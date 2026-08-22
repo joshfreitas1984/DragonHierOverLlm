@@ -2,825 +2,409 @@
   splits:
   - split: 1
     text: "名称"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Name"
   - split: 2
     text: "描述"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Description"
   - split: 3
     text: "等级"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Level"
   - split: 4
     text: "速度"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Speed"
   - split: 5
     text: "耐力"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Endurance"
   - split: 6
     text: "冲刺"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Sprint"
   - split: 7
     text: "抗性"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Resistance"
   - split: 8
     text: "价值"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Value"
 - raw: "0,骡子,马和驴杂交而成，体质结实，肢蹄强健，多见于民间,0,10,15,10,15,200"
   splits:
   - split: 1
     text: "骡子"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Donkey"
   - split: 2
     text: "马和驴杂交而成，体质结实，肢蹄强健，多见于民间"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Mule, resulting from the hybridization of horse and donkey, is robust in physique with strong hooves, and is commonly found among the people."
 - raw: "1,驴子,四肢瘦弱，躯干短小的畜类，速度缓慢但刻苦耐劳,0,5,20,5,20,200"
   splits:
   - split: 1
     text: "驴子"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Donkey"
   - split: 2
     text: "四肢瘦弱，躯干短小的畜类，速度缓慢但刻苦耐劳"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Thin‑limbed and short‑bodied livestock, slow but hardworking and enduring"
 - raw: "2,跛脚马,腿脚受过伤或是天生残疾的马匹，胜在价格便宜,0,10,20,10,10,200"
   splits:
   - split: 1
     text: "跛脚马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Limping horse"
   - split: 2
     text: "腿脚受过伤或是天生残疾的马匹，胜在价格便宜"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses with injured legs or those born with disabilities may be cheaper."
 - raw: "3,小马,天生体型弱小的马匹，令人几乎不忍骑乘,0,15,10,15,10,200"
   splits:
   - split: 1
     text: "小马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Little Horse"
   - split: 2
     text: "天生体型弱小的马匹，令人几乎不忍骑乘"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses naturally small and slender, almost making one reluctant to ride them."
 - raw: "4,劣马,品质拙劣且难以驾驭的马匹，往往是马贩子的淘汰品,0,15,15,15,5,200"
   splits:
   - split: 1
     text: "劣马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Poor horse"
   - split: 2
     text: "品质拙劣且难以驾驭的马匹，往往是马贩子的淘汰品"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Poor and difficult‑to‑handle horses are often discarded by horse dealers."
 - raw: "5,矮马,天生体型低矮的马匹，骑乘后双脚几乎不离地面,0,20,20,5,5,200"
   splits:
   - split: 1
     text: "矮马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Pony"
   - split: 2
     text: "天生体型低矮的马匹，骑乘后双脚几乎不离地面"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses naturally with low body frames, where the feet almost do not leave the ground when ridden"
 - raw: "6,驮马,专用于货运的马匹，由于常年负重，多有慢性病,0,15,15,5,15,200"
   splits:
   - split: 1
     text: "驮马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Pack horse"
   - split: 2
     text: "专用于货运的马匹，由于常年负重，多有慢性病"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses used exclusively for freight often develop chronic illnesses due to years of carrying heavy loads."
 - raw: "7,瘦马,天生体型瘦削的马匹，常年营养不良导致肋骨根根分明,0,25,10,10,5,200"
   splits:
   - split: 1
     text: "瘦马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Weak horse"
   - split: 2
     text: "天生体型瘦削的马匹，常年营养不良导致肋骨根根分明"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses naturally lean and slender, suffering from chronic malnutrition that makes their rib cages distinctly visible."
 - raw: "8,大马,体质强健的高头大马，武林人士常用,1,20,30,20,30,400"
   splits:
   - split: 1
     text: "大马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Laba"
   - split: 2
     text: "体质强健的高头大马，武林人士常用"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A sturdy horse of great stature, commonly used by Wulin individuals."
 - raw: "9,烈马,性格爆裂，难以驾驭的马匹，狂奔时速度极快,1,45,10,35,10,400"
   splits:
   - split: 1
     text: "烈马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Wild Horse"
   - split: 2
     text: "性格爆裂，难以驾驭的马匹，狂奔时速度极快"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Temperamental horse, difficult to control, runs at incredible speed when unreined"
 - raw: "10,军马,军中所用的马匹，速度与耐久较为均衡,1,30,25,25,20,400"
   splits:
   - split: 1
     text: "军马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Military horses"
   - split: 2
     text: "军中所用的马匹，速度与耐久较为均衡"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses used in the army have a balance between speed and endurance."
 - raw: "11,快马,信差和驿站常用的马匹，以快速见长,1,40,15,40,5,400"
   splits:
   - split: 1
     text: "快马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Rapid horse"
   - split: 2
     text: "信差和驿站常用的马匹，以快速见长"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses commonly used by messengers and relay stations for their speed."
 - raw: "12,战马,骑兵所用冲锋陷阵之马匹，性能优良，坚忍不拔,1,35,20,30,15,400"
   splits:
   - split: 1
     text: "战马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Battlehorse"
   - split: 2
     text: "骑兵所用冲锋陷阵之马匹，性能优良，坚忍不拔"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "The horses used for cavalry charges are of excellent performance and great endurance."
 - raw: "13,河曲马,黄河盘曲上游草原上所产马种，体格健硕，农用或军用皆可,1,20,35,15,30,400"
   splits:
   - split: 1
     text: "河曲马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Riverbend Horse"
   - split: 2
     text: "黄河盘曲上游草原上所产马种，体格健硕，农用或军用皆可"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses bred on the upstream grasslands of the Yellow River, robust in build, suitable for both agricultural and military use."
 - raw: "14,西南马,云贵川地区所产马种，体型较小，善于穿越复杂地形,1,25,25,25,25,400"
   splits:
   - split: 1
     text: "西南马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Southwest Horse"
   - split: 2
     text: "云贵川地区所产马种，体型较小，善于穿越复杂地形"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horse breeds from the Yunnan, Guizhou, and Sichuan regions, smaller in size, excel at traversing complex terrain."
 - raw: "15,山地马,山区所产，极为矮小的马种，其耐力持久，擅长翻山越岭,1,15,30,20,35,400"
   splits:
   - split: 1
     text: "山地马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Mountain horse"
   - split: 2
     text: "山区所产，极为矮小的马种，其耐力持久，擅长翻山越岭"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Produced in the mountains, this extremely short horse is enduring and excels at traversing rugged terrain."
 - raw: "16,蒙古马,产于蒙古草原的优良马种，体格不大，但极为勇猛健壮,2,40,40,35,35,800"
   splits:
   - split: 1
     text: "蒙古马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Mongolian horse"
   - split: 2
     text: "产于蒙古草原的优良马种，体格不大，但极为勇猛健壮"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A fine horse breed from the Mongolian steppes, not large in stature but incredibly brave and robust."
 - raw: "17,哈萨克马,产于新疆的草原马，体格中等，性能均衡，是许多西北优良马种的祖先,2,25,55,20,50,800"
   splits:
   - split: 1
     text: "哈萨克马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Kazakh horses"
   - split: 2
     text: "产于新疆的草原马，体格中等，性能均衡，是许多西北优良马种的祖先"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "The grassland horse from Xinjiang has a moderate build and balanced performance, making it the ancestor of many fine horse breeds in Northwest China."
 - raw: "18,伊犁马,以哈萨克马为基础杂交而成，体格高大，身形匀称，且禀性灵敏,2,35,45,30,40,800"
   splits:
   - split: 1
     text: "伊犁马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ili horse"
   - split: 2
     text: "以哈萨克马为基础杂交而成，体格高大，身形匀称，且禀性灵敏"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Based on the Kazakh horse, this breed is tall and well‑proportioned, with a keen disposition."
 - raw: "19,乌孙马,产于西域乌孙国的一种良马，汉武帝称之为天马,2,30,50,40,30,800"
   splits:
   - split: 1
     text: "乌孙马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ussu Horse"
   - split: 2
     text: "产于西域乌孙国的一种良马，汉武帝称之为天马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A fine horse produced in the Western Regions among the Wusun Kingdom, Emperor Wu of Han called it a Heavenly Horse."
 - raw: "20,五花马,将鬃毛修剪成五瓣作为装饰的骏马,2,35,35,40,40,800"
   splits:
   - split: 1
     text: "五花马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Five‑colored horse"
   - split: 2
     text: "将鬃毛修剪成五瓣作为装饰的骏马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses with manes trimmed into five petals for decoration"
 - raw: "21,白兔马,静若处子，动若突兔之白马，深得少年侠士之喜爱,2,50,30,45,25,800"
   splits:
   - split: 1
     text: "白兔马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "White Rabbit Horse"
   - split: 2
     text: "静若处子，动若突兔之白马，深得少年侠士之喜爱"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Like a quiet virgin in repose, and a swift horse like a rabbit in motion, she deeply wins the affection of young martial artists."
 - raw: "22,枣红马,遍体枣红色的马匹，性格温驯，极为吃苦耐劳,2,25,60,20,45,800"
   splits:
   - split: 1
     text: "枣红马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Chestnut horse"
   - split: 2
     text: "遍体枣红色的马匹，性格温驯，极为吃苦耐劳"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses painted deep crimson red all over, with a gentle temperament and an exceptionally hardworking nature"
 - raw: "23,绿耳马,青黄色的骏马，传说其先祖曾为周穆王驾车驱使,2,45,25,50,30,800"
   splits:
   - split: 1
     text: "绿耳马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Green Ear Horse"
   - split: 2
     text: "青黄色的骏马，传说其先祖曾为周穆王驾车驱使"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A fine steed of greenish‑yellow hue, said to have ancestors who once drove for King Mu of Zhou."
 - raw: "24,白义马,带有淡淡铁灰色的俊美白马，传说其先祖曾为周穆王驾车驱使,3,50,50,50,50,1600"
   splits:
   - split: 1
     text: "白义马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "White Meaning Horse"
   - split: 2
     text: "带有淡淡铁灰色的俊美白马，传说其先祖曾为周穆王驾车驱使"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A handsomely white horse with a faint steel gray hue, said to have ancestors who once pulled the chariot for King Mu of Zhou."
 - raw: "25,青骓马,苍白杂色骏马，其冲刺速度迅猛异常，先祖亦曾随唐太宗征战一时,3,40,60,60,40,1600"
   splits:
   - split: 1
     text: "青骓马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Qingzhui Horse"
   - split: 2
     text: "苍白杂色骏马，其冲刺速度迅猛异常，先祖亦曾随唐太宗征战一时"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Pale spotted steed, its sprint speed is exceptionally swift, and Ancestral also served alongside Emperor Taizong in battle for a time."
 - raw: "26,华骝马,黄中带红的骏马，其祖先亦是为周穆王驾车的八骏之一,3,45,55,65,35,1600"
   splits:
   - split: 1
     text: "华骝马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Golden Lion Horse"
   - split: 2
     text: "黄中带红的骏马，其祖先亦是为周穆王驾车的八骏之一"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A horse of red‑golden hue, among its ancestors are also one of the eight fine steeds that drew Zhou Muwang's carriage."
 - raw: "27,黄骠马,此马遍体黄毛中带有白点，头有白毛，状如满月，是难得一遇的宝马良驹,3,55,65,35,45,1600"
   splits:
   - split: 1
     text: "黄骠马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Chestnut horse"
   - split: 2
     text: "此马遍体黄毛中带有白点，头有白毛，状如满月，是难得一遇的宝马良驹"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "This horse has a coat of yellow with white spots, has white fur on its head, resembling a full moon, making it a rare and fine steed."
 - raw: "28,骕骦马,此马色如霜纨，形如秋雁，毛发如白练，高首而脩颈，气质如霜，寒气逼人,3,65,45,55,35,1600"
   splits:
   - split: 1
     text: "骕骦马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Stallion"
   - split: 2
     text: "此马色如霜纨，形如秋雁，毛发如白练，高首而脩颈，气质如霜，寒气逼人"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "This horse's coat is as white as frosty silk, its form like that of autumn geese, its hair as pure as snow, with a tall and elongated neck. Its temperament is like frost, chilling to the bone."
 - raw: "29,玉花骢,毛色青白相杂，身形优雅健美之骏马，堪称马中之美人也,3,60,30,60,50,1600"
   splits:
   - split: 1
     text: "玉花骢"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "White Cloud Steed"
   - split: 2
     text: "毛色青白相杂，身形优雅健美之骏马，堪称马中之美人也"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A horse with a coat of blue and white mixed together, graceful and strong in build, can be considered a beauty among horses."
 - raw: "30,奔宵马,遍体漆黑之骏马，传说其先祖可夜行万里,3,75,35,50,40,1600"
   splits:
   - split: 1
     text: "奔宵马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Swift Heaven Horse"
   - split: 2
     text: "遍体漆黑之骏马，传说其先祖可夜行万里"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A steed entirely black, said to have ancestors capable of traveling a thousand miles at night"
 - raw: "31,纤离马,体型纤细之骏马，其奔驰速度快若闪电，极为迅捷,3,70,40,70,20,1600"
   splits:
   - split: 1
     text: "纤离马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Xianli Ma"
   - split: 2
     text: "体型纤细之骏马，其奔驰速度快若闪电，极为迅捷"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A slender horse that dashes faster than lightning, incredibly swift"
 - raw: "32,乌骓马,毛色如绸缎般柔亮，体格极为健壮的黑马，霸王项羽曾骑着这种战马征伐四方,4,45,70,60,75,3200"
   splits:
   - split: 1
     text: "乌骓马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Swift Black Stallion"
   - split: 2
     text: "毛色如绸缎般柔亮，体格极为健壮的黑马，霸王项羽曾骑着这种战马征伐四方"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horsehair as soft and lustrous as silk, this strong and robust black stallion was ridden by the warlord Xiang Yu as he marched his armies across the land."
 - raw: "33,白蹄乌,有四只白蹄的纯黑色骏马，其先祖位列唐太宗六骏，被赞为倚天长剑，追风骏足,4,70,60,50,70,3200"
   splits:
   - split: 1
     text: "白蹄乌"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "White horse"
   - split: 2
     text: "有四只白蹄的纯黑色骏马，其先祖位列唐太宗六骏，被赞为倚天长剑，追风骏足"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Four pure black steeds with four white hooves, whose ancestors were among the Six Steeds of Tang Taizong, are praised as long swords from heaven and swift hooves of the wind."
 - raw: "34,什伐赤,产自波斯的赤红骏马，其先祖曾随唐太宗征战虎牢关，身中五箭而亡,4,50,75,55,70,3200"
   splits:
   - split: 1
     text: "什伐赤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Shifachi"
   - split: 2
     text: "产自波斯的赤红骏马，其先祖曾随唐太宗征战虎牢关，身中五箭而亡"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A crimson steed bred in Persia whose ancestors fought at Huolong Pass alongside Emperor Taizong of Tang and fell in battle with five arrow wounds."
 - raw: "35,拳毛驹,黄皮黑嘴，身布连环旋毛，世人多以为丑，然而其矫健善走，蹄大快程，不可以貌取之,4,75,65,45,65,3200"
   splits:
   - split: 1
     text: "拳毛驹"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Foal with mane"
   - split: 2
     text: "黄皮黑嘴，身布连环旋毛，世人多以为丑，然而其矫健善走，蹄大快程，不可以貌取之"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Yellow‑skinned with a black beak, its body covered in ringed spiral hairs. Many regard it as ugly, but it is agile and swift, with large hooves that make it quick on its feet‑cannot judge by appearance alone."
 - raw: "36,斑豹马,周身斑点如豹纹的马匹，其速度与爆发力均有虎豹之威,4,80,50,70,50,3200"
   splits:
   - split: 1
     text: "斑豹马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Leopard Horse"
   - split: 2
     text: "周身斑点如豹纹的马匹，其速度与爆发力均有虎豹之威"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Horses with spots like leopard skin, their speed and explosive power are fierce like tigers and leopards."
 - raw: "37,赤骥马,毛色赤红的骏马，传说其祖先在周穆王八骏之中最得恩宠,4,65,55,65,65,3200"
   splits:
   - split: 1
     text: "赤骥马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Red Steed"
   - split: 2
     text: "毛色赤红的骏马，传说其祖先在周穆王八骏之中最得恩宠"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A crimson horse, whose ancestors were among the most favored of Duke Mu of Zhou's Eight Horses."
 - raw: "38,麒麟兽,身形矫健，勇猛无比的骏马，其奔驰时周身鬃毛飘逸，如同麒麟降世一般,4,55,80,40,75,3200"
   splits:
   - split: 1
     text: "麒麟兽"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Qilin beast"
   - split: 2
     text: "身形矫健，勇猛无比的骏马，其奔驰时周身鬃毛飘逸，如同麒麟降世一般"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A nimble and incredibly brave steed, its mane flowing gracefully as it gallops, much like the arrival of a qilin."
 - raw: "39,照夜白,遍体雪白的骏马，在夜间疾驰时化作一道白练，所过之处好似被照亮一般,4,60,85,75,30,3200"
   splits:
   - split: 1
     text: "照夜白"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Zhonghuabeiyang"
   - split: 2
     text: "遍体雪白的骏马，在夜间疾驰时化作一道白练，所过之处好似被照亮一般"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A steed entirely snow‑white gallops through the night, becoming a white streak of light. Everywhere it passes seems illuminated."
 - raw: "40,汗血马,大宛百里挑一的珍贵名马，因奔跑后流汗如血而得名，爱马之人视之如至宝,5,80,80,80,60,6400"
   splits:
   - split: 1
     text: "汗血马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Blood‑sweat horse"
   - split: 2
     text: "大宛百里挑一的珍贵名马，因奔跑后流汗如血而得名，爱马之人视之如至宝"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A rare and precious horse from Dayuan, named for its sweat that runs like blood after running, and beloved horsemen regard it as a treasure beyond measure."
 - raw: "41,赤兔马,遍体火红，体型庞大之骏马，冲锋时势大力猛，如烈火燎原，堪称马中王者,5,90,70,85,55,6400"
   splits:
   - split: 1
     text: "赤兔马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Red Horse"
   - split: 2
     text: "遍体火红，体型庞大之骏马，冲锋时势大力猛，如烈火燎原，堪称马中王者"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A large, fiery‑red horse that charges with immense force, like a prairie fire, truly reigning as the king of horses."
 - raw: "42,的卢马,速度迅捷，跳跃冲刺能力亦极为惊人的名马，传说其先祖曾背负刘备越过阔数丈的檀溪,5,75,60,95,70,6400"
   splits:
   - split: 1
     text: "的卢马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Qilu horse"
   - split: 2
     text: "速度迅捷，跳跃冲刺能力亦极为惊人的名马，传说其先祖曾背负刘备越过阔数丈的檀溪"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A famed horse known for its speed and extraordinary leaping prowess, legend says its ancestor carried Liu Bei across a wide Tanchi stream."
 - raw: "43,绝影马,风驰电掣，连影子亦追随不及之快马，传说曹操曾骑其先祖逃脱重围,5,85,75,75,65,6400"
   splits:
   - split: 1
     text: "绝影马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Shadow Rush Horse"
   - split: 2
     text: "风驰电掣，连影子亦追随不及之快马，传说曹操曾骑其先祖逃脱重围"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Wind swift as lightning, a steed so fast not even its shadow could follow, legend says Cao Cao rode his ancestor's mount to escape the encirclement."
 - raw: "44,特勒骠,应策腾空，承声半汉，入险摧敌，乘危济难，其先祖乃突厥名马，作为贡品随唐太宗征战多年,5,65,90,65,80,6400"
   splits:
   - split: 1
     text: "特勒骠"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Tellerion"
   - split: 2
     text: "应策腾空，承声半汉，入险摧敌，乘危济难，其先祖乃突厥名马，作为贡品随唐太宗征战多年"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties‑his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
 - raw: "45,神凫马,传说祖先乃秦始皇座下名马，为求仙药随其东巡，过名川大山如飞履平地,5,95,50,70,85,6400"
   splits:
   - split: 1
     text: "神凫马"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Divine Duck Horse"
   - split: 2
     text: "传说祖先乃秦始皇座下名马，为求仙药随其东巡，过名川大山如飞履平地"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Legend says that the ancestors were famous horses under Emperor Qin Shi Huang. Seeking immortal medicines, they accompanied him on his eastern tour, traversing renowned rivers and mountains as if flying."
 - raw: "46,飒露紫,紫燕超跃，骨腾神骏，气詟三川，威凌八阵，其先祖曾为救唐太宗于重围之中而殒命，可谓忠勇过人,5,60,85,80,75,6400"
   splits:
   - split: 1
     text: "飒露紫"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Slapuizi"
   - split: 2
     text: "紫燕超跃，骨腾神骏，气詟三川，威凌八阵，其先祖曾为救唐太宗于重围之中而殒命，可谓忠勇过人"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "While they soar like purple swallows, their bones leap like spirit horses. Their ancestral valor shakes the Three Rivers and deters eight arrays. They once sacrificed their lives to save Emperor Taizong of Tang from a heavy encirclement, displaying unparalleled loyalty and bravery."
 - raw: "47,白龙驹,遍体白毛，神采秀逸之骏马，其奔腾若风雷，世人皆以为是白龙所化,5,70,95,60,75,6400"
   splits:
   - split: 1
     text: "白龙驹"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "White Dragon Horse"
   - split: 2
     text: "遍体白毛，神采秀逸之骏马，其奔腾若风雷，世人皆以为是白龙所化"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Body covered in white fur, graceful and elegant horse, its gallop like wind and thunder, people believe it to be transformed from a white dragon"

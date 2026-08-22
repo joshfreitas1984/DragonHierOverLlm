@@ -1,522 +1,232 @@
 - raw: "剧情可解锁恋爱角色"
   splits:
-  - split: 0
-    text: "剧情可解锁恋爱角色"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "剧情可解锁恋爱角色"
+    translated: "Plot choices unlock romantic characters"
 - raw: "杨思迟"
   splits:
-  - split: 0
-    text: "杨思迟"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "杨思迟"
+    translated: "Yang Sichi"
 - raw: "魏胥华"
   splits:
-  - split: 0
-    text: "魏胥华"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "魏胥华"
+    translated: "Wei Xuhua"
 - raw: "顾游年"
   splits:
-  - split: 0
-    text: "顾游年"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "顾游年"
+    translated: "Gu Younian"
 - raw: "郝大力"
   splits:
-  - split: 0
-    text: "郝大力"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "郝大力"
+    translated: "Hao Dali"
 - raw: "汪财"
   splits:
-  - split: 0
-    text: "汪财"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "汪财"
+    translated: "Wang Cai"
 - raw: "吴谋"
   splits:
-  - split: 0
-    text: "吴谋"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "吴谋"
+    translated: "Wu Mou"
 - raw: "楚风疾"
   splits:
-  - split: 0
-    text: "楚风疾"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "楚风疾"
+    translated: "Chu Fengji"
 - raw: "齐焱"
   splits:
-  - split: 0
-    text: "齐焱"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "齐焱"
+    translated: "Qi Yan"
 - raw: "张峻"
   splits:
-  - split: 0
-    text: "张峻"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "张峻"
+    translated: "Zhang Jun"
 - raw: "林云裳"
   splits:
-  - split: 0
-    text: "林云裳"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "林云裳"
+    translated: "Lin Yunshang"
 - raw: "姜婉"
   splits:
-  - split: 0
-    text: "姜婉"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "姜婉"
+    translated: "Jiang Wan"
 - raw: "余采薇"
   splits:
-  - split: 0
-    text: "余采薇"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "余采薇"
+    translated: "Yu Caiwei"
 - raw: "慕容星辰"
   splits:
-  - split: 0
-    text: "慕容星辰"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "慕容星辰"
+    translated: "Murong Xingchen"
 - raw: "龙凝霜"
   splits:
-  - split: 0
-    text: "龙凝霜"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "龙凝霜"
+    translated: "Long Ningshuang"
 - raw: "白云天"
   splits:
-  - split: 0
-    text: "白云天"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "白云天"
+    translated: "Bai Yuntian"
 - raw: "张文馨"
   splits:
-  - split: 0
-    text: "张文馨"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "张文馨"
+    translated: "Zhang Wenxin"
 - raw: "上官凤"
   splits:
-  - split: 0
-    text: "上官凤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "上官凤"
+    translated: "Shangguan Feng"
 - raw: "林弄影"
   splits:
-  - split: 0
-    text: "林弄影"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "林弄影"
+    translated: "Lin Nongying"
 - raw: "姬清梵"
   splits:
-  - split: 0
-    text: "姬清梵"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "姬清梵"
+    translated: "Ji Qingfan"
 - raw: "皇甫青衫"
   splits:
-  - split: 0
-    text: "皇甫青衫"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "皇甫青衫"
+    translated: "Huangfu Qingshan"
 - raw: "傅砚之"
   splits:
-  - split: 0
-    text: "傅砚之"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "傅砚之"
+    translated: "Fu Yanzhi"
 - raw: "张弥勒"
   splits:
-  - split: 0
-    text: "张弥勒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "张弥勒"
+    translated: "Zhang MiLe"
 - raw: "陆沉舟"
   splits:
-  - split: 0
-    text: "陆沉舟"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "陆沉舟"
+    translated: "Lu Chenzhou"
 - raw: "王霸"
   splits:
-  - split: 0
-    text: "王霸"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "王霸"
+    translated: "Wang Ba"
 - raw: "龙灭"
   splits:
-  - split: 0
-    text: "龙灭"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "龙灭"
+    translated: "Long Mie"
 - raw: "罗八怪"
   splits:
-  - split: 0
-    text: "罗八怪"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "罗八怪"
+    translated: "Luo Bagui"
 - raw: "宋明公"
   splits:
-  - split: 0
-    text: "宋明公"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "宋明公"
+    translated: "Song Minggong"
 - raw: "叶寒"
   splits:
-  - split: 0
-    text: "叶寒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "叶寒"
+    translated: "Ye Han"
 - raw: "李天临"
   splits:
-  - split: 0
-    text: "李天临"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "李天临"
+    translated: "Li Tianlin"
 - raw: "菲燕子"
   splits:
-  - split: 0
-    text: "菲燕子"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "菲燕子"
+    translated: "Fei Yanzi"
 - raw: "曲佩环"
   splits:
-  - split: 0
-    text: "曲佩环"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "曲佩环"
+    translated: "Qu Peihuan"
 - raw: "水清秋"
   splits:
-  - split: 0
-    text: "水清秋"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "水清秋"
+    translated: "Shui Qingqiu"
 - raw: "柳如月"
   splits:
-  - split: 0
-    text: "柳如月"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "柳如月"
+    translated: "Liu Ruyue"
 - raw: "北冥雪"
   splits:
-  - split: 0
-    text: "北冥雪"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "北冥雪"
+    translated: "Beiming Xue"
 - raw: "殷雨霏"
   splits:
-  - split: 0
-    text: "殷雨霏"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "殷雨霏"
+    translated: "Yin Yufei"
 - raw: "马应龙"
   splits:
-  - split: 0
-    text: "马应龙"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "马应龙"
+    translated: "Ma Yinglong"
 - raw: "马超群"
   splits:
-  - split: 0
-    text: "马超群"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "马超群"
+    translated: "Ma Chaoqun"
 - raw: "马丹心"
   splits:
-  - split: 0
-    text: "马丹心"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "马丹心"
+    translated: "Ma Danxin"
 - raw: "马宝郭"
   splits:
-  - split: 0
-    text: "马宝郭"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "马宝郭"
+    translated: "Ma Baoguo"
 - raw: "项问天"
   splits:
-  - split: 0
-    text: "项问天"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "项问天"
+    translated: "Xiang Wentian"
 - raw: "郭勇锐"
   splits:
-  - split: 0
-    text: "郭勇锐"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "郭勇锐"
+    translated: "Guo Yongrui"
 - raw: "阮芷"
   splits:
-  - split: 0
-    text: "阮芷"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "阮芷"
+    translated: "Ruan Zhi"
 - raw: "李云鹤"
   splits:
-  - split: 0
-    text: "李云鹤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "李云鹤"
+    translated: "Li Yunhe"
 - raw: "清风"
   splits:
-  - split: 0
-    text: "清风"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "清风"
+    translated: "Qingfeng"
 - raw: "彗定"
   splits:
-  - split: 0
-    text: "彗定"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "彗定"
+    translated: "Hui Ding"
 - raw: "皇甫斌"
   splits:
-  - split: 0
-    text: "皇甫斌"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "皇甫斌"
+    translated: "Huangfu Bin"
 - raw: "万仞山"
   splits:
-  - split: 0
-    text: "万仞山"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "万仞山"
+    translated: "Wan Renshan"
 - raw: "乐无疾"
   splits:
-  - split: 0
-    text: "乐无疾"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "乐无疾"
+    translated: "Yue Wuji"
 - raw: "赵破虏"
   splits:
-  - split: 0
-    text: "赵破虏"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "赵破虏"
+    translated: "Zhao Polu"
 - raw: "郭淮"
   splits:
-  - split: 0
-    text: "郭淮"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "郭淮"
+    translated: "Guo Huai"
 - raw: "唐嫣然"
   splits:
-  - split: 0
-    text: "唐嫣然"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "唐嫣然"
+    translated: "Tang Yanran"
 - raw: "龙凤娥"
   splits:
-  - split: 0
-    text: "龙凤娥"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "龙凤娥"
+    translated: "Long Feng'e"
 - raw: "何足道"
   splits:
-  - split: 0
-    text: "何足道"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "何足道"
+    translated: "He Zudao"
 - raw: "武绝义"
   splits:
-  - split: 0
-    text: "武绝义"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "武绝义"
+    translated: "Wu Jueyi"
 - raw: "韩嵩"
   splits:
-  - split: 0
-    text: "韩嵩"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "韩嵩"
+    translated: "Han Song"
 - raw: "司马德源"
   splits:
-  - split: 0
-    text: "司马德源"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "司马德源"
+    translated: "Sima Deyuan"
 - raw: "张青蓬"
   splits:
-  - split: 0
-    text: "张青蓬"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "张青蓬"
+    translated: "Zhang Qingpeng"

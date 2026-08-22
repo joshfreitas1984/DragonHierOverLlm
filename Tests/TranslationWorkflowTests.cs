@@ -1,6 +1,4 @@
-﻿using Code;
-using FanslationStudio.LlmKit.Configuration;
-using FanslationStudio.LlmKit.Utility;
+﻿using FanslationStudio.LlmKit.Configuration;
 using FanslationStudio.LlmKit.Workflow;
 using Tests.Code;
 
@@ -12,25 +10,25 @@ public class TranslationWorkflowTests
     [Fact(DisplayName = "0. Reset All Flags")]
     public async Task ResetAllFlags()
     {
-        await TranslationWorkflow.ResetAllFlags(Constants.WorkingDirectory, GameTextFiles.TextFilesToSplit);
+        await TranslationWorkflow.ResetAllFlags(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "1. TranslateLinesBruteForce")]
     public async Task TranslateLinesBruteForce()
     {
-        await TranslationWorkflow.TranslateLinesBruteForce(Constants.WorkingDirectory, GameTextFiles.TextFilesToSplit);
+        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "2. ApplyRulesToCurrentTranslation")]
     public async Task ApplyRulesToCurrentTranslation()
     {
-        await TranslationWorkflow.ApplyAllRulesToCurrentTranslation(Constants.WorkingDirectory, GameTextFiles.TextFilesToSplit);
+        await TranslationWorkflow.ApplyAllRulesToCurrentTranslation(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "3. Translate Lines Only")]
     public async Task TranslateLines()
     {
-        await TranslationWorkflow.TranslateLines(Constants.WorkingDirectory, GameTextFiles.TextFilesToSplit);
+        await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "5. Flag some regexes")]
@@ -41,8 +39,8 @@ public class TranslationWorkflowTests
             "⑩",
         };
 
-        await TranslationWorkflow.SetSplitAsInvalid(Constants.WorkingDirectory, 
-            GameTextFiles.TextFilesToSplit, badStrings);
+        await TranslationWorkflow.SetSplitAsInvalid(GameFileHandling.WorkingDirectory,
+            GameFileHandling.TextFilesToSplit, badStrings);
     }
 
     [Fact(DisplayName = "6. Clean up some regexes")]
@@ -54,7 +52,7 @@ public class TranslationWorkflowTests
             (@"(\d+)(\s*)(coin|wen|money|quan|liang)", "$1 coin"),
         };
 
-        await TranslationWorkflow.CleanUpSomeRegexes(Constants.WorkingDirectory,
-            GameTextFiles.TextFilesToSplit, regex);
+        await TranslationWorkflow.CleanUpSomeRegexes(GameFileHandling.WorkingDirectory,
+            GameFileHandling.TextFilesToSplit, regex);
     }
 }

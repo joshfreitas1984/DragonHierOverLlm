@@ -4,861 +4,370 @@
   splits:
   - split: 1
     text: "纯粹"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Purely"
   - split: 2
     text: "固执"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Stubborn"
   - split: 3
     text: "稳重"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Reliable"
   - split: 4
     text: "忠厚"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Honesty"
   - split: 5
     text: "简单"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Simple"
   - split: 6
     text: "灵活"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Flexible"
   - split: 7
     text: "潇洒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Graceful"
   - split: 8
     text: "轻佻"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Flippant"
   - split: 9
     text: "算计"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Plot against"
   - split: 10
     text: "叛逆"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Rebellion"
 - raw: "思考招式,嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展……,#PlayerName#，我近日修行始终不得要领，已为此苦思多日了。,#PlayerName#，我的招式还有太多纰漏之处，需得勤加练习才行。,#PlayerName#，我这招式若是使得不对，还请不要见笑。,#PlayerName#你来得正好，快看看我这招使得如何？,#PlayerName#，我这招若在此处陡然生变，你可有什么破解之法？,#PlayerName#，我这招式随手使出，可有几分潇洒自如之意啊？,#PlayerName#，看剑！\\n……哈哈，开个玩笑而已。,#PlayerName#，你若能指出我招式中的纰漏，日后自有重谢。,#PlayerName#，我这招精妙非常，只怕你也难以招架！"
   splits:
-  - split: 0
-    text: "思考招式"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "思考招式"
+    translated: "Think of a technique"
   - split: 1
     text: "嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展……"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Hmm? Oh! It's {PlayerName}! Just then, I was coming up with a clever move; all one needs to do is act in this way..."
   - split: 2
     text: "#PlayerName#，我近日修行始终不得要领，已为此苦思多日了。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, I have been struggling to grasp the right approach in my recent cultivation for many days now."
   - split: 3
     text: "#PlayerName#，我的招式还有太多纰漏之处，需得勤加练习才行。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, my techniques still have too many flaws and need more practice."
   - split: 4
     text: "#PlayerName#，我这招式若是使得不对，还请不要见笑。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, if I perform this technique incorrectly, please don't laugh at me."
   - split: 5
     text: "#PlayerName#你来得正好，快看看我这招使得如何？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, you've come at the right time. Quick, take a look and see how I'm doing this move?"
   - split: 6
     text: "#PlayerName#，我这招若在此处陡然生变，你可有什么破解之法？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, if I suddenly change this technique here, do you have any countermeasure?"
   - split: 7
     text: "#PlayerName#，我这招式随手使出，可有几分潇洒自如之意啊？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, with this move, I've just let it flow naturally‑does it have a bit of grace to it?"
   - split: 8
     text: "#PlayerName#，看剑！\\n……哈哈，开个玩笑而已。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
   - split: 9
     text: "#PlayerName#，你若能指出我招式中的纰漏，日后自有重谢。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, if you can point out the flaws in my techniques, there will surely be a great reward for you in the future."
   - split: 10
     text: "#PlayerName#，我这招精妙非常，只怕你也难以招架！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, my maneuver is exceptionally skillful; I doubt you could withstand it!"
 - raw: "武学见解,依我所见，武学的精要之处在于战无不胜，攻无不克,依我所见，武学的精要之处在于勤学苦练，登峰造极,依我所见，武学的精要之处在于步步为营，攻守兼备,依我所见，武学的精要之处在于修身养性，仁者无敌,依我所见，武学的精要之处在于删繁就简，返璞归真,依我所见，武学的精要之处在于活学活用，灵巧多变,依我所见，武学的精要之处在于行云流水，挥洒自如,依我所见，武学的精要之处在于避实就虚，随心所欲,依我所见，武学的精要之处在于算无遗策，克敌机先,依我所见，武学的精要之处在于破除陈规，剑走偏锋"
   splits:
-  - split: 0
-    text: "武学见解"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "武学见解"
+    translated: "Martial insights"
   - split: 1
     text: "依我所见，武学的精要之处在于战无不胜，攻无不克"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "As I see it, the essence of martial arts lies in invincibility and unconquerability."
   - split: 2
     text: "依我所见，武学的精要之处在于勤学苦练，登峰造极"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my opinion, the essence of martial arts lies in diligent practice and striving for perfection."
   - split: 3
     text: "依我所见，武学的精要之处在于步步为营，攻守兼备"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my opinion, the essence of martial arts lies in advancing with caution and defending while attacking."
   - split: 4
     text: "依我所见，武学的精要之处在于修身养性，仁者无敌"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my view, the essence of martial arts lies in cultivating one's body and mind, and the benevolent are invincible."
   - split: 5
     text: "依我所见，武学的精要之处在于删繁就简，返璞归真"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my opinion, the essence of martial arts lies in simplifying complexity and returning to simplicity."
   - split: 6
     text: "依我所见，武学的精要之处在于活学活用，灵巧多变"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my opinion, the essence of martial arts lies in flexible application and adaptability."
   - split: 7
     text: "依我所见，武学的精要之处在于行云流水，挥洒自如"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my opinion, the essence of martial arts lies in its fluidity and natural grace."
   - split: 8
     text: "依我所见，武学的精要之处在于避实就虚，随心所欲"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my opinion, the essence of martial arts lies in avoiding the real and striking the void, acting according to one's will."
   - split: 9
     text: "依我所见，武学的精要之处在于算无遗策，克敌机先"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my view, the essence of martial arts lies in devising strategies without fail and gaining the upper hand before the enemy."
   - split: 10
     text: "依我所见，武学的精要之处在于破除陈规，剑走偏锋"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In my opinion, the essence of martial arts lies in breaking conventional rules and taking an unconventional approach with the sword."
 - raw: "休闲娱乐,一旦做起喜欢的事就会废寝忘食，#PlayerName#也会如此吗？,若是这门功夫一日不练成，我便一日不得安寝。,#PlayerName#近日练功可有懈怠？需知江湖中人若习武不精，早晚会吃苦头,今日艳阳高照，正适合邀三五好友郊游野炊一番,躺着不动，静静发呆也是一件美事，#PlayerName#也这么认为吧！,我正要去街上闲逛，#PlayerName#若是想来的话就同去吧,#PlayerName#来的正好，难得浮生偷闲，快随我同去痛饮几杯！,听说城中名伶正登台唱戏，#PlayerName#何不随我去听几首小曲，快活快活？,若是一事不能增进武艺或谋取利益，我便万万不愿去做,我已习惯独来独往，#PlayerName#若是无事，还望别来打扰。"
   splits:
-  - split: 0
-    text: "休闲娱乐"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "休闲娱乐"
+    translated: "Leisure and entertainment"
   - split: 1
     text: "一旦做起喜欢的事就会废寝忘食，#PlayerName#也会如此吗？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Once engrossed in something they enjoy, they forget all about eating and sleeping. Would #PlayerName# be the same way?"
   - split: 2
     text: "若是这门功夫一日不练成，我便一日不得安寝。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "If this martial skill is not mastered in a day, I shall have no peace until it is."
   - split: 3
     text: "#PlayerName#近日练功可有懈怠？需知江湖中人若习武不精，早晚会吃苦头"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, have you been slacking off in your recent training? One must remember that in the Jianghu, those who are not skilled in martial arts will eventually face difficulties."
   - split: 4
     text: "今日艳阳高照，正适合邀三五好友郊游野炊一番"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Today is a sunny day perfect for inviting three or five friends on an outing and having a picnic in the countryside."
   - split: 5
     text: "躺着不动，静静发呆也是一件美事，#PlayerName#也这么认为吧！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Lying idle and gazing into space is also a delightful pastime. #PlayerName# agrees, right!"
   - split: 6
     text: "我正要去街上闲逛，#PlayerName#若是想来的话就同去吧"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "I'm heading to the street to take a leisurely stroll. If #PlayerName# wants to come, feel free to join me."
   - split: 7
     text: "#PlayerName#来的正好，难得浮生偷闲，快随我同去痛饮几杯！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, you come at the perfect time. It's rare for me to find a moment to relax. Come, let's go enjoy some drinks together!"
   - split: 8
     text: "听说城中名伶正登台唱戏，#PlayerName#何不随我去听几首小曲，快活快活？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Heard the famous performer is on stage singing plays. Why not come with me, #PlayerName#, and listen to a few tunes for some merriment?"
   - split: 9
     text: "若是一事不能增进武艺或谋取利益，我便万万不愿去做"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "If it cannot improve my martial arts or bring any benefit, I would never do it."
   - split: 10
     text: "我已习惯独来独往，#PlayerName#若是无事，还望别来打扰。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "I am accustomed to wandering alone; #PlayerName#, if you have no business, please do not disturb me."
 - raw: "评价武功,#PlayerName#你这招是如何使出的，快和我说道说道。,#PlayerName#武功与我相比孰强孰弱，早晚要分个高下才是！,#PlayerName#武功灵巧有余，若能增加一些踏实稳重便再好不过了,#PlayerName#若在武学上有疑惑不解之处，只管来问我便是,#PlayerName#近日武功可有精进？,#PlayerName#武功稳重有余，若能增加一些灵活巧变便再好不过了,#PlayerName#武功进步神速，只怕早晚要把我远远甩开。,每日练武练武，真是烦煞人也！,#PlayerName#武功虽时有进步，但还是一眼就能看出诸多破绽之处。,#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
   splits:
-  - split: 0
-    text: "评价武功"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "评价武功"
+    translated: "Assess martial arts skill"
   - split: 1
     text: "#PlayerName#你这招是如何使出的，快和我说道说道。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, how did you learn this technique? Spill the beans and tell me about it quickly."
   - split: 2
     text: "#PlayerName#武功与我相比孰强孰弱，早晚要分个高下才是！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName's martial arts ability is stronger or weaker than mine, and we will eventually determine who is superior!"
   - split: 3
     text: "#PlayerName#武功灵巧有余，若能增加一些踏实稳重便再好不过了"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName's martial arts are agile and clever, but would benefit from some added steadiness and solidity."
   - split: 4
     text: "#PlayerName#若在武学上有疑惑不解之处，只管来问我便是"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, if you have any doubts about martial arts, feel free to ask me."
   - split: 5
     text: "#PlayerName#近日武功可有精进？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, have you made any progress in your martial arts lately?"
   - split: 6
     text: "#PlayerName#武功稳重有余，若能增加一些灵活巧变便再好不过了"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "PlayerName's martial arts are solid and steady, but would be even better with some added flexibility and wisdom changes."
   - split: 7
     text: "#PlayerName#武功进步神速，只怕早晚要把我远远甩开。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "PlayerName's martial arts skill can rapidly increase, so they might eventually leave me far behind."
   - split: 8
     text: "每日练武练武，真是烦煞人也！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Daily training in martial arts truly drives me mad!"
   - split: 9
     text: "#PlayerName#武功虽时有进步，但还是一眼就能看出诸多破绽之处。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName's# martial arts have shown some improvement, but there are still numerous flaws that can be easily spotted."
   - split: 10
     text: "#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "If my martial arts doesn't improve, I might be left far behind."
 - raw: "日常见面,#PlayerName#？抱歉我心有所思，没注意到你。,#PlayerName#我们有几日未见了？容我好好回忆回忆。,不知#PlayerName#寻我有何贵干？,#PlayerName#若有我帮得上忙的地方，只管吩咐。,#PlayerName#别来无恙？,真巧，我正要离开此处，便遇到了#PlayerName#你。,#PlayerName#你我又见面了，算不算是缘分使然？,#PlayerName#几日不见，风采依旧啊！,#PlayerName#前来寻我，只怕是有事相求？,#PlayerName#有话快说吧，我还有要事在身。"
   splits:
-  - split: 0
-    text: "日常见面"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "日常见面"
+    translated: "Daily greeting"
   - split: 1
     text: "#PlayerName#？抱歉我心有所思，没注意到你。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#? Sorry, I was lost in thought and didn't notice you."
   - split: 2
     text: "#PlayerName#我们有几日未见了？容我好好回忆回忆。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, we haven't seen each other in a few days, I need some time to recall."
   - split: 3
     text: "不知#PlayerName#寻我有何贵干？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "I don't know what #PlayerName# wants from me."
   - split: 4
     text: "#PlayerName#若有我帮得上忙的地方，只管吩咐。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, if there's anything I can help with, just let me know."
   - split: 5
     text: "#PlayerName#别来无恙？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, how have you been?"
   - split: 6
     text: "真巧，我正要离开此处，便遇到了#PlayerName#你。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Coincidentally, I was just about to leave when I ran into {PlayerName} here."
   - split: 7
     text: "#PlayerName#你我又见面了，算不算是缘分使然？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, we've met again. Could it be due to fate?"
   - split: 8
     text: "#PlayerName#几日不见，风采依旧啊！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, several days have passed yet you still look the same!"
   - split: 9
     text: "#PlayerName#前来寻我，只怕是有事相求？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName# came to find me, fearing there might be something he wishes to ask of me?"
   - split: 10
     text: "#PlayerName#有话快说吧，我还有要事在身。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "#PlayerName#, get to the point. I have important matters to attend to."
 - raw: "诗词歌赋,击筑复击筑，欲歌双泪横。宝刀重如命，命如鸿毛轻。,日出扶桑一丈高，人间万事细如毛。野夫怒见不平事，磨损胸中万古刀。,滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。,士卒涂草莽，将军空尔为。乃知兵者是凶器，圣人不得已而用之。,十年磨一剑，霜刃未曾试。今日把示君，谁有不平事？,贵逼人来不自由，龙翔凤翥势难收。满堂花醉三千客，一剑霜寒十四州。,人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。,名花倾国两相欢，长得君王带笑看。解释春风无限恨，沉香亭北倚阑干。,飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。,十步杀一人，千里不留行。事了拂衣去，深藏身与名。"
   splits:
-  - split: 0
-    text: "诗词歌赋"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "诗词歌赋"
+    translated: "Poetry and verse"
   - split: 1
     text: "击筑复击筑，欲歌双泪横。宝刀重如命，命如鸿毛轻。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Striking the zhu again and again, tears well up as I sing. My precious blade weighs like a life, while life is as light as goose down."
   - split: 2
     text: "日出扶桑一丈高，人间万事细如毛。野夫怒见不平事，磨损胸中万古刀。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "The sun rises in Su Feng at ten feet high,   Man's affairs are as fine as hair.   Furrowed by rage at unjust deeds,   My chest wears down the ancient blade within me."
   - split: 3
     text: "滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "The Yangtze flows on to the east, washing away heroes. Gains and losses turn to nothing; green mountains remain, as do several settings of sunset."
   - split: 4
     text: "士卒涂草莽，将军空尔为。乃知兵者是凶器，圣人不得已而用之。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Soldiers lie amid the grass and weeds, while generals vainly act. Thus it is known that weapons are instruments of evil; sages use them only when compelled."
   - split: 5
     text: "十年磨一剑，霜刃未曾试。今日把示君，谁有不平事？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ten years to sharpen one sword; its frosty edge has yet to be tested. Today I show it to you, who has the grievances yet unrighted?"
   - split: 6
     text: "贵逼人来不自由，龙翔凤翥势难收。满堂花醉三千客，一剑霜寒十四州。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
   - split: 7
     text: "人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Life is short; make the most of it by rejoicing. Do not let golden goblets remain empty under the moon. Heaven endowed me with talents that must serve some purpose; even if I spend a thousand gold pieces, they will come back to me."
   - split: 8
     text: "名花倾国两相欢，长得君王带笑看。解释春风无限恨，沉香亭北倚阑干。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
   - split: 9
     text: "飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
   - split: 10
     text: "十步杀一人，千里不留行。事了拂衣去，深藏身与名。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ten steps to kill one man, a thousand miles go unimpeded. After matters are resolved, I depart quietly, hiding my presence and name."
 - raw: "为人处世,能够不断精进武艺，磨炼心性，实在是人生一大乐事。,即便穷极此生，也要追寻武学之至高境界。,江湖中人需得处处小心谨慎，行差踏错一步，就可能招来杀身之祸。,得道多助，失道寡助，行走江湖还需以道义为重。,在乱世中能够平平淡淡，无病无灾，便已是大幸了。,自由自在，来去如风的江湖生活，怎能不令人心驰神往？,什么皇图霸业，不过几杯浊酒，三两笑谈罢了。,人生在世数十载，弹指一挥间，还是应当及时行乐才是。,宁教我负天下人，休教天下人负我。,与我为敌之人，自是应当赶尽杀绝才是。"
   splits:
-  - split: 0
-    text: "为人处世"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "为人处世"
+    translated: "Mannerly behavior"
   - split: 1
     text: "能够不断精进武艺，磨炼心性，实在是人生一大乐事。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "To constantly refine one's martial arts and temper one's spirit is truly a great joy in life."
   - split: 2
     text: "即便穷极此生，也要追寻武学之至高境界。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Even if this life is impoverished, one must strive for the pinnacle of martial arts."
   - split: 3
     text: "江湖中人需得处处小心谨慎，行差踏错一步，就可能招来杀身之祸。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In the Jianghu, one must be constantly careful and cautious; a single misstep could bring about fatal trouble."
   - split: 4
     text: "得道多助，失道寡助，行走江湖还需以道义为重。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Those who follow the way gain many helpers, while those who do not lose most. Thus, traveling in the Jianghu means prioritizing righteousness."
   - split: 5
     text: "在乱世中能够平平淡淡，无病无灾，便已是大幸了。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In times of chaos, to live calmly without suffering is already a great blessing."
   - split: 6
     text: "自由自在，来去如风的江湖生活，怎能不令人心驰神往？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "The carefree life of the Jianghu, moving like the wind, how could it not captivate the heart?"
   - split: 7
     text: "什么皇图霸业，不过几杯浊酒，三两笑谈罢了。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "What grand ambitions and dominions are but a few cups of murky wine and casual conversations?"
   - split: 8
     text: "人生在世数十载，弹指一挥间，还是应当及时行乐才是。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Life in this world is but a dozen decades, a blink of an eye. It's best to enjoy oneself while one can."
   - split: 9
     text: "宁教我负天下人，休教天下人负我。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Better that I betray all under heaven than that all under heaven betray me."
   - split: 10
     text: "与我为敌之人，自是应当赶尽杀绝才是。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Those who oppose me should be hunted down and destroyed without mercy."
 - raw: "对待朋友,人生在世，能得一两知己，便已足够。,君子一诺值千金，对待朋友必当生死相依，不离不弃。,知人知面不知心，在结交朋友时，也应当思量三分，不可率性而为。,对待朋友应当肝胆相照，毫无保留，#PlayerName#想必也如此认为。,对待他人若是真心实意，他人自然也会以真心回报。,缘起相聚，缘散别离，江湖中人身若浮萍，无外如是。,不论正邪贵贱，男女老少，只要能共饮三杯，便是朋友一场。,窈窕淑女，君子好逑，如此风雅之事，又何罪之有？,若没有利用价值，这样的朋友不如不交。,江湖中所谓知己好友，大多是酒肉之交，相互利用罢了。"
   splits:
-  - split: 0
-    text: "对待朋友"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "对待朋友"
+    translated: "Treat friends"
   - split: 1
     text: "人生在世，能得一两知己，便已足够。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In this life, to have one or two true friends is enough."
   - split: 2
     text: "君子一诺值千金，对待朋友必当生死相依，不离不弃。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A gentleman's word is worth a thousand gold, so one must be willing to stake life and death for friends, never leaving their side."
   - split: 3
     text: "知人知面不知心，在结交朋友时，也应当思量三分，不可率性而为。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A man may know another by his face but not by his heart; when making friends, one should consider things carefully and not act on impulse."
   - split: 4
     text: "对待朋友应当肝胆相照，毫无保留，#PlayerName#想必也如此认为。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Treating friends with openness and honesty, without reservation, #PlayerName# must believe in the same way."
   - split: 5
     text: "对待他人若是真心实意，他人自然也会以真心回报。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Treat others with sincerity, and they will naturally return your sincerity in kind."
   - split: 6
     text: "缘起相聚，缘散别离，江湖中人身若浮萍，无外如是。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Meeting in the Jianghu, parting as its tides ebb and flow. In the world of men here, lives are like floating waterplants, ever thus."
   - split: 7
     text: "不论正邪贵贱，男女老少，只要能共饮三杯，便是朋友一场。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "No matter whether one is good or evil, noble or humble, young or old, as long as you can share three drinks together, you are friends for life."
   - split: 8
     text: "窈窕淑女，君子好逑，如此风雅之事，又何罪之有？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "A gentleman admires the virtuous and graceful lady‑what crime is there in such refined pursuits?"
   - split: 9
     text: "若没有利用价值，这样的朋友不如不交。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "If such a friend has no utilitarian value, it's better not to have them."
   - split: 10
     text: "江湖中所谓知己好友，大多是酒肉之交，相互利用罢了。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In the Jianghu, so‑called close friends are mostly acquaintances who use each other for their own benefit."
 - raw: "对待仇敌,兵来将挡，水来土掩，若有人与我为敌，我便要与他分个高下。,冤家自是宜解不宜结，但一旦结下，便定要赶尽杀绝。,行走江湖，危机四伏，还是不要与人轻易结下仇怨为妙。,江湖中人以和为贵，若能化敌为友，化干戈为玉帛，岂不是美事一桩！,以德报怨，何以报德。对待为敌之人，不能心慈手软。,若遇到仇家上门，打得过就打，打不过只管逃跑便是。,往事如烟，去日苦多，没有什么仇怨是不能化解的。,遇上仇家，我自然要啐上他两口唾沫，方能一解心头之恨,天下熙熙，皆为利来，没有永远的敌友，只有永远的利益。,若有人敢与我为敌，我定要叫他后悔终生"
   splits:
-  - split: 0
-    text: "对待仇敌"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "对待仇敌"
+    translated: "Deal with enemies"
   - split: 1
     text: "兵来将挡，水来土掩，若有人与我为敌，我便要与他分个高下。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "When soldiers come, generals will meet them; when water comes, soil will contain it. If someone opposes me, I shall see him through to the end and determine who is superior."
   - split: 2
     text: "冤家自是宜解不宜结，但一旦结下，便定要赶尽杀绝。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Enemies should be resolved rather than harbored. But once they are entrenched, one must root them out completely."
   - split: 3
     text: "行走江湖，危机四伏，还是不要与人轻易结下仇怨为妙。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Travelling through the Jianghu, dangers lurk everywhere, so it's best not to easily incur enmity with others."
   - split: 4
     text: "江湖中人以和为贵，若能化敌为友，化干戈为玉帛，岂不是美事一桩！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "People in the Jianghu value harmony above all. If one could turn enemies into friends and weapons into jade, would that not be a splendid affair!"
   - split: 5
     text: "以德报怨，何以报德。对待为敌之人，不能心慈手软。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "To forgive those who wrong us is well and good, but how do we repay those who have been kind? We must not show mercy to our enemies."
   - split: 6
     text: "若遇到仇家上门，打得过就打，打不过只管逃跑便是。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "If enemies come looking for trouble, fight back if you can; if not, just run away."
   - split: 7
     text: "往事如烟，去日苦多，没有什么仇怨是不能化解的。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Past sorrows like smoke; many days have passed with much hardship. There is nothing in grievance that cannot be resolved."
   - split: 8
     text: "遇上仇家，我自然要啐上他两口唾沫，方能一解心头之恨"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Encountering an enemy, I naturally have to spit on him twice to satisfy my resentment."
   - split: 9
     text: "天下熙熙，皆为利来，没有永远的敌友，只有永远的利益。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "All comers to this world seek gain, for there are no eternal enemies or allies; only everlasting benefits."
   - split: 10
     text: "若有人敢与我为敌，我定要叫他后悔终生"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "If anyone dares to oppose me, I will make them regret it for the rest of their life."
 - raw: "评价江湖,江湖纷扰，不过乱花迷人眼，修炼自身的武功心性，才是求真之道。,只要日夜苦练，百折不挠，定能在江湖上闯出一番名头！,江湖险恶，其中魑魅魍魉甚众，#PlayerName#还要多加小心啊。,若人人贯彻仁义之道，江湖也定能成为一方乐土。,江湖世事，纷乱繁杂，每每想到都令我头疼不已。,江湖风云，诡谲多变，唯有顺势而动，方能立于不败之地。,天下英雄出我辈，一入江湖岁月催，不知这乱世之中，最终几人成名，几人饮恨。,那些循规蹈矩，迂腐无趣的江湖大侠，却又偏偏好为人师，实在令人避之不及。,江湖中人多有侠义之名，可又有几人真能大公无私，行侠义之实呢？,时无英雄，使竖子成名，当下江湖所谓名门高手，实则大多酒囊饭袋而已。"
   splits:
-  - split: 0
-    text: "评价江湖"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+  - text: "评价江湖"
+    translated: "Rate the Jianghu"
   - split: 1
     text: "江湖纷扰，不过乱花迷人眼，修炼自身的武功心性，才是求真之道。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Tumult in the Jianghu is but a distraction. The true path lies in refining one's martial arts and inner nature."
   - split: 2
     text: "只要日夜苦练，百折不挠，定能在江湖上闯出一番名头！"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Only through diligent practice day and night, never giving up, can one certainly make a name for oneself in the Jianghu!"
   - split: 3
     text: "江湖险恶，其中魑魅魍魉甚众，#PlayerName#还要多加小心啊。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Jianghu is perilous, with many demons and evil spirits lurking around. #PlayerName#, you should be even more cautious."
   - split: 4
     text: "若人人贯彻仁义之道，江湖也定能成为一方乐土。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "If everyone upholds the way of benevolence and righteousness, the Jianghu can surely become a land of peace."
   - split: 5
     text: "江湖世事，纷乱繁杂，每每想到都令我头疼不已。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Jianghu affairs are complex and chaotic, causing me nothing but headaches whenever I think about them."
   - split: 6
     text: "江湖风云，诡谲多变，唯有顺势而动，方能立于不败之地。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "The Jianghu is full of unpredictable changes; they must adapt accordingly to remain unbeaten."
   - split: 7
     text: "天下英雄出我辈，一入江湖岁月催，不知这乱世之中，最终几人成名，几人饮恨。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Heroes of the world arise in our age; upon entering the Jianghu, time presses on. Who knows in this chaotic world, how many will achieve fame, and how many will end in sorrow."
   - split: 8
     text: "那些循规蹈矩，迂腐无趣的江湖大侠，却又偏偏好为人师，实在令人避之不及。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Those rigid and boring Great Heroes of the Jianghu who insist on being teachers to others are truly best avoided."
   - split: 9
     text: "江湖中人多有侠义之名，可又有几人真能大公无私，行侠义之实呢？"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "People in the Jianghu are often known for their righteous names, but how many truly act with complete selflessness and real acts of chivalry?"
   - split: 10
     text: "时无英雄，使竖子成名，当下江湖所谓名门高手，实则大多酒囊饭袋而已。"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "When there are no heroes in the world, it allows upstarts to gain fame. In truth, most of the so‑called high‑ranking experts in today's Jianghu are little more than wine bellies and gluttons."

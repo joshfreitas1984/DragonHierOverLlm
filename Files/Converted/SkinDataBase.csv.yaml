@@ -2,527 +2,263 @@
   splits:
   - split: 1
     text: "名字"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Name"
   - split: 2
     text: "加成效果"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Bonus effect"
 - raw: "-10,邪道服,伤害0.02,-1"
   splits:
   - split: 1
     text: "邪道服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Netherway Garment"
   - split: 2
     text: "伤害0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Damage 0.02"
 - raw: "-9,杀手服,速度0.02,-1"
   splits:
   - split: 1
     text: "杀手服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Assassin's outfit"
   - split: 2
     text: "速度0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Speed 0.02"
 - raw: "-8,强盗服,暴击0.02,-1"
   splits:
   - split: 1
     text: "强盗服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Bandit's clothes"
   - split: 2
     text: "暴击0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Critical hit 0.02"
 - raw: "-7,游侠服,命中0.02,-1"
   splits:
   - split: 1
     text: "游侠服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ranger's outfit"
   - split: 2
     text: "命中0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Hit Rate 0.02"
 - raw: "-6,才子服,学识4,-1"
   splits:
   - split: 1
     text: "才子服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Scholarly Attire"
   - split: 2
     text: "学识4"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Knowledge of 4"
 - raw: "-5,官差服,压制0.02,-1"
   splits:
   - split: 1
     text: "官差服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Official uniform"
   - split: 2
     text: "压制0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Suppress 0.02"
 - raw: "-4,杂役服,采伐4,-1"
   splits:
   - split: 1
     text: "杂役服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Labour uniform"
   - split: 2
     text: "采伐4"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Felling 4"
 - raw: "-3,商人服,口才4,-1"
   splits:
   - split: 1
     text: "商人服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Trader's outfit"
   - split: 2
     text: "口才4"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "4 charisma"
 - raw: "-2,农民服,木植4,-1"
   splits:
   - split: 1
     text: "农民服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Farmer's outfit"
   - split: 2
     text: "木植4"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Tree Plant 4"
 - raw: "-1,常服,经验获取0.02,-1"
   splits:
   - split: 1
     text: "常服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Daily attire"
   - split: 2
     text: "经验获取0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Experience gained from 0.02"
 - raw: "0,锦袍,意志2,-1"
   splits:
   - split: 1
     text: "锦袍"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Brocade robe"
   - split: 2
     text: "意志2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "2_will_"
 - raw: "1,夜行衣,射术2,-1"
   splits:
   - split: 1
     text: "夜行衣"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Night travel robe"
   - split: 2
     text: "射术2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Archery 2"
 - raw: "2,医袍,医术4,-1"
   splits:
   - split: 1
     text: "医袍"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Doctor's robe"
   - split: 2
     text: "医术4"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Medical skill 4"
 - raw: "3,百衲衣,拳掌2,-1"
   splits:
   - split: 1
     text: "百衲衣"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Patchwork robe"
   - split: 2
     text: "拳掌2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Fist and Palm 2"
 - raw: "4,戎装,长兵2,-1"
   splits:
   - split: 1
     text: "戎装"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Uniform"
   - split: 2
     text: "长兵2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Long Sword 2"
 - raw: "5,法服,智力2,-1"
   splits:
   - split: 1
     text: "法服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Clerical attire"
   - split: 2
     text: "智力2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Intellect 2"
 - raw: "6,甲胄,护甲1,-1"
   splits:
   - split: 1
     text: "甲胄"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Armor"
   - split: 2
     text: "护甲1"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Armor 1"
 - raw: "7,避毒服,毒术4,-1"
   splits:
   - split: 1
     text: "避毒服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Poison‑proof suit"
   - split: 2
     text: "毒术4"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Poison Technique 4"
 - raw: "8,铁衣,力道2,-1"
   splits:
   - split: 1
     text: "铁衣"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Iron Clothes"
   - split: 2
     text: "力道2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Strength 2"
 - raw: "9,襕衫,闪避0.02,-1"
   splits:
   - split: 1
     text: "襕衫"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Robe"
   - split: 2
     text: "闪避0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Dodge 0.02"
 - raw: "10,袈裟,体质2,-1"
   splits:
   - split: 1
     text: "袈裟"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Robe"
   - split: 2
     text: "体质2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "2 stamina"
 - raw: "11,道袍,内功2,-1"
   splits:
   - split: 1
     text: "道袍"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Dao robe"
   - split: 2
     text: "内功2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Neigong 2"
 - raw: "12,胡裘,刀法2,-1"
   splits:
   - split: 1
     text: "胡裘"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Fur coat"
   - split: 2
     text: "刀法2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Blade Technique 2"
 - raw: "13,鹤氅,剑法2,-1"
   splits:
   - split: 1
     text: "鹤氅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Heron cloak"
   - split: 2
     text: "剑法2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Sword Technique 2"
 - raw: "14,瑶衣,轻功2,-1"
   splits:
   - split: 1
     text: "瑶衣"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Yao yi"
   - split: 2
     text: "轻功2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Lightness 2"
 - raw: "15,奇装,奇门2,-1"
   splits:
   - split: 1
     text: "奇装"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Odd attire"
   - split: 2
     text: "奇门2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Mystic 2"
 - raw: "16,匠服,灵巧2,-1"
   splits:
   - split: 1
     text: "匠服"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Craftsman's robe"
   - split: 2
     text: "灵巧2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Agile 2"
 - raw: "17,火浣布,锻造4,-1"
   splits:
   - split: 1
     text: "火浣布"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Fire‑borne cloth"
   - split: 2
     text: "锻造4"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Forge 4"
 - raw: "18,羌姆袍,绝技2,-1"
   splits:
   - split: 1
     text: "羌姆袍"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Kham Pao"
   - split: 2
     text: "绝技2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ultimate Technique 2"
 - raw: "19,貂裘,经脉2,-1"
   splits:
   - split: 1
     text: "貂裘"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Fur coat"
   - split: 2
     text: "经脉2"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Meridian 2"
 - raw: "-100,白马红妆,伤害0.02,0"
   splits:
   - split: 1
     text: "白马红妆"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "White Horse, Red Makeup"
   - split: 2
     text: "伤害0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Damage 0.02"
 - raw: "-101,风起青萍,速度0.02,0"
   splits:
   - split: 1
     text: "风起青萍"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Breeze Ruffles the Green Rushgrass"
   - split: 2
     text: "速度0.02"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Speed 0.02"

@@ -2,675 +2,331 @@
   splits:
   - split: 1
     text: "名称"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Name"
   - split: 2
     text: "描述"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Description"
   - split: 3
     text: "等级"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Level"
   - split: 4
     text: "生命"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Health"
   - split: 5
     text: "生命上限"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Health points"
   - split: 6
     text: "内力"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Inner Power"
   - split: 7
     text: "内力上限"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Inner Power Cap"
   - split: 8
     text: "体力"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Strength"
   - split: 9
     text: "外伤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "External Injury"
   - split: 10
     text: "内伤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Internal Injury"
   - split: 11
     text: "中毒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Poisoned"
   - split: 13
     text: "价值"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Value"
   - split: 14
     text: "小类"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Sub‑category"
   - split: 15
     text: "审核名"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Review Name"
 - raw: "0,腊八粥,,0,0,1,0,0,0,0,0,0,0,100,0,无"
   splits:
   - split: 1
     text: "腊八粥"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Eight Treasure Porridge"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "1,炖老母鸡,,1,0,2,0,0,0,0,0,0,0,200,0,无"
   splits:
   - split: 1
     text: "炖老母鸡"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Slow‑cooked old hen"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "2,天麻鱼头,,2,0,4,0,0,0,0,0,0,0,400,0,无"
   splits:
   - split: 1
     text: "天麻鱼头"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Tianma Fish Head"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "3,沙苑甲鱼汤,,3,0,6,0,0,0,0,0,0,0,800,0,无"
   splits:
   - split: 1
     text: "沙苑甲鱼汤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Shayuan Soft‑Shelled Turtle Soup"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "4,参茸熊掌,,4,0,8,0,0,0,0,0,0,0,1600,0,无"
   splits:
   - split: 1
     text: "参茸熊掌"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ginseng Deer Antler Bear Paw"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "5,十全大补汤,,5,0,10,0,0,0,0,0,0,0,3200,0,无"
   splits:
   - split: 1
     text: "十全大补汤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Decocted Decoction of All‑Nourishing Herbs"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "6,雄黄酒,,0,0,0,0,2,0,0,0,0,0,100,1,乌龙茶"
   splits:
   - split: 1
     text: "雄黄酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Yellow rice wine"
   - split: 15
     text: "乌龙茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Oolong tea"
 - raw: "7,蛇酒,,1,0,0,0,4,0,0,0,0,0,200,1,肉桂茶"
   splits:
   - split: 1
     text: "蛇酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Wine made from snake meat"
   - split: 15
     text: "肉桂茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cinnamon tea"
 - raw: "8,三鞭酒,,2,0,0,0,8,0,0,0,0,0,400,1,铁观音茶"
   splits:
   - split: 1
     text: "三鞭酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Three‑horn liquor"
   - split: 15
     text: "铁观音茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Tieguanyin tea"
 - raw: "9,鹿胎酒,,3,0,0,0,12,0,0,0,0,0,800,1,白牡丹茶"
   splits:
   - split: 1
     text: "鹿胎酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Fetus alcohol"
   - split: 15
     text: "白牡丹茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "White Peony Tea"
 - raw: "10,虎骨酒,,4,0,0,0,16,0,0,0,0,0,1600,1,大红袍茶"
   splits:
   - split: 1
     text: "虎骨酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Tiger Bone Wine"
   - split: 15
     text: "大红袍茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Big Red Robe Tea"
 - raw: "11,龙脑酒,,5,0,0,0,20,0,0,0,0,0,3200,1,凤凰水仙茶"
   splits:
   - split: 1
     text: "龙脑酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Dragon Brain Wine"
   - split: 15
     text: "凤凰水仙茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Phoenix Dianhua Tea"
 - raw: "12,烧饼,,0,0,0,0,0,20,0,0,0,0,25,0,无"
   splits:
   - split: 1
     text: "烧饼"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Pancake"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "13,肉包,,1,0,0,0,0,30,0,0,0,0,50,0,无"
   splits:
   - split: 1
     text: "肉包"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Meat bun"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "14,煎饺,,2,0,0,0,0,40,0,0,0,0,100,0,无"
   splits:
   - split: 1
     text: "煎饺"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Pan‑fried dumplings"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "15,烧鸡,,3,0,0,0,0,60,0,0,0,0,200,0,无"
   splits:
   - split: 1
     text: "烧鸡"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Roast chicken"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "16,红烧肉,,4,0,0,0,0,80,0,0,0,0,400,0,无"
   splits:
   - split: 1
     text: "红烧肉"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Braised pork"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "17,乳猪,,5,0,0,0,0,100,0,0,0,0,800,0,无"
   splits:
   - split: 1
     text: "乳猪"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Roast suckling pig"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "18,浊酒,,0,0,0,0,0,10,0,0,0,1,50,1,绿茶"
   splits:
   - split: 1
     text: "浊酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Dregs wine"
   - split: 15
     text: "绿茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Green tea"
 - raw: "19,烧刀子,,1,0,0,0,0,15,0,0,0,2,100,1,龙井茶"
   splits:
   - split: 1
     text: "烧刀子"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Burn Blade"
   - split: 15
     text: "龙井茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "West Lake Longjing tea"
 - raw: "20,竹叶青,,2,0,0,0,0,20,0,0,0,3,200,1,碧螺春茶"
   splits:
   - split: 1
     text: "竹叶青"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Bamboo Leaf Tea"
   - split: 15
     text: "碧螺春茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Biluochun tea"
 - raw: "21,葡萄酒,,3,0,0,0,0,30,0,0,0,4,400,1,毛峰茶"
   splits:
   - split: 1
     text: "葡萄酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Grape Wine"
   - split: 15
     text: "毛峰茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Mao Feng tea"
 - raw: "22,新丰酒,,4,0,0,0,0,40,0,0,0,5,800,1,云雾茶"
   splits:
   - split: 1
     text: "新丰酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "New Harvest Wine"
   - split: 15
     text: "云雾茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cloud Mist Tea"
 - raw: "23,杜康酒,,5,0,0,0,0,50,0,0,0,6,1600,1,太平猴魁茶"
   splits:
   - split: 1
     text: "杜康酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Dukang Wine"
   - split: 15
     text: "太平猴魁茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Taiping Houkui tea"
 - raw: "24,桂圆枸杞粥,,0,10,0,0,0,0,0,0,0,1,50,0,无"
   splits:
   - split: 1
     text: "桂圆枸杞粥"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Longan and Goji Berry Porridge"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "25,茯苓糕,,1,20,0,0,0,0,0,0,0,2,100,0,无"
   splits:
   - split: 1
     text: "茯苓糕"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Poria Pudding"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "26,当归炖羊肉,,2,40,0,0,0,0,0,0,0,3,200,0,无"
   splits:
   - split: 1
     text: "当归炖羊肉"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Chinese Angelica and Lamb Soup"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "27,虫草老鸭煲,,3,60,0,0,0,0,0,0,0,4,400,0,无"
   splits:
   - split: 1
     text: "虫草老鸭煲"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Abalone and Cordyceps Soup"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "28,四君子汤,,4,80,0,0,0,0,0,0,0,5,800,0,无"
   splits:
   - split: 1
     text: "四君子汤"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Four Gentlemen Decoction"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "29,烩八珍,,5,100,0,0,0,0,0,0,0,6,1600,0,无"
   splits:
   - split: 1
     text: "烩八珍"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Stewed eight delicacies"
   - split: 15
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "30,清酒,,0,0,0,20,0,0,0,0,0,1,50,1,红茶"
   splits:
   - split: 1
     text: "清酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Rice wine"
   - split: 15
     text: "红茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Black tea"
 - raw: "31,花雕酒,,1,0,0,40,0,0,0,0,0,2,100,1,工夫茶"
   splits:
   - split: 1
     text: "花雕酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Shanghu Fortified Wine"
   - split: 15
     text: "工夫茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Afternoon Tea"
 - raw: "32,女儿红,,2,0,0,80,0,0,0,0,0,3,200,1,古树茶"
   splits:
   - split: 1
     text: "女儿红"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Red Daughter Wine"
   - split: 15
     text: "古树茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ancient tree tea"
 - raw: "33,桑落酒,,3,0,0,120,0,0,0,0,0,4,400,1,九曲红梅茶"
   splits:
   - split: 1
     text: "桑落酒"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Dew Fallen Wine"
   - split: 15
     text: "九曲红梅茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Nine Bends Crimson Cherry Tea"
 - raw: "34,猴儿酿,,4,0,0,160,0,0,0,0,0,5,800,1,金骏眉茶"
   splits:
   - split: 1
     text: "猴儿酿"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Monkey brew"
   - split: 15
     text: "金骏眉茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Golden Monkey Tea"
 - raw: "35,换骨醪,,5,0,0,200,0,0,0,0,0,6,1600,1,正山小种茶"
   splits:
   - split: 1
     text: "换骨醪"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Bone‑Transforming Decoction"
   - split: 15
     text: "正山小种茶"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Zhengshan Xiazhong tea"

@@ -13,8 +13,8 @@ glossaryPreset:
   usePresetChineseGlossary: true
   chineseGlossaryTypesToSupress:
     - Phonetics
-retryCount: 4
-batchSize: 20000
+retryCount: 0
+batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true
 translateFlagged: true

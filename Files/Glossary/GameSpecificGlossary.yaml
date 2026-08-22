@@ -1,1 +1,681 @@
 ﻿# Names, Locations, Moves, etc
+
+# Locations
+- raw: 京城
+  result: Capital
+- raw: 杭州
+  result: Hangzhou
+- raw: 福州
+  result: Fuzhou
+- raw: 大理
+  result: Dali
+- raw: 幽州
+  result: Youzhou
+- raw: 晋阳
+  result: Jinyang
+- raw: 成都
+  result: Chengdu
+- raw: 西凉
+  result: Xiliang
+- raw: 江陵
+  result: Jiangling
+- raw: 扬州
+  result: Yangzhou
+- raw: 乐山镇
+  result: Leshan Town
+- raw: 太平乡
+  result: Taiping Township
+- raw: 剑川镇
+  result: Jianchuan Town
+- raw: 清远乡
+  result: Qingyuan Township
+- raw: 富阳镇
+  result: Fuyang Town
+- raw: 那曲乡
+  result: Nagqu Township
+- raw: 玉溪村
+  result: Yuxi Village
+- raw: 灵台村
+  result: Lingtai Village
+- raw: 酒泉村
+  result: Jiuquan Village
+- raw: 陇西县
+  result: Longxi County
+- raw: 河内乡
+  result: Hanoi Township
+- raw: 昌都镇
+  result: Qamdo Town
+- raw: 巴陵村
+  result: Baling Village
+- raw: 怀柔村
+  result: Huairou Village
+- raw: 当涂镇
+  result: Dangtu Town
+- raw: 高邮镇
+  result: Gaoyou Town
+- raw: 宁化乡
+  result: Ninghua Township
+- raw: 襄垣村
+  result: Xiangyuan Village
+- raw: 武邑乡
+  result: Wuyi Township
+- raw: 云梦乡
+  result: Yunmeng Township
+
+- raw: 长乐帮
+  result: Changle Gang
+# - raw: 唐门
+#   result: Tang Clan
+- raw: 药王谷
+  result: Medicine King Valley
+# - raw: 丐帮
+#   result: Beggar Gang
+- raw: 飞龙门
+  result: Flying Dragon Gate
+- raw: 茅山派
+  result: Maoshan Sect
+- raw: 铸剑山庄
+  result: Swordforging Manor
+- raw: 五毒教
+  result: Five Poisons Sect
+- raw: 阎罗殿
+  result: Yama Hall
+- raw: 大隐阁
+  result: Great Hidden Pavilion
+- raw: 少林寺
+  result: Shaolin Temple
+- raw: 武当派
+  result: Wudang Sect
+- raw: 霸刀门
+  result: Tyrant Blade Sect
+- raw: 蓬莱派
+  result: Penglai Sect
+- raw: 峨眉派
+  result: Emei Sect
+- raw: 崆峒派
+  result: Kongtong Sect
+- raw: 神机门
+  result: Divine Mechanism Sect
+- raw: 霹雳堂
+  result: Thunderclap Hall
+- raw: 金刚密宗
+  result: Vajrayana Sect
+- raw: 天山派
+  result: Tianshan Sect
+- raw: 聚义门
+  result: Righteous Alliance Gate
+- raw: 黄河帮
+  result: Yellow River Gang
+- raw: 八卦门
+  result: Bagua Sect
+- raw: 海沙帮
+  result: Sea Sand Gang
+- raw: 铁掌帮
+  result: Iron Palm Gang
+- raw: 仙霞派
+  result: Xianxia Sect
+- raw: 巨鲸帮
+  result: Giant Whale Gang
+- raw: 金龙帮
+  result: Golden Dragon Gang
+- raw: 青城派
+  result: Qingcheng Sect
+- raw: 伏牛派
+  result: Funiu Sect
+
+- raw: 逻娑
+  result: Luosuo
+- raw: 朱仙镇
+  result: Zhuxian Town
+- raw: 景德镇
+  result: Jingdezhen
+- raw: 佛山镇
+  result: Foshan Town
+- raw: 腾冲府
+  result: Tengchong Prefecture
+- raw: 板桥镇
+  result: Banqiao Town
+- raw: 灵州
+  result: Lingzhou
+- raw: 应天
+  result: Yingtian
+- raw: 墨脱县
+  result: Motuo County
+- raw: 七里镇
+  result: Qili Town
+- raw: 永昌村
+  result: Yongchang Village
+- raw: 蚕丛村
+  result: Cancong Village
+- raw: 子午镇
+  result: Ziwu Town
+- raw: 章丘镇
+  result: Zhangqiu Town
+- raw: 威远村
+  result: Weiyuan Village
+- raw: 枫桥镇
+  result: Fengqiao Town
+- raw: 余杭镇
+  result: Yuhang Town
+- raw: 普洱村
+  result: Pu'er Village
+- raw: 扶胥镇
+  result: Fuxu Town
+
+# Chat Names
+- raw: 姜.映泉
+  result: Jiang Yingquan
+- raw: 陆.仁谦
+  result: Lu Renqian
+- raw: 魏.胥华
+  result: Wei Xuhua
+- raw: 余.采薇
+  result: Yu Caiwei
+- raw: 顾.游年
+  result: Gu Younian
+- raw: 沈.退
+  result: Shen Tui
+- raw: 姜.婉
+  result: Jiang Wan
+- raw: 杨.思迟
+  result: Yang Sichi
+- raw: 林.云裳
+  result: Lin Yunshang
+- raw: 乐.无疾
+  result: Yue Wuji
+- raw: 云.彩衣
+  result: Yun Caiyi
+- raw: 卢.玉麟
+  result: Lu Yulin
+- raw: 唐.逸影
+  result: Tang Yiying
+- raw: 唐.离
+  result: Tang Li
+- raw: 唐.嫣然
+  result: Tang Yanran
+- raw: 皇甫.青衫
+  result: Huangfu Qingshan
+- raw: 皇甫.斌
+  result: Huangfu Bin
+- raw: 朱.断岳
+  result: Zhu Duanyue
+- raw: 徐.不平
+  result: Xu Buping
+- raw: 赵.破虏
+  result: Zhao Polu
+- raw: 诸葛.伶
+  result: Zhuge Ling
+- raw: 南宫.瑶
+  result: Nangong Yao
+- raw: 葛.知远
+  result: Ge Zhiyuan
+- raw: 欧.长兵
+  result: Ou Changbing
+- raw: 祖.心炎
+  result: Zu Xinyan
+- raw: 龙.凤娥
+  result: Long Feng'e
+- raw: 龙.凝霜
+  result: Long Ningshuang
+- raw: 石.崇虎
+  result: Shi Chonghu
+- raw: 阎.罗王
+  result: Yan Luowang
+- raw: 崔.命官
+  result: Cui Mingguan
+- raw: 孟.婆娑
+  result: Meng Posuo
+- raw: 常.无黑
+  result: Chang Wuhei
+- raw: 常.无白
+  result: Chang Wubai
+- raw: 牛.头
+  result: Niu Tou
+- raw: 马.面
+  result: Ma Mian
+- raw: 道.无名
+  result: Dao Wuming
+- raw: 思.中澜
+  result: Si Zhonglan
+- raw: 姬.清梵
+  result: Ji Qingfan
+- raw: 空闻.大师
+  result: Kongwen Master
+- raw: 空见.大师
+  result: Kongjian Master
+- raw: 如是.大师
+  result: Rushi Master
+- raw: 张.青蓬
+  result: Zhang Qingpeng
+- raw: 张.文馨
+  result: Zhang Wenxin
+- raw: 宋.廉庭
+  result: Song Lianting
+- raw: 项.元霸
+  result: Xiang Yuanba
+- raw: 宇文.极
+  result: Yuwen Ji
+- raw: 吕.寻峰
+  result: Lü Xunfeng
+- raw: 庄.晓梦
+  result: Zhuang Xiaomeng
+- raw: 司马.德源
+  result: Sima Deyuan
+- raw: 李.潇湘
+  result: Li Xiaoxiang
+- raw: 白.云天
+  result: Bai Yuntian
+- raw: 曲.自封
+  result: Qu Zifeng
+- raw: 闻.惊鸿
+  result: Wen Jinghong
+- raw: 墨.璇玑
+  result: Mo Xuanji
+- raw: 墨.从义
+  result: Mo Congyi
+- raw: 雷.震天
+  result: Lei Zhentian
+- raw: 雷.冠群
+  result: Lei Guanqun
+- raw: 雷.彤
+  result: Lei Tong
+- raw: 转轮.法王
+  result: Zhuanlun Dharma King
+- raw: 金刚.法王
+  result: Jingang Dharma King
+- raw: 真言.法王
+  result: Zhenyan Dharma King
+- raw: 凌.北渊
+  result: Ling Beiyuan
+- raw: 云.九霄
+  result: Yun Jiuxiao
+- raw: 江.映寒
+  result: Jiang Yinghan
+- raw: 夏.天雄
+  result: Xia Tianxiong
+- raw: 叶.一鸣
+  result: Ye Yiming
+- raw: 韩.嵩
+  result: Han Song
+- raw: 陆.奇
+  result: Lu Qi
+- raw: 吕.子芳
+  result: Lü Zifang
+- raw: 公孙.防
+  result: Gongsun Fang
+- raw: 狄.坤
+  result: Di Kun
+- raw: 万.仞山
+  result: Wan Renshan
+- raw: 卓.远望
+  result: Zhuo Yuanwang
+- raw: 陆.离
+  result: Lu Li
+- raw: 卫.海川
+  result: Wei Haichuan
+- raw: 沈.蛟
+  result: Shen Jiao
+- raw: 上官.雯
+  result: Shangguan Wen
+- raw: 周.莫知
+  result: Zhou Mozhi
+- raw: 陌.田桑
+  result: Mo Tiansang
+- raw: 武.绝义
+  result: Wu Jueyi
+- raw: 黄.泉
+  result: Huang Quan
+- raw: 玉.观音
+  result: Yu Guanyin
+- raw: 雨.人屠
+  result: Yu Rentu
+- raw: 上官.凤
+  result: Shangguan Feng
+- raw: 计.心狂
+  result: Ji Xinkuang
+- raw: 慕容.星辰
+  result: Murong Xingchen
+- raw: 幽.冥
+  result: You Ming
+- raw: 魅.影
+  result: Mei Ying
+- raw: 血.刃
+  result: Xue Ren
+- raw: 残.阳
+  result: Can Yang
+- raw: 厉.苍穹
+  result: Li Cangqiong
+- raw: 迟.百城
+  result: Chi Baicheng
+- raw: 费.彬
+  result: Fei Bin
+- raw: 岳.无畏
+  result: Yue Wuwei
+- raw: 高.首
+  result: Gao Shou
+- raw: 王.彪
+  result: Wang Biao
+- raw: 马.悍
+  result: Ma Han
+- raw: 凤.南飞
+  result: Feng Nanfei
+- raw: 裘.龙
+  result: Qiu Long
+- raw: 张.成化
+  result: Zhang Chenghua
+- raw: 曾.镇海
+  result: Zeng Zhenhai
+- raw: 宋.明公
+  result: Song Minggong
+- raw: 戴.壮
+  result: Dai Zhuang
+- raw: 马.应龙
+  result: Ma Yinglong
+- raw: 马.超群
+  result: Ma Chaoqun
+- raw: 马.丹心
+  result: Ma Danxin
+- raw: 马.宝郭
+  result: Ma Baoguo
+- raw: 郝.大力
+  result: Hao Dali
+- raw: 汪.财
+  result: Wang Cai
+- raw: 吴.谋
+  result: Wu Mou
+- raw: 熊.百胜
+  result: Xiong Baisheng
+- raw: 朱.全
+  result: Zhu Quan
+- raw: 严.达开
+  result: Yan Dakai
+- raw: 冯.虎
+  result: Feng Hu
+- raw: 刘.豹
+  result: Liu Bao
+- raw: 黄.豺
+  result: Huang Chai
+- raw: 韩.狼
+  result: Han Lang
+- raw: 吴.忧
+  result: Wu You
+- raw: 孟.经世
+  result: Meng Jingshi
+- raw: 郭.淮
+  result: Guo Huai
+- raw: 吕.天行
+  result: Lü Tianxing
+- raw: 何.足道
+  result: He Zudao
+- raw: 楚.风疾
+  result: Chu Fengji
+- raw: 林.弄影
+  result: Lin Nongying
+- raw: 齐.焱
+  result: Qi Yan
+- raw: 张.峻
+  result: Zhang Jun
+- raw: 项.问天
+  result: Xiang Wentian
+- raw: 郭.勇锐
+  result: Guo Yongrui
+- raw: 阮.芷
+  result: Ruan Zhi
+- raw: 彗.定
+  result: Hui Ding
+- raw: 清.风
+  result: Qingfeng
+- raw: 李.云鹤
+  result: Li Yunhe
+- raw: 吕.舞阳
+  result: Lü Wuyang
+- raw: 曲.佩环
+  result: Qu Peihuan
+- raw: 水.清秋
+  result: Shui Qingqiu
+- raw: 柳.如月
+  result: Liu Ruyue
+- raw: 殷.雨霏
+  result: Yin Yufei
+- raw: 北冥.雪
+  result: Beiming Xue
+- raw: 金.龙生
+  result: Jin Longsheng
+- raw: 天.残
+  result: Tian Can
+- raw: 地.缺
+  result: Di Que
+- raw: 南.丑
+  result: Nan Chou
+- raw: 北.怪
+  result: Bei Guai
+- raw: 逍遥.生
+  result: Xiaoyao Sheng
+- raw: 独孤.剑
+  result: Dugu Jian
+- raw: 炼气.士
+  result: Qi Refining Scholar
+- raw: 都.点检
+  result: Du Dianjian
+- raw: 独臂.刀
+  result: Dubei Dao
+- raw: 斗酒.僧
+  result: Doujiu Monk
+- raw: 王.添翼
+  result: Wang Tianyi
+- raw: 雷.殷殷
+  result: Lei Yinyin
+- raw: 赵.胤宗
+  result: Zhao Yinzong
+- raw: 中年天.残
+  result: Middle-aged Tian Can
+- raw: 中年地.缺
+  result: Middle-aged Di Que
+- raw: 中年南.丑
+  result: Middle-aged Nan Chou
+- raw: 中年北.怪
+  result: Middle-aged Bei Guai
+- raw: 赵.义仁
+  result: Zhao Yiren
+- raw: 石.守信
+  result: Shi Shouxin
+- raw: 中年赵.胤宗
+  result: Middle-aged Zhao Yinzong
+- raw: 傅.砚之
+  result: Fu Yanzhi
+- raw: 张.弥勒
+  result: Zhang Mile
+- raw: 陆.沉舟
+  result: Lu Chenzhou
+- raw: 王.霸
+  result: Wang Ba
+- raw: 龙.灭
+  result: Long Mie
+- raw: 罗.八怪
+  result: Luo Bagua
+- raw: 菲.燕子
+  result: Fei Yanzi
+- raw: 叶.寒
+  result: Ye Han
+- raw: 李.天临
+  result: Li Tianlin
+- raw: 熊.刚
+  result: Xiong Gang
+- raw: 王.伦
+  result: Wang Lun
+
+# Love Interests
+- raw: 杨思迟
+  result: Yang Sichi
+- raw: 魏胥华
+  result: Wei Xuhua
+- raw: 顾游年
+  result: Gu Younian
+- raw: 郝大力
+  result: Hao Dali
+- raw: 汪财
+  result: Wang Cai
+- raw: 吴谋
+  result: Wu Mou
+- raw: 楚风疾
+  result: Chu Fengji
+- raw: 齐焱
+  result: Qi Yan
+- raw: 张峻
+  result: Zhang Jun
+- raw: 林云裳
+  result: Lin Yunshang
+- raw: 姜婉
+  result: Jiang Wan
+- raw: 余采薇
+  result: Yu Caiwei
+- raw: 慕容星辰
+  result: Murong Xingchen
+- raw: 龙凝霜
+  result: Long Ningshuang
+- raw: 白云天
+  result: Bai Yuntian
+- raw: 张文馨
+  result: Zhang Wenxin
+- raw: 上官凤
+  result: Shangguan Feng
+- raw: 林弄影
+  result: Lin Nongying
+- raw: 姬清梵
+  result: Ji Qingfan
+- raw: 皇甫青衫
+  result: Huangfu Qingshan
+- raw: 傅砚之
+  result: Fu Yanzhi
+- raw: 张弥勒
+  result: Zhang Mile
+- raw: 陆沉舟
+  result: Lu Chenzhou
+- raw: 王霸
+  result: Wang Ba
+- raw: 龙灭
+  result: Long Mie
+- raw: 罗八怪
+  result: Luo Bagui
+- raw: 宋明公
+  result: Song Minggong
+- raw: 叶寒
+  result: Ye Han
+- raw: 李天临
+  result: Li Tianlin
+- raw: 菲燕子
+  result: Fei Yanzi
+- raw: 曲佩环
+  result: Qu Peihuan
+- raw: 水清秋
+  result: Shui Qingqiu
+- raw: 柳如月
+  result: Liu Ruyue
+- raw: 北冥雪
+  result: Beiming Xue
+- raw: 殷雨霏
+  result: Yin Yufei
+- raw: 马应龙
+  result: Ma Yinglong
+- raw: 马超群
+  result: Ma Chaoqun
+- raw: 马丹心
+  result: Ma Danxin
+- raw: 马宝郭
+  result: Ma Baoguo
+- raw: 项问天
+  result: Xiang Wentian
+- raw: 郭勇锐
+  result: Guo Yongrui
+- raw: 阮芷
+  result: Ruan Zhi
+- raw: 李云鹤
+  result: Li Yunhe
+- raw: 清风
+  result: Qingfeng
+- raw: 彗定
+  result: Hui Ding
+- raw: 皇甫斌
+  result: Huangfu Bin
+- raw: 万仞山
+  result: Wan Renshan
+- raw: 乐无疾
+  result: Yue Wuji
+- raw: 赵破虏
+  result: Zhao Polu
+- raw: 郭淮
+  result: Guo Huai
+- raw: 唐嫣然
+  result: Tang Yanran
+- raw: 龙凤娥
+  result: Long Feng'e
+- raw: 何足道
+  result: He Zudao
+- raw: 武绝义
+  result: Wu Jueyi
+- raw: 韩嵩
+  result: Han Song
+- raw: 司马德源
+  result: Sima Deyuan
+- raw: 张青蓬
+  result: Zhang Qingpeng
+
+# Factions
+- raw: 长乐帮
+  result: Changle Gang
+- raw: 药王谷
+  result: Medicine King Valley
+# - raw: 丐帮
+#   result: Beggar Gang
+- raw: 飞龙门
+  result: Flying Dragon Gate
+- raw: 茅山派
+  result: Maoshan Sect
+- raw: 铸剑山庄
+  result: Swordforging Manor
+- raw: 五毒教
+  result: Five Poisons Sect
+- raw: 阎罗殿
+  result: Yama Hall
+- raw: 大隐阁
+  result: Great Hidden Pavilion
+- raw: 少林寺
+  result: Shaolin Temple
+- raw: 武当派
+  result: Wudang Sect
+- raw: 霸刀门
+  result: Tyrant Blade Sect
+- raw: 蓬莱派
+  result: Penglai Sect
+- raw: 峨眉派
+  result: Emei Sect
+- raw: 崆峒派
+  result: Kongtong Sect
+- raw: 神机门
+  result: Divine Mechanism Sect
+- raw: 霹雳堂
+  result: Thunderclap Hall
+- raw: 金刚密宗
+  result: Vajrayana Sect
+- raw: 天山派
+  result: Tianshan Sect
+- raw: 聚义门
+  result: Righteous Alliance Gate
+- raw: 黄河帮
+  result: Yellow River Gang
+- raw: 八卦门
+  result: Bagua Sect
+- raw: 海沙帮
+  result: Sea Sand Gang
+- raw: 铁掌帮
+  result: Iron Palm Gang
+- raw: 仙霞派
+  result: Xianxia Sect
+- raw: 巨鲸帮
+  result: Giant Whale Gang
+- raw: 金龙帮
+  result: Golden Dragon Gang
+- raw: 青城派
+  result: Qingcheng Sect
+- raw: 伏牛派
+  result: Funiu Sect

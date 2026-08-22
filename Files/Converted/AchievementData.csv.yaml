@@ -4,919 +4,439 @@
   splits:
   - split: 1
     text: "无人能敌"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Unmatched"
   - split: 2
     text: "累计在战斗中亲手击败500人"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulatively, you have personally defeated 500 enemies in battle."
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "1,百战百胜,累计战斗获胜200场,int,200,无"
   splits:
   - split: 1
     text: "百战百胜"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Invincible in every battle"
   - split: 2
     text: "累计战斗获胜200场"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Count victories in battles: 200"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "2,舌灿莲花,累计论战获胜100场,int,100,无"
   splits:
   - split: 1
     text: "舌灿莲花"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Talk eloquently"
   - split: 2
     text: "累计论战获胜100场"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Accumulated debating wins: 100 matches"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "3,千杯不醉,累计对饮获胜100场,int,100,无"
   splits:
   - split: 1
     text: "千杯不醉"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Drinks not intoxicating"
   - split: 2
     text: "累计对饮获胜100场"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulative drinking win count: 100 rounds"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "4,吉星高照,累计赌博获胜100场,int,100,无"
   splits:
   - split: 1
     text: "吉星高照"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Favorable stars shine high"
   - split: 2
     text: "累计赌博获胜100场"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulative gambling wins: 100 games"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "5,家财万贯,累计获得100000银钱,int,100000,无"
   splits:
   - split: 1
     text: "家财万贯"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Rich beyond measure"
   - split: 2
     text: "累计获得100000银钱"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulative earnings of 100000 silver coins"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "6,声名显赫,累计获得10000声望,int,10000,无"
   splits:
   - split: 1
     text: "声名显赫"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Famous far and wide"
   - split: 2
     text: "累计获得10000声望"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Accumulate 10000 reputation points"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "7,劳苦功高,累计获得10000门派功绩,int,10000,无"
   splits:
   - split: 1
     text: "劳苦功高"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Hard‑earned success"
   - split: 2
     text: "累计获得10000门派功绩"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Earned 10000 Sect Merit Points"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "8,恶贯满盈,累计获得1000点恶名,int,1000,无"
   splits:
   - split: 1
     text: "恶贯满盈"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Wicked deeds abound"
   - split: 2
     text: "累计获得1000点恶名"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Accumulated Notorious Points: 1000"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "9,高朋满座,累计结识100名角色,int,100,无"
   splits:
   - split: 1
     text: "高朋满座"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Guests fill the room"
   - split: 2
     text: "累计结识100名角色"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Accumulated 100 characters met"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "10,不辱使命,累计完成100个委托任务,int,100,无"
   splits:
   - split: 1
     text: "不辱使命"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Fulfilled my mission"
   - split: 2
     text: "累计完成100个委托任务"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulative completion of 100 commission tasks"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "11,家业丰厚,累计购买10次私宅,int,10,无"
   splits:
   - split: 1
     text: "家业丰厚"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ample family fortune"
   - split: 2
     text: "累计购买10次私宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulative purchases of 10 private residences"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "12,天赋异禀,累计领悟30次天赋,int,30,无"
   splits:
   - split: 1
     text: "天赋异禀"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Gifted"
   - split: 2
     text: "累计领悟30次天赋"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Accumulated 30 times mastering talents"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "13,天工巧匠,累计铸造/炼药/烹饪200次,int,200,无"
   splits:
   - split: 1
     text: "天工巧匠"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Master Craftsman"
   - split: 2
     text: "累计铸造/炼药/烹饪200次"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulative smelting/potion‑making/cooking 200 times"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "14,精益求精,累计煅烧/炮制/精烩100次,int,100,无"
   splits:
   - split: 1
     text: "精益求精"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Strive for excellence"
   - split: 2
     text: "累计煅烧/炮制/精烩100次"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cumulated smelted/crafted/refined 100 times"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "15,如有神助,任意一项角色属性基础值达到120点,bool,1,无"
   splits:
   - split: 1
     text: "如有神助"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "With divine assistance"
   - split: 2
     text: "任意一项角色属性基础值达到120点"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Any character attribute base value reaches 120 points"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "16,武艺超群,任意一门武学技能基础值达到120点,bool,1,无"
   splits:
   - split: 1
     text: "武艺超群"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Skilled in combat"
   - split: 2
     text: "任意一门武学技能基础值达到120点"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Any martial arts skill with a base value of 120 points or higher"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "17,技艺无双,任意一项生活技艺基础值达到100点,bool,1,无"
   splits:
   - split: 1
     text: "技艺无双"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Unmatched Skill"
   - split: 2
     text: "任意一项生活技艺基础值达到100点"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Any skill base value for daily living skills reaches 100 points"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "18,绝世神功,习得任意一门绝世武功,bool,1,无"
   splits:
   - split: 1
     text: "绝世神功"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Eternal Divine Skill"
   - split: 2
     text: "习得任意一门绝世武功"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Learn any supreme martial arts technique"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "19,登峰造极,将任意一门绝世武功修炼至十重,bool,1,无"
   splits:
   - split: 1
     text: "登峰造极"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Reach the pinnacle"
   - split: 2
     text: "将任意一门绝世武功修炼至十重"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Master any supreme martial art up to the Tenth Level"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "20,盖世英雄,成为英雄谱战力第一名,bool,1,无"
   splits:
   - split: 1
     text: "盖世英雄"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "World‑Famous Hero"
   - split: 2
     text: "成为英雄谱战力第一名"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Become the top warrior in the heroes' battle rankings"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "21,大权在握,成为门派掌门,bool,1,无"
   splits:
   - split: 1
     text: "大权在握"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "In full control"
   - split: 2
     text: "成为门派掌门"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Become the Sect Leader"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "22,一击制胜,单次造成200点以上伤害,bool,1,无"
   splits:
   - split: 1
     text: "一击制胜"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "One hit to win"
   - split: 2
     text: "单次造成200点以上伤害"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Cause more than 200 points of damage in one attack"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "23,横扫千军,一场战斗中亲手击败10名以上敌人,bool,1,无"
   splits:
   - split: 1
     text: "横扫千军"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Sweep across a thousand armies"
   - split: 2
     text: "一场战斗中亲手击败10名以上敌人"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Defeat more than 10 enemies in a single battle with your own hands"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "24,情深义重,与一名角色好感达到100,bool,1,无"
   splits:
   - split: 1
     text: "情深义重"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Deeply affectionate and loyal"
   - split: 2
     text: "与一名角色好感达到100"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "25,义结金兰,与一名角色结义,bool,1,无"
   splits:
   - split: 1
     text: "义结金兰"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Bonds of sisterhood"
   - split: 2
     text: "与一名角色结义"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Buddy up with a character"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "26,相濡以沫,与一名角色结缘,bool,1,无"
   splits:
   - split: 1
     text: "相濡以沫"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "To share one's fate"
   - split: 2
     text: "与一名角色结缘"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Befriend a character"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "27,海誓山盟,与一名角色结为夫妻,bool,1,无"
   splits:
   - split: 1
     text: "海誓山盟"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Eternal vows in the mountains and by the sea"
   - split: 2
     text: "与一名角色结为夫妻"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Marry a character"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
 - raw: "28,天下第一,达成天下第一结局,bool,1,第三次泰岳大典胜出后选择归隐"
   splits:
   - split: 1
     text: "天下第一"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Number One Under Heaven"
   - split: 2
     text: "达成天下第一结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Top Outcome in the World"
   - split: 5
     text: "第三次泰岳大典胜出后选择归隐"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "After winning the Third Taiyue Grand Ceremony, choose to seclude oneself."
 - raw: "29,归隐田园,达成归隐田园结局,bool,1,第三次泰岳大典失败后选择归隐"
   splits:
   - split: 1
     text: "归隐田园"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Retire to the countryside"
   - split: 2
     text: "达成归隐田园结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Retirement in the Countryside Ending"
   - split: 5
     text: "第三次泰岳大典失败后选择归隐"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "After the failure of the Third Taiye Great Ceremony, choosing to seclude oneself."
 - raw: "30,豪商巨贾,达成豪商巨贾结局,bool,1,达到50万银钱后进入门派/自宅"
   splits:
   - split: 1
     text: "豪商巨贾"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Rich merchants and industrialists"
   - split: 2
     text: "达成豪商巨贾结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Outrageous Merchant Outcome"
   - split: 5
     text: "达到50万银钱后进入门派/自宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Reach 50 thousand silver coins to enter the Sect/Household."
 - raw: "31,功成名就,达成功成名就结局,bool,1,达到9999声望后进入门派/自宅"
   splits:
   - split: 1
     text: "功成名就"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Success and fame achieved"
   - split: 2
     text: "达成功成名就结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve Fame and Success Ending"
   - split: 5
     text: "达到9999声望后进入门派/自宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Reach 9999 Prestige to enter the Sect/Household"
 - raw: "32,禁军统领,达成禁军统领结局,bool,1,官职达到最高后进入门派/自宅"
   splits:
   - split: 1
     text: "禁军统领"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Commander of the Forbidden Army"
   - split: 2
     text: "达成禁军统领结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Forbidden Army Commander Ending"
   - split: 5
     text: "官职达到最高后进入门派/自宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "After reaching the highest official position, enter the Sect/Household."
 - raw: "33,权势滔天,达成权势滔天结局,bool,1,勋阶达到最高后进入门派/自宅"
   splits:
   - split: 1
     text: "权势滔天"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Overwhelming Power"
   - split: 2
     text: "达成权势滔天结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Overwhelming Power Ending"
   - split: 5
     text: "勋阶达到最高后进入门派/自宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "After reaching the highest rank, enter the Sect/Household"
 - raw: "34,名门大派,达成名门大派结局,bool,1,成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派/自宅"
   splits:
   - split: 1
     text: "名门大派"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Elite Family Sect"
   - split: 2
     text: "达成名门大派结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Outcome of a Renowned Clansman House"
   - split: 5
     text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派/自宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Become the leader of a Sect by reaching Hall Level 10 and having a population over 200, then enter your Sect/home after winning the Sect Leader Conference."
 - raw: "35,武林盟主,达成武林盟主结局,bool,1,占领、附庸、同盟区域50%后进入门派/自宅\\n或通关剧情模式第四章"
   splits:
   - split: 1
     text: "武林盟主"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Alliance Leader"
   - split: 2
     text: "达成武林盟主结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Alliance Leader Ending"
   - split: 5
     text: "占领、附庸、同盟区域50%后进入门派/自宅\\n或通关剧情模式第四章"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "After occupying, vassalizing, or allying regions 50%,\\nenter the Sect/Household\\nor complete Plot Mode Chapter 4"
 - raw: "36,终归一统,达成终归一统结局,bool,1,占领、附庸、同盟区域100%后进入门派/自宅"
   splits:
   - split: 1
     text: "终归一统"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Ultimately unified"
   - split: 2
     text: "达成终归一统结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Ultimate Unification Ending"
   - split: 5
     text: "占领、附庸、同盟区域100%后进入门派/自宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "After occupying, vassalizing, or allied regions 100%, enter the Sect/Hall"
 - raw: "37,鸾凤和鸣,达成鸾凤和鸣结局,bool,1,同时拥有夫妻和4名情侣且好感均100，进入门派/自宅"
   splits:
   - split: 1
     text: "鸾凤和鸣"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Dragon and phoenix resonate"
   - split: 2
     text: "达成鸾凤和鸣结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve the Dragon and Phoenix Harmony Ending"
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派/自宅"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Simultaneously having a spouse and 4 romantic partners with equal affection 100, enter the Sect/Homestead."
 - raw: "38,终生监禁,达成终生监禁结局,bool,1,被捕入狱时恶名达到999"
   splits:
   - split: 1
     text: "终生监禁"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Life imprisonment"
   - split: 2
     text: "达成终生监禁结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Achieve lifetime imprisonment ending"
   - split: 5
     text: "被捕入狱时恶名达到999"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "When arrested and sent to prison, his infamy reached 999."
 - raw: "39,九死一生,九死一生难度下达成任意结局,bool,1,无"
   splits:
   - split: 1
     text: "九死一生"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Life and death"
   - split: 2
     text: "九死一生难度下达成任意结局"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
   - split: 5
     text: "无"
-    translated: ""
-    safeToTranslate: true
-    flaggedForRetranslation: false
-    flaggedMistranslation: ""
-    flaggedHallucination: ""
+    translated: "None"
