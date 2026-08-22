@@ -1,6381 +1,6381 @@
 # NameData
 - raw: 钱
   result: Qian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 姚
   result: Yao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 荀
   result: Xun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冉
   result: Ran
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 游
   result: You
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 孙
   result: Sun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 邵
   result: Shao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 羊
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 郦
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 竺
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 汪
   result: Wang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 湛
   result: Zhan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 惠
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雍
   result: Yong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 权
   result: Quan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 周
   result: Zhou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 祁
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 甄
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 桑
   result: Sang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 盖
   result: Gai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 吴
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赵
   result: Zhao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 曲
   result: Qu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 濮
   result: Pu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 益
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 郑
   result: Zheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 禹
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 家
   result: Jia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 桂
   result: Gui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 桓
   result: Huan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 王
   result: Wang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 狄
   result: Di
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 封
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 牛
   result: Niu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 公
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冯
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 米
   result: Mi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芮
   result: Rui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 通
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 司马
   result: Sima
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 陈
   result: Chen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贝
   result: Bei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 羿
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 边
   result: Bian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 寿
   result: Shou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 褚
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 明
   result: Ming
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 储
   result: Chu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 扈
   result: Hu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 欧阳
   result: Ouyang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卫
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 臧
   result: Zang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 靳
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 燕
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 夏侯
   result: Xiahou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蒋
   result: Jiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 计
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 汲
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冀
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 诸葛
   result: Zhuge
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 沈
   result: Shen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 伏
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 糜
   result: Mi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尚
   result: Shang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 东方
   result: Dongfang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 韩
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 成
   result: Cheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 松
   result: Song
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 浦
   result: Pu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赫连
   result: Helian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 杨
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 戴
   result: Dai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 井
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 农
   result: Nong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 皇甫
   result: Huangfu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 朱
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 谈
   result: Tan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 富
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 温
   result: Wen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尉迟
   result: Yuchi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尤
   result: You
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 茅
   result: Mao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 巫
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 别
   result: Bie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 段
   result: Duan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 许
   result: Xu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 庞
   result: Pang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 乌
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 庄
   result: Zhuang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 公冶
   result: Gongye
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 何
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 熊
   result: Xiong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 焦
   result: Jiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晏
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宋
   result: Song
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 吕
   result: Lv
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 纪
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 巴
   result: Ba
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 柴
   result: Chai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 秦
   result: Qin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 施
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 舒
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 弓
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 穆
   result: Mu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 单于
   result: Chanyu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 张
   result: Zhang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 屈
   result: Qu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 牧
   result: Mu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阎
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 曹
   result: Cao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 孔
   result: Kong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 项
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 充
   result: Chong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 祝
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 慕
   result: Mu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 华
   result: Hua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 梁
   result: Liang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 谷
   result: Gu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 连
   result: Lian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 公孙
   result: Gongsun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 金
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 杜
   result: Du
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 车
   result: Che
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 茹
   result: Ru
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 太史
   result: Taishi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 魏
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阮
   result: Ruan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 侯
   result: Hou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 李
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 轩辕
   result: Xuanyuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 陶
   result: Tao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蓝
   result: Lan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 钟离
   result: Zhongli
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宦
   result: Huan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 令狐
   result: Linghu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 姜
   result: Jiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 闵
   result: Min
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蓬
   result: Peng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 艾
   result: Ai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 容
   result: Rong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 戚
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 席
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 全
   result: Quan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鱼
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宇文
   result: Yuwen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 谢
   result: Xie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 季
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 班
   result: Ban
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 向
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 长孙
   result: Zhangsun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 邹
   result: Zou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 麻
   result: Ma
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 仰
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 古
   result: Gu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 慕容
   result: Murong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 喻
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 强
   result: Qiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 秋
   result: Qiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 易
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鲜于
   result: Xianyu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 柏
   result: Bai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贾
   result: Jia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 仲
   result: Zhong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 慎
   result: Shen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 独孤
   result: Dugu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 水
   result: Shui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 路
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 伊
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 戈
   result: Ge
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 司徒
   result: Situ
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 窦
   result: Dou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 娄
   result: Lou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宫
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 廖
   result: Liao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 司空
   result: Sikong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 章
   result: Zhang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 危
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 云
   result: Yun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 江
   result: Jiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 督
   result: Du
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 苏
   result: Su
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 童
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 仇
   result: Chou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 终
   result: Zhong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 庾
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 潘
   result: Pan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 颜
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 暴
   result: Bao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 居
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 端木
   result: Duanmu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 奚
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 梅
   result: Mei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 甘
   result: Gan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 衡
   result: Heng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 郭
   result: Guo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 范
   result: Fan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 盛
   result: Sheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 言
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 步
   result: Bu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 葛
   result: Ge
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 彭
   result: Peng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 林
   result: Lin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 厉
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 都
   result: Du
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 董
   result: Dong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 郎
   result: Lang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 刁
   result: Diao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 戎
   result: Rong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 耿
   result: Geng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 严
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鲁
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 钟
   result: Zhong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 祖
   result: Zu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 满
   result: Man
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 山
   result: Shan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 韦
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 徐
   result: Xu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 武
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 弘
   result: Hong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 国
   result: Guo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 昌
   result: Chang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 邱
   result: Qiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 符
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 匡
   result: Kuang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 拓跋
   result: Tuoba
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 马
   result: Ma
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 高
   result: Gao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 景
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 文
   result: Wen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 刘
   result: Liu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 苗
   result: Miao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 夏
   result: Xia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 詹
   result: Zhan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 寇
   result: Kou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晋
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凤
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蔡
   result: Cai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 束
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 广
   result: Guang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 楚
   result: Chu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 花
   result: Hua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 田
   result: Tian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 龙
   result: Long
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 禄
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阙
   result: Que
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 方
   result: Fang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 胡
   result: Hu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 幸
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 东
   result: Dong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 法
   result: Fa
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 任
   result: Ren
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凌
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 司
   result: Si
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 欧
   result: Ou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 叶
   result: Ye
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 袁
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 霍
   result: Huo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 韶
   result: Shao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 沃
   result: Wo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 涂
   result: Tu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 柳
   result: Liu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 虞
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 樊
   result: Fan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 利
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 钦
   result: Qin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鲍
   result: Bao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 万
   result: Wan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 黎
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蔚
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 百里
   result: Baili
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 史
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 支
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 俞
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 越
   result: Yue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 东郭
   result: Dongguo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 唐
   result: Tang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 柯
   result: Ke
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 薄
   result: Bao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 印
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 南门
   result: Nanmen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 费
   result: Fei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莫
   result: Mo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 怀
   result: Huai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 隆
   result: Long
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 呼延
   result: Huyan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 廉
   result: Lian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 管
   result: Guan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宿
   result: Su
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 师
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 归
   result: Gui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 岑
   result: Cen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卢
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 白
   result: Bai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 巩
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 海
   result: Hai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雷
   result: Lei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 经
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蒲
   result: Pu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 聂
   result: Nie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 北冥
   result: Beiming
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贺
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 房
   result: Fang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卓
   result: Zhuo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晁
   result: Chao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 岳
   result: Yue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 倪
   result: Ni
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 裘
   result: Qiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 从
   result: Cong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 勾
   result: Gou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 帅
   result: Shuai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 汤
   result: Tang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 缪
   result: Mou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 薛
   result: Xue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 敖
   result: Ao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 上官
   result: Shangguan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 况
   result: Kuang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 干
   result: Gan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 索
   result: Suo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 融
   result: Rong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 亢
   result: Kang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 殷
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 解
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 咸
   result: Xian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冷
   result: Leng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 骆
   result: Luo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 罗
   result: Luo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 应
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 籍
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 辛
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 荣
   result: Rong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 毕
   result: Bi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宗
   result: Zong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赖
   result: Lai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宣
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 琴
   result: Qin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 郝
   result: Hao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丁
   result: Ding
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 那
   result: Na
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贲
   result: Bi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 完颜
   result: Wanyan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 安
   result: An
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 邓
   result: Deng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 屠
   result: Tu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 简
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 东门
   result: Dongmen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 常
   result: Chang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 商
   result: Shang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蒙
   result: Meng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 饶
   result: Rao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 西门
   result: Ximen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 乐
   result: Le
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 郁
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 池
   result: Chi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 空
   result: Kong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 牟
   result: Mou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 于
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 单
   result: Dan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 乔
   result: Qiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 曾
   result: Zeng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 扶
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 时
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 杭
   result: Hang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阴
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 毋
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 伯
   result: Bo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 傅
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 洪
   result: Hong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 萧
   result: Xiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 沙
   result: Sha
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赏
   result: Shang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 皮
   result: Pi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 包
   result: Bao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 胥
   result: Xu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鞠
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 养
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卞
   result: Bian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 诸
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 能
   result: Neng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 左
   result: Zuo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 苍
   result: Cang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 齐
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 石
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 双
   result: Shuang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 须
   result: Xu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 康
   result: Kang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 崔
   result: Cui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 闻
   result: Wen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丰
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 墨
   result: Mo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 伍
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 吉
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莘
   result: Shen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 巢
   result: Chao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 谯
   result: Qiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 余
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 钮
   result: Niu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 党
   result: Dang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 关
   result: Guan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 年
   result: Nian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 元
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 龚
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 翟
   result: Di
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蒯
   result: Kuai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 爱
   result: Ai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卜
   result: Bu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 程
   result: Cheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 谭
   result: Tan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 相
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阳
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 顾
   result: Gu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 嵇
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贡
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 查
   result: Cha
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 北堂
   result: Beitang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 孟
   result: Meng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 邢
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 劳
   result: Lao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 后
   result: Hou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尹
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 平
   result: Ping
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 滑
   result: Hua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 荆
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 堵
   result: Du
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 翁
   result: Weng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 黄
   result: Huang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 裴
   result: Pei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 姬
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 红
   result: Hong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 左丘
   result: Zuoqiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 和
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 陆
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 申
   result: Shen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 福
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 佟
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 天
   result: Tian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 楼
   result: Lou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 仪
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尽
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 市
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 地
   result: Di
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阁
   result: Ge
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 寻
   result: Xun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 京
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 事
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 日
   result: Ri
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 欢
   result: Huan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 谨
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 之
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 首
   result: Shou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 月
   result: Yue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 迎
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 仙
   result: Xian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 属
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 星
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宜
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 表
   result: Biao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 惊
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 术
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 辰
   result: Chen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宾
   result: Bin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 滨
   result: Bin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 友
   result: You
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 并
   result: Bing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 净
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 霜
   result: Shuang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 木
   result: Mu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 恩
   result: En
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 泊
   result: Bo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 久
   result: Jiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 顺
   result: Shun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 语
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 酒
   result: Jiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 火
   result: Huo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 飞
   result: Fei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 旧
   result: Jiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 厅
   result: Ting
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 土
   result: Tu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 升
   result: Sheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 采
   result: Cai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 庭
   result: Ting
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 风
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 见
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 仓
   result: Cang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 扇
   result: Shan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 图
   result: Tu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 少
   result: Shao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 聚
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 推
   result: Tui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雨
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 子
   result: Zi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 涓
   result: Juan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 外
   result: Wai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 声
   result: Sheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 心
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卷
   result: Juan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晚
   result: Wan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 真
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晨
   result: Chen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 电
   result: Dian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 人
   result: Ren
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 澄
   result: Cheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 控
   result: Kong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 网
   result: Wang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尘
   result: Chen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 持
   result: Chi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 来
   result: Lai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 微
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丘
   result: Qiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 敬
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尺
   result: Chi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 廊
   result: Lang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 陵
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 敏
   result: Min
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 出
   result: Chu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 类
   result: Lei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 精
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 创
   result: Chuang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 屋
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 原
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 瓷
   result: Ci
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 离
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 无
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 台
   result: Tai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丛
   result: Cong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 理
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 物
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 影
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 历
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 夕
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 河
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 喜
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 当
   result: Dang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 析
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 川
   result: Chuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 一
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 导
   result: Dao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凉
   result: Liang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 息
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 二
   result: Er
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 祷
   result: Dao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 量
   result: Liang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 先
   result: Xian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 湖
   result: Hu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 三
   result: San
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 动
   result: Dong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 列
   result: Lie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 显
   result: Xian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 四
   result: Si
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 临
   result: Lin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 洋
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 五
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 度
   result: Du
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 铃
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 象
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冰
   result: Bing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 六
   result: Liu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 朵
   result: Duo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 翎
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 霄
   result: Xiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 七
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 发
   result: Fa
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 留
   result: Liu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 效
   result: Xiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 泽
   result: Ze
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 八
   result: Ba
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 流
   result: Liu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 协
   result: Xie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 深
   result: Shen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 九
   result: Jiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凡
   result: Fan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鹿
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 榭
   result: Xie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 涵
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 十
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 泛
   result: Fan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 轮
   result: Lun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 形
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 春
   result: Chun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 百
   result: Bai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 络
   result: Luo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 梓
   result: Zi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 千
   result: Qian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 沉
   result: Chen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 落
   result: La
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 虚
   result: Xu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 轩
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冬
   result: Dong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 兆
   result: Zhao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 放
   result: Fang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 意
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 命
   result: Ming
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 立
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 里
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 漫
   result: Man
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 分
   result: Fen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 门
   result: Men
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 央
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 至
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鑫
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 摇
   result: Yao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 迷
   result: Mi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 映
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 梧
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 玖
   result: Jiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 密
   result: Mi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 野
   result: Ye
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 桐
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 复
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 名
   result: Ming
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 银
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 圆
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赋
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 末
   result: Mo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 夜
   result: Ye
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赤
   result: Chi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 感
   result: Gan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 目
   result: Mu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 移
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 维
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 剑
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 沐
   result: Mu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 盈
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丹
   result: Dan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 望
   result: Wang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 亘
   result: Gen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 营
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 诺
   result: Nuo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 暮
   result: Mu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 善
   result: Shan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 字
   result: Zi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 楠
   result: Nan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 幽
   result: You
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 绿
   result: Lv
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 亚
   result: Ya
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 拾
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 内
   result: Nei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 有
   result: You
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 碧
   result: Bi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 观
   result: Guan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 渐
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 羽
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 青
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 殿
   result: Dian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 馆
   result: Guan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 派
   result: Pai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 御
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 紫
   result: Zi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 其
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 奏
   result: Zou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 园
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 黑
   result: Hei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 迪
   result: Di
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 果
   result: Guo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 旁
   result: Pang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 院
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 化
   result: Hua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 寒
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凭
   result: Ping
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 约
   result: Yue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 端
   result: Duan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 行
   result: Hang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 清
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 运
   result: Yun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 瑞
   result: Rui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 绝
   result: Jue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 漆
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 早
   result: Zao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 初
   result: Chu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 以
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 乱
   result: Luan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 哨
   result: Shao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 画
   result: Hua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 祈
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 光
   result: Guang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 奕
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 郊
   result: Jiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 起
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 展
   result: Zhan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 熙
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 槐
   result: Huai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 前
   result: Qian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 占
   result: Zhan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宝
   result: Bao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 然
   result: Ran
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 幻
   result: Huan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 潜
   result: Qian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 玉
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 换
   result: Huan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 桥
   result: Qiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 藏
   result: Cang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 令
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 烟
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 轻
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 刀
   result: Dao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 奇
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 倾
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 召
   result: Zhao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 艺
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 遇
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 灰
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 森
   result: Sen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 润
   result: Run
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 繁
   result: Fan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 回
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 致
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 示
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 畅
   result: Chang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 汇
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 染
   result: Ran
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 枝
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 代
   result: Dai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 新
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 会
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 半
   result: Ban
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 知
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 君
   result: Jun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 色
   result: Se
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 热
   result: Re
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 彬
   result: Bin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 捷
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 泉
   result: Quan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 积
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 逐
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 期
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 龄
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 亭
   result: Ting
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 烛
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 彤
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 唱
   result: Chang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 入
   result: Ru
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 笑
   result: Xiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 布
   result: Bu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 集
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 散
   result: San
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 转
   result: Zhuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 澜
   result: Lan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 追
   result: Zhui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 系
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 不
   result: Bu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 瑟
   result: Se
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 愁
   result: Chou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 醉
   result: Zui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 棠
   result: Tang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 间
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 杉
   result: Shan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 琢
   result: Zhuo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 部
   result: Bu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 圣
   result: Sheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 默
   result: Mo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 防
   result: Fang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 学
   result: Xue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冶
   result: Ye
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 炫
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 型
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 剧
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 邦
   result: Bang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 辅
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 韧
   result: Ren
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 挂
   result: Gua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 共
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冠
   result: Guan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 涌
   result: Yong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 靖
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 规
   result: Gui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 域
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 增
   result: Zeng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 旭
   result: Xu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 睿
   result: Rui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 造
   result: Zao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 号
   result: Hao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 驱
   result: Qu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 昭
   result: Zhao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 桦
   result: Hua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 衍
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晃
   result: Huang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 煌
   result: Huang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鸳
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 获
   result: Huo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 治
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 极
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 壤
   result: Rang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宙
   result: Zhou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 架
   result: Jia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 界
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 旗
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宇
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 世
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 合
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阶
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 统
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 准
   result: Zhun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尖
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 族
   result: Zu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 交
   result: Jiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 带
   result: Dai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 掌
   result: Zhang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 教
   result: Jiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 实
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 神
   result: Shen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 寺
   result: Si
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 堂
   result: Tang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 藤
   result: Teng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 始
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 接
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 烈
   result: Lie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 远
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 斗
   result: Dou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 矩
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 大
   result: Da
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 照
   result: Zhao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 上
   result: Shang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 跃
   result: Yue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 炬
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 岩
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鸿
   result: Hong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 近
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 进
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 钧
   result: Jun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 浩
   result: Hao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 勇
   result: Yong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 波
   result: Bo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 继
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 同
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 克
   result: Ke
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 猛
   result: Meng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 涛
   result: Tao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 承
   result: Cheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 志
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 刻
   result: Ke
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 刚
   result: Gang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 浪
   result: Lang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 镂
   result: Lou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 源
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 炉
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雄
   result: Xiong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 潮
   result: Chao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 根
   result: Gen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 恒
   result: Heng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 威
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 渊
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 柱
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 烙
   result: Lao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 豪
   result: Hao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 隐
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鸣
   result: Ming
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 炼
   result: Lian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 震
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 逸
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 永
   result: Yong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 辽
   result: Liao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 壮
   result: Zhuang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 超
   result: Chao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 磊
   result: Lei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 猎
   result: Lie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阔
   result: Kuo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 虎
   result: Hu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 振
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 岭
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宏
   result: Hong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 特
   result: Te
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 豹
   result: Bao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 磨
   result: Mo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 伟
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 勤
   result: Qin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 彪
   result: Biao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宽
   result: Kuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 破
   result: Po
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 杰
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 骏
   result: Jun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 奎
   result: Kui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 契
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 建
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 南
   result: Nan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鹏
   result: Peng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 领
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 器
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 西
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鹤
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 庆
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 北
   result: Bei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 斌
   result: Bin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 扬
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 切
   result: Qie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 筑
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 中
   result: Zhong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 博
   result: Bo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 燃
   result: Ran
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 基
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 甲
   result: Jia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 昆
   result: Kun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 熔
   result: Rong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 健
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 乙
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 士
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 栗
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 势
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丙
   result: Bing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 夫
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 朝
   result: Zhao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 收
   result: Shou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 毅
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 生
   result: Sheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晖
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 燧
   result: Sui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 启
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 戊
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 汉
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 峥
   result: Zheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 塔
   result: Ta
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 己
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 铮
   result: Zheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 潭
   result: Tan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 亮
   result: Liang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 庚
   result: Geng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 叔
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 争
   result: Zheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 炭
   result: Tan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 道
   result: Dao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 朗
   result: Lang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 麒
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 霆
   result: Ting
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 德
   result: De
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 壬
   result: Ren
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 胜
   result: Sheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 麟
   result: Lin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 炎
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 忠
   result: Zhong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 癸
   result: Gui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 秉
   result: Bing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 焰
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 仁
   result: Ren
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赢
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 沧
   result: Cang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鹰
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 义
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 顶
   result: Ding
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 城
   result: Cheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 礼
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 辉
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 登
   result: Deng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 阵
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 智
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 耀
   result: Yao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 民
   result: Min
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 栋
   result: Dong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 镇
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 信
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 军
   result: Jun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 团
   result: Tuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 洞
   result: Dong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 止
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 诚
   result: Cheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 兵
   result: Bing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 结
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 冲
   result: Chong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 制
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 谦
   result: Qian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 将
   result: Jiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 正
   result: Zheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 崇
   result: Chong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 质
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贤
   result: Xian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 定
   result: Ding
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 荡
   result: Dang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 种
   result: Zhong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 良
   result: Liang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 锻
   result: Duan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 重
   result: Zhong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 俊
   result: Jun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 力
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 兴
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 革
   result: Ge
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 州
   result: Zhou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 本
   result: Ben
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 举
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 更
   result: Geng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 铸
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 达
   result: Da
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 主
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 直
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 工
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 钢
   result: Gang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凯
   result: Kai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 攻
   result: Gong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尊
   result: Zun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 长
   result: Chang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 铁
   result: Tie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 旋
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 固
   result: Gu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 铜
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 泰
   result: Tai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 锋
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 征
   result: Zheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 圭
   result: Gui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 锡
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 峰
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 旅
   result: Lv
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 昊
   result: Hao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 弋
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 守
   result: Shou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 赫
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 用
   result: Yong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鼎
   result: Ding
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 横
   result: Heng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贵
   result: Gui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 铭
   result: Ming
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 划
   result: Hua
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 总
   result: Zong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 击
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 祥
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 玄
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 坚
   result: Jian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 枪
   result: Qiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 太
   result: Tai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 奋
   result: Fen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 角
   result: Jiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 断
   result: Duan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 醒
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 问
   result: Wen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 灭
   result: Mie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 败
   result: Bai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丑
   result: Chou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 缺
   result: Que
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 棘
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 孤
   result: Gu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鬼
   result: Gui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 戒
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 开
   result: Kai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 难
   result: Nan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 敌
   result: Di
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 罡
   result: Gang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 翰
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 哲
   result: Zhe
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 斩
   result: Zhan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 杀
   result: Sha
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莽
   result: Mang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 坤
   result: Kun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 亦
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 毒
   result: Du
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 暗
   result: An
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 树
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 延
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 血
   result: Xie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 则
   result: Ze
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 苦
   result: Ku
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 悲
   result: Bei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 痛
   result: Tong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 残
   result: Can
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 弃
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 疾
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 裕
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 皓
   result: Hao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 侠
   result: Xia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 客
   result: Ke
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 群
   result: Qun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 岛
   result: Dao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晓
   result: Xiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 珊
   result: Shan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 稚
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 希
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 苓
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 小
   result: Xiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晶
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 梦
   result: Meng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 妹
   result: Mei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莹
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鸽
   result: Ge
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 境
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 葵
   result: Kui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 姑
   result: Gu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莺
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 淑
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 斓
   result: Lan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 娘
   result: Niang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 草
   result: Cao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鹃
   result: Juan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 贞
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卿
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 妃
   result: Fei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 兰
   result: Lan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蝶
   result: Die
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宁
   result: Ning
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 黛
   result: Dai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 英
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 锦
   result: Jin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 静
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 灵
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 绣
   result: Xiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 倩
   result: Qian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蕊
   result: Rui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 好
   result: Hao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芝
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 绫
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 巧
   result: Qiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蕴
   result: Yun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 妙
   result: Miao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 萱
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 霖
   result: Lin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 妮
   result: Ni
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芸
   result: Yun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 绮
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 姝
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 娃
   result: Wa
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 茗
   result: Ming
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 衣
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 笛
   result: Di
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 恬
   result: Tian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芬
   result: Fen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 裳
   result: Chang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 竹
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晗
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 媛
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芳
   result: Fang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 慧
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 棋
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 昕
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 婵
   result: Chan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蓓
   result: Bei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 书
   result: Shu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 纯
   result: Chun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 娟
   result: Juan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蕾
   result: Lei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 香
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 诗
   result: Shi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 菲
   result: Fei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 娇
   result: Jiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 翠
   result: Cui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 穗
   result: Sui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 卉
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 媚
   result: Mei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丽
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 颖
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莱
   result: Lai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 婉
   result: Wan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 萍
   result: Ping
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芒
   result: Mang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 音
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 梨
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 婷
   result: Ting
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莲
   result: Lian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 彩
   result: Cai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 韵
   result: Yun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蜜
   result: Mi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 妍
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 荷
   result: He
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 艳
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 歌
   result: Ge
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 女
   result: Nv
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 嫣
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莉
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 素
   result: Su
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 纱
   result: Sha
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蔷
   result: Qiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 秀
   result: Xiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 如
   result: Ru
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 丝
   result: Si
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 璧
   result: Bi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 薇
   result: Wei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 美
   result: Mei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 若
   result: Ruo
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 菘
   result: Song
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 环
   result: Huan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 茜
   result: Qian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 悦
   result: Yue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 晴
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 琪
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 莎
   result: Sha
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雯
   result: Wen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 曦
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 桃
   result: Tao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 璇
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蓉
   result: Rong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 露
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 馨
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 舞
   result: Wu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 玑
   result: Ji
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 菱
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 霞
   result: Xia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 欣
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 绚
   result: Xuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 珍
   result: Zhen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雪
   result: Xue
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芽
   result: Ya
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 珠
   result: Zhu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 杏
   result: Xing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 虹
   result: Hong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 优
   result: You
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雁
   result: Yan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 玲
   result: Ling
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 涟
   result: Lian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 雅
   result: Ya
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 依
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 珑
   result: Long
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 溪
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 怡
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 荫
   result: Yin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 佩
   result: Pei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 思
   result: Si
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 暖
   result: Nuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 樱
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 琼
   result: Qiong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 椿
   result: Chun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 绪
   result: Xu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 荧
   result: Ying
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 瑶
   result: Yao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 榆
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 念
   result: Nian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 可
   result: Ke
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 苑
   result: Yuan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 瑜
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 枫
   result: Feng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 想
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 佳
   result: Jia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 俪
   result: Li
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 琳
   result: Lin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 菊
   result: Ju
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 盼
   result: Pan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 嘉
   result: Jia
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 魅
   result: Mei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 袅
   result: Niao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 儿
   result: Er
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芙
   result: Fu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 璐
   result: Lu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 洁
   result: Jie
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 忘
   result: Wang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 忧
   result: You
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蔓
   result: Man
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 听
   result: Ting
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 情
   result: Qing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 忆
   result: Yi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 歆
   result: Xin
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 婧
   result: Jing
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 琦
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 蕙
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 浓
   result: Nong
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 淡
   result: Dan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 颀
   result: Qi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 伴
   result: Ban
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 隽
   result: Jun
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 眉
   result: Mei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 尔
   result: Er
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 含
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 娜
   result: Na
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 惜
   result: Xi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 泪
   result: Lei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凝
   result: Ning
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 菡
   result: Han
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 宛
   result: Wan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 甜
   result: Tian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 潇
   result: Xiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 姿
   result: Zi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 鸯
   result: Yang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 柔
   result: Rou
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 软
   result: Ruan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 袖
   result: Xiu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 琬
   result: Wan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 凰
   result: Huang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 非
   result: Fei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 襄
   result: Xiang
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 姗
   result: Shan
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 霏
   result: Fei
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 彗
   result: Hui
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 脂
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 芷
   result: Zhi
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 纤
   result: Xian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 曳
   result: Ye
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 遥
   result: Yao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 弦
   result: Xian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 与
   result: Yu
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 珂
   result: Ke
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 粉
   result: Fen
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 棉
   result: Mian
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 脉
   result: Mai
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 俏
   result: Qiao
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 橙
   result: Cheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 
 - raw: 笙
   result: Sheng
-  badtrans: true
+  badtrans: false
   only: 
     - NameData.csv 

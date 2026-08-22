@@ -3,7 +3,6 @@ using FanslationStudio.LlmKit.Configuration;
 using FanslationStudio.LlmKit.Utility;
 using FanslationStudio.LlmKit.Workflow;
 using System.Xml.Linq;
-using Tests.Code;
 using ToolGood.Words;
 
 namespace Tests;
@@ -115,7 +114,7 @@ public class GlossaryCreationTests
                         glossary.Add($"- raw: {raw}");
                         glossary.Add($"  result: {pinyin}");
                         //glossary.Add($"  result: {line.Splits[i].Translated}");
-                        glossary.Add($"  badtrans: true");
+                        glossary.Add($"  badtrans: false");
                         glossary.Add($"  only: ");
                         glossary.Add($"    - NameData.csv ");
                     }

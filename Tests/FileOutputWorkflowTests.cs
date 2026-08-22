@@ -1,6 +1,5 @@
 ﻿using FanslationStudio.LlmKit;
 using System.IO.Compression;
-using Tests.Code;
 
 namespace Tests;
 

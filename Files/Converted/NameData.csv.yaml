@@ -20,7 +20,7 @@
 - raw: "姓,钱,姚,荀,冉,游"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "钱"
     translated: "Qian"
@@ -39,7 +39,7 @@
 - raw: "姓,孙,邵,羊,郦,竺"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "孙"
     translated: "Sun"
@@ -58,7 +58,7 @@
 - raw: "姓,汪,湛,惠,雍,权"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "汪"
     translated: "Wang"
@@ -77,7 +77,7 @@
 - raw: "姓,周,祁,甄,桑,盖"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "周"
     translated: "Zhou"
@@ -96,7 +96,7 @@
 - raw: "姓,吴,赵,曲,濮,益"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "吴"
     translated: "Wu"
@@ -115,7 +115,7 @@
 - raw: "姓,郑,禹,家,桂,桓"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "郑"
     translated: "Zheng"
@@ -134,7 +134,7 @@
 - raw: "姓,王,狄,封,牛,公"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "王"
     translated: "Wang"
@@ -153,7 +153,7 @@
 - raw: "姓,冯,米,芮,通,司马"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "冯"
     translated: "Feng"
@@ -172,7 +172,7 @@
 - raw: "姓,陈,贝,羿,边,寿"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "陈"
     translated: "Chen"
@@ -191,7 +191,7 @@
 - raw: "姓,褚,明,储,扈,欧阳"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "褚"
     translated: "Zhu"
@@ -210,7 +210,7 @@
 - raw: "姓,卫,臧,靳,燕,夏侯"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "卫"
     translated: "Wei"
@@ -229,7 +229,7 @@
 - raw: "姓,蒋,计,汲,冀,诸葛"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "蒋"
     translated: "Jiang"
@@ -248,7 +248,7 @@
 - raw: "姓,沈,伏,糜,尚,东方"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "沈"
     translated: "Shen"
@@ -267,7 +267,7 @@
 - raw: "姓,韩,成,松,浦,赫连"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "韩"
     translated: "Han"
@@ -286,7 +286,7 @@
 - raw: "姓,杨,戴,井,农,皇甫"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "杨"
     translated: "Yang"
@@ -305,7 +305,7 @@
 - raw: "姓,朱,谈,富,温,尉迟"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "朱"
     translated: "Zhu"
@@ -324,7 +324,7 @@
 - raw: "姓,尤,茅,巫,别,段"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "尤"
     translated: "You"
@@ -343,7 +343,7 @@
 - raw: "姓,许,庞,乌,庄,公冶"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "许"
     translated: "Xu"
@@ -362,7 +362,7 @@
 - raw: "姓,何,熊,焦,晏,宋"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "何"
     translated: "He"
@@ -381,7 +381,7 @@
 - raw: "姓,吕,纪,巴,柴,秦"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "吕"
     translated: "Lv"
@@ -400,7 +400,7 @@
 - raw: "姓,施,舒,弓,穆,单于"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "施"
     translated: "Shi"
@@ -415,11 +415,11 @@
     translated: "Mu"
   - split: 5
     text: "单于"
-    translated: "ChanYu"
+    translated: "Chanyu"
 - raw: "姓,张,屈,牧,阎,曹"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "张"
     translated: "Zhang"
@@ -438,7 +438,7 @@
 - raw: "姓,孔,项,充,祝,慕"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "孔"
     translated: "Kong"
@@ -457,7 +457,7 @@
 - raw: "姓,华,梁,谷,连,公孙"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "华"
     translated: "Hua"
@@ -476,7 +476,7 @@
 - raw: "姓,金,杜,车,茹,太史"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "金"
     translated: "Jin"
@@ -495,7 +495,7 @@
 - raw: "姓,魏,阮,侯,李,轩辕"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "魏"
     translated: "Wei"
@@ -514,7 +514,7 @@
 - raw: "姓,陶,蓝,钟离,宦,令狐"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "陶"
     translated: "Tao"
@@ -533,7 +533,7 @@
 - raw: "姓,姜,闵,蓬,艾,容"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "姜"
     translated: "Jiang"
@@ -552,7 +552,7 @@
 - raw: "姓,戚,席,全,鱼,宇文"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "戚"
     translated: "Qi"
@@ -571,7 +571,7 @@
 - raw: "姓,谢,季,班,向,长孙"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "谢"
     translated: "Xie"
@@ -586,11 +586,11 @@
     translated: "Xiang"
   - split: 5
     text: "长孙"
-    translated: "ZhangSun"
+    translated: "Zhangsun"
 - raw: "姓,邹,麻,仰,古,慕容"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "邹"
     translated: "Zou"
@@ -609,7 +609,7 @@
 - raw: "姓,喻,强,秋,易,鲜于"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "喻"
     translated: "Yu"
@@ -628,7 +628,7 @@
 - raw: "姓,柏,贾,仲,慎,独孤"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "柏"
     translated: "Bai"
@@ -647,7 +647,7 @@
 - raw: "姓,水,路,伊,戈,司徒"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "水"
     translated: "Shui"
@@ -666,7 +666,7 @@
 - raw: "姓,窦,娄,宫,廖,司空"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "窦"
     translated: "Dou"
@@ -685,7 +685,7 @@
 - raw: "姓,章,危,云,江,督"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "章"
     translated: "Zhang"
@@ -704,7 +704,7 @@
 - raw: "姓,苏,童,仇,终,庾"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "苏"
     translated: "Su"
@@ -723,7 +723,7 @@
 - raw: "姓,潘,颜,暴,居,端木"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "潘"
     translated: "Pan"
@@ -742,7 +742,7 @@
 - raw: "姓,奚,梅,甘,衡,郭"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "奚"
     translated: "Xi"
@@ -761,7 +761,7 @@
 - raw: "姓,范,盛,言,步,葛"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "范"
     translated: "Fan"
@@ -780,7 +780,7 @@
 - raw: "姓,彭,林,厉,都,董"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "彭"
     translated: "Peng"
@@ -799,7 +799,7 @@
 - raw: "姓,郎,刁,戎,耿,严"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "郎"
     translated: "Lang"
@@ -818,7 +818,7 @@
 - raw: "姓,鲁,钟,祖,满,山"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "鲁"
     translated: "Lu"
@@ -837,7 +837,7 @@
 - raw: "姓,韦,徐,武,弘,国"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "韦"
     translated: "Wei"
@@ -856,7 +856,7 @@
 - raw: "姓,昌,邱,符,匡,拓跋"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "昌"
     translated: "Chang"
@@ -875,7 +875,7 @@
 - raw: "姓,马,高,景,文,刘"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "马"
     translated: "Ma"
@@ -894,7 +894,7 @@
 - raw: "姓,苗,夏,詹,寇,晋"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "苗"
     translated: "Miao"
@@ -913,7 +913,7 @@
 - raw: "姓,凤,蔡,束,广,楚"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "凤"
     translated: "Feng"
@@ -932,7 +932,7 @@
 - raw: "姓,花,田,龙,禄,阙"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "花"
     translated: "Hua"
@@ -951,7 +951,7 @@
 - raw: "姓,方,胡,幸,东,法"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "方"
     translated: "Fang"
@@ -970,7 +970,7 @@
 - raw: "姓,任,凌,司,欧,叶"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "任"
     translated: "Ren"
@@ -989,7 +989,7 @@
 - raw: "姓,袁,霍,韶,沃,涂"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "袁"
     translated: "Yuan"
@@ -1008,7 +1008,7 @@
 - raw: "姓,柳,虞,樊,利,钦"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "柳"
     translated: "Liu"
@@ -1027,7 +1027,7 @@
 - raw: "姓,鲍,万,黎,蔚,百里"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "鲍"
     translated: "Bao"
@@ -1046,7 +1046,7 @@
 - raw: "姓,史,支,俞,越,东郭"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "史"
     translated: "Shi"
@@ -1065,7 +1065,7 @@
 - raw: "姓,唐,柯,薄,印,南门"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "唐"
     translated: "Tang"
@@ -1084,7 +1084,7 @@
 - raw: "姓,费,莫,怀,隆,呼延"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "费"
     translated: "Fei"
@@ -1103,7 +1103,7 @@
 - raw: "姓,廉,管,宿,师,归"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "廉"
     translated: "Lian"
@@ -1122,7 +1122,7 @@
 - raw: "姓,岑,卢,白,巩,海"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "岑"
     translated: "Cen"
@@ -1141,7 +1141,7 @@
 - raw: "姓,雷,经,蒲,聂,北冥"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "雷"
     translated: "Lei"
@@ -1160,7 +1160,7 @@
 - raw: "姓,贺,房,卓,晁,岳"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "贺"
     translated: "Che"
@@ -1179,7 +1179,7 @@
 - raw: "姓,倪,裘,从,勾,帅"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "倪"
     translated: "Ni"
@@ -1198,7 +1198,7 @@
 - raw: "姓,汤,缪,薛,敖,上官"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "汤"
     translated: "Tang"
@@ -1217,7 +1217,7 @@
 - raw: "姓,况,干,索,融,亢"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "况"
     translated: "Kuang"
@@ -1236,7 +1236,7 @@
 - raw: "姓,殷,解,咸,冷,骆"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "殷"
     translated: "Yin"
@@ -1255,7 +1255,7 @@
 - raw: "姓,罗,应,籍,辛,荣"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "罗"
     translated: "Luo"
@@ -1274,7 +1274,7 @@
 - raw: "姓,毕,宗,赖,宣,琴"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "毕"
     translated: "Bi"
@@ -1293,7 +1293,7 @@
 - raw: "姓,郝,丁,那,贲,完颜"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "郝"
     translated: "Hao"
@@ -1312,7 +1312,7 @@
 - raw: "姓,安,邓,屠,简,东门"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "安"
     translated: "Ann"
@@ -1331,7 +1331,7 @@
 - raw: "姓,常,商,蒙,饶,西门"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "常"
     translated: "Chang"
@@ -1350,7 +1350,7 @@
 - raw: "姓,乐,郁,池,空,牟"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "乐"
     translated: "Le"
@@ -1369,7 +1369,7 @@
 - raw: "姓,于,单,乔,曾,扶"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "于"
     translated: "Yu"
@@ -1388,7 +1388,7 @@
 - raw: "姓,时,杭,阴,毋,伯"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "时"
     translated: "Shi"
@@ -1407,7 +1407,7 @@
 - raw: "姓,傅,洪,萧,沙,赏"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "傅"
     translated: "Fu"
@@ -1426,7 +1426,7 @@
 - raw: "姓,皮,包,胥,鞠,养"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "皮"
     translated: "Pi"
@@ -1445,7 +1445,7 @@
 - raw: "姓,卞,诸,能,左,苍"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "卞"
     translated: "Bian"
@@ -1464,7 +1464,7 @@
 - raw: "姓,齐,石,双,须,南宫"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "齐"
     translated: "Qi"
@@ -1483,7 +1483,7 @@
 - raw: "姓,康,崔,闻,丰,墨"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "康"
     translated: "Kang"
@@ -1502,7 +1502,7 @@
 - raw: "姓,伍,吉,莘,巢,谯"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "伍"
     translated: "Wu"
@@ -1521,7 +1521,7 @@
 - raw: "姓,余,钮,党,关,年"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "余"
     translated: "Yu"
@@ -1540,7 +1540,7 @@
 - raw: "姓,元,龚,翟,蒯,爱"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "元"
     translated: "Yuan"
@@ -1559,7 +1559,7 @@
 - raw: "姓,卜,程,谭,相,阳"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "卜"
     translated: "Bu"
@@ -1578,7 +1578,7 @@
 - raw: "姓,顾,嵇,贡,查,北堂"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "顾"
     translated: "Gu"
@@ -1597,7 +1597,7 @@
 - raw: "姓,孟,邢,劳,后,尹"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "孟"
     translated: "Meng"
@@ -1616,7 +1616,7 @@
 - raw: "姓,平,滑,荆,堵,翁"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "平"
     translated: "Ping"
@@ -1635,7 +1635,7 @@
 - raw: "姓,黄,裴,姬,红,左丘"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "黄"
     translated: "Huang"
@@ -1654,7 +1654,7 @@
 - raw: "姓,和,陆,申,福,佟"
   splits:
   - text: "姓"
-    translated: "Last name"
+    translated: "Surname"
   - split: 1
     text: "和"
     translated: "He"
@@ -3193,6 +3193,7 @@
 - raw: "男名,部,圣,默,防,学"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "部"
     translated: "Bu"
@@ -3211,6 +3212,7 @@
 - raw: "男名,冶,炫,型,剧,邦"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "冶"
     translated: "Ye"
@@ -3229,6 +3231,7 @@
 - raw: "男名,辅,马,戎,慎,韧"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "辅"
     translated: "Fu"
@@ -3247,6 +3250,7 @@
 - raw: "男名,挂,共,冠,涌,葛"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "挂"
     translated: "Gua"
@@ -3265,6 +3269,7 @@
 - raw: "男名,靖,蒲,规,域,能"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "靖"
     translated: "Jing"
@@ -3283,6 +3288,7 @@
 - raw: "男名,增,旭,睿,造,号"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "增"
     translated: "Zeng"
@@ -3301,6 +3307,7 @@
 - raw: "男名,驱,家,昭,张,桦"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "驱"
     translated: "Qu"
@@ -3319,6 +3326,7 @@
 - raw: "男名,衍,晃,煌,凤,鸳"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "衍"
     translated: "Yan"
@@ -3337,6 +3345,7 @@
 - raw: "男名,获,治,极,壤,宙"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "获"
     translated: "Huo"
@@ -3355,6 +3364,7 @@
 - raw: "男名,架,界,旗,宇,世"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "架"
     translated: "Jia"
@@ -3373,6 +3383,7 @@
 - raw: "男名,合,阶,统,准,尖"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "合"
     translated: "He"
@@ -3391,6 +3402,7 @@
 - raw: "男名,史,族,交,带,简"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "史"
     translated: "Shi"
@@ -3409,6 +3421,7 @@
 - raw: "男名,掌,教,实,剑,神"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "掌"
     translated: "Zhang"
@@ -3427,6 +3440,7 @@
 - raw: "男名,寺,堂,藤,始,接"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "寺"
     translated: "Si"
@@ -3445,6 +3459,7 @@
 - raw: "男名,高,烈,远,斗,矩"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "高"
     translated: "Gao"
@@ -3463,6 +3478,7 @@
 - raw: "男名,大,照,上,跃,炬"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "大"
     translated: "Da"
@@ -3481,6 +3497,7 @@
 - raw: "男名,岩,鸿,近,进,钧"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "岩"
     translated: "Yan"
@@ -3499,6 +3516,7 @@
 - raw: "男名,石,浩,古,步,亢"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "石"
     translated: "Shi"
@@ -3517,6 +3535,7 @@
 - raw: "男名,勇,波,继,同,克"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "勇"
     translated: "Yong"
@@ -3535,6 +3554,7 @@
 - raw: "男名,猛,涛,承,志,刻"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "猛"
     translated: "Meng"
@@ -3553,6 +3573,7 @@
 - raw: "男名,刚,浪,松,向,镂"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "刚"
     translated: "Gang"
@@ -3571,6 +3592,7 @@
 - raw: "男名,强,源,柏,全,炉"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "强"
     translated: "Qiang"
@@ -3589,6 +3611,7 @@
 - raw: "男名,雄,潮,根,恒,陆"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "雄"
     translated: "Xiong"
@@ -3607,6 +3630,7 @@
 - raw: "男名,威,渊,柱,衡,烙"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "威"
     translated: "Wei"
@@ -3625,6 +3649,7 @@
 - raw: "男名,豪,隐,梁,鸣,炼"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "豪"
     translated: "Hao"
@@ -3643,6 +3668,7 @@
 - raw: "男名,震,逸,成,永,辽"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "震"
     translated: "Zhen"
@@ -3661,6 +3687,7 @@
 - raw: "男名,壮,超,龙,磊,猎"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "壮"
     translated: "Zhuang"
@@ -3679,6 +3706,7 @@
 - raw: "男名,阔,越,虎,振,岭"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "阔"
     translated: "Kuo"
@@ -3697,6 +3725,7 @@
 - raw: "男名,宏,特,豹,隆,磨"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "宏"
     translated: "Hong"
@@ -3715,6 +3744,7 @@
 - raw: "男名,伟,勤,彪,宽,破"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "伟"
     translated: "Wei"
@@ -3733,6 +3763,7 @@
 - raw: "男名,杰,东,骏,奎,契"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "杰"
     translated: "Jie"
@@ -3751,6 +3782,7 @@
 - raw: "男名,建,南,鹏,领,器"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "建"
     translated: "Jian"
@@ -3769,6 +3801,7 @@
 - raw: "男名,国,西,鹤,弘,奇"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "国"
     translated: "Guo"
@@ -3787,6 +3820,7 @@
 - raw: "男名,庆,北,斌,扬,切"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "庆"
     translated: "Qing"
@@ -3805,6 +3839,7 @@
 - raw: "男名,筑,中,郎,博,燃"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "筑"
     translated: "Zhu"
@@ -3823,6 +3858,7 @@
 - raw: "男名,基,甲,公,昆,熔"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "基"
     translated: "Ji"
@@ -3841,6 +3877,7 @@
 - raw: "男名,健,乙,士,栗,势"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "健"
     translated: "Jian"
@@ -3859,6 +3896,7 @@
 - raw: "男名,康,丙,夫,朝,收"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "康"
     translated: "Kang"
@@ -3877,6 +3915,7 @@
 - raw: "男名,毅,丁,生,晖,燧"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "毅"
     translated: "Yi"
@@ -3895,6 +3934,7 @@
 - raw: "男名,启,戊,汉,峥,塔"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "启"
     translated: "Qi"
@@ -3913,6 +3953,7 @@
 - raw: "男名,明,己,伯,铮,潭"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "明"
     translated: "Ming"
@@ -3931,6 +3972,7 @@
 - raw: "男名,亮,庚,叔,争,炭"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "亮"
     translated: "Liang"
@@ -3949,6 +3991,7 @@
 - raw: "男名,道,辛,朗,麒,霆"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "道"
     translated: "Dao"
@@ -3967,6 +4010,7 @@
 - raw: "男名,德,壬,胜,麟,炎"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "德"
     translated: "De"
@@ -3985,6 +4029,7 @@
 - raw: "男名,忠,癸,利,秉,焰"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "忠"
     translated: "Zhong"
@@ -4003,6 +4048,7 @@
 - raw: "男名,仁,阳,赢,沧,鹰"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "仁"
     translated: "Ren"
@@ -4021,6 +4067,7 @@
 - raw: "男名,义,顶,权,城,岳"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "义"
     translated: "Yi"
@@ -4039,6 +4086,7 @@
 - raw: "男名,礼,辉,益,登,阵"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "礼"
     translated: "Li"
@@ -4057,6 +4105,7 @@
 - raw: "男名,智,耀,民,栋,镇"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "智"
     translated: "Zhi"
@@ -4075,6 +4124,7 @@
 - raw: "男名,信,军,团,洞,止"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "信"
     translated: "Xin"
@@ -4093,6 +4143,7 @@
 - raw: "男名,诚,兵,结,冲,制"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "诚"
     translated: "Cheng"
@@ -4111,6 +4162,7 @@
 - raw: "男名,谦,将,正,崇,质"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "谦"
     translated: "Qian"
@@ -4129,6 +4181,7 @@
 - raw: "男名,贤,帅,定,荡,种"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "贤"
     translated: "Xian"
@@ -4147,6 +4200,7 @@
 - raw: "男名,良,武,安,锻,重"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "良"
     translated: "Liang"
@@ -4165,6 +4219,7 @@
 - raw: "男名,俊,力,兴,革,州"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "俊"
     translated: "Jun"
@@ -4183,6 +4238,7 @@
 - raw: "男名,通,本,举,更,铸"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "通"
     translated: "Tong"
@@ -4201,6 +4257,7 @@
 - raw: "男名,达,主,直,工,祖"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "达"
     translated: "Da"
@@ -4219,6 +4276,7 @@
 - raw: "男名,广,钢,凯,攻,尊"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "广"
     translated: "Guang"
@@ -4237,6 +4295,7 @@
 - raw: "男名,长,铁,旋,固,铜"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "长"
     translated: "Chang"
@@ -4255,6 +4314,7 @@
 - raw: "男名,泰,锋,征,圭,锡"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "泰"
     translated: "Tai"
@@ -4273,6 +4333,7 @@
 - raw: "男名,昌,峰,旅,昊,弋"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "昌"
     translated: "Chang"
@@ -4291,6 +4352,7 @@
 - raw: "男名,盛,钟,守,赫,用"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "盛"
     translated: "Sheng"
@@ -4309,6 +4371,7 @@
 - raw: "男名,富,鼎,卫,横,宗"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "富"
     translated: "Fu"
@@ -4327,6 +4390,7 @@
 - raw: "男名,贵,铭,福,划,总"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "贵"
     translated: "Gui"
@@ -4345,6 +4409,7 @@
 - raw: "男名,吉,印,禄,击,刀"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "吉"
     translated: "Ji"
@@ -4363,6 +4428,7 @@
 - raw: "男名,祥,玄,寿,坚,枪"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "祥"
     translated: "Xiang"
@@ -4381,6 +4447,7 @@
 - raw: "男名,洪,太,奋,角,断"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "洪"
     translated: "Hong"
@@ -4399,6 +4466,7 @@
 - raw: "男名,醒,问,灭,败,丑"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "醒"
     translated: "Xing"
@@ -4417,6 +4485,7 @@
 - raw: "男名,缺,棘,孤,鬼,封"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "缺"
     translated: "Que"
@@ -4435,6 +4504,7 @@
 - raw: "男名,戒,开,难,敌,罡"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "戒"
     translated: "Jie"
@@ -4453,6 +4523,7 @@
 - raw: "男名,翰,哲,斩,杀,莽"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "翰"
     translated: "Han"
@@ -4471,6 +4542,7 @@
 - raw: "男名,凡,坤,亦,毒,暗"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "凡"
     translated: "Fan"
@@ -4489,6 +4561,7 @@
 - raw: "男名,仇,树,延,血,则"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "仇"
     translated: "Chou"
@@ -4507,6 +4580,7 @@
 - raw: "男名,苦,悲,痛,残,文"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "苦"
     translated: "Ku"
@@ -4525,6 +4599,7 @@
 - raw: "男名,弃,疾,裕,皓,天"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "弃"
     translated: "Qi"
@@ -4543,6 +4618,7 @@
 - raw: "男名,侠,客,群,岛,经"
   splits:
   - text: "男名"
+    translated: "Male Name"
   - split: 1
     text: "侠"
     translated: "Xia"
@@ -4561,6 +4637,7 @@
 - raw: "女名,晓,珊,稚,希,苓"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "晓"
     translated: "Xiao"
@@ -4579,6 +4656,7 @@
 - raw: "女名,小,晶,燕,梦,艾"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "小"
     translated: "Xiao"
@@ -4597,6 +4675,7 @@
 - raw: "女名,妹,莹,鸽,境,葵"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "妹"
     translated: "Mei"
@@ -4615,6 +4694,7 @@
 - raw: "女名,姑,花,莺,淑,斓"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "姑"
     translated: "Gu"
@@ -4633,6 +4713,7 @@
 - raw: "女名,娘,草,鹃,贞,卿"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "娘"
     translated: "Niang"
@@ -4651,6 +4732,7 @@
 - raw: "女名,妃,兰,蝶,宁,黛"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "妃"
     translated: "Fei"
@@ -4669,6 +4751,7 @@
 - raw: "女名,姬,英,锦,静,芮"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "姬"
     translated: "Qi Ji"
@@ -4687,6 +4770,7 @@
 - raw: "女名,后,灵,绣,倩,蕊"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "后"
     translated: "Hou"
@@ -4705,6 +4789,7 @@
 - raw: "女名,好,芝,绫,巧,蕴"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "好"
     translated: "Hao"
@@ -4723,6 +4808,7 @@
 - raw: "女名,妙,萱,罗,鱼,霖"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "妙"
     translated: "Miao"
@@ -4741,6 +4827,7 @@
 - raw: "女名,妮,芸,绮,琴,姝"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "妮"
     translated: "Ni"
@@ -4759,6 +4846,7 @@
 - raw: "女名,娃,茗,衣,笛,恬"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "娃"
     translated: "Wa"
@@ -4777,6 +4865,7 @@
 - raw: "女名,爱,芬,裳,竹,晗"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "爱"
     translated: "Ai"
@@ -4795,6 +4884,7 @@
 - raw: "女名,媛,芳,慧,棋,昕"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "媛"
     translated: "Yuan"
@@ -4813,6 +4903,7 @@
 - raw: "女名,婵,蓓,惠,书,纯"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "婵"
     translated: "Chan"
@@ -4831,6 +4922,7 @@
 - raw: "女名,娟,蕾,香,诗,菲"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "娟"
     translated: "Juan"
@@ -4849,6 +4941,7 @@
 - raw: "女名,娇,翠,穗,文,卉"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "娇"
     translated: "Jiao"
@@ -4867,6 +4960,7 @@
 - raw: "女名,媚,丽,颖,语,莱"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "媚"
     translated: "Mei"
@@ -4885,6 +4979,7 @@
 - raw: "女名,婉,萍,芒,音,梨"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "婉"
     translated: "Wan"
@@ -4903,6 +4998,7 @@
 - raw: "女名,婷,莲,彩,韵,蜜"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "婷"
     translated: "Ting"
@@ -4921,6 +5017,7 @@
 - raw: "女名,妍,荷,艳,歌,女"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "妍"
     translated: "Yan"
@@ -4939,6 +5036,7 @@
 - raw: "女名,嫣,莉,素,曲,纱"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "嫣"
     translated: "Yan"
@@ -4957,6 +5055,7 @@
 - raw: "女名,贝,蔷,秀,如,丝"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "贝"
     translated: "Bei"
@@ -4975,6 +5074,7 @@
 - raw: "女名,璧,薇,美,若,菘"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "璧"
     translated: "Bi"
@@ -4993,6 +5093,7 @@
 - raw: "女名,环,茜,悦,晴,苏"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "环"
     translated: "Huan"
@@ -5011,6 +5112,7 @@
 - raw: "女名,琪,莎,雯,曦,桃"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "琪"
     translated: "Qi"
@@ -5029,6 +5131,7 @@
 - raw: "女名,璇,蓉,露,馨,舞"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "璇"
     translated: "Xuan"
@@ -5047,6 +5150,7 @@
 - raw: "女名,玑,菱,霞,欣,绚"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "玑"
     translated: "Ji"
@@ -5065,6 +5169,7 @@
 - raw: "女名,珍,梅,雪,颜,芽"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "珍"
     translated: "Zhen"
@@ -5083,6 +5188,7 @@
 - raw: "女名,珠,杏,虹,优,雁"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "珠"
     translated: "Zhu"
@@ -5101,6 +5207,7 @@
 - raw: "女名,玲,杨,涟,雅,依"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "玲"
     translated: "Ling"
@@ -5119,6 +5226,7 @@
 - raw: "女名,珑,柳,溪,怡,荫"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "珑"
     translated: "Long"
@@ -5137,6 +5245,7 @@
 - raw: "女名,佩,桂,思,暖,樱"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "佩"
     translated: "Pei"
@@ -5155,6 +5264,7 @@
 - raw: "女名,琼,椿,绪,满,荧"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "琼"
     translated: "Qiong"
@@ -5173,6 +5283,7 @@
 - raw: "女名,瑶,榆,念,可,苑"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "瑶"
     translated: "Yao"
@@ -5191,6 +5302,7 @@
 - raw: "女名,瑜,枫,想,佳,俪"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "瑜"
     translated: "Yu"
@@ -5209,6 +5321,7 @@
 - raw: "女名,琳,菊,盼,嘉,魅"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "琳"
     translated: "Lin"
@@ -5227,6 +5340,7 @@
 - raw: "女名,容,袅,儿,施,芙"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "容"
     translated: "Rong"
@@ -5245,6 +5359,7 @@
 - raw: "女名,璐,洁,忘,忧,蔓"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "璐"
     translated: "Lu"
@@ -5263,6 +5378,7 @@
 - raw: "女名,听,情,忆,歆,婧"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "听"
     translated: "Ting"
@@ -5281,6 +5397,7 @@
 - raw: "女名,琦,蕙,浓,淡,颀"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "琦"
     translated: "Qi"
@@ -5299,6 +5416,7 @@
 - raw: "女名,伴,隽,眉,清,尔"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "伴"
     translated: "Ban"
@@ -5317,6 +5435,7 @@
 - raw: "女名,含,莫,伊,娜,惜"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "含"
     translated: "Han"
@@ -5335,6 +5454,7 @@
 - raw: "女名,泪,君,凝,菡,凌"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "泪"
     translated: "Lei"
@@ -5353,6 +5473,7 @@
 - raw: "女名,宛,甜,潇,姿,鸯"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "宛"
     translated: "Wan"
@@ -5371,6 +5492,7 @@
 - raw: "女名,柔,软,袖,琬,凰"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "柔"
     translated: "Rou"
@@ -5389,6 +5511,7 @@
 - raw: "女名,约,诺,言,采,净"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "约"
     translated: "Yue"
@@ -5407,6 +5530,7 @@
 - raw: "女名,玄,飞,一,烟,非"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "玄"
     translated: "Xuan"
@@ -5425,6 +5549,7 @@
 - raw: "女名,襄,姗,影,朱,绿"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "襄"
     translated: "Xiang"
@@ -5443,6 +5568,7 @@
 - raw: "女名,盈,水,雨,霜,霏"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "盈"
     translated: "Ying"
@@ -5461,6 +5587,7 @@
 - raw: "女名,春,夏,秋,冬,季"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "春"
     translated: "Chun"
@@ -5479,6 +5606,7 @@
 - raw: "女名,青,倾,紫,敏,彗"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "青"
     translated: "Qing"
@@ -5497,6 +5625,7 @@
 - raw: "女名,寻,欢,乐,幻,真"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "寻"
     translated: "Xun"
@@ -5515,6 +5644,7 @@
 - raw: "女名,脂,玉,冰,芷,纤"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "脂"
     translated: "Zhi"
@@ -5533,6 +5663,7 @@
 - raw: "女名,尘,仙,子,梓,涵"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "尘"
     translated: "Chen"
@@ -5551,6 +5682,7 @@
 - raw: "女名,摇,曳,步,遥,弦"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "摇"
     translated: "Yao"
@@ -5569,6 +5701,7 @@
 - raw: "女名,幽,千,与,染,心"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "幽"
     translated: "You"
@@ -5587,6 +5720,7 @@
 - raw: "女名,桐,温,鹿,珂,圆"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "桐"
     translated: "Tong"
@@ -5605,6 +5739,7 @@
 - raw: "女名,亭,粉,画,醉,昭"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "亭"
     translated: "Ting"
@@ -5623,6 +5758,7 @@
 - raw: "女名,君,棉,脉,仪,俏"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "君"
     translated: "Jun"
@@ -5641,6 +5777,7 @@
 - raw: "女名,白,橙,红,黄,笙"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "白"
     translated: "Bai"
@@ -5659,6 +5796,7 @@
 - raw: "女名,谷,风,华,双,剑"
   splits:
   - text: "女名"
+    translated: "Female Name"
   - split: 1
     text: "谷"
     translated: "Gu"

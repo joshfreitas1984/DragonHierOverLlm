@@ -233,6 +233,8 @@
     translated: "Rusty Sword"
   - split: 10
     text: "提升剑法伤害\\n降低受到的剑法伤害"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -1212,6 +1214,8 @@
     translated: "Counterattack"
   - split: 3
     text: "藏锋"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 4
     text: "尽出"
     translated: "Exhaust"
@@ -2432,8 +2436,12 @@
   splits:
   - split: 1
     text: "重碾"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 3
     text: "重碾"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 4
     text: "无"
     translated: "None"

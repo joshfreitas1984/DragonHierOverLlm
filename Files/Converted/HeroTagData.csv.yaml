@@ -88,6 +88,7 @@
     translated: "Strength"
   - split: 9
     text: "力道90+天赋:孔武有力"
+    translated: "Strength90+ Talent: Powerful and Fortitudinous"
   - split: 10
     text: "孔武有力"
     translated: "Strong and mighty"
@@ -1296,6 +1297,7 @@
     translated: "Inner Qi is hot"
   - split: 9
     text: "内功120+天赋:内息冰寒"
+    translated: "Neigong 120 + Natural Talent: Inner Qi Icy Cold"
   - split: 10
     text: "内息冰寒"
     translated: "Inner Qi Ice Cold"
@@ -1715,6 +1717,7 @@
     translated: "Heaven‑shaking earthquake"
   - split: 4
     text: "眩晕+0.15;动摇+0.15"
+    translated: "Dizziness +0.15; shaking +0.15"
   - split: 9
     text: "灵巧110+智力110+天赋:鬼斧神工+天赋:例无虚发"
     translated: "Agility110+Intelligence110+Talent: Divine Craftsmanship+Talent: Unerring Aim"
@@ -4465,6 +4468,7 @@
     translated: "Study medicine"
   - split: 9
     text: "天赋:医师"
+    translated: "Gift: Physician"
   - split: 10
     text: "医师"
     translated: "Doctor"
@@ -5103,13 +5107,16 @@
   splits:
   - split: 1
     text: "未卜先知"
+    translated: "Foreknow the future"
   - split: 4
     text: "闪避+0.15"
+    translated: "Dodge +0.15"
   - split: 5
     text: "卜算"
     translated: "Fortune Teller"
   - split: 9
     text: "天赋:相士"
+    translated: "Gift: Fortune Teller"
   - split: 10
     text: "相士"
     translated: "Fortune teller"
@@ -5123,6 +5130,7 @@
     translated: "Ranger"
   - split: 4
     text: "飘逸+0.05"
+    translated: "Elegant +0.05"
   - split: 5
     text: "游侠"
     translated: "Ranger"
@@ -5182,10 +5190,12 @@
     translated: "Gamble addict"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "266,嗜赌如命,2,Self,慧眼+0.1,赌徒,,1,0,天赋:赌徒,赌徒,喜好,TRUE"
   splits:
   - split: 1
     text: "嗜赌如命"
+    translated: "Addicted to gambling"
   - split: 4
     text: "慧眼+0.1"
     translated: "Insightful Eye +0.1"
@@ -5194,11 +5204,13 @@
     translated: "Gamble addict"
   - split: 9
     text: "天赋:赌徒"
+    translated: "Talent: Gambler"
   - split: 10
     text: "赌徒"
     translated: "Gamble addict"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "267,赌运亨通,4,Self,慧眼+0.15,赌徒,,1,0,天赋:嗜赌如命,嗜赌如命,喜好,FALSE"
   splits:
   - split: 1
@@ -5215,8 +5227,10 @@
     translated: "Talent: gambling addiction"
   - split: 10
     text: "嗜赌如命"
+    translated: "Addicted to gambling"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "268,酒鬼,1,Self,壮骨+0.05,酒鬼,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5230,10 +5244,12 @@
     translated: "Drunkard"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "269,放歌纵酒,2,Self,壮骨+0.1,酒鬼,,1,0,天赋:酒鬼,酒鬼,喜好,TRUE"
   splits:
   - split: 1
     text: "放歌纵酒"
+    translated: "Sing and drink freely"
   - split: 4
     text: "壮骨+0.1"
     translated: "Bone‑strengthening+0.1"
@@ -5248,6 +5264,7 @@
     translated: "Drunkard"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "270,醉生梦死,4,Self,壮骨+0.15,酒鬼,,1,0,天赋:放歌纵酒,放歌纵酒,喜好,FALSE"
   splits:
   - split: 1
@@ -5261,10 +5278,13 @@
     translated: "Drunkard"
   - split: 9
     text: "天赋:放歌纵酒"
+    translated: "Talent: Singing and Drinking to One's Heart's Content"
   - split: 10
     text: "放歌纵酒"
+    translated: "Sing and drink freely"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "271,食客,1,Self,活血+0.05,食客,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5278,6 +5298,7 @@
     translated: "Dining guest"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "272,大快朵颐,2,Self,活血+0.1,食客,,1,0,天赋:食客,食客,喜好,TRUE"
   splits:
   - split: 1
@@ -5291,11 +5312,13 @@
     translated: "Dining guest"
   - split: 9
     text: "天赋:食客"
+    translated: "Talent: Food Guest"
   - split: 10
     text: "食客"
     translated: "Dining guest"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "273,饕餮盛宴,4,Self,活血+0.15,食客,,1,0,天赋:大快朵颐,大快朵颐,喜好,FALSE"
   splits:
   - split: 1
@@ -5315,16 +5338,21 @@
     translated: "Enjoy oneself to the fullest"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "274,收藏,1,Self,鹰眼+0.05,收藏,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
     text: "收藏"
+    translated: "Collect"
   - split: 4
     text: "鹰眼+0.05"
+    translated: "Eagle Eye +0.05"
   - split: 5
     text: "收藏"
+    translated: "Collect"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "275,去伪存真,2,Self,鹰眼+0.1,收藏,,1,0,天赋:收藏,收藏,喜好,TRUE"
   splits:
   - split: 1
@@ -5335,56 +5363,70 @@
     translated: "Eagle Eye +0.1"
   - split: 5
     text: "收藏"
+    translated: "Collect"
   - split: 9
     text: "天赋:收藏"
     translated: "Talent: Collection"
   - split: 10
     text: "收藏"
+    translated: "Collect"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "276,慧眼独具,4,Self,鹰眼+0.15,收藏,,1,0,天赋:去伪存真,去伪存真,喜好,FALSE"
   splits:
   - split: 1
     text: "慧眼独具"
+    translated: "Insightful discernment"
   - split: 4
     text: "鹰眼+0.15"
     translated: "Eagle Eye +0.15"
   - split: 5
     text: "收藏"
+    translated: "Collect"
   - split: 9
     text: "天赋:去伪存真"
+    translated: "Gift: Filter Out the False"
   - split: 10
     text: "去伪存真"
     translated: "Separate truth from falsehood"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "277,骑术,1,Self,急速+0.05,骑术,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
     text: "骑术"
+    translated: "Horsemanship"
   - split: 4
     text: "急速+0.05"
     translated: "+0.05 rapidly"
   - split: 5
     text: "骑术"
+    translated: "Horsemanship"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "278,纵马驰骋,2,Self,急速+0.1,骑术,,1,0,天赋:骑术,骑术,喜好,TRUE"
   splits:
   - split: 1
     text: "纵马驰骋"
+    translated: "Gallop on horseback"
   - split: 4
     text: "急速+0.1"
     translated: "+0.1 rapidly"
   - split: 5
     text: "骑术"
+    translated: "Horsemanship"
   - split: 9
     text: "天赋:骑术"
     translated: "Talent: Riding Skill"
   - split: 10
     text: "骑术"
+    translated: "Horsemanship"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "279,一骑绝尘,4,Self,急速+0.15,骑术,,1,0,天赋:纵马驰骋,纵马驰骋,喜好,FALSE"
   splits:
   - split: 1
@@ -5395,12 +5437,16 @@
     translated: "+0.15 quickly"
   - split: 5
     text: "骑术"
+    translated: "Horsemanship"
   - split: 9
     text: "天赋:纵马驰骋"
+    translated: "Talent: Horseback Riding Skillfully"
   - split: 10
     text: "纵马驰骋"
+    translated: "Gallop on horseback"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "280,读书,1,Self,定神+0.05,读书,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5408,11 +5454,13 @@
     translated: "Reading books"
   - split: 4
     text: "定神+0.05"
+    translated: "Focus +0.05"
   - split: 5
     text: "读书"
     translated: "Reading books"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "281,博览群书,2,Self,定神+0.1,读书,,1,0,天赋:读书,读书,喜好,TRUE"
   splits:
   - split: 1
@@ -5420,6 +5468,7 @@
     translated: "Read extensively"
   - split: 4
     text: "定神+0.1"
+    translated: "Focus +0.1"
   - split: 5
     text: "读书"
     translated: "Reading books"
@@ -5431,10 +5480,12 @@
     translated: "Reading books"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "282,皓首穷经,4,Self,定神+0.15,读书,,1,0,天赋:博览群书,博览群书,喜好,FALSE"
   splits:
   - split: 1
     text: "皓首穷经"
+    translated: "Devote one's life to studying"
   - split: 4
     text: "定神+0.15"
     translated: "Focus +0.15"
@@ -5443,11 +5494,13 @@
     translated: "Reading books"
   - split: 9
     text: "天赋:博览群书"
+    translated: "Talent: Widely Read"
   - split: 10
     text: "博览群书"
     translated: "Read extensively"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "283,瑶琴,1,Self,负面加成+0.05,瑶琴,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5455,11 +5508,13 @@
     translated: "Yaqin"
   - split: 4
     text: "负面加成+0.05"
+    translated: "Negative bonus +0.05"
   - split: 5
     text: "瑶琴"
     translated: "Yaqin"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "284,余音绕梁,2,Self,负面加成+0.1,瑶琴,,1,0,天赋:瑶琴,瑶琴,喜好,TRUE"
   splits:
   - split: 1
@@ -5479,6 +5534,7 @@
     translated: "Yaqin"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "285,鸾吟凤唱,4,Self,负面加成+0.15,瑶琴,,1,0,天赋:余音绕梁,余音绕梁,喜好,FALSE"
   splits:
   - split: 1
@@ -5486,16 +5542,19 @@
     translated: "Phoenix Song"
   - split: 4
     text: "负面加成+0.15"
+    translated: "Negative bonus +0.15"
   - split: 5
     text: "瑶琴"
     translated: "Yaqin"
   - split: 9
     text: "天赋:余音绕梁"
+    translated: "Talent: Echoes in the Throat"
   - split: 10
     text: "余音绕梁"
     translated: "Resonant echoes linger in the hall"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "286,弈棋,1,Self,破招+0.05,弈棋,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5509,28 +5568,35 @@
     translated: "Go playing"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "287,棋高一着,2,Self,破招+0.1,弈棋,,1,0,天赋:弈棋,弈棋,喜好,TRUE"
   splits:
   - split: 1
     text: "棋高一着"
+    translated: "A move ahead"
   - split: 4
     text: "破招+0.1"
+    translated: "Counter +0.1"
   - split: 5
     text: "弈棋"
     translated: "Go playing"
   - split: 9
     text: "天赋:弈棋"
+    translated: "Talent: Chess Mastery"
   - split: 10
     text: "弈棋"
     translated: "Go playing"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "288,神机妙算,4,Self,破招+0.15,弈棋,,1,0,天赋:棋高一着,棋高一着,喜好,FALSE"
   splits:
   - split: 1
     text: "神机妙算"
+    translated: "Divine strategy"
   - split: 4
     text: "破招+0.15"
+    translated: "Counter +0.15"
   - split: 5
     text: "弈棋"
     translated: "Go playing"
@@ -5539,8 +5605,10 @@
     translated: "Innate Advantage: A Step Ahead"
   - split: 10
     text: "棋高一着"
+    translated: "A move ahead"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "289,书法,1,Self,通脉+0.05,书法,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5554,37 +5622,47 @@
     translated: "Calligraphy"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "290,笔走龙蛇,2,Self,通脉+0.1,书法,,1,0,天赋:书法,书法,喜好,TRUE"
   splits:
   - split: 1
     text: "笔走龙蛇"
+    translated: "Brush moves like dragonsisciendi"
   - split: 4
     text: "通脉+0.1"
+    translated: "Pulse Smooth+0.1"
   - split: 5
     text: "书法"
     translated: "Calligraphy"
   - split: 9
     text: "天赋:书法"
+    translated: "Talent: Calligraphy"
   - split: 10
     text: "书法"
     translated: "Calligraphy"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "291,铁画银钩,4,Self,通脉+0.15,书法,,1,0,天赋:笔走龙蛇,笔走龙蛇,喜好,FALSE"
   splits:
   - split: 1
     text: "铁画银钩"
+    translated: "Iron Lines and Silver Hooks"
   - split: 4
     text: "通脉+0.15"
+    translated: "Pulse Smooth +0.15"
   - split: 5
     text: "书法"
     translated: "Calligraphy"
   - split: 9
     text: "天赋:笔走龙蛇"
+    translated: "Talent: brush moves like dragonsisciendi"
   - split: 10
     text: "笔走龙蛇"
+    translated: "Brush moves like dragonsisciendi"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "292,绘画,1,Self,连绵+0.05,绘画,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5592,11 +5670,13 @@
     translated: "Painting"
   - split: 4
     text: "连绵+0.05"
+    translated: "+0.05 continuous"
   - split: 5
     text: "绘画"
     translated: "Painting"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "293,丹青妙手,2,Self,连绵+0.1,绘画,,1,0,天赋:绘画,绘画,喜好,TRUE"
   splits:
   - split: 1
@@ -5604,6 +5684,7 @@
     translated: "Skillful Painter"
   - split: 4
     text: "连绵+0.1"
+    translated: "Continuous+0.1"
   - split: 5
     text: "绘画"
     translated: "Painting"
@@ -5615,6 +5696,7 @@
     translated: "Painting"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "294,妙至毫巅,4,Self,连绵+0.15,绘画,,1,0,天赋:丹青妙手,丹青妙手,喜好,FALSE"
   splits:
   - split: 1
@@ -5628,21 +5710,27 @@
     translated: "Painting"
   - split: 9
     text: "天赋:丹青妙手"
+    translated: "Gift: Danqing Miao Shou"
   - split: 10
     text: "丹青妙手"
     translated: "Skillful Painter"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "295,吟诗,1,Self,醒脑+0.05,吟诗,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
     text: "吟诗"
+    translated: "Compose poetry"
   - split: 4
     text: "醒脑+0.05"
+    translated: "Awake_brain+0.05"
   - split: 5
     text: "吟诗"
+    translated: "Compose poetry"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "296,文思泉涌,2,Self,醒脑+0.1,吟诗,,1,0,天赋:吟诗,吟诗,喜好,TRUE"
   splits:
   - split: 1
@@ -5650,14 +5738,19 @@
     translated: "Inspiration flows freely"
   - split: 4
     text: "醒脑+0.1"
+    translated: "Awake+0.1"
   - split: 5
     text: "吟诗"
+    translated: "Compose poetry"
   - split: 9
     text: "天赋:吟诗"
+    translated: "Talent: Poetry Recitation"
   - split: 10
     text: "吟诗"
+    translated: "Compose poetry"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "297,七步成诗,4,Self,醒脑+0.15,吟诗,,1,0,天赋:文思泉涌,文思泉涌,喜好,FALSE"
   splits:
   - split: 1
@@ -5665,8 +5758,10 @@
     translated: "Seven steps to compose a poem"
   - split: 4
     text: "醒脑+0.15"
+    translated: "Awaken +0.15"
   - split: 5
     text: "吟诗"
+    translated: "Compose poetry"
   - split: 9
     text: "天赋:文思泉涌"
     translated: "Gift: fertile‑minded"
@@ -5675,6 +5770,7 @@
     translated: "Inspiration flows freely"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "298,狩猎,1,Self,轻灵+0.05,狩猎,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5682,33 +5778,41 @@
     translated: "Hunting"
   - split: 4
     text: "轻灵+0.05"
+    translated: "Agile +0.05"
   - split: 5
     text: "狩猎"
     translated: "Hunting"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "299,飞鹰走犬,2,Self,轻灵+0.1,狩猎,,1,0,天赋:狩猎,狩猎,喜好,TRUE"
   splits:
   - split: 1
     text: "飞鹰走犬"
+    translated: "Eagle flies, hounds run"
   - split: 4
     text: "轻灵+0.1"
+    translated: "Agile +0.1"
   - split: 5
     text: "狩猎"
     translated: "Hunting"
   - split: 9
     text: "天赋:狩猎"
+    translated: "Talent: Hunting"
   - split: 10
     text: "狩猎"
     translated: "Hunting"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "300,苍鹰搏兔,4,Self,轻灵+0.15,狩猎,,1,0,天赋:飞鹰走犬,飞鹰走犬,喜好,FALSE"
   splits:
   - split: 1
     text: "苍鹰搏兔"
+    translated: "Eagle preys on rabbit"
   - split: 4
     text: "轻灵+0.15"
+    translated: "Elegant +0.15"
   - split: 5
     text: "狩猎"
     translated: "Hunting"
@@ -5717,18 +5821,24 @@
     translated: "The following sentence has been translated to: They shot down the eagle while chasing after it."
   - split: 10
     text: "飞鹰走犬"
+    translated: "Eagle flies, hounds run"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "301,云游,1,Self,旅行速度+0.1,云游,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
     text: "云游"
+    translated: "Wandering Clouds"
   - split: 4
     text: "旅行速度+0.1"
+    translated: "Travel speed +0.1"
   - split: 5
     text: "云游"
+    translated: "Wandering Clouds"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "302,游山玩水,2,Self,旅行速度+0.2,云游,,1,0,天赋:云游,云游,喜好,TRUE"
   splits:
   - split: 1
@@ -5736,14 +5846,19 @@
     translated: "To sightsee and have fun"
   - split: 4
     text: "旅行速度+0.2"
+    translated: "Travel speed +0.2"
   - split: 5
     text: "云游"
+    translated: "Wandering Clouds"
   - split: 9
     text: "天赋:云游"
+    translated: "Talent: Cloud Roaming"
   - split: 10
     text: "云游"
+    translated: "Wandering Clouds"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "303,浪迹天涯,4,Self,旅行速度+0.3,云游,,1,0,天赋:游山玩水,游山玩水,喜好,FALSE"
   splits:
   - split: 1
@@ -5751,40 +5866,53 @@
     translated: "Roaming Through the Vast Lands"
   - split: 4
     text: "旅行速度+0.3"
+    translated: "Travel speed +0.3"
   - split: 5
     text: "云游"
+    translated: "Wandering Clouds"
   - split: 9
     text: "天赋:游山玩水"
+    translated: "Gift: Traveling and Scenery Enjoyment"
   - split: 10
     text: "游山玩水"
     translated: "To sightsee and have fun"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "304,静修,1,Self,坚毅+0.05,静修,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
     text: "静修"
+    translated: "Meditation"
   - split: 4
     text: "坚毅+0.05"
     translated: "Resilient +0.05"
   - split: 5
     text: "静修"
+    translated: "Meditation"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "305,蛰居偃伏,2,Self,坚毅+0.1,静修,,1,0,天赋:静修,静修,喜好,TRUE"
   splits:
   - split: 1
     text: "蛰居偃伏"
+    translated: "Secluded Resting"
   - split: 4
     text: "坚毅+0.1"
+    translated: "Resilience +0.1"
   - split: 5
     text: "静修"
+    translated: "Meditation"
   - split: 9
     text: "天赋:静修"
+    translated: "Gift: Meditation"
   - split: 10
     text: "静修"
+    translated: "Meditation"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "306,面壁功深,4,Self,坚毅+0.15,静修,,1,0,天赋:蛰居偃伏,蛰居偃伏,喜好,FALSE"
   splits:
   - split: 1
@@ -5792,14 +5920,19 @@
     translated: "Wall‑Buddhing Skill Profound"
   - split: 4
     text: "坚毅+0.15"
+    translated: "Resilient +0.15"
   - split: 5
     text: "静修"
+    translated: "Meditation"
   - split: 9
     text: "天赋:蛰居偃伏"
+    translated: "Talent: Dormant Potential"
   - split: 10
     text: "蛰居偃伏"
+    translated: "Secluded Resting"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "307,舞技,1,Self,舒筋+0.05,舞技,,1,0,,,喜好,TRUE"
   splits:
   - split: 1
@@ -5813,26 +5946,32 @@
     translated: "Dance skill"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "308,舞态生风,2,Self,舒筋+0.1,舞技,,1,0,天赋:舞技,舞技,喜好,TRUE"
   splits:
   - split: 1
     text: "舞态生风"
+    translated: "Dance with the grace of the wind"
   - split: 4
     text: "舒筋+0.1"
+    translated: "Stretching +0.1"
   - split: 5
     text: "舞技"
     translated: "Dance skill"
   - split: 9
     text: "天赋:舞技"
+    translated: "Talent: Dance Skills"
   - split: 10
     text: "舞技"
     translated: "Dance skill"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "309,羽衣蹁跹,4,Self,舒筋+0.15,舞技,,1,0,天赋:舞态生风,舞态生风,喜好,FALSE"
   splits:
   - split: 1
     text: "羽衣蹁跹"
+    translated: "Feathered Dancelightly"
   - split: 4
     text: "舒筋+0.15"
     translated: "Stretching +0.15"
@@ -5841,10 +5980,13 @@
     translated: "Dance skill"
   - split: 9
     text: "天赋:舞态生风"
+    translated: "Skill: Graceful As Wind"
   - split: 10
     text: "舞态生风"
+    translated: "Dance with the grace of the wind"
   - split: 11
     text: "喜好"
+    translated: "Preferences"
 - raw: "310,随从,2,SelfTeam,灵巧+2;体质+2,随从,,1,0,,,战法,TRUE"
   splits:
   - split: 1
@@ -5852,6 +5994,7 @@
     translated: "Attendant"
   - split: 4
     text: "灵巧+2;体质+2"
+    translated: "Agility+2; Constitution+2"
   - split: 5
     text: "随从"
     translated: "Attendant"
@@ -5862,13 +6005,16 @@
   splits:
   - split: 1
     text: "唯命是从"
+    translated: "At your command"
   - split: 4
     text: "灵巧+4;体质+4"
+    translated: "Agility +4; Constitution +4"
   - split: 5
     text: "随从"
     translated: "Attendant"
   - split: 9
     text: "天赋:随从"
+    translated: "Talent: Companion"
   - split: 10
     text: "随从"
     translated: "Attendant"
@@ -5879,15 +6025,19 @@
   splits:
   - split: 1
     text: "精明强干"
+    translated: "Shrewd and capable"
   - split: 4
     text: "灵巧+6;体质+6"
+    translated: "Agility +6; Constitution +6"
   - split: 5
     text: "随从"
     translated: "Attendant"
   - split: 9
     text: "天赋:唯命是从"
+    translated: "Predisposition: obedience to orders"
   - split: 10
     text: "唯命是从"
+    translated: "At your command"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -5895,10 +6045,13 @@
   splits:
   - split: 1
     text: "军师"
+    translated: "Counselor"
   - split: 4
     text: "智力+2;经脉+2"
+    translated: "Intelligence +2; Meridians +2"
   - split: 5
     text: "军师"
+    translated: "Counselor"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -5906,15 +6059,19 @@
   splits:
   - split: 1
     text: "排兵布阵"
+    translated: "Arranging troops on the battlefield"
   - split: 4
     text: "智力+4;经脉+4"
+    translated: "Intelligence +4; Meridians +4"
   - split: 5
     text: "军师"
+    translated: "Counselor"
   - split: 9
     text: "天赋:军师"
     translated: "Gift: Strategist"
   - split: 10
     text: "军师"
+    translated: "Counselor"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -5925,13 +6082,16 @@
     translated: "Plan from afar"
   - split: 4
     text: "智力+6;经脉+6"
+    translated: "Intelligence +6; meridians +6"
   - split: 5
     text: "军师"
+    translated: "Counselor"
   - split: 9
     text: "天赋:排兵布阵"
     translated: "Talent: Arranging Troops"
   - split: 10
     text: "排兵布阵"
+    translated: "Arranging troops on the battlefield"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -5942,6 +6102,7 @@
     translated: "Leader"
   - split: 4
     text: "力道+2;意志+2"
+    translated: "Strength +2; Willpower +2"
   - split: 5
     text: "领袖"
     translated: "Leader"
@@ -5955,11 +6116,13 @@
     translated: "Ambitious heart"
   - split: 4
     text: "力道+4;意志+4"
+    translated: "Strength +4; Willpower +4"
   - split: 5
     text: "领袖"
     translated: "Leader"
   - split: 9
     text: "天赋:领袖"
+    translated: "Talent: Leader"
   - split: 10
     text: "领袖"
     translated: "Leader"
@@ -5979,6 +6142,7 @@
     translated: "Leader"
   - split: 9
     text: "天赋:胸怀大志"
+    translated: "Talent: Ambition"
   - split: 10
     text: "胸怀大志"
     translated: "Ambitious heart"
@@ -5989,10 +6153,13 @@
   splits:
   - split: 1
     text: "先锋"
+    translated: "Vanguard"
   - split: 4
     text: "伤害+0.04;卸力-0.02"
+    translated: "Damage +0.04; Force Mitigation ‑0.02"
   - split: 5
     text: "先锋"
+    translated: "Vanguard"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6000,14 +6167,19 @@
   splits:
   - split: 1
     text: "奋勇当先"
+    translated: "Charge bravely"
   - split: 4
     text: "伤害+0.08;卸力-0.04"
+    translated: "Damage +0.08; Force Mitigation ‑0.04"
   - split: 5
     text: "先锋"
+    translated: "Vanguard"
   - split: 9
     text: "天赋:先锋"
+    translated: "Talent: Vanguard"
   - split: 10
     text: "先锋"
+    translated: "Vanguard"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6015,14 +6187,19 @@
   splits:
   - split: 1
     text: "背水一战"
+    translated: "A desperate situation with nowhere to retreat"
   - split: 4
     text: "伤害+0.12;卸力-0.06"
+    translated: "Damage +0.12; Force Absorption ‑0.06"
   - split: 5
     text: "先锋"
+    translated: "Vanguard"
   - split: 9
     text: "天赋:奋勇当先"
+    translated: "Talent: Charge to the Forefront"
   - split: 10
     text: "奋勇当先"
+    translated: "Charge bravely"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6030,10 +6207,13 @@
   splits:
   - split: 1
     text: "守备"
+    translated: "Garrison"
   - split: 4
     text: "卸力+0.04;速度-0.02"
+    translated: "Distribute Force +0.04; Speed ‑0.02"
   - split: 5
     text: "守备"
+    translated: "Garrison"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6041,14 +6221,19 @@
   splits:
   - split: 1
     text: "戒备森严"
+    translated: "Strictly guarded"
   - split: 4
     text: "卸力+0.08;速度-0.04"
+    translated: "Distribute force +0.08; increase speed ‑0.04"
   - split: 5
     text: "守备"
+    translated: "Garrison"
   - split: 9
     text: "天赋:守备"
+    translated: "Talent: Defense"
   - split: 10
     text: "守备"
+    translated: "Garrison"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6056,14 +6241,19 @@
   splits:
   - split: 1
     text: "严防死守"
+    translated: "Hold at all costs"
   - split: 4
     text: "卸力+0.12;速度-0.06"
+    translated: "Absorb Force +0.12; Speed ‑0.06"
   - split: 5
     text: "守备"
+    translated: "Garrison"
   - split: 9
     text: "天赋:戒备森严"
+    translated: "Talent: Vigilant"
   - split: 10
     text: "戒备森严"
+    translated: "Strictly guarded"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6071,11 +6261,13 @@
   splits:
   - split: 1
     text: "游斗"
+    translated: "Duel"
   - split: 4
     text: "速度+0.04;伤害-0.02"
     translated: "Speed +0.04; Damage ‑0.02"
   - split: 5
     text: "游斗"
+    translated: "Duel"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6083,15 +6275,19 @@
   splits:
   - split: 1
     text: "快步流星"
+    translated: "Quickstep"
   - split: 4
     text: "速度+0.08;伤害-0.04"
+    translated: "Speed +0.08; Damage ‑0.04"
   - split: 5
     text: "游斗"
+    translated: "Duel"
   - split: 9
     text: "天赋:游斗"
     translated: "Talent: Dextrous Combat"
   - split: 10
     text: "游斗"
+    translated: "Duel"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6099,14 +6295,19 @@
   splits:
   - split: 1
     text: "千里奔袭"
+    translated: "Thousand‑mile dash"
   - split: 4
     text: "速度+0.12;伤害-0.06"
+    translated: "Speed +0.12; Damage ‑0.06"
   - split: 5
     text: "游斗"
+    translated: "Duel"
   - split: 9
     text: "天赋:快步流星"
+    translated: "Skill: Quickstep Flash"
   - split: 10
     text: "快步流星"
+    translated: "Quickstep"
   - split: 11
     text: "战法"
     translated: "Battle strategy"
@@ -6114,8 +6315,10 @@
   splits:
   - split: 1
     text: "精力充沛"
+    translated: "Full of energy"
   - split: 4
     text: "经验获取+0.2;旅行速度+0.1"
+    translated: "Experience gain +0.2; travel speed +0.1"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6126,6 +6329,7 @@
     translated: "Eight Treasure Porridge"
   - split: 4
     text: "回血0.01;回内0.01"
+    translated: "Heal 0.01; Internal Recovery 0.01"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6133,10 +6337,13 @@
   splits:
   - split: 1
     text: "微醺"
+    translated: "Tipsy"
   - split: 4
     text: "伤害抗性+0.05;命中-0.05"
+    translated: "Damage resistance +0.05; hit rate ‑0.05"
   - split: 5
     text: "微醺"
+    translated: "Tipsy"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6147,8 +6354,10 @@
     translated: "Drunken revelry"
   - split: 4
     text: "伤害抗性+0.1;命中-0.1"
+    translated: "Resistance to damage +0.1; hit rate ‑0.1"
   - split: 5
     text: "微醺"
+    translated: "Tipsy"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6156,10 +6365,13 @@
   splits:
   - split: 1
     text: "大醉"
+    translated: "Drunk"
   - split: 4
     text: "伤害抗性+0.15;命中-0.15"
+    translated: "Damage resistance +0.15; hit rate ‑0.15"
   - split: 5
     text: "微醺"
+    translated: "Tipsy"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6167,10 +6379,13 @@
   splits:
   - split: 1
     text: "酩酊"
+    translated: "Drunk"
   - split: 4
     text: "伤害抗性+0.2;命中-0.2"
+    translated: "Damage resistance +0.2; hit rate ‑0.2"
   - split: 5
     text: "微醺"
+    translated: "Tipsy"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6181,6 +6396,7 @@
     translated: "Banquet is boring"
   - split: 4
     text: "恢复效率+0.02;负面抗性+0.02"
+    translated: "Restore Efficiency +0.02; Negative Resistance +0.02"
   - split: 5
     text: "宴会无趣"
     translated: "Banquet is boring"
@@ -6191,8 +6407,10 @@
   splits:
   - split: 1
     text: "宴会平平"
+    translated: "Banquet was unremarkable"
   - split: 4
     text: "恢复效率+0.04;负面抗性+0.04"
+    translated: "Restore Efficiency +0.04; Negative Resistance +0.04"
   - split: 5
     text: "宴会无趣"
     translated: "Banquet is boring"
@@ -6203,8 +6421,10 @@
   splits:
   - split: 1
     text: "宴会满意"
+    translated: "Banquet satisfactory"
   - split: 4
     text: "恢复效率+0.06;负面抗性+0.06"
+    translated: "Restore Efficiency +0.06; Negative Resistance +0.06"
   - split: 5
     text: "宴会无趣"
     translated: "Banquet is boring"
@@ -6215,8 +6435,10 @@
   splits:
   - split: 1
     text: "宴会欢喜"
+    translated: "Banquet merriment"
   - split: 4
     text: "恢复效率+0.08;负面抗性+0.08"
+    translated: "Restore Efficiency +0.08; Negative Resistance +0.08"
   - split: 5
     text: "宴会无趣"
     translated: "Banquet is boring"
@@ -6227,8 +6449,10 @@
   splits:
   - split: 1
     text: "宴会极乐"
+    translated: "Ultimate Joy Feast"
   - split: 4
     text: "恢复效率+0.1;负面抗性+0.1"
+    translated: "Restore Efficiency +0.1; Negative Resistance +0.1"
   - split: 5
     text: "宴会无趣"
     translated: "Banquet is boring"
@@ -6239,12 +6463,16 @@
   splits:
   - split: 1
     text: "赌运"
+    translated: "Luck at gambling"
   - split: 4
     text: "暴击+0.05"
+    translated: "Crit +0.05"
   - split: 5
     text: "赌运"
+    translated: "Luck at gambling"
   - split: 6
     text: "霉运"
+    translated: "Bad luck"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6252,12 +6480,16 @@
   splits:
   - split: 1
     text: "霉运"
+    translated: "Bad luck"
   - split: 4
     text: "暴击-0.05"
+    translated: "Critical hit ‑0.05"
   - split: 5
     text: "霉运"
+    translated: "Bad luck"
   - split: 6
     text: "赌运"
+    translated: "Luck at gambling"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6265,13 +6497,16 @@
   splits:
   - split: 1
     text: "论胜"
+    translated: "Discussing Victory"
   - split: 4
     text: "理论经验+0.1;技艺经验+0.2"
     translated: "Theoretical Experience +0.1; Practical Experience +0.2"
   - split: 5
     text: "论胜"
+    translated: "Discussing Victory"
   - split: 6
     text: "论败"
+    translated: "Talk of Defeat"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6279,12 +6514,16 @@
   splits:
   - split: 1
     text: "论败"
+    translated: "Talk of Defeat"
   - split: 4
     text: "理论经验-0.1;技艺经验-0.2"
+    translated: "Theoretical Experience ‑0.1; Practical Skill Experience ‑0.2"
   - split: 5
     text: "论败"
+    translated: "Talk of Defeat"
   - split: 6
     text: "论胜"
+    translated: "Discussing Victory"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6292,10 +6531,13 @@
   splits:
   - split: 1
     text: "轻症"
+    translated: "Mild cases"
   - split: 4
     text: "伤害-0.1;速度-0.1"
+    translated: "Damage‑0.1;speed‑0.1"
   - split: 5
     text: "抱恙"
+    translated: "Sick"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6303,10 +6545,13 @@
   splits:
   - split: 1
     text: "中症"
+    translated: "Moderate condition"
   - split: 4
     text: "伤害-0.2;速度-0.2"
+    translated: "Damage‑0.2; speed‑0.2"
   - split: 5
     text: "抱恙"
+    translated: "Sick"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6314,10 +6559,13 @@
   splits:
   - split: 1
     text: "重症"
+    translated: "Serious condition"
   - split: 4
     text: "伤害-0.4;速度-0.4"
+    translated: "Damage ‑0.4; Speed ‑0.4"
   - split: 5
     text: "抱恙"
+    translated: "Sick"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6325,11 +6573,13 @@
   splits:
   - split: 1
     text: "危症"
+    translated: "Critical condition"
   - split: 4
     text: "伤害-0.8;速度-0.8"
     translated: "Damage ‑0.8; Speed ‑0.8"
   - split: 5
     text: "抱恙"
+    translated: "Sick"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6337,10 +6587,13 @@
   splits:
   - split: 1
     text: "气息不调"
+    translated: "Imbalanced qi"
   - split: 4
     text: "伤害-0.05;速度-0.05;经脉-10"
+    translated: "Damage ‑0.05; Speed ‑0.05; Meridians ‑10"
   - split: 5
     text: "气息不调"
+    translated: "Imbalanced qi"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6348,10 +6601,13 @@
   splits:
   - split: 1
     text: "内息紊乱"
+    translated: "Inner Qi Disruption"
   - split: 4
     text: "伤害-0.1;速度-0.1;经脉-20"
+    translated: "Damage ‑0.1; Speed ‑0.1; Meridians ‑20"
   - split: 5
     text: "气息不调"
+    translated: "Imbalanced qi"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6359,10 +6615,13 @@
   splits:
   - split: 1
     text: "经脉受阻"
+    translated: "Meridians blocked"
   - split: 4
     text: "伤害-0.2;速度-0.2;经脉-40"
+    translated: "Damage ‑0.2; Speed ‑0.2; Meridians ‑40"
   - split: 5
     text: "气息不调"
+    translated: "Imbalanced qi"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6373,8 +6632,10 @@
     translated: "Meridian severed"
   - split: 4
     text: "伤害-0.4;速度-0.4;经脉-80"
+    translated: "Damage ‑0.4; Speed ‑0.4; Meridians ‑80"
   - split: 5
     text: "气息不调"
+    translated: "Imbalanced qi"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6382,6 +6643,7 @@
   splits:
   - split: 1
     text: "断臂"
+    translated: "Amputated arm"
   - split: 4
     text: "伤害-0.4"
     translated: "Damage ‑0.4"
@@ -6392,8 +6654,10 @@
   splits:
   - split: 1
     text: "跛足"
+    translated: "Limp"
   - split: 4
     text: "速度-0.4"
+    translated: "Speed ‑0.4"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6404,6 +6668,7 @@
     translated: "Goalless"
   - split: 4
     text: "命中-0.4"
+    translated: "Hit Rate ‑0.4"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6411,8 +6676,10 @@
   splits:
   - split: 1
     text: "理论心得"
+    translated: "Theoretical insights"
   - split: 4
     text: "实战经验+0.1"
+    translated: "Combat experience +0.1"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6420,8 +6687,10 @@
   splits:
   - split: 1
     text: "实战心得"
+    translated: "Battlefield insights"
   - split: 4
     text: "理论经验+0.1"
+    translated: "Theoretical experience +0.1"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6429,13 +6698,16 @@
   splits:
   - split: 1
     text: "机关木臂"
+    translated: "Mechanical Wooden Arms"
   - split: 4
     text: "机关伤害+0.1"
     translated: "Mechanism damage +0.1"
   - split: 5
     text: "机关木臂"
+    translated: "Mechanical Wooden Arms"
   - split: 9
     text: "奇门20+智力30"
+    translated: "Mystic 20+Intelligence30"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6443,15 +6715,19 @@
   splits:
   - split: 1
     text: "机关石臂"
+    translated: "Mechanical Stone Arm"
   - split: 4
     text: "机关伤害+0.2"
     translated: "Mechanical damage +0.2"
   - split: 5
     text: "机关木臂"
+    translated: "Mechanical Wooden Arms"
   - split: 9
     text: "奇门40+智力60+天赋:机关木臂"
+    translated: "Odd Doors 40 + Intelligence 60 + Talent: Mechanism Wooden Arm"
   - split: 10
     text: "机关木臂"
+    translated: "Mechanical Wooden Arms"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6459,15 +6735,18 @@
   splits:
   - split: 1
     text: "机关铁臂"
+    translated: "Mechanical Iron Arm"
   - split: 4
     text: "机关伤害+0.3"
     translated: "Mechanical damage +0.3"
   - split: 5
     text: "机关木臂"
+    translated: "Mechanical Wooden Arms"
   - split: 9
     text: "奇门60+智力90+天赋:机关石臂"
   - split: 10
     text: "机关石臂"
+    translated: "Mechanical Stone Arm"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6478,11 +6757,13 @@
     translated: "Mechanical Wood Wheel"
   - split: 4
     text: "机关速度+0.1"
+    translated: "Mechanism speed +0.1"
   - split: 5
     text: "机关木轮"
     translated: "Mechanical Wood Wheel"
   - split: 9
     text: "奇门20+智力30"
+    translated: "Mystic 20+Intelligence30"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6490,13 +6771,16 @@
   splits:
   - split: 1
     text: "机关石轮"
+    translated: "Mechanism Stone Wheel"
   - split: 4
     text: "机关速度+0.2"
+    translated: "Mechanism speed +0.2"
   - split: 5
     text: "机关木轮"
     translated: "Mechanical Wood Wheel"
   - split: 9
     text: "奇门40+智力60+天赋:机关木轮"
+    translated: "Oddity 40 + Intelligence 60 + Talent: Mechanism Wooden Wheel"
   - split: 10
     text: "机关木轮"
     translated: "Mechanical Wood Wheel"
@@ -6507,8 +6791,10 @@
   splits:
   - split: 1
     text: "机关铁轮"
+    translated: "Mechanical Iron Wheels"
   - split: 4
     text: "机关速度+0.3"
+    translated: "Mechanism speed +0.3"
   - split: 5
     text: "机关木轮"
     translated: "Mechanical Wood Wheel"
@@ -6517,6 +6803,7 @@
     translated: "Fortune 60 + Intelligence 90 + Talent: Mechanism Disk"
   - split: 10
     text: "机关石轮"
+    translated: "Mechanism Stone Wheel"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6524,12 +6811,16 @@
   splits:
   - split: 1
     text: "机关木甲"
+    translated: "Mechanical Wood Armor"
   - split: 4
     text: "机关耐久+0.1"
+    translated: "Mechanism durability +0.1"
   - split: 5
     text: "机关木甲"
+    translated: "Mechanical Wood Armor"
   - split: 9
     text: "奇门20+智力30"
+    translated: "Mystic 20+Intelligence30"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6537,14 +6828,19 @@
   splits:
   - split: 1
     text: "机关石甲"
+    translated: "Mechanical Armor Stone"
   - split: 4
     text: "机关耐久+0.2"
+    translated: "Mechanism durability +0.2"
   - split: 5
     text: "机关木甲"
+    translated: "Mechanical Wood Armor"
   - split: 9
     text: "奇门40+智力60+天赋:机关木甲"
+    translated: "Odd Doors 40 + Intelligence 60 + Talent: Wooden Mechanism Armor"
   - split: 10
     text: "机关木甲"
+    translated: "Mechanical Wood Armor"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6552,14 +6848,19 @@
   splits:
   - split: 1
     text: "机关铁甲"
+    translated: "Mechanical Armor"
   - split: 4
     text: "机关耐久+0.3"
+    translated: "Mechanism durability +0.3"
   - split: 5
     text: "机关木甲"
+    translated: "Mechanical Wood Armor"
   - split: 9
     text: "奇门60+智力90+天赋:机关石甲"
+    translated: "Oddity 60 + Intelligence 90 + Innate: Mechanism Stone Armor"
   - split: 10
     text: "机关石甲"
+    translated: "Mechanical Armor Stone"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6570,6 +6871,7 @@
     translated: "Mechanism Master"
   - split: 4
     text: "机关伤害+0.2;机关速度+0.2;机关耐久+0.2"
+    translated: "Mechanism damage +0.2; Mechanism speed +0.2; Mechanism durability +0.2"
   - split: 9
     text: "奇门80+智力100+天赋:机关铁臂+天赋:机关铁轮+天赋:机关铁甲"
   - split: 11
@@ -6579,11 +6881,13 @@
   splits:
   - split: 1
     text: "鲁班在世"
+    translated: "Lu Ban be alive"
   - split: 4
     text: "机关伤害+0.4;机关速度+0.4;机关耐久+0.4"
     translated: "Mechanism damage +0.4; mechanism speed +0.4; mechanism durability +0.4"
   - split: 9
     text: "奇门90+智力110+天赋:能工巧匠+天赋:机关大师"
+    translated: "Oddities 90 + Intelligence 110 + Talent: Artisan + Talent: Mechanism Master"
   - split: 10
     text: "机关大师"
     translated: "Mechanism Master"
@@ -6594,8 +6898,10 @@
   splits:
   - split: 1
     text: "机关义手"
+    translated: "Mechanism Cyberarm"
   - split: 4
     text: "伤害-0.2;连击+0.05;暴击+0.05"
+    translated: "Damage ‑0.2; Combo +0.05; Crit +0.05"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6606,6 +6912,7 @@
     translated: "Handcuffs"
   - split: 4
     text: "伤害-0.5"
+    translated: "Harm ‑0.5"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6613,8 +6920,10 @@
   splits:
   - split: 1
     text: "脚镣"
+    translated: "Handcuffs"
   - split: 4
     text: "速度-0.5"
+    translated: "Speed ‑0.5"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6622,8 +6931,10 @@
   splits:
   - split: 1
     text: "机关义手"
+    translated: "Mechanism Cyberarm"
   - split: 4
     text: "伤害-0.15;连击+0.05;暴击+0.05"
+    translated: "Damage ‑0.15; Combo +0.05; Critical Hit +0.05"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6631,8 +6942,10 @@
   splits:
   - split: 1
     text: "机关义手"
+    translated: "Mechanism Cyberarm"
   - split: 4
     text: "伤害-0.1;连击+0.05;暴击+0.05"
+    translated: "Damage ‑0.1; Combo +0.05; Critical Hit +0.05"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6640,8 +6953,10 @@
   splits:
   - split: 1
     text: "机关义手"
+    translated: "Mechanism Cyberarm"
   - split: 4
     text: "伤害-0.05;连击+0.05;暴击+0.05"
+    translated: "Damage ‑0.05; Combo +0.05; Critical Hit +0.05"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6649,8 +6964,10 @@
   splits:
   - split: 1
     text: "机关义手"
+    translated: "Mechanism Cyberarm"
   - split: 4
     text: "伤害-0.05;连击+0.1;暴击+0.1"
+    translated: "Damage ‑0.05; Combo +0.1; Critical Hit +0.1"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6661,6 +6978,7 @@
     translated: "Climb Mount Tai"
   - split: 4
     text: "力道+2;灵巧+2;智力+2;意志+2;体质+2;经脉+2;内功+2;轻功+2;绝技+2;拳掌+2;剑法+2;刀法+2;长兵+2;奇门+2;射术+2"
+    translated: "Strength +2; Agility +2; Intelligence +2; Willpower +2; Constitution +2; Meridians +2; Neigong +2; Qinggong +2; Ultimate Skill +2; Fist and Palm Techniques +2; Sword Technique +2; Blade Technique +2; Long Weapons +2; Mystical Gates +2; Archery +2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6668,8 +6986,10 @@
   splits:
   - split: 1
     text: "负心人"
+    translated: "Faithless one"
   - split: 4
     text: "好感获取-0.3"
+    translated: "Goodwill gained ‑0.3"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6677,8 +6997,10 @@
   splits:
   - split: 1
     text: "修行心得"
+    translated: "Training insights"
   - split: 4
     text: "实战经验+0.2;理论经验+0.2;技艺经验+0.2"
+    translated: "Combat Experience +0.2; Theoretical Experience +0.2; Skill Experience +0.2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6686,8 +7008,10 @@
   splits:
   - split: 1
     text: "刮骨疗毒"
+    translated: "Cutting out the poison"
   - split: 4
     text: "医术+10;毒术+5;自愈+3"
+    translated: "Healing+10; Toxic+5; Self‑healing+3"
   - split: 5
     text: "医毒"
     translated: "Poison Medicine"
@@ -6696,6 +7020,7 @@
     translated: "Poison Doctor"
   - split: 9
     text: "医术60+毒术40+天赋:医毒"
+    translated: "Medicine 60 + Toxicology 40 + Talent: Medicinal Poison"
   - split: 10
     text: "医毒"
     translated: "Poison Medicine"
@@ -6706,8 +7031,10 @@
   splits:
   - split: 1
     text: "百毒不侵"
+    translated: "Invulnerable to toxins"
   - split: 4
     text: "医术+20;毒术+10;自愈+6"
+    translated: "Medical Skills +20; Poison Skills +10; Self‑healing +6"
   - split: 5
     text: "医毒"
     translated: "Poison Medicine"
@@ -6716,8 +7043,10 @@
     translated: "Poison Doctor"
   - split: 9
     text: "医术80+毒术60+天赋:刮骨疗毒+天赋:妙手回春"
+    translated: "Healing Skill 80 + Toxicity Skill 60 + Talent: Bone Scraping to Heal Poison + Talent: Miraculous Hand Revives Spring"
   - split: 10
     text: "刮骨疗毒"
+    translated: "Cutting out the poison"
   - split: 11
     text: "技艺"
     translated: "Skill"
@@ -6728,6 +7057,7 @@
     translated: "Number One Under Heaven"
   - split: 4
     text: "内功+5;轻功+5;绝技+5;拳掌+5;剑法+5;刀法+5;长兵+5;奇门+5;射术+5"
+    translated: "Neigong +5; qinggong +5; supreme skill +5; fist and palm techniques +5; sword technique +5; blade technique +5; long weapons +5; mystic gate +5; archery +5"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6738,6 +7068,7 @@
     translated: "Retire to the countryside"
   - split: 4
     text: "医术+10;毒术+10;学识+10;口才+10;采伐+10;木植+10;锻造+10;炼药+10;烹饪+10"
+    translated: "Medicine +10; Toxic Arts +10; Knowledge +10; Eloquence +10; Logging +10; Timber +10; Smithing +10; Alchemy +10; Cooking +10"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6748,6 +7079,7 @@
     translated: "Rich merchants and industrialists"
   - split: 4
     text: "买卖优势+0.2"
+    translated: "Advantages of Buying +0.2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6758,6 +7090,7 @@
     translated: "Success and fame achieved"
   - split: 4
     text: "功绩获取+0.2"
+    translated: "Merit Acquisition +0.2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6768,6 +7101,7 @@
     translated: "Commander of the Forbidden Army"
   - split: 4
     text: "经验获取+0.2"
+    translated: "Experience gained from +0.2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6778,6 +7112,7 @@
     translated: "Overwhelming Power"
   - split: 4
     text: "声望获取+0.2"
+    translated: "Reputation gain +0.2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6788,6 +7123,7 @@
     translated: "Elite Family Sect"
   - split: 4
     text: "本门武学威力+0.2"
+    translated: "The power of this martial art +0.2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6809,6 +7145,7 @@
     translated: "Ultimately unified"
   - split: 4
     text: "力道+3;灵巧+3;智力+3;意志+3;体质+3;经脉+3;内功+3;轻功+3;绝技+3;拳掌+3;剑法+3;刀法+3;长兵+3;奇门+3;射术+3;医术+5;毒术+5;学识+5;口才+5;采伐+5;木植+5;锻造+5;炼药+5;烹饪+5"
+    translated: "Strength +3; Agility +3; Intelligence +3; Willpower +3; Constitution +3; Meridians +3; Neigong +3; Qinggong +3; Ultimate Skill +3; Punching and Palm Techniques +3; Swordsmanship +3; Blade Technique +3; Long Weapons +3; Immortal Gates +3; Archery +3; Medicine +5; Toxin Arts +5; Knowledge +5; Eloquence +5; Logging +5; Woodworking +5; Smithing +5; Alchemy +5; Cooking +5"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6819,6 +7156,7 @@
     translated: "Dragon and phoenix resonate"
   - split: 4
     text: "好感获取+0.2"
+    translated: "Goodwill Gain +0.2"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6829,6 +7167,7 @@
     translated: "Life imprisonment"
   - split: 4
     text: "恶名减少+0.1"
+    translated: "Notoriety reduced by +0.1"
   - split: 11
     text: "特效"
     translated: "Special effects"
@@ -6836,6 +7175,7 @@
   splits:
   - split: 1
     text: "背叛师门"
+    translated: "Betray the sect elders"
   - split: 4
     text: "声望获取-0.3;好感获取-0.1"
     translated: "Reputation gain: ‑0.3; Favor gain: ‑0.1"

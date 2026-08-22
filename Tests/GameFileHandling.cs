@@ -3,7 +3,7 @@ using FanslationStudio.LlmKit.Support;
 using FanslationStudio.LlmKit.Utility;
 using System.Text.RegularExpressions;
 
-namespace Tests.Code
+namespace Tests
 {
     public static class GameFileHandling
     {

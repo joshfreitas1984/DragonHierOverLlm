@@ -1,5 +1,32 @@
 ﻿# Names, Locations, Moves, etc
 
+# Name Data
+- raw: "姓"
+  result: "Surname"
+  badtrans: true
+  only: 
+    - NameData.csv 
+- raw: "类别"
+  result: "Category"
+  badtrans: true
+  only: 
+    - NameData.csv 
+- raw: "内容"
+  result: "Content"
+  badtrans: true
+  only: 
+    - NameData.csv 
+- raw: "男名"
+  result: "Male Name"
+  badtrans: true
+  only: 
+    - NameData.csv 
+- raw: "女名"
+  result: "Female Name"
+  badtrans: true
+  only: 
+    - NameData.csv 
+
 # Locations
 - raw: 京城
   result: Capital

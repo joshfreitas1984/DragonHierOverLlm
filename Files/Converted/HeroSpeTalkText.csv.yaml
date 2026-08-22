@@ -26,6 +26,7 @@
     translated: "Bai Yuntian"
   - split: 9
     text: "思中澜"
+    translated: "Think Zhong Lan"
   - split: 10
     text: "计心狂"
     translated: "Crazy Heart Desire"
@@ -47,10 +48,13 @@
     translated: "While there is a clash between top experts, the sole purpose is to defeat the opponent.  With no desires or emotions, they are fully devoted and focused. Concentrating solely on “Kill” \\nis enough."
   - split: 3
     text: "#PlayerName#，你不会和那些无趣江湖人士一般，\\n成天只知道习武练功吧！"
+    translated: "#PlayerName#, you won't be like those boring Jianghu folks.\\nAll you know is training and martial arts!"
   - split: 4
     text: "习武练功，何必拘泥于招式？\\n从心所欲，挥手成招，方为至高之境界。"
+    translated: "Why stick to techniques in training martial arts?\\nDo as one pleases, summoning techniques with a wave of the hand‑this is the ultimate realm."
   - split: 5
     text: "#PlayerName#，老夫这铁掌帮武功，不知可在仙霞派之上？"
+    translated: "#PlayerName#, let me see if the Iron Palm Gang's martial arts is superior to the Xianxia Sect's."
   - split: 6
     text: "老子所习招式，皆是逆势而动，倒转而行。\\n任你大罗金仙，也休想摸清老子的套路。"
     translated: "Laozi's practiced techniques all involve moving against the trend and reversing actions. \\nNo matter how powerful you may be, such as a Great Sage Equaling Heaven, you cannot decipher Laozi's methods."
@@ -59,6 +63,7 @@
     translated: "'\\n' The battle between masters lies not in the movements themselves, but in their execution by “Person”.\\nWith the right timing, even the weakest move can become immensely powerful."
   - split: 8
     text: "听师傅说，出招之法在于随心所欲，无拘无束。\\n若能一呼一吸，收发自然，便也算小半个高手了吧。"
+    translated: "According to Master, the key to making a move lies in doing as one pleases, without any constraints.\\nIf one can breathe naturally with ease, they might be considered somewhat of a master."
   - split: 9
     text: "道无名阁主功力深不可测，我确实远远不及。\\n不过若论剑招之精妙，或许我能略胜一筹。"
     translated: "Dao Wuming's Pavilion Lord's power is beyond measurement. I indeed fall far short.\\nBut if it comes to the subtlety of sword techniques, perhaps I could have a slight advantage."
@@ -76,18 +81,25 @@
     translated: "Martial insights"
   - split: 1
     text: "当今世人......越醉心武道......\\n我等医者......越难得空闲......"
+    translated: "People of today... the more obsessed they are with martial arts...\\nWe who are doctors... find it harder and harder to find spare time..."
   - split: 2
     text: "当今武学，多拘泥于花哨招式与繁复心法。\\n然唯有“杀”者，才是武学至高之道。"
+    translated: "Today's martial arts often focus on flashy techniques and complex heart methods.\\nOnly “” represents the pinnacle of martial arts."
   - split: 3
     text: "闯荡江湖，只要练好轻功就行。\\n想打就打，想走就走，岂不是天下无敌？"
+    translated: "Roaming the Jianghu just requires mastering Qinggong\\nFeel free to fight or flee as you please‑aren't you invincible in this world?"
   - split: 4
     text: "海纳百川，有容乃大。\\n习武之道，在于并包兼蓄，融会贯通。"
+    translated: "A river wide enough carries a hundred tributaries.\\nThe way of martial arts lies in embracing diversity and integrating knowledge comprehensively."
   - split: 5
     text: "强食弱肉，胜者为王，\\n此乃自然之理，亦是武道之真谛。"
+    translated: "Survival of the fittest, the victor is king.\\nThis is the natural law, and it is the true essence of martial arts."
   - split: 6
     text: "武学之道，在于破除常规，别开蹊径。\\n若是一招一式，一板一眼，那可就太过无聊了。"
+    translated: "The Way of martial arts lies in breaking conventional norms and charting new paths.\\nIf every move and step were rigidly formal, it would be far too boring."
   - split: 7
     text: "习武之道，玄妙无穷。\\n老朽便是穷尽一生，也只得窥见一角而已。"
+    translated: "The way of martial arts is infinitely mysterious and profound.\\nI have devoted my entire life and still can only catch a glimpse of it."
   - split: 8
     text: "我久居山林，只略懂些拳脚。\\n#PlayerName#若是得空，定要多教我两招。"
     translated: "I have long resided in the mountains and only know a few fists and feet. \\n#PlayerName#, if you have time, you must teach me a couple of moves."
@@ -101,6 +113,7 @@
     text: "习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，\\n方能踏上武学正道，抵达仁者无敌之境。"
   - split: 12
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。\\n传说大成者可以静制动，以柔克刚，其劲力亦如太极圆转，生生不息。"
+    translated: "Taiji Divine Skill is the zenith of Wudang martial arts and is renowned throughout the Jianghu.\\nIt is said that Great Achievers can control movement with stillness and overcome strength with gentleness. Their power flows like the Taiji circle, ever‑renewing and unending."
 - raw: "休闲娱乐,......#PlayerName#......可遇到什么趣事......与我说说......,老夫的刀法，还有太多可精进之处。\\n因此更当争分夺秒，勤学苦练才行。,本姑娘一闲着没事，就想去偷点好东西......\\n#PlayerName#要不要一起？,读万卷书，行万里路，方为修行之道。\\n#PlayerName#闲暇之时，也当多读些经史典籍才是。,若一事不能增进武艺或为本帮谋利，老夫便不会浪费时间。,大碗喝酒，快意恩仇，人生如此，夫复何求！,但凡是这江湖之事，老朽皆算略有耳闻，\\n因此方才得了这“百晓”的名号。,在峨眉山上耍猴子，抓野兔，那可有趣的紧啊！\\n#PlayerName#想试试不？比比咱们谁抓得多！,归墟秘典之核心法门，唯有阁主知晓。\\n如此，方能避免修为不足之人强行修习，走火入魔。,叛出五毒教后，我便一直在寻找天下至毒之法门。\\n却听闻这龙胤归藏功中，或许会有线索......,犬子郭勇锐生性纯良，奈何有些不谙世事。\\n还望#PlayerName#多多提点，莫要让他闯下什么祸端。,师傅总希望我日后能接掌武当派。\\n可如今周遭门派虎视眈眈，奸邪之徒横行于世，\\n此等重任，我怕是万万当不起的。"
   splits:
   - text: "休闲娱乐"
@@ -116,6 +129,7 @@
     translated: "I often just want to sneak some good stuff when I'm idle... \\n#PlayerName#, want to join me?"
   - split: 4
     text: "读万卷书，行万里路，方为修行之道。\\n#PlayerName#闲暇之时，也当多读些经史典籍才是。"
+    translated: "Read ten thousand books and travel ten thousand miles; only then can one truly cultivate oneself.\\n#PlayerName#, during your free time, you should also read more classics and historical texts."
   - split: 5
     text: "若一事不能增进武艺或为本帮谋利，老夫便不会浪费时间。"
     translated: "If one thing does not improve my martial arts or benefit our faction, Old Man would not waste time on it."
@@ -130,12 +144,16 @@
     translated: "\\nPlay with monkeys and catch wild rabbits on Emei Mountain‑what fun! #PlayerName#, want to give it a try? Let's see who catches more!"
   - split: 9
     text: "归墟秘典之核心法门，唯有阁主知晓。\\n如此，方能避免修为不足之人强行修习，走火入魔。"
+    translated: "The core Heart Method of the Secret Scroll of the Return Void, only the Pavilion Lord knows it.\\nThus, it can avoid those with insufficient cultivation forcibly practicing and falling into demonic possession."
   - split: 10
     text: "叛出五毒教后，我便一直在寻找天下至毒之法门。\\n却听闻这龙胤归藏功中，或许会有线索......"
+    translated: "After leaving the Five Poisons Sect, I have been constantly searching for the ultimate toxic method in the world.\\nBut they also heard that perhaps there might be clues in the Longyin Huizang Technique..."
   - split: 11
     text: "犬子郭勇锐生性纯良，奈何有些不谙世事。\\n还望#PlayerName#多多提点，莫要让他闯下什么祸端。"
+    translated: "Guo Yongrui, my son, is inherently kind, though he sometimes lacks worldly experience.\\nI hope you, #PlayerName#, can offer him much guidance and prevent him from causing any trouble."
   - split: 12
     text: "师傅总希望我日后能接掌武当派。\\n可如今周遭门派虎视眈眈，奸邪之徒横行于世，\\n此等重任，我怕是万万当不起的。"
+    translated: "The master always hopes that I will someday take over the Wudang Sect.\\nNowadays, however, the surrounding sects are eying each other with hostile intent, while wicked villains roam the world.\\nThis great responsibility, I fear I am utterly unworthy of bearing it."
 - raw: "评价武功,......对于习武之道......我不过一知半解而已......,#PlayerName#你这些招式看似精妙，\\n但称得上杀人之法的，却是寥寥无几。,#PlayerName#，你这身形笨重，步伐迟缓，\\n还得多练练轻功才行。,#PlayerName#，老夫观你骨骼精奇，气运不凡。\\n若能韬光养晦，潜心修炼，或许终能成就大业。,#PlayerName#招式之中破绽颇多，\\n若是日后与我交手，可要多加小心了。,#PlayerName#这身功夫循规蹈矩，实在无趣。\\n等老子心情好，哪天指点你几招！,#PlayerName#近来功力突飞猛进，老朽果然没看错人。,#PlayerName#和师傅老人家比，不知武功谁高谁低？\\n......感觉应该还是#PlayerName#厉害些。\\n毕竟师傅白胡子一大把了，老身子骨怕是挨不了几拳。,#PlayerName#武功不俗，确实算得上江湖中难得一见的青年才俊了。,呵呵，#PlayerName#周身破绽颇多，\\n万一哪天你我刀兵相向之时......自会知晓。,#PlayerName#若在武学上有疑惑之处，大可来与我探讨。\\n某定当知无不言，言无不尽。,#PlayerName#招式凌厉，然后劲不足。\\n若能藏锋敛气，内外兼修，便能更上一层楼。"
   splits:
   - text: "评价武功"
@@ -145,15 +163,19 @@
     translated: "...I only have a half‑understanding of the way of martial arts..."
   - split: 2
     text: "#PlayerName#你这些招式看似精妙，\\n但称得上杀人之法的，却是寥寥无几。"
+    translated: "#PlayerName#, these techniques of yours seem exquisite\\nBut methods that can truly be called deadly are few and far between."
   - split: 3
     text: "#PlayerName#，你这身形笨重，步伐迟缓，\\n还得多练练轻功才行。"
+    translated: "#PlayerName#, your body is heavy and slow‑moving\\nOne needs to practice lightness more"
   - split: 4
     text: "#PlayerName#，老夫观你骨骼精奇，气运不凡。\\n若能韬光养晦，潜心修炼，或许终能成就大业。"
     translated: "#PlayerName#, Old Man I have observed your bones to be extraordinary, and your fate blessed.\\nIf you can bide your time and focus on cultivation, perhaps you will ultimately achieve great accomplishments."
   - split: 5
     text: "#PlayerName#招式之中破绽颇多，\\n若是日后与我交手，可要多加小心了。"
+    translated: "#PlayerName#' techniques have quite a few vulnerabilities\\nIf we meet in combat in the future, be sure to be more careful."
   - split: 6
     text: "#PlayerName#这身功夫循规蹈矩，实在无趣。\\n等老子心情好，哪天指点你几招！"
+    translated: "#PlayerName's#kung fu follows the rules too closely and is really boring.\\nWait until I'm in a good mood; someday I'll show you a few moves!"
   - split: 7
     text: "#PlayerName#近来功力突飞猛进，老朽果然没看错人。"
     translated: "#PlayerName#has made remarkable progress in his cultivation lately. Old Man truly didn't make a wrong judgment on you."
@@ -162,12 +184,13 @@
     translated: "#PlayerName# compares to Master Senior Citizen, one can't help but wonder whose martial arts are superior.\\n...Feeling that #PlayerName# might still be more formidable.\\nAfter all, Master has a whole bunch of white hair and an old body; he probably won't withstand too many punches."
   - split: 9
     text: "#PlayerName#武功不俗，确实算得上江湖中难得一见的青年才俊了。"
-    translated: "PlayerName has decent martial arts skills, indeed deserving of being called a rare young talent in the Jianghu."
+    translated: "#PlayerName#'s martial arts are not bad. You could indeed be considered a rare talent among the young men in the Jianghu."
   - split: 10
     text: "呵呵，#PlayerName#周身破绽颇多，\\n万一哪天你我刀兵相向之时......自会知晓。"
     translated: "Hehe, #PlayerName#, you have many vulnerabilities.   Should we ever clash with blades one day...\\n...you'll know then."
   - split: 11
     text: "#PlayerName#若在武学上有疑惑之处，大可来与我探讨。\\n某定当知无不言，言无不尽。"
+    translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nHe will speak his mind fully and without reservation."
   - split: 12
     text: "#PlayerName#招式凌厉，然后劲不足。\\n若能藏锋敛气，内外兼修，便能更上一层楼。"
 - raw: "日常见面,......#PlayerName#......近来可有受伤......,#PlayerName#，有何贵干？,#PlayerName#，最近可有得手什么好宝物？\\n......你这是什么表情，我、我可没想偷你东西。,天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。\\n便是老夫也算不出，这乱世究竟何时终结......,#PlayerName#前来寻我，想必是有事相求。,废话少说，#PlayerName#找老子所为何事？,呵呵呵呵，#PlayerName#今日前来拜访，老朽恐怕早已猜到了。,这世间有比山上野果更好吃的东西？我可不信！\\n除非#PlayerName#下次带来给我尝尝！,#PlayerName#今日看来颇有雅兴，\\n不然怎会突然想起前来寻我？,#PlayerName#就算有事相求，也得拿出相应价码交换才行。,在下不才，蒙武林同道厚爱，得了这“中原大侠”的名号。\\n每每想来，只觉诚惶诚恐，羞愧莫名。,#PlayerName#又见面了，看来你我也算缘分不浅。"
@@ -182,8 +205,10 @@
     translated: "What can I do for you, #PlayerName#?"
   - split: 3
     text: "#PlayerName#，最近可有得手什么好宝物？\\n......你这是什么表情，我、我可没想偷你东西。"
+    translated: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is this on your face? I, I didn't mean to steal anything from you."
   - split: 4
     text: "天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。\\n便是老夫也算不出，这乱世究竟何时终结......"
+    translated: "Heaven and Earth are indifferent; they treat all things as straws in a dog's mouth; sages are also indifferent; they treat the common people as straws in a dog's mouth.\\nEven I cannot calculate when this chaotic world will end..."
   - split: 5
     text: "#PlayerName#前来寻我，想必是有事相求。"
     translated: "#PlayerName# came to find me, so there must be something you need."
@@ -198,6 +223,7 @@
     translated: "Is there anything in this world better to eat than mountain wild berries? I don't believe it!\\nUnless #PlayerName# brings some for me to try next time!"
   - split: 9
     text: "#PlayerName#今日看来颇有雅兴，\\n不然怎会突然想起前来寻我？"
+    translated: "#PlayerName# seems to have quite the appetite for refined pursuits today.\\nOtherwise, how would he suddenly remember to come find me?"
   - split: 10
     text: "#PlayerName#就算有事相求，也得拿出相应价码交换才行。"
     translated: "#PlayerName#, if you have something to ask for, you still need to offer the proper price in return."
@@ -213,12 +239,16 @@
     translated: "Poetry and verse"
   - split: 1
     text: "古人医在心，心正药自真......今人医在手，手滥药不神。\\n我愿天地炉，多衔扁鹊身......自然六合内，少闻贫病人。"
+    translated: "Ancient doctors healed with their hearts; when their intentions were pure, their medicines worked wonders. Modern doctors wield their skills with their hands; when these hands are overly liberal, the medicines lose their potency.\\nI wish the Heavenly Furnace could bear the body of Bianque... Naturally, there would be fewer poor patients in the universe."
   - split: 2
     text: "千古江山，英雄无觅孙仲谋处。\\n舞榭歌台，风流总被雨打风吹去。\\n斜阳草树，寻常巷陌，人道寄奴曾住。\\n想当年，金戈铁马，气吞万里如虎。"
+    translated: "Time‑honored rivers and mountains; where can one find a hero like Sun Zhongmou?\\nStage of dancing and singing, graceful elegance is always washed away by rain and wind.\\nSunset over grass and trees on ordinary alleyways‑they say that Emperor Gaozu once lived here.\\nBack in the day, golden spears and iron horses surged with the might to swallow miles of land like tigers."
   - split: 3
     text: "世人结交须黄金，黄金不多交不深。\\n纵令然诺暂相许，终是悠悠行路心。"
+    translated: "A person forms bonds through gold, but if the gold is scarce, so too shall be the depth of the friendship.\\nThough we temporarily pledged our word, ultimately, your heart remains on the distant path."
   - split: 4
     text: "道可道，非常道；名可名，非常名。\\n无名天地之始，有名万物之母。\\n此两者同出而异名，同谓之玄，玄之又玄，众妙之门。"
+    translated: "The Way that can be spoken is not the constant Way; the name that can be named is not the constant name.\\nThe nameless is the beginning of heaven and earth; the named is the mother of all things.\\nThese two arise together but are named differently; they are both referred to as profound, profoundly profound, the gateway to all wonders."
   - split: 5
     text: "画虎画皮难画骨，知人知面不知心。\\n有酒有肉多兄弟，急难何曾见一人？"
     translated: "Drawing a tiger is hard to capture its bones; knowing a person is easy to see their face but hard to know their heart. With wine and meat, many are brothers; '\\n' in times of need, where is one to be found?"
@@ -227,10 +257,13 @@
     translated: "Betrayal without remorse, acting with impunity.\\nIn heaven and on earth, I alone am supreme!"
   - split: 7
     text: "唱彻阳关泪未干，功名馀事且加餐。浮天水送无穷树，带雨云埋一半山。\\n今古恨，几千般，只应离合是悲欢。江头未是风波恶，别有人间行路难。"
+    translated: "The songs of farewell sung to the sunlit pass have left my tears unspent;   In pursuit of glory and fame, let us eat well.   Waters stretch into the sky, carrying endless rows of trees far away;   Rain veils half a mountain in clouds.\\nAncient sorrows and grievances, myriad in kind,   Should only partings and reunions be sorrow and joy?   The riverbank is not the worst of storms;   There are far more trials in this mortal world."
   - split: 8
     text: "师傅老人家总喜欢念些诗词歌赋，什么之乎者也，着实拗口。\\n好好说话不行吗？#PlayerName#你也是这么想的吧！"
+    translated: "Master often likes to recite some poetry and literary works, all those 'zhi hu zhe ye', are genuinely difficult to pronounce.\\nCan't we just talk nicely? #PlayerName#, you must be thinking the same way!"
   - split: 9
     text: "一上高楼万里愁，蒹葭杨柳似汀洲。\\n溪云初起日沉阁，山雨欲来风满楼。"
+    translated: "A thousand miles of sorrow when I climb high, The reeds and willows by the riverside resemble islets.\\nThe rain clouds begin to rise as the sun sets behind the pagoda, and with the coming of the rain, the wind fills the tower."
   - split: 10
     text: "兵者，诡道也。\\n故能而示之不能，用而示之不用，近而示之远，远而示之近。\\n攻其无备，出其不意。此兵家之胜，不可先传也。"
     translated: "A soldier is adept at deception.\\nThus, he shows his strength as weakness, uses his forces as if they were idle, makes his nearby position seem distant, and makes his distant position seem close.\\nHe attacks where the enemy is unprepared, strikes when least expected. This is a military commander's victory, which cannot be predicted in advance."
@@ -239,6 +272,7 @@
     translated: "Soldiers lie amidst the grass and weeds, while generals vainly lament. Thus I understand that war is a weapon of evil; sages employ it only out of necessity."
   - split: 12
     text: "无声无象，全身空透，应物自然，西山悬磬。\\n虎吼猿鸣，水清河静，翻汇倒海，尽性立命。"
+    translated: "Soundless and formless, wholly transparent, responding to things as they are, West Mountain Xuanying.\\nRoaring tigers and howling apes, water clear and rivers calm, overturning the sea and turning it back, exhausting one's nature and establishing one's life."
 - raw: "为人处世,......能多愈几例顽疾......多救几条性命......此生便足矣......,吾生也有涯，而武道无涯。\\n以有涯随无涯，又何尝不可！,本姑娘所取的财物，大多来路不干净。\\n此等劫富济贫侠义之举，又怎能算是“偷”呢？,祸兮福之所倚，福兮祸之所伏。\\n避世绝俗，秉持守中之道，方为长久之计。,总有一天......我夏天雄要剿灭仙霞派，重振铁掌帮......以报先师之恩情。,人生在世，就是应当随心所欲，肆意妄为。\\n事事都谨小慎微，岂不是白活一场！,江湖中风浪变换，波云诡谲。\\n唯有隔岸观火，见风使舵，方能立于不败之地。,师傅他总念叨着什么佛家、道家、儒家之争，也不知有什么好争的。\\n大不了开个比武擂台，大家一较高下不就行了。,世人皆以为一入江湖，便能自由自在，随心所欲。\\n却不知这江湖中勾心斗角，人心险恶，比世间只多不少。,窃钩者诛，窃国者侯。\\n什么仁义道德，不过是庸人自扰罢了。,天地有正气，公道在人心。\\n我郭淮能得武林众人厚爱，唯靠“侠义”二字而已。,师傅和师叔为了武当派，日日殚精竭虑。\\n我虽资历尚浅，却也想尽力为他们分忧。"
   splits:
   - text: "为人处世"
@@ -251,25 +285,34 @@
     translated: "Life is finite, but the martial way is infinite.\\nTo pursue the infinite with what is finite‑why not!"
   - split: 3
     text: "本姑娘所取的财物，大多来路不干净。\\n此等劫富济贫侠义之举，又怎能算是“偷”呢？"
+    translated: "The goods I have obtained are mostly of questionable origin.\\nHow can such acts of helping the poor at the expense of the rich and upholding righteousness be considered mere “”?"
   - split: 4
     text: "祸兮福之所倚，福兮祸之所伏。\\n避世绝俗，秉持守中之道，方为长久之计。"
+    translated: "Misfortune may be an actual blessing in disguise, and blessing may conceal misfortune.\\nLive apart from the world, adhering to the principle of maintaining balance, that is the long‑term solution."
   - split: 5
     text: "总有一天......我夏天雄要剿灭仙霞派，重振铁掌帮......以报先师之恩情。"
+    translated: "One day... I, Xiachong, will eradicate the Xianxia Sect and revive the Iron Palm Gang... to repay my mentor's kindness."
   - split: 6
     text: "人生在世，就是应当随心所欲，肆意妄为。\\n事事都谨小慎微，岂不是白活一场！"
+    translated: "Life in the world should be about indulging your desires and acting recklessly.\\nBeing overly cautious about everything, isn't that just living in vain!"
   - split: 7
     text: "江湖中风浪变换，波云诡谲。\\n唯有隔岸观火，见风使舵，方能立于不败之地。"
+    translated: "The winds and waves of the Jianghu shift unpredictably.\\nOnly by sitting on the fence and sailing with the wind can one remain unbeaten."
   - split: 8
     text: "师傅他总念叨着什么佛家、道家、儒家之争，也不知有什么好争的。\\n大不了开个比武擂台，大家一较高下不就行了。"
+    translated: "Master keeps going on about the disputes between Buddhist, Taoist, and Confucian teachings, but I'm not sure what's so contentious about it.\\nWhy not set up a trial by combat and let everyone have a good competition?"
   - split: 9
     text: "世人皆以为一入江湖，便能自由自在，随心所欲。\\n却不知这江湖中勾心斗角，人心险恶，比世间只多不少。"
+    translated: "People believe that once one enters the Jianghu, they can be free and do as they please.\\nLittle did he know that in the Jianghu, intrigue and deceit abound, no less than in the mortal world."
   - split: 10
     text: "窃钩者诛，窃国者侯。\\n什么仁义道德，不过是庸人自扰罢了。"
     translated: "'\\n' He who steals a hook is put to death; he who steals a country becomes a lord.\\nWhat righteousness and morality? Nothing but trouble for the common folk."
   - split: 11
     text: "天地有正气，公道在人心。\\n我郭淮能得武林众人厚爱，唯靠“侠义”二字而已。"
+    translated: "Righteous energy fills the universe; fairness resides in human hearts.\\nI Guo Huai can earn the affection of Wulin solely with those two words, “”."
   - split: 12
     text: "师傅和师叔为了武当派，日日殚精竭虑。\\n我虽资历尚浅，却也想尽力为他们分忧。"
+    translated: "Master and Master Uncle constantly strain their minds for the Wudang Sect.\\nThough I am relatively new, I still wish to do what I can to alleviate their burdens."
 - raw: "对待朋友,......我久居深山幽谷之中......像#PlayerName#这样能说上两句话之人......亦是不多......,天下之间，太多蝇营狗苟之辈。\\n人生一世，又能遇上几个倾心相交的英雄豪杰？,#PlayerName#放心，本姑娘一般不偷相熟之人的东西......\\n除非有人惹我不开心了！,君子之交，淡泊如水，\\n志同道合之谊，方能历久弥坚。,哼哼，#PlayerName#若能助铁掌帮一臂之力，\\n我夏天雄自也不会亏待阁下......,行走江湖，老子早已习惯了独来独往。\\n报团取暖，不过是蝼蚁所为。,这些年来，老朽见过太多亲朋反目，手足相残之惨剧。\\n所谓天下熙熙皆为利来，天下攘攘皆为利往，莫不如是。,我朋友大多是些飞禽走兽，山野猴子，\\n#PlayerName#你算第一个初具人形的......这成语是这么用的吧？,缘起相聚，缘散别离，江湖中人身若浮萍，\\n#PlayerName#与我也不过如是。,#PlayerName#若能助一臂之力，我自然不会亏待于你。,兄弟义气，自当肝胆相照，一片赤诚。\\n想必#PlayerName#也如此认为。,只要我等名门大派秉公持正，携手并进，\\n就定能使这天下武林风清气正，海晏河清。\\n不知#PlayerName#是否也这样认为？"
   splits:
   - text: "对待朋友"
@@ -279,26 +322,34 @@
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。\\n人生一世，又能遇上几个倾心相交的英雄豪杰？"
+    translated: "There are too many yingying gouguo beggars in this world.\\nHow many like‑minded heroes can one encounter in a lifetime?"
   - split: 3
     text: "#PlayerName#放心，本姑娘一般不偷相熟之人的东西......\\n除非有人惹我不开心了！"
+    translated: "#PlayerName#, don't worry, I usually don't steal from people I know...\\nUnless someone angers me!"
   - split: 4
     text: "君子之交，淡泊如水，\\n志同道合之谊，方能历久弥坚。"
+    translated: "A gentleman's friendship is as pure and unassuming as water.\\nA friendship based on shared ideals will only grow stronger with time."
   - split: 5
     text: "哼哼，#PlayerName#若能助铁掌帮一臂之力，\\n我夏天雄自也不会亏待阁下......"
+    translated: "Hmph. If #PlayerName# can lend a hand to the Iron Palm Gang,...\\nI won't shortchange you in the summer heat..."
   - split: 6
     text: "行走江湖，老子早已习惯了独来独往。\\n报团取暖，不过是蝼蚁所为。"
+    translated: "Traversing the Jianghu, I had long grown accustomed to coming and going alone.\\nHuddling for warmth is just something ants do."
   - split: 7
     text: "这些年来，老朽见过太多亲朋反目，手足相残之惨剧。\\n所谓天下熙熙皆为利来，天下攘攘皆为利往，莫不如是。"
+    translated: "Over the years, I have seen too many tragedies of loved ones turning against each other and siblings tearing each other apart.\\nAs goes the saying, All comers to the world seek profit, and all goers leave for profit, it is no different in this case."
   - split: 8
     text: "我朋友大多是些飞禽走兽，山野猴子，\\n#PlayerName#你算第一个初具人形的......这成语是这么用的吧？"
     translated: "My friends are mostly birds and beasts, wild monkeys in the mountains. \\n#PlayerName#, you're the first to start resembling a human... Is that how this idiom is used?"
   - split: 9
     text: "缘起相聚，缘散别离，江湖中人身若浮萍，\\n#PlayerName#与我也不过如是。"
+    translated: "Fate brings us together, fate sends us apart; in the Jianghu, one's life is like a floating fern.\\n#PlayerName# is no different from me"
   - split: 10
     text: "#PlayerName#若能助一臂之力，我自然不会亏待于你。"
     translated: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
   - split: 11
     text: "兄弟义气，自当肝胆相照，一片赤诚。\\n想必#PlayerName#也如此认为。"
+    translated: "Brotherhood loyalty should involve open hearts and sincere intentions.\\nI bet #PlayerName# agrees"
   - split: 12
     text: "只要我等名门大派秉公持正，携手并进，\\n就定能使这天下武林风清气正，海晏河清。\\n不知#PlayerName#是否也这样认为？"
     translated: "As long as the prestigious factions uphold justice and work together, we can certainly ensure that the Wulin is righteous and pure, with seas calm and rivers clear. \\nMay I ask #PlayerName# if they also believe this?"
@@ -314,17 +365,22 @@
     translated: "Those who oppose me must be utterly exterminated."
   - split: 3
     text: "哼，若是有人敢与我结仇，\\n本姑娘非得把他裤头子都偷过来，方能一解心头之恨。"
+    translated: "Hmph, if anyone dares to make enemies with me,\\nI must steal all of his underpants to vent the anger in my heart."
   - split: 4
     text: "老夫平日隐居山林，鲜有好友，却也无甚仇敌。\\n至人无己，神人无功，圣人无名，如是而已。"
+    translated: "I rarely have friends but also few enemies since I often hide in the mountains.\\nThose who are supreme have no self, those who are divine achieve nothing, and those who are sages seek no fame; thus it is."
   - split: 5
     text: "#PlayerName#若敢阻碍我铁掌帮行事，\\n到时可休怪老夫不讲情面。"
+    translated: "#PlayerName#, if you dare hinder the Iron Palm Gang's operations,...\\nYou can't blame an old man for that later on."
   - split: 6
     text: "何人敢与老子为敌，老子定会叫他后悔终生！"
     translated: "Who dares to oppose me, Old Man will make him regret for life!"
   - split: 7
     text: "明枪易躲，暗箭难防。\\n#PlayerName#行走江湖之时，还是少结些仇家为妙。"
+    translated: "A arrow in the open is easy to dodge, but a stealthy one is hard to guard against.\\n#PlayerName#, when wandering through the Jianghu, it's better to make fewer enemies."
   - split: 8
     text: "峨眉山中有个老猴王，天天撒泼捣乱，破坏田地，\\n实在是本姑娘一生之大敌！"
+    translated: "In the midst of Emei Mountain, there's an old monkey king who causes trouble every day, wrecking farmland.\\nTruly this Miss is my arch nemesis in a lifetime!"
   - split: 9
     text: "恩怨如棋，不必争一时之得失......\\n唯有精心布局，笑到最后，方才称得上是赢家。"
     translated: "Grudges are like chess; there's no need to argue over short‑term gains or losses...\\nOnly by carefully planning and emerging victorious in the end can one truly be considered a winner."
@@ -336,6 +392,7 @@
     translated: "Driven by personal vendettas, it can only lead to meaningless slaughter.\\nTravelling the Jianghu, one must prioritize justice and righteousness!"
   - split: 12
     text: "自古正邪不两立，惩奸除恶，斩妖伏魔，\\n此乃我武当正道应尽之职责。"
+    translated: "Right and wrong have never coexisted since ancient times. Combatting evil and eliminating wickedness, slaying demons and subduing monsters,\\nThis is the duty we Wudang practitioners should fulfill."
 - raw: "评价江湖,......江湖纷乱......#PlayerName#多加小心......,当今江湖，有太多欺世盗名，妄称侠义之辈。\\n唯有将他们斩杀干净，老夫荡平乱世的霸道才能实现。,别看那些江湖大侠，一个个道貌岸然。\\n私底下杀人放火的事没少干，比本姑娘可坏多了。\\n......#PlayerName#，你不会也是其中之一吧？,当今江湖英雄辈出，豪侠并起，此皆天下大乱所致。\\n圣人不死，大盗不止，唯有守中之道，方能维持时局平衡。,什么名门正派，不过是些沽名钓誉之辈！\\n为达目的不择手段，如此方为大丈夫所为。,当今江湖，不过一群虫豸杂碎！\\n能入老子法眼的，不过寥寥数人而已。,最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。,什么是江湖？为啥要叫江湖？\\n难道那些大侠都是鱼虾转世，喜欢游泳不成......,人在江湖，身不由己。\\n#PlayerName#，或许你我也会有拔剑相向的一天。,循规蹈矩依正道而行者，不过棋子而已。\\n呵呵，而我计心狂，只做那弈棋之人。,哎，这江湖中的奸邪宵小之徒，\\n为何总是除之不尽，杀之不竭......,师傅总说，这江湖中人亦正亦邪，黑白往往并不分明。\\n我却觉得黑便是黑，白便是白，又不是瞎子，岂能看不出来？"
   splits:
   - text: "评价江湖"
@@ -345,26 +402,34 @@
     translated: "...the Jianghu is in chaos... #PlayerName#, be careful..."
   - split: 2
     text: "当今江湖，有太多欺世盗名，妄称侠义之辈。\\n唯有将他们斩杀干净，老夫荡平乱世的霸道才能实现。"
+    translated: "In today's Jianghu, there are too many who deceive the world and falsely claim to uphold chivalry.\\nOnly by thoroughly exterminating them can Elder Pacify achieve his domineering goal of bringing peace to the tumultuous world."
   - split: 3
     text: "别看那些江湖大侠，一个个道貌岸然。\\n私底下杀人放火的事没少干，比本姑娘可坏多了。\\n......#PlayerName#，你不会也是其中之一吧？"
     translated: "Don't look at those so‑called Great Heroes of the Jianghu; they all appear upright and moral.\\nIn private, they've done plenty of murders and arson‑much worse than this Miss!\\n......#PlayerName#, are you one of them too?"
   - split: 4
     text: "当今江湖英雄辈出，豪侠并起，此皆天下大乱所致。\\n圣人不死，大盗不止，唯有守中之道，方能维持时局平衡。"
+    translated: "Heroes and martial artists abound in the current Jianghu, all arising from the great chaos of the world.\\nA sage does not perish, nor will great thieves cease. Only the way of adhering to the middle can maintain balance in the times."
   - split: 5
     text: "什么名门正派，不过是些沽名钓誉之辈！\\n为达目的不择手段，如此方为大丈夫所为。"
+    translated: "What noble and righteous sects, merely some people seeking fame and reputation!\\nMeans and methods are irrelevant to achieving one's goal; that is what a true man does."
   - split: 6
     text: "当今江湖，不过一群虫豸杂碎！\\n能入老子法眼的，不过寥寥数人而已。"
+    translated: "Today's Jianghu is merely a mess of various creatures!\\nOnly a handful of people have caught my Daoist eye."
   - split: 7
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
     translated: "The hardest thing to measure is the heart, and even this “Jianghu Baxiao” of mine might be difficult to decipher fully."
   - split: 8
     text: "什么是江湖？为啥要叫江湖？\\n难道那些大侠都是鱼虾转世，喜欢游泳不成......"
+    translated: "What is the Jianghu? Why call it that?\\nCould those Great Heroes have been reborn as fish and shrimp, liking to swim instead...."
   - split: 9
     text: "人在江湖，身不由己。\\n#PlayerName#，或许你我也会有拔剑相向的一天。"
     translated: "In the Jianghu, one's fate is not their own.\\n#PlayerName#, perhaps you and I might even come to draw our swords against each other someday."
   - split: 10
     text: "循规蹈矩依正道而行者，不过棋子而已。\\n呵呵，而我计心狂，只做那弈棋之人。"
+    translated: "Those who follow the rules and walk the righteous path are merely pieces on the chessboard.\\nHaha, while my heart races, I merely play the chessmaster."
   - split: 11
     text: "哎，这江湖中的奸邪宵小之徒，\\n为何总是除之不尽，杀之不竭......"
+    translated: "Alas, the villains and scoundrels in this Jianghu.\\nWhy can't they be completely exterminated or endlessly defeated..."
   - split: 12
     text: "师傅总说，这江湖中人亦正亦邪，黑白往往并不分明。\\n我却觉得黑便是黑，白便是白，又不是瞎子，岂能看不出来？"
+    translated: "Master always says that in the Jianghu, people can be both right and wrong, with black and white rarely clear‑cut.\\nBut I think black is black, and white is white. Not being blind, how could I not see that?"

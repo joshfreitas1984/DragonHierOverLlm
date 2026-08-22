@@ -1,5 +1,4 @@
 ﻿using FanslationStudio.LlmKit;
-using Tests.Code;
 
 namespace Tests;
 

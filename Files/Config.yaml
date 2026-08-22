@@ -13,30 +13,32 @@ glossaryPreset:
   usePresetChineseGlossary: true
   chineseGlossaryTypesToSupress:
     - Phonetics
-retryCount: 0
+retryCount: 1
 batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true
 translateFlagged: true
+extraStringTokenReplacers:
+  - '#PlayerName#'
 splitCharactersList:
-  - '\\n'
-  - '⑩'
-  - '⓪'
-  - '①'
-  - '②'
-  - '③'
-  - '④'
-  - '⑤'
-  - '⑥'
-  - '⑦'
-  - '⑧'
-  - '⑨'
-  #- '-', # This will split between other groups
-  #- ':', # This will split between other groups
-  #-'|',
-  #-'。'
-  #-'<br>',
-  #-'-', 
+  - '\n'
+  - '<br>'
+  # - '⑩'
+  # - '⓪'
+  # - '①'
+  # - '②'
+  # - '③'
+  # - '④'
+  # - '⑤'
+  # - '⑥'
+  # - '⑦'
+  # - '⑧'
+  # - '⑨'
+  # - '-' # This will split between other groups
+  # - ':' # This will split between other groups
+  # - '|'
+  # - '。'
+  # - '-' 
 splitRegexPatterns:
   #- '(.*?)',
   #- '（.*?）',

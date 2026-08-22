@@ -38,7 +38,7 @@
     translated: "Think of a technique"
   - split: 1
     text: "嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展……"
-    translated: "Hmm? Oh! It's {PlayerName}! Just then, I was coming up with a clever move; all one needs to do is act in this way..."
+    translated: "Hmm? Oh! It's #PlayerName#! I was just thinking of a brilliant strategy; it's as simple as this..."
   - split: 2
     text: "#PlayerName#，我近日修行始终不得要领，已为此苦思多日了。"
     translated: "#PlayerName#, I have been struggling to grasp the right approach in my recent cultivation for many days now."
@@ -59,6 +59,7 @@
     translated: "#PlayerName#, with this move, I've just let it flow naturally‑does it have a bit of grace to it?"
   - split: 8
     text: "#PlayerName#，看剑！\\n……哈哈，开个玩笑而已。"
+    translated: "#PlayerName#, draw your sword!\\n......Ha ha, just joking."
   - split: 9
     text: "#PlayerName#，你若能指出我招式中的纰漏，日后自有重谢。"
     translated: "#PlayerName#, if you can point out the flaws in my techniques, there will surely be a great reward for you in the future."
@@ -142,10 +143,10 @@
     translated: "#PlayerName#, how did you learn this technique? Spill the beans and tell me about it quickly."
   - split: 2
     text: "#PlayerName#武功与我相比孰强孰弱，早晚要分个高下才是！"
-    translated: "#PlayerName's martial arts ability is stronger or weaker than mine, and we will eventually determine who is superior!"
+    translated: "#PlayerName's martial arts is either stronger or weaker than mine, and we'll have to settle it eventually!"
   - split: 3
     text: "#PlayerName#武功灵巧有余，若能增加一些踏实稳重便再好不过了"
-    translated: "#PlayerName's martial arts are agile and clever, but would benefit from some added steadiness and solidity."
+    translated: "#PlayerName's martial arts are agile and skilled, but would benefit from some added stability and gravitas."
   - split: 4
     text: "#PlayerName#若在武学上有疑惑不解之处，只管来问我便是"
     translated: "#PlayerName#, if you have any doubts about martial arts, feel free to ask me."
@@ -154,16 +155,16 @@
     translated: "#PlayerName#, have you made any progress in your martial arts lately?"
   - split: 6
     text: "#PlayerName#武功稳重有余，若能增加一些灵活巧变便再好不过了"
-    translated: "PlayerName's martial arts are solid and steady, but would be even better with some added flexibility and wisdom changes."
+    translated: "#PlayerName's martial arts is sturdy and reliable. Adding some flexibility and agility would be better."
   - split: 7
     text: "#PlayerName#武功进步神速，只怕早晚要把我远远甩开。"
-    translated: "PlayerName's martial arts skill can rapidly increase, so they might eventually leave me far behind."
+    translated: "#PlayerName's martial arts have progressed at an incredible rate, and I fear they will soon leave me far behind."
   - split: 8
     text: "每日练武练武，真是烦煞人也！"
     translated: "Daily training in martial arts truly drives me mad!"
   - split: 9
     text: "#PlayerName#武功虽时有进步，但还是一眼就能看出诸多破绽之处。"
-    translated: "#PlayerName's# martial arts have shown some improvement, but there are still numerous flaws that can be easily spotted."
+    translated: "#PlayerName's# martial arts have shown some improvement, but there are still many obvious flaws."
   - split: 10
     text: "#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
     translated: "If my martial arts doesn't improve, I might be left far behind."
@@ -188,7 +189,7 @@
     translated: "#PlayerName#, how have you been?"
   - split: 6
     text: "真巧，我正要离开此处，便遇到了#PlayerName#你。"
-    translated: "Coincidentally, I was just about to leave when I ran into {PlayerName} here."
+    translated: "By chance, I was just about to leave when I encountered you, #PlayerName#."
   - split: 7
     text: "#PlayerName#你我又见面了，算不算是缘分使然？"
     translated: "#PlayerName#, we've met again. Could it be due to fate?"

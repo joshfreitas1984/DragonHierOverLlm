@@ -16,6 +16,7 @@
     translated: "A Moment's Inn"
   - split: 2
     text: "这本是关外一无名小客栈，传说店家愿出高价，求名士题匾额一副，以振声望。\\n前朝文豪恰巧行径此处，抚掌笑曰：既然此处有间客栈，就叫“有间客栈”好了！\\n随战乱不断，商路迁移，此处生意竟真逐渐转暖，最终成了关东首屈一指的客店之所。"
+    translated: "This was originally an unknown small inn beyond the pass, where legend had it that the owner was willing to pay a high price to invite a scholar to inscribe a plaque, in hopes of boosting their reputation.\\nFormer literary giants walking this path might exclaim with a clap of the hands: Since there is an inn here, let's call it “A Moment's Inn”!\\nWith wars and conflicts constantly shifting trade routes, business here gradually warmed up. Eventually, it became the top guesthouse in Guan Dong."
 - raw: "1,河洛客栈,这黄河洛水交接之所，乃炎黄故地，中原要冲，自古以来便是土地肥沃，人丁兴旺之所。\\n故而这天子脚下的河洛客栈，生意也一直颇为兴隆。\\n南方的游人学子，或官员商贾上京之时，大多要在此打尖歇脚几日，再行赶路。,23.78;2.4"
   splits:
   - split: 1
@@ -23,6 +24,7 @@
     translated: "River Luo Inn"
   - split: 2
     text: "这黄河洛水交接之所，乃炎黄故地，中原要冲，自古以来便是土地肥沃，人丁兴旺之所。\\n故而这天子脚下的河洛客栈，生意也一直颇为兴隆。\\n南方的游人学子，或官员商贾上京之时，大多要在此打尖歇脚几日，再行赶路。"
+    translated: "This intersection of the Yellow River and Luo Water, known as the ancient land of Yan and Huang, is a strategic center in Central Plains. Since ancient times, it has been renowned for its fertile soil and thriving population.\\nAs a result, business at the Heluo Inn beneath this emperor's feet has remained quite prosperous.\\nTravelers and students from the south, or officials and merchants heading to the capital, often stop here for a few days to rest and refuel before continuing their journey."
 - raw: "2,兴隆客栈,这兴隆客栈乃是南方规模最大，名望最盛的客店之一，\\n由于位于连通中原与南方诸郡以及福州港口的必经之路上，因此也常常门庭若市，座无虚席，\\n可谓店如其名，生意兴隆。,34.4;-20.4"
   splits:
   - split: 1
@@ -38,6 +40,7 @@
     translated: "Yue Coming Inn"
   - split: 2
     text: "这晋阳西南，边陲要冲，亦是中原与北方各地交通往来的重要之所，\\n“悦来”其名取自“有朋自远方来，不亦悦乎”，\\n此处往来汉人羌胡以及各番邦者，倒也确是共聚一堂，自得融洽。"
+    translated: "This Jinyang, located southwest of the border and a critical junction, is also an important hub for transportation between the Central Plains and northern regions.\\n“Jue Coming” takes its name from It's delightful to have friends come from afar, isn't it?\\nHere, the Han people, Qiang Hu, and various barbarian nations do indeed gather together, finding mutual understanding and harmony."
 - raw: "4,龙门客栈,西北关外，荒烟蔓草，滚滚黄沙中，\\n竟有这间生意不俗，行人络绎的龙门客栈，着实令往来行者眼前一亮。\\n不过也有江湖传闻，其老板娘八面玲珑，妩媚泼辣，通过掌控出关商道和边防将领，经营黑店谋取暴利。,-41.53;19.92"
   splits:
   - split: 1
@@ -45,6 +48,7 @@
     translated: "Dragon Gate Inn"
   - split: 2
     text: "西北关外，荒烟蔓草，滚滚黄沙中，\\n竟有这间生意不俗，行人络绎的龙门客栈，着实令往来行者眼前一亮。\\n不过也有江湖传闻，其老板娘八面玲珑，妩媚泼辣，通过掌控出关商道和边防将领，经营黑店谋取暴利。"
+    translated: "Outside Northwest Gate, wild smoke and overgrown grass, rolling yellow sand,\\nThis bustling Dragon Gate Inn, with its thriving business and constant stream of travelers, truly brightens the eyes of those who pass by.\\nHowever, there are also tales from the Jianghu about his mistress being adept at navigating social situations, enchantingly charismatic, and shrewdly ruthless. She amassed huge profits by controlling the passage trade routes and border military commanders."
 - raw: "5,高升客栈,此处乃巴蜀地区重要水陆驿站，由于其名取“步步高升”之意，颇受往来商贾旅人的欢迎，\\n加之其位于巴蜀与西北地区间几乎必经的要道之上，因而每日也是顾客盈门，高朋满座。,-18.07;10.89"
   splits:
   - split: 1
@@ -52,6 +56,7 @@
     translated: "High Riser Inn"
   - split: 2
     text: "此处乃巴蜀地区重要水陆驿站，由于其名取“步步高升”之意，颇受往来商贾旅人的欢迎，\\n加之其位于巴蜀与西北地区间几乎必经的要道之上，因而每日也是顾客盈门，高朋满座。"
+    translated: "This place is an important water and land relay station in Bashu region, renowned for its name's meaning of climb the corporate ladder, making it particularly popular among travelers and merchants.\\nDue to its location on a nearly indispensable route between Bashu and the Northwest regions, it is bustling with customers and filled with esteemed guests every day."
 - raw: "6,仙居客栈,此处乃是江陵一带颇具声名之驿站，\\n因其周边风景秀美，名山屏卫，云雾缭绕宛若神仙居所，故而得名“仙居客栈”。\\n在此处打尖住店之人，大多是往来于南方和中原地区的商贾游人，或是赶考学子。,-5.92;-18.19"
   splits:
   - split: 1
@@ -59,6 +64,7 @@
     translated: "Xianju Inn"
   - split: 2
     text: "此处乃是江陵一带颇具声名之驿站，\\n因其周边风景秀美，名山屏卫，云雾缭绕宛若神仙居所，故而得名“仙居客栈”。\\n在此处打尖住店之人，大多是往来于南方和中原地区的商贾游人，或是赶考学子。"
+    translated: "This is a well‑known relay station in the Jiangling area.\\nDue to its picturesque surroundings, surrounded by famous mountains that serve as a barrier, shrouded in clouds and mist like a residence of immortals, it is named “Xianju Inn”.\\nThose who stay at inns here are mostly merchants and travelers coming from the south and central regions, or students heading for the imperial exams."
 - raw: "7,同福客栈,这同福客栈本是京城西南一名不见经传的破落小店，依靠零星商旅勉强维持。\\n近年来由于飞龙门得势，依靠拜会山门和进京上贡的武林中人，生意倒也颇有起色，\\n竟逐渐成了江湖传闻中卧虎藏龙，高手云集之所。,-1.19;9.97"
   splits:
   - split: 1
@@ -66,6 +72,7 @@
     translated: "Tongfu Inn"
   - split: 2
     text: "这同福客栈本是京城西南一名不见经传的破落小店，依靠零星商旅勉强维持。\\n近年来由于飞龙门得势，依靠拜会山门和进京上贡的武林中人，生意倒也颇有起色，\\n竟逐渐成了江湖传闻中卧虎藏龙，高手云集之所。"
+    translated: "This Tongfu Inn was originally a obscure and struggling small establishment in the southwest of the Capital, relying on occasional travelers to barely survive.\\nIn recent years, due to the Flying Dragon Gate gaining prominence, business has thrived thanks to meetings at the sect's entrance and tributes from those who visit or make offerings in the capital.\\nGradually, it became a place in the Jianghu where dragons lie dormant and masters gather."
 - raw: "8,万安客栈,这万安客栈位于西南边陲，大理城附近的交通要道上，\\n再向西行便会进入高原苦寒之地，崎岖坎坷，罕有人烟，\\n往来旅人大多选择在此整备行囊，顺便祈福颂愿，以求路途之中“万事平安”。,-38.9;-5.6"
   splits:
   - split: 1
@@ -81,3 +88,4 @@
     translated: "Xiu Shui Inn"
   - split: 2
     text: "这秀水客栈形制古朴，装饰精美，自前朝建设以来已有百年历史。\\n由于位于扬州与杭州之间通衢要道，颇受往来商贾欢迎，\\n更兼其周边山明水秀，风光宜人，因而也吸引了许多四方旅人专程来此游览。"
+    translated: "This ancient yet elegantly decorated Shuishe Inn has stood for a century since its construction in the previous dynasty.\\nLocated between Yangzhou and Hangzhou on a major trade route, it is particularly favored by traveling merchants.\\nMoreover, with its surrounding mountains lush and waters clear, the scenery is delightful, attracting many travelers from all directions who come specifically to visit."

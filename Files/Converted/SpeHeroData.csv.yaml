@@ -465,6 +465,8 @@
     translated: "Jingle Luliu"
   - split: 18
     text: "师傅:10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "12,卢.玉麟,男,长乐帮,默认,长老,-1,算计,平平,34,无序/凶狠,刀法,口才,,精明强干;舞技;横刀跃马;轻功;囤积居奇;仕官,铁算盘,0,0,,-99,0"
   splits:
   - split: 1
@@ -786,6 +788,8 @@
     translated: "Fair and Unbiased; Iron Hand and Steel Fist; Drunken Dreaming; Pure Inner Power; Ultimate Skill; Health; Begging; Spear Sharpness"
   - split: 15
     text: "大醉侠"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "20,赵.破虏,男,飞龙门,默认,掌门,-1,稳重,聪颖,32,守序/中立,长兵/刀法,采伐,帝王封禅功,公正不阿;胸怀大志;一骑绝尘;枪扫六合;横刀跃马;绝艺超群;坚若磐石;身先士卒,潜龙勿用,0,0,,-99,0"
   splits:
   - split: 1
@@ -1499,6 +1503,8 @@
     translated: "Heavenly Descent Swordsmanship; Vortex Secret Classic; Painting the Dragon's Eyes"
   - split: 14
     text: "不幸;武学天才;雄才伟略;神机妙算;炉火纯青;飞檐走壁;身怀绝技;剑随意动"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     text: "天剑客"
     translated: "Sky Swordsman"
@@ -1656,6 +1662,8 @@
     translated: "Rebirth Classic;Dharmaraja Holy Staff"
   - split: 14
     text: "武痴;四大皆空;枪扫六合;铁手钢拳;炉火纯青;刀枪不入;绝艺超群;枪出如龙;虚怀若谷"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     text: "佛痴"
     translated: "Buddhist devoted"
@@ -1865,7 +1873,9 @@
   splits:
   - split: 1
     text: "吕.寻峰"
-    translated: "Lü Xunfeng"
+    translated: "Lu Xunfeng"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Lü Xunfeng,吕.寻峰,Lü Xunfeng,吕.寻峰,Lü Xunfeng,吕.寻峰,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -2676,6 +2686,8 @@
     translated: "Tide Rise Moon Full Success"
   - split: 14
     text: "唯命是从;拳不离手;残忍;冷静"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     text: "铁掌双雄"
     translated: "Dual Palm Masters"
@@ -2715,7 +2727,9 @@
   splits:
   - split: 1
     text: "吕.子芳"
-    translated: "Lü Zifang"
+    translated: "Lu Zifang"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Lü Zifang,吕.子芳,Lü Zifang,吕.子芳,Lü Zifang,吕.子芳,"
   - split: 2
     text: "女"
     translated: "Female"
@@ -3692,6 +3706,8 @@
     translated: "Yellow River Dual Fiends"
   - split: 18
     text: "师傅:73"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "98,凤.南飞,男,无,默认,长老,4,算计,超群,48,守序/冷酷,奇门,,,笑里藏刀;善贾;收藏;学识,乐善好施,0,0,,-3,0"
   splits:
   - split: 1
@@ -4453,6 +4469,8 @@
     translated: "Seclusion from the World; Calm Mind and Serene Spirit; Humble as a Hollow Valley; Phoenix Singing and Phoenix Chanting; Leaping Roofs and Wandering Walls; Mystical Doors and Hidden Traversals; Confucian Scholarship"
   - split: 15
     text: "大隐琴侠"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "119,孟.经世,男,无,霸刀门,副掌门,5,算计,平平,56,守序/冷酷,绝技/刀法,,,囤积居奇;暴躁;盛气凌人;公正不阿;身怀绝技;横刀跃马;笔走龙蛇,霸刀狂侠,0,1,,-99,0"
   splits:
   - split: 1
@@ -4487,6 +4505,8 @@
     translated: "Stockpile to manipulate; easily irritated; overbearing; unbiased and just; master of extraordinary skills; slash with a saber while galloping on horseback; stroke the brush like dragonsisci"
   - split: 15
     text: "霸刀狂侠"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "120,郭.淮,男,无,丐帮,副掌门,6,忠厚,愚钝,45,戒律/仁慈,内功/拳掌,,,侠义无双;武痴;浩气凛然;宅心仁厚;炉火纯青;铁手钢拳;愚钝;排山倒海;百折不挠;钢筋铁骨,中原大侠,0,1,,-99,1"
   splits:
   - split: 1
@@ -4526,7 +4546,9 @@
   splits:
   - split: 1
     text: "吕.天行"
-    translated: "Lü Tianxing"
+    translated: "Lu Tianxing"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Lü Tianxing,吕.天行,Lü Tianxing,吕.天行,Lü Tianxing,吕.天行,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -4956,11 +4978,15 @@
     translated: "Seven Righteous Ones"
   - split: 18
     text: "师傅:16"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "133,吕.舞阳,男,无,蓬莱派,正式弟子,2,轻佻,聪颖,22,平常/冷酷,剑法,,,心狠手辣;练武;游手好闲;桀骜不驯,侠义七子,0,1,,-99,0"
   splits:
   - split: 1
     text: "吕.舞阳"
-    translated: "Lü Wuyang"
+    translated: "Lu Wuyang"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Lü Wuyang,吕.舞阳,Lü Wuyang,吕.舞阳,Lü Wuyang,吕.舞阳,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -5124,6 +5150,8 @@
     translated: "Face of Jade Official"
   - split: 18
     text: "师傅:124"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "138,北冥.雪,女,无,默认,长老,4,潇洒,超群,28,混乱/凶狠,刀法/射术,,,倾国倾城;盛气凌人;嗜赌如命;相士,,0,0,,-9,1"
   splits:
   - split: 1
@@ -5342,6 +5370,8 @@
     translated: "Primordial Heavenly Might; Ethereal and Immortal; Tigers Roar, Dragons Sing"
   - split: 14
     text: "痴傻蒙昧;胆小如鼠;铁手钢拳;例无虚发;枪扫六合;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     text: "侠盗四奇"
     translated: "Thief and Four Quirks"
@@ -5408,8 +5438,12 @@
     translated: "Lawful/Neutral"
   - split: 11
     text: "剑法/轻功/内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 13
     text: "独孤剑法;无尽剑意;仙娥折梅;先天功;天意剑诀"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 14
     text: "返璞归真;混元一气;太极圆转;人剑合一;气冲斗牛;武学天才;面壁功深;浪迹天涯;铁画银钩;妙至毫巅"
     translated: "Pristine Simplicity; Primordial Unity; Tai Chi Rotation; Man and Sword One; Qi Surges to the Constellations; Martial Genius; Deep Wall Meditation; Roaming the Horizon; Iron Line Silver Hook; Perfection in Every Detail"
@@ -5931,6 +5965,8 @@
     translated: "Palm Strike/Qimen"
   - split: 13
     text: "禁军拳术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 14
     text: "缚鸡之力;智力;学识;仁慈;儒生;博览群书;军师"
     translated: "Binding‑chicken strength; intelligence; knowledge; kindness; scholar; well‑read; military advisor"

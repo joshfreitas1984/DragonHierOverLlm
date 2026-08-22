@@ -143,6 +143,7 @@
     translated: "Ancestral hall"
   - split: 7
     text: "祭典?获取门派威望\\n技能影响：学识-我-ProduceBuildingWork-5;鉴定?鉴定珍宝-我&入门弟子-IdentifyItem;门派展厅?管理门派展厅-我&正式弟子-ShowForceShowRoom;宴会?与门派弟子宴饮提升忠诚-我&掌门-StartForceParty"
+    translated: "Festival? Gain Sect Reputation\\nSkill Impact: Scholar ‑ I ‑ ProduceBuildingWork ‑5; Appraisal? Appraise Treasures ‑ I & Initiate Disciples ‑ IdentifyItem; Sect Exhibition Hall? Manage the Sect's Exhibition Hall ‑ I & Formal Disciples ‑ Show Force Showroom; Banquet? Host a Feast with Sect Disciples to Boost Loyalty ‑ I & Sect Leader ‑ Start Force Party"
   - split: 8
     text: "威望+10"
     translated: "Reputation+10"
@@ -217,6 +218,7 @@
     translated: "Healing Room"
   - split: 7
     text: "疗伤?治疗伤势-我|附庸|门客-HospitalCureInjuryForce;坐诊?为周边受伤侠士疗伤治病-我&正式弟子-DoctorWork"
+    translated: "Healing injuries? Treating wounded warriors ‑ I, an vassal or retainer; Providing medical care to nearby injured knights ‑ I and my formal disciples as doctors."
   - split: 8
     text: "银钱+100"
     translated: "Coin +100"
@@ -285,6 +287,7 @@
     translated: "Money Shop"
   - split: 7
     text: "经营?获取门派银钱\\n技能影响：口才-我|无门派-ProduceBuildingWork-0;放债?增加资源储量\\n技能影响：口才 学识-我-RecoverBuildingResourceRate;经营?窃取门派银钱\\n技能影响：口才-敌-ProduceBuildingSteal-0"
+    translated: "Operating? Acquiring Sect Funds\\nSkill Impact: Eloquence ‑ Unaffiliated; Produce Building Work ‑0; Loaning? Increase Resource Reserves\\nSkill Impact: Eloquence Knowledge ‑ I ‑ Increase Building Resource Recovery Rate; Management? Steal Sect Funds\\nSkill Impact: Eloquence ‑ Enemy: Produce Building Theft ‑0"
   - split: 8
     text: "银钱+100"
     translated: "Coin +100"
@@ -324,6 +327,7 @@
     translated: "Forest"
   - split: 7
     text: "砍伐?获取门派木料\\n技能影响：采伐-我|无门派-ProduceBuildingWork-2;勘探?增加资源储量\\n技能影响：采伐 学识-我-RecoverBuildingResourceRate;砍伐?窃取门派木料\\n技能影响：采伐-敌-ProduceBuildingSteal-2"
+    translated: "Chop? Obtain Sect Wood\\nSkill Impact: Logging ‑ Unsected; Produce Building Work ‑2; Exploration? Increase Resource Reserves\\nSkill Impact: Logging Intelligence ‑ I ‑ RecoverBuildingResourceRate; Cutting? Steal Sect Wood\\nSkill Impact: Logging ‑ Enemy: Produce Building Steal ‑2"
   - split: 8
     text: "木料+100"
     translated: "Logs +100"
@@ -343,6 +347,7 @@
     translated: "Minefield"
   - split: 7
     text: "挖掘?获取门派矿石\\n技能影响：采伐-我|无门派-ProduceBuildingWork-3;勘探?增加资源储量\\n技能影响：采伐 学识-我-RecoverBuildingResourceRate;挖掘?窃取门派矿石\\n技能影响：采伐-敌-ProduceBuildingSteal-3"
+    translated: "Dig to obtain Sect minerals\\nSkill Impact: Harvesting ‑ No Sect; Produce Building Work ‑3; Exploration? Increase Resource Reserves\\nSkill Impact: Logging Boosts Knowledge ‑ I ‑ Recover Building Resource Rate; Mining? Steal Sect Minerals\\nSkill Impact: Logging ‑ Enemy ‑ Produce Building Steal ‑3"
   - split: 8
     text: "矿石+100"
     translated: "Mineral +100"
@@ -362,6 +367,7 @@
     translated: "Herb Garden"
   - split: 7
     text: "采收?获取门派药材\\n技能影响：木植-我|无门派-ProduceBuildingWork-4;育种?增加资源储量\\n技能影响：木植 学识-我-RecoverBuildingResourceRate;采收?窃取门派药材\\n技能影响：木植-敌-ProduceBuildingSteal-4"
+    translated: "Harvest? Gather Sect herbs\\nSkill Impact: ProduceBuildingWork ‑4; Breeding? Increase Resource Storage\\nSkill Impact: Mu Zhi Knowledge ‑ I ‑ RecoverBuildingResourceRate; Harvest? Steal Sect Herbs\\nSkill Effect: Plant Enemy ‑ Produce Building Steal ‑4"
   - split: 8
     text: "药材+100"
     translated: "Herbs +100"
@@ -430,6 +436,7 @@
     translated: "Inn"
   - split: 7
     text: "探听?打探周边随机事件--AskNearRandomEvent;住宿?休养恢复状态--HotelRest;打杂?赚取少量银钱--SimpleWork;烹饪?制作饮食--StartCraftFoodMoney;精烩?强化饮食--StartEnhanceFoodMoney;义诊?增加区域人口\\n技能影响：炼药-我-AreaBuildingWork-4;投药?降低区域人口\\n技能影响：炼药-敌-AreaBuildingWork-负4"
+    translated: "Spying? Gather Information on Random Nearby Events; Staying? Recover Status at a Hotel; Doing Menial Tasks? Earn Small Amounts of Silver; Cooking? Make Food and Gain Money; Specializing in Cuisine? Enhance Food Effects and Gain Money; Providing Free Medical Services? Increase Population in the Area\\nSkill Impact: Alchemy ‑ I ‑ Area Building Work ‑4; Poisoning? Decrease Regional Population\\nSkill Impact: Alchemy ‑ Enemy ‑ AreaBuildingWork ‑ Neg4"
   - split: 8
     text: "民心+6"
     translated: "Public opinion+6"
@@ -455,6 +462,7 @@
     translated: "Notice"
   - split: 7
     text: "卖艺?通过卖艺赚取银钱--PerformForMoney;江湖委托?完成江湖委托获取银钱和江湖声望--ShowBuildingMission;施舍?增加区域民心\\n技能影响：烹饪-我-AreaBuildingWork-2;劝诱?降低区域民心\\n技能影响：烹饪-敌-AreaBuildingWork-负2"
+    translated: "Perform for Money? Earn silver by performing‑Jianghu Commission? Complete Jianghu missions to earn silver and reputation‑Charity? Increase local goodwill.\\nSkill Impact: Cooking ‑ I ‑ Area Building Work ‑2; Persuasion? Decrease Area Popularity\\nSkill Impact: Cooking ‑ Enemy ‑ AreaBuildingWork ‑ Neg 2"
   - split: 8
     text: "威望+10"
     translated: "Reputation+10"
@@ -480,6 +488,7 @@
     translated: "Sentinel"
   - split: 7
     text: "巡查?提升当地治安并减少恶名--PatrolArea;整备?增加区域治安\\n技能影响：锻造-我-AreaBuildingWork-1;损毁?降低区域治安\\n技能影响：锻造-敌-AreaBuildingWork-负1"
+    translated: "Patrol Area? Improve local law and order and reduce notoriety ‑‑PatrolArea; Prepare? Increase area law and order\\nSkill Impact: Smithing ‑ I ‑ Area Building Work ‑1; Destruction? Lower Regional Law Enforcement\\nSkill Impact: Blacksmithing ‑ Enemy ‑ AreaBuildingWork ‑ Neg1"
   - split: 8
     text: "治安+6"
     translated: "Safety +6"
@@ -517,6 +526,7 @@
     translated: "Research Efficiency 0.2; Storage Capacity 1; Disciple Cap 5"
   - split: 11
     text: "武馆-0.2;医馆-0.2"
+    translated: "Fighting Pavilion‑0.2; Medical Pavilion‑0.2"
   - split: 12
     text: "威望50;粮食500;木料500;矿石500"
     translated: "Reputation 50; grain 500; wood 500; minerals 500"
@@ -585,6 +595,7 @@
     translated: "Trade‑ShowBuildingShop; Heal Wounds? Treat Injuries‑HospitalCureInjury; Practice Medicine? Treat Injured Warriors in the Surrounding Areas‑DoctorWork; Refine Medicines? Create Elixirs‑StartCraftMedMoney; Enhance Medicines? Strengthen Elixirs‑StartEnhanceMedMoney; Use Poison? Coat Items with Toxins/Poisons/Disinfectants‑StartCraftPoisonMoney"
   - split: 8
     text: "民心+2;银钱+100"
+    translated: "Public opinion+2; financial resources+100"
   - split: 9
     text: "药材-50"
     translated: "Medicine ‑50"
@@ -1156,6 +1167,7 @@
     translated: "Grain 1000; timber 2000"
   - split: 19
     text: "上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
+    translated: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance‑truly the finest scenery of Jing and Wu regions. Notable figures, talented young men frequently travel and socialize here, refining their skills."
 - raw: "51,烟花柳巷,51,6,1,0,4,宴饮--SpeStartParty,银钱+400;全域人口+10,粮食-400,恢复效率0.2,,银钱1000;粮食2000,20,9,,0,footstep,0;0,楼宇密布，车水马龙，好一派热闹景致，戏院，青楼，酒馆，赌坊林立其中，出入之人除贩夫走卒，三教九流之外，亦不乏豪商巨贾，文人雅士，歌舞宴饮之声，数里之外亦不绝于耳。"
   splits:
   - split: 1
@@ -1316,6 +1328,7 @@
     translated: "Food 2000; timber 1000"
   - split: 19
     text: "平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
+    translated: "A vast and flat circular arena used for horse riding practice or racing conferences. Disciples of Flying Dragon Gate often reside here, carefully observing to select strong and healthy individuals as their steeds. According to the sect's rules, once chosen, a disciple and their horse are inseparable, bound by life and death."
 - raw: "58,华阳洞,58,6,1,0,4,提升炼药潜力--StudyMaxLivingSkill-7;丹引-我&门派功能5-StartBreakMed,木料+50;药材+50,银钱-100,全员经脉2;全员奇门2;全员炼药4,,木料1000;药材2000,20,35,,2,footstep,0;0,鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
   splits:
   - split: 1
@@ -1361,6 +1374,7 @@
     translated: "Wood 1000; minerals 2000"
   - split: 19
     text: "一方清澈见底的水池，池中或卧或立有刀兵剑刃无数，乃是铸剑山庄历代冶炼积累之残次品及试验品。以此池水淬炼兵器，可感应池中无穷剑意，所得之锋利坚韧远非凡俗可比。"
+    translated: "A clear pond with countless swords and blades lying or standing within. This is the remnants and test products from Swordforging Manor's centuries of metalworking. Using this pool water to temper weapons can sense the infinite sword intent within, yielding blades far sharper and tougher than ordinary ones."
 - raw: "60,万毒池,60,6,1,0,4,提升毒术潜力--StudyMaxLivingSkill-1;炼蛊-我&门派功能7-ShowSpePoison,药材+100,粮食-100,毒术经验0.2;全员毒术4;恢复效率0.2,,矿石1000;药材2000,20,37,,2,footstep,0;0,瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
   splits:
   - split: 1
@@ -1405,6 +1419,7 @@
     translated: "Wood 1000; minerals 2000"
   - split: 19
     text: "于崇山峻岭间开凿而成，险要奇崛之关口，黄鹤高飞不得过，猿猱欲度愁攀援。阎罗殿弟子想正式入门，需要在此通过极为艰险严苛之考验，方能闯过鬼门关，入修罗之道。"
+    translated: "Carved through towering mountains and steep ridges, this perilous and rugged pass is so treacherous that even yellow cranes cannot fly over it, and monkeys hesitate to cross for fear of the difficult climb. For Yama Hall disciples to formally join, they must undergo an extremely harsh and rigorous test here, passing through the Ghost Gate before entering the path of Deva Realm."
 - raw: "62,星辰楼,62,6,1,0,4,提升轻功潜力--StudyMaxFightSkill-1;博引-我&门派功能9-StartSpeBookStorage,威望+15,木料-100,理论经验0.2;实战经验0.1;全员学识4;藏经容量10,,银钱2000;木料1000,20,39,,2,footstep,0;0,屹立于山巅，取“危楼高百尺，手可摘星辰”之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
   splits:
   - split: 1
@@ -1427,6 +1442,7 @@
     translated: "Silver coins 2000; wooden materials 1000"
   - split: 19
     text: "屹立于山巅，取“危楼高百尺，手可摘星辰”之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
+    translated: "Standing atop the mountain, taking inspiration from “”. Inside the Great Hidden Pavilion, countless treasures of the Hundred Schools of Thought and ancient texts are stored. With each ascending level, the books become increasingly profound and difficult to understand. To date, only a few disciples have been able to reach the top through their layered studies."
 - raw: "63,铜人阵,63,6,1,0,4,提升生命上限--StudyMaxState-0;禅宗修行-我&门派功能10-ShowMeditation,威望+20,木料-50;矿石-100,理论经验0.1;实战经验0.2;全员体质2,,银钱1000;矿石2000,20,40,,3,footstep,0;0,以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
   splits:
   - split: 1
@@ -1466,11 +1482,13 @@
     translated: "Food supplies ‑100"
   - split: 10
     text: "全员智力2;全员经脉2;全员意志2"
+    translated: "Full intelligence 2; full meridians 2; full willpower 2"
   - split: 12
     text: "银钱1000;粮食1000;药材1000"
     translated: "Silver coins 1000; grain 1000; medicinal herbs 1000"
   - split: 19
     text: "依山而建，重檐叠砌之宫殿，上应紫薇星宿，下合帝君方位，聚气藏风，水脉绵延，武当派弟子多在此修习道家心法和上乘内功，以求感通天地，阴阳调和。"
+    translated: "Built against the mountain, this palace features multiple eaves and tiered structures. It aligns with the Purple Micro Constellation above and corresponds to the imperial directions below. The design gathers energy, harbors winds, and follows water flows. Many disciples of the Wudang Sect practice Taoist Heart Methods and advanced Neigong here, seeking to attune themselves with heaven and earth, achieving harmony between yin and yang."
 - raw: "65,试刀台,65,6,1,0,4,提升刀法潜力--StudyMaxFightSkill-5;试刀-我&门派功能12-ShowWeaponResearch,威望+10,矿石-100,全员体质2;刀法经验0.2;全员刀法2,,粮食1000;矿石2000,20,42,,7,footstep,0;0,一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
   splits:
   - split: 1
@@ -1493,6 +1511,7 @@
     translated: "Grain 1000; minerals 2000"
   - split: 19
     text: "一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
+    translated: "A high stage exuding momentum is adorned with hundreds of various swords and blades. Their sizes vary, and their lengths differ, yet the blade light sparkles brilliantly. Disciples of the Tyrant Blade Sect frequently practice their Blade Art here, testing out their weapons. The sound of splitting gold and shattering stones reverberates like thunder, never ceasing to echo."
 - raw: "66,蓬莱阁,66,6,1,0,4,提升剑法潜力--StudyMaxFightSkill-4;万剑-我&门派功能13-ShowWeaponResearch,威望+10,木料-100,全员灵巧2;剑法经验0.2;全员剑法2,,木料2000;药材1000,20,43,,2,footstep,0;0,地处丹崖山峦，东临碣石，以观沧海，传说八仙过海始于此处，蓬莱弟子登临此地，观琼瑶仙境，海市蜃楼之奇景，以此融入剑法剑意之中，轻灵飘逸确不似凡间所有。"
   splits:
   - split: 1
@@ -1509,6 +1528,7 @@
     translated: "Timber ‑100"
   - split: 10
     text: "全员灵巧2;剑法经验0.2;全员剑法2"
+    translated: "Full Agility 2; Sword Art Experience 0.2; Full Team Swordsmanship 2"
   - split: 12
     text: "木料2000;药材1000"
     translated: "Wood 2000; herbs 1000"
@@ -1565,6 +1585,7 @@
   splits:
   - split: 1
     text: "机关坊"
+    translated: "Mechanism Ward"
   - split: 7
     text: "提升学识潜力--StudyMaxLivingSkill-2;机关-我&门派功能16-ShowSpeSummonResearch"
     translated: "Boost Scholar Potential‑‑StudyMaxLivingSkill ‑2; Mechanism ‑ I & Sect Functionality ‑ ShowSpeSummonResearch 16"
@@ -1582,6 +1603,7 @@
     translated: "Coin 1000; wood 2000"
   - split: 19
     text: "墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
+    translated: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise‑and‑tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
 - raw: "70,火炼室,70,6,1,0,4,提升烹饪潜力--StudyMaxLivingSkill-8;火药-我&门派功能17-ShowForceSpeResearch;重烩-我&门派功能17-StartBreakFood,矿石+100,银钱-100,全员射术2;锻造经验0.1;全员锻造2,,银钱1000;矿石2000,20,47,,7,door,0;0,为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
   splits:
   - split: 1
@@ -1604,6 +1626,7 @@
     translated: "Coin 1000; ore 2000"
   - split: 19
     text: "为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
+    translated: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year‑round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
 - raw: "71,灵塔殿,71,6,1,0,4,提升绝技潜力--StudyMaxFightSkill-2;密宗修行-我&门派功能18-ShowMeditation,威望+10,矿石-100,全员力道2;绝技经验0.2;全员绝技2,,粮食1000;矿石1000;药材1000,20,48,,11,door,0;0,在庄严庙堂中，井然有序错落着数百座大小不一，样式各异的佛塔，其中供奉的皆是历代祖师之骨灰舍利。金刚弟子往往在这四处缭绕，延绵不绝的祭祀香火中，修炼高深之密宗心法。"
   splits:
   - split: 1
@@ -1626,6 +1649,7 @@
     translated: "Food 1000; minerals 1000; herbs 1000"
   - split: 19
     text: "在庄严庙堂中，井然有序错落着数百座大小不一，样式各异的佛塔，其中供奉的皆是历代祖师之骨灰舍利。金刚弟子往往在这四处缭绕，延绵不绝的祭祀香火中，修炼高深之密宗心法。"
+    translated: "In the majestic temple hall, hundreds of differently sized and styled Buddha pagodas are neatly arranged in a staggered formation. Each one houses the bone relics of past patriarchs. The Diamond Disciples often circulate around these, cultivating profound Vajrayana Heart Methods amidst the continuous incense smoke from enduring sacrifices."
 - raw: "72,玄冰池,72,6,1,0,4,提升内功潜力--StudyMaxFightSkill-0;玄冰-我&门派功能19-ShowForceSpeResearch,粮食+50;药材+50,银钱-100,全员意志2;内功经验0.2;全员内功2,,银钱1000;粮食1000;药材1000,20,49,,2,footstep,0;0,天山之巅池泽中有玄冰一块，终年不化，阴寒刺骨，常人只需靠近便感周身冰结，血脉凝固，堪称世间至阴至寒之物。天山弟子卧于其上修炼，配合至阴至阳之心法，自是各有奇效。"
   splits:
   - split: 1
@@ -1667,6 +1691,7 @@
   splits:
   - split: 1
     text: "应天书院"
+    translated: "Yingtian Academy"
   - split: 7
     text: "秘籍--ShowBuildingShop"
     translated: "Manna‑‑ShowBuildingShop"
