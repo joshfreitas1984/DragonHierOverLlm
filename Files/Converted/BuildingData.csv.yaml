@@ -218,7 +218,7 @@
     translated: "Healing Room"
   - split: 7
     text: "疗伤?治疗伤势-我|附庸|门客-HospitalCureInjuryForce;坐诊?为周边受伤侠士疗伤治病-我&正式弟子-DoctorWork"
-    translated: "Healing injuries? Treating wounded warriors ‑ I, an vassal or retainer; Providing medical care to nearby injured knights ‑ I and my formal disciples as doctors."
+    translated: "Healing injuries? Treating wounded knights ‑ I |Vassal| Retainer‑HospitalCureInjuryForce; Practicing medicine? Healing nearby injured knights ‑ I & Formal Disciples‑DoctorWork"
   - split: 8
     text: "银钱+100"
     translated: "Coin +100"
@@ -1328,7 +1328,7 @@
     translated: "Food 2000; timber 1000"
   - split: 19
     text: "平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
-    translated: "A vast and flat circular arena used for horse riding practice or racing conferences. Disciples of Flying Dragon Gate often reside here, carefully observing to select strong and healthy individuals as their steeds. According to the sect's rules, once chosen, a disciple and their horse are inseparable, bound by life and death."
+    translated: "A vast, flat circular arena used for horse riding practice or equestrian competitions. Flying Dragon Gate disciples often reside here, carefully observing to select those with strong muscles and robust bones as their mounts. According to the sect rules, once chosen, a disciple and their horse are inseparable, bound by life and death."
 - raw: "58,华阳洞,58,6,1,0,4,提升炼药潜力--StudyMaxLivingSkill-7;丹引-我&门派功能5-StartBreakMed,木料+50;药材+50,银钱-100,全员经脉2;全员奇门2;全员炼药4,,木料1000;药材2000,20,35,,2,footstep,0;0,鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
   splits:
   - split: 1

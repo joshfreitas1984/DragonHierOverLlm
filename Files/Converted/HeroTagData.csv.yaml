@@ -763,6 +763,7 @@
   splits:
   - split: 1
     text: "枪扫六合"
+    translated: "Gun sweeps the six directions"
   - split: 4
     text: "长兵潜力+15;长兵+15"
     translated: "Longsword Potential +15; Longsword +15"
@@ -1027,11 +1028,13 @@
   splits:
   - split: 1
     text: "刀锋"
+    translated: "Blade Edge"
   - split: 4
     text: "刀法威力+0.05;内劲+0.05"
     translated: "Blade technique potency +0.05; internal power +0.05"
   - split: 5
     text: "刀锋"
+    translated: "Blade Edge"
   - split: 9
     text: "刀法50+内功50"
     translated: "Blade Technique 50 + Neigong 50"
@@ -1048,11 +1051,13 @@
     translated: "Blade Art Power +0.1; Internal Strength +0.1; Blade Art Range +1"
   - split: 5
     text: "刀锋"
+    translated: "Blade Edge"
   - split: 9
     text: "刀法100+内功100+天赋:刀锋"
     translated: "Blade Art 100+ Neigong 100+ Talent: Blade Sharpness"
   - split: 10
     text: "刀锋"
+    translated: "Blade Edge"
   - split: 11
     text: "武学"
     translated: "Martial arts"
@@ -6744,6 +6749,7 @@
     translated: "Mechanical Wooden Arms"
   - split: 9
     text: "奇门60+智力90+天赋:机关石臂"
+    translated: "Oddities 60 + Intelligence 90 + Talent: Mechanical Arm"
   - split: 10
     text: "机关石臂"
     translated: "Mechanical Stone Arm"

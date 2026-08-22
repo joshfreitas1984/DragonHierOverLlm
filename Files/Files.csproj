@@ -22,6 +22,7 @@
     <Folder Include="StandardPrompts\" />
     <Folder Include="Raw\Dumped\" />
     <Folder Include="Raw\Export\" />
+    <Folder Include="TestResults\Failed\" />
     <Folder Include="TestResults\Glossary\" />
     <Folder Include="TestResults\Export\" />
     <Folder Include="TestResults\OldFiles\" />

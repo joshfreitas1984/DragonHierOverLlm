@@ -131,8 +131,7 @@
     translated: "Rush forward with great vigor"
   - split: 4
     text: "猛力冲撞敌人造成击退效果"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ram into enemies to knock them back"
   - split: 17
     text: "急速0.06;击退1"
     translated: "Rapid 0.06; repel 1"

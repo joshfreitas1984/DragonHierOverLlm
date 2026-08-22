@@ -1503,8 +1503,7 @@
     translated: "Heavenly Descent Swordsmanship; Vortex Secret Classic; Painting the Dragon's Eyes"
   - split: 14
     text: "不幸;武学天才;雄才伟略;神机妙算;炉火纯青;飞檐走壁;身怀绝技;剑随意动"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Unfortunate; martial prodigy; great talent and strategy; divine calculation; masterful skill; agile as a swift shadow; possessing unparalleled techniques; sword follows the will"
   - split: 15
     text: "天剑客"
     translated: "Sky Swordsman"
@@ -1874,8 +1873,6 @@
   - split: 1
     text: "吕.寻峰"
     translated: "Lu Xunfeng"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lü Xunfeng,吕.寻峰,Lü Xunfeng,吕.寻峰,Lü Xunfeng,吕.寻峰,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -2728,8 +2725,6 @@
   - split: 1
     text: "吕.子芳"
     translated: "Lu Zifang"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lü Zifang,吕.子芳,Lü Zifang,吕.子芳,Lü Zifang,吕.子芳,"
   - split: 2
     text: "女"
     translated: "Female"
@@ -4469,8 +4464,7 @@
     translated: "Seclusion from the World; Calm Mind and Serene Spirit; Humble as a Hollow Valley; Phoenix Singing and Phoenix Chanting; Leaping Roofs and Wandering Walls; Mystical Doors and Hidden Traversals; Confucian Scholarship"
   - split: 15
     text: "大隐琴侠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hidden Depths Virtuoso"
 - raw: "119,孟.经世,男,无,霸刀门,副掌门,5,算计,平平,56,守序/冷酷,绝技/刀法,,,囤积居奇;暴躁;盛气凌人;公正不阿;身怀绝技;横刀跃马;笔走龙蛇,霸刀狂侠,0,1,,-99,0"
   splits:
   - split: 1
@@ -4547,8 +4541,6 @@
   - split: 1
     text: "吕.天行"
     translated: "Lu Tianxing"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lü Tianxing,吕.天行,Lü Tianxing,吕.天行,Lü Tianxing,吕.天行,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -4985,8 +4977,6 @@
   - split: 1
     text: "吕.舞阳"
     translated: "Lu Wuyang"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lü Wuyang,吕.舞阳,Lü Wuyang,吕.舞阳,Lü Wuyang,吕.舞阳,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -5370,8 +5360,7 @@
     translated: "Primordial Heavenly Might; Ethereal and Immortal; Tigers Roar, Dragons Sing"
   - split: 14
     text: "痴傻蒙昧;胆小如鼠;铁手钢拳;例无虚发;枪扫六合;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Foolish and ignorant; cowardly as a mouse; iron hand, steel fist; never misses; guns sweep the six directions; technique perfected; elusive like a ghost; unparalleled artistry; masters a hundred schools; martial arts master"
   - split: 15
     text: "侠盗四奇"
     translated: "Thief and Four Quirks"
@@ -5438,12 +5427,12 @@
     translated: "Lawful/Neutral"
   - split: 11
     text: "剑法/轻功/内功"
+    translated: "Swordsmanship/Lightness/Internal Cultivation"
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Neigong,内功,"
   - split: 13
     text: "独孤剑法;无尽剑意;仙娥折梅;先天功;天意剑诀"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Solitary Saber Art; Endless Sword Intent; Fairy Plucks Plum Blossoms; Primordial Skill; Will of Heaven Sword Technique"
   - split: 14
     text: "返璞归真;混元一气;太极圆转;人剑合一;气冲斗牛;武学天才;面壁功深;浪迹天涯;铁画银钩;妙至毫巅"
     translated: "Pristine Simplicity; Primordial Unity; Tai Chi Rotation; Man and Sword One; Qi Surges to the Constellations; Martial Genius; Deep Wall Meditation; Roaming the Horizon; Iron Line Silver Hook; Perfection in Every Detail"
@@ -5965,8 +5954,9 @@
     translated: "Palm Strike/Qimen"
   - split: 13
     text: "禁军拳术"
+    translated: "Forbiddon Army Combat Technique"
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Forbidden Army,禁军,"
   - split: 14
     text: "缚鸡之力;智力;学识;仁慈;儒生;博览群书;军师"
     translated: "Binding‑chicken strength; intelligence; knowledge; kindness; scholar; well‑read; military advisor"

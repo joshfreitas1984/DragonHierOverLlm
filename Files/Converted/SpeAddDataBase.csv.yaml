@@ -233,8 +233,7 @@
     translated: "Rusty Sword"
   - split: 10
     text: "提升剑法伤害\\n降低受到的剑法伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance sword art damage\\nReduce damage from sword techniques"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -2436,12 +2435,10 @@
   splits:
   - split: 1
     text: "重碾"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Repeatedly crushed"
   - split: 3
     text: "重碾"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Repeatedly crushed"
   - split: 4
     text: "无"
     translated: "None"
