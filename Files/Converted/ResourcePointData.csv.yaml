@@ -1,0 +1,532 @@
+- raw: "id,名字,类别,图标,占领门派（-99表示自动）,临近地点"
+  splits:
+  - split: 1
+    text: "名字"
+  - split: 2
+    text: "类别"
+  - split: 3
+    text: "图标"
+  - split: 4
+    text: "占领门派（-99表示自动）"
+  - split: 5
+    text: "临近地点"
+- raw: "0,瓷窑,,,-99,0"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "1,农田,,,-99,0"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "2,玉矿,,,-99,0"
+  splits:
+  - split: 1
+    text: "玉矿"
+- raw: "3,甘泉,,,-99,1"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "4,湖泽,,,-99,1"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "5,绸缎,,,-99,1"
+  splits:
+  - split: 1
+    text: "绸缎"
+- raw: "6,湖泽,,,-99,2"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "7,果园,,,-99,2"
+  splits:
+  - split: 1
+    text: "果园"
+- raw: "8,瓷窑,,,-99,2"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "9,银矿,,,-99,3"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "10,湖泽,,,-99,3"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "11,茶山,,,-99,3"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "12,玉矿,,,-99,4"
+  splits:
+  - split: 1
+    text: "玉矿"
+- raw: "13,药圃,,,-99,4"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "14,森林,,,-99,4"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "15,牧场,,,-99,5"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "16,铜矿,,,-99,5"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "17,铁矿,,,-99,5"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "18,金矿,,,-99,6"
+  splits:
+  - split: 1
+    text: "金矿"
+- raw: "19,绸缎,,,-99,6"
+  splits:
+  - split: 1
+    text: "绸缎"
+- raw: "20,盐矿,,,-99,6"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "21,牧场,,,-99,7"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "22,玉矿,,,-99,7"
+  splits:
+  - split: 1
+    text: "玉矿"
+- raw: "23,盐矿,,,-99,7"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "24,湖泽,,,-99,8"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "25,茶山,,,-99,8"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "26,农田,,,-99,8"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "27,绸缎,,,-99,9"
+  splits:
+  - split: 1
+    text: "绸缎"
+- raw: "28,湖泽,,,-99,9"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "29,果园,,,-99,9"
+  splits:
+  - split: 1
+    text: "果园"
+- raw: "30,盐矿,,,-99,10"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "31,瓷窑,,,-99,11"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "32,银矿,,,-99,12"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "33,森林,,,-99,13"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "34,茶山,,,-99,14"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "35,药圃,,,-99,15"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "36,甘泉,,,-99,16"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "37,农田,,,-99,17"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "38,甘泉,,,-99,18"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "39,牧场,,,-99,19"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "40,茶山,,,-99,20"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "41,盐矿,,,-99,21"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "42,湖泽,,,-99,22"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "43,甘泉,,,-99,23"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "44,农田,,,-99,24"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "45,湖泽,,,-99,25"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "46,茶山,,,-99,26"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "47,铁矿,,,-99,27"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "48,农田,,,-99,28"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "49,湖泽,,,-99,29"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "50,茶山,,,-99,30"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "51,瓷窑,,,-99,30"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "52,铜矿,,,-99,31"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "53,铁矿,,,-99,31"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "54,灵谷,,,-99,32"
+  splits:
+  - split: 1
+    text: "灵谷"
+- raw: "55,甘泉,,,-99,32"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "56,铜矿,,,-99,33"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "57,茶山,,,-99,33"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "58,牧场,,,-99,34"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "59,铜矿,,,-99,34"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "60,银矿,,,-99,35"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "61,森林,,,-99,35"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "62,铁矿,,,-99,36"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "63,甘泉,,,-99,36"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "64,灵谷,,,-99,37"
+  splits:
+  - split: 1
+    text: "灵谷"
+- raw: "65,古木,,,-99,37"
+  splits:
+  - split: 1
+    text: "古木"
+- raw: "66,金矿,,,-99,38"
+  splits:
+  - split: 1
+    text: "金矿"
+- raw: "67,森林,,,-99,38"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "68,牧场,,,-99,38"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "69,瓷窑,,,-99,39"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "70,银矿,,,-99,39"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "71,甘泉,,,-99,39"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "72,药圃,,,-99,40"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "73,森林,,,-99,40"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "74,农田,,,-99,40"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "75,茶山,,,-99,41"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "76,甘泉,,,-99,41"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "77,果园,,,-99,41"
+  splits:
+  - split: 1
+    text: "果园"
+- raw: "78,铜矿,,,-99,42"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "79,盐矿,,,-99,42"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "80,药圃,,,-99,43"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "81,森林,,,-99,43"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "82,药圃,,,-99,44"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "83,古木,,,-99,44"
+  splits:
+  - split: 1
+    text: "古木"
+- raw: "84,铜矿,,,-99,45"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "85,甘泉,,,-99,45"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "86,古木,,,-99,46"
+  splits:
+  - split: 1
+    text: "古木"
+- raw: "87,铁矿,,,-99,46"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "88,铜矿,,,-99,47"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "89,瓷窑,,,-99,47"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "90,银矿,,,-99,48"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "91,盐矿,,,-99,48"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "92,牧场,,,-99,48"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "93,银矿,,,-99,49"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "94,药圃,,,-99,49"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "95,铜矿,,,-99,50"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "96,盐矿,,,-99,51"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "97,茶山,,,-99,52"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "98,盐矿,,,-99,53"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "99,铁矿,,,-99,54"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "100,农田,,,-99,55"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "101,盐矿,,,-99,56"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "102,金矿,,,-99,57"
+  splits:
+  - split: 1
+    text: "金矿"
+- raw: "103,铜矿,,,-99,58"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "104,农田,,,-99,59"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "105,灵谷,,,-99,60"
+  splits:
+  - split: 1
+    text: "灵谷"
+- raw: "106,农田,,,-99,60"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "107,湖泽,,,-99,60"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "108,农田,,,-99,61"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "109,瓷窑,,,-99,62"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "110,药圃,,,-99,63"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "111,森林,,,-99,64"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "112,盐矿,,,-99,65"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "113,银矿,,,-99,66"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "114,牧场,,,-99,66"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "115,甘泉,,,-99,66"
+  splits:
+  - split: 1
+    text: "甘泉"
+- raw: "116,湖泽,,,-99,67"
+  splits:
+  - split: 1
+    text: "湖泽"
+- raw: "117,茶山,,,-99,67"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "118,铁矿,,,-99,67"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "119,药圃,,,-99,68"
+  splits:
+  - split: 1
+    text: "药圃"
+- raw: "120,瓷窑,,,-99,69"
+  splits:
+  - split: 1
+    text: "瓷窑"
+- raw: "121,铜矿,,,-99,70"
+  splits:
+  - split: 1
+    text: "铜矿"
+- raw: "122,森林,,,-99,71"
+  splits:
+  - split: 1
+    text: "森林"
+- raw: "123,牧场,,,-99,72"
+  splits:
+  - split: 1
+    text: "牧场"
+- raw: "124,铁矿,,,-99,73"
+  splits:
+  - split: 1
+    text: "铁矿"
+- raw: "125,盐矿,,,-99,74"
+  splits:
+  - split: 1
+    text: "盐矿"
+- raw: "126,银矿,,,-99,75"
+  splits:
+  - split: 1
+    text: "银矿"
+- raw: "127,农田,,,-99,76"
+  splits:
+  - split: 1
+    text: "农田"
+- raw: "128,茶山,,,-99,77"
+  splits:
+  - split: 1
+    text: "茶山"
+- raw: "129,瓷窑,,,-99,78"
+  splits:
+  - split: 1
+    text: "瓷窑"

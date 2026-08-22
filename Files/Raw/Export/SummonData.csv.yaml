@@ -1,0 +1,70 @@
+- raw: "id,名字,稀有度,基础生命,基础速度,移动距离,技能ID,攻击音效,建筑"
+  splits:
+  - split: 1
+    text: "名字"
+  - split: 2
+    text: "稀有度"
+  - split: 3
+    text: "基础生命"
+  - split: 4
+    text: "基础速度"
+  - split: 5
+    text: "移动距离"
+  - split: 6
+    text: "技能ID"
+  - split: 7
+    text: "攻击音效"
+  - split: 8
+    text: "建筑"
+- raw: "0,箭塔,0,150,1.25,0,0,WoodenSummonAttack,TRUE"
+  splits:
+  - split: 1
+    text: "箭塔"
+- raw: "1,木流马,0,10,1.1,3,6;1,SpeEffect/振波土石,FALSE"
+  splits:
+  - split: 1
+    text: "木流马"
+  - split: 7
+    text: "SpeEffect/振波土石"
+- raw: "2,青铜奔牛,1,20,1.2,3,6;2,SpeEffect/振波土石,FALSE"
+  splits:
+  - split: 1
+    text: "青铜奔牛"
+  - split: 7
+    text: "SpeEffect/振波土石"
+- raw: "3,玉石麒麟,2,35,1,4,6;3,SpeEffect/振波土石,FALSE"
+  splits:
+  - split: 1
+    text: "玉石麒麟"
+  - split: 7
+    text: "SpeEffect/振波土石"
+- raw: "4,燎原朱雀,3,60,1,6,0;4,Eagle,FALSE"
+  splits:
+  - split: 1
+    text: "燎原朱雀"
+- raw: "5,地动青龙,4,75,0.9,5,0;5,SpeEffect/龙吼,FALSE"
+  splits:
+  - split: 1
+    text: "地动青龙"
+  - split: 7
+    text: "SpeEffect/龙吼"
+- raw: "6,分舵,4,300,1.5,0,7,WoodenSummonAttack,TRUE"
+  splits:
+  - split: 1
+    text: "分舵"
+- raw: "7,战鼓,2,200,1,0,8,SpeEffect/士气上升,TRUE"
+  splits:
+  - split: 1
+    text: "战鼓"
+  - split: 7
+    text: "SpeEffect/士气上升"
+- raw: "8,公输遗匣,5,50,1.5,4,7;8;2;4;5;9,SpeEffect/剑雨,FALSE"
+  splits:
+  - split: 1
+    text: "公输遗匣"
+  - split: 7
+    text: "SpeEffect/剑雨"
+- raw: "9,总舵,5,500,2,0,7;8;10,WoodenSummonAttack,TRUE"
+  splits:
+  - split: 1
+    text: "总舵"

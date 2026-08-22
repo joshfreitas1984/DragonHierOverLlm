@@ -1,0 +1,322 @@
+- raw: "ID,Name,Describe,Type,Num,Tips"
+  splits: []
+- raw: "0,无人能敌,累计在战斗中亲手击败500人,int,500,无"
+  splits:
+  - split: 1
+    text: "无人能敌"
+  - split: 2
+    text: "累计在战斗中亲手击败500人"
+  - split: 5
+    text: "无"
+- raw: "1,百战百胜,累计战斗获胜200场,int,200,无"
+  splits:
+  - split: 1
+    text: "百战百胜"
+  - split: 2
+    text: "累计战斗获胜200场"
+  - split: 5
+    text: "无"
+- raw: "2,舌灿莲花,累计论战获胜100场,int,100,无"
+  splits:
+  - split: 1
+    text: "舌灿莲花"
+  - split: 2
+    text: "累计论战获胜100场"
+  - split: 5
+    text: "无"
+- raw: "3,千杯不醉,累计对饮获胜100场,int,100,无"
+  splits:
+  - split: 1
+    text: "千杯不醉"
+  - split: 2
+    text: "累计对饮获胜100场"
+  - split: 5
+    text: "无"
+- raw: "4,吉星高照,累计赌博获胜100场,int,100,无"
+  splits:
+  - split: 1
+    text: "吉星高照"
+  - split: 2
+    text: "累计赌博获胜100场"
+  - split: 5
+    text: "无"
+- raw: "5,家财万贯,累计获得100000银钱,int,100000,无"
+  splits:
+  - split: 1
+    text: "家财万贯"
+  - split: 2
+    text: "累计获得100000银钱"
+  - split: 5
+    text: "无"
+- raw: "6,声名显赫,累计获得10000声望,int,10000,无"
+  splits:
+  - split: 1
+    text: "声名显赫"
+  - split: 2
+    text: "累计获得10000声望"
+  - split: 5
+    text: "无"
+- raw: "7,劳苦功高,累计获得10000门派功绩,int,10000,无"
+  splits:
+  - split: 1
+    text: "劳苦功高"
+  - split: 2
+    text: "累计获得10000门派功绩"
+  - split: 5
+    text: "无"
+- raw: "8,恶贯满盈,累计获得1000点恶名,int,1000,无"
+  splits:
+  - split: 1
+    text: "恶贯满盈"
+  - split: 2
+    text: "累计获得1000点恶名"
+  - split: 5
+    text: "无"
+- raw: "9,高朋满座,累计结识100名角色,int,100,无"
+  splits:
+  - split: 1
+    text: "高朋满座"
+  - split: 2
+    text: "累计结识100名角色"
+  - split: 5
+    text: "无"
+- raw: "10,不辱使命,累计完成100个委托任务,int,100,无"
+  splits:
+  - split: 1
+    text: "不辱使命"
+  - split: 2
+    text: "累计完成100个委托任务"
+  - split: 5
+    text: "无"
+- raw: "11,家业丰厚,累计购买10次私宅,int,10,无"
+  splits:
+  - split: 1
+    text: "家业丰厚"
+  - split: 2
+    text: "累计购买10次私宅"
+  - split: 5
+    text: "无"
+- raw: "12,天赋异禀,累计领悟30次天赋,int,30,无"
+  splits:
+  - split: 1
+    text: "天赋异禀"
+  - split: 2
+    text: "累计领悟30次天赋"
+  - split: 5
+    text: "无"
+- raw: "13,天工巧匠,累计铸造/炼药/烹饪200次,int,200,无"
+  splits:
+  - split: 1
+    text: "天工巧匠"
+  - split: 2
+    text: "累计铸造/炼药/烹饪200次"
+  - split: 5
+    text: "无"
+- raw: "14,精益求精,累计煅烧/炮制/精烩100次,int,100,无"
+  splits:
+  - split: 1
+    text: "精益求精"
+  - split: 2
+    text: "累计煅烧/炮制/精烩100次"
+  - split: 5
+    text: "无"
+- raw: "15,如有神助,任意一项角色属性基础值达到120点,bool,1,无"
+  splits:
+  - split: 1
+    text: "如有神助"
+  - split: 2
+    text: "任意一项角色属性基础值达到120点"
+  - split: 5
+    text: "无"
+- raw: "16,武艺超群,任意一门武学技能基础值达到120点,bool,1,无"
+  splits:
+  - split: 1
+    text: "武艺超群"
+  - split: 2
+    text: "任意一门武学技能基础值达到120点"
+  - split: 5
+    text: "无"
+- raw: "17,技艺无双,任意一项生活技艺基础值达到100点,bool,1,无"
+  splits:
+  - split: 1
+    text: "技艺无双"
+  - split: 2
+    text: "任意一项生活技艺基础值达到100点"
+  - split: 5
+    text: "无"
+- raw: "18,绝世神功,习得任意一门绝世武功,bool,1,无"
+  splits:
+  - split: 1
+    text: "绝世神功"
+  - split: 2
+    text: "习得任意一门绝世武功"
+  - split: 5
+    text: "无"
+- raw: "19,登峰造极,将任意一门绝世武功修炼至十重,bool,1,无"
+  splits:
+  - split: 1
+    text: "登峰造极"
+  - split: 2
+    text: "将任意一门绝世武功修炼至十重"
+  - split: 5
+    text: "无"
+- raw: "20,盖世英雄,成为英雄谱战力第一名,bool,1,无"
+  splits:
+  - split: 1
+    text: "盖世英雄"
+  - split: 2
+    text: "成为英雄谱战力第一名"
+  - split: 5
+    text: "无"
+- raw: "21,大权在握,成为门派掌门,bool,1,无"
+  splits:
+  - split: 1
+    text: "大权在握"
+  - split: 2
+    text: "成为门派掌门"
+  - split: 5
+    text: "无"
+- raw: "22,一击制胜,单次造成200点以上伤害,bool,1,无"
+  splits:
+  - split: 1
+    text: "一击制胜"
+  - split: 2
+    text: "单次造成200点以上伤害"
+  - split: 5
+    text: "无"
+- raw: "23,横扫千军,一场战斗中亲手击败10名以上敌人,bool,1,无"
+  splits:
+  - split: 1
+    text: "横扫千军"
+  - split: 2
+    text: "一场战斗中亲手击败10名以上敌人"
+  - split: 5
+    text: "无"
+- raw: "24,情深义重,与一名角色好感达到100,bool,1,无"
+  splits:
+  - split: 1
+    text: "情深义重"
+  - split: 2
+    text: "与一名角色好感达到100"
+  - split: 5
+    text: "无"
+- raw: "25,义结金兰,与一名角色结义,bool,1,无"
+  splits:
+  - split: 1
+    text: "义结金兰"
+  - split: 2
+    text: "与一名角色结义"
+  - split: 5
+    text: "无"
+- raw: "26,相濡以沫,与一名角色结缘,bool,1,无"
+  splits:
+  - split: 1
+    text: "相濡以沫"
+  - split: 2
+    text: "与一名角色结缘"
+  - split: 5
+    text: "无"
+- raw: "27,海誓山盟,与一名角色结为夫妻,bool,1,无"
+  splits:
+  - split: 1
+    text: "海誓山盟"
+  - split: 2
+    text: "与一名角色结为夫妻"
+  - split: 5
+    text: "无"
+- raw: "28,天下第一,达成天下第一结局,bool,1,第三次泰岳大典胜出后选择归隐"
+  splits:
+  - split: 1
+    text: "天下第一"
+  - split: 2
+    text: "达成天下第一结局"
+  - split: 5
+    text: "第三次泰岳大典胜出后选择归隐"
+- raw: "29,归隐田园,达成归隐田园结局,bool,1,第三次泰岳大典失败后选择归隐"
+  splits:
+  - split: 1
+    text: "归隐田园"
+  - split: 2
+    text: "达成归隐田园结局"
+  - split: 5
+    text: "第三次泰岳大典失败后选择归隐"
+- raw: "30,豪商巨贾,达成豪商巨贾结局,bool,1,达到50万银钱后进入门派/自宅"
+  splits:
+  - split: 1
+    text: "豪商巨贾"
+  - split: 2
+    text: "达成豪商巨贾结局"
+  - split: 5
+    text: "达到50万银钱后进入门派/自宅"
+- raw: "31,功成名就,达成功成名就结局,bool,1,达到9999声望后进入门派/自宅"
+  splits:
+  - split: 1
+    text: "功成名就"
+  - split: 2
+    text: "达成功成名就结局"
+  - split: 5
+    text: "达到9999声望后进入门派/自宅"
+- raw: "32,禁军统领,达成禁军统领结局,bool,1,官职达到最高后进入门派/自宅"
+  splits:
+  - split: 1
+    text: "禁军统领"
+  - split: 2
+    text: "达成禁军统领结局"
+  - split: 5
+    text: "官职达到最高后进入门派/自宅"
+- raw: "33,权势滔天,达成权势滔天结局,bool,1,勋阶达到最高后进入门派/自宅"
+  splits:
+  - split: 1
+    text: "权势滔天"
+  - split: 2
+    text: "达成权势滔天结局"
+  - split: 5
+    text: "勋阶达到最高后进入门派/自宅"
+- raw: "34,名门大派,达成名门大派结局,bool,1,成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派/自宅"
+  splits:
+  - split: 1
+    text: "名门大派"
+  - split: 2
+    text: "达成名门大派结局"
+  - split: 5
+    text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派/自宅"
+- raw: "35,武林盟主,达成武林盟主结局,bool,1,占领、附庸、同盟区域50%后进入门派/自宅\\n或通关剧情模式第四章"
+  splits:
+  - split: 1
+    text: "武林盟主"
+  - split: 2
+    text: "达成武林盟主结局"
+  - split: 5
+    text: "占领、附庸、同盟区域50%后进入门派/自宅\\n或通关剧情模式第四章"
+- raw: "36,终归一统,达成终归一统结局,bool,1,占领、附庸、同盟区域100%后进入门派/自宅"
+  splits:
+  - split: 1
+    text: "终归一统"
+  - split: 2
+    text: "达成终归一统结局"
+  - split: 5
+    text: "占领、附庸、同盟区域100%后进入门派/自宅"
+- raw: "37,鸾凤和鸣,达成鸾凤和鸣结局,bool,1,同时拥有夫妻和4名情侣且好感均100，进入门派/自宅"
+  splits:
+  - split: 1
+    text: "鸾凤和鸣"
+  - split: 2
+    text: "达成鸾凤和鸣结局"
+  - split: 5
+    text: "同时拥有夫妻和4名情侣且好感均100，进入门派/自宅"
+- raw: "38,终生监禁,达成终生监禁结局,bool,1,被捕入狱时恶名达到999"
+  splits:
+  - split: 1
+    text: "终生监禁"
+  - split: 2
+    text: "达成终生监禁结局"
+  - split: 5
+    text: "被捕入狱时恶名达到999"
+- raw: "39,九死一生,九死一生难度下达成任意结局,bool,1,无"
+  splits:
+  - split: 1
+    text: "九死一生"
+  - split: 2
+    text: "九死一生难度下达成任意结局"
+  - split: 5
+    text: "无"

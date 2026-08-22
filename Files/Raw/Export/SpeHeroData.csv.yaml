@@ -1,0 +1,4300 @@
+- raw: "id,名字,性别,门派,武学流派,等级,实力等级,性格,资质,年龄,立场,擅长武学,擅长技艺,绝学,标签,绰号,隐藏,出师角色,关系设定,皮肤ID,特殊skeleton"
+  splits:
+  - split: 1
+    text: "名字"
+  - split: 2
+    text: "性别"
+  - split: 3
+    text: "门派"
+  - split: 4
+    text: "武学流派"
+  - split: 5
+    text: "等级"
+  - split: 6
+    text: "实力等级"
+  - split: 7
+    text: "性格"
+  - split: 8
+    text: "资质"
+  - split: 9
+    text: "年龄"
+  - split: 10
+    text: "立场"
+  - split: 11
+    text: "擅长武学"
+  - split: 12
+    text: "擅长技艺"
+  - split: 13
+    text: "绝学"
+  - split: 14
+    text: "标签"
+  - split: 15
+    text: "绰号"
+  - split: 16
+    text: "隐藏"
+  - split: 17
+    text: "出师角色"
+  - split: 18
+    text: "关系设定"
+  - split: 19
+    text: "皮肤ID"
+  - split: 20
+    text: "特殊skeleton"
+- raw: "1,姜.映泉,男,仙霞派,默认,掌门,-1,稳重,聪颖,38,平常/善良,内功/剑法,医术/学识,无影乱剑,领袖;御剑;内家;正直;仁慈,,0,0,朋友:2;亲属:7;仇人:65,-1,1"
+  splits:
+  - split: 1
+    text: "姜.映泉"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "仙霞派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/善良"
+  - split: 11
+    text: "内功/剑法"
+  - split: 12
+    text: "医术/学识"
+  - split: 13
+    text: "无影乱剑"
+  - split: 14
+    text: "领袖;御剑;内家;正直;仁慈"
+  - split: 18
+    text: "朋友:2;亲属:7;仇人:65"
+- raw: "2,陆.仁谦,男,无,仙霞派,长老,-1,固执,平平,42,戒律/中立,绝技/拳掌/剑法,,快慢十八路,游侠;御剑;刚愎;云游,,0,1,,-7,0"
+  splits:
+  - split: 1
+    text: "陆.仁谦"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "仙霞派"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/中立"
+  - split: 11
+    text: "绝技/拳掌/剑法"
+  - split: 13
+    text: "快慢十八路"
+  - split: 14
+    text: "游侠;御剑;刚愎;云游"
+- raw: "3,魏.胥华,男,仙霞派,默认,亲传弟子,-1,叛逆,聪颖,27,无序/冷酷,内功/剑法/拳掌,毒术,,桀骜不驯;刚愎;勤奋;内家,,0,0,,-1,1"
+  splits:
+  - split: 1
+    text: "魏.胥华"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "仙霞派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/冷酷"
+  - split: 11
+    text: "内功/剑法/拳掌"
+  - split: 12
+    text: "毒术"
+  - split: 14
+    text: "桀骜不驯;刚愎;勤奋;内家"
+- raw: "4,余.采薇,女,仙霞派,默认,正式弟子,-1,纯粹,究极,21,平常/冷酷,内功/轻功/剑法,学识,,武学天才;灵巧;幸运;机敏,,0,0,,-7,1"
+  splits:
+  - split: 1
+    text: "余.采薇"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "仙霞派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/冷酷"
+  - split: 11
+    text: "内功/轻功/剑法"
+  - split: 12
+    text: "学识"
+  - split: 14
+    text: "武学天才;灵巧;幸运;机敏"
+- raw: "5,顾.游年,男,仙霞派,默认,正式弟子,-1,潇洒,超群,24,无序/仁慈,内功/剑法/奇门,学识/口才,,游侠;谦逊;冷静;正直,,0,0,,-6,1"
+  splits:
+  - split: 1
+    text: "顾.游年"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "仙霞派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "内功/剑法/奇门"
+  - split: 12
+    text: "学识/口才"
+  - split: 14
+    text: "游侠;谦逊;冷静;正直"
+- raw: "6,沈.退,男,仙霞派,默认,入门弟子,-1,轻佻,聪颖,23,守序/中立,绝技/剑法/射术,口才,,游手好闲;叛逆;赌徒,,0,0,,-9,0"
+  splits:
+  - split: 1
+    text: "沈.退"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "仙霞派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "绝技/剑法/射术"
+  - split: 12
+    text: "口才"
+  - split: 14
+    text: "游手好闲;叛逆;赌徒"
+- raw: "7,姜.婉,女,仙霞派,默认,入门弟子,-1,忠厚,平平,25,守序/善良,轻功/奇门/剑法,医术/炼药,,明眸皓齿;忠诚;仁慈;炼药,,0,0,,-6,1"
+  splits:
+  - split: 1
+    text: "姜.婉"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "仙霞派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/善良"
+  - split: 11
+    text: "轻功/奇门/剑法"
+  - split: 12
+    text: "医术/炼药"
+  - split: 14
+    text: "明眸皓齿;忠诚;仁慈;炼药"
+- raw: "8,杨.思迟,男,仙霞派,默认,外门弟子,-1,简单,愚钝,19,混乱/仁慈,绝技/拳掌/长兵,采伐/锻造,,愚钝;孜孜不倦;务农;忠心耿耿,,0,0,,-4,0"
+  splits:
+  - split: 1
+    text: "杨.思迟"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "仙霞派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "混乱/仁慈"
+  - split: 11
+    text: "绝技/拳掌/长兵"
+  - split: 12
+    text: "采伐/锻造"
+  - split: 14
+    text: "愚钝;孜孜不倦;务农;忠心耿耿"
+- raw: "9,林.云裳,女,无,默认,外门弟子,-1,灵活,聪颖,16,守序/善良,轻功/剑法/刀法,烹饪/木植,,美貌;练武;学徒,,0,0,,-3,1"
+  splits:
+  - split: 1
+    text: "林.云裳"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/善良"
+  - split: 11
+    text: "轻功/剑法/刀法"
+  - split: 12
+    text: "烹饪/木植"
+  - split: 14
+    text: "美貌;练武;学徒"
+- raw: "10,乐.无疾,女,长乐帮,默认,掌门,-1,轻佻,聪颖,31,戒律/凶狠,刀法/射术,口才,净乐琉璃刀,倾国倾城;运筹帷幄;舞态生风;横刀跃马;飞檐走壁;赌运亨通;善贾,金风玉露,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "乐.无疾"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "长乐帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 11
+    text: "刀法/射术"
+  - split: 12
+    text: "口才"
+  - split: 13
+    text: "净乐琉璃刀"
+  - split: 14
+    text: "倾国倾城;运筹帷幄;舞态生风;横刀跃马;飞檐走壁;赌运亨通;善贾"
+  - split: 15
+    text: "金风玉露"
+- raw: "11,云.彩衣,女,长乐帮,默认,副掌门,-1,固执,超群,24,平常/中立,射术,烹饪,醉梦鱼龙舞,明眸皓齿;羽衣蹁跹;耍刀;飞檐走壁;赌徒;智力,净乐琉璃,0,0,师傅:10,-99,0"
+  splits:
+  - split: 1
+    text: "云.彩衣"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "长乐帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "平常/中立"
+  - split: 11
+    text: "射术"
+  - split: 12
+    text: "烹饪"
+  - split: 13
+    text: "醉梦鱼龙舞"
+  - split: 14
+    text: "明眸皓齿;羽衣蹁跹;耍刀;飞檐走壁;赌徒;智力"
+  - split: 15
+    text: "净乐琉璃"
+  - split: 18
+    text: "师傅:10"
+- raw: "12,卢.玉麟,男,长乐帮,默认,长老,-1,算计,平平,34,无序/凶狠,刀法,口才,,精明强干;舞技;横刀跃马;轻功;囤积居奇;仕官,铁算盘,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "卢.玉麟"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "长乐帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 12
+    text: "口才"
+  - split: 14
+    text: "精明强干;舞技;横刀跃马;轻功;囤积居奇;仕官"
+  - split: 15
+    text: "铁算盘"
+- raw: "13,唐.逸影,男,唐门,默认,掌门,-1,固执,聪颖,44,混乱/中立,射术/刀法,毒术,漫天花雨;九天罗候针,胸怀大志;例无虚发;轻功;绝艺超群;惊弓;毒术;精打细算;明察秋毫,九天鬼手,0,0,亲属:14/15,-99,0"
+  splits:
+  - split: 1
+    text: "唐.逸影"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "唐门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "射术/刀法"
+  - split: 12
+    text: "毒术"
+  - split: 13
+    text: "漫天花雨;九天罗候针"
+  - split: 14
+    text: "胸怀大志;例无虚发;轻功;绝艺超群;惊弓;毒术;精打细算;明察秋毫"
+  - split: 15
+    text: "九天鬼手"
+  - split: 18
+    text: "亲属:14/15"
+- raw: "14,唐.离,男,唐门,默认,亲传弟子,1,轻佻,平平,23,无序/凶狠,刀法,,,游手好闲;挥霍无度;射术;飞鹰走犬;放歌纵酒;嗜赌如命,,0,0,亲属:15,-99,0"
+  splits:
+  - split: 1
+    text: "唐.离"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "唐门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "游手好闲;挥霍无度;射术;飞鹰走犬;放歌纵酒;嗜赌如命"
+  - split: 18
+    text: "亲属:15"
+- raw: "15,唐.嫣然,女,唐门,默认,副掌门,-1,叛逆,超群,20,无序/善良,射术,,九天罗候针,美貌;百步穿杨;神出鬼没;身怀绝技;桀骜不驯;锐眼;摘叶飞花,杀人无形,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "唐.嫣然"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "唐门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/善良"
+  - split: 11
+    text: "射术"
+  - split: 13
+    text: "九天罗候针"
+  - split: 14
+    text: "美貌;百步穿杨;神出鬼没;身怀绝技;桀骜不驯;锐眼;摘叶飞花"
+  - split: 15
+    text: "杀人无形"
+- raw: "16,皇甫.青衫,女,药王谷,默认,掌门,-1,忠厚,超群,22,平常/仁慈,射术/拳掌,医术,无影神针,妙手回春;医师;百步穿杨;灵丹妙药;毒术;内家;宅心仁厚;避世绝俗;刮骨疗毒,玉面医仙,0,0,亲属:17,-99,1"
+  splits:
+  - split: 1
+    text: "皇甫.青衫"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "药王谷"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "平常/仁慈"
+  - split: 11
+    text: "射术/拳掌"
+  - split: 12
+    text: "医术"
+  - split: 13
+    text: "无影神针"
+  - split: 14
+    text: "妙手回春;医师;百步穿杨;灵丹妙药;毒术;内家;宅心仁厚;避世绝俗;刮骨疗毒"
+  - split: 15
+    text: "玉面医仙"
+  - split: 18
+    text: "亲属:17"
+- raw: "17,皇甫.斌,男,药王谷,默认,副掌门,-1,灵活,超群,25,无序/善良,拳掌,炼药,灵犀一指,济世神医;术精岐黄;拳掌;对症下药;毒术;内力精纯;叛逆;游侠;以毒攻毒,穿林妙手,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "皇甫.斌"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "药王谷"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/善良"
+  - split: 11
+    text: "拳掌"
+  - split: 12
+    text: "炼药"
+  - split: 13
+    text: "灵犀一指"
+  - split: 14
+    text: "济世神医;术精岐黄;拳掌;对症下药;毒术;内力精纯;叛逆;游侠;以毒攻毒"
+  - split: 15
+    text: "穿林妙手"
+- raw: "18,朱.断岳,男,丐帮,默认,掌门,-1,稳重,平平,38,戒律/善良,拳掌,烹饪,降龙掌法,丑陋;浩气凛然;铁手钢拳;饕餮盛宴;内家;身怀绝技;容光焕发;行乞;掌风,铁碗残拳,0,0,结义:19,-99,0"
+  splits:
+  - split: 1
+    text: "朱.断岳"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "丐帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/善良"
+  - split: 11
+    text: "拳掌"
+  - split: 12
+    text: "烹饪"
+  - split: 13
+    text: "降龙掌法"
+  - split: 14
+    text: "丑陋;浩气凛然;铁手钢拳;饕餮盛宴;内家;身怀绝技;容光焕发;行乞;掌风"
+  - split: 15
+    text: "铁碗残拳"
+  - split: 18
+    text: "结义:19"
+- raw: "19,徐.不平,女,丐帮,默认,副掌门,-1,简单,聪颖,40,守序/仁慈,长兵,,打狗八绝棍,公正不阿;铁手钢拳;醉生梦死;内力精纯;绝技;康健;行乞;枪芒,大醉侠,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "徐.不平"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "丐帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/仁慈"
+  - split: 11
+    text: "长兵"
+  - split: 13
+    text: "打狗八绝棍"
+  - split: 14
+    text: "公正不阿;铁手钢拳;醉生梦死;内力精纯;绝技;康健;行乞;枪芒"
+  - split: 15
+    text: "大醉侠"
+- raw: "20,赵.破虏,男,飞龙门,默认,掌门,-1,稳重,聪颖,32,守序/中立,长兵/刀法,采伐,帝王封禅功,公正不阿;胸怀大志;一骑绝尘;枪扫六合;横刀跃马;绝艺超群;坚若磐石;身先士卒,潜龙勿用,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "赵.破虏"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "飞龙门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "长兵/刀法"
+  - split: 12
+    text: "采伐"
+  - split: 13
+    text: "帝王封禅功"
+  - split: 14
+    text: "公正不阿;胸怀大志;一骑绝尘;枪扫六合;横刀跃马;绝艺超群;坚若磐石;身先士卒"
+  - split: 15
+    text: "潜龙勿用"
+- raw: "21,诸葛.伶,女,飞龙门,默认,副掌门,-1,算计,超群,44,戒律/冷酷,长兵,,惊鸿一点枪,笑里藏刀;运筹帷幄;纵马驰骋;舞枪弄棍;身怀绝技;位极人臣;临危不乱,小卧龙,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "诸葛.伶"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "飞龙门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "长兵"
+  - split: 13
+    text: "惊鸿一点枪"
+  - split: 14
+    text: "笑里藏刀;运筹帷幄;纵马驰骋;舞枪弄棍;身怀绝技;位极人臣;临危不乱"
+  - split: 15
+    text: "小卧龙"
+- raw: "22,南宫.瑶,女,茅山派,默认,掌门,-1,潇洒,聪颖,45,戒律/善良,剑法,炼药,龙虎金丹功;玄真剑气,仙风道骨;未卜先知;剑随意动;对症下药;旁门左道;身怀绝技;淡泊,玄微法师,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "南宫.瑶"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "茅山派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/善良"
+  - split: 11
+    text: "剑法"
+  - split: 12
+    text: "炼药"
+  - split: 13
+    text: "龙虎金丹功;玄真剑气"
+  - split: 14
+    text: "仙风道骨;未卜先知;剑随意动;对症下药;旁门左道;身怀绝技;淡泊"
+  - split: 15
+    text: "玄微法师"
+- raw: "23,葛.知远,男,茅山派,默认,副掌门,-1,纯粹,超群,51,无序/冷酷,奇门,,遁甲天书,仙风道骨;相士;奇门遁甲;灵丹妙药;御剑;绝艺超群;仕官,洞真法师,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "葛.知远"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "茅山派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/冷酷"
+  - split: 11
+    text: "奇门"
+  - split: 13
+    text: "遁甲天书"
+  - split: 14
+    text: "仙风道骨;相士;奇门遁甲;灵丹妙药;御剑;绝艺超群;仕官"
+  - split: 15
+    text: "洞真法师"
+- raw: "24,欧.长兵,男,铸剑山庄,默认,掌门,-1,算计,聪颖,46,守序/冷酷,刀法,采伐,屠龙要术,千锤百炼;能工巧匠;横刀跃马;仕官;绝技;体质;囤积居奇;不择手段,铸铁仙翁,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "欧.长兵"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "铸剑山庄"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 11
+    text: "刀法"
+  - split: 12
+    text: "采伐"
+  - split: 13
+    text: "屠龙要术"
+  - split: 14
+    text: "千锤百炼;能工巧匠;横刀跃马;仕官;绝技;体质;囤积居奇;不择手段"
+  - split: 15
+    text: "铸铁仙翁"
+- raw: "25,祖.心炎,女,铸剑山庄,默认,副掌门,-1,简单,超群,55,戒律/善良,剑法,锻造,赤霄斩蛇剑,鬼斧神工;能工巧匠;剑随意动;绝技;意志;通才;面目狰狞;性烈如火,百炼神剑,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "祖.心炎"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "铸剑山庄"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/善良"
+  - split: 11
+    text: "剑法"
+  - split: 12
+    text: "锻造"
+  - split: 13
+    text: "赤霄斩蛇剑"
+  - split: 14
+    text: "鬼斧神工;能工巧匠;剑随意动;绝技;意志;通才;面目狰狞;性烈如火"
+  - split: 15
+    text: "百炼神剑"
+- raw: "26,龙.凤娥,女,五毒教,默认,掌门,-1,叛逆,超群,22,混乱/凶狠,拳掌,毒术,万毒宝典;蚩尤鬼降,拳不离手;百步穿杨;见血封喉;飞檐走壁;绝艺超群;毒手药王;灭心绝情;离经叛道,销魂蚀骨,0,0,亲属:27,-99,1"
+  splits:
+  - split: 1
+    text: "龙.凤娥"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "五毒教"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/凶狠"
+  - split: 11
+    text: "拳掌"
+  - split: 12
+    text: "毒术"
+  - split: 13
+    text: "万毒宝典;蚩尤鬼降"
+  - split: 14
+    text: "拳不离手;百步穿杨;见血封喉;飞檐走壁;绝艺超群;毒手药王;灭心绝情;离经叛道"
+  - split: 15
+    text: "销魂蚀骨"
+  - split: 18
+    text: "亲属:27"
+- raw: "27,龙.凝霜,女,五毒教,默认,长老,-1,忠厚,平平,17,戒律/善良,奇门,毒术,金蚕王蛊,倾国倾城;奇门遁甲;射术;五毒俱全;飞檐走壁;绝技;百毒不侵;宅心仁厚,毒手琴心,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "龙.凝霜"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "五毒教"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/善良"
+  - split: 11
+    text: "奇门"
+  - split: 12
+    text: "毒术"
+  - split: 13
+    text: "金蚕王蛊"
+  - split: 14
+    text: "倾国倾城;奇门遁甲;射术;五毒俱全;飞檐走壁;绝技;百毒不侵;宅心仁厚"
+  - split: 15
+    text: "毒手琴心"
+- raw: "28,石.崇虎,男,五毒教,默认,副掌门,-1,灵活,聪颖,36,混乱/中立,奇门,,,忠心耿耿;旁门左道;拳掌;五毒俱全;轻功;身怀绝技;食客;医师,黑爪,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "石.崇虎"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "五毒教"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "忠心耿耿;旁门左道;拳掌;五毒俱全;轻功;身怀绝技;食客;医师"
+  - split: 15
+    text: "黑爪"
+- raw: "29,阎.罗王,男,阎罗殿,默认,掌门,-1,纯粹,超群,56,守序/凶狠,刀法/拳掌,采伐,万恶魔功;杀人刀法,唯我独尊;雄才伟略;公正不阿;一刀两断;拔山扛鼎;钢筋铁骨;刀枪不入;内力精纯;绝艺超群;刀锋,十殿冥主,0,0,仇人:36/39/42/120,-99,1"
+  splits:
+  - split: 1
+    text: "阎.罗王"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "阎罗殿"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/凶狠"
+  - split: 11
+    text: "刀法/拳掌"
+  - split: 12
+    text: "采伐"
+  - split: 13
+    text: "万恶魔功;杀人刀法"
+  - split: 14
+    text: "唯我独尊;雄才伟略;公正不阿;一刀两断;拔山扛鼎;钢筋铁骨;刀枪不入;内力精纯;绝艺超群;刀锋"
+  - split: 15
+    text: "十殿冥主"
+  - split: 18
+    text: "仇人:36/39/42/120"
+- raw: "30,崔.命官,男,阎罗殿,默认,副掌门,-1,潇洒,聪颖,35,平常/凶狠,拳掌,,血脉逆行,军师;心狠手辣;拳不离手;横刀跃马;内家;身怀绝技;弈棋;通才,阴冥诡士,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "崔.命官"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "阎罗殿"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/凶狠"
+  - split: 11
+    text: "拳掌"
+  - split: 13
+    text: "血脉逆行"
+  - split: 14
+    text: "军师;心狠手辣;拳不离手;横刀跃马;内家;身怀绝技;弈棋;通才"
+  - split: 15
+    text: "阴冥诡士"
+- raw: "31,孟.婆娑,女,阎罗殿,默认,副掌门,-1,算计,超群,30,无序/冷酷,刀法,口才,,倾国倾城;笑里藏刀;耍刀;拳掌;内力精纯;神出鬼没;绝技;瑶琴,空谷幽兰,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "孟.婆娑"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "阎罗殿"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/冷酷"
+  - split: 11
+    text: "刀法"
+  - split: 12
+    text: "口才"
+  - split: 14
+    text: "倾国倾城;笑里藏刀;耍刀;拳掌;内力精纯;神出鬼没;绝技;瑶琴"
+  - split: 15
+    text: "空谷幽兰"
+- raw: "32,常.无黑,男,阎罗殿,默认,长老,-1,叛逆,聪颖,34,混乱/凶狠,刀法,,销魂鬼刃,性烈如火;唯命是从;横刀跃马;外门;劈荆斩棘,黑白无常,0,0,结义:33,-99,0"
+  splits:
+  - split: 1
+    text: "常.无黑"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "阎罗殿"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 13
+    text: "销魂鬼刃"
+  - split: 14
+    text: "性烈如火;唯命是从;横刀跃马;外门;劈荆斩棘"
+  - split: 15
+    text: "黑白无常"
+  - split: 18
+    text: "结义:33"
+- raw: "33,常.无白,女,阎罗殿,默认,长老,-1,轻佻,聪颖,28,无序/中立,拳掌,,九死离魂掌,气定神闲;戒备森严;拳不离手;内家;精耕细作,黑白无常,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "常.无白"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "阎罗殿"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/中立"
+  - split: 11
+    text: "拳掌"
+  - split: 13
+    text: "九死离魂掌"
+  - split: 14
+    text: "气定神闲;戒备森严;拳不离手;内家;精耕细作"
+  - split: 15
+    text: "黑白无常"
+- raw: "34,牛.头,男,阎罗殿,默认,长老,-1,简单,愚钝,29,平常/凶狠,拳掌,,神倒鬼跌拳,离经叛道;奋勇当先;拳不离手;绝技;农家,,0,0,结义:35,-99,0"
+  splits:
+  - split: 1
+    text: "牛.头"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "阎罗殿"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "平常/凶狠"
+  - split: 11
+    text: "拳掌"
+  - split: 13
+    text: "神倒鬼跌拳"
+  - split: 14
+    text: "离经叛道;奋勇当先;拳不离手;绝技;农家"
+  - split: 18
+    text: "结义:35"
+- raw: "35,马.面,男,阎罗殿,默认,长老,-1,轻佻,平平,32,混乱/冷酷,刀法,,饮血魔刀,盛气凌人;快步流星;横刀跃马;轻功;采伐,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "马.面"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "阎罗殿"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/冷酷"
+  - split: 11
+    text: "刀法"
+  - split: 13
+    text: "饮血魔刀"
+  - split: 14
+    text: "盛气凌人;快步流星;横刀跃马;轻功;采伐"
+- raw: "36,道.无名,男,大隐阁,默认,掌门,6,纯粹,超群,47,无序/中立,奇门,学识,归墟秘典;天人感应步;轮回不灭法;广陵散曲功;呕血坐隐功,蛰居偃伏;避世绝俗;气定神闲;铁画银钩;皓首穷经;博学多才;炉火纯青;绝艺超群;鸿儒大学;起死回生,无双国士,0,0,朋友:37,-99,1"
+  splits:
+  - split: 1
+    text: "道.无名"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "大隐阁"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/中立"
+  - split: 11
+    text: "奇门"
+  - split: 12
+    text: "学识"
+  - split: 13
+    text: "归墟秘典;天人感应步;轮回不灭法;广陵散曲功;呕血坐隐功"
+  - split: 14
+    text: "蛰居偃伏;避世绝俗;气定神闲;铁画银钩;皓首穷经;博学多才;炉火纯青;绝艺超群;鸿儒大学;起死回生"
+  - split: 15
+    text: "无双国士"
+  - split: 18
+    text: "朋友:37"
+- raw: "37,思.中澜,男,大隐阁,默认,副掌门,-1,灵活,究极,28,混乱/冷酷,剑法,口才,天来剑术;归墟秘典;画龙点睛,不幸;武学天才;雄才伟略;神机妙算;炉火纯青;飞檐走壁;身怀绝技;剑随意动,天剑客,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "思.中澜"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "大隐阁"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "混乱/冷酷"
+  - split: 11
+    text: "剑法"
+  - split: 12
+    text: "口才"
+  - split: 13
+    text: "天来剑术;归墟秘典;画龙点睛"
+  - split: 14
+    text: "不幸;武学天才;雄才伟略;神机妙算;炉火纯青;飞檐走壁;身怀绝技;剑随意动"
+  - split: 15
+    text: "天剑客"
+- raw: "38,姬.清梵,女,大隐阁,默认,副掌门,-1,潇洒,超群,27,守序/仁慈,奇门,,天人感应步;春秋笔法;霓裳羽衣舞,明眸皓齿;妙至毫巅;鸾吟凤唱;内力精纯;神出鬼没;绝技;儒生;公正不阿,霓裳仙子,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "姬.清梵"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "大隐阁"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/仁慈"
+  - split: 11
+    text: "奇门"
+  - split: 13
+    text: "天人感应步;春秋笔法;霓裳羽衣舞"
+  - split: 14
+    text: "明眸皓齿;妙至毫巅;鸾吟凤唱;内力精纯;神出鬼没;绝技;儒生;公正不阿"
+  - split: 15
+    text: "霓裳仙子"
+- raw: "39,空闻.大师,男,少林寺,默认,掌门,-1,忠厚,聪颖,58,戒律/仁慈,拳掌,,金刚不坏神功;大力金刚掌,禅师;铁手钢拳;奇门;内力精纯;刀枪不入;身怀绝技;慈悲为怀;公正不阿;不骄不躁,德高望重,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "空闻.大师"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "少林寺"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/仁慈"
+  - split: 11
+    text: "拳掌"
+  - split: 13
+    text: "金刚不坏神功;大力金刚掌"
+  - split: 14
+    text: "禅师;铁手钢拳;奇门;内力精纯;刀枪不入;身怀绝技;慈悲为怀;公正不阿;不骄不躁"
+  - split: 15
+    text: "德高望重"
+- raw: "40,空见.大师,男,少林寺,默认,副掌门,-1,稳重,超群,66,守序/冷酷,奇门,医术,易筋经;金刚伏魔圈,禅师;奇门遁甲;奇异莫名;炉火纯青;坚若磐石;绝艺超群;浩气凛然;盛气凌人;暴躁,金身罗汉,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "空见.大师"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "少林寺"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 11
+    text: "奇门"
+  - split: 12
+    text: "医术"
+  - split: 13
+    text: "易筋经;金刚伏魔圈"
+  - split: 14
+    text: "禅师;奇门遁甲;奇异莫名;炉火纯青;坚若磐石;绝艺超群;浩气凛然;盛气凌人;暴躁"
+  - split: 15
+    text: "金身罗汉"
+- raw: "41,如是.大师,男,少林寺,默认,副掌门,6,纯粹,究极,77,平常/中立,长兵,学识,洗髓经;达摩神杖,武痴;四大皆空;枪扫六合;铁手钢拳;炉火纯青;刀枪不入;绝艺超群;枪出如龙;虚怀若谷,佛痴,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "如是.大师"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "少林寺"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/中立"
+  - split: 11
+    text: "长兵"
+  - split: 12
+    text: "学识"
+  - split: 13
+    text: "洗髓经;达摩神杖"
+  - split: 14
+    text: "武痴;四大皆空;枪扫六合;铁手钢拳;炉火纯青;刀枪不入;绝艺超群;枪出如龙;虚怀若谷"
+  - split: 15
+    text: "佛痴"
+- raw: "42,张.青蓬,男,武当派,默认,掌门,-1,稳重,超群,45,平常/仁慈,拳掌/剑法,学识,太极神功;太极拳法,仙风道骨;铁手钢拳;剑随意动;炉火纯青;绝艺超群;对症下药;运气自如;脉络贯通;掌风,无为真人,0,0,亲属:43,-99,0"
+  splits:
+  - split: 1
+    text: "张.青蓬"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "武当派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "平常/仁慈"
+  - split: 11
+    text: "拳掌/剑法"
+  - split: 12
+    text: "学识"
+  - split: 13
+    text: "太极神功;太极拳法"
+  - split: 14
+    text: "仙风道骨;铁手钢拳;剑随意动;炉火纯青;绝艺超群;对症下药;运气自如;脉络贯通;掌风"
+  - split: 15
+    text: "无为真人"
+  - split: 18
+    text: "亲属:43"
+- raw: "43,张.文馨,女,武当派,默认,副掌门,-1,潇洒,究极,21,混乱/中立,剑法/拳掌,炼药,道德真经;太极剑道,武学天才;美貌;道士;剑随意动;内力精纯;身怀绝技;万木争荣;炼药;经脉,文逸真人,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "张.文馨"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "武当派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "剑法/拳掌"
+  - split: 12
+    text: "炼药"
+  - split: 13
+    text: "道德真经;太极剑道"
+  - split: 14
+    text: "武学天才;美貌;道士;剑随意动;内力精纯;身怀绝技;万木争荣;炼药;经脉"
+  - split: 15
+    text: "文逸真人"
+- raw: "44,宋.廉庭,男,武当派,默认,副掌门,-1,固执,聪颖,41,戒律/仁慈,剑法/拳掌,,太乙神剑,道士;剑随意动;拳不离手;内力精纯;身怀绝技;经脉;公正不阿;怒发冲冠;剑气,清虚真人,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "宋.廉庭"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "武当派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/仁慈"
+  - split: 11
+    text: "剑法/拳掌"
+  - split: 13
+    text: "太乙神剑"
+  - split: 14
+    text: "道士;剑随意动;拳不离手;内力精纯;身怀绝技;经脉;公正不阿;怒发冲冠;剑气"
+  - split: 15
+    text: "清虚真人"
+- raw: "45,项.元霸,男,霸刀门,默认,掌门,-1,固执,愚钝,28,平常/中立,刀法/长兵,烹饪,霸刀一式,拔山扛鼎;天生神力;一刀两断;刀枪不入;钢筋铁骨;痴傻蒙昧;武痴;脉络阻塞,力大无穷,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "项.元霸"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "霸刀门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "平常/中立"
+  - split: 11
+    text: "刀法/长兵"
+  - split: 12
+    text: "烹饪"
+  - split: 13
+    text: "霸刀一式"
+  - split: 14
+    text: "拔山扛鼎;天生神力;一刀两断;刀枪不入;钢筋铁骨;痴傻蒙昧;武痴;脉络阻塞"
+  - split: 15
+    text: "力大无穷"
+- raw: "46,宇文.极,女,霸刀门,默认,副掌门,-1,算计,超群,33,平常/凶狠,长兵/刀法,,霸王枪法,雄才伟略;精明强干;横刀跃马;位极人臣;坚若磐石;身怀绝技;排兵布阵,算无遗策,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "宇文.极"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "霸刀门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "平常/凶狠"
+  - split: 11
+    text: "长兵/刀法"
+  - split: 13
+    text: "霸王枪法"
+  - split: 14
+    text: "雄才伟略;精明强干;横刀跃马;位极人臣;坚若磐石;身怀绝技;排兵布阵"
+  - split: 15
+    text: "算无遗策"
+- raw: "47,吕.寻峰,男,蓬莱派,默认,掌门,-1,灵活,超群,38,混乱/冷酷,剑法/奇门,,敲爻歌诀,胸怀大志;不择手段;剑随意动;轻功;炉火纯青;杂学;修道;气冲斗牛,都灵子,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "吕.寻峰"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "蓬莱派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/冷酷"
+  - split: 11
+    text: "剑法/奇门"
+  - split: 13
+    text: "敲爻歌诀"
+  - split: 14
+    text: "胸怀大志;不择手段;剑随意动;轻功;炉火纯青;杂学;修道;气冲斗牛"
+  - split: 15
+    text: "都灵子"
+- raw: "48,庄.晓梦,女,蓬莱派,默认,副掌门,-1,潇洒,聪颖,30,守序/善良,奇门/剑法,,铁拐化龙;五尺混天绫,游山玩水;旁门左道;神出鬼没;武学天才;内力精纯;隐士;卜算;剑气,云鹏子,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "庄.晓梦"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "蓬莱派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/善良"
+  - split: 11
+    text: "奇门/剑法"
+  - split: 13
+    text: "铁拐化龙;五尺混天绫"
+  - split: 14
+    text: "游山玩水;旁门左道;神出鬼没;武学天才;内力精纯;隐士;卜算;剑气"
+  - split: 15
+    text: "云鹏子"
+- raw: "49,司马.德源,男,峨眉派,默认,掌门,-1,忠厚,超群,68,守序/仁慈,拳掌,木植,三洞灵宝经;天罡指穴功,隐士;拳不离手;坚若磐石;炉火纯青;飞檐走壁;顺脉;仁慈;丑陋,白眉真人,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "司马.德源"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "峨眉派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/仁慈"
+  - split: 11
+    text: "拳掌"
+  - split: 12
+    text: "木植"
+  - split: 13
+    text: "三洞灵宝经;天罡指穴功"
+  - split: 14
+    text: "隐士;拳不离手;坚若磐石;炉火纯青;飞檐走壁;顺脉;仁慈;丑陋"
+  - split: 15
+    text: "白眉真人"
+- raw: "50,李.潇湘,女,峨眉派,默认,副掌门,-1,固执,聪颖,36,戒律/冷酷,剑法,,诸天化身步;灭心绝情剑,淡泊;剑随意动;炉火纯青;飞檐走壁;丹青妙手;脉络贯通;木植,潇湘真人,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "李.潇湘"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "峨眉派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "剑法"
+  - split: 13
+    text: "诸天化身步;灭心绝情剑"
+  - split: 14
+    text: "淡泊;剑随意动;炉火纯青;飞檐走壁;丹青妙手;脉络贯通;木植"
+  - split: 15
+    text: "潇湘真人"
+- raw: "51,白.云天,女,峨眉派,默认,亲传弟子,6,纯粹,究极,18,平常/仁慈,内功/轻功/剑法,木植,三洞灵宝经;诸天化身步,武学天才;七窍玲珑;聪慧绝伦;奇经八脉;仙风道骨;四大皆空;炉火纯青;神出鬼没;吉人天相,白云子,0,0,,-99,1"
+  splits:
+  - split: 1
+    text: "白.云天"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "峨眉派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/仁慈"
+  - split: 11
+    text: "内功/轻功/剑法"
+  - split: 12
+    text: "木植"
+  - split: 13
+    text: "三洞灵宝经;诸天化身步"
+  - split: 14
+    text: "武学天才;七窍玲珑;聪慧绝伦;奇经八脉;仙风道骨;四大皆空;炉火纯青;神出鬼没;吉人天相"
+  - split: 15
+    text: "白云子"
+- raw: "52,曲.自封,男,崆峒派,默认,掌门,-1,叛逆,超群,43,戒律/冷酷,奇门/长兵,,斗转星移;乾坤日月圈;玉石俱焚矛,心狠手辣;旁门左道;内力精纯;绝艺超群;百病不侵;杂学;临危不乱,紫髯道人,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "曲.自封"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "崆峒派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "奇门/长兵"
+  - split: 13
+    text: "斗转星移;乾坤日月圈;玉石俱焚矛"
+  - split: 14
+    text: "心狠手辣;旁门左道;内力精纯;绝艺超群;百病不侵;杂学;临危不乱"
+  - split: 15
+    text: "紫髯道人"
+- raw: "53,闻.惊鸿,女,崆峒派,默认,副掌门,-1,固执,聪颖,32,混乱/凶狠,奇门,,斗转星移;生死一线鞭,灭心绝情;旁门左道;内家;绝艺超群;容光焕发;通才;身先士卒,绝情道人,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "闻.惊鸿"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "崆峒派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/凶狠"
+  - split: 11
+    text: "奇门"
+  - split: 13
+    text: "斗转星移;生死一线鞭"
+  - split: 14
+    text: "灭心绝情;旁门左道;内家;绝艺超群;容光焕发;通才;身先士卒"
+  - split: 15
+    text: "绝情道人"
+- raw: "54,墨.璇玑,女,神机门,默认,掌门,-1,简单,究极,21,平常/仁慈,奇门,锻造,公输遗匣,机关大师;机关铁轮;能工巧匠;聪慧绝伦;旧病沉疴;奇门遁甲;百步穿杨;瘦骨嶙峋;旷世奇才;脉络阻塞,天工巧匠,0,0,亲属:55,-99,0"
+  splits:
+  - split: 1
+    text: "墨.璇玑"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "神机门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/仁慈"
+  - split: 11
+    text: "奇门"
+  - split: 12
+    text: "锻造"
+  - split: 13
+    text: "公输遗匣"
+  - split: 14
+    text: "机关大师;机关铁轮;能工巧匠;聪慧绝伦;旧病沉疴;奇门遁甲;百步穿杨;瘦骨嶙峋;旷世奇才;脉络阻塞"
+  - split: 15
+    text: "天工巧匠"
+  - split: 18
+    text: "亲属:55"
+- raw: "55,墨.从义,男,神机门,默认,副掌门,-1,灵活,聪颖,23,混乱/善良,射术,木植,武库战车;元戎弩箭,机关大师;机关铁甲;能工巧匠;足智多谋;多病;例无虚发;旁门左道;天资过人;巧捷万端;滞脉,病鲁班,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "墨.从义"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "神机门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "射术"
+  - split: 12
+    text: "木植"
+  - split: 13
+    text: "武库战车;元戎弩箭"
+  - split: 14
+    text: "机关大师;机关铁甲;能工巧匠;足智多谋;多病;例无虚发;旁门左道;天资过人;巧捷万端;滞脉"
+  - split: 15
+    text: "病鲁班"
+- raw: "56,雷.震天,男,霹雳堂,默认,掌门,-1,稳重,超群,45,戒律/冷酷,射术/长兵,锻造,灭世天雷,胸怀大志;千锤百炼;能工巧匠;百步穿杨;绝技;聪慧;滞脉;多病,掣地霹雳,0,0,亲属:57/58/151,-99,0"
+  splits:
+  - split: 1
+    text: "雷.震天"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "霹雳堂"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "射术/长兵"
+  - split: 12
+    text: "锻造"
+  - split: 13
+    text: "灭世天雷"
+  - split: 14
+    text: "胸怀大志;千锤百炼;能工巧匠;百步穿杨;绝技;聪慧;滞脉;多病"
+  - split: 15
+    text: "掣地霹雳"
+  - split: 18
+    text: "亲属:57/58/151"
+- raw: "57,雷.冠群,男,霹雳堂,默认,副掌门,-1,轻佻,聪颖,23,混乱/凶狠,长兵/射术,,火树银枪,锻造;学徒;放歌纵酒;云游;长兵;绝技;脉络阻塞;瘦骨嶙峋,烁金枪,0,0,亲属:58/151,-99,0"
+  splits:
+  - split: 1
+    text: "雷.冠群"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "霹雳堂"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/凶狠"
+  - split: 11
+    text: "长兵/射术"
+  - split: 13
+    text: "火树银枪"
+  - split: 14
+    text: "锻造;学徒;放歌纵酒;云游;长兵;绝技;脉络阻塞;瘦骨嶙峋"
+  - split: 15
+    text: "烁金枪"
+  - split: 18
+    text: "亲属:58/151"
+- raw: "58,雷.彤,女,霹雳堂,默认,副掌门,-1,灵活,平平,19,无序/中立,射术,,神火飞鸦,美貌;千锤百炼;工匠;射术;轻功;滞脉;多病;天资过人,燎原火凤,0,0,亲属:151,-99,0"
+  splits:
+  - split: 1
+    text: "雷.彤"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "霹雳堂"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/中立"
+  - split: 11
+    text: "射术"
+  - split: 13
+    text: "神火飞鸦"
+  - split: 14
+    text: "美貌;千锤百炼;工匠;射术;轻功;滞脉;多病;天资过人"
+  - split: 15
+    text: "燎原火凤"
+  - split: 18
+    text: "亲属:151"
+- raw: "59,转轮.法王,男,金刚密宗,默认,掌门,-1,固执,聪颖,55,戒律/凶狠,奇门,,龙象护法功;观想日月轮,禅师;旁门左道;耍刀;炉火纯青;身怀绝技;力道;百病不侵;灵丹妙药,龙象护法,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "转轮.法王"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "金刚密宗"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 11
+    text: "奇门"
+  - split: 13
+    text: "龙象护法功;观想日月轮"
+  - split: 14
+    text: "禅师;旁门左道;耍刀;炉火纯青;身怀绝技;力道;百病不侵;灵丹妙药"
+  - split: 15
+    text: "龙象护法"
+- raw: "60,金刚.法王,男,金刚密宗,默认,副掌门,-1,简单,平平,65,无序/中立,刀法,,大日如来功;无上大力杵,四大皆空;一刀两断;奇门;内力精纯;绝艺超群;奇经八脉;先天气海,灵童转世,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "金刚.法王"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "金刚密宗"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/中立"
+  - split: 11
+    text: "刀法"
+  - split: 13
+    text: "大日如来功;无上大力杵"
+  - split: 14
+    text: "四大皆空;一刀两断;奇门;内力精纯;绝艺超群;奇经八脉;先天气海"
+  - split: 15
+    text: "灵童转世"
+- raw: "61,真言.法王,女,金刚密宗,默认,副掌门,-1,灵活,超群,42,混乱/冷酷,奇门/刀法,烹饪,因陀罗杵;无苦寂灭刀,禅师;运气自如;先天气海;炉火纯青;绝技;奇技;对症下药,慧眼明王,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "真言.法王"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "金刚密宗"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/冷酷"
+  - split: 11
+    text: "奇门/刀法"
+  - split: 12
+    text: "烹饪"
+  - split: 13
+    text: "因陀罗杵;无苦寂灭刀"
+  - split: 14
+    text: "禅师;运气自如;先天气海;炉火纯青;绝技;奇技;对症下药"
+  - split: 15
+    text: "慧眼明王"
+- raw: "62,凌.北渊,女,天山派,默认,掌门,-1,叛逆,超群,38,守序/凶狠,拳掌/剑法,,不老长春功;仙娥折梅;白虹贯日掌,倾国倾城;拳不离手;御剑;神出鬼没;炉火纯青;取予有节;脱胎换骨;避世绝俗,天山仙子,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "凌.北渊"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "天山派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/凶狠"
+  - split: 11
+    text: "拳掌/剑法"
+  - split: 13
+    text: "不老长春功;仙娥折梅;白虹贯日掌"
+  - split: 14
+    text: "倾国倾城;拳不离手;御剑;神出鬼没;炉火纯青;取予有节;脱胎换骨;避世绝俗"
+  - split: 15
+    text: "天山仙子"
+- raw: "63,云.九霄,男,天山派,默认,副掌门,-1,忠厚,聪颖,29,平常/善良,拳掌/剑法,医术,白虹贯日掌;九霄冲天剑,正直;拳不离手;飞檐走壁;内力精纯;忠心耿耿;棋高一着;忠诚,雪山飞鸿,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "云.九霄"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "天山派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/善良"
+  - split: 11
+    text: "拳掌/剑法"
+  - split: 12
+    text: "医术"
+  - split: 13
+    text: "白虹贯日掌;九霄冲天剑"
+  - split: 14
+    text: "正直;拳不离手;飞檐走壁;内力精纯;忠心耿耿;棋高一着;忠诚"
+  - split: 15
+    text: "雪山飞鸿"
+- raw: "64,江.映寒,女,天山派,默认,长老,-1,纯粹,超群,26,无序/仁慈,剑法,,仙娥折梅;清虚广寒剑,明眸皓齿;剑随意动;飞檐走壁;内力精纯;谦逊;余音绕梁,冷月寒江,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "江.映寒"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "天山派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "剑法"
+  - split: 13
+    text: "仙娥折梅;清虚广寒剑"
+  - split: 14
+    text: "明眸皓齿;剑随意动;飞檐走壁;内力精纯;谦逊;余音绕梁"
+  - split: 15
+    text: "冷月寒江"
+- raw: "65,夏.天雄,男,铁掌帮,默认,掌门,-1,算计,超群,38,戒律/凶狠,,,潮起月盈功;劈金碎玉掌,雄才伟略;拳不离手;坚若磐石;内家;身怀绝技,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "夏.天雄"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "铁掌帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 13
+    text: "潮起月盈功;劈金碎玉掌"
+  - split: 14
+    text: "雄才伟略;拳不离手;坚若磐石;内家;身怀绝技"
+- raw: "66,叶.一鸣,女,铁掌帮,默认,长老,-1,轻佻,聪颖,32,无序/冷酷,,,劈金碎玉掌,精明强干;拳掌;刚愎;暴躁,铁掌双雄,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "叶.一鸣"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "铁掌帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/冷酷"
+  - split: 13
+    text: "劈金碎玉掌"
+  - split: 14
+    text: "精明强干;拳掌;刚愎;暴躁"
+  - split: 15
+    text: "铁掌双雄"
+- raw: "67,韩.嵩,男,铁掌帮,默认,长老,-1,稳重,平平,44,混乱/中立,,,潮起月盈功,唯命是从;拳不离手;残忍;冷静,铁掌双雄,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "韩.嵩"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "铁掌帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/中立"
+  - split: 13
+    text: "潮起月盈功"
+  - split: 14
+    text: "唯命是从;拳不离手;残忍;冷静"
+  - split: 15
+    text: "铁掌双雄"
+- raw: "68,陆.奇,男,铁掌帮,默认,亲传弟子,-1,叛逆,超群,26,守序/凶狠,,,,排兵布阵;拳掌;懒惰,铁掌四杰,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "陆.奇"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "铁掌帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/凶狠"
+  - split: 14
+    text: "排兵布阵;拳掌;懒惰"
+  - split: 15
+    text: "铁掌四杰"
+- raw: "69,吕.子芳,女,铁掌帮,默认,亲传弟子,-1,潇洒,聪颖,29,平常/凶狠,,,,叛逆;浪费,铁掌四杰,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "吕.子芳"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "铁掌帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/凶狠"
+  - split: 14
+    text: "叛逆;浪费"
+  - split: 15
+    text: "铁掌四杰"
+- raw: "70,公孙.防,男,铁掌帮,默认,正式弟子,-1,简单,愚钝,28,戒律/中立,,,,忠诚;愚钝,铁掌四杰,0,0,朋友:71,-99,0"
+  splits:
+  - split: 1
+    text: "公孙.防"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "铁掌帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "戒律/中立"
+  - split: 14
+    text: "忠诚;愚钝"
+  - split: 15
+    text: "铁掌四杰"
+  - split: 18
+    text: "朋友:71"
+- raw: "71,狄.坤,男,铁掌帮,默认,正式弟子,-1,忠厚,平平,30,守序/冷酷,,,,阴险;不幸,铁掌四杰,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "狄.坤"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "铁掌帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 14
+    text: "阴险;不幸"
+  - split: 15
+    text: "铁掌四杰"
+- raw: "72,万.仞山,男,聚义门,默认,掌门,-1,稳重,超群,36,平常/仁慈,,,,学佛;正直;木植;静修,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "万.仞山"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "聚义门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "平常/仁慈"
+  - split: 14
+    text: "学佛;正直;木植;静修"
+- raw: "73,卓.远望,男,黄河帮,默认,掌门,-1,纯粹,平平,32,守序/冷酷,,,,挥霍无度;酒鬼;烹饪,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "卓.远望"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "黄河帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 14
+    text: "挥霍无度;酒鬼;烹饪"
+- raw: "74,陆.离,女,八卦门,默认,掌门,-1,忠厚,聪颖,34,守序/善良,,,,练武;游侠;美貌,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "陆.离"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "八卦门"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/善良"
+  - split: 14
+    text: "练武;游侠;美貌"
+- raw: "75,卫.海川,女,海沙帮,默认,掌门,-1,固执,平平,31,无序/凶狠,,,,工匠;暴躁;铸山煮海,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "卫.海川"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "海沙帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/凶狠"
+  - split: 14
+    text: "工匠;暴躁;铸山煮海"
+- raw: "76,沈.蛟,男,巨鲸帮,默认,掌门,-1,轻佻,平平,35,混乱/中立,,,,赌徒;懒惰;锻造;狩猎,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "沈.蛟"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "巨鲸帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/中立"
+  - split: 14
+    text: "赌徒;懒惰;锻造;狩猎"
+- raw: "77,上官.雯,女,金龙帮,默认,掌门,-1,叛逆,超群,33,戒律/凶狠,,,,经商;口才;足智多谋,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "上官.雯"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "金龙帮"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 14
+    text: "经商;口才;足智多谋"
+- raw: "78,周.莫知,男,青城派,默认,掌门,-1,算计,聪颖,34,平常/冷酷,,,,节俭;收藏;从政,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "周.莫知"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "青城派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/冷酷"
+  - split: 14
+    text: "节俭;收藏;从政"
+- raw: "79,陌.田桑,女,伏牛派,默认,掌门,-1,简单,平平,38,平常/善良,,木植,,勤奋;强身健体;在世神农;精耕细作,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "陌.田桑"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "伏牛派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "掌门"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "平常/善良"
+  - split: 12
+    text: "木植"
+  - split: 14
+    text: "勤奋;强身健体;在世神农;精耕细作"
+- raw: "80,武.绝义,男,无,飞龙门,副掌门,6,固执,超群,49,戒律/凶狠,长兵,,逆转周天大法,唯我独尊;醉生梦死;心狠手辣;枪扫六合;枪芒;拔山扛鼎;钢筋铁骨;刀枪不入;绝艺超群,绝情断义,0,1,,-99,1"
+  splits:
+  - split: 1
+    text: "武.绝义"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "飞龙门"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 11
+    text: "长兵"
+  - split: 13
+    text: "逆转周天大法"
+  - split: 14
+    text: "唯我独尊;醉生梦死;心狠手辣;枪扫六合;枪芒;拔山扛鼎;钢筋铁骨;刀枪不入;绝艺超群"
+  - split: 15
+    text: "绝情断义"
+- raw: "81,黄.泉,男,无,唐门,副掌门,5,简单,聪颖,55,平常/冷酷,射术,,,笑里藏刀;心狠手辣;神出鬼没;例无虚发;惊弓;七窍玲珑;避世绝俗,鬼见愁,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "黄.泉"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "唐门"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/冷酷"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "笑里藏刀;心狠手辣;神出鬼没;例无虚发;惊弓;七窍玲珑;避世绝俗"
+  - split: 15
+    text: "鬼见愁"
+- raw: "82,玉.观音,女,无,金刚密宗,副掌门,5,纯粹,超群,35,戒律/凶狠,奇门,,,灭心绝情;动心忍性;美貌;四大皆空;离经叛道;旁门左道;奇异莫名,骷髅红粉,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "玉.观音"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "金刚密宗"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "灭心绝情;动心忍性;美貌;四大皆空;离经叛道;旁门左道;奇异莫名"
+  - split: 15
+    text: "骷髅红粉"
+- raw: "83,雨.人屠,男,无,阎罗殿,副掌门,5,叛逆,平平,33,混乱/凶狠,刀法,,生死劫刀法,残忍;怒发冲冠;一刀两断;魁梧奇伟;拔山扛鼎;百丑千拙;笨手笨脚,雨夜狂屠,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "雨.人屠"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "阎罗殿"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 13
+    text: "生死劫刀法"
+  - split: 14
+    text: "残忍;怒发冲冠;一刀两断;魁梧奇伟;拔山扛鼎;百丑千拙;笨手笨脚"
+  - split: 15
+    text: "雨夜狂屠"
+- raw: "84,上官.凤,女,无,天山派,长老,4,潇洒,超群,29,平常/中立,剑法,,,倾国倾城;穷奢极欲;排兵布阵;舌灿莲花;剑随意动;飞檐走壁;赌运亨通,刺骨冰寒,0,1,,-99,1"
+  splits:
+  - split: 1
+    text: "上官.凤"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "天山派"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "平常/中立"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "倾国倾城;穷奢极欲;排兵布阵;舌灿莲花;剑随意动;飞檐走壁;赌运亨通"
+  - split: 15
+    text: "刺骨冰寒"
+- raw: "85,计.心狂,男,无,五毒教,长老,4,算计,究极,26,无序/冷酷,拳掌,,,运筹帷幄;笑里藏刀;聪慧绝伦;未卜先知;见血封喉;拳不离手;例无虚发;神出鬼没,诡计毒谋,0,1,,-99,1"
+  splits:
+  - split: 1
+    text: "计.心狂"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "五毒教"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "无序/冷酷"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "运筹帷幄;笑里藏刀;聪慧绝伦;未卜先知;见血封喉;拳不离手;例无虚发;神出鬼没"
+  - split: 15
+    text: "诡计毒谋"
+- raw: "86,慕容.星辰,女,无,长乐帮,长老,4,轻佻,超群,22,守序/善良,轻功,,醉梦鱼龙舞,七窍玲珑;神出鬼没;口齿伶俐;巧捷万端;明眸皓齿;目光炯炯;去伪存真;福星高照,摘月偷星,0,1,,-99,1"
+  splits:
+  - split: 1
+    text: "慕容.星辰"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "长乐帮"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/善良"
+  - split: 11
+    text: "轻功"
+  - split: 13
+    text: "醉梦鱼龙舞"
+  - split: 14
+    text: "七窍玲珑;神出鬼没;口齿伶俐;巧捷万端;明眸皓齿;目光炯炯;去伪存真;福星高照"
+  - split: 15
+    text: "摘月偷星"
+- raw: "87,幽.冥,男,无,崆峒派,长老,4,算计,聪颖,31,守序/凶狠,奇门,,,飞檐走壁;奇门遁甲;足智多谋;经脉;叛逆,四大杀手,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "幽.冥"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "崆峒派"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/凶狠"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "飞檐走壁;奇门遁甲;足智多谋;经脉;叛逆"
+  - split: 15
+    text: "四大杀手"
+- raw: "88,魅.影,女,无,唐门,长老,4,轻佻,超群,24,混乱/善良,射术,,,神出鬼没;百步穿杨;手疾眼快;惊弓;隐士,四大杀手,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "魅.影"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "唐门"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "神出鬼没;百步穿杨;手疾眼快;惊弓;隐士"
+  - split: 15
+    text: "四大杀手"
+- raw: "89,血.刃,男,无,霸刀门,长老,4,纯粹,平平,36,平常/凶狠,刀法,,,身怀绝技;一刀两断;外门;孔武有力;暴躁,四大杀手,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "血.刃"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "霸刀门"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "平常/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "身怀绝技;一刀两断;外门;孔武有力;暴躁"
+  - split: 15
+    text: "四大杀手"
+- raw: "90,残.阳,男,无,铸剑山庄,长老,4,叛逆,聪颖,27,无序/冷酷,剑法,,,内力精纯;人剑合一;轻功;动心忍性;工匠,四大杀手,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "残.阳"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "铸剑山庄"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/冷酷"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "内力精纯;人剑合一;轻功;动心忍性;工匠"
+  - split: 15
+    text: "四大杀手"
+- raw: "91,厉.苍穹,男,无,默认,长老,4,叛逆,聪颖,42,守序/凶狠,刀法,,战八方藏刀式,怒发冲冠;横刀跃马;外门,刀劳鬼,0,0,,-10,0"
+  splits:
+  - split: 1
+    text: "厉.苍穹"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 13
+    text: "战八方藏刀式"
+  - split: 14
+    text: "怒发冲冠;横刀跃马;外门"
+  - split: 15
+    text: "刀劳鬼"
+- raw: "92,迟.百城,男,无,默认,亲传弟子,3,稳重,聪颖,45,戒律/冷酷,射术,,,不择手段;射术;轻功,拘魂鬼,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "迟.百城"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "不择手段;射术;轻功"
+  - split: 15
+    text: "拘魂鬼"
+- raw: "93,费.彬,男,无,默认,亲传弟子,3,简单,平平,37,守序/仁慈,拳掌,,,心狠手辣;拳掌;内家;多病;五毒俱全,痨病鬼,0,0,,-9,0"
+  splits:
+  - split: 1
+    text: "费.彬"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/仁慈"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "心狠手辣;拳掌;内家;多病;五毒俱全"
+  - split: 15
+    text: "痨病鬼"
+- raw: "94,岳.无畏,男,无,默认,正式弟子,2,固执,平平,35,无序/中立,长兵,,,性烈如火;长兵;绝技,山魈鬼,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "岳.无畏"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/中立"
+  - split: 11
+    text: "长兵"
+  - split: 14
+    text: "性烈如火;长兵;绝技"
+  - split: 15
+    text: "山魈鬼"
+- raw: "95,高.首,男,无,默认,正式弟子,1,轻佻,愚钝,31,混乱/善良,奇门,,,胆小如鼠;刚愎;懒惰,魍魉鬼,0,0,,-9,0"
+  splits:
+  - split: 1
+    text: "高.首"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "胆小如鼠;刚愎;懒惰"
+  - split: 15
+    text: "魍魉鬼"
+- raw: "96,王.彪,男,无,黄河帮,入门弟子,1,轻佻,平平,33,无序/凶狠,拳掌,,,盛气凌人;勇敢;赌徒,黄河双煞,0,0,结义:97;师傅:73,-99,0"
+  splits:
+  - split: 1
+    text: "王.彪"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "黄河帮"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/凶狠"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "盛气凌人;勇敢;赌徒"
+  - split: 15
+    text: "黄河双煞"
+  - split: 18
+    text: "结义:97;师傅:73"
+- raw: "97,马.悍,男,无,黄河帮,入门弟子,1,叛逆,愚钝,30,平常/冷酷,刀法,,,暴躁;忠诚;酒鬼,黄河双煞,0,0,师傅:73,-99,0"
+  splits:
+  - split: 1
+    text: "马.悍"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "黄河帮"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "平常/冷酷"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "暴躁;忠诚;酒鬼"
+  - split: 15
+    text: "黄河双煞"
+  - split: 18
+    text: "师傅:73"
+- raw: "98,凤.南飞,男,无,默认,长老,4,算计,超群,48,守序/冷酷,奇门,,,笑里藏刀;善贾;收藏;学识,乐善好施,0,0,,-3,0"
+  splits:
+  - split: 1
+    text: "凤.南飞"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "笑里藏刀;善贾;收藏;学识"
+  - split: 15
+    text: "乐善好施"
+- raw: "99,裘.龙,男,无,默认,亲传弟子,3,固执,平平,43,无序/中立,长兵,,,心狠手辣;酒鬼;浪费,入林龙,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "裘.龙"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/中立"
+  - split: 11
+    text: "长兵"
+  - split: 14
+    text: "心狠手辣;酒鬼;浪费"
+  - split: 15
+    text: "入林龙"
+- raw: "100,张.成化,男,无,默认,正式弟子,2,灵活,聪颖,39,混乱/中立,射术,,,桀骜不驯;练武;勤奋,化虎成龙,0,0,,-4,0"
+  splits:
+  - split: 1
+    text: "张.成化"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "桀骜不驯;练武;勤奋"
+  - split: 15
+    text: "化虎成龙"
+- raw: "101,曾.镇海,男,无,默认,正式弟子,2,稳重,愚钝,40,戒律/凶狠,刀法,,,盛气凌人;纵马驰骋;面目狰狞,翻江镇海,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "曾.镇海"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "盛气凌人;纵马驰骋;面目狰狞"
+  - split: 15
+    text: "翻江镇海"
+- raw: "102,宋.明公,男,无,默认,正式弟子,2,忠厚,聪颖,45,戒律/仁慈,剑法,,,谦逊;战战兢兢;从政;领袖,及时雨,0,0,,-3,0"
+  splits:
+  - split: 1
+    text: "宋.明公"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/仁慈"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "谦逊;战战兢兢;从政;领袖"
+  - split: 15
+    text: "及时雨"
+- raw: "103,戴.壮,男,无,默认,入门弟子,1,简单,平平,33,守序/善良,拳掌,,劈柴刀法;通臂拳,康健;笨拙;宅心仁厚;务农,乐山大患,0,0,,-2,0"
+  splits:
+  - split: 1
+    text: "戴.壮"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/善良"
+  - split: 11
+    text: "拳掌"
+  - split: 13
+    text: "劈柴刀法;通臂拳"
+  - split: 14
+    text: "康健;笨拙;宅心仁厚;务农"
+  - split: 15
+    text: "乐山大患"
+- raw: "104,马.应龙,男,无,默认,亲传弟子,3,稳重,平平,52,戒律/冷酷,刀法,,,纵马驰骋;横刀跃马;大快朵颐,西北四骏,0,0,亲属:105/106/107,-8,0"
+  splits:
+  - split: 1
+    text: "马.应龙"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "纵马驰骋;横刀跃马;大快朵颐"
+  - split: 15
+    text: "西北四骏"
+  - split: 18
+    text: "亲属:105/106/107"
+- raw: "105,马.超群,男,无,默认,正式弟子,2,叛逆,超群,39,无序/凶狠,长兵,,,纵马驰骋;长兵;勤奋,西北四骏,0,0,亲属:106/107,-7,0"
+  splits:
+  - split: 1
+    text: "马.超群"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/凶狠"
+  - split: 11
+    text: "长兵"
+  - split: 14
+    text: "纵马驰骋;长兵;勤奋"
+  - split: 15
+    text: "西北四骏"
+  - split: 18
+    text: "亲属:106/107"
+- raw: "106,马.丹心,女,无,默认,入门弟子,1,忠厚,聪颖,26,无序/仁慈,剑法,,,骑术;御剑;忠诚,西北四骏,0,0,亲属:107,-4,0"
+  splits:
+  - split: 1
+    text: "马.丹心"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "骑术;御剑;忠诚"
+  - split: 15
+    text: "西北四骏"
+  - split: 18
+    text: "亲属:107"
+- raw: "107,马.宝郭,男,无,默认,外门弟子,0,简单,愚钝,46,混乱/中立,拳掌,,,骑术;笨拙;刚愎;吟诗,西北四骏,0,0,,-2,0"
+  splits:
+  - split: 1
+    text: "马.宝郭"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "骑术;笨拙;刚愎;吟诗"
+  - split: 15
+    text: "西北四骏"
+- raw: "108,郝.大力,男,无,默认,外门弟子,0,忠厚,愚钝,26,混乱/仁慈,拳掌,,,强壮;笨拙;务农;愚钝,神拳无敌,0,0,结义:109/110,-2,0"
+  splits:
+  - split: 1
+    text: "郝.大力"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "混乱/仁慈"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "强壮;笨拙;务农;愚钝"
+  - split: 15
+    text: "神拳无敌"
+  - split: 18
+    text: "结义:109/110"
+- raw: "109,汪.财,男,无,默认,外门弟子,0,纯粹,愚钝,23,混乱/善良,奇门,,,经商;瘦弱;精打细算;愚钝,富可敌国,0,0,结义:110,-3,0"
+  splits:
+  - split: 1
+    text: "汪.财"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "经商;瘦弱;精打细算;愚钝"
+  - split: 15
+    text: "富可敌国"
+  - split: 18
+    text: "结义:110"
+- raw: "110,吴.谋,男,无,默认,外门弟子,0,算计,愚钝,22,无序/善良,射术,,,读书;多病;懦弱;傻头傻脑,智计无双,0,0,,-6,0"
+  splits:
+  - split: 1
+    text: "吴.谋"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "无序/善良"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "读书;多病;懦弱;傻头傻脑"
+  - split: 15
+    text: "智计无双"
+- raw: "111,熊.百胜,男,无,默认,亲传弟子,3,纯粹,平平,39,平常/凶狠,刀法,,,耍刀;懒惰;刚愎;领袖;挥霍无度,黑风寨大当家,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "熊.百胜"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "平常/凶狠"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "耍刀;懒惰;刚愎;领袖;挥霍无度"
+  - split: 15
+    text: "黑风寨大当家"
+- raw: "112,朱.全,男,无,默认,正式弟子,2,潇洒,聪颖,42,守序/冷酷,拳掌,,,阴险;残忍,黑风寨二当家,0,0,,-9,0"
+  splits:
+  - split: 1
+    text: "朱.全"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "阴险;残忍"
+  - split: 15
+    text: "黑风寨二当家"
+- raw: "113,严.达开,男,无,默认,正式弟子,2,稳重,平平,34,戒律/凶狠,长兵,,,性烈如火;勇敢,黑风寨三当家,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "严.达开"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 11
+    text: "长兵"
+  - split: 14
+    text: "性烈如火;勇敢"
+  - split: 15
+    text: "黑风寨三当家"
+- raw: "114,冯.虎,男,无,默认,入门弟子,1,算计,聪颖,33,守序/中立,刀法,,,暴躁;随从,黑风四贼,0,0,朋友:115/116/117,-8,0"
+  splits:
+  - split: 1
+    text: "冯.虎"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "暴躁;随从"
+  - split: 15
+    text: "黑风四贼"
+  - split: 18
+    text: "朋友:115/116/117"
+- raw: "115,刘.豹,男,无,默认,入门弟子,1,潇洒,平平,36,平常/冷酷,拳掌,,,残忍;叛逆,黑风四贼,0,0,朋友:116/117,-9,0"
+  splits:
+  - split: 1
+    text: "刘.豹"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "平常/冷酷"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "残忍;叛逆"
+  - split: 15
+    text: "黑风四贼"
+  - split: 18
+    text: "朋友:116/117"
+- raw: "116,黄.豺,男,无,默认,外门弟子,0,轻佻,愚钝,28,混乱/冷酷,射术,,,阴险;弱视,黑风四贼,0,0,朋友:117,-8,0"
+  splits:
+  - split: 1
+    text: "黄.豺"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "混乱/冷酷"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "阴险;弱视"
+  - split: 15
+    text: "黑风四贼"
+  - split: 18
+    text: "朋友:117"
+- raw: "117,韩.狼,女,无,默认,外门弟子,0,灵活,平平,31,混乱/凶狠,奇门,,,懦弱;瘦骨嶙峋,黑风四贼,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "韩.狼"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/凶狠"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "懦弱;瘦骨嶙峋"
+  - split: 15
+    text: "黑风四贼"
+- raw: "118,吴.忧,女,无,大隐阁,副掌门,5,灵活,聪颖,48,无序/仁慈,轻功/奇门,,,避世绝俗;气定神闲;虚怀若谷;鸾吟凤唱;飞檐走壁;奇门遁甲;儒术,大隐琴侠,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "吴.忧"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "大隐阁"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "轻功/奇门"
+  - split: 14
+    text: "避世绝俗;气定神闲;虚怀若谷;鸾吟凤唱;飞檐走壁;奇门遁甲;儒术"
+  - split: 15
+    text: "大隐琴侠"
+- raw: "119,孟.经世,男,无,霸刀门,副掌门,5,算计,平平,56,守序/冷酷,绝技/刀法,,,囤积居奇;暴躁;盛气凌人;公正不阿;身怀绝技;横刀跃马;笔走龙蛇,霸刀狂侠,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "孟.经世"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "霸刀门"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 11
+    text: "绝技/刀法"
+  - split: 14
+    text: "囤积居奇;暴躁;盛气凌人;公正不阿;身怀绝技;横刀跃马;笔走龙蛇"
+  - split: 15
+    text: "霸刀狂侠"
+- raw: "120,郭.淮,男,无,丐帮,副掌门,6,忠厚,愚钝,45,戒律/仁慈,内功/拳掌,,,侠义无双;武痴;浩气凛然;宅心仁厚;炉火纯青;铁手钢拳;愚钝;排山倒海;百折不挠;钢筋铁骨,中原大侠,0,1,,-99,1"
+  splits:
+  - split: 1
+    text: "郭.淮"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "丐帮"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "愚钝"
+  - split: 10
+    text: "戒律/仁慈"
+  - split: 11
+    text: "内功/拳掌"
+  - split: 14
+    text: "侠义无双;武痴;浩气凛然;宅心仁厚;炉火纯青;铁手钢拳;愚钝;排山倒海;百折不挠;钢筋铁骨"
+  - split: 15
+    text: "中原大侠"
+- raw: "121,吕.天行,男,无,蓬莱派,副掌门,5,潇洒,聪颖,51,平常/中立,轻功/剑法,,,淡泊;蛰居偃伏;不骄不躁;博览群书;神出鬼没;剑随意动;剑气,蓬莱奇侠,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "吕.天行"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "蓬莱派"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/中立"
+  - split: 11
+    text: "轻功/剑法"
+  - split: 14
+    text: "淡泊;蛰居偃伏;不骄不躁;博览群书;神出鬼没;剑随意动;剑气"
+  - split: 15
+    text: "蓬莱奇侠"
+- raw: "122,何.足道,男,无,茅山派,副掌门,5,灵活,超群,42,混乱/善良,内功/剑法,,,道士;侠客;浪迹天涯;文思泉涌;内力精纯;人剑合一;卜算,茅山道侠,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "何.足道"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "茅山派"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "内功/剑法"
+  - split: 14
+    text: "道士;侠客;浪迹天涯;文思泉涌;内力精纯;人剑合一;卜算"
+  - split: 15
+    text: "茅山道侠"
+- raw: "123,楚.风疾,男,无,大隐阁,长老,4,灵活,超群,32,守序/善良,射术,,,神出鬼没;百步穿杨;足智多谋;明察秋毫;公正不阿;领袖,敕封御史之风,0,1,结义:124/125/126,-99,0"
+  splits:
+  - split: 1
+    text: "楚.风疾"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "大隐阁"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/善良"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "神出鬼没;百步穿杨;足智多谋;明察秋毫;公正不阿;领袖"
+  - split: 15
+    text: "敕封御史之风"
+  - split: 18
+    text: "结义:124/125/126"
+- raw: "124,林.弄影,女,无,峨眉派,长老,4,潇洒,聪颖,25,无序/仁慈,剑法,,,飞檐走壁;剑随意动;手疾眼快;桀骜不驯;懒惰;随机应变;游斗,敕封御史之林,0,1,结义:125/126,-99,0"
+  splits:
+  - split: 1
+    text: "林.弄影"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "峨眉派"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "飞檐走壁;剑随意动;手疾眼快;桀骜不驯;懒惰;随机应变;游斗"
+  - split: 15
+    text: "敕封御史之林"
+  - split: 18
+    text: "结义:125/126"
+- raw: "125,齐.焱,男,无,飞龙门,长老,4,叛逆,超群,28,戒律/中立,长兵,,,内力精纯;枪扫六合;强身健体;性烈如火;面目狰狞;先锋,敕封御史之火,0,1,结义:126,-99,0"
+  splits:
+  - split: 1
+    text: "齐.焱"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "飞龙门"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/中立"
+  - split: 11
+    text: "长兵"
+  - split: 14
+    text: "内力精纯;枪扫六合;强身健体;性烈如火;面目狰狞;先锋"
+  - split: 15
+    text: "敕封御史之火"
+  - split: 18
+    text: "结义:126"
+- raw: "126,张.峻,男,无,少林寺,长老,4,稳重,平平,34,守序/仁慈,拳掌,,,绝艺超群;拳不离手;百折不挠;不骄不躁;冷静;守备,敕封御史之山,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "张.峻"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "少林寺"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/仁慈"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "绝艺超群;拳不离手;百折不挠;不骄不躁;冷静;守备"
+  - split: 15
+    text: "敕封御史之山"
+- raw: "127,项.问天,男,无,飞龙门,亲传弟子,3,忠厚,超群,29,戒律/仁慈,刀法,,,浩气凛然;废寝忘食;侠客;耍刀;强身健体,侠义七子,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "项.问天"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "飞龙门"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/仁慈"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "浩气凛然;废寝忘食;侠客;耍刀;强身健体"
+  - split: 15
+    text: "侠义七子"
+- raw: "128,郭.勇锐,男,无,丐帮,亲传弟子,1,简单,平平,26,平常/善良,拳掌,,,正直;忠心耿耿;傻头傻脑;勇敢,侠义七子,0,1,,-99,1"
+  splits:
+  - split: 1
+    text: "郭.勇锐"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "丐帮"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "平常/善良"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "正直;忠心耿耿;傻头傻脑;勇敢"
+  - split: 15
+    text: "侠义七子"
+- raw: "129,阮.芷,男,无,大隐阁,亲传弟子,3,灵活,究极,18,混乱/中立,奇门,,,桀骜不驯;浪费;刚愎;足智多谋;锐眼;见多识广;雅士,侠义七子,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "阮.芷"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "大隐阁"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "桀骜不驯;浪费;刚愎;足智多谋;锐眼;见多识广;雅士"
+  - split: 15
+    text: "侠义七子"
+- raw: "130,彗.定,男,无,少林寺,亲传弟子,3,固执,平平,27,戒律/仁慈,长兵,,,孜孜不倦;武痴;学佛;孔武有力;静修;化缘,侠义七子,0,1,朋友:131,-99,0"
+  splits:
+  - split: 1
+    text: "彗.定"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "少林寺"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/仁慈"
+  - split: 11
+    text: "长兵"
+  - split: 14
+    text: "孜孜不倦;武痴;学佛;孔武有力;静修;化缘"
+  - split: 15
+    text: "侠义七子"
+  - split: 18
+    text: "朋友:131"
+- raw: "131,清.风,女,无,武当派,亲传弟子,3,算计,超群,20,无序/善良,剑法,,,无所用心;美貌;修道;手疾眼快;卜算,侠义七子,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "清.风"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "武当派"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/善良"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "无所用心;美貌;修道;手疾眼快;卜算"
+  - split: 15
+    text: "侠义七子"
+- raw: "132,李.云鹤,女,无,药王谷,正式弟子,2,潇洒,聪颖,19,混乱/善良,射术,,,宅心仁厚;学医;勤奋;勇敢;视线模糊;医术,侠义七子,0,1,师傅:16,-99,0"
+  splits:
+  - split: 1
+    text: "李.云鹤"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "药王谷"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "宅心仁厚;学医;勤奋;勇敢;视线模糊;医术"
+  - split: 15
+    text: "侠义七子"
+  - split: 18
+    text: "师傅:16"
+- raw: "133,吕.舞阳,男,无,蓬莱派,正式弟子,2,轻佻,聪颖,22,平常/冷酷,剑法,,,心狠手辣;练武;游手好闲;桀骜不驯,侠义七子,0,1,,-99,0"
+  splits:
+  - split: 1
+    text: "吕.舞阳"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "蓬莱派"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "平常/冷酷"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "心狠手辣;练武;游手好闲;桀骜不驯"
+  - split: 15
+    text: "侠义七子"
+- raw: "134,曲.佩环,女,无,默认,外门弟子,0,简单,聪颖,21,守序/中立,拳掌,,,美貌;余音绕梁;绘画;书法;雅士,,0,0,,-4,0"
+  splits:
+  - split: 1
+    text: "曲.佩环"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "美貌;余音绕梁;绘画;书法;雅士"
+- raw: "135,水.清秋,女,无,默认,入门弟子,1,灵活,超群,19,无序/冷酷,射术,,,明眸皓齿;博览群书;文思泉涌;习文,,0,0,,-6,0"
+  splits:
+  - split: 1
+    text: "水.清秋"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "无序/冷酷"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "明眸皓齿;博览群书;文思泉涌;习文"
+- raw: "136,柳.如月,女,无,默认,正式弟子,2,纯粹,究极,25,平常/仁慈,奇门,,,倾国倾城;舞态生风;炮凤烹龙,,0,0,,-1,0"
+  splits:
+  - split: 1
+    text: "柳.如月"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "正式弟子"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/仁慈"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "倾国倾城;舞态生风;炮凤烹龙"
+- raw: "137,殷.雨霏,女,无,默认,亲传弟子,3,固执,聪颖,24,戒律/冷酷,剑法/长兵,,,明眸皓齿;棋高一着;命途多舛,玉面判官,0,0,师傅:124,-5,0"
+  splits:
+  - split: 1
+    text: "殷.雨霏"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "剑法/长兵"
+  - split: 14
+    text: "明眸皓齿;棋高一着;命途多舛"
+  - split: 15
+    text: "玉面判官"
+  - split: 18
+    text: "师傅:124"
+- raw: "138,北冥.雪,女,无,默认,长老,4,潇洒,超群,28,混乱/凶狠,刀法/射术,,,倾国倾城;盛气凌人;嗜赌如命;相士,,0,0,,-9,1"
+  splits:
+  - split: 1
+    text: "北冥.雪"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/凶狠"
+  - split: 11
+    text: "刀法/射术"
+  - split: 14
+    text: "倾国倾城;盛气凌人;嗜赌如命;相士"
+- raw: "139,金.龙生,男,无,默认,副掌门,7,稳重,究极,61,平常/中立,内功/轻功/绝技,学识/口才,,武学天才;鸿儒大学;未卜先知;神机妙算;慧眼独具;博学多才;不老长生;起死回生;艺成百家;武学宗师,江湖百晓,0,0,,-3,1"
+  splits:
+  - split: 1
+    text: "金.龙生"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/中立"
+  - split: 11
+    text: "内功/轻功/绝技"
+  - split: 12
+    text: "学识/口才"
+  - split: 14
+    text: "武学天才;鸿儒大学;未卜先知;神机妙算;慧眼独具;博学多才;不老长生;起死回生;艺成百家;武学宗师"
+  - split: 15
+    text: "江湖百晓"
+- raw: "140,天.残,男,无,默认,副掌门,6,固执,超群,71,混乱/善良,拳掌/剑法/刀法,,元始天功;飘飘欲仙;虎啸龙吟,缚鸡之力;旧病沉疴;铁手钢拳;人剑合一;一刀两断;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师,侠盗四奇,1,0,,-4,0"
+  splits:
+  - split: 1
+    text: "天.残"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "拳掌/剑法/刀法"
+  - split: 13
+    text: "元始天功;飘飘欲仙;虎啸龙吟"
+  - split: 14
+    text: "缚鸡之力;旧病沉疴;铁手钢拳;人剑合一;一刀两断;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
+  - split: 15
+    text: "侠盗四奇"
+- raw: "141,地.缺,男,无,默认,副掌门,6,简单,平平,68,守序/中立,剑法/刀法/奇门,,元始天功;飘飘欲仙;虎啸龙吟,东倒西歪;经脉断绝;奇门遁甲;人剑合一;一刀两断;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师,侠盗四奇,1,0,,-2,0"
+  splits:
+  - split: 1
+    text: "地.缺"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "剑法/刀法/奇门"
+  - split: 13
+    text: "元始天功;飘飘欲仙;虎啸龙吟"
+  - split: 14
+    text: "东倒西歪;经脉断绝;奇门遁甲;人剑合一;一刀两断;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
+  - split: 15
+    text: "侠盗四奇"
+- raw: "142,南.丑,男,无,默认,副掌门,6,轻佻,聪颖,65,无序/仁慈,奇门/长兵/射术,,元始天功;飘飘欲仙;虎啸龙吟,百丑千拙;雾里看花;奇门遁甲;例无虚发;枪扫六合;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师,侠盗四奇,1,0,,-3,0"
+  splits:
+  - split: 1
+    text: "南.丑"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "奇门/长兵/射术"
+  - split: 13
+    text: "元始天功;飘飘欲仙;虎啸龙吟"
+  - split: 14
+    text: "百丑千拙;雾里看花;奇门遁甲;例无虚发;枪扫六合;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
+  - split: 15
+    text: "侠盗四奇"
+- raw: "143,北.怪,男,无,默认,副掌门,6,叛逆,究极,59,无序/善良,射术/拳掌/长兵,,元始天功;飘飘欲仙;虎啸龙吟,痴傻蒙昧;胆小如鼠;铁手钢拳;例无虚发;枪扫六合;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师,侠盗四奇,1,0,,-5,0"
+  splits:
+  - split: 1
+    text: "北.怪"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "无序/善良"
+  - split: 11
+    text: "射术/拳掌/长兵"
+  - split: 13
+    text: "元始天功;飘飘欲仙;虎啸龙吟"
+  - split: 14
+    text: "痴傻蒙昧;胆小如鼠;铁手钢拳;例无虚发;枪扫六合;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
+  - split: 15
+    text: "侠盗四奇"
+- raw: "144,逍遥.生,男,无,大隐阁,副掌门,15,潇洒,究极,64,混乱/中立,奇门/绝技/轻功,,天劫九重;公输遗匣;碧海潮生曲,物我两忘;扭转乾坤;万物归墟;奇门遁甲;奇异莫名;游戏人间;未卜先知;神机妙算;鸿儒大学;慧眼独具,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "逍遥.生"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "大隐阁"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "奇门/绝技/轻功"
+  - split: 13
+    text: "天劫九重;公输遗匣;碧海潮生曲"
+  - split: 14
+    text: "物我两忘;扭转乾坤;万物归墟;奇门遁甲;奇异莫名;游戏人间;未卜先知;神机妙算;鸿儒大学;慧眼独具"
+- raw: "145,独孤.剑,女,无,蓬莱派,副掌门,15,固执,超群,45,戒律/中立,剑法/轻功/内功,,独孤剑法;无尽剑意;仙娥折梅;先天功;天意剑诀,返璞归真;混元一气;太极圆转;人剑合一;气冲斗牛;武学天才;面壁功深;浪迹天涯;铁画银钩;妙至毫巅,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "独孤.剑"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "蓬莱派"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/中立"
+  - split: 11
+    text: "剑法/轻功/内功"
+  - split: 13
+    text: "独孤剑法;无尽剑意;仙娥折梅;先天功;天意剑诀"
+  - split: 14
+    text: "返璞归真;混元一气;太极圆转;人剑合一;气冲斗牛;武学天才;面壁功深;浪迹天涯;铁画银钩;妙至毫巅"
+- raw: "146,炼气.士,女,无,峨眉派,副掌门,15,纯粹,究极,55,平常/冷酷,射术/轻功/绝技,,多情飞刀;九天罗候针;漫天花雨;七星透骨钉;暴雨梨花针;碎颅钉;玉髓冰魄针;银丝网,不老长生;天人合一;先天真气;例无虚发;摘叶飞花;见血封喉;仙风道骨;皓首穷经;鸾吟凤唱;先天气海,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "炼气.士"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "峨眉派"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/冷酷"
+  - split: 11
+    text: "射术/轻功/绝技"
+  - split: 13
+    text: "多情飞刀;九天罗候针;漫天花雨;七星透骨钉;暴雨梨花针;碎颅钉;玉髓冰魄针;银丝网"
+  - split: 14
+    text: "不老长生;天人合一;先天真气;例无虚发;摘叶飞花;见血封喉;仙风道骨;皓首穷经;鸾吟凤唱;先天气海"
+- raw: "147,都.点检,男,无,飞龙门,副掌门,15,算计,超群,57,守序/凶狠,长兵/绝技/内功,,龙胤归藏功;打狗八绝棍;达摩神杖,轰天震地;登峰造极;不动如山;枪扫六合;枪出如龙;艺成百家;雄才伟略;苍鹰搏兔;一骑绝尘;运筹帷幄,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "都.点检"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "飞龙门"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/凶狠"
+  - split: 11
+    text: "长兵/绝技/内功"
+  - split: 13
+    text: "龙胤归藏功;打狗八绝棍;达摩神杖"
+  - split: 14
+    text: "轰天震地;登峰造极;不动如山;枪扫六合;枪出如龙;艺成百家;雄才伟略;苍鹰搏兔;一骑绝尘;运筹帷幄"
+- raw: "148,独臂.刀,男,无,阎罗殿,副掌门,15,忠厚,聪颖,49,戒律/善良,刀法/内功/绝技,,霸刀一式;净乐琉璃刀;蚩尤鬼降,十殿阎王;以劲御气;力降十会;一刀两断;削铁无声;避世绝俗;天煞孤星;侠义无双;至死不渝;背水一战,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "独臂.刀"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "阎罗殿"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "戒律/善良"
+  - split: 11
+    text: "刀法/内功/绝技"
+  - split: 13
+    text: "霸刀一式;净乐琉璃刀;蚩尤鬼降"
+  - split: 14
+    text: "十殿阎王;以劲御气;力降十会;一刀两断;削铁无声;避世绝俗;天煞孤星;侠义无双;至死不渝;背水一战"
+- raw: "149,斗酒.僧,男,无,少林寺,副掌门,15,灵活,究极,66,无序/仁慈,拳掌/内功/轻功,,醉梦鱼龙舞;灵犀一指;白虹贯日掌,即身成佛;功德圆满;天人合一;铁手钢拳;排山倒海;刀枪不入;醉生梦死;饕餮盛宴;赌运亨通;四大皆空,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "斗酒.僧"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "少林寺"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "拳掌/内功/轻功"
+  - split: 13
+    text: "醉梦鱼龙舞;灵犀一指;白虹贯日掌"
+  - split: 14
+    text: "即身成佛;功德圆满;天人合一;铁手钢拳;排山倒海;刀枪不入;醉生梦死;饕餮盛宴;赌运亨通;四大皆空"
+- raw: "150,王.添翼,男,青城派,默认,外门弟子,0,简单,聪颖,20,守序/仁慈,,,,忠心耿耿;勤奋;练武;仁慈;不幸,,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "王.添翼"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "青城派"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "守序/仁慈"
+  - split: 14
+    text: "忠心耿耿;勤奋;练武;仁慈;不幸"
+- raw: "151,雷.殷殷,女,霹雳堂,默认,亲传弟子,0,叛逆,超群,18,混乱/中立,射术,,,美貌;射术;盛气凌人;叛逆,小霹雳,0,0,,-99,0"
+  splits:
+  - split: 1
+    text: "雷.殷殷"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "霹雳堂"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "美貌;射术;盛气凌人;叛逆"
+  - split: 15
+    text: "小霹雳"
+- raw: "152,赵.胤宗,男,无,飞龙门,亲传弟子,5,潇洒,究极,27,守序/中立,长兵/绝技/内功,,龙胤归藏功,轰天震地;登峰造极;不动如山;枪扫六合;枪出如龙;艺成百家;雄才伟略;苍鹰搏兔;一骑绝尘;运筹帷幄,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "赵.胤宗"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "飞龙门"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "长兵/绝技/内功"
+  - split: 13
+    text: "龙胤归藏功"
+  - split: 14
+    text: "轰天震地;登峰造极;不动如山;枪扫六合;枪出如龙;艺成百家;雄才伟略;苍鹰搏兔;一骑绝尘;运筹帷幄"
+- raw: "153,中年天.残,男,无,默认,亲传弟子,3,固执,超群,41,混乱/善良,拳掌,,,缚鸡之力;旧病沉疴;铁手钢拳;内力精纯;飞檐走壁;身怀绝技,侠盗四丑,1,0,,-4,0"
+  splits:
+  - split: 1
+    text: "中年天.残"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "拳掌"
+  - split: 14
+    text: "缚鸡之力;旧病沉疴;铁手钢拳;内力精纯;飞檐走壁;身怀绝技"
+  - split: 15
+    text: "侠盗四丑"
+- raw: "154,中年地.缺,男,无,默认,亲传弟子,3,简单,平平,38,守序/中立,剑法,,,东倒西歪;经脉断绝;人剑合一;内力精纯;飞檐走壁;身怀绝技,侠盗四丑,1,0,,-2,0"
+  splits:
+  - split: 1
+    text: "中年地.缺"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "剑法"
+  - split: 14
+    text: "东倒西歪;经脉断绝;人剑合一;内力精纯;飞檐走壁;身怀绝技"
+  - split: 15
+    text: "侠盗四丑"
+- raw: "155,中年南.丑,男,无,默认,亲传弟子,3,轻佻,聪颖,35,无序/仁慈,奇门,,,百丑千拙;雾里看花;奇门遁甲;内力精纯;飞檐走壁;身怀绝技,侠盗四丑,1,0,,-3,0"
+  splits:
+  - split: 1
+    text: "中年南.丑"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "无序/仁慈"
+  - split: 11
+    text: "奇门"
+  - split: 14
+    text: "百丑千拙;雾里看花;奇门遁甲;内力精纯;飞檐走壁;身怀绝技"
+  - split: 15
+    text: "侠盗四丑"
+- raw: "156,中年北.怪,男,无,默认,亲传弟子,3,叛逆,究极,29,无序/善良,射术,,,痴傻蒙昧;胆小如鼠;例无虚发;内力精纯;飞檐走壁;身怀绝技,侠盗四丑,1,0,,-5,0"
+  splits:
+  - split: 1
+    text: "中年北.怪"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "无序/善良"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "痴傻蒙昧;胆小如鼠;例无虚发;内力精纯;飞檐走壁;身怀绝技"
+  - split: 15
+    text: "侠盗四丑"
+- raw: "157,赵.义仁,男,无,飞龙门,长老,5,算计,超群,29,戒律/凶狠,长兵,,逆转周天大法,唯我独尊;醉生梦死;心狠手辣;枪扫六合;枪芒;拔山扛鼎;钢筋铁骨;刀枪不入;绝艺超群,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "赵.义仁"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "飞龙门"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "戒律/凶狠"
+  - split: 11
+    text: "长兵"
+  - split: 13
+    text: "逆转周天大法"
+  - split: 14
+    text: "唯我独尊;醉生梦死;心狠手辣;枪扫六合;枪芒;拔山扛鼎;钢筋铁骨;刀枪不入;绝艺超群"
+- raw: "158,石.守信,男,无,阎罗殿,长老,5,纯粹,超群,36,守序/凶狠,刀法/拳掌,采伐,万恶魔功;杀人刀法,唯我独尊;雄才伟略;公正不阿;一刀两断;拔山扛鼎;钢筋铁骨;刀枪不入;内力精纯;绝艺超群;刀锋,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "石.守信"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "阎罗殿"
+  - split: 5
+    text: "长老"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/凶狠"
+  - split: 11
+    text: "刀法/拳掌"
+  - split: 12
+    text: "采伐"
+  - split: 13
+    text: "万恶魔功;杀人刀法"
+  - split: 14
+    text: "唯我独尊;雄才伟略;公正不阿;一刀两断;拔山扛鼎;钢筋铁骨;刀枪不入;内力精纯;绝艺超群;刀锋"
+- raw: "159,中年赵.胤宗,男,无,飞龙门,副掌门,12,潇洒,究极,33,守序/中立,长兵/绝技/内功,,龙胤归藏功,轰天震地;登峰造极;不动如山;枪扫六合;枪出如龙;艺成百家;雄才伟略;苍鹰搏兔;一骑绝尘;运筹帷幄,,1,1,,-99,0"
+  splits:
+  - split: 1
+    text: "中年赵.胤宗"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "飞龙门"
+  - split: 5
+    text: "副掌门"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "长兵/绝技/内功"
+  - split: 13
+    text: "龙胤归藏功"
+  - split: 14
+    text: "轰天震地;登峰造极;不动如山;枪扫六合;枪出如龙;艺成百家;雄才伟略;苍鹰搏兔;一骑绝尘;运筹帷幄"
+- raw: "160,傅.砚之,男,无,默认,外门弟子,0,固执,聪颖,19,混乱/仁慈,拳掌/奇门,,禁军拳术,缚鸡之力;智力;学识;仁慈;儒生;博览群书;军师,,0,0,,-6,0"
+  splits:
+  - split: 1
+    text: "傅.砚之"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "外门弟子"
+  - split: 7
+    text: "固执"
+  - split: 8
+    text: "聪颖"
+  - split: 10
+    text: "混乱/仁慈"
+  - split: 11
+    text: "拳掌/奇门"
+  - split: 13
+    text: "禁军拳术"
+  - split: 14
+    text: "缚鸡之力;智力;学识;仁慈;儒生;博览群书;军师"
+- raw: "161,张.弥勒,男,无,默认,入门弟子,1,忠厚,平平,36,混乱/善良,拳掌,,,,拳佛,0,0,,10,0"
+  splits:
+  - split: 1
+    text: "张.弥勒"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "忠厚"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/善良"
+  - split: 11
+    text: "拳掌"
+  - split: 15
+    text: "拳佛"
+- raw: "162,陆.沉舟,男,无,默认,入门弟子,1,简单,平平,53,守序/中立,剑法,,,,陆地剑仙,0,0,,13,0"
+  splits:
+  - split: 1
+    text: "陆.沉舟"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "简单"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "守序/中立"
+  - split: 11
+    text: "剑法"
+  - split: 15
+    text: "陆地剑仙"
+- raw: "163,王.霸,男,无,默认,入门弟子,1,稳重,平平,48,戒律/冷酷,刀法,,,,横刀灭九州,0,0,,12,0"
+  splits:
+  - split: 1
+    text: "王.霸"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "稳重"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/冷酷"
+  - split: 11
+    text: "刀法"
+  - split: 15
+    text: "横刀灭九州"
+- raw: "164,龙.灭,男,无,默认,入门弟子,1,算计,平平,32,戒律/善良,长兵,,,,铁枪破宇宙,0,0,,4,0"
+  splits:
+  - split: 1
+    text: "龙.灭"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "戒律/善良"
+  - split: 11
+    text: "长兵"
+  - split: 15
+    text: "铁枪破宇宙"
+- raw: "165,罗.八怪,男,无,默认,入门弟子,1,灵活,平平,28,混乱/中立,奇门,,,,出奇必胜,0,0,,15,0"
+  splits:
+  - split: 1
+    text: "罗.八怪"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "灵活"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/中立"
+  - split: 11
+    text: "奇门"
+  - split: 15
+    text: "出奇必胜"
+- raw: "166,菲.燕子,女,无,默认,入门弟子,1,轻佻,平平,26,无序/凶狠,射术,,,,百步穿针,0,0,,1,0"
+  splits:
+  - split: 1
+    text: "菲.燕子"
+  - split: 2
+    text: "女"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "轻佻"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "无序/凶狠"
+  - split: 11
+    text: "射术"
+  - split: 15
+    text: "百步穿针"
+- raw: "167,叶.寒,男,无,默认,亲传弟子,3,叛逆,超群,24,守序/冷酷,刀法/射术,,,叛逆;酒鬼;赌运亨通;游戏人间,百骰百胜,0,0,,-7,0"
+  splits:
+  - split: 1
+    text: "叶.寒"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "叛逆"
+  - split: 8
+    text: "超群"
+  - split: 10
+    text: "守序/冷酷"
+  - split: 11
+    text: "刀法/射术"
+  - split: 14
+    text: "叛逆;酒鬼;赌运亨通;游戏人间"
+  - split: 15
+    text: "百骰百胜"
+- raw: "168,李.天临,男,无,默认,入门弟子,2,纯粹,究极,18,平常/仁慈,剑法/奇门,,,武学天才;正直;勤奋;游侠,,0,0,,-4,0"
+  splits:
+  - split: 1
+    text: "李.天临"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "纯粹"
+  - split: 8
+    text: "究极"
+  - split: 10
+    text: "平常/仁慈"
+  - split: 11
+    text: "剑法/奇门"
+  - split: 14
+    text: "武学天才;正直;勤奋;游侠"
+- raw: "169,熊.刚,男,无,默认,入门弟子,1,潇洒,平平,30,混乱/冷酷,刀法,,,残忍;强壮,滚地雷,0,0,,-8,0"
+  splits:
+  - split: 1
+    text: "熊.刚"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "入门弟子"
+  - split: 7
+    text: "潇洒"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/冷酷"
+  - split: 11
+    text: "刀法"
+  - split: 14
+    text: "残忍;强壮"
+  - split: 15
+    text: "滚地雷"
+- raw: "170,王.伦,男,无,默认,亲传弟子,3,算计,平平,32,混乱/冷酷,射术,,,阴险;刚愎,白衣秀士,0,0,,-6,0"
+  splits:
+  - split: 1
+    text: "王.伦"
+  - split: 2
+    text: "男"
+  - split: 3
+    text: "无"
+  - split: 4
+    text: "默认"
+  - split: 5
+    text: "亲传弟子"
+  - split: 7
+    text: "算计"
+  - split: 8
+    text: "平平"
+  - split: 10
+    text: "混乱/冷酷"
+  - split: 11
+    text: "射术"
+  - split: 14
+    text: "阴险;刚愎"
+  - split: 15
+    text: "白衣秀士"

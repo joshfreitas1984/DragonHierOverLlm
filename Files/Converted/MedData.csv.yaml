@@ -1,0 +1,676 @@
+- raw: "ID,名称,描述,等级,生命,生命上限,内力,内力上限,体力,外伤,内伤,中毒,Buff,价值,小类,审核名"
+  splits:
+  - split: 1
+    text: "名称"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "描述"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "等级"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "生命"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "生命上限"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 6
+    text: "内力"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 7
+    text: "内力上限"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 8
+    text: "体力"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "外伤"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "内伤"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "中毒"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 13
+    text: "价值"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 14
+    text: "小类"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "审核名"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "0,补血丹,,0,20,0,0,0,0,0,0,0,0,25,0,无"
+  splits:
+  - split: 1
+    text: "补血丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "1,小还丹,,1,40,0,0,0,0,0,0,0,0,50,0,无"
+  splits:
+  - split: 1
+    text: "小还丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "2,大还丹,,2,80,0,0,0,0,0,0,0,0,100,0,无"
+  splits:
+  - split: 1
+    text: "大还丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "3,人参养荣丸,,3,120,0,0,0,0,0,0,0,0,200,0,无"
+  splits:
+  - split: 1
+    text: "人参养荣丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "4,玉洞黑石丹,,4,160,0,0,0,0,0,0,0,0,400,0,无"
+  splits:
+  - split: 1
+    text: "玉洞黑石丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "5,万灵回生散,,5,200,0,0,0,0,0,0,0,0,800,0,无"
+  splits:
+  - split: 1
+    text: "万灵回生散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "6,益气散,,0,0,0,40,0,0,0,0,0,0,25,0,无"
+  splits:
+  - split: 1
+    text: "益气散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "7,行气丹,,1,0,0,80,0,0,0,0,0,0,50,0,无"
+  splits:
+  - split: 1
+    text: "行气丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "8,逍遥丹,,2,0,0,160,0,0,0,0,0,0,100,0,无"
+  splits:
+  - split: 1
+    text: "逍遥丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "9,参苓白术散,,3,0,0,240,0,0,0,0,0,0,200,0,无"
+  splits:
+  - split: 1
+    text: "参苓白术散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "10,济生养气丸,,4,0,0,320,0,0,0,0,0,0,400,0,无"
+  splits:
+  - split: 1
+    text: "济生养气丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "11,紫霄玄关散,,5,0,0,400,0,0,0,0,0,0,800,0,无"
+  splits:
+  - split: 1
+    text: "紫霄玄关散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "12,八珍散,,0,15,0,30,0,0,0,0,0,0,50,0,无"
+  splits:
+  - split: 1
+    text: "八珍散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "13,无常丹,,1,30,0,60,0,0,0,0,0,0,100,0,无"
+  splits:
+  - split: 1
+    text: "无常丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "14,紫金丹,,2,60,0,120,0,0,0,0,0,0,200,0,无"
+  splits:
+  - split: 1
+    text: "紫金丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "15,天王补心丹,,3,90,0,180,0,0,0,0,0,0,400,0,无"
+  splits:
+  - split: 1
+    text: "天王补心丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "16,生生造化丹,,4,120,0,240,0,0,0,0,0,0,800,0,无"
+  splits:
+  - split: 1
+    text: "生生造化丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "17,九转还魂丹,,5,150,0,300,0,0,0,0,0,0,1600,0,无"
+  splits:
+  - split: 1
+    text: "九转还魂丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "18,止血散,,0,0,0,0,0,0,-5,0,0,0,50,0,无"
+  splits:
+  - split: 1
+    text: "止血散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "19,金疮散,,1,0,0,0,0,0,-10,0,0,0,100,0,无"
+  splits:
+  - split: 1
+    text: "金疮散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "20,三七跌打散,,2,0,0,0,0,0,-20,0,0,0,200,0,无"
+  splits:
+  - split: 1
+    text: "三七跌打散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "21,接骨七厘散,,3,0,0,0,0,0,-30,0,0,0,400,0,无"
+  splits:
+  - split: 1
+    text: "接骨七厘散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "22,血府逐瘀散,,4,0,0,0,0,0,-40,0,0,0,800,0,无"
+  splits:
+  - split: 1
+    text: "血府逐瘀散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "23,天香断续散,,5,0,0,0,0,0,-50,0,0,0,1600,0,无"
+  splits:
+  - split: 1
+    text: "天香断续散"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "24,通络丹,,0,0,0,0,0,0,0,-5,0,0,50,0,无"
+  splits:
+  - split: 1
+    text: "通络丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "25,紫藤丹,,1,0,0,0,0,0,0,-10,0,0,100,0,无"
+  splits:
+  - split: 1
+    text: "紫藤丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "26,牛黄血竭丹,,2,0,0,0,0,0,0,-20,0,0,200,0,无"
+  splits:
+  - split: 1
+    text: "牛黄血竭丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "27,田七鲨胆丹,,3,0,0,0,0,0,0,-30,0,0,400,0,无"
+  splits:
+  - split: 1
+    text: "田七鲨胆丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "28,三黄宝腊丹,,4,0,0,0,0,0,0,-40,0,0,800,0,无"
+  splits:
+  - split: 1
+    text: "三黄宝腊丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "29,还阳正气丹,,5,0,0,0,0,0,0,-50,0,0,1600,0,无"
+  splits:
+  - split: 1
+    text: "还阳正气丹"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "30,黄连丸,,0,0,0,0,0,0,0,0,-5,0,50,0,无"
+  splits:
+  - split: 1
+    text: "黄连丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "31,荆防丸,,1,0,0,0,0,0,0,0,-10,0,100,0,无"
+  splits:
+  - split: 1
+    text: "荆防丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "32,六味地黄丸,,2,0,0,0,0,0,0,0,-20,0,200,0,无"
+  splits:
+  - split: 1
+    text: "六味地黄丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "33,天心解毒丸,,3,0,0,0,0,0,0,0,-30,0,400,0,无"
+  splits:
+  - split: 1
+    text: "天心解毒丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "34,金花玉露丸,,4,0,0,0,0,0,0,0,-40,0,800,0,无"
+  splits:
+  - split: 1
+    text: "金花玉露丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "35,龙涎净厄丸,,5,0,0,0,0,0,0,0,-50,0,1600,0,无"
+  splits:
+  - split: 1
+    text: "龙涎净厄丸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""

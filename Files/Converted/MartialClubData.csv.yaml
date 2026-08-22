@@ -1,0 +1,231 @@
+- raw: "武馆,擅长武学,武学ID"
+  splits:
+  - split: 0
+    text: "武馆"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "擅长武学"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "武学ID"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "京城,内功/长兵/奇门,1;28;18;94;23"
+  splits:
+  - split: 0
+    text: "京城"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "内功/长兵/奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "杭州,轻功/刀法,5;37;16;80"
+  splits:
+  - split: 0
+    text: "杭州"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "轻功/刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "福州,内功/射术,0;27;119;26"
+  splits:
+  - split: 0
+    text: "福州"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "内功/射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "大理,拳掌/奇门,10;66;22;104"
+  splits:
+  - split: 0
+    text: "大理"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "拳掌/奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "幽州,剑法/刀法,12;69;161;17"
+  splits:
+  - split: 0
+    text: "幽州"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "剑法/刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "晋阳,绝技/长兵,7;55;19;90;179"
+  splits:
+  - split: 0
+    text: "晋阳"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "绝技/长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "成都,轻功/射术,3;25;112;205"
+  splits:
+  - split: 0
+    text: "成都"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "轻功/射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "西凉,刀法/长兵,15;78;175;20"
+  splits:
+  - split: 0
+    text: "西凉"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "刀法/长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "江陵,绝技/剑法,6;48;138;14"
+  splits:
+  - split: 0
+    text: "江陵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "绝技/剑法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "扬州,剑法/射术,13;71;24;108"
+  splits:
+  - split: 0
+    text: "扬州"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "剑法/射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "逻娑,内功/奇门,2;21;99;190"
+  splits:
+  - split: 0
+    text: "逻娑"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "内功/奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "灵州,轻功/拳掌,4;44;129;11"
+  splits:
+  - split: 0
+    text: "灵州"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "轻功/拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "应天,绝技/拳掌,8;9;58;152"
+  splits:
+  - split: 0
+    text: "应天"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "绝技/拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""

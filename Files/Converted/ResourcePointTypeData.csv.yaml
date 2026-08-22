@@ -1,0 +1,689 @@
+- raw: "id,名字,资源,加成,守城效果"
+  splits:
+  - split: 1
+    text: "名字"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "资源"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "加成"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "守城效果"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "0,茶山,\"威望+2,药材+1\",技艺经验0.01,速度+0.05"
+  splits:
+  - split: 1
+    text: "茶山"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"威望+2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "药材+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "技艺经验0.01"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "速度+0.05"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "1,瓷窑,\"威望+3,银钱+1\",技艺经验0.02,速度+0.1"
+  splits:
+  - split: 1
+    text: "瓷窑"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"威望+3"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "银钱+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "技艺经验0.02"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "速度+0.1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "2,绸缎,\"威望+4,银钱+2\",技艺经验0.03,速度+0.15"
+  splits:
+  - split: 1
+    text: "绸缎"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"威望+4"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "银钱+2\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "技艺经验0.03"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "速度+0.15"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "3,铜矿,\"银钱+2,矿石+1\",弟子功绩0.01,伤害+0.05"
+  splits:
+  - split: 1
+    text: "铜矿"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"银钱+2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "矿石+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "弟子功绩0.01"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "伤害+0.05"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "4,银矿,\"银钱+2,矿石+2\",弟子功绩0.02,伤害+0.1"
+  splits:
+  - split: 1
+    text: "银矿"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"银钱+2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "矿石+2\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "弟子功绩0.02"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "伤害+0.1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "5,金矿,\"银钱+5,矿石+1\",弟子功绩0.03,伤害+0.15"
+  splits:
+  - split: 1
+    text: "金矿"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"银钱+5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "矿石+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "弟子功绩0.03"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "伤害+0.15"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "6,农田,粮食+3,恢复效率0.01,命中+0.05"
+  splits:
+  - split: 1
+    text: "农田"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "粮食+3"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "恢复效率0.01"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "命中+0.05"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "7,牧场,\"粮食+3,威望+1\",恢复效率0.02,命中+0.1"
+  splits:
+  - split: 1
+    text: "牧场"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"粮食+3"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "威望+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "恢复效率0.02"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "命中+0.1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "8,果园,\"粮食+4,木料+2\",恢复效率0.03,命中+0.15"
+  splits:
+  - split: 1
+    text: "果园"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"粮食+4"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "木料+2\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "恢复效率0.03"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "命中+0.15"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "9,湖泽,\"木料+2,粮食+1\",建造速度0.02,城防耐久+0.1"
+  splits:
+  - split: 1
+    text: "湖泽"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"木料+2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "粮食+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "建造速度0.02"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "城防耐久+0.1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "10,森林,\"木料+3,药材+1\",建造速度0.04,城防耐久+0.2"
+  splits:
+  - split: 1
+    text: "森林"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"木料+3"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "药材+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "建造速度0.04"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "城防耐久+0.2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "11,古木,\"木料+4,药材+2\",建造速度0.06,城防耐久+0.3"
+  splits:
+  - split: 1
+    text: "古木"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"木料+4"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "药材+2\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "建造速度0.06"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "城防耐久+0.3"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "12,盐矿,\"矿石+2,粮食+1\",科研效率0.02,护甲+2.5"
+  splits:
+  - split: 1
+    text: "盐矿"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"矿石+2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "粮食+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "科研效率0.02"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "护甲+2.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "13,铁矿,\"矿石+3,银钱+1\",科研效率0.04,护甲+5"
+  splits:
+  - split: 1
+    text: "铁矿"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"矿石+3"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "银钱+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "科研效率0.04"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "护甲+5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "14,玉矿,\"矿石+4,威望+2\",科研效率0.06,护甲+7.5"
+  splits:
+  - split: 1
+    text: "玉矿"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"矿石+4"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "威望+2\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "科研效率0.06"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "护甲+7.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "15,甘泉,\"药材+2,粮食+1\",疗伤效率0.01,回血+0.005"
+  splits:
+  - split: 1
+    text: "甘泉"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"药材+2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "粮食+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "疗伤效率0.01"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "回血+0.005"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "16,药圃,\"药材+3,威望+1\",疗伤效率0.02,回血+0.01"
+  splits:
+  - split: 1
+    text: "药圃"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"药材+3"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "威望+1\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "疗伤效率0.02"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "回血+0.01"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "17,灵谷,\"药材+4,木料+2\",疗伤效率0.03,回血+0.015"
+  splits:
+  - split: 1
+    text: "灵谷"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "\"药材+4"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "木料+2\""
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "疗伤效率0.03"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "回血+0.015"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""

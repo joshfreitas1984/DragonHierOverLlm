@@ -1,0 +1,154 @@
+- raw: "id,名字,小类,属性,动画"
+  splits:
+  - split: 1
+    text: "名字"
+  - split: 2
+    text: "小类"
+  - split: 3
+    text: "属性"
+  - split: 4
+    text: "动画"
+- raw: "0,手甲,0,0,skill0_0"
+  splits:
+  - split: 1
+    text: "手甲"
+- raw: "1,指刺,0,1,skill0_2"
+  splits:
+  - split: 1
+    text: "指刺"
+- raw: "2,钩爪,0,2,skill0_0"
+  splits:
+  - split: 1
+    text: "钩爪"
+- raw: "3,指虎,0,3,skill0_2"
+  splits:
+  - split: 1
+    text: "指虎"
+- raw: "4,拳套,0,4,skill0_0"
+  splits:
+  - split: 1
+    text: "拳套"
+- raw: "5,指环,0,5,skill0_2"
+  splits:
+  - split: 1
+    text: "指环"
+- raw: "6,重剑,1,0,skill1_2"
+  splits:
+  - split: 1
+    text: "重剑"
+- raw: "7,短剑,1,1,skill1_1"
+  splits:
+  - split: 1
+    text: "短剑"
+- raw: "8,细剑,1,2,skill1_1"
+  splits:
+  - split: 1
+    text: "细剑"
+- raw: "9,长剑,1,3,skill1_2"
+  splits:
+  - split: 1
+    text: "长剑"
+- raw: "10,大剑,1,4,skill1_2"
+  splits:
+  - split: 1
+    text: "大剑"
+- raw: "11,软剑,1,5,skill1_1"
+  splits:
+  - split: 1
+    text: "软剑"
+- raw: "12,重刀,2,0,skill2_1"
+  splits:
+  - split: 1
+    text: "重刀"
+- raw: "13,短刀,2,1,skill2_0"
+  splits:
+  - split: 1
+    text: "短刀"
+- raw: "14,唐刀,2,2,skill2_0"
+  splits:
+  - split: 1
+    text: "唐刀"
+- raw: "15,朴刀,2,3,skill2_1"
+  splits:
+  - split: 1
+    text: "朴刀"
+- raw: "16,大刀,2,4,skill2_1"
+  splits:
+  - split: 1
+    text: "大刀"
+- raw: "17,弯刀,2,5,skill2_0"
+  splits:
+  - split: 1
+    text: "弯刀"
+- raw: "18,长戟,3,0,skill3_1"
+  splits:
+  - split: 1
+    text: "长戟"
+- raw: "19,长枪,3,1,skill3_1"
+  splits:
+  - split: 1
+    text: "长枪"
+- raw: "20,长叉,3,2,skill3_1"
+  splits:
+  - split: 1
+    text: "长叉"
+- raw: "21,长戈,3,3,skill3_2"
+  splits:
+  - split: 1
+    text: "长戈"
+- raw: "22,长矛,3,4,skill3_2"
+  splits:
+  - split: 1
+    text: "长矛"
+- raw: "23,长棍,3,5,skill3_2"
+  splits:
+  - split: 1
+    text: "长棍"
+- raw: "24,飞轮,4,0,skill4_1"
+  splits:
+  - split: 1
+    text: "飞轮"
+- raw: "25,对刺,4,1,skill4_0"
+  splits:
+  - split: 1
+    text: "对刺"
+- raw: "26,判笔,4,2,skill4_4"
+  splits:
+  - split: 1
+    text: "判笔"
+- raw: "27,软鞭,4,3,skill4_3"
+  splits:
+  - split: 1
+    text: "软鞭"
+- raw: "28,铁扇,4,4,skill4_6"
+  splits:
+  - split: 1
+    text: "铁扇"
+- raw: "29,瑶琴,4,5,skill4_8"
+  splits:
+  - split: 1
+    text: "瑶琴"
+- raw: "30,长弓,5,0,skill5_2"
+  splits:
+  - split: 1
+    text: "长弓"
+- raw: "31,短弓,5,1,skill5_0"
+  splits:
+  - split: 1
+    text: "短弓"
+- raw: "32,曲弓,5,2,skill5_2"
+  splits:
+  - split: 1
+    text: "曲弓"
+- raw: "33,直弓,5,3,skill5_0"
+  splits:
+  - split: 1
+    text: "直弓"
+- raw: "34,硬弓,5,4,skill5_2"
+  splits:
+  - split: 1
+    text: "硬弓"
+- raw: "35,软弓,5,5,skill5_0"
+  splits:
+  - split: 1
+    text: "软弓"

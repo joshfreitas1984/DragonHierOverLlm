@@ -1,0 +1,3978 @@
+- raw: "类别,内容,内容,内容,内容,内容"
+  splits:
+  - text: "类别"
+  - split: 1
+    text: "内容"
+  - split: 2
+    text: "内容"
+  - split: 3
+    text: "内容"
+  - split: 4
+    text: "内容"
+  - split: 5
+    text: "内容"
+- raw: "姓,钱,姚,荀,冉,游"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "钱"
+  - split: 2
+    text: "姚"
+  - split: 3
+    text: "荀"
+  - split: 4
+    text: "冉"
+  - split: 5
+    text: "游"
+- raw: "姓,孙,邵,羊,郦,竺"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "孙"
+  - split: 2
+    text: "邵"
+  - split: 3
+    text: "羊"
+  - split: 4
+    text: "郦"
+  - split: 5
+    text: "竺"
+- raw: "姓,汪,湛,惠,雍,权"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "汪"
+  - split: 2
+    text: "湛"
+  - split: 3
+    text: "惠"
+  - split: 4
+    text: "雍"
+  - split: 5
+    text: "权"
+- raw: "姓,周,祁,甄,桑,盖"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "周"
+  - split: 2
+    text: "祁"
+  - split: 3
+    text: "甄"
+  - split: 4
+    text: "桑"
+  - split: 5
+    text: "盖"
+- raw: "姓,吴,赵,曲,濮,益"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "吴"
+  - split: 2
+    text: "赵"
+  - split: 3
+    text: "曲"
+  - split: 4
+    text: "濮"
+  - split: 5
+    text: "益"
+- raw: "姓,郑,禹,家,桂,桓"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "郑"
+  - split: 2
+    text: "禹"
+  - split: 3
+    text: "家"
+  - split: 4
+    text: "桂"
+  - split: 5
+    text: "桓"
+- raw: "姓,王,狄,封,牛,公"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "王"
+  - split: 2
+    text: "狄"
+  - split: 3
+    text: "封"
+  - split: 4
+    text: "牛"
+  - split: 5
+    text: "公"
+- raw: "姓,冯,米,芮,通,司马"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "冯"
+  - split: 2
+    text: "米"
+  - split: 3
+    text: "芮"
+  - split: 4
+    text: "通"
+  - split: 5
+    text: "司马"
+- raw: "姓,陈,贝,羿,边,寿"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "陈"
+  - split: 2
+    text: "贝"
+  - split: 3
+    text: "羿"
+  - split: 4
+    text: "边"
+  - split: 5
+    text: "寿"
+- raw: "姓,褚,明,储,扈,欧阳"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "褚"
+  - split: 2
+    text: "明"
+  - split: 3
+    text: "储"
+  - split: 4
+    text: "扈"
+  - split: 5
+    text: "欧阳"
+- raw: "姓,卫,臧,靳,燕,夏侯"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "卫"
+  - split: 2
+    text: "臧"
+  - split: 3
+    text: "靳"
+  - split: 4
+    text: "燕"
+  - split: 5
+    text: "夏侯"
+- raw: "姓,蒋,计,汲,冀,诸葛"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "蒋"
+  - split: 2
+    text: "计"
+  - split: 3
+    text: "汲"
+  - split: 4
+    text: "冀"
+  - split: 5
+    text: "诸葛"
+- raw: "姓,沈,伏,糜,尚,东方"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "沈"
+  - split: 2
+    text: "伏"
+  - split: 3
+    text: "糜"
+  - split: 4
+    text: "尚"
+  - split: 5
+    text: "东方"
+- raw: "姓,韩,成,松,浦,赫连"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "韩"
+  - split: 2
+    text: "成"
+  - split: 3
+    text: "松"
+  - split: 4
+    text: "浦"
+  - split: 5
+    text: "赫连"
+- raw: "姓,杨,戴,井,农,皇甫"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "杨"
+  - split: 2
+    text: "戴"
+  - split: 3
+    text: "井"
+  - split: 4
+    text: "农"
+  - split: 5
+    text: "皇甫"
+- raw: "姓,朱,谈,富,温,尉迟"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "朱"
+  - split: 2
+    text: "谈"
+  - split: 3
+    text: "富"
+  - split: 4
+    text: "温"
+  - split: 5
+    text: "尉迟"
+- raw: "姓,尤,茅,巫,别,段"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "尤"
+  - split: 2
+    text: "茅"
+  - split: 3
+    text: "巫"
+  - split: 4
+    text: "别"
+  - split: 5
+    text: "段"
+- raw: "姓,许,庞,乌,庄,公冶"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "许"
+  - split: 2
+    text: "庞"
+  - split: 3
+    text: "乌"
+  - split: 4
+    text: "庄"
+  - split: 5
+    text: "公冶"
+- raw: "姓,何,熊,焦,晏,宋"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "何"
+  - split: 2
+    text: "熊"
+  - split: 3
+    text: "焦"
+  - split: 4
+    text: "晏"
+  - split: 5
+    text: "宋"
+- raw: "姓,吕,纪,巴,柴,秦"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "吕"
+  - split: 2
+    text: "纪"
+  - split: 3
+    text: "巴"
+  - split: 4
+    text: "柴"
+  - split: 5
+    text: "秦"
+- raw: "姓,施,舒,弓,穆,单于"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "施"
+  - split: 2
+    text: "舒"
+  - split: 3
+    text: "弓"
+  - split: 4
+    text: "穆"
+  - split: 5
+    text: "单于"
+- raw: "姓,张,屈,牧,阎,曹"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "张"
+  - split: 2
+    text: "屈"
+  - split: 3
+    text: "牧"
+  - split: 4
+    text: "阎"
+  - split: 5
+    text: "曹"
+- raw: "姓,孔,项,充,祝,慕"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "孔"
+  - split: 2
+    text: "项"
+  - split: 3
+    text: "充"
+  - split: 4
+    text: "祝"
+  - split: 5
+    text: "慕"
+- raw: "姓,华,梁,谷,连,公孙"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "华"
+  - split: 2
+    text: "梁"
+  - split: 3
+    text: "谷"
+  - split: 4
+    text: "连"
+  - split: 5
+    text: "公孙"
+- raw: "姓,金,杜,车,茹,太史"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "金"
+  - split: 2
+    text: "杜"
+  - split: 3
+    text: "车"
+  - split: 4
+    text: "茹"
+  - split: 5
+    text: "太史"
+- raw: "姓,魏,阮,侯,李,轩辕"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "魏"
+  - split: 2
+    text: "阮"
+  - split: 3
+    text: "侯"
+  - split: 4
+    text: "李"
+  - split: 5
+    text: "轩辕"
+- raw: "姓,陶,蓝,钟离,宦,令狐"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "陶"
+  - split: 2
+    text: "蓝"
+  - split: 3
+    text: "钟离"
+  - split: 4
+    text: "宦"
+  - split: 5
+    text: "令狐"
+- raw: "姓,姜,闵,蓬,艾,容"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "姜"
+  - split: 2
+    text: "闵"
+  - split: 3
+    text: "蓬"
+  - split: 4
+    text: "艾"
+  - split: 5
+    text: "容"
+- raw: "姓,戚,席,全,鱼,宇文"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "戚"
+  - split: 2
+    text: "席"
+  - split: 3
+    text: "全"
+  - split: 4
+    text: "鱼"
+  - split: 5
+    text: "宇文"
+- raw: "姓,谢,季,班,向,长孙"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "谢"
+  - split: 2
+    text: "季"
+  - split: 3
+    text: "班"
+  - split: 4
+    text: "向"
+  - split: 5
+    text: "长孙"
+- raw: "姓,邹,麻,仰,古,慕容"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "邹"
+  - split: 2
+    text: "麻"
+  - split: 3
+    text: "仰"
+  - split: 4
+    text: "古"
+  - split: 5
+    text: "慕容"
+- raw: "姓,喻,强,秋,易,鲜于"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "喻"
+  - split: 2
+    text: "强"
+  - split: 3
+    text: "秋"
+  - split: 4
+    text: "易"
+  - split: 5
+    text: "鲜于"
+- raw: "姓,柏,贾,仲,慎,独孤"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "柏"
+  - split: 2
+    text: "贾"
+  - split: 3
+    text: "仲"
+  - split: 4
+    text: "慎"
+  - split: 5
+    text: "独孤"
+- raw: "姓,水,路,伊,戈,司徒"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "水"
+  - split: 2
+    text: "路"
+  - split: 3
+    text: "伊"
+  - split: 4
+    text: "戈"
+  - split: 5
+    text: "司徒"
+- raw: "姓,窦,娄,宫,廖,司空"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "窦"
+  - split: 2
+    text: "娄"
+  - split: 3
+    text: "宫"
+  - split: 4
+    text: "廖"
+  - split: 5
+    text: "司空"
+- raw: "姓,章,危,云,江,督"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "章"
+  - split: 2
+    text: "危"
+  - split: 3
+    text: "云"
+  - split: 4
+    text: "江"
+  - split: 5
+    text: "督"
+- raw: "姓,苏,童,仇,终,庾"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "苏"
+  - split: 2
+    text: "童"
+  - split: 3
+    text: "仇"
+  - split: 4
+    text: "终"
+  - split: 5
+    text: "庾"
+- raw: "姓,潘,颜,暴,居,端木"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "潘"
+  - split: 2
+    text: "颜"
+  - split: 3
+    text: "暴"
+  - split: 4
+    text: "居"
+  - split: 5
+    text: "端木"
+- raw: "姓,奚,梅,甘,衡,郭"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "奚"
+  - split: 2
+    text: "梅"
+  - split: 3
+    text: "甘"
+  - split: 4
+    text: "衡"
+  - split: 5
+    text: "郭"
+- raw: "姓,范,盛,言,步,葛"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "范"
+  - split: 2
+    text: "盛"
+  - split: 3
+    text: "言"
+  - split: 4
+    text: "步"
+  - split: 5
+    text: "葛"
+- raw: "姓,彭,林,厉,都,董"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "彭"
+  - split: 2
+    text: "林"
+  - split: 3
+    text: "厉"
+  - split: 4
+    text: "都"
+  - split: 5
+    text: "董"
+- raw: "姓,郎,刁,戎,耿,严"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "郎"
+  - split: 2
+    text: "刁"
+  - split: 3
+    text: "戎"
+  - split: 4
+    text: "耿"
+  - split: 5
+    text: "严"
+- raw: "姓,鲁,钟,祖,满,山"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "鲁"
+  - split: 2
+    text: "钟"
+  - split: 3
+    text: "祖"
+  - split: 4
+    text: "满"
+  - split: 5
+    text: "山"
+- raw: "姓,韦,徐,武,弘,国"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "韦"
+  - split: 2
+    text: "徐"
+  - split: 3
+    text: "武"
+  - split: 4
+    text: "弘"
+  - split: 5
+    text: "国"
+- raw: "姓,昌,邱,符,匡,拓跋"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "昌"
+  - split: 2
+    text: "邱"
+  - split: 3
+    text: "符"
+  - split: 4
+    text: "匡"
+  - split: 5
+    text: "拓跋"
+- raw: "姓,马,高,景,文,刘"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "马"
+  - split: 2
+    text: "高"
+  - split: 3
+    text: "景"
+  - split: 4
+    text: "文"
+  - split: 5
+    text: "刘"
+- raw: "姓,苗,夏,詹,寇,晋"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "苗"
+  - split: 2
+    text: "夏"
+  - split: 3
+    text: "詹"
+  - split: 4
+    text: "寇"
+  - split: 5
+    text: "晋"
+- raw: "姓,凤,蔡,束,广,楚"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "凤"
+  - split: 2
+    text: "蔡"
+  - split: 3
+    text: "束"
+  - split: 4
+    text: "广"
+  - split: 5
+    text: "楚"
+- raw: "姓,花,田,龙,禄,阙"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "花"
+  - split: 2
+    text: "田"
+  - split: 3
+    text: "龙"
+  - split: 4
+    text: "禄"
+  - split: 5
+    text: "阙"
+- raw: "姓,方,胡,幸,东,法"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "方"
+  - split: 2
+    text: "胡"
+  - split: 3
+    text: "幸"
+  - split: 4
+    text: "东"
+  - split: 5
+    text: "法"
+- raw: "姓,任,凌,司,欧,叶"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "任"
+  - split: 2
+    text: "凌"
+  - split: 3
+    text: "司"
+  - split: 4
+    text: "欧"
+  - split: 5
+    text: "叶"
+- raw: "姓,袁,霍,韶,沃,涂"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "袁"
+  - split: 2
+    text: "霍"
+  - split: 3
+    text: "韶"
+  - split: 4
+    text: "沃"
+  - split: 5
+    text: "涂"
+- raw: "姓,柳,虞,樊,利,钦"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "柳"
+  - split: 2
+    text: "虞"
+  - split: 3
+    text: "樊"
+  - split: 4
+    text: "利"
+  - split: 5
+    text: "钦"
+- raw: "姓,鲍,万,黎,蔚,百里"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "鲍"
+  - split: 2
+    text: "万"
+  - split: 3
+    text: "黎"
+  - split: 4
+    text: "蔚"
+  - split: 5
+    text: "百里"
+- raw: "姓,史,支,俞,越,东郭"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "史"
+  - split: 2
+    text: "支"
+  - split: 3
+    text: "俞"
+  - split: 4
+    text: "越"
+  - split: 5
+    text: "东郭"
+- raw: "姓,唐,柯,薄,印,南门"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "唐"
+  - split: 2
+    text: "柯"
+  - split: 3
+    text: "薄"
+  - split: 4
+    text: "印"
+  - split: 5
+    text: "南门"
+- raw: "姓,费,莫,怀,隆,呼延"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "费"
+  - split: 2
+    text: "莫"
+  - split: 3
+    text: "怀"
+  - split: 4
+    text: "隆"
+  - split: 5
+    text: "呼延"
+- raw: "姓,廉,管,宿,师,归"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "廉"
+  - split: 2
+    text: "管"
+  - split: 3
+    text: "宿"
+  - split: 4
+    text: "师"
+  - split: 5
+    text: "归"
+- raw: "姓,岑,卢,白,巩,海"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "岑"
+  - split: 2
+    text: "卢"
+  - split: 3
+    text: "白"
+  - split: 4
+    text: "巩"
+  - split: 5
+    text: "海"
+- raw: "姓,雷,经,蒲,聂,北冥"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "雷"
+  - split: 2
+    text: "经"
+  - split: 3
+    text: "蒲"
+  - split: 4
+    text: "聂"
+  - split: 5
+    text: "北冥"
+- raw: "姓,贺,房,卓,晁,岳"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "贺"
+  - split: 2
+    text: "房"
+  - split: 3
+    text: "卓"
+  - split: 4
+    text: "晁"
+  - split: 5
+    text: "岳"
+- raw: "姓,倪,裘,从,勾,帅"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "倪"
+  - split: 2
+    text: "裘"
+  - split: 3
+    text: "从"
+  - split: 4
+    text: "勾"
+  - split: 5
+    text: "帅"
+- raw: "姓,汤,缪,薛,敖,上官"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "汤"
+  - split: 2
+    text: "缪"
+  - split: 3
+    text: "薛"
+  - split: 4
+    text: "敖"
+  - split: 5
+    text: "上官"
+- raw: "姓,况,干,索,融,亢"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "况"
+  - split: 2
+    text: "干"
+  - split: 3
+    text: "索"
+  - split: 4
+    text: "融"
+  - split: 5
+    text: "亢"
+- raw: "姓,殷,解,咸,冷,骆"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "殷"
+  - split: 2
+    text: "解"
+  - split: 3
+    text: "咸"
+  - split: 4
+    text: "冷"
+  - split: 5
+    text: "骆"
+- raw: "姓,罗,应,籍,辛,荣"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "罗"
+  - split: 2
+    text: "应"
+  - split: 3
+    text: "籍"
+  - split: 4
+    text: "辛"
+  - split: 5
+    text: "荣"
+- raw: "姓,毕,宗,赖,宣,琴"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "毕"
+  - split: 2
+    text: "宗"
+  - split: 3
+    text: "赖"
+  - split: 4
+    text: "宣"
+  - split: 5
+    text: "琴"
+- raw: "姓,郝,丁,那,贲,完颜"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "郝"
+  - split: 2
+    text: "丁"
+  - split: 3
+    text: "那"
+  - split: 4
+    text: "贲"
+  - split: 5
+    text: "完颜"
+- raw: "姓,安,邓,屠,简,东门"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "安"
+  - split: 2
+    text: "邓"
+  - split: 3
+    text: "屠"
+  - split: 4
+    text: "简"
+  - split: 5
+    text: "东门"
+- raw: "姓,常,商,蒙,饶,西门"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "常"
+  - split: 2
+    text: "商"
+  - split: 3
+    text: "蒙"
+  - split: 4
+    text: "饶"
+  - split: 5
+    text: "西门"
+- raw: "姓,乐,郁,池,空,牟"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "乐"
+  - split: 2
+    text: "郁"
+  - split: 3
+    text: "池"
+  - split: 4
+    text: "空"
+  - split: 5
+    text: "牟"
+- raw: "姓,于,单,乔,曾,扶"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "于"
+  - split: 2
+    text: "单"
+  - split: 3
+    text: "乔"
+  - split: 4
+    text: "曾"
+  - split: 5
+    text: "扶"
+- raw: "姓,时,杭,阴,毋,伯"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "时"
+  - split: 2
+    text: "杭"
+  - split: 3
+    text: "阴"
+  - split: 4
+    text: "毋"
+  - split: 5
+    text: "伯"
+- raw: "姓,傅,洪,萧,沙,赏"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "傅"
+  - split: 2
+    text: "洪"
+  - split: 3
+    text: "萧"
+  - split: 4
+    text: "沙"
+  - split: 5
+    text: "赏"
+- raw: "姓,皮,包,胥,鞠,养"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "皮"
+  - split: 2
+    text: "包"
+  - split: 3
+    text: "胥"
+  - split: 4
+    text: "鞠"
+  - split: 5
+    text: "养"
+- raw: "姓,卞,诸,能,左,苍"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "卞"
+  - split: 2
+    text: "诸"
+  - split: 3
+    text: "能"
+  - split: 4
+    text: "左"
+  - split: 5
+    text: "苍"
+- raw: "姓,齐,石,双,须,南宫"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "齐"
+  - split: 2
+    text: "石"
+  - split: 3
+    text: "双"
+  - split: 4
+    text: "须"
+  - split: 5
+    text: "南宫"
+- raw: "姓,康,崔,闻,丰,墨"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "康"
+  - split: 2
+    text: "崔"
+  - split: 3
+    text: "闻"
+  - split: 4
+    text: "丰"
+  - split: 5
+    text: "墨"
+- raw: "姓,伍,吉,莘,巢,谯"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "伍"
+  - split: 2
+    text: "吉"
+  - split: 3
+    text: "莘"
+  - split: 4
+    text: "巢"
+  - split: 5
+    text: "谯"
+- raw: "姓,余,钮,党,关,年"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "余"
+  - split: 2
+    text: "钮"
+  - split: 3
+    text: "党"
+  - split: 4
+    text: "关"
+  - split: 5
+    text: "年"
+- raw: "姓,元,龚,翟,蒯,爱"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "元"
+  - split: 2
+    text: "龚"
+  - split: 3
+    text: "翟"
+  - split: 4
+    text: "蒯"
+  - split: 5
+    text: "爱"
+- raw: "姓,卜,程,谭,相,阳"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "卜"
+  - split: 2
+    text: "程"
+  - split: 3
+    text: "谭"
+  - split: 4
+    text: "相"
+  - split: 5
+    text: "阳"
+- raw: "姓,顾,嵇,贡,查,北堂"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "顾"
+  - split: 2
+    text: "嵇"
+  - split: 3
+    text: "贡"
+  - split: 4
+    text: "查"
+  - split: 5
+    text: "北堂"
+- raw: "姓,孟,邢,劳,后,尹"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "孟"
+  - split: 2
+    text: "邢"
+  - split: 3
+    text: "劳"
+  - split: 4
+    text: "后"
+  - split: 5
+    text: "尹"
+- raw: "姓,平,滑,荆,堵,翁"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "平"
+  - split: 2
+    text: "滑"
+  - split: 3
+    text: "荆"
+  - split: 4
+    text: "堵"
+  - split: 5
+    text: "翁"
+- raw: "姓,黄,裴,姬,红,左丘"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "黄"
+  - split: 2
+    text: "裴"
+  - split: 3
+    text: "姬"
+  - split: 4
+    text: "红"
+  - split: 5
+    text: "左丘"
+- raw: "姓,和,陆,申,福,佟"
+  splits:
+  - text: "姓"
+  - split: 1
+    text: "和"
+  - split: 2
+    text: "陆"
+  - split: 3
+    text: "申"
+  - split: 4
+    text: "福"
+  - split: 5
+    text: "佟"
+- raw: "名,天,楼,仪,尽,市"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "天"
+  - split: 2
+    text: "楼"
+  - split: 3
+    text: "仪"
+  - split: 4
+    text: "尽"
+  - split: 5
+    text: "市"
+- raw: "名,地,阁,寻,京,事"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "地"
+  - split: 2
+    text: "阁"
+  - split: 3
+    text: "寻"
+  - split: 4
+    text: "京"
+  - split: 5
+    text: "事"
+- raw: "名,日,欢,谨,之,首"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "日"
+  - split: 2
+    text: "欢"
+  - split: 3
+    text: "谨"
+  - split: 4
+    text: "之"
+  - split: 5
+    text: "首"
+- raw: "名,月,迎,仙,荆,属"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "月"
+  - split: 2
+    text: "迎"
+  - split: 3
+    text: "仙"
+  - split: 4
+    text: "荆"
+  - split: 5
+    text: "属"
+- raw: "名,星,宜,表,惊,术"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "星"
+  - split: 2
+    text: "宜"
+  - split: 3
+    text: "表"
+  - split: 4
+    text: "惊"
+  - split: 5
+    text: "术"
+- raw: "名,辰,宾,滨,井,双"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "辰"
+  - split: 2
+    text: "宾"
+  - split: 3
+    text: "滨"
+  - split: 4
+    text: "井"
+  - split: 5
+    text: "双"
+- raw: "名,金,友,并,净,霜"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "金"
+  - split: 2
+    text: "友"
+  - split: 3
+    text: "并"
+  - split: 4
+    text: "净"
+  - split: 5
+    text: "霜"
+- raw: "名,木,恩,泊,久,顺"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "木"
+  - split: 2
+    text: "恩"
+  - split: 3
+    text: "泊"
+  - split: 4
+    text: "久"
+  - split: 5
+    text: "顺"
+- raw: "名,水,华,语,酒,田"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "水"
+  - split: 2
+    text: "华"
+  - split: 3
+    text: "语"
+  - split: 4
+    text: "酒"
+  - split: 5
+    text: "田"
+- raw: "名,火,飞,楚,旧,厅"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "火"
+  - split: 2
+    text: "飞"
+  - split: 3
+    text: "楚"
+  - split: 4
+    text: "旧"
+  - split: 5
+    text: "厅"
+- raw: "名,土,升,采,居,庭"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "土"
+  - split: 2
+    text: "升"
+  - split: 3
+    text: "采"
+  - split: 4
+    text: "居"
+  - split: 5
+    text: "庭"
+- raw: "名,风,见,仓,扇,图"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "风"
+  - split: 2
+    text: "见"
+  - split: 3
+    text: "仓"
+  - split: 4
+    text: "扇"
+  - split: 5
+    text: "图"
+- raw: "名,云,少,常,聚,推"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "云"
+  - split: 2
+    text: "少"
+  - split: 3
+    text: "常"
+  - split: 4
+    text: "聚"
+  - split: 5
+    text: "推"
+- raw: "名,雨,子,车,涓,外"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "雨"
+  - split: 2
+    text: "子"
+  - split: 3
+    text: "车"
+  - split: 4
+    text: "涓"
+  - split: 5
+    text: "外"
+- raw: "名,声,心,陈,卷,晚"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "声"
+  - split: 2
+    text: "心"
+  - split: 3
+    text: "陈"
+  - split: 4
+    text: "卷"
+  - split: 5
+    text: "晚"
+- raw: "名,雷,真,晨,空,王"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "雷"
+  - split: 2
+    text: "真"
+  - split: 3
+    text: "晨"
+  - split: 4
+    text: "空"
+  - split: 5
+    text: "王"
+- raw: "名,电,人,澄,控,网"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "电"
+  - split: 2
+    text: "人"
+  - split: 3
+    text: "澄"
+  - split: 4
+    text: "控"
+  - split: 5
+    text: "网"
+- raw: "名,山,尘,持,来,微"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "山"
+  - split: 2
+    text: "尘"
+  - split: 3
+    text: "持"
+  - split: 4
+    text: "来"
+  - split: 5
+    text: "微"
+- raw: "名,丘,敬,尺,廊,韦"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "丘"
+  - split: 2
+    text: "敬"
+  - split: 3
+    text: "尺"
+  - split: 4
+    text: "廊"
+  - split: 5
+    text: "韦"
+- raw: "名,陵,敏,出,类,乌"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "陵"
+  - split: 2
+    text: "敏"
+  - split: 3
+    text: "出"
+  - split: 4
+    text: "类"
+  - split: 5
+    text: "乌"
+- raw: "名,平,精,创,冷,屋"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "平"
+  - split: 2
+    text: "精"
+  - split: 3
+    text: "创"
+  - split: 4
+    text: "冷"
+  - split: 5
+    text: "屋"
+- raw: "名,原,湛,瓷,离,无"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "原"
+  - split: 2
+    text: "湛"
+  - split: 3
+    text: "瓷"
+  - split: 4
+    text: "离"
+  - split: 5
+    text: "无"
+- raw: "名,台,景,丛,理,物"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "台"
+  - split: 2
+    text: "景"
+  - split: 3
+    text: "丛"
+  - split: 4
+    text: "理"
+  - split: 5
+    text: "物"
+- raw: "名,江,影,单,历,夕"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "江"
+  - split: 2
+    text: "影"
+  - split: 3
+    text: "单"
+  - split: 4
+    text: "历"
+  - split: 5
+    text: "夕"
+- raw: "名,河,喜,当,连,析"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "河"
+  - split: 2
+    text: "喜"
+  - split: 3
+    text: "当"
+  - split: 4
+    text: "连"
+  - split: 5
+    text: "析"
+- raw: "名,川,一,导,凉,息"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "川"
+  - split: 2
+    text: "一"
+  - split: 3
+    text: "导"
+  - split: 4
+    text: "凉"
+  - split: 5
+    text: "息"
+- raw: "名,池,二,祷,量,先"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "池"
+  - split: 2
+    text: "二"
+  - split: 3
+    text: "祷"
+  - split: 4
+    text: "量"
+  - split: 5
+    text: "先"
+- raw: "名,湖,三,动,列,显"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "湖"
+  - split: 2
+    text: "三"
+  - split: 3
+    text: "动"
+  - split: 4
+    text: "列"
+  - split: 5
+    text: "显"
+- raw: "名,海,四,都,临,相"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "海"
+  - split: 2
+    text: "四"
+  - split: 3
+    text: "都"
+  - split: 4
+    text: "临"
+  - split: 5
+    text: "相"
+- raw: "名,洋,五,度,铃,象"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "洋"
+  - split: 2
+    text: "五"
+  - split: 3
+    text: "度"
+  - split: 4
+    text: "铃"
+  - split: 5
+    text: "象"
+- raw: "名,冰,六,朵,翎,霄"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "冰"
+  - split: 2
+    text: "六"
+  - split: 3
+    text: "朵"
+  - split: 4
+    text: "翎"
+  - split: 5
+    text: "霄"
+- raw: "名,沙,七,发,留,效"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "沙"
+  - split: 2
+    text: "七"
+  - split: 3
+    text: "发"
+  - split: 4
+    text: "留"
+  - split: 5
+    text: "效"
+- raw: "名,泽,八,法,流,协"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "泽"
+  - split: 2
+    text: "八"
+  - split: 3
+    text: "法"
+  - split: 4
+    text: "流"
+  - split: 5
+    text: "协"
+- raw: "名,深,九,凡,鹿,榭"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "深"
+  - split: 2
+    text: "九"
+  - split: 3
+    text: "凡"
+  - split: 4
+    text: "鹿"
+  - split: 5
+    text: "榭"
+- raw: "名,涵,十,泛,轮,形"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "涵"
+  - split: 2
+    text: "十"
+  - split: 3
+    text: "泛"
+  - split: 4
+    text: "轮"
+  - split: 5
+    text: "形"
+- raw: "名,春,百,范,络,梓"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "春"
+  - split: 2
+    text: "百"
+  - split: 3
+    text: "范"
+  - split: 4
+    text: "络"
+  - split: 5
+    text: "梓"
+- raw: "名,夏,千,沉,落,虚"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "夏"
+  - split: 2
+    text: "千"
+  - split: 3
+    text: "沉"
+  - split: 4
+    text: "落"
+  - split: 5
+    text: "虚"
+- raw: "名,秋,万,房,麻,轩"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "秋"
+  - split: 2
+    text: "万"
+  - split: 3
+    text: "房"
+  - split: 4
+    text: "麻"
+  - split: 5
+    text: "轩"
+- raw: "名,冬,兆,放,意,命"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "冬"
+  - split: 2
+    text: "兆"
+  - split: 3
+    text: "放"
+  - split: 4
+    text: "意"
+  - split: 5
+    text: "命"
+- raw: "名,立,里,丰,漫,言"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "立"
+  - split: 2
+    text: "里"
+  - split: 3
+    text: "丰"
+  - split: 4
+    text: "漫"
+  - split: 5
+    text: "言"
+- raw: "名,分,元,伏,门,央"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "分"
+  - split: 2
+    text: "元"
+  - split: 3
+    text: "伏"
+  - split: 4
+    text: "门"
+  - split: 5
+    text: "央"
+- raw: "名,至,鑫,扶,蒙,摇"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "至"
+  - split: 2
+    text: "鑫"
+  - split: 3
+    text: "扶"
+  - split: 4
+    text: "蒙"
+  - split: 5
+    text: "摇"
+- raw: "名,谷,甘,符,迷,映"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "谷"
+  - split: 2
+    text: "甘"
+  - split: 3
+    text: "符"
+  - split: 4
+    text: "迷"
+  - split: 5
+    text: "映"
+- raw: "名,梧,乐,玖,密,野"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "梧"
+  - split: 2
+    text: "乐"
+  - split: 3
+    text: "玖"
+  - split: 4
+    text: "密"
+  - split: 5
+    text: "野"
+- raw: "名,桐,方,复,名,叶"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "桐"
+  - split: 2
+    text: "方"
+  - split: 3
+    text: "复"
+  - split: 4
+    text: "名"
+  - split: 5
+    text: "叶"
+- raw: "名,银,圆,赋,末,夜"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "银"
+  - split: 2
+    text: "圆"
+  - split: 3
+    text: "赋"
+  - split: 4
+    text: "末"
+  - split: 5
+    text: "夜"
+- raw: "名,赤,周,感,目,移"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "赤"
+  - split: 2
+    text: "周"
+  - split: 3
+    text: "感"
+  - split: 4
+    text: "目"
+  - split: 5
+    text: "移"
+- raw: "名,红,维,剑,沐,盈"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "红"
+  - split: 2
+    text: "维"
+  - split: 3
+    text: "剑"
+  - split: 4
+    text: "沐"
+  - split: 5
+    text: "盈"
+- raw: "名,丹,望,亘,牧,营"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "丹"
+  - split: 2
+    text: "望"
+  - split: 3
+    text: "亘"
+  - split: 4
+    text: "牧"
+  - split: 5
+    text: "营"
+- raw: "名,朱,诺,宫,暮,善"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "朱"
+  - split: 2
+    text: "诺"
+  - split: 3
+    text: "宫"
+  - split: 4
+    text: "暮"
+  - split: 5
+    text: "善"
+- raw: "名,黄,字,和,楠,幽"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "黄"
+  - split: 2
+    text: "字"
+  - split: 3
+    text: "和"
+  - split: 4
+    text: "楠"
+  - split: 5
+    text: "幽"
+- raw: "名,绿,亚,拾,内,有"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "绿"
+  - split: 2
+    text: "亚"
+  - split: 3
+    text: "拾"
+  - split: 4
+    text: "内"
+  - split: 5
+    text: "有"
+- raw: "名,碧,季,观,渐,羽"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "碧"
+  - split: 2
+    text: "季"
+  - split: 3
+    text: "观"
+  - split: 4
+    text: "渐"
+  - split: 5
+    text: "羽"
+- raw: "名,青,殿,馆,年,尚"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "青"
+  - split: 2
+    text: "殿"
+  - split: 3
+    text: "馆"
+  - split: 4
+    text: "年"
+  - split: 5
+    text: "尚"
+- raw: "名,蓝,尤,归,派,御"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "蓝"
+  - split: 2
+    text: "尤"
+  - split: 3
+    text: "归"
+  - split: 4
+    text: "派"
+  - split: 5
+    text: "御"
+- raw: "名,紫,其,奏,庞,园"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "紫"
+  - split: 2
+    text: "其"
+  - split: 3
+    text: "奏"
+  - split: 4
+    text: "庞"
+  - split: 5
+    text: "园"
+- raw: "名,黑,迪,果,旁,院"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "黑"
+  - split: 2
+    text: "迪"
+  - split: 3
+    text: "果"
+  - split: 4
+    text: "旁"
+  - split: 5
+    text: "院"
+- raw: "名,白,化,寒,凭,约"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "白"
+  - split: 2
+    text: "化"
+  - split: 3
+    text: "寒"
+  - split: 4
+    text: "凭"
+  - split: 5
+    text: "约"
+- raw: "名,墨,端,行,清,运"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "墨"
+  - split: 2
+    text: "端"
+  - split: 3
+    text: "行"
+  - split: 4
+    text: "清"
+  - split: 5
+    text: "运"
+- raw: "名,苍,瑞,绝,漆,早"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "苍"
+  - split: 2
+    text: "瑞"
+  - split: 3
+    text: "绝"
+  - split: 4
+    text: "漆"
+  - split: 5
+    text: "早"
+- raw: "名,初,以,乱,齐,哨"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "初"
+  - split: 2
+    text: "以"
+  - split: 3
+    text: "乱"
+  - split: 4
+    text: "齐"
+  - split: 5
+    text: "哨"
+- raw: "名,温,易,画,祈,庄"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "温"
+  - split: 2
+    text: "易"
+  - split: 3
+    text: "画"
+  - split: 4
+    text: "祈"
+  - split: 5
+    text: "庄"
+- raw: "名,光,奕,郊,起,展"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "光"
+  - split: 2
+    text: "奕"
+  - split: 3
+    text: "郊"
+  - split: 4
+    text: "起"
+  - split: 5
+    text: "展"
+- raw: "名,荣,熙,槐,前,占"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "荣"
+  - split: 2
+    text: "熙"
+  - split: 3
+    text: "槐"
+  - split: 4
+    text: "前"
+  - split: 5
+    text: "占"
+- raw: "名,宝,然,幻,潜,怀"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "宝"
+  - split: 2
+    text: "然"
+  - split: 3
+    text: "幻"
+  - split: 4
+    text: "潜"
+  - split: 5
+    text: "怀"
+- raw: "名,玉,司,换,桥,章"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "玉"
+  - split: 2
+    text: "司"
+  - split: 3
+    text: "换"
+  - split: 4
+    text: "桥"
+  - split: 5
+    text: "章"
+- raw: "名,藏,令,烟,轻,刀"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "藏"
+  - split: 2
+    text: "令"
+  - split: 3
+    text: "烟"
+  - split: 4
+    text: "轻"
+  - split: 5
+    text: "刀"
+- raw: "名,陶,奇,别,倾,召"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "陶"
+  - split: 2
+    text: "奇"
+  - split: 3
+    text: "别"
+  - split: 4
+    text: "倾"
+  - split: 5
+    text: "召"
+- raw: "名,艺,遇,灰,凌,森"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "艺"
+  - split: 2
+    text: "遇"
+  - split: 3
+    text: "灰"
+  - split: 4
+    text: "凌"
+  - split: 5
+    text: "森"
+- raw: "名,润,繁,回,致,琴"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "润"
+  - split: 2
+    text: "繁"
+  - split: 3
+    text: "回"
+  - split: 4
+    text: "致"
+  - split: 5
+    text: "琴"
+- raw: "名,示,畅,汇,染,枝"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "示"
+  - split: 2
+    text: "畅"
+  - split: 3
+    text: "汇"
+  - split: 4
+    text: "染"
+  - split: 5
+    text: "枝"
+- raw: "名,代,新,会,半,知"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "代"
+  - split: 2
+    text: "新"
+  - split: 3
+    text: "会"
+  - split: 4
+    text: "半"
+  - split: 5
+    text: "知"
+- raw: "名,纪,君,色,热,彬"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "纪"
+  - split: 2
+    text: "君"
+  - split: 3
+    text: "色"
+  - split: 4
+    text: "热"
+  - split: 5
+    text: "彬"
+- raw: "名,捷,泉,积,融,逐"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "捷"
+  - split: 2
+    text: "泉"
+  - split: 3
+    text: "积"
+  - split: 4
+    text: "融"
+  - split: 5
+    text: "逐"
+- raw: "名,期,龄,林,亭,烛"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "期"
+  - split: 2
+    text: "龄"
+  - split: 3
+    text: "林"
+  - split: 4
+    text: "亭"
+  - split: 5
+    text: "烛"
+- raw: "名,时,彤,唱,入,祝"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "时"
+  - split: 2
+    text: "彤"
+  - split: 3
+    text: "唱"
+  - split: 4
+    text: "入"
+  - split: 5
+    text: "祝"
+- raw: "名,笑,布,集,散,转"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "笑"
+  - split: 2
+    text: "布"
+  - split: 3
+    text: "集"
+  - split: 4
+    text: "散"
+  - split: 5
+    text: "转"
+- raw: "名,舒,澜,秦,桑,追"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "舒"
+  - split: 2
+    text: "澜"
+  - split: 3
+    text: "秦"
+  - split: 4
+    text: "桑"
+  - split: 5
+    text: "追"
+- raw: "名,系,游,不,瑟,愁"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "系"
+  - split: 2
+    text: "游"
+  - split: 3
+    text: "不"
+  - split: 4
+    text: "瑟"
+  - split: 5
+    text: "愁"
+- raw: "名,醉,棠,间,杉,琢"
+  splits:
+  - text: "名"
+  - split: 1
+    text: "醉"
+  - split: 2
+    text: "棠"
+  - split: 3
+    text: "间"
+  - split: 4
+    text: "杉"
+  - split: 5
+    text: "琢"
+- raw: "男名,部,圣,默,防,学"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "部"
+  - split: 2
+    text: "圣"
+  - split: 3
+    text: "默"
+  - split: 4
+    text: "防"
+  - split: 5
+    text: "学"
+- raw: "男名,冶,炫,型,剧,邦"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "冶"
+  - split: 2
+    text: "炫"
+  - split: 3
+    text: "型"
+  - split: 4
+    text: "剧"
+  - split: 5
+    text: "邦"
+- raw: "男名,辅,马,戎,慎,韧"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "辅"
+  - split: 2
+    text: "马"
+  - split: 3
+    text: "戎"
+  - split: 4
+    text: "慎"
+  - split: 5
+    text: "韧"
+- raw: "男名,挂,共,冠,涌,葛"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "挂"
+  - split: 2
+    text: "共"
+  - split: 3
+    text: "冠"
+  - split: 4
+    text: "涌"
+  - split: 5
+    text: "葛"
+- raw: "男名,靖,蒲,规,域,能"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "靖"
+  - split: 2
+    text: "蒲"
+  - split: 3
+    text: "规"
+  - split: 4
+    text: "域"
+  - split: 5
+    text: "能"
+- raw: "男名,增,旭,睿,造,号"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "增"
+  - split: 2
+    text: "旭"
+  - split: 3
+    text: "睿"
+  - split: 4
+    text: "造"
+  - split: 5
+    text: "号"
+- raw: "男名,驱,家,昭,张,桦"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "驱"
+  - split: 2
+    text: "家"
+  - split: 3
+    text: "昭"
+  - split: 4
+    text: "张"
+  - split: 5
+    text: "桦"
+- raw: "男名,衍,晃,煌,凤,鸳"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "衍"
+  - split: 2
+    text: "晃"
+  - split: 3
+    text: "煌"
+  - split: 4
+    text: "凤"
+  - split: 5
+    text: "鸳"
+- raw: "男名,获,治,极,壤,宙"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "获"
+  - split: 2
+    text: "治"
+  - split: 3
+    text: "极"
+  - split: 4
+    text: "壤"
+  - split: 5
+    text: "宙"
+- raw: "男名,架,界,旗,宇,世"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "架"
+  - split: 2
+    text: "界"
+  - split: 3
+    text: "旗"
+  - split: 4
+    text: "宇"
+  - split: 5
+    text: "世"
+- raw: "男名,合,阶,统,准,尖"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "合"
+  - split: 2
+    text: "阶"
+  - split: 3
+    text: "统"
+  - split: 4
+    text: "准"
+  - split: 5
+    text: "尖"
+- raw: "男名,史,族,交,带,简"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "史"
+  - split: 2
+    text: "族"
+  - split: 3
+    text: "交"
+  - split: 4
+    text: "带"
+  - split: 5
+    text: "简"
+- raw: "男名,掌,教,实,剑,神"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "掌"
+  - split: 2
+    text: "教"
+  - split: 3
+    text: "实"
+  - split: 4
+    text: "剑"
+  - split: 5
+    text: "神"
+- raw: "男名,寺,堂,藤,始,接"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "寺"
+  - split: 2
+    text: "堂"
+  - split: 3
+    text: "藤"
+  - split: 4
+    text: "始"
+  - split: 5
+    text: "接"
+- raw: "男名,高,烈,远,斗,矩"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "高"
+  - split: 2
+    text: "烈"
+  - split: 3
+    text: "远"
+  - split: 4
+    text: "斗"
+  - split: 5
+    text: "矩"
+- raw: "男名,大,照,上,跃,炬"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "大"
+  - split: 2
+    text: "照"
+  - split: 3
+    text: "上"
+  - split: 4
+    text: "跃"
+  - split: 5
+    text: "炬"
+- raw: "男名,岩,鸿,近,进,钧"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "岩"
+  - split: 2
+    text: "鸿"
+  - split: 3
+    text: "近"
+  - split: 4
+    text: "进"
+  - split: 5
+    text: "钧"
+- raw: "男名,石,浩,古,步,亢"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "石"
+  - split: 2
+    text: "浩"
+  - split: 3
+    text: "古"
+  - split: 4
+    text: "步"
+  - split: 5
+    text: "亢"
+- raw: "男名,勇,波,继,同,克"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "勇"
+  - split: 2
+    text: "波"
+  - split: 3
+    text: "继"
+  - split: 4
+    text: "同"
+  - split: 5
+    text: "克"
+- raw: "男名,猛,涛,承,志,刻"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "猛"
+  - split: 2
+    text: "涛"
+  - split: 3
+    text: "承"
+  - split: 4
+    text: "志"
+  - split: 5
+    text: "刻"
+- raw: "男名,刚,浪,松,向,镂"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "刚"
+  - split: 2
+    text: "浪"
+  - split: 3
+    text: "松"
+  - split: 4
+    text: "向"
+  - split: 5
+    text: "镂"
+- raw: "男名,强,源,柏,全,炉"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "强"
+  - split: 2
+    text: "源"
+  - split: 3
+    text: "柏"
+  - split: 4
+    text: "全"
+  - split: 5
+    text: "炉"
+- raw: "男名,雄,潮,根,恒,陆"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "雄"
+  - split: 2
+    text: "潮"
+  - split: 3
+    text: "根"
+  - split: 4
+    text: "恒"
+  - split: 5
+    text: "陆"
+- raw: "男名,威,渊,柱,衡,烙"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "威"
+  - split: 2
+    text: "渊"
+  - split: 3
+    text: "柱"
+  - split: 4
+    text: "衡"
+  - split: 5
+    text: "烙"
+- raw: "男名,豪,隐,梁,鸣,炼"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "豪"
+  - split: 2
+    text: "隐"
+  - split: 3
+    text: "梁"
+  - split: 4
+    text: "鸣"
+  - split: 5
+    text: "炼"
+- raw: "男名,震,逸,成,永,辽"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "震"
+  - split: 2
+    text: "逸"
+  - split: 3
+    text: "成"
+  - split: 4
+    text: "永"
+  - split: 5
+    text: "辽"
+- raw: "男名,壮,超,龙,磊,猎"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "壮"
+  - split: 2
+    text: "超"
+  - split: 3
+    text: "龙"
+  - split: 4
+    text: "磊"
+  - split: 5
+    text: "猎"
+- raw: "男名,阔,越,虎,振,岭"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "阔"
+  - split: 2
+    text: "越"
+  - split: 3
+    text: "虎"
+  - split: 4
+    text: "振"
+  - split: 5
+    text: "岭"
+- raw: "男名,宏,特,豹,隆,磨"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "宏"
+  - split: 2
+    text: "特"
+  - split: 3
+    text: "豹"
+  - split: 4
+    text: "隆"
+  - split: 5
+    text: "磨"
+- raw: "男名,伟,勤,彪,宽,破"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "伟"
+  - split: 2
+    text: "勤"
+  - split: 3
+    text: "彪"
+  - split: 4
+    text: "宽"
+  - split: 5
+    text: "破"
+- raw: "男名,杰,东,骏,奎,契"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "杰"
+  - split: 2
+    text: "东"
+  - split: 3
+    text: "骏"
+  - split: 4
+    text: "奎"
+  - split: 5
+    text: "契"
+- raw: "男名,建,南,鹏,领,器"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "建"
+  - split: 2
+    text: "南"
+  - split: 3
+    text: "鹏"
+  - split: 4
+    text: "领"
+  - split: 5
+    text: "器"
+- raw: "男名,国,西,鹤,弘,奇"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "国"
+  - split: 2
+    text: "西"
+  - split: 3
+    text: "鹤"
+  - split: 4
+    text: "弘"
+  - split: 5
+    text: "奇"
+- raw: "男名,庆,北,斌,扬,切"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "庆"
+  - split: 2
+    text: "北"
+  - split: 3
+    text: "斌"
+  - split: 4
+    text: "扬"
+  - split: 5
+    text: "切"
+- raw: "男名,筑,中,郎,博,燃"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "筑"
+  - split: 2
+    text: "中"
+  - split: 3
+    text: "郎"
+  - split: 4
+    text: "博"
+  - split: 5
+    text: "燃"
+- raw: "男名,基,甲,公,昆,熔"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "基"
+  - split: 2
+    text: "甲"
+  - split: 3
+    text: "公"
+  - split: 4
+    text: "昆"
+  - split: 5
+    text: "熔"
+- raw: "男名,健,乙,士,栗,势"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "健"
+  - split: 2
+    text: "乙"
+  - split: 3
+    text: "士"
+  - split: 4
+    text: "栗"
+  - split: 5
+    text: "势"
+- raw: "男名,康,丙,夫,朝,收"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "康"
+  - split: 2
+    text: "丙"
+  - split: 3
+    text: "夫"
+  - split: 4
+    text: "朝"
+  - split: 5
+    text: "收"
+- raw: "男名,毅,丁,生,晖,燧"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "毅"
+  - split: 2
+    text: "丁"
+  - split: 3
+    text: "生"
+  - split: 4
+    text: "晖"
+  - split: 5
+    text: "燧"
+- raw: "男名,启,戊,汉,峥,塔"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "启"
+  - split: 2
+    text: "戊"
+  - split: 3
+    text: "汉"
+  - split: 4
+    text: "峥"
+  - split: 5
+    text: "塔"
+- raw: "男名,明,己,伯,铮,潭"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "明"
+  - split: 2
+    text: "己"
+  - split: 3
+    text: "伯"
+  - split: 4
+    text: "铮"
+  - split: 5
+    text: "潭"
+- raw: "男名,亮,庚,叔,争,炭"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "亮"
+  - split: 2
+    text: "庚"
+  - split: 3
+    text: "叔"
+  - split: 4
+    text: "争"
+  - split: 5
+    text: "炭"
+- raw: "男名,道,辛,朗,麒,霆"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "道"
+  - split: 2
+    text: "辛"
+  - split: 3
+    text: "朗"
+  - split: 4
+    text: "麒"
+  - split: 5
+    text: "霆"
+- raw: "男名,德,壬,胜,麟,炎"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "德"
+  - split: 2
+    text: "壬"
+  - split: 3
+    text: "胜"
+  - split: 4
+    text: "麟"
+  - split: 5
+    text: "炎"
+- raw: "男名,忠,癸,利,秉,焰"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "忠"
+  - split: 2
+    text: "癸"
+  - split: 3
+    text: "利"
+  - split: 4
+    text: "秉"
+  - split: 5
+    text: "焰"
+- raw: "男名,仁,阳,赢,沧,鹰"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "仁"
+  - split: 2
+    text: "阳"
+  - split: 3
+    text: "赢"
+  - split: 4
+    text: "沧"
+  - split: 5
+    text: "鹰"
+- raw: "男名,义,顶,权,城,岳"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "义"
+  - split: 2
+    text: "顶"
+  - split: 3
+    text: "权"
+  - split: 4
+    text: "城"
+  - split: 5
+    text: "岳"
+- raw: "男名,礼,辉,益,登,阵"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "礼"
+  - split: 2
+    text: "辉"
+  - split: 3
+    text: "益"
+  - split: 4
+    text: "登"
+  - split: 5
+    text: "阵"
+- raw: "男名,智,耀,民,栋,镇"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "智"
+  - split: 2
+    text: "耀"
+  - split: 3
+    text: "民"
+  - split: 4
+    text: "栋"
+  - split: 5
+    text: "镇"
+- raw: "男名,信,军,团,洞,止"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "信"
+  - split: 2
+    text: "军"
+  - split: 3
+    text: "团"
+  - split: 4
+    text: "洞"
+  - split: 5
+    text: "止"
+- raw: "男名,诚,兵,结,冲,制"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "诚"
+  - split: 2
+    text: "兵"
+  - split: 3
+    text: "结"
+  - split: 4
+    text: "冲"
+  - split: 5
+    text: "制"
+- raw: "男名,谦,将,正,崇,质"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "谦"
+  - split: 2
+    text: "将"
+  - split: 3
+    text: "正"
+  - split: 4
+    text: "崇"
+  - split: 5
+    text: "质"
+- raw: "男名,贤,帅,定,荡,种"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "贤"
+  - split: 2
+    text: "帅"
+  - split: 3
+    text: "定"
+  - split: 4
+    text: "荡"
+  - split: 5
+    text: "种"
+- raw: "男名,良,武,安,锻,重"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "良"
+  - split: 2
+    text: "武"
+  - split: 3
+    text: "安"
+  - split: 4
+    text: "锻"
+  - split: 5
+    text: "重"
+- raw: "男名,俊,力,兴,革,州"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "俊"
+  - split: 2
+    text: "力"
+  - split: 3
+    text: "兴"
+  - split: 4
+    text: "革"
+  - split: 5
+    text: "州"
+- raw: "男名,通,本,举,更,铸"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "通"
+  - split: 2
+    text: "本"
+  - split: 3
+    text: "举"
+  - split: 4
+    text: "更"
+  - split: 5
+    text: "铸"
+- raw: "男名,达,主,直,工,祖"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "达"
+  - split: 2
+    text: "主"
+  - split: 3
+    text: "直"
+  - split: 4
+    text: "工"
+  - split: 5
+    text: "祖"
+- raw: "男名,广,钢,凯,攻,尊"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "广"
+  - split: 2
+    text: "钢"
+  - split: 3
+    text: "凯"
+  - split: 4
+    text: "攻"
+  - split: 5
+    text: "尊"
+- raw: "男名,长,铁,旋,固,铜"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "长"
+  - split: 2
+    text: "铁"
+  - split: 3
+    text: "旋"
+  - split: 4
+    text: "固"
+  - split: 5
+    text: "铜"
+- raw: "男名,泰,锋,征,圭,锡"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "泰"
+  - split: 2
+    text: "锋"
+  - split: 3
+    text: "征"
+  - split: 4
+    text: "圭"
+  - split: 5
+    text: "锡"
+- raw: "男名,昌,峰,旅,昊,弋"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "昌"
+  - split: 2
+    text: "峰"
+  - split: 3
+    text: "旅"
+  - split: 4
+    text: "昊"
+  - split: 5
+    text: "弋"
+- raw: "男名,盛,钟,守,赫,用"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "盛"
+  - split: 2
+    text: "钟"
+  - split: 3
+    text: "守"
+  - split: 4
+    text: "赫"
+  - split: 5
+    text: "用"
+- raw: "男名,富,鼎,卫,横,宗"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "富"
+  - split: 2
+    text: "鼎"
+  - split: 3
+    text: "卫"
+  - split: 4
+    text: "横"
+  - split: 5
+    text: "宗"
+- raw: "男名,贵,铭,福,划,总"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "贵"
+  - split: 2
+    text: "铭"
+  - split: 3
+    text: "福"
+  - split: 4
+    text: "划"
+  - split: 5
+    text: "总"
+- raw: "男名,吉,印,禄,击,刀"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "吉"
+  - split: 2
+    text: "印"
+  - split: 3
+    text: "禄"
+  - split: 4
+    text: "击"
+  - split: 5
+    text: "刀"
+- raw: "男名,祥,玄,寿,坚,枪"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "祥"
+  - split: 2
+    text: "玄"
+  - split: 3
+    text: "寿"
+  - split: 4
+    text: "坚"
+  - split: 5
+    text: "枪"
+- raw: "男名,洪,太,奋,角,断"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "洪"
+  - split: 2
+    text: "太"
+  - split: 3
+    text: "奋"
+  - split: 4
+    text: "角"
+  - split: 5
+    text: "断"
+- raw: "男名,醒,问,灭,败,丑"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "醒"
+  - split: 2
+    text: "问"
+  - split: 3
+    text: "灭"
+  - split: 4
+    text: "败"
+  - split: 5
+    text: "丑"
+- raw: "男名,缺,棘,孤,鬼,封"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "缺"
+  - split: 2
+    text: "棘"
+  - split: 3
+    text: "孤"
+  - split: 4
+    text: "鬼"
+  - split: 5
+    text: "封"
+- raw: "男名,戒,开,难,敌,罡"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "戒"
+  - split: 2
+    text: "开"
+  - split: 3
+    text: "难"
+  - split: 4
+    text: "敌"
+  - split: 5
+    text: "罡"
+- raw: "男名,翰,哲,斩,杀,莽"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "翰"
+  - split: 2
+    text: "哲"
+  - split: 3
+    text: "斩"
+  - split: 4
+    text: "杀"
+  - split: 5
+    text: "莽"
+- raw: "男名,凡,坤,亦,毒,暗"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "凡"
+  - split: 2
+    text: "坤"
+  - split: 3
+    text: "亦"
+  - split: 4
+    text: "毒"
+  - split: 5
+    text: "暗"
+- raw: "男名,仇,树,延,血,则"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "仇"
+  - split: 2
+    text: "树"
+  - split: 3
+    text: "延"
+  - split: 4
+    text: "血"
+  - split: 5
+    text: "则"
+- raw: "男名,苦,悲,痛,残,文"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "苦"
+  - split: 2
+    text: "悲"
+  - split: 3
+    text: "痛"
+  - split: 4
+    text: "残"
+  - split: 5
+    text: "文"
+- raw: "男名,弃,疾,裕,皓,天"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "弃"
+  - split: 2
+    text: "疾"
+  - split: 3
+    text: "裕"
+  - split: 4
+    text: "皓"
+  - split: 5
+    text: "天"
+- raw: "男名,侠,客,群,岛,经"
+  splits:
+  - text: "男名"
+  - split: 1
+    text: "侠"
+  - split: 2
+    text: "客"
+  - split: 3
+    text: "群"
+  - split: 4
+    text: "岛"
+  - split: 5
+    text: "经"
+- raw: "女名,晓,珊,稚,希,苓"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "晓"
+  - split: 2
+    text: "珊"
+  - split: 3
+    text: "稚"
+  - split: 4
+    text: "希"
+  - split: 5
+    text: "苓"
+- raw: "女名,小,晶,燕,梦,艾"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "小"
+  - split: 2
+    text: "晶"
+  - split: 3
+    text: "燕"
+  - split: 4
+    text: "梦"
+  - split: 5
+    text: "艾"
+- raw: "女名,妹,莹,鸽,境,葵"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "妹"
+  - split: 2
+    text: "莹"
+  - split: 3
+    text: "鸽"
+  - split: 4
+    text: "境"
+  - split: 5
+    text: "葵"
+- raw: "女名,姑,花,莺,淑,斓"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "姑"
+  - split: 2
+    text: "花"
+  - split: 3
+    text: "莺"
+  - split: 4
+    text: "淑"
+  - split: 5
+    text: "斓"
+- raw: "女名,娘,草,鹃,贞,卿"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "娘"
+  - split: 2
+    text: "草"
+  - split: 3
+    text: "鹃"
+  - split: 4
+    text: "贞"
+  - split: 5
+    text: "卿"
+- raw: "女名,妃,兰,蝶,宁,黛"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "妃"
+  - split: 2
+    text: "兰"
+  - split: 3
+    text: "蝶"
+  - split: 4
+    text: "宁"
+  - split: 5
+    text: "黛"
+- raw: "女名,姬,英,锦,静,芮"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "姬"
+  - split: 2
+    text: "英"
+  - split: 3
+    text: "锦"
+  - split: 4
+    text: "静"
+  - split: 5
+    text: "芮"
+- raw: "女名,后,灵,绣,倩,蕊"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "后"
+  - split: 2
+    text: "灵"
+  - split: 3
+    text: "绣"
+  - split: 4
+    text: "倩"
+  - split: 5
+    text: "蕊"
+- raw: "女名,好,芝,绫,巧,蕴"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "好"
+  - split: 2
+    text: "芝"
+  - split: 3
+    text: "绫"
+  - split: 4
+    text: "巧"
+  - split: 5
+    text: "蕴"
+- raw: "女名,妙,萱,罗,鱼,霖"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "妙"
+  - split: 2
+    text: "萱"
+  - split: 3
+    text: "罗"
+  - split: 4
+    text: "鱼"
+  - split: 5
+    text: "霖"
+- raw: "女名,妮,芸,绮,琴,姝"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "妮"
+  - split: 2
+    text: "芸"
+  - split: 3
+    text: "绮"
+  - split: 4
+    text: "琴"
+  - split: 5
+    text: "姝"
+- raw: "女名,娃,茗,衣,笛,恬"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "娃"
+  - split: 2
+    text: "茗"
+  - split: 3
+    text: "衣"
+  - split: 4
+    text: "笛"
+  - split: 5
+    text: "恬"
+- raw: "女名,爱,芬,裳,竹,晗"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "爱"
+  - split: 2
+    text: "芬"
+  - split: 3
+    text: "裳"
+  - split: 4
+    text: "竹"
+  - split: 5
+    text: "晗"
+- raw: "女名,媛,芳,慧,棋,昕"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "媛"
+  - split: 2
+    text: "芳"
+  - split: 3
+    text: "慧"
+  - split: 4
+    text: "棋"
+  - split: 5
+    text: "昕"
+- raw: "女名,婵,蓓,惠,书,纯"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "婵"
+  - split: 2
+    text: "蓓"
+  - split: 3
+    text: "惠"
+  - split: 4
+    text: "书"
+  - split: 5
+    text: "纯"
+- raw: "女名,娟,蕾,香,诗,菲"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "娟"
+  - split: 2
+    text: "蕾"
+  - split: 3
+    text: "香"
+  - split: 4
+    text: "诗"
+  - split: 5
+    text: "菲"
+- raw: "女名,娇,翠,穗,文,卉"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "娇"
+  - split: 2
+    text: "翠"
+  - split: 3
+    text: "穗"
+  - split: 4
+    text: "文"
+  - split: 5
+    text: "卉"
+- raw: "女名,媚,丽,颖,语,莱"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "媚"
+  - split: 2
+    text: "丽"
+  - split: 3
+    text: "颖"
+  - split: 4
+    text: "语"
+  - split: 5
+    text: "莱"
+- raw: "女名,婉,萍,芒,音,梨"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "婉"
+  - split: 2
+    text: "萍"
+  - split: 3
+    text: "芒"
+  - split: 4
+    text: "音"
+  - split: 5
+    text: "梨"
+- raw: "女名,婷,莲,彩,韵,蜜"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "婷"
+  - split: 2
+    text: "莲"
+  - split: 3
+    text: "彩"
+  - split: 4
+    text: "韵"
+  - split: 5
+    text: "蜜"
+- raw: "女名,妍,荷,艳,歌,女"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "妍"
+  - split: 2
+    text: "荷"
+  - split: 3
+    text: "艳"
+  - split: 4
+    text: "歌"
+  - split: 5
+    text: "女"
+- raw: "女名,嫣,莉,素,曲,纱"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "嫣"
+  - split: 2
+    text: "莉"
+  - split: 3
+    text: "素"
+  - split: 4
+    text: "曲"
+  - split: 5
+    text: "纱"
+- raw: "女名,贝,蔷,秀,如,丝"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "贝"
+  - split: 2
+    text: "蔷"
+  - split: 3
+    text: "秀"
+  - split: 4
+    text: "如"
+  - split: 5
+    text: "丝"
+- raw: "女名,璧,薇,美,若,菘"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "璧"
+  - split: 2
+    text: "薇"
+  - split: 3
+    text: "美"
+  - split: 4
+    text: "若"
+  - split: 5
+    text: "菘"
+- raw: "女名,环,茜,悦,晴,苏"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "环"
+  - split: 2
+    text: "茜"
+  - split: 3
+    text: "悦"
+  - split: 4
+    text: "晴"
+  - split: 5
+    text: "苏"
+- raw: "女名,琪,莎,雯,曦,桃"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "琪"
+  - split: 2
+    text: "莎"
+  - split: 3
+    text: "雯"
+  - split: 4
+    text: "曦"
+  - split: 5
+    text: "桃"
+- raw: "女名,璇,蓉,露,馨,舞"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "璇"
+  - split: 2
+    text: "蓉"
+  - split: 3
+    text: "露"
+  - split: 4
+    text: "馨"
+  - split: 5
+    text: "舞"
+- raw: "女名,玑,菱,霞,欣,绚"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "玑"
+  - split: 2
+    text: "菱"
+  - split: 3
+    text: "霞"
+  - split: 4
+    text: "欣"
+  - split: 5
+    text: "绚"
+- raw: "女名,珍,梅,雪,颜,芽"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "珍"
+  - split: 2
+    text: "梅"
+  - split: 3
+    text: "雪"
+  - split: 4
+    text: "颜"
+  - split: 5
+    text: "芽"
+- raw: "女名,珠,杏,虹,优,雁"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "珠"
+  - split: 2
+    text: "杏"
+  - split: 3
+    text: "虹"
+  - split: 4
+    text: "优"
+  - split: 5
+    text: "雁"
+- raw: "女名,玲,杨,涟,雅,依"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "玲"
+  - split: 2
+    text: "杨"
+  - split: 3
+    text: "涟"
+  - split: 4
+    text: "雅"
+  - split: 5
+    text: "依"
+- raw: "女名,珑,柳,溪,怡,荫"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "珑"
+  - split: 2
+    text: "柳"
+  - split: 3
+    text: "溪"
+  - split: 4
+    text: "怡"
+  - split: 5
+    text: "荫"
+- raw: "女名,佩,桂,思,暖,樱"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "佩"
+  - split: 2
+    text: "桂"
+  - split: 3
+    text: "思"
+  - split: 4
+    text: "暖"
+  - split: 5
+    text: "樱"
+- raw: "女名,琼,椿,绪,满,荧"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "琼"
+  - split: 2
+    text: "椿"
+  - split: 3
+    text: "绪"
+  - split: 4
+    text: "满"
+  - split: 5
+    text: "荧"
+- raw: "女名,瑶,榆,念,可,苑"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "瑶"
+  - split: 2
+    text: "榆"
+  - split: 3
+    text: "念"
+  - split: 4
+    text: "可"
+  - split: 5
+    text: "苑"
+- raw: "女名,瑜,枫,想,佳,俪"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "瑜"
+  - split: 2
+    text: "枫"
+  - split: 3
+    text: "想"
+  - split: 4
+    text: "佳"
+  - split: 5
+    text: "俪"
+- raw: "女名,琳,菊,盼,嘉,魅"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "琳"
+  - split: 2
+    text: "菊"
+  - split: 3
+    text: "盼"
+  - split: 4
+    text: "嘉"
+  - split: 5
+    text: "魅"
+- raw: "女名,容,袅,儿,施,芙"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "容"
+  - split: 2
+    text: "袅"
+  - split: 3
+    text: "儿"
+  - split: 4
+    text: "施"
+  - split: 5
+    text: "芙"
+- raw: "女名,璐,洁,忘,忧,蔓"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "璐"
+  - split: 2
+    text: "洁"
+  - split: 3
+    text: "忘"
+  - split: 4
+    text: "忧"
+  - split: 5
+    text: "蔓"
+- raw: "女名,听,情,忆,歆,婧"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "听"
+  - split: 2
+    text: "情"
+  - split: 3
+    text: "忆"
+  - split: 4
+    text: "歆"
+  - split: 5
+    text: "婧"
+- raw: "女名,琦,蕙,浓,淡,颀"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "琦"
+  - split: 2
+    text: "蕙"
+  - split: 3
+    text: "浓"
+  - split: 4
+    text: "淡"
+  - split: 5
+    text: "颀"
+- raw: "女名,伴,隽,眉,清,尔"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "伴"
+  - split: 2
+    text: "隽"
+  - split: 3
+    text: "眉"
+  - split: 4
+    text: "清"
+  - split: 5
+    text: "尔"
+- raw: "女名,含,莫,伊,娜,惜"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "含"
+  - split: 2
+    text: "莫"
+  - split: 3
+    text: "伊"
+  - split: 4
+    text: "娜"
+  - split: 5
+    text: "惜"
+- raw: "女名,泪,君,凝,菡,凌"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "泪"
+  - split: 2
+    text: "君"
+  - split: 3
+    text: "凝"
+  - split: 4
+    text: "菡"
+  - split: 5
+    text: "凌"
+- raw: "女名,宛,甜,潇,姿,鸯"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "宛"
+  - split: 2
+    text: "甜"
+  - split: 3
+    text: "潇"
+  - split: 4
+    text: "姿"
+  - split: 5
+    text: "鸯"
+- raw: "女名,柔,软,袖,琬,凰"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "柔"
+  - split: 2
+    text: "软"
+  - split: 3
+    text: "袖"
+  - split: 4
+    text: "琬"
+  - split: 5
+    text: "凰"
+- raw: "女名,约,诺,言,采,净"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "约"
+  - split: 2
+    text: "诺"
+  - split: 3
+    text: "言"
+  - split: 4
+    text: "采"
+  - split: 5
+    text: "净"
+- raw: "女名,玄,飞,一,烟,非"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "玄"
+  - split: 2
+    text: "飞"
+  - split: 3
+    text: "一"
+  - split: 4
+    text: "烟"
+  - split: 5
+    text: "非"
+- raw: "女名,襄,姗,影,朱,绿"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "襄"
+  - split: 2
+    text: "姗"
+  - split: 3
+    text: "影"
+  - split: 4
+    text: "朱"
+  - split: 5
+    text: "绿"
+- raw: "女名,盈,水,雨,霜,霏"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "盈"
+  - split: 2
+    text: "水"
+  - split: 3
+    text: "雨"
+  - split: 4
+    text: "霜"
+  - split: 5
+    text: "霏"
+- raw: "女名,春,夏,秋,冬,季"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "春"
+  - split: 2
+    text: "夏"
+  - split: 3
+    text: "秋"
+  - split: 4
+    text: "冬"
+  - split: 5
+    text: "季"
+- raw: "女名,青,倾,紫,敏,彗"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "青"
+  - split: 2
+    text: "倾"
+  - split: 3
+    text: "紫"
+  - split: 4
+    text: "敏"
+  - split: 5
+    text: "彗"
+- raw: "女名,寻,欢,乐,幻,真"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "寻"
+  - split: 2
+    text: "欢"
+  - split: 3
+    text: "乐"
+  - split: 4
+    text: "幻"
+  - split: 5
+    text: "真"
+- raw: "女名,脂,玉,冰,芷,纤"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "脂"
+  - split: 2
+    text: "玉"
+  - split: 3
+    text: "冰"
+  - split: 4
+    text: "芷"
+  - split: 5
+    text: "纤"
+- raw: "女名,尘,仙,子,梓,涵"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "尘"
+  - split: 2
+    text: "仙"
+  - split: 3
+    text: "子"
+  - split: 4
+    text: "梓"
+  - split: 5
+    text: "涵"
+- raw: "女名,摇,曳,步,遥,弦"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "摇"
+  - split: 2
+    text: "曳"
+  - split: 3
+    text: "步"
+  - split: 4
+    text: "遥"
+  - split: 5
+    text: "弦"
+- raw: "女名,幽,千,与,染,心"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "幽"
+  - split: 2
+    text: "千"
+  - split: 3
+    text: "与"
+  - split: 4
+    text: "染"
+  - split: 5
+    text: "心"
+- raw: "女名,桐,温,鹿,珂,圆"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "桐"
+  - split: 2
+    text: "温"
+  - split: 3
+    text: "鹿"
+  - split: 4
+    text: "珂"
+  - split: 5
+    text: "圆"
+- raw: "女名,亭,粉,画,醉,昭"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "亭"
+  - split: 2
+    text: "粉"
+  - split: 3
+    text: "画"
+  - split: 4
+    text: "醉"
+  - split: 5
+    text: "昭"
+- raw: "女名,君,棉,脉,仪,俏"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "君"
+  - split: 2
+    text: "棉"
+  - split: 3
+    text: "脉"
+  - split: 4
+    text: "仪"
+  - split: 5
+    text: "俏"
+- raw: "女名,白,橙,红,黄,笙"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "白"
+  - split: 2
+    text: "橙"
+  - split: 3
+    text: "红"
+  - split: 4
+    text: "黄"
+  - split: 5
+    text: "笙"
+- raw: "女名,谷,风,华,双,剑"
+  splits:
+  - text: "女名"
+  - split: 1
+    text: "谷"
+  - split: 2
+    text: "风"
+  - split: 3
+    text: "华"
+  - split: 4
+    text: "双"
+  - split: 5
+    text: "剑"

@@ -1,0 +1,1077 @@
+- raw: "序号,特效,描述,显示百分比,基础数值"
+  splits:
+  - split: 0
+    text: "序号"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 1
+    text: "特效"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "描述"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "显示百分比"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "基础数值"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "0,区域上限,区域上限,FALSE,1"
+  splits:
+  - split: 1
+    text: "区域上限"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "区域上限"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "1,弟子上限,弟子上限,FALSE,5"
+  splits:
+  - split: 1
+    text: "弟子上限"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "弟子上限"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "2,仓储容量,仓储容量,FALSE,1"
+  splits:
+  - split: 1
+    text: "仓储容量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仓储容量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "3,弟子功绩,弟子功绩,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "弟子功绩"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "弟子功绩"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "4,科研效率,科研效率,TRUE,0.04"
+  splits:
+  - split: 1
+    text: "科研效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "科研效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "5,旅行速度,旅行速度,TRUE,0.01"
+  splits:
+  - split: 1
+    text: "旅行速度"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "旅行速度"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "6,实战经验,实战经验,TRUE,0.01"
+  splits:
+  - split: 1
+    text: "实战经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "实战经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "7,理论经验,理论经验,TRUE,0.01"
+  splits:
+  - split: 1
+    text: "理论经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "理论经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "8,疗伤效率,疗伤效率,TRUE,0.01"
+  splits:
+  - split: 1
+    text: "疗伤效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "疗伤效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "9,本地疗伤效率,本地疗伤效率,TRUE,0.05"
+  splits:
+  - split: 1
+    text: "本地疗伤效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "本地疗伤效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "10,恢复效率,恢复效率,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "恢复效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "恢复效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "11,本地恢复效率,本地恢复效率,TRUE,0.1"
+  splits:
+  - split: 1
+    text: "本地恢复效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "本地恢复效率"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "12,建造速度,建造速度,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "建造速度"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "建造速度"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "13,本地建造速度,本地建造速度,TRUE,0.1"
+  splits:
+  - split: 1
+    text: "本地建造速度"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "本地建造速度"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "14,资源点产量,资源点产量,TRUE,0.01"
+  splits:
+  - split: 1
+    text: "资源点产量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "资源点产量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "15,本地资源点产量,本地资源点产量,TRUE,0.05"
+  splits:
+  - split: 1
+    text: "本地资源点产量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "本地资源点产量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "16,技艺经验,技艺经验,TRUE,0.01"
+  splits:
+  - split: 1
+    text: "技艺经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "技艺经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "17,内功经验,内功经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "内功经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "内功经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "18,轻功经验,轻功经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "轻功经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "轻功经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "19,绝技经验,绝技经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "绝技经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "绝技经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "20,拳掌经验,拳掌经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "拳掌经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "拳掌经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "21,剑法经验,剑法经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "剑法经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "剑法经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "22,刀法经验,刀法经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "刀法经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "刀法经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "23,长兵经验,长兵经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "长兵经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "长兵经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "24,奇门经验,奇门经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "奇门经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "奇门经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "25,射术经验,射术经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "射术经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "射术经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "26,医术经验,医术经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "医术经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "医术经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "27,毒术经验,毒术经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "毒术经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "毒术经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "28,学识经验,学识经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "学识经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "学识经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "29,口才经验,口才经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "口才经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "口才经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "30,采伐经验,采伐经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "采伐经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "采伐经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "31,木植经验,木植经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "木植经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "木植经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "32,锻造经验,锻造经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "锻造经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "锻造经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "33,炼药经验,炼药经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "炼药经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "炼药经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "34,烹饪经验,烹饪经验,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "烹饪经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "烹饪经验"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "35,全员力道,全员力道,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员力道"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员力道"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "36,全员灵巧,全员灵巧,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员灵巧"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员灵巧"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "37,全员智力,全员智力,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员智力"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员智力"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "38,全员意志,全员意志,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员意志"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员意志"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "39,全员体质,全员体质,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员体质"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员体质"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "40,全员经脉,全员经脉,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员经脉"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员经脉"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "41,全员内功,全员内功,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员内功"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员内功"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "42,全员轻功,全员轻功,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员轻功"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员轻功"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "43,全员绝技,全员绝技,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员绝技"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员绝技"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "44,全员拳掌,全员拳掌,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "45,全员剑法,全员剑法,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员剑法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员剑法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "46,全员刀法,全员刀法,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "47,全员长兵,全员长兵,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "48,全员奇门,全员奇门,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "49,全员射术,全员射术,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "50,全员医术,全员医术,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员医术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员医术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "51,全员毒术,全员毒术,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员毒术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员毒术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "52,全员学识,全员学识,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员学识"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员学识"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "53,全员口才,全员口才,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员口才"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员口才"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "54,全员采伐,全员采伐,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员采伐"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员采伐"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "55,全员木植,全员木植,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员木植"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员木植"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "56,全员锻造,全员锻造,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员锻造"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员锻造"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "57,全员炼药,全员炼药,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员炼药"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员炼药"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "58,全员烹饪,全员烹饪,FALSE,1"
+  splits:
+  - split: 1
+    text: "全员烹饪"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全员烹饪"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "59,藏经容量,藏经容量,FALSE,5"
+  splits:
+  - split: 1
+    text: "藏经容量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "藏经容量"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "60,全域治安,全域治安,FALSE,1"
+  splits:
+  - split: 1
+    text: "全域治安"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全域治安"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "61,全域民心,全域民心,FALSE,1"
+  splits:
+  - split: 1
+    text: "全域民心"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全域民心"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "62,全域防御,全域防御,FALSE,1"
+  splits:
+  - split: 1
+    text: "全域防御"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全域防御"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "63,全域人口,全域人口,FALSE,5"
+  splits:
+  - split: 1
+    text: "全域人口"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "全域人口"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "64,城防耐久,城防耐久,TRUE,0.02"
+  splits:
+  - split: 1
+    text: "城防耐久"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "城防耐久"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""

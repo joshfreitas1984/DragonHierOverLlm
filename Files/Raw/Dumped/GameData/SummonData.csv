@@ -1,0 +1,11 @@
+id,名字,稀有度,基础生命,基础速度,移动距离,技能ID,攻击音效,建筑
+0,箭塔,0,150,1.25,0,0,WoodenSummonAttack,TRUE
+1,木流马,0,10,1.1,3,6;1,SpeEffect/振波土石,FALSE
+2,青铜奔牛,1,20,1.2,3,6;2,SpeEffect/振波土石,FALSE
+3,玉石麒麟,2,35,1,4,6;3,SpeEffect/振波土石,FALSE
+4,燎原朱雀,3,60,1,6,0;4,Eagle,FALSE
+5,地动青龙,4,75,0.9,5,0;5,SpeEffect/龙吼,FALSE
+6,分舵,4,300,1.5,0,7,WoodenSummonAttack,TRUE
+7,战鼓,2,200,1,0,8,SpeEffect/士气上升,TRUE
+8,公输遗匣,5,50,1.5,4,7;8;2;4;5;9,SpeEffect/剑雨,FALSE
+9,总舵,5,500,2,0,7;8;10,WoodenSummonAttack,TRUE

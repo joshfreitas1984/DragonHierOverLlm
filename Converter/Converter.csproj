@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Il2CppExplorer</AssemblyName>
+    <RootNamespace>Il2CppExplorer</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="output\**" />
+    <Content Remove="output\**" />
+    <EmbeddedResource Remove="output\**" />
+    <None Remove="output\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Mono.Cecil" Version="0.11.5" />
+    <!-- LibCpp2IL from BepInEx/core — used to extract Unity engine method RVAs for Ghidra labels -->
+    <Reference Include="LibCpp2IL">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\core\LibCpp2IL.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="AssetRipper.Primitives">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\core\AssetRipper.Primitives.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

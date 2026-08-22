@@ -1,0 +1,1210 @@
+- raw: "id,名字,图标,类别0门派1城市村镇通用2城市3村镇4生产5小建筑6特殊建筑,唯一,居中,随机位置,互动选项,每月产出,每月维护,加成,增加效率,升级消耗,建造时间,限制区域0通用1城镇2门派,商店设置,环境音效,进入音效,盗窃抢劫,描述"
+  splits:
+  - split: 1
+    text: "名字"
+  - split: 2
+    text: "图标"
+  - split: 3
+    text: "类别0门派1城市村镇通用2城市3村镇4生产5小建筑6特殊建筑"
+  - split: 4
+    text: "唯一"
+  - split: 5
+    text: "居中"
+  - split: 6
+    text: "随机位置"
+  - split: 7
+    text: "互动选项"
+  - split: 8
+    text: "每月产出"
+  - split: 9
+    text: "每月维护"
+  - split: 10
+    text: "加成"
+  - split: 11
+    text: "增加效率"
+  - split: 12
+    text: "升级消耗"
+  - split: 13
+    text: "建造时间"
+  - split: 14
+    text: "限制区域0通用1城镇2门派"
+  - split: 15
+    text: "商店设置"
+  - split: 16
+    text: "环境音效"
+  - split: 17
+    text: "进入音效"
+  - split: 18
+    text: "盗窃抢劫"
+  - split: 19
+    text: "描述"
+- raw: "0,正厅,0,0,1,1,0,门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting;弟子方针?设定弟子行动方针-我&长老-ManageForceHeroSetting;门派外交?与其他门派进行外交-非我-InteractOtherForce;门派科研?查看门派科研情况-我-ShowResearch;查看科研?查看门派科研情况-非我-ShowResearch;门派委托?完成门派委托获取银钱和门派功绩-我&入门弟子-ShowBuildingMission;挥师出征?向周遭区域发起攻击-我&掌门-LeaderManageForceAttack;外交派遣?派遣信使进行外交-我&掌门-LeaderInteractOtherForce;别派委托?完成别派委托获取银钱和别派功绩-非我-ShowOtherForceMission;功绩兑换?功绩兑换武学/服装/特殊建筑-非我-ShowContributionExchange,威望+10,,区域上限2;弟子上限20;仓储容量4,,威望400;银钱2000;粮食1000;木料1000;矿石1000,30,2,,-1,bigdoor,0;0,门派正中之厅堂，亦是一门之中最为重要之建筑，掌门往往在此安排事务，举办会议，会见宾客。"
+  splits:
+  - split: 1
+    text: "正厅"
+  - split: 7
+    text: "门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting;弟子方针?设定弟子行动方针-我&长老-ManageForceHeroSetting;门派外交?与其他门派进行外交-非我-InteractOtherForce;门派科研?查看门派科研情况-我-ShowResearch;查看科研?查看门派科研情况-非我-ShowResearch;门派委托?完成门派委托获取银钱和门派功绩-我&入门弟子-ShowBuildingMission;挥师出征?向周遭区域发起攻击-我&掌门-LeaderManageForceAttack;外交派遣?派遣信使进行外交-我&掌门-LeaderInteractOtherForce;别派委托?完成别派委托获取银钱和别派功绩-非我-ShowOtherForceMission;功绩兑换?功绩兑换武学/服装/特殊建筑-非我-ShowContributionExchange"
+  - split: 8
+    text: "威望+10"
+  - split: 10
+    text: "区域上限2;弟子上限20;仓储容量4"
+  - split: 12
+    text: "威望400;银钱2000;粮食1000;木料1000;矿石1000"
+  - split: 19
+    text: "门派正中之厅堂，亦是一门之中最为重要之建筑，掌门往往在此安排事务，举办会议，会见宾客。"
+- raw: "1,藏经阁,1,0,1,0,4,阅读藏书?阅读藏经阁秘籍获取理论经验-我|附庸-ShowBookStore;阅读秘籍?阅读行囊/仓库秘籍获取理论经验-我|附庸|门客-ChooseReadBook;编纂秘籍?对秘籍进行整合/抄录/默写-我&正式弟子-ShowBookWriter;管理藏书?管理藏经阁内藏书-我&副掌门-ManageBookStore;盗窃藏书?偷窃藏经阁内藏书-非我-StealForceSkill,,银钱-50,理论经验0.1;藏经容量40,,木料1000,10,2,,-1,door,0;0,门派中藏经，阅经，以及文案抄写研究之所，从粗浅入门功夫到秘传独门武学，皆分门别类储藏其中，非本门弟子自是严禁入内。"
+  splits:
+  - split: 1
+    text: "藏经阁"
+  - split: 7
+    text: "阅读藏书?阅读藏经阁秘籍获取理论经验-我|附庸-ShowBookStore;阅读秘籍?阅读行囊/仓库秘籍获取理论经验-我|附庸|门客-ChooseReadBook;编纂秘籍?对秘籍进行整合/抄录/默写-我&正式弟子-ShowBookWriter;管理藏书?管理藏经阁内藏书-我&副掌门-ManageBookStore;盗窃藏书?偷窃藏经阁内藏书-非我-StealForceSkill"
+  - split: 9
+    text: "银钱-50"
+  - split: 10
+    text: "理论经验0.1;藏经容量40"
+  - split: 12
+    text: "木料1000"
+  - split: 19
+    text: "门派中藏经，阅经，以及文案抄写研究之所，从粗浅入门功夫到秘传独门武学，皆分门别类储藏其中，非本门弟子自是严禁入内。"
+- raw: "2,练武场,2,0,1,0,4,练习?练习武功获取实战经验-我|附庸|门客-StudyFightSelf;切磋?与门派弟子进行切磋-我|附庸-StudyFightOther,,粮食-50,实战经验0.1,,矿石1000,10,2,,4,footstep,0;0,有练功木人以及各式兵器陈列的宽阔广场，门派弟子会在此修习各式外门武学或相互切磋比试。"
+  splits:
+  - split: 1
+    text: "练武场"
+  - split: 7
+    text: "练习?练习武功获取实战经验-我|附庸|门客-StudyFightSelf;切磋?与门派弟子进行切磋-我|附庸-StudyFightOther"
+  - split: 9
+    text: "粮食-50"
+  - split: 10
+    text: "实战经验0.1"
+  - split: 12
+    text: "矿石1000"
+  - split: 19
+    text: "有练功木人以及各式兵器陈列的宽阔广场，门派弟子会在此修习各式外门武学或相互切磋比试。"
+- raw: "3,闭关室,3,0,1,0,4,修炼?修炼内功/轻功/绝技获取实战经验-我|附庸|门客-StudyInternalSelf;突破?突破抵达瓶颈的武学-我|附庸|门客-BreakThroughSkill;天赋?消耗天赋点领悟天赋-我|附庸|门客-ManageTag,,银钱-50,理论经验0.05;实战经验0.05,,粮食500;药材500,10,2,,-1,door,0;0,位于门派深处一处幽僻隐秘的建筑，设有修习内功，轻功以及绝技的各类器械秘籍、机关装置，以及突破武学境界所需的闭关房。"
+  splits:
+  - split: 1
+    text: "闭关室"
+  - split: 7
+    text: "修炼?修炼内功/轻功/绝技获取实战经验-我|附庸|门客-StudyInternalSelf;突破?突破抵达瓶颈的武学-我|附庸|门客-BreakThroughSkill;天赋?消耗天赋点领悟天赋-我|附庸|门客-ManageTag"
+  - split: 9
+    text: "银钱-50"
+  - split: 10
+    text: "理论经验0.05;实战经验0.05"
+  - split: 12
+    text: "粮食500;药材500"
+  - split: 19
+    text: "位于门派深处一处幽僻隐秘的建筑，设有修习内功，轻功以及绝技的各类器械秘籍、机关装置，以及突破武学境界所需的闭关房。"
+- raw: "4,祠堂,4,0,1,0,3,祭典?获取门派威望\\n技能影响：学识-我-ProduceBuildingWork-5;鉴定?鉴定珍宝-我&入门弟子-IdentifyItem;门派展厅?管理门派展厅-我&正式弟子-ShowForceShowRoom;宴会?与门派弟子宴饮提升忠诚-我&掌门-StartForceParty,威望+10,银钱-100,科研效率0.4;学识经验0.1;口才经验0.1,,威望100;木料500;矿石500,10,2,,11,door,0;0,供奉祭祀门派历代掌门先贤之所，同时设有陈列珍宝之展厅，以及研习技艺，鉴定珍宝所需的各类工具书籍。"
+  splits:
+  - split: 1
+    text: "祠堂"
+  - split: 7
+    text: "祭典?获取门派威望\\n技能影响：学识-我-ProduceBuildingWork-5;鉴定?鉴定珍宝-我&入门弟子-IdentifyItem;门派展厅?管理门派展厅-我&正式弟子-ShowForceShowRoom;宴会?与门派弟子宴饮提升忠诚-我&掌门-StartForceParty"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "科研效率0.4;学识经验0.1;口才经验0.1"
+  - split: 12
+    text: "威望100;木料500;矿石500"
+  - split: 19
+    text: "供奉祭祀门派历代掌门先贤之所，同时设有陈列珍宝之展厅，以及研习技艺，鉴定珍宝所需的各类工具书籍。"
+- raw: "5,工匠坊,5,0,1,0,2,铸造?制作装备-我&正式弟子-StartCraftEquipment;煅烧?强化装备-我&亲传弟子-StartEnhanceEquipment;烹饪?制作饮食-我-StartCraftFood;精烩?强化饮食-我&入门弟子-StartEnhanceFood,银钱+100,矿石-50,建造速度0.2;锻造经验0.1;采伐经验0.1,木匠-0.2;石坊-0.2,木料500;矿石500,10,2,,7,door,0;0,设置有熔炉铁砧以及各式木匠工具之所，弟子在此制作各式武器防具，以供门派使用。"
+  splits:
+  - split: 1
+    text: "工匠坊"
+  - split: 7
+    text: "铸造?制作装备-我&正式弟子-StartCraftEquipment;煅烧?强化装备-我&亲传弟子-StartEnhanceEquipment;烹饪?制作饮食-我-StartCraftFood;精烩?强化饮食-我&入门弟子-StartEnhanceFood"
+  - split: 8
+    text: "银钱+100"
+  - split: 9
+    text: "矿石-50"
+  - split: 10
+    text: "建造速度0.2;锻造经验0.1;采伐经验0.1"
+  - split: 11
+    text: "木匠-0.2;石坊-0.2"
+  - split: 12
+    text: "木料500;矿石500"
+  - split: 19
+    text: "设置有熔炉铁砧以及各式木匠工具之所，弟子在此制作各式武器防具，以供门派使用。"
+- raw: "6,炼丹炉,6,0,1,0,2,炼药?制作丹药-我&入门弟子-StartCraftMed;炮制?强化丹药-我&正式弟子-StartEnhanceMed;用毒?对物品进行淬毒/下毒/消毒-我&入门弟子-StartCraftPoison,银钱+100,药材-50,疗伤效率0.05;恢复效率0.05;炼药经验0.1;木植经验0.1,药房-0.2,粮食500;药材500,10,2,,10,door,0;0,设置有杵臼甘埚以及各式丹炉药鼎之所，弟子在此炼制各式灵丹妙药，以供门派使用。"
+  splits:
+  - split: 1
+    text: "炼丹炉"
+  - split: 7
+    text: "炼药?制作丹药-我&入门弟子-StartCraftMed;炮制?强化丹药-我&正式弟子-StartEnhanceMed;用毒?对物品进行淬毒/下毒/消毒-我&入门弟子-StartCraftPoison"
+  - split: 8
+    text: "银钱+100"
+  - split: 9
+    text: "药材-50"
+  - split: 10
+    text: "疗伤效率0.05;恢复效率0.05;炼药经验0.1;木植经验0.1"
+  - split: 11
+    text: "药房-0.2"
+  - split: 12
+    text: "粮食500;药材500"
+  - split: 19
+    text: "设置有杵臼甘埚以及各式丹炉药鼎之所，弟子在此炼制各式灵丹妙药，以供门派使用。"
+- raw: "7,疗伤室,7,0,1,0,3,疗伤?治疗伤势-我|附庸|门客-HospitalCureInjuryForce;坐诊?为周边受伤侠士疗伤治病-我&正式弟子-DoctorWork,银钱+100,药材-50,本地疗伤效率0.1;医术经验0.1;毒术经验0.1,药房-0.2,药材1000,10,2,,10,door,0;0,设有各式医疗工具和常见药材，供本门弟子寻医问药，疗养伤病，康复元气之所。"
+  splits:
+  - split: 1
+    text: "疗伤室"
+  - split: 7
+    text: "疗伤?治疗伤势-我|附庸|门客-HospitalCureInjuryForce;坐诊?为周边受伤侠士疗伤治病-我&正式弟子-DoctorWork"
+  - split: 8
+    text: "银钱+100"
+  - split: 9
+    text: "药材-50"
+  - split: 10
+    text: "本地疗伤效率0.1;医术经验0.1;毒术经验0.1"
+  - split: 11
+    text: "药房-0.2"
+  - split: 12
+    text: "药材1000"
+  - split: 19
+    text: "设有各式医疗工具和常见药材，供本门弟子寻医问药，疗养伤病，康复元气之所。"
+- raw: "8,宿舍,8,0,1,0,2,休息?休养恢复状态-我|附庸|门客-HomeRest;私人仓库?存放物品-我|附庸|门客-OpenSelfStorage,,粮食-50,弟子上限20;本地恢复效率0.1;烹饪经验0.1,摊贩-0.2;磨坊-0.2,粮食500;木料500,10,2,,-1,door,0;0,门派中人居住休憩之所，低级弟子往往几人合住一简朴厢房，位高者则有豪华厢房单独居住。"
+  splits:
+  - split: 1
+    text: "宿舍"
+  - split: 7
+    text: "休息?休养恢复状态-我|附庸|门客-HomeRest;私人仓库?存放物品-我|附庸|门客-OpenSelfStorage"
+  - split: 9
+    text: "粮食-50"
+  - split: 10
+    text: "弟子上限20;本地恢复效率0.1;烹饪经验0.1"
+  - split: 11
+    text: "摊贩-0.2;磨坊-0.2"
+  - split: 12
+    text: "粮食500;木料500"
+  - split: 19
+    text: "门派中人居住休憩之所，低级弟子往往几人合住一简朴厢房，位高者则有豪华厢房单独居住。"
+- raw: "9,仓库,9,0,1,0,3,门派金库?管理门派银钱-我&入门弟子-ManageForceMoney;门派仓库?查看门派仓库--OpenForceStorage;管理售价?管理门派仓库物品售价-我&副掌门-ManageForceStorage;盗窃库存?偷窃门派仓库内物品-非我-StealForceResource,,木料-50,资源点产量0.1;仓储容量2,,粮食500;矿石500,10,2,,-1,door,0;0,各式木架，箱桶排列有序，门派资源皆储藏其中，门派弟子也均分配少量空间以储存私人物品。"
+  splits:
+  - split: 1
+    text: "仓库"
+  - split: 7
+    text: "门派金库?管理门派银钱-我&入门弟子-ManageForceMoney;门派仓库?查看门派仓库--OpenForceStorage;管理售价?管理门派仓库物品售价-我&副掌门-ManageForceStorage;盗窃库存?偷窃门派仓库内物品-非我-StealForceResource"
+  - split: 9
+    text: "木料-50"
+  - split: 10
+    text: "资源点产量0.1;仓储容量2"
+  - split: 12
+    text: "粮食500;矿石500"
+  - split: 19
+    text: "各式木架，箱桶排列有序，门派资源皆储藏其中，门派弟子也均分配少量空间以储存私人物品。"
+- raw: "10,钱庄,10,4,1,0,1,经营?获取门派银钱\\n技能影响：口才-我|无门派-ProduceBuildingWork-0;放债?增加资源储量\\n技能影响：口才 学识-我-RecoverBuildingResourceRate;经营?窃取门派银钱\\n技能影响：口才-敌-ProduceBuildingSteal-0,银钱+100,,,摊贩-0.2,银钱1000,10,0,,0,door,0;0,本地银两兑换，典当放债之处，区域所有者可在此赚取银两，以供门派使用。"
+  splits:
+  - split: 1
+    text: "钱庄"
+  - split: 7
+    text: "经营?获取门派银钱\\n技能影响：口才-我|无门派-ProduceBuildingWork-0;放债?增加资源储量\\n技能影响：口才 学识-我-RecoverBuildingResourceRate;经营?窃取门派银钱\\n技能影响：口才-敌-ProduceBuildingSteal-0"
+  - split: 8
+    text: "银钱+100"
+  - split: 11
+    text: "摊贩-0.2"
+  - split: 12
+    text: "银钱1000"
+  - split: 19
+    text: "本地银两兑换，典当放债之处，区域所有者可在此赚取银两，以供门派使用。"
+- raw: "11,农田,11,4,1,0,1,耕作?获取门派粮食\\n技能影响：木植-我|无门派-ProduceBuildingWork-1;育种?增加资源储量\\n技能影响：木植 学识-我-RecoverBuildingResourceRate;耕作?窃取门派粮食\\n技能影响：木植-敌-ProduceBuildingSteal-1,粮食+100,,,磨坊-0.2,银钱500;粮食500,10,0,,5,footstep,0;0,本地耕种粮食，养殖放牧之处，区域所有者可在此收取粮食，以供门派使用。"
+  splits:
+  - split: 1
+    text: "农田"
+  - split: 7
+    text: "耕作?获取门派粮食\\n技能影响：木植-我|无门派-ProduceBuildingWork-1;育种?增加资源储量\\n技能影响：木植 学识-我-RecoverBuildingResourceRate;耕作?窃取门派粮食\\n技能影响：木植-敌-ProduceBuildingSteal-1"
+  - split: 8
+    text: "粮食+100"
+  - split: 11
+    text: "磨坊-0.2"
+  - split: 12
+    text: "银钱500;粮食500"
+  - split: 19
+    text: "本地耕种粮食，养殖放牧之处，区域所有者可在此收取粮食，以供门派使用。"
+- raw: "12,森林,12,4,1,0,1,砍伐?获取门派木料\\n技能影响：采伐-我|无门派-ProduceBuildingWork-2;勘探?增加资源储量\\n技能影响：采伐 学识-我-RecoverBuildingResourceRate;砍伐?窃取门派木料\\n技能影响：采伐-敌-ProduceBuildingSteal-2,木料+100,,,木匠-0.2,银钱500;木料500,10,0,,6,footstep,0;0,本地森林繁茂，树木茁壮之处，区域所有者可在此砍伐木材，以供门派使用。"
+  splits:
+  - split: 1
+    text: "森林"
+  - split: 7
+    text: "砍伐?获取门派木料\\n技能影响：采伐-我|无门派-ProduceBuildingWork-2;勘探?增加资源储量\\n技能影响：采伐 学识-我-RecoverBuildingResourceRate;砍伐?窃取门派木料\\n技能影响：采伐-敌-ProduceBuildingSteal-2"
+  - split: 8
+    text: "木料+100"
+  - split: 11
+    text: "木匠-0.2"
+  - split: 12
+    text: "银钱500;木料500"
+  - split: 19
+    text: "本地森林繁茂，树木茁壮之处，区域所有者可在此砍伐木材，以供门派使用。"
+- raw: "13,矿场,13,4,1,0,1,挖掘?获取门派矿石\\n技能影响：采伐-我|无门派-ProduceBuildingWork-3;勘探?增加资源储量\\n技能影响：采伐 学识-我-RecoverBuildingResourceRate;挖掘?窃取门派矿石\\n技能影响：采伐-敌-ProduceBuildingSteal-3,矿石+100,,,石坊-0.2,银钱500;矿石500,10,0,,9,footstep,0;0,本地开山凿石，探寻矿脉之处，区域所有者可在此开采矿石，以供门派使用。"
+  splits:
+  - split: 1
+    text: "矿场"
+  - split: 7
+    text: "挖掘?获取门派矿石\\n技能影响：采伐-我|无门派-ProduceBuildingWork-3;勘探?增加资源储量\\n技能影响：采伐 学识-我-RecoverBuildingResourceRate;挖掘?窃取门派矿石\\n技能影响：采伐-敌-ProduceBuildingSteal-3"
+  - split: 8
+    text: "矿石+100"
+  - split: 11
+    text: "石坊-0.2"
+  - split: 12
+    text: "银钱500;矿石500"
+  - split: 19
+    text: "本地开山凿石，探寻矿脉之处，区域所有者可在此开采矿石，以供门派使用。"
+- raw: "14,药园,14,4,1,0,1,采收?获取门派药材\\n技能影响：木植-我|无门派-ProduceBuildingWork-4;育种?增加资源储量\\n技能影响：木植 学识-我-RecoverBuildingResourceRate;采收?窃取门派药材\\n技能影响：木植-敌-ProduceBuildingSteal-4,药材+100,,,药房-0.2,银钱500;药材500,10,0,,1,footstep,0;0,本地种植药草，栽培异花之处，区域所有者可在此采摘药材，以供门派使用。"
+  splits:
+  - split: 1
+    text: "药园"
+  - split: 7
+    text: "采收?获取门派药材\\n技能影响：木植-我|无门派-ProduceBuildingWork-4;育种?增加资源储量\\n技能影响：木植 学识-我-RecoverBuildingResourceRate;采收?窃取门派药材\\n技能影响：木植-敌-ProduceBuildingSteal-4"
+  - split: 8
+    text: "药材+100"
+  - split: 11
+    text: "药房-0.2"
+  - split: 12
+    text: "银钱500;药材500"
+  - split: 19
+    text: "本地种植药草，栽培异花之处，区域所有者可在此采摘药材，以供门派使用。"
+- raw: "15,官府,15,1,1,1,0,官职?积累官府功绩提升官职--ShowGovernLv;功绩兑换?用官府功绩兑换物品/护卫-官职-ShowGovernContribution;官府委托?完成官府委托获取银钱和官府功绩-官职-ShowBuildingMission;恶名?管理自身恶名--GovernmentClearBadFame,人口+20;银钱+100,治安-2;民心-2,人口上限400;弟子上限5,,威望200;银钱1000;粮食500;木料500;矿石500,10,1,,-1,bigdoor,0;0,居于城镇中央，朝廷官员办公判案之所，气势恢宏，守卫森严，亦是一城之中最为重要之建筑。"
+  splits:
+  - split: 1
+    text: "官府"
+  - split: 7
+    text: "官职?积累官府功绩提升官职--ShowGovernLv;功绩兑换?用官府功绩兑换物品/护卫-官职-ShowGovernContribution;官府委托?完成官府委托获取银钱和官府功绩-官职-ShowBuildingMission;恶名?管理自身恶名--GovernmentClearBadFame"
+  - split: 8
+    text: "人口+20;银钱+100"
+  - split: 9
+    text: "治安-2;民心-2"
+  - split: 10
+    text: "人口上限400;弟子上限5"
+  - split: 12
+    text: "威望200;银钱1000;粮食500;木料500;矿石500"
+  - split: 19
+    text: "居于城镇中央，朝廷官员办公判案之所，气势恢宏，守卫森严，亦是一城之中最为重要之建筑。"
+- raw: "16,集市,16,2,1,0,2,交易--ShowBuildingShop;资源贸易?买卖门派资源-有门派-ShowFreeTrade,银钱+100,粮食-50,本地资源点产量0.2,珍宝铺-0.2;兵器铺-0.2;材料铺-0.2,粮食500;木料500,10,1,1000-12-0-0/1/2/3/4/5,0,footstep,1;1,本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
+  splits:
+  - split: 1
+    text: "集市"
+  - split: 7
+    text: "交易--ShowBuildingShop;资源贸易?买卖门派资源-有门派-ShowFreeTrade"
+  - split: 8
+    text: "银钱+100"
+  - split: 9
+    text: "粮食-50"
+  - split: 10
+    text: "本地资源点产量0.2"
+  - split: 11
+    text: "珍宝铺-0.2;兵器铺-0.2;材料铺-0.2"
+  - split: 12
+    text: "粮食500;木料500"
+  - split: 19
+    text: "本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
+- raw: "17,客栈,17,1,1,0,3,探听?打探周边随机事件--AskNearRandomEvent;住宿?休养恢复状态--HotelRest;打杂?赚取少量银钱--SimpleWork;烹饪?制作饮食--StartCraftFoodMoney;精烩?强化饮食--StartEnhanceFoodMoney;义诊?增加区域人口\\n技能影响：炼药-我-AreaBuildingWork-4;投药?降低区域人口\\n技能影响：炼药-敌-AreaBuildingWork-负4,民心+6,治安-4,本地恢复效率0.1,岗哨-0.2;集市-0.2,银钱500;粮食500,10,1,,0,door,0;0,供商贾旅人和武林人士打尖住店之所，一楼提供各式家常菜肴，二楼则为住宿客房。"
+  splits:
+  - split: 1
+    text: "客栈"
+  - split: 7
+    text: "探听?打探周边随机事件--AskNearRandomEvent;住宿?休养恢复状态--HotelRest;打杂?赚取少量银钱--SimpleWork;烹饪?制作饮食--StartCraftFoodMoney;精烩?强化饮食--StartEnhanceFoodMoney;义诊?增加区域人口\\n技能影响：炼药-我-AreaBuildingWork-4;投药?降低区域人口\\n技能影响：炼药-敌-AreaBuildingWork-负4"
+  - split: 8
+    text: "民心+6"
+  - split: 9
+    text: "治安-4"
+  - split: 10
+    text: "本地恢复效率0.1"
+  - split: 11
+    text: "岗哨-0.2;集市-0.2"
+  - split: 12
+    text: "银钱500;粮食500"
+  - split: 19
+    text: "供商贾旅人和武林人士打尖住店之所，一楼提供各式家常菜肴，二楼则为住宿客房。"
+- raw: "18,告示,18,1,1,0,4,卖艺?通过卖艺赚取银钱--PerformForMoney;江湖委托?完成江湖委托获取银钱和江湖声望--ShowBuildingMission;施舍?增加区域民心\\n技能影响：烹饪-我-AreaBuildingWork-2;劝诱?降低区域民心\\n技能影响：烹饪-敌-AreaBuildingWork-负2,威望+10,银钱-50,本地建造速度0.2,客栈-0.2;集市-0.2,木料1000,10,1,,0,footstep,0;0,立于闹市中心的木牌，其上张贴有各式通缉悬赏和委托告示，往来行人不时驻足端详。"
+  splits:
+  - split: 1
+    text: "告示"
+  - split: 7
+    text: "卖艺?通过卖艺赚取银钱--PerformForMoney;江湖委托?完成江湖委托获取银钱和江湖声望--ShowBuildingMission;施舍?增加区域民心\\n技能影响：烹饪-我-AreaBuildingWork-2;劝诱?降低区域民心\\n技能影响：烹饪-敌-AreaBuildingWork-负2"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "银钱-50"
+  - split: 10
+    text: "本地建造速度0.2"
+  - split: 11
+    text: "客栈-0.2;集市-0.2"
+  - split: 12
+    text: "木料1000"
+  - split: 19
+    text: "立于闹市中心的木牌，其上张贴有各式通缉悬赏和委托告示，往来行人不时驻足端详。"
+- raw: "19,岗哨,19,1,1,0,4,巡查?提升当地治安并减少恶名--PatrolArea;整备?增加区域治安\\n技能影响：锻造-我-AreaBuildingWork-1;损毁?降低区域治安\\n技能影响：锻造-敌-AreaBuildingWork-负1,治安+6,民心-4,本地资源点产量0.1,酒馆-0.2;集市-0.2,矿石1000,10,1,,3,footstep,0;0,当地捕快驻扎巡防之处，设有瞭望塔可俯瞰城内情况。一地治安皆依赖此处方能管理周全。"
+  splits:
+  - split: 1
+    text: "岗哨"
+  - split: 7
+    text: "巡查?提升当地治安并减少恶名--PatrolArea;整备?增加区域治安\\n技能影响：锻造-我-AreaBuildingWork-1;损毁?降低区域治安\\n技能影响：锻造-敌-AreaBuildingWork-负1"
+  - split: 8
+    text: "治安+6"
+  - split: 9
+    text: "民心-4"
+  - split: 10
+    text: "本地资源点产量0.1"
+  - split: 11
+    text: "酒馆-0.2;集市-0.2"
+  - split: 12
+    text: "矿石1000"
+  - split: 19
+    text: "当地捕快驻扎巡防之处，设有瞭望塔可俯瞰城内情况。一地治安皆依赖此处方能管理周全。"
+- raw: "20,分舵,20,1,1,0,4,分舵管理?查看分舵相关情报--ManageBranch;门派科研?查看门派科研情况-我-ShowResearch;探索?探索区域获取门派资源-我-ExploreArea;招募?招募门派弟子-我-StartHireFollower;修缮?增加区域防御\\n技能影响：木植-我-AreaBuildingWork-3;破坏?降低区域防御\\n技能影响：采掘-敌-AreaBuildingWork-负3,防御+2;银钱+100,粮食-100,科研效率0.2;仓储容量1;弟子上限5,武馆-0.2;医馆-0.2,威望50;粮食500;木料500;矿石500,10,1,,4,footstep,0;0,武林门派大多地处偏远，于城镇内设立分舵便于弟子驻防管理，从而获取城内税金以及各式资源。"
+  splits:
+  - split: 1
+    text: "分舵"
+  - split: 7
+    text: "分舵管理?查看分舵相关情报--ManageBranch;门派科研?查看门派科研情况-我-ShowResearch;探索?探索区域获取门派资源-我-ExploreArea;招募?招募门派弟子-我-StartHireFollower;修缮?增加区域防御\\n技能影响：木植-我-AreaBuildingWork-3;破坏?降低区域防御\\n技能影响：采掘-敌-AreaBuildingWork-负3"
+  - split: 8
+    text: "防御+2;银钱+100"
+  - split: 9
+    text: "粮食-100"
+  - split: 10
+    text: "科研效率0.2;仓储容量1;弟子上限5"
+  - split: 11
+    text: "武馆-0.2;医馆-0.2"
+  - split: 12
+    text: "威望50;粮食500;木料500;矿石500"
+  - split: 19
+    text: "武林门派大多地处偏远，于城镇内设立分舵便于弟子驻防管理，从而获取城内税金以及各式资源。"
+- raw: "21,驿站,21,2,1,0,4,交易--ShowBuildingShop;马车?乘坐马车快速前往其他城市--CityQuickTravel,治安+2;人口+10,银钱-100,旅行速度0.04,珍宝铺-0.2;告示-0.2,矿石500;木料500,10,1,500-6-0-6,8,footstep,0;0,设于要道通衢旁，供往来旅客和江湖人士乘坐马车或更换马匹的场所。"
+  splits:
+  - split: 1
+    text: "驿站"
+  - split: 7
+    text: "交易--ShowBuildingShop;马车?乘坐马车快速前往其他城市--CityQuickTravel"
+  - split: 8
+    text: "治安+2;人口+10"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "旅行速度0.04"
+  - split: 11
+    text: "珍宝铺-0.2;告示-0.2"
+  - split: 12
+    text: "矿石500;木料500"
+  - split: 19
+    text: "设于要道通衢旁，供往来旅客和江湖人士乘坐马车或更换马匹的场所。"
+- raw: "22,武馆,22,2,1,0,3,交易--ShowBuildingShop;馆藏武学?学习馆内所藏武学--StudyMartialClubSkill;阅读秘籍?阅读行囊/仓库秘籍获取理论经验--ChooseReadBookMoney;自行练习?练习武功获取实战经验--StudyFightMoney;雇佣陪练?与武师进行切磋--StudyFightOtherMoney;突破?突破抵达瓶颈的武学--BreakThroughSkillMoney;天赋?消耗天赋点领悟天赋--ManageTagMoney;踢馆?挑战武师抢夺馆内秘籍--AttackMartialClub,防御+2;银钱+100,粮食-50,理论经验0.05;实战经验0.05,兵器铺-0.2,矿石500;药材500,10,1,1000-4-0-3,3,door,0;0,朝廷势弱，盗匪横行，大多城镇中皆设有武馆，供民众习武强身，也有不少江湖中人会在此任教演习。"
+  splits:
+  - split: 1
+    text: "武馆"
+  - split: 7
+    text: "交易--ShowBuildingShop;馆藏武学?学习馆内所藏武学--StudyMartialClubSkill;阅读秘籍?阅读行囊/仓库秘籍获取理论经验--ChooseReadBookMoney;自行练习?练习武功获取实战经验--StudyFightMoney;雇佣陪练?与武师进行切磋--StudyFightOtherMoney;突破?突破抵达瓶颈的武学--BreakThroughSkillMoney;天赋?消耗天赋点领悟天赋--ManageTagMoney;踢馆?挑战武师抢夺馆内秘籍--AttackMartialClub"
+  - split: 8
+    text: "防御+2;银钱+100"
+  - split: 9
+    text: "粮食-50"
+  - split: 10
+    text: "理论经验0.05;实战经验0.05"
+  - split: 11
+    text: "兵器铺-0.2"
+  - split: 12
+    text: "矿石500;药材500"
+  - split: 19
+    text: "朝廷势弱，盗匪横行，大多城镇中皆设有武馆，供民众习武强身，也有不少江湖中人会在此任教演习。"
+- raw: "23,医馆,23,2,1,0,3,交易--ShowBuildingShop;疗伤?治疗伤势--HospitalCureInjury;坐诊?为周边受伤侠士疗伤治病--DoctorWork;炼药?制作丹药--StartCraftMedMoney;炮制?强化丹药--StartEnhanceMedMoney;用毒?对物品进行淬毒/下毒/消毒--StartCraftPoisonMoney,民心+2;银钱+100,药材-50,本地疗伤效率0.1,药房-0.2,药材1000,10,1,600-8-0-1,10,door,0;0,供民众寻医问药，疗伤调养之所，除常驻医师之外，也有医术精湛的江湖人士在此替人治病赚取银两。"
+  splits:
+  - split: 1
+    text: "医馆"
+  - split: 7
+    text: "交易--ShowBuildingShop;疗伤?治疗伤势--HospitalCureInjury;坐诊?为周边受伤侠士疗伤治病--DoctorWork;炼药?制作丹药--StartCraftMedMoney;炮制?强化丹药--StartEnhanceMedMoney;用毒?对物品进行淬毒/下毒/消毒--StartCraftPoisonMoney"
+  - split: 8
+    text: "民心+2;银钱+100"
+  - split: 9
+    text: "药材-50"
+  - split: 10
+    text: "本地疗伤效率0.1"
+  - split: 11
+    text: "药房-0.2"
+  - split: 12
+    text: "药材1000"
+  - split: 19
+    text: "供民众寻医问药，疗伤调养之所，除常驻医师之外，也有医术精湛的江湖人士在此替人治病赚取银两。"
+- raw: "24,珍宝铺,24,1,1,0,2,交易--ShowBuildingShop;鉴定?鉴定珍宝--IdentifyItemMoney,银钱+100,粮食-50,,摊贩-0.2;磨坊-0.2,银钱500;粮食500,10,1,1000-20-0-4,0,door,1;1,专门售卖各类古董珍宝的店铺。"
+  splits:
+  - split: 1
+    text: "珍宝铺"
+  - split: 7
+    text: "交易--ShowBuildingShop;鉴定?鉴定珍宝--IdentifyItemMoney"
+  - split: 8
+    text: "银钱+100"
+  - split: 9
+    text: "粮食-50"
+  - split: 11
+    text: "摊贩-0.2;磨坊-0.2"
+  - split: 12
+    text: "银钱500;粮食500"
+  - split: 19
+    text: "专门售卖各类古董珍宝的店铺。"
+- raw: "25,兵器铺,25,2,1,0,2,交易--ShowBuildingShop;铸造?制作装备--StartCraftEquipmentMoney;煅烧?强化装备--StartEnhanceEquipmentMoney,银钱+100,矿石-50,,木匠-0.2;石坊-0.2,银钱500;矿石500,10,1,800-8-0-0,7,door,1;1,专门售卖各类兵器防具的店铺。"
+  splits:
+  - split: 1
+    text: "兵器铺"
+  - split: 7
+    text: "交易--ShowBuildingShop;铸造?制作装备--StartCraftEquipmentMoney;煅烧?强化装备--StartEnhanceEquipmentMoney"
+  - split: 8
+    text: "银钱+100"
+  - split: 9
+    text: "矿石-50"
+  - split: 11
+    text: "木匠-0.2;石坊-0.2"
+  - split: 12
+    text: "银钱500;矿石500"
+  - split: 19
+    text: "专门售卖各类兵器防具的店铺。"
+- raw: "26,材料铺,26,2,1,0,2,交易--ShowBuildingShop,银钱+100,木料-50,,木匠-0.2;石坊-0.2,银钱500;木料500,10,1,400-10-0-5,9,door,1;1,专门售卖各类制作材料的店铺。"
+  splits:
+  - split: 1
+    text: "材料铺"
+  - split: 7
+    text: "交易--ShowBuildingShop"
+  - split: 8
+    text: "银钱+100"
+  - split: 9
+    text: "木料-50"
+  - split: 11
+    text: "木匠-0.2;石坊-0.2"
+  - split: 12
+    text: "银钱500;木料500"
+  - split: 19
+    text: "专门售卖各类制作材料的店铺。"
+- raw: "27,民宅,27,5,0,0,0,,人口+5,粮食-20,人口上限100,药房-0.1,粮食500,10,1,,-1,door,0;0,供市民居住之所，可以提升当地人口。"
+  splits:
+  - split: 1
+    text: "民宅"
+  - split: 8
+    text: "人口+5"
+  - split: 9
+    text: "粮食-20"
+  - split: 10
+    text: "人口上限100"
+  - split: 11
+    text: "药房-0.1"
+  - split: 12
+    text: "粮食500"
+  - split: 19
+    text: "供市民居住之所，可以提升当地人口。"
+- raw: "28,驻所,28,5,0,0,0,,治安+1,银钱-20,,摊贩-0.1;磨坊-0.1,矿石500,10,1,,-1,door,0;0,供捕快驻扎之所，可以提升当地治安。"
+  splits:
+  - split: 1
+    text: "驻所"
+  - split: 8
+    text: "治安+1"
+  - split: 9
+    text: "银钱-20"
+  - split: 11
+    text: "摊贩-0.1;磨坊-0.1"
+  - split: 12
+    text: "矿石500"
+  - split: 19
+    text: "供捕快驻扎之所，可以提升当地治安。"
+- raw: "29,园林,29,5,0,0,0,,民心+1,银钱-20,,木匠-0.1;石坊-0.1,木料500,10,1,,-1,door,0;0,供民众游乐之所，可以提升当地民心。"
+  splits:
+  - split: 1
+    text: "园林"
+  - split: 8
+    text: "民心+1"
+  - split: 9
+    text: "银钱-20"
+  - split: 11
+    text: "木匠-0.1;石坊-0.1"
+  - split: 12
+    text: "木料500"
+  - split: 19
+    text: "供民众游乐之所，可以提升当地民心。"
+- raw: "30,摊贩,30,5,0,0,0,,银钱+20,,,摊贩-0.1,银钱500,10,0,,-1,door,0;0,一处小型摊贩，可以产出少量银钱。"
+  splits:
+  - split: 1
+    text: "摊贩"
+  - split: 8
+    text: "银钱+20"
+  - split: 11
+    text: "摊贩-0.1"
+  - split: 12
+    text: "银钱500"
+  - split: 19
+    text: "一处小型摊贩，可以产出少量银钱。"
+- raw: "31,磨坊,31,5,0,0,0,,粮食+20,,,磨坊-0.1,银钱250;粮食250,10,0,,-1,door,0;0,一处小型模仿，可以产出少量粮食。"
+  splits:
+  - split: 1
+    text: "磨坊"
+  - split: 8
+    text: "粮食+20"
+  - split: 11
+    text: "磨坊-0.1"
+  - split: 12
+    text: "银钱250;粮食250"
+  - split: 19
+    text: "一处小型模仿，可以产出少量粮食。"
+- raw: "32,木匠,32,5,0,0,0,,木料+20,,,木匠-0.1;工棚-0.1,银钱250;木料250,10,0,,-1,door,0;0,一处小型木匠，可以产出少量木料。"
+  splits:
+  - split: 1
+    text: "木匠"
+  - split: 8
+    text: "木料+20"
+  - split: 11
+    text: "木匠-0.1;工棚-0.1"
+  - split: 12
+    text: "银钱250;木料250"
+  - split: 19
+    text: "一处小型木匠，可以产出少量木料。"
+- raw: "33,石坊,33,5,0,0,0,,矿石+20,,,石坊-0.1;工棚-0.1,银钱250;矿石250,10,0,,-1,door,0;0,一处小型石坊，可以产出少量矿石。"
+  splits:
+  - split: 1
+    text: "石坊"
+  - split: 8
+    text: "矿石+20"
+  - split: 11
+    text: "石坊-0.1;工棚-0.1"
+  - split: 12
+    text: "银钱250;矿石250"
+  - split: 19
+    text: "一处小型石坊，可以产出少量矿石。"
+- raw: "34,药房,34,5,0,0,0,,药材+20,,,药房-0.1,药材500,10,0,,-1,door,0;0,一处小型药房，可以产出少量药材。"
+  splits:
+  - split: 1
+    text: "药房"
+  - split: 8
+    text: "药材+20"
+  - split: 11
+    text: "药房-0.1"
+  - split: 12
+    text: "药材500"
+  - split: 19
+    text: "一处小型药房，可以产出少量药材。"
+- raw: "35,客房,35,5,0,0,0,,,粮食-40,弟子上限2,,粮食250;木料250,10,2,,-1,door,0;0,一处小型宿舍，可以扩展门派的住宿空间。"
+  splits:
+  - split: 1
+    text: "客房"
+  - split: 9
+    text: "粮食-40"
+  - split: 10
+    text: "弟子上限2"
+  - split: 12
+    text: "粮食250;木料250"
+  - split: 19
+    text: "一处小型宿舍，可以扩展门派的住宿空间。"
+- raw: "36,仓房,36,5,0,0,0,,,粮食-20,仓储容量1,,木料250;矿石250,10,2,,-1,door,0;0,一处小型仓库，可以扩展门派的储存空间。"
+  splits:
+  - split: 1
+    text: "仓房"
+  - split: 9
+    text: "粮食-20"
+  - split: 10
+    text: "仓储容量1"
+  - split: 12
+    text: "木料250;矿石250"
+  - split: 19
+    text: "一处小型仓库，可以扩展门派的储存空间。"
+- raw: "37,校场,37,5,0,0,0,,,银钱-30,实战经验0.02,,矿石250;药材250,10,2,,-1,door,0;0,一处比武操练的场地，供弟子实战演练所用。"
+  splits:
+  - split: 1
+    text: "校场"
+  - split: 9
+    text: "银钱-30"
+  - split: 10
+    text: "实战经验0.02"
+  - split: 12
+    text: "矿石250;药材250"
+  - split: 19
+    text: "一处比武操练的场地，供弟子实战演练所用。"
+- raw: "38,静室,38,5,0,0,0,,,银钱-30,理论经验0.02,,木料250;药材250,10,2,,-1,door,0;0,一处幽深静谧的暗室，供弟子理论研习所用。"
+  splits:
+  - split: 1
+    text: "静室"
+  - split: 9
+    text: "银钱-30"
+  - split: 10
+    text: "理论经验0.02"
+  - split: 12
+    text: "木料250;药材250"
+  - split: 19
+    text: "一处幽深静谧的暗室，供弟子理论研习所用。"
+- raw: "39,酒馆,39,1,1,0,3,交易--ShowBuildingShop;宴会?与周边侠士宴饮增进关系--StartParty;博骰?与侠士掷骰赌博一试手气--StartGamble;保镖?雇佣保镖随行护卫--StartHireBodyGuard,粮食+50;人口+6,银钱-50,弟子功绩0.05,告示-0.2;集市-0.2,粮食500;药材500,10,1,200-8-0-2,0,door,0;0,供市井小民和武林人士宴饮作乐之所，陈设华丽，人声嘈杂，更有庄家在此开设赌局，吸引往来人士一试手气。"
+  splits:
+  - split: 1
+    text: "酒馆"
+  - split: 7
+    text: "交易--ShowBuildingShop;宴会?与周边侠士宴饮增进关系--StartParty;博骰?与侠士掷骰赌博一试手气--StartGamble;保镖?雇佣保镖随行护卫--StartHireBodyGuard"
+  - split: 8
+    text: "粮食+50;人口+6"
+  - split: 9
+    text: "银钱-50"
+  - split: 10
+    text: "弟子功绩0.05"
+  - split: 11
+    text: "告示-0.2;集市-0.2"
+  - split: 12
+    text: "粮食500;药材500"
+  - split: 19
+    text: "供市井小民和武林人士宴饮作乐之所，陈设华丽，人声嘈杂，更有庄家在此开设赌局，吸引往来人士一试手气。"
+- raw: "40,私塾,40,5,0,0,0,,,银钱-40,科研效率0.08,祠堂-0.1,威望25;粮食250,10,2,,-1,door,0;0,讲经授课之处，可以增加门派的科研效率。"
+  splits:
+  - split: 1
+    text: "私塾"
+  - split: 9
+    text: "银钱-40"
+  - split: 10
+    text: "科研效率0.08"
+  - split: 11
+    text: "祠堂-0.1"
+  - split: 12
+    text: "威望25;粮食250"
+  - split: 19
+    text: "讲经授课之处，可以增加门派的科研效率。"
+- raw: "41,工棚,41,5,0,0,0,,,粮食-30,建造速度0.04,木匠-0.1;石坊-0.1,粮食250;矿石250,10,1,,-1,door,0;0,修缮施工之处，可以增加门派的建造速度。"
+  splits:
+  - split: 1
+    text: "工棚"
+  - split: 9
+    text: "粮食-30"
+  - split: 10
+    text: "建造速度0.04"
+  - split: 11
+    text: "木匠-0.1;石坊-0.1"
+  - split: 12
+    text: "粮食250;矿石250"
+  - split: 19
+    text: "修缮施工之处，可以增加门派的建造速度。"
+- raw: "42,皇宫,42,6,1,0,4,勋阶--ShowHornorPlot;进贡--GiveTreasureToGovern,威望+20;全域人口+10;全域治安+1;全域民心+1,银钱-300,区域上限2,,银钱2000;木料1000;矿石1000,20,0,,-1,door,0;0,当朝皇帝所居之宫殿，虽几经战乱焚毁太半，依旧气势恢宏，极具王者气象。"
+  splits:
+  - split: 1
+    text: "皇宫"
+  - split: 7
+    text: "勋阶--ShowHornorPlot;进贡--GiveTreasureToGovern"
+  - split: 8
+    text: "威望+20;全域人口+10;全域治安+1;全域民心+1"
+  - split: 9
+    text: "银钱-300"
+  - split: 10
+    text: "区域上限2"
+  - split: 12
+    text: "银钱2000;木料1000;矿石1000"
+  - split: 19
+    text: "当朝皇帝所居之宫殿，虽几经战乱焚毁太半，依旧气势恢宏，极具王者气象。"
+- raw: "43,大运河,43,6,1,0,4,珍宝--ShowBuildingShop,银钱+100;粮食+150;全域人口+5,木料-150;矿石-50,资源点产量0.2,,银钱2000;粮食1000,20,1,2000-30-1-4,1,door,0;0,历代不断开凿扩建而成，中原与江南地区往来通商、水路漕运之第一要道，其河面宽广，船舶林立，半天下之奇珍异宝，银钱粮饷，悉由此路进出。两岸港口码头，街市集镇，更不可胜数。"
+  splits:
+  - split: 1
+    text: "大运河"
+  - split: 7
+    text: "珍宝--ShowBuildingShop"
+  - split: 8
+    text: "银钱+100;粮食+150;全域人口+5"
+  - split: 9
+    text: "木料-150;矿石-50"
+  - split: 10
+    text: "资源点产量0.2"
+  - split: 12
+    text: "银钱2000;粮食1000"
+  - split: 19
+    text: "历代不断开凿扩建而成，中原与江南地区往来通商、水路漕运之第一要道，其河面宽广，船舶林立，半天下之奇珍异宝，银钱粮饷，悉由此路进出。两岸港口码头，街市集镇，更不可胜数。"
+- raw: "44,甘棠港,44,6,1,0,4,奇材--ShowBuildingShop,银钱+200;粮食+100,木料-100;矿石-100,资源点产量0.1;技艺经验0.1,,木料1000;粮食2000,20,2,2000-15-1-5,1,footstep,0;0,海上交通贸易之重要港口，来往于此的商贾密布，舶船如织，盛况空前，各种来自海外的稀有材料，奇珍异宝，乃至飞禽走兽，皆在此流通买卖，因而时人誉曰：海上丝路，自此始也。"
+  splits:
+  - split: 1
+    text: "甘棠港"
+  - split: 7
+    text: "奇材--ShowBuildingShop"
+  - split: 8
+    text: "银钱+200;粮食+100"
+  - split: 9
+    text: "木料-100;矿石-100"
+  - split: 10
+    text: "资源点产量0.1;技艺经验0.1"
+  - split: 12
+    text: "木料1000;粮食2000"
+  - split: 19
+    text: "海上交通贸易之重要港口，来往于此的商贾密布，舶船如织，盛况空前，各种来自海外的稀有材料，奇珍异宝，乃至飞禽走兽，皆在此流通买卖，因而时人誉曰：海上丝路，自此始也。"
+- raw: "45,崇圣寺,45,6,1,0,4,治愈--SpeCure,药材+100;威望+10;全域民心+1,银钱-200,疗伤效率0.2,,木料1000;药材2000,20,3,,11,footstep,0;0,点苍山麓，洱海之滨，寺中有三塔峙立，金碧交辉，香火鼎盛，以五大重器闻名于世，堪称西南第一佛刹。传闻其间僧众不乏极擅医术者，慈悲为怀，济世救民，一时传为佳话。"
+  splits:
+  - split: 1
+    text: "崇圣寺"
+  - split: 7
+    text: "治愈--SpeCure"
+  - split: 8
+    text: "药材+100;威望+10;全域民心+1"
+  - split: 9
+    text: "银钱-200"
+  - split: 10
+    text: "疗伤效率0.2"
+  - split: 12
+    text: "木料1000;药材2000"
+  - split: 19
+    text: "点苍山麓，洱海之滨，寺中有三塔峙立，金碧交辉，香火鼎盛，以五大重器闻名于世，堪称西南第一佛刹。传闻其间僧众不乏极擅医术者，慈悲为怀，济世救民，一时传为佳话。"
+- raw: "46,长城,46,6,1,0,4,兵器--ShowBuildingShop,威望+20;全域防御+1,矿石-100,实战经验0.1;城防耐久0.2,,银钱1000;矿石2000,20,4,2000-15-1-0,2,footstep,0;0,依山而建的防御工事，由高大绵延的长垣以及敌楼、关城、墩堡、营城等组成，用于阻隔北方游牧骑兵入侵之铁蹄，作为自古以来兵家必争之地，一时也成了兵甲器具的集散交易之所。"
+  splits:
+  - split: 1
+    text: "长城"
+  - split: 7
+    text: "兵器--ShowBuildingShop"
+  - split: 8
+    text: "威望+20;全域防御+1"
+  - split: 9
+    text: "矿石-100"
+  - split: 10
+    text: "实战经验0.1;城防耐久0.2"
+  - split: 12
+    text: "银钱1000;矿石2000"
+  - split: 19
+    text: "依山而建的防御工事，由高大绵延的长垣以及敌楼、关城、墩堡、营城等组成，用于阻隔北方游牧骑兵入侵之铁蹄，作为自古以来兵家必争之地，一时也成了兵甲器具的集散交易之所。"
+- raw: "47,晋祠,47,6,1,0,4,布施--SpeReduceBadFame,全域民心+1;威望+10;木料+100,粮食-200,技艺经验0.1;弟子功绩0.1,,银钱1000;木料2000,20,5,,1,footstep,0;0,历史悠久的皇家祭祀园林，其规模宏伟，由诸多祠堂，亭台，庙宇，楼阁及造景构成。历代皇帝皆会在此例行祭祀，本朝更是不断兴修亭台，扩建园林，以壮其威仪。"
+  splits:
+  - split: 1
+    text: "晋祠"
+  - split: 7
+    text: "布施--SpeReduceBadFame"
+  - split: 8
+    text: "全域民心+1;威望+10;木料+100"
+  - split: 9
+    text: "粮食-200"
+  - split: 10
+    text: "技艺经验0.1;弟子功绩0.1"
+  - split: 12
+    text: "银钱1000;木料2000"
+  - split: 19
+    text: "历史悠久的皇家祭祀园林，其规模宏伟，由诸多祠堂，亭台，庙宇，楼阁及造景构成。历代皇帝皆会在此例行祭祀，本朝更是不断兴修亭台，扩建园林，以壮其威仪。"
+- raw: "48,都江堰,48,6,1,0,4,珍馐--ShowBuildingShop,粮食+300,木料-50;矿石-150,资源点产量0.1;科研效率0.4,,粮食2000;木料1000,20,6,2000-15-1-2,1,footstep,0;0,由星罗棋布，错综复杂的引水渠道和大小水库组成的庞大水利工程，其渠可行舟，亦可作浇灌汲饮之用，蜀中以此灌溉沃野千里，并罕有水灾泛滥，终成其“天府”之美名。"
+  splits:
+  - split: 1
+    text: "都江堰"
+  - split: 7
+    text: "珍馐--ShowBuildingShop"
+  - split: 8
+    text: "粮食+300"
+  - split: 9
+    text: "木料-50;矿石-150"
+  - split: 10
+    text: "资源点产量0.1;科研效率0.4"
+  - split: 12
+    text: "粮食2000;木料1000"
+  - split: 19
+    text: "由星罗棋布，错综复杂的引水渠道和大小水库组成的庞大水利工程，其渠可行舟，亦可作浇灌汲饮之用，蜀中以此灌溉沃野千里，并罕有水灾泛滥，终成其“天府”之美名。"
+- raw: "49,莫高窟,49,6,1,0,4,闭关--SpeGetTalentPoint;遗忘武学--SpeRemoveSkill;遗忘天赋--SpeRemoveTag,威望+20;矿石+100,银钱-200,理论经验0.2,,木料1000;矿石2000,20,66,,2,footstep,0;0,历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
+  splits:
+  - split: 1
+    text: "莫高窟"
+  - split: 7
+    text: "闭关--SpeGetTalentPoint;遗忘武学--SpeRemoveSkill;遗忘天赋--SpeRemoveTag"
+  - split: 8
+    text: "威望+20;矿石+100"
+  - split: 9
+    text: "银钱-200"
+  - split: 10
+    text: "理论经验0.2"
+  - split: 12
+    text: "木料1000;矿石2000"
+  - split: 19
+    text: "历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
+- raw: "50,黄鹤楼,50,6,1,0,4,招贤--SpeHireFollower,威望+10;全域治安+1,木料-150,实战经验0.1;弟子功绩0.2,,粮食1000;木料2000,20,8,,2,footstep,0;0,上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
+  splits:
+  - split: 1
+    text: "黄鹤楼"
+  - split: 7
+    text: "招贤--SpeHireFollower"
+  - split: 8
+    text: "威望+10;全域治安+1"
+  - split: 9
+    text: "木料-150"
+  - split: 10
+    text: "实战经验0.1;弟子功绩0.2"
+  - split: 12
+    text: "粮食1000;木料2000"
+  - split: 19
+    text: "上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
+- raw: "51,烟花柳巷,51,6,1,0,4,宴饮--SpeStartParty,银钱+400;全域人口+10,粮食-400,恢复效率0.2,,银钱1000;粮食2000,20,9,,0,footstep,0;0,楼宇密布，车水马龙，好一派热闹景致，戏院，青楼，酒馆，赌坊林立其中，出入之人除贩夫走卒，三教九流之外，亦不乏豪商巨贾，文人雅士，歌舞宴饮之声，数里之外亦不绝于耳。"
+  splits:
+  - split: 1
+    text: "烟花柳巷"
+  - split: 7
+    text: "宴饮--SpeStartParty"
+  - split: 8
+    text: "银钱+400;全域人口+10"
+  - split: 9
+    text: "粮食-400"
+  - split: 10
+    text: "恢复效率0.2"
+  - split: 12
+    text: "银钱1000;粮食2000"
+  - split: 19
+    text: "楼宇密布，车水马龙，好一派热闹景致，戏院，青楼，酒馆，赌坊林立其中，出入之人除贩夫走卒，三教九流之外，亦不乏豪商巨贾，文人雅士，歌舞宴饮之声，数里之外亦不绝于耳。"
+- raw: "52,布达拉宫,52,6,1,0,4,灵药--ShowBuildingShop,药材+100;全域治安+1,粮食-200,弟子上限10;仓储容量4,,矿石1000;药材2000,20,60,2000-15-1-1,11,footstep,0;0,依山而建，殿宇嵯峨，气势雄伟的寺庙群，金顶与红幡白墙交相辉映，颇为肃穆庄严。传闻其僧众极擅炮制高原珍稀药材，以此制成之藏药更是具有枯骨生肌，返老还童等神奇功效。"
+  splits:
+  - split: 1
+    text: "布达拉宫"
+  - split: 7
+    text: "灵药--ShowBuildingShop"
+  - split: 8
+    text: "药材+100;全域治安+1"
+  - split: 9
+    text: "粮食-200"
+  - split: 10
+    text: "弟子上限10;仓储容量4"
+  - split: 12
+    text: "矿石1000;药材2000"
+  - split: 19
+    text: "依山而建，殿宇嵯峨，气势雄伟的寺庙群，金顶与红幡白墙交相辉映，颇为肃穆庄严。传闻其僧众极擅炮制高原珍稀药材，以此制成之藏药更是具有枯骨生肌，返老还童等神奇功效。"
+- raw: "53,销金窟,53,6,1,0,4,提升口才潜力--StudyMaxLivingSkill-3;销金-我&门派功能0-ShowBuildingShopForceStorage,银钱+200,粮食-150,资源点产量0.2;技艺经验0.2;全员口才4;区域上限1,,银钱2000;粮食1000,20,30,0-15-1.5-4,0,door,0;0,世人皆道烟花柳巷为寻乐之处，却不知此处才是世间极乐之所，其间珍馐美馔罗列星陈，朱颜粉黛婀娜逦迤，朝歌夜弦，纸醉金迷，便是王公贵族也以能在此享乐为荣。"
+  splits:
+  - split: 1
+    text: "销金窟"
+  - split: 7
+    text: "提升口才潜力--StudyMaxLivingSkill-3;销金-我&门派功能0-ShowBuildingShopForceStorage"
+  - split: 8
+    text: "银钱+200"
+  - split: 9
+    text: "粮食-150"
+  - split: 10
+    text: "资源点产量0.2;技艺经验0.2;全员口才4;区域上限1"
+  - split: 12
+    text: "银钱2000;粮食1000"
+  - split: 19
+    text: "世人皆道烟花柳巷为寻乐之处，却不知此处才是世间极乐之所，其间珍馐美馔罗列星陈，朱颜粉黛婀娜逦迤，朝歌夜弦，纸醉金迷，便是王公贵族也以能在此享乐为荣。"
+- raw: "54,暗室,54,6,1,0,4,提升射术潜力--StudyMaxFightSkill-8;暗器-我&门派功能1-ShowWeaponResearch;杀手订单-我&门派功能1-ShowBuildingMission,威望+10,粮食-100,全员轻功2;射术经验0.2;全员射术2,,木料1000;药材2000,20,31,,10,door,0;0,配置各式暗器毒药的工坊，四周以帘布遮挡，重重叠叠密不透光。盖因唐门武学讲求出奇制胜，在暗室中修习可防止泄密，同时锻炼黑暗中视物之能力。"
+  splits:
+  - split: 1
+    text: "暗室"
+  - split: 7
+    text: "提升射术潜力--StudyMaxFightSkill-8;暗器-我&门派功能1-ShowWeaponResearch;杀手订单-我&门派功能1-ShowBuildingMission"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "粮食-100"
+  - split: 10
+    text: "全员轻功2;射术经验0.2;全员射术2"
+  - split: 12
+    text: "木料1000;药材2000"
+  - split: 19
+    text: "配置各式暗器毒药的工坊，四周以帘布遮挡，重重叠叠密不透光。盖因唐门武学讲求出奇制胜，在暗室中修习可防止泄密，同时锻炼黑暗中视物之能力。"
+- raw: "55,万花谷,55,6,1,0,4,提升医术潜力--StudyMaxLivingSkill-0;灵谷-我&门派功能2-ShowBuildingShopForceStorage,粮食+50;药材+150,银钱-150,医术经验0.2;全员医术4;疗伤效率0.2,,粮食1000;药材2000,20,32,0-10-1.5-5-2,1,footstep,0;0,蜿蜒地势之间一处幽静深谷，其间水草丰茂，灵气汇集，因而生长有奇花异草，灵药仙芝无数，在此处种植药材也是事半功倍，乃是世人修习医术之圣地。"
+  splits:
+  - split: 1
+    text: "万花谷"
+  - split: 7
+    text: "提升医术潜力--StudyMaxLivingSkill-0;灵谷-我&门派功能2-ShowBuildingShopForceStorage"
+  - split: 8
+    text: "粮食+50;药材+150"
+  - split: 9
+    text: "银钱-150"
+  - split: 10
+    text: "医术经验0.2;全员医术4;疗伤效率0.2"
+  - split: 12
+    text: "粮食1000;药材2000"
+  - split: 19
+    text: "蜿蜒地势之间一处幽静深谷，其间水草丰茂，灵气汇集，因而生长有奇花异草，灵药仙芝无数，在此处种植药材也是事半功倍，乃是世人修习医术之圣地。"
+- raw: "56,大会台,56,6,1,0,4,提升拳掌潜力--StudyMaxFightSkill-3;铁掌-我&门派功能3-ShowWeaponResearch,粮食+200,银钱-50;木料-100,拳掌经验0.2;全员拳掌2;全员长兵2,,粮食2000;木料1000,20,33,,4,footstep,0;0,一处平坦广阔之木台，不论三教九流，鸡鸣狗盗之徒，乃至衣衫褴褛之乞丐，皆可登台或坐而论道，或一展拳脚，丐帮择其贤者招揽，因而人才济济，冠绝东南。"
+  splits:
+  - split: 1
+    text: "大会台"
+  - split: 7
+    text: "提升拳掌潜力--StudyMaxFightSkill-3;铁掌-我&门派功能3-ShowWeaponResearch"
+  - split: 8
+    text: "粮食+200"
+  - split: 9
+    text: "银钱-50;木料-100"
+  - split: 10
+    text: "拳掌经验0.2;全员拳掌2;全员长兵2"
+  - split: 12
+    text: "粮食2000;木料1000"
+  - split: 19
+    text: "一处平坦广阔之木台，不论三教九流，鸡鸣狗盗之徒，乃至衣衫褴褛之乞丐，皆可登台或坐而论道，或一展拳脚，丐帮择其贤者招揽，因而人才济济，冠绝东南。"
+- raw: "57,赛马场,57,6,1,0,4,提升长兵潜力--StudyMaxFightSkill-6;枪术-我&门派功能4-ShowWeaponResearch,粮食+100,银钱-100,长兵经验0.2;全员长兵2;旅行速度0.2,,粮食2000;木料1000,20,34,,8,footstep,0;0,平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
+  splits:
+  - split: 1
+    text: "赛马场"
+  - split: 7
+    text: "提升长兵潜力--StudyMaxFightSkill-6;枪术-我&门派功能4-ShowWeaponResearch"
+  - split: 8
+    text: "粮食+100"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "长兵经验0.2;全员长兵2;旅行速度0.2"
+  - split: 12
+    text: "粮食2000;木料1000"
+  - split: 19
+    text: "平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
+- raw: "58,华阳洞,58,6,1,0,4,提升炼药潜力--StudyMaxLivingSkill-7;丹引-我&门派功能5-StartBreakMed,木料+50;药材+50,银钱-100,全员经脉2;全员奇门2;全员炼药4,,木料1000;药材2000,20,35,,2,footstep,0;0,鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
+  splits:
+  - split: 1
+    text: "华阳洞"
+  - split: 7
+    text: "提升炼药潜力--StudyMaxLivingSkill-7;丹引-我&门派功能5-StartBreakMed"
+  - split: 8
+    text: "木料+50;药材+50"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "全员经脉2;全员奇门2;全员炼药4"
+  - split: 12
+    text: "木料1000;药材2000"
+  - split: 19
+    text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
+- raw: "59,剑池,59,6,1,0,4,提升锻造潜力--StudyMaxLivingSkill-6;天工-我&门派功能6-StartSpeEnhanceEquip;拆解-我&门派功能6-StartBreakEquipment,木料+50;矿石+50,银钱-100,全员剑法2;锻造经验0.2;全员锻造4,,木料1000;矿石2000,20,36,,1,footstep,0;0,一方清澈见底的水池，池中或卧或立有刀兵剑刃无数，乃是铸剑山庄历代冶炼积累之残次品及试验品。以此池水淬炼兵器，可感应池中无穷剑意，所得之锋利坚韧远非凡俗可比。"
+  splits:
+  - split: 1
+    text: "剑池"
+  - split: 7
+    text: "提升锻造潜力--StudyMaxLivingSkill-6;天工-我&门派功能6-StartSpeEnhanceEquip;拆解-我&门派功能6-StartBreakEquipment"
+  - split: 8
+    text: "木料+50;矿石+50"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "全员剑法2;锻造经验0.2;全员锻造4"
+  - split: 12
+    text: "木料1000;矿石2000"
+  - split: 19
+    text: "一方清澈见底的水池，池中或卧或立有刀兵剑刃无数，乃是铸剑山庄历代冶炼积累之残次品及试验品。以此池水淬炼兵器，可感应池中无穷剑意，所得之锋利坚韧远非凡俗可比。"
+- raw: "60,万毒池,60,6,1,0,4,提升毒术潜力--StudyMaxLivingSkill-1;炼蛊-我&门派功能7-ShowSpePoison,药材+100,粮食-100,毒术经验0.2;全员毒术4;恢复效率0.2,,矿石1000;药材2000,20,37,,2,footstep,0;0,瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
+  splits:
+  - split: 1
+    text: "万毒池"
+  - split: 7
+    text: "提升毒术潜力--StudyMaxLivingSkill-1;炼蛊-我&门派功能7-ShowSpePoison"
+  - split: 8
+    text: "药材+100"
+  - split: 9
+    text: "粮食-100"
+  - split: 10
+    text: "毒术经验0.2;全员毒术4;恢复效率0.2"
+  - split: 12
+    text: "矿石1000;药材2000"
+  - split: 19
+    text: "瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
+- raw: "61,鬼门关,61,6,1,0,4,提升采伐潜力--StudyMaxLivingSkill-4;试炼-我&门派功能8-StartChallengeGhostGatePlot,威望+10;银钱+100,木料-50;矿石-100,城防耐久0.1;全员力道2;全员拳掌2;全员刀法2,,木料1000;矿石2000,20,38,,2,footstep,0;0,于崇山峻岭间开凿而成，险要奇崛之关口，黄鹤高飞不得过，猿猱欲度愁攀援。阎罗殿弟子想正式入门，需要在此通过极为艰险严苛之考验，方能闯过鬼门关，入修罗之道。"
+  splits:
+  - split: 1
+    text: "鬼门关"
+  - split: 7
+    text: "提升采伐潜力--StudyMaxLivingSkill-4;试炼-我&门派功能8-StartChallengeGhostGatePlot"
+  - split: 8
+    text: "威望+10;银钱+100"
+  - split: 9
+    text: "木料-50;矿石-100"
+  - split: 10
+    text: "城防耐久0.1;全员力道2;全员拳掌2;全员刀法2"
+  - split: 12
+    text: "木料1000;矿石2000"
+  - split: 19
+    text: "于崇山峻岭间开凿而成，险要奇崛之关口，黄鹤高飞不得过，猿猱欲度愁攀援。阎罗殿弟子想正式入门，需要在此通过极为艰险严苛之考验，方能闯过鬼门关，入修罗之道。"
+- raw: "62,星辰楼,62,6,1,0,4,提升轻功潜力--StudyMaxFightSkill-1;博引-我&门派功能9-StartSpeBookStorage,威望+15,木料-100,理论经验0.2;实战经验0.1;全员学识4;藏经容量10,,银钱2000;木料1000,20,39,,2,footstep,0;0,屹立于山巅，取“危楼高百尺，手可摘星辰”之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
+  splits:
+  - split: 1
+    text: "星辰楼"
+  - split: 7
+    text: "提升轻功潜力--StudyMaxFightSkill-1;博引-我&门派功能9-StartSpeBookStorage"
+  - split: 8
+    text: "威望+15"
+  - split: 9
+    text: "木料-100"
+  - split: 10
+    text: "理论经验0.2;实战经验0.1;全员学识4;藏经容量10"
+  - split: 12
+    text: "银钱2000;木料1000"
+  - split: 19
+    text: "屹立于山巅，取“危楼高百尺，手可摘星辰”之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
+- raw: "63,铜人阵,63,6,1,0,4,提升生命上限--StudyMaxState-0;禅宗修行-我&门派功能10-ShowMeditation,威望+20,木料-50;矿石-100,理论经验0.1;实战经验0.2;全员体质2,,银钱1000;矿石2000,20,40,,3,footstep,0;0,以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
+  splits:
+  - split: 1
+    text: "铜人阵"
+  - split: 7
+    text: "提升生命上限--StudyMaxState-0;禅宗修行-我&门派功能10-ShowMeditation"
+  - split: 8
+    text: "威望+20"
+  - split: 9
+    text: "木料-50;矿石-100"
+  - split: 10
+    text: "理论经验0.1;实战经验0.2;全员体质2"
+  - split: 12
+    text: "银钱1000;矿石2000"
+  - split: 19
+    text: "以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
+- raw: "64,紫霄宫,64,6,1,0,4,提升内力上限--StudyMaxState-1;道法修行-我&门派功能11-ShowMeditation,威望+10,粮食-100,全员智力2;全员经脉2;全员意志2,,银钱1000;粮食1000;药材1000,20,41,,11,footstep,0;0,依山而建，重檐叠砌之宫殿，上应紫薇星宿，下合帝君方位，聚气藏风，水脉绵延，武当派弟子多在此修习道家心法和上乘内功，以求感通天地，阴阳调和。"
+  splits:
+  - split: 1
+    text: "紫霄宫"
+  - split: 7
+    text: "提升内力上限--StudyMaxState-1;道法修行-我&门派功能11-ShowMeditation"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "粮食-100"
+  - split: 10
+    text: "全员智力2;全员经脉2;全员意志2"
+  - split: 12
+    text: "银钱1000;粮食1000;药材1000"
+  - split: 19
+    text: "依山而建，重檐叠砌之宫殿，上应紫薇星宿，下合帝君方位，聚气藏风，水脉绵延，武当派弟子多在此修习道家心法和上乘内功，以求感通天地，阴阳调和。"
+- raw: "65,试刀台,65,6,1,0,4,提升刀法潜力--StudyMaxFightSkill-5;试刀-我&门派功能12-ShowWeaponResearch,威望+10,矿石-100,全员体质2;刀法经验0.2;全员刀法2,,粮食1000;矿石2000,20,42,,7,footstep,0;0,一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
+  splits:
+  - split: 1
+    text: "试刀台"
+  - split: 7
+    text: "提升刀法潜力--StudyMaxFightSkill-5;试刀-我&门派功能12-ShowWeaponResearch"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "矿石-100"
+  - split: 10
+    text: "全员体质2;刀法经验0.2;全员刀法2"
+  - split: 12
+    text: "粮食1000;矿石2000"
+  - split: 19
+    text: "一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
+- raw: "66,蓬莱阁,66,6,1,0,4,提升剑法潜力--StudyMaxFightSkill-4;万剑-我&门派功能13-ShowWeaponResearch,威望+10,木料-100,全员灵巧2;剑法经验0.2;全员剑法2,,木料2000;药材1000,20,43,,2,footstep,0;0,地处丹崖山峦，东临碣石，以观沧海，传说八仙过海始于此处，蓬莱弟子登临此地，观琼瑶仙境，海市蜃楼之奇景，以此融入剑法剑意之中，轻灵飘逸确不似凡间所有。"
+  splits:
+  - split: 1
+    text: "蓬莱阁"
+  - split: 7
+    text: "提升剑法潜力--StudyMaxFightSkill-4;万剑-我&门派功能13-ShowWeaponResearch"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "木料-100"
+  - split: 10
+    text: "全员灵巧2;剑法经验0.2;全员剑法2"
+  - split: 12
+    text: "木料2000;药材1000"
+  - split: 19
+    text: "地处丹崖山峦，东临碣石，以观沧海，传说八仙过海始于此处，蓬莱弟子登临此地，观琼瑶仙境，海市蜃楼之奇景，以此融入剑法剑意之中，轻灵飘逸确不似凡间所有。"
+- raw: "67,金顶,67,6,1,0,4,提升木植潜力--StudyMaxLivingSkill-5;自然修行-我&门派功能14-ShowMeditation,威望+10,矿石-100,全员内功2;轻功经验0.2;全员轻功2,,木料1000;矿石2000,20,44,,2,footstep,0;0,纯铜铸造之宝殿，通体以金箔敷盖，在旭日映射之下，灿烂辉煌，迢耀天地，恍若佛光普照。峨眉弟子多在此观览云海升腾，感悟天地灵韵，从而精进修为，提升武艺。"
+  splits:
+  - split: 1
+    text: "金顶"
+  - split: 7
+    text: "提升木植潜力--StudyMaxLivingSkill-5;自然修行-我&门派功能14-ShowMeditation"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "矿石-100"
+  - split: 10
+    text: "全员内功2;轻功经验0.2;全员轻功2"
+  - split: 12
+    text: "木料1000;矿石2000"
+  - split: 19
+    text: "纯铜铸造之宝殿，通体以金箔敷盖，在旭日映射之下，灿烂辉煌，迢耀天地，恍若佛光普照。峨眉弟子多在此观览云海升腾，感悟天地灵韵，从而精进修为，提升武艺。"
+- raw: "68,七十二洞,68,6,1,0,4,提升奇门潜力--StudyMaxFightSkill-7;奇技-我&门派功能15-ShowWeaponResearch,矿石+50;药材+50,银钱-100,全员绝技2;奇门经验0.2;全员奇门2,,矿石1000;药材2000,20,45,,2,footstep,0;0,崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
+  splits:
+  - split: 1
+    text: "七十二洞"
+  - split: 7
+    text: "提升奇门潜力--StudyMaxFightSkill-7;奇技-我&门派功能15-ShowWeaponResearch"
+  - split: 8
+    text: "矿石+50;药材+50"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "全员绝技2;奇门经验0.2;全员奇门2"
+  - split: 12
+    text: "矿石1000;药材2000"
+  - split: 19
+    text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
+- raw: "69,机关坊,69,6,1,0,4,提升学识潜力--StudyMaxLivingSkill-2;机关-我&门派功能16-ShowSpeSummonResearch,威望+10;银钱+100,木料-150,城防耐久0.2;科研效率0.4;全员灵巧2;全员智力2,,银钱1000;木料2000,20,46,,9,door,0;0,墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
+  splits:
+  - split: 1
+    text: "机关坊"
+  - split: 7
+    text: "提升学识潜力--StudyMaxLivingSkill-2;机关-我&门派功能16-ShowSpeSummonResearch"
+  - split: 8
+    text: "威望+10;银钱+100"
+  - split: 9
+    text: "木料-150"
+  - split: 10
+    text: "城防耐久0.2;科研效率0.4;全员灵巧2;全员智力2"
+  - split: 12
+    text: "银钱1000;木料2000"
+  - split: 19
+    text: "墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
+- raw: "70,火炼室,70,6,1,0,4,提升烹饪潜力--StudyMaxLivingSkill-8;火药-我&门派功能17-ShowForceSpeResearch;重烩-我&门派功能17-StartBreakFood,矿石+100,银钱-100,全员射术2;锻造经验0.1;全员锻造2,,银钱1000;矿石2000,20,47,,7,door,0;0,为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
+  splits:
+  - split: 1
+    text: "火炼室"
+  - split: 7
+    text: "提升烹饪潜力--StudyMaxLivingSkill-8;火药-我&门派功能17-ShowForceSpeResearch;重烩-我&门派功能17-StartBreakFood"
+  - split: 8
+    text: "矿石+100"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "全员射术2;锻造经验0.1;全员锻造2"
+  - split: 12
+    text: "银钱1000;矿石2000"
+  - split: 19
+    text: "为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
+- raw: "71,灵塔殿,71,6,1,0,4,提升绝技潜力--StudyMaxFightSkill-2;密宗修行-我&门派功能18-ShowMeditation,威望+10,矿石-100,全员力道2;绝技经验0.2;全员绝技2,,粮食1000;矿石1000;药材1000,20,48,,11,door,0;0,在庄严庙堂中，井然有序错落着数百座大小不一，样式各异的佛塔，其中供奉的皆是历代祖师之骨灰舍利。金刚弟子往往在这四处缭绕，延绵不绝的祭祀香火中，修炼高深之密宗心法。"
+  splits:
+  - split: 1
+    text: "灵塔殿"
+  - split: 7
+    text: "提升绝技潜力--StudyMaxFightSkill-2;密宗修行-我&门派功能18-ShowMeditation"
+  - split: 8
+    text: "威望+10"
+  - split: 9
+    text: "矿石-100"
+  - split: 10
+    text: "全员力道2;绝技经验0.2;全员绝技2"
+  - split: 12
+    text: "粮食1000;矿石1000;药材1000"
+  - split: 19
+    text: "在庄严庙堂中，井然有序错落着数百座大小不一，样式各异的佛塔，其中供奉的皆是历代祖师之骨灰舍利。金刚弟子往往在这四处缭绕，延绵不绝的祭祀香火中，修炼高深之密宗心法。"
+- raw: "72,玄冰池,72,6,1,0,4,提升内功潜力--StudyMaxFightSkill-0;玄冰-我&门派功能19-ShowForceSpeResearch,粮食+50;药材+50,银钱-100,全员意志2;内功经验0.2;全员内功2,,银钱1000;粮食1000;药材1000,20,49,,2,footstep,0;0,天山之巅池泽中有玄冰一块，终年不化，阴寒刺骨，常人只需靠近便感周身冰结，血脉凝固，堪称世间至阴至寒之物。天山弟子卧于其上修炼，配合至阴至阳之心法，自是各有奇效。"
+  splits:
+  - split: 1
+    text: "玄冰池"
+  - split: 7
+    text: "提升内功潜力--StudyMaxFightSkill-0;玄冰-我&门派功能19-ShowForceSpeResearch"
+  - split: 8
+    text: "粮食+50;药材+50"
+  - split: 9
+    text: "银钱-100"
+  - split: 10
+    text: "全员意志2;内功经验0.2;全员内功2"
+  - split: 12
+    text: "银钱1000;粮食1000;药材1000"
+  - split: 19
+    text: "天山之巅池泽中有玄冰一块，终年不化，阴寒刺骨，常人只需靠近便感周身冰结，血脉凝固，堪称世间至阴至寒之物。天山弟子卧于其上修炼，配合至阴至阳之心法，自是各有奇效。"
+- raw: "73,私宅,73,2,1,0,3,购买-未购买-BuyCityHouse;书房?♦阅读秘籍\\n♦编纂秘籍-已购买-CityHouseBookRoom;练功房?♦自行练习\\n♦突破\\n♦天赋-已购买-CityHousePracticeRoom;休息?休养恢复状态-已购买-HomeRest;私人仓库?存放物品-已购买-OpenSelfStorage;个人展厅?管理个人展厅-已购买-ShowSelfShowRoom;修缮升级?提升私宅等级-已购买-UpgradeCityHouse,,,,,银钱1000,10,1,,1,door,0;0,一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"
+  splits:
+  - split: 1
+    text: "私宅"
+  - split: 7
+    text: "购买-未购买-BuyCityHouse;书房?♦阅读秘籍\\n♦编纂秘籍-已购买-CityHouseBookRoom;练功房?♦自行练习\\n♦突破\\n♦天赋-已购买-CityHousePracticeRoom;休息?休养恢复状态-已购买-HomeRest;私人仓库?存放物品-已购买-OpenSelfStorage;个人展厅?管理个人展厅-已购买-ShowSelfShowRoom;修缮升级?提升私宅等级-已购买-UpgradeCityHouse"
+  - split: 12
+    text: "银钱1000"
+  - split: 19
+    text: "一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"
+- raw: "74,应天书院,74,6,1,0,4,秘籍--ShowBuildingShop,威望+25,粮食-200,技艺经验0.1;科研效率0.4;藏经容量10,,威望100;粮食2000,20,67,2000-15-1-3,1,door,0;0,此书院自本朝开科取士以来，登第者多达六十余人。远近文人学子皆心向往之，慕名求学者亦是络绎不绝，因而成为一处文人武客交流技艺，买卖藏书之胜地。"
+  splits:
+  - split: 1
+    text: "应天书院"
+  - split: 7
+    text: "秘籍--ShowBuildingShop"
+  - split: 8
+    text: "威望+25"
+  - split: 9
+    text: "粮食-200"
+  - split: 10
+    text: "技艺经验0.1;科研效率0.4;藏经容量10"
+  - split: 12
+    text: "威望100;粮食2000"
+  - split: 19
+    text: "此书院自本朝开科取士以来，登第者多达六十余人。远近文人学子皆心向往之，慕名求学者亦是络绎不绝，因而成为一处文人武客交流技艺，买卖藏书之胜地。"
+- raw: "75,河套马场,75,6,1,0,4,名驹--ShowBuildingShop,威望+10;粮食+100,银钱-150,旅行速度0.2,,银钱1000;粮食2000,20,7,2000-15-1-6,8,footstep,0;0,黄河裹挟泥沙而下，冲积而成一处水草丰美，沃野千里的天然牧场，不仅可作粮食生产，更是以盛产名驹战马而天下闻名，难怪俗语有云：黄河百害，唯富一套。"
+  splits:
+  - split: 1
+    text: "河套马场"
+  - split: 7
+    text: "名驹--ShowBuildingShop"
+  - split: 8
+    text: "威望+10;粮食+100"
+  - split: 9
+    text: "银钱-150"
+  - split: 10
+    text: "旅行速度0.2"
+  - split: 12
+    text: "银钱1000;粮食2000"
+  - split: 19
+    text: "黄河裹挟泥沙而下，冲积而成一处水草丰美，沃野千里的天然牧场，不仅可作粮食生产，更是以盛产名驹战马而天下闻名，难怪俗语有云：黄河百害，唯富一套。"

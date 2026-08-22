@@ -1,0 +1,1427 @@
+- raw: "id,名字,行事风格,等级,门派地点ID,颜色,特殊武功,特殊好感设定,男性比例,武功专长,技艺专长,特色物品,大帮派,自动补充弟子,默认皮肤,门派特性"
+  splits:
+  - split: 1
+    text: "名字"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "行事风格"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "等级"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "门派地点ID"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "颜色"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 6
+    text: "特殊武功"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 7
+    text: "特殊好感设定"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 8
+    text: "男性比例"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "武功专长"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "技艺专长"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "特色物品"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 12
+    text: "大帮派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 13
+    text: "自动补充弟子"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 14
+    text: "默认皮肤"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "门派特性"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "0,长乐帮,中庸,3,30,53defd,,,0.35,轻功;刀法;射术,口才,珍宝:1.5,1,1,0,<b>痛饮</b>：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感+20%。\\n<b>豪赌</b>：随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。\\n<b>销金</b>：在销金库可用门派功绩兑换高品质珍宝。"
+  splits:
+  - split: 1
+    text: "长乐帮"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "轻功;刀法;射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "口才"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "珍宝:1.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>痛饮</b>：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感+20%。\\n<b>豪赌</b>：随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。\\n<b>销金</b>：在销金库可用门派功绩兑换高品质珍宝。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "1,唐门,霸业,4,31,9f61e5,,,0.5,绝技;射术;刀法,毒术,材料:1.5,1,1,1,<b>暗器</b>：暗室研究射术兵器，提升射术威力。\\n<b>杀手</b>：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
+  splits:
+  - split: 1
+    text: "唐门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "绝技;射术;刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "毒术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "材料:1.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>暗器</b>：暗室研究射术兵器，提升射术威力。\\n<b>杀手</b>：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "2,药王谷,中庸,4,32,b57d4c,,,0.5,内功;拳掌;射术,医术;炼药,丹药:2,1,1,2,<b>行医</b>：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。\\n<b>妙药</b>：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求-50%。\\n<b>灵谷</b>：在万花谷可用门派功绩兑换高品质药引。"
+  splits:
+  - split: 1
+    text: "药王谷"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;拳掌;射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "医术;炼药"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "丹药:2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>行医</b>：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。\\n<b>妙药</b>：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求-50%。\\n<b>灵谷</b>：在万花谷可用门派功绩兑换高品质药引。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "3,丐帮,仁义,5,33,e1bf6e,,,0.5,拳掌;长兵;绝技,口才;烹饪,饮食:2,1,1,3,<b>铁掌</b>：大会台研究拳掌兵器，提升拳掌威力。\\n<b>行乞</b>：可消耗声望向他人乞讨银两。索取他人物品消耗好感-40%。"
+  splits:
+  - split: 1
+    text: "丐帮"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "拳掌;长兵;绝技"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "口才;烹饪"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "饮食:2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>铁掌</b>：大会台研究拳掌兵器，提升拳掌威力。\\n<b>行乞</b>：可消耗声望向他人乞讨银两。索取他人物品消耗好感-40%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "4,飞龙门,中庸,4,34,fdf553,,,0.6,绝技;长兵;刀法,采伐,马匹:2,1,1,4,<b>枪术</b>：赛马场研究长兵兵器，提升长兵威力。\\n<b>马术</b>：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
+  splits:
+  - split: 1
+    text: "飞龙门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "绝技;长兵;刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "采伐"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "马匹:2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>枪术</b>：赛马场研究长兵兵器，提升长兵威力。\\n<b>马术</b>：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "5,茅山派,中庸,5,35,dafaf7,,,0.5,绝技;奇门;剑法,炼药,丹药:1.5,1,1,5,<b>符法</b>：修习符咒武学解锁对应符法，用符法在战前强化己方角色/弱化对方角色。\\n<b>天雷</b>：每满级一门雷电武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点意志。\\n<b>丹引</b>：在华阳洞可炼化丹药获取对应药引。"
+  splits:
+  - split: 1
+    text: "茅山派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "绝技;奇门;剑法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "炼药"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "丹药:1.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>符法</b>：修习符咒武学解锁对应符法，用符法在战前强化己方角色/弱化对方角色。\\n<b>天雷</b>：每满级一门雷电武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点意志。\\n<b>丹引</b>：在华阳洞可炼化丹药获取对应药引。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "6,铸剑山庄,中庸,3,36,8ff2f4,,,0.5,剑法;绝技;刀法,采伐;锻造,装备:2,1,1,6,<b>天工</b>：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。\\n<b>巧匠</b>：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
+  splits:
+  - split: 1
+    text: "铸剑山庄"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "剑法;绝技;刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "采伐;锻造"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "装备:2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>天工</b>：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。\\n<b>巧匠</b>：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "7,五毒教,霸业,5,37,b46da6,,,0.5,奇门;绝技;拳掌,木植;毒术,珍宝:1,1,1,7,<b>炼蛊</b>：在万毒池消耗药引/食材获取毒物，融合低级毒物获取强力高级毒物。\\n<b>毒术</b>：用毒可以选用多个毒物，装备淬毒下降速率-25%。"
+  splits:
+  - split: 1
+    text: "五毒教"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "奇门;绝技;拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "木植;毒术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "珍宝:1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>炼蛊</b>：在万毒池消耗药引/食材获取毒物，融合低级毒物获取强力高级毒物。\\n<b>毒术</b>：用毒可以选用多个毒物，装备淬毒下降速率-25%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "8,阎罗殿,霸业,6,38,960E0A,,,0.5,内功;刀法;绝技;拳掌,采伐,装备:1,1,1,8,<b>试炼</b>：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。\\n<b>霸道</b>：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
+  splits:
+  - split: 1
+    text: "阎罗殿"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;刀法;绝技;拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "采伐"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "装备:1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>试炼</b>：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。\\n<b>霸道</b>：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "9,大隐阁,中庸,6,39,c5dff5,,,0.5,内功;轻功;奇门;剑法,学识;口才,珍宝:2,1,1,9,<b>博引</b>：搜集其他门派秘籍放入星辰阁，获取对应武学加成。\\n<b>旁证</b>：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求-10%。"
+  splits:
+  - split: 1
+    text: "大隐阁"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;轻功;奇门;剑法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "学识;口才"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "珍宝:2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>博引</b>：搜集其他门派秘籍放入星辰阁，获取对应武学加成。\\n<b>旁证</b>：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求-10%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "10,少林寺,仁义,6,40,ffb861,,,1,内功;绝技;长兵;拳掌,医术,秘籍:1,1,1,10,<b>禅宗</b>：通过禅宗修行获取少林寺武学加成。\\n<b>普度</b>：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
+  splits:
+  - split: 1
+    text: "少林寺"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;绝技;长兵;拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "医术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "秘籍:1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>禅宗</b>：通过禅宗修行获取少林寺武学加成。\\n<b>普度</b>：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "11,武当派,仁义,5,41,a0e15f,,,0.5,内功;绝技;剑法;拳掌,木植;炼药,秘籍:0.75,1,1,11,<b>道法</b>：通过道法修行获取武当派武学加成。\\n<b>无为</b>：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
+  splits:
+  - split: 1
+    text: "武当派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;绝技;剑法;拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "木植;炼药"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "秘籍:0.75"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>道法</b>：通过道法修行获取武当派武学加成。\\n<b>无为</b>：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "12,霸刀门,中庸,3,42,c36328,,,0.6,刀法;长兵;绝技,烹饪,饮食:1,1,1,12,<b>试刀</b>：试刀台研究刀法兵器，提升刀法威力。\\n<b>老饕</b>：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
+  splits:
+  - split: 1
+    text: "霸刀门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "刀法;长兵;绝技"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "烹饪"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "饮食:1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>试刀</b>：试刀台研究刀法兵器，提升刀法威力。\\n<b>老饕</b>：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "13,蓬莱派,仁义,3,43,fcc4d2,,,0.5,内功;剑法;奇门,学识,秘籍:0.5,1,1,13,<b>万剑</b>：蓬莱阁研究剑法兵器，提升剑法威力。\\n<b>归宗</b>：每满级一门剑法武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点剑法。"
+  splits:
+  - split: 1
+    text: "蓬莱派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;剑法;奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "学识"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "秘籍:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>万剑</b>：蓬莱阁研究剑法兵器，提升剑法威力。\\n<b>归宗</b>：每满级一门剑法武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点剑法。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "14,峨眉派,仁义,4,44,affac8,,,0.5,内功;轻功;拳掌,木植,材料:1,1,1,14,<b>自然</b>：通过自然修行获取峨嵋派武学加成。\\n<b>灵悟</b>：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
+  splits:
+  - split: 1
+    text: "峨眉派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;轻功;拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "木植"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "材料:1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>自然</b>：通过自然修行获取峨嵋派武学加成。\\n<b>灵悟</b>：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "15,崆峒派,霸业,3,45,3e92aa,,,0.5,绝技;奇门;长兵,毒术,马匹:1,1,1,15,<b>奇技</b>：七十二洞研究奇门兵器，提升奇门威力。\\n<b>百出</b>：每满级一门奇门武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点奇门。"
+  splits:
+  - split: 1
+    text: "崆峒派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "绝技;奇门;长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "毒术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "马匹:1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>奇技</b>：七十二洞研究奇门兵器，提升奇门威力。\\n<b>百出</b>：每满级一门奇门武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点奇门。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "16,神机门,仁义,4,46,3eaa66,,,0.5,奇门;射术;绝技,学识;锻造,装备:1.5,1,1,16,<b>机关</b>：使用装备改装升级机关兽，获取对应的机关兽加成。\\n<b>杂学</b>：所有技艺经验+20%，收集资源时更易获得高级珍宝/材料，珍宝鉴定额外学识加成。"
+  splits:
+  - split: 1
+    text: "神机门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "奇门;射术;绝技"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "学识;锻造"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "装备:1.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>机关</b>：使用装备改装升级机关兽，获取对应的机关兽加成。\\n<b>杂学</b>：所有技艺经验+20%，收集资源时更易获得高级珍宝/材料，珍宝鉴定额外学识加成。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "17,霹雳堂,中庸,3,47,d72724,,,0.5,射术;绝技;长兵,锻造,材料:2,1,1,17,<b>火药</b>：通过配置火药提升霹雳堂武学和灼烧武学效果。\\n<b>灼烧</b>：每满级一门灼烧武学，根据武学品级额外提升0.5%/1%/1.5%/2%/2.5%/3%负面加成。\\n<b>重烩</b>：在火炼室可重烩饮食获取对应食材。"
+  splits:
+  - split: 1
+    text: "霹雳堂"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "射术;绝技;长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "锻造"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "材料:2"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>火药</b>：通过配置火药提升霹雳堂武学和灼烧武学效果。\\n<b>灼烧</b>：每满级一门灼烧武学，根据武学品级额外提升0.5%/1%/1.5%/2%/2.5%/3%负面加成。\\n<b>重烩</b>：在火炼室可重烩饮食获取对应食材。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "18,金刚密宗,霸业,5,48,695180,,,0.5,内功;绝技;奇门,烹饪,饮食:1.5,1,1,18,<b>密宗</b>：通过密宗修行获取金刚宗武学加成。\\n<b>灌顶</b>：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
+  splits:
+  - split: 1
+    text: "金刚密宗"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;绝技;奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "烹饪"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "饮食:1.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>密宗</b>：通过密宗修行获取金刚宗武学加成。\\n<b>灌顶</b>：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "19,天山派,霸业,4,49,445c6a,,,0.4,轻功;内功;拳掌,医术,丹药:1,1,1,19,<b>玄冰</b>：通过凝结玄冰提升天山派武学和冰寒武学效果。\\n<b>冰寒</b>：每满级一门冰寒武学，根据武学品级额外提升2/4/6/8/10/12点内力上限。"
+  splits:
+  - split: 1
+    text: "天山派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "轻功;内功;拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "医术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "丹药:1"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>玄冰</b>：通过凝结玄冰提升天山派武学和冰寒武学效果。\\n<b>冰寒</b>：每满级一门冰寒武学，根据武学品级额外提升2/4/6/8/10/12点内力上限。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "20,聚义门,仁义,2,50,ABABAB,207/223/241,,0.5,内功;拳掌;长兵,无,丹药:0.5,0,1,-7,<b>聚义</b>：内功经验+20%，医术经验+20%。"
+  splits:
+  - split: 1
+    text: "聚义门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;拳掌;长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "丹药:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>聚义</b>：内功经验+20%，医术经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "21,黄河帮,霸业,0,51,ABABAB,,,0.5,轻功;刀法,无,珍宝:0.5,0,1,-8,<b>黄河</b>：刀法经验+20%，毒术经验+20%。"
+  splits:
+  - split: 1
+    text: "黄河帮"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "轻功;刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "珍宝:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>黄河</b>：刀法经验+20%，毒术经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "22,八卦门,仁义,1,52,ABABAB,,,0.5,绝技;剑法;奇门,无,秘籍:0.25,0,1,-5,<b>八卦</b>：奇门经验+20%，学识经验+20%。"
+  splits:
+  - split: 1
+    text: "八卦门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "绝技;剑法;奇门"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "秘籍:0.25"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>八卦</b>：奇门经验+20%，学识经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "23,海沙帮,中庸,0,53,ABABAB,,,0.5,绝技;刀法,无,材料:0.5,0,1,-9,<b>海沙</b>：绝技经验+20%，烹饪经验+20%。"
+  splits:
+  - split: 1
+    text: "海沙帮"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "绝技;刀法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "材料:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>海沙</b>：绝技经验+20%，烹饪经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "24,铁掌帮,霸业,1,54,ABABAB,6/11/32/47/62/117/138/151/196/210/225,,0.5,内功;拳掌,无,装备:0.5,0,0,-10,<b>铁掌</b>：拳掌经验+20%，锻造经验+20%。"
+  splits:
+  - split: 1
+    text: "铁掌帮"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;拳掌"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "装备:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>铁掌</b>：拳掌经验+20%，锻造经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "25,仙霞派,中庸,0,55,ABABAB,0/4/7/9/12/16/20/21/24/31/39/52/61/68/126/149/157/230,14-60;24-25,0.5,剑法,无,秘籍:0.25,0,0,-99,<b>仙霞</b>：所有经验获取+5%。"
+  splits:
+  - split: 1
+    text: "仙霞派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "剑法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "秘籍:0.25"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>仙霞</b>：所有经验获取+5%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "26,巨鲸帮,中庸,1,56,ABABAB,,,0.5,轻功;射术,无,饮食:0.5,0,1,-4,<b>巨鲸</b>：轻功经验+20%，采伐经验+20%。"
+  splits:
+  - split: 1
+    text: "巨鲸帮"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "轻功;射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "饮食:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>巨鲸</b>：轻功经验+20%，采伐经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "27,金龙帮,中庸,2,57,ABABAB,,,0.5,内功;射术,无,珍宝:0.5,0,1,-3,<b>金龙</b>：射术经验+20%，口才经验+20%。"
+  splits:
+  - split: 1
+    text: "金龙帮"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "中庸"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "内功;射术"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "珍宝:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>金龙</b>：射术经验+20%，口才经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "28,青城派,霸业,1,58,ABABAB,,,0.5,轻功;奇门;剑法,无,装备:0.5,0,1,-6,<b>青城</b>：剑法经验+20%，炼药经验+20%。"
+  splits:
+  - split: 1
+    text: "青城派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "霸业"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "轻功;奇门;剑法"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "装备:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>青城</b>：剑法经验+20%，炼药经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "29,伏牛派,仁义,0,59,ABABAB,,,0.5,绝技;长兵,无,马匹:0.5,0,1,-2,<b>伏牛</b>：长兵经验+20%，木植经验+20%。"
+  splits:
+  - split: 1
+    text: "伏牛派"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "仁义"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 9
+    text: "绝技;长兵"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 10
+    text: "无"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 11
+    text: "马匹:0.5"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 15
+    text: "<b>伏牛</b>：长兵经验+20%，木植经验+20%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""

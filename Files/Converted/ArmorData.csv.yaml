@@ -1,0 +1,199 @@
+- raw: "id,名字,类别,护甲,轻功,重量级"
+  splits:
+  - split: 1
+    text: "名字"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 2
+    text: "类别"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 3
+    text: "护甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 4
+    text: "轻功"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+  - split: 5
+    text: "重量级"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "0,布甲,1,3,1,0"
+  splits:
+  - split: 1
+    text: "布甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "1,轻甲,1,4,0,1"
+  splits:
+  - split: 1
+    text: "轻甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "2,链甲,1,5,-1,2"
+  splits:
+  - split: 1
+    text: "链甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "3,鳞甲,1,6,-2,3"
+  splits:
+  - split: 1
+    text: "鳞甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "4,铠甲,1,7,-3,4"
+  splits:
+  - split: 1
+    text: "铠甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "5,重甲,1,8,-4,5"
+  splits:
+  - split: 1
+    text: "重甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "0,发带,2,1,2,0"
+  splits:
+  - split: 1
+    text: "发带"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "1,头冠,2,2,1,1"
+  splits:
+  - split: 1
+    text: "头冠"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "2,斗笠,2,3,0,2"
+  splits:
+  - split: 1
+    text: "斗笠"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "3,半盔,2,4,-1,3"
+  splits:
+  - split: 1
+    text: "半盔"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "4,全盔,2,5,-2,4"
+  splits:
+  - split: 1
+    text: "全盔"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "5,重盔,2,6,-3,5"
+  splits:
+  - split: 1
+    text: "重盔"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "0,布鞋,3,-1,4,0"
+  splits:
+  - split: 1
+    text: "布鞋"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "1,鞋履,3,0,3,1"
+  splits:
+  - split: 1
+    text: "鞋履"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "2,短靴,3,1,2,2"
+  splits:
+  - split: 1
+    text: "短靴"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "3,长靴,3,2,1,3"
+  splits:
+  - split: 1
+    text: "长靴"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "4,胫甲,3,3,0,4"
+  splits:
+  - split: 1
+    text: "胫甲"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "5,重靴,3,4,-1,5"
+  splits:
+  - split: 1
+    text: "重靴"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""

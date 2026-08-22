@@ -1,0 +1,326 @@
+- raw: "Tips"
+  splits: []
+- raw: "随身携带的珍宝，\\n若学识足够会每日自动尝试鉴定。"
+  splits:
+  - split: 0
+    text: "随身携带的珍宝，\\n若学识足够会每日自动尝试鉴定。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "珍宝在鉴定后才能卖出更高价格。"
+  splits:
+  - split: 0
+    text: "珍宝在鉴定后才能卖出更高价格。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "声望达到对方一半才能结识。"
+  splits:
+  - split: 0
+    text: "声望达到对方一半才能结识。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "门派的占领区域达到上限后，\\n就无法占领新的区域。"
+  splits:
+  - split: 0
+    text: "门派的占领区域达到上限后，\\n就无法占领新的区域。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "门派的弟子人口达到上限后，\\n就无法招募新的弟子。"
+  splits:
+  - split: 0
+    text: "门派的弟子人口达到上限后，\\n就无法招募新的弟子。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "每一级别的武功都有修习数量上限，\\n超出上限后所有该级别武功获得的经验都会减少。"
+  splits:
+  - split: 0
+    text: "每一级别的武功都有修习数量上限，\\n超出上限后所有该级别武功获得的经验都会减少。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "装备负重会影响角色在战斗中的速度。"
+  splits:
+  - split: 0
+    text: "装备负重会影响角色在战斗中的速度。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
+  splits:
+  - split: 0
+    text: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "在官府获取官职后，便可以替朝廷效力。"
+  splits:
+  - split: 0
+    text: "在官府获取官职后，便可以替朝廷效力。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "野外有时会出现强力恶贼，\\n此时应绕道而行，以免遭到袭击。"
+  splits:
+  - split: 0
+    text: "野外有时会出现强力恶贼，\\n此时应绕道而行，以免遭到袭击。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "探索起始时，偶尔会察觉到高人气息。\\n此时若仔细搜寻，定会有意外收获。"
+  splits:
+  - split: 0
+    text: "探索起始时，偶尔会察觉到高人气息。\\n此时若仔细搜寻，定会有意外收获。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "秘籍品质越高，阅读中越容易出现较好的方格。"
+  splits:
+  - split: 0
+    text: "秘籍品质越高，阅读中越容易出现较好的方格。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "放在藏经阁内的秘籍会根据品质，\\n提升全门派修习该武学的速度。"
+  splits:
+  - split: 0
+    text: "放在藏经阁内的秘籍会根据品质，\\n提升全门派修习该武学的速度。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "好感达到50后可以成为朋友。"
+  splits:
+  - split: 0
+    text: "好感达到50后可以成为朋友。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "好感达到100后，可以让关系更进一步。"
+  splits:
+  - split: 0
+    text: "好感达到100后，可以让关系更进一步。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "恶名过高时进入城镇，\\n很可能会被官府或城内侠士抓捕。"
+  splits:
+  - split: 0
+    text: "恶名过高时进入城镇，\\n很可能会被官府或城内侠士抓捕。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "行囊超重会减慢你的大地图旅行速度。"
+  splits:
+  - split: 0
+    text: "行囊超重会减慢你的大地图旅行速度。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "穿着过于沉重的装备会减慢你的战斗速度。"
+  splits:
+  - split: 0
+    text: "穿着过于沉重的装备会减慢你的战斗速度。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "在编纂秘籍时，\\n你可以将两本低品质秘籍合成一本高品质秘籍。"
+  splits:
+  - split: 0
+    text: "在编纂秘籍时，\\n你可以将两本低品质秘籍合成一本高品质秘籍。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "与对方的性格越接近，好感提升越快。"
+  splits:
+  - split: 0
+    text: "与对方的性格越接近，好感提升越快。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "与对方的立场越接近，初始好感越高。"
+  splits:
+  - split: 0
+    text: "与对方的立场越接近，初始好感越高。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "较高的恶名会降低好感获取，\\n其他侠士在野外遭遇时也会避而远之。"
+  splits:
+  - split: 0
+    text: "较高的恶名会降低好感获取，\\n其他侠士在野外遭遇时也会避而远之。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "袭击同门或亲朋好友，\\n会导致恶名成倍增加。"
+  splits:
+  - split: 0
+    text: "袭击同门或亲朋好友，\\n会导致恶名成倍增加。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "恶名每个月会自动衰减10%，\\n投案自首时也会减少10%。"
+  splits:
+  - split: 0
+    text: "恶名每个月会自动衰减10%，\\n投案自首时也会减少10%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "在城镇或安全区内行凶作恶，\\n会导致恶名成倍增加。"
+  splits:
+  - split: 0
+    text: "在城镇或安全区内行凶作恶，\\n会导致恶名成倍增加。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "探索耐力耗尽后，\\n每走一步都会消耗越来越多生命/内力。"
+  splits:
+  - split: 0
+    text: "探索耐力耗尽后，\\n每走一步都会消耗越来越多生命/内力。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "战斗中某项伤势较高时，\\n会获得针对该伤势的临时抗性。"
+  splits:
+  - split: 0
+    text: "战斗中某项伤势较高时，\\n会获得针对该伤势的临时抗性。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "战斗中一名角色败退时，\\n其所控制的机关兽也都会败退。"
+  splits:
+  - split: 0
+    text: "战斗中一名角色败退时，\\n其所控制的机关兽也都会败退。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "在西域灵州的莫高窟中，\\n可闭关遗忘已有的零级武学或天赋。"
+  splits:
+  - split: 0
+    text: "在西域灵州的莫高窟中，\\n可闭关遗忘已有的零级武学或天赋。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "外功武学的突破效果，\\n只有在使用该武学时才会生效。"
+  splits:
+  - split: 0
+    text: "外功武学的突破效果，\\n只有在使用该武学时才会生效。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "京城的私宅因为等级最高，\\n价格自然也最贵。"
+  splits:
+  - split: 0
+    text: "京城的私宅因为等级最高，\\n价格自然也最贵。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "战场局势瞬息万变，\\n对付实力较弱者也不可掉以轻心。"
+  splits:
+  - split: 0
+    text: "战场局势瞬息万变，\\n对付实力较弱者也不可掉以轻心。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "侧面攻击提升5%伤害及命中，\\n背后攻击则提升10%。"
+  splits:
+  - split: 0
+    text: "侧面攻击提升5%伤害及命中，\\n背后攻击则提升10%。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "行走江湖不能一味单打独斗，\\n多与其他侠士组队同行，方为万全之法。"
+  splits:
+  - split: 0
+    text: "行走江湖不能一味单打独斗，\\n多与其他侠士组队同行，方为万全之法。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "行走江湖不能一味单打独斗，\\n多与其他侠士组队同行，方为万全之法。"
+  splits:
+  - split: 0
+    text: "行走江湖不能一味单打独斗，\\n多与其他侠士组队同行，方为万全之法。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""
+- raw: "行走江湖不能一味单打独斗，\\n多与其他侠士组队同行，方为万全之法。"
+  splits:
+  - split: 0
+    text: "行走江湖不能一味单打独斗，\\n多与其他侠士组队同行，方为万全之法。"
+    translated: ""
+    safeToTranslate: true
+    flaggedForRetranslation: false
+    flaggedMistranslation: ""
+    flaggedHallucination: ""

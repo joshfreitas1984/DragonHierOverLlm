@@ -1,0 +1,49 @@
+﻿models:
+  - name: Qwen25-Standard
+    modelPreset: Qwen25 
+    modelPresetType: Standard
+    customPromptsPath: 
+    apiKeyPath: 
+  - name: Qwen25-StructuredText
+    modelPreset:  Qwen25
+    modelPresetType: StructuredText
+    customPromptsPath: 
+    apiKeyPath: 
+glossaryPreset:
+  usePresetChineseGlossary: true
+  chineseGlossaryTypesToSupress:
+    - Phonetics
+retryCount: 4
+batchSize: 20000
+skipLineValidation: false
+correctionPromptsEnabled: true
+translateFlagged: true
+splitCharactersList:
+  - '\\n'
+  - '⑩'
+  - '⓪'
+  - '①'
+  - '②'
+  - '③'
+  - '④'
+  - '⑤'
+  - '⑥'
+  - '⑦'
+  - '⑧'
+  - '⑨'
+  #- '-', # This will split between other groups
+  #- ':', # This will split between other groups
+  #-'|',
+  #-'。'
+  #-'<br>',
+  #-'-', 
+splitRegexPatterns:
+  #- '(.*?)',
+  #- '（.*?）',
+  - '《.*?》'
+  - '\〈.*?\〉'
+  - '\「.*?\」'
+  - '\『.*?\』'
+  - '\【.*?\】'
+  - '\〖.*?\〗'
+  - '\“.*?”'
