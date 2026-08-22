@@ -326,9 +326,7 @@
     translated: "Fists and palms"
   - split: 3
     text: "禁军拳术"
-    translated: "Forbiddon Army Combat Technique"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Forbidden Army,禁军,"
+    translated: "Forbidden Army Combat Technique"
   - split: 4
     text: "军中流传的基础拳法"
     translated: "Basic punching techniques taught in the army"
@@ -349,8 +347,7 @@
     translated: "4 head"
   - split: 27
     text: "三连打击-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Triple Strike‑Target‑Grid‑Hit"
   - split: 28
     text: "拳"
     translated: "Fist"
@@ -853,7 +850,7 @@
     translated: "Breath Control Technique"
   - split: 4
     text: "固气培元，放劲发人，从而增强内息强度之基础内功功法"
-    translated: "Strengthen Inner Qi and Cultivate Fundamental Energy, then release power to enhance the foundational inner qi techniques."
+    translated: "Strengthening Inner Qi and Cultivating the Fundamental, Releasing Strength to Enhance the Basis of Inner Qi Flow"
     flaggedForRetranslation: true
     flaggedMistranslation: "Neigong,内功,"
   - split: 7
@@ -1235,7 +1232,7 @@
     translated: "Iron ball rolls"
   - split: 4
     text: "一套注重力道运用的轻功法门，需要推动数百斤重的石球或铁球行走，奔跑，乃至上下坡"
-    translated: "A qigong discipline focused on the application of strength, requiring one to move, run, and navigate inclines while carrying a heavy stone or iron ball weighing hundreds of catties."
+    translated: "A qigong technique focusing on the application of strength, requiring one to walk, run, and even navigate slopes while moving hundreds of catties worth of stone or iron balls."
     flaggedForRetranslation: true
     flaggedMistranslation: "Qinggong,轻功,"
   - split: 7
@@ -1735,7 +1732,7 @@
     translated: "Yue Family Fist"
   - split: 4
     text: "用于军中练兵作战的拳法，招式刚猛且对内功的要求很低"
-    translated: "Punching techniques used for military training and combat, with fierce movements that require little internal strength."
+    translated: "Punching techniques used for military training and combat, with robust moves that require minimal internal energy cultivation."
     flaggedForRetranslation: true
     flaggedMistranslation: "Neigong,内功,"
   - split: 7
@@ -2129,8 +2126,7 @@
     translated: "Sword Technique 1; Willpower 1"
   - split: 9
     text: "意志1;剑法2;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower 1; Sword Technique 2; Inner Power 0.1"
   - split: 10
     text: "剑法15;意志10"
     translated: "Sword Technique 15; willpower 10"
@@ -2145,8 +2141,7 @@
     translated: "12 hand"
   - split: 27
     text: "劈砍_灰-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Chop‑Target‑Gray‑Grid‑Occur"
   - split: 28
     text: "剑"
     translated: "Sword"
@@ -2355,8 +2350,7 @@
     translated: "Head 10"
   - split: 27
     text: "劈砍_紫-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slash_Target_Grid_Happen_Purple"
   - split: 28
     text: "刀"
     translated: "Blade"
@@ -2790,8 +2784,7 @@
     translated: "Staff technique of a thousand catties"
   - split: 4
     text: "将双手力道集中于刚猛一击之中，极简的招式蕴含着千钧之力，也因此缺乏防御后招"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Focus the strength in a powerful strike, condensing the power of a simple technique into a devastating blow, thus lacking any follow‑up defensive moves."
   - split: 7
     text: "长兵1;力道1"
     translated: "Long weapon 1; Strength 1"
@@ -2966,8 +2959,7 @@
     translated: "A powerful and aggressive whip technique that opens and closes with great force; those with profound power can break rocks with a single lash, truly showcasing its ferocity."
   - split: 7
     text: "奇门1;力道1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mystic Gates 1; Strength 1"
   - split: 9
     text: "力道1;奇门2;内力0.1"
     translated: "Strength 1; Qimen 2; Inner Power 0.1"
@@ -2985,8 +2977,7 @@
     translated: "9 chest"
   - split: 27
     text: "劈砍_裂地-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slash‑Terrain‑Break‑Target‑Grid‑Happen"
   - split: 28
     text: "鞭"
     translated: "Whip"
@@ -3077,8 +3068,7 @@
     translated: "Odd Doors 1; Willpower 1"
   - split: 9
     text: "意志2;奇门2;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower2;Qimen2;Inner Power0.2"
   - split: 10
     text: "奇门15;意志10"
     translated: "Trigram 15; Willpower 10"
@@ -3151,8 +3141,7 @@
     translated: "Intelligence 2; mystic gate 2; Inner Power 0.2"
   - split: 10
     text: "奇门15;智力15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trigram 15; Intelligence 15"
   - split: 17
     text: "飘逸0.08"
     translated: "Ethereal 0.08"
@@ -3199,8 +3188,7 @@
     translated: "10's stomach"
   - split: 27
     text: "磁暴-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Magnetic Storm‑Target Grid Triggered"
   - split: 28
     text: "鞭"
     translated: "Whip"
@@ -3217,8 +3205,7 @@
     translated: "Throwing the short axe with force straight at the head, the technique is remarkably simple, requiring only a strong arm to unleash its power."
   - split: 7
     text: "射术1;力道1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery1;Strength1"
   - split: 9
     text: "力道2;射术1"
     translated: "Strength 2; Archery 1"
@@ -3414,8 +3401,7 @@
     translated: "Archery 1; meridians 1"
   - split: 9
     text: "经脉1;射术2;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Meridian 1; Archery 2; Inner Power 0.1"
   - split: 10
     text: "射术20;经脉10"
     translated: "Archery 20; Meridians 10"
@@ -3617,8 +3603,7 @@
     translated: "Heaven‑Shaking Earth‑Piercing Technique"
   - split: 4
     text: "阳刚猛烈的内功心法，内力如同奔雷般向四肢流转，使得修习者行动速度与经脉流转亦大大加快"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Yang‑gentle forceful neigong heart method, inner power flows like rushing thunder towards the limbs, greatly accelerating the practitioner's movement speed and meridian circulation."
   - split: 7
     text: "内功1;经脉1;灵巧1"
     translated: "Neigong 1; jingmai 1; lingqiao 1"
@@ -3938,8 +3923,7 @@
     translated: "A feather's weight moves a thousand catties"
   - split: 4
     text: "一门借力打力，以巧胜强的功夫，其对劲道的把握以及时机之掌控，非日夜苦练难得纯熟"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A skill that relies on counterforce to overcome strength with cleverness requires mastery of power and precise timing, which can only be achieved through constant practice."
   - split: 7
     text: "绝技1;灵巧1;智力1"
     translated: "Ultimate Skill 1; Dexterity 1; Intelligence 1"
@@ -4119,8 +4103,7 @@
     translated: "Butterfly Sweep"
   - split: 4
     text: "此功法专练手肘的顶凿屈转与抗击打能力，功成后手肘孔武有力，纵以利刃砍之亦不能损"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This cultivation technique focuses on strengthening the elbow's thrusting, bending, and impact resistance. Upon mastery, the elbow becomes robust and resilient; even sharp blades cannot damage it."
   - split: 7
     text: "绝技1;力道1;意志1"
     translated: "Special Move 1; Strength 1; Willpower 1"
@@ -4247,8 +4230,7 @@
     translated: "Raptor Hand"
   - split: 4
     text: "从猛禽捕食动作中演化出的擒拿路数，着重抓锁猎物的脖颈或关节处，并伺机予以致命一击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Evolved from predatory raptor techniques focused on grabbing and locking the prey's neck or joints, this sequence emphasizes seizing these vulnerable points to deliver a fatal strike when opportunities arise."
   - split: 7
     text: "拳掌1;灵巧1;智力1"
     translated: "Fist and palm attacks 1; Agility 1; Intelligence 1"
@@ -4423,8 +4405,7 @@
     translated: "Iron Mallet Hand"
   - split: 4
     text: "一双手掌如同铁琵琶一般环抱身前，防御滴水不漏，令敌人难寻破绽之掌法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hands clamped before him like iron zithers, defending with flawless technique that leaves no opening for the enemy to exploit."
   - split: 7
     text: "拳掌2;体质1"
     translated: "Fist and Palm 2; Physique 1"
@@ -4465,8 +4446,7 @@
     translated: "Fist and Palm 2; Will and Determination 1"
   - split: 9
     text: "意志2;拳掌2;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower 2; Punch and Palm 2; Inner Power 0.2"
   - split: 10
     text: "拳掌25;意志15"
     translated: "Fist and palm 25; Willpower 15"
@@ -4481,8 +4461,7 @@
     translated: "16 head"
   - split: 27
     text: "穿刺_土叶-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Puncture_Target‑Grid_Happen"
   - split: 28
     text: "拳"
     translated: "Fist"
@@ -4552,8 +4531,7 @@
     translated: "13's stomach"
   - split: 27
     text: "劈砍_黑白震-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slice and Chop ‑ Target Grid Activated"
   - split: 28
     text: "剑"
     translated: "Sword"
@@ -4708,15 +4686,13 @@
     translated: "One‑Stroke Electric Sword"
   - split: 4
     text: "一字电剑剑势喜直，将全身力道集中一线击出，不留防御后手，自然快如闪电"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The electric sword technique focuses on a straight strike, channeling all strength into a single line for an attack with no room for defense. Naturally, it is swift like lightning."
   - split: 7
     text: "剑法1;力道1;意志1"
     translated: "Sword Technique 1; Strength 1; Willpower 1"
   - split: 9
     text: "意志2;剑法2;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 2; Sword Technique 2; Inner Power 0.2"
   - split: 10
     text: "剑法25;意志25;力道15"
     translated: "Sword Technique 25; willpower 25; Strength 15"
@@ -4780,9 +4756,7 @@
     translated: "Doctor's Sword"
   - split: 4
     text: "高人观泰山五大夫松所创之剑法，其剑势如苍松挺直，古朴沉稳，讲求以静制动"
-    translated: "Scholars observing the sword technique created by the Five Dukes Pine on Mount Tai admire its graceful yet rigid stance, reminiscent of an ancient and steady pine tree. It emphasizes using stillness to generate movement."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Doctor,大夫,"
+    translated: "Masters observing the Sword Art created by the Great Doctor Pine on Mount Tai find its sword movements as straight as a towering pine, ancient and steady. It emphasizes using stillness to generate power."
   - split: 7
     text: "剑法1;力道1;体质1"
     translated: "Sword Technique 1; Strength 1; Constitution 1"
@@ -4900,8 +4874,7 @@
     translated: "Blade Technique 25; Strength 25; Constitution 15"
   - split: 17
     text: "压制0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Suppress 0.08"
   - split: 21
     text: "腹20"
     translated: "20 stomach"
@@ -5193,8 +5166,7 @@
     translated: "13 steps"
   - split: 27
     text: "地刺-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spikes‑Target‑Grid‑Happen"
   - split: 28
     text: "刀"
     translated: "Blade"
@@ -5457,8 +5429,7 @@
     translated: "Versatile Rhombus Spear"
   - split: 4
     text: "招式繁复多变的枪法，据说由悟性高超之人使出，能产生上百种变化"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Complex and varied Spear Art, reputedly wielded by individuals of high natural insight, able to produce over a hundred variations."
   - split: 7
     text: "长兵1;体质1;绝技1"
     translated: "Long‑arm Weapon1; Vitality1; Super Skill1"
@@ -5566,8 +5537,7 @@
     translated: "Extremely swift fan technique, layer upon layer of maneuvers, akin to a hurricane sweeping away mines, leaving no time to catch one's breath."
   - split: 7
     text: "奇门1;灵巧1;经脉1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trigram 1; Agility 1; Meridians 1"
   - split: 9
     text: "灵巧2;奇门2;内力0.2"
     translated: "Agile 2; Mystical Doors 2; Inner Power 0.2"
@@ -5637,15 +5607,13 @@
     translated: "A powerful whip technique infused with yang inner power, casting golden light and resembling a dragon emerging from the sea."
   - split: 7
     text: "奇门1;力道1;经脉1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Odd Doors 1; Strength 1; Meridians 1"
   - split: 9
     text: "经脉2;奇门2;内力0.2"
     translated: "Meridians 2; Strange Doors 2; Inner Power 0.2"
   - split: 10
     text: "奇门30;经脉20;力道15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trigrams 30; Meridians 20; Strength 15"
   - split: 17
     text: "内劲0.08"
     translated: "Internal force 0.08"
@@ -5677,8 +5645,7 @@
     translated: "Mystic Gates 1; Willpower 1; Intelligence 1"
   - split: 9
     text: "意志2;奇门2;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower2;Qimen2;Inner Power0.2"
   - split: 10
     text: "奇门35;意志20;智力10"
     translated: "Odd Doors 35; Willpower 20; Intelligence 10"
@@ -5765,8 +5732,7 @@
     translated: "Hands6; feet5"
   - split: 27
     text: "劈砍_黑白震-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slice and Chop ‑ Target Grid Activated"
   - split: 28
     text: "对刺"
     translated: "Stabbing attack"
@@ -5853,8 +5819,7 @@
     translated: "This technique relies on the words 'counter' and 'retaliate.' By utilizing the stiffness of the whip, each lash creates a series of follow‑up strikes that are hard to guard against."
   - split: 7
     text: "奇门1;智力1;轻功1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trickery 1; Intelligence 1; Qinggong 1"
   - split: 9
     text: "智力2;奇门1;内力0.2"
     translated: "Intelligence 2; Qi Men 1; Inner Power 0.2"
@@ -6071,8 +6036,7 @@
     translated: "Chest2; abdomen4"
   - split: 27
     text: "打击1-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Attack 1‑Target‑Grid‑Happen"
 - raw: "202,射术,2,银飞梭,小枚的银质梭镖，可借由内劲丢出，断脉打穴，颇为方便,13,1,射术1;力道1;经脉1,,经脉2;射术2;内力0.2,射术30;经脉20;力道15,\"4,0,0\",\"4,2,5\",截脉0.08,12,-1,0,心22,心6,,,skill5_0,17-----1,闪光-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -6410,8 +6374,7 @@
     translated: "Potential in Qinggong 1; Qinggong 1; Willpower 1"
   - split: 8
     text: "轻功9;灵巧9;意志6;急速0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 9; Lightness 9; Willpower 6; Swiftness 0.1"
   - split: 10
     text: "轻功40;灵巧30;意志20"
     translated: "Qinggong 40; Lightness 30; Willpower 20"
@@ -6622,8 +6585,7 @@
     translated: "Potential in Punches and Palm Strikes 1; Punches and Palm Strikes 1; Willpower 1"
   - split: 9
     text: "意志2;拳掌3;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 2; fists and palms 3; inner power 0.2"
   - split: 10
     text: "拳掌55;意志30"
     translated: "Fist and Palm 55; Willpower 30"
@@ -6792,12 +6754,10 @@
     translated: "Diancang's Lost Sword"
   - split: 4
     text: "古门派点苍遗留之剑谱，大巧不工，重剑无锋，招式之中颇有古朴归真之意"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Ancient Diancang Sect's leftover sword spectrum, great ingenuity without artifice, heavy swords without sharp edges, with a touch of ancient simplicity and genuineness in their moves"
   - split: 7
     text: "经脉潜力1;剑法1;体质1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential in Meridians 1; Sword Art 1; Constitution 1"
   - split: 9
     text: "体质2;剑法2;内力0.3"
     translated: "Constitution 2; sword technique 2; inner power 0.3"
@@ -6955,8 +6915,7 @@
     translated: "10 chest; 9 abdomen"
   - split: 27
     text: "羽散-Target-Grid-Happen;三连剑影小-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Flock‑Diffuse‑Target‑Grid‑Happen;Triple Sword Shadow Target‑Grid‑Happen"
   - split: 28
     text: "刀"
     translated: "Blade"
@@ -6970,8 +6929,7 @@
     translated: "Emptiness Emptiness Blade"
   - split: 4
     text: "相传乃是一无名老道所传，以虚招为主，刀意空玄飘幻，令人如坠云里雾里，无从捉摸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "It is said to have been passed down by an anonymous old Taoist master. The technique mainly employs empty maneuvers, with sword intent that is ethereal and elusive, leaving one feeling as if they are in a fog, unable to grasp its essence."
   - split: 7
     text: "刀法潜力1;刀法1;体质1"
     translated: "Blade Art Potential 1; Blade Art 1; Constitution 1"
@@ -7003,8 +6961,7 @@
     translated: "Blade Art"
   - split: 3
     text: "东瀛刀术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Japanese blade technique"
   - split: 4
     text: "东瀛武士之刀法，招法看似简单，实则强调对人体力道之极致运用，无需内力修为便能发挥威力"
     flaggedForRetranslation: true
@@ -7192,8 +7149,7 @@
     translated: "Long‑sword Potential 1; Long‑sword 1; Willpower 1"
   - split: 9
     text: "意志2;长兵3;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 2; Long Weapon 3; Inner Power 0.2"
   - split: 10
     text: "长兵40;意志30"
     translated: "Long Sword 40; Willpower 30"
@@ -7292,8 +7248,7 @@
     translated: "Midday‑Midnight Dual Jade Sabers"
   - split: 4
     text: "擅长招架攻击的成对奇门兵刃，出手时开合交织，难舍难分，恰似一对鸳鸯"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A pair of qimen binglen that excel in blocking and attacking simultaneously. The movements open and close intertwine, making it hard to separate them, much like a pair of swan geese."
   - split: 7
     text: "智力潜力1;奇门1;灵巧1"
     translated: "Intellectual Potential 1; Jiemen 1; Dexterity 1"
@@ -7334,8 +7289,7 @@
     translated: "Potential: 1; Oracle: 1; Intelligence: 1"
   - split: 9
     text: "智力2;奇门3;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Intelligence 2; Qimen 3; Inner Power 0.2"
   - split: 10
     text: "奇门55;智力30"
     translated: "Divination 55; Intelligence 30"
@@ -7445,8 +7399,7 @@
     translated: "Strength 2; shooting skills 3; Inner Power 0.2"
   - split: 10
     text: "射术50;力道35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery50;Strength35"
   - split: 17
     text: "破甲0.05;雷电0.05"
     translated: "Piercing Armor 0.05; Lightning 0.05"
@@ -7466,8 +7419,7 @@
     translated: "Archery"
   - split: 3
     text: "子母如意珠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pearl of Divine Will"
   - split: 4
     text: "看似平平无奇的铁珠，实则内藏数个更小的铁珠，手法高超者掷出，能同时打击多个穴位"
     translated: "At first glance, these ordinary iron balls conceal smaller iron balls inside. Skilled practitioners can throw them to simultaneously strike multiple acupoints."
@@ -7777,8 +7729,7 @@
     translated: "Fists and palms"
   - split: 3
     text: "泫然指法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Glistening Fingertouch"
   - split: 4
     text: "此指法精妙非凡，饱含悲苦之意，内息运行低沉婉转，如怨如慕，如泣如诉，被命中之人血脉亦为之阻滞"
     translated: "This finger technique is incredibly ingenious, imbued with a profound sense of sorrow. The inner qi flows low and mellifluous, like lamentation and yearning, causing the blood vessels of those hit to constrict."
@@ -8131,8 +8082,7 @@
     translated: "Domination Strange Spear"
   - split: 4
     text: "兵行险锋，枪出奇招，此枪法招招角度诡谲，出奇制胜，传说熟习之人，必能建功立业，傲视群雄"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Risking the sharp edge of battle, wielding the surprising strike‑each angle of this spear technique is cunning and unexpected, ensuring an advantage. Legends say that those who master it are sure to achieve remarkable success and tower above their peers."
   - split: 7
     text: "长兵潜力1;体质潜力1;长兵2"
     translated: "Potential for Long Weapons 1; Physical Potential 1; Long Weapons 2"
@@ -8205,8 +8155,7 @@
     translated: "A very rare weapon; silver chains ending in a golden sphere, flexible and swift, capable of sealing meridians and striking acupoints with unparalleled effectiveness."
   - split: 7
     text: "奇门潜力2;奇门1;智力1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential of Iumen 2; Iumen 1; Intelligence 1"
   - split: 9
     text: "智力3;奇门3;内力0.2"
     translated: "Intelligence 3; Qimen 3; Inner Power 0.2"
@@ -8238,8 +8187,7 @@
     translated: "Iron Head Decapitation Skill"
   - split: 4
     text: "以巨型铡刀使出，顺劈竖砍，或格或架，因其形制独特，体积巨大，可以不变应万变"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Using a massive scissor blade, it slices both horizontally and vertically, blocking or parrying as needed. Due to its unique design and enormous size, it can adapt to various situations with ease."
   - split: 7
     text: "奇门潜力1;智力潜力1;奇门1;意志1"
     translated: "Potential in Mystic Doors 1; Intelligence Potential 1; Mystic Doors 1; Willpower 1"
@@ -8274,8 +8222,7 @@
     translated: "Five‑Mythical‑Beast Crazy Whip"
   - split: 4
     text: "以内力灌注软鞭，狂舞之时其残影亦化为五条巨蟒，绞杀突进，配合无间，真如活物一般难以防备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fueled by inner power, the soft whip danced wildly, its blurred shadows transforming into five giant snakes that strangled the attacker with perfect coordination, making it almost impossible to guard against."
   - split: 7
     text: "奇门潜力1;意志潜力1;奇门2"
     translated: "Potential in Mystic Doors 1; Potential in Willpower 1; Mystic Doors 2"
@@ -8549,8 +8496,7 @@
     translated: "Blade Technique 75; Strength 60"
   - split: 17
     text: "断骨0.08;雷电0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Broken Bones 0.08; Thunderbolts 0.08"
   - split: 21
     text: "腹9;足7;心9"
     translated: "Stomach9;Legs7;Heart9"
@@ -8799,8 +8745,7 @@
     translated: "Execution Blade Art"
   - split: 4
     text: "刽子手杀头之刀法，招式极其简单，胜在干脆利落"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Decapitation Blade Art, the moves are extremely simple, excelling in their direct and decisive nature."
   - split: 7
     text: "刀法1"
     translated: "Blade Art 1"
@@ -8835,7 +8780,7 @@
     translated: "Furious Mastery"
   - split: 4
     text: "长乐帮入门弟子时常与其他帮派中人争抢地盘与档口，此时以怒面示人，可以吓退竞争者"
-    translated: "Entrance disciples of the Changle Gang frequently compete with members from other factions for territory and stalls. At such times, displaying an angry face can intimidate competitors and deter them."
+    translated: "Entrance disciples of the Changle Gang often compete with members from other gangs for territory and stalls. At such times, showing a furious expression can intimidate their competitors."
     flaggedForRetranslation: true
     flaggedMistranslation: "Hour of Zi,子时,"
   - split: 7
@@ -9124,8 +9069,7 @@
     translated: "Smile Hiding Blade Technique"
   - split: 4
     text: "长乐帮众所使力道强横之刀法，招式发力迅猛，大开大合，擅长以攻代守"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Changle Gang's widely used Blade Art employs strong force, with quick and powerful moves that open up large spaces. They excel in using offensive tactics to defend."
   - split: 7
     text: "刀法2;力道1"
     translated: "Blade Technique 2; Strength 1"
@@ -9160,7 +9104,7 @@
     translated: "Living Maitreya Heart Method"
   - split: 4
     text: "长乐帮亲传弟子时常需要接洽官府中人乃至皇亲贵胄，此时以极度欢喜之情相迎，自然事半功倍"
-    translated: "Changle Gang's directly transmitted disciples often need to communicate with officials and even nobles, so greeting them with extreme joy naturally results in half the effort for double the result."
+    translated: "Changle Gang's direct disciples often need to engage with officials and even nobles, so greeting them with extreme joy naturally results in half the effort for double the result."
     flaggedForRetranslation: true
     flaggedMistranslation: "Hour of Zi,子时,"
   - split: 7
@@ -9185,8 +9129,7 @@
     translated: "This step is agile and majestic, flowing naturally with a sense of joy and generosity, truly like a horse galloping through the spring breeze, seeing all the flowers of Chang'an in one day."
   - split: 7
     text: "轻功潜力1;轻功1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential for Qinggong 1; Qinggong 1; Willpower 1"
   - split: 8
     text: "轻功12;意志12;速度0.1"
     translated: "Qinggong 12; willpower 12; speed 0.1"
@@ -9326,8 +9269,7 @@
     translated: "Emotion Management Technique"
   - split: 4
     text: "长乐帮顶级内功，将内息流转蕴含于喜怒哀乐情绪收放间，心随意动，劲由心生，无形无影，伤人于瞬息之间"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Top‑tier Neigong of the Changle Gang, infusing inner qi with emotions of joy, anger, sorrow, and pleasure. With a mere thought, power arises from the heart, intangible and formless, striking enemies in an instant."
   - split: 7
     text: "意志潜力1;内功潜力1;内功2"
     translated: "Will potential 1; neigong potential 1; neigong 2"
@@ -9420,8 +9362,7 @@
     translated: "7 hand; 7 foot"
   - split: 27
     text: "鲜血狂乱-Target-Grid-Happen;血爪狂-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blood Rush‑Target Grid Activated; Blood Claws Rage‑Target Grid Activated"
   - split: 28
     text: "刀"
     translated: "Blade"
@@ -9525,9 +9466,8 @@
     translated: "Law of Backhand Injury"
   - split: 4
     text: "唐门入门心法，专练收发暗器之阴狠内劲"
-    translated: "Tang Clan Entry Heart Method, specifically cultivates stealthy ferocity internal energy to control and discharge throwing weapons."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Hidden Weapon,暗器,"
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "内功1"
     translated: "Neigong 1"
@@ -10321,8 +10261,7 @@
     translated: "Agility 4; Archery 2; Inner Power 0.3"
   - split: 10
     text: "射术55;灵巧50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery 55; Dexterity 50"
   - split: 17
     text: "毒素0.12;不愈0.06"
     translated: "Toxin 0.12; Non‑healing 0.06"
@@ -10378,8 +10317,7 @@
     translated: "Seven‑Star Piercing Bone Needle"
   - split: 4
     text: "一次发出七枚透骨钢钉之手法，可同时攻击七个不同部位，其中暗含星宿阵法之理，唯有聪慧过人者方能完全掌握"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A technique to launch seven piercing steel nails simultaneously can attack seven different areas at once. It contains the principles of the Stellar Constellation Array Formation. Only those exceptionally clever can fully master it."
   - split: 7
     text: "射术潜力2;射术1;智力1"
     translated: "Archery potential 2; archery 1; intelligence 1"
@@ -10535,8 +10473,7 @@
     translated: "Ultimate Technique"
   - split: 3
     text: "推拿法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Massage technique"
   - split: 4
     text: "此按摩手法可疏通经脉，活络气血，也能缓解过度练功后的肌肉酸痛"
     translated: "This massage technique can unblock the meridians and invigorate the lifeforce, also relieving muscle soreness from excessive training."
@@ -10559,8 +10496,7 @@
     translated: "Rain Droplet Finger Technique"
   - split: 4
     text: "绵若无物之指法，其劲道如和风细雨，能缓缓侵入经脉，闭人手臂之穴道"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "While seemingly effortless, their power flows like a gentle breeze and fine rain, slowly permeating the meridians and closing off one's arm acupoints."
   - split: 7
     text: "拳掌1"
     translated: "Fist and palm 1"
@@ -10616,9 +10552,7 @@
     translated: "10's stomach"
   - split: 27
     text: "打击5-Target-Grid-Happen;真气-Target-Grid-Happen"
-    translated: "Attack‑5‑Target‑Grid‑Happen;True‑Qi‑Target‑Grid‑Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "True Qi,真气,"
+    translated: "Strike 5‑Target‑Grid‑Happen; True Qi Target‑Grid‑Happen"
   - split: 28
     text: "拳"
     translated: "Fist"
@@ -10706,8 +10640,7 @@
     translated: "Special Technique 1; Intelligence 1"
   - split: 8
     text: "绝技4;智力4;经脉4;疗伤0.04;康复0.02;药性0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Extraordinary 4; Intelligence 4; Meridians 4; Healing 0.04; Recovery 0.02; Medicine Nature 0.04"
   - split: 10
     text: "绝技10;智力5"
     translated: "Ultimate Skill 10; Intelligence 5"
@@ -10797,8 +10730,7 @@
     translated: "Archery 1; meridians 1"
   - split: 9
     text: "医术0.2;经脉0.1;射术0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Medical skill 0.2; meridian 0.1; archery technique 0.1"
   - split: 10
     text: "射术15;经脉5;医术15"
     translated: "Archery 15; Meridians 5; Medicine 15"
@@ -10844,8 +10776,7 @@
     translated: "Qinggong 2; physical condition 1"
   - split: 8
     text: "轻功4;体质6;经脉6;回血0.005;回体1;药性0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 4; zhiru 6; jingmai 6; huixue 0.005; huiti 1; yaoxing 0.04"
   - split: 10
     text: "轻功25;体质15"
     translated: "Qinggong 25; zhenzhi 15"
@@ -10859,8 +10790,7 @@
     translated: "Golden Hairpin Skin Peeling Technique"
   - split: 4
     text: "用金鎞刮去眼球表面的薄膜，使盲人复明之法。施此术者，眼力手劲均须极巧极稳，稍有差池便会伤人眼球"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Using a golden coin to scrape away the film on the eyeball to restore blindness. One must have exceptional dexterity and steadiness to perform this procedure; any mistake could damage the eye."
   - split: 7
     text: "绝技2;智力1"
     translated: "Ultimate Skill 2; Intelligence 1"
@@ -10977,8 +10907,7 @@
     translated: "Rejuvenation Technique"
   - split: 4
     text: "战国名医扁鹊所留之医书，其中妙药灵方无数，更兼锤炼经脉之神奇法门，可大大增加内息潜能"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Medical texts left by the Warring States physician Bianque contain countless miraculous remedies and elixirs. Moreover, they include extraordinary methods for refining meridians, which can greatly enhance one's inner qi potential."
   - split: 7
     text: "体质潜力1;经脉潜力1;医术潜力1"
     translated: "Physical Potential 1; Meridian Potential 1; Medical Skill Potential 1"
@@ -11211,8 +11140,7 @@
     translated: "Divine Pulse Palm"
   - split: 4
     text: "救治走火入魔者时，需以掌力化去其体内淤积乱行之内息。对敌时，此掌法也可化去其丹田所蕴含之内息，使其虚弱无比"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "When treating a possessed individual, one must use palm force to dissipate the chaotic internal qi accumulated within their body. In combat, this palm technique can also neutralize the internal qi contained in their dantian, leaving them utterly weakened."
   - split: 7
     text: "拳掌潜力2;拳掌1;经脉1"
     translated: "Punch Palm Potential 2; Punch Palm 1; Meridians 1"
@@ -11248,8 +11176,7 @@
     translated: "Ethereal Divine Needle"
   - split: 4
     text: "用于治病救人之极细银针，以独特手法发出，无声无息，无踪无影，可于无形之间伤人要穴，断人经脉"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Used for treating the critically ill and saving lives, these extremely fine silver needles are launched with a unique technique, making no sound and leaving no trace. They can injure vital points and sever meridians without being seen."
   - split: 7
     text: "智力潜力1;经脉潜力1;射术1;智力1"
     translated: "Intellectual Potential 1; Meridian Potential 1; Archery Skill 1; Intelligence 1"
@@ -11301,9 +11228,7 @@
     translated: "Telepathic Touch"
   - split: 4
     text: "药王谷医术最高手法，需将五指功夫练至化境，劲道妙至毫巅，或悬丝诊脉，或摘叶飞花，皆若探囊取物"
-    translated: "The highest level of medical technique in Medicine King Valley requires practicing the five‑finger skill to the realm of transcendance, with forceful movements exquisite to the extreme. Whether it be diagnosing by pulse through a thread, or plucking a leaf and shooting flower petals, all are as easy as fetching an item from one's pocket."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Transcendant,化境,"
+    translated: "The highest techniques in Medicine King Valley require mastering the Five Fingers Technique to reach Transcendence. The power and precision are exquisite, allowing for either pulse diagnosis by thread or leaf, as if taking something from a pocket."
   - split: 7
     text: "拳掌潜力2;智力潜力2;拳掌1"
     translated: "Fist and Palm Potential 2; Mental Potential 2; Fist and Palm 1"
@@ -11634,8 +11559,7 @@
     translated: "Drunk Fist"
   - split: 4
     text: "丐帮高手醉酒后意外使出的独到拳法，拳路似醉非醉，似醒非醒，左倒右支，难以捉摸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "High‑level practitioners of the Beggar Sect accidentally unleashed a unique fist technique after drinking. The movements are half‑drunk, half‑awake, leaning left while supporting right, making them hard to predict."
   - split: 7
     text: "拳掌1;体质1"
     translated: "Fist and Palm 1; Physical Condition 1"
@@ -11647,8 +11571,7 @@
     translated: "Fist and Palm 20; Physique 10"
   - split: 17
     text: "动摇0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Shake 0.06"
   - split: 21
     text: "腹18"
     translated: "18 stomach"
@@ -11683,8 +11606,7 @@
     translated: "Long weapon10; Strength15"
   - split: 17
     text: "迟缓0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Lagging 0.06"
   - split: 21
     text: "头20"
     translated: "Head 20"
@@ -11816,8 +11738,7 @@
     translated: "Fist and palm 35; meridian 15"
   - split: 17
     text: "截脉0.04;腰腹点穴0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sever 0.04; Stab Acupuncture Points in the Waist and Abdomen 0.04"
   - split: 21
     text: "腹18"
     translated: "18 stomach"
@@ -11849,8 +11770,7 @@
     translated: "Strength 2; Punches and Palm Strikes 2; Inner Power 0.2"
   - split: 10
     text: "拳掌30;力道25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fist and palm 30; Strength 25"
   - split: 17
     text: "压制0.04;眩晕0.04;击退1"
     translated: "Suppress 0.04; Daze 0.04; Repel 1"
@@ -11897,8 +11817,7 @@
     translated: "4 hand; 9 heart"
   - split: 27
     text: "莲花转-Target-Grid-Happen;三连打击-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Lotus Rotation ‑ Target Grid ‑ Happen; Triple Strike ‑ Target Grid ‑ Happen"
   - split: 28
     text: "长兵"
     translated: "Long weapon"
@@ -11912,8 +11831,7 @@
     translated: "Staff of Mourning Weeping"
   - split: 4
     text: "从叫花子替人哭丧之动作中演化而出，以棍点地，然后快速出击，棍势诡谲凶猛，更兼使用者狂呼乱嚎，真如丧考妣一般"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Evolved from the jiangjiazi's act of crying for others' funerals, this technique involves striking the ground with a staff, followed by rapid attacks. The strikes are deceptively fierce and ruthless, while the user screams and roars like someone who has lost their mind or a dear family member."
   - split: 7
     text: "长兵1;体质2"
     translated: "Long Weapon 1; Constitution 2"
@@ -12150,8 +12068,9 @@
     translated: "World‑Disturbing Celestial Vigor"
   - split: 4
     text: "至阳至刚之内功心法，其劲力汹涌澎湃，霸道无匹，无法无天，横冲直撞之时甚至会伤及己身，非功力雄厚者难以掌控"
+    translated: "The supreme yang and utmost rigid internal cultivation method generates a surging and overwhelming force. It is tyrannical and unparalleled, with no bounds or laws to restrain it. When unleashed, it can even harm the practitioner themselves. Only those with profound power can control it."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Neigong,内功,Heart Method,心法,"
   - split: 7
     text: "经脉潜力1;内功潜力1;内功2"
     translated: "Meridian Potential 1; Neigong Potential 1; Neigong 2"
@@ -12160,8 +12079,7 @@
     translated: "Health Cap 100; Inner Power Cap 100; Neigong 15; Meridians 15; Repeated Grinding 0.05; Dizziness 0.05; Punch and Palm Power 0.05"
   - split: 10
     text: "内功60;经脉50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong 60; jingmai 50"
 - raw: "414,绝技,4,虎落平阳,虎落平阳，蛟入浅海，乃是作困兽之斗，集中全身力量博最后一击的丐帮绝学，在生死关头能够发挥出超常的威力,,0.9,力道潜力1;绝技潜力1;绝技2,绝技15;力道15;铜皮0.05;壮骨0.05;拳掌威力0.05,,绝技55;力道45,,,,0,3,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -12575,8 +12493,7 @@
     translated: "Four Gate Blade Technique"
   - split: 4
     text: "只有四式的刀法，攻击敌人上下左右四处门户，胜在简单易学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only the Four Styles Blade Art attacks the enemy's four directions‑up, down, left, and right‑and excels in its simplicity and ease of learning."
   - split: 7
     text: "刀法1"
     translated: "Blade Art 1"
@@ -12818,8 +12735,7 @@
     translated: "Neigong 2; zhiru 1"
   - split: 8
     text: "生命上限100;内力上限20;内功6;力道6;意志6;长兵威力0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Maximum Health 100; Maximum Inner Power 20; Neigong 6; Strength 6; Willpower 6; Long Weapons Power 0.08"
   - split: 10
     text: "内功25;体质25"
     translated: "Neigong 25; zhiqi 25"
@@ -12979,8 +12895,7 @@
     translated: "Heaven‑Splitting Blade Technique"
   - split: 4
     text: "举刀砍劈敌人上盘之刀法，招式简单以力量取胜，抵挡不及者难免头颈遭受重创"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Lifting the blade to slash and cleave at the enemy's upper body‑this Blade Art relies on raw power. Those who cannot block in time are doomed to suffer severe injuries to their necks."
   - split: 7
     text: "刀法2;力道1"
     translated: "Blade Technique 2; Strength 1"
@@ -13080,8 +12995,7 @@
     flaggedMistranslation: "Failed"
   - split: 7
     text: "体质潜力1;长兵1;体质1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential in Constitution 1; Long Weapons 1; Constitution 1"
   - split: 9
     text: "体质3;长兵3"
     translated: "3 Physique; 3 Long Weapons"
@@ -13113,7 +13027,7 @@
     translated: "Soldier Spear"
   - split: 4
     text: "相传黄忠斩夏侯渊时所使，居高临下突袭刺击之枪法，其招式勇往无前，以威势取胜，一枪既出足以平定三军"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "The fighting technique that Huang Zhong used to kill Xia Houyuan by launching a sudden attack from a higher position, its moves are bold and straight‑forward, relying on momentum to win. A single spear throw is enough to stabilize the army's situation."
     flaggedForRetranslation: true
     flaggedMistranslation: "Spear Art,枪法,"
   - split: 7
@@ -13240,8 +13154,9 @@
     translated: "Red River Divine Skill"
   - split: 4
     text: "名将所传，隐于诗词之绝技。练成此功者体魄心智均如脱胎换骨、神仙再造一般"
+    translated: "The martial arts skill hidden in poetry and verse, as passed down by great generals. Those who perfect this art see their body and mind transformed, like being reborn as a deity."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Resilience,体魄,"
   - split: 7
     text: "力道潜力1;意志潜力1;体质潜力1"
     translated: "Strength potential 1; Willpower potential 1; Physical potential 1"
@@ -13296,8 +13211,7 @@
     translated: "Silver Lance Washed in Crimson Blood"
   - split: 4
     text: "鲜血铸就，惊鸿绝巘之枪法，三国名将赵子龙凭此出生入死，斩将七十余人未尝一败"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Bloodcrafted, the Spear Technique of Transcendent Peaks, General Zhao Zilong of the Three Kingdoms era relied on this to survive countless battles and slay over seventy enemies without a single defeat."
   - split: 7
     text: "意志潜力2;长兵1;意志1"
     translated: "Potential Willpower 2; Long Weapons 1; Willpower 1"
@@ -13329,8 +13243,7 @@
     translated: "Long weapon"
   - split: 3
     text: "退日戈术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Defend Against Solar Blades"
   - split: 4
     text: "情势危急之时使出，足以力挽狂澜的挥戈之术，传说鲁阳公曾以此法逼退空中烈日"
     translated: "In times of dire peril, wield the technique that can turn the tide, as legend has it that Duke Lu Yang once used this method to force back the midday sun in the sky."
@@ -13342,8 +13255,7 @@
     translated: "Strength 3; Long Weapons 3"
   - split: 10
     text: "长兵55;力道40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon55; Strength40"
   - split: 17
     text: "击退5;破甲0.04"
     translated: "Push Back 5; Penetrate Armor 0.04"
@@ -13424,7 +13336,7 @@
     translated: "Elegant Spear Stroke"
   - split: 4
     text: "飞龙门登峰造极之枪法，其发力时机只在瞬息之间，如惊鸿于水面一点，却是数十年心魂体魄修炼之结晶，即便高手对战也能一招分出胜负"
-    translated: "The pinnacle of the Flying Dragon Gate spear technique reaches its zenith in an instant. Its moment of power lies in that fleeting second, like a startled dove touching the water's surface. Yet, it is the culmination of decades of heart, soul, and body cultivation. Even among skilled combatants, a single move can determine the outcome."
+    translated: "The pinnacle of the Flying Dragon Gate spear technique reaches its peak in that moment of force application, like a startled swallow touching the water. Yet it is the culmination of decades of soul and body cultivation, even between experts, the outcome can be decided by a single move."
     flaggedForRetranslation: true
     flaggedMistranslation: "Resilience,体魄,"
   - split: 7
@@ -13461,9 +13373,7 @@
     translated: "Nurturing Inner Pill Technique"
   - split: 4
     text: "茅山道门以人体为鼎炉，以内息为药材，在体内修炼结丹的内功筑基方式"
-    translated: "The Mount Shenshan Daoist school uses the human body as an alchemical furnace and inner qi as medicinal herbs to practice Foundation Establishment through Core Formation within the body."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    translated: "The Mo Mountain Daoist school uses the human body as an alchemical furnace and inner qi as medicinal ingredients to cultivate core formation through neigong and foundation establishment within the body."
   - split: 7
     text: "内功1"
     translated: "Neigong 1"
@@ -13610,9 +13520,7 @@
     translated: "Qingfeng Sword Technique"
   - split: 4
     text: "清风徐来，水波不兴，此剑法不急不躁，舒缓平稳，旨在锻炼经脉而非逞强伤人"
-    translated: "Gentle breezes arise, water ripples not, this sword technique is neither rushed nor impatient, smooth and steady, aimed at exercising meridians rather than showcasing strength or harming others."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qingfeng,清风,"
+    translated: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
   - split: 7
     text: "经脉1"
     translated: "Meridian 1"
@@ -13624,8 +13532,7 @@
     translated: "Sword Technique 5; Meridian 5"
   - split: 17
     text: "调息0.04;通脉0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Regulate Breathing 0.04; Unblock Meridians 0.04"
   - split: 21
     text: "胸13"
     translated: "13 chest"
@@ -13688,8 +13595,9 @@
     translated: "Long‑Eyed Flying Ears Technique"
   - split: 4
     text: "茅山派集中神智，使耳聪目明之法，被民间讹传为眼睛伸长，耳朵飞出的仙术"
+    translated: "While correcting, they also verified that the meaning, tone, and cultural nuance remained accurate. The names were in Pinyin, with titles such as Master translated to Daoist Master and placed appropriately."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Maoshan Sect,茅山派,"
   - split: 7
     text: "绝技1;智力1"
     translated: "Special Technique 1; Intelligence 1"
@@ -13748,8 +13656,7 @@
     translated: "Odd Doors 1; Willpower 1"
   - split: 9
     text: "意志1;奇门2;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 1; mystic gate 2; inner power 0.2"
   - split: 10
     text: "奇门15;意志10"
     translated: "Trigram 15; Willpower 10"
@@ -13858,9 +13765,7 @@
     translated: "In‑game Essence Cultivation Technique"
   - split: 4
     text: "唐代幻真先生所传，一门将天地元气吞服到自身体内，转化利用以充盈内息的进阶内功心法"
-    translated: "Transmitted by Tang Dynasty's Huanzhen Scholar, a school of neigong that ingests the primordial energy of heaven and earth into one's body, transforming and utilizing it to bolster inner qi."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heart Method,心法,"
+    translated: "Taizhong Huanzhen's Transmission: A Heart Method that ingests and transforms the primordial energy of heaven and earth to nurture one's inner qi, advancing as a Neigong practice."
   - split: 7
     text: "内功2;体质1"
     translated: "Neigong 2; zhiru 1"
@@ -13958,8 +13863,7 @@
     translated: "Trigram 1; Agility 1; Willpower 1"
   - split: 9
     text: "意志3;奇门1;内力0.3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 3; Jiemen 1; Inner Power 0.3"
   - split: 10
     text: "奇门30;意志25"
     translated: "Odd Doors 30; Willpower 25"
@@ -14020,8 +13924,7 @@
     translated: "Sword Art 30; Meridian 20"
   - split: 17
     text: "真伤0.05;破招0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "True damage 0.05; Break move 0.05"
   - split: 21
     text: "胸14;头8"
     translated: "Chest14; head8"
@@ -14082,8 +13985,7 @@
     translated: "Qinggong"
   - split: 3
     text: "瞬息千里"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A fleeting moment spanning a thousand miles"
   - split: 4
     text: "将全身内劲灌注于腿脚，以极快之速度，瞬间闪身跃出数丈距离，可轻松躲避大多攻击"
     translated: "Focus all internal energy in his legs and feet, move at an incredibly fast speed, instantly shifting several meters away to easily dodge most attacks."
@@ -14103,8 +14005,7 @@
     translated: "Ultimate Technique"
   - split: 3
     text: "神女报梦"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Nymph Foretells Dreams"
   - split: 4
     text: "通过神游之法，在睡梦中研习经典，冥想开悟，从而凝练心神，增长智慧的神奇道家法门"
     translated: "Through the technique of divine travel, studying classics and meditating for enlightenment while asleep, thus refining one's spirit and increasing wisdom in a miraculous Daoist method."
@@ -14124,15 +14025,13 @@
     translated: "Qi Men"
   - split: 3
     text: "寒天咒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cold Winter Curse"
   - split: 4
     text: "将寒冷内息注入他人体内之咒术，可令其气血冰凝，经脉淤阻，周身寒气弥散"
     translated: "A spell to infuse one's body with cold inner qi can cause the victim's lifeforce to freeze, block their meridians, and disperse coldness throughout their entire body."
   - split: 7
     text: "意志潜力1;奇门1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential Willpower 1; Orointment 1; Will 1"
   - split: 9
     text: "意志3;奇门3;内力0.3"
     translated: "Will 3; Qi Men 3; Inner Power 0.3"
@@ -14147,8 +14046,7 @@
     translated: "18 stomach"
   - split: 27
     text: "符纸上升-Target-Grid-Happen;冰雾-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Feng paper rises ‑ Target Grid Happens; Ice Fog ‑ Target Grid Happens"
 - raw: "484,奇门,3,地母雷网,茅山秘传引雷之术，将内息所生之雷电引入地下，电击周遭敌人，其威力颇强，消耗也颇大,18,1.2,智力潜力1;奇门1;智力1,,智力4;奇门2;内力0.2,奇门50;智力40,\"0,1,2\",\"7,0,0\",雷电0.1,23,5,0,足16;腹6,足10;腹2,,,skill1_1,,雷球-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 1
@@ -14156,8 +14054,7 @@
     translated: "Qi Men"
   - split: 3
     text: "地母雷网"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Thunder Mother Net"
   - split: 4
     text: "茅山秘传引雷之术，将内息所生之雷电引入地下，电击周遭敌人，其威力颇强，消耗也颇大"
     flaggedForRetranslation: true
@@ -14193,19 +14090,16 @@
     translated: "Fiery Body Refinement Talisman"
   - split: 4
     text: "催动阳刚内力流转全身的咒法，使血脉喷张，肌肉紧绷，遍体坚硬如铁壁铜墙，从而大大增加抗击打能力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A spell to drive the yang inner power throughout the body, causing the blood vessels to dilate, muscles to tighten, and the entire body to become as hard as iron walls and copper fortresses, thus greatly enhancing one's ability to withstand strikes."
   - split: 7
     text: "奇门潜力1;奇门1;体质1"
     translated: "Potential in Formation Techniques 1; Formation Techniques 1; Constitution 1"
   - split: 9
     text: "体质0.2;奇门0.2;内力0.02;医术0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Constitution 0.2; qimen 0.2; inner power 0.02; medicine 0.1"
   - split: 10
     text: "奇门40;体质35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trigrams 40; Constitution 35"
   - split: 17
     text: "霸体0.3"
     translated: "Invincibility 0.3"
@@ -14254,8 +14148,7 @@
     translated: "Neigong"
   - split: 3
     text: "龙虎金丹功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dragon Tiger Golden Pill Skill"
   - split: 4
     text: "将周身内力汇聚丹田反复催动炼化，如龙虎相争，直至阴阳调和水火相济，便是金丹练成之时，功力亦突飞猛进"
     translated: "Gather all inner power throughout the body into the dantian and repeatedly refine it. Like a struggle between dragon and tiger, until yin and yang are balanced and water and fire harmonize‑this is when the Golden Pillar is formed. One's cultivation thus advances dramatically."
@@ -14275,8 +14168,7 @@
     translated: "Neigong"
   - split: 3
     text: "冲虚神功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Empty Dew Divine Skill"
   - split: 4
     text: "天师道隐匿于冲虚真经中的精妙内功法门，遵循天地含精，万物化生等自然之理，可令修习者祛病延年，功力大增"
     translated: "The refined neigong techniques hidden in the 'Oneness and Tranquility True Scripture' of the Taoist Priest School follow the principles of nature, such as containing essence within heaven and earth and transforming all things. They can enable practitioners to rid themselves of illnesses, prolong their lifespan, and significantly enhance their power."
@@ -14288,8 +14180,7 @@
     translated: "Health Cap 90; Inner Power Cap 110; Neigong 10; Meridians 10; Constitution 10; Recovery 0.06; Lightning 0.06; Negative Effect Resistance 0.03"
   - split: 10
     text: "内功60;智力55;经脉45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong 60; intelligence 55; meridians 45"
 - raw: "489,轻功,4,万里神行,茅山独门轻功，需双腿肌肉放松，完全以内劲驱动腿脚。因而不损耗体力，内息越深厚者其奔行速度越快，耐力越久,,1,轻功潜力2;轻功1;意志1,轻功10;智力10;经脉10;速度0.06;蓄力0.06,,轻功60;意志45;智力30,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -14306,8 +14197,7 @@
     translated: "Potential for Qinggong 2; Qinggong 1; Willpower 1"
   - split: 8
     text: "轻功10;智力10;经脉10;速度0.06;蓄力0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 10; Intelligence 10; Meridians 10; Speed 0.06; Charging 0.06"
   - split: 10
     text: "轻功60;意志45;智力30"
     translated: "Qinggong 60; Willpower 45; Intelligence 30"
@@ -14354,8 +14244,7 @@
     translated: "Trigram 55; Intelligence 50"
   - split: 17
     text: "内伤0.06;灼烧0.12"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Internal Injury 0.06; Burn 0.12"
   - split: 21
     text: "胸10;腹10"
     translated: "Chest10; abdomen10"
@@ -14372,8 +14261,7 @@
     translated: "Divine Soldier Heavenly General Curse"
   - split: 4
     text: "至阳至刚之防御咒法，功力催至顶峰时周身金光外泄，好似天兵天将神力加持，寻常兵刃不能伤其分毫"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A defense spell of utmost yang and rigidity, when the power reaches its peak, a golden light emanates from all around. It is as if celestial warriors have granted it divine strength; ordinary weapons cannot even scratch it."
   - split: 7
     text: "体质潜力2;奇门1;体质1"
     translated: "Potential in Constitution 2; Mystic Gateways 1; Constitution 1"
@@ -14397,15 +14285,13 @@
     translated: "Qi Men"
   - split: 3
     text: "斗煞藏魂符"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pain Suppression Soul Sealing Talisman"
   - split: 4
     text: "专以内息攻敌心神的茅山咒术，意志柔弱者一旦中招，或丧魂失魄，或狂舞乱癫，久久不能清醒"
     translated: "Specialized in attacking an opponent's mind and spirit through inner qi, the Maw Mountain curse weakens one's willpower; those who fall victim may lose their wits or go into a frenzied dance, remaining disoriented for a long time."
   - split: 7
     text: "奇门潜力1;意志潜力1;奇门1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential in Mystical Doors 1; Potential in Willpower 1; Mystical Doors 1; Willpower 1"
   - split: 9
     text: "意志2;奇门4;内力0.2"
     flaggedForRetranslation: true
@@ -14415,15 +14301,13 @@
     translated: "Sunatic 60; Willpower 45"
   - split: 17
     text: "混乱0.1;定身0.1;雷电0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Chaos 0.1; stun 0.1; lightning 0.1"
   - split: 21
     text: "头10;心10"
     translated: "Head10; heart10"
   - split: 27
     text: "符纸上升-Target-Grid-Happen;鲜血狂乱-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Target Grid Event: Rising Symbols;Target Grid Event: Chaotic Blood"
 - raw: "494,剑法,4,玄真剑气,茅山道剑最高境界，可化虚为实，化气为剑，在剑锋形成三尺白芒，吹毛立断，削铁如泥，江湖中罕有人敢撄其锋芒,22,1.1,经脉潜力1;剑法2;经脉2,,经脉4;剑法1;内力0.4,剑法45;经脉60,\"4,0,0\",\"4,2,5\",内劲0.12,28,5,0,胸12;头11,胸10;头4,,,skill1_0,,天罚-Target-Grid-Happen;真气喷-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 1
@@ -14441,8 +14325,7 @@
     translated: "Pulse Potential 1; Sword Technique 2; Pulse 2"
   - split: 9
     text: "经脉4;剑法1;内力0.4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Meridian 4; Sword Art 1; Inner Power 0.4"
   - split: 10
     text: "剑法45;经脉60"
     translated: "Sword Technique 45; Meridian 60"
@@ -14503,8 +14386,7 @@
     translated: "Trigram 75; Intelligence 60; Willpower 45"
   - split: 17
     text: "雷电0.08;内劲0.08;动摇0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Thunderstrike 0.08; Inner Strength 0.08; Shake 0.04"
   - split: 21
     text: "头14;胸10;腹6"
     translated: "Head14; chest10; abdomen6"
@@ -14876,8 +14758,7 @@
     translated: "Seeking the Path in Mount Name"
   - split: 4
     text: "铸剑弟子常需遍访名山，寻找可用木材矿藏，此步法轻盈若风，行山路如履平地，可大大加快搜寻效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Apprentice swordsmen often need to visit famous mountains extensively to find suitable wood ore deposits. This stepping method is light as the wind, making mountain paths feel like flat ground, greatly increasing their search efficiency."
   - split: 7
     text: "轻功2;灵巧1"
     translated: "Qinggong 2; Lightness 1"
@@ -14987,8 +14868,7 @@
     translated: "Butterfly Master Slices Ox"
   - split: 4
     text: "对于防御严密之敌，如庖丁解牛般从薄弱处下手，攻击盔甲接缝处和守招死角处的刀招，对手法精准度要求很高"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "For an opponent with tight defenses, strike at the weak points like Lady Ding slicing through an ox, targeting the gaps in armor and the blind spots of their guard. This requires a high degree of precision in technique."
   - split: 7
     text: "刀法2;灵巧1"
     translated: "Blade Technique 2; Agile 1"
@@ -15023,7 +14903,7 @@
     translated: "Flame refinement technique"
   - split: 4
     text: "逐渐加热内息之法，其真气形同炉火，先黑浊，后黄白，再青白，最终化为纯青，乃是功法纯熟，至阳至热之象征"
-    translated: "The method of gradually heating inner qi is akin to the process of a furnace. Initially, it is dark and turbid, then turns yellowish‑white, followed by a bluish‑white hue, and ultimately becomes pure green. This represents the mastery of the cultivation technique, signifying its utmost yang and heat."
+    translated: "Gradually heating the inner qi follows a method similar to stoking a furnace. Initially, it is dark and turbid; then it turns yellowish‑white; next, it becomes cyan‑white; finally, it transforms into pure cyan, which signifies mastery of the technique and its utmost yang and heat."
     flaggedForRetranslation: true
     flaggedMistranslation: "True Qi,真气,"
   - split: 7
@@ -15054,8 +14934,7 @@
     translated: "Qinggong 12; zhiqi 12; huye 5; jianyi 0.05; equipment load 5"
   - split: 10
     text: "轻功45;体质30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 45; physical condition 30"
 - raw: "517,绝技,3,百剑穿心,铸剑山庄秘传绝技，练成后可同时使用三把武器，切换迅捷，上下翻飞，如同百刃出击,,1.1,绝技潜力1;绝技1;灵巧1,剑法12;灵巧12;连击0.1;装备负重3,,绝技35;灵巧25;剑法45,,,,0,6,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -15232,8 +15111,7 @@
     translated: "Sword of Crimson Heaven Slice Snake"
   - split: 4
     text: "传说乃汉高祖刘邦斩白蛇之剑法，势若长虹，锋锐无匹，其剑气化为一道赤练激射而出，可斩尽天下不祥之物"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Legend says this sword technique is akin to Han Gaozu Liu Bang's art of slaying the white snake. With a sweeping force like a long rainbow, it boasts unparalleled sharpness. Its sword energy transforms into a fiery whip that shoots forth, capable of cutting through all evil in the world."
   - split: 7
     text: "剑法潜力2;剑法1;灵巧1"
     translated: "Potential in Sword Art 2; Sword Art 1; Agility 1"
@@ -15581,8 +15459,7 @@
     translated: "Will1;Qi Men2;Toxic Arts2"
   - split: 10
     text: "奇门10;毒术10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Divination 10; Poison Arts 10"
   - split: 17
     text: "虚弱0.1"
     translated: "Weak 0.1"
@@ -15602,9 +15479,7 @@
     translated: "Corpse Decay Technique"
   - split: 4
     text: "为江湖人士所禁忌的功法，需配合腐尸之毒修炼而成，对修炼者的毒功和意志均是一种考验"
-    translated: "A cultivation technique taboo among martial artists, it requires the practice of corpse poisoning to perfect, testing both the cultivator's poisonous skills and willpower."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Jianghu,江湖,"
+    translated: "A cultivation technique taboo among Jianghu practitioners that requires the practice of corruption toxins, testing both a cultivator's toxic skills and willpower."
   - split: 7
     text: "内功1;经脉1"
     translated: "Neigong 1; jingmai 1"
@@ -15641,8 +15516,7 @@
     translated: "Ultimate Technique"
   - split: 3
     text: "炼蛊术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pit Treating Technique"
   - split: 4
     text: "苗疆秘术，取各种毒虫置于一器内，任其自相啖食，待独存一物者谓之为蛊，能幻化变形，为人患祸"
     translated: "Yaojiang Secret Art, place various venomous insects in a vessel and let them feast on each other until only one remains. This single survivor is called a gu, capable of transforming and bringing misfortune to people."
@@ -15665,8 +15539,7 @@
     translated: "Winding Snake Finger Technique"
   - split: 4
     text: "柔弱无骨，顺势攀附之奇特手法，可沿敌人手臂缠绕而上，攻其心腹要害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Soft and boneless, this unique method of clinging can wind around an enemy's arm to strike at their vital point‑the heart and belly."
   - split: 7
     text: "拳掌1;意志1"
     translated: "Fist and Palm 1; Will and Determination 1"
@@ -15745,8 +15618,7 @@
     translated: "Intelligence 1; Archery 1; Toxic Arts 3"
   - split: 10
     text: "射术10;毒术15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery 10; Poisoning 15"
   - split: 17
     text: "毒素0.06;不愈0.04"
     translated: "Toxin 0.06; incurable 0.04"
@@ -15801,8 +15673,7 @@
     translated: "Yin Snake Pesticide"
   - split: 4
     text: "此蛊虫状如小蛇，阴寒至极，能够钻入目标体内顺血脉而行，阻塞内息，啮咬内脏"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This insect‑glyph resembles a small snake, extremely yin and cold, capable of penetrating the target's body to travel along the meridians, blocking inner qi and biting internal organs."
   - split: 7
     text: "奇门1;意志1"
     translated: "Odd Doors 1; Willpower 1"
@@ -15820,8 +15691,7 @@
     translated: "Head 8"
   - split: 27
     text: "蛇头-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Head Snake‑Target Grid Activation"
 - raw: "543,内功,2,五仙真灵诀,将毒素融入体内真气的五仙秘术，运功后内息带有些许毒性，与五仙教毒功结合使用可谓事半功倍,,1,内功2;经脉1,生命上限30;内力上限60;内功8;经脉8;毒术8;毒素0.08;负面加成0.02,,内功25;经脉20;毒术30,,,,0,7,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -15841,9 +15711,7 @@
     translated: "Health Cap 30; Inner Power Cap 60; Neigong 8; Meridians 8; Venom Technique 8; Poison 0.08; Negative Buffs 0.02"
   - split: 10
     text: "内功25;经脉20;毒术30"
-    translated: "Internal power 25; meridians 20; poison techniques 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    translated: "Neigong 25; jingmai 20; dushu 30"
 - raw: "544,轻功,2,蛤蟆纵跳,身形蹲伏如蛤蟆，随后发力弹跳之法，虽不甚雅观，但可一跃而出数丈距离，苗疆人士多有使用,,0.8,轻功2;灵巧1,轻功8;灵巧8;急速0.06;闪避0.04,,轻功25;灵巧25,,,,0,7,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -15900,8 +15768,7 @@
     translated: "Fist and Palm 2; Will and Determination 1"
   - split: 9
     text: "意志2;拳掌2;毒术2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower 2; Punch and Palm 2; Toxin Techniques 2"
   - split: 10
     text: "拳掌30;意志20;毒术20"
     translated: "Fist and Palm 30; Willpower 20; Toxic Arts 20"
@@ -15930,8 +15797,7 @@
     translated: "Bone‑Dispelling Soft Palm Technique"
   - split: 4
     text: "专攻筋骨关节处的掌法，中掌者初觉无甚大碍，待出手时才发觉自身筋骨已断裂受损，可见其内劲之阴柔歹毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Focusing on the palms for attacking muscles and bones, the target may initially feel no severe harm. However, upon receiving the strike, they will realize their own muscle and bone have been fractured and damaged, showing the inner force's Yin flexibility and maliciousness."
   - split: 7
     text: "毒术2;经脉1"
     translated: "Poison Techniques 2; Meridians 1"
@@ -15969,8 +15835,7 @@
     translated: "Fine toxic iron sand with a shorter range but wider area of effect. A casual wave can form a black smoke cloud, causing unbearable itching or pain for those who come into contact with it or inhale it."
   - split: 7
     text: "毒术2;智力1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison Technique 2; Intelligence 1"
   - split: 9
     text: "智力1;射术1;毒术4"
     translated: "Intelligence 1; Archery 1; Toxin Techniques 4"
@@ -16037,8 +15902,7 @@
     translated: "Trigram 2; Willpower 1"
   - split: 9
     text: "意志2;奇门1;毒术3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will2;Illuminated Tactics1;Toxic Arts3"
   - split: 10
     text: "奇门25;意志20;毒术25"
     translated: "Trigram 25; Willpower 20; Toxin Arts 25"
@@ -16070,9 +15934,7 @@
     translated: "Health Cap 20; Inner Power Cap 100; Neigong 12; Meridians 12; Poison Technique 4; Poison 0.04; Paralysis 0.04; Negative Buffs 0.04"
   - split: 10
     text: "内功40;经脉25;毒术40"
-    translated: "Internal power 40; meridians 25; poison arts 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    translated: "Neigong 40; jingmai 25; doshu 40"
 - raw: "552,轻功,3,蜈蚣遁地术,双腿摆动迅捷，更兼指掌攀援的奇特轻功，登山越险，见缝插针，上树游墙，如履平地,,0.9,轻功潜力1;轻功1;意志1,轻功12;意志12;闪避0.05;乱神0.05,,轻功45;意志25,,,,0,7,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -16193,9 +16055,7 @@
     translated: "Meng Po Powder"
   - split: 4
     text: "可迅速麻痹心脉大脑之五毒教特制迷药，中者如饮孟婆汤般，迷离惝恍，神情恍惚，乃至当场昏迷不醒，丧失记忆"
-    translated: "A quick‑acting Five Poison Sect special drug that numbs the heart, pulse, and brain; those affected lose consciousness as if drinking from Lady Meng's broth, falling into a daze and losing their memory."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Five Poisons Sect,五毒教,"
+    translated: "A quick‑acting Five Poisons Sect specially formulated knockout drug that affects the heart, pulse, and brain. Those who ingest it fall into a state akin to drinking the River Lethe, becoming dazed and disoriented until they lose consciousness entirely and forget everything."
   - split: 7
     text: "毒术潜力1;毒术1;智力1"
     translated: "Poison Skill Potential 1; Poison Skill 1; Intelligence 1"
@@ -16364,8 +16224,7 @@
     translated: "Poison Palm Technique"
   - split: 4
     text: "五毒教至高掌法，需采五毒反复淬炼双掌，中掌者体内五毒流窜，相互攻伐，周身肌肤因而呈现赤黄青紫黑五种颜色，足见其毒性诡谲狂乱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The supreme palm technique of the Five Poisons Sect requires absorbing the five poisons and repeatedly refining one's palms. Those struck by this technique will have their bodies invaded by the five toxins, which attack each other, causing their skin to turn red, yellow, green, blue, and black‑demonstrating the complexity and chaos of its toxicity."
   - split: 7
     text: "意志潜力2;拳掌1;智力1"
     translated: "Potential willpower 2; fist and palm techniques 1; intelligence 1"
@@ -16400,8 +16259,7 @@
     translated: "Red venom dripped into their throat"
   - split: 4
     text: "以红矾炼制而成的剧毒红色粉末，中毒者上吐下泻，随后很快肌肉麻痹，全身痉挛，若不及时救治，少顷便会窒息而亡"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Processed with potassium dichromate to create a highly toxic red powder. Victims will experience severe vomiting and diarrhea, followed by rapid muscle paralysis and whole‑body convulsions. Without timely treatment, they will suffocate and die soon thereafter."
   - split: 7
     text: "毒术潜力1;智力潜力1;射术2"
     translated: "Poison Potential 1; Intelligence Potential 1; Archery 2"
@@ -16468,8 +16326,7 @@
     translated: "The larvae of this curse feed on the host's flesh and constantly hatch and multiply within them, to some extent influencing and controlling the host's mind and behavior."
   - split: 7
     text: "奇门潜力2;奇门1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential 2; Mysticism 1; Willpower 1"
   - split: 9
     text: "意志2;奇门2;毒术4"
     translated: "Willpower2;I Ching2;Toxic Arts4"
@@ -16495,8 +16352,7 @@
     translated: "Chiyou Ghost Descent"
   - split: 4
     text: "以苗家请神之法使先祖蚩尤降神附体，所过之处皆黑雾缭绕，功力稍浅者甫一接触，或疯癫乱舞，或丧神失魄，如见蚩尤真身"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Invoke the Miao spirit‑invoking method to summon the ancestor Chi You, causing black mist to surround the area. Those with lesser spiritual power who come into contact will either go mad and dance wildly or become demented and soulless, as if seeing Chi You's true form."
   - split: 7
     text: "轻功潜力1;意志潜力2;轻功1;意志1"
     translated: "Potential in Qinggong 1; Potential in Willpower 2; Qinggong 1; Willpower 1"
@@ -16516,12 +16372,10 @@
     translated: "Book of Poisonous Diseases"
   - split: 4
     text: "五毒教自先祖以来不断搜集而成，记载了无数虫蛇花草之毒理毒性及相生相克关系，故习此宝典，可知天下毒矣"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Five Poisons Sect has continuously collected knowledge passed down from ancestors, detailing the toxins and interactions of countless insects, snakes, plants, and flowers. Thus, studying this treasured text allows one to know all the poisons in the world."
   - split: 7
     text: "毒术潜力1;智力潜力1;绝技潜力1;智力2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison Skill Potential 1; Intelligence Potential 1; Special Technique Potential 1; Intelligence 2"
   - split: 8
     text: "绝技14;智力14;毒术12;毒素0.12;负面加成0.12"
     translated: "Special Skill 14; Intelligence 14; Poison Technique 12; Poison 0.12; Negative Buff 0.12"
@@ -16538,8 +16392,7 @@
     translated: "Golden Silkworm King Infestation"
   - split: 4
     text: "五毒教秘宝，其状若蚕虫，肤质金黄，毒性猛烈无比，顷刻间便能令中毒者五脏溃烂，七窍流血而亡"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Five Poisons Sect Treasures, shaped like silkworms, have a golden exoskeleton. Their toxicity is fierce and merciless; victims can suffer organ failure and bleed from their orifices within moments."
   - split: 7
     text: "毒术潜力1;智力潜力1;射术潜力1;射术2"
     translated: "Poison Skill Potential 1; Intelligence Potential 1; Archery Potential 1; Archery 2"
@@ -16557,8 +16410,7 @@
     translated: "Head12; stomach12"
   - split: 27
     text: "蛛网-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Web‑Target‑Grid‑Happen"
 - raw: "569,内功,0,黑尸诀,阎罗殿入门之邪功，修习者身形僵直，皮肤隐隐发黑，如死尸一般,,1,内功1,生命上限30;内力上限10;内功3;体质3;经脉3;回血0.003,,内功10,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -16933,8 +16785,7 @@
     translated: "Fists and palms"
   - split: 3
     text: "血手印"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Bloodstain"
   - split: 4
     text: "专攻敌人胸腹部位，以凶狠内劲阻截其血脉流通的掌法，因会在命中处留下手印形状的鲜红淤血而闻名"
     translated: "A palm technique that specializes in striking the enemy's chest and abdomen to obstruct their blood circulation with fierce internal energy. Known for leaving distinctive hand‑shaped crimson bruises at the point of impact."
@@ -17305,8 +17156,7 @@
     translated: "Eighteen Black Dragon Techniques"
   - split: 4
     text: "下手毒辣，时刻以性命相搏的掌法，出手时劲力凝聚于掌心，使手掌乌黑发紫，形容恐怖，因而得名"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fingers strike with vicious force, a palm technique fought with one's life. When deployed, the power condenses at the center of the palm, turning it dark purple and terrifying to behold‑hence its name."
   - split: 7
     text: "体质潜力1;拳掌1;力道1"
     translated: "Physical Potential 1; Punching and Palm Techniques 1; Strength 1"
@@ -17385,8 +17235,7 @@
     translated: "Health Upper Limit 120; Inner Power Upper Limit 80; Neigong 15; Meridians 15; Internal Injury 0.06; Mad Passion 0.06; Drain Inner Power 0.32; Negative Resistance ‑0.02"
   - split: 10
     text: "内功65;经脉50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong 65; jingmai 50"
 - raw: "598,轻功,4,无法无天步,横冲直撞，一往无前之步法，其声威地动山摇，其去势所向披靡，试图阻挡之人轻则歪倒撞飞，重则伤筋断骨,,0.9,轻功潜力2;轻功1;体质1,轻功6;力道12;体质12;重碾0.06;杀机0.06,,轻功55;体质40,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -17407,8 +17256,7 @@
     flaggedMistranslation: "Failed"
   - split: 10
     text: "轻功55;体质40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 55; physical condition 40"
 - raw: "599,绝技,4,炼狱破天劲,以炼狱般炎热内息充盈四肢，使周身力道暴增之绝技，功力不足者若强行催动，则有血脉爆裂之危险,,1,绝技潜力2;绝技1;力道1,绝技15;力道15;吸血0.05;壮骨0.05;动摇0.05,,绝技60;力道45,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -17439,8 +17287,7 @@
     translated: "Bloodsucking Blade"
   - split: 4
     text: "专攻血脉要害之凶邪刀法，在伤敌之时可吸取气血充盈自身，而使用者也常因异种气血难以消化而陷入癫狂"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "While focusing on malevolent blade techniques that target vital points, these moves can absorb their opponent's lifeforce during combat to strengthen the user. However, the exotic nature of the absorbed blood and qi often drives users mad due to their inability to process it."
   - split: 7
     text: "刀法潜力2;刀法1;力道1"
     translated: "Blade Technique Potential 2; Blade Technique 1; Strength 1"
@@ -17567,8 +17414,7 @@
     translated: "8 hand; 4 chest"
   - split: 27
     text: "蓝火爆发-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blue Flame Burst ‑ Target Grid Activated"
   - split: 28
     text: "拳"
     translated: "Fist"
@@ -17582,9 +17428,8 @@
     translated: "Ten Thousand Devils Technique"
   - split: 4
     text: "习武者最珍视苦修而来的内功功力，而此法却专攻任督二脉，损伤主脉消减功力，治疗不及便有伤残之虞，江湖中人不仅恨之入骨，更是畏之如虎"
-    translated: "Fighters hold inner cultivation through arduous practice most dear, yet this method targets only the Ren and Du meridians. Damaging the main channels reduces power; without timely treatment, one risks permanent injury. Even in the Jianghu, not only do people loathe it to the core, but they fear it as if it were a tiger."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "力道潜力2;内功潜力1;内功1;力道1"
     translated: "Strength potential 2; neigong potential 1; neigong 1; strength 1"
@@ -17720,8 +17565,7 @@
     translated: "Eighteen Songs of the Frontier Flute"
   - split: 4
     text: "假托蔡文姬之名所作琴曲，其音调如怨如慕，如泣如诉，闻者无不落泪伤心，难以自持"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A qin piece pretentiously attributed to Cai Wenji, its melody is filled with sorrow and longing, evoking tears and heartache in all who hear it, making them unable to control themselves."
   - split: 7
     text: "射术1"
     translated: "Archery 1"
@@ -17803,8 +17647,7 @@
     translated: "Special Technique 1; Intelligence 1"
   - split: 8
     text: "绝技6;智力6;弱点0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Special Skill 6; Intelligence 6; Weakness 0.06"
   - split: 10
     text: "绝技15;智力20"
     translated: "Ultimate Skill 15; Intelligence 20"
@@ -17997,8 +17840,7 @@
     translated: "Neigong 2; willpower 1"
   - split: 8
     text: "生命上限30;内力上限90;内功9;意志9;醒脑0.03;无敌0.03;负面抗性0.03"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Health Cap 30; Inner Power Cap 90; Neigong 9; Willpower 9; Refresh Mind 0.03; Invincibility 0.03; Negative Effect Resistance 0.03"
   - split: 10
     text: "内功35;意志25"
     translated: "Neigong 35; willpower 25"
@@ -18161,8 +18003,7 @@
     translated: "Trigram 1; Willpower 2"
   - split: 9
     text: "意志1;奇门4;内力0.3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower1;Qimen4;Inner Power0.3"
   - split: 10
     text: "奇门30;意志25"
     translated: "Odd Doors 30; Willpower 25"
@@ -18203,8 +18044,7 @@
     translated: "Sword Art 35; Agility 25"
   - split: 17
     text: "震脑0.04;头颈点穴0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Brain‑striking 0.04; Neck Acupressure Point Strike 0.04"
   - split: 21
     text: "头19"
     translated: "Head 19"
@@ -18393,8 +18233,7 @@
     translated: "Elegant and intricate calligraphy strokes, the pen tips dance swiftly in the air. Slow yet graceful movements create a myriad of vivid flowers in their fleeting shadows, truly a breathtaking display."
   - split: 7
     text: "意志潜力1;奇门1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential willpower 1; mystic gates 1; will 1"
   - split: 9
     text: "意志4;奇门3;内力0.1"
     translated: "Willpower4;Qimen3;Inner Power0.1"
@@ -18461,8 +18300,9 @@
     translated: "Great Yang Mystic Skill"
   - split: 4
     text: "融汇儒道易三家之神妙经典：太玄经上卷，需于正午时分汲取皓日之精华，日积月累方能修得此至阳至刚之磅礴内息"
+    translated: "Fusing the divine and mysterious classics of Confucianism, Taoism, and I Ching: The Great Mystery Scripture, Volume One requires extracting the essence of noonday sunlight at midday. Only through prolonged accumulation can one attain this utmost yang and resilient inner qi."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Hour of Wu,午时,"
   - split: 7
     text: "内功潜力2;内功1;意志1"
     translated: "Potential in Neigong 2; Neigong 1; Willpower 1"
@@ -18502,7 +18342,7 @@
     translated: "Nine‑Division Spiral Shadow"
   - split: 4
     text: "身形拔地而起，扶摇直上可至数丈之高的超绝轻功，功力深厚者更能以真气幻化九道身影，同进同退，见者无不惊异莫名"
-    translated: "His figure leaped from the ground, rising in a spiral to heights of several zhang. Those with profound cultivation could even manipulate True Qi to create nine illusions, moving in unison as one; all who witnessed this were left marveling in wonder."
+    translated: "Form leaped from the ground, soaring upwards like a feather caught in a whirlwind, reaching heights of several dozen feet. Those with profound power could even transform True Qi into nine illusions, moving in unison, leaving all who witnessed it utterly astonished."
     flaggedForRetranslation: true
     flaggedMistranslation: "Qinggong,轻功,"
   - split: 7
@@ -18777,7 +18617,7 @@
     translated: "Calm Zen Technique"
   - split: 4
     text: "以禅入静，静中修禅，乃少林一切佛法以及内功修行之基础"
-    translated: "Cultivate through meditation, and meditate while in a state of tranquility‑this is the foundation for all Buddhist practices and inner strength cultivation in Shaolin."
+    translated: "Cultivate through meditation, and in stillness refine meditation‑this is the foundation of all Buddhist practices and inner cultivation in Shaolin."
     flaggedForRetranslation: true
     flaggedMistranslation: "Neigong,内功,"
   - split: 7
@@ -19021,8 +18861,7 @@
     translated: "Body of Bronze"
   - split: 4
     text: "以黄铜浇铸成铜人，用手足胸背各部位拍打撞击，苦练而成的少林硬功，功成后周身刚硬，寻常拳脚触之立折"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cast in brass as a copper figure and trained by striking various parts of the body with hands, feet, chest, and back, this Shaolin hard skill is grueling to master. Upon completion, the practitioner's entire body becomes stiff and tough, breaking ordinary strikes upon contact."
   - split: 7
     text: "绝技1;体质1"
     translated: "Master Skill 1; Constitution 1"
@@ -19190,8 +19029,7 @@
     translated: "Long Weapon1; Willpower1"
   - split: 9
     text: "意志2;长兵2;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower2;Long‑bladed Weapons2;Inner Power0.1"
   - split: 10
     text: "长兵15;意志10"
     translated: "Long Weapon15; Willpower10"
@@ -19296,8 +19134,7 @@
     translated: "Ultimate Technique"
   - split: 3
     text: "一指禅"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "One‑Finger Zen"
   - split: 4
     text: "少林传统倒立功夫，初时以十指撑地，逐步递减，直至能以一指维持不倒即为功成，此后自是筋骨勇壮，力道惊人"
     translated: "Shaolin traditional handstand martial arts involve starting with ten fingers on the ground and gradually reducing until one can maintain balance with just one finger. Only then is the technique considered mastered. At this point, one's muscle and bone are surely strong, and their strength astonishing."
@@ -19355,9 +19192,7 @@
     translated: "Go Free from Worries"
   - split: 4
     text: "招式精妙，专攻头颈部位的少林指法，若不施加内劲可指点他人使其醒悟，若施加内劲则能令其昏厥当场"
-    translated: "Movements are exquisite, specializing in strikes to the head and neck area. Without applying internal force, these techniques can awaken others by striking them. With internal force, they can render someone unconscious on the spot."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Shaolin,少林,"
+    translated: "The techniques are exquisite, focusing on strikes to the head and neck areas characteristic of Shaolin. Applied without internal force, they can enlighten others, causing them to awaken; when internal force is used, they can render someone unconscious on the spot."
   - split: 7
     text: "拳掌2;经脉1"
     translated: "Fist and Palm 2; Meridians 1"
@@ -19440,8 +19275,7 @@
     translated: "Long Weapons25; Willpower15"
   - split: 17
     text: "急速0.04;阻滞0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Swift 0.04; sluggish 0.04"
   - split: 21
     text: "头6;足7;手7"
     translated: "Head6;foot7;hand7"
@@ -19527,8 +19361,7 @@
     translated: "Strength potential 1; Constitution potential 1"
   - split: 8
     text: "生命上限90;内力上限70;体质12;力道12;回血0.005;康复0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Life limit 90; Inner power limit 70; Constitution 12; Strength 12; Health regeneration 0.005; Recovery 0.05"
   - split: 10
     text: "内功40;体质30;力道20"
     translated: "Neigong 40; qi constitution 30; strength 20"
@@ -19657,8 +19490,7 @@
     flaggedMistranslation: "Failed"
   - split: 7
     text: "体质潜力1;长兵1;体质1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential in Constitution 1; Long Weapons 1; Constitution 1"
   - split: 9
     text: "体质4;长兵2;内力0.1"
     translated: "Physique 4; Long Weapons 2; Inner Power 0.1"
@@ -19737,8 +19569,7 @@
     translated: "Qimen 45; Intelligence 30"
   - split: 17
     text: "眩晕0.06;坚毅0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dizziness 0.06; resilience 0.06"
   - split: 21
     text: "头16;心6"
     translated: "Head16; heart6"
@@ -19761,9 +19592,7 @@
     translated: "Arhat Divine Technique"
   - split: 4
     text: "颇为艰深的罗汉堂秘传内功，其内劲浑厚，吐息澎湃，真气游走全身，以精炼体魄兼得硬功修习之效，可谓一举两得之奇功"
-    translated: "The highly advanced Zen Monastery secret neigong is profound and robust. Its internal energy surges powerfully, circulating throughout the body while refining resilience and hardening one's physique simultaneously‑a truly remarkable skill that achieves two goals at once."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "True Qi,真气,"
+    translated: "Quite profound, the secret Neigong of the Arhat Hall, its internal strength is thick and surging, True Qi circulates throughout the body, refining Resilience while also practicing hard skills, truly a skill that achieves two benefits at once."
   - split: 7
     text: "内功潜力2;内功1;体质1"
     translated: "Potential in Neigong 2; Neigong 1; Constitution 1"
@@ -19917,8 +19746,7 @@
     translated: "Head7; heart7"
   - split: 27
     text: "佛散-Target-Grid-Start;残影-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Phaethon‑Target‑Grid‑Activate;Faint Target‑Grid‑Trigger"
   - split: 28
     text: "拳"
     translated: "Fist"
@@ -19942,8 +19770,7 @@
     translated: "Intelligence 3; Long Weapons 4; Inner Power 0.1"
   - split: 10
     text: "长兵60;智力55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long Weapon60; Intelligence55"
   - split: 17
     text: "震脑0.06;慧眼0.06"
     translated: "Shock Brain0.06; Wise Eye0.06"
@@ -19978,8 +19805,7 @@
     translated: "Physique 4; Long Weapons 2; Inner Power 0.2"
   - split: 10
     text: "长兵60;体质45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long Weapons 60; Stamina 45"
   - split: 17
     text: "死战0.12;活血0.06"
     translated: "Fight to the death 0.12; invigorate blood 0.06"
@@ -20008,8 +19834,7 @@
     translated: "Two iron rings of adamantine swung and chopped, spinning wildly. They could also bind foes with ropes to bring them back to the temple for Buddhist enlightenment. Thus, evil spirits and heretics would be in utter dread at the mere mention of this power."
   - split: 7
     text: "奇门潜力2;奇门1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential Divination 2; Mystical Hexagram 1; Willpower 1"
   - split: 9
     text: "体质4;奇门3;内力0.1"
     translated: "Physique 4; Qimen 3; Inner Power 0.1"
@@ -20114,8 +19939,7 @@
     translated: "Long weapon 75; Constitution 60; Strength 45"
   - split: 17
     text: "断骨0.06;凝血0.06;眩晕0.06;击退1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breakbone 0.06; coagulate blood 0.06; dizziness 0.06; knock back 1"
   - split: 21
     text: "头9;手9;足9"
     translated: "Head9;hand9;foot9"
@@ -20138,8 +19962,7 @@
     translated: "Wudang Taihe Gong"
   - split: 4
     text: "武当入门内功，通过呼吸吐纳取天地精气，排体内浊气，求阴阳调和之法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wudang Neigong for Beginners involves taking in the essence of heaven and earth through breathing exercises, expelling internal stale air, and seeking methods to achieve harmony between yin and yang."
   - split: 7
     text: "内功1"
     translated: "Neigong 1"
@@ -20200,7 +20023,7 @@
     translated: "Wudang Changquan"
   - split: 4
     text: "武当入门拳法，舒缓灵巧，开合缜密，有培本筑基之功效，不可轻视"
-    translated: "Basic Wudang Fist Technique, gentle yet nimble, opening and closing with meticulous detail, possessing the efficacy of nurturing fundamentals and laying foundations‑do not undervalue it."
+    translated: "Basic Wudang Fist Technique, gentle yet agile, opening and closing with meticulous precision, it has the effect of nurturing the fundamentals and establishing a solid foundation‑do not underestimate it."
     flaggedForRetranslation: true
     flaggedMistranslation: "Foundation Establishment,筑基,"
   - split: 7
@@ -20237,8 +20060,7 @@
     translated: "Wudang Mian Palm"
   - split: 4
     text: "体现武当以柔克刚思维的入门掌法，掌力绵长圆转且蕴含内劲，看似柔弱无骨，实为绵里藏针"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Demonstrate Wudang's principle of yielding to hardness with gentle force. The palm technique is long, circular, and infused with internal power. At first glance, it appears soft and weak, but in reality, it hides sharpness within its gentleness."
   - split: 7
     text: "拳掌1"
     translated: "Fist and palm 1"
@@ -20453,8 +20275,7 @@
     translated: "Fist and Palm 10; Meridians 15"
   - split: 17
     text: "心胸点穴0.06;疗伤0.04;内伤0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stomach Point Acupressure 0.06; Wound Treatment 0.04; Internal Injury 0.04"
   - split: 21
     text: "腹14"
     translated: "14 abdomen"
@@ -20578,8 +20399,9 @@
     translated: "Health Cap 50; Inner Power Cap 70; Intelligence 9; Meridians 9; Indomitable 0.04; Unblocked Meridians 0.04"
   - split: 10
     text: "内功25;智力25;经脉15"
+    translated: "Internal_power 25; intelligence 25; spirit_veins 15"
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Neigong,内功,"
 - raw: "709,轻功,2,四象疑步,以四象代表四个方位移动之法，其中循环变化纷繁往复，每一步皆顺应卦象，不通易经之人难免疑惑万分,,1.1,轻功2;智力1,轻功8;灵巧8;疲劳0.04;反击0.06,,轻功25;智力30,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -20665,8 +20487,7 @@
     translated: "Infinite Mystic Skill Fist"
   - split: 4
     text: "玄门正宗以气御劲的上乘拳术，出招时将全身内力灌注双臂上击出，以雄厚内劲伤敌于无形之间"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The upper‑crust Taoist sect wields supreme fist techniques that channel one's entire inner power into the arms for a powerful strike, inflicting damage with unseen might."
   - split: 7
     text: "拳掌1;经脉2"
     translated: "Fist and Palm 1; Meridians 2"
@@ -20713,8 +20534,7 @@
     translated: "Sword Technique 30; Dexterity 20"
   - split: 17
     text: "阻滞0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Obstructed 0.08"
   - split: 21
     text: "手14;心6"
     translated: "14 hand; 6 heart"
@@ -20723,8 +20543,7 @@
     translated: "9 hand; 3 heart"
   - split: 27
     text: "风轮-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Windwheel‑Target Grid‑Accurately Hit"
   - split: 28
     text: "剑"
     translated: "Sword"
@@ -20842,8 +20661,7 @@
     translated: "Meridians 3; Punches and Palms 3; Inner Power 0.1"
   - split: 10
     text: "拳掌40;经脉35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fist and palm 40; meridian 35"
   - split: 17
     text: "内伤0.06;阻滞0.06"
     translated: "Internal Injury 0.06; Obstruction 0.06"
@@ -20974,8 +20792,7 @@
     translated: "Inborn supreme mystic energy"
   - split: 4
     text: "能生成若有似无罡气之玄妙心法，调息时至阴至柔，对敌时至阳至刚，大成后周身三寸范围如有无形障壁，常人不能近之"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Can generate a subtle and mysterious Heart Method to cultivate ethereal qi. When regulating the breath, it reaches the utmost Yin and softness; in battle, it becomes the utmost Yang and hardness. Upon mastery, there will be an invisible barrier within a three‑inch radius around the body, preventing ordinary people from approaching."
   - split: 7
     text: "内功潜力2;内功1;经脉1"
     translated: "Potential in Neigong 2; Neigong 1; Meridians 1"
@@ -21182,8 +20999,7 @@
     translated: "Neigong potential 2; intelligence potential 1; neigong 1; intelligence 1"
   - split: 8
     text: "生命上限60;内力上限180;内功12;经脉12;智力12;内伤0.04;连绵0.04;反弹0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Health Maximum 60; Inner Power Maximum 180; Neigong 12; Meridians 12; Intelligence 12; Internal Injury 0.04; Continuous Damage 0.04; Rebound 0.04"
   - split: 10
     text: "内功75;智力60;经脉50"
     translated: "Neigong 75; intelligence 60; meridians 50"
@@ -21238,8 +21054,7 @@
     translated: "Hands6; Feet6; Heart6"
   - split: 27
     text: "墨圆斩-Target-Grid-Start;太极爆-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Murian Slash ‑ Target‑Grid‑Start; Supreme Ultimate Explosion ‑ Target‑Grid‑Happen"
   - split: 28
     text: "剑"
     translated: "Sword"
@@ -21438,9 +21253,7 @@
     translated: "Yellow Sand Falling Geese"
   - split: 4
     text: "西北刀客所用，在沙地上如落雁般滑行飞跃的轻功法门"
-    translated: "The Blade Master's technique in the northwest, allowing them to glide and leap across the sand like a falling goose."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qinggong,轻功,"
+    translated: "The Blade Master's Qinggong technique allows them to glide and leap across the sand like a falling goose."
   - split: 7
     text: "轻功1;意志1"
     translated: "Qinggong 1; willpower 1"
@@ -21480,8 +21293,7 @@
     translated: "Earth‑Shaking Blade Technique"
   - split: 4
     text: "以蛮力取胜，速度较为缓慢的刀法，劈空砍地时能感到地面微微震颤，足见其势大力沉"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Using brute force, this blade technique is relatively slow. When chopping through the air and striking the ground, one can feel the earth tremble slightly, demonstrating its powerful impact."
   - split: 7
     text: "刀法1;力道1"
     translated: "Blade Technique 1; Strength 1"
@@ -21703,8 +21515,7 @@
     translated: "Head3; chest9"
   - split: 27
     text: "喷泉-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fountain‑Target‑Grid‑Happen"
   - split: 28
     text: "刀"
     translated: "Blade"
@@ -21718,8 +21529,7 @@
     translated: "Seven Probes Dragon Coil Spear"
   - split: 4
     text: "以虚招为主的七式枪法，每一枪皆是试探之招，如神龙探首，而身形则隐藏在云雾之中蓄势待发"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A seven‑posture spear technique primarily based on feinting attacks. Each strike is a probing maneuver like a divine dragon peeking its head out, while the body remains hidden in mist, biding its time."
   - split: 7
     text: "长兵2;意志1"
     translated: "Long Weapon2; Willpower1"
@@ -21777,8 +21587,7 @@
     translated: "Through constant collisions with trees or brick walls, this bold and domineering fighting step is cultivated. Holding a blade, charge into battle, slashing through enemy troops as if no one were there."
   - split: 7
     text: "轻功潜力1;轻功1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential for Qinggong 1; Lightness 1; Willpower 1"
   - split: 8
     text: "轻功4;意志10;断骨0.08;重碾0.08;减伤4"
     flaggedForRetranslation: true
@@ -21892,8 +21701,7 @@
     translated: "Long Spear Potential 1; Long Spear 1; Willpower 1"
   - split: 9
     text: "意志3;长兵3;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 3; Long Weapon 3; Inner Power 0.1"
   - split: 10
     text: "长兵40;意志40"
     translated: "Long Weapon40; Willpower40"
@@ -21942,7 +21750,7 @@
     translated: "Heavenly Mandate Blade Technique"
   - split: 4
     text: "\"上应天命"
-    translated: "\"Up to the Will of Heaven\""
+    translated: "\"Up to the Heavenly Mandate\""
     flaggedForRetranslation: true
     flaggedMistranslation: "Yingtian,应天,"
   - split: 5
@@ -21982,8 +21790,7 @@
     translated: "Bent Sword under a Crescent Moon"
   - split: 4
     text: "此刀法孤傲诡谲，去势如同天边一轮残月，以弧线向下勾连，寒冷皎洁之刀光亦四下照射，能够穿透世间一切壁障"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This Blade Art is solitary and cunning, its momentum like a waning moon in the sky, drawing down in an arc. The cold, bright blade light also casts shadows all around, capable of piercing through everything in this world."
   - split: 7
     text: "力道潜力2;体质潜力1"
     translated: "Strength potential 2; Constitution potential 1"
@@ -22024,8 +21831,7 @@
     translated: "Longsword Potential 2; Longsword 1; Willpower 1"
   - split: 9
     text: "意志3;长兵4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower3;Long Weapon4"
   - split: 10
     text: "长兵60;意志45"
     translated: "Long Weapons60; Willpower45"
@@ -22098,9 +21904,7 @@
     translated: "Health Cap 10; Inner Power Cap 30; Neigong 4; Meridians 4; Sword Art Power 0.04"
   - split: 10
     text: "内功5;经脉5"
-    translated: "Internal Skill 5; Meridian 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    translated: "Neigong 5; jingmai 5"
 - raw: "762,轻功,0,倒骑驴,仿张果老倒骑驴，倒着向后奔跑纵跃之法，可避开迎面之攻势,,0.9,轻功1,轻功2;灵巧2;闪避0.08,,轻功5,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -22222,9 +22026,7 @@
     translated: "Flower Basket Dropped by Heavenly Maiden"
   - split: 4
     text: "仿照蓝采和法宝以铁条编成，云游八方时能作容器，如遇拦路盗匪，也可遮挡利刃和暗器的袭击"
-    translated: "Mimic Blue Caihe's treasure, made from iron rods. It can be used as a container during travels. If bandits intercept them, it can shield sharp blades and conceal weapon attacks."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Hidden Weapon,暗器,"
+    translated: "Inspired by Lan Caihe's treasure made from iron rods, it can serve as a container when traveling through the eight directions. Should one encounter bandits along the way, it can also shield against sharp blades and hidden weapons."
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -22276,8 +22078,7 @@
     translated: "Qinggong"
   - split: 3
     text: "泅水术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Swimming Spell"
   - split: 4
     text: "蓬莱派地处海边，因而有此在海水中修炼之法，功成者迎风破浪，泅水浮波，颇为轻松惬意"
     translated: "The Penglai Sect is situated by the sea, hence they have methods of cultivation in seawater. Those who achieve success can sail through the wind and waves, swimming effortlessly."
@@ -22301,9 +22102,8 @@
     translated: "Art of Cinnabar"
   - split: 4
     text: "蓬莱派基础内丹法门，其炼气者，需冥心定息，元寂绵绵，直至气入丹田，丹火旺盛"
-    translated: "The foundational inner alchemy technique of the Penglai Sect requires practitioners to concentrate their minds and regulate their breathing, achieving a state of profound silence. They must continue this until the qi enters the dantian and the dan fire burns brightly."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Qi Refining,炼气,"
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "意志1;经脉1"
     translated: "Will1; Meridians1"
@@ -22435,8 +22235,7 @@
     translated: "Neigong 2; jingmai 1"
   - split: 8
     text: "生命上限30;内力上限90;内功9;经脉9;调息0.06;剑法威力0.02"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Health Cap 30; Inner Power Cap 90; Neigong 9; Meridians 9; Breathing Exercise 0.06; Sword Art Power 0.02"
   - split: 10
     text: "内功30;经脉20"
     translated: "Neigong 30; jingmai 20"
@@ -22450,7 +22249,7 @@
     translated: "Soar goes home"
   - split: 4
     text: "海边多风，因而蓬莱派有此借助风力移动之法，只需清风一起，便可乘风而行，姿态颇为潇洒飘逸"
-    translated: "The sea breeze is strong, so the Penglai Sect has a method to utilize this wind force for movement. All it takes is a gentle breeze, and one can ride the wind, adopting an especially graceful and ethereal posture."
+    translated: "The sea breeze is frequent, so the Penglai Sect has a method to harness this wind power for movement. One only needs the breeze to begin, and they can then ride the wind, with a posture that is quite graceful and ethereal."
     flaggedForRetranslation: true
     flaggedMistranslation: "Qingfeng,清风,"
   - split: 7
@@ -22472,8 +22271,7 @@
     translated: "Song of Sword Qi"
   - split: 4
     text: "此歌诀壮怀激烈，豪气干云，需以手指一边弹击剑刃，一边吟咏历代侠客风姿，其隐意颇深，只有深谙剑道者方能领会"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This verse is grand and passionate, its heroic spirit reaching to the heavens. It requires reciting the demeanor of legendary wanderers while tapping the sword blade with your fingers. Its deeper implications can only be understood by those well‑versed in the way of the sword."
   - split: 7
     text: "绝技1;意志1;剑法1"
     translated: "Ultimate Skill 1; Willpower 1; Sword Art 1"
@@ -22550,8 +22348,7 @@
     translated: "4 feet; 6 stomach"
   - split: 27
     text: "喷泉-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fountain‑Target‑Grid‑Happen"
   - split: 28
     text: "剑"
     translated: "Sword"
@@ -22565,8 +22362,7 @@
     translated: "Smallpox Inducer"
   - split: 4
     text: "韩湘子所作之洞箫曲，辞语空灵玄奥，摄人心神，可令听者如闻仙乐，心醉神迷之间不能自已"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Immortal Xiangzi's flute melody is eloquent and profound, capturing one's soul. It can make listeners feel as if they are hearing celestial music, to the point where they cannot control their entrancement."
   - split: 7
     text: "奇门2;体质1"
     translated: "Sun 2; Constitution 1"
@@ -22602,8 +22398,7 @@
     translated: "Immortal Stroke Top Technique"
   - split: 4
     text: "蓬莱派秘传修真之法，仙人抚我顶，结发受长生，习此功法时自有一股真气自百会穴而下，若能一路破关抵达丹田，便可大增功力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The secret cultivation methods of the Penglai Sect grant me a touch from an immortal, binding my hair and bestowing eternal life. When practicing this technique, true qi naturally flows down from the Hundred Meetings point. If one can breakthrough through all obstacles to reach the dantian, their strength will greatly increase."
   - split: 7
     text: "内功潜力1;内功1;经脉1"
     translated: "Potential Neigong 1; Neigong 1; Meridians 1"
@@ -22632,8 +22427,7 @@
     translated: "Qinggong 12; Lightness 12; Dodge 0.1"
   - split: 10
     text: "轻功45;灵巧30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 45; Lightness 30"
 - raw: "781,绝技,3,灵剑幻花,蓬莱派独特运劲法门，可令剑尖高速颤动，舞出幻影剑花，使任何剑招都带有迷惑性，令敌人难以判断其走势,,1,经脉潜力1;意志1;剑法1,灵巧8;意志8;剑法8;飘逸0.05;剑法威力0.05,,绝技30;意志30;剑法40,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -22647,8 +22441,7 @@
     translated: "The unique cultivation technique of the Penglai Sect allows sword tips to rapidly tremble, creating illusory sword flowers. This gives any sword move a mesmerizing quality, making it difficult for enemies to judge its trajectory."
   - split: 7
     text: "经脉潜力1;意志1;剑法1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vital Meridian Potential 1; Willpower 1; Sword Art 1"
   - split: 8
     text: "灵巧8;意志8;剑法8;飘逸0.05;剑法威力0.05"
     translated: "Agile 8; Resolute 8; Sword Art 8; Graceful 0.05; Sword Art Power 0.05"
@@ -22665,8 +22458,7 @@
     translated: "Moonchaser Sword"
   - split: 4
     text: "需于月升之时修炼，吸收午夜阴气来滋养自身剑气的道家剑法，一经施展，则剑光闪闪，寒气逼人，如皎月西沉，令朔风四起"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice under the moon's rise to absorb the midnight yinqi and nourish their sword energy. Once unleashed, it shines like moonlight, with a chilling presence, resembling the waning moon setting, causing the cold wind to howl."
   - split: 7
     text: "剑法潜力1;剑法1;灵巧1"
     translated: "Potential in Sword Art 1; Sword Art 1; Agility 1"
@@ -22815,15 +22607,13 @@
     translated: "Extend the index and middle fingers straight, forming a gesture like a sword pointing at the enemy. This can be used to measure distances and determine the direction of movement, allowing one to attack the enemy's weak points and anticipate their movements in combat against skilled opponents."
   - split: 7
     text: "经脉潜力1;灵巧潜力1;灵巧1;剑法1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential Meridian 1; Potential Dexterity 1; Dexterity 1; Sword Art 1"
   - split: 8
     text: "灵巧10;意志10;剑法10;剑法威力0.12"
     translated: "Agility 10; Willpower 10; Swordsmanship 10; Power of the Sword Art 0.12"
   - split: 10
     text: "绝技45;灵巧45;剑法55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Skill 45; Agility 45; Sword Technique 55"
 - raw: "788,剑法,4,碧海飞仙剑,蓬莱派第三代掌门凌霄子在海边练剑时，曾目睹海市蜃楼间仙女舞剑，便默记下招式，最终创出这套碧海飞仙剑，其招飘逸绝伦，使人如见飞仙之丰神绰约。,20,1,灵巧潜力2;剑法1;灵巧1,,灵巧4;剑法3;内力0.2,剑法60;灵巧45,\"1,1,2\",\"1,0,1\",飘逸0.06;轻灵0.06,24,13,0,手14;心9,手6;心9,,,skill1_2,,蓝旋风-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -22881,8 +22671,7 @@
     translated: "Sword Art 55; Meridian 50"
   - split: 17
     text: "内伤0.05;调息0.05;截脉0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Internal Injury 0.05; regulate breathing 0.05; feel the pulse 0.05"
   - split: 21
     text: "头12;胸12"
     translated: "Head12; chest12"
@@ -22905,8 +22694,7 @@
     translated: "Iron Cane Dragon Transformation"
   - split: 4
     text: "八仙之首铁拐李所传奇门，有劈金碎石之威能，其中更有将铁拐一击掷出，直捣黄龙，再以内劲吸回手中的神奇招式"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The legendary school of the first among the Eight Immortals, Iron Crutch Li, boasts the prowess to split gold and shatter rocks. Among its techniques is one where Iron Crutch is thrown out and directly pierces the imperial heart before being drawn back by inner strength into his hand."
   - split: 7
     text: "奇门潜力2;奇门1;智力1"
     translated: "Alchemical Potential 2; Celestial Gate 1; Intelligence 1"
@@ -22944,15 +22732,13 @@
     translated: "A plain silk brocade scroll, under the influence of profound inner power and unique technique, dances in the wind, shading heaven and blocking the sun, capable of wrapping weapons and binding enemies. In its intricate twists and turns, it seems to possess a spirit."
   - split: 7
     text: "经脉潜力2;奇门1;意志1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Potential in Meridians 2; Mystical Doors 1; Willpower 1"
   - split: 9
     text: "经脉5;奇门2;内力0.2"
     translated: "Meridians 5; Mystical Palaces 2; Inner Power 0.2"
   - split: 10
     text: "奇门50;经脉55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mystic Gates 50; Meridian Channels 55"
   - split: 17
     text: "手臂点穴0.05;腿足点穴0.05;阻滞0.05"
     translated: "Arm acupressure 0.05; leg and foot acupressure 0.05; obstructing 0.05"
@@ -22961,8 +22747,7 @@
     translated: "9 hand; 16 foot"
   - split: 22
     text: "手9;足5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "9 hand; 5 foot"
   - split: 27
     text: "冰龙卷-Target-Grid-Happen"
     translated: "Ice Dragon Twist ‑ Target Grid ‑ Event Triggered"
@@ -22996,16 +22781,14 @@
     translated: "Sword Art"
   - split: 3
     text: "天遁剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Heavenly Evasion Sword Technique"
   - split: 4
     text: "神妙非凡，玄机莫测，与凡间剑法有云泥之别，传说乃火龙真人所授仙法，吕祖有诗赞曰：庞眉斗竖恶精神，万里腾空一踊身。背上匣中三尺剑，为天且示不平人。"
     flaggedForRetranslation: true
     flaggedMistranslation: "Failed"
   - split: 7
     text: "剑法潜力2;经脉潜力1;灵巧潜力1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art Potential 2; Meridian Potential 1; Dexterity Potential 1"
   - split: 9
     text: "经脉3;灵巧3;剑法3;内力0.4"
     translated: "Meridians 3; Dexterity 3; Sword Art 3; Inner Power 0.4"
@@ -23014,8 +22797,7 @@
     translated: "Sword Art 80; dexterity 70; meridians 60"
   - split: 17
     text: "内伤0.06;截脉0.06;内劲0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Internal Injury 0.06; Interrupted Pulse 0.06; Internal Strength 0.06"
   - split: 21
     text: "头9;心9;腹9"
     translated: "Head9; heart9; abdomen9"
@@ -23024,8 +22806,7 @@
     translated: "Head5; heart5; stomach5"
   - split: 27
     text: "天剑-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sky Sword ‑ Target Grid Activated"
   - split: 28
     text: "剑"
     translated: "Sword"
@@ -23036,12 +22817,10 @@
     translated: "Neigong"
   - split: 3
     text: "坐忘功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Meditation Technique"
   - split: 4
     text: "峨眉派入门道家心法，修习者需在坐禅之时忘却己身，排除杂念，清心净性，真气自生"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Heart Method of the Emei Sect for newcomers involves sitting in meditation and forgetting oneself, clearing the mind of distractions, thus allowing True Qi to arise naturally."
   - split: 7
     text: "内功1"
     translated: "Neigong 1"
@@ -23061,15 +22840,13 @@
     translated: "Monkey Leap Over the Creek"
   - split: 4
     text: "模仿猿猴越过山涧的纵跳之法，练习者腿部发力与落脚地点稍有偏差便会落入水中，狼狈不堪"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice by leaping across ravines like a monkey, the slightest discrepancy in leg power or landing spot can result in a messy fall into the water."
   - split: 7
     text: "轻功1"
     translated: "Qinggong 1"
   - split: 8
     text: "轻功4;灵巧4;舒筋0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 4; agility 4; tendon‑stretching 0.04"
   - split: 10
     text: "轻功5;灵巧5"
     translated: "Qinggong 5; Lightness 5"
@@ -23080,8 +22857,7 @@
     translated: "Ultimate Technique"
   - split: 3
     text: "凝心诀"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Concentration Technique"
   - split: 4
     text: "峨眉入门弟子必须熟记之口诀，有凝聚心神，锻炼智慧之功效"
     flaggedForRetranslation: true
@@ -23111,15 +22887,13 @@
     translated: "Fist and palm 1"
   - split: 9
     text: "智力2;拳掌1;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Intelligence 2; Punches and Palm Techniques 1; Inner Power 0.1"
   - split: 10
     text: "拳掌5"
     translated: "Fist and palm 5"
   - split: 17
     text: "笨拙0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Clumsy 0.04"
   - split: 21
     text: "足12"
     translated: "12 feet"
@@ -23142,8 +22916,7 @@
     translated: "Thirty‑Six Closed Hands"
   - split: 4
     text: "灵巧协调之拳法，其三十六式变化多端，连环紧扣，擅长封禁敌手，避实打虚"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Agile Coordination Fist Technique, with its 36 variations, changes endlessly and tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
   - split: 7
     text: "拳掌1"
     translated: "Fist and palm 1"
@@ -23364,8 +23137,7 @@
     translated: "Monkey King Sword Technique"
   - split: 4
     text: "此剑法身形不定，左右纵跳，同时随意出手，招无定形，心无定意，其路数亦如猿猴般灵活善变，难以捉摸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This sword technique is unpredictable in movement, leaping to the left and right with casual strikes. The attacks have no fixed form, and the mind has no set intent. Its path is as agile and changeable as a monkey's, making it hard to grasp."
   - split: 7
     text: "剑法1;灵巧1"
     translated: "Sword Technique 1; Agility 1"
@@ -23754,8 +23526,7 @@
     translated: "Selfless leap across"
   - split: 4
     text: "峨眉金顶东面有一悬崖名舍身崖，雄险奇伟，修习者需以舍身勇气一跃而下，于悬崖上攀援横渡直至谷底，功力稍浅者恐有粉骨碎身之虞"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "On the eastern side of Gold Summit of Mount Emei stands a sheer cliff known as Self‑Sacrifice Cliff. Majestic, perilous, and awe‑inspiring, cultivators must leap from the cliff with the courage of self‑sacrifice, then climb and cross along the precipice until reaching the valley floor. Those with slightly weaker cultivation might risk serious injury or even death."
   - split: 7
     text: "轻功潜力2;轻功1;灵巧1"
     translated: "Potential for Qinggong 2; Qinggong 1; Agility 1"
@@ -23830,8 +23601,7 @@
     translated: "Heavenly Warrant Thunderous Palm"
   - split: 4
     text: "威力惊人内力消耗也极大的掌法，将阴阳两股精纯真气凝聚掌心，借劈掌之力将其剧烈融合，所到之处雷鸣震天，无坚不摧，无物不毁"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A palm technique with shocking power and immense inner power consumption, it condenses the pure True Qi of yin and yang in the palm. By leveraging the force of a chopping palm strike, it violently fuses them together. Wherever it goes, thunderous echoes fill the sky, overwhelming anything solid and destroying everything in its path."
   - split: 7
     text: "经脉潜力2;拳掌1;经脉1"
     translated: "Potential Meridian 2; Fist Palm 1; Meridians 1"
@@ -24023,8 +23793,7 @@
     translated: "7 feet"
   - split: 27
     text: "圆斩血-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Circle Slash Blood‑Target‑Grid‑Happen"
   - split: 28
     text: "鞭"
     translated: "Whip"
@@ -24044,8 +23813,7 @@
     translated: "Mystic 1"
   - split: 9
     text: "意志2;奇门2;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 2; qi men 2; inner power 0.1"
   - split: 10
     text: "奇门5"
     translated: "Mystic 5"
@@ -24213,8 +23981,7 @@
     translated: "Odd Doors 1; Willpower 1"
   - split: 9
     text: "意志1;奇门2;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 1; Mystical Palaces 2; Inner Power 0.1"
   - split: 10
     text: "奇门20;意志10"
     translated: "Trigram 20; Willpower 10"
@@ -24278,8 +24045,7 @@
     translated: "Five Turnings of Secret Techniques"
   - split: 4
     text: "崆峒派以奇门功夫闻名天下，此心法是专为此所创，其真气灵活多变，诡谲难测，配合各式奇门武功皆有妙效"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Kongtong Sect is renowned worldwide for its amazing martial arts techniques. This heart method was specifically created for it, with True Qi that is flexible and ever‑changing, cunning and unpredictable. It proves highly effective when paired with various styles of amazing martial arts techniques."
   - split: 7
     text: "内功2;体质1"
     translated: "Neigong 2; zhiru 1"
@@ -24296,11 +24062,10 @@
     translated: "Qinggong"
   - split: 3
     text: "大鹏展翅"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Phoenix rises"
   - split: 4
     text: "模仿山间大鹏将双臂大开，可在空中长时间滑翔的轻功法门，崆峒派弟子时常需用此身法在山头间快速移动"
-    translated: "Mimicking the vulture in the mountains spreading its wings wide, this lightness technique allows for long glides in mid‑air. Kongtong Sect disciples often use this agility to quickly move between mountain peaks."
+    translated: "Mimicking the vulture soaring among mountain peaks, spreading their arms wide to glide through the air for extended periods, this lightness technique is often used by Kongtong Sect disciples to swiftly move between cliff tops."
     flaggedForRetranslation: true
     flaggedMistranslation: "Hour of Zi,子时,"
   - split: 7
@@ -24383,8 +24148,7 @@
     translated: "Trigram 1; Willpower 2"
   - split: 9
     text: "意志3;奇门2;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower3;Qimen2;Inner Power0.2"
   - split: 10
     text: "奇门25;意志25"
     translated: "Trigram 25; Willpower 25"
@@ -24546,15 +24310,13 @@
     translated: "Potential from I Men 1; I Men 1; Willpower 1"
   - split: 9
     text: "意志2;奇门4;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Will 2; Strange Gate 4; Inner Power 0.2"
   - split: 10
     text: "奇门45;意志35"
     translated: "Trigram 45; Willpower 35"
   - split: 17
     text: "混乱0.1;定身0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Chaos 0.1; Stun 0.1"
   - split: 21
     text: "头9;心17"
     translated: "Head9; heart17"
@@ -24598,8 +24360,7 @@
     translated: "Chest6; abdomen7"
   - split: 27
     text: "火柱-Target-Grid-Happen;蝴蝶斩-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Flame Pillar ‑ Target‑Grid‑Happen;Butterfly Slash ‑ Target‑Grid‑Happen"
   - split: 28
     text: "长兵"
     translated: "Long weapon"
@@ -24674,8 +24435,7 @@
     translated: "Life and Death Thin Thread Whip"
   - split: 4
     text: "将鞭收于脑后引而不发，全神贯注，将生死悬于身后一线之超绝鞭法，此鞭挥出力道时机方位均是精妙非凡，可谓高下立判，胜负立分"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Holding the whip behind his head, ready but restrained, he focused intently on a supreme technique that placed life and death in a fine balance. The timing, power, and angle of this swing were exceptionally precise, making the difference between victory and defeat instantly clear."
   - split: 7
     text: "奇门潜力2;奇门1;灵巧1"
     translated: "Potential in I Ching 2; Knowledge of I Ching 1; Dexterity 1"
@@ -24716,8 +24476,7 @@
     translated: "Potential Willpower 2; Mysticism 1; Will 1"
   - split: 9
     text: "意志4;奇门3;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower4;Qimen3;Inner Power0.2"
   - split: 10
     text: "奇门55;意志50"
     translated: "Trigram 55; Willpower 50"
@@ -25033,9 +24792,7 @@
     translated: "Mechanism Umbrella"
   - split: 4
     text: "以机关控制开合的镔铁伞，关合时可挥舞突刺，撑开时可阻挡攻击，堪称神机门技巧器械的代表之作"
-    translated: "A steel umbrella controlled by mechanisms that opens and closes can be swung and thrust when closed, and used to block attacks when open, truly embodying the Divine Mechanism Sect's skillful devices."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Refined Iron,镔铁,"
+    translated: "A refined iron umbrella controlled by mechanisms that opens and closes can be swung and thrust when closed, and used to block attacks when open. It is a prime example of the Divine Mechanism Sect's skillful machinery."
   - split: 7
     text: "奇门1;意志1"
     translated: "Odd Doors 1; Willpower 1"
@@ -25198,8 +24955,7 @@
     translated: "Trigram 25; Intelligence 20"
   - split: 17
     text: "手臂点穴0.1;迟缓0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Arm acupressure 0.1; delay 0.04"
   - split: 21
     text: "手19"
     translated: "19's hand"
@@ -25208,8 +24964,7 @@
     translated: "12 hand"
   - split: 27
     text: "锁链-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Chain Target Grid Happen"
   - split: 28
     text: "扇"
     translated: "Fan"
@@ -25223,8 +24978,7 @@
     translated: "Divine Mechanism Arrow"
   - split: 4
     text: "将尾部绑有火药的箭支装入竹筒，以引线相连而成的机关装置，可瞬间发射大量火箭，一时间火光冲天，声势惊人"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A mechanism device where arrows tipped with gunpowder are placed in a bamboo tube connected by fuses. It can instantly launch numerous rockets, causing a brilliant burst of flames and a startling display."
   - split: 7
     text: "射术2;灵巧1"
     translated: "Archery 2; Dexterity 1"
@@ -25371,8 +25125,7 @@
     translated: "Five Hearts Pursuit Arrow"
   - split: 4
     text: "连发五箭之机关筒，此五箭近乎首尾相连，射速极快，射程极远且不失准度，是神机门箭矢器械的代表之作"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A mechanism cylinder for consecutive firing of five arrows, these five arrows nearly connect end‑to‑end, boasting an extremely fast firing rate and an impressive long range without sacrificing accuracy. This is a representative work of the Divine Mechanism Sect's arrow weaponry."
   - split: 7
     text: "射术潜力1;射术1;灵巧1"
     translated: "Archery potential 1; archery 1; agility 1"
@@ -25760,8 +25513,7 @@
     translated: "Qinggong 1; Lightness 1"
   - split: 8
     text: "轻功6;灵巧6;急速0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 6; lightness 6; swiftness 0.06"
   - split: 10
     text: "轻功15;灵巧10"
     translated: "Qinggong 15; Lightness 10"
@@ -25859,8 +25611,9 @@
     translated: "Spear Art of Fiery Sun"
   - split: 4
     text: "枪头浸透火油，在对敌时点燃使出的枪法，招式开合挥舞，火光阵阵，能够有效逼退敌人的攻势"
+    translated: "The spear tip soaked in flammable oil is ignited for use against enemies. The technique involves opening and closing the stance while swinging, with a series of fiery strikes that effectively repel the enemy's attacks."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Spear Art,枪法,"
   - split: 7
     text: "长兵1;意志1"
     translated: "Long Weapon1; Willpower1"
@@ -26354,8 +26107,7 @@
     translated: "Legs 1; chest 1; head 1"
   - split: 27
     text: "爆炸大-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Explosion Target‑Grid Trigger"
 - raw: "918,内功,0,吐姆功,通过经脉运转，提高身体温度的瑜伽法门，在金刚宗所处的高原苦寒之地多有流传,,1,内功1,生命上限30;内力上限10;内功3;力道3;回血0.004,,内功5,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -26447,8 +26199,7 @@
     flaggedMistranslation: "Failed"
   - split: 4
     text: "源于天竺的金刚宗杵形法器，象征所向无敌、无坚不摧的智慧与佛法，可斩断烦恼，祛除邪魔"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A weapon from the Vajrayana school of Kasmira, symbolizing invincible and indestructible wisdom and Buddhism that can cut through suffering and expel evil spirits."
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -26483,8 +26234,7 @@
     translated: "Flywheel Technique"
   - split: 4
     text: "产自天竺的圆轮形奇门兵刃，平时可作祭祀法器，战斗时可大力挥舞格挡，或投掷攻敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A circular wheeled mystical weapon from Gandhara. In peace, it serves as a sacrificial artifact. During battle, it can be powerfully swung for blocking or thrown to attack enemies."
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -26863,8 +26613,7 @@
     translated: "Trigram 1; Intelligence 2"
   - split: 9
     text: "智力3;奇门1;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Intelligence 3; Mystical Seals 1; Inner Power 0.2"
   - split: 10
     text: "奇门25;智力30"
     translated: "Trigram 25; Intelligence 30"
@@ -27011,8 +26760,7 @@
     translated: "This technique is profound and versatile, capable of both attacking demons and defending the righteous. Hence it is named Great Might for its offensive power, and Great Virtue for its defensive protection."
   - split: 7
     text: "奇门潜力1;奇门1;力道1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hidden Potential 1; Astral Influence 1; Strength 1"
   - split: 9
     text: "力道2;奇门4;内力0.1"
     translated: "Strength 2; Qimen 4; Inner Power 0.1"
@@ -27183,8 +26931,7 @@
     translated: "Strength 5; Qimen 2; Inner Power 0.1"
   - split: 10
     text: "奇门55;力道50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Odd Doors 55; Strength 50"
   - split: 17
     text: "暴击0.06;破甲0.06"
     translated: "Critical Hit 0.06; Piercing Armor 0.06"
@@ -27216,8 +26963,7 @@
     translated: "Alchemical Potential 2; Astral Influence 1; Intelligence 1"
   - split: 9
     text: "智力4;奇门3;内力0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Intelligence 4; Mystical Gate 3; Inner Power 0.1"
   - split: 10
     text: "奇门65;智力45"
     translated: "Mystic Gate 65; Intelligence 45"
@@ -27367,9 +27113,7 @@
     translated: "Health Cap 10; Inner Power Cap 30; Neigong 4; Meridians 4; Ice Cold 0.04"
   - split: 10
     text: "内功5;经脉5"
-    translated: "Internal Skill 5; Meridian 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    translated: "Neigong 5; jingmai 5"
 - raw: "956,轻功,0,踏雪行,天山苦寒，积雪深厚，外门弟子在山道上洒扫庭除，挑水担柴，颇要几分脚力,,0.9,轻功1,轻功4;灵巧2;体质2;轻灵0.04,,轻功5,,,,0,19,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -27441,8 +27185,7 @@
     translated: "12 stomach"
   - split: 27
     text: "水滴-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Water Drop ‑ Target Grid ‑ Event Occurred"
   - split: 28
     text: "拳"
     translated: "Fist"
@@ -27785,15 +27528,13 @@
     translated: "Standing on thin ice near a precipice"
   - split: 4
     text: "天山乃雪岭苦寒之地，故而有此冰面行走之法，脚步轻巧灵动，审慎小心，稍有差池便会坠入寒冷刺骨的湖水中"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tianshan is a snowy mountain range with bitter cold, hence the method of walking on ice requires light and agile steps, proceeding with caution. A moment's carelessness could lead to falling into the freezing lake water."
   - split: 7
     text: "轻功2;灵巧1"
     translated: "Qinggong 2; Lightness 1"
   - split: 8
     text: "轻功9;灵巧9;轻灵0.05;回体1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong 9; Lightness 9; Lightness 0.05; Recovery 1"
   - split: 10
     text: "轻功30;灵巧25"
     translated: "Qinggong 30; Lightness 25"
@@ -28038,8 +27779,7 @@
     translated: "Strength 2; Punches and Palm Strikes 4; Inner Power 0.2"
   - split: 10
     text: "拳掌40;力道25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fist and palm 40; Strength 25"
   - split: 17
     text: "内劲0.1"
     translated: "Internal force 0.1"
@@ -28167,8 +27907,7 @@
     translated: "Neigong"
   - split: 3
     text: "玄冥真气"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "True Qi of Xuan Ming"
   - split: 4
     text: "在天山峰顶极寒之地修炼而成的内功心法，被此内劲击中者，冰肌蚀骨，血脉凝固，可谓一只脚已踏入黄泉幽冥之中"
     translated: "Neigong and Heart Method cultivated in the extreme cold at the peak of Tianshan Mountain, those struck by this inner power experience icy flesh and bones, congealed blood vessels, and a foot already stepping into the underworld."
@@ -28245,8 +27984,7 @@
     translated: "Fists and palms"
   - split: 3
     text: "玄冥神掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Palms of Frozen Annihilation"
   - split: 4
     text: "此掌法擅长以绵密内力入侵敌人体内，注入数股极寒真气沿经脉乱窜逆行，中者便是日常行动亦力不从心，自然无法再战"
     translated: "This palm technique specializes in invading an enemy's body with dense inner power, injecting several streams of extreme cold true qi that wander and reverse along the meridians. Those affected find even their daily actions difficult to perform, let alone engage in combat again."
@@ -28341,8 +28079,7 @@
     translated: "Head4; chest6"
   - split: 27
     text: "岩浆喷-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Magma Burst‑Target Grid Activated"
   - split: 28
     text: "剑"
     translated: "Sword"
@@ -28646,8 +28383,7 @@
     translated: "10 hand"
   - split: 27
     text: "爪痕-Target-Grid-Happen;叶轮-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Claw Marks ‑ Target‑Grid‑Happen; Leaf Wheels ‑ Target‑Grid‑Happen"
   - split: 28
     text: "拳"
     translated: "Fist"
@@ -28702,8 +28438,7 @@
     translated: "Sword Technique 1"
   - split: 9
     text: "意志1;剑法2;内力0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower 1; Sword Technique 2; Inner Power 0.2"
   - split: 10
     text: "剑法5"
     translated: "Sword Technique 5"
@@ -28908,8 +28643,7 @@
     translated: "Iron Fan Skill"
   - split: 4
     text: "以铁扇为兵刃的基础奇门功法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Basic chi kung technique using the iron fan as a weapon"
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -29166,8 +28900,7 @@
     translated: "Cosmic Palm Power"
   - split: 4
     text: "此掌法需在丹田凝集混元之气，不属五行，不归阴阳，浑然天成，可以混沌初开之力将对手内息化作无形"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This palm technique requires gathering Primordial Qi in the dantian; it does not belong to the Five Elements nor does it conform to Yin and Yang. It is naturally formed, capable of using the force of chaos at the beginning of creation to render one's inner Qi intangible."
   - split: 7
     text: "拳掌潜力1;灵巧潜力1;经脉潜力1"
     translated: "Punching Potential 1; Dexterity Potential 1; Meridian Potential 1"
@@ -29377,7 +29110,7 @@
     translated: "Tiger Hawk Wields a Reed Gun"
   - split: 4
     text: "传闻武成王黄飞虎所使，一式极为轻灵翔动的枪法，时而如芦花纷飞四散而落，时而如猛虎下山势不可挡"
-    translated: "The fighting technique of Lord Wenchengwang Huang Feihu, known for its extreme lightness and agility, sometimes moves as gracefully as flying water caltrops, at other times as formidable as a tiger descending the mountain."
+    translated: "The fighting style of Lord Wu Cheng Wang Huang Fei Hu, extremely agile and ethereal, sometimes resembles flying reeds dispersing in all directions, while at other times it's as formidable as a tiger descending the mountain with irresistible force."
     flaggedForRetranslation: true
     flaggedMistranslation: "Spear Art,枪法,"
   - split: 7
@@ -29426,8 +29159,7 @@
     translated: "Long Weapons50; Intelligence35; Meridians60"
   - split: 17
     text: "震脑0.06;笨拙0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Thunderstrike 0.06; clunky 0.06"
   - split: 21
     text: "胸14;手10"
     translated: "Chest14;hand10"
@@ -29459,8 +29191,7 @@
     translated: "Strength 1; meridians 4; mystic gates 2; Inner Power 0.5"
   - split: 10
     text: "奇门50;经脉65;力道30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Odd Doors 50; Meridians 65; Strength 30"
   - split: 17
     text: "灼烧0.06;混乱0.06"
     translated: "Burning 0.06; Chaos 0.06"
@@ -29599,9 +29330,7 @@
     translated: "Health Cap 100; Inner Power Cap 140; Neigong 16; Strength 10; Meridians 10; Pulse Unblocking 0.06; Thunder and Lightning 0.06; Breathing Control 0.06"
   - split: 10
     text: "内功80;力道55;经脉50"
-    translated: "Internal_power 80; strength 55; spirit_vein 50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    translated: "Neigong 80; strength 55; jingmai 50"
 - raw: "1033,内功,5,蚀骨销魂功,魔道奇功，可无声无息侵入对方经脉，制造极乐幻觉与巨大痛苦，中者大多面容扭曲，似笑似哭，惨不忍睹,,1.2,内功潜力1;智力潜力1;意志潜力1;意志2,生命上限140;内力上限100;内功12;灵巧12;意志12;震脑0.06;乱神0.06;混乱0.06,,内功70;智力65;意志60,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 1
@@ -29655,8 +29384,7 @@
     translated: "This technique seems to move only a hair, but in reality it covers several yards. It often leaves opponents with the desolate feeling of being within arm's reach yet perpetually out of grasp."
   - split: 7
     text: "轻功潜力1;灵巧潜力1;体质潜力1;灵巧2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong Potential 1; Agility Potential 1; Constitution Potential 1; Agility 2"
   - split: 8
     text: "轻功12;智力12;体质12;急速0.08;失衡0.08"
     translated: "Qinggong 12; Intelligence 12; Constitution 12; Speed 0.08; Imbalance 0.08"
@@ -29673,8 +29401,7 @@
     translated: "Great Sorrow Dharma Formula of Yin and Yang"
   - split: 4
     text: "高僧所创，可将天地阴阳二气化为悲智双运之力，最终达到无缘大慈，同体大悲之境界"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Created by a high monk, this can transform the yin and yang energies of heaven and earth into the power of dual practice of wisdom and compassion. Ultimately, it reaches the realm of boundless compassionate love without conditions and great sympathy for all beings."
   - split: 7
     text: "绝技潜力1;力道潜力1;智力潜力1;智力2"
     translated: "Potential for Ultimate Technique 1; Strength Potential 1; Intelligence Potential 1; Intelligence 2"
@@ -29750,8 +29477,7 @@
     translated: "One‑Finger Meditation Technique"
   - split: 4
     text: "穷尽千变万化，而返璞归真于一指。修习者需先通晓天下拳掌，然后忘尽所学，方能领悟此招真谛"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Exhaust all myriad changes and transformations, then revert to the essence with a single finger. Practitioners must first master all martial arts techniques, then forget everything they have learned, to truly comprehend the intent of this move."
   - split: 7
     text: "拳掌潜力1;智力潜力1;意志潜力1;意志2"
     translated: "Fist Potential 1; Intelligence Potential 1; Willpower Potential 1; Willpower 2"
@@ -29821,8 +29547,7 @@
     translated: "Solo Sword Technique"
   - split: 4
     text: "世外高人独孤剑所创的无上剑法，号称可破尽天下所有招式"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Sword Art created by the recluse Du Guang Jian is said to be able to break through all sword techniques in the world."
   - split: 7
     text: "剑法潜力1;智力潜力1;意志潜力1;智力2"
     translated: "Sword Art Potential 1; Intelligence Potential 1; Willpower Potential 1; Intelligence 2"
@@ -29964,8 +29689,7 @@
     translated: "Ambush on All Sides"
   - split: 4
     text: "传闻是西楚霸王项羽被困垓下时领悟出的最后招式，奈何因其败亡而最终失传"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "It is said that the final technique was conceived by Xiang Yu, the Western Chu Overlord, when he was trapped in Gaixia. Unfortunately, due to his subsequent defeat and death, this technique eventually fell into obscurity."
   - split: 7
     text: "长兵潜力1;力道潜力1;意志潜力1;意志2"
     translated: "Long‑sword Potential 1; Strength Potential 1; Willpower Potential 1; Willpower 2"

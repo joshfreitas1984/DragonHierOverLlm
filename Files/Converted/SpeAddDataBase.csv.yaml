@@ -1213,8 +1213,7 @@
     translated: "Counterattack"
   - split: 3
     text: "藏锋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hide Sharpness"
   - split: 4
     text: "尽出"
     translated: "Exhaust"

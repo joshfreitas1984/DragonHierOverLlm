@@ -197,8 +197,7 @@
     translated: "Dizziness 0.05; instability 0.05; imbalance 0.05"
   - split: 27
     text: "地刺-Target-Grid-Happen"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spine Trap‑Target‑Grid‑Happen"
   - split: 28
     text: "弓"
     translated: "Bow"

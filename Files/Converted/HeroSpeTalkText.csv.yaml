@@ -75,6 +75,8 @@
     translated: "The Jianghu is vast, and I cannot be considered particularly gifted.\\nBut if we talk about diligence in cultivation, I suspect no one can match me."
   - split: 12
     text: "我道法修为尚浅，师傅总说我还不懂太极生两仪，两仪生四象，四象生八卦的道理。\\n我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个“生”法。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "武学见解,当今世人......越醉心武道......\\n我等医者......越难得空闲......,当今武学，多拘泥于花哨招式与繁复心法。\\n然唯有“杀”者，才是武学至高之道。,闯荡江湖，只要练好轻功就行。\\n想打就打，想走就走，岂不是天下无敌？,海纳百川，有容乃大。\\n习武之道，在于并包兼蓄，融会贯通。,强食弱肉，胜者为王，\\n此乃自然之理，亦是武道之真谛。,武学之道，在于破除常规，别开蹊径。\\n若是一招一式，一板一眼，那可就太过无聊了。,习武之道，玄妙无穷。\\n老朽便是穷尽一生，也只得窥见一角而已。,我久居山林，只略懂些拳脚。\\n#PlayerName#若是得空，定要多教我两招。,大隐阁武学本就奥妙无穷，星辰楼之中更藏有秘籍无数。\\n能够登临楼顶之人，从古至今不过寥寥几人而已。,好勇斗狠，以武相争，那便落了下乘。\\n以暗器毒药伤人，兵不血刃，才是上上之法。,习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，\\n方能踏上武学正道，抵达仁者无敌之境。,太极神功乃武当武学之尊，在江湖中亦是久负盛名。\\n传说大成者可以静制动，以柔克刚，其劲力亦如太极圆转，生生不息。"
   splits:
   - text: "武学见解"
@@ -111,6 +113,8 @@
     translated: "\\nBrave in combat and fierce in conflict, fighting with martial prowess is merely a lower approach.  Using hidden weapons and poison to harm others, avoiding bloodshed through cunning, is the superior method."
   - split: 11
     text: "习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，\\n方能踏上武学正道，抵达仁者无敌之境。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 12
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。\\n传说大成者可以静制动，以柔克刚，其劲力亦如太极圆转，生生不息。"
     translated: "Taiji Divine Skill is the zenith of Wudang martial arts and is renowned throughout the Jianghu.\\nIt is said that Great Achievers can control movement with stillness and overcome strength with gentleness. Their power flows like the Taiji circle, ever‑renewing and unending."
@@ -193,6 +197,8 @@
     translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nHe will speak his mind fully and without reservation."
   - split: 12
     text: "#PlayerName#招式凌厉，然后劲不足。\\n若能藏锋敛气，内外兼修，便能更上一层楼。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "日常见面,......#PlayerName#......近来可有受伤......,#PlayerName#，有何贵干？,#PlayerName#，最近可有得手什么好宝物？\\n......你这是什么表情，我、我可没想偷你东西。,天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。\\n便是老夫也算不出，这乱世究竟何时终结......,#PlayerName#前来寻我，想必是有事相求。,废话少说，#PlayerName#找老子所为何事？,呵呵呵呵，#PlayerName#今日前来拜访，老朽恐怕早已猜到了。,这世间有比山上野果更好吃的东西？我可不信！\\n除非#PlayerName#下次带来给我尝尝！,#PlayerName#今日看来颇有雅兴，\\n不然怎会突然想起前来寻我？,#PlayerName#就算有事相求，也得拿出相应价码交换才行。,在下不才，蒙武林同道厚爱，得了这“中原大侠”的名号。\\n每每想来，只觉诚惶诚恐，羞愧莫名。,#PlayerName#又见面了，看来你我也算缘分不浅。"
   splits:
   - text: "日常见面"

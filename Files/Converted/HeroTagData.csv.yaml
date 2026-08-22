@@ -6880,6 +6880,8 @@
     translated: "Mechanism damage +0.2; Mechanism speed +0.2; Mechanism durability +0.2"
   - split: 9
     text: "奇门80+智力100+天赋:机关铁臂+天赋:机关铁轮+天赋:机关铁甲"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
     text: "高级"
     translated: "Senior"

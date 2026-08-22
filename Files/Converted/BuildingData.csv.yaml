@@ -124,6 +124,8 @@
     translated: "Seclusion Room"
   - split: 7
     text: "修炼?修炼内功/轻功/绝技获取实战经验-我|附庸|门客-StudyInternalSelf;突破?突破抵达瓶颈的武学-我|附庸|门客-BreakThroughSkill;天赋?消耗天赋点领悟天赋-我|附庸|门客-ManageTag"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 9
     text: "银钱-50"
     translated: "Coin ‑50"
@@ -219,6 +221,7 @@
   - split: 7
     text: "疗伤?治疗伤势-我|附庸|门客-HospitalCureInjuryForce;坐诊?为周边受伤侠士疗伤治病-我&正式弟子-DoctorWork"
     translated: "Healing injuries? Treating wounded knights ‑ I |Vassal| Retainer‑HospitalCureInjuryForce; Practicing medicine? Healing nearby injured knights ‑ I & Formal Disciples‑DoctorWork"
+    flaggedForRetranslation: true
   - split: 8
     text: "银钱+100"
     translated: "Coin +100"
@@ -1122,6 +1125,8 @@
     translated: "Food 2000; timber 1000"
   - split: 19
     text: "由星罗棋布，错综复杂的引水渠道和大小水库组成的庞大水利工程，其渠可行舟，亦可作浇灌汲饮之用，蜀中以此灌溉沃野千里，并罕有水灾泛滥，终成其“天府”之美名。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "49,莫高窟,49,6,1,0,4,闭关--SpeGetTalentPoint;遗忘武学--SpeRemoveSkill;遗忘天赋--SpeRemoveTag,威望+20;矿石+100,银钱-200,理论经验0.2,,木料1000;矿石2000,20,66,,2,footstep,0;0,历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
   splits:
   - split: 1
@@ -1329,6 +1334,8 @@
   - split: 19
     text: "平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
     translated: "A vast, flat circular arena used for horse riding practice or equestrian competitions. Flying Dragon Gate disciples often reside here, carefully observing to select those with strong muscles and robust bones as their mounts. According to the sect rules, once chosen, a disciple and their horse are inseparable, bound by life and death."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Hour of Zi,子时,"
 - raw: "58,华阳洞,58,6,1,0,4,提升炼药潜力--StudyMaxLivingSkill-7;丹引-我&门派功能5-StartBreakMed,木料+50;药材+50,银钱-100,全员经脉2;全员奇门2;全员炼药4,,木料1000;药材2000,20,35,,2,footstep,0;0,鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
   splits:
   - split: 1
@@ -1397,6 +1404,8 @@
     translated: "Minerals 1000; herbs 2000"
   - split: 19
     text: "瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: "61,鬼门关,61,6,1,0,4,提升采伐潜力--StudyMaxLivingSkill-4;试炼-我&门派功能8-StartChallengeGhostGatePlot,威望+10;银钱+100,木料-50;矿石-100,城防耐久0.1;全员力道2;全员拳掌2;全员刀法2,,木料1000;矿石2000,20,38,,2,footstep,0;0,于崇山峻岭间开凿而成，险要奇崛之关口，黄鹤高飞不得过，猿猱欲度愁攀援。阎罗殿弟子想正式入门，需要在此通过极为艰险严苛之考验，方能闯过鬼门关，入修罗之道。"
   splits:
   - split: 1

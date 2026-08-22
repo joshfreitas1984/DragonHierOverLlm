@@ -144,9 +144,11 @@
   - split: 2
     text: "#PlayerName#武功与我相比孰强孰弱，早晚要分个高下才是！"
     translated: "#PlayerName's martial arts is either stronger or weaker than mine; we'll have to settle it once and for all!"
+    flaggedForRetranslation: true
   - split: 3
     text: "#PlayerName#武功灵巧有余，若能增加一些踏实稳重便再好不过了"
     translated: "#PlayerName's martial arts are agile and proficient, but would benefit from some added steadiness and stability."
+    flaggedForRetranslation: true
   - split: 4
     text: "#PlayerName#若在武学上有疑惑不解之处，只管来问我便是"
     translated: "#PlayerName#, if you have any doubts about martial arts, feel free to ask me."
@@ -156,18 +158,22 @@
   - split: 6
     text: "#PlayerName#武功稳重有余，若能增加一些灵活巧变便再好不过了"
     translated: "PlayerName's martial arts is solid and stable, but would benefit from more flexibility and change."
+    flaggedForRetranslation: true
   - split: 7
     text: "#PlayerName#武功进步神速，只怕早晚要把我远远甩开。"
     translated: "#PlayerName's martial arts progress is astonishing, and he might leave me far behind before I know it."
+    flaggedForRetranslation: true
   - split: 8
     text: "每日练武练武，真是烦煞人也！"
     translated: "Daily training in martial arts truly drives me mad!"
   - split: 9
     text: "#PlayerName#武功虽时有进步，但还是一眼就能看出诸多破绽之处。"
     translated: "#PlayerName's martial arts have improved somewhat, but there are still numerous flaws that can be easily spotted."
+    flaggedForRetranslation: true
   - split: 10
     text: "#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
     translated: "If my martial arts doesn't improve, I might be left far behind."
+    flaggedForRetranslation: true
 - raw: "日常见面,#PlayerName#？抱歉我心有所思，没注意到你。,#PlayerName#我们有几日未见了？容我好好回忆回忆。,不知#PlayerName#寻我有何贵干？,#PlayerName#若有我帮得上忙的地方，只管吩咐。,#PlayerName#别来无恙？,真巧，我正要离开此处，便遇到了#PlayerName#你。,#PlayerName#你我又见面了，算不算是缘分使然？,#PlayerName#几日不见，风采依旧啊！,#PlayerName#前来寻我，只怕是有事相求？,#PlayerName#有话快说吧，我还有要事在身。"
   splits:
   - text: "日常见面"

@@ -416,6 +416,8 @@
   - split: 9
     text: "内功;绝技;奇门"
     translated: "Internal Skill; Ultimate Technique; Strange Doors"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Neigong,内功,"
   - split: 10
     text: "烹饪"
     translated: "Cooking"
