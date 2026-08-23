@@ -79,7 +79,7 @@
   - split: 15
     subIndex: 1
     text: "：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
-    translated: ":Consume alcohol to gain corresponding long‑term buffs. Drinking with others does not require good will, and drinking consumes -20% of the ingredient, increasing goodwill."
+    translated: ":Consume alcohol to gain corresponding long‑term buffs. Drinking with others does not require good will, and drinking consumes ‑20% of the ingredient, increasing goodwill."
   - split: 15
     subIndex: 2
     text: "豪赌"
@@ -142,7 +142,7 @@
   - split: 15
     subIndex: 3
     text: "：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
-    translated: ":In a dark room, you can accept hitman orders. You gain -60% notoriety for attacking and severely injuring others; if arrested by officials, you can use qinggong to evade capture."
+    translated: ":In a dark room, you can accept hitman orders. You gain ‑60% notoriety for attacking and severely injuring others; if arrested by officials, you can use qinggong to evade capture."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -185,6 +185,8 @@
   - split: 15
     subIndex: 1
     text: "：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "妙药"
@@ -200,6 +202,7 @@
   - split: 15
     subIndex: 5
     text: "：在万花谷可用门派功绩兑换高品质药引。"
+    translated: ":Sect merits can be used to exchange for high‑quality medicinal herbs in the Ten Thousand Flowers Valley."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -293,6 +296,7 @@
   - split: 15
     subIndex: 1
     text: "：赛马场研究长兵兵器，提升长兵威力。"
+    translated: ":Study longsword weaponry at the racetrack to enhance its power."
   - split: 15
     subIndex: 2
     text: "马术"
@@ -300,6 +304,7 @@
   - split: 15
     subIndex: 3
     text: "：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
+    translated: ":Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming boost gives the horse a 0.2% increase in all attributes."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -362,6 +367,8 @@
   - split: 15
     subIndex: 7
     text: "：在华阳洞可炼化丹药获取对应药引。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -404,6 +411,8 @@
   - split: 15
     subIndex: 1
     text: "：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "巧匠"
@@ -456,6 +465,7 @@
   - split: 15
     subIndex: 1
     text: "：在万毒池消耗药引"
+    translated: ":Burn the medicinal herb in the Sea of Venom"
   - split: 15
     subIndex: 2
     text: "食材获取毒物，融合低级毒物获取强力高级毒物。"
@@ -467,6 +477,8 @@
   - split: 15
     subIndex: 4
     text: "：用毒可以选用多个毒物，装备淬毒下降速率"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -511,6 +523,8 @@
   - split: 15
     subIndex: 1
     text: "：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "霸道"
@@ -518,6 +532,8 @@
   - split: 15
     subIndex: 3
     text: "：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -564,6 +580,8 @@
   - split: 15
     subIndex: 1
     text: "：搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "旁证"
@@ -571,6 +589,7 @@
   - split: 15
     subIndex: 3
     text: "：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求"
+    translated: ":Discussing the upper limit of battle hand cards +3, players gain enhanced effects and extra goodwill upon victory. The skill requirements for compiling treatises."
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -615,6 +634,8 @@
   - split: 15
     subIndex: 1
     text: "：通过禅宗修行获取少林寺武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "普度"
@@ -669,6 +690,8 @@
   - split: 15
     subIndex: 1
     text: "：通过道法修行获取武当派武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "无为"
@@ -764,6 +787,7 @@
   - split: 15
     subIndex: 1
     text: "：蓬莱阁研究剑法兵器，提升剑法威力。"
+    translated: ":Penglai Pavilion studies sword arts and weaponry to enhance the power of sword techniques."
   - split: 15
     subIndex: 2
     text: "归宗"
@@ -861,6 +885,8 @@
   - split: 15
     subIndex: 1
     text: "：七十二洞研究奇门兵器，提升奇门威力。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "百出"
@@ -915,6 +941,8 @@
   - split: 15
     subIndex: 1
     text: "：使用装备改装升级机关兽，获取对应的机关兽加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "杂学"
@@ -922,6 +950,7 @@
   - split: 15
     subIndex: 3
     text: "：所有技艺经验+20%，收集资源时更易获得高级珍宝"
+    translated: ":All craft experience +20%: Collecting resources is more likely to yield advanced treasures."
   - split: 15
     subIndex: 4
     text: "材料，珍宝鉴定额外学识加成。"
@@ -966,6 +995,8 @@
   - split: 15
     subIndex: 1
     text: "：通过配置火药提升霹雳堂武学和灼烧武学效果。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "灼烧"
@@ -977,6 +1008,7 @@
   - split: 15
     subIndex: 4
     text: "3%负面加成。"
+    translated: "3% negative modifier"
   - split: 15
     subIndex: 5
     text: "重烩"
@@ -1023,6 +1055,7 @@
   - split: 15
     subIndex: 1
     text: "：通过密宗修行获取金刚宗武学加成。"
+    translated: ":Gain enhancements in Vajra Martial Arts through tantric cultivation."
   - split: 15
     subIndex: 2
     text: "灌顶"
@@ -1030,6 +1063,8 @@
   - split: 15
     subIndex: 3
     text: "：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1068,6 +1103,8 @@
   - split: 15
     subIndex: 1
     text: "：通过凝结玄冰提升天山派武学和冰寒武学效果。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "冰寒"
@@ -1326,6 +1363,8 @@
   - split: 15
     subIndex: 1
     text: "：轻功经验+20%，采伐经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -1360,6 +1399,8 @@
   - split: 15
     subIndex: 1
     text: "：射术经验+20%，口才经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1}"

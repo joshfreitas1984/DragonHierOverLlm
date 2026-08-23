@@ -192,7 +192,7 @@
   - split: 7
     subIndex: 32
     text: "完成别派委托获取银钱和别派功绩"
-    translated: "Complete side quests to earn silver and reputation points from other factions"
+    translated: "Complete other faction commissions to earn silver and merits from other factions"
   - split: 7
     subIndex: 33
     text: "非我"
@@ -321,6 +321,7 @@
   - split: 7
     subIndex: 13
     text: "默写"
+    translated: "Recite"
   - split: 7
     subIndex: 14
     text: "我"
@@ -1141,6 +1142,7 @@
   - split: 7
     subIndex: 5
     text: "放债"
+    translated: "Loan shark"
   - split: 7
     subIndex: 6
     text: "增加资源储量"
@@ -1989,6 +1991,7 @@
   - split: 7
     subIndex: 1
     text: "查看分舵相关情报"
+    translated: "Check information on sub‑fortresses"
   - split: 7
     subIndex: 2
     text: "门派科研"
@@ -2888,6 +2891,7 @@
   - split: 7
     subIndex: 6
     text: "雇佣保镖随行护卫"
+    translated: "Hire a guard to accompany you for protection"
   - split: 8
     text: "粮食"
     translated: "Food grain"
@@ -4021,6 +4025,7 @@
   - split: 10
     subIndex: 1
     text: "全员毒术4"
+    translated: "All‑toxic technique 4"
   - split: 10
     subIndex: 2
     text: "恢复效率0.2"
@@ -4034,6 +4039,7 @@
     translated: "2000 herbs"
   - split: 19
     text: "瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
+    translated: "Fog of poison thickly shrouds the murky green pool, swirling with hidden currents. This pool is the product of the Five Poisons Sect's long‑standing practice of refining pupae and testing poisons. The Golden Silkworm King Pupa, which strikes fear into even the bravest of Jianghu warriors with its mere presence, originates from here. Those with weak cultivation will feel dizzy and faint upon merely approaching it."
   templates:
   - split: 7
     template: "{0}--StudyMaxLivingSkill-1;{1}-{2}&{3}-ShowSpePoison"
@@ -4492,6 +4498,7 @@
     translated: "Seventy‑Two Caves"
   - split: 7
     text: "提升奇门潜力"
+    translated: "Enhance their potential in the Jiemen practice"
   - split: 7
     subIndex: 1
     text: "奇技"
@@ -4689,6 +4696,7 @@
     translated: "Temple of the Spiritual Tower"
   - split: 7
     text: "提升绝技潜力"
+    translated: "Boost their Potential for Ultimate Technique"
   - split: 7
     subIndex: 1
     text: "密宗修行"

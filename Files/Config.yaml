@@ -13,6 +13,7 @@ glossaryPreset:
   usePresetChineseGlossary: true
   chineseGlossaryTypesToSupress:
     - Phonetics
+useContinuousWorkerPool: true
 retryCount: 1
 batchSize: 100
 skipLineValidation: false

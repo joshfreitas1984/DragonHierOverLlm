@@ -137,6 +137,7 @@
   - split: 18
     subIndex: 1
     text: "亲属"
+    translated: "Relatives"
   - split: 18
     subIndex: 2
     text: "仇人"
@@ -1001,6 +1002,7 @@
     translated: "Nine Heaven Ghost Hand"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -1070,6 +1072,7 @@
     translated: "Addicted to gambling"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -1231,6 +1234,7 @@
     translated: "Face of Jade Medical Immortal"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -2025,6 +2029,7 @@
     translated: "Heart‑rending and bone‑chilling"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -3323,6 +3328,7 @@
     translated: "Immortal Wuwei"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -3678,7 +3684,7 @@
   splits:
   - split: 1
     text: "吕.寻峰"
-    translated: "Lü Xunfeng"
+    translated: "Lu Xunfeng"
   - split: 2
     text: "男"
     translated: "Male"
@@ -4348,6 +4354,7 @@
     translated: "Master Craftsman"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -4526,6 +4533,7 @@
     translated: "Earth‑Shattering Thunderbolt"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -4611,6 +4619,7 @@
     translated: "Blazing Spear"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -4692,6 +4701,7 @@
     translated: "FlameSpread Phoenix"
   - split: 18
     text: "亲属"
+    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -5421,7 +5431,7 @@
   splits:
   - split: 1
     text: "吕.子芳"
-    translated: "Lü Zifang"
+    translated: "Lu Zifang"
   - split: 2
     text: "女"
     translated: "Female"
@@ -8409,7 +8419,7 @@
   splits:
   - split: 1
     text: "吕.天行"
-    translated: "Lü Tianxing"
+    translated: "Lu Tianxing"
   - split: 2
     text: "男"
     translated: "Male"
@@ -9214,7 +9224,7 @@
   splits:
   - split: 1
     text: "吕.舞阳"
-    translated: "Lü Wuyang"
+    translated: "Lu Wuyang"
   - split: 2
     text: "男"
     translated: "Male"

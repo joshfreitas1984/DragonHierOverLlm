@@ -127,6 +127,7 @@
     translated: "But if it comes to diligence in training, I daresay no one can match me."
   - split: 12
     text: "我道法修为尚浅，师傅总说我还不懂太极生两仪，两仪生四象，四象生八卦的道理。"
+    translated: "I am still shallow in my Daoist cultivation, and my master always says I don't understand the principle that Taiji gives rise to the Two Instruments, the Two Instruments give rise to the Four Symbols, and the Four Symbols give rise to Bagua."
   - split: 12
     subIndex: 1
     text: "我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个"
@@ -197,6 +198,7 @@
     translated: "Want to fight, go fight; want to leave, go leave‑aren't you invincible under heaven?"
   - split: 4
     text: "海纳百川，有容乃大。"
+    translated: "A sea that embraces hundreds of rivers can be great."
   - split: 4
     subIndex: 1
     text: "习武之道，在于并包兼蓄，融会贯通。"
@@ -214,6 +216,7 @@
   - split: 6
     subIndex: 1
     text: "若是一招一式，一板一眼，那可就太过无聊了。"
+    translated: "If every move and step were rigidly precise, it would be far too boring."
   - split: 7
     text: "习武之道，玄妙无穷。"
     translated: "The way of martial arts is infinitely mysterious and profound."
@@ -248,6 +251,8 @@
   - split: 11
     subIndex: 1
     text: "方能踏上武学正道，抵达仁者无敌之境。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 12
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。"
     translated: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu."
@@ -328,7 +333,7 @@
   - split: 7
     subIndex: 3
     text: "的名号。"
-    translated: "The name"
+    translated: "Name"
   - split: 8
     text: "在峨眉山上耍猴子，抓野兔，那可有趣的紧啊！"
     translated: "Playing with monkeys and catching wild rabbits on Mount Emei is really fun!"
@@ -349,6 +354,7 @@
   - split: 10
     subIndex: 1
     text: "却听闻这龙胤归藏功中，或许会有线索......"
+    translated: "But I've heard that perhaps there might be clues in the Long Yin Huizang technique..."
   - split: 11
     text: "犬子郭勇锐生性纯良，奈何有些不谙世事。"
     translated: "Guo Yongrui, my son, is inherently kind‑hearted, though he sometimes lacks worldly wisdom."
@@ -425,7 +431,7 @@
     translated: "If we meet in battle someday, be sure to be more cautious."
   - split: 6
     text: "#PlayerName#这身功夫循规蹈矩，实在无趣。"
-    translated: "#PlayerName's# fighting style is rather conventional and frankly boring."
+    translated: "#PlayerName#this martial skill follows the rules too closely, truly uninteresting."
   - split: 6
     subIndex: 1
     text: "等老子心情好，哪天指点你几招！"
@@ -463,10 +469,12 @@
     translated: "He will speak his mind fully and without reservation."
   - split: 12
     text: "#PlayerName#招式凌厉，然后劲不足。"
-    translated: "#PlayerName's attacks are sharp and precise, then lack power."
+    translated: "#PlayerName#'s attacks were sharp and decisive, but then lacked power."
   - split: 12
     subIndex: 1
     text: "若能藏锋敛气，内外兼修，便能更上一层楼。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 2
     template: "{0}\\n{1}"
@@ -505,6 +513,7 @@
     translated: "...What expression is that? I didn't mean to steal anything from you."
   - split: 4
     text: "天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。"
+    translated: "Heaven and Earth are indifferent; they treat all things as straws in a ritual. Saints are also indifferent; they treat the people as straws in a ritual."
   - split: 4
     subIndex: 1
     text: "便是老夫也算不出，这乱世究竟何时终结......"
@@ -545,7 +554,7 @@
   - split: 11
     subIndex: 2
     text: "的名号。"
-    translated: "The name"
+    translated: "Name"
   - split: 11
     subIndex: 3
     text: "每每想来，只觉诚惶诚恐，羞愧莫名。"
@@ -633,6 +642,7 @@
     translated: "Ancient sorrows span thousands of tales;   Only partings and reunions bring sighs and smiles. While the river may appear calm, true trials lie in the difficulties of human life, they say."
   - split: 8
     text: "师傅老人家总喜欢念些诗词歌赋，什么之乎者也，着实拗口。"
+    translated: "Master elderly folks often like reciting poems and verses, all those 'zhi hu zhe ye', are truly hard to pronounce."
   - split: 8
     subIndex: 1
     text: "好好说话不行吗？#PlayerName#你也是这么想的吧！"
@@ -660,6 +670,7 @@
     translated: "Soldiers lie amidst the grass and weeds, while generals vainly lament. Thus I understand that war is a weapon of evil; sages employ it only out of necessity."
   - split: 12
     text: "无声无象，全身空透，应物自然，西山悬磬。"
+    translated: "Soundless and formless, fully permeating the body, adapting to things naturally, West Mountain Xuanying."
   - split: 12
     subIndex: 1
     text: "虎吼猿鸣，水清河静，翻汇倒海，尽性立命。"
@@ -707,6 +718,7 @@
   - split: 3
     subIndex: 1
     text: "此等劫富济贫侠义之举，又怎能算是"
+    translated: "Such acts of righting wrongs and helping the needy, how can they be considered anything but commendable?"
   - split: 3
     subIndex: 2
     text: "偷"
@@ -741,7 +753,9 @@
     translated: "Only by sitting on the fence and adapting to the wind can one remain invincible."
   - split: 8
     text: "师傅他总念叨着什么佛家、道家、儒家之争，也不知有什么好争的。"
-    translated: "He always goes on about the disputes between Buddhism, Daoism, and Confucianism, but I wonder what the fuss is about."
+    translated: "He always talks about the debates between Buddhism, Daoism, and Confucianism, but I wonder what's so contentious about it."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Master,师傅,"
   - split: 8
     subIndex: 1
     text: "大不了开个比武擂台，大家一较高下不就行了。"
@@ -759,13 +773,16 @@
   - split: 10
     subIndex: 1
     text: "什么仁义道德，不过是庸人自扰罢了。"
+    translated: "What righteousness and morality, merely bother common people unnecessarily."
   - split: 11
     text: "天地有正气，公道在人心。"
     translated: "Righteous energy fills the universe; justice lies in the hearts of men."
   - split: 11
     subIndex: 1
     text: "我郭淮能得武林众人厚爱，唯靠"
-    translated: "I can earn the affection of the Wulin solely through"
+    translated: "I can earn the affection of the Wulin, solely through"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Guo Huai,郭淮,"
   - split: 11
     subIndex: 2
     text: "侠义"
@@ -811,12 +828,16 @@
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 2
     subIndex: 1
     text: "人生一世，又能遇上几个倾心相交的英雄豪杰？"
     translated: "How many devoted and like‑minded heroes can one encounter in a lifetime?"
   - split: 3
     text: "#PlayerName#放心，本姑娘一般不偷相熟之人的东西......"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 3
     subIndex: 1
     text: "除非有人惹我不开心了！"
@@ -868,6 +889,7 @@
     translated: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
   - split: 11
     text: "兄弟义气，自当肝胆相照，一片赤诚。"
+    translated: "Brotherly loyalty demands openness and sincerity, a heart as red as one's words."
   - split: 11
     subIndex: 1
     text: "想必#PlayerName#也如此认为。"
@@ -940,6 +962,7 @@
     translated: "Who dares to oppose me, Old Man will make him regret for life!"
   - split: 7
     text: "明枪易躲，暗箭难防。"
+    translated: "A arrow in the open is easy to dodge, but an ambush is hard to guard against."
   - split: 7
     subIndex: 1
     text: "行走江湖之时，还是少结些仇家为妙。"

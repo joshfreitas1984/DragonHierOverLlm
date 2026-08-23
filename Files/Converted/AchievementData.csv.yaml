@@ -149,6 +149,7 @@
     translated: "Master Craftsman"
   - split: 2
     text: "累计铸造"
+    translated: "Cumulative Casting"
   - split: 2
     subIndex: 1
     text: "炼药"
@@ -490,6 +491,7 @@
     translated: "Achieve the Dragon and Phoenix Harmony Ending"
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
+    translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
   - split: 5
     subIndex: 1
     text: "自宅"

@@ -123,6 +123,7 @@
   - split: 10
     subIndex: 1
     text: "+0.5%卸力"
+    translated: "+0.5% Absorb Force"
   - split: 10
     subIndex: 2
     text: "+0.5%负面加成"
@@ -708,6 +709,8 @@
     translated: "None"
   - split: 10
     text: "影响装备制作"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "强化，巩固"

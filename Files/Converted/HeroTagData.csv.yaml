@@ -2034,6 +2034,7 @@
     translated: "Arrow from a startled bird"
   - split: 9
     text: "射术100"
+    translated: "Archery 100"
   - split: 9
     subIndex: 1
     text: "内功100"
