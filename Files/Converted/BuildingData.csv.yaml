@@ -64,240 +64,192 @@
     translated: "Main Hall"
   - split: 7
     text: "门派弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect disciples"
   - split: 7
     subIndex: 1
     text: "查看弟子相关信息"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Check Disciple Information"
   - split: 7
     subIndex: 2
     text: "门派职位"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect position"
   - split: 7
     subIndex: 3
     text: "管理门派特殊职位"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage special positions in the sect"
   - split: 7
     subIndex: 4
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 5
     text: "长老"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Elder"
   - split: 7
     subIndex: 6
     text: "弟子方针"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple Strategy"
   - split: 7
     subIndex: 7
     text: "设定弟子行动方针"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Set the junior disciple's action strategy"
   - split: 7
     subIndex: 8
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 9
     text: "长老"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Elder"
   - split: 7
     subIndex: 10
     text: "门派外交"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Diplomacy"
   - split: 7
     subIndex: 11
     text: "与其他门派进行外交"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Engage in diplomacy with other sects"
   - split: 7
     subIndex: 12
     text: "非我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Not me"
   - split: 7
     subIndex: 13
     text: "门派科研"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Research"
   - split: 7
     subIndex: 14
     text: "查看门派科研情况"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "View the sect's research status"
   - split: 7
     subIndex: 15
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 16
     text: "查看科研"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Check research"
   - split: 7
     subIndex: 17
     text: "查看门派科研情况"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "View the sect's research status"
   - split: 7
     subIndex: 18
     text: "非我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Not me"
   - split: 7
     subIndex: 19
     text: "门派委托"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Commission"
   - split: 7
     subIndex: 20
     text: "完成门派委托获取银钱和门派功绩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Complete the Sect Commission to earn silver and Sect merits."
   - split: 7
     subIndex: 21
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 22
     text: "入门弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Novice Disciple"
   - split: 7
     subIndex: 23
     text: "挥师出征"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "March to battle"
   - split: 7
     subIndex: 24
     text: "向周遭区域发起攻击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Attack the surrounding area"
   - split: 7
     subIndex: 25
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 26
     text: "掌门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Master"
   - split: 7
     subIndex: 27
     text: "外交派遣"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Diplomatic mission"
   - split: 7
     subIndex: 28
     text: "派遣信使进行外交"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dispatch diplomats for diplomacy"
   - split: 7
     subIndex: 29
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 30
     text: "掌门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Master"
   - split: 7
     subIndex: 31
     text: "别派委托"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Don't assign commissions"
   - split: 7
     subIndex: 32
     text: "完成别派委托获取银钱和别派功绩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Complete side quests to earn silver and reputation points from other factions"
   - split: 7
     subIndex: 33
     text: "非我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Not me"
   - split: 7
     subIndex: 34
     text: "功绩兑换"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Merit Exchange"
   - split: 7
     subIndex: 35
     text: "功绩兑换武学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Merit Exchange Martial Techniques"
   - split: 7
     subIndex: 36
     text: "服装"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Clothing"
   - split: 7
     subIndex: 37
     text: "特殊建筑"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Special buildings"
   - split: 7
     subIndex: 38
     text: "非我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Not me"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 10
     text: "区域上限2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Area cap 2"
   - split: 10
     subIndex: 1
     text: "弟子上限20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple cap 20"
   - split: 10
     subIndex: 2
     text: "仓储容量4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Storage capacity 4"
   - split: 12
     text: "威望400"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation400"
   - split: 12
     subIndex: 1
     text: "银钱2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 2000"
   - split: 12
     subIndex: 2
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 12
     subIndex: 3
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 4
     text: "矿石1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 1000"
   - split: 19
     text: "门派正中之厅堂，亦是一门之中最为重要之建筑，掌门往往在此安排事务，举办会议，会见宾客。"
     translated: "The hall at the center of the sect is one of its most important structures, where the Sect Leader often handles affairs, holds meetings, and receives guests."
@@ -317,131 +269,104 @@
     translated: "Temple Scriptures Pavilion"
   - split: 7
     text: "阅读藏书"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read the library"
   - split: 7
     subIndex: 1
     text: "阅读藏经阁秘籍获取理论经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read the scriptures in the Tripitaka Pavilion to gain theoretical experience."
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 4
     text: "阅读秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read the cheat sheet"
   - split: 7
     subIndex: 5
     text: "阅读行囊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read the inventory"
   - split: 7
     subIndex: 6
     text: "仓库秘籍获取理论经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Warehouse secret skill acquisition theoretical experience"
   - split: 7
     subIndex: 7
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 8
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 9
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 7
     subIndex: 10
     text: "编纂秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Compile the secret scrolls"
   - split: 7
     subIndex: 11
     text: "对秘籍进行整合"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Integrate the secretskicheng"
   - split: 7
     subIndex: 12
     text: "抄录"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Copy"
   - split: 7
     subIndex: 13
     text: "默写"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     subIndex: 14
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 15
     text: "正式弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Formal disciple"
   - split: 7
     subIndex: 16
     text: "管理藏书"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage the library"
   - split: 7
     subIndex: 17
     text: "管理藏经阁内藏书"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage the books in the Repository Archive"
   - split: 7
     subIndex: 18
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 19
     text: "副掌门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vice Sect Leader"
   - split: 7
     subIndex: 20
     text: "盗窃藏书"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Theft of rare books"
   - split: 7
     subIndex: 21
     text: "偷窃藏经阁内藏书"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stealing books from the Cangjingge Cangjingge is a repository of scriptures."
   - split: 7
     subIndex: 22
     text: "非我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Not me"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "理论经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Theoretical experience 0.1"
   - split: 10
     subIndex: 1
     text: "藏经容量40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Capacity of Jingzang 40"
   - split: 12
     text: "木料1000"
     translated: "1000 timber"
@@ -462,52 +387,42 @@
     translated: "Training Grounds"
   - split: 7
     text: "练习"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice"
   - split: 7
     subIndex: 1
     text: "练习武功获取实战经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice martial arts to gain practical combat experience"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 4
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 7
     subIndex: 5
     text: "切磋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Refine skills through practice"
   - split: 7
     subIndex: 6
     text: "与门派弟子进行切磋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spar with Sect apprentices"
   - split: 7
     subIndex: 7
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 8
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "实战经验0.1"
     translated: "Combat experience 0.1"
@@ -529,110 +444,88 @@
     translated: "Seclusion Room"
   - split: 7
     text: "修炼"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cultivate"
   - split: 7
     subIndex: 1
     text: "修炼内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cultivate neigong"
   - split: 7
     subIndex: 2
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 7
     subIndex: 3
     text: "绝技获取实战经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Master advanced techniques through practical experience"
   - split: 7
     subIndex: 4
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 5
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 6
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 7
     subIndex: 7
     text: "突破"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breakthrough"
   - split: 7
     subIndex: 8
     text: "突破抵达瓶颈的武学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breaking through the bottleneck in martial arts proficiency"
   - split: 7
     subIndex: 9
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 10
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 11
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 7
     subIndex: 12
     text: "天赋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gift"
   - split: 7
     subIndex: 13
     text: "消耗天赋点领悟天赋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spend Talent Points to Understand Talents"
   - split: 7
     subIndex: 14
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 15
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 16
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "理论经验0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practical experience with 0.05"
   - split: 10
     subIndex: 1
     text: "实战经验0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Combat experience 0.05"
   - split: 12
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 1
     text: "药材500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "500 herbs"
   - split: 19
     text: "位于门派深处一处幽僻隐秘的建筑，设有修习内功，轻功以及绝技的各类器械秘籍、机关装置，以及突破武学境界所需的闭关房。"
     translated: "In a secluded and hidden building deep within the sect, there are various manuals and devices for cultivating neigong and qinggong, as well as supreme techniques. Mechanism traps and seclusion rooms have also been installed to aid in breaking through the martial arts realm."
@@ -652,119 +545,95 @@
     translated: "Ancestral hall"
   - split: 7
     text: "祭典"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Festival"
   - split: 7
     subIndex: 1
     text: "获取门派威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Acquire Sect Prestige"
   - split: 7
     subIndex: 2
     text: "技能影响：学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Knowledge"
   - split: 7
     subIndex: 3
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 4
     text: "鉴定"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Identification"
   - split: 7
     subIndex: 5
     text: "鉴定珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Appraise Treasures"
   - split: 7
     subIndex: 6
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 7
     text: "入门弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Novice Disciple"
   - split: 7
     subIndex: 8
     text: "门派展厅"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Exhibition Hall"
   - split: 7
     subIndex: 9
     text: "管理门派展厅"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage the Sect Exhibition Hall"
   - split: 7
     subIndex: 10
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 11
     text: "正式弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Formal disciple"
   - split: 7
     subIndex: 12
     text: "宴会"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Banquet"
   - split: 7
     subIndex: 13
     text: "与门派弟子宴饮提升忠诚"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dine with Sect Disciples to Boost Loyalty"
   - split: 7
     subIndex: 14
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 15
     text: "掌门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Master"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "科研效率0.4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Research efficiency 0.4"
   - split: 10
     subIndex: 1
     text: "学识经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Knowledge and experience 0.1"
   - split: 10
     subIndex: 2
     text: "口才经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Speech experience 0.1"
   - split: 12
     text: "威望100"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation 100"
   - split: 12
     subIndex: 1
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 12
     subIndex: 2
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 19
     text: "供奉祭祀门派历代掌门先贤之所，同时设有陈列珍宝之展厅，以及研习技艺，鉴定珍宝所需的各类工具书籍。"
     translated: "A hall for honoring and worshipping the ancestors of past Sect Leaders, equipped with exhibition halls to display treasures, as well as various tools and books needed for studying techniques and appraising artifacts."
@@ -786,118 +655,94 @@
     translated: "Workshop"
   - split: 7
     text: "铸造"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Casting"
   - split: 7
     subIndex: 1
     text: "制作装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Craft equipment"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "正式弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Formal disciple"
   - split: 7
     subIndex: 4
     text: "煅烧"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Firing"
   - split: 7
     subIndex: 5
     text: "强化装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance equipment"
   - split: 7
     subIndex: 6
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 7
     text: "亲传弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Direct disciple"
   - split: 7
     subIndex: 8
     text: "烹饪"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cooking"
   - split: 7
     subIndex: 9
     text: "制作饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Preparing food"
   - split: 7
     subIndex: 10
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 11
     text: "精烩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Essence"
   - split: 7
     subIndex: 12
     text: "强化饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strengthened diet"
   - split: 7
     subIndex: 13
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 14
     text: "入门弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Novice Disciple"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "建造速度0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Construction speed 0.2"
   - split: 10
     subIndex: 1
     text: "锻造经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forging experience 0.1"
   - split: 10
     subIndex: 2
     text: "采伐经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Logging experience 0.1"
   - split: 11
     text: "木匠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Carpenter"
   - split: 11
     subIndex: 1
     text: "石坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stone archway"
   - split: 12
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 12
     subIndex: 1
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 19
     text: "设置有熔炉铁砧以及各式木匠工具之所，弟子在此制作各式武器防具，以供门派使用。"
     translated: "A place equipped with forges, an anvil, and various carpenter's tools, where disciples create all sorts of weapons and armor for the sect's use."
@@ -921,113 +766,90 @@
     translated: "Alchemical furnace"
   - split: 7
     text: "炼药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Alchemy"
   - split: 7
     subIndex: 1
     text: "制作丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Preparing elixirs"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "入门弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Novice Disciple"
   - split: 7
     subIndex: 4
     text: "炮制"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Prepare"
   - split: 7
     subIndex: 5
     text: "强化丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strengthening Elixir"
   - split: 7
     subIndex: 6
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 7
     text: "正式弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Formal disciple"
   - split: 7
     subIndex: 8
     text: "用毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poisoning"
   - split: 7
     subIndex: 9
     text: "对物品进行淬毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison the item"
   - split: 7
     subIndex: 10
     text: "下毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poisoning"
   - split: 7
     subIndex: 11
     text: "消毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disinfection"
   - split: 7
     subIndex: 12
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 13
     text: "入门弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Novice Disciple"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 10
     text: "疗伤效率0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing efficiency 0.05"
   - split: 10
     subIndex: 1
     text: "恢复效率0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Restore efficiency 0.05"
   - split: 10
     subIndex: 2
     text: "炼药经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Alchemical experience 0.1"
   - split: 10
     subIndex: 3
     text: "木植经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tree planting experience 0.1"
   - split: 11
     text: "药房"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pharmacy"
   - split: 12
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 1
     text: "药材500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "500 herbs"
   - split: 19
     text: "设置有杵臼甘埚以及各式丹炉药鼎之所，弟子在此炼制各式灵丹妙药，以供门派使用。"
     translated: "A place equipped with mortars and pestles, cauldrons, and various alchemical furnaces, where disciples here refine all sorts of elixirs and medicines for the sect's use."
@@ -1051,74 +873,59 @@
     translated: "Healing Room"
   - split: 7
     text: "疗伤"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing"
   - split: 7
     subIndex: 1
     text: "治疗伤势"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing wounds"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 4
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 7
     subIndex: 5
     text: "坐诊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "On duty"
   - split: 7
     subIndex: 6
     text: "为周边受伤侠士疗伤治病"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treat wounded warriors nearby"
   - split: 7
     subIndex: 7
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 8
     text: "正式弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Formal disciple"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 10
     text: "本地疗伤效率0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Local healing efficiency 0.1"
   - split: 10
     subIndex: 1
     text: "医术经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Medical experience 0.1"
   - split: 10
     subIndex: 2
     text: "毒术经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison technique experience 0.1"
   - split: 11
     text: "药房"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pharmacy"
   - split: 12
     text: "药材1000"
     translated: "1000 herbs"
@@ -1143,89 +950,71 @@
     translated: "Dormitory"
   - split: 7
     text: "休息"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Rest"
   - split: 7
     subIndex: 1
     text: "休养恢复状态"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recover health and status"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 4
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 7
     subIndex: 5
     text: "私人仓库"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Private warehouse"
   - split: 7
     subIndex: 6
     text: "存放物品"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Store items"
   - split: 7
     subIndex: 7
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 8
     text: "附庸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vassal"
   - split: 7
     subIndex: 9
     text: "门客"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Retainer"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "弟子上限20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple cap 20"
   - split: 10
     subIndex: 1
     text: "本地恢复效率0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Local recovery efficiency 0.1"
   - split: 10
     subIndex: 2
     text: "烹饪经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cooking experience 0.1"
   - split: 11
     text: "摊贩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vendor"
   - split: 11
     subIndex: 1
     text: "磨坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mill"
   - split: 12
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 1
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 19
     text: "门派中人居住休憩之所，低级弟子往往几人合住一简朴厢房，位高者则有豪华厢房单独居住。"
     translated: "A place for residents and rest within the sect, junior disciples often share simple parlors with a few others, while those of higher rank have luxurious parlors for solitary living."
@@ -1247,90 +1036,72 @@
     translated: "Warehouse"
   - split: 7
     text: "门派金库"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Treasury"
   - split: 7
     subIndex: 1
     text: "管理门派银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage sect finances"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "入门弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Novice Disciple"
   - split: 7
     subIndex: 4
     text: "门派仓库"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect warehouse"
   - split: 7
     subIndex: 5
     text: "查看门派仓库"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "View Sect Warehouse"
   - split: 7
     subIndex: 6
     text: "管理售价"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage Selling Price"
   - split: 7
     subIndex: 7
     text: "管理门派仓库物品售价"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage the selling prices of items in the sect's warehouse"
   - split: 7
     subIndex: 8
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 9
     text: "副掌门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vice Sect Leader"
   - split: 7
     subIndex: 10
     text: "盗窃库存"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Theft of inventory"
   - split: 7
     subIndex: 11
     text: "偷窃门派仓库内物品"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stealing items from the Sect's warehouse"
   - split: 7
     subIndex: 12
     text: "非我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Not me"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 10
     text: "资源点产量0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Resource output 0.1"
   - split: 10
     subIndex: 1
     text: "仓储容量2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Storage capacity 2"
   - split: 12
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 1
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 19
     text: "各式木架，箱桶排列有序，门派资源皆储藏其中，门派弟子也均分配少量空间以储存私人物品。"
     translated: "Various wooden racks and boxes are arranged in order, storing the sect's resources. The sect's disciples also each have a small amount of space to store their personal items."
@@ -1350,81 +1121,64 @@
     translated: "Money Shop"
   - split: 7
     text: "经营"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Operate"
   - split: 7
     subIndex: 1
     text: "获取门派银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Acquire Sect Silver"
   - split: 7
     subIndex: 2
     text: "技能影响：口才"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Oratory Skill"
   - split: 7
     subIndex: 3
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 4
     text: "无门派"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "No sect"
   - split: 7
     subIndex: 5
     text: "放债"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     subIndex: 6
     text: "增加资源储量"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase resource reserves"
   - split: 7
     subIndex: 7
     text: "技能影响：口才"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Oratory Skill"
   - split: 7
     subIndex: 8
     text: "学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scholarship"
   - split: 7
     subIndex: 9
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 10
     text: "经营"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Operate"
   - split: 7
     subIndex: 11
     text: "窃取门派银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Steal the Sect's silver coins"
   - split: 7
     subIndex: 12
     text: "技能影响：口才"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Oratory Skill"
   - split: 7
     subIndex: 13
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 11
     text: "摊贩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vendor"
   - split: 12
     text: "银钱1000"
     translated: "Coin 1000"
@@ -1445,90 +1199,72 @@
     translated: "Crop Field"
   - split: 7
     text: "耕作"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Farming"
   - split: 7
     subIndex: 1
     text: "获取门派粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Acquire Sect Food Grain"
   - split: 7
     subIndex: 2
     text: "技能影响：木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Arboriculture"
   - split: 7
     subIndex: 3
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 4
     text: "无门派"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "No sect"
   - split: 7
     subIndex: 5
     text: "育种"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breeding"
   - split: 7
     subIndex: 6
     text: "增加资源储量"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase resource reserves"
   - split: 7
     subIndex: 7
     text: "技能影响：木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Arboriculture"
   - split: 7
     subIndex: 8
     text: "学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scholarship"
   - split: 7
     subIndex: 9
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 10
     text: "耕作"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Farming"
   - split: 7
     subIndex: 11
     text: "窃取门派粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Steal from the sect's food stores"
   - split: 7
     subIndex: 12
     text: "技能影响：木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Arboriculture"
   - split: 7
     subIndex: 13
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 11
     text: "磨坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mill"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 19
     text: "本地耕种粮食，养殖放牧之处，区域所有者可在此收取粮食，以供门派使用。"
     translated: "Local farming and livestock areas where the region's owner can collect crops to supply the sect."
@@ -1548,90 +1284,72 @@
     translated: "Forest"
   - split: 7
     text: "砍伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cut down"
   - split: 7
     subIndex: 1
     text: "获取门派木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Acquire Sect Timber"
   - split: 7
     subIndex: 2
     text: "技能影响：采伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Logging"
   - split: 7
     subIndex: 3
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 4
     text: "无门派"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "No sect"
   - split: 7
     subIndex: 5
     text: "勘探"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Exploration"
   - split: 7
     subIndex: 6
     text: "增加资源储量"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase resource reserves"
   - split: 7
     subIndex: 7
     text: "技能影响：采伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Logging"
   - split: 7
     subIndex: 8
     text: "学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scholarship"
   - split: 7
     subIndex: 9
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 10
     text: "砍伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cut down"
   - split: 7
     subIndex: 11
     text: "窃取门派木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Steal Sect timber"
   - split: 7
     subIndex: 12
     text: "技能影响：采伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Logging"
   - split: 7
     subIndex: 13
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 8
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 11
     text: "木匠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Carpenter"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 19
     text: "本地森林繁茂，树木茁壮之处，区域所有者可在此砍伐木材，以供门派使用。"
     translated: "Local forests thrive with robust trees. The area's owner can cut down wood here for the sect's use."
@@ -1651,90 +1369,72 @@
     translated: "Minefield"
   - split: 7
     text: "挖掘"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Digging"
   - split: 7
     subIndex: 1
     text: "获取门派矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Acquire Sect Ore"
   - split: 7
     subIndex: 2
     text: "技能影响：采伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Logging"
   - split: 7
     subIndex: 3
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 4
     text: "无门派"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "No sect"
   - split: 7
     subIndex: 5
     text: "勘探"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Exploration"
   - split: 7
     subIndex: 6
     text: "增加资源储量"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase resource reserves"
   - split: 7
     subIndex: 7
     text: "技能影响：采伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Logging"
   - split: 7
     subIndex: 8
     text: "学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scholarship"
   - split: 7
     subIndex: 9
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 10
     text: "挖掘"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Digging"
   - split: 7
     subIndex: 11
     text: "窃取门派矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Steal Sect minerals"
   - split: 7
     subIndex: 12
     text: "技能影响：采伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Logging"
   - split: 7
     subIndex: 13
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 8
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 11
     text: "石坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stone archway"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 19
     text: "本地开山凿石，探寻矿脉之处，区域所有者可在此开采矿石，以供门派使用。"
     translated: "Local sect members can excavate and mine stones in areas where mountain caves have been cleared to explore mineral veins. The area's owner can mine minerals here for the sect's use."
@@ -1754,90 +1454,72 @@
     translated: "Herb Garden"
   - split: 7
     text: "采收"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Harvest"
   - split: 7
     subIndex: 1
     text: "获取门派药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Acquire Sect Herbal Medicines"
   - split: 7
     subIndex: 2
     text: "技能影响：木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Arboriculture"
   - split: 7
     subIndex: 3
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 4
     text: "无门派"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "No sect"
   - split: 7
     subIndex: 5
     text: "育种"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breeding"
   - split: 7
     subIndex: 6
     text: "增加资源储量"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase resource reserves"
   - split: 7
     subIndex: 7
     text: "技能影响：木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Arboriculture"
   - split: 7
     subIndex: 8
     text: "学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scholarship"
   - split: 7
     subIndex: 9
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 10
     text: "采收"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Harvest"
   - split: 7
     subIndex: 11
     text: "窃取门派药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Steal Sect herbs"
   - split: 7
     subIndex: 12
     text: "技能影响：木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Arboriculture"
   - split: 7
     subIndex: 13
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 8
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 11
     text: "药房"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pharmacy"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "药材500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "500 herbs"
   - split: 19
     text: "本地种植药草，栽培异花之处，区域所有者可在此采摘药材，以供门派使用。"
     translated: "Local cultivation of herbs; the area's owner can harvest them here for the sect's use."
@@ -1857,109 +1539,87 @@
     translated: "Government offices"
   - split: 7
     text: "官职"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Position"
   - split: 7
     subIndex: 1
     text: "积累官府功绩提升官职"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Accumulate government achievements to advance in official rank"
   - split: 7
     subIndex: 2
     text: "功绩兑换"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Merit Exchange"
   - split: 7
     subIndex: 3
     text: "用官府功绩兑换物品"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Exchange items for official achievements"
   - split: 7
     subIndex: 4
     text: "护卫"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Guard"
   - split: 7
     subIndex: 5
     text: "官职"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Position"
   - split: 7
     subIndex: 6
     text: "官府委托"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Government Commission"
   - split: 7
     subIndex: 7
     text: "完成官府委托获取银钱和官府功绩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Complete the commission from the government to obtain silver and increase government merits"
   - split: 7
     subIndex: 8
     text: "官职"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Position"
   - split: 7
     subIndex: 9
     text: "恶名"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 7
     subIndex: 10
     text: "管理自身恶名"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage one's own reputation for ill"
   - split: 8
     text: "人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Population"
   - split: 8
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public safety"
   - split: 9
     subIndex: 1
     text: "民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public sentiment"
   - split: 10
     text: "人口上限400"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Population cap 400"
   - split: 10
     subIndex: 1
     text: "弟子上限5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple Cap 5"
   - split: 12
     text: "威望200"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation200"
   - split: 12
     subIndex: 1
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 2
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 3
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 12
     subIndex: 4
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 19
     text: "居于城镇中央，朝廷官员办公判案之所，气势恢宏，守卫森严，亦是一城之中最为重要之建筑。"
     translated: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent‑making it one of the most crucial structures in the entire city."
@@ -1981,57 +1641,46 @@
     translated: "Marketplace"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 7
     subIndex: 1
     text: "资源贸易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Resource trade"
   - split: 7
     subIndex: 2
     text: "买卖门派资源"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trading sect resources"
   - split: 7
     subIndex: 3
     text: "有门派"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "There is a sect"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "本地资源点产量0.2"
     translated: "Local resource point production 0.2"
   - split: 11
     text: "珍宝铺"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure Shop"
   - split: 11
     subIndex: 1
     text: "兵器铺"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Weapon Shop"
   - split: 11
     subIndex: 2
     text: "材料铺"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Materials distribution begins now"
   - split: 12
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 1
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 19
     text: "本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
     translated: "Local vendors gather here, a place for the common folk to trade and sell goods. Most items sold are varied but not of high quality. Members of various sects can also conduct large‑scale resource transactions here."
@@ -2053,127 +1702,102 @@
     translated: "Inn"
   - split: 7
     text: "探听"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Snoop"
   - split: 7
     subIndex: 1
     text: "打探周边随机事件"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Explore random events in the vicinity"
   - split: 7
     subIndex: 2
     text: "住宿"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Accommodation"
   - split: 7
     subIndex: 3
     text: "休养恢复状态"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recover health and status"
   - split: 7
     subIndex: 4
     text: "打杂"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "General laborer"
   - split: 7
     subIndex: 5
     text: "赚取少量银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Earn a little silver coin"
   - split: 7
     subIndex: 6
     text: "烹饪"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cooking"
   - split: 7
     subIndex: 7
     text: "制作饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Preparing food"
   - split: 7
     subIndex: 8
     text: "精烩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Essence"
   - split: 7
     subIndex: 9
     text: "强化饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strengthened diet"
   - split: 7
     subIndex: 10
     text: "义诊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Free clinic"
   - split: 7
     subIndex: 11
     text: "增加区域人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase the population in the area"
   - split: 7
     subIndex: 12
     text: "技能影响：炼药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Effect: Alchemy"
   - split: 7
     subIndex: 13
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 14
     text: "投药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Administering medicine"
   - split: 7
     subIndex: 15
     text: "降低区域人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Decrease the population in the area"
   - split: 7
     subIndex: 16
     text: "技能影响：炼药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Effect: Alchemy"
   - split: 7
     subIndex: 17
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 7
     subIndex: 18
     text: "负4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "‑4"
   - split: 8
     text: "民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public sentiment"
   - split: 9
     text: "治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public safety"
   - split: 10
     text: "本地恢复效率0.1"
     translated: "Local recovery efficiency 0.1"
   - split: 11
     text: "岗哨"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sentinel"
   - split: 11
     subIndex: 1
     text: "集市"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Marketplace"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 19
     text: "供商贾旅人和武林人士打尖住店之所，一楼提供各式家常菜肴，二楼则为住宿客房。"
     translated: "A place for merchants, travelers, and Wulin individuals to take a break and stay overnight, the first floor offers various home‑style dishes, while the second floor provides lodging rooms."
@@ -2195,88 +1819,71 @@
     translated: "Notice"
   - split: 7
     text: "卖艺"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Perform for hire"
   - split: 7
     subIndex: 1
     text: "通过卖艺赚取银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Earn silver through busking"
   - split: 7
     subIndex: 2
     text: "江湖委托"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Jianghu Commission"
   - split: 7
     subIndex: 3
     text: "完成江湖委托获取银钱和江湖声望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Complete Jianghu commissions to earn silver and fame in the Jianghu."
   - split: 7
     subIndex: 4
     text: "施舍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Charity"
   - split: 7
     subIndex: 5
     text: "增加区域民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase public sentiment in the region"
   - split: 7
     subIndex: 6
     text: "技能影响：烹饪"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Cooking"
   - split: 7
     subIndex: 7
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 8
     text: "劝诱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enticement"
   - split: 7
     subIndex: 9
     text: "降低区域民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reduce regional morale"
   - split: 7
     subIndex: 10
     text: "技能影响：烹饪"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Cooking"
   - split: 7
     subIndex: 11
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 7
     subIndex: 12
     text: "负2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "‑2"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "本地建造速度0.2"
     translated: "Local construction speed 0.2"
   - split: 11
     text: "客栈"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Inn"
   - split: 11
     subIndex: 1
     text: "集市"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Marketplace"
   - split: 12
     text: "木料1000"
     translated: "1000 timber"
@@ -2299,78 +1906,63 @@
     translated: "Sentinel"
   - split: 7
     text: "巡查"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Patrol"
   - split: 7
     subIndex: 1
     text: "提升当地治安并减少恶名"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Improve local law and order and reduce notoriety"
   - split: 7
     subIndex: 2
     text: "整备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Preparation"
   - split: 7
     subIndex: 3
     text: "增加区域治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase public safety in the area"
   - split: 7
     subIndex: 4
     text: "技能影响：锻造"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Smithing"
   - split: 7
     subIndex: 5
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 6
     text: "损毁"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Destruction"
   - split: 7
     subIndex: 7
     text: "降低区域治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Decrease regional law and order"
   - split: 7
     subIndex: 8
     text: "技能影响：锻造"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Smithing"
   - split: 7
     subIndex: 9
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 7
     subIndex: 10
     text: "负1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "‑1"
   - split: 8
     text: "治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public safety"
   - split: 9
     text: "民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public sentiment"
   - split: 10
     text: "本地资源点产量0.1"
     translated: "Local resource point production 0.1"
   - split: 11
     text: "酒馆"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tavern"
   - split: 11
     subIndex: 1
     text: "集市"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Marketplace"
   - split: 12
     text: "矿石1000"
     translated: "Mineral 1000"
@@ -2393,158 +1985,125 @@
     translated: "Sub‑branch office"
   - split: 7
     text: "分舵管理"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Branch management"
   - split: 7
     subIndex: 1
     text: "查看分舵相关情报"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     subIndex: 2
     text: "门派科研"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Research"
   - split: 7
     subIndex: 3
     text: "查看门派科研情况"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "View the sect's research status"
   - split: 7
     subIndex: 4
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 5
     text: "探索"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Explore"
   - split: 7
     subIndex: 6
     text: "探索区域获取门派资源"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Explore the area to acquire Sect resources"
   - split: 7
     subIndex: 7
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 8
     text: "招募"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recruit"
   - split: 7
     subIndex: 9
     text: "招募门派弟子"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recruit Sect Disciples"
   - split: 7
     subIndex: 10
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 11
     text: "修缮"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Renovation"
   - split: 7
     subIndex: 12
     text: "增加区域防御"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase area defense"
   - split: 7
     subIndex: 13
     text: "技能影响：木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Arboriculture"
   - split: 7
     subIndex: 14
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 15
     text: "破坏"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Destruction"
   - split: 7
     subIndex: 16
     text: "降低区域防御"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Lower area defense"
   - split: 7
     subIndex: 17
     text: "技能影响：采掘"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Impact: Mining"
   - split: 7
     subIndex: 18
     text: "敌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Di"
   - split: 7
     subIndex: 19
     text: "负3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "‑3"
   - split: 8
     text: "防御"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Defense"
   - split: 8
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "科研效率0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Research efficiency 0.2"
   - split: 10
     subIndex: 1
     text: "仓储容量1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Storage capacity 1"
   - split: 10
     subIndex: 2
     text: "弟子上限5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple Cap 5"
   - split: 11
     text: "武馆"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Martial arts dojo"
   - split: 11
     subIndex: 1
     text: "医馆"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Medical Pavilion"
   - split: 12
     text: "威望50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation 50"
   - split: 12
     subIndex: 1
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 2
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 12
     subIndex: 3
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 19
     text: "武林门派大多地处偏远，于城镇内设立分舵便于弟子驻防管理，从而获取城内税金以及各式资源。"
     translated: "Most sects in the Wulin are located in remote areas and establish branch headquarters within towns to facilitate disciple garrison management. This allows them to obtain town taxes and various resources."
@@ -2568,52 +2127,42 @@
     translated: "Inn"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 7
     subIndex: 1
     text: "马车"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Horse‑drawn carriage"
   - split: 7
     subIndex: 2
     text: "乘坐马车快速前往其他城市"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ride the carriage quickly to other cities"
   - split: 8
     text: "治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public safety"
   - split: 8
     subIndex: 1
     text: "人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Population"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "旅行速度0.04"
     translated: "Travel speed 0.04"
   - split: 11
     text: "珍宝铺"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure Shop"
   - split: 11
     subIndex: 1
     text: "告示"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Notice"
   - split: 12
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 12
     subIndex: 1
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 19
     text: "设于要道通衢旁，供往来旅客和江湖人士乘坐马车或更换马匹的场所。"
     translated: "Located beside major thoroughfares, this place offers travelers and individuals from the Jianghu a chance to ride carriages or change horses."
@@ -2635,118 +2184,94 @@
     translated: "Martial arts dojo"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 7
     subIndex: 1
     text: "馆藏武学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Collected Martial Arts Styles"
   - split: 7
     subIndex: 2
     text: "学习馆内所藏武学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Study the martial arts techniques housed in the academy"
   - split: 7
     subIndex: 3
     text: "阅读秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read the cheat sheet"
   - split: 7
     subIndex: 4
     text: "阅读行囊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read the inventory"
   - split: 7
     subIndex: 5
     text: "仓库秘籍获取理论经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Warehouse secret skill acquisition theoretical experience"
   - split: 7
     subIndex: 6
     text: "自行练习"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice on your own"
   - split: 7
     subIndex: 7
     text: "练习武功获取实战经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice martial arts to gain practical combat experience"
   - split: 7
     subIndex: 8
     text: "雇佣陪练"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hire a training partner"
   - split: 7
     subIndex: 9
     text: "与武师进行切磋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spar with martial artists"
   - split: 7
     subIndex: 10
     text: "突破"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breakthrough"
   - split: 7
     subIndex: 11
     text: "突破抵达瓶颈的武学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breaking through the bottleneck in martial arts proficiency"
   - split: 7
     subIndex: 12
     text: "天赋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gift"
   - split: 7
     subIndex: 13
     text: "消耗天赋点领悟天赋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spend Talent Points to Understand Talents"
   - split: 7
     subIndex: 14
     text: "踢馆"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Challenge the master"
   - split: 7
     subIndex: 15
     text: "挑战武师抢夺馆内秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Challenge the martial artists to steal secret manuals from the academy"
   - split: 8
     text: "防御"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Defense"
   - split: 8
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "理论经验0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practical experience with 0.05"
   - split: 10
     subIndex: 1
     text: "实战经验0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Combat experience 0.05"
   - split: 11
     text: "兵器铺"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Weapon Shop"
   - split: 12
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 12
     subIndex: 1
     text: "药材500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "500 herbs"
   - split: 19
     text: "朝廷势弱，盗匪横行，大多城镇中皆设有武馆，供民众习武强身，也有不少江湖中人会在此任教演习。"
     translated: "The court's power was weak, and bandits roamed freely. As a result, most towns had martial arts schools to allow the public to learn martial arts for self‑defense. There were also many practitioners from the Jianghu who taught and practiced there."
@@ -2770,88 +2295,71 @@
     translated: "Medical Pavilion"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 7
     subIndex: 1
     text: "疗伤"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing"
   - split: 7
     subIndex: 2
     text: "治疗伤势"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing wounds"
   - split: 7
     subIndex: 3
     text: "坐诊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "On duty"
   - split: 7
     subIndex: 4
     text: "为周边受伤侠士疗伤治病"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treat wounded warriors nearby"
   - split: 7
     subIndex: 5
     text: "炼药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Alchemy"
   - split: 7
     subIndex: 6
     text: "制作丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Preparing elixirs"
   - split: 7
     subIndex: 7
     text: "炮制"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Prepare"
   - split: 7
     subIndex: 8
     text: "强化丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strengthening Elixir"
   - split: 7
     subIndex: 9
     text: "用毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poisoning"
   - split: 7
     subIndex: 10
     text: "对物品进行淬毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison the item"
   - split: 7
     subIndex: 11
     text: "下毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poisoning"
   - split: 7
     subIndex: 12
     text: "消毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disinfection"
   - split: 8
     text: "民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public sentiment"
   - split: 8
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 10
     text: "本地疗伤效率0.1"
     translated: "Local healing efficiency 0.1"
   - split: 11
     text: "药房"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pharmacy"
   - split: 12
     text: "药材1000"
     translated: "1000 herbs"
@@ -2874,44 +2382,35 @@
     translated: "Treasure Shop"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 7
     subIndex: 1
     text: "鉴定"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Identification"
   - split: 7
     subIndex: 2
     text: "鉴定珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Appraise Treasures"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 11
     text: "摊贩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vendor"
   - split: 11
     subIndex: 1
     text: "磨坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mill"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 19
     text: "专门售卖各类古董珍宝的店铺。"
     translated: "A shop specializing in various antiquities and treasures."
@@ -2933,54 +2432,43 @@
     translated: "Weapon Shop"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 7
     subIndex: 1
     text: "铸造"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Casting"
   - split: 7
     subIndex: 2
     text: "制作装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Craft equipment"
   - split: 7
     subIndex: 3
     text: "煅烧"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Firing"
   - split: 7
     subIndex: 4
     text: "强化装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance equipment"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 11
     text: "木匠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Carpenter"
   - split: 11
     subIndex: 1
     text: "石坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stone archway"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "矿石500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 500"
   - split: 19
     text: "专门售卖各类兵器防具的店铺。"
     translated: "A shop specializing in various weapons and armor."
@@ -3002,34 +2490,27 @@
     translated: "Materials distribution begins now"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 11
     text: "木匠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Carpenter"
   - split: 11
     subIndex: 1
     text: "石坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stone archway"
   - split: 12
     text: "银钱500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 500"
   - split: 12
     subIndex: 1
     text: "木料500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "'500' wood has been incorrectly removed from the translation."
   - split: 19
     text: "专门售卖各类制作材料的店铺。"
     translated: "A store specializing in various crafting materials"
@@ -3051,19 +2532,16 @@
     translated: "Residential house"
   - split: 8
     text: "人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Population"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "人口上限100"
     translated: "Population cap 100"
   - split: 11
     text: "药房"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Pharmacy"
   - split: 12
     text: "粮食500"
     translated: "Food 500"
@@ -3084,21 +2562,17 @@
     translated: "Resident"
   - split: 8
     text: "治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public safety"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 11
     text: "摊贩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vendor"
   - split: 11
     subIndex: 1
     text: "磨坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mill"
   - split: 12
     text: "矿石500"
     translated: "Mineral 500"
@@ -3119,21 +2593,17 @@
     translated: "Garden"
   - split: 8
     text: "民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Public sentiment"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 11
     text: "木匠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Carpenter"
   - split: 11
     subIndex: 1
     text: "石坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stone archway"
   - split: 12
     text: "木料500"
     translated: "'500' wood has been incorrectly removed from the translation."
@@ -3154,8 +2624,7 @@
     translated: "Vendor"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 11
     text: "摊贩"
     translated: "Vendor"
@@ -3177,20 +2646,17 @@
     translated: "Mill"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 11
     text: "磨坊"
     translated: "Mill"
   - split: 12
     text: "银钱250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 250"
   - split: 12
     subIndex: 1
     text: "粮食250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 250"
   - split: 19
     text: "一处小型模仿，可以产出少量粮食。"
     translated: "A small‑scale mimicry that can produce a modest amount of grain."
@@ -3208,25 +2674,21 @@
     translated: "Carpenter"
   - split: 8
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 11
     text: "木匠"
     translated: "Carpenter"
   - split: 11
     subIndex: 1
     text: "工棚"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Barracks"
   - split: 12
     text: "银钱250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 250"
   - split: 12
     subIndex: 1
     text: "木料250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 wood"
   - split: 19
     text: "一处小型木匠，可以产出少量木料。"
     translated: "A small carpenter can produce a modest amount of wood."
@@ -3244,25 +2706,21 @@
     translated: "Stone archway"
   - split: 8
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 11
     text: "石坊"
     translated: "Stone archway"
   - split: 11
     subIndex: 1
     text: "工棚"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Barracks"
   - split: 12
     text: "银钱250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 250"
   - split: 12
     subIndex: 1
     text: "矿石250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 ore"
   - split: 19
     text: "一处小型石坊，可以产出少量矿石。"
     translated: "A small stone archway that can produce a minor amount of minerals."
@@ -3280,8 +2738,7 @@
     translated: "Pharmacy"
   - split: 8
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 11
     text: "药房"
     translated: "Pharmacy"
@@ -3303,20 +2760,17 @@
     translated: "Guest room"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "弟子上限2"
     translated: "Disciple limit2"
   - split: 12
     text: "粮食250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 250"
   - split: 12
     subIndex: 1
     text: "木料250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 wood"
   - split: 19
     text: "一处小型宿舍，可以扩展门派的住宿空间。"
     translated: "A small dormitory that can expand the sect's accommodation space."
@@ -3332,20 +2786,17 @@
     translated: "Granary"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "仓储容量1"
     translated: "Storage capacity 1"
   - split: 12
     text: "木料250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 wood"
   - split: 12
     subIndex: 1
     text: "矿石250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 ore"
   - split: 19
     text: "一处小型仓库，可以扩展门派的储存空间。"
     translated: "A small warehouse that can expand the sect's storage capacity."
@@ -3361,20 +2812,17 @@
     translated: "Arena"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "实战经验0.02"
     translated: "Practical battle experience 0.02"
   - split: 12
     text: "矿石250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 ore"
   - split: 12
     subIndex: 1
     text: "药材250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 herbs"
   - split: 19
     text: "一处比武操练的场地，供弟子实战演练所用。"
     translated: "A training ground for martial arts practice, used by disciples for practical exercises."
@@ -3390,20 +2838,17 @@
     translated: "Quiet Room"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "理论经验0.02"
     translated: "Theoretical experience 0.02"
   - split: 12
     text: "木料250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 wood"
   - split: 12
     subIndex: 1
     text: "药材250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 herbs"
   - split: 19
     text: "一处幽深静谧的暗室，供弟子理论研习所用。"
     translated: "A quiet and deep room for disciples to theorize and study."
@@ -3419,72 +2864,57 @@
     translated: "Tavern"
   - split: 7
     text: "交易"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trade"
   - split: 7
     subIndex: 1
     text: "宴会"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Banquet"
   - split: 7
     subIndex: 2
     text: "与周边侠士宴饮增进关系"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Socialize and improve relations with nearby warriors by feasting together."
   - split: 7
     subIndex: 3
     text: "博骰"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Bet"
   - split: 7
     subIndex: 4
     text: "与侠士掷骰赌博一试手气"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Challenge the xia Shi to a game of dice to test their luck"
   - split: 7
     subIndex: 5
     text: "保镖"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Bodyguard"
   - split: 7
     subIndex: 6
     text: "雇佣保镖随行护卫"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 8
     subIndex: 1
     text: "人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Population"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "弟子功绩0.05"
     translated: "Disciple's Achievements 0.05"
   - split: 11
     text: "告示"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Notice"
   - split: 11
     subIndex: 1
     text: "集市"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Marketplace"
   - split: 12
     text: "粮食500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 500"
   - split: 12
     subIndex: 1
     text: "药材500"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "500 herbs"
   - split: 19
     text: "供市井小民和武林人士宴饮作乐之所，陈设华丽，人声嘈杂，更有庄家在此开设赌局，吸引往来人士一试手气。"
     translated: "A luxurious establishment catering to both commoners and martial artists for feasting and entertainment, it is filled with the cacophony of voices. Additionally, there are dealers setting up gambling sessions here, drawing in passersby to test their luck."
@@ -3506,24 +2936,20 @@
     translated: "Private school"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "科研效率0.08"
     translated: "Research efficiency 0.08"
   - split: 11
     text: "祠堂"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ancestral hall"
   - split: 12
     text: "威望25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation25"
   - split: 12
     subIndex: 1
     text: "粮食250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 250"
   - split: 19
     text: "讲经授课之处，可以增加门派的科研效率。"
     translated: "A place for preaching and teaching can increase the Sect's research efficiency."
@@ -3541,29 +2967,24 @@
     translated: "Barracks"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "建造速度0.04"
     translated: "Construction speed 0.04"
   - split: 11
     text: "木匠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Carpenter"
   - split: 11
     subIndex: 1
     text: "石坊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stone archway"
   - split: 12
     text: "粮食250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food 250"
   - split: 12
     subIndex: 1
     text: "矿石250"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "250 ore"
   - split: 19
     text: "修缮施工之处，可以增加门派的建造速度。"
     translated: "Renovating construction sites can increase the sect's building speed."
@@ -3581,53 +3002,43 @@
     translated: "Palace"
   - split: 7
     text: "勋阶"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Rank"
   - split: 7
     subIndex: 1
     text: "进贡"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tribute"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 1
     text: "全域人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global population"
   - split: 8
     subIndex: 2
     text: "全域治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global law and order"
   - split: 8
     subIndex: 3
     text: "全域民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global public sentiment"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "区域上限2"
     translated: "Area cap 2"
   - split: 12
     text: "银钱2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 2000"
   - split: 12
     subIndex: 1
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 2
     text: "矿石1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 1000"
   - split: 19
     text: "当朝皇帝所居之宫殿，虽几经战乱焚毁太半，依旧气势恢宏，极具王者气象。"
     translated: "Although the imperial palace of the current emperor has been largely destroyed by wars and fires, it still exudes a majestic momentum and embodies the grandeur of royal power."
@@ -3647,43 +3058,35 @@
     translated: "Grand Canal"
   - split: 7
     text: "珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 8
     subIndex: 1
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 8
     subIndex: 2
     text: "全域人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global population"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 9
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "资源点产量0.2"
     translated: "Resource output 0.2"
   - split: 12
     text: "银钱2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 2000"
   - split: 12
     subIndex: 1
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 19
     text: "历代不断开凿扩建而成，中原与江南地区往来通商、水路漕运之第一要道，其河面宽广，船舶林立，半天下之奇珍异宝，银钱粮饷，悉由此路进出。两岸港口码头，街市集镇，更不可胜数。"
     translated: "Carved and expanded upon over generations, it has become the primary route for commerce between the Central Plains and the Jiangnan region, vital for waterway transportation. The river is wide with ships moored along its length, carrying half the nation's treasures and rarities, silver, money, and grain supplies through this passage. On both banks, countless ports and docks, as well as market towns and cities, line the way."
@@ -3703,44 +3106,35 @@
     translated: "Camphor Port"
   - split: 7
     text: "奇材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Odd talent"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 8
     subIndex: 1
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 9
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "资源点产量0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Resource output 0.1"
   - split: 10
     subIndex: 1
     text: "技艺经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill experience 0.1"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "粮食2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 2000"
   - split: 19
     text: "海上交通贸易之重要港口，来往于此的商贾密布，舶船如织，盛况空前，各种来自海外的稀有材料，奇珍异宝，乃至飞禽走兽，皆在此流通买卖，因而时人誉曰：海上丝路，自此始也。"
     translated: "An important port for maritime trade and commerce, this place is bustling with merchants and ships sailing back and forth. The scene is unprecedentedly vibrant, with various rare materials, exotic treasures, and even birds and beasts from afar all circulating here in trade. Thus, contemporaries hailed it as the beginning of what was later known as the Maritime Silk Road: From Here Begin the Voyages."
@@ -3762,38 +3156,31 @@
     translated: "Chongsheng Temple"
   - split: 7
     text: "治愈"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Heal"
   - split: 8
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 8
     subIndex: 1
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 2
     text: "全域民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global public sentiment"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "疗伤效率0.2"
     translated: "Healing efficiency 0.2"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "药材2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 herbs"
   - split: 19
     text: "点苍山麓，洱海之滨，寺中有三塔峙立，金碧交辉，香火鼎盛，以五大重器闻名于世，堪称西南第一佛刹。传闻其间僧众不乏极擅医术者，慈悲为怀，济世救民，一时传为佳话。"
     translated: "At the foot of Diancang Mountain, beside Erhai Lake, there stand three pagodas within the temple, shining with golden and emerald light. The temple is renowned for its five major treasures and thrives with incense offerings. It is considered the foremost Buddhist monastery in Southwest China. Legends say that among the monks, many are exceptionally skilled in medicine, practicing compassion to heal the sick and save lives, which has become a well‑told tale."
@@ -3813,39 +3200,31 @@
     translated: "Great Wall"
   - split: 7
     text: "兵器"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Weapons"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 1
     text: "全域防御"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global Defense"
   - split: 9
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "实战经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Combat experience 0.1"
   - split: 10
     subIndex: 1
     text: "城防耐久0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "City defense durability 0.2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "依山而建的防御工事，由高大绵延的长垣以及敌楼、关城、墩堡、营城等组成，用于阻隔北方游牧骑兵入侵之铁蹄，作为自古以来兵家必争之地，一时也成了兵甲器具的集散交易之所。"
     translated: "Fortifications built along the mountains, composed of long ramparts, watchtowers, gate forts, and encampment cities. They were designed to block the invasion of northern nomadic cavalry with their iron hooves, making this a battleground coveted by military strategists throughout history. Temporarily, it also became a hub for the gathering and trading of weapons and armor."
@@ -3867,44 +3246,35 @@
     translated: "Jin Temple"
   - split: 7
     text: "布施"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Alms"
   - split: 8
     text: "全域民心"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global public sentiment"
   - split: 8
     subIndex: 1
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 2
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "技艺经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill experience 0.1"
   - split: 10
     subIndex: 1
     text: "弟子功绩0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple's achievements 0.1"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "木料2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 timber"
   - split: 19
     text: "历史悠久的皇家祭祀园林，其规模宏伟，由诸多祠堂，亭台，庙宇，楼阁及造景构成。历代皇帝皆会在此例行祭祀，本朝更是不断兴修亭台，扩建园林，以壮其威仪。"
     translated: "A historically renowned imperial sacrificial garden, its grand scale comprises numerous temples, pavilions, shrines, towers, and landscaping features. Rulers of past dynasties regularly conducted sacrifices here, and during our reign, more pavilions were constructed and the garden expanded to enhance its majesty."
@@ -3926,53 +3296,42 @@
     translated: "Dujiangyan"
   - split: 7
     text: "珍馐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Delicacy"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 9
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "资源点产量0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Resource output 0.1"
   - split: 10
     subIndex: 1
     text: "科研效率0.4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Research efficiency 0.4"
   - split: 12
     text: "粮食2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 2000"
   - split: 12
     subIndex: 1
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 19
     text: "由星罗棋布，错综复杂的引水渠道和大小水库组成的庞大水利工程，其渠可行舟，亦可作浇灌汲饮之用，蜀中以此灌溉沃野千里，并罕有水灾泛滥，终成其"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "By means of a vast hydraulic engineering system comprising intricately interconnected canals and numerous reservoirs both large and small, boats could navigate these channels while they also served for irrigation and water supply. This network irrigated thousands of miles of fertile land in Shu, rarely experiencing floods, thus contributing to its prosperity."
   - split: 19
     subIndex: 1
     text: "天府"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Land of Abundance"
   - split: 19
     subIndex: 2
     text: "之美名。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Of noble name"
   templates:
   - split: 7
     template: "{0}--ShowBuildingShop"
@@ -3993,43 +3352,35 @@
     translated: "Mogao Caves"
   - split: 7
     text: "闭关"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Secluded training"
   - split: 7
     subIndex: 1
     text: "遗忘武学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forgotten Martial Arts"
   - split: 7
     subIndex: 2
     text: "遗忘天赋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forgotten talent"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "理论经验0.2"
     translated: "Theoretical experience 0.2"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
     translated: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
@@ -4049,39 +3400,31 @@
     translated: "Yellow Crane Tower"
   - split: 7
     text: "招贤"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recruit Talent"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 1
     text: "全域治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global law and order"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 10
     text: "实战经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Combat experience 0.1"
   - split: 10
     subIndex: 1
     text: "弟子功绩0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple's Achievements 0.2"
   - split: 12
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 12
     subIndex: 1
     text: "木料2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 timber"
   - split: 19
     text: "上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
     translated: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance‑truly the finest scenery of Jing and Wu regions. Notable figures, talented young men frequently travel and socialize here, refining their skills."
@@ -4103,33 +3446,27 @@
     translated: "Red Light District"
   - split: 7
     text: "宴饮"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Banquet"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 8
     subIndex: 1
     text: "全域人口"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global population"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "恢复效率0.2"
     translated: "Restore efficiency 0.2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "粮食2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 2000"
   - split: 19
     text: "楼宇密布，车水马龙，好一派热闹景致，戏院，青楼，酒馆，赌坊林立其中，出入之人除贩夫走卒，三教九流之外，亦不乏豪商巨贾，文人雅士，歌舞宴饮之声，数里之外亦不绝于耳。"
     translated: "Skyscrapers loomed, traffic surged, and the scene was bustling with activity. Theaters, pleasure houses, taverns, and gambling dens were scattered throughout. Besides the common folk and people from all walks of life, it was also frequented by wealthy merchants, scholars, and artists. The sound of music, singing, and feasting echoed for miles around."
@@ -4149,39 +3486,31 @@
     translated: "Potala Palace"
   - split: 7
     text: "灵药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Elixir"
   - split: 8
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 8
     subIndex: 1
     text: "全域治安"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Global law and order"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "弟子上限10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disciple Cap 10"
   - split: 10
     subIndex: 1
     text: "仓储容量4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Storage capacity 4"
   - split: 12
     text: "矿石1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 1000"
   - split: 12
     subIndex: 1
     text: "药材2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 herbs"
   - split: 19
     text: "依山而建，殿宇嵯峨，气势雄伟的寺庙群，金顶与红幡白墙交相辉映，颇为肃穆庄严。传闻其僧众极擅炮制高原珍稀药材，以此制成之藏药更是具有枯骨生肌，返老还童等神奇功效。"
     translated: "Built upon the mountain, these majestic temples rise in grandeur, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high‑altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
@@ -4203,59 +3532,47 @@
     translated: "Den of vice"
   - split: 7
     text: "提升口才潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Improve verbal skills potential"
   - split: 7
     subIndex: 1
     text: "销金"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gold dust"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能0"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect function 0"
   - split: 8
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "资源点产量0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Resource output 0.2"
   - split: 10
     subIndex: 1
     text: "技艺经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员口才4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All verbal skills 4"
   - split: 10
     subIndex: 3
     text: "区域上限1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Area cap 1"
   - split: 12
     text: "银钱2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 2000"
   - split: 12
     subIndex: 1
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 19
     text: "世人皆道烟花柳巷为寻乐之处，却不知此处才是世间极乐之所，其间珍馐美馔罗列星陈，朱颜粉黛婀娜逦迤，朝歌夜弦，纸醉金迷，便是王公贵族也以能在此享乐为荣。"
     translated: "It is said that the Yanghua Liukuang is a place to seek pleasure. But few realize that this is truly the epitome of bliss in this world. Here, delicacies are laid out like stars, women with rosy cheeks and graceful figures sway gracefully. Daytime songs and night‑time melodies fill the air, all wrapped up in paper dreams and golden illusions. Even nobles and princes consider it an honor to find joy here."
@@ -4277,69 +3594,55 @@
     translated: "Darkroom"
   - split: 7
     text: "提升射术潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance shooting skill potential"
   - split: 7
     subIndex: 1
     text: "暗器"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hidden Weapon"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Function 1"
   - split: 7
     subIndex: 4
     text: "杀手订单"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Assassin Contract"
   - split: 7
     subIndex: 5
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 6
     text: "门派功能1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Function 1"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "全员轻功2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Qinggong 2"
   - split: 10
     subIndex: 1
     text: "射术经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员射术2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full‑team archery skills 2"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "药材2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 herbs"
   - split: 19
     text: "配置各式暗器毒药的工坊，四周以帘布遮挡，重重叠叠密不透光。盖因唐门武学讲求出奇制胜，在暗室中修习可防止泄密，同时锻炼黑暗中视物之能力。"
     translated: "A workshop equipped with various hidden weapons and poisons is shrouded in curtains from all sides, layer upon layer, completely devoid of light. Due to the Tang Clan's martial arts emphasizing surprise and innovation, training in this dark room prevents leaks and also hones the ability to see in darkness."
@@ -4361,59 +3664,47 @@
     translated: "Valley of a Hundred Flowers"
   - split: 7
     text: "提升医术潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Improve medical skill potential"
   - split: 7
     subIndex: 1
     text: "灵谷"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spirit Grove"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 2"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 8
     subIndex: 1
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "医术经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Medical experience 0.2"
   - split: 10
     subIndex: 1
     text: "全员医术4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full Team Medical4"
   - split: 10
     subIndex: 2
     text: "疗伤效率0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing efficiency 0.2"
   - split: 12
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 12
     subIndex: 1
     text: "药材2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 herbs"
   - split: 19
     text: "蜿蜒地势之间一处幽静深谷，其间水草丰茂，灵气汇集，因而生长有奇花异草，灵药仙芝无数，在此处种植药材也是事半功倍，乃是世人修习医术之圣地。"
     translated: "A tranquil deep valley winding through rugged terrain, where grasses and plants flourish, gathering spiritual energy. As a result, there are countless unusual flowers, strange herbs, and immortals' medicinal fungi here, making it ideal for cultivating medicines‑half the effort for double the result. It is truly a holy land for people to study medical arts."
@@ -4435,59 +3726,47 @@
     translated: "Grand Stage"
   - split: 7
     text: "提升拳掌潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance punching and palm potential"
   - split: 7
     subIndex: 1
     text: "铁掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Iron Palm"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect function 3"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     subIndex: 1
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 10
     text: "拳掌经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Punch and palm experience 0.2"
   - split: 10
     subIndex: 1
     text: "全员拳掌2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Punch and Palm Techniques 2"
   - split: 10
     subIndex: 2
     text: "全员长兵2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All‑attacker troops 2"
   - split: 12
     text: "粮食2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 2000"
   - split: 12
     subIndex: 1
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 19
     text: "一处平坦广阔之木台，不论三教九流，鸡鸣狗盗之徒，乃至衣衫褴褛之乞丐，皆可登台或坐而论道，或一展拳脚，丐帮择其贤者招揽，因而人才济济，冠绝东南。"
     translated: "A flat and expansive wooden platform where practitioners of all three teachings and nine ranks, thieves and vagrants, and even destitute beggars, could gather to discuss philosophy or showcase their skills. The Beggar Sect would welcome the virtuous among them, thus attracting a multitude of talents unmatched in the southeast."
@@ -4509,59 +3788,46 @@
     translated: "Racetrack"
   - split: 7
     text: "提升长兵潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Boost long‑soldier potential"
   - split: 7
     subIndex: 1
     text: "枪术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gun combat"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect functionality 4"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "长兵经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long Sword Experience 0.2"
   - split: 10
     subIndex: 1
     text: "全员长兵2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All‑attacker troops 2"
   - split: 10
     subIndex: 2
     text: "旅行速度0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Travel speed 0.2"
   - split: 12
     text: "粮食2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 2000"
   - split: 12
     subIndex: 1
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 19
     text: "平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
-    translated: "A vast, flat circular arena used for horse riding practice or equestrian competitions. Flying Dragon Gate disciples often reside here, carefully observing to select those with strong muscles and robust bones as their mounts. According to the sect rules, once chosen, a disciple and their horse are inseparable, bound by life and death."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Hour of Zi,子时,Hour of Zi,子时,"
+    translated: "A vast, flat circular arena used for horse riding practice or races. Disciples of the Flying Dragon Gate often reside here, carefully observing to select those with strong and healthy limbs as their mounts. According to the sect rules, once chosen, a disciple and their horse are inseparable, bound by life and death together."
   templates:
   - split: 7
     template: "{0}--StudyMaxFightSkill-6;{1}-{2}&{3}-ShowWeaponResearch"
@@ -4580,78 +3846,62 @@
     translated: "Yang Cave"
   - split: 7
     text: "提升炼药潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase alchemical potential"
   - split: 7
     subIndex: 1
     text: "丹引"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dan Yin"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 5"
   - split: 8
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 8
     subIndex: 1
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "全员经脉2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All meridians 2"
   - split: 10
     subIndex: 1
     text: "全员奇门2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Team Divination 2"
   - split: 10
     subIndex: 2
     text: "全员炼药4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All‑Personnel Alchemy Team 4"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "药材2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 herbs"
   - split: 19
     text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Devil's Craft and Divine Work, the Luminous Spirit Seepage Cave, where the Mi Mountain disciples work in tandem"
   - split: 19
     subIndex: 1
     text: "存神"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cultivate the Spirit"
   - split: 19
     subIndex: 2
     text: "服气"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Surrender"
   - split: 19
     subIndex: 3
     text: "之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The method of cultivation is endless in its subtlety and application. As an ancient poem puts it: White Tiger Deer Dragon Treads Purple Smoke, Watching Verdant Sea Turn Mulberry Field, Searching True Herbs on Scarlet City Jade Chest, Reaching Huayang's Eighth Heaven."
   templates:
   - split: 7
     template: "{0}--StudyMaxLivingSkill-7;{1}-{2}&{3}-StartBreakMed"
@@ -4672,74 +3922,59 @@
     translated: "Sword Pool"
   - split: 7
     text: "提升锻造潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance forging potential"
   - split: 7
     subIndex: 1
     text: "天工"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Heavenly Artisan"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能6"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect functionality 6"
   - split: 7
     subIndex: 4
     text: "拆解"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disassemble"
   - split: 7
     subIndex: 5
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 6
     text: "门派功能6"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect functionality 6"
   - split: 8
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 8
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "全员剑法2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full‑Scale Swordsmanship 2"
   - split: 10
     subIndex: 1
     text: "锻造经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forging experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员锻造4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full Team Forge 4"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "一方清澈见底的水池，池中或卧或立有刀兵剑刃无数，乃是铸剑山庄历代冶炼积累之残次品及试验品。以此池水淬炼兵器，可感应池中无穷剑意，所得之锋利坚韧远非凡俗可比。"
     translated: "A clear pond with countless swords and blades lying or standing within. This is the remnants and test products from Swordforging Manor's centuries of metalworking. Using this pool water to temper weapons can sense the infinite sword intent within, yielding blades far sharper and tougher than ordinary ones."
@@ -4761,58 +3996,44 @@
     translated: "Pond of a Thousand Poisons"
   - split: 7
     text: "提升毒术潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance poison skill potential"
   - split: 7
     subIndex: 1
     text: "炼蛊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Incubate poison insects"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能7"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect function 7"
   - split: 8
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "毒术经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison technique experience 0.2"
   - split: 10
     subIndex: 1
     text: "全员毒术4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 2
     text: "恢复效率0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Restore efficiency 0.2"
   - split: 12
     text: "矿石1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 1000"
   - split: 12
     subIndex: 1
     text: "药材2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 herbs"
   - split: 19
     text: "瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 7
     template: "{0}--StudyMaxLivingSkill-1;{1}-{2}&{3}-ShowSpePoison"
@@ -4831,69 +4052,55 @@
     translated: "Narrow escape"
   - split: 7
     text: "提升采伐潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase logging potential"
   - split: 7
     subIndex: 1
     text: "试炼"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trial"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能8"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 8"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 9
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "城防耐久0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "City defense durability 0.1"
   - split: 10
     subIndex: 1
     text: "全员力道2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Strength 2"
   - split: 10
     subIndex: 2
     text: "全员拳掌2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Punch and Palm Techniques 2"
   - split: 10
     subIndex: 3
     text: "全员刀法2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Blade Techniques 2"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "于崇山峻岭间开凿而成，险要奇崛之关口，黄鹤高飞不得过，猿猱欲度愁攀援。阎罗殿弟子想正式入门，需要在此通过极为艰险严苛之考验，方能闯过鬼门关，入修罗之道。"
     translated: "Carved through towering mountains and steep ridges, this perilous and rugged pass is so treacherous that even yellow cranes cannot fly over it, and monkeys hesitate to cross for fear of the difficult climb. For Yama Hall disciples to formally join, they must undergo an extremely harsh and rigorous test here, passing through the Ghost Gate before entering the path of Deva Realm."
@@ -4915,73 +4122,58 @@
     translated: "Starry Sky Tower"
   - split: 7
     text: "提升轻功潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Boost Qinggong Potential"
   - split: 7
     subIndex: 1
     text: "博引"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wide‑ranging"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能9"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect functionality 9"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 10
     text: "理论经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Theoretical experience 0.2"
   - split: 10
     subIndex: 1
     text: "实战经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Combat experience 0.1"
   - split: 10
     subIndex: 2
     text: "全员学识4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Everyone's knowledge of 4"
   - split: 10
     subIndex: 3
     text: "藏经容量10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tome Capacity 10"
   - split: 12
     text: "银钱2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money 2000"
   - split: 12
     subIndex: 1
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 19
     text: "屹立于山巅，取"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Standing atop the mountain, gather"
   - split: 19
     subIndex: 1
     text: "危楼高百尺，手可摘星辰"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A hundred feet up the precarious tower, one's hand can pluck at stars."
   - split: 19
     subIndex: 2
     text: "之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This is the idea. Within the Great Hidden Pavilion, there are countless works from the Hundred Schools of Thought and ancient classics. With each ascending floor, the texts become deeper and more obscure. To this day, only a handful of disciples have been able to reach the topmost level after studying layer by layer."
   templates:
   - split: 7
     template: "{0}--StudyMaxFightSkill-1;{1}-{2}&{3}-StartSpeBookStorage"
@@ -5002,59 +4194,47 @@
     translated: "Phalanx of Bronze Figures"
   - split: 7
     text: "提升生命上限"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase maximum health"
   - split: 7
     subIndex: 1
     text: "禅宗修行"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Zen meditation"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 10"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 9
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "理论经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Theoretical experience 0.1"
   - split: 10
     subIndex: 1
     text: "实战经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practical experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员体质2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All members' stamina 2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
     translated: "Cast from wrought copper, eighteen Buddha statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought‑after testament to one's strength in the Wulin."
@@ -5076,59 +4256,47 @@
     translated: "Purple Heaven Palace"
   - split: 7
     text: "提升内力上限"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase maximum inner power"
   - split: 7
     subIndex: 1
     text: "道法修行"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Daoist cultivation"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能11"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 11"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "全员智力2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All intelligence 2"
   - split: 10
     subIndex: 1
     text: "全员经脉2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All meridians 2"
   - split: 10
     subIndex: 2
     text: "全员意志2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All willpower 2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 12
     subIndex: 2
     text: "药材1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 herbs"
   - split: 19
     text: "依山而建，重檐叠砌之宫殿，上应紫薇星宿，下合帝君方位，聚气藏风，水脉绵延，武当派弟子多在此修习道家心法和上乘内功，以求感通天地，阴阳调和。"
     translated: "Built against the mountain, this palace features multiple eaves and tiered structures. It aligns with the Purple Micro Constellation above and corresponds to the imperial directions below. The design gathers energy, harbors winds, and follows water flows. Many disciples of the Wudang Sect practice Taoist Heart Methods and advanced Neigong here, seeking to attune themselves with heaven and earth, achieving harmony between yin and yang."
@@ -5150,54 +4318,43 @@
     translated: "Test Blade Platform"
   - split: 7
     text: "提升刀法潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance Blade Technique Potential"
   - split: 7
     subIndex: 1
     text: "试刀"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Test blade"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能12"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Function 12"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "全员体质2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All members' stamina 2"
   - split: 10
     subIndex: 1
     text: "刀法经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Technique Experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员刀法2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Blade Techniques 2"
   - split: 12
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
     translated: "A high stage exuding momentum is adorned with hundreds of various swords and blades. Their sizes vary, and their lengths differ, yet the blade light sparkles brilliantly. Disciples of the Tyrant Blade Sect frequently practice their Blade Art here, testing out their weapons. The sound of splitting gold and shattering stones reverberates like thunder, never ceasing to echo."
@@ -5219,54 +4376,43 @@
     translated: "Penglai Pavilion"
   - split: 7
     text: "提升剑法潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance Swordsmanship Potential"
   - split: 7
     subIndex: 1
     text: "万剑"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ten Thousand Swords"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能13"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect functionality 13"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 10
     text: "全员灵巧2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Flexible 2"
   - split: 10
     subIndex: 1
     text: "剑法经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Technique Experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员剑法2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full‑Scale Swordsmanship 2"
   - split: 12
     text: "木料2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 timber"
   - split: 12
     subIndex: 1
     text: "药材1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 herbs"
   - split: 19
     text: "地处丹崖山峦，东临碣石，以观沧海，传说八仙过海始于此处，蓬莱弟子登临此地，观琼瑶仙境，海市蜃楼之奇景，以此融入剑法剑意之中，轻灵飘逸确不似凡间所有。"
     translated: "Situated amidst the red cliffs of Danxia Mountains, facing Jieshi to the east, one can gaze upon the vast sea. Legend has it that the Eight Immortals first crossed the sea from here. The Penglai disciples ascended this place to behold the Qingyao fairyland and the wondrous sights of the Haishi shenli. They incorporated these into their sword techniques, imbuing them with a lightness and ethereality that seems otherworldly and not found in ordinary mortal lands."
@@ -5288,54 +4434,43 @@
     translated: "Golden Peak"
   - split: 7
     text: "提升木植潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Boost tree potential"
   - split: 7
     subIndex: 1
     text: "自然修行"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Natural Cultivation"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能14"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Function 14"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "全员内功2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All participants perform neigong 2"
   - split: 10
     subIndex: 1
     text: "轻功经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员轻功2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Qinggong 2"
   - split: 12
     text: "木料1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 timber"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "纯铜铸造之宝殿，通体以金箔敷盖，在旭日映射之下，灿烂辉煌，迢耀天地，恍若佛光普照。峨眉弟子多在此观览云海升腾，感悟天地灵韵，从而精进修为，提升武艺。"
     translated: "The Precious Hall forged from pure copper shines brilliantly under the golden foil covering its entire body. When illuminated by the rising sun, it radiates like a divine light bathing the heavens and earth. Many Mount Emei disciples come here to observe the clouds ascending, imbibe the spirit of nature, and thereby refine their cultivation and enhance their martial arts skills."
@@ -5357,59 +4492,46 @@
     translated: "Seventy‑Two Caves"
   - split: 7
     text: "提升奇门潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     subIndex: 1
     text: "奇技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strange Art"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect Function 15"
   - split: 8
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 8
     subIndex: 1
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "全员绝技2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full‑team ultimate 2"
   - split: 10
     subIndex: 1
     text: "奇门经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "0.2 Qimen experience"
   - split: 10
     subIndex: 2
     text: "全员奇门2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Team Divination 2"
   - split: 12
     text: "矿石1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 1000"
   - split: 12
     subIndex: 1
     text: "药材2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 herbs"
   - split: 19
     text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
     translated: "Kongtong Mountain, perilous and marvelously bizarre, legend speaks of seventy‑two cave entrances scattered throughout its peaks, depths unfathomable and their pathways unknown. After generations of excavation, these caves are now intricately connected, winding and tortuous. The Kongtong disciples cultivate special techniques here. They often employ dangerous tactics that are hard to guard against."
@@ -5431,64 +4553,51 @@
     translated: "Mechanism Ward"
   - split: 7
     text: "提升学识潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Boost scholarly potential"
   - split: 7
     subIndex: 1
     text: "机关"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mechanism"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能16"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect function 16"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 9
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 10
     text: "城防耐久0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "City defense durability 0.2"
   - split: 10
     subIndex: 1
     text: "科研效率0.4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Research efficiency 0.4"
   - split: 10
     subIndex: 2
     text: "全员灵巧2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Flexible 2"
   - split: 10
     subIndex: 3
     text: "全员智力2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All intelligence 2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "木料2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "2000 timber"
   - split: 19
     text: "墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
     translated: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise‑and‑tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
@@ -5510,69 +4619,55 @@
     translated: "Forge Room"
   - split: 7
     text: "提升烹饪潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Boost cooking potential"
   - split: 7
     subIndex: 1
     text: "火药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gunpowder"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能17"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 17"
   - split: 7
     subIndex: 4
     text: "重烩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stewed Again"
   - split: 7
     subIndex: 5
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 6
     text: "门派功能17"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 17"
   - split: 8
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "全员射术2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full‑team archery skills 2"
   - split: 10
     subIndex: 1
     text: "锻造经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forging experience 0.1"
   - split: 10
     subIndex: 2
     text: "全员锻造2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full Team Smithing 2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "矿石2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals 2000"
   - split: 19
     text: "为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
     translated: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year‑round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
@@ -5594,59 +4689,46 @@
     translated: "Temple of the Spiritual Tower"
   - split: 7
     text: "提升绝技潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     subIndex: 1
     text: "密宗修行"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tibetan Buddhist practice"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能18"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect feature 18"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 10
     text: "全员力道2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All Strength 2"
   - split: 10
     subIndex: 1
     text: "绝技经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill Points in Ultimate Techniques 0.2"
   - split: 10
     subIndex: 2
     text: "全员绝技2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full‑team ultimate 2"
   - split: 12
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 12
     subIndex: 1
     text: "矿石1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral 1000"
   - split: 12
     subIndex: 2
     text: "药材1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 herbs"
   - split: 19
     text: "在庄严庙堂中，井然有序错落着数百座大小不一，样式各异的佛塔，其中供奉的皆是历代祖师之骨灰舍利。金刚弟子往往在这四处缭绕，延绵不绝的祭祀香火中，修炼高深之密宗心法。"
     translated: "In the majestic temple hall, hundreds of differently sized and styled Buddha pagodas are neatly arranged in a staggered formation. Each one houses the bone relics of past patriarchs. The Diamond Disciples often circulate around these, cultivating profound Vajrayana Heart Methods amidst the continuous incense smoke from enduring sacrifices."
@@ -5668,64 +4750,51 @@
     translated: "Pond of Black Ice"
   - split: 7
     text: "提升内功潜力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance Neigong Potential"
   - split: 7
     subIndex: 1
     text: "玄冰"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Xuanbing"
   - split: 7
     subIndex: 2
     text: "我"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I"
   - split: 7
     subIndex: 3
     text: "门派功能19"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect functionality 19"
   - split: 8
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 8
     subIndex: 1
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "全员意志2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All willpower 2"
   - split: 10
     subIndex: 1
     text: "内功经验0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong experience 0.2"
   - split: 10
     subIndex: 2
     text: "全员内功2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "All participants perform neigong 2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "粮食1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 1000"
   - split: 12
     subIndex: 2
     text: "药材1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "1000 herbs"
   - split: 19
     text: "天山之巅池泽中有玄冰一块，终年不化，阴寒刺骨，常人只需靠近便感周身冰结，血脉凝固，堪称世间至阴至寒之物。天山弟子卧于其上修炼，配合至阴至阳之心法，自是各有奇效。"
     translated: "At the peak of Tianshan, there is a pool with a block of yin ice that never melts throughout the year. Its coldness and chilliness seep into bones, and ordinary people will feel their entire body turn to ice just by getting close, causing their blood vessels to congeal. This yin ice can be considered one of the coldest objects in the world. Disciples of Tianshan practice on it, combining it with heart methods that are both yin and yang, achieving various extraordinary effects."
@@ -5747,118 +4816,95 @@
     translated: "Private residence"
   - split: 7
     text: "购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Purchase"
   - split: 7
     subIndex: 1
     text: "未购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Not purchased"
   - split: 7
     subIndex: 2
     text: "书房"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Study"
   - split: 7
     subIndex: 3
     text: "阅读秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read the cheat sheet"
   - split: 7
     subIndex: 4
     text: "编纂秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Compile the secret scrolls"
   - split: 7
     subIndex: 5
     text: "已购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Purchased"
   - split: 7
     subIndex: 6
     text: "练功房"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Training Room"
   - split: 7
     subIndex: 7
     text: "自行练习"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice on your own"
   - split: 7
     subIndex: 8
     text: "突破"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Breakthrough"
   - split: 7
     subIndex: 9
     text: "天赋"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gift"
   - split: 7
     subIndex: 10
     text: "已购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Purchased"
   - split: 7
     subIndex: 11
     text: "休息"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Rest"
   - split: 7
     subIndex: 12
     text: "休养恢复状态"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recover health and status"
   - split: 7
     subIndex: 13
     text: "已购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Purchased"
   - split: 7
     subIndex: 14
     text: "私人仓库"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Private warehouse"
   - split: 7
     subIndex: 15
     text: "存放物品"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Store items"
   - split: 7
     subIndex: 16
     text: "已购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Purchased"
   - split: 7
     subIndex: 17
     text: "个人展厅"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Personal Exhibition Hall"
   - split: 7
     subIndex: 18
     text: "管理个人展厅"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Manage Personal Exhibition Hall"
   - split: 7
     subIndex: 19
     text: "已购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Purchased"
   - split: 7
     subIndex: 20
     text: "修缮升级"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Renovation upgrade"
   - split: 7
     subIndex: 21
     text: "提升私宅等级"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Upgrade Private Residence Level"
   - split: 7
     subIndex: 22
     text: "已购买"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Purchased"
   - split: 12
     text: "银钱1000"
     translated: "Coin 1000"
@@ -5875,39 +4921,31 @@
     translated: "Yingtian Academy"
   - split: 7
     text: "秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure booklet"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 9
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 10
     text: "技艺经验0.1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skill experience 0.1"
   - split: 10
     subIndex: 1
     text: "科研效率0.4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Research efficiency 0.4"
   - split: 10
     subIndex: 2
     text: "藏经容量10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tome Capacity 10"
   - split: 12
     text: "威望100"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation 100"
   - split: 12
     subIndex: 1
     text: "粮食2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 2000"
   - split: 19
     text: "此书院自本朝开科取士以来，登第者多达六十余人。远近文人学子皆心向往之，慕名求学者亦是络绎不绝，因而成为一处文人武客交流技艺，买卖藏书之胜地。"
     translated: "Since the imperial examination system was established in our dynasty, over sixty candidates have passed and entered officialdom from this academy. While scholars and students from near and far all look up to it with admiration, those seeking fame and knowledge flock there without cease. Consequently, it has become a popular venue for exchanges of skills among literati and martial artists, as well as the buying and selling of books."
@@ -5929,33 +4967,27 @@
     translated: "Hetao Horse Ranch"
   - split: 7
     text: "名驹"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Prize Horse"
   - split: 8
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 8
     subIndex: 1
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 9
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 10
     text: "旅行速度0.2"
     translated: "Travel speed 0.2"
   - split: 12
     text: "银钱1000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Coin 1000"
   - split: 12
     subIndex: 1
     text: "粮食2000"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food supplies 2000"
   - split: 19
     text: "黄河裹挟泥沙而下，冲积而成一处水草丰美，沃野千里的天然牧场，不仅可作粮食生产，更是以盛产名驹战马而天下闻名，难怪俗语有云：黄河百害，唯富一套。"
     translated: "The Yellow River carries sediment downstream, depositing it to form a lush pasture stretching for a thousand miles. Not only is it ideal for grain production, but it is also renowned worldwide for its abundant produce of famous horses and warhorses. No wonder the saying goes: The Yellow River brings a hundred ills, but one good thing it has is rich farmland."

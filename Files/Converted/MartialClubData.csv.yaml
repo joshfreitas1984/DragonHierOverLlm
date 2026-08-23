@@ -7,8 +7,7 @@
     translated: "Skilled in martial arts"
   - split: 2
     text: "武学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Martial arts"
   templates:
   - split: 2
     template: "{0}ID"
@@ -18,18 +17,15 @@
     translated: "Capital City"
   - split: 1
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 1
     subIndex: 1
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 1
     subIndex: 2
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   templates:
   - split: 1
     template: "{0}/{1}/{2}"
@@ -39,13 +35,11 @@
     translated: "Hangzhou"
   - split: 1
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 1
     subIndex: 1
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -55,13 +49,11 @@
     translated: "Fuzhou"
   - split: 1
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 1
     subIndex: 1
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -71,13 +63,11 @@
     translated: "Dali"
   - split: 1
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 1
     subIndex: 1
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -87,13 +77,11 @@
     translated: "Youzhou"
   - split: 1
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 1
     subIndex: 1
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -103,13 +91,11 @@
     translated: "Jinyang"
   - split: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 1
     subIndex: 1
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -119,13 +105,11 @@
     translated: "Chengdu"
   - split: 1
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 1
     subIndex: 1
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -135,13 +119,11 @@
     translated: "Xiliang"
   - split: 1
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 1
     subIndex: 1
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -151,13 +133,11 @@
     translated: "Jiangling"
   - split: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 1
     subIndex: 1
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -167,13 +147,11 @@
     translated: "Yangzhou"
   - split: 1
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 1
     subIndex: 1
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -183,13 +161,11 @@
     translated: "Luosuo"
   - split: 1
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 1
     subIndex: 1
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -199,13 +175,11 @@
     translated: "Lingzhou"
   - split: 1
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 1
     subIndex: 1
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -215,13 +189,11 @@
     translated: "Yingtian"
   - split: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 1
     subIndex: 1
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   templates:
   - split: 1
     template: "{0}/{1}"

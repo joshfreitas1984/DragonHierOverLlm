@@ -17,8 +17,7 @@
     translated: "Distance moved"
   - split: 6
     text: "技能"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Skills"
   - split: 7
     text: "攻击音效"
     translated: "Attack sound effect"
@@ -40,8 +39,7 @@
     translated: "Tree Flow Horse"
   - split: 7
     text: "振波土石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vibrasand"
   templates:
   - split: 7
     template: "SpeEffect/{0}"
@@ -52,8 +50,7 @@
     translated: "Bronze Running Bull"
   - split: 7
     text: "振波土石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vibrasand"
   templates:
   - split: 7
     template: "SpeEffect/{0}"
@@ -64,8 +61,7 @@
     translated: "Jasper qilin"
   - split: 7
     text: "振波土石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Vibrasand"
   templates:
   - split: 7
     template: "SpeEffect/{0}"
@@ -81,8 +77,7 @@
     translated: "Earthquake Dragon Qinglong"
   - split: 7
     text: "龙吼"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dragon roar"
   templates:
   - split: 7
     template: "SpeEffect/{0}"
@@ -98,8 +93,7 @@
     translated: "Battle drum"
   - split: 7
     text: "士气上升"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Morale rises"
   templates:
   - split: 7
     template: "SpeEffect/{0}"
@@ -110,8 +104,7 @@
     translated: "Cao Shu's Legacy Box"
   - split: 7
     text: "剑雨"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Rain of Swords"
   templates:
   - split: 7
     template: "SpeEffect/{0}"

@@ -56,8 +56,7 @@
     translated: "Defense stance"
   - split: 19
     text: "召唤"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Summon"
   - split: 20
     text: "使用次数"
     translated: "Frequency of use"
@@ -101,8 +100,7 @@
     translated: "Bleeding from 0.08"
   - split: 23
     text: "劈砍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slash"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -125,8 +123,7 @@
     translated: "Imbalance 0.04"
   - split: 23
     text: "打击1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strike 1"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -146,17 +143,14 @@
     translated: "Ram into enemies to knock them back"
   - split: 13
     text: "急速0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "0.06 quickly"
   - split: 13
     subIndex: 1
     text: "击退1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Repel 1"
   - split: 23
     text: "打击2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strike 2"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -181,8 +175,7 @@
     translated: "Bleeding from 0.1"
   - split: 23
     text: "箭雨"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Arrow rain"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -205,8 +198,7 @@
     translated: "Scorch 0.1"
   - split: 23
     text: "天火"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Heavenly Fire"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -226,22 +218,18 @@
     translated: "Cause a wide‑area earthquake through powerful shockwaves"
   - split: 13
     text: "眩晕0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dizzy 0.05"
   - split: 13
     subIndex: 1
     text: "动摇0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Shake 0.05"
   - split: 13
     subIndex: 2
     text: "失衡0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Imbalance 0.05"
   - split: 23
     text: "地刺"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spikes"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -266,8 +254,7 @@
     translated: "0.04 bleeding"
   - split: 23
     text: "劈砍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slash"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -290,8 +277,7 @@
     translated: "Bleeding from 0.12"
   - split: 23
     text: "劈砍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slash"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -314,8 +300,7 @@
     translated: "Charge 0.05"
   - split: 23
     text: "治疗"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treatment"
   templates:
   - split: 23
     template: "{0}-Target-Grid-Happen"
@@ -332,22 +317,18 @@
     translated: "Ten Thousand Ingenious Devices, All Contained Here"
   - split: 13
     text: "虚弱0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Weak 0.08"
   - split: 13
     subIndex: 1
     text: "弱点0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Weakness 0.08"
   - split: 13
     subIndex: 2
     text: "迟缓0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "0.08 is sluggish"
   - split: 23
     text: "地面打击5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ground strike 5"
   - split: 24
     text: "弓"
     translated: "Bow"
@@ -372,8 +353,7 @@
     translated: "0.04 bleeding"
   - split: 23
     text: "劈砍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Slash"
   - split: 24
     text: "弓"
     translated: "Bow"

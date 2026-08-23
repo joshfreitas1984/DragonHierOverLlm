@@ -63,18 +63,15 @@
     translated: "Powerless"
   - split: 10
     text: "+0.5%暴击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Critical Hit"
   - split: 10
     subIndex: 1
     text: "+0.5%断连"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Disconnected"
   - split: 10
     subIndex: 2
     text: "+1装备负重"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+1 load capacity for equipment"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -94,18 +91,15 @@
     translated: "Clumsy"
   - split: 10
     text: "+0.5%速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Speed"
   - split: 10
     subIndex: 1
     text: "+0.5%闪避"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Dodge"
   - split: 10
     subIndex: 2
     text: "+0.5体力上限"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5 maximum stamina capacity"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -125,18 +119,14 @@
     translated: "Stupid"
   - split: 10
     text: "+0.5%命中"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Hit Rate"
   - split: 10
     subIndex: 1
     text: "+0.5%卸力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 2
     text: "+0.5%负面加成"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Negative Bonus"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -156,18 +146,15 @@
     translated: "Languid"
   - split: 10
     text: "+0.5%反击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Counterattack"
   - split: 10
     subIndex: 1
     text: "+0.5%护甲"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Armor"
   - split: 10
     subIndex: 2
     text: "+0.5%负面抗性"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Negative Resistance"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -187,18 +174,15 @@
     translated: "Weak"
   - split: 10
     text: "+1生命上限"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+1 Health Points"
   - split: 10
     subIndex: 1
     text: "+0.5%压制"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% Suppression"
   - split: 10
     subIndex: 2
     text: "+0.5%伤势抗性"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% injury resistance"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -218,18 +202,15 @@
     translated: "Cut off"
   - split: 10
     text: "+2内力上限"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+2 Inner Power Cap"
   - split: 10
     subIndex: 1
     text: "+0.5%连击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5 consecutive hits"
   - split: 10
     subIndex: 2
     text: "+0.5%恢复效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "+0.5% recovery efficiency"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -300,13 +281,11 @@
     translated: "Fistfight"
   - split: 10
     text: "提升拳掌伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase fist and palm attack damage"
   - split: 10
     subIndex: 1
     text: "降低受到的拳掌伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reduce damage from fist and palm attacks"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -326,13 +305,11 @@
     translated: "Rusty Sword"
   - split: 10
     text: "提升剑法伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Enhance sword technique damage"
   - split: 10
     subIndex: 1
     text: "降低受到的剑法伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reduce damage from sword techniques"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -352,13 +329,11 @@
     translated: "Clumsy Blade"
   - split: 10
     text: "提升刀法伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Boost Blade Art damage"
   - split: 10
     subIndex: 1
     text: "降低受到的刀法伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reduce damage from blade techniques"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -378,13 +353,11 @@
     translated: "Broken Spear"
   - split: 10
     text: "提升长兵伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase spear damage"
   - split: 10
     subIndex: 1
     text: "降低受到的长兵伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reduce damage from polearm attacks"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -404,13 +377,11 @@
     translated: "Oddball"
   - split: 10
     text: "提升奇门伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Boost Oddly Gate Damage"
   - split: 10
     subIndex: 1
     text: "降低受到的奇门伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reduce damage from qimen attacks"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -430,13 +401,11 @@
     translated: "Within arm's reach"
   - split: 10
     text: "提升射术伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Increase arrow damage"
   - split: 10
     subIndex: 1
     text: "降低受到的射术伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reduce their arrow damage taken"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -609,13 +578,11 @@
     translated: "None"
   - split: 10
     text: "影响治疗外伤"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Affecting External Injuries Treatment"
   - split: 10
     subIndex: 1
     text: "内伤的效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Internal Injury's efficiency"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -635,13 +602,11 @@
     translated: "None"
   - split: 10
     text: "影响用毒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Affect poisoning"
   - split: 10
     subIndex: 1
     text: "解毒的效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Efficiency of detoxification"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -695,13 +660,11 @@
     translated: "None"
   - split: 10
     text: "影响获取门派木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Affecting Sect Timber Acquisition"
   - split: 10
     subIndex: 1
     text: "矿石，破坏区域防御的效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Minerals, reducing the efficiency of defense in the destruction area"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -721,13 +684,11 @@
     translated: "None"
   - split: 10
     text: "影响获取门派粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Affect acquisition of Sect grains"
   - split: 10
     subIndex: 1
     text: "药材，巩固区域防御的效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Medicine, to enhance the efficiency of consolidating regional defenses"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -747,18 +708,14 @@
     translated: "None"
   - split: 10
     text: "影响装备制作"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "强化，巩固"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strengthen, consolidate"
   - split: 10
     subIndex: 2
     text: "破坏区域治安的效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Efficiency in maintaining order in affected areas"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -778,18 +735,15 @@
     translated: "None"
   - split: 10
     text: "影响丹药制作"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Affecting Dan Pill Production"
   - split: 10
     subIndex: 1
     text: "强化，巩固"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strengthen, consolidate"
   - split: 10
     subIndex: 2
     text: "破坏区域人口的效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Efficiency in damaging the population"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -809,18 +763,15 @@
     translated: "None"
   - split: 10
     text: "影响饮食制作"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Affect food preparation"
   - split: 10
     subIndex: 1
     text: "强化，巩固"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strengthen, consolidate"
   - split: 10
     subIndex: 2
     text: "破坏区域民心的效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Efficiency in undermining the morale of the affected area"
   - split: 11
     text: "伤害"
     translated: "Damage"
@@ -1605,13 +1556,11 @@
     translated: "None"
   - split: 10
     text: "行动条"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Action Bar"
   - split: 10
     subIndex: 1
     text: "体力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strength"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -1631,13 +1580,11 @@
     translated: "None"
   - split: 10
     text: "行动条"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Action Bar"
   - split: 10
     subIndex: 1
     text: "体力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strength"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -1759,13 +1706,11 @@
     translated: "None"
   - split: 10
     text: "每回合+5%生命"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Every turn +5% health"
   - split: 10
     subIndex: 1
     text: "内力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Inner Power"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -1785,13 +1730,11 @@
     translated: "None"
   - split: 10
     text: "每回合-5%生命"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Every turn ‑5% health"
   - split: 10
     subIndex: 1
     text: "内力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Inner Power"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -1913,13 +1856,11 @@
     translated: "None"
   - split: 10
     text: "速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Speed"
   - split: 10
     subIndex: 1
     text: "恢复效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recovery efficiency"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -1990,13 +1931,11 @@
     translated: "None"
   - split: 10
     text: "无法移动"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cannot move"
   - split: 10
     subIndex: 1
     text: "禁用轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disable Qinggong"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2016,18 +1955,15 @@
     translated: "None"
   - split: 10
     text: "力道"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strength"
   - split: 10
     subIndex: 1
     text: "经脉"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Meridian"
   - split: 10
     subIndex: 2
     text: "禁用内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disable Neigong"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2047,18 +1983,15 @@
     translated: "None"
   - split: 10
     text: "灵巧"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Nimble"
   - split: 10
     subIndex: 1
     text: "体质"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Physique"
   - split: 10
     subIndex: 2
     text: "禁用绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disable Ultimate Technique"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2078,18 +2011,15 @@
     translated: "None"
   - split: 10
     text: "智力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Intelligence"
   - split: 10
     subIndex: 1
     text: "意志"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower"
   - split: 10
     subIndex: 2
     text: "负面抗性"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Negative resistance"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2109,8 +2039,7 @@
     translated: "None"
   - split: 10
     text: "伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Damage"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2130,8 +2059,7 @@
     translated: "None"
   - split: 10
     text: "护甲"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Armor"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2151,8 +2079,7 @@
     translated: "None"
   - split: 10
     text: "护甲"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Armor"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2172,8 +2099,7 @@
     translated: "None"
   - split: 10
     text: "速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Speed"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2193,8 +2119,7 @@
     translated: "None"
   - split: 10
     text: "速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Speed"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2214,8 +2139,7 @@
     translated: "None"
   - split: 10
     text: "命中"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hit Rate"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2235,8 +2159,7 @@
     translated: "None"
   - split: 10
     text: "命中"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hit Rate"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2256,8 +2179,7 @@
     translated: "None"
   - split: 10
     text: "闪避"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dodge"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2277,8 +2199,7 @@
     translated: "None"
   - split: 10
     text: "闪避"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dodge"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2298,8 +2219,7 @@
     translated: "None"
   - split: 10
     text: "受伤"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Injured"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2319,8 +2239,7 @@
     translated: "None"
   - split: 10
     text: "受伤"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Injured"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2340,18 +2259,15 @@
     translated: "None"
   - split: 10
     text: "伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Damage"
   - split: 10
     subIndex: 1
     text: "暴击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Critical hit"
   - split: 10
     subIndex: 2
     text: "敌我不分"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Friend or foe"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2422,8 +2338,7 @@
     translated: "None"
   - split: 10
     text: "力道"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strength"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2443,8 +2358,7 @@
     translated: "None"
   - split: 10
     text: "力道"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strength"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2464,8 +2378,7 @@
     translated: "None"
   - split: 10
     text: "灵巧"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Nimble"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2485,8 +2398,7 @@
     translated: "None"
   - split: 10
     text: "灵巧"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Nimble"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2506,8 +2418,7 @@
     translated: "None"
   - split: 10
     text: "智力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Intelligence"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2527,8 +2438,7 @@
     translated: "None"
   - split: 10
     text: "智力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Intelligence"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2548,8 +2458,7 @@
     translated: "None"
   - split: 10
     text: "意志"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2569,8 +2478,7 @@
     translated: "None"
   - split: 10
     text: "意志"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2590,8 +2498,7 @@
     translated: "None"
   - split: 10
     text: "体质"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Physique"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2611,8 +2518,7 @@
     translated: "None"
   - split: 10
     text: "体质"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Physique"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2632,8 +2538,7 @@
     translated: "None"
   - split: 10
     text: "经脉"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Meridian"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2653,8 +2558,7 @@
     translated: "None"
   - split: 10
     text: "经脉"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Meridian"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2776,8 +2680,7 @@
     translated: "None"
   - split: 10
     text: "暴击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Critical hit"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2797,8 +2700,7 @@
     translated: "None"
   - split: 10
     text: "暴击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Critical hit"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2818,8 +2720,7 @@
     translated: "None"
   - split: 10
     text: "卸力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Force absorption"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2839,8 +2740,7 @@
     translated: "None"
   - split: 10
     text: "卸力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Force absorption"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2860,8 +2760,7 @@
     translated: "None"
   - split: 10
     text: "反击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Counterattack"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2881,8 +2780,7 @@
     translated: "None"
   - split: 10
     text: "压制"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Suppress"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2902,8 +2800,7 @@
     translated: "None"
   - split: 10
     text: "连击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Combo"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2923,8 +2820,7 @@
     translated: "None"
   - split: 10
     text: "连击"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Combo"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2944,8 +2840,7 @@
     translated: "None"
   - split: 10
     text: "断连"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disconnect"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -2965,8 +2860,7 @@
     translated: "None"
   - split: 10
     text: "断连"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Disconnect"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -2986,8 +2880,7 @@
     translated: "None"
   - split: 10
     text: "伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Damage"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -3007,8 +2900,7 @@
     translated: "None"
   - split: 10
     text: "恢复效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recovery efficiency"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -3028,8 +2920,7 @@
     translated: "None"
   - split: 10
     text: "恢复效率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Recovery efficiency"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -3049,8 +2940,7 @@
     translated: "None"
   - split: 10
     text: "负面抗性"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Negative resistance"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -3070,8 +2960,7 @@
     translated: "None"
   - split: 10
     text: "负面抗性"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Negative resistance"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -3380,8 +3269,7 @@
     translated: "None"
   - split: 10
     text: "移动距离"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Distance moved"
   - split: 11
     text: "我方"
     translated: "Our side"
@@ -3401,8 +3289,7 @@
     translated: "None"
   - split: 10
     text: "移动距离"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Distance moved"
   - split: 11
     text: "敌方"
     translated: "Enemy"
@@ -4017,23 +3904,19 @@
     translated: "None"
   - split: 10
     text: "坐骑加成轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mount Boost Qinggong"
   - split: 10
     subIndex: 1
     text: "力道"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strength"
   - split: 10
     subIndex: 2
     text: "体质"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Physique"
   - split: 10
     subIndex: 3
     text: "意志"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Willpower"
   - split: 11
     text: "我方"
     translated: "Our side"

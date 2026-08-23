@@ -178,6 +178,7 @@
   - split: 2
     subIndex: 2
     text: "精烩100次"
+    translated: "100 times refined"
   - split: 5
     text: "无"
     translated: "None"

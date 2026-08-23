@@ -42,131 +42,103 @@
     translated: "Think of a technique"
   - split: 1
     text: "......我此招使得......可有纰漏？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "...I've executed this move... are there any flaws?"
   - split: 2
     text: "绝顶高手相争之时，唯一目的便是击败对方。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "When masters of top‑tier skill contend, their sole purpose is to defeat each other."
   - split: 2
     subIndex: 1
     text: "无欲无情，全心投入，专注于"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Without desire or emotion, fully focused and invested."
   - split: 2
     subIndex: 2
     text: "杀"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sha"
   - split: 2
     subIndex: 3
     text: "这一字便已足够。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This single character is enough"
   - split: 3
     text: "#PlayerName#，你不会和那些无趣江湖人士一般，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#, you won't be like those dull Jianghu folk."
   - split: 3
     subIndex: 1
     text: "成天只知道习武练功吧！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Does he only know how to practice martial arts and cultivation all day long!"
   - split: 4
     text: "习武练功，何必拘泥于招式？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Why stick to techniques in martial arts practice?"
   - split: 4
     subIndex: 1
     text: "从心所欲，挥手成招，方为至高之境界。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Free from constraint, gesturing creates technique‑truly the highest realm."
   - split: 5
     text: "#PlayerName#，老夫这铁掌帮武功，不知可在仙霞派之上？"
     translated: "#PlayerName#, let me see if the Iron Palm Gang's martial arts is superior to the Xianxia Sect's."
   - split: 6
     text: "老子所习招式，皆是逆势而动，倒转而行。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The techniques I practice all involve moving against the trend and acting in reverse."
   - split: 6
     subIndex: 1
     text: "任你大罗金仙，也休想摸清老子的套路。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "No matter how powerful you are, you still can't figure out my tactics."
   - split: 7
     text: "高手之争，非在一招一式之间，而在于运用之"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A contest of mastery lies not in each move and stance, but in the application thereof."
   - split: 7
     subIndex: 1
     text: "人"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ren"
   - split: 7
     subIndex: 2
     text: "身上。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "On their person"
   - split: 7
     subIndex: 3
     text: "只要时机得当，再弱的招式亦能威力倍增。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Given the right opportunity, even the weakest technique can become incredibly powerful."
   - split: 8
     text: "听师傅说，出招之法在于随心所欲，无拘无束。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "According to Master, the key to making a move lies in doing as one pleases without any restrictions."
   - split: 8
     subIndex: 1
     text: "若能一呼一吸，收发自然，便也算小半个高手了吧。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "If one can inhale and exhale naturally, sending and receiving with ease, one could be considered a minor master, right?"
   - split: 9
     text: "道无名阁主功力深不可测，我确实远远不及。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Dao Wuming Pavilion Master's strength is unfathomable, and I am indeed far from matching it."
   - split: 9
     subIndex: 1
     text: "不过若论剑招之精妙，或许我能略胜一筹。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "But if it comes to the elegance of sword techniques, perhaps I could edge out a bit ahead."
   - split: 10
     text: "哼哼，见过我招式之人大多已经殒命，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hmph. Most who have seen my techniques are already dead."
   - split: 10
     subIndex: 1
     text: "还是少好奇些为妙。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "It's better to be less curious"
   - split: 11
     text: "江湖偌大，在下远算不上天赋异禀。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Jianghu is vast, and I far do not count as having exceptional talent."
   - split: 11
     subIndex: 1
     text: "但若论练功刻苦，恐怕无人能与我相提并论。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "But if it comes to diligence in training, I daresay no one can match me."
   - split: 12
     text: "我道法修为尚浅，师傅总说我还不懂太极生两仪，两仪生四象，四象生八卦的道理。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 12
     subIndex: 1
     text: "我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I have only seen hens hatch chicks, but I have no idea how the Taiji gives rise to the Liangyi."
   - split: 12
     subIndex: 2
     text: "生"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sheng"
   - split: 12
     subIndex: 3
     text: "法。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Law"
   templates:
   - split: 1
     template: "......#PlayerName#{0}"
@@ -196,122 +168,93 @@
     translated: "Martial insights"
   - split: 1
     text: "当今世人......越醉心武道......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Contemporaries... the more immersed they are in martial arts..."
   - split: 1
     subIndex: 1
     text: "我等医者......越难得空闲......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "We who are doctors... find it even harder to be idle..."
   - split: 2
     text: "当今武学，多拘泥于花哨招式与繁复心法。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Today's martial arts often focus on flashy techniques and complex heart methods."
   - split: 2
     subIndex: 1
     text: "然唯有"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only then"
   - split: 2
     subIndex: 2
     text: "杀"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sha"
   - split: 2
     subIndex: 3
     text: "者，才是武学至高之道。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "That is the pinnacle of martial arts"
   - split: 3
     text: "闯荡江湖，只要练好轻功就行。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Traverse the Jianghu, you just need to master the lightness."
   - split: 3
     subIndex: 1
     text: "想打就打，想走就走，岂不是天下无敌？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Want to fight, go fight; want to leave, go leave‑aren't you invincible under heaven?"
   - split: 4
     text: "海纳百川，有容乃大。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 4
     subIndex: 1
     text: "习武之道，在于并包兼蓄，融会贯通。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The way of martial arts lies in embracing and incorporating diverse techniques, achieving integration and mastery."
   - split: 5
     text: "强食弱肉，胜者为王，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Survival of the fittest, the victor is king."
   - split: 5
     subIndex: 1
     text: "此乃自然之理，亦是武道之真谛。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This is the natural law, and it is the true essence of martial ways."
   - split: 6
     text: "武学之道，在于破除常规，别开蹊径。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The way of martial arts lies in breaking conventional norms and forging new paths."
   - split: 6
     subIndex: 1
     text: "若是一招一式，一板一眼，那可就太过无聊了。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "习武之道，玄妙无穷。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The way of martial arts is infinitely mysterious and profound."
   - split: 7
     subIndex: 1
     text: "老朽便是穷尽一生，也只得窥见一角而已。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I could spend my entire life and still only catch a glimpse of it."
   - split: 8
     text: "我久居山林，只略懂些拳脚。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I have lived in the mountains for so long that I only know some basic fighting skills."
   - split: 8
     subIndex: 1
     text: "若是得空，定要多教我两招。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "If you have the time, be sure to teach me a few more techniques."
   - split: 9
     text: "大隐阁武学本就奥妙无穷，星辰楼之中更藏有秘籍无数。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The martial arts of the Great Hidden Pavilion are already profound and mysterious. The Stellar Tower contains countless secret treatises as well."
   - split: 9
     subIndex: 1
     text: "能够登临楼顶之人，从古至今不过寥寥几人而已。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only a few people have had the chance to ascend to the rooftop throughout history and ancient times."
   - split: 10
     text: "好勇斗狠，以武相争，那便落了下乘。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Brave in battle and ruthless, resorting to force‑such is a poor choice."
   - split: 10
     subIndex: 1
     text: "以暗器毒药伤人，兵不血刃，才是上上之法。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Using hidden weapons and poison is the best way to defeat an enemy without a bloody fight."
   - split: 11
     text: "习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The path of martial arts offers no shortcuts; one must steadily and tirelessly train day and night."
   - split: 11
     subIndex: 1
     text: "方能踏上武学正道，抵达仁者无敌之境。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 12
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu."
   - split: 12
     subIndex: 1
     text: "传说大成者可以静制动，以柔克刚，其劲力亦如太极圆转，生生不息。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "It is said that great accomplished ones can move through stillness and soften to overcome hardness. Their power flows like the taiji circle, ever‑renewing and unending."
   templates:
   - split: 1
     template: "{0}\\n{1}"
@@ -343,35 +286,28 @@
     translated: "Leisure and entertainment"
   - split: 1
     text: "......可遇到什么趣事......与我说说......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "...Any fun stories you've had... tell me about them..."
   - split: 2
     text: "老夫的刀法，还有太多可精进之处。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "My blade technique still has much room for improvement."
   - split: 2
     subIndex: 1
     text: "因此更当争分夺秒，勤学苦练才行。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Therefore, we must strive to learn diligently and practice hard every second."
   - split: 3
     text: "本姑娘一闲着没事，就想去偷点好东西......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This miss likes to sneak around and steal some nice things whenever I'm idle...."
   - split: 3
     subIndex: 1
     text: "要不要一起？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Want to join?"
   - split: 4
     text: "读万卷书，行万里路，方为修行之道。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Read ten thousand books and travel ten thousand miles to truly master the way of cultivation."
   - split: 4
     subIndex: 1
     text: "闲暇之时，也当多读些经史典籍才是。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "In idle moments, one should also read more classics and historical texts."
   - split: 5
     text: "若一事不能增进武艺或为本帮谋利，老夫便不会浪费时间。"
     translated: "If one thing does not improve my martial arts or benefit our faction, Old Man would not waste time on it."
@@ -380,73 +316,57 @@
     translated: "Drain the cup to the dregs, revel in revenge and righteousness, such is life; what more could one ask for?"
   - split: 7
     text: "但凡是这江湖之事，老朽皆算略有耳闻，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "But regarding matters of the Jianghu, the old man has heard of them all."
   - split: 7
     subIndex: 1
     text: "因此方才得了这"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Therefore, I just obtained this"
   - split: 7
     subIndex: 2
     text: "百晓"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hundred Wise"
   - split: 7
     subIndex: 3
     text: "的名号。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The name"
   - split: 8
     text: "在峨眉山上耍猴子，抓野兔，那可有趣的紧啊！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Playing with monkeys and catching wild rabbits on Mount Emei is really fun!"
   - split: 8
     subIndex: 1
     text: "想试试不？比比咱们谁抓得多！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Want to try it out? Let's see who catches more!"
   - split: 9
     text: "归墟秘典之核心法门，唯有阁主知晓。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The core Heart Method of the Secret Scroll of Huayu, known only to the Lord."
   - split: 9
     subIndex: 1
     text: "如此，方能避免修为不足之人强行修习，走火入魔。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This way, those without sufficient cultivation can avoid forcing themselves and going astray."
   - split: 10
     text: "叛出五毒教后，我便一直在寻找天下至毒之法门。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world."
   - split: 10
     subIndex: 1
     text: "却听闻这龙胤归藏功中，或许会有线索......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 11
     text: "犬子郭勇锐生性纯良，奈何有些不谙世事。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Guo Yongrui, my son, is inherently kind‑hearted, though he sometimes lacks worldly wisdom."
   - split: 11
     subIndex: 1
     text: "还望#PlayerName#多多提点，莫要让他闯下什么祸端。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I hope you, #PlayerName#, can give him plenty of advice and prevent him from getting into any trouble."
   - split: 12
     text: "师傅总希望我日后能接掌武当派。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The master always hopes that one day I will take over the Wudang Sect."
   - split: 12
     subIndex: 1
     text: "可如今周遭门派虎视眈眈，奸邪之徒横行于世，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "But now, surrounding sects are eyeing with ambition, while wicked people roam the world."
   - split: 12
     subIndex: 2
     text: "此等重任，我怕是万万当不起的。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Such great responsibility, I fear I am utterly unworthy of bearing it."
   templates:
   - split: 1
     template: "......#PlayerName#{0}"
@@ -477,96 +397,76 @@
     translated: "...I only have a half‑understanding of the way of martial arts..."
   - split: 2
     text: "#PlayerName#你这些招式看似精妙，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#, these moves of yours appear quite ingenious,"
   - split: 2
     subIndex: 1
     text: "但称得上杀人之法的，却是寥寥无几。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "But methods that could truly be called lethal are few and far between."
   - split: 3
     text: "#PlayerName#，你这身形笨重，步伐迟缓，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#, your movements are slow and cumbersome"
   - split: 3
     subIndex: 1
     text: "还得多练练轻功才行。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "One needs to practice lightness more"
   - split: 4
     text: "#PlayerName#，老夫观你骨骼精奇，气运不凡。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#, Old Man I've noticed your bone structure is peculiar and extraordinary, and your life force isremarkable."
   - split: 4
     subIndex: 1
     text: "若能韬光养晦，潜心修炼，或许终能成就大业。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "If one can bide their time and focus on cultivation, perhaps they might ultimately achieve great endeavors."
   - split: 5
     text: "#PlayerName#招式之中破绽颇多，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#'s techniques have many flaws"
   - split: 5
     subIndex: 1
     text: "若是日后与我交手，可要多加小心了。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "If we meet in battle someday, be sure to be more cautious."
   - split: 6
     text: "#PlayerName#这身功夫循规蹈矩，实在无趣。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName's# fighting style is rather conventional and frankly boring."
   - split: 6
     subIndex: 1
     text: "等老子心情好，哪天指点你几招！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wait until I'm in a good mood; I'll show you a few moves some day!"
   - split: 7
     text: "#PlayerName#近来功力突飞猛进，老朽果然没看错人。"
     translated: "#PlayerName#has made remarkable progress in his cultivation lately. Old Man truly didn't make a wrong judgment on you."
   - split: 8
     text: "#PlayerName#和师傅老人家比，不知武功谁高谁低？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills."
   - split: 8
     subIndex: 1
     text: "......感觉应该还是#PlayerName#厉害些。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "...I feel #PlayerName# should still be more powerful."
   - split: 8
     subIndex: 2
     text: "毕竟师傅白胡子一大把了，老身子骨怕是挨不了几拳。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "After all, Master has a full head of white hair; his old body probably can't withstand many punches."
   - split: 9
     text: "#PlayerName#武功不俗，确实算得上江湖中难得一见的青年才俊了。"
     translated: "#PlayerName#'s martial arts are not bad. You could indeed be considered a rare talent among the young men in the Jianghu."
   - split: 10
     text: "呵呵，#PlayerName#周身破绽颇多，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Haha, #PlayerName#, you have several weaknesses"
   - split: 10
     subIndex: 1
     text: "万一哪天你我刀兵相向之时......自会知晓。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "When we face each other in battle someday... we will know."
   - split: 11
     text: "#PlayerName#若在武学上有疑惑之处，大可来与我探讨。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me."
   - split: 11
     subIndex: 1
     text: "某定当知无不言，言无不尽。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "He will speak his mind fully and without reservation."
   - split: 12
     text: "#PlayerName#招式凌厉，然后劲不足。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName's attacks are sharp and precise, then lack power."
   - split: 12
     subIndex: 1
     text: "若能藏锋敛气，内外兼修，便能更上一层楼。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 2
     template: "{0}\\n{1}"
@@ -592,29 +492,23 @@
     translated: "Daily greeting"
   - split: 1
     text: "......近来可有受伤......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "...Have you been injured lately..."
   - split: 2
     text: "#PlayerName#，有何贵干？"
     translated: "What can I do for you, #PlayerName#?"
   - split: 3
     text: "#PlayerName#，最近可有得手什么好宝物？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#, have you come across any good treasures lately?"
   - split: 3
     subIndex: 1
     text: "......你这是什么表情，我、我可没想偷你东西。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "...What expression is that? I didn't mean to steal anything from you."
   - split: 4
     text: "天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 4
     subIndex: 1
     text: "便是老夫也算不出，这乱世究竟何时终结......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Even I cannot calculate when this chaotic world will end..."
   - split: 5
     text: "#PlayerName#前来寻我，想必是有事相求。"
     translated: "#PlayerName# came to find me, so there must be something you need."
@@ -626,44 +520,36 @@
     translated: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
   - split: 8
     text: "这世间有比山上野果更好吃的东西？我可不信！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Is there anything better to eat than wild berries on the mountain? I don't believe it!"
   - split: 8
     subIndex: 1
     text: "除非#PlayerName#下次带来给我尝尝！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Unless #PlayerName# brings something for me to try next time!"
   - split: 9
     text: "#PlayerName#今日看来颇有雅兴，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName# seems to have quite the appetite for refined pursuits today."
   - split: 9
     subIndex: 1
     text: "不然怎会突然想起前来寻我？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Otherwise, how would he suddenly remember to come find me?"
   - split: 10
     text: "#PlayerName#就算有事相求，也得拿出相应价码交换才行。"
     translated: "#PlayerName#, if you have something to ask for, you still need to offer the proper price in return."
   - split: 11
     text: "在下不才，蒙武林同道厚爱，得了这"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I am but an unworthy one, and through the kindness of my Wulin peers, I have been granted this."
   - split: 11
     subIndex: 1
     text: "中原大侠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Great Hero of the Central Plains"
   - split: 11
     subIndex: 2
     text: "的名号。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The name"
   - split: 11
     subIndex: 3
     text: "每每想来，只觉诚惶诚恐，羞愧莫名。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Every time I think about it, I feel genuinely fearful and deeply ashamed."
   - split: 12
     text: "#PlayerName#又见面了，看来你我也算缘分不浅。"
     translated: "#PlayerName# meets again, it seems we have some unspoken connection."
@@ -686,126 +572,98 @@
     translated: "Poetry and verse"
   - split: 1
     text: "古人医在心，心正药自真......今人医在手，手滥药不神。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders."
   - split: 1
     subIndex: 1
     text: "我愿天地炉，多衔扁鹊身......自然六合内，少闻贫病人。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I wish for the Heavens Furnace to grant me the body of Bianque... May there be fewer poor patients in this world."
   - split: 2
     text: "千古江山，英雄无觅孙仲谋处。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Time‑honored rivers and mountains; where can one find a hero like Sun Zhongmou?"
   - split: 2
     subIndex: 1
     text: "舞榭歌台，风流总被雨打风吹去。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stage of dancing and singing pavilions; the heroic deeds of the past are all swept away by rain and wind."
   - split: 2
     subIndex: 2
     text: "斜阳草树，寻常巷陌，人道寄奴曾住。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Evening sun shines on grass and trees, ordinary alleys where ancient heroes once lived."
   - split: 2
     subIndex: 3
     text: "想当年，金戈铁马，气吞万里如虎。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Back in the day, golden spears and iron horses, swallowing miles upon miles with the might of tigers."
   - split: 3
     text: "世人结交须黄金，黄金不多交不深。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "People form friendships with gold, but if the gold is lacking, so too is the depth of the friendship."
   - split: 3
     subIndex: 1
     text: "纵令然诺暂相许，终是悠悠行路心。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Though we may temporarily make promises, ultimately their hearts remain strangers."
   - split: 4
     text: "道可道，非常道；名可名，非常名。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The Way that can be spoken is not the constant Way; the name that can be named is not the constant name."
   - split: 4
     subIndex: 1
     text: "无名天地之始，有名万物之母。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The nameless is the beginning of heaven and earth; the named is the mother of all things."
   - split: 4
     subIndex: 2
     text: "此两者同出而异名，同谓之玄，玄之又玄，众妙之门。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "These two arise from the same source but are called by different names, both known as the Mystic, the Mystic within the Mystic, the gate of all mysteries."
   - split: 5
     text: "画虎画皮难画骨，知人知面不知心。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "To paint a tiger is hard; it's even harder to capture its bones. To know a person is to know their face, but not their heart."
   - split: 5
     subIndex: 1
     text: "有酒有肉多兄弟，急难何曾见一人？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Much wine and meat brings many brothers, yet in times of need, not a soul is seen?"
   - split: 6
     text: "绝情断义，横行无忌。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Betraying emotions and morals, acting with impunity"
   - split: 6
     subIndex: 1
     text: "天上地下，唯我独尊！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Above and below, none shall surpass me!"
   - split: 7
     text: "唱彻阳关泪未干，功名馀事且加餐。浮天水送无穷树，带雨云埋一半山。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The melody of Yangguan lingers with unshed tears,   Achievements and honors are trivial; feast instead.   Endless trees drift past on waters spanning the sky,   Rain‑cloaked clouds obscure half the mountains."
   - split: 7
     subIndex: 1
     text: "今古恨，几千般，只应离合是悲欢。江头未是风波恶，别有人间行路难。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ancient sorrows span thousands of tales;   Only partings and reunions bring sighs and smiles. While the river may appear calm, true trials lie in the difficulties of human life, they say."
   - split: 8
     text: "师傅老人家总喜欢念些诗词歌赋，什么之乎者也，着实拗口。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 8
     subIndex: 1
     text: "好好说话不行吗？#PlayerName#你也是这么想的吧！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Can't we just talk nicely? #PlayerName#, you must be thinking the same way!"
   - split: 9
     text: "一上高楼万里愁，蒹葭杨柳似汀洲。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Afar in the tall tower, ten thousand miles of sorrow;  The reeds and willows resemble islets near the shore."
   - split: 9
     subIndex: 1
     text: "溪云初起日沉阁，山雨欲来风满楼。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The clouds rise as the sun sets behind the pagoda, and the wind fills the tower as rain is on its way."
   - split: 10
     text: "兵者，诡道也。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A soldier fights not because he values his life but because he values victory."
   - split: 10
     subIndex: 1
     text: "故能而示之不能，用而示之不用，近而示之远，远而示之近。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "By being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near."
   - split: 10
     subIndex: 2
     text: "攻其无备，出其不意。此兵家之胜，不可先传也。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Catch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
   - split: 11
     text: "士卒涂草莽，将军空尔为。乃知兵者是凶器，圣人不得已而用之。"
     translated: "Soldiers lie amidst the grass and weeds, while generals vainly lament. Thus I understand that war is a weapon of evil; sages employ it only out of necessity."
   - split: 12
     text: "无声无象，全身空透，应物自然，西山悬磬。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 12
     subIndex: 1
     text: "虎吼猿鸣，水清河静，翻汇倒海，尽性立命。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Tiger roars, ape cries, the water clears, and the river calms. All is in harmony, allowing one to fully experience and establish their essence."
   templates:
   - split: 1
     template: "{0}\\n{1}"
@@ -838,117 +696,91 @@
     translated: "....cure a few more stubborn diseases....save a few more lives....this life would be sufficient...."
   - split: 2
     text: "吾生也有涯，而武道无涯。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Life is finite, but the martial way is endless."
   - split: 2
     subIndex: 1
     text: "以有涯随无涯，又何尝不可！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "To pursue the infinite with finite means‑why not at all!"
   - split: 3
     text: "本姑娘所取的财物，大多来路不干净。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The goods I have acquired are mostly from dubious sources."
   - split: 3
     subIndex: 1
     text: "此等劫富济贫侠义之举，又怎能算是"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 3
     subIndex: 2
     text: "偷"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Steal"
   - split: 3
     subIndex: 3
     text: "呢？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "?"
   - split: 4
     text: "祸兮福之所倚，福兮祸之所伏。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Misfortune may be an actual blessing in disguise, and a blessing may conceal a potential misfortune."
   - split: 4
     subIndex: 1
     text: "避世绝俗，秉持守中之道，方为长久之计。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "While living apart from the world, adhering to the way of maintaining balance, this is a long‑term strategy."
   - split: 5
     text: "总有一天......我夏天雄要剿灭仙霞派，重振铁掌帮......以报先师之恩情。"
     translated: "One day... I, Xiachong, will eradicate the Xianxia Sect and revive the Iron Palm Gang... to repay my mentor's kindness."
   - split: 6
     text: "人生在世，就是应当随心所欲，肆意妄为。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Life in the world is about living freely and doing as one pleases."
   - split: 6
     subIndex: 1
     text: "事事都谨小慎微，岂不是白活一场！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Living so cautiously, isn't that just a wasted life!"
   - split: 7
     text: "江湖中风浪变换，波云诡谲。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The winds and waves of the Jianghu shift unpredictably."
   - split: 7
     subIndex: 1
     text: "唯有隔岸观火，见风使舵，方能立于不败之地。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only by sitting on the fence and adapting to the wind can one remain invincible."
   - split: 8
     text: "师傅他总念叨着什么佛家、道家、儒家之争，也不知有什么好争的。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "He always goes on about the disputes between Buddhism, Daoism, and Confucianism, but I wonder what the fuss is about."
   - split: 8
     subIndex: 1
     text: "大不了开个比武擂台，大家一较高下不就行了。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Why not set up a duel platform and let everyone have a competition?"
   - split: 9
     text: "世人皆以为一入江湖，便能自由自在，随心所欲。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "People believe that upon entering the Jianghu, one can enjoy freedom and do as they please."
   - split: 9
     subIndex: 1
     text: "却不知这江湖中勾心斗角，人心险恶，比世间只多不少。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Yet little does he know that in the Jianghu, cunning intrigues and treacherous hearts abound, no less than in the worldly realm."
   - split: 10
     text: "窃钩者诛，窃国者侯。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "He who steals a hook is put to death, he who steals a country becomes a lord."
   - split: 10
     subIndex: 1
     text: "什么仁义道德，不过是庸人自扰罢了。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 11
     text: "天地有正气，公道在人心。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Righteous energy fills the universe; justice lies in the hearts of men."
   - split: 11
     subIndex: 1
     text: "我郭淮能得武林众人厚爱，唯靠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I can earn the affection of the Wulin solely through"
   - split: 11
     subIndex: 2
     text: "侠义"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Righteous bravery"
   - split: 11
     subIndex: 3
     text: "二字而已。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Just two characters"
   - split: 12
     text: "师傅和师叔为了武当派，日日殚精竭虑。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Master and Master Uncle daily exert themselves for the Wudang Sect."
   - split: 12
     subIndex: 1
     text: "我虽资历尚浅，却也想尽力为他们分忧。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Though I am relatively new, I still wish to do what I can to alleviate their burdens."
   templates:
   - split: 2
     template: "{0}\\n{1}"
@@ -979,102 +811,78 @@
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 2
     subIndex: 1
     text: "人生一世，又能遇上几个倾心相交的英雄豪杰？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "How many devoted and like‑minded heroes can one encounter in a lifetime?"
   - split: 3
     text: "#PlayerName#放心，本姑娘一般不偷相熟之人的东西......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 3
     subIndex: 1
     text: "除非有人惹我不开心了！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Unless someone angers me!"
   - split: 4
     text: "君子之交，淡泊如水，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A gentleman's friendship is as tranquil as water."
   - split: 4
     subIndex: 1
     text: "志同道合之谊，方能历久弥坚。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A friendship based on shared ideals will only grow stronger over time."
   - split: 5
     text: "哼哼，#PlayerName#若能助铁掌帮一臂之力，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hmph. If #PlayerName# can lend a hand to the Iron Palm Gang,"
   - split: 5
     subIndex: 1
     text: "我夏天雄自也不会亏待阁下......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I won't shortchange you in the summer heat either...."
   - split: 6
     text: "行走江湖，老子早已习惯了独来独往。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Traversing the Jianghu, I am accustomed to traveling alone."
   - split: 6
     subIndex: 1
     text: "报团取暖，不过是蝼蚁所为。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Huddling together for warmth is merely something ants do."
   - split: 7
     text: "这些年来，老朽见过太多亲朋反目，手足相残之惨剧。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "In all these years, I have witnessed too many tragedies of loved ones turning against each other and brothers tearing each other apart."
   - split: 7
     subIndex: 1
     text: "所谓天下熙熙皆为利来，天下攘攘皆为利往，莫不如是。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "As goes the saying, All comers to the world seek profit, and all goers from it seek profit, and so it is with these matters."
   - split: 8
     text: "我朋友大多是些飞禽走兽，山野猴子，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "My friends are mostly birds and beasts, mountain monkeys."
   - split: 8
     subIndex: 1
     text: "你算第一个初具人形的......这成语是这么用的吧？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "You're the first to take on a human form... Is that how this idiom is supposed to be used?"
   - split: 9
     text: "缘起相聚，缘散别离，江湖中人身若浮萍，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fate brings us together, fate sends us apart; in the Jianghu, people's lives are like floating weeds."
   - split: 9
     subIndex: 1
     text: "与我也不过如是。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Same goes for me"
   - split: 10
     text: "#PlayerName#若能助一臂之力，我自然不会亏待于你。"
     translated: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
   - split: 11
     text: "兄弟义气，自当肝胆相照，一片赤诚。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 11
     subIndex: 1
     text: "想必#PlayerName#也如此认为。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I'm sure #PlayerName# thinks so too"
   - split: 12
     text: "只要我等名门大派秉公持正，携手并进，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "As long as the prestigious sects uphold justice and advance together,"
   - split: 12
     subIndex: 1
     text: "就定能使这天下武林风清气正，海晏河清。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "So let us ensure that the Wulin is clear and upright, with a peaceful sea and clean rivers."
   - split: 12
     subIndex: 2
     text: "不知#PlayerName#是否也这样认为？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Unknown if #PlayerName# thinks so as well"
   templates:
   - split: 2
     template: "{0}\\n{1}"
@@ -1108,88 +916,69 @@
     translated: "Those who oppose me must be utterly exterminated."
   - split: 3
     text: "哼，若是有人敢与我结仇，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hmph, if anyone dares to make enemies with me,"
   - split: 3
     subIndex: 1
     text: "本姑娘非得把他裤头子都偷过来，方能一解心头之恨。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I have to steal all his underpants to vent my frustration."
   - split: 4
     text: "老夫平日隐居山林，鲜有好友，却也无甚仇敌。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I usually hide in the mountains and forests, rarely having friends but also few enemies."
   - split: 4
     subIndex: 1
     text: "至人无己，神人无功，圣人无名，如是而已。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sages have no self, spirits accomplish nothing, and sainst have no fame; thus it is."
   - split: 5
     text: "#PlayerName#若敢阻碍我铁掌帮行事，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,..."
   - split: 5
     subIndex: 1
     text: "到时可休怪老夫不讲情面。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "You can't blame an old man for that."
   - split: 6
     text: "何人敢与老子为敌，老子定会叫他后悔终生！"
     translated: "Who dares to oppose me, Old Man will make him regret for life!"
   - split: 7
     text: "明枪易躲，暗箭难防。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     subIndex: 1
     text: "行走江湖之时，还是少结些仇家为妙。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Travelling through the Jianghu, it's better to make fewer enemies."
   - split: 8
     text: "峨眉山中有个老猴王，天天撒泼捣乱，破坏田地，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "In the midst of Mount Emei, there's an old monkey king who wreaks havoc every day, damaging farmland."
   - split: 8
     subIndex: 1
     text: "实在是本姑娘一生之大敌！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Truly this Miss is my greatest enemy in a lifetime!"
   - split: 9
     text: "恩怨如棋，不必争一时之得失......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Grudges are like chess; there's no need to fuss over temporary gains or losses..."
   - split: 9
     subIndex: 1
     text: "唯有精心布局，笑到最后，方才称得上是赢家。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only by carefully planning and emerging victorious in the end can one truly be considered a winner."
   - split: 10
     text: "睚眦之怨，亦当百倍奉还。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Grudges should be returned a hundredfold"
   - split: 10
     subIndex: 1
     text: "若非如此，他人怎知我计心狂不好招惹？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Otherwise, how would others know that my reckless mind is not easily provoked?"
   - split: 11
     text: "为一己私仇驱使，只会徒增无谓的杀戮。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Driven by personal vendetta, it can only lead to pointless slaughter."
   - split: 11
     subIndex: 1
     text: "行走江湖，当以公道大义为重！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Travelling through the Jianghu, one must prioritize justice and righteousness!"
   - split: 12
     text: "自古正邪不两立，惩奸除恶，斩妖伏魔，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Right and wrong have never coexisted since ancient times. Prosecute evil, eliminate wrongdoing, slay demons, and subdue monsters."
   - split: 12
     subIndex: 1
     text: "此乃我武当正道应尽之职责。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "This is the duty we Wu Tang righteous path should fulfill."
   templates:
   - split: 3
     template: "{0}\\n{1}"
@@ -1218,113 +1007,89 @@
     translated: "...the Jianghu is in chaos... #PlayerName#, be careful..."
   - split: 2
     text: "当今江湖，有太多欺世盗名，妄称侠义之辈。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "In today's Jianghu, there are too many pretenders who claim to uphold chivalry."
   - split: 2
     subIndex: 1
     text: "唯有将他们斩杀干净，老夫荡平乱世的霸道才能实现。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only by slaying them all can Senior Achiever realize the domineering ambition to bring peace to the chaotic world."
   - split: 3
     text: "别看那些江湖大侠，一个个道貌岸然。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
   - split: 3
     subIndex: 1
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Private killings and arson aren't rare either; I'm much worse than this Miss."
   - split: 3
     subIndex: 2
     text: "，你不会也是其中之一吧？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "You're not one of them, right?"
   - split: 4
     text: "当今江湖英雄辈出，豪侠并起，此皆天下大乱所致。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Heroes and chivalrous gentlemen abound in the Jianghu today, all due to great turmoil ravaging the land."
   - split: 4
     subIndex: 1
     text: "圣人不死，大盗不止，唯有守中之道，方能维持时局平衡。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A sage not dying means great thieves will never cease. Only the way of staying true to the middle can maintain the balance of the times."
   - split: 5
     text: "什么名门正派，不过是些沽名钓誉之辈！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "What noble and righteous sects, merely some people seeking fame and reputation!"
   - split: 5
     subIndex: 1
     text: "为达目的不择手段，如此方为大丈夫所为。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Means are irrelevant to the end goal‑such actions befit true men."
   - split: 6
     text: "当今江湖，不过一群虫豸杂碎！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Today's Jianghu is but a mix of various insects!"
   - split: 6
     subIndex: 1
     text: "能入老子法眼的，不过寥寥数人而已。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only a few people have caught my eye."
   - split: 7
     text: "最难测算是人心，便是老朽这"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The hardest thing to calculate is human heart, even for an old man like me."
   - split: 7
     subIndex: 1
     text: "江湖百晓"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Jianghu Bai Xiao"
   - split: 7
     subIndex: 2
     text: "，怕也难解其分毫。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ",It's hard to fully understand their feelings"
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "What is the Jianghu? Why call it that?"
   - split: 8
     subIndex: 1
     text: "难道那些大侠都是鱼虾转世，喜欢游泳不成......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Could those Great Heroes have been reincarnated as fish and shrimp, liking swimming instead...."
   - split: 9
     text: "人在江湖，身不由己。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "In the Jianghu, one's actions are not entirely in their own control."
   - split: 9
     subIndex: 1
     text: "，或许你我也会有拔剑相向的一天。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Perhaps we might also come to the point where we draw our swords against each other."
   - split: 10
     text: "循规蹈矩依正道而行者，不过棋子而已。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Those who follow the rules and walk the straight path are merely pieces on the board."
   - split: 10
     subIndex: 1
     text: "呵呵，而我计心狂，只做那弈棋之人。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Haha, while my heart races, I am only the chess player."
   - split: 11
     text: "哎，这江湖中的奸邪宵小之徒，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ah, the villains and scoundrels in this Jianghu."
   - split: 11
     subIndex: 1
     text: "为何总是除之不尽，杀之不竭......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Why can't we ever fully exterminate or exhaust them..."
   - split: 12
     text: "师傅总说，这江湖中人亦正亦邪，黑白往往并不分明。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The master often says that in the Jianghu, people can be both upright and wicked, and good and evil are not always clear‑cut."
   - split: 12
     subIndex: 1
     text: "我却觉得黑便是黑，白便是白，又不是瞎子，岂能看不出来？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "But I think black is black and white is white. Isn't it clear to someone who isn't blind?"
   templates:
   - split: 2
     template: "{0}\\n{1}"

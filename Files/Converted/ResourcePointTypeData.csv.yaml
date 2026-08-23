@@ -19,20 +19,17 @@
     translated: "Tea Hill"
   - split: 2
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 2
     subIndex: 1
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 3
     text: "技艺经验0.01"
     translated: "Skill Experience 0.01"
   - split: 4
     text: "速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Speed"
   templates:
   - split: 2
     template: "{0}+2,{1}+1"
@@ -45,20 +42,17 @@
     translated: "Porcelain kiln"
   - split: 2
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 2
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 3
     text: "技艺经验0.02"
     translated: "Skill experience 0.02"
   - split: 4
     text: "速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Speed"
   templates:
   - split: 2
     template: "{0}+3,{1}+1"
@@ -71,20 +65,17 @@
     translated: "Silkcloth"
   - split: 2
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 2
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 3
     text: "技艺经验0.03"
     translated: "Skill and experience 0.03"
   - split: 4
     text: "速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Speed"
   templates:
   - split: 2
     template: "{0}+4,{1}+2"
@@ -97,20 +88,17 @@
     translated: "Copper mine"
   - split: 2
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 2
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 3
     text: "弟子功绩0.01"
     translated: "Disciple's achievements 0.01"
   - split: 4
     text: "伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Damage"
   templates:
   - split: 2
     template: "{0}+2,{1}+1"
@@ -123,20 +111,17 @@
     translated: "Silver mine"
   - split: 2
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 2
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 3
     text: "弟子功绩0.02"
     translated: "Disciple's achievements 0.02"
   - split: 4
     text: "伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Damage"
   templates:
   - split: 2
     template: "{0}+2,{1}+2"
@@ -149,20 +134,17 @@
     translated: "Gold mine"
   - split: 2
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 2
     subIndex: 1
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 3
     text: "弟子功绩0.03"
     translated: "Disciple's Achievements 0.03"
   - split: 4
     text: "伤害"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Damage"
   templates:
   - split: 2
     template: "{0}+5,{1}+1"
@@ -175,15 +157,13 @@
     translated: "Crop Field"
   - split: 2
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 3
     text: "恢复效率0.01"
     translated: "Restore efficiency 0.01"
   - split: 4
     text: "命中"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hit Rate"
   templates:
   - split: 2
     template: "{0}+3"
@@ -196,20 +176,17 @@
     translated: "Pasture"
   - split: 2
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 2
     subIndex: 1
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 3
     text: "恢复效率0.02"
     translated: "Restore efficiency 0.02"
   - split: 4
     text: "命中"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hit Rate"
   templates:
   - split: 2
     template: "{0}+3,{1}+1"
@@ -222,20 +199,17 @@
     translated: "Orchard"
   - split: 2
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 2
     subIndex: 1
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 3
     text: "恢复效率0.03"
     translated: "Restore efficiency 0.03"
   - split: 4
     text: "命中"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hit Rate"
   templates:
   - split: 2
     template: "{0}+4,{1}+2"
@@ -248,20 +222,17 @@
     translated: "Lake Marsh"
   - split: 2
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 2
     subIndex: 1
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 3
     text: "建造速度0.02"
     translated: "Construction speed 0.02"
   - split: 4
     text: "城防耐久"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "City defense durability"
   templates:
   - split: 2
     template: "{0}+2,{1}+1"
@@ -274,20 +245,17 @@
     translated: "Forest"
   - split: 2
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 2
     subIndex: 1
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 3
     text: "建造速度0.04"
     translated: "Construction speed 0.04"
   - split: 4
     text: "城防耐久"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "City defense durability"
   templates:
   - split: 2
     template: "{0}+3,{1}+1"
@@ -300,20 +268,17 @@
     translated: "Old woods"
   - split: 2
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 2
     subIndex: 1
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 3
     text: "建造速度0.06"
     translated: "Construction speed 0.06"
   - split: 4
     text: "城防耐久"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "City defense durability"
   templates:
   - split: 2
     template: "{0}+4,{1}+2"
@@ -326,20 +291,17 @@
     translated: "Salt mine"
   - split: 2
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 2
     subIndex: 1
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 3
     text: "科研效率0.02"
     translated: "Research efficiency 0.02"
   - split: 4
     text: "护甲"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Armor"
   templates:
   - split: 2
     template: "{0}+2,{1}+1"
@@ -352,20 +314,17 @@
     translated: "Iron mine"
   - split: 2
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 2
     subIndex: 1
     text: "银钱"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Money"
   - split: 3
     text: "科研效率0.04"
     translated: "Research efficiency 0.04"
   - split: 4
     text: "护甲"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Armor"
   templates:
   - split: 2
     template: "{0}+3,{1}+1"
@@ -378,20 +337,17 @@
     translated: "Jasper mine"
   - split: 2
     text: "矿石"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mineral"
   - split: 2
     subIndex: 1
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 3
     text: "科研效率0.06"
     translated: "Research efficiency 0.06"
   - split: 4
     text: "护甲"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Armor"
   templates:
   - split: 2
     template: "{0}+4,{1}+2"
@@ -404,20 +360,17 @@
     translated: "Sweet Spring"
   - split: 2
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 2
     subIndex: 1
     text: "粮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food grain"
   - split: 3
     text: "疗伤效率0.01"
     translated: "Healing efficiency 0.01"
   - split: 4
     text: "回血"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing"
   templates:
   - split: 2
     template: "{0}+2,{1}+1"
@@ -430,20 +383,17 @@
     translated: "Apothecary garden"
   - split: 2
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 2
     subIndex: 1
     text: "威望"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Reputation"
   - split: 3
     text: "疗伤效率0.02"
     translated: "Healing efficiency 0.02"
   - split: 4
     text: "回血"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing"
   templates:
   - split: 2
     template: "{0}+3,{1}+1"
@@ -456,20 +406,17 @@
     translated: "Spirit Grove"
   - split: 2
     text: "药材"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Herbs"
   - split: 2
     subIndex: 1
     text: "木料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wood"
   - split: 3
     text: "疗伤效率0.03"
     translated: "Healing efficiency 0.03"
   - split: 4
     text: "回血"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Healing"
   templates:
   - split: 2
     template: "{0}+4,{1}+2"

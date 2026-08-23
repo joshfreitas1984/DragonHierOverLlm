@@ -11,8 +11,7 @@
     translated: "Level"
   - split: 4
     text: "门派地点"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sect location"
   - split: 5
     text: "颜色"
     translated: "Color"
@@ -59,54 +58,44 @@
     translated: "Moderation"
   - split: 9
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 9
     subIndex: 1
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 9
     subIndex: 2
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   - split: 10
     text: "口才"
     translated: "Eloquence"
   - split: 11
     text: "珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure"
   - split: 15
     text: "痛饮"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Drunken revelry"
   - split: 15
     subIndex: 1
     text: "：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Consume alcohol to gain corresponding long‑term buffs. Drinking with others does not require good will, and drinking consumes -20% of the ingredient, increasing goodwill."
   - split: 15
     subIndex: 2
     text: "豪赌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Bold bet"
   - split: 15
     subIndex: 3
     text: "：随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":You can gamble anytime to gain additional reputation points. The number of gambling sessions doubles each month, as does the betting amount."
   - split: 15
     subIndex: 4
     text: "销金"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gold dust"
   - split: 15
     subIndex: 5
     text: "：在销金库可用门派功绩兑换高品质珍宝。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Treasure items of high quality can be obtained by exchanging Sect merits in the Money Vault."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -124,44 +113,36 @@
     translated: "Prosperity"
   - split: 9
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 1
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   - split: 9
     subIndex: 2
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 10
     text: "毒术"
     translated: "Poison Technique"
   - split: 11
     text: "材料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Materials"
   - split: 15
     text: "暗器"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Hidden Weapon"
   - split: 15
     subIndex: 1
     text: "：暗室研究射术兵器，提升射术威力。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Study weapons of archery in a dark room to enhance the power of shooting skills."
   - split: 15
     subIndex: 2
     text: "杀手"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Assassin"
   - split: 15
     subIndex: 3
     text: "：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":In a dark room, you can accept hitman orders. You gain -60% notoriety for attacking and severely injuring others; if arrested by officials, you can use qinggong to evade capture."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -179,60 +160,46 @@
     translated: "Moderation"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 9
     subIndex: 2
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   - split: 10
     text: "医术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Medicine"
   - split: 10
     subIndex: 1
     text: "炼药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Alchemy"
   - split: 11
     text: "丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Elixir"
   - split: 15
     text: "行医"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Practice medicine"
   - split: 15
     subIndex: 1
     text: "：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "妙药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Miracle medicine"
   - split: 15
     subIndex: 3
     text: "：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Alchemy efficiency at +20% and can select multiple medicinal herbs, enhancing the refinement of elixirs with all required ingredients."
   - split: 15
     subIndex: 4
     text: "灵谷"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spirit Grove"
   - split: 15
     subIndex: 5
     text: "：在万花谷可用门派功绩兑换高品质药引。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -252,50 +219,40 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 9
     subIndex: 1
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 9
     subIndex: 2
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 10
     text: "口才"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Eloquence"
   - split: 10
     subIndex: 1
     text: "烹饪"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Cooking"
   - split: 11
     text: "饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food and drink"
   - split: 15
     text: "铁掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Iron Palm"
   - split: 15
     subIndex: 1
     text: "：大会台研究拳掌兵器，提升拳掌威力。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Attend the grand hall training to enhance your fist and palm techniques and weapon skills."
   - split: 15
     subIndex: 2
     text: "行乞"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Begging"
   - split: 15
     subIndex: 3
     text: "：可消耗声望向他人乞讨银两。索取他人物品消耗好感"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Spend reputation to beg for silver from others. Requesting items from others consumes goodwill."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -315,44 +272,34 @@
     translated: "Moderation"
   - split: 9
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 1
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 9
     subIndex: 2
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 10
     text: "采伐"
     translated: "Logging"
   - split: 11
     text: "马匹"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Horses"
   - split: 15
     text: "枪术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gun combat"
   - split: 15
     subIndex: 1
     text: "：赛马场研究长兵兵器，提升长兵威力。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "马术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Horsemanship"
   - split: 15
     subIndex: 3
     text: "：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -370,64 +317,51 @@
     translated: "Moderation"
   - split: 9
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 1
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 9
     subIndex: 2
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 10
     text: "炼药"
     translated: "Alchemy"
   - split: 11
     text: "丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Elixir"
   - split: 15
     text: "符法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Spellcasting"
   - split: 15
     subIndex: 1
     text: "：修习符咒武学解锁对应符法，用符法在战前强化己方角色"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Mastery of talisman martial arts unlocks corresponding talisman techniques, which can be used to enhance your characters before battle."
   - split: 15
     subIndex: 2
     text: "弱化对方角色。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Weaken the opposing character"
   - split: 15
     subIndex: 3
     text: "天雷"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Heavenly Thunder"
   - split: 15
     subIndex: 4
     text: "：每满级一门雷电武学，根据武学品级额外提升0.5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Gain one Lightning Martial Art per level, with additional improvement based on the art's grade by 0.5."
   - split: 15
     subIndex: 5
     text: "3点意志。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "3 points of Willpower"
   - split: 15
     subIndex: 6
     text: "丹引"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Dan Yin"
   - split: 15
     subIndex: 7
     text: "：在华阳洞可炼化丹药获取对应药引。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -445,50 +379,39 @@
     translated: "Moderation"
   - split: 9
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 9
     subIndex: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 2
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 10
     text: "采伐"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Logging"
   - split: 10
     subIndex: 1
     text: "锻造"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forging"
   - split: 11
     text: "装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Equipment"
   - split: 15
     text: "天工"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Heavenly Artisan"
   - split: 15
     subIndex: 1
     text: "：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "巧匠"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Craftsman"
   - split: 15
     subIndex: 3
     text: "：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Forge efficiency at +20% and can use multiple materials; in Sword Pool, dismantling equipment yields corresponding materials."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -508,55 +431,42 @@
     translated: "Prosperity"
   - split: 9
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 9
     subIndex: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 2
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 10
     text: "木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forest Plant"
   - split: 10
     subIndex: 1
     text: "毒术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison Technique"
   - split: 11
     text: "珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure"
   - split: 15
     text: "炼蛊"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Incubate poison insects"
   - split: 15
     subIndex: 1
     text: "：在万毒池消耗药引"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "食材获取毒物，融合低级毒物获取强力高级毒物。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons."
   - split: 15
     subIndex: 3
     text: "毒术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Poison Technique"
   - split: 15
     subIndex: 4
     text: "：用毒可以选用多个毒物，装备淬毒下降速率"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -576,49 +486,38 @@
     translated: "Prosperity"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 9
     subIndex: 2
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 3
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 10
     text: "采伐"
     translated: "Logging"
   - split: 11
     text: "装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Equipment"
   - split: 15
     text: "试炼"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Trial"
   - split: 15
     subIndex: 1
     text: "：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "霸道"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Domineering"
   - split: 15
     subIndex: 3
     text: "：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -636,55 +535,42 @@
     translated: "Moderation"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 9
     subIndex: 2
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 9
     subIndex: 3
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 10
     text: "学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scholarship"
   - split: 10
     subIndex: 1
     text: "口才"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Eloquence"
   - split: 11
     text: "珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure"
   - split: 15
     text: "博引"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wide‑ranging"
   - split: 15
     subIndex: 1
     text: "：搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "旁证"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Circumstantial evidence"
   - split: 15
     subIndex: 3
     text: "：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -704,49 +590,39 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 2
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 9
     subIndex: 3
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 10
     text: "医术"
     translated: "Medicine"
   - split: 11
     text: "秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure booklet"
   - split: 15
     text: "禅宗"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Zen Buddhism"
   - split: 15
     subIndex: 1
     text: "：通过禅宗修行获取少林寺武学加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "普度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Universal Salvation"
   - split: 15
     subIndex: 3
     text: "：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Civilize wild villains or other martial artists, changing others' stance towards laws and kindness, and boosting goodwill and reputation."
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -764,55 +640,43 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 2
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 9
     subIndex: 3
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 10
     text: "木植"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forest Plant"
   - split: 10
     subIndex: 1
     text: "炼药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Alchemy"
   - split: 11
     text: "秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure booklet"
   - split: 15
     text: "道法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Way of Dao"
   - split: 15
     subIndex: 1
     text: "：通过道法修行获取武当派武学加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "无为"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Do Nothing"
   - split: 15
     subIndex: 3
     text: "：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Civilize wild villains or other heros, shifting others' stances towards a neutral state and increasing their goodwill and reputation."
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -832,44 +696,36 @@
     translated: "Moderation"
   - split: 9
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 9
     subIndex: 1
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 9
     subIndex: 2
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 10
     text: "烹饪"
     translated: "Cooking"
   - split: 11
     text: "饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food and drink"
   - split: 15
     text: "试刀"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Test blade"
   - split: 15
     subIndex: 1
     text: "：试刀台研究刀法兵器，提升刀法威力。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Practice Blade Art on the Trial Stage to enhance its power."
   - split: 15
     subIndex: 2
     text: "老饕"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gourmand"
   - split: 15
     subIndex: 3
     text: "：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Cooking efficiency at +20% and can use multiple ingredients. Consuming a delicacy grants corresponding lasting bonuses."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -887,49 +743,39 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 9
     subIndex: 2
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 10
     text: "学识"
     translated: "Scholarship"
   - split: 11
     text: "秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure booklet"
   - split: 15
     text: "万剑"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ten Thousand Swords"
   - split: 15
     subIndex: 1
     text: "：蓬莱阁研究剑法兵器，提升剑法威力。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "归宗"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Return to the Ancestral Home"
   - split: 15
     subIndex: 3
     text: "：每满级一门剑法武学，根据武学品级额外提升0.5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Each level of sword art martial arts unlocks an additional one, with higher grade skills boosting it by 0.5."
   - split: 15
     subIndex: 4
     text: "3点剑法。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "3 points of Sword Technique"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -947,44 +793,36 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 9
     subIndex: 2
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 10
     text: "木植"
     translated: "Forest Plant"
   - split: 11
     text: "材料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Materials"
   - split: 15
     text: "自然"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Natural"
   - split: 15
     subIndex: 1
     text: "：通过自然修行获取峨嵋派武学加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Gain benefits from Emei martial arts through natural cultivation."
   - split: 15
     subIndex: 2
     text: "灵悟"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Lingwu"
   - split: 15
     subIndex: 3
     text: "：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Breakthrough efficiency +20%, breakthrough option +1, and the breakthrough bonus gains an additional level 1."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1002,49 +840,39 @@
     translated: "Prosperity"
   - split: 9
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 1
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 9
     subIndex: 2
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 10
     text: "毒术"
     translated: "Poison Technique"
   - split: 11
     text: "马匹"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Horses"
   - split: 15
     text: "奇技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Strange Art"
   - split: 15
     subIndex: 1
     text: "：七十二洞研究奇门兵器，提升奇门威力。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "百出"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Constant problems"
   - split: 15
     subIndex: 3
     text: "：每满级一门奇门武学，根据武学品级额外提升0.5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":A martial art skill is unlocked upon leveling up, with an additional boost of 0.5 based on the skill's rank."
   - split: 15
     subIndex: 4
     text: "3点奇门。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "3 Points of Mystical Gates"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1062,55 +890,42 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 9
     subIndex: 1
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   - split: 9
     subIndex: 2
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 10
     text: "学识"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scholarship"
   - split: 10
     subIndex: 1
     text: "锻造"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Forging"
   - split: 11
     text: "装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Equipment"
   - split: 15
     text: "机关"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Mechanism"
   - split: 15
     subIndex: 1
     text: "：使用装备改装升级机关兽，获取对应的机关兽加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "杂学"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Miscellaneous studies"
   - split: 15
     subIndex: 3
     text: "：所有技艺经验+20%，收集资源时更易获得高级珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 4
     text: "材料，珍宝鉴定额外学识加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Materials and treasure appraisal additional knowledge bonus"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1130,59 +945,46 @@
     translated: "Moderation"
   - split: 9
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   - split: 9
     subIndex: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 2
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 10
     text: "锻造"
     translated: "Forging"
   - split: 11
     text: "材料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Materials"
   - split: 15
     text: "火药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gunpowder"
   - split: 15
     subIndex: 1
     text: "：通过配置火药提升霹雳堂武学和灼烧武学效果。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "灼烧"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Scorching"
   - split: 15
     subIndex: 3
     text: "：每满级一门灼烧武学，根据武学品级额外提升0.5%"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Gain one Burning Martial Art per level, with an additional 0.5% boost based on the martial art's grade."
   - split: 15
     subIndex: 4
     text: "3%负面加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 5
     text: "重烩"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Stewed Again"
   - split: 15
     subIndex: 6
     text: "：在火炼室可重烩饮食获取对应食材。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Burnt Room allows you to reheat meals to get the corresponding ingredients."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1200,44 +1002,34 @@
     translated: "Prosperity"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 2
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 10
     text: "烹饪"
     translated: "Cooking"
   - split: 11
     text: "饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food and drink"
   - split: 15
     text: "密宗"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Esoteric Buddhism"
   - split: 15
     subIndex: 1
     text: "：通过密宗修行获取金刚宗武学加成。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "灌顶"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Crown ceremony"
   - split: 15
     subIndex: 3
     text: "：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1255,49 +1047,39 @@
     translated: "Prosperity"
   - split: 9
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 9
     subIndex: 1
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 2
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 10
     text: "医术"
     translated: "Medicine"
   - split: 11
     text: "丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Elixir"
   - split: 15
     text: "玄冰"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Xuanbing"
   - split: 15
     subIndex: 1
     text: "：通过凝结玄冰提升天山派武学和冰寒武学效果。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 15
     subIndex: 2
     text: "冰寒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Icicles"
   - split: 15
     subIndex: 3
     text: "：每满级一门冰寒武学，根据武学品级额外提升2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Gain one Ice and Cold Martial Art for each level cap, with additional enhancement based on the art's grade: 2"
   - split: 15
     subIndex: 4
     text: "12点内力上限。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "12 points of Inner Power cap"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1315,34 +1097,28 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 9
     subIndex: 2
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "丹药"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Elixir"
   - split: 15
     text: "聚义"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Gather to swear loyalty"
   - split: 15
     subIndex: 1
     text: "：内功经验+20%，医术经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Neigong experience +20%, medical skill experience"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1360,29 +1136,24 @@
     translated: "Prosperity"
   - split: 9
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 9
     subIndex: 1
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure"
   - split: 15
     text: "黄河"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Yellow River"
   - split: 15
     subIndex: 1
     text: "：刀法经验+20%，毒术经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":blade technique experience +20% , poison art experience"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -1400,34 +1171,28 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 1
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 9
     subIndex: 2
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure booklet"
   - split: 15
     text: "八卦"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Bagua"
   - split: 15
     subIndex: 1
     text: "：奇门经验+20%，学识经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Mystic Experience +20% , Scholarly Experience"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1445,29 +1210,24 @@
     translated: "Moderation"
   - split: 9
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 1
     text: "刀法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Blade Art"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "材料"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Materials"
   - split: 15
     text: "海沙"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Desert sand"
   - split: 15
     subIndex: 1
     text: "：绝技经验+20%，烹饪经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Master Skill Experience +20% , Cooking Experience"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -1485,29 +1245,24 @@
     translated: "Prosperity"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "拳掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fists and palms"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Equipment"
   - split: 15
     text: "铁掌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Iron Palm"
   - split: 15
     subIndex: 1
     text: "：拳掌经验+20%，锻造经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Punching and Palm Technique +20%，Forging Experience%"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -1531,17 +1286,14 @@
     translated: "None"
   - split: 11
     text: "秘籍"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure booklet"
   - split: 15
     text: "仙霞"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Xianxia"
   - split: 15
     subIndex: 1
     text: "：所有经验获取"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":all experience points gained"
   templates:
   - split: 11
     template: "{0}:0.25"
@@ -1557,29 +1309,23 @@
     translated: "Moderation"
   - split: 9
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 9
     subIndex: 1
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "饮食"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Food and drink"
   - split: 15
     text: "巨鲸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Great whale"
   - split: 15
     subIndex: 1
     text: "：轻功经验+20%，采伐经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -1597,29 +1343,23 @@
     translated: "Moderation"
   - split: 9
     text: "内功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Neigong"
   - split: 9
     subIndex: 1
     text: "射术"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Archery"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "珍宝"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Treasure"
   - split: 15
     text: "金龙"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Golden Dragon"
   - split: 15
     subIndex: 1
     text: "：射术经验+20%，口才经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -1637,34 +1377,28 @@
     translated: "Prosperity"
   - split: 9
     text: "轻功"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qinggong"
   - split: 9
     subIndex: 1
     text: "奇门"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qi Men"
   - split: 9
     subIndex: 2
     text: "剑法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Sword Art"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Equipment"
   - split: 15
     text: "青城"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Qingcheng"
   - split: 15
     subIndex: 1
     text: "：剑法经验+20%，炼药经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Sword Art experience +20%, Alchemy experience"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1682,29 +1416,24 @@
     translated: "Righteousness and benevolence"
   - split: 9
     text: "绝技"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Ultimate Technique"
   - split: 9
     subIndex: 1
     text: "长兵"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Long weapon"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
     text: "马匹"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Horses"
   - split: 15
     text: "伏牛"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Wutou Mountain"
   - split: 15
     subIndex: 1
     text: "：长兵经验+20%，木植经验"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: ":Longsword Experience +20%，Felling Experience"
   templates:
   - split: 9
     template: "{0};{1}"
