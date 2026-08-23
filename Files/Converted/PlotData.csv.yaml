@@ -40879,8 +40879,6 @@
   - split: 10
     text: "不许再叫，你爹已将你全权委托于我照管。"
     translated: "You are not to call me Father again; he has fully entrusted you to my care."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Commission,委托,"
   - split: 10
     subIndex: 1
     text: "若再使性子，小心我帮规伺候！"
@@ -65090,7 +65088,7 @@
     translated: "Wind howls"
   - split: 10
     text: "这有什么好谢的？别婆婆妈妈，咱们走！"
-    translated: "What is there to thank me for? Don't be so fussy—let’s go!"
+    translated: "What is there to thank me for? Don't be so fussy‑let's go!"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
