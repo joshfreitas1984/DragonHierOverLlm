@@ -154,7 +154,8 @@
     translated: "#PlayerName#'s martial arts skills are either stronger or weaker than mine, and we'll have to settle that once and for all!"
   - split: 3
     text: "#PlayerName#武功灵巧有余，若能增加一些踏实稳重便再好不过了"
-    translated: "#PlayerName's martial arts are agile and proficient, but would benefit from some added steadiness and gravitas."
+    translated: "#PlayerName's martial arts are agile and proficient, but would benefit from some added steadiness and solidity."
+    flaggedForRetranslation: true
   - split: 4
     text: "#PlayerName#若在武学上有疑惑不解之处，只管来问我便是"
     translated: "#PlayerName#, if you have any doubts about martial arts, feel free to ask me."
@@ -163,19 +164,21 @@
     translated: "#PlayerName#, have you made any progress in your martial arts lately?"
   - split: 6
     text: "#PlayerName#武功稳重有余，若能增加一些灵活巧变便再好不过了"
-    translated: "#PlayerName's martial arts is solid and stable, but would benefit from more flexibility and clever changes."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "#PlayerName#武功进步神速，只怕早晚要把我远远甩开。"
-    translated: "PlayerName's martial arts abilities can quickly improve, which might mean they will be left far behind by him sooner or later."
+    translated: "PlayerName's martial arts skill can quickly improve, and they will likely be left far behind sooner or later."
+    flaggedForRetranslation: true
   - split: 8
     text: "每日练武练武，真是烦煞人也！"
     translated: "Daily training in martial arts truly drives me mad!"
   - split: 9
     text: "#PlayerName#武功虽时有进步，但还是一眼就能看出诸多破绽之处。"
-    translated: "#PlayerName's# martial arts have shown some improvement, but there are still numerous flaws evident at a glance."
+    translated: "#PlayerName#'s martial arts have improved somewhat, but there are still numerous flaws that can be easily spotted."
   - split: 10
     text: "#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
-    translated: "If my martial arts doesn't improve, I might be left far behind."
+    translated: "#PlayerName#, if my martial arts doesn't improve, I might be left far behind."
 - raw: "日常见面,#PlayerName#？抱歉我心有所思，没注意到你。,#PlayerName#我们有几日未见了？容我好好回忆回忆。,不知#PlayerName#寻我有何贵干？,#PlayerName#若有我帮得上忙的地方，只管吩咐。,#PlayerName#别来无恙？,真巧，我正要离开此处，便遇到了#PlayerName#你。,#PlayerName#你我又见面了，算不算是缘分使然？,#PlayerName#几日不见，风采依旧啊！,#PlayerName#前来寻我，只怕是有事相求？,#PlayerName#有话快说吧，我还有要事在身。"
   splits:
   - text: "日常见面"

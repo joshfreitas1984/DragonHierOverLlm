@@ -14,8 +14,16 @@ glossaryPreset:
   chineseGlossaryTypesToSupress:
     - Phonetics
 useContinuousWorkerPool: true
-maxConcurrency: 50
-retryCount: 3
+maxConcurrency: 4 # Ollama is capped anyway
+retryCount: 1 # Dropped from 3 - no stronger model to escalate to, so extra retries mostly just burn time on the same qwen2.5:7b model
+# Escalation: once a split exhausts `retryCount` against its normal model and is still invalid, it
+# gets escalationRetryCount extra attempts against the model named here (must match a `name` under
+# `models:` above). No-op if unset, or if it resolves to the exact same underlying model (`Model`
+# string) as the split already tried - so this is safe to leave pointed at the same Qwen2.5 entry
+# for now; swap it to a real second/stronger model under `models:` later with no other code
+# changes needed.
+# escalationModelName: Qwen25-Standard
+# escalationRetryCount: 1
 batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true

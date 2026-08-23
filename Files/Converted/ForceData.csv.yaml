@@ -185,6 +185,7 @@
   - split: 15
     subIndex: 1
     text: "：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
+    translated: ":Healing others is unlimited by affection or frequency. Each month, his clinic visits double, and he gains affection +20% and additional reputation from all treatments."
   - split: 15
     subIndex: 2
     text: "妙药"
@@ -365,6 +366,7 @@
   - split: 15
     subIndex: 7
     text: "：在华阳洞可炼化丹药获取对应药引。"
+    translated: ":In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -407,6 +409,7 @@
   - split: 15
     subIndex: 1
     text: "：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。"
+    translated: ":Gather meteoric iron fragments during exploration and enhance equipment further in the Sword Pool."
   - split: 15
     subIndex: 2
     text: "巧匠"
@@ -471,6 +474,7 @@
   - split: 15
     subIndex: 4
     text: "：用毒可以选用多个毒物，装备淬毒下降速率"
+    translated: ":Poisoning can use multiple toxins, and equipping reduces the poisoning rate."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -515,6 +519,7 @@
   - split: 15
     subIndex: 1
     text: "：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
+    translated: ":Challenging the Gate of Despair trial with increasing difficulty, acquiring progressively stronger talent effects."
   - split: 15
     subIndex: 2
     text: "霸道"
@@ -522,6 +527,7 @@
   - split: 15
     subIndex: 3
     text: "：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
+    translated: ":Reputation for stealing from others and shops at ‑40%; can use a special technique to break free when arrested by the soldiers."
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -568,6 +574,7 @@
   - split: 15
     subIndex: 1
     text: "：搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
+    translated: ":Collect secret techniques from other sects and place them in the Stellar Pavilion to gain corresponding martial arts enhancements."
   - split: 15
     subIndex: 2
     text: "旁证"
@@ -620,6 +627,7 @@
   - split: 15
     subIndex: 1
     text: "：通过禅宗修行获取少林寺武学加成。"
+    translated: ":Gain benefits from Shaolin Temple martial arts through Zen practice."
   - split: 15
     subIndex: 2
     text: "普度"
@@ -674,6 +682,7 @@
   - split: 15
     subIndex: 1
     text: "：通过道法修行获取武当派武学加成。"
+    translated: ":Through Daoist cultivation, gain the martial arts enhancements of the Wudang Sect."
   - split: 15
     subIndex: 2
     text: "无为"
@@ -867,6 +876,7 @@
   - split: 15
     subIndex: 1
     text: "：七十二洞研究奇门兵器，提升奇门威力。"
+    translated: ":Study all seventy‑two passages to enhance the power of the qimen weaponry."
   - split: 15
     subIndex: 2
     text: "百出"
@@ -921,6 +931,7 @@
   - split: 15
     subIndex: 1
     text: "：使用装备改装升级机关兽，获取对应的机关兽加成。"
+    translated: ":Upgrade your mecha beasts by equipping and enhancing them to gain corresponding bonuses."
   - split: 15
     subIndex: 2
     text: "杂学"
@@ -973,6 +984,7 @@
   - split: 15
     subIndex: 1
     text: "：通过配置火药提升霹雳堂武学和灼烧武学效果。"
+    translated: ":Boost the effects of Thunderclap Hall and burning martial arts by configuring the gunpowder."
   - split: 15
     subIndex: 2
     text: "灼烧"
@@ -1039,6 +1051,7 @@
   - split: 15
     subIndex: 3
     text: "：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
+    translated: ":Tame wild bandits or other martial artists, sway their stance towards chaos and ferocity, and increase your reputation and popularity."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1077,6 +1090,7 @@
   - split: 15
     subIndex: 1
     text: "：通过凝结玄冰提升天山派武学和冰寒武学效果。"
+    translated: ":Condense the Frost Ice to enhance the Tianshan Sect's martial arts and ice‑cold combat techniques."
   - split: 15
     subIndex: 2
     text: "冰寒"
@@ -1335,6 +1349,7 @@
   - split: 15
     subIndex: 1
     text: "：轻功经验+20%，采伐经验"
+    translated: ":Qinggong experience +20%, logging experience"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -1369,6 +1384,7 @@
   - split: 15
     subIndex: 1
     text: "：射术经验+20%，口才经验"
+    translated: ":Archery experience +20%, persuasion experience"
   templates:
   - split: 9
     template: "{0};{1}"

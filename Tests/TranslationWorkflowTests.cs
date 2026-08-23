@@ -30,6 +30,32 @@ public class TranslationWorkflowTests
         await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
     }
 
+    [Fact(DisplayName = "4. Flag lines corrupted by bracket-split bug for retranslation")]
+    public async Task SetBracketSplitBugLinesAsInvalid()
+    {
+        // FanslationStudio.LlmKit's TranslationService.SplitBracketsRegexIfNeededAsync had a bug:
+        // it translated each bracket's inner content, then discarded that translation and spliced
+        // in a mangled substring of an internal placeholder number instead (usually empty, or a
+        // single digit) when restoring the bracket in the final result. This was live while
+        // splitRegexPatterns included these bracket pairs (enabled in the "First cut of
+        // translation"/"Second round" commits, disabled again in "Pre-run") - any split whose raw
+        // Text contains one of these bracket characters went through that path and needs
+        // retranslation now that the bug is fixed.
+        var badStrings = new List<string>
+        {
+            "《", "》",
+            "〈", "〉",
+            "「", "」",
+            "『", "』",
+            "【", "】",
+            "〖", "〗",
+            "\u201C", "\u201D", // “ ”
+        };
+
+        await TranslationWorkflow.SetSplitAsInvalid(GameFileHandling.WorkingDirectory,
+            GameFileHandling.TextFilesToSplit, badStrings);
+    }
+
     [Fact(DisplayName = "5. Flag some regexes")]
     public async Task SetSplitAsInvalid()
     {

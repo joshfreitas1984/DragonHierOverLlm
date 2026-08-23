@@ -709,6 +709,7 @@
     translated: "None"
   - split: 10
     text: "影响装备制作"
+    translated: "Affecting equipment crafting"
   - split: 10
     subIndex: 1
     text: "强化，巩固"

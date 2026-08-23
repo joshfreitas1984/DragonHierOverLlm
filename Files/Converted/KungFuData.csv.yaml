@@ -4318,6 +4318,7 @@
     translated: "Southern Mountain Blade Technique"
   - split: 4
     text: "南山以寿闻名，这套刀法也恰巧稳重持正，以防守闻名。如由内功高强者使出，其威力亦不可小视"
+    translated: "Southern Mountain is renowned for longevity. This blade technique is also stable and proper, primarily known for its defensive nature. If wielded by one with high neigong, it should not be underestimated in power."
   - split: 7
     text: "刀法1"
     translated: "Blade Art 1"
@@ -5187,6 +5188,7 @@
     translated: "Nine‑section whip technique"
   - split: 4
     text: "由九节铁鞭铰接而成的奇门兵器，以内力灌注其中，则可刚可柔，如臂指使，招式多变异常"
+    translated: "Made from nine‑section steel whips linked together, this peculiar weapon can be both hard and soft when infused with inner power. Its fighting styles are highly versatile and unpredictable, much like the movements of an arm or finger."
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -9384,6 +9386,7 @@
     translated: "Eight Formation Coiled Dragon Sword"
   - split: 4
     text: "蕴含八阵图义理的刀法，以生死八门配合五行生克，经过精确计算使出，方能发挥威力"
+    translated: "While combining blade techniques following the principles of Ba Yan Tu with Wu Xing sheng, they can truly unleash their power after precise calculation."
   - split: 7
     text: "刀法1"
     translated: "Blade Art 1"
@@ -10039,6 +10042,7 @@
     translated: "Little Night Demon Staff Technique"
   - split: 4
     text: "源于佛门，一种套路多变，以灵活见长的棍法，其中挑、点、戳的招式极多，可用于封人穴脉"
+    translated: "Originating from the Buddhist monastery, this staff technique is versatile and excels in flexibility. It features a multitude of techniques such as prying, tapping, and thrusting, which can be used to block an opponent's acupoints."
   - split: 7
     text: "长兵1"
     translated: "Long Sword 1"
@@ -13937,6 +13941,7 @@
     translated: "Japanese blade technique"
   - split: 4
     text: "东瀛武士之刀法，招法看似简单，实则强调对人体力道之极致运用，无需内力修为便能发挥威力"
+    translated: "The East Asian warrior's Blade Technique appears simple, yet it emphasizes the utmost application of strength to the body. This technique can release significant power without requiring great Inner Power cultivation."
   - split: 7
     text: "体质潜力1"
     translated: "Potential in physique 1"
@@ -19859,6 +19864,7 @@
   - split: 23
     subIndex: 1
     text: "血爪狂"
+    translated: "Bloodclaw Frenzy"
   - split: 24
     text: "刀"
     translated: "Blade"
@@ -21689,6 +21695,7 @@
     translated: "Hundred Turns, Thousand Folds Blade"
   - split: 4
     text: "给刀柄安装机关，使刀刃可以弯折旋转，因此可从各种诡异角度出刀，招式变化无穷"
+    translated: "Install a mechanism on the knife handle to make the blade bend and rotate, allowing for attacks from various strange angles with endless changes in technique. They could strike from above, below, front, or back, catching their opponent off guard at every turn."
   - split: 7
     text: "灵巧潜力1"
     translated: "Agility Potential 1"
@@ -25102,6 +25109,7 @@
     translated: "Heart Method of Lotus Fall"
   - split: 4
     text: "暗藏在民间戏曲莲花落中的进阶内功心法，若能演唱此贯口，证明此人已步入丐帮正式弟子之行列"
+    translated: "Hidden within the folk opera Lianhua Luo lies advanced Neigong Heart Methods. To recite this passage fluently demonstrates that they have become an official disciple of the Beggar Sect."
   - split: 7
     text: "内功2"
     translated: "Neigong 2"
@@ -25903,6 +25911,7 @@
     translated: "Odd Doors Three Talents Staff"
   - split: 4
     text: "此棍法共分三大式，一式敬天，一式敬地，一式敬人，其中招式变换和内劲运用暗合奇门遁甲之法"
+    translated: "This staff technique is divided into three major forms: one for honoring heaven, one for honoring earth, and one for honoring people. Among them, the changes in movements and internal strength usage secretly align with the methods of Qi Men Dun Jia."
   - split: 7
     text: "长兵潜力1"
     translated: "Potential of Long Troops 1"
@@ -26188,6 +26197,7 @@
     translated: "Dreamless Meditation Fist"
   - split: 4
     text: "相传是跛脚僧于睡梦中传授丐帮前辈的神妙拳法，出招时双眼微闭做昏昏欲睡状，招式空幻奇绝令人如坠梦中而不自知，待惊醒已身中数拳矣"
+    translated: "It is said that the limping monk taught the mystical martial arts techniques of the Beggar Sect to its seniors during their dreams. When using these moves, they keep their eyes slightly closed, giving an appearance of drowsiness. While performing the gesture was fluid and graceful, they moved with such elusiveness that it was like watching a dream, and before one could realize it, they had already been struck by several punches."
   - split: 7
     text: "经脉潜力2"
     translated: "Meridian Potential 2"
@@ -26800,6 +26810,7 @@
     translated: "March to War"
   - split: 4
     text: "行伍之人行军时所走步法，不求快速轻巧，但求齐整有力"
+    translated: "A soldier's step during marching is not about speed and lightness but about neat and powerful."
   - split: 7
     text: "体质1"
     translated: "1 stamina"
@@ -26827,6 +26838,7 @@
     translated: "Ultimate Technique"
   - split: 3
     text: "举盾术"
+    translated: "Shield Bash"
   - split: 4
     text: "士兵持盾防御，抵挡攻击之法"
     translated: "Soldiers hold shields to defend, warding off attacks."
@@ -27910,6 +27922,7 @@
     translated: "Heart Method of Hidden Dragon"
   - split: 4
     text: "讲求藏锋守拙，蓄势待发之内功心法，其息如龙潜深渊，厚积薄发，一旦出手，便如蛟龙出海，势不可挡"
+    translated: "Pursuing the art of neigong and heart method that emphasizes concealing one's strength and biding time, breathing as deep as a dragon lurking in the depths, storing power for a powerful release. Once unleashed, it is like a sea dragon emerging, irresistible in its might."
   - split: 7
     text: "内功潜力1"
     translated: "Neigong potential 1"
@@ -28078,6 +28091,7 @@
     translated: "Sixteen Path Azure Dragon Halberds"
   - split: 4
     text: "此戟法共分十六路，均以青龙为形制，或游走盘恒，或张牙舞爪，招式之间浑然有序，一气呵成"
+    translated: "This sword technique is divided into sixteen paths, all modeled after the Qinglong. Some moves wander and circulate, while others display fangs and claws. The forms flow seamlessly, forming a coherent whole."
   - split: 7
     text: "体质潜力1"
     translated: "Potential in physique 1"
@@ -28153,6 +28167,8 @@
     translated: "Soldier Spear"
   - split: 4
     text: "相传黄忠斩夏侯渊时所使，居高临下突袭刺击之枪法，其招式勇往无前，以威势取胜，一枪既出足以平定三军"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "长兵潜力1"
     translated: "Potential of Long Troops 1"
@@ -28449,7 +28465,9 @@
     translated: "Red River Divine Skill"
   - split: 4
     text: "名将所传，隐于诗词之绝技。练成此功者体魄心智均如脱胎换骨、神仙再造一般"
-    translated: "The art passed down by renowned generals is concealed within the mastery of poetry and verse. Those who perfect this skill experience a transformation akin to rebirth, with their body and mind rejuvenated as if created anew by deities."
+    translated: "The martial arts skill hidden in poetry and verse, as passed down by renowned generals. Those who perfect this technique experience a transformation of both body and mind, akin to being reborn as if created anew by immortal hands."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Resilience,体魄,"
   - split: 7
     text: "力道潜力1"
     translated: "Strength potential 1"
@@ -28915,6 +28933,7 @@
     translated: "Elegant Spear Stroke"
   - split: 4
     text: "飞龙门登峰造极之枪法，其发力时机只在瞬息之间，如惊鸿于水面一点，却是数十年心魂体魄修炼之结晶，即便高手对战也能一招分出胜负"
+    translated: "The pinnacle of the Flying Dragon Gate spear technique reaches its peak in an instant, like a shockwave on the water's surface. Yet, it is the culmination of decades of heart, soul, and resilience cultivation. Even among skilled warriors, victory or defeat can be decided by a single move."
   - split: 7
     text: "长兵潜力2"
     translated: "Potential of Long Infantry 2"
@@ -29556,6 +29575,7 @@
     translated: "Throat Bone Stagnation Technique"
   - split: 4
     text: "扰乱对方内息的奇门咒术，命中者骨鲠在喉，芒刺在背，难以发挥全力"
+    translated: "Disturbing the opponent's Inner Qi with peculiar ritual magic; those hit find a bone caught in their throat and thorns on their back, making it hard for them to give their full effort."
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -30219,6 +30239,8 @@
     translated: "Five Elements Reaching the Origin Technique"
   - split: 4
     text: "道家上乘内功，将体内五气经过任督二脉汇聚于脑海，可去人间烦恼，入极乐幻境"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "内功潜力1"
     translated: "Neigong potential 1"
@@ -31195,6 +31217,7 @@
     translated: "Xuanzhen Sword Energy"
   - split: 4
     text: "茅山道剑最高境界，可化虚为实，化气为剑，在剑锋形成三尺白芒，吹毛立断，削铁如泥，江湖中罕有人敢撄其锋芒"
+    translated: "The highest realm of the Mount Mao Daoist Sword can transform the intangible into the tangible, and refine essence into swords. At the tip of the sword, a three‑foot white glow forms, able to cut through hair instantly and slice through iron as if it were clay. In the Jianghu, few dare to confront its sharp edge."
   - split: 7
     text: "经脉潜力1"
     translated: "Potential of Meridian 1"
@@ -32425,7 +32448,9 @@
     translated: "Flame refinement technique"
   - split: 4
     text: "逐渐加热内息之法，其真气形同炉火，先黑浊，后黄白，再青白，最终化为纯青，乃是功法纯熟，至阳至热之象征"
-    translated: "Gradually heating the inner qi follows a pattern akin to increasing heat in a furnace. Initially dark and turbid, it then becomes yellowish‑white, before turning cyan‑white, and ultimately purifying into true cyan, symbolizing the proficiency and utmost yang and heat of the cultivation method."
+    translated: "The method of gradually heating inner qi resembles a furnace. Initially, it is dark and turbid, then turns yellowish‑white, followed by a bluish‑white hue, ultimately becoming pure green‑a symbol of the technique's mastery and its utmost yang and heat."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "True Qi,真气,"
   - split: 7
     text: "内功潜力1"
     translated: "Neigong potential 1"
@@ -43254,6 +43279,7 @@
     translated: "Formless Form"
   - split: 4
     text: "少林至高身法，需破除执念，心静止水，目中空无一物，其身形如梦幻泡影，如露亦如电，稍纵即逝，无可捉摸"
+    translated: "Shaolin Supreme Agility requires breaking free from attachment, calming the mind like still water, and seeing nothing in one's eyes. The practitioner moves like a dream, an illusion, a bubble, or a shadow‑like dewdrops or lightning, fleeting and intangible."
   - split: 7
     text: "轻功潜力2"
     translated: "Qinggong potential 2"
@@ -44306,6 +44332,7 @@
     translated: "Wudang Soft and Hard Skills"
   - split: 4
     text: "武当功夫讲求刚柔并济，软硬兼施，此功法将腹部软功和周身硬功结合，劲道收放灵活自如"
+    translated: "Wudang martial arts emphasize the integration of hardness and softness, applying both flexible force and robust techniques. This cultivation method combines abdominal soft skills with full‑body hard techniques, allowing for agile and versatile power control."
   - split: 7
     text: "绝技1"
     translated: "Special Technique 1"
@@ -44342,7 +44369,9 @@
     translated: "Wudang Changquan"
   - split: 4
     text: "武当入门拳法，舒缓灵巧，开合缜密，有培本筑基之功效，不可轻视"
-    translated: "Introduction to Wudang Fist Techniques, gentle yet dexterous, opening and closing with precision, offering foundational establishment benefits; do not underestimate them."
+    translated: "Basic Wudang Fist Technique, gentle yet dexterous, opening and closing with meticulous precision, possesses the effect of nurturing the fundamentals and laying a foundation, so it should not be taken lightly."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Foundation Establishment,筑基,"
   - split: 7
     text: "拳掌1"
     translated: "Fist and palm 1"
@@ -44591,6 +44620,7 @@
     translated: "Nine Palaces, Eighteen Steps"
   - split: 4
     text: "在九宫格阵中按五行生克移动之法，能够提升修习者下盘灵活以及奇门数术功力"
+    translated: "Following the Five Elements generating and overcoming method in the Nine Palaces array can enhance a practitioner's lower body flexibility and prowess in odd door numerology."
   - split: 7
     text: "轻功1"
     translated: "Qinggong 1"
@@ -48175,7 +48205,9 @@
     translated: "Heavenly Mandate Blade Technique"
   - split: 4
     text: "上应天命"
-    translated: "Follow the will of heaven"
+    translated: "Con comply with the will of heaven"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yingtian,应天,"
   - split: 4
     subIndex: 1
     text: "下从人心之刀法，出手时引动全身霸道无比之劲道，去势威猛，勇往直前，可谓天命所归，所向披靡"
@@ -48900,6 +48932,7 @@
     translated: "Art of Cinnabar"
   - split: 4
     text: "蓬莱派基础内丹法门，其炼气者，需冥心定息，元寂绵绵，直至气入丹田，丹火旺盛"
+    translated: "Foundation Qi Refining Method of the Penglai Sect requires practitioners to concentrate their minds and regulate their breathing, allowing the essence to remain still and continuous. Only then can the qi enter the dantian, where the dantian fire becomes vigorous."
   - split: 7
     text: "意志1"
     translated: "1_will_"
@@ -49297,6 +49330,7 @@
     translated: "Flower Flying Butterfly Sword"
   - split: 4
     text: "相传乃无名女冠所创之剑法，轻巧灵动，曼妙翩跹，如蝴蝶飞舞，花瓣飘散，颇具观赏性，于剑法修为亦大有裨益"
+    translated: "It is said to have been created by an anonymous nun, this sword technique being light and agile, graceful like a butterfly dancing, petals scattering around. While possessing great aesthetic value, it also significantly enhances their cultivation in swordsmanship."
   - split: 7
     text: "剑法2"
     translated: "Sword Technique 2"
@@ -49933,6 +49967,7 @@
     translated: "Purple Microstar Technique"
   - split: 4
     text: "紫微斗数推命之术演化而来，将经脉穴位与天空星辰对应，根据每日天象与命盘转化来推算对应的内力运行路径，此后修为自然突飞猛进，如有神助"
+    translated: "The technique evolved from Purple Microscopic Astrology, matching meridians and acupoints with celestial bodies. It calculates their inner power's operational pathways based on daily celestial phenomena and their bianpan. This method has naturally led to rapid advancements in cultivation, almost as if guided by divine assistance."
   - split: 7
     text: "内功潜力2"
     translated: "Potential for Neigong 2"
@@ -50692,6 +50727,7 @@
     translated: "Concentration Technique"
   - split: 4
     text: "峨眉入门弟子必须熟记之口诀，有凝聚心神，锻炼智慧之功效"
+    translated: "New apprentices must memorize this mnemonic to focus their minds and sharpen their wisdom."
   - split: 7
     text: "绝技1"
     translated: "Special Technique 1"
@@ -51033,6 +51069,8 @@
     translated: "Method of Calm Unity"
   - split: 4
     text: "盘腿打坐内观，可视自身脏腑气脉五色盛衰之相，直至影相发白融为一体，自感遍体舒爽，烦恼去尽，入清净之境矣"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "绝技1"
     translated: "Special Technique 1"
@@ -51746,6 +51784,7 @@
     translated: "Seven‑star Horizontal Chain"
   - split: 4
     text: "将体内七处要穴以真气相连的绝学，可形成一快速强劲的小周天循环，从而大大增加自身发力和经脉运行速度"
+    translated: "The supreme martial art that connects the seven crucial acupoints within the body using True Qi can form a rapid and powerful small circulation of true qi, significantly increasing one's power output and meridian operation speed."
   - split: 7
     text: "灵巧潜力1"
     translated: "Agility Potential 1"
@@ -52872,6 +52911,7 @@
     translated: "Iron‑spined pike thrust"
   - split: 4
     text: "西凉兵士所修习的铁矛突刺之法，招式简单但威力较大"
+    translated: "The method of thrusting with iron spears that the Xiliang soldiers practice is simple but carries great power."
   - split: 7
     text: "长兵1"
     translated: "Long Sword 1"
@@ -54433,6 +54473,7 @@
     translated: "4 abdomen"
   - split: 23
     text: "血爪狂"
+    translated: "Bloodclaw Frenzy"
   - split: 23
     subIndex: 1
     text: "喷血迹"
@@ -54465,6 +54506,8 @@
     translated: "Stars Shift and Constellations Move"
   - split: 4
     text: "令经脉穴位皆偏移逆转的崆峒奇功，修习后周身力道反转，出招方式与内息运行皆异于常人，更能借此反转之力将来袭刀剑偏移方向，甚至反伤敌身"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "意志潜力2"
     translated: "Potential of willpower 2"
@@ -54832,6 +54875,7 @@
     translated: "Have five cars"
   - split: 4
     text: "每一步皆应和着五车星象方位的奇门步法，轻巧快速且蕴含智慧"
+    translated: "Each step should follow the qimen bufa corresponding to the Wu Caoyang Xuan directions, light and swift yet imbued with wisdom."
   - split: 7
     text: "轻功1"
     translated: "Qinggong 1"
@@ -55860,6 +55904,7 @@
     translated: "Ten Thousand Ingenious Machines"
   - split: 4
     text: "公输班所创，同时凝结了神机门历代高人无数智慧心血，机关术之核心法门，只有长老以上地位者方能一睹其全貌"
+    translated: "Created by Gongshu Ban, this distills the wisdom and blood sweat of countless sages across generations in the Divine Mechanism Sect. It is the core heart method of mechanical arts‑only those of Elder rank or above can witness its full form."
   - split: 7
     text: "灵巧潜力1"
     translated: "Agility Potential 1"
@@ -56780,7 +56825,9 @@
     translated: "Spear Art of Fiery Sun"
   - split: 4
     text: "枪头浸透火油，在对敌时点燃使出的枪法，招式开合挥舞，火光阵阵，能够有效逼退敌人的攻势"
-    translated: "The spear tip soaked in flaming oil is ignited for use against enemies. The techniques wielded with sweeping and opening movements produce flare‑ups that effectively repel the enemy's attacks."
+    translated: "The spear tip soaked in oil ignites when used against enemies. The techniques swing and open with flashes of fire, effectively pushing back the enemy's attacks."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Spear Art,枪法,"
   - split: 7
     text: "长兵1"
     translated: "Long Sword 1"
@@ -58374,6 +58421,7 @@
     translated: "Bottle Qi Gong"
   - split: 4
     text: "金刚宗修气瑜伽法，借助观想拙火疏通并洗涤自身经脉，可令内息滚沸，抵御藏地严寒"
+    translated: "The Vajra Sect's Breath Cultivation Yoga Method uses visualization of Kunpeng Fire to unblock and cleanse the body's meridians, allowing Inner Qi to boil and resist the harsh cold in Tibetan regions."
   - split: 7
     text: "内功1"
     translated: "Neigong 1"
@@ -59980,6 +60028,7 @@
     translated: "Blade of Tranquil Bliss"
   - split: 4
     text: "修习者需先破除烦恼妄想，令身心进入绝对静止之境界，然后方能使出这消除世间苦难，令万物寂灭的玄妙刀法"
+    translated: "Mortals must first rid themselves of worldly worries and illusions, allowing their body and mind to enter an absolute state of stillness. Only then can they wield this mystic Blade Art that eradicates suffering from the world and brings all things to silence."
   - split: 7
     text: "刀法潜力2"
     translated: "Potential of Blade Art 2"
@@ -60028,6 +60077,7 @@
   - split: 23
     subIndex: 1
     text: "血爪狂"
+    translated: "Bloodclaw Frenzy"
   - split: 24
     text: "刀"
     translated: "Blade"
@@ -62704,6 +62754,8 @@
     translated: "Reverse Cycle Heaven Technique"
   - split: 4
     text: "武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "力道潜力1"
     translated: "Strength potential 1"
@@ -63464,6 +63516,7 @@
     translated: "Bandit Blade Technique"
   - split: 4
     text: "招式粗浅，以命相搏的刀法，多为贼寇所使"
+    translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
   - split: 7
     text: "体质1"
     translated: "1 stamina"

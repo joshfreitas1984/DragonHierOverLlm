@@ -16,6 +16,16 @@ This repository contains multiple independent sub-projects. Scoped instructions 
 > **Workflow rule:** After completing any significant feature or fix in a sub-project, update its
 > scoped instructions file (and that sub-project's own `README.md` if present) — these are the
 > primary source of truth for future sessions.
+>
+> **Reverse-engineering rule:** Whenever you investigate/reverse-engineer how existing code works
+> (tracing a log line back to its source, figuring out why a heuristic fires, mapping a runtime
+> behavior back to the responsible function, etc.), write down what you learned in the relevant
+> scoped instructions file (or the target sub-project's own `.github/copilot-instructions.md` if
+> the code lives in the sibling `FanslationStudio.LlmKit` repo — see below) before finishing the
+> task, even if the user didn't explicitly ask for documentation. Findings that only exist in chat
+> history are lost for future sessions; findings written into the instructions files persist. Keep
+> entries concise and reference exact file/method names so a future session can jump straight to
+> the relevant code.
 
 ## Quick reference
 

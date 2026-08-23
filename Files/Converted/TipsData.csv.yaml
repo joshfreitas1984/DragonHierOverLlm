@@ -28,6 +28,7 @@
 - raw: "门派的弟子人口达到上限后，\\n就无法招募新的弟子。"
   splits:
   - text: "门派的弟子人口达到上限后，"
+    translated: "When the disciples' population of the Sect reaches its limit,"
   - subIndex: 1
     text: "就无法招募新的弟子。"
     translated: "So you can no longer recruit new disciples."
