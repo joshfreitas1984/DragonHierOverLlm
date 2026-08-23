@@ -191,5 +191,55 @@ public class CompoundFieldSplitterTests
         Assert.Single(fragments);
         Assert.Equal(original, fragments[0]);
     }
+
+    [Fact(DisplayName = "A lone fullwidth punctuation mark stranded between two placeholder tokens still merges into the following sentence")]
+    public void LoneFullwidthPunctuationBetweenPlaceholderTokensStillMerges()
+    {
+        var original = "#PlayerName#！#PlayerName#！都日上三竿了，怎么还在睡大觉呢！\\n嘴里还一直念叨着什么“看招”，“承让”，\\n怕不是又在梦里行侠仗义了。";
+        var options = new CompoundFieldSplitterOptions
+        {
+            PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
+        };
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original, options);
+
+        // The two placeholder tokens and the lone fullwidth '！' between/after them are all glue -
+        // none of them may act as a fixed fragment boundary, so the whole opening clause merges
+        // into the first '\\n'-delimited sentence fragment instead of leaving a stray literal
+        // "#PlayerName#！#PlayerName#" prefix (or splitting off just the second '！').
+        Assert.Equal("{0}\\n{1}\\n{2}", template);
+        Assert.Equal(
+            [
+                "#PlayerName#！#PlayerName#！都日上三竿了，怎么还在睡大觉呢！",
+                "嘴里还一直念叨着什么“看招”，“承让”，",
+                "怕不是又在梦里行侠仗义了。"
+            ],
+            fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "A placeholder token straight after a literal '\\n' boundary still glues into the following sentence, without pulling the boundary's own fragment along")]
+    public void PlaceholderTokenAfterLiteralBoundaryGluesOnlyIntoFollowingSentence()
+    {
+        var original = "不错，本门以剑法闻名巴蜀，掌门更凭“无影乱剑”威震一方。\\n#PlayerName#若是整天使一手太祖长拳，让外人见了怕是要笑掉大牙。";
+        var options = new CompoundFieldSplitterOptions
+        {
+            PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
+        };
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original, options);
+
+        // The literal "\\n" is a genuine boundary and must stay in the template, but "#PlayerName#"
+        // immediately following it must glue into the sentence that follows it, not remain as its
+        // own stranded literal prefix (the previous bug produced "{0}\\n#PlayerName#{1}").
+        Assert.Equal("{0}\\n{1}", template);
+        Assert.Equal(
+            [
+                "不错，本门以剑法闻名巴蜀，掌门更凭“无影乱剑”威震一方。",
+                "#PlayerName#若是整天使一手太祖长拳，让外人见了怕是要笑掉大牙。"
+            ],
+            fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
 }
 

@@ -225,16 +225,8 @@
     text: "飞毛腿"
     translated: "Fast Foot"
   - split: 4
-    text: "源于古代递送紧急军情"
-    translated: "Originating from ancient emergency military communications"
-  - split: 4
-    subIndex: 1
-    text: "羽檄"
-    translated: "Military emergency report"
-  - split: 4
-    subIndex: 2
-    text: "之兵士的步法"
-    translated: "Soldier's marching steps"
+    text: "源于古代递送紧急军情“羽檄”之兵士的步法"
+    translated: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
   - split: 7
     text: "灵巧1"
     translated: "Nimble 1"
@@ -250,8 +242,6 @@
     text: "速度0.04"
     translated: "Speed 0.04"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 8
     template: "{0};{1};{2}"
 - raw: "4,轻功,0,轻身术,每日背负沙袋行走并渐增负重，乃是最基础的轻功练习之法,,0.9,轻功1,轻功4;灵巧4;意志4,,轻功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
@@ -2671,16 +2661,8 @@
     text: "通臂拳"
     translated: "Long‑arm fist"
   - split: 4
-    text: "以"
-    translated: "Yi"
-  - split: 4
-    subIndex: 1
-    text: "两臂相通"
-    translated: "Arms linked"
-  - split: 4
-    subIndex: 2
-    text: "的通臂劲而著称的一套拳法，力道由肩发出，通过手肘至拳上，以成通臂之势"
-    translated: "A set of fist techniques renowned for their extended arm power, where the strength originates from the shoulders, travels through the elbows to the fists, forming an extended arm posture."
+    text: "以“两臂相通”的通臂劲而著称的一套拳法，力道由肩发出，通过手肘至拳上，以成通臂之势"
+    translated: "A fist technique known for its Linked‑Arm Strength, where the strength originates from the shoulders and travels through the elbows to the fists, creating a connected‑arm posture."
   - split: 7
     text: "拳掌1"
     translated: "Fist and palm 1"
@@ -2722,8 +2704,6 @@
     text: "拳"
     translated: "Fist"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -3480,16 +3460,8 @@
     text: "无量剑法"
     translated: "Boundless Sword Technique"
   - split: 4
-    text: "注重内功修为之剑法，其内劲收发方式繁多且可以自由组合，因此得"
-    translated: "Focused on neigong cultivation, the Sword Art features a multitude of internal power emission methods that can be freely combined, thus allowing"
-  - split: 4
-    subIndex: 1
-    text: "无量"
-    translated: "Infinite"
-  - split: 4
-    subIndex: 2
-    text: "之名"
-    translated: "In His Name"
+    text: "注重内功修为之剑法，其内劲收发方式繁多且可以自由组合，因此得“无量”之名"
+    translated: "Focus on neigong cultivation, this sword art features a myriad of internal energy emission methods that can be freely combined, thus earning the name Boundless."
   - split: 7
     text: "剑法1"
     translated: "Sword Technique 1"
@@ -3527,8 +3499,6 @@
     text: "剑"
     translated: "Sword"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -4664,16 +4634,8 @@
     text: "中平枪法"
     translated: "Middle‑Level Spear Technique"
   - split: 4
-    text: "讲求顶平肩平脚平枪平"
-    translated: "Strive for level heads, shoulders, feet, and guns."
-  - split: 4
-    subIndex: 1
-    text: "四平"
-    translated: "Pingling"
-  - split: 4
-    subIndex: 2
-    text: "之枪法，平直穿插，去势如箭，尽管招式简单，却又难以招架"
-    translated: "His Spear Technique involves level and piercing movements, each strike as sharp as an arrow. Despite its simplicity, it is hard to block."
+    text: "讲求顶平肩平脚平枪平“四平”之枪法，平直穿插，去势如箭，尽管招式简单，却又难以招架"
+    translated: "Focusing on the Four Plains: level shoulders, level hips, level feet, and level spear technique‑straight and penetrating like an arrow. Despite its simple movements, it is difficult to block."
   - split: 7
     text: "力道1"
     translated: "Strength 1"
@@ -4711,8 +4673,6 @@
     text: "长兵"
     translated: "Long weapon"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -4728,12 +4688,8 @@
     text: "八母枪术"
     translated: "Eight Mothers Staff Technique"
   - split: 4
-    text: "封闭提掳拿拦还缠"
-    translated: "Containment and capture operations"
-  - split: 4
-    subIndex: 1
-    text: "八式乃一切枪术之基本，其生出的组合又变化万千，因此以八母闻名"
-    translated: "The Eight Forms are the foundation of all rifle techniques. Their combinations are myriad and ever‑changing, hence they are known as the Eight Mothers."
+    text: "“封闭提掳拿拦还缠”八式乃一切枪术之基本，其生出的组合又变化万千，因此以八母闻名"
+    translated: "The Eightfold Seal Capture Form is the fundamental of all rifle techniques. Its combinations are countless and ever‑changing, hence it is known as the Eight Mothers."
   - split: 7
     text: "长兵1"
     translated: "Long Sword 1"
@@ -4779,8 +4735,6 @@
     text: "长兵"
     translated: "Long weapon"
   templates:
-  - split: 4
-    template: "“{0}”{1}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -7623,16 +7577,8 @@
     text: "摔碑手"
     translated: "Crushing themHand"
   - split: 4
-    text: "一门刚柔并济，攻守兼备的掌法，其诀窍在于"
-    translated: "A palm technique that combines hardness and softness, offense and defense. The key lies in"
-  - split: 4
-    subIndex: 1
-    text: "摔"
-    translated: "Fall"
-  - split: 4
-    subIndex: 2
-    text: "字，即借助手腕甩打之力增强搏击威力"
-    translated: "Stroke, which enhances the power of combat through the use of wrist whipping force."
+    text: "一门刚柔并济，攻守兼备的掌法，其诀窍在于“摔”字，即借助手腕甩打之力增强搏击威力"
+    translated: "A palm technique that combines softness and hardness, offense and defense. The key lies in the throw – using the wrist's snapping force to enhance the striking power."
   - split: 7
     text: "拳掌2"
     translated: "Fist and Palm 2"
@@ -7686,8 +7632,6 @@
     text: "拳"
     translated: "Fist"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -26654,16 +26598,9 @@
     text: "打狗八绝棍"
     translated: "Eight Absolute Staff Techniques"
   - split: 4
-    text: "丐帮祖师对战群邪时所创棍法，以"
-    translated: "The staff techniques created by the ancestor master of the Beggar Sect during battles against the assembled evil forces,"
-  - split: 4
-    subIndex: 1
-    text: "打狗"
-    translated: "Beat up the dog"
-  - split: 4
-    subIndex: 2
-    text: "称之颇有几分戏谑粗俗之意，却是举重若轻，返璞归真，实用至极，无丝毫多余动作之招式"
-    translated: "It's somewhat playful and coarse, yet executed with effortless simplicity and practicality, devoid of any superfluous movements."
+    text: "丐帮祖师对战群邪时所创棍法，以“打狗”称之颇有几分戏谑粗俗之意，却是举重若轻，返璞归真，实用至极，无丝毫多余动作之招式"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "长兵潜力1"
     translated: "Potential of Long Troops 1"
@@ -26745,8 +26682,6 @@
     text: "长兵"
     translated: "Long weapon"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1};{2}"
   - split: 9
@@ -37399,16 +37334,8 @@
     text: "天玄七煞刀"
     translated: "Heavenly Black Seven Deadly Scimitars"
   - split: 4
-    text: "此七式刀法每招名称中皆有一"
-    translated: "Each of these seven Blade Arts has a name that includes"
-  - split: 4
-    subIndex: 1
-    text: "杀"
-    translated: "Sha"
-  - split: 4
-    subIndex: 2
-    text: "字，一刀比一刀更为邪气逼人，杀意旺盛，若七刀尽出则再无退路，不死不休"
-    translated: "Each cut was more evil than the last, exuding a strong intent to kill. If all seven cuts are unleashed, there will be no turning back; it must be fatal."
+    text: "此七式刀法每招名称中皆有一“杀”字，一刀比一刀更为邪气逼人，杀意旺盛，若七刀尽出则再无退路，不死不休"
+    translated: "Each of these seven Blade Arts includes a kill in its name. Each strike is more wicked than the last, brimming with murderous intent. If all seven are used, there will be no turning back‑no mercy, no survival."
   - split: 7
     text: "刀法潜力1"
     translated: "Potential of Blade Art 1"
@@ -37470,8 +37397,6 @@
     text: "刀"
     translated: "Blade"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1};{2}"
   - split: 9
@@ -38967,24 +38892,8 @@
     text: "永字八法"
     translated: "Eight Principles of Calligraphy"
   - split: 4
-    text: "此八招在空中画一"
-    translated: "These eight moves trace out"
-  - split: 4
-    subIndex: 1
-    text: "永"
-    translated: "Yong"
-  - split: 4
-    subIndex: 2
-    text: "字，取"
-    translated: "Character, take"
-  - split: 4
-    subIndex: 3
-    text: "永"
-    translated: "Yong"
-  - split: 4
-    subIndex: 4
-    text: "字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
-    translated: "Eight stroke types‑side press, leap, flick, peck, snap, tear, and slash‑are practiced as the foundational exercises in calligraphy."
+    text: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
+    translated: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -39026,8 +38935,6 @@
     text: "笔"
     translated: "Pen"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}“{3}”{4}"
   - split: 7
     template: "{0};{1}"
   - split: 9

@@ -28,18 +28,12 @@
   splits:
   - text: "思考招式"
   - split: 1
-    text: "......我此招使得......可有纰漏？"
+    text: "......#PlayerName#......我此招使得......可有纰漏？"
   - split: 2
     text: "绝顶高手相争之时，唯一目的便是击败对方。"
   - split: 2
     subIndex: 1
-    text: "无欲无情，全心投入，专注于"
-  - split: 2
-    subIndex: 2
-    text: "杀"
-  - split: 2
-    subIndex: 3
-    text: "这一字便已足够。"
+    text: "无欲无情，全心投入，专注于“杀”这一字便已足够。"
   - split: 3
     text: "#PlayerName#，你不会和那些无趣江湖人士一般，"
   - split: 3
@@ -58,15 +52,9 @@
     subIndex: 1
     text: "任你大罗金仙，也休想摸清老子的套路。"
   - split: 7
-    text: "高手之争，非在一招一式之间，而在于运用之"
+    text: "高手之争，非在一招一式之间，而在于运用之“人”身上。"
   - split: 7
     subIndex: 1
-    text: "人"
-  - split: 7
-    subIndex: 2
-    text: "身上。"
-  - split: 7
-    subIndex: 3
     text: "只要时机得当，再弱的招式亦能威力倍增。"
   - split: 8
     text: "听师傅说，出招之法在于随心所欲，无拘无束。"
@@ -82,7 +70,7 @@
     text: "哼哼，见过我招式之人大多已经殒命，"
   - split: 10
     subIndex: 1
-    text: "还是少好奇些为妙。"
+    text: "#PlayerName#还是少好奇些为妙。"
   - split: 11
     text: "江湖偌大，在下远算不上天赋异禀。"
   - split: 11
@@ -92,18 +80,10 @@
     text: "我道法修为尚浅，师傅总说我还不懂太极生两仪，两仪生四象，四象生八卦的道理。"
   - split: 12
     subIndex: 1
-    text: "我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个"
-  - split: 12
-    subIndex: 2
-    text: "生"
-  - split: 12
-    subIndex: 3
-    text: "法。"
+    text: "我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个“生”法。"
   templates:
-  - split: 1
-    template: "......#PlayerName#{0}"
   - split: 2
-    template: "{0}\\n{1}“{2}”{3}"
+    template: "{0}\\n{1}"
   - split: 3
     template: "{0}\\n{1}"
   - split: 4
@@ -111,17 +91,17 @@
   - split: 6
     template: "{0}\\n{1}"
   - split: 7
-    template: "{0}“{1}”{2}\\n{3}"
+    template: "{0}\\n{1}"
   - split: 8
     template: "{0}\\n{1}"
   - split: 9
     template: "{0}\\n{1}"
   - split: 10
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 11
     template: "{0}\\n{1}"
   - split: 12
-    template: "{0}\\n{1}“{2}”{3}"
+    template: "{0}\\n{1}"
 - raw: "武学见解,当今世人......越醉心武道......\\n我等医者......越难得空闲......,当今武学，多拘泥于花哨招式与繁复心法。\\n然唯有“杀”者，才是武学至高之道。,闯荡江湖，只要练好轻功就行。\\n想打就打，想走就走，岂不是天下无敌？,海纳百川，有容乃大。\\n习武之道，在于并包兼蓄，融会贯通。,强食弱肉，胜者为王，\\n此乃自然之理，亦是武道之真谛。,武学之道，在于破除常规，别开蹊径。\\n若是一招一式，一板一眼，那可就太过无聊了。,习武之道，玄妙无穷。\\n老朽便是穷尽一生，也只得窥见一角而已。,我久居山林，只略懂些拳脚。\\n#PlayerName#若是得空，定要多教我两招。,大隐阁武学本就奥妙无穷，星辰楼之中更藏有秘籍无数。\\n能够登临楼顶之人，从古至今不过寥寥几人而已。,好勇斗狠，以武相争，那便落了下乘。\\n以暗器毒药伤人，兵不血刃，才是上上之法。,习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，\\n方能踏上武学正道，抵达仁者无敌之境。,太极神功乃武当武学之尊，在江湖中亦是久负盛名。\\n传说大成者可以静制动，以柔克刚，其劲力亦如太极圆转，生生不息。"
   splits:
   - text: "武学见解"
@@ -134,13 +114,7 @@
     text: "当今武学，多拘泥于花哨招式与繁复心法。"
   - split: 2
     subIndex: 1
-    text: "然唯有"
-  - split: 2
-    subIndex: 2
-    text: "杀"
-  - split: 2
-    subIndex: 3
-    text: "者，才是武学至高之道。"
+    text: "然唯有“杀”者，才是武学至高之道。"
   - split: 3
     text: "闯荡江湖，只要练好轻功就行。"
   - split: 3
@@ -170,7 +144,7 @@
     text: "我久居山林，只略懂些拳脚。"
   - split: 8
     subIndex: 1
-    text: "若是得空，定要多教我两招。"
+    text: "#PlayerName#若是得空，定要多教我两招。"
   - split: 9
     text: "大隐阁武学本就奥妙无穷，星辰楼之中更藏有秘籍无数。"
   - split: 9
@@ -195,7 +169,7 @@
   - split: 1
     template: "{0}\\n{1}"
   - split: 2
-    template: "{0}\\n{1}“{2}”{3}"
+    template: "{0}\\n{1}"
   - split: 3
     template: "{0}\\n{1}"
   - split: 4
@@ -207,7 +181,7 @@
   - split: 7
     template: "{0}\\n{1}"
   - split: 8
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 9
     template: "{0}\\n{1}"
   - split: 10
@@ -220,7 +194,7 @@
   splits:
   - text: "休闲娱乐"
   - split: 1
-    text: "......可遇到什么趣事......与我说说......"
+    text: "......#PlayerName#......可遇到什么趣事......与我说说......"
   - split: 2
     text: "老夫的刀法，还有太多可精进之处。"
   - split: 2
@@ -230,12 +204,12 @@
     text: "本姑娘一闲着没事，就想去偷点好东西......"
   - split: 3
     subIndex: 1
-    text: "要不要一起？"
+    text: "#PlayerName#要不要一起？"
   - split: 4
     text: "读万卷书，行万里路，方为修行之道。"
   - split: 4
     subIndex: 1
-    text: "闲暇之时，也当多读些经史典籍才是。"
+    text: "#PlayerName#闲暇之时，也当多读些经史典籍才是。"
   - split: 5
     text: "若一事不能增进武艺或为本帮谋利，老夫便不会浪费时间。"
   - split: 6
@@ -244,18 +218,12 @@
     text: "但凡是这江湖之事，老朽皆算略有耳闻，"
   - split: 7
     subIndex: 1
-    text: "因此方才得了这"
-  - split: 7
-    subIndex: 2
-    text: "百晓"
-  - split: 7
-    subIndex: 3
-    text: "的名号。"
+    text: "因此方才得了这“百晓”的名号。"
   - split: 8
     text: "在峨眉山上耍猴子，抓野兔，那可有趣的紧啊！"
   - split: 8
     subIndex: 1
-    text: "想试试不？比比咱们谁抓得多！"
+    text: "#PlayerName#想试试不？比比咱们谁抓得多！"
   - split: 9
     text: "归墟秘典之核心法门，唯有阁主知晓。"
   - split: 9
@@ -280,18 +248,16 @@
     subIndex: 2
     text: "此等重任，我怕是万万当不起的。"
   templates:
-  - split: 1
-    template: "......#PlayerName#{0}"
   - split: 2
     template: "{0}\\n{1}"
   - split: 3
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 4
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 7
-    template: "{0}\\n{1}“{2}”{3}"
+    template: "{0}\\n{1}"
   - split: 8
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 9
     template: "{0}\\n{1}"
   - split: 10
@@ -380,7 +346,7 @@
   splits:
   - text: "日常见面"
   - split: 1
-    text: "......近来可有受伤......"
+    text: "......#PlayerName#......近来可有受伤......"
   - split: 2
     text: "#PlayerName#，有何贵干？"
   - split: 3
@@ -412,21 +378,13 @@
   - split: 10
     text: "#PlayerName#就算有事相求，也得拿出相应价码交换才行。"
   - split: 11
-    text: "在下不才，蒙武林同道厚爱，得了这"
+    text: "在下不才，蒙武林同道厚爱，得了这“中原大侠”的名号。"
   - split: 11
     subIndex: 1
-    text: "中原大侠"
-  - split: 11
-    subIndex: 2
-    text: "的名号。"
-  - split: 11
-    subIndex: 3
     text: "每每想来，只觉诚惶诚恐，羞愧莫名。"
   - split: 12
     text: "#PlayerName#又见面了，看来你我也算缘分不浅。"
   templates:
-  - split: 1
-    template: "......#PlayerName#{0}"
   - split: 3
     template: "{0}\\n{1}"
   - split: 4
@@ -436,7 +394,7 @@
   - split: 9
     template: "{0}\\n{1}"
   - split: 11
-    template: "{0}“{1}”{2}\\n{3}"
+    template: "{0}\\n{1}"
 - raw: "诗词歌赋,古人医在心，心正药自真......今人医在手，手滥药不神。\\n我愿天地炉，多衔扁鹊身......自然六合内，少闻贫病人。,千古江山，英雄无觅孙仲谋处。\\n舞榭歌台，风流总被雨打风吹去。\\n斜阳草树，寻常巷陌，人道寄奴曾住。\\n想当年，金戈铁马，气吞万里如虎。,世人结交须黄金，黄金不多交不深。\\n纵令然诺暂相许，终是悠悠行路心。,道可道，非常道；名可名，非常名。\\n无名天地之始，有名万物之母。\\n此两者同出而异名，同谓之玄，玄之又玄，众妙之门。,画虎画皮难画骨，知人知面不知心。\\n有酒有肉多兄弟，急难何曾见一人？,绝情断义，横行无忌。\\n天上地下，唯我独尊！,唱彻阳关泪未干，功名馀事且加餐。浮天水送无穷树，带雨云埋一半山。\\n今古恨，几千般，只应离合是悲欢。江头未是风波恶，别有人间行路难。,师傅老人家总喜欢念些诗词歌赋，什么之乎者也，着实拗口。\\n好好说话不行吗？#PlayerName#你也是这么想的吧！,一上高楼万里愁，蒹葭杨柳似汀洲。\\n溪云初起日沉阁，山雨欲来风满楼。,兵者，诡道也。\\n故能而示之不能，用而示之不用，近而示之远，远而示之近。\\n攻其无备，出其不意。此兵家之胜，不可先传也。,士卒涂草莽，将军空尔为。乃知兵者是凶器，圣人不得已而用之。,无声无象，全身空透，应物自然，西山悬磬。\\n虎吼猿鸣，水清河静，翻汇倒海，尽性立命。"
   splits:
   - text: "诗词歌赋"
@@ -546,13 +504,7 @@
     text: "本姑娘所取的财物，大多来路不干净。"
   - split: 3
     subIndex: 1
-    text: "此等劫富济贫侠义之举，又怎能算是"
-  - split: 3
-    subIndex: 2
-    text: "偷"
-  - split: 3
-    subIndex: 3
-    text: "呢？"
+    text: "此等劫富济贫侠义之举，又怎能算是“偷”呢？"
   - split: 4
     text: "祸兮福之所倚，福兮祸之所伏。"
   - split: 4
@@ -589,13 +541,7 @@
     text: "天地有正气，公道在人心。"
   - split: 11
     subIndex: 1
-    text: "我郭淮能得武林众人厚爱，唯靠"
-  - split: 11
-    subIndex: 2
-    text: "侠义"
-  - split: 11
-    subIndex: 3
-    text: "二字而已。"
+    text: "我郭淮能得武林众人厚爱，唯靠“侠义”二字而已。"
   - split: 12
     text: "师傅和师叔为了武当派，日日殚精竭虑。"
   - split: 12
@@ -605,7 +551,7 @@
   - split: 2
     template: "{0}\\n{1}"
   - split: 3
-    template: "{0}\\n{1}“{2}”{3}"
+    template: "{0}\\n{1}"
   - split: 4
     template: "{0}\\n{1}"
   - split: 6
@@ -619,7 +565,7 @@
   - split: 10
     template: "{0}\\n{1}"
   - split: 11
-    template: "{0}\\n{1}“{2}”{3}"
+    template: "{0}\\n{1}"
   - split: 12
     template: "{0}\\n{1}"
 - raw: "对待朋友,......我久居深山幽谷之中......像#PlayerName#这样能说上两句话之人......亦是不多......,天下之间，太多蝇营狗苟之辈。\\n人生一世，又能遇上几个倾心相交的英雄豪杰？,#PlayerName#放心，本姑娘一般不偷相熟之人的东西......\\n除非有人惹我不开心了！,君子之交，淡泊如水，\\n志同道合之谊，方能历久弥坚。,哼哼，#PlayerName#若能助铁掌帮一臂之力，\\n我夏天雄自也不会亏待阁下......,行走江湖，老子早已习惯了独来独往。\\n报团取暖，不过是蝼蚁所为。,这些年来，老朽见过太多亲朋反目，手足相残之惨剧。\\n所谓天下熙熙皆为利来，天下攘攘皆为利往，莫不如是。,我朋友大多是些飞禽走兽，山野猴子，\\n#PlayerName#你算第一个初具人形的......这成语是这么用的吧？,缘起相聚，缘散别离，江湖中人身若浮萍，\\n#PlayerName#与我也不过如是。,#PlayerName#若能助一臂之力，我自然不会亏待于你。,兄弟义气，自当肝胆相照，一片赤诚。\\n想必#PlayerName#也如此认为。,只要我等名门大派秉公持正，携手并进，\\n就定能使这天下武林风清气正，海晏河清。\\n不知#PlayerName#是否也这样认为？"
@@ -661,12 +607,12 @@
     text: "我朋友大多是些飞禽走兽，山野猴子，"
   - split: 8
     subIndex: 1
-    text: "你算第一个初具人形的......这成语是这么用的吧？"
+    text: "#PlayerName#你算第一个初具人形的......这成语是这么用的吧？"
   - split: 9
     text: "缘起相聚，缘散别离，江湖中人身若浮萍，"
   - split: 9
     subIndex: 1
-    text: "与我也不过如是。"
+    text: "#PlayerName#与我也不过如是。"
   - split: 10
     text: "#PlayerName#若能助一臂之力，我自然不会亏待于你。"
   - split: 11
@@ -696,9 +642,9 @@
   - split: 7
     template: "{0}\\n{1}"
   - split: 8
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 9
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 11
     template: "{0}\\n{1}"
   - split: 12
@@ -731,7 +677,7 @@
     text: "明枪易躲，暗箭难防。"
   - split: 7
     subIndex: 1
-    text: "行走江湖之时，还是少结些仇家为妙。"
+    text: "#PlayerName#行走江湖之时，还是少结些仇家为妙。"
   - split: 8
     text: "峨眉山中有个老猴王，天天撒泼捣乱，破坏田地，"
   - split: 8
@@ -765,7 +711,7 @@
   - split: 5
     template: "{0}\\n{1}"
   - split: 7
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 8
     template: "{0}\\n{1}"
   - split: 9
@@ -793,7 +739,7 @@
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"
   - split: 3
     subIndex: 2
-    text: "，你不会也是其中之一吧？"
+    text: "......#PlayerName#，你不会也是其中之一吧？"
   - split: 4
     text: "当今江湖英雄辈出，豪侠并起，此皆天下大乱所致。"
   - split: 4
@@ -810,13 +756,7 @@
     subIndex: 1
     text: "能入老子法眼的，不过寥寥数人而已。"
   - split: 7
-    text: "最难测算是人心，便是老朽这"
-  - split: 7
-    subIndex: 1
-    text: "江湖百晓"
-  - split: 7
-    subIndex: 2
-    text: "，怕也难解其分毫。"
+    text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
   - split: 8
@@ -826,7 +766,7 @@
     text: "人在江湖，身不由己。"
   - split: 9
     subIndex: 1
-    text: "，或许你我也会有拔剑相向的一天。"
+    text: "#PlayerName#，或许你我也会有拔剑相向的一天。"
   - split: 10
     text: "循规蹈矩依正道而行者，不过棋子而已。"
   - split: 10
@@ -846,19 +786,17 @@
   - split: 2
     template: "{0}\\n{1}"
   - split: 3
-    template: "{0}\\n{1}\\n......#PlayerName#{2}"
+    template: "{0}\\n{1}\\n{2}"
   - split: 4
     template: "{0}\\n{1}"
   - split: 5
     template: "{0}\\n{1}"
   - split: 6
     template: "{0}\\n{1}"
-  - split: 7
-    template: "{0}“{1}”{2}"
   - split: 8
     template: "{0}\\n{1}"
   - split: 9
-    template: "{0}\\n#PlayerName#{1}"
+    template: "{0}\\n{1}"
   - split: 10
     template: "{0}\\n{1}"
   - split: 11

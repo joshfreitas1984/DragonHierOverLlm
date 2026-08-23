@@ -164,13 +164,7 @@
   - split: 3
     text: "飞毛腿"
   - split: 4
-    text: "源于古代递送紧急军情"
-  - split: 4
-    subIndex: 1
-    text: "羽檄"
-  - split: 4
-    subIndex: 2
-    text: "之兵士的步法"
+    text: "源于古代递送紧急军情“羽檄”之兵士的步法"
   - split: 7
     text: "灵巧1"
   - split: 8
@@ -182,8 +176,6 @@
     subIndex: 2
     text: "速度0.04"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 8
     template: "{0};{1};{2}"
 - raw: "4,轻功,0,轻身术,每日背负沙袋行走并渐增负重，乃是最基础的轻功练习之法,,0.9,轻功1,轻功4;灵巧4;意志4,,轻功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
@@ -1999,13 +1991,7 @@
   - split: 3
     text: "通臂拳"
   - split: 4
-    text: "以"
-  - split: 4
-    subIndex: 1
-    text: "两臂相通"
-  - split: 4
-    subIndex: 2
-    text: "的通臂劲而著称的一套拳法，力道由肩发出，通过手肘至拳上，以成通臂之势"
+    text: "以“两臂相通”的通臂劲而著称的一套拳法，力道由肩发出，通过手肘至拳上，以成通臂之势"
   - split: 7
     text: "拳掌1"
   - split: 7
@@ -2035,8 +2021,6 @@
   - split: 24
     text: "拳"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -2603,13 +2587,7 @@
   - split: 3
     text: "无量剑法"
   - split: 4
-    text: "注重内功修为之剑法，其内劲收发方式繁多且可以自由组合，因此得"
-  - split: 4
-    subIndex: 1
-    text: "无量"
-  - split: 4
-    subIndex: 2
-    text: "之名"
+    text: "注重内功修为之剑法，其内劲收发方式繁多且可以自由组合，因此得“无量”之名"
   - split: 7
     text: "剑法1"
   - split: 7
@@ -2636,8 +2614,6 @@
   - split: 24
     text: "剑"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -3488,13 +3464,7 @@
   - split: 3
     text: "中平枪法"
   - split: 4
-    text: "讲求顶平肩平脚平枪平"
-  - split: 4
-    subIndex: 1
-    text: "四平"
-  - split: 4
-    subIndex: 2
-    text: "之枪法，平直穿插，去势如箭，尽管招式简单，却又难以招架"
+    text: "讲求顶平肩平脚平枪平“四平”之枪法，平直穿插，去势如箭，尽管招式简单，却又难以招架"
   - split: 7
     text: "力道1"
   - split: 7
@@ -3521,8 +3491,6 @@
   - split: 24
     text: "长兵"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -3536,10 +3504,7 @@
   - split: 3
     text: "八母枪术"
   - split: 4
-    text: "封闭提掳拿拦还缠"
-  - split: 4
-    subIndex: 1
-    text: "八式乃一切枪术之基本，其生出的组合又变化万千，因此以八母闻名"
+    text: "“封闭提掳拿拦还缠”八式乃一切枪术之基本，其生出的组合又变化万千，因此以八母闻名"
   - split: 7
     text: "长兵1"
   - split: 7
@@ -3572,8 +3537,6 @@
   - split: 24
     text: "长兵"
   templates:
-  - split: 4
-    template: "“{0}”{1}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -5728,13 +5691,7 @@
   - split: 3
     text: "摔碑手"
   - split: 4
-    text: "一门刚柔并济，攻守兼备的掌法，其诀窍在于"
-  - split: 4
-    subIndex: 1
-    text: "摔"
-  - split: 4
-    subIndex: 2
-    text: "字，即借助手腕甩打之力增强搏击威力"
+    text: "一门刚柔并济，攻守兼备的掌法，其诀窍在于“摔”字，即借助手腕甩打之力增强搏击威力"
   - split: 7
     text: "拳掌2"
   - split: 7
@@ -5773,8 +5730,6 @@
   - split: 24
     text: "拳"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1}"
   - split: 9
@@ -20234,13 +20189,7 @@
   - split: 3
     text: "打狗八绝棍"
   - split: 4
-    text: "丐帮祖师对战群邪时所创棍法，以"
-  - split: 4
-    subIndex: 1
-    text: "打狗"
-  - split: 4
-    subIndex: 2
-    text: "称之颇有几分戏谑粗俗之意，却是举重若轻，返璞归真，实用至极，无丝毫多余动作之招式"
+    text: "丐帮祖师对战群邪时所创棍法，以“打狗”称之颇有几分戏谑粗俗之意，却是举重若轻，返璞归真，实用至极，无丝毫多余动作之招式"
   - split: 7
     text: "长兵潜力1"
   - split: 7
@@ -20300,8 +20249,6 @@
   - split: 24
     text: "长兵"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1};{2}"
   - split: 9
@@ -28400,13 +28347,7 @@
   - split: 3
     text: "天玄七煞刀"
   - split: 4
-    text: "此七式刀法每招名称中皆有一"
-  - split: 4
-    subIndex: 1
-    text: "杀"
-  - split: 4
-    subIndex: 2
-    text: "字，一刀比一刀更为邪气逼人，杀意旺盛，若七刀尽出则再无退路，不死不休"
+    text: "此七式刀法每招名称中皆有一“杀”字，一刀比一刀更为邪气逼人，杀意旺盛，若七刀尽出则再无退路，不死不休"
   - split: 7
     text: "刀法潜力1"
   - split: 7
@@ -28451,8 +28392,6 @@
   - split: 24
     text: "刀"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}"
   - split: 7
     template: "{0};{1};{2}"
   - split: 9
@@ -29597,19 +29536,7 @@
   - split: 3
     text: "永字八法"
   - split: 4
-    text: "此八招在空中画一"
-  - split: 4
-    subIndex: 1
-    text: "永"
-  - split: 4
-    subIndex: 2
-    text: "字，取"
-  - split: 4
-    subIndex: 3
-    text: "永"
-  - split: 4
-    subIndex: 4
-    text: "字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
+    text: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
   - split: 7
     text: "奇门1"
   - split: 7
@@ -29639,8 +29566,6 @@
   - split: 24
     text: "笔"
   templates:
-  - split: 4
-    template: "{0}“{1}”{2}“{3}”{4}"
   - split: 7
     template: "{0};{1}"
   - split: 9

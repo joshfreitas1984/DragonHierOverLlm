@@ -19,23 +19,15 @@
     translated: "This was originally an unremarkable small inn beyond the borders. Legend has it that the proprietor offered a high reward to scholars seeking to inscribe a plaque, hoping to boost their reputation."
   - split: 2
     subIndex: 1
-    text: "前朝文豪恰巧行径此处，抚掌笑曰：既然此处有间客栈，就叫"
-    translated: "Former literary giants stroll herein and clap in amusement: Since there is an inn here, let's call it"
+    text: "前朝文豪恰巧行径此处，抚掌笑曰：既然此处有间客栈，就叫“有间客栈”好了！"
+    translated: "Former literary giants walking this path might exclaim with a clap: Since there's an inn here, let's call it Youjian Inn!"
   - split: 2
     subIndex: 2
-    text: "有间客栈"
-    translated: "A Moment's Inn"
-  - split: 2
-    subIndex: 3
-    text: "好了！"
-    translated: "Okay!"
-  - split: 2
-    subIndex: 4
     text: "随战乱不断，商路迁移，此处生意竟真逐渐转暖，最终成了关东首屈一指的客店之所。"
     translated: "With warfare and unrest leading to the migration of trade routes, business here gradually picked up. Eventually, it became the top guesthouse in Guandong."
   templates:
   - split: 2
-    template: "{0}\\n{1}“{2}”{3}\\n{4}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "1,河洛客栈,这黄河洛水交接之所，乃炎黄故地，中原要冲，自古以来便是土地肥沃，人丁兴旺之所。\\n故而这天子脚下的河洛客栈，生意也一直颇为兴隆。\\n南方的游人学子，或官员商贾上京之时，大多要在此打尖歇脚几日，再行赶路。,23.78;2.4"
   splits:
   - split: 1
@@ -84,23 +76,15 @@
     translated: "This Jinyang, located southwest of the border and a crucial junction, is also an important hub for transportation between Central China and various northern regions."
   - split: 2
     subIndex: 1
-    text: "悦来"
-    translated: "Joyful Come"
+    text: "“悦来”其名取自“有朋自远方来，不亦悦乎”，"
+    translated: "Yuelai takes its name from It's delightful when friends come from afar."
   - split: 2
     subIndex: 2
-    text: "其名取自"
-    translated: "Its name comes from"
-  - split: 2
-    subIndex: 3
-    text: "有朋自远方来，不亦悦乎"
-    translated: "A friend coming from afar brings great joy, does it not?"
-  - split: 2
-    subIndex: 4
     text: "此处往来汉人羌胡以及各番邦者，倒也确是共聚一堂，自得融洽。"
     translated: "Here, the Han people, Qiang Hu, and various foreign nations do indeed gather together and find mutual harmony."
   templates:
   - split: 2
-    template: "{0}\\n“{1}”{2}“{3}”，\\n{4}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "4,龙门客栈,西北关外，荒烟蔓草，滚滚黄沙中，\\n竟有这间生意不俗，行人络绎的龙门客栈，着实令往来行者眼前一亮。\\n不过也有江湖传闻，其老板娘八面玲珑，妩媚泼辣，通过掌控出关商道和边防将领，经营黑店谋取暴利。,-41.53;19.92"
   splits:
   - split: 1
@@ -126,23 +110,15 @@
     text: "高升客栈"
     translated: "High Riser Inn"
   - split: 2
-    text: "此处乃巴蜀地区重要水陆驿站，由于其名取"
-    translated: "This place is an important water and land relay station in the Bashu region, named due to its location."
+    text: "此处乃巴蜀地区重要水陆驿站，由于其名取“步步高升”之意，颇受往来商贾旅人的欢迎，"
+    translated: "This place is an important water and land relay station in the Bashu region. Due to its name meaning steady progress, it is particularly favored by travelers and merchants."
   - split: 2
     subIndex: 1
-    text: "步步高升"
-    translated: "Promote step by step"
-  - split: 2
-    subIndex: 2
-    text: "之意，颇受往来商贾旅人的欢迎，"
-    translated: "Is particularly popular among merchants and travelers"
-  - split: 2
-    subIndex: 3
     text: "加之其位于巴蜀与西北地区间几乎必经的要道之上，因而每日也是顾客盈门，高朋满座。"
     translated: "Given its location on a nearly indispensable passageway between Bashu and the Northwest regions, it thus sees customers and esteemed guests every day."
   templates:
   - split: 2
-    template: "{0}“{1}”{2}\\n{3}"
+    template: "{0}\\n{1}"
 - raw: "6,仙居客栈,此处乃是江陵一带颇具声名之驿站，\\n因其周边风景秀美，名山屏卫，云雾缭绕宛若神仙居所，故而得名“仙居客栈”。\\n在此处打尖住店之人，大多是往来于南方和中原地区的商贾游人，或是赶考学子。,-5.92;-18.19"
   splits:
   - split: 1
@@ -153,19 +129,15 @@
     translated: "This is a renowned relay station in the Jiangling region."
   - split: 2
     subIndex: 1
-    text: "因其周边风景秀美，名山屏卫，云雾缭绕宛若神仙居所，故而得名"
-    translated: "Due to its picturesque surroundings and misty peaks that resemble a dwelling for immortals, it is named thus."
+    text: "因其周边风景秀美，名山屏卫，云雾缭绕宛若神仙居所，故而得名“仙居客栈”。"
+    translated: "Because of its picturesque surroundings and mist‑shrouded mountains that resemble a dwelling for immortals, it is named Xijiu Inn."
   - split: 2
     subIndex: 2
-    text: "仙居客栈"
-    translated: "Xianju Inn"
-  - split: 2
-    subIndex: 3
     text: "在此处打尖住店之人，大多是往来于南方和中原地区的商贾游人，或是赶考学子。"
     translated: "Those who stay at inns here are mostly merchants and travelers going between the South and Central Plains, or students heading to take exams."
   templates:
   - split: 2
-    template: "{0}\\n{1}“{2}”。\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "7,同福客栈,这同福客栈本是京城西南一名不见经传的破落小店，依靠零星商旅勉强维持。\\n近年来由于飞龙门得势，依靠拜会山门和进京上贡的武林中人，生意倒也颇有起色，\\n竟逐渐成了江湖传闻中卧虎藏龙，高手云集之所。,-1.19;9.97"
   splits:
   - split: 1
@@ -199,15 +171,11 @@
     translated: "Continuing west will lead you into the highlands, a harsh and barren region with rugged terrain and sparse population."
   - split: 2
     subIndex: 2
-    text: "往来旅人大多选择在此整备行囊，顺便祈福颂愿，以求路途之中"
-    translated: "Most travelers tend to prepare their provisions here and also offer prayers for safe travels."
-  - split: 2
-    subIndex: 3
-    text: "万事平安"
-    translated: "May all be well"
+    text: "往来旅人大多选择在此整备行囊，顺便祈福颂愿，以求路途之中“万事平安”。"
+    translated: "Most travelers tend to prepare their supplies here and also pray for safety on their journey, wishing for peace in all matters during their travels."
   templates:
   - split: 2
-    template: "{0}\\n{1}\\n{2}“{3}”。"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "9,秀水客栈,这秀水客栈形制古朴，装饰精美，自前朝建设以来已有百年历史。\\n由于位于扬州与杭州之间通衢要道，颇受往来商贾欢迎，\\n更兼其周边山明水秀，风光宜人，因而也吸引了许多四方旅人专程来此游览。,53.85;-3.78"
   splits:
   - split: 1
