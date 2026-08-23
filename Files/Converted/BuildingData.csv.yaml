@@ -3327,8 +3327,7 @@
     translated: "1000 timber"
   - split: 19
     text: "由星罗棋布，错综复杂的引水渠道和大小水库组成的庞大水利工程，其渠可行舟，亦可作浇灌汲饮之用，蜀中以此灌溉沃野千里，并罕有水灾泛滥，终成其“天府”之美名。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "A vast water engineering project consisting of intricate and numerous irrigation canals and reservoirs supports the fertile fields of Shu. These canals serve not only as passageways for boats but also for irrigation and drinking. Thanks to this system, Shu enjoys rare occurrences of floods and earns its reputation as the Land of Abundance."
   templates:
   - split: 7
     template: "{0}--ShowBuildingShop"
@@ -3884,8 +3883,7 @@
     translated: "2000 herbs"
   - split: 19
     text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Divine Craftsmanship, in the misty cave filled with spiritual energy, the disciples of Mount Mao practice techniques such as Mindfulness and Breath Cultivation. The benefits are countless. As an ancient poem says: White‑tiger spotted dragon treads purple smoke, seeing the azure sea turn into mulberry fields, seeking true alchemy in Crimson City, now arriving at Huayang's eighth heaven."
   templates:
   - split: 7
     template: "{0}--StudyMaxLivingSkill-7;{1}-{2}&{3}-StartBreakMed"

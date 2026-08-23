@@ -70,7 +70,12 @@ namespace Tests
             new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
             new() {Path = "MartialClubData.csv", PackageOutput = true },
             new() {Path = "MedData.csv", PackageOutput = true },
-            new() {Path = "NameData.csv", PackageOutput = true,  },
+            // Column 0 (类别 / category: 姓/名/男名/女名) is compared verbatim by the game's own
+            // LoadAllGameData routing logic (String.Equals against hardcoded Chinese literals) to
+            // decide which of familyNameDataBase/givenNameDataBase/maleGivenNameDataBase/
+            // femaleGivenNameDataBase a row's names go into - translating it breaks that routing
+            // silently (no crash, but every list stays empty since nothing matches).
+            new() {Path = "NameData.csv", PackageOutput = true, SkipColumns = [0] },
             new() {Path = "ResourcePointTypeData.csv", PackageOutput = true },
             new() {Path = "SkinDataBase.csv", PackageOutput = true },
             new() {Path = "SpeAddDataBase.csv", PackageOutput = true },

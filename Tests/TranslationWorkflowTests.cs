@@ -18,6 +18,7 @@ public class TranslationWorkflowTests
     public async Task TranslateLinesBruteForce()
     {
         await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
+        await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
     [Fact(DisplayName = "2. ApplyRulesToCurrentTranslation")]
@@ -30,6 +31,7 @@ public class TranslationWorkflowTests
     public async Task TranslateLines()
     {
         await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
+        await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
