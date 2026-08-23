@@ -154,8 +154,7 @@
     translated: "#PlayerName#'s martial arts skills are either stronger or weaker than mine, and we'll have to settle that once and for all!"
   - split: 3
     text: "#PlayerName#武功灵巧有余，若能增加一些踏实稳重便再好不过了"
-    translated: "#PlayerName's martial arts are agile and proficient, but would benefit from some added steadiness and solidity."
-    flaggedForRetranslation: true
+    translated: "#PlayerName#'s martial arts skill is quite agile, but adding some steadiness and solidity would be even better."
   - split: 4
     text: "#PlayerName#若在武学上有疑惑不解之处，只管来问我便是"
     translated: "#PlayerName#, if you have any doubts about martial arts, feel free to ask me."
@@ -164,12 +163,10 @@
     translated: "#PlayerName#, have you made any progress in your martial arts lately?"
   - split: 6
     text: "#PlayerName#武功稳重有余，若能增加一些灵活巧变便再好不过了"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "#PlayerName#'s martial arts are solid and stable, but would benefit from some added flexibility and cleverness."
   - split: 7
     text: "#PlayerName#武功进步神速，只怕早晚要把我远远甩开。"
-    translated: "PlayerName's martial arts skill can quickly improve, and they will likely be left far behind sooner or later."
-    flaggedForRetranslation: true
+    translated: "#PlayerName#'s martial arts progress is rapid, and he might leave me far behind before long."
   - split: 8
     text: "每日练武练武，真是烦煞人也！"
     translated: "Daily training in martial arts truly drives me mad!"

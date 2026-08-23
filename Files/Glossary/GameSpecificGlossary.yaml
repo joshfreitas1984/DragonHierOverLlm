@@ -166,6 +166,9 @@
   result: Lingzhou
 - raw: 应天
   result: Yingtian
+  allowalt: 
+    - Heaven's will
+    - Mandate of heaven
 - raw: 墨脱县
   result: Motuo County
 - raw: 七里镇
@@ -327,7 +330,7 @@
 - raw: 陆.奇
   result: Lu Qi
 - raw: 吕.子芳
-  result: Lü Zifang
+  result: Lu Zifang
 - raw: 公孙.防
   result: Gongsun Fang
 - raw: 狄.坤

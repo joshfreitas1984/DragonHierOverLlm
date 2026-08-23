@@ -776,9 +776,7 @@
   - split: 11
     subIndex: 1
     text: "我郭淮能得武林众人厚爱，唯靠"
-    translated: "I can gain the affection of the Wulin only through"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Guo Huai,郭淮,"
+    translated: "I, Guo Huai, have received the affection of the Wulin's many people, relying solely on..."
   - split: 11
     subIndex: 2
     text: "侠义"

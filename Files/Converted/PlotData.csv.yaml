@@ -712,7 +712,7 @@
     translated: "Temple Scriptures Pavilion"
   - split: 10
     text: "哇，本门藏经阁，雕梁画栋，藏书无数，当真气派啊。"
-    translated: "Wow, the Zangjingge of our sect is decorated with carved beams and painted columns, housing countless books. It's truly majestic."
+    translated: "Wow, our sect's Zang Jing ge treasure house is adorned with carved beams and painted columns, housing countless books. It's truly imposing in its grandeur."
     flaggedForRetranslation: true
     flaggedMistranslation: "True Qi,真气,"
 - raw: ",,,右,,,,,,,听你这惊讶的口气，怕是入门之后，还没来过这儿吧？"
@@ -749,9 +749,8 @@
   - split: 10
     subIndex: 1
     text: "所谓武功，分为内功，轻功，绝技和外功四大种类，这你可清楚？"
-    translated: "So martial arts are divided into internal skill, lightness, supreme techniques, and external skill. Are you clear on this?"
     flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    flaggedMistranslation: "Failed"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -3527,8 +3526,8 @@
     translated: "Right"
   - split: 10
     text: "若#PlayerName#你日后有空，还请指点我一番。"
-    translated: "If you have some free time in the future, PlayerName, please guide me."
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "若我哪里练得不对，只管指出来，千万别留啥面子！"
@@ -5541,8 +5540,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#，杨师弟，听说你们两个要下山。"
-    translated: "#PlayerName, Junior Disciple Yang, I heard you two are going down the mountain."
-    flaggedForRetranslation: true
+    translated: "#PlayerName#, Junior Disciple Yang, I heard that the two of you are going down the mountain."
   - split: 10
     subIndex: 1
     text: "师姐我准备了些盘缠和伤药，你们收好了。"
@@ -24627,7 +24625,7 @@
   - split: 10
     subIndex: 1
     text: "等二当家三当家赶来，你们就等死吧！"
-    translated: "When the Second and Third Masters arrive, you'll be waiting to die!"
+    translated: "When the Second and Third Bosses arrive, you'll be waiting to die!"
     flaggedForRetranslation: true
     flaggedMistranslation: "Second Boss,二当家,"
   templates:
@@ -26085,8 +26083,7 @@
     translated: "Right"
   - split: 10
     text: "嗯，都听#PlayerName#安排"
-    translated: "Alright, follow #PlayerName's# lead"
-    flaggedForRetranslation: true
+    translated: "Sure, follow #PlayerName#'s arrangements"
 - raw: "132,玩家,姜映泉,左,,,,,,,师傅！师傅！小师妹受伤了。"
   splits:
   - split: 1
@@ -30922,8 +30919,7 @@
     translated: "Player"
   - split: 10
     text: "哎呀，早就说#PlayerName#武功高强，我和林师妹这三脚猫功夫根本不够看呐"
-    translated: "Ah, I've been saying #PlayerName's name here has mighty skills. My junior sister and I barely have the ability to put up a show against you."
-    flaggedForRetranslation: true
+    translated: "Ah, I've been saying #PlayerName# is highly skilled in martial arts. My junior sister and I barely have the skills to watch!"
   templates:
   - split: 8
     template: "ChangeFightSkill;{0}-4-2"
@@ -40885,7 +40881,7 @@
     translated: "Right"
   - split: 10
     text: "不许再叫，你爹已将你全权委托于我照管。"
-    translated: "You're not to call me Father anymore; he has fully entrusted you to my care."
+    translated: "No more calling me Father; he has fully entrusted you to my care."
     flaggedForRetranslation: true
     flaggedMistranslation: "Commission,委托,"
   - split: 10
@@ -45005,8 +45001,9 @@
     translated: "Right"
   - split: 10
     text: "我郭淮自出师丐帮起，历大小二百余战，剪除邪魔外道无数，"
+    translated: "I, Guo Huai, have been with the Beggar Sect since its founding and have participated in over two hundred battles of various scales, eliminating countless evil forces."
     flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    flaggedMistranslation: "Waiter,小二,"
   - split: 10
     subIndex: 1
     text: "至今已二十有六年矣。"
@@ -46326,9 +46323,7 @@
     translated: "Right"
   - split: 10
     text: "阿弥陀佛，施主所言正是。"
-    translated: "Amituofo. Your words are indeed correct."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Benefactor,施主,"
+    translated: "Amituofo. Benefactor, you speak truly."
   - split: 10
     subIndex: 1
     text: "可一味止战止杀，并不能解门派之纷争，"
@@ -47566,8 +47561,7 @@
     translated: "Zuo"
   - split: 10
     text: "#PlayerName#啊！"
-    translated: "#PlayerName!"
-    flaggedForRetranslation: true
+    translated: "#PlayerName#!"
   - split: 10
     subIndex: 1
     text: "是爹爹吩咐我来此处寻那黄河双煞的，不成想还真找到了！"
@@ -50540,9 +50534,7 @@
   - split: 10
     subIndex: 1
     text: "下次见面之时，咱们三兄弟就当上官啦，哈哈后会有期！"
-    translated: "Next time we meet, the three of us will be officials, ha ha. See you later!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Brother,兄弟,"
+    translated: "Next time we meet Brother, the three of us will be officials, haha. See you later!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -62665,9 +62657,7 @@
     translated: "Zuo"
   - split: 10
     text: "前辈所言果真鞭辟入里，受教了！"
-    translated: "Your words truly hit the nail on the head; I have much to learn!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior,前辈,"
+    translated: "Senior's words truly hit the mark, I have learned a great deal!"
 - raw: ",,,右,,,,,ScreenBlack,,好了，两位小友，我还有事在身，先行告辞了！"
   splits:
   - split: 3
@@ -63898,8 +63888,8 @@
     translated: "Jiang Wan"
   - split: 10
     text: "还有早饭，#PlayerName#别忘了给师姐留一份。"
-    translated: "There's breakfast as well, don't forget to save a portion for Senior Sis."
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-5"
@@ -65139,9 +65129,7 @@
     translated: "Zuo"
   - split: 10
     text: "嗯，那熊百胜，果真与铁掌帮主夏天雄狼狈为奸，"
-    translated: "Hmm, so Bear Baisheng truly conspired with Sect Master Iron Palm Summer Wolf."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Iron Palm Gang,铁掌帮,"
+    translated: "Hmm, so Bear Baisheng truly conspired with the Sect Master of Iron Palm Gang, Summer Yang Wolf."
   - split: 10
     subIndex: 1
     text: "好像在密谋什么大事。"
@@ -65804,7 +65792,7 @@
   - split: 10
     subIndex: 1
     text: "师傅他就是食古不化，冥顽不灵！"
-    translated: "He is just stubborn and unable to adapt to new ideas!"
+    translated: "He is just stuck in old ways and stubborn!"
     flaggedForRetranslation: true
     flaggedMistranslation: "Master,师傅,"
   templates:
@@ -67709,7 +67697,7 @@
     translated: "People in the Jianghu were astonished to find that his skills were on par with his father, Guo Huai the Great Hero."
   - split: 10
     text: "这话说的，以兄弟我的资质，降龙掌法不也信手拈来么。"
-    translated: "Well said. With my talent, the Dragon Taming Palm Technique comes naturally to me too."
+    translated: "As I put it, with my abilities, the Dragon‑Taming Palm Technique is something I can pull off effortlessly too."
     flaggedForRetranslation: true
     flaggedMistranslation: "Brother,兄弟,"
   - split: 10
@@ -67850,8 +67838,7 @@
   - split: 10
     subIndex: 1
     text: "等到受赏之时，定会飞鸽通知#PlayerName#你。"
-    translated: "You will be notified by homing pigeon when the reward is given."
-    flaggedForRetranslation: true
+    translated: "On the day of your reward, a homing pigeon will be sent to notify you, #PlayerName#."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -71529,8 +71516,7 @@
     translated: "Zuo"
   - split: 10
     text: "嘿嘿，不怕#PlayerName#笑话，我之前的那件外甲都烂得不像样了。"
-    translated: "Haha, don't worry about my jokes; my previous outer armor was already in such bad shape."
-    flaggedForRetranslation: true
+    translated: "Hehe, don't worry about #PlayerName#'s jokes; my previous outer armor was practically ruined."
   - split: 10
     subIndex: 1
     text: "听说铸剑山庄的锻造技术是一绝，我赶紧来换身新的穿穿，看起来威风点。"
@@ -87204,7 +87190,7 @@
     translated: "Zuo"
   - split: 10
     text: "本门内功"
-    translated: "Internal cultivation of this sect"
+    translated: "Internal skill of this sect"
     flaggedForRetranslation: true
     flaggedMistranslation: "Neigong,内功,"
   - split: 10
@@ -91741,8 +91727,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#！来的正巧。"
-    translated: "#PlayerName!# came at the right time."
-    flaggedForRetranslation: true
+    translated: "#PlayerName#, you came just in time"
   - split: 10
     subIndex: 1
     text: "这些饭菜，你替我送去后山，给你沈退师兄去。"
@@ -92983,7 +92968,7 @@
   - split: 10
     subIndex: 1
     text: "你那些师兄师弟，还有师傅都在哪儿呀？"
-    translated: "Where are your junior and senior disciples, as well as your master?"
+    translated: "Where are your senior and junior disciples, as well as your master?"
     flaggedForRetranslation: true
     flaggedMistranslation: "Senior Brother,师兄,"
   templates:
@@ -106441,8 +106426,7 @@
     translated: "Zuo"
   - split: 10
     text: "#PlayerName#，小师妹！你们怎么来了？"
-    translated: "#PlayerName!, Little Junior Sister! How did you two manage to come here?"
-    flaggedForRetranslation: true
+    translated: "#PlayerName#, junior sister! Why did you come here?"
 - raw: ",林云裳,,左,,,,,,,我和#PlayerName#担心你被那狄坤寻仇，这才跟来了。\\n看来还真没算错！"
   splits:
   - split: 1
@@ -111541,7 +111525,7 @@
   - split: 10
     subIndex: 1
     text: "三位，以后咱们就是同门师兄弟了，有什么不懂的只管问我便是！"
-    translated: "Three, from now on we are fellow disciples under the same master. Don't hesitate to ask me if you have any doubts!"
+    translated: "Three, from now on we are fellow disciples under the same sect. Don't hesitate to ask me if you have any questions!"
     flaggedForRetranslation: true
     flaggedMistranslation: "Senior Brother,师兄,"
   - split: 10
@@ -114042,7 +114026,7 @@
     translated: "Zuo"
   - split: 10
     text: "哈哈哈，妹儿放心，大哥我自然早有防备。"
-    translated: "Haha, little sister, don't worry. I naturally had precautions long ago."
+    translated: "Haha, little sister, rest assured‑I naturally had precautions in place."
     flaggedForRetranslation: true
     flaggedMistranslation: "Senior Brother,大哥,"
   - split: 10
@@ -120586,8 +120570,7 @@
     translated: "Right"
   - split: 10
     text: "那不一定，万一#PlayerName#走火入魔了什么的，"
-    translated: "That's not certain; what if {PlayerName} falls into evil?"
-    flaggedForRetranslation: true
+    translated: "That's not certain; what if #PlayerName# falls into evil?"
   - split: 10
     subIndex: 1
     text: "我好赶紧援助不是，不然师傅那儿可交代不过去了。"
@@ -127672,7 +127655,7 @@
   - split: 10
     subIndex: 1
     text: "眼下得争分夺秒，恐怕没时间疗伤了。"
-    translated: "We must act quickly; there probably won't be time to heal."
+    translated: "We must act quickly; there probably won't be time to treat our injuries."
     flaggedForRetranslation: true
     flaggedMistranslation: "Second,秒,"
   templates:
@@ -142999,8 +142982,8 @@
   - split: 10
     subIndex: 1
     text: "只怕难以将其一网打尽，所以才想到寻#PlayerName#你助拳。"
-    translated: "Fearing it would be difficult to take down entirely, that's why I thought of seeking your help, PlayerName."
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -144220,7 +144203,7 @@
   - split: 10
     subIndex: 1
     text: "我和阮芷得努力医治百姓，实在没有精力去对付黑道五鬼了。"
-    translated: "We need to focus on treating the people; we really don't have the energy to deal with the Black Gang's Five Devils."
+    translated: "We need to focus on treating the common people; we really don't have the energy to deal with the Five Ghosts of the Black Society."
     flaggedForRetranslation: true
     flaggedMistranslation: "Ruan Zhi,阮芷,"
   templates:
@@ -155108,7 +155091,7 @@
   - split: 10
     subIndex: 1
     text: "刚才的一段插曲纷扰，也被这清风拂去。"
-    translated: "The commotion from that interlude was brushed aside by the gentle breeze."
+    translated: "The commotion from that little disturbance was swept away by the gentle breeze."
     flaggedForRetranslation: true
     flaggedMistranslation: "Qingfeng,清风,"
   templates:
@@ -159793,8 +159776,7 @@
   - split: 10
     subIndex: 1
     text: "你你你，你怎么可以侮辱#PlayerName#的师傅！快点下跪道歉！"
-    translated: "You you you, how can you insult #PlayerName's Master#! Kneel down and apologize quickly!"
-    flaggedForRetranslation: true
+    translated: "You you you, how can you insult #PlayerName#'s master! Kneel down and apologize quickly!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -164737,8 +164719,7 @@
     translated: "Right"
   - split: 10
     text: "依照#PlayerName#此言，"
-    translated: "Following #PlayerName's instructions, they continued their journey through the misty mountains."
-    flaggedForRetranslation: true
+    translated: "Following #PlayerName#'s words,"
   - split: 10
     subIndex: 1
     text: "我等此刻似乎应该明哲保身，坐山观虎斗？"
@@ -170855,8 +170836,7 @@
     translated: "Guo Huai"
   - split: 10
     text: "好！#PlayerName#，等商定好计策，我们再飞鸽传书于你。"
-    translated: "Okay! PlayerName, once we've settled on a strategy, we'll send you the message via homing pigeon."
-    flaggedForRetranslation: true
+    translated: "Okay! #PlayerName#, once we've settled on our strategy, we'll send you a message via homing pigeon."
   - split: 10
     subIndex: 1
     text: "还望届时你还能来大理，助我等一臂之力！"
@@ -180808,7 +180788,7 @@
   - split: 10
     subIndex: 1
     text: "听闻这长乐帮主乃是人间绝色，我看你是动了凡心了！"
-    translated: "Hearing that the Sect Master of Changle is a peerless beauty in this world, I see you've been swayed by mortal desires!"
+    translated: "Hearing that the Sect Leader of Changle is a peerless beauty in this world, I see you've succumbed to mere mortal desires!"
     flaggedForRetranslation: true
     flaggedMistranslation: "Changle Gang,长乐帮,"
   templates:
@@ -204807,8 +204787,7 @@
     translated: "Right"
   - split: 10
     text: "好说好说，#PlayerName#只管问来，我保证知无不言！"
-    translated: "No problem at all, {PlayerName}, just ask and I'll make sure to speak my mind!"
-    flaggedForRetranslation: true
+    translated: "You're welcome! Just ask #PlayerName#, I promise I'll speak my mind about anything!"
 - raw: ",,,左,,,,,,,那就劳烦了，还请万掌门说说，\\n这段时间在这闭关室附近，可有遇到什么奇怪之事。"
   splits:
   - split: 3
@@ -209233,8 +209212,8 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#真知灼见，老朽也早有此意......"
-    translated: "#PlayerName's true insight; I had this notion as well..."
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "只是还需稍作斟酌......"
@@ -215746,8 +215725,8 @@
   - split: 10
     subIndex: 1
     text: "日后#PlayerName#若是有空，还请来我庄内坐坐，咱们好好喝上两杯！"
-    translated: "If you have some free time in the future, PlayerName, please come to my estate and join me for a couple of drinks!"
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -221200,8 +221179,8 @@
     translated: "Zuo"
   - split: 10
     text: "不错，眼下#PlayerName#已给吴大侠喂过解药了。"
-    translated: "Not bad. PlayerName has already given Wu Great Hero the antidote."
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "过不多久等吴大侠醒来，真相自会大白！"
@@ -228872,8 +228851,7 @@
     translated: "Right"
   - split: 10
     text: "毕竟此前在墓中，若不是#PlayerName#你和那三个傻瓜出手击败上官凤，"
-    translated: "After all, in the tomb before, if it weren't for you and those three fools defeating Shangguan Feng,"
-    flaggedForRetranslation: true
+    translated: "After all, before in the tomb, if it weren't for your #PlayerName# and those three idiots beating Shangguan Feng,"
   - split: 10
     subIndex: 1
     text: "只怕我难逃一劫。"
@@ -237553,8 +237531,8 @@
   - split: 10
     subIndex: 1
     text: "不知#PlayerName#，还记得祖师留在这地窖之中的遗训否？"
-    translated: "Unknown Player Name, do you still remember the ancestral precepts left by the founder in this cellar?"
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -258176,8 +258154,7 @@
     translated: "Zuo"
   - split: 10
     text: "#PlayerName#你！"
-    translated: "#PlayerName!, you!"
-    flaggedForRetranslation: true
+    translated: "#PlayerName# you!"
   - split: 10
     subIndex: 1
     text: "我小妹之前救过你性命，你竟然要恩将仇报？"
@@ -270374,7 +270351,7 @@
   - split: 10
     subIndex: 1
     text: "未曾听闻过施主的大名，还望见谅。"
-    translated: "Never heard of your esteemed name before; I hope you will forgive me."
+    translated: "I have never heard of your great name before; I hope you will forgive me."
     flaggedForRetranslation: true
     flaggedMistranslation: "Benefactor,施主,"
   templates:
@@ -273874,7 +273851,7 @@
     translated: "Right"
   - split: 10
     text: "武绝义他们被血衣盟包围，已经陷入苦战。"
-    translated: "They were surrounded by the Blood Robe Alliance and were already engaged in a bitter battle."
+    translated: "They were surrounded by the Blood Robe League and were already engaged in a bitter battle."
     flaggedForRetranslation: true
     flaggedMistranslation: "Wu Jueyi,武绝义,"
   - split: 10
@@ -288118,7 +288095,7 @@
     translated: "Right"
   - split: 10
     text: "这二当家三当家，武功路数颇为狠辣。"
-    translated: "This Second and Third Boss both have quite ruthless combat styles."
+    translated: "These Second and Third Vice‑Leaders have rather ruthless combat styles."
     flaggedForRetranslation: true
     flaggedMistranslation: "Second Boss,二当家,"
   - split: 10
@@ -291065,7 +291042,7 @@
     translated: "Zuo"
   - split: 10
     text: "哦！想起来了，这四人后来跟赵点检一起，共斗黄沙寨二当家三当家。"
-    translated: "Oh! I remember now. These four later fought against the Second and Third Masters of Huangsha Fortress together with Zhao Dianjian."
+    translated: "Oh! I remember now. These four later fought against the Second and Third Masters of Huangsha Fortress together with Zhao Dijian."
     flaggedForRetranslation: true
     flaggedMistranslation: "Second Boss,二当家,"
   - split: 10
@@ -300590,8 +300567,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#所言确有道理，只是......"
-    translated: "#PlayerName's# words are indeed reasonable, but..."
-    flaggedForRetranslation: true
+    translated: "#PlayerName#'s words are indeed reasonable, but..."
   - split: 10
     subIndex: 1
     text: "这神秘道士究竟是用了什么办法，逼迫周世宗自缢身亡的呢？"
@@ -301673,8 +301649,8 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#你说的，难道是金龙生金老先生？"
-    translated: "You said it‑it must be Golden Dragon, Elder Golden!"
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "可他不是已指天发誓，不能透露血衣盟大统领之真实身份了么？"
@@ -307394,8 +307370,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#脑瓜子机灵的很，只比我稍逊一筹。"
-    translated: "#PlayerName's brain is quite sharp, only slightly inferior to mine."
-    flaggedForRetranslation: true
+    translated: "#PlayerName#'s brain is very clever, just slightly inferior to mine."
   - split: 10
     subIndex: 1
     text: "山人给你一条锦囊妙计，万一到时不能力敌，那就智取！"
@@ -307709,8 +307684,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#眼光果然毒辣，"
-    translated: "#PlayerName's#eye is truly sharp"
-    flaggedForRetranslation: true
+    translated: "#PlayerName# truly has keen insight"
   - split: 10
     subIndex: 1
     text: "不错，这是老夫近日誊抄的。"
@@ -313114,7 +313088,7 @@
     translated: "River Twelve"
   - split: 10
     text: "（不慌不忙掷出几枚银镖，正是长乐帮独门暗器极乐刺！）"
-    translated: "(Throwing several silver darts calmly, they are indeed the Longle Gang's exclusive hidden weapon, Joyful Stabs!)"
+    translated: "(Throwing a few silver darts calmly, they are indeed the Longle Gang's unique hidden weapon, Joyful Stabs!)"
     flaggedForRetranslation: true
     flaggedMistranslation: "Changle Gang,长乐帮,"
   templates:
@@ -313720,7 +313694,7 @@
     translated: "Right"
   - split: 10
     text: "我长乐帮向来有仇必报，有恩必还。"
-    translated: "My Long Happiness Clan always avenges grievances and repays favors."
+    translated: "My Long‑Evjoy Gang always avenges grievances and repays kindness."
     flaggedForRetranslation: true
     flaggedMistranslation: "Changle Gang,长乐帮,"
   - split: 10
@@ -316130,7 +316104,7 @@
     translated: "Zuo"
   - split: 10
     text: "卢副帮主帮他改头换面，重获新生，"
-    translated: "Deputy Gang Leader helped him transform and reboot, giving him a new lease on life."
+    translated: "Deputy Gang Leader helped him revamp his appearance and give him a new lease on life."
     flaggedForRetranslation: true
     flaggedMistranslation: "Deputy Leader,副帮主,"
   - split: 10
@@ -316162,7 +316136,7 @@
     translated: "Zuo"
   - split: 10
     text: "小声点吧！这话要是让卢副帮主的耳目听到了，"
-    translated: "Shhh! If Deputy Gang Leader Lu's spies heard this..."
+    translated: "Shhh! If this gets heard by Deputy Gang Master Lu's spies,..."
     flaggedForRetranslation: true
     flaggedMistranslation: "Deputy Leader,副帮主,"
   - split: 10
@@ -318976,7 +318950,7 @@
   - split: 10
     subIndex: 1
     text: "呵呵，当时他一路送你回福州，姐姐我就看出你们两不对劲。"
-    translated: "Haha, back then when he sent you all the way to Fuzhou, I could tell there was something off between you two."
+    translated: "Haha, back then when he sent you all the way to Fuzhou, I could tell something wasn't right between you two."
     flaggedForRetranslation: true
     flaggedMistranslation: "Older Sister,姐姐,"
   templates:
@@ -326797,8 +326771,7 @@
     translated: "Right"
   - split: 10
     text: "如此甚好，此战若无#PlayerName#出手，"
-    translated: "So very well. If not for #PlayerName's# intervention in this battle,"
-    flaggedForRetranslation: true
+    translated: "So very well said; if #PlayerName# hadn't intervened in this battle,"
   - split: 10
     subIndex: 1
     text: "断不能将这飞凤钱庄一网打尽。"
@@ -333477,8 +333450,7 @@
   - split: 10
     subIndex: 1
     text: "说起来#PlayerName#，你可有见到王添翼兄弟？"
-    translated: "Speaking of {PlayerName}, have you seen Brother Wang Tianyi?"
-    flaggedForRetranslation: true
+    translated: "Speaking of #PlayerName#, have you seen Brother Wang Tianyi?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -334468,7 +334440,7 @@
     translated: "Zuo"
   - split: 10
     text: "乐帮主......我替卢副帮主做事，乃是迫不得已。"
-    translated: "Gang Leader Ye... I did this for Deputy Gang Leader Lu out of necessity."
+    translated: "Gang Master Yue... I did this for Deputy Gang Master Lu out of necessity."
     flaggedForRetranslation: true
     flaggedMistranslation: "Deputy Leader,副帮主,"
   - split: 10
@@ -338340,8 +338312,7 @@
     translated: "Zuo"
   - split: 10
     text: "好！#PlayerName#，这老贼就由我来处理！"
-    translated: "Alright! PlayerName, let me deal with this old scoundrel!"
-    flaggedForRetranslation: true
+    translated: "Okay! #PlayerName#, let me deal with this old thief!"
 - raw: "1211,郭淮,周莫知,左,,Fight8,SpeEffect/龙咆哮,,ChangeInjury;周莫知-1-200,,周莫知，你已是无路可走，乖乖束手就擒！"
   splits:
   - split: 1
@@ -341673,8 +341644,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#，慕容姑娘！"
-    translated: "#PlayerName_, Miss Chongming!"
-    flaggedForRetranslation: true
+    translated: "#PlayerName#, Miss Cheng Mansion!"
   - split: 10
     subIndex: 1
     text: "你们......你们只要答应替老夫抢回宝藏，出这口恶气，"
@@ -353637,7 +353607,7 @@
     translated: "Right"
   - split: 10
     text: "此外他还暗中授意分舵长老，将军械输送给血衣盟加强武装。"
-    translated: "Moreover, he covertly instructed the Deputy Head of the Sub‑Branch to supply weapons for the Blood Robe Alliance to strengthen their armed forces."
+    translated: "Besides, he secretly instructed the Deputy Head of the Sub‑branch to supply arms to Blood Robe Alliance to strengthen their defenses."
     flaggedForRetranslation: true
     flaggedMistranslation: "General,将军,Elder,长老,"
   - split: 10
@@ -355897,7 +355867,7 @@
     translated: "Right"
   - split: 10
     text: "婉儿啊......早就告诫过你，不要随意进出姐姐房间。"
-    translated: "Wend Er... I warned you before not to enter my room at random."
+    translated: "Wan'er... I warned you before not to enter my room at random."
     flaggedForRetranslation: true
     flaggedMistranslation: "Older Sister,姐姐,"
   - split: 10
@@ -359302,8 +359272,8 @@
     translated: "Right"
   - split: 10
     text: "借#PlayerName#吉言，咱们后会有期，告辞！"
-    translated: "By PlayerName's good fortune, we'll meet again sometime! Goodbye!"
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
 - raw: ",无,无,无,,,,,,,轰轰烈烈的皇城大战终于落下帷幕，\\n血衣盟北统领诸葛伶也在此战后伏诛。"
   splits:
   - split: 1
@@ -360729,8 +360699,7 @@
   - split: 10
     subIndex: 1
     text: "多、多谢#PlayerName#，若非阁下鼎力相助，只怕小生今日要丧命于此了。"
-    translated: "Thanks a lot, PlayerName. If it weren't for your generous assistance, I fear I would have met my demise here today."
-    flaggedForRetranslation: true
+    translated: "Thanks a lot, #PlayerName#. If it weren't for your generous help, I might have lost my life here today."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -361323,8 +361292,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#教训的是......"
-    translated: "#PlayerName's lesson is......"
-    flaggedForRetranslation: true
+    translated: "#PlayerName# teaches us that......"
   - split: 10
     subIndex: 1
     text: "可是这"
@@ -365872,7 +365840,7 @@
     translated: "Wind howls"
   - split: 10
     text: "哈哈哈哈，王寨主，兄弟来迟一步，莫要见怪。"
-    translated: "Haha, Fort Master Wang, I'm a bit late. Don't be angry."
+    translated: "Haha, Fort Master Wang, I came just a step too late. Don't be vexed."
     flaggedForRetranslation: true
     flaggedMistranslation: "Brother,兄弟,"
   templates:
@@ -379237,9 +379205,7 @@
     translated: "Zuo"
   - split: 10
     text: "前辈所言果真字字珠玑，受教了！"
-    translated: "Your words truly contain invaluable wisdom‑I have learned much!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior,前辈,"
+    translated: "The words of the senior are indeed priceless; I have learned much!"
 - raw: ",,,右,,,,,ScreenBlack,,好了，两位小友。我还有事在身，后会有期！"
   splits:
   - split: 3
@@ -380467,7 +380433,7 @@
     translated: "Zuo"
   - split: 10
     text: "好！余师姐，今天不练会，我杨思迟就不睡觉了！"
-    translated: "Good! Sister Apprentice Yu, I won't sleep tonight unless we practice!"
+    translated: "Okay! Senior Sister Yu, I won't sleep tonight unless we have a practice session today!"
     flaggedForRetranslation: true
     flaggedMistranslation: "Yang Sichi,杨思迟,"
 - raw: ",玩家,,左,,,,,GetSpeReward;113,,大家这么干劲十足，我这做掌门的也不能落下。\\n好，咱们今天就一同参悟这高人武学！"
@@ -381204,7 +381170,7 @@
     translated: "Zuo"
   - split: 10
     text: "此前晚辈和同门师兄弟，也多承蒙您照护。"
-    translated: "Previously, Junior and fellow disciples have also been well cared for by you."
+    translated: "Previously, the junior and fellow disciples have also received much care from you."
     flaggedForRetranslation: true
     flaggedMistranslation: "Senior Brother,师兄,"
   - split: 10
@@ -384827,8 +384793,7 @@
   - split: 10
     subIndex: 1
     text: "想当年#PlayerName#初出茅庐之时，可是连藏经阁和练武场在哪儿都找不着呢。"
-    translated: "Back in the day when PlayerName first stepped into this world, they couldn't even find the Repository Pavilion or the Training Grounds."
-    flaggedForRetranslation: true
+    translated: "Back in the day when #PlayerName# first stepped out of seclusion, they couldn't even find where the Treasure Repository and Training Grounds were."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -385226,8 +385191,7 @@
     translated: "Dai Zhuang"
   - split: 10
     text: "哎哟！#PlayerName#，不用管我们，快将这贼人一剑斩了！"
-    translated: "Ow! PlayerName, don't bother with us, slash this rogue with one swift sword strike!"
-    flaggedForRetranslation: true
+    translated: "Ouch! #PlayerName#, don't worry about us, just slice this rogue with one sword swing!"
   templates:
   - split: 8
     template: "ChangeInjury;{0}-1-30"
@@ -389070,8 +389034,8 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#说的有道理啊！"
-    translated: "#PlayerName's_remark_is_quite_reasonable!"
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "那还等什么，赶紧开干吧！"
@@ -392351,9 +392315,8 @@
   - split: 10
     subIndex: 1
     text: "本大侠手中这剑可不是摆设，姑娘，告辞！"
-    translated: "This sword in my hand is no mere ornament, Miss. Goodbye!"
     flaggedForRetranslation: true
-    flaggedMistranslation: "Great Hero,大侠,"
+    flaggedMistranslation: "Failed"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -400034,7 +399997,7 @@
   - split: 10
     subIndex: 1
     text: "我韩嵩混迹江湖多年，岂能不知？"
-    translated: "I have been in the Jianghu for many years; how could I not know?"
+    translated: "I've been wandering in the Jianghu for many years; how could I not know?"
     flaggedForRetranslation: true
     flaggedMistranslation: "Han Song,韩嵩,"
   templates:
@@ -404883,8 +404846,7 @@
   - split: 10
     subIndex: 1
     text: "匣内数百枚黑色钢针激射而出，向着#PlayerName#极速飞去！"
-    translated: "Hundreds of black steel needles shot out from the box and flew towards #PlayerName!"
-    flaggedForRetranslation: true
+    translated: "Hundreds of black steel needles shot out of the box and flew towards #PlayerName# at incredible speed!"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
@@ -405107,8 +405069,7 @@
     translated: "Right"
   - split: 10
     text: "好了好了，都听#PlayerName#你的。"
-    translated: "Alright alright, everything will follow #PlayerName's₹instructions"
-    flaggedForRetranslation: true
+    translated: "Alright, alright, whatever #PlayerName# says goes"
 - raw: ",无,无,无,,,人群交谈,,,,另外一边，见如此杀招被你们挡下，\\n唐门弟子皆有些惊慌失措。"
   splits:
   - split: 1
@@ -410014,8 +409975,8 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#要不把此事交给我吧，"
-    translated: "Why don't you leave it to me?"
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "让我来想想办法！"
@@ -410390,8 +410351,7 @@
     translated: "Right"
   - split: 10
     text: "今日#PlayerName#就这结盟之事，痛陈利弊，句句珠玑。"
-    translated: "Today, PlayerName eloquently outlined the pros and cons of this alliance, every word a gem."
-    flaggedForRetranslation: true
+    translated: "Today #PlayerName#, he thoroughly discussed the pros and cons of this alliance, every word hitting the mark."
   - split: 10
     subIndex: 1
     text: "阁下辩才之利，已不在老朽之下了。"
@@ -415230,8 +415190,7 @@
     translated: "Right"
   - split: 10
     text: "哼哼，好个#PlayerName#，不愧是兄长赵胤宗认可的人物。"
-    translated: "Hmph, PlayerName, indeed you are the person Brother Zhao Yizong approves of."
-    flaggedForRetranslation: true
+    translated: "Hmph, quite the #PlayerName#. No wonder Brother Zhao Yizong acknowledges you."
 - raw: ",,,右,,,,,,,好，给老子吩咐下去。\\n全体阎罗殿弟子，退回总舵！"
   splits:
   - split: 3
@@ -421966,7 +421925,7 @@
   - split: 10
     subIndex: 1
     text: "支持飞龙门的少林、丐帮、大隐、铸剑、茅山，"
-    translated: "Supporting the Shaolin, Beggar Sect, Great Seclusion, Forge Sword, and Mao Shan."
+    translated: "Supporting the Shaolin, Beggar Sect, Great Concealment, Forge Sword, and Taoist Mountain sects"
     flaggedForRetranslation: true
     flaggedMistranslation: "Flying Dragon Gate,飞龙门,"
   - split: 10
@@ -423690,8 +423649,7 @@
     translated: "Wu Jueyi"
   - split: 10
     text: "呵呵呵呵，此战#PlayerName#出力甚多。"
-    translated: "Haha, in this battle, PlayerName contributed greatly"
-    flaggedForRetranslation: true
+    translated: "Haha, this battle had #PlayerName# contribute significantly"
   - split: 10
     subIndex: 1
     text: "我等不过是在旁相助罢了。"
@@ -428145,8 +428103,7 @@
     translated: "Right"
   - split: 10
     text: "（大手一挥）#PlayerName#，你知道我等绝不会投降，"
-    translated: "(PlayerName), you know we will never surrender"
-    flaggedForRetranslation: true
+    translated: "(A broad wave of the hand)#PlayerName#, you know we would never surrender."
   - split: 10
     subIndex: 1
     text: "就不必多费口舌了！"
@@ -436800,8 +436757,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#武功出神入化，砍人比我砍瓜切菜还快。"
-    translated: "#PlayerName's martial arts is so proficient that it's faster than slicing vegetables."
-    flaggedForRetranslation: true
+    translated: "#PlayerName#'s martial arts is so proficient that cutting someone down is faster than chopping vegetables."
   - split: 10
     subIndex: 1
     text: "我觉得#PlayerName#此战定能取胜！"
@@ -441468,8 +441424,8 @@
     translated: "Right"
   - split: 10
     text: "今日#PlayerName#，若想继承义父赵胤宗之遗志，"
-    translated: "Today, PlayerName, if you wish to inherit Big Brother Zhao Yizong's legacy,"
     flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "那我赵破虏也当为阁下冲锋陷阵，万死不辞！"
@@ -444254,7 +444210,7 @@
     translated: "Zuo"
   - split: 10
     text: "阿弥陀佛，施主所言就算有理，"
-    translated: "Amituofo, even if what you say is reasonable,"
+    translated: "Amituofo; even if what you say is reasonable,"
     flaggedForRetranslation: true
     flaggedMistranslation: "Benefactor,施主,"
   - split: 10

@@ -28465,9 +28465,7 @@
     translated: "Red River Divine Skill"
   - split: 4
     text: "名将所传，隐于诗词之绝技。练成此功者体魄心智均如脱胎换骨、神仙再造一般"
-    translated: "The martial arts skill hidden in poetry and verse, as passed down by renowned generals. Those who perfect this technique experience a transformation of both body and mind, akin to being reborn as if created anew by immortal hands."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Resilience,体魄,"
+    translated: "The skills passed down by renowned generals are hidden within the extremes of poetry and verse. Those who perfect this art find their body and mind transformed as if reborn, much like a deity being recreated."
   - split: 7
     text: "力道潜力1"
     translated: "Strength potential 1"
@@ -32448,7 +32446,7 @@
     translated: "Flame refinement technique"
   - split: 4
     text: "逐渐加热内息之法，其真气形同炉火，先黑浊，后黄白，再青白，最终化为纯青，乃是功法纯熟，至阳至热之象征"
-    translated: "The method of gradually heating inner qi resembles a furnace. Initially, it is dark and turbid, then turns yellowish‑white, followed by a bluish‑white hue, ultimately becoming pure green‑a symbol of the technique's mastery and its utmost yang and heat."
+    translated: "The method of gradually heating inner qi resembles the process of a furnace. Initially, it is dark and turbid, then turns yellowish‑white, followed by a bluish‑white hue, and ultimately becomes purely green. This signifies the perfection of the cultivation technique, indicating its utmost yang and intense heat."
     flaggedForRetranslation: true
     flaggedMistranslation: "True Qi,真气,"
   - split: 7
@@ -44369,9 +44367,7 @@
     translated: "Wudang Changquan"
   - split: 4
     text: "武当入门拳法，舒缓灵巧，开合缜密，有培本筑基之功效，不可轻视"
-    translated: "Basic Wudang Fist Technique, gentle yet dexterous, opening and closing with meticulous precision, possesses the effect of nurturing the fundamentals and laying a foundation, so it should not be taken lightly."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Foundation Establishment,筑基,"
+    translated: "Basic Wudang Fist Technique, gentle yet agile, opening and closing with meticulous detail, possesses the effect of nurturing the root and foundation establishment; it should not be underestimated."
   - split: 7
     text: "拳掌1"
     translated: "Fist and palm 1"
@@ -48205,9 +48201,7 @@
     translated: "Heavenly Mandate Blade Technique"
   - split: 4
     text: "上应天命"
-    translated: "Con comply with the will of heaven"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yingtian,应天,"
+    translated: "Up to the mandate of heaven"
   - split: 4
     subIndex: 1
     text: "下从人心之刀法，出手时引动全身霸道无比之劲道，去势威猛，勇往直前，可谓天命所归，所向披靡"
@@ -56825,9 +56819,7 @@
     translated: "Spear Art of Fiery Sun"
   - split: 4
     text: "枪头浸透火油，在对敌时点燃使出的枪法，招式开合挥舞，火光阵阵，能够有效逼退敌人的攻势"
-    translated: "The spear tip soaked in oil ignites when used against enemies. The techniques swing and open with flashes of fire, effectively pushing back the enemy's attacks."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Spear Art,枪法,"
+    translated: "The spear tip soaked in flammable oil is ignited and used against enemies. The spear art involves opening and closing with swift swings, producing flashes of flame that effectively repel the enemy's attacks."
   - split: 7
     text: "长兵1"
     translated: "Long Sword 1"
