@@ -67,6 +67,65 @@ signatures once both namespaces are in scope.
 - Guard on plain property reads (e.g. `Il2CppSystem.Type.FullName`) before doing anything — these
   are safe, non-invoking reads.
 
+## Gotcha: `object`/`Exception` parameters on interop methods are `Il2CppSystem.Object`/`Exception`
+
+Methods like `UnityEngine.Debug.Log(object message)` look like they take `System.Object` from
+IntelliSense/decompiled signatures, but in this interop build they actually take
+`Il2CppSystem.Object` (and `Debug.LogException` takes `Il2CppSystem.Exception`, not
+`System.Exception`). A `[HarmonyPatch(typeof(Debug), nameof(Debug.Log), new[] { typeof(object) })]`
+attribute using `System.Object`/`System.Exception` therefore silently fails to match any real
+overload — Harmony throws `HarmonyException: Undefined target method` /
+`AccessTools.DeclaredMethod: Could not find method ... and parameters (object)` at `Load()` time
+(plugin fails to load entirely), not a subtler runtime bug. Fix: use `typeof(Il2CppSystem.Object)`
+/ `typeof(Il2CppSystem.Exception)` in the `HarmonyPatch` attribute and as the patch method's
+parameter type instead — the interop wrapper types convert to `object` fine as a plain upcast when
+passed into ordinary C# helper methods (e.g. logging/formatting) afterward. See
+`UnityLogCapture.cs` for the corrected patch signatures.
+
+This was found by dumping raw IL metadata with fully-qualified type names (short names alone are
+misleading — `Il2CppSystem.Object` and `System.Object` both print as just "Object" unless you also
+resolve the type's namespace). When verifying interop method signatures via
+`System.Reflection.Metadata`/`PEReader`, always resolve and print the parameter types' namespaces,
+not just their short names.
+
+## Gotcha: `Il2CppSystem.Object.ToString()` does not return the boxed value's real content
+
+Even after fixing the patch signatures above, calling `.ToString()` directly on an
+`Il2CppSystem.Object` parameter (e.g. a `Debug.Log` message) prints the literal string
+`"Il2CppSystem.Object"` — the C# wrapper class's own default `Object.ToString()` (its full type
+name) — instead of the actual boxed value (e.g. the real string that was logged). Same for
+`Il2CppSystem.Exception.ToString()`, which returns `"Il2CppSystem.Exception"` instead of a
+message+stacktrace dump; use `.Message`/`.StackTrace`/`.InnerException` directly instead (plain
+safe property reads) — see `FormatException` in `UnityLogCapture.cs`.
+
+For the general `Il2CppSystem.Object` case (most log messages are actually boxed strings), the fix
+is to inspect the object's *real* IL2CPP class and, if it is `System.String`, read the text via the
+native string accessor — all through plain, non-generic static methods on
+`Il2CppInterop.Runtime.IL2CPP` (from `BepInEx\core\Il2CppInterop.Runtime.dll`), not the
+confirmed-unsafe generic `Cast<T>()`/`TryCast<T>()`:
+
+```csharp
+var ptr = il2cppObj.Pointer; // Il2CppObjectBase.Pointer — safe property read
+var klass = IL2CPP.il2cpp_object_get_class(ptr);
+var ns = IL2CPP.il2cpp_class_get_namespace_(klass);   // "System"
+var name = IL2CPP.il2cpp_class_get_name_(klass);      // "String"
+if (ns == "System" && name == "String")
+    text = IL2CPP.Il2CppStringToManaged(ptr);
+```
+
+`il2cpp_object_get_class`/`il2cpp_class_get_namespace_`/`il2cpp_class_get_name_`/
+`Il2CppStringToManaged` are all plain static P/Invoke-wrapper methods with concrete (non-generic)
+parameter/return types — safe per the interop rules above, since the "generic Il2Cpp interop call"
+danger is specifically about generic methods like `Cast<T>`/`TryCast<T>`, not about calling
+non-generic static helpers that happen to live in the interop runtime library. See
+`UnityLogCapture.FormatMessage` for the full implementation and fallback behavior for non-string
+boxed values (falls back to plain `ToString()`, which is fine for types that do override it).
+
+Found via the same raw-metadata-dump technique as above, applied this time to
+`BepInEx\core\Il2CppInterop.Runtime.dll` (not the game's own `BepInEx\interop\*.dll`) to enumerate
+the `Il2CppInterop.Runtime.IL2CPP` static helper class's full method list and find the non-generic
+string/class-name accessors.
+
 ## Debugging tips
 
 Before writing any interop-touching code, verify real signatures against the actual
@@ -110,3 +169,37 @@ original raw text (`outputLines.Add(line.Raw)`). So the file the plugin picks up
 `resources/<path>.csv` is never a partial patch; it's always the full intended replacement, and
 `Load_Postfix` should just use it wholesale. If you ever reintroduce any kind of merge logic here,
 first re-verify the "column 0 is a stable ID" assumption per-file — it does not hold universally.
+
+## `UnityLogCapture` — capturing Unity engine log output without BepInEx's log hook
+
+BepInEx's built-in Unity log redirection did not fire for this game/build, so we can't rely on it
+to see Unity-originated errors (asset load failures, missing references, etc.) that never go
+through our own code paths.
+
+The obvious fix, `UnityEngine.Application.logMessageReceived`, **does not exist** in this game's
+stripped interop build. Verified by reading `BepInEx\interop\UnityEngine.CoreModule.dll`'s raw
+metadata directly (`System.Reflection.Metadata`/`PEReader`, no assembly load or execution — regular
+`System.Reflection.Assembly.LoadFile`/`AssemblyLoadContext` reflection over these interop DLLs
+throws `ReflectionTypeLoadException`/returns null `GetType` results outside the actual game process,
+because IL2CPP interop stub assemblies have interdependencies that only resolve inside the running
+game host) with a disposable console app: `UnityEngine.Application`'s type definition has **no**
+`logMessageReceived` event, backing field, or add/remove method at all in this build — Il2CppInterop
+only generates members that are actually referenced/used, and this event apparently wasn't. Do not
+waste time trying to subscribe to it here; it will fail to even compile (`CS0117`).
+
+What *is* present and safe to use (confirmed via the same metadata dump): `UnityEngine.Debug`'s
+`Log`, `LogWarning`, `LogError`, `LogException`, `LogAssertion`, each with a plain-`object`
+overload and an `(object, UnityEngine.Object context)` overload, plus `*Format` variants. Since
+virtually all engine- and game-originated log traffic funnels through these same `Debug` methods,
+`UnityLogCapture.cs` Harmony-postfix-patches all of the non-Format overloads (ordinary Harmony
+patching is a confirmed-safe interop pattern per above) and writes every message to
+`BepInEx\plugins\unity-log.txt`, plus mirrors errors/warnings/exceptions/asserts into
+`MainPlugin.Logger`. This is registered in `MainPlugin.Load()` via
+`Harmony.CreateAndPatchAll(typeof(UnityLogCapture))` alongside the other patch classes — no
+separate `Install()`/event-subscription step is needed since it's pure Harmony patching.
+
+If a future Unity/BepInEx interop build *does* expose `logMessageReceived`, it would still be worth
+re-checking with the same metadata-dump technique before wiring it up, since relying on
+compile-time `IntelliSense`/decompiled signatures from a different game's interop build can be
+misleading — always verify against this game's actual `BepInEx\interop\*.dll` directly.
+

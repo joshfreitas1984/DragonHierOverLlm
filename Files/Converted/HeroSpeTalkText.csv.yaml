@@ -714,9 +714,7 @@
   - split: 11
     subIndex: 1
     text: "我郭淮能得武林众人厚爱，唯靠“侠义”二字而已。"
-    translated: "I can win the affection of the Wulin solely with the words chivalry and righteousness."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Guo Huai,郭淮,"
+    translated: "I can earn the affection of Wulin only through the words chivalry and righteousness, Guo Huai."
   - split: 12
     text: "师傅和师叔为了武当派，日日殚精竭虑。"
     translated: "Master and Master Uncle daily exert themselves for the Wudang Sect."

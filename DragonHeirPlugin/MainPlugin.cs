@@ -23,6 +23,7 @@ public class MainPlugin : BasePlugin
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         Harmony.CreateAndPatchAll(typeof(MainPlugin));
         Harmony.CreateAndPatchAll(typeof(ResourceIoPatches));
+        Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
 
         //DisableEastAsianTmpSettings();
