@@ -4318,8 +4318,6 @@
     translated: "Southern Mountain Blade Technique"
   - split: 4
     text: "南山以寿闻名，这套刀法也恰巧稳重持正，以防守闻名。如由内功高强者使出，其威力亦不可小视"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "刀法1"
     translated: "Blade Art 1"
@@ -5189,8 +5187,6 @@
     translated: "Nine‑section whip technique"
   - split: 4
     text: "由九节铁鞭铰接而成的奇门兵器，以内力灌注其中，则可刚可柔，如臂指使，招式多变异常"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -8574,8 +8570,7 @@
     translated: "Northern Dipper Sword Technique"
   - split: 4
     text: "分为七式，将北斗七星之方位与运行规律蕴含其中，招式精妙非凡，常人难解"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Divided into seven forms, it contains the directions and movement patterns of the Big Dipper's Seven Stars. Each technique is exceptionally ingenious, beyond ordinary people to decipher."
   - split: 7
     text: "剑法2"
     translated: "Sword Technique 2"
@@ -9389,8 +9384,6 @@
     translated: "Eight Formation Coiled Dragon Sword"
   - split: 4
     text: "蕴含八阵图义理的刀法，以生死八门配合五行生克，经过精确计算使出，方能发挥威力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "刀法1"
     translated: "Blade Art 1"
@@ -10046,8 +10039,6 @@
     translated: "Little Night Demon Staff Technique"
   - split: 4
     text: "源于佛门，一种套路多变，以灵活见长的棍法，其中挑、点、戳的招式极多，可用于封人穴脉"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "长兵1"
     translated: "Long Sword 1"
@@ -25111,8 +25102,6 @@
     translated: "Heart Method of Lotus Fall"
   - split: 4
     text: "暗藏在民间戏曲莲花落中的进阶内功心法，若能演唱此贯口，证明此人已步入丐帮正式弟子之行列"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "内功2"
     translated: "Neigong 2"
@@ -25914,8 +25903,6 @@
     translated: "Odd Doors Three Talents Staff"
   - split: 4
     text: "此棍法共分三大式，一式敬天，一式敬地，一式敬人，其中招式变换和内劲运用暗合奇门遁甲之法"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "长兵潜力1"
     translated: "Potential of Long Troops 1"
@@ -26201,8 +26188,6 @@
     translated: "Dreamless Meditation Fist"
   - split: 4
     text: "相传是跛脚僧于睡梦中传授丐帮前辈的神妙拳法，出招时双眼微闭做昏昏欲睡状，招式空幻奇绝令人如坠梦中而不自知，待惊醒已身中数拳矣"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "经脉潜力2"
     translated: "Meridian Potential 2"
@@ -26815,8 +26800,6 @@
     translated: "March to War"
   - split: 4
     text: "行伍之人行军时所走步法，不求快速轻巧，但求齐整有力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "体质1"
     translated: "1 stamina"
@@ -27797,8 +27780,7 @@
     translated: "Iron steeds and golden spears"
   - split: 4
     text: "行伍猛士所使的挥戈术，专破敌人防御，凭其惊人力道，可轻易啄开寻常甲盾"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The combat technique of the warrior uses them specifically to break enemy defenses. Leveraging their astonishing power, it can easily penetrate ordinary armor."
   - split: 7
     text: "长兵1"
     translated: "Long Sword 1"
@@ -27928,8 +27910,6 @@
     translated: "Heart Method of Hidden Dragon"
   - split: 4
     text: "讲求藏锋守拙，蓄势待发之内功心法，其息如龙潜深渊，厚积薄发，一旦出手，便如蛟龙出海，势不可挡"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "内功潜力1"
     translated: "Neigong potential 1"
@@ -28098,8 +28078,6 @@
     translated: "Sixteen Path Azure Dragon Halberds"
   - split: 4
     text: "此戟法共分十六路，均以青龙为形制，或游走盘恒，或张牙舞爪，招式之间浑然有序，一气呵成"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "体质潜力1"
     translated: "Potential in physique 1"
@@ -28937,9 +28915,6 @@
     translated: "Elegant Spear Stroke"
   - split: 4
     text: "飞龙门登峰造极之枪法，其发力时机只在瞬息之间，如惊鸿于水面一点，却是数十年心魂体魄修炼之结晶，即便高手对战也能一招分出胜负"
-    translated: "The pinnacle of the Flying Dragon Gate spear technique reaches its zenith in an instant, like a startled dove touching the water. Yet, it is the culmination of decades of mental, spiritual, and physical cultivation. Even among skilled opponents, victory can be decided by a single move."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Resilience,体魄,"
   - split: 7
     text: "长兵潜力2"
     translated: "Potential of Long Infantry 2"
@@ -29581,8 +29556,6 @@
     translated: "Throat Bone Stagnation Technique"
   - split: 4
     text: "扰乱对方内息的奇门咒术，命中者骨鲠在喉，芒刺在背，难以发挥全力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "奇门1"
     translated: "Mystic 1"
@@ -30246,8 +30219,6 @@
     translated: "Five Elements Reaching the Origin Technique"
   - split: 4
     text: "道家上乘内功，将体内五气经过任督二脉汇聚于脑海，可去人间烦恼，入极乐幻境"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "内功潜力1"
     translated: "Neigong potential 1"
@@ -31224,8 +31195,6 @@
     translated: "Xuanzhen Sword Energy"
   - split: 4
     text: "茅山道剑最高境界，可化虚为实，化气为剑，在剑锋形成三尺白芒，吹毛立断，削铁如泥，江湖中罕有人敢撄其锋芒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "经脉潜力1"
     translated: "Potential of Meridian 1"
@@ -36404,8 +36373,7 @@
     translated: "Heart Method of Killing Intent"
   - split: 4
     text: "每修炼一层，心中杀意便会增加一分的邪道心法，功力尚浅或急功近利者很容易因此走火入魔"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "With each layer of cultivation, their murderous intent increases by one point‑the evil Path Heart Method is easy for those with shallow power or those eager for quick gains to fall into madness."
   - split: 7
     text: "内功1"
     translated: "Neigong 1"
@@ -42965,8 +42933,7 @@
     translated: "Mad Staff Technique"
   - split: 4
     text: "如痴如狂，如癫如嗔之棍法，棍势攻出四面八方，形无定势，动无虚招，以疯助其快，以魔增其威，令敌人望而生畏又无处遁逃"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "While they wield the staff, it becomes a manifestation of their madness. The strikes come from all directions, unpredictable and relentless, instilling fear and leaving no room for escape. Forms are unpredictable, and every move is real. Madness enhances their speed, while evil increases their might. Enemies fear them but cannot escape."
   - split: 7
     text: "体质潜力1"
     translated: "Potential in physique 1"
@@ -43287,8 +43254,6 @@
     translated: "Formless Form"
   - split: 4
     text: "少林至高身法，需破除执念，心静止水，目中空无一物，其身形如梦幻泡影，如露亦如电，稍纵即逝，无可捉摸"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "轻功潜力2"
     translated: "Qinggong potential 2"
@@ -44341,8 +44306,6 @@
     translated: "Wudang Soft and Hard Skills"
   - split: 4
     text: "武当功夫讲求刚柔并济，软硬兼施，此功法将腹部软功和周身硬功结合，劲道收放灵活自如"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "绝技1"
     translated: "Special Technique 1"
@@ -44628,8 +44591,6 @@
     translated: "Nine Palaces, Eighteen Steps"
   - split: 4
     text: "在九宫格阵中按五行生克移动之法，能够提升修习者下盘灵活以及奇门数术功力"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "轻功1"
     translated: "Qinggong 1"
@@ -48939,9 +48900,6 @@
     translated: "Art of Cinnabar"
   - split: 4
     text: "蓬莱派基础内丹法门，其炼气者，需冥心定息，元寂绵绵，直至气入丹田，丹火旺盛"
-    translated: "The foundational inner dan method of the Penglai Sect requires them to meditate and regulate their breath, maintaining a state of yuan silence. This continues until the qi enters the dantian and the dan fire becomes vigorous."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qi Refining,炼气,"
   - split: 7
     text: "意志1"
     translated: "1_will_"
@@ -49339,8 +49297,6 @@
     translated: "Flower Flying Butterfly Sword"
   - split: 4
     text: "相传乃无名女冠所创之剑法，轻巧灵动，曼妙翩跹，如蝴蝶飞舞，花瓣飘散，颇具观赏性，于剑法修为亦大有裨益"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "剑法2"
     translated: "Sword Technique 2"
@@ -49977,8 +49933,6 @@
     translated: "Purple Microstar Technique"
   - split: 4
     text: "紫微斗数推命之术演化而来，将经脉穴位与天空星辰对应，根据每日天象与命盘转化来推算对应的内力运行路径，此后修为自然突飞猛进，如有神助"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "内功潜力2"
     translated: "Potential for Neigong 2"
@@ -51079,8 +51033,6 @@
     translated: "Method of Calm Unity"
   - split: 4
     text: "盘腿打坐内观，可视自身脏腑气脉五色盛衰之相，直至影相发白融为一体，自感遍体舒爽，烦恼去尽，入清净之境矣"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "绝技1"
     translated: "Special Technique 1"
@@ -51794,8 +51746,6 @@
     translated: "Seven‑star Horizontal Chain"
   - split: 4
     text: "将体内七处要穴以真气相连的绝学，可形成一快速强劲的小周天循环，从而大大增加自身发力和经脉运行速度"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "灵巧潜力1"
     translated: "Agility Potential 1"
@@ -54483,8 +54433,6 @@
     translated: "4 abdomen"
   - split: 23
     text: "血爪狂"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 23
     subIndex: 1
     text: "喷血迹"
@@ -54517,8 +54465,6 @@
     translated: "Stars Shift and Constellations Move"
   - split: 4
     text: "令经脉穴位皆偏移逆转的崆峒奇功，修习后周身力道反转，出招方式与内息运行皆异于常人，更能借此反转之力将来袭刀剑偏移方向，甚至反伤敌身"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "意志潜力2"
     translated: "Potential of willpower 2"
@@ -55914,8 +55860,6 @@
     translated: "Ten Thousand Ingenious Machines"
   - split: 4
     text: "公输班所创，同时凝结了神机门历代高人无数智慧心血，机关术之核心法门，只有长老以上地位者方能一睹其全貌"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "灵巧潜力1"
     translated: "Agility Potential 1"
@@ -58430,8 +58374,6 @@
     translated: "Bottle Qi Gong"
   - split: 4
     text: "金刚宗修气瑜伽法，借助观想拙火疏通并洗涤自身经脉，可令内息滚沸，抵御藏地严寒"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "内功1"
     translated: "Neigong 1"
@@ -60086,8 +60028,6 @@
   - split: 23
     subIndex: 1
     text: "血爪狂"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 24
     text: "刀"
     translated: "Blade"
@@ -62764,8 +62704,6 @@
     translated: "Reverse Cycle Heaven Technique"
   - split: 4
     text: "武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "力道潜力1"
     translated: "Strength potential 1"
@@ -63526,8 +63464,6 @@
     translated: "Bandit Blade Technique"
   - split: 4
     text: "招式粗浅，以命相搏的刀法，多为贼寇所使"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 7
     text: "体质1"
     translated: "1 stamina"

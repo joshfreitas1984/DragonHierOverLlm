@@ -14,7 +14,8 @@ glossaryPreset:
   chineseGlossaryTypesToSupress:
     - Phonetics
 useContinuousWorkerPool: true
-retryCount: 1
+maxConcurrency: 50
+retryCount: 3
 batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true

@@ -251,8 +251,6 @@
   - split: 11
     subIndex: 1
     text: "方能踏上武学正道，抵达仁者无敌之境。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 12
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。"
     translated: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu."
@@ -473,8 +471,6 @@
   - split: 12
     subIndex: 1
     text: "若能藏锋敛气，内外兼修，便能更上一层楼。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 2
     template: "{0}\\n{1}"
@@ -754,8 +750,6 @@
   - split: 8
     text: "师傅他总念叨着什么佛家、道家、儒家之争，也不知有什么好争的。"
     translated: "He always talks about the debates between Buddhism, Daoism, and Confucianism, but I wonder what's so contentious about it."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Master,师傅,"
   - split: 8
     subIndex: 1
     text: "大不了开个比武擂台，大家一较高下不就行了。"
@@ -781,8 +775,6 @@
     subIndex: 1
     text: "我郭淮能得武林众人厚爱，唯靠"
     translated: "I can earn the affection of the Wulin, solely through"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Guo Huai,郭淮,"
   - split: 11
     subIndex: 2
     text: "侠义"
@@ -828,16 +820,12 @@
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 2
     subIndex: 1
     text: "人生一世，又能遇上几个倾心相交的英雄豪杰？"
     translated: "How many devoted and like‑minded heroes can one encounter in a lifetime?"
   - split: 3
     text: "#PlayerName#放心，本姑娘一般不偷相熟之人的东西......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 3
     subIndex: 1
     text: "除非有人惹我不开心了！"
