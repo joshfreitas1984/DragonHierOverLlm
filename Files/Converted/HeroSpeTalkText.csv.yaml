@@ -822,8 +822,7 @@
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "There are too many xingyinggouguo beggars in this world."
   - split: 2
     subIndex: 1
     text: "人生一世，又能遇上几个倾心相交的英雄豪杰？"

@@ -28,8 +28,8 @@ batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true
 translateFlagged: true
-extraStringTokenReplacers:
-  - '#PlayerName#'
+#extraStringTokenReplacers:
+#  - '#PlayerName#'
 splitCharactersList:
   # - '\n'
   # - '<br>'

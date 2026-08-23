@@ -126,6 +126,19 @@ public class CompoundFieldSplitterTests
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
 
+    [Fact(DisplayName = "Curly Chinese quotation marks around a quoted word stay glued into the surrounding sentence")]
+    public void CurlyChineseQuotationMarksStayGluedIntoSurroundingSentence()
+    {
+        var original = "嗯？当真如此？让我瞧瞧。\\n（将三本秘籍摊开，都翻到小数字为“一”的那一页）";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        // '\\n' is a genuine ASCII literal boundary (see MixedFullWidthPunctuationAcrossWholeSentenceStaysOneFragment),
+        // but the curly quotes '“'/'”' around '一' must not split the parenthetical sentence apart.
+        Assert.Equal("{0}\\n{1}", template);
+        Assert.Equal(["嗯？当真如此？让我瞧瞧。", "（将三本秘籍摊开，都翻到小数字为“一”的那一页）"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
     [Fact(DisplayName = "Standalone signed numeric fields with no adjacent Chinese remain fully literal")]
     public void StandaloneSignedNumericFieldsRemainLiteral()
     {

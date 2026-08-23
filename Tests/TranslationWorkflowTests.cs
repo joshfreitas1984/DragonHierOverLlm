@@ -1,5 +1,7 @@
 ﻿using FanslationStudio.LlmKit.Configuration;
+using FanslationStudio.LlmKit.Utility;
 using FanslationStudio.LlmKit.Workflow;
+using static FanslationStudio.LlmKit.GameFileHandlingBase;
 
 namespace Tests;
 
@@ -30,7 +32,7 @@ public class TranslationWorkflowTests
         await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
     }
 
-    [Fact(DisplayName = "4. Flag lines corrupted by bracket-split bug for retranslation")]
+    [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
     public async Task SetBracketSplitBugLinesAsInvalid()
     {
         // FanslationStudio.LlmKit's TranslationService.SplitBracketsRegexIfNeededAsync had a bug:
@@ -79,5 +81,18 @@ public class TranslationWorkflowTests
 
         await TranslationWorkflow.CleanUpSomeRegexes(GameFileHandling.WorkingDirectory,
             GameFileHandling.TextFilesToSplit, regex);
+    }
+
+    [Fact(DisplayName = "4. Find All Failing Translations")]
+    public async Task FindAllFailingTranslations()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        (List<FailedTranslation> failures, List<string> forTheGlossary) =
+            await GetFailedTranslations(workingDirectory, GameFileHandling.TextFilesToSplit);
+
+        var serializer = YamlHelper.CreateSerializer();
+        var yaml = serializer.Serialize(failures);
+        File.WriteAllText($"{workingDirectory}/TestResults/FailedTranslations.yaml", yaml);
+        File.WriteAllLines($"{workingDirectory}/TestResults/ForManualTrans.yaml", forTheGlossary);
     }
 }

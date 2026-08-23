@@ -21,6 +21,32 @@ namespace Tests
             PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
         };
 
+        // Registers this game's LLM-result post-repair hook (see LineValidation.CustomPostRepair)
+        // the first time GameFileHandling is touched - which every workflow test does, since they
+        // all reference GameFileHandling.WorkingDirectory/TextFilesToSplit before kicking off a
+        // translation run. This runs after every LLM call (including each retry/correction round)
+        // and before CheckTransalationSuccessful validates the result, so a known, deterministic
+        // LLM quirk can be fixed here instead of burning a retry round-trip.
+        static GameFileHandling()
+        {
+            LineValidation.CustomPostRepair = RepairKnownLlmQuirks;
+        }
+
+        // Matches an English possessive/contraction suffix the LLM sometimes glues inside a
+        // "#PlaceholderToken#" wrapper instead of after it, e.g. "#PlayerName's#" - the placeholder
+        // itself must stay exactly "#PlayerName#" for the game engine to substitute it at runtime,
+        // so the suffix needs to be moved outside the closing '#' rather than sent back for a retry.
+        private static readonly Regex PlaceholderTrailingSuffixRegex =
+            new(@"#(\w+)('s|'re|'ve|'ll|'d|'t)#", RegexOptions.Compiled);
+
+        private static string RepairKnownLlmQuirks(string raw, string llmResult)
+        {
+            if (string.IsNullOrEmpty(llmResult))
+                return llmResult;
+
+            return PlaceholderTrailingSuffixRegex.Replace(llmResult, "#$1#$2");
+        }
+
         public static string[] ParseCsvRow(string line) => CompoundFieldSplitter.ParseCsvRow(line);
 
         public static string RebuildCsvRow(IEnumerable<string> fields) => CompoundFieldSplitter.RebuildCsvRow(fields);

@@ -28167,8 +28167,7 @@
     translated: "Soldier Spear"
   - split: 4
     text: "相传黄忠斩夏侯渊时所使，居高临下突袭刺击之枪法，其招式勇往无前，以威势取胜，一枪既出足以平定三军"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The fighting technique Spear Art that Huang Zhong used to kill Xia Houyuan by launching a sudden attack from a high position. Its moves are bold and direct, relying on intimidation to secure victory; a single strike is enough to calm the army."
   - split: 7
     text: "长兵潜力1"
     translated: "Potential of Long Troops 1"
@@ -32446,9 +32445,7 @@
     translated: "Flame refinement technique"
   - split: 4
     text: "逐渐加热内息之法，其真气形同炉火，先黑浊，后黄白，再青白，最终化为纯青，乃是功法纯熟，至阳至热之象征"
-    translated: "The method of gradually heating inner qi resembles the process of a furnace. Initially, it is dark and turbid, then turns yellowish‑white, followed by a bluish‑white hue, and ultimately becomes purely green. This signifies the perfection of the cultivation technique, indicating its utmost yang and intense heat."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "True Qi,真气,"
+    translated: "The method of gradually heating true qi is like a furnace. Initially dark and turbid, it then turns yellowish‑white, followed by a bluish‑white hue, ultimately becoming pure green‑a symbol of the technique's mastery and its utmost yang and heat."
   - split: 7
     text: "内功潜力1"
     translated: "Neigong potential 1"
