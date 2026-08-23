@@ -1,5 +1,4 @@
 - raw: "ID,Name,Describe,Type,Num,Tips"
-  splits: []
 - raw: "0,无人能敌,累计在战斗中亲手击败500人,int,500,无"
   splits:
   - split: 1
@@ -109,17 +108,35 @@
   - split: 1
     text: "天工巧匠"
   - split: 2
-    text: "累计铸造/炼药/烹饪200次"
+    text: "累计铸造"
+  - split: 2
+    subIndex: 1
+    text: "炼药"
+  - split: 2
+    subIndex: 2
+    text: "烹饪200次"
   - split: 5
     text: "无"
+  templates:
+  - split: 2
+    template: "{0}/{1}/{2}"
 - raw: "14,精益求精,累计煅烧/炮制/精烩100次,int,100,无"
   splits:
   - split: 1
     text: "精益求精"
   - split: 2
-    text: "累计煅烧/炮制/精烩100次"
+    text: "累计煅烧"
+  - split: 2
+    subIndex: 1
+    text: "炮制"
+  - split: 2
+    subIndex: 2
+    text: "精烩100次"
   - split: 5
     text: "无"
+  templates:
+  - split: 2
+    template: "{0}/{1}/{2}"
 - raw: "15,如有神助,任意一项角色属性基础值达到120点,bool,1,无"
   splits:
   - split: 1
@@ -247,7 +264,13 @@
   - split: 2
     text: "达成豪商巨贾结局"
   - split: 5
-    text: "达到50万银钱后进入门派/自宅"
+    text: "达到50万银钱后进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  templates:
+  - split: 5
+    template: "{0}/{1}"
 - raw: "31,功成名就,达成功成名就结局,bool,1,达到9999声望后进入门派/自宅"
   splits:
   - split: 1
@@ -255,7 +278,13 @@
   - split: 2
     text: "达成功成名就结局"
   - split: 5
-    text: "达到9999声望后进入门派/自宅"
+    text: "达到9999声望后进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  templates:
+  - split: 5
+    template: "{0}/{1}"
 - raw: "32,禁军统领,达成禁军统领结局,bool,1,官职达到最高后进入门派/自宅"
   splits:
   - split: 1
@@ -263,7 +292,13 @@
   - split: 2
     text: "达成禁军统领结局"
   - split: 5
-    text: "官职达到最高后进入门派/自宅"
+    text: "官职达到最高后进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  templates:
+  - split: 5
+    template: "{0}/{1}"
 - raw: "33,权势滔天,达成权势滔天结局,bool,1,勋阶达到最高后进入门派/自宅"
   splits:
   - split: 1
@@ -271,7 +306,13 @@
   - split: 2
     text: "达成权势滔天结局"
   - split: 5
-    text: "勋阶达到最高后进入门派/自宅"
+    text: "勋阶达到最高后进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  templates:
+  - split: 5
+    template: "{0}/{1}"
 - raw: "34,名门大派,达成名门大派结局,bool,1,成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派/自宅"
   splits:
   - split: 1
@@ -279,7 +320,13 @@
   - split: 2
     text: "达成名门大派结局"
   - split: 5
-    text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派/自宅"
+    text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  templates:
+  - split: 5
+    template: "{0}/{1}"
 - raw: "35,武林盟主,达成武林盟主结局,bool,1,占领、附庸、同盟区域50%后进入门派/自宅\\n或通关剧情模式第四章"
   splits:
   - split: 1
@@ -287,7 +334,16 @@
   - split: 2
     text: "达成武林盟主结局"
   - split: 5
-    text: "占领、附庸、同盟区域50%后进入门派/自宅\\n或通关剧情模式第四章"
+    text: "占领、附庸、同盟区域50%后进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  - split: 5
+    subIndex: 2
+    text: "或通关剧情模式第四章"
+  templates:
+  - split: 5
+    template: "{0}/{1}\\n{2}"
 - raw: "36,终归一统,达成终归一统结局,bool,1,占领、附庸、同盟区域100%后进入门派/自宅"
   splits:
   - split: 1
@@ -295,7 +351,13 @@
   - split: 2
     text: "达成终归一统结局"
   - split: 5
-    text: "占领、附庸、同盟区域100%后进入门派/自宅"
+    text: "占领、附庸、同盟区域100%后进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  templates:
+  - split: 5
+    template: "{0}/{1}"
 - raw: "37,鸾凤和鸣,达成鸾凤和鸣结局,bool,1,同时拥有夫妻和4名情侣且好感均100，进入门派/自宅"
   splits:
   - split: 1
@@ -303,7 +365,13 @@
   - split: 2
     text: "达成鸾凤和鸣结局"
   - split: 5
-    text: "同时拥有夫妻和4名情侣且好感均100，进入门派/自宅"
+    text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
+  - split: 5
+    subIndex: 1
+    text: "自宅"
+  templates:
+  - split: 5
+    template: "{0}/{1}"
 - raw: "38,终生监禁,达成终生监禁结局,bool,1,被捕入狱时恶名达到999"
   splits:
   - split: 1

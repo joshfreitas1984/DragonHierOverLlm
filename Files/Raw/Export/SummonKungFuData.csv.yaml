@@ -37,7 +37,7 @@
   - split: 18
     text: "防御架势"
   - split: 19
-    text: "召唤ID"
+    text: "召唤"
   - split: 20
     text: "使用次数"
   - split: 21
@@ -54,6 +54,9 @@
     text: "角色位移"
   - split: 28
     text: "隐藏"
+  templates:
+  - split: 19
+    template: "{0}ID"
 - raw: "0,射术,0,弩箭,中型的弩箭，威力中等,15,0,,,,,\"0,2,6\",\"0,0,0\",流血0.08,0,-1,0,,,,,skill5_2,0,劈砍-Target-Grid-Happen,弓,Same,FALSE,-1,0"
   splits:
   - split: 1
@@ -62,12 +65,15 @@
     text: "弩箭"
   - split: 4
     text: "中型的弩箭，威力中等"
-  - split: 17
+  - split: 13
     text: "流血0.08"
-  - split: 27
-    text: "劈砍-Target-Grid-Happen"
-  - split: 28
+  - split: 23
+    text: "劈砍"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "1,射术,0,野马脱缰,猛力冲击敌人造成失衡效果,12,0,,,,,\"2,2,4\",\"0,0,0\",失衡0.04,0,16,0,,,,,skill5_2,,打击1-Target-Grid-Happen,弓,Same,TRUE,-1,0"
   splits:
   - split: 1
@@ -76,12 +82,15 @@
     text: "野马脱缰"
   - split: 4
     text: "猛力冲击敌人造成失衡效果"
-  - split: 17
+  - split: 13
     text: "失衡0.04"
-  - split: 27
-    text: "打击1-Target-Grid-Happen"
-  - split: 28
+  - split: 23
+    text: "打击1"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "2,射术,1,狂奔猛突,猛力冲撞敌人造成击退效果,14,0,,,,,\"2,3,4\",\"0,0,0\",急速0.06;击退1,0,16,0,,,,,skill5_2,,打击2-Target-Grid-Happen,弓,Same,TRUE,-1,0"
   splits:
   - split: 1
@@ -90,12 +99,20 @@
     text: "狂奔猛突"
   - split: 4
     text: "猛力冲撞敌人造成击退效果"
-  - split: 17
-    text: "急速0.06;击退1"
-  - split: 27
-    text: "打击2-Target-Grid-Happen"
-  - split: 28
+  - split: 13
+    text: "急速0.06"
+  - split: 13
+    subIndex: 1
+    text: "击退1"
+  - split: 23
+    text: "打击2"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 13
+    template: "{0};{1}"
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "3,射术,2,飞矢乱箭,向小范围射出密集的箭雨,10,0,,,,,\"0,2,3\",\"0,0,1\",流血0.1,0,16,0,,,,,skill5_2,,箭雨-Target-Grid-Happen,弓,Distance,FALSE,-1,0"
   splits:
   - split: 1
@@ -104,12 +121,15 @@
     text: "飞矢乱箭"
   - split: 4
     text: "向小范围射出密集的箭雨"
-  - split: 17
+  - split: 13
     text: "流血0.1"
-  - split: 27
-    text: "箭雨-Target-Grid-Happen"
-  - split: 28
+  - split: 23
+    text: "箭雨"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "4,射术,3,燎原业火,向范围内喷射燃烧的火油,19,0,,,,,\"0,4,6\",\"1,0,1\",灼烧0.1,0,16,0,,,,,skill5_2,,天火-Target-Grid-Happen,弓,Distance,FALSE,-1,0"
   splits:
   - split: 1
@@ -118,12 +138,15 @@
     text: "燎原业火"
   - split: 4
     text: "向范围内喷射燃烧的火油"
-  - split: 17
+  - split: 13
     text: "灼烧0.1"
-  - split: 27
-    text: "天火-Target-Grid-Happen"
-  - split: 28
+  - split: 23
+    text: "天火"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "5,射术,4,地动山摇,通过强力冲击引发大范围地震,21,0,,,,,\"0,4,7\",\"0,0,2\",眩晕0.05;动摇0.05;失衡0.05,0,16,0,,,,,skill5_2,,地刺-Target-Grid-Happen,弓,Distance,FALSE,-1,0"
   splits:
   - split: 1
@@ -132,12 +155,23 @@
     text: "地动山摇"
   - split: 4
     text: "通过强力冲击引发大范围地震"
-  - split: 17
-    text: "眩晕0.05;动摇0.05;失衡0.05"
-  - split: 27
-    text: "地刺-Target-Grid-Happen"
-  - split: 28
+  - split: 13
+    text: "眩晕0.05"
+  - split: 13
+    subIndex: 1
+    text: "动摇0.05"
+  - split: 13
+    subIndex: 2
+    text: "失衡0.05"
+  - split: 23
+    text: "地刺"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 13
+    template: "{0};{1};{2}"
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "6,射术,0,小型弩箭,小型的弩箭，威力较弱,10,0,,,,,\"0,1,4\",\"0,0,0\",流血0.04,0,-1,0,,,,,skill5_2,0-----0.5,劈砍-Target-Grid-Happen,弓,Same,FALSE,-1,0"
   splits:
   - split: 1
@@ -146,12 +180,15 @@
     text: "小型弩箭"
   - split: 4
     text: "小型的弩箭，威力较弱"
-  - split: 17
+  - split: 13
     text: "流血0.04"
-  - split: 27
-    text: "劈砍-Target-Grid-Happen"
-  - split: 28
+  - split: 23
+    text: "劈砍"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "7,射术,1,大型弩箭,大型的弩箭，威力较强,20,0,,,,,\"0,3,8\",\"0,0,0\",流血0.12,0,-1,0,,,,,skill5_2,0-----1.5,劈砍-Target-Grid-Happen,弓,Same,FALSE,-1,0"
   splits:
   - split: 1
@@ -160,12 +197,15 @@
     text: "大型弩箭"
   - split: 4
     text: "大型的弩箭，威力较强"
-  - split: 17
+  - split: 13
     text: "流血0.12"
-  - split: 27
-    text: "劈砍-Target-Grid-Happen"
-  - split: 28
+  - split: 23
+    text: "劈砍"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "8,射术,1,振奋,擂响战鼓，激励范围友军士气,-10,0,,,,,\"0,1,5\",\"1,0,1\",蓄力0.05,0,-1,3,,,,,skill5_2,,治疗-Target-Grid-Happen,,Same,FALSE,-1,0"
   splits:
   - split: 1
@@ -174,10 +214,13 @@
     text: "振奋"
   - split: 4
     text: "擂响战鼓，激励范围友军士气"
-  - split: 17
+  - split: 13
     text: "蓄力0.05"
-  - split: 27
-    text: "治疗-Target-Grid-Happen"
+  - split: 23
+    text: "治疗"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "9,射术,5,破兵式,千机万巧，尽在其中,20,0,,,,,\"0,3,5\",\"3,0,1\",虚弱0.08;弱点0.08;迟缓0.08,0,16,0,,,,,skill5_2,,地面打击5-Target-Grid-Happen,弓,Distance,FALSE,-1,0"
   splits:
   - split: 1
@@ -186,12 +229,23 @@
     text: "破兵式"
   - split: 4
     text: "千机万巧，尽在其中"
-  - split: 17
-    text: "虚弱0.08;弱点0.08;迟缓0.08"
-  - split: 27
-    text: "地面打击5-Target-Grid-Happen"
-  - split: 28
+  - split: 13
+    text: "虚弱0.08"
+  - split: 13
+    subIndex: 1
+    text: "弱点0.08"
+  - split: 13
+    subIndex: 2
+    text: "迟缓0.08"
+  - split: 23
+    text: "地面打击5"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 13
+    template: "{0};{1};{2}"
+  - split: 23
+    template: "{0}-Target-Grid-Happen"
 - raw: "10,射术,2,齐射,向大范围射出密集的箭雨,15,0,,,,,\"0,2,6\",\"0,0,2\",流血0.04,0,-1,0,,,,,skill5_2,0,劈砍-Target-Grid-Happen,弓,Same,FALSE,-1,0"
   splits:
   - split: 1
@@ -200,9 +254,12 @@
     text: "齐射"
   - split: 4
     text: "向大范围射出密集的箭雨"
-  - split: 17
+  - split: 13
     text: "流血0.04"
-  - split: 27
-    text: "劈砍-Target-Grid-Happen"
-  - split: 28
+  - split: 23
+    text: "劈砍"
+  - split: 24
     text: "弓"
+  templates:
+  - split: 23
+    template: "{0}-Target-Grid-Happen"

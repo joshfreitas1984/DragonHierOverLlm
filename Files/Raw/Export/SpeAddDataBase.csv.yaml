@@ -42,9 +42,18 @@
   - split: 4
     text: "无力"
   - split: 10
-    text: "+0.5%暴击\\n+0.5%断连\\n+1装备负重"
+    text: "+0.5%暴击"
+  - split: 10
+    subIndex: 1
+    text: "+0.5%断连"
+  - split: 10
+    subIndex: 2
+    text: "+1装备负重"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}\\n{2}"
 - raw: "1,灵巧,1,巧捷,笨拙,0,0,0,0,0,+0.5%速度\\n+0.5%闪避\\n+0.5体力上限,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -54,9 +63,18 @@
   - split: 4
     text: "笨拙"
   - split: 10
-    text: "+0.5%速度\\n+0.5%闪避\\n+0.5体力上限"
+    text: "+0.5%速度"
+  - split: 10
+    subIndex: 1
+    text: "+0.5%闪避"
+  - split: 10
+    subIndex: 2
+    text: "+0.5体力上限"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}\\n{2}"
 - raw: "2,智力,1,慧根,愚钝,0,0,0,0,0,+0.5%命中\\n+0.5%卸力\\n+0.5%负面加成,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -66,9 +84,18 @@
   - split: 4
     text: "愚钝"
   - split: 10
-    text: "+0.5%命中\\n+0.5%卸力\\n+0.5%负面加成"
+    text: "+0.5%命中"
+  - split: 10
+    subIndex: 1
+    text: "+0.5%卸力"
+  - split: 10
+    subIndex: 2
+    text: "+0.5%负面加成"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}\\n{2}"
 - raw: "3,意志,1,勇毅,萎靡,0,0,0,0,0,+0.5%反击\\n+0.5%护甲\\n+0.5%负面抗性,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -78,9 +105,18 @@
   - split: 4
     text: "萎靡"
   - split: 10
-    text: "+0.5%反击\\n+0.5%护甲\\n+0.5%负面抗性"
+    text: "+0.5%反击"
+  - split: 10
+    subIndex: 1
+    text: "+0.5%护甲"
+  - split: 10
+    subIndex: 2
+    text: "+0.5%负面抗性"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}\\n{2}"
 - raw: "4,体质,1,壮硕,瘦弱,0,0,0,0,0,+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -90,9 +126,18 @@
   - split: 4
     text: "瘦弱"
   - split: 10
-    text: "+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性"
+    text: "+1生命上限"
+  - split: 10
+    subIndex: 1
+    text: "+0.5%压制"
+  - split: 10
+    subIndex: 2
+    text: "+0.5%伤势抗性"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}\\n{2}"
 - raw: "5,经脉,1,贯通,断绝,0,0,0,0,0,+2内力上限\\n+0.5%连击\\n+0.5%恢复效率,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -102,9 +147,18 @@
   - split: 4
     text: "断绝"
   - split: 10
-    text: "+2内力上限\\n+0.5%连击\\n+0.5%恢复效率"
+    text: "+2内力上限"
+  - split: 10
+    subIndex: 1
+    text: "+0.5%连击"
+  - split: 10
+    subIndex: 2
+    text: "+0.5%恢复效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}\\n{2}"
 - raw: "6,内功,1,内家,空乏,0,0,0,0,0,+1%内力上限,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -150,9 +204,15 @@
   - split: 4
     text: "残拳"
   - split: 10
-    text: "提升拳掌伤害\\n降低受到的拳掌伤害"
+    text: "提升拳掌伤害"
+  - split: 10
+    subIndex: 1
+    text: "降低受到的拳掌伤害"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}"
 - raw: "10,剑法,1,利剑,锈剑,0,0,0,0,0,提升剑法伤害\\n降低受到的剑法伤害,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -162,9 +222,15 @@
   - split: 4
     text: "锈剑"
   - split: 10
-    text: "提升剑法伤害\\n降低受到的剑法伤害"
+    text: "提升剑法伤害"
+  - split: 10
+    subIndex: 1
+    text: "降低受到的剑法伤害"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}"
 - raw: "11,刀法,1,宝刀,钝刀,0,0,0,0,0,提升刀法伤害\\n降低受到的刀法伤害,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -174,9 +240,15 @@
   - split: 4
     text: "钝刀"
   - split: 10
-    text: "提升刀法伤害\\n降低受到的刀法伤害"
+    text: "提升刀法伤害"
+  - split: 10
+    subIndex: 1
+    text: "降低受到的刀法伤害"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}"
 - raw: "12,长兵,1,银枪,断枪,0,0,0,0,0,提升长兵伤害\\n降低受到的长兵伤害,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -186,9 +258,15 @@
   - split: 4
     text: "断枪"
   - split: 10
-    text: "提升长兵伤害\\n降低受到的长兵伤害"
+    text: "提升长兵伤害"
+  - split: 10
+    subIndex: 1
+    text: "降低受到的长兵伤害"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}"
 - raw: "13,奇门,1,奇异,无奇,0,0,0,0,0,提升奇门伤害\\n降低受到的奇门伤害,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -198,9 +276,15 @@
   - split: 4
     text: "无奇"
   - split: 10
-    text: "提升奇门伤害\\n降低受到的奇门伤害"
+    text: "提升奇门伤害"
+  - split: 10
+    subIndex: 1
+    text: "降低受到的奇门伤害"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}"
 - raw: "14,射术,1,远射,咫尺,0,0,0,0,0,提升射术伤害\\n降低受到的射术伤害,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -210,9 +294,15 @@
   - split: 4
     text: "咫尺"
   - split: 10
-    text: "提升射术伤害\\n降低受到的射术伤害"
+    text: "提升射术伤害"
+  - split: 10
+    subIndex: 1
+    text: "降低受到的射术伤害"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}\\n{1}"
 - raw: "15,内功威力,0.01,无,无,1,1,0,0,0,内功威力,伤害,0,0,1,0,0"
   splits:
   - split: 1
@@ -330,9 +420,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "影响治疗外伤/内伤的效率"
+    text: "影响治疗外伤"
+  - split: 10
+    subIndex: 1
+    text: "内伤的效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}/{1}"
 - raw: "25,毒术,1,无,无,0,1,0,0,0,影响用毒/解毒的效率,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -342,9 +438,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "影响用毒/解毒的效率"
+    text: "影响用毒"
+  - split: 10
+    subIndex: 1
+    text: "解毒的效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}/{1}"
 - raw: "26,学识,1,无,无,0,1,0,0,0,影响珍宝鉴定，论战，编纂秘籍，获取门派威望的效率,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -378,9 +480,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "影响获取门派木料/矿石，破坏区域防御的效率"
+    text: "影响获取门派木料"
+  - split: 10
+    subIndex: 1
+    text: "矿石，破坏区域防御的效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}/{1}"
 - raw: "29,木植,1,无,无,0,1,0,0,0,影响获取门派粮食/药材，巩固区域防御的效率,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -390,9 +498,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "影响获取门派粮食/药材，巩固区域防御的效率"
+    text: "影响获取门派粮食"
+  - split: 10
+    subIndex: 1
+    text: "药材，巩固区域防御的效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}/{1}"
 - raw: "30,锻造,1,无,无,0,1,0,0,0,影响装备制作/强化，巩固/破坏区域治安的效率,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -402,9 +516,18 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "影响装备制作/强化，巩固/破坏区域治安的效率"
+    text: "影响装备制作"
+  - split: 10
+    subIndex: 1
+    text: "强化，巩固"
+  - split: 10
+    subIndex: 2
+    text: "破坏区域治安的效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}/{1}/{2}"
 - raw: "31,炼药,1,无,无,0,1,0,0,0,影响丹药制作/强化，巩固/破坏区域人口的效率,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -414,9 +537,18 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "影响丹药制作/强化，巩固/破坏区域人口的效率"
+    text: "影响丹药制作"
+  - split: 10
+    subIndex: 1
+    text: "强化，巩固"
+  - split: 10
+    subIndex: 2
+    text: "破坏区域人口的效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}/{1}/{2}"
 - raw: "32,烹饪,1,无,无,0,1,0,0,0,影响饮食制作/强化，巩固/破坏区域民心的效率,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -426,9 +558,18 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "影响饮食制作/强化，巩固/破坏区域民心的效率"
+    text: "影响饮食制作"
+  - split: 10
+    subIndex: 1
+    text: "强化，巩固"
+  - split: 10
+    subIndex: 2
+    text: "破坏区域民心的效率"
   - split: 11
     text: "伤害"
+  templates:
+  - split: 10
+    template: "{0}/{1}/{2}"
 - raw: "33,力道潜力,1,无,无,0,1,0,0,0,力道潜力,伤害,0,0,0,0,0"
   splits:
   - split: 1
@@ -978,9 +1119,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "行动条-30%;体力-20"
+    text: "行动条"
+  - split: 10
+    subIndex: 1
+    text: "体力"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-30%;{1}-20"
 - raw: "79,急速,0.01,白驹,无,1,0,1,0,0,行动条+30%;体力+20,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -990,9 +1137,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "行动条+30%;体力+20"
+    text: "行动条"
+  - split: 10
+    subIndex: 1
+    text: "体力"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+30%;{1}+20"
 - raw: "80,外伤,0.01,无,无,1,1,1,0,0,根据生命差造成外伤,伤害,0,1,1,1,0"
   splits:
   - split: 1
@@ -1074,9 +1227,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "每回合+5%生命/内力"
+    text: "每回合+5%生命"
+  - split: 10
+    subIndex: 1
+    text: "内力"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}/{1}"
 - raw: "87,灼烧,0.01,阳炎,无,1,0,1,2,0,每回合-5%生命/内力,敌方,0,1,1,1,1"
   splits:
   - split: 1
@@ -1086,9 +1245,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "每回合-5%生命/内力"
+    text: "每回合-5%生命"
+  - split: 10
+    subIndex: 1
+    text: "内力"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}/{1}"
 - raw: "88,疗伤,0.01,回春,无,1,0,1,3,1,每回合+5%生命,我方,0,1,1,1,1"
   splits:
   - split: 1
@@ -1170,9 +1335,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "速度/恢复效率-30%"
+    text: "速度"
+  - split: 10
+    subIndex: 1
+    text: "恢复效率"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}/{1}-30%"
 - raw: "95,无敌,0.005,不败,无,1,0,1,0,1,免疫伤害至下次受击,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1218,9 +1389,15 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "无法移动;禁用轻功"
+    text: "无法移动"
+  - split: 10
+    subIndex: 1
+    text: "禁用轻功"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0};{1}"
 - raw: "99,心胸点穴,0.01,无,无,1,1,1,-1,0,力道/经脉-30%;禁用内功,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1230,9 +1407,18 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "力道/经脉-30%;禁用内功"
+    text: "力道"
+  - split: 10
+    subIndex: 1
+    text: "经脉"
+  - split: 10
+    subIndex: 2
+    text: "禁用内功"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}/{1}-30%;{2}"
 - raw: "100,腰腹点穴,0.01,无,无,1,1,1,-1,0,灵巧/体质-30%;禁用绝技,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1242,9 +1428,18 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "灵巧/体质-30%;禁用绝技"
+    text: "灵巧"
+  - split: 10
+    subIndex: 1
+    text: "体质"
+  - split: 10
+    subIndex: 2
+    text: "禁用绝技"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}/{1}-30%;{2}"
 - raw: "101,头颈点穴,0.01,无,无,1,1,1,-1,0,智力/意志/负面抗性-30%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1254,9 +1449,18 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "智力/意志/负面抗性-30%"
+    text: "智力"
+  - split: 10
+    subIndex: 1
+    text: "意志"
+  - split: 10
+    subIndex: 2
+    text: "负面抗性"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}/{1}/{2}-30%"
 - raw: "102,虚弱,0.01,虚弱,无,1,0,1,3,0,伤害-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1266,9 +1470,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "伤害-50%"
+    text: "伤害"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "103,横练,0.01,横练,无,1,0,1,2,1,护甲+50%,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1278,9 +1485,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "护甲+50%"
+    text: "护甲"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "104,破甲,0.01,破甲,无,1,0,1,3,0,护甲-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1290,9 +1500,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "护甲-50%"
+    text: "护甲"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "105,轻灵,0.01,轻灵,无,1,0,1,2,1,速度+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1302,9 +1515,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "速度+50%"
+    text: "速度"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "106,迟缓,0.01,迟缓,无,1,0,1,2,0,速度-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1314,9 +1530,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "速度-50%"
+    text: "速度"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "107,鹰眼,0.01,鹰视,无,1,0,1,3,1,命中+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1326,9 +1545,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "命中+50%"
+    text: "命中"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "108,目盲,0.01,刺目,无,1,0,1,3,0,命中-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1338,9 +1560,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "命中-50%"
+    text: "命中"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "109,飘逸,0.01,飘逸,无,1,0,1,2,1,闪避+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1350,9 +1575,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "闪避+50%"
+    text: "闪避"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "110,笨拙,0.01,笨拙,无,1,0,1,2,0,闪避-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1362,9 +1590,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "闪避-50%"
+    text: "闪避"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "111,霸体,0.01,霸体,无,1,0,1,1,1,受伤-50%,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1374,9 +1605,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "受伤-50%"
+    text: "受伤"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "112,弱点,0.01,弱点,无,1,0,1,2,0,受伤+50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1386,9 +1620,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "受伤+50%"
+    text: "受伤"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "113,疯魔,0.01,疯魔,无,1,0,1,2,1,伤害/暴击+30%;敌我不分,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1398,9 +1635,18 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "伤害/暴击+30%;敌我不分"
+    text: "伤害"
+  - split: 10
+    subIndex: 1
+    text: "暴击"
+  - split: 10
+    subIndex: 2
+    text: "敌我不分"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}/{1}+30%;{2}"
 - raw: "114,混乱,0.01,混乱,无,1,0,1,2,0,敌我不分,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1446,9 +1692,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "力道+50%"
+    text: "力道"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "118,断骨,0.01,断骨,无,1,0,1,2,0,力道-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1458,9 +1707,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "力道-50%"
+    text: "力道"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "119,舒筋,0.01,舒筋,无,1,0,1,3,1,灵巧+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1470,9 +1722,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "灵巧+50%"
+    text: "灵巧"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "120,伤筋,0.01,伤筋,无,1,0,1,2,0,灵巧-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1482,9 +1737,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "灵巧-50%"
+    text: "灵巧"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "121,醒脑,0.01,醒脑,无,1,0,1,3,1,智力+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1494,9 +1752,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "智力+50%"
+    text: "智力"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "122,震脑,0.01,震脑,无,1,0,1,2,0,智力-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1506,9 +1767,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "智力-50%"
+    text: "智力"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "123,定神,0.01,定神,无,1,0,1,3,1,意志+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1518,9 +1782,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "意志+50%"
+    text: "意志"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "124,乱神,0.01,乱神,无,1,0,1,2,0,意志-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1530,9 +1797,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "意志-50%"
+    text: "意志"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "125,活血,0.01,活血,无,1,0,1,3,1,体质+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1542,9 +1812,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "体质+50%"
+    text: "体质"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "126,凝血,0.01,凝血,无,1,0,1,2,0,体质-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1554,9 +1827,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "体质-50%"
+    text: "体质"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "127,通脉,0.01,通脉,无,1,0,1,3,1,经脉+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1566,9 +1842,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "经脉+50%"
+    text: "经脉"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "128,截脉,0.01,截脉,无,1,0,1,2,0,经脉-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1578,9 +1857,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "经脉-50%"
+    text: "经脉"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "129,复生,0.01,无,无,1,1,1,0,0,被击倒后恢复全状态,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1662,9 +1944,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "暴击+50%"
+    text: "暴击"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "136,昏沉,0.01,昏沉,无,1,0,1,3,0,暴击-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1674,9 +1959,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "暴击-50%"
+    text: "暴击"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "137,铜皮,0.01,铜皮,无,1,0,1,2,1,卸力+50%,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1686,9 +1974,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "卸力+50%"
+    text: "卸力"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "138,脆弱,0.01,脆弱,无,1,0,1,2,0,卸力-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1698,9 +1989,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "卸力-50%"
+    text: "卸力"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "139,不屈,0.01,不屈,无,1,0,1,2,1,反击+50%,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1710,9 +2004,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "反击+50%"
+    text: "反击"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "140,重碾,0.01,重碾,无,1,0,1,3,1,压制+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1722,9 +2019,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "压制+50%"
+    text: "压制"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "141,连绵,0.01,连绵,无,1,0,1,3,1,连击+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1734,9 +2034,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "连击+50%"
+    text: "连击"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "142,断腕,0.01,断腕,无,1,0,1,3,0,连击-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1746,9 +2049,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "连击-50%"
+    text: "连击"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "143,断招,0.01,断招,无,1,0,1,2,1,断连+50%,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1758,9 +2064,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "断连+50%"
+    text: "断连"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "144,阻滞,0.01,阻滞,无,1,0,1,2,0,断连-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1770,9 +2079,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "断连-50%"
+    text: "断连"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "145,杀机,0.01,杀机,无,1,0,1,3,1,伤害+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1782,9 +2094,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "伤害+50%"
+    text: "伤害"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "146,康复,0.01,康复,无,1,0,1,3,1,恢复效率+50%,我方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1794,9 +2109,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "恢复效率+50%"
+    text: "恢复效率"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "147,不愈,0.01,不愈,无,1,0,1,3,0,恢复效率-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1806,9 +2124,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "恢复效率-50%"
+    text: "恢复效率"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "148,坚毅,0.01,坚毅,无,1,0,1,2,1,负面抗性+50%,我方,0,2,1,1,0"
   splits:
   - split: 1
@@ -1818,9 +2139,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "负面抗性+50%"
+    text: "负面抗性"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+50%"
 - raw: "149,动摇,0.01,动摇,无,1,0,1,2,0,负面抗性-50%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -1830,9 +2154,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "负面抗性-50%"
+    text: "负面抗性"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-50%"
 - raw: "150,内劲,0.01,无,无,1,1,1,0,0,根据内力差造成真伤,伤害,0,1,1,1,0"
   splits:
   - split: 1
@@ -2046,9 +2373,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "移动距离+75%"
+    text: "移动距离"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}+75%"
 - raw: "168,裂膝,0.01,裂膝,无,1,0,1,2,0,移动距离-75%,敌方,0,1,1,1,0"
   splits:
   - split: 1
@@ -2058,9 +2388,12 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "移动距离-75%"
+    text: "移动距离"
   - split: 11
     text: "敌方"
+  templates:
+  - split: 10
+    template: "{0}-75%"
 - raw: "169,破招,0.01,无,无,1,1,1,0,0,无视守招的架势防御,伤害,0,1,1,1,0"
   splits:
   - split: 1
@@ -2490,9 +2823,21 @@
   - split: 4
     text: "无"
   - split: 10
-    text: "坐骑加成轻功/力道/体质/意志"
+    text: "坐骑加成轻功"
+  - split: 10
+    subIndex: 1
+    text: "力道"
+  - split: 10
+    subIndex: 2
+    text: "体质"
+  - split: 10
+    subIndex: 3
+    text: "意志"
   - split: 11
     text: "我方"
+  templates:
+  - split: 10
+    template: "{0}/{1}/{2}/{3}"
 - raw: "205,装备强化,0.002,无,无,1,1,1,0,0,提升装备基础效果,我方,0,0,0,1,0"
   splits:
   - split: 1

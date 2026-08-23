@@ -1,0 +1,182 @@
+using FanslationStudio.LlmKit.Support;
+using FanslationStudio.LlmKit.Utility;
+using System.Text.RegularExpressions;
+
+namespace Tests;
+
+public class CompoundFieldSplitterTests
+{
+    [Fact(DisplayName = "Digits glued to Chinese text stay in one fragment")]
+    public void DigitsGluedToChineseStayInOneFragment()
+    {
+        var (template, fragments) = CompoundFieldSplitter.Decompose("累计在战斗中亲手击败500人");
+
+        Assert.Equal("{0}", template);
+        Assert.Single(fragments);
+        Assert.Equal("累计在战斗中亲手击败500人", fragments[0]);
+    }
+
+    [Fact(DisplayName = "Operators still separate stat name from its value")]
+    public void OperatorsStillSeparateStatFromValue()
+    {
+        var (template, fragments) = CompoundFieldSplitter.Decompose("威望+10");
+
+        Assert.Equal("{0}+10", template);
+        Assert.Single(fragments);
+        Assert.Equal("威望", fragments[0]);
+    }
+
+    [Fact(DisplayName = "Trivial whole-cell template is detected")]
+    public void TrivialWholeCellTemplateIsDetected()
+    {
+        var (template, fragments) = CompoundFieldSplitter.Decompose("珍宝在鉴定后才能卖出更高价格");
+
+        Assert.True(CompoundFieldSplitter.IsTrivialTemplate(template, fragments.Count));
+    }
+
+    [Fact(DisplayName = "Compound cell with role separators still splits into multiple fragments")]
+    public void CompoundCellWithRoleSeparatorsStillSplits()
+    {
+        var original = "门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.False(CompoundFieldSplitter.IsTrivialTemplate(template, fragments.Count));
+        Assert.Equal(["门派弟子", "查看弟子相关信息", "门派职位", "管理门派特殊职位", "我", "长老"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "Empty Templates/Splits lists are omitted from serialized YAML")]
+    public void EmptyTemplatesAndSplitsListsAreOmittedFromYaml()
+    {
+        var line = new TranslationLine("ID,Name") { Splits = [], Templates = [] };
+
+        var serializer = YamlHelper.CreateSerializer();
+        var yaml = serializer.Serialize(line);
+
+        Assert.DoesNotContain("templates:", yaml);
+        Assert.DoesNotContain("splits:", yaml);
+    }
+
+    [Fact(DisplayName = "Negative sentinel value glues with its surrounding parenthetical into one fragment")]
+    public void NegativeSentinelValueGluesWithParentheticalIntoOneFragment()
+    {
+        var original = "占领门派（-99表示自动）";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}", template);
+        Assert.Single(fragments);
+        Assert.Equal(original, fragments[0]);
+    }
+
+    [Fact(DisplayName = "Percentage threshold stays glued to the surrounding clause")]
+    public void PercentageThresholdStaysGluedToClause()
+    {
+        var original = "同盟区域50%后进入门派/自宅";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}/{1}", template);
+        Assert.Equal(["同盟区域50%后进入门派", "自宅"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "Wide-char commas within a sentence stay glued into one fragment (punctuation can move during translation)")]
+    public void WideCharCommasStayGluedIntoOneFragment()
+    {
+        var original = "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派/自宅";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}/{1}", template);
+        Assert.Equal(["成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派", "自宅"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "Wide-char question mark and exclamation mark stay glued into the same fragment")]
+    public void WideCharQuestionAndExclamationStayGluedIntoSameFragment()
+    {
+        var original = "确定要离开吗？此操作无法撤销！确定？";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}", template);
+        Assert.Single(fragments);
+        Assert.Equal(original, fragments[0]);
+    }
+
+    [Fact(DisplayName = "Wide-char full stop ('。') stays glued into the same fragment as the sentence")]
+    public void WideCharFullStopStaysGluedIntoSameFragment()
+    {
+        var original = "珍宝在鉴定后才能卖出更高价格。";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}", template);
+        Assert.Single(fragments);
+        Assert.Equal(original, fragments[0]);
+        Assert.True(CompoundFieldSplitter.IsTrivialTemplate(template, fragments.Count));
+    }
+
+    [Fact(DisplayName = "Mixed full-width punctuation across a whole multi-clause sentence stays one fragment")]
+    public void MixedFullWidthPunctuationAcrossWholeSentenceStaysOneFragment()
+    {
+        var original = "门派的占领区域达到上限后，\\n就无法占领新的区域。真的要继续吗？请注意！";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        // '\\n' (an ASCII literal escape sequence used by the game, not a real newline character)
+        // is not part of the CJK/fullwidth text classes, so it still forms a genuine boundary here.
+        Assert.Equal("{0}\\n{1}", template);
+        Assert.Equal(["门派的占领区域达到上限后，", "就无法占领新的区域。真的要继续吗？请注意！"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "Standalone signed numeric fields with no adjacent Chinese remain fully literal")]
+    public void StandaloneSignedNumericFieldsRemainLiteral()
+    {
+        var original = "1000-12-0-0/1/2/3/4/5";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal(original, template);
+        Assert.Empty(fragments);
+    }
+
+    [Fact(DisplayName = "Without placeholder options, a game placeholder token between two Chinese runs is a fixed boundary")]
+    public void WithoutPlaceholderOptionsTokenIsFixedBoundary()
+    {
+        var original = "欢迎回来，#PlayerName#，今天也要加油哦";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}#PlayerName#{1}", template);
+        Assert.Equal(["欢迎回来，", "，今天也要加油哦"], fragments);
+    }
+
+    [Fact(DisplayName = "With placeholder options configured, a game placeholder token glues into a single fragment")]
+    public void WithPlaceholderOptionsTokenGluesIntoSingleFragment()
+    {
+        var original = "欢迎回来，#PlayerName#，今天也要加油哦";
+        var options = new CompoundFieldSplitterOptions
+        {
+            PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
+        };
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original, options);
+
+        Assert.Equal("{0}", template);
+        Assert.Single(fragments);
+        Assert.Equal(original, fragments[0]);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "Placeholder token at the very start of a compound cell still glues to the following clause")]
+    public void PlaceholderTokenAtStartStillGluesToFollowingClause()
+    {
+        var original = "#PlayerName#大人，欢迎回来";
+        var options = new CompoundFieldSplitterOptions
+        {
+            PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
+        };
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original, options);
+
+        Assert.Equal("{0}", template);
+        Assert.Single(fragments);
+        Assert.Equal(original, fragments[0]);
+    }
+}
+

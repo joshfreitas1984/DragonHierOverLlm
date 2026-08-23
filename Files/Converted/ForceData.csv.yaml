@@ -10,8 +10,9 @@
     text: "等级"
     translated: "Level"
   - split: 4
-    text: "门派地点ID"
-    translated: "Sect location ID"
+    text: "门派地点"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 5
     text: "颜色"
     translated: "Color"
@@ -45,6 +46,9 @@
   - split: 15
     text: "门派特性"
     translated: "Sect traits"
+  templates:
+  - split: 4
+    template: "{0}ID"
 - raw: "0,长乐帮,中庸,3,30,53defd,,,0.35,轻功;刀法;射术,口才,珍宝:1.5,1,1,0,<b>痛饮</b>：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感+20%。\\n<b>豪赌</b>：随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。\\n<b>销金</b>：在销金库可用门派功绩兑换高品质珍宝。"
   splits:
   - split: 1
@@ -54,17 +58,62 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "轻功;刀法;射术"
-    translated: "Qinggong; Blade Art; Archery Technique"
+    text: "轻功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "射术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "口才"
     translated: "Eloquence"
   - split: 11
-    text: "珍宝:1.5"
-    translated: "Treasure: 1.5"
+    text: "珍宝"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>痛饮</b>：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感+20%。\\n<b>豪赌</b>：随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。\\n<b>销金</b>：在销金库可用门派功绩兑换高品质珍宝。"
-    translated: "<b>Drunk Festivity:</b> Consume fine wine to gain corresponding long‑term benefits. No goodwill requirement for drinking with others, but it costs ‑20% of your internal energy and increases goodwill by +20%.\\n<b>Gambling Spree:</b> Engage in gambling at any time to gain additional goodwill. You can double the number of gambling sessions per month and the betting amount.\\n<b>Golden Vault:</b> Use sect merits in the Golden Vault to exchange for high‑quality treasures."
+    text: "痛饮"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "豪赌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "销金"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 5
+    text: "：在销金库可用门派功绩兑换高品质珍宝。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。\\n<b>{2}</b>{3}\\n<b>{4}</b>{5}"
 - raw: "1,唐门,霸业,4,31,9f61e5,,,0.5,绝技;射术;刀法,毒术,材料:1.5,1,1,1,<b>暗器</b>：暗室研究射术兵器，提升射术威力。\\n<b>杀手</b>：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
   splits:
   - split: 1
@@ -74,17 +123,52 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "绝技;射术;刀法"
-    translated: "Ultimate Skill; Archery; Blade Technique"
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "射术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "毒术"
     translated: "Poison Technique"
   - split: 11
-    text: "材料:1.5"
-    translated: "Materials:1.5"
+    text: "材料"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>暗器</b>：暗室研究射术兵器，提升射术威力。\\n<b>杀手</b>：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
-    translated: "<b>Hidden Weapon:</b> Study archery weaponry in the dark room to enhance the power of their shots.\\n<b>Killer:</b> You can take on killer orders in the dark room. Gain a reputation for attacking others and being ruthless by ‑60% points, and use Qinggong to evade capture by officials when apprehended."
+    text: "暗器"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：暗室研究射术兵器，提升射术威力。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "杀手"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1.5"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "2,药王谷,中庸,4,32,b57d4c,,,0.5,内功;拳掌;射术,医术;炼药,丹药:2,1,1,2,<b>行医</b>：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。\\n<b>妙药</b>：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求-50%。\\n<b>灵谷</b>：在万花谷可用门派功绩兑换高品质药引。"
   splits:
   - split: 1
@@ -94,17 +178,70 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "内功;拳掌;射术"
-    translated: "Neigong; fist and palm techniques; archery skills"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "射术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
-    text: "医术;炼药"
-    translated: "Medicine; alchemy"
+    text: "医术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 10
+    subIndex: 1
+    text: "炼药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
-    text: "丹药:2"
-    translated: "Potion:2"
+    text: "丹药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>行医</b>：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。\\n<b>妙药</b>：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求-50%。\\n<b>灵谷</b>：在万花谷可用门派功绩兑换高品质药引。"
-    translated: "<b>Practioner:</b> Treat others without limit on goodwill or frequency. Double the monthly clinic visits, gain additional reputation with every treatment, and increase goodwill by +20%.\\n<b>Magic Medicine:</b> Increases alchemy efficiency by +20% and allows the selection of multiple herbs. Enhances all requirements for refining elixirs by ‑50%.\\n<b>Spirit Grove</b>: In Ten Thousand Flowers Valley, you can use Sect merits to exchange for high‑quality medicinal aids."
+    text: "行医"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "妙药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "灵谷"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 5
+    text: "：在万花谷可用门派功绩兑换高品质药引。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 10
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:2"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}-50%。\\n<b>{4}</b>{5}"
 - raw: "3,丐帮,仁义,5,33,e1bf6e,,,0.5,拳掌;长兵;绝技,口才;烹饪,饮食:2,1,1,3,<b>铁掌</b>：大会台研究拳掌兵器，提升拳掌威力。\\n<b>行乞</b>：可消耗声望向他人乞讨银两。索取他人物品消耗好感-40%。"
   splits:
   - split: 1
@@ -114,17 +251,60 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "拳掌;长兵;绝技"
-    translated: "Fist and palm techniques; long‑range weapons; ultimate skill"
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
-    text: "口才;烹饪"
-    translated: "Eloquence; cooking"
+    text: "口才"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 10
+    subIndex: 1
+    text: "烹饪"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
-    text: "饮食:2"
-    translated: "Dining: 2"
+    text: "饮食"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>铁掌</b>：大会台研究拳掌兵器，提升拳掌威力。\\n<b>行乞</b>：可消耗声望向他人乞讨银两。索取他人物品消耗好感-40%。"
-    translated: "<b>Iron Palm:</b> The conference stage focuses on studying palm techniques and weapons, enhancing their power.\\n<b>Begging:</b> Consume reputation to beg for silver from others. Requesting items from others consumes goodwill by ‑40%."
+    text: "铁掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：大会台研究拳掌兵器，提升拳掌威力。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "行乞"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：可消耗声望向他人乞讨银两。索取他人物品消耗好感"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 10
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:2"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}-40%。"
 - raw: "4,飞龙门,中庸,4,34,fdf553,,,0.6,绝技;长兵;刀法,采伐,马匹:2,1,1,4,<b>枪术</b>：赛马场研究长兵兵器，提升长兵威力。\\n<b>马术</b>：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
   splits:
   - split: 1
@@ -134,17 +314,52 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "绝技;长兵;刀法"
-    translated: "Ultimate Skill;Long Armament;Blade Technique"
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "采伐"
     translated: "Logging"
   - split: 11
-    text: "马匹:2"
-    translated: "Horse:2"
+    text: "马匹"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>枪术</b>：赛马场研究长兵兵器，提升长兵威力。\\n<b>马术</b>：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
-    translated: "<b>Spear Technique:</b>: Study long weapons at the racetrack to enhance their power. <b>Horse Riding:</b>: Increase horse taming speed by +20%, reduce stamina cost for sprints by ‑20%.\\nEvery 1% in taming skill boosts all horse attributes by 0.2%."
+    text: "枪术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：赛马场研究长兵兵器，提升长兵威力。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "马术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:2"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "5,茅山派,中庸,5,35,dafaf7,,,0.5,绝技;奇门;剑法,炼药,丹药:1.5,1,1,5,<b>符法</b>：修习符咒武学解锁对应符法，用符法在战前强化己方角色/弱化对方角色。\\n<b>天雷</b>：每满级一门雷电武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点意志。\\n<b>丹引</b>：在华阳洞可炼化丹药获取对应药引。"
   splits:
   - split: 1
@@ -154,17 +369,72 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "绝技;奇门;剑法"
-    translated: "Ultimate Skill;Strange Doors;Sword Technique"
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "剑法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "炼药"
     translated: "Alchemy"
   - split: 11
-    text: "丹药:1.5"
-    translated: "Potion: 1.5"
+    text: "丹药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>符法</b>：修习符咒武学解锁对应符法，用符法在战前强化己方角色/弱化对方角色。\\n<b>天雷</b>：每满级一门雷电武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点意志。\\n<b>丹引</b>：在华阳洞可炼化丹药获取对应药引。"
-    translated: "<b>Magic Arts:</b> Mastering magical incantations unlocks corresponding Magic Arts, which can be used to enhance your characters' abilities or weaken the opponents' before battle.\\n<b>Heavenly Thunder:</b> Each level grants one Electric Arts combat technique, with additional Willpower points of 0.5/1/1.5/2/2.5/3 based on the technique's rank.\\n<b>Danyin:</b> In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    text: "符法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：修习符咒武学解锁对应符法，用符法在战前强化己方角色"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "弱化对方角色。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "天雷"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "：每满级一门雷电武学，根据武学品级额外提升0.5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 5
+    text: "3点意志。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 6
+    text: "丹引"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 7
+    text: "：在华阳洞可炼化丹药获取对应药引。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1.5"
+  - split: 15
+    template: "<b>{0}</b>{1}/{2}\\n<b>{3}</b>{4}/1/1.5/2/2.5/{5}\\n<b>{6}</b>{7}"
 - raw: "6,铸剑山庄,中庸,3,36,8ff2f4,,,0.5,剑法;绝技;刀法,采伐;锻造,装备:2,1,1,6,<b>天工</b>：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。\\n<b>巧匠</b>：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
   splits:
   - split: 1
@@ -174,17 +444,60 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "剑法;绝技;刀法"
-    translated: "Sword Technique; Ultimate Skill; Blade Technique"
+    text: "剑法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
-    text: "采伐;锻造"
-    translated: "Logging; forging"
+    text: "采伐"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 10
+    subIndex: 1
+    text: "锻造"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
-    text: "装备:2"
-    translated: "Equip: 2"
+    text: "装备"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>天工</b>：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。\\n<b>巧匠</b>：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
-    translated: "<b>Heavenly Smith:</b> Gather meteorite fragments during exploration and use the Sword Pool for additional equipment enhancement.\\n<b>Craftsman</b>: Increases forging efficiency by +20% and allows the selection of multiple materials. In Sword Pool, you can disassemble equipment to obtain corresponding materials."
+    text: "天工"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "巧匠"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 10
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:2"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "7,五毒教,霸业,5,37,b46da6,,,0.5,奇门;绝技;拳掌,木植;毒术,珍宝:1,1,1,7,<b>炼蛊</b>：在万毒池消耗药引/食材获取毒物，融合低级毒物获取强力高级毒物。\\n<b>毒术</b>：用毒可以选用多个毒物，装备淬毒下降速率-25%。"
   splits:
   - split: 1
@@ -194,17 +507,65 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "奇门;绝技;拳掌"
-    translated: "Odd Doors; Ultimate Skill; Fist and Palm Techniques"
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
-    text: "木植;毒术"
-    translated: "Wood Plant; Poison Technique"
+    text: "木植"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 10
+    subIndex: 1
+    text: "毒术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
-    text: "珍宝:1"
-    translated: "Treasure:1"
+    text: "珍宝"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>炼蛊</b>：在万毒池消耗药引/食材获取毒物，融合低级毒物获取强力高级毒物。\\n<b>毒术</b>：用毒可以选用多个毒物，装备淬毒下降速率-25%。"
-    translated: "<b>Cultivate Toxins:</b> Consume medicinal herbs or ingredients in the Ten Thousand Poison Pool to obtain toxins. Combine lower‑level toxins to acquire powerful, advanced toxins.\\n<b>Toxin Art:</b> Using toxins allows for the selection of multiple poison substances, reducing the cooldown rate by ‑25% for equipped items."
+    text: "炼蛊"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：在万毒池消耗药引"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "食材获取毒物，融合低级毒物获取强力高级毒物。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "毒术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "：用毒可以选用多个毒物，装备淬毒下降速率"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 10
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:1"
+  - split: 15
+    template: "<b>{0}</b>{1}/{2}\\n<b>{3}</b>{4}-25%。"
 - raw: "8,阎罗殿,霸业,6,38,960E0A,,,0.5,内功;刀法;绝技;拳掌,采伐,装备:1,1,1,8,<b>试炼</b>：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。\\n<b>霸道</b>：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
   splits:
   - split: 1
@@ -214,17 +575,57 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "内功;刀法;绝技;拳掌"
-    translated: "Neigong; Blade Technique; Ultimate Skill; Fist and Palm Techniques"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 3
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "采伐"
     translated: "Logging"
   - split: 11
-    text: "装备:1"
-    translated: "Equip: 1"
+    text: "装备"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>试炼</b>：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。\\n<b>霸道</b>：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
-    translated: "<b>Trial:</b> A progressively challenging Gate of Peril trial where the difficulty rises with each attempt, granting increasingly powerful abilities.\\n<b>Brazen</b>: Known for stealing items from others and stores at ‑40% chance, can use a special skill to break free when arrested by the authorities."
+    text: "试炼"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "霸道"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2};{3}"
+  - split: 11
+    template: "{0}:1"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "9,大隐阁,中庸,6,39,c5dff5,,,0.5,内功;轻功;奇门;剑法,学识;口才,珍宝:2,1,1,9,<b>博引</b>：搜集其他门派秘籍放入星辰阁，获取对应武学加成。\\n<b>旁证</b>：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求-10%。"
   splits:
   - split: 1
@@ -234,17 +635,65 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "内功;轻功;奇门;剑法"
-    translated: "Neigong; Qinggong; Qimen; Sword Technique"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "轻功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 3
+    text: "剑法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
-    text: "学识;口才"
-    translated: "Scholarship; eloquence"
+    text: "学识"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 10
+    subIndex: 1
+    text: "口才"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
-    text: "珍宝:2"
-    translated: "Treasure: 2"
+    text: "珍宝"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>博引</b>：搜集其他门派秘籍放入星辰阁，获取对应武学加成。\\n<b>旁证</b>：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求-10%。"
-    translated: "<b>Collective Insight:</b>: Gather secret manuals from other sects and store them in the Celestial Pavilion to gain corresponding combat skill enhancements. <b>Supporting Evidence:</b>: Argumentation hand card limit is +3. The skill requirement for compiling manuals is ‑10%.   Note: The '\\n' tag has been preserved as a newline indicator."
+    text: "博引"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "旁证"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2};{3}"
+  - split: 10
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:2"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}-10%。"
 - raw: "10,少林寺,仁义,6,40,ffb861,,,1,内功;绝技;长兵;拳掌,医术,秘籍:1,1,1,10,<b>禅宗</b>：通过禅宗修行获取少林寺武学加成。\\n<b>普度</b>：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
   splits:
   - split: 1
@@ -254,17 +703,57 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "内功;绝技;长兵;拳掌"
-    translated: "Neigong; Ultimate Skill; Long Melee Weapon; Fist and Palm Techniques"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 3
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "医术"
     translated: "Medicine"
   - split: 11
-    text: "秘籍:1"
-    translated: "Tome:1"
+    text: "秘籍"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>禅宗</b>：通过禅宗修行获取少林寺武学加成。\\n<b>普度</b>：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
-    translated: "<b>Zen:</b> Practice Zen to gain benefits from Shaolin Temple martial arts.\\n<b>Pudu:</b> Teach and reform wildbandits or other martial artists, aligning others' stances towards rules of virtue and compassion, thereby increasing goodwill and reputation."
+    text: "禅宗"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：通过禅宗修行获取少林寺武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "普度"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2};{3}"
+  - split: 11
+    template: "{0}:1"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "11,武当派,仁义,5,41,a0e15f,,,0.5,内功;绝技;剑法;拳掌,木植;炼药,秘籍:0.75,1,1,11,<b>道法</b>：通过道法修行获取武当派武学加成。\\n<b>无为</b>：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
   splits:
   - split: 1
@@ -274,17 +763,65 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "内功;绝技;剑法;拳掌"
-    translated: "Neigong; Supreme Skill; Sword Technique; Punching and Palm Techniques"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "剑法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 3
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
-    text: "木植;炼药"
-    translated: "Muzhi; Alchemy"
+    text: "木植"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 10
+    subIndex: 1
+    text: "炼药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
-    text: "秘籍:0.75"
-    translated: "Manual:0.75"
+    text: "秘籍"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>道法</b>：通过道法修行获取武当派武学加成。\\n<b>无为</b>：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
-    translated: "<b>Martial Dao Techniques:</b> Acquire Wudang Sect martial arts bonuses through the practice of Martial Dao techniques.\\n<b>No Action</b>: Teach and reform wild villains or other martial artists, shifting others' stances towards a neutral stance and increasing their good will and reputation."
+    text: "道法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：通过道法修行获取武当派武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "无为"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2};{3}"
+  - split: 10
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:0.75"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "12,霸刀门,中庸,3,42,c36328,,,0.6,刀法;长兵;绝技,烹饪,饮食:1,1,1,12,<b>试刀</b>：试刀台研究刀法兵器，提升刀法威力。\\n<b>老饕</b>：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
   splits:
   - split: 1
@@ -294,17 +831,52 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "刀法;长兵;绝技"
-    translated: "Blade Art; Long Weapon; Ultimate Technique"
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "烹饪"
     translated: "Cooking"
   - split: 11
-    text: "饮食:1"
-    translated: "Diet:1"
+    text: "饮食"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>试刀</b>：试刀台研究刀法兵器，提升刀法威力。\\n<b>老饕</b>：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
-    translated: "<b>Test Blade</b>: Test Blade Platform studies blade techniques and weaponry, enhancing the power of blade art.\\n<b>Gourmand</b>: Increases cooking efficiency by +20% and allows selecting multiple ingredients; when consuming delicacies, gain corresponding long‑term bonuses."
+    text: "试刀"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：试刀台研究刀法兵器，提升刀法威力。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "老饕"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "13,蓬莱派,仁义,3,43,fcc4d2,,,0.5,内功;剑法;奇门,学识,秘籍:0.5,1,1,13,<b>万剑</b>：蓬莱阁研究剑法兵器，提升剑法威力。\\n<b>归宗</b>：每满级一门剑法武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点剑法。"
   splits:
   - split: 1
@@ -314,17 +886,57 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "内功;剑法;奇门"
-    translated: "Neigong, Sword Technique, Jiemen"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "剑法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "学识"
     translated: "Scholarship"
   - split: 11
-    text: "秘籍:0.5"
-    translated: "Manual:0.5"
+    text: "秘籍"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>万剑</b>：蓬莱阁研究剑法兵器，提升剑法威力。\\n<b>归宗</b>：每满级一门剑法武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点剑法。"
-    translated: "<b>Thousand Swords:</b> Study sword techniques and weaponry at Penglai Pavilion to enhance the power of your sword art.\\n<b>Guizong:</b> Gain 1 point of Sword Art for each level of Sword Technique martial art. Additionally, based on the martial art's grade, gain 0.5/1/1.5/2/2.5/3 points of Sword Art upon leveling up."
+    text: "万剑"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：蓬莱阁研究剑法兵器，提升剑法威力。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "归宗"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：每满级一门剑法武学，根据武学品级额外提升0.5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "3点剑法。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/1/1.5/2/2.5/{4}"
 - raw: "14,峨眉派,仁义,4,44,affac8,,,0.5,内功;轻功;拳掌,木植,材料:1,1,1,14,<b>自然</b>：通过自然修行获取峨嵋派武学加成。\\n<b>灵悟</b>：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
   splits:
   - split: 1
@@ -334,17 +946,52 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "内功;轻功;拳掌"
-    translated: "Neigong; Qinggong; Quanzhang"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "轻功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "木植"
     translated: "Forest Plant"
   - split: 11
-    text: "材料:1"
-    translated: "Materials:1"
+    text: "材料"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>自然</b>：通过自然修行获取峨嵋派武学加成。\\n<b>灵悟</b>：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
-    translated: "<b>Natural Training:</b> Enhance Emei martial arts through natural cultivation.\\n<b>Lingwu:</b> Breakthrough efficiency ++20%; choose breakthrough option +1 and gain additional 1 levels of breakthrough bonus."
+    text: "自然"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：通过自然修行获取峨嵋派武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "灵悟"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "15,崆峒派,霸业,3,45,3e92aa,,,0.5,绝技;奇门;长兵,毒术,马匹:1,1,1,15,<b>奇技</b>：七十二洞研究奇门兵器，提升奇门威力。\\n<b>百出</b>：每满级一门奇门武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点奇门。"
   splits:
   - split: 1
@@ -354,17 +1001,57 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "绝技;奇门;长兵"
-    translated: "Ultimate Skill;Strange Doors;Long Blade"
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "毒术"
     translated: "Poison Technique"
   - split: 11
-    text: "马匹:1"
-    translated: "Horse:1"
+    text: "马匹"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>奇技</b>：七十二洞研究奇门兵器，提升奇门威力。\\n<b>百出</b>：每满级一门奇门武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点奇门。"
-    translated: "<b>Qi Ji</b>: Study the 72 Caverns of Strange Array Techniques to enhance the power of Strange Array weaponry. <b>Bai Chu</b>: \\nEach level of a Strange Array martial art increases its power by 0.5/1/1.5/2/2.5/3 points."
+    text: "奇技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：七十二洞研究奇门兵器，提升奇门威力。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "百出"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：每满级一门奇门武学，根据武学品级额外提升0.5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "3点奇门。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/1/1.5/2/2.5/{4}"
 - raw: "16,神机门,仁义,4,46,3eaa66,,,0.5,奇门;射术;绝技,学识;锻造,装备:1.5,1,1,16,<b>机关</b>：使用装备改装升级机关兽，获取对应的机关兽加成。\\n<b>杂学</b>：所有技艺经验+20%，收集资源时更易获得高级珍宝/材料，珍宝鉴定额外学识加成。"
   splits:
   - split: 1
@@ -374,17 +1061,65 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "奇门;射术;绝技"
-    translated: "Odd Doors; Archery; Ultimate Technique"
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "射术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
-    text: "学识;锻造"
-    translated: "Scholarship; smithing"
+    text: "学识"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 10
+    subIndex: 1
+    text: "锻造"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 11
-    text: "装备:1.5"
-    translated: "Equip: 1.5"
+    text: "装备"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>机关</b>：使用装备改装升级机关兽，获取对应的机关兽加成。\\n<b>杂学</b>：所有技艺经验+20%，收集资源时更易获得高级珍宝/材料，珍宝鉴定额外学识加成。"
-    translated: "<b>Mechanism:</b> Use equipment to modify and upgrade Mechanimal, obtaining corresponding bonuses.\\n<b>Jiazue</b>: All skill experience ++20%, easier to obtain advanced treasures/materials when gathering resources, additional knowledge bonus for treasure appraisal."
+    text: "机关"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：使用装备改装升级机关兽，获取对应的机关兽加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "杂学"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：所有技艺经验+20%，收集资源时更易获得高级珍宝"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "材料，珍宝鉴定额外学识加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 10
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:1.5"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/{4}"
 - raw: "17,霹雳堂,中庸,3,47,d72724,,,0.5,射术;绝技;长兵,锻造,材料:2,1,1,17,<b>火药</b>：通过配置火药提升霹雳堂武学和灼烧武学效果。\\n<b>灼烧</b>：每满级一门灼烧武学，根据武学品级额外提升0.5%/1%/1.5%/2%/2.5%/3%负面加成。\\n<b>重烩</b>：在火炼室可重烩饮食获取对应食材。"
   splits:
   - split: 1
@@ -394,17 +1129,67 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "射术;绝技;长兵"
-    translated: "Archery; Ultimate Skill; Long Bladed Weapon"
+    text: "射术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "锻造"
     translated: "Forging"
   - split: 11
-    text: "材料:2"
-    translated: "Materials:2"
+    text: "材料"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>火药</b>：通过配置火药提升霹雳堂武学和灼烧武学效果。\\n<b>灼烧</b>：每满级一门灼烧武学，根据武学品级额外提升0.5%/1%/1.5%/2%/2.5%/3%负面加成。\\n<b>重烩</b>：在火炼室可重烩饮食获取对应食材。"
-    translated: "<b>Powder:</b> Enhance the effects of Thunderclap Hall martial arts and burning martial arts by configuring powder.\\n<b>Burning Skill:</b> Each level of Burning Skill grants additional negative effects based on the skill's grade: 0.5%/1%/1.5%/2%/2.5%/3%.\\n<b>Recook:</b> Recook meals in the Furnace Room to get the corresponding ingredients."
+    text: "火药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：通过配置火药提升霹雳堂武学和灼烧武学效果。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "灼烧"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：每满级一门灼烧武学，根据武学品级额外提升0.5%"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "3%负面加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 5
+    text: "重烩"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 6
+    text: "：在火炼室可重烩饮食获取对应食材。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:2"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/1%/1.5%/2%/2.5%/{4}\\n<b>{5}</b>{6}"
 - raw: "18,金刚密宗,霸业,5,48,695180,,,0.5,内功;绝技;奇门,烹饪,饮食:1.5,1,1,18,<b>密宗</b>：通过密宗修行获取金刚宗武学加成。\\n<b>灌顶</b>：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
   splits:
   - split: 1
@@ -414,19 +1199,52 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "内功;绝技;奇门"
-    translated: "Internal Skill; Ultimate Technique; Strange Doors"
+    text: "内功"
     flaggedForRetranslation: true
-    flaggedMistranslation: "Neigong,内功,"
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "烹饪"
     translated: "Cooking"
   - split: 11
-    text: "饮食:1.5"
-    translated: "Diet:1.5"
+    text: "饮食"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>密宗</b>：通过密宗修行获取金刚宗武学加成。\\n<b>灌顶</b>：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
-    translated: "<b>Tantric Path:</b> Gain enhancements in Vajrayana martial arts through Tantric practice.\\n<b>Kuanding:</b> Teach and reform wild villains or other martial artists, altering others' stances towards chaos and ferocity, and increasing their goodwill and reputation."
+    text: "密宗"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：通过密宗修行获取金刚宗武学加成。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "灌顶"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1.5"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
 - raw: "19,天山派,霸业,4,49,445c6a,,,0.4,轻功;内功;拳掌,医术,丹药:1,1,1,19,<b>玄冰</b>：通过凝结玄冰提升天山派武学和冰寒武学效果。\\n<b>冰寒</b>：每满级一门冰寒武学，根据武学品级额外提升2/4/6/8/10/12点内力上限。"
   splits:
   - split: 1
@@ -436,17 +1254,57 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "轻功;内功;拳掌"
-    translated: "Qinggong; Neigong; Quanzhang"
+    text: "轻功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "医术"
     translated: "Medicine"
   - split: 11
-    text: "丹药:1"
-    translated: "Potion: 1"
+    text: "丹药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>玄冰</b>：通过凝结玄冰提升天山派武学和冰寒武学效果。\\n<b>冰寒</b>：每满级一门冰寒武学，根据武学品级额外提升2/4/6/8/10/12点内力上限。"
-    translated: "<b>Icy Freeze:</b> Enhance the Tianshan Sect and Ice‑Cold Martial Arts through the condensation of icy freeze.\\n<b>Ice Cold:</b> Every level of Ice Cold martial arts increases your Inner Power cap by 2/4/6/8/10/12 points based on the skill grade."
+    text: "玄冰"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：通过凝结玄冰提升天山派武学和冰寒武学效果。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 2
+    text: "冰寒"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 3
+    text: "：每满级一门冰寒武学，根据武学品级额外提升2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 4
+    text: "12点内力上限。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:1"
+  - split: 15
+    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/4/6/8/10/{4}"
 - raw: "20,聚义门,仁义,2,50,ABABAB,207/223/241,,0.5,内功;拳掌;长兵,无,丹药:0.5,0,1,-7,<b>聚义</b>：内功经验+20%，医术经验+20%。"
   splits:
   - split: 1
@@ -456,17 +1314,42 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "内功;拳掌;长兵"
-    translated: "Neigong; fists and palms; long weapons"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "丹药:0.5"
-    translated: "Potion: 0.5"
+    text: "丹药"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>聚义</b>：内功经验+20%，医术经验+20%。"
-    translated: "<b>Gather Strength:</b> Neigong Experience +20%, Medical Skill Experience +20%."
+    text: "聚义"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：内功经验+20%，医术经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "21,黄河帮,霸业,0,51,ABABAB,,,0.5,轻功;刀法,无,珍宝:0.5,0,1,-8,<b>黄河</b>：刀法经验+20%，毒术经验+20%。"
   splits:
   - split: 1
@@ -476,17 +1359,37 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "轻功;刀法"
-    translated: "Qinggong; Blade Technique"
+    text: "轻功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "珍宝:0.5"
-    translated: "Treasure:0.5"
+    text: "珍宝"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>黄河</b>：刀法经验+20%，毒术经验+20%。"
-    translated: "<b>Huang He:</b> Blade Art Experience +20%, Poison Technique Experience +20%."
+    text: "黄河"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：刀法经验+20%，毒术经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "22,八卦门,仁义,1,52,ABABAB,,,0.5,绝技;剑法;奇门,无,秘籍:0.25,0,1,-5,<b>八卦</b>：奇门经验+20%，学识经验+20%。"
   splits:
   - split: 1
@@ -496,17 +1399,42 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "绝技;剑法;奇门"
-    translated: "Ultimate Technique;Sword Technique;Strategic Maneuvers"
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "剑法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "秘籍:0.25"
-    translated: "Secret: 0.25"
+    text: "秘籍"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>八卦</b>：奇门经验+20%，学识经验+20%。"
-    translated: "<b>Bagua</b>: Qimen experience +20%, scholarly experience +20%"
+    text: "八卦"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：奇门经验+20%，学识经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:0.25"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "23,海沙帮,中庸,0,53,ABABAB,,,0.5,绝技;刀法,无,材料:0.5,0,1,-9,<b>海沙</b>：绝技经验+20%，烹饪经验+20%。"
   splits:
   - split: 1
@@ -516,17 +1444,37 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "绝技;刀法"
-    translated: "Ultimate Skill; Blade Technique"
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "刀法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "材料:0.5"
-    translated: "Materials: 0.5"
+    text: "材料"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>海沙</b>：绝技经验+20%，烹饪经验+20%。"
-    translated: "<b>Hai Sha:</b> Master Skill Experience +20%, Cooking Experience +20%."
+    text: "海沙"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：绝技经验+20%，烹饪经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "24,铁掌帮,霸业,1,54,ABABAB,6/11/32/47/62/117/138/151/196/210/225,,0.5,内功;拳掌,无,装备:0.5,0,0,-10,<b>铁掌</b>：拳掌经验+20%，锻造经验+20%。"
   splits:
   - split: 1
@@ -536,17 +1484,37 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "内功;拳掌"
-    translated: "Neigong; Quanzhang"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "拳掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "装备:0.5"
-    translated: "Equip: 0.5"
+    text: "装备"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>铁掌</b>：拳掌经验+20%，锻造经验+20%。"
-    translated: "<b>Iron Palm:</b> Punching Palm Experience +20%, Forging Experience +20%."
+    text: "铁掌"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：拳掌经验+20%，锻造经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "25,仙霞派,中庸,0,55,ABABAB,0/4/7/9/12/16/20/21/24/31/39/52/61/68/126/149/157/230,14-60;24-25,0.5,剑法,无,秘籍:0.25,0,0,-99,<b>仙霞</b>：所有经验获取+5%。"
   splits:
   - split: 1
@@ -562,11 +1530,23 @@
     text: "无"
     translated: "None"
   - split: 11
-    text: "秘籍:0.25"
-    translated: "Secret: 0.25"
+    text: "秘籍"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>仙霞</b>：所有经验获取+5%。"
-    translated: "<b>Xianxia</b>: All experience gain +5%"
+    text: "仙霞"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：所有经验获取"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 11
+    template: "{0}:0.25"
+  - split: 15
+    template: "<b>{0}</b>{1}+5%。"
 - raw: "26,巨鲸帮,中庸,1,56,ABABAB,,,0.5,轻功;射术,无,饮食:0.5,0,1,-4,<b>巨鲸</b>：轻功经验+20%，采伐经验+20%。"
   splits:
   - split: 1
@@ -576,17 +1556,37 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "轻功;射术"
-    translated: "Qinggong; archery"
+    text: "轻功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "射术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "饮食:0.5"
-    translated: "Diet:0.5"
+    text: "饮食"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>巨鲸</b>：轻功经验+20%，采伐经验+20%。"
-    translated: "<b>Kuaijia Whale:</b> Qinggong experience +20%, Logging experience +20%.')'"
+    text: "巨鲸"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：轻功经验+20%，采伐经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "27,金龙帮,中庸,2,57,ABABAB,,,0.5,内功;射术,无,珍宝:0.5,0,1,-3,<b>金龙</b>：射术经验+20%，口才经验+20%。"
   splits:
   - split: 1
@@ -596,17 +1596,37 @@
     text: "中庸"
     translated: "Moderation"
   - split: 9
-    text: "内功;射术"
-    translated: "Neigong; archery skill"
+    text: "内功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "射术"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "珍宝:0.5"
-    translated: "Treasure:0.5"
+    text: "珍宝"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>金龙</b>：射术经验+20%，口才经验+20%。"
-    translated: "<b>Jinlong</b>: Archery experience +20%, Eloquence experience +20%"
+    text: "金龙"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：射术经验+20%，口才经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "28,青城派,霸业,1,58,ABABAB,,,0.5,轻功;奇门;剑法,无,装备:0.5,0,1,-6,<b>青城</b>：剑法经验+20%，炼药经验+20%。"
   splits:
   - split: 1
@@ -616,17 +1636,42 @@
     text: "霸业"
     translated: "Prosperity"
   - split: 9
-    text: "轻功;奇门;剑法"
-    translated: "Qinggong Sword Technique"
+    text: "轻功"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "奇门"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 2
+    text: "剑法"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "装备:0.5"
-    translated: "Equip: 0.5"
+    text: "装备"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>青城</b>：剑法经验+20%，炼药经验+20%。"
-    translated: "<b>Qingcheng</b>: Sword Art experience +20%, Alchemy experience +20%. <b>Qingcheng</b>: Sword Technique experience +20%, Potion‑making experience +20%."
+    text: "青城"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：剑法经验+20%，炼药经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1};{2}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"
 - raw: "29,伏牛派,仁义,0,59,ABABAB,,,0.5,绝技;长兵,无,马匹:0.5,0,1,-2,<b>伏牛</b>：长兵经验+20%，木植经验+20%。"
   splits:
   - split: 1
@@ -636,14 +1681,34 @@
     text: "仁义"
     translated: "Righteousness and benevolence"
   - split: 9
-    text: "绝技;长兵"
-    translated: "Ultimate Skill; Long Weapon"
+    text: "绝技"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 9
+    subIndex: 1
+    text: "长兵"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 10
     text: "无"
     translated: "None"
   - split: 11
-    text: "马匹:0.5"
-    translated: "Horse:0.5"
+    text: "马匹"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 15
-    text: "<b>伏牛</b>：长兵经验+20%，木植经验+20%。"
-    translated: "<b>Foniu:</b> Long weapon experience +20%, Wood gathering experience +20%."
+    text: "伏牛"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 15
+    subIndex: 1
+    text: "：长兵经验+20%，木植经验"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 9
+    template: "{0};{1}"
+  - split: 11
+    template: "{0}:0.5"
+  - split: 15
+    template: "<b>{0}</b>{1}+20%。"

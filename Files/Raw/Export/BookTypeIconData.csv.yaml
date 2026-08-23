@@ -46,44 +46,27 @@
   - split: 1
     text: "黑"
 - raw: "1,1C2C39,4;-5"
-  splits: []
 - raw: "2,00443F,1;-1"
-  splits: []
 - raw: "3,2b261f,2;4"
-  splits: []
 - raw: "4,3D1700,-6;5"
-  splits: []
 - raw: "5,674500,2;0"
-  splits: []
 - raw: "6,黑,4;-3"
   splits:
   - split: 1
     text: "黑"
 - raw: "7,d9daf0,-2;-4"
-  splits: []
 - raw: "8,C10C00,-3;3"
-  splits: []
 - raw: "9,2F3748,3;-3"
-  splits: []
 - raw: "10,462F0D,-4;9"
-  splits: []
 - raw: "11,202D44,-2;4"
-  splits: []
 - raw: "12,372e2d,1;-4"
-  splits: []
 - raw: "13,003D52,-1;-1"
-  splits: []
 - raw: "14,5A0025,1;1"
-  splits: []
 - raw: "15,FFFFFF,4;-5"
-  splits: []
 - raw: "16,黑,-4;3"
   splits:
   - split: 1
     text: "黑"
 - raw: "17,FFD97E,1;2"
-  splits: []
 - raw: "18,D9D9D9,0;0"
-  splits: []
 - raw: "19,113D5A,2;2"
-  splits: []

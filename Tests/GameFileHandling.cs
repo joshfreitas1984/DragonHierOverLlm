@@ -10,9 +10,25 @@ namespace Tests
         public const string WorkingDirectory = "../../../../Files";
         public const string GameFolder = "G:\\SteamLibrary\\steamapps\\common\\LongYinLiZhiZhuan";
 
+        // This game wraps dynamic placeholder tokens in '#' (e.g. "#PlayerName#"). Their position
+        // can move during translation, so they must be glued into whichever Chinese run they're
+        // touching rather than treated as a fixed fragment boundary - see the "#PlayerName#" note
+        // in tests-translation-workflow.instructions.md. This is opted in here, at the game level,
+        // rather than baked into the shared CompoundFieldSplitter, since another game could just as
+        // easily use '#' as a genuine structural separator.
+        private static readonly CompoundFieldSplitterOptions SplitterOptions = new()
+        {
+            PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
+        };
+
+        public static string[] ParseCsvRow(string line) => CompoundFieldSplitter.ParseCsvRow(line);
+
+        public static string RebuildCsvRow(IEnumerable<string> fields) => CompoundFieldSplitter.RebuildCsvRow(fields);
+
         public static readonly TextFileToSplit[] TextFilesToSplit = [
             new() {Path = "AchievementData.csv", PackageOutput = true },
-            new() {Path = "AreaData.csv", PackageOutput = true },
+            // Column 3 (图标 / icon) is a resource path, not user-facing text - never translate it.
+            new() {Path = "AreaData.csv", PackageOutput = true, SkipColumns = [3] },
             new() {Path = "ArmorData.csv", PackageOutput = true },
             //new() {Path = "BookTypeIconData.csv", PackageOutput = true },
             new() {Path = "BuildingData.csv", PackageOutput = true },
@@ -43,7 +59,7 @@ namespace Tests
             // Main one
             new() {Path = "PlotData.csv", PackageOutput = true },
         ];
-  
+
         public static void ExportGameSpecificTextAssetsToCustomFormat(string workingDirectory)
         {
             string exportPath = $"{workingDirectory}/Raw/Export";
@@ -56,12 +72,15 @@ namespace Tests
                 Directory.CreateDirectory(convertedPath);
 
             var serializer = YamlHelper.CreateSerializer();
-            var pattern = LineValidation.ChineseCharPattern;
+            var configByFileName = TextFilesToSplit.ToDictionary(t => t.Path, t => t);
 
             var dir = new DirectoryInfo($"{workingDirectory}/Raw/Dumped/GameData/");
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
+                configByFileName.TryGetValue(file.Name, out var fileConfig);
+                var skipColumns = fileConfig?.SkipColumns ?? [];
+
                 //So far the game uses pure CSV files, so we can just read all lines and split by commas
                 var lines = File.ReadAllLines(file.FullName);
 
@@ -72,19 +91,39 @@ namespace Tests
                 {
                     lineIncrement++;
 
-                    var splits = line.Split(",");
+                    var splits = ParseCsvRow(line);
                     var foundSplits = new List<TranslationSplit>();
+                    var foundTemplates = new List<FieldTemplate>();
 
-                    // Find Chinese
+                    // Find Chinese fragments per column. A column may pack several fragments together
+                    // with structural separators (';', '-', '&', '|', etc.) - e.g. BuildingData's
+                    // action column - so we pull out each Chinese run individually and keep everything
+                    // else (ids, delimiters, method names) in a template used to rebuild the cell later.
+                    // Columns that are nothing but a single Chinese fragment (no surrounding structure)
+                    // don't need a template at all - they're recorded as a plain whole-cell split.
+                    // Columns listed in the file's SkipColumns (e.g. AreaData's icon column) are left
+                    // completely untouched - never decomposed at all, regardless of what fragments
+                    // they would otherwise have produced.
                     for (int i = 0; i < splits.Length; i++)
                     {
-                        if (Regex.IsMatch(splits[i], pattern))
+                        if (skipColumns.Contains(i))
+                            continue;
+
+                        var (template, fragments) = CompoundFieldSplitter.Decompose(splits[i], SplitterOptions);
+                        if (fragments.Count == 0)
+                            continue;
+
+                        if (CompoundFieldSplitter.IsTrivialTemplate(template, fragments.Count))
                         {
-                            foundSplits.Add(new TranslationSplit()
-                            {
-                                Split = i,
-                                Text = splits[i],
-                            });
+                            foundSplits.Add(new TranslationSplit(i, 0, fragments[0]));
+                            continue;
+                        }
+
+                        foundTemplates.Add(new FieldTemplate(i, template));
+
+                        for (int f = 0; f < fragments.Count; f++)
+                        {
+                            foundSplits.Add(new TranslationSplit(i, f, fragments[f]));
                         }
                     }
 
@@ -94,6 +133,7 @@ namespace Tests
                         //LineNum = lineNum,
                         Raw = line,
                         Splits = foundSplits,
+                        Templates = foundTemplates,
                     });
                 }
 
@@ -131,8 +171,8 @@ namespace Tests
             var passedCount = 0;
             var failedCount = 0;
 
-            await FileIteration.IterateTranslatedFilesAsync(workingDirectory, 
-                textFiles, 
+            await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
+                textFiles,
                 async (outputFile, textFileToTranslate, fileLines) =>
             {
                 var failedLines = new List<string>();
@@ -141,31 +181,82 @@ namespace Tests
                 foreach (var line in fileLines)
                 {
                     // Regular DB handling
-                    var splits = line.Raw.Split(',');
+                    var splits = ParseCsvRow(line.Raw);
                     var failed = false;
+                    var templatedColumns = line.Templates.Select(t => t.Split).ToHashSet();
 
-                    foreach (var split in line.Splits)
+                    foreach (var template in line.Templates)
                     {
-                        if (!textFileToTranslate.PackageOutput
-                            || split.FlaggedForRetranslation
-                            || !split.SafeToTranslate) //Count Failure
+                        if (template.Split < 0 || template.Split >= splits.Length)
+                            continue;
+
+                        var fragments = line.Splits
+                            .Where(s => s.Split == template.Split)
+                            .OrderBy(s => s.SubIndex)
+                            .ToList();
+
+                        var translatedFragments = new List<string>();
+
+                        foreach (var fragment in fragments)
                         {
-                            failed = true;
-                            break;
+                            if (!textFileToTranslate.PackageOutput
+                                || fragment.FlaggedForRetranslation
+                                || !fragment.SafeToTranslate) //Count Failure
+                            {
+                                failed = true;
+                                break;
+                            }
+
+                            //Check line to be extra safe
+                            //if (Regex.IsMatch(fragment.Translated, @"(?<!\\)\n"))
+                            //    failed = true;
+                            //else
+                            if (!string.IsNullOrEmpty(fragment.Translated))
+                                translatedFragments.Add(fragment.Translated);
+                            //If it was already blank its all good
+                            else if (!string.IsNullOrEmpty(fragment.Text))
+                            {
+                                failed = true;
+                                break;
+                            }
+                            else
+                                translatedFragments.Add(fragment.Text);
                         }
 
-                        //Check line to be extra safe
-                        //if (Regex.IsMatch(split.Translated, @"(?<!\\)\n"))
-                        //    failed = true;
-                        //else
-                        if (!string.IsNullOrEmpty(split.Translated))
-                            splits[split.Split] = $"\"{split.Translated}\"";
-                        //If it was already blank its all good
-                        else if (!string.IsNullOrEmpty(split.Text))
-                            failed = true;
+                        if (failed)
+                            break;
+
+                        splits[template.Split] = CompoundFieldSplitter.Reconstruct(template.Template, translatedFragments);
                     }
 
-                    line.Translated = string.Join(',', splits);
+                    // Plain columns (whole cell is a single translatable fragment, no template needed)
+                    if (!failed)
+                    {
+                        foreach (var split in line.Splits.Where(s => !templatedColumns.Contains(s.Split)))
+                        {
+                            if (split.Split < 0 || split.Split >= splits.Length)
+                                continue;
+
+                            if (!textFileToTranslate.PackageOutput
+                                || split.FlaggedForRetranslation
+                                || !split.SafeToTranslate) //Count Failure
+                            {
+                                failed = true;
+                                break;
+                            }
+
+                            if (!string.IsNullOrEmpty(split.Translated))
+                                splits[split.Split] = split.Translated;
+                            //If it was already blank its all good
+                            else if (!string.IsNullOrEmpty(split.Text))
+                            {
+                                failed = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    line.Translated = RebuildCsvRow(splits);
 
                     if (!failed)
                     {

@@ -1,5 +1,4 @@
 - raw: ",0,1,2,3,4,5,6,7,8,9"
-  splits: []
 - raw: ",纯粹,固执,稳重,忠厚,简单,灵活,潇洒,轻佻,算计,叛逆"
   splits:
   - split: 1
@@ -37,8 +36,9 @@
   - text: "思考招式"
     translated: "Think of a technique"
   - split: 1
-    text: "嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展……"
-    translated: "Hmm? Oh! It's #PlayerName#! I was just thinking of a brilliant strategy; it's as simple as this..."
+    text: "嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 2
     text: "#PlayerName#，我近日修行始终不得要领，已为此苦思多日了。"
     translated: "#PlayerName#, I have been struggling to grasp the right approach in my recent cultivation for many days now."
@@ -58,14 +58,25 @@
     text: "#PlayerName#，我这招式随手使出，可有几分潇洒自如之意啊？"
     translated: "#PlayerName#, with this move, I've just let it flow naturally‑does it have a bit of grace to it?"
   - split: 8
-    text: "#PlayerName#，看剑！\\n……哈哈，开个玩笑而已。"
-    translated: "#PlayerName#, draw your sword!\\n......Ha ha, just joking."
+    text: "#PlayerName#，看剑！"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  - split: 8
+    subIndex: 1
+    text: "哈哈，开个玩笑而已。"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 9
     text: "#PlayerName#，你若能指出我招式中的纰漏，日后自有重谢。"
     translated: "#PlayerName#, if you can point out the flaws in my techniques, there will surely be a great reward for you in the future."
   - split: 10
     text: "#PlayerName#，我这招精妙非常，只怕你也难以招架！"
     translated: "#PlayerName#, my maneuver is exceptionally skillful; I doubt you could withstand it!"
+  templates:
+  - split: 1
+    template: "{0}……"
+  - split: 8
+    template: "{0}\\n……{1}"
 - raw: "武学见解,依我所见，武学的精要之处在于战无不胜，攻无不克,依我所见，武学的精要之处在于勤学苦练，登峰造极,依我所见，武学的精要之处在于步步为营，攻守兼备,依我所见，武学的精要之处在于修身养性，仁者无敌,依我所见，武学的精要之处在于删繁就简，返璞归真,依我所见，武学的精要之处在于活学活用，灵巧多变,依我所见，武学的精要之处在于行云流水，挥洒自如,依我所见，武学的精要之处在于避实就虚，随心所欲,依我所见，武学的精要之处在于算无遗策，克敌机先,依我所见，武学的精要之处在于破除陈规，剑走偏锋"
   splits:
   - text: "武学见解"

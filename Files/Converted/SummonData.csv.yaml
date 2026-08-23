@@ -16,14 +16,18 @@
     text: "移动距离"
     translated: "Distance moved"
   - split: 6
-    text: "技能ID"
-    translated: "Skill ID"
+    text: "技能"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - split: 7
     text: "攻击音效"
     translated: "Attack sound effect"
   - split: 8
     text: "建筑"
     translated: "Building"
+  templates:
+  - split: 6
+    template: "{0}ID"
 - raw: "0,箭塔,0,150,1.25,0,0,WoodenSummonAttack,TRUE"
   splits:
   - split: 1
@@ -35,24 +39,36 @@
     text: "木流马"
     translated: "Tree Flow Horse"
   - split: 7
-    text: "SpeEffect/振波土石"
-    translated: "Shockwave Soil"
+    text: "振波土石"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 7
+    template: "SpeEffect/{0}"
 - raw: "2,青铜奔牛,1,20,1.2,3,6;2,SpeEffect/振波土石,FALSE"
   splits:
   - split: 1
     text: "青铜奔牛"
     translated: "Bronze Running Bull"
   - split: 7
-    text: "SpeEffect/振波土石"
-    translated: "Shockwave Soil"
+    text: "振波土石"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 7
+    template: "SpeEffect/{0}"
 - raw: "3,玉石麒麟,2,35,1,4,6;3,SpeEffect/振波土石,FALSE"
   splits:
   - split: 1
     text: "玉石麒麟"
     translated: "Jasper qilin"
   - split: 7
-    text: "SpeEffect/振波土石"
-    translated: "Shockwave Soil"
+    text: "振波土石"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 7
+    template: "SpeEffect/{0}"
 - raw: "4,燎原朱雀,3,60,1,6,0;4,Eagle,FALSE"
   splits:
   - split: 1
@@ -64,8 +80,12 @@
     text: "地动青龙"
     translated: "Earthquake Dragon Qinglong"
   - split: 7
-    text: "SpeEffect/龙吼"
-    translated: "Dragon Roar"
+    text: "龙吼"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 7
+    template: "SpeEffect/{0}"
 - raw: "6,分舵,4,300,1.5,0,7,WoodenSummonAttack,TRUE"
   splits:
   - split: 1
@@ -77,16 +97,24 @@
     text: "战鼓"
     translated: "Battle drum"
   - split: 7
-    text: "SpeEffect/士气上升"
-    translated: "Morale Boost"
+    text: "士气上升"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 7
+    template: "SpeEffect/{0}"
 - raw: "8,公输遗匣,5,50,1.5,4,7;8;2;4;5;9,SpeEffect/剑雨,FALSE"
   splits:
   - split: 1
     text: "公输遗匣"
     translated: "Cao Shu's Legacy Box"
   - split: 7
-    text: "SpeEffect/剑雨"
-    translated: "SpeEffect/Sword Rain"
+    text: "剑雨"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
+  templates:
+  - split: 7
+    template: "SpeEffect/{0}"
 - raw: "9,总舵,5,500,2,0,7;8;10,WoodenSummonAttack,TRUE"
   splits:
   - split: 1

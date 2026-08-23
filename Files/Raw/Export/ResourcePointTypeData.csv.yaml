@@ -13,212 +13,319 @@
   - split: 1
     text: "茶山"
   - split: 2
-    text: "\"威望+2"
+    text: "威望"
+  - split: 2
+    subIndex: 1
+    text: "药材"
   - split: 3
-    text: "药材+1\""
-  - split: 4
     text: "技艺经验0.01"
-  - split: 5
-    text: "速度+0.05"
+  - split: 4
+    text: "速度"
+  templates:
+  - split: 2
+    template: "{0}+2,{1}+1"
+  - split: 4
+    template: "{0}+0.05"
 - raw: "1,瓷窑,\"威望+3,银钱+1\",技艺经验0.02,速度+0.1"
   splits:
   - split: 1
     text: "瓷窑"
   - split: 2
-    text: "\"威望+3"
+    text: "威望"
+  - split: 2
+    subIndex: 1
+    text: "银钱"
   - split: 3
-    text: "银钱+1\""
-  - split: 4
     text: "技艺经验0.02"
-  - split: 5
-    text: "速度+0.1"
+  - split: 4
+    text: "速度"
+  templates:
+  - split: 2
+    template: "{0}+3,{1}+1"
+  - split: 4
+    template: "{0}+0.1"
 - raw: "2,绸缎,\"威望+4,银钱+2\",技艺经验0.03,速度+0.15"
   splits:
   - split: 1
     text: "绸缎"
   - split: 2
-    text: "\"威望+4"
+    text: "威望"
+  - split: 2
+    subIndex: 1
+    text: "银钱"
   - split: 3
-    text: "银钱+2\""
-  - split: 4
     text: "技艺经验0.03"
-  - split: 5
-    text: "速度+0.15"
+  - split: 4
+    text: "速度"
+  templates:
+  - split: 2
+    template: "{0}+4,{1}+2"
+  - split: 4
+    template: "{0}+0.15"
 - raw: "3,铜矿,\"银钱+2,矿石+1\",弟子功绩0.01,伤害+0.05"
   splits:
   - split: 1
     text: "铜矿"
   - split: 2
-    text: "\"银钱+2"
+    text: "银钱"
+  - split: 2
+    subIndex: 1
+    text: "矿石"
   - split: 3
-    text: "矿石+1\""
-  - split: 4
     text: "弟子功绩0.01"
-  - split: 5
-    text: "伤害+0.05"
+  - split: 4
+    text: "伤害"
+  templates:
+  - split: 2
+    template: "{0}+2,{1}+1"
+  - split: 4
+    template: "{0}+0.05"
 - raw: "4,银矿,\"银钱+2,矿石+2\",弟子功绩0.02,伤害+0.1"
   splits:
   - split: 1
     text: "银矿"
   - split: 2
-    text: "\"银钱+2"
+    text: "银钱"
+  - split: 2
+    subIndex: 1
+    text: "矿石"
   - split: 3
-    text: "矿石+2\""
-  - split: 4
     text: "弟子功绩0.02"
-  - split: 5
-    text: "伤害+0.1"
+  - split: 4
+    text: "伤害"
+  templates:
+  - split: 2
+    template: "{0}+2,{1}+2"
+  - split: 4
+    template: "{0}+0.1"
 - raw: "5,金矿,\"银钱+5,矿石+1\",弟子功绩0.03,伤害+0.15"
   splits:
   - split: 1
     text: "金矿"
   - split: 2
-    text: "\"银钱+5"
+    text: "银钱"
+  - split: 2
+    subIndex: 1
+    text: "矿石"
   - split: 3
-    text: "矿石+1\""
-  - split: 4
     text: "弟子功绩0.03"
-  - split: 5
-    text: "伤害+0.15"
+  - split: 4
+    text: "伤害"
+  templates:
+  - split: 2
+    template: "{0}+5,{1}+1"
+  - split: 4
+    template: "{0}+0.15"
 - raw: "6,农田,粮食+3,恢复效率0.01,命中+0.05"
   splits:
   - split: 1
     text: "农田"
   - split: 2
-    text: "粮食+3"
+    text: "粮食"
   - split: 3
     text: "恢复效率0.01"
   - split: 4
-    text: "命中+0.05"
+    text: "命中"
+  templates:
+  - split: 2
+    template: "{0}+3"
+  - split: 4
+    template: "{0}+0.05"
 - raw: "7,牧场,\"粮食+3,威望+1\",恢复效率0.02,命中+0.1"
   splits:
   - split: 1
     text: "牧场"
   - split: 2
-    text: "\"粮食+3"
+    text: "粮食"
+  - split: 2
+    subIndex: 1
+    text: "威望"
   - split: 3
-    text: "威望+1\""
-  - split: 4
     text: "恢复效率0.02"
-  - split: 5
-    text: "命中+0.1"
+  - split: 4
+    text: "命中"
+  templates:
+  - split: 2
+    template: "{0}+3,{1}+1"
+  - split: 4
+    template: "{0}+0.1"
 - raw: "8,果园,\"粮食+4,木料+2\",恢复效率0.03,命中+0.15"
   splits:
   - split: 1
     text: "果园"
   - split: 2
-    text: "\"粮食+4"
+    text: "粮食"
+  - split: 2
+    subIndex: 1
+    text: "木料"
   - split: 3
-    text: "木料+2\""
-  - split: 4
     text: "恢复效率0.03"
-  - split: 5
-    text: "命中+0.15"
+  - split: 4
+    text: "命中"
+  templates:
+  - split: 2
+    template: "{0}+4,{1}+2"
+  - split: 4
+    template: "{0}+0.15"
 - raw: "9,湖泽,\"木料+2,粮食+1\",建造速度0.02,城防耐久+0.1"
   splits:
   - split: 1
     text: "湖泽"
   - split: 2
-    text: "\"木料+2"
+    text: "木料"
+  - split: 2
+    subIndex: 1
+    text: "粮食"
   - split: 3
-    text: "粮食+1\""
-  - split: 4
     text: "建造速度0.02"
-  - split: 5
-    text: "城防耐久+0.1"
+  - split: 4
+    text: "城防耐久"
+  templates:
+  - split: 2
+    template: "{0}+2,{1}+1"
+  - split: 4
+    template: "{0}+0.1"
 - raw: "10,森林,\"木料+3,药材+1\",建造速度0.04,城防耐久+0.2"
   splits:
   - split: 1
     text: "森林"
   - split: 2
-    text: "\"木料+3"
+    text: "木料"
+  - split: 2
+    subIndex: 1
+    text: "药材"
   - split: 3
-    text: "药材+1\""
-  - split: 4
     text: "建造速度0.04"
-  - split: 5
-    text: "城防耐久+0.2"
+  - split: 4
+    text: "城防耐久"
+  templates:
+  - split: 2
+    template: "{0}+3,{1}+1"
+  - split: 4
+    template: "{0}+0.2"
 - raw: "11,古木,\"木料+4,药材+2\",建造速度0.06,城防耐久+0.3"
   splits:
   - split: 1
     text: "古木"
   - split: 2
-    text: "\"木料+4"
+    text: "木料"
+  - split: 2
+    subIndex: 1
+    text: "药材"
   - split: 3
-    text: "药材+2\""
-  - split: 4
     text: "建造速度0.06"
-  - split: 5
-    text: "城防耐久+0.3"
+  - split: 4
+    text: "城防耐久"
+  templates:
+  - split: 2
+    template: "{0}+4,{1}+2"
+  - split: 4
+    template: "{0}+0.3"
 - raw: "12,盐矿,\"矿石+2,粮食+1\",科研效率0.02,护甲+2.5"
   splits:
   - split: 1
     text: "盐矿"
   - split: 2
-    text: "\"矿石+2"
+    text: "矿石"
+  - split: 2
+    subIndex: 1
+    text: "粮食"
   - split: 3
-    text: "粮食+1\""
-  - split: 4
     text: "科研效率0.02"
-  - split: 5
-    text: "护甲+2.5"
+  - split: 4
+    text: "护甲"
+  templates:
+  - split: 2
+    template: "{0}+2,{1}+1"
+  - split: 4
+    template: "{0}+2.5"
 - raw: "13,铁矿,\"矿石+3,银钱+1\",科研效率0.04,护甲+5"
   splits:
   - split: 1
     text: "铁矿"
   - split: 2
-    text: "\"矿石+3"
+    text: "矿石"
+  - split: 2
+    subIndex: 1
+    text: "银钱"
   - split: 3
-    text: "银钱+1\""
-  - split: 4
     text: "科研效率0.04"
-  - split: 5
-    text: "护甲+5"
+  - split: 4
+    text: "护甲"
+  templates:
+  - split: 2
+    template: "{0}+3,{1}+1"
+  - split: 4
+    template: "{0}+5"
 - raw: "14,玉矿,\"矿石+4,威望+2\",科研效率0.06,护甲+7.5"
   splits:
   - split: 1
     text: "玉矿"
   - split: 2
-    text: "\"矿石+4"
+    text: "矿石"
+  - split: 2
+    subIndex: 1
+    text: "威望"
   - split: 3
-    text: "威望+2\""
-  - split: 4
     text: "科研效率0.06"
-  - split: 5
-    text: "护甲+7.5"
+  - split: 4
+    text: "护甲"
+  templates:
+  - split: 2
+    template: "{0}+4,{1}+2"
+  - split: 4
+    template: "{0}+7.5"
 - raw: "15,甘泉,\"药材+2,粮食+1\",疗伤效率0.01,回血+0.005"
   splits:
   - split: 1
     text: "甘泉"
   - split: 2
-    text: "\"药材+2"
+    text: "药材"
+  - split: 2
+    subIndex: 1
+    text: "粮食"
   - split: 3
-    text: "粮食+1\""
-  - split: 4
     text: "疗伤效率0.01"
-  - split: 5
-    text: "回血+0.005"
+  - split: 4
+    text: "回血"
+  templates:
+  - split: 2
+    template: "{0}+2,{1}+1"
+  - split: 4
+    template: "{0}+0.005"
 - raw: "16,药圃,\"药材+3,威望+1\",疗伤效率0.02,回血+0.01"
   splits:
   - split: 1
     text: "药圃"
   - split: 2
-    text: "\"药材+3"
+    text: "药材"
+  - split: 2
+    subIndex: 1
+    text: "威望"
   - split: 3
-    text: "威望+1\""
-  - split: 4
     text: "疗伤效率0.02"
-  - split: 5
-    text: "回血+0.01"
+  - split: 4
+    text: "回血"
+  templates:
+  - split: 2
+    template: "{0}+3,{1}+1"
+  - split: 4
+    template: "{0}+0.01"
 - raw: "17,灵谷,\"药材+4,木料+2\",疗伤效率0.03,回血+0.015"
   splits:
   - split: 1
     text: "灵谷"
   - split: 2
-    text: "\"药材+4"
+    text: "药材"
+  - split: 2
+    subIndex: 1
+    text: "木料"
   - split: 3
-    text: "木料+2\""
-  - split: 4
     text: "疗伤效率0.03"
-  - split: 5
-    text: "回血+0.015"
+  - split: 4
+    text: "回血"
+  templates:
+  - split: 2
+    template: "{0}+4,{1}+2"
+  - split: 4
+    template: "{0}+0.015"

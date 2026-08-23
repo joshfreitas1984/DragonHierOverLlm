@@ -21,8 +21,8 @@ translateFlagged: true
 extraStringTokenReplacers:
   - '#PlayerName#'
 splitCharactersList:
-  - '\n'
-  - '<br>'
+  # - '\n'
+  # - '<br>'
   # - '⑩'
   # - '⓪'
   # - '①'
@@ -42,10 +42,10 @@ splitCharactersList:
 splitRegexPatterns:
   #- '(.*?)',
   #- '（.*?）',
-  - '《.*?》'
-  - '\〈.*?\〉'
-  - '\「.*?\」'
-  - '\『.*?\』'
-  - '\【.*?\】'
-  - '\〖.*?\〗'
-  - '\“.*?”'
+  # - '《.*?》'
+  # - '\〈.*?\〉'
+  # - '\「.*?\」'
+  # - '\『.*?\』'
+  # - '\【.*?\】'
+  # - '\〖.*?\〗'
+  # - '\“.*?”'
