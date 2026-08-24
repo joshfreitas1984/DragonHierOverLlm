@@ -38,6 +38,11 @@
          `dotnet build -v:diag`) - it must be embedded into the main plugin DLL via Costura.Fody
          (see FodyWeavers.xml) instead, same as any other external dependency here. -->
     <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+    <!-- Parses the PrefabText raw/result YAML dictionary (Files/Mod/*.yaml, produced by
+         FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow.PackagePrefabTextAsync) in
+         PrefabTextPatches.cs. Same CopyLocalLockFileAssemblies/Costura embedding requirement as
+         System.Text.Encoding.CodePages above. -->
+    <PackageReference Include="YamlDotNet" Version="15.1.2" />
     <PackageReference Include="Costura.Fody" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -63,6 +68,9 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppSystem">
       <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\Il2CppSystem.dll</HintPath>

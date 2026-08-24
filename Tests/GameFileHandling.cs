@@ -1,6 +1,7 @@
 ﻿using FanslationStudio.LlmKit;
 using FanslationStudio.LlmKit.Support;
 using FanslationStudio.LlmKit.Utility;
+using FanslationStudio.LlmKit.Workflow;
 using System.Text.RegularExpressions;
 
 namespace Tests
@@ -241,6 +242,17 @@ namespace Tests
             // indexing - guarded against in LineValidation.CheckTransalationSuccessful's generic
             // '|' check (see that file) rather than by skipping this column outright.
             new() {Path = "PlotData.csv", PackageOutput = true },
+
+            // Hardcoded UI/prefab text baked directly into MonoBehaviour/TMP_Text components
+            // rather than a game-data CSV - see AssetDumperWorkflowTests.DumpChineseTextFromAssets,
+            // which dumps this as one distinct Chinese string per line to
+            // Files/Raw/Dumped/PrefabText/dumpedPrefabText.txt (m_Text/text fields only - every
+            // other field found by that scan goes to the sibling dumpedOtherText.txt instead, which
+            // is diagnostic-only and never fed into this pipeline). Handled by the generic,
+            // game-agnostic FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow instead of the CSV
+            // column-decomposition path above - there's no row/column structure here, each line IS
+            // the whole translatable unit.
+            new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
         ];
 
         public static void ExportGameSpecificTextAssetsToCustomFormat(string workingDirectory)
@@ -332,7 +344,8 @@ namespace Tests
 
         public static void ExportPrefabTextAssetToCustomFormat(string workingDirectory)
         {
-            throw new NotImplementedException();
+            foreach (var textFile in TextFilesToSplit.Where(t => t.TextFileType == TextFileType.PrefabText))
+                PrefabTextWorkflow.ExportPrefabTextToCustomFormat(workingDirectory, textFile);
         }
 
         public static void ExportDynamicStringTextAssetToCustomFormat(string workingDirectory)
@@ -354,8 +367,18 @@ namespace Tests
             var passedCount = 0;
             var failedCount = 0;
 
+            // PrefabText files have no CSV row/column structure to reconstruct - ParseCsvRow below
+            // would misinterpret their plain-string Raw lines as CSV cells. Package those through
+            // the generic PrefabTextWorkflow instead, and only run the CSV reconstruction loop
+            // against genuine RegularDb files.
+            var csvTextFiles = textFiles.Where(t => t.TextFileType != TextFileType.PrefabText).ToArray();
+            var prefabTextFiles = textFiles.Where(t => t.TextFileType == TextFileType.PrefabText);
+
+            foreach (var prefabTextFile in prefabTextFiles)
+                await PrefabTextWorkflow.PackagePrefabTextAsync(workingDirectory, prefabTextFile);
+
             await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
-                textFiles,
+                csvTextFiles,
                 async (outputFile, textFileToTranslate, fileLines) =>
             {
                 var failedLines = new List<string>();

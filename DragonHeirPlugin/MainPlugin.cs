@@ -31,6 +31,7 @@ public class MainPlugin : BasePlugin
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         Harmony.CreateAndPatchAll(typeof(MainPlugin));
         Harmony.CreateAndPatchAll(typeof(ResourceIoPatches));
+        Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Harmony.CreateAndPatchAll(typeof(CrashMitigationPatches));
         Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));

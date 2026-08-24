@@ -8,6 +8,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AssetsTools.NET" Version="3.0.5" />
+    <PackageReference Include="AssetsTools.NET.Cpp2IL" Version="3.0.4" />
+    <!-- AssetsTools.NET.Cpp2IL 3.0.4's nuspec declares a minimum dependency on
+         Samboy063.LibCpp2IL 2022.0.7.2, so NuGet restores that (lowest matching) version by
+         default - but that's WRONG:
+           - 2022.0.7.2 (and all older 2022.0.x / 2021.x releases) predate LibCpp2IL's switch to
+             AssetRipper.Primitives.UnityVersion, so LibCpp2IlMain has no
+             Initialize(byte[], byte[], AssetRipper.Primitives.UnityVersion) overload at all ->
+             "Method not found: ...LibCpp2IlMain.Initialize(...)".
+           - Any of the "2022.1.0-pre-release.N" builds from N=15 onward (and the unofficial,
+             not-on-nuget.org "2022.1.0-development.NNNN" builds) come from LibCpp2IL's later
+             LibCpp2IlContext refactor, where MetadataVersion/Initialize/etc. on LibCpp2IlMain
+             became [Obsolete] *properties* delegating to a context object instead of plain static
+             fields. AssetsTools.NET.Cpp2IL.dll 3.0.4's IL still does a direct field access
+             (ldsfld) against LibCpp2IlMain.MetadataVersion, so any of those versions throw
+             "Field not found: 'LibCpp2IL.LibCpp2IlMain.MetadataVersion'" at runtime for every
+             MonoBehaviour.
+         The only officially published nuget.org version that has BOTH the new 3-arg
+         Initialize(byte[], byte[], UnityVersion) overload AND still exposes MetadataVersion as a
+         real static field (not yet refactored to the context/property model) is
+         "2022.1.0-pre-release.13" (confirmed via LibCpp2IlMain.cs source at that git tag). Pin to
+         exactly that version - do not bump without re-checking LibCpp2IlMain.cs source at the
+         target tag for `public static float MetadataVersion =` (field) vs
+         `public static float MetadataVersion =>` (obsolete property). -->
+    <PackageReference Include="Samboy063.LibCpp2IL" Version="2022.1.0-pre-release.13" />
+    <PackageReference Include="AssetRipper.Primitives" Version="2.1.0" />
     <PackageReference Include="coverlet.collector" Version="6.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
     <PackageReference Include="ToolGood.Words" Version="3.1.0.3" />
@@ -20,6 +46,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FanslationStudio.LlmKit\FanslationStudio.LlmKit\FanslationStudio.LlmKit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Optional - see AssetDumperWorkflowTests.ClassDataTpkPath. Only copied if present, so its
+         absence is not a build error. -->
+    <Content Include="classdata.tpk" Condition="Exists('classdata.tpk')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

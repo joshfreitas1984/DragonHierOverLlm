@@ -211,6 +211,63 @@ case) including why Costura alone wasn't sufficient without step 1.
   methodology and known hazard patterns (`Label<sign><number>` cross-reference cells, etc.) before
   re-deriving them from scratch.
 
+## `PrefabTextPatches` — runtime replacement of hardcoded prefab UI text (TMP_Text/UI.Text only)
+
+Replaces `plotText`/`describe`/etc.-style CSV-backed fields are **not** handled here — those
+already round-trip through the existing CSV workflow (`Tests/GameFileHandling.cs` +
+`ResourceIoPatches.cs`'s whole-file `TextAsset` override), confirmed by checking
+`BepInEx\interop\Assembly-CSharp.dll`: every one of those field names (`plotText`, `describe`,
+`tutorialText`, `eventDescribe`, `startRemindText`, `choiceText`) is a property on a plain data
+class (`SinglePlotData`, `InnData`, `EventData`, ...) already loaded from a registered CSV
+(`PlotData.csv`, `InnData.csv`, etc.), not standalone prefab text. Scope was deliberately narrowed
+to just `TMP_Text.text`/`UI.Text.text` — the two "primary" fields `AssetDumperWorkflowTests.cs`
+dumps to `dumpedPrefabText.txt` (see `IsPrimaryTextField`) — with broader coverage left as a
+follow-up if untranslated text turns up later that isn't CSV-backed.
+
+**Why not `Awake`/`OnEnable`/`set_text` patches (tried and rejected):** a prefab's serialized field
+values come from native IL2CPP deserialization directly, bypassing C# property setters/lifecycle
+callbacks for the initial baked-in value — those hooks may never fire for the text already present
+on a freshly-loaded/instantiated prefab. Instead, `PrefabTextPatches` Harmony-postfixes
+`Resources.Load(string, Il2CppSystem.Type)` and `AssetBundle.LoadAsset(string)`, and if the result
+is a `GameObject`, manually walks its transform tree looking for `TMP_Text`/`UI.Text` components to
+patch directly — mirroring both `AssetDumperWorkflowTests.cs`'s offline scan and the old
+Mono-only `XUnity.ResourceRedirector`-based `TextReplacerPlugin` (`G:\Xyzj2OverLlm\EnglishPatch\
+PrefabText\TextReplacerPlugin.cs` from a different game/repo) this replaces —
+`XUnity.ResourceRedirector` itself doesn't support IL2CPP, hence the manual Harmony patches here
+instead of that library's asset/resource-loaded hooks.
+
+**New interop-safety finding: no `is`/`as` pattern matching against IL2CPP wrapper types either.**
+The existing "no generic `Cast<T>()`/`TryCast<T>()`" rule extends to C#'s `is`/`as` operators when
+used against Il2Cpp wrapper types — Il2CppInterop implements those operators via the same generic
+`TryCast<T>()` machinery under the hood, so `component is TMP_Text` is just as unsafe as calling
+`TryCast<TMP_Text>()` directly. `PrefabTextPatches` avoids this entirely by requesting components
+by exact type up front instead of testing components after the fact:
+`GameObject.GetComponents(Il2CppSystem.Type)` is Unity's own inheritance-aware native lookup, so
+requesting `Il2CppType.From(typeof(TMP_Text))` (the **non-generic** `Il2CppType.From(System.Type)`
+overload — not the generic `Il2CppType.Of<T>()`) already returns only `TMP_Text`-or-subclass
+instances (e.g. `TextMeshProUGUI`), reconstructed via the confirmed-safe `(IntPtr)` pointer-wrap
+constructor (`new TMP_Text(component.Pointer)`) — same pattern as `ResourceIoPatches`'
+`new TextAsset(__result.Pointer)`. Confirmed via reflection against the real interop DLLs that both
+`TMP_Text` and `UI.Text` expose a public `(IntPtr)` constructor, and that
+`GameObject.GetComponents` only has a `(Il2CppSystem.Type)` overload (not a `(System.Type)` one) in
+this build.
+
+**`AssetBundle.LoadAsset(string)` has no requested-`Type` parameter** to check against (unlike
+`Resources.Load(string, Il2CppSystem.Type)`), so `PrefabTextPatches.IsGameObject` queries the
+returned object's real IL2CPP class directly via `IL2CPP.il2cpp_object_get_class` +
+`il2cpp_class_get_namespace_`/`il2cpp_class_get_name_` — the same non-generic technique
+`UnityLogCapture.FormatMessage` already uses for `Il2CppSystem.Object` — rather than casting.
+
+**Dictionary format/location:** `PrefabTextPatches` loads
+`BepInEx\plugins\resources\dumpedPrefabText.txt.yaml` (same `resources` folder convention as
+`ResourceIoPatches`' CSV overrides) — the flat raw/result YAML list produced by
+`FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow.PackagePrefabTextAsync`
+(`Files/Mod/dumpedPrefabText.txt.yaml`) — via a `YamlDotNet` `PackageReference` embedded through
+Costura.Fody (same `CopyLocalLockFileAssemblies=true` + Costura pattern as
+`System.Text.Encoding.CodePages`; confirmed embedded by checking
+`costura.yamldotnet.dll.compressed` appears in the built DLL's `GetManifestResourceNames()`).
+Replacement is an exact raw-string dictionary lookup, matching each component's current
+`.text` verbatim before overwriting it.
 
 
 
