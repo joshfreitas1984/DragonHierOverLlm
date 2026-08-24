@@ -36,15 +36,4 @@ public class FileInputWorkflowTests
             .CheckFileLinesMatch(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
         Assert.Empty(badFiles);
     }
-
-    [Fact(DisplayName = "CSV rows round-trip without breaking quoted fields")]
-    public void CsvRowsRoundTripWithoutBreakingQuotedFields()
-    {
-        var raw = "0,正厅,0,\"门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting\",1,1,0";
-
-        var parts = GameFileHandling.ParseCsvRow(raw);
-        Assert.Equal(7, parts.Length);
-        Assert.Equal("门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting", parts[3]);
-        Assert.Equal(raw, GameFileHandling.RebuildCsvRow(parts));
-    }
 }

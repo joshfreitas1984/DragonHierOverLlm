@@ -3685,8 +3685,6 @@
   - split: 1
     text: "吕.寻峰"
     translated: "Lu Xunfeng"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lü Xunfeng,吕.寻峰,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -8422,8 +8420,6 @@
   - split: 1
     text: "吕.天行"
     translated: "Lu Tianxing"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lü Tianxing,吕.天行,"
   - split: 2
     text: "男"
     translated: "Male"
@@ -9229,8 +9225,6 @@
   - split: 1
     text: "吕.舞阳"
     translated: "Lu Wuyang"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lü Wuyang,吕.舞阳,"
   - split: 2
     text: "男"
     translated: "Male"

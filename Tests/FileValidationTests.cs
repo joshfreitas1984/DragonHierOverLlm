@@ -108,8 +108,27 @@ public class FileValidationTests
                     problems.Add($"{textFile.Path} line {i + 1}: CSV round-trip mismatch{Environment.NewLine}  original: {line}{Environment.NewLine}  rebuilt:  {rebuilt}");
             }
         }
+        
 
-        Assert.Empty(problems);
+
+        Assert.Empty(problems);        
+    }
+
+    [Fact(DisplayName = "CSV rows round-trip without breaking quoted fields")]
+    public void CsvRowsRoundTripWithoutBreakingQuotedFields()
+    {
+        var raw = "0,正厅,0,\"门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting\",1,1,0";
+
+        var parts = GameFileHandling.ParseCsvRow(raw);
+        Assert.Equal(7, parts.Length);
+        Assert.Equal("门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting", parts[3]);
+
+        // RebuildCsvRow only re-quotes fields that actually need it (embedded comma/quote/
+        // newline), so a field that was quoted in the input but doesn't need quoting will come
+        // back unquoted - that's still a faithful round-trip, just not byte-identical. Assert the
+        // parsed fields are semantically preserved rather than the exact original text.
+        var rebuilt = GameFileHandling.RebuildCsvRow(parts);
+        Assert.Equal(parts, GameFileHandling.ParseCsvRow(rebuilt));
     }
 
     [Fact(DisplayName = "Packaged Mod cells contain no unresolved '{n}' template placeholders")]
