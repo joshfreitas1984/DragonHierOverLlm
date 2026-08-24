@@ -37,8 +37,11 @@ namespace EnglishPatch;
 /// always verify full parameter type names (namespace included), not just short names, when
 /// reflecting over these interop DLLs.
 ///
-/// Writes to BepInEx\plugins\unity-log.txt next to the plugin DLL, and mirrors errors/warnings
-/// into BepInEx's own log via MainPlugin.Logger. All work is wrapped in try/catch per the interop
+/// Writes to BepInEx\plugins\unity-log.txt next to the plugin DLL, and mirrors only unhandled
+/// exceptions (Debug.LogException) into BepInEx's own console log via MainPlugin.Logger — plain
+/// Log/Warning/Error/Assertion calls are typically harmless/known engine chatter and would
+/// otherwise spam the console, drowning out real problems; they are still recorded to
+/// unity-log.txt for offline inspection. All work is wrapped in try/catch per the interop
 /// safety rules in .github/instructions/dragonheirplugin.instructions.md — treat the IL2CPP host
 /// as potentially unstable and never let a logging failure take down the game. Patch bodies are
 /// concrete/non-generic per those same rules.
@@ -73,19 +76,15 @@ internal static class UnityLogCapture
                 File.AppendAllText(LogFile, line + Environment.NewLine, new UTF8Encoding(false));
             }
 
-            if (string.Equals(level, "Error", StringComparison.OrdinalIgnoreCase) ||
-                string.Equals(level, "Exception", StringComparison.OrdinalIgnoreCase) ||
-                string.Equals(level, "Assertion", StringComparison.OrdinalIgnoreCase))
+            // Only mirror unhandled exceptions (Debug.LogException) to the BepInEx console — Unity
+            // calls LogException specifically when an exception propagates out of a callback
+            // uncaught by game code, which is exactly the "unhandled" signal we care about here.
+            // Plain Log/Warning/Error/Assertion calls are extremely noisy (mostly harmless/known
+            // engine chatter) and would otherwise drown out real problems in the console; they
+            // still get written to unity-log.txt above for offline inspection.
+            if (string.Equals(level, "Exception", StringComparison.OrdinalIgnoreCase))
             {
                 MainPlugin.Logger?.LogError($"[UnityLog:{level}] {text}");
-            }
-            else if (string.Equals(level, "Warning", StringComparison.OrdinalIgnoreCase))
-            {
-                MainPlugin.Logger?.LogWarning($"[UnityLog:{level}] {text}");
-            }
-            else
-            {
-                MainPlugin.Logger?.LogInfo($"[UnityLog:{level}] {text}");
             }
         }
         catch (Exception ex)

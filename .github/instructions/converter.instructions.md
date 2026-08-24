@@ -172,6 +172,65 @@ output/
 
 ---
 
+## Known decompiler limitations / bugs found through real investigations
+
+- **Fixed: `NativeMethodExtractor.ExtractMethodLabels` mislabeled shared-generic-code addresses.**
+  IL2CPP "generic sharing" compiles many distinct managed methods (e.g. `Dictionary<string, T>`
+  members instantiated over different reference-type `T`s) down to the **same native code
+  address**. The extractor used to do `result.TryAdd(rvaHex, label)` — "keep whichever method
+  happens to be first in the metadata table" — which silently mislabels every other method at that
+  shared address with a plausible-looking but WRONG name. Confirmed in the wild: several calls in
+  `GameDataController.cs` with args like `"[DOTween]"`, `"[BoundingBox]"`, `"[CDATA["` were labeled
+  `Resources.Load(...)` even though those are obviously not resource paths — some unrelated
+  shared-generic method (not `Resources.Load`) happened to occupy that address and win the
+  first-occurrence race. **Fix applied**: collect ALL candidate labels per native address first;
+  only emit a label when an address has exactly one candidate. Ambiguous addresses are left
+  unlabeled (Ghidra's default `FUN_xxxxxxxx`) rather than guessing — a missing label is far less
+  harmful than a confidently wrong one, since a wrong label actively misleads investigation. Console
+  output now reports both counts, e.g. `Extracted N unambiguous method labels ... (M addresses
+  skipped as ambiguous/shared-generic)`. Verified by re-running `--filter "GameDataController"`
+  before/after: the bogus `Resources.Load("[DOTween]", ...)`-style calls are gone post-fix (now
+  render as unresolved `FUN_...` calls instead).
+- **Still open: some `Resources.Load`-labeled calls are still wrong, for a DIFFERENT reason.**
+  After the fix above, `GameDataController.cs` still contains calls like
+  `Resources.Load("[CDATA[", ...)`, `Resources.Load("[NGUI] ", ...)`, `Resources.Load("[/sub]",
+  ...)` — clearly log/XML-tag-parsing strings, not resource paths. Checked `_labels.csv`: the real
+  `Resources.Load` managed method genuinely maps to exactly 3 distinct, unambiguous native
+  addresses (one per overload) — so this is NOT the same "shared managed-metadata address" bug
+  fixed above. This looks like IL2CPP/the game binary reusing the *same native trampoline/icall
+  stub code* for `Resources.Load` and some unrelated string-processing routine at the **native**
+  level — something our metadata-only (`LibCpp2IL`/managed methodDefs) extraction approach can't
+  see or disambiguate, since it only knows about managed method → address mappings, not
+  native-code-level code reuse. Not yet fixed; if this needs solving, it would require actually
+  inspecting/disassembling the native function bodies at those addresses (e.g. via Ghidra's own
+  analysis) to tell whether they're truly identical code or just coincidentally-adjacent, rather
+  than anything achievable in `NativeMethodExtractor` alone.
+- **Field-resolution passes (3d/3e) miss instance-field offsets when the singleton pointer is
+  hoisted across statements.** For a singleton chain written as:
+  ```csharp
+  var pGameDataController = *(int64*)(GameDataController_StaticsPtr + 184);
+  // ...several lines later...
+  lVar3 = *(int64 *)(pGameDataController + 0x1d8);
+  ```
+  passes 3d/3e currently treat the hoisted `pClassName`-named local strictly as a "statics block
+  pointer" (for resolving further `ClassName.staticField` reads), not as the resolved *instance*
+  pointer it actually is in this shape (offset `0xb8`/184 here holds the singleton instance
+  pointer directly, one dereference deep — not a statics-block base to add further static offsets
+  to). The existing chain-form resolution in 3e/3f (`*(type*)(*pVar + OFFSET) →
+  ClassName.instance.instanceField`) only fires when the dereference and offset-add appear
+  together in one inline expression; it doesn't fire once the singleton pointer has already been
+  captured into a separately-named local several statements earlier. Net effect: instance field
+  offsets like `+0x1d8` on a hoisted singleton local are left as raw pointer arithmetic instead of
+  being resolved to `GameDataController.someFieldName`. Found while investigating the
+  `StartMenuController.ResetFaceSetting`/`ResetPlayerTag` crash (see
+  `dragonheirplugin.instructions.md`) — worked around there via a runtime reflection-based
+  diagnostic patch instead of fixing this pass, since getting real field names from a live process
+  is more reliable than perfecting this disambiguation. If tackled properly, the fix likely belongs
+  in pass 3e/3f: track hoisted `pClassName` locals that were assigned from a *known instance-typed*
+  static field offset (e.g. an `_instance`/`Instance` static field, commonly at `0xb8` for
+  singletons) and route subsequent `pClassName + OFFSET` accesses through `type.FieldOffsets`
+  (instance offsets) rather than `type.StaticFieldOffsets`.
+
 ## Common issues
 
 | Symptom | Fix |

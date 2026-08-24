@@ -7,6 +7,9 @@ applyTo: "Tests/**"
 > **Workflow rule:** After any significant feature or fix here, update this file (and
 > `FanslationStudio.LlmKit`'s own `.github/copilot-instructions.md` if the change touches shared
 > Line/Split/Template types or `CompoundFieldSplitter`) — these are the primary source of truth.
+> Keep this file short — it's auto-injected into context on every `Tests/**` edit. Put detailed
+> bug-investigation narratives/case studies in [`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md)
+> instead (read on-demand, not auto-loaded), and only summarize the current-state rule here.
 
 ## What this project actually is
 
@@ -25,6 +28,14 @@ signal for a code change** — they mutate real working-directory state (copy/de
 `Files/Raw`, `Files/Converted`, `Files/Mod`) and calling an LLM API costs money and can silently
 change on-disk translation state. Only run a specific numbered fact when the user asks to advance
 the actual translation workflow.
+
+**Never run the export/merge steps (`"0. Copy raws..."`, `"1. ExportAssetsIntoTranslated"`,
+`"2. MergeFilesIntoTranslated"`) on your own initiative, even right after editing
+`GameFileHandling.cs`/`TextFilesToSplit`** — the user has explicitly asked for these to always be
+left for them to run themselves. This is different from the packaging step below: exporting/merging
+touches `Files/Converted`'s accumulated translation state (irreversible-ish, only regenerable by
+re-running the whole pipeline), whereas packaging just rebuilds `Files/Mod` from what's already in
+`Files/Converted` and is safe to run freely.
 
 For genuine regression testing of logic changes (e.g. CSV parsing, fragment
 decomposition/reconstruction), write plain xUnit tests against pure functions — see
@@ -143,3 +154,42 @@ Core Line/Split/Template types and CSV/compound-field logic live in `FanslationS
 not a NuGet package). If a fix belongs conceptually to "how do we parse/reconstruct a cell" or
 "how does merge matching work", it belongs in that shared repo, not duplicated here — see its own
 `.github/copilot-instructions.md` for the rules governing that code.
+
+## Per-column crash-prevention hooks (`SkipColumns` / `CustomColumnRepair` / `CustomColumnValidator`)
+
+Some CSV columns pack extra structure *inside the cell* (e.g. `Label+Number` stat modifiers
+looked up by exact string match, or `|`/`;`-delimited compound records) that
+`GameDataController.LoadAllGameData` parses with little/no fault tolerance — a single row where an
+LLM translation doesn't preserve that structure exactly can silently null out a whole database or
+raw-crash the game at startup with no per-row isolation. Two mechanisms exist to guard against
+this, both registered in `Tests/GameFileHandling.cs`'s static constructor:
+
+- **`SkipColumns`** (per-file list on a `TextFileToSplit` entry) — the column is **never**
+  decomposed/translated; it passes through byte-identical from the raw CSV on both export and
+  packaging (`PackageFinalTranslationAsync`'s reconstruction loops `continue`/skip entirely for any
+  `SkipColumns` column). Use this only for columns that should never be translated at all (icon
+  names, resource paths, internal keys, or a `Label+Number` cell cross-referenced by exact string
+  match elsewhere — see `Tests/KNOWN_ISSUES.md` for confirmed examples:
+  `HeroTagData.csv` col 4, `ResourcePointTypeData.csv` cols 2/3/4, `SkinDataBase.csv` col 2,
+  `NameData.csv` col 0, `AreaData.csv` col 3).
+- **`LineValidation.CustomColumnRepair`** / **`CustomColumnValidator`** (both
+  `Func<TextFileToSplit?, int?, string, string, string(?)>`, receiving `(textFile, column, raw,
+  result)`) — for columns that DO contain real translatable text but sit inside a structural
+  delimiter format (`|`, `;`, etc.) that must never bleed into a translated fragment.
+  `CustomColumnRepair` runs in `PrepareResult` and strips/fixes the offending character(s)
+  deterministically before validation; `CustomColumnValidator` runs at the end of
+  `CheckTransalationSuccessful` as a defense-in-depth backstop (return a non-null reason to force a
+  retry). This game's implementations (`RepairGameSpecificColumn` /
+  `ValidateGameSpecificColumn`, e.g. the `PlotData.csv` column-9 choice-text case) live in
+  `Tests/GameFileHandling.cs` — add new file+column rules there, always scoped to an exact
+  `textFile.Path == "..."` + `column == N` check, never a blanket "this character is always bad"
+  rule (the same delimiter can be legitimate text in a different column/file).
+
+**Prefer the repair/validator hooks over `SkipColumns` whenever the column has real user-facing
+text** — `SkipColumns` throws away translatable content and should be reserved for columns never
+meant to be translated. When investigating a new "database ends up empty at startup" or "game
+crashes on load" case, see `Tests/KNOWN_ISSUES.md` for the full investigation methodology
+(decompiling `GameDataController.LoadAllGameData`, checking `Player.log` when `BepInEx/LogOutput.log`
+just stops with no exception, the `StringToSpeAddData` label-lookup heuristic, and verifying a fix
+via the packaging-only test fact without a full game relaunch) and to record a new case once solved.
+

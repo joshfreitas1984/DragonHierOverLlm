@@ -2,197 +2,131 @@
   splits:
   - split: 1
     text: "名字"
-  - split: 2
-    text: "加成效果"
 - raw: "-10,邪道服,伤害0.02,-1"
   splits:
   - split: 1
     text: "邪道服"
-  - split: 2
-    text: "伤害0.02"
 - raw: "-9,杀手服,速度0.02,-1"
   splits:
   - split: 1
     text: "杀手服"
-  - split: 2
-    text: "速度0.02"
 - raw: "-8,强盗服,暴击0.02,-1"
   splits:
   - split: 1
     text: "强盗服"
-  - split: 2
-    text: "暴击0.02"
 - raw: "-7,游侠服,命中0.02,-1"
   splits:
   - split: 1
     text: "游侠服"
-  - split: 2
-    text: "命中0.02"
 - raw: "-6,才子服,学识4,-1"
   splits:
   - split: 1
     text: "才子服"
-  - split: 2
-    text: "学识4"
 - raw: "-5,官差服,压制0.02,-1"
   splits:
   - split: 1
     text: "官差服"
-  - split: 2
-    text: "压制0.02"
 - raw: "-4,杂役服,采伐4,-1"
   splits:
   - split: 1
     text: "杂役服"
-  - split: 2
-    text: "采伐4"
 - raw: "-3,商人服,口才4,-1"
   splits:
   - split: 1
     text: "商人服"
-  - split: 2
-    text: "口才4"
 - raw: "-2,农民服,木植4,-1"
   splits:
   - split: 1
     text: "农民服"
-  - split: 2
-    text: "木植4"
 - raw: "-1,常服,经验获取0.02,-1"
   splits:
   - split: 1
     text: "常服"
-  - split: 2
-    text: "经验获取0.02"
 - raw: "0,锦袍,意志2,-1"
   splits:
   - split: 1
     text: "锦袍"
-  - split: 2
-    text: "意志2"
 - raw: "1,夜行衣,射术2,-1"
   splits:
   - split: 1
     text: "夜行衣"
-  - split: 2
-    text: "射术2"
 - raw: "2,医袍,医术4,-1"
   splits:
   - split: 1
     text: "医袍"
-  - split: 2
-    text: "医术4"
 - raw: "3,百衲衣,拳掌2,-1"
   splits:
   - split: 1
     text: "百衲衣"
-  - split: 2
-    text: "拳掌2"
 - raw: "4,戎装,长兵2,-1"
   splits:
   - split: 1
     text: "戎装"
-  - split: 2
-    text: "长兵2"
 - raw: "5,法服,智力2,-1"
   splits:
   - split: 1
     text: "法服"
-  - split: 2
-    text: "智力2"
 - raw: "6,甲胄,护甲1,-1"
   splits:
   - split: 1
     text: "甲胄"
-  - split: 2
-    text: "护甲1"
 - raw: "7,避毒服,毒术4,-1"
   splits:
   - split: 1
     text: "避毒服"
-  - split: 2
-    text: "毒术4"
 - raw: "8,铁衣,力道2,-1"
   splits:
   - split: 1
     text: "铁衣"
-  - split: 2
-    text: "力道2"
 - raw: "9,襕衫,闪避0.02,-1"
   splits:
   - split: 1
     text: "襕衫"
-  - split: 2
-    text: "闪避0.02"
 - raw: "10,袈裟,体质2,-1"
   splits:
   - split: 1
     text: "袈裟"
-  - split: 2
-    text: "体质2"
 - raw: "11,道袍,内功2,-1"
   splits:
   - split: 1
     text: "道袍"
-  - split: 2
-    text: "内功2"
 - raw: "12,胡裘,刀法2,-1"
   splits:
   - split: 1
     text: "胡裘"
-  - split: 2
-    text: "刀法2"
 - raw: "13,鹤氅,剑法2,-1"
   splits:
   - split: 1
     text: "鹤氅"
-  - split: 2
-    text: "剑法2"
 - raw: "14,瑶衣,轻功2,-1"
   splits:
   - split: 1
     text: "瑶衣"
-  - split: 2
-    text: "轻功2"
 - raw: "15,奇装,奇门2,-1"
   splits:
   - split: 1
     text: "奇装"
-  - split: 2
-    text: "奇门2"
 - raw: "16,匠服,灵巧2,-1"
   splits:
   - split: 1
     text: "匠服"
-  - split: 2
-    text: "灵巧2"
 - raw: "17,火浣布,锻造4,-1"
   splits:
   - split: 1
     text: "火浣布"
-  - split: 2
-    text: "锻造4"
 - raw: "18,羌姆袍,绝技2,-1"
   splits:
   - split: 1
     text: "羌姆袍"
-  - split: 2
-    text: "绝技2"
 - raw: "19,貂裘,经脉2,-1"
   splits:
   - split: 1
     text: "貂裘"
-  - split: 2
-    text: "经脉2"
 - raw: "-100,白马红妆,伤害0.02,0"
   splits:
   - split: 1
     text: "白马红妆"
-  - split: 2
-    text: "伤害0.02"
 - raw: "-101,风起青萍,速度0.02,0"
   splits:
   - split: 1
     text: "风起青萍"
-  - split: 2
-    text: "速度0.02"

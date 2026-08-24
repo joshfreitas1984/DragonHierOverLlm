@@ -33,6 +33,66 @@ public class GlossaryCreationTests
         await GenerateGlossaryFromIndex("SpeHeroData.csv", 0, "ChatNames");
     }
 
+    [Fact]
+    public async Task GetSpeAddLabels()
+    {
+        // SpeAddDataBase.csv and ForceSpeAddDataBase.csv's label column (split 1, "特效"/"Special
+        // effects" header) is looked up by GameDataController.StringToSpeAddData via an exact
+        // String.Equals against the label half of a "Label+Number" fragment embedded in
+        // HeroTagData.csv's "效果" column and ResourcePointTypeData.csv's "守城效果" column (both
+        // currently SkipColumns'd in GameFileHandling.cs - see dragonheirplugin.instructions.md's
+        // "CONFIRMED root cause" section for the game-data-load abort/crash this caused when the
+        // two sides were translated inconsistently). This glossary pins every label to a single,
+        // consistent English translation across all four files, restricted via "only" so it
+        // doesn't leak into unrelated translations. Once this glossary is populated and reviewed,
+        // the SkipColumns entries for HeroTagData.csv/ResourcePointTypeData.csv can be removed and
+        // the pipeline re-run to translate those columns safely.
+        var only = new List<string>
+        {
+            "SpeAddDataBase.csv",
+            "ForceSpeAddDataBase.csv",
+            "HeroTagData.csv",
+            "ResourcePointTypeData.csv",
+        };
+
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var config = ConfigurationExtensions.GetConfiguration(workingDirectory);
+
+        var glossary = new List<string>();
+        var items = new List<string>();
+
+        await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
+            GameFileHandling.TextFilesToSplit,
+            async (outputFile, textFileToTranslate, fileLines) =>
+            {
+                if (textFileToTranslate.Path != "SpeAddDataBase.csv" && textFileToTranslate.Path != "ForceSpeAddDataBase.csv")
+                    return;
+
+                foreach (var line in fileLines)
+                {
+                    if (line.Splits.Count <= 1)
+                        continue;
+
+                    var raw = line.Splits[1].Text;
+                    if (string.IsNullOrEmpty(raw) || items.Contains(raw))
+                        continue;
+
+                    items.Add(raw);
+
+                    glossary.Add($"- raw: {raw}");
+                    glossary.Add($"  result: {line.Splits[1].Translated}");
+                    glossary.Add($"  badtrans: true");
+                    glossary.Add($"  only: ");
+                    foreach (var file in only)
+                        glossary.Add($"    - {file}");
+                }
+
+                await Task.CompletedTask;
+            });
+
+        File.WriteAllLines($"{workingDirectory}/TestResults/GlossaryExport/ExportSpeAddLabels.yaml", glossary);
+    }
+
     private static async Task GenerateGlossaryFromIndex(string path, int index, string name)
     {
         var workingDirectory = GameFileHandling.WorkingDirectory;

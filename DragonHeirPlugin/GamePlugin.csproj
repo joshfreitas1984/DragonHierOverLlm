@@ -16,12 +16,35 @@
     <RootNamespace>EnglishPatch</RootNamespace>
     <GameDir>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\plugins</GameDir>
     <ReleaseFolder>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\ReleaseFolder\Files\BepInEx\plugins</ReleaseFolder>
+    <!-- BepInEx's SDK/props force CopyLocalLockFileAssemblies=false project-wide, which means a
+         plain PackageReference (e.g. System.Text.Encoding.CodePages, added for GBK decode
+         support) is never copied into bin/ at all - so Costura.Fody (which embeds by scanning
+         the build output folder) has nothing to pick up for it, even though it does successfully
+         embed the interop <Reference>/HintPath assemblies (those default to copy-local
+         regardless of this setting). Overriding it back to true here for just this project lets
+         package-reference DLLs land in bin/ again so Costura can embed them too. -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.785" PrivateAssets="all" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+    <!-- Needed to decode GBK-encoded TextAsset bytes (some game data files are not UTF-8 -
+         see ResourceIoPatches.DecodeAssetBytes). .NET Core only ships UTF-8/UTF-16/UTF-32/ASCII
+         by default; CodePagesEncodingProvider adds codepage 936 (GBK) support.
+         BepInEx's SDK sets CopyLocalLockFileAssemblies=false project-wide, so a plain
+         PackageReference is never copied to the output/plugins folder (confirmed via
+         `dotnet build -v:diag`) - it must be embedded into the main plugin DLL via Costura.Fody
+         (see FodyWeavers.xml) instead, same as any other external dependency here. -->
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+    <PackageReference Include="Costura.Fody" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Fody" Version="6.8.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">

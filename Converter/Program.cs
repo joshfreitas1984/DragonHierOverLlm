@@ -50,6 +50,31 @@ if (cfg.Diag)
         Console.Error.WriteLine("\n[DIAG] Checking LibCpp2IL binary API...");
         NativeMethodExtractor.ExtractMethodLabels(cfg.BinaryPath, cfg.MetadataPath, cfg.UnityVersion);
         NativeMethodExtractor.DumpBinaryApi();
+
+        // If --filter is set, also dump that type's real IL2CPP instance field offsets —
+        // useful for translating a raw "*(pInstance + 0xNN)" pointer offset seen in decompiled
+        // pseudocode back to the actual field name without guessing via manual 8-byte-slot
+        // arithmetic (unreliable once any value-type/struct field breaks the assumption that
+        // every field is a flat 8-byte pointer slot).
+        if (!string.IsNullOrEmpty(cfg.TypeFilter))
+        {
+            var offsets = NativeMethodExtractor.ExtractFieldOffsets();
+            if (offsets.TryGetValue(cfg.TypeFilter, out var fieldOffsets))
+            {
+                Console.WriteLine($"\n[DIAG] Field offsets for '{cfg.TypeFilter}':");
+                foreach (var (name, off) in fieldOffsets.OrderBy(kv => kv.Value))
+                {
+                    if (off < 0)
+                        Console.WriteLine($"  static  0x{(-off - 1):x} ({-off - 1,4})  {name}");
+                    else
+                        Console.WriteLine($"  instance 0x{off:x} ({off,4})  {name}");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"\n[DIAG] No field offsets found for '{cfg.TypeFilter}' (check spelling/that it's a game type).");
+            }
+        }
     }
     return 0;
 }

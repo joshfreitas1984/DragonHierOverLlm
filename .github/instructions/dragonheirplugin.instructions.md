@@ -4,6 +4,11 @@ applyTo: "DragonHeirPlugin/**"
 
 # DragonHeirPlugin — IL2CPP Interop Notes
 
+> Keep this file short — it's auto-injected into context on every `DragonHeirPlugin/**` edit. Put
+> detailed crash-investigation narratives/case studies in
+> [`DragonHeirPlugin/KNOWN_ISSUES.md`](../../DragonHeirPlugin/KNOWN_ISSUES.md) instead (read
+> on-demand, not auto-loaded), and only summarize the current-state rule/pattern here.
+
 ## Project shape
 
 Single-game BepInEx.Unity.IL2CPP plugin (`GamePlugin.csproj`, namespace `EnglishPatch`) for
@@ -147,59 +152,65 @@ potentially unstable and fail safe (log, leave original values untouched) rather
 `ResourceIoPatches.Load_Postfix` patches `Resources.Load` to dump every loaded `TextAsset` to
 `BepInEx\plugins\raw\<path>.csv` and, if a matching file exists at
 `BepInEx\plugins\resources\<path>.csv`, overwrite the asset's text with that file's **entire
-contents verbatim** — no row-level merging.
-
-This used to go through `CsvMerger.MergeByFirstColumn` (still present in `CsvMerger.cs` but no
-longer called), which matched base/override rows by each row's first CSV column, on the assumption
-that column 0 is a stable per-row ID. **That assumption is false for at least `NameData.csv`**:
-column 0 there is a repeated category label (`姓`/"Surname"), not a unique ID, and the override
-file's own column 0 gets translated too (`姓` → `"Surname"`). Every base row's lookup by `"姓"`
-then missed every override row keyed by `"Surname"`, so **every row silently fell back to the
-original untranslated text** — no exception was thrown, the log line even reported a successful
-merge with a plausible non-zero output length, but the actual in-game text never changed. This is
-a good example of why "no error + plausible-looking log output" isn't sufficient evidence a
-transform actually worked — always compare a snippet of the *actual resulting content*, not just
-whether an operation completed without throwing.
-
-The real reason a row-level merge isn't needed at all: `Tests/GameFileHandling.cs`'s
-`PackageFinalTranslationAsync` (see `.github/instructions/tests-translation-workflow.instructions.md`)
-already writes a **complete drop-in file** to `Files/Mod/*.csv` — every row is present, with
-translated rows using the translated text and untranslated/failed rows written back as their
-original raw text (`outputLines.Add(line.Raw)`). So the file the plugin picks up under
-`resources/<path>.csv` is never a partial patch; it's always the full intended replacement, and
-`Load_Postfix` should just use it wholesale. If you ever reintroduce any kind of merge logic here,
-first re-verify the "column 0 is a stable ID" assumption per-file — it does not hold universally.
+contents verbatim** — no row-level merging. `Tests/GameFileHandling.cs`'s
+`PackageFinalTranslationAsync` already writes a complete drop-in file to `Files/Mod/*.csv` (every
+row present, untranslated/failed rows kept as original raw text), so the override file is always
+the full intended replacement, never a partial patch. `CsvMerger.MergeByFirstColumn` (unused,
+still in `CsvMerger.cs`) was tried and abandoned — see `DragonHeirPlugin/KNOWN_ISSUES.md` for why a
+row-level merge by column-0 ID doesn't hold up for every file.
 
 ## `UnityLogCapture` — capturing Unity engine log output without BepInEx's log hook
 
-BepInEx's built-in Unity log redirection did not fire for this game/build, so we can't rely on it
-to see Unity-originated errors (asset load failures, missing references, etc.) that never go
-through our own code paths.
+BepInEx's built-in Unity log redirection does not fire for this game/build, and
+`UnityEngine.Application.logMessageReceived` does not exist in this stripped interop build (do not
+try to use it — see `DragonHeirPlugin/KNOWN_ISSUES.md` for how this was verified). Instead,
+`UnityLogCapture.cs` Harmony-postfix-patches `UnityEngine.Debug`'s `Log`/`LogWarning`/`LogError`/
+`LogException`/`LogAssertion` overloads and writes every message to
+`BepInEx\plugins\unity-log.txt`. Only `LogException` calls (Unity's signal for an exception that
+propagated out of a callback uncaught by game code — i.e. genuinely unhandled) are mirrored into
+the BepInEx console via `MainPlugin.Logger.LogError`; plain Log/Warning/Error/Assertion calls are
+mostly harmless/known chatter and are recorded to `unity-log.txt` only, to keep the console
+readable. Registered in `MainPlugin.Load()` via `Harmony.CreateAndPatchAll(typeof(UnityLogCapture))`.
 
-The obvious fix, `UnityEngine.Application.logMessageReceived`, **does not exist** in this game's
-stripped interop build. Verified by reading `BepInEx\interop\UnityEngine.CoreModule.dll`'s raw
-metadata directly (`System.Reflection.Metadata`/`PEReader`, no assembly load or execution — regular
-`System.Reflection.Assembly.LoadFile`/`AssemblyLoadContext` reflection over these interop DLLs
-throws `ReflectionTypeLoadException`/returns null `GetType` results outside the actual game process,
-because IL2CPP interop stub assemblies have interdependencies that only resolve inside the running
-game host) with a disposable console app: `UnityEngine.Application`'s type definition has **no**
-`logMessageReceived` event, backing field, or add/remove method at all in this build — Il2CppInterop
-only generates members that are actually referenced/used, and this event apparently wasn't. Do not
-waste time trying to subscribe to it here; it will fail to even compile (`CS0117`).
+## Adding a new external NuGet dependency (non-interop, non-BepInEx)
 
-What *is* present and safe to use (confirmed via the same metadata dump): `UnityEngine.Debug`'s
-`Log`, `LogWarning`, `LogError`, `LogException`, `LogAssertion`, each with a plain-`object`
-overload and an `(object, UnityEngine.Object context)` overload, plus `*Format` variants. Since
-virtually all engine- and game-originated log traffic funnels through these same `Debug` methods,
-`UnityLogCapture.cs` Harmony-postfix-patches all of the non-Format overloads (ordinary Harmony
-patching is a confirmed-safe interop pattern per above) and writes every message to
-`BepInEx\plugins\unity-log.txt`, plus mirrors errors/warnings/exceptions/asserts into
-`MainPlugin.Logger`. This is registered in `MainPlugin.Load()` via
-`Harmony.CreateAndPatchAll(typeof(UnityLogCapture))` alongside the other patch classes — no
-separate `Install()`/event-subscription step is needed since it's pure Harmony patching.
+BepInEx sets `CopyLocalLockFileAssemblies = false` project-wide, so a plain `PackageReference`
+DLL is never copied to `bin/` or deployed — it will crash the game at load time with
+`FileNotFoundException` even though it compiles and builds fine locally. Any time you add a new
+external dependency to `GamePlugin.csproj`:
+1. Override `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` in the main
+   `PropertyGroup`.
+2. Embed it via **Costura.Fody** (already configured in this project — see `FodyWeavers.xml` and
+   the `Costura.Fody`/`Fody` package references) so it merges into the single deployed plugin DLL.
+3. Verify the specific dependency actually got embedded via `GetManifestResourceNames()` in a
+   throwaway separate process (a bigger output DLL size alone is not proof) — look for
+   `costura.<packagename>.dll.compressed` in the resource list.
 
-If a future Unity/BepInEx interop build *does* expose `logMessageReceived`, it would still be worth
-re-checking with the same metadata-dump technique before wiring it up, since relying on
-compile-time `IntelliSense`/decompiled signatures from a different game's interop build can be
-misleading — always verify against this game's actual `BepInEx\interop\*.dll` directly.
+See `DragonHeirPlugin/KNOWN_ISSUES.md` for the full investigation (the `System.Text.Encoding.CodePages`
+case) including why Costura alone wasn't sufficient without step 1.
+
+## Known confirmed crash root causes (see `KNOWN_ISSUES.md` for full writeups)
+
+- `StartMenuController.ResetFaceSetting`/`ResetPlayerTag` crashes were downstream symptoms of
+  `GameDataController.LoadAllGameData` aborting partway through its single sequential,
+  non-isolated database-build pass — root cause was `HeroTagData.csv`/`ResourcePointTypeData.csv`
+  effect-string columns breaking `GameDataController.StringToSpeAddData`. Fixed pipeline-side via
+  `SkipColumns` in `Tests/GameFileHandling.cs` (see `Tests/KNOWN_ISSUES.md`); the plugin-side
+  `DiagnosticPatches.cs`/`CrashMitigationPatches.cs` mitigation patches have since been removed.
+- Same `StringToSpeAddData` bug class recurred via `GameDataController.LoadSkillData` on
+  `KungFuData.csv`/`SummonKungFuData.csv` column 13, then again (different method,
+  `StringToAttriRatio`, no try/catch) on the same files' columns 9/10 — both fixed via
+  `SkipColumns`.
+- **General lesson**: when `BepInEx/LogOutput.log` just stops mid-sequence with no exception
+  logged, that means an uncaught exception occurred synchronously inside
+  `GameDataController.LoadAllGameData` (or its Harmony-patched call chain) — check Unity's own
+  `Player.log` (`%USERPROFILE%\AppData\LocalLow\TppStudio\LongYinLiZhiZhuan\Player.log`) for the
+  actual stack trace, since BepInEx's own logging never gets a chance to react to a crash that
+  fatal. When investigating a new "database ends up empty"/crash-on-load case, read
+  `DragonHeirPlugin/KNOWN_ISSUES.md` and `Tests/KNOWN_ISSUES.md` first for the established
+  methodology and known hazard patterns (`Label<sign><number>` cross-reference cells, etc.) before
+  re-deriving them from scratch.
+
+
+
 

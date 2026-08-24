@@ -64,7 +64,7 @@ internal static class ResourceIoPatches
     {
         try
         {
-            MainPlugin.Logger?.LogInfo($"ResourceIoPatches.Load_Postfix called for '{path}' (type='{systemTypeInstance?.FullName}', resultNull={__result == null})");
+            MainPlugin.Logger?.LogDebug($"ResourceIoPatches.Load_Postfix called for '{path}' (type='{systemTypeInstance?.FullName}', resultNull={__result == null})");
 
             if (__result == null || systemTypeInstance?.FullName != "UnityEngine.TextAsset")
             {
@@ -74,15 +74,23 @@ internal static class ResourceIoPatches
             var ta = new TextAsset(__result.Pointer);
             var sanitizedPath = SanitizePath(path);
 
+            // Decode from the raw bytes ourselves rather than trusting TextAsset.text - Unity's
+            // .text getter always assumes UTF-8, but at least one game data file
+            // (SpeHeroFaceData.csv) is actually GBK-encoded on disk. Reading that asset via .text
+            // silently mangles every CJK cell into U+FFFD replacement characters with no error -
+            // the corruption is irreversible once dumped that way. See DecodeAssetBytes.
+            byte[] rawBytes = ta.bytes;
+            var text = DecodeAssetBytes(rawBytes, path);
+
             var rawFile = Path.Combine(RawDir, sanitizedPath + ".csv");
             Directory.CreateDirectory(Path.GetDirectoryName(rawFile)!);
-            File.WriteAllText(rawFile, ta.text, new UTF8Encoding(false));
-            MainPlugin.Logger?.LogInfo($"ResourceIoPatches: dumped raw TextAsset '{path}' -> '{rawFile}' ({ta.text?.Length ?? 0} chars)");
+            File.WriteAllText(rawFile, text, new UTF8Encoding(false));
+            MainPlugin.Logger?.LogDebug($"ResourceIoPatches: dumped raw TextAsset '{path}' -> '{rawFile}' ({text?.Length ?? 0} chars)");
 
             var overrideFile = Path.Combine(ResourcesDir, sanitizedPath + ".csv");
             if (!File.Exists(overrideFile))
             {
-                MainPlugin.Logger?.LogInfo($"ResourceIoPatches: no override file at '{overrideFile}' for '{path}' — leaving asset untouched");
+                MainPlugin.Logger?.LogDebug($"ResourceIoPatches: no override file at '{overrideFile}' for '{path}' — leaving asset untouched");
                 return;
             }
 
@@ -94,11 +102,48 @@ internal static class ResourceIoPatches
             // native pointer, so no new instance needs to be constructed. __result already refers
             // to the same native object as `ta`, so no reassignment is needed either.
             TextAsset.Internal_CreateInstance(ta, overrideText);
-            MainPlugin.Logger?.LogInfo($"ResourceIoPatches: applied whole-file override '{overrideFile}' to TextAsset '{path}' ({overrideText.Length} chars). Post-write text starts with: '{ta.text?.Substring(0, Math.Min(40, ta.text?.Length ?? 0))}'");
+            MainPlugin.Logger?.LogDebug($"ResourceIoPatches: applied whole-file override '{overrideFile}' to TextAsset '{path}' ({overrideText.Length} chars). Post-write text starts with: '{ta.text?.Substring(0, Math.Min(40, ta.text?.Length ?? 0))}'");
         }
         catch (Exception ex)
         {
             MainPlugin.Logger?.LogError($"ResourceIoPatches.Load_Postfix failed for '{path}': {ex}");
         }
     }
+
+    /// <summary>
+    /// Decodes raw TextAsset bytes as UTF-8, falling back to GBK (codepage 936) when the bytes
+    /// aren't valid UTF-8. Unity's TextAsset.text getter always assumes UTF-8 regardless of the
+    /// asset's actual source encoding, so any GBK-sourced asset (confirmed for
+    /// SpeHeroFaceData.csv, possibly others) gets silently mangled into U+FFFD replacement
+    /// characters if read via .text instead of .bytes. Requires
+    /// Encoding.RegisterProvider(CodePagesEncodingProvider.Instance) to have been called
+    /// (done once in MainPlugin.Load) since .NET Core doesn't ship codepage 936 by default.
+    /// </summary>
+    private static string DecodeAssetBytes(byte[] bytes, string path)
+    {
+        if (bytes == null || bytes.Length == 0)
+            return string.Empty;
+
+        try
+        {
+            // Strict UTF-8 decode: throws on any invalid byte sequence instead of silently
+            // substituting U+FFFD, so we can reliably detect non-UTF-8 source data.
+            var strictUtf8 = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true);
+            return strictUtf8.GetString(bytes);
+        }
+        catch (DecoderFallbackException)
+        {
+            MainPlugin.Logger?.LogWarning($"ResourceIoPatches: '{path}' is not valid UTF-8 — falling back to GBK (codepage 936) decode");
+            try
+            {
+                return Encoding.GetEncoding(936).GetString(bytes);
+            }
+            catch (Exception gbkEx)
+            {
+                MainPlugin.Logger?.LogError($"ResourceIoPatches: GBK fallback decode failed for '{path}': {gbkEx}. Falling back to lossy UTF-8.");
+                return Encoding.UTF8.GetString(bytes);
+            }
+        }
+    }
+
 }

@@ -3,6 +3,7 @@ using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 using System.Reflection;
+using System.Text;
 
 namespace EnglishPatch;
 
@@ -19,11 +20,20 @@ public class MainPlugin : BasePlugin
     {
         Logger = base.Log;
 
+        // Register codepage 936 (GBK) support - .NET Core only ships Unicode encodings by
+        // default. Some game TextAssets (e.g. SpeHeroFaceData) are GBK-encoded rather than
+        // UTF-8, and Unity's TextAsset.text getter always assumes UTF-8, silently mangling
+        // GBK content into U+FFFD replacement characters. ResourceIoPatches.DecodeAssetBytes
+        // reads the raw TextAsset.bytes and falls back to GBK when UTF-8 strict decoding fails.
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
         // Plugin startup logic
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         Harmony.CreateAndPatchAll(typeof(MainPlugin));
         Harmony.CreateAndPatchAll(typeof(ResourceIoPatches));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
+        Harmony.CreateAndPatchAll(typeof(CrashMitigationPatches));
+        Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
 
         //DisableEastAsianTmpSettings();

@@ -1,4 +1,4 @@
-ID,Name,Describe,Type,Num,Tips
+﻿ID,Name,Describe,Type,Num,Tips
 0,无人能敌,累计在战斗中亲手击败500人,int,500,无
 1,百战百胜,累计战斗获胜200场,int,200,无
 2,舌灿莲花,累计论战获胜100场,int,100,无

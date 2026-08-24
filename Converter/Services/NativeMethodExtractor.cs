@@ -94,7 +94,23 @@ public static class NativeMethodExtractor
             return new();
         }
 
-        var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        // IL2CPP "generic sharing": methods whose generic args are all reference types
+        // (e.g. Dictionary<string, HeroTagDataBase>.TryGetValue and Dictionary<string, Foo>.TryGetValue)
+        // legitimately compile down to the SAME native code address, since the generated code only
+        // ever touches object pointers generically. That means a single RVA can correspond to dozens
+        // of unrelated methods. Blindly keeping "first occurrence wins" (the old behavior) silently
+        // mislabels every other method at that address with an arbitrary, confidently-wrong name
+        // picked purely by metadata table order - e.g. we observed calls with string args like
+        // "[DOTween]"/"[BoundingBox]" (clearly not resource paths) labeled "Resources.Load" this way,
+        // because some unrelated shared-generic method happened to be first in the table at that
+        // address. See .github/instructions/converter.instructions.md for the full writeup.
+        //
+        // Fix: collect ALL candidate labels per address first, then only emit a concrete label for
+        // addresses with exactly one candidate. Ambiguous addresses are left unlabeled (Ghidra keeps
+        // its default FUN_xxxxxxxx name) rather than guessing - a missing label is far less harmful
+        // than a wrong one, since a wrong one actively misleads investigation (see the lesson in
+        // dragonheirplugin.instructions.md about not trusting plausible-but-unverified correlations).
+        var candidatesByAddress = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
 
         foreach (Il2CppMethodDefinition method in LibCpp2IlMain.TheMetadata.methodDefs)
         {
@@ -106,11 +122,27 @@ public static class NativeMethodExtractor
             string label = $"{className}__{methodName}";
             string rvaHex = $"0x{ptr:X}";
 
-            // Keep first occurrence (avoid overwriting already-added same-address entries)
-            result.TryAdd(rvaHex, label);
+            if (!candidatesByAddress.TryGetValue(rvaHex, out var list))
+                candidatesByAddress[rvaHex] = list = new List<string>();
+            if (!list.Contains(label))
+                list.Add(label);
         }
 
-        Console.WriteLine($"  [NativeLabels] Extracted {result.Count} method labels from IL2CPP metadata.");
+        var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        int ambiguousCount = 0;
+        foreach (var (rvaHex, candidates) in candidatesByAddress)
+        {
+            if (candidates.Count == 1)
+            {
+                result[rvaHex] = candidates[0];
+            }
+            else
+            {
+                ambiguousCount++;
+            }
+        }
+
+        Console.WriteLine($"  [NativeLabels] Extracted {result.Count} unambiguous method labels from IL2CPP metadata ({ambiguousCount} addresses skipped as ambiguous/shared-generic).");
         return result;
     }
 
