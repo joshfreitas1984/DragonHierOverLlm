@@ -206,6 +206,40 @@ public static class StringMapExtractor
     private static readonly System.Text.RegularExpressions.Regex CjkRegex =
         new(@"[\u4e00-\u9fff]", System.Text.RegularExpressions.RegexOptions.Compiled);
 
+    // Confirmed (2026-08-27, via _string_map.csv cross-reference on DAT_181d62558/DAT_181d95d80/
+    // DAT_181d95e88) false-positive class: .NET/ICU internal Unicode-category/culture boundary
+    // data tables that happen to get compiled as string literals into the game assembly (likely
+    // via some BCL API touching CharUnicodeInfo/RegexCharClass/globalization tables) and happen to
+    // contain a CJK codepoint or two among thousands of others, so they pass CjkRegex despite
+    // being pure noise - never real user-facing dialogue/UI text. These are NOT corrupted/garbled
+    // extraction (verified byte-for-byte identical against _string_map.csv - the extraction itself
+    // is correct), just genuine but useless BCL data. Real Chinese game text never legitimately
+    // mixes in Hebrew/Arabic/Thai/Lao/Tibetan/Ethiopic/Khmer/Mongolian/Hangul-Jamo/Coptic/
+    // halfwidth-fullwidth-form/control-picture codepoints alongside CJK ideographs, so a candidate
+    // touching several of these unrelated scripts at once is a reliable signal for this exact
+    // noise class rather than a hand-authored heuristic that could misfire on legitimate long
+    // templated dialogue (which stays within CJK + ASCII + basic punctuation).
+    private static readonly System.Text.RegularExpressions.Regex[] ExoticScriptRegexes =
+    [
+        new(@"[\u0590-\u05FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Hebrew
+        new(@"[\u0600-\u06FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Arabic
+        new(@"[\u0E00-\u0E7F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Thai
+        new(@"[\u0E80-\u0EFF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Lao
+        new(@"[\u0F00-\u0FFF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Tibetan
+        new(@"[\u1200-\u137F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Ethiopic
+        new(@"[\u1780-\u17FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Khmer
+        new(@"[\u1800-\u18AF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Mongolian
+        new(@"[\u1100-\u11FF\u3130-\u318F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Hangul Jamo
+        new(@"[\u2C80-\u2CFF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Coptic
+        new(@"[\uFF00-\uFFEF\u2400-\u243F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Halfwidth/Fullwidth + Control Pictures
+    ];
+
+    // A genuine BCL noise string touches several of these unrelated scripts at once (the confirmed
+    // instances touch 8+); real Chinese dialogue never touches more than one (if any). Requiring 3
+    // distinct hits keeps a wide margin against false-positives on legitimate text.
+    private static bool IsExoticScriptNoise(string value) =>
+        ExoticScriptRegexes.Count(r => r.IsMatch(value)) >= 3;
+
     /// <summary>
     /// Filters an already-extracted _string_map.csv for CJK-containing values and writes each as
     /// its own candidate line. A value with an embedded real newline (`\r\n`/`\n`/`\r`) is kept as
@@ -225,9 +259,10 @@ public static class StringMapExtractor
     /// surrounding text are preserved intact within a candidate. Excludes any candidate already
     /// present in <paramref name="excludeFile"/> (one raw fragment per line, in the same escaped
     /// form - typically the pipeline's dynamicStrings.txt input, itself populated by reviewing and
-    /// merging entries from this same method's own output rather than hand-authored), and writes the
-    /// remaining distinct candidates to <paramref name="outputPath"/>, one per line, sorted for
-    /// reproducible diffs. Returns the number of candidates written.
+    /// merging entries from this same method's own output rather than hand-authored), as well as
+    /// any value identified as BCL/ICU internal noise (see <see cref="IsExoticScriptNoise"/>), and
+    /// writes the remaining distinct candidates to <paramref name="outputPath"/>, one per line,
+    /// sorted for reproducible diffs. Returns the number of candidates written.
     /// </summary>
     public static int ExtractDynamicStringCandidates(string stringMapCsvPath, string outputPath, string? excludeFile)
         => ExtractDynamicStringCandidates(stringMapCsvPath, outputPath, excludeFile, null);
@@ -264,6 +299,7 @@ public static class StringMapExtractor
             .Where(v => !string.IsNullOrWhiteSpace(v))
             .Select(v => v.Trim())
             .Where(v => v.Length > 0 && CjkRegex.IsMatch(v))
+            .Where(v => !IsExoticScriptNoise(v))
             .Select(EscapeNewlinesForFlatFile)
             .Where(v => !exclude.Contains(v))
             .Distinct()

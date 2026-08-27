@@ -701,6 +701,7 @@
 - raw: "一列"
   splits:
   - text: "一列"
+    translated: "A train"
 - raw: "一行"
   splits:
   - text: "一行"
@@ -1623,6 +1624,7 @@
 - raw: "平定蜀中"
   splits:
   - text: "平定蜀中"
+    translated: "Stabilize Sichuan"
 - raw: "乡野农民"
   splits:
   - text: "乡野农民"
@@ -2909,6 +2911,7 @@
 - raw: "追捕逃犯"
   splits:
   - text: "追捕逃犯"
+    translated: "Chase fugitive"
 - raw: "追捕高首"
   splits:
   - text: "追捕高首"
@@ -3115,6 +3118,7 @@
 - raw: "青城求援"
   splits:
   - text: "青城求援"
+    translated: "Qingcheng seeks aid"
 - raw: "青龙堂主"
   splits:
   - text: "青龙堂主"
@@ -3270,6 +3274,7 @@
 - raw: "“敌对”可以偷窃或抢夺对方的物品，或是偷师对方的武功。\n需要注意，这些行为会大大降低好感，并且增加你的<b>恶名</b>。\n恶名过高的话，你会被四处追捕，寸步难行。"
   splits:
   - text: "“敌对”可以偷窃或抢夺对方的物品，或是偷师对方的武功。"
+    translated: "Adversary can steal or plunder the other party's items, or even learn their martial arts by stealth."
   - subIndex: 1
     text: "需要注意，这些行为会大大降低好感，并且增加你的"
     translated: "You should note that these actions will significantly decrease favor and increase your"
@@ -3319,6 +3324,7 @@
 - raw: "#$PlayerName#寻一僻静之处置办农庄，过上了闲云野鹤的生活。\n与几位眷侣每日吟诗作赋，对酒当歌，弹琴下棋，飞鹰走犬。"
   splits:
   - text: "#$PlayerName#寻一僻静之处置办农庄，过上了闲云野鹤的生活。"
+    translated: "#$PlayerName# searched for a secluded place to set up a farmstead and lives a carefree life like a wild crane."
   - subIndex: 1
     text: "与几位眷侣每日吟诗作赋，对酒当歌，弹琴下棋，飞鹰走犬。"
     translated: "Spending each day with a few beloved companions reciting poetry, singing over wine, playing music, and chess, and hunting with eagles and hounds."
@@ -3364,6 +3370,7 @@
 - raw: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
+    translated: "#PlayerForceDescribe##$PlayerName# devoted himself to the court, and his rank rose step by step. position rose step by step."
 - raw: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地，"
@@ -3371,6 +3378,7 @@
 - raw: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
+    translated: "#PlayerForceDescribe##$PlayerName# and his vassals, allies, have been pushing forward victoriously, conquering cities and territories."
 - raw: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
@@ -3424,6 +3432,7 @@
 - raw: "#PlayerName#，万毒池一战你击败本门叛徒思中澜，此前又帮我请吴忧出山主持大局，对大隐阁可谓恩深义重。\n若近来有空，还望你能来<b>大隐阁内</b>一叙，我当以厚礼相赠，以表谢意。"
   splits:
   - text: "#PlayerName#，万毒池一战你击败本门叛徒思中澜，此前又帮我请吴忧出山主持大局，对大隐阁可谓恩深义重。"
+    translated: "#PlayerName#, your victory over the traitor Si Zhonglan in the Venomous Pool and your subsequent invitation of Wu You to take charge of the situation have shown great loyalty to the Great Hidden Pavilion."
   - subIndex: 1
     text: "若近来有空，还望你能来"
     translated: "If you have some free time recently, I hope you can come."
@@ -3739,6 +3748,7 @@
     translated: "#TargetInteractName#you ramble on incoherently, making no sense"
   - subIndex: 1
     text: "休要在这边误人子弟了！"
+    translated: "Don't waste your time teaching someone wrong!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#TargetInteractName#双眉紧蹙，来回踱步，似乎心中有所思量，\n若是什么疑难困扰，可有我帮得上忙的地方？"
@@ -3747,6 +3757,7 @@
     translated: "#TargetInteractName# furrowed his brow and paced back and forth, clearly deep in thought."
   - subIndex: 1
     text: "若是什么疑难困扰，可有我帮得上忙的地方？"
+    translated: "If there are any difficult issues troubling you, are they things I can assist with?"
   templates:
   - template: "{0}\n{1}"
 - raw: "#TargetInteractName#早上好啊！"
@@ -3893,6 +3904,7 @@
 - raw: "<b>本门东南方的仙居客栈</b>，近来传闻有许多武林高手出没，似乎将有大事发生。\n#PlayerName#若<b>近几月</b>得空可前去查探一番，不过江湖险恶，还需注意安全。"
   splits:
   - text: "本门东南方的仙居客栈"
+    translated: "The Immortal Residence Inn to the southeast of the gate"
   - subIndex: 1
     text: "，近来传闻有许多武林高手出没，似乎将有大事发生。"
     translated: ",Lately, there have been many rumors of Wulin shouclassed wandering around, as if a significant event is about to occur."
@@ -4033,6 +4045,7 @@
     translated: "Qinggong collectively decides"
   - subIndex: 5
     text: "根据结果增加略少恶名"
+    translated: "Increase renown slightly based on the result"
   templates:
   - template: "♦{0}\n♦{1}/{2}/{3}/{4}\n♦{5}"
 - raw: "♦向对方请教/传授生活技艺"
@@ -4123,6 +4136,7 @@
     translated: "Increase 1 points of goodwill"
   - subIndex: 1
     text: "好感40以上无效"
+    translated: "No effect if goodwill is above 40"
   templates:
   - template: "♦{0}\n♦{1}"
 - raw: "♦提升对方一门武功经验，武功等级比对方高越多，效果越好\n♦提升2点好感，每月1次(徒弟每月3次)"
@@ -4226,6 +4240,7 @@
 - raw: "一名形容精奇，目露慧光之人似乎正在路边讲经说法，要过去瞧瞧看吗？"
   splits:
   - text: "一名形容精奇，目露慧光之人似乎正在路边讲经说法，要过去瞧瞧看吗？"
+    translated: "A person described as having profound wisdom and bright eyes seems to be preaching by the roadside. Should we go take a look?"
 - raw: "一名神情颓唐，衣衫破旧之人站在路旁，\n似乎在叫卖着什么好物，不妨过去瞧瞧。"
   splits:
   - text: "一名神情颓唐，衣衫破旧之人站在路旁，"
@@ -4271,6 +4286,7 @@
 - raw: "一支镖师队伍将要通过#TargetPlace#，此处民风剽悍，盗匪横行，还望侠义之士前往护卫周全。"
   splits:
   - text: "一支镖师队伍将要通过#TargetPlace#，此处民风剽悍，盗匪横行，还望侠义之士前往护卫周全。"
+    translated: "A team of guards will be passing through #TargetPlace#. Here, the local folk are fierce, and bandits abound. We hope that men of righteousness will come to ensure their safety."
 - raw: "一群暴民抗拒赋税并在#TargetPlace#聚集闹事。为免事态升级，还望武林侠士前去维持秩序。"
   splits:
   - text: "一群暴民抗拒赋税并在#TargetPlace#聚集闹事。为免事态升级，还望武林侠士前去维持秩序。"
@@ -4390,6 +4406,7 @@
     translated: "Only the Elder can perform the migration"
   - subIndex: 2
     text: "副掌门则可以进行拆除或新建。"
+    translated: "Deputy Sect Leader can carry out demolition or construction."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "不醉不休！"
@@ -4407,6 +4424,7 @@
 - raw: "与#TargetPlace#商议两派切磋大会。"
   splits:
   - text: "与#TargetPlace#商议两派切磋大会。"
+    translated: "Negotiate with #TargetPlace# about a grand martial arts exchange between the two factions."
 - raw: "与友帮弟子汇合后，你们进入了此地分舵，开始抵御敌方猛烈的攻势。"
   splits:
   - text: "与友帮弟子汇合后，你们进入了此地分舵，开始抵御敌方猛烈的攻势。"
@@ -4506,6 +4524,7 @@
 - raw: "临时搭建起的擂台颇具气势，四处彩旗招展，人头攒动，\n台上鼓声阵阵，越发急促，已有不少文人雅士站在台上摩拳擦掌，\n看来辩才大赛即将开始了。"
   splits:
   - text: "临时搭建起的擂台颇具气势，四处彩旗招展，人头攒动，"
+    translated: "The temporary fighting arena exudes intensity, with colorful flags fluttering around and a bustling crowd."
   - subIndex: 1
     text: "台上鼓声阵阵，越发急促，已有不少文人雅士站在台上摩拳擦掌，"
     translated: "Drums sounded from the stage, growing more urgent. Several scholars and literati had already taken their positions, rubbing their hands in anticipation."
@@ -4517,6 +4536,7 @@
 - raw: "临时搭建起的擂台颇具气势，四处彩旗招展，人头攒动，\n台上鼓声阵阵，越发急促，已有不少本门弟子站在台上摩拳擦掌，\n看来门派大比即将开始了。"
   splits:
   - text: "临时搭建起的擂台颇具气势，四处彩旗招展，人头攒动，"
+    translated: "The temporary fighting arena exudes intensity, with colorful flags fluttering around and a bustling crowd."
   - subIndex: 1
     text: "台上鼓声阵阵，越发急促，已有不少本门弟子站在台上摩拳擦掌，"
     translated: "Drums echoed loudly from the stage, growing more urgent. Several disciples from the sect were already standing on the stage, rubbing their fists in anticipation."
@@ -4528,6 +4548,7 @@
 - raw: "临时搭建起的擂台颇具气势，四处彩旗招展，人头攒动，\n台上鼓声阵阵，越发急促，已有不少武林人士站在台上摩拳擦掌，\n看来比武大赛即将开始了。"
   splits:
   - text: "临时搭建起的擂台颇具气势，四处彩旗招展，人头攒动，"
+    translated: "The temporary fighting arena exudes intensity, with colorful flags fluttering around and a bustling crowd."
   - subIndex: 1
     text: "台上鼓声阵阵，越发急促，已有不少武林人士站在台上摩拳擦掌，"
     translated: "Drums beat rapidly on the stage, growing more urgent. Several Wulin figures already stand on the stage, rubbing their fists in anticipation."
@@ -4539,8 +4560,10 @@
 - raw: "临时搭建起的擂台颇具气势，鼓声如雷预示着一年一度的掌门大会即将召开。\n台下已挤满了来自五湖四海的武林人士，欲一睹各大门派高手之风采。"
   splits:
   - text: "临时搭建起的擂台颇具气势，鼓声如雷预示着一年一度的掌门大会即将召开。"
+    translated: "While they strode into the training grounds, they could hear the distant sounds of martial arts battles and the rhythmic beat of drums signaling the upcoming annual sect leader assembly."
   - subIndex: 1
     text: "台下已挤满了来自五湖四海的武林人士，欲一睹各大门派高手之风采。"
+    translated: "While the arena was already filled with people from all over, they were eager to witness the skills of the various sect masters."
   templates:
   - template: "{0}\n{1}"
 - raw: "义不容辞"
@@ -4552,6 +4575,7 @@
   - text: "为了打击混江十三雄的幕后主使霹雳堂，长乐帮笑面虎率领精锐在"
   - subIndex: 1
     text: "一带四处劫掠报复。"
+    translated: "One attacked and pillaged in four directions as revenge."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "为决定京城防务归属，朝廷决定将支持仙霞派和飞龙门的掌门分为两队，在<b>京城</b>举行一场比武对决。"
@@ -4571,6 +4595,7 @@
     translated: "Master"
   - subIndex: 1
     text: "本月将举办传功大会"
+    translated: "This month, the Transmission Conference will be held."
   - subIndex: 2
     text: "，将本门绝学无影乱剑传授给各位弟子。"
     translated: ",Teach all of you disciples the ultimate technique, Shadowless Random Sword."
@@ -4603,6 +4628,7 @@
     translated: "A famous sword conference is about to take place."
   - subIndex: 3
     text: "届时会上将拍卖大量精良装备，各路英豪纷纷前往欲一睹为快。"
+    translated: "At the event, there will be a auction of high‑quality equipment, drawing many heroes eager to see and bid."
   templates:
   - template: "{0}<b>{1}</b>{2}\n{3}"
 - raw: "为应对仙霞派之快速崛起，唐门内部近来异动频频，似乎有大事谋划。"
@@ -4803,6 +4829,7 @@
 - raw: "主管治下城镇治安事宜\n\n提升任职者#EffectSkill#经验#ForceJobExpRate#\n同时根据任职者<b>#EffectSkill#技能</b>提升<b>#EffectForceSpeAdd#</b>"
   splits:
   - text: "主管治下城镇治安事宜"
+    translated: "Overseeing the law and order of the towns under his jurisdiction"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
     translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
@@ -4838,6 +4865,7 @@
 - raw: "主管门派习武传功事宜\n\n提升任职者武学经验#ForceJobExpRate#\n同时根据任职者<b>武学技能</b>提升全门派<b>#EffectForceSpeAdd#</b>"
   splits:
   - text: "主管门派习武传功事宜"
+    translated: "Sect Leader for Martial Arts Instruction and Skill Transmission"
   - subIndex: 1
     text: "提升任职者武学经验#ForceJobExpRate#"
     translated: "Increase the martial arts experience of the job holder #ForceJobExpRate#"
@@ -4954,6 +4982,7 @@
     translated: "September 9th, Double Ninth Festival"
   - subIndex: 1
     text: "正是一年登高望远，饮酒赏菊之时。"
+    translated: "It's the time to climb high and gaze far while drinking and appreciating chrysanthemums."
   templates:
   - template: "{0}\n{1}"
 - raw: "九种武学技能分别为：\n内功，轻功，绝技，拳掌，剑法，刀法，长兵，奇门，射术。"
@@ -5027,6 +5056,7 @@
 - raw: "人人习武练功，侠义之风盛行于世。\n原本肆虐一时的宵小奸邪，也逐渐销声匿迹。"
   splits:
   - text: "人人习武练功，侠义之风盛行于世。"
+    translated: "Everyone practices martial arts and cultivates skills, with chivalrous virtues flourishing throughout the land."
   - subIndex: 1
     text: "原本肆虐一时的宵小奸邪，也逐渐销声匿迹。"
     translated: "Formerly rampant minor villains have gradually disappeared"
@@ -5055,6 +5085,7 @@
 - raw: "什么贼人竟如此大胆，敢在我#SourceForceName#的地界上为非作歹！"
   splits:
   - text: "什么贼人竟如此大胆，敢在我#SourceForceName#的地界上为非作歹！"
+    translated: "What dareful bandit dares to cause chaos on the lands of #SourceForceName#!"
 - raw: "今天真是晦气，这破门派看来榨不出几滴油水。\n要不去仓库随便顺点物什，兴许还能卖几两银子……"
   splits:
   - text: "今天真是晦气，这破门派看来榨不出几滴油水。"
@@ -5079,6 +5110,7 @@
     translated: "Damn it, are you lot just messing around here and completely ignoring me?"
   - subIndex: 1
     text: "也好，今天老子就先拿你们两个祭刀，然后再和这娘们快活快活！"
+    translated: "While correcting, I'll test my dao on the two of you first, and then have some fun with that woman!"
   templates:
   - template: "{0}\n{1}"
 - raw: "他的商号遍布神州大陆，影响力甚至沿着丝绸之路远播海外。"
@@ -5171,6 +5203,7 @@
 - raw: "传说在#PosText#的一处遗迹之中，隐藏有前朝高手秘密储藏的神兵一件，附近武林人士纷纷前往欲争夺此宝藏。\n(凶险奇遇，建议携队友前往)"
   splits:
   - text: "传说在#PosText#的一处遗迹之中，隐藏有前朝高手秘密储藏的神兵一件，附近武林人士纷纷前往欲争夺此宝藏。"
+    translated: "Legend has it that in a ruin located at #PosText#, there lies a divine weapon secretly stored by the experts of the preceding dynasty. Nearby Wulin figures have flocked there to vie for this treasure."
   - subIndex: 1
     text: "凶险奇遇，建议携队友前往"
     translated: "Dreadful Fortune, recommend going with teammates"
@@ -5284,6 +5317,7 @@
     translated: "Rumor"
   - subIndex: 1
     text: "内的飞龙门分舵，屡屡发生武器失窃案件，御史楚风疾正在着手调查此事。"
+    translated: "The Flying Dragon Gate sub‑branch has been experiencing multiple cases of weapon theft, and Inspector Chu Fengji is currently investigating the matter."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>出现了一匹世所罕见的千里名驹，武林同道决定举办一场赛马大会来决定此马的最终归属。"
@@ -5292,6 +5326,7 @@
     translated: "Rumor"
   - subIndex: 1
     text: "出现了一匹世所罕见的千里名驹，武林同道决定举办一场赛马大会来决定此马的最终归属。"
+    translated: "An exceptionally rare thousand‑mile ju is present, and the Wulin colleagues have decided to hold a horse racing festival to determine the final ownership of this magnificent steed."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>发生了一起璞玉劫案，御史张峻正在着手调查此事。"
@@ -5399,6 +5434,7 @@
     translated: "Rumor"
   - subIndex: 1
     text: "梁山水寨，大当家王伦与二当家宋明公两派人马爆发冲突，随时就要火并。"
+    translated: "Liangshan Shuizhai, where Big Boss Wang Lun and Second Boss Song Minggong lead their factions, are on the brink of an armed confrontation."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>近日获得了一柄神兵残片，其副庄主正着手准备修复事宜。"
@@ -5679,6 +5715,7 @@
 - raw: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
   splits:
   - text: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
+    translated: "Rumors say that due to #PlayerForceDescribe##$PlayerName#'s efforts to protect the prince during Xiao Zhuo Zuo's rebellion, the current emperor has specially granted permission for him to investigate cases within the palace."
 - raw: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
   splits:
   - text: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
@@ -5733,6 +5770,7 @@
     translated: "Rumors say that"
   - subIndex: 1
     text: "城中，号称“百骰百胜”的侠士被仇家团团围住，生命危在旦夕。"
+    translated: "In the city, the martial artist known as Roll a Hundred Dice, Win a Hundred Times was surrounded by their enemies, and their life hung by a thread."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻在<b>#PosText#</b>有一名盗墓女贼出没，附近不少坟地都遭其贼手。"
@@ -5753,6 +5791,7 @@
     translated: "Nearby"
   - subIndex: 2
     text: "五毒掌教龙凤娥已亲率弟子严阵以待，而中原群雄也正紧急赶往此地。"
+    translated: "The Venerable Master Long Feng'e of the Five Venom Palms Sect has already led her disciples to await the arrival in strict formation, while the heroes of the Central Plains are also urgently making their way here."
   templates:
   - template: "{0}<b>#PosText#</b>{1}\n{2}"
 - raw: "传闻大隐掌门道无名已率领联军兵临<b>#PosText#</b>，不知双方这场惊天大战最终鹿死谁手。"
@@ -5761,6 +5800,7 @@
     translated: "Rumor has it that Sect Master Dao Wuying has led the allied forces to the gates"
   - subIndex: 1
     text: "，不知双方这场惊天大战最终鹿死谁手。"
+    translated: ",I wonder whose hand will ultimately claim the victory in this shocking great battle."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻大隐阁叛徒思中澜为了躲避各派追杀，眼下在<b>#PosText#</b>城内暂避风头。"
@@ -5792,6 +5832,7 @@
 - raw: "传闻少林寺空见大师在<b>#PosText#</b>四处探访，似乎在寻找一名世外高人。"
   splits:
   - text: "传闻少林寺空见大师在"
+    translated: "Rumors say the Great Master Kongjian at Shaolin Temple is"
   - subIndex: 1
     text: "四处探访，似乎在寻找一名世外高人。"
     translated: "Exploring everywhere, it seems he is searching for a hermit sage."
@@ -5806,6 +5847,7 @@
 - raw: "传闻峨嵋派<b>大理</b>分舵遭到邪派围攻，危在旦夕。掌门司马德源已向中原各派掌门发出紧急求援信。"
   splits:
   - text: "传闻峨嵋派"
+    translated: "Legend has it that the Emei school"
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -5952,6 +5994,7 @@
 - raw: "传闻武当副掌门张文馨与中原大侠郭淮在<b>丐帮</b>共商大计，意图寻找江湖百晓金龙生之下落。"
   splits:
   - text: "传闻武当副掌门张文馨与中原大侠郭淮在"
+    translated: "Rumors abound that Great Hero Guo Huai of the Central Plains is in collusion with Wudang Sect Leader Zhang Wenxin."
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -5996,6 +6039,7 @@
     translated: "Rumors say that Sect Master Zhang Qingpeng of Wudang and Sect Leader Wu Jueyi of Yama Hall are meeting up."
   - subIndex: 1
     text: "城内，准备共商追捕武林公敌计心狂之大计。"
+    translated: "In the city, they are preparing to discuss the grand plan to capture the public enemy of the martial arts world, Ji Xin Kuang."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻江湖侠士已将黑道五鬼之一高首捉拿归案，御史大人将在<b>飞龙门内</b>予以嘉奖。"
@@ -6088,6 +6132,7 @@
 - raw: "传闻近来一大伙强盗山贼在<b>仙霞派</b>附近集结，不知究竟有何企图。"
   splits:
   - text: "传闻近来一大伙强盗山贼在"
+    translated: "Rumors have it that a gang of bandits has been causing trouble around these parts recently."
   - subIndex: 1
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -6102,6 +6147,7 @@
     translated: "Rumors have it that a plague has been spreading recently."
   - subIndex: 1
     text: "城内传播蔓延，虽有药王谷侠士竭力救治，但仍杯水车薪，难以为继。"
+    translated: "While the Medicine King Valley Hero did their best to treat the affected, it was still like trying to fill an ocean with a cup, barely sustainable."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻逃犯王添翼与岳无畏越狱之后，被唐门和青城派一路追杀，如今逃到了<b>#PosText#</b>地界。"
@@ -6116,6 +6162,7 @@
 - raw: "传闻逐鹿盟土崩瓦解后，中原侠士为报仇雪恨，在<b>#PosText#</b>一带袭击五毒教弟子。"
   splits:
   - text: "传闻逐鹿盟土崩瓦解后，中原侠士为报仇雪恨，在"
+    translated: "After the Zhuelu Alliance crumbled, Central Plain warriors sought revenge to avenge their grievances,"
   - subIndex: 1
     text: "一带袭击五毒教弟子。"
     translated: "One band attacked the Five Poisons Sect disciples."
@@ -6167,6 +6214,7 @@
 - raw: "传闻长乐帮叛徒卢玉麟逃出杭州后，一路向北流亡，如今已抵达<b>#PosText#</b>一带。"
   splits:
   - text: "传闻长乐帮叛徒卢玉麟逃出杭州后，一路向北流亡，如今已抵达"
+    translated: "It was said that after traitor Lu Yulan fled Hangzhou, he has been on the run northward and has now arrived at"
   - subIndex: 1
     text: "一带。"
     translated: "One belt"
@@ -6280,6 +6328,7 @@
     translated: "Rumors say the Twin Fiends of the Yellow River are"
   - subIndex: 1
     text: "四处劫掠，为非作歹，已有侠士领受江湖追缉令前往抓捕。"
+    translated: "Rampaging and causing trouble, heroes have already received warrants to apprehend them in the Jianghu."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻黄河双煞此前被侠士擒获，现下已押送到了<b>#PosText#</b>。"
@@ -6291,6 +6340,7 @@
 - raw: "传闻黄河双煞被众多武林侠士追捕，只得一路逃到了<b>#PosText#</b>。"
   splits:
   - text: "传闻黄河双煞被众多武林侠士追捕，只得一路逃到了"
+    translated: "Rumors say that the Yellow River Dual Fiends were chased by many Wulin martial artists and had to flee all the way here."
   templates:
   - template: "{0}<b>#PosText#</b>。"
 - raw: "传闻黑道五鬼之一的高首被三名捕快追捕，如今逃到了<b>#PosText#</b>附近躲藏。"
@@ -6374,6 +6424,7 @@
 - raw: "余采薇随高人前去学剑，如今一月有余尚未归来。师兄弟们在<b>#PosText#</b>内七嘴八舌，议论纷纷。"
   splits:
   - text: "余采薇随高人前去学剑，如今一月有余尚未归来。师兄弟们在"
+    translated: "Yu Caiwei has been away learning swordsmanship from a master for over a month and has yet to return. Fellow senior brothers and sisters are"
   - subIndex: 1
     text: "内七嘴八舌，议论纷纷。"
     translated: "There were whispers and much speculation"
@@ -6385,6 +6436,7 @@
     translated: "As an entry‑level disciple, you can only learn the most basic martial arts now."
   - subIndex: 1
     text: "初次修习某一秘籍，是需要消耗一定门派功绩的。"
+    translated: "Initial study of a particular danji requires a certain amount of Sect merits."
   - subIndex: 2
     text: "如果已学会该功法，则可以免费阅读。"
     translated: "If you have mastered this cultivation technique, you can read it for free."
@@ -6495,6 +6547,7 @@
 - raw: "你可以雇佣好感达到40的角色作为帮手。\n只有无门无派的江湖侠士可被雇佣。"
   splits:
   - text: "你可以雇佣好感达到40的角色作为帮手。"
+    translated: "You can hire characters as helpers when their goodwill reaches 40."
   - subIndex: 1
     text: "只有无门无派的江湖侠士可被雇佣。"
     translated: "Only wandering martial artists without a sect can be hired."
@@ -6533,6 +6586,7 @@
     translated: "You currently have high carrying capacity. It will be difficult to move on the large map if you overload."
   - subIndex: 1
     text: "此时应该将多余物品存入宿舍内的私人仓库中。"
+    translated: "You should store excess items in the private warehouse in your dorm room."
   templates:
   - template: "{0}\n{1}"
 - raw: "你当前运用的武功，包括：\n内功，轻功，绝技，以及最多八门外功。"
@@ -6549,6 +6603,7 @@
     translated: "While following the leader's instructions, they arrived at the destination to find a group of bandits in a standoff with the escort team."
   - subIndex: 1
     text: "有数名镖师已然身受重伤，勉强支撑着。"
+    translated: "Several escorts were already severely injured and struggling to hold on."
   templates:
   - template: "{0}\n{1}"
 - raw: "你有所不知。我前日与一江湖人士争执不休，一时脑热与他相约以武论高下。\n眼见人已经打上山门来了，还望#SourceInteractName#看在同门情谊份上，助我一臂之力！"
@@ -6670,6 +6725,7 @@
 - raw: "使用道具包括丹药和饮食，可快速恢复状态，\n但也会产生耐药性。"
   splits:
   - text: "使用道具包括丹药和饮食，可快速恢复状态，"
+    translated: "Using items, including elixirs and food, can quickly restore your condition."
   - subIndex: 1
     text: "但也会产生耐药性。"
     translated: "But it can also develop resistance"
@@ -6739,6 +6795,7 @@
 - raw: "入门弟子可以修习藏经阁内绿色进阶武功，\n从而大大提升自身修为。"
   splits:
   - text: "入门弟子可以修习藏经阁内绿色进阶武功，"
+    translated: "Junior disciples can practice the green‑level advanced martial arts in the Cangjingge."
   - subIndex: 1
     text: "从而大大提升自身修为。"
     translated: "Thus significantly enhancing their cultivation"
@@ -6815,6 +6872,7 @@
     translated: "Internal Skill primarily charges through attacks"
   - subIndex: 1
     text: "激活内功可使其效果翻倍，同时恢复部分内力。"
+    translated: "Activating internal skill will double its effects while restoring some inner power."
   templates:
   - template: "{0}\n{1}"
 - raw: "内功修炼会从气海开始，\n消耗内力不断冲破相邻穴位。"
@@ -6854,6 +6912,7 @@
 - raw: "最终以疾风怒涛之势，占据了天下半壁江山。"
   splits:
   - text: "最终以疾风怒涛之势，占据了天下半壁江山。"
+    translated: "Ultimately, they seized control of half the realm with the fierce momentum of a stormy sea."
 - raw: "最终夺得了“天下第一”的称号！"
   splits:
   - text: "最终夺得了“天下第一”的称号！"
@@ -6869,6 +6928,7 @@
 - raw: "最终成为了武林之中堪称北斗泰山，举足轻重的名门大派。"
   splits:
   - text: "最终成为了武林之中堪称北斗泰山，举足轻重的名门大派。"
+    translated: "The final achievement became a renowned and significant faction in the martial arts world, comparable to Beichen Taishan and a force to be reckoned with."
 - raw: "最终未能夺得“天下第一”的称号。"
   splits:
   - text: "最终未能夺得“天下第一”的称号。"
@@ -6948,9 +7008,11 @@
 - raw: "前往#TargetPlace#，为吴忧求取解药。"
   splits:
   - text: "前往#TargetPlace#，为吴忧求取解药。"
+    translated: "Go to #TargetPlace# to obtain a cure for Wu You."
 - raw: "前往#TargetPlace#，从飞龙门手中接管京城防务。"
   splits:
   - text: "前往#TargetPlace#，从飞龙门手中接管京城防务。"
+    translated: "Head to #TargetPlace#, take over the Capital's defense from Flying Dragon Gate."
 - raw: "前往#TargetPlace#，打听赵京娘的最终下落。"
   splits:
   - text: "前往#TargetPlace#，打听赵京娘的最终下落。"
@@ -7083,6 +7145,7 @@
     translated: "Gather to swear loyalty"
   - subIndex: 5
     text: "青城门派好感在80以上，可在战斗中获得援助"
+    translated: "Qingcheng Sect goodwill above 80 allows you to receive aid in battle"
   - subIndex: 6
     text: "先占领成都周边资源，可降低后续攻城战难度"
     translated: "Secure resources around Chengdu first to reduce the difficulty of subsequent sieges."
@@ -7123,6 +7186,7 @@
 - raw: "前往#TargetPlace#追捕唐逸影父子二人。"
   splits:
   - text: "前往#TargetPlace#追捕唐逸影父子二人。"
+    translated: "Go to #TargetPlace# to apprehend Tang Yiying and her son."
 - raw: "前往#TargetPlace#追捕身受重伤的金龙生。"
   splits:
   - text: "前往#TargetPlace#追捕身受重伤的金龙生。"
@@ -7162,9 +7226,11 @@
 - raw: "助#$SourceInteractName#一臂之力"
   splits:
   - text: "助#$SourceInteractName#一臂之力"
+    translated: "Offer you#$SourceInteractName#a helping hand"
 - raw: "助#$TargetInteractName#一臂之力"
   splits:
   - text: "助#$TargetInteractName#一臂之力"
+    translated: "Give#$TargetInteractName#a helping hand"
 - raw: "助#SourceForceName#一臂之力"
   splits:
   - text: "助#SourceForceName#一臂之力"
@@ -7283,6 +7349,7 @@
 - raw: "去#TargetPlace#继续追寻落水武林人士的去向。"
   splits:
   - text: "去#TargetPlace#继续追寻落水武林人士的去向。"
+    translated: "Go to #TargetPlace# to continue tracking the direction of the drowned martial artist."
 - raw: "去#TargetPlace#集结队伍，准备进攻。"
   splits:
   - text: "去#TargetPlace#集结队伍，准备进攻。"
@@ -7340,6 +7407,7 @@
 - raw: "受到攻击时，会根据对方所用外功，降低对应部位的架势。\n防御方则会自动选用最合适的外功，进行架势防御。"
   splits:
   - text: "受到攻击时，会根据对方所用外功，降低对应部位的架势。"
+    translated: "When attacked, it will reduce the corresponding stance according to the opponent's external skill."
   - subIndex: 1
     text: "防御方则会自动选用最合适的外功，进行架势防御。"
     translated: "The defensive party will automatically select the most appropriate External Skill for stance defense."
@@ -7369,6 +7437,7 @@
 - raw: "另外，你可以点击下方的马匹按钮，发动冲刺，\n可在短时间内提升速度，但加快耐力消耗。。"
   splits:
   - text: "另外，你可以点击下方的马匹按钮，发动冲刺，"
+    translated: "Additionally, you can click the horse button below to initiate a sprint."
   - subIndex: 1
     text: "可在短时间内提升速度，但加快耐力消耗。。"
     translated: "It can boost speed temporarily but increase the consumption of stamina."
@@ -7416,6 +7485,7 @@
 - raw: "另外如果你进入强盗的视野范围，就可能会被追杀。\n因此看到战力强悍的强盗时，请尽量绕道而行。"
   splits:
   - text: "另外如果你进入强盗的视野范围，就可能会被追杀。"
+    translated: "If you enter the bandits' line of sight, you may be hunted down."
   - subIndex: 1
     text: "因此看到战力强悍的强盗时，请尽量绕道而行。"
     translated: "So when you encounter strong bandits, try to detour."
@@ -7502,11 +7572,13 @@
     translated: "But there was a table of Jianghu figures with serious expressions, speaking in hushed tones as if discussing some important matter."
   - subIndex: 2
     text: "只能隐约听见，好像与附近某桩罕为人知的奇遇有关。"
+    translated: "You can only faintly hear it, as if it's related to some little‑known fortune nearby."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "只需满足以下任一条件，便可进行操控\n1.入队跟随你的侠士\n2.地位不高于你的同门\n3.好感在50以上者"
   splits:
   - text: "只需满足以下任一条件，便可进行操控"
+    translated: "By meeting any of the following conditions, control can be exerted."
   - subIndex: 1
     text: "1.入队跟随你的侠士"
   - subIndex: 2
@@ -7546,6 +7618,7 @@
 - raw: "叶一鸣已被击败，趁其群龙无首，返回#TargetPlace#发动进攻。"
   splits:
   - text: "叶一鸣已被击败，趁其群龙无首，返回#TargetPlace#发动进攻。"
+    translated: "Ye Yiming has been defeated. Taking advantage of his leadership vacuum, return to #TargetPlace# to launch an attack."
 - raw: "各大门派在<b>京城</b>举办少年英雄大会，众多江湖才俊齐聚一堂，共襄此次盛举。"
   splits:
   - text: "各大门派在"
@@ -7766,6 +7839,7 @@
 - raw: "听说在#PosText#一带有名刁蛮女子四处惹是生非，引发了不少骚乱。"
   splits:
   - text: "听说在#PosText#一带有名刁蛮女子四处惹是生非，引发了不少骚乱。"
+    translated: "It's said that a notorious spoiled woman in the #PosText# area has been causing trouble everywhere, leading to quite a bit of unrest."
 - raw: "听说有名刁蛮女子在#PosText#大闹一场，炸毁了数栋住宅，被称为“爆炸狂魔”并遭到官府追缉。"
   splits:
   - text: "听说有名刁蛮女子在#PosText#大闹一场，炸毁了数栋住宅，被称为“爆炸狂魔”并遭到官府追缉。"
@@ -7909,6 +7983,7 @@
 - raw: "听闻此地有一远古遗址，其中时有奇珍异宝出土面世。\n若能前往此处试试手气，或许会有意外收获。"
   splits:
   - text: "听闻此地有一远古遗址，其中时有奇珍异宝出土面世。"
+    translated: "Hear tell of an ancient archaeological site here, where rare treasures and exotic artifacts occasionally emerge into the world."
   - subIndex: 1
     text: "若能前往此处试试手气，或许会有意外收获。"
   templates:
@@ -8087,6 +8162,7 @@
 - raw: "和白云天一道去#TargetPlace#游玩。"
   splits:
   - text: "和白云天一道去#TargetPlace#游玩。"
+    translated: "Go sightseeing in #TargetPlace# with Bai Yuntian"
 - raw: "和白云天一道返回#TargetPlace#。"
   splits:
   - text: "和白云天一道返回#TargetPlace#。"
@@ -8189,6 +8265,7 @@
 - raw: "哼哼，#SourceForceName#屡次骚扰我#TargetForceName#治下村镇，这笔账还没算呢！\n这次你等所运之物资，作为日前冒犯之赔偿，我们就笑纳了。"
   splits:
   - text: "哼哼，#SourceForceName#屡次骚扰我#TargetForceName#治下村镇，这笔账还没算呢！"
+    translated: "Hmph, #SourceForceName# has been harassing my settlements under #TargetForceName#. This score hasn't been settled yet!"
   - subIndex: 1
     text: "这次你等所运之物资，作为日前冒犯之赔偿，我们就笑纳了。"
     translated: "This time, you wait for the supplies to arrive as compensation for your recent offense‑ we humbly accept."
@@ -8330,6 +8407,7 @@
     translated: "Hehe, guys, we intercepted a treasure map from a guy who wasn't watching where he was going today."
   - subIndex: 1
     text: "待咱们挖出宝藏来，我带大家吃香的喝辣的去！"
+    translated: "Once we dig up the treasure, I'll take everyone to enjoy the good food and spicy dishes!"
   templates:
   - template: "{0}\n{1}"
 - raw: "四大御史同时入宫，准备告发一件谋反大罪。<b>#PosText#</b>中阴云密布，一场大战已迫在眉睫。"
@@ -8393,6 +8471,7 @@
     translated: "Boost the first level of Wuzhu Changquan within a month to win the bet with Senior Brother Gu Younian."
   - subIndex: 1
     text: "理论经验：在藏经阁阅读秘籍"
+    translated: "Theoretical Experience: Reading scrolls in the Scripture Repository"
   - subIndex: 2
     text: "实战经验：在练武场练习或切磋"
     translated: "Combat Experience: Practicing or sparring in the training ground"
@@ -8412,6 +8491,7 @@
     translated: "During the height of national power, #$PlayerName# personally led the elite Forbidden Army in campaigns."
   - subIndex: 1
     text: "北击大辽，东征高丽，收服西域，克定安南。"
+    translated: "Conquer the Great Liao to the north, march east to Goryeo, subdue the Western Regions, and pacify Annam."
   templates:
   - template: "{0}\n{1}"
 - raw: "在场地的中心位置，一名豪商摆起了气派的展位，准备举办一场拍卖大会。\n围观人士气氛热烈，纷纷跃跃欲试。"
@@ -8456,6 +8536,7 @@
     translated: "In the Apprentice Policy Interface, you can set the behavior policies for each apprentice."
   - subIndex: 1
     text: "你可以指定弟子优先修习某一门武功，或是将他们擅长的工作设为高优先级，"
+    translated: "You can assign priorities to your disciples for certain martial arts skills, or set their proficient tasks to a higher priority."
   - subIndex: 2
     text: "从而提高整个门派的工作效率。"
     translated: "Thus increasing the overall efficiency of the sect."
@@ -8575,11 +8656,13 @@
     translated: "While traveling through the Jianghu, you will encounter all sorts of different people."
   - subIndex: 1
     text: "这些人有着截然不同的性格，喜好和武学修为。"
+    translated: "These people have vastly different personalities, preferences, and martial arts proficiency."
   templates:
   - template: "{0}\n{1}"
 - raw: "在赛道上，会随机出现两种道路，\n浅色道路为快速路，在上面移动相当于冲刺加速，\n深色道路为泥泞路，在上面移动相当于水中减速。"
   splits:
   - text: "在赛道上，会随机出现两种道路，"
+    translated: "On the track, two types of roads will appear randomly."
   - subIndex: 1
     text: "浅色道路为快速路，在上面移动相当于冲刺加速，"
     translated: "Light‑colored roads are expressways, moving on them is equivalent to sprinting and accelerating."
@@ -8624,6 +8707,7 @@
 - raw: "在闭关室突破瓶颈，将太祖长拳修炼至十重功力"
   splits:
   - text: "在闭关室突破瓶颈，将太祖长拳修炼至十重功力"
+    translated: "Break through the bottleneck in the meditation chamber and refine the Ancestor Founder Long Fist to the tenth level of power"
 - raw: "地图上的水域和山脉会极大降低移动速度，\n若可能的话，尽量绕开这些地形移动。"
   splits:
   - text: "地图上的水域和山脉会极大降低移动速度，"
@@ -8636,6 +8720,7 @@
 - raw: "坊间传闻有一名神匠隐居于此，技艺超群，鬼斧神工。\n只是这山高地阔，人迹罕至，要寻找此人也无异于大海捞针一般。"
   splits:
   - text: "坊间传闻有一名神匠隐居于此，技艺超群，鬼斧神工。"
+    translated: "There is a legendary master craftsman said to be hiding here, whose skills are unparalleled and seem almost supernatural."
   - subIndex: 1
     text: "只是这山高地阔，人迹罕至，要寻找此人也无异于大海捞针一般。"
     translated: "But with this remote and rugged terrain, rarely visited by humans, finding this person would be akin to searching for a needle in a haystack."
@@ -8711,6 +8796,7 @@
     translated: "Alas, the local officials have insufficient manpower, and the law and order situation is deteriorating."
   - subIndex: 2
     text: "还望大侠能够在此巡查三日，震慑那些宵小之徒。"
+    translated: "I hope the Great Hero will inspect these parts for three days to deter those petty villains."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "大侠来的太巧了，我刚好得了一件稀世珍宝，\n既然你我有缘，就忍痛割爱卖给你好了。"
@@ -8807,6 +8893,7 @@
 - raw: "奉旨前往#TargetPlace#为顾游年求医。"
   splits:
   - text: "奉旨前往#TargetPlace#为顾游年求医。"
+    translated: "Ordered to travel to #TargetPlace# to seek medical advice for Gu Younian."
 - raw: "好，凝神细听，随我默念#PlotInteractSkillName#口诀......"
   splits:
   - text: "好，凝神细听，随我默念#PlotInteractSkillName#口诀......"
@@ -8920,6 +9007,7 @@
     translated: "In this crisp September autumn, with the sky high and the air refreshing, I wonder whom I should invite to enjoy the scenery together?"
   - subIndex: 1
     text: "（可以邀请好感50以上的同性共度重阳）"
+    translated: "(can invite same‑sex companions with affection above 50 for the Double Ninth Festival)"
   templates:
   - template: "{0}\n{1}"
 - raw: "姑娘莫慌！\n有我仙霞派杨思迟在，谁敢动你一根毫毛！"
@@ -8988,6 +9076,7 @@
     translated: "When the other party's goodwill towards them exceeds 70, they can learn their martial arts."
   - subIndex: 1
     text: "根据武功的级别，会消耗相应的好感度。"
+    translated: "Based on the level of martial arts skills, corresponding goodwill will be consumed."
   templates:
   - template: "{0}\n{1}"
 - raw: "寻一件<color=#FD1430>绝世珍宝</color>交由#TargetPlace#进献圣上。"
@@ -9009,6 +9098,7 @@
 - raw: "寻找#TargetPlace#的都点检墓。"
   splits:
   - text: "寻找#TargetPlace#的都点检墓。"
+    translated: "Check every point in #TargetPlace#"
 - raw: "寻找一件精良级别的珍宝交给姜婉师姐"
   splits:
   - text: "寻找一件精良级别的珍宝交给姜婉师姐"
@@ -9023,6 +9113,7 @@
     translated: "Refine the Sword Technique to the Tenth Level Power"
   - subIndex: 1
     text: "理论经验：在藏经阁阅读秘籍"
+    translated: "Theoretical Experience: Reading scrolls in the Scripture Repository"
   - subIndex: 2
     text: "实战经验：在练武场练习或切磋"
     translated: "Combat Experience: Practicing or sparring in the training ground"
@@ -9077,6 +9168,7 @@
     translated: "By acquiring resources for the sect or completing sect tasks monthly to boost merits"
   - subIndex: 2
     text: "积累#UpgradeForceLvNeedContributionNum#功绩并习得#UpgradeForceLvNeedSkillNum#门基础武学后，可在"
+    translated: "Accumulate#UpgradeForceLvNeedContributionNum#credits and master#UpgradeForceLvNeedSkillNum#basics of martial arts, then you can"
   - subIndex: 3
     text: "门派正厅"
     translated: "Sect main hall"
@@ -9094,6 +9186,7 @@
     translated: "Through acquiring resources for the Sect, completing Sect commissions, or boosting merit by fulfilling monthly Sect tasks."
   - subIndex: 2
     text: "积累#UpgradeForceLvNeedContributionNum#功绩并习得#UpgradeForceLvNeedSkillNum#门进阶武学后，可在"
+    translated: "Accumulate#UpgradeForceLvNeedContributionNum#credits and master#UpgradeForceLvNeedSkillNum#new martial arts skills, after which you can"
   - subIndex: 3
     text: "门派正厅"
     translated: "Sect main hall"
@@ -9138,6 +9231,7 @@
     translated: "Young Hero, you've finally arrived. We were just preparing to set off for #NextMissionTargetPlace#."
   - subIndex: 1
     text: "这一路山川险要，匪徒横行，还望少侠能鼎力护卫。"
+    translated: "This journey through rugged mountains and dangerous terrain is plagued by bandits, so I hope the Young Hero can provide strong protection."
   templates:
   - template: "{0}\n{1}"
 - raw: "少侠可算来了。\n这#AreaName#前些日子，不知为何出现了一批染病之人。\n上吐下泻，高热不退，周身无力，日渐虚弱。"
@@ -9146,8 +9240,10 @@
     translated: "Young Hero, you've finally arrived"
   - subIndex: 1
     text: "这#AreaName#前些日子，不知为何出现了一批染病之人。"
+    translated: "This #AreaName# not long ago saw a group of diseased people appear for unknown reasons."
   - subIndex: 2
     text: "上吐下泻，高热不退，周身无力，日渐虚弱。"
+    translated: "Vomiting, diarrhea, high fever that doesn't break, general weakness, and gradually worsening condition."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "少侠可算来了。此行前路颇为险峻，还望少侠替我们护卫周全。\n若能安全抵达目的地，本镖局自当重谢。"
@@ -9168,6 +9264,7 @@
     translated: "Young Hero, you are prompt and righteous. I admire you."
   - subIndex: 1
     text: "只是听说，这贪官豢养了一批穷凶极恶的鹰犬侍卫，"
+    translated: "They say this corrupt official has cultivated a group of ruthless henchmen as his bodyguards."
   - subIndex: 2
     text: "少侠此去，千万要做好苦战一场的准备。"
     translated: "Young Hero, prepare for a bitter and fierce battle."
@@ -9200,6 +9297,7 @@
     translated: "Young Hero, don't worry. I have long heard that there is a divine doctor hiding in the wilderness of #NextMissionTargetPlace#."
   - subIndex: 1
     text: "善治疫病，常能妙手回春，药到病除。"
+    translated: "Skilled in treating epidemics, they often work wonders, curing the sick with their medicine."
   templates:
   - template: "{0}\n{1}"
 - raw: "尝试调解"
@@ -9307,6 +9405,7 @@
 - raw: "并关入了看守极为严密，绝无逃脱可能的天牢之中。"
   splits:
   - text: "并关入了看守极为严密，绝无逃脱可能的天牢之中。"
+    translated: "And they were imprisoned in the Celestial Prison, guarded with extreme vigilance, leaving no possibility of escape."
 - raw: "幸会幸会，久闻#$PlayerName#少侠大名，今日终得一见。\n可惜我还有俗务缠身，只能先行告辞了！"
   splits:
   - text: "幸会幸会，久闻#$PlayerName#少侠大名，今日终得一见。"
@@ -9480,6 +9579,7 @@
 - raw: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
   splits:
   - text: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
+    translated: "The Art of Sword Technique has reached a high level. Go to #TargetPlace# to ask Senior Brother Gu Younian about the next methods of cultivation."
 - raw: "思迟你此趟也有功劳，去库房再领匹好马便是，\n你们退下吧。"
   splits:
   - text: "思迟你此趟也有功劳，去库房再领匹好马便是，"
@@ -9762,6 +9862,7 @@
 - raw: "押运队伍先行逃往了#TargetPlace#，前去汇合并进城求援。"
   splits:
   - text: "押运队伍先行逃往了#TargetPlace#，前去汇合并进城求援。"
+    translated: "The escort team fled first to #TargetPlace#, to rendezvous and seek aid before entering the city."
 - raw: "押运队伍向北逃往了#TargetPlace#，尽快前去护卫。"
   splits:
   - text: "押运队伍向北逃往了#TargetPlace#，尽快前去护卫。"
@@ -9800,6 +9901,7 @@
     translated: "Click Yang Sichi and choose Cultivation"
   - subIndex: 2
     text: "指点，再选择一门等级高于他的武功便可进行指点"
+    translated: "Guide, then select a martial art skill of a higher rank to proceed."
   templates:
   - template: "{0}\n<i>{1}-{2}</i>"
 - raw: "指点白云天一门武功"
@@ -9871,6 +9973,7 @@
 - raw: "探明了黑风寨之虚实，回#TargetPlace#向师傅复命。"
   splits:
   - text: "探明了黑风寨之虚实，回#TargetPlace#向师傅复命。"
+    translated: "Determine the situation of Black Wind Camp, then return to #TargetPlace# to report to Master."
 - raw: "探查一番"
   splits:
   - text: "探查一番"
@@ -10015,6 +10118,7 @@
 - raw: "既然如此，我们便沿掌柜所说道路，前去探个究竟！\n万一遇上了那伙贼人，便好好教训他们一顿！"
   splits:
   - text: "既然如此，我们便沿掌柜所说道路，前去探个究竟！"
+    translated: "Since that's the case, let's follow the shopkeeper's path and go see what we can find!"
   - subIndex: 1
     text: "万一遇上了那伙贼人，便好好教训他们一顿！"
     translated: "If you encounter those bandits, give them a good beating!"
@@ -10092,6 +10196,7 @@
 - raw: "是#TargetInteractName#啊，看他真气紊乱，神智癫狂，想来是练功时意外走火入魔所致。\n此人出手狠重，功力竟似乎有所增长，若无十成把握还是不要轻易招惹为妙。"
   splits:
   - text: "是#TargetInteractName#啊，看他真气紊乱，神智癫狂，想来是练功时意外走火入魔所致。"
+    translated: "It's #TargetInteractName#. While observing their True Qi in chaos and their mind erratic, it seems they accidentally fell into madness during their cultivation practice."
   - subIndex: 1
     text: "此人出手狠重，功力竟似乎有所增长，若无十成把握还是不要轻易招惹为妙。"
     translated: "This person's strike is extremely forceful, and their power seems to have grown. It's better to avoid provoking them unless you have complete confidence."
@@ -10124,6 +10229,7 @@
 - raw: "暂且离开"
   splits:
   - text: "暂且离开"
+    translated: "Temporary leave"
 - raw: "暂且解决了盗匪事件，回#TargetPlace#向师傅复命。"
   splits:
   - text: "暂且解决了盗匪事件，回#TargetPlace#向师傅复命。"
@@ -10197,6 +10303,7 @@
     translated: "The grand Dragon Boat Racing Festival this year has surpassed all expectations, with generous prizes and higher standards than usual races. Missing out would be a real shame."
   - subIndex: 1
     text: "不妨披挂上马，大展雄威，与其他参赛者一较高下。"
+    translated: "Why not mount your horse and showcase your prowess, competing against the other contestants."
   templates:
   - template: "{0}\n{1}"
 - raw: "本次领取的门派任务是<b>收集银钱</b>，\n需要为门派获取足够的银钱才能完成任务。"
@@ -10214,6 +10321,7 @@
 - raw: "本门藏经阁内所藏的秘籍，按照等级罗列在此处。"
   splits:
   - text: "本门藏经阁内所藏的秘籍，按照等级罗列在此处。"
+    translated: "The secret manuals stored in this sect's cang jing ge are listed here according to their rank."
 - raw: "村民传闻，盗贼的传闻是出自#TargetPlace#一带，看来需要前去进一步探查才行。"
   splits:
   - text: "村民传闻，盗贼的传闻是出自#TargetPlace#一带，看来需要前去进一步探查才行。"
@@ -10318,6 +10426,7 @@
 - raw: "此后，#$PlayerName#便效仿都点检赵胤宗，\n于泰山玉皇顶召开泰岳大典，宣告武林一统。"
   splits:
   - text: "此后，#$PlayerName#便效仿都点检赵胤宗，"
+    translated: "Afterward, #$PlayerName# began to emulate Zhuo Yinzong, the Du Dianjian."
   - subIndex: 1
     text: "于泰山玉皇顶召开泰岳大典，宣告武林一统。"
     translated: "Hold the Great Ceremony of Taiye on Tai'an Yuhuadong to declare the unification of the Wulin."
@@ -10326,6 +10435,7 @@
 - raw: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，\n并借此时机黄袍加身，登基称帝。"
   splits:
   - text: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，"
+    translated: "Afterwards, #$PlayerName# followed in the footsteps of Zhuo Yinzong, the Chief Inspector, and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai."
   - subIndex: 1
     text: "并借此时机黄袍加身，登基称帝。"
     translated: "And seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
@@ -10346,6 +10456,7 @@
 - raw: "此后#$PlayerName#更是借政治贸易手段瓦解了大辽的南下攻势，进一步巩固了朝廷统治。"
   splits:
   - text: "此后#$PlayerName#更是借政治贸易手段瓦解了大辽的南下攻势，进一步巩固了朝廷统治。"
+    translated: "After that, #$PlayerName# further dismantled the Liao Dynasty's southern offensive through political and trade means, further consolidating the imperial court's rule."
 - raw: "此后他凭借这笔资金成立钱庄，广纳田产，专心于营商之道"
   splits:
   - text: "此后他凭借这笔资金成立钱庄，广纳田产，专心于营商之道"
@@ -10586,6 +10697,7 @@
 - raw: "武功右侧的橙色进度条表示实战经验。"
   splits:
   - text: "武功右侧的橙色进度条表示实战经验。"
+    translated: "The orange progress bar on the right side of the martial arts skill indicates practical combat experience."
 - raw: "武功左侧的蓝色进度条表示理论经验。"
   splits:
   - text: "武功左侧的蓝色进度条表示理论经验。"
@@ -10637,6 +10749,7 @@
 - raw: "每年十一月一日乃掌门大会召开之时，各大掌门现已汇于<b>#PosText#</b>城内共襄盛举。会上每位掌门皆需选出四名本门弟子结队比武，一决胜负。"
   splits:
   - text: "每年十一月一日乃掌门大会召开之时，各大掌门现已汇于"
+    translated: "On November first, the Assembly of the Sect Leaders is held, and they are now all present."
   - subIndex: 1
     text: "城内共襄盛举。会上每位掌门皆需选出四名本门弟子结队比武，一决胜负。"
     translated: "The celebration is shared by all within the city. At the meeting, each Sect Leader must select four disciples from their own sect to form teams for a martial competition to determine the winner."
@@ -10666,6 +10779,7 @@
     translated: "Whenever a major event occurs in the Jianghu, a notice will appear in the rumor board."
   - subIndex: 1
     text: "此时不妨根据提示，前往目标地点查探一番。"
+    translated: "You might want to head to the designated location and have a look around."
   templates:
   - template: "{0}\n{1}"
 - raw: "每次回合结束，这三项武功会自动少量充能。\n每击倒一名敌人，则都能获得较多充能。"
@@ -10767,6 +10881,7 @@
 - raw: "江湖传闻，应天城内有一渔民从江中网出了个水猴子，知情者无不啧啧称奇。"
   splits:
   - text: "江湖传闻，应天城内有一渔民从江中网出了个水猴子，知情者无不啧啧称奇。"
+    translated: "Jianghu rumor has it that a fisherman in Yingtian City caught a water monkey from the river, and all who know about it can't help but marvel."
 - raw: "江湖传闻，得高人传功的砍柴少年躲藏在<b>#PosText#</b>，有一名魔道高手已前去抢夺神功。"
   splits:
   - text: "江湖传闻，得高人传功的砍柴少年躲藏在"
@@ -10809,6 +10924,7 @@
 - raw: "江湖风闻，神偷慕容星辰要对<b>#PosText#</b>内的大户下手，一时间人心惶惶，城内富商人人自危。"
   splits:
   - text: "江湖风闻，神偷慕容星辰要对"
+    translated: "Rumors abound in the Jianghu that the divine thief Murong Xingchen is planning to"
   - subIndex: 1
     text: "内的大户下手，一时间人心惶惶，城内富商人人自危。"
     translated: "The wealthy merchants within were targeted, causing a moment of panic, with every wealthy merchant in the city fearing for their safety."
@@ -10877,6 +10993,7 @@
 - raw: "没想到这荒野之中竟有一上古遗迹，似乎是某位无名前辈高人的修炼场所。\n若能深入其中探索，或许会找到遗留的心法秘籍以为己用。"
   splits:
   - text: "没想到这荒野之中竟有一上古遗迹，似乎是某位无名前辈高人的修炼场所。"
+    translated: "Unexpectedly, there turns out to be an ancient site in this wilderness, seeming to be a place of cultivation for some unnamed senior."
   - subIndex: 1
     text: "若能深入其中探索，或许会找到遗留的心法秘籍以为己用。"
     translated: "If you can delve into it and explore, perhaps you might find the preserved Heart Method scriptures to use for yourself."
@@ -10885,9 +11002,11 @@
 - raw: "没缺胳膊断腿的回来就好，这次探查可有什么发现？"
   splits:
   - text: "没缺胳膊断腿的回来就好，这次探查可有什么发现？"
+    translated: "As long as you come back without any injuries, that's fine. Did this mission uncover anything?"
 - raw: "注意，向不同地形移动时会消耗不同耐力。\n尽量选择在道路上行走，可以有效节省耐力。"
   splits:
   - text: "注意，向不同地形移动时会消耗不同耐力。"
+    translated: "Note that moving through different terrains will consume different amounts of stamina."
   - subIndex: 1
     text: "尽量选择在道路上行走，可以有效节省耐力。"
     translated: "Walking on roads can effectively save stamina"
@@ -10980,6 +11099,7 @@
     translated: "Click the Hire button to invite the other party to join your team for 15 days."
   - subIndex: 1
     text: "根据对方的战力，会消耗相应的银钱。"
+    translated: "Based on the opponent's power, it will consume corresponding silver and money."
   templates:
   - template: "{0}\n{1}"
 - raw: "点击马匹图标，可以发动“冲刺”，\n在短时间内极大提升速度，同时也会快速消耗耐力。"
@@ -11040,6 +11160,7 @@
 - raw: "由于#$PlayerName#罪孽实在过于深重，因而被判处终身监禁，"
   splits:
   - text: "由于#$PlayerName#罪孽实在过于深重，因而被判处终身监禁，"
+    translated: "Due to #$PlayerName#'s sins being too profound, they are sentenced to life imprisonment."
 - raw: "由于太祖长拳是拳掌功夫，因此选择“拳掌”分类"
   splits:
   - text: "由于太祖长拳是拳掌功夫，因此选择“拳掌”分类"
@@ -11121,6 +11242,7 @@
 - raw: "真是冤家路窄，既然#TargetInteractName#你非要挡道，可就别怪我不客气了！"
   splits:
   - text: "真是冤家路窄，既然#TargetInteractName#你非要挡道，可就别怪我不客气了！"
+    translated: "True enemies meet on a narrow road; since you#TargetInteractName# insist on blocking my way, don't blame me for being unfriendly!"
 - raw: "真是无理取闹，同门的师兄弟们早就看你不顺眼很久了！"
   splits:
   - text: "真是无理取闹，同门的师兄弟们早就看你不顺眼很久了！"
@@ -11221,6 +11343,7 @@
     translated: "Accumulate governmental merits to advance in the official position."
   - subIndex: 1
     text: "为日后行走江湖提供更多便利。"
+    translated: "To provide more convenience for traveling through the Jianghu in the future."
   templates:
   - template: "{0}\n{1}"
 - raw: "穴位分为灰/绿/蓝/紫/橙/红六个等级。\n等级越高，冲关越困难，奖励经验也越多。\n提升建筑等级则可以降低冲关难度。"
@@ -11247,6 +11370,7 @@
     translated: "The higher the level, the more difficult it is to clear the challenge, and the more experience rewards you receive."
   - subIndex: 7
     text: "提升建筑等级则可以降低冲关难度。"
+    translated: "While raising the level of the building can reduce the difficulty of clearing the stage, they can also make the gameplay feel less accessible to new players."
   templates:
   - template: "{0}/{1}/{2}/{3}/{4}/{5}\n{6}\n{7}"
 - raw: "突破完成后，可以从三项加成中选择一项，永久提升武功效果。\n突破效率越高，这三项加成也就越强。"
@@ -11321,6 +11445,7 @@
     translated: "The pink field displays the horse's tameness"
   - subIndex: 1
     text: "驯服度越高，马匹越能发挥出自身的能力。"
+    translated: "The higher the taming level, the more the horse can utilize its full abilities."
   templates:
   - template: "{0}\n{1}"
 - raw: "索取"
@@ -11333,6 +11458,7 @@
     translated: "The red area indicates your attack range and will rotate to follow the mouse."
   - subIndex: 1
     text: "左键点击发动攻击，便能将范围内的射击物全部击落。"
+    translated: "Left‑click to initiate an attack, which can neutralize all projectiles within range. Hit all projectiles in the area with a single left‑click."
   templates:
   - template: "{0}\n{1}"
 - raw: "线索显示，这名贪官眼下正藏身在#TargetPlace#内，是时候将他捉拿归案了。(凶险委托，建议携队友前往)"
@@ -11365,6 +11491,7 @@
 - raw: "练习中每击落一个射击物，都会使连击数加1。\n连击数越高，就能获得越多经验。"
   splits:
   - text: "练习中每击落一个射击物，都会使连击数加1。"
+    translated: "For each shooting object hit during practice, the combo count increases by 1."
   - subIndex: 1
     text: "连击数越高，就能获得越多经验。"
     translated: "The higher the combo, the more experience you get."
@@ -11406,6 +11533,7 @@
     translated: "Continue to train the Great Ancestor Long Fist to the tenth level of power"
   - subIndex: 1
     text: "理论经验：在藏经阁阅读秘籍"
+    translated: "Theoretical Experience: Reading scrolls in the Scripture Repository"
   - subIndex: 2
     text: "实战经验：在练武场练习或切磋"
     translated: "Combat Experience: Practicing or sparring in the training ground"
@@ -11542,6 +11670,7 @@
 - raw: "自江陵失守之后，中原武林人人自危，各大门派惶惶不安。\n武当掌门张青蓬决定于<b>#PosText#</b>紫霄宫召开大会，与各派商议应对之策。"
   splits:
   - text: "自江陵失守之后，中原武林人人自危，各大门派惶惶不安。"
+    translated: "Since the fall of Jiangling, the Central Plains Wulin has lived in fear, with each sect worried and uneasy."
   - subIndex: 1
     text: "武当掌门张青蓬决定于"
     translated: "Wudang Sect Master Zhang Qingpeng has decided to"
@@ -11575,6 +11704,7 @@
 - raw: "若一时难寻合适队友，可以<b>去城市酒馆中雇佣保镖</b>，\n以解燃眉之急。"
   splits:
   - text: "若一时难寻合适队友，可以"
+    translated: "While they cannot find a suitable team member for the time being, they can temporarily join a less optimal team."
   - subIndex: 1
     text: "去城市酒馆中雇佣保镖"
     translated: "Go to the city tavern to hire a bodyguard"
@@ -11595,6 +11725,7 @@
 - raw: "若是没有骑马，行走江湖怕是颇为不便。\n请先打开人物详情，在物品栏中选择马匹进行装备。"
   splits:
   - text: "若是没有骑马，行走江湖怕是颇为不便。"
+    translated: "If there were no horses, traveling through the Jianghu would likely be quite inconvenient."
   - subIndex: 1
     text: "请先打开人物详情，在物品栏中选择马匹进行装备。"
     translated: "Please open the character details first, then select the horse in the inventory to equip it."
@@ -11661,8 +11792,10 @@
 - raw: "藏经阁内不仅可以阅读藏书，\n也可以阅读随身携带的秘籍。"
   splits:
   - text: "藏经阁内不仅可以阅读藏书，"
+    translated: "You can also read the stored books in the Tripitaka Pavilion."
   - subIndex: 1
     text: "也可以阅读随身携带的秘籍。"
+    translated: "You can also read the secret techniques you carry with you."
   templates:
   - template: "{0}\n{1}"
 - raw: "藏经阁是阅读秘籍之场所。\n所有秘籍，都要在此处才能进行参阅。"
@@ -11697,6 +11830,7 @@
     translated: "When health reaches zero due to fatigue damage, the exploration is declared a failure."
   - subIndex: 1
     text: "也可以点击中止按钮来主动结束。"
+    translated: "You can also click the stop button to actively end it."
   templates:
   - template: "{0}\n{1}"
 - raw: "行医"
@@ -11709,6 +11843,7 @@
     translated: "Travelling through the Jianghu requires more than just solo combat."
   - subIndex: 1
     text: "你可以邀请好感达标的侠士同行助阵。"
+    translated: "You can invite individuals with sufficient goodwill to join and assist."
   templates:
   - template: "{0}\n{1}"
 - raw: "行走江湖不能只靠单打独斗，\n拥有强力的帮手也是克敌制胜之法。"
@@ -11735,6 +11870,7 @@
     translated: "Travelling through the Jianghu inevitably leads to injuries. Now you have accumulated a certain amount of wounds."
   - subIndex: 1
     text: "伤势会按比例降低你的属性，因此需格外注意。"
+    translated: "Injuries will proportionally reduce your stats, so be especially careful."
   templates:
   - template: "{0}\n{1}"
 - raw: "袭击"
@@ -11838,6 +11974,7 @@
 - raw: "计策已经准备妥当，眼下正是奇袭铁掌帮总舵的绝妙时机，还望#PlayerName#<b>速回门派</b>汇合。"
   splits:
   - text: "计策已经准备妥当，眼下正是奇袭铁掌帮总舵的绝妙时机，还望#PlayerName#"
+    translated: "The plan is already in place, and now is the perfect time to launch a surprise attack on the Iron Palm Gang's main den. I look forward to your actions, #PlayerName#."
   - subIndex: 1
     text: "速回门派"
     translated: "Speed back to the sect"
@@ -11879,6 +12016,7 @@
 - raw: "说服#TargetPlace#削减丐帮决战兵力。"
   splits:
   - text: "说服#TargetPlace#削减丐帮决战兵力。"
+    translated: "Persuade #TargetPlace# to reduce the Beggar Sect's combat force for the final battle."
 - raw: "说服#TargetPlace#削减大隐阁决战兵力。"
   splits:
   - text: "说服#TargetPlace#削减大隐阁决战兵力。"
@@ -11892,6 +12030,7 @@
 - raw: "说服#TargetPlace#削减霹雳堂决战兵力。"
   splits:
   - text: "说服#TargetPlace#削减霹雳堂决战兵力。"
+    translated: "Persuade #TargetPlace# to reduce the combat forces at Thunderclap Hall."
 - raw: "说服#TargetPlace#同意结盟一事。"
   splits:
   - text: "说服#TargetPlace#同意结盟一事。"
@@ -11910,6 +12049,7 @@
     translated: "Oh, Senior Brother Yang, why have you suddenly started acting so handsome!"
   - subIndex: 1
     text: "不是说要低调行事的么？"
+    translated: "While they agreed to be more discreet, they should not have told anyone."
   templates:
   - template: "{0}\n{1}"
 - raw: "请先点击“钱庄”的建筑按钮，进入钱庄。"
@@ -12099,6 +12239,7 @@
 - raw: "跟随笑面虎前往#TargetPlace#的混江十三雄水寨。"
   splits:
   - text: "跟随笑面虎前往#TargetPlace#的混江十三雄水寨。"
+    translated: "Follow the Smiling Tiger to #TargetPlace# for the Water Camp of the Thirteen Heroes of the River."
 - raw: "跟随花石纲押运队伍前往#TargetPlace#进行休整。"
   splits:
   - text: "跟随花石纲押运队伍前往#TargetPlace#进行休整。"
@@ -12417,6 +12558,7 @@
     translated: "There are also rumors that #$PlayerName#'s children with his consorts later on..."
   - subIndex: 1
     text: "或习武练功，纵横江湖，或入朝为官，青云直上，"
+    translated: "Or practice martial arts and roam the Jianghu, or enter the court and rise to high office,"
   templates:
   - template: "{0}\n{1}"
 - raw: "还望少侠顾念苍生，体恤百姓，前去求一味治疗此瘟疫的药方。"
@@ -12490,6 +12632,7 @@
 - raw: "这二派武林人士正在争斗不休，应该如何是好？"
   splits:
   - text: "这二派武林人士正在争斗不休，应该如何是好？"
+    translated: "What should we do with these two factions of Wulin fighting non‑stop?"
 - raw: "这些商品虽说琳琅满目，品质不俗，售价却也比平常高上许多。\n若是银两富余，不妨看看有没有什么好东西。"
   splits:
   - text: "这些商品虽说琳琅满目，品质不俗，售价却也比平常高上许多。"
@@ -12591,6 +12734,7 @@
 - raw: "这几名强盗把侠士给团团围住，应当如何是好？"
   splits:
   - text: "这几名强盗把侠士给团团围住，应当如何是好？"
+    translated: "What should we do with these bandits surrounding the xiushi in a circle?"
 - raw: "这几名强盗把商人给团团围住，应当如何是好？"
   splits:
   - text: "这几名强盗把商人给团团围住，应当如何是好？"
@@ -12642,6 +12786,7 @@
 - raw: "这山洞地处荒野，周边却有诸多行人与车马留下的踪迹，想必这便是传说中藏宝之所，不知是何人已捷足先登。\n不论如何，想取得宝藏，只怕免不了一场恶战了。\n（此处颇为凶险，建议携带队友前往）"
   splits:
   - text: "这山洞地处荒野，周边却有诸多行人与车马留下的踪迹，想必这便是传说中藏宝之所，不知是何人已捷足先登。"
+    translated: "This cave is located in the wilderness, yet there are numerous traces left by passersby and carriages around it. The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact. I wonder if someone has already beaten me to it."
   - subIndex: 1
     text: "不论如何，想取得宝藏，只怕免不了一场恶战了。"
     translated: "No matter what, it seems we'll have to face a fierce battle to obtain the treasure."
@@ -12739,6 +12884,7 @@
 - raw: "远处有名僧人打扮之人正在化缘，应该如何是好？"
   splits:
   - text: "远处有名僧人打扮之人正在化缘，应该如何是好？"
+    translated: "What should we do about the monk who is going door‑to‑door for alms in the distance?"
 - raw: "远处有名农民打扮之人正在种地，应该如何是好？"
   splits:
   - text: "远处有名农民打扮之人正在种地，应该如何是好？"
@@ -12834,13 +12980,16 @@
 - raw: "选用的辅助品越珍贵，突破效率越高。\n提升建筑等级和对应武学技能，也可以增加突破效率。"
   splits:
   - text: "选用的辅助品越珍贵，突破效率越高。"
+    translated: "The more precious the fuzhipin, the higher the breakthrough efficiency."
   - subIndex: 1
     text: "提升建筑等级和对应武学技能，也可以增加突破效率。"
+    translated: "Boosting the level of buildings and the corresponding martial arts skills can also increase breakthrough efficiency."
   templates:
   - template: "{0}\n{1}"
 - raw: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，\n供后世所有名人雅士瞻仰。"
   splits:
   - text: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，"
+    translated: "Gradually became one of the most revered and weighty figures in the Wulin, with a single word carrying immense weight."
   - subIndex: 1
     text: "供后世所有名人雅士瞻仰。"
     translated: "For all renowned scholars of future generations to admire."
@@ -12849,6 +12998,7 @@
 - raw: "逐鹿盟南线的阎罗金刚联军攻克墨脱县后继续稳步推进，如今已兵临<b>#PosText#</b>城下。"
   splits:
   - text: "逐鹿盟南线的阎罗金刚联军攻克墨脱县后继续稳步推进，如今已兵临"
+    translated: "The Yama Golden King Alliance, after conquering Motuo County in the southern front of the Battle for the Swallowing Falcon Alliance, has continued to advance steadily. Now they have their troops at the gates of"
   - subIndex: 1
     text: "城下。"
     translated: "Below the city walls"
@@ -12866,6 +13016,7 @@
 - raw: "逐鹿盟大军休整妥当后，近日已自成都开拔，浩浩荡荡向<b>#PosText#</b>攻去。"
   splits:
   - text: "逐鹿盟大军休整妥当后，近日已自成都开拔，浩浩荡荡向"
+    translated: "After the Jiulu Alliance's main force had completed its rest and consolidation, it departed from Chengdu in recent days, advancing in great numbers toward"
   - subIndex: 1
     text: "攻去。"
     translated: "Attack"
@@ -12903,6 +13054,7 @@
     translated: "Through the Forbid option, you can forbid a disciple from using an item."
   - subIndex: 1
     text: "此举会消耗门派威望，并降低少许好感和忠诚。"
+    translated: "This action will consume the sect's prestige and slightly decrease goodwill and loyalty."
   templates:
   - template: "{0}\n{1}"
 - raw: "通过“指点”选项，你可以指点弟子，助其快速获取武功经验。"
@@ -12954,6 +13106,7 @@
 - raw: "邀请同行"
   splits:
   - text: "邀请同行"
+    translated: "Invite peers"
 - raw: "邀请同门入队，只需好感达到50点。\n邀请非同门，则需好感达到80点。"
   splits:
   - text: "邀请同门入队，只需好感达到50点。"
@@ -13024,6 +13177,7 @@
 - raw: "阁下可是#$PlayerName#？能在此处相遇，真是有缘。"
   splits:
   - text: "阁下可是#$PlayerName#？能在此处相遇，真是有缘。"
+    translated: "Are you#$PlayerName#? It's fate that we meet here."
 - raw: "阁下是..."
   splits:
   - text: "阁下是..."
@@ -13111,6 +13265,7 @@
     translated: "Subordinate sects will follow the Sect Leader's lead and no longer attack other sects."
   - subIndex: 1
     text: "此外还会上贡每月收入的20%。"
+    translated: "In addition, a percentage of the monthly income, 20%, will be presented as tribute."
   templates:
   - template: "{0}\n{1}"
 - raw: "附近村镇的民众在此举办庙会，周边行商旅人纷纷汇集于此，\n其间摊贩密布，百货云集，颇具盛况！\n若是闲来无事，我不妨也来凑个热闹。"
@@ -13276,3 +13431,416 @@
     translated: "You can move to adjacent tiles"
   templates:
   - template: "{0}WSAD{1}\n{2}"
+- raw: "长老"
+  splits:
+  - text: "长老"
+    translated: "Elder"
+- raw: "亲传弟子"
+  splits:
+  - text: "亲传弟子"
+    translated: "Direct disciple"
+- raw: "内功"
+  splits:
+  - text: "内功"
+    translated: "Neigong"
+- raw: "内力上限"
+  splits:
+  - text: "内力上限"
+    translated: "Inner Power Cap"
+- raw: "灵巧"
+  splits:
+  - text: "灵巧"
+    translated: "Nimble"
+- raw: "意志"
+  splits:
+  - text: "意志"
+    translated: "Willpower"
+- raw: "体质"
+  splits:
+  - text: "体质"
+    translated: "Physique"
+- raw: "速度"
+  splits:
+  - text: "速度"
+    translated: "Speed"
+- raw: "闪避"
+  splits:
+  - text: "闪避"
+    translated: "Dodge"
+- raw: "护甲"
+  splits:
+  - text: "护甲"
+    translated: "Armor"
+- raw: "内力"
+  splits:
+  - text: "内力"
+    translated: "Inner Power"
+- raw: "伤害"
+  splits:
+  - text: "伤害"
+    translated: "Damage"
+- raw: "剑法"
+  splits:
+  - text: "剑法"
+    translated: "Sword Art"
+- raw: "暴击"
+  splits:
+  - text: "暴击"
+    translated: "Critical hit"
+- raw: "长兵"
+  splits:
+  - text: "长兵"
+    translated: "Long weapon"
+- raw: "外伤"
+  splits:
+  - text: "外伤"
+    translated: "External Injury"
+- raw: "奇门"
+  splits:
+  - text: "奇门"
+    translated: "Qi Men"
+- raw: "体力上限"
+  splits:
+  - text: "体力上限"
+    translated: "Maximum stamina"
+- raw: "负面加成"
+  splits:
+  - text: "负面加成"
+    translated: "Negative buffs"
+- raw: "疲劳"
+  splits:
+  - text: "疲劳"
+    translated: "Fatigue"
+- raw: "内伤"
+  splits:
+  - text: "内伤"
+    translated: "Internal Injury"
+- raw: "毒术"
+  splits:
+  - text: "毒术"
+    translated: "Poison Technique"
+- raw: "医术"
+  splits:
+  - text: "医术"
+    translated: "Medicine"
+- raw: "斗转"
+  splits:
+  - text: "斗转"
+    translated: "Stars turn"
+- raw: "吸血"
+  splits:
+  - text: "吸血"
+    translated: "Vampire"
+- raw: "机关速度"
+  splits:
+  - text: "机关速度"
+    translated: "Mechanism speed"
+- raw: "拆招"
+  splits:
+  - text: "拆招"
+    translated: "Counterattack"
+- raw: "威望"
+  splits:
+  - text: "威望"
+    translated: "Reputation"
+- raw: "药材"
+  splits:
+  - text: "药材"
+    translated: "Herbs"
+- raw: "银钱"
+  splits:
+  - text: "银钱"
+    translated: "Money"
+- raw: "粮食"
+  splits:
+  - text: "粮食"
+    translated: "Food grain"
+- raw: "学识"
+  splits:
+  - text: "学识"
+    translated: "Scholarship"
+- raw: "下毒"
+  splits:
+  - text: "下毒"
+    translated: "Poisoning"
+- raw: "临时:官兵领队&随机;;-1;事件难度;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "官兵领队"
+    translated: "Officer led the way"
+  - subIndex: 2
+    text: "随机"
+    translated: "Randomly"
+  - subIndex: 3
+    text: "事件难度"
+    translated: "Event difficulty"
+  templates:
+  - template: "{0}:{1}&{2};;-1;{3};-5"
+- raw: "交易"
+  splits:
+  - text: "交易"
+    translated: "Trade"
+- raw: "仙木灵果"
+  splits:
+  - text: "仙木灵果"
+    translated: "Immortal Wood Miraculous Fruit"
+- raw: "任务系统"
+  splits:
+  - text: "任务系统"
+    translated: "Task System"
+- raw: "侧击背击"
+  splits:
+  - text: "侧击背击"
+    translated: "Flank and Rear Assault"
+- raw: "修炼内功"
+  splits:
+  - text: "修炼内功"
+    translated: "Cultivate neigong"
+- raw: "修炼绝技"
+  splits:
+  - text: "修炼绝技"
+    translated: "Mastering Top Skills"
+- raw: "偷师"
+  splits:
+  - text: "偷师"
+    translated: "Steal techniques"
+- raw: "偷窃"
+  splits:
+  - text: "偷窃"
+    translated: "Theft"
+- raw: "别派挑衅"
+  splits:
+  - text: "别派挑衅"
+    translated: "Don't provoke them"
+- raw: "别派盗匪"
+  splits:
+  - text: "别派盗匪"
+    translated: "Don't dispatch bandits"
+- raw: "千里名驹"
+  splits:
+  - text: "千里名驹"
+- raw: "博骰教程"
+  splits:
+  - text: "博骰教程"
+    translated: "Dice Rolling Tutorial"
+- raw: "同门切磋"
+  splits:
+  - text: "同门切磋"
+    translated: "Fellow disciples' friendly exchange"
+- raw: "同门论战"
+  splits:
+  - text: "同门论战"
+    translated: "Intra‑Doctrinal Debates"
+- raw: "地痞闹事"
+  splits:
+  - text: "地痞闹事"
+    translated: "Hoodlum causing trouble"
+- raw: "城镇建筑"
+  splits:
+  - text: "城镇建筑"
+    translated: "Village building"
+- raw: "外功连击"
+  splits:
+  - text: "外功连击"
+    translated: "External Skill Combo"
+- raw: "太祖长拳"
+  splits:
+  - text: "太祖长拳"
+    translated: "Great Ancestor Long Fist"
+- raw: "失传秘籍"
+  splits:
+  - text: "失传秘籍"
+    translated: "Lost technique"
+- raw: "学人武功"
+  splits:
+  - text: "学人武功"
+    translated: "Scholar's martial arts"
+- raw: "对饮"
+  splits:
+  - text: "对饮"
+    translated: "Drinking together"
+- raw: "属性潜力"
+  splits:
+  - text: "属性潜力"
+    translated: "Attribute potential"
+- raw: "得罪了"
+  splits:
+  - text: "得罪了"
+    translated: "Forgiven me"
+- raw: "恢复状态"
+  splits:
+  - text: "恢复状态"
+    translated: "Restore status"
+- raw: "战斗基础"
+  splits:
+  - text: "战斗基础"
+    translated: "Fundamentals of Combat"
+- raw: "战斗恢复"
+  splits:
+  - text: "战斗恢复"
+    translated: "Battle recovery"
+- raw: "把酒言欢"
+  splits:
+  - text: "把酒言欢"
+    translated: "Drink and merrily chat"
+- raw: "抢夺"
+  splits:
+  - text: "抢夺"
+- raw: "拍卖大会"
+  splits:
+  - text: "拍卖大会"
+    translated: "Auction Festival"
+- raw: "拦路抢劫"
+  splits:
+  - text: "拦路抢劫"
+    translated: "Holdup"
+- raw: "掌门大会"
+  splits:
+  - text: "掌门大会"
+    translated: "Sect Leader Assembly"
+- raw: "掌门教程"
+  splits:
+  - text: "掌门教程"
+    translated: "Sect Leader Tutorial"
+- raw: "攻城战斗"
+  splits:
+  - text: "攻城战斗"
+    translated: "Siege battle"
+- raw: "旅行商人"
+  splits:
+  - text: "旅行商人"
+    translated: "Traveling merchant"
+- raw: "晋升职位"
+  splits:
+  - text: "晋升职位"
+    translated: "Promote position"
+- raw: "武功充能"
+  splits:
+  - text: "武功充能"
+    translated: "Skill charge"
+- raw: "武学奇才"
+  splits:
+  - text: "武学奇才"
+    translated: "Martial prodigy"
+- raw: "皇家宝库"
+  splits:
+  - text: "皇家宝库"
+    translated: "Royal Treasury"
+- raw: "看家护院"
+  splits:
+  - text: "看家护院"
+    translated: "Guard the household and property"
+- raw: "破"
+  splits:
+  - text: "破"
+    translated: "Crack"
+- raw: "神兵现世"
+  splits:
+  - text: "神兵现世"
+    translated: "Divine weapon revealed"
+- raw: "离开"
+  splits:
+  - text: "离开"
+    translated: "Leave"
+- raw: "索取物品"
+  splits:
+  - text: "索取物品"
+    translated: "Request items"
+- raw: "练习外功"
+  splits:
+  - text: "练习外功"
+    translated: "Practice external skill"
+- raw: "羞辱"
+  splits:
+  - text: "羞辱"
+    translated: "Humiliation"
+- raw: "苦行僧人"
+  splits:
+  - text: "苦行僧人"
+    translated: "Ascetic"
+- raw: "装备武功"
+  splits:
+  - text: "装备武功"
+    translated: "Equip martial arts skill"
+- raw: "角色交互"
+  splits:
+  - text: "角色交互"
+    translated: "Character Interaction"
+- raw: "请指教"
+  splits:
+  - text: "请指教"
+    translated: "Please instruct me"
+- raw: "豪商巨贾"
+  splits:
+  - text: "豪商巨贾"
+    translated: "Rich merchants and industrialists"
+- raw: "赤脚医生"
+  splits:
+  - text: "赤脚医生"
+    translated: "Barefoot doctor"
+- raw: "进阶武学"
+  splits:
+  - text: "进阶武学"
+    translated: "Advanced Martial Arts"
+- raw: "迷宫探索"
+  splits:
+  - text: "迷宫探索"
+    translated: "Maze exploration"
+- raw: "通"
+  splits:
+  - text: "通"
+    translated: "Pass"
+- raw: "邀请入队"
+  splits:
+  - text: "邀请入队"
+    translated: "Invite to join the team"
+- raw: "镖师求助"
+  splits:
+  - text: "镖师求助"
+    translated: "Martial artist in need"
+- raw: "门派交互"
+  splits:
+  - text: "门派交互"
+    translated: "Sect interaction"
+- raw: "门派任务"
+  splits:
+  - text: "门派任务"
+    translated: "Sect quest"
+- raw: "门派管理"
+  splits:
+  - text: "门派管理"
+    translated: "Sect Management"
+- raw: "阅读秘籍"
+  splits:
+  - text: "阅读秘籍"
+    translated: "Read the cheat sheet"
+- raw: "附庸兑换"
+  splits:
+  - text: "附庸兑换"
+    translated: "Vassal Exchange"
+- raw: "附庸门派"
+  splits:
+  - text: "附庸门派"
+    translated: "Subsidiary Sect"
+- raw: "隐居神医"
+  splits:
+  - text: "隐居神医"
+    translated: "Hermit Sage Physician"
+- raw: "难"
+  splits:
+  - text: "难"
+    translated: "Hard"
+- raw: "雇佣帮手"
+  splits:
+  - text: "雇佣帮手"
+    translated: "Hire an assistant"
+- raw: "飞贼夺物"
+  splits:
+  - text: "飞贼夺物"
+    translated: "Pickpocketing"
+- raw: "马匹系统"
+  splits:
+  - text: "马匹系统"
+    translated: "Horse system"

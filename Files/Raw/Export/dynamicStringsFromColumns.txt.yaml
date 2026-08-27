@@ -10274,3 +10274,314 @@
     text: "可以向相邻地图格移动。"
   templates:
   - template: "{0}WSAD{1}\n{2}"
+- raw: "长老"
+  splits:
+  - text: "长老"
+- raw: "亲传弟子"
+  splits:
+  - text: "亲传弟子"
+- raw: "内功"
+  splits:
+  - text: "内功"
+- raw: "内力上限"
+  splits:
+  - text: "内力上限"
+- raw: "灵巧"
+  splits:
+  - text: "灵巧"
+- raw: "意志"
+  splits:
+  - text: "意志"
+- raw: "体质"
+  splits:
+  - text: "体质"
+- raw: "速度"
+  splits:
+  - text: "速度"
+- raw: "闪避"
+  splits:
+  - text: "闪避"
+- raw: "护甲"
+  splits:
+  - text: "护甲"
+- raw: "内力"
+  splits:
+  - text: "内力"
+- raw: "伤害"
+  splits:
+  - text: "伤害"
+- raw: "剑法"
+  splits:
+  - text: "剑法"
+- raw: "暴击"
+  splits:
+  - text: "暴击"
+- raw: "长兵"
+  splits:
+  - text: "长兵"
+- raw: "外伤"
+  splits:
+  - text: "外伤"
+- raw: "奇门"
+  splits:
+  - text: "奇门"
+- raw: "体力上限"
+  splits:
+  - text: "体力上限"
+- raw: "负面加成"
+  splits:
+  - text: "负面加成"
+- raw: "疲劳"
+  splits:
+  - text: "疲劳"
+- raw: "内伤"
+  splits:
+  - text: "内伤"
+- raw: "毒术"
+  splits:
+  - text: "毒术"
+- raw: "医术"
+  splits:
+  - text: "医术"
+- raw: "斗转"
+  splits:
+  - text: "斗转"
+- raw: "吸血"
+  splits:
+  - text: "吸血"
+- raw: "机关速度"
+  splits:
+  - text: "机关速度"
+- raw: "拆招"
+  splits:
+  - text: "拆招"
+- raw: "威望"
+  splits:
+  - text: "威望"
+- raw: "药材"
+  splits:
+  - text: "药材"
+- raw: "银钱"
+  splits:
+  - text: "银钱"
+- raw: "粮食"
+  splits:
+  - text: "粮食"
+- raw: "学识"
+  splits:
+  - text: "学识"
+- raw: "下毒"
+  splits:
+  - text: "下毒"
+- raw: "临时:官兵领队&随机;;-1;事件难度;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "官兵领队"
+  - subIndex: 2
+    text: "随机"
+  - subIndex: 3
+    text: "事件难度"
+  templates:
+  - template: "{0}:{1}&{2};;-1;{3};-5"
+- raw: "交易"
+  splits:
+  - text: "交易"
+- raw: "仙木灵果"
+  splits:
+  - text: "仙木灵果"
+- raw: "任务系统"
+  splits:
+  - text: "任务系统"
+- raw: "侧击背击"
+  splits:
+  - text: "侧击背击"
+- raw: "修炼内功"
+  splits:
+  - text: "修炼内功"
+- raw: "修炼绝技"
+  splits:
+  - text: "修炼绝技"
+- raw: "偷师"
+  splits:
+  - text: "偷师"
+- raw: "偷窃"
+  splits:
+  - text: "偷窃"
+- raw: "别派挑衅"
+  splits:
+  - text: "别派挑衅"
+- raw: "别派盗匪"
+  splits:
+  - text: "别派盗匪"
+- raw: "千里名驹"
+  splits:
+  - text: "千里名驹"
+- raw: "博骰教程"
+  splits:
+  - text: "博骰教程"
+- raw: "同门切磋"
+  splits:
+  - text: "同门切磋"
+- raw: "同门论战"
+  splits:
+  - text: "同门论战"
+- raw: "地痞闹事"
+  splits:
+  - text: "地痞闹事"
+- raw: "城镇建筑"
+  splits:
+  - text: "城镇建筑"
+- raw: "外功连击"
+  splits:
+  - text: "外功连击"
+- raw: "太祖长拳"
+  splits:
+  - text: "太祖长拳"
+- raw: "失传秘籍"
+  splits:
+  - text: "失传秘籍"
+- raw: "学人武功"
+  splits:
+  - text: "学人武功"
+- raw: "对饮"
+  splits:
+  - text: "对饮"
+- raw: "属性潜力"
+  splits:
+  - text: "属性潜力"
+- raw: "得罪了"
+  splits:
+  - text: "得罪了"
+- raw: "恢复状态"
+  splits:
+  - text: "恢复状态"
+- raw: "战斗基础"
+  splits:
+  - text: "战斗基础"
+- raw: "战斗恢复"
+  splits:
+  - text: "战斗恢复"
+- raw: "把酒言欢"
+  splits:
+  - text: "把酒言欢"
+- raw: "抢夺"
+  splits:
+  - text: "抢夺"
+- raw: "拍卖大会"
+  splits:
+  - text: "拍卖大会"
+- raw: "拦路抢劫"
+  splits:
+  - text: "拦路抢劫"
+- raw: "掌门大会"
+  splits:
+  - text: "掌门大会"
+- raw: "掌门教程"
+  splits:
+  - text: "掌门教程"
+- raw: "攻城战斗"
+  splits:
+  - text: "攻城战斗"
+- raw: "旅行商人"
+  splits:
+  - text: "旅行商人"
+- raw: "晋升职位"
+  splits:
+  - text: "晋升职位"
+- raw: "武功充能"
+  splits:
+  - text: "武功充能"
+- raw: "武学奇才"
+  splits:
+  - text: "武学奇才"
+- raw: "皇家宝库"
+  splits:
+  - text: "皇家宝库"
+- raw: "看家护院"
+  splits:
+  - text: "看家护院"
+- raw: "破"
+  splits:
+  - text: "破"
+- raw: "神兵现世"
+  splits:
+  - text: "神兵现世"
+- raw: "离开"
+  splits:
+  - text: "离开"
+- raw: "索取物品"
+  splits:
+  - text: "索取物品"
+- raw: "练习外功"
+  splits:
+  - text: "练习外功"
+- raw: "羞辱"
+  splits:
+  - text: "羞辱"
+- raw: "苦行僧人"
+  splits:
+  - text: "苦行僧人"
+- raw: "装备武功"
+  splits:
+  - text: "装备武功"
+- raw: "角色交互"
+  splits:
+  - text: "角色交互"
+- raw: "请指教"
+  splits:
+  - text: "请指教"
+- raw: "豪商巨贾"
+  splits:
+  - text: "豪商巨贾"
+- raw: "赤脚医生"
+  splits:
+  - text: "赤脚医生"
+- raw: "进阶武学"
+  splits:
+  - text: "进阶武学"
+- raw: "迷宫探索"
+  splits:
+  - text: "迷宫探索"
+- raw: "通"
+  splits:
+  - text: "通"
+- raw: "邀请入队"
+  splits:
+  - text: "邀请入队"
+- raw: "镖师求助"
+  splits:
+  - text: "镖师求助"
+- raw: "门派交互"
+  splits:
+  - text: "门派交互"
+- raw: "门派任务"
+  splits:
+  - text: "门派任务"
+- raw: "门派管理"
+  splits:
+  - text: "门派管理"
+- raw: "阅读秘籍"
+  splits:
+  - text: "阅读秘籍"
+- raw: "附庸兑换"
+  splits:
+  - text: "附庸兑换"
+- raw: "附庸门派"
+  splits:
+  - text: "附庸门派"
+- raw: "隐居神医"
+  splits:
+  - text: "隐居神医"
+- raw: "难"
+  splits:
+  - text: "难"
+- raw: "雇佣帮手"
+  splits:
+  - text: "雇佣帮手"
+- raw: "飞贼夺物"
+  splits:
+  - text: "飞贼夺物"
+- raw: "马匹系统"
+  splits:
+  - text: "马匹系统"
