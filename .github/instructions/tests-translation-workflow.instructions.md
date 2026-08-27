@@ -157,6 +157,26 @@ files use, so no game process, Harmony, or IL2CPP-awareness is needed to read th
   `GameFileHandling.ExportPrefabTextAssetToCustomFormat` (`FileInputWorkflowTests`'s
   `"1b. ExportPrefabTextIntoTranslated"`, run right after step 1, before step 2's merge) — this is
   no longer purely a read-only discovery step. See "PrefabText pipeline" below.
+- **`IsPrimaryTextField`'s `"m_Text"`/`"text"` allowlist misses real displayed text on several
+  other `MonoBehaviour` fields (2026-08-27 finding, via in-game screenshots of untranslated text)**
+  — confirmed for character-creation hero-class template badges (`异士模板`, `弓手模板`, etc.)
+  living on a plain `name` field, and more broadly for `eventName`/`tutorialName`/`showName`/
+  `bulletName`/`fullName`/`jobName`/`spellName`/`pointName`/`sourceName`/`plotName`. These land in
+  `dumpedOtherText.txt` only (diagnostic, not fed into the pipeline) and never get translated as a
+  result. Rather than widen `IsPrimaryTextField` itself (risky — `dumpedOtherText.txt`'s `data`
+  field mixes real content like `丐帮`/`万安客栈` with internal asset/UI names like
+  `下拉菜单_按钮`/`三角形`/`中型树0` on the exact same field name, and `targetName` similarly mixes
+  a few real NPC names with internal `临时:强盗头目&随机;;;事件难度+0.5;-8;;true`-style config
+  strings), this is now handled by a **second automated dynamic-string extraction source**: see
+  `GameFileHandling.ExtractDynamicStringCandidatesFromOtherText` /
+  `DynamicStringOtherTextFields` below, registered as `FileInputWorkflowTests`'s
+  `"1c. ExportDynamicStringsIntoTranslated"` fact (both extraction sources now run inline at the
+  start of that single fact). `data`/`targetName` were sampled
+  and found too noisy even after filtering out ASCII-suspicious entries, so they're deliberately
+  NOT in `DynamicStringOtherTextFields` — if a future screenshot confirms a real missing string on
+  one of those two fields specifically, add it directly to `dynamicStrings.txt` (the file merged in
+  from reviewed `output/_dynamicStrings_candidates.txt` entries - see the DynamicStringsIL2CPP
+  pipeline section below) rather than promoting the whole field wholesale.
 
 ## PrefabText pipeline (`dumpedPrefabText.txt` → `Files/Mod/dumpedPrefabText.txt.yaml`)
 
@@ -245,17 +265,70 @@ larger, otherwise data-driven runtime string.
   `ForceData.csv` column 1 = force/sect name, `SpeHeroData.csv` column 5 = rank/tier tag - see the
   bare-fragment-corruption bug writeup in `dragonheirplugin.instructions.md`).
   `GameFileHandling.ExtractDynamicStringCandidatesFromColumns` (run via `FileInputWorkflowTests`'s
-  `"1c-pre. ExtractDynamicStringCandidatesFromColumns"`, before `"1c."`) pulls distinct values from
+  the merged `"1c. ExportDynamicStringsIntoTranslated"` fact, before the export call in that same
+  fact) pulls distinct values from
   those columns into a second dump file, `Files/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt`
   (deduped against the master `dynamicStrings.txt` and idempotent across re-runs), registered as its
   own `TextFileToSplit` entry with the same `TextFileType.DynamicStringsIL2CPP` - flows through the
-  same export/merge/package steps as the hand-curated file, just packaged separately as
+  same export/merge/package steps as the master `dynamicStrings.txt` file (itself populated by
+  reviewing/merging `output/_dynamicStrings_candidates.txt`, not hand-authored), just packaged
+  separately as
   `Files/Mod/dynamicStringsFromColumns.txt.yaml`. `DragonHeirPlugin/DynamicStringPatches.cs` loads
   every `dynamicStrings*.txt.yaml` file it finds (not one fixed filename) and merges them into one
   in-memory dictionary, so this needed no runtime-consumption changes beyond that glob.
+- **Third source, also config-driven, writing to the SAME `dynamicStringsFromColumns.txt` file:**
+  `GameFileHandling.DynamicStringOtherTextFields` declares a hand-vetted allowlist of
+  `AssetDumperWorkflowTests`-produced `DumpedTextEntry.Field` names (`name`, `eventName`,
+  `tutorialName`, `showName`, `bulletName`, `fullName`, `jobName`, `spellName`, `pointName`,
+  `sourceName`, `plotName`, and - added 2026-08-27 - `plotText`, `tutorialText`, `choiceText`,
+  `startRemindText`, `describe`, `eventDescribe`, `jobDescribe`) known to hold real player-facing
+  text that `IsPrimaryTextField`'s `"m_Text"`/`"text"` check misses (e.g. hero-class creation
+  template badges like `异士模板` live on a plain `name` field - see the finding above).
+  `GameFileHandling.ExtractDynamicStringCandidatesFromOtherText` (run via
+  the same merged `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"` fact, run
+  inline right alongside the CSV-column source above, both before that fact's own export call) reads
+  `Files/Raw/Dumped/PrefabText/dumpedOtherText.txt` (produced by the separate, one-off
+  `AssetDumperWorkflowTests.DumpChineseTextFromAssets` asset scan - this extraction only finds
+  anything new after that scan has been re-run), keeps every distinct value whose field is in the
+  allowlist, and appends any not already seen to `dynamicStringsFromColumns.txt` - deduped and
+  idempotent the same way as the CSV-column source above. `data` and `targetName` were sampled and
+  found too noisy to promote wholesale (mix real content with internal asset/UI names or
+  config-string fragments on the exact same field name) - deliberately left out; add a genuinely
+  missing string from one of those two fields directly to `dynamicStrings.txt` instead.
+  - **The `plotText`/`tutorialText`/`choiceText`/`startRemindText`/`describe`/`eventDescribe`/
+    `jobDescribe` fields are long paragraphs/sentences on custom data classes (`SinglePlotData`,
+    `InnData`, `EventData`-like structures), not baked directly onto a `TMP_Text`/`UI.Text`
+    component - this directly contradicts `DragonHeirPlugin/PrefabTextPatches.cs`'s own doc
+    comment, which claims these fields "are already populated from the existing CSV workflow, no
+    runtime patch needed". Verified empirically wrong: grepped every raw value sampled from these
+    fields against every file in `Files/Raw/Dumped/GameData/*.csv` - zero matches for any of them.
+    Do not trust that comment for any other field without similarly verifying against the CSVs.
+  - Despite being long-form rather than short labels, these still belong in the
+    **DynamicStrings** (substring-replace) mechanism, not `PrefabText` (whole-string load-time
+    scan) - `PrefabTextPatches.cs` only inspects a `TMP_Text`/`UI.Text` component's `text` value
+    once, at `Resources.Load`/`AssetBundle.LoadAsset`/scene-load time, and never re-checks it
+    afterward, so it would never see a value assigned later at arbitrary runtime (e.g. when a plot
+    dialog or tutorial popup actually opens) - which is exactly when these fields get copied onto
+    a UI component's `.text`. `DynamicStringPatches.cs`, by contrast, patches the
+    `TMP_Text.text`/`UI.Text.text` **setters** themselves (sink-level, field-agnostic - see its
+    `TmpTextSetText_Postfix`/`UiTextSetText_Postfix`), so it catches the value the moment it's
+    actually displayed regardless of which source field it came from - exactly what these need.
+    `DynamicStringPatches.LoadDictionary` already sorts entries longest-first specifically so a
+    full-paragraph entry can never be corrupted by a shorter, unrelated fragment matching part of
+    it first, and the existing `GamePlaceholderTokenRegex`/`CheckTransalationSuccessful`
+    placeholder-preservation check already runs unconditionally (not just for CSV columns), so no
+    new validation was needed for the longer/paragraph case. Each field was sampled for noise the
+    same way as the short name-fields before being added (checked for stray ASCII-letter runs not
+    part of a `#Placeholder#` token): `plotText` (415 total, 3 suspicious - all confirmed
+    legitimate `<color=red>` markup), `choiceText` (160/160 clean), `describe` (247/247 clean),
+    `startRemindText` (240/240 clean), `eventDescribe` (27/27 clean), `jobDescribe` (12/12 clean),
+    `tutorialText` (308 total, 7 suspicious - all confirmed legitimate key-name references like
+    `Shift`/`WSAD`/`Tab` inside `<b>...</b>` tags).
 - `GameFileHandling.ExportDynamicStringTextAssetToCustomFormat` (run via
   `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"`, right after step 1b, before
-  step 2's merge) calls `DynamicStringWorkflow.ExportDynamicStringsToCustomFormat`.
+  step 2's merge) calls `DynamicStringWorkflow.ExportDynamicStringsToCustomFormat` - this single
+  fact now also runs both automated candidate-extraction sources inline first (see below), so
+  there's only one fact to run for the whole dynamic-strings workflow.
 - `GameFileHandling.PackageFinalTranslationAsync` filters `TextFileType.DynamicStringsIL2CPP`
   entries out of the CSV reconstruction loop (same as PrefabText) and calls
   `DynamicStringWorkflow.PackageDynamicStringsAsync` for each, producing

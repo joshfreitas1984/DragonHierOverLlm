@@ -165,16 +165,13 @@
     text: "呼"
   - split: 10
     subIndex: 2
-    text: "弟子"
+    text: "弟子#$PlayerName#拜见师傅！"
   - split: 10
     subIndex: 3
-    text: "拜见师傅！"
-  - split: 10
-    subIndex: 4
     text: "呼"
   templates:
   - split: 10
-    template: "{0}…{1}…{2}#$PlayerName#{3}……{4}…"
+    template: "{0}…{1}…{2}……{3}…"
 - raw: ",,,右,,,,,,,都日晒三竿了，怎么还窝在宿舍里赖床？\\n我看今天的练功早课，#PlayerName#你也没去吧。"
   splits:
   - split: 3
@@ -375,13 +372,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "你天赋不差，为师自然多几分期望。"
+    text: "#$PlayerName#你天赋不差，为师自然多几分期望。"
   - split: 10
     subIndex: 1
     text: "从今日起，你要勤学苦练，万万不可再轻慢懈怠。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,免得日后行走江湖，听说你是我姜映泉的弟子，\\n为师也要叫江湖中人耻笑，教出这么个不成器的弟子！"
   splits:
   - split: 3
@@ -1394,13 +1391,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "年轻气盛，不妨使个激将法）"
+    text: "（#$PlayerName#年轻气盛，不妨使个激将法）"
   - split: 10
     subIndex: 1
     text: "噢哟？我不信。#PlayerName#要是刻苦练功，这太阳岂不是要从西边出来了？"
   templates:
   - split: 10
-    template: "（#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,干脆我跟你打个赌好了！\\n若#PlayerName#能<b>在一个月内，将太祖长拳提升一重功力</b>，\\n我便将前几日机缘巧合得的一本秘籍，拱手相赠与你，如何？"
   splits:
   - split: 3
@@ -2458,13 +2455,10 @@
     text: "#TargetInteractName#放心，"
   - split: 10
     subIndex: 3
-    text: "以后复兴本门的重任，就包在我"
-  - split: 10
-    subIndex: 4
-    text: "身上！"
+    text: "以后复兴本门的重任，就包在我#$PlayerName#身上！"
   templates:
   - split: 10
-    template: "{0}~{1}~{2}\\n{3}#$PlayerName#{4}"
+    template: "{0}~{1}~{2}\\n{3}"
 - raw: ",,,右,,,,,,,又贫嘴！\\n……话说这两天山上寒气料峭，你怎么还穿着这身单衣？\\n若是病倒了，还怎么复兴我仙霞派？"
   splits:
   - split: 3
@@ -3191,13 +3185,10 @@
     text: "竟敢辱我师门，伤我师兄，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "今天也跟你们拼了！"
+    text: "我#$PlayerName#今天也跟你们拼了！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,余采薇,右,,,,,,,#PlayerName#，你修为尚浅，莫要逞强。"
   splits:
   - split: 2
@@ -4018,19 +4009,16 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "初出茅庐的"
+    text: "初出茅庐的#$PlayerName#，会在未来的江湖风波中扮演怎样的角色，"
   - split: 10
     subIndex: 1
-    text: "，会在未来的江湖风波中扮演怎样的角色，"
-  - split: 10
-    subIndex: 2
     text: "你所立下的宏伟志向，又将如何影响仙霞派，乃至整个武林的命运，"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "此时此刻，一切都还犹未可知。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "25,玩家,姜映泉,右,,,,,,,哎……这可如何是好。"
   splits:
   - split: 1
@@ -4120,16 +4108,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "这次你就随"
+    text: "这次你就随#$PlayerName#一起下山，增长些见识吧。"
   - split: 10
     subIndex: 1
-    text: "一起下山，增长些见识吧。"
-  - split: 10
-    subIndex: 2
     text: "师兄弟之间也好有个照应。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,好的师傅！"
   splits:
   - split: 3
@@ -4179,10 +4164,10 @@
     text: "为师在马厩中挑选了一匹小马和一副鞍具，"
   - split: 10
     subIndex: 2
-    text: "你就骑它下山吧！"
+    text: "#$PlayerName#你就骑它下山吧！"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n#$PlayerName#{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,江湖路远，旅途多艰，这马儿可是武林中人极为重要之伙伴，\\n#PlayerName#你要好生爱惜照护，在危机时分方能指望它解围脱困。"
   splits:
   - split: 3
@@ -7588,16 +7573,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "原来是陆师伯，在下"
+    text: "原来是陆师伯，在下#$PlayerName#，在仙霞派弟子中入门最晚。"
   - split: 10
     subIndex: 1
-    text: "，在仙霞派弟子中入门最晚。"
-  - split: 10
-    subIndex: 2
     text: "陆师伯既是师傅的兄长，不知为何从未在派内见过？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,……我一向独来独往，不喜吵闹，\\n过惯了四海为家的闲散生活，\\n所以就早早出师，下山游历去了。"
   splits:
   - split: 3
@@ -7787,16 +7769,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "师姐有命，"
+    text: "师姐有命，#$PlayerName#岂敢不从。"
   - split: 10
     subIndex: 1
-    text: "岂敢不从。"
-  - split: 10
-    subIndex: 2
     text: "不过这书信是要送给何人呀？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,京城内有位长辈有恩于我，这次本该亲自前去拜访的，\\n但这门内大事小事，杂务不断，实在脱不开身。"
   splits:
   - split: 3
@@ -7905,13 +7884,13 @@
     text: "是我"
   - split: 10
     subIndex: 2
-    text: "在下仙霞派弟子"
+    text: "在下仙霞派弟子#$PlayerName#。"
   - split: 10
     subIndex: 3
     text: "（好霸气的女子，声势不同凡响，武功更是深不可测！）"
   templates:
   - split: 10
-    template: "{0}……{1}……{2}#$PlayerName#。\\n{3}"
+    template: "{0}……{1}……{2}\\n{3}"
 - raw: ",,,右,,,,,,,原来是姜掌门的高徒，我乃你师傅故交，\\n他老人家一切安好？"
   splits:
   - split: 3
@@ -8552,17 +8531,14 @@
     text: "区区一群小贼，想动魏师兄？"
   - split: 10
     subIndex: 1
-    text: "先过我"
-  - split: 10
-    subIndex: 2
-    text: "这关！"
+    text: "先过我#$PlayerName#这关！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 8
     template: "ChangeHeroFavor;{0}-5"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",魏胥华,,左,,,,,ChangeMaxFightSkill;魏胥华-4-2,,好，#PlayerName#有志气！\\n我这做大师兄的岂能落后？"
   splits:
   - split: 1
@@ -8793,13 +8769,10 @@
     text: "你们两个，留在这儿只会拖我后腿！"
   - split: 10
     subIndex: 1
-    text: "姜婉，带着"
-  - split: 10
-    subIndex: 2
-    text: "能跑多远跑多远！"
+    text: "姜婉，带着#$PlayerName#能跑多远跑多远！"
   templates:
   - split: 10
-    template: "……{0}\\n{1}#$PlayerName#{2}"
+    template: "……{0}\\n{1}"
 - raw: ",,,左,,,,,,,可是......"
   splits:
   - split: 3
@@ -8912,16 +8885,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "好！"
+    text: "好！#$PlayerName#今日奋勇当先，为巴陵百姓除了一害，"
   - split: 10
     subIndex: 1
-    text: "今日奋勇当先，为巴陵百姓除了一害，"
-  - split: 10
-    subIndex: 2
     text: "不愧是为师的好徒儿！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: "63,姜映泉,黄豺,左,,,SpeEffect/剑雨,,ChangeInjury;黄豺-0-200,,无影乱剑！"
   splits:
   - split: 1
@@ -9231,16 +9201,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "姜婉，杨思迟，"
+    text: "姜婉，杨思迟，#$PlayerName#，你们检查下这商队遇难者，"
   - split: 10
     subIndex: 1
-    text: "，你们检查下这商队遇难者，"
-  - split: 10
-    subIndex: 2
     text: "将幸存之人尽快送到巴陵村寻大夫医治。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,,,,是！"
   splits:
   - split: 1
@@ -10783,7 +10750,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，还有思迟啊，"
+    text: "#$PlayerName#，还有思迟啊，"
   - split: 10
     subIndex: 1
     text: "你们作为师兄，与云裳年纪相仿，她如今父母双亡，孤苦无依，"
@@ -10792,7 +10759,7 @@
     text: "所以你们平日在生活和练武中，还要勤于关心，多加照顾才是。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,是！师傅。"
   splits:
   - split: 3
@@ -11231,13 +11198,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "你年轻气盛，只当这江湖中尽是快意恩仇，打打杀杀。"
+    text: "#$PlayerName#你年轻气盛，只当这江湖中尽是快意恩仇，打打杀杀。"
   - split: 10
     subIndex: 1
     text: "其实人情世故，韬略纵横，才是令那些名门大派屹立不倒，香火旺盛之秘诀。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,好了好了，青城派需沿长江逆流而上，还有两三天的路程。\\n你快去快回，为师等着周莫知掌门的回信。"
   splits:
   - split: 3
@@ -11271,13 +11238,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "哦，不是不是，在下仙霞派弟子"
+    text: "哦，不是不是，在下仙霞派弟子#$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "受师傅之托前来拜会贵派掌门周莫知他老人家，并送上书帖和薄礼一份。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,仙霞派？要得要得，我也时常听师傅提起，与本派关系好得很。\\n这样嘛，我领你去正厅见师傅，也免得你在派内迷了路。"
   splits:
   - split: 3
@@ -11364,13 +11331,10 @@
     text: "不错，此前那位应该是顾游年顾师兄。"
   - split: 10
     subIndex: 1
-    text: "在下"
-  - split: 10
-    subIndex: 2
-    text: "是师傅新招收的弟子，这等跑腿的活自然就由我代劳了。"
+    text: "在下#$PlayerName#是师傅新招收的弟子，这等跑腿的活自然就由我代劳了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,嗯，才思敏捷，不卑不亢，姜掌门收了个好徒弟啊。"
   splits:
   - split: 3
@@ -12921,13 +12885,10 @@
     text: "哎呀，幸会幸会！"
   - split: 10
     subIndex: 1
-    text: "我嘞是青城派弟子王添翼，这位是仙霞派弟子"
-  - split: 10
-    subIndex: 2
-    text: "，也都是江湖中人啦。"
+    text: "我嘞是青城派弟子王添翼，这位是仙霞派弟子#$PlayerName#，也都是江湖中人啦。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",雷殷殷,,左,,,,,,,黄河双煞？什么歪瓜裂枣。\\n再说了，这边是长江，你们黄河双煞在这儿劫什么道？"
   splits:
   - split: 1
@@ -16169,10 +16130,10 @@
     text: "（这三人名号一个赛一个响亮，功夫却只会些庄稼把式，怕不是三个傻子吧"
   - split: 10
     subIndex: 1
-    text: "额哈哈，三位好汉久仰久仰。在下仙霞派"
+    text: "额哈哈，三位好汉久仰久仰。在下仙霞派#$PlayerName#。"
   templates:
   - split: 10
-    template: "{0}……）\\n{1}#$PlayerName#。"
+    template: "{0}……）\\n{1}"
 - raw: ",,郝大力,右,,,,,,,#$PlayerName#？没听说过。"
   splits:
   - split: 2
@@ -16180,10 +16141,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "？没听说过。"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#？没听说过。"
 - raw: ",,汪财,右,,,,,,,怎么说话呢大哥！……\\n哈哈，少侠，我这位大哥脑筋不太好，说话没个分寸，还望见谅。"
   splits:
   - split: 2
@@ -17181,16 +17139,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "哈哈，我"
+    text: "哈哈，我#$PlayerName#办事，师妹还有啥不放心的。"
   - split: 10
     subIndex: 1
-    text: "办事，师妹还有啥不放心的。"
-  - split: 10
-    subIndex: 2
     text: "看看这是什么？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,呀，就是这个！谢谢#PlayerName#！\\n我这就拿去做些好菜，#PlayerName#到时候先替我尝尝。"
   splits:
   - split: 3
@@ -17836,13 +17791,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你与云裳一同去巴陵村散播消息，"
+    text: "#$PlayerName#，你与云裳一同去巴陵村散播消息，"
   - split: 10
     subIndex: 1
     text: "顺便带她熟悉熟悉本门治下村镇，路上注意安全。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,,,,是师傅。"
   splits:
   - split: 1
@@ -20668,13 +20623,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，顾游年，余采薇，姜婉，沈退，杨思迟，林云裳，"
+    text: "#$PlayerName#，顾游年，余采薇，姜婉，沈退，杨思迟，林云裳，"
   - split: 10
     subIndex: 1
     text: "此战事关本门荣辱，更是要替云裳父母，以及巴陵村父老乡亲报仇雪恨。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,你们只要听从大师兄魏胥华之指挥，同仇敌忾，精诚一致，\\n定能赢下此战，将这黑风寨连根拔起！"
   splits:
   - split: 3
@@ -22209,13 +22164,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你带剩余人手去多收集些木柴，"
+    text: "#$PlayerName#，你带剩余人手去多收集些木柴，"
   - split: 10
     subIndex: 1
     text: "等搬完物资便可放一把大火，将这山寨彻底烧毁，以绝后患。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,FireContinue,,ChangeMaxFightSkill;林云裳-4-5,,你们把寨内物资清剿一空，随后便将此处付之一炬。\\n大火从黎明烧到正午时分，将半边天都映成了红色。"
   splits:
   - split: 3
@@ -24141,16 +24096,13 @@
     text: "这这这"
   - split: 10
     subIndex: 1
-    text: "该死小贼竟如此下作，可别落到我"
+    text: "该死小贼竟如此下作，可别落到我#$PlayerName#手里！"
   - split: 10
     subIndex: 2
-    text: "手里！"
-  - split: 10
-    subIndex: 3
     text: "否则非得叫他求生不得，求死不能！"
   templates:
   - split: 10
-    template: "{0}……{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}……{1}\\n{2}"
 - raw: ",,余采薇,右,,,,,,,好了好了，别在这儿说大话了。\\n你师傅带着几位师兄已经直奔下山各条要道，去寻那贼人踪迹了。"
   splits:
   - split: 2
@@ -24789,13 +24741,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "师姐放心，有我"
+    text: "师姐放心，有我#$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "定不能让他动你一根毫毛。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: "178,,,无,,,,,,,（那人将你们打的东倒西歪，倒也没有乘胜追击，\\n只见得脚下一发力，便撞破身后窗户，倒纵入茫茫夜色之中）"
   splits:
   - split: 3
@@ -26728,13 +26680,10 @@
     text: "西北四骏？哪里冒出来的小马贼，"
   - split: 10
     subIndex: 1
-    text: "有没有听过我"
-  - split: 10
-    subIndex: 2
-    text: "的大名啊！"
+    text: "有没有听过我#$PlayerName#的大名啊！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,StartSpeFight;26,,好好好，看来小子你是敬酒不吃吃罚酒，兄弟们给我上！"
   splits:
   - split: 3
@@ -27148,13 +27097,10 @@
     text: "好家伙这一大家子，"
   - split: 10
     subIndex: 1
-    text: "就算你们太爷爷来了，这千里马也是我"
-  - split: 10
-    subIndex: 2
-    text: "的！"
+    text: "就算你们太爷爷来了，这千里马也是我#$PlayerName#的！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,马超群,右,,,,,StartSpeFight;28,,大言不惭！看我马超群一马当先，擒拿你这臭小子！"
   splits:
   - split: 2
@@ -28161,13 +28107,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "今日若再放过，只怕武林中人皆以我"
-  - split: 10
-    subIndex: 1
-    text: "是非不分，妇人之仁了。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "今日若再放过，只怕武林中人皆以我#$PlayerName#是非不分，妇人之仁了。"
 - raw: ",,,右,,,,,,出手惩戒;PunishFourHorse,落在你手里，实在是我西北四骏时运不济，\\n此乃天命，天命啊！"
   splits:
   - split: 3
@@ -28300,13 +28240,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "哼，我#SourceForceDescribe#"
+    text: "哼，我#SourceForceDescribe##$SourceInteractName#，"
   - split: 10
     subIndex: 1
     text: "今天就算豁出这条命，也要给老百姓除害！"
   templates:
   - split: 10
-    template: "{0}#$SourceInteractName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,（哪来的愣头青，居然吓不倒他？得再凶狠些）\\n好好好，我这双铁拳下已有九百九十九条冤魂，\\n你就来做第一百个好了！"
   splits:
   - split: 3
@@ -38723,13 +38663,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "既然如此，剩下的悬赏就一并交给这位"
-  - split: 10
-    subIndex: 1
-    text: "少侠吧。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "既然如此，剩下的悬赏就一并交给这位#$PlayerName#少侠吧。"
 - raw: ",,,右,,,,,,,我还需将这黄河双煞的尸首交由官府检验，也要告辞了。\\n你们三个，把尸首扛上，随我进京城去吧。"
   splits:
   - split: 3
@@ -39605,13 +39539,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，祝姜掌门福如东海，寿比南山。"
+    text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门福如东海，寿比南山。"
   - split: 10
     subIndex: 1
     text: "掌门特意嘱托我带来这件#PlotInteractItemName#，还请收下。"
   templates:
   - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",宋廉庭,,左,,,,,SpePlotFuc;19,,#SourceForceDescribe##$SourceInteractName#，祝姜掌门松鹤延年，福寿双全。\\n我还带了件#PlotInteractItemName#作为贺礼，请姜掌门笑纳。"
   splits:
   - split: 1
@@ -39619,13 +39553,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，祝姜掌门松鹤延年，福寿双全。"
+    text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门松鹤延年，福寿双全。"
   - split: 10
     subIndex: 1
     text: "我还带了件#PlotInteractItemName#作为贺礼，请姜掌门笑纳。"
   templates:
   - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",周莫知,,左,,,,,HidePlotItem,,#SourceForceDescribe##$SourceInteractName#，祝姜掌门松柏长青，日月昌明。\\n这件#PlotInteractItemName#聊表心意，还望莫要嫌弃。"
   splits:
   - split: 1
@@ -39633,13 +39567,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，祝姜掌门松柏长青，日月昌明。"
+    text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门松柏长青，日月昌明。"
   - split: 10
     subIndex: 1
     text: "这件#PlotInteractItemName#聊表心意，还望莫要嫌弃。"
   templates:
   - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哈哈哈，几位掌门百忙之中前来，姜某已是感激不尽。\\n这些厚礼实在受之有愧啊。快快请坐，快快请坐！"
   splits:
   - split: 3
@@ -39659,10 +39593,10 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，祝姜掌门"
+    text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门"
   templates:
   - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}……"
+    template: "{0}……"
 - raw: ",,玩家,右,,,,,,,师傅的寿宴，你们铁掌帮来凑什么热闹？"
   splits:
   - split: 2
@@ -43026,13 +42960,10 @@
     text: "顾师兄平日里对我也多有照顾，悉心指导我习武练功。"
   - split: 10
     subIndex: 2
-    text: "若是就这么弃他不顾，我"
-  - split: 10
-    subIndex: 3
-    text: "岂不是猪狗不如？"
+    text: "若是就这么弃他不顾，我#$PlayerName#岂不是猪狗不如？"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}#$PlayerName#{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,正好我还记得药王谷的路怎么走，咱们事不宜迟，这就求药去！\\n药王谷若是不肯，我就跟你一起下跪磕头，磕到他们答应为止！"
   splits:
   - split: 3
@@ -43405,13 +43336,10 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#SourceForceDescribe#"
-  - split: 10
-    subIndex: 1
-    text: "，敢问阁下"
+    text: "在下#SourceForceDescribe##$SourceInteractName#，敢问阁下"
   templates:
   - split: 10
-    template: "{0}#$SourceInteractName#{1}……"
+    template: "{0}……"
 - raw: ",,,右,,,,,,,药王谷。"
   splits:
   - split: 3
@@ -44576,13 +44504,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#SourceForceDescribe#"
-  - split: 10
-    subIndex: 1
-    text: "，见过宋掌门。"
-  templates:
-  - split: 10
-    template: "{0}#$SourceInteractName#{1}"
+    text: "在下#SourceForceDescribe##$SourceInteractName#，见过宋掌门。"
 - raw: ",顾游年,,左,,,,,,,#SourceForceDescribe##$SourceInteractName#，见过宋掌门。"
   splits:
   - split: 1
@@ -44590,10 +44512,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，见过宋掌门。"
-  templates:
-  - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}"
+    text: "#SourceForceDescribe##$SourceInteractName#，见过宋掌门。"
 - raw: ",,,右,,,,,,,原来是仙霞派二位高徒，此来有何贵干？"
   splits:
   - split: 3
@@ -45075,13 +44994,10 @@
     text: "不把顾兄治好，我皇甫斌名字倒过来写！"
   - split: 10
     subIndex: 2
-    text: "若把顾兄治好，你"
-  - split: 10
-    subIndex: 3
-    text: "名字倒过来写！"
+    text: "若把顾兄治好，你#$PlayerName#名字倒过来写！"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}#$PlayerName#{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,ScreenBlack,,好，一言为定！"
   splits:
   - split: 3
@@ -46967,16 +46883,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "哈哈，我"
+    text: "哈哈，我#$PlayerName#办事，师妹还有啥不放心的。"
   - split: 10
     subIndex: 1
-    text: "办事，师妹还有啥不放心的。"
-  - split: 10
-    subIndex: 2
     text: "看看这是什么？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,呀，就是这个！谢谢#PlayerName#！\\n我这就拿去做些好菜，#PlayerName#到时候先替我尝尝。"
   splits:
   - split: 3
@@ -47179,13 +47092,10 @@
     text: "狗贼，光天化日，朗朗乾坤，竟敢在此欺行霸市。"
   - split: 10
     subIndex: 1
-    text: "我#SourceForceDescribe#"
-  - split: 10
-    subIndex: 2
-    text: "第一个不同意！"
+    text: "我#SourceForceDescribe##$SourceInteractName#第一个不同意！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$SourceInteractName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,久仰久仰，在下“化虎成龙”张成化，乃是龙虎寨寨主。\\n在此向父老乡亲们收取保护费用，是为了寨内弟兄日常资用，实属无奈之举。"
   splits:
   - split: 3
@@ -48391,16 +48301,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "师姐放心，我"
+    text: "师姐放心，我#$PlayerName#料理这些小贼不在话下。"
   - split: 10
     subIndex: 1
-    text: "料理这些小贼不在话下。"
-  - split: 10
-    subIndex: 2
     text: "只是你自己多加小心！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,林云裳,右,,,,,,,#PlayerName#，早饭都快凉了……\\n什么情况什么情况？怎么这么多黑衣蒙面人？\\n姜师姐怎么受伤了？"
   splits:
   - split: 2
@@ -49047,16 +48954,13 @@
     text: "嗯，师傅，还有各位，你们对我恩重如山，情谊深厚，"
   - split: 10
     subIndex: 1
-    text: "不论身世如何，姓名如何，我也会以#SourceForceDescribe#"
+    text: "不论身世如何，姓名如何，我也会以#SourceForceDescribe##$SourceInteractName#之身生活下去，"
   - split: 10
     subIndex: 2
-    text: "之身生活下去，"
-  - split: 10
-    subIndex: 3
     text: "情比金坚，至死不渝！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$SourceInteractName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,林云裳,右,,,,,,,什么死啊活啊的太不吉利了，\\n姜师姐上次重病蒙你照护，今天我来给你疗伤，走吧！"
   splits:
   - split: 2
@@ -51957,16 +51861,13 @@
     text: "四哥四哥，别丢下我啊"
   - split: 10
     subIndex: 1
-    text: "呜呜呜呜呜，"
+    text: "呜呜呜呜呜，#$PlayerName#大侠饶了小的吧，"
   - split: 10
     subIndex: 2
-    text: "大侠饶了小的吧，"
-  - split: 10
-    subIndex: 3
     text: "小的再也不敢招摇撞骗了。"
   templates:
   - split: 10
-    template: "{0}……\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}……\\n{1}\\n{2}"
 - raw: ",,,左,,,,,SpeHeroDeath;高首,,哼，现在在这儿摇尾乞怜，晚了！"
   splits:
   - split: 3
@@ -56726,10 +56627,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "前来道贺，恭喜唐掌门！"
-  templates:
-  - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}"
+    text: "#SourceForceDescribe##$SourceInteractName#前来道贺，恭喜唐掌门！"
 - raw: ",闻惊鸿,,左,,,,,SpePlotFuc;41,,#SourceForceDescribe##$SourceInteractName#前来道贺，恭喜唐掌门！"
   splits:
   - split: 1
@@ -56737,10 +56635,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "前来道贺，恭喜唐掌门！"
-  templates:
-  - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}"
+    text: "#SourceForceDescribe##$SourceInteractName#前来道贺，恭喜唐掌门！"
 - raw: ",韩嵩,,左,,,,,HidePlotItem,,#SourceForceDescribe##$SourceInteractName#前来道贺，恭喜唐掌门！"
   splits:
   - split: 1
@@ -56748,10 +56643,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "前来道贺，恭喜唐掌门！"
-  templates:
-  - split: 10
-    template: "#SourceForceDescribe##$SourceInteractName#{0}"
+    text: "#SourceForceDescribe##$SourceInteractName#前来道贺，恭喜唐掌门！"
 - raw: ",周莫知,,左,,Fight1,,,,,唐掌门，恭喜恭喜。\\n今天我也特意准备了一件厚礼，还望唐掌门千万不要推辞！"
   splits:
   - split: 1
@@ -57129,7 +57021,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "？这是我青城派内部事务，"
+    text: "#$PlayerName#？这是我青城派内部事务，"
   - split: 10
     subIndex: 1
     text: "你仙霞派无关人等，莫要多管闲事！"
@@ -57138,7 +57030,7 @@
     text: "添翼，为师送你一程！（举掌又要拍下）"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,周掌门，添翼兄在江湖中交游甚广，颇负侠名，\\n想来不是作奸犯科之徒，我看此事必有隐情。"
   splits:
   - split: 3
@@ -64897,13 +64789,10 @@
     text: "什么乱七八糟的，这么多名号？"
   - split: 10
     subIndex: 1
-    text: "算了算了，蜀中神剑"
-  - split: 10
-    subIndex: 2
-    text: "，也要和三位兄弟共进退！"
+    text: "算了算了，蜀中神剑#$PlayerName#，也要和三位兄弟共进退！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,两位兄弟，#PlayerName#，我……\\n（一时哽咽，狠狠抹了把泪）"
   splits:
   - split: 3
@@ -65284,13 +65173,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，念在你被这三人蒙蔽，加上又是初犯，"
+    text: "#$PlayerName#，念在你被这三人蒙蔽，加上又是初犯，"
   - split: 10
     subIndex: 1
     text: "这次就放你一马，下不为例，知道吗？"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,是是，我明白了御史大人。\\n（好险好险，不知不觉就跟这三个傻帽一起冲了，还好没酿成大错......）"
   splits:
   - split: 3
@@ -72647,10 +72536,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "沈师兄谋划这等大计，怎么能少得了我"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#！"
+    text: "沈师兄谋划这等大计，怎么能少得了我#$PlayerName#！"
 - raw: ",沈退,,左,,,,,,,#PlayerName#？你可不在计划中啊。"
   splits:
   - split: 1
@@ -73856,16 +73742,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "师姐放心，我"
+    text: "师姐放心，我#$PlayerName#早晚有一天，"
   - split: 10
     subIndex: 1
-    text: "早晚有一天，"
-  - split: 10
-    subIndex: 2
     text: "会把巴陵村夺回来，替大师兄讨还血债的！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,噗！瞧你一本正经的样子，师姐我差点都信以为真了。"
   splits:
   - split: 3
@@ -77095,16 +76978,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "小师妹放心，我"
+    text: "小师妹放心，我#$PlayerName#行走江湖这么些年，"
   - split: 10
     subIndex: 1
-    text: "行走江湖这么些年，"
-  - split: 10
-    subIndex: 2
     text: "见过的优质食材没有一千也有八百，保证替你寻一个来！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,GetBranchMission;21,,那就……只好再劳烦#PlayerName#一次。\\n这次做的菜，也给#PlayerName#你先尝就是啦！"
   splits:
   - split: 3
@@ -77153,16 +77033,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "哈哈，我"
+    text: "哈哈，我#$PlayerName#办事，师妹还有啥不放心的。"
   - split: 10
     subIndex: 1
-    text: "办事，师妹还有啥不放心的。"
-  - split: 10
-    subIndex: 2
     text: "看看这是什么？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,呀，就是这个！谢谢#PlayerName#！\\n我这就拿去做些好菜，#PlayerName#到时候先替我尝尝。"
   splits:
   - split: 3
@@ -79772,16 +79649,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "叶长老，那个叫"
+    text: "叶长老，那个叫#$PlayerName#的，功力着实不俗。"
   - split: 10
     subIndex: 1
-    text: "的，功力着实不俗。"
-  - split: 10
-    subIndex: 2
     text: "眼下咱们盲目去追，怕也讨不到什么好处。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,FootStepContinue,,,,况且若弄丢潮起月盈功，帮主怪罪下来，咱们都吃不了兜着走！\\n（说罢赶忙催动轻功，向陆仁谦逃遁方向追去）"
   splits:
   - split: 3
@@ -84499,13 +84373,10 @@
     text: "是啊，让姜师姐留下来吧，师傅尽管放心！"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "就算拼了这条小命，也会保护师姐安全的！"
+    text: "我#$PlayerName#就算拼了这条小命，也会保护师姐安全的！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",顾游年,,左,,,,,,,求你了师傅，\\n姜师姐对您的孝心天可怜见，对咱们小辈的关照也是无微不至。"
   splits:
   - split: 1
@@ -88658,13 +88529,10 @@
     text: "大师兄，没想到时隔一年，又能和你并肩作战了！"
   - split: 10
     subIndex: 1
-    text: "仙霞派"
-  - split: 10
-    subIndex: 2
-    text: "，前来助大师兄一阵！"
+    text: "仙霞派#$PlayerName#，前来助大师兄一阵！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",沈退,,左,,,,,PlotCheckHeroSkill;魏胥华|PlotRecoverAllHeroState;魏胥华|HideInteractUITemp,,大师兄，我看你剑招生疏的很，\\n就勉为其难，让你躲在我身后一回好了！\\n仙霞派沈退，前来送几位上路！"
   splits:
   - split: 1
@@ -89550,13 +89418,10 @@
     text: "这么客气做什么。只要是姜师姐有求，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "就是上刀山，下油锅，也要把这东西弄来！"
+    text: "我#$PlayerName#就是上刀山，下油锅，也要把这东西弄来！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,只是姜师姐，你怎么突然想到要搜罗珍宝，\\n是准备给自己攒嫁妆了？"
   splits:
   - split: 3
@@ -89765,18 +89630,15 @@
   - split: 8
     text: "姜婉"
   - split: 10
-    text: "哈哈，我"
+    text: "哈哈，我#$PlayerName#办事，师姐还有啥不放心的。"
   - split: 10
     subIndex: 1
-    text: "办事，师姐还有啥不放心的。"
-  - split: 10
-    subIndex: 2
     text: "看看这是什么？"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-15"
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,呀，这个是…#PlotInteractItemName#？\\n太好了！谢谢#PlayerName#！\\n（笑颜绽开如同春花般灿烂，竟是一把将你抱在怀中）"
   splits:
   - split: 3
@@ -91178,13 +91040,10 @@
     text: "若没有各位出手相助，我这顾师兄怕是永无痊愈之日，"
   - split: 10
     subIndex: 1
-    text: "这份恩情，我"
-  - split: 10
-    subIndex: 2
-    text: "有机会也定会报答的。"
+    text: "这份恩情，我#$PlayerName#有机会也定会报答的。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,青山不改绿水长流，各位，咱们后会有期！"
   splits:
   - split: 3
@@ -91796,13 +91655,10 @@
     text: "（慌忙连连作揖）金先生，久仰久仰！"
   - split: 10
     subIndex: 1
-    text: "晚辈#PlayerForceDescribe#"
-  - split: 10
-    subIndex: 2
-    text: "，拜见老前辈。"
+    text: "晚辈#PlayerForceDescribe##$PlayerName#，拜见老前辈。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,免了免了，少侠来自仙霞派……\\n你们与铁掌帮之龃龉，已有百年之久……\\n此间之秘密，藏在巴陵村中，确实不为常人所知……"
   splits:
   - split: 3
@@ -91904,13 +91760,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "老夫横看竖看，也没找到"
-  - split: 10
-    subIndex: 1
-    text: "之大名，实在抱歉。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "老夫横看竖看，也没找到#$PlayerName#之大名，实在抱歉。"
 - raw: ",,,左,,,,,,,啊……哈哈哈，金先生不必自责。\\n倒是我初入江湖未久，功力浅薄，让您见笑了。"
   splits:
   - split: 3
@@ -92038,13 +91888,10 @@
     text: "莫非是遇上了传说中的“瓶颈”？"
   - split: 10
     subIndex: 1
-    text: "难道我"
-  - split: 10
-    subIndex: 2
-    text: "的大侠之路，就要止步于此了？"
+    text: "难道我#$PlayerName#的大侠之路，就要止步于此了？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,不行不行！眼下顾师兄正在派内<b>闭关室</b>，\\n赶紧找他问问该怎么办去！"
   splits:
   - split: 3
@@ -92509,10 +92356,10 @@
     text: "这御剑要术击、刺、格、洗四式说来简单，要练习纯熟还真得花些功夫。"
   - split: 10
     subIndex: 1
-    text: "不过这点小事可难不住我"
+    text: "不过这点小事可难不住我#$PlayerName#！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#！"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,如今我的太祖长拳和御剑要术这两门功夫都已大成。\\n接下来该如何继续磨炼武艺呢？"
   splits:
   - split: 3
@@ -93644,10 +93491,10 @@
     text: "哦？有这种好事？那我就先把你们一网打尽，再解决大当家。"
   - split: 10
     subIndex: 1
-    text: "，顾游年，站在旁边看师伯我擒贼，不许插手！"
+    text: "#$PlayerName#，顾游年，站在旁边看师伯我擒贼，不许插手！"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: "495,陆仁谦,临时:黑风头目,左,,,,,ChangeMaxFightSkill;陆仁谦-4-1|ChangeInjury;黑风头目-0-30,,#$PlayerName#，顾游年，看到了吗，这才是我仙霞派武学的用法！"
   splits:
   - split: 1
@@ -93665,14 +93512,12 @@
     subIndex: 1
     text: "黑风头目"
   - split: 10
-    text: "，顾游年，看到了吗，这才是我仙霞派武学的用法！"
+    text: "#$PlayerName#，顾游年，看到了吗，这才是我仙霞派武学的用法！"
   templates:
   - split: 2
     template: "{0}:{1}"
   - split: 8
     template: "ChangeMaxFightSkill;{0}-4-1|ChangeInjury;{1}-0-30"
-  - split: 10
-    template: "#$PlayerName#{0}"
 - raw: ",,,右,,,,,,,哎哟！大侠饶命！大侠饶命！"
   splits:
   - split: 3
@@ -95658,13 +95503,10 @@
     text: "呵呵，瞧把你高兴的。"
   - split: 10
     subIndex: 1
-    text: "不过"
-  - split: 10
-    subIndex: 2
-    text: "这两年来武功突飞猛进，倒确实让为师刮目相看了。"
+    text: "不过#$PlayerName#这两年来武功突飞猛进，倒确实让为师刮目相看了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,魏胥华,右,,,,,,,咳咳咳咳，#PlayerName#如今的武功……确实进步神速。"
   splits:
   - split: 2
@@ -98318,13 +98160,10 @@
     text: "哈哈，大师兄没听说过士别三日当刮目相看么？"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "也早已非吴下阿蒙了！"
+    text: "我#$PlayerName#也早已非吴下阿蒙了！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "522,魏胥华,叶一鸣,右,,,,,ChangeInjury;魏胥华-1-30,,臭小子看掌！"
   splits:
   - split: 1
@@ -101375,13 +101214,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "小师妹，各位师兄，我"
-  - split: 10
-    subIndex: 1
-    text: "愿与大家共进退！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "小师妹，各位师兄，我#$PlayerName#愿与大家共进退！"
 - raw: ",,,右,,,,,,,（扫视一圈，见众弟子群情激昂，皆无退意）\\n好！我就知道，这仙霞派上下无论武功高低，\\n都是侠肝义胆，铁血丹心之辈！"
   splits:
   - split: 3
@@ -101525,16 +101358,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "最后是"
+    text: "最后是#$PlayerName#，你带着杨思迟和其余弟子，进攻巴陵村北方的后门。"
   - split: 10
     subIndex: 1
-    text: "，你带着杨思迟和其余弟子，进攻巴陵村北方的后门。"
-  - split: 10
-    subIndex: 2
     text: "此处守备力量中等，但要注意铁掌帮方向过来的援军。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,你们攻下北门后，就守在原地抵御铁掌帮援军。\\n拖住援军越久，咱们另外三个方向的进攻就越可能成功。"
   splits:
   - split: 3
@@ -101650,13 +101480,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你入门虽晚，但武功已是不俗。"
+    text: "#$PlayerName#，你入门虽晚，但武功已是不俗。"
   - split: 10
     subIndex: 1
     text: "若有余力，还需多多照顾着你杨师兄一些。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,师傅放心，我自有分寸。"
   splits:
   - split: 3
@@ -101919,13 +101749,10 @@
     text: "嘿嘿，突然说这些做什么？整的我怪不好意思......"
   - split: 10
     subIndex: 1
-    text: "若不是当年顾师兄指导有方，也难有我"
-  - split: 10
-    subIndex: 2
-    text: "今日之成就不是？"
+    text: "若不是当年顾师兄指导有方，也难有我#$PlayerName#今日之成就不是？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,啊哈哈，大概是上年纪了，喜欢追忆过往，感怀旧事......\\n五六年弹指一挥间，咱们仙霞派经历了诸多困苦磨难，怎能不叫人感慨？"
   splits:
   - split: 3
@@ -102051,16 +101878,13 @@
     text: "顾师兄......各位师兄妹，"
   - split: 10
     subIndex: 1
-    text: "有你们与我"
+    text: "有你们与我#$PlayerName#并肩作战，此次定能得胜而回，"
   - split: 10
     subIndex: 2
-    text: "并肩作战，此次定能得胜而回，"
-  - split: 10
-    subIndex: 3
     text: "到时候咱们全门一道痛饮美酒，不醉不归！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,GetMainMission;20,,好，一言为定！"
   splits:
   - split: 3
@@ -103177,13 +103001,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "杨师兄......你既然有此志气，我"
-  - split: 10
-    subIndex: 1
-    text: "也绝非贪生怕死之辈。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "杨师兄......你既然有此志气，我#$PlayerName#也绝非贪生怕死之辈。"
 - raw: ",,,左,close,,,TRUE,SpePlotFuc;63,,咱们守住此处，不退，绝不退！"
   splits:
   - split: 3
@@ -104576,10 +104394,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "快走吧！带仙霞派弟子撤退！"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#快走吧！带仙霞派弟子撤退！"
 - raw: ",玩家,,左,,,,,,,师傅......"
   splits:
   - split: 1
@@ -104612,12 +104427,10 @@
     subIndex: 1
     text: "负50"
   - split: 10
-    text: "......夏天雄！"
+    text: "#$PlayerName#......夏天雄！"
   templates:
   - split: 8
     template: "ChangeInjury;{0}-1-{1}"
-  - split: 10
-    template: "#$PlayerName#{0}"
 - raw: ",,,无,,,SpeEffect/风呼啸,,UpgradeHeroSkill;姜映泉-819-2-1|PlotCheckHeroSkill;姜映泉,,姜映泉忍住剧痛催动真气，周身经脉渐渐鼓起，\\n竟是顶着极为深重的内伤，将梵文贝叶经催动至极限。"
   splits:
   - split: 3
@@ -104708,16 +104521,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "师傅，我"
+    text: "师傅，我#$PlayerName#岂是那种贪生怕死之人？"
   - split: 10
     subIndex: 1
-    text: "岂是那种贪生怕死之人？"
-  - split: 10
-    subIndex: 2
     text: "只是想到大师兄就在地窖门口，将他叫来咱们并肩作战！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",魏胥华,,左,,,,,,,咳咳咳，师傅！\\n你时常教诲，人固有一死，或重于泰山，或轻于鸿毛。\\n今日我魏胥华，只有重于泰山之死，绝无轻于鸿毛之生！"
   splits:
   - split: 1
@@ -105026,13 +104836,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "......不必了！"
+    text: "#$PlayerName#......不必了！"
   - split: 10
     subIndex: 1
     text: "他经脉尽断......并不比为师好多少......"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,怎么会......不可能！\\n我梵文贝叶经明明已经大成......"
   splits:
   - split: 3
@@ -105249,16 +105059,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "至于"
+    text: "至于#$PlayerName#，为师弟子中，你天资最高。"
   - split: 10
     subIndex: 1
-    text: "，为师弟子中，你天资最高。"
-  - split: 10
-    subIndex: 2
     text: "以后仙霞派的重担，就落在你肩上了......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,你过来，为师有几句话对你说......"
   splits:
   - split: 3
@@ -105583,16 +105390,13 @@
     text: "夏帮主，两派百年仇恨，我们又相争数十年，"
   - split: 10
     subIndex: 1
-    text: "如今功力竟在"
+    text: "如今功力竟在#$PlayerName#身上归而为一，果真是分则两败，合能成王！"
   - split: 10
     subIndex: 2
-    text: "身上归而为一，果真是分则两败，合能成王！"
-  - split: 10
-    subIndex: 3
     text: "啊哈哈哈啊哈哈哈！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,哈哈哈啊哈哈哈！姜映泉，若是当年我们能精诚合作，两派合而为一，\\n或许早已称霸武林，我铁掌帮弟子，也不用再为下个月的粮饷发愁了！"
   splits:
   - split: 3
@@ -105778,28 +105582,19 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "至于我仙霞派，按照师傅的遗训，便由"
-  - split: 10
-    subIndex: 1
-    text: "继任掌门之位！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "至于我仙霞派，按照师傅的遗训，便由#$PlayerName#继任掌门之位！"
 - raw: ",,,左,,,,,,,慢着慢着，我#$PlayerName#何德何能，能够担当此重任？\\n我觉得......大师兄就比我更合适！"
   splits:
   - split: 3
     text: "左"
   - split: 10
-    text: "慢着慢着，我"
+    text: "慢着慢着，我#$PlayerName#何德何能，能够担当此重任？"
   - split: 10
     subIndex: 1
-    text: "何德何能，能够担当此重任？"
-  - split: 10
-    subIndex: 2
     text: "我觉得......大师兄就比我更合适！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,魏胥华,右,,,,,,,#PlayerName#，师傅命你接任掌门，自有他老人家深谋远虑之处。"
   splits:
   - split: 2
@@ -106090,13 +105885,10 @@
     text: "如今师傅新丧，百废待兴，有劳各位师兄师姐鼎力相助。"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "定会谨遵师傅遗志，恪尽职守，励精图治，振兴仙霞派！"
+    text: "我#$PlayerName#定会谨遵师傅遗志，恪尽职守，励精图治，振兴仙霞派！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,杨思迟,右,,,,,ScreenBlack,,#$PlayerName#突然这么一本正经，还真有些不习惯......"
   splits:
   - split: 2
@@ -106104,10 +105896,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "突然这么一本正经，还真有些不习惯......"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#突然这么一本正经，还真有些不习惯......"
 - raw: ",无,无,无,,,,,,,随后你们将师傅的遗体运回仙霞后山，安葬在了陆仁谦陆师伯旁。\\n高大的墓碑之上，篆刻一行大字：仙霞派第六代掌门 姜映泉之墓。"
   splits:
   - split: 1
@@ -106256,16 +106045,13 @@
     text: "而百废待兴的仙霞派，将在这一新时代中扮演怎样重要的角色，"
   - split: 10
     subIndex: 1
-    text: "此刻的"
+    text: "此刻的#$PlayerName#和师兄弟们，尚沉浸在失去师傅的悲痛中，"
   - split: 10
     subIndex: 2
-    text: "和师兄弟们，尚沉浸在失去师傅的悲痛中，"
-  - split: 10
-    subIndex: 3
     text: "对此一无所知......"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "560,玩家,姜婉,左,,,,,,,姜师姐！"
   splits:
   - split: 1
@@ -107047,13 +106833,10 @@
     text: "那就多谢师姐啦！师姐待我真好！"
   - split: 10
     subIndex: 1
-    text: "这份恩情，我"
-  - split: 10
-    subIndex: 2
-    text: "永远铭记于心！"
+    text: "这份恩情，我#$PlayerName#永远铭记于心！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,这么生分做什么，你可是师姐我的#PlayerName#呀！\\n咱们仙霞派同门，自是应当像一家人一样互相帮助，互相扶持。"
   splits:
   - split: 3
@@ -107215,13 +106998,10 @@
     text: "你若实在不愿前往，为师也不强求，"
   - split: 10
     subIndex: 1
-    text: "便让游年陪同"
-  - split: 10
-    subIndex: 2
-    text: "，一道前去剿匪便是。"
+    text: "便让游年陪同#$PlayerName#，一道前去剿匪便是。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,算了算了，既然是师傅有命，弟子岂能不从。"
   splits:
   - split: 3
@@ -107879,13 +107659,10 @@
     text: "即便如此，这粮食也是来路不正。"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "就是死这儿，从这仙霞山上跳下去，也不会吃一口！"
+    text: "我#$PlayerName#就是死这儿，从这仙霞山上跳下去，也不会吃一口！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,,,,,一段时间后，仙霞派食堂内......"
   splits:
   - split: 3
@@ -109482,7 +109259,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#PlayerForceDescribe#"
+    text: "在下#PlayerForceDescribe##$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "久闻江湖中有七位少年英雄，武艺高强，行侠仗义。"
@@ -109491,7 +109268,7 @@
     text: "原来二位便是其中两员，久仰久仰。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,SetHeroMeet;阮芷,,哈哈，也没传的那么厉害，\\n我们几位才疏学浅，和江湖中那些成名的前辈不能比。"
   splits:
   - split: 3
@@ -109715,13 +109492,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "等等等等，是我，"
-  - split: 10
-    subIndex: 1
-    text: "啊！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "等等等等，是我，#$PlayerName#啊！"
 - raw: ",,,右,,,,,,,哦！是#PlayerName#！\\n抱歉抱歉，我这眼神实在不好，差点又把你认成迟百城了。"
   splits:
   - split: 3
@@ -110162,16 +109933,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "说什么呢阮芷？人家"
+    text: "说什么呢阮芷？人家#$PlayerName#侠义心肠，乃是为了查明疫病而来。"
   - split: 10
     subIndex: 1
-    text: "侠义心肠，乃是为了查明疫病而来。"
-  - split: 10
-    subIndex: 2
     text: "才不像你一样，贪图什么悬赏呢！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,额......是是是，#TargetInteractName#说的是。\\n只是不知这疫病，与那黑道五鬼迟百城有什么干系呢？"
   splits:
   - split: 3
@@ -111058,13 +110826,10 @@
     text: "话说怎么看着你这么眼熟？"
   - split: 10
     subIndex: 1
-    text: "你你你、你不是"
-  - split: 10
-    subIndex: 2
-    text: "么！"
+    text: "你你你、你不是#$PlayerName#么！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,阮芷,右,,,,,,,咳咳咳咳，什么乱七八糟的，这家伙是黑道五鬼之一，迟百城！\\n你小子果然在扬州城，这悬赏我是拿定了！咳咳咳咳咳！"
   splits:
   - split: 2
@@ -111293,13 +111058,10 @@
     text: "十万火急十万火急，扬州城内爆发疫病，众多百姓命在旦夕。"
   - split: 10
     subIndex: 1
-    text: "在下#PlayerForceDescribe#"
-  - split: 10
-    subIndex: 2
-    text: "，受贵派弟子李云鹤之托，前来向你们掌门求援来的！"
+    text: "在下#PlayerForceDescribe##$PlayerName#，受贵派弟子李云鹤之托，前来向你们掌门求援来的！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,李云鹤？她不是奉命追捕黑道五鬼迟百城去了么，\\n怎么会掺和上疫病这档子事。"
   splits:
   - split: 3
@@ -111755,16 +111517,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "咳咳咳，已经不行了，师傅，"
+    text: "咳咳咳，已经不行了，师傅，#$PlayerName#，阮芷......"
   - split: 10
     subIndex: 1
-    text: "，阮芷......"
-  - split: 10
-    subIndex: 2
     text: "对不起，我撑不住了......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,（咳出了几口鲜血，缓缓闭上双眼，竟是渐渐没了声息。）"
   splits:
   - split: 3
@@ -114311,10 +114070,10 @@
     text: "不敢当不敢当！前辈这个词是给年长之人用的。"
   - split: 10
     subIndex: 1
-    text: "在下#PlayerForceDescribe#"
+    text: "在下#PlayerForceDescribe##$PlayerName#。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#。"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,没想到你这小姑娘，竟然是峨眉派的高徒。\\n只是感觉......怎么如此不谙世事呢？"
   splits:
   - split: 3
@@ -115469,28 +115228,19 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#PlayerForceDescribe#"
+    text: "在下#PlayerForceDescribe##$PlayerName#，在江湖中也算小有名气，"
   - split: 10
     subIndex: 1
-    text: "，在江湖中也算小有名气，"
-  - split: 10
-    subIndex: 2
     text: "不知几位能否行个方便？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,原来是#$PlayerName#少侠，久仰久仰。"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "原来是"
-  - split: 10
-    subIndex: 1
-    text: "少侠，久仰久仰。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "原来是#$PlayerName#少侠，久仰久仰。"
 - raw: ",,,右,,,,,,,只是本次大会事关重大，为免人多口杂，\\n只有名门大派掌门和受邀请者方能入场。"
   splits:
   - split: 3
@@ -118422,16 +118172,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "由本门弟子"
+    text: "由本门弟子#$PlayerName#，正式接任仙霞派掌门之位。"
   - split: 10
     subIndex: 1
-    text: "，正式接任仙霞派掌门之位。"
-  - split: 10
-    subIndex: 2
     text: "现请新任掌门，上前受印！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,close,,,,,,群雄听闻此言，均是交头接耳，窃窃私语，\\n讨论起“#$PlayerName#”，这个近来在江湖中声名鹊起的名号来。"
   splits:
   - split: 3
@@ -118440,13 +118187,10 @@
     text: "群雄听闻此言，均是交头接耳，窃窃私语，"
   - split: 10
     subIndex: 1
-    text: "讨论起“"
-  - split: 10
-    subIndex: 2
-    text: "”，这个近来在江湖中声名鹊起的名号来。"
+    text: "讨论起“#$PlayerName#”，这个近来在江湖中声名鹊起的名号来。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,,,,你在众人的注视下行至大殿正中，面向祖师牌位深鞠三躬，\\n随后转身面向众人，双手缓缓展开，\\n接过了由大师兄亲自递上的掌门信物——一柄古朴而威严的掌门令牌。"
   splits:
   - split: 1
@@ -118475,13 +118219,10 @@
     text: "咳咳......大师兄，诸位英雄豪杰。"
   - split: 10
     subIndex: 1
-    text: "感谢大家前来捧场，见证我"
-  - split: 10
-    subIndex: 2
-    text: "继任仙霞派掌门之仪式。"
+    text: "感谢大家前来捧场，见证我#$PlayerName#继任仙霞派掌门之仪式。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,无,左,,,,,,,我#$PlayerName#，承蒙师长厚爱，同门信赖，今日接任仙霞派掌门之位。\\n今日在各位见证之下，我郑重宣誓，将以先师姜映泉为榜样，\\n秉持侠义，守护仙霞，恪尽职守，九死不悔。"
   splits:
   - split: 2
@@ -118489,19 +118230,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#，承蒙师长厚爱，同门信赖，今日接任仙霞派掌门之位。"
   - split: 10
     subIndex: 1
-    text: "，承蒙师长厚爱，同门信赖，今日接任仙霞派掌门之位。"
-  - split: 10
-    subIndex: 2
     text: "今日在各位见证之下，我郑重宣誓，将以先师姜映泉为榜样，"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "秉持侠义，守护仙霞，恪尽职守，九死不悔。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,对于铁掌帮之仇，我亦当铭记于心，\\n但更愿以和为贵，化解武林恩怨，共谋繁荣发展。\\n愿仙霞派，在我与诸位弟子的共同努力下，能够发展壮大，再现辉煌！"
   splits:
   - split: 3
@@ -118544,18 +118282,15 @@
   - split: 8
     text: "宋廉庭"
   - split: 10
-    text: "，前来恭喜"
+    text: "#TargetForceDescribe##$TargetInteractName#，前来恭喜#$PlayerName#继任仙霞派掌门。"
   - split: 10
     subIndex: 1
-    text: "继任仙霞派掌门。"
-  - split: 10
-    subIndex: 2
     text: "掌门特意嘱托我带来这件#PlotInteractItemName#，还请收下。"
   templates:
   - split: 8
     template: "GetSpeReward;73|SetHeroMeet;{0}"
   - split: 10
-    template: "#TargetForceDescribe##$TargetInteractName#{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,宋廉庭,右,,,,,GetSpeReward;73|SetHeroMeet;周莫知,,#TargetForceDescribe##$TargetInteractName#，前来恭喜#$PlayerName#继任仙霞派掌门。\\n我还带了件#PlotInteractItemName#作为贺礼，请姜掌门笑纳。"
   splits:
   - split: 2
@@ -118565,18 +118300,15 @@
   - split: 8
     text: "周莫知"
   - split: 10
-    text: "，前来恭喜"
+    text: "#TargetForceDescribe##$TargetInteractName#，前来恭喜#$PlayerName#继任仙霞派掌门。"
   - split: 10
     subIndex: 1
-    text: "继任仙霞派掌门。"
-  - split: 10
-    subIndex: 2
     text: "我还带了件#PlotInteractItemName#作为贺礼，请姜掌门笑纳。"
   templates:
   - split: 8
     template: "GetSpeReward;73|SetHeroMeet;{0}"
   - split: 10
-    template: "#TargetForceDescribe##$TargetInteractName#{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,周莫知,右,,,,,HidePlotItem,,#TargetForceDescribe##$TargetInteractName#，前来恭喜#$PlayerName#继任仙霞派掌门。\\n这件#PlotInteractItemName#聊表心意，还望莫要嫌弃。"
   splits:
   - split: 2
@@ -118584,16 +118316,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，前来恭喜"
+    text: "#TargetForceDescribe##$TargetInteractName#，前来恭喜#$PlayerName#继任仙霞派掌门。"
   - split: 10
     subIndex: 1
-    text: "继任仙霞派掌门。"
-  - split: 10
-    subIndex: 2
     text: "这件#PlotInteractItemName#聊表心意，还望莫要嫌弃。"
   templates:
   - split: 10
-    template: "#TargetForceDescribe##$TargetInteractName#{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哎，一听说你师傅姜映泉老人家仙逝的消息，\\n我当时就如同五雷轰顶，天塌地陷，大哭了三天三夜方才平息呐！"
   splits:
   - split: 3
@@ -118653,13 +118382,10 @@
     text: "只是世道险恶，咱们仙霞派也不可群龙无首。"
   - split: 10
     subIndex: 1
-    text: "所以我"
-  - split: 10
-    subIndex: 2
-    text: "才临危受命，不得已接下这掌门之位。"
+    text: "所以我#$PlayerName#才临危受命，不得已接下这掌门之位。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,咱们仙霞派与青城派世代交好，本就是兄弟之帮。\\n只是我年纪尚轻，资历尚浅，日后若是有什么做的不妥的地方，\\n还望周掌门能够多多包涵，从旁帮衬一二啊！"
   splits:
   - split: 3
@@ -118730,16 +118456,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "哈哈，想当年连藏经阁都找不到的"
+    text: "哈哈，想当年连藏经阁都找不到的#$PlayerName#，如今竟成一派之掌门了。"
   - split: 10
     subIndex: 1
-    text: "，如今竟成一派之掌门了。"
-  - split: 10
-    subIndex: 2
     text: "当年送你的那本《御剑要术》，现在也是拿不出手了。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,ChangeHeroFavor;顾游年-10|GetSpeReward;74,,#TargetInteractName#，你就别拿我打趣了。\\n当年你悉心指导，这份恩情我铭记于心。\\n今天你若是能再送我一本御剑要术，我也会打心眼里高兴的。"
   splits:
   - split: 3
@@ -118940,13 +118663,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "感谢各位师兄弟的信任，我"
-  - split: 10
-    subIndex: 1
-    text: "定不会辜负你们的期望。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "感谢各位师兄弟的信任，我#$PlayerName#定不会辜负你们的期望。"
 - raw: ",无,无,无,PlotImage/张灯结彩,,,,,,随后众人开席宴饮，主宾尽欢，\\n仙霞派内一派欢声笑语，好生热闹。"
   splits:
   - split: 1
@@ -119000,10 +118717,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "掌门，我还有一事......"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#掌门，我还有一事......"
 - raw: ",,,左,,,,,,,咳咳咳咳！李、李掌门，你峨眉派与我仙霞派本就同气连枝，情谊深厚。\\n有什么事只管吩咐，不必客气。"
   splits:
   - split: 3
@@ -119321,13 +119035,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "掌门，还望届时你也能代表仙霞派参与大会。"
+    text: "#$PlayerName#掌门，还望届时你也能代表仙霞派参与大会。"
   - split: 10
     subIndex: 1
     text: "与我峨眉派以及中原各位掌门一起，共商抗敌之策。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,ChangeHeroFavor;李潇湘-5,,好，事关中原武林安危，我仙霞派义不容辞。\\n届时必定到会，与武林同道共商抗敌大计！"
   splits:
   - split: 3
@@ -119879,13 +119593,10 @@
     text: "只是小徒日夜在山上与猿猴鸟兽为伍，因此不晓得这世间的规矩和礼数。"
   - split: 10
     subIndex: 1
-    text: "若是言行之间冲撞了"
-  - split: 10
-    subIndex: 2
-    text: "掌门，我先替她赔个不是。"
+    text: "若是言行之间冲撞了#$PlayerName#掌门，我先替她赔个不是。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,哎呀不敢当不敢当，贵徒虽说不谙世事，但却是一副侠义心肠。\\n德源掌门日后多让她下山历练走动，定能成为一代大侠。"
   splits:
   - split: 3
@@ -119951,16 +119662,13 @@
     text: "本次金顶大会之原委，想必你也已然知晓。"
   - split: 10
     subIndex: 1
-    text: "还望届时大会上，"
+    text: "还望届时大会上，#$PlayerName#掌门可以念在两派源远流长，同气连枝的份上，"
   - split: 10
     subIndex: 2
-    text: "掌门可以念在两派源远流长，同气连枝的份上，"
-  - split: 10
-    subIndex: 3
     text: "执仗义之言，扬侠义之道，大力声援我峨眉派啊。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,于情于理，我等都不应弃武林同道于不顾。\\n只是......我仙霞派毕竟势单力微，加上掌门新丧，难免心有余而力不足。\\n这抗敌之主力，还得依靠少林武当等名门大派才行。"
   splits:
   - split: 3
@@ -120375,13 +120083,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "掌门，你身为后起之秀，英雄少年，新近又继任了掌门之位。"
+    text: "#$PlayerName#掌门，你身为后起之秀，英雄少年，新近又继任了掌门之位。"
   - split: 10
     subIndex: 1
     text: "不知你仙霞派是否也愿意伸出援手，与我峨眉共抗阎罗殿？"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,愿意支援;ChangePlotDataBase;612|模棱两可;ChangePlotDataBase;613|委婉推辞;ChangePlotDataBase;614,额......"
   splits:
   - split: 3
@@ -120411,31 +120119,25 @@
     text: "一方有难，八方支援，更何况我仙霞派与峨眉派师出同源，共气连枝。"
   - split: 10
     subIndex: 1
-    text: "我"
+    text: "我#$PlayerName#愿与司马掌门，共抗阎罗殿！"
   - split: 10
     subIndex: 2
-    text: "愿与司马掌门，共抗阎罗殿！"
-  - split: 10
-    subIndex: 3
     text: "相信若是先师还在世，也定会做出同样的决定。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,ChangePlotDataBase;615,,好！#$PlayerName#仗义执言，果真是不负侠名。\\n有仙霞派相助，我们的胜算便又多了一分。"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "好！"
+    text: "好！#$PlayerName#仗义执言，果真是不负侠名。"
   - split: 10
     subIndex: 1
-    text: "仗义执言，果真是不负侠名。"
-  - split: 10
-    subIndex: 2
     text: "有仙霞派相助，我们的胜算便又多了一分。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: "613,玩家,司马德源,左,,,,,PlotChangeForceFavor;14-3|PlotChangeForceFavor;3-1|PlotChangeForceFavor;10-1|PlotChangeForceFavor;11-1,,哎，我仙霞派掌门新丧，立足未稳，座下弟子也是青黄不接。\\n虽说想与司马掌门共抗强敌，却也怕心有余而力不足，\\n只能到时候随机应变，尽力而为了......"
   splits:
   - split: 1
@@ -120460,7 +120162,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "此番言辞恳切，也确实有自己的苦衷。"
+    text: "......#$PlayerName#此番言辞恳切，也确实有自己的苦衷。"
   - split: 10
     subIndex: 1
     text: "还望强敌来袭时，你能看在我们两派的渊源上伸出援手，"
@@ -120469,7 +120171,7 @@
     text: "我峨眉派定当感激不尽。"
   templates:
   - split: 10
-    template: "......#$PlayerName#{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "614,玩家,司马德源,左,,,,,PlotChangeForceFavor;3-2|PlotChangeForceFavor;10-2|PlotChangeForceFavor;11-2,,哎，我仙霞派掌门新丧，立足未稳，座下弟子也是青黄不接。\\n只怕实在是腾不出手来，与司马掌门共抗强敌了......"
   splits:
   - split: 1
@@ -120491,13 +120193,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "此番言辞恳切，也确实有自己的苦衷。"
+    text: "......#$PlayerName#此番言辞恳切，也确实有自己的苦衷。"
   - split: 10
     subIndex: 1
     text: "我若是再苦苦相求，反倒是强人所难了。"
   templates:
   - split: 10
-    template: "......#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: "615,无,司马德源,右,,,,,,,（转头面向群雄）诸位，我知道，现在要说服各位颇为困难，\\n毕竟这阎罗殿行事诡秘，在江湖中恶名不彰。\\n加上五毒和金刚，自第一次泰岳封禅大典之后，也已在中原销声匿迹多年。"
   splits:
   - split: 1
@@ -121315,16 +121017,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "对呀，我记得"
+    text: "对呀，我记得#$PlayerName#你说过，"
   - split: 10
     subIndex: 1
-    text: "你说过，"
-  - split: 10
-    subIndex: 2
     text: "下次来峨眉山时，让我也搞一条给你尝尝......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,哈哈哈，你还记得这茬，我开玩笑的，当不得真......\\n#TargetInteractName#，你不会......"
   splits:
   - split: 3
@@ -122538,16 +122237,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "对了，"
+    text: "对了，#$PlayerName#你不是仙霞派掌门么？"
   - split: 10
     subIndex: 1
-    text: "你不是仙霞派掌门么？"
-  - split: 10
-    subIndex: 2
     text: "我除了峨眉，还没见过其他门派是什么样子，要不你带我去仙霞派看看！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,ChangeHeroFavor;白云天-5,,哎，好吧好吧。\\n去了仙霞派就算闹出些乱子，也总比你在成都城内兴风作浪来的强。\\n走吧走吧，带你去仙霞派。"
   splits:
   - split: 3
@@ -123185,13 +122881,10 @@
     text: "你这话什么意思？"
   - split: 10
     subIndex: 1
-    text: "姜映泉是我们掌门"
-  - split: 10
-    subIndex: 2
-    text: "的师傅，不是已经仙逝了么......."
+    text: "姜映泉是我们掌门#$PlayerName#的师傅，不是已经仙逝了么......."
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,什么意思？\\n就是他从坟里蹦出来，我们掌门张真人也不怕他！"
   splits:
   - split: 3
@@ -123733,21 +123426,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "各位道长，在下#PlayerForceDescribe#"
-  - split: 10
-    subIndex: 1
-    text: "，适才多有得罪。"
+    text: "各位道长，在下#PlayerForceDescribe##$PlayerName#，适才多有得罪。"
   templates:
   - split: 2
     template: "{0}:{1}"
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
 - raw: ",,,右,,,,,,,#$PlayerName#掌门，咳咳咳咳，\\n你也不管管你这小弟子，手里举着剑就往山上冲，\\n还说什么，要教训我们掌门张真人一顿......"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "掌门，咳咳咳咳，"
+    text: "#$PlayerName#掌门，咳咳咳咳，"
   - split: 10
     subIndex: 1
     text: "你也不管管你这小弟子，手里举着剑就往山上冲，"
@@ -123756,7 +123444,7 @@
     text: "还说什么，要教训我们掌门张真人一顿......"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,抱歉抱歉，实在抱歉。\\n还望各位大人有大量，不要和这小姑娘一般见识。"
   splits:
   - split: 3
@@ -123903,16 +123591,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "明明就是他们先侮辱"
+    text: "明明就是他们先侮辱#$PlayerName#的师傅姜掌门，"
   - split: 10
     subIndex: 1
-    text: "的师傅姜掌门，"
-  - split: 10
-    subIndex: 2
     text: "我让他们道歉他们不肯，这才打起来的！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,嗯？真有此事？！\\n（一双虎目精光毕露扫向武当弟子，\\n见大家畏畏缩缩，心中便有了几分数）"
   splits:
   - split: 3
@@ -124025,13 +123710,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "嗯，既然"
-  - split: 10
-    subIndex: 1
-    text: "掌门发话了，就饶你一命。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "嗯，既然#$PlayerName#掌门发话了，就饶你一命。"
 - raw: ",,,右,,,,,PlotChangeForceFavor;11-3,,今天我这武当弟子，不仅输了武功，还败了人品。\\n回去之后，我定要好好教训教训他们，免得再在武林同道面前丢人现眼！"
   splits:
   - split: 3
@@ -124385,15 +124064,12 @@
     text: "哼！还不是因为那些武当弟子不长眼！"
   - split: 10
     subIndex: 1
-    text: "先对"
-  - split: 10
-    subIndex: 2
-    text: "你师傅出言不逊，我才想教训教训他们的。"
+    text: "先对#$PlayerName#你师傅出言不逊，我才想教训教训他们的。"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-5"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,行吧，多谢#TargetInteractName#你为我仙霞派出头了。\\n也不枉我带你下山，走这一趟遭的罪。"
   splits:
   - split: 3
@@ -126456,16 +126132,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "既然你和"
+    text: "既然你和#$PlayerName#掌门都亲自前来，那我也只好奉陪。"
   - split: 10
     subIndex: 1
-    text: "掌门都亲自前来，那我也只好奉陪。"
-  - split: 10
-    subIndex: 2
     text: "二位，咱们以武论道，点到为止。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: "640,玩家,道无名,左,,,,,ChangeMaxFightSkill;玩家-2-3,,（你每每与道无名过招之时，即便拼尽全力出手，也像打在棉花上一般，\\n再强劲的内劲也如同泥牛入海，当下暗叫不妙！）"
   splits:
   - split: 1
@@ -127579,16 +127252,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "峨眉派诸位，仙霞派"
+    text: "峨眉派诸位，仙霞派#$PlayerName#率弟子前来支援！"
   - split: 10
     subIndex: 1
-    text: "率弟子前来支援！"
-  - split: 10
-    subIndex: 2
     text: "大家再坚持一阵，各大门派的援军就在路上！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,,,,,峨眉弟子见援军抵达，纷纷面露喜色，振奋精神。\\n而阎罗殿之攻势亦是一波接着一波，越来越猛烈！"
   splits:
   - split: 3
@@ -127719,10 +127389,10 @@
     text: "久闻五毒教横行苗疆，善使下三滥手段，如今一见果然凶险异常！"
   - split: 10
     subIndex: 1
-    text: "掌门当心毒雾，接下来交给我聚义门便是。"
+    text: "#$PlayerName#掌门当心毒雾，接下来交给我聚义门便是。"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,门聚忠良，义铸精钢，斩奸除恶，侠骨流芳！\\n聚义门弟子，随我上！"
   splits:
   - split: 3
@@ -130133,16 +129803,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "久闻"
+    text: "久闻#$PlayerName#掌门深得仙霞派真传，一手无影乱剑颇为精妙。"
   - split: 10
     subIndex: 1
-    text: "掌门深得仙霞派真传，一手无影乱剑颇为精妙。"
-  - split: 10
-    subIndex: 2
     text: "此轮便由你出战，不知是否可行？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,,,,无妨！今日峨眉有难，我自当全力以赴。"
   splits:
   - split: 1
@@ -130185,16 +129852,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好个"
+    text: "好个#$PlayerName#，有两下子！"
   - split: 10
     subIndex: 1
-    text: "，有两下子！"
-  - split: 10
-    subIndex: 2
     text: "给我等着，牛爷爷改日再让你知道厉害！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: "660,玩家,牛头,左,,,,,ChangeFightSkill;牛头-5-5,,阎罗殿武功果然凌厉，这局是你赢了。"
   splits:
   - split: 1
@@ -131314,18 +130978,15 @@
   - split: 8
     text: "白云天"
   - split: 10
-    text: "那你师傅司马掌门，以及同门师兄师姐，还有"
+    text: "那你师傅司马掌门，以及同门师兄师姐，还有#$PlayerName#我，都难免肝肠寸断。"
   - split: 10
     subIndex: 1
-    text: "我，都难免肝肠寸断。"
-  - split: 10
-    subIndex: 2
     text: "悲伤难过之情，不会逊色于此人的父母妻儿的......"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-5"
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#PlayerName#，谢谢你开导我。\\n时至今日，我才明白师傅时常说的，\\n“乃知兵者是凶器，圣人不得已而用之”是什么意思。"
   splits:
   - split: 3
@@ -131871,13 +131532,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "掌门来了啊！"
+    text: "#$PlayerName#掌门来了啊！"
   - split: 10
     subIndex: 1
     text: "正好正好，我们在商议进攻大理之军阵排布。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,这大理南门，若仙霞派联合聚义门两派之力，倒也足够了......\\n那就有劳您和仙霞派诸位弟子了。"
   splits:
   - split: 3
@@ -131897,13 +131558,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好，有"
-  - split: 10
-    subIndex: 1
-    text: "掌门助阵，自是再好不过！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "好，有#$PlayerName#掌门助阵，自是再好不过！"
 - raw: ",,白云天,右,,,,,,,（向你拼命使眼色）\\n南门只靠仙霞派和聚义门攻打，未免势单力薄，少了个高手压阵。\\n师傅，让我跟#PlayerName#一起去吧，我保证不惹祸！"
   splits:
   - split: 2
@@ -131940,13 +131595,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "............哎，好吧好吧，你要听"
-  - split: 10
-    subIndex: 1
-    text: "掌门的指挥，不许任性妄为！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "............哎，好吧好吧，你要听#$PlayerName#掌门的指挥，不许任性妄为！"
 - raw: ",,白云天,右,,,,,,,嘿嘿，师傅放心！\\n我跟#$PlayerName#掌门可是老交情了。"
   splits:
   - split: 2
@@ -131957,13 +131606,10 @@
     text: "嘿嘿，师傅放心！"
   - split: 10
     subIndex: 1
-    text: "我跟"
-  - split: 10
-    subIndex: 2
-    text: "掌门可是老交情了。"
+    text: "我跟#$PlayerName#掌门可是老交情了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,玩家,右,,,,,,,不过司马掌门，怎么能没见到思中澜思阁主，和他的大隐阁弟子们？"
   splits:
   - split: 2
@@ -132019,16 +131665,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "不错！所以"
+    text: "不错！所以#$PlayerName#掌门攻打南门之时，不必定要攻陷此地。"
   - split: 10
     subIndex: 1
-    text: "掌门攻打南门之时，不必定要攻陷此地。"
-  - split: 10
-    subIndex: 2
     text: "只需大肆鼓噪，吸引足够的防守力量，为城内伏兵提供机会便可！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,司马掌门放心！"
   splits:
   - split: 3
@@ -132119,13 +131762,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "掌门，我聚义门先一步出发。"
+    text: "#$PlayerName#掌门，我聚义门先一步出发。"
   - split: 10
     subIndex: 1
     text: "咱们在大理南面汇合，行兵列阵，随后发起进攻！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: "670,无,无,无,森林,,,,,,大理南门外，一处僻静的树林中......"
   splits:
   - split: 1
@@ -132156,10 +131799,10 @@
     text: "皆已到齐了！"
   - split: 10
     subIndex: 1
-    text: "掌门，仙霞派弟子也准备妥当了吗？"
+    text: "#$PlayerName#掌门，仙霞派弟子也准备妥当了吗？"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,close,,,,,,万事俱备，时间也差不多了，咱们准备发动进攻吧！"
   splits:
   - split: 3
@@ -132171,16 +131814,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好，"
+    text: "好，#$PlayerName#掌门，此次进攻颇为凶险，"
   - split: 10
     subIndex: 1
-    text: "掌门，此次进攻颇为凶险，"
-  - split: 10
-    subIndex: 2
     text: "由我率领聚义门弟子打头阵，两翼和后排就交给仙霞派诸位援护了！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,白云天,右,,,,,,,那我呢那我呢？我干什么？"
   splits:
   - split: 2
@@ -133509,13 +133149,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "掌门，万仞山掌门，郭淮大侠，还有彗定清风二位少侠，"
+    text: "#$PlayerName#掌门，万仞山掌门，郭淮大侠，还有彗定清风二位少侠，"
   - split: 10
     subIndex: 1
     text: "我替大理百姓，以及峨眉上下弟子，拜谢各位了！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,玩家,右,,,,,,,司马掌门不必客气。\\n天下兴亡，匹夫有责，维护中原武林安危，本就是我等应行之义举。"
   splits:
   - split: 2
@@ -133969,13 +133609,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "大理南门也已攻克，"
-  - split: 10
-    subIndex: 1
-    text: "掌门，我来晚一步！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "大理南门也已攻克，#$PlayerName#掌门，我来晚一步！"
 - raw: ",,孟婆娑,右,,,,,,,殿主！北门已经失守，我率领弟子前来回防。"
   splits:
   - split: 2
@@ -134193,25 +133827,22 @@
     text: "二位少侠！听说此地有税银劫匪，"
   - split: 10
     subIndex: 1
-    text: "来援手！"
+    text: "#PlayerForceDescribe##$PlayerName#来援手！"
   templates:
   - split: 10
-    template: "{0}\\n#PlayerForceDescribe##$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,阿弥陀佛，多谢#$PlayerName#仗义相助。\\n小僧乃是......"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "阿弥陀佛，多谢"
+    text: "阿弥陀佛，多谢#$PlayerName#仗义相助。"
   - split: 10
     subIndex: 1
-    text: "仗义相助。"
-  - split: 10
-    subIndex: 2
     text: "小僧乃是......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,清风,右,,,,TRUE,,,你们两个，能不能先擒贼再寒暄！"
   splits:
   - split: 2
@@ -135005,10 +134636,10 @@
     text: "小僧定不辱使命。"
   - split: 10
     subIndex: 1
-    text: "施主，还望届时你能也来杭州，助我等一臂之力！"
+    text: "#$PlayerName#施主，还望届时你能也来杭州，助我等一臂之力！"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,ChangeHeroFavor;彗定-5|ChangeHeroFavor;清风-5,,一言为定，二位多保重。"
   splits:
   - split: 3
@@ -136391,13 +136022,10 @@
     text: "以小僧之力，想必能拖住他们半个时辰。"
   - split: 10
     subIndex: 2
-    text: "之后，就有劳"
-  - split: 10
-    subIndex: 3
-    text: "施主和清风道长了。"
+    text: "之后，就有劳#$PlayerName#施主和清风道长了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}#$PlayerName#{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,彗定少侠，对方人多势众，你一个人上去只怕凶多吉少啊。\\n要不还是从长计议吧！"
   splits:
   - split: 3
@@ -136522,13 +136150,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "太好了，卢长老来得及时！在下#PlayerForceDescribe#"
+    text: "太好了，卢长老来得及时！在下#PlayerForceDescribe##$PlayerName#。"
   - split: 10
     subIndex: 1
     text: "此处贼人人多势众，千万小心！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#。\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哼，一群流寇土匪，也敢在我长乐帮地界撒野？\\n诸位弟子听命，格杀勿论！"
   splits:
   - split: 3
@@ -136975,13 +136603,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "少侠，你武艺高强，更兼侠肝义胆。"
+    text: "#$PlayerName#少侠，你武艺高强，更兼侠肝义胆。"
   - split: 10
     subIndex: 1
     text: "这批花石纲，还望你也能来一道护送，事成之后，同样会有重谢。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,,,,好说好说，我定前来助阵。"
   splits:
   - split: 1
@@ -137910,10 +137538,10 @@
     text: "大家并肩作战，守住车队，"
   - split: 10
     subIndex: 1
-    text: "和卢长老一定会赶来救援的！"
+    text: "#$PlayerName#和卢长老一定会赶来救援的！"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,StartSpeFight;143,,敬酒不吃吃罚酒，\\n我这儿几十号弟兄，你们侠义七子就算有三头六臂也抵挡不住。\\n弟兄们，给我上！"
   splits:
   - split: 3
@@ -140451,13 +140079,10 @@
     text: "快说，这些年你躲到哪里去了？"
   - split: 10
     subIndex: 1
-    text: "知不知道我跟"
-  - split: 10
-    subIndex: 2
-    text: "找你找得有多辛苦！"
+    text: "知不知道我跟#$PlayerName#找你找得有多辛苦！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,............王添翼是什么狗东西，青城派无耻叛徒，也配跟我笑面鬼相提并论？\\n疯婆娘，你若再纠缠，可别怪我笑面鬼不客气！"
   splits:
   - split: 3
@@ -141408,10 +141033,10 @@
     text: "还好及时出声提醒，若这次鬼迷心窍害死郭大侠，"
   - split: 10
     subIndex: 1
-    text: "我还有何颜面再见雷大小姐，郭勇锐和"
+    text: "我还有何颜面再见雷大小姐，郭勇锐和#$PlayerName#......"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#......"
+    template: "{0}\\n{1}"
 - raw: ",,厉苍穹,右,,,,,,,（在山崖上向下望去）\\n好恐怖的掌力！中原大侠郭淮果然名不虚传。"
   splits:
   - split: 2
@@ -141843,10 +141468,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "少侠？你怎么也在此处？"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#少侠？你怎么也在此处？"
 - raw: ",,,左,,,,,,,我和郭勇锐一道赶来，正是为了救王添翼一命。\\n此事有诸多误会，还望郭大侠暂且停手，听我解释一番！"
   splits:
   - split: 3
@@ -141873,16 +141495,13 @@
     text: "我本以为，这黑道五鬼只余三人，厉苍穹，费彬，和王添翼。"
   - split: 10
     subIndex: 1
-    text: "没想到现在又多了两个，"
+    text: "没想到现在又多了两个，#$PlayerName#和我亲儿子郭勇锐，"
   - split: 10
     subIndex: 2
-    text: "和我亲儿子郭勇锐，"
-  - split: 10
-    subIndex: 3
     text: "正好又凑齐五鬼，好好好！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,今天我郭淮，便领教领教你们这新“黑道三鬼”的高招，来！"
   splits:
   - split: 3
@@ -142087,13 +141706,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "少侠......哎，你和勇锐年纪尚轻，被贼人蒙蔽也是情有可原。"
+    text: "#$PlayerName#少侠......哎，你和勇锐年纪尚轻，被贼人蒙蔽也是情有可原。"
   - split: 10
     subIndex: 1
     text: "奸恶之人皆是反复无常之徒，你们若是轻信，早晚会吃苦头！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,<b>想当年我也曾被人蒙蔽，教出了一个杀人魔头徒弟来......</b>\\n从那时起，我便立志除尽天下恶贼，只有如此方能弥补往日之过失。"
   splits:
   - split: 3
@@ -142117,13 +141736,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "少侠，还望你能替我劝劝勇锐，"
+    text: "#$PlayerName#少侠，还望你能替我劝劝勇锐，"
   - split: 10
     subIndex: 1
     text: "别再被奸人继续蒙蔽了。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,迷途知返，为时未晚，咳咳咳咳，\\n切莫像我年轻时一样犯下大错，悔之晚矣！"
   splits:
   - split: 3
@@ -142441,28 +142060,25 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "还有那个什么"
+    text: "还有那个什么#$PlayerName#，以及郭淮之子郭勇锐，"
   - split: 10
     subIndex: 1
-    text: "，以及郭淮之子郭勇锐，"
-  - split: 10
-    subIndex: 2
     text: "这两小子屡屡坏我们好事，你却和他们眉来眼去，似乎有什么说不清道不明的关系。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,#$PlayerName#......郭勇锐......一路追杀咱们......我恨不能手刃了他们！\\n怎么会和他们眉来眼去？费彬兄弟莫再血口喷人了！"
   splits:
   - split: 3
     text: "左"
   - split: 10
-    text: "......郭勇锐......一路追杀咱们......我恨不能手刃了他们！"
+    text: "#$PlayerName#......郭勇锐......一路追杀咱们......我恨不能手刃了他们！"
   - split: 10
     subIndex: 1
     text: "怎么会和他们眉来眼去？费彬兄弟莫再血口喷人了！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哼哼，空口无凭！\\n老子此次前来，就是为了押你去厉大哥那里，将你所作所为一一禀报！\\n厉大哥和大统领见多识广，明察秋毫，到时候定有公断！"
   splits:
   - split: 3
@@ -143634,13 +143250,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "既然二位有此决心，那我"
-  - split: 10
-    subIndex: 1
-    text: "岂能不舍命陪君子？"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "既然二位有此决心，那我#$PlayerName#岂能不舍命陪君子？"
 - raw: ",,,左,,,,TRUE,,,今日我们三人共斗厉苍穹，不死不休！"
   splits:
   - split: 3
@@ -144223,16 +143833,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好！"
+    text: "好！#$PlayerName#，郭勇锐，人生难得两位知己。"
   - split: 10
     subIndex: 1
-    text: "，郭勇锐，人生难得两位知己。"
-  - split: 10
-    subIndex: 2
     text: "咱们来生再做兄弟，再一起行侠仗义，闯荡江湖！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,HideSpeHero;王添翼,,我王添翼......先走一步......\\n（说罢缓缓闭上双眼）"
   splits:
   - split: 3
@@ -145763,16 +145370,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "各位掌门大侠都一同出征，我"
+    text: "各位掌门大侠都一同出征，我#$PlayerName#自也不能落于人后，"
   - split: 10
     subIndex: 1
-    text: "自也不能落于人后，"
-  - split: 10
-    subIndex: 2
     text: "此次#PlayerForceName#，愿随道阁主一同出征！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,好！有少林，武当，加上#PlayerForceName#，此战便有七成胜算了。"
   splits:
   - split: 3
@@ -148646,19 +148250,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "而仙霞派这些年来，在"
+    text: "而仙霞派这些年来，在#$PlayerName#领导下迅速崛起，"
   - split: 10
     subIndex: 1
-    text: "领导下迅速崛起，"
-  - split: 10
-    subIndex: 2
     text: "如今也已是巴蜀武林一股不可小觑之力量，"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "可惜眼下无法拉拢，必须加倍谨慎对待。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,不过眼下倒也无需调集援军，因为很快......就能见分晓了......"
   splits:
   - split: 3
@@ -155312,16 +154913,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "不论如何，我"
+    text: "不论如何，我#$PlayerName#只要一息尚存，"
   - split: 10
     subIndex: 1
-    text: "只要一息尚存，"
-  - split: 10
-    subIndex: 2
     text: "就定会找出凶手，替白云子报仇雪恨！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",无,无,无,,,,,ShowMemoryCover,,归途之上，你不仅回想起与白云子相识以来的种种往事......"
   splits:
   - split: 1
@@ -155485,13 +155083,10 @@
     text: "哼！还不是因为那些武当弟子不长眼！"
   - split: 10
     subIndex: 1
-    text: "先对"
-  - split: 10
-    subIndex: 2
-    text: "你师傅出言不逊，我才想教训教训他们的。"
+    text: "先对#$PlayerName#你师傅出言不逊，我才想教训教训他们的。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,行吧，多谢#TargetInteractName#你为我仙霞派出头了。\\n也不枉我带你下山，走这一趟遭的罪。"
   splits:
   - split: 3
@@ -155671,16 +155266,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "那你师傅司马掌门，以及同门师兄师姐，还有"
+    text: "那你师傅司马掌门，以及同门师兄师姐，还有#$PlayerName#我，都难免肝肠寸断。"
   - split: 10
     subIndex: 1
-    text: "我，都难免肝肠寸断。"
-  - split: 10
-    subIndex: 2
     text: "悲伤难过之情，不会逊色于此人的父母妻儿的......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#PlayerName#，谢谢你开导我。\\n时至今日，我才明白师傅时常说的，\\n“乃知兵者是凶器，圣人不得已而用之”是什么意思。"
   splits:
   - split: 3
@@ -163179,13 +162771,10 @@
     text: "完了，这下完了，出师未捷身先死，长使英雄泪满襟。"
   - split: 10
     subIndex: 1
-    text: "没想到我"
-  - split: 10
-    subIndex: 2
-    text: "一世英名，竟然就毁在这密林之中......"
+    text: "没想到我#$PlayerName#一世英名，竟然就毁在这密林之中......"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,我不甘心呐！！！"
   splits:
   - split: 3
@@ -163308,13 +162897,10 @@
     text: "咳咳咳咳，不、不必了，"
   - split: 10
     subIndex: 1
-    text: "多谢姑娘救命之恩，我"
-  - split: 10
-    subIndex: 2
-    text: "无以为报。"
+    text: "多谢姑娘救命之恩，我#$PlayerName#无以为报。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,没事没事，举手之劳。"
   splits:
   - split: 3
@@ -165444,13 +165030,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#PlayerForceDescribe#"
+    text: "在下#PlayerForceDescribe##$PlayerName#。"
   - split: 10
     subIndex: 1
     text: "龙姑娘日后若是来中原，可以到#PlayerForceName#坐坐，我一定尽地主之谊。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#。\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,FinishEventMission,,希望......会有机会吧。\\n#PlayerName#，告辞。"
   splits:
   - split: 3
@@ -167909,10 +167495,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#PlayerForceDescribe#"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#。"
+    text: "在下#PlayerForceDescribe##$PlayerName#。"
 - raw: ",,,右,,,,,,,原来是#PlayerName#！久仰久仰。\\n久闻#PlayerForceName#中出了名后起之秀，今日一见，果真名不虚传。"
   splits:
   - split: 3
@@ -169301,7 +168884,7 @@
     subIndex: 1
     text: "吴忧"
   - split: 10
-    text: "吴大侠，向您引荐下，这位是#PlayerForceDescribe#"
+    text: "吴大侠，向您引荐下，这位是#PlayerForceDescribe##$PlayerName#。"
   - split: 10
     subIndex: 1
     text: "此前在江陵城中，正是他同我们一道追捕曾镇海。"
@@ -169309,7 +168892,7 @@
   - split: 8
     template: "SetHeroMeet;{0}|ChangeHeroFavor;{1}-2"
   - split: 10
-    template: "{0}#$PlayerName#。\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,右,,,Drink,,,,（饮了几口茶，微微点头）\\n#PlayerName#少年英雄，果然名不虚传。"
   splits:
   - split: 1
@@ -169825,13 +169408,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，这家伙也是项问天的帮凶。"
+    text: "#$PlayerName#，这家伙也是项问天的帮凶。"
   - split: 10
     subIndex: 1
     text: "爹爹，快把他们一起拿下，就地正法！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,吕天行,右,,,,,,,放心，爹爹一定会替你主持公道的。\\n项问天，#$PlayerName#，你们血口喷人也得有个分寸。"
   splits:
   - split: 2
@@ -169842,13 +169425,10 @@
     text: "放心，爹爹一定会替你主持公道的。"
   - split: 10
     subIndex: 1
-    text: "项问天，"
-  - split: 10
-    subIndex: 2
-    text: "，你们血口喷人也得有个分寸。"
+    text: "项问天，#$PlayerName#，你们血口喷人也得有个分寸。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,我们家舞阳向来乖巧懂事，怎会做出下毒这种伤天害理事情？\\n今日之事，显然就是你们两个串通所为。"
   splits:
   - split: 3
@@ -169871,13 +169451,13 @@
     text: "就是就是，爹爹说的太对了！"
   - split: 10
     subIndex: 1
-    text: "哈哈哈哈，项问天，"
+    text: "哈哈哈哈，项问天，#$PlayerName#，"
   - split: 10
     subIndex: 2
     text: "眼下有我爹爹替我做主，你们就等死吧！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#，\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,吕天行,右,,,,,,,眼下这么多江湖豪杰在此，你们二人的罪行已是昭然若揭。\\n还不快快束手就擒，如实招来，免受皮肉之苦！"
   splits:
   - split: 2
@@ -169915,13 +169495,10 @@
     text: "哼！#PlayerName#，死到临头，你还是担心担心自己吧。"
   - split: 10
     subIndex: 1
-    text: "各位，给我把项问天和"
-  - split: 10
-    subIndex: 2
-    text: "这两个贼子拿下！"
+    text: "各位，给我把项问天和#$PlayerName#这两个贼子拿下！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "846,玩家,项问天,左,,,GroupFight,,,,光一个吕天行已经颇难对付，加上还有这么多侠客在旁。\\n这下真是黄泥掉裤裆了......"
   splits:
   - split: 1
@@ -170206,13 +169783,10 @@
     text: "我此刻挟持吴大侠，也是迫不得已。"
   - split: 10
     subIndex: 1
-    text: "待"
-  - split: 10
-    subIndex: 2
-    text: "求药归来将吴大侠救醒，一切自会真相大白！"
+    text: "待#$PlayerName#求药归来将吴大侠救醒，一切自会真相大白！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哼，我看你不过是在浪费时间！"
   splits:
   - split: 3
@@ -170533,13 +170107,10 @@
     text: "郭大侠，来得正好，"
   - split: 10
     subIndex: 1
-    text: "与我一同将项问天和"
-  - split: 10
-    subIndex: 2
-    text: "拿下！"
+    text: "与我一同将项问天和#$PlayerName#拿下！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,吕舞阳,右,,,,,,,郭、郭、郭伯伯，吴忧吴掌柜被项问天和#$PlayerName#毒害了，\\n您一定要替我做主啊......"
   splits:
   - split: 2
@@ -170547,16 +170118,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "郭、郭、郭伯伯，吴忧吴掌柜被项问天和"
+    text: "郭、郭、郭伯伯，吴忧吴掌柜被项问天和#$PlayerName#毒害了，"
   - split: 10
     subIndex: 1
-    text: "毒害了，"
-  - split: 10
-    subIndex: 2
     text: "您一定要替我做主啊......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,什么，此事当真？\\n（虎目一扫，吕舞阳自觉心虚，当下移开目光不敢对视）"
   splits:
   - split: 3
@@ -170744,13 +170312,10 @@
     text: "郭淮，咱们这么多年的交情，你竟然不替我儿子说句公道话？"
   - split: 10
     subIndex: 1
-    text: "看来你是下定决心，要袒护项问天和"
-  - split: 10
-    subIndex: 2
-    text: "了！"
+    text: "看来你是下定决心，要袒护项问天和#$PlayerName#了！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,既然你不义，就休怪老夫无情。\\n今天老夫就来领教领教你的降龙掌法，看看到底几斤几两！"
   splits:
   - split: 3
@@ -172565,16 +172130,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "哎，可惜项问天有"
+    text: "哎，可惜项问天有#$PlayerName#和侠义七子相助，郭淮更是朋友遍天下。"
   - split: 10
     subIndex: 1
-    text: "和侠义七子相助，郭淮更是朋友遍天下。"
-  - split: 10
-    subIndex: 2
     text: "少侠你想凭自己孤身一人，找他们二位报仇，只怕希望渺茫啊。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,是啊......如今我虽得了爹爹一身功力，但终究势单力薄......\\n该怎么办呢......"
   splits:
   - split: 3
@@ -173337,15 +172899,12 @@
     text: "郭大侠，项兄，你们但凡有用得上我的地方，尽管开口。"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "定会帮助二位，将此案查个水落石出！"
+    text: "我#$PlayerName#定会帮助二位，将此案查个水落石出！"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-5"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ChangeHeroFavor;项问天-5,,好！项少侠，你去西凉飞凤钱庄打探情报，\\n我留在京城中继续搜寻线索。这次定要将此案件，查个水落石出。"
   splits:
   - split: 3
@@ -173671,13 +173230,10 @@
     text: "三位兄弟，你们打错人了，"
   - split: 10
     subIndex: 1
-    text: "是我，"
-  - split: 10
-    subIndex: 2
-    text: "啊！"
+    text: "是我，#$PlayerName#啊！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "867,玩家,郝大力,右,,,,TRUE,ChangeInjury;玩家-1-20,,嚯！哈！吃我一招，泰山压顶！"
   splits:
   - split: 1
@@ -173718,15 +173274,12 @@
     text: "哎哟，大力兄弟别打了。"
   - split: 10
     subIndex: 1
-    text: "是我，"
-  - split: 10
-    subIndex: 2
-    text: "啊！"
+    text: "是我，#$PlayerName#啊！"
   templates:
   - split: 8
     template: "ChangeMaxAttri;{0}-0-5|ChangeMaxAttri;{1}-4-5|ChangeMaxAttri;{2}-2-5|ChangeMaxAttri;{3}-5-5|ChangeMaxAttri;{4}-1-5|ChangeMaxAttri;{5}-3-5"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ChangePlotDataBase;868,,啊？兄弟们快住手，打错人了！"
   splits:
   - split: 3
@@ -177691,18 +177244,15 @@
   - split: 8
     text: "万仞山"
   - split: 10
-    text: "呵呵，"
+    text: "呵呵，#$PlayerName#你功夫不错，假以时日定能成大器。"
   - split: 10
     subIndex: 1
-    text: "你功夫不错，假以时日定能成大器。"
-  - split: 10
-    subIndex: 2
     text: "折损在这聚义门，未免可惜了。"
   templates:
   - split: 8
     template: "PlotChangeForceFavor;20-20|ChangeHeroFavor;{0}-20"
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",万仞山,,左,,,,,ChangePlotDataBase;889,,#PlayerName#之武艺，真可挽狂澜于既倒，扶大厦之将倾。\\n我等聚义门弟子，也当引为榜样，奋勇杀敌！"
   splits:
   - split: 1
@@ -177728,12 +177278,10 @@
   - split: 8
     text: "玩家"
   - split: 10
-    text: "，你学艺未成，回去练练再来吧！"
+    text: "#$PlayerName#，你学艺未成，回去练练再来吧！"
   templates:
   - split: 8
     template: "ChangeInjury;{0}-0-50"
-  - split: 10
-    template: "#$PlayerName#{0}"
 - raw: ",,,左,,,,,AddForceAllMaxAttri;8-1|ChangePlotDataBase;889,,唔......七大恶人之首，绝情断义果然名不虚传！\\n就算断过一臂，竟仍有此等实力。"
   splits:
   - split: 3
@@ -179115,13 +178663,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "项帮主！在下#PlayerForceDescribe#"
+    text: "项帮主！在下#PlayerForceDescribe##$PlayerName#。"
   - split: 10
     subIndex: 1
     text: "听闻西凉遭逐鹿盟联军攻击，特地前来援助！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#。\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#PlayerForceName#？好像有点耳熟......"
   splits:
   - split: 3
@@ -183845,16 +183393,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "呵，"
+    text: "呵，#$PlayerName#，不愧是阎殿主看中的人才。"
   - split: 10
     subIndex: 1
-    text: "，不愧是阎殿主看中的人才。"
-  - split: 10
-    subIndex: 2
     text: "为今之计，也只好暂时撤退了。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,SetHeroMeet;空见大师|ChangeHeroFavor;空见大师-10|PlotChangeForceFavor;10-5,,我仙霞派今日众志成城，成功击退逐鹿盟联军。\\n想来经过此役，诸位弟子的潜力也会有所长进。"
   splits:
   - split: 3
@@ -184110,13 +183655,10 @@
     text: "没事没事，小师妹不必担心，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "武功高强，一点伤都没有。"
+    text: "我#$PlayerName#武功高强，一点伤都没有。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哈哈哈哈哈......噗！（喷出一口鲜血）"
   splits:
   - split: 3
@@ -184590,19 +184132,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "依老夫观察，这"
+    text: "依老夫观察，这#$PlayerName#身上气息奇特，不容小觑，"
   - split: 10
     subIndex: 1
-    text: "身上气息奇特，不容小觑，"
-  - split: 10
-    subIndex: 2
     text: "加上其得到少林，武当，丐帮等联军援助，"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "这巴陵村已如铁桶一块，万万不可硬攻。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,所以老夫方才想出这条计策，声东击西，\\n先将中原大军拖在巴陵村一地，我们则奇袭佛山镇，\\n然后攻取清远，打开前往江陵的通路。"
   splits:
   - split: 3
@@ -185016,15 +184555,12 @@
     text: "哼，溜得挺快，"
   - split: 10
     subIndex: 1
-    text: "区区"
-  - split: 10
-    subIndex: 2
-    text: "，不过尔尔。"
+    text: "区区#$PlayerName#，不过尔尔。"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "922,无,无,无,,,Horses,,SpePlotFuc;116,,你率领#PlayerForceName#弟子且战且退，\\n终于冲出佛山镇，追上了药王谷一干人等。"
   splits:
   - split: 1
@@ -186421,13 +185957,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "宋掌门！在下#PlayerForceName#"
-  - split: 10
-    subIndex: 1
-    text: "，前来支援江陵！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "宋掌门！在下#PlayerForceName##$PlayerName#，前来支援江陵！"
 - raw: ",,,右,,,,,,,#PlayerName#，来得正好！\\n这逐鹿盟大军突然出现在江陵城下，本派弟子手忙脚乱，让你见笑了。"
   splits:
   - split: 3
@@ -193464,16 +192994,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "你这种卑鄙小人，想让我"
+    text: "你这种卑鄙小人，想让我#$PlayerName#俯首称臣，"
   - split: 10
     subIndex: 1
-    text: "俯首称臣，"
-  - split: 10
-    subIndex: 2
     text: "怕不是在痴人说梦！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: "955,玩家,思中澜,右,,,,,ChangeInjury;玩家-1-50|ChangeAttri;思中澜-all-5,,#PlayerName#，以你现在的功力想要阻拦我，\\n无异于痴人说梦！"
   splits:
   - split: 1
@@ -194664,13 +194191,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "还有我！"
-  - split: 10
-    subIndex: 1
-    text: "虽资历尚浅，也愿祝各位一臂之力！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "还有我！#$PlayerName#虽资历尚浅，也愿祝各位一臂之力！"
 - raw: ",,张青蓬,右,,,,,,,#PlayerName#门派事务繁忙，就不劳你随我们一同追捕了。\\n若是在路上截住了思中澜那恶贼，贫道会飞鸽传书请你前来助拳！"
   splits:
   - split: 2
@@ -198907,16 +198428,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "我向"
+    text: "我向#$PlayerName#和峨眉派司马掌门保证过，"
   - split: 10
     subIndex: 1
-    text: "和峨眉派司马掌门保证过，"
-  - split: 10
-    subIndex: 2
     text: "会保住白云子的性命。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,本公子一直听闻五毒教众都是些邪魔外道，\\n没想到还有如此高风亮节之人！"
   splits:
   - split: 3
@@ -199530,13 +199048,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "什么？龙掌教，"
-  - split: 10
-    subIndex: 1
-    text: "此话当真？"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "什么？龙掌教，#$PlayerName#此话当真？"
 - raw: ",龙凤娥,,左,,,,,,,（看你使了个眼色，当下心领神会，点头承认）\\n不错，本掌教日夜服食各种灵药和毒物，在体内相互冲克。\\n最终便可使血液带有奇特药性，能解天下一切剧毒！"
   splits:
   - split: 1
@@ -206004,19 +205516,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "哼哼，"
+    text: "哼哼，#$PlayerName#，张文馨，"
   - split: 10
     subIndex: 1
-    text: "，张文馨，"
-  - split: 10
-    subIndex: 2
     text: "你们两个小子年纪轻轻，武功却已是不凡，"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "颇有石将军和老子当年的风范。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,老子与你们此前多次交手，恨不能你死我活，\\n如今反倒得二位相助，真是有趣得很，有趣的很呐。"
   splits:
   - split: 3
@@ -207753,10 +207262,10 @@
     text: "说起来，可能是因为失忆了，这世间万物看起来都颇为新鲜。"
   - split: 10
     subIndex: 1
-    text: "，要不你带我去附近的城里逛逛，看看有啥好玩的？"
+    text: "#$PlayerName#，要不你带我去附近的城里逛逛，看看有啥好玩的？"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,哎，果然还是老样子，又想到处乱跑。\\n行吧行吧，看在你大病初愈的份上，\\n想去哪里，我带你去就是了。"
   splits:
   - split: 3
@@ -207780,10 +207289,10 @@
     text: "嘻嘻，好耶！总觉得此情此景有些眼熟。"
   - split: 10
     subIndex: 1
-    text: "，你以前也经常带我到处玩吗？"
+    text: "#$PlayerName#，你以前也经常带我到处玩吗？"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,呵呵，那是自然。\\n想当年，你强闯武当派，打得真武剑阵七零八落......"
   splits:
   - split: 3
@@ -207816,13 +207325,10 @@
     text: "哈哈哈哈，有趣有趣，像神话故事一样。"
   - split: 10
     subIndex: 1
-    text: "那"
-  - split: 10
-    subIndex: 2
-    text: "你慢慢说给我听好了！"
+    text: "那#$PlayerName#你慢慢说给我听好了！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,那你记得你的绝招是什么吗？\\n若能说出来，我就把这些故事讲给你听。"
   splits:
   - split: 3
@@ -207888,13 +207394,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "你若再卖关子，"
+    text: "#$PlayerName#你若再卖关子，"
   - split: 10
     subIndex: 1
     text: "当心我一招“星落九天”把你打成筛子！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,UpgradeHeroSkill;白云天-1050-1-6|PlotCheckHeroSkill;白云天,,对啦对啦，就是这个！"
   splits:
   - split: 3
@@ -208149,28 +207655,22 @@
     text: "（翻身爬上旁边的窗台）"
   - split: 10
     subIndex: 1
-    text: "今天我"
-  - split: 10
-    subIndex: 2
-    text: "，便随你一道去找师傅赔罪便是。"
+    text: "今天我#$PlayerName#，便随你一道去找师傅赔罪便是。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,那怎么行！#$PlayerName#你如今身为掌门，\\n师兄弟们还都指着你统领大局，复兴仙霞派呢。"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "那怎么行！"
+    text: "那怎么行！#$PlayerName#你如今身为掌门，"
   - split: 10
     subIndex: 1
-    text: "你如今身为掌门，"
-  - split: 10
-    subIndex: 2
     text: "师兄弟们还都指着你统领大局，复兴仙霞派呢。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,辜负师父遗命，便是不忠不孝之徒，\\n有何颜面再做这仙霞派掌门？"
   splits:
   - split: 3
@@ -208566,13 +208066,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "你如今身为仙霞派掌门，"
+    text: "#$PlayerName#你如今身为仙霞派掌门，"
   - split: 10
     subIndex: 1
     text: "我正好也代师傅检查检查，你最近有没有勤学苦练。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,啊？要不还是免了吧......我如今功力高深莫测，\\n万一不小心伤了师姐你，可就不好了......"
   splits:
   - split: 3
@@ -209155,15 +208655,12 @@
     text: "武统领，既是为了争夺归藏功而来，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "不妨助你一臂之力！"
+    text: "我#$PlayerName#不妨助你一臂之力！"
   templates:
   - split: 8
     template: "SetHeroMeet;{0}|ChangeHeroFavor;{1}-5"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,StartSpeFight;199,,哼，竟然又是你小子？\\n也好，你功夫不错，定能助老子夺回此功！"
   splits:
   - split: 3
@@ -209193,15 +208690,12 @@
     text: "大胆恶徒，竟敢擅闯少林重地。"
   - split: 10
     subIndex: 1
-    text: "大师莫慌，我"
-  - split: 10
-    subIndex: 2
-    text: "前来助你！"
+    text: "大师莫慌，我#$PlayerName#前来助你！"
   templates:
   - split: 8
     template: "SetHeroMeet;{0}|ChangeHeroFavor;{1}-5"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,StartSpeFight;200,,阿弥陀佛，善哉善哉。"
   splits:
   - split: 3
@@ -212084,13 +211578,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "这位高人稍安勿躁，在下是#PlayerForceDescribe#"
+    text: "这位高人稍安勿躁，在下是#PlayerForceDescribe##$PlayerName#。"
   - split: 10
     subIndex: 1
     text: "旁边这二位乃是武当副掌门张文馨，和阎罗殿主武绝义。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#。\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,原来是#PlayerName#，久仰大名了。\\n在下乃是神机门副门主墨从义，当今门主墨璇玑是我胞妹。"
   splits:
   - split: 3
@@ -213030,16 +212524,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "那我"
+    text: "那我#$PlayerName#也自当竭尽所能，"
   - split: 10
     subIndex: 1
-    text: "也自当竭尽所能，"
-  - split: 10
-    subIndex: 2
     text: "助各位惩凶除恶，拿下计心狂！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,好，还望#PlayerName#你也做足准备。\\n毕竟血衣盟在扬州城内经营已久，根深蒂固，\\n届时必定又是一场惊天血战，告辞！"
   splits:
   - split: 3
@@ -214597,16 +214088,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好好好，"
+    text: "好好好，#$PlayerName#，张文馨！"
   - split: 10
     subIndex: 1
-    text: "，张文馨！"
-  - split: 10
-    subIndex: 2
     text: "既然你们非要与我为敌，那就别怪我不客气。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,SpeEffect/毒液喷洒,,,,（一股诡异的紫色毒烟自周身蒸腾而起，直冲屋顶）"
   splits:
   - split: 3
@@ -215514,13 +215002,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，记住这个名号。"
+    text: "#PlayerForceDescribe##$PlayerName#，记住这个名号。"
   - split: 10
     subIndex: 1
     text: "以后敢在来骚扰我仙霞派，定不轻饶！"
   templates:
   - split: 10
-    template: "#PlayerForceDescribe##$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ChangePlotDataBase;23,,好大的口气，老娘再来会会你！"
   splits:
   - split: 3
@@ -215787,13 +215275,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "金先生！在下与"
-  - split: 10
-    subIndex: 1
-    text: "一道前来救援！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "金先生！在下与#$PlayerName#一道前来救援！"
 - raw: ",,,右,,,,,,,咳咳咳咳，二位来的可真及时。\\n这帮血衣盟探子截住老朽，正准备要痛下杀手。"
   splits:
   - split: 3
@@ -215925,14 +215407,12 @@
   - split: 8
     text: "玩家"
   - split: 10
-    text: "在此，想动金先生就过我这关！"
+    text: "#$PlayerName#在此，想动金先生就过我这关！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 8
     template: "ChangeAttri;{0}-all-1"
-  - split: 10
-    template: "#$PlayerName#{0}"
 - raw: ",,,无,,,,,ChangePlotDataBase;1048,,血衣盟众杀手见你功力高强，一时难以得手，\\n也只得四散逃窜，作鸟兽散了。"
   splits:
   - split: 3
@@ -218068,14 +217548,14 @@
     text: "（运起内力，大喝一声）"
   - split: 10
     subIndex: 1
-    text: "在此，贼人休得放肆！"
+    text: "#$PlayerName#在此，贼人休得放肆！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 8
     template: "ChangeMaxAttri;{0}-5-2"
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,,,ChangePlotDataBase;1055,,血衣盟贼人听闻你的名号，\\n顿时惊惧万分，很快便溃不成军。"
   splits:
   - split: 3
@@ -223665,16 +223145,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#纵横江湖这么多年，见过不贪的官，见过不奸的商，"
   - split: 10
     subIndex: 1
-    text: "纵横江湖这么多年，见过不贪的官，见过不奸的商，"
-  - split: 10
-    subIndex: 2
     text: "唯独没见过忧国忧民的土匪强盗。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,所以说此事实在是太不合理，\\n定是那说书人胡编乱造出来的。"
   splits:
   - split: 3
@@ -225895,13 +225372,10 @@
     text: "好，那咱们这就出发吧。"
   - split: 10
     subIndex: 1
-    text: "凭我"
-  - split: 10
-    subIndex: 2
-    text: "这张三寸不烂之舌，定能说服此人乖乖合作！"
+    text: "凭我#$PlayerName#这张三寸不烂之舌，定能说服此人乖乖合作！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "1076,无,无,无,酒馆,,,,,,你们来到京城最大的酒馆之中，\\n只见此处人来人往，热闹非凡。"
   splits:
   - split: 1
@@ -229421,13 +228895,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "，和武当派张文馨。"
+    text: "#PlayerForceDescribe##$PlayerName#，和武当派张文馨。"
   - split: 10
     subIndex: 1
     text: "小兄弟好生练武，咱们后会有期！"
   templates:
   - split: 10
-    template: "#PlayerForceDescribe##$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",无,,右,,,SpeEffect/风呼啸,,,,#$PlayerName#，还有武当文逸真人？！\\n竟然是你们二位大侠，当真是如雷贯耳！"
   splits:
   - split: 1
@@ -229437,7 +228911,7 @@
   - split: 6
     text: "风呼啸"
   - split: 10
-    text: "，还有武当文逸真人？！"
+    text: "#$PlayerName#，还有武当文逸真人？！"
   - split: 10
     subIndex: 1
     text: "竟然是你们二位大侠，当真是如雷贯耳！"
@@ -229445,7 +228919,7 @@
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,在下姓展名昭......已经走了啊......\\n事了拂衣去，深藏身与名，当真是高人风范。"
   splits:
   - split: 3
@@ -236060,19 +235534,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "嗯，届时我"
+    text: "嗯，届时我#$PlayerName#也会与#PlayerForceName#弟子，同各位一道并肩奋战。"
   - split: 10
     subIndex: 1
-    text: "#也会与#"
-  - split: 10
-    subIndex: 2
-    text: "弟子，同各位一道并肩奋战。"
-  - split: 10
-    subIndex: 3
     text: "定要将此人一举擒获，将血衣盟这一武林大患彻底铲除！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName{1}PlayerForceName#{2}\\n{3}"
+    template: "{0}\\n{1}"
 - raw: ",无,无,无,,BigMap7,,,,,众位掌门商议已定，各自回门派准备抓捕事宜。\\n你与大家一一告别后，也准备踏上回程。"
   splits:
   - split: 1
@@ -237698,16 +237166,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "就是就是，看看人家"
+    text: "就是就是，看看人家#$PlayerName#，胸有成竹，气定神闲，"
   - split: 10
     subIndex: 1
-    text: "，胸有成竹，气定神闲，"
-  - split: 10
-    subIndex: 2
     text: "再看看你那没出息的样子！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,TRUE,,,小翼子你要是敢临时打退党鼓，\\n当心我就再也不理你了！"
   splits:
   - split: 3
@@ -238853,13 +238318,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，看在你是为数不多识破老身的聪明人份上，"
+    text: "#$PlayerName#，看在你是为数不多识破老身的聪明人份上，"
   - split: 10
     subIndex: 1
     text: "快把手上那张纸片交出，老身答应，留你一个全尸！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",张文馨,,左,,,,,,,金龙生！没想到你伪装了这么多年老好人，\\n竟在暗中扶植血衣盟，犯下这么多滔天罪孽。"
   splits:
   - split: 1
@@ -239343,16 +238808,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "废话也说的够多了，"
+    text: "废话也说的够多了，#$PlayerName#，是时候上路了。"
   - split: 10
     subIndex: 1
-    text: "，是时候上路了。"
-  - split: 10
-    subIndex: 2
     text: "快交出英雄谱残片，老身留你们全尸！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,#PlayerName#，这金龙生一番胡言乱语，\\n看来是彻底失心疯了。"
   splits:
   - split: 3
@@ -239384,16 +238846,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "放心，今日我"
+    text: "放心，今日我#$PlayerName#只要一息尚存，"
   - split: 10
     subIndex: 1
-    text: "只要一息尚存，"
-  - split: 10
-    subIndex: 2
     text: "就不会让此残片落入贼手。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,金龙生，你的所有阴谋诡计既已败露，今日又已被天罗地网包围。\\n快快束手就擒，莫要再负隅顽抗了！"
   splits:
   - split: 3
@@ -240653,7 +240112,7 @@
   - split: 6
     text: "加速旋转"
   - split: 10
-    text: "好好好，郭淮，"
+    text: "好好好，郭淮，#$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "既然你们一心求死，老身就成全你们！"
@@ -240661,7 +240120,7 @@
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,StartSpeFight;221,,今日老身便祭出十二分功力，\\n叫你们知道什么是天高地厚！"
   splits:
   - split: 3
@@ -240881,12 +240340,9 @@
   - split: 8
     text: "金龙生"
   - split: 10
-    text: "不错，金龙生你恶贯满盈，我"
+    text: "不错，金龙生你恶贯满盈，我#$PlayerName#今日便要以你之血，"
   - split: 10
     subIndex: 1
-    text: "今日便要以你之血，"
-  - split: 10
-    subIndex: 2
     text: "祭奠周世宗柴荣，以及这么多年来无数中原侠士之冤魂！"
   templates:
   - split: 6
@@ -240894,7 +240350,7 @@
   - split: 8
     template: "ChangeInjury;{0}-1-1000"
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,TRUE,ChangePlotDataBase;1126,,噗！！！不可能，英雄谱，我的英雄谱！！！"
   splits:
   - split: 3
@@ -241265,16 +240721,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好，郭大侠，还有此前见过的"
+    text: "好，郭大侠，还有此前见过的#$PlayerName#小兄弟。"
   - split: 10
     subIndex: 1
-    text: "小兄弟。"
-  - split: 10
-    subIndex: 2
     text: "江湖中有你们这样的英雄人物，这乱世就必有终结之日。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,如此，我也好放心离去了。"
   splits:
   - split: 3
@@ -241673,28 +241126,25 @@
     text: "金龙生以为龙胤已死，终于可以肆意妄为，逍遥法外，"
   - split: 10
     subIndex: 1
-    text: "致其掉以轻心，阴谋败露。被#PlayerForceDescribe#"
+    text: "致其掉以轻心，阴谋败露。被#PlayerForceDescribe##$PlayerName#与一众高手设计围杀，"
   - split: 10
     subIndex: 2
-    text: "与一众高手设计围杀，"
-  - split: 10
-    subIndex: 3
     text: "最终败亡于东海岸边。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,无,,,,,,,#$PlayerName#立志改变天下命运的壮举，激励了后来无数初入江湖的英雄侠士。\\n而龙胤之人皆已陨落，之后神州的命运也就交到这些有志之士手中了。"
   splits:
   - split: 3
     text: "无"
   - split: 10
-    text: "立志改变天下命运的壮举，激励了后来无数初入江湖的英雄侠士。"
+    text: "#$PlayerName#立志改变天下命运的壮举，激励了后来无数初入江湖的英雄侠士。"
   - split: 10
     subIndex: 1
     text: "而龙胤之人皆已陨落，之后神州的命运也就交到这些有志之士手中了。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",无,无,无,,,,,,,后人亦有诗赞云：\\n日月其迈兮风雷鼓，山河激荡兮曙光寒。\\n鸿雁南飞兮思故垒，枭雄北顾兮裂玄关。\\n四面楚歌惊魍魉，八方剑气挽狂澜。\\n他年若遂凌云志，重整乾坤万代安！"
   splits:
   - split: 1
@@ -241867,13 +241317,10 @@
     text: "风起云涌，江湖翻沸，"
   - split: 10
     subIndex: 1
-    text: "待我"
-  - split: 10
-    subIndex: 2
-    text: "再闯上一闯！"
+    text: "待我#$PlayerName#再闯上一闯！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "1131,临时:农夫&男;50;-1;1;-2,,左,,,,TRUE,,,乡亲们不好了不好了！浑江十三雄又来征粮了！"
   splits:
   - split: 1
@@ -247392,7 +246839,7 @@
     subIndex: 1
     text: "唐嫣然"
   - split: 10
-    text: "！姜映泉明明武功平平，"
+    text: "#$PlayerName#！姜映泉明明武功平平，"
   - split: 10
     subIndex: 1
     text: "你这家伙怎会如此厉害......"
@@ -247400,7 +246847,7 @@
   - split: 8
     template: "SetHeroMeet;{0}|ChangeHeroFavor;{1}-5"
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,唐嫣然,右,,,,,,,能躲过我暗器之人，江湖中并不多。\\n#PlayerName#，你算是其中一个。"
   splits:
   - split: 2
@@ -247467,13 +246914,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，郭勇锐，雷殷殷......"
+    text: "#$PlayerName#，郭勇锐，雷殷殷......"
   - split: 10
     subIndex: 1
     text: "若为此事与#PlayerForceName#、丐帮和霹雳堂开战，那可就得不偿失了。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,笑面虎，今日人多不便，改天再取你性命。\\n唐门弟子，随我走！"
   splits:
   - split: 3
@@ -248337,10 +247784,10 @@
     text: "既能行侠仗义，又可以狠狠赚上一笔，"
   - split: 10
     subIndex: 1
-    text: "这等好事岂能少的了我"
+    text: "这等好事岂能少的了我#$PlayerName#。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#。"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,Party,,,,你来到传闻中那家富户门口，只见形态各异的武林人士已排起了长队。\\n一时间人潮挤挤，热闹非凡，将此地衬得如同菜市场一般。"
   splits:
   - split: 3
@@ -248590,10 +248037,10 @@
     text: "这位少侠，总感觉有些面熟......"
   - split: 10
     subIndex: 1
-    text: "莫非阁下就是近来声名鹊起的#PlayerForceDescribe#"
+    text: "莫非阁下就是近来声名鹊起的#PlayerForceDescribe##$PlayerName#？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#？"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,凤员外好眼力，正是在下。"
   splits:
   - split: 3
@@ -248687,16 +248134,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "风闻"
+    text: "风闻#$PlayerName#侠义无双，不在中原大侠郭淮之下，"
   - split: 10
     subIndex: 1
-    text: "侠义无双，不在中原大侠郭淮之下，"
-  - split: 10
-    subIndex: 2
     text: "今日一见，果然名不虚传。请进，有请了！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",无,无,无,,,,,,,是夜，众人酒足饭饱，依计四下埋伏，\\n等待那传说中的江洋大盗自投罗网。"
   splits:
   - split: 1
@@ -250552,13 +249996,10 @@
     text: "保护费？没听说过。"
   - split: 10
     subIndex: 1
-    text: "从来只有我"
-  - split: 10
-    subIndex: 2
-    text: "收别人的保护费，你们算什么东西！"
+    text: "从来只有我#$PlayerName#收别人的保护费，你们算什么东西！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,StartSpeFight;228,,噢哟，还敢嘴硬？小的们，给我打！"
   splits:
   - split: 3
@@ -250995,7 +250436,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "夫人，在下#PlayerForceDescribe#"
+    text: "夫人，在下#PlayerForceDescribe##$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "这位是飞龙门大侠，侠义七子之首项问天。"
@@ -251004,7 +250445,7 @@
     text: "你若有什么冤屈和难处，只管对我们两个说。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",项问天,,左,,,Armor,,,,（用力拍拍胸脯，身上的盔甲锵锵作响）不错，夫人只管放心！\\n上刀山下油锅，这江湖中没有我们二人管不了的事！"
   splits:
   - split: 1
@@ -252257,13 +251698,10 @@
     text: "什、什么情况！侠义七子怎么都来了......"
   - split: 10
     subIndex: 1
-    text: "好啊，项问天，"
-  - split: 10
-    subIndex: 2
-    text: "，原来是你们两个在耍老子！"
+    text: "好啊，项问天，#$PlayerName#，原来是你们两个在耍老子！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,,,,哼，狗贼，我们早就察觉你的真面目了！"
   splits:
   - split: 1
@@ -252734,13 +252172,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "唔......"
-  - split: 10
-    subIndex: 1
-    text: "你给我等着！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "唔......#$PlayerName#你给我等着！"
 - raw: "1172,玩家,凤南飞,右,,BigMap10,SpeEffect/二连斩,,ChangeInjury;玩家-0-80,,哈哈哈哈哈，#$PlayerName#看招！"
   splits:
   - split: 1
@@ -252754,17 +252186,12 @@
   - split: 8
     text: "玩家"
   - split: 10
-    text: "哈哈哈哈哈，"
-  - split: 10
-    subIndex: 1
-    text: "看招！"
+    text: "哈哈哈哈哈，#$PlayerName#看招！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 8
     template: "ChangeInjury;{0}-0-80"
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
 - raw: ",,,左,,,,,ChangePlotDataBase;1173,,哼，狗贼再来！"
   splits:
   - split: 3
@@ -253676,13 +253103,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，项问天，又是你们两个来坏我好事！"
+    text: "#$PlayerName#，项问天，又是你们两个来坏我好事！"
   - split: 10
     subIndex: 1
     text: "若不是你们，我爹也不会死！！！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,凤南飞,右,,,,,,,小兄弟莫慌，如今诸多血衣盟高手在场。\\n此二人前来，不过也就是多送两条人命而已。"
   splits:
   - split: 2
@@ -253761,10 +253188,10 @@
     text: "（面色张狂，止不住狞笑起来）桀桀桀桀桀桀桀桀！"
   - split: 10
     subIndex: 1
-    text: "，项问天，你们两个还真是......聪明！"
+    text: "#$PlayerName#，项问天，你们两个还真是......聪明！"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,难怪老子在西凉城布下这等迷阵，都没有唬住你们！\\n好，看在你们这么聪明，又快要死的份上，\\n老子大发慈悲告诉你们！"
   splits:
   - split: 3
@@ -256356,13 +255783,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#PlayerForceDescribe#"
-  - split: 10
-    subIndex: 1
-    text: "，见过乐帮主。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "在下#PlayerForceDescribe##$PlayerName#，见过乐帮主。"
 - raw: ",,,右,,,,,,,呵呵，当真是英雄出少年。\\n年纪轻轻便有此等胆识和功力，日后必能成就一番功绩。\\n长乐帮在江南一带发展迅猛，也正是用人之际。"
   splits:
   - split: 3
@@ -259741,13 +259162,10 @@
     text: "什么“神药”，不过是乱人心志的邪魔外道罢了。"
   - split: 10
     subIndex: 1
-    text: "今天我"
-  - split: 10
-    subIndex: 2
-    text: "，定要将你绳之以法！"
+    text: "今天我#$PlayerName#，定要将你绳之以法！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",乐无疾,,左,,,,,PlotChangeForceFavor;0-10,,呵呵呵呵，#PlayerName#武功高绝，胸怀正气，\\n当真是不可多得的少年英才。"
   splits:
   - split: 1
@@ -260123,13 +259541,10 @@
     text: "一代枭雄，血衣盟东统领卢玉麟，"
   - split: 10
     subIndex: 1
-    text: "就这样败亡于"
-  - split: 10
-    subIndex: 2
-    text: "和侠义七子手下。"
+    text: "就这样败亡于#$PlayerName#和侠义七子手下。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",郭勇锐,项问天,左,,,,,,,呼，好一场恶战......\\n这卢玉麟凭借着神药之威力，当真是难以对付。"
   splits:
   - split: 1
@@ -264486,13 +263901,10 @@
     text: "孟大侠？你竟然还有活着......"
   - split: 10
     subIndex: 1
-    text: "在下#PlayerForceDescribe#"
-  - split: 10
-    subIndex: 2
-    text: "，这位是......慕容姑娘。"
+    text: "在下#PlayerForceDescribe##$PlayerName#，这位是......慕容姑娘。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#PlayerName#？咳咳咳咳......\\n我听郭淮提起过你，算是青年才俊......数一数二的人物。"
   splits:
   - split: 3
@@ -266215,7 +265627,7 @@
   - split: 6
     text: "风呼啸"
   - split: 10
-    text: "？慕容星辰？呵呵呵呵，"
+    text: "#$PlayerName#？慕容星辰？呵呵呵呵，"
   - split: 10
     subIndex: 1
     text: "没想到能跟到这儿来，真是小瞧你们了！"
@@ -266223,7 +265635,7 @@
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,恶贼，快交出封桩库藏宝图，饶你们不死！"
   splits:
   - split: 3
@@ -269567,13 +268979,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，老夫见你侠肝义胆，计略深远。"
+    text: "#$PlayerName#，老夫见你侠肝义胆，计略深远。"
   - split: 10
     subIndex: 1
     text: "如此少年英才，兴许能替老夫解开这多年来的悬案。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,老夫这里有一件重要线索，要交到你手中。\\n望你好生保管，在关键时刻或许能助你破解谜团。"
   splits:
   - split: 3
@@ -269615,13 +269027,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，望你能继承周世宗和老夫的遗志，"
+    text: "#$PlayerName#，望你能继承周世宗和老夫的遗志，"
   - split: 10
     subIndex: 1
     text: "将血衣盟彻底剿灭，为天下除去这一大害。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,前辈放心，晚辈定会妥善保管此物，\\n并查明血衣盟之幕后元凶的。"
   splits:
   - split: 3
@@ -269870,13 +269282,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "？我、我怎会在此处......"
+    text: "#$PlayerName#？我、我怎会在此处......"
   - split: 10
     subIndex: 1
     text: "我不是已经死了么？"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,哎，本来是差点死了。\\n若不是我一时心软，把你给保了下来......"
   splits:
   - split: 3
@@ -269894,16 +269306,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "谁要你救了！我有今时今日，皆拜你"
+    text: "谁要你救了！我有今时今日，皆拜你#$PlayerName#所赐！"
   - split: 10
     subIndex: 1
-    text: "所赐！"
-  - split: 10
-    subIndex: 2
     text: "少在这儿假仁假义，咳咳咳咳！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,呵呵，你这家伙作恶多端，\\n你以为我真想救你吗？"
   splits:
   - split: 3
@@ -270259,13 +269668,10 @@
     text: "好了好了，小师妹你别瞎操心了。"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "行走江湖，向来是一身正气，光明磊落。"
+    text: "我#$PlayerName#行走江湖，向来是一身正气，光明磊落。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,四位御史大人突然上门，想必是有要事相商。\\n应该不是来抓我的......是吧各位？"
   splits:
   - split: 3
@@ -272017,13 +271423,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "无妨无妨，在下#PlayerForceDescribe#"
+    text: "无妨无妨，在下#PlayerForceDescribe##$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "这位是四大御史之一的张峻张御史。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哎呀，竟然是你们二位，当真是如雷贯耳。\\n不知二位今天，怎会想到来寻我这下人？"
   splits:
   - split: 3
@@ -276381,16 +275787,13 @@
     text: "姜师姐，别再说这种见外的话了。"
   - split: 10
     subIndex: 1
-    text: "当年我"
+    text: "当年我#$PlayerName#初入仙霞，一无所有之时，"
   - split: 10
     subIndex: 2
-    text: "初入仙霞，一无所有之时，"
-  - split: 10
-    subIndex: 3
     text: "乃是你悉心照顾，方才能有今日之成就。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,姜师姐，你当年送的甲胄和靴子，虽然早已破旧不堪，\\n但在我#$PlayerName#心中，却永远光洁如新，胜过一切神兵利器。"
   splits:
   - split: 3
@@ -276399,13 +275802,10 @@
     text: "姜师姐，你当年送的甲胄和靴子，虽然早已破旧不堪，"
   - split: 10
     subIndex: 1
-    text: "但在我"
-  - split: 10
-    subIndex: 2
-    text: "心中，却永远光洁如新，胜过一切神兵利器。"
+    text: "但在我#$PlayerName#心中，却永远光洁如新，胜过一切神兵利器。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#$PlayerName#......."
   splits:
   - split: 3
@@ -278328,16 +277728,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "想我"
+    text: "想我#$PlayerName#成年之后，就一直胸怀壮志，"
   - split: 10
     subIndex: 1
-    text: "成年之后，就一直胸怀壮志，"
-  - split: 10
-    subIndex: 2
     text: "想凭借自己的能力，在这江湖中一展拳脚。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,如今觅得良机，孤身进京，为的正是实现这一抱负。\\n只可惜身上所剩盘缠不多，得先想办法赚些银两，解决明天饭钱才行。"
   splits:
   - split: 3
@@ -278939,18 +278336,15 @@
     text: "慢着慢着，傅兄恐怕是弄错了吧。"
   - split: 10
     subIndex: 1
-    text: "在下"
+    text: "在下#$PlayerName#，乃是#PlayerForceDescribe#。"
   - split: 10
     subIndex: 2
-    text: "，乃是#PlayerForceDescribe#。"
-  - split: 10
-    subIndex: 3
     text: "今日到此，也是听说有强人出没，想要为民除害来着。"
   templates:
   - split: 8
     template: "SetHeroMeet;{0}"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,哎呀，原来如此。#PlayerName#你仪表堂堂，一身正气，\\n想来不会是那种啸聚山林的强盗土匪，小生实在是眼拙了，恕罪恕罪。"
   splits:
   - split: 3
@@ -280787,13 +280181,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "啊？我？......在、在下#PlayerForceDescribe#"
-  - split: 10
-    subIndex: 1
-    text: "，见过各位前辈。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "啊？我？......在、在下#PlayerForceDescribe##$PlayerName#，见过各位前辈。"
 - raw: ",,,左,,,,,,,（什么拳佛，剑仙，都些稀奇古怪的人物。\\n得想个办法开溜，免得蹚了这趟浑水......）"
   splits:
   - split: 3
@@ -281479,7 +280867,7 @@
   - split: 8
     text: "殷雨霏"
   - split: 10
-    text: "各位官差大人，在下#PlayerForceDescribe#"
+    text: "各位官差大人，在下#PlayerForceDescribe##$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "此次特地前来助各位擒拿此贼。"
@@ -281487,7 +280875,7 @@
   - split: 8
     template: "SetHeroMeet;{0}"
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,殷雨霏,右,,,,,,,江湖侠士，多是些散兵游勇，难堪一用。\\n这里有我与官兵处置，你别碍事就行。"
   splits:
   - split: 2
@@ -281710,7 +281098,7 @@
     subIndex: 1
     text: "推辞不受"
   - split: 10
-    text: "......你武功不俗，此战也出力甚多。"
+    text: "#$PlayerName#......你武功不俗，此战也出力甚多。"
   - split: 10
     subIndex: 1
     text: "这200银两乃是这群贼人的悬赏，你拿去吧。"
@@ -281718,7 +281106,7 @@
   - split: 9
     template: "{0};AcceptLiangShanReward;0|{1};AcceptLiangShanReward;1"
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: "1308,玩家,殷雨霏,左,,,,,,,为民除害，要什么赏钱。\\n巡捕大人未免小瞧我了。"
   splits:
   - split: 1
@@ -282061,16 +281449,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "咳咳咳咳！原来是"
+    text: "咳咳咳咳！原来是#$PlayerName#啊！"
   - split: 10
     subIndex: 1
-    text: "啊！"
-  - split: 10
-    subIndex: 2
     text: "近来道上生意可好？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,啊？哦！哈哈哈，托殷姐的福，\\n前些日子宰了几只肥羊，收获颇丰。"
   splits:
   - split: 3
@@ -282114,15 +281499,10 @@
   - split: 8
     text: "宋明公"
   - split: 10
-    text: "这位是"
-  - split: 10
-    subIndex: 1
-    text: "，道上人称这个......这个“黑旋风”是也。"
+    text: "这位是#$PlayerName#，道上人称这个......这个“黑旋风”是也。"
   templates:
   - split: 8
     template: "SetHeroMeet;{0}"
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
 - raw: ",,宋明公,右,,,,,,,惭愧惭愧，都是道上兄弟谬赞了。\\n今日能够认识殷女侠和#$PlayerName#你们二位高手，实在是荣幸之至。"
   splits:
   - split: 2
@@ -282133,13 +281513,10 @@
     text: "惭愧惭愧，都是道上兄弟谬赞了。"
   - split: 10
     subIndex: 1
-    text: "今日能够认识殷女侠和"
-  - split: 10
-    subIndex: 2
-    text: "你们二位高手，实在是荣幸之至。"
+    text: "今日能够认识殷女侠和#$PlayerName#你们二位高手，实在是荣幸之至。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,宋统领过谦了，久闻梁山水寨强人辈出，高手如云，\\n宋统领更是乐善好施，忠义无双，在下也是早有投奔报效之心啊。"
   splits:
   - split: 3
@@ -284564,13 +283941,10 @@
     text: "来，今天就跟你表演表演胸口碎大石，"
   - split: 10
     subIndex: 1
-    text: "让父老乡亲见识见识我"
-  - split: 10
-    subIndex: 2
-    text: "的硬气功夫！"
+    text: "让父老乡亲见识见识我#$PlayerName#的硬气功夫！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ScreenBlack,,哈哈，太好了！走，咱们开演去。"
   splits:
   - split: 3
@@ -284615,13 +283989,10 @@
     text: "为回馈各位的热情，今日小女子特地邀请搭档，"
   - split: 10
     subIndex: 1
-    text: "“铁金刚”"
-  - split: 10
-    subIndex: 2
-    text: "前来一同表演。"
+    text: "“铁金刚”#$PlayerName#前来一同表演。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,这位“铁金刚”，在道上可是大名鼎鼎，无人不知无人不晓。\\n一身硬气功夫天下无敌，刀砍不入，枪戳不进。"
   splits:
   - split: 3
@@ -285368,13 +284739,10 @@
     text: "好一群嚣张跋扈的地痞流氓，平时定也没少祸害城中百姓。"
   - split: 10
     subIndex: 1
-    text: "今天我"
-  - split: 10
-    subIndex: 2
-    text: "就要为民除害，叫你们吃点苦头！"
+    text: "今天我#$PlayerName#就要为民除害，叫你们吃点苦头！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",曲佩环,,左,,,,,StartSpeFight;257,,#PlayerName#......算了算了。\\n是可忍孰不可忍，我也跟你们拼了！"
   splits:
   - split: 1
@@ -285650,13 +285018,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
-  - split: 10
-    subIndex: 1
-    text: "堂堂大侠，岂会言而无信？"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "我#$PlayerName#堂堂大侠，岂会言而无信？"
 - raw: ",,,右,,,,,ChangeHeroFavor;曲佩环-20,,那你和我拉钩！"
   splits:
   - split: 3
@@ -286540,16 +285902,13 @@
     text: "再说了，我在江湖中认识了很多好朋友，"
   - split: 10
     subIndex: 1
-    text: "像这位"
+    text: "像这位#$PlayerName#，就是江湖上成名已久的大侠，"
   - split: 10
     subIndex: 2
-    text: "，就是江湖上成名已久的大侠，"
-  - split: 10
-    subIndex: 3
     text: "有他们照顾，不会有什么危险的。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",玩家,,右,,,,,,,这位#$PlayerName#大侠，此话当真？"
   splits:
   - split: 1
@@ -286557,13 +285916,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "这位"
-  - split: 10
-    subIndex: 1
-    text: "大侠，此话当真？"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "这位#$PlayerName#大侠，此话当真？"
 - raw: ",,,左,,,,,,,咳咳，勉、勉强算是吧......"
   splits:
   - split: 3
@@ -288704,13 +288057,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "久闻阁下赌术高超，我"
-  - split: 10
-    subIndex: 1
-    text: "今天便来讨教讨教。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "久闻阁下赌术高超，我#$PlayerName#今天便来讨教讨教。"
 - raw: ",,,右,,,,,StartGambleYeHan,,赌桌之上无兄弟，那我就多有得罪了！"
   splits:
   - split: 3
@@ -289304,7 +288651,7 @@
   - split: 6
     text: "风呼啸"
   - split: 10
-    text: "诸位莫慌，#PlayerForceDescribe#"
+    text: "诸位莫慌，#PlayerForceDescribe##$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "前来与诸位一同抗贼！"
@@ -289314,16 +288661,13 @@
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,StartSpeFight;263,,#$PlayerName#大侠高义！若能击退贼人，我等定当厚报！"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "大侠高义！若能击退贼人，我等定当厚报！"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#大侠高义！若能击退贼人，我等定当厚报！"
 - raw: "1364,玩家,叶寒,左,,,,,,,叶兄，你怎么来了？\\n不准备继续看戏了？"
   splits:
   - split: 1
@@ -291089,18 +290433,15 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "桀桀桀桀，这位"
+    text: "桀桀桀桀，这位#$PlayerName#大侠，"
   - split: 10
     subIndex: 1
-    text: "大侠，"
-  - split: 10
-    subIndex: 2
     text: "此等神功在这臭小子手上也是浪费。"
   templates:
   - split: 2
     template: "{0}:{1}"
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,不如大侠同我们一道将这秘籍抢来，\\n然后一人抄写一份，保证公平，如何？"
   splits:
   - split: 3
@@ -291144,13 +290485,10 @@
     text: "呵呵，神功秘籍虽然诱人，"
   - split: 10
     subIndex: 1
-    text: "但我"
-  - split: 10
-    subIndex: 2
-    text: "堂堂大侠，岂是那种抢夺他人之物的恶贼？"
+    text: "但我#$PlayerName#堂堂大侠，岂是那种抢夺他人之物的恶贼？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,UpgradeAllHeroSkill;李天临-3|PlotCheckHeroSkill;李天临,,李天临兄弟，我来助你一同退敌！"
   splits:
   - split: 3
@@ -291549,13 +290887,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "大侠，按照此前约定，"
+    text: "#$PlayerName#大侠，按照此前约定，"
   - split: 10
     subIndex: 1
     text: "这本秘籍就抄录一份，作为您老人家的酬劳。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,GetSpeReward;110,,哼，就这么办。"
   splits:
   - split: 3
@@ -292193,22 +291531,19 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，见过前辈。"
-  templates:
-  - split: 10
-    template: "#PlayerForceDescribe##$PlayerName#{0}"
+    text: "#PlayerForceDescribe##$PlayerName#，见过前辈。"
 - raw: ",,,左,,,,,,,#$PlayerName#，我听说过你的名号，\\n是个不可多得的少年英才。"
   splits:
   - split: 3
     text: "左"
   - split: 10
-    text: "，我听说过你的名号，"
+    text: "#$PlayerName#，我听说过你的名号，"
   - split: 10
     subIndex: 1
     text: "是个不可多得的少年英才。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,前辈谬赞了。"
   splits:
   - split: 3
@@ -292529,13 +291864,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "在下#PlayerForceDescribe#"
+    text: "在下#PlayerForceDescribe##$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "见过二位高手。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,呵呵，我们两个在江湖中根本排不上名号，\\n#PlayerName#这“高手”的称号，还是留给自己用吧。"
   splits:
   - split: 3
@@ -292928,13 +292263,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "老夫横看竖看，也没找到"
-  - split: 10
-    subIndex: 1
-    text: "之大名，实在抱歉。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "老夫横看竖看，也没找到#$PlayerName#之大名，实在抱歉。"
 - raw: ",,,左,,,,,,,啊……哈哈哈，金先生不必自责。\\n倒是我初入江湖未久，功力浅薄，让您见笑了。"
   splits:
   - split: 3
@@ -294467,13 +293796,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "嘿嘿，师姐的指点，我"
-  - split: 10
-    subIndex: 1
-    text: "这辈子都不敢忘。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "嘿嘿，师姐的指点，我#$PlayerName#这辈子都不敢忘。"
 - raw: "1400,玩家,余采薇,右,,,,,,,哼，答错了。\\n看来师姐的指点，你是一点都没放在心上！"
   splits:
   - split: 1
@@ -295469,16 +294792,10 @@
     text: "姬阁主，在下与同门师兄弟，此前也屡蒙贵派之恩情。"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "#与#"
-  - split: 10
-    subIndex: 3
-    text: "，会与大隐阁同仇敌忾，共同进退，还请放心。"
+    text: "我#$PlayerName#与#PlayerForceName#，会与大隐阁同仇敌忾，共同进退，还请放心。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName{2}PlayerForceName#{3}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ChangeHeroFavor;姬清梵-5,,好，有#PlayerForceName#相助，我大隐阁定能重振旗鼓。\\n#PlayerName#，你我两派从此同气连枝，共同维护武林正道！"
   splits:
   - split: 3
@@ -297093,13 +296410,10 @@
     text: "风起云涌，江湖翻沸，"
   - split: 10
     subIndex: 1
-    text: "待我"
-  - split: 10
-    subIndex: 2
-    text: "再闯上一闯！"
+    text: "待我#$PlayerName#再闯上一闯！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "1426,杨思迟,,左,,BigMap12,,TRUE,,,师傅！您老人家真要就此隐退了？！\\n徒、徒儿还没能好好孝顺你呢......"
   splits:
   - split: 1
@@ -297206,13 +296520,10 @@
     text: "呵呵，诸位不必过于担心，"
   - split: 10
     subIndex: 1
-    text: "这不是还有"
-  - split: 10
-    subIndex: 2
-    text: "么？"
+    text: "这不是还有#$PlayerName#么？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,,,,师傅，弟子资历尚浅，怕是难堪重任......"
   splits:
   - split: 1
@@ -297241,10 +296552,10 @@
     text: "想来仙霞派日后在你手中，能够比为师执掌时更为兴盛强大。"
   - split: 10
     subIndex: 1
-    text: "，为师相信你有这样的能力。"
+    text: "#$PlayerName#，为师相信你有这样的能力。"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,师傅......我一定不辜负您老的期望。"
   splits:
   - split: 3
@@ -297394,10 +296705,10 @@
     text: "另外为师此去，这身盔甲兵刃以后怕是用不上了。"
   - split: 10
     subIndex: 1
-    text: "你就收下，也好另作他用。"
+    text: "#$PlayerName#你就收下，也好另作他用。"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,选择物品;RobHeroItemChoose;姜映泉,此外为师身上若有什么看得上的物件，\\n#$PlayerName#你也任选一件拿去，算做是留个纪念。"
   splits:
   - split: 3
@@ -297411,12 +296722,12 @@
     text: "此外为师身上若有什么看得上的物件，"
   - split: 10
     subIndex: 1
-    text: "你也任选一件拿去，算做是留个纪念。"
+    text: "#$PlayerName#你也任选一件拿去，算做是留个纪念。"
   templates:
   - split: 9
     template: "{0};RobHeroItemChoose;{1}"
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,多谢师傅，徒儿定会珍藏此物。"
   splits:
   - split: 3
@@ -297799,13 +297110,10 @@
     text: "嘿嘿，承让了！"
   - split: 10
     subIndex: 1
-    text: "今天我"
-  - split: 10
-    subIndex: 2
-    text: "侥幸夺冠，还有赖各位一路提点不是？"
+    text: "今天我#$PlayerName#侥幸夺冠，还有赖各位一路提点不是？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,顾游年,右,,,,,,,说到提点，我这做师兄的就没有功劳吗？\\n想当年#PlayerName#初出茅庐之时，可是连藏经阁和练武场在哪儿都找不着呢。"
   splits:
   - split: 2
@@ -297830,12 +297138,12 @@
     text: "嘿嘿，顾师兄就别揭人短处了。"
   - split: 10
     subIndex: 1
-    text: "多亏了你当年指导，才有今日之"
+    text: "多亏了你当年指导，才有今日之#$PlayerName#。"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-5"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#。"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ChangeHeroFavor;杨思迟-5,,哈哈哈哈，算你还有些良心。\\n不过你今日夺了这少年英雄大会冠军，我这做师兄的脸上有光，\\n也算当年没白费苦心。"
   splits:
   - split: 3
@@ -297998,16 +297306,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "还望在场的诸位仙霞派弟子，皆以"
+    text: "还望在场的诸位仙霞派弟子，皆以#$PlayerName#为榜样，"
   - split: 10
     subIndex: 1
-    text: "为榜样，"
-  - split: 10
-    subIndex: 2
     text: "立凌云之志，积跬步之功。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,AddForceAllMaxAttri;25-1,,为师相信各位，终有一天，\\n都能成为这江湖中顶天立地的少年英雄！"
   splits:
   - split: 3
@@ -298330,12 +297635,12 @@
     text: "（低头看去，心口已中了一剑）"
   - split: 10
     subIndex: 1
-    text: "啊啊啊啊啊啊啊啊，"
+    text: "啊啊啊啊啊啊啊啊，#$PlayerName#！"
   templates:
   - split: 8
     template: "SpeHeroDeath;{0}"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#！"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,BigMap2,,,ScreenBlack,,（话音未落，恶贼岳无畏已是轰然倒地，气绝身亡）"
   splits:
   - split: 3
@@ -299851,13 +299156,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "阎殿主！想动万掌门，先过我"
-  - split: 10
-    subIndex: 1
-    text: "这关！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "阎殿主！想动万掌门，先过我#$PlayerName#这关！"
 - raw: ",,,右,,,,,,,#PlayerName#，别来无恙！\\n与贵派此前交手多次，老夫也算打心眼里佩服。"
   splits:
   - split: 3
@@ -300217,16 +299516,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "另外，"
+    text: "另外，#$PlayerName#此人功力高深莫测，"
   - split: 10
     subIndex: 1
-    text: "此人功力高深莫测，"
-  - split: 10
-    subIndex: 2
     text: "竟能抵挡本门这么多高手。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,今日若拼个你死我活，只怕会损失惨重，乱了我军军心。\\n看来日后，我等还需加倍提防此人。"
   splits:
   - split: 3
@@ -300268,16 +299564,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "幸得仙霞派掌门"
+    text: "幸得仙霞派掌门#$PlayerName#挺身而出，力挽狂澜，"
   - split: 10
     subIndex: 1
-    text: "挺身而出，力挽狂澜，"
-  - split: 10
-    subIndex: 2
     text: "竟硬是从逐鹿盟联军一众高手刀下，保住了万仞山掌门之性命。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,,,,,此战过后，邪派联军的后顾之忧被一扫而空，\\n再也无人能够阻挡其进入中原之步伐，\\n一支久经沙场，磨牙吮血的大军已然蓄势待发，避无可避。"
   splits:
   - split: 3
@@ -300387,13 +299680,10 @@
     text: "今日若眼睁睁看着万掌门被围攻而死，"
   - split: 10
     subIndex: 1
-    text: "日后我"
-  - split: 10
-    subIndex: 2
-    text: "还有何颜面，自称侠义之士？"
+    text: "日后我#$PlayerName#还有何颜面，自称侠义之士？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,咳咳咳咳，我与姜掌门曾有数面之缘，\\n奈何一直未能寻得机会深交。"
   splits:
   - split: 3
@@ -301395,12 +300685,12 @@
     text: "正值此时，一群侠士鱼贯而入，"
   - split: 10
     subIndex: 1
-    text: "为首者正是仙霞派掌门"
+    text: "为首者正是仙霞派掌门#$PlayerName#。"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#。"
+    template: "{0}\\n{1}"
 - raw: ",玩家,,左,,,,TRUE,,,众人听着，唐门助纣为虐，反复无常，\\n已经惹得天怒人怨，成都百姓民不聊生，\\n江湖中也是人人得而诛之！"
   splits:
   - split: 1
@@ -301438,13 +300728,10 @@
     text: "各位若是识相的，便放下兵刃，退出成都，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "保证不会为难各位武林同道。"
+    text: "我#$PlayerName#保证不会为难各位武林同道。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,但若有人敢负隅顽抗，垂死挣扎，\\n那我#$PlayerName#也不介意让各位领教领教，我仙霞派的剑招！"
   splits:
   - split: 3
@@ -301453,13 +300740,10 @@
     text: "但若有人敢负隅顽抗，垂死挣扎，"
   - split: 10
     subIndex: 1
-    text: "那我"
-  - split: 10
-    subIndex: 2
-    text: "也不介意让各位领教领教，我仙霞派的剑招！"
+    text: "那我#$PlayerName#也不介意让各位领教领教，我仙霞派的剑招！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,SpeEffect/龙咆哮,,,,这段话以高深之内力喊出，震得人鼓膜生疼。\\n在场唐门弟子闻言也是军心大乱，不知该如何应对。"
   splits:
   - split: 3
@@ -301494,12 +300778,12 @@
     text: "此、此人便是近来声名鹊起，"
   - split: 10
     subIndex: 1
-    text: "以一己之力力抗逐鹿盟的仙霞派掌门"
+    text: "以一己之力力抗逐鹿盟的仙霞派掌门#$PlayerName#？"
   templates:
   - split: 2
     template: "{0}:{1}&{2};40;1;3"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#？"
+    template: "{0}\\n{1}"
 - raw: ",,临时:唐门弟子乙&女;30;1;2,右,,,,,,,听闻此人武功已至化境，加上仙霞派也是高手如云，\\n咱们今天算是完蛋了......"
   splits:
   - split: 2
@@ -301971,16 +301255,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "仙霞派在掌门"
+    text: "仙霞派在掌门#$PlayerName#指挥之下奇袭成都，最终一举攻克此地。"
   - split: 10
     subIndex: 1
-    text: "指挥之下奇袭成都，最终一举攻克此地。"
-  - split: 10
-    subIndex: 2
     text: "此战之消息，很快便传遍了神州各地。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,,,,,短短数年间，仙霞派便从丧失掌门的阴霾中走出，\\n发展成为巴蜀一地数一数二的名门大派，\\n江湖中人无不引以为奇，啧啧赞叹。"
   splits:
   - split: 3
@@ -302001,16 +301282,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "而仙霞派日后，又将在"
+    text: "而仙霞派日后，又将在#$PlayerName#的领导下迎来何种发展，"
   - split: 10
     subIndex: 1
-    text: "的领导下迎来何种发展，"
-  - split: 10
-    subIndex: 2
     text: "还需拭目以待......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: "1454,玩家,唐逸影,左,,,GroupFight,,PlotChangeForceFavor;1-负10,,唔......百足之虫死而不僵。\\n没想到唐门还有这等实力，看来此战是无法取胜了。"
   splits:
   - split: 1
@@ -302339,13 +301617,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "区区悬崖峭壁，难不住我"
+    text: "区区悬崖峭壁，难不住我#$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "看我一招梯云纵！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,SpeEffect/风呼啸,,,,你施展轻功，拔地而起，\\n几个纵越过后，便来到峭壁之上。"
   splits:
   - split: 3
@@ -302396,13 +301674,10 @@
     text: "前、前辈莫非就是传说中的世外高人，独孤剑？"
   - split: 10
     subIndex: 1
-    text: "在下#PlayerForceDescribe#"
-  - split: 10
-    subIndex: 2
-    text: "，见过前辈。"
+    text: "在下#PlayerForceDescribe##$PlayerName#，见过前辈。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,年纪轻轻，轻功却是不错。\\n想必你此次费劲辛苦，是为了向我求教而来吧。"
   splits:
   - split: 3
@@ -302609,13 +301884,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "对了，在下#PlayerForceDescribe#"
+    text: "对了，在下#PlayerForceDescribe##$PlayerName#。"
   - split: 10
     subIndex: 1
     text: "敢为兄台尊姓大名？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#。\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,没什么尊姓大名，就叫李天临！\\n正巧昨天我打了头野猪，请大侠尝尝我的烟熏野猪肉。"
   splits:
   - split: 3
@@ -302842,13 +302117,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "对了，在下#PlayerForceDescribe#"
+    text: "对了，在下#PlayerForceDescribe##$PlayerName#。"
   - split: 10
     subIndex: 1
     text: "敢为兄台尊姓大名？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#。\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,没什么尊姓大名，就叫李天临！\\n正巧昨天我打了头野猪，请大侠尝尝我的烟熏野猪肉。"
   splits:
   - split: 3
@@ -303040,40 +302315,31 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "姜师姐，各位同门，我"
+    text: "姜师姐，各位同门，我#$PlayerName#能有今日，"
   - split: 10
     subIndex: 1
-    text: "能有今日，"
-  - split: 10
-    subIndex: 2
     text: "离不开各位一路以来的关心照顾，悉心提点。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,各位放心，我#$PlayerName#不管是天下第一，还是天下倒数第一，\\n都会誓死守卫仙霞派，与各位生死相依，不离不弃！"
   splits:
   - split: 3
     text: "左"
   - split: 10
-    text: "各位放心，我"
+    text: "各位放心，我#$PlayerName#不管是天下第一，还是天下倒数第一，"
   - split: 10
     subIndex: 1
-    text: "不管是天下第一，还是天下倒数第一，"
-  - split: 10
-    subIndex: 2
     text: "都会誓死守卫仙霞派，与各位生死相依，不离不弃！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ScreenBlack,,#$PlayerName#......师傅果然没有看错你......"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "......师傅果然没有看错你......"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#......师傅果然没有看错你......"
 - raw: ",,郭淮,右,,Fight1,,,,,胜者既已决出，大会也接近尾声。\\n各位英雄，我郭某人还有一个提议。"
   splits:
   - split: 2
@@ -303255,13 +302521,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，想当年你与老身初见之时，"
+    text: "#$PlayerName#，想当年你与老身初见之时，"
   - split: 10
     subIndex: 1
     text: "还是个英雄谱上数百名开外的无名小卒。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,时至今日，竟已是能够在泰岳大典夺魁的绝世高手。\\n你这一路立志前行之经历，老身会一一记录在英雄谱中。"
   splits:
   - split: 3
@@ -303291,16 +302557,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "金先生，我"
+    text: "金先生，我#$PlayerName#这一生，尚未盖棺定论。"
   - split: 10
     subIndex: 1
-    text: "这一生，尚未盖棺定论。"
-  - split: 10
-    subIndex: 2
     text: "著书立传什么的，还是改日再说吧。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,眼下却有一桩更为紧要之事，要和金先生你商量一二......"
   splits:
   - split: 3
@@ -304335,16 +303598,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#正想凭借着胸中的这股浩然正气，试上一试。"
   - split: 10
     subIndex: 1
-    text: "正想凭借着胸中的这股浩然正气，试上一试。"
-  - split: 10
-    subIndex: 2
     text: "即便大事不成，大不了到时候再回头寻求自保之法。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,但这也必定是一条铺满荆棘的血雨腥风之路，诸位。\\n你们若不愿一起走，我#$PlayerName#也不会有半句怨言。"
   splits:
   - split: 3
@@ -304353,13 +303613,10 @@
     text: "但这也必定是一条铺满荆棘的血雨腥风之路，诸位。"
   - split: 10
     subIndex: 1
-    text: "你们若不愿一起走，我"
-  - split: 10
-    subIndex: 2
-    text: "也不会有半句怨言。"
+    text: "你们若不愿一起走，我#$PlayerName#也不会有半句怨言。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,TRUE,,,#PlayerName#你说什么呢！\\n这么些年来，你救我的命没有十次也有八次。\\n就算是刀山火海，我杨思迟也跟着你走，绝不推辞！"
   splits:
   - split: 3
@@ -304489,16 +303746,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "还望各位能助我"
+    text: "还望各位能助我#$PlayerName#平定乱世，"
   - split: 10
     subIndex: 1
-    text: "平定乱世，"
-  - split: 10
-    subIndex: 2
     text: "不论结果如何，我们生死相依，不离不弃！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,AddPlotDataBase;1470,,嗯！生死相依，不离不弃！"
   splits:
   - split: 3
@@ -307183,13 +306437,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你确实是掌门的最佳人选，"
+    text: "#$PlayerName#，你确实是掌门的最佳人选，"
   - split: 10
     subIndex: 1
     text: "师傅他人家果然没有看错。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,嘿嘿，还得仰仗各位师兄鼎力相助，才能有今日之战果。"
   splits:
   - split: 3
@@ -307669,28 +306923,22 @@
     text: "诶，游年此言差矣。"
   - split: 10
     subIndex: 1
-    text: "为师已将掌门之位传于"
-  - split: 10
-    subIndex: 2
-    text: "了。"
+    text: "为师已将掌门之位传于#$PlayerName#了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,派内无论大事小事，只要#$PlayerName#点头首肯便可，\\n何必来请示为师？"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "派内无论大事小事，只要"
+    text: "派内无论大事小事，只要#$PlayerName#点头首肯便可，"
   - split: 10
     subIndex: 1
-    text: "点头首肯便可，"
-  - split: 10
-    subIndex: 2
     text: "何必来请示为师？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,不过此事确实也出乎为师意料，没想到这么多年两派纷争，\\n竟然真让#$PlayerName#和你们这群毛头小子一举解决了。"
   splits:
   - split: 3
@@ -307699,13 +306947,10 @@
     text: "不过此事确实也出乎为师意料，没想到这么多年两派纷争，"
   - split: 10
     subIndex: 1
-    text: "竟然真让"
-  - split: 10
-    subIndex: 2
-    text: "和你们这群毛头小子一举解决了。"
+    text: "竟然真让#$PlayerName#和你们这群毛头小子一举解决了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,自古以来长江后浪推前浪，\\n为师也是打心眼里为你们感到高兴！"
   splits:
   - split: 3
@@ -307808,13 +307053,10 @@
     text: "还望师傅重新担任掌门之职，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "愿扶持左右。"
+    text: "我#$PlayerName#愿扶持左右。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,不可不可，掌门大位为师早已传给你，岂可儿戏？"
   splits:
   - split: 3
@@ -307904,13 +307146,10 @@
     text: "所以派内一切事务，为师皆不过问了。"
   - split: 10
     subIndex: 1
-    text: "所有事情还是你们商量着来，再由"
-  - split: 10
-    subIndex: 2
-    text: "决断便可。"
+    text: "所有事情还是你们商量着来，再由#$PlayerName#决断便可。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,为师只负责替你们打打下手，也算乐得清闲。\\n其他的事情，就休要来过问我这老头子了！"
   splits:
   - split: 3
@@ -307952,13 +307191,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你做得很好。"
+    text: "#$PlayerName#，你做得很好。"
   - split: 10
     subIndex: 1
     text: "仙霞派在你手中欣欣向荣，确实没有辜负为师的期望。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,PlotChangeHeroForceLvMaxAttri;姜映泉-1,,如今仙霞派发展壮大，\\n为师也不必担心，之前结下的那些仇家上门寻衅了。"
   splits:
   - split: 3
@@ -308032,16 +307271,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "呵呵，听说"
+    text: "呵呵，听说#$PlayerName#收了个天赋异禀的小徒儿，"
   - split: 10
     subIndex: 1
-    text: "收了个天赋异禀的小徒儿，"
-  - split: 10
-    subIndex: 2
     text: "今日一看果然是非同凡响。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,师公过奖了，我以前挺厉害的，\\n现在还得从头练起，还望您老不要嫌弃。"
   splits:
   - split: 3
@@ -308657,16 +307893,13 @@
     text: "如今阁下堂堂一派掌门，竟然要屈居人下，"
   - split: 10
     subIndex: 1
-    text: "听仙霞派那"
+    text: "听仙霞派那#$PlayerName#小儿之号令，"
   - split: 10
     subIndex: 2
-    text: "小儿之号令，"
-  - split: 10
-    subIndex: 3
     text: "当真是虎落平阳，令人不胜唏嘘啊！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,咳咳，情势所迫，老夫也是逼不得已。\\n日后若能寻得机会，定要......"
   splits:
   - split: 3
@@ -308858,13 +308091,10 @@
     text: "说的不错，韩掌门！"
   - split: 10
     subIndex: 1
-    text: "仙霞派屡屡坏我好事，我早就看"
-  - split: 10
-    subIndex: 2
-    text: "不爽。"
+    text: "仙霞派屡屡坏我好事，我早就看#$PlayerName#不爽。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,唐逸影,右,,,,,,,嗯，此人还伙同恶徒王添翼，将犬子唐离害得经脉尽断，\\n我唐门与仙霞派之间血海深仇，恐怕不在铁掌帮之下。"
   splits:
   - split: 2
@@ -309127,16 +308357,13 @@
     text: "咳咳，离儿，"
   - split: 10
     subIndex: 1
-    text: "仙霞派"
+    text: "仙霞派#$PlayerName#武功卓绝，非同小可，"
   - split: 10
     subIndex: 2
-    text: "武功卓绝，非同小可，"
-  - split: 10
-    subIndex: 3
     text: "眼下还不可掉以轻心。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,这些日子你先收收心，少给爹爹惹事。\\n等到攻克仙霞派，尘埃落定之后，\\n你想怎样就怎样，爹爹由着你性子来！"
   splits:
   - split: 3
@@ -309524,13 +308751,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好你个"
-  - split: 10
-    subIndex: 1
-    text: "，竟敢与韩嵩合谋诓骗老夫！！！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "好你个#$PlayerName#，竟敢与韩嵩合谋诓骗老夫！！！"
 - raw: ",,,左,,,,,,,唐掌门，我只是听说有宵小之徒在本门后山非为作歹，这才前来捉拿。\\n这诓骗之事又从何说起啊？"
   splits:
   - split: 3
@@ -309776,10 +308997,10 @@
     text: "能将老夫逼至这等绝境，"
   - split: 10
     subIndex: 1
-    text: "，你果然不是等闲之辈。"
+    text: "#$PlayerName#，你果然不是等闲之辈。"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,FireContinue,,,,但我唐门数百年基业，岂可断绝于此？\\n看老夫这招，漫天花雨！！！"
   splits:
   - split: 3
@@ -309978,12 +309199,12 @@
     text: "韩掌门，此战多亏了你的苦肉计，方才能这么顺利。"
   - split: 10
     subIndex: 1
-    text: "在此谢过各位铁掌帮同道了。"
+    text: "#$PlayerName#在此谢过各位铁掌帮同道了。"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-10"
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,SpePlotFuc;171,,咳咳，#PlayerName#不必客气。\\n唐门不除，你我两派皆永无安宁之日。"
   splits:
   - split: 3
@@ -310200,16 +309421,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "啊？"
+    text: "啊？#$PlayerName#你如今已身为掌门，"
   - split: 10
     subIndex: 1
-    text: "你如今已身为掌门，"
-  - split: 10
-    subIndex: 2
     text: "再做这个......不太合适吧。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,杨思迟,右,,,,,,,就是，#PlayerName#刚经历大战，\\n该歇息歇息才是。"
   splits:
   - split: 2
@@ -310270,13 +309488,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "说得好，"
+    text: "#$PlayerName#说得好，"
   - split: 10
     subIndex: 1
     text: "咱们仙霞派弟子不论长幼尊卑，都应当共同进退。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,顾游年,右,,,,,,,婉儿，云裳，脏活累活就交给师兄我们几个。\\n你们负责打扫战场，收拾残局便可。"
   splits:
   - split: 2
@@ -310354,16 +309572,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "即便像我这种死过一次的人，都能被"
+    text: "即便像我这种死过一次的人，都能被#$PlayerName#救活，"
   - split: 10
     subIndex: 1
-    text: "救活，"
-  - split: 10
-    subIndex: 2
     text: "只要大家同行协力，就一定能够逢凶化吉。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,嗯......好！诸位。\\n来日与唐门，必然还有一场惊天决战。"
   splits:
   - split: 3
@@ -310600,16 +309815,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "不错，"
+    text: "不错，#$PlayerName#。你屡屡破坏本门大计，"
   - split: 10
     subIndex: 1
-    text: "。你屡屡破坏本门大计，"
-  - split: 10
-    subIndex: 2
     text: "今日必须取你项上人头。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",白云天,,左,,,,,,,唐姑娘，我们掌门武功可高得很呢。\\n要不你下次多带点人过来吧，这几个怕是不太够。"
   splits:
   - split: 1
@@ -310668,18 +309880,15 @@
     subIndex: 1
     text: "唐嫣然"
   - split: 10
-    text: "哼，"
+    text: "哼，#$PlayerName#，你这身武功非同小可，"
   - split: 10
     subIndex: 1
-    text: "，你这身武功非同小可，"
-  - split: 10
-    subIndex: 2
     text: "果真如江湖传闻的一样。"
   templates:
   - split: 8
     template: "SetHeroMeet;{0}|ChangeHeroFavor;{1}-10"
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,思中澜、金龙生都未能取我项上人头，\\n唐姑娘，就凭你恐怕还差些火候。"
   splits:
   - split: 3
@@ -312112,16 +311321,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "可你却连区区"
+    text: "可你却连区区#$PlayerName#都拿不下，"
   - split: 10
     subIndex: 1
-    text: "都拿不下，"
-  - split: 10
-    subIndex: 2
     text: "实在是太让为父失望了！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,父亲......是我没用......"
   splits:
   - split: 3
@@ -312177,28 +311383,25 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "怎么自从遇上王添翼和"
+    text: "怎么自从遇上王添翼和#$PlayerName#后，"
   - split: 10
     subIndex: 1
-    text: "后，"
-  - split: 10
-    subIndex: 2
     text: "便屡屡不能完成任务呢？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#$PlayerName#武艺高强，加之还有一群亲朋好友与同门兄弟拼死相护，\\n实在难以寻得机会......"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "武艺高强，加之还有一群亲朋好友与同门兄弟拼死相护，"
+    text: "#$PlayerName#武艺高强，加之还有一群亲朋好友与同门兄弟拼死相护，"
   - split: 10
     subIndex: 1
     text: "实在难以寻得机会......"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,诶，为父不想听这些借口。\\n你多花上些银两，把那些亲朋好友收买过来不就行了？"
   splits:
   - split: 3
@@ -312216,16 +311419,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "这些人为护"
+    text: "这些人为护#$PlayerName#，连性命都可不管不顾。"
   - split: 10
     subIndex: 1
-    text: "，连性命都可不管不顾。"
-  - split: 10
-    subIndex: 2
     text: "恐怕没办法用银两收买......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",唐离,,左,,,,TRUE,,,放屁！这世上没有钱收买不到的人，\\n休要再找借口！"
   splits:
   - split: 1
@@ -312345,13 +311545,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "？你好大的胆子！"
+    text: "#$PlayerName#？你好大的胆子！"
   - split: 10
     subIndex: 1
     text: "我只需一声令下，便会有数十名唐门弟子将你围住。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,那唐姑娘，看来是不想知道你自己的身世之谜咯？\\n若是如此，那我便告辞了！"
   splits:
   - split: 3
@@ -312411,13 +311611,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你若想凭此事就离间我，"
+    text: "#$PlayerName#，你若想凭此事就离间我，"
   - split: 10
     subIndex: 1
     text: "那未免太小瞧人了。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,那你可知，那个杀害你全家的贼人，\\n究竟是何来历？"
   splits:
   - split: 3
@@ -312798,19 +311998,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#，今日便秉承历任掌门之志，"
   - split: 10
     subIndex: 1
-    text: "，今日便秉承历任掌门之志，"
-  - split: 10
-    subIndex: 2
     text: "兴兵讨贼，除暴安良。"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "定要替巴蜀百姓，和死于唐门之手的侠士讨还公道！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,仙霞派众位弟子，可愿随我一同出征？"
   splits:
   - split: 3
@@ -313123,13 +312320,10 @@
     text: "只要阁下下令开城投降，上表臣服，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "保证秋毫无犯，也不会为难贵派弟子。"
+    text: "我#$PlayerName#保证秋毫无犯，也不会为难贵派弟子。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哼哼！痴人说梦！我唐门历经掌门数十代，\\n百年基业，高手如云，\\n岂是你们这些三流小派可以觊觎的？"
   splits:
   - split: 3
@@ -313263,16 +312457,13 @@
     text: "嫣然啊，此战事关我唐门荣辱兴衰。"
   - split: 10
     subIndex: 1
-    text: "还望你全力出手，取下那"
+    text: "还望你全力出手，取下那#$PlayerName#项上人头。"
   - split: 10
     subIndex: 2
-    text: "项上人头。"
-  - split: 10
-    subIndex: 3
     text: "切莫再让为父失望了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,........................"
   splits:
   - split: 3
@@ -313450,13 +312641,10 @@
     text: "哈哈哈哈哈！爹爹霸气，爹爹威武！"
   - split: 10
     subIndex: 1
-    text: "此神器一出，那"
-  - split: 10
-    subIndex: 2
-    text: "定当命丧于此。"
+    text: "此神器一出，那#$PlayerName#定当命丧于此。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,SpeEffect/加速旋转,,,,唐逸影屏息凝神，将机匣瞄准正在阵前指挥的#PlayerName#，\\n随后大喝一声，袖袍鼓起，\\n将毕生功力尽数灌注到机匣内。"
   splits:
   - split: 3
@@ -313694,16 +312882,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "差一点就能将"
+    text: "差一点就能将#$PlayerName#斩于马下，"
   - split: 10
     subIndex: 1
-    text: "斩于马下，"
-  - split: 10
-    subIndex: 2
     text: "竟让一个不知从哪儿冒出来的小姑娘坏了好事！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,唐逸影,右,,,,,,,没想到啊没想到，\\n这仙霞派内卧虎藏龙，竟然还有这等高手。\\n看来老夫真是低估#$PlayerName#了。"
   splits:
   - split: 2
@@ -313717,13 +312902,10 @@
     text: "这仙霞派内卧虎藏龙，竟然还有这等高手。"
   - split: 10
     subIndex: 2
-    text: "看来老夫真是低估"
-  - split: 10
-    subIndex: 3
-    text: "了。"
+    text: "看来老夫真是低估#$PlayerName#了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}#$PlayerName#{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,呜呜呜呜，爹爹，这、这下咱们该如何是好......"
   splits:
   - split: 3
@@ -314825,16 +314007,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "今日之事，乃是你被"
+    text: "今日之事，乃是你被#$PlayerName#蛊惑所致，"
   - split: 10
     subIndex: 1
-    text: "蛊惑所致，"
-  - split: 10
-    subIndex: 2
     text: "爹爹不怪你！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,可你手上沾满了鲜血，就算回去，\\n正道武林和#$PlayerName#，肯定也容不下你。"
   splits:
   - split: 3
@@ -314843,13 +314022,10 @@
     text: "可你手上沾满了鲜血，就算回去，"
   - split: 10
     subIndex: 1
-    text: "正道武林和"
-  - split: 10
-    subIndex: 2
-    text: "，肯定也容不下你。"
+    text: "正道武林和#$PlayerName#，肯定也容不下你。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,........................"
   splits:
   - split: 3
@@ -314871,16 +314047,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "待到功力精进之后，咱们再回来寻"
+    text: "待到功力精进之后，咱们再回来寻#$PlayerName#报仇雪恨！"
   - split: 10
     subIndex: 1
-    text: "报仇雪恨！"
-  - split: 10
-    subIndex: 2
     text: "爹爹保证会像以前一样，对待亲生女儿般对待你。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,ItemLose,,,,（盯着唐逸影面色如铁，缓缓从怀中掏出暗器机匣）\\n爹爹......我对唐门忠心耿耿，\\n为你做了这么多......伤天害理之事......"
   splits:
   - split: 3
@@ -315251,13 +314424,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "爹爹！"
-  - split: 10
-    subIndex: 1
-    text: "，我跟你拼了！"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "爹爹！#$PlayerName#，我跟你拼了！"
 - raw: ",,,无,,,SpeEffect/风呼啸,,,,眼见父亲重伤，唐离发疯一般举刀向你扑来。"
   splits:
   - split: 3
@@ -316172,16 +315339,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "此役之消息传遍武林，闻者无不震惊于"
+    text: "此役之消息传遍武林，闻者无不震惊于#$PlayerName#之宏图大略。"
   - split: 10
     subIndex: 1
-    text: "之宏图大略。"
-  - split: 10
-    subIndex: 2
     text: "而仙霞派也凭借此役，迅速跃升成为武林一流门派。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,,,FinishEventMission,,一颗新星冉冉升起，\\n正逐步照亮这条通往远方的乱世之路。"
   splits:
   - split: 3
@@ -317899,13 +317063,10 @@
     text: "师傅您老人家虽然年事已高，"
   - split: 10
     subIndex: 1
-    text: "但"
-  - split: 10
-    subIndex: 2
-    text: "还是年富力强啊。"
+    text: "但#$PlayerName#还是年富力强啊。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,只要峨眉派能与仙霞派结为盟友，\\n凭#PlayerName#的武功，人品和谋略，\\n就定能保峨眉派之周全。"
   splits:
   - split: 3
@@ -318111,13 +317272,10 @@
     text: "有人认为这是仙霞派由攻转守之信号。"
   - split: 10
     subIndex: 2
-    text: "也有人认为"
-  - split: 10
-    subIndex: 3
-    text: "可能另有所图。"
+    text: "也有人认为#$PlayerName#可能另有所图。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}#$PlayerName#{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,无,,,,,,,不论如何，所有武林人士皆疑心重重，\\n猜测着仙霞派下一步之动向。"
   splits:
   - split: 3
@@ -318335,13 +317493,10 @@
     text: "紫霄宫内，武当掌门张青蓬神情严肃，"
   - split: 10
     subIndex: 1
-    text: "正与仙霞掌门"
-  - split: 10
-    subIndex: 2
-    text: "商议着结盟大事。"
+    text: "正与仙霞掌门#$PlayerName#商议着结盟大事。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",玩家,张青蓬,左,close,,,,,,张真人，如今天下大乱，群雄并起。\\n若贵派能与我仙霞派结为同盟，\\n那么便可携手并进，共抗强敌。"
   splits:
   - split: 1
@@ -318929,16 +318084,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "毕竟"
+    text: "毕竟#$PlayerName#掌门和仙霞派，曾有大恩于我武当。"
   - split: 10
     subIndex: 1
-    text: "掌门和仙霞派，曾有大恩于我武当。"
-  - split: 10
-    subIndex: 2
     text: "就算不能结盟，咱们也应当与仙霞派搞好关系。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哦？那徒儿你有何见解？"
   splits:
   - split: 3
@@ -319497,16 +318649,13 @@
     text: "消息传遍江湖，一时群雄震动。"
   - split: 10
     subIndex: 1
-    text: "无人知晓"
+    text: "无人知晓#$PlayerName#突然结盟峨眉武当两大门派，"
   - split: 10
     subIndex: 2
-    text: "突然结盟峨眉武当两大门派，"
-  - split: 10
-    subIndex: 3
     text: "究竟后续有何谋划。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,无,,,,,,,不论如何，各大门派皆屏息凝神，\\n紧盯着仙霞派下一步之动向。"
   splits:
   - split: 3
@@ -322474,13 +321623,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好个"
+    text: "好个#$PlayerName#！"
   - split: 10
     subIndex: 1
     text: "老子如今功力大成，竟还敌不过你这毛头小子？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#！\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,难怪兄长会对你刮目相看......\\n好！你配得上和我武绝义结盟！"
   splits:
   - split: 3
@@ -323270,18 +322419,15 @@
   - split: 6
     text: "腐烂"
   - split: 10
-    text: "每次对上"
+    text: "每次对上#$PlayerName#准没好事。"
   - split: 10
     subIndex: 1
-    text: "准没好事。"
-  - split: 10
-    subIndex: 2
     text: "算了算了，还是先退回苗疆去吧。"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,无,无,,,,,,,其余四派援军，本就是临时前来助阵。\\n眼见情势不妙，顿时四散而逃。"
   splits:
   - split: 2
@@ -323394,13 +322540,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好啊，"
+    text: "好啊，#$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "你不愧是被我兄长看中的人。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,今日阎罗殿总舵被你攻陷，老子也算愿赌服输了。\\n要杀要剐悉听尊便，说吧，你想如何？"
   splits:
   - split: 3
@@ -323469,16 +322615,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "不过......"
+    text: "不过......#$PlayerName#，你是我兄长看中之人，"
   - split: 10
     subIndex: 1
-    text: "，你是我兄长看中之人，"
-  - split: 10
-    subIndex: 2
     text: "武功和谋略，倒也不在老子之下......"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,PlayerConquerForce;8,,好，老子便答应你。\\n从今日起，我阎罗殿就奉仙霞派为宗主，\\n唯#$PlayerName#你这家伙马首是瞻。"
   splits:
   - split: 3
@@ -323490,13 +322633,10 @@
     text: "从今日起，我阎罗殿就奉仙霞派为宗主，"
   - split: 10
     subIndex: 2
-    text: "唯"
-  - split: 10
-    subIndex: 3
-    text: "你这家伙马首是瞻。"
+    text: "唯#$PlayerName#你这家伙马首是瞻。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}#$PlayerName#{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,这话怎么听着有些奇怪呢......\\n算了算了，如此便好。"
   splits:
   - split: 3
@@ -323630,13 +322770,10 @@
     text: "今日之胜利，乃是大家的功劳。"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "岂敢一人独占。"
+    text: "我#$PlayerName#岂敢一人独占。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,魏胥华,右,,,,,,,今日一战，算是圆满完成了当日联合峨眉武当，\\n平定阎罗殿之计划。"
   splits:
   - split: 2
@@ -323805,7 +322942,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "的计划一一实现后，"
+    text: "#$PlayerName#的计划一一实现后，"
   - split: 10
     subIndex: 1
     text: "缓缓转起的时代齿轮，"
@@ -323814,7 +322951,7 @@
     text: "正推动仙霞派驶向前方。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: "1563,无,无,无,,,GroupFight,,,,曾经的逐鹿盟五大门派，\\n阎罗、金刚、天山、崆峒、五毒再度联手。"
   splits:
   - split: 1
@@ -324566,31 +323703,28 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "仙霞派？我与其掌门"
+    text: "仙霞派？我与其掌门#$PlayerName#颇为熟悉。"
   - split: 10
     subIndex: 1
-    text: "颇为熟悉。"
-  - split: 10
-    subIndex: 2
     text: "此人不仅抗击阎罗殿，击败逐鹿盟，"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "还协助我大隐，成功追捕了叛徒思中澜。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,#$PlayerName#后来还几乎凭一己之力，\\n粉碎了血衣盟阴谋，并诛杀罪魁祸首金龙生。"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "后来还几乎凭一己之力，"
+    text: "#$PlayerName#后来还几乎凭一己之力，"
   - split: 10
     subIndex: 1
     text: "粉碎了血衣盟阴谋，并诛杀罪魁祸首金龙生。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,此人对于中原武林，可谓是功勋卓著，\\n立下过汗马之劳。"
   splits:
   - split: 3
@@ -324623,10 +323757,10 @@
     text: "姬阁主稍安勿躁，且听老衲一言。"
   - split: 10
     subIndex: 1
-    text: "近来先取铁掌帮，又平唐门。"
+    text: "#$PlayerName#近来先取铁掌帮，又平唐门。"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,与峨眉、武当两派结为同盟后，\\n更是一路南下，收服了曾经不可一世的阎罗殿。"
   splits:
   - split: 3
@@ -324698,13 +323832,10 @@
     text: "......方丈你的意思是，"
   - split: 10
     subIndex: 1
-    text: "这"
-  - split: 10
-    subIndex: 2
-    text: "乃是都点检第二？"
+    text: "这#$PlayerName#乃是都点检第二？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,虽说未必如此，但如今仙霞、峨眉、武当三派联盟，\\n已控有荆襄、巴蜀、云南、广南之大片领土。"
   splits:
   - split: 3
@@ -324758,10 +323889,10 @@
     text: "姬阁主，莫非你敢打包票，"
   - split: 10
     subIndex: 1
-    text: "与仙霞派会止步于此？"
+    text: "#$PlayerName#与仙霞派会止步于此？"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,......不敢。"
   splits:
   - split: 3
@@ -324785,16 +323916,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "就算"
+    text: "就算#$PlayerName#无心染指中原，"
   - split: 10
     subIndex: 1
-    text: "无心染指中原，"
-  - split: 10
-    subIndex: 2
     text: "我等也不可不防患于未然啊！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,朱断岳,右,,,,,,,嗯，峨眉也就算了，\\n毕竟和仙霞派源远流长，关系密切。"
   splits:
   - split: 2
@@ -324927,13 +324055,10 @@
     text: "一旦仙霞派向任何一派发起攻击，另外三派便需全力救援。"
   - split: 10
     subIndex: 1
-    text: "若不如此，我等很可能会被"
-  - split: 10
-    subIndex: 2
-    text: "逐个击破。"
+    text: "若不如此，我等很可能会被#$PlayerName#逐个击破。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,小诸葛败亡后，我飞龙门元气大伤，本就无意争霸天下。\\n今日若能与少林、丐帮、大隐结为防御同盟，自然再好不过！"
   splits:
   - split: 3
@@ -324965,7 +324090,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "虽称得上当世英雄，"
+    text: "#$PlayerName#虽称得上当世英雄，"
   - split: 10
     subIndex: 1
     text: "但此人若敢进犯我丐帮领土，"
@@ -324974,7 +324099,7 @@
     text: "老叫花子也不会惧他半分！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,姬清梵,左,,,,,,,阿弥陀佛，飞龙、丐帮二位掌门皆已同意，\\n不知姬阁主意下如何？"
   splits:
   - split: 2
@@ -325000,16 +324125,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "咳咳，姬阁主与"
+    text: "咳咳，姬阁主与#$PlayerName#私交甚笃，此事老衲也有耳闻。"
   - split: 10
     subIndex: 1
-    text: "私交甚笃，此事老衲也有耳闻。"
-  - split: 10
-    subIndex: 2
     text: "但事关门派大事，不可被儿女情长左右啊，"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,否则，不仅对不起已故的道无名阁主，\\n大隐阁其余长老可能也会因此不满，甚至发动弹劾。"
   splits:
   - split: 3
@@ -325656,13 +324778,10 @@
     text: "约好了要一同平定乱世，"
   - split: 10
     subIndex: 2
-    text: "我"
-  - split: 10
-    subIndex: 3
-    text: "岂是言而无信之人。"
+    text: "我#$PlayerName#岂是言而无信之人。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}#$PlayerName#{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,只要咱们仙霞派上下一心，同心协力，\\n就算遇上中原联军，\\n也一定能逢凶化吉，克敌制胜。"
   splits:
   - split: 3
@@ -326301,16 +325420,13 @@
     text: "嗯，仙霞派近来发展迅猛，实力强大。"
   - split: 10
     subIndex: 1
-    text: "其掌门"
+    text: "其掌门#$PlayerName#武功人品俱是不俗，"
   - split: 10
     subIndex: 2
-    text: "武功人品俱是不俗，"
-  - split: 10
-    subIndex: 3
     text: "加上还为当今朝廷和中原武林立下过汗马功劳。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,贫道也推举此人，担任京城防务一职！"
   splits:
   - split: 3
@@ -327556,16 +326672,13 @@
     text: "只要各位掌门同意此事，"
   - split: 10
     subIndex: 1
-    text: "我"
+    text: "我#$PlayerName#便认可这场比试公平公正，"
   - split: 10
     subIndex: 2
-    text: "便认可这场比试公平公正，"
-  - split: 10
-    subIndex: 3
     text: "绝不再有半句怨言！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,行吧行吧，老叫花子还怕了你不成。\\n你换个年轻弟子就是了！"
   splits:
   - split: 3
@@ -328140,15 +327253,12 @@
     text: "多谢张真人和各位掌门鼎力相助。"
   - split: 10
     subIndex: 1
-    text: "诸位之情义，我"
-  - split: 10
-    subIndex: 2
-    text: "定不敢忘。"
+    text: "诸位之情义，我#$PlayerName#定不敢忘。"
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-10"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,司马德源,右,,,,,ChangeHeroFavor;武绝义-10,,呵呵呵呵，此战#PlayerName#出力甚多。\\n我等不过是在旁相助罢了。"
   splits:
   - split: 2
@@ -328859,19 +327969,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#一直以来都是忠心报国，"
   - split: 10
     subIndex: 1
-    text: "一直以来都是忠心报国，"
-  - split: 10
-    subIndex: 2
     text: "仙霞派也屡屡替朝廷排忧解难。"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "此事御史大人你再清楚不过了。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,所以说，楚御史你若能替我仙霞派，\\n在圣上面前美言几句，\\n兴许就能让圣上早日下定主意。"
   splits:
   - split: 3
@@ -328933,16 +328040,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "楚御史，我"
+    text: "楚御史，我#$PlayerName#平定小诸葛谋反有功。"
   - split: 10
     subIndex: 1
-    text: "平定小诸葛谋反有功。"
-  - split: 10
-    subIndex: 2
     text: "还入宫查明周世宗死因，诛杀了罪魁祸首金龙生。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,列举这些事迹，并非为了居功自傲，\\n而是为证明我#$PlayerName#赤胆忠心，精诚报国之志。"
   splits:
   - split: 3
@@ -328951,13 +328055,10 @@
     text: "列举这些事迹，并非为了居功自傲，"
   - split: 10
     subIndex: 1
-    text: "而是为证明我"
-  - split: 10
-    subIndex: 2
-    text: "赤胆忠心，精诚报国之志。"
+    text: "而是为证明我#$PlayerName#赤胆忠心，精诚报国之志。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,如今飞龙门不甘心交出京城，似乎正暗中谋划大计。\\n若此事拖延日久，那京中很可能会爆发大乱。"
   splits:
   - split: 3
@@ -329189,13 +328290,10 @@
     text: "今日只是请你顺便说几句好话，这都要推辞，"
   - split: 10
     subIndex: 1
-    text: "那未免太不给我"
-  - split: 10
-    subIndex: 2
-    text: "面子了。"
+    text: "那未免太不给我#$PlayerName#面子了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,哎，行吧行吧，#PlayerName#对我等也算有恩。\\n待寻得机会，我就在圣上面前美言几句。"
   splits:
   - split: 3
@@ -329337,16 +328435,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "所以你若真觉得我"
+    text: "所以你若真觉得我#$PlayerName#是个忠诚之士，值得信赖，"
   - split: 10
     subIndex: 1
-    text: "是个忠诚之士，值得信赖，"
-  - split: 10
-    subIndex: 2
     text: "就应该禀明此事，避免主上判断有误啊！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,嗯，#PlayerName#说的有理，我这就去办。"
   splits:
   - split: 3
@@ -329672,7 +328767,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "仙霞掌门"
+    text: "仙霞掌门#$PlayerName#，"
   - split: 10
     subIndex: 1
     text: "平小诸葛之乱，屡建靖难之功，"
@@ -329681,7 +328776,7 @@
     text: "忠勤夙著，朕甚嘉之。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#，\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,GetSpeReward;130,,今赐宝甲一领，可避矢石刀兵；\\n并赐御厩宝马一匹，以彰殊勋。"
   splits:
   - split: 3
@@ -329761,16 +328856,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "恭喜"
+    text: "恭喜#$PlayerName#了，"
   - split: 10
     subIndex: 1
-    text: "了，"
-  - split: 10
-    subIndex: 2
     text: "今次当真是兵不血刃，取得了京城。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,司马德源,右,,,,,,,以老朽拙见，仙霞派据有京城后，\\n其声威已跃居各大门派之上。\\n只怕这天下武林，再无人能一较高下了。"
   splits:
   - split: 2
@@ -329798,13 +328890,13 @@
     text: "长江后浪推前浪，"
   - split: 10
     subIndex: 1
-    text: "年纪轻轻，便建立如此之功业，"
+    text: "#$PlayerName#年纪轻轻，便建立如此之功业，"
   - split: 10
     subIndex: 2
     text: "就连贫道也是自愧不如。"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,还需多谢诸位掌门！若无各位鼎力相助，\\n也难有我仙霞派今日之成就。"
   splits:
   - split: 3
@@ -330912,16 +330004,13 @@
     text: "飞龙门抗旨不遵，拒交京防，形同谋逆。"
   - split: 10
     subIndex: 1
-    text: "着仙霞派掌门"
+    text: "着仙霞派掌门#$PlayerName#统帅联军，"
   - split: 10
     subIndex: 2
-    text: "统帅联军，"
-  - split: 10
-    subIndex: 3
     text: "剿灭飞龙门，永绝后患"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n<b>{3}</b>。"
+    template: "{0}\\n{1}\\n<b>{2}</b>。"
 - raw: ",,,左,,,,,,,剿灭飞龙门......永绝后患......"
   splits:
   - split: 3
@@ -331354,13 +330443,10 @@
     text: "师姐你就放一万个心吧，"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "绝不会滥杀无辜的！"
+    text: "我#$PlayerName#绝不会滥杀无辜的！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#PlayerName#.......感激不尽......\\n我先替飞龙门将士拜谢你了！"
   splits:
   - split: 3
@@ -332017,13 +331103,13 @@
     text: "场面之惨烈悲壮，"
   - split: 10
     subIndex: 1
-    text: "便是久经战阵的"
+    text: "便是久经战阵的#$PlayerName#，"
   - split: 10
     subIndex: 2
     text: "也是目不忍视，耳不忍闻。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#，\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,无,,,,,,,正值此时，一阵慷慨激昂，\\n但又暗含幽怨的琴声自后方响起。"
   splits:
   - split: 3
@@ -333031,13 +332117,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "近日来连克京城和飞龙门，"
+    text: "#$PlayerName#近日来连克京城和飞龙门，"
   - split: 10
     subIndex: 1
     text: "天下震动，想必各位掌门也已知晓。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,如今仙霞派联盟不仅据有荆襄、巴蜀、云南、广南等地，\\n其触须更是已深入京畿重城，中原腹地。"
   splits:
   - split: 3
@@ -333103,13 +332189,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "此人，"
+    text: "#$PlayerName#此人，"
   - split: 10
     subIndex: 1
     text: "向来秉持正道，并以侠义为重。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,兴许我们可以与其和谈，\\n达成一个双方均能接受的结果。"
   splits:
   - split: 3
@@ -333129,13 +332215,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "呵呵，这么说来，"
-  - split: 10
-    subIndex: 1
-    text: "还对妾身有过救命之恩呢。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "呵呵，这么说来，#$PlayerName#还对妾身有过救命之恩呢。"
 - raw: ",,,左,,,,,,,此事若能和谈解决，那自然再好不过。\\n只要不影响我长乐帮的生意，一切好说。"
   splits:
   - split: 3
@@ -333198,16 +332278,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "如今血衣盟已销声匿迹，"
+    text: "如今血衣盟已销声匿迹，#$PlayerName#亦是通情达理之人。"
   - split: 10
     subIndex: 1
-    text: "亦是通情达理之人。"
-  - split: 10
-    subIndex: 2
     text: "我看这和谈之事，并无不可！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,吕寻峰,右,,,,,,,哼哼，乐帮主，你也是久经风浪之人，岂会如此天真？"
   splits:
   - split: 2
@@ -333221,7 +332298,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "执掌仙霞派以来，"
+    text: "#$PlayerName#执掌仙霞派以来，"
   - split: 10
     subIndex: 1
     text: "四面出击，虎踞鲸吞，"
@@ -333230,7 +332307,7 @@
     text: "可见此人野心不小。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,以我看，与此人和谈，无异于与虎谋皮！"
   splits:
   - split: 3
@@ -333250,16 +332327,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "我们皆知姬阁主，乐帮主，你们与"
+    text: "我们皆知姬阁主，乐帮主，你们与#$PlayerName#私交甚笃，"
   - split: 10
     subIndex: 1
-    text: "私交甚笃，"
-  - split: 10
-    subIndex: 2
     text: "但此等门派兴亡大计，不可为儿女私情左右。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,若二位因私废公，不仅对不起在座武林同道之信任，\\n更会让自家门派的长老弟子失望啊！"
   splits:
   - split: 3
@@ -333279,16 +332353,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "咳咳咳咳，"
+    text: "咳咳咳咳，#$PlayerName#也曾助我神机门，"
   - split: 10
     subIndex: 1
-    text: "也曾助我神机门，"
-  - split: 10
-    subIndex: 2
     text: "清剿过扬州血衣盟贼人。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,此人确实侠义心肠，\\n并非什么奸邪之徒。"
   splits:
   - split: 3
@@ -333340,16 +332411,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "事到如今，"
+    text: "事到如今，#$PlayerName#之目的已再明显不过了，"
   - split: 10
     subIndex: 1
-    text: "之目的已再明显不过了，"
-  - split: 10
-    subIndex: 2
     text: "那便是横扫中原，一统武林。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,若想只通过和谈，便令其止步于此，\\n那未免痴人说梦了。"
   splits:
   - split: 3
@@ -333459,13 +332527,10 @@
     text: "哎，要我说，咱们还是趁早投降，"
   - split: 10
     subIndex: 1
-    text: "求"
-  - split: 10
-    subIndex: 2
-    text: "放咱们一条生路吧......"
+    text: "求#$PlayerName#放咱们一条生路吧......"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,雷震天,右,,,,TRUE,,,欧庄主，大敌当前，\\n岂可长他人志气，灭自己威风？"
   splits:
   - split: 2
@@ -333485,16 +332550,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "我倒不信了，"
+    text: "我倒不信了，#$PlayerName#武功再高，"
   - split: 10
     subIndex: 1
-    text: "武功再高，"
-  - split: 10
-    subIndex: 2
     text: "能敌得过我霹雳堂的灭世天雷不成！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,空闻大师,右,,,,,,,阿弥陀佛，雷堂主说的正是。"
   splits:
   - split: 2
@@ -333576,13 +332638,10 @@
     text: "届时只需集结大军，以清君侧之名义夺回京城，"
   - split: 10
     subIndex: 1
-    text: "便可一举粉碎"
-  - split: 10
-    subIndex: 2
-    text: "染指中原之计划！"
+    text: "便可一举粉碎#$PlayerName#染指中原之计划！"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,诸位，这便是老衲应对仙霞之计策，\\n不知各位意下如何？"
   splits:
   - split: 3
@@ -333972,16 +333031,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "此番"
+    text: "此番#$PlayerName#兵锋直指中原，若再不出手，"
   - split: 10
     subIndex: 1
-    text: "兵锋直指中原，若再不出手，"
-  - split: 10
-    subIndex: 2
     text: "少林百年清誉、武林千年道统，恐将名存实亡。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,以战止战，终究只是权宜之计。"
   splits:
   - split: 3
@@ -334038,16 +333094,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "但"
+    text: "但#$PlayerName#将一人意志凌驾于各派传承之上，"
   - split: 10
     subIndex: 1
-    text: "将一人意志凌驾于各派传承之上，"
-  - split: 10
-    subIndex: 2
     text: "凡不从者便以武力压制，此等行为难道不该制止吗？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,仙霞派虽四面出击，虎踞鲸吞，\\n但却始终秉持侠义之道，未曾滥杀一人。"
   splits:
   - split: 3
@@ -334401,13 +333454,10 @@
     text: "诶，这你们就有所不知了，眼下咱正准备和仙霞派决战。"
   - split: 10
     subIndex: 1
-    text: "这仙霞派掌门"
-  - split: 10
-    subIndex: 2
-    text: "，可不是什么寻常人物。"
+    text: "这仙霞派掌门#$PlayerName#，可不是什么寻常人物。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,此人短短数十年间，就从外门弟子跃升成绝顶高手，\\n而且还把仙霞派发展成天下第一大派。"
   splits:
   - split: 3
@@ -334762,13 +333812,10 @@
     text: "如果说这高人当真如此厉害，内力修为还在都点检之上，"
   - split: 10
     subIndex: 1
-    text: "那确实是深不可测，想来应付得了"
-  - split: 10
-    subIndex: 2
-    text: "了。"
+    text: "那确实是深不可测，想来应付得了#$PlayerName#了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,所以说咱们才需要加紧寻访此人不是。\\n好了好了，休息的差不多了，赶紧出发吧！"
   splits:
   - split: 3
@@ -334984,16 +334031,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "杨师兄莫慌，我"
+    text: "杨师兄莫慌，我#$PlayerName#足智多谋，"
   - split: 10
     subIndex: 1
-    text: "足智多谋，"
-  - split: 10
-    subIndex: 2
     text: "岂能没有应对之策？"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,姜婉,右,,,,,,,#PlayerName#你就别卖关子了，\\n快说说到底是什么办法！"
   splits:
   - split: 2
@@ -337908,10 +336952,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "原来你就是那位传说中的"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#？！"
+    text: "原来你就是那位传说中的#$PlayerName#？！"
 - raw: ",,,左,,,,,,,咳咳，正是在下。"
   splits:
   - split: 3
@@ -338680,13 +337721,10 @@
     text: "你可别听了几句花言巧语，"
   - split: 10
     subIndex: 1
-    text: "就被"
-  - split: 10
-    subIndex: 2
-    text: "诓骗了去......"
+    text: "就被#$PlayerName#诓骗了去......"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,可是............"
   splits:
   - split: 3
@@ -338703,13 +337741,10 @@
     text: "咳咳，龙掌教，中原人士对贵派虽多有误会，"
   - split: 10
     subIndex: 1
-    text: "但我"
-  - split: 10
-    subIndex: 2
-    text: "对贵派，可一直都是尊敬有加的。"
+    text: "但我#$PlayerName#对贵派，可一直都是尊敬有加的。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,我若真是那种抱有成见之人，\\n此前茅山何足道一役中，又怎么可能会出手相助呢？"
   splits:
   - split: 3
@@ -339885,19 +338920,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "他被"
+    text: "他被#$PlayerName#及各派掌门围攻，"
   - split: 10
     subIndex: 1
-    text: "及各派掌门围攻，"
-  - split: 10
-    subIndex: 2
     text: "最终与阎罗王同归于尽。"
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "其尸首就躺在本门万毒池内。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,呵呵呵呵呵，你现在赶紧去捞，可能还能剩点骨架。"
   splits:
   - split: 3
@@ -340225,24 +339257,18 @@
     text: "二位且慢！这其中似乎有什么误会。"
   - split: 10
     subIndex: 1
-    text: "还请听我"
-  - split: 10
-    subIndex: 2
-    text: "一言......"
+    text: "还请听我#$PlayerName#一言......"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,#$PlayerName#？怎么哪儿都有你这家伙......"
   splits:
   - split: 3
     text: "右"
   - split: 10
-    text: "？怎么哪儿都有你这家伙......"
-  templates:
-  - split: 10
-    template: "#$PlayerName#{0}"
+    text: "#$PlayerName#？怎么哪儿都有你这家伙......"
 - raw: ",,,右,,,,,,,本掌教正要教训这牛鼻子老道，\\n你若不帮忙，就别来碍事！"
   splits:
   - split: 3
@@ -340294,13 +339320,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你既不帮我，又非要挡在路中间，"
+    text: "#$PlayerName#，你既不帮我，又非要挡在路中间，"
   - split: 10
     subIndex: 1
     text: "那可就别怪本掌教不客气了！"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,你们两个听不懂人话是吧？\\n好啊，我今天就偏要挡在路中间......"
   splits:
   - split: 3
@@ -340384,7 +339410,7 @@
     subIndex: 2
     text: "仇人"
   - split: 10
-    text: "，何足道，你们给本掌教等着。"
+    text: "#$PlayerName#，何足道，你们给本掌教等着。"
   - split: 10
     subIndex: 1
     text: "今日所作所为，我龙凤娥自当加倍奉还！"
@@ -340392,7 +339418,7 @@
   - split: 8
     template: "PlotChangeHeroRelation;{0}-{1}-{2}"
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,无,左,,,SpeEffect/腐烂,,ChangeHeroFavor;何足道-20,,龙、龙掌教？哎......\\n龙掌教这脾气，还是这么倔强。"
   splits:
   - split: 2
@@ -341069,10 +340095,10 @@
     text: "这样，两派往日的矛盾便可一笔勾销。"
   - split: 10
     subIndex: 1
-    text: "不知二位意下如何，可否信得过我"
+    text: "不知二位意下如何，可否信得过我#$PlayerName#？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#？"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,ChangeHeroFavor;何足道-10,,嗯，以#PlayerName#之武功人品，\\n阁下既然愿意担保此事，贫道也可放心了。"
   splits:
   - split: 3
@@ -341139,13 +340165,10 @@
     text: "哼哼，虽说此事本教也可轻松解决，"
   - split: 10
     subIndex: 1
-    text: "但"
-  - split: 10
-    subIndex: 2
-    text: "此番调停，也算替我省了不少事。"
+    text: "但#$PlayerName#此番调停，也算替我省了不少事。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,呵呵，这些中原大侠，\\n一个个抱残守缺，冥顽不灵。"
   splits:
   - split: 3
@@ -341440,16 +340463,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "诸位，我"
+    text: "诸位，我#$PlayerName#自继任仙霞派掌门以来，一直承蒙各位支持。"
   - split: 10
     subIndex: 1
-    text: "自继任仙霞派掌门以来，一直承蒙各位支持。"
-  - split: 10
-    subIndex: 2
     text: "历经阎罗殿肆虐，血衣盟阴谋等劫难，勉力维持下来。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,此后本门卧薪尝胆，励精图治，\\n先克铁掌帮，再收唐门，\\n终于彻底平定了蜀中一地。"
   splits:
   - split: 3
@@ -342062,16 +341082,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#出身微末，"
   - split: 10
     subIndex: 1
-    text: "出身微末，"
-  - split: 10
-    subIndex: 2
     text: "自踏入江湖以来，已历时数十载。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,从一开始籍籍无名，立志习武，\\n一路上历尽波折，踏遍坎坷。"
   splits:
   - split: 3
@@ -342103,16 +341120,13 @@
   - split: 6
     text: "号角"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#不会辜负大家的信任。"
   - split: 10
     subIndex: 1
-    text: "不会辜负大家的信任。"
-  - split: 10
-    subIndex: 2
     text: "一定要全力以赴，拿下此战胜利。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,人群欢呼,,GetMainMission;44,,时间已至，请各位擂动战鼓，吹响号角。\\n准备前往京城，与敌人决一死战！"
   splits:
   - split: 3
@@ -342181,16 +341195,13 @@
     text: "空闻大师，今日好大的阵仗！"
   - split: 10
     subIndex: 1
-    text: "没想到我"
+    text: "没想到我#$PlayerName#竟有此等的面子，"
   - split: 10
     subIndex: 2
-    text: "竟有此等的面子，"
-  - split: 10
-    subIndex: 3
     text: "能让中原九大门派联合对敌。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,阿弥陀佛！#PlayerName#，老衲与你虽私交不深，\\n但也久闻你是个侠义为重之人。"
   splits:
   - split: 3
@@ -342271,13 +341282,10 @@
     text: "久闻大师乃是少林方丈，德高望重，江湖中人人敬仰。"
   - split: 10
     subIndex: 1
-    text: "岂会忘了这京城，是皇上授予我"
-  - split: 10
-    subIndex: 2
-    text: "，命仙霞派掌管防务的呢？"
+    text: "岂会忘了这京城，是皇上授予我#$PlayerName#，命仙霞派掌管防务的呢？"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,大师若有意见，大可以上表请愿，求皇上收回成命。\\n我仙霞派只是奉命行事罢了，各位何必苦苦相逼？"
   splits:
   - split: 3
@@ -342337,16 +341345,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我"
+    text: "我#$PlayerName#立志平定乱世，"
   - split: 10
     subIndex: 1
-    text: "立志平定乱世，"
-  - split: 10
-    subIndex: 2
     text: "今日这京城一战，就是我横扫中原武林之始。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,这些年来，阎罗王，思中澜，金龙生，败于我手的绝世高手不计其数。\\n方丈若是想做下一个的话，那就只管来试试吧！"
   splits:
   - split: 3
@@ -342528,13 +341533,10 @@
     text: "好，久闻两位大师佛法精深，武功更是登峰造极。"
   - split: 10
     subIndex: 1
-    text: "今日我"
-  - split: 10
-    subIndex: 2
-    text: "，便来向二位讨教讨教。"
+    text: "今日我#$PlayerName#，便来向二位讨教讨教。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: "1660,,玩家,右,,,GroupFight,,,,阎罗殿弟子皆是历战老兵，精于军阵。\\n作为第二阵中坚力量，自是再合适不过了！"
   splits:
   - split: 2
@@ -343148,16 +342150,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "所以还望这位"
+    text: "所以还望这位#$PlayerName#施主，"
   - split: 10
     subIndex: 1
-    text: "施主，"
-  - split: 10
-    subIndex: 2
     text: "看在贫僧的面子上，将京城交还给中原各派。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,如此，则战端便可止歇，伤员亦可得救治。\\n贫僧当亲自护送贵派返回巴蜀，保证各位毫发无伤。"
   splits:
   - split: 3
@@ -343208,13 +342207,13 @@
     text: "好，那贫僧也有一问。"
   - split: 10
     subIndex: 1
-    text: "，你此番攻城略地，吞并巴蜀，"
+    text: "#$PlayerName#，你此番攻城略地，吞并巴蜀，"
   - split: 10
     subIndex: 2
     text: "然后又占据京城，图谋中原。"
   templates:
   - split: 10
-    template: "{0}\\n#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,看到如今血流成河之场面，还望你扪心自问，\\n此举到底是为了一己私欲，狼子野心......"
   splits:
   - split: 3
@@ -343357,16 +342356,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "大师，我"
+    text: "大师，我#$PlayerName#不敢说毫无私心。"
   - split: 10
     subIndex: 1
-    text: "不敢说毫无私心。"
-  - split: 10
-    subIndex: 2
     text: "但以我之武功名望，早已足够独步武林，笑傲江湖。"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,何必要费尽心力，\\n携同门师兄弟一起浴血奋战，自寻磨难？"
   splits:
   - split: 3
@@ -343472,13 +342468,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "你算老几？你有什么资格质问一直在为民除害的"
+    text: "你算老几？你有什么资格质问一直在为民除害的#$PlayerName#？"
   - split: 10
     subIndex: 1
     text: "你怎么不问问你自己！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#？\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,咳咳咳咳咳......"
   splits:
   - split: 3
@@ -344001,16 +342997,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "好个"
+    text: "好个#$PlayerName#，竟然连五毒教都请来了？！"
   - split: 10
     subIndex: 1
-    text: "，竟然连五毒教都请来了？！"
-  - split: 10
-    subIndex: 2
     text: "大家快屏气凝神，逼出体内毒素！"
   templates:
   - split: 10
-    template: "{0}#$PlayerName#{1}\\n{2}"
+    template: "{0}\\n{1}"
 - raw: ",,龙凝霜,右,,,SpeEffect/铃铛,,,,五毒弟子，继续放烟，莫要给对面可乘之机。"
   splits:
   - split: 2
@@ -344135,15 +343128,12 @@
     text: "血衣盟北统领......上官凤？！"
   - split: 10
     subIndex: 1
-    text: "没想到你都和"
-  - split: 10
-    subIndex: 2
-    text: "沆瀣一气！"
+    text: "没想到你都和#$PlayerName#沆瀣一气！"
   templates:
   - split: 8
     template: "HeroRiseUp;{0}-10"
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,大师，我上官凤早已洗心革面，改邪归正。\\n今日来此，正是要助#PlayerName#平定乱世，弥补以往所犯之罪孽。"
   splits:
   - split: 3
@@ -344385,16 +343375,13 @@
     text: "贫僧听闻江湖中，"
   - split: 10
     subIndex: 1
-    text: "出了"
+    text: "出了#$PlayerName#这样一位武功谋略，均在都点检之上的人物，"
   - split: 10
     subIndex: 2
-    text: "这样一位武功谋略，均在都点检之上的人物，"
-  - split: 10
-    subIndex: 3
     text: "同样立志平定乱世。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,右,,,,,,,所以此次前来，也是想一试阁下之真心。"
   splits:
   - split: 3
@@ -344567,13 +343554,13 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "我想起了！......师傅......峨眉派......"
+    text: "#$PlayerName#我想起了！......师傅......峨眉派......"
   - split: 10
     subIndex: 1
     text: "所有......所有的事情......"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,司马德源,右,,,,TRUE,,,咳咳咳咳！徒儿，你当真想起为师啦？"
   splits:
   - split: 2
@@ -344701,13 +343688,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，小姑娘，各位掌门，今日之战已毕，贫僧也该退场了。"
+    text: "#$PlayerName#，小姑娘，各位掌门，今日之战已毕，贫僧也该退场了。"
   - split: 10
     subIndex: 1
     text: "能在有生之年看到乱世迎来终局，贫僧也算是得偿所愿。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,还望阁下能够戒骄戒躁，励精图治。\\n相信各位齐心协力之下，定能扫清寰宇，\\n还天下万民一个朗朗乾坤，告辞了！"
   splits:
   - split: 3
@@ -344770,13 +343757,7 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "多谢大师指点，我"
-  - split: 10
-    subIndex: 1
-    text: "定不会辜负你的期望。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "多谢大师指点，我#$PlayerName#定不会辜负你的期望。"
 - raw: ",玩家,空闻大师,左,,,,,,,空闻大师，此战胜负已分。\\n不知各位还有何打算？"
   splits:
   - split: 1
@@ -344990,13 +343971,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "，你这家伙果然是深不可测，"
+    text: "#$PlayerName#，你这家伙果然是深不可测，"
   - split: 10
     subIndex: 1
     text: "竟能完成超越老子和胞兄之功业。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,老子承认，你确实是个盖世英雄。\\n今后老子和阎罗门将士，也继续听你号令！"
   splits:
   - split: 3
@@ -345046,13 +344027,10 @@
     text: "各位掌门，今日之胜利离不开各位全力相助。"
   - split: 10
     subIndex: 1
-    text: "我"
-  - split: 10
-    subIndex: 2
-    text: "绝不会忘记各位之恩义。"
+    text: "我#$PlayerName#绝不会忘记各位之恩义。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,,左,,,,,,,如今天下已定，乱世将平，我愿意同各位一道，\\n分享这份来之不易的荣耀与喜悦。"
   splits:
   - split: 3
@@ -345084,13 +344062,13 @@
   - split: 6
     text: "人群欢呼"
   - split: 10
-    text: "高举手中宝剑，"
+    text: "#$PlayerName#高举手中宝剑，"
   - split: 10
     subIndex: 1
     text: "场下众人欢呼雀跃，掌声雷动。"
   templates:
   - split: 10
-    template: "#$PlayerName#{0}\\n{1}"
+    template: "{0}\\n{1}"
 - raw: ",,,无,,,,,ScreenBlack,,笼罩在神州大陆上的乱世阴云，正缓缓消散，\\n一个属于#$PlayerName#的新时代，终于来临了。"
   splits:
   - split: 3
@@ -345099,13 +344077,10 @@
     text: "笼罩在神州大陆上的乱世阴云，正缓缓消散，"
   - split: 10
     subIndex: 1
-    text: "一个属于"
-  - split: 10
-    subIndex: 2
-    text: "的新时代，终于来临了。"
+    text: "一个属于#$PlayerName#的新时代，终于来临了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}#$PlayerName#{2}"
+    template: "{0}\\n{1}"
 - raw: ",,魏胥华,右,,,,,,,今日我等力克九派联军，此战定会流传千古，\\n成为武林中人津津乐道的轶闻传说。"
   splits:
   - split: 2
@@ -345558,13 +344533,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "眼看阵型溃散，"
-  - split: 10
-    subIndex: 1
-    text: "也只能下令弟子退出京城。"
-  templates:
-  - split: 10
-    template: "{0}#$PlayerName#{1}"
+    text: "眼看阵型溃散，#$PlayerName#也只能下令弟子退出京城。"
 - raw: ",玩家,斗酒僧,左,,,,,,,敌军仿佛无穷无尽一般。\\n留得青山在不怕没柴烧，只好先放弃京城了。"
   splits:
   - split: 1

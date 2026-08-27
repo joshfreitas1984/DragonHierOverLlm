@@ -293,7 +293,8 @@ namespace Tests
             // Second, separately-sourced DynamicStringsIL2CPP file - see
             // ExtractDynamicStringCandidatesFromColumns/DynamicStringColumnSources below. Kept as
             // its own file (rather than merged into dynamicStrings.txt) purely so it's obvious
-            // which entries were hand-curated from decompiled code vs. auto-pulled from CSV
+            // which entries came from reviewed output/_dynamicStrings_candidates.txt (IL2CPP string-map
+            // literals) vs. auto-pulled from CSV
             // columns - the runtime plugin loads every "dynamicStrings*.txt.yaml" file it finds
             // and merges them into one dictionary (see DynamicStringPatches.LoadDictionary), so
             // this needs no special handling anywhere else in the pipeline.
@@ -318,6 +319,79 @@ namespace Tests
             ("ForceData.csv", [1]),
             // 职位 (rank/tier tag) - e.g. "外门弟子", "亲传弟子", "掌门", "长老".
             ("SpeHeroData.csv", [5]),
+        ];
+
+        // Confirmed-safe MonoBehaviour field names for the SECOND automated dynamic-string
+        // source below (ExtractDynamicStringCandidatesFromOtherText), sourced from
+        // Files/Raw/Dumped/PrefabText/dumpedOtherText.txt - AssetDumperWorkflowTests.IsPrimaryTextField
+        // only treats "m_Text"/"text" as real displayed UI text, so anything on another field
+        // (e.g. hero-class creation template badges like "异士模板"/"弓手模板" living on a plain
+        // "name" field) is written to dumpedOtherText.txt only and never reaches the translation
+        // pipeline (found 2026-08-27 via an in-game screenshot showing an untranslated badge).
+        // Rather than widen IsPrimaryTextField wholesale (dumpedOtherText.txt mixes real
+        // display text with plenty of internal/asset-only fields on THE SAME field name), each
+        // field here was individually sampled against a real dump (every entry checked for stray
+        // ASCII letters/underscores, a strong signal of an internal identifier rather than
+        // player-facing Chinese text) before being added:
+        //   - "name" (397/397 clean), "eventName" (100/100), "tutorialName" (59/59),
+        //     "showName" (18/18), "bulletName" (18/18), "fullName" (18/18), "jobName" (12/12),
+        //     "spellName" (10/10), "pointName" (1/1), "sourceName" (5/5), "plotName" (5/5) -
+        //     zero suspicious (ASCII-letter/underscore-containing) entries in a real dump, so
+        //     every value on these fields was promoted wholesale.
+        //   - "data" (342/857 suspicious, e.g. "下拉菜单_按钮"/"中型树0") and "targetName"
+        //     (7/28 suspicious - internal "临时:强盗头目&随机;;;事件难度+0.5;-8;;true"-style config
+        //     strings) are BOTH still too noisy even after filtering out the ASCII-suspicious
+        //     entries (e.g. "data"'s remaining 515 "clean" entries still mix real names like
+        //     "万安客栈"/"丐帮" with internal shape/asset names like "三角形"/"人像"/"事件标签") -
+        //     deliberately left OUT of this list rather than risk polluting the dictionary with
+        //     bare-fragment entries for words like "三角形"/"人像" that could then corrupt
+        //     unrelated compounds elsewhere (the exact hazard DynamicStringColumnSources/
+        //     DynamicStringLabelColumnSources above already guard against). If a future
+        //     screenshot confirms a real missing string on "data"/"targetName", add it directly
+        //     to dynamicStrings.txt (populated by reviewing/merging output/_dynamicStrings_candidates.txt,
+        //     not hand-authored) instead of promoting the whole field.
+        //   - Function/parameter-reference fields (callParam, startCallSpeFuc, tutorialSpeFuc,
+        //     clickCallFuc, tutorialEndSpeFuc, triggerTargetID, speEffect) were not even sampled -
+        //     these are plainly internal method/ID references by name, never displayed text.
+        //
+        // 2026-08-27: added "plotText"/"tutorialText"/"choiceText"/"startRemindText"/"describe"/
+        // "eventDescribe"/"jobDescribe" - long-form paragraph/sentence fields living on custom
+        // data classes (SinglePlotData/InnData/EventData-like structures), NOT baked directly onto
+        // a TMP_Text/UI.Text component the way PrefabTextPatches.cs's whole-string load-time scan
+        // expects. Verified via grep against every dumped GameData CSV that none of these values
+        // have a CSV source at all - PrefabTextPatches.cs's own doc comment claiming these fields
+        // "are already populated from the existing CSV workflow" is WRONG for at least these
+        // fields (confirmed empirically, not just for one screenshot bug - do not trust that
+        // comment for any other field without similarly verifying against the CSVs first). Each
+        // sampled for noise the same way as the short name-fields above: plotText (415 total, 3
+        // suspicious - all confirmed legitimate, containing "<color=red>" markup), choiceText
+        // (160/160 clean), describe (247/247 clean), startRemindText (240/240 clean),
+        // eventDescribe (27/27 clean), jobDescribe (12/12 clean), tutorialText (308 total, 7
+        // suspicious - all confirmed legitimate, containing key-name references like
+        // "Shift"/"WSAD"/"Tab" inside "<b>...</b>" tags). Despite being full paragraphs rather
+        // than short labels, this is still the correct DynamicStrings (substring-replace)
+        // mechanism rather than PrefabText (whole-string load-time scan): these values are
+        // assigned to a TMP_Text/UI.Text's .text property well after prefab load, at arbitrary
+        // runtime (e.g. when a plot dialog or tutorial popup actually opens) - PrefabTextPatches
+        // only observes text already baked into a component at Resources.Load/scene-load time and
+        // never re-checks it afterwards, so it would never see these. DynamicStringPatches, by
+        // contrast, patches the TMP_Text.text/UI.Text.text SETTERS themselves (sink-level,
+        // field-agnostic - see DynamicStringPatches.cs's TmpTextSetText_Postfix/
+        // UiTextSetText_Postfix), catching the value at the exact moment it's actually displayed
+        // regardless of which source field it came from - exactly the mechanism these fields need.
+        // A full-paragraph entry is applied via ordinary substring replace the same as any other
+        // dynamic-string entry (LoadDictionary sorts longest-first specifically so a full
+        // paragraph can never be corrupted by a shorter, unrelated fragment matching part of it
+        // first), and the existing GamePlaceholderTokenRegex/CheckTransalationSuccessful
+        // validation (which runs unconditionally, not just for CSV columns) already guards against
+        // an LLM dropping an embedded "#PlaceholderToken#" during translation - no new validation
+        // needed for the longer/paragraph case.
+        public static readonly string[] DynamicStringOtherTextFields =
+        [
+            "name", "eventName", "tutorialName", "showName", "bulletName", "fullName",
+            "jobName", "spellName", "pointName", "sourceName", "plotName",
+            "plotText", "tutorialText", "choiceText", "startRemindText", "describe",
+            "eventDescribe", "jobDescribe",
         ];
 
         // Matches the LABEL portion of a "Label<sign><number>" stat-modifier item (e.g. "内功1",
@@ -424,6 +498,60 @@ namespace Tests
                 ExtractFrom(csvFileName, columns, cell => cell
                     .Split([';', ','], StringSplitOptions.RemoveEmptyEntries)
                     .Select(item => StatLabelRegex.Match(item).Value));
+            }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
+
+        /// <summary>
+        /// SECOND automated source feeding the same dynamicStringsFromColumns.txt dump - see
+        /// DynamicStringOtherTextFields' doc comment above for why these specific field names are
+        /// trusted and what was deliberately left out. Reads
+        /// Files/Raw/Dumped/PrefabText/dumpedOtherText.txt (produced by
+        /// AssetDumperWorkflowTests.DumpChineseTextFromAssets - a one-off asset scan, not part of
+        /// the numbered pipeline, so this only finds anything new after that scan is re-run),
+        /// keeps every distinct value whose Field is in DynamicStringOtherTextFields, and appends
+        /// any not already present in dynamicStrings.txt or a previous run of this method (or
+        /// ExtractDynamicStringCandidatesFromColumns - both write to the same file) to
+        /// dynamicStringsFromColumns.txt. Repeatable/idempotent like its sibling - safe to re-run
+        /// any time (e.g. after re-running the asset dumper or adding a new field to the
+        /// allowlist) without duplicating already-extracted values.
+        /// </summary>
+        public static void ExtractDynamicStringCandidatesFromOtherText(string workingDirectory)
+        {
+            var otherTextPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedOtherText.txt";
+            if (!File.Exists(otherTextPath)) return;
+
+            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
+
+            var seen = new HashSet<string>();
+            if (File.Exists(masterDumpPath))
+                seen.UnionWith(File.ReadAllLines(masterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
+            if (File.Exists(outputPath))
+                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+
+            var allowedFields = new HashSet<string>(DynamicStringOtherTextFields, StringComparer.OrdinalIgnoreCase);
+
+            // Deserialize into a plain Dictionary rather than the DumpedTextEntry record itself -
+            // YamlDotNet's default object node deserializer requires a parameterless constructor
+            // to instantiate an item, which a positional record (Raw, Field) doesn't have
+            // (confirmed via a real run: "Cannot dynamically create an instance of type
+            // 'Tests.DumpedTextEntry'... No parameterless constructor defined"). A Dictionary node
+            // deserializes fine with no such requirement and needs no changes to the shared record
+            // type (used for serialization elsewhere in AssetDumperWorkflowTests).
+            var deserializer = YamlHelper.CreateDeserializer();
+            var entries = deserializer.Deserialize<List<Dictionary<string, string>>>(File.ReadAllText(otherTextPath)) ?? [];
+
+            var found = new List<string>();
+            foreach (var entry in entries)
+            {
+                if (!entry.TryGetValue("raw", out var raw) || string.IsNullOrWhiteSpace(raw)) continue;
+                if (!entry.TryGetValue("field", out var field) || !allowedFields.Contains(field)) continue;
+                if (!seen.Add(raw)) continue;
+
+                found.Add(raw);
             }
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);

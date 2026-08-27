@@ -3,262 +3,163 @@
   - split: 1
     text: "名字"
     translated: "Name"
-  - split: 2
-    text: "加成效果"
-    translated: "Bonus effect"
 - raw: "-10,邪道服,伤害0.02,-1"
   splits:
   - split: 1
     text: "邪道服"
     translated: "Netherway Garment"
-  - split: 2
-    text: "伤害0.02"
-    translated: "Damage 0.02"
 - raw: "-9,杀手服,速度0.02,-1"
   splits:
   - split: 1
     text: "杀手服"
     translated: "Assassin's outfit"
-  - split: 2
-    text: "速度0.02"
-    translated: "Speed 0.02"
 - raw: "-8,强盗服,暴击0.02,-1"
   splits:
   - split: 1
     text: "强盗服"
     translated: "Bandit's clothes"
-  - split: 2
-    text: "暴击0.02"
-    translated: "Critical hit 0.02"
 - raw: "-7,游侠服,命中0.02,-1"
   splits:
   - split: 1
     text: "游侠服"
     translated: "Ranger's outfit"
-  - split: 2
-    text: "命中0.02"
-    translated: "Hit Rate 0.02"
 - raw: "-6,才子服,学识4,-1"
   splits:
   - split: 1
     text: "才子服"
     translated: "Scholarly Attire"
-  - split: 2
-    text: "学识4"
-    translated: "Knowledge of 4"
 - raw: "-5,官差服,压制0.02,-1"
   splits:
   - split: 1
     text: "官差服"
     translated: "Official uniform"
-  - split: 2
-    text: "压制0.02"
-    translated: "Suppress 0.02"
 - raw: "-4,杂役服,采伐4,-1"
   splits:
   - split: 1
     text: "杂役服"
     translated: "Labour uniform"
-  - split: 2
-    text: "采伐4"
-    translated: "Felling 4"
 - raw: "-3,商人服,口才4,-1"
   splits:
   - split: 1
     text: "商人服"
     translated: "Trader's outfit"
-  - split: 2
-    text: "口才4"
-    translated: "4 charisma"
 - raw: "-2,农民服,木植4,-1"
   splits:
   - split: 1
     text: "农民服"
     translated: "Farmer's outfit"
-  - split: 2
-    text: "木植4"
-    translated: "Tree Plant 4"
 - raw: "-1,常服,经验获取0.02,-1"
   splits:
   - split: 1
     text: "常服"
     translated: "Daily attire"
-  - split: 2
-    text: "经验获取0.02"
-    translated: "Experience gained from 0.02"
 - raw: "0,锦袍,意志2,-1"
   splits:
   - split: 1
     text: "锦袍"
     translated: "Brocade robe"
-  - split: 2
-    text: "意志2"
-    translated: "2_will_"
 - raw: "1,夜行衣,射术2,-1"
   splits:
   - split: 1
     text: "夜行衣"
     translated: "Night travel robe"
-  - split: 2
-    text: "射术2"
-    translated: "Archery 2"
 - raw: "2,医袍,医术4,-1"
   splits:
   - split: 1
     text: "医袍"
     translated: "Doctor's robe"
-  - split: 2
-    text: "医术4"
-    translated: "Medical skill 4"
 - raw: "3,百衲衣,拳掌2,-1"
   splits:
   - split: 1
     text: "百衲衣"
     translated: "Patchwork robe"
-  - split: 2
-    text: "拳掌2"
-    translated: "Fist and Palm 2"
 - raw: "4,戎装,长兵2,-1"
   splits:
   - split: 1
     text: "戎装"
     translated: "Uniform"
-  - split: 2
-    text: "长兵2"
-    translated: "Long Sword 2"
 - raw: "5,法服,智力2,-1"
   splits:
   - split: 1
     text: "法服"
     translated: "Clerical attire"
-  - split: 2
-    text: "智力2"
-    translated: "Intellect 2"
 - raw: "6,甲胄,护甲1,-1"
   splits:
   - split: 1
     text: "甲胄"
     translated: "Armor"
-  - split: 2
-    text: "护甲1"
-    translated: "Armor 1"
 - raw: "7,避毒服,毒术4,-1"
   splits:
   - split: 1
     text: "避毒服"
     translated: "Poison‑proof suit"
-  - split: 2
-    text: "毒术4"
-    translated: "Poison Technique 4"
 - raw: "8,铁衣,力道2,-1"
   splits:
   - split: 1
     text: "铁衣"
     translated: "Iron Clothes"
-  - split: 2
-    text: "力道2"
-    translated: "Strength 2"
 - raw: "9,襕衫,闪避0.02,-1"
   splits:
   - split: 1
     text: "襕衫"
     translated: "Robe"
-  - split: 2
-    text: "闪避0.02"
-    translated: "Dodge 0.02"
 - raw: "10,袈裟,体质2,-1"
   splits:
   - split: 1
     text: "袈裟"
     translated: "Robe"
-  - split: 2
-    text: "体质2"
-    translated: "2 stamina"
 - raw: "11,道袍,内功2,-1"
   splits:
   - split: 1
     text: "道袍"
     translated: "Dao robe"
-  - split: 2
-    text: "内功2"
-    translated: "Neigong 2"
 - raw: "12,胡裘,刀法2,-1"
   splits:
   - split: 1
     text: "胡裘"
     translated: "Fur coat"
-  - split: 2
-    text: "刀法2"
-    translated: "Blade Technique 2"
 - raw: "13,鹤氅,剑法2,-1"
   splits:
   - split: 1
     text: "鹤氅"
     translated: "Heron cloak"
-  - split: 2
-    text: "剑法2"
-    translated: "Sword Technique 2"
 - raw: "14,瑶衣,轻功2,-1"
   splits:
   - split: 1
     text: "瑶衣"
     translated: "Yao yi"
-  - split: 2
-    text: "轻功2"
-    translated: "Lightness 2"
 - raw: "15,奇装,奇门2,-1"
   splits:
   - split: 1
     text: "奇装"
     translated: "Odd attire"
-  - split: 2
-    text: "奇门2"
-    translated: "Mystic 2"
 - raw: "16,匠服,灵巧2,-1"
   splits:
   - split: 1
     text: "匠服"
     translated: "Craftsman's robe"
-  - split: 2
-    text: "灵巧2"
-    translated: "Agile 2"
 - raw: "17,火浣布,锻造4,-1"
   splits:
   - split: 1
     text: "火浣布"
     translated: "Fire‑borne cloth"
-  - split: 2
-    text: "锻造4"
-    translated: "Forge 4"
 - raw: "18,羌姆袍,绝技2,-1"
   splits:
   - split: 1
     text: "羌姆袍"
     translated: "Kham Pao"
-  - split: 2
-    text: "绝技2"
-    translated: "Ultimate Technique 2"
 - raw: "19,貂裘,经脉2,-1"
   splits:
   - split: 1
     text: "貂裘"
     translated: "Fur coat"
-  - split: 2
-    text: "经脉2"
-    translated: "Meridian 2"
 - raw: "-100,白马红妆,伤害0.02,0"
   splits:
   - split: 1
     text: "白马红妆"
     translated: "White Horse, Red Makeup"
-  - split: 2
-    text: "伤害0.02"
-    translated: "Damage 0.02"
 - raw: "-101,风起青萍,速度0.02,0"
   splits:
   - split: 1
     text: "风起青萍"
     translated: "Breeze Ruffles the Green Rushgrass"
-  - split: 2
-    text: "速度0.02"
-    translated: "Speed 0.02"

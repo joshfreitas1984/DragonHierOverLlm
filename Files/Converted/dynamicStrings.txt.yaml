@@ -276,6 +276,7 @@
     translated: "#PlayerName# finally arrived; another Mid‑Autumn Festival has come around."
   - subIndex: 1
     text: "师兄弟们难得又齐聚一堂，尝尝月饼咯。"
+    translated: "Senior Brothers and fellow brothers, it's rare for us to gather again. Let's try some mooncakes."
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#咱们此前多有误会，方才互生嫌隙。\n今日便诚心诚意向你致个歉，以表我#$TargetInteractName#化干戈为玉帛之诚意。"
@@ -382,6 +383,7 @@
     translated: "Sadly, I #TargetForceName# has already beaten me to it. The martial arts on this stele naturally belong to us."
   - subIndex: 2
     text: "不过#PlayerName#你若想强取，我#TargetForceName#也不怕奉陪！"
+    translated: "But if you try to take by force, #PlayerName#, my #TargetForceName# won't shy away from the challenge!"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "#PlayerName#想要学习本门的{0}吗？\n#PlayerName#虽非本门弟子，但在江湖中声名显赫，且与本座私交甚笃。\n因此若能为本门立下{1}点功绩，倒也可破例而为。"
@@ -552,6 +554,7 @@
 - raw: "#PlayerName#武功着实高强，\n山外有山，人外有人，看来我等还需继续精进。"
   splits:
   - text: "#PlayerName#武功着实高强，"
+    translated: "#PlayerName#'s martial arts skills are truly formidable"
   - subIndex: 1
     text: "山外有山，人外有人，看来我等还需继续精进。"
     translated: "Beyond the mountain lies another mountain, and beyond people lie more people. It seems we still need to continue improving."
@@ -3037,6 +3040,7 @@
 - raw: "乡绅自发捐款，组织义工修筑防御工事。"
   splits:
   - text: "乡绅自发捐款，组织义工修筑防御工事。"
+    translated: "Local gentry voluntarily donated money and organized volunteer labor to construct defensive fortifications."
 - raw: "书生"
   splits:
   - text: "书生"
@@ -4556,6 +4560,7 @@
 - raw: "刚刚#PlayerName#，应该算是败在我手下的吧！"
   splits:
   - text: "刚刚#PlayerName#，应该算是败在我手下的吧！"
+    translated: "Just now, #PlayerName#, you should have fallen to me!"
 - raw: "初习"
   splits:
   - text: "初习"
@@ -4975,6 +4980,7 @@
 - raw: "危"
   splits:
   - text: "危"
+    translated: "Danger"
 - raw: "历时{0}载，#PlayerForceName#以及附庸、盟友，终于占据了天下全部江山。\n没想到我#$PlayerName#起于青萍之末，竟能创下如此前无古人后无来者之丰功伟业。"
   splits:
   - text: "历时"
@@ -5002,6 +5008,7 @@
 - raw: "厉苍穹陷入了癫狂！"
   splits:
   - text: "厉苍穹陷入了癫狂！"
+    translated: "Li Ciqiong became manic!"
 - raw: "厌恶"
   splits:
   - text: "厌恶"
@@ -5556,6 +5563,7 @@
     translated: "Invite the couple to join the team"
   - subIndex: 2
     text: "无好感消耗"
+    translated: "No goodwill consumption"
   templates:
   - template: "{0};LoverAskHeroJoinTeam;;;♦{1}\n♦{2}"
 - raw: "同门切磋"
@@ -6068,6 +6076,7 @@
     translated: "Haha, #SourceInteractName# and"
   - subIndex: 1
     text: "的大喜之日，怎能少了我#$TargetInteractName#捧场！"
+    translated: "The day of such great joy, how could I be missing you, #$TargetInteractName#?"
   - subIndex: 2
     text: "这#PlotInteractItemName#是我准备的贺礼，#PlayerName#一定要收下！"
   templates:
@@ -6382,6 +6391,7 @@
 - raw: "哎，我早就劝你少做些离经叛道之事。\n你看，果不其然，被人抓入牢中了吧！"
   splits:
   - text: "哎，我早就劝你少做些离经叛道之事。"
+    translated: "Ah, I had warned you to do less heretical and rebellious things."
   - subIndex: 1
     text: "你看，果不其然，被人抓入牢中了吧！"
     translated: "Sure enough, you were caught and thrown into jail!"
@@ -7000,6 +7010,7 @@
     translated: "Ah well... The little one roams the world, has a rough nature, and there's a bounty on their head."
   - subIndex: 1
     text: "若是去了贵派，怕反倒会给大侠添乱啊！"
+    translated: "If you go to your sect, it might actually cause more trouble for the Great Hero!"
   - subIndex: 2
     text: "招募"
     translated: "Recruit"
@@ -9987,6 +9998,7 @@
     translated: "Your"
   - subIndex: 2
     text: "特地吩咐，让咱们代他向你问好！受死吧#$SourceInteractName#！"
+    translated: "He specially instructed us to extend his greetings to you! Die, #$SourceInteractName#!"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "当真称得上是精美绝伦，世间罕见，此等稀世珍宝千万要小心保管才是。"
@@ -10006,8 +10018,7 @@
     translated: "Recruit disciples to join the team"
   - subIndex: 2
     text: "无好感消耗"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "No goodwill consumption"
   templates:
   - template: "{0};ForceAskHeroJoinTeam;;;♦{1}\n♦{2}"
 - raw: "征用;ForceAskHeroGiveItem;;;♦消耗门派威望征用物品\n♦降低弟子少许好感和忠诚\n♦每月最多一次;;ForceAskGiveItemTime"
@@ -10338,6 +10349,7 @@
 - raw: "情势不妙"
   splits:
   - text: "情势不妙"
+    translated: "Situation is critical"
 - raw: "情报探子"
   splits:
   - text: "情报探子"
@@ -10496,6 +10508,7 @@
     translated: "I, #TargetForceName#, have long been on good terms with #SourceForceName#."
   - subIndex: 1
     text: "此次特地带数名#TargetForceDescribe#弟子前来，"
+    translated: "I have brought several #TargetForceDescribe# disciples specially"
   - subIndex: 2
     text: "是想要与贵派以武论友，切磋交流一番。"
     translated: "You wish to spar with your sect for the sake of martial arts friendship and exchange skills."
@@ -11913,6 +11926,7 @@
 - raw: "敌方全体陷入了癫狂！"
   splits:
   - text: "敌方全体陷入了癫狂！"
+    translated: "The enemy tiquan went taogu mad!"
 - raw: "敌视"
   splits:
   - text: "敌视"
@@ -12356,8 +12370,6 @@
     translated: "I only just discovered a fertile valley filled with rare ingredients."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何采摘？"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一群毒性异常的蛇虫，里面似乎混杂有珍稀毒物，\n不知#PlayerName#是否知晓应当如何捉捕？"
@@ -13796,6 +13808,7 @@
     translated: "The competition is now officially underway! Please step forward to warm up and face off against your opponents one by one!"
   - subIndex: 1
     text: "只要在比赛中取得前三名，就能获得赏银与奖品以示鼓励。"
+    translated: "Only by securing a top‑three finish in the competition will you earn the reward money and prizes."
   - subIndex: 2
     text: "望各位大侠奋勇争先，各展拳脚，最终都能取得满意名次！"
     translated: "I hope all the great heroes will strive with valor and showcase your skills, ultimately achieving a satisfying ranking!"
@@ -16081,6 +16094,7 @@
     translated: "After braving numerous dangers, you have finally reached the depths of the underground labyrinth."
   - subIndex: 1
     text: "只见一名身受重伤的高人，被数名同样武功不凡的邪道人士团团围住。"
+    translated: "A virtuous expert, grievously injured, was surrounded by several practitioners of the heretical way."
   templates:
   - template: "{0}\n{1}"
 - raw: "经验"
@@ -17972,8 +17986,7 @@
     translated: "The Eloquence Contest has officially begun! Please have the participants step forward to prepare for the debates, one pair at a time!"
   - subIndex: 1
     text: "只要在比赛中取得前三名，就能获得赏银与奖品以示鼓励。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Only by securing a top‑three finish in the competition will you earn the reward money and prizes."
   - subIndex: 2
     text: "望各位大侠妙语连珠，舌灿莲花，最终都能取得满意名次！"
     translated: "I hope all of you Great Heroes will speak eloquently and ultimately secure a satisfactory ranking!"

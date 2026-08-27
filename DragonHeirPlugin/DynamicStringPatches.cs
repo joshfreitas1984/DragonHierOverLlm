@@ -78,7 +78,7 @@ internal static class DynamicStringPatches
     private static readonly string ResourcesDir = Path.Combine(PluginDir, "resources");
     // Glob rather than a single exact filename: DynamicStringWorkflow-packaged dictionary files
     // all share the "...txt.yaml" shape (raw/result/isTemplate flat list) regardless of which
-    // TextFileToSplit produced them, e.g. "dynamicStrings.txt.yaml" (hand-curated literal
+    // TextFileToSplit produced them, e.g. "dynamicStrings.txt.yaml" (literal
     // fragments) and "dynamicStringsFromColumns.txt.yaml" (auto-extracted CSV column values -
     // see Tests/GameFileHandling.cs's DynamicStringColumnSources/ExtractDynamicStringCandidatesFromColumns).
     // Every matching file is loaded and merged into the same in-memory dictionary (see

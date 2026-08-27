@@ -350,7 +350,8 @@ pairs for CSV columns known to hold whole-phrase display strings read raw by som
 `Files/Raw/Dumped/GameData/`, pulls every distinct non-empty value from the specified columns, and
 appends any not already present in the master `dynamicStrings.txt` (or a previous run of this same
 method) to a **separate** dump file, `Files/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt`
-— kept distinct from the hand-curated `dynamicStrings.txt` purely for traceability (obvious at a
+— kept distinct from `dynamicStrings.txt` (itself populated by reviewing/merging
+  `Converter/output/_dynamicStrings_candidates.txt`, not hand-authored) purely for traceability (obvious at a
 glance which entries were auto-pulled from CSV columns vs. manually found in decompiled code).
 Registered as its own `TextFileToSplit` entry (same `TextFileType.DynamicStringsIL2CPP`), so it
 flows through the *existing* `DynamicStringWorkflow`/`"1c." export`/merge/package pipeline

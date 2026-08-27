@@ -51,9 +51,6 @@
   - split: 17
     text: "出师角色"
     translated: "Outfit Character"
-  - split: 18
-    text: "关系设定"
-    translated: "Relationship setup"
   - split: 19
     text: "皮肤"
     translated: "Skin"
@@ -131,17 +128,6 @@
     subIndex: 4
     text: "仁慈"
     translated: "Merciful"
-  - split: 18
-    text: "朋友"
-    translated: "Friend"
-  - split: 18
-    subIndex: 1
-    text: "亲属"
-    translated: "Relatives"
-  - split: 18
-    subIndex: 2
-    text: "仇人"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -151,8 +137,6 @@
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4}"
-  - split: 18
-    template: "{0}:2;{1}:7;{2}:65"
 - raw: "2,陆.仁谦,男,无,仙霞派,长老,-1,固执,平平,42,戒律/中立,绝技/拳掌/剑法,,快慢十八路,游侠;御剑;刚愎;云游,,0,1,,-7,0"
   splits:
   - split: 1
@@ -842,16 +826,11 @@
   - split: 15
     text: "净乐琉璃"
     translated: "Jingle Luliu"
-  - split: 18
-    text: "师傅"
-    translated: "Master"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5}"
-  - split: 18
-    template: "{0}:10"
 - raw: "12,卢.玉麟,男,长乐帮,默认,长老,-1,算计,平平,34,无序/凶狠,刀法,口才,,精明强干;舞技;横刀跃马;轻功;囤积居奇;仕官,铁算盘,0,0,,-99,0"
   splits:
   - split: 1
@@ -1000,9 +979,6 @@
   - split: 15
     text: "九天鬼手"
     translated: "Nine Heaven Ghost Hand"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -1012,8 +988,6 @@
     template: "{0};{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7}"
-  - split: 18
-    template: "{0}:14/15"
 - raw: "14,唐.离,男,唐门,默认,亲传弟子,1,轻佻,平平,23,无序/凶狠,刀法,,,游手好闲;挥霍无度;射术;飞鹰走犬;放歌纵酒;嗜赌如命,,0,0,亲属:15,-99,0"
   splits:
   - split: 1
@@ -1070,16 +1044,11 @@
     subIndex: 5
     text: "嗜赌如命"
     translated: "Addicted to gambling"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5}"
-  - split: 18
-    template: "{0}:15"
 - raw: "15,唐.嫣然,女,唐门,默认,副掌门,-1,叛逆,超群,20,无序/善良,射术,,九天罗候针,美貌;百步穿杨;神出鬼没;身怀绝技;桀骜不驯;锐眼;摘叶飞花,杀人无形,0,0,,-99,1"
   splits:
   - split: 1
@@ -1232,9 +1201,6 @@
   - split: 15
     text: "玉面医仙"
     translated: "Face of Jade Medical Immortal"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -1242,8 +1208,6 @@
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
-  - split: 18
-    template: "{0}:17"
 - raw: "17,皇甫.斌,男,药王谷,默认,副掌门,-1,灵活,超群,25,无序/善良,拳掌,炼药,灵犀一指,济世神医;术精岐黄;拳掌;对症下药;毒术;内力精纯;叛逆;游侠;以毒攻毒,穿林妙手,0,0,,-99,1"
   splits:
   - split: 1
@@ -1403,16 +1367,11 @@
   - split: 15
     text: "铁碗残拳"
     translated: "Iron Bowl Fists"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
-  - split: 18
-    template: "{0}:19"
 - raw: "19,徐.不平,女,丐帮,默认,副掌门,-1,简单,聪颖,40,守序/仁慈,长兵,,打狗八绝棍,公正不阿;铁手钢拳;醉生梦死;内力精纯;绝技;康健;行乞;枪芒,大醉侠,0,0,,-99,0"
   splits:
   - split: 1
@@ -2027,9 +1986,6 @@
   - split: 15
     text: "销魂蚀骨"
     translated: "Heart‑rending and bone‑chilling"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -2037,8 +1993,6 @@
     template: "{0};{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7}"
-  - split: 18
-    template: "{0}:27"
 - raw: "27,龙.凝霜,女,五毒教,默认,长老,-1,忠厚,平平,17,戒律/善良,奇门,毒术,金蚕王蛊,倾国倾城;奇门遁甲;射术;五毒俱全;飞檐走壁;绝技;百毒不侵;宅心仁厚,毒手琴心,0,0,,-99,1"
   splits:
   - split: 1
@@ -2278,9 +2232,6 @@
   - split: 15
     text: "十殿冥主"
     translated: "Ten Sovereigns of the Netherworld"
-  - split: 18
-    text: "仇人"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -2290,8 +2241,6 @@
     template: "{0};{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
-  - split: 18
-    template: "{0}:36/39/42/120"
 - raw: "30,崔.命官,男,阎罗殿,默认,副掌门,-1,潇洒,聪颖,35,平常/凶狠,拳掌,,血脉逆行,军师;心狠手辣;拳不离手;横刀跃马;内家;身怀绝技;弈棋;通才,阴冥诡士,0,0,,-99,0"
   splits:
   - split: 1
@@ -2500,16 +2449,11 @@
   - split: 15
     text: "黑白无常"
     translated: "Black and White Officials"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4}"
-  - split: 18
-    template: "{0}:33"
 - raw: "33,常.无白,女,阎罗殿,默认,长老,-1,轻佻,聪颖,28,无序/中立,拳掌,,九死离魂掌,气定神闲;戒备森严;拳不离手;内家;精耕细作,黑白无常,0,0,,-99,0"
   splits:
   - split: 1
@@ -2628,16 +2572,11 @@
     subIndex: 4
     text: "农家"
     translated: "Farmer's"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4}"
-  - split: 18
-    template: "{0}:35"
 - raw: "35,马.面,男,阎罗殿,默认,长老,-1,轻佻,平平,32,混乱/冷酷,刀法,,饮血魔刀,盛气凌人;快步流星;横刀跃马;轻功;采伐,,0,0,,-99,0"
   splits:
   - split: 1
@@ -2795,9 +2734,6 @@
   - split: 15
     text: "无双国士"
     translated: "Unmatched National Scholar"
-  - split: 18
-    text: "朋友"
-    translated: "Friend"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -2805,8 +2741,6 @@
     template: "{0};{1};{2};{3};{4}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
-  - split: 18
-    template: "{0}:37"
 - raw: "37,思.中澜,男,大隐阁,默认,副掌门,-1,灵活,究极,28,混乱/冷酷,剑法,口才,天来剑术;归墟秘典;画龙点睛,不幸;武学天才;雄才伟略;神机妙算;炉火纯青;飞檐走壁;身怀绝技;剑随意动,天剑客,0,0,,-99,1"
   splits:
   - split: 1
@@ -3326,9 +3260,6 @@
   - split: 15
     text: "无为真人"
     translated: "Immortal Wuwei"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -3338,8 +3269,6 @@
     template: "{0};{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
-  - split: 18
-    template: "{0}:43"
 - raw: "43,张.文馨,女,武当派,默认,副掌门,-1,潇洒,究极,21,混乱/中立,剑法/拳掌,炼药,道德真经;太极剑道,武学天才;美貌;道士;剑随意动;内力精纯;身怀绝技;万木争荣;炼药;经脉,文逸真人,0,0,,-99,1"
   splits:
   - split: 1
@@ -4352,16 +4281,11 @@
   - split: 15
     text: "天工巧匠"
     translated: "Master Craftsman"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
-  - split: 18
-    template: "{0}:55"
 - raw: "55,墨.从义,男,神机门,默认,副掌门,-1,灵活,聪颖,23,混乱/善良,射术,木植,武库战车;元戎弩箭,机关大师;机关铁甲;能工巧匠;足智多谋;多病;例无虚发;旁门左道;天资过人;巧捷万端;滞脉,病鲁班,0,0,,-99,0"
   splits:
   - split: 1
@@ -4531,9 +4455,6 @@
   - split: 15
     text: "掣地霹雳"
     translated: "Earth‑Shattering Thunderbolt"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -4541,8 +4462,6 @@
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7}"
-  - split: 18
-    template: "{0}:57/58/151"
 - raw: "57,雷.冠群,男,霹雳堂,默认,副掌门,-1,轻佻,聪颖,23,混乱/凶狠,长兵/射术,,火树银枪,锻造;学徒;放歌纵酒;云游;长兵;绝技;脉络阻塞;瘦骨嶙峋,烁金枪,0,0,亲属:58/151,-99,0"
   splits:
   - split: 1
@@ -4617,9 +4536,6 @@
   - split: 15
     text: "烁金枪"
     translated: "Blazing Spear"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -4627,8 +4543,6 @@
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7}"
-  - split: 18
-    template: "{0}:58/151"
 - raw: "58,雷.彤,女,霹雳堂,默认,副掌门,-1,灵活,平平,19,无序/中立,射术,,神火飞鸦,美貌;千锤百炼;工匠;射术;轻功;滞脉;多病;天资过人,燎原火凤,0,0,亲属:151,-99,0"
   splits:
   - split: 1
@@ -4699,16 +4613,11 @@
   - split: 15
     text: "燎原火凤"
     translated: "FlameSpread Phoenix"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6};{7}"
-  - split: 18
-    template: "{0}:151"
 - raw: "59,转轮.法王,男,金刚密宗,默认,掌门,-1,固执,聪颖,55,戒律/凶狠,奇门,,龙象护法功;观想日月轮,禅师;旁门左道;耍刀;炉火纯青;身怀绝技;力道;百病不侵;灵丹妙药,龙象护法,0,0,,-99,0"
   splits:
   - split: 1
@@ -5512,16 +5421,11 @@
   - split: 15
     text: "铁掌四杰"
     translated: "Four Palm Masters"
-  - split: 18
-    text: "朋友"
-    translated: "Friend"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1}"
-  - split: 18
-    template: "{0}:71"
 - raw: "71,狄.坤,男,铁掌帮,默认,正式弟子,-1,忠厚,平平,30,守序/冷酷,,,,阴险;不幸,铁掌四杰,0,0,,-99,0"
   splits:
   - split: 1
@@ -7009,20 +6913,11 @@
   - split: 15
     text: "黄河双煞"
     translated: "Yellow River Dual Fiends"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
-  - split: 18
-    subIndex: 1
-    text: "师傅"
-    translated: "Master"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2}"
-  - split: 18
-    template: "{0}:97;{1}:73"
 - raw: "97,马.悍,男,无,黄河帮,入门弟子,1,叛逆,愚钝,30,平常/冷酷,刀法,,,暴躁;忠诚;酒鬼,黄河双煞,0,0,师傅:73,-99,0"
   splits:
   - split: 1
@@ -7070,16 +6965,11 @@
   - split: 15
     text: "黄河双煞"
     translated: "Yellow River Dual Fiends"
-  - split: 18
-    text: "师傅"
-    translated: "Master"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2}"
-  - split: 18
-    template: "{0}:73"
 - raw: "98,凤.南飞,男,无,默认,长老,4,算计,超群,48,守序/冷酷,奇门,,,笑里藏刀;善贾;收藏;学识,乐善好施,0,0,,-3,0"
   splits:
   - split: 1
@@ -7460,16 +7350,11 @@
   - split: 15
     text: "西北四骏"
     translated: "Four Great Horses of the Northwest"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2}"
-  - split: 18
-    template: "{0}:105/106/107"
 - raw: "105,马.超群,男,无,默认,正式弟子,2,叛逆,超群,39,无序/凶狠,长兵,,,纵马驰骋;长兵;勤奋,西北四骏,0,0,亲属:106/107,-7,0"
   splits:
   - split: 1
@@ -7517,16 +7402,11 @@
   - split: 15
     text: "西北四骏"
     translated: "Four Great Horses of the Northwest"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2}"
-  - split: 18
-    template: "{0}:106/107"
 - raw: "106,马.丹心,女,无,默认,入门弟子,1,忠厚,聪颖,26,无序/仁慈,剑法,,,骑术;御剑;忠诚,西北四骏,0,0,亲属:107,-4,0"
   splits:
   - split: 1
@@ -7574,16 +7454,11 @@
   - split: 15
     text: "西北四骏"
     translated: "Four Great Horses of the Northwest"
-  - split: 18
-    text: "亲属"
-    translated: "Relatives"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2}"
-  - split: 18
-    template: "{0}:107"
 - raw: "107,马.宝郭,男,无,默认,外门弟子,0,简单,愚钝,46,混乱/中立,拳掌,,,骑术;笨拙;刚愎;吟诗,西北四骏,0,0,,-2,0"
   splits:
   - split: 1
@@ -7691,16 +7566,11 @@
   - split: 15
     text: "神拳无敌"
     translated: "Invincible Divine Fist"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3}"
-  - split: 18
-    template: "{0}:109/110"
 - raw: "109,汪.财,男,无,默认,外门弟子,0,纯粹,愚钝,23,混乱/善良,奇门,,,经商;瘦弱;精打细算;愚钝,富可敌国,0,0,结义:110,-3,0"
   splits:
   - split: 1
@@ -7752,16 +7622,11 @@
   - split: 15
     text: "富可敌国"
     translated: "Wealth rivaling that of a nation"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3}"
-  - split: 18
-    template: "{0}:110"
 - raw: "110,吴.谋,男,无,默认,外门弟子,0,算计,愚钝,22,无序/善良,射术,,,读书;多病;懦弱;傻头傻脑,智计无双,0,0,,-6,0"
   splits:
   - split: 1
@@ -8017,16 +7882,11 @@
   - split: 15
     text: "黑风四贼"
     translated: "Four Bandits of Black Wind"
-  - split: 18
-    text: "朋友"
-    translated: "Friend"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1}"
-  - split: 18
-    template: "{0}:115/116/117"
 - raw: "115,刘.豹,男,无,默认,入门弟子,1,潇洒,平平,36,平常/冷酷,拳掌,,,残忍;叛逆,黑风四贼,0,0,朋友:116/117,-9,0"
   splits:
   - split: 1
@@ -8070,16 +7930,11 @@
   - split: 15
     text: "黑风四贼"
     translated: "Four Bandits of Black Wind"
-  - split: 18
-    text: "朋友"
-    translated: "Friend"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1}"
-  - split: 18
-    template: "{0}:116/117"
 - raw: "116,黄.豺,男,无,默认,外门弟子,0,轻佻,愚钝,28,混乱/冷酷,射术,,,阴险;弱视,黑风四贼,0,0,朋友:117,-8,0"
   splits:
   - split: 1
@@ -8123,16 +7978,11 @@
   - split: 15
     text: "黑风四贼"
     translated: "Four Bandits of Black Wind"
-  - split: 18
-    text: "朋友"
-    translated: "Friend"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1}"
-  - split: 18
-    template: "{0}:117"
 - raw: "117,韩.狼,女,无,默认,外门弟子,0,灵活,平平,31,混乱/凶狠,奇门,,,懦弱;瘦骨嶙峋,黑风四贼,0,0,,-8,0"
   splits:
   - split: 1
@@ -8622,16 +8472,11 @@
   - split: 15
     text: "敕封御史之风"
     translated: "Imperial Censor of Breezy Wind"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5}"
-  - split: 18
-    template: "{0}:124/125/126"
 - raw: "124,林.弄影,女,无,峨眉派,长老,4,潇洒,聪颖,25,无序/仁慈,剑法,,,飞檐走壁;剑随意动;手疾眼快;桀骜不驯;懒惰;随机应变;游斗,敕封御史之林,0,1,结义:125/126,-99,0"
   splits:
   - split: 1
@@ -8695,16 +8540,11 @@
   - split: 15
     text: "敕封御史之林"
     translated: "Imperial Censor Lin"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5};{6}"
-  - split: 18
-    template: "{0}:125/126"
 - raw: "125,齐.焱,男,无,飞龙门,长老,4,叛逆,超群,28,戒律/中立,长兵,,,内力精纯;枪扫六合;强身健体;性烈如火;面目狰狞;先锋,敕封御史之火,0,1,结义:126,-99,0"
   splits:
   - split: 1
@@ -8764,16 +8604,11 @@
   - split: 15
     text: "敕封御史之火"
     translated: "Imperial Censor's Flame"
-  - split: 18
-    text: "结义"
-    translated: "Brotherhood by blood"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5}"
-  - split: 18
-    template: "{0}:126"
 - raw: "126,张.峻,男,无,少林寺,长老,4,稳重,平平,34,守序/仁慈,拳掌,,,绝艺超群;拳不离手;百折不挠;不骄不躁;冷静;守备,敕封御史之山,0,1,,-99,0"
   splits:
   - split: 1
@@ -9081,16 +8916,11 @@
   - split: 15
     text: "侠义七子"
     translated: "Seven Righteous Ones"
-  - split: 18
-    text: "朋友"
-    translated: "Friend"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5}"
-  - split: 18
-    template: "{0}:131"
 - raw: "131,清.风,女,无,武当派,亲传弟子,3,算计,超群,20,无序/善良,剑法,,,无所用心;美貌;修道;手疾眼快;卜算,侠义七子,0,1,,-99,0"
   splits:
   - split: 1
@@ -9210,16 +9040,11 @@
   - split: 15
     text: "侠义七子"
     translated: "Seven Righteous Ones"
-  - split: 18
-    text: "师傅"
-    translated: "Master"
   templates:
   - split: 10
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2};{3};{4};{5}"
-  - split: 18
-    template: "{0}:16"
 - raw: "133,吕.舞阳,男,无,蓬莱派,正式弟子,2,轻佻,聪颖,22,平常/冷酷,剑法,,,心狠手辣;练武;游手好闲;桀骜不驯,侠义七子,0,1,,-99,0"
   splits:
   - split: 1
@@ -9486,9 +9311,6 @@
   - split: 15
     text: "玉面判官"
     translated: "Face of Jade Official"
-  - split: 18
-    text: "师傅"
-    translated: "Master"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -9496,8 +9318,6 @@
     template: "{0}/{1}"
   - split: 14
     template: "{0};{1};{2}"
-  - split: 18
-    template: "{0}:124"
 - raw: "138,北冥.雪,女,无,默认,长老,4,潇洒,超群,28,混乱/凶狠,刀法/射术,,,倾国倾城;盛气凌人;嗜赌如命;相士,,0,0,,-9,1"
   splits:
   - split: 1

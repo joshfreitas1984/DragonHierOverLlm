@@ -536,6 +536,7 @@
 - raw: "♦弟子会根据方针设定的优先级自行安排行动。\\n♦优先级最高5，最低0。\\n♦按住左Shift可将优先级直接设置为5。\\n♦按住左Ctrl可将优先级直接设置为0。"
   splits:
   - text: "弟子会根据方针设定的优先级自行安排行动。"
+    translated: "Disciples will arrange their actions according to the prioritization set by the guidelines."
   - subIndex: 1
     text: "优先级最高5，最低0。"
     translated: "Priority highest 5, lowest 0"
@@ -946,6 +947,7 @@
     translated: "Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB."
   - subIndex: 4
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不以任何形式向未成年人提供网络游戏服务。"
+    translated: "This game is only available for minors to play for up to 1 hours of online gaming service from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times."
   - subIndex: 5
     text: "本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。"
     translated: "The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies."
@@ -2966,6 +2968,7 @@
 - raw: "引毒"
   splits:
   - text: "引毒"
+    translated: "Lure poison"
 - raw: "弟子上限+1"
   splits:
   - text: "弟子上限"

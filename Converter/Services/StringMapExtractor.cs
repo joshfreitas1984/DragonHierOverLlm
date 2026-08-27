@@ -7,9 +7,19 @@ namespace Il2CppExplorer.Services;
 ///
 /// In Unity IL2CPP builds, the native binary's .data section contains
 /// pre-initialised 8-byte slots. The lower 32 bits of each slot encode a
-/// metadata usage: bits[31..29] = usageType, bits[28..0] = sourceIndex.
-/// usageType 5 (kIl2CppMetadataUsageStringLiteral) means sourceIndex is
-/// an index into the global-metadata.dat stringLiterals table.
+/// metadata usage: bits[31..29] = usageType, bits[28..0] = an encoded index.
+/// usageType 5 (kIl2CppMetadataUsageStringLiteral) means the encoded index
+/// resolves to an index into the global-metadata.dat stringLiterals table.
+///
+/// IMPORTANT (metadata v27+, which removed the separate metadataUsagePairs
+/// indirection table): the raw 29-bit value is NOT the string-literal index
+/// directly - it must be right-shifted by 1 first (confirmed against
+/// LibCpp2IL's MetadataUsage.DecodeMetadataUsage: "if (metadataVersion >= 27)
+/// index >>= 1;"). Without this shift, srcIdx values come out roughly double
+/// their real value and get silently rejected by the strCount bounds check,
+/// even though the usageType matched correctly - this was a real bug found
+/// investigating CustomDifficultyData's untranslated slider labels (see
+/// converter.instructions.md).
 ///
 /// Ghidra shows these slots as DAT_181dXXXXXX globals. This extractor scans
 /// every 8-byte slot in .data, resolves the ones that are string literals,
@@ -97,7 +107,9 @@ public static class StringMapExtractor
         // ── 4. Scan .data section for string literal cache slots ──────────
         // Each slot is 8 bytes. The lower 32 bits encode:
         //   bits[31..29] = usageType (5 = StringLiteral)
-        //   bits[28..0]  = sourceIndex into stringLiterals[]
+        //   bits[28..0]  = encoded index; on metadata v27+ this must be >>1
+        //                  to get the real index into stringLiterals[]
+        //                  (see LibCpp2IL MetadataUsage.DecodeMetadataUsage)
         Console.Write("  [StringMap] Scanning .data for string literal slots...");
         var map = new Dictionary<string, string>();
         int fo = dataSection.FileOffset;
@@ -108,6 +120,7 @@ public static class StringMapExtractor
             uint val = BitConverter.ToUInt32(binary, fo + off);
             uint utype = val >> 29;
             uint srcIdx = val & 0x1FFFFFFFu;
+            if (version >= 27) srcIdx >>= 1;
             if (utype != StringLiteralUsageType || srcIdx >= (uint)strCount) continue;
 
             ulong slotVA = dataVA + (ulong)off;
@@ -211,7 +224,8 @@ public static class StringMapExtractor
     /// have. Placeholders (e.g. `#$PlayerName#`), punctuation (e.g. `，`), and all other
     /// surrounding text are preserved intact within a candidate. Excludes any candidate already
     /// present in <paramref name="excludeFile"/> (one raw fragment per line, in the same escaped
-    /// form - typically the pipeline's hand-curated dynamicStrings.txt input), and writes the
+    /// form - typically the pipeline's dynamicStrings.txt input, itself populated by reviewing and
+    /// merging entries from this same method's own output rather than hand-authored), and writes the
     /// remaining distinct candidates to <paramref name="outputPath"/>, one per line, sorted for
     /// reproducible diffs. Returns the number of candidates written.
     /// </summary>
