@@ -239,6 +239,20 @@ larger, otherwise data-driven runtime string.
   concatenated with).
 - `GameFileHandling.TextFilesToSplit` has a `dynamicStrings.txt` entry with `TextFileType =
   TextFileType.DynamicStringsIL2CPP`.
+- **Second source, config-driven (not manually curated):** `GameFileHandling.DynamicStringColumnSources`
+  declares `(CsvFileName, int[] Columns)` pairs for CSV columns known to hold whole-phrase display
+  strings some IL2CPP code path reads raw, bypassing the normal per-column CSV translation (e.g.
+  `ForceData.csv` column 1 = force/sect name, `SpeHeroData.csv` column 5 = rank/tier tag - see the
+  bare-fragment-corruption bug writeup in `dragonheirplugin.instructions.md`).
+  `GameFileHandling.ExtractDynamicStringCandidatesFromColumns` (run via `FileInputWorkflowTests`'s
+  `"1c-pre. ExtractDynamicStringCandidatesFromColumns"`, before `"1c."`) pulls distinct values from
+  those columns into a second dump file, `Files/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt`
+  (deduped against the master `dynamicStrings.txt` and idempotent across re-runs), registered as its
+  own `TextFileToSplit` entry with the same `TextFileType.DynamicStringsIL2CPP` - flows through the
+  same export/merge/package steps as the hand-curated file, just packaged separately as
+  `Files/Mod/dynamicStringsFromColumns.txt.yaml`. `DragonHeirPlugin/DynamicStringPatches.cs` loads
+  every `dynamicStrings*.txt.yaml` file it finds (not one fixed filename) and merges them into one
+  in-memory dictionary, so this needed no runtime-consumption changes beyond that glob.
 - `GameFileHandling.ExportDynamicStringTextAssetToCustomFormat` (run via
   `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"`, right after step 1b, before
   step 2's merge) calls `DynamicStringWorkflow.ExportDynamicStringsToCustomFormat`.

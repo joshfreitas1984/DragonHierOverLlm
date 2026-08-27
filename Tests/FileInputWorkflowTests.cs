@@ -34,6 +34,19 @@ public class FileInputWorkflowTests
         GameFileHandling.ExportDynamicStringTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
     }
 
+    // Repeatable, config-driven extraction of whole-phrase strings (force/sect names, hero rank
+    // tags, etc.) from specific CSV columns - see GameFileHandling.DynamicStringColumnSources'
+    // doc comment for why these need their own dictionary entries instead of relying on
+    // DynamicStringPatches' bare single-character fallback entries. Must run before "1c." (which
+    // exports whatever is in Raw/Dumped/DynamicStrings/*.txt, including the
+    // dynamicStringsFromColumns.txt this produces) - safe to re-run any time, already-extracted
+    // values are never duplicated.
+    [Fact(DisplayName = "1c-pre. ExtractDynamicStringCandidatesFromColumns")]
+    public void ExtractDynamicStringCandidatesFromColumns()
+    {
+        GameFileHandling.ExtractDynamicStringCandidatesFromColumns(GameFileHandling.WorkingDirectory);
+    }
+
     [Fact(DisplayName = "2. MergeFilesIntoTranslated")]
     public async Task MergeFilesIntoTranslated()
     {

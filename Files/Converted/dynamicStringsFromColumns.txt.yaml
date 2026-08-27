@@ -1,0 +1,700 @@
+- raw: "长乐帮"
+  splits:
+  - text: "长乐帮"
+    translated: "Changle Gang"
+- raw: "唐门"
+  splits:
+  - text: "唐门"
+    translated: "Tang Clan"
+- raw: "药王谷"
+  splits:
+  - text: "药王谷"
+    translated: "Medicine King Valley"
+- raw: "丐帮"
+  splits:
+  - text: "丐帮"
+    translated: "Beggar Sect"
+- raw: "飞龙门"
+  splits:
+  - text: "飞龙门"
+    translated: "Flying Dragon Gate"
+- raw: "茅山派"
+  splits:
+  - text: "茅山派"
+    translated: "Maoshan Sect"
+- raw: "铸剑山庄"
+  splits:
+  - text: "铸剑山庄"
+    translated: "Swordforging Manor"
+- raw: "五毒教"
+  splits:
+  - text: "五毒教"
+    translated: "Five Poisons Sect"
+- raw: "阎罗殿"
+  splits:
+  - text: "阎罗殿"
+    translated: "Yama Hall"
+- raw: "大隐阁"
+  splits:
+  - text: "大隐阁"
+    translated: "Great Hidden Pavilion"
+- raw: "少林寺"
+  splits:
+  - text: "少林寺"
+    translated: "Shaolin Temple"
+- raw: "武当派"
+  splits:
+  - text: "武当派"
+    translated: "Wudang Sect"
+- raw: "霸刀门"
+  splits:
+  - text: "霸刀门"
+    translated: "Tyrant Blade Sect"
+- raw: "蓬莱派"
+  splits:
+  - text: "蓬莱派"
+    translated: "Penglai Sect"
+- raw: "峨眉派"
+  splits:
+  - text: "峨眉派"
+    translated: "Emei Sect"
+- raw: "崆峒派"
+  splits:
+  - text: "崆峒派"
+    translated: "Kongtong Sect"
+- raw: "神机门"
+  splits:
+  - text: "神机门"
+    translated: "Divine Mechanism Sect"
+- raw: "霹雳堂"
+  splits:
+  - text: "霹雳堂"
+    translated: "Thunderclap Hall"
+- raw: "金刚密宗"
+  splits:
+  - text: "金刚密宗"
+    translated: "Vajrayana Sect"
+- raw: "天山派"
+  splits:
+  - text: "天山派"
+    translated: "Tianshan Sect"
+- raw: "聚义门"
+  splits:
+  - text: "聚义门"
+    translated: "Righteous Alliance Gate"
+- raw: "黄河帮"
+  splits:
+  - text: "黄河帮"
+    translated: "Yellow River Gang"
+- raw: "八卦门"
+  splits:
+  - text: "八卦门"
+    translated: "Bagua Sect"
+- raw: "海沙帮"
+  splits:
+  - text: "海沙帮"
+    translated: "Sea Sand Gang"
+- raw: "铁掌帮"
+  splits:
+  - text: "铁掌帮"
+    translated: "Iron Palm Gang"
+- raw: "仙霞派"
+  splits:
+  - text: "仙霞派"
+    translated: "Xianxia Sect"
+- raw: "巨鲸帮"
+  splits:
+  - text: "巨鲸帮"
+    translated: "Giant Whale Gang"
+- raw: "金龙帮"
+  splits:
+  - text: "金龙帮"
+    translated: "Golden Dragon Gang"
+- raw: "青城派"
+  splits:
+  - text: "青城派"
+    translated: "Qingcheng Sect"
+- raw: "伏牛派"
+  splits:
+  - text: "伏牛派"
+    translated: "Funiu Sect"
+- raw: "掌门"
+  splits:
+  - text: "掌门"
+    translated: "Sect Master"
+- raw: "正式弟子"
+  splits:
+  - text: "正式弟子"
+    translated: "Formal disciple"
+- raw: "入门弟子"
+  splits:
+  - text: "入门弟子"
+    translated: "Novice Disciple"
+- raw: "外门弟子"
+  splits:
+  - text: "外门弟子"
+    translated: "Outer Gate Disciple"
+- raw: "副掌门"
+  splits:
+  - text: "副掌门"
+    translated: "Vice Sect Leader"
+- raw: "经脉"
+  splits:
+  - text: "经脉"
+    translated: "Meridian"
+- raw: "生命上限"
+  splits:
+  - text: "生命上限"
+    translated: "Health points"
+- raw: "智力"
+  splits:
+  - text: "智力"
+    translated: "Intelligence"
+- raw: "力道"
+  splits:
+  - text: "力道"
+    translated: "Strength"
+- raw: "轻功"
+  splits:
+  - text: "轻功"
+    translated: "Qinggong"
+- raw: "绝技"
+  splits:
+  - text: "绝技"
+    translated: "Ultimate Technique"
+- raw: "减伤"
+  splits:
+  - text: "减伤"
+    translated: "Damage Reduction"
+- raw: "卸力"
+  splits:
+  - text: "卸力"
+    translated: "Force absorption"
+- raw: "拳掌"
+  splits:
+  - text: "拳掌"
+    translated: "Fists and palms"
+- raw: "恢复"
+  splits:
+  - text: "恢复"
+    translated: "Recovery"
+- raw: "命中"
+  splits:
+  - text: "命中"
+    translated: "Hit Rate"
+- raw: "通脉"
+  splits:
+  - text: "通脉"
+    translated: "Tonify Meridians"
+- raw: "刀法"
+  splits:
+  - text: "刀法"
+    translated: "Blade Art"
+- raw: "蓄力"
+  splits:
+  - text: "蓄力"
+    translated: "Build Up Energy"
+- raw: "连击"
+  splits:
+  - text: "连击"
+    translated: "Combo"
+- raw: "震脑"
+  splits:
+  - text: "震脑"
+    translated: "Brain shock"
+- raw: "采伐"
+  splits:
+  - text: "采伐"
+    translated: "Logging"
+- raw: "压制"
+  splits:
+  - text: "压制"
+    translated: "Suppress"
+- raw: "拉近"
+  splits:
+  - text: "拉近"
+    translated: "Zoom in"
+- raw: "射术"
+  splits:
+  - text: "射术"
+    translated: "Archery"
+- raw: "流血"
+  splits:
+  - text: "流血"
+    translated: "Bleeding"
+- raw: "目盲"
+  splits:
+  - text: "目盲"
+    translated: "Blind"
+- raw: "回内"
+  splits:
+  - text: "回内"
+    translated: "Inside"
+- raw: "回血"
+  splits:
+  - text: "回血"
+    translated: "Healing"
+- raw: "灼烧"
+  splits:
+  - text: "灼烧"
+    translated: "Scorching"
+- raw: "神行"
+  splits:
+  - text: "神行"
+    translated: "Swift Step"
+- raw: "轻灵"
+  splits:
+  - text: "轻灵"
+    translated: "Nimble"
+- raw: "飘逸"
+  splits:
+  - text: "飘逸"
+    translated: "Elegant"
+- raw: "回体"
+  splits:
+  - text: "回体"
+    translated: "Restore Health"
+- raw: "反击"
+  splits:
+  - text: "反击"
+    translated: "Counterattack"
+- raw: "断腕"
+  splits:
+  - text: "断腕"
+    translated: "Amputate"
+- raw: "虚弱"
+  splits:
+  - text: "虚弱"
+    translated: "Weak"
+- raw: "活血"
+  splits:
+  - text: "活血"
+    translated: "Promote blood circulation"
+- raw: "连绵"
+  splits:
+  - text: "连绵"
+    translated: "Continuous"
+- raw: "眩晕"
+  splits:
+  - text: "眩晕"
+    translated: "Dizziness"
+- raw: "雷电"
+  splits:
+  - text: "雷电"
+    translated: "Thunderbolt"
+- raw: "迟缓"
+  splits:
+  - text: "迟缓"
+    translated: "Lagging"
+- raw: "急速"
+  splits:
+  - text: "急速"
+    translated: "Rapidly"
+- raw: "破招"
+  splits:
+  - text: "破招"
+    translated: "Counterattack"
+- raw: "不屈"
+  splits:
+  - text: "不屈"
+    translated: "Indomitable"
+- raw: "霸体"
+  splits:
+  - text: "霸体"
+    translated: "Invincibility"
+- raw: "重碾"
+  splits:
+  - text: "重碾"
+    translated: "Repeatedly crushed"
+- raw: "破甲"
+  splits:
+  - text: "破甲"
+    translated: "Pierce armor"
+- raw: "横练"
+  splits:
+  - text: "横练"
+    translated: "Horizontal training"
+- raw: "弱点"
+  splits:
+  - text: "弱点"
+    translated: "Weakness"
+- raw: "断招"
+  splits:
+  - text: "断招"
+    translated: "Counterattack"
+- raw: "毒素"
+  splits:
+  - text: "毒素"
+    translated: "Poison"
+- raw: "头颈点穴"
+  splits:
+  - text: "头颈点穴"
+    translated: "Neck point pressing"
+- raw: "笨拙"
+  splits:
+  - text: "笨拙"
+    translated: "Clumsy"
+- raw: "手臂点穴"
+  splits:
+  - text: "手臂点穴"
+    translated: "Arm point pressing"
+- raw: "腿足点穴"
+  splits:
+  - text: "腿足点穴"
+    translated: "Leg and foot acupressure"
+- raw: "醒脑"
+  splits:
+  - text: "醒脑"
+    translated: "Refresh their minds"
+- raw: "定神"
+  splits:
+  - text: "定神"
+    translated: "Focus"
+- raw: "鹰眼"
+  splits:
+  - text: "鹰眼"
+    translated: "Eagle Eye"
+- raw: "击退"
+  splits:
+  - text: "击退"
+    translated: "Repel"
+- raw: "动摇"
+  splits:
+  - text: "动摇"
+    translated: "Shake"
+- raw: "阻滞"
+  splits:
+  - text: "阻滞"
+    translated: "Obstacle"
+- raw: "伤筋"
+  splits:
+  - text: "伤筋"
+    translated: "Sprain"
+- raw: "凝血"
+  splits:
+  - text: "凝血"
+    translated: "Blood clotting"
+- raw: "壮骨"
+  splits:
+  - text: "壮骨"
+    translated: "Strengthen bone"
+- raw: "断骨"
+  splits:
+  - text: "断骨"
+    translated: "Broken bone"
+- raw: "内劲"
+  splits:
+  - text: "内劲"
+    translated: "Internal strength"
+- raw: "冰寒"
+  splits:
+  - text: "冰寒"
+    translated: "Icicles"
+- raw: "杀机"
+  splits:
+  - text: "杀机"
+    translated: "Killer intent"
+- raw: "铜皮"
+  splits:
+  - text: "铜皮"
+    translated: "Brass skin"
+- raw: "心胸点穴"
+  splits:
+  - text: "心胸点穴"
+    translated: "Heart Point Acupressure"
+- raw: "腰腹点穴"
+  splits:
+  - text: "腰腹点穴"
+    translated: "Stomach and waist acupressure points"
+- raw: "乱神"
+  splits:
+  - text: "乱神"
+    translated: "Mad God"
+- raw: "疯魔"
+  splits:
+  - text: "疯魔"
+    translated: "Mad Despair"
+- raw: "脆弱"
+  splits:
+  - text: "脆弱"
+    translated: "Fragile"
+- raw: "混乱"
+  splits:
+  - text: "混乱"
+    translated: "Chaos"
+- raw: "裂膝"
+  splits:
+  - text: "裂膝"
+    translated: "Split‑knee"
+- raw: "截脉"
+  splits:
+  - text: "截脉"
+    translated: "Cut pulse"
+- raw: "经脉潜力"
+  splits:
+  - text: "经脉潜力"
+    translated: "Vital Meridian Potential"
+- raw: "调息"
+  splits:
+  - text: "调息"
+    translated: "Breathwork"
+- raw: "内功潜力"
+  splits:
+  - text: "内功潜力"
+    translated: "Neigong Potential"
+- raw: "智力潜力"
+  splits:
+  - text: "智力潜力"
+    translated: "Intellectual potential"
+- raw: "吸内"
+  splits:
+  - text: "吸内"
+    translated: "Inhale"
+- raw: "轻功潜力"
+  splits:
+  - text: "轻功潜力"
+    translated: "Qinggong Potential"
+- raw: "意志潜力"
+  splits:
+  - text: "意志潜力"
+    translated: "Willpower potential"
+- raw: "灵巧潜力"
+  splits:
+  - text: "灵巧潜力"
+    translated: "Agile Potential"
+- raw: "绝技潜力"
+  splits:
+  - text: "绝技潜力"
+    translated: "Potential for ultimate technique"
+- raw: "体质潜力"
+  splits:
+  - text: "体质潜力"
+    translated: "Physical potential"
+- raw: "护体真气"
+  splits:
+  - text: "护体真气"
+    translated: "Bodyguard True Qi"
+- raw: "慧眼"
+  splits:
+  - text: "慧眼"
+    translated: "Sharp‑eyed"
+- raw: "力道潜力"
+  splits:
+  - text: "力道潜力"
+    translated: "Strength Potential"
+- raw: "拳掌潜力"
+  splits:
+  - text: "拳掌潜力"
+    translated: "Punch Palm Potential"
+- raw: "昏沉"
+  splits:
+  - text: "昏沉"
+    translated: "Drowsiness"
+- raw: "剑法潜力"
+  splits:
+  - text: "剑法潜力"
+    translated: "Potential in Sword Technique"
+- raw: "刀法潜力"
+  splits:
+  - text: "刀法潜力"
+    translated: "Blade Technique Potential"
+- raw: "穿甲"
+  splits:
+  - text: "穿甲"
+    translated: "Penetration"
+- raw: "死战"
+  splits:
+  - text: "死战"
+    translated: "All‑Out Battle"
+- raw: "失衡"
+  splits:
+  - text: "失衡"
+    translated: "Imbalance"
+- raw: "长兵潜力"
+  splits:
+  - text: "长兵潜力"
+    translated: "Potential of Long Soldiers"
+- raw: "奇门潜力"
+  splits:
+  - text: "奇门潜力"
+    translated: "Mystery Potential"
+- raw: "射术潜力"
+  splits:
+  - text: "射术潜力"
+    translated: "Archery potential"
+- raw: "无敌"
+  splits:
+  - text: "无敌"
+    translated: "Unbeatable"
+- raw: "移距"
+  splits:
+  - text: "移距"
+    translated: "Move distance"
+- raw: "负面抗性"
+  splits:
+  - text: "负面抗性"
+    translated: "Negative resistance"
+- raw: "射术威力"
+  splits:
+  - text: "射术威力"
+    translated: "Archery power"
+- raw: "不愈"
+  splits:
+  - text: "不愈"
+    translated: "Unhealed"
+- raw: "毒术潜力"
+  splits:
+  - text: "毒术潜力"
+    translated: "Poison Technique Potential"
+- raw: "疗伤"
+  splits:
+  - text: "疗伤"
+    translated: "Healing"
+- raw: "药性"
+  splits:
+  - text: "药性"
+    translated: "Drug properties"
+- raw: "康复"
+  splits:
+  - text: "康复"
+    translated: "Recovery"
+- raw: "医术潜力"
+  splits:
+  - text: "医术潜力"
+    translated: "Potential in medicine"
+- raw: "削内"
+  splits:
+  - text: "削内"
+    translated: "Eliminate internal enemies"
+- raw: "拳掌威力"
+  splits:
+  - text: "拳掌威力"
+    translated: "Fist and palm attacks are powerful"
+- raw: "长兵威力"
+  splits:
+  - text: "长兵威力"
+    translated: "Long‑range weapon power"
+- raw: "坐骑加成"
+  splits:
+  - text: "坐骑加成"
+    translated: "Mount bonus"
+- raw: "装备负重"
+  splits:
+  - text: "装备负重"
+    translated: "Equipment load limit"
+- raw: "真伤"
+  splits:
+  - text: "真伤"
+    translated: "True damage"
+- raw: "定身"
+  splits:
+  - text: "定身"
+    translated: "Stun"
+- raw: "装备强化"
+  splits:
+  - text: "装备强化"
+    translated: "Equipment Strengthening"
+- raw: "坚毅"
+  splits:
+  - text: "坚毅"
+    translated: "Resilience"
+- raw: "刀法威力"
+  splits:
+  - text: "刀法威力"
+    translated: "Blade Technique Power"
+- raw: "反伤削内"
+  splits:
+  - text: "反伤削内"
+    translated: "Penetration Reduction"
+- raw: "舒筋"
+  splits:
+  - text: "舒筋"
+    translated: "Stretch tendons"
+- raw: "反伤吸内"
+  splits:
+  - text: "反伤吸内"
+    translated: "Penetration Absorbs Damage"
+- raw: "复生"
+  splits:
+  - text: "复生"
+    translated: "Resurrection"
+- raw: "反弹"
+  splits:
+  - text: "反弹"
+    translated: "Bounce"
+- raw: "剑法威力"
+  splits:
+  - text: "剑法威力"
+    translated: "Sword Technique Power"
+- raw: "自愈"
+  splits:
+  - text: "自愈"
+    translated: "Self‑healing"
+- raw: "奇门威力"
+  splits:
+  - text: "奇门威力"
+    translated: "Power of the I Ching"
+- raw: "机关耐久"
+  splits:
+  - text: "机关耐久"
+    translated: "Mechanism Durability"
+- raw: "机关伤害"
+  splits:
+  - text: "机关伤害"
+    translated: "Mechanical damage"
+- raw: "锻造"
+  splits:
+  - text: "锻造"
+    translated: "Forging"
+- raw: "锻造潜力"
+  splits:
+  - text: "锻造潜力"
+    translated: "Forge Potential"
+- raw: "技艺经验"
+  splits:
+  - text: "技艺经验"
+    translated: "Skill and experience"
+- raw: "矿石"
+  splits:
+  - text: "矿石"
+    translated: "Mineral"
+- raw: "弟子功绩"
+  splits:
+  - text: "弟子功绩"
+    translated: "Disciple's Achievements"
+- raw: "恢复效率"
+  splits:
+  - text: "恢复效率"
+    translated: "Recovery efficiency"
+- raw: "木料"
+  splits:
+  - text: "木料"
+    translated: "Wood"
+- raw: "建造速度"
+  splits:
+  - text: "建造速度"
+    translated: "Construction speed"
+- raw: "城防耐久"
+  splits:
+  - text: "城防耐久"
+    translated: "City defense durability"
+- raw: "科研效率"
+  splits:
+  - text: "科研效率"
+    translated: "Research efficiency"
+- raw: "疗伤效率"
+  splits:
+  - text: "疗伤效率"
+    translated: "Healing efficiency"
+- raw: "口才"
+  splits:
+  - text: "口才"
+    translated: "Eloquence"
+- raw: "木植"
+  splits:
+  - text: "木植"
+    translated: "Forest Plant"
+- raw: "经验获取"
+  splits:
+  - text: "经验获取"
+    translated: "Experience gained"

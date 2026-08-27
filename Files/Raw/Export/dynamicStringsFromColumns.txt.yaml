@@ -1,0 +1,525 @@
+- raw: "长乐帮"
+  splits:
+  - text: "长乐帮"
+- raw: "唐门"
+  splits:
+  - text: "唐门"
+- raw: "药王谷"
+  splits:
+  - text: "药王谷"
+- raw: "丐帮"
+  splits:
+  - text: "丐帮"
+- raw: "飞龙门"
+  splits:
+  - text: "飞龙门"
+- raw: "茅山派"
+  splits:
+  - text: "茅山派"
+- raw: "铸剑山庄"
+  splits:
+  - text: "铸剑山庄"
+- raw: "五毒教"
+  splits:
+  - text: "五毒教"
+- raw: "阎罗殿"
+  splits:
+  - text: "阎罗殿"
+- raw: "大隐阁"
+  splits:
+  - text: "大隐阁"
+- raw: "少林寺"
+  splits:
+  - text: "少林寺"
+- raw: "武当派"
+  splits:
+  - text: "武当派"
+- raw: "霸刀门"
+  splits:
+  - text: "霸刀门"
+- raw: "蓬莱派"
+  splits:
+  - text: "蓬莱派"
+- raw: "峨眉派"
+  splits:
+  - text: "峨眉派"
+- raw: "崆峒派"
+  splits:
+  - text: "崆峒派"
+- raw: "神机门"
+  splits:
+  - text: "神机门"
+- raw: "霹雳堂"
+  splits:
+  - text: "霹雳堂"
+- raw: "金刚密宗"
+  splits:
+  - text: "金刚密宗"
+- raw: "天山派"
+  splits:
+  - text: "天山派"
+- raw: "聚义门"
+  splits:
+  - text: "聚义门"
+- raw: "黄河帮"
+  splits:
+  - text: "黄河帮"
+- raw: "八卦门"
+  splits:
+  - text: "八卦门"
+- raw: "海沙帮"
+  splits:
+  - text: "海沙帮"
+- raw: "铁掌帮"
+  splits:
+  - text: "铁掌帮"
+- raw: "仙霞派"
+  splits:
+  - text: "仙霞派"
+- raw: "巨鲸帮"
+  splits:
+  - text: "巨鲸帮"
+- raw: "金龙帮"
+  splits:
+  - text: "金龙帮"
+- raw: "青城派"
+  splits:
+  - text: "青城派"
+- raw: "伏牛派"
+  splits:
+  - text: "伏牛派"
+- raw: "掌门"
+  splits:
+  - text: "掌门"
+- raw: "正式弟子"
+  splits:
+  - text: "正式弟子"
+- raw: "入门弟子"
+  splits:
+  - text: "入门弟子"
+- raw: "外门弟子"
+  splits:
+  - text: "外门弟子"
+- raw: "副掌门"
+  splits:
+  - text: "副掌门"
+- raw: "经脉"
+  splits:
+  - text: "经脉"
+- raw: "生命上限"
+  splits:
+  - text: "生命上限"
+- raw: "智力"
+  splits:
+  - text: "智力"
+- raw: "力道"
+  splits:
+  - text: "力道"
+- raw: "轻功"
+  splits:
+  - text: "轻功"
+- raw: "绝技"
+  splits:
+  - text: "绝技"
+- raw: "减伤"
+  splits:
+  - text: "减伤"
+- raw: "卸力"
+  splits:
+  - text: "卸力"
+- raw: "拳掌"
+  splits:
+  - text: "拳掌"
+- raw: "恢复"
+  splits:
+  - text: "恢复"
+- raw: "命中"
+  splits:
+  - text: "命中"
+- raw: "通脉"
+  splits:
+  - text: "通脉"
+- raw: "刀法"
+  splits:
+  - text: "刀法"
+- raw: "蓄力"
+  splits:
+  - text: "蓄力"
+- raw: "连击"
+  splits:
+  - text: "连击"
+- raw: "震脑"
+  splits:
+  - text: "震脑"
+- raw: "采伐"
+  splits:
+  - text: "采伐"
+- raw: "压制"
+  splits:
+  - text: "压制"
+- raw: "拉近"
+  splits:
+  - text: "拉近"
+- raw: "射术"
+  splits:
+  - text: "射术"
+- raw: "流血"
+  splits:
+  - text: "流血"
+- raw: "目盲"
+  splits:
+  - text: "目盲"
+- raw: "回内"
+  splits:
+  - text: "回内"
+- raw: "回血"
+  splits:
+  - text: "回血"
+- raw: "灼烧"
+  splits:
+  - text: "灼烧"
+- raw: "神行"
+  splits:
+  - text: "神行"
+- raw: "轻灵"
+  splits:
+  - text: "轻灵"
+- raw: "飘逸"
+  splits:
+  - text: "飘逸"
+- raw: "回体"
+  splits:
+  - text: "回体"
+- raw: "反击"
+  splits:
+  - text: "反击"
+- raw: "断腕"
+  splits:
+  - text: "断腕"
+- raw: "虚弱"
+  splits:
+  - text: "虚弱"
+- raw: "活血"
+  splits:
+  - text: "活血"
+- raw: "连绵"
+  splits:
+  - text: "连绵"
+- raw: "眩晕"
+  splits:
+  - text: "眩晕"
+- raw: "雷电"
+  splits:
+  - text: "雷电"
+- raw: "迟缓"
+  splits:
+  - text: "迟缓"
+- raw: "急速"
+  splits:
+  - text: "急速"
+- raw: "破招"
+  splits:
+  - text: "破招"
+- raw: "不屈"
+  splits:
+  - text: "不屈"
+- raw: "霸体"
+  splits:
+  - text: "霸体"
+- raw: "重碾"
+  splits:
+  - text: "重碾"
+- raw: "破甲"
+  splits:
+  - text: "破甲"
+- raw: "横练"
+  splits:
+  - text: "横练"
+- raw: "弱点"
+  splits:
+  - text: "弱点"
+- raw: "断招"
+  splits:
+  - text: "断招"
+- raw: "毒素"
+  splits:
+  - text: "毒素"
+- raw: "头颈点穴"
+  splits:
+  - text: "头颈点穴"
+- raw: "笨拙"
+  splits:
+  - text: "笨拙"
+- raw: "手臂点穴"
+  splits:
+  - text: "手臂点穴"
+- raw: "腿足点穴"
+  splits:
+  - text: "腿足点穴"
+- raw: "醒脑"
+  splits:
+  - text: "醒脑"
+- raw: "定神"
+  splits:
+  - text: "定神"
+- raw: "鹰眼"
+  splits:
+  - text: "鹰眼"
+- raw: "击退"
+  splits:
+  - text: "击退"
+- raw: "动摇"
+  splits:
+  - text: "动摇"
+- raw: "阻滞"
+  splits:
+  - text: "阻滞"
+- raw: "伤筋"
+  splits:
+  - text: "伤筋"
+- raw: "凝血"
+  splits:
+  - text: "凝血"
+- raw: "壮骨"
+  splits:
+  - text: "壮骨"
+- raw: "断骨"
+  splits:
+  - text: "断骨"
+- raw: "内劲"
+  splits:
+  - text: "内劲"
+- raw: "冰寒"
+  splits:
+  - text: "冰寒"
+- raw: "杀机"
+  splits:
+  - text: "杀机"
+- raw: "铜皮"
+  splits:
+  - text: "铜皮"
+- raw: "心胸点穴"
+  splits:
+  - text: "心胸点穴"
+- raw: "腰腹点穴"
+  splits:
+  - text: "腰腹点穴"
+- raw: "乱神"
+  splits:
+  - text: "乱神"
+- raw: "疯魔"
+  splits:
+  - text: "疯魔"
+- raw: "脆弱"
+  splits:
+  - text: "脆弱"
+- raw: "混乱"
+  splits:
+  - text: "混乱"
+- raw: "裂膝"
+  splits:
+  - text: "裂膝"
+- raw: "截脉"
+  splits:
+  - text: "截脉"
+- raw: "经脉潜力"
+  splits:
+  - text: "经脉潜力"
+- raw: "调息"
+  splits:
+  - text: "调息"
+- raw: "内功潜力"
+  splits:
+  - text: "内功潜力"
+- raw: "智力潜力"
+  splits:
+  - text: "智力潜力"
+- raw: "吸内"
+  splits:
+  - text: "吸内"
+- raw: "轻功潜力"
+  splits:
+  - text: "轻功潜力"
+- raw: "意志潜力"
+  splits:
+  - text: "意志潜力"
+- raw: "灵巧潜力"
+  splits:
+  - text: "灵巧潜力"
+- raw: "绝技潜力"
+  splits:
+  - text: "绝技潜力"
+- raw: "体质潜力"
+  splits:
+  - text: "体质潜力"
+- raw: "护体真气"
+  splits:
+  - text: "护体真气"
+- raw: "慧眼"
+  splits:
+  - text: "慧眼"
+- raw: "力道潜力"
+  splits:
+  - text: "力道潜力"
+- raw: "拳掌潜力"
+  splits:
+  - text: "拳掌潜力"
+- raw: "昏沉"
+  splits:
+  - text: "昏沉"
+- raw: "剑法潜力"
+  splits:
+  - text: "剑法潜力"
+- raw: "刀法潜力"
+  splits:
+  - text: "刀法潜力"
+- raw: "穿甲"
+  splits:
+  - text: "穿甲"
+- raw: "死战"
+  splits:
+  - text: "死战"
+- raw: "失衡"
+  splits:
+  - text: "失衡"
+- raw: "长兵潜力"
+  splits:
+  - text: "长兵潜力"
+- raw: "奇门潜力"
+  splits:
+  - text: "奇门潜力"
+- raw: "射术潜力"
+  splits:
+  - text: "射术潜力"
+- raw: "无敌"
+  splits:
+  - text: "无敌"
+- raw: "移距"
+  splits:
+  - text: "移距"
+- raw: "负面抗性"
+  splits:
+  - text: "负面抗性"
+- raw: "射术威力"
+  splits:
+  - text: "射术威力"
+- raw: "不愈"
+  splits:
+  - text: "不愈"
+- raw: "毒术潜力"
+  splits:
+  - text: "毒术潜力"
+- raw: "疗伤"
+  splits:
+  - text: "疗伤"
+- raw: "药性"
+  splits:
+  - text: "药性"
+- raw: "康复"
+  splits:
+  - text: "康复"
+- raw: "医术潜力"
+  splits:
+  - text: "医术潜力"
+- raw: "削内"
+  splits:
+  - text: "削内"
+- raw: "拳掌威力"
+  splits:
+  - text: "拳掌威力"
+- raw: "长兵威力"
+  splits:
+  - text: "长兵威力"
+- raw: "坐骑加成"
+  splits:
+  - text: "坐骑加成"
+- raw: "装备负重"
+  splits:
+  - text: "装备负重"
+- raw: "真伤"
+  splits:
+  - text: "真伤"
+- raw: "定身"
+  splits:
+  - text: "定身"
+- raw: "装备强化"
+  splits:
+  - text: "装备强化"
+- raw: "坚毅"
+  splits:
+  - text: "坚毅"
+- raw: "刀法威力"
+  splits:
+  - text: "刀法威力"
+- raw: "反伤削内"
+  splits:
+  - text: "反伤削内"
+- raw: "舒筋"
+  splits:
+  - text: "舒筋"
+- raw: "反伤吸内"
+  splits:
+  - text: "反伤吸内"
+- raw: "复生"
+  splits:
+  - text: "复生"
+- raw: "反弹"
+  splits:
+  - text: "反弹"
+- raw: "剑法威力"
+  splits:
+  - text: "剑法威力"
+- raw: "自愈"
+  splits:
+  - text: "自愈"
+- raw: "奇门威力"
+  splits:
+  - text: "奇门威力"
+- raw: "机关耐久"
+  splits:
+  - text: "机关耐久"
+- raw: "机关伤害"
+  splits:
+  - text: "机关伤害"
+- raw: "锻造"
+  splits:
+  - text: "锻造"
+- raw: "锻造潜力"
+  splits:
+  - text: "锻造潜力"
+- raw: "技艺经验"
+  splits:
+  - text: "技艺经验"
+- raw: "矿石"
+  splits:
+  - text: "矿石"
+- raw: "弟子功绩"
+  splits:
+  - text: "弟子功绩"
+- raw: "恢复效率"
+  splits:
+  - text: "恢复效率"
+- raw: "木料"
+  splits:
+  - text: "木料"
+- raw: "建造速度"
+  splits:
+  - text: "建造速度"
+- raw: "城防耐久"
+  splits:
+  - text: "城防耐久"
+- raw: "科研效率"
+  splits:
+  - text: "科研效率"
+- raw: "疗伤效率"
+  splits:
+  - text: "疗伤效率"
+- raw: "口才"
+  splits:
+  - text: "口才"
+- raw: "木植"
+  splits:
+  - text: "木植"
+- raw: "经验获取"
+  splits:
+  - text: "经验获取"

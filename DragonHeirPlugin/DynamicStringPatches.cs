@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using HarmonyLib;
 using TMPro;
 using UnityEngine.UI;
@@ -75,17 +76,149 @@ internal static class DynamicStringPatches
 {
     private static readonly string PluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".";
     private static readonly string ResourcesDir = Path.Combine(PluginDir, "resources");
-    private const string DictionaryFileName = "dynamicStrings.txt.yaml";
+    // Glob rather than a single exact filename: DynamicStringWorkflow-packaged dictionary files
+    // all share the "...txt.yaml" shape (raw/result/isTemplate flat list) regardless of which
+    // TextFileToSplit produced them, e.g. "dynamicStrings.txt.yaml" (hand-curated literal
+    // fragments) and "dynamicStringsFromColumns.txt.yaml" (auto-extracted CSV column values -
+    // see Tests/GameFileHandling.cs's DynamicStringColumnSources/ExtractDynamicStringCandidatesFromColumns).
+    // Every matching file is loaded and merged into the same in-memory dictionary (see
+    // LoadDictionary) so adding a new source file never requires a plugin-side path change.
+    private const string DictionaryFilePattern = "dynamicStrings*.txt.yaml";
 
     private static List<DictionaryEntry> _dictionary = new();
 
+    // Entries flagged isTemplate: true in the packaged YAML (FanslationStudio.LlmKit's
+    // DynamicStringResult.IsTemplate - set at packaging time, not re-derived here) contain a
+    // literal String.Format placeholder in Raw (e.g. "{0}年{1}月{2}日"). Two independent
+    // consumers apply these, at two different points:
+    //  1. FormatPrefix (literal match) - translates the *template argument itself* before an
+    //     actual `System.String.Format` call runs, while it still contains literal
+    //     "{0}"/"{1}"/"{2}".
+    //  2. _compiledTemplates (structural/regex match, see below) - for cases where the raw
+    //     template's placeholders were substituted by something OTHER than a patchable
+    //     `System.String.Format` call (confirmed case: `GameDataController.GetSaveInfo`'s
+    //     SaveTime field is built via a plain parameterless `DateTime.ToString()`, which bakes
+    //     zh-CN's own culture-specific "年"/"月"/"日" date separators directly via .NET's
+    //     internal date-formatting machinery - never touching any String.Format/Concat overload
+    //     this plugin can patch). By the time such a string reaches a Concat postfix or a
+    //     TMP_Text/UI.Text .text setter, the literal "{0}"/"{1}"/"{2}" text is long gone (already
+    //     substituted with real data, e.g. "1年2月5日"), so a literal substring match against
+    //     Raw can never fire here - only a regex built from the template's shape can recognize
+    //     and reconstruct it.
+    private static List<DictionaryEntry> _templateDictionary = new();
+
+    // Compiled once per loaded _templateDictionary entry - see CompiledTemplate for what each
+    // field means. Applied by ApplyTemplates against Concat/Format results and sink-level
+    // component text, in addition to (not instead of) FormatPrefix's literal pre-substitution
+    // match, since either mechanism alone misses cases the other catches.
+    private static List<CompiledTemplate> _compiledTemplates = new();
+
+    // A literal "{n}" placeholder token, e.g. "{0}", "{12}".
+    private static readonly Regex PlaceholderRegex = new(@"\{(\d+)\}", RegexOptions.Compiled);
+
+    // A single dictionary template entry, precompiled into a structural matcher: Pattern captures
+    // each "{n}" placeholder as a named group ("p0", "p1", ...) around the template's literal
+    // (translated) separator text, so it matches the template's *shape* regardless of how the
+    // placeholders were actually substituted (String.Format, String.Concat, or - the confirmed
+    // motivating case - .NET's own internal DateTime.ToString() culture formatting). Literal
+    // Chinese segments in Raw are cheap-pre-filtered via LiteralSegments (plain Contains checks)
+    // before running the full regex, since running ~400 template regexes against every
+    // Concat/Format result and every UI text assignment in a running Unity game would otherwise be
+    // wasteful.
+    private sealed class CompiledTemplate
+    {
+        public Regex Pattern;
+        public string ReplacementPattern;
+        public List<string> LiteralSegments;
+    }
+
+    // Builds a CompiledTemplate from a raw/result pair, e.g. raw "{0}年{1}月{2}日", result
+    // "{0}Year{1}Month{2}Day" -> Pattern matches "(?<p0>.+?)年(?<p1>.+?)月(?<p2>.+?)日" anywhere
+    // in a larger string (not anchored - the composite date is typically embedded inside a bigger
+    // block of concatenated text), and ReplacementPattern is "${p0}Year${p1}Month${p2}Day" - a
+    // .NET regex replacement string referencing the same named groups, so translated literal text
+    // from Result surrounds the untouched (non-translatable, e.g. numeric) captured fragments.
+    //
+    // CONFIRMED BUG (2026-08-27, found via the SafeDebugLog trace below): the previous
+    // implementation built the pattern by running `Regex.Escape(entry.Raw)` first and then trying
+    // to find/replace the now-escaped "{n}" placeholder tokens back into capture groups. This is
+    // broken because .NET's `Regex.Escape` only escapes the OPENING brace ("{" -> "\{") and
+    // deliberately leaves the closing "}" alone (confirmed empirically: `Regex.Escape("{0}")` ==
+    // "\{0}", not "\{0\}"). The old code's placeholder-finder regex `\\\{(\d+)\\\}` required a
+    // backslash before the closing brace too, so it never matched anything - every compiled
+    // template's Pattern silently degraded into a literal match for the RAW placeholder text
+    // itself (e.g. requiring the literal substring "{0}年{1}月{2}日" to still be present,
+    // post-substitution), which can never happen once real data has replaced the placeholders. As
+    // a result `ApplyTemplates` has never matched a single template since it was introduced -
+    // confirmed by reproducing the exact old logic in isolation (IsMatch always false) and by the
+    // live SafeDebugLog trace showing the compiled template never converting the "{2}日" -> "Day"
+    // tail of the save-slot date. The fresh fix below builds the pattern by walking Raw directly
+    // (splitting on placeholder tokens found via PlaceholderRegex and Regex.Escape-ing only the
+    // literal text segments between them), so it never depends on being able to find escaped
+    // brace tokens after the fact.
+    private static CompiledTemplate BuildCompiledTemplate(DictionaryEntry entry)
+    {
+        var raw = entry.Raw ?? string.Empty;
+        var patternBuilder = new System.Text.StringBuilder();
+        var literalSegments = new List<string>();
+        var lastIndex = 0;
+
+        foreach (Match placeholder in PlaceholderRegex.Matches(raw))
+        {
+            var literal = raw.Substring(lastIndex, placeholder.Index - lastIndex);
+            if (literal.Length > 0)
+            {
+                patternBuilder.Append(Regex.Escape(literal));
+                literalSegments.Add(literal);
+            }
+            patternBuilder.Append($"(?<p{placeholder.Groups[1].Value}>.+?)");
+            lastIndex = placeholder.Index + placeholder.Length;
+        }
+
+        var trailingLiteral = raw.Substring(lastIndex);
+        if (trailingLiteral.Length > 0)
+        {
+            patternBuilder.Append(Regex.Escape(trailingLiteral));
+            literalSegments.Add(trailingLiteral);
+        }
+
+        var replacementPattern = PlaceholderRegex.Replace(entry.Result ?? string.Empty, m => $"${{p{m.Groups[1].Value}}}");
+
+        return new CompiledTemplate
+        {
+            Pattern = new Regex(patternBuilder.ToString(), RegexOptions.Compiled),
+            ReplacementPattern = replacementPattern,
+            LiteralSegments = literalSegments,
+        };
+    }
+
     [ThreadStatic]
     private static bool _inTextSetterPostfix;
+
+    // Guards GenericPostfix/FormatPrefix (the String.Concat/Format patches) against re-entrancy.
+    // Confirmed necessary the hard way: MainPlugin.Logger.LogInfo/LogError (BepInEx's
+    // DiskLogListener.LogEvent) internally calls System.String.Format itself to build the log
+    // line - which is one of the very methods this class patches - so logging anything from
+    // inside GenericPostfix/FormatPrefix (including from a catch block's error log) re-enters the
+    // same patch and recurses infinitely (observed as a StackOverflow via nested
+    // "DynamicClass.DMD<System.String::Format> -> DiskLogListener.LogEvent -> ... ->
+    // GenericPostfix -> DynamicClass.DMD<System.String::Format> -> ..." frames). Set true before
+    // running the patch body (including before any logging in its catch block) and checked at
+    // entry so a re-entrant call is always a cheap, immediate no-op instead of running the
+    // dictionary/template scan and logging again.
+    [ThreadStatic]
+    private static bool _inFormatConcatPatch;
 
     public sealed class DictionaryEntry
     {
         public string Raw { get; set; }
         public string Result { get; set; }
+
+        // Deserialized from the packaged YAML's "isTemplate" key (see FanslationStudio.LlmKit's
+        // DynamicStringResult.IsTemplate) - the pipeline computes this once at packaging time so
+        // the plugin never has to re-derive "does Raw look like a String.Format template" from
+        // the raw text itself at runtime.
+        public bool IsTemplate { get; set; }
     }
 
     /// <summary>Loads dynamicStrings.txt.yaml (if present) and patches every public static
@@ -97,11 +230,26 @@ internal static class DynamicStringPatches
     {
         try
         {
-            _dictionary = LoadDictionary();
-            MainPlugin.Logger.LogInfo($"[DynamicStringPatches] Loaded {_dictionary.Count} translated fragment(s) from '{DictionaryFileName}'.");
+            var loaded = LoadDictionary();
+            _templateDictionary = loaded.Where(e => e.IsTemplate).ToList();
+            _dictionary = loaded.Where(e => !e.IsTemplate).ToList();
+            _compiledTemplates = _templateDictionary
+                .Select(entry =>
+                {
+                    try { return BuildCompiledTemplate(entry); }
+                    catch (Exception ex)
+                    {
+                        MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to compile template '{entry.Raw}': {ex}");
+                        return null;
+                    }
+                })
+                .Where(t => t != null)
+                .ToList();
+            MainPlugin.Logger.LogInfo($"[DynamicStringPatches] Loaded {_dictionary.Count} translated fragment(s) and {_templateDictionary.Count} template(s) ({_compiledTemplates.Count} compiled) from '{DictionaryFilePattern}'.");
 
             var harmony = new Harmony("EnglishPatch.DynamicStringPatches");
             var postfix = new HarmonyMethod(typeof(DynamicStringPatches), nameof(GenericPostfix));
+            var formatPrefix = new HarmonyMethod(typeof(DynamicStringPatches), nameof(FormatPrefix));
 
             var targets = typeof(string)
                 .GetMethods(BindingFlags.Public | BindingFlags.Static)
@@ -110,12 +258,21 @@ internal static class DynamicStringPatches
                     && !m.IsGenericMethod);
 
             var patched = 0;
+            var formatPatched = 0;
             foreach (var method in targets)
             {
                 try
                 {
-                    harmony.Patch(method, postfix: postfix);
+                    // Format's template argument (still containing literal "{0}"/"{1}"/... at this
+                    // point) is translated first via the prefix, then the (now-translated,
+                    // already-formatted) result still goes through the same postfix as Concat -
+                    // harmless no-op for the template fragments (their literal braces text is gone
+                    // by then) but still catches any additional bare-fragment matches elsewhere in
+                    // the same result.
+                    var isFormat = method.Name == nameof(string.Format);
+                    harmony.Patch(method, prefix: isFormat ? formatPrefix : null, postfix: postfix);
                     patched++;
+                    if (isFormat) formatPatched++;
                 }
                 catch (Exception ex)
                 {
@@ -123,7 +280,7 @@ internal static class DynamicStringPatches
                 }
             }
 
-            MainPlugin.Logger.LogInfo($"[DynamicStringPatches] Patched {patched} String.Concat/Format overload(s).");
+            MainPlugin.Logger.LogInfo($"[DynamicStringPatches] Patched {patched} String.Concat/Format overload(s) ({formatPatched} with template prefix).");
 
             // Sink-level patches: attribute-driven ([HarmonyPatch] on TmpTextSetText_Postfix /
             // UiTextSetText_Postfix below), applied via PatchAll(Type) rather than manual
@@ -141,35 +298,49 @@ internal static class DynamicStringPatches
     {
         try
         {
-            var path = FindResourceFile(DictionaryFileName);
-            if (path == null) return new List<DictionaryEntry>();
+            var paths = FindResourceFiles(DictionaryFilePattern);
+            if (paths.Count == 0) return new List<DictionaryEntry>();
 
             var deserializer = new DeserializerBuilder()
                 .WithNamingConvention(CamelCaseNamingConvention.Instance)
                 .IgnoreUnmatchedProperties()
                 .Build();
-            var yaml = File.ReadAllText(path);
-            var entries = deserializer.Deserialize<List<DictionaryEntry>>(yaml) ?? new List<DictionaryEntry>();
+
+            var entries = new List<DictionaryEntry>();
+            foreach (var path in paths)
+            {
+                try
+                {
+                    var yaml = File.ReadAllText(path);
+                    var fileEntries = deserializer.Deserialize<List<DictionaryEntry>>(yaml);
+                    if (fileEntries != null) entries.AddRange(fileEntries);
+                }
+                catch (Exception ex)
+                {
+                    MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to load '{path}': {ex}");
+                }
+            }
 
             // Longest-fragment-first: entries are applied via sequential substring replace
             // (ApplyDictionary), so a shorter fragment that happens to be a substring of a longer
             // one (e.g. "势" vs "架势") must not get a chance to match first - it would corrupt the
             // longer fragment's span before that entry's own (more specific/correct) replacement
-            // ever runs. Sorting longest-first guarantees the most specific match always wins.
+            // ever runs. Sorting longest-first guarantees the most specific match always wins,
+            // regardless of which source file a given entry came from.
             return entries.OrderByDescending(e => e.Raw?.Length ?? 0).ToList();
         }
         catch (Exception ex)
         {
-            MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to load {DictionaryFileName}: {ex}");
+            MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to load dictionaries matching '{DictionaryFilePattern}': {ex}");
             return new List<DictionaryEntry>();
         }
     }
 
-    private static string FindResourceFile(string fileName)
+    private static List<string> FindResourceFiles(string filePattern)
     {
         return Directory.Exists(ResourcesDir)
-            ? Directory.GetFiles(ResourcesDir, fileName, SearchOption.AllDirectories).FirstOrDefault()
-            : null;
+            ? Directory.GetFiles(ResourcesDir, filePattern, SearchOption.AllDirectories).ToList()
+            : new List<string>();
     }
 
     // Applied to every patched String.Concat/Format overload's result. _dictionary is expected to
@@ -178,15 +349,54 @@ internal static class DynamicStringPatches
     // entirely when the dictionary is empty (e.g. before the pipeline has produced one yet).
     private static void GenericPostfix(ref string __result)
     {
-        if (__result == null || _dictionary.Count == 0) return;
+        if (__result == null || _inFormatConcatPatch) return;
 
+        _inFormatConcatPatch = true;
         try
         {
-            __result = ApplyDictionary(__result);
+            var result = __result;
+            if (_compiledTemplates.Count > 0)
+                result = ApplyTemplates(result, _compiledTemplates);
+            if (_dictionary.Count > 0)
+                result = ApplyDictionary(result, _dictionary);
+            __result = result;
         }
         catch (Exception ex)
         {
             MainPlugin.Logger.LogError($"[DynamicStringPatches] Postfix failed: {ex}");
+        }
+        finally
+        {
+            _inFormatConcatPatch = false;
+        }
+    }
+
+    // Runs before every patched String.Format overload. Translates the *template* argument itself
+    // (still containing literal "{0}"/"{1}"/... placeholders at this point, e.g.
+    // "{0}年{1}月{2}日") against _templateDictionary, so the composite literal's own real
+    // fragments ("年"/"月"/"日") get translated as one deliberate, specific whole-template match
+    // instead of relying on the generic postfix's substring scan of the *already-formatted*
+    // result - which can never see the template's literal braces text at all (by then "{0}" etc.
+    // have been substituted with real data), and would otherwise only get accidentally patched by
+    // unrelated bare-fragment entries that happen to share a substring with part of the template.
+    // Harmony matches this prefix's "format" parameter by name across every String.Format overload
+    // (varying position/arg count), so one prefix method covers all of them.
+    private static void FormatPrefix(ref string format)
+    {
+        if (format == null || _templateDictionary.Count == 0 || _inFormatConcatPatch) return;
+
+        _inFormatConcatPatch = true;
+        try
+        {
+            format = ApplyDictionary(format, _templateDictionary);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[DynamicStringPatches] FormatPrefix failed: {ex}");
+        }
+        finally
+        {
+            _inFormatConcatPatch = false;
         }
     }
 
@@ -214,14 +424,18 @@ internal static class DynamicStringPatches
 
     private static void ApplyToComponentText(Func<string> getText, Action<string> setText)
     {
-        if (_inTextSetterPostfix || _dictionary.Count == 0) return;
+        if (_inTextSetterPostfix) return;
 
         try
         {
             var current = getText();
             if (string.IsNullOrEmpty(current)) return;
 
-            var replaced = ApplyDictionary(current);
+            var replaced = current;
+            if (_compiledTemplates.Count > 0)
+                replaced = ApplyTemplates(replaced, _compiledTemplates);
+            if (_dictionary.Count > 0)
+                replaced = ApplyDictionary(replaced, _dictionary);
             if (replaced == current) return;
 
             _inTextSetterPostfix = true;
@@ -234,10 +448,34 @@ internal static class DynamicStringPatches
         }
     }
 
-    private static string ApplyDictionary(string input)
+    // Structural/regex counterpart to ApplyDictionary - matches each compiled template's *shape*
+    // (translated literal separators around captured placeholder spans) anywhere in the input,
+    // regardless of what actually substituted the original template's placeholders (String.Format,
+    // String.Concat, or - the confirmed motivating case - .NET's own internal DateTime.ToString()
+    // culture formatting, which bakes zh-CN's "年"/"月"/"日" separators directly with no
+    // patchable managed call in between). Cheap LiteralSegments pre-filter avoids running the full
+    // regex for templates that obviously can't match. Applied before the bare-fragment dictionary
+    // pass so a matched composite's own literal separators are fully translated first, preventing
+    // an unrelated bare single-character entry (e.g. a standalone "年"/"月" entry meant for a
+    // different call site) from partially corrupting the same span first.
+    private static string ApplyTemplates(string input, List<CompiledTemplate> templates)
     {
         var result = input;
-        foreach (var entry in _dictionary)
+        foreach (var template in templates)
+        {
+            if (template.LiteralSegments.Count > 0 && !template.LiteralSegments.All(result.Contains))
+                continue;
+
+            if (template.Pattern.IsMatch(result))
+                result = template.Pattern.Replace(result, template.ReplacementPattern);
+        }
+        return result;
+    }
+
+    private static string ApplyDictionary(string input, List<DictionaryEntry> dictionary)
+    {
+        var result = input;
+        foreach (var entry in dictionary)
         {
             if (string.IsNullOrEmpty(entry.Raw)) continue;
             if (result.Contains(entry.Raw))

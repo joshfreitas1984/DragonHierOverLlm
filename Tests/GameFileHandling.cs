@@ -289,7 +289,146 @@ namespace Tests
             // patches System.String.Concat/Format globally and applies the packaged raw/result
             // dictionary as a substring replace, so no per-method configuration is needed here.
             new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+
+            // Second, separately-sourced DynamicStringsIL2CPP file - see
+            // ExtractDynamicStringCandidatesFromColumns/DynamicStringColumnSources below. Kept as
+            // its own file (rather than merged into dynamicStrings.txt) purely so it's obvious
+            // which entries were hand-curated from decompiled code vs. auto-pulled from CSV
+            // columns - the runtime plugin loads every "dynamicStrings*.txt.yaml" file it finds
+            // and merges them into one dictionary (see DynamicStringPatches.LoadDictionary), so
+            // this needs no special handling anywhere else in the pipeline.
+            new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
         ];
+
+        // Declares which CSV columns hold whole-phrase display strings (force/sect names, hero
+        // rank/tier tags, etc.) that are known to also get read "raw" by some IL2CPP code path
+        // outside the normal per-column CSV translation (e.g. GameDataController.GetSaveInfo's
+        // save-slot description embeds a force name and a rank tag straight from save data,
+        // bypassing the already-translated ForceData/SpeHeroData lookups entirely - see the
+        // save-slot mixed-language investigation in dragonheirplugin.instructions.md). Without an
+        // explicit whole-phrase dictionary entry for these, DynamicStringPatches' bare
+        // single-character fallback entries (e.g. "弟子" -> "Disciple", "情" -> "Qing") are the
+        // only thing that can match, which mangles any compound word containing that character
+        // (e.g. "外门弟子" -> "外门Disciple", "剧情" -> "剧Qing"). Column indices are 0-based and
+        // match the raw CSV layout under Files/Raw/Dumped/GameData/ (i.e. before any
+        // SkipColumns/decomposition is applied).
+        public static readonly (string CsvFileName, int[] Columns)[] DynamicStringColumnSources =
+        [
+            // 名字 (name) - force/sect display name, e.g. "仙霞派".
+            ("ForceData.csv", [1]),
+            // 职位 (rank/tier tag) - e.g. "外门弟子", "亲传弟子", "掌门", "长老".
+            ("SpeHeroData.csv", [5]),
+        ];
+
+        // Matches the LABEL portion of a "Label<sign><number>" stat-modifier item (e.g. "内功1",
+        // "威望+2", "技艺经验0.01") - i.e. everything before the first digit or '+'/'-' sign. Used
+        // by DynamicStringLabelColumnSources below for compound cells where the whole cell/item
+        // isn't a stable, repeated piece of vocabulary (the number differs per row) but the label
+        // is - unlike DynamicStringColumnSources' whole-value columns (force names, rank tags),
+        // which are already a single discrete value with no numeric suffix to strip.
+        private static readonly Regex StatLabelRegex = new(@"^[^\d+\-]+", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Same purpose as DynamicStringColumnSources, but for columns whose cells are compound
+        /// "Label&lt;sign&gt;&lt;number&gt;[;Label&lt;sign&gt;&lt;number&gt;...]" stat/resource
+        /// modifiers (e.g. KungFuData.csv's "内功1;经脉1", ResourcePointTypeData.csv's
+        /// "威望+2,药材+1") rather than a single discrete display value - these are exactly the
+        /// SkipColumns entries in TextFilesToSplit above that are never translated because their
+        /// Label half is cross-referenced by exact string match against another (also translated)
+        /// table, per each SkipColumns comment. Extracting the WHOLE cell/item here would be
+        /// useless (every row has a different number glued to the same label, e.g. "内功1" vs
+        /// "内功4"), so this strips the numeric suffix via StatLabelRegex and keeps only the
+        /// repeated Label vocabulary (e.g. "内功", "威望", "技艺经验") - guarding against the same
+        /// bare-fragment corruption DynamicStringColumnSources targets, in case any of these
+        /// labels are ever displayed raw (e.g. a tooltip built directly from this cell) bypassing
+        /// the translated lookup table this column is intentionally left unlinked from.
+        /// NameData.csv's SkipColumns=[0] ("类别": 姓/名/男名/女名) is deliberately NOT listed here
+        /// - it's a pure internal routing key (which name list a row's names go into), never
+        /// displayed to the player, so there's nothing to translate.
+        /// </summary>
+        public static readonly (string CsvFileName, int[] Columns)[] DynamicStringLabelColumnSources =
+        [
+            // 修炼效果/运功效果/威力系数/修炼需求/使用特效 - e.g. "内功1;经脉1", "生命上限20;内力上限20;内功4".
+            ("KungFuData.csv", [7, 8, 9, 10, 13]),
+            ("SummonKungFuData.csv", [7, 8, 9, 10, 13]),
+            // 资源/加成/守城效果 - e.g. "威望+2,药材+1", "技艺经验0.01", "速度+0.05".
+            ("ResourcePointTypeData.csv", [2, 3, 4]),
+            // 加成效果 - e.g. "伤害0.02", "学识4".
+            ("SkinDataBase.csv", [2]),
+        ];
+
+        /// <summary>
+        /// Repeatable, config-driven alternative to manually grepping decompiled output for
+        /// compound words that DynamicStringPatches' bare-fragment dictionary would otherwise
+        /// mangle (see DynamicStringColumnSources' doc comment). For each configured
+        /// (CsvFileName, Columns) pair, reads the corresponding raw CSV under
+        /// Files/Raw/Dumped/GameData/, pulls out every distinct non-empty value from the
+        /// specified columns (or, for DynamicStringLabelColumnSources, every distinct Label
+        /// stripped from each ';'/','-separated compound item), and writes any that aren't
+        /// already present in the master dynamicStrings.txt dump (or a previous run of this same
+        /// method) to Files/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt - a flat
+        /// one-entry-per-line dump in the exact same format
+        /// DynamicStringWorkflow.ExportDynamicStringsToCustomFormat expects, so it flows through
+        /// the existing "1c. ExportDynamicStringsIntoTranslated" / "2. MergeFilesIntoTranslated" /
+        /// "6. Package to Game Files" steps unchanged. Safe to re-run at any time (e.g. after
+        /// adding a new source entry) - already-extracted/dumped values are never duplicated.
+        /// </summary>
+        public static void ExtractDynamicStringCandidatesFromColumns(string workingDirectory)
+        {
+            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
+
+            var seen = new HashSet<string>();
+            if (File.Exists(masterDumpPath))
+                seen.UnionWith(File.ReadAllLines(masterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
+            if (File.Exists(outputPath))
+                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+
+            var found = new List<string>();
+
+            void ExtractFrom(string csvFileName, int[] columns, Func<string, IEnumerable<string>> valueExtractor)
+            {
+                var csvPath = $"{workingDirectory}/Raw/Dumped/GameData/{csvFileName}";
+                if (!File.Exists(csvPath)) return;
+
+                // Skip the header row (row 0) - every configured file here is a plain header+data
+                // CSV, same as the main ExportGameSpecificTextAssetsToCustomFormat path.
+                foreach (var line in File.ReadAllLines(csvPath).Skip(1))
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+
+                    var fields = ParseCsvRow(line);
+                    foreach (var column in columns)
+                    {
+                        if (column >= fields.Length) continue;
+
+                        var cell = fields[column];
+                        if (string.IsNullOrWhiteSpace(cell)) continue;
+
+                        foreach (var value in valueExtractor(cell))
+                        {
+                            if (string.IsNullOrWhiteSpace(value)) continue;
+                            if (!seen.Add(value)) continue;
+
+                            found.Add(value);
+                        }
+                    }
+                }
+            }
+
+            foreach (var (csvFileName, columns) in DynamicStringColumnSources)
+                ExtractFrom(csvFileName, columns, cell => [cell]);
+
+            foreach (var (csvFileName, columns) in DynamicStringLabelColumnSources)
+            {
+                ExtractFrom(csvFileName, columns, cell => cell
+                    .Split([';', ','], StringSplitOptions.RemoveEmptyEntries)
+                    .Select(item => StatLabelRegex.Match(item).Value));
+            }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
 
         public static void ExportGameSpecificTextAssetsToCustomFormat(string workingDirectory)
         {

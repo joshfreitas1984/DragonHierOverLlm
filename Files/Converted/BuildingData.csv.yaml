@@ -1174,7 +1174,7 @@
   - split: 7
     subIndex: 13
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 8
     text: "银钱"
     translated: "Money"
@@ -1253,7 +1253,7 @@
   - split: 7
     subIndex: 13
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 8
     text: "粮食"
     translated: "Food grain"
@@ -1338,7 +1338,7 @@
   - split: 7
     subIndex: 13
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 8
     text: "木料"
     translated: "Wood"
@@ -1423,7 +1423,7 @@
   - split: 7
     subIndex: 13
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 8
     text: "矿石"
     translated: "Mineral"
@@ -1508,7 +1508,7 @@
   - split: 7
     subIndex: 13
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 8
     text: "药材"
     translated: "Herbs"
@@ -1772,7 +1772,7 @@
   - split: 7
     subIndex: 17
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 7
     subIndex: 18
     text: "负4"
@@ -1865,7 +1865,7 @@
   - split: 7
     subIndex: 11
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 7
     subIndex: 12
     text: "负2"
@@ -1944,7 +1944,7 @@
   - split: 7
     subIndex: 9
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 7
     subIndex: 10
     text: "负1"
@@ -2059,7 +2059,7 @@
   - split: 7
     subIndex: 18
     text: "敌"
-    translated: "Di"
+    translated: "Enemy"
   - split: 7
     subIndex: 19
     text: "负3"

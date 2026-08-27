@@ -72,6 +72,19 @@ public class TranslationWorkflowTests
             GameFileHandling.TextFilesToSplit, badStrings);
     }
 
+    [Fact(DisplayName = "5. Flag single Chinese character strings")]
+    public async Task SetSingleChineseCharacterSplitsAsInvalid()
+    {
+        var badPatterns = new List<string>
+        {
+            // Matches a split whose entire text (after trimming whitespace) is exactly one CJK character.
+            @"^\s*\p{IsCJKUnifiedIdeographs}\s*$",
+        };
+
+        await TranslationWorkflow.SetSplitAsInvalidByRegex(GameFileHandling.WorkingDirectory,
+            GameFileHandling.TextFilesToSplit, badPatterns);
+    }
+
     [Fact(DisplayName = "6. Clean up some regexes")]
     public static async Task CleanUpSomeRegexes()
     {

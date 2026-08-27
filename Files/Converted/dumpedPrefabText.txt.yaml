@@ -509,7 +509,7 @@
 - raw: "♦左ctrl+~键打开/关闭控制台。\\n♦上/下方向键切换上条/下条历史指令。\\n<color=red>♦开启作弊功能后，存档将无法获取成就且可能导致未知bug，请谨慎使用。</color>"
   splits:
   - text: "左"
-    translated: "Zuo"
+    translated: "Left"
   - subIndex: 1
     text: "键打开"
     translated: "Press to open"
@@ -518,7 +518,7 @@
     translated: "Close the console"
   - subIndex: 3
     text: "上"
-    translated: "Shang"
+    translated: "Up"
   - subIndex: 4
     text: "下方向键切换上条"
     translated: "Down arrow key to switch to the previous option."
@@ -1014,17 +1014,17 @@
 - raw: "QQ群: 542674865"
   splits:
   - text: "群"
-    translated: "Qun"
+    translated: "Group"
   templates:
   - template: "QQ{0}: 542674865"
 - raw: "一"
   splits:
   - text: "一"
-    translated: "Yi"
+    translated: "One"
 - raw: "一\\n等\\n奖"
   splits:
   - text: "一"
-    translated: "Yi"
+    translated: "One"
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1040,15 +1040,15 @@
 - raw: "七"
   splits:
   - text: "七"
-    translated: "Qi"
+    translated: "Seven"
 - raw: "三"
   splits:
   - text: "三"
-    translated: "San"
+    translated: "Three"
 - raw: "三\\n等\\n奖"
   splits:
   - text: "三"
-    translated: "San"
+    translated: "Three"
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1107,7 +1107,7 @@
     translated: "Specialty"
   - subIndex: 1
     text: "剑"
-    translated: "Jian"
+    translated: "Sword"
   - subIndex: 2
     text: "秘籍"
     translated: "Treasure booklet"
@@ -1140,7 +1140,7 @@
 - raw: "中"
   splits:
   - text: "中"
-    translated: "Zhong"
+    translated: "Middle"
 - raw: "中原"
   splits:
   - text: "中原"
@@ -1196,7 +1196,7 @@
 - raw: "九"
   splits:
   - text: "九"
-    translated: "Jiu"
+    translated: "Nine"
 - raw: "九死一生"
   splits:
   - text: "九死一生"
@@ -1216,11 +1216,11 @@
 - raw: "二"
   splits:
   - text: "二"
-    translated: "Er"
+    translated: "Two"
 - raw: "二\\n等\\n奖"
   splits:
   - text: "二"
-    translated: "Er"
+    translated: "Two"
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1240,7 +1240,7 @@
 - raw: "五"
   splits:
   - text: "五"
-    translated: "Wu"
+    translated: "Five"
 - raw: "五级"
   splits:
   - text: "五级"
@@ -1401,7 +1401,7 @@
 - raw: "会\\n议"
   splits:
   - text: "会"
-    translated: "Hui"
+    translated: "Will"
   - subIndex: 1
     text: "议"
     translated: "Discuss"
@@ -1517,7 +1517,7 @@
 - raw: "佳\\n肴"
   splits:
   - text: "佳"
-    translated: "Jia"
+    translated: "Good"
   - subIndex: 1
     text: "肴"
     translated: "Delicacy"
@@ -1624,6 +1624,7 @@
 - raw: "全体自动"
   splits:
   - text: "全体自动"
+    translated: "Full auto"
 - raw: "全关"
   splits:
   - text: "全关"
@@ -1726,11 +1727,11 @@
 - raw: "八"
   splits:
   - text: "八"
-    translated: "Ba"
+    translated: "Eight"
 - raw: "六"
   splits:
   - text: "六"
-    translated: "Liu"
+    translated: "Six"
 - raw: "关注哔站"
   splits:
   - text: "关注哔站"
@@ -1774,7 +1775,7 @@
 - raw: "内"
   splits:
   - text: "内"
-    translated: "Nei"
+    translated: "Inside"
 - raw: "内伤\\n-0.5%全属性\\n-0.5%内力上限\\n-0.25%体力上限"
   splits:
   - text: "内伤"
@@ -1828,7 +1829,7 @@
 - raw: "冠"
   splits:
   - text: "冠"
-    translated: "Guan"
+    translated: "Crown"
 - raw: "冲刺快捷键"
   splits:
   - text: "冲刺快捷键"
@@ -1872,7 +1873,7 @@
 - raw: "出\\n售"
   splits:
   - text: "出"
-    translated: "Chu"
+    translated: "Out"
   - subIndex: 1
     text: "售"
     translated: "Sell"
@@ -2174,6 +2175,7 @@
 - raw: "升序"
   splits:
   - text: "升序"
+    translated: "Ascending"
 - raw: "升级"
   splits:
   - text: "升级"
@@ -2189,7 +2191,7 @@
 - raw: "博\\n骰"
   splits:
   - text: "博"
-    translated: "Bo"
+    translated: "Brother"
   - subIndex: 1
     text: "骰"
     translated: "Dice"
@@ -2332,7 +2334,7 @@
     translated: "Preferences"
   - subIndex: 1
     text: "剑"
-    translated: "Jian"
+    translated: "Sword"
   - subIndex: 2
     text: "秘籍"
     translated: "Treasure booklet"
@@ -2357,7 +2359,7 @@
 - raw: "四"
   splits:
   - text: "四"
-    translated: "Si"
+    translated: "Four"
 - raw: "围墙"
   splits:
   - text: "围墙"
@@ -2579,7 +2581,7 @@
 - raw: "女"
   splits:
   - text: "女"
-    translated: "Nv"
+    translated: "Woman"
 - raw: "好感100"
   splits:
   - text: "好感100"
@@ -2731,7 +2733,7 @@
     translated: "Banquet"
   - subIndex: 1
     text: "会"
-    translated: "Hui"
+    translated: "Will"
   templates:
   - template: "{0}\\n{1}"
 - raw: "宴会评分\\n<b>999999</b>"
@@ -2854,7 +2856,7 @@
 - raw: "属"
   splits:
   - text: "属"
-    translated: "Shu"
+    translated: "Belong"
 - raw: "属性"
   splits:
   - text: "属性"
@@ -3124,7 +3126,7 @@
     translated: "Gender"
   - subIndex: 1
     text: "男"
-    translated: "Male"
+    translated: "Man"
   templates:
   - template: "{0} {1}"
 - raw: "性格"
@@ -3743,7 +3745,7 @@
 - raw: "无"
   splits:
   - text: "无"
-    translated: "Wu"
+    translated: "None"
 - raw: "无名之辈"
   splits:
   - text: "无名之辈"
@@ -4005,6 +4007,7 @@
     translated: "Detection of minor status:"
   - subIndex: 1
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
+    translated: "This game is only available for minors to play for up to 1 hours of online gaming from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It must not be provided to minors in any other form or at any other time."
   templates:
   - template: "{0}\\n\\n{1}"
 - raw: "次年，飞龙门掌门赵胤宗于泰山举行会盟大会，"
@@ -4018,7 +4021,7 @@
 - raw: "正"
   splits:
   - text: "正"
-    translated: "Zheng"
+    translated: "Right"
 - raw: "正在研究"
   splits:
   - text: "正在研究"
@@ -4041,14 +4044,14 @@
 - raw: "武"
   splits:
   - text: "武"
-    translated: "Wu"
+    translated: "Martial"
 - raw: "武\\n器"
   splits:
   - text: "武"
-    translated: "Wu"
+    translated: "Martial"
   - subIndex: 1
     text: "器"
-    translated: "Qi"
+    translated: "Vessel"
   templates:
   - template: "{0}\\n{1}"
 - raw: "武功"
@@ -4206,7 +4209,7 @@
 - raw: "水"
   splits:
   - text: "水"
-    translated: "Shui"
+    translated: "Water"
 - raw: "江南"
   splits:
   - text: "江南"
@@ -4335,7 +4338,7 @@
 - raw: "清"
   splits:
   - text: "清"
-    translated: "Qing"
+    translated: "Clear"
 - raw: "清空功绩并离开门派\\n需身份为亲传弟子\\n且功绩达到满值"
   splits:
   - text: "清空功绩并离开门派"
@@ -4369,7 +4372,7 @@
     translated: "Approval Number: Guoxin Chushi [Year] No. 2025100"
   - subIndex: 2
     text: "号"
-    translated: "Hao"
+    translated: "No"
   - subIndex: 3
     text: "出版物号："
     translated: "Publication Number:"
@@ -4606,7 +4609,7 @@
 - raw: "男"
   splits:
   - text: "男"
-    translated: "Male"
+    translated: "Man"
 - raw: "疗伤休养"
   splits:
   - text: "疗伤休养"
@@ -4726,6 +4729,7 @@
 - raw: "确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确"
   splits:
   - text: "确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确"
+    translated: "Confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm"
 - raw: "礼法"
   splits:
   - text: "礼法"
@@ -4733,7 +4737,7 @@
 - raw: "神"
   splits:
   - text: "神"
-    translated: "Shen"
+    translated: "God"
 - raw: "禁军统领"
   splits:
   - text: "禁军统领"
@@ -4937,8 +4941,7 @@
     translated: "Shortcut keys"
   - subIndex: 2
     text: "全体自动"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Full auto"
   - subIndex: 3
     text: "快捷键"
     translated: "Shortcut keys"
@@ -5027,7 +5030,7 @@
 - raw: "绝"
   splits:
   - text: "绝"
-    translated: "Jue"
+    translated: "Absolute"
 - raw: "绝世"
   splits:
   - text: "绝世"
@@ -5072,10 +5075,10 @@
 - raw: "美\\n酒"
   splits:
   - text: "美"
-    translated: "Mei"
+    translated: "Beautiful"
   - subIndex: 1
     text: "酒"
-    translated: "Jiu"
+    translated: "Wine"
   templates:
   - template: "{0}\\n{1}"
 - raw: "美酒\\n(消耗)"
@@ -5137,7 +5140,7 @@
 - raw: "胜"
   splits:
   - text: "胜"
-    translated: "Sheng"
+    translated: "Victory"
 - raw: "胡须"
   splits:
   - text: "胡须"
@@ -5272,7 +5275,7 @@
     translated: "Defeat the enemy stronghold within 3 minutes"
   - subIndex: 2
     text: "五"
-    translated: "Wu"
+    translated: "Five"
   templates:
   - template: "{0}\\n{1} {2}\\n"
 - raw: "菜单"
@@ -5314,7 +5317,7 @@
     translated: "Operating style"
   - subIndex: 1
     text: "中"
-    translated: "Zhong"
+    translated: "Middle"
   - subIndex: 2
     text: "弟子"
     translated: "Disciple"
@@ -5584,7 +5587,7 @@
     translated: "Foot"
   - subIndex: 1
     text: "履"
-    translated: "Step"
+    translated: "Walk"
   templates:
   - template: "{0}\\n{1}"
 - raw: "足履\\n（消耗）"
@@ -5619,7 +5622,7 @@
 - raw: "轻"
   splits:
   - text: "轻"
-    translated: "Qing"
+    translated: "Lightly"
 - raw: "轻功"
   splits:
   - text: "轻功"
@@ -5761,7 +5764,7 @@
     translated: "View"
   - subIndex: 1
     text: "宝"
-    translated: "Bao"
+    translated: "Treasure"
   templates:
   - template: "{0}\\n{1}"
 - raw: "铠甲"
@@ -6261,10 +6264,10 @@
 - raw: "饰\\n品"
   splits:
   - text: "饰"
-    translated: "Role"
+    translated: "Acted"
   - subIndex: 1
     text: "品"
-    translated: "Ting"
+    translated: "Tasting"
   templates:
   - template: "{0}\\n{1}"
 - raw: "马匹"

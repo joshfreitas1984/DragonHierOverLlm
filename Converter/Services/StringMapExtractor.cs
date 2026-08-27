@@ -441,14 +441,41 @@ public static class StringMapExtractor
                 .Replace("\n", "\\n")
                 .Replace("\t", "\\t") + "\"";
 
+    // Single-pass, left-to-right unescape. This MUST NOT be implemented as a sequence of global
+    // string.Replace calls (as it previously was: unescaping \" \r \n \t before \\): a source
+    // string containing a literal backslash immediately followed by a literal 'n'/'r'/'t'/'"'
+    // (e.g. a Windows path or a regex-like fragment embedded in game text) round-trips through
+    // CsvEscape as "\\" + "n" (backslash escaped to \\\\, followed by the untouched letter n).
+    // Replacing "\\n" -> "\n" BEFORE "\\\\" -> "\\" then matches across that boundary (the second
+    // backslash of the escaped pair + the following literal 'n'), silently turning a real
+    // backslash+letter sequence into a newline and eating one of the two backslashes - genuine
+    // string corruption on decompiled output substitution (pass 5a). A single left-to-right scan
+    // that consumes each recognised two-character escape atomically has no such cross-boundary
+    // ambiguity.
     private static string CsvUnescape(string s)
     {
         if (s.Length >= 2 && s[0] == '"' && s[^1] == '"')
             s = s[1..^1];
-        return s.Replace("\\\"", "\"")
-                .Replace("\\r", "\r")
-                .Replace("\\n", "\n")
-                .Replace("\\t", "\t")
-                .Replace("\\\\", "\\");
+
+        var sb = new StringBuilder(s.Length);
+        for (int i = 0; i < s.Length; i++)
+        {
+            char c = s[i];
+            if (c == '\\' && i + 1 < s.Length)
+            {
+                char next = s[i + 1];
+                switch (next)
+                {
+                    case '\\': sb.Append('\\'); i++; continue;
+                    case '"': sb.Append('"'); i++; continue;
+                    case 'r': sb.Append('\r'); i++; continue;
+                    case 'n': sb.Append('\n'); i++; continue;
+                    case 't': sb.Append('\t'); i++; continue;
+                    default: break; // not a recognised escape - keep the backslash literal
+                }
+            }
+            sb.Append(c);
+        }
+        return sb.ToString();
     }
 }

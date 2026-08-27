@@ -705,7 +705,6 @@
     translated: "Triple Sword Shadow Light"
   - split: 24
     text: "刀"
-    translated: "Blade"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -762,6 +761,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -799,10 +800,12 @@
   - split: 23
     subIndex: 1
     text: "蓝"
-    translated: "Lan"
+    translated: "Blue"
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 23
     template: "{0}_{1}-Target-Grid-Happen"
@@ -1030,7 +1033,7 @@
   - split: 23
     subIndex: 1
     text: "灰"
-    translated: "Hui"
+    translated: "Gray"
   - split: 23
     subIndex: 2
     text: "叶轮"
@@ -1038,6 +1041,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -1078,7 +1083,7 @@
   - split: 23
     subIndex: 1
     text: "白"
-    translated: "Bai"
+    translated: "White"
   - split: 24
     text: "对刺"
     translated: "Stabbing attack"
@@ -3736,7 +3741,7 @@
   - split: 23
     subIndex: 1
     text: "灰"
-    translated: "Hui"
+    translated: "Gray"
   - split: 24
     text: "剑"
     translated: "Sword"
@@ -3796,6 +3801,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -3845,10 +3852,12 @@
   - split: 23
     subIndex: 1
     text: "黄"
-    translated: "Huang"
+    translated: "Yellow"
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -3909,6 +3918,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -3973,6 +3984,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -4029,6 +4042,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -4087,10 +4102,12 @@
   - split: 23
     subIndex: 1
     text: "紫"
-    translated: "Zi"
+    translated: "Purple"
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -4151,6 +4168,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -4215,6 +4234,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -4271,6 +4292,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -4333,6 +4356,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -4501,7 +4526,7 @@
   - split: 23
     subIndex: 1
     text: "白"
-    translated: "Bai"
+    translated: "White"
   - split: 23
     subIndex: 2
     text: "叶轮"
@@ -4730,7 +4755,7 @@
   - split: 23
     subIndex: 1
     text: "蓝"
-    translated: "Lan"
+    translated: "Blue"
   - split: 24
     text: "长兵"
     translated: "Long weapon"
@@ -5015,6 +5040,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -9097,6 +9124,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -9169,6 +9198,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -9241,6 +9272,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -9311,6 +9344,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -9391,6 +9426,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -9463,6 +9500,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -9539,6 +9578,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -9615,6 +9656,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -9683,6 +9726,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -9751,6 +9796,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -10871,6 +10918,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -11097,7 +11146,7 @@
   - split: 23
     subIndex: 1
     text: "灰"
-    translated: "Hui"
+    translated: "Gray"
   - split: 23
     subIndex: 2
     text: "爆叶"
@@ -11105,6 +11154,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -13680,6 +13731,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -13770,6 +13823,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -13860,6 +13915,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -13946,6 +14003,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -14028,6 +14087,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -14625,7 +14686,7 @@
     translated: "Butterfly Slash"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -14872,6 +14933,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -16416,6 +16479,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -16514,6 +16579,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -16596,6 +16663,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -17030,6 +17099,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -17856,6 +17927,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -18428,6 +18501,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -18690,7 +18765,7 @@
   - split: 23
     subIndex: 1
     text: "紫"
-    translated: "Zi"
+    translated: "Purple"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -18761,6 +18836,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -19029,6 +19106,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -19097,6 +19176,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -19421,6 +19502,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -19503,6 +19586,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -19812,6 +19897,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -19898,6 +19985,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -20071,6 +20160,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -20402,6 +20493,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -20782,6 +20875,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -21202,6 +21297,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -21700,6 +21797,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -22086,6 +22185,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -26997,6 +27098,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -27390,10 +27493,12 @@
   - split: 23
     subIndex: 1
     text: "黄"
-    translated: "Huang"
+    translated: "Yellow"
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -27837,6 +27942,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -28322,6 +28429,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -28776,6 +28885,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -31647,6 +31758,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -31974,6 +32087,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -32353,6 +32468,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -32776,6 +32893,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -33140,6 +33259,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -36175,6 +36296,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -36223,6 +36346,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -36516,6 +36641,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -36576,6 +36703,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -36915,6 +37044,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -36989,6 +37120,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -37394,6 +37527,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -37484,6 +37619,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -37915,6 +38052,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -38001,6 +38140,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -38421,6 +38562,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -43799,7 +43942,7 @@
     translated: "Buddhist pressure"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -44861,7 +45004,7 @@
   - split: 23
     subIndex: 1
     text: "紫"
-    translated: "Zi"
+    translated: "Purple"
   - split: 23
     subIndex: 2
     text: "八卦爆"
@@ -46792,6 +46935,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -46836,6 +46981,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -47103,6 +47250,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -47167,6 +47316,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -47462,6 +47613,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -47536,6 +47689,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -47867,6 +48022,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -47941,6 +48098,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -48172,6 +48331,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 4
     template: "{0},{1}"
@@ -48256,6 +48417,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -48444,6 +48607,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -54289,7 +54454,7 @@
     translated: "Bagua light"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -54649,6 +54814,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -58250,10 +58417,10 @@
   - split: 23
     subIndex: 1
     text: "黄"
-    translated: "Huang"
+    translated: "Yellow"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -58298,6 +58465,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -58595,7 +58764,7 @@
     translated: "Blood Circle"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 4
     template: "{0}——{1}"
@@ -58658,6 +58827,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 4
     template: "{0}——{1}"
@@ -59009,7 +59180,7 @@
     translated: "Round Slash Flame"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -59082,6 +59253,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -59463,7 +59636,7 @@
     translated: "Blessing Scattered"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -59542,6 +59715,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -59894,7 +60069,7 @@
     translated: "Blessing Scattered"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 7
     template: "{0};{1};{2}"
@@ -59973,6 +60148,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1}"
@@ -63391,6 +63568,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -63435,6 +63614,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 9
     template: "{0};{1}"
@@ -64574,6 +64755,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -64664,6 +64847,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -65039,7 +65224,7 @@
     translated: "Blood Disk"
   - split: 24
     text: "轮"
-    translated: "Turn"
+    translated: "Wheel"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -66177,6 +66362,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"
@@ -66291,6 +66478,8 @@
   - split: 24
     text: "刀"
     translated: "Blade"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Bad Character"
   templates:
   - split: 7
     template: "{0};{1};{2};{3}"

@@ -72,7 +72,7 @@
     translated: "Jiang Yingquan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -160,7 +160,7 @@
     translated: "Lu Renqian"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -226,7 +226,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -292,7 +292,7 @@
     translated: "Yu Caiwei"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -358,7 +358,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -430,7 +430,7 @@
     translated: "Shen Tui"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -492,7 +492,7 @@
     translated: "Jiang Wan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -564,7 +564,7 @@
     translated: "Yang Sichi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -636,7 +636,7 @@
     translated: "Lin Yunshang"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -704,7 +704,7 @@
     translated: "Yue Wuji"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "长乐帮"
     translated: "Changle Gang"
@@ -784,7 +784,7 @@
     translated: "Yun Caiyi"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "长乐帮"
     translated: "Changle Gang"
@@ -859,7 +859,7 @@
     translated: "Lu Yulin"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "长乐帮"
     translated: "Changle Gang"
@@ -926,7 +926,7 @@
     translated: "Tang Yiying"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "唐门"
     translated: "Tang Clan"
@@ -1021,7 +1021,7 @@
     translated: "Tang Li"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "唐门"
     translated: "Tang Clan"
@@ -1087,7 +1087,7 @@
     translated: "Tang Yanran"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "唐门"
     translated: "Tang Clan"
@@ -1158,7 +1158,7 @@
     translated: "Huangfu Qingshan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "药王谷"
     translated: "Medicine King Valley"
@@ -1251,7 +1251,7 @@
     translated: "Huangfu Bin"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "药王谷"
     translated: "Medicine King Valley"
@@ -1333,7 +1333,7 @@
     translated: "Zhu Duanyue"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "丐帮"
     translated: "Beggar Sect"
@@ -1420,7 +1420,7 @@
     translated: "Xu Buping"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "丐帮"
     translated: "Beggar Sect"
@@ -1495,7 +1495,7 @@
     translated: "Zhao Polu"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "飞龙门"
     translated: "Flying Dragon Gate"
@@ -1579,7 +1579,7 @@
     translated: "Zhuge Ling"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "飞龙门"
     translated: "Flying Dragon Gate"
@@ -1650,7 +1650,7 @@
     translated: "Nangong Yao"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "茅山派"
     translated: "Maoshan Sect"
@@ -1730,7 +1730,7 @@
     translated: "Ge Zhiyuan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "茅山派"
     translated: "Maoshan Sect"
@@ -1801,7 +1801,7 @@
     translated: "Ou Changbing"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "铸剑山庄"
     translated: "Swordforging Manor"
@@ -1879,7 +1879,7 @@
     translated: "Zu Xinyan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "铸剑山庄"
     translated: "Swordforging Manor"
@@ -1957,7 +1957,7 @@
     translated: "Long Feng'e"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "五毒教"
     translated: "Five Poisons Sect"
@@ -2046,7 +2046,7 @@
     translated: "Long Ningshuang"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "五毒教"
     translated: "Five Poisons Sect"
@@ -2124,7 +2124,7 @@
     translated: "Shi Chonghu"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "五毒教"
     translated: "Five Poisons Sect"
@@ -2196,7 +2196,7 @@
     translated: "Yan Luowang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -2299,7 +2299,7 @@
     translated: "Cui Mingguan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -2374,7 +2374,7 @@
     translated: "Meng Posuo"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -2449,7 +2449,7 @@
     translated: "Chang Wuhei"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -2517,7 +2517,7 @@
     translated: "Chang Wubai"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -2580,7 +2580,7 @@
     translated: "Niu Tou"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -2645,7 +2645,7 @@
     translated: "Ma Mian"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -2705,7 +2705,7 @@
     translated: "Dao Wuming"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "大隐阁"
     translated: "Great Hidden Pavilion"
@@ -2814,7 +2814,7 @@
     translated: "Si Zhonglan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "大隐阁"
     translated: "Great Hidden Pavilion"
@@ -2902,7 +2902,7 @@
     translated: "Ji Qingfan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "大隐阁"
     translated: "Great Hidden Pavilion"
@@ -2987,7 +2987,7 @@
     translated: "Kongwen Master"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -3072,7 +3072,7 @@
     translated: "Kongjian Master"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -3160,7 +3160,7 @@
     translated: "Rushi Master"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -3248,7 +3248,7 @@
     translated: "Zhang Qingpeng"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "武当派"
     translated: "Wudang Sect"
@@ -3347,7 +3347,7 @@
     translated: "Zhang Wenxin"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "武当派"
     translated: "Wudang Sect"
@@ -3441,7 +3441,7 @@
     translated: "Song Lianting"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "武当派"
     translated: "Wudang Sect"
@@ -3526,7 +3526,7 @@
     translated: "Xiang Yuanba"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "霸刀门"
     translated: "Tyrant Blade Sect"
@@ -3610,7 +3610,7 @@
     translated: "Yuwen Ji"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "霸刀门"
     translated: "Tyrant Blade Sect"
@@ -3687,7 +3687,7 @@
     translated: "Lu Xunfeng"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "蓬莱派"
     translated: "Penglai Sect"
@@ -3768,7 +3768,7 @@
     translated: "Zhuang Xiaomeng"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "蓬莱派"
     translated: "Penglai Sect"
@@ -3855,7 +3855,7 @@
     translated: "Sima Deyuan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "峨眉派"
     translated: "Emei Sect"
@@ -3939,7 +3939,7 @@
     translated: "Li Xiaoxiang"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "峨眉派"
     translated: "Emei Sect"
@@ -4016,7 +4016,7 @@
     translated: "Bai Yuntian"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "峨眉派"
     translated: "Emei Sect"
@@ -4114,7 +4114,7 @@
     translated: "Qu Zifeng"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "崆峒派"
     translated: "Kongtong Sect"
@@ -4201,7 +4201,7 @@
     translated: "Wen Jinghong"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "崆峒派"
     translated: "Kongtong Sect"
@@ -4278,7 +4278,7 @@
     translated: "Mo Xuanji"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "神机门"
     translated: "Divine Mechanism Sect"
@@ -4369,7 +4369,7 @@
     translated: "Mo Congyi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "神机门"
     translated: "Divine Mechanism Sect"
@@ -4461,7 +4461,7 @@
     translated: "Lei Zhentian"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "霹雳堂"
     translated: "Thunderclap Hall"
@@ -4550,7 +4550,7 @@
     translated: "Lei Guanqun"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "霹雳堂"
     translated: "Thunderclap Hall"
@@ -4636,7 +4636,7 @@
     translated: "Lei Tong"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "霹雳堂"
     translated: "Thunderclap Hall"
@@ -4716,7 +4716,7 @@
     translated: "Zhuanlun Dharma King"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "金刚密宗"
     translated: "Vajrayana Sect"
@@ -4797,7 +4797,7 @@
     translated: "Jingang Dharma King"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "金刚密宗"
     translated: "Vajrayana Sect"
@@ -4874,7 +4874,7 @@
     translated: "Zhenyan Dharma King"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "金刚密宗"
     translated: "Vajrayana Sect"
@@ -4960,7 +4960,7 @@
     translated: "Ling Beiyuan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "天山派"
     translated: "Tianshan Sect"
@@ -5051,7 +5051,7 @@
     translated: "Yun Jiuxiao"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "天山派"
     translated: "Tianshan Sect"
@@ -5137,7 +5137,7 @@
     translated: "Jiang Yinghan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "天山派"
     translated: "Tianshan Sect"
@@ -5210,7 +5210,7 @@
     translated: "Xia Tianxiong"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "铁掌帮"
     translated: "Iron Palm Gang"
@@ -5273,7 +5273,7 @@
     translated: "Ye Yiming"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "铁掌帮"
     translated: "Iron Palm Gang"
@@ -5329,7 +5329,7 @@
     translated: "Han Song"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "铁掌帮"
     translated: "Iron Palm Gang"
@@ -5385,7 +5385,7 @@
     translated: "Lu Qi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "铁掌帮"
     translated: "Iron Palm Gang"
@@ -5434,7 +5434,7 @@
     translated: "Lu Zifang"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "铁掌帮"
     translated: "Iron Palm Gang"
@@ -5479,7 +5479,7 @@
     translated: "Gongsun Fang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "铁掌帮"
     translated: "Iron Palm Gang"
@@ -5529,7 +5529,7 @@
     translated: "Di Kun"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "铁掌帮"
     translated: "Iron Palm Gang"
@@ -5574,7 +5574,7 @@
     translated: "Wan Renshan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "聚义门"
     translated: "Righteous Alliance Gate"
@@ -5624,7 +5624,7 @@
     translated: "Zhuo Yuanwang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "黄河帮"
     translated: "Yellow River Gang"
@@ -5670,7 +5670,7 @@
     translated: "Lu Li"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "八卦门"
     translated: "Bagua Sect"
@@ -5716,7 +5716,7 @@
     translated: "Wei Haichuan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "海沙帮"
     translated: "Sea Sand Gang"
@@ -5762,7 +5762,7 @@
     translated: "Shen Jiao"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "巨鲸帮"
     translated: "Giant Whale Gang"
@@ -5812,7 +5812,7 @@
     translated: "Shangguan Wen"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "金龙帮"
     translated: "Golden Dragon Gang"
@@ -5858,7 +5858,7 @@
     translated: "Zhou Mozhi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -5904,7 +5904,7 @@
     translated: "Mo Tiansang"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "伏牛派"
     translated: "Funiu Sect"
@@ -5957,7 +5957,7 @@
     translated: "Wu Jueyi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6036,7 +6036,7 @@
     translated: "Huang Quan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6104,7 +6104,7 @@
     translated: "Yu Guanyin"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -6172,7 +6172,7 @@
     translated: "Yu Rentu"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6243,7 +6243,7 @@
     translated: "Shangguan Feng"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -6311,7 +6311,7 @@
     translated: "Ji Xinkuang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6383,7 +6383,7 @@
     translated: "Murong Xingchen"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -6458,7 +6458,7 @@
     translated: "You Ming"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6518,7 +6518,7 @@
     translated: "Mei Ying"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -6578,7 +6578,7 @@
     translated: "Xue Ren"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6638,7 +6638,7 @@
     translated: "Can Yang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6698,7 +6698,7 @@
     translated: "Li Cangqiong"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6753,7 +6753,7 @@
     translated: "Chi Baicheng"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6805,7 +6805,7 @@
     translated: "Fei Bin"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6865,7 +6865,7 @@
     translated: "Yue Wuwei"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6917,7 +6917,7 @@
     translated: "Gao Shou"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -6969,7 +6969,7 @@
     translated: "Wang Biao"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7030,7 +7030,7 @@
     translated: "Ma Han"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7087,7 +7087,7 @@
     translated: "Feng Nanfei"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7143,7 +7143,7 @@
     translated: "Qiu Long"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7195,7 +7195,7 @@
     translated: "Zhang Chenghua"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7247,7 +7247,7 @@
     translated: "Zeng Zhenhai"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7299,7 +7299,7 @@
     translated: "Song Minggong"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7355,7 +7355,7 @@
     translated: "Dai Zhuang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7420,7 +7420,7 @@
     translated: "Ma Yinglong"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7477,7 +7477,7 @@
     translated: "Ma Chaoqun"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7534,7 +7534,7 @@
     translated: "Ma Danxin"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -7591,7 +7591,7 @@
     translated: "Ma Baoguo"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7647,7 +7647,7 @@
     translated: "Hao Dali"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7708,7 +7708,7 @@
     translated: "Wang Cai"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7769,7 +7769,7 @@
     translated: "Wu Mou"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7825,7 +7825,7 @@
     translated: "Xiong Baisheng"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7885,7 +7885,7 @@
     translated: "Zhu Quan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7933,7 +7933,7 @@
     translated: "Yan Dakai"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -7981,7 +7981,7 @@
     translated: "Feng Hu"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8034,7 +8034,7 @@
     translated: "Liu Bao"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8087,7 +8087,7 @@
     translated: "Huang Chai"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8140,7 +8140,7 @@
     translated: "Han Lang"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -8188,7 +8188,7 @@
     translated: "Wu You"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -8262,7 +8262,7 @@
     translated: "Meng Jingshi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8336,7 +8336,7 @@
     translated: "Guo Huai"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8422,7 +8422,7 @@
     translated: "Lu Tianxing"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8496,7 +8496,7 @@
     translated: "He Zudao"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8570,7 +8570,7 @@
     translated: "Chu Fengji"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8639,7 +8639,7 @@
     translated: "Lin Nongying"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -8712,7 +8712,7 @@
     translated: "Qi Yan"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8781,7 +8781,7 @@
     translated: "Zhang Jun"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8845,7 +8845,7 @@
     translated: "Xiang Wentian"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8905,7 +8905,7 @@
     translated: "Guo Yongrui"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -8961,7 +8961,7 @@
     translated: "Ruan Zhi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -9029,7 +9029,7 @@
     translated: "Hui Ding"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -9098,7 +9098,7 @@
     translated: "Qingfeng"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -9158,7 +9158,7 @@
     translated: "Li Yunhe"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -9227,7 +9227,7 @@
     translated: "Lu Wuyang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -9283,7 +9283,7 @@
     translated: "Qu Peihuan"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -9340,7 +9340,7 @@
     translated: "Shui Qingqiu"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -9393,7 +9393,7 @@
     translated: "Liu Ruyue"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -9442,7 +9442,7 @@
     translated: "Yin Yufei"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -9505,7 +9505,7 @@
     translated: "Beiming Xue"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -9564,7 +9564,7 @@
     translated: "Jin Longsheng"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -9663,7 +9663,7 @@
     translated: "Tian Can"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -9766,7 +9766,7 @@
     translated: "Di Que"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -9869,7 +9869,7 @@
     translated: "Nan Chou"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -9972,7 +9972,7 @@
     translated: "Bei Guai"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -10075,7 +10075,7 @@
     translated: "Xiaoyao Sheng"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -10175,7 +10175,7 @@
     translated: "Dugu Jian"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -10283,7 +10283,7 @@
     translated: "Qi Refining Scholar"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -10403,7 +10403,7 @@
     translated: "Du Dianjian"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -10503,7 +10503,7 @@
     translated: "Dubei Dao"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -10603,7 +10603,7 @@
     translated: "Doujiu Monk"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -10703,7 +10703,7 @@
     translated: "Wang Tianyi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -10757,7 +10757,7 @@
     translated: "Lei Yinyin"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "霹雳堂"
     translated: "Thunderclap Hall"
@@ -10813,7 +10813,7 @@
     translated: "Zhao Yinzong"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -10903,7 +10903,7 @@
     translated: "Middle‑aged Tian Can"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -10967,7 +10967,7 @@
     translated: "Middle‑aged Di Que"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11031,7 +11031,7 @@
     translated: "Middle‑aged Nan Chou"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11095,7 +11095,7 @@
     translated: "Middle‑aged Bei Guai"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11159,7 +11159,7 @@
     translated: "Zhao Yiren"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11235,7 +11235,7 @@
     translated: "Shi Shouxin"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11330,7 +11330,7 @@
     translated: "Middle‑aged Zhao Yinzong"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11420,7 +11420,7 @@
     translated: "Fu Yanzhi"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11494,7 +11494,7 @@
     translated: "Zhang MiLei"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11533,7 +11533,7 @@
     translated: "Lu Chenzhou"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11572,7 +11572,7 @@
     translated: "Wang Ba"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11611,7 +11611,7 @@
     translated: "Long Mie"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11650,7 +11650,7 @@
     translated: "Luo Bagua"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11689,7 +11689,7 @@
     translated: "Fei Yanzi"
   - split: 2
     text: "女"
-    translated: "Female"
+    translated: "Woman"
   - split: 3
     text: "无"
     translated: "None"
@@ -11728,7 +11728,7 @@
     translated: "Ye Han"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11790,7 +11790,7 @@
     translated: "Li Tianlin"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11849,7 +11849,7 @@
     translated: "Xiong Gang"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
@@ -11897,7 +11897,7 @@
     translated: "Wang Lun"
   - split: 2
     text: "男"
-    translated: "Male"
+    translated: "Man"
   - split: 3
     text: "无"
     translated: "None"
