@@ -2,6 +2,7 @@
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
+using System;
 using System.Reflection;
 using System.Text;
 
@@ -40,6 +41,8 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Harmony.CreateAndPatchAll(typeof(CrashMitigationPatches));
         Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
+        Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
+        DynamicStringPatches.PatchAll();
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
 
         //DisableEastAsianTmpSettings();
@@ -120,6 +123,66 @@ public class MainPlugin : BasePlugin
     //        return true;
     //    }
     //}
+
+    // GlobalData.ConvertNumToChinese(int input) spells a number out as Chinese numeral text (e.g.
+    // "一万二千三百四十五") for display. Skip the original entirely and return a plain,
+    // English-friendly formatted number instead (e.g. "12,345").
+    [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.ConvertNumToChinese))]
+    [HarmonyPrefix]
+    public static bool ConvertNumToChinese_Prefix(int input, ref string __result)
+    {
+        try
+        {
+            __result = input.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Error in ConvertNumToChinese patch: {ex}");
+            return true;
+        }
+    }
+
+    // GlobalData.GetNumText(int) is the general-purpose "level/count" numeral-to-Chinese-word
+    // helper (e.g. building levels, party counts, chapter numbers) - called from dozens of UI
+    // controllers across the codebase (AreaData, BuildingUIController, ChapterController,
+    // QuickDetail, etc.), unlike ConvertNumToChinese which is only used for one specific spot.
+    // Same treatment: skip the Chinese-word lookup, return the plain Arabic numeral instead.
+    [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.GetNumText))]
+    [HarmonyPrefix]
+    public static bool GetNumText_Prefix(int num, ref string __result)
+    {
+        try
+        {
+            __result = num.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Error in GetNumText patch: {ex}");
+            return true;
+        }
+    }
+
+    // GlobalData.GetChineseNumText(int id) picks a single Chinese numeral character out of a lookup
+    // string via "id % length" (no other call sites found in the decompiled codebase - likely
+    // rare/decorative, e.g. a looping digit animation). Return the equivalent Arabic digit
+    // character instead, mirroring the "id % 10" style of the original.
+    [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.GetChineseNumText))]
+    [HarmonyPrefix]
+    public static bool GetChineseNumText_Prefix(int id, ref char __result)
+    {
+        try
+        {
+            __result = (char)('0' + (Math.Abs(id) % 10));
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Error in GetChineseNumText patch: {ex}");
+            return true;
+        }
+    }
 
     //[HarmonyPatch(typeof(TypingLogic), "GetTypeSpeed")]
     //[HarmonyPrefix]

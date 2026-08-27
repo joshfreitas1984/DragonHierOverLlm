@@ -34,6 +34,24 @@ public class CompoundFieldSplitterTests
         Assert.True(CompoundFieldSplitter.IsTrivialTemplate(template, fragments.Count));
     }
 
+    [Fact(DisplayName = "Pre-existing literal {n} format placeholders don't collide with synthesized fragment placeholders")]
+    public void LiteralNumericPlaceholdersDontCollideWithFragmentPlaceholders()
+    {
+        var original = "{0}年{1}月{2}日";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        var translated = fragments.Select(f => f switch
+        {
+            "年" => "Year",
+            "月" => "Month",
+            "日" => "Day",
+            _ => f,
+        }).ToList();
+
+        Assert.Equal("{0}Year{1}Month{2}Day", CompoundFieldSplitter.Reconstruct(template, translated));
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
     [Fact(DisplayName = "Compound cell with role separators still splits into multiple fragments")]
     public void CompoundCellWithRoleSeparatorsStillSplits()
     {

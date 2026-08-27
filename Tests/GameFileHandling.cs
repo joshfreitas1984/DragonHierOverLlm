@@ -19,7 +19,11 @@ namespace Tests
         // easily use '#' as a genuine structural separator.
         private static readonly CompoundFieldSplitterOptions SplitterOptions = new()
         {
-            PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
+            // '\$?' allows this game's '#$PlayerName#'/'#$SourceInteractName#'/'#$TargetInteractName#'
+            // variants (a leading '$' inside the '#...#' wrapper) in addition to the plain
+            // '#PlayerName#'/'#SourceForceName#' form - '\w' alone doesn't include '$', so without
+            // this the '$'-prefixed tokens weren't recognized as placeholders at all.
+            PlaceholderPatterns = [new Regex(@"#\$?\w+#", RegexOptions.Compiled)]
         };
 
         // Registers this game's LLM-result post-repair hook (see LineValidation.CustomPostRepair)
@@ -37,10 +41,12 @@ namespace Tests
 
         // Matches an English possessive/contraction suffix the LLM sometimes glues inside a
         // "#PlaceholderToken#" wrapper instead of after it, e.g. "#PlayerName's#" - the placeholder
-        // itself must stay exactly "#PlayerName#" for the game engine to substitute it at runtime,
-        // so the suffix needs to be moved outside the closing '#' rather than sent back for a retry.
+        // itself must stay exactly "#PlayerName#" (or "#$PlayerName#" for this game's '$'-prefixed
+        // variants) for the game engine to substitute it at runtime, so the suffix needs to be moved
+        // outside the closing '#' rather than sent back for a retry. '\$?' mirrors SplitterOptions'
+        // PlaceholderPatterns regex so both token flavors get the same repair.
         private static readonly Regex PlaceholderTrailingSuffixRegex =
-            new(@"#(\w+)('s|'re|'ve|'ll|'d|'t)#", RegexOptions.Compiled);
+            new(@"#(\$?\w+)('s|'re|'ve|'ll|'d|'t)#", RegexOptions.Compiled);
 
         private static string RepairKnownLlmQuirks(string raw, string llmResult)
         {
@@ -93,8 +99,23 @@ namespace Tests
         // count mismatch to slip through undetected.
         private static readonly char[] PlotChoiceValidationDelimiters = PlotChoiceStructuralDelimiters;
 
+        // Applies to every file/column (unlike the PlotData.csv-scoped check below) - the built-in
+        // placeholder-preservation check in LineValidation.CheckTransalationSuccessful only guards
+        // curly-brace "{0}"-style placeholders (LineValidation.PlaceholderMatchPattern); it has no
+        // awareness of this game's '#PlayerName#'/'#$SourceInteractName#'/'#$TargetInteractName#'
+        // tokens at all, so without this an LLM silently dropping the whole token (or just its '$')
+        // would pass validation unnoticed. One generic regex covers both the plain and '$'-prefixed
+        // forms (mirrors SplitterOptions.PlaceholderPatterns) - no per-token special casing needed.
+        private static readonly Regex GamePlaceholderTokenRegex = new(@"#\$?\w+#", RegexOptions.Compiled);
+
         private static string? ValidateGameSpecificColumn(TextFileToSplit textFile, int? column, string raw, string result)
         {
+            foreach (Match match in GamePlaceholderTokenRegex.Matches(raw))
+            {
+                if (!result.Contains(match.Value))
+                    return match.Value;
+            }
+
             if (textFile.Path == "PlotData.csv" && column == 9)
             {
                 foreach (var delimiter in PlotChoiceValidationDelimiters)
@@ -253,6 +274,21 @@ namespace Tests
             // column-decomposition path above - there's no row/column structure here, each line IS
             // the whole translatable unit.
             new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
+
+            // Hardcoded, runtime-assembled string literal fragments baked directly into IL2CPP
+            // game code (String.Concat/String.Format calls mixing Chinese literals with data).
+            // Candidates are discovered offline/statically via Converter's
+            // --dynamic-string-candidates mode (filters output/_string_map.csv for CJK values - no
+            // game run needed) - see the "dynamic/hardcoded in-code string translation plan" repo
+            // memory and DragonHeirPlugin/DynamicStringPatches.cs. Reviewed candidates are merged
+            // into Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt, a flat list of one distinct
+            // literal fragment per line, e.g. "架势". Handled by the generic
+            // FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow (same flat-list mechanics as
+            // PrefabTextWorkflow, kept as a distinct TextFileType/Workflow pair since the runtime
+            // consumption model differs - see DynamicStringWorkflow's doc comment). The plugin
+            // patches System.String.Concat/Format globally and applies the packaged raw/result
+            // dictionary as a substring replace, so no per-method configuration is needed here.
+            new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
         ];
 
         public static void ExportGameSpecificTextAssetsToCustomFormat(string workingDirectory)
@@ -350,7 +386,8 @@ namespace Tests
 
         public static void ExportDynamicStringTextAssetToCustomFormat(string workingDirectory)
         {
-            throw new NotImplementedException();
+            foreach (var textFile in TextFilesToSplit.Where(t => t.TextFileType == TextFileType.DynamicStringsIL2CPP))
+                DynamicStringWorkflow.ExportDynamicStringsToCustomFormat(workingDirectory, textFile, SplitterOptions);
         }
 
         public static async Task PackageFinalTranslationAsync(string workingDirectory, TextFileToSplit[] textFiles)
@@ -367,15 +404,29 @@ namespace Tests
             var passedCount = 0;
             var failedCount = 0;
 
-            // PrefabText files have no CSV row/column structure to reconstruct - ParseCsvRow below
-            // would misinterpret their plain-string Raw lines as CSV cells. Package those through
-            // the generic PrefabTextWorkflow instead, and only run the CSV reconstruction loop
-            // against genuine RegularDb files.
-            var csvTextFiles = textFiles.Where(t => t.TextFileType != TextFileType.PrefabText).ToArray();
+            // PrefabText/DynamicStringsIL2CPP files have no CSV row/column structure to
+            // reconstruct - ParseCsvRow below would misinterpret their plain-string Raw lines as
+            // CSV cells. Package those through their own generic workflows instead, and only run
+            // the CSV reconstruction loop against genuine RegularDb files.
+            var csvTextFiles = textFiles
+                .Where(t => t.TextFileType != TextFileType.PrefabText && t.TextFileType != TextFileType.DynamicStringsIL2CPP)
+                .ToArray();
             var prefabTextFiles = textFiles.Where(t => t.TextFileType == TextFileType.PrefabText);
+            var dynamicStringFiles = textFiles.Where(t => t.TextFileType == TextFileType.DynamicStringsIL2CPP);
 
             foreach (var prefabTextFile in prefabTextFiles)
-                await PrefabTextWorkflow.PackagePrefabTextAsync(workingDirectory, prefabTextFile);
+            {
+                var (passed, failed) = await PrefabTextWorkflow.PackagePrefabTextAsync(workingDirectory, prefabTextFile);
+                passedCount += passed;
+                failedCount += failed;
+            }
+
+            foreach (var dynamicStringFile in dynamicStringFiles)
+            {
+                var (passed, failed) = await DynamicStringWorkflow.PackageDynamicStringsAsync(workingDirectory, dynamicStringFile);
+                passedCount += passed;
+                failedCount += failed;
+            }
 
             await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
                 csvTextFiles,

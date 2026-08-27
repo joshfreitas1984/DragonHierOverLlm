@@ -80,6 +80,7 @@
     translated: "Just to meet you"
   - subIndex: 17
     text: "卿卿神"
+    translated: "Qingqing Shen"
   - subIndex: 18
     text: "燕四方"
     translated: "Four Directions Yan"
@@ -94,16 +95,16 @@
     translated: "Poisoned"
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "-0.5% All Attributes"
+    translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.25%生命上限"
-    translated: "-0.25% Health Maximum"
+    translated: "‑0.25% Health Maximum"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "-0.25% Inner Power Cap"
+    translated: "‑0.25% Inner Power Cap"
   - subIndex: 4
     text: "-0.25%体力上限"
-    translated: "-0.25% Max Stamina"
+    translated: "‑0.25% Max Stamina"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: "<b>体质</b>\\n+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性"
@@ -127,13 +128,13 @@
     translated: "Internal Injury"
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "-0.5% All Attributes"
+    translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "-0.5% Inner Power Cap"
+    translated: "‑0.5% Inner Power Cap"
   - subIndex: 3
     text: "-0.5%体力上限"
-    translated: "-0.5% Maximum Stamina Capacity"
+    translated: "‑0.5% Maximum Stamina Capacity"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>内功</b>\\n+1%内力上限"
@@ -211,10 +212,10 @@
     translated: "External Injury"
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "-0.5% All Attributes"
+    translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%生命上限"
-    translated: "-0.5% Health Maximum"
+    translated: "‑0.5% Health Maximum"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}"
 - raw: "<b>奇门</b>\\n提升奇门伤害\\n降低受到的奇门伤害"
@@ -642,16 +643,16 @@
     translated: "Speed up construction: monthly building production"
   - subIndex: 3
     text: "，建造消耗-5%，建造速度"
-    translated: ",Construction consumes -5% resources, construction speed"
+    translated: ",Construction consumes ‑5% resources, construction speed"
   - subIndex: 4
     text: "加快科研：科研消耗-5%，科研速度"
-    translated: "Speed up Research: Research consumption -5% , research speed"
+    translated: "Speed up Research: Research consumption ‑5% , research speed"
   - subIndex: 5
     text: "加快弟子晋升：晋升频率+5%，晋升消耗-5%，晋升武学等级"
-    translated: "Speed Up Disciple Promotion: Promotion Frequency +5%, Promotion Cost -5%, Martial Arts Level"
+    translated: "Speed Up Disciple Promotion: Promotion Frequency +5%, Promotion Cost ‑5%, Martial Arts Level"
   - subIndex: 6
     text: "，招募消耗-5%，月俸消耗"
-    translated: ",Recruitment costs -5% consumed, monthly salary costs consumed"
+    translated: ",Recruitment costs ‑5% consumed, monthly salary costs consumed"
   templates:
   - template: "♦{0}AI{1}\\n—{2}+{3}+5%\\n—{4}+5%\\n—{5}+{6}-2.5%"
 - raw: "♦消毒可以去除物品所带毒性。"
@@ -672,6 +673,7 @@
 - raw: "♦消耗耐心阅读文字，便可获得理论经验。\\n♦秘籍品质越高，随机文字内容越好。\\n♦提升建筑等级和对应技能可增加初始耐心。"
   splits:
   - text: "消耗耐心阅读文字，便可获得理论经验。"
+    translated: "Consume patience by reading the text to gain theoretical experience."
   - subIndex: 1
     text: "秘籍品质越高，随机文字内容越好。"
     translated: "The higher the quality of the cheat sheet, the better the random text content."
@@ -848,6 +850,7 @@
     translated: "Achievements can only be obtained in extremely difficult situations"
   - subIndex: 7
     text: "每10点难度+1天赋数上限"
+    translated: "Every 10 points increase Skill Cap by +1."
   - subIndex: 8
     text: "建议了解游戏机制后再调整自定义选项"
     translated: "I recommend understanding the game mechanics before adjusting the custom options."
@@ -945,6 +948,7 @@
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不以任何形式向未成年人提供网络游戏服务。"
   - subIndex: 5
     text: "本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。"
+    translated: "The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies."
   templates:
   - template: "1. {0}\\n\\n2. {1}\\n\\n3. {2}\\n<color=#BC1717>  〇 {3}\\n  〇 {4}</color>\\n\\n4. {5}\\n"
 - raw: "100天"
@@ -1147,16 +1151,16 @@
     translated: "Poisoned"
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "-0.5% All Attributes"
+    translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.25%生命上限"
-    translated: "-0.25% Health Maximum"
+    translated: "‑0.25% Health Maximum"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "-0.25% Inner Power Cap"
+    translated: "‑0.25% Inner Power Cap"
   - subIndex: 4
     text: "-0.25%体力上限"
-    translated: "-0.25% Max Stamina"
+    translated: "‑0.25% Max Stamina"
   templates:
   - template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: "中立"
@@ -1441,7 +1445,7 @@
     translated: "Strength"
   - subIndex: 1
     text: "体力小于50时，每减少1点-1%连击"
-    translated: "When your stamina is less than 50, every 1 point decrease grants -1% chance to combo."
+    translated: "When your stamina is less than 50, every 1 point decrease grants ‑1% chance to combo."
   - subIndex: 2
     text: "闪避。"
     translated: "Dodge"
@@ -1547,6 +1551,7 @@
 - raw: "信笺"
   splits:
   - text: "信笺"
+    translated: "Letterheaded paper"
 - raw: "修为"
   splits:
   - text: "修为"
@@ -1776,13 +1781,13 @@
     translated: "Internal Injury"
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "-0.5% All Attributes"
+    translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "-0.5% Inner Power Cap"
+    translated: "‑0.5% Inner Power Cap"
   - subIndex: 3
     text: "-0.25%体力上限"
-    translated: "-0.25% Max Stamina"
+    translated: "‑0.25% Max Stamina"
   templates:
   - template: "{0}\\n{1}\\n{2}\\n{3}"
 - raw: "内力"
@@ -2002,6 +2007,7 @@
     translated: "Refresh all commissions"
   - subIndex: 1
     text: "每月1次"
+    translated: "Monthly 1 times"
   templates:
   - template: "{0}\\n{1}"
 - raw: "刺客死士"
@@ -2233,6 +2239,7 @@
 - raw: "取寻仙问道之“仙”字，与陶弘景“心标象外，志结霞门”之“霞”字，"
   splits:
   - text: "取寻仙问道之“仙”字，与陶弘景“心标象外，志结霞门”之“霞”字，"
+    translated: "Take the character xian from the quest for immortality and questions of dao, and the xia character from Tao Hongjing's heart marked beyond form, will tied to the clouds."
 - raw: "取消"
   splits:
   - text: "取消"
@@ -2469,13 +2476,13 @@
     translated: "External Injury"
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "-0.5% All Attributes"
+    translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%生命上限"
-    translated: "-0.5% Health Maximum"
+    translated: "‑0.5% Health Maximum"
   - subIndex: 3
     text: "-0.25%体力上限"
-    translated: "-0.25% Max Stamina"
+    translated: "‑0.25% Max Stamina"
   templates:
   - template: "{0}\\n{1}\\n{2}\\n{3}"
 - raw: "外功"
@@ -3178,6 +3185,7 @@
     translated: "Reputation"
   - subIndex: 1
     text: "对好感"
+    translated: "For affection points"
   - subIndex: 2
     text: "交易等造成负面影响，超过50会被通缉。"
     translated: "Trading activities causing negative impacts will result in a wanted notice if they exceed 50."
@@ -3349,6 +3357,7 @@
 - raw: "所有生活技艺+3"
   splits:
   - text: "所有生活技艺"
+    translated: "All life skills"
   templates:
   - template: "{0}+3"
 - raw: "所有生活技艺潜力+1"
@@ -3677,6 +3686,7 @@
 - raw: "新建"
   splits:
   - text: "新建"
+    translated: "Create New"
 - raw: "新手推荐！"
   splits:
   - text: "新手推荐！"
@@ -4187,6 +4197,7 @@
     translated: "Greater than 90: Production Efficiency"
   - subIndex: 5
     text: "高民心增加委托数量，降低委托难度；低民心减少委托数量，提升委托难度。"
+    translated: "While high morale increases the number of commissions and lowers their difficulty, low morale decreases the number of commissions and raises their difficulty."
   - subIndex: 6
     text: "影响攻城战守卫强度。"
     translated: "Affects the defense strength in sieges"
@@ -4344,6 +4355,7 @@
 - raw: "温馨提示"
   splits:
   - text: "温馨提示"
+    translated: "Warm reminder"
 - raw: "游侠"
   splits:
   - text: "游侠"
@@ -4837,6 +4849,7 @@
     translated: "Chapter Three"
   - subIndex: 1
     text: "江湖翻沸壮士死"
+    translated: "Jianghu boils; valiant warriors die"
   - subIndex: 2
     text: "天下大势："
     translated: "The great trend of the world:"
@@ -4924,6 +4937,8 @@
     translated: "Shortcut keys"
   - subIndex: 2
     text: "全体自动"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Failed"
   - subIndex: 3
     text: "快捷键"
     translated: "Shortcut keys"
@@ -5182,6 +5197,7 @@
 - raw: "自巫峡东至西陵峡，群山皆连绵无断处，怪石穿空，奇峰耸峙。"
   splits:
   - text: "自巫峡东至西陵峡，群山皆连绵无断处，怪石穿空，奇峰耸峙。"
+    translated: "From Wu Gorge to Xiling Gorge, the mountains stretch continuously with no breaks, their strange rocks piercing the sky, and magnificent peaks rising majestically."
 - raw: "自由模式"
   splits:
   - text: "自由模式"
@@ -5205,6 +5221,7 @@
 - raw: "至少6位"
   splits:
   - text: "至少6位"
+    translated: "At least 6 people agree with them"
 - raw: "舵主"
   splits:
   - text: "舵主"
@@ -5407,6 +5424,7 @@
 - raw: "解锁才子服"
   splits:
   - text: "解锁才子服"
+    translated: "Unlock Scholar Attire"
 - raw: "解锁杀手服"
   splits:
   - text: "解锁杀手服"
@@ -5962,6 +5980,7 @@
     translated: "After reaching the limit, you will be unable to recruit or promote disciples."
   - subIndex: 2
     text: "可通过科研、升级正厅和宿舍、占领更多区域等提升人口上限"
+    translated: "You can increase the population limit by upgrading the main hall and dormitories through research, claiming more areas, and other methods."
   - subIndex: 3
     text: "不同级别弟子分别占用人口1"
     translated: "Disciples of different ranks occupy population slots 1"

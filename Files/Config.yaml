@@ -14,7 +14,7 @@ glossaryPreset:
   chineseGlossaryTypesToSupress:
     - Phonetics
 useContinuousWorkerPool: true
-maxConcurrency: 4 # Ollama is capped anyway
+maxConcurrency: 2 # Ollama is capped anyway
 retryCount: 1 # Dropped from 3 - no stronger model to escalate to, so extra retries mostly just burn time on the same qwen2.5:7b model
 # Escalation: once a split exhausts `retryCount` against its normal model and is still invalid, it
 # gets escalationRetryCount extra attempts against the model named here (must match a `name` under

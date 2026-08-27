@@ -28,6 +28,12 @@ public class FileInputWorkflowTests
         GameFileHandling.ExportPrefabTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
     }
 
+    [Fact(DisplayName = "1c. ExportDynamicStringsIntoTranslated")]
+    public void ExportDynamicStringsIntoTranslated()
+    {
+        GameFileHandling.ExportDynamicStringTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
+    }
+
     [Fact(DisplayName = "2. MergeFilesIntoTranslated")]
     public async Task MergeFilesIntoTranslated()
     {

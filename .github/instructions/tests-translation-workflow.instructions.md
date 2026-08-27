@@ -192,9 +192,70 @@ similar flat-list dumper can reuse this as-is):
   (`Translated` empty, `FlaggedForRetranslation`, or `!SafeToTranslate`) — so the output always has
   one entry per dumped string, never a missing key. Runtime lookup (a future `DragonHeirPlugin`
   patch) is expected to key off exact `raw` string match.
+- **Bug fixed (2026-08-27): a failed split was invisible in `PackageFinalTranslationAsync`'s
+  printed `Passed`/`Failed` totals for `PrefabText`/`DynamicStringsIL2CPP` files.** The
+  reconstruction fallback-to-raw logic itself was always correct (a flagged/unsafe/untranslated
+  fragment already correctly forced the whole line back to `Raw` in the packaged YAML), but
+  `PrefabTextWorkflow.PackagePrefabTextAsync`/`DynamicStringWorkflow.PackageDynamicStringsAsync`
+  never reported which lines fell back vs. genuinely translated — so those failures never
+  contributed to the counts, making a raw-fallback line look identical to a real pass in the run's
+  reported stats (only the CSV `RegularDb` path via `GameFileHandling.PackageFinalTranslationAsync`
+  tracked `passedCount`/`failedCount` at all). Both workflow methods now return a `(int Passed, int
+  Failed)` tuple (their private `ReconstructLine` returns `(string? Result, bool Failed)`), and
+  `GameFileHandling.PackageFinalTranslationAsync` adds these into its existing totals. If either
+  method's signature changes again, re-check this aggregation still compiles/wires up correctly.
 - **Still not implemented:** the runtime BepInEx plugin patch in `DragonHeirPlugin/` that actually
   reads `dumpedPrefabText.txt.yaml` and substitutes translated text back into `UI.Text`/`TMP_Text`
   components at runtime.
+
+## DynamicStringsIL2CPP pipeline (`dynamicStrings.txt` → `Files/Mod/dynamicStrings.txt.yaml`)
+
+Hardcoded, runtime-assembled string literal fragments compiled directly into IL2CPP game code
+(e.g. a `String.Concat`/`String.Format` call mixing a Chinese literal like `"架势"` with data such
+as a save-slot's task text) - see the `dynamic-string-translation-plan` repo memory and
+`DragonHeirPlugin/DynamicStringPatches.cs`. Handled by
+`FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow`, mechanically almost identical to the
+PrefabText pipeline above (flat list of distinct strings -> standard TranslationLine YAML ->
+Export/Converted/translate -> flat raw/result YAML) but kept as its own `TextFileType` (
+`DynamicStringsIL2CPP` - deliberately NOT the older, unrelated `TextFileType.DynamicStrings`,
+which targeted a Mono/Cecil-transpiler approach that doesn't work against IL2CPP) and its own
+`Workflow` class, since the runtime consumption model differs: a PrefabText result is looked up by
+an exact *whole-string* match against a UI component's full text, whereas a DynamicStringsIL2CPP
+result is applied as an exact *substring* replacement against a small hardcoded fragment of a
+larger, otherwise data-driven runtime string.
+
+- **Candidate discovery is fully static/offline** (unlike PrefabText's offline asset scan, but
+  equally no game run needed): `Converter`'s `--dynamic-string-candidates` mode filters the
+  already-extracted `output/_string_map.csv` (every string literal compiled into the game's IL2CPP
+  binary - see `Converter/Services/StringMapExtractor.cs`) for CJK-containing values and writes the
+  distinct results to `output/_dynamicStrings_candidates.txt`, one per line. Run it with `--dll
+  <manifest-or-dummy-dll>` (only needs the DLL path to satisfy `Config.Validate`, no
+  `--binary`/`--ghidra` required) plus `--output ./output` and `--exclude-file
+  ../Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` to skip fragments already curated. Review
+  the candidates file (it includes plenty of noise - debug/internal strings, data already covered
+  by the CSV/PrefabText pipelines, etc.) and merge genuine hardcoded UI/dialogue fragments into
+  `Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` - one distinct literal fragment per line
+  (just the bare Chinese text, e.g. `架势` - not surrounding whitespace it happens to be
+  concatenated with).
+- `GameFileHandling.TextFilesToSplit` has a `dynamicStrings.txt` entry with `TextFileType =
+  TextFileType.DynamicStringsIL2CPP`.
+- `GameFileHandling.ExportDynamicStringTextAssetToCustomFormat` (run via
+  `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"`, right after step 1b, before
+  step 2's merge) calls `DynamicStringWorkflow.ExportDynamicStringsToCustomFormat`.
+- `GameFileHandling.PackageFinalTranslationAsync` filters `TextFileType.DynamicStringsIL2CPP`
+  entries out of the CSV reconstruction loop (same as PrefabText) and calls
+  `DynamicStringWorkflow.PackageDynamicStringsAsync` for each, producing
+  `Files/Mod/dynamicStrings.txt.yaml` - a flat list of `DynamicStringResult { Raw, Result }`
+  (`raw`/`result` YAML keys), the same shape as PrefabText's output.
+- **No per-method configuration needed at runtime** - the static extraction has no way to
+  attribute a literal back to the specific Type+Method that concatenates it, so
+  `DragonHeirPlugin/DynamicStringPatches.cs` doesn't try to target specific methods at all. Instead
+  it reflects over every public static, non-generic, string-returning overload of
+  `System.String.Concat`/`System.String.Format` and Harmony-postfixes all of them with one generic
+  postfix that applies every `dynamicStrings.txt.yaml` entry as an exact substring replace
+  (`__result.Replace(raw, result)`) - this is a plain BCL type, not an IL2CPP-wrapped game type, so
+  patching it is an ordinary, fully-safe Harmony patch. Catches the fragment regardless of which
+  game method builds the string.
 
 ## Working directory layout (`Files/`)
 
@@ -283,10 +344,15 @@ casing should be needed):
   compact stat-modifier label) correctly stays split as fragment `威望` + literal `+10` — the
   sign/percent fusion only kicks in when it's genuinely embedded in surrounding text.
 
-### Game placeholder tokens (`#PlayerName#`)
+### Game placeholder tokens (`#PlayerName#`, `#$PlayerName#`, `#$SourceInteractName#`, `#$TargetInteractName#`)
 
-This game uses `#PlayerName#`-style tokens (`#` + word chars + `#`) as a dynamic placeholder the
-game engine substitutes at runtime (player name, etc.). Its position in the sentence can
+This game uses `#PlayerName#`-style tokens (`#` + optional `$` + word chars + `#`) as a dynamic
+placeholder the game engine substitutes at runtime (player name, NPC name in an interaction,
+etc.) - the `$`-prefixed variants (`#$PlayerName#`, `#$SourceInteractName#`,
+`#$TargetInteractName#`) behave identically to the plain ones, just a different naming convention
+in the dump, and are covered by the same `PlaceholderPatterns` regex (`#\$?\w+#` in
+`GameFileHandling.SplitterOptions` - `\w` alone doesn't include `$`, so the pattern needs the
+explicit `\$?` to match these). Its position in the sentence can
 legitimately change during translation, so it must **never** be a fixed fragment boundary — e.g.
 `欢迎回来，#PlayerName#，今天也要加油哦` must decompose to a **single** fragment (template `{0}`),
 not `{0}#PlayerName#{1}` with the placeholder pinned as fixed literal text between two

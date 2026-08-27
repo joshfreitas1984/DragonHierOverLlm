@@ -270,7 +270,7 @@
   - split: 3
     subIndex: 1
     text: "#PlayerName#要不要一起？"
-    translated: "Do you want to come along?"
+    translated: "#PlayerName#, want to do it together?"
   - split: 4
     text: "读万卷书，行万里路，方为修行之道。"
     translated: "Read ten thousand books and travel ten thousand miles to truly master the way of cultivation."

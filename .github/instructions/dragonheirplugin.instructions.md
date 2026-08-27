@@ -131,6 +131,33 @@ Found via the same raw-metadata-dump technique as above, applied this time to
 the `Il2CppInterop.Runtime.IL2CPP` static helper class's full method list and find the non-generic
 string/class-name accessors.
 
+## Gotcha: Harmony prefix parameter name must match the real IL2CPP parameter name (not just type)
+
+Harmony matches prefix/postfix parameters to the original method's parameters **by name**, not
+just by position/type. Two `GlobalData` patches broke this way and both only surfaced at
+`Harmony.CreateAndPatchAll()` / plugin-load time (not compile time, and not even at `HarmonyPatch`
+attribute resolution — `nameof(GlobalData.X)` finds the method fine), deep in IL emission:
+`HarmonyException: IL Compile Error` → `System.Exception: Parameter "<wrong-name>" not found in
+method ...`, crashing the whole plugin load (every patch in the same `PatchAll` call fails to
+apply as a result):
+- `ConvertNumToChinese_Prefix` was declared `(uint num, ref string __result)` but the real
+  interop signature is `static string ConvertNumToChinese(int input)` — wrong type (`uint` vs
+  `int`) *and* wrong name (`num` vs `input`).
+- `GetChineseNumText_Prefix` was declared `(int num, ref char __result)` but the real signature is
+  `static char GetChineseNumText(int id)` — right type, wrong name (`num` vs `id`).
+- `GetNumText_Prefix`'s `(int num, ...)` happens to already match the real parameter name (`num`),
+  which is why it never broke.
+
+Fix in both cases: rename the prefix parameter to match the real name exactly and match its real
+type. Note that `HarmonyManipulator.WritePrefixes` appears to stop applying further patches in the
+same class after the first one throws during IL compilation — the `ConvertNumToChinese` error had
+to be fixed and redeployed before the *next* bad patch (`GetChineseNumText`) even surfaced in the
+log, so don't assume a single fix-and-retry cycle catches every bad patch in the file; re-check
+all `[HarmonyPatch(typeof(GlobalData), ...)]` (and other interop-type) prefixes' parameter names
+against the real DLL after any such failure, rather than fixing one at a time reactively. When
+adding a new Harmony patch, verify the original method's exact parameter names via the interop DLL
+(see "Debugging tips" below) rather than guessing from decompiled/legacy variable names.
+
 ## Debugging tips
 
 Before writing any interop-touching code, verify real signatures against the actual

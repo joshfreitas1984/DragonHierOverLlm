@@ -79,6 +79,38 @@ if (cfg.Diag)
     return 0;
 }
 
+// ── 1c. Dynamic-string candidate extraction mode ─────────────────────────────
+if (cfg.DynamicStringCandidates)
+{
+    string mapCsvPath = Path.Combine(cfg.OutputDir, "_string_map.csv");
+    if (!File.Exists(mapCsvPath))
+    {
+        Console.Error.WriteLine($"[ERROR] {mapCsvPath} not found - run a normal decompile pass first to generate it.");
+        return 1;
+    }
+
+    string candidatesPath = Path.Combine(cfg.OutputDir, "_dynamicStrings_candidates.txt");
+    Console.WriteLine("[DynamicStringCandidates] Filtering _string_map.csv for CJK-containing literals...");
+    if (!string.IsNullOrEmpty(cfg.ExcludeFile))
+        Console.WriteLine($"  Excluding fragments already listed in: {cfg.ExcludeFile}");
+
+    string? decompiledDir = null;
+    if (!cfg.NoExcludeLogStrings)
+    {
+        decompiledDir = !string.IsNullOrEmpty(cfg.DecompiledDir)
+            ? cfg.DecompiledDir
+            : Path.Combine(cfg.OutputDir, "_decompiled");
+        if (Directory.Exists(decompiledDir))
+            Console.WriteLine($"  Excluding Debug.Log-only strings found under: {decompiledDir}");
+        else
+            decompiledDir = null;
+    }
+
+    int count = StringMapExtractor.ExtractDynamicStringCandidates(mapCsvPath, candidatesPath, cfg.ExcludeFile, decompiledDir);
+    Console.WriteLine($"  Wrote {count} candidate(s) -> {candidatesPath}");
+    return 0;
+}
+
 // ── 2. Parse dummy DLL ────────────────────────────────────────────────────────
 Console.WriteLine("[1/4] Parsing dummy DLL...");
 var parser = new DllParser();

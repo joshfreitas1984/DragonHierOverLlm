@@ -36,6 +36,37 @@ public class Config
     /// <summary>Dump raw custom-attribute names/values for the first few types and exit.</summary>
     public bool Diag { get; set; } = false;
 
+    /// <summary>
+    /// Filter --output/_string_map.csv for CJK-containing string literals and write the
+    /// distinct candidates (one per line) to --output/_dynamicStrings_candidates.txt, then
+    /// exit. Does not require --dll/--binary/--ghidra - only needs a previously-extracted
+    /// _string_map.csv (see StringMapExtractor). Used to discover case-4 dynamic-string
+    /// translation candidates offline, without launching the game.
+    /// </summary>
+    public bool DynamicStringCandidates { get; set; } = false;
+
+    /// <summary>
+    /// Optional, used only with --dynamic-string-candidates: path to a file listing already-
+    /// known raw fragments (one per line, e.g. Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt)
+    /// to exclude from the candidates output.
+    /// </summary>
+    public string ExcludeFile { get; set; } = "";
+
+    /// <summary>
+    /// Optional, used only with --dynamic-string-candidates: path to the decompiled .c output
+    /// folder (Converter's own output/_decompiled by default - auto-filled from --output if not
+    /// set explicitly) to scan for Debug.Log-family call sites, so developer/diagnostic-only
+    /// string literals can be excluded from the candidates output. Pass --no-exclude-log-strings
+    /// to skip this scan even if the folder exists.
+    /// </summary>
+    public string DecompiledDir { get; set; } = "";
+
+    /// <summary>
+    /// When true (default), --dynamic-string-candidates skips the Debug.Log call-site scan
+    /// entirely even if a decompiled folder is found/provided.
+    /// </summary>
+    public bool NoExcludeLogStrings { get; set; } = false;
+
     /// <summary>Only parse the DLL and write the manifest; do not run Ghidra.</summary>
     public bool SkipDecompile { get; set; } = false;
 
@@ -126,6 +157,10 @@ public class Config
                 case "--use-offset": cfg.UseFileOffset = true; break;
                 case "--diag": cfg.Diag = true; break;
                 case "--all-namespaces": cfg.AllNamespaces = true; break;
+                case "--dynamic-string-candidates": cfg.DynamicStringCandidates = true; break;
+                case "--exclude-file": cfg.ExcludeFile = args[++i]; break;
+                case "--decompiled-dir": cfg.DecompiledDir = args[++i]; break;
+                case "--no-exclude-log-strings": cfg.NoExcludeLogStrings = true; break;
                 case "--help":
                 case "-h":
                     PrintHelp();
@@ -199,6 +234,8 @@ public class Config
         }
 
         // ── Validate required paths (after auto-discovery) ────────────────────
+        if (DynamicStringCandidates) return; // only needs --output/_string_map.csv, no DLL/binary/ghidra
+
         if (string.IsNullOrEmpty(DllPath))
             throw new ArgumentException("--dll <path>  is required (or use --game-dir to auto-discover)");
         if (!File.Exists(DllPath))
@@ -256,6 +293,20 @@ public class Config
               --skip-decompile         Parse DLL & write manifest only; do not run Ghidra
               --use-offset             Pass file Offset to Ghidra instead of RVA
               --all-namespaces         Include all namespaces (default: _NoNamespace only)
+              --dynamic-string-candidates
+                                       Filter output/_string_map.csv for CJK string literals and
+                                       write output/_dynamicStrings_candidates.txt, then exit.
+                                       Only needs an existing _string_map.csv (--dll/--binary/
+                                       --ghidra not required). Pair with --exclude-file to skip
+                                       fragments already known.
+              --exclude-file  <path>   With --dynamic-string-candidates: file of already-known
+                                       raw fragments (one per line) to exclude from the output.
+              --decompiled-dir <dir>   With --dynamic-string-candidates: decompiled .c folder to
+                                       scan for Debug.Log-family call sites, excluding those
+                                       string values from the candidates output (default:
+                                       <output>/_decompiled).
+              --no-exclude-log-strings With --dynamic-string-candidates: skip the Debug.Log
+                                       call-site scan entirely.
               --help                   Show this message
             """);
     }
