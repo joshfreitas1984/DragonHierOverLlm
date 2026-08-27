@@ -32,6 +32,11 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(MainPlugin));
         Harmony.CreateAndPatchAll(typeof(ResourceIoPatches));
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));
+        // Nested patch class - Harmony.CreateAndPatchAll(Type) does not recurse into nested types,
+        // so AssetBundleLoadAssetPatch (which needs its own [HarmonyTargetMethod] to resolve the
+        // ambiguous AssetBundle.LoadAsset(string) overload - see PrefabTextPatches.cs) must be
+        // patched explicitly.
+        Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.AssetBundleLoadAssetPatch));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Harmony.CreateAndPatchAll(typeof(CrashMitigationPatches));
         Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));

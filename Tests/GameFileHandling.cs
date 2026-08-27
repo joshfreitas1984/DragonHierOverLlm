@@ -345,7 +345,7 @@ namespace Tests
         public static void ExportPrefabTextAssetToCustomFormat(string workingDirectory)
         {
             foreach (var textFile in TextFilesToSplit.Where(t => t.TextFileType == TextFileType.PrefabText))
-                PrefabTextWorkflow.ExportPrefabTextToCustomFormat(workingDirectory, textFile);
+                PrefabTextWorkflow.ExportPrefabTextToCustomFormat(workingDirectory, textFile, SplitterOptions);
         }
 
         public static void ExportDynamicStringTextAssetToCustomFormat(string workingDirectory)

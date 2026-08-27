@@ -258,16 +258,44 @@ returned object's real IL2CPP class directly via `IL2CPP.il2cpp_object_get_class
 `il2cpp_class_get_namespace_`/`il2cpp_class_get_name_` — the same non-generic technique
 `UnityLogCapture.FormatMessage` already uses for `Il2CppSystem.Object` — rather than casting.
 
-**Dictionary format/location:** `PrefabTextPatches` loads
-`BepInEx\plugins\resources\dumpedPrefabText.txt.yaml` (same `resources` folder convention as
-`ResourceIoPatches`' CSV overrides) — the flat raw/result YAML list produced by
+**Dictionary format/location:** `PrefabTextPatches` searches recursively under
+`BepInEx\plugins\resources\` for a file named `dumpedPrefabText.txt.yaml` (NOT a fixed flat path -
+it's actually deployed at `resources\GameData\dumpedPrefabText.txt.yaml`, mirroring the CSV
+overrides' subfolder convention) — the flat raw/result YAML list produced by
 `FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow.PackagePrefabTextAsync`
 (`Files/Mod/dumpedPrefabText.txt.yaml`) — via a `YamlDotNet` `PackageReference` embedded through
 Costura.Fody (same `CopyLocalLockFileAssemblies=true` + Costura pattern as
 `System.Text.Encoding.CodePages`; confirmed embedded by checking
 `costura.yamldotnet.dll.compressed` appears in the built DLL's `GetManifestResourceNames()`).
 Replacement is an exact raw-string dictionary lookup, matching each component's current
-`.text` verbatim before overwriting it.
+`.text` verbatim before overwriting it. **Deserializer gotcha:** the dictionary YAML keys are
+lowercase (`raw`/`result` — matching `PrefabTextResult`'s YamlDotNet-serialized camelCase output),
+so the plugin's `DeserializerBuilder` must configure `.WithNamingConvention(CamelCaseNamingConvention.Instance)`
+(and `.IgnoreUnmatchedProperties()`) — a plain `new DeserializerBuilder().Build()` with no naming
+convention requires an exact PascalCase match and throws
+`YamlException: Property 'raw' not found on type '...PrefabTextEntry'` for every entry.
+
+**Harmony `[HarmonyTargetMethod]` + class-level `[HarmonyPatch]` gotcha:** when a nested patch
+class uses `[HarmonyTargetMethod]` to manually resolve an ambiguous overload (see
+`AssetBundleLoadAssetPatch` above), the class-level `[HarmonyPatch(...)]` attribute must specify
+**only the declaring type** — adding a method name/args overload to that same attribute (e.g.
+`[HarmonyPatch(typeof(AssetBundle), nameof(AssetBundle.LoadAsset))]`) throws
+`ArgumentException: You cannot combine TargetMethod, TargetMethods or [HarmonyPatchAll] with
+individual annotations` at `Harmony.CreateAndPatchAll` time (plugin fails to load entirely) — the
+`TargetMethod()` resolver must be the *only* way Harmony determines what to patch on that class.
+
+**Gap found by live testing: `Resources.Load`/`AssetBundle.LoadAsset` alone miss scene-embedded
+UI (e.g. the Start/title screen).** A GameObject that's part of a scene file's own serialized
+contents (not a standalone prefab asset) is instantiated directly by Unity's scene loader and
+never passes through either load call, so the dictionary loaded fine but no on-screen text ever
+changed for that screen. Fixed by also patching
+`[HarmonyPatch(typeof(UnityEngine.SceneManagement.SceneManager), "Internal_SceneLoaded")]` (a
+private static method, patched by string name — confirmed non-ambiguous via reflection, only one
+overload exists) and walking `scene.GetRootGameObjects()` with the same recursive tree-walk used
+for the asset-load patches, once the scene has fully finished loading. If more untranslated text
+turns up later, check whether it's genuinely scene-embedded vs. a prefab loaded through some other
+call this doesn't cover yet (e.g. `AssetBundle.LoadAssetAsync`, addressables) before assuming the
+dictionary itself is incomplete.
 
 
 

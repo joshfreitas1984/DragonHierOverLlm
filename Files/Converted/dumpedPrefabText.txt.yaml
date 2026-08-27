@@ -1,0 +1,6286 @@
+- raw: "                                                            99年99月99日"
+  splits:
+  - text: "99年99月99日"
+    translated: "99 year 99 month 99 day"
+  templates:
+  - template: "                                                            {0}"
+- raw: "(副掌门以上方可参阅)"
+  splits:
+  - text: "副掌门以上方可参阅"
+    translated: "Only the Deputy Sect Leader and above can review."
+  templates:
+  - template: "({0})"
+- raw: "(副掌门门以上方可参阅)"
+  splits:
+  - text: "副掌门门以上方可参阅"
+    translated: "Only the Sect Leader and above may refer to this."
+  templates:
+  - template: "({0})"
+- raw: "[长按]"
+  splits:
+  - text: "长按"
+    translated: "Press and hold"
+  templates:
+  - template: "[{0}]"
+- raw: "《龙胤立志传》适龄游戏提示"
+  splits:
+  - text: "《龙胤立志传》适龄游戏提示"
+    translated: "Age‑appropriate game notice for Dragon Heritage Determination Chronicles"
+- raw: "<b>(所有排名均不分先后)</b>\\n策划：ZPP\\n程序：ZPP\\n美术：TPP\\n\\n发行：青豆，Sherry，Ouyi，lele，Lost，云起龙骧，小云，谦谦，黄国，狗狗\\n测试：郑煜，夏田怡静，蒋晟，云起龙骧\\n玩家支持：椰子，Dr.玄\\n\\n特别鸣谢\\n参与自由模式测试的玩家：\\n椰子 \\n奥西法\\n月下饮江河\\n馒头君\\n河物休\\n只为遇见你\\n卿卿神\\n燕四方\\n妙手回春海森保\\nShades"
+  splits:
+  - text: "所有排名均不分先后"
+    translated: "All rankings are unordered"
+  - subIndex: 1
+    text: "策划："
+    translated: "Planner:"
+  - subIndex: 2
+    text: "程序："
+    translated: "Program:"
+  - subIndex: 3
+    text: "美术："
+    translated: "Artistry:"
+  - subIndex: 4
+    text: "发行：青豆，"
+    translated: "Publisher: Qingdou"
+  - subIndex: 5
+    text: "，云起龙骧，小云，谦谦，黄国，狗狗"
+    translated: ",Rising Clouds and Ascending Dragons, Xiao Yun, Humble Hum, Yellow State, Doggies"
+  - subIndex: 6
+    text: "测试：郑煜，夏田怡静，蒋晟，云起龙骧"
+    translated: "Test: Zheng Yu, Xia Tianyi Jing, Jiang Sheng, Yun Qi Long Xiang"
+  - subIndex: 7
+    text: "玩家支持：椰子，"
+    translated: "Player Support: Coconut"
+  - subIndex: 8
+    text: ".玄"
+    translated: ".Xuan"
+  - subIndex: 9
+    text: "特别鸣谢"
+    translated: "Special thanks"
+  - subIndex: 10
+    text: "参与自由模式测试的玩家："
+    translated: "Players participating in the free mode test:"
+  - subIndex: 11
+    text: "椰子"
+    translated: "Coconut"
+  - subIndex: 12
+    text: "奥西法"
+    translated: "Oxifa"
+  - subIndex: 13
+    text: "月下饮江河"
+    translated: "Drinking by the riverside under the moonlight"
+  - subIndex: 14
+    text: "馒头君"
+    translated: "Steamed bun king"
+  - subIndex: 15
+    text: "河物休"
+    translated: "River Relic Restorer"
+  - subIndex: 16
+    text: "只为遇见你"
+    translated: "Just to meet you"
+  - subIndex: 17
+    text: "卿卿神"
+  - subIndex: 18
+    text: "燕四方"
+    translated: "Four Directions Yan"
+  - subIndex: 19
+    text: "妙手回春海森保"
+    translated: "Hai Senbao Revives with Skill"
+  templates:
+  - template: "<b>({0})</b>\\n{1}ZPP\\n{2}ZPP\\n{3}TPP\\n\\n{4}Sherry，Ouyi，lele，Lost{5}\\n{6}\\n{7}Dr{8}\\n\\n{9}\\n{10}\\n{11} \\n{12}\\n{13}\\n{14}\\n{15}\\n{16}\\n{17}\\n{18}\\n{19}\\nShades"
+- raw: "<b>中毒</b>\\n-0.5%全属性\\n-0.25%生命上限\\n-0.25%内力上限\\n-0.25%体力上限"
+  splits:
+  - text: "中毒"
+    translated: "Poisoned"
+  - subIndex: 1
+    text: "-0.5%全属性"
+    translated: "-0.5% All Attributes"
+  - subIndex: 2
+    text: "-0.25%生命上限"
+    translated: "-0.25% Health Maximum"
+  - subIndex: 3
+    text: "-0.25%内力上限"
+    translated: "-0.25% Inner Power Cap"
+  - subIndex: 4
+    text: "-0.25%体力上限"
+    translated: "-0.25% Max Stamina"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}\\n{4}"
+- raw: "<b>体质</b>\\n+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性"
+  splits:
+  - text: "体质"
+    translated: "Physique"
+  - subIndex: 1
+    text: "+1生命上限"
+    translated: "+1 Health Points"
+  - subIndex: 2
+    text: "+0.5%压制"
+    translated: "+0.5% Suppression"
+  - subIndex: 3
+    text: "+0.5%伤势抗性"
+    translated: "+0.5% injury resistance"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
+- raw: "<b>内伤</b>\\n-0.5%全属性\\n-0.5%内力上限\\n-0.5%体力上限"
+  splits:
+  - text: "内伤"
+    translated: "Internal Injury"
+  - subIndex: 1
+    text: "-0.5%全属性"
+    translated: "-0.5% All Attributes"
+  - subIndex: 2
+    text: "-0.5%内力上限"
+    translated: "-0.5% Inner Power Cap"
+  - subIndex: 3
+    text: "-0.5%体力上限"
+    translated: "-0.5% Maximum Stamina Capacity"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
+- raw: "<b>内功</b>\\n+1%内力上限"
+  splits:
+  - text: "内功"
+    translated: "Neigong"
+  - subIndex: 1
+    text: "+1%内力上限"
+    translated: "+1% Inner Power Cap"
+  templates:
+  - template: "<b>{0}</b>\\n{1}"
+- raw: "<b>刀法</b>\\n提升刀法伤害\\n降低受到的刀法伤害"
+  splits:
+  - text: "刀法"
+    translated: "Blade Art"
+  - subIndex: 1
+    text: "提升刀法伤害"
+    translated: "Boost Blade Art damage"
+  - subIndex: 2
+    text: "降低受到的刀法伤害"
+    translated: "Reduce damage from blade techniques"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}"
+- raw: "<b>剑法</b>\\n提升剑法伤害\\n降低受到的剑法伤害"
+  splits:
+  - text: "剑法"
+    translated: "Sword Art"
+  - subIndex: 1
+    text: "提升剑法伤害"
+    translated: "Enhance sword technique damage"
+  - subIndex: 2
+    text: "降低受到的剑法伤害"
+    translated: "Reduce damage from sword techniques"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}"
+- raw: "<b>力道</b>\\n+0.5%暴击\\n+0.5%断连\\n+1装备负重"
+  splits:
+  - text: "力道"
+    translated: "Strength"
+  - subIndex: 1
+    text: "+0.5%暴击"
+    translated: "+0.5% Critical Hit"
+  - subIndex: 2
+    text: "+0.5%断连"
+    translated: "+0.5% Disconnected"
+  - subIndex: 3
+    text: "+1装备负重"
+    translated: "+1 load capacity for equipment"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
+- raw: "<b>医术</b>\\n影响治疗外伤/内伤的效率"
+  splits:
+  - text: "医术"
+    translated: "Medicine"
+  - subIndex: 1
+    text: "影响治疗外伤"
+    translated: "Affecting External Injuries Treatment"
+  - subIndex: 2
+    text: "内伤的效率"
+    translated: "Internal Injury's efficiency"
+  templates:
+  - template: "<b>{0}</b>\\n{1}/{2}"
+- raw: "<b>口才</b>\\n影响交易价格，论战，以及获取门派银钱的效率"
+  splits:
+  - text: "口才"
+    translated: "Eloquence"
+  - subIndex: 1
+    text: "影响交易价格，论战，以及获取门派银钱的效率"
+    translated: "Affect trading prices, debates, and the efficiency of obtaining sect silver."
+  templates:
+  - template: "<b>{0}</b>\\n{1}"
+- raw: "<b>外伤</b>\\n-0.5%全属性\\n-0.5%生命上限"
+  splits:
+  - text: "外伤"
+    translated: "External Injury"
+  - subIndex: 1
+    text: "-0.5%全属性"
+    translated: "-0.5% All Attributes"
+  - subIndex: 2
+    text: "-0.5%生命上限"
+    translated: "-0.5% Health Maximum"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}"
+- raw: "<b>奇门</b>\\n提升奇门伤害\\n降低受到的奇门伤害"
+  splits:
+  - text: "奇门"
+    translated: "Qi Men"
+  - subIndex: 1
+    text: "提升奇门伤害"
+    translated: "Boost Oddly Gate Damage"
+  - subIndex: 2
+    text: "降低受到的奇门伤害"
+    translated: "Reduce damage from qimen attacks"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}"
+- raw: "<b>学识</b>\\n影响珍宝鉴定，论战，以及获取门派威望的效率"
+  splits:
+  - text: "学识"
+    translated: "Scholarship"
+  - subIndex: 1
+    text: "影响珍宝鉴定，论战，以及获取门派威望的效率"
+    translated: "Influences the efficiency of treasure appraisal, debates, and sect reputation gain"
+  templates:
+  - template: "<b>{0}</b>\\n{1}"
+- raw: "<b>射术</b>\\n提升射术伤害\\n降低受到的射术伤害"
+  splits:
+  - text: "射术"
+    translated: "Archery"
+  - subIndex: 1
+    text: "提升射术伤害"
+    translated: "Increase arrow damage"
+  - subIndex: 2
+    text: "降低受到的射术伤害"
+    translated: "Reduce their arrow damage taken"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}"
+- raw: "<b>意志</b>\\n+0.5%反击\\n+0.5%护甲\\n+0.5%负面抗性"
+  splits:
+  - text: "意志"
+    translated: "Willpower"
+  - subIndex: 1
+    text: "+0.5%反击"
+    translated: "+0.5% Counterattack"
+  - subIndex: 2
+    text: "+0.5%护甲"
+    translated: "+0.5% Armor"
+  - subIndex: 3
+    text: "+0.5%负面抗性"
+    translated: "+0.5% Negative Resistance"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
+- raw: "<b>拳掌</b>\\n提升拳掌伤害\\n降低受到的拳掌伤害"
+  splits:
+  - text: "拳掌"
+    translated: "Fists and palms"
+  - subIndex: 1
+    text: "提升拳掌伤害"
+    translated: "Increase fist and palm attack damage"
+  - subIndex: 2
+    text: "降低受到的拳掌伤害"
+    translated: "Reduce damage from fist and palm attacks"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}"
+- raw: "<b>智力</b>\\n+0.5%命中\\n+0.5%卸力\\n+0.5%负面加成"
+  splits:
+  - text: "智力"
+    translated: "Intelligence"
+  - subIndex: 1
+    text: "+0.5%命中"
+    translated: "+0.5% Hit Rate"
+  - subIndex: 2
+    text: "+0.5%卸力"
+    translated: "+0.5% Absorb Force"
+  - subIndex: 3
+    text: "+0.5%负面加成"
+    translated: "+0.5% Negative Bonus"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
+- raw: "<b>木植</b>\\n影响获取门派粮食/药材，以及巩固区域防御的效率"
+  splits:
+  - text: "木植"
+    translated: "Forest Plant"
+  - subIndex: 1
+    text: "影响获取门派粮食"
+    translated: "Affect acquisition of Sect grains"
+  - subIndex: 2
+    text: "药材，以及巩固区域防御的效率"
+    translated: "Herbs, and the efficiency of reinforcing regional defenses"
+  templates:
+  - template: "<b>{0}</b>\\n{1}/{2}"
+- raw: "<b>毒术</b>\\n影响用毒/解毒的效率"
+  splits:
+  - text: "毒术"
+    translated: "Poison Technique"
+  - subIndex: 1
+    text: "影响用毒"
+    translated: "Affect poisoning"
+  - subIndex: 2
+    text: "解毒的效率"
+    translated: "Efficiency of detoxification"
+  templates:
+  - template: "<b>{0}</b>\\n{1}/{2}"
+- raw: "<b>灵巧</b>\\n+0.5%速度\\n+0.5%闪避\\n+0.5体力上限"
+  splits:
+  - text: "灵巧"
+    translated: "Nimble"
+  - subIndex: 1
+    text: "+0.5%速度"
+    translated: "+0.5% Speed"
+  - subIndex: 2
+    text: "+0.5%闪避"
+    translated: "+0.5% Dodge"
+  - subIndex: 3
+    text: "+0.5体力上限"
+    translated: "+0.5 maximum stamina capacity"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
+- raw: "<b>炼药</b>\\n影响丹药的制作/强化，以及巩固/破坏区域人口的效率"
+  splits:
+  - text: "炼药"
+    translated: "Alchemy"
+  - subIndex: 1
+    text: "影响丹药的制作"
+    translated: "Affecting the preparation of elixirs"
+  - subIndex: 2
+    text: "强化，以及巩固"
+    translated: "Strengthening and consolidating"
+  - subIndex: 3
+    text: "破坏区域人口的效率"
+    translated: "Efficiency in damaging the population"
+  templates:
+  - template: "<b>{0}</b>\\n{1}/{2}/{3}"
+- raw: "<b>烹饪</b>\\n影响饮食的制作/强化，以及巩固/破坏区域民心的效率"
+  splits:
+  - text: "烹饪"
+    translated: "Cooking"
+  - subIndex: 1
+    text: "影响饮食的制作"
+    translated: "Influences food preparation"
+  - subIndex: 2
+    text: "强化，以及巩固"
+    translated: "Strengthening and consolidating"
+  - subIndex: 3
+    text: "破坏区域民心的效率"
+    translated: "Efficiency in undermining the morale of the affected area"
+  templates:
+  - template: "<b>{0}</b>\\n{1}/{2}/{3}"
+- raw: "<b>经脉</b>\\n+2内力上限\\n+0.5%连击\\n+0.5%恢复效率"
+  splits:
+  - text: "经脉"
+    translated: "Meridian"
+  - subIndex: 1
+    text: "+2内力上限"
+    translated: "+2 Inner Power Cap"
+  - subIndex: 2
+    text: "+0.5%连击"
+    translated: "+0.5 consecutive hits"
+  - subIndex: 3
+    text: "+0.5%恢复效率"
+    translated: "+0.5% recovery efficiency"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
+- raw: "<b>绝技</b>\\n+1%生命上限"
+  splits:
+  - text: "绝技"
+    translated: "Ultimate Technique"
+  - subIndex: 1
+    text: "+1%生命上限"
+    translated: "+1% Health Maximum"
+  templates:
+  - template: "<b>{0}</b>\\n{1}"
+- raw: "<b>轻功</b>\\n+1%速度"
+  splits:
+  - text: "轻功"
+    translated: "Qinggong"
+  - subIndex: 1
+    text: "+1%速度"
+    translated: "+1% Speed"
+  templates:
+  - template: "<b>{0}</b>\\n{1}"
+- raw: "<b>采伐</b>\\n影响获取门派木料/矿石，以及破坏区域防御的效率"
+  splits:
+  - text: "采伐"
+    translated: "Logging"
+  - subIndex: 1
+    text: "影响获取门派木料"
+    translated: "Affecting Sect Timber Acquisition"
+  - subIndex: 2
+    text: "矿石，以及破坏区域防御的效率"
+    translated: "Minerals, and reduce the effectiveness of the defense in the affected area"
+  templates:
+  - template: "<b>{0}</b>\\n{1}/{2}"
+- raw: "<b>锻造</b>\\n影响装备的制作/强化，以及巩固/破坏区域治安的效率"
+  splits:
+  - text: "锻造"
+    translated: "Forging"
+  - subIndex: 1
+    text: "影响装备的制作"
+    translated: "Affecting the crafting of equipment"
+  - subIndex: 2
+    text: "强化，以及巩固"
+    translated: "Strengthening and consolidating"
+  - subIndex: 3
+    text: "破坏区域治安的效率"
+    translated: "Efficiency in maintaining order in affected areas"
+  templates:
+  - template: "<b>{0}</b>\\n{1}/{2}/{3}"
+- raw: "<b>长兵</b>\\n提升长兵伤害\\n降低受到的长兵伤害"
+  splits:
+  - text: "长兵"
+    translated: "Long weapon"
+  - subIndex: 1
+    text: "提升长兵伤害"
+    translated: "Increase spear damage"
+  - subIndex: 2
+    text: "降低受到的长兵伤害"
+    translated: "Reduce damage from polearm attacks"
+  templates:
+  - template: "<b>{0}</b>\\n{1}\\n{2}"
+- raw: "<color=grey>快捷键ESC</color>"
+  splits:
+  - text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "<color=grey>{0}ESC</color>"
+- raw: "<color=grey>快捷键空格</color>"
+  splits:
+  - text: "快捷键空格"
+    translated: "Press spacebar"
+  templates:
+  - template: "<color=grey>{0}</color>"
+- raw: "♦从气海出发，一路打通穴位。\\n♦最终回归气海，便可打通周天获取额外经验。\\n♦中途内力耗尽，修炼会自动结束，也可点击按钮主动结束。"
+  splits:
+  - text: "从气海出发，一路打通穴位。"
+    translated: "Starting from the Sea of Qi, they smoothly unblocked the meridians."
+  - subIndex: 1
+    text: "最终回归气海，便可打通周天获取额外经验。"
+    translated: "Return to the Qi Sea and you can unlock additional experience throughout the body."
+  - subIndex: 2
+    text: "中途内力耗尽，修炼会自动结束，也可点击按钮主动结束。"
+    translated: "Midway through cultivation, inner power will deplete automatically, ending the session. You can also click the button to end it manually."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}"
+- raw: "♦使用头盔/护甲/足履对机关兽进行改装，可获得对所有机关兽生效的特殊加成，持续30日。\\n♦每次改装都会提升对应部位的经验，部位升级后会提供永久的机关兽加成。"
+  splits:
+  - text: "使用头盔"
+    translated: "Use the helmet"
+  - subIndex: 1
+    text: "护甲"
+    translated: "Armor"
+  - subIndex: 2
+    text: "足履对机关兽进行改装，可获得对所有机关兽生效的特殊加成，持续30日。"
+    translated: "Step the Mechanism Beast to modify it, and you will gain special bonuses applicable to all Mechanism Beasts for 30 days."
+  - subIndex: 3
+    text: "每次改装都会提升对应部位的经验，部位升级后会提供永久的机关兽加成。"
+    translated: "Each modification will increase the experience of the corresponding body part. After upgrading a body part, it will provide permanent enhancements to the mecha beast."
+  templates:
+  - template: "♦{0}/{1}/{2}\\n♦{3}"
+- raw: "♦在物品上下毒，当物品转移至他人身上时，就会使其中毒。\\n♦使用带毒装备，阅读带毒书籍等，会导致额外中毒。\\n♦服用带毒的丹药和饮食，会导致中毒加倍。"
+  splits:
+  - text: "在物品上下毒，当物品转移至他人身上时，就会使其中毒。"
+    translated: "To poison an item, when it is transferred to someone else, they will be poisoned."
+  - subIndex: 1
+    text: "使用带毒装备，阅读带毒书籍等，会导致额外中毒。"
+    translated: "Using poison‑equipped items or reading poison‑contaminated books can cause additional poisoning."
+  - subIndex: 2
+    text: "服用带毒的丹药和饮食，会导致中毒加倍。"
+    translated: "Taking toxic elixirs and consuming poisonous food will result in double poisoning."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}"
+- raw: "♦在耐力耗尽前抵达终点\\n♦途中可能会遭遇各种随机事件\\n♦马匹品质越高，初始耐力越多"
+  splits:
+  - text: "在耐力耗尽前抵达终点"
+    translated: "Reach the finish line before exhausting your stamina"
+  - subIndex: 1
+    text: "途中可能会遭遇各种随机事件"
+    translated: "You may encounter various random events along the way."
+  - subIndex: 2
+    text: "马匹品质越高，初始耐力越多"
+    translated: "The higher the quality of the horse, the more initial stamina it has."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}"
+- raw: "♦将武功修炼至十重获得天赋点\\n♦在闭关室消耗天赋点领悟天赋"
+  splits:
+  - text: "将武功修炼至十重获得天赋点"
+    translated: "Advance martial arts to the tenth level to gain a talent point"
+  - subIndex: 1
+    text: "在闭关室消耗天赋点领悟天赋"
+    translated: "Consume Talent Points in the Seclusion Room to Grasp Talents"
+  templates:
+  - template: "♦{0}\\n♦{1}"
+- raw: "♦左ctrl+~键打开/关闭控制台。\\n♦上/下方向键切换上条/下条历史指令。\\n<color=red>♦开启作弊功能后，存档将无法获取成就且可能导致未知bug，请谨慎使用。</color>"
+  splits:
+  - text: "左"
+    translated: "Zuo"
+  - subIndex: 1
+    text: "键打开"
+    translated: "Press to open"
+  - subIndex: 2
+    text: "关闭控制台。"
+    translated: "Close the console"
+  - subIndex: 3
+    text: "上"
+    translated: "Shang"
+  - subIndex: 4
+    text: "下方向键切换上条"
+    translated: "Down arrow key to switch to the previous option."
+  - subIndex: 5
+    text: "下条历史指令。"
+    translated: "Next historical command"
+  - subIndex: 6
+    text: "开启作弊功能后，存档将无法获取成就且可能导致未知"
+    translated: "Enabling cheat mode will prevent achievement unlocks and may cause unknown issues."
+  - subIndex: 7
+    text: "，请谨慎使用。"
+    translated: ",Please use this cautiously"
+  templates:
+  - template: "♦{0}ctrl+~{1}/{2}\\n♦{3}/{4}/{5}\\n<color=red>♦{6}bug{7}</color>"
+- raw: "♦弟子会根据方针设定的优先级自行安排行动。\\n♦优先级最高5，最低0。\\n♦按住左Shift可将优先级直接设置为5。\\n♦按住左Ctrl可将优先级直接设置为0。"
+  splits:
+  - text: "弟子会根据方针设定的优先级自行安排行动。"
+  - subIndex: 1
+    text: "优先级最高5，最低0。"
+    translated: "Priority highest 5, lowest 0"
+  - subIndex: 2
+    text: "按住左"
+    translated: "Press and hold the left button"
+  - subIndex: 3
+    text: "可将优先级直接设置为5。"
+    translated: "Priority can be set directly to 5"
+  - subIndex: 4
+    text: "按住左"
+    translated: "Press and hold the left button"
+  - subIndex: 5
+    text: "可将优先级直接设置为0。"
+    translated: "Priority can be set directly to 0"
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}Shift{3}\\n♦{4}Ctrl{5}"
+- raw: "♦提升修行等级可以增加本门武学的威力。\\n♦通过供奉物品可以每日获取经验并提升修行效率。"
+  splits:
+  - text: "提升修行等级可以增加本门武学的威力。"
+    translated: "Improving cultivation level can increase the power of our martial arts."
+  - subIndex: 1
+    text: "通过供奉物品可以每日获取经验并提升修行效率。"
+    translated: "By offering items, one can gain experience daily and improve cultivation efficiency."
+  templates:
+  - template: "♦{0}\\n♦{1}"
+- raw: "♦搜集其他门派秘籍放入星辰阁，可根据武学等级获取对应技能加成。\\n♦每门武学只能放入一本对应秘籍，秘籍稀有度越高加成越高。"
+  splits:
+  - text: "搜集其他门派秘籍放入星辰阁，可根据武学等级获取对应技能加成。"
+    translated: "Collect secret manuals from other Sects and store them in the Celestial Pavilion to gain corresponding skill enhancements based on your martial arts level."
+  - subIndex: 1
+    text: "每门武学只能放入一本对应秘籍，秘籍稀有度越高加成越高。"
+    translated: "Each martial art can only be inserted into a corresponding treatise. The rarer the treatise, the higher the bonus."
+  templates:
+  - template: "♦{0}\\n♦{1}"
+- raw: "♦是否允许弟子学习新武功\\n<b>允许</b>：允许学习任何新武功\\n<b>仅藏经阁</b>：只允许学习藏经阁内新武功\\n<b>禁止</b>：禁止学习新武功"
+  splits:
+  - text: "是否允许弟子学习新武功"
+    translated: "Is it permissible for the disciple to learn new martial arts?"
+  - subIndex: 1
+    text: "允许"
+    translated: "Allow"
+  - subIndex: 2
+    text: "：允许学习任何新武功"
+    translated: ":Allow learning any new martial arts skill"
+  - subIndex: 3
+    text: "仅藏经阁"
+    translated: "Only in the Tripitaka Treasury Hall"
+  - subIndex: 4
+    text: "：只允许学习藏经阁内新武功"
+    translated: ":Only new martial arts from the Tripitaka Pavilion are allowed to be learned."
+  - subIndex: 5
+    text: "禁止"
+    translated: "No permission"
+  - subIndex: 6
+    text: "：禁止学习新武功"
+    translated: ":No learning of new martial arts techniques"
+  templates:
+  - template: "♦{0}\\n<b>{1}</b>{2}\\n<b>{3}</b>{4}\\n<b>{5}</b>{6}"
+- raw: "♦未使用的天赋点会保留到游戏中\\n♦每达成1个成就，可提升2点初始天赋点"
+  splits:
+  - text: "未使用的天赋点会保留到游戏中"
+    translated: "Unused talent points will carry over to the game."
+  - subIndex: 1
+    text: "每达成1个成就，可提升2点初始天赋点"
+    translated: "Complete 1 achievements to gain 2 initial talent points."
+  templates:
+  - template: "♦{0}\\n♦{1}"
+- raw: "♦正式弟子以上，长老以下者皆可任命为分舵舵主\\n♦分舵舵主会根据其属性，全面提升目标城镇治理效果"
+  splits:
+  - text: "正式弟子以上，长老以下者皆可任命为分舵舵主"
+    translated: "Elders below and formal disciples above can all be appointed as branch den leaders."
+  - subIndex: 1
+    text: "分舵舵主会根据其属性，全面提升目标城镇治理效果"
+    translated: "The vice‑head of a branch will comprehensively enhance the governance effectiveness of the target town based on their attributes."
+  templates:
+  - template: "♦{0}\\n♦{1}"
+- raw: "♦武功抵达瓶颈需突破才能升级\\n♦突破为武功增加额外效果，用丹药/饮食/秘籍辅助以获得更强效果\\n♦提升建筑等级和对应武学技能可增加突破效率"
+  splits:
+  - text: "武功抵达瓶颈需突破才能升级"
+    translated: "Martial arts proficiency must breakthrough to level up when it reaches a bottleneck."
+  - subIndex: 1
+    text: "突破为武功增加额外效果，用丹药"
+    translated: "Breakthrough to add additional effects to martial arts skills using pills."
+  - subIndex: 2
+    text: "饮食"
+    translated: "Food and drink"
+  - subIndex: 3
+    text: "秘籍辅助以获得更强效果"
+    translated: "Secret guide to enhance effects"
+  - subIndex: 4
+    text: "提升建筑等级和对应武学技能可增加突破效率"
+    translated: "Boosting building levels and corresponding martial skills can increase breakthrough efficiency."
+  templates:
+  - template: "♦{0}\\n♦{1}/{2}/{3}\\n♦{4}"
+- raw: "♦每级对AI门派产生影响：\\n—加快建筑建造：每月建造数量+，建造消耗-5%，建造速度+5%\\n—加快科研：科研消耗-5%，科研速度+5%\\n—加快弟子晋升：晋升频率+5%，晋升消耗-5%，晋升武学等级+，招募消耗-5%，月俸消耗-2.5%"
+  splits:
+  - text: "每级对"
+    translated: "Level up by"
+  - subIndex: 1
+    text: "门派产生影响："
+    translated: "Sect influence emerges:"
+  - subIndex: 2
+    text: "加快建筑建造：每月建造数量"
+    translated: "Speed up construction: monthly building production"
+  - subIndex: 3
+    text: "，建造消耗-5%，建造速度"
+    translated: ",Construction consumes -5% resources, construction speed"
+  - subIndex: 4
+    text: "加快科研：科研消耗-5%，科研速度"
+    translated: "Speed up Research: Research consumption -5% , research speed"
+  - subIndex: 5
+    text: "加快弟子晋升：晋升频率+5%，晋升消耗-5%，晋升武学等级"
+    translated: "Speed Up Disciple Promotion: Promotion Frequency +5%, Promotion Cost -5%, Martial Arts Level"
+  - subIndex: 6
+    text: "，招募消耗-5%，月俸消耗"
+    translated: ",Recruitment costs -5% consumed, monthly salary costs consumed"
+  templates:
+  - template: "♦{0}AI{1}\\n—{2}+{3}+5%\\n—{4}+5%\\n—{5}+{6}-2.5%"
+- raw: "♦消毒可以去除物品所带毒性。"
+  splits:
+  - text: "消毒可以去除物品所带毒性。"
+    translated: "Disinfection can remove the toxicity carried by items."
+  templates:
+  - template: "♦{0}"
+- raw: "♦消耗对应兵器进行研究，可提升研究等级。每级可增加1%对应武学威力。\\n♦研究武器时，武器特效会施加到所有对应武学上。"
+  splits:
+  - text: "消耗对应兵器进行研究，可提升研究等级。每级可增加1%对应武学威力。"
+    translated: "Consume the corresponding weapon to enhance research, which increases the research level. Each level adds 1% to the power of the corresponding martial art."
+  - subIndex: 1
+    text: "研究武器时，武器特效会施加到所有对应武学上。"
+    translated: "When researching weapons, their special effects will be applied to all corresponding martial arts techniques."
+  templates:
+  - template: "♦{0}\\n♦{1}"
+- raw: "♦消耗耐心阅读文字，便可获得理论经验。\\n♦秘籍品质越高，随机文字内容越好。\\n♦提升建筑等级和对应技能可增加初始耐心。"
+  splits:
+  - text: "消耗耐心阅读文字，便可获得理论经验。"
+  - subIndex: 1
+    text: "秘籍品质越高，随机文字内容越好。"
+    translated: "The higher the quality of the cheat sheet, the better the random text content."
+  - subIndex: 2
+    text: "提升建筑等级和对应技能可增加初始耐心。"
+    translated: "Raising the level of buildings and their corresponding skills can increase initial patience."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}"
+- raw: "♦消耗资源制造目标物品，消耗越多产物等级越高\\n♦建筑等级和对应技能(锻造/烹饪/炼药)可以增加制作效率\\n♦不使用材料时消耗翻倍\\n♦产物会继承材料的加成效果(相同词条取较大值)"
+  splits:
+  - text: "消耗资源制造目标物品，消耗越多产物等级越高"
+    translated: "Consume more resources to produce higher‑grade items"
+  - subIndex: 1
+    text: "建筑等级和对应技能"
+    translated: "Building level and corresponding skills"
+  - subIndex: 2
+    text: "锻造"
+    translated: "Forging"
+  - subIndex: 3
+    text: "烹饪"
+    translated: "Cooking"
+  - subIndex: 4
+    text: "炼药"
+    translated: "Alchemy"
+  - subIndex: 5
+    text: "可以增加制作效率"
+    translated: "Can increase production efficiency"
+  - subIndex: 6
+    text: "不使用材料时消耗翻倍"
+    translated: "When not using materials, consumption doubles"
+  - subIndex: 7
+    text: "产物会继承材料的加成效果"
+    translated: "The products will inherit the bonuses from the materials."
+  - subIndex: 8
+    text: "相同词条取较大值"
+    translated: "Take the larger value"
+  templates:
+  - template: "♦{0}\\n♦{1}({2}/{3}/{4}){5}\\n♦{6}\\n♦{7}({8})"
+- raw: "♦消耗资源强化目标物品。\\n♦强化等级越高消耗资源越多，需要对应技能越高。\\n♦强化至少要消耗一件与目标物品同等级的材料。\\n♦如果强化材料有更好的特效词条，则可强化目标物品的特效。"
+  splits:
+  - text: "消耗资源强化目标物品。"
+    translated: "Consume resources to strengthen the target item"
+  - subIndex: 1
+    text: "强化等级越高消耗资源越多，需要对应技能越高。"
+    translated: "The higher the reinforcement level, the more resources are consumed, and the corresponding skill required is higher."
+  - subIndex: 2
+    text: "强化至少要消耗一件与目标物品同等级的材料。"
+    translated: "At least one material of the same grade as the target item is required for strengthening."
+  - subIndex: 3
+    text: "如果强化材料有更好的特效词条，则可强化目标物品的特效。"
+    translated: "If the enhancement material has better special effects, it can enhance the special effects of the target item."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}\\n♦{3}"
+- raw: "♦消耗门派资源研究科技，可为全门派提供加成效果。\\n♦科研项目等级不能超过正厅的建筑等级。"
+  splits:
+  - text: "消耗门派资源研究科技，可为全门派提供加成效果。"
+    translated: "Consume sect resources to research technology, which can provide bonuses to the entire sect."
+  - subIndex: 1
+    text: "科研项目等级不能超过正厅的建筑等级。"
+    translated: "The research project level cannot exceed the main hall's building level."
+  templates:
+  - template: "♦{0}\\n♦{1}"
+- raw: "♦消耗陨铁可对装备进行特殊天工强化。\\n♦物品等级和天工强化等级越高，消耗陨铁越多。\\n♦物品基础属性强化后，可以进一步获得普通强化和技能强化的增益效果。"
+  splits:
+  - text: "消耗陨铁可对装备进行特殊天工强化。"
+    translated: "Consuming Meteor Iron allows for special celestial refinement of equipment."
+  - subIndex: 1
+    text: "物品等级和天工强化等级越高，消耗陨铁越多。"
+    translated: "The more advanced the item level and divine craftsmanship enhancement level are, the more meteor iron is consumed."
+  - subIndex: 2
+    text: "物品基础属性强化后，可以进一步获得普通强化和技能强化的增益效果。"
+    translated: "After basic attribute enhancement of items, they can further gain benefits from ordinary enhancement and skill enhancement."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}"
+- raw: "♦点数组合从优到劣依次为\\n  同花(1 1 1 1)\\n  四顺(1 2 3 4)\\n  三条(1 1 1 2)\\n  两双(1 1 2 2)\\n  一对(1 1 2 3)\\n  杂色(1 2 3 5)\\n♦双方同型则总点数大者胜\\n♦每轮可选择一枚骰子重掷\\n♦同花会使赌注翻倍结算"
+  splits:
+  - text: "点数组合从优到劣依次为"
+    translated: "The best combinations of points are in order from top to bottom:"
+  - subIndex: 1
+    text: "同花"
+    translated: "Same suit"
+  - subIndex: 2
+    text: "四顺"
+    translated: "Four Straight"
+  - subIndex: 3
+    text: "三条"
+    translated: "Three trails"
+  - subIndex: 4
+    text: "两双"
+    translated: "Two pairs"
+  - subIndex: 5
+    text: "一对"
+    translated: "A pair"
+  - subIndex: 6
+    text: "杂色"
+    translated: "Multicolor"
+  - subIndex: 7
+    text: "双方同型则总点数大者胜"
+    translated: "Then the one with the higher total points wins."
+  - subIndex: 8
+    text: "每轮可选择一枚骰子重掷"
+    translated: "Each roll allows you to reroll one die."
+  - subIndex: 9
+    text: "同花会使赌注翻倍结算"
+    translated: "A flush will double the bet payout"
+  templates:
+  - template: "♦{0}\\n  {1}(1 1 1 1)\\n  {2}(1 2 3 4)\\n  {3}(1 1 1 2)\\n  {4}(1 1 2 2)\\n  {5}(1 1 2 3)\\n  {6}(1 2 3 5)\\n♦{7}\\n♦{8}\\n♦{9}"
+- raw: "♦突破加成仅作用于该技能之上\\n♦内功/轻功/绝技的突破加成在装备后生效\\n♦外功的突破加成仅在战斗中使用时生效"
+  splits:
+  - text: "突破加成仅作用于该技能之上"
+    translated: "Breakthrough bonus applies only to this skill"
+  - subIndex: 1
+    text: "内功"
+    translated: "Neigong"
+  - subIndex: 2
+    text: "轻功"
+    translated: "Qinggong"
+  - subIndex: 3
+    text: "绝技的突破加成在装备后生效"
+    translated: "The breakthrough bonus of the ultimate technique becomes effective after equipping it."
+  - subIndex: 4
+    text: "外功的突破加成仅在战斗中使用时生效"
+    translated: "The bonus from breaking through external skill becomes effective only when used in battle."
+  templates:
+  - template: "♦{0}\\n♦{1}/{2}/{3}\\n♦{4}"
+- raw: "♦给武器/饰品淬毒，可在攻击时让对方中毒。\\n♦给护甲/头盔/鞋履淬毒，可在防御时让对方中毒。\\n♦淬毒会随使用减少，其特效也会相应降低。\\n♦武器/护甲的淬毒效果比其他装备更强。"
+  splits:
+  - text: "给武器"
+    translated: "Equip weapon"
+  - subIndex: 1
+    text: "饰品淬毒，可在攻击时让对方中毒。"
+    translated: "Infuse the accessory with poison to apply a poisoning effect when attacking."
+  - subIndex: 2
+    text: "给护甲"
+    translated: "Apply armor"
+  - subIndex: 3
+    text: "头盔"
+    translated: "Helmet"
+  - subIndex: 4
+    text: "鞋履淬毒，可在防御时让对方中毒。"
+    translated: "Clog poisoning can inflict a poison effect on the opponent during defense."
+  - subIndex: 5
+    text: "淬毒会随使用减少，其特效也会相应降低。"
+    translated: "Poisoning will decrease with use, and its effects will accordingly diminish."
+  - subIndex: 6
+    text: "武器"
+    translated: "Weapon"
+  - subIndex: 7
+    text: "护甲的淬毒效果比其他装备更强。"
+    translated: "The poison effect of the armor is stronger than that of other equipment."
+  templates:
+  - template: "♦{0}/{1}\\n♦{2}/{3}/{4}\\n♦{5}\\n♦{6}/{7}"
+- raw: "♦自定义选项会在<b>所选难度基础上</b>产生影响\\n♦综合等级在平衡/较难/困难/极难情况下才能获取成就\\n♦每10点难度+1天赋数上限\\n♦建议了解游戏机制后再调整自定义选项"
+  splits:
+  - text: "自定义选项会在"
+    translated: "Custom options will be available in"
+  - subIndex: 1
+    text: "所选难度基础上"
+    translated: "Based on the selected difficulty"
+  - subIndex: 2
+    text: "产生影响"
+    translated: "Have an impact"
+  - subIndex: 3
+    text: "综合等级在平衡"
+    translated: "Overall balance is being adjusted"
+  - subIndex: 4
+    text: "较难"
+    translated: "More difficult"
+  - subIndex: 5
+    text: "困难"
+    translated: "Difficulty"
+  - subIndex: 6
+    text: "极难情况下才能获取成就"
+    translated: "Achievements can only be obtained in extremely difficult situations"
+  - subIndex: 7
+    text: "每10点难度+1天赋数上限"
+  - subIndex: 8
+    text: "建议了解游戏机制后再调整自定义选项"
+    translated: "I recommend understanding the game mechanics before adjusting the custom options."
+  templates:
+  - template: "♦{0}<b>{1}</b>{2}\\n♦{3}/{4}/{5}/{6}\\n♦{7}\\n♦{8}"
+- raw: "♦藏经阁秘籍可提升门派所有弟子修炼该武学的速度。\\n♦秘籍越稀有加成越高。\\n(此加成对玩家无效)"
+  splits:
+  - text: "藏经阁秘籍可提升门派所有弟子修炼该武学的速度。"
+    translated: "The scriptures in the Scripture Depository can enhance the speed at which all disciples of the Sect practice this martial art."
+  - subIndex: 1
+    text: "秘籍越稀有加成越高。"
+    translated: "The more rare the secret technique, the higher the bonus."
+  - subIndex: 2
+    text: "此加成对玩家无效"
+    translated: "This buff is ineffective on players"
+  templates:
+  - template: "♦{0}\\n♦{1}\\n({2})"
+- raw: "♦轮流给对方斟酒，斟酒越满消耗越多内力。\\n♦若酒溢出杯面失了礼数，对方本轮便可跳过喝酒。\\n♦内力先归零者拼酒失败。"
+  splits:
+  - text: "轮流给对方斟酒，斟酒越满消耗越多内力。"
+    translated: "Take turns pouring wine for each other; the fuller the pour, the more inner power it consumes."
+  - subIndex: 1
+    text: "若酒溢出杯面失了礼数，对方本轮便可跳过喝酒。"
+    translated: "If the wine overflows the cup and shows a lack of decorum, the other person can skip drinking this round."
+  - subIndex: 2
+    text: "内力先归零者拼酒失败。"
+    translated: "The one who lets their Inner Power reach zero first loses the drinking challenge."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}"
+- raw: "♦达成结局解锁对应传承天赋(不占用天赋栏位)"
+  splits:
+  - text: "达成结局解锁对应传承天赋"
+    translated: "Achieve the ending to unlock corresponding legacy talents"
+  - subIndex: 1
+    text: "不占用天赋栏位"
+    translated: "Does not occupy skill slot"
+  templates:
+  - template: "♦{0}({1})"
+- raw: "♦选出价值最贵的珍宝。\\n♦<b>学识</b>可以增加珍宝辨别能力。"
+  splits:
+  - text: "选出价值最贵的珍宝。"
+    translated: "Choose the most expensive treasure"
+  - subIndex: 1
+    text: "学识"
+    translated: "Scholarship"
+  - subIndex: 2
+    text: "可以增加珍宝辨别能力。"
+    translated: "Can increase the ability to identify treasures"
+  templates:
+  - template: "♦{0}\\n♦<b>{1}</b>{2}"
+- raw: "♦随机三种技艺作为议题，每次辩论会更换新议题。\\n♦学识决定手牌强度和特殊牌概率。\\n♦口才决定初始耐心，手牌数量和特殊牌种类。"
+  splits:
+  - text: "随机三种技艺作为议题，每次辩论会更换新议题。"
+    translated: "Randomly select three arts as topics for each debate session, with new topics chosen for each meeting."
+  - subIndex: 1
+    text: "学识决定手牌强度和特殊牌概率。"
+    translated: "Knowledge determines the strength of hand cards and the probability of special cards."
+  - subIndex: 2
+    text: "口才决定初始耐心，手牌数量和特殊牌种类。"
+    translated: "Debate skill determines initial patience, hand card quantity, and types of special cards."
+  templates:
+  - template: "♦{0}\\n♦{1}\\n♦{2}"
+- raw: "♦鼠标悬停在图标上，可查看属性具体效果\\n♦上限>70时，每提升1点上限需消耗2潜力\\n♦上限>80时，每提升1点上限需消耗3潜力"
+  splits:
+  - text: "鼠标悬停在图标上，可查看属性具体效果"
+    translated: "Hovering the mouse over the icon allows you to view the specific effects of the properties."
+  - subIndex: 1
+    text: "上限"
+    translated: "Limit"
+  - subIndex: 2
+    text: "70时，每提升1点上限需消耗2潜力"
+    translated: "At 70, increasing the cap by 1 points requires consuming 2 potential."
+  - subIndex: 3
+    text: "上限"
+    translated: "Limit"
+  - subIndex: 4
+    text: "80时，每提升1点上限需消耗3潜力"
+    translated: "At 80, increasing the cap by 1 points requires consuming 3 potential."
+  templates:
+  - template: "♦{0}\\n♦{1}>{2}\\n♦{3}>{4}"
+- raw: "1. 本游戏是一款武侠题材的开放世界游戏，适用于16周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。\\n\\n2. 本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。\\n\\n3. 本游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理：\\n<color=#BC1717>  〇 未满8周岁的用户不能付费购买游戏；8周岁以上的未满16周岁的未成年人用户，不得单次消费超过50元人民币，每月充值消费累计不得超过200元人民币；16周岁以上的未成年人用户，单次消费不得超过100元人民币，每月充值消费累计不得超过400元人民币。\\n  〇 本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不以任何形式向未成年人提供网络游戏服务。</color>\\n\\n4. 本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。\\n"
+  splits:
+  - text: "本游戏是一款武侠题材的开放世界游戏，适用于16周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。"
+    translated: "This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance."
+  - subIndex: 1
+    text: "本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。"
+    translated: "The game features a ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations."
+  - subIndex: 2
+    text: "本游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理："
+    translated: "This game has a real‑name authentication system for users. Minors will be subject to the following management:"
+  - subIndex: 3
+    text: "未满8周岁的用户不能付费购买游戏；8周岁以上的未满16周岁的未成年人用户，不得单次消费超过50元人民币，每月充值消费累计不得超过200元人民币；16周岁以上的未成年人用户，单次消费不得超过100元人民币，每月充值消费累计不得超过400元人民币。"
+    translated: "Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB."
+  - subIndex: 4
+    text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不以任何形式向未成年人提供网络游戏服务。"
+  - subIndex: 5
+    text: "本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。"
+  templates:
+  - template: "1. {0}\\n\\n2. {1}\\n\\n3. {2}\\n<color=#BC1717>  〇 {3}\\n  〇 {4}</color>\\n\\n4. {5}\\n"
+- raw: "100天"
+  splits:
+  - text: "100天"
+    translated: "100 day"
+- raw: "10两"
+  splits:
+  - text: "10两"
+    translated: "10 pairs"
+- raw: "10天"
+  splits:
+  - text: "10天"
+    translated: "10 day"
+- raw: "15两"
+  splits:
+  - text: "15两"
+    translated: "15 two"
+- raw: "20日"
+  splits:
+  - text: "20日"
+    translated: "20 day"
+- raw: "22年12月30日 "
+  splits:
+  - text: "22年12月30日"
+    translated: "22 Year 12 Month 30 Day"
+  templates:
+  - template: "{0} "
+- raw: "30天"
+  splits:
+  - text: "30天"
+    translated: "30 day"
+- raw: "3200点声望 100点掌门好感"
+  splits:
+  - text: "3200点声望"
+    translated: "3200 reputation points"
+  - subIndex: 1
+    text: "100点掌门好感"
+    translated: "Gain Sect Leader Favor by 100 points"
+  templates:
+  - template: "{0} {1}"
+- raw: "5两"
+  splits:
+  - text: "5两"
+    translated: "5 pairs"
+- raw: "6到20位数字或字母"
+  splits:
+  - text: "6到20位数字或字母"
+    translated: "6 to 20 digits or letters"
+- raw: "99天"
+  splits:
+  - text: "99天"
+    translated: "99 days"
+- raw: "F5 快速存档\\nF9 快速读档"
+  splits:
+  - text: "快速存档"
+    translated: "Quick save"
+  - subIndex: 1
+    text: "快速读档"
+    translated: "Quick load"
+  templates:
+  - template: "F5 {0}\\nF9 {1}"
+- raw: "QQ群: 542674865"
+  splits:
+  - text: "群"
+    translated: "Qun"
+  templates:
+  - template: "QQ{0}: 542674865"
+- raw: "一"
+  splits:
+  - text: "一"
+    translated: "Yi"
+- raw: "一\\n等\\n奖"
+  splits:
+  - text: "一"
+    translated: "Yi"
+  - subIndex: 1
+    text: "等"
+    translated: "Wait"
+  - subIndex: 2
+    text: "奖"
+    translated: "Prize"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "一命模式"
+  splits:
+  - text: "一命模式"
+    translated: "One‑life mode"
+- raw: "七"
+  splits:
+  - text: "七"
+    translated: "Qi"
+- raw: "三"
+  splits:
+  - text: "三"
+    translated: "San"
+- raw: "三\\n等\\n奖"
+  splits:
+  - text: "三"
+    translated: "San"
+  - subIndex: 1
+    text: "等"
+    translated: "Wait"
+  - subIndex: 2
+    text: "奖"
+    translated: "Prize"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "三级"
+  splits:
+  - text: "三级"
+    translated: "Level three"
+- raw: "上乘"
+  splits:
+  - text: "上乘"
+    translated: "Superior"
+- raw: "下一场"
+  splits:
+  - text: "下一场"
+    translated: "Next fight"
+- raw: "下一议题"
+  splits:
+  - text: "下一议题"
+    translated: "Next item on the agenda"
+- raw: "下注"
+  splits:
+  - text: "下注"
+    translated: "Bet"
+- raw: "不使用任何武学"
+  splits:
+  - text: "不使用任何武学"
+    translated: "Use no martial arts techniques"
+- raw: "不使用材料进行制作，消耗翻倍效率减半，且获得门派功绩减半"
+  splits:
+  - text: "不使用材料进行制作，消耗翻倍效率减半，且获得门派功绩减半"
+    translated: "Without using materials for crafting, the consumption is doubled, efficiency is halved, and sect achievements are also reduced by half."
+- raw: "不可获取成就"
+  splits:
+  - text: "不可获取成就"
+    translated: "Cannot obtain achievement"
+- raw: "不懈制作"
+  splits:
+  - text: "不懈制作"
+    translated: "Unceasingly create"
+- raw: "不懈突破"
+  splits:
+  - text: "不懈突破"
+    translated: "Unceasingly push beyond limits"
+- raw: "不过这些纷争暂未影响到巴蜀一地。"
+  splits:
+  - text: "不过这些纷争暂未影响到巴蜀一地。"
+    translated: "However, these disputes have not yet affected Bashu."
+- raw: "专长 剑/秘籍/秘籍/秘籍/秘籍/秘籍"
+  splits:
+  - text: "专长"
+    translated: "Specialty"
+  - subIndex: 1
+    text: "剑"
+    translated: "Jian"
+  - subIndex: 2
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 3
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 4
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 5
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 6
+    text: "秘籍"
+    translated: "Treasure booklet"
+  templates:
+  - template: "{0} {1}/{2}/{3}/{4}/{5}/{6}"
+- raw: "专门用于关押在江湖中行凶作恶之人的监牢。铜墙铁壁，守卫森严，狱卒也多为武艺高强之人。"
+  splits:
+  - text: "专门用于关押在江湖中行凶作恶之人的监牢。铜墙铁壁，守卫森严，狱卒也多为武艺高强之人。"
+    translated: "A prison specifically for those who commit atrocities in the Jianghu. With bronze walls and iron gates, it is heavily guarded, and most of the jailers are skilled warriors."
+- raw: "世界"
+  splits:
+  - text: "世界"
+    translated: "World"
+- raw: "丢弃物品"
+  splits:
+  - text: "丢弃物品"
+    translated: "Discard item"
+- raw: "中"
+  splits:
+  - text: "中"
+    translated: "Zhong"
+- raw: "中原"
+  splits:
+  - text: "中原"
+    translated: "Central Plains"
+- raw: "中毒\\n-0.5%全属性\\n-0.25%生命上限\\n-0.25%内力上限\\n-0.25%体力上限"
+  splits:
+  - text: "中毒"
+    translated: "Poisoned"
+  - subIndex: 1
+    text: "-0.5%全属性"
+    translated: "-0.5% All Attributes"
+  - subIndex: 2
+    text: "-0.25%生命上限"
+    translated: "-0.25% Health Maximum"
+  - subIndex: 3
+    text: "-0.25%内力上限"
+    translated: "-0.25% Inner Power Cap"
+  - subIndex: 4
+    text: "-0.25%体力上限"
+    translated: "-0.25% Max Stamina"
+  templates:
+  - template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
+- raw: "中立"
+  splits:
+  - text: "中立"
+    translated: "Neutral"
+- raw: "丹药"
+  splits:
+  - text: "丹药"
+    translated: "Elixir"
+- raw: "丹药\\n(消耗)"
+  splits:
+  - text: "丹药"
+    translated: "Elixir"
+  - subIndex: 1
+    text: "消耗"
+    translated: "Consume"
+  templates:
+  - template: "{0}\\n({1})"
+- raw: "丹药\\n（消耗）"
+  splits:
+  - text: "丹药"
+    translated: "Elixir"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "主菜单"
+  splits:
+  - text: "主菜单"
+    translated: "Main Menu"
+- raw: "九"
+  splits:
+  - text: "九"
+    translated: "Jiu"
+- raw: "九死一生"
+  splits:
+  - text: "九死一生"
+    translated: "Life and death"
+- raw: "习得武学，获取秘籍可解锁对应武学图鉴"
+  splits:
+  - text: "习得武学，获取秘籍可解锁对应武学图鉴"
+    translated: "Acquire martial arts skills by obtaining manuals, which unlock corresponding martial arts manuals."
+- raw: "书香门第"
+  splits:
+  - text: "书香门第"
+    translated: "Scholarly family household"
+- raw: "事件"
+  splits:
+  - text: "事件"
+    translated: "Event"
+- raw: "二"
+  splits:
+  - text: "二"
+    translated: "Er"
+- raw: "二\\n等\\n奖"
+  splits:
+  - text: "二"
+    translated: "Er"
+  - subIndex: 1
+    text: "等"
+    translated: "Wait"
+  - subIndex: 2
+    text: "奖"
+    translated: "Prize"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "二位英雄先后离世，朝堂之上和武林之中群龙无首。"
+  splits:
+  - text: "二位英雄先后离世，朝堂之上和武林之中群龙无首。"
+    translated: "The passing of these two heroes left both the court and the Wulin leaderless."
+- raw: "二十五天"
+  splits:
+  - text: "二十五天"
+    translated: "Twenty‑five days"
+- raw: "五"
+  splits:
+  - text: "五"
+    translated: "Wu"
+- raw: "五级"
+  splits:
+  - text: "五级"
+    translated: "Fifth level"
+- raw: "交谈"
+  splits:
+  - text: "交谈"
+    translated: "Conversation"
+- raw: "京城城分舵"
+  splits:
+  - text: "京城城分舵"
+    translated: "Capital Branch Office"
+- raw: "京城攻防战"
+  splits:
+  - text: "京城攻防战"
+    translated: "Capital Siege Warfare"
+- raw: "亲传弟子"
+  splits:
+  - text: "亲传弟子"
+    translated: "Direct disciple"
+- raw: "亲属"
+  splits:
+  - text: "亲属"
+    translated: "Relatives"
+- raw: "人力管理Lv.0"
+  splits:
+  - text: "人力管理"
+    translated: "Human resources management"
+  templates:
+  - template: "{0}Lv.0"
+- raw: "人口\\n♦每100人口可提升区域内所有建筑1%生产效率。"
+  splits:
+  - text: "人口"
+    translated: "Population"
+  - subIndex: 1
+    text: "每100人口可提升区域内所有建筑1%生产效率。"
+    translated: "Each 100 person increases the production efficiency of all buildings in the area by 1%."
+  templates:
+  - template: "{0}\\n♦{1}"
+- raw: "人员名册"
+  splits:
+  - text: "人员名册"
+    translated: "Roster of Personnel"
+- raw: "人物列表"
+  splits:
+  - text: "人物列表"
+    translated: "Character List"
+- raw: "人物图鉴"
+  splits:
+  - text: "人物图鉴"
+    translated: "Character Gallery"
+- raw: "仅一回合"
+  splits:
+  - text: "仅一回合"
+    translated: "Just one turn"
+- raw: "仅显示标记角色"
+  splits:
+  - text: "仅显示标记角色"
+    translated: "Display only tagged characters"
+- raw: "仅藏经阁"
+  splits:
+  - text: "仅藏经阁"
+    translated: "Only in the Tripitaka Treasury Hall"
+- raw: "仅限非剧情信件"
+  splits:
+  - text: "仅限非剧情信件"
+    translated: "Limited to non‑plot‑related letters"
+- raw: "仇敌"
+  splits:
+  - text: "仇敌"
+    translated: "Enemy"
+- raw: "他人"
+  splits:
+  - text: "他人"
+    translated: "Others"
+- raw: "仙霞派正式弟子"
+  splits:
+  - text: "仙霞派正式弟子"
+    translated: "Xianxia Sect Formal Disciples"
+- raw: "仙霞派派正式弟子"
+  splits:
+  - text: "仙霞派派正式弟子"
+    translated: "Xianxia Sect Formal Disciple"
+- raw: "仙霞派派正式正式"
+  splits:
+  - text: "仙霞派派正式正式"
+    translated: "Xianxia Sect officially"
+- raw: "以此换取支持，稳固皇位。"
+  splits:
+  - text: "以此换取支持，稳固皇位。"
+    translated: "To secure support and consolidate his throne"
+- raw: "价值"
+  splits:
+  - text: "价值"
+    translated: "Value"
+- raw: "任务\\n<color=grey>快捷键Tab</color>"
+  splits:
+  - text: "任务"
+    translated: "Task"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}Tab</color>"
+- raw: "任务文本"
+  splits:
+  - text: "任务文本"
+    translated: "Task text"
+- raw: "仿本"
+  splits:
+  - text: "仿本"
+    translated: "Sample"
+- raw: "休息(快捷键S)\\n♦生命+1% 内力+2%\\n♦体力+10\\n♦恢复5%已损失架势"
+  splits:
+  - text: "休息"
+    translated: "Rest"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  - subIndex: 2
+    text: "生命"
+    translated: "Health"
+  - subIndex: 3
+    text: "内力"
+    translated: "Inner Power"
+  - subIndex: 4
+    text: "体力"
+    translated: "Strength"
+  - subIndex: 5
+    text: "恢复5%已损失架势"
+    translated: "Restore 5% Stance Lost"
+  templates:
+  - template: "{0}({1}S)\\n♦{2}+1% {3}+2%\\n♦{4}+10\\n♦{5}"
+- raw: "优先未满级武学"
+  splits:
+  - text: "优先未满级武学"
+    translated: "Prioritize unmastered martial arts skills"
+- raw: "优先治疗武学"
+  splits:
+  - text: "优先治疗武学"
+    translated: "Prioritize martial arts treatment"
+- raw: "优先级"
+  splits:
+  - text: "优先级"
+    translated: "Priority"
+- raw: "优先级较高的城镇会优先进行建造"
+  splits:
+  - text: "优先级较高的城镇会优先进行建造"
+    translated: "Higher‑priority towns will be constructed first"
+- raw: "优先高特效武学"
+  splits:
+  - text: "优先高特效武学"
+    translated: "Prioritize martial arts techniques with high special effects"
+- raw: "优质"
+  splits:
+  - text: "优质"
+    translated: "High‑quality"
+- raw: "会\\n议"
+  splits:
+  - text: "会"
+    translated: "Hui"
+  - subIndex: 1
+    text: "议"
+    translated: "Discuss"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "传承天赋"
+  splits:
+  - text: "传承天赋"
+    translated: "Inherited talent"
+- raw: "传说仙霞派源自峨眉派一旁支，其祖师妙远真人，"
+  splits:
+  - text: "传说仙霞派源自峨眉派一旁支，其祖师妙远真人，"
+    translated: "Legend has it that the Xianxia Sect originated from a side branch of the Emei Sect. Its founding immortal is called Mao Yuan Immortal Charming Remote."
+- raw: "传闻"
+  splits:
+  - text: "传闻"
+    translated: "Rumor"
+- raw: "伤害"
+  splits:
+  - text: "伤害"
+    translated: "Damage"
+- raw: "伤害+10%"
+  splits:
+  - text: "伤害"
+    translated: "Damage"
+  templates:
+  - template: "{0}+10%"
+- raw: "伤害+99%"
+  splits:
+  - text: "伤害"
+    translated: "Damage"
+  templates:
+  - template: "{0}+99%"
+- raw: "但江湖中依旧暗潮汹涌，一场剧变仍在酝酿之中......"
+  splits:
+  - text: "但江湖中依旧暗潮汹涌，一场剧变仍在酝酿之中......"
+    translated: "But in the Jianghu, dark currents still surged, and a dramatic change was brewing..."
+- raw: "体力\\n♦体力小于50时，每减少1点-1%连击/闪避。\\n♦体力恢复可超上限，每超上限1点+0.5%连击/命中。\\n♦体力超上限时，每回合衰减超出部分50%(最少5点)。"
+  splits:
+  - text: "体力"
+    translated: "Strength"
+  - subIndex: 1
+    text: "体力小于50时，每减少1点-1%连击"
+    translated: "When your stamina is less than 50, every 1 point decrease grants -1% chance to combo."
+  - subIndex: 2
+    text: "闪避。"
+    translated: "Dodge"
+  - subIndex: 3
+    text: "体力恢复可超上限，每超上限1点+0.5%连击"
+    translated: "Stamina recovery can exceed the limit by up to 1 points, increasing combo rate by +0.5% for each excess point."
+  - subIndex: 4
+    text: "命中。"
+    translated: "Hit Rate"
+  - subIndex: 5
+    text: "体力超上限时，每回合衰减超出部分50%"
+    translated: "When your stamina exceeds the limit, it decays by 50% each turn."
+  - subIndex: 6
+    text: "最少5点"
+    translated: "At least 5 points"
+  templates:
+  - template: "{0}\\n♦{1}/{2}\\n♦{3}/{4}\\n♦{5}({6})。"
+- raw: "体质"
+  splits:
+  - text: "体质"
+    translated: "Physique"
+- raw: "体质+5"
+  splits:
+  - text: "体质"
+    translated: "Physique"
+  templates:
+  - template: "{0}+5"
+- raw: "体质+5\\n意志+5"
+  splits:
+  - text: "体质"
+    translated: "Physique"
+  - subIndex: 1
+    text: "意志"
+    translated: "Willpower"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "作为仙霞派弟子，体验一个小门派在江湖变局之中的恩怨浮沉。\\n<color=green>通过剧情解锁特殊角色的亲密/招募</color>\\n(推荐使用剑法/拳掌角色)"
+  splits:
+  - text: "作为仙霞派弟子，体验一个小门派在江湖变局之中的恩怨浮沉。"
+    translated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu."
+  - subIndex: 1
+    text: "通过剧情解锁特殊角色的亲密"
+    translated: "Unlock special intimate interactions with characters through the storyline"
+  - subIndex: 2
+    text: "招募"
+    translated: "Recruit"
+  - subIndex: 3
+    text: "推荐使用剑法"
+    translated: "I recommend using Sword Technique"
+  - subIndex: 4
+    text: "拳掌角色"
+    translated: "Fist and Palm Character"
+  templates:
+  - template: "{0}\\n<color=green>{1}/{2}</color>\\n({3}/{4})"
+- raw: "作用范围"
+  splits:
+  - text: "作用范围"
+    translated: "Range of effect"
+- raw: "你的出价"
+  splits:
+  - text: "你的出价"
+    translated: "Your bid"
+- raw: "你的排名 500+"
+  splits:
+  - text: "你的排名"
+    translated: "Your ranking"
+  templates:
+  - template: "{0} 500+"
+- raw: "佳\\n肴"
+  splits:
+  - text: "佳"
+    translated: "Jia"
+  - subIndex: 1
+    text: "肴"
+    translated: "Delicacy"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "佳肴\\n(消耗)"
+  splits:
+  - text: "佳肴"
+    translated: "Delicacy"
+  - subIndex: 1
+    text: "消耗"
+    translated: "Consume"
+  templates:
+  - template: "{0}\\n({1})"
+- raw: "使用调息"
+  splits:
+  - text: "使用调息"
+    translated: "Use controlled breathing"
+- raw: "使用道具"
+  splits:
+  - text: "使用道具"
+    translated: "Use item"
+- raw: "供奉"
+  splits:
+  - text: "供奉"
+    translated: "Worship"
+- raw: "信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本"
+  splits:
+  - text: "信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本"
+    translated: "Letter format test text letter format test text letter format test text letter format test text letter format test text letter format test text"
+- raw: "信笺"
+  splits:
+  - text: "信笺"
+- raw: "修为"
+  splits:
+  - text: "修为"
+    translated: "Cultivation level"
+- raw: "修炼武功"
+  splits:
+  - text: "修炼武功"
+    translated: "Train in martial arts"
+- raw: "修行效率 999\\n每日经验 999"
+  splits:
+  - text: "修行效率"
+    translated: "Practice efficiency"
+  - subIndex: 1
+    text: "每日经验"
+    translated: "Daily experience points"
+  templates:
+  - template: "{0} 999\\n{1} 999"
+- raw: "倾向于接近敌人"
+  splits:
+  - text: "倾向于接近敌人"
+    translated: "Tends to move closer to the enemy"
+- raw: "倾向于接近玩家"
+  splits:
+  - text: "倾向于接近玩家"
+    translated: "Tends to approach the player"
+- raw: "倾向于远离敌人"
+  splits:
+  - text: "倾向于远离敌人"
+    translated: "Tends to keep a distance from enemies"
+- raw: "倾向于远离玩家"
+  splits:
+  - text: "倾向于远离玩家"
+    translated: "Tends to distance himself from players"
+- raw: "停"
+  splits:
+  - text: "停"
+    translated: "Stop"
+- raw: "停战100"
+  splits:
+  - text: "停战100"
+    translated: "Ceasefire 100"
+- raw: "允许"
+  splits:
+  - text: "允许"
+    translated: "Allow"
+- raw: "先皇周世宗柴荣，神武雄略，一代明主。"
+  splits:
+  - text: "先皇周世宗柴荣，神武雄略，一代明主。"
+    translated: "Emperor Zhou Shizong Taiwu Chengong, valiant and stratagemic, a enlightened ruler of his age."
+- raw: "入群会友"
+  splits:
+  - text: "入群会友"
+    translated: "Joining friends in the group"
+- raw: "入门弟子"
+  splits:
+  - text: "入门弟子"
+    translated: "Novice Disciple"
+- raw: "全体出战"
+  splits:
+  - text: "全体出战"
+    translated: "All members in battle"
+- raw: "全体手动"
+  splits:
+  - text: "全体手动"
+    translated: "Manual for all"
+- raw: "全体离队"
+  splits:
+  - text: "全体离队"
+    translated: "All units stand down"
+- raw: "全体自动"
+  splits:
+  - text: "全体自动"
+- raw: "全关"
+  splits:
+  - text: "全关"
+    translated: "Shut down all rooms"
+- raw: "全屏"
+  splits:
+  - text: "全屏"
+    translated: "Fullscreen"
+- raw: "全属性/全技能+2\\n非本门弟子经验+20%\\n难度提升速度++++"
+  splits:
+  - text: "全属性"
+    translated: "All attributes"
+  - subIndex: 1
+    text: "全技能"
+    translated: "All skills"
+  - subIndex: 2
+    text: "非本门弟子经验"
+    translated: "Non‑disciple experience points"
+  - subIndex: 3
+    text: "难度提升速度"
+    translated: "Difficulty increase speed"
+  templates:
+  - template: "{0}/{1}+2\\n{2}+20%\\n{3}++++"
+- raw: "全属性/全技能+4\\n非本门弟子经验+10%\\n难度提升速度+++"
+  splits:
+  - text: "全属性"
+    translated: "All attributes"
+  - subIndex: 1
+    text: "全技能"
+    translated: "All skills"
+  - subIndex: 2
+    text: "非本门弟子经验"
+    translated: "Non‑disciple experience points"
+  - subIndex: 3
+    text: "难度提升速度"
+    translated: "Difficulty increase speed"
+  templates:
+  - template: "{0}/{1}+4\\n{2}+10%\\n{3}+++"
+- raw: "全属性/全技能+6\\n玩家经验/声望+20%\\n难度提升速度++"
+  splits:
+  - text: "全属性"
+    translated: "All attributes"
+  - subIndex: 1
+    text: "全技能"
+    translated: "All skills"
+  - subIndex: 2
+    text: "玩家经验"
+    translated: "Player experience"
+  - subIndex: 3
+    text: "声望"
+    translated: "Reputation"
+  - subIndex: 4
+    text: "难度提升速度"
+    translated: "Difficulty increase speed"
+  templates:
+  - template: "{0}/{1}+6\\n{2}/{3}+20%\\n{4}++"
+- raw: "全属性/全技能+9\\n玩家经验/声望+40%\\n非本门弟子经验-20%\\n难度提升速度+"
+  splits:
+  - text: "全属性"
+    translated: "All attributes"
+  - subIndex: 1
+    text: "全技能"
+    translated: "All skills"
+  - subIndex: 2
+    text: "玩家经验"
+    translated: "Player experience"
+  - subIndex: 3
+    text: "声望"
+    translated: "Reputation"
+  - subIndex: 4
+    text: "非本门弟子经验"
+    translated: "Non‑disciple experience points"
+  - subIndex: 5
+    text: "难度提升速度"
+    translated: "Difficulty increase speed"
+  templates:
+  - template: "{0}/{1}+9\\n{2}/{3}+40%\\n{4}-20%\\n{5}+"
+- raw: "全开"
+  splits:
+  - text: "全开"
+    translated: "Full settings"
+- raw: "全技能+1"
+  splits:
+  - text: "全技能"
+    translated: "All skills"
+  templates:
+  - template: "{0}+1"
+- raw: "全盔"
+  splits:
+  - text: "全盔"
+    translated: "Full helmet"
+- raw: "全部"
+  splits:
+  - text: "全部"
+    translated: "All"
+- raw: "全部已读"
+  splits:
+  - text: "全部已读"
+    translated: "All read"
+- raw: "八"
+  splits:
+  - text: "八"
+    translated: "Ba"
+- raw: "六"
+  splits:
+  - text: "六"
+    translated: "Liu"
+- raw: "关注哔站"
+  splits:
+  - text: "关注哔站"
+    translated: "Follow Bilibili"
+- raw: "关注红书"
+  splits:
+  - text: "关注红书"
+    translated: "Follow RedBook"
+- raw: "关系"
+  splits:
+  - text: "关系"
+    translated: "Relationship"
+- raw: "关闭"
+  splits:
+  - text: "关闭"
+    translated: "Close"
+- raw: "兴趣爱好"
+  splits:
+  - text: "兴趣爱好"
+    translated: "Hobbies"
+- raw: "兵刃"
+  splits:
+  - text: "兵刃"
+    translated: "Blades"
+- raw: "兵器研究"
+  splits:
+  - text: "兵器研究"
+    translated: "Weaponry Research"
+- raw: "其他"
+  splits:
+  - text: "其他"
+    translated: "Other"
+- raw: "其他角色与你的性格越接近，好感提升越快"
+  splits:
+  - text: "其他角色与你的性格越接近，好感提升越快"
+    translated: "The more your personalities align with other characters, the faster your affection with them increases."
+- raw: "其他角色与你的立场越接近，初始好感越高"
+  splits:
+  - text: "其他角色与你的立场越接近，初始好感越高"
+    translated: "The higher the initial goodwill is when other characters align more closely with your stance."
+- raw: "内"
+  splits:
+  - text: "内"
+    translated: "Nei"
+- raw: "内伤\\n-0.5%全属性\\n-0.5%内力上限\\n-0.25%体力上限"
+  splits:
+  - text: "内伤"
+    translated: "Internal Injury"
+  - subIndex: 1
+    text: "-0.5%全属性"
+    translated: "-0.5% All Attributes"
+  - subIndex: 2
+    text: "-0.5%内力上限"
+    translated: "-0.5% Inner Power Cap"
+  - subIndex: 3
+    text: "-0.25%体力上限"
+    translated: "-0.25% Max Stamina"
+  templates:
+  - template: "{0}\\n{1}\\n{2}\\n{3}"
+- raw: "内力"
+  splits:
+  - text: "内力"
+    translated: "Inner Power"
+- raw: "内功"
+  splits:
+  - text: "内功"
+    translated: "Neigong"
+- raw: "内功+5\\n学识+5"
+  splits:
+  - text: "内功"
+    translated: "Neigong"
+  - subIndex: 1
+    text: "学识"
+    translated: "Scholarship"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "最低要求 999"
+  splits:
+  - text: "最低要求"
+    translated: "Minimum requirement"
+  templates:
+  - template: "{0} 999"
+- raw: "最终下落不明。"
+  splits:
+  - text: "最终下落不明。"
+    translated: "Eventually, he fell off the radar"
+- raw: "农垦"
+  splits:
+  - text: "农垦"
+    translated: "Agricultural reclamation"
+- raw: "农家子弟"
+  splits:
+  - text: "农家子弟"
+    translated: "Farmer's son"
+- raw: "冠"
+  splits:
+  - text: "冠"
+    translated: "Guan"
+- raw: "冲刺快捷键"
+  splits:
+  - text: "冲刺快捷键"
+    translated: "Shortcut key for sprint"
+- raw: "决战战斗失败会导致游戏结束，部分重要剧情战和高难度奇遇为决战，请谨慎选择！"
+  splits:
+  - text: "决战战斗失败会导致游戏结束，部分重要剧情战和高难度奇遇为决战，请谨慎选择！"
+    translated: "Failing in the final battle will end the game. Some crucial plot battles and high‑difficulty random events are considered the final battle; please be cautious!"
+- raw: "决战模式"
+  splits:
+  - text: "决战模式"
+    translated: "Battle Mode"
+- raw: "决战硬核模式下，死亡会自动删除硬核存档"
+  splits:
+  - text: "决战硬核模式下，死亡会自动删除硬核存档"
+    translated: "In Hardcore Mode, death will automatically delete the Hardcore save."
+- raw: "准备"
+  splits:
+  - text: "准备"
+    translated: "Prepare"
+- raw: "准备越狱"
+  splits:
+  - text: "准备越狱"
+    translated: "Prepare to escape"
+- raw: "减伤100%"
+  splits:
+  - text: "减伤100%"
+    translated: "Reduce damage by 100%"
+- raw: "减少潜力\\n按住左shift连减5点"
+  splits:
+  - text: "减少潜力"
+    translated: "Reduce potential"
+  - subIndex: 1
+    text: "按住左"
+    translated: "Press and hold the left button"
+  - subIndex: 2
+    text: "连减5点"
+    translated: "Reduce 5 points continuously"
+  templates:
+  - template: "{0}\\n{1}shift{2}"
+- raw: "出\\n售"
+  splits:
+  - text: "出"
+    translated: "Chu"
+  - subIndex: 1
+    text: "售"
+    translated: "Sell"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "出价"
+  splits:
+  - text: "出价"
+    translated: "Bid"
+- raw: "出售\\n按左Shift十倍出售"
+  splits:
+  - text: "出售"
+    translated: "Sell"
+  - subIndex: 1
+    text: "按左"
+    translated: "Press left"
+  - subIndex: 2
+    text: "十倍出售"
+    translated: "Ten times selling price"
+  templates:
+  - template: "{0}\\n{1}Shift{2}"
+- raw: "出师"
+  splits:
+  - text: "出师"
+    translated: "Departure to Campaign"
+- raw: "出战"
+  splits:
+  - text: "出战"
+    translated: "Enter Battle"
+- raw: "出生籍贯"
+  splits:
+  - text: "出生籍贯"
+    translated: "Place of birth and origin"
+- raw: "出身"
+  splits:
+  - text: "出身"
+    translated: "Origin"
+- raw: "击败守卫后，可以夺取商店内一件物品"
+  splits:
+  - text: "击败守卫后，可以夺取商店内一件物品"
+    translated: "Defeating the guard allows you to steal an item from the shop."
+- raw: "刀法"
+  splits:
+  - text: "刀法"
+    translated: "Blade Art"
+- raw: "刀法+5"
+  splits:
+  - text: "刀法"
+    translated: "Blade Art"
+  templates:
+  - template: "{0}+5"
+- raw: "刀法+5\\n烹饪+5"
+  splits:
+  - text: "刀法"
+    translated: "Blade Art"
+  - subIndex: 1
+    text: "烹饪"
+    translated: "Cooking"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "刀法武器"
+  splits:
+  - text: "刀法武器"
+    translated: "Blade Technique Weapon"
+- raw: "分散"
+  splits:
+  - text: "分散"
+    translated: "Distribute"
+- raw: "分舵"
+  splits:
+  - text: "分舵"
+    translated: "Sub‑branch office"
+- raw: "分舵管理"
+  splits:
+  - text: "分舵管理"
+    translated: "Branch management"
+- raw: "分舵舵主"
+  splits:
+  - text: "分舵舵主"
+    translated: "Branch Deputy Leader"
+- raw: "分辨率"
+  splits:
+  - text: "分辨率"
+    translated: "Resolution"
+- raw: "切磋交友"
+  splits:
+  - text: "切磋交友"
+    translated: "Refine skills and make friends"
+- raw: "初始天赋"
+  splits:
+  - text: "初始天赋"
+    translated: "Initial talent"
+- raw: "初始获得500银钱"
+  splits:
+  - text: "初始获得500银钱"
+    translated: "Initial gain of 500 silver coins"
+- raw: "初始获得50声望"
+  splits:
+  - text: "初始获得50声望"
+    translated: "Initial gain of 50 reputation points"
+- raw: "初始获得随机护甲"
+  splits:
+  - text: "初始获得随机护甲"
+    translated: "Initial random armor acquisition"
+- raw: "初始获得随机武器"
+  splits:
+  - text: "初始获得随机武器"
+    translated: "Initial random weapon acquisition"
+- raw: "初始获得随机秘籍"
+  splits:
+  - text: "初始获得随机秘籍"
+    translated: "Gain random scrolls at start"
+- raw: "初始获得随机马匹"
+  splits:
+  - text: "初始获得随机马匹"
+    translated: "Start with a random horse"
+- raw: "初露锋芒"
+  splits:
+  - text: "初露锋芒"
+    translated: "Showcase Talent"
+- raw: "制造"
+  splits:
+  - text: "制造"
+    translated: "Production"
+- raw: "刷新委托"
+  splits:
+  - text: "刷新委托"
+    translated: "Refresh Commission"
+- raw: "刷新所有委托\\n每月1次"
+  splits:
+  - text: "刷新所有委托"
+    translated: "Refresh all commissions"
+  - subIndex: 1
+    text: "每月1次"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "刺客死士"
+  splits:
+  - text: "刺客死士"
+    translated: "Assassin Mercenary"
+- raw: "剑法"
+  splits:
+  - text: "剑法"
+    translated: "Sword Art"
+- raw: "剑法+5"
+  splits:
+  - text: "剑法"
+    translated: "Sword Art"
+  templates:
+  - template: "{0}+5"
+- raw: "剑法+5\\n医术+5"
+  splits:
+  - text: "剑法"
+    translated: "Sword Art"
+  - subIndex: 1
+    text: "医术"
+    translated: "Medicine"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "剑法武器"
+  splits:
+  - text: "剑法武器"
+    translated: "Sword Art Weapons"
+- raw: "剧情"
+  splits:
+  - text: "剧情"
+    translated: "Plot"
+- raw: "剧情信件"
+  splits:
+  - text: "剧情信件"
+    translated: "Plot Letter"
+- raw: "剧情模式"
+  splits:
+  - text: "剧情模式"
+    translated: "Story Mode"
+- raw: "剧情模式推荐！"
+  splits:
+  - text: "剧情模式推荐！"
+    translated: "I recommend the story mode!"
+- raw: "剩余刑期"
+  splits:
+  - text: "剩余刑期"
+    translated: "Remaining sentence"
+- raw: "剩余战力"
+  splits:
+  - text: "剩余战力"
+    translated: "Remaining combat strength"
+- raw: "力道"
+  splits:
+  - text: "力道"
+    translated: "Strength"
+- raw: "力道+5"
+  splits:
+  - text: "力道"
+    translated: "Strength"
+  templates:
+  - template: "{0}+5"
+- raw: "力道+5\\n体质+5"
+  splits:
+  - text: "力道"
+    translated: "Strength"
+  - subIndex: 1
+    text: "体质"
+    translated: "Physique"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "力道+5\\n灵巧+5"
+  splits:
+  - text: "力道"
+    translated: "Strength"
+  - subIndex: 1
+    text: "灵巧"
+    translated: "Nimble"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "力量+1"
+  splits:
+  - text: "力量"
+    translated: "Strength"
+  templates:
+  - template: "{0}+1"
+- raw: "功成名就"
+  splits:
+  - text: "功成名就"
+    translated: "Success and fame achieved"
+- raw: "功绩 100"
+  splits:
+  - text: "功绩"
+    translated: "Achievements"
+  templates:
+  - template: "{0} 100"
+- raw: "功绩 1000"
+  splits:
+  - text: "功绩"
+    translated: "Achievements"
+  templates:
+  - template: "{0} 1000"
+- raw: "功绩 999"
+  splits:
+  - text: "功绩"
+    translated: "Achievements"
+  templates:
+  - template: "{0} 999"
+- raw: "功绩 9999"
+  splits:
+  - text: "功绩"
+    translated: "Achievements"
+  templates:
+  - template: "{0} 9999"
+- raw: "功绩榜"
+  splits:
+  - text: "功绩榜"
+    translated: "Achievements Board"
+- raw: "加快时间流速"
+  splits:
+  - text: "加快时间流速"
+    translated: "Speed up time flow"
+- raw: "加载中,请稍候"
+  splits:
+  - text: "加载中"
+    translated: "Loading..."
+  - subIndex: 1
+    text: "请稍候"
+    translated: "Please wait moment"
+  templates:
+  - template: "{0},{1}"
+- raw: "劣质"
+  splits:
+  - text: "劣质"
+    translated: "Cheap"
+- raw: "北塞"
+  splits:
+  - text: "北塞"
+    translated: "Northern Barrier"
+- raw: "匪徒"
+  splits:
+  - text: "匪徒"
+    translated: "Thug"
+- raw: "医术"
+  splits:
+  - text: "医术"
+    translated: "Medicine"
+- raw: "医术 99"
+  splits:
+  - text: "医术"
+    translated: "Medicine"
+  templates:
+  - template: "{0} 99"
+- raw: "医术+10\\n炼药+10"
+  splits:
+  - text: "医术"
+    translated: "Medicine"
+  - subIndex: 1
+    text: "炼药"
+    translated: "Alchemy"
+  templates:
+  - template: "{0}+10\\n{1}+10"
+- raw: "升序"
+  splits:
+  - text: "升序"
+- raw: "升级"
+  splits:
+  - text: "升级"
+    translated: "Upgrade"
+- raw: "半盔"
+  splits:
+  - text: "半盔"
+    translated: "Half helmet"
+- raw: "南海"
+  splits:
+  - text: "南海"
+    translated: "South Sea"
+- raw: "博\\n骰"
+  splits:
+  - text: "博"
+    translated: "Bo"
+  - subIndex: 1
+    text: "骰"
+    translated: "Dice"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "博引"
+  splits:
+  - text: "博引"
+    translated: "Wide‑ranging"
+- raw: "博引特殊加成"
+  splits:
+  - text: "博引特殊加成"
+    translated: "Borrowed Unique Bonus"
+- raw: "占领区域"
+  splits:
+  - text: "占领区域"
+    translated: "Conquer Area"
+- raw: "却遭武当，少林，丐帮，大隐等各大门派围攻，"
+  splits:
+  - text: "却遭武当，少林，丐帮，大隐等各大门派围攻，"
+    translated: "Yet they were besieged by the Wudang, Shaolin, Beggar Sect, and other major sects."
+- raw: "原地休息\\n<color=grey>长按空格</color>"
+  splits:
+  - text: "原地休息"
+    translated: "Rest in place"
+  - subIndex: 1
+    text: "长按空格"
+    translated: "Press and hold the spacebar"
+  templates:
+  - template: "{0}\\n<color=grey>{1}</color>"
+- raw: "原地等待"
+  splits:
+  - text: "原地等待"
+    translated: "Wait in place"
+- raw: "参赛队伍"
+  splits:
+  - text: "参赛队伍"
+    translated: "Contest teams"
+- raw: "发带"
+  splits:
+  - text: "发带"
+    translated: "Headband"
+- raw: "取出"
+  splits:
+  - text: "取出"
+    translated: "Fetch"
+- raw: "取寻仙问道之“仙”字，与陶弘景“心标象外，志结霞门”之“霞”字，"
+  splits:
+  - text: "取寻仙问道之“仙”字，与陶弘景“心标象外，志结霞门”之“霞”字，"
+- raw: "取消"
+  splits:
+  - text: "取消"
+    translated: "Cancel"
+- raw: "叛离"
+  splits:
+  - text: "叛离"
+    translated: "Rebellion"
+- raw: "口才"
+  splits:
+  - text: "口才"
+    translated: "Eloquence"
+- raw: "口才100"
+  splits:
+  - text: "口才100"
+    translated: "100 eloquence"
+- raw: "右侧弹出消息"
+  splits:
+  - text: "右侧弹出消息"
+    translated: "Right‑side message pop‑up"
+- raw: "各大门派纷纷割据一方，分庭抗礼。"
+  splits:
+  - text: "各大门派纷纷割据一方，分庭抗礼。"
+    translated: "The various sects all carved out their own territories and confronted each other."
+- raw: "各派功绩"
+  splits:
+  - text: "各派功绩"
+    translated: "Various factions' achievements"
+- raw: "合而名为仙霞派，开宗至今已百年矣。"
+  splits:
+  - text: "合而名为仙霞派，开宗至今已百年矣。"
+    translated: "United, it is known as the Xianxia Sect; founded a hundred years ago."
+- raw: "同档\\n秘籍"
+  splits:
+  - text: "同档"
+    translated: "Same tier"
+  - subIndex: 1
+    text: "秘籍"
+    translated: "Treasure booklet"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "名..."
+  splits:
+  - text: "名..."
+    translated: "Name..."
+- raw: "名册"
+  splits:
+  - text: "名册"
+    translated: "Roster"
+- raw: "名家"
+  splits:
+  - text: "名家"
+    translated: "Elite"
+- raw: "名录\\n<color=grey>快捷键P</color>"
+  splits:
+  - text: "名录"
+    translated: "Registry"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}P</color>"
+- raw: "名门大派"
+  splits:
+  - text: "名门大派"
+    translated: "Elite Family Sect"
+- raw: "启程"
+  splits:
+  - text: "启程"
+    translated: "Departure"
+- raw: "周世宗之后，继任皇位者皆碌碌庸才，难以服众。"
+  splits:
+  - text: "周世宗之后，继任皇位者皆碌碌庸才，难以服众。"
+    translated: "After Emperor Shizong, those who succeeded to the throne were all mediocre talents, failing to win the people's approval."
+- raw: "品级"
+  splits:
+  - text: "品级"
+    translated: "Rank"
+- raw: "商贾之后"
+  splits:
+  - text: "商贾之后"
+    translated: "Merchant's offspring"
+- raw: "喜好"
+  splits:
+  - text: "喜好"
+    translated: "Preferences"
+- raw: "喜好 剑/秘籍/秘籍/秘籍/秘籍/秘籍"
+  splits:
+  - text: "喜好"
+    translated: "Preferences"
+  - subIndex: 1
+    text: "剑"
+    translated: "Jian"
+  - subIndex: 2
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 3
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 4
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 5
+    text: "秘籍"
+    translated: "Treasure booklet"
+  - subIndex: 6
+    text: "秘籍"
+    translated: "Treasure booklet"
+  templates:
+  - template: "{0} {1}/{2}/{3}/{4}/{5}/{6}"
+- raw: "嘴巴"
+  splits:
+  - text: "嘴巴"
+    translated: "Mouth"
+- raw: "四"
+  splits:
+  - text: "四"
+    translated: "Si"
+- raw: "围墙"
+  splits:
+  - text: "围墙"
+    translated: "Wall"
+- raw: "图鉴"
+  splits:
+  - text: "图鉴"
+    translated: "Pokedex"
+- raw: "在各大门派统治下，中原迎来了一时的安宁。"
+  splits:
+  - text: "在各大门派统治下，中原迎来了一时的安宁。"
+    translated: "Under the rule of various sects, Central Plain enjoyed a temporary peace."
+- raw: "在设置界面开启\\n每到游戏内特定日期会尝试自动存档"
+  splits:
+  - text: "在设置界面开启"
+    translated: "Enable in the settings interface"
+  - subIndex: 1
+    text: "每到游戏内特定日期会尝试自动存档"
+    translated: "Every in‑game specific date attempts automatic saving"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "地区日志"
+  splits:
+  - text: "地区日志"
+    translated: "Regional Log"
+- raw: "地图\\n<color=grey>快捷键I</color>"
+  splits:
+  - text: "地图"
+    translated: "Map"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}I</color>"
+- raw: "地震"
+  splits:
+  - text: "地震"
+    translated: "Earthquake"
+- raw: "城市名称"
+  splits:
+  - text: "城市名称"
+    translated: "City name"
+- raw: "城镇管理"
+  splits:
+  - text: "城镇管理"
+    translated: "City Management"
+- raw: "基本信息"
+  splits:
+  - text: "基本信息"
+    translated: "Basic Information"
+- raw: "基础"
+  splits:
+  - text: "基础"
+    translated: "Basics"
+- raw: "基础信息"
+  splits:
+  - text: "基础信息"
+    translated: "Basic Information"
+- raw: "基础效率 100%"
+  splits:
+  - text: "基础效率"
+    translated: "Base efficiency"
+  templates:
+  - template: "{0} 100%"
+- raw: "基础武功 99/99"
+  splits:
+  - text: "基础武功"
+    translated: "Fundamental martial arts"
+  templates:
+  - template: "{0} 99/99"
+- raw: "基础生命上限 200"
+  splits:
+  - text: "基础生命上限"
+    translated: "Base Health Cap"
+  templates:
+  - template: "{0} 200"
+- raw: "增加潜力\\n按住左shift连加5点"
+  splits:
+  - text: "增加潜力"
+    translated: "Increase potential"
+  - subIndex: 1
+    text: "按住左"
+    translated: "Press and hold the left button"
+  - subIndex: 2
+    text: "连加5点"
+    translated: "Add 1 point to 5"
+  templates:
+  - template: "{0}\\n{1}shift{2}"
+- raw: "声望"
+  splits:
+  - text: "声望"
+    translated: "Reputation"
+- raw: "声望\\n♦声望达到对方50%方可结识，同时影响好感上限。\\n♦提升委托数量和难度。"
+  splits:
+  - text: "声望"
+    translated: "Reputation"
+  - subIndex: 1
+    text: "声望达到对方50%方可结识，同时影响好感上限。"
+    translated: "You can meet them when your reputation reaches 50%, and this also affects the upper limit of your affection."
+  - subIndex: 2
+    text: "提升委托数量和难度。"
+    translated: "Increase the number and difficulty of commissions"
+  templates:
+  - template: "{0}\\n♦{1}\\n♦{2}"
+- raw: "声望越高，能同时接受越多委托"
+  splits:
+  - text: "声望越高，能同时接受越多委托"
+    translated: "Reputation higher, the more commissions one can simultaneously accept."
+- raw: "外交关系"
+  splits:
+  - text: "外交关系"
+    translated: "Diplomatic relations"
+- raw: "外伤\\n-0.5%全属性\\n-0.5%生命上限\\n-0.25%体力上限"
+  splits:
+  - text: "外伤"
+    translated: "External Injury"
+  - subIndex: 1
+    text: "-0.5%全属性"
+    translated: "-0.5% All Attributes"
+  - subIndex: 2
+    text: "-0.5%生命上限"
+    translated: "-0.5% Health Maximum"
+  - subIndex: 3
+    text: "-0.25%体力上限"
+    translated: "-0.25% Max Stamina"
+  templates:
+  - template: "{0}\\n{1}\\n{2}\\n{3}"
+- raw: "外功"
+  splits:
+  - text: "外功"
+    translated: "External Skill"
+- raw: "大侠"
+  splits:
+  - text: "大侠"
+    translated: "Great Hero"
+- raw: "大周天"
+  splits:
+  - text: "大周天"
+    translated: "Great Heavenly Cycle"
+- raw: "天下第一"
+  splits:
+  - text: "天下第一"
+    translated: "Number One Under Heaven"
+- raw: "天工"
+  splits:
+  - text: "天工"
+    translated: "Heavenly Artisan"
+- raw: "天生"
+  splits:
+  - text: "天生"
+    translated: "Naturally"
+- raw: "天赋"
+  splits:
+  - text: "天赋"
+    translated: "Gift"
+- raw: "天赋点 99"
+  splits:
+  - text: "天赋点"
+    translated: "Talent points"
+  templates:
+  - template: "{0} 99"
+- raw: "夫妻"
+  splits:
+  - text: "夫妻"
+    translated: "Husband and wife"
+- raw: "头\\n盔"
+  splits:
+  - text: "头"
+    translated: "Head"
+  - subIndex: 1
+    text: "盔"
+    translated: "Helmet"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "头冠"
+  splits:
+  - text: "头冠"
+    translated: "Tiara"
+- raw: "头发"
+  splits:
+  - text: "头发"
+    translated: "Hair"
+- raw: "头盔\\n（消耗）"
+  splits:
+  - text: "头盔"
+    translated: "Helmet"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "奇门"
+  splits:
+  - text: "奇门"
+    translated: "Qi Men"
+- raw: "奇门+5"
+  splits:
+  - text: "奇门"
+    translated: "Qi Men"
+  templates:
+  - template: "{0}+5"
+- raw: "奇门+5\\n炼药+5"
+  splits:
+  - text: "奇门"
+    translated: "Qi Men"
+  - subIndex: 1
+    text: "炼药"
+    translated: "Alchemy"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "奇门武器"
+  splits:
+  - text: "奇门武器"
+    translated: "Mystic Weapon"
+- raw: "奈何天妒英才，不久竟突发恶疾，中道崩殂。"
+  splits:
+  - text: "奈何天妒英才，不久竟突发恶疾，中道崩殂。"
+    translated: "Alas, heaven disdains talents, and not long after, he suddenly fell ill with a severe disease and died midway through his reign."
+- raw: "女"
+  splits:
+  - text: "女"
+    translated: "Nv"
+- raw: "好感100"
+  splits:
+  - text: "好感100"
+    translated: "Favor towards 100"
+- raw: "如果大侠在游玩时遇到Bug或者任何想吐槽的地方，欢迎来我们的官方玩家群或频道进行交流。\\n发售只是一个新起点，后续我们会持续调整更新，让每个玩家都能够获得更好的体验。\\n如果大侠在游玩过程中感受到了我们想表达的那片江湖，还请给予我们好评支持 。"
+  splits:
+  - text: "如果大侠在游玩时遇到"
+    translated: "If the great hero encounters"
+  - subIndex: 1
+    text: "或者任何想吐槽的地方，欢迎来我们的官方玩家群或频道进行交流。"
+  - subIndex: 2
+    text: "发售只是一个新起点，后续我们会持续调整更新，让每个玩家都能够获得更好的体验。"
+    translated: "Release is just the beginning of a new journey. We will continue to make adjustments and updates so that every player can enjoy an even better experience."
+  - subIndex: 3
+    text: "如果大侠在游玩过程中感受到了我们想表达的那片江湖，还请给予我们好评支持"
+    translated: "If the Great Hero enjoys the Jianghu we strive to portray during your gameplay, please consider giving us a positive review."
+  templates:
+  - template: "{0}Bug{1}\\n{2}\\n{3} 。"
+- raw: "如果您发现存档丢失或损坏，请查看备份文件夹：\\nC:\\Users\\[用户名] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
+  splits:
+  - text: "如果您发现存档丢失或损坏，请查看备份文件夹："
+    translated: "If you find that your saved game is lost or damaged, please check the backup folder:"
+  - subIndex: 1
+    text: "用户名"
+    translated: "Username"
+  templates:
+  - template: "{0}\\nC:\\Users\\[{1}] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
+- raw: "姓..."
+  splits:
+  - text: "姓..."
+    translated: "Last name..."
+- raw: "姓名"
+  splits:
+  - text: "姓名"
+    translated: "Name"
+- raw: "委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容"
+  splits:
+  - text: "委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容委托内容"
+    translated: "Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content Commission content"
+- raw: "委托名称"
+  splits:
+  - text: "委托名称"
+    translated: "Commission Name"
+- raw: "委托奇遇"
+  splits:
+  - text: "委托奇遇"
+    translated: "Commission random events"
+- raw: "委托悬赏"
+  splits:
+  - text: "委托悬赏"
+    translated: "Commission bounty"
+- raw: "威望"
+  splits:
+  - text: "威望"
+    translated: "Reputation"
+- raw: "字幕字幕字幕字幕字幕字幕字幕"
+  splits:
+  - text: "字幕字幕字幕字幕字幕字幕字幕"
+    translated: "Subtitles subtitles subtitles subtitles subtitles subtitles subtitles"
+- raw: "存档"
+  splits:
+  - text: "存档"
+    translated: "Save Game"
+- raw: "存档错误"
+  splits:
+  - text: "存档错误"
+    translated: "Save error"
+- raw: "学习技艺"
+  splits:
+  - text: "学习技艺"
+    translated: "Learn a craft"
+- raw: "学识"
+  splits:
+  - text: "学识"
+    translated: "Scholarship"
+- raw: "学识+10\\n口才+10"
+  splits:
+  - text: "学识"
+    translated: "Scholarship"
+  - subIndex: 1
+    text: "口才"
+    translated: "Eloquence"
+  templates:
+  - template: "{0}+10\\n{1}+10"
+- raw: "守卫"
+  splits:
+  - text: "守卫"
+    translated: "Guard"
+- raw: "守卫熟络"
+  splits:
+  - text: "守卫熟络"
+    translated: "Guard familiar"
+- raw: "守卫熟络越高\\n每日积累伤势越少"
+  splits:
+  - text: "守卫熟络越高"
+    translated: "Guard familiarity increases"
+  - subIndex: 1
+    text: "每日积累伤势越少"
+    translated: "Daily injuries accumulate less over time"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "守卫警戒"
+  splits:
+  - text: "守卫警戒"
+    translated: "Guards on alert"
+- raw: "守卫警戒越高\\n逃跑/越狱的难度越高"
+  splits:
+  - text: "守卫警戒越高"
+    translated: "Security alert levels are higher"
+  - subIndex: 1
+    text: "逃跑"
+    translated: "Escape"
+  - subIndex: 2
+    text: "越狱的难度越高"
+    translated: "Difficulty of escaping increases"
+  templates:
+  - template: "{0}\\n{1}/{2}"
+- raw: "守方"
+  splits:
+  - text: "守方"
+    translated: "Defender"
+- raw: "完美"
+  splits:
+  - text: "完美"
+    translated: "Perfect"
+- raw: "宗师"
+  splits:
+  - text: "宗师"
+    translated: "Masters"
+- raw: "宗师比武大会"
+  splits:
+  - text: "宗师比武大会"
+    translated: "Grand Master Battle Tournament"
+- raw: "官府官府"
+  splits:
+  - text: "官府官府"
+    translated: "Government office government office"
+- raw: "宝甲"
+  splits:
+  - text: "宝甲"
+    translated: "Sturdy Armor"
+- raw: "实名认证"
+  splits:
+  - text: "实名认证"
+    translated: "Real name verification"
+- raw: "宴\\n会"
+  splits:
+  - text: "宴"
+    translated: "Banquet"
+  - subIndex: 1
+    text: "会"
+    translated: "Hui"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "宴会评分\\n<b>999999</b>"
+  splits:
+  - text: "宴会评分"
+    translated: "Banquet evaluation"
+  templates:
+  - template: "{0}\\n<b>999999</b>"
+- raw: "宴会评分\\n999999"
+  splits:
+  - text: "宴会评分"
+    translated: "Banquet evaluation"
+  templates:
+  - template: "{0}\\n999999"
+- raw: "宴会进行中..."
+  splits:
+  - text: "宴会进行中..."
+    translated: "The banquet is in progress...."
+- raw: "家传宝物"
+  splits:
+  - text: "家传宝物"
+    translated: "Family heirloom"
+- raw: "家族身世"
+  splits:
+  - text: "家族身世"
+    translated: "Family background"
+- raw: "密码"
+  splits:
+  - text: "密码"
+    translated: "Password"
+- raw: "对\\n饮"
+  splits:
+  - text: "对"
+    translated: "For"
+  - subIndex: 1
+    text: "饮"
+    translated: "Drink"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "对话对话对话对对话对话对话对对话对话对话对\\n对话对话对话对对话对话对话对对话对话对话对\\n对话对话对话对对话对话对话对对话对话对话对"
+  splits:
+  - text: "对话对话对话对对话对话对话对对话对话对话对"
+    translated: "Conversation conversation conversation conversation conversation Conversation conversation conversation conversation conversation"
+  - subIndex: 1
+    text: "对话对话对话对对话对话对话对对话对话对话对"
+    translated: "Conversation conversation conversation conversation conversation Conversation conversation conversation conversation conversation"
+  - subIndex: 2
+    text: "对话对话对话对对话对话对话对对话对话对话对"
+    translated: "Conversation conversation conversation conversation conversation Conversation conversation conversation conversation conversation"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "对话记录"
+  splits:
+  - text: "对话记录"
+    translated: "Conversation log"
+- raw: "导入"
+  splits:
+  - text: "导入"
+    translated: "Import"
+- raw: "导出"
+  splits:
+  - text: "导出"
+    translated: "Export"
+- raw: "将两本相同低品质秘籍，整合成一本高品质的秘籍"
+  splits:
+  - text: "将两本相同低品质秘籍，整合成一本高品质的秘籍"
+    translated: "Merge two identical low‑quality scrolls into one high‑quality scroll"
+- raw: "将制作产物放入门派仓库，可获取门派贡献并完成门派任务\\n(消耗材料方能放入自己行囊)"
+  splits:
+  - text: "将制作产物放入门派仓库，可获取门派贡献并完成门派任务"
+    translated: "Place the crafted items in the Sect warehouse to earn Sect contribution and complete Sect tasks."
+  - subIndex: 1
+    text: "消耗材料方能放入自己行囊"
+    translated: "Materials can only be added to your own inventory."
+  templates:
+  - template: "{0}\\n({1})"
+- raw: "将所会的武功默写成秘籍"
+  splits:
+  - text: "将所会的武功默写成秘籍"
+    translated: "Write down the martial arts techniques mastered as a secret manual"
+- raw: "射术"
+  splits:
+  - text: "射术"
+    translated: "Archery"
+- raw: "射术+5"
+  splits:
+  - text: "射术"
+    translated: "Archery"
+  templates:
+  - template: "{0}+5"
+- raw: "射术+5\\n口才+5"
+  splits:
+  - text: "射术"
+    translated: "Archery"
+  - subIndex: 1
+    text: "口才"
+    translated: "Eloquence"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "射术武器"
+  splits:
+  - text: "射术武器"
+    translated: "Bow weapons"
+- raw: "小周天"
+  splits:
+  - text: "小周天"
+    translated: "Microcosmic Orbit"
+- raw: "少林寺"
+  splits:
+  - text: "少林寺"
+    translated: "Shaolin Temple"
+- raw: "局势"
+  splits:
+  - text: "局势"
+    translated: "Situation"
+- raw: "展厅"
+  splits:
+  - text: "展厅"
+    translated: "Exhibit hall"
+- raw: "属"
+  splits:
+  - text: "属"
+    translated: "Shu"
+- raw: "属性"
+  splits:
+  - text: "属性"
+    translated: "Attributes"
+- raw: "属性潜力 60"
+  splits:
+  - text: "属性潜力"
+    translated: "Attribute potential"
+  templates:
+  - template: "{0} 60"
+- raw: "岐黄"
+  splits:
+  - text: "岐黄"
+    translated: "Qi Huang"
+- raw: "工作中"
+  splits:
+  - text: "工作中"
+    translated: "At work"
+- raw: "工作工作"
+  splits:
+  - text: "工作工作"
+    translated: "Work work"
+- raw: "工匠"
+  splits:
+  - text: "工匠"
+    translated: "Craftsman"
+- raw: "已接悬赏9/9"
+  splits:
+  - text: "已接悬赏9"
+    translated: "Accepted bounty for 9"
+  templates:
+  - template: "{0}/9"
+- raw: "已获得初始天赋点 999"
+  splits:
+  - text: "已获得初始天赋点"
+    translated: "Gained initial talent points"
+  templates:
+  - template: "{0} 999"
+- raw: "巴蜀"
+  splits:
+  - text: "巴蜀"
+    translated: "Sichuan"
+- raw: "布甲"
+  splits:
+  - text: "布甲"
+    translated: "Leather armor"
+- raw: "布鞋"
+  splits:
+  - text: "布鞋"
+    translated: "Sneakers"
+- raw: "师傅"
+  splits:
+  - text: "师傅"
+    translated: "Master"
+- raw: "常规"
+  splits:
+  - text: "常规"
+    translated: "Standard"
+- raw: "广泛"
+  splits:
+  - text: "广泛"
+    translated: "Widespread"
+- raw: "建筑"
+  splits:
+  - text: "建筑"
+    translated: "Building"
+- raw: "建筑三级解锁"
+  splits:
+  - text: "建筑三级解锁"
+    translated: "Unlock level 3 construction"
+- raw: "建筑九级解锁"
+  splits:
+  - text: "建筑九级解锁"
+    translated: "Level 9 building unlocked"
+- raw: "开启时每次闪避消耗5体力。\\n体力小于5点时无法闪避。\\n对玩家和所有角色同时生效。"
+  splits:
+  - text: "开启时每次闪避消耗5体力。"
+    translated: "Activate consumes 5 stamina each time you Dodge."
+  - subIndex: 1
+    text: "体力小于5点时无法闪避。"
+    translated: "When your stamina is less than 5 points, you cannot dodge."
+  - subIndex: 2
+    text: "对玩家和所有角色同时生效。"
+    translated: "Affects both the player and all other characters simultaneously."
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "开始"
+  splits:
+  - text: "开始"
+    translated: "Start"
+- raw: "开席"
+  splits:
+  - text: "开席"
+    translated: "Dinner begins"
+- raw: "开拍"
+  splits:
+  - text: "开拍"
+    translated: "Action!"
+- raw: "开赛"
+  splits:
+  - text: "开赛"
+    translated: "Start the game"
+- raw: "弃权"
+  splits:
+  - text: "弃权"
+    translated: "Relinquish"
+- raw: "引毒"
+  splits:
+  - text: "引毒"
+- raw: "弟子上限+1"
+  splits:
+  - text: "弟子上限"
+    translated: "Disciple Cap Limit"
+  templates:
+  - template: "{0}+1"
+- raw: "弟子方针"
+  splits:
+  - text: "弟子方针"
+    translated: "Disciple Strategy"
+- raw: "弟子训练"
+  splits:
+  - text: "弟子训练"
+    translated: "Disciple training"
+- raw: "强化"
+  splits:
+  - text: "强化"
+    translated: "Strengthen"
+- raw: "强化\\n目标"
+  splits:
+  - text: "强化"
+    translated: "Strengthen"
+  - subIndex: 1
+    text: "目标"
+    translated: "Goal"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "强化消耗\\n木材 999\\n矿石 999"
+  splits:
+  - text: "强化消耗"
+    translated: "Enhancement Consumption"
+  - subIndex: 1
+    text: "木材"
+    translated: "Wood"
+  - subIndex: 2
+    text: "矿石"
+    translated: "Mineral"
+  templates:
+  - template: "{0}\\n{1} 999\\n{2} 999"
+- raw: "强化特性\\n特性特性+999\\n特性特性+999\\n特性特性+999"
+  splits:
+  - text: "强化特性"
+    translated: "Enhanced Traits"
+  - subIndex: 1
+    text: "特性特性"
+    translated: "Attributes Attributes"
+  - subIndex: 2
+    text: "特性特性"
+    translated: "Attributes Attributes"
+  - subIndex: 3
+    text: "特性特性"
+    translated: "Attributes Attributes"
+  templates:
+  - template: "{0}\\n{1}+999\\n{2}+999\\n{3}+999"
+- raw: "强行叛离会增加恶名\\n一段时间内无法加入新门派"
+  splits:
+  - text: "强行叛离会增加恶名"
+    translated: "Forcing a separation will increase notoriety"
+  - subIndex: 1
+    text: "一段时间内无法加入新门派"
+    translated: "Cannot join a new sect for a while."
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "归隐田园"
+  splits:
+  - text: "归隐田园"
+    translated: "Retire to the countryside"
+- raw: "当前出价"
+  splits:
+  - text: "当前出价"
+    translated: "Current bid"
+- raw: "当时的天下第一大派飞龙门亦于此战中精锐丧尽，从此一蹶不振。"
+  splits:
+  - text: "当时的天下第一大派飞龙门亦于此战中精锐丧尽，从此一蹶不振。"
+    translated: "At that time, the Flying Dragon Gate, the greatest martial faction in the land, lost its elite forces in this battle and subsequently declined."
+- raw: "形象"
+  splits:
+  - text: "形象"
+    translated: "Image"
+- raw: "形象代码..."
+  splits:
+  - text: "形象代码..."
+    translated: "Character code..."
+- raw: "徒弟"
+  splits:
+  - text: "徒弟"
+    translated: "Disciple"
+- raw: "御赐勋位\\n上轻车都尉"
+  splits:
+  - text: "御赐勋位"
+    translated: "Imperial Grant of Honours"
+  - subIndex: 1
+    text: "上轻车都尉"
+    translated: "Light Chariot Commander"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "志向"
+  splits:
+  - text: "志向"
+    translated: "Aspiration"
+- raw: "忠诚\\n♦影响弟子工作效率，包括习武练功，资源采集，道具制造等。\\n♦忠诚每月会自动向50点靠拢，可通过嘉奖或宴会快速提升。"
+  splits:
+  - text: "忠诚"
+    translated: "Loyalty"
+  - subIndex: 1
+    text: "影响弟子工作效率，包括习武练功，资源采集，道具制造等。"
+    translated: "Affecting apprentice efficiency in various activities such as martial arts practice, resource gathering, and item crafting."
+  - subIndex: 2
+    text: "忠诚每月会自动向50点靠拢，可通过嘉奖或宴会快速提升。"
+    translated: "Loyalty will automatically approach 50 points each month and can be accelerated through rewards or feasts."
+  templates:
+  - template: "{0}\\n♦{1}\\n♦{2}"
+- raw: "快捷键"
+  splits:
+  - text: "快捷键"
+    translated: "Shortcut keys"
+- raw: "快进"
+  splits:
+  - text: "快进"
+    translated: "Fast forward"
+- raw: "快速"
+  splits:
+  - text: "快速"
+    translated: "Quick"
+- raw: "快速\\n登录"
+  splits:
+  - text: "快速"
+    translated: "Quick"
+  - subIndex: 1
+    text: "登录"
+    translated: "Log in"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "快速对话"
+  splits:
+  - text: "快速对话"
+    translated: "Quick dialogue"
+- raw: "快速拾取"
+  splits:
+  - text: "快速拾取"
+    translated: "Quick pickup"
+- raw: "快速路\\n在上面移动相当于冲刺加速"
+  splits:
+  - text: "快速路"
+    translated: "Expressway"
+  - subIndex: 1
+    text: "在上面移动相当于冲刺加速"
+    translated: "Moving up is equivalent to sprinting and accelerating."
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "性别"
+  splits:
+  - text: "性别"
+    translated: "Gender"
+- raw: "性别 男"
+  splits:
+  - text: "性别"
+    translated: "Gender"
+  - subIndex: 1
+    text: "男"
+    translated: "Male"
+  templates:
+  - template: "{0} {1}"
+- raw: "性格"
+  splits:
+  - text: "性格"
+    translated: "Personality"
+- raw: "性格 好好好"
+  splits:
+  - text: "性格"
+    translated: "Personality"
+  - subIndex: 1
+    text: "好好好"
+    translated: "Fine fine"
+  templates:
+  - template: "{0} {1}"
+- raw: "总舵职位"
+  splits:
+  - text: "总舵职位"
+    translated: "Chief Den Position"
+- raw: "总计加成\\n威望+99\\n威望+99"
+  splits:
+  - text: "总计加成"
+    translated: "Total bonus"
+  - subIndex: 1
+    text: "威望"
+    translated: "Reputation"
+  - subIndex: 2
+    text: "威望"
+    translated: "Reputation"
+  templates:
+  - template: "{0}\\n{1}+99\\n{2}+99"
+- raw: "总评分"
+  splits:
+  - text: "总评分"
+    translated: "Overall Score"
+- raw: "总音量"
+  splits:
+  - text: "总音量"
+    translated: "Total volume"
+- raw: "恶名-0%\\n\\n可攻击资源\\n\\n不可攻击城镇\\n\\n不可攻击总舵"
+  splits:
+  - text: "恶名"
+    translated: "Reputation"
+  - subIndex: 1
+    text: "可攻击资源"
+    translated: "Attackable resources"
+  - subIndex: 2
+    text: "不可攻击城镇"
+    translated: "Cannot attack towns"
+  - subIndex: 3
+    text: "不可攻击总舵"
+    translated: "Cannot attack the main den"
+  templates:
+  - template: "{0}-0%\\n\\n{1}\\n\\n{2}\\n\\n{3}"
+- raw: "恶名\\n♦对好感/交易等造成负面影响，超过50会被通缉。\\n♦城镇内行凶恶名+100%，城镇周边绿色安全区+50%。\\n♦袭击同门或亲朋好友，会导致恶名成倍增加。\\n♦每月缓慢衰减，可通过岗哨巡查或行侠仗义降低，也可在官府缴纳罚金清空。"
+  splits:
+  - text: "恶名"
+    translated: "Reputation"
+  - subIndex: 1
+    text: "对好感"
+  - subIndex: 2
+    text: "交易等造成负面影响，超过50会被通缉。"
+    translated: "Trading activities causing negative impacts will result in a wanted notice if they exceed 50."
+  - subIndex: 3
+    text: "城镇内行凶恶名+100%，城镇周边绿色安全区"
+    translated: "Town center notorious for violence +100% , town periphery green safe zone"
+  - subIndex: 4
+    text: "袭击同门或亲朋好友，会导致恶名成倍增加。"
+    translated: "Attacking fellow disciples or loved ones will cause your notoriety to increase exponentially."
+  - subIndex: 5
+    text: "每月缓慢衰减，可通过岗哨巡查或行侠仗义降低，也可在官府缴纳罚金清空。"
+    translated: "Decays slowly over time and can be reduced through patrols or acts of heroism. It can also be cleared by paying a fine to the authorities."
+  templates:
+  - template: "{0}\\n♦{1}/{2}\\n♦{3}+50%。\\n♦{4}\\n♦{5}"
+- raw: "悬赏9999两"
+  splits:
+  - text: "悬赏9999两"
+    translated: "Bounty 9999 taels"
+- raw: "情侣"
+  splits:
+  - text: "情侣"
+    translated: "Couple"
+- raw: "意志"
+  splits:
+  - text: "意志"
+    translated: "Willpower"
+- raw: "意志+5"
+  splits:
+  - text: "意志"
+    translated: "Willpower"
+  templates:
+  - template: "{0}+5"
+- raw: "愤怒"
+  splits:
+  - text: "愤怒"
+    translated: "Anger"
+- raw: "愤怒状态下本回合无法出牌"
+  splits:
+  - text: "愤怒状态下本回合无法出牌"
+    translated: "In an angry state, no cards can be played this round."
+- raw: "成交"
+  splits:
+  - text: "成交"
+    translated: "Deal"
+- raw: "成品命名..."
+  splits:
+  - text: "成品命名..."
+    translated: "Product Naming..."
+- raw: "成就"
+  splits:
+  - text: "成就"
+    translated: "Achievement"
+- raw: "成就列表"
+  splits:
+  - text: "成就列表"
+    translated: "Achievements List"
+- raw: "成就名称"
+  splits:
+  - text: "成就名称"
+    translated: "Achievement Name"
+- raw: "成就描述成就描述成就描述成就描述成就描"
+  splits:
+  - text: "成就描述成就描述成就描述成就描述成就描"
+    translated: "Achievement description achievement description achievement description achievement description achievement description"
+- raw: "战利品"
+  splits:
+  - text: "战利品"
+    translated: "Loot"
+- raw: "战力"
+  splits:
+  - text: "战力"
+    translated: "Combat power"
+- raw: "战力\\n♦由角色的属性，装备和武功综合计算得出。"
+  splits:
+  - text: "战力"
+    translated: "Combat power"
+  - subIndex: 1
+    text: "由角色的属性，装备和武功综合计算得出。"
+    translated: "Computed from the character's attributes, equipment, and martial arts."
+  templates:
+  - template: "{0}\\n♦{1}"
+- raw: "战力\\n999999"
+  splits:
+  - text: "战力"
+    translated: "Combat power"
+  templates:
+  - template: "{0}\\n999999"
+- raw: "战功"
+  splits:
+  - text: "战功"
+    translated: "Combat achievements"
+- raw: "战斗信息\\n<color=grey>快捷键Tab</color>"
+  splits:
+  - text: "战斗信息"
+    translated: "Battle information"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}Tab</color>"
+- raw: "战斗屏幕震动"
+  splits:
+  - text: "战斗屏幕震动"
+    translated: "Battle screen shakes"
+- raw: "战斗时长 999    击败敌人 999    造成伤害 999    承受伤害 999"
+  splits:
+  - text: "战斗时长"
+    translated: "Battle duration"
+  - subIndex: 1
+    text: "击败敌人"
+    translated: "Defeat the enemy"
+  - subIndex: 2
+    text: "造成伤害"
+    translated: "Cause damage"
+  - subIndex: 3
+    text: "承受伤害"
+    translated: "Take damage"
+  templates:
+  - template: "{0} 999    {1} 999    {2} 999    {3} 999"
+- raw: "战斗视角跟随"
+  splits:
+  - text: "战斗视角跟随"
+    translated: "Fight camera follows"
+- raw: "战斗评价"
+  splits:
+  - text: "战斗评价"
+    translated: "Battle evaluation"
+- raw: "战斗难度极低，仅体验剧情\\n<color=red>无法获得成就</color>\\n玩家伤害+100%\\n玩家受伤-50%\\n全属性/全技能+15\\n玩家经验/声望+100%\\n非本门弟子经验-60%\\n难度提升速度-"
+  splits:
+  - text: "战斗难度极低，仅体验剧情"
+    translated: "The battle difficulty is extremely low; it's just for experiencing the story."
+  - subIndex: 1
+    text: "无法获得成就"
+    translated: "Cannot earn achievement"
+  - subIndex: 2
+    text: "玩家伤害"
+    translated: "Player damage"
+  - subIndex: 3
+    text: "玩家受伤"
+    translated: "Player injured"
+  - subIndex: 4
+    text: "全属性"
+    translated: "All attributes"
+  - subIndex: 5
+    text: "全技能"
+    translated: "All skills"
+  - subIndex: 6
+    text: "玩家经验"
+    translated: "Player experience"
+  - subIndex: 7
+    text: "声望"
+    translated: "Reputation"
+  - subIndex: 8
+    text: "非本门弟子经验"
+    translated: "Non‑disciple experience points"
+  - subIndex: 9
+    text: "难度提升速度"
+    translated: "Difficulty increase speed"
+  templates:
+  - template: "{0}\\n<color=red>{1}</color>\\n{2}+100%\\n{3}-50%\\n{4}/{5}+15\\n{6}/{7}+100%\\n{8}-60%\\n{9}-"
+- raw: "战法"
+  splits:
+  - text: "战法"
+    translated: "Battle strategy"
+- raw: "战鼓"
+  splits:
+  - text: "战鼓"
+    translated: "Battle drum"
+- raw: "所有生活技艺+3"
+  splits:
+  - text: "所有生活技艺"
+  templates:
+  - template: "{0}+3"
+- raw: "所有生活技艺潜力+1"
+  splits:
+  - text: "所有生活技艺潜力"
+    translated: "All potential in life skills"
+  templates:
+  - template: "{0}+1"
+- raw: "打工探索"
+  splits:
+  - text: "打工探索"
+    translated: "Working exploration"
+- raw: "打开自动建造后，每月6日会自动建造/升级建筑"
+  splits:
+  - text: "打开自动建造后，每月6日会自动建造"
+    translated: "After enabling automatic construction, it will automatically build on the 6th day of each month."
+  - subIndex: 1
+    text: "升级建筑"
+    translated: "Upgrade building"
+  templates:
+  - template: "{0}/{1}"
+- raw: "打通18个穴位回归气海\\n最终结算经验x250%"
+  splits:
+  - text: "打通18个穴位回归气海"
+    translated: "Puncture 18 acupoints to return to Qi Hai."
+  - subIndex: 1
+    text: "最终结算经验"
+    translated: "Final experience settlement"
+  templates:
+  - template: "{0}\\n{1}x250%"
+- raw: "打通9个穴位回归气海\\n最终结算经验x200%"
+  splits:
+  - text: "打通9个穴位回归气海"
+    translated: "Pierce 9 acupoints to return to the Sea of Qi"
+  - subIndex: 1
+    text: "最终结算经验"
+    translated: "Final experience settlement"
+  templates:
+  - template: "{0}\\n{1}x200%"
+- raw: "托管方式"
+  splits:
+  - text: "托管方式"
+    translated: "Hosting method"
+- raw: "技"
+  splits:
+  - text: "技"
+    translated: "Skill"
+- raw: "技能"
+  splits:
+  - text: "技能"
+    translated: "Skills"
+- raw: "技艺"
+  splits:
+  - text: "技艺"
+    translated: "Skill"
+- raw: "技艺潜力 60"
+  splits:
+  - text: "技艺潜力"
+    translated: "Skill potential"
+  templates:
+  - template: "{0} 60"
+- raw: "抄录"
+  splits:
+  - text: "抄录"
+    translated: "Copy"
+- raw: "抄录现有秘籍，获得残本秘籍"
+  splits:
+  - text: "抄录现有秘籍，获得残本秘籍"
+    translated: "Copy the existing grimoire to obtain a partial copy"
+- raw: "折扣100%"
+  splits:
+  - text: "折扣100%"
+    translated: "Discount 100%"
+- raw: "抢劫"
+  splits:
+  - text: "抢劫"
+    translated: "Robbery"
+- raw: "护\\n甲"
+  splits:
+  - text: "护"
+    translated: "Protect"
+  - subIndex: 1
+    text: "甲"
+    translated: "Jia"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "护甲\\n（消耗）"
+  splits:
+  - text: "护甲"
+    translated: "Armor"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "抵达瓶颈\\n积累满经验后\\n在闭关室突破"
+  splits:
+  - text: "抵达瓶颈"
+    translated: "Reach the bottleneck"
+  - subIndex: 1
+    text: "积累满经验后"
+    translated: "After accumulating enough experience points"
+  - subIndex: 2
+    text: "在闭关室突破"
+    translated: "Break through in the meditation chamber"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "拆除"
+  splits:
+  - text: "拆除"
+    translated: "Remove"
+- raw: "招架(快捷键C)\\n♦体力+5\\n♦恢复15%已损失架势"
+  splits:
+  - text: "招架"
+    translated: "Block"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  - subIndex: 2
+    text: "体力"
+    translated: "Strength"
+  - subIndex: 3
+    text: "恢复15%已损失架势"
+    translated: "Restore 15% Stance Damaged"
+  templates:
+  - template: "{0}({1}C)\\n♦{2}+5\\n♦{3}"
+- raw: "拳掌"
+  splits:
+  - text: "拳掌"
+    translated: "Fists and palms"
+- raw: "拳掌+5"
+  splits:
+  - text: "拳掌"
+    translated: "Fists and palms"
+  templates:
+  - template: "{0}+5"
+- raw: "拳掌+5\\n木植+5"
+  splits:
+  - text: "拳掌"
+    translated: "Fists and palms"
+  - subIndex: 1
+    text: "木植"
+    translated: "Forest Plant"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "拳掌兵器\\n（消耗）"
+  splits:
+  - text: "拳掌兵器"
+    translated: "Punching and palm weapons"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "拳掌武器"
+  splits:
+  - text: "拳掌武器"
+    translated: "Punching and palm weapon"
+- raw: "持有"
+  splits:
+  - text: "持有"
+    translated: "Possess"
+- raw: "换牌"
+  splits:
+  - text: "换牌"
+    translated: "Swap cards"
+- raw: "换装冷却 30日"
+  splits:
+  - text: "换装冷却"
+    translated: "Swap cooldown"
+  - subIndex: 1
+    text: "30日"
+    translated: "30th"
+  templates:
+  - template: "{0} {1}"
+- raw: "排名"
+  splits:
+  - text: "排名"
+    translated: "Ranking"
+- raw: "探索度 100%"
+  splits:
+  - text: "探索度"
+    translated: "Exploration Level"
+  templates:
+  - template: "{0} 100%"
+- raw: "探索度100%\\n额外获得声望"
+  splits:
+  - text: "探索度100%"
+    translated: "Exploration 100%"
+  - subIndex: 1
+    text: "额外获得声望"
+    translated: "Additional reputation gain"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "探索度20%\\n揭示所有塔楼"
+  splits:
+  - text: "探索度20%"
+    translated: "Exploration 20%"
+  - subIndex: 1
+    text: "揭示所有塔楼"
+    translated: "Reveal all towers"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "探索度40%\\n揭示所有地图和营地"
+  splits:
+  - text: "探索度40%"
+    translated: "Explore Percentage 40%"
+  - subIndex: 1
+    text: "揭示所有地图和营地"
+    translated: "Reveal all maps and campsites"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "探索度60%\\n恢复15%已消耗耐力"
+  splits:
+  - text: "探索度60%"
+    translated: "Explore Level 60%"
+  - subIndex: 1
+    text: "恢复15%已消耗耐力"
+    translated: "Restore 15% Stamina"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "探索度80%\\n恢复10%已消耗耐力\\n揭示终点位置"
+  splits:
+  - text: "探索度80%"
+    translated: "Explore Level 80%"
+  - subIndex: 1
+    text: "恢复10%已消耗耐力"
+    translated: "Restore 10% stamina consumed"
+  - subIndex: 2
+    text: "揭示终点位置"
+    translated: "Reveal the final position"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "推脱"
+  splits:
+  - text: "推脱"
+    translated: "Avoid"
+- raw: "描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述"
+  splits:
+  - text: "描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述"
+    translated: "Description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description"
+- raw: "提升防御战时的围墙耐久"
+  splits:
+  - text: "提升防御战时的围墙耐久"
+    translated: "Increase the durability of walls during defensive battles"
+- raw: "提升防御战时的守卫等级"
+  splits:
+  - text: "提升防御战时的守卫等级"
+    translated: "Increase the defense level of guards during battles"
+- raw: "提升防御战时的战鼓等级"
+  splits:
+  - text: "提升防御战时的战鼓等级"
+    translated: "Increase the drum level during defensive battles"
+- raw: "提升防御战时的箭塔等级"
+  splits:
+  - text: "提升防御战时的箭塔等级"
+    translated: "Upgrade the defense tier of arrow towers in battle"
+- raw: "提升防御战时的陷阱数量"
+  splits:
+  - text: "提升防御战时的陷阱数量"
+    translated: "Increase the number of traps during defensive battles"
+- raw: "提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息"
+  splits:
+  - text: "提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息"
+    translated: "Hint information hint information hint information hint information hint information hint information hint information hint information hint information hint information hint information"
+- raw: "撤销"
+  splits:
+  - text: "撤销"
+    translated: "Revoke"
+- raw: "支持者包DLC"
+  splits:
+  - text: "支持者包"
+    translated: "Supporter Pack"
+  templates:
+  - template: "{0}DLC"
+- raw: "改装"
+  splits:
+  - text: "改装"
+    translated: "Rebuild"
+- raw: "攻击模式"
+  splits:
+  - text: "攻击模式"
+    translated: "Attack Mode"
+- raw: "攻方"
+  splits:
+  - text: "攻方"
+    translated: "Attacker"
+- raw: "放入"
+  splits:
+  - text: "放入"
+    translated: "Insert"
+- raw: "放入门派仓库"
+  splits:
+  - text: "放入门派仓库"
+    translated: "Place it in the Sect warehouse"
+- raw: "放弃"
+  splits:
+  - text: "放弃"
+    translated: "Give up"
+- raw: "教程内容教程内容教程内容教程内容教程内容教程内容教程内容\\n教程内容教程内容教程内容教程内容教程内容"
+  splits:
+  - text: "教程内容教程内容教程内容教程内容教程内容教程内容教程内容"
+    translated: "Tutorial content Tutorial content Tutorial content Tutorial content Tutorial content Tutorial content Tutorial content"
+  - subIndex: 1
+    text: "教程内容教程内容教程内容教程内容教程内容"
+    translated: "Tutorial content Tutorial content Tutorial content Tutorial content Tutorial content"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "整合"
+  splits:
+  - text: "整合"
+    translated: "Integrate"
+- raw: "文本文本文本文本文本文本\\n文本文本文本文本文本文本"
+  splits:
+  - text: "文本文本文本文本文本文本"
+    translated: "Plain plain plain plain plain text"
+  - subIndex: 1
+    text: "文本文本文本文本文本文本"
+    translated: "Plain plain plain plain plain text"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "斗笠"
+  splits:
+  - text: "斗笠"
+    translated: "Hood"
+- raw: "新建"
+  splits:
+  - text: "新建"
+- raw: "新手推荐！"
+  splits:
+  - text: "新手推荐！"
+    translated: "New Player Recommendation!"
+- raw: "新手推荐！\\n全属性/全技能+12\\n玩家经验/声望+60%\\n非本门弟子经验-40%"
+  splits:
+  - text: "新手推荐！"
+    translated: "New Player Recommendation!"
+  - subIndex: 1
+    text: "全属性"
+    translated: "All attributes"
+  - subIndex: 2
+    text: "全技能"
+    translated: "All skills"
+  - subIndex: 3
+    text: "玩家经验"
+    translated: "Player experience"
+  - subIndex: 4
+    text: "声望"
+    translated: "Reputation"
+  - subIndex: 5
+    text: "非本门弟子经验"
+    translated: "Non‑disciple experience points"
+  templates:
+  - template: "{0}\\n{1}/{2}+12\\n{3}/{4}+60%\\n{5}-40%"
+- raw: "新手推荐！\\n全属性/全技能+15\\n玩家经验/声望+80%\\n非本门弟子经验-60%\\n难度提升速度-"
+  splits:
+  - text: "新手推荐！"
+    translated: "New Player Recommendation!"
+  - subIndex: 1
+    text: "全属性"
+    translated: "All attributes"
+  - subIndex: 2
+    text: "全技能"
+    translated: "All skills"
+  - subIndex: 3
+    text: "玩家经验"
+    translated: "Player experience"
+  - subIndex: 4
+    text: "声望"
+    translated: "Reputation"
+  - subIndex: 5
+    text: "非本门弟子经验"
+    translated: "Non‑disciple experience points"
+  - subIndex: 6
+    text: "难度提升速度"
+    translated: "Difficulty increase speed"
+  templates:
+  - template: "{0}\\n{1}/{2}+15\\n{3}/{4}+80%\\n{5}-60%\\n{6}-"
+- raw: "旗鼓相当"
+  splits:
+  - text: "旗鼓相当"
+    translated: "Even match"
+- raw: "无"
+  splits:
+  - text: "无"
+    translated: "Wu"
+- raw: "无名之辈"
+  splits:
+  - text: "无名之辈"
+    translated: "Ordinary Folk"
+- raw: "无影乱剑"
+  splits:
+  - text: "无影乱剑"
+    translated: "Shadowless Chaotic Swords"
+- raw: "无敌剑法功法"
+  splits:
+  - text: "无敌剑法功法"
+    translated: "Unbreakable Sword Art Skill"
+- raw: "无敌无敌无敌"
+  splits:
+  - text: "无敌无敌无敌"
+    translated: "Unbeatable! Unbeatable! Unbeatable!"
+- raw: "无敌牌 至交(100) 11111"
+  splits:
+  - text: "无敌牌"
+    translated: "Unbeatable Card"
+  - subIndex: 1
+    text: "至交"
+    translated: "Best friend"
+  templates:
+  - template: "{0} {1}(100) 11111"
+- raw: "无法手动存档，退出时自动存档"
+  splits:
+  - text: "无法手动存档，退出时自动存档"
+    translated: "Cannot save manually; saves automatically upon exit"
+- raw: "无特殊效果"
+  splits:
+  - text: "无特殊效果"
+    translated: "No special effects"
+- raw: "日志"
+  splits:
+  - text: "日志"
+    translated: "Log"
+- raw: "早期测试版\\n不代表游戏最终品质"
+  splits:
+  - text: "早期测试版"
+    translated: "Early test version"
+  - subIndex: 1
+    text: "不代表游戏最终品质"
+    translated: "Does not represent the final quality of the game"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "旱"
+  splits:
+  - text: "旱"
+    translated: "Drought"
+- raw: "时间"
+  splits:
+  - text: "时间"
+    translated: "Time"
+- raw: "显示城市"
+  splits:
+  - text: "显示城市"
+    translated: "Show city"
+- raw: "显示客栈"
+  splits:
+  - text: "显示客栈"
+    translated: "Show inn"
+- raw: "显示村庄"
+  splits:
+  - text: "显示村庄"
+    translated: "Show the village"
+- raw: "显示资源"
+  splits:
+  - text: "显示资源"
+    translated: "Display resources"
+- raw: "显示道路"
+  splits:
+  - text: "显示道路"
+    translated: "Show the road"
+- raw: "显示门派"
+  splits:
+  - text: "显示门派"
+    translated: "Display Sect"
+- raw: "晋升"
+  splits:
+  - text: "晋升"
+    translated: "Promotion"
+- raw: "晋升[入门弟子]条件\\n入门武学 1/6\\n门派功绩 100/100"
+  splits:
+  - text: "晋升"
+    translated: "Promotion"
+  - subIndex: 1
+    text: "入门弟子"
+    translated: "Novice Disciple"
+  - subIndex: 2
+    text: "条件"
+    translated: "Conditions"
+  - subIndex: 3
+    text: "入门武学"
+    translated: "Introduction to Martial Arts"
+  - subIndex: 4
+    text: "门派功绩"
+    translated: "Sect Achievements"
+  templates:
+  - template: "{0}[{1}]{2}\\n{3} 1/6\\n{4} 100/100"
+- raw: "普通"
+  splits:
+  - text: "普通"
+    translated: "Ordinary"
+- raw: "普通制作"
+  splits:
+  - text: "普通制作"
+    translated: "Ordinary production"
+- raw: "普通突破"
+  splits:
+  - text: "普通突破"
+    translated: "Common Breakthrough"
+- raw: "普通角色"
+  splits:
+  - text: "普通角色"
+    translated: "Ordinary character"
+- raw: "智力"
+  splits:
+  - text: "智力"
+    translated: "Intelligence"
+- raw: "智力+5"
+  splits:
+  - text: "智力"
+    translated: "Intelligence"
+  templates:
+  - template: "{0}+5"
+- raw: "智力+5\\n意志+5"
+  splits:
+  - text: "智力"
+    translated: "Intelligence"
+  - subIndex: 1
+    text: "意志"
+    translated: "Willpower"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "智力+5\\n经脉+5"
+  splits:
+  - text: "智力"
+    translated: "Intelligence"
+  - subIndex: 1
+    text: "经脉"
+    translated: "Meridian"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "暗中破坏"
+  splits:
+  - text: "暗中破坏"
+    translated: "Secretly sabotage"
+- raw: "更新日志"
+  splits:
+  - text: "更新日志"
+    translated: "Update Log"
+- raw: "曾立下“十年开天下，十年养百姓，十年致太平”的凌云壮志。"
+  splits:
+  - text: "曾立下“十年开天下，十年养百姓，十年致太平”的凌云壮志。"
+    translated: "He once vowed to conquer the world in ten years, nurture the people in ten years, and bring peace in ten years."
+- raw: "朋友"
+  splits:
+  - text: "朋友"
+    translated: "Friend"
+- raw: "服装兑换"
+  splits:
+  - text: "服装兑换"
+    translated: "Clothing Exchange"
+- raw: "服饰"
+  splits:
+  - text: "服饰"
+    translated: "Clothing"
+- raw: "木材\\n（消耗）"
+  splits:
+  - text: "木材"
+    translated: "Wood"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "木植"
+  splits:
+  - text: "木植"
+    translated: "Forest Plant"
+- raw: "未获取"
+  splits:
+  - text: "未获取"
+    translated: "Not acquired"
+- raw: "机关"
+  splits:
+  - text: "机关"
+    translated: "Mechanism"
+- raw: "机关伤害+10%"
+  splits:
+  - text: "机关伤害"
+    translated: "Mechanical damage"
+  templates:
+  - template: "{0}+10%"
+- raw: "机关耐久+10%"
+  splits:
+  - text: "机关耐久"
+    translated: "Mechanism Durability"
+  templates:
+  - template: "{0}+10%"
+- raw: "机关速度+10%"
+  splits:
+  - text: "机关速度"
+    translated: "Mechanism speed"
+  templates:
+  - template: "{0}+10%"
+- raw: "杂货铺"
+  splits:
+  - text: "杂货铺"
+    translated: "General Store"
+- raw: "权势滔天"
+  splits:
+  - text: "权势滔天"
+    translated: "Overwhelming Power"
+- raw: "材料"
+  splits:
+  - text: "材料"
+    translated: "Materials"
+- raw: "材料\\n(消耗)"
+  splits:
+  - text: "材料"
+    translated: "Materials"
+  - subIndex: 1
+    text: "消耗"
+    translated: "Consume"
+  templates:
+  - template: "{0}\\n({1})"
+- raw: "极难+99"
+  splits:
+  - text: "极难"
+    translated: "Extremely difficult"
+  templates:
+  - template: "{0}+99"
+- raw: "查看地图"
+  splits:
+  - text: "查看地图"
+    translated: "Check the map"
+- raw: "查看适龄提示"
+  splits:
+  - text: "查看适龄提示"
+    translated: "Check age rating warning"
+- raw: "标记\\n♦标记角色可在名录快速搜索"
+  splits:
+  - text: "标记"
+    translated: "Mark"
+  - subIndex: 1
+    text: "标记角色可在名录快速搜索"
+    translated: "Marked characters can be quickly searched in the registry."
+  templates:
+  - template: "{0}\\n♦{1}"
+- raw: "标记角色"
+  splits:
+  - text: "标记角色"
+    translated: "Tag the character"
+- raw: "检测到您为未成年人，敬请注意：\\n\\n本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
+  splits:
+  - text: "检测到您为未成年人，敬请注意："
+    translated: "Detection of minor status:"
+  - subIndex: 1
+    text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
+  templates:
+  - template: "{0}\\n\\n{1}"
+- raw: "次年，飞龙门掌门赵胤宗于泰山举行会盟大会，"
+  splits:
+  - text: "次年，飞龙门掌门赵胤宗于泰山举行会盟大会，"
+    translated: "The following year, Sect Leader Zhao Yizong of Flying Dragon Gate held a grand alliance conference on Mount Tai."
+- raw: "欲凭一己之力消弭武林纷争。"
+  splits:
+  - text: "欲凭一己之力消弭武林纷争。"
+    translated: "Desiring to extinguish the conflicts in the Wulin with my own strength."
+- raw: "正"
+  splits:
+  - text: "正"
+    translated: "Zheng"
+- raw: "正在研究"
+  splits:
+  - text: "正在研究"
+    translated: "Studying"
+- raw: "正在踏入江湖..."
+  splits:
+  - text: "正在踏入江湖..."
+    translated: "Stepping into the Jianghu..."
+- raw: "正是于巴蜀一带小有名气的门派：仙霞派。"
+  splits:
+  - text: "正是于巴蜀一带小有名气的门派：仙霞派。"
+- raw: "此后数年间，天下大乱，百姓流离，奸邪并起，宵小横行。"
+  splits:
+  - text: "此后数年间，天下大乱，百姓流离，奸邪并起，宵小横行。"
+    translated: "In the following years, chaos reigned across the land as people wandered and suffered. Evil flourished while petty villains ran rampant."
+- raw: "步履维艰"
+  splits:
+  - text: "步履维艰"
+    translated: "Stumbling forward"
+- raw: "武"
+  splits:
+  - text: "武"
+    translated: "Wu"
+- raw: "武\\n器"
+  splits:
+  - text: "武"
+    translated: "Wu"
+  - subIndex: 1
+    text: "器"
+    translated: "Qi"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "武功"
+  splits:
+  - text: "武功"
+    translated: "Martial arts"
+- raw: "武功偏好"
+  splits:
+  - text: "武功偏好"
+    translated: "Martial arts preference"
+- raw: "武功兑换"
+  splits:
+  - text: "武功兑换"
+    translated: "Martial Arts Skill Exchange"
+- raw: "武器等级1"
+  splits:
+  - text: "武器等级1"
+    translated: "Weapon level 1"
+- raw: "武学"
+  splits:
+  - text: "武学"
+    translated: "Martial arts"
+- raw: "武学图鉴"
+  splits:
+  - text: "武学图鉴"
+    translated: "Martial Arts Compendium"
+- raw: "武学技能"
+  splits:
+  - text: "武学技能"
+    translated: "Martial skill"
+- raw: "武学潜力 60"
+  splits:
+  - text: "武学潜力"
+    translated: "Martial potential"
+  templates:
+  - template: "{0} 60"
+- raw: "武当\\n外门弟子百衲衣"
+  splits:
+  - text: "武当"
+    translated: "Wudang"
+  - subIndex: 1
+    text: "外门弟子百衲衣"
+    translated: "Outer Gate Disciple Bahetee Cloak"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "武当武当"
+  splits:
+  - text: "武当武当"
+    translated: "Wudang Wudang"
+- raw: "武当派\\n亲传弟子道袍道"
+  splits:
+  - text: "武当派"
+    translated: "Wudang Sect"
+  - subIndex: 1
+    text: "亲传弟子道袍道"
+    translated: "Apprentice Worn Dao Robe"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "武林盟主"
+  splits:
+  - text: "武林盟主"
+    translated: "Alliance Leader"
+- raw: "武者"
+  splits:
+  - text: "武者"
+    translated: "Warrior"
+- raw: "死战"
+  splits:
+  - text: "死战"
+    translated: "All‑Out Battle"
+- raw: "每10日"
+  splits:
+  - text: "每10日"
+    translated: "Every 10 day"
+- raw: "每15日"
+  splits:
+  - text: "每15日"
+    translated: "Daily 15"
+- raw: "每30日"
+  splits:
+  - text: "每30日"
+    translated: "Every 30 day"
+- raw: "每5日"
+  splits:
+  - text: "每5日"
+    translated: "Daily 5"
+- raw: "每月威望产出"
+  splits:
+  - text: "每月威望产出"
+    translated: "Monthly reputation output"
+- raw: "每月收益\\n银两+100\\n威望+100"
+  splits:
+  - text: "每月收益"
+    translated: "Monthly earnings"
+  - subIndex: 1
+    text: "银两"
+    translated: "Silver taels"
+  - subIndex: 2
+    text: "威望"
+    translated: "Reputation"
+  templates:
+  - template: "{0}\\n{1}+100\\n{2}+100"
+- raw: "每月木料产出"
+  splits:
+  - text: "每月木料产出"
+    translated: "Monthly wood production"
+- raw: "每月矿石产出"
+  splits:
+  - text: "每月矿石产出"
+    translated: "Monthly ore production"
+- raw: "每月粮食产出"
+  splits:
+  - text: "每月粮食产出"
+    translated: "Monthly food production"
+- raw: "每月药材产出"
+  splits:
+  - text: "每月药材产出"
+    translated: "Monthly herbal produce"
+- raw: "每月银钱产出"
+  splits:
+  - text: "每月银钱产出"
+    translated: "Monthly silver income"
+- raw: "毒术"
+  splits:
+  - text: "毒术"
+    translated: "Poison Technique"
+- raw: "民心"
+  splits:
+  - text: "民心"
+    translated: "Public sentiment"
+- raw: "民心\\n♦低于50：每降低1点减少所有建筑1%生产效率。\\n  大于70：生产效率+10%\\n  大于80：生产效率+15%\\n  大于90：生产效率+20%\\n♦高民心增加委托数量，降低委托难度；低民心减少委托数量，提升委托难度。\\n♦影响攻城战守卫强度。"
+  splits:
+  - text: "民心"
+    translated: "Public sentiment"
+  - subIndex: 1
+    text: "低于50：每降低1点减少所有建筑1%生产效率。"
+    translated: "Below 50: For every 1 point decrease, all building production efficiency is reduced by 1%."
+  - subIndex: 2
+    text: "大于70：生产效率"
+    translated: "Greater than 70: production efficiency"
+  - subIndex: 3
+    text: "大于80：生产效率"
+    translated: "Greater than 80: Production Efficiency"
+  - subIndex: 4
+    text: "大于90：生产效率"
+    translated: "Greater than 90: Production Efficiency"
+  - subIndex: 5
+    text: "高民心增加委托数量，降低委托难度；低民心减少委托数量，提升委托难度。"
+  - subIndex: 6
+    text: "影响攻城战守卫强度。"
+    translated: "Affects the defense strength in sieges"
+  templates:
+  - template: "{0}\\n♦{1}\\n  {2}+10%\\n  {3}+15%\\n  {4}+20%\\n♦{5}\\n♦{6}"
+- raw: "水"
+  splits:
+  - text: "水"
+    translated: "Shui"
+- raw: "江南"
+  splits:
+  - text: "江南"
+    translated: "Jiangnan"
+- raw: "江湖中风浪肆虐，中原各地皆有所波及。"
+  splits:
+  - text: "江湖中风浪肆虐，中原各地皆有所波及。"
+    translated: "Winds and waves of turmoil ravage the Jianghu, affecting all regions of Central Plains."
+- raw: "汪汪汪汪"
+  splits:
+  - text: "汪汪汪汪"
+    translated: "Woof woof woof woof"
+- raw: "治安"
+  splits:
+  - text: "治安"
+    translated: "Public safety"
+- raw: "治安\\n♦低于50：每降低1点减少所有建筑1%生产效率。\\n  大于70：生产效率+10%\\n  大于80：生产效率+15%\\n  大于90：生产效率+20%\\n♦高治安增加商品数量，降低买卖价格；低治安减少商品数量，提升买卖价格。\\n♦影响攻城战守卫人数。"
+  splits:
+  - text: "治安"
+    translated: "Public safety"
+  - subIndex: 1
+    text: "低于50：每降低1点减少所有建筑1%生产效率。"
+    translated: "Below 50: For every 1 point decrease, all building production efficiency is reduced by 1%."
+  - subIndex: 2
+    text: "大于70：生产效率"
+    translated: "Greater than 70: production efficiency"
+  - subIndex: 3
+    text: "大于80：生产效率"
+    translated: "Greater than 80: Production Efficiency"
+  - subIndex: 4
+    text: "大于90：生产效率"
+    translated: "Greater than 90: Production Efficiency"
+  - subIndex: 5
+    text: "高治安增加商品数量，降低买卖价格；低治安减少商品数量，提升买卖价格。"
+    translated: "High stability increases the quantity of goods and lowers buying and selling prices; low stability decreases the quantity of goods and raises buying and selling prices."
+  - subIndex: 6
+    text: "影响攻城战守卫人数。"
+    translated: "Affects the number of defenders in a siege battle."
+  templates:
+  - template: "{0}\\n♦{1}\\n  {2}+10%\\n  {3}+15%\\n  {4}+20%\\n♦{5}\\n♦{6}"
+- raw: "治安100"
+  splits:
+  - text: "治安100"
+    translated: "Public Safety 100"
+- raw: "治疗"
+  splits:
+  - text: "治疗"
+    translated: "Treatment"
+- raw: "泥泞路\\n在上面移动相当于水中减速"
+  splits:
+  - text: "泥泞路"
+    translated: "Muddy road"
+  - subIndex: 1
+    text: "在上面移动相当于水中减速"
+    translated: "Moving upwards is equivalent to moving slower in water."
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "注册"
+  splits:
+  - text: "注册"
+    translated: "Register"
+- raw: "洪水"
+  splits:
+  - text: "洪水"
+    translated: "Flood"
+- raw: "测试"
+  splits:
+  - text: "测试"
+    translated: "Test"
+- raw: "测试测试测试测试测试测试"
+  splits:
+  - text: "测试测试测试测试测试测试"
+    translated: "Test test test test test test"
+- raw: "消息"
+  splits:
+  - text: "消息"
+    translated: "Message"
+- raw: "消极"
+  splits:
+  - text: "消极"
+    translated: "Negative"
+- raw: "消毒"
+  splits:
+  - text: "消毒"
+    translated: "Disinfection"
+- raw: "消耗低级毒物获取高级毒物"
+  splits:
+  - text: "消耗低级毒物获取高级毒物"
+    translated: "Consume low‑level toxins to obtain high‑level toxins"
+- raw: "消耗天数 99"
+  splits:
+  - text: "消耗天数"
+    translated: "Days Consumed"
+  templates:
+  - template: "{0} 99"
+- raw: "消耗时间:1天"
+  splits:
+  - text: "消耗时间"
+    translated: "Spend time"
+  - subIndex: 1
+    text: "1天"
+    translated: "1 days"
+  templates:
+  - template: "{0}:{1}"
+- raw: "消耗时间：1天"
+  splits:
+  - text: "消耗时间：1天"
+    translated: "Time consumed: 1 days"
+- raw: "消耗药引/食材获取毒物"
+  splits:
+  - text: "消耗药引"
+    translated: "Consume materia"
+  - subIndex: 1
+    text: "食材获取毒物"
+    translated: "Poison from ingredient acquisition"
+  templates:
+  - template: "{0}/{1}"
+- raw: "淬毒"
+  splits:
+  - text: "淬毒"
+    translated: "Poisoned"
+- raw: "添加愿望单"
+  splits:
+  - text: "添加愿望单"
+    translated: "Add to Wish List"
+- raw: "清"
+  splits:
+  - text: "清"
+    translated: "Qing"
+- raw: "清空功绩并离开门派\\n需身份为亲传弟子\\n且功绩达到满值"
+  splits:
+  - text: "清空功绩并离开门派"
+    translated: "Clear achievements and leave the sect"
+  - subIndex: 1
+    text: "需身份为亲传弟子"
+    translated: "Must be a direct disciple"
+  - subIndex: 2
+    text: "且功绩达到满值"
+    translated: "And merits reach full value"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "清空已读信件"
+  splits:
+  - text: "清空已读信件"
+    translated: "Clear read messages"
+- raw: "温馨提示"
+  splits:
+  - text: "温馨提示"
+- raw: "游侠"
+  splits:
+  - text: "游侠"
+    translated: "Ranger"
+- raw: "游戏名称：《龙胤立志传》 批准文号：国新出审〔2025〕100 号 出版物号：ISBN 978-7-498-14483-6\\n著作权人：当涂县皮皮糖软件开发工作室 出版单位：华东师范大学电子音像出版社有限公司"
+  splits:
+  - text: "游戏名称：《龙胤立志传》"
+    translated: "Game Title: The Dragon's Heir's Resolve"
+  - subIndex: 1
+    text: "批准文号：国新出审〔2025〕100"
+    translated: "Approval Number: Guoxin Chushi [Year] No. 2025100"
+  - subIndex: 2
+    text: "号"
+    translated: "Hao"
+  - subIndex: 3
+    text: "出版物号："
+    translated: "Publication Number:"
+  - subIndex: 4
+    text: "著作权人：当涂县皮皮糖软件开发工作室"
+    translated: "Copyright holder: Dangtian County Pipitao Software Development Studio"
+  - subIndex: 5
+    text: "出版单位：华东师范大学电子音像出版社有限公司"
+    translated: "Publisher: Huadong Normal University Electronic Audio‑Visual Press Co., Ltd."
+  templates:
+  - template: "{0} {1} {2} {3}ISBN 978-7-498-14483-6\\n{4} {5}"
+- raw: "游戏模式"
+  splits:
+  - text: "游戏模式"
+    translated: "Game mode"
+- raw: "游戏难度"
+  splits:
+  - text: "游戏难度"
+    translated: "Game difficulty"
+- raw: "激活技能"
+  splits:
+  - text: "激活技能"
+    translated: "Activate skill"
+- raw: "激进"
+  splits:
+  - text: "激进"
+    translated: "Radical"
+- raw: "火药"
+  splits:
+  - text: "火药"
+    translated: "Gunpowder"
+- raw: "火药加成\\n伤害+999%\\n伤害+999%\\n伤害+999%\\n伤害+999%\\n伤害+999%\\n伤害+999%"
+  splits:
+  - text: "火药加成"
+    translated: "Gunpowder bonus"
+  - subIndex: 1
+    text: "伤害"
+    translated: "Damage"
+  - subIndex: 2
+    text: "伤害"
+    translated: "Damage"
+  - subIndex: 3
+    text: "伤害"
+    translated: "Damage"
+  - subIndex: 4
+    text: "伤害"
+    translated: "Damage"
+  - subIndex: 5
+    text: "伤害"
+    translated: "Damage"
+  - subIndex: 6
+    text: "伤害"
+    translated: "Damage"
+  templates:
+  - template: "{0}\\n{1}+999%\\n{2}+999%\\n{3}+999%\\n{4}+999%\\n{5}+999%\\n{6}+999%"
+- raw: "灵巧"
+  splits:
+  - text: "灵巧"
+    translated: "Nimble"
+- raw: "灵巧+5"
+  splits:
+  - text: "灵巧"
+    translated: "Nimble"
+  templates:
+  - template: "{0}+5"
+- raw: "灵巧+5\\n经脉+5"
+  splits:
+  - text: "灵巧"
+    translated: "Nimble"
+  - subIndex: 1
+    text: "经脉"
+    translated: "Meridian"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "灼烧: 每回合减少对手当前血量5%内力5%血量5%内力5%血量5%内力5%"
+  splits:
+  - text: "灼烧"
+    translated: "Scorching"
+  - subIndex: 1
+    text: "每回合减少对手当前血量5%内力5%血量5%内力5%血量5%内力5%"
+    translated: "Reduce opponent's current health by 5% inner power, 5% health, 5% inner power, 5% health, 5% inner power, 5% health each turn."
+  templates:
+  - template: "{0}: {1}"
+- raw: "点击切换已读状态\\n按住左Shift点击即可删除"
+  splits:
+  - text: "点击切换已读状态"
+    translated: "Click to toggle read status"
+  - subIndex: 1
+    text: "按住左"
+    translated: "Press and hold the left button"
+  - subIndex: 2
+    text: "点击即可删除"
+    translated: "Click to delete"
+  templates:
+  - template: "{0}\\n{1}Shift{2}"
+- raw: "炼药"
+  splits:
+  - text: "炼药"
+    translated: "Alchemy"
+- raw: "炼蛊"
+  splits:
+  - text: "炼蛊"
+    translated: "Incubate poison insects"
+- raw: "烹饪"
+  splits:
+  - text: "烹饪"
+    translated: "Cooking"
+- raw: "熟练度"
+  splits:
+  - text: "熟练度"
+    translated: "Proficiency"
+- raw: "爱好爱好爱好"
+  splits:
+  - text: "爱好爱好爱好"
+    translated: "Hobbies hobbies hobbies"
+- raw: "牛刀小试"
+  splits:
+  - text: "牛刀小试"
+    translated: "A Test of Skill"
+- raw: "物品名称"
+  splits:
+  - text: "物品名称"
+    translated: "Item Name"
+- raw: "特定剧情可解锁亲密选项"
+  splits:
+  - text: "特定剧情可解锁亲密选项"
+    translated: "Intimate options unlockable in specific plot scenarios"
+- raw: "特效"
+  splits:
+  - text: "特效"
+    translated: "Special effects"
+- raw: "特效特效"
+  splits:
+  - text: "特效特效"
+    translated: "Special effects special effects"
+- raw: "特效特效[99]"
+  splits:
+  - text: "特效特效"
+    translated: "Special effects special effects"
+  templates:
+  - template: "{0}[99]"
+- raw: "特殊"
+  splits:
+  - text: "特殊"
+    translated: "Special"
+- raw: "特殊建筑"
+  splits:
+  - text: "特殊建筑"
+    translated: "Special buildings"
+- raw: "特殊建筑0/9"
+  splits:
+  - text: "特殊建筑0"
+    translated: "Special building 0"
+  templates:
+  - template: "{0}/9"
+- raw: "特殊建筑一旦建造完成便无法拆除，请谨慎选择"
+  splits:
+  - text: "特殊建筑一旦建造完成便无法拆除，请谨慎选择"
+    translated: "Special buildings cannot be removed once constructed; please choose wisely."
+- raw: "特殊立绘"
+  splits:
+  - text: "特殊立绘"
+    translated: "Special portrait"
+- raw: "特殊角色"
+  splits:
+  - text: "特殊角色"
+    translated: "Special Roles"
+- raw: "特殊角色\\n不可招募"
+  splits:
+  - text: "特殊角色"
+    translated: "Special Roles"
+  - subIndex: 1
+    text: "不可招募"
+    translated: "Cannot recruit"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "特殊角色好感达100可解锁对应人物图鉴"
+  splits:
+  - text: "特殊角色好感达100可解锁对应人物图鉴"
+    translated: "Special character goodwill reaching 100 unlocks the corresponding character encyclopedia entry."
+- raw: "猪皮无敌"
+  splits:
+  - text: "猪皮无敌"
+    translated: "Skin as Strong as Pig Leather Invincible"
+- raw: "猪皮无敌使用"
+  splits:
+  - text: "猪皮无敌使用"
+    translated: "Invincible Pig Skin usage"
+- raw: "猪皮无无"
+  splits:
+  - text: "猪皮无无"
+    translated: "Skinflint"
+- raw: "猪皮猪皮"
+  splits:
+  - text: "猪皮猪皮"
+    translated: "Pig skin pig skin"
+- raw: "珍品拍卖大会"
+  splits:
+  - text: "珍品拍卖大会"
+    translated: "Treasure Auction Gala"
+- raw: "珍奇"
+  splits:
+  - text: "珍奇"
+    translated: "Strange Treasures"
+- raw: "珍宝"
+  splits:
+  - text: "珍宝"
+    translated: "Treasure"
+- raw: "珍宝\\n（消耗）"
+  splits:
+  - text: "珍宝"
+    translated: "Treasure"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "生命"
+  splits:
+  - text: "生命"
+    translated: "Health"
+- raw: "生活技艺"
+  splits:
+  - text: "生活技艺"
+    translated: "Life Skills"
+- raw: "用户名"
+  splits:
+  - text: "用户名"
+    translated: "Username"
+- raw: "用毒"
+  splits:
+  - text: "用毒"
+    translated: "Poisoning"
+- raw: "男"
+  splits:
+  - text: "男"
+    translated: "Male"
+- raw: "疗伤休养"
+  splits:
+  - text: "疗伤休养"
+    translated: "Healing and recuperation"
+- raw: "瘟疫"
+  splits:
+  - text: "瘟疫"
+    translated: "Plague"
+- raw: "登峰造极"
+  splits:
+  - text: "登峰造极"
+    translated: "Reach the pinnacle"
+- raw: "登录"
+  splits:
+  - text: "登录"
+    translated: "Log in"
+- raw: "百会"
+  splits:
+  - text: "百会"
+    translated: "Meeting of the Hundred Sands"
+- raw: "监牢"
+  splits:
+  - text: "监牢"
+    translated: "Prison"
+- raw: "目标"
+  splits:
+  - text: "目标"
+    translated: "Goal"
+- raw: "眉毛"
+  splits:
+  - text: "眉毛"
+    translated: "Brow"
+- raw: "眼看日薄西山，朝廷只能将治下城镇分封给各大门派，"
+  splits:
+  - text: "眼看日薄西山，朝廷只能将治下城镇分封给各大门派，"
+    translated: "As the sun set, the court was forced to grant control of the towns under its jurisdiction to the major sects."
+- raw: "眼睛"
+  splits:
+  - text: "眼睛"
+    translated: "Eyes"
+- raw: "睡觉"
+  splits:
+  - text: "睡觉"
+    translated: "Sleep"
+- raw: "知难而进"
+  splits:
+  - text: "知难而进"
+    translated: "Advance in the face of difficulty"
+- raw: "短靴"
+  splits:
+  - text: "短靴"
+    translated: "Short boots"
+- raw: "研"
+  splits:
+  - text: "研"
+    translated: "Study"
+- raw: "研究名称"
+  splits:
+  - text: "研究名称"
+    translated: "Study Name"
+- raw: "研究时间 999\\n研究经验 999"
+  splits:
+  - text: "研究时间"
+    translated: "Research time"
+  - subIndex: 1
+    text: "研究经验"
+    translated: "Research experience"
+  templates:
+  - template: "{0} 999\\n{1} 999"
+- raw: "研究特效\\n特性特性+999\\n特性特性+999\\n特性特性+999"
+  splits:
+  - text: "研究特效"
+    translated: "Research special effects"
+  - subIndex: 1
+    text: "特性特性"
+    translated: "Attributes Attributes"
+  - subIndex: 2
+    text: "特性特性"
+    translated: "Attributes Attributes"
+  - subIndex: 3
+    text: "特性特性"
+    translated: "Attributes Attributes"
+  templates:
+  - template: "{0}\\n{1}+999\\n{2}+999\\n{3}+999"
+- raw: "研究速率 100%"
+  splits:
+  - text: "研究速率"
+    translated: "Research speed"
+  templates:
+  - template: "{0} 100%"
+- raw: "研究队列 0/8"
+  splits:
+  - text: "研究队列"
+    translated: "Study cohort"
+  templates:
+  - template: "{0} 0/8"
+- raw: "硬核模式"
+  splits:
+  - text: "硬核模式"
+    translated: "Hardcore Mode"
+- raw: "确认"
+  splits:
+  - text: "确认"
+    translated: "Confirm"
+- raw: "确认换装"
+  splits:
+  - text: "确认换装"
+    translated: "Confirm outfit change"
+- raw: "确认注册"
+  splits:
+  - text: "确认注册"
+    translated: "Confirm registration"
+- raw: "确认登录"
+  splits:
+  - text: "确认登录"
+    translated: "Confirm login"
+- raw: "确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确"
+  splits:
+  - text: "确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确"
+- raw: "礼法"
+  splits:
+  - text: "礼法"
+    translated: "Etiquette"
+- raw: "神"
+  splits:
+  - text: "神"
+    translated: "Shen"
+- raw: "禁军统领"
+  splits:
+  - text: "禁军统领"
+    translated: "Commander of the Forbidden Army"
+- raw: "禁止"
+  splits:
+  - text: "禁止"
+    translated: "No permission"
+- raw: "禅宗修行"
+  splits:
+  - text: "禅宗修行"
+    translated: "Zen meditation"
+- raw: "离家原因"
+  splits:
+  - text: "离家原因"
+    translated: "Reason for leaving home"
+- raw: "离队"
+  splits:
+  - text: "离队"
+    translated: "Depart the team"
+- raw: "离队时间\\n3日"
+  splits:
+  - text: "离队时间"
+    translated: "Time to leave the squad"
+  - subIndex: 1
+    text: "3日"
+    translated: "3th day"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "秘传"
+  splits:
+  - text: "秘传"
+    translated: "Inherited secret"
+- raw: "秘籍"
+  splits:
+  - text: "秘籍"
+    translated: "Treasure booklet"
+- raw: "移动模式"
+  splits:
+  - text: "移动模式"
+    translated: "Move mode"
+- raw: "突破"
+  splits:
+  - text: "突破"
+    translated: "Breakthrough"
+- raw: "突破效率+10%\\n突破耗时+50%\\n突破伤势+20%"
+  splits:
+  - text: "突破效率"
+    translated: "Boost efficiency"
+  - subIndex: 1
+    text: "突破耗时"
+    translated: "Time to breakthrough"
+  - subIndex: 2
+    text: "突破伤势"
+    translated: "Overcome injuries"
+  templates:
+  - template: "{0}+10%\\n{1}+50%\\n{2}+20%"
+- raw: "突破效率+20%\\n突破耗时+100%\\n突破伤势+40%"
+  splits:
+  - text: "突破效率"
+    translated: "Boost efficiency"
+  - subIndex: 1
+    text: "突破耗时"
+    translated: "Time to breakthrough"
+  - subIndex: 2
+    text: "突破伤势"
+    translated: "Overcome injuries"
+  templates:
+  - template: "{0}+20%\\n{1}+100%\\n{2}+40%"
+- raw: "立场"
+  splits:
+  - text: "立场"
+    translated: "Stance"
+- raw: "立场 混乱 中立"
+  splits:
+  - text: "立场"
+    translated: "Stance"
+  - subIndex: 1
+    text: "混乱"
+    translated: "Chaos"
+  - subIndex: 2
+    text: "中立"
+    translated: "Neutral"
+  templates:
+  - template: "{0} {1} {2}"
+- raw: "第99年99月99日"
+  splits:
+  - text: "第99年99月99日"
+    translated: "Year 99, Month 99 Day 99"
+- raw: "第一件"
+  splits:
+  - text: "第一件"
+    translated: "First thing"
+- raw: "第一名"
+  splits:
+  - text: "第一名"
+    translated: "First Place"
+- raw: "第一轮"
+  splits:
+  - text: "第一轮"
+    translated: "First Round"
+- raw: "第一章"
+  splits:
+  - text: "第一章"
+    translated: "Chapter One"
+- raw: "第三名"
+  splits:
+  - text: "第三名"
+    translated: "Third place"
+- raw: "第三章 江湖翻沸壮士死\\n天下大势：\\n全局恶名修正-20%\\n门派间 可以攻击资源\\n门派间 可以攻击城镇\\n门派间 不可攻击总舵"
+  splits:
+  - text: "第三章"
+    translated: "Chapter Three"
+  - subIndex: 1
+    text: "江湖翻沸壮士死"
+  - subIndex: 2
+    text: "天下大势："
+    translated: "The great trend of the world:"
+  - subIndex: 3
+    text: "全局恶名修正"
+    translated: "Global notoriety correction"
+  - subIndex: 4
+    text: "门派间"
+    translated: "Sects between"
+  - subIndex: 5
+    text: "可以攻击资源"
+    translated: "Can attack resources"
+  - subIndex: 6
+    text: "门派间"
+    translated: "Sects between"
+  - subIndex: 7
+    text: "可以攻击城镇"
+    translated: "Can attack towns"
+  - subIndex: 8
+    text: "门派间"
+    translated: "Sects between"
+  - subIndex: 9
+    text: "不可攻击总舵"
+    translated: "Cannot attack the main den"
+  templates:
+  - template: "{0} {1}\\n{2}\\n{3}-20%\\n{4} {5}\\n{6} {7}\\n{8} {9}"
+- raw: "第二名"
+  splits:
+  - text: "第二名"
+    translated: "Second place"
+- raw: "等级"
+  splits:
+  - text: "等级"
+    translated: "Level"
+- raw: "等级1"
+  splits:
+  - text: "等级1"
+    translated: "Level 1"
+- raw: "等级9"
+  splits:
+  - text: "等级9"
+    translated: "Level 9"
+- raw: "等级加成\\n少林寺武学威力 +10%"
+  splits:
+  - text: "等级加成"
+    translated: "Level bonus"
+  - subIndex: 1
+    text: "少林寺武学威力"
+    translated: "The Might of Shaolin Temple Martial Arts"
+  templates:
+  - template: "{0}\\n{1} +10%"
+- raw: "等级加成\\n拳掌威力 +10%"
+  splits:
+  - text: "等级加成"
+    translated: "Level bonus"
+  - subIndex: 1
+    text: "拳掌威力"
+    translated: "Fist and palm attacks are powerful"
+  templates:
+  - template: "{0}\\n{1} +10%"
+- raw: "策划： ZPP\\n程序： ZPP\\n美术： TPP\\n\\n如果大侠觉得游戏不错，\\n还请给予好评支持，万分感谢！"
+  splits:
+  - text: "策划："
+    translated: "Planner:"
+  - subIndex: 1
+    text: "程序："
+    translated: "Program:"
+  - subIndex: 2
+    text: "美术："
+    translated: "Artistry:"
+  - subIndex: 3
+    text: "如果大侠觉得游戏不错，"
+    translated: "If the Great Hero thinks the game is good,"
+  - subIndex: 4
+    text: "还请给予好评支持，万分感谢！"
+    translated: "Please give us a good review to support us; thank you very much!"
+  templates:
+  - template: "{0} ZPP\\n{1} ZPP\\n{2} TPP\\n\\n{3}\\n{4}"
+- raw: "策略(快捷键F1)\\n全体自动(快捷键F2)\\n全体手动(快捷键F3)"
+  splits:
+  - text: "策略"
+    translated: "Strategy"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  - subIndex: 2
+    text: "全体自动"
+  - subIndex: 3
+    text: "快捷键"
+    translated: "Shortcut keys"
+  - subIndex: 4
+    text: "全体手动"
+    translated: "Manual for all"
+  - subIndex: 5
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}({1}F1)\\n{2}({3}F2)\\n{4}({5}F3)"
+- raw: "简体中文"
+  splits:
+  - text: "简体中文"
+    translated: "Simplified Chinese"
+- raw: "管理"
+  splits:
+  - text: "管理"
+    translated: "Management"
+- raw: "箭塔"
+  splits:
+  - text: "箭塔"
+    translated: "Turret"
+- raw: "类型"
+  splits:
+  - text: "类型"
+    translated: "Type"
+- raw: "精良"
+  splits:
+  - text: "精良"
+    translated: "Fine"
+- raw: "紫霄宫"
+  splits:
+  - text: "紫霄宫"
+    translated: "Purple Heaven Palace"
+- raw: "繁體中文"
+  splits:
+  - text: "繁體中文"
+    translated: "Traditional Chinese"
+- raw: "练功"
+  splits:
+  - text: "练功"
+    translated: "Training sessions"
+- raw: "终归一统"
+  splits:
+  - text: "终归一统"
+    translated: "Ultimately unified"
+- raw: "终生监禁"
+  splits:
+  - text: "终生监禁"
+    translated: "Life imprisonment"
+- raw: "经历日志"
+  splits:
+  - text: "经历日志"
+    translated: "Experience Log"
+- raw: "经脉"
+  splits:
+  - text: "经脉"
+    translated: "Meridian"
+- raw: "经脉+5"
+  splits:
+  - text: "经脉"
+    translated: "Meridian"
+  templates:
+  - template: "{0}+5"
+- raw: "经验 999"
+  splits:
+  - text: "经验"
+    translated: "Experience"
+  templates:
+  - template: "{0} 999"
+- raw: "经验倍率+100%"
+  splits:
+  - text: "经验倍率"
+    translated: "Experience multiplier"
+  templates:
+  - template: "{0}+100%"
+- raw: "结义"
+  splits:
+  - text: "结义"
+    translated: "Brotherhood by blood"
+- raw: "结束"
+  splits:
+  - text: "结束"
+    translated: "End"
+- raw: "绝"
+  splits:
+  - text: "绝"
+    translated: "Jue"
+- raw: "绝世"
+  splits:
+  - text: "绝世"
+    translated: "Peerless"
+- raw: "绝世武功"
+  splits:
+  - text: "绝世武功"
+    translated: "Timeless Martial Art"
+- raw: "绝技"
+  splits:
+  - text: "绝技"
+    translated: "Ultimate Technique"
+- raw: "绝技+5\\n锻造+5"
+  splits:
+  - text: "绝技"
+    translated: "Ultimate Technique"
+  - subIndex: 1
+    text: "锻造"
+    translated: "Forging"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "统计数据"
+  splits:
+  - text: "统计数据"
+    translated: "Statistics"
+- raw: "继续"
+  splits:
+  - text: "继续"
+    translated: "Continue"
+- raw: "继续坐牢"
+  splits:
+  - text: "继续坐牢"
+    translated: "Keep going to jail"
+- raw: "继续游戏"
+  splits:
+  - text: "继续游戏"
+    translated: "Continue playing"
+- raw: "缴纳罚款"
+  splits:
+  - text: "缴纳罚款"
+    translated: "Pay the fine"
+- raw: "美\\n酒"
+  splits:
+  - text: "美"
+    translated: "Mei"
+  - subIndex: 1
+    text: "酒"
+    translated: "Jiu"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "美酒\\n(消耗)"
+  splits:
+  - text: "美酒"
+    translated: "Fine wine"
+  - subIndex: 1
+    text: "消耗"
+    translated: "Consume"
+  templates:
+  - template: "{0}\\n({1})"
+- raw: "而今日之事，就要从这仙霞派内说起……"
+  splits:
+  - text: "而今日之事，就要从这仙霞派内说起"
+    translated: "And today's matter must be recounted from within the Xianxia Sect."
+  templates:
+  - template: "{0}……"
+- raw: "耐力 999/999"
+  splits:
+  - text: "耐力"
+    translated: "Endurance"
+  templates:
+  - template: "{0} 999/999"
+- raw: "耐心 -20"
+  splits:
+  - text: "耐心"
+    translated: "Patience"
+  templates:
+  - template: "{0} -20"
+- raw: "耐心制作"
+  splits:
+  - text: "耐心制作"
+    translated: "Patient crafting"
+- raw: "耐心突破"
+  splits:
+  - text: "耐心突破"
+    translated: "Patience Breakthrough"
+- raw: "耐药性100%"
+  splits:
+  - text: "耐药性100%"
+    translated: "Drug resistance 100%"
+- raw: "耗内"
+  splits:
+  - text: "耗内"
+    translated: "Internal Use Only"
+- raw: "聚焦自身\\n<color=grey>快捷键N</color>"
+  splits:
+  - text: "聚焦自身"
+    translated: "Focus on oneself"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}N</color>"
+- raw: "肤色"
+  splits:
+  - text: "肤色"
+    translated: "Skin color"
+- raw: "胜"
+  splits:
+  - text: "胜"
+    translated: "Sheng"
+- raw: "胡须"
+  splits:
+  - text: "胡须"
+    translated: "Beard"
+- raw: "胫甲"
+  splits:
+  - text: "胫甲"
+    translated: "Greaves"
+- raw: "能工巧匠"
+  splits:
+  - text: "能工巧匠"
+    translated: "Craftsman"
+- raw: "脸型"
+  splits:
+  - text: "脸型"
+    translated: "Face shape"
+- raw: "腥风血雨"
+  splits:
+  - text: "腥风血雨"
+    translated: "Bloodshed and carnage"
+- raw: "自动"
+  splits:
+  - text: "自动"
+    translated: "Automatic"
+- raw: "自动存档"
+  splits:
+  - text: "自动存档"
+    translated: "Auto‑save"
+- raw: "自动建造"
+  splits:
+  - text: "自动建造"
+    translated: "Automatic construction"
+- raw: "自动战斗"
+  splits:
+  - text: "自动战斗"
+    translated: "Auto‑battle"
+- raw: "自动研究"
+  splits:
+  - text: "自动研究"
+    translated: "Automatically research"
+- raw: "自动策略"
+  splits:
+  - text: "自动策略"
+    translated: "Automatic strategy"
+- raw: "自古以来便被称作“天府之国”。"
+  splits:
+  - text: "自古以来便被称作“天府之国”。"
+    translated: "Known since ancient times as the Land of Abundance."
+- raw: "自定义选项"
+  splits:
+  - text: "自定义选项"
+    translated: "Custom options"
+- raw: "自定义难度"
+  splits:
+  - text: "自定义难度"
+    translated: "Custom Difficulty"
+- raw: "自巫峡东至西陵峡，群山皆连绵无断处，怪石穿空，奇峰耸峙。"
+  splits:
+  - text: "自巫峡东至西陵峡，群山皆连绵无断处，怪石穿空，奇峰耸峙。"
+- raw: "自由模式"
+  splits:
+  - text: "自由模式"
+    translated: "Free Mode"
+- raw: "自由选择门派拜入，逐鹿天下或浪迹江湖。\\n<color=green>所有特殊角色解锁可亲密\\n消耗门派威望解锁江湖特殊角色招募</color>"
+  splits:
+  - text: "自由选择门派拜入，逐鹿天下或浪迹江湖。"
+    translated: "Free to join any Sect and vie for supremacy or wander the Jianghu."
+  - subIndex: 1
+    text: "所有特殊角色解锁可亲密"
+    translated: "All special characters can be interacted with intimately once unlocked."
+  - subIndex: 2
+    text: "消耗门派威望解锁江湖特殊角色招募"
+    translated: "Consume Sect Prestige to Unlock Special Jianghu Recruitments"
+  templates:
+  - template: "{0}\\n<color=green>{1}\\n{2}</color>"
+- raw: "自身"
+  splits:
+  - text: "自身"
+    translated: "Oneself"
+- raw: "至少6位"
+  splits:
+  - text: "至少6位"
+- raw: "舵主"
+  splits:
+  - text: "舵主"
+    translated: "Captain"
+- raw: "良驹"
+  splits:
+  - text: "良驹"
+    translated: "Good steed"
+- raw: "若是眼尖，便不难发现在这山林掩映间，赫然有几间庭院屋舍坐落。"
+  splits:
+  - text: "若是眼尖，便不难发现在这山林掩映间，赫然有几间庭院屋舍坐落。"
+    translated: "If one has sharp eyes, it would not be difficult to spot several courtyards and houses nestled among the trees."
+- raw: "英雄谱"
+  splits:
+  - text: "英雄谱"
+    translated: "Hall of Heroes"
+- raw: "药引\\n（消耗）"
+  splits:
+  - text: "药引"
+    translated: "Medicine guide"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "药引\\n食材\\n（消耗）"
+  splits:
+  - text: "药引"
+    translated: "Medicine guide"
+  - subIndex: 1
+    text: "食材"
+    translated: "Ingredients"
+  - subIndex: 2
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}\\n{2}"
+- raw: "获得物品"
+  splits:
+  - text: "获得物品"
+    translated: "Obtain items"
+- raw: "获胜条件：\\n时间3以内击败敌方总舵 五\\n"
+  splits:
+  - text: "获胜条件："
+    translated: "Winning conditions:"
+  - subIndex: 1
+    text: "时间3以内击败敌方总舵"
+    translated: "Defeat the enemy stronghold within 3 minutes"
+  - subIndex: 2
+    text: "五"
+    translated: "Wu"
+  templates:
+  - template: "{0}\\n{1} {2}\\n"
+- raw: "菜单"
+  splits:
+  - text: "菜单"
+    translated: "Menu"
+- raw: "菜单\\n<color=grey>快捷键ESC</color>"
+  splits:
+  - text: "菜单"
+    translated: "Menu"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}ESC</color>"
+- raw: "落草为寇"
+  splits:
+  - text: "落草为寇"
+    translated: "To become a bandit"
+- raw: "藏经经"
+  splits:
+  - text: "藏经经"
+    translated: "Treasure Canon Canon"
+- raw: "藏经经验加成"
+  splits:
+  - text: "藏经经验加成"
+    translated: "Temple scripture experience bonus"
+- raw: "蚍蜉撼树"
+  splits:
+  - text: "蚍蜉撼树"
+    translated: "Ant trying to shake a tree"
+- raw: "蜀中仙云映霞光"
+  splits:
+  - text: "蜀中仙云映霞光"
+    translated: "Shu Central Immortal Clouds Gleaming with Dawn Light"
+- raw: "行事风格 中\\n弟子 19/0\\n银钱 365/1000 (+1050)\\n粮食 342/1000 (+120)\\n木料 319/1000 (+280)\\n矿石 312/1000 (+320)\\n药材 396/1000 (+160)\\n威望 350/1000 (0)"
+  splits:
+  - text: "行事风格"
+    translated: "Operating style"
+  - subIndex: 1
+    text: "中"
+    translated: "Zhong"
+  - subIndex: 2
+    text: "弟子"
+    translated: "Disciple"
+  - subIndex: 3
+    text: "银钱"
+    translated: "Money"
+  - subIndex: 4
+    text: "粮食"
+    translated: "Food grain"
+  - subIndex: 5
+    text: "木料"
+    translated: "Wood"
+  - subIndex: 6
+    text: "矿石"
+    translated: "Mineral"
+  - subIndex: 7
+    text: "药材"
+    translated: "Herbs"
+  - subIndex: 8
+    text: "威望"
+    translated: "Reputation"
+  templates:
+  - template: "{0} {1}\\n{2} 19/0\\n{3} 365/1000 (+1050)\\n{4} 342/1000 (+120)\\n{5} 319/1000 (+280)\\n{6} 312/1000 (+320)\\n{7} 396/1000 (+160)\\n{8} 350/1000 (0)"
+- raw: "行伍中人"
+  splits:
+  - text: "行伍中人"
+    translated: "Military man"
+- raw: "行侠四方"
+  splits:
+  - text: "行侠四方"
+    translated: "Wander as a wanderer across the four seas"
+- raw: "行赏"
+  splits:
+  - text: "行赏"
+    translated: "Reward"
+- raw: "补给\\n马匹耐力+30%"
+  splits:
+  - text: "补给"
+    translated: "Supply"
+  - subIndex: 1
+    text: "马匹耐力"
+    translated: "Horse endurance"
+  templates:
+  - template: "{0}\\n{1}+30%"
+- raw: "袭击黄河帮<color=#8C8C8C>外门弟子</color>东门惊乐1次"
+  splits:
+  - text: "袭击黄河帮"
+    translated: "Attack the Yellow River Gang"
+  - subIndex: 1
+    text: "外门弟子"
+    translated: "Outer Gate Disciple"
+  - subIndex: 2
+    text: "东门惊乐1次"
+    translated: "East Gate: Delighted by Joy 1 Times"
+  templates:
+  - template: "{0}<color=#8C8C8C>{1}</color>{2}"
+- raw: "装备"
+  splits:
+  - text: "装备"
+    translated: "Equipment"
+- raw: "装甲等级1"
+  splits:
+  - text: "装甲等级1"
+    translated: "Armor Level 1"
+- raw: "西域"
+  splits:
+  - text: "西域"
+    translated: "Western Regions"
+- raw: "角色"
+  splits:
+  - text: "角色"
+    translated: "Character"
+- raw: "角色服装会提供不同的加成效果，需要在游戏内自行解锁/升级。"
+  splits:
+  - text: "角色服装会提供不同的加成效果，需要在游戏内自行解锁"
+    translated: "Character clothing provides different bonuses, which need to be unlocked in‑game."
+  - subIndex: 1
+    text: "升级。"
+    translated: "Upgrade"
+  templates:
+  - template: "{0}/{1}"
+- raw: "角色详情\\n<color=grey>快捷键Q</color>"
+  splits:
+  - text: "角色详情"
+    translated: "Character Details"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}Q</color>"
+- raw: "解锁农民服"
+  splits:
+  - text: "解锁农民服"
+    translated: "Unlock farmer outfit"
+- raw: "解锁商人服"
+  splits:
+  - text: "解锁商人服"
+    translated: "Unlock Merchant Clothes"
+- raw: "解锁官差服"
+  splits:
+  - text: "解锁官差服"
+    translated: "Unlock Official Patrol Uniform"
+- raw: "解锁强盗服"
+  splits:
+  - text: "解锁强盗服"
+    translated: "Unlock Outlaw Costume"
+- raw: "解锁才子服"
+  splits:
+  - text: "解锁才子服"
+- raw: "解锁杀手服"
+  splits:
+  - text: "解锁杀手服"
+    translated: "Unlock Assassin Outfit"
+- raw: "解锁杂役服"
+  splits:
+  - text: "解锁杂役服"
+    translated: "Unlock servant clothing"
+- raw: "解锁游侠服"
+  splits:
+  - text: "解锁游侠服"
+    translated: "Unlock Ranger Outfit"
+- raw: "解锁邪道服"
+  splits:
+  - text: "解锁邪道服"
+    translated: "Unlock Evil Path Outfit"
+- raw: "认输"
+  splits:
+  - text: "认输"
+    translated: "Surrender"
+- raw: "议题"
+  splits:
+  - text: "议题"
+    translated: "Topic"
+- raw: "论\\n战"
+  splits:
+  - text: "论"
+    translated: "Discuss"
+  - subIndex: 1
+    text: "战"
+    translated: "Battle"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "设定"
+  splits:
+  - text: "设定"
+    translated: "Set"
+- raw: "设置"
+  splits:
+  - text: "设置"
+    translated: "Settings"
+- raw: "评分"
+  splits:
+  - text: "评分"
+    translated: "Rating"
+- raw: "试穿服装"
+  splits:
+  - text: "试穿服装"
+    translated: "Try on clothes"
+- raw: "详细信息"
+  splits:
+  - text: "详细信息"
+    translated: "Detailed information"
+- raw: "详细加成"
+  splits:
+  - text: "详细加成"
+    translated: "Detailed bonuses"
+- raw: "语言"
+  splits:
+  - text: "语言"
+    translated: "Language"
+- raw: "请进行实名认证"
+  splits:
+  - text: "请进行实名认证"
+    translated: "Please perform real‑name verification"
+- raw: "读取"
+  splits:
+  - text: "读取"
+    translated: "Read"
+- raw: "调息(快捷键X)\\n♦生命+5% 内力+10%\\n♦体力+30\\n♦恢复10%已损失架势"
+  splits:
+  - text: "调息"
+    translated: "Breathwork"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  - subIndex: 2
+    text: "生命"
+    translated: "Health"
+  - subIndex: 3
+    text: "内力"
+    translated: "Inner Power"
+  - subIndex: 4
+    text: "体力"
+    translated: "Strength"
+  - subIndex: 5
+    text: "恢复10%已损失架势"
+    translated: "Restore 10% Stance Lost"
+  templates:
+  - template: "{0}({1}X)\\n♦{2}+5% {3}+10%\\n♦{4}+30\\n♦{5}"
+- raw: "谨慎"
+  splits:
+  - text: "谨慎"
+    translated: "Be cautious"
+- raw: "豪杰"
+  splits:
+  - text: "豪杰"
+    translated: "Hero"
+- raw: "贩售"
+  splits:
+  - text: "贩售"
+    translated: "Selling"
+- raw: "贫困"
+  splits:
+  - text: "贫困"
+    translated: "Poverty"
+- raw: "购\\n买"
+  splits:
+  - text: "购"
+    translated: "Buy"
+  - subIndex: 1
+    text: "买"
+    translated: "Buy"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "购买\\n按左Shift十倍购买"
+  splits:
+  - text: "购买"
+    translated: "Purchase"
+  - subIndex: 1
+    text: "按左"
+    translated: "Press left"
+  - subIndex: 2
+    text: "十倍购买"
+    translated: "Ten times purchase volume"
+  templates:
+  - template: "{0}\\n{1}Shift{2}"
+- raw: "贿赂狱卒"
+  splits:
+  - text: "贿赂狱卒"
+    translated: "Bribe the jailer"
+- raw: "资源储量高于上限一定百分比时，才进行建造"
+  splits:
+  - text: "资源储量高于上限一定百分比时，才进行建造"
+    translated: "Resource construction only occurs when the resource reserves exceed the upper limit by a certain percentage."
+- raw: "资源收集"
+  splits:
+  - text: "资源收集"
+    translated: "Resource collection"
+- raw: "资源贸易"
+  splits:
+  - text: "资源贸易"
+    translated: "Resource trade"
+- raw: "资源阈值"
+  splits:
+  - text: "资源阈值"
+    translated: "Resource threshold"
+- raw: "超重!"
+  splits:
+  - text: "超重"
+    translated: "Overweight"
+  templates:
+  - template: "{0}!"
+- raw: "足\\n履"
+  splits:
+  - text: "足"
+    translated: "Foot"
+  - subIndex: 1
+    text: "履"
+    translated: "Step"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "足履\\n（消耗）"
+  splits:
+  - text: "足履"
+    translated: "Walked"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "跟随"
+  splits:
+  - text: "跟随"
+    translated: "Follow"
+- raw: "跳过"
+  splits:
+  - text: "跳过"
+    translated: "Skip"
+- raw: "跳过教程"
+  splits:
+  - text: "跳过教程"
+    translated: "Skip tutorial"
+- raw: "踏入江湖"
+  splits:
+  - text: "踏入江湖"
+    translated: "Step into the Jianghu"
+- raw: "身份证号"
+  splits:
+  - text: "身份证号"
+    translated: "ID number"
+- raw: "轻"
+  splits:
+  - text: "轻"
+    translated: "Qing"
+- raw: "轻功"
+  splits:
+  - text: "轻功"
+    translated: "Qinggong"
+- raw: "轻功+5\\n毒术+5"
+  splits:
+  - text: "轻功"
+    translated: "Qinggong"
+  - subIndex: 1
+    text: "毒术"
+    translated: "Poison Technique"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "轻松休闲"
+  splits:
+  - text: "轻松休闲"
+    translated: "Relaxed and casual"
+- raw: "轻甲"
+  splits:
+  - text: "轻甲"
+    translated: "Light armor"
+- raw: "输入代号..."
+  splits:
+  - text: "输入代号..."
+    translated: "Input code..."
+- raw: "达成结局： 天下第一\\n统计数据： 9999"
+  splits:
+  - text: "达成结局："
+    translated: "Achieve Ending:"
+  - subIndex: 1
+    text: "天下第一"
+    translated: "Number One Under Heaven"
+  - subIndex: 2
+    text: "统计数据："
+    translated: "Statistics:"
+  templates:
+  - template: "{0} {1}\\n{2} 9999"
+- raw: "返回门派\\n<color=grey>快捷键B</color>"
+  splits:
+  - text: "返回门派"
+    translated: "Return to the Sect"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}B</color>"
+- raw: "这里物产丰饶，山川秀美，百姓安居乐业。"
+  splits:
+  - text: "这里物产丰饶，山川秀美，百姓安居乐业。"
+    translated: "Here the land is bountiful, with beautiful mountains and rivers, and the people live in peace and prosperity."
+- raw: "进行修行"
+  splits:
+  - text: "进行修行"
+    translated: "Practice cultivation"
+- raw: "进阶"
+  splits:
+  - text: "进阶"
+    translated: "Advanced"
+- raw: "退出"
+  splits:
+  - text: "退出"
+    translated: "Exit"
+- raw: "退出游戏"
+  splits:
+  - text: "退出游戏"
+    translated: "Exit game"
+- raw: "选择基础成品"
+  splits:
+  - text: "选择基础成品"
+    translated: "Choose basic finished product"
+- raw: "速度100%"
+  splits:
+  - text: "速度100%"
+    translated: "Speed 100%"
+- raw: "邪魔外道"
+  splits:
+  - text: "邪魔外道"
+    translated: "Heretical sect"
+- raw: "配置火药"
+  splits:
+  - text: "配置火药"
+    translated: "Prepare the gunpowder"
+- raw: "采伐"
+  splits:
+  - text: "采伐"
+    translated: "Logging"
+- raw: "采伐+10\\n种植+10"
+  splits:
+  - text: "采伐"
+    translated: "Logging"
+  - subIndex: 1
+    text: "种植"
+    translated: "Cultivation"
+  templates:
+  - template: "{0}+10\\n{1}+10"
+- raw: "释放范围"
+  splits:
+  - text: "释放范围"
+    translated: "Range of effect"
+- raw: "重投"
+  splits:
+  - text: "重投"
+    translated: "Re‑roll"
+- raw: "重甲"
+  splits:
+  - text: "重甲"
+    translated: "Heavy Armor"
+- raw: "重盔"
+  splits:
+  - text: "重盔"
+    translated: "Heavy helmet"
+- raw: "重量"
+  splits:
+  - text: "重量"
+    translated: "Weight"
+- raw: "重靴"
+  splits:
+  - text: "重靴"
+    translated: "Heavy boots"
+- raw: "金刚密宗"
+  splits:
+  - text: "金刚密宗"
+    translated: "Vajrayana Sect"
+- raw: "金刚密宗亲传弟子"
+  splits:
+  - text: "金刚密宗亲传弟子"
+    translated: "Vajrayana Sect Disciple Passed Down Directly"
+- raw: "金刚密宗入门弟子"
+  splits:
+  - text: "金刚密宗入门弟子"
+    translated: "Vajrayana Sect Novice Disciple"
+- raw: "金龙生处已解锁藏宝阁功能"
+  splits:
+  - text: "金龙生处已解锁藏宝阁功能"
+    translated: "The treasure hall function has been unlocked in the place where Golden Dragon was born."
+- raw: "鉴\\n宝"
+  splits:
+  - text: "鉴"
+    translated: "View"
+  - subIndex: 1
+    text: "宝"
+    translated: "Bao"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "铠甲"
+  splits:
+  - text: "铠甲"
+    translated: "Armor"
+- raw: "银两"
+  splits:
+  - text: "银两"
+    translated: "Silver taels"
+- raw: "银两:9999"
+  splits:
+  - text: "银两"
+    translated: "Silver taels"
+  templates:
+  - template: "{0}:9999"
+- raw: "铸剑山庄外门弟子"
+  splits:
+  - text: "铸剑山庄外门弟子"
+    translated: "Swordforging Manor Outer Hall Disciple"
+- raw: "铸造"
+  splits:
+  - text: "铸造"
+    translated: "Casting"
+- raw: "链甲"
+  splits:
+  - text: "链甲"
+    translated: "Chain Mail"
+- raw: "锁定武学"
+  splits:
+  - text: "锁定武学"
+    translated: "Locking martial arts skills"
+- raw: "锁定装备"
+  splits:
+  - text: "锁定装备"
+- raw: "锁定角色不会自行更换武学"
+  splits:
+  - text: "锁定角色不会自行更换武学"
+    translated: "Locking a character will not automatically change their martial arts style."
+- raw: "锁定角色不会自行更换装备"
+  splits:
+  - text: "锁定角色不会自行更换装备"
+- raw: "锻造"
+  splits:
+  - text: "锻造"
+    translated: "Forging"
+- raw: "锻造+10\\n烹饪+10"
+  splits:
+  - text: "锻造"
+    translated: "Forging"
+  - subIndex: 1
+    text: "烹饪"
+    translated: "Cooking"
+  templates:
+  - template: "{0}+10\\n{1}+10"
+- raw: "长兵"
+  splits:
+  - text: "长兵"
+    translated: "Long weapon"
+- raw: "长兵+5"
+  splits:
+  - text: "长兵"
+    translated: "Long weapon"
+  templates:
+  - template: "{0}+5"
+- raw: "长兵+5\\n采伐+5"
+  splits:
+  - text: "长兵"
+    translated: "Long weapon"
+  - subIndex: 1
+    text: "采伐"
+    translated: "Logging"
+  templates:
+  - template: "{0}+5\\n{1}+5"
+- raw: "长兵武器"
+  splits:
+  - text: "长兵武器"
+    translated: "Long weapons"
+- raw: "长靴"
+  splits:
+  - text: "长靴"
+    translated: "Long boots"
+- raw: "门客"
+  splits:
+  - text: "门客"
+    translated: "Retainer"
+- raw: "门派"
+  splits:
+  - text: "门派"
+    translated: "Sect"
+- raw: "门派\\n<color=grey>快捷键O</color>"
+  splits:
+  - text: "门派"
+    translated: "Sect"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}\\n<color=grey>{1}O</color>"
+- raw: "门派任务\\n降低五毒<color=#FF8C06>长老</color>琴榆芮榆芮忠诚3点  (0/3)"
+  splits:
+  - text: "门派任务"
+    translated: "Sect quest"
+  - subIndex: 1
+    text: "降低五毒"
+    translated: "Reduce Five Poisons"
+  - subIndex: 2
+    text: "长老"
+    translated: "Elder"
+  - subIndex: 3
+    text: "琴榆芮榆芮忠诚3点"
+    translated: "Qinyu Ruirui loyalty to 3 points"
+  templates:
+  - template: "{0}\\n{1}<color=#FF8C06>{2}</color>{3}  (0/3)"
+- raw: "门派功绩\\n用途：\\n♦提升门派地位\\n♦藏经阁阅读新秘籍\\n♦门派仓库兑换物品\\n获取：\\n♦每月门派任务\\n♦完成门派委托\\n♦获取门派资源"
+  splits:
+  - text: "门派功绩"
+    translated: "Sect Achievements"
+  - subIndex: 1
+    text: "用途："
+    translated: "Purpose:"
+  - subIndex: 2
+    text: "提升门派地位"
+    translated: "Boost the Sect's Status"
+  - subIndex: 3
+    text: "藏经阁阅读新秘籍"
+    translated: "Reading New Scriptures in the Scripture Repository"
+  - subIndex: 4
+    text: "门派仓库兑换物品"
+    translated: "Sect warehouse item exchange"
+  - subIndex: 5
+    text: "获取："
+    translated: "Acquire:"
+  - subIndex: 6
+    text: "每月门派任务"
+    translated: "Monthly sect tasks"
+  - subIndex: 7
+    text: "完成门派委托"
+    translated: "Complete Sect Commission"
+  - subIndex: 8
+    text: "获取门派资源"
+    translated: "Acquire Sect Resources"
+  templates:
+  - template: "{0}\\n{1}\\n♦{2}\\n♦{3}\\n♦{4}\\n{5}\\n♦{6}\\n♦{7}\\n♦{8}"
+- raw: "门派功绩已满\\n可在正厅-弟子职位进行晋升"
+  splits:
+  - text: "门派功绩已满"
+    translated: "Sect achievements have reached the maximum"
+  - subIndex: 1
+    text: "可在正厅"
+    translated: "In the main hall"
+  - subIndex: 2
+    text: "弟子职位进行晋升"
+    translated: "Promotion of disciples' positions"
+  templates:
+  - template: "{0}\\n{1}-{2}"
+- raw: "门派区域\\n♦达到上限后将无法占领新区域\\n♦可通过升级门派正厅/科研/建造销金窟/占领京城/在皇宫提升勋阶来提升区域上限"
+  splits:
+  - text: "门派区域"
+    translated: "Sect Area"
+  - subIndex: 1
+    text: "达到上限后将无法占领新区域"
+    translated: "After reaching the limit, no new areas can be conquered."
+  - subIndex: 2
+    text: "可通过升级门派正厅"
+    translated: "Can upgrade the sect main hall"
+  - subIndex: 3
+    text: "科研"
+    translated: "Research"
+  - subIndex: 4
+    text: "建造销金窟"
+    translated: "Build a casino"
+  - subIndex: 5
+    text: "占领京城"
+    translated: "Capture the Capital"
+  - subIndex: 6
+    text: "在皇宫提升勋阶来提升区域上限"
+    translated: "Raise your title in the palace to increase the area limit"
+  templates:
+  - template: "{0}\\n♦{1}\\n♦{2}/{3}/{4}/{5}/{6}"
+- raw: "门派威望"
+  splits:
+  - text: "门派威望"
+    translated: "Sect Prestige"
+- raw: "门派实力 衰微\\n主要方针 巩固实力\\n本月方针 内务整备"
+  splits:
+  - text: "门派实力"
+    translated: "Sect power"
+  - subIndex: 1
+    text: "衰微"
+    translated: "Decline"
+  - subIndex: 2
+    text: "主要方针"
+    translated: "Main strategy"
+  - subIndex: 3
+    text: "巩固实力"
+    translated: "Strengthen our power"
+  - subIndex: 4
+    text: "本月方针"
+    translated: "This Month's Policy"
+  - subIndex: 5
+    text: "内务整备"
+    translated: "Housekeeping preparation"
+  templates:
+  - template: "{0} {1}\\n{2} {3}\\n{4} {5}"
+- raw: "门派弟子"
+  splits:
+  - text: "门派弟子"
+    translated: "Sect disciples"
+- raw: "门派弟子\\n♦达到上限后将无法招募或晋升弟子\\n♦可通过科研、升级正厅和宿舍、占领更多区域等提升人口上限\\n♦不同级别弟子分别占用人口1/2/4/8/16/32\\n♦超过100人口后，每1人口+1%月俸消耗"
+  splits:
+  - text: "门派弟子"
+    translated: "Sect disciples"
+  - subIndex: 1
+    text: "达到上限后将无法招募或晋升弟子"
+    translated: "After reaching the limit, you will be unable to recruit or promote disciples."
+  - subIndex: 2
+    text: "可通过科研、升级正厅和宿舍、占领更多区域等提升人口上限"
+  - subIndex: 3
+    text: "不同级别弟子分别占用人口1"
+    translated: "Disciples of different ranks occupy population slots 1"
+  - subIndex: 4
+    text: "超过100人口后，每1人口+1%月俸消耗"
+    translated: "After over 100 people, each additional 1 people consume +1% of monthly stipend."
+  templates:
+  - template: "{0}\\n♦{1}\\n♦{2}\\n♦{3}/2/4/8/16/32\\n♦{4}"
+- raw: "门派木料"
+  splits:
+  - text: "门派木料"
+    translated: "Sect Timber"
+- raw: "门派矿石"
+  splits:
+  - text: "门派矿石"
+    translated: "Sect Ore"
+- raw: "门派科研"
+  splits:
+  - text: "门派科研"
+    translated: "Sect Research"
+- raw: "门派粮食"
+  splits:
+  - text: "门派粮食"
+    translated: "Sect grain"
+- raw: "门派经营"
+  splits:
+  - text: "门派经营"
+    translated: "Sect Management"
+- raw: "门派职位"
+  splits:
+  - text: "门派职位"
+    translated: "Sect position"
+- raw: "门派药材"
+  splits:
+  - text: "门派药材"
+    translated: "Sect herbs"
+- raw: "门派银钱"
+  splits:
+  - text: "门派银钱"
+    translated: "Sect funds"
+- raw: "闪避平衡模式"
+  splits:
+  - text: "闪避平衡模式"
+    translated: "Dodge Balance Mode"
+- raw: "问卷反馈"
+  splits:
+  - text: "问卷反馈"
+    translated: "Survey feedback"
+- raw: "阅毕"
+  splits:
+  - text: "阅毕"
+    translated: "Read through"
+- raw: "阅读藏书"
+  splits:
+  - text: "阅读藏书"
+    translated: "Read the library"
+- raw: "队友 9/9"
+  splits:
+  - text: "队友"
+    translated: "Teammate"
+  templates:
+  - template: "{0} 9/9"
+- raw: "防御\\n♦影响攻城战城墙、箭塔、战鼓、分舵耐久。"
+  splits:
+  - text: "防御"
+    translated: "Defense"
+  - subIndex: 1
+    text: "影响攻城战城墙、箭塔、战鼓、分舵耐久。"
+    translated: "Affects the fort's walls, towers, drums, and sub‑fort durability."
+  templates:
+  - template: "{0}\\n♦{1}"
+- raw: "陌上花开，恰逢君来。\\n承蒙青睐，不胜感激。\\n"
+  splits:
+  - text: "陌上花开，恰逢君来。"
+    translated: "When the flowers by the path bloom, you arrive just right."
+  - subIndex: 1
+    text: "承蒙青睐，不胜感激。"
+    translated: "Thank you for your kindness. I am deeply grateful."
+  templates:
+  - template: "{0}\\n{1}\\n"
+- raw: "限时30天"
+  splits:
+  - text: "限时30天"
+    translated: "Limited to 30 days"
+- raw: "陨铁\\n♦在探索中随机出现，通过隐居铁匠/富饶矿脉奇遇可较多获取。\\n♦在<b>剑池</b>使用<b>天工</b>功能，可消耗陨铁对装备进行特殊强化。"
+  splits:
+  - text: "陨铁"
+    translated: "Meteoric iron"
+  - subIndex: 1
+    text: "在探索中随机出现，通过隐居铁匠"
+    translated: "Appears randomly during exploration, crafted by reclusive blacksmiths"
+  - subIndex: 2
+    text: "富饶矿脉奇遇可较多获取。"
+    translated: "Rich vein fortune events can yield more resources."
+  - subIndex: 3
+    text: "在"
+    translated: "In"
+  - subIndex: 4
+    text: "剑池"
+    translated: "Sword Pool"
+  - subIndex: 5
+    text: "使用"
+    translated: "Use"
+  - subIndex: 6
+    text: "天工"
+    translated: "Heavenly Artisan"
+  - subIndex: 7
+    text: "功能，可消耗陨铁对装备进行特殊强化。"
+    translated: "Function allows for special reinforcement of equipment by consuming meteor iron."
+  templates:
+  - template: "{0}\\n♦{1}/{2}\\n♦{3}<b>{4}</b>{5}<b>{6}</b>{7}"
+- raw: "陷阱"
+  splits:
+  - text: "陷阱"
+    translated: "Trap"
+- raw: "随机事件("
+  splits:
+  - text: "随机事件"
+    translated: "Random events"
+  templates:
+  - template: "{0}("
+- raw: "随机初始属性\\n数值总和固定"
+  splits:
+  - text: "随机初始属性"
+    translated: "Random starting attributes"
+  - subIndex: 1
+    text: "数值总和固定"
+    translated: "Total value remains fixed"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "随机武学技能\\n数值总和固定"
+  splits:
+  - text: "随机武学技能"
+    translated: "Random Martial Arts Skill"
+  - subIndex: 1
+    text: "数值总和固定"
+    translated: "Total value remains fixed"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "随机生活技艺\\n数值总和固定"
+  splits:
+  - text: "随机生活技艺"
+    translated: "Random Life Skills"
+  - subIndex: 1
+    text: "数值总和固定"
+    translated: "Total value remains fixed"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "障碍\\n马匹耐力-15%"
+  splits:
+  - text: "障碍"
+    translated: "Obstacle"
+  - subIndex: 1
+    text: "马匹耐力"
+    translated: "Horse endurance"
+  templates:
+  - template: "{0}\\n{1}-15%"
+- raw: "难度:aaaaaa"
+  splits:
+  - text: "难度"
+    translated: "Difficulty"
+  templates:
+  - template: "{0}:aaaaaa"
+- raw: "难度：九死一生\\n难度：九死一生"
+  splits:
+  - text: "难度：九死一生"
+    translated: "Difficulty: nine lives on the line"
+  - subIndex: 1
+    text: "难度：九死一生"
+    translated: "Difficulty: nine lives on the line"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "难度难度难度     功绩 999"
+  splits:
+  - text: "难度难度难度"
+    translated: "Difficulty difficulty difficulty"
+  - subIndex: 1
+    text: "功绩"
+    translated: "Achievements"
+  templates:
+  - template: "{0}     {1} 999"
+- raw: "雇佣"
+  splits:
+  - text: "雇佣"
+    translated: "Hire"
+- raw: "零"
+  splits:
+  - text: "零"
+    translated: "Zero"
+- raw: "需要学识：99"
+  splits:
+  - text: "需要学识：99"
+    translated: "Needs knowledge: 99"
+- raw: "非剧情信件30日后自动删除"
+  splits:
+  - text: "非剧情信件30日后自动删除"
+    translated: "Non‑plot letters will be automatically deleted 30 days later"
+- raw: "非本门分舵无法管理"
+  splits:
+  - text: "非本门分舵无法管理"
+    translated: "Factions not under this sect cannot be managed."
+- raw: "非本门弟子经验+30%\\n难度提升速度+++++"
+  splits:
+  - text: "非本门弟子经验"
+    translated: "Non‑disciple experience points"
+  - subIndex: 1
+    text: "难度提升速度"
+    translated: "Difficulty increase speed"
+  templates:
+  - template: "{0}+30%\\n{1}+++++"
+- raw: "面朝向右"
+  splits:
+  - text: "面朝向右"
+    translated: "Facing right"
+- raw: "面朝向左"
+  splits:
+  - text: "面朝向左"
+    translated: "Facing left"
+- raw: "鞋履"
+  splits:
+  - text: "鞋履"
+    translated: "Footwear"
+- raw: "音乐音量"
+  splits:
+  - text: "音乐音量"
+    translated: "Music volume"
+- raw: "音效音量"
+  splits:
+  - text: "音效音量"
+    translated: "Sound effect volume"
+- raw: "顶级"
+  splits:
+  - text: "顶级"
+    translated: "Top‑notch"
+- raw: "顺子\\n99点"
+  splits:
+  - text: "顺子"
+    translated: "Straight"
+  - subIndex: 1
+    text: "99点"
+    translated: "99 points"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "预估价值"
+  splits:
+  - text: "预估价值"
+    translated: "Estimated value"
+- raw: "预设模板"
+  splits:
+  - text: "预设模板"
+    translated: "Preset template"
+- raw: "饥荒"
+  splits:
+  - text: "饥荒"
+    translated: "Famine"
+- raw: "饮食"
+  splits:
+  - text: "饮食"
+    translated: "Food and drink"
+- raw: "饮食\\n(消耗)"
+  splits:
+  - text: "饮食"
+    translated: "Food and drink"
+  - subIndex: 1
+    text: "消耗"
+    translated: "Consume"
+  templates:
+  - template: "{0}\\n({1})"
+- raw: "饮食\\n（消耗）"
+  splits:
+  - text: "饮食"
+    translated: "Food and drink"
+  - subIndex: 1
+    text: "（消耗）"
+    translated: "(consumption)"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "饰\\n品"
+  splits:
+  - text: "饰"
+    translated: "Role"
+  - subIndex: 1
+    text: "品"
+    translated: "Ting"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "马匹"
+  splits:
+  - text: "马匹"
+    translated: "Horses"
+- raw: "马名字"
+  splits:
+  - text: "马名字"
+    translated: "Name of the Horse"
+- raw: "高级"
+  splits:
+  - text: "高级"
+    translated: "Senior"
+- raw: "鳞甲"
+  splits:
+  - text: "鳞甲"
+    translated: "Scale armor"
+- raw: "鸾凤和鸣"
+  splits:
+  - text: "鸾凤和鸣"
+    translated: "Dragon and phoenix resonate"
+- raw: "默写"
+  splits:
+  - text: "默写"
+    translated: "Recite"
+- raw: "默认"
+  splits:
+  - text: "默认"
+    translated: "Default"
+- raw: "鼻子"
+  splits:
+  - text: "鼻子"
+    translated: "Nose"
+- raw: "齿轮等级1"
+  splits:
+  - text: "齿轮等级1"
+    translated: "Gear Rank 1"

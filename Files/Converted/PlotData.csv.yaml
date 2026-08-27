@@ -82835,6 +82835,7 @@
   - split: 10
     subIndex: 1
     text: "从来偷的都是为富不仁的大户，拿的都是来路不正的财物。"
+    translated: "They always steal from the uncharitable wealthy, taking items with dubious origins."
   - split: 10
     subIndex: 2
     text: "为的，也不过是养活这群孤苦无依的孩子罢了"
@@ -148889,6 +148890,7 @@
   - split: 10
     subIndex: 1
     text: "且佛道交融，可谓交相共举，兼收并蓄，有“仙域佛国’’之美誉。"
+    translated: "'And with the blending of Buddhism and Taoism, it is renowned for its mutual promotion, inclusive nature, and is known as the Immortal Realm Buddhist Kingdom."
   - split: 10
     subIndex: 2
     text: "将这秘籍交由我峨眉保管，方能公平持正，消除纷争！"
@@ -296672,6 +296674,7 @@
     translated: "Right"
   - split: 10
     text: "不错，我们所查到的线索，到此处便戛然而止了。"
+    translated: "Not bad; our leads end here abruptly"
   - split: 10
     subIndex: 1
     text: "之后，只能仰仗你们二位的聪明才智了。"

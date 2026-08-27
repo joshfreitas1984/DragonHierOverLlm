@@ -1,13 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using Il2CppInterop.Runtime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace EnglishPatch;
 
@@ -32,16 +35,21 @@ namespace EnglishPatch;
 /// an oversight - broader field coverage can follow up later if untranslated text turns up that
 /// isn't covered by a CSV.
 ///
-/// Why this patches Resources.Load/AssetBundle.LoadAsset instead of TMP_Text/UI.Text lifecycle
-/// methods (Awake/OnEnable/set_text): a prefab asset's serialized fields are populated directly
-/// from native IL2CPP deserialization, which does not invoke C# property setters or Unity
-/// lifecycle callbacks for the initial value baked into the asset - by the time Awake/OnEnable/
-/// set_text would fire (if they fire at all for a given field), the original Chinese text may
-/// already be in place with no observable "set" event to hook. Patching the asset-load call
-/// itself and walking the resulting GameObject's component tree directly (mirroring the offline
-/// AssetDumperWorkflowTests.cs scan, and the old Mono-only XUnity.ResourceRedirector-based
-/// TextReplacerPlugin this replaces - ResourceRedirector doesn't support IL2CPP) sees the data as
-/// soon as it exists, regardless of whether anything ever "sets" it in the C# sense.
+/// Why this patches Resources.Load/AssetBundle.LoadAsset/SceneManager.Internal_SceneLoaded instead
+/// of TMP_Text/UI.Text lifecycle methods (Awake/OnEnable/set_text): a prefab or scene asset's
+/// serialized fields are populated directly from native IL2CPP deserialization, which does not
+/// invoke C# property setters or Unity lifecycle callbacks for the initial value baked into the
+/// asset - by the time Awake/OnEnable/set_text would fire (if they fire at all for a given field),
+/// the original Chinese text may already be in place with no observable "set" event to hook.
+/// Patching the asset-load call itself and walking the resulting GameObject's component tree
+/// directly (mirroring the offline AssetDumperWorkflowTests.cs scan, and the old Mono-only
+/// XUnity.ResourceRedirector-based TextReplacerPlugin this replaces - ResourceRedirector doesn't
+/// support IL2CPP) sees the data as soon as it exists, regardless of whether anything ever "sets"
+/// it in the C# sense. Resources.Load/AssetBundle.LoadAsset alone miss any GameObject that is part
+/// of a *scene* file's own serialized contents rather than a standalone loaded prefab (e.g. the
+/// Start/title screen's UI) - those are instantiated directly by Unity's scene loader, never
+/// routed through either load call - so SceneManager.Internal_SceneLoaded is also patched to catch
+/// that category, walking scene.GetRootGameObjects() once the scene has finished loading.
 ///
 /// IL2CPP interop safety (see .github/instructions/dragonheirplugin.instructions.md):
 /// - No generic Cast&lt;T&gt;/TryCast&lt;T&gt;/AddComponent&lt;T&gt;/GetComponentsInChildren&lt;T&gt;/
@@ -65,7 +73,7 @@ internal static class PrefabTextPatches
 {
     private static readonly string PluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".";
     private static readonly string ResourcesDir = Path.Combine(PluginDir, "resources");
-    private static readonly string DictionaryFile = Path.Combine(ResourcesDir, "dumpedPrefabText.txt.yaml");
+    private const string DictionaryFileName = "dumpedPrefabText.txt.yaml";
 
     private static Dictionary<string, string> _replacements;
     private static Il2CppSystem.Type _tmpTextType;
@@ -81,15 +89,33 @@ internal static class PrefabTextPatches
             _replacements = new Dictionary<string, string>();
             try
             {
-                if (!File.Exists(DictionaryFile))
+                if (!Directory.Exists(ResourcesDir))
                 {
                     MainPlugin.Logger?.LogWarning(
-                        $"PrefabTextPatches: no dictionary file at '{DictionaryFile}' - prefab text replacement disabled.");
+                        $"PrefabTextPatches: resources directory '{ResourcesDir}' does not exist - prefab text replacement disabled.");
                     return _replacements;
                 }
 
-                var yaml = File.ReadAllText(DictionaryFile);
-                var deserializer = new DeserializerBuilder().Build();
+                // Searched recursively rather than a fixed flat path - the file is deployed
+                // alongside the CSV overrides under a subfolder mirroring the game's actual
+                // Resources.Load path (e.g. resources\GameData\dumpedPrefabText.txt.yaml), same
+                // convention ResourceIoPatches uses for its own override files.
+                var dictionaryFile = Directory
+                    .EnumerateFiles(ResourcesDir, DictionaryFileName, SearchOption.AllDirectories)
+                    .FirstOrDefault();
+
+                if (dictionaryFile == null)
+                {
+                    MainPlugin.Logger?.LogWarning(
+                        $"PrefabTextPatches: no '{DictionaryFileName}' found anywhere under '{ResourcesDir}' - prefab text replacement disabled.");
+                    return _replacements;
+                }
+
+                var yaml = File.ReadAllText(dictionaryFile);
+                var deserializer = new DeserializerBuilder()
+                    .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                    .IgnoreUnmatchedProperties()
+                    .Build();
                 var entries = deserializer.Deserialize<List<PrefabTextEntry>>(yaml) ?? [];
 
                 foreach (var entry in entries)
@@ -99,11 +125,11 @@ internal static class PrefabTextPatches
                 }
 
                 MainPlugin.Logger?.LogWarning(
-                    $"PrefabTextPatches: loaded {_replacements.Count} prefab text replacements from '{DictionaryFile}'.");
+                    $"PrefabTextPatches: loaded {_replacements.Count} prefab text replacements from '{dictionaryFile}'.");
             }
             catch (Exception ex)
             {
-                MainPlugin.Logger?.LogError($"PrefabTextPatches: failed to load dictionary '{DictionaryFile}': {ex}");
+                MainPlugin.Logger?.LogError($"PrefabTextPatches: failed to load dictionary under '{ResourcesDir}': {ex}");
             }
 
             return _replacements;
@@ -133,21 +159,74 @@ internal static class PrefabTextPatches
         }
     }
 
-    [HarmonyPatch(typeof(AssetBundle), nameof(AssetBundle.LoadAsset), new[] { typeof(string) })]
+    // Catches text baked directly into a *scene* file (e.g. the Start/title screen) - such
+    // GameObjects are never routed through Resources.Load/AssetBundle.LoadAsset at all, since
+    // they're part of the scene's own serialized contents and are instantiated by Unity's scene
+    // loader directly. SceneManager.Internal_SceneLoaded fires once a scene has fully finished
+    // loading (all its root GameObjects already instantiated), so walking
+    // scene.GetRootGameObjects() here catches exactly this category, using the same recursive
+    // tree-walk as the asset-load patches above.
+    [HarmonyPatch(typeof(SceneManager), "Internal_SceneLoaded")]
     [HarmonyPostfix]
-    private static void AssetBundleLoadAsset_Postfix(string name, ref UnityEngine.Object __result)
+    private static void SceneLoaded_Postfix(Scene scene, LoadSceneMode mode)
     {
         try
         {
-            if (__result == null || Replacements.Count == 0 || !IsGameObject(__result))
+            if (Replacements.Count == 0)
                 return;
 
-            var go = new GameObject(__result.Pointer);
-            ProcessGameObjectRecursive(go);
+            foreach (var go in scene.GetRootGameObjects())
+            {
+                if (go != null)
+                    ProcessGameObjectRecursive(go);
+            }
         }
         catch (Exception ex)
         {
-            MainPlugin.Logger?.LogError($"PrefabTextPatches.AssetBundleLoadAsset_Postfix failed for '{name}': {ex}");
+            MainPlugin.Logger?.LogError($"PrefabTextPatches.SceneLoaded_Postfix failed: {ex}");
+        }
+    }
+
+    // AssetBundle.LoadAsset(string) is ambiguous to AccessTools.DeclaredMethod's simple
+    // name+parameter-type lookup: this build also has a generic LoadAsset<T>(string) overload with
+    // the exact same (string) parameter list, and DeclaredMethod's Type.GetMethod call doesn't
+    // disambiguate by generic arity - both candidates match, so a plain
+    // [HarmonyPatch(typeof(AssetBundle), nameof(AssetBundle.LoadAsset), new[] { typeof(string) })]
+    // attribute throws AmbiguousMatchException at Harmony.CreateAndPatchAll time (plugin fails to
+    // load entirely). [HarmonyTargetMethod] lets us resolve the exact non-generic MethodInfo
+    // ourselves via LINQ instead of relying on Harmony's ambiguous default resolution. The
+    // class-level [HarmonyPatch] attribute must specify ONLY the declaring type here (no method
+    // name) - Harmony throws "You cannot combine TargetMethod ... with individual annotations" if
+    // a method name/args annotation is combined with a [HarmonyTargetMethod] resolver on the same
+    // class.
+    [HarmonyPatch(typeof(AssetBundle))]
+    internal static class AssetBundleLoadAssetPatch
+    {
+        [HarmonyTargetMethod]
+        private static MethodBase TargetMethod()
+        {
+            return typeof(AssetBundle)
+                .GetMethods(BindingFlags.Public | BindingFlags.Instance)
+                .Single(m => m.Name == nameof(AssetBundle.LoadAsset)
+                    && !m.IsGenericMethod
+                    && m.GetParameters() is [{ ParameterType.Name: "String" }]);
+        }
+
+        [HarmonyPostfix]
+        private static void Postfix(string name, ref UnityEngine.Object __result)
+        {
+            try
+            {
+                if (__result == null || Replacements.Count == 0 || !IsGameObject(__result))
+                    return;
+
+                var go = new GameObject(__result.Pointer);
+                ProcessGameObjectRecursive(go);
+            }
+            catch (Exception ex)
+            {
+                MainPlugin.Logger?.LogError($"PrefabTextPatches.AssetBundleLoadAsset_Postfix failed for '{name}': {ex}");
+            }
         }
     }
 
