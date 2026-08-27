@@ -2,6 +2,7 @@
 using FanslationStudio.LlmKit.Support;
 using FanslationStudio.LlmKit.Utility;
 using FanslationStudio.LlmKit.Workflow;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 
 namespace Tests
@@ -394,6 +395,34 @@ namespace Tests
             "eventDescribe", "jobDescribe",
         ];
 
+        // Confirmed-broken 2026-08-27 via an in-game character-creation screenshot showing
+        // "Initial获得RandomlyWeapon" (raw "初始获得随机武器" only partially translated). This
+        // value's dumpedOtherText.txt field is "text" - normally excluded from
+        // DynamicStringOtherTextFields above because "text"/"m_Text" is exactly what
+        // PrefabTextPatches.cs's whole-string load-time GameObject scan already handles (see that
+        // field's own doc comment), so blanket-including every "text"/"m_Text" field here would
+        // duplicate ~1400+ already-working PrefabText entries into the DynamicStrings dictionary
+        // (which DynamicStringPatches' own comments say is expected to stay "low hundreds of
+        // entries" for perf). But THIS specific family of strings (the character-creation starting
+        // -bonus choice list: gold/reputation/random armor/weapon/manual/horse) is confirmed via
+        // the screenshot to reach the game's actual UI via TMP_Text.text/UI.Text.text being SET AT
+        // RUNTIME (code populating a dynamically-instantiated list item), not via the baked prefab
+        // value PrefabTextPatches' asset-load scan inspects - so only DynamicStringPatches' sink-
+        // level .text setter patch ever observes the real value, and its bare-fragment fallback
+        // entries ("初始"->"Initial", "随机"->"Randomly", "武器"->"Weapon") mangled it because no
+        // whole-phrase entry existed to win the longest-match-first sort. Rather than widen the
+        // field allowlist (scale risk above), this narrow raw-value override list lets
+        // ExtractDynamicStringCandidatesFromOtherText promote just these specific values -
+        // already-translated in Files/Mod/dumpedPrefabText.txt.yaml - into the DynamicStrings
+        // dictionary too, as a safety net for the same underlying PrefabTextPatches miss. Add
+        // further specific raw values here only once a screenshot/log confirms the same failure
+        // mode, not speculatively.
+        public static readonly string[] DynamicStringPrimaryTextOverrides =
+        [
+            "初始获得500银钱", "初始获得50声望", "初始获得随机护甲", "初始获得随机武器",
+            "初始获得随机秘籍", "初始获得随机马匹",
+        ];
+
         // Matches the LABEL portion of a "Label<sign><number>" stat-modifier item (e.g. "内功1",
         // "威望+2", "技艺经验0.01") - i.e. everything before the first digit or '+'/'-' sign. Used
         // by DynamicStringLabelColumnSources below for compound cells where the whole cell/item
@@ -533,6 +562,7 @@ namespace Tests
                 seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
 
             var allowedFields = new HashSet<string>(DynamicStringOtherTextFields, StringComparer.OrdinalIgnoreCase);
+            var rawOverrides = new HashSet<string>(DynamicStringPrimaryTextOverrides, StringComparer.Ordinal);
 
             // Deserialize into a plain Dictionary rather than the DumpedTextEntry record itself -
             // YamlDotNet's default object node deserializer requires a parameterless constructor
@@ -548,11 +578,96 @@ namespace Tests
             foreach (var entry in entries)
             {
                 if (!entry.TryGetValue("raw", out var raw) || string.IsNullOrWhiteSpace(raw)) continue;
-                if (!entry.TryGetValue("field", out var field) || !allowedFields.Contains(field)) continue;
+                // Normally requires the entry's Field to be in the allowlist above - but a
+                // "text"/"m_Text" field entry whose raw value is in DynamicStringPrimaryTextOverrides
+                // is let through too (see that array's doc comment for why).
+                var fieldAllowed = entry.TryGetValue("field", out var field) && allowedFields.Contains(field);
+                if (!fieldAllowed && !rawOverrides.Contains(raw)) continue;
                 if (!seen.Add(raw)) continue;
 
                 found.Add(raw);
             }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
+
+        /// <summary>
+        /// THIRD automated source feeding the same dynamicStringsFromColumns.txt dump. Unlike
+        /// Source 1/2 above (which read pre-dumped, already-committed files), this source shells
+        /// out to the sibling Converter project to regenerate
+        /// Converter/output/_dynamicStrings_candidates.txt FRESH from Converter/output/_string_map.csv
+        /// every single time this method runs (via `dotnet run --no-build --
+        /// --dynamic-string-candidates`, see converter.instructions.md), rather than trusting
+        /// whatever stale copy of that file happens to already be on disk. This exists specifically
+        /// because previously-"missing" phrases (e.g. 随机敌人数量/非本门弟子经验) turned out to be
+        /// entirely a staleness problem - the extraction logic itself was already correct, but nothing
+        /// forced a re-extraction after new game patches changed _string_map.csv, so a stale candidates
+        /// file silently hid genuinely-new strings. Regenerating unconditionally as part of "1c" makes
+        /// that failure mode structurally impossible going forward.
+        ///
+        /// Deliberately forgiving of a not-yet-decompiled environment: if the Converter project or
+        /// its _string_map.csv doesn't exist yet (e.g. a fresh clone where the full IL2CPP decompile
+        /// pipeline hasn't been run), or the regeneration subprocess fails for any reason, this
+        /// silently no-ops rather than failing the whole test run - the other two sources still work
+        /// independently of this one. Like its siblings, safe to re-run any time; already-extracted
+        /// values (from dynamicStrings.txt or a previous run of any of the three source methods) are
+        /// never duplicated.
+        /// </summary>
+        public static void ExtractDynamicStringCandidatesFromIl2CppStringMap(string workingDirectory)
+        {
+            var converterDir = Path.GetFullPath(Path.Combine(workingDirectory, "..", "Converter"));
+            var converterProjectPath = Path.Combine(converterDir, "Converter.csproj");
+            var converterOutputDir = Path.Combine(converterDir, "output");
+            var stringMapPath = Path.Combine(converterOutputDir, "_string_map.csv");
+
+            if (!File.Exists(converterProjectPath) || !File.Exists(stringMapPath)) return;
+
+            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
+            var candidatesPath = Path.Combine(converterOutputDir, "_dynamicStrings_candidates.txt");
+
+            var psi = new ProcessStartInfo("dotnet")
+            {
+                WorkingDirectory = converterDir,
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+            };
+            psi.ArgumentList.Add("run");
+            psi.ArgumentList.Add("--no-build");
+            psi.ArgumentList.Add("--");
+            psi.ArgumentList.Add("--dynamic-string-candidates");
+            psi.ArgumentList.Add("--output");
+            psi.ArgumentList.Add(converterOutputDir);
+            psi.ArgumentList.Add("--exclude-file");
+            psi.ArgumentList.Add(Path.GetFullPath(masterDumpPath));
+
+            try
+            {
+                using var process = Process.Start(psi);
+                if (process == null) return;
+                process.WaitForExit();
+                if (process.ExitCode != 0 || !File.Exists(candidatesPath)) return;
+            }
+            catch
+            {
+                // Converter isn't built / dotnet isn't on PATH / etc. - fall back to whatever
+                // candidates file (if any) already exists rather than failing the whole test run.
+                if (!File.Exists(candidatesPath)) return;
+            }
+
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
+
+            var seen = new HashSet<string>();
+            if (File.Exists(masterDumpPath))
+                seen.UnionWith(File.ReadAllLines(masterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
+            if (File.Exists(outputPath))
+                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+
+            var found = File.ReadAllLines(candidatesPath)
+                .Where(l => !string.IsNullOrEmpty(l))
+                .Where(seen.Add)
+                .ToList();
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
             File.AppendAllLines(outputPath, found);

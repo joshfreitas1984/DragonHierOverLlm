@@ -48,7 +48,8 @@ if ($MetadataPath -and (Test-Path $MetadataPath)) {
     $expectedSanity = [Convert]::ToUInt32("FAB11BAF", 16)
     if ($sanity -ne $expectedSanity) {
         Write-Warning "global-metadata.dat sanity check failed (got 0x$($sanity.ToString('X')))"
-    } else {
+    }
+    else {
         $metaVersion = [BitConverter]::ToInt32($meta, 4)
         $slOff = [BitConverter]::ToInt32($meta, 0x08)
         $slSize = [BitConverter]::ToInt32($meta, 0x0C)
@@ -81,10 +82,12 @@ $magic = [BitConverter]::ToUInt16($bytes, $optionalHeaderOffset)
 if ($magic -eq 0x20b) {
     # PE32+ (x64)
     $imageBase = [BitConverter]::ToUInt64($bytes, $optionalHeaderOffset + 24)
-} elseif ($magic -eq 0x10b) {
+}
+elseif ($magic -eq 0x10b) {
     # PE32
     $imageBase = [uint64][BitConverter]::ToUInt32($bytes, $optionalHeaderOffset + 28)
-} else {
+}
+else {
     Write-Error "Unrecognized PE optional header magic: 0x$($magic.ToString('X'))"
     exit 1
 }
@@ -142,11 +145,12 @@ foreach ($addrStr in $Addresses) {
     if ($null -ne $stringLiterals) {
         if ($srcIdx -ge $strCount) {
             $resolved = "OUT OF RANGE (strCount=$strCount)"
-        } else {
+        }
+        else {
             $resolved = "'$($stringLiterals[$srcIdx])'"
         }
     }
 
     Write-Host ("{0} -> section '{1}' RVA=0x{2:X} fileOffset=0x{3:X} raw8={4:X16} usageType={5} srcIdx={6} resolved={7}" -f `
-        $addrStr, $section.Name, $rva, $fileOffset, $slot, $usageType, $srcIdx, $resolved)
+            $addrStr, $section.Name, $rva, $fileOffset, $slot, $usageType, $srcIdx, $resolved)
 }

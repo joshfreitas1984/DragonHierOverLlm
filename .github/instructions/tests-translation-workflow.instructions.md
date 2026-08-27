@@ -169,14 +169,37 @@ files use, so no game process, Harmony, or IL2CPP-awareness is needed to read th
   a few real NPC names with internal `临时:强盗头目&随机;;;事件难度+0.5;-8;;true`-style config
   strings), this is now handled by a **second automated dynamic-string extraction source**: see
   `GameFileHandling.ExtractDynamicStringCandidatesFromOtherText` /
+  `GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap` /
   `DynamicStringOtherTextFields` below, registered as `FileInputWorkflowTests`'s
-  `"1c. ExportDynamicStringsIntoTranslated"` fact (both extraction sources now run inline at the
+  `"1c. ExportDynamicStringsIntoTranslated"` fact (all three extraction sources now run inline at the
   start of that single fact). `data`/`targetName` were sampled
   and found too noisy even after filtering out ASCII-suspicious entries, so they're deliberately
   NOT in `DynamicStringOtherTextFields` — if a future screenshot confirms a real missing string on
   one of those two fields specifically, add it directly to `dynamicStrings.txt` (the file merged in
   from reviewed `output/_dynamicStrings_candidates.txt` entries - see the DynamicStringsIL2CPP
   pipeline section below) rather than promoting the whole field wholesale.
+- **A "primary" `text`/`m_Text` field can STILL miss `PrefabTextPatches.cs`'s load-time scan if the
+  value is set at runtime rather than baked into the prefab (2026-08-27 finding, via a
+  character-creation screenshot showing `Initial获得RandomlyWeapon`, i.e. `初始获得随机武器` only
+  partially translated)** — `dumpedOtherText.txt` correctly tagged this value's field as `text`
+  (so it wasn't missed by the noise-filtering above), and `Files/Mod/dumpedPrefabText.txt.yaml`
+  already has the correct whole-string translation ("Initial random weapon acquisition"). But the
+  in-game UI showed a mangled result built from `DynamicStringPatches`' BARE-FRAGMENT dictionary
+  entries (`初始`→`Initial`, `随机`→`Randomly`, `武器`→`Weapon`) instead — proof this particular
+  component's `.text` is populated by code at runtime (a character-creation starting-bonus choice
+  list: gold/reputation/random armor/weapon/manual/horse), not baked into the asset at
+  `Resources.Load`/`AssetBundle.LoadAsset`/scene-load time, so `PrefabTextPatches.cs`'s tree-walk
+  never sees the real value — only `DynamicStringPatches`' sink-level `.text` setter patch does,
+  and it had no whole-phrase entry to prefer over the shorter bare-fragment ones. Fix: added a
+  narrow `GameFileHandling.DynamicStringPrimaryTextOverrides` raw-value allowlist (NOT a field-name
+  allowlist — deliberately not widening `DynamicStringOtherTextFields` to include `text`/`m_Text`,
+  which would duplicate ~1400+ already-correctly-handled `PrefabTextPatches` entries into the
+  DynamicStrings dictionary and risk the perf assumption in `DynamicStringPatches.cs` that it stays
+  "low hundreds of entries"). `ExtractDynamicStringCandidatesFromOtherText` now also promotes a
+  `dumpedOtherText.txt` entry whose raw value is in this override list even when its field isn't in
+  `DynamicStringOtherTextFields`. If another screenshot shows the same "translated word fragments
+  mashed together with no spaces" symptom for a different `text`/`m_Text` value, add that exact raw
+  string to `DynamicStringPrimaryTextOverrides` rather than widening the field allowlist.
 
 ## PrefabText pipeline (`dumpedPrefabText.txt` → `Files/Mod/dumpedPrefabText.txt.yaml`)
 
@@ -324,10 +347,30 @@ larger, otherwise data-driven runtime string.
     `startRemindText` (240/240 clean), `eventDescribe` (27/27 clean), `jobDescribe` (12/12 clean),
     `tutorialText` (308 total, 7 suspicious - all confirmed legitimate key-name references like
     `Shift`/`WSAD`/`Tab` inside `<b>...</b>` tags).
+- **Fourth source, writing to the SAME `dynamicStringsFromColumns.txt` file, and the only one that
+  actively regenerates its own upstream input rather than just reading a pre-dumped file:**
+  `GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap` (run via the same merged
+  `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"` fact, run inline last,
+  after the two sources above, before that fact's own export call) shells out
+  (`System.Diagnostics.Process`, `dotnet run --no-build --`) to the sibling `Converter` project to
+  regenerate `Converter/output/_dynamicStrings_candidates.txt` FRESH from the current
+  `Converter/output/_string_map.csv` every time this fact runs (`--dynamic-string-candidates
+  --exclude-file <dynamicStrings.txt>` - see `converter.instructions.md`), then appends any
+  genuinely-new entries to `dynamicStringsFromColumns.txt` using the same seen-set dedup pattern as
+  the other sources. Added specifically because two real missing phrases
+  (`随机敌人数量`/`非本门弟子经验`) turned out to be a pure staleness problem - the extraction logic
+  itself was already correct, but nothing forced re-extraction after a game patch changed
+  `_string_map.csv`, so an old on-disk candidates file silently hid new strings. Regenerating
+  unconditionally as part of "1c" makes that failure mode structurally impossible going forward.
+  No-ops gracefully (does not fail the test) if `Converter/output/_string_map.csv` doesn't exist yet
+  (fresh clone, full decompile pipeline not run) or the subprocess fails for any reason - the other
+  three sources still work independently. `Converter/Services/StringMapExtractor.cs`'s
+  `IsExoticScriptNoise` filter (see `converter.instructions.md`) keeps BCL/ICU internal Unicode-table
+  noise strings out of the regenerated candidates before they ever reach this source.
 - `GameFileHandling.ExportDynamicStringTextAssetToCustomFormat` (run via
   `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"`, right after step 1b, before
   step 2's merge) calls `DynamicStringWorkflow.ExportDynamicStringsToCustomFormat` - this single
-  fact now also runs both automated candidate-extraction sources inline first (see below), so
+  fact now also runs all three automated candidate-extraction sources inline first (see above), so
   there's only one fact to run for the whole dynamic-strings workflow.
 - `GameFileHandling.PackageFinalTranslationAsync` filters `TextFileType.DynamicStringsIL2CPP`
   entries out of the CSV reconstruction loop (same as PrefabText) and calls

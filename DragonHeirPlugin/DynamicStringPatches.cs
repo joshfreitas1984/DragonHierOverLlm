@@ -113,8 +113,14 @@ internal static class DynamicStringPatches
     // match, since either mechanism alone misses cases the other catches.
     private static List<CompiledTemplate> _compiledTemplates = new();
 
-    // A literal "{n}" placeholder token, e.g. "{0}", "{12}".
-    private static readonly Regex PlaceholderRegex = new(@"\{(\d+)\}", RegexOptions.Compiled);
+    // A game placeholder marker, e.g. "#PlayerName#", "#$PlayerName#", "#PlayerForceDescribe#".
+    // These are NOT String.Format-style "{n}" placeholders - they're the game's own localization
+    // tokens, substituted with real (already independently-translated, e.g. via PlotData.csv/
+    // NameData.csv) text by the game's own systems well before the composite string ever reaches
+    // a Concat/Format call or a TMP_Text/UI.Text setter. Combined into PlaceholderOrTokenRegex
+    // below so BuildCompiledTemplate can treat both kinds of marker the same way: as wildcard
+    // captures, never as literal text to match against (see CONFIRMED BUG #2 below).
+    private static readonly Regex PlaceholderOrTokenRegex = new(@"\{(\d+)\}|#\$?[A-Za-z0-9_]+#", RegexOptions.Compiled);
 
     // A single dictionary template entry, precompiled into a structural matcher: Pattern captures
     // each "{n}" placeholder as a named group ("p0", "p1", ...) around the template's literal
@@ -153,17 +159,42 @@ internal static class DynamicStringPatches
     // confirmed by reproducing the exact old logic in isolation (IsMatch always false) and by the
     // live SafeDebugLog trace showing the compiled template never converting the "{2}日" -> "Day"
     // tail of the save-slot date. The fresh fix below builds the pattern by walking Raw directly
-    // (splitting on placeholder tokens found via PlaceholderRegex and Regex.Escape-ing only the
+    // (splitting on placeholder tokens found via PlaceholderOrTokenRegex and Regex.Escape-ing only the
     // literal text segments between them), so it never depends on being able to find escaped
     // brace tokens after the fact.
+    //
+    // CONFIRMED BUG #2 (2026-08-27, found via the "是{PlayerForceDescribe}{PlayerName}啊，\n此次
+    // {0}前来拜访我{1}，不知{3}？" screenshot case): fix #1 above only ever treated the
+    // "{n}"-numbered String.Format placeholders as wildcards; every OTHER marker in Raw - in
+    // particular the game's own "#Token#"/"#$Token#" localization placeholders (e.g.
+    // "#PlayerForceDescribe#", "#$PlayerName#") - was still escaped and baked into the pattern as
+    // REQUIRED LITERAL TEXT. But those tokens are always substituted with real,
+    // already-independently-translated text (via the normal CSV pipeline) long before the
+    // composite string ever reaches a patched Concat/Format call or TMP_Text/UI.Text setter, so
+    // the literal "#PlayerForceDescribe##$PlayerName#" text this pattern demanded could never
+    // actually appear at runtime - the whole template silently failed IsMatch forever, which
+    // meant none of its translated literal segments ("此次" -> "This time", "前来拜访我" -> "Come
+    // to visit me", "，不知" -> ",Unknown") were ever applied, even though the slot values
+    // themselves (already translated elsewhere) rendered fine. Fix: walk Raw with
+    // PlaceholderOrTokenRegex instead of a "{n}"-only regex, so "#Token#" markers become wildcard
+    // capture groups too, exactly like "{n}". Numbered "{n}" placeholders keep being named by
+    // their own number ("p0", "p1", ...) so they still match Result's own "{n}" occurrences
+    // order-independently (unchanged from fix #1); "#Token#" markers have no number to key off,
+    // so they're named by strict left-to-right order of appearance instead ("tok0", "tok1", ...)
+    // - both Raw's and Result's token occurrences are walked in that same order, which holds
+    // because translation is expected to carry each marker through verbatim and in place, only
+    // moving the surrounding literal text (the same assumption every other file in this pipeline
+    // already relies on for these tokens - see CompoundFieldSplitter in the sibling
+    // FanslationStudio.LlmKit repo).
     private static CompiledTemplate BuildCompiledTemplate(DictionaryEntry entry)
     {
         var raw = entry.Raw ?? string.Empty;
         var patternBuilder = new System.Text.StringBuilder();
         var literalSegments = new List<string>();
         var lastIndex = 0;
+        var tokenIndex = 0;
 
-        foreach (Match placeholder in PlaceholderRegex.Matches(raw))
+        foreach (Match placeholder in PlaceholderOrTokenRegex.Matches(raw))
         {
             var literal = raw.Substring(lastIndex, placeholder.Index - lastIndex);
             if (literal.Length > 0)
@@ -171,7 +202,17 @@ internal static class DynamicStringPatches
                 patternBuilder.Append(Regex.Escape(literal));
                 literalSegments.Add(literal);
             }
-            patternBuilder.Append($"(?<p{placeholder.Groups[1].Value}>.+?)");
+
+            if (placeholder.Groups[1].Success)
+            {
+                patternBuilder.Append($"(?<p{placeholder.Groups[1].Value}>.+?)");
+            }
+            else
+            {
+                patternBuilder.Append($"(?<tok{tokenIndex}>.+?)");
+                tokenIndex++;
+            }
+
             lastIndex = placeholder.Index + placeholder.Length;
         }
 
@@ -182,7 +223,14 @@ internal static class DynamicStringPatches
             literalSegments.Add(trailingLiteral);
         }
 
-        var replacementPattern = PlaceholderRegex.Replace(entry.Result ?? string.Empty, m => $"${{p{m.Groups[1].Value}}}");
+        var replacementTokenIndex = 0;
+        var replacementPattern = PlaceholderOrTokenRegex.Replace(entry.Result ?? string.Empty, m =>
+        {
+            if (m.Groups[1].Success) return $"${{p{m.Groups[1].Value}}}";
+            var name = $"tok{replacementTokenIndex}";
+            replacementTokenIndex++;
+            return $"${{{name}}}";
+        });
 
         return new CompiledTemplate
         {

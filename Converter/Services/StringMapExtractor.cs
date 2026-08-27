@@ -223,6 +223,7 @@ public static class StringMapExtractor
     [
         new(@"[\u0590-\u05FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Hebrew
         new(@"[\u0600-\u06FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Arabic
+        new(@"[\u0700-\u08FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Syriac/Arabic Supp/Thaana/NKo/Samaritan
         new(@"[\u0E00-\u0E7F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Thai
         new(@"[\u0E80-\u0EFF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Lao
         new(@"[\u0F00-\u0FFF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Tibetan
@@ -230,6 +231,7 @@ public static class StringMapExtractor
         new(@"[\u1780-\u17FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Khmer
         new(@"[\u1800-\u18AF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Mongolian
         new(@"[\u1100-\u11FF\u3130-\u318F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Hangul Jamo
+        new(@"[\uAC00-\uD7A3]", System.Text.RegularExpressions.RegexOptions.Compiled), // Hangul Syllables
         new(@"[\u2C80-\u2CFF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Coptic
         new(@"[\uFF00-\uFFEF\u2400-\u243F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Halfwidth/Fullwidth + Control Pictures
     ];
@@ -237,7 +239,18 @@ public static class StringMapExtractor
     // A genuine BCL noise string touches several of these unrelated scripts at once (the confirmed
     // instances touch 8+); real Chinese dialogue never touches more than one (if any). Requiring 3
     // distinct hits keeps a wide margin against false-positives on legitimate text.
+    //
+    // Separately, Unicode reserves certain codepoints as permanent "noncharacters" (U+FFFE,
+    // U+FFFF, and U+FDD0-U+FDEF) that are guaranteed to NEVER appear in any real, valid text -
+    // they exist purely as internal sentinels/boundary markers. A string literal containing one is
+    // an unambiguous signal that it's raw BCL/ICU table data, not user-facing text (confirmed via
+    // the short `␀ﾻ꿿￿蟿￾߿`-style candidates that don't touch enough distinct scripts to trip the
+    // >=3 threshold above but do contain U+FFFE/U+FFFF noncharacters).
+    private static readonly System.Text.RegularExpressions.Regex NoncharacterRegex =
+        new(@"[\uFFFE\uFFFF\uFDD0-\uFDEF]", System.Text.RegularExpressions.RegexOptions.Compiled);
+
     private static bool IsExoticScriptNoise(string value) =>
+        NoncharacterRegex.IsMatch(value) ||
         ExoticScriptRegexes.Count(r => r.IsMatch(value)) >= 3;
 
     /// <summary>
