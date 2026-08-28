@@ -185,7 +185,21 @@ namespace Tests
             //new() {Path = "BookTypeIconData.csv", PackageOutput = true },
             new() {Path = "BuildingData.csv", PackageOutput = true },
             new() {Path = "FoodData.csv", PackageOutput = true },
-            new() {Path = "ForceData.csv", PackageOutput = true },
+            // Columns 9 (武功专长/Combat specialty, e.g. "轻功;刀法;射术") and 10 (技艺专长/Craft
+            // specialty) are ';'-separated label lists, and column 11 (特色物品/Signature item,
+            // e.g. "珍宝:1.5") is a ':'-separated Label:Number cell - all three are cross-
+            // referenced by exact string lookup against fixed internal category/resource-type
+            // dictionaries inside GameDataController's ForceData.csv loader (confirmed via
+            // decompiling GameDataController with Converter --filter "GameDataController" - the
+            // loader splits each cell and calls the same dictionary-lookup helper used for
+            // ResourcePointTypeData.csv's "资源" column). This is the same label-cross-reference
+            // hazard as HeroTagData.csv's "效果" column and KungFuData.csv's columns 7/8/13 (see
+            // dragonheirplugin.instructions.md's "CONFIRMED root cause" section) - translating
+            // these labels breaks the lookup, which falls back to a default/invalid index that
+            // later gets used to index a small fixed-size collection elsewhere in the UI (observed
+            // as an uncaught ArgumentOutOfRangeException in HandBookMenuController.ShowForceSkill,
+            // reached via the faction handbook screen). Never translate these columns.
+            new() {Path = "ForceData.csv", PackageOutput = true, SkipColumns = [9, 10, 11] },
             new() {Path = "ForceSpeAddDataBase.csv", PackageOutput = true },
             new() {Path = "HeroNatureTalkText.csv", PackageOutput = true },
             new() {Path = "HeroSpeTalkText.csv", PackageOutput = true },

@@ -339,11 +339,15 @@ internal static class PrefabTextPatches
         try
         {
             var current = getText();
-            if (string.IsNullOrEmpty(current) || !Replacements.TryGetValue(current, out var replacement) || replacement == current)
+            if (string.IsNullOrEmpty(current))
+                return;
+
+            var lookupKey = NormalizeForLookup(current);
+            if (!Replacements.TryGetValue(lookupKey, out var replacement) || replacement == lookupKey)
                 return;
 
             _inTextSetterPostfix = true;
-            try { setText(replacement); }
+            try { setText(DenormalizeFromLookup(replacement)); }
             finally { _inTextSetterPostfix = false; }
         }
         catch (Exception ex)
@@ -415,9 +419,31 @@ internal static class PrefabTextPatches
 
     private static void ReplaceIfKnown(string currentText, Action<string> setText)
     {
-        if (!string.IsNullOrEmpty(currentText) && Replacements.TryGetValue(currentText, out var replacement))
-            setText(replacement);
+        if (string.IsNullOrEmpty(currentText))
+            return;
+
+        if (Replacements.TryGetValue(NormalizeForLookup(currentText), out var replacement))
+            setText(DenormalizeFromLookup(replacement));
     }
+
+    // AssetDumperWorkflowTests.cs dumps multi-line component text with real newlines collapsed to
+    // a literal "\n" (two chars: backslash + n) so each dumped entry stays a single line in the
+    // flat dump/CSV/YAML files - see AssetDumperWorkflowTests.cs's `text.Replace("\n", "\\n").Replace("\r", "")`.
+    // The Replacements dictionary (Raw/Result) is keyed/valued using that same escaped form, but a
+    // live TMP_Text/UI.Text component's runtime .text contains REAL newline characters (baked into
+    // the prefab via Unity's multi-line inspector fields), never the literal escaped form. Without
+    // normalizing here, any multi-line dumped string (typically ones wrapped in <color=...> spanning
+    // multiple lines) silently fails this exact-match lookup and falls through un-replaced to
+    // DynamicStringPatches' bare-fragment substitution, which then partially/incorrectly mangles it
+    // character-by-character (confirmed via an in-game screenshot: "自由选择门派拜入，逐鹿天下或
+    // 浪迹江湖。" rendering as "Freedom选择SectJoin under，逐鹿SkyDown或浪迹Jianghu" instead of the
+    // correct whole-string translation already present in dumpedPrefabText.txt.yaml).
+    private static string NormalizeForLookup(string text) => text.Replace("\n", "\\n").Replace("\r", "");
+
+    // Reverses NormalizeForLookup for the translated Result value before it is assigned back to a
+    // real TMP_Text/UI.Text component, so the rendered text has genuine newlines again rather than
+    // a literal "\n" appearing on-screen.
+    private static string DenormalizeFromLookup(string text) => text.Replace("\\n", "\n");
 
     private class PrefabTextEntry
     {

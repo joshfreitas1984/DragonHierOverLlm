@@ -122,6 +122,27 @@ internal static class DynamicStringPatches
     // captures, never as literal text to match against (see CONFIRMED BUG #2 below).
     private static readonly Regex PlaceholderOrTokenRegex = new(@"\{(\d+)\}|#\$?[A-Za-z0-9_]+#", RegexOptions.Compiled);
 
+    // CONFIRMED BUG #3 (2026-08-28, "Experience倍率＋0%" screenshot case): a placeholder capture
+    // group built as plain ".+?" has no boundary other than "whatever satisfies the next literal
+    // segment", so it can lazily span across a COMPLETELY UNRELATED, still-untranslated CJK run
+    // that happens to sit between this template's literal text and its next literal/terminator.
+    // Confirmed case: template raw "经验{0}%" (meant for e.g. "经验100%") compiles to literal
+    // "经验" + capture + literal "%"; against the real runtime string "经验倍率＋0%" (a static
+    // "经验倍率" label immediately followed by an unrelated dynamically-computed "＋0%" slider
+    // value - two different concerns that happen to land in the same string), the lazy capture
+    // matched "倍率＋0" as the "placeholder" (there is no other "%" to stop at sooner), producing
+    // "Experience倍率＋0%" - and because ApplyTemplates runs BEFORE the bare-fragment dictionary
+    // pass, this consumed "经验" before the correct, more specific whole-phrase entry
+    // ("经验倍率" -> "Experience multiplier") ever got a chance to match. Fix: constrain every
+    // placeholder capture (both "{n}" and "#Token#" kinds) to exclude CJK ideographs/punctuation,
+    // since a "{n}"-placeholder's real runtime value is always a plain number/date component in
+    // every confirmed case, and a "#Token#" marker is always substituted with already-translated
+    // (English) text by the game's own localization before this postfix ever runs - neither should
+    // ever legitimately need to span across untranslated Chinese text. This makes the whole
+    // template fail to match (falls through to the bare dictionary pass, which is exactly what we
+    // want) instead of over-matching into someone else's text.
+    private const string PlaceholderCaptureClass = @"[^\p{IsCJKUnifiedIdeographs}\p{IsCJKSymbolsandPunctuation}\p{IsCJKCompatibilityIdeographs}]";
+
     // A single dictionary template entry, precompiled into a structural matcher: Pattern captures
     // each "{n}" placeholder as a named group ("p0", "p1", ...) around the template's literal
     // (translated) separator text, so it matches the template's *shape* regardless of how the
@@ -205,11 +226,11 @@ internal static class DynamicStringPatches
 
             if (placeholder.Groups[1].Success)
             {
-                patternBuilder.Append($"(?<p{placeholder.Groups[1].Value}>.+?)");
+                patternBuilder.Append($"(?<p{placeholder.Groups[1].Value}>{PlaceholderCaptureClass}+?)");
             }
             else
             {
-                patternBuilder.Append($"(?<tok{tokenIndex}>.+?)");
+                patternBuilder.Append($"(?<tok{tokenIndex}>{PlaceholderCaptureClass}+?)");
                 tokenIndex++;
             }
 
