@@ -188,18 +188,26 @@ files use, so no game process, Harmony, or IL2CPP-awareness is needed to read th
   entries (`初始`→`Initial`, `随机`→`Randomly`, `武器`→`Weapon`) instead — proof this particular
   component's `.text` is populated by code at runtime (a character-creation starting-bonus choice
   list: gold/reputation/random armor/weapon/manual/horse), not baked into the asset at
-  `Resources.Load`/`AssetBundle.LoadAsset`/scene-load time, so `PrefabTextPatches.cs`'s tree-walk
-  never sees the real value — only `DynamicStringPatches`' sink-level `.text` setter patch does,
-  and it had no whole-phrase entry to prefer over the shorter bare-fragment ones. Fix: added a
-  narrow `GameFileHandling.DynamicStringPrimaryTextOverrides` raw-value allowlist (NOT a field-name
-  allowlist — deliberately not widening `DynamicStringOtherTextFields` to include `text`/`m_Text`,
-  which would duplicate ~1400+ already-correctly-handled `PrefabTextPatches` entries into the
-  DynamicStrings dictionary and risk the perf assumption in `DynamicStringPatches.cs` that it stays
-  "low hundreds of entries"). `ExtractDynamicStringCandidatesFromOtherText` now also promotes a
-  `dumpedOtherText.txt` entry whose raw value is in this override list even when its field isn't in
-  `DynamicStringOtherTextFields`. If another screenshot shows the same "translated word fragments
-  mashed together with no spaces" symptom for a different `text`/`m_Text` value, add that exact raw
-  string to `DynamicStringPrimaryTextOverrides` rather than widening the field allowlist.
+  `Resources.Load`/`AssetBundle.LoadAsset`/scene-load time, so `PrefabTextPatches.cs`'s load-time
+  tree-walk never sees the real value at that point. **Fixed generally (2026-08-28), not with a
+  per-string override**: `PrefabTextPatches.cs` now ALSO postfixes `TMP_Text.text`/`UI.Text.text`'s
+  setters (same sink-level pattern `DynamicStringPatches.cs` already used), doing an EXACT
+  whole-string lookup against its own `Replacements` dictionary — no separate dictionary/file
+  needed, since `dumpedPrefabText.txt.yaml` already has a correct whole-phrase entry for any string
+  `AssetDumperWorkflowTests.cs`'s offline scan found (that scan reads each field's serialized
+  *default* value, which is exactly what a runtime-populated component is initialized with
+  before/when the game sets it). These new postfixes run at `[HarmonyPriority(Priority.First)]`,
+  guaranteed to execute before `DynamicStringPatches`' same-named setter postfixes (left at
+  default `Priority.Normal`) regardless of which class's Harmony patches were registered first in
+  `MainPlugin.Load()` — patch APPLICATION order does not determine POSTFIX EXECUTION order, only
+  `HarmonyPriority` does. This means any whole-string match here gets replaced before
+  `DynamicStringPatches`' bare-fragment postfix even runs, so there's nothing left for it to
+  corrupt. An earlier stopgap (`GameFileHandling.DynamicStringPrimaryTextOverrides`, a narrow
+  per-raw-value allowlist feeding these specific strings into the DynamicStrings substring-replace
+  dictionary too) was removed once this general fix landed — no per-string overrides needed going
+  forward. Genuinely runtime-COMPOSED strings (concatenated with other data, e.g. a save-slot
+  description) still correctly fall through unmodified to `DynamicStringPatches`' template/fragment
+  matching, since they never byte-match a whole dumped prefab entry.
 
 ## PrefabText pipeline (`dumpedPrefabText.txt` → `Files/Mod/dumpedPrefabText.txt.yaml`)
 

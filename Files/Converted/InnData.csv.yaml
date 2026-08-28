@@ -19,15 +19,19 @@
     translated: "This was originally an unremarkable small inn beyond the borders. Legend has it that the proprietor offered a high reward to scholars seeking to inscribe a plaque, hoping to boost their reputation."
   - split: 2
     subIndex: 1
-    text: "前朝文豪恰巧行径此处，抚掌笑曰：既然此处有间客栈，就叫“有间客栈”好了！"
-    translated: "Former literary giants walking this path might exclaim with a clap: Since there's an inn here, let's call it Youjian Inn!"
+    text: "前朝文豪恰巧行径此处，抚掌笑曰"
+    translated: "A literary giant from the preceding dynasty, passing by here, clapped and laughed, saying"
   - split: 2
     subIndex: 2
+    text: "既然此处有间客栈，就叫“有间客栈”好了！"
+    translated: "Since there's already a inn here, let's call it You Jian Inn!"
+  - split: 2
+    subIndex: 3
     text: "随战乱不断，商路迁移，此处生意竟真逐渐转暖，最终成了关东首屈一指的客店之所。"
     translated: "With warfare and unrest leading to the migration of trade routes, business here gradually picked up. Eventually, it became the top guesthouse in Guandong."
   templates:
   - split: 2
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}：{2}\\n{3}"
 - raw: "1,河洛客栈,这黄河洛水交接之所，乃炎黄故地，中原要冲，自古以来便是土地肥沃，人丁兴旺之所。\\n故而这天子脚下的河洛客栈，生意也一直颇为兴隆。\\n南方的游人学子，或官员商贾上京之时，大多要在此打尖歇脚几日，再行赶路。,23.78;2.4"
   splits:
   - split: 1

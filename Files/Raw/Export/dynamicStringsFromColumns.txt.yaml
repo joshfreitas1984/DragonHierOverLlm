@@ -3773,18 +3773,18 @@
   - template: "{0}\n{1}"
 - raw: "九种武学技能分别为：\n内功，轻功，绝技，拳掌，剑法，刀法，长兵，奇门，射术。"
   splits:
-  - text: "九种武学技能分别为："
+  - text: "九种武学技能分别为"
   - subIndex: 1
     text: "内功，轻功，绝技，拳掌，剑法，刀法，长兵，奇门，射术。"
   templates:
-  - template: "{0}\n{1}"
+  - template: "{0}：\n{1}"
 - raw: "九种生活技艺分别为：\n医术，毒术，学识，口才，采伐，木植，锻造，炼药，烹饪。"
   splits:
-  - text: "九种生活技艺分别为："
+  - text: "九种生活技艺分别为"
   - subIndex: 1
     text: "医术，毒术，学识，口才，采伐，木植，锻造，炼药，烹饪。"
   templates:
-  - template: "{0}\n{1}"
+  - template: "{0}：\n{1}"
 - raw: "也有人说他抵达北辽，在当地乱局中留下了足迹。"
   splits:
   - text: "也有人说他抵达北辽，在当地乱局中留下了足迹。"
@@ -5014,11 +5014,11 @@
   - template: "{0}\n{1}"
 - raw: "你当前运用的武功，包括：\n内功，轻功，绝技，以及最多八门外功。"
   splits:
-  - text: "你当前运用的武功，包括："
+  - text: "你当前运用的武功，包括"
   - subIndex: 1
     text: "内功，轻功，绝技，以及最多八门外功。"
   templates:
-  - template: "{0}\n{1}"
+  - template: "{0}：\n{1}"
 - raw: "你按镖头指示抵达目标地点，只见一群强人正围着镖队僵持不下，\n有数名镖师已然身受重伤，勉强支撑着。"
   splits:
   - text: "你按镖头指示抵达目标地点，只见一群强人正围着镖队僵持不下，"
@@ -5191,11 +5191,11 @@
   - text: "全天下习武之人不论何门何派，皆唯#PlayerForceName#马首是瞻。"
 - raw: "六大属性分别为：\n力道，灵巧，智力，意志，体质，经脉。"
   splits:
-  - text: "六大属性分别为："
+  - text: "六大属性分别为"
   - subIndex: 1
     text: "力道，灵巧，智力，意志，体质，经脉。"
   templates:
-  - template: "{0}\n{1}"
+  - template: "{0}：\n{1}"
 - raw: "其声望也日益显赫，直至达到了顶点。"
   splits:
   - text: "其声望也日益显赫，直至达到了顶点。"
@@ -5706,7 +5706,7 @@
   - template: "{0}\n{1}"
 - raw: "另外还有一些特殊射击物如：\n星星可增加连击数，\n苹果可恢复生命，\n盾牌则可抵挡一次伤害。"
   splits:
-  - text: "另外还有一些特殊射击物如："
+  - text: "另外还有一些特殊射击物如"
   - subIndex: 1
     text: "星星可增加连击数，"
   - subIndex: 2
@@ -5714,7 +5714,7 @@
   - subIndex: 3
     text: "盾牌则可抵挡一次伤害。"
   templates:
-  - template: "{0}\n{1}\n{2}\n{3}"
+  - template: "{0}：\n{1}\n{2}\n{3}"
 - raw: "只可惜我#$SourceInteractName#纵横江湖多年，却仍旧茕茕孑立，形影相吊。\n不知有谁能与我共度佳期，同赏明月呢？\n（可以邀请好感50以上的异性共度七夕）"
   splits:
   - text: "只可惜我#$SourceInteractName#纵横江湖多年，却仍旧茕茕孑立，形影相吊。"
@@ -6466,11 +6466,15 @@
   splits:
   - text: "在一个月内提升太祖长拳一重功力，以赢得与师兄顾游年的赌约。"
   - subIndex: 1
-    text: "理论经验：在藏经阁阅读秘籍"
+    text: "理论经验"
   - subIndex: 2
-    text: "实战经验：在练武场练习或切磋"
+    text: "在藏经阁阅读秘籍"
+  - subIndex: 3
+    text: "实战经验"
+  - subIndex: 4
+    text: "在练武场练习或切磋"
   templates:
-  - template: "{0}\n<i>{1}\n{2}</i>"
+  - template: "{0}\n<i>{1}：{2}\n{3}：{4}</i>"
 - raw: "在下#$PlayerName#"
   splits:
   - text: "在下#$PlayerName#"
@@ -6958,13 +6962,19 @@
   splits:
   - text: "将御剑要术修炼至十重功力"
   - subIndex: 1
-    text: "理论经验：在藏经阁阅读秘籍"
+    text: "理论经验"
   - subIndex: 2
-    text: "实战经验：在练武场练习或切磋"
+    text: "在藏经阁阅读秘籍"
   - subIndex: 3
-    text: "突破瓶颈：在闭关室选择突破"
+    text: "实战经验"
+  - subIndex: 4
+    text: "在练武场练习或切磋"
+  - subIndex: 5
+    text: "突破瓶颈"
+  - subIndex: 6
+    text: "在闭关室选择突破"
   templates:
-  - template: "{0}\n<i>{1}\n{2}\n{3}</i>"
+  - template: "{0}\n<i>{1}：{2}\n{3}：{4}\n{5}：{6}</i>"
 - raw: "将求得的药方送回#TargetPlace#。"
   splits:
   - text: "将求得的药方送回#TargetPlace#。"
@@ -8541,7 +8551,7 @@
   - template: "{0}\n{1}"
 - raw: "疗伤共有三种方式：\n包扎用于治疗外伤。\n调息用于治疗内伤。\n解毒用于治疗中毒。"
   splits:
-  - text: "疗伤共有三种方式："
+  - text: "疗伤共有三种方式"
   - subIndex: 1
     text: "包扎用于治疗外伤。"
   - subIndex: 2
@@ -8549,7 +8559,7 @@
   - subIndex: 3
     text: "解毒用于治疗中毒。"
   templates:
-  - template: "{0}\n{1}\n{2}\n{3}"
+  - template: "{0}：\n{1}\n{2}\n{3}"
 - raw: "百姓性命危在旦夕，应当如何是好？"
   splits:
   - text: "百姓性命危在旦夕，应当如何是好？"
@@ -8815,11 +8825,15 @@
   splits:
   - text: "继续将太祖长拳修炼至十重功力"
   - subIndex: 1
-    text: "理论经验：在藏经阁阅读秘籍"
+    text: "理论经验"
   - subIndex: 2
-    text: "实战经验：在练武场练习或切磋"
+    text: "在藏经阁阅读秘籍"
+  - subIndex: 3
+    text: "实战经验"
+  - subIndex: 4
+    text: "在练武场练习或切磋"
   templates:
-  - template: "{0}\n<i>{1}\n{2}</i>"
+  - template: "{0}\n<i>{1}：{2}\n{3}：{4}</i>"
 - raw: "继续跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"
   splits:
   - text: "继续跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"
@@ -10230,19 +10244,27 @@
   - text: "飞龙门叛党劫持姜婉，眼下正藏身于#TargetPlace#内。"
 - raw: "马匹的四项属性分别为：\n速度：影响基础速度\n冲刺：影响冲刺加成\n耐力：影响耐力上限\n坚韧：影响耐力耗尽和恶劣地形/天气下的速度"
   splits:
-  - text: "马匹的四项属性分别为："
+  - text: "马匹的四项属性分别为"
   - subIndex: 1
-    text: "速度：影响基础速度"
+    text: "速度"
   - subIndex: 2
-    text: "冲刺：影响冲刺加成"
+    text: "影响基础速度"
   - subIndex: 3
-    text: "耐力：影响耐力上限"
+    text: "冲刺"
   - subIndex: 4
-    text: "坚韧：影响耐力耗尽和恶劣地形"
+    text: "影响冲刺加成"
   - subIndex: 5
+    text: "耐力"
+  - subIndex: 6
+    text: "影响耐力上限"
+  - subIndex: 7
+    text: "坚韧"
+  - subIndex: 8
+    text: "影响耐力耗尽和恶劣地形"
+  - subIndex: 9
     text: "天气下的速度"
   templates:
-  - template: "{0}\n{1}\n{2}\n{3}\n{4}/{5}"
+  - template: "{0}：\n{1}：{2}\n{3}：{4}\n{5}：{6}\n{7}：{8}/{9}"
 - raw: "驳斥#PlotTargetInteractName0#"
   splits:
   - text: "驳斥#PlotTargetInteractName0#"
@@ -11665,69 +11687,91 @@
   - subIndex: 1
     text: "获得80%门派加成效果"
   - subIndex: 2
-    text: "新增门派功能："
+    text: "新增门派功能"
   - subIndex: 3
     text: "正厅"
   - subIndex: 4
-    text: "科研项目：进行科研安排"
+    text: "科研项目"
   - subIndex: 5
-    text: "制作功能：煅烧"
+    text: "进行科研安排"
   - subIndex: 6
-    text: "建造模式：升级建筑"
+    text: "制作功能"
+  - subIndex: 7
+    text: "煅烧"
+  - subIndex: 8
+    text: "建造模式"
+  - subIndex: 9
+    text: "升级建筑"
   templates:
-  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}\n♦({3}){4}\n♦{5}\n♦{6}</color></i>"
+  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}：\n♦({3}){4}：{5}\n♦{6}：{7}\n♦{8}：{9}</color></i>"
 - raw: "<b>可以不参加门派会议</b>\n获得90%门派加成效果\n<i><color=#696969>新增门派功能：\n♦(正厅)门派职位：任免门派职位\n♦(正厅)弟子方针：设定弟子行动方针\n♦(分舵)分舵管理：任免舵主和升级分舵设施\n♦建造模式：新建/拆除建筑</color></i>"
   splits:
   - text: "可以不参加门派会议"
   - subIndex: 1
     text: "获得90%门派加成效果"
   - subIndex: 2
-    text: "新增门派功能："
+    text: "新增门派功能"
   - subIndex: 3
     text: "正厅"
   - subIndex: 4
-    text: "门派职位：任免门派职位"
+    text: "门派职位"
   - subIndex: 5
-    text: "正厅"
+    text: "任免门派职位"
   - subIndex: 6
-    text: "弟子方针：设定弟子行动方针"
+    text: "正厅"
   - subIndex: 7
-    text: "分舵"
+    text: "弟子方针"
   - subIndex: 8
-    text: "分舵管理：任免舵主和升级分舵设施"
+    text: "设定弟子行动方针"
   - subIndex: 9
-    text: "建造模式：新建"
+    text: "分舵"
   - subIndex: 10
+    text: "分舵管理"
+  - subIndex: 11
+    text: "任免舵主和升级分舵设施"
+  - subIndex: 12
+    text: "建造模式"
+  - subIndex: 13
+    text: "新建"
+  - subIndex: 14
     text: "拆除建筑"
   templates:
-  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}\n♦({3}){4}\n♦({5}){6}\n♦({7}){8}\n♦{9}/{10}</color></i>"
+  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}：\n♦({3}){4}：{5}\n♦({6}){7}：{8}\n♦({9}){10}：{11}\n♦{12}：{13}/{14}</color></i>"
 - raw: "<b>每个月都需参加门派会议</b>\n获得60%门派加成效果\n<i><color=#696969>新增门派功能：\n♦(正厅)门派委托：领取门派委托\n♦(祠堂)鉴定：主动鉴定珍宝\n♦(仓库)门派金库：捐献银两\n♦制作功能：精烩/炼药/用毒</color></i>"
   splits:
   - text: "每个月都需参加门派会议"
   - subIndex: 1
     text: "获得60%门派加成效果"
   - subIndex: 2
-    text: "新增门派功能："
+    text: "新增门派功能"
   - subIndex: 3
     text: "正厅"
   - subIndex: 4
-    text: "门派委托：领取门派委托"
+    text: "门派委托"
   - subIndex: 5
-    text: "祠堂"
+    text: "领取门派委托"
   - subIndex: 6
-    text: "鉴定：主动鉴定珍宝"
+    text: "祠堂"
   - subIndex: 7
-    text: "仓库"
+    text: "鉴定"
   - subIndex: 8
-    text: "门派金库：捐献银两"
+    text: "主动鉴定珍宝"
   - subIndex: 9
-    text: "制作功能：精烩"
+    text: "仓库"
   - subIndex: 10
-    text: "炼药"
+    text: "门派金库"
   - subIndex: 11
+    text: "捐献银两"
+  - subIndex: 12
+    text: "制作功能"
+  - subIndex: 13
+    text: "精烩"
+  - subIndex: 14
+    text: "炼药"
+  - subIndex: 15
     text: "用毒"
   templates:
-  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}\n♦({3}){4}\n♦({5}){6}\n♦({7}){8}\n♦{9}/{10}/{11}</color></i>"
+  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}：\n♦({3}){4}：{5}\n♦({6}){7}：{8}\n♦({9}){10}：{11}\n♦{12}：{13}/{14}/{15}</color></i>"
 - raw: "<b>门派特性</b>\n{1}{0}</color>"
   splits:
   - text: "门派特性"
@@ -11865,18 +11909,18 @@
   - template: "⟦1⟧\n{0}⟦2⟧%\n{1}⟦3⟧%\n⟦0⟧"
 - raw: "{1}“{0}”之高，\n令我眼界大开"
   splits:
-  - text: "”之高，"
+  - text: "之高，"
   - subIndex: 1
     text: "令我眼界大开"
   templates:
-  - template: "⟦1⟧“⟦0⟧{0}\n{1}"
+  - template: "⟦1⟧“⟦0⟧”{0}\n{1}"
 - raw: "{1}“{0}”止步于此，\n与乡野村夫何异？"
   splits:
-  - text: "”止步于此，"
+  - text: "止步于此，"
   - subIndex: 1
     text: "与乡野村夫何异？"
   templates:
-  - template: "⟦1⟧“⟦0⟧{0}\n{1}"
+  - template: "⟦1⟧“⟦0⟧”{0}\n{1}"
 - raw: "{1}之“{0}”精妙非常，\n我还需多加学习"
   splits:
   - text: "之“"
@@ -11956,11 +12000,11 @@
   - template: "⟦5⟧{0}⟦0⟧⟦1⟧{1}\n(⟦2⟧{2}⟦4⟧⟦3⟧)"
 - raw: "“{0}”竟有这等境界...\n我不能及也"
   splits:
-  - text: "”竟有这等境界..."
+  - text: "竟有这等境界..."
   - subIndex: 1
     text: "我不能及也"
   templates:
-  - template: "“⟦0⟧{0}\n{1}"
+  - template: "“⟦0⟧”{0}\n{1}"
 - raw: "●初始好感由双方立场决定\n●好感上限由双方声望决定\n●非切磋战每点减少0.25%暴击率"
   splits:
   - text: "初始好感由双方立场决定"
@@ -12872,11 +12916,13 @@
   - text: "乘车"
 - raw: "九大门派签订盟约：好感+50 停战360日"
   splits:
-  - text: "九大门派签订盟约：好感"
+  - text: "九大门派签订盟约"
   - subIndex: 1
+    text: "好感"
+  - subIndex: 2
     text: "停战360日"
   templates:
-  - template: "{0}+50 {1}"
+  - template: "{0}：{1}+50 {2}"
 - raw: "乞丐"
   splits:
   - text: "乞丐"
@@ -13216,7 +13262,7 @@
   - subIndex: 2
     text: "双方将各派战力前"
   - subIndex: 3
-    text: "名的弟子出阵，预计最终战力为："
+    text: "名的弟子出阵，预计最终战力为"
   - subIndex: 4
     text: "想必此战将以"
   - subIndex: 5
@@ -13224,7 +13270,7 @@
   - subIndex: 6
     text: "告终，确认要开战吗？"
   templates:
-  - template: "{0}<b>⟦5⟧%</b>{1}\n{2}⟦2⟧{3}\n<b>⟦0⟧⟦7⟧ ⟦3⟧\n⟦1⟧⟦8⟧ ⟦4⟧</b>\n{4}<b>{5}⟦9⟧</b>{6}"
+  - template: "{0}<b>⟦5⟧%</b>{1}\n{2}⟦2⟧{3}：\n<b>⟦0⟧⟦7⟧ ⟦3⟧\n⟦1⟧⟦8⟧ ⟦4⟧</b>\n{4}<b>{5}⟦9⟧</b>{6}"
 - raw: "以武论道;EnlightForNpcSpePlot;1"
   splits:
   - text: "以武论道"
@@ -13387,11 +13433,13 @@
   - template: "{0};PlayerLoseFightEscape"
 - raw: "但见司仪朗声道：新郎搭躬。\n随后新郎躬身拱手，延请新娘。新娘款款上前，两人并肩伫立。"
   splits:
-  - text: "但见司仪朗声道：新郎搭躬。"
+  - text: "但见司仪朗声道"
   - subIndex: 1
+    text: "新郎搭躬。"
+  - subIndex: 2
     text: "随后新郎躬身拱手，延请新娘。新娘款款上前，两人并肩伫立。"
   templates:
-  - template: "{0}\n{1}"
+  - template: "{0}：{1}\n{2}"
 - raw: "低价出售({0}两);GiveNpcBountyItemPriceSure;1"
   splits:
   - text: "低价出售"
@@ -13464,13 +13512,13 @@
   - text: "你眼见落入下风，只得向后一个纵越，随后落荒而逃！"
 - raw: "你被那群杀手打得身受重伤，只得趁他们不备大喝一声：\n“{0}，怎么现在才来相助！”\n在杀手们惊慌错愕之时，迅速向后纵越几步，然后落荒而逃！"
   splits:
-  - text: "你被那群杀手打得身受重伤，只得趁他们不备大喝一声："
+  - text: "你被那群杀手打得身受重伤，只得趁他们不备大喝一声"
   - subIndex: 1
     text: "，怎么现在才来相助！”"
   - subIndex: 2
     text: "在杀手们惊慌错愕之时，迅速向后纵越几步，然后落荒而逃！"
   templates:
-  - template: "{0}\n“⟦0⟧{1}\n{2}"
+  - template: "{0}：\n“⟦0⟧{1}\n{2}"
 - raw: "你说什么！本门待你恩重如山，#PlayerName#你当真要叛离我#PlayerForceName#？！\n(身为{0}，叛离门派会固定增加{1}点恶名，且{2}天内不能拜师或加入其他门派)"
   splits:
   - text: "你说什么！本门待你恩重如山，#PlayerName#你当真要叛离我#PlayerForceName#？！"
@@ -16194,13 +16242,15 @@
   splits:
   - text: "在疗伤室中，只需消耗门派药材便可治疗自身伤势。"
   - subIndex: 1
-    text: "（当前伤势：外伤"
+    text: "（当前伤势"
   - subIndex: 2
-    text: "内伤"
+    text: "外伤"
   - subIndex: 3
+    text: "内伤"
+  - subIndex: 4
     text: "中毒"
   templates:
-  - template: "{0}\n{1}⟦0⟧/{2}⟦1⟧/{3}⟦2⟧）"
+  - template: "{0}\n{1}：{2}⟦0⟧/{3}⟦1⟧/{4}⟦2⟧）"
 - raw: "在这石窟之中与世隔绝，酣然入梦，足以明心见性，忘却前尘旧事。\n少侠只需耗费{0}银两在此闭关十日，便可遗忘一门<b>零重修为</b>的武学。"
   splits:
   - text: "在这石窟之中与世隔绝，酣然入梦，足以明心见性，忘却前尘旧事。"
@@ -17295,9 +17345,11 @@
   splits:
   - text: "官府"
   - subIndex: 1
-    text: "月俸：银钱"
+    text: "月俸"
+  - subIndex: 2
+    text: "银钱"
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧"
+  - template: "{0}⟦0⟧{1}：{2}⟦1⟧"
 - raw: "官府功绩"
   splits:
   - text: "官府功绩"
@@ -18264,7 +18316,9 @@
   - text: "快速"
 - raw: "快速登录失败，错误代码："
   splits:
-  - text: "快速登录失败，错误代码："
+  - text: "快速登录失败，错误代码"
+  templates:
+  - template: "{0}："
 - raw: "念在#TargetInteractName#也是对#TargetForceName#一片忠心，这次便放你一马，\n只是日后若在战场相见，只怕我就不会手下留情了！"
   splits:
   - text: "念在#TargetInteractName#也是对#TargetForceName#一片忠心，这次便放你一马，"
@@ -19684,9 +19738,9 @@
   - text: "断绝了结义关系"
 - raw: "新的江湖传闻：{0}"
   splits:
-  - text: "新的江湖传闻："
+  - text: "新的江湖传闻"
   templates:
-  - template: "{0}⟦0⟧"
+  - template: "{0}：⟦0⟧"
 - raw: "方向"
   splits:
   - text: "方向"
@@ -20162,7 +20216,9 @@
   - text: "未成年人可游玩时间"
 - raw: "未找到对应处理函数："
   splits:
-  - text: "未找到对应处理函数："
+  - text: "未找到对应处理函数"
+  templates:
+  - template: "{0}："
 - raw: "未知"
   splits:
   - text: "未知"
@@ -20398,13 +20454,15 @@
   - subIndex: 1
     text: "阁下身上若有什么疑难杂症，旧病沉疴，只管交给在下便是。"
   - subIndex: 2
-    text: "（当前伤势：外伤"
+    text: "（当前伤势"
   - subIndex: 3
-    text: "内伤"
+    text: "外伤"
   - subIndex: 4
+    text: "内伤"
+  - subIndex: 5
     text: "中毒"
   templates:
-  - template: "{0}\n{1}\n{2}⟦0⟧/{3}⟦1⟧/{4}⟦2⟧）"
+  - template: "{0}\n{1}\n{2}：{3}⟦0⟧/{4}⟦1⟧/{5}⟦2⟧）"
 - raw: "朱大户"
   splits:
   - text: "朱大户"
@@ -21354,7 +21412,9 @@
   - text: "注册失败，用户名不符合要求"
 - raw: "注册失败，错误代码："
   splits:
-  - text: "注册失败，错误代码："
+  - text: "注册失败，错误代码"
+  templates:
+  - template: "{0}："
 - raw: "注册结果:"
   splits:
   - text: "注册结果"
@@ -21422,11 +21482,11 @@
   - text: "消耗天数"
 - raw: "消耗时间：{0}天"
   splits:
-  - text: "消耗时间："
+  - text: "消耗时间"
   - subIndex: 1
     text: "天"
   templates:
-  - template: "{0}⟦0⟧{1}"
+  - template: "{0}：⟦0⟧{1}"
 - raw: "消耗银两:"
   splits:
   - text: "消耗银两"
@@ -21906,7 +21966,9 @@
   - text: "登录"
 - raw: "登录失败，错误代码："
   splits:
-  - text: "登录失败，错误代码："
+  - text: "登录失败，错误代码"
+  templates:
+  - template: "{0}："
 - raw: "登录状态无效，请重新启动游戏。"
   splits:
   - text: "登录状态无效，请重新启动游戏。"
@@ -22945,9 +23007,9 @@
   - subIndex: 1
     text: "周遭共有"
   - subIndex: 2
-    text: "件江湖要事发生，分别为："
+    text: "件江湖要事发生，分别为"
   templates:
-  - template: "{0}⟦2⟧{1}⟦0⟧{2}\n⟦1⟧。"
+  - template: "{0}⟦2⟧{1}⟦0⟧{2}：\n⟦1⟧。"
 - raw: "老夫这英雄谱上，不仅记载了群雄排行座次，\n这江湖中何时何地有何奇闻异事发生，也是一一俱全。\n#PlayerName#若想了解某一城市，连同周边区域事件之情报，只管来找老夫购买便可。"
   splits:
   - text: "老夫这英雄谱上，不仅记载了群雄排行座次，"
@@ -23116,7 +23178,9 @@
   - template: "{0}\n{1}"
 - raw: "自定义难度："
   splits:
-  - text: "自定义难度："
+  - text: "自定义难度"
+  templates:
+  - template: "{0}："
 - raw: "自己留下;ChaseRuningThiefFinish;1"
   splits:
   - text: "自己留下"

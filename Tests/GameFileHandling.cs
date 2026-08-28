@@ -54,7 +54,48 @@ namespace Tests
             if (string.IsNullOrEmpty(llmResult))
                 return llmResult;
 
-            return PlaceholderTrailingSuffixRegex.Replace(llmResult, "#$1#$2");
+            llmResult = PlaceholderTrailingSuffixRegex.Replace(llmResult, "#$1#$2");
+
+            // The LLM occasionally corrupts a placeholder's '#...#' wrapper instead of leaving it
+            // untouched - ranging from dropping just the '$' (e.g. raw "#$PlayerName#" coming back
+            // as "#PlayerName#" - confirmed on a real PlotData.csv row: "各位，给我把项问天和
+            // #$PlayerName#这两个贼子拿下！" translated with the token reduced to "#PlayerName#"),
+            // to dropping one of the two '#' delimiters, to stripping the wrapper entirely and
+            // just translating/copying the bare identifier as if it were an ordinary name (e.g.
+            // raw "是#PlotTargetInteractName0#在无理取闹" coming back as "It's
+            // PlotTargetInteractName0 being unreasonable" - note the very next row's near-identical
+            // "#PlotTargetInteractName1#" was translated correctly in the same batch, confirming
+            // this is a nondeterministic LLM quirk rather than a systematic inability to handle the
+            // token). These compound identifiers (PlayerName, PlotTargetInteractName0,
+            // SourceInteractName, etc.) are distinctive enough that any partially-corrupted
+            // appearance in an English translation is unambiguous evidence of a mangled wrapper,
+            // not a coincidental collision with real English text - safe to repair deterministically
+            // instead of burning repeated retries on it.
+            foreach (Match match in GamePlaceholderTokenRegex.Matches(raw))
+            {
+                if (llmResult.Contains(match.Value))
+                    continue;
+
+                var coreName = match.Value.Trim('#').TrimStart('$');
+
+                // Matches the identifier with an optionally-missing '$' and/or either '#'
+                // delimiter (or both, i.e. the fully bare identifier) - '\b' around the core name
+                // itself prevents matching mid-word (e.g. "PlayerNameSuffix") even when the
+                // surrounding '#'/'$' are absent. Any match here other than the fully-correct
+                // token (already excluded above) is a corruption to repair.
+                var corruptedTokenRegex = new Regex($@"#?\$?\b{Regex.Escape(coreName)}\b#?", RegexOptions.Compiled);
+                var corruptedMatch = corruptedTokenRegex.Matches(llmResult)
+                    .Cast<Match>()
+                    .FirstOrDefault(m => m.Value != match.Value);
+
+                if (corruptedMatch != null)
+                    // Remove/Insert (not Regex.Replace) so the replacement text - which may itself
+                    // contain '$' (e.g. "#$PlayerName#") - is inserted literally rather than being
+                    // interpreted as a regex substitution pattern.
+                    llmResult = llmResult.Remove(corruptedMatch.Index, corruptedMatch.Length).Insert(corruptedMatch.Index, match.Value);
+            }
+
+            return llmResult;
         }
 
         // Per-file, per-column structural characters that can NEVER legitimately appear in a
@@ -276,6 +317,24 @@ namespace Tests
             // the whole translatable unit.
             new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
 
+            // Second, separately-sourced PrefabText file - see DynamicStringOtherTextFields'
+            // doc comment and ExtractDynamicStringCandidatesFromOtherText below.
+            // **Moved 2026-08-28** from the DynamicStringsIL2CPP (fragment/substring) pipeline to
+            // this PrefabText (exact whole-string match) pipeline instead, now that
+            // DragonHeirPlugin/PrefabTextPatches.cs's sink-level TMP_Text.text/UI.Text.text setter
+            // postfix does an EXACT match at [HarmonyPriority(Priority.First)] - strictly safer
+            // for these values than DynamicStringPatches' bare-fragment substring dictionary,
+            // since every value here (name/plotText/describe/etc.) is always assigned to a
+            // component as a complete, non-concatenated string (confirmed per-field via the noise
+            // sampling in DynamicStringOtherTextFields' doc comment), never built by
+            // runtime string concatenation the way DynamicStringsIL2CPP's fragments are. Kept as
+            // its own file (rather than merged into dumpedPrefabText.txt) so it's obvious which
+            // entries came from the offline dumpedOtherText.txt scan vs. AssetDumperWorkflowTests'
+            // primary m_Text/text field scan - the runtime plugin loads every
+            // "dumpedPrefabText*.txt.yaml" file it finds and merges them into one dictionary (see
+            // PrefabTextPatches.LoadDictionary), so this needs no special handling anywhere else.
+            new() {Path = "dumpedPrefabTextFromOtherFields.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
+
             // Hardcoded, runtime-assembled string literal fragments baked directly into IL2CPP
             // game code (String.Concat/String.Format calls mixing Chinese literals with data).
             // Candidates are discovered offline/statically via Converter's
@@ -370,23 +429,31 @@ namespace Tests
         // eventDescribe (27/27 clean), jobDescribe (12/12 clean), tutorialText (308 total, 7
         // suspicious - all confirmed legitimate, containing key-name references like
         // "Shift"/"WSAD"/"Tab" inside "<b>...</b>" tags). Despite being full paragraphs rather
-        // than short labels, this is still the correct DynamicStrings (substring-replace)
-        // mechanism rather than PrefabText (whole-string load-time scan): these values are
+        // than short labels, at the time this was written the DynamicStrings (substring-replace)
+        // mechanism was believed to be the only viable one for these fields: these values are
         // assigned to a TMP_Text/UI.Text's .text property well after prefab load, at arbitrary
-        // runtime (e.g. when a plot dialog or tutorial popup actually opens) - PrefabTextPatches
-        // only observes text already baked into a component at Resources.Load/scene-load time and
-        // never re-checks it afterwards, so it would never see these. DynamicStringPatches, by
-        // contrast, patches the TMP_Text.text/UI.Text.text SETTERS themselves (sink-level,
-        // field-agnostic - see DynamicStringPatches.cs's TmpTextSetText_Postfix/
-        // UiTextSetText_Postfix), catching the value at the exact moment it's actually displayed
-        // regardless of which source field it came from - exactly the mechanism these fields need.
-        // A full-paragraph entry is applied via ordinary substring replace the same as any other
-        // dynamic-string entry (LoadDictionary sorts longest-first specifically so a full
-        // paragraph can never be corrupted by a shorter, unrelated fragment matching part of it
-        // first), and the existing GamePlaceholderTokenRegex/CheckTransalationSuccessful
-        // validation (which runs unconditionally, not just for CSV columns) already guards against
-        // an LLM dropping an embedded "#PlaceholderToken#" during translation - no new validation
-        // needed for the longer/paragraph case.
+        // runtime (e.g. when a plot dialog or tutorial popup actually opens), and
+        // PrefabTextPatches.cs only ever inspected text already baked into a component at
+        // Resources.Load/scene-load time (never re-checking it afterwards), so it would never
+        // have seen these.
+        //
+        // **Superseded 2026-08-28**: PrefabTextPatches.cs now ALSO postfixes TMP_Text.text/
+        // UI.Text.text's SETTERS directly (sink-level, field-agnostic, same mechanism
+        // DynamicStringPatches already used), doing an EXACT whole-string lookup against its own
+        // Replacements dictionary at [HarmonyPriority(Priority.First)] - see that class's "Second,
+        // sink-level patch added 2026-08-28" doc comment. Since every value on these fields is
+        // always assigned as a complete, non-concatenated string (confirmed by the per-field noise
+        // sampling above - none of these are ever built by runtime String.Concat/Format the way
+        // DynamicStringsIL2CPP's fragments are), an EXACT match is strictly safer than
+        // DynamicStringPatches' bare-fragment substring dictionary (no risk of a shorter unrelated
+        // fragment mangling part of an unmatched string), so these fields now feed
+        // dumpedPrefabTextFromOtherFields.txt (a PrefabText-type file, see TextFilesToSplit above)
+        // instead of dynamicStringsFromColumns.txt - see
+        // ExtractDynamicStringCandidatesFromOtherText below. The existing
+        // GamePlaceholderTokenRegex/CheckTransalationSuccessful validation (which runs
+        // unconditionally, not just for CSV columns) still guards against an LLM dropping an
+        // embedded "#PlaceholderToken#" during translation regardless of which pipeline packages
+        // the line.
         public static readonly string[] DynamicStringOtherTextFields =
         [
             "name", "eventName", "tutorialName", "showName", "bulletName", "fullName",
@@ -395,33 +462,25 @@ namespace Tests
             "eventDescribe", "jobDescribe",
         ];
 
-        // Confirmed-broken 2026-08-27 via an in-game character-creation screenshot showing
-        // "Initial获得RandomlyWeapon" (raw "初始获得随机武器" only partially translated). This
-        // value's dumpedOtherText.txt field is "text" - normally excluded from
-        // DynamicStringOtherTextFields above because "text"/"m_Text" is exactly what
-        // PrefabTextPatches.cs's whole-string load-time GameObject scan already handles (see that
-        // field's own doc comment), so blanket-including every "text"/"m_Text" field here would
-        // duplicate ~1400+ already-working PrefabText entries into the DynamicStrings dictionary
-        // (which DynamicStringPatches' own comments say is expected to stay "low hundreds of
-        // entries" for perf). But THIS specific family of strings (the character-creation starting
-        // -bonus choice list: gold/reputation/random armor/weapon/manual/horse) is confirmed via
-        // the screenshot to reach the game's actual UI via TMP_Text.text/UI.Text.text being SET AT
-        // RUNTIME (code populating a dynamically-instantiated list item), not via the baked prefab
-        // value PrefabTextPatches' asset-load scan inspects - so only DynamicStringPatches' sink-
-        // level .text setter patch ever observes the real value, and its bare-fragment fallback
-        // entries ("初始"->"Initial", "随机"->"Randomly", "武器"->"Weapon") mangled it because no
-        // whole-phrase entry existed to win the longest-match-first sort. Rather than widen the
-        // field allowlist (scale risk above), this narrow raw-value override list lets
-        // ExtractDynamicStringCandidatesFromOtherText promote just these specific values -
-        // already-translated in Files/Mod/dumpedPrefabText.txt.yaml - into the DynamicStrings
-        // dictionary too, as a safety net for the same underlying PrefabTextPatches miss. Add
-        // further specific raw values here only once a screenshot/log confirms the same failure
-        // mode, not speculatively.
-        public static readonly string[] DynamicStringPrimaryTextOverrides =
-        [
-            "初始获得500银钱", "初始获得50声望", "初始获得随机护甲", "初始获得随机武器",
-            "初始获得随机秘籍", "初始获得随机马匹",
-        ];
+        // 2026-08-27/28 history: an in-game character-creation screenshot showed
+        // "Initial获得RandomlyWeapon" (raw "初始获得随机武器" only partially translated) - the
+        // value's dumpedOtherText.txt field is "text", reaching the game's UI via
+        // TMP_Text.text/UI.Text.text being SET AT RUNTIME (a dynamically-instantiated list item),
+        // not via the baked prefab value PrefabTextPatches.cs's asset-load scan inspects. A narrow
+        // per-raw-value override list (DynamicStringPrimaryTextOverrides) was added here as a
+        // stopgap to feed these specific values into the DynamicStrings substring-replace
+        // dictionary too. **Superseded 2026-08-28** by a general fix in
+        // DragonHeirPlugin/PrefabTextPatches.cs instead: that class now ALSO postfixes
+        // TMP_Text.text/UI.Text.text's setters (like DynamicStringPatches already did), doing an
+        // EXACT whole-string lookup against its own Replacements dictionary
+        // (dumpedPrefabText.txt.yaml already has a correct whole-phrase entry for any string
+        // AssetDumperWorkflowTests.cs's offline scan found, regardless of whether the component's
+        // .text is set at load time or later at runtime) and running at
+        // [HarmonyPriority(Priority.First)] so it always wins over DynamicStringPatches' bare-
+        // fragment substring postfix on the same setters. This fixes the whole class of "prefab
+        // text set at runtime instead of baked into the prefab" bugs generically, so the
+        // DynamicStringPrimaryTextOverrides stopgap was removed - no per-string overrides needed
+        // going forward.
 
         // Matches the LABEL portion of a "Label<sign><number>" stat-modifier item (e.g. "内功1",
         // "威望+2", "技艺经验0.01") - i.e. everything before the first digit or '+'/'-' sign. Used
@@ -534,26 +593,31 @@ namespace Tests
         }
 
         /// <summary>
-        /// SECOND automated source feeding the same dynamicStringsFromColumns.txt dump - see
-        /// DynamicStringOtherTextFields' doc comment above for why these specific field names are
-        /// trusted and what was deliberately left out. Reads
+        /// Second automated source feeding the PrefabText pipeline (see TextFilesToSplit's
+        /// "dumpedPrefabTextFromOtherFields.txt" entry) - see DynamicStringOtherTextFields' doc
+        /// comment above for why these specific field names are trusted and what was deliberately
+        /// left out, and for why this now targets the PrefabText (exact-match) pipeline instead of
+        /// DynamicStringsIL2CPP (substring-match). Reads
         /// Files/Raw/Dumped/PrefabText/dumpedOtherText.txt (produced by
         /// AssetDumperWorkflowTests.DumpChineseTextFromAssets - a one-off asset scan, not part of
         /// the numbered pipeline, so this only finds anything new after that scan is re-run),
         /// keeps every distinct value whose Field is in DynamicStringOtherTextFields, and appends
-        /// any not already present in dynamicStrings.txt or a previous run of this method (or
-        /// ExtractDynamicStringCandidatesFromColumns - both write to the same file) to
-        /// dynamicStringsFromColumns.txt. Repeatable/idempotent like its sibling - safe to re-run
-        /// any time (e.g. after re-running the asset dumper or adding a new field to the
-        /// allowlist) without duplicating already-extracted values.
+        /// any not already present in dumpedPrefabText.txt or a previous run of this method to
+        /// Files/Raw/Dumped/PrefabText/dumpedPrefabTextFromOtherFields.txt - a flat one-entry-per-
+        /// line dump in the exact same format PrefabTextWorkflow.ExportPrefabTextToCustomFormat
+        /// expects, so it flows through the existing "1c. ExportDynamicStringsIntoTranslated" /
+        /// "2. MergeFilesIntoTranslated" / "6. Package to Game Files" steps unchanged. Repeatable/
+        /// idempotent like its DynamicStrings-side siblings - safe to re-run any time (e.g. after
+        /// re-running the asset dumper or adding a new field to the allowlist) without duplicating
+        /// already-extracted values.
         /// </summary>
         public static void ExtractDynamicStringCandidatesFromOtherText(string workingDirectory)
         {
             var otherTextPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedOtherText.txt";
             if (!File.Exists(otherTextPath)) return;
 
-            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
-            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
+            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedPrefabText.txt";
+            var outputPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedPrefabTextFromOtherFields.txt";
 
             var seen = new HashSet<string>();
             if (File.Exists(masterDumpPath))
@@ -562,7 +626,6 @@ namespace Tests
                 seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
 
             var allowedFields = new HashSet<string>(DynamicStringOtherTextFields, StringComparer.OrdinalIgnoreCase);
-            var rawOverrides = new HashSet<string>(DynamicStringPrimaryTextOverrides, StringComparer.Ordinal);
 
             // Deserialize into a plain Dictionary rather than the DumpedTextEntry record itself -
             // YamlDotNet's default object node deserializer requires a parameterless constructor
@@ -578,11 +641,7 @@ namespace Tests
             foreach (var entry in entries)
             {
                 if (!entry.TryGetValue("raw", out var raw) || string.IsNullOrWhiteSpace(raw)) continue;
-                // Normally requires the entry's Field to be in the allowlist above - but a
-                // "text"/"m_Text" field entry whose raw value is in DynamicStringPrimaryTextOverrides
-                // is let through too (see that array's doc comment for why).
-                var fieldAllowed = entry.TryGetValue("field", out var field) && allowedFields.Contains(field);
-                if (!fieldAllowed && !rawOverrides.Contains(raw)) continue;
+                if (!entry.TryGetValue("field", out var field) || !allowedFields.Contains(field)) continue;
                 if (!seen.Add(raw)) continue;
 
                 found.Add(raw);

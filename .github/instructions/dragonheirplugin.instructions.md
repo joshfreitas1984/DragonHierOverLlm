@@ -406,16 +406,32 @@ labels this way, several already covered by existing whole-sentence entries in `
 
 ## `PrefabTextPatches` — runtime replacement of hardcoded prefab UI text (TMP_Text/UI.Text only)
 
-Replaces `plotText`/`describe`/etc.-style CSV-backed fields are **not** handled here — those
-already round-trip through the existing CSV workflow (`Tests/GameFileHandling.cs` +
-`ResourceIoPatches.cs`'s whole-file `TextAsset` override), confirmed by checking
-`BepInEx\interop\Assembly-CSharp.dll`: every one of those field names (`plotText`, `describe`,
-`tutorialText`, `eventDescribe`, `startRemindText`, `choiceText`) is a property on a plain data
-class (`SinglePlotData`, `InnData`, `EventData`, ...) already loaded from a registered CSV
-(`PlotData.csv`, `InnData.csv`, etc.), not standalone prefab text. Scope was deliberately narrowed
-to just `TMP_Text.text`/`UI.Text.text` — the two "primary" fields `AssetDumperWorkflowTests.cs`
-dumps to `dumpedPrefabText.txt` (see `IsPrimaryTextField`) — with broader coverage left as a
-follow-up if untranslated text turns up later that isn't CSV-backed.
+**Correction (2026-08-28):** an earlier version of this note claimed `plotText`/`describe`/etc.
+fields "already round-trip through the existing CSV workflow" and were deliberately out of scope.
+That was WRONG — confirmed by grepping every dumped GameData CSV that none of these values
+(`plotText`, `describe`, `tutorialText`, `eventDescribe`, `startRemindText`, `choiceText`, plus
+short name-fields like `name`/`eventName`/`plotName`) have a CSV source at all; they're populated
+from `Files/Raw/Dumped/PrefabText/dumpedOtherText.txt` (the diagnostic-only dump
+`AssetDumperWorkflowTests.cs` writes for every non-primary MonoBehaviour field) instead. See
+`Tests/GameFileHandling.cs`'s `DynamicStringOtherTextFields`/
+`ExtractDynamicStringCandidatesFromOtherText` for exactly which field names are trusted (each
+individually sampled for ASCII/underscore noise before being promoted) and how they're extracted.
+These fields were originally routed through `DynamicStringPatches`' substring/fragment dictionary
+(`dynamicStringsFromColumns.txt`), then **moved here** 2026-08-28: since every value on these
+fields is always assigned as a complete, non-concatenated string, an exact whole-string match is
+strictly safer than a bare-fragment substring replace (no risk of a shorter unrelated fragment
+mangling part of an unmatched string). They now feed a second dump file,
+`Files/Raw/Dumped/PrefabText/dumpedPrefabTextFromOtherFields.txt` (registered as its own
+`TextFileToSplit` entry, `TextFileType.PrefabText`), packaged to
+`Files/Mod/dumpedPrefabTextFromOtherFields.txt.yaml` and loaded here alongside
+`dumpedPrefabText.txt.yaml` (see the `DictionaryFilePattern`/multi-file glob note below). The
+extraction call moved from the `"1c."` fact to `"1b."` in `Tests/FileInputWorkflowTests.cs` so it
+runs before `ExportPrefabTextAssetToCustomFormat` packages whatever's on disk.
+
+`TMP_Text.text`/`UI.Text.text` remain the only component fields patched directly — the two
+"primary" fields `AssetDumperWorkflowTests.cs` dumps to `dumpedPrefabText.txt` (see
+`IsPrimaryTextField`) — the fields above reach the same two setters at runtime regardless of which
+data class they're read from, so no additional component-field coverage was needed to fix this.
 
 **Why not `Awake`/`OnEnable`/`set_text` patches (tried and rejected):** a prefab's serialized field
 values come from native IL2CPP deserialization directly, bypassing C# property setters/lifecycle
@@ -452,11 +468,16 @@ returned object's real IL2CPP class directly via `IL2CPP.il2cpp_object_get_class
 `UnityLogCapture.FormatMessage` already uses for `Il2CppSystem.Object` — rather than casting.
 
 **Dictionary format/location:** `PrefabTextPatches` searches recursively under
-`BepInEx\plugins\resources\` for a file named `dumpedPrefabText.txt.yaml` (NOT a fixed flat path -
-it's actually deployed at `resources\GameData\dumpedPrefabText.txt.yaml`, mirroring the CSV
-overrides' subfolder convention) — the flat raw/result YAML list produced by
+`BepInEx\plugins\resources\` for every file matching the glob `dumpedPrefabText*.txt.yaml`
+(`DictionaryFilePattern`, mirroring `DynamicStringPatches.DictionaryFilePattern`'s
+`dynamicStrings*.txt.yaml` — currently matches both `dumpedPrefabText.txt.yaml` and
+`dumpedPrefabTextFromOtherFields.txt.yaml`, NOT a fixed flat path - they're actually deployed at
+`resources\GameData\...`, mirroring the CSV overrides' subfolder convention), loading and merging
+every matching file's entries into one dictionary — adding a further `dumpedPrefabText`-family dump
+file in future never requires another plugin change, it just needs to match the glob and be listed
+in `TextFilesToSplit`. Each file is the flat raw/result YAML list produced by
 `FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow.PackagePrefabTextAsync`
-(`Files/Mod/dumpedPrefabText.txt.yaml`) — via a `YamlDotNet` `PackageReference` embedded through
+(e.g. `Files/Mod/dumpedPrefabText.txt.yaml`) — via a `YamlDotNet` `PackageReference` embedded through
 Costura.Fody (same `CopyLocalLockFileAssemblies=true` + Costura pattern as
 `System.Text.Encoding.CodePages`; confirmed embedded by checking
 `costura.yamldotnet.dll.compressed` appears in the built DLL's `GetManifestResourceNames()`).

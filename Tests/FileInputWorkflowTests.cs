@@ -25,17 +25,29 @@ public class FileInputWorkflowTests
     [Fact(DisplayName = "1b. ExportPrefabTextIntoTranslated")]
     public void ExportPrefabTextIntoTranslated()
     {
+        // Must run before the export below, which exports whatever ends up in
+        // Raw/Dumped/PrefabText/*.txt (including dumpedPrefabTextFromOtherFields.txt) - see
+        // GameFileHandling.DynamicStringOtherTextFields' doc comment for exactly which
+        // MonoBehaviour field names are trusted and why, and
+        // ExtractDynamicStringCandidatesFromOtherText's own doc comment for why this now feeds
+        // the PrefabText (exact-match) pipeline instead of DynamicStringsIL2CPP
+        // (substring-match). Idempotent/safe to re-run (already-extracted values are never
+        // duplicated) and only finds anything new after AssetDumperWorkflowTests'
+        // DumpChineseTextFromAssets asset scan has been (re-)run at least once.
+        GameFileHandling.ExtractDynamicStringCandidatesFromOtherText(GameFileHandling.WorkingDirectory);
+
         GameFileHandling.ExportPrefabTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
     }
 
     [Fact(DisplayName = "1c. ExportDynamicStringsIntoTranslated")]
     public void ExportDynamicStringsIntoTranslated()
     {
-        // All three automated candidate-extraction sources run first, in-process, so this single
-        // fact covers the whole dynamic-strings workflow end to end - all are idempotent/safe to
-        // re-run (already-extracted values are never duplicated) and must run before the export
-        // below, which exports whatever ends up in Raw/Dumped/DynamicStrings/*.txt (including
-        // dynamicStringsFromColumns.txt, which all three populate).
+        // Both remaining automated candidate-extraction sources run first, in-process, so this
+        // single fact covers the whole dynamic-strings workflow end to end - both are
+        // idempotent/safe to re-run (already-extracted values are never duplicated) and must run
+        // before the export below, which exports whatever ends up in
+        // Raw/Dumped/DynamicStrings/*.txt (including dynamicStringsFromColumns.txt, which both
+        // populate).
         //
         // Source 1: config-driven extraction of whole-phrase strings (force/sect names, hero rank
         // tags, etc.) from specific CSV columns - see GameFileHandling.DynamicStringColumnSources'
@@ -43,13 +55,10 @@ public class FileInputWorkflowTests
         // DynamicStringPatches' bare single-character fallback entries.
         GameFileHandling.ExtractDynamicStringCandidatesFromColumns(GameFileHandling.WorkingDirectory);
 
-        // Source 2: extraction from Files/Raw/Dumped/PrefabText/dumpedOtherText.txt (produced by
-        // the separate, one-off AssetDumperWorkflowTests.DumpChineseTextFromAssets asset scan) -
-        // see GameFileHandling.DynamicStringOtherTextFields' doc comment for exactly which
-        // MonoBehaviour field names are trusted and why. Only finds anything new after the asset
-        // dumper has been (re-)run at least once.
-        GameFileHandling.ExtractDynamicStringCandidatesFromOtherText(GameFileHandling.WorkingDirectory);
-
+        // Source 2 (formerly "Source 2" here, extracting from dumpedOtherText.txt) now runs in
+        // "1b" above instead, feeding the PrefabText pipeline rather than this one - see
+        // ExtractDynamicStringCandidatesFromOtherText's doc comment.
+        //
         // Source 3: regenerates Converter/output/_dynamicStrings_candidates.txt FRESH (by shelling
         // out to the sibling Converter project) from the current Converter/output/_string_map.csv
         // every run, rather than trusting whatever candidates file happens to already be on disk -

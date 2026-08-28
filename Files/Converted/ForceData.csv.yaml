@@ -78,31 +78,31 @@
     translated: "Drunken revelry"
   - split: 15
     subIndex: 1
-    text: "：消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
-    translated: ":Consume alcohol to gain corresponding long‑term buffs. Drinking with others does not require good will, and drinking consumes ‑20% of the ingredient, increasing goodwill."
+    text: "消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
+    translated: "Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill."
   - split: 15
     subIndex: 2
     text: "豪赌"
     translated: "Bold bet"
   - split: 15
     subIndex: 3
-    text: "：随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。"
-    translated: ":You can gamble anytime to gain additional reputation points. The number of gambling sessions doubles each month, as does the betting amount."
+    text: "随时进行赌博并获取额外好感，每月可赌博次数翻倍，下注数额翻倍。"
+    translated: "You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling."
   - split: 15
     subIndex: 4
     text: "销金"
     translated: "Gold dust"
   - split: 15
     subIndex: 5
-    text: "：在销金库可用门派功绩兑换高品质珍宝。"
-    translated: ":Treasure items of high quality can be obtained by exchanging Sect merits in the Money Vault."
+    text: "在销金库可用门派功绩兑换高品质珍宝。"
+    translated: "Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:1.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。\\n<b>{2}</b>{3}\\n<b>{4}</b>{5}"
+    template: "<b>{0}</b>：{1}+20%。\\n<b>{2}</b>：{3}\\n<b>{4}</b>：{5}"
 - raw: "1,唐门,霸业,4,31,9f61e5,,,0.5,绝技;射术;刀法,毒术,材料:1.5,1,1,1,<b>暗器</b>：暗室研究射术兵器，提升射术威力。\\n<b>杀手</b>：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
   splits:
   - split: 1
@@ -133,23 +133,23 @@
     translated: "Hidden Weapon"
   - split: 15
     subIndex: 1
-    text: "：暗室研究射术兵器，提升射术威力。"
-    translated: ":Study weapons of archery in a dark room to enhance the power of shooting skills."
+    text: "暗室研究射术兵器，提升射术威力。"
+    translated: "Study the art of archery in the dark room to enhance the power of shooting."
   - split: 15
     subIndex: 2
     text: "杀手"
     translated: "Assassin"
   - split: 15
     subIndex: 3
-    text: "：在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
-    translated: ":In a dark room, you can accept hitman orders. You gain ‑60% notoriety for attacking and severely injuring others; if arrested by officials, you can use qinggong to evade capture."
+    text: "在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
+    translated: "You can claim hitman contracts in the dark room. You have a ‑60% reputation for being ruthless and assaultive, but you can use lightness to evade the officials when caught."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:1.5"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "2,药王谷,中庸,4,32,b57d4c,,,0.5,内功;拳掌;射术,医术;炼药,丹药:2,1,1,2,<b>行医</b>：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。\\n<b>妙药</b>：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求-50%。\\n<b>灵谷</b>：在万花谷可用门派功绩兑换高品质药引。"
   splits:
   - split: 1
@@ -184,24 +184,24 @@
     translated: "Practice medicine"
   - split: 15
     subIndex: 1
-    text: "：治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
-    translated: ":Healing others is unlimited by affection or frequency. Each month, his clinic visits double, and he gains affection +20% and additional reputation from all treatments."
+    text: "治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
+    translated: "Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation."
   - split: 15
     subIndex: 2
     text: "妙药"
     translated: "Miracle medicine"
   - split: 15
     subIndex: 3
-    text: "：炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求"
-    translated: ":Alchemy efficiency at +20% and can select multiple medicinal herbs, enhancing the refinement of elixirs with all required ingredients."
+    text: "炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求"
+    translated: "Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are met."
   - split: 15
     subIndex: 4
     text: "灵谷"
     translated: "Spirit Grove"
   - split: 15
     subIndex: 5
-    text: "：在万花谷可用门派功绩兑换高品质药引。"
-    translated: ":Sect merits can be used to exchange for high‑quality medicinal herbs in the Ten Thousand Flowers Valley."
+    text: "在万花谷可用门派功绩兑换高品质药引。"
+    translated: "In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -210,7 +210,7 @@
   - split: 11
     template: "{0}:2"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}-50%。\\n<b>{4}</b>{5}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}-50%。\\n<b>{4}</b>：{5}"
 - raw: "3,丐帮,仁义,5,33,e1bf6e,,,0.5,拳掌;长兵;绝技,口才;烹饪,饮食:2,1,1,3,<b>铁掌</b>：大会台研究拳掌兵器，提升拳掌威力。\\n<b>行乞</b>：可消耗声望向他人乞讨银两。索取他人物品消耗好感-40%。"
   splits:
   - split: 1
@@ -245,16 +245,16 @@
     translated: "Iron Palm"
   - split: 15
     subIndex: 1
-    text: "：大会台研究拳掌兵器，提升拳掌威力。"
-    translated: ":Attend the grand hall training to enhance your fist and palm techniques and weapon skills."
+    text: "大会台研究拳掌兵器，提升拳掌威力。"
+    translated: "The conference focuses on palm and fist weapons, enhancing their power."
   - split: 15
     subIndex: 2
     text: "行乞"
     translated: "Begging"
   - split: 15
     subIndex: 3
-    text: "：可消耗声望向他人乞讨银两。索取他人物品消耗好感"
-    translated: ":Spend reputation to beg for silver from others. Requesting items from others consumes goodwill."
+    text: "可消耗声望向他人乞讨银两。索取他人物品消耗好感"
+    translated: "Consume prestige to beg for silver from others. Requesting items from others consumes goodwill."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -263,7 +263,7 @@
   - split: 11
     template: "{0}:2"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}-40%。"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}-40%。"
 - raw: "4,飞龙门,中庸,4,34,fdf553,,,0.6,绝技;长兵;刀法,采伐,马匹:2,1,1,4,<b>枪术</b>：赛马场研究长兵兵器，提升长兵威力。\\n<b>马术</b>：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
   splits:
   - split: 1
@@ -294,23 +294,23 @@
     translated: "Gun combat"
   - split: 15
     subIndex: 1
-    text: "：赛马场研究长兵兵器，提升长兵威力。"
-    translated: ":Study longsword weaponry at the racetrack to enhance its power."
+    text: "赛马场研究长兵兵器，提升长兵威力。"
+    translated: "Study lances at the racetrack to enhance their power."
   - split: 15
     subIndex: 2
     text: "马术"
     translated: "Horsemanship"
   - split: 15
     subIndex: 3
-    text: "：马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
-    translated: ":Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming boost gives the horse a 0.2% increase in all attributes."
+    text: "马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
+    translated: "Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:2"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "5,茅山派,中庸,5,35,dafaf7,,,0.5,绝技;奇门;剑法,炼药,丹药:1.5,1,1,5,<b>符法</b>：修习符咒武学解锁对应符法，用符法在战前强化己方角色/弱化对方角色。\\n<b>天雷</b>：每满级一门雷电武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点意志。\\n<b>丹引</b>：在华阳洞可炼化丹药获取对应药引。"
   splits:
   - split: 1
@@ -341,8 +341,8 @@
     translated: "Spellcasting"
   - split: 15
     subIndex: 1
-    text: "：修习符咒武学解锁对应符法，用符法在战前强化己方角色"
-    translated: ":Mastery of talisman martial arts unlocks corresponding talisman techniques, which can be used to enhance your characters before battle."
+    text: "修习符咒武学解锁对应符法，用符法在战前强化己方角色"
+    translated: "Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle."
   - split: 15
     subIndex: 2
     text: "弱化对方角色。"
@@ -353,8 +353,8 @@
     translated: "Heavenly Thunder"
   - split: 15
     subIndex: 4
-    text: "：每满级一门雷电武学，根据武学品级额外提升0.5"
-    translated: ":Gain one Lightning Martial Art per level, with additional improvement based on the art's grade by 0.5."
+    text: "每满级一门雷电武学，根据武学品级额外提升0.5"
+    translated: "Gain one Thunderbolt Martial Art per level, with additional enhancement 0.5 based on the Art's grade."
   - split: 15
     subIndex: 5
     text: "3点意志。"
@@ -365,15 +365,15 @@
     translated: "Dan Yin"
   - split: 15
     subIndex: 7
-    text: "：在华阳洞可炼化丹药获取对应药引。"
-    translated: ":In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    text: "在华阳洞可炼化丹药获取对应药引。"
+    translated: "In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:1.5"
   - split: 15
-    template: "<b>{0}</b>{1}/{2}\\n<b>{3}</b>{4}/1/1.5/2/2.5/{5}\\n<b>{6}</b>{7}"
+    template: "<b>{0}</b>：{1}/{2}\\n<b>{3}</b>：{4}/1/1.5/2/2.5/{5}\\n<b>{6}</b>：{7}"
 - raw: "6,铸剑山庄,中庸,3,36,8ff2f4,,,0.5,剑法;绝技;刀法,采伐;锻造,装备:2,1,1,6,<b>天工</b>：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。\\n<b>巧匠</b>：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
   splits:
   - split: 1
@@ -408,16 +408,16 @@
     translated: "Heavenly Artisan"
   - split: 15
     subIndex: 1
-    text: "：在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。"
-    translated: ":Gather meteoric iron fragments during exploration and enhance equipment further in the Sword Pool."
+    text: "在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。"
+    translated: "Collect meteorite fragments during exploration and enhance your equipment in the Sword Pool for additional strengthening."
   - split: 15
     subIndex: 2
     text: "巧匠"
     translated: "Craftsman"
   - split: 15
     subIndex: 3
-    text: "：锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
-    translated: ":Forge efficiency at +20% and can use multiple materials; in Sword Pool, dismantling equipment yields corresponding materials."
+    text: "锻造效率+20%且可以选用多个材料，在剑池可拆解装备获取对应材料。"
+    translated: "Forging efficiency +20% and you can select multiple materials. In the Sword Pool, you can dismantle equipment to obtain corresponding materials."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -426,7 +426,7 @@
   - split: 11
     template: "{0}:2"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "7,五毒教,霸业,5,37,b46da6,,,0.5,奇门;绝技;拳掌,木植;毒术,珍宝:1,1,1,7,<b>炼蛊</b>：在万毒池消耗药引/食材获取毒物，融合低级毒物获取强力高级毒物。\\n<b>毒术</b>：用毒可以选用多个毒物，装备淬毒下降速率-25%。"
   splits:
   - split: 1
@@ -461,8 +461,8 @@
     translated: "Incubate poison insects"
   - split: 15
     subIndex: 1
-    text: "：在万毒池消耗药引"
-    translated: ":Burn the medicinal herb in the Sea of Venom"
+    text: "在万毒池消耗药引"
+    translated: "Consume the medicinal herb in the Sea of Venom"
   - split: 15
     subIndex: 2
     text: "食材获取毒物，融合低级毒物获取强力高级毒物。"
@@ -473,8 +473,8 @@
     translated: "Poison Technique"
   - split: 15
     subIndex: 4
-    text: "：用毒可以选用多个毒物，装备淬毒下降速率"
-    translated: ":Poisoning can use multiple toxins, and equipping reduces the poisoning rate."
+    text: "用毒可以选用多个毒物，装备淬毒下降速率"
+    translated: "Poisons can be selected from multiple options, and the rate of poison application decreases."
   templates:
   - split: 9
     template: "{0};{1};{2}"
@@ -483,7 +483,7 @@
   - split: 11
     template: "{0}:1"
   - split: 15
-    template: "<b>{0}</b>{1}/{2}\\n<b>{3}</b>{4}-25%。"
+    template: "<b>{0}</b>：{1}/{2}\\n<b>{3}</b>：{4}-25%。"
 - raw: "8,阎罗殿,霸业,6,38,960E0A,,,0.5,内功;刀法;绝技;拳掌,采伐,装备:1,1,1,8,<b>试炼</b>：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。\\n<b>霸道</b>：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
   splits:
   - split: 1
@@ -518,23 +518,23 @@
     translated: "Trial"
   - split: 15
     subIndex: 1
-    text: "：挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
-    translated: ":Challenging the Gate of Despair trial with increasing difficulty, acquiring progressively stronger talent effects."
+    text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
+    translated: "Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities."
   - split: 15
     subIndex: 2
     text: "霸道"
     translated: "Domineering"
   - split: 15
     subIndex: 3
-    text: "：抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
-    translated: ":Reputation for stealing from others and shops at ‑40%; can use a special technique to break free when arrested by the soldiers."
+    text: "抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
+    translated: "Reputation for stealing from others and shops at ‑40%; can use a special technique to break free when arrested by the constabulary."
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
   - split: 11
     template: "{0}:1"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "9,大隐阁,中庸,6,39,c5dff5,,,0.5,内功;轻功;奇门;剑法,学识;口才,珍宝:2,1,1,9,<b>博引</b>：搜集其他门派秘籍放入星辰阁，获取对应武学加成。\\n<b>旁证</b>：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求-10%。"
   splits:
   - split: 1
@@ -573,16 +573,16 @@
     translated: "Wide‑ranging"
   - split: 15
     subIndex: 1
-    text: "：搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
-    translated: ":Collect secret techniques from other sects and place them in the Stellar Pavilion to gain corresponding martial arts enhancements."
+    text: "搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
+    translated: "Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses."
   - split: 15
     subIndex: 2
     text: "旁证"
     translated: "Circumstantial evidence"
   - split: 15
     subIndex: 3
-    text: "：论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求"
-    translated: ":Discussing the upper limit of battle hand cards +3, players gain enhanced effects and extra goodwill upon victory. The skill requirements for compiling treatises."
+    text: "论战手牌上限+3，论战胜利获取强化特效和额外好感。秘籍编纂的技能要求"
+    translated: "Battle Handcard Limit +3, Victory in Battle Grants Enhanced Effects and Extra Favor. Skill Requirement for Manuscript Compilation"
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -591,7 +591,7 @@
   - split: 11
     template: "{0}:2"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}-10%。"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}-10%。"
 - raw: "10,少林寺,仁义,6,40,ffb861,,,1,内功;绝技;长兵;拳掌,医术,秘籍:1,1,1,10,<b>禅宗</b>：通过禅宗修行获取少林寺武学加成。\\n<b>普度</b>：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
   splits:
   - split: 1
@@ -626,23 +626,23 @@
     translated: "Zen Buddhism"
   - split: 15
     subIndex: 1
-    text: "：通过禅宗修行获取少林寺武学加成。"
-    translated: ":Gain benefits from Shaolin Temple martial arts through Zen practice."
+    text: "通过禅宗修行获取少林寺武学加成。"
+    translated: "Gain the benefits of Shaolin Temple martial arts through Zen practice."
   - split: 15
     subIndex: 2
     text: "普度"
     translated: "Universal Salvation"
   - split: 15
     subIndex: 3
-    text: "：教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
-    translated: ":Civilize wild villains or other martial artists, changing others' stance towards laws and kindness, and boosting goodwill and reputation."
+    text: "教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
+    translated: "Tame wild bandits or other martial artists, change others' stances towards virtue and compassion, and increase goodwill and reputation."
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
   - split: 11
     template: "{0}:1"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "11,武当派,仁义,5,41,a0e15f,,,0.5,内功;绝技;剑法;拳掌,木植;炼药,秘籍:0.75,1,1,11,<b>道法</b>：通过道法修行获取武当派武学加成。\\n<b>无为</b>：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
   splits:
   - split: 1
@@ -681,16 +681,16 @@
     translated: "Way of Dao"
   - split: 15
     subIndex: 1
-    text: "：通过道法修行获取武当派武学加成。"
-    translated: ":Through Daoist cultivation, gain the martial arts enhancements of the Wudang Sect."
+    text: "通过道法修行获取武当派武学加成。"
+    translated: "Gain the Wudang sect martial arts bonuses through Daoist cultivation."
   - split: 15
     subIndex: 2
     text: "无为"
     translated: "Do Nothing"
   - split: 15
     subIndex: 3
-    text: "：教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
-    translated: ":Civilize wild villains or other heros, shifting others' stances towards a neutral state and increasing their goodwill and reputation."
+    text: "教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
+    translated: "Tame wild villains or other martial artists, shifting others' stances from neutral to mildly favorable and boosting their affinity and reputation."
   templates:
   - split: 9
     template: "{0};{1};{2};{3}"
@@ -699,7 +699,7 @@
   - split: 11
     template: "{0}:0.75"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "12,霸刀门,中庸,3,42,c36328,,,0.6,刀法;长兵;绝技,烹饪,饮食:1,1,1,12,<b>试刀</b>：试刀台研究刀法兵器，提升刀法威力。\\n<b>老饕</b>：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
   splits:
   - split: 1
@@ -730,23 +730,23 @@
     translated: "Test blade"
   - split: 15
     subIndex: 1
-    text: "：试刀台研究刀法兵器，提升刀法威力。"
-    translated: ":Practice Blade Art on the Trial Stage to enhance its power."
+    text: "试刀台研究刀法兵器，提升刀法威力。"
+    translated: "Study the Blade Art and weaponry on the Trial Blade Platform to enhance the power of your Blade Technique."
   - split: 15
     subIndex: 2
     text: "老饕"
     translated: "Gourmand"
   - split: 15
     subIndex: 3
-    text: "：烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
-    translated: ":Cooking efficiency at +20% and can use multiple ingredients. Consuming a delicacy grants corresponding lasting bonuses."
+    text: "烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
+    translated: "Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:1"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "13,蓬莱派,仁义,3,43,fcc4d2,,,0.5,内功;剑法;奇门,学识,秘籍:0.5,1,1,13,<b>万剑</b>：蓬莱阁研究剑法兵器，提升剑法威力。\\n<b>归宗</b>：每满级一门剑法武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点剑法。"
   splits:
   - split: 1
@@ -777,16 +777,16 @@
     translated: "Ten Thousand Swords"
   - split: 15
     subIndex: 1
-    text: "：蓬莱阁研究剑法兵器，提升剑法威力。"
-    translated: ":Penglai Pavilion studies sword arts and weaponry to enhance the power of sword techniques."
+    text: "蓬莱阁研究剑法兵器，提升剑法威力。"
+    translated: "Study sword arts and weaponry at Penglai Pavilion to enhance swordsmanship power."
   - split: 15
     subIndex: 2
     text: "归宗"
     translated: "Return to the Ancestral Home"
   - split: 15
     subIndex: 3
-    text: "：每满级一门剑法武学，根据武学品级额外提升0.5"
-    translated: ":Each level of sword art martial arts unlocks an additional one, with higher grade skills boosting it by 0.5."
+    text: "每满级一门剑法武学，根据武学品级额外提升0.5"
+    translated: "Gain one Sword Art upon reaching max level, with additional boosts based on the art's rank: 0.5"
   - split: 15
     subIndex: 4
     text: "3点剑法。"
@@ -797,7 +797,7 @@
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/1/1.5/2/2.5/{4}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/1/1.5/2/2.5/{4}"
 - raw: "14,峨眉派,仁义,4,44,affac8,,,0.5,内功;轻功;拳掌,木植,材料:1,1,1,14,<b>自然</b>：通过自然修行获取峨嵋派武学加成。\\n<b>灵悟</b>：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
   splits:
   - split: 1
@@ -828,23 +828,23 @@
     translated: "Natural"
   - split: 15
     subIndex: 1
-    text: "：通过自然修行获取峨嵋派武学加成。"
-    translated: ":Gain benefits from Emei martial arts through natural cultivation."
+    text: "通过自然修行获取峨嵋派武学加成。"
+    translated: "Gain the benefits of Emei martial arts through natural cultivation."
   - split: 15
     subIndex: 2
     text: "灵悟"
     translated: "Lingwu"
   - split: 15
     subIndex: 3
-    text: "：突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
-    translated: ":Breakthrough efficiency +20%, breakthrough option +1, and the breakthrough bonus gains an additional level 1."
+    text: "突破效率+20%，突破选项+1且突破加成额外提升1个级别。"
+    translated: "Breakthrough efficiency +20%, breakthrough option +1 and additional breakthrough level boost by 1 ranks."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:1"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "15,崆峒派,霸业,3,45,3e92aa,,,0.5,绝技;奇门;长兵,毒术,马匹:1,1,1,15,<b>奇技</b>：七十二洞研究奇门兵器，提升奇门威力。\\n<b>百出</b>：每满级一门奇门武学，根据武学品级额外提升0.5/1/1.5/2/2.5/3点奇门。"
   splits:
   - split: 1
@@ -875,16 +875,16 @@
     translated: "Strange Art"
   - split: 15
     subIndex: 1
-    text: "：七十二洞研究奇门兵器，提升奇门威力。"
-    translated: ":Study all seventy‑two passages to enhance the power of the qimen weaponry."
+    text: "七十二洞研究奇门兵器，提升奇门威力。"
+    translated: "Research the 72 Caves to enhance the power of the qimen weapons."
   - split: 15
     subIndex: 2
     text: "百出"
     translated: "Constant problems"
   - split: 15
     subIndex: 3
-    text: "：每满级一门奇门武学，根据武学品级额外提升0.5"
-    translated: ":A martial art skill is unlocked upon leveling up, with an additional boost of 0.5 based on the skill's rank."
+    text: "每满级一门奇门武学，根据武学品级额外提升0.5"
+    translated: "Gain one Odd Door Martial Art upon leveling up, with additional enhancement based on the art's grade by 0.5."
   - split: 15
     subIndex: 4
     text: "3点奇门。"
@@ -895,7 +895,7 @@
   - split: 11
     template: "{0}:1"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/1/1.5/2/2.5/{4}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/1/1.5/2/2.5/{4}"
 - raw: "16,神机门,仁义,4,46,3eaa66,,,0.5,奇门;射术;绝技,学识;锻造,装备:1.5,1,1,16,<b>机关</b>：使用装备改装升级机关兽，获取对应的机关兽加成。\\n<b>杂学</b>：所有技艺经验+20%，收集资源时更易获得高级珍宝/材料，珍宝鉴定额外学识加成。"
   splits:
   - split: 1
@@ -930,16 +930,16 @@
     translated: "Mechanism"
   - split: 15
     subIndex: 1
-    text: "：使用装备改装升级机关兽，获取对应的机关兽加成。"
-    translated: ":Upgrade your mecha beasts by equipping and enhancing them to gain corresponding bonuses."
+    text: "使用装备改装升级机关兽，获取对应的机关兽加成。"
+    translated: "Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses."
   - split: 15
     subIndex: 2
     text: "杂学"
     translated: "Miscellaneous studies"
   - split: 15
     subIndex: 3
-    text: "：所有技艺经验+20%，收集资源时更易获得高级珍宝"
-    translated: ":All craft experience +20%: Collecting resources is more likely to yield advanced treasures."
+    text: "所有技艺经验+20%，收集资源时更易获得高级珍宝"
+    translated: "All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures."
   - split: 15
     subIndex: 4
     text: "材料，珍宝鉴定额外学识加成。"
@@ -952,7 +952,7 @@
   - split: 11
     template: "{0}:1.5"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/{4}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/{4}"
 - raw: "17,霹雳堂,中庸,3,47,d72724,,,0.5,射术;绝技;长兵,锻造,材料:2,1,1,17,<b>火药</b>：通过配置火药提升霹雳堂武学和灼烧武学效果。\\n<b>灼烧</b>：每满级一门灼烧武学，根据武学品级额外提升0.5%/1%/1.5%/2%/2.5%/3%负面加成。\\n<b>重烩</b>：在火炼室可重烩饮食获取对应食材。"
   splits:
   - split: 1
@@ -983,16 +983,16 @@
     translated: "Gunpowder"
   - split: 15
     subIndex: 1
-    text: "：通过配置火药提升霹雳堂武学和灼烧武学效果。"
-    translated: ":Boost the effects of Thunderclap Hall and burning martial arts by configuring the gunpowder."
+    text: "通过配置火药提升霹雳堂武学和灼烧武学效果。"
+    translated: "Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder."
   - split: 15
     subIndex: 2
     text: "灼烧"
     translated: "Scorching"
   - split: 15
     subIndex: 3
-    text: "：每满级一门灼烧武学，根据武学品级额外提升0.5%"
-    translated: ":Gain one Burning Martial Art per level, with an additional 0.5% boost based on the martial art's grade."
+    text: "每满级一门灼烧武学，根据武学品级额外提升0.5%"
+    translated: "Gain one Burning Martial Art per level, with an additional 0.5% boost based on the art's grade."
   - split: 15
     subIndex: 4
     text: "3%负面加成。"
@@ -1003,15 +1003,15 @@
     translated: "Stewed Again"
   - split: 15
     subIndex: 6
-    text: "：在火炼室可重烩饮食获取对应食材。"
-    translated: ":Burnt Room allows you to reheat meals to get the corresponding ingredients."
+    text: "在火炼室可重烩饮食获取对应食材。"
+    translated: "You can reheat meals in the Furnace Room to get the corresponding ingredients."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:2"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/1%/1.5%/2%/2.5%/{4}\\n<b>{5}</b>{6}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/1%/1.5%/2%/2.5%/{4}\\n<b>{5}</b>：{6}"
 - raw: "18,金刚密宗,霸业,5,48,695180,,,0.5,内功;绝技;奇门,烹饪,饮食:1.5,1,1,18,<b>密宗</b>：通过密宗修行获取金刚宗武学加成。\\n<b>灌顶</b>：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
   splits:
   - split: 1
@@ -1042,23 +1042,23 @@
     translated: "Esoteric Buddhism"
   - split: 15
     subIndex: 1
-    text: "：通过密宗修行获取金刚宗武学加成。"
-    translated: ":Gain enhancements in Vajra Martial Arts through tantric cultivation."
+    text: "通过密宗修行获取金刚宗武学加成。"
+    translated: "Gain benefits from Vajra Martial Arts through Tantric practice."
   - split: 15
     subIndex: 2
     text: "灌顶"
     translated: "Crown ceremony"
   - split: 15
     subIndex: 3
-    text: "：教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
-    translated: ":Tame wild bandits or other martial artists, sway their stance towards chaos and ferocity, and increase your reputation and popularity."
+    text: "教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
+    translated: "While civilizing wild villains, shift others' stances towards civilization and righteousness, and increase their favor and reputation."
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:1.5"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
 - raw: "19,天山派,霸业,4,49,445c6a,,,0.4,轻功;内功;拳掌,医术,丹药:1,1,1,19,<b>玄冰</b>：通过凝结玄冰提升天山派武学和冰寒武学效果。\\n<b>冰寒</b>：每满级一门冰寒武学，根据武学品级额外提升2/4/6/8/10/12点内力上限。"
   splits:
   - split: 1
@@ -1089,16 +1089,16 @@
     translated: "Xuanbing"
   - split: 15
     subIndex: 1
-    text: "：通过凝结玄冰提升天山派武学和冰寒武学效果。"
-    translated: ":Condense the Frost Ice to enhance the Tianshan Sect's martial arts and ice‑cold combat techniques."
+    text: "通过凝结玄冰提升天山派武学和冰寒武学效果。"
+    translated: "Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques."
   - split: 15
     subIndex: 2
     text: "冰寒"
     translated: "Icicles"
   - split: 15
     subIndex: 3
-    text: "：每满级一门冰寒武学，根据武学品级额外提升2"
-    translated: ":Gain one Ice and Cold Martial Art for each level cap, with additional enhancement based on the art's grade: 2"
+    text: "每满级一门冰寒武学，根据武学品级额外提升2"
+    translated: "Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality."
   - split: 15
     subIndex: 4
     text: "12点内力上限。"
@@ -1109,7 +1109,7 @@
   - split: 11
     template: "{0}:1"
   - split: 15
-    template: "<b>{0}</b>{1}\\n<b>{2}</b>{3}/4/6/8/10/{4}"
+    template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/4/6/8/10/{4}"
 - raw: "20,聚义门,仁义,2,50,ABABAB,207/223/241,,0.5,内功;拳掌;长兵,无,丹药:0.5,0,1,-7,<b>聚义</b>：内功经验+20%，医术经验+20%。"
   splits:
   - split: 1
@@ -1140,15 +1140,15 @@
     translated: "Gather to swear loyalty"
   - split: 15
     subIndex: 1
-    text: "：内功经验+20%，医术经验"
-    translated: ":Neigong experience +20%, medical skill experience"
+    text: "内功经验+20%，医术经验"
+    translated: "Neigong experience +20%, medical skill experience"
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "21,黄河帮,霸业,0,51,ABABAB,,,0.5,轻功;刀法,无,珍宝:0.5,0,1,-8,<b>黄河</b>：刀法经验+20%，毒术经验+20%。"
   splits:
   - split: 1
@@ -1175,15 +1175,15 @@
     translated: "Yellow River"
   - split: 15
     subIndex: 1
-    text: "：刀法经验+20%，毒术经验"
-    translated: ":blade technique experience +20% , poison art experience"
+    text: "刀法经验+20%，毒术经验"
+    translated: "Blade Art experience +20%, poison technique experience"
   templates:
   - split: 9
     template: "{0};{1}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "22,八卦门,仁义,1,52,ABABAB,,,0.5,绝技;剑法;奇门,无,秘籍:0.25,0,1,-5,<b>八卦</b>：奇门经验+20%，学识经验+20%。"
   splits:
   - split: 1
@@ -1214,15 +1214,15 @@
     translated: "Bagua"
   - split: 15
     subIndex: 1
-    text: "：奇门经验+20%，学识经验"
-    translated: ":Mystic Experience +20% , Scholarly Experience"
+    text: "奇门经验+20%，学识经验"
+    translated: "Combat experience +20%, Scholarly experience"
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:0.25"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "23,海沙帮,中庸,0,53,ABABAB,,,0.5,绝技;刀法,无,材料:0.5,0,1,-9,<b>海沙</b>：绝技经验+20%，烹饪经验+20%。"
   splits:
   - split: 1
@@ -1249,15 +1249,15 @@
     translated: "Desert sand"
   - split: 15
     subIndex: 1
-    text: "：绝技经验+20%，烹饪经验"
-    translated: ":Master Skill Experience +20% , Cooking Experience"
+    text: "绝技经验+20%，烹饪经验"
+    translated: "Special Skill Experience +20%, Cooking Experience"
   templates:
   - split: 9
     template: "{0};{1}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "24,铁掌帮,霸业,1,54,ABABAB,6/11/32/47/62/117/138/151/196/210/225,,0.5,内功;拳掌,无,装备:0.5,0,0,-10,<b>铁掌</b>：拳掌经验+20%，锻造经验+20%。"
   splits:
   - split: 1
@@ -1284,15 +1284,15 @@
     translated: "Iron Palm"
   - split: 15
     subIndex: 1
-    text: "：拳掌经验+20%，锻造经验"
-    translated: ":Punching and Palm Technique +20%，Forging Experience%"
+    text: "拳掌经验+20%，锻造经验"
+    translated: "Fist and Palm Experience +20%, Smithing Experience"
   templates:
   - split: 9
     template: "{0};{1}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "25,仙霞派,中庸,0,55,ABABAB,0/4/7/9/12/16/20/21/24/31/39/52/61/68/126/149/157/230,14-60;24-25,0.5,剑法,无,秘籍:0.25,0,0,-99,<b>仙霞</b>：所有经验获取+5%。"
   splits:
   - split: 1
@@ -1315,13 +1315,13 @@
     translated: "Xianxia"
   - split: 15
     subIndex: 1
-    text: "：所有经验获取"
-    translated: ":all experience points gained"
+    text: "所有经验获取"
+    translated: "All experience points gained"
   templates:
   - split: 11
     template: "{0}:0.25"
   - split: 15
-    template: "<b>{0}</b>{1}+5%。"
+    template: "<b>{0}</b>：{1}+5%。"
 - raw: "26,巨鲸帮,中庸,1,56,ABABAB,,,0.5,轻功;射术,无,饮食:0.5,0,1,-4,<b>巨鲸</b>：轻功经验+20%，采伐经验+20%。"
   splits:
   - split: 1
@@ -1348,15 +1348,15 @@
     translated: "Great whale"
   - split: 15
     subIndex: 1
-    text: "：轻功经验+20%，采伐经验"
-    translated: ":Qinggong experience +20%, logging experience"
+    text: "轻功经验+20%，采伐经验"
+    translated: "Qinggong experience +20%, woodcutting experience"
   templates:
   - split: 9
     template: "{0};{1}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "27,金龙帮,中庸,2,57,ABABAB,,,0.5,内功;射术,无,珍宝:0.5,0,1,-3,<b>金龙</b>：射术经验+20%，口才经验+20%。"
   splits:
   - split: 1
@@ -1383,15 +1383,15 @@
     translated: "Golden Dragon"
   - split: 15
     subIndex: 1
-    text: "：射术经验+20%，口才经验"
-    translated: ":Archery experience +20%, persuasion experience"
+    text: "射术经验+20%，口才经验"
+    translated: "Archery experience +20%, eloquence experience"
   templates:
   - split: 9
     template: "{0};{1}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "28,青城派,霸业,1,58,ABABAB,,,0.5,轻功;奇门;剑法,无,装备:0.5,0,1,-6,<b>青城</b>：剑法经验+20%，炼药经验+20%。"
   splits:
   - split: 1
@@ -1422,15 +1422,15 @@
     translated: "Qingcheng"
   - split: 15
     subIndex: 1
-    text: "：剑法经验+20%，炼药经验"
-    translated: ":Sword Art experience +20%, Alchemy experience"
+    text: "剑法经验+20%，炼药经验"
+    translated: "Sword Art experience +20%, alchemy experience"
   templates:
   - split: 9
     template: "{0};{1};{2}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"
 - raw: "29,伏牛派,仁义,0,59,ABABAB,,,0.5,绝技;长兵,无,马匹:0.5,0,1,-2,<b>伏牛</b>：长兵经验+20%，木植经验+20%。"
   splits:
   - split: 1
@@ -1457,12 +1457,12 @@
     translated: "Wutou Mountain"
   - split: 15
     subIndex: 1
-    text: "：长兵经验+20%，木植经验"
-    translated: ":Longsword Experience +20%，Felling Experience"
+    text: "长兵经验+20%，木植经验"
+    translated: "Long Sword Experience +20%, Woodcutter Experience"
   templates:
   - split: 9
     template: "{0};{1}"
   - split: 11
     template: "{0}:0.5"
   - split: 15
-    template: "<b>{0}</b>{1}+20%。"
+    template: "<b>{0}</b>：{1}+20%。"

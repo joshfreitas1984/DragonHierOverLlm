@@ -16,24 +16,36 @@ namespace EnglishPatch;
 
 /// <summary>
 /// Replaces hardcoded Chinese UI text baked directly into prefabs at load time, using an exact
-/// raw-string lookup against the flat raw/result dictionary produced by
+/// raw-string lookup against the flat raw/result dictionary(ies) produced by
 /// FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow.PackagePrefabTextAsync
-/// (Files/Mod/dumpedPrefabText.txt.yaml, deployed to BepInEx\plugins\resources\ next to this
+/// (Files/Mod/dumpedPrefabText*.txt.yaml, deployed to BepInEx\plugins\resources\ next to this
 /// plugin - same "resources" folder ResourceIoPatches.cs already uses for CSV overrides):
 /// <code>
 /// - raw: 地图一览
 ///   result: Map Overview
 /// </code>
 ///
-/// Only TMPro.TMP_Text and UnityEngine.UI.Text's "text" field is handled - the two "primary" text
-/// fields AssetDumperWorkflowTests.cs dumps to dumpedPrefabText.txt (see IsPrimaryTextField
-/// there). Other dumped fields (plotText, describe, tutorialText, eventDescribe,
-/// startRemindText, choiceText, etc.) all live on plain data classes (SinglePlotData, InnData,
-/// EventData, ...) that are already populated from the existing CSV workflow
-/// (Tests/GameFileHandling.cs + ResourceIoPatches.cs's whole-file TextAsset override) - translating
-/// the CSV is enough for those, no runtime patch needed. This is a deliberate scope decision, not
-/// an oversight - broader field coverage can follow up later if untranslated text turns up that
-/// isn't covered by a CSV.
+/// Two source files are currently packaged, both loaded and merged into the same dictionary (see
+/// DictionaryFilePattern/Replacements below):
+///  - dumpedPrefabText.txt(.yaml): TMPro.TMP_Text/UnityEngine.UI.Text's "text" field only - the
+///    two "primary" text fields AssetDumperWorkflowTests.cs dumps here (see IsPrimaryTextField
+///    there).
+///  - dumpedPrefabTextFromOtherFields.txt(.yaml): other MonoBehaviour fields (plotText, describe,
+///    tutorialText, eventDescribe, startRemindText, choiceText, name, etc.) living on plain data
+///    classes (SinglePlotData, InnData, EventData, ...) that AssetDumperWorkflowTests.cs dumps to
+///    the diagnostic-only dumpedOtherText.txt - see Tests/GameFileHandling.cs's
+///    DynamicStringOtherTextFields/ExtractDynamicStringCandidatesFromOtherText for exactly which
+///    field names are trusted and why. **Moved here 2026-08-28** from the DynamicStrings
+///    (substring/fragment) pipeline: an earlier version of this comment claimed these fields "are
+///    already populated from the existing CSV workflow" - confirmed WRONG by grepping every
+///    dumped GameData CSV (none of these values have a CSV source at all, see
+///    GameFileHandling.cs's 2026-08-27 history note) - so they DO need their own runtime
+///    replacement, same as the primary text fields above. Since every value on these fields is
+///    always assigned as a complete, non-concatenated string (never built by runtime
+///    String.Concat/Format), an exact match here is strictly safer than DynamicStringPatches'
+///    bare-fragment substring dictionary (no risk of a shorter unrelated fragment mangling part of
+///    an unmatched string).
+
 ///
 /// Why this patches Resources.Load/AssetBundle.LoadAsset/SceneManager.Internal_SceneLoaded instead
 /// of TMP_Text/UI.Text lifecycle methods (Awake/OnEnable/set_text): a prefab or scene asset's
@@ -50,6 +62,38 @@ namespace EnglishPatch;
 /// Start/title screen's UI) - those are instantiated directly by Unity's scene loader, never
 /// routed through either load call - so SceneManager.Internal_SceneLoaded is also patched to catch
 /// that category, walking scene.GetRootGameObjects() once the scene has finished loading.
+///
+/// **Second, sink-level patch added 2026-08-28 (TmpTextSetText_Postfix/UiTextSetText_Postfix):**
+/// the load-time tree-walk above only ever sees a component's *baked* value at
+/// Resources.Load/AssetBundle.LoadAsset/scene-load time. Some UI components (confirmed via an
+/// in-game screenshot of a character-creation starting-bonus list showing
+/// "Initial获得RandomlyWeapon", raw "初始获得随机武器") have their .text SET LATER AT RUNTIME by
+/// game code (e.g. populating a dynamically-instantiated list item) - the load-time scan never
+/// observes that value at all, since it isn't present on the GameObject tree yet when
+/// Resources.Load/scene-load fires. Rather than only detect this per-value (see
+/// Tests/GameFileHandling.cs's DynamicStringPrimaryTextOverrides history), this is fixed
+/// generally: TMP_Text.text/UI.Text.text's setters are now ALSO postfixed here, doing an EXACT
+/// whole-string lookup against the same Replacements dictionary this class already loads (no
+/// separate dictionary/file needed - dumpedPrefabText.txt.yaml already has a correct whole-phrase
+/// entry for any string AssetDumperWorkflowTests.cs's offline scan found, since that scan reads
+/// each field's serialized *default* value, which is exactly what a runtime-populated component
+/// is initialized with before/when the game sets it).
+///
+/// **Ordering vs. DynamicStringPatches.cs's own sink-level postfixes on the SAME two setters:**
+/// this class is Harmony-patched first, in MainPlugin.Load(), before DynamicStringPatches.PatchAll()
+/// runs - but patch APPLICATION order doesn't determine POSTFIX EXECUTION order, Harmony priority
+/// does. TmpTextSetText_Postfix/UiTextSetText_Postfix below are marked [HarmonyPriority(Priority.First)]
+/// so they always run before DynamicStringPatches' same-named postfixes (left at the default
+/// Priority.Normal) regardless of patch registration order. This matters because an exact
+/// whole-string match here is strictly safer than DynamicStringPatches' bare-fragment substring
+/// dictionary for text that IS a byte-identical, non-concatenated copy of a dumped prefab string -
+/// running first means the whole string gets replaced wholesale before DynamicStringPatches' own
+/// postfix ever runs, so its bare-fragment fallback entries (e.g. "初始"->"Initial",
+/// "随机"->"Randomly") have nothing left to corrupt (no Chinese substrings remain once this postfix
+/// has already replaced the whole string). Genuinely runtime-COMPOSED strings (concatenated with
+/// other data, e.g. a save-slot description) will never byte-match a whole dumped prefab entry
+/// here, so they correctly fall through unmodified to DynamicStringPatches' template/fragment
+/// matching, which remains the only mechanism that can handle those.
 ///
 /// IL2CPP interop safety (see .github/instructions/dragonheirplugin.instructions.md):
 /// - No generic Cast&lt;T&gt;/TryCast&lt;T&gt;/AddComponent&lt;T&gt;/GetComponentsInChildren&lt;T&gt;/
@@ -73,7 +117,17 @@ internal static class PrefabTextPatches
 {
     private static readonly string PluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".";
     private static readonly string ResourcesDir = Path.Combine(PluginDir, "resources");
-    private const string DictionaryFileName = "dumpedPrefabText.txt.yaml";
+    // Glob rather than a single exact filename - mirrors DynamicStringPatches.DictionaryFilePattern.
+    // PrefabTextWorkflow-packaged dictionary files all share the same "raw"/"result" flat-list
+    // shape regardless of which TextFileToSplit produced them, e.g. "dumpedPrefabText.txt.yaml"
+    // (AssetDumperWorkflowTests' primary m_Text/text field scan) and
+    // "dumpedPrefabTextFromOtherFields.txt.yaml" (Tests/GameFileHandling.cs's
+    // ExtractDynamicStringCandidatesFromOtherText - other MonoBehaviour fields, e.g. plotText/
+    // describe/name, moved here 2026-08-28 from the DynamicStrings pipeline since these values are
+    // always whole, non-concatenated strings and so are safer as an exact match). Every matching
+    // file is loaded and merged into the same in-memory dictionary (see Replacements below), so
+    // adding a new source file never requires a plugin-side path change.
+    private const string DictionaryFilePattern = "dumpedPrefabText*.txt.yaml";
 
     private static Dictionary<string, string> _replacements;
     private static Il2CppSystem.Type _tmpTextType;
@@ -96,45 +150,50 @@ internal static class PrefabTextPatches
                     return _replacements;
                 }
 
-                // Searched recursively rather than a fixed flat path - the file is deployed
+                // Searched recursively rather than a fixed flat path - these files are deployed
                 // alongside the CSV overrides under a subfolder mirroring the game's actual
                 // Resources.Load path (e.g. resources\GameData\dumpedPrefabText.txt.yaml), same
                 // convention ResourceIoPatches uses for its own override files.
-                var dictionaryFile = Directory
-                    .EnumerateFiles(ResourcesDir, DictionaryFileName, SearchOption.AllDirectories)
-                    .FirstOrDefault();
+                var dictionaryFiles = Directory
+                    .EnumerateFiles(ResourcesDir, DictionaryFilePattern, SearchOption.AllDirectories)
+                    .ToList();
 
-                if (dictionaryFile == null)
+                if (dictionaryFiles.Count == 0)
                 {
                     MainPlugin.Logger?.LogWarning(
-                        $"PrefabTextPatches: no '{DictionaryFileName}' found anywhere under '{ResourcesDir}' - prefab text replacement disabled.");
+                        $"PrefabTextPatches: no '{DictionaryFilePattern}' files found anywhere under '{ResourcesDir}' - prefab text replacement disabled.");
                     return _replacements;
                 }
 
-                var yaml = File.ReadAllText(dictionaryFile);
                 var deserializer = new DeserializerBuilder()
                     .WithNamingConvention(CamelCaseNamingConvention.Instance)
                     .IgnoreUnmatchedProperties()
                     .Build();
-                var entries = deserializer.Deserialize<List<PrefabTextEntry>>(yaml) ?? [];
 
-                foreach (var entry in entries)
+                foreach (var dictionaryFile in dictionaryFiles)
                 {
-                    if (!string.IsNullOrEmpty(entry.Raw))
-                        _replacements[entry.Raw] = entry.Result ?? entry.Raw;
-                }
+                    var yaml = File.ReadAllText(dictionaryFile);
+                    var entries = deserializer.Deserialize<List<PrefabTextEntry>>(yaml) ?? [];
 
-                MainPlugin.Logger?.LogWarning(
-                    $"PrefabTextPatches: loaded {_replacements.Count} prefab text replacements from '{dictionaryFile}'.");
+                    foreach (var entry in entries)
+                    {
+                        if (!string.IsNullOrEmpty(entry.Raw))
+                            _replacements[entry.Raw] = entry.Result ?? entry.Raw;
+                    }
+
+                    MainPlugin.Logger?.LogWarning(
+                        $"PrefabTextPatches: loaded entries from '{dictionaryFile}' ({_replacements.Count} total so far).");
+                }
             }
             catch (Exception ex)
             {
-                MainPlugin.Logger?.LogError($"PrefabTextPatches: failed to load dictionary under '{ResourcesDir}': {ex}");
+                MainPlugin.Logger?.LogError($"PrefabTextPatches: failed to load dictionaries under '{ResourcesDir}': {ex}");
             }
 
             return _replacements;
         }
     }
+
 
     // Non-generic Il2CppType.From(System.Type) - not the generic Il2CppType.Of<T>() - per the
     // interop safety notes above.
@@ -239,6 +298,58 @@ internal static class PrefabTextPatches
         var ns = IL2CPP.il2cpp_class_get_namespace_(klass);
         var name = IL2CPP.il2cpp_class_get_name_(klass);
         return ns == "UnityEngine" && name == "GameObject";
+    }
+
+    // Sink-level patches (see this class's doc comment "Second, sink-level patch added
+    // 2026-08-28" section) - catch text assigned to a TMP_Text/UI.Text component at arbitrary
+    // runtime, not just what's already baked into the GameObject tree at asset/scene-load time.
+    // [HarmonyPriority(Priority.First)] guarantees these run before DynamicStringPatches' own
+    // same-named setter postfixes (left at the default Priority.Normal there), regardless of which
+    // class's Harmony patches were registered first in MainPlugin.Load().
+    [ThreadStatic]
+    private static bool _inTextSetterPostfix;
+
+    [HarmonyPatch(typeof(TMP_Text), nameof(TMP_Text.text), MethodType.Setter)]
+    [HarmonyPostfix]
+    [HarmonyPriority(Priority.First)]
+    private static void TmpTextSetText_Postfix(TMP_Text __instance)
+    {
+        ApplyExactMatchToComponentText(() => __instance.text, v => __instance.text = v);
+    }
+
+    [HarmonyPatch(typeof(Text), nameof(Text.text), MethodType.Setter)]
+    [HarmonyPostfix]
+    [HarmonyPriority(Priority.First)]
+    private static void UiTextSetText_Postfix(Text __instance)
+    {
+        ApplyExactMatchToComponentText(() => __instance.text, v => __instance.text = v);
+    }
+
+    // Exact whole-string lookup only (never substring/fragment replace) - unlike
+    // DynamicStringPatches' generic sink-level postfix, this reuses the SAME Replacements
+    // dictionary the load-time tree-walk above already loads, so it's safe against bare-fragment
+    // corruption: a value here either matches a dumped prefab string byte-for-byte (safe to
+    // replace wholesale) or it doesn't match at all (left untouched, falls through to
+    // DynamicStringPatches for template/fragment handling if applicable).
+    private static void ApplyExactMatchToComponentText(Func<string> getText, Action<string> setText)
+    {
+        if (_inTextSetterPostfix || Replacements.Count == 0)
+            return;
+
+        try
+        {
+            var current = getText();
+            if (string.IsNullOrEmpty(current) || !Replacements.TryGetValue(current, out var replacement) || replacement == current)
+                return;
+
+            _inTextSetterPostfix = true;
+            try { setText(replacement); }
+            finally { _inTextSetterPostfix = false; }
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"PrefabTextPatches: text setter postfix failed: {ex}");
+        }
     }
 
     private static void ProcessGameObjectRecursive(GameObject go)

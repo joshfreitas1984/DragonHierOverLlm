@@ -553,58 +553,62 @@
     translated: "Acquire Sect Prestige"
   - split: 7
     subIndex: 2
-    text: "技能影响：学识"
-    translated: "Skill Impact: Knowledge"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 3
+    text: "学识"
+    translated: "Scholarship"
+  - split: 7
+    subIndex: 4
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 4
+    subIndex: 5
     text: "鉴定"
     translated: "Identification"
   - split: 7
-    subIndex: 5
+    subIndex: 6
     text: "鉴定珍宝"
     translated: "Appraise Treasures"
   - split: 7
-    subIndex: 6
+    subIndex: 7
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 7
+    subIndex: 8
     text: "入门弟子"
     translated: "Novice Disciple"
   - split: 7
-    subIndex: 8
+    subIndex: 9
     text: "门派展厅"
     translated: "Sect Exhibition Hall"
   - split: 7
-    subIndex: 9
+    subIndex: 10
     text: "管理门派展厅"
     translated: "Manage the Sect Exhibition Hall"
   - split: 7
-    subIndex: 10
+    subIndex: 11
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 11
+    subIndex: 12
     text: "正式弟子"
     translated: "Formal disciple"
   - split: 7
-    subIndex: 12
+    subIndex: 13
     text: "宴会"
     translated: "Banquet"
   - split: 7
-    subIndex: 13
+    subIndex: 14
     text: "与门派弟子宴饮提升忠诚"
     translated: "Dine with Sect Disciples to Boost Loyalty"
   - split: 7
-    subIndex: 14
+    subIndex: 15
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 15
+    subIndex: 16
     text: "掌门"
     translated: "Sect Master"
   - split: 8
@@ -640,7 +644,7 @@
     translated: "A hall for honoring and worshipping the ancestors of past Sect Leaders, equipped with exhibition halls to display treasures, as well as various tools and books needed for studying techniques and appraising artifacts."
   templates:
   - split: 7
-    template: "{0}?{1}\\n{2}-{3}-ProduceBuildingWork-5;{4}?{5}-{6}&{7}-IdentifyItem;{8}?{9}-{10}&{11}-ShowForceShowRoom;{12}?{13}-{14}&{15}-StartForceParty"
+    template: "{0}?{1}\\n{2}：{3}-{4}-ProduceBuildingWork-5;{5}?{6}-{7}&{8}-IdentifyItem;{9}?{10}-{11}&{12}-ShowForceShowRoom;{13}?{14}-{15}&{16}-StartForceParty"
   - split: 8
     template: "{0}+10"
   - split: 9
@@ -1129,50 +1133,62 @@
     translated: "Acquire Sect Silver"
   - split: 7
     subIndex: 2
-    text: "技能影响：口才"
-    translated: "Skill Impact: Oratory Skill"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 3
+    text: "口才"
+    translated: "Eloquence"
+  - split: 7
+    subIndex: 4
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 4
+    subIndex: 5
     text: "无门派"
     translated: "No sect"
   - split: 7
-    subIndex: 5
+    subIndex: 6
     text: "放债"
     translated: "Loan shark"
   - split: 7
-    subIndex: 6
+    subIndex: 7
     text: "增加资源储量"
     translated: "Increase resource reserves"
   - split: 7
-    subIndex: 7
-    text: "技能影响：口才"
-    translated: "Skill Impact: Oratory Skill"
-  - split: 7
     subIndex: 8
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 9
+    text: "口才"
+    translated: "Eloquence"
+  - split: 7
+    subIndex: 10
     text: "学识"
     translated: "Scholarship"
   - split: 7
-    subIndex: 9
+    subIndex: 11
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 10
+    subIndex: 12
     text: "经营"
     translated: "Operate"
   - split: 7
-    subIndex: 11
+    subIndex: 13
     text: "窃取门派银钱"
     translated: "Steal the Sect's silver coins"
   - split: 7
-    subIndex: 12
-    text: "技能影响：口才"
-    translated: "Skill Impact: Oratory Skill"
+    subIndex: 14
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
-    subIndex: 13
+    subIndex: 15
+    text: "口才"
+    translated: "Eloquence"
+  - split: 7
+    subIndex: 16
     text: "敌"
     translated: "Enemy"
   - split: 8
@@ -1189,7 +1205,7 @@
     translated: "Local silver exchange, pawnshop, and lending establishment where the area owner can earn silver for the sect's use."
   templates:
   - split: 7
-    template: "{0}?{1}\\n{2}-{3}|{4}-ProduceBuildingWork-0;{5}?{6}\\n{7} {8}-{9}-RecoverBuildingResourceRate;{10}?{11}\\n{12}-{13}-ProduceBuildingSteal-0"
+    template: "{0}?{1}\\n{2}：{3}-{4}|{5}-ProduceBuildingWork-0;{6}?{7}\\n{8}：{9} {10}-{11}-RecoverBuildingResourceRate;{12}?{13}\\n{14}：{15}-{16}-ProduceBuildingSteal-0"
   - split: 8
     template: "{0}+100"
   - split: 11
@@ -1208,50 +1224,62 @@
     translated: "Acquire Sect Food Grain"
   - split: 7
     subIndex: 2
-    text: "技能影响：木植"
-    translated: "Skill Impact: Arboriculture"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 3
+    text: "木植"
+    translated: "Forest Plant"
+  - split: 7
+    subIndex: 4
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 4
+    subIndex: 5
     text: "无门派"
     translated: "No sect"
   - split: 7
-    subIndex: 5
+    subIndex: 6
     text: "育种"
     translated: "Breeding"
   - split: 7
-    subIndex: 6
+    subIndex: 7
     text: "增加资源储量"
     translated: "Increase resource reserves"
   - split: 7
-    subIndex: 7
-    text: "技能影响：木植"
-    translated: "Skill Impact: Arboriculture"
-  - split: 7
     subIndex: 8
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 9
+    text: "木植"
+    translated: "Forest Plant"
+  - split: 7
+    subIndex: 10
     text: "学识"
     translated: "Scholarship"
   - split: 7
-    subIndex: 9
+    subIndex: 11
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 10
+    subIndex: 12
     text: "耕作"
     translated: "Farming"
   - split: 7
-    subIndex: 11
+    subIndex: 13
     text: "窃取门派粮食"
     translated: "Steal from the sect's food stores"
   - split: 7
-    subIndex: 12
-    text: "技能影响：木植"
-    translated: "Skill Impact: Arboriculture"
+    subIndex: 14
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
-    subIndex: 13
+    subIndex: 15
+    text: "木植"
+    translated: "Forest Plant"
+  - split: 7
+    subIndex: 16
     text: "敌"
     translated: "Enemy"
   - split: 8
@@ -1272,7 +1300,7 @@
     translated: "Local farming and livestock areas where the region's owner can collect crops to supply the sect."
   templates:
   - split: 7
-    template: "{0}?{1}\\n{2}-{3}|{4}-ProduceBuildingWork-1;{5}?{6}\\n{7} {8}-{9}-RecoverBuildingResourceRate;{10}?{11}\\n{12}-{13}-ProduceBuildingSteal-1"
+    template: "{0}?{1}\\n{2}：{3}-{4}|{5}-ProduceBuildingWork-1;{6}?{7}\\n{8}：{9} {10}-{11}-RecoverBuildingResourceRate;{12}?{13}\\n{14}：{15}-{16}-ProduceBuildingSteal-1"
   - split: 8
     template: "{0}+100"
   - split: 11
@@ -1293,50 +1321,62 @@
     translated: "Acquire Sect Timber"
   - split: 7
     subIndex: 2
-    text: "技能影响：采伐"
-    translated: "Skill Impact: Logging"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 3
+    text: "采伐"
+    translated: "Logging"
+  - split: 7
+    subIndex: 4
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 4
+    subIndex: 5
     text: "无门派"
     translated: "No sect"
   - split: 7
-    subIndex: 5
+    subIndex: 6
     text: "勘探"
     translated: "Exploration"
   - split: 7
-    subIndex: 6
+    subIndex: 7
     text: "增加资源储量"
     translated: "Increase resource reserves"
   - split: 7
-    subIndex: 7
-    text: "技能影响：采伐"
-    translated: "Skill Impact: Logging"
-  - split: 7
     subIndex: 8
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 9
+    text: "采伐"
+    translated: "Logging"
+  - split: 7
+    subIndex: 10
     text: "学识"
     translated: "Scholarship"
   - split: 7
-    subIndex: 9
+    subIndex: 11
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 10
+    subIndex: 12
     text: "砍伐"
     translated: "Cut down"
   - split: 7
-    subIndex: 11
+    subIndex: 13
     text: "窃取门派木料"
     translated: "Steal Sect timber"
   - split: 7
-    subIndex: 12
-    text: "技能影响：采伐"
-    translated: "Skill Impact: Logging"
+    subIndex: 14
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
-    subIndex: 13
+    subIndex: 15
+    text: "采伐"
+    translated: "Logging"
+  - split: 7
+    subIndex: 16
     text: "敌"
     translated: "Enemy"
   - split: 8
@@ -1357,7 +1397,7 @@
     translated: "Local forests thrive with robust trees. The area's owner can cut down wood here for the sect's use."
   templates:
   - split: 7
-    template: "{0}?{1}\\n{2}-{3}|{4}-ProduceBuildingWork-2;{5}?{6}\\n{7} {8}-{9}-RecoverBuildingResourceRate;{10}?{11}\\n{12}-{13}-ProduceBuildingSteal-2"
+    template: "{0}?{1}\\n{2}：{3}-{4}|{5}-ProduceBuildingWork-2;{6}?{7}\\n{8}：{9} {10}-{11}-RecoverBuildingResourceRate;{12}?{13}\\n{14}：{15}-{16}-ProduceBuildingSteal-2"
   - split: 8
     template: "{0}+100"
   - split: 11
@@ -1378,50 +1418,62 @@
     translated: "Acquire Sect Ore"
   - split: 7
     subIndex: 2
-    text: "技能影响：采伐"
-    translated: "Skill Impact: Logging"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 3
+    text: "采伐"
+    translated: "Logging"
+  - split: 7
+    subIndex: 4
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 4
+    subIndex: 5
     text: "无门派"
     translated: "No sect"
   - split: 7
-    subIndex: 5
+    subIndex: 6
     text: "勘探"
     translated: "Exploration"
   - split: 7
-    subIndex: 6
+    subIndex: 7
     text: "增加资源储量"
     translated: "Increase resource reserves"
   - split: 7
-    subIndex: 7
-    text: "技能影响：采伐"
-    translated: "Skill Impact: Logging"
-  - split: 7
     subIndex: 8
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 9
+    text: "采伐"
+    translated: "Logging"
+  - split: 7
+    subIndex: 10
     text: "学识"
     translated: "Scholarship"
   - split: 7
-    subIndex: 9
+    subIndex: 11
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 10
+    subIndex: 12
     text: "挖掘"
     translated: "Digging"
   - split: 7
-    subIndex: 11
+    subIndex: 13
     text: "窃取门派矿石"
     translated: "Steal Sect minerals"
   - split: 7
-    subIndex: 12
-    text: "技能影响：采伐"
-    translated: "Skill Impact: Logging"
+    subIndex: 14
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
-    subIndex: 13
+    subIndex: 15
+    text: "采伐"
+    translated: "Logging"
+  - split: 7
+    subIndex: 16
     text: "敌"
     translated: "Enemy"
   - split: 8
@@ -1442,7 +1494,7 @@
     translated: "Local sect members can excavate and mine stones in areas where mountain caves have been cleared to explore mineral veins. The area's owner can mine minerals here for the sect's use."
   templates:
   - split: 7
-    template: "{0}?{1}\\n{2}-{3}|{4}-ProduceBuildingWork-3;{5}?{6}\\n{7} {8}-{9}-RecoverBuildingResourceRate;{10}?{11}\\n{12}-{13}-ProduceBuildingSteal-3"
+    template: "{0}?{1}\\n{2}：{3}-{4}|{5}-ProduceBuildingWork-3;{6}?{7}\\n{8}：{9} {10}-{11}-RecoverBuildingResourceRate;{12}?{13}\\n{14}：{15}-{16}-ProduceBuildingSteal-3"
   - split: 8
     template: "{0}+100"
   - split: 11
@@ -1463,50 +1515,62 @@
     translated: "Acquire Sect Herbal Medicines"
   - split: 7
     subIndex: 2
-    text: "技能影响：木植"
-    translated: "Skill Impact: Arboriculture"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 3
+    text: "木植"
+    translated: "Forest Plant"
+  - split: 7
+    subIndex: 4
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 4
+    subIndex: 5
     text: "无门派"
     translated: "No sect"
   - split: 7
-    subIndex: 5
+    subIndex: 6
     text: "育种"
     translated: "Breeding"
   - split: 7
-    subIndex: 6
+    subIndex: 7
     text: "增加资源储量"
     translated: "Increase resource reserves"
   - split: 7
-    subIndex: 7
-    text: "技能影响：木植"
-    translated: "Skill Impact: Arboriculture"
-  - split: 7
     subIndex: 8
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 9
+    text: "木植"
+    translated: "Forest Plant"
+  - split: 7
+    subIndex: 10
     text: "学识"
     translated: "Scholarship"
   - split: 7
-    subIndex: 9
+    subIndex: 11
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 10
+    subIndex: 12
     text: "采收"
     translated: "Harvest"
   - split: 7
-    subIndex: 11
+    subIndex: 13
     text: "窃取门派药材"
     translated: "Steal Sect herbs"
   - split: 7
-    subIndex: 12
-    text: "技能影响：木植"
-    translated: "Skill Impact: Arboriculture"
+    subIndex: 14
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
-    subIndex: 13
+    subIndex: 15
+    text: "木植"
+    translated: "Forest Plant"
+  - split: 7
+    subIndex: 16
     text: "敌"
     translated: "Enemy"
   - split: 8
@@ -1527,7 +1591,7 @@
     translated: "Local cultivation of herbs; the area's owner can harvest them here for the sect's use."
   templates:
   - split: 7
-    template: "{0}?{1}\\n{2}-{3}|{4}-ProduceBuildingWork-4;{5}?{6}\\n{7} {8}-{9}-RecoverBuildingResourceRate;{10}?{11}\\n{12}-{13}-ProduceBuildingSteal-4"
+    template: "{0}?{1}\\n{2}：{3}-{4}|{5}-ProduceBuildingWork-4;{6}?{7}\\n{8}：{9} {10}-{11}-RecoverBuildingResourceRate;{12}?{13}\\n{14}：{15}-{16}-ProduceBuildingSteal-4"
   - split: 8
     template: "{0}+100"
   - split: 11
@@ -1751,30 +1815,38 @@
     translated: "Increase the population in the area"
   - split: 7
     subIndex: 12
-    text: "技能影响：炼药"
-    translated: "Skill Effect: Alchemy"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 13
+    text: "炼药"
+    translated: "Alchemy"
+  - split: 7
+    subIndex: 14
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 14
+    subIndex: 15
     text: "投药"
     translated: "Administering medicine"
   - split: 7
-    subIndex: 15
+    subIndex: 16
     text: "降低区域人口"
     translated: "Decrease the population in the area"
   - split: 7
-    subIndex: 16
-    text: "技能影响：炼药"
-    translated: "Skill Effect: Alchemy"
-  - split: 7
     subIndex: 17
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 18
+    text: "炼药"
+    translated: "Alchemy"
+  - split: 7
+    subIndex: 19
     text: "敌"
     translated: "Enemy"
   - split: 7
-    subIndex: 18
+    subIndex: 20
     text: "负4"
     translated: "‑4"
   - split: 8
@@ -1805,7 +1877,7 @@
     translated: "A place for merchants, travelers, and Wulin individuals to take a break and stay overnight, the first floor offers various home‑style dishes, while the second floor provides lodging rooms."
   templates:
   - split: 7
-    template: "{0}?{1}--AskNearRandomEvent;{2}?{3}--HotelRest;{4}?{5}--SimpleWork;{6}?{7}--StartCraftFoodMoney;{8}?{9}--StartEnhanceFoodMoney;{10}?{11}\\n{12}-{13}-AreaBuildingWork-4;{14}?{15}\\n{16}-{17}-AreaBuildingWork-{18}"
+    template: "{0}?{1}--AskNearRandomEvent;{2}?{3}--HotelRest;{4}?{5}--SimpleWork;{6}?{7}--StartCraftFoodMoney;{8}?{9}--StartEnhanceFoodMoney;{10}?{11}\\n{12}：{13}-{14}-AreaBuildingWork-4;{15}?{16}\\n{17}：{18}-{19}-AreaBuildingWork-{20}"
   - split: 8
     template: "{0}+6"
   - split: 9
@@ -1844,30 +1916,38 @@
     translated: "Increase public sentiment in the region"
   - split: 7
     subIndex: 6
-    text: "技能影响：烹饪"
-    translated: "Skill Impact: Cooking"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 7
+    text: "烹饪"
+    translated: "Cooking"
+  - split: 7
+    subIndex: 8
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 8
+    subIndex: 9
     text: "劝诱"
     translated: "Enticement"
   - split: 7
-    subIndex: 9
+    subIndex: 10
     text: "降低区域民心"
     translated: "Reduce regional morale"
   - split: 7
-    subIndex: 10
-    text: "技能影响：烹饪"
-    translated: "Skill Impact: Cooking"
-  - split: 7
     subIndex: 11
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 12
+    text: "烹饪"
+    translated: "Cooking"
+  - split: 7
+    subIndex: 13
     text: "敌"
     translated: "Enemy"
   - split: 7
-    subIndex: 12
+    subIndex: 14
     text: "负2"
     translated: "‑2"
   - split: 8
@@ -1894,7 +1974,7 @@
     translated: "In the bustling city center stood a wooden signboard with various wanted posters, bounties, and commissions posted on it. Passersby would often pause to examine them closely."
   templates:
   - split: 7
-    template: "{0}?{1}--PerformForMoney;{2}?{3}--ShowBuildingMission;{4}?{5}\\n{6}-{7}-AreaBuildingWork-2;{8}?{9}\\n{10}-{11}-AreaBuildingWork-{12}"
+    template: "{0}?{1}--PerformForMoney;{2}?{3}--ShowBuildingMission;{4}?{5}\\n{6}：{7}-{8}-AreaBuildingWork-2;{9}?{10}\\n{11}：{12}-{13}-AreaBuildingWork-{14}"
   - split: 8
     template: "{0}+10"
   - split: 9
@@ -1923,30 +2003,38 @@
     translated: "Increase public safety in the area"
   - split: 7
     subIndex: 4
-    text: "技能影响：锻造"
-    translated: "Skill Impact: Smithing"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 5
+    text: "锻造"
+    translated: "Forging"
+  - split: 7
+    subIndex: 6
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 6
+    subIndex: 7
     text: "损毁"
     translated: "Destruction"
   - split: 7
-    subIndex: 7
+    subIndex: 8
     text: "降低区域治安"
     translated: "Decrease regional law and order"
   - split: 7
-    subIndex: 8
-    text: "技能影响：锻造"
-    translated: "Skill Impact: Smithing"
-  - split: 7
     subIndex: 9
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 10
+    text: "锻造"
+    translated: "Forging"
+  - split: 7
+    subIndex: 11
     text: "敌"
     translated: "Enemy"
   - split: 7
-    subIndex: 10
+    subIndex: 12
     text: "负1"
     translated: "‑1"
   - split: 8
@@ -1973,7 +2061,7 @@
     translated: "In the local precinct where patrol officers are stationed, there is a watchtower that overlooks the city. The entire area's law and order depend on this place to be managed comprehensively."
   templates:
   - split: 7
-    template: "{0}?{1}--PatrolArea;{2}?{3}\\n{4}-{5}-AreaBuildingWork-1;{6}?{7}\\n{8}-{9}-AreaBuildingWork-{10}"
+    template: "{0}?{1}--PatrolArea;{2}?{3}\\n{4}：{5}-{6}-AreaBuildingWork-1;{7}?{8}\\n{9}：{10}-{11}-AreaBuildingWork-{12}"
   - split: 8
     template: "{0}+6"
   - split: 9
@@ -2038,30 +2126,38 @@
     translated: "Increase area defense"
   - split: 7
     subIndex: 13
-    text: "技能影响：木植"
-    translated: "Skill Impact: Arboriculture"
+    text: "技能影响"
+    translated: "Skill impact"
   - split: 7
     subIndex: 14
+    text: "木植"
+    translated: "Forest Plant"
+  - split: 7
+    subIndex: 15
     text: "我"
     translated: "I"
   - split: 7
-    subIndex: 15
+    subIndex: 16
     text: "破坏"
     translated: "Destruction"
   - split: 7
-    subIndex: 16
+    subIndex: 17
     text: "降低区域防御"
     translated: "Lower area defense"
   - split: 7
-    subIndex: 17
-    text: "技能影响：采掘"
-    translated: "Skill Impact: Mining"
-  - split: 7
     subIndex: 18
+    text: "技能影响"
+    translated: "Skill impact"
+  - split: 7
+    subIndex: 19
+    text: "采掘"
+    translated: "Mining"
+  - split: 7
+    subIndex: 20
     text: "敌"
     translated: "Enemy"
   - split: 7
-    subIndex: 19
+    subIndex: 21
     text: "负3"
     translated: "‑3"
   - split: 8
@@ -2112,7 +2208,7 @@
     translated: "Most sects in the Wulin are located in remote areas and establish branch headquarters within towns to facilitate disciple garrison management. This allows them to obtain town taxes and various resources."
   templates:
   - split: 7
-    template: "{0}?{1}--ManageBranch;{2}?{3}-{4}-ShowResearch;{5}?{6}-{7}-ExploreArea;{8}?{9}-{10}-StartHireFollower;{11}?{12}\\n{13}-{14}-AreaBuildingWork-3;{15}?{16}\\n{17}-{18}-AreaBuildingWork-{19}"
+    template: "{0}?{1}--ManageBranch;{2}?{3}-{4}-ShowResearch;{5}?{6}-{7}-ExploreArea;{8}?{9}-{10}-StartHireFollower;{11}?{12}\\n{13}：{14}-{15}-AreaBuildingWork-3;{16}?{17}\\n{18}：{19}-{20}-AreaBuildingWork-{21}"
   - split: 8
     template: "{0}+2;{1}+100"
   - split: 9
@@ -3140,8 +3236,12 @@
     text: "粮食2000"
     translated: "Food supplies 2000"
   - split: 19
-    text: "海上交通贸易之重要港口，来往于此的商贾密布，舶船如织，盛况空前，各种来自海外的稀有材料，奇珍异宝，乃至飞禽走兽，皆在此流通买卖，因而时人誉曰：海上丝路，自此始也。"
-    translated: "An important port for maritime trade and commerce, this place is bustling with merchants and ships sailing back and forth. The scene is unprecedentedly vibrant, with various rare materials, exotic treasures, and even birds and beasts from afar all circulating here in trade. Thus, contemporaries hailed it as the beginning of what was later known as the Maritime Silk Road: From Here Begin the Voyages."
+    text: "海上交通贸易之重要港口，来往于此的商贾密布，舶船如织，盛况空前，各种来自海外的稀有材料，奇珍异宝，乃至飞禽走兽，皆在此流通买卖，因而时人誉曰"
+    translated: "A crucial port for maritime trade and commerce, it is bustling with merchants and ships, a scene unprecedented in its grandeur. Various rare materials, exotic treasures, and even flying beasts and land animals all circulate here for trade, earning it the contemporary accolade of"
+  - split: 19
+    subIndex: 1
+    text: "海上丝路，自此始也。"
+    translated: "The Maritime Silk Road begins here"
   templates:
   - split: 7
     template: "{0}--ShowBuildingShop"
@@ -3153,6 +3253,8 @@
     template: "{0};{1}"
   - split: 12
     template: "{0};{1}"
+  - split: 19
+    template: "{0}：{1}"
 - raw: "45,崇圣寺,45,6,1,0,4,治愈--SpeCure,药材+100;威望+10;全域民心+1,银钱-200,疗伤效率0.2,,木料1000;药材2000,20,3,,11,footstep,0;0,点苍山麓，洱海之滨，寺中有三塔峙立，金碧交辉，香火鼎盛，以五大重器闻名于世，堪称西南第一佛刹。传闻其间僧众不乏极擅医术者，慈悲为怀，济世救民，一时传为佳话。"
   splits:
   - split: 1
@@ -3882,8 +3984,12 @@
     text: "药材2000"
     translated: "2000 herbs"
   - split: 19
-    text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
-    translated: "Divine Craftsmanship, in the misty cave filled with spiritual energy, the disciples of Mount Mao practice techniques such as Mindfulness and Breath Cultivation. The benefits are countless. As an ancient poem says: White‑tiger spotted dragon treads purple smoke, seeing the azure sea turn into mulberry fields, seeking true alchemy in Crimson City, now arriving at Huayang's eighth heaven."
+    text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰"
+    translated: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Shen Zhen and Fu Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:"
+  - split: 19
+    subIndex: 1
+    text: "素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
+    translated: "Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
   templates:
   - split: 7
     template: "{0}--StudyMaxLivingSkill-7;{1}-{2}&{3}-StartBreakMed"
@@ -3895,6 +4001,8 @@
     template: "{0};{1};{2}"
   - split: 12
     template: "{0};{1}"
+  - split: 19
+    template: "{0}：{1}"
 - raw: "59,剑池,59,6,1,0,4,提升锻造潜力--StudyMaxLivingSkill-6;天工-我&门派功能6-StartSpeEnhanceEquip;拆解-我&门派功能6-StartBreakEquipment,木料+50;矿石+50,银钱-100,全员剑法2;锻造经验0.2;全员锻造4,,木料1000;矿石2000,20,36,,1,footstep,0;0,一方清澈见底的水池，池中或卧或立有刀兵剑刃无数，乃是铸剑山庄历代冶炼积累之残次品及试验品。以此池水淬炼兵器，可感应池中无穷剑意，所得之锋利坚韧远非凡俗可比。"
   splits:
   - split: 1
@@ -4963,8 +5071,12 @@
     text: "粮食2000"
     translated: "Food supplies 2000"
   - split: 19
-    text: "黄河裹挟泥沙而下，冲积而成一处水草丰美，沃野千里的天然牧场，不仅可作粮食生产，更是以盛产名驹战马而天下闻名，难怪俗语有云：黄河百害，唯富一套。"
-    translated: "The Yellow River carries sediment downstream, depositing it to form a lush pasture stretching for a thousand miles. Not only is it ideal for grain production, but it is also renowned worldwide for its abundant produce of famous horses and warhorses. No wonder the saying goes: The Yellow River brings a hundred ills, but one good thing it has is rich farmland."
+    text: "黄河裹挟泥沙而下，冲积而成一处水草丰美，沃野千里的天然牧场，不仅可作粮食生产，更是以盛产名驹战马而天下闻名，难怪俗语有云"
+    translated: "The Yellow River, laden with silt, flows down to form a vast pasture with abundant grass and fertile land. Not only is it suitable for grain production, but it is also famous for its production of renowned horses and war steeds. No wonder there's a saying that goes,"
+  - split: 19
+    subIndex: 1
+    text: "黄河百害，唯富一套。"
+    translated: "The Yellow River brings many harms, but only benefits in one way."
   templates:
   - split: 7
     template: "{0}--ShowBuildingShop"
@@ -4974,3 +5086,5 @@
     template: "{0}-150"
   - split: 12
     template: "{0};{1}"
+  - split: 19
+    template: "{0}：{1}"

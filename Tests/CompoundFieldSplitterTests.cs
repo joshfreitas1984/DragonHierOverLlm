@@ -259,5 +259,45 @@ public class CompoundFieldSplitterTests
             fragments);
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
+
+    [Fact(DisplayName = "A quote pair split apart by a literal '{n}' format placeholder stays together as template literal text, not torn between literal and fragment")]
+    public void QuotePairSplitByFormatPlaceholderStaysInTemplate()
+    {
+        // Both halves of "“"/"”" are present in this single raw string, wrapping the game's own
+        // "{0}" format placeholder - the closing "”" must NOT be glued onto the start of the
+        // following fragment ("之高，"), and the opening "“" must NOT be left stranded/converted -
+        // both marks belong together in the template as literal text framing the placeholder.
+        var original = "{1}“{0}”之高，\n令我眼界大开";
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("⟦1⟧“⟦0⟧”{0}\n{1}", template);
+        Assert.Equal(["之高，", "令我眼界大开"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "A fullwidth-parenthesis pair split apart by a literal '{n}' format placeholder stays together as template literal text")]
+    public void ParenPairSplitByFormatPlaceholderStaysInTemplate()
+    {
+        var original = "（{0}）今天天气不错";
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("（⟦0⟧）{0}", template);
+        Assert.Equal(["今天天气不错"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Fact(DisplayName = "A fullwidth colon acts as a fragment boundary instead of being absorbed into the surrounding sentence")]
+    public void FullwidthColonActsAsFragmentBoundary()
+    {
+        var original = "正是于巴蜀一带小有名气的门派：仙霞派。";
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}：{1}", template);
+        Assert.Equal(["正是于巴蜀一带小有名气的门派", "仙霞派。"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
 }
 

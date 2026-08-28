@@ -3228,7 +3228,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "但闻此歌云："
+    text: "但闻此歌云"
   - split: 10
     subIndex: 1
     text: "三山浮海倚蓬瀛，路入真元险尽平。"
@@ -3243,7 +3243,7 @@
     text: "我来问道无馀事，云在青天水在瓶。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
+    template: "{0}：\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: ",,,无,,,,,,,说来也怪，这道歌初听平平无奇，但细思过后竟似乎有凝神静气，修身养性之功效。\\n两派人马不自觉停止了争斗，呆呆看往下山的通路。"
   splits:
   - split: 3
@@ -4129,10 +4129,13 @@
     text: "你俩修为尚浅，初次行走江湖容易吃亏，还需格外谨慎小心。"
   - split: 10
     subIndex: 1
-    text: "记住一条铁律：打得过就打，打不过就跑！"
+    text: "记住一条铁律"
+  - split: 10
+    subIndex: 2
+    text: "打得过就打，打不过就跑！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,左,,,,,,,师傅放心，#PlayerName#到时跑得肯定比谁都快！"
   splits:
   - split: 3
@@ -5356,13 +5359,19 @@
     text: "其内功心法号曰潮起月盈功，"
   - split: 10
     subIndex: 2
-    text: "外门武功则是一套剑法：无影乱剑，"
+    text: "外门武功则是一套剑法"
   - split: 10
     subIndex: 3
-    text: "和一套掌法：劈金碎玉掌。"
+    text: "无影乱剑，"
+  - split: 10
+    subIndex: 4
+    text: "和一套掌法"
+  - split: 10
+    subIndex: 5
+    text: "劈金碎玉掌。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}：{3}\\n{4}：{5}"
 - raw: ",,,右,,,,,,,这无影乱剑和劈金碎玉掌对所使之人的内功修为要求颇高，\\n而潮起月盈功恰好是修习内功的高妙功法，\\n在加之承影宝剑之锋利，称得上是蛟龙得云，猛虎添翼。"
   splits:
   - split: 3
@@ -12451,13 +12460,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "听说是您父亲亲手所写，并付上一句叮嘱：若是不看，后果自负。"
+    text: "听说是您父亲亲手所写，并付上一句叮嘱"
   - split: 10
     subIndex: 1
+    text: "若是不看，后果自负。"
+  - split: 10
+    subIndex: 2
     text: "哎呀，毕竟父女情深，雷大小姐您还是拆开看看吧。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,左,,,,,,,…………拿来！"
   splits:
   - split: 3
@@ -18574,15 +18586,18 @@
   - split: 6
     text: "风呼啸"
   - split: 10
-    text: "正从谷中通过，只听得山崖上断喝一声：动手！"
+    text: "正从谷中通过，只听得山崖上断喝一声"
   - split: 10
     subIndex: 1
+    text: "动手！"
+  - split: 10
+    subIndex: 2
     text: "道路前方忽然跳出几条人影，拦住你们出谷的道路。"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,无,,,SpeEffect/风呼啸,,,,随即身后也是悉索几声，几条人影从旁跳出，挡住回头退路。\\n这两拨人马将你们彻底堵在了峡谷之中。"
   splits:
   - split: 3
@@ -21268,12 +21283,15 @@
     text: "正在此时，只见得寨中有几处火光闪动，浓烟渐起，"
   - split: 10
     subIndex: 2
-    text: "随后便是几声高呼：着火啦！"
+    text: "随后便是几声高呼"
+  - split: 10
+    subIndex: 3
+    text: "着火啦！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}：{3}"
 - raw: ",,,左,,,FireContinue,,,,他奶奶的，说了小心火烛小心火烛，又有哪个不长眼的在瞎搞？"
   splits:
   - split: 3
@@ -23361,10 +23379,13 @@
     text: "嗯，两位的这招飞星快剑，乃是本门中阶的剑法武学，"
   - split: 10
     subIndex: 1
-    text: "只有熟练掌握，方能修习本门秘传：无影乱剑。"
+    text: "只有熟练掌握，方能修习本门秘传"
+  - split: 10
+    subIndex: 2
+    text: "无影乱剑。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: "161,无,魏胥华,右,,,,,GetSpeReward;24,,你们的招式，还略欠火候。\\n这飞星快剑的紧要之处，你们两个听好了……"
   splits:
   - split: 1
@@ -25519,13 +25540,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（你们正交谈着，忽然从山崖上传来一声不屑的冷笑："
+    text: "（你们正交谈着，忽然从山崖上传来一声不屑的冷笑"
   - split: 10
     subIndex: 1
     text: "“哼哼，我药王谷中人从不食言！”）"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",,,无,,,,,,,（随后一道人影从天而降，竟是名身着华袍，面如冠玉，气度不凡的青年男子。）"
   splits:
   - split: 3
@@ -26506,7 +26527,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（只听得一阵洪钟般的笑声从山下传来："
+    text: "（只听得一阵洪钟般的笑声从山下传来"
   - split: 10
     subIndex: 1
     text: "哈哈哈哈哈哈，你们七拼八凑，我也不好意思收。"
@@ -26515,7 +26536,7 @@
     text: "留着买点好吃好喝的吧！哈哈哈哈哈哈！）"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,临走了还得损我们两句，什么人呐这是！"
   splits:
   - split: 3
@@ -26527,7 +26548,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "只听得阵阵歌声渐行渐远："
+    text: "只听得阵阵歌声渐行渐远"
   - split: 10
     subIndex: 1
     text: "九重天子寰中贵，五等诸侯门外尊。"
@@ -26536,7 +26557,7 @@
     text: "争似布衣狂醉客，不教性命属乾坤。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",魏胥华,,左,,,,,,,我听闻药王谷近年出了名青年侠少，嫉恶如仇，嬉笑怒骂。\\n其武艺不凡，医术造诣更仅在药王掌门之下，\\n故世人唤之穿林妙手，此人倒有几分相像。"
   splits:
   - split: 1
@@ -28760,7 +28781,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（正值此时，只听得人群中忽然传出几声孩童高呼："
+    text: "（正值此时，只听得人群中忽然传出几声孩童高呼"
   - split: 10
     subIndex: 1
     text: "“你们为什么要打壮叔叔，你们都是坏人！壮叔叔最好了！”"
@@ -28769,7 +28790,7 @@
     text: "话未说完，那孩童便被一名妇女捂住嘴巴，匆忙拽走。）"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,这这这，各位父老乡亲，\\n若此人并非大奸大恶之人，还望大家说句公道话，\\n免得我们误抓好人，坏了江湖道义啊！"
   splits:
   - split: 3
@@ -29323,12 +29344,15 @@
     text: "村长家下蛋的鸡，屠户家的肉还有村口菜园里的菜都被他吃光了，"
   - split: 10
     subIndex: 2
-    text: "问他要钱他还不服，说：“吃饭要什么钱？”。"
+    text: "问他要钱他还不服，说"
+  - split: 10
+    subIndex: 3
+    text: "“吃饭要什么钱？”。"
   templates:
   - split: 2
     template: "{0}:{1}&{2};20;-1;0;-4"
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}：{3}"
 - raw: ",,临时:村民甲,右,,,,,,,是啊，村里酒楼里的存酒也被他喝了个精光。\\n问他要钱也是一分没有，说：“喝酒就喝酒，要什么钱？”。\\n还怪理直气壮的！"
   splits:
   - split: 2
@@ -29342,15 +29366,18 @@
     text: "是啊，村里酒楼里的存酒也被他喝了个精光。"
   - split: 10
     subIndex: 1
-    text: "问他要钱也是一分没有，说：“喝酒就喝酒，要什么钱？”。"
+    text: "问他要钱也是一分没有，说"
   - split: 10
     subIndex: 2
+    text: "“喝酒就喝酒，要什么钱？”。"
+  - split: 10
+    subIndex: 3
     text: "还怪理直气壮的！"
   templates:
   - split: 2
     template: "{0}:{1}"
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}：{2}\\n{3}"
 - raw: ",,临时:村民丙&男;40;-1;0;-4,右,,,,,,,那混蛋说是来村里捉贼，结果看谁不顺眼就用绳子捆起来！\\n现下已经捆了十几个村民，全都关在酒馆里了。"
   splits:
   - split: 2
@@ -33095,7 +33122,13 @@
   - split: 6
     text: "人群欢呼"
   - split: 10
-    text: "（台上台下黑道群雄，纷纷高声呼喊：盟主万岁！盟主万岁！）"
+    text: "（台上台下黑道群雄，纷纷高声呼喊"
+  - split: 10
+    subIndex: 1
+    text: "盟主万岁！盟主万岁！）"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: ",,,右,,,,,,,来，上酒，饮了这碗好酒，从此我们便亲如手足兄弟了！\\n（接过酒碗，一饮而尽，随后将碗摔碎在地）"
   splits:
   - split: 3
@@ -34201,7 +34234,7 @@
     text: "再看江上，水天一色，烟波浩渺，百舸争流，气象万千，"
   - split: 10
     subIndex: 2
-    text: "正如诗中所言："
+    text: "正如诗中所言"
   - split: 10
     subIndex: 3
     text: "长江巨浪拍天浮，城郭相望万景收。"
@@ -34210,7 +34243,7 @@
     text: "汉水北吞云梦入，蜀江西带洞庭流。）"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
+    template: "{0}\\n{1}\\n{2}：\\n{3}\\n{4}"
 - raw: ",,,无,,,,,,,（此时恰逢夕阳西下，斜晖脉脉，波光粼粼，\\n楼影映于江面恍若淬火鎏金，竟不似人间景色。）"
   splits:
   - split: 3
@@ -35087,10 +35120,10 @@
     text: "一名白衣飘飘，面如冠玉的美男子，竟从黄鹤楼顶层踏空而下，"
   - split: 10
     subIndex: 2
-    text: "只见他飘然而落，一边弹琴，一边歌曰："
+    text: "只见他飘然而落，一边弹琴，一边歌曰"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}……）"
+    template: "{0}\\n{1}\\n{2}：……）"
 - raw: ",思中澜,,左,,,,,,,关东有义士，兴兵讨群凶。初期会盟津，乃心在咸阳。\\n军合力不齐，踌躇而雁行。势利使人争，嗣还自相戕。"
   splits:
   - split: 1
@@ -35438,13 +35471,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "空闻大师，楞严经有云：死死生生。互来相啖。恶业俱生。穷未来际。"
+    text: "空闻大师，楞严经有云"
   - split: 10
     subIndex: 1
+    text: "死死生生。互来相啖。恶业俱生。穷未来际。"
+  - split: 10
+    subIndex: 2
     text: "汝负我命。我还汝债。以是因缘。经百千劫。常在生死。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,左,,,,,,,各派之间，若能止战止杀，\\n乃是一件弘法利生之无量功德，方丈又怎会不鼎力支持呢？"
   splits:
   - split: 3
@@ -35951,7 +35987,13 @@
   - split: 6
     text: "人群欢呼"
   - split: 10
-    text: "（台上台下，群情激昂，纷纷振臂高呼：万岁！万岁！万岁！）"
+    text: "（台上台下，群情激昂，纷纷振臂高呼"
+  - split: 10
+    subIndex: 1
+    text: "万岁！万岁！万岁！）"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: ",,,无,,,,,,,（侍从上前分发酒碗，众英雄在黄鹤楼下诵读誓约，歃血为盟，\\n其声响震天动地，江水都为之倒流。）"
   splits:
   - split: 3
@@ -42851,7 +42893,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（众位弟子一同高呼：是师傅！弟子铭记于心。）"
+    text: "（众位弟子一同高呼"
+  - split: 10
+    subIndex: 1
+    text: "是师傅！弟子铭记于心。）"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: "283,玩家,林云裳,右,,,,,,,#PlayerName#，你还记得此前顾师兄为我求医之事吗？\\n我当时病得迷迷糊糊，很多细节都已记不太清。"
   splits:
   - split: 1
@@ -55688,10 +55736,13 @@
     text: "（你们正打的难解难分，只听见周边嘈杂叫喊之声越来越多，"
   - split: 10
     subIndex: 1
-    text: "有几个百姓叫嚷道：官兵来啦，官兵来啦！）"
+    text: "有几个百姓叫嚷道"
+  - split: 10
+    subIndex: 2
+    text: "官兵来啦，官兵来啦！）"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",临时:家丁甲,唐离,左,,,,,,,少爷，少爷，官兵来了。\\n别把事情闹大，咱还是赶紧撤吧！"
   splits:
   - split: 1
@@ -56871,13 +56922,16 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（忽然台下一阵惊呼：找到了！找到了！"
+    text: "（忽然台下一阵惊呼"
   - split: 10
     subIndex: 1
+    text: "找到了！找到了！"
+  - split: 10
+    subIndex: 2
     text: "眼看几名青城弟子，将一人架到了台上，手中赫然握着一张银票！）"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",王添翼,周莫知,右,,,,TRUE,,,添、添翼？！\\n为师，为师待你不薄，你怎么，怎么会做出这种事？！"
   splits:
   - split: 1
@@ -62230,7 +62284,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "此情此景，真可谓："
+    text: "此情此景，真可谓"
   - split: 10
     subIndex: 1
     text: "唱彻阳关泪未干，功名馀事且加餐。"
@@ -62239,7 +62293,7 @@
     text: "浮天水送无穷树，带雨云埋一半山"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}…"
+    template: "{0}：\\n{1}\\n{2}…"
 - raw: ",,,无,,,,,SpePlotFuc;45,,今古恨，几千般，只应离合是悲欢？\\n江头未是风波恶，别有人间行路难！"
   splits:
   - split: 3
@@ -64551,10 +64605,13 @@
     text: "（正当场面陷入僵局时，忽听得许多急促的脚步声接近。"
   - split: 10
     subIndex: 1
-    text: "随后屋外有人大声呼喊：“贼人慕容星辰，官差已至，还不束手就擒！”）"
+    text: "随后屋外有人大声呼喊"
+  - split: 10
+    subIndex: 2
+    text: "“贼人慕容星辰，官差已至，还不束手就擒！”）"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",吴谋,,左,,,,,,,额，大哥……是我们叫来的救兵……眼下怎么办？"
   splits:
   - split: 1
@@ -66992,7 +67049,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（众弟子异口同声：是师傅！）"
+    text: "（众弟子异口同声"
+  - split: 10
+    subIndex: 1
+    text: "是师傅！）"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: "394,魏胥华,姜映泉,左,,BigMap3,,,,,师傅！弟子一直在铁掌帮和黑风寨之间探查情报，\\n近日来发现，他们忽然频频异动，且有大量人员调遣。"
   splits:
   - split: 1
@@ -67118,7 +67181,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（众弟子异口同声：不愿意！）"
+    text: "（众弟子异口同声"
+  - split: 10
+    subIndex: 1
+    text: "不愿意！）"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: ",,,右,,,,,,,好！眼下正是机会，可以将计就计，迎头痛击，\\n狠狠教训一番这群恶贼！"
   splits:
   - split: 3
@@ -67178,7 +67247,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（众弟子异口同声：是师傅！）"
+    text: "（众弟子异口同声"
+  - split: 10
+    subIndex: 1
+    text: "是师傅！）"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: ",魏胥华,顾游年,左,,,,,ChangeMaxAttri;顾游年-2-3,,顾师弟，此次作战之方案，你是否已思虑妥当？"
   splits:
   - split: 1
@@ -69918,15 +69993,18 @@
   - split: 4
     text: "多人争斗"
   - split: 10
-    text: "（你们与铁掌帮正打的难解难分，忽听得洪钟般一声：“停手！”。"
+    text: "（你们与铁掌帮正打的难解难分，忽听得洪钟般一声"
   - split: 10
     subIndex: 1
+    text: "“停手！”。"
+  - split: 10
+    subIndex: 2
     text: "定睛一看，迎面走来的正是铁掌帮帮主，夏天雄！）"
   templates:
   - split: 4
     template: "PlotImage/{0}"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,夏天雄,右,,,,,,,成王败寇，如今巴陵村归我铁掌帮所有，仙霞派溃败已成定局。\\n念及你们同门情深，奋勇作战，我也不多作为难。"
   splits:
   - split: 2
@@ -70418,7 +70496,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "此番情景，正可谓是："
+    text: "此番情景，正可谓是"
   - split: 10
     subIndex: 1
     text: "平沙浅草接天长。路茫茫。几兴亡。昨夜波声。洗岸骨如霜。"
@@ -70427,7 +70505,7 @@
     text: "千古英雄成底事，徒感慨，谩悲凉。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,无,,,,,FinishEventMission,,少年有意伏中行。馘名王。扫沙场。击楫中流，曾记泪沾裳。\\n欲上治安双阙远，空怅望，过维扬。"
   splits:
   - split: 3
@@ -70700,19 +70778,22 @@
     text: "（借着洞口照入的微弱光线，你发现山洞墙壁上依稀刻着几个字，"
   - split: 10
     subIndex: 1
-    text: "正是仙霞派祖师的遗训：““分"
+    text: "正是仙霞派祖师的遗训"
   - split: 10
     subIndex: 2
-    text: "合"
+    text: "““分"
   - split: 10
     subIndex: 3
-    text: "败"
+    text: "合"
   - split: 10
     subIndex: 4
+    text: "败"
+  - split: 10
+    subIndex: 5
     text: "王"
   templates:
   - split: 10
-    template: "{0}\\n{1}…{2}…{3}…{4}…””）"
+    template: "{0}\\n{1}：{2}…{3}…{4}…{5}…””）"
 - raw: ",,,左,,,,,,,嗨，我还以为是啥前辈高人遗留的武功秘籍呢，\\n这不就是本门祖师妙远真人的遗训么。"
   splits:
   - split: 3
@@ -70757,10 +70838,13 @@
     text: "是啊，所以师傅不是猜测了么，"
   - split: 10
     subIndex: 1
-    text: "这几个字乃是：“先分后合，败寇成王”。"
+    text: "这几个字乃是"
+  - split: 10
+    subIndex: 2
+    text: "“先分后合，败寇成王”。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,左,,,,,,,意思是让仙霞派和铁掌帮先分而两立，\\n等到决出胜负后再合并，由胜利者统领不是？"
   splits:
   - split: 3
@@ -72107,10 +72191,13 @@
     text: "只见他轻车熟路来到藏经阁内部，稍加翻找便寻出了一本秘籍，"
   - split: 10
     subIndex: 2
-    text: "正是仙霞派的镇派绝学：无影乱剑！）"
+    text: "正是仙霞派的镇派绝学"
+  - split: 10
+    subIndex: 3
+    text: "无影乱剑！）"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}：{3}"
 - raw: ",,,无,close,,SpeEffect/风呼啸,,ScreenBlack,,（将秘籍揣入怀中，趁守卫未回，沈退赶忙窜出藏经阁，\\n随后又在派内七拐八绕，避开岗哨，\\n最后竟施展轻功，翻出高大的院墙，向着山下一路跑去。）"
   splits:
   - split: 3
@@ -77349,10 +77436,13 @@
     text: "（正说着，只听得人群中阵阵骚动，"
   - split: 10
     subIndex: 1
-    text: "有人惊呼：来了来了，花车来了！）"
+    text: "有人惊呼"
+  - split: 10
+    subIndex: 2
+    text: "来了来了，花车来了！）"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,,,,,（你们顺着那人指的方向望去，\\n只见道路远方，一辆极尽奢华的高大三层花车，正在长乐帮众的簇拥之下缓缓驶来。）"
   splits:
   - split: 3
@@ -77814,16 +77904,19 @@
   - split: 6
     text: "人群欢呼"
   - split: 10
-    text: "（群众们眼见云彩衣得胜，当下爆出一阵雷鸣般的欢呼：云帮主万岁！云帮主万岁！"
+    text: "（群众们眼见云彩衣得胜，当下爆出一阵雷鸣般的欢呼"
   - split: 10
     subIndex: 1
-    text: "云彩衣微笑着向大家挥了挥手，又向余采薇和你眨了眨眼，"
+    text: "云帮主万岁！云帮主万岁！"
   - split: 10
     subIndex: 2
+    text: "云彩衣微笑着向大家挥了挥手，又向余采薇和你眨了眨眼，"
+  - split: 10
+    subIndex: 3
     text: "随后便乘坐花车一路远去"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}……）"
+    template: "{0}：{1}\\n{2}\\n{3}……）"
 - raw: ",,,无,,,,,,,（那群围观者见状，也熙熙攘攘，追随着花车渐行渐远，\\n此处终于恢复了平静，只留下满地的花瓣和糕点。）"
   splits:
   - split: 3
@@ -80854,13 +80947,16 @@
     text: "（坟包之上，赫然屹立着师傅姜映泉亲手篆刻的墓碑，"
   - split: 10
     subIndex: 1
-    text: "上书一行大字：仙霞派第五代弟子"
+    text: "上书一行大字"
   - split: 10
     subIndex: 2
+    text: "仙霞派第五代弟子"
+  - split: 10
+    subIndex: 3
     text: "陆仁谦之墓。）"
   templates:
   - split: 10
-    template: "{0}\\n{1} {2}"
+    template: "{0}\\n{1}：{2} {3}"
 - raw: ",姜映泉,,左,,,,,,,陆师兄，你放心，我姜映泉定要将仙霞派发扬光大。\\n不会让你和师傅失望，辜负这掌门之位的！"
   splits:
   - split: 1
@@ -80995,10 +81091,10 @@
     text: "青山悠悠，白云苍苍，天地默然无语之间，"
   - split: 10
     subIndex: 1
-    text: "又是一名英雄葬身于此，正是有诗云："
+    text: "又是一名英雄葬身于此，正是有诗云"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}："
 - raw: ",,,无,,,,,FinishEventMission,,腰间羽箭久凋零，太息燕然未勒铭。\\n老子犹堪绝大漠，诸君何至泣新亭。\\n一身报国有万死，双鬓向人无再青。\\n记取江湖泊船处，卧闻新雁落寒汀。"
   splits:
   - split: 3
@@ -85396,7 +85492,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "此情此景，有道是："
+    text: "此情此景，有道是"
   - split: 10
     subIndex: 1
     text: "一别都门三改火，天涯踏尽红尘。"
@@ -85405,7 +85501,7 @@
     text: "依然一笑作春温。无波真古井，有节是秋筠。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,无,,,,,SpePlotFuc;52,,惆怅孤帆连夜发，送行淡月微云。\\n尊前不用翠眉颦。人生如逆旅，我亦是行人。"
   splits:
   - split: 3
@@ -85682,13 +85778,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "（三名年轻人闻言，连忙一起下拜，异口同声道："
+    text: "（三名年轻人闻言，连忙一起下拜，异口同声道"
   - split: 10
     subIndex: 1
     text: "拜见姜掌门！弟子定当誓死效力！）"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",,诸葛伶,右,,,,,,,好了姜掌门，如此一来，\\n婉儿离开仙霞派时和我的约定，可就都算达成了，\\n我也好回去向这小妮子交差了不是。"
   splits:
   - split: 2
@@ -89355,15 +89451,18 @@
   - split: 8
     text: "魏胥华"
   - split: 10
-    text: "（众人异口同声高呼：夺回巴陵村！夺回巴陵村！"
+    text: "（众人异口同声高呼"
   - split: 10
     subIndex: 1
+    text: "夺回巴陵村！夺回巴陵村！"
+  - split: 10
+    subIndex: 2
     text: "响声震彻山林，在仙霞派内回荡良久。）"
   templates:
   - split: 8
     template: "SetHeroLoveAble;{0}-true"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,无,,,,,FinishEventMission,,（原本笼罩在派内的阴云，如今也随着大师兄回归一扫而空。\\n众人皆是斗志昂扬，摩拳擦掌，准备着与铁掌帮决一死战！）"
   splits:
   - split: 3
@@ -89794,15 +89893,18 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "诏曰：朕即位以来，用仁义以治天下，公赏罚以定干戈。"
+    text: "诏曰"
   - split: 10
     subIndex: 1
+    text: "朕即位以来，用仁义以治天下，公赏罚以定干戈。"
+  - split: 10
+    subIndex: 2
     text: "仙霞派顾游年侠少有为，惩凶除恶，实乃忠纯勇义之士，本当嘉奖。"
   templates:
   - split: 2
     template: "{0}:{1}&{2};40;-1;4;-5"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,右,,,,,,,然今闻其不幸，遭贼人暗害，经脉俱断，沉疴不起，\\n朕亦为此深感痛心疾首，寝食难安。"
   splits:
   - split: 3
@@ -91115,7 +91217,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "此情此景，真可谓："
+    text: "此情此景，真可谓"
   - split: 10
     subIndex: 1
     text: "昔日龌龊不足夸，今朝放荡思无涯。"
@@ -91124,7 +91226,7 @@
     text: "春风得意马蹄疾，一日看尽长安花！"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: "479,玩家,无,左,,,,,,来战！;HideInteractUITemp,哼，连狗官差都闻风赶来凑热闹了，看来还是得速战速决。"
   splits:
   - split: 1
@@ -96781,10 +96883,13 @@
     text: "他的手边赫然摆着三本秘籍，分别是铁掌帮绝学潮起月盈功，劈金碎玉掌，"
   - split: 10
     subIndex: 2
-    text: "以及从陆仁谦手中夺来的仙霞派秘籍：无影乱剑。）"
+    text: "以及从陆仁谦手中夺来的仙霞派秘籍"
+  - split: 10
+    subIndex: 3
+    text: "无影乱剑。）"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}：{3}"
 - raw: ",韩嵩,夏天雄,左,,,,,,,帮主！"
   splits:
   - split: 1
@@ -98626,10 +98731,13 @@
     text: "仙霞派诸位弟子清点人马收拢队伍后，正欲扬长而去，"
   - split: 10
     subIndex: 1
-    text: "忽听得铁掌帮弟子发出阵阵惊呼：帮主回来了，帮主回来了！"
+    text: "忽听得铁掌帮弟子发出阵阵惊呼"
+  - split: 10
+    subIndex: 2
+    text: "帮主回来了，帮主回来了！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,Horses,,,,只见远处，果然有一队人马手持火把疾驰而来，\\n为首者赫然正是铁掌帮帮主，夏天雄！"
   splits:
   - split: 3
@@ -99594,10 +99702,13 @@
     text: "在穷尽了无数可能后，你忽然脑中忽然灵光一闪，"
   - split: 10
     subIndex: 1
-    text: "赶忙打开三本秘籍，一边翻阅一边连连惊叹：原来如此！原来如此！"
+    text: "赶忙打开三本秘籍，一边翻阅一边连连惊叹"
+  - split: 10
+    subIndex: 2
+    text: "原来如此！原来如此！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",玩家,姜映泉,右,,,,,,,#PlayerName#，你将大家召集到这藏经阁，\\n是已经找到了这三本秘籍中所隐藏的秘密？"
   splits:
   - split: 1
@@ -101113,13 +101224,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "古语云：乃知兵者是凶器，圣人不得已而用之。"
+    text: "古语云"
   - split: 10
     subIndex: 1
+    text: "乃知兵者是凶器，圣人不得已而用之。"
+  - split: 10
+    subIndex: 2
     text: "吾辈习武之人，本就应当以手中之剑，斩除奸邪，匡扶正义。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,右,,,,,,,所以今日吾姜映泉，承先师遗志，守正道而行，\\n绝不能再坐视此獠为非作歹！"
   splits:
   - split: 3
@@ -102143,10 +102257,13 @@
     text: "还未及反应过来，只听得东面又传来几声惨叫。"
   - split: 10
     subIndex: 1
-    text: "有人高呼：仙霞派攻入村子啦！仙霞派攻入村子啦！"
+    text: "有人高呼"
+  - split: 10
+    subIndex: 2
+    text: "仙霞派攻入村子啦！仙霞派攻入村子啦！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,临时:铁掌弟子乙,右,,,,,,,什么情况，村子东面明明是悬崖峭壁。\\n仙霞派难道是插了翅膀，从山崖上飞下来的不成？"
   splits:
   - split: 2
@@ -105909,13 +106026,16 @@
     text: "随后你们将师傅的遗体运回仙霞后山，安葬在了陆仁谦陆师伯旁。"
   - split: 10
     subIndex: 1
-    text: "高大的墓碑之上，篆刻一行大字：仙霞派第六代掌门"
+    text: "高大的墓碑之上，篆刻一行大字"
   - split: 10
     subIndex: 2
+    text: "仙霞派第六代掌门"
+  - split: 10
+    subIndex: 3
     text: "姜映泉之墓。"
   templates:
   - split: 10
-    template: "{0}\\n{1} {2}"
+    template: "{0}\\n{1}：{2} {3}"
 - raw: ",,,无,,,,,,,师兄弟们在坟前，回想起这些年来，师傅的春风化雨，谆谆教诲，\\n无不以泪洗面，恸哭不已！"
   splits:
   - split: 3
@@ -107943,7 +108063,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "众人异口同声：是！"
+    text: "众人异口同声"
+  - split: 10
+    subIndex: 1
+    text: "是！"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: ",玩家,,左,,,,,,,师傅，我这就出发，天黑前应该来得及送过去......"
   splits:
   - split: 1
@@ -110465,13 +110591,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "打开包裹一看，你们三人顿时面面相觑，说不出话来："
+    text: "打开包裹一看，你们三人顿时面面相觑，说不出话来"
   - split: 10
     subIndex: 1
     text: "包裹内装的，竟是一些家禽和畜类的腐肉。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",,,右,,,,,,,搞什么呢，腐肉？\\n亏得我拼死拼活，结果竟捞回来一包垃圾。"
   splits:
   - split: 3
@@ -114573,13 +114699,16 @@
     text: "此后，他更是自创了一套龙胤归藏功，"
   - split: 10
     subIndex: 1
-    text: "号曰：龙胤在天，归藏玄通，八荒聚气，万法朝宗。"
+    text: "号曰"
   - split: 10
     subIndex: 2
+    text: "龙胤在天，归藏玄通，八荒聚气，万法朝宗。"
+  - split: 10
+    subIndex: 3
     text: "就连当时的少林武当众位绝顶高手，也一一甘拜下风。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}：{2}\\n{3}"
 - raw: ",,,右,,,,,,,赵掌门凭借这身武艺纵横沙场，自是如鱼得水，屡立奇功，\\n历任滑州兴顺副指挥使，开封府马直军使，殿前都虞候，永州防御使，\\n直至升任殿前都指挥使，定国军节度使之时，年纪不过也才三十出头。"
   splits:
   - split: 3
@@ -115864,13 +115993,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "（回了个招呼，暗自思忖：云天妹子果然来了啊，"
+    text: "（回了个招呼，暗自思忖"
   - split: 10
     subIndex: 1
+    text: "云天妹子果然来了啊，"
+  - split: 10
+    subIndex: 2
     text: "不知她后来有没有追上那老兵，等大会结束问问去。）"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",赵破虏,,左,,,,,,,司马长老此言虽有道理，\\n但这龙胤归藏功终究是飞龙门前任掌门，我义父赵胤宗所创。"
   splits:
   - split: 1
@@ -121373,7 +121505,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "有个少年举弓欲射，他就飞起徘徊空中言曰："
+    text: "有个少年举弓欲射，他就飞起徘徊空中言曰"
   - split: 10
     subIndex: 1
     text: "有鸟有鸟丁令威，去家千年今始归，城郭如故人民非，何不学仙冢累累！"
@@ -121382,7 +121514,7 @@
     text: "然后就高冲上天，从此不知所踪了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,这故事听起来确实奇之又奇，不过似乎不像是真事啊......\\n要是这丁令威真的离家千年，化鹤而归，\\n那城郭应该都重建很多次了，怎么还会“城郭如故人民非”呢？"
   splits:
   - split: 3
@@ -121466,7 +121598,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "后来李商隐写的诗："
+    text: "后来李商隐写的诗"
   - split: 10
     subIndex: 1
     text: "萱草含丹粉，荷花抱绿房。鸟应悲蜀帝，蝉是怨齐王。"
@@ -121475,7 +121607,7 @@
     text: "就讲的是这故事。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,原来如此，没想到#TargetInteractName#年纪轻轻，懂得还挺多。"
   splits:
   - split: 3
@@ -125069,13 +125201,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "然后另外一个就说了：大力金刚掌虽说力道威猛，"
+    text: "然后另外一个就说了"
   - split: 10
     subIndex: 1
+    text: "大力金刚掌虽说力道威猛，"
+  - split: 10
+    subIndex: 2
     text: "武当派的日月明光掌似乎也不逞多让。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,右,,,,,,,这日月明光掌汲取日月之精华，以纯阳纯阴内力混元击出，\\n其气劲破空激射，如日月当空，光芒万丈，刺目耀眼。"
   splits:
   - split: 3
@@ -125093,13 +125228,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "第一个人似乎不服，便又说道："
+    text: "第一个人似乎不服，便又说道"
   - split: 10
     subIndex: 1
     text: "如此说来，峨眉派的天罡雷轰掌或许才更胜一筹。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",,,右,,,,,,,这天罡雷轰掌乃是门威力惊人，内力消耗也极大的掌法，\\n将阴阳两股精纯真气凝聚掌心，借劈掌之力将其剧烈融合，\\n所到之处雷鸣震天，无坚不摧，无物不毁！"
   splits:
   - split: 3
@@ -125183,13 +125318,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "第一人闻言，沉吟片刻说道："
+    text: "第一人闻言，沉吟片刻说道"
   - split: 10
     subIndex: 1
     text: "这白虹贯日掌虽然神奇，但毕竟只是道听途说，没人亲眼见过。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",,,右,,,,,,,而丐帮有一式掌法，许多江湖人士都见识过，\\n那才叫惊天地，泣鬼神，此掌一出，谁与争锋！"
   splits:
   - split: 3
@@ -127328,7 +127463,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "峨眉弟子阵中顿时爆出几声惊呼：“五毒教，五毒教来了！”"
+    text: "峨眉弟子阵中顿时爆出几声惊呼"
+  - split: 10
+    subIndex: 1
+    text: "“五毒教，五毒教来了！”"
+  templates:
+  - split: 10
+    template: "{0}：{1}"
 - raw: ",牛头,石崇虎,右,,,,,,,牛头马面，你们身为前锋，怎么到现在还没攻陷此处？"
   splits:
   - split: 1
@@ -142453,9 +142594,12 @@
   - split: 8
     text: "郭勇锐"
   - split: 10
-    text: "（只见厉苍穹使出成名绝学：战八方藏刀式，将手中钢刀舞得上下翻飞，滴水不漏。"
+    text: "（只见厉苍穹使出成名绝学"
   - split: 10
     subIndex: 1
+    text: "战八方藏刀式，将手中钢刀舞得上下翻飞，滴水不漏。"
+  - split: 10
+    subIndex: 2
     text: "泼天刀光如同一张大网撒开，随后向你们劈头盖脸笼罩而来！）"
   templates:
   - split: 6
@@ -142463,7 +142607,7 @@
   - split: 8
     template: "ChangeInjury;{0}-0-30"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,左,,,,,,,#PlayerName#当心！\\n（郭勇锐挡在你身前，瞬间便中了数刀！）"
   splits:
   - split: 3
@@ -144321,10 +144465,13 @@
     text: "在四人瞩目之下，一人从阴影中现身而出，"
   - split: 10
     subIndex: 1
-    text: "赫然正是七大恶人之一：上官凤。"
+    text: "赫然正是七大恶人之一"
+  - split: 10
+    subIndex: 2
+    text: "上官凤。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,,,,,看然此人，便是之前发号施令的血衣盟大统领，\\n而这四大杀手，显然也皆是血衣盟高层。"
   splits:
   - split: 3
@@ -147381,10 +147528,13 @@
     text: "唯有心怀仁义之人，方能领悟武学之真谛，"
   - split: 10
     subIndex: 1
-    text: "达到剑指天下，心系苍生之境界，是故曰：仁者无敌。"
+    text: "达到剑指天下，心系苍生之境界，是故曰"
+  - split: 10
+    subIndex: 2
+    text: "仁者无敌。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,左,,,,,,,石将军所言，实在是误入歧途，偏离正道，\\n恐怕离走火入魔已是不远了！"
   splits:
   - split: 3
@@ -148356,7 +148506,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "而此时中原联军的营地中却毫无动静，只隐隐传来阵阵歌声，其语云："
+    text: "而此时中原联军的营地中却毫无动静，只隐隐传来阵阵歌声，其语云"
   - split: 10
     subIndex: 1
     text: "白马饰金羁，连翩西北驰。"
@@ -148365,7 +148515,7 @@
     text: "借问谁家子，幽并游侠儿。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",道无名,,左,,,,,,,少小去乡邑，扬声沙漠垂。\\n宿昔秉良弓，楛矢何参差。"
   splits:
   - split: 1
@@ -148625,13 +148775,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "听闻中原古语云：识时务者为俊杰。"
+    text: "听闻中原古语云"
   - split: 10
     subIndex: 1
+    text: "识时务者为俊杰。"
+  - split: 10
+    subIndex: 2
     text: "各位好汉不如速速投降，老僧还可考虑放你们一条生路。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,右,,,,,,,（只见潇湘仙子灰头土脸，狼狈不堪，\\n但依旧目光锐利，面色自若，拔剑直指敌方面门）"
   splits:
   - split: 3
@@ -148674,13 +148827,13 @@
   - split: 6
     text: "人群欢呼"
   - split: 10
-    text: "守军听闻此言，爆出阵阵山呼海啸之声："
+    text: "守军听闻此言，爆出阵阵山呼海啸之声"
   - split: 10
     subIndex: 1
     text: "死守乐山镇！死守乐山镇！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",石崇虎,,左,,,,,,,困兽犹斗，垂死挣扎！\\n给我杀！"
   splits:
   - split: 1
@@ -148963,10 +149116,13 @@
     text: "老子这些年苦心闭关，将飞龙门武学与归藏功融合，"
   - split: 10
     subIndex: 1
-    text: "终于练成了一门绝世神功：绝义归藏功。"
+    text: "终于练成了一门绝世神功"
+  - split: 10
+    subIndex: 2
+    text: "绝义归藏功。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,左,,,,TRUE,,,今天能败在这门神功之下，是你们的荣幸。\\n来受死吧！！！"
   splits:
   - split: 3
@@ -149363,10 +149519,13 @@
     text: "几位掌门起身正欲阻拦思中澜，"
   - split: 10
     subIndex: 1
-    text: "只听得门外一阵惊呼：道阁主回来了！"
+    text: "只听得门外一阵惊呼"
+  - split: 10
+    subIndex: 2
+    text: "道阁主回来了！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,SpeEffect/风呼啸,,,,众人赶忙跑出门外，只见道无名催动轻功自空中飘然而下，\\n虽然满身鲜血，但神情依旧自若。"
   splits:
   - split: 3
@@ -149873,12 +150032,15 @@
     text: "话音未落，只听一声断喝，一名大汉现身在前拦住去路，"
   - split: 10
     subIndex: 2
-    text: "赫然正是七大恶人之首：武绝义！"
+    text: "赫然正是七大恶人之首"
+  - split: 10
+    subIndex: 3
+    text: "武绝义！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}：{3}"
 - raw: ",道无名,武绝义,右,,,,,,,哈哈哈哈，道阁主远道而来，怎么也不多逗留几日？\\n如今不打声招呼就走，未免有些失了礼数吧！"
   splits:
   - split: 1
@@ -150604,12 +150766,15 @@
     text: "正值千钧一发之际，只听山谷绝壁上，"
   - split: 10
     subIndex: 2
-    text: "一个年轻声音喝到：#PlayerName#莫慌！"
+    text: "一个年轻声音喝到"
+  - split: 10
+    subIndex: 3
+    text: "#PlayerName#莫慌！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}：{3}"
 - raw: ",,白云天,右,,,,,,,众人抬眼望去，只见一名身着峨眉亲传弟子服装的女子，\\n正傲然挺立于数十丈高的山崖之上，赫然正是白云天！"
   splits:
   - split: 2
@@ -152112,15 +152277,18 @@
     text: "（一名身形魁梧，目光如炬的番僧先行踏入营帐，"
   - split: 10
     subIndex: 1
-    text: "只见他双手结印，口中念诵：嗡嘛呢叭咪吽！声若洪钟，震得整个营帐嗡嗡作响。"
+    text: "只见他双手结印，口中念诵"
   - split: 10
     subIndex: 2
+    text: "嗡嘛呢叭咪吽！声若洪钟，震得整个营帐嗡嗡作响。"
+  - split: 10
+    subIndex: 3
     text: "这密宗最为神圣的六字真言自他口中念出，每一字都似乎蕴含着无穷智慧。）"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}：{2}\\n{3}"
 - raw: ",,,左,,,,,,,阎殿主！\\n许久未见，您当真是老当益壮，英雄不减当年啊！"
   splits:
   - split: 3
@@ -156701,13 +156869,16 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "你双手合十，拜了数拜，暗道几声：道阁主，得罪了。"
+    text: "你双手合十，拜了数拜，暗道几声"
   - split: 10
     subIndex: 1
+    text: "道阁主，得罪了。"
+  - split: 10
+    subIndex: 2
     text: "最后便细细检查起了道无名身上的状况。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,左,,,,,,,道阁主遍体漆黑，显然是中毒而死。\\n形容枯槁，好像一截干枯的的树木一般。\\n整个尸身散发着轻微的臭味，但腐烂程度还算不严重。"
   splits:
   - split: 3
@@ -159192,10 +159363,13 @@
     text: "司马德源见此情况，正欲下令让峨眉弟子前去将桌子拼好，"
   - split: 10
     subIndex: 1
-    text: "忽然思中澜大手一挥，叫了声：不必了！"
+    text: "忽然思中澜大手一挥，叫了声"
+  - split: 10
+    subIndex: 2
+    text: "不必了！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,右,,,,,,,不必多此一举，我一进闭关室就看到了。\\n这桌子上确实刻了五个字......"
   splits:
   - split: 3
@@ -160518,10 +160692,13 @@
     text: "校场之上，群情激昂，"
   - split: 10
     subIndex: 1
-    text: "众人齐声高呼：誓与大理共存亡！誓与大理共存亡！"
+    text: "众人齐声高呼"
+  - split: 10
+    subIndex: 2
+    text: "誓与大理共存亡！誓与大理共存亡！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,GroupFight,,StartSpeFight;158,,大理城外，邪派联军也已准备妥当，\\n一场落幕之战，即将在此打响！"
   splits:
   - split: 3
@@ -165708,13 +165885,16 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "你与铸剑山庄弟子正战成一团，只听一声断喝：“住手！”"
+    text: "你与铸剑山庄弟子正战成一团，只听一声断喝"
   - split: 10
     subIndex: 1
+    text: "“住手！”"
+  - split: 10
+    subIndex: 2
     text: "那群弟子闻言赶忙收起兵刃，恭恭敬敬向着声音处望去。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,祖心炎,右,,,,TRUE,,,让你们来搜寻神兵，不是让你们拦路打劫的！"
   splits:
   - split: 2
@@ -170354,12 +170534,15 @@
     text: "眼看战况越发激烈，双方就要见血，"
   - split: 10
     subIndex: 1
-    text: "郭淮果断运起全身力道，大喝一声：住手！"
+    text: "郭淮果断运起全身力道，大喝一声"
+  - split: 10
+    subIndex: 2
+    text: "住手！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,SpeEffect/龙咆哮,,ChangeInjury;吕天行-1-10,,一道刚猛无比的掌风席卷整个仙居客栈，\\n场上众人无不左摇右晃，头晕目眩，纷纷停住了手中的兵刃。"
   splits:
   - split: 3
@@ -175473,12 +175656,15 @@
     text: "值此千钧一发之际，只听门外一阵骚动，"
   - split: 10
     subIndex: 1
-    text: "有人惊呼：飞龙门来了！"
+    text: "有人惊呼"
+  - split: 10
+    subIndex: 2
+    text: "飞龙门来了！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,SpeEffect/响亮刀鸣,,,,一点寒芒先到，随后枪出如龙，\\n一名身着甲胄之人大步流星，将上官凤的招式尽数化解！"
   splits:
   - split: 3
@@ -176741,13 +176927,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "岂不闻韩非子云：国小而不处卑，力少而不畏强，"
+    text: "岂不闻韩非子云"
   - split: 10
     subIndex: 1
+    text: "国小而不处卑，力少而不畏强，"
+  - split: 10
+    subIndex: 2
     text: "无礼而侮大邻，贪愎而拙交者，可亡也。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,右,,,,,,,因此联军第一战，老夫准备先拿聚义门开刀。\\n一方面，拔除这根中原武林安插在西南的钉子，以绝后患。"
   splits:
   - split: 3
@@ -177428,9 +177617,12 @@
   - split: 8
     text: "万仞山"
   - split: 10
-    text: "（见此时机，阎罗王将全身功力凝聚于刀上，使出一招成名绝技：杀人刀法！"
+    text: "（见此时机，阎罗王将全身功力凝聚于刀上，使出一招成名绝技"
   - split: 10
     subIndex: 1
+    text: "杀人刀法！"
+  - split: 10
+    subIndex: 2
     text: "一道无比凌厉的刀气裹挟着漫天尘土，直直向万仞山奔去。"
   templates:
   - split: 6
@@ -177438,7 +177630,7 @@
   - split: 8
     template: "ChangeInjury;{0}-0-200"
   - split: 10
-    template: "{0}\\n{1})"
+    template: "{0}：{1}\\n{2})"
 - raw: ",,,左,,,,TRUE,,,（避无可避，只得全力一接）\\n唔！！！！！"
   splits:
   - split: 3
@@ -178283,10 +178475,13 @@
     text: "逐鹿盟在攻克墨脱后兵分两路，"
   - split: 10
     subIndex: 1
-    text: "其中北路天山崆峒两派的进攻目标，乃是西北重镇：西凉城。"
+    text: "其中北路天山崆峒两派的进攻目标，乃是西北重镇"
+  - split: 10
+    subIndex: 2
+    text: "西凉城。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,,,,,西凉城位于河西走廊咽喉要道之上，连通中原，控扼西域，\\n自古以来便是西北首府，丝路要冲，\\n一直以来在霸刀门的掌控之下，也算政通人和，欣欣向荣。"
   splits:
   - split: 3
@@ -179498,10 +179693,13 @@
     text: "听闻帮主此言，霸刀门弟子不仅哄堂大笑起来，"
   - split: 10
     subIndex: 1
-    text: "纷纷叫骂道：不该让！不该让！"
+    text: "纷纷叫骂道"
+  - split: 10
+    subIndex: 2
+    text: "不该让！不该让！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,右,,,,,,,对头！我项元霸这辈子，最看不起吃霸王餐的人。\\n咱得让这些家伙瞧瞧，霸刀门的菜刀，哦不，宝刀，可不是吃素的！"
   splits:
   - split: 3
@@ -180854,10 +181052,13 @@
     text: "双方弗一交兵，还未过上几招，"
   - split: 10
     subIndex: 1
-    text: "青城掌门周莫知忽然大喝一声：退！"
+    text: "青城掌门周莫知忽然大喝一声"
+  - split: 10
+    subIndex: 2
+    text: "退！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,,,,,只见青城弟子便如事先约定一般，\\n纷纷收起手中宝剑，向四面八方逃窜而去。"
   splits:
   - split: 3
@@ -188254,7 +188455,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "此情此景，诚如崔颢所云："
+    text: "此情此景，诚如崔颢所云"
   - split: 10
     subIndex: 1
     text: "昔人已乘黄鹤去，此地空余黄鹤楼。"
@@ -188269,7 +188470,7 @@
     text: "日暮乡关何处是？烟波江上使人愁。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
+    template: "{0}：\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: "941,无,张青蓬,右,,BigMap11,,,,,各位掌门，此次贫道邀请大家前来，缘由不言自明。\\n不久之前，我武当派治下的江陵遭逐鹿盟大军奇袭，不幸失守。"
   splits:
   - split: 1
@@ -190360,10 +190561,13 @@
     text: "每当日轮转至巽位时，整座宫观便升腾起紫气，与云海交融作混沌太极状。"
   - split: 10
     subIndex: 2
-    text: "难怪武当山被世人称为：亘古无双胜境，天下第一仙山。"
+    text: "难怪武当山被世人称为"
+  - split: 10
+    subIndex: 3
+    text: "亘古无双胜境，天下第一仙山。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}：{3}"
 - raw: ",,,无,,,紧密鼓点,,,,原本静谧和谐，香火缭绕的武当派，本应响起晨练的钟声，\\n此时却锣鼓大躁，一片嘈杂，往来弟子俱是神情紧张，行色匆匆。"
   splits:
   - split: 3
@@ -191354,15 +191558,18 @@
   - split: 6
     text: "龙咆哮"
   - split: 10
-    text: "忽然听闻一声惊天动地的怒吼：慢着！"
+    text: "忽然听闻一声惊天动地的怒吼"
   - split: 10
     subIndex: 1
+    text: "慢着！"
+  - split: 10
+    subIndex: 2
     text: "一名巨汉从天而降，落在武当弟子阵前。"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,无,,,SpeEffect/爆土石小,,,,此人双掌轻轻一挥，便将空中暗器尽数拍飞。\\n来者正是，中原大侠郭淮！"
   splits:
   - split: 3
@@ -201378,10 +201585,10 @@
     text: "终将大隐叛徒思中澜绳之以法的壮举，"
   - split: 10
     subIndex: 2
-    text: "可谓千回百转，可歌可泣，无怪乎后人有诗赞曰："
+    text: "可谓千回百转，可歌可泣，无怪乎后人有诗赞曰"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}："
 - raw: ",,,无,,,,,,,剑啸长河铁马鸣，九霄龙虎会中庭。\\n千山暮雪追云履，万里寒江踏浪行。\\n中澜惑星沉北斗，上清正气破幽冥。\\n今朝歃血盟肝胆，敢向阎罗问姓名！"
   splits:
   - split: 3
@@ -205402,10 +205609,13 @@
     text: "阎罗殿众弟子听闻此言，纷纷向武绝义单膝下跪，"
   - split: 10
     subIndex: 1
-    text: "抱拳高呼：参见武殿主！参见武殿主！"
+    text: "抱拳高呼"
+  - split: 10
+    subIndex: 2
+    text: "参见武殿主！参见武殿主！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,常无白,右,,,,,,,武统领，你既是阎殿主的多年战友，又是本门副殿主。\\n继任这殿主之位也是名正言顺，我们黑白无常愿效犬马之劳！"
   splits:
   - split: 2
@@ -207455,7 +207665,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "夕阳斜照，快马驰骋，此情此景，真可谓："
+    text: "夕阳斜照，快马驰骋，此情此景，真可谓"
   - split: 10
     subIndex: 1
     text: "剑外忽传收蓟北，初闻涕泪满衣裳。"
@@ -207464,7 +207674,7 @@
     text: "却看亲友愁何在，漫卷诗书喜欲狂。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,无,,,,,FinishEventMission,,白日放歌须纵酒，青春作伴好还乡。\\n即从巴峡穿巫峡，便下襄阳向洛阳！"
   splits:
   - split: 3
@@ -209684,10 +209894,13 @@
     text: "武当派与阎罗殿一拍即合，与山门口约定摈弃前嫌，握手言和，"
   - split: 10
     subIndex: 1
-    text: "共同追捕当今武林最大的敌人：计心狂。"
+    text: "共同追捕当今武林最大的敌人"
+  - split: 10
+    subIndex: 2
+    text: "计心狂。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,,,,,待事宜商量完毕，定下出发时间后，\\n武绝义便同孟婆娑一同下山而去。"
   splits:
   - split: 3
@@ -221222,13 +221435,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "好，那老身今日便说上一段，此话名为："
+    text: "好，那老身今日便说上一段，此话名为"
   - split: 10
     subIndex: 1
     text: "四奇盗共斗黄沙寨，赵点检千里送京娘！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",无,无,无,,,,,ShowMemoryCover,,话说赵点检领着侠盗四奇兄弟与赵京娘，离了悦来客栈。\\n便马不停蹄一路南下，终于在天黑之前赶到了河内乡。"
   splits:
   - split: 1
@@ -221913,15 +222126,18 @@
   - split: 6
     text: "快剑"
   - split: 10
-    text: "说时迟那时快，二当家张广儿忽然大喝一声：动手！"
+    text: "说时迟那时快，二当家张广儿忽然大喝一声"
   - split: 10
     subIndex: 1
+    text: "动手！"
+  - split: 10
+    subIndex: 2
     text: "便从手中飞射出无数暗器，向大当家背心扑来。"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,无,,,SpeEffect/二连快劈,,ChangeInjury;大当家-0-80,,与此同时，显然是早有预谋，\\n三当家周进拔出双刀，向大当家下盘砍去！"
   splits:
   - split: 3
@@ -222962,10 +223178,10 @@
     text: "这段话，题做“四奇盗共斗黄沙寨，赵点检千里送京娘”，"
   - split: 10
     subIndex: 1
-    text: "后人有诗赞云："
+    text: "后人有诗赞云"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}："
 - raw: ",,,无,,,,,ScreenBlack,,不恋私情不畏强，独行千里送京娘。\\n汉唐吕武纷多事，谁及英雄赵大郎！"
   splits:
   - split: 3
@@ -225186,16 +225402,19 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "这四人分别号曰：天残，地缺，南丑，北怪，"
+    text: "这四人分别号曰"
   - split: 10
     subIndex: 1
-    text: "早年间在晋阳一代劫富济贫，行侠仗义。"
+    text: "天残，地缺，南丑，北怪，"
   - split: 10
     subIndex: 2
+    text: "早年间在晋阳一代劫富济贫，行侠仗义。"
+  - split: 10
+    subIndex: 3
     text: "后来拜入赵点检麾下后，便销声匿迹，不知所踪了。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：{1}\\n{2}\\n{3}"
 - raw: ",,,左,,,,,,,嗯，看来赵京娘说的不错，\\n这四人后来果然是隐藏于赵点检左右，做他的贴身护卫去了。"
   splits:
   - split: 3
@@ -241154,7 +241373,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "后人亦有诗赞云："
+    text: "后人亦有诗赞云"
   - split: 10
     subIndex: 1
     text: "日月其迈兮风雷鼓，山河激荡兮曙光寒。"
@@ -241169,7 +241388,7 @@
     text: "他年若遂凌云志，重整乾坤万代安！"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
+    template: "{0}：\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: ",,,无,,,,,,,此次泰岳大典过后，一直侵扰各地的血衣盟彻底灰飞烟灭，\\n各大门派腾出手来，再无顾忌，开始全力互相攻伐，夺城略地。\\n整个武林，也自此进入了虎踞鲸吞，群雄逐鹿之时代。"
   splits:
   - split: 3
@@ -244876,10 +245095,13 @@
     text: "众人欢声笑语，又喝了一阵，"
   - split: 10
     subIndex: 1
-    text: "突闻堂下弟子报称：长乐帮前来道贺！"
+    text: "突闻堂下弟子报称"
+  - split: 10
+    subIndex: 2
+    text: "长乐帮前来道贺！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,人群交谈,,,,众人皆知长乐帮近来与霹雳堂摩擦不断，不知此次是何来意，\\n因此纷纷停下酒杯，看向门口。"
   splits:
   - split: 3
@@ -247895,10 +248117,13 @@
     text: "场下侠士群情激昂，"
   - split: 10
     subIndex: 1
-    text: "纷纷高呼：愿意！愿意！"
+    text: "纷纷高呼"
+  - split: 10
+    subIndex: 2
+    text: "愿意！愿意！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,右,,,,,,,咳咳，多谢各位路见不平，拔刀相助！\\n只是在下这小门小院，恐怕容不下这么多侠士。"
   splits:
   - split: 3
@@ -251598,10 +251823,13 @@
     text: "未及你们回应，"
   - split: 10
     subIndex: 1
-    text: "堂下突然响起一声高呼：愿意！"
+    text: "堂下突然响起一声高呼"
+  - split: 10
+    subIndex: 2
+    text: "愿意！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,右,,,,TRUE,,,什么人！！！"
   splits:
   - split: 3
@@ -255543,13 +255771,16 @@
   - split: 6
     text: "人群喊叫"
   - split: 10
-    text: "正值二人争论不休之时，忽然一声惊呼：花车来了！"
+    text: "正值二人争论不休之时，忽然一声惊呼"
   - split: 10
     subIndex: 1
+    text: "花车来了！"
+  - split: 10
+    subIndex: 2
     text: "众人皆踮起脚尖，屏息凝神循声望去。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,无,,,紧密鼓点,,,,只见街道尽头，彩带纷飞，锣鼓齐鸣。\\n一台装饰华美的花车由八匹高头大马牵引，缓缓向此处驶来。"
   splits:
   - split: 3
@@ -262560,10 +262791,10 @@
     text: "成为武林中一段佳话。"
   - split: 10
     subIndex: 2
-    text: "这番艰难波折，后人也有诗赞云："
+    text: "这番艰难波折，后人也有诗赞云"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}\\n{1}\\n{2}："
 - raw: ",,,无,,,,,SpePlotFuc;167,,青锋曾断同门义，霹雳终焚宿世仇。\\n狱底星霜磨剑魄，江湖风雨淬吴钩。\\n五更鬼啸摧魔障，一朝光寒动九州。\\n终是苍天怜侠骨，红妆白马共千秋。"
   splits:
   - split: 3
@@ -263012,13 +263243,16 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "孟经世扔下酒杯，起身便走，忽然听闻堂下一声断喝：留步！"
+    text: "孟经世扔下酒杯，起身便走，忽然听闻堂下一声断喝"
   - split: 10
     subIndex: 1
+    text: "留步！"
+  - split: 10
+    subIndex: 2
     text: "抬眼望去，来者竟是血衣盟西统领上官凤，及其座下的四大杀手。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,上官凤,右,,,SpeEffect/风呼啸,,,,孟大侠难得来一趟，岂能这么快就走？\\n来来来，我陪你喝上一杯！"
   splits:
   - split: 2
@@ -264284,13 +264518,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "这诗的第一句，乃是：东临沧海炎龙藏。"
+    text: "这诗的第一句，乃是"
   - split: 10
     subIndex: 1
+    text: "东临沧海炎龙藏。"
+  - split: 10
+    subIndex: 2
     text: "我怀疑诗中的“沧海”，就暗示着这个湖泊。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,魅影,右,,,,,,,“东临沧海”难道就是说，宝藏在襄垣村东边这个湖泊旁？\\n那后面三个字“炎龙藏”又是什么意思？"
   splits:
   - split: 2
@@ -267650,7 +267887,7 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "此外字画上所提的四句诗："
+    text: "此外字画上所提的四句诗"
   - split: 10
     subIndex: 1
     text: "东临沧海炎龙藏，南岭叠云掩奇珍。"
@@ -267662,7 +267899,7 @@
     text: "显然正预示了宝藏的具体位置。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}\\n{3}"
+    template: "{0}：\\n{1}\\n{2}\\n{3}"
 - raw: ",,,右,,,,,,,一开始我不知其意，只知道往东南西北四个方位乱找，\\n结果不仅一无所获，反而连中陷阱。"
   splits:
   - split: 3
@@ -278547,16 +278784,19 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "圣人有云：不义而富且贵，于我如浮云！"
+    text: "圣人有云"
   - split: 10
     subIndex: 1
-    text: "此等行径，非但有损德行，更"
+    text: "不义而富且贵，于我如浮云！"
   - split: 10
     subIndex: 2
+    text: "此等行径，非但有损德行，更"
+  - split: 10
+    subIndex: 3
     text: "更违背了天地良心啊！"
   templates:
   - split: 10
-    template: "{0}\\n{1}…{2}"
+    template: "{0}：{1}\\n{2}…{3}"
 - raw: ",,,右,,,,,,,哈哈哈哈，什么狗屁圣人，老子就是要杀人放火，大富大贵！\\n有本事，你叫圣人从坟里跳出来打老子呀，啊哈哈哈哈哈！"
   splits:
   - split: 3
@@ -278872,10 +279112,13 @@
     text: "（深深作了一揖）原来如此！"
   - split: 10
     subIndex: 1
-    text: "难怪夫子有云：学而不思则罔，思而不学则殆。"
+    text: "难怪夫子有云"
+  - split: 10
+    subIndex: 2
+    text: "学而不思则罔，思而不学则殆。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,右,,,,,,,#PlayerName#虽为武林中人，却如此博文光识，一语惊醒梦中人。\\n三人行必有吾师焉，此言果然不假，小生佩服，佩服！"
   splits:
   - split: 3
@@ -278982,13 +279225,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "夫子有云：苟子之不欲，虽赏之不窃。"
+    text: "夫子有云"
   - split: 10
     subIndex: 1
+    text: "苟子之不欲，虽赏之不窃。"
+  - split: 10
+    subIndex: 2
     text: "若政通人和，百业俱兴，就算悬赏邀请百姓去偷盗，也不会有人答应。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,左,,,,,,,好汉若能及时悔改，匡扶正道，我愿意与阁下一同惩奸除恶。\\n假以时日，众人齐心协力，定能使天下太平。"
   splits:
   - split: 3
@@ -279568,13 +279814,16 @@
   - split: 3
     text: "左"
   - split: 10
-    text: "非也非也，子曰：己所不欲，勿施于人。"
+    text: "非也非也，子曰"
   - split: 10
     subIndex: 1
+    text: "己所不欲，勿施于人。"
+  - split: 10
+    subIndex: 2
     text: "若是人人都当土匪，那这世间......"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,右,,,,,,,我听不懂，听不懂啊！\\n求你了，求二位放过小的吧！我给二位爷磕头了！"
   splits:
   - split: 3
@@ -279743,16 +279992,19 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "我明白了，子曰：毋意，毋必，毋固，毋我。"
+    text: "我明白了，子曰"
   - split: 10
     subIndex: 1
-    text: "智者不应固执己见，拘泥于一条大道。"
+    text: "毋意，毋必，毋固，毋我。"
   - split: 10
     subIndex: 2
+    text: "智者不应固执己见，拘泥于一条大道。"
+  - split: 10
+    subIndex: 3
     text: "夫子也曾问道于老子，小生又有何资格故步自封，吊死在一棵树上呢？"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：{1}\\n{2}\\n{3}"
 - raw: ",,,右,,,,,,,为今之计，只有掌握更多的大道，方能破除乱世之迷局。\\n圣贤之道是其一，习武之道也是其一。"
   splits:
   - split: 3
@@ -283422,10 +283674,13 @@
     text: "台下众人见状不由哄堂大笑，嘘声不断。"
   - split: 10
     subIndex: 1
-    text: "有人高呼：再来一个！再来一个！"
+    text: "有人高呼"
+  - split: 10
+    subIndex: 2
+    text: "再来一个！再来一个！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,右,,,,,,,下面给大家来点轻功！“金鸡独立”外加“猴子偷桃”......\\n哎呀！不对不对！是“猴子捞月”！"
   splits:
   - split: 3
@@ -283471,13 +283726,16 @@
   - split: 6
     text: "人群交谈"
   - split: 10
-    text: "有人高呼：饿虎扑食？这是饿犬吃屎吧！"
+    text: "有人高呼"
   - split: 10
     subIndex: 1
+    text: "饿虎扑食？这是饿犬吃屎吧！"
+  - split: 10
+    subIndex: 2
     text: "引得台下又是一片嘘声和嘲笑。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",玩家,,左,,,,,,,这小姑娘功夫也太差了点，这样走街卖艺岂不得饿死......"
   splits:
   - split: 1
@@ -284846,13 +285104,16 @@
   - split: 6
     text: "人群交谈"
   - split: 10
-    text: "正值围观群众纷纷慷慨解囊之时，忽然有人惊呼：衙门的来了！"
+    text: "正值围观群众纷纷慷慨解囊之时，忽然有人惊呼"
   - split: 10
     subIndex: 1
+    text: "衙门的来了！"
+  - split: 10
+    subIndex: 2
     text: "听闻此言，曲佩环赶紧收起赏钱，拉着你的衣袖扭头就跑。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,左,,,FootStepContinue,,,,曲、曲姑娘，我们为什么要跑？"
   splits:
   - split: 3
@@ -286408,13 +286669,16 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "这三字口诀便是：接！化！发！"
+    text: "这三字口诀便是"
   - split: 10
     subIndex: 1
+    text: "接！化！发！"
+  - split: 10
+    subIndex: 2
     text: "你可听清楚了？"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,左,,,,,,,啊？接......化......发？\\n这是什么意思？"
   splits:
   - split: 3
@@ -289563,13 +289827,16 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "可谓是：三杯吐然诺，五岳倒为轻。"
+    text: "可谓是"
   - split: 10
     subIndex: 1
+    text: "三杯吐然诺，五岳倒为轻。"
+  - split: 10
+    subIndex: 2
     text: "眼花耳热后，意气素霓生。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,无,,,,,,,一轮一轮地敬酒，叶寒与你皆是喝得酩酊大醉。\\n篝火越烧越旺，你们的脸和心也越来越热。"
   splits:
   - split: 3
@@ -297330,13 +297597,13 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "仙霞派众弟子异口同声道："
+    text: "仙霞派众弟子异口同声道"
   - split: 10
     subIndex: 1
     text: "是，师傅！"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: "1430,玩家,岳无畏,无,,Fight0,,,ChangeInjury;岳无畏-0-30,,只见岳无畏将群魔乱舞功法催动到极致，虽说攻势凶猛，\\n却依旧被你以精妙招式一一化解。"
   splits:
   - split: 1
@@ -297556,14 +297823,17 @@
     text: "话音刚落，你便将手中剑鞘甩出，"
   - split: 10
     subIndex: 1
-    text: "吸引岳无畏注意，同时高喊一声：王兄动手！"
+    text: "吸引岳无畏注意，同时高喊一声"
+  - split: 10
+    subIndex: 2
+    text: "王兄动手！"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
   - split: 8
     template: "ChangeAttri;{0}-1-5"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,无,,,SpeEffect/剑鸣,,ChangeInjury;岳无畏-0-30,,只见王添翼同时拔剑，一下刺入岳无畏后背！"
   splits:
   - split: 3
@@ -299204,10 +299474,13 @@
     text: "此三股之气合而为一，确实貌似势不可挡，"
   - split: 10
     subIndex: 1
-    text: "但吾师有云：天地有正气，杂然赋流形。"
+    text: "但吾师有云"
+  - split: 10
+    subIndex: 2
+    text: "天地有正气，杂然赋流形。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,左,,,,,,,我今日便要用这浩然正气，对抗各位的凶邪之气，\\n鹿死谁手，只怕还犹未可知。"
   splits:
   - split: 3
@@ -305533,10 +305806,13 @@
     text: "难得你谦虚一回，行吧！"
   - split: 10
     subIndex: 1
-    text: "不过还有一句话，叫：师傅领进门，修行在个人。"
+    text: "不过还有一句话，叫"
+  - split: 10
+    subIndex: 2
+    text: "师傅领进门，修行在个人。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,左,,,,,,,之后就靠你自己勤学苦练，\\n将此功法修炼纯熟了。"
   splits:
   - split: 3
@@ -319336,10 +319612,13 @@
     text: "不过要进攻阎罗殿总舵，"
   - split: 10
     subIndex: 1
-    text: "还需先攻克其天险：鬼门关。"
+    text: "还需先攻克其天险"
+  - split: 10
+    subIndex: 2
+    text: "鬼门关。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}\\n{1}：{2}"
 - raw: ",,,左,,,,,,,昔日大隐阁主道无名所率中原联军，\\n曾折戟于鬼门关下，\\n我等一定不能重蹈覆辙。"
   splits:
   - split: 3
@@ -325950,7 +326229,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "整个武林似乎也正以京城为界，被逐步撕裂为两大联盟："
+    text: "整个武林似乎也正以京城为界，被逐步撕裂为两大联盟"
   - split: 10
     subIndex: 1
     text: "以仙霞派为代表的京城以西联盟，"
@@ -325959,7 +326238,7 @@
     text: "和以少林寺为代表的京城以东联盟。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,无,,BigMap0,,,,,这两大联盟为了争夺京城，冲突愈演愈烈。\\n至于最终鹿死谁手，所有人都在拭目以待。"
   splits:
   - split: 3
@@ -328738,15 +329017,18 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "诏曰：飞龙门掌京防数十载，授节钺，寄腹心。"
+    text: "诏曰"
   - split: 10
     subIndex: 1
+    text: "飞龙门掌京防数十载，授节钺，寄腹心。"
+  - split: 10
+    subIndex: 2
     text: "岂料副掌门诸葛伶潜结外藩，私蓄死士，意图宫变。"
   templates:
   - split: 2
     template: "{0}:{1}&{2};40;-1;5;-5"
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：{1}\\n{2}"
 - raw: ",,,右,,,,,,,幸宿卫效死，逆党旋平。然禁卫重地，岂容再疏？\\n今飞龙门全派退归总舵，非诏不得入京。\\n京畿防务，委仙霞派接掌。"
   splits:
   - split: 3
@@ -329216,13 +329498,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "此宝剑之上，刻着十六个字，乃是："
+    text: "此宝剑之上，刻着十六个字，乃是"
   - split: 10
     subIndex: 1
     text: "飞龙永镇，京畿世守。违者剑下，先斩后奏。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",,,右,,,,,,,此中意思，再明确不过了。\\n那就是将京城交由我飞龙门世代守卫，永不更易！"
   splits:
   - split: 3
@@ -329240,13 +329522,13 @@
   - split: 3
     text: "右"
   - split: 10
-    text: "#PlayerName#，每名飞龙弟子入门之前，皆需对天起誓："
+    text: "#PlayerName#，每名飞龙弟子入门之前，皆需对天起誓"
   - split: 10
     subIndex: 1
     text: "七尺之躯，效大周之命；一腔之血，护柴氏之宗。"
   templates:
   - split: 10
-    template: "{0}\\n{1}"
+    template: "{0}：\\n{1}"
 - raw: ",,,右,,,,,,,精忠报国，生死与共，如有二心，天地不容！"
   splits:
   - split: 3
@@ -331942,7 +332224,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "回望飞龙门波澜壮阔之经历，正应了诗句："
+    text: "回望飞龙门波澜壮阔之经历，正应了诗句"
   - split: 10
     subIndex: 1
     text: "岁暮阴阳催短景，天涯霜雪霁寒宵。"
@@ -331957,7 +332239,7 @@
     text: "卧龙跃马终黄土，人事依依漫寂寥。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
+    template: "{0}：\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: ",,,无,,,,,,,此战过后，飞龙门正式成为了仙霞派之附庸。\\n仙霞派及其联盟之威势，也一度达到了武林顶点。\\n便是少林武当丐帮等名门大派，也难以望其项背。"
   splits:
   - split: 3
@@ -344472,7 +344754,7 @@
   - split: 3
     text: "无"
   - split: 10
-    text: "后人有诗赞云："
+    text: "后人有诗赞云"
   - split: 10
     subIndex: 1
     text: "蜀中仙云映霞光，峨眉夜雨打苍茫。"
@@ -344481,7 +344763,7 @@
     text: "江湖翻沸壮士死，山河泣血战未央。"
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}"
+    template: "{0}：\\n{1}\\n{2}"
 - raw: ",,,无,,,,,ScreenBlack,,<color=red><size=40><b>————全剧终————</b></size></color>\\n第四章剧情结束，已开启进攻总舵，\\n后续可自行触发终归一统结局。"
   splits:
   - split: 3

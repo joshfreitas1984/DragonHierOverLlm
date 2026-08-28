@@ -632,9 +632,9 @@
   - template: "{0}\n{1}"
 - raw: "#PlayerName#来的正好，我近来俗务缠身，有桩委托实在无暇应付：\n{0}"
   splits:
-  - text: "#PlayerName#来的正好，我近来俗务缠身，有桩委托实在无暇应付："
+  - text: "#PlayerName#来的正好，我近来俗务缠身，有桩委托实在无暇应付"
   templates:
-  - template: "{0}\n⟦0⟧"
+  - template: "{0}：\n⟦0⟧"
 - raw: "#PlayerName#果真慧眼识珠，此人确实是个可造之材。\n若蒙#SourceForceName#不弃，我这就命其拜入#PlayerName#麾下！\n(招募附庸门派的{0}，需消耗门派威望{1}点)"
   splits:
   - text: "#PlayerName#果真慧眼识珠，此人确实是个可造之材。"
@@ -1798,7 +1798,11 @@
   - template: "/{0}"
 - raw: "100%探索奖励：额外获得声望"
   splits:
-  - text: "100%探索奖励：额外获得声望"
+  - text: "100%探索奖励"
+  - subIndex: 1
+    text: "额外获得声望"
+  templates:
+  - template: "{0}：{1}"
 - raw: "10000两;ManageForceMoneyPlotSure;10000-"
   splits:
   - text: "10000两"
@@ -1926,7 +1930,11 @@
   - template: "{0};SureSimpleWork;1"
 - raw: "20%探索奖励：揭示所有塔楼"
   splits:
-  - text: "20%探索奖励：揭示所有塔楼"
+  - text: "20%探索奖励"
+  - subIndex: 1
+    text: "揭示所有塔楼"
+  templates:
+  - template: "{0}：{1}"
 - raw: "2000两;ManageForceMoneyPlotSure;2000-"
   splits:
   - text: "2000两"
@@ -1934,7 +1942,11 @@
   - template: "{0};ManageForceMoneyPlotSure;2000-"
 - raw: "40%探索奖励：揭示所有地图和营地"
   splits:
-  - text: "40%探索奖励：揭示所有地图和营地"
+  - text: "40%探索奖励"
+  - subIndex: 1
+    text: "揭示所有地图和营地"
+  templates:
+  - template: "{0}：{1}"
 - raw: "5000两;ManageForceMoneyPlotSure;5000-"
   splits:
   - text: "5000两"
@@ -2002,10 +2014,18 @@
   - template: "{0};SureSimpleWork;5"
 - raw: "60%探索奖励：恢复15%已消耗耐力"
   splits:
-  - text: "60%探索奖励：恢复15%已消耗耐力"
+  - text: "60%探索奖励"
+  - subIndex: 1
+    text: "恢复15%已消耗耐力"
+  templates:
+  - template: "{0}：{1}"
 - raw: "80%探索奖励：恢复10%已消耗耐力并揭示终点"
   splits:
-  - text: "80%探索奖励：恢复10%已消耗耐力并揭示终点"
+  - text: "80%探索奖励"
+  - subIndex: 1
+    text: "恢复10%已消耗耐力并揭示终点"
+  templates:
+  - template: "{0}：{1}"
 - raw: ":;A[_`a{À×Ø÷øĲĴĿŁŉŊſƀǄǍǱǴǶǺȘɐʩʻ˂Ά·Έ΋Ό΍Ύ΢ΣϏϐϗϚϛϜϝϞϟϠϡϢϴЁЍЎѐёѝў҂ҐӅӇӉӋӍӐӬӮӶӸӺԱ՗ՙ՚աևא׫װ׳ءػفًٱڸںڿۀۏې۔ەۖۥۧअऺऽाक़ॢঅ঍এ঑ও঩প঱ল঳শ঺ড়৞য়ৢৰ৲ਅ਋ਏ਑ਓ਩ਪ਱ਲ਴ਵ਷ਸ਺ਖ਼੝ਫ਼੟ੲੵઅઌઍ઎એ઒ઓ઩પ઱લ઴વ઺ઽાૠૡଅ଍ଏ଑ଓ଩ପ଱ଲ଴ଶ଺ଽାଡ଼୞ୟୢஅ஋எ஑ஒ஖ங஛ஜ஝ஞ஠ண஥ந஫மஶஷ஺అ఍ఎ఑ఒ఩పఴవ఺ౠౢಅ಍ಎ಑ಒ಩ಪ಴ವ಺ೞ೟ೠೢഅ഍എ഑ഒഩപഺൠൢกฯะัาิเๆກ຃ຄ຅ງຉຊ຋ຍຎດຘນຠມ຤ລ຦ວຨສຬອຯະັາິຽ຾ເ໅ཀ཈ཉཪႠ჆აჷᄀᄁᄂᄄᄅᄈᄉᄊᄋᄍᄎᄓᄼᄽᄾᄿᅀᅁᅌᅍᅎᅏᅐᅑᅔᅖᅙᅚᅟᅢᅣᅤᅥᅦᅧᅨᅩᅪᅭᅯᅲᅴᅵᅶᆞᆟᆨᆩᆫᆬᆮᆰᆷᆹᆺᆻᆼᇃᇫᇬᇰᇱᇹᇺḀẜẠỺἀ἖Ἐ἞ἠ὆Ὀ὎ὐ὘Ὑ὚Ὓ὜Ὕ὞Ὗ὾ᾀ᾵ᾶ᾽ι᾿ῂ῅ῆ῍ῐ῔ῖ῜ῠ῭ῲ῵ῶ´Ω℧Kℬ℮ℯↀↃ〇〈〡〪ぁゕァ・ㄅㄭ一龦가힤"
   splits:
   - text: "一龦"
@@ -2141,58 +2161,76 @@
   - subIndex: 1
     text: "获得70%门派加成效果"
   - subIndex: 2
-    text: "新增门派功能："
+    text: "新增门派功能"
   - subIndex: 3
     text: "藏经阁"
   - subIndex: 4
-    text: "编纂秘籍：整合"
+    text: "编纂秘籍"
   - subIndex: 5
-    text: "抄录"
+    text: "整合"
   - subIndex: 6
-    text: "默写"
+    text: "抄录"
   - subIndex: 7
-    text: "疗伤室"
+    text: "默写"
   - subIndex: 8
-    text: "坐诊：替同门治疗伤病"
+    text: "疗伤室"
   - subIndex: 9
-    text: "祠堂"
+    text: "坐诊"
   - subIndex: 10
-    text: "展厅：放置藏品"
+    text: "替同门治疗伤病"
   - subIndex: 11
-    text: "仓库"
+    text: "祠堂"
   - subIndex: 12
-    text: "门派金库：领取银两"
+    text: "展厅"
   - subIndex: 13
-    text: "制作功能：铸造"
+    text: "放置藏品"
   - subIndex: 14
+    text: "仓库"
+  - subIndex: 15
+    text: "门派金库"
+  - subIndex: 16
+    text: "领取银两"
+  - subIndex: 17
+    text: "制作功能"
+  - subIndex: 18
+    text: "铸造"
+  - subIndex: 19
     text: "炮制"
   templates:
-  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}\n♦({3}){4}/{5}/{6}\n♦({7}){8}\n♦({9}){10}\n♦({11}){12}\n♦{13}/{14}</color></i>"
+  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}：\n♦({3}){4}：{5}/{6}/{7}\n♦({8}){9}：{10}\n♦({11}){12}：{13}\n♦({14}){15}：{16}\n♦{17}：{18}/{19}</color></i>"
 - raw: "<b>可以不参加门派会议</b>\n获得100%门派加成效果\n<i><color=#696969>新增门派功能：\n♦(藏经阁)管理藏书：调整藏经阁\n♦(仓库)管理售价：调整仓库售价\n♦(资源点)进攻：进攻资源点\n♦建造模式：迁移建筑/升级道路</color></i>"
   splits:
   - text: "可以不参加门派会议"
   - subIndex: 1
     text: "获得100%门派加成效果"
   - subIndex: 2
-    text: "新增门派功能："
+    text: "新增门派功能"
   - subIndex: 3
     text: "藏经阁"
   - subIndex: 4
-    text: "管理藏书：调整藏经阁"
+    text: "管理藏书"
   - subIndex: 5
-    text: "仓库"
+    text: "调整藏经阁"
   - subIndex: 6
-    text: "管理售价：调整仓库售价"
+    text: "仓库"
   - subIndex: 7
-    text: "资源点"
+    text: "管理售价"
   - subIndex: 8
-    text: "进攻：进攻资源点"
+    text: "调整仓库售价"
   - subIndex: 9
-    text: "建造模式：迁移建筑"
+    text: "资源点"
   - subIndex: 10
+    text: "进攻"
+  - subIndex: 11
+    text: "进攻资源点"
+  - subIndex: 12
+    text: "建造模式"
+  - subIndex: 13
+    text: "迁移建筑"
+  - subIndex: 14
     text: "升级道路"
   templates:
-  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}\n♦({3}){4}\n♦({5}){6}\n♦({7}){8}\n♦{9}/{10}</color></i>"
+  - template: "<b>{0}</b>\n{1}\n<i><color=#696969>{2}：\n♦({3}){4}：{5}\n♦({6}){7}：{8}\n♦({9}){10}：{11}\n♦{12}：{13}/{14}</color></i>"
 - raw: "<b>天赋点 {0}</b>"
   splits:
   - text: "天赋点"
@@ -3864,9 +3902,9 @@
   - template: "⟦0⟧{0}"
 - raw: "{0}天赋变化：{1}"
   splits:
-  - text: "天赋变化："
+  - text: "天赋变化"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧"
+  - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}天赋点{1}"
   splits:
   - text: "天赋点"
@@ -3879,14 +3917,14 @@
   - template: "⟦0⟧{0} ⟦1⟧"
 - raw: "{0}失去天赋：{1}"
   splits:
-  - text: "失去天赋："
+  - text: "失去天赋"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧"
+  - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}失去状态：{1}"
   splits:
-  - text: "失去状态："
+  - text: "失去状态"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧"
+  - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}奋起了({1})！"
   splits:
   - text: "奋起了"
@@ -4168,11 +4206,11 @@
   - template: "⟦0⟧{0};EnlightRandomEnmey;⟦1⟧;;♦{1}⟦0⟧{2}\n♦{3}⟦0⟧{4}"
 - raw: "{0}新的练习最高纪录：{1}点"
   splits:
-  - text: "新的练习最高纪录："
+  - text: "新的练习最高纪录"
   - subIndex: 1
     text: "点"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
+  - template: "⟦0⟧{0}：⟦1⟧{1}"
 - raw: "{0}方获胜"
   splits:
   - text: "方获胜"
@@ -4281,9 +4319,9 @@
   splits:
   - text: "武学威力"
   - subIndex: 1
-    text: "武学加成："
+    text: "武学加成"
   templates:
-  - template: "⟦0⟧{0}+⟦1⟧%\n⟦2⟧{1}\n⟦3⟧"
+  - template: "⟦0⟧{0}+⟦1⟧%\n⟦2⟧{1}：\n⟦3⟧"
 - raw: "{0}死而复生，恢复{1}生命/{2}内力/{3}体力/{4}全架势/{4}%行动力。"
   splits:
   - text: "死而复生，恢复"
@@ -4559,9 +4597,9 @@
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}获得状态：{1}[{2}]"
   splits:
-  - text: "获得状态："
+  - text: "获得状态"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧[⟦2⟧]"
+  - template: "⟦0⟧{0}：⟦1⟧[⟦2⟧]"
 - raw: "{0}藏经阁添加了藏书《{1}》。"
   splits:
   - text: "藏经阁添加了藏书《"
@@ -4699,14 +4737,14 @@
   - template: "⟦0⟧{0};SurePerformForMoney;⟦1⟧_⟦2⟧"
 - raw: "{0}领悟了天赋：{1}"
   splits:
-  - text: "领悟了天赋："
+  - text: "领悟了天赋"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧"
+  - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}领悟天赋：{1}"
   splits:
-  - text: "领悟天赋："
+  - text: "领悟天赋"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧"
+  - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}驯服度+{1}%"
   splits:
   - text: "驯服度"
@@ -4736,11 +4774,11 @@
   - template: "⟦1⟧\n{0}⟦2⟧%\n{1}⟦3⟧%\n⟦0⟧"
 - raw: "{1}“{0}”修为尚浅\n切勿自以为是"
   splits:
-  - text: "”修为尚浅"
+  - text: "修为尚浅"
   - subIndex: 1
     text: "切勿自以为是"
   templates:
-  - template: "⟦1⟧“⟦0⟧{0}\n{1}"
+  - template: "⟦1⟧“⟦0⟧”{0}\n{1}"
 - raw: "{1}一席话，\n令我茅塞顿开"
   splits:
   - text: "一席话，"
@@ -4940,21 +4978,21 @@
   - template: "·{0}"
 - raw: "“{0}”之道，博大精深"
   splits:
-  - text: "”之道，博大精深"
+  - text: "之道，博大精深"
   templates:
-  - template: "“⟦0⟧{0}"
+  - template: "“⟦0⟧”{0}"
 - raw: "“{0}”此事，可谓易学难精"
   splits:
-  - text: "”此事，可谓易学难精"
+  - text: "此事，可谓易学难精"
   templates:
-  - template: "“⟦0⟧{0}"
+  - template: "“⟦0⟧”{0}"
 - raw: "“{0}”者奥妙非常，\n非常人能够掌握"
   splits:
-  - text: "”者奥妙非常，"
+  - text: "者奥妙非常，"
   - subIndex: 1
     text: "非常人能够掌握"
   templates:
-  - template: "“⟦0⟧{0}\n{1}"
+  - template: "“⟦0⟧”{0}\n{1}"
 - raw: "♦ 盗窃"
   splits:
   - text: "盗窃"
@@ -5004,13 +5042,13 @@
   - template: "♦{0}\n♦⟦0⟧"
 - raw: "《{0}》新的{2}阅读最高纪录：{1}点"
   splits:
-  - text: "》新的"
+  - text: "新的"
   - subIndex: 1
-    text: "阅读最高纪录："
+    text: "阅读最高纪录"
   - subIndex: 2
     text: "点"
   templates:
-  - template: "《⟦0⟧{0}⟦2⟧{1}⟦1⟧{2}"
+  - template: "《⟦0⟧》{0}⟦2⟧{1}：⟦1⟧{2}"
 - raw: "一个都答不上...;ForceLeaderAnswerQuestion;1"
   splits:
   - text: "一个都答不上..."
@@ -5293,7 +5331,9 @@
   - template: "{0};RefuseTraderFreeItem"
 - raw: "不知#PlayerName#可有耳闻："
   splits:
-  - text: "不知#PlayerName#可有耳闻："
+  - text: "不知#PlayerName#可有耳闻"
+  templates:
+  - template: "{0}："
 - raw: "不知#PlayerName#有何高见，尽管道来。"
   splits:
   - text: "不知#PlayerName#有何高见，尽管道来。"
@@ -6211,7 +6251,7 @@
   - subIndex: 3
     text: "双方将各派战力前"
   - subIndex: 4
-    text: "名的弟子出阵，预计最终战力为："
+    text: "名的弟子出阵，预计最终战力为"
   - subIndex: 5
     text: "想必此战将以"
   - subIndex: 6
@@ -6219,7 +6259,7 @@
   - subIndex: 7
     text: "告终，确认要开战吗？"
   templates:
-  - template: "{0}<b>⟦5⟧%</b>{1}<b>⟦6⟧%</b>{2}\n{3}⟦2⟧{4}\n<b>⟦0⟧⟦7⟧ ⟦3⟧\n⟦1⟧⟦8⟧ ⟦4⟧</b>\n{5}<b>{6}⟦9⟧</b>{7}"
+  - template: "{0}<b>⟦5⟧%</b>{1}<b>⟦6⟧%</b>{2}\n{3}⟦2⟧{4}：\n<b>⟦0⟧⟦7⟧ ⟦3⟧\n⟦1⟧⟦8⟧ ⟦4⟧</b>\n{5}<b>{6}⟦9⟧</b>{7}"
 - raw: "以武论道;EnlightForNpcSpeStart;1"
   splits:
   - text: "以武论道"
@@ -7129,7 +7169,9 @@
   - text: "则为"
 - raw: "创建目标目录失败："
   splits:
-  - text: "创建目标目录失败："
+  - text: "创建目标目录失败"
+  templates:
+  - template: "{0}："
 - raw: "初始上限 {0}/5"
   splits:
   - text: "初始上限"
@@ -7765,9 +7807,9 @@
   splits:
   - text: "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，"
   - subIndex: 1
-    text: "随手将银两收入囊中，随后竟然开口道："
+    text: "随手将银两收入囊中，随后竟然开口道"
   templates:
-  - template: "{0}\n{1}"
+  - template: "{0}\n{1}："
 - raw: "只需修书一封大肆羞辱{0}，便可降低双方之间的关系。\n确认要如此行事吗？"
   splits:
   - text: "只需修书一封大肆羞辱"
@@ -7880,13 +7922,15 @@
   - text: "叶一鸣"
 - raw: "司仪接着道：新郎新娘堂前就位。\n新郎新娘共同走上堂前，只见堂中设一张供桌，\n桌上上供奉着天地君亲师的牌位，后方则悬挂着祖宗神幔"
   splits:
-  - text: "司仪接着道：新郎新娘堂前就位。"
+  - text: "司仪接着道"
   - subIndex: 1
-    text: "新郎新娘共同走上堂前，只见堂中设一张供桌，"
+    text: "新郎新娘堂前就位。"
   - subIndex: 2
+    text: "新郎新娘共同走上堂前，只见堂中设一张供桌，"
+  - subIndex: 3
     text: "桌上上供奉着天地君亲师的牌位，后方则悬挂着祖宗神幔"
   templates:
-  - template: "{0}\n{1}\n{2}"
+  - template: "{0}：{1}\n{2}\n{3}"
 - raw: "叹息"
   splits:
   - text: "叹息"
@@ -9846,7 +9890,7 @@
   - text: "天"
 - raw: "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵"
   splits:
-  - text: "天下大势："
+  - text: "天下大势"
   - subIndex: 1
     text: "门派"
   - subIndex: 2
@@ -9862,7 +9906,7 @@
   - subIndex: 7
     text: "总舵"
   templates:
-  - template: "{0}⟦4⟧⟦0⟧{1} ⟦1⟧{2}⟦4⟧{3} ⟦2⟧{4}⟦4⟧{5} ⟦3⟧{6}/{7}"
+  - template: "{0}：⟦4⟧⟦0⟧{1} ⟦1⟧{2}⟦4⟧{3} ⟦2⟧{4}⟦4⟧{5} ⟦3⟧{6}/{7}"
 - raw: "天下第一"
   splits:
   - text: "天下第一"
@@ -10532,13 +10576,17 @@
   - template: "{0}-{1}:"
 - raw: "实名认证失败，错误代码："
   splits:
-  - text: "实名认证失败，错误代码："
+  - text: "实名认证失败，错误代码"
+  templates:
+  - template: "{0}："
 - raw: "实名认证成功"
   splits:
   - text: "实名认证成功"
 - raw: "实名认证错误代码："
   splits:
-  - text: "实名认证错误代码："
+  - text: "实名认证错误代码"
+  templates:
+  - template: "{0}："
 - raw: "实属侥幸;HideInteractUIOneDay"
   splits:
   - text: "实属侥幸"
@@ -10699,9 +10747,9 @@
   splits:
   - text: "小的向往来行人探听了消息，周遭共有"
   - subIndex: 1
-    text: "件江湖要事发生，分别为："
+    text: "件江湖要事发生，分别为"
   templates:
-  - template: "{0}⟦0⟧{1}\n⟦1⟧。"
+  - template: "{0}⟦0⟧{1}：\n⟦1⟧。"
 - raw: "小的是在这附近耕田种地的农民，\n若少侠想买些粮食药材或是烹饪材料，找小的就对了，保管物美价廉！"
   splits:
   - text: "小的是在这附近耕田种地的农民，"
@@ -11373,7 +11421,7 @@
   - text: "当前不可进攻京城！"
 - raw: "当前最高纪录：{1}点经验\n是否消耗{4}自动练习{0}？\n可得{2}%({3}点)"
   splits:
-  - text: "当前最高纪录："
+  - text: "当前最高纪录"
   - subIndex: 1
     text: "点经验"
   - subIndex: 2
@@ -11385,7 +11433,7 @@
   - subIndex: 5
     text: "点"
   templates:
-  - template: "{0}⟦1⟧{1}\n{2}⟦4⟧{3}⟦0⟧？\n{4}⟦2⟧%(⟦3⟧{5})"
+  - template: "{0}：⟦1⟧{1}\n{2}⟦4⟧{3}⟦0⟧？\n{4}⟦2⟧%(⟦3⟧{5})"
 - raw: "当前用户信息:"
   splits:
   - text: "当前用户信息"
@@ -12302,7 +12350,9 @@
   - text: "扳指"
 - raw: "找不到字典文件："
   splits:
-  - text: "找不到字典文件："
+  - text: "找不到字典文件"
+  templates:
+  - template: "{0}："
 - raw: "承山"
   splits:
   - text: "承山"
@@ -14651,7 +14701,9 @@
   - template: "{0};SaveCrazyNpcHelp"
 - raw: "消耗时间："
   splits:
-  - text: "消耗时间："
+  - text: "消耗时间"
+  templates:
+  - template: "{0}："
 - raw: "消耗耐心"
   splits:
   - text: "消耗耐心"
@@ -16302,11 +16354,13 @@
   - template: "{0}\n{1}\n{2}"
 - raw: "自宅展厅收入：银钱{0} 声望{1}"
   splits:
-  - text: "自宅展厅收入：银钱"
+  - text: "自宅展厅收入"
   - subIndex: 1
+    text: "银钱"
+  - subIndex: 2
     text: "声望"
   templates:
-  - template: "{0}⟦0⟧ {1}⟦1⟧"
+  - template: "{0}：{1}⟦0⟧ {2}⟦1⟧"
 - raw: "自寻死路！;EnterAreaStartFightHaterSpe"
   splits:
   - text: "自寻死路！"
@@ -16554,41 +16608,49 @@
   splits:
   - text: "获得100%门派加成效果"
   - subIndex: 1
-    text: "新增门派功能："
+    text: "新增门派功能"
   - subIndex: 2
     text: "祠堂"
   - subIndex: 3
-    text: "宴会：举办门派宴会"
+    text: "宴会"
   - subIndex: 4
-    text: "仓库"
+    text: "举办门派宴会"
   - subIndex: 5
-    text: "门派仓库：管理门派仓库"
+    text: "仓库"
   - subIndex: 6
-    text: "正厅"
+    text: "门派仓库"
   - subIndex: 7
-    text: "挥师出征：进攻其他区域"
+    text: "管理门派仓库"
+  - subIndex: 8
+    text: "正厅"
+  - subIndex: 9
+    text: "挥师出征"
+  - subIndex: 10
+    text: "进攻其他区域"
   templates:
-  - template: "{0}\n<i><color=#696969>{1}\n♦({2}){3}\n♦({4}){5}\n♦({6}){7}</color></i>"
+  - template: "{0}\n<i><color=#696969>{1}：\n♦({2}){3}：{4}\n♦({5}){6}：{7}\n♦({8}){9}：{10}</color></i>"
 - raw: "获得世外高人指点"
   splits:
   - text: "获得世外高人指点"
 - raw: "获得新任务："
   splits:
-  - text: "获得新任务："
+  - text: "获得新任务"
+  templates:
+  - template: "{0}："
 - raw: "获胜条件：\n{0}击败敌方{1}"
   splits:
-  - text: "获胜条件："
+  - text: "获胜条件"
   - subIndex: 1
     text: "击败敌方"
   templates:
-  - template: "{0}\n⟦0⟧{1}⟦1⟧"
+  - template: "{0}：\n⟦0⟧{1}⟦1⟧"
 - raw: "获胜条件：\n坚持至时序{0}"
   splits:
-  - text: "获胜条件："
+  - text: "获胜条件"
   - subIndex: 1
     text: "坚持至时序"
   templates:
-  - template: "{0}\n{1}⟦0⟧"
+  - template: "{0}：\n{1}⟦0⟧"
 - raw: "莺莺"
   splits:
   - text: "莺莺"
@@ -16898,7 +16960,9 @@
   - text: "解聘"
 - raw: "解锁了新服装："
   splits:
-  - text: "解锁了新服装："
+  - text: "解锁了新服装"
+  templates:
+  - template: "{0}："
 - raw: "解除门客关系{0}"
   splits:
   - text: "解除门客关系"
@@ -18183,9 +18247,9 @@
   - template: "{0}\n{1}"
 - raw: "进入结局：{0}"
   splits:
-  - text: "进入结局："
+  - text: "进入结局"
   templates:
-  - template: "{0}⟦0⟧"
+  - template: "{0}：⟦0⟧"
 - raw: "进招吧"
   splits:
   - text: "进招吧"

@@ -25,45 +25,51 @@
   splits:
   - text: "所有排名均不分先后"
   - subIndex: 1
-    text: "策划："
+    text: "策划"
   - subIndex: 2
-    text: "程序："
+    text: "程序"
   - subIndex: 3
-    text: "美术："
+    text: "美术"
   - subIndex: 4
-    text: "发行：青豆，"
+    text: "发行"
   - subIndex: 5
-    text: "，云起龙骧，小云，谦谦，黄国，狗狗"
+    text: "青豆，"
   - subIndex: 6
-    text: "测试：郑煜，夏田怡静，蒋晟，云起龙骧"
+    text: "，云起龙骧，小云，谦谦，黄国，狗狗"
   - subIndex: 7
-    text: "玩家支持：椰子，"
+    text: "测试"
   - subIndex: 8
-    text: ".玄"
+    text: "郑煜，夏田怡静，蒋晟，云起龙骧"
   - subIndex: 9
-    text: "特别鸣谢"
+    text: "玩家支持"
   - subIndex: 10
-    text: "参与自由模式测试的玩家："
+    text: "椰子，"
   - subIndex: 11
-    text: "椰子"
+    text: ".玄"
   - subIndex: 12
-    text: "奥西法"
+    text: "特别鸣谢"
   - subIndex: 13
-    text: "月下饮江河"
+    text: "参与自由模式测试的玩家"
   - subIndex: 14
-    text: "馒头君"
+    text: "椰子"
   - subIndex: 15
-    text: "河物休"
+    text: "奥西法"
   - subIndex: 16
-    text: "只为遇见你"
+    text: "月下饮江河"
   - subIndex: 17
-    text: "卿卿神"
+    text: "馒头君"
   - subIndex: 18
-    text: "燕四方"
+    text: "河物休"
   - subIndex: 19
+    text: "只为遇见你"
+  - subIndex: 20
+    text: "卿卿神"
+  - subIndex: 21
+    text: "燕四方"
+  - subIndex: 22
     text: "妙手回春海森保"
   templates:
-  - template: "<b>({0})</b>\\n{1}ZPP\\n{2}ZPP\\n{3}TPP\\n\\n{4}Sherry，Ouyi，lele，Lost{5}\\n{6}\\n{7}Dr{8}\\n\\n{9}\\n{10}\\n{11} \\n{12}\\n{13}\\n{14}\\n{15}\\n{16}\\n{17}\\n{18}\\n{19}\\nShades"
+  - template: "<b>({0})</b>\\n{1}：ZPP\\n{2}：ZPP\\n{3}：TPP\\n\\n{4}：{5}Sherry，Ouyi，lele，Lost{6}\\n{7}：{8}\\n{9}：{10}Dr{11}\\n\\n{12}\\n{13}：\\n{14} \\n{15}\\n{16}\\n{17}\\n{18}\\n{19}\\n{20}\\n{21}\\n{22}\\nShades"
 - raw: "<b>中毒</b>\\n-0.5%全属性\\n-0.25%生命上限\\n-0.25%内力上限\\n-0.25%体力上限"
   splits:
   - text: "中毒"
@@ -430,17 +436,17 @@
   - subIndex: 1
     text: "允许"
   - subIndex: 2
-    text: "：允许学习任何新武功"
+    text: "允许学习任何新武功"
   - subIndex: 3
     text: "仅藏经阁"
   - subIndex: 4
-    text: "：只允许学习藏经阁内新武功"
+    text: "只允许学习藏经阁内新武功"
   - subIndex: 5
     text: "禁止"
   - subIndex: 6
-    text: "：禁止学习新武功"
+    text: "禁止学习新武功"
   templates:
-  - template: "♦{0}\\n<b>{1}</b>{2}\\n<b>{3}</b>{4}\\n<b>{5}</b>{6}"
+  - template: "♦{0}\\n<b>{1}</b>：{2}\\n<b>{3}</b>：{4}\\n<b>{5}</b>：{6}"
 - raw: "♦未使用的天赋点会保留到游戏中\\n♦每达成1个成就，可提升2点初始天赋点"
   splits:
   - text: "未使用的天赋点会保留到游戏中"
@@ -472,19 +478,25 @@
   splits:
   - text: "每级对"
   - subIndex: 1
-    text: "门派产生影响："
+    text: "门派产生影响"
   - subIndex: 2
-    text: "加快建筑建造：每月建造数量"
+    text: "加快建筑建造"
   - subIndex: 3
-    text: "，建造消耗-5%，建造速度"
+    text: "每月建造数量"
   - subIndex: 4
-    text: "加快科研：科研消耗-5%，科研速度"
+    text: "，建造消耗-5%，建造速度"
   - subIndex: 5
-    text: "加快弟子晋升：晋升频率+5%，晋升消耗-5%，晋升武学等级"
+    text: "加快科研"
   - subIndex: 6
+    text: "科研消耗-5%，科研速度"
+  - subIndex: 7
+    text: "加快弟子晋升"
+  - subIndex: 8
+    text: "晋升频率+5%，晋升消耗-5%，晋升武学等级"
+  - subIndex: 9
     text: "，招募消耗-5%，月俸消耗"
   templates:
-  - template: "♦{0}AI{1}\\n—{2}+{3}+5%\\n—{4}+5%\\n—{5}+{6}-2.5%"
+  - template: "♦{0}AI{1}：\\n—{2}：{3}+{4}+5%\\n—{5}：{6}+5%\\n—{7}：{8}+{9}-2.5%"
 - raw: "♦消毒可以去除物品所带毒性。"
   splits:
   - text: "消毒可以去除物品所带毒性。"
@@ -692,7 +704,7 @@
   - subIndex: 1
     text: "本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。"
   - subIndex: 2
-    text: "本游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理："
+    text: "本游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理"
   - subIndex: 3
     text: "未满8周岁的用户不能付费购买游戏；8周岁以上的未满16周岁的未成年人用户，不得单次消费超过50元人民币，每月充值消费累计不得超过200元人民币；16周岁以上的未成年人用户，单次消费不得超过100元人民币，每月充值消费累计不得超过400元人民币。"
   - subIndex: 4
@@ -700,7 +712,7 @@
   - subIndex: 5
     text: "本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。"
   templates:
-  - template: "1. {0}\\n\\n2. {1}\\n\\n3. {2}\\n<color=#BC1717>  〇 {3}\\n  〇 {4}</color>\\n\\n4. {5}\\n"
+  - template: "1. {0}\\n\\n2. {1}\\n\\n3. {2}：\\n<color=#BC1717>  〇 {3}\\n  〇 {4}</color>\\n\\n4. {5}\\n"
 - raw: "100天"
   splits:
   - text: "100天"
@@ -1952,11 +1964,11 @@
   - template: "{0}Bug{1}\\n{2}\\n{3} 。"
 - raw: "如果您发现存档丢失或损坏，请查看备份文件夹：\\nC:\\Users\\[用户名] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
   splits:
-  - text: "如果您发现存档丢失或损坏，请查看备份文件夹："
+  - text: "如果您发现存档丢失或损坏，请查看备份文件夹"
   - subIndex: 1
     text: "用户名"
   templates:
-  - template: "{0}\\nC:\\Users\\[{1}] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
+  - template: "{0}：\\nC:\\Users\\[{1}] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
 - raw: "姓..."
   splits:
   - text: "姓..."
@@ -3017,11 +3029,11 @@
   - text: "标记角色"
 - raw: "检测到您为未成年人，敬请注意：\\n\\n本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
   splits:
-  - text: "检测到您为未成年人，敬请注意："
+  - text: "检测到您为未成年人，敬请注意"
   - subIndex: 1
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
   templates:
-  - template: "{0}\\n\\n{1}"
+  - template: "{0}：\\n\\n{1}"
 - raw: "次年，飞龙门掌门赵胤宗于泰山举行会盟大会，"
   splits:
   - text: "次年，飞龙门掌门赵胤宗于泰山举行会盟大会，"
@@ -3039,7 +3051,11 @@
   - text: "正在踏入江湖..."
 - raw: "正是于巴蜀一带小有名气的门派：仙霞派。"
   splits:
-  - text: "正是于巴蜀一带小有名气的门派：仙霞派。"
+  - text: "正是于巴蜀一带小有名气的门派"
+  - subIndex: 1
+    text: "仙霞派。"
+  templates:
+  - template: "{0}：{1}"
 - raw: "此后数年间，天下大乱，百姓流离，奸邪并起，宵小横行。"
   splits:
   - text: "此后数年间，天下大乱，百姓流离，奸邪并起，宵小横行。"
@@ -3157,19 +3173,27 @@
   splits:
   - text: "民心"
   - subIndex: 1
-    text: "低于50：每降低1点减少所有建筑1%生产效率。"
+    text: "低于50"
   - subIndex: 2
-    text: "大于70：生产效率"
+    text: "每降低1点减少所有建筑1%生产效率。"
   - subIndex: 3
-    text: "大于80：生产效率"
+    text: "大于70"
   - subIndex: 4
-    text: "大于90：生产效率"
+    text: "生产效率"
   - subIndex: 5
-    text: "高民心增加委托数量，降低委托难度；低民心减少委托数量，提升委托难度。"
+    text: "大于80"
   - subIndex: 6
+    text: "生产效率"
+  - subIndex: 7
+    text: "大于90"
+  - subIndex: 8
+    text: "生产效率"
+  - subIndex: 9
+    text: "高民心增加委托数量，降低委托难度；低民心减少委托数量，提升委托难度。"
+  - subIndex: 10
     text: "影响攻城战守卫强度。"
   templates:
-  - template: "{0}\\n♦{1}\\n  {2}+10%\\n  {3}+15%\\n  {4}+20%\\n♦{5}\\n♦{6}"
+  - template: "{0}\\n♦{1}：{2}\\n  {3}：{4}+10%\\n  {5}：{6}+15%\\n  {7}：{8}+20%\\n♦{9}\\n♦{10}"
 - raw: "水"
   splits:
   - text: "水"
@@ -3189,19 +3213,27 @@
   splits:
   - text: "治安"
   - subIndex: 1
-    text: "低于50：每降低1点减少所有建筑1%生产效率。"
+    text: "低于50"
   - subIndex: 2
-    text: "大于70：生产效率"
+    text: "每降低1点减少所有建筑1%生产效率。"
   - subIndex: 3
-    text: "大于80：生产效率"
+    text: "大于70"
   - subIndex: 4
-    text: "大于90：生产效率"
+    text: "生产效率"
   - subIndex: 5
-    text: "高治安增加商品数量，降低买卖价格；低治安减少商品数量，提升买卖价格。"
+    text: "大于80"
   - subIndex: 6
+    text: "生产效率"
+  - subIndex: 7
+    text: "大于90"
+  - subIndex: 8
+    text: "生产效率"
+  - subIndex: 9
+    text: "高治安增加商品数量，降低买卖价格；低治安减少商品数量，提升买卖价格。"
+  - subIndex: 10
     text: "影响攻城战守卫人数。"
   templates:
-  - template: "{0}\\n♦{1}\\n  {2}+10%\\n  {3}+15%\\n  {4}+20%\\n♦{5}\\n♦{6}"
+  - template: "{0}\\n♦{1}：{2}\\n  {3}：{4}+10%\\n  {5}：{6}+15%\\n  {7}：{8}+20%\\n♦{9}\\n♦{10}"
 - raw: "治安100"
   splits:
   - text: "治安100"
@@ -3253,7 +3285,11 @@
   - template: "{0}:{1}"
 - raw: "消耗时间：1天"
   splits:
-  - text: "消耗时间：1天"
+  - text: "消耗时间"
+  - subIndex: 1
+    text: "1天"
+  templates:
+  - template: "{0}：{1}"
 - raw: "消耗药引/食材获取毒物"
   splits:
   - text: "消耗药引"
@@ -3290,19 +3326,27 @@
   - text: "游侠"
 - raw: "游戏名称：《龙胤立志传》 批准文号：国新出审〔2025〕100 号 出版物号：ISBN 978-7-498-14483-6\\n著作权人：当涂县皮皮糖软件开发工作室 出版单位：华东师范大学电子音像出版社有限公司"
   splits:
-  - text: "游戏名称：《龙胤立志传》"
+  - text: "游戏名称"
   - subIndex: 1
-    text: "批准文号：国新出审〔2025〕100"
+    text: "《龙胤立志传》"
   - subIndex: 2
-    text: "号"
+    text: "批准文号"
   - subIndex: 3
-    text: "出版物号："
+    text: "国新出审〔2025〕100"
   - subIndex: 4
-    text: "著作权人：当涂县皮皮糖软件开发工作室"
+    text: "号"
   - subIndex: 5
-    text: "出版单位：华东师范大学电子音像出版社有限公司"
+    text: "出版物号"
+  - subIndex: 6
+    text: "著作权人"
+  - subIndex: 7
+    text: "当涂县皮皮糖软件开发工作室"
+  - subIndex: 8
+    text: "出版单位"
+  - subIndex: 9
+    text: "华东师范大学电子音像出版社有限公司"
   templates:
-  - template: "{0} {1} {2} {3}ISBN 978-7-498-14483-6\\n{4} {5}"
+  - template: "{0}：{1} {2}：{3} {4} {5}：ISBN 978-7-498-14483-6\\n{6}：{7} {8}：{9}"
 - raw: "游戏模式"
   splits:
   - text: "游戏模式"
@@ -3659,7 +3703,7 @@
   - subIndex: 1
     text: "江湖翻沸壮士死"
   - subIndex: 2
-    text: "天下大势："
+    text: "天下大势"
   - subIndex: 3
     text: "全局恶名修正"
   - subIndex: 4
@@ -3675,7 +3719,7 @@
   - subIndex: 9
     text: "不可攻击总舵"
   templates:
-  - template: "{0} {1}\\n{2}\\n{3}-20%\\n{4} {5}\\n{6} {7}\\n{8} {9}"
+  - template: "{0} {1}\\n{2}：\\n{3}-20%\\n{4} {5}\\n{6} {7}\\n{8} {9}"
 - raw: "第二名"
   splits:
   - text: "第二名"
@@ -3704,17 +3748,17 @@
   - template: "{0}\\n{1} +10%"
 - raw: "策划： ZPP\\n程序： ZPP\\n美术： TPP\\n\\n如果大侠觉得游戏不错，\\n还请给予好评支持，万分感谢！"
   splits:
-  - text: "策划："
+  - text: "策划"
   - subIndex: 1
-    text: "程序："
+    text: "程序"
   - subIndex: 2
-    text: "美术："
+    text: "美术"
   - subIndex: 3
     text: "如果大侠觉得游戏不错，"
   - subIndex: 4
     text: "还请给予好评支持，万分感谢！"
   templates:
-  - template: "{0} ZPP\\n{1} ZPP\\n{2} TPP\\n\\n{3}\\n{4}"
+  - template: "{0}： ZPP\\n{1}： ZPP\\n{2}： TPP\\n\\n{3}\\n{4}"
 - raw: "策略(快捷键F1)\\n全体自动(快捷键F2)\\n全体手动(快捷键F3)"
   splits:
   - text: "策略"
@@ -3971,13 +4015,13 @@
   - text: "获得物品"
 - raw: "获胜条件：\\n时间3以内击败敌方总舵 五\\n"
   splits:
-  - text: "获胜条件："
+  - text: "获胜条件"
   - subIndex: 1
     text: "时间3以内击败敌方总舵"
   - subIndex: 2
     text: "五"
   templates:
-  - template: "{0}\\n{1} {2}\\n"
+  - template: "{0}：\\n{1} {2}\\n"
 - raw: "菜单"
   splits:
   - text: "菜单"
@@ -4258,13 +4302,13 @@
   - text: "输入代号..."
 - raw: "达成结局： 天下第一\\n统计数据： 9999"
   splits:
-  - text: "达成结局："
+  - text: "达成结局"
   - subIndex: 1
     text: "天下第一"
   - subIndex: 2
-    text: "统计数据："
+    text: "统计数据"
   templates:
-  - template: "{0} {1}\\n{2} 9999"
+  - template: "{0}： {1}\\n{2}： 9999"
 - raw: "返回门派\\n<color=grey>快捷键B</color>"
   splits:
   - text: "返回门派"
@@ -4437,7 +4481,7 @@
   splits:
   - text: "门派功绩"
   - subIndex: 1
-    text: "用途："
+    text: "用途"
   - subIndex: 2
     text: "提升门派地位"
   - subIndex: 3
@@ -4445,7 +4489,7 @@
   - subIndex: 4
     text: "门派仓库兑换物品"
   - subIndex: 5
-    text: "获取："
+    text: "获取"
   - subIndex: 6
     text: "每月门派任务"
   - subIndex: 7
@@ -4453,7 +4497,7 @@
   - subIndex: 8
     text: "获取门派资源"
   templates:
-  - template: "{0}\\n{1}\\n♦{2}\\n♦{3}\\n♦{4}\\n{5}\\n♦{6}\\n♦{7}\\n♦{8}"
+  - template: "{0}\\n{1}：\\n♦{2}\\n♦{3}\\n♦{4}\\n{5}：\\n♦{6}\\n♦{7}\\n♦{8}"
 - raw: "门派功绩已满\\n可在正厅-弟子职位进行晋升"
   splits:
   - text: "门派功绩已满"
@@ -4634,11 +4678,15 @@
   - template: "{0}:aaaaaa"
 - raw: "难度：九死一生\\n难度：九死一生"
   splits:
-  - text: "难度：九死一生"
+  - text: "难度"
   - subIndex: 1
-    text: "难度：九死一生"
+    text: "九死一生"
+  - subIndex: 2
+    text: "难度"
+  - subIndex: 3
+    text: "九死一生"
   templates:
-  - template: "{0}\\n{1}"
+  - template: "{0}：{1}\\n{2}：{3}"
 - raw: "难度难度难度     功绩 999"
   splits:
   - text: "难度难度难度"
@@ -4654,7 +4702,9 @@
   - text: "零"
 - raw: "需要学识：99"
   splits:
-  - text: "需要学识：99"
+  - text: "需要学识"
+  templates:
+  - template: "{0}：99"
 - raw: "非剧情信件30日后自动删除"
   splits:
   - text: "非剧情信件30日后自动删除"
