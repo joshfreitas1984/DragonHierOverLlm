@@ -12,27 +12,13 @@ namespace Tests
         public const string WorkingDirectory = "../../../../Files";
         public const string GameFolder = "G:\\SteamLibrary\\steamapps\\common\\LongYinLiZhiZhuan";
 
-        // This game wraps dynamic placeholder tokens in '#' (e.g. "#PlayerName#"). Their position
-        // can move during translation, so they must be glued into whichever Chinese run they're
-        // touching rather than treated as a fixed fragment boundary - see the "#PlayerName#" note
-        // in tests-translation-workflow.instructions.md. This is opted in here, at the game level,
-        // rather than baked into the shared CompoundFieldSplitter, since another game could just as
-        // easily use '#' as a genuine structural separator.
+        // Game-specific placeholder handling: see docs/gamefilehandling-reference.md.
         private static readonly CompoundFieldSplitterOptions SplitterOptions = new()
         {
-            // '\$?' allows this game's '#$PlayerName#'/'#$SourceInteractName#'/'#$TargetInteractName#'
-            // variants (a leading '$' inside the '#...#' wrapper) in addition to the plain
-            // '#PlayerName#'/'#SourceForceName#' form - '\w' alone doesn't include '$', so without
-            // this the '$'-prefixed tokens weren't recognized as placeholders at all.
             PlaceholderPatterns = [new Regex(@"#\$?\w+#", RegexOptions.Compiled)]
         };
 
-        // Registers this game's LLM-result post-repair hook (see LineValidation.CustomPostRepair)
-        // the first time GameFileHandling is touched - which every workflow test does, since they
-        // all reference GameFileHandling.WorkingDirectory/TextFilesToSplit before kicking off a
-        // translation run. This runs after every LLM call (including each retry/correction round)
-        // and before CheckTransalationSuccessful validates the result, so a known, deterministic
-        // LLM quirk can be fixed here instead of burning a retry round-trip.
+        // Register game-specific translation repair and validation hooks.
         static GameFileHandling()
         {
             LineValidation.CustomPostRepair = RepairKnownLlmQuirks;
@@ -40,12 +26,7 @@ namespace Tests
             LineValidation.CustomColumnValidator = ValidateGameSpecificColumn;
         }
 
-        // Matches an English possessive/contraction suffix the LLM sometimes glues inside a
-        // "#PlaceholderToken#" wrapper instead of after it, e.g. "#PlayerName's#" - the placeholder
-        // itself must stay exactly "#PlayerName#" (or "#$PlayerName#" for this game's '$'-prefixed
-        // variants) for the game engine to substitute it at runtime, so the suffix needs to be moved
-        // outside the closing '#' rather than sent back for a retry. '\$?' mirrors SplitterOptions'
-        // PlaceholderPatterns regex so both token flavors get the same repair.
+        // Repairs possessive/contraction suffixes placed inside placeholder wrappers.
         private static readonly Regex PlaceholderTrailingSuffixRegex =
             new(@"#(\$?\w+)('s|'re|'ve|'ll|'d|'t)#", RegexOptions.Compiled);
 
@@ -56,21 +37,7 @@ namespace Tests
 
             llmResult = PlaceholderTrailingSuffixRegex.Replace(llmResult, "#$1#$2");
 
-            // The LLM occasionally corrupts a placeholder's '#...#' wrapper instead of leaving it
-            // untouched - ranging from dropping just the '$' (e.g. raw "#$PlayerName#" coming back
-            // as "#PlayerName#" - confirmed on a real PlotData.csv row: "各位，给我把项问天和
-            // #$PlayerName#这两个贼子拿下！" translated with the token reduced to "#PlayerName#"),
-            // to dropping one of the two '#' delimiters, to stripping the wrapper entirely and
-            // just translating/copying the bare identifier as if it were an ordinary name (e.g.
-            // raw "是#PlotTargetInteractName0#在无理取闹" coming back as "It's
-            // PlotTargetInteractName0 being unreasonable" - note the very next row's near-identical
-            // "#PlotTargetInteractName1#" was translated correctly in the same batch, confirming
-            // this is a nondeterministic LLM quirk rather than a systematic inability to handle the
-            // token). These compound identifiers (PlayerName, PlotTargetInteractName0,
-            // SourceInteractName, etc.) are distinctive enough that any partially-corrupted
-            // appearance in an English translation is unambiguous evidence of a mangled wrapper,
-            // not a coincidental collision with real English text - safe to repair deterministically
-            // instead of burning repeated retries on it.
+            // Restore recognizable tokens when the LLM drops a '$', delimiter, or wrapper.
             foreach (Match match in GamePlaceholderTokenRegex.Matches(raw))
             {
                 if (llmResult.Contains(match.Value))
@@ -78,49 +45,21 @@ namespace Tests
 
                 var coreName = match.Value.Trim('#').TrimStart('$');
 
-                // Matches the identifier with an optionally-missing '$' and/or either '#'
-                // delimiter (or both, i.e. the fully bare identifier) - '\b' around the core name
-                // itself prevents matching mid-word (e.g. "PlayerNameSuffix") even when the
-                // surrounding '#'/'$' are absent. Any match here other than the fully-correct
-                // token (already excluded above) is a corruption to repair.
+                // Optional delimiters and word boundaries avoid matching a larger identifier.
                 var corruptedTokenRegex = new Regex($@"#?\$?\b{Regex.Escape(coreName)}\b#?", RegexOptions.Compiled);
                 var corruptedMatch = corruptedTokenRegex.Matches(llmResult)
                     .Cast<Match>()
                     .FirstOrDefault(m => m.Value != match.Value);
 
                 if (corruptedMatch != null)
-                    // Remove/Insert (not Regex.Replace) so the replacement text - which may itself
-                    // contain '$' (e.g. "#$PlayerName#") - is inserted literally rather than being
-                    // interpreted as a regex substitution pattern.
+                    // Insert literally because a valid replacement token may contain '$'.
                     llmResult = llmResult.Remove(corruptedMatch.Index, corruptedMatch.Length).Insert(corruptedMatch.Index, match.Value);
             }
 
             return llmResult;
         }
 
-        // Per-file, per-column structural characters that can NEVER legitimately appear in a
-        // translated fragment - see LineValidation.CustomColumnRepair's doc comment in
-        // FanslationStudio.LlmKit for why this lives here (game-specific) rather than as a generic
-        // repair in the shared library. CompoundFieldSplitter.Reconstruct only ever substitutes a
-        // translated fragment positionally into "{n}" placeholders inside a fixed literal template
-        // (see that method), so the template's own delimiter shape can never be corrupted by
-        // whatever a fragment contains - the ONLY way structural corruption can happen is if a
-        // fragment's own translated text contains one of the characters the template already uses
-        // as a real separator elsewhere in the cell, since the game's own runtime CSV/choice parser
-        // can't tell the difference between the two once they're substituted into the same string.
-        //
-        // PlotData.csv column 9 (选项/Choice): CompoundFieldSplitter keeps '|' (separates multiple
-        // choice-options in one cell) and ';' (separates choiceText;callFuc;callParam;... within
-        // one option - see GameDataController.SetChoiceDataTexts/SinglePlotChoiceData..ctor) as
-        // literal template text, so a raw choiceText fragment for this column is always a single
-        // isolated Chinese run with zero '|'/';' in it - there is no legitimate reason for either
-        // character to appear in its translation. That means, unlike most translation-quality
-        // problems, this one can be fixed deterministically rather than merely detected: strip any
-        // '|'/';' the LLM introduces before the result is ever validated or saved, preventing the
-        // desync in SetChoiceDataTexts's indexing at the source instead of relying on a retry loop
-        // to eventually avoid it (the crash class documented in
-        // tests-translation-workflow.instructions.md). Restricted to this exact file+column so a
-        // legitimate '|'/';' elsewhere is never touched.
+        // PlotData column 9 repair details: docs/gamefilehandling-reference.md.
         private static readonly char[] PlotChoiceStructuralDelimiters = ['|', ';'];
 
         private static string RepairGameSpecificColumn(TextFileToSplit? textFile, int? column, string raw, string result)
@@ -134,20 +73,10 @@ namespace Tests
             return result;
         }
 
-        // Backstop for ValidateGameSpecificColumn/RepairGameSpecificColumn: with the repair above in
-        // place this should never actually trigger for PlotData.csv column 9 any more (the repair
-        // already strips the only characters this checks for before validation ever runs), but it's
-        // kept as defense-in-depth in case a future change to the repair/decompose logic causes a
-        // count mismatch to slip through undetected.
+        // Defense-in-depth delimiter validation for PlotData column 9.
         private static readonly char[] PlotChoiceValidationDelimiters = PlotChoiceStructuralDelimiters;
 
-        // Applies to every file/column (unlike the PlotData.csv-scoped check below) - the built-in
-        // placeholder-preservation check in LineValidation.CheckTransalationSuccessful only guards
-        // curly-brace "{0}"-style placeholders (LineValidation.PlaceholderMatchPattern); it has no
-        // awareness of this game's '#PlayerName#'/'#$SourceInteractName#'/'#$TargetInteractName#'
-        // tokens at all, so without this an LLM silently dropping the whole token (or just its '$')
-        // would pass validation unnoticed. One generic regex covers both the plain and '$'-prefixed
-        // forms (mirrors SplitterOptions.PlaceholderPatterns) - no per-token special casing needed.
+        // Preserve this game's #...# placeholders; see docs/gamefilehandling-reference.md.
         private static readonly Regex GamePlaceholderTokenRegex = new(@"#\$?\w+#", RegexOptions.Compiled);
 
         private static string? ValidateGameSpecificColumn(TextFileToSplit textFile, int? column, string raw, string result)
@@ -179,295 +108,133 @@ namespace Tests
 
         public static readonly TextFileToSplit[] TextFilesToSplit = [
             new() {Path = "AchievementData.csv", PackageOutput = true },
-            // Column 3 (图标 / icon) is a resource path, not user-facing text - never translate it.
-            new() {Path = "AreaData.csv", PackageOutput = true, SkipColumns = [3] },
+            // Skip-column rationale: docs/gamefilehandling-reference.md. Column 2 (类别/Category)
+            // is exact-matched against the hardcoded literals "城市"/"村镇"/"门派" in
+            // GameDataController's AreaData load loop - translating it breaks that check.
+            new() {Path = "AreaData.csv", PackageOutput = true, SkipColumns = [2, 3] },
             new() {Path = "ArmorData.csv", PackageOutput = true },
             //new() {Path = "BookTypeIconData.csv", PackageOutput = true },
-            new() {Path = "BuildingData.csv", PackageOutput = true },
+            // Columns 8/9/10/12 (每月产出/每月维护/加成/升级消耗 - Monthly production/
+            // maintenance/Bonus/Upgrade consumption) are all Label<sign><number> cells matched via
+            // String.Contains/String.Replace against a fixed resource-name list (and, for column
+            // 10, also against forceSpeAddDataBase's label list) in GameDataController's
+            // BuildingData load loop. Column 11 (增加效率/Increase efficiency) stores its
+            // label half as AreaBuildingRateChange.targetBuildingName, a building-name lookup key.
+            // Translating any of these breaks the corresponding lookup.
+            new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [8, 9, 10, 11, 12] },
             new() {Path = "FoodData.csv", PackageOutput = true },
-            // Columns 9 (武功专长/Combat specialty, e.g. "轻功;刀法;射术") and 10 (技艺专长/Craft
-            // specialty) are ';'-separated label lists, and column 11 (特色物品/Signature item,
-            // e.g. "珍宝:1.5") is a ':'-separated Label:Number cell - all three are cross-
-            // referenced by exact string lookup against fixed internal category/resource-type
-            // dictionaries inside GameDataController's ForceData.csv loader (confirmed via
-            // decompiling GameDataController with Converter --filter "GameDataController" - the
-            // loader splits each cell and calls the same dictionary-lookup helper used for
-            // ResourcePointTypeData.csv's "资源" column). This is the same label-cross-reference
-            // hazard as HeroTagData.csv's "效果" column and KungFuData.csv's columns 7/8/13 (see
-            // dragonheirplugin.instructions.md's "CONFIRMED root cause" section) - translating
-            // these labels breaks the lookup, which falls back to a default/invalid index that
-            // later gets used to index a small fixed-size collection elsewhere in the UI (observed
-            // as an uncaught ArgumentOutOfRangeException in HandBookMenuController.ShowForceSkill,
-            // reached via the faction handbook screen). Never translate these columns.
-            new() {Path = "ForceData.csv", PackageOutput = true, SkipColumns = [9, 10, 11] },
-            new() {Path = "ForceSpeAddDataBase.csv", PackageOutput = true },
+            // Column 2 (行事风格/Operating style) is exact-matched against the hardcoded literal
+            // "中庸" in ForceData.cs (String.Equals(this.forceStyle,"中庸",0)) to drive sect
+            // behavior - translating it breaks that check, so it must stay raw alongside the
+            // existing lookup/routing columns.
+            new() {Path = "ForceData.csv", PackageOutput = true, SkipColumns = [1, 2, 9, 10, 11] },
+            // Lookup-key column; see docs/gamefilehandling-reference.md.
+            new() {Path = "ForceSpeAddDataBase.csv", PackageOutput = true, SkipColumns = [1] },
             new() {Path = "HeroNatureTalkText.csv", PackageOutput = true },
             new() {Path = "HeroSpeTalkText.csv", PackageOutput = true },
-            // Column 4 (效果 / effect: e.g. "力道潜力+5;力道+5") is a Label<sign><number> cell
-            // whose Label half is looked up by GameDataController.StringToSpeAddData via an exact
-            // String.Equals match against ForceSpeAddDataBase.csv's (also translated) label text -
-            // translating both files independently can produce mismatched label wording, which
-            // either silently fails the lookup (logged, harmless) or matches the wrong entry and
-            // then throws an uncaught FormatException in Single.Parse, aborting the rest of
-            // GameDataController.LoadAllGameData entirely (see dragonheirplugin.instructions.md's
-            // "CONFIRMED root cause" section). Never translate this column.
-            new() {Path = "HeroTagData.csv", PackageOutput = true, SkipColumns = [4] },
+            // Every column skipped, including column 1 (名称/Name) - that column is itself the
+            // exact-match lookup key SpeHeroData.csv's raw (untranslated) 标签/Tags column is
+            // compared against via GameDataController.GetTagID, so it isn't real player-facing
+            // text and must stay raw too (see docs/gamefilehandling-reference.md and
+            // docs/skipcolumns-stringtospeadddata-family.md). Its actual display text is captured
+            // separately for translation via DynamicStringColumnSources below.
+            new() {Path = "HeroTagData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
             new() {Path = "HorseData.csv", PackageOutput = true },
             new() {Path = "InnData.csv", PackageOutput = true },
-            // Columns 7 (修炼效果/Training effect), 8 (运功效果/Skill effect), and 13
-            // (使用特效/Use special effects) are all Label<sign><number>;Label<sign><number>;...
-            // compound cells, e.g. "内功1;经脉1", "生命上限20;内力上限20;内功4;智力4;经脉4", and
-            // "流血0.08" - each ';'-separated label is cross-referenced by exact String.Equals
-            // against forceSpeAddDataBase/speAddDataBase (built independently from
-            // ForceSpeAddDataBase.csv/SpeAddDataBase.csv, which we also translate) inside
-            // GameDataController.StringToSpeAddData, called from LoadSkillData for every
-            // KungFuData.csv/SummonKungFuData.csv row (confirmed via decompiling GameDataController
-            // with Converter --filter "GameDataController" - LoadSkillData.c calls
-            // StringToSpeAddData on columns 7, 8, AND 0xd/13 unconditionally). Column 13 is the one
-            // that actually crashed a real playtest (see below) - columns 7/8 are always empty in
-            // this game's actual CSV data, so they're harmless in practice, but are still skipped
-            // since the game code treats them identically and there's no guarantee some rows won't
-            // populate them. This is the exact same label-cross-reference hazard as HeroTagData.csv's
-            // "效果" column and ResourcePointTypeData.csv's columns 2-4 (see
-            // dragonheirplugin.instructions.md's "CONFIRMED root cause" section) - translating the
-            // label text here independently from ForceSpeAddDataBase.csv/SpeAddDataBase.csv risks
-            // the two ending up worded differently, which either fails the lookup harmlessly
-            // (logged "StringToSpeAddData Error: ..." - the vanilla no-op case already seen in
-            // BepInEx logs) or - observed via Player.log after a real playtest, on column 13 -
-            // crashes GameDataController.LoadAllGameData outright with an uncaught
-            // ArgumentException ("oldValue is the empty string") inside StringToSpeAddData's
-            // regex-label-stripping step when a translated label's Chinese text got reduced to
-            // nothing. Never translate these columns.
-            //
-            // Columns 9 (威力系数/Power ratio) and 10 (修炼需求/Cultivation requirement) are a
-            // SEPARATE but analogous hazard: both are also Label<number>[;Label<number>...] cells
-            // (e.g. "内功10", "轻功5") but are fed through GameDataController.StringToAttriRatio
-            // instead of StringToSpeAddData - it splits on ';', regex-strips the label text from
-            // each piece, then calls Single.Parse on whatever's left. Unlike StringToSpeAddData
-            // (which catches the lookup failure and only logs "StringToSpeAddData Error: ..."),
-            // StringToAttriRatio has NO try/catch around Single.Parse - if the label text doesn't
-            // get fully stripped (near-certain once it's been translated to English, since the
-            // regex targets the original Chinese label text), Single.Parse throws an uncaught
-            // FormatException that kills LoadAllGameData with no exception logged to
-            // BepInEx/LogOutput.log (only visible in Player.log) - confirmed via a real playtest
-            // after the PlotData.csv column-9 fix let the load sequence progress this far. Must
-            // stay untranslated for the same reason as columns 7/8/13.
-            new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [7, 8, 9, 10, 13] },
+            // Structured lookup-key columns; see docs/gamefilehandling-reference.md and
+            // docs/spehero-relationship-and-skillfocus-crashes.md (column 3/Name is exact-matched
+            // by GameDataController.GetSkillID against SpeHeroData.csv column 13's raw skill names).
+            // Columns 17/18 (攻击架势/防御架势, Attack/Defense stance) are parsed by
+            // PartPostureData's ctor via String.Contains against a fixed body-part vocabulary.
+            // Column 23 (特效/Special effects) stores each fragment's label half as
+            // SkillSpeEffectData.speName, exact-matched via String.Equals and used to build a
+            // Resources.Load("SpeEffect/"+speName) asset path (BattleController.CreateSpeEffect).
+            // Column 24 (使用武器/Use weapons) is exact-matched via the same FUN_1817ff280
+            // dictionary lookup used elsewhere and concatenated into a
+            // Resources.Load("武器/"+weaponName) asset path (HeroData.SetHeroWeapon/SetSkillWeapon).
+            // Column 21 (动作/Action) is animationName, passed to SkeletonData.FindAnimation/
+            // AnimationState.SetAnimation - an exact-match Spine animation clip name. Column 25
+            // (伤害顺序/Order of damage dealt) is Enum.Parse'd into skillDamageOrder.
+            new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25] },
             new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
             new() {Path = "MartialClubData.csv", PackageOutput = true },
             new() {Path = "MedData.csv", PackageOutput = true },
-            // Column 0 (类别 / category: 姓/名/男名/女名) is compared verbatim by the game's own
-            // LoadAllGameData routing logic (String.Equals against hardcoded Chinese literals) to
-            // decide which of familyNameDataBase/givenNameDataBase/maleGivenNameDataBase/
-            // femaleGivenNameDataBase a row's names go into - translating it breaks that routing
-            // silently (no crash, but every list stays empty since nothing matches).
+            // Internal routing key; see docs/gamefilehandling-reference.md.
             new() {Path = "NameData.csv", PackageOutput = true, SkipColumns = [0] },
             new() {Path = "ResourcePointData.csv", PackageOutput = true },
-            // Columns 2, 3, and 4 all encode Label<sign><number>/Label+number compound cells whose
-            // Label half is cross-referenced by exact string match against other (also translated)
-            // data tables in GameDataController.LoadAllGameData:
-            //   - Column 2 (资源 / Resources, e.g. "威望+2,药材+1"): each ','-separated item is
-            //     split on '+' and the label looked up against an internal resource-type table.
-            //   - Column 3 (加成 / Bonus, e.g. "技艺经验0.01"): ';'-separated labels matched via
-            //     String.Equals against forceTechDataBase (built from TechDataBase.csv).
-            //   - Column 4 (守城效果 / Defense effect): same StringToSpeAddData label lookup as
-            //     HeroTagData.csv's effect column (see comment there).
-            // All three must stay untranslated - see dragonheirplugin.instructions.md's "CONFIRMED
-            // root cause" section for the LoadAllGameData abort this causes when translated.
+            // Structured lookup-key columns; see docs/gamefilehandling-reference.md.
             new() {Path = "ResourcePointTypeData.csv", PackageOutput = true, SkipColumns = [2, 3, 4] },
             new() {Path = "SkinDataBase.csv", PackageOutput = true, SkipColumns = [2] },
-            new() {Path = "SpeAddDataBase.csv", PackageOutput = true },
-            // Column 18 (关系设定/"Relationship setting", e.g. "朋友:2;亲属:7;仇人:65") is a
-            // Label:ID;Label:ID;... compound cell where each Label (朋友/Friend, 亲属/Relatives,
-            // 仇人/Enemy, 师父/Master, 结拜/Brotherhood by blood) is compared verbatim by the game's
-            // own relationship-setup code to route the paired hero ID into the right
-            // Friends/Relatives/Haters/Teacher/Brothers list on HeroData. Confirmed via a real
-            // playtest: once this column got translated, Unity log showed a wave of non-fatal
-            // "角色关系<TranslatedLabel>未设置" ("Character relationship <label> not set") Debug.Log
-            // messages right after SpeHeroData.csv's override was applied - using the ALREADY-
-            // TRANSLATED English label text embedded in the message, confirming the label lookup
-            // is comparing against a fixed/hardcoded set of Chinese keywords (not another
-            // translated CSV) and silently failing to route the relationship once translated. Same
-            // class of bug as NameData.csv's SkipColumns=[0] (a cell value used as an internal
-            // routing/lookup key, not just displayed) - not fatal like the StringToSpeAddData/
-            // StringToAttriRatio cases, but real data loss (hero relationships never get set up).
-            new() {Path = "SpeHeroData.csv", PackageOutput = true, SkipColumns = [18] },
+            // Lookup-key column; see docs/gamefilehandling-reference.md.
+            // Column 11 (特效价值类别/fightValueType) is exact-matched against "我方"/"敌方"/"伤害"
+            // in HeroSpeAddDataBase.GetDescribe/GetTriggerDescribe/GetTargetDescribe. Columns 3/4
+            // (正面词缀/负面词缀) and 10 (描述) are only concatenated for display, no lookup found.
+            new() {Path = "SpeAddDataBase.csv", PackageOutput = true, SkipColumns = [1, 11] },
+            // Only column 1 (名字/Name) is translated - every other column is a game-parsed
+            // lookup/enum/numeric value (see docs/gamefilehandling-reference.md and
+            // docs/spehero-relationship-and-skillfocus-crashes.md), including column 2
+            // (性别/Gender, exact-matched against 男/女 - confirmed cause of the
+            // GameController.GenerateHeroData ArgumentOutOfRangeException crash at new-game hero
+            // generation when translated).
+            new() {Path = "SpeHeroData.csv", PackageOutput = true, SkipColumns = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
             //new() {Path = "SpeHeroFaceData.csv", PackageOutput = true },
-            new() {Path = "SummonData.csv", PackageOutput = true },
-            // Same column layout/hazard as KungFuData.csv above (both loaded via
-            // GameDataController.LoadSkillData, just with a different summon-skill flag) - columns
-            // 7/8/13 (修炼效果/运功效果/使用特效) are label-cross-reference cells that must stay
-            // untranslated. Column 13 is populated in nearly every row of this file and is what
-            // actually crashed a real playtest (see the comment on KungFuData.csv above). Columns
-            // 9/10 carry the same StringToAttriRatio fatal-FormatException hazard described there
-            // too.
-            new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [7, 8, 9, 10, 13] },
-            new() {Path = "TechDataBase.csv", PackageOutput = true },
+            new() {Path = "SummonData.csv", PackageOutput = true,  SkipColumns = [7]},
+            // Structured lookup-key columns; see docs/gamefilehandling-reference.md.
+            // Structured lookup-key columns; see docs/gamefilehandling-reference.md. Same schema
+            // and shared GameDataController.LoadSkillData loader as KungFuData.csv, so columns
+            // 17/18/21/23/24/25 are unsafe for the same reasons (see its comment above). Column 3
+            // (名字/Name) IS safe here though - GetSkillID's name lookup only scans
+            // kungfuSkillDataBase, not the summon variant, so summon skill names aren't matched
+            // against SpeHeroData.csv column 13 like regular KungFuData.csv names are.
+            new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [1, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25] },
+            // Column 4 (加成对象/Target for buff) is exact-matched via String.Equals against
+            // ForceSpeAddDataBase.name (cross-file lookup key). Column 8 (消耗资源/Consume
+            // resources) goes through the same FUN_1817ff280 name-lookup dictionary used for
+            // force/weapon name resolution elsewhere. Column 1 (名称/Name) is only stored raw.
+            new() {Path = "TechDataBase.csv", PackageOutput = true, SkipColumns = [4, 8] },
             new() {Path = "TipsData.csv", PackageOutput = true },
             new() {Path = "WeaponData.csv", PackageOutput = true },
 
-            // Main one
-            // Column 9 (选项/Choice) is a compound field: '|'-separated choice options, each
-            // further ';'-separated into choiceText;callFuc;callParam;... (see
-            // GameDataController.SetChoiceDataTexts/SinglePlotChoiceData..ctor). CompoundFieldSplitter
-            // already decomposes this correctly on its own - '|' and ';' are plain ASCII separators
-            // it never absorbs into a fragment, so only the individual Chinese choiceText runs get
-            // sent to the LLM and the delimiter structure survives as literal template text. The
-            // real risk isn't the splitting itself, it's the LLM occasionally bleeding a literal
-            // '|' into a translated fragment (e.g. explaining alternatives as "Option A | Option B"),
-            // which would silently add an extra choice-option and desync SetChoiceDataTexts's
-            // indexing - guarded against in LineValidation.CheckTransalationSuccessful's generic
-            // '|' check (see that file) rather than by skipping this column outright.
-            new() {Path = "PlotData.csv", PackageOutput = true },
+            // Main dialogue table; column-specific repair is documented in the reference.
+            // Columns 3/4/5/6/8 are non-narrative asset/routing keys, not display text:
+            // - Column 3 (高亮方/highlight side) exact-matched against "左"/"右"/"无"/"皆".
+            // - Column 4 (背景图片/background image) - background sprite reference.
+            // - Column 5 (背景音乐/background music) is concatenated/passed to
+            //   BGMController.SetPlotBgm as a music asset name.
+            // - Column 6 (播放音效/play sound effect) is concatenated into
+            //   "Sound/SoundEffect/"+value (or "Sound/"+value for "Environment" cases) and passed
+            //   to Resources.Load.
+            // - Column 8 (调用函数/call function) is split on ';'/'-' and dispatched via
+            //   Component.SendMessage(this, functionName, ...) - a reflection-based call by name.
+            // Column 9 (选项/choices) stays translated - it's covered by the CustomColumnRepair/
+            // CustomColumnValidator delimiter-preservation pattern above, not SkipColumns.
+            new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [3, 4, 5, 6, 8] },
 
-            // Hardcoded UI/prefab text baked directly into MonoBehaviour/TMP_Text components
-            // rather than a game-data CSV - see AssetDumperWorkflowTests.DumpChineseTextFromAssets,
-            // which dumps this as one distinct Chinese string per line to
-            // Files/Raw/Dumped/PrefabText/dumpedPrefabText.txt (m_Text/text fields only - every
-            // other field found by that scan goes to the sibling dumpedOtherText.txt instead, which
-            // is diagnostic-only and never fed into this pipeline). Handled by the generic,
-            // game-agnostic FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow instead of the CSV
-            // column-decomposition path above - there's no row/column structure here, each line IS
-            // the whole translatable unit.
+            // Flat prefab-text input; see docs/gamefilehandling-reference.md.
             new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
 
-            // Second, separately-sourced PrefabText file - see DynamicStringOtherTextFields'
-            // doc comment and ExtractDynamicStringCandidatesFromOtherText below.
-            // **Moved 2026-08-28** from the DynamicStringsIL2CPP (fragment/substring) pipeline to
-            // this PrefabText (exact whole-string match) pipeline instead, now that
-            // DragonHeirPlugin/PrefabTextPatches.cs's sink-level TMP_Text.text/UI.Text.text setter
-            // postfix does an EXACT match at [HarmonyPriority(Priority.First)] - strictly safer
-            // for these values than DynamicStringPatches' bare-fragment substring dictionary,
-            // since every value here (name/plotText/describe/etc.) is always assigned to a
-            // component as a complete, non-concatenated string (confirmed per-field via the noise
-            // sampling in DynamicStringOtherTextFields' doc comment), never built by
-            // runtime string concatenation the way DynamicStringsIL2CPP's fragments are. Kept as
-            // its own file (rather than merged into dumpedPrefabText.txt) so it's obvious which
-            // entries came from the offline dumpedOtherText.txt scan vs. AssetDumperWorkflowTests'
-            // primary m_Text/text field scan - the runtime plugin loads every
-            // "dumpedPrefabText*.txt.yaml" file it finds and merges them into one dictionary (see
-            // PrefabTextPatches.LoadDictionary), so this needs no special handling anywhere else.
+            // Additional flat PrefabText source; see docs/gamefilehandling-reference.md.
             new() {Path = "dumpedPrefabTextFromOtherFields.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
 
-            // Hardcoded, runtime-assembled string literal fragments baked directly into IL2CPP
-            // game code (String.Concat/String.Format calls mixing Chinese literals with data).
-            // Candidates are discovered offline/statically via Converter's
-            // --dynamic-string-candidates mode (filters output/_string_map.csv for CJK values - no
-            // game run needed) - see the "dynamic/hardcoded in-code string translation plan" repo
-            // memory and DragonHeirPlugin/DynamicStringPatches.cs. Reviewed candidates are merged
-            // into Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt, a flat list of one distinct
-            // literal fragment per line, e.g. "架势". Handled by the generic
-            // FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow (same flat-list mechanics as
-            // PrefabTextWorkflow, kept as a distinct TextFileType/Workflow pair since the runtime
-            // consumption model differs - see DynamicStringWorkflow's doc comment). The plugin
-            // patches System.String.Concat/Format globally and applies the packaged raw/result
-            // dictionary as a substring replace, so no per-method configuration is needed here.
+            // Flat IL2CPP dynamic-string input; see docs/gamefilehandling-reference.md.
             new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
-            // Second, separately-sourced DynamicStringsIL2CPP file - see
-            // ExtractDynamicStringCandidatesFromColumns/DynamicStringColumnSources below. Kept as
-            // its own file (rather than merged into dynamicStrings.txt) purely so it's obvious
-            // which entries came from reviewed output/_dynamicStrings_candidates.txt (IL2CPP string-map
-            // literals) vs. auto-pulled from CSV
-            // columns - the runtime plugin loads every "dynamicStrings*.txt.yaml" file it finds
-            // and merges them into one dictionary (see DynamicStringPatches.LoadDictionary), so
-            // this needs no special handling anywhere else in the pipeline.
+            // Additional dynamic-string source; see docs/gamefilehandling-reference.md.
             new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
         ];
 
-        // Declares which CSV columns hold whole-phrase display strings (force/sect names, hero
-        // rank/tier tags, etc.) that are known to also get read "raw" by some IL2CPP code path
-        // outside the normal per-column CSV translation (e.g. GameDataController.GetSaveInfo's
-        // save-slot description embeds a force name and a rank tag straight from save data,
-        // bypassing the already-translated ForceData/SpeHeroData lookups entirely - see the
-        // save-slot mixed-language investigation in dragonheirplugin.instructions.md). Without an
-        // explicit whole-phrase dictionary entry for these, DynamicStringPatches' bare
-        // single-character fallback entries (e.g. "弟子" -> "Disciple", "情" -> "Qing") are the
-        // only thing that can match, which mangles any compound word containing that character
-        // (e.g. "外门弟子" -> "外门Disciple", "剧情" -> "剧Qing"). Column indices are 0-based and
-        // match the raw CSV layout under Files/Raw/Dumped/GameData/ (i.e. before any
-        // SkipColumns/decomposition is applied).
+        // Whole-phrase raw display sources; see docs/gamefilehandling-reference.md.
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringColumnSources =
         [
-            // 名字 (name) - force/sect display name, e.g. "仙霞派".
             ("ForceData.csv", [1]),
-            // 职位 (rank/tier tag) - e.g. "外门弟子", "亲传弟子", "掌门", "长老".
             ("SpeHeroData.csv", [5]),
+            ("HeroTagData.csv", [1]),
+            ("KungFuData.csv", [3]),
         ];
 
-        // Confirmed-safe MonoBehaviour field names for the SECOND automated dynamic-string
-        // source below (ExtractDynamicStringCandidatesFromOtherText), sourced from
-        // Files/Raw/Dumped/PrefabText/dumpedOtherText.txt - AssetDumperWorkflowTests.IsPrimaryTextField
-        // only treats "m_Text"/"text" as real displayed UI text, so anything on another field
-        // (e.g. hero-class creation template badges like "异士模板"/"弓手模板" living on a plain
-        // "name" field) is written to dumpedOtherText.txt only and never reaches the translation
-        // pipeline (found 2026-08-27 via an in-game screenshot showing an untranslated badge).
-        // Rather than widen IsPrimaryTextField wholesale (dumpedOtherText.txt mixes real
-        // display text with plenty of internal/asset-only fields on THE SAME field name), each
-        // field here was individually sampled against a real dump (every entry checked for stray
-        // ASCII letters/underscores, a strong signal of an internal identifier rather than
-        // player-facing Chinese text) before being added:
-        //   - "name" (397/397 clean), "eventName" (100/100), "tutorialName" (59/59),
-        //     "showName" (18/18), "bulletName" (18/18), "fullName" (18/18), "jobName" (12/12),
-        //     "spellName" (10/10), "pointName" (1/1), "sourceName" (5/5), "plotName" (5/5) -
-        //     zero suspicious (ASCII-letter/underscore-containing) entries in a real dump, so
-        //     every value on these fields was promoted wholesale.
-        //   - "data" (342/857 suspicious, e.g. "下拉菜单_按钮"/"中型树0") and "targetName"
-        //     (7/28 suspicious - internal "临时:强盗头目&随机;;;事件难度+0.5;-8;;true"-style config
-        //     strings) are BOTH still too noisy even after filtering out the ASCII-suspicious
-        //     entries (e.g. "data"'s remaining 515 "clean" entries still mix real names like
-        //     "万安客栈"/"丐帮" with internal shape/asset names like "三角形"/"人像"/"事件标签") -
-        //     deliberately left OUT of this list rather than risk polluting the dictionary with
-        //     bare-fragment entries for words like "三角形"/"人像" that could then corrupt
-        //     unrelated compounds elsewhere (the exact hazard DynamicStringColumnSources/
-        //     DynamicStringLabelColumnSources above already guard against). If a future
-        //     screenshot confirms a real missing string on "data"/"targetName", add it directly
-        //     to dynamicStrings.txt (populated by reviewing/merging output/_dynamicStrings_candidates.txt,
-        //     not hand-authored) instead of promoting the whole field.
-        //   - Function/parameter-reference fields (callParam, startCallSpeFuc, tutorialSpeFuc,
-        //     clickCallFuc, tutorialEndSpeFuc, triggerTargetID, speEffect) were not even sampled -
-        //     these are plainly internal method/ID references by name, never displayed text.
-        //
-        // 2026-08-27: added "plotText"/"tutorialText"/"choiceText"/"startRemindText"/"describe"/
-        // "eventDescribe"/"jobDescribe" - long-form paragraph/sentence fields living on custom
-        // data classes (SinglePlotData/InnData/EventData-like structures), NOT baked directly onto
-        // a TMP_Text/UI.Text component the way PrefabTextPatches.cs's whole-string load-time scan
-        // expects. Verified via grep against every dumped GameData CSV that none of these values
-        // have a CSV source at all - PrefabTextPatches.cs's own doc comment claiming these fields
-        // "are already populated from the existing CSV workflow" is WRONG for at least these
-        // fields (confirmed empirically, not just for one screenshot bug - do not trust that
-        // comment for any other field without similarly verifying against the CSVs first). Each
-        // sampled for noise the same way as the short name-fields above: plotText (415 total, 3
-        // suspicious - all confirmed legitimate, containing "<color=red>" markup), choiceText
-        // (160/160 clean), describe (247/247 clean), startRemindText (240/240 clean),
-        // eventDescribe (27/27 clean), jobDescribe (12/12 clean), tutorialText (308 total, 7
-        // suspicious - all confirmed legitimate, containing key-name references like
-        // "Shift"/"WSAD"/"Tab" inside "<b>...</b>" tags). Despite being full paragraphs rather
-        // than short labels, at the time this was written the DynamicStrings (substring-replace)
-        // mechanism was believed to be the only viable one for these fields: these values are
-        // assigned to a TMP_Text/UI.Text's .text property well after prefab load, at arbitrary
-        // runtime (e.g. when a plot dialog or tutorial popup actually opens), and
-        // PrefabTextPatches.cs only ever inspected text already baked into a component at
-        // Resources.Load/scene-load time (never re-checking it afterwards), so it would never
-        // have seen these.
-        //
-        // **Superseded 2026-08-28**: PrefabTextPatches.cs now ALSO postfixes TMP_Text.text/
-        // UI.Text.text's SETTERS directly (sink-level, field-agnostic, same mechanism
-        // DynamicStringPatches already used), doing an EXACT whole-string lookup against its own
-        // Replacements dictionary at [HarmonyPriority(Priority.First)] - see that class's "Second,
-        // sink-level patch added 2026-08-28" doc comment. Since every value on these fields is
-        // always assigned as a complete, non-concatenated string (confirmed by the per-field noise
-        // sampling above - none of these are ever built by runtime String.Concat/Format the way
-        // DynamicStringsIL2CPP's fragments are), an EXACT match is strictly safer than
-        // DynamicStringPatches' bare-fragment substring dictionary (no risk of a shorter unrelated
-        // fragment mangling part of an unmatched string), so these fields now feed
-        // dumpedPrefabTextFromOtherFields.txt (a PrefabText-type file, see TextFilesToSplit above)
-        // instead of dynamicStringsFromColumns.txt - see
-        // ExtractDynamicStringCandidatesFromOtherText below. The existing
-        // GamePlaceholderTokenRegex/CheckTransalationSuccessful validation (which runs
-        // unconditionally, not just for CSV columns) still guards against an LLM dropping an
-        // embedded "#PlaceholderToken#" during translation regardless of which pipeline packages
-        // the line.
+        // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.
+        // The allowlist was sampled against real dumps; noisy/internal fields are intentionally absent.
+        // Field selection and exact-match setter rationale: docs/gamefilehandling-reference.md.
         public static readonly string[] DynamicStringOtherTextFields =
         [
             "name", "eventName", "tutorialName", "showName", "bulletName", "fullName",
@@ -476,52 +243,12 @@ namespace Tests
             "eventDescribe", "jobDescribe",
         ];
 
-        // 2026-08-27/28 history: an in-game character-creation screenshot showed
-        // "Initial获得RandomlyWeapon" (raw "初始获得随机武器" only partially translated) - the
-        // value's dumpedOtherText.txt field is "text", reaching the game's UI via
-        // TMP_Text.text/UI.Text.text being SET AT RUNTIME (a dynamically-instantiated list item),
-        // not via the baked prefab value PrefabTextPatches.cs's asset-load scan inspects. A narrow
-        // per-raw-value override list (DynamicStringPrimaryTextOverrides) was added here as a
-        // stopgap to feed these specific values into the DynamicStrings substring-replace
-        // dictionary too. **Superseded 2026-08-28** by a general fix in
-        // DragonHeirPlugin/PrefabTextPatches.cs instead: that class now ALSO postfixes
-        // TMP_Text.text/UI.Text.text's setters (like DynamicStringPatches already did), doing an
-        // EXACT whole-string lookup against its own Replacements dictionary
-        // (dumpedPrefabText.txt.yaml already has a correct whole-phrase entry for any string
-        // AssetDumperWorkflowTests.cs's offline scan found, regardless of whether the component's
-        // .text is set at load time or later at runtime) and running at
-        // [HarmonyPriority(Priority.First)] so it always wins over DynamicStringPatches' bare-
-        // fragment substring postfix on the same setters. This fixes the whole class of "prefab
-        // text set at runtime instead of baked into the prefab" bugs generically, so the
-        // DynamicStringPrimaryTextOverrides stopgap was removed - no per-string overrides needed
-        // going forward.
+        // Runtime setter behavior: docs/gamefilehandling-reference.md.
 
-        // Matches the LABEL portion of a "Label<sign><number>" stat-modifier item (e.g. "内功1",
-        // "威望+2", "技艺经验0.01") - i.e. everything before the first digit or '+'/'-' sign. Used
-        // by DynamicStringLabelColumnSources below for compound cells where the whole cell/item
-        // isn't a stable, repeated piece of vocabulary (the number differs per row) but the label
-        // is - unlike DynamicStringColumnSources' whole-value columns (force names, rank tags),
-        // which are already a single discrete value with no numeric suffix to strip.
+        // Extracts the repeated label from a structured stat modifier.
         private static readonly Regex StatLabelRegex = new(@"^[^\d+\-]+", RegexOptions.Compiled);
 
-        /// <summary>
-        /// Same purpose as DynamicStringColumnSources, but for columns whose cells are compound
-        /// "Label&lt;sign&gt;&lt;number&gt;[;Label&lt;sign&gt;&lt;number&gt;...]" stat/resource
-        /// modifiers (e.g. KungFuData.csv's "内功1;经脉1", ResourcePointTypeData.csv's
-        /// "威望+2,药材+1") rather than a single discrete display value - these are exactly the
-        /// SkipColumns entries in TextFilesToSplit above that are never translated because their
-        /// Label half is cross-referenced by exact string match against another (also translated)
-        /// table, per each SkipColumns comment. Extracting the WHOLE cell/item here would be
-        /// useless (every row has a different number glued to the same label, e.g. "内功1" vs
-        /// "内功4"), so this strips the numeric suffix via StatLabelRegex and keeps only the
-        /// repeated Label vocabulary (e.g. "内功", "威望", "技艺经验") - guarding against the same
-        /// bare-fragment corruption DynamicStringColumnSources targets, in case any of these
-        /// labels are ever displayed raw (e.g. a tooltip built directly from this cell) bypassing
-        /// the translated lookup table this column is intentionally left unlinked from.
-        /// NameData.csv's SkipColumns=[0] ("类别": 姓/名/男名/女名) is deliberately NOT listed here
-        /// - it's a pure internal routing key (which name list a row's names go into), never
-        /// displayed to the player, so there's nothing to translate.
-        /// </summary>
+        /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringLabelColumnSources =
         [
             // 修炼效果/运功效果/威力系数/修炼需求/使用特效 - e.g. "内功1;经脉1", "生命上限20;内力上限20;内功4".
@@ -531,24 +258,15 @@ namespace Tests
             ("ResourcePointTypeData.csv", [2, 3, 4]),
             // 加成效果 - e.g. "伤害0.02", "学识4".
             ("SkinDataBase.csv", [2]),
+            // 每月产出/每月维护/加成/增加效率/升级消耗 - e.g. "威望+10", "银钱+100", "木匠-0.2;石坊-0.2".
+            // Columns 8/9/10/12 match resource names against forceSpeAddDataBase's label list
+            // (AreaBuildingDataBase.GetDescribe concatenates the raw label into the building info
+            // panel); column 11's label is a cross-referenced building name
+            // (AreaBuildingRateChange.targetBuildingName, concatenated by GetAreaBuildRateChangeText).
+            ("BuildingData.csv", [8, 9, 10, 11, 12]),
         ];
 
-        /// <summary>
-        /// Repeatable, config-driven alternative to manually grepping decompiled output for
-        /// compound words that DynamicStringPatches' bare-fragment dictionary would otherwise
-        /// mangle (see DynamicStringColumnSources' doc comment). For each configured
-        /// (CsvFileName, Columns) pair, reads the corresponding raw CSV under
-        /// Files/Raw/Dumped/GameData/, pulls out every distinct non-empty value from the
-        /// specified columns (or, for DynamicStringLabelColumnSources, every distinct Label
-        /// stripped from each ';'/','-separated compound item), and writes any that aren't
-        /// already present in the master dynamicStrings.txt dump (or a previous run of this same
-        /// method) to Files/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt - a flat
-        /// one-entry-per-line dump in the exact same format
-        /// DynamicStringWorkflow.ExportDynamicStringsToCustomFormat expects, so it flows through
-        /// the existing "1c. ExportDynamicStringsIntoTranslated" / "2. MergeFilesIntoTranslated" /
-        /// "6. Package to Game Files" steps unchanged. Safe to re-run at any time (e.g. after
-        /// adding a new source entry) - already-extracted/dumped values are never duplicated.
-        /// </summary>
+        /// <summary>Extracts configured whole values and structured labels idempotently.</summary>
         public static void ExtractDynamicStringCandidatesFromColumns(string workingDirectory)
         {
             var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
@@ -567,8 +285,7 @@ namespace Tests
                 var csvPath = $"{workingDirectory}/Raw/Dumped/GameData/{csvFileName}";
                 if (!File.Exists(csvPath)) return;
 
-                // Skip the header row (row 0) - every configured file here is a plain header+data
-                // CSV, same as the main ExportGameSpecificTextAssetsToCustomFormat path.
+                // Skip the header row.
                 foreach (var line in File.ReadAllLines(csvPath).Skip(1))
                 {
                     if (string.IsNullOrWhiteSpace(line)) continue;
@@ -606,25 +323,7 @@ namespace Tests
             File.AppendAllLines(outputPath, found);
         }
 
-        /// <summary>
-        /// Second automated source feeding the PrefabText pipeline (see TextFilesToSplit's
-        /// "dumpedPrefabTextFromOtherFields.txt" entry) - see DynamicStringOtherTextFields' doc
-        /// comment above for why these specific field names are trusted and what was deliberately
-        /// left out, and for why this now targets the PrefabText (exact-match) pipeline instead of
-        /// DynamicStringsIL2CPP (substring-match). Reads
-        /// Files/Raw/Dumped/PrefabText/dumpedOtherText.txt (produced by
-        /// AssetDumperWorkflowTests.DumpChineseTextFromAssets - a one-off asset scan, not part of
-        /// the numbered pipeline, so this only finds anything new after that scan is re-run),
-        /// keeps every distinct value whose Field is in DynamicStringOtherTextFields, and appends
-        /// any not already present in dumpedPrefabText.txt or a previous run of this method to
-        /// Files/Raw/Dumped/PrefabText/dumpedPrefabTextFromOtherFields.txt - a flat one-entry-per-
-        /// line dump in the exact same format PrefabTextWorkflow.ExportPrefabTextToCustomFormat
-        /// expects, so it flows through the existing "1c. ExportDynamicStringsIntoTranslated" /
-        /// "2. MergeFilesIntoTranslated" / "6. Package to Game Files" steps unchanged. Repeatable/
-        /// idempotent like its DynamicStrings-side siblings - safe to re-run any time (e.g. after
-        /// re-running the asset dumper or adding a new field to the allowlist) without duplicating
-        /// already-extracted values.
-        /// </summary>
+        /// <summary>Extracts allowlisted dumped fields into the exact-match PrefabText input.</summary>
         public static void ExtractDynamicStringCandidatesFromOtherText(string workingDirectory)
         {
             var otherTextPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedOtherText.txt";
@@ -641,13 +340,7 @@ namespace Tests
 
             var allowedFields = new HashSet<string>(DynamicStringOtherTextFields, StringComparer.OrdinalIgnoreCase);
 
-            // Deserialize into a plain Dictionary rather than the DumpedTextEntry record itself -
-            // YamlDotNet's default object node deserializer requires a parameterless constructor
-            // to instantiate an item, which a positional record (Raw, Field) doesn't have
-            // (confirmed via a real run: "Cannot dynamically create an instance of type
-            // 'Tests.DumpedTextEntry'... No parameterless constructor defined"). A Dictionary node
-            // deserializes fine with no such requirement and needs no changes to the shared record
-            // type (used for serialization elsewhere in AssetDumperWorkflowTests).
+            // Use dictionaries because the dumped-entry record has no parameterless constructor.
             var deserializer = YamlHelper.CreateDeserializer();
             var entries = deserializer.Deserialize<List<Dictionary<string, string>>>(File.ReadAllText(otherTextPath)) ?? [];
 
@@ -665,28 +358,7 @@ namespace Tests
             File.AppendAllLines(outputPath, found);
         }
 
-        /// <summary>
-        /// THIRD automated source feeding the same dynamicStringsFromColumns.txt dump. Unlike
-        /// Source 1/2 above (which read pre-dumped, already-committed files), this source shells
-        /// out to the sibling Converter project to regenerate
-        /// Converter/output/_dynamicStrings_candidates.txt FRESH from Converter/output/_string_map.csv
-        /// every single time this method runs (via `dotnet run --no-build --
-        /// --dynamic-string-candidates`, see converter.instructions.md), rather than trusting
-        /// whatever stale copy of that file happens to already be on disk. This exists specifically
-        /// because previously-"missing" phrases (e.g. 随机敌人数量/非本门弟子经验) turned out to be
-        /// entirely a staleness problem - the extraction logic itself was already correct, but nothing
-        /// forced a re-extraction after new game patches changed _string_map.csv, so a stale candidates
-        /// file silently hid genuinely-new strings. Regenerating unconditionally as part of "1c" makes
-        /// that failure mode structurally impossible going forward.
-        ///
-        /// Deliberately forgiving of a not-yet-decompiled environment: if the Converter project or
-        /// its _string_map.csv doesn't exist yet (e.g. a fresh clone where the full IL2CPP decompile
-        /// pipeline hasn't been run), or the regeneration subprocess fails for any reason, this
-        /// silently no-ops rather than failing the whole test run - the other two sources still work
-        /// independently of this one. Like its siblings, safe to re-run any time; already-extracted
-        /// values (from dynamicStrings.txt or a previous run of any of the three source methods) are
-        /// never duplicated.
-        /// </summary>
+        /// <summary>Refreshes IL2CPP string-map candidates and appends new entries idempotently.</summary>
         public static void ExtractDynamicStringCandidatesFromIl2CppStringMap(string workingDirectory)
         {
             var converterDir = Path.GetFullPath(Path.Combine(workingDirectory, "..", "Converter"));
@@ -767,7 +439,6 @@ namespace Tests
                 configByFileName.TryGetValue(file.Name, out var fileConfig);
                 var skipColumns = fileConfig?.SkipColumns ?? [];
 
-                //So far the game uses pure CSV files, so we can just read all lines and split by commas
                 var lines = File.ReadAllLines(file.FullName);
 
                 var foundLines = new List<TranslationLine>();
@@ -781,15 +452,7 @@ namespace Tests
                     var foundSplits = new List<TranslationSplit>();
                     var foundTemplates = new List<FieldTemplate>();
 
-                    // Find Chinese fragments per column. A column may pack several fragments together
-                    // with structural separators (';', '-', '&', '|', etc.) - e.g. BuildingData's
-                    // action column - so we pull out each Chinese run individually and keep everything
-                    // else (ids, delimiters, method names) in a template used to rebuild the cell later.
-                    // Columns that are nothing but a single Chinese fragment (no surrounding structure)
-                    // don't need a template at all - they're recorded as a plain whole-cell split.
-                    // Columns listed in the file's SkipColumns (e.g. AreaData's icon column) are left
-                    // completely untouched - never decomposed at all, regardless of what fragments
-                    // they would otherwise have produced.
+                    // Decompose translatable cells and retain templates for structured cells.
                     for (int i = 0; i < splits.Length; i++)
                     {
                         if (skipColumns.Contains(i))
@@ -859,10 +522,7 @@ namespace Tests
             var passedCount = 0;
             var failedCount = 0;
 
-            // PrefabText/DynamicStringsIL2CPP files have no CSV row/column structure to
-            // reconstruct - ParseCsvRow below would misinterpret their plain-string Raw lines as
-            // CSV cells. Package those through their own generic workflows instead, and only run
-            // the CSV reconstruction loop against genuine RegularDb files.
+            // Flat-text workflows are packaged separately from regular CSV files.
             var csvTextFiles = textFiles
                 .Where(t => t.TextFileType != TextFileType.PrefabText && t.TextFileType != TextFileType.DynamicStringsIL2CPP)
                 .ToArray();
@@ -903,14 +563,7 @@ namespace Tests
                         if (template.Split < 0 || template.Split >= splits.Length)
                             continue;
 
-                        // Never reconstruct a column the file's config says to skip - splits[]
-                        // already holds this column's original raw value from ParseCsvRow(line.Raw)
-                        // above, which is exactly what we want to leave untouched. This guards
-                        // against stale FieldTemplate/TranslationSplit entries left over in
-                        // Files/Converted/*.csv.yaml from before a column was added to
-                        // SkipColumns - without this check, a stale template would still get
-                        // reconstructed here even though ExportGameSpecificTextAssetsToCustomFormat
-                        // no longer produces new templates for skipped columns.
+                        // Preserve skipped columns, including stale converted templates.
                         if (textFileToTranslate.SkipColumns.Contains(template.Split))
                             continue;
 
@@ -961,15 +614,7 @@ namespace Tests
                             if (split.Split < 0 || split.Split >= splits.Length)
                                 continue;
 
-                            // Never touch a column the file's config says to skip - splits[] already
-                            // holds this column's original raw value from ParseCsvRow(line.Raw), which
-                            // is exactly what we want. Assigning split.Text here (as opposed to
-                            // skipping entirely) is unsafe for a compound/multi-fragment column: this
-                            // loop runs once per TranslationSplit sub-fragment, so for a column with
-                            // more than one fragment (e.g. a stale entry left over in
-                            // Files/Converted/*.csv.yaml from before this column was added to
-                            // SkipColumns) it would overwrite splits[] once per fragment, leaving only
-                            // the last fragment's raw text instead of the whole original cell.
+                            // Preserve skipped columns; a stale compound split must not overwrite the cell.
                             if (textFileToTranslate.SkipColumns.Contains(split.Split))
                                 continue;
 

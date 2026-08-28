@@ -5485,7 +5485,7 @@
 - raw: "{0}本门</color>"
   splits:
   - text: "本门"
-    translated: "This Door"
+    translated: "This Sect"
   templates:
   - template: "⟦0⟧{0}</color>"
 - raw: "{0}检定了身上的{1}件珍宝，学识经验增进{2}点。"
@@ -17597,11 +17597,11 @@
 - raw: "本门"
   splits:
   - text: "本门"
-    translated: "This Door"
+    translated: "This Sect"
 - raw: "本门{0}方能设置"
   splits:
   - text: "本门"
-    translated: "This Door"
+    translated: "This Sect"
   - subIndex: 1
     text: "方能设置"
     translated: "Be able to set"

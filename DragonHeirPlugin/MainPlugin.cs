@@ -39,8 +39,7 @@ public class MainPlugin : BasePlugin
         // patched explicitly.
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.AssetBundleLoadAssetPatch));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
-        Harmony.CreateAndPatchAll(typeof(CrashMitigationPatches));
-        Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
+        //Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
         Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
         DynamicStringPatches.PatchAll();
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
@@ -76,53 +75,6 @@ public class MainPlugin : BasePlugin
         else
             Logger.LogError($"Field '{fieldName}' not found in {obj.GetType().Name}.");
     }
-
-    //[HarmonyPatch(typeof(GameTools), nameof(GameTools.ConvertNumberToChineseDate))]
-    //[HarmonyPrefix]
-    //public static bool ConvertNumberToChineseDate_Prefix(int number, ref string __result)
-    //{
-    //    if (number <= 0)
-    //        __result = "0";
-    //    else
-    //        __result = Convert.ToString(number);
-
-    //    return false;
-    //}
-
-    //[HarmonyPatch(typeof(GameTools), nameof(GameTools.ConvertNumberToChineseNoUnit))]
-    //[HarmonyPrefix]
-    //public static bool ConvertNumberToChineseNoUnit_Prefix(int number, ref string __result)
-    //{
-    //    try
-    //    {
-    //        if (number >= 1_000_000_000)
-    //        {
-    //            double billions = number / 1_000_000_000.0;
-    //            __result = $"{billions:0.##}B";
-    //        }
-    //        else if (number >= 1_000_000)
-    //        {
-    //            double millions = number / 1_000_000.0;
-    //            __result = $"{millions:0.##}M";
-    //        }
-    //        else if (number >= 1_000)
-    //        {
-    //            double thousands = number / 1_000.0;
-    //            __result = $"{thousands:0.##}K";
-    //        }
-    //        else
-    //        {
-    //            __result = number.ToString();
-    //        }
-
-    //        return false;
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        Logger.LogError($"Error in ConvertNumberToChineseNoUnit patch: {ex}");
-    //        return true;
-    //    }
-    //}
 
     // GlobalData.ConvertNumToChinese(int input) spells a number out as Chinese numeral text (e.g.
     // "一万二千三百四十五") for display. Skip the original entirely and return a plain,

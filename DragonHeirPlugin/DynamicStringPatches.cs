@@ -157,6 +157,36 @@ internal static class DynamicStringPatches
         public Regex Pattern;
         public string ReplacementPattern;
         public List<string> LiteralSegments;
+
+        // CONFIRMED BUG #4 (2026-08-28, "非This DoorDiscipleExperience+0%" screenshot case,
+        // found AFTER bug #3 above): constraining the placeholder capture to non-CJK (bug #3's
+        // fix) stopped a template from over-matching into unrelated CJK text, but did nothing
+        // to stop it from UNDER-matching - i.e. still successfully matching a SHORT literal
+        // fragment that is itself only part of a longer, more specific whole-phrase dictionary
+        // entry. Confirmed case: template raw "经验{0}%" (literal "经验" + non-CJK capture +
+        // literal "%") legitimately matches the tail of the real runtime string
+        // "非本门弟子经验+0%" (literal "经验" at index 5, capture "+0" is plain ASCII/digits so
+        // bug #3's CJK exclusion does not block it, literal "%" follows) - producing
+        // "非本门弟子Experience+0%". But "非本门弟子经验" (7 chars) is ALSO a complete, more
+        // specific whole-phrase entry in the bare dictionary ("Non-disciple experience points") -
+        // and because ApplyTemplates runs BEFORE ApplyDictionary (required for the ORIGINAL date-
+        // separator bug - see BuildCompiledTemplate's comments - so this order can't just be
+        // reversed globally), the template's partial match consumed "经验" first, permanently
+        // destroying the substring "非本门弟子经验" that the longer dictionary entry needed to
+        // match. ApplyDictionary then fell back to shorter bare fragments ("本门"->"This Sect",
+        // "弟子"->"Disciple"), producing the garbled "非This DoorDiscipleExperience+0%".
+        // Fix: BlockingRawEntries (populated once in PatchAll, not per-call) lists every bare
+        // _dictionary entry that (a) contains one of this template's own LiteralSegments as a
+        // substring and (b) is strictly LONGER than that literal segment - i.e. a dictionary
+        // entry that is a more specific superstring of what this template's literal alone would
+        // match. ApplyTemplates checks, for each individual regex match, whether any
+        // BlockingRawEntries occurrence in the input overlaps that match's span; if so, the
+        // template leaves that occurrence untouched entirely and lets ApplyDictionary's own
+        // longest-first pass translate the whole, more specific phrase instead (the small cost:
+        // the numeric suffix that the template would have translated alongside it, e.g. "+0%",
+        // stays untranslated in that occurrence - acceptable, since avoiding corruption matters
+        // far more than translating every last fragment of a compound label).
+        public List<string> BlockingRawEntries = new();
     }
 
     // Builds a CompiledTemplate from a raw/result pair, e.g. raw "{0}年{1}月{2}日", result
@@ -314,6 +344,20 @@ internal static class DynamicStringPatches
                 })
                 .Where(t => t != null)
                 .ToList();
+
+            // See CompiledTemplate.BlockingRawEntries for why this exists: computed once here
+            // (not per-call) since both _dictionary and _compiledTemplates are already loaded and
+            // fixed for the lifetime of the process.
+            foreach (var template in _compiledTemplates)
+            {
+                template.BlockingRawEntries = _dictionary
+                    .Where(e => !string.IsNullOrEmpty(e.Raw)
+                        && template.LiteralSegments.Any(seg => seg.Length > 0 && e.Raw.Contains(seg) && e.Raw.Length > seg.Length))
+                    .Select(e => e.Raw)
+                    .Distinct()
+                    .ToList();
+            }
+
             MainPlugin.Logger.LogInfo($"[DynamicStringPatches] Loaded {_dictionary.Count} translated fragment(s) and {_templateDictionary.Count} template(s) ({_compiledTemplates.Count} compiled) from '{DictionaryFilePattern}'.");
 
             var harmony = new Harmony("EnglishPatch.DynamicStringPatches");
@@ -535,10 +579,41 @@ internal static class DynamicStringPatches
             if (template.LiteralSegments.Count > 0 && !template.LiteralSegments.All(result.Contains))
                 continue;
 
-            if (template.Pattern.IsMatch(result))
-                result = template.Pattern.Replace(result, template.ReplacementPattern);
+            if (!template.Pattern.IsMatch(result))
+                continue;
+
+            // See CompiledTemplate.BlockingRawEntries (CONFIRMED BUG #4) - captures the text at
+            // the start of this template's pass so per-match overlap checks are computed against
+            // a stable snapshot (Regex.Replace's MatchEvaluator runs against this same original
+            // string for every match before any replacement is written back).
+            var beforeThisTemplate = result;
+            result = template.Pattern.Replace(result, m =>
+                template.BlockingRawEntries.Count > 0 && OverlapsBlockingEntry(beforeThisTemplate, m, template.BlockingRawEntries)
+                    ? m.Value
+                    : m.Result(template.ReplacementPattern));
         }
         return result;
+    }
+
+    // Returns true if any of the template's BlockingRawEntries occurs in `text` at a position
+    // overlapping this specific regex match's span - see CompiledTemplate.BlockingRawEntries for
+    // the full "经验{0}%" vs "非本门弟子经验" motivating case.
+    private static bool OverlapsBlockingEntry(string text, Match match, List<string> blockingRawEntries)
+    {
+        var matchStart = match.Index;
+        var matchEnd = match.Index + match.Length;
+        foreach (var raw in blockingRawEntries)
+        {
+            var idx = text.IndexOf(raw, StringComparison.Ordinal);
+            while (idx >= 0)
+            {
+                var entryEnd = idx + raw.Length;
+                if (idx < matchEnd && entryEnd > matchStart)
+                    return true;
+                idx = text.IndexOf(raw, idx + 1, StringComparison.Ordinal);
+            }
+        }
+        return false;
     }
 
     private static string ApplyDictionary(string input, List<DictionaryEntry> dictionary)

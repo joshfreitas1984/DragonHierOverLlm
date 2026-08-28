@@ -26738,7 +26738,7 @@
 - raw: "本门<b>{0}</b>遭敌对门派{1}袭击，危在旦夕，{2}"
   splits:
   - text: "本门"
-    translated: "This Door"
+    translated: "This Sect"
   - subIndex: 1
     text: "遭敌对门派"
     translated: "Attacked by rival sect"
@@ -32513,7 +32513,7 @@
 - raw: "这门{0}，本就与我的武功路数不符。\n如今将其遗忘，正好腾出心力来修习其他武学！"
   splits:
   - text: "这门"
-    translated: "This door"
+    translated: "This Sect"
   - subIndex: 1
     text: "，本就与我的武功路数不符。"
     translated: ",This doesn't align with my martial arts style."

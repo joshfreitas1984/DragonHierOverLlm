@@ -8,8 +8,12 @@ applyTo: "Tests/**"
 > `FanslationStudio.LlmKit`'s own `.github/copilot-instructions.md` if the change touches shared
 > Line/Split/Template types or `CompoundFieldSplitter`) — these are the primary source of truth.
 > Keep this file short — it's auto-injected into context on every `Tests/**` edit. Put detailed
-> bug-investigation narratives/case studies in [`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md)
-> instead (read on-demand, not auto-loaded), and only summarize the current-state rule here.
+> bug-investigation narratives/case studies in a topic file under
+> [`Tests/docs/`](../../Tests/docs/) instead (read on-demand, not auto-loaded, indexed by
+> [`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md)), and only summarize the current-state
+> rule here. **Batch write-backs**: during a task, jot scratch notes in session memory as you find
+> things — write ONE consolidated update (a new/extended `Tests/docs/*.md` file + this file's
+> summary + a one-line index entry) at the end of the task, not after every individual fix.
 
 ## What this project actually is
 
@@ -93,54 +97,15 @@ files use, so no game process, Harmony, or IL2CPP-awareness is needed to read th
   `monoBehavioursSkipped` count in the test output before concluding "there's nothing there"; if it
   is high (or `GameAssembly.dll`/`global-metadata.dat` weren't found), the scan never actually
   looked at that text at all.
-- **Confirmed on a real run (2026-08-24): `otherAssetsSkipped` vastly outnumbered
-  `monoBehavioursSkipped`** (40,489 vs 12,458 out of ~52,947 assets, 0 strings found) — meaning the
-  dominant failure wasn't `MonoBehaviour`/Cpp2IL resolution at all, it was that this release build
-  strips type trees from **every** asset class (`TypeTreeEnabled == false`), and with no
-  `classdata.tpk` loaded, built-in engine types (`GameObject`, `Transform`, `Texture2D`, etc.) have
-  no `ClassDatabase` to describe their layout either — `GetBaseField` fails on those just as hard
-  as on `MonoBehaviour`. A `classdata.tpk` matching Unity `2020.3.48f1` (the version this game uses
-  per `converter.instructions.md`) was needed on top of the `Cpp2IlTempGenerator` MonoBehaviour
-  fix. **Resolved**: sourced `classdata.tpk` from the `nesrak1/UABEA` release (not
-  `nesrak1/AssetsTools.NET`'s own releases — those don't ship one), placed at `Tests/classdata.tpk`
-  — this alone dropped `otherAssetsSkipped` from 40,489 to 2.
-- **`Samboy063.LibCpp2IL` NuGet version pin is load-bearing — do not bump without re-verifying.**
-  `AssetsTools.NET.Cpp2IL` 3.0.4's nuspec only declares a *minimum* dependency on
-  `Samboy063.LibCpp2IL >= 2022.0.7.2`, so plain restore picks the wrong version and MonoBehaviour
-  resolution fails 100% of the time with one of two different runtime errors depending on which
-  auto-resolved version you land on:
-  - `2022.0.7.2` (and any older 2021.x/2022.0.x) predates LibCpp2IL's switch to
-    `AssetRipper.Primitives.UnityVersion`, so `LibCpp2IlMain` has no
-    `Initialize(byte[], byte[], AssetRipper.Primitives.UnityVersion)` overload at all →
-    `Method not found: ...LibCpp2IlMain.Initialize(...)`.
-  - Any `2022.1.0-pre-release.N` from N=15 onward (nuget.org) — or any unofficial
-    `2022.1.0-development.NNNN` build that may already be sitting in the local NuGet cache from an
-    unrelated prior restore, which is **not published on nuget.org at all** (verified via both the
-    `/v3/registration5-gz-semver2/samboy063.libcpp2il/index.json` and legacy
-    `/v2/package-versions` endpoints, with and without `includePrerelease`) — comes from
-    LibCpp2IL's later `LibCpp2IlContext` refactor, where `LibCpp2IlMain.MetadataVersion` (and
-    `.Initialize`, `.TheMetadata`, etc.) became `[Obsolete]` *properties* delegating to a context
-    object instead of plain static fields. `AssetsTools.NET.Cpp2IL.dll` 3.0.4's IL still does a
-    direct field access (`ldsfld`) against `LibCpp2IlMain.MetadataVersion`, so these throw
-    `Field not found: 'LibCpp2IL.LibCpp2IlMain.MetadataVersion'` for every MonoBehaviour instead.
-  - **The correct, officially-published version is `2022.1.0-pre-release.13`** (paired with
-    `AssetRipper.Primitives 2.1.0`, per its nuspec) — confirmed by fetching
-    `LibCpp2IlMain.cs` at that exact git tag on `SamboyCoding/Cpp2IL` and verifying it has *both*
-    the 3-arg `Initialize(byte[], byte[], UnityVersion)` overload *and* still declares
-    `MetadataVersion` as `public static float MetadataVersion = 24f;` (a real field, not yet
-    refactored to the obsolete-property/context model). This is pinned explicitly in
-    `Tests.csproj` alongside `AssetRipper.Primitives 2.1.0` — **if either version is ever bumped,
-    re-fetch `LibCpp2IlMain.cs` at the new tag on GitHub and re-check for
-    `public static float MetadataVersion =` (field, OK) vs. `=>` (obsolete property, broken)
-    before assuming it works.**
-  - Confirmed fixed on a real run (2026 session): `monoBehavioursSkipped` dropped from 12,397 (100%
-    failure) to 5 out of ~52,947 assets, with 4,180 distinct Chinese strings found.
-- Once LibCpp2IL/`classdata.tpk` were both fixed, the dominant remaining noise was `m_Name` (Unity
-  GameObject/asset naming, not player-facing text) and a `first` field — both excluded via a
-  `IgnoredFieldNames` field-name allowlist-exclusion in `ExtractChineseText`. An earlier
-  path-based heuristic (`LooksLikeAssetPath`, matching things like
-  `skeleton/battle/obstacle/屏风_1/skeleton.atlas`) was tried and removed — it didn't reliably catch
-  the noise; the field-name check is what actually worked. `TextAsset` assets (`m_Script`, whole
+- **`Samboy063.LibCpp2IL` is pinned to `2022.1.0-pre-release.13`** (with `AssetRipper.Primitives
+  2.1.0`) in `Tests.csproj` — do not bump without re-verifying, plain restore picks a version that
+  breaks MonoBehaviour resolution 100% of the time. A `classdata.tpk` (from `nesrak1/UABEA`'s
+  releases, not `AssetsTools.NET`'s own) at `Tests/classdata.tpk` is also required for built-in
+  engine types. Full version-pin investigation and classdata.tpk root cause in
+  [`Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md`](../../Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md).
+- Noise filtering: `m_Name`/`first` fields excluded via `IgnoredFieldNames` in `ExtractChineseText`
+  (a path-based heuristic was tried and removed — didn't reliably catch the noise). `TextAsset`
+  assets (`m_Script`, whole
   embedded file contents) are skipped entirely before field-walking, and a `MaxStringLength = 2000`
   cap guards against any other unexpectedly huge string field.
 - **Output is split into two files (Aug 2026)** by `IsPrimaryTextField` (exact, case-insensitive
@@ -158,261 +123,53 @@ files use, so no game process, Harmony, or IL2CPP-awareness is needed to read th
   `"1b. ExportPrefabTextIntoTranslated"`, run right after step 1, before step 2's merge) — this is
   no longer purely a read-only discovery step. See "PrefabText pipeline" below.
 - **`IsPrimaryTextField`'s `"m_Text"`/`"text"` allowlist misses real displayed text on several
-  other `MonoBehaviour` fields (2026-08-27 finding, via in-game screenshots of untranslated text)**
-  — confirmed for character-creation hero-class template badges (`异士模板`, `弓手模板`, etc.)
-  living on a plain `name` field, and more broadly for `eventName`/`tutorialName`/`showName`/
-  `bulletName`/`fullName`/`jobName`/`spellName`/`pointName`/`sourceName`/`plotName`. These land in
-  `dumpedOtherText.txt` only (diagnostic, not fed into the pipeline) and never get translated as a
-  result. Rather than widen `IsPrimaryTextField` itself (risky — `dumpedOtherText.txt`'s `data`
-  field mixes real content like `丐帮`/`万安客栈` with internal asset/UI names like
-  `下拉菜单_按钮`/`三角形`/`中型树0` on the exact same field name, and `targetName` similarly mixes
-  a few real NPC names with internal `临时:强盗头目&随机;;;事件难度+0.5;-8;;true`-style config
-  strings), this is now handled by a **second automated dynamic-string extraction source**: see
-  `GameFileHandling.ExtractDynamicStringCandidatesFromOtherText` /
-  `GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap` /
-  `DynamicStringOtherTextFields` below, registered as `FileInputWorkflowTests`'s
-  `"1c. ExportDynamicStringsIntoTranslated"` fact (all three extraction sources now run inline at the
-  start of that single fact). `data`/`targetName` were sampled
-  and found too noisy even after filtering out ASCII-suspicious entries, so they're deliberately
-  NOT in `DynamicStringOtherTextFields` — if a future screenshot confirms a real missing string on
-  one of those two fields specifically, add it directly to `dynamicStrings.txt` (the file merged in
-  from reviewed `output/_dynamicStrings_candidates.txt` entries - see the DynamicStringsIL2CPP
-  pipeline section below) rather than promoting the whole field wholesale.
-- **A "primary" `text`/`m_Text` field can STILL miss `PrefabTextPatches.cs`'s load-time scan if the
-  value is set at runtime rather than baked into the prefab (2026-08-27 finding, via a
-  character-creation screenshot showing `Initial获得RandomlyWeapon`, i.e. `初始获得随机武器` only
-  partially translated)** — `dumpedOtherText.txt` correctly tagged this value's field as `text`
-  (so it wasn't missed by the noise-filtering above), and `Files/Mod/dumpedPrefabText.txt.yaml`
-  already has the correct whole-string translation ("Initial random weapon acquisition"). But the
-  in-game UI showed a mangled result built from `DynamicStringPatches`' BARE-FRAGMENT dictionary
-  entries (`初始`→`Initial`, `随机`→`Randomly`, `武器`→`Weapon`) instead — proof this particular
-  component's `.text` is populated by code at runtime (a character-creation starting-bonus choice
-  list: gold/reputation/random armor/weapon/manual/horse), not baked into the asset at
-  `Resources.Load`/`AssetBundle.LoadAsset`/scene-load time, so `PrefabTextPatches.cs`'s load-time
-  tree-walk never sees the real value at that point. **Fixed generally (2026-08-28), not with a
-  per-string override**: `PrefabTextPatches.cs` now ALSO postfixes `TMP_Text.text`/`UI.Text.text`'s
-  setters (same sink-level pattern `DynamicStringPatches.cs` already used), doing an EXACT
-  whole-string lookup against its own `Replacements` dictionary — no separate dictionary/file
-  needed, since `dumpedPrefabText.txt.yaml` already has a correct whole-phrase entry for any string
-  `AssetDumperWorkflowTests.cs`'s offline scan found (that scan reads each field's serialized
-  *default* value, which is exactly what a runtime-populated component is initialized with
-  before/when the game sets it). These new postfixes run at `[HarmonyPriority(Priority.First)]`,
-  guaranteed to execute before `DynamicStringPatches`' same-named setter postfixes (left at
-  default `Priority.Normal`) regardless of which class's Harmony patches were registered first in
-  `MainPlugin.Load()` — patch APPLICATION order does not determine POSTFIX EXECUTION order, only
-  `HarmonyPriority` does. This means any whole-string match here gets replaced before
-  `DynamicStringPatches`' bare-fragment postfix even runs, so there's nothing left for it to
-  corrupt. An earlier stopgap (`GameFileHandling.DynamicStringPrimaryTextOverrides`, a narrow
-  per-raw-value allowlist feeding these specific strings into the DynamicStrings substring-replace
-  dictionary too) was removed once this general fix landed — no per-string overrides needed going
-  forward. Genuinely runtime-COMPOSED strings (concatenated with other data, e.g. a save-slot
-  description) still correctly fall through unmodified to `DynamicStringPatches`' template/fragment
-  matching, since they never byte-match a whole dumped prefab entry.
+  other `MonoBehaviour` fields** (`name`, `eventName`/`tutorialName`/`showName`/`bulletName`/
+  `fullName`/`jobName`/`spellName`/`pointName`/`sourceName`/`plotName`) — these land in
+  `dumpedOtherText.txt` only. Handled via the automated dynamic-string extraction sources
+  (`ExtractDynamicStringCandidatesFromOtherText`/`ExtractDynamicStringCandidatesFromIl2CppStringMap`/
+  `DynamicStringOtherTextFields`, see DynamicStringsIL2CPP pipeline below) rather than widening
+  `IsPrimaryTextField` (risky — `data`/`targetName` mix real content with internal asset/UI names
+  on the same field, deliberately excluded).
+- **A "primary" `text`/`m_Text` field can still miss `PrefabTextPatches.cs`'s load-time scan if the
+  value is set at runtime rather than baked into the prefab.** Fixed generally:
+  `PrefabTextPatches.cs` also postfixes `TMP_Text.text`/`UI.Text.text` setters (same sink-level
+  pattern `DynamicStringPatches.cs` uses) doing an EXACT whole-string lookup against its own
+  `Replacements` dictionary, at `[HarmonyPriority(Priority.First)]` so it always runs before
+  `DynamicStringPatches`' bare-fragment postfix. Genuinely runtime-COMPOSED strings still fall
+  through unmodified to `DynamicStringPatches`' template/fragment matching. Full investigation
+  narrative (both findings) in [`Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md`](../../Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md).
 
 ## PrefabText pipeline (`dumpedPrefabText.txt` → `Files/Mod/dumpedPrefabText.txt.yaml`)
 
-Unlike the CSV pipeline above, a dumped prefab-text file has **no row/column structure** — each
-line is one distinct, already-deduplicated Chinese string with nothing else to decompose, so it's
-handled by the generic, game-agnostic `FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow` instead
-of `GameFileHandling`'s CSV-specific `CompoundFieldSplitter`/`ParseCsvRow` path (any game with a
-similar flat-list dumper can reuse this as-is):
-
-- `GameFileHandling.TextFilesToSplit` has a `dumpedPrefabText.txt` entry with
-  `TextFileType = TextFileType.PrefabText` (this enum value already existed in
-  `TextFileToSplit.cs` but was previously unused anywhere).
-- `GameFileHandling.ExportPrefabTextAssetToCustomFormat` calls
-  `PrefabTextWorkflow.ExportPrefabTextToCustomFormat`, which reads
-  `Files/Raw/Dumped/PrefabText/dumpedPrefabText.txt` (one string per line) and writes the same
-  `TranslationLine` YAML shape as the CSV path — each line gets exactly one whole-line
-  `TranslationSplit` (`Split = 0, SubIndex = 0`) and **no `FieldTemplate`** — to
-  `Files/Raw/Export/dumpedPrefabText.txt.yaml`, then seeds `Files/Converted/` the same way the CSV
-  path does. This means `GameFileHandlingBase.MergeFilesIntoTranslatedAsync` (step 2) and
-  `Workflow/TranslationWorkflow.cs`'s translate/retry loop work on it completely unchanged — it's
-  just another `TextFileToSplit` entry to those.
-- `GameFileHandling.PackageFinalTranslationAsync` filters `TextFileType.PrefabText` entries OUT of
-  the CSV `ParseCsvRow`/`FileIteration.IterateTranslatedFilesAsync` reconstruction loop (a
-  plain-string `Raw` line would otherwise be misparsed as a CSV row) and instead calls
-  `PrefabTextWorkflow.PackagePrefabTextAsync` for each one. That writes
-  `Files/Mod/dumpedPrefabText.txt.yaml` as a flat list of `PrefabTextResult { Raw, Result }`
-  (`camelCase` YAML keys via `YamlHelper`, so it serializes as `raw`/`result`):
-  ```yaml
-  - raw: 地图一览
-    result: Map Overview
-  ```
-  A line falls back to `Result = Text` (untranslated) if it has no usable translation yet
-  (`Translated` empty, `FlaggedForRetranslation`, or `!SafeToTranslate`) — so the output always has
-  one entry per dumped string, never a missing key. Runtime lookup (a future `DragonHeirPlugin`
-  patch) is expected to key off exact `raw` string match.
-- **Bug fixed (2026-08-27): a failed split was invisible in `PackageFinalTranslationAsync`'s
-  printed `Passed`/`Failed` totals for `PrefabText`/`DynamicStringsIL2CPP` files.** The
-  reconstruction fallback-to-raw logic itself was always correct (a flagged/unsafe/untranslated
-  fragment already correctly forced the whole line back to `Raw` in the packaged YAML), but
-  `PrefabTextWorkflow.PackagePrefabTextAsync`/`DynamicStringWorkflow.PackageDynamicStringsAsync`
-  never reported which lines fell back vs. genuinely translated — so those failures never
-  contributed to the counts, making a raw-fallback line look identical to a real pass in the run's
-  reported stats (only the CSV `RegularDb` path via `GameFileHandling.PackageFinalTranslationAsync`
-  tracked `passedCount`/`failedCount` at all). Both workflow methods now return a `(int Passed, int
-  Failed)` tuple (their private `ReconstructLine` returns `(string? Result, bool Failed)`), and
-  `GameFileHandling.PackageFinalTranslationAsync` adds these into its existing totals. If either
-  method's signature changes again, re-check this aggregation still compiles/wires up correctly.
-- **Still not implemented:** the runtime BepInEx plugin patch in `DragonHeirPlugin/` that actually
-  reads `dumpedPrefabText.txt.yaml` and substitutes translated text back into `UI.Text`/`TMP_Text`
-  components at runtime.
+A dumped prefab-text file has **no row/column structure** — each line is one distinct,
+already-deduplicated Chinese string, handled by the generic, game-agnostic
+`FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow` (registered as `TextFileType.PrefabText` in
+`GameFileHandling.TextFilesToSplit`) instead of the CSV-specific `CompoundFieldSplitter` path.
+Export/package wiring is via `GameFileHandling.ExportPrefabTextAssetToCustomFormat` /
+`PackageFinalTranslationAsync` (which special-cases `TextFileType.PrefabText` out of the CSV
+reconstruction loop). Output is `Files/Mod/dumpedPrefabText.txt.yaml`, a flat `raw`/`result` list,
+looked up at runtime by exact whole-string match (**not yet implemented** in `DragonHeirPlugin/`).
+Full wiring details, the packaging-fallback shape, and the 2026-08-27 Passed/Failed-count bug fix:
+[`Tests/docs/prefabtext-pipeline-architecture.md`](../../Tests/docs/prefabtext-pipeline-architecture.md).
 
 ## DynamicStringsIL2CPP pipeline (`dynamicStrings.txt` → `Files/Mod/dynamicStrings.txt.yaml`)
 
 Hardcoded, runtime-assembled string literal fragments compiled directly into IL2CPP game code
-(e.g. a `String.Concat`/`String.Format` call mixing a Chinese literal like `"架势"` with data such
-as a save-slot's task text) - see the `dynamic-string-translation-plan` repo memory and
-`DragonHeirPlugin/DynamicStringPatches.cs`. Handled by
-`FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow`, mechanically almost identical to the
-PrefabText pipeline above (flat list of distinct strings -> standard TranslationLine YAML ->
-Export/Converted/translate -> flat raw/result YAML) but kept as its own `TextFileType` (
-`DynamicStringsIL2CPP` - deliberately NOT the older, unrelated `TextFileType.DynamicStrings`,
-which targeted a Mono/Cecil-transpiler approach that doesn't work against IL2CPP) and its own
-`Workflow` class, since the runtime consumption model differs: a PrefabText result is looked up by
-an exact *whole-string* match against a UI component's full text, whereas a DynamicStringsIL2CPP
-result is applied as an exact *substring* replacement against a small hardcoded fragment of a
-larger, otherwise data-driven runtime string.
+(e.g. `String.Concat`/`String.Format` mixing a Chinese literal with data). Handled by
+`FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow` (`TextFileType.DynamicStringsIL2CPP` —
+NOT the older unrelated `TextFileType.DynamicStrings`), applied at runtime as an exact
+**substring** replace via `DragonHeirPlugin/DynamicStringPatches.cs` Harmony-postfixing
+`String.Concat`/`String.Format`. Four candidate-discovery sources feed
+`Files/Raw/Dumped/DynamicStrings/dynamicStrings*.txt`: (1) manually-curated master file reviewed
+from `Converter --dynamic-string-candidates`, (2) config-driven CSV-column sources
+(`GameFileHandling.DynamicStringColumnSources`), (3) config-driven allowlisted asset-dumper field
+names (`DynamicStringOtherTextFields`), (4) an auto-regenerating IL2CPP-string-map source that
+reruns `Converter` fresh each time. All four are run inline by `FileInputWorkflowTests`'s merged
+`"1c. ExportDynamicStringsIntoTranslated"` fact. Dialogue-option buttons additionally need a
+bare-label dictionary entry (see doc). Full wiring details for all four sources, the
+`dynamicStringsFromColumns.txt` dedup behavior, and the dialogue-button fix:
+[`Tests/docs/dynamicstrings-pipeline-architecture.md`](../../Tests/docs/dynamicstrings-pipeline-architecture.md).
 
-- **Candidate discovery is fully static/offline** (unlike PrefabText's offline asset scan, but
-  equally no game run needed): `Converter`'s `--dynamic-string-candidates` mode filters the
-  already-extracted `output/_string_map.csv` (every string literal compiled into the game's IL2CPP
-  binary - see `Converter/Services/StringMapExtractor.cs`) for CJK-containing values and writes the
-  distinct results to `output/_dynamicStrings_candidates.txt`, one per line. Run it with `--dll
-  <manifest-or-dummy-dll>` (only needs the DLL path to satisfy `Config.Validate`, no
-  `--binary`/`--ghidra` required) plus `--output ./output` and `--exclude-file
-  ../Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` to skip fragments already curated. Review
-  the candidates file (it includes plenty of noise - debug/internal strings, data already covered
-  by the CSV/PrefabText pipelines, etc.) and merge genuine hardcoded UI/dialogue fragments into
-  `Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` - one distinct literal fragment per line
-  (just the bare Chinese text, e.g. `架势` - not surrounding whitespace it happens to be
-  concatenated with).
-- `GameFileHandling.TextFilesToSplit` has a `dynamicStrings.txt` entry with `TextFileType =
-  TextFileType.DynamicStringsIL2CPP`.
-- **Second source, config-driven (not manually curated):** `GameFileHandling.DynamicStringColumnSources`
-  declares `(CsvFileName, int[] Columns)` pairs for CSV columns known to hold whole-phrase display
-  strings some IL2CPP code path reads raw, bypassing the normal per-column CSV translation (e.g.
-  `ForceData.csv` column 1 = force/sect name, `SpeHeroData.csv` column 5 = rank/tier tag - see the
-  bare-fragment-corruption bug writeup in `dragonheirplugin.instructions.md`).
-  `GameFileHandling.ExtractDynamicStringCandidatesFromColumns` (run via `FileInputWorkflowTests`'s
-  the merged `"1c. ExportDynamicStringsIntoTranslated"` fact, before the export call in that same
-  fact) pulls distinct values from
-  those columns into a second dump file, `Files/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt`
-  (deduped against the master `dynamicStrings.txt` and idempotent across re-runs), registered as its
-  own `TextFileToSplit` entry with the same `TextFileType.DynamicStringsIL2CPP` - flows through the
-  same export/merge/package steps as the master `dynamicStrings.txt` file (itself populated by
-  reviewing/merging `output/_dynamicStrings_candidates.txt`, not hand-authored), just packaged
-  separately as
-  `Files/Mod/dynamicStringsFromColumns.txt.yaml`. `DragonHeirPlugin/DynamicStringPatches.cs` loads
-  every `dynamicStrings*.txt.yaml` file it finds (not one fixed filename) and merges them into one
-  in-memory dictionary, so this needed no runtime-consumption changes beyond that glob.
-- **Third source, also config-driven, writing to the SAME `dynamicStringsFromColumns.txt` file:**
-  `GameFileHandling.DynamicStringOtherTextFields` declares a hand-vetted allowlist of
-  `AssetDumperWorkflowTests`-produced `DumpedTextEntry.Field` names (`name`, `eventName`,
-  `tutorialName`, `showName`, `bulletName`, `fullName`, `jobName`, `spellName`, `pointName`,
-  `sourceName`, `plotName`, and - added 2026-08-27 - `plotText`, `tutorialText`, `choiceText`,
-  `startRemindText`, `describe`, `eventDescribe`, `jobDescribe`) known to hold real player-facing
-  text that `IsPrimaryTextField`'s `"m_Text"`/`"text"` check misses (e.g. hero-class creation
-  template badges like `异士模板` live on a plain `name` field - see the finding above).
-  `GameFileHandling.ExtractDynamicStringCandidatesFromOtherText` (run via
-  the same merged `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"` fact, run
-  inline right alongside the CSV-column source above, both before that fact's own export call) reads
-  `Files/Raw/Dumped/PrefabText/dumpedOtherText.txt` (produced by the separate, one-off
-  `AssetDumperWorkflowTests.DumpChineseTextFromAssets` asset scan - this extraction only finds
-  anything new after that scan has been re-run), keeps every distinct value whose field is in the
-  allowlist, and appends any not already seen to `dynamicStringsFromColumns.txt` - deduped and
-  idempotent the same way as the CSV-column source above. `data` and `targetName` were sampled and
-  found too noisy to promote wholesale (mix real content with internal asset/UI names or
-  config-string fragments on the exact same field name) - deliberately left out; add a genuinely
-  missing string from one of those two fields directly to `dynamicStrings.txt` instead.
-  - **The `plotText`/`tutorialText`/`choiceText`/`startRemindText`/`describe`/`eventDescribe`/
-    `jobDescribe` fields are long paragraphs/sentences on custom data classes (`SinglePlotData`,
-    `InnData`, `EventData`-like structures), not baked directly onto a `TMP_Text`/`UI.Text`
-    component - this directly contradicts `DragonHeirPlugin/PrefabTextPatches.cs`'s own doc
-    comment, which claims these fields "are already populated from the existing CSV workflow, no
-    runtime patch needed". Verified empirically wrong: grepped every raw value sampled from these
-    fields against every file in `Files/Raw/Dumped/GameData/*.csv` - zero matches for any of them.
-    Do not trust that comment for any other field without similarly verifying against the CSVs.
-  - Despite being long-form rather than short labels, these still belong in the
-    **DynamicStrings** (substring-replace) mechanism, not `PrefabText` (whole-string load-time
-    scan) - `PrefabTextPatches.cs` only inspects a `TMP_Text`/`UI.Text` component's `text` value
-    once, at `Resources.Load`/`AssetBundle.LoadAsset`/scene-load time, and never re-checks it
-    afterward, so it would never see a value assigned later at arbitrary runtime (e.g. when a plot
-    dialog or tutorial popup actually opens) - which is exactly when these fields get copied onto
-    a UI component's `.text`. `DynamicStringPatches.cs`, by contrast, patches the
-    `TMP_Text.text`/`UI.Text.text` **setters** themselves (sink-level, field-agnostic - see its
-    `TmpTextSetText_Postfix`/`UiTextSetText_Postfix`), so it catches the value the moment it's
-    actually displayed regardless of which source field it came from - exactly what these need.
-    `DynamicStringPatches.LoadDictionary` already sorts entries longest-first specifically so a
-    full-paragraph entry can never be corrupted by a shorter, unrelated fragment matching part of
-    it first, and the existing `GamePlaceholderTokenRegex`/`CheckTransalationSuccessful`
-    placeholder-preservation check already runs unconditionally (not just for CSV columns), so no
-    new validation was needed for the longer/paragraph case. Each field was sampled for noise the
-    same way as the short name-fields before being added (checked for stray ASCII-letter runs not
-    part of a `#Placeholder#` token): `plotText` (415 total, 3 suspicious - all confirmed
-    legitimate `<color=red>` markup), `choiceText` (160/160 clean), `describe` (247/247 clean),
-    `startRemindText` (240/240 clean), `eventDescribe` (27/27 clean), `jobDescribe` (12/12 clean),
-    `tutorialText` (308 total, 7 suspicious - all confirmed legitimate key-name references like
-    `Shift`/`WSAD`/`Tab` inside `<b>...</b>` tags).
-- **Fourth source, writing to the SAME `dynamicStringsFromColumns.txt` file, and the only one that
-  actively regenerates its own upstream input rather than just reading a pre-dumped file:**
-  `GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap` (run via the same merged
-  `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"` fact, run inline last,
-  after the two sources above, before that fact's own export call) shells out
-  (`System.Diagnostics.Process`, `dotnet run --no-build --`) to the sibling `Converter` project to
-  regenerate `Converter/output/_dynamicStrings_candidates.txt` FRESH from the current
-  `Converter/output/_string_map.csv` every time this fact runs (`--dynamic-string-candidates
-  --exclude-file <dynamicStrings.txt>` - see `converter.instructions.md`), then appends any
-  genuinely-new entries to `dynamicStringsFromColumns.txt` using the same seen-set dedup pattern as
-  the other sources. Added specifically because two real missing phrases
-  (`随机敌人数量`/`非本门弟子经验`) turned out to be a pure staleness problem - the extraction logic
-  itself was already correct, but nothing forced re-extraction after a game patch changed
-  `_string_map.csv`, so an old on-disk candidates file silently hid new strings. Regenerating
-  unconditionally as part of "1c" makes that failure mode structurally impossible going forward.
-  No-ops gracefully (does not fail the test) if `Converter/output/_string_map.csv` doesn't exist yet
-  (fresh clone, full decompile pipeline not run) or the subprocess fails for any reason - the other
-  three sources still work independently. `Converter/Services/StringMapExtractor.cs`'s
-  `IsExoticScriptNoise` filter (see `converter.instructions.md`) keeps BCL/ICU internal Unicode-table
-  noise strings out of the regenerated candidates before they ever reach this source.
-- `GameFileHandling.ExportDynamicStringTextAssetToCustomFormat` (run via
-  `FileInputWorkflowTests`'s `"1c. ExportDynamicStringsIntoTranslated"`, right after step 1b, before
-  step 2's merge) calls `DynamicStringWorkflow.ExportDynamicStringsToCustomFormat` - this single
-  fact now also runs all three automated candidate-extraction sources inline first (see above), so
-  there's only one fact to run for the whole dynamic-strings workflow.
-- `GameFileHandling.PackageFinalTranslationAsync` filters `TextFileType.DynamicStringsIL2CPP`
-  entries out of the CSV reconstruction loop (same as PrefabText) and calls
-  `DynamicStringWorkflow.PackageDynamicStringsAsync` for each, producing
-  `Files/Mod/dynamicStrings.txt.yaml` - a flat list of `DynamicStringResult { Raw, Result }`
-  (`raw`/`result` YAML keys), the same shape as PrefabText's output.
-- **FIXED (2026-08-28): NPC dialogue-option buttons (e.g. "打扰了;HideInteractUI",
-  "打扰了;GovernPlotStart;1") never got translated even though their dictionary entry existed.**
-  These raw cells are a game-data convention - `Label;ActionName[;Param]` - where the game's own
-  data loader splits on `;` and only ever passes the bare `Label` substring to the
-  TMP_Text/UI.Text component that renders the button; the `;ActionName;Param` suffix is action
-  metadata consumed elsewhere and never reaches the UI. `DynamicStringPatches.ApplyDictionary`
-  only fires when `input.Contains(entry.Raw)`, so a dictionary entry keyed on the FULL compound
-  literal (`"打扰了;GovernPlotStart;1" -> "Excuse me;GovernPlotStart;1"`) can never match the
-  shorter on-screen text `"打扰了"` - it's backwards (the dictionary key is longer than what's
-  actually rendered). Fix (in the sibling `FanslationStudio.LlmKit` repo's
-  `Workflow/DynamicStringWorkflow.cs`): `ReconstructLine`/`PackageDynamicStringsAsync` now also
-  emit a second, bare `DynamicStringResult` entry (`Raw`/`Result` = just the single fragment's
-  text/translation, deduped via a `HashSet<string>`) whenever a line's template has exactly ONE
-  translatable split - covers this whole class of "Label;metadata" cells generically, not just
-  the two reported examples, without needing per-file/per-column configuration. Multi-fragment
-  templates (e.g. the DateTime-style `"{0}年{1}月{2}日"` case) are deliberately left alone - their
-  fragments aren't standalone rendered labels. No `DragonHeirPlugin` changes were needed since
-  `DynamicStringPatches.LoadDictionary` already merges every entry from every `dynamicStrings*.txt.yaml`
-  file; re-running "6. Package to Game Files" alone regenerates the fixed `Files/Mod/*.yaml`.
-- **No per-method configuration needed at runtime** - the static extraction has no way to
-  attribute a literal back to the specific Type+Method that concatenates it, so
-  `DragonHeirPlugin/DynamicStringPatches.cs` doesn't try to target specific methods at all. Instead
-  it reflects over every public static, non-generic, string-returning overload of
-  `System.String.Concat`/`System.String.Format` and Harmony-postfixes all of them with one generic
-  postfix that applies every `dynamicStrings.txt.yaml` entry as an exact substring replace
-  (`__result.Replace(raw, result)`) - this is a plain BCL type, not an IL2CPP-wrapped game type, so
-  patching it is an ordinary, fully-safe Harmony patch. Catches the fragment regardless of which
-  game method builds the string.
 
 ## Working directory layout (`Files/`)
 
@@ -547,7 +304,7 @@ this, both registered in `Tests/GameFileHandling.cs`'s static constructor:
   packaging (`PackageFinalTranslationAsync`'s reconstruction loops `continue`/skip entirely for any
   `SkipColumns` column). Use this only for columns that should never be translated at all (icon
   names, resource paths, internal keys, or a `Label+Number` cell cross-referenced by exact string
-  match elsewhere — see `Tests/KNOWN_ISSUES.md` for confirmed examples:
+  match elsewhere — see [`Tests/docs/skipcolumns-stringtospeadddata-family.md`](../../Tests/docs/skipcolumns-stringtospeadddata-family.md) for confirmed examples:
   `HeroTagData.csv` col 4, `ResourcePointTypeData.csv` cols 2/3/4, `SkinDataBase.csv` col 2,
   `NameData.csv` col 0, `AreaData.csv` col 3).
 - **`LineValidation.CustomColumnRepair`** / **`CustomColumnValidator`** (both
@@ -566,7 +323,7 @@ this, both registered in `Tests/GameFileHandling.cs`'s static constructor:
 **Prefer the repair/validator hooks over `SkipColumns` whenever the column has real user-facing
 text** — `SkipColumns` throws away translatable content and should be reserved for columns never
 meant to be translated. When investigating a new "database ends up empty at startup" or "game
-crashes on load" case, see `Tests/KNOWN_ISSUES.md` for the full investigation methodology
+crashes on load" case, see [`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md) for the full investigation methodology
 (decompiling `GameDataController.LoadAllGameData`, checking `Player.log` when `BepInEx/LogOutput.log`
 just stops with no exception, the `StringToSpeAddData` label-lookup heuristic, and verifying a fix
 via the packaging-only test fact without a full game relaunch) and to record a new case once solved.

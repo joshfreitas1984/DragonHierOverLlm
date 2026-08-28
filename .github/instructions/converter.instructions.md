@@ -4,7 +4,7 @@ applyTo: "Converter/**"
 
 # Il2CppExplorer — Run Instructions
 
-> **Workflow rule:** After completing any significant feature or fix, update **both** `Converter/README.md` **and** this file — the passes table, Editing tips, and any new flags. These are the primary source of truth for future sessions.
+> **Workflow rule:** After completing any significant feature or fix, update **both** `Converter/README.md` **and** this file — the passes table, Editing tips, and any new flags. Keep this file short — it's auto-injected into context on every `Converter/**` edit. Put detailed decompiler bug/limitation narratives in a topic file under [`Converter/docs/`](../../Converter/docs/) instead (read on-demand, not auto-loaded, indexed by [`Converter/KNOWN_ISSUES.md`](../../Converter/KNOWN_ISSUES.md)), and only summarize the current-state finding here. **Batch write-backs**: during a task, jot scratch notes in session memory as you find things — write ONE consolidated update (a new/extended `docs/*.md` file + this file's summary + a one-line index entry) at the end of the task, not after every individual fix.
 
 ## Quick reference
 
@@ -174,131 +174,33 @@ output/
 
 ## Known decompiler limitations / bugs found through real investigations
 
-- **Fixed: `NativeMethodExtractor.ExtractMethodLabels` mislabeled shared-generic-code addresses.**
-  IL2CPP "generic sharing" compiles many distinct managed methods (e.g. `Dictionary<string, T>`
-  members instantiated over different reference-type `T`s) down to the **same native code
-  address**. The extractor used to do `result.TryAdd(rvaHex, label)` — "keep whichever method
-  happens to be first in the metadata table" — which silently mislabels every other method at that
-  shared address with a plausible-looking but WRONG name. Confirmed in the wild: several calls in
-  `GameDataController.cs` with args like `"[DOTween]"`, `"[BoundingBox]"`, `"[CDATA["` were labeled
-  `Resources.Load(...)` even though those are obviously not resource paths — some unrelated
-  shared-generic method (not `Resources.Load`) happened to occupy that address and win the
-  first-occurrence race. **Fix applied**: collect ALL candidate labels per native address first;
-  only emit a label when an address has exactly one candidate. Ambiguous addresses are left
-  unlabeled (Ghidra's default `FUN_xxxxxxxx`) rather than guessing — a missing label is far less
-  harmful than a confidently wrong one, since a wrong label actively misleads investigation. Console
-  output now reports both counts, e.g. `Extracted N unambiguous method labels ... (M addresses
-  skipped as ambiguous/shared-generic)`. Verified by re-running `--filter "GameDataController"`
-  before/after: the bogus `Resources.Load("[DOTween]", ...)`-style calls are gone post-fix (now
-  render as unresolved `FUN_...` calls instead).
-- **Still open: some `Resources.Load`-labeled calls are still wrong, for a DIFFERENT reason.**
-  After the fix above, `GameDataController.cs` still contains calls like
-  `Resources.Load("[CDATA[", ...)`, `Resources.Load("[NGUI] ", ...)`, `Resources.Load("[/sub]",
-  ...)` — clearly log/XML-tag-parsing strings, not resource paths. Checked `_labels.csv`: the real
-  `Resources.Load` managed method genuinely maps to exactly 3 distinct, unambiguous native
-  addresses (one per overload) — so this is NOT the same "shared managed-metadata address" bug
-  fixed above. This looks like IL2CPP/the game binary reusing the *same native trampoline/icall
-  stub code* for `Resources.Load` and some unrelated string-processing routine at the **native**
-  level — something our metadata-only (`LibCpp2IL`/managed methodDefs) extraction approach can't
-  see or disambiguate, since it only knows about managed method → address mappings, not
-  native-code-level code reuse. Not yet fixed; if this needs solving, it would require actually
-  inspecting/disassembling the native function bodies at those addresses (e.g. via Ghidra's own
-  analysis) to tell whether they're truly identical code or just coincidentally-adjacent, rather
-  than anything achievable in `NativeMethodExtractor` alone.
-- **Field-resolution passes (3d/3e) miss instance-field offsets when the singleton pointer is
-  hoisted across statements.** For a singleton chain written as:
-  ```csharp
-  var pGameDataController = *(int64*)(GameDataController_StaticsPtr + 184);
-  // ...several lines later...
-  lVar3 = *(int64 *)(pGameDataController + 0x1d8);
-  ```
-  passes 3d/3e currently treat the hoisted `pClassName`-named local strictly as a "statics block
-  pointer" (for resolving further `ClassName.staticField` reads), not as the resolved *instance*
-  pointer it actually is in this shape (offset `0xb8`/184 here holds the singleton instance
-  pointer directly, one dereference deep — not a statics-block base to add further static offsets
-  to). The existing chain-form resolution in 3e/3f (`*(type*)(*pVar + OFFSET) →
-  ClassName.instance.instanceField`) only fires when the dereference and offset-add appear
-  together in one inline expression; it doesn't fire once the singleton pointer has already been
-  captured into a separately-named local several statements earlier. Net effect: instance field
-  offsets like `+0x1d8` on a hoisted singleton local are left as raw pointer arithmetic instead of
-  being resolved to `GameDataController.someFieldName`. Found while investigating the
-  `StartMenuController.ResetFaceSetting`/`ResetPlayerTag` crash (see
-  `dragonheirplugin.instructions.md`) — worked around there via a runtime reflection-based
-  diagnostic patch instead of fixing this pass, since getting real field names from a live process
-  is more reliable than perfecting this disambiguation. If tackled properly, the fix likely belongs
-  in pass 3e/3f: track hoisted `pClassName` locals that were assigned from a *known instance-typed*
-  static field offset (e.g. an `_instance`/`Instance` static field, commonly at `0xb8` for
-  singletons) and route subsequent `pClassName + OFFSET` accesses through `type.FieldOffsets`
-  (instance offsets) rather than `type.StaticFieldOffsets`.
+> Full narratives for each item below are in `Converter/docs/` (indexed by
+> [`Converter/KNOWN_ISSUES.md`](../../Converter/KNOWN_ISSUES.md)) — read the specific topic doc,
+> not this whole file, when investigating a similar issue.
 
-- **Fixed: `StringMapExtractor`'s `.data`-section scan silently dropped ~half of all real
-  string-literal slots on IL2CPP metadata v27+, because the encoded index needs an extra `>>1`.**
-  Found investigating the in-game "Custom options" difficulty-slider screen (screenshot showed
-  untranslated/mixed labels like `本门DiscipleExperience`, `随机Enemy人强度`, `AISectSend展Speed`).
-  Traced the labels to `CustomDifficultyData.customDifficultyName`/`teammateLimitName`/
-  `teammateLimitDescribe` (three static `List<string>` fields), populated in
-  `CustomDifficultyData__cctor` (`output/_decompiled/_NoNamespace/CustomDifficultyData/.cctor.c`)
-  from 21 distinct `DAT_` addresses (e.g. `DAT_181d72c58`, `DAT_181d56200`) — none of which appeared
-  in `_string_map.csv`.
-
-  Root cause, confirmed via a one-off inspection script (`Scripts/InspectDatAddresses.ps1`, kept in
-  the repo for future similar investigations) that manually parses the PE section table and
-  `global-metadata.dat`'s string-literal table: all 21 addresses decode correctly as
-  `usageType == 5` (`kIl2CppMetadataUsageStringLiteral`) in the `.data` section — so the original
-  "wrong section" / "different encoding" theory below was wrong. The real bug is that this game's
-  `global-metadata.dat` is **metadata version 27** (Unity 2020.3.48f1), and IL2CPP v27 removed the
-  separate `metadataUsagePairs` indirection table, changing the encoding of the low 29 bits of the
-  `.data` slot. Cross-checked against LibCpp2IL's own decoder
-  (`LibCpp2IL/MetadataUsage.cs::DecodeMetadataUsage`):
-  ```csharp
-  var index = (uint)(encoded & 0x1FFF_FFFF);
-  if (context.Metadata.MetadataVersion >= 27)
-      index >>= 1;   // <-- StringMapExtractor was missing this shift entirely
-  ```
-  Without the `>>1`, the decoded `srcIdx` comes out roughly double its real value (e.g. raw `35691`
-  instead of the correct `17845`), which happens to still look like a plausible index but silently
-  fails the `srcIdx >= strCount` bounds check for the upper half of the string table — so the bug
-  never threw, it just silently dropped every string literal indexed in the upper half of the
-  table, with no error or log output. All 21 `CustomDifficultyData` addresses decoded correctly
-  once the shift was added (verified against the actual in-game Chinese slider labels, e.g.
-  `DAT_181d72c58` → `经验倍率`, `DAT_181d71e58` → `组队限制`).
-
-  **Fix applied** in `StringMapExtractor.ExtractAndSave`'s scan loop: `if (version >= 27) srcIdx
-  >>= 1;` right after masking, before the `strCount` bounds check. This is metadata-version-gated so
-  it doesn't affect any pre-27 games this converter might ever be pointed at (LibCpp2IL's own logic
-  confirms pre-27 metadata uses the raw un-shifted index via the separate `metadataUsagePairs`
-  table, which is a different code path entirely and not something this extractor implements).
-
-  **Action still needed (not yet done):** re-run the full Converter pipeline (or at least the
-  string-map/dynamic-string-candidate extraction step) to regenerate `_string_map.csv` and
-  `_dynamicStrings_candidates.txt` with this fix, then have the user review/merge the newly-surfaced
-  candidates into `Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` themselves (per the
-  established rule against hand-editing dump files — do not do this step automatically).
-
-  **Update: pipeline re-run completed.** Ran `--skip-decompile` (no need to re-invoke Ghidra, this
-  bug was purely in the metadata-usage decode step) after deleting the stale `_string_map.csv` to
-  force regeneration: entry count went from roughly half to **19280 entries** (metadata has 19283
-  string literals total — nearly everything now resolves). All 1108 `_NoNamespace` class files were
-  rewritten with the corrected string values. Then re-ran `--dynamic-string-candidates
-  --exclude-file ../Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt`, producing 3680 candidates
-  in `output/_dynamicStrings_candidates.txt` — **still needs user review/merge into
-  `dynamicStrings.txt`**, not done automatically.
-- **Fixed: `StringMapExtractor.CsvUnescape` could corrupt `_string_map.csv` values on round-trip.**
-  `CsvEscape`/`CsvUnescape` (used to persist DAT_-address → string-literal mappings) were
-  implemented as a sequence of global `string.Replace` calls. `CsvUnescape` unescaped `\"`, `\r`,
-  `\n`, `\t` **before** `\\`, so a source string containing a literal backslash immediately
-  followed by a literal `n`/`r`/`t`/`"` (e.g. a Windows-style path or a regex-like fragment
-  embedded in game text) — which `CsvEscape` correctly encodes as an escaped backslash (`\\\\`)
-  followed by the untouched letter — got mis-parsed: the `\n`-unescape pass matched across the
-  boundary between the second backslash of the escaped pair and the following literal letter,
-  silently turning a real `backslash + letter` sequence into a newline and eating one of the two
-  backslashes. This is exactly the "decompiler is corrupting strings" symptom — a `DAT_` address
-  would resolve (via pass 5a) to a subtly mangled string instead of the true literal. **Fix
-  applied**: `CsvUnescape` now does a single left-to-right character scan that consumes each
-  recognised two-character escape atomically, so there is no cross-boundary ambiguity between the
-  `\\` escape and the `\r`/`\n`/`\t`/`\"` escapes. If a similar "value differs subtly from what's
-  in the binary" report comes up again for `_string_map.csv`-sourced text, suspect this same class
-  of bug (sequential-`Replace`-based escaping) before looking at the PE/metadata extraction logic.
+- **Fixed**: `NativeMethodExtractor.ExtractMethodLabels` used to mislabel shared-generic-code
+  addresses (first-occurrence-wins), producing confidently wrong labels like bogus
+  `Resources.Load(...)` calls. Now only labels addresses with exactly one candidate; ambiguous
+  addresses stay unlabeled (`FUN_xxxxxxxx`). **Still open**: a few genuinely-distinct
+  `Resources.Load`-labeled calls are wrong for a different, unfixed reason (native
+  trampoline/icall stub code reuse, not a managed-metadata ambiguity — not solvable at the
+  managed-methodDefs level we currently extract from). See
+  `docs/nativemethodextractor-shared-generic-mislabeling.md`.
+- **Open**: field-resolution passes 3d/3e don't resolve instance-field offsets on a singleton
+  pointer that was hoisted into a separately-named local several statements before the offset
+  access (only inline `*(type*)(*pVar + OFFSET)` chains resolve). Worked around at the
+  investigation site via a runtime reflection diagnostic patch rather than fixing this pass. See
+  `docs/field-resolution-hoisted-singleton-gap.md`.
+- **Fixed**: `StringMapExtractor`'s `.data`-section scan silently dropped ~half of all string
+  literals on IL2CPP metadata v27+ (Unity 2020.3.48f1) due to a missing `>>1` shift on the decoded
+  usage index. Confirmed root-caused, fixed, and the full pipeline re-run afterward brought
+  `_string_map.csv` from ~half to 19280/19283 entries resolved. New dynamic-string candidates
+  surfaced by the re-run (3680) still need user review/merge into `dynamicStrings.txt` — not done
+  automatically. See `docs/stringmapextractor-metadata-v27-shift-bug.md`.
+- **Fixed**: `StringMapExtractor.CsvUnescape`'s sequential-`Replace`-based escaping could corrupt
+  strings containing a literal backslash immediately followed by `n`/`r`/`t`/`"` (cross-boundary
+  match between the `\\` and `\r`/`\n`/`\t`/`\"` escape passes). Now a single left-to-right atomic
+  scan. See `docs/stringmapextractor-csvunescape-corruption.md`.
 
 ## Common issues
 
