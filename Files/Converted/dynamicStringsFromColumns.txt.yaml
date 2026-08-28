@@ -4230,8 +4230,6 @@
 - raw: "12月初8乃释迦摩尼悟道成佛之日，家家户户会以各种谷物豆类，混合红枣花生莲子枸杞桂圆核桃等干果，佐以红糖白糖熬煮成一锅香甜浓郁的腊八粥以表纪念。"
   splits:
   - text: "12月初8乃释迦摩尼悟道成佛之日，家家户户会以各种谷物豆类，混合红枣花生莲子枸杞桂圆核桃等干果，佐以红糖白糖熬煮成一锅香甜浓郁的腊八粥以表纪念。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
 - raw: "1月15日乃是一年中首个月圆之夜，各大城市皆会张灯结彩，举办赏花灯、猜灯谜、吃汤圆、舞鱼龙等活动。"
   splits:
   - text: "1月15日乃是一年中首个月圆之夜，各大城市皆会张灯结彩，举办赏花灯、猜灯谜、吃汤圆、舞鱼龙等活动。"
@@ -4239,8 +4237,6 @@
 - raw: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
   splits:
   - text: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
 - raw: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
   splits:
   - text: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
@@ -5837,7 +5833,7 @@
 - raw: "传闻大隐掌门道无名已率领联军兵临<b>#PosText#</b>，不知双方这场惊天大战最终鹿死谁手。"
   splits:
   - text: "传闻大隐掌门道无名已率领联军兵临"
-    translated: "Rumor has it that Sect Master Dao Wuying has led the allied forces to the gates"
+    translated: "Whispers suggest that Sect Master Dao Wuming has led the allied forces to the gates of"
   - subIndex: 1
     text: "，不知双方这场惊天大战最终鹿死谁手。"
     translated: ",I wonder whose hand will ultimately claim the victory in this shocking great battle."
@@ -6251,9 +6247,7 @@
 - raw: "传闻长乐帮主乐无疾亲率大军兵临<b>#PosText#</b>城下，准备与叛徒卢玉麟决一死战。"
   splits:
   - text: "传闻长乐帮主乐无疾亲率大军兵临"
-    translated: "Rumor has it that Sect Master Yue Wuji personally led a large army to approach"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Changle Gang,长乐帮,"
+    translated: "Rumors claim that Sect Master Yue Wuji personally led a large army to approach"
   - subIndex: 1
     text: "城下，准备与叛徒卢玉麟决一死战。"
     translated: "Below the city walls, prepare to fight to the death with traitor Lu Yulin."
@@ -7675,8 +7669,6 @@
     translated: "The menu on the right can be used for other battle operations."
   - subIndex: 1
     text: "如移动，休息，使用物品等。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - template: "{0}\n{1}"
 - raw: "叶一鸣已被击败，趁其群龙无首，返回#TargetPlace#发动进攻。"
@@ -22546,7 +22538,7 @@
 - raw: "姜映泉-819-2-4-false"
   splits:
   - text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   templates:
   - template: "{0}-819-2-4-false"
 - raw: "威压;ReleaseHateWithNpcStrenght"
@@ -34119,3 +34111,9163 @@
   splits:
   - text: "，由#$PlayerName#大侠委托出售"
     translated: ",By Commission of Great Hero #$PlayerName#"
+- raw: "孔武有力"
+  splits:
+  - text: "孔武有力"
+    translated: "Strong and mighty"
+- raw: "拔山扛鼎"
+  splits:
+  - text: "拔山扛鼎"
+    translated: "Uproot mountains and overturn cauldrons"
+- raw: "手疾眼快"
+  splits:
+  - text: "手疾眼快"
+    translated: "Quick hands and sharp eyes"
+- raw: "七窍玲珑"
+  splits:
+  - text: "七窍玲珑"
+    translated: "Seven‑orifices clear‑thinking"
+- raw: "足智多谋"
+  splits:
+  - text: "足智多谋"
+    translated: "Resourceful"
+- raw: "聪慧绝伦"
+  splits:
+  - text: "聪慧绝伦"
+    translated: "Peerlessly wise"
+- raw: "动心忍性"
+  splits:
+  - text: "动心忍性"
+    translated: "Mobilize the heart and toughen the nature"
+- raw: "百折不挠"
+  splits:
+  - text: "百折不挠"
+    translated: "Unyielding"
+- raw: "强身健体"
+  splits:
+  - text: "强身健体"
+    translated: "Strengthen one's body"
+- raw: "钢筋铁骨"
+  splits:
+  - text: "钢筋铁骨"
+    translated: "Steel frame"
+- raw: "运气自如"
+  splits:
+  - text: "运气自如"
+    translated: "Luck flows freely"
+- raw: "奇经八脉"
+  splits:
+  - text: "奇经八脉"
+    translated: "Eight Extraordinary Vessels"
+- raw: "内家"
+  splits:
+  - text: "内家"
+    translated: "Internal kung fu"
+- raw: "内力精纯"
+  splits:
+  - text: "内力精纯"
+    translated: "Inner power refined"
+- raw: "炉火纯青"
+  splits:
+  - text: "炉火纯青"
+    translated: "Mature beyond measure"
+- raw: "飞檐走壁"
+  splits:
+  - text: "飞檐走壁"
+    translated: "Climbing walls and rooftops"
+- raw: "神出鬼没"
+  splits:
+  - text: "神出鬼没"
+    translated: "Invisible"
+- raw: "身怀绝技"
+  splits:
+  - text: "身怀绝技"
+    translated: "Master of extraordinary skills"
+- raw: "绝艺超群"
+  splits:
+  - text: "绝艺超群"
+    translated: "Superb Artistry"
+- raw: "拳不离手"
+  splits:
+  - text: "拳不离手"
+    translated: "Practice makes perfect"
+- raw: "铁手钢拳"
+  splits:
+  - text: "铁手钢拳"
+    translated: "Iron Fists"
+- raw: "御剑"
+  splits:
+  - text: "御剑"
+    translated: "Wield the Sword"
+- raw: "剑随意动"
+  splits:
+  - text: "剑随意动"
+    translated: "Sword moves at will"
+- raw: "人剑合一"
+  splits:
+  - text: "人剑合一"
+    translated: "One with the Sword"
+- raw: "耍刀"
+  splits:
+  - text: "耍刀"
+    translated: "Blade play"
+- raw: "横刀跃马"
+  splits:
+  - text: "横刀跃马"
+    translated: "Wield the saber and leap on horseback"
+- raw: "一刀两断"
+  splits:
+  - text: "一刀两断"
+    translated: "Cut off completely"
+- raw: "舞枪弄棍"
+  splits:
+  - text: "舞枪弄棍"
+    translated: "Wield spear and staff"
+- raw: "枪扫六合"
+  splits:
+  - text: "枪扫六合"
+    translated: "Gun sweeps the six directions"
+- raw: "旁门左道"
+  splits:
+  - text: "旁门左道"
+    translated: "Backdoor method"
+- raw: "奇门遁甲"
+  splits:
+  - text: "奇门遁甲"
+    translated: "Qi Men Dun Jia"
+- raw: "百步穿杨"
+  splits:
+  - text: "百步穿杨"
+    translated: "Hundred steps through the willow"
+- raw: "例无虚发"
+  splits:
+  - text: "例无虚发"
+    translated: "Accurate shot"
+- raw: "外门"
+  splits:
+  - text: "外门"
+    translated: "Outer Gate"
+- raw: "坚若磐石"
+  splits:
+  - text: "坚若磐石"
+    translated: "As solid as a rock"
+- raw: "刀枪不入"
+  splits:
+  - text: "刀枪不入"
+    translated: "Impervious to blades and spears"
+- raw: "掌风"
+  splits:
+  - text: "掌风"
+    translated: "Palmslash"
+- raw: "排山倒海"
+  splits:
+  - text: "排山倒海"
+    translated: "Overwhelming"
+- raw: "剑气"
+  splits:
+  - text: "剑气"
+    translated: "Sword aura"
+- raw: "气冲斗牛"
+  splits:
+  - text: "气冲斗牛"
+    translated: "Boast to the stars"
+- raw: "刀锋"
+  splits:
+  - text: "刀锋"
+    translated: "Blade Edge"
+- raw: "削铁无声"
+  splits:
+  - text: "削铁无声"
+    translated: "Silent as cutting iron"
+- raw: "枪芒"
+  splits:
+  - text: "枪芒"
+    translated: "Spear Glow"
+- raw: "枪出如龙"
+  splits:
+  - text: "枪出如龙"
+    translated: "Spear Out Like a Dragon"
+- raw: "奇技"
+  splits:
+  - text: "奇技"
+    translated: "Strange Art"
+- raw: "奇异莫名"
+  splits:
+  - text: "奇异莫名"
+    translated: "Strange and inexplicable"
+- raw: "惊弓"
+  splits:
+  - text: "惊弓"
+    translated: "Arrow from a startled bird"
+- raw: "摘叶飞花"
+  splits:
+  - text: "摘叶飞花"
+    translated: "Falling Leaf Flutter"
+- raw: "脱胎换骨"
+  splits:
+  - text: "脱胎换骨"
+    translated: "Reborn from head to toe"
+- raw: "羽化登仙"
+  splits:
+  - text: "羽化登仙"
+    translated: "Enlightened Ascension"
+- raw: "不老长生"
+  splits:
+  - text: "不老长生"
+    translated: "Eternal Youth"
+- raw: "内息灼热"
+  splits:
+  - text: "内息灼热"
+    translated: "Inner Qi is hot"
+- raw: "焚身烈焰"
+  splits:
+  - text: "焚身烈焰"
+    translated: "Burning Flame That Consumes One Whole"
+- raw: "内息冰寒"
+  splits:
+  - text: "内息冰寒"
+    translated: "Inner Qi Ice Cold"
+- raw: "刺骨奇寒"
+  splits:
+  - text: "刺骨奇寒"
+    translated: "Bone‑chilling cold"
+- raw: "阴阳调和"
+  splits:
+  - text: "阴阳调和"
+    translated: "Yin Yang harmony"
+- raw: "先天真气"
+  splits:
+  - text: "先天真气"
+    translated: "Primordial True Qi"
+- raw: "混元一气"
+  splits:
+  - text: "混元一气"
+    translated: "Primordial Breath"
+- raw: "至阳至刚"
+  splits:
+  - text: "至阳至刚"
+    translated: "Most Yang and Most Hard"
+- raw: "至阴至柔"
+  splits:
+  - text: "至阴至柔"
+    translated: "From Yin to Yang, From Soft to Hard"
+- raw: "刚柔并济"
+  splits:
+  - text: "刚柔并济"
+    translated: "Hard and Soft Combined"
+- raw: "物我两忘"
+  splits:
+  - text: "物我两忘"
+    translated: "Forget self and thing"
+- raw: "移形换位"
+  splits:
+  - text: "移形换位"
+    translated: "Teleportation"
+- raw: "陆地飞行"
+  splits:
+  - text: "陆地飞行"
+    translated: "Land flight"
+- raw: "扭转乾坤"
+  splits:
+  - text: "扭转乾坤"
+    translated: "Turn the tide"
+- raw: "不动如山"
+  splits:
+  - text: "不动如山"
+    translated: "Still as a mountain"
+- raw: "神鬼莫测"
+  splits:
+  - text: "神鬼莫测"
+    translated: "Mysterious like a deity and a devil"
+- raw: "以劲御气"
+  splits:
+  - text: "以劲御气"
+    translated: "Control the Qi with Strength"
+- raw: "艺成百家"
+  splits:
+  - text: "艺成百家"
+    translated: "Achieve Mastery in a Hundred Arts"
+- raw: "武学宗师"
+  splits:
+  - text: "武学宗师"
+    translated: "Martial Sage"
+- raw: "返璞归真"
+  splits:
+  - text: "返璞归真"
+    translated: "Return to simplicity"
+- raw: "起死回生"
+  splits:
+  - text: "起死回生"
+    translated: "Resurrect from the dead"
+- raw: "天人合一"
+  splits:
+  - text: "天人合一"
+    translated: "Harmony between heaven and man"
+- raw: "功德圆满"
+  splits:
+  - text: "功德圆满"
+    translated: "Blessing complete"
+- raw: "即身成佛"
+  splits:
+  - text: "即身成佛"
+    translated: "Buddhahood in This Very Existence"
+- raw: "太极圆转"
+  splits:
+  - text: "太极圆转"
+    translated: "Tai Chi Circle Turn"
+- raw: "轰天震地"
+  splits:
+  - text: "轰天震地"
+    translated: "Heaven‑shaking earthquake"
+- raw: "十殿阎王"
+  splits:
+  - text: "十殿阎王"
+    translated: "Ten Kings of Hell"
+- raw: "力降十会"
+  splits:
+  - text: "力降十会"
+    translated: "Force ten meetings"
+- raw: "术精岐黄"
+  splits:
+  - text: "术精岐黄"
+    translated: "Skilled in Jing Huang"
+- raw: "五毒俱全"
+  splits:
+  - text: "五毒俱全"
+    translated: "All poisons are present"
+- raw: "见血封喉"
+  splits:
+  - text: "见血封喉"
+    translated: "Lethal Dart Poison"
+- raw: "见多识广"
+  splits:
+  - text: "见多识广"
+    translated: "Well‑traveled"
+- raw: "学富五车"
+  splits:
+  - text: "学富五车"
+    translated: "Well‑versed"
+- raw: "口齿伶俐"
+  splits:
+  - text: "口齿伶俐"
+    translated: "Articulate"
+- raw: "舌灿莲花"
+  splits:
+  - text: "舌灿莲花"
+    translated: "Talk eloquently"
+- raw: "劈荆斩棘"
+  splits:
+  - text: "劈荆斩棘"
+    translated: "Cut through obstacles"
+- raw: "铸山煮海"
+  splits:
+  - text: "铸山煮海"
+    translated: "Forge Mountains and Cook Oceans"
+- raw: "精耕细作"
+  splits:
+  - text: "精耕细作"
+    translated: "Meticulous cultivation"
+- raw: "万木争荣"
+  splits:
+  - text: "万木争荣"
+    translated: "Vast forests flourish"
+- raw: "千锤百炼"
+  splits:
+  - text: "千锤百炼"
+    translated: "Well‑refined through countless trials"
+- raw: "鬼斧神工"
+  splits:
+  - text: "鬼斧神工"
+    translated: "Ingenious craftsmanship"
+- raw: "对症下药"
+  splits:
+  - text: "对症下药"
+    translated: "Prescribe the remedy to the illness"
+- raw: "烩不厌细"
+  splits:
+  - text: "烩不厌细"
+    translated: "One must not be too meticulous in stewing."
+- raw: "炮凤烹龙"
+  splits:
+  - text: "炮凤烹龙"
+    translated: "Cooking Dragons and Roasting Phoenixes"
+- raw: "毒医"
+  splits:
+  - text: "毒医"
+    translated: "Poison Doctor"
+- raw: "以毒攻毒"
+  splits:
+  - text: "以毒攻毒"
+    translated: "Fight poison with poison"
+- raw: "毒手药王"
+  splits:
+  - text: "毒手药王"
+    translated: "Poison‑hand Medicine King"
+- raw: "医毒"
+  splits:
+  - text: "医毒"
+    translated: "Poison Medicine"
+- raw: "强壮"
+  splits:
+  - text: "强壮"
+    translated: "Strong"
+- raw: "魁梧奇伟"
+  splits:
+  - text: "魁梧奇伟"
+    translated: "Towering and imposing"
+- raw: "天生神力"
+  splits:
+  - text: "天生神力"
+    translated: "Supernatural Strength"
+- raw: "瘦弱"
+  splits:
+  - text: "瘦弱"
+    translated: "Weak"
+- raw: "瘦骨嶙峋"
+  splits:
+  - text: "瘦骨嶙峋"
+    translated: "Bony"
+- raw: "缚鸡之力"
+  splits:
+  - text: "缚鸡之力"
+    translated: "The strength to kill a chicken"
+- raw: "机敏"
+  splits:
+  - text: "机敏"
+    translated: "Nimble"
+- raw: "随机应变"
+  splits:
+  - text: "随机应变"
+    translated: "Adapt on the fly"
+- raw: "巧捷万端"
+  splits:
+  - text: "巧捷万端"
+    translated: "Resourceful and versatile"
+- raw: "笨手笨脚"
+  splits:
+  - text: "笨手笨脚"
+    translated: "Clumsy"
+- raw: "东倒西歪"
+  splits:
+  - text: "东倒西歪"
+    translated: "Tipped over"
+- raw: "聪慧"
+  splits:
+  - text: "聪慧"
+    translated: "Wise"
+- raw: "天资过人"
+  splits:
+  - text: "天资过人"
+    translated: "Gifted"
+- raw: "旷世奇才"
+  splits:
+  - text: "旷世奇才"
+    translated: "Worldly Genius"
+- raw: "傻头傻脑"
+  splits:
+  - text: "傻头傻脑"
+    translated: "Stupid and silly"
+- raw: "痴傻蒙昧"
+  splits:
+  - text: "痴傻蒙昧"
+    translated: "Stupid and ignorant"
+- raw: "勇敢"
+  splits:
+  - text: "勇敢"
+    translated: "Brave"
+- raw: "身先士卒"
+  splits:
+  - text: "身先士卒"
+    translated: "Lead by example"
+- raw: "临危不乱"
+  splits:
+  - text: "临危不乱"
+    translated: "Remain calm in crisis"
+- raw: "懦弱"
+  splits:
+  - text: "懦弱"
+    translated: "Cowardly"
+- raw: "战战兢兢"
+  splits:
+  - text: "战战兢兢"
+    translated: "On tenterhooks"
+- raw: "胆小如鼠"
+  splits:
+  - text: "胆小如鼠"
+    translated: "As timid as a mouse"
+- raw: "康健"
+  splits:
+  - text: "康健"
+    translated: "Healthy"
+- raw: "容光焕发"
+  splits:
+  - text: "容光焕发"
+    translated: "Energetic and vibrant"
+- raw: "百病不侵"
+  splits:
+  - text: "百病不侵"
+    translated: "Invulnerable to illness"
+- raw: "多病"
+  splits:
+  - text: "多病"
+    translated: "Ill often"
+- raw: "身心交病"
+  splits:
+  - text: "身心交病"
+    translated: "Body and mind affected"
+- raw: "旧病沉疴"
+  splits:
+  - text: "旧病沉疴"
+    translated: "Old wounds have not fully healed"
+- raw: "顺脉"
+  splits:
+  - text: "顺脉"
+    translated: "Correct Pulse"
+- raw: "脉络贯通"
+  splits:
+  - text: "脉络贯通"
+    translated: "Clearly understood"
+- raw: "先天气海"
+  splits:
+  - text: "先天气海"
+    translated: "Primordial Qi Sea"
+- raw: "滞脉"
+  splits:
+  - text: "滞脉"
+    translated: "Stop pulse"
+- raw: "脉络阻塞"
+  splits:
+  - text: "脉络阻塞"
+    translated: "Blocked meridian"
+- raw: "经脉断绝"
+  splits:
+  - text: "经脉断绝"
+    translated: "Meridian severed"
+- raw: "正直"
+  splits:
+  - text: "正直"
+    translated: "Honest"
+- raw: "公正不阿"
+  splits:
+  - text: "公正不阿"
+    translated: "Impartial"
+- raw: "浩气凛然"
+  splits:
+  - text: "浩气凛然"
+    translated: "Upright and righteous"
+- raw: "阴险"
+  splits:
+  - text: "阴险"
+    translated: "Cunning"
+- raw: "不择手段"
+  splits:
+  - text: "不择手段"
+    translated: "Stop at nothing"
+- raw: "笑里藏刀"
+  splits:
+  - text: "笑里藏刀"
+    translated: "Smile Conceals a Dagger"
+- raw: "宅心仁厚"
+  splits:
+  - text: "宅心仁厚"
+    translated: "Kind and benevolent"
+- raw: "慈悲为怀"
+  splits:
+  - text: "慈悲为怀"
+    translated: "With compassion in heart"
+- raw: "残忍"
+  splits:
+  - text: "残忍"
+    translated: "Cruel"
+- raw: "心狠手辣"
+  splits:
+  - text: "心狠手辣"
+    translated: "Cruel and ruthless"
+- raw: "灭心绝情"
+  splits:
+  - text: "灭心绝情"
+    translated: "Heartless and emotionless"
+- raw: "气定神闲"
+  splits:
+  - text: "气定神闲"
+    translated: "Calm and composed"
+- raw: "心如止水"
+  splits:
+  - text: "心如止水"
+    translated: "Calm as still water"
+- raw: "暴躁"
+  splits:
+  - text: "暴躁"
+    translated: "Irritable"
+- raw: "性烈如火"
+  splits:
+  - text: "性烈如火"
+    translated: "As fierce as fire"
+- raw: "怒发冲冠"
+  splits:
+  - text: "怒发冲冠"
+    translated: "Rage fills his hair, topping his crown"
+- raw: "幸运"
+  splits:
+  - text: "幸运"
+    translated: "Luck"
+- raw: "福星高照"
+  splits:
+  - text: "福星高照"
+    translated: "Lucky stars shining high"
+- raw: "不幸"
+  splits:
+  - text: "不幸"
+    translated: "Unluckily"
+- raw: "命途多舛"
+  splits:
+  - text: "命途多舛"
+    translated: "With a tumultuous fate"
+- raw: "天煞孤星"
+  splits:
+  - text: "天煞孤星"
+    translated: "Celestial Doom Star"
+- raw: "美貌"
+  splits:
+  - text: "美貌"
+    translated: "Beauty"
+- raw: "明眸皓齿"
+  splits:
+  - text: "明眸皓齿"
+    translated: "Bright eyes and perfect teeth"
+- raw: "倾国倾城"
+  splits:
+  - text: "倾国倾城"
+    translated: "Breathtakingly beautiful"
+- raw: "丑陋"
+  splits:
+  - text: "丑陋"
+    translated: "Ugly"
+- raw: "面目狰狞"
+  splits:
+  - text: "面目狰狞"
+    translated: "With a fierce expression"
+- raw: "百丑千拙"
+  splits:
+  - text: "百丑千拙"
+    translated: "Hundred Follies Thousand Naive"
+- raw: "锐眼"
+  splits:
+  - text: "锐眼"
+    translated: "Sharp Eye"
+- raw: "目光炯炯"
+  splits:
+  - text: "目光炯炯"
+    translated: "Eyes shining brightly"
+- raw: "明察秋毫"
+  splits:
+  - text: "明察秋毫"
+    translated: "Keen‑eyed"
+- raw: "弱视"
+  splits:
+  - text: "弱视"
+    translated: "Lazy eye"
+- raw: "视线模糊"
+  splits:
+  - text: "视线模糊"
+    translated: "Sight blurred"
+- raw: "雾里看花"
+  splits:
+  - text: "雾里看花"
+    translated: "Foggy mist scenery"
+- raw: "谦逊"
+  splits:
+  - text: "谦逊"
+    translated: "Humble"
+- raw: "不骄不躁"
+  splits:
+  - text: "不骄不躁"
+    translated: "Neither arrogant nor anxious"
+- raw: "虚怀若谷"
+  splits:
+  - text: "虚怀若谷"
+    translated: "Empty as a valley"
+- raw: "刚愎"
+  splits:
+  - text: "刚愎"
+    translated: "Stubborn"
+- raw: "盛气凌人"
+  splits:
+  - text: "盛气凌人"
+    translated: "Overbearing"
+- raw: "唯我独尊"
+  splits:
+  - text: "唯我独尊"
+    translated: "Supreme Ruler"
+- raw: "忠诚"
+  splits:
+  - text: "忠诚"
+    translated: "Loyalty"
+- raw: "忠心耿耿"
+  splits:
+  - text: "忠心耿耿"
+    translated: "Loyal to the core"
+- raw: "至死不渝"
+  splits:
+  - text: "至死不渝"
+    translated: "Loyal till death"
+- raw: "桀骜不驯"
+  splits:
+  - text: "桀骜不驯"
+    translated: "Rebellious"
+- raw: "离经叛道"
+  splits:
+  - text: "离经叛道"
+    translated: "Heretical"
+- raw: "勤奋"
+  splits:
+  - text: "勤奋"
+    translated: "Diligence"
+- raw: "孜孜不倦"
+  splits:
+  - text: "孜孜不倦"
+    translated: "Diligent"
+- raw: "废寝忘食"
+  splits:
+  - text: "废寝忘食"
+    translated: "Study day and night"
+- raw: "懒惰"
+  splits:
+  - text: "懒惰"
+    translated: "Laziness"
+- raw: "游手好闲"
+  splits:
+  - text: "游手好闲"
+    translated: "Idle"
+- raw: "无所用心"
+  splits:
+  - text: "无所用心"
+    translated: "Idle and careless"
+- raw: "节俭"
+  splits:
+  - text: "节俭"
+    translated: "Frugality"
+- raw: "精打细算"
+  splits:
+  - text: "精打细算"
+    translated: "Thrifty"
+- raw: "取予有节"
+  splits:
+  - text: "取予有节"
+    translated: "Moderation in all things"
+- raw: "浪费"
+  splits:
+  - text: "浪费"
+    translated: "Waste"
+- raw: "挥霍无度"
+  splits:
+  - text: "挥霍无度"
+    translated: "Wasteful"
+- raw: "穷奢极欲"
+  splits:
+  - text: "穷奢极欲"
+    translated: "Luxury and extravagance"
+- raw: "练武"
+  splits:
+  - text: "练武"
+    translated: "Training in martial arts"
+- raw: "武痴"
+  splits:
+  - text: "武痴"
+    translated: "Martial maniac"
+- raw: "武学天才"
+  splits:
+  - text: "武学天才"
+    translated: "Martial genius"
+- raw: "学医"
+  splits:
+  - text: "学医"
+    translated: "Study medicine"
+- raw: "济世神医"
+  splits:
+  - text: "济世神医"
+    translated: "Savior Physician"
+- raw: "习文"
+  splits:
+  - text: "习文"
+    translated: "Xwen"
+- raw: "雅士"
+  splits:
+  - text: "雅士"
+    translated: "Gentleman"
+- raw: "文采斐然"
+  splits:
+  - text: "文采斐然"
+    translated: "Eloquently gifted"
+- raw: "务农"
+  splits:
+  - text: "务农"
+    translated: "Farm"
+- raw: "农家"
+  splits:
+  - text: "农家"
+    translated: "Farmer's"
+- raw: "在世神农"
+  splits:
+  - text: "在世神农"
+    translated: "Timeless Shen Nong"
+- raw: "能工巧匠"
+  splits:
+  - text: "能工巧匠"
+    translated: "Craftsman"
+- raw: "经商"
+  splits:
+  - text: "经商"
+    translated: "Business"
+- raw: "善贾"
+  splits:
+  - text: "善贾"
+    translated: "Skillful Trader"
+- raw: "囤积居奇"
+  splits:
+  - text: "囤积居奇"
+    translated: "Hoard for speculative gain"
+- raw: "从政"
+  splits:
+  - text: "从政"
+    translated: "Enter politics"
+- raw: "仕官"
+  splits:
+  - text: "仕官"
+    translated: "Become a government official"
+- raw: "位极人臣"
+  splits:
+  - text: "位极人臣"
+    translated: "Second‑in‑command"
+- raw: "杂学"
+  splits:
+  - text: "杂学"
+    translated: "Miscellaneous studies"
+- raw: "通才"
+  splits:
+  - text: "通才"
+    translated: "Renaissance Man"
+- raw: "博学多才"
+  splits:
+  - text: "博学多才"
+    translated: "Well‑learned and versatile"
+- raw: "淡泊"
+  splits:
+  - text: "淡泊"
+    translated: "Tranquil"
+- raw: "隐士"
+  splits:
+  - text: "隐士"
+    translated: "Hermit"
+- raw: "避世绝俗"
+  splits:
+  - text: "避世绝俗"
+    translated: "Withdrawn from the world"
+- raw: "儒术"
+  splits:
+  - text: "儒术"
+    translated: "Confucianism"
+- raw: "儒生"
+  splits:
+  - text: "儒生"
+    translated: "Scholar‑official"
+- raw: "鸿儒大学"
+  splits:
+  - text: "鸿儒大学"
+    translated: "Hong Ru University"
+- raw: "修道"
+  splits:
+  - text: "修道"
+    translated: "Cultivate the way"
+- raw: "道士"
+  splits:
+  - text: "道士"
+    translated: "Daoist priest"
+- raw: "仙风道骨"
+  splits:
+  - text: "仙风道骨"
+    translated: "Immortal wind and fairy bone"
+- raw: "学佛"
+  splits:
+  - text: "学佛"
+    translated: "Study Buddhism"
+- raw: "禅师"
+  splits:
+  - text: "禅师"
+    translated: "Zen Master"
+- raw: "四大皆空"
+  splits:
+  - text: "四大皆空"
+    translated: "Four Empty Seats"
+- raw: "行乞"
+  splits:
+  - text: "行乞"
+    translated: "Begging"
+- raw: "化缘"
+  splits:
+  - text: "化缘"
+    translated: "Beg for alms"
+- raw: "卜算"
+  splits:
+  - text: "卜算"
+    translated: "Fortune Teller"
+- raw: "相士"
+  splits:
+  - text: "相士"
+    translated: "Fortune teller"
+- raw: "未卜先知"
+  splits:
+  - text: "未卜先知"
+    translated: "Foreknow the future"
+- raw: "侠义无双"
+  splits:
+  - text: "侠义无双"
+    translated: "Indestructible Chivalry"
+- raw: "嗜赌如命"
+  splits:
+  - text: "嗜赌如命"
+    translated: "Addicted to gambling"
+- raw: "赌运亨通"
+  splits:
+  - text: "赌运亨通"
+    translated: "Lucky in gambling"
+- raw: "酒鬼"
+  splits:
+  - text: "酒鬼"
+    translated: "Drunkard"
+- raw: "放歌纵酒"
+  splits:
+  - text: "放歌纵酒"
+    translated: "Sing and drink freely"
+- raw: "醉生梦死"
+  splits:
+  - text: "醉生梦死"
+    translated: "Drunken dreams"
+- raw: "食客"
+  splits:
+  - text: "食客"
+    translated: "Dining guest"
+- raw: "大快朵颐"
+  splits:
+  - text: "大快朵颐"
+    translated: "Enjoy oneself to the fullest"
+- raw: "饕餮盛宴"
+  splits:
+  - text: "饕餮盛宴"
+    translated: "Feast of gluttony"
+- raw: "收藏"
+  splits:
+  - text: "收藏"
+    translated: "Collect"
+- raw: "去伪存真"
+  splits:
+  - text: "去伪存真"
+    translated: "Separate truth from falsehood"
+- raw: "慧眼独具"
+  splits:
+  - text: "慧眼独具"
+    translated: "Insightful discernment"
+- raw: "骑术"
+  splits:
+  - text: "骑术"
+    translated: "Horsemanship"
+- raw: "纵马驰骋"
+  splits:
+  - text: "纵马驰骋"
+    translated: "Gallop on horseback"
+- raw: "一骑绝尘"
+  splits:
+  - text: "一骑绝尘"
+    translated: "A single rider dashes ahead"
+- raw: "读书"
+  splits:
+  - text: "读书"
+    translated: "Reading books"
+- raw: "博览群书"
+  splits:
+  - text: "博览群书"
+    translated: "Read extensively"
+- raw: "皓首穷经"
+  splits:
+  - text: "皓首穷经"
+    translated: "Devote one's life to studying"
+- raw: "瑶琴"
+  splits:
+  - text: "瑶琴"
+    translated: "Yaqin"
+- raw: "余音绕梁"
+  splits:
+  - text: "余音绕梁"
+    translated: "Resonant echoes linger in the hall"
+- raw: "鸾吟凤唱"
+  splits:
+  - text: "鸾吟凤唱"
+    translated: "Phoenix Song"
+- raw: "弈棋"
+  splits:
+  - text: "弈棋"
+    translated: "Go playing"
+- raw: "棋高一着"
+  splits:
+  - text: "棋高一着"
+    translated: "A move ahead"
+- raw: "神机妙算"
+  splits:
+  - text: "神机妙算"
+    translated: "Divine strategy"
+- raw: "书法"
+  splits:
+  - text: "书法"
+    translated: "Calligraphy"
+- raw: "笔走龙蛇"
+  splits:
+  - text: "笔走龙蛇"
+    translated: "Brush moves like dragonsisciendi"
+- raw: "铁画银钩"
+  splits:
+  - text: "铁画银钩"
+    translated: "Iron Lines and Silver Hooks"
+- raw: "绘画"
+  splits:
+  - text: "绘画"
+    translated: "Painting"
+- raw: "丹青妙手"
+  splits:
+  - text: "丹青妙手"
+    translated: "Skillful Painter"
+- raw: "妙至毫巅"
+  splits:
+  - text: "妙至毫巅"
+    translated: "Meticulous to the extreme"
+- raw: "吟诗"
+  splits:
+  - text: "吟诗"
+    translated: "Compose poetry"
+- raw: "文思泉涌"
+  splits:
+  - text: "文思泉涌"
+    translated: "Inspiration flows freely"
+- raw: "七步成诗"
+  splits:
+  - text: "七步成诗"
+    translated: "Seven steps to compose a poem"
+- raw: "狩猎"
+  splits:
+  - text: "狩猎"
+    translated: "Hunting"
+- raw: "飞鹰走犬"
+  splits:
+  - text: "飞鹰走犬"
+    translated: "Eagle flies, hounds run"
+- raw: "苍鹰搏兔"
+  splits:
+  - text: "苍鹰搏兔"
+    translated: "Eagle preys on rabbit"
+- raw: "云游"
+  splits:
+  - text: "云游"
+    translated: "Wandering Clouds"
+- raw: "游山玩水"
+  splits:
+  - text: "游山玩水"
+    translated: "To sightsee and have fun"
+- raw: "浪迹天涯"
+  splits:
+  - text: "浪迹天涯"
+    translated: "Roaming Through the Vast Lands"
+- raw: "静修"
+  splits:
+  - text: "静修"
+    translated: "Meditation"
+- raw: "蛰居偃伏"
+  splits:
+  - text: "蛰居偃伏"
+    translated: "Secluded Resting"
+- raw: "面壁功深"
+  splits:
+  - text: "面壁功深"
+    translated: "Wall‑Buddhing Skill Profound"
+- raw: "舞技"
+  splits:
+  - text: "舞技"
+    translated: "Dance skill"
+- raw: "舞态生风"
+  splits:
+  - text: "舞态生风"
+    translated: "Dance with the grace of the wind"
+- raw: "羽衣蹁跹"
+  splits:
+  - text: "羽衣蹁跹"
+    translated: "Feathered Dancelightly"
+- raw: "随从"
+  splits:
+  - text: "随从"
+    translated: "Attendant"
+- raw: "唯命是从"
+  splits:
+  - text: "唯命是从"
+    translated: "At your command"
+- raw: "精明强干"
+  splits:
+  - text: "精明强干"
+    translated: "Shrewd and capable"
+- raw: "军师"
+  splits:
+  - text: "军师"
+    translated: "Counselor"
+- raw: "排兵布阵"
+  splits:
+  - text: "排兵布阵"
+    translated: "Arranging troops on the battlefield"
+- raw: "运筹帷幄"
+  splits:
+  - text: "运筹帷幄"
+    translated: "Plan from afar"
+- raw: "领袖"
+  splits:
+  - text: "领袖"
+    translated: "Leader"
+- raw: "胸怀大志"
+  splits:
+  - text: "胸怀大志"
+    translated: "Ambitious heart"
+- raw: "雄才伟略"
+  splits:
+  - text: "雄才伟略"
+    translated: "Strategic Genius"
+- raw: "先锋"
+  splits:
+  - text: "先锋"
+    translated: "Vanguard"
+- raw: "奋勇当先"
+  splits:
+  - text: "奋勇当先"
+    translated: "Charge bravely"
+- raw: "背水一战"
+  splits:
+  - text: "背水一战"
+    translated: "A desperate situation with nowhere to retreat"
+- raw: "守备"
+  splits:
+  - text: "守备"
+    translated: "Garrison"
+- raw: "戒备森严"
+  splits:
+  - text: "戒备森严"
+    translated: "Strictly guarded"
+- raw: "严防死守"
+  splits:
+  - text: "严防死守"
+    translated: "Hold at all costs"
+- raw: "游斗"
+  splits:
+  - text: "游斗"
+    translated: "Duel"
+- raw: "快步流星"
+  splits:
+  - text: "快步流星"
+    translated: "Quickstep"
+- raw: "千里奔袭"
+  splits:
+  - text: "千里奔袭"
+    translated: "Thousand‑mile dash"
+- raw: "精力充沛"
+  splits:
+  - text: "精力充沛"
+    translated: "Full of energy"
+- raw: "腊八粥"
+  splits:
+  - text: "腊八粥"
+    translated: "Eight Treasure Porridge"
+- raw: "微醺"
+  splits:
+  - text: "微醺"
+    translated: "Tipsy"
+- raw: "大醉"
+  splits:
+  - text: "大醉"
+    translated: "Drunk"
+- raw: "酩酊"
+  splits:
+  - text: "酩酊"
+    translated: "Drunk"
+- raw: "宴会无趣"
+  splits:
+  - text: "宴会无趣"
+    translated: "Banquet is boring"
+- raw: "宴会平平"
+  splits:
+  - text: "宴会平平"
+    translated: "Banquet was unremarkable"
+- raw: "宴会满意"
+  splits:
+  - text: "宴会满意"
+    translated: "Banquet satisfactory"
+- raw: "宴会欢喜"
+  splits:
+  - text: "宴会欢喜"
+    translated: "Banquet merriment"
+- raw: "宴会极乐"
+  splits:
+  - text: "宴会极乐"
+    translated: "Ultimate Joy Feast"
+- raw: "赌运"
+  splits:
+  - text: "赌运"
+    translated: "Luck at gambling"
+- raw: "霉运"
+  splits:
+  - text: "霉运"
+    translated: "Bad luck"
+- raw: "论胜"
+  splits:
+  - text: "论胜"
+    translated: "Discussing Victory"
+- raw: "论败"
+  splits:
+  - text: "论败"
+    translated: "Talk of Defeat"
+- raw: "轻症"
+  splits:
+  - text: "轻症"
+    translated: "Mild cases"
+- raw: "中症"
+  splits:
+  - text: "中症"
+    translated: "Moderate condition"
+- raw: "重症"
+  splits:
+  - text: "重症"
+    translated: "Serious condition"
+- raw: "危症"
+  splits:
+  - text: "危症"
+    translated: "Critical condition"
+- raw: "气息不调"
+  splits:
+  - text: "气息不调"
+    translated: "Imbalanced qi"
+- raw: "内息紊乱"
+  splits:
+  - text: "内息紊乱"
+    translated: "Inner Qi Disruption"
+- raw: "经脉受阻"
+  splits:
+  - text: "经脉受阻"
+    translated: "Meridians blocked"
+- raw: "断臂"
+  splits:
+  - text: "断臂"
+    translated: "Amputated arm"
+- raw: "跛足"
+  splits:
+  - text: "跛足"
+    translated: "Limp"
+- raw: "目渺"
+  splits:
+  - text: "目渺"
+    translated: "Goalless"
+- raw: "理论心得"
+  splits:
+  - text: "理论心得"
+    translated: "Theoretical insights"
+- raw: "实战心得"
+  splits:
+  - text: "实战心得"
+    translated: "Battlefield insights"
+- raw: "机关木臂"
+  splits:
+  - text: "机关木臂"
+    translated: "Mechanical Wooden Arms"
+- raw: "机关石臂"
+  splits:
+  - text: "机关石臂"
+    translated: "Mechanical Stone Arm"
+- raw: "机关铁臂"
+  splits:
+  - text: "机关铁臂"
+    translated: "Mechanical Iron Arm"
+- raw: "机关木轮"
+  splits:
+  - text: "机关木轮"
+    translated: "Mechanical Wood Wheel"
+- raw: "机关石轮"
+  splits:
+  - text: "机关石轮"
+    translated: "Mechanism Stone Wheel"
+- raw: "机关铁轮"
+  splits:
+  - text: "机关铁轮"
+    translated: "Mechanical Iron Wheels"
+- raw: "机关木甲"
+  splits:
+  - text: "机关木甲"
+    translated: "Mechanical Wood Armor"
+- raw: "机关石甲"
+  splits:
+  - text: "机关石甲"
+    translated: "Mechanical Armor Stone"
+- raw: "机关铁甲"
+  splits:
+  - text: "机关铁甲"
+    translated: "Mechanical Armor"
+- raw: "机关大师"
+  splits:
+  - text: "机关大师"
+    translated: "Mechanism Master"
+- raw: "鲁班在世"
+  splits:
+  - text: "鲁班在世"
+    translated: "Lu Ban be alive"
+- raw: "机关义手"
+  splits:
+  - text: "机关义手"
+    translated: "Mechanism Cyberarm"
+- raw: "手铐"
+  splits:
+  - text: "手铐"
+    translated: "Handcuffs"
+- raw: "脚镣"
+  splits:
+  - text: "脚镣"
+    translated: "Handcuffs"
+- raw: "登顶泰岳"
+  splits:
+  - text: "登顶泰岳"
+    translated: "Climb Mount Tai"
+- raw: "负心人"
+  splits:
+  - text: "负心人"
+    translated: "Faithless one"
+- raw: "修行心得"
+  splits:
+  - text: "修行心得"
+    translated: "Training insights"
+- raw: "刮骨疗毒"
+  splits:
+  - text: "刮骨疗毒"
+    translated: "Cutting out the poison"
+- raw: "百毒不侵"
+  splits:
+  - text: "百毒不侵"
+    translated: "Invulnerable to toxins"
+- raw: "背叛师门"
+  splits:
+  - text: "背叛师门"
+    translated: "Betray the sect elders"
+- raw: "吐纳法"
+  splits:
+  - text: "吐纳法"
+    translated: "Breathing technique"
+- raw: "脉络诀"
+  splits:
+  - text: "脉络诀"
+    translated: "Pulse Deciphering Technique"
+- raw: "气血功"
+  splits:
+  - text: "气血功"
+    translated: "Lifeforce Technique"
+- raw: "飞毛腿"
+  splits:
+  - text: "飞毛腿"
+    translated: "Fast Foot"
+- raw: "轻身术"
+  splits:
+  - text: "轻身术"
+    translated: "Featherfall Technique"
+- raw: "梅花桩"
+  splits:
+  - text: "梅花桩"
+    translated: "Willow stick posts"
+- raw: "铁布衫"
+  splits:
+  - text: "铁布衫"
+    translated: "Iron Body Armor"
+- raw: "千斤坠"
+  splits:
+  - text: "千斤坠"
+    translated: "Gravitational pull"
+- raw: "胸口碎大石"
+  splits:
+  - text: "胸口碎大石"
+    translated: "Chest Smash Great Stones"
+- raw: "十段锦长拳"
+  splits:
+  - text: "十段锦长拳"
+    translated: "Ten‑Form Brocade Long Fist"
+- raw: "禁军拳术"
+  splits:
+  - text: "禁军拳术"
+    translated: "Forbidden Army Combat Technique"
+- raw: "木剑式"
+  splits:
+  - text: "木剑式"
+    translated: "Wooden Sword Style"
+- raw: "禁军剑术"
+  splits:
+  - text: "禁军剑术"
+    translated: "Forbidden Army Swordsmanship"
+- raw: "拔刀功"
+  splits:
+  - text: "拔刀功"
+    translated: "Draw Blade Technique"
+- raw: "劈柴刀法"
+  splits:
+  - text: "劈柴刀法"
+    translated: "Chopping Wood Blade Technique"
+- raw: "禁军刀术"
+  splits:
+  - text: "禁军刀术"
+    translated: "Forbidden Army Blade Technique"
+- raw: "太祖棍法"
+  splits:
+  - text: "太祖棍法"
+    translated: "Ancestral Staff Technique"
+- raw: "猎户叉功"
+  splits:
+  - text: "猎户叉功"
+    translated: "Hunter's Fork Technique"
+- raw: "禁军枪术"
+  splits:
+  - text: "禁军枪术"
+    translated: "Forbidden Army Spear Technique"
+- raw: "三路鞭法"
+  splits:
+  - text: "三路鞭法"
+    translated: "Three Whips Technique"
+- raw: "伐木斧功"
+  splits:
+  - text: "伐木斧功"
+    translated: "Axeman Skill"
+- raw: "禁军钩术"
+  splits:
+  - text: "禁军钩术"
+    translated: "Forbidden Army Hook Technique"
+- raw: "飞镖要诀"
+  splits:
+  - text: "飞镖要诀"
+    translated: "Dart throwing secrets"
+- raw: "飞针要诀"
+  splits:
+  - text: "飞针要诀"
+    translated: "Essence of Rapid Needle Technique"
+- raw: "飞刀要诀"
+  splits:
+  - text: "飞刀要诀"
+    translated: "Essentials of Flying Blade"
+- raw: "开声贯气法"
+  splits:
+  - text: "开声贯气法"
+    translated: "Breath Control Technique"
+- raw: "气守丹田法"
+  splits:
+  - text: "气守丹田法"
+    translated: "Method of Conserving Qi in the Dantian"
+- raw: "舒筋通络法"
+  splits:
+  - text: "舒筋通络法"
+    translated: "Toning and Unblocking Method"
+- raw: "四段功法"
+  splits:
+  - text: "四段功法"
+    translated: "Fourfold Technique"
+- raw: "玉带诀"
+  splits:
+  - text: "玉带诀"
+    translated: "Silkworm Belt Technique"
+- raw: "五指点石功"
+  splits:
+  - text: "五指点石功"
+    translated: "Five‑Finger Stoned‑Skipping Technique"
+- raw: "排打硬功"
+  splits:
+  - text: "排打硬功"
+    translated: "Hardening fist techniques"
+- raw: "鞭气劲"
+  splits:
+  - text: "鞭气劲"
+    translated: "Strong Whip Breath"
+- raw: "实腹鼓气功"
+  splits:
+  - text: "实腹鼓气功"
+    translated: "Solid Chest Breathing Exercise"
+- raw: "热炎功"
+  splits:
+  - text: "热炎功"
+    translated: "Flame Heat Technique"
+- raw: "草上飞"
+  splits:
+  - text: "草上飞"
+    translated: "Swift as a Grasshopper"
+- raw: "泥潭功"
+  splits:
+  - text: "泥潭功"
+    translated: "Mire Technique"
+- raw: "走壁功"
+  splits:
+  - text: "走壁功"
+    translated: "Wall Crawling Skill"
+- raw: "鲤鱼跃龙门"
+  splits:
+  - text: "鲤鱼跃龙门"
+    translated: "Leap over the Dragon Gate"
+- raw: "一线穿"
+  splits:
+  - text: "一线穿"
+    translated: "One‑line‑through"
+- raw: "雁回旋"
+  splits:
+  - text: "雁回旋"
+    translated: "Wild Goose Reversal"
+- raw: "跑铁索"
+  splits:
+  - text: "跑铁索"
+    translated: "Cross the hanging cable"
+- raw: "穿帘步"
+  splits:
+  - text: "穿帘步"
+    translated: "Through‑the‑curtain step"
+- raw: "缸沿功"
+  splits:
+  - text: "缸沿功"
+    translated: "Kanenaga Ichirou"
+- raw: "铁球滚"
+  splits:
+  - text: "铁球滚"
+    translated: "Iron ball rolls"
+- raw: "开碑劲"
+  splits:
+  - text: "开碑劲"
+    translated: "Stonesplitting Strength"
+- raw: "龟甲功"
+  splits:
+  - text: "龟甲功"
+    translated: "Tortoise Shell Technique"
+- raw: "石锁功"
+  splits:
+  - text: "石锁功"
+    translated: "Stone Lock Skill"
+- raw: "拔山功"
+  splits:
+  - text: "拔山功"
+    translated: "Overwhelming Victory"
+- raw: "倒踢腿"
+  splits:
+  - text: "倒踢腿"
+    translated: "Roundhouse kick"
+- raw: "柔身术"
+  splits:
+  - text: "柔身术"
+    translated: "Soft Body Technique"
+- raw: "拔钉功"
+  splits:
+  - text: "拔钉功"
+    translated: "Nail‑Pulling Technique"
+- raw: "闪战法"
+  splits:
+  - text: "闪战法"
+    translated: "Quick Battle Strategy"
+- raw: "铁牛犁地"
+  splits:
+  - text: "铁牛犁地"
+    translated: "Iron Ox Plowing the Fields"
+- raw: "乱弹琵琶"
+  splits:
+  - text: "乱弹琵琶"
+    translated: "Plucking the pipa randomly"
+- raw: "八卦掌法"
+  splits:
+  - text: "八卦掌法"
+    translated: "Bagua Palm Technique"
+- raw: "通臂拳"
+  splits:
+  - text: "通臂拳"
+    translated: "Long‑arm fist"
+- raw: "燕青拳"
+  splits:
+  - text: "燕青拳"
+    translated: "Yanying Quan"
+- raw: "野狐拳"
+  splits:
+  - text: "野狐拳"
+    translated: "Fox Fist"
+- raw: "螳螂拳"
+  splits:
+  - text: "螳螂拳"
+    translated: "Praying Mantis Fist"
+- raw: "八极拳"
+  splits:
+  - text: "八极拳"
+    translated: "Eight Extremes Fist"
+- raw: "赤尻连拳"
+  splits:
+  - text: "赤尻连拳"
+    translated: "Red Ass Combo"
+- raw: "连环掌法"
+  splits:
+  - text: "连环掌法"
+    translated: "Chain Palm Technique"
+- raw: "岳家拳"
+  splits:
+  - text: "岳家拳"
+    translated: "Yue Family Fist"
+- raw: "形意拳"
+  splits:
+  - text: "形意拳"
+    translated: "Form Sandboxing Fist"
+- raw: "八卦剑法"
+  splits:
+  - text: "八卦剑法"
+    translated: "Bagua Sword Technique"
+- raw: "连环剑法"
+  splits:
+  - text: "连环剑法"
+    translated: "Linked Sword Technique"
+- raw: "雷震剑法"
+  splits:
+  - text: "雷震剑法"
+    translated: "Thunderclap Sword Technique"
+- raw: "白马剑法"
+  splits:
+  - text: "白马剑法"
+    translated: "White Horse Sword Technique"
+- raw: "云雾剑法"
+  splits:
+  - text: "云雾剑法"
+    translated: "Sword Technique in Mist and Cloud"
+- raw: "无量剑法"
+  splits:
+  - text: "无量剑法"
+    translated: "Boundless Sword Technique"
+- raw: "迅剑诀"
+  splits:
+  - text: "迅剑诀"
+    translated: "Quick Sword Technique"
+- raw: "闪剑"
+  splits:
+  - text: "闪剑"
+    translated: "Flash Sword"
+- raw: "开阖剑术"
+  splits:
+  - text: "开阖剑术"
+    translated: "Opening and Closing Swordsmanship"
+- raw: "迎风剑法"
+  splits:
+  - text: "迎风剑法"
+    translated: "Wind Cutting Sword Technique"
+- raw: "八卦刀法"
+  splits:
+  - text: "八卦刀法"
+    translated: "Bagua Blade Art"
+- raw: "六合刀法"
+  splits:
+  - text: "六合刀法"
+    translated: "Hexing Blade Technique"
+- raw: "螳螂刀法"
+  splits:
+  - text: "螳螂刀法"
+    translated: "Mantis Blade Technique"
+- raw: "劈挂刀法"
+  splits:
+  - text: "劈挂刀法"
+    translated: "Blade Technique"
+- raw: "铁门闩刀法"
+  splits:
+  - text: "铁门闩刀法"
+    translated: "Iron Gate Blade Technique"
+- raw: "辛酉刀法"
+  splits:
+  - text: "辛酉刀法"
+    translated: "Xinchou Blade Art"
+- raw: "雁行刀"
+  splits:
+  - text: "雁行刀"
+    translated: "Formation Blade"
+- raw: "地堂刀法"
+  splits:
+  - text: "地堂刀法"
+    translated: "Blade Technique"
+- raw: "青龙刀法"
+  splits:
+  - text: "青龙刀法"
+    translated: "Blue Dragon Blade Art"
+- raw: "南山刀法"
+  splits:
+  - text: "南山刀法"
+    translated: "Southern Mountain Blade Technique"
+- raw: "八卦棍法"
+  splits:
+  - text: "八卦棍法"
+    translated: "Bagua Staff Technique"
+- raw: "罗家枪法"
+  splits:
+  - text: "罗家枪法"
+    translated: "Ro Family Spear Technique"
+- raw: "灵猿棍法"
+  splits:
+  - text: "灵猿棍法"
+    translated: "Monkey Staff Technique"
+- raw: "五郎棍法"
+  splits:
+  - text: "五郎棍法"
+    translated: "Five‑Branch Staff Technique"
+- raw: "形意枪"
+  splits:
+  - text: "形意枪"
+    translated: "Shape‑Intent Spear"
+- raw: "中平枪法"
+  splits:
+  - text: "中平枪法"
+    translated: "Middle‑Level Spear Technique"
+- raw: "八母枪术"
+  splits:
+  - text: "八母枪术"
+    translated: "Eight Mothers Staff Technique"
+- raw: "杨家枪法"
+  splits:
+  - text: "杨家枪法"
+    translated: "Yangs' Spear Technique"
+- raw: "千钧棍法"
+  splits:
+  - text: "千钧棍法"
+    translated: "Staff technique of a thousand catties"
+- raw: "牛头钢叉功"
+  splits:
+  - text: "牛头钢叉功"
+    translated: "Bull Horn Pummel Technique"
+- raw: "八卦鞭法"
+  splits:
+  - text: "八卦鞭法"
+    translated: "Bagua Whip Technique"
+- raw: "开山斧"
+  splits:
+  - text: "开山斧"
+    translated: "Felling Axe"
+- raw: "黄沙万里鞭"
+  splits:
+  - text: "黄沙万里鞭"
+    translated: "Ten‑thousand‑li Whip Through Sands"
+- raw: "碎石铁鞭"
+  splits:
+  - text: "碎石铁鞭"
+    translated: "Cracked Stone Whip"
+- raw: "九节鞭法"
+  splits:
+  - text: "九节鞭法"
+    translated: "Nine‑section whip technique"
+- raw: "海叟钩法"
+  splits:
+  - text: "海叟钩法"
+    translated: "Old Sea Hook Technique"
+- raw: "连环对刺"
+  splits:
+  - text: "连环对刺"
+    translated: "Chain Stabbing"
+- raw: "铁蜈钩"
+  splits:
+  - text: "铁蜈钩"
+    translated: "Iron Spider Hook"
+- raw: "清凉扇法"
+  splits:
+  - text: "清凉扇法"
+    translated: "Cool Fan Technique"
+- raw: "闪电五连鞭"
+  splits:
+  - text: "闪电五连鞭"
+    translated: "Lightning Five‑Strike Whip"
+- raw: "掷短斧"
+  splits:
+  - text: "掷短斧"
+    translated: "Throw small axes"
+- raw: "梅花镖"
+  splits:
+  - text: "梅花镖"
+    translated: "Plum Blossom Dart"
+- raw: "玉蜂针"
+  splits:
+  - text: "玉蜂针"
+    translated: "Silkworm Needle"
+- raw: "白翎箭"
+  splits:
+  - text: "白翎箭"
+    translated: "White Feather Arrow"
+- raw: "枣核钉"
+  splits:
+  - text: "枣核钉"
+    translated: "Split pin"
+- raw: "甩袖箭"
+  splits:
+  - text: "甩袖箭"
+    translated: "Wielded sleeve‑jar arrows"
+- raw: "棉套索"
+  splits:
+  - text: "棉套索"
+    translated: "Cotton lasso"
+- raw: "系绳镖"
+  splits:
+  - text: "系绳镖"
+    translated: "Boomerang"
+- raw: "铁莲花"
+  splits:
+  - text: "铁莲花"
+    translated: "Iron Lily"
+- raw: "飞手戟"
+  splits:
+  - text: "飞手戟"
+    translated: "Boarding pike"
+- raw: "硬气功"
+  splits:
+  - text: "硬气功"
+    translated: "Hard Qigong"
+- raw: "归元吐纳功"
+  splits:
+  - text: "归元吐纳功"
+    translated: "Primordial Breathing Technique"
+- raw: "心意气混元功"
+  splits:
+  - text: "心意气混元功"
+    translated: "Harmony of Intent and Qi Gong"
+- raw: "金刚心法"
+  splits:
+  - text: "金刚心法"
+    translated: "Heart Method of Vajra Mind"
+- raw: "轰天掣地诀"
+  splits:
+  - text: "轰天掣地诀"
+    translated: "Heaven‑Shaking Earth‑Piercing Technique"
+- raw: "普贤心经"
+  splits:
+  - text: "普贤心经"
+    translated: "The Heart Sutra of Manjushri Bodhisattva"
+- raw: "灵台清明功"
+  splits:
+  - text: "灵台清明功"
+    translated: "Clear Consciousness Cultivation Technique"
+- raw: "紫气氤氲法"
+  splits:
+  - text: "紫气氤氲法"
+    translated: "Vapor of Mystic Qi Surrounding Technique"
+- raw: "沸血法"
+  splits:
+  - text: "沸血法"
+    translated: "Boiling Blood Magic"
+- raw: "软玄功"
+  splits:
+  - text: "软玄功"
+    translated: "Soft Mystic Skill"
+- raw: "燕子三抄水"
+  splits:
+  - text: "燕子三抄水"
+    translated: "Swallow Triple Dip the Water"
+- raw: "上高楼"
+  splits:
+  - text: "上高楼"
+    translated: "Ascend to the high tower"
+- raw: "壁虎游墙"
+  splits:
+  - text: "壁虎游墙"
+    translated: "Gecko climbs walls"
+- raw: "磐罡步"
+  splits:
+  - text: "磐罡步"
+    translated: "Pan Gang Step"
+- raw: "金雁功"
+  splits:
+  - text: "金雁功"
+    translated: "Golden Swallow Technique"
+- raw: "白马悬蹄"
+  splits:
+  - text: "白马悬蹄"
+    translated: "White Horse Hoof Dangling"
+- raw: "天云步"
+  splits:
+  - text: "天云步"
+    translated: "Heavenly Cloud Step"
+- raw: "翻腾术"
+  splits:
+  - text: "翻腾术"
+    translated: "Tumbling Technique"
+- raw: "别离步"
+  splits:
+  - text: "别离步"
+    translated: "Step of Parting"
+- raw: "陆地飞行术"
+  splits:
+  - text: "陆地飞行术"
+    translated: "Land Flight Spell"
+- raw: "四两拨千斤"
+  splits:
+  - text: "四两拨千斤"
+    translated: "A feather's weight moves a thousand catties"
+- raw: "铜头铁臂功"
+  splits:
+  - text: "铜头铁臂功"
+    translated: "Iron‑arm Copper‑head Skill"
+- raw: "隔山打牛"
+  splits:
+  - text: "隔山打牛"
+    translated: "Hit the bull from afar"
+- raw: "一指金刚法"
+  splits:
+  - text: "一指金刚法"
+    translated: "One Fingertip Vajra Technique"
+- raw: "千层纸功"
+  splits:
+  - text: "千层纸功"
+    translated: "Multiple Layers Paper Technique"
+- raw: "分水功"
+  splits:
+  - text: "分水功"
+    translated: "Dividing Water Technique"
+- raw: "柔骨摆柳功"
+  splits:
+  - text: "柔骨摆柳功"
+    translated: "Rou Gu Ba Liu Gong"
+- raw: "卧虎功"
+  splits:
+  - text: "卧虎功"
+    translated: "Tiger‑Crouching Fist"
+- raw: "乱环扑"
+  splits:
+  - text: "乱环扑"
+    translated: "Chaotic Rings Assault"
+- raw: "霸王肘"
+  splits:
+  - text: "霸王肘"
+    translated: "Butterfly Sweep"
+- raw: "摔碑手"
+  splits:
+  - text: "摔碑手"
+    translated: "Crushing themHand"
+- raw: "追风短打"
+  splits:
+  - text: "追风短打"
+    translated: "Swift Strike"
+- raw: "惊涛掌"
+  splits:
+  - text: "惊涛掌"
+    translated: "Whirlpool Palm"
+- raw: "猛禽手"
+  splits:
+  - text: "猛禽手"
+    translated: "Raptor Hand"
+- raw: "铁砂掌"
+  splits:
+  - text: "铁砂掌"
+    translated: "Iron Palm"
+- raw: "合盘掌"
+  splits:
+  - text: "合盘掌"
+    translated: "Palming Technique"
+- raw: "伏虎拳"
+  splits:
+  - text: "伏虎拳"
+    translated: "Tiger‑Crushing Fist"
+- raw: "大擒拿手"
+  splits:
+  - text: "大擒拿手"
+    translated: "Dragon Entangling Hands"
+- raw: "铁琵琶手"
+  splits:
+  - text: "铁琵琶手"
+    translated: "Iron Mallet Hand"
+- raw: "二郎担山掌"
+  splits:
+  - text: "二郎担山掌"
+    translated: "Second Young Master Shoulders Mountain Palm"
+- raw: "飞星快剑"
+  splits:
+  - text: "飞星快剑"
+    translated: "Swift Star Sword"
+- raw: "快慢十八路"
+  splits:
+  - text: "快慢十八路"
+    translated: "Fast and Slow Eighteen Roads"
+- raw: "泼墨剑法"
+  splits:
+  - text: "泼墨剑法"
+    translated: "Freehand Sword Technique"
+- raw: "北斗剑法"
+  splits:
+  - text: "北斗剑法"
+    translated: "Northern Dipper Sword Technique"
+- raw: "雨打飞花剑"
+  splits:
+  - text: "雨打飞花剑"
+    translated: "Rain‑Splashed Flying Flower Sword"
+- raw: "浣花流水剑"
+  splits:
+  - text: "浣花流水剑"
+    translated: "Flowing Lotus Sword"
+- raw: "一字电剑"
+  splits:
+  - text: "一字电剑"
+    translated: "One‑Stroke Electric Sword"
+- raw: "周公剑法"
+  splits:
+  - text: "周公剑法"
+    translated: "Wu Geng's Sword Technique"
+- raw: "五大夫剑"
+  splits:
+  - text: "五大夫剑"
+    translated: "Doctor's Sword"
+- raw: "霜花剑式"
+  splits:
+  - text: "霜花剑式"
+    translated: "Frost Flower Sword Form"
+- raw: "八面破身刀"
+  splits:
+  - text: "八面破身刀"
+    translated: "Eight‑Faced Piercing Blade"
+- raw: "逐浪刀法"
+  splits:
+  - text: "逐浪刀法"
+    translated: "Wave Blade Technique"
+- raw: "鸳鸯刀法"
+  splits:
+  - text: "鸳鸯刀法"
+    translated: "Interlocked Blade Technique"
+- raw: "五虎断门刀"
+  splits:
+  - text: "五虎断门刀"
+    translated: "Five Tiger Pierce‑Chest Knife"
+- raw: "八阵盘龙刀"
+  splits:
+  - text: "八阵盘龙刀"
+    translated: "Eight Formation Coiled Dragon Sword"
+- raw: "春秋刀术"
+  splits:
+  - text: "春秋刀术"
+    translated: "Spring and Autumn Sword Art"
+- raw: "百兽刀法"
+  splits:
+  - text: "百兽刀法"
+    translated: "Tiger's Claw Blade Technique"
+- raw: "荡寇刀法"
+  splits:
+  - text: "荡寇刀法"
+    translated: "Blade Technique for Subduing Rebels"
+- raw: "雷鸣刀法"
+  splits:
+  - text: "雷鸣刀法"
+    translated: "Thunder Blade Technique"
+- raw: "泰山十八刀"
+  splits:
+  - text: "泰山十八刀"
+    translated: "Eighteen Cuts of Mount Tai"
+- raw: "二十四路枪势"
+  splits:
+  - text: "二十四路枪势"
+    translated: "Twenty‑four Styles of Spear Technique"
+- raw: "泼水杖法"
+  splits:
+  - text: "泼水杖法"
+    translated: "Water‑Splashing Staff Technique"
+- raw: "六合大枪"
+  splits:
+  - text: "六合大枪"
+    translated: "Sixfold Great Spear"
+- raw: "小夜叉棍法"
+  splits:
+  - text: "小夜叉棍法"
+    translated: "Little Night Demon Staff Technique"
+- raw: "醉八仙棍法"
+  splits:
+  - text: "醉八仙棍法"
+    translated: "Drunk Eight Immortals Staff Technique"
+- raw: "蟠龙棍法"
+  splits:
+  - text: "蟠龙棍法"
+    translated: "Pillar Dragon Staff Technique"
+- raw: "大夜叉棍法"
+  splits:
+  - text: "大夜叉棍法"
+    translated: "Great Night Hare Staff Technique"
+- raw: "百变菱枪"
+  splits:
+  - text: "百变菱枪"
+    translated: "Versatile Rhombus Spear"
+- raw: "问天枪诀"
+  splits:
+  - text: "问天枪诀"
+    translated: "Heavenly Inquiry Staff Technique"
+- raw: "空灵杖法"
+  splits:
+  - text: "空灵杖法"
+    translated: "Staff Technique of Etherealness"
+- raw: "狂风扫雷扇"
+  splits:
+  - text: "狂风扫雷扇"
+    translated: "Wind Sweeping Mine Fan"
+- raw: "蛇鹤八打"
+  splits:
+  - text: "蛇鹤八打"
+    translated: "Eight Strikes of Snake and Crane"
+- raw: "金龙鞭法"
+  splits:
+  - text: "金龙鞭法"
+    translated: "Golden Dragon Whip Technique"
+- raw: "夺命鞭法"
+  splits:
+  - text: "夺命鞭法"
+    translated: "Fate‑Stealing Whip Technique"
+- raw: "乱披风锤法"
+  splits:
+  - text: "乱披风锤法"
+    translated: "Chaotic Mauling Technique"
+- raw: "精钢蟹钳功"
+  splits:
+  - text: "精钢蟹钳功"
+    translated: "Steel Crustacean Claw Technique"
+- raw: "普门杖法"
+  splits:
+  - text: "普门杖法"
+    translated: "Staff Method of Universal Doors"
+- raw: "盘根错节斧"
+  splits:
+  - text: "盘根错节斧"
+    translated: "Entangled Axes"
+- raw: "回打软鞭式"
+  splits:
+  - text: "回打软鞭式"
+    translated: "Return with whip‑like technique"
+- raw: "呼延鞭法"
+  splits:
+  - text: "呼延鞭法"
+    translated: "Huayuan Whip Technique"
+- raw: "八门飞刀术"
+  splits:
+  - text: "八门飞刀术"
+    translated: "Eight Gates Flying Daggers Technique"
+- raw: "乌叶镖"
+  splits:
+  - text: "乌叶镖"
+    translated: "Black Leaf Dart"
+- raw: "龙须针"
+  splits:
+  - text: "龙须针"
+    translated: "Dragon whisker needle"
+- raw: "铁链飞爪"
+  splits:
+  - text: "铁链飞爪"
+    translated: "Chain grappling hook"
+- raw: "流星锤"
+  splits:
+  - text: "流星锤"
+    translated: "Meteor Hammer"
+- raw: "银飞梭"
+  splits:
+  - text: "银飞梭"
+    translated: "Silver Flying Shuttle"
+- raw: "铁索渔网"
+  splits:
+  - text: "铁索渔网"
+    translated: "Chain fishing net"
+- raw: "含沙射影"
+  splits:
+  - text: "含沙射影"
+    translated: "Sling sand to accuse"
+- raw: "刀叶扇"
+  splits:
+  - text: "刀叶扇"
+    translated: "Bladeleaf Fan"
+- raw: "乾坤飞轮"
+  splits:
+  - text: "乾坤飞轮"
+    translated: "Heavenly Wheel Rush"
+- raw: "潜渊心经"
+  splits:
+  - text: "潜渊心经"
+    translated: "Qian Yuan Heart Sutra"
+- raw: "五岳独尊功"
+  splits:
+  - text: "五岳独尊功"
+    translated: "Majestic Five Peaks Technique"
+- raw: "乾元功"
+  splits:
+  - text: "乾元功"
+    translated: "Kan Yuan Skill"
+- raw: "潮起月盈功"
+  splits:
+  - text: "潮起月盈功"
+    translated: "Tide Rise Moon Full Success"
+- raw: "太上十三经"
+  splits:
+  - text: "太上十三经"
+    translated: "The Thirteenth Classic of the Highest Rank"
+- raw: "水上漂"
+  splits:
+  - text: "水上漂"
+    translated: "Water Flea"
+- raw: "七步追魂"
+  splits:
+  - text: "七步追魂"
+    translated: "Seven‑Step Soul Pursuer"
+- raw: "八步赶蝉"
+  splits:
+  - text: "八步赶蝉"
+    translated: "Eight Steps to Catch a Cicada"
+- raw: "踏空行"
+  splits:
+  - text: "踏空行"
+    translated: "Leap Void"
+- raw: "飒沓流星步"
+  splits:
+  - text: "飒沓流星步"
+    translated: "Swift Meteor Step"
+- raw: "虎鹤双形"
+  splits:
+  - text: "虎鹤双形"
+    translated: "Tiger and Crane Dual Forms"
+- raw: "真元护体"
+  splits:
+  - text: "真元护体"
+    translated: "True Essence Body Guard"
+- raw: "五方揭谛功"
+  splits:
+  - text: "五方揭谛功"
+    translated: "Five Directions Perceiver Skill"
+- raw: "熊形虎相"
+  splits:
+  - text: "熊形虎相"
+    translated: "Bear‑like tiger appearance"
+- raw: "雷霆万钧"
+  splits:
+  - text: "雷霆万钧"
+    translated: "Thunderous Strike"
+- raw: "飞凤手"
+  splits:
+  - text: "飞凤手"
+    translated: "Phoenix Fist"
+- raw: "缠丝擒拿手"
+  splits:
+  - text: "缠丝擒拿手"
+    translated: "Silkworm Entanglement Holding Hand Technique"
+- raw: "百花错拳"
+  splits:
+  - text: "百花错拳"
+    translated: "Flower Mist Fist"
+- raw: "劈金碎玉掌"
+  splits:
+  - text: "劈金碎玉掌"
+    translated: "Golden Splitting Palm"
+- raw: "分筋错骨手"
+  splits:
+  - text: "分筋错骨手"
+    translated: "Bone‑setting hand"
+- raw: "追魂夺命剑"
+  splits:
+  - text: "追魂夺命剑"
+    translated: "Lethal Soul‑Seizing Sword"
+- raw: "子午十二剑"
+  splits:
+  - text: "子午十二剑"
+    translated: "Midnight Twelve Swords"
+- raw: "点苍遗剑"
+  splits:
+  - text: "点苍遗剑"
+    translated: "Diancang's Lost Sword"
+- raw: "无影乱剑"
+  splits:
+  - text: "无影乱剑"
+    translated: "Shadowless Chaotic Swords"
+- raw: "越女剑法"
+  splits:
+  - text: "越女剑法"
+    translated: "Sword Technique of the Yue Maiden"
+- raw: "两仪刀法"
+  splits:
+  - text: "两仪刀法"
+    translated: "Dual Essence Blade Technique"
+- raw: "羽衣刀法"
+  splits:
+  - text: "羽衣刀法"
+    translated: "Feathered Robe Blade Technique"
+- raw: "空空玄玄刀"
+  splits:
+  - text: "空空玄玄刀"
+    translated: "Emptiness Emptiness Blade"
+- raw: "东瀛刀术"
+  splits:
+  - text: "东瀛刀术"
+    translated: "Japanese blade technique"
+- raw: "升天斩"
+  splits:
+  - text: "升天斩"
+    translated: "Heavenly Cut"
+- raw: "阴符枪谱"
+  splits:
+  - text: "阴符枪谱"
+    translated: "Yinfu Qiangpu"
+- raw: "灵蛇杖法"
+  splits:
+  - text: "灵蛇杖法"
+    translated: "Staff Technique of the Agile Serpent"
+- raw: "燎原百击枪"
+  splits:
+  - text: "燎原百击枪"
+    translated: "Firespark Hundred Strikes Spear"
+- raw: "焚天棍影"
+  splits:
+  - text: "焚天棍影"
+    translated: "Heaven‑Burning Staff Shadow"
+- raw: "百鸟朝凤枪"
+  splits:
+  - text: "百鸟朝凤枪"
+    translated: "Spear of a Hundred Birds Paying Homage to the Phoenix"
+- raw: "毗卢鞭法"
+  splits:
+  - text: "毗卢鞭法"
+    translated: "Vajra Whip Technique"
+- raw: "子午鸳鸯钺"
+  splits:
+  - text: "子午鸳鸯钺"
+    translated: "Midday‑Midnight Dual Jade Sabers"
+- raw: "判官笔法"
+  splits:
+  - text: "判官笔法"
+    translated: "Butterfly Stroke of the Judge"
+- raw: "月牙弯钩"
+  splits:
+  - text: "月牙弯钩"
+    translated: "New Moon Crescent Hook"
+- raw: "开天辟地斧"
+  splits:
+  - text: "开天辟地斧"
+    translated: "Ax of Creation and Destruction"
+- raw: "雷公钻"
+  splits:
+  - text: "雷公钻"
+    translated: "Thunder Drill"
+- raw: "子母如意珠"
+  splits:
+  - text: "子母如意珠"
+    translated: "Pearl of Divine Will"
+- raw: "腐骨针"
+  splits:
+  - text: "腐骨针"
+    translated: "Bonescorning Needle"
+- raw: "赤链蛇锥"
+  splits:
+  - text: "赤链蛇锥"
+    translated: "Red‑striped Keelback Snake"
+- raw: "阴冥砂"
+  splits:
+  - text: "阴冥砂"
+    translated: "Yinming Sha"
+- raw: "六言真经"
+  splits:
+  - text: "六言真经"
+    translated: "True Six Word Classic"
+- raw: "先天功"
+  splits:
+  - text: "先天功"
+    translated: "Predestined Skill"
+- raw: "元神出窍功"
+  splits:
+  - text: "元神出窍功"
+    translated: "Spirit Departure Technique"
+- raw: "如影随形"
+  splits:
+  - text: "如影随形"
+    translated: "Like a shadow follows"
+- raw: "攀云乘龙"
+  splits:
+  - text: "攀云乘龙"
+    translated: "Climb to great heights and soar like a dragon"
+- raw: "嫦娥奔月"
+  splits:
+  - text: "嫦娥奔月"
+    translated: "Chang'e Flies to the Moon"
+- raw: "刀枪不入法"
+  splits:
+  - text: "刀枪不入法"
+    translated: "Invincible Skill"
+- raw: "蛤蟆奇功"
+  splits:
+  - text: "蛤蟆奇功"
+    translated: "Frog Supreme Skill"
+- raw: "梦斩真龙"
+  splits:
+  - text: "梦斩真龙"
+    translated: "Dream Slice True Dragon"
+- raw: "泫然指法"
+  splits:
+  - text: "泫然指法"
+    translated: "Glistening Fingertouch"
+- raw: "大风云手"
+  splits:
+  - text: "大风云手"
+    translated: "Great Wind Hand Technique"
+- raw: "龙爪十缠"
+  splits:
+  - text: "龙爪十缠"
+    translated: "Dragon Claw Ten Wraps"
+- raw: "无名剑法"
+  splits:
+  - text: "无名剑法"
+    translated: "Nameless Sword Technique"
+- raw: "天意剑诀"
+  splits:
+  - text: "天意剑诀"
+    translated: "The Will of the Sword Technique"
+- raw: "太白剑意"
+  splits:
+  - text: "太白剑意"
+    translated: "Tai Bai Sword Intention"
+- raw: "万壑刀法"
+  splits:
+  - text: "万壑刀法"
+    translated: "Valley of Blades Technique"
+- raw: "雾隐云龙刀"
+  splits:
+  - text: "雾隐云龙刀"
+    translated: "Misty Dragonblade"
+- raw: "战八方藏刀式"
+  splits:
+  - text: "战八方藏刀式"
+    translated: "War in All Directions, Blade Style"
+- raw: "披风七杀戟"
+  splits:
+  - text: "披风七杀戟"
+    translated: "Seven‑Cloak Killing Spear"
+- raw: "傲世奇枪"
+  splits:
+  - text: "傲世奇枪"
+    translated: "Domination Strange Spear"
+- raw: "当头棒喝"
+  splits:
+  - text: "当头棒喝"
+    translated: "A sudden harsh awakening"
+- raw: "银索金玲"
+  splits:
+  - text: "银索金玲"
+    translated: "Silver Bell and Golden Loop"
+- raw: "龙头铁铡功"
+  splits:
+  - text: "龙头铁铡功"
+    translated: "Iron Head Decapitation Skill"
+- raw: "五蟒狂鞭"
+  splits:
+  - text: "五蟒狂鞭"
+    translated: "Five‑Mythical‑Beast Crazy Whip"
+- raw: "阎王帖"
+  splits:
+  - text: "阎王帖"
+    translated: "Order from the King of Hell"
+- raw: "追魂魔针"
+  splits:
+  - text: "追魂魔针"
+    translated: "Haunting Soul Needle"
+- raw: "善恶镖"
+  splits:
+  - text: "善恶镖"
+    translated: "Good and Evil Courier"
+- raw: "元始天功"
+  splits:
+  - text: "元始天功"
+    translated: "Primordial Heavenly Virtue"
+- raw: "飘飘欲仙"
+  splits:
+  - text: "飘飘欲仙"
+    translated: "Ethereal and transcendent"
+- raw: "虎啸龙吟"
+  splits:
+  - text: "虎啸龙吟"
+    translated: "Tiger Roars and Dragon Sings"
+- raw: "照影神拳"
+  splits:
+  - text: "照影神拳"
+    translated: "Shadowform Divine Fist"
+- raw: "诛仙剑法"
+  splits:
+  - text: "诛仙剑法"
+    translated: "Swordsmanship of the Crimson Virtue Sword"
+- raw: "九州风雷刀"
+  splits:
+  - text: "九州风雷刀"
+    translated: "Zhou Ji Wind and Thunder Blade"
+- raw: "大闹天宫棍"
+  splits:
+  - text: "大闹天宫棍"
+    translated: "Staff of Chaos in Heaven"
+- raw: "碧海潮生曲"
+  splits:
+  - text: "碧海潮生曲"
+    translated: "Tide‑Echoing Melody"
+- raw: "多情飞刀"
+  splits:
+  - text: "多情飞刀"
+    translated: "Romantic Blade"
+- raw: "哭面功"
+  splits:
+  - text: "哭面功"
+    translated: "Cry Face Technique"
+- raw: "爬竿术"
+  splits:
+  - text: "爬竿术"
+    translated: "Tightrope Walking"
+- raw: "耍狗熊"
+  splits:
+  - text: "耍狗熊"
+    translated: "Play with bears"
+- raw: "石灰散"
+  splits:
+  - text: "石灰散"
+    translated: "Powdered Lime"
+- raw: "金钱镖"
+  splits:
+  - text: "金钱镖"
+    translated: "Money Courier"
+- raw: "刑场刀法"
+  splits:
+  - text: "刑场刀法"
+    translated: "Execution Blade Art"
+- raw: "怒面功"
+  splits:
+  - text: "怒面功"
+    translated: "Furious Mastery"
+- raw: "走马灯"
+  splits:
+  - text: "走马灯"
+    translated: "Carousel lamp"
+- raw: "虎口吞枪"
+  splits:
+  - text: "虎口吞枪"
+    translated: "Clawed through the spear"
+- raw: "银屑粉"
+  splits:
+  - text: "银屑粉"
+    translated: "Silver powder"
+- raw: "铜蟾蜍"
+  splits:
+  - text: "铜蟾蜍"
+    translated: "Brass toad"
+- raw: "两面三刀法"
+  splits:
+  - text: "两面三刀法"
+    translated: "Two‑Faced Blade Technique"
+- raw: "知足常乐功"
+  splits:
+  - text: "知足常乐功"
+    translated: "Contentment Brings Eternal Happiness"
+- raw: "脚踏飞燕"
+  splits:
+  - text: "脚踏飞燕"
+    translated: "Swallow Leap Forward"
+- raw: "嬉皮笑脸"
+  splits:
+  - text: "嬉皮笑脸"
+    translated: "Grinning"
+- raw: "长乐散"
+  splits:
+  - text: "长乐散"
+    translated: "Changle Powder"
+- raw: "长乐刀法"
+  splits:
+  - text: "长乐刀法"
+    translated: "Longevity Blade Technique"
+- raw: "笑里藏刀式"
+  splits:
+  - text: "笑里藏刀式"
+    translated: "Smile Hiding Blade Technique"
+- raw: "活弥勒心法"
+  splits:
+  - text: "活弥勒心法"
+    translated: "Living Maitreya Heart Method"
+- raw: "得意春风步"
+  splits:
+  - text: "得意春风步"
+    translated: "Pleased by the Spring Breeze Step"
+- raw: "放浪形骸"
+  splits:
+  - text: "放浪形骸"
+    translated: "Carefree"
+- raw: "极乐刺"
+  splits:
+  - text: "极乐刺"
+    translated: "Heavenly Bliss Piercer"
+- raw: "游龙戏凤刀"
+  splits:
+  - text: "游龙戏凤刀"
+    translated: "Dragon Playing Phoenix Blade"
+- raw: "一刀两断法"
+  splits:
+  - text: "一刀两断法"
+    translated: "Cut off completely"
+- raw: "喜怒哀乐大法"
+  splits:
+  - text: "喜怒哀乐大法"
+    translated: "Emotion Management Technique"
+- raw: "日月凌空"
+  splits:
+  - text: "日月凌空"
+    translated: "Sun and Moon Soar into the Sky"
+- raw: "千金一掷"
+  splits:
+  - text: "千金一掷"
+    translated: "Stake a fortune"
+- raw: "醉阎罗刀法"
+  splits:
+  - text: "醉阎罗刀法"
+    translated: "Blade Technique of Drunken Judge"
+- raw: "恩断义绝刀法"
+  splits:
+  - text: "恩断义绝刀法"
+    translated: "Blade Technique of Cutting Off Both Bonds"
+- raw: "醉梦鱼龙舞"
+  splits:
+  - text: "醉梦鱼龙舞"
+    translated: "Drunken Dreaming Dance of Fish and Dragon"
+- raw: "净乐琉璃刀"
+  splits:
+  - text: "净乐琉璃刀"
+    translated: "Pure Joy Crystal Blade"
+- raw: "阴手伤人法"
+  splits:
+  - text: "阴手伤人法"
+    translated: "Law of Backhand Injury"
+- raw: "走房檐"
+  splits:
+  - text: "走房檐"
+    translated: "Walk along the eaves"
+- raw: "心眼功"
+  splits:
+  - text: "心眼功"
+    translated: "Mind Eye Skill"
+- raw: "毒蒺藜"
+  splits:
+  - text: "毒蒺藜"
+    translated: "Poison spurge"
+- raw: "绣花针"
+  splits:
+  - text: "绣花针"
+    translated: "Embroidery needle"
+- raw: "三寸钉"
+  splits:
+  - text: "三寸钉"
+    translated: "Three‑inch nail"
+- raw: "袖里藏刀"
+  splits:
+  - text: "袖里藏刀"
+    translated: "Hidden dagger in one's sleeve"
+- raw: "七窍玲珑功"
+  splits:
+  - text: "七窍玲珑功"
+    translated: "Clear Orifice Skill"
+- raw: "鹞子翻身"
+  splits:
+  - text: "鹞子翻身"
+    translated: "Flying Swallow Spin"
+- raw: "隐匿术"
+  splits:
+  - text: "隐匿术"
+    translated: "Stealth spell"
+- raw: "错骨钩"
+  splits:
+  - text: "错骨钩"
+    translated: "Fishbone ribhook"
+- raw: "牛毛针"
+  splits:
+  - text: "牛毛针"
+    translated: "Fine Needle"
+- raw: "青蜂钉"
+  splits:
+  - text: "青蜂钉"
+    translated: "Poison Bee Pin"
+- raw: "机关弹刀"
+  splits:
+  - text: "机关弹刀"
+    translated: "Mechanism Critique"
+- raw: "九转飞芒功"
+  splits:
+  - text: "九转飞芒功"
+    translated: "Nine Turns Swift Spark Skill"
+- raw: "金蝉脱壳"
+  splits:
+  - text: "金蝉脱壳"
+    translated: "Golden Cicada Shell"
+- raw: "袖里乾坤"
+  splits:
+  - text: "袖里乾坤"
+    translated: "Microcosm in the palm of your hand"
+- raw: "银丝网"
+  splits:
+  - text: "银丝网"
+    translated: "Silver‑webbed net"
+- raw: "断肠针"
+  splits:
+  - text: "断肠针"
+    translated: "Intestine‑Piercing Needle"
+- raw: "穿心钉"
+  splits:
+  - text: "穿心钉"
+    translated: "Stabbing dagger"
+- raw: "飞叶斩片刀"
+  splits:
+  - text: "飞叶斩片刀"
+    translated: "Falling Leaf Slice Blade"
+- raw: "百手千指功"
+  splits:
+  - text: "百手千指功"
+    translated: "Skill of Thousand Fingers on Hundred Hands"
+- raw: "鬼影重重"
+  splits:
+  - text: "鬼影重重"
+    translated: "Shadow Conspiracy"
+- raw: "绵里藏针"
+  splits:
+  - text: "绵里藏针"
+    translated: "Hiding needles in cotton"
+- raw: "孔雀翎"
+  splits:
+  - text: "孔雀翎"
+    translated: "Peacock Feathers"
+- raw: "玉髓冰魄针"
+  splits:
+  - text: "玉髓冰魄针"
+    translated: "Jade Dew Spirit Needle"
+- raw: "碎颅钉"
+  splits:
+  - text: "碎颅钉"
+    translated: "Braincracker nail"
+- raw: "百转千折刀"
+  splits:
+  - text: "百转千折刀"
+    translated: "Hundred Turns, Thousand Folds Blade"
+- raw: "天阴柔劲"
+  splits:
+  - text: "天阴柔劲"
+    translated: "Soft and yielding strength"
+- raw: "观音泪"
+  splits:
+  - text: "观音泪"
+    translated: "Goddess Tear"
+- raw: "暴雨梨花针"
+  splits:
+  - text: "暴雨梨花针"
+    translated: "Bamboo Spears in a Storm"
+- raw: "七星透骨钉"
+  splits:
+  - text: "七星透骨钉"
+    translated: "Seven‑Star Piercing Bone Needle"
+- raw: "万化玄机刀"
+  splits:
+  - text: "万化玄机刀"
+    translated: "Wan Hua Xuan Ji Sword"
+- raw: "漫天花雨"
+  splits:
+  - text: "漫天花雨"
+    translated: "Flowering rain"
+- raw: "九天罗候针"
+  splits:
+  - text: "九天罗候针"
+    translated: "Nine Heaven Luo Hou Needle"
+- raw: "千金要方"
+  splits:
+  - text: "千金要方"
+    translated: "Prescriptions for Universal Relief"
+- raw: "悬绳功"
+  splits:
+  - text: "悬绳功"
+    translated: "Tightrope walking"
+- raw: "推拿法"
+  splits:
+  - text: "推拿法"
+    translated: "Massage technique"
+- raw: "微雨指法"
+  splits:
+  - text: "微雨指法"
+    translated: "Rain Droplet Finger Technique"
+- raw: "化瘀掌"
+  splits:
+  - text: "化瘀掌"
+    translated: "Palm for Removing Stagnation"
+- raw: "药王针术"
+  splits:
+  - text: "药王针术"
+    translated: "Potion Master Needle Technique"
+- raw: "采补养元功"
+  splits:
+  - text: "采补养元功"
+    translated: "Cai Bu Yang Yuan Gong"
+- raw: "采燕功"
+  splits:
+  - text: "采燕功"
+    translated: "Cai Yan Gong"
+- raw: "回春丹方"
+  splits:
+  - text: "回春丹方"
+    translated: "Revival Pill Formula"
+- raw: "指点十一式"
+  splits:
+  - text: "指点十一式"
+    translated: "Guide to Eleven Styles"
+- raw: "春蚕掌"
+  splits:
+  - text: "春蚕掌"
+    translated: "Silkworm Grip"
+- raw: "芙蓉金针"
+  splits:
+  - text: "芙蓉金针"
+    translated: "Fragrant Lotus Mushrooms"
+- raw: "金针伐脉术"
+  splits:
+  - text: "金针伐脉术"
+    translated: "Needle to Seize Meridian Technique"
+- raw: "灵鳌步"
+  splits:
+  - text: "灵鳌步"
+    translated: "Azure Tortoise Step"
+- raw: "金钗刮膜功"
+  splits:
+  - text: "金钗刮膜功"
+    translated: "Golden Hairpin Skin Peeling Technique"
+- raw: "凝血指"
+  splits:
+  - text: "凝血指"
+    translated: "Clotting Finger"
+- raw: "摧心掌"
+  splits:
+  - text: "摧心掌"
+    translated: "Crushing Heart Palm"
+- raw: "天王补心针"
+  splits:
+  - text: "天王补心针"
+    translated: "Heavenly King's Heart‑Nourishing Injection"
+- raw: "扁鹊回春功"
+  splits:
+  - text: "扁鹊回春功"
+    translated: "Rejuvenation Technique"
+- raw: "女娲补天式"
+  splits:
+  - text: "女娲补天式"
+    translated: "Repairing the Sky Style"
+- raw: "移花接木"
+  splits:
+  - text: "移花接木"
+    translated: "Planting a seed out of season"
+- raw: "九幽黄泉指"
+  splits:
+  - text: "九幽黄泉指"
+    translated: "Netherworld Yellow Springs Point"
+- raw: "药王毒手"
+  splits:
+  - text: "药王毒手"
+    translated: "Poison‑Finger Medicrowad"
+- raw: "扁鹊神针"
+  splits:
+  - text: "扁鹊神针"
+    translated: "Fatty Acupoint Sage Needle"
+- raw: "神农本草秘要"
+  splits:
+  - text: "神农本草秘要"
+    translated: "Essential Secrets of Shen Nong's Herbal Classic"
+- raw: "枯骨生肉法"
+  splits:
+  - text: "枯骨生肉法"
+    translated: "Meat from bones technique"
+- raw: "大慈大悲指"
+  splits:
+  - text: "大慈大悲指"
+    translated: "Great Compassion and Great Mercy"
+- raw: "化脉神掌"
+  splits:
+  - text: "化脉神掌"
+    translated: "Divine Pulse Palm"
+- raw: "无影神针"
+  splits:
+  - text: "无影神针"
+    translated: "Ethereal Divine Needle"
+- raw: "黄帝秘经"
+  splits:
+  - text: "黄帝秘经"
+    translated: "Yellow Emperor's Inner Canon"
+- raw: "灵犀一指"
+  splits:
+  - text: "灵犀一指"
+    translated: "Telepathic Touch"
+- raw: "敲碗诀"
+  splits:
+  - text: "敲碗诀"
+    translated: "Tap Bowl Technique"
+- raw: "野狗步"
+  splits:
+  - text: "野狗步"
+    translated: "Wolfstep"
+- raw: "快板功"
+  splits:
+  - text: "快板功"
+    translated: "Fast Boxing Technique"
+- raw: "五行六合拳"
+  splits:
+  - text: "五行六合拳"
+    translated: "Five Elements Six Directions Fist"
+- raw: "快活十三掌"
+  splits:
+  - text: "快活十三掌"
+    translated: "Happy Thirteen Palms"
+- raw: "铁扫帚"
+  splits:
+  - text: "铁扫帚"
+    translated: "Iron Broom"
+- raw: "花子棍"
+  splits:
+  - text: "花子棍"
+    translated: "Hachiko Staff"
+- raw: "内家数来宝"
+  splits:
+  - text: "内家数来宝"
+    translated: "Internal School's Coming to Showcase"
+- raw: "鸟兽散"
+  splits:
+  - text: "鸟兽散"
+    translated: "Scatter like birds and beasts"
+- raw: "花鼓戏"
+  splits:
+  - text: "花鼓戏"
+    translated: "Huagu Opera"
+- raw: "沾衣十八跌"
+  splits:
+  - text: "沾衣十八跌"
+    translated: "Cloth‑Dampening Eighteen Falls"
+- raw: "醉拳"
+  splits:
+  - text: "醉拳"
+    translated: "Drunk Fist"
+- raw: "拜年棍法"
+  splits:
+  - text: "拜年棍法"
+    translated: "New Year Staff Technique"
+- raw: "双棍缠身"
+  splits:
+  - text: "双棍缠身"
+    translated: "Staff wearing the Bind of Duty"
+- raw: "莲花落心法"
+  splits:
+  - text: "莲花落心法"
+    translated: "Heart Method of Lotus Fall"
+- raw: "死缠烂打"
+  splits:
+  - text: "死缠烂打"
+    translated: "P Persistent as Hell"
+- raw: "布袋功"
+  splits:
+  - text: "布袋功"
+    translated: "Pouch Skill"
+- raw: "莲花掌"
+  splits:
+  - text: "莲花掌"
+    translated: "Lotus Palm Technique"
+- raw: "铜锤手"
+  splits:
+  - text: "铜锤手"
+    translated: "Bronze Hammer Fist"
+- raw: "莲花乱棍"
+  splits:
+  - text: "莲花乱棍"
+    translated: "Lotus Staff Assault"
+- raw: "哭丧棍法"
+  splits:
+  - text: "哭丧棍法"
+    translated: "Staff of Mourning Weeping"
+- raw: "混天功"
+  splits:
+  - text: "混天功"
+    translated: "Tianjin Gong"
+- raw: "逍遥游"
+  splits:
+  - text: "逍遥游"
+    translated: "Free and Unfettered Roaming"
+- raw: "妙手空空"
+  splits:
+  - text: "妙手空空"
+    translated: "Empty‑handed Genius"
+- raw: "鲲鹏拳法"
+  splits:
+  - text: "鲲鹏拳法"
+    translated: "Kunpeng Fist Technique"
+- raw: "铁蒲扇手"
+  splits:
+  - text: "铁蒲扇手"
+    translated: "Iron Pudan Fan Hand"
+- raw: "奇门三才棍"
+  splits:
+  - text: "奇门三才棍"
+    translated: "Odd Doors Three Talents Staff"
+- raw: "威武棍法"
+  splits:
+  - text: "威武棍法"
+    translated: "Mighty Staff Technique"
+- raw: "混世天罡"
+  splits:
+  - text: "混世天罡"
+    translated: "World‑Disturbing Celestial Vigor"
+- raw: "虎落平阳"
+  splits:
+  - text: "虎落平阳"
+    translated: "Tiger falling to plain town"
+- raw: "睡梦罗汉拳"
+  splits:
+  - text: "睡梦罗汉拳"
+    translated: "Dreamless Meditation Fist"
+- raw: "酒仙散手"
+  splits:
+  - text: "酒仙散手"
+    translated: "Immortal of Wine's Open Hand Technique"
+- raw: "吉祥如意棍"
+  splits:
+  - text: "吉祥如意棍"
+    translated: "Staff of Good Fortune"
+- raw: "黑白无常棍"
+  splits:
+  - text: "黑白无常棍"
+    translated: "Black and White Officials' Staffs"
+- raw: "降龙掌法"
+  splits:
+  - text: "降龙掌法"
+    translated: "Dragon‑Taming Palm Technique"
+- raw: "打狗八绝棍"
+  splits:
+  - text: "打狗八绝棍"
+    translated: "Eight Absolute Staff Techniques"
+- raw: "禁军心法"
+  splits:
+  - text: "禁军心法"
+    translated: "Forbidden Army Heart Method"
+- raw: "从军行"
+  splits:
+  - text: "从军行"
+    translated: "March to War"
+- raw: "举盾术"
+  splits:
+  - text: "举盾术"
+    translated: "Shield Bash"
+- raw: "薛家戟法"
+  splits:
+  - text: "薛家戟法"
+    translated: "Xue Family Saber Technique"
+- raw: "岳家枪法"
+  splits:
+  - text: "岳家枪法"
+    translated: "Yue Clan Spear Art"
+- raw: "舂米戈术"
+  splits:
+  - text: "舂米戈术"
+    translated: "Rice Pound Technique"
+- raw: "四门刀法"
+  splits:
+  - text: "四门刀法"
+    translated: "Four Gate Blade Technique"
+- raw: "羽林心法"
+  splits:
+  - text: "羽林心法"
+    translated: "Heart Method of the Imperial Bodyguards"
+- raw: "衔枚疾走"
+  splits:
+  - text: "衔枚疾走"
+    translated: "March in silence hurry"
+- raw: "铁桶功"
+  splits:
+  - text: "铁桶功"
+    translated: "Iron Barrel Technique"
+- raw: "折戟沉沙"
+  splits:
+  - text: "折戟沉沙"
+    translated: "Broken sword buried in sand"
+- raw: "回马枪术"
+  splits:
+  - text: "回马枪术"
+    translated: "Riding‑the‑Horseback Gun Technique"
+- raw: "泣血戈术"
+  splits:
+  - text: "泣血戈术"
+    translated: "Blood‑Curdling Gore Technique"
+- raw: "斩马刀法"
+  splits:
+  - text: "斩马刀法"
+    translated: "Blade Technique"
+- raw: "孤烟心经"
+  splits:
+  - text: "孤烟心经"
+    translated: "Solo Smoke Sutra"
+- raw: "策马过五关"
+  splits:
+  - text: "策马过五关"
+    translated: "Ride past five gates"
+- raw: "陷阵之志"
+  splits:
+  - text: "陷阵之志"
+    translated: "Resolved for the Charge"
+- raw: "飞龙长戟"
+  splits:
+  - text: "飞龙长戟"
+    translated: "Dragonflight Long Spear"
+- raw: "潜龙枪诀"
+  splits:
+  - text: "潜龙枪诀"
+    translated: "Dragon‑Severing Spear Technique"
+- raw: "铁马金戈"
+  splits:
+  - text: "铁马金戈"
+    translated: "Iron steeds and golden spears"
+- raw: "劈天刀法"
+  splits:
+  - text: "劈天刀法"
+    translated: "Heaven‑Splitting Blade Technique"
+- raw: "潜龙心法"
+  splits:
+  - text: "潜龙心法"
+    translated: "Heart Method of Hidden Dragon"
+- raw: "长车踏破"
+  splits:
+  - text: "长车踏破"
+    translated: "Long carriage crushing through"
+- raw: "明光照铁衣"
+  splits:
+  - text: "明光照铁衣"
+    translated: "Bright light illuminates his iron armor"
+- raw: "十六路青龙戟"
+  splits:
+  - text: "十六路青龙戟"
+    translated: "Sixteen Path Azure Dragon Halberds"
+- raw: "定军枪"
+  splits:
+  - text: "定军枪"
+    translated: "Soldier Spear"
+- raw: "干戈琢玉"
+  splits:
+  - text: "干戈琢玉"
+    translated: "Carve Jade with Sabers"
+- raw: "百战刀法"
+  splits:
+  - text: "百战刀法"
+    translated: "Hundred‑Fight Blade Technique"
+- raw: "龙城飞将步"
+  splits:
+  - text: "龙城飞将步"
+    translated: "Dragon City Flying General Steps"
+- raw: "满江红神功"
+  splits:
+  - text: "满江红神功"
+    translated: "Red River Divine Skill"
+- raw: "八荒六合戟"
+  splits:
+  - text: "八荒六合戟"
+    translated: "Eight Directions Universe Netstaff"
+- raw: "碧血洗银枪"
+  splits:
+  - text: "碧血洗银枪"
+    translated: "Silver Lance Washed in Crimson Blood"
+- raw: "退日戈术"
+  splits:
+  - text: "退日戈术"
+    translated: "Defend Against Solar Blades"
+- raw: "镇魔斩妖刀"
+  splits:
+  - text: "镇魔斩妖刀"
+    translated: "Demon‑Slaying Monster‑Cutting Blade"
+- raw: "帝王封禅功"
+  splits:
+  - text: "帝王封禅功"
+    translated: "Imperial Sacrifice to Heaven"
+- raw: "惊鸿一点枪"
+  splits:
+  - text: "惊鸿一点枪"
+    translated: "Elegant Spear Stroke"
+- raw: "内丹功"
+  splits:
+  - text: "内丹功"
+    translated: "Nurturing Inner Pill Technique"
+- raw: "卷云步"
+  splits:
+  - text: "卷云步"
+    translated: "Wisp Step"
+- raw: "布气诀"
+  splits:
+  - text: "布气诀"
+    translated: "Breath Control Technique"
+- raw: "十八连环破"
+  splits:
+  - text: "十八连环破"
+    translated: "Eighteen Linked Rings Deciphered"
+- raw: "清心咒"
+  splits:
+  - text: "清心咒"
+    translated: "Purifying Heart Spell"
+- raw: "安神咒"
+  splits:
+  - text: "安神咒"
+    translated: "Soothing Charm"
+- raw: "清风剑法"
+  splits:
+  - text: "清风剑法"
+    translated: "Qingfeng Sword Technique"
+- raw: "静守谷神法"
+  splits:
+  - text: "静守谷神法"
+    translated: "Cultivating the Vassal Spirit Method"
+- raw: "御风咒"
+  splits:
+  - text: "御风咒"
+    translated: "Wind‑Riding Curse"
+- raw: "长目飞耳功"
+  splits:
+  - text: "长目飞耳功"
+    translated: "Long‑Eyed Flying Ears Technique"
+- raw: "跌打梅山咒"
+  splits:
+  - text: "跌打梅山咒"
+    translated: "Meridian Healing Mountain Charm"
+- raw: "咽喉骨鲠法"
+  splits:
+  - text: "咽喉骨鲠法"
+    translated: "Throat Bone Stagnation Technique"
+- raw: "定身咒"
+  splits:
+  - text: "定身咒"
+    translated: "Paralyze Spell"
+- raw: "茅山道剑"
+  splits:
+  - text: "茅山道剑"
+    translated: "Mountain Fog Sword"
+- raw: "玄门胎息功"
+  splits:
+  - text: "玄门胎息功"
+    translated: "Xianmen Taisi Gong"
+- raw: "服内元气诀"
+  splits:
+  - text: "服内元气诀"
+    translated: "In‑game Essence Cultivation Technique"
+- raw: "关公朗真术"
+  splits:
+  - text: "关公朗真术"
+    translated: "Guangong Read True Arts"
+- raw: "引雷术"
+  splits:
+  - text: "引雷术"
+    translated: "Lightning Diversion Technique"
+- raw: "勾魂咒"
+  splits:
+  - text: "勾魂咒"
+    translated: "Soul‑stealing curse"
+- raw: "天罡咒"
+  splits:
+  - text: "天罡咒"
+    translated: "Heavenly Constellation Curse"
+- raw: "御剑秘术"
+  splits:
+  - text: "御剑秘术"
+    translated: "Secret Sword Technique"
+- raw: "五气朝元功"
+  splits:
+  - text: "五气朝元功"
+    translated: "Five Elements Reaching the Origin Technique"
+- raw: "金仙秘旨功"
+  splits:
+  - text: "金仙秘旨功"
+    translated: "Secret Guidance of Golden Immortal Technique"
+- raw: "瞬息千里"
+  splits:
+  - text: "瞬息千里"
+    translated: "A fleeting moment spanning a thousand miles"
+- raw: "神女报梦"
+  splits:
+  - text: "神女报梦"
+    translated: "Nymph Foretells Dreams"
+- raw: "寒天咒"
+  splits:
+  - text: "寒天咒"
+    translated: "Cold Winter Curse"
+- raw: "地母雷网"
+  splits:
+  - text: "地母雷网"
+    translated: "Thunder Mother Net"
+- raw: "钟馗斩妖剑"
+  splits:
+  - text: "钟馗斩妖剑"
+    translated: "Ghosts destroy their sword"
+- raw: "龙虎金丹功"
+  splits:
+  - text: "龙虎金丹功"
+    translated: "Dragon Tiger Golden Pill Skill"
+- raw: "冲虚神功"
+  splits:
+  - text: "冲虚神功"
+    translated: "Empty Dew Divine Skill"
+- raw: "万里神行"
+  splits:
+  - text: "万里神行"
+    translated: "Ten Thousand Mile Swift Travel"
+- raw: "三华聚顶"
+  splits:
+  - text: "三华聚顶"
+    translated: "Three flowers gather at the crown of the head"
+- raw: "三昧真火"
+  splits:
+  - text: "三昧真火"
+    translated: "Flaming Mallet Mastery"
+- raw: "神兵天将咒"
+  splits:
+  - text: "神兵天将咒"
+    translated: "Divine Soldier Heavenly General Curse"
+- raw: "玄真剑气"
+  splits:
+  - text: "玄真剑气"
+    translated: "Xuanzhen Sword Energy"
+- raw: "遁甲天书"
+  splits:
+  - text: "遁甲天书"
+    translated: "Heavenly Scripture of Hexagram Prediction"
+- raw: "天劫九重"
+  splits:
+  - text: "天劫九重"
+    translated: "Nine Layers of Heavenly Tribulation"
+- raw: "打铁功"
+  splits:
+  - text: "打铁功"
+    translated: "Blacksmithing Skill"
+- raw: "木屐步"
+  splits:
+  - text: "木屐步"
+    translated: "Woodclog shuffle"
+- raw: "木甲百重"
+  splits:
+  - text: "木甲百重"
+    translated: "Wooden Armor Layered Hundred Times"
+- raw: "寒泉剑法"
+  splits:
+  - text: "寒泉剑法"
+    translated: "Sword Technique of Cold Spring"
+- raw: "鱼肠剑法"
+  splits:
+  - text: "鱼肠剑法"
+    translated: "Sword Technique of the Intestine Blade"
+- raw: "宰鸡牛刀"
+  splits:
+  - text: "宰鸡牛刀"
+    translated: "Killing chickens with a big knife"
+- raw: "百炼功"
+  splits:
+  - text: "百炼功"
+    translated: "Aging Skill"
+- raw: "铁履功"
+  splits:
+  - text: "铁履功"
+    translated: "Iron Boot Technique"
+- raw: "双剑合璧"
+  splits:
+  - text: "双剑合璧"
+    translated: "Double Blades Unite"
+- raw: "青釭剑法"
+  splits:
+  - text: "青釭剑法"
+    translated: "Sword Technique of Qinggang"
+- raw: "胜邪剑法"
+  splits:
+  - text: "胜邪剑法"
+    translated: "Sword Technique of Victory Evil"
+- raw: "乱麻刀法"
+  splits:
+  - text: "乱麻刀法"
+    translated: "Tangled Blade Technique"
+- raw: "千锤功"
+  splits:
+  - text: "千锤功"
+    translated: "Hardened by Thousand Strikes"
+- raw: "名山寻路"
+  splits:
+  - text: "名山寻路"
+    translated: "Seeking the Path in Mount Name"
+- raw: "铁甲千重"
+  splits:
+  - text: "铁甲千重"
+    translated: "Iron Armor Thousand Layers"
+- raw: "巨阙重剑"
+  splits:
+  - text: "巨阙重剑"
+    translated: "Heavy Sword Jue Qu"
+- raw: "承影剑法"
+  splits:
+  - text: "承影剑法"
+    translated: "Shadow Blade Swordsmanship"
+- raw: "庖丁解牛刀"
+  splits:
+  - text: "庖丁解牛刀"
+    translated: "Butterfly Master Slices Ox"
+- raw: "炉火纯青功"
+  splits:
+  - text: "炉火纯青功"
+    translated: "Flame refinement technique"
+- raw: "踏破铁鞋功"
+  splits:
+  - text: "踏破铁鞋功"
+    translated: "Finding the needle in the haystack"
+- raw: "百剑穿心"
+  splits:
+  - text: "百剑穿心"
+    translated: "Hundred Swords Through the Heart"
+- raw: "破军剑法"
+  splits:
+  - text: "破军剑法"
+    translated: "Sword Technique of the Broken Army"
+- raw: "干将莫邪剑"
+  splits:
+  - text: "干将莫邪剑"
+    translated: "Dryad Sword"
+- raw: "分金刀术"
+  splits:
+  - text: "分金刀术"
+    translated: "Technique of the Golden Cut Blade"
+- raw: "万剑奇功"
+  splits:
+  - text: "万剑奇功"
+    translated: "Strange Thousand Swords Technique"
+- raw: "金甲万重"
+  splits:
+  - text: "金甲万重"
+    translated: "Ten Thousand Armored Layers"
+- raw: "赤霄斩蛇剑"
+  splits:
+  - text: "赤霄斩蛇剑"
+    translated: "Sword of Crimson Heaven Slice Snake"
+- raw: "含光无形剑"
+  splits:
+  - text: "含光无形剑"
+    translated: "Ethereal Sword of Huangguang"
+- raw: "屠龙要术"
+  splits:
+  - text: "屠龙要术"
+    translated: "Dragon Slayer Technique"
+- raw: "无尽剑意"
+  splits:
+  - text: "无尽剑意"
+    translated: "Endless Sword Intention"
+- raw: "引蛇术"
+  splits:
+  - text: "引蛇术"
+    translated: "Lure Technique"
+- raw: "泥鳅功"
+  splits:
+  - text: "泥鳅功"
+    translated: "Mud Carp Technique"
+- raw: "迷虫香"
+  splits:
+  - text: "迷虫香"
+    translated: "Cocoon Fragrance"
+- raw: "蓝砂手"
+  splits:
+  - text: "蓝砂手"
+    translated: "Blue Sand Hand"
+- raw: "五毒掌"
+  splits:
+  - text: "五毒掌"
+    translated: "Five‑Toxic Palm"
+- raw: "朱蟾砂"
+  splits:
+  - text: "朱蟾砂"
+    translated: "Zhu Chanyan"
+- raw: "五毒针"
+  splits:
+  - text: "五毒针"
+    translated: "Venom Needle"
+- raw: "泥鳅蛊"
+  splits:
+  - text: "泥鳅蛊"
+    translated: "Fish toad trap"
+- raw: "腐尸功"
+  splits:
+  - text: "腐尸功"
+    translated: "Corpse Decay Technique"
+- raw: "蛇行步"
+  splits:
+  - text: "蛇行步"
+    translated: "Serpent step"
+- raw: "炼蛊术"
+  splits:
+  - text: "炼蛊术"
+    translated: "Pit Treating Technique"
+- raw: "金蛇缠丝手"
+  splits:
+  - text: "金蛇缠丝手"
+    translated: "Winding Snake Finger Technique"
+- raw: "灵蛇拳"
+  splits:
+  - text: "灵蛇拳"
+    translated: "Dragon Serpent Fist"
+- raw: "腐尸毒"
+  splits:
+  - text: "腐尸毒"
+    translated: "Corpse Poison"
+- raw: "碧磷针"
+  splits:
+  - text: "碧磷针"
+    translated: "Green Phosphorus Needle"
+- raw: "阴蛇蛊"
+  splits:
+  - text: "阴蛇蛊"
+    translated: "Yin Snake Pesticide"
+- raw: "五仙真灵诀"
+  splits:
+  - text: "五仙真灵诀"
+    translated: "Five Immortal True Spirit Technique"
+- raw: "蛤蟆纵跳"
+  splits:
+  - text: "蛤蟆纵跳"
+    translated: "Frog leap"
+- raw: "迷魂息"
+  splits:
+  - text: "迷魂息"
+    translated: "Mind‑Distorting Silence"
+- raw: "三尸蜈蚣爪"
+  splits:
+  - text: "三尸蜈蚣爪"
+    translated: "Three Corpses Scorpion Claw"
+- raw: "化骨绵掌"
+  splits:
+  - text: "化骨绵掌"
+    translated: "Bone‑Dispelling Soft Palm Technique"
+- raw: "断魂砂"
+  splits:
+  - text: "断魂砂"
+    translated: "Painful Sand"
+- raw: "饮血针"
+  splits:
+  - text: "饮血针"
+    translated: "Bloodsucking Needle"
+- raw: "狂癫蛊"
+  splits:
+  - text: "狂癫蛊"
+    translated: "Mad venom potion"
+- raw: "天蚕吐丝功"
+  splits:
+  - text: "天蚕吐丝功"
+    translated: "Silkworm Spins Silk Skill"
+- raw: "蜈蚣遁地术"
+  splits:
+  - text: "蜈蚣遁地术"
+    translated: "Earthworm Diving Technique"
+- raw: "摄魂大法"
+  splits:
+  - text: "摄魂大法"
+    translated: "Mind Theft Technique"
+- raw: "千蛛万毒手"
+  splits:
+  - text: "千蛛万毒手"
+    translated: "Ten Thousand Poison Hands"
+- raw: "赤炼神掌"
+  splits:
+  - text: "赤炼神掌"
+    translated: "Fiery Seizing Palm"
+- raw: "孟婆散"
+  splits:
+  - text: "孟婆散"
+    translated: "Meng Po Powder"
+- raw: "赤炼神针"
+  splits:
+  - text: "赤炼神针"
+    translated: "Red Refining Divine Needle"
+- raw: "情花蛊"
+  splits:
+  - text: "情花蛊"
+    translated: "Flower poison spell"
+- raw: "五毒魔功"
+  splits:
+  - text: "五毒魔功"
+    translated: "Poisonous Five Toxins Skill"
+- raw: "天蛇诡步"
+  splits:
+  - text: "天蛇诡步"
+    translated: "Heavenly Serpent Deceptive Steps"
+- raw: "天蚕手"
+  splits:
+  - text: "天蚕手"
+    translated: "Silkworm Hand"
+- raw: "五毒神掌"
+  splits:
+  - text: "五毒神掌"
+    translated: "Poison Palm Technique"
+- raw: "鹤顶红"
+  splits:
+  - text: "鹤顶红"
+    translated: "Red venom dripped into their throat"
+- raw: "黑血神针"
+  splits:
+  - text: "黑血神针"
+    translated: "Black Blood Divine Needle"
+- raw: "害神蛊"
+  splits:
+  - text: "害神蛊"
+    translated: "Devil poison"
+- raw: "蚩尤鬼降"
+  splits:
+  - text: "蚩尤鬼降"
+    translated: "Chiyou Ghost Descent"
+- raw: "万毒宝典"
+  splits:
+  - text: "万毒宝典"
+    translated: "Book of Poisonous Diseases"
+- raw: "金蚕王蛊"
+  splits:
+  - text: "金蚕王蛊"
+    translated: "Golden Silkworm King Infestation"
+- raw: "黑尸诀"
+  splits:
+  - text: "黑尸诀"
+    translated: "Black Corpse Technique"
+- raw: "飞沙走石"
+  splits:
+  - text: "飞沙走石"
+    translated: "Dust storms"
+- raw: "鬼夜哭"
+  splits:
+  - text: "鬼夜哭"
+    translated: "Cry in the Night"
+- raw: "夜行刀法"
+  splits:
+  - text: "夜行刀法"
+    translated: "Night Blade Technique"
+- raw: "红眼刀法"
+  splits:
+  - text: "红眼刀法"
+    translated: "Blade Technique of the Red‑Eyed One"
+- raw: "僵尸拳"
+  splits:
+  - text: "僵尸拳"
+    translated: "Zombie Punch"
+- raw: "招魂掌"
+  splits:
+  - text: "招魂掌"
+    translated: "Palming of the Soul"
+- raw: "杀意心法"
+  splits:
+  - text: "杀意心法"
+    translated: "Heart Method of Killing Intent"
+- raw: "邪鬼步"
+  splits:
+  - text: "邪鬼步"
+    translated: "Evil Spirit Step"
+- raw: "鬼打墙"
+  splits:
+  - text: "鬼打墙"
+    translated: "Dead end"
+- raw: "鬼面刀法"
+  splits:
+  - text: "鬼面刀法"
+    translated: "Blade Technique of the Ghost Face"
+- raw: "阴风刀法"
+  splits:
+  - text: "阴风刀法"
+    translated: "Yin Wind Blade Technique"
+- raw: "绝户爪"
+  splits:
+  - text: "绝户爪"
+    translated: "Bone of contention"
+- raw: "血手印"
+  splits:
+  - text: "血手印"
+    translated: "Bloodstain"
+- raw: "阴阳磨"
+  splits:
+  - text: "阴阳磨"
+    translated: "Yin yang grinder"
+- raw: "幽冥步"
+  splits:
+  - text: "幽冥步"
+    translated: "Step of the Netherworld"
+- raw: "鬼见愁"
+  splits:
+  - text: "鬼见愁"
+    translated: "Devil's Shoal"
+- raw: "夺命追魂刀"
+  splits:
+  - text: "夺命追魂刀"
+    translated: "Killing Soul Pursuit Sword"
+- raw: "修罗刀法"
+  splits:
+  - text: "修罗刀法"
+    translated: "Devil Slice Blade Technique"
+- raw: "鬼哭拳"
+  splits:
+  - text: "鬼哭拳"
+    translated: "Ghosts Cry Fist"
+- raw: "朱砂掌"
+  splits:
+  - text: "朱砂掌"
+    translated: "Cinnabar Palm Strike"
+- raw: "混世魔功"
+  splits:
+  - text: "混世魔功"
+    translated: "World‑Destroying Evil Skill"
+- raw: "百鬼夜行"
+  splits:
+  - text: "百鬼夜行"
+    translated: "Night Parade of One Thousand Monsters"
+- raw: "群魔乱舞"
+  splits:
+  - text: "群魔乱舞"
+    translated: "Chaos reigns"
+- raw: "天玄七煞刀"
+  splits:
+  - text: "天玄七煞刀"
+    translated: "Heavenly Black Seven Deadly Scimitars"
+- raw: "阴阳乱刃"
+  splits:
+  - text: "阴阳乱刃"
+    translated: "Blade of Chaos"
+- raw: "黑龙十八手"
+  splits:
+  - text: "黑龙十八手"
+    translated: "Eighteen Black Dragon Techniques"
+- raw: "抽髓掌"
+  splits:
+  - text: "抽髓掌"
+    translated: "Bone‑Draining Palm"
+- raw: "苦海魔功"
+  splits:
+  - text: "苦海魔功"
+    translated: "Sea of Suffering Evil Technique"
+- raw: "无法无天步"
+  splits:
+  - text: "无法无天步"
+    translated: "Lawless Step"
+- raw: "炼狱破天劲"
+  splits:
+  - text: "炼狱破天劲"
+    translated: "Purgatory Breakheaven Strength"
+- raw: "饮血魔刀"
+  splits:
+  - text: "饮血魔刀"
+    translated: "Bloodsucking Blade"
+- raw: "销魂鬼刃"
+  splits:
+  - text: "销魂鬼刃"
+    translated: "Devil Blade"
+- raw: "神倒鬼跌拳"
+  splits:
+  - text: "神倒鬼跌拳"
+    translated: "Divine Down Demon Fallen Fist"
+- raw: "九死离魂掌"
+  splits:
+  - text: "九死离魂掌"
+    translated: "Nine Lives Soul‑Stealing Palm"
+- raw: "万恶魔功"
+  splits:
+  - text: "万恶魔功"
+    translated: "Ten Thousand Devils Technique"
+- raw: "血脉逆行"
+  splits:
+  - text: "血脉逆行"
+    translated: "Reverse flow of blood"
+- raw: "杀人刀法"
+  splits:
+  - text: "杀人刀法"
+    translated: "Blade Technique for Murder"
+- raw: "龟息功"
+  splits:
+  - text: "龟息功"
+    translated: "Turtle Breathing Technique"
+- raw: "灵虚步"
+  splits:
+  - text: "灵虚步"
+    translated: "Ethereal Steps"
+- raw: "抚琴清音"
+  splits:
+  - text: "抚琴清音"
+    translated: "Pluck the zither to play clear music"
+- raw: "胡笳十八拍"
+  splits:
+  - text: "胡笳十八拍"
+    translated: "Eighteen Songs of the Frontier Flute"
+- raw: "琴棋书画功"
+  splits:
+  - text: "琴棋书画功"
+    translated: "Music, chess, calligraphy, and painting skills"
+- raw: "星罗棋布"
+  splits:
+  - text: "星罗棋布"
+    translated: "Starlit and densely dotted"
+- raw: "七弦无形音"
+  splits:
+  - text: "七弦无形音"
+    translated: "Seventeenth String Without Formed Sound"
+- raw: "棋盘四式"
+  splits:
+  - text: "棋盘四式"
+    translated: "Four Board Styles"
+- raw: "永字八法"
+  splits:
+  - text: "永字八法"
+    translated: "Eight Principles of Calligraphy"
+- raw: "丹青破穴"
+  splits:
+  - text: "丹青破穴"
+    translated: "Danqing Poxue"
+- raw: "天罗地网剑"
+  splits:
+  - text: "天罗地网剑"
+    translated: "Heavenly Net Earth Web Sword"
+- raw: "无欲无情功"
+  splits:
+  - text: "无欲无情功"
+    translated: "Desireless and Emotionless Skill"
+- raw: "横空挪移"
+  splits:
+  - text: "横空挪移"
+    translated: "Horizontal Teleportation"
+- raw: "阳春白雪"
+  splits:
+  - text: "阳春白雪"
+    translated: "Highbrow music"
+- raw: "手谈十九路"
+  splits:
+  - text: "手谈十九路"
+    translated: "Go on the nineteenth road"
+- raw: "泼墨成画功"
+  splits:
+  - text: "泼墨成画功"
+    translated: "Murphy's Law Painting Technique"
+- raw: "玄音幻剑"
+  splits:
+  - text: "玄音幻剑"
+    translated: "Phantom Sword Xuan Yin"
+- raw: "梦蝶心经"
+  splits:
+  - text: "梦蝶心经"
+    translated: "Dream Butterfly Sutra"
+- raw: "凭虚临风"
+  splits:
+  - text: "凭虚临风"
+    translated: "Gaze into the void with wind at one's back"
+- raw: "文心雕龙"
+  splits:
+  - text: "文心雕龙"
+    translated: "Carving Dragon on Literature"
+- raw: "高山流水"
+  splits:
+  - text: "高山流水"
+    translated: "High Mountains and Flowing Water"
+- raw: "乱点天元"
+  splits:
+  - text: "乱点天元"
+    translated: "Randomly Activating Heavenly Principles"
+- raw: "裴将军功"
+  splits:
+  - text: "裴将军功"
+    translated: "General Pei's Achievements"
+- raw: "生花妙笔"
+  splits:
+  - text: "生花妙笔"
+    translated: "Ingenious penmanship"
+- raw: "阴阳奇剑"
+  splits:
+  - text: "阴阳奇剑"
+    translated: "Yin‑Yang Mystery Sword"
+- raw: "太阳太玄功"
+  splits:
+  - text: "太阳太玄功"
+    translated: "Great Yang Mystic Skill"
+- raw: "太阴太玄功"
+  splits:
+  - text: "太阴太玄功"
+    translated: "Great Yin Mystic Skill"
+- raw: "螺旋九影"
+  splits:
+  - text: "螺旋九影"
+    translated: "Nine‑Division Spiral Shadow"
+- raw: "霓裳羽衣舞"
+  splits:
+  - text: "霓裳羽衣舞"
+    translated: "Feather Robe Dance"
+- raw: "广陵散曲功"
+  splits:
+  - text: "广陵散曲功"
+    translated: "Broadsong Skill"
+- raw: "呕血坐隐功"
+  splits:
+  - text: "呕血坐隐功"
+    translated: "Vomited blood while sitting in meditation"
+- raw: "春秋笔法"
+  splits:
+  - text: "春秋笔法"
+    translated: "Spring Pen Technique"
+- raw: "画龙点睛"
+  splits:
+  - text: "画龙点睛"
+    translated: "Adding the finishing touch"
+- raw: "天来剑术"
+  splits:
+  - text: "天来剑术"
+    translated: "Heavenly Swordsmanship"
+- raw: "归墟秘典"
+  splits:
+  - text: "归墟秘典"
+    translated: "Mystic Texts of Huixu"
+- raw: "天人感应步"
+  splits:
+  - text: "天人感应步"
+    translated: "Heavenly Response Step"
+- raw: "轮回不灭法"
+  splits:
+  - text: "轮回不灭法"
+    translated: "Immortal Cycle Technique"
+- raw: "静禅功"
+  splits:
+  - text: "静禅功"
+    translated: "Calm Zen Technique"
+- raw: "挑水桶"
+  splits:
+  - text: "挑水桶"
+    translated: "Water bucket"
+- raw: "铁裆功"
+  splits:
+  - text: "铁裆功"
+    translated: "Iron Crotch Technique"
+- raw: "少林长拳"
+  splits:
+  - text: "少林长拳"
+    translated: "Shaolin Long Fist"
+- raw: "少林棍法"
+  splits:
+  - text: "少林棍法"
+    translated: "Shaolin Staff Technique"
+- raw: "稍子棍法"
+  splits:
+  - text: "稍子棍法"
+    translated: "Subduing Staff Technique"
+- raw: "月牙铲功"
+  splits:
+  - text: "月牙铲功"
+    translated: "Crescent Blade Technique"
+- raw: "罗汉护体功"
+  splits:
+  - text: "罗汉护体功"
+    translated: "Khan Protection Technique"
+- raw: "蜻蜓点水"
+  splits:
+  - text: "蜻蜓点水"
+    translated: "Skimming over the water"
+- raw: "遍体铜人"
+  splits:
+  - text: "遍体铜人"
+    translated: "Body of Bronze"
+- raw: "罗汉拳法"
+  splits:
+  - text: "罗汉拳法"
+    translated: "Kung Fu of the Arhat Fist"
+- raw: "韦陀掌"
+  splits:
+  - text: "韦陀掌"
+    translated: "Vajra Palm"
+- raw: "天竺佛指"
+  splits:
+  - text: "天竺佛指"
+    translated: "Buddha's Fingertip from India"
+- raw: "齐眉棍法"
+  splits:
+  - text: "齐眉棍法"
+    translated: "Staff technique"
+- raw: "梅花棍法"
+  splits:
+  - text: "梅花棍法"
+    translated: "Plum Blossom Staff Technique"
+- raw: "伏魔铲法"
+  splits:
+  - text: "伏魔铲法"
+    translated: "Method of the Devil‑subduing Tongs"
+- raw: "菩提心法"
+  splits:
+  - text: "菩提心法"
+    translated: "Buddha Heart Method"
+- raw: "九图六坐像"
+  splits:
+  - text: "九图六坐像"
+    translated: "Nine Sitting and Six Seated Figures"
+- raw: "一指禅"
+  splits:
+  - text: "一指禅"
+    translated: "One‑Finger Zen"
+- raw: "少林龙爪手"
+  splits:
+  - text: "少林龙爪手"
+    translated: "Shaolin Dragon Claw Hand"
+- raw: "去烦恼指"
+  splits:
+  - text: "去烦恼指"
+    translated: "Go Free from Worries"
+- raw: "扫落叶棍法"
+  splits:
+  - text: "扫落叶棍法"
+    translated: "Staff technique for sweeping leaves"
+- raw: "五虎群羊棍"
+  splits:
+  - text: "五虎群羊棍"
+    translated: "Five Tigers Gathered Lambs Staff"
+- raw: "大韦陀杵"
+  splits:
+  - text: "大韦陀杵"
+    translated: "Great Gandharva Mace"
+- raw: "袈裟伏魔功"
+  splits:
+  - text: "袈裟伏魔功"
+    translated: "Robe Suppression Evil Skill"
+- raw: "少林归藏功"
+  splits:
+  - text: "少林归藏功"
+    translated: "Shaolin Guizang Gong"
+- raw: "一苇渡江"
+  splits:
+  - text: "一苇渡江"
+    translated: "Crossing the river on a single reed"
+- raw: "金钟罩"
+  splits:
+  - text: "金钟罩"
+    translated: "Golden Bell Protection"
+- raw: "般若掌"
+  splits:
+  - text: "般若掌"
+    translated: "Wisdom Palm"
+- raw: "无相劫指"
+  splits:
+  - text: "无相劫指"
+    translated: "Fist of the Formless Ravaging Fist"
+- raw: "疯魔棍法"
+  splits:
+  - text: "疯魔棍法"
+    translated: "Mad Staff Technique"
+- raw: "大智无定棍法"
+  splits:
+  - text: "大智无定棍法"
+    translated: "Great Wisdom Has No Fixed Staff Technique"
+- raw: "菩提智慧杵"
+  splits:
+  - text: "菩提智慧杵"
+    translated: "Bodhi Wisdom Mace"
+- raw: "阿罗汉神功"
+  splits:
+  - text: "阿罗汉神功"
+    translated: "Arhat Divine Technique"
+- raw: "无色无相身"
+  splits:
+  - text: "无色无相身"
+    translated: "Formless Form"
+- raw: "佛门狮吼功"
+  splits:
+  - text: "佛门狮吼功"
+    translated: "Monk's Lion Roar Technique"
+- raw: "大力金刚掌"
+  splits:
+  - text: "大力金刚掌"
+    translated: "Powerful Golden Hawk Palm"
+- raw: "拈花指"
+  splits:
+  - text: "拈花指"
+    translated: "Blossom Finger"
+- raw: "如来千叶手"
+  splits:
+  - text: "如来千叶手"
+    translated: "Buddha Thousand‑Petaled Hand"
+- raw: "大文殊杖法"
+  splits:
+  - text: "大文殊杖法"
+    translated: "Great Manjushri Staff Technique"
+- raw: "紧那罗王棍法"
+  splits:
+  - text: "紧那罗王棍法"
+    translated: "King Vessava Staff Technique"
+- raw: "金刚伏魔圈"
+  splits:
+  - text: "金刚伏魔圈"
+    translated: "Golden Wheel of Subduing Evil Circle"
+- raw: "易筋经"
+  splits:
+  - text: "易筋经"
+    translated: "Meridian Cleansing Technique"
+- raw: "洗髓经"
+  splits:
+  - text: "洗髓经"
+    translated: "Bone Washing Classic"
+- raw: "金刚不坏神功"
+  splits:
+  - text: "金刚不坏神功"
+    translated: "Invincible Divine Skill"
+- raw: "达摩神杖"
+  splits:
+  - text: "达摩神杖"
+    translated: "Bodhidharma's Staff"
+- raw: "武当太和功"
+  splits:
+  - text: "武当太和功"
+    translated: "Wudang Taihe Gong"
+- raw: "八卦步"
+  splits:
+  - text: "八卦步"
+    translated: "Bagua Step"
+- raw: "武当软硬功"
+  splits:
+  - text: "武当软硬功"
+    translated: "Wudang Soft and Hard Skills"
+- raw: "武当长拳"
+  splits:
+  - text: "武当长拳"
+    translated: "Wudang Changquan"
+- raw: "武当绵掌"
+  splits:
+  - text: "武当绵掌"
+    translated: "Wudang Mian Palm"
+- raw: "武当丹剑"
+  splits:
+  - text: "武当丹剑"
+    translated: "Wudang Dancane Sword"
+- raw: "松溪小花剑"
+  splits:
+  - text: "松溪小花剑"
+    translated: "Songxi Minor Flower Sword"
+- raw: "武当混元桩"
+  splits:
+  - text: "武当混元桩"
+    translated: "Wudang Hunyuan Pillar"
+- raw: "九宫十八步"
+  splits:
+  - text: "九宫十八步"
+    translated: "Nine Palaces, Eighteen Steps"
+- raw: "子午盘功"
+  splits:
+  - text: "子午盘功"
+    translated: "Midday Wheel Technique"
+- raw: "九宫游身掌"
+  splits:
+  - text: "九宫游身掌"
+    translated: "Nine Palaces Wandering Palm"
+- raw: "金针指功"
+  splits:
+  - text: "金针指功"
+    translated: "Needle‑pricking Skill"
+- raw: "柔云剑法"
+  splits:
+  - text: "柔云剑法"
+    translated: "Soft Cloud Sword Technique"
+- raw: "玄门十三剑"
+  splits:
+  - text: "玄门十三剑"
+    translated: "Thirteenth Sword of the Taoist Sect"
+- raw: "元始周天功"
+  splits:
+  - text: "元始周天功"
+    translated: "Primordial Thousand Heaven Technique"
+- raw: "武当归藏功"
+  splits:
+  - text: "武当归藏功"
+    translated: "Wudang Guichuan Skill"
+- raw: "四象疑步"
+  splits:
+  - text: "四象疑步"
+    translated: "Four Symbols Doubtful Steps"
+- raw: "金关玉锁诀"
+  splits:
+  - text: "金关玉锁诀"
+    translated: "Golden Gate and Jade Lock Technique"
+- raw: "昊天掌"
+  splits:
+  - text: "昊天掌"
+    translated: "Heavenly Arm"
+- raw: "无极玄功拳"
+  splits:
+  - text: "无极玄功拳"
+    translated: "Infinite Mystic Skill Fist"
+- raw: "绕指柔剑"
+  splits:
+  - text: "绕指柔剑"
+    translated: "Soft‑Bending Sword"
+- raw: "两仪剑法"
+  splits:
+  - text: "两仪剑法"
+    translated: "Dual‑Nature Sword Technique"
+- raw: "纯阳无极功"
+  splits:
+  - text: "纯阳无极功"
+    translated: "Pure Yang Infinite Skill"
+- raw: "天梯纵云步"
+  splits:
+  - text: "天梯纵云步"
+    translated: "Heavenly Ladder Leaping Cloud Step"
+- raw: "柔易九转功"
+  splits:
+  - text: "柔易九转功"
+    translated: "Nine Transformations Soft and Gentle Technique"
+- raw: "伏魔证道拳"
+  splits:
+  - text: "伏魔证道拳"
+    translated: "Purification Fist to Attain Dao"
+- raw: "太虚掌"
+  splits:
+  - text: "太虚掌"
+    translated: "Void Palm"
+- raw: "丹凤朝阳剑"
+  splits:
+  - text: "丹凤朝阳剑"
+    translated: "Golden Phoenix Rising Sword"
+- raw: "三清化一剑"
+  splits:
+  - text: "三清化一剑"
+    translated: "Three Purities as One Sword"
+- raw: "先天无上罡气"
+  splits:
+  - text: "先天无上罡气"
+    translated: "Inborn supreme mystic energy"
+- raw: "北斗仙踪"
+  splits:
+  - text: "北斗仙踪"
+    translated: "Northern Dipper Xinzong"
+- raw: "阴阳调元法"
+  splits:
+  - text: "阴阳调元法"
+    translated: "Yin‑Yang Harmonization Technique"
+- raw: "日月明光掌"
+  splits:
+  - text: "日月明光掌"
+    translated: "Glorious Day and Moon Palm"
+- raw: "太极拳法"
+  splits:
+  - text: "太极拳法"
+    translated: "Tai Chi boxing"
+- raw: "太乙神剑"
+  splits:
+  - text: "太乙神剑"
+    translated: "Divine Jian of Taiyi"
+- raw: "真武荡魔剑"
+  splits:
+  - text: "真武荡魔剑"
+    translated: "True Martial Demonic Cleansing Sword"
+- raw: "太极神功"
+  splits:
+  - text: "太极神功"
+    translated: "Taiji Divine Skill"
+- raw: "道德真经"
+  splits:
+  - text: "道德真经"
+    translated: "True Classic of Virtue"
+- raw: "太极剑道"
+  splits:
+  - text: "太极剑道"
+    translated: "Way of the Taiji Sword"
+- raw: "铁脉功"
+  splits:
+  - text: "铁脉功"
+    translated: "Iron Vein Technique"
+- raw: "铁膝功"
+  splits:
+  - text: "铁膝功"
+    translated: "Iron Knee Technique"
+- raw: "铁头功"
+  splits:
+  - text: "铁头功"
+    translated: "Iron Head Technique"
+- raw: "开山刀法"
+  splits:
+  - text: "开山刀法"
+    translated: "Mountain‑Cleaving Blade Technique"
+- raw: "骤雨刀法"
+  splits:
+  - text: "骤雨刀法"
+    translated: "Thunderstorm Blade Art"
+- raw: "银蛇枪法"
+  splits:
+  - text: "银蛇枪法"
+    translated: "Silver Snake Spear Technique"
+- raw: "十三太保横练"
+  splits:
+  - text: "十三太保横练"
+    translated: "Thirteen Guards Hardened Training"
+- raw: "黄沙落雁"
+  splits:
+  - text: "黄沙落雁"
+    translated: "Yellow Sand Falling Geese"
+- raw: "铜皮铁骨功"
+  splits:
+  - text: "铜皮铁骨功"
+    translated: "Copper Skin Iron Bones Skill"
+- raw: "撼地刀法"
+  splits:
+  - text: "撼地刀法"
+    translated: "Earth‑Shaking Blade Technique"
+- raw: "狂风快刀"
+  splits:
+  - text: "狂风快刀"
+    translated: "Blazing Gale Blade"
+- raw: "西凉枪法"
+  splits:
+  - text: "西凉枪法"
+    translated: "Xiliang Spear Technique"
+- raw: "童子金身功"
+  splits:
+  - text: "童子金身功"
+    translated: "Childhood Golden Body Technique"
+- raw: "猛将步"
+  splits:
+  - text: "猛将步"
+    translated: "Brave Soldier Step"
+- raw: "黑砂刚体"
+  splits:
+  - text: "黑砂刚体"
+    translated: "Black Sand Rigid Body"
+- raw: "霹雳雷震刀"
+  splits:
+  - text: "霹雳雷震刀"
+    translated: "Thunderclap Slash Blade"
+- raw: "断水流刀法"
+  splits:
+  - text: "断水流刀法"
+    translated: "Flowing Water Blade Technique"
+- raw: "七探盘龙枪"
+  splits:
+  - text: "七探盘龙枪"
+    translated: "Seven Probes Dragon Coil Spear"
+- raw: "霸王举鼎功"
+  splits:
+  - text: "霸王举鼎功"
+    translated: "Peng Jiang Raising Cauldron Technique"
+- raw: "千里横行"
+  splits:
+  - text: "千里横行"
+    translated: "Mile‑long March"
+- raw: "金刀换掌功"
+  splits:
+  - text: "金刀换掌功"
+    translated: "Golden Blade for Palm Technique"
+- raw: "英雄刀法"
+  splits:
+  - text: "英雄刀法"
+    translated: "Heroic Blade Technique"
+- raw: "嗔狂刀法"
+  splits:
+  - text: "嗔狂刀法"
+    translated: "Frenzied Blade Art"
+- raw: "寻龙枪诀"
+  splits:
+  - text: "寻龙枪诀"
+    translated: "Dragon Seeking Spear Technique"
+- raw: "霸王卸甲"
+  splits:
+  - text: "霸王卸甲"
+    translated: "Kingdom Unleashes Armors"
+- raw: "天命刀法"
+  splits:
+  - text: "天命刀法"
+    translated: "Heavenly Mandate Blade Technique"
+- raw: "缺月弯刀"
+  splits:
+  - text: "缺月弯刀"
+    translated: "Bent Sword under a Crescent Moon"
+- raw: "霸王枪法"
+  splits:
+  - text: "霸王枪法"
+    translated: "Butterfly Spear Technique"
+- raw: "霸刀一式"
+  splits:
+  - text: "霸刀一式"
+    translated: "Blade Dominance Fist Style"
+- raw: "抱元诀"
+  splits:
+  - text: "抱元诀"
+    translated: "Cultivate the Fundamental Technique"
+- raw: "倒骑驴"
+  splits:
+  - text: "倒骑驴"
+    translated: "Ride a donkey backwards"
+- raw: "通气法"
+  splits:
+  - text: "通气法"
+    translated: "Breathing method"
+- raw: "八仙剑法"
+  splits:
+  - text: "八仙剑法"
+    translated: "Sword Technique of the Eight Immortals"
+- raw: "碧波剑法"
+  splits:
+  - text: "碧波剑法"
+    translated: "Sword Technique of Gentle Waves"
+- raw: "天女散花篮"
+  splits:
+  - text: "天女散花篮"
+    translated: "Flower Basket Dropped by Heavenly Maiden"
+- raw: "灵宝毕法功"
+  splits:
+  - text: "灵宝毕法功"
+    translated: "Divine Treasure Completion Technique"
+- raw: "泅水术"
+  splits:
+  - text: "泅水术"
+    translated: "Swimming Spell"
+- raw: "丹砂诀"
+  splits:
+  - text: "丹砂诀"
+    translated: "Art of Cinnabar"
+- raw: "风波十三式"
+  splits:
+  - text: "风波十三式"
+    translated: "Thirteenth Wave Style"
+- raw: "流云剑术"
+  splits:
+  - text: "流云剑术"
+    translated: "Whirling Cloud Swordsmanship"
+- raw: "芭蕉铁扇功"
+  splits:
+  - text: "芭蕉铁扇功"
+    translated: "Banana Fan Power"
+- raw: "长生真诀"
+  splits:
+  - text: "长生真诀"
+    translated: "True Art of Immortality"
+- raw: "乘风归"
+  splits:
+  - text: "乘风归"
+    translated: "Soar goes home"
+- raw: "剑气歌"
+  splits:
+  - text: "剑气歌"
+    translated: "Song of Sword Qi"
+- raw: "花飞蝶舞剑"
+  splits:
+  - text: "花飞蝶舞剑"
+    translated: "Flower Flying Butterfly Sword"
+- raw: "沧海追风剑"
+  splits:
+  - text: "沧海追风剑"
+    translated: "Whirlwind Sword by the Sea"
+- raw: "天花引"
+  splits:
+  - text: "天花引"
+    translated: "Smallpox Inducer"
+- raw: "仙人抚顶功"
+  splits:
+  - text: "仙人抚顶功"
+    translated: "Immortal Stroke Top Technique"
+- raw: "青烟飞絮"
+  splits:
+  - text: "青烟飞絮"
+    translated: "Vapors drift"
+- raw: "灵剑幻花"
+  splits:
+  - text: "灵剑幻花"
+    translated: "Flickering Sword Illusory Flower"
+- raw: "溟海逐月剑"
+  splits:
+  - text: "溟海逐月剑"
+    translated: "Moonchaser Sword"
+- raw: "朝阳一气剑"
+  splits:
+  - text: "朝阳一气剑"
+    translated: "Sunrise One Breath Sword"
+- raw: "冲天渔鼓"
+  splits:
+  - text: "冲天渔鼓"
+    translated: "Heaven‑reaching fish drum"
+- raw: "紫微星诀"
+  splits:
+  - text: "紫微星诀"
+    translated: "Purple Microstar Technique"
+- raw: "凌波虚渡"
+  splits:
+  - text: "凌波虚渡"
+    translated: "Fleeting Passage on Ripples"
+- raw: "大道剑诀"
+  splits:
+  - text: "大道剑诀"
+    translated: "Great Way Sword Art"
+- raw: "碧海飞仙剑"
+  splits:
+  - text: "碧海飞仙剑"
+    translated: "Azure Sea Flying Immortal Sword"
+- raw: "纯阳剑法"
+  splits:
+  - text: "纯阳剑法"
+    translated: "Purist Sword Technique"
+- raw: "铁拐化龙"
+  splits:
+  - text: "铁拐化龙"
+    translated: "Iron Cane Dragon Transformation"
+- raw: "五尺混天绫"
+  splits:
+  - text: "五尺混天绫"
+    translated: "Five‑zhi Huandian Ling"
+- raw: "敲爻歌诀"
+  splits:
+  - text: "敲爻歌诀"
+    translated: "Song of Hexagram Divination"
+- raw: "天遁剑法"
+  splits:
+  - text: "天遁剑法"
+    translated: "Heavenly Evasion Sword Technique"
+- raw: "坐忘功"
+  splits:
+  - text: "坐忘功"
+    translated: "Meditation Technique"
+- raw: "猿公跳涧"
+  splits:
+  - text: "猿公跳涧"
+    translated: "Monkey Leap Over the Creek"
+- raw: "凝心诀"
+  splits:
+  - text: "凝心诀"
+    translated: "Concentration Technique"
+- raw: "鸭形拳"
+  splits:
+  - text: "鸭形拳"
+    translated: "Peking Duck Fist"
+- raw: "三十六闭手"
+  splits:
+  - text: "三十六闭手"
+    translated: "Thirty‑Six Closed Hands"
+- raw: "静心剑法"
+  splits:
+  - text: "静心剑法"
+    translated: "Sword Technique of Calming the Mind"
+- raw: "临济十二庄"
+  splits:
+  - text: "临济十二庄"
+    translated: "Linji Twelve Villages"
+- raw: "峨眉归藏功"
+  splits:
+  - text: "峨眉归藏功"
+    translated: "Emei Guizang Skill"
+- raw: "峨眉虎步功"
+  splits:
+  - text: "峨眉虎步功"
+    translated: "Emei Tiger Step Skill"
+- raw: "清静归一法"
+  splits:
+  - text: "清静归一法"
+    translated: "Method of Calm Unity"
+- raw: "至云纽丝拳"
+  splits:
+  - text: "至云纽丝拳"
+    translated: "Zhi Yuno Silk Punch"
+- raw: "白猿通臂拳"
+  splits:
+  - text: "白猿通臂拳"
+    translated: "White Ape Long Arm Fist"
+- raw: "猿公剑法"
+  splits:
+  - text: "猿公剑法"
+    translated: "Monkey King Sword Technique"
+- raw: "灵悟自然功"
+  splits:
+  - text: "灵悟自然功"
+    translated: "Eternal Awakening Natural Technique"
+- raw: "步步生莲"
+  splits:
+  - text: "步步生莲"
+    translated: "Step on Lotus"
+- raw: "莲花宝笈"
+  splits:
+  - text: "莲花宝笈"
+    translated: "Lotus Treasure Manual"
+- raw: "金顶绵掌"
+  splits:
+  - text: "金顶绵掌"
+    translated: "Golden Peak Soft Palm Technique"
+- raw: "峨眉鹰爪功"
+  splits:
+  - text: "峨眉鹰爪功"
+    translated: "Emei Eagle Claw Fist"
+- raw: "回风拂柳剑"
+  splits:
+  - text: "回风拂柳剑"
+    translated: "Breeze‑Brushing Willow Sword"
+- raw: "莲花玄功"
+  splits:
+  - text: "莲花玄功"
+    translated: "Mystic Skill of the Lotus Flower"
+- raw: "灵狐拜月步"
+  splits:
+  - text: "灵狐拜月步"
+    translated: "Fox Spirit Moon Worship Step"
+- raw: "七星横链"
+  splits:
+  - text: "七星横链"
+    translated: "Seven‑star Horizontal Chain"
+- raw: "兰花拂穴手"
+  splits:
+  - text: "兰花拂穴手"
+    translated: "Laoran Fuxie Hand"
+- raw: "金刚三昧掌"
+  splits:
+  - text: "金刚三昧掌"
+    translated: "Golden State Palm"
+- raw: "玄女九式"
+  splits:
+  - text: "玄女九式"
+    translated: "Nine Mystic Feminine Techniques"
+- raw: "梵文贝叶经"
+  splits:
+  - text: "梵文贝叶经"
+    translated: "Buddhist Palm Leaf Texts"
+- raw: "舍身飞渡"
+  splits:
+  - text: "舍身飞渡"
+    translated: "Selfless leap across"
+- raw: "金顶佛光"
+  splits:
+  - text: "金顶佛光"
+    translated: "Golden Summit Buddha's Light"
+- raw: "天罡指穴功"
+  splits:
+  - text: "天罡指穴功"
+    translated: "Heavenly Warden Pointing Skill"
+- raw: "天罡雷轰掌"
+  splits:
+  - text: "天罡雷轰掌"
+    translated: "Heavenly Warrant Thunderous Palm"
+- raw: "灭心绝情剑"
+  splits:
+  - text: "灭心绝情剑"
+    translated: "Heart‑Cleansing and Emotion‑Ending Sword"
+- raw: "三洞灵宝经"
+  splits:
+  - text: "三洞灵宝经"
+    translated: "Three Caverns Divine Treasure Sutra"
+- raw: "诸天化身步"
+  splits:
+  - text: "诸天化身步"
+    translated: "Step of Infinite Body Factions"
+- raw: "易通法"
+  splits:
+  - text: "易通法"
+    translated: "Easy Communication Method"
+- raw: "麻雀跃"
+  splits:
+  - text: "麻雀跃"
+    translated: "Sparrow jumps"
+- raw: "爬铁索"
+  splits:
+  - text: "爬铁索"
+    translated: "Climb the iron cables"
+- raw: "蝎尾鞭"
+  splits:
+  - text: "蝎尾鞭"
+    translated: "Scorpion Tail Whip"
+- raw: "扫拂尘"
+  splits:
+  - text: "扫拂尘"
+    translated: "Sweep away dust"
+- raw: "铁脊矛突"
+  splits:
+  - text: "铁脊矛突"
+    translated: "Iron‑spined pike thrust"
+- raw: "子午流注功"
+  splits:
+  - text: "子午流注功"
+    translated: "Midday and Midnight Skill"
+- raw: "鹰翼功"
+  splits:
+  - text: "鹰翼功"
+    translated: "Eagle Wing Technique"
+- raw: "磐石劲"
+  splits:
+  - text: "磐石劲"
+    translated: "Rock Steady"
+- raw: "五鬼追魂鞭"
+  splits:
+  - text: "五鬼追魂鞭"
+    translated: "Five Ghosts Pursuit Soul Whip"
+- raw: "龙凤双钩"
+  splits:
+  - text: "龙凤双钩"
+    translated: "Dragon and Phoenix Dual Hooks"
+- raw: "搬山铁耙功"
+  splits:
+  - text: "搬山铁耙功"
+    translated: "Picking Axe Skill of Moving Mountains"
+- raw: "奇门五转"
+  splits:
+  - text: "奇门五转"
+    translated: "Five Turnings of Secret Techniques"
+- raw: "大鹏展翅"
+  splits:
+  - text: "大鹏展翅"
+    translated: "Phoenix rises"
+- raw: "花架门"
+  splits:
+  - text: "花架门"
+    translated: "Arbor gate"
+- raw: "金鳞巨蟒鞭"
+  splits:
+  - text: "金鳞巨蟒鞭"
+    translated: "Great Serpent Whip"
+- raw: "翻天印"
+  splits:
+  - text: "翻天印"
+    translated: "Turn Heaven Seal"
+- raw: "贯甲破盾矛"
+  splits:
+  - text: "贯甲破盾矛"
+    translated: "Penetrate Armor and Smash Shields"
+- raw: "上清气功"
+  splits:
+  - text: "上清气功"
+    translated: "Upper Clear Qi Gong"
+- raw: "倒踩三叠云"
+  splits:
+  - text: "倒踩三叠云"
+    translated: "Step on three‑tiered clouds"
+- raw: "龟藏豹隐"
+  splits:
+  - text: "龟藏豹隐"
+    translated: "Turtle Conceals Leopard"
+- raw: "鬼打狂鞭"
+  splits:
+  - text: "鬼打狂鞭"
+    translated: "Ghostly Mad Whip"
+- raw: "太统法铃"
+  splits:
+  - text: "太统法铃"
+    translated: "Great Unifying Harmonizing Bell"
+- raw: "北风百裂矛"
+  splits:
+  - text: "北风百裂矛"
+    translated: "Hundred‑Cracking Spear of the Northern Wind"
+- raw: "离合神功"
+  splits:
+  - text: "离合神功"
+    translated: "Skill of Separation and Union"
+- raw: "七雁落长空"
+  splits:
+  - text: "七雁落长空"
+    translated: "Seven wild geese fall into the vast sky"
+- raw: "回音搜魂术"
+  splits:
+  - text: "回音搜魂术"
+    translated: "Echo Soul‑searching Technique"
+- raw: "生死一线鞭"
+  splits:
+  - text: "生死一线鞭"
+    translated: "Life and Death Thin Thread Whip"
+- raw: "乾坤日月圈"
+  splits:
+  - text: "乾坤日月圈"
+    translated: "Heaven and Earth Circle"
+- raw: "玉石俱焚矛"
+  splits:
+  - text: "玉石俱焚矛"
+    translated: "Everything goes up in flames"
+- raw: "斗转星移"
+  splits:
+  - text: "斗转星移"
+    translated: "Stars Shift and Constellations Move"
+- raw: "非攻法"
+  splits:
+  - text: "非攻法"
+    translated: "Non‑Assault Technique"
+- raw: "迷踪步"
+  splits:
+  - text: "迷踪步"
+    translated: "Evasive Steps"
+- raw: "口算功"
+  splits:
+  - text: "口算功"
+    translated: "Mental arithmetic skill"
+- raw: "木流马"
+  splits:
+  - text: "木流马"
+    translated: "Tree Flow Horse"
+- raw: "机簧斧"
+  splits:
+  - text: "机簧斧"
+    translated: "Springblade Axe"
+- raw: "飞蝗箭"
+  splits:
+  - text: "飞蝗箭"
+    translated: "Locust Arrow"
+- raw: "明鬼诀"
+  splits:
+  - text: "明鬼诀"
+    translated: "Art of Conjuring Devils"
+- raw: "坐五车"
+  splits:
+  - text: "坐五车"
+    translated: "Have five cars"
+- raw: "相星术"
+  splits:
+  - text: "相星术"
+    translated: "Astrology of Relationship Stars"
+- raw: "青铜奔牛"
+  splits:
+  - text: "青铜奔牛"
+    translated: "Bronze Running Bull"
+- raw: "机关伞"
+  splits:
+  - text: "机关伞"
+    translated: "Mechanism Umbrella"
+- raw: "连珠箭"
+  splits:
+  - text: "连珠箭"
+    translated: "Bolt Shower"
+- raw: "天志术"
+  splits:
+  - text: "天志术"
+    translated: "Heavenly Will Spell"
+- raw: "八阵图步"
+  splits:
+  - text: "八阵图步"
+    translated: "Formation Array Step"
+- raw: "举手摘星式"
+  splits:
+  - text: "举手摘星式"
+    translated: "Hand Raised to Star Pose"
+- raw: "玉石麒麟"
+  splits:
+  - text: "玉石麒麟"
+    translated: "Jasper qilin"
+- raw: "六转孔明锁"
+  splits:
+  - text: "六转孔明锁"
+    translated: "Six‑turning Clever Lock"
+- raw: "神机箭"
+  splits:
+  - text: "神机箭"
+    translated: "Divine Mechanism Arrow"
+- raw: "本经阴符七术"
+  splits:
+  - text: "本经阴符七术"
+    translated: "The Seven Arts of Hidden Influence"
+- raw: "云龙九现"
+  splits:
+  - text: "云龙九现"
+    translated: "Nine Dragons Unleashed"
+- raw: "指算玄通"
+  splits:
+  - text: "指算玄通"
+    translated: "Calculation by Finger Wisdom"
+- raw: "燎原朱雀"
+  splits:
+  - text: "燎原朱雀"
+    translated: "Prickly Heat Phoenix"
+- raw: "遮天假手"
+  splits:
+  - text: "遮天假手"
+    translated: "Blindfolded Fist"
+- raw: "五子追心箭"
+  splits:
+  - text: "五子追心箭"
+    translated: "Five Hearts Pursuit Arrow"
+- raw: "河图洛书"
+  splits:
+  - text: "河图洛书"
+    translated: "River Map and Luo Book"
+- raw: "千机万巧"
+  splits:
+  - text: "千机万巧"
+    translated: "Ten Thousand Ingenious Machines"
+- raw: "地动青龙"
+  splits:
+  - text: "地动青龙"
+    translated: "Earthquake Dragon Qinglong"
+- raw: "傀儡牵丝术"
+  splits:
+  - text: "傀儡牵丝术"
+    translated: "Puppeteer's String Manipulation Technique"
+- raw: "元戎弩箭"
+  splits:
+  - text: "元戎弩箭"
+    translated: "Commander's Crossbow Arrow"
+- raw: "武库战车"
+  splits:
+  - text: "武库战车"
+    translated: "War wagon armory"
+- raw: "公输遗匣"
+  splits:
+  - text: "公输遗匣"
+    translated: "Cao Shu's Legacy Box"
+- raw: "雷火功"
+  splits:
+  - text: "雷火功"
+    translated: "Lightning Fire Skill"
+- raw: "疾电步"
+  splits:
+  - text: "疾电步"
+    translated: "Lightning Step"
+- raw: "铁手腕"
+  splits:
+  - text: "铁手腕"
+    translated: "Iron Hand"
+- raw: "铄心弹"
+  splits:
+  - text: "铄心弹"
+    translated: "Heartsearing Bullet"
+- raw: "火蒺藜"
+  splits:
+  - text: "火蒺藜"
+    translated: "Flame thorn"
+- raw: "霹雳枪法"
+  splits:
+  - text: "霹雳枪法"
+    translated: "Thunderbolt Spear Technique"
+- raw: "烈阳心法"
+  splits:
+  - text: "烈阳心法"
+    translated: "Heart Method of Radiant Sun"
+- raw: "风火轮"
+  splits:
+  - text: "风火轮"
+    translated: "Magic wheel"
+- raw: "硝石法"
+  splits:
+  - text: "硝石法"
+    translated: "Potassium Nitrate Method"
+- raw: "震天雷"
+  splits:
+  - text: "震天雷"
+    translated: "Skyshattering Bomb"
+- raw: "突火筒"
+  splits:
+  - text: "突火筒"
+    translated: "Rocket launcher"
+- raw: "烈阳枪法"
+  splits:
+  - text: "烈阳枪法"
+    translated: "Spear Art of Fiery Sun"
+- raw: "江翻海沸功"
+  splits:
+  - text: "江翻海沸功"
+    translated: "Chang‑fan‑hai‑bo Skill"
+- raw: "雷车动地"
+  splits:
+  - text: "雷车动地"
+    translated: "Thundering wheels shake the earth"
+- raw: "伏硫黄法"
+  splits:
+  - text: "伏硫黄法"
+    translated: "Phosphorus sulfide method"
+- raw: "霹雳雷火弹"
+  splits:
+  - text: "霹雳雷火弹"
+    translated: "Thunderbolt Fire Bomb"
+- raw: "猛火油"
+  splits:
+  - text: "猛火油"
+    translated: "Hot oil"
+- raw: "震天枪式"
+  splits:
+  - text: "震天枪式"
+    translated: "Thunderclap Gunstance"
+- raw: "祝融真火诀"
+  splits:
+  - text: "祝融真火诀"
+    translated: "Wishing You True Fire Technique Success"
+- raw: "电光火石"
+  splits:
+  - text: "电光火石"
+    translated: "Flash of lightning"
+- raw: "伏火矾法"
+  splits:
+  - text: "伏火矾法"
+    translated: "Fire Curing Method"
+- raw: "飞火流星"
+  splits:
+  - text: "飞火流星"
+    translated: "Firefly Meteor Shower"
+- raw: "铁嘴火鹞"
+  splits:
+  - text: "铁嘴火鹞"
+    translated: "Ironbeak Flameeagle"
+- raw: "奔雷枪诀"
+  splits:
+  - text: "奔雷枪诀"
+    translated: "Thunderbolt Spear Technique"
+- raw: "黑火药法"
+  splits:
+  - text: "黑火药法"
+    translated: "Black Powder Law"
+- raw: "连环子母弹"
+  splits:
+  - text: "连环子母弹"
+    translated: "Linked mother‑and‑child rockets"
+- raw: "神火飞鸦"
+  splits:
+  - text: "神火飞鸦"
+    translated: "Divine Flame Raven"
+- raw: "火树银枪"
+  splits:
+  - text: "火树银枪"
+    translated: "Firetree Silver Spear"
+- raw: "灭世天雷"
+  splits:
+  - text: "灭世天雷"
+    translated: "Apocalypse Thunderbolt"
+- raw: "吐姆功"
+  splits:
+  - text: "吐姆功"
+    translated: "Tum Gong"
+- raw: "转山行"
+  splits:
+  - text: "转山行"
+    translated: "Circle the Holy Mountain"
+- raw: "天耳通"
+  splits:
+  - text: "天耳通"
+    translated: "Heavenly Ear Permeation"
+- raw: "灌顶法"
+  splits:
+  - text: "灌顶法"
+    translated: "Crown Pouring Method"
+- raw: "如意宝杵"
+  splits:
+  - text: "如意宝杵"
+    translated: "Ruyi Treasure Staff"
+- raw: "飞轮功"
+  splits:
+  - text: "飞轮功"
+    translated: "Flywheel Technique"
+- raw: "持戒刀法"
+  splits:
+  - text: "持戒刀法"
+    translated: "Held Vow Blade Technique"
+- raw: "宝瓶气功"
+  splits:
+  - text: "宝瓶气功"
+    translated: "Bottle Qi Gong"
+- raw: "顶礼功"
+  splits:
+  - text: "顶礼功"
+    translated: "Salute respectfully"
+- raw: "天眼通"
+  splits:
+  - text: "天眼通"
+    translated: "All‑seeing Eye"
+- raw: "密宗缩骨功"
+  splits:
+  - text: "密宗缩骨功"
+    translated: "Taoist bone compression technique"
+- raw: "三曼荼罗杵"
+  splits:
+  - text: "三曼荼罗杵"
+    translated: "Three Mandala Mace"
+- raw: "往生轮"
+  splits:
+  - text: "往生轮"
+    translated: "Rebirth Wheel"
+- raw: "往生刀法"
+  splits:
+  - text: "往生刀法"
+    translated: "Rebirth Blade Technique"
+- raw: "不动明王功"
+  splits:
+  - text: "不动明王功"
+    translated: "Eye of Wisdom Technique"
+- raw: "神足通"
+  splits:
+  - text: "神足通"
+    translated: "Divine Foot Technique"
+- raw: "金刚怒目"
+  splits:
+  - text: "金刚怒目"
+    translated: "Furious Eyes of Golden Firmament"
+- raw: "降龙伏虎功"
+  splits:
+  - text: "降龙伏虎功"
+    translated: "Dragon Tames Dragon, Tiger Calms Tiger Kung Fu Technique"
+- raw: "金刚降魔杵"
+  splits:
+  - text: "金刚降魔杵"
+    translated: "Staff of Subduing Evil"
+- raw: "五轮大法"
+  splits:
+  - text: "五轮大法"
+    translated: "Five Rims Method"
+- raw: "金刚降魔刀"
+  splits:
+  - text: "金刚降魔刀"
+    translated: "Devil‑Slaying Great Saber"
+- raw: "摩揭陀瑜伽功"
+  splits:
+  - text: "摩揭陀瑜伽功"
+    translated: "Magadha Yoga Technique"
+- raw: "转轮行空"
+  splits:
+  - text: "转轮行空"
+    translated: "Skyward Spin Wheel"
+- raw: "释迦掷象"
+  splits:
+  - text: "释迦掷象"
+    translated: "Sakyamuni Rolls the Elephant"
+- raw: "瑜伽行地"
+  splits:
+  - text: "瑜伽行地"
+    translated: "Yoga on the Mat"
+- raw: "大威德杵"
+  splits:
+  - text: "大威德杵"
+    translated: "Vajra"
+- raw: "无量转轮功"
+  splits:
+  - text: "无量转轮功"
+    translated: "Infinite Wheel Rotation Skill"
+- raw: "阿鼻八刀"
+  splits:
+  - text: "阿鼻八刀"
+    translated: "Avalanche Eight Blades"
+- raw: "大黑天降魔功"
+  splits:
+  - text: "大黑天降魔功"
+    translated: "Great Black Heaven Defeating Demons Skill"
+- raw: "密宗大手印"
+  splits:
+  - text: "密宗大手印"
+    translated: "Vajra Hand Trajectory"
+- raw: "宿命通"
+  splits:
+  - text: "宿命通"
+    translated: "Fate Reader"
+- raw: "无上大力杵"
+  splits:
+  - text: "无上大力杵"
+    translated: "Supreme Power Mace"
+- raw: "观想日月轮"
+  splits:
+  - text: "观想日月轮"
+    translated: "Contemplate the Wheel of the Moon and Sun"
+- raw: "无苦寂灭刀"
+  splits:
+  - text: "无苦寂灭刀"
+    translated: "Blade of Tranquil Bliss"
+- raw: "大日如来功"
+  splits:
+  - text: "大日如来功"
+    translated: "Great Sun Primordial Buddha Technique"
+- raw: "龙象护法功"
+  splits:
+  - text: "龙象护法功"
+    translated: "Dragon Elephant Guarding Method"
+- raw: "因陀罗杵"
+  splits:
+  - text: "因陀罗杵"
+    translated: "Indra's Staff"
+- raw: "凝冰诀"
+  splits:
+  - text: "凝冰诀"
+    translated: "Ice Binding Technique"
+- raw: "踏雪行"
+  splits:
+  - text: "踏雪行"
+    translated: "Walk on Snowedmaken"
+- raw: "采冰术"
+  splits:
+  - text: "采冰术"
+    translated: "Ice Harvesting Skill"
+- raw: "碧罗掌"
+  splits:
+  - text: "碧罗掌"
+    translated: "Emerald Palm Fist"
+- raw: "朔风指"
+  splits:
+  - text: "朔风指"
+    translated: "Northeast wind blows"
+- raw: "天山剑法"
+  splits:
+  - text: "天山剑法"
+    translated: "Tianshan Sword Technique"
+- raw: "吹雪剑法"
+  splits:
+  - text: "吹雪剑法"
+    translated: "Blizzard Sword Technique"
+- raw: "寒梅心经"
+  splits:
+  - text: "寒梅心经"
+    translated: "Heart Sutra of Cold Plum"
+- raw: "雪泥鸿爪"
+  splits:
+  - text: "雪泥鸿爪"
+    translated: "Feather marks in the snow"
+- raw: "傲霜诀"
+  splits:
+  - text: "傲霜诀"
+    translated: "Decree to Withstand Frost"
+- raw: "五罗轻烟掌"
+  splits:
+  - text: "五罗轻烟掌"
+    translated: "Five‑robed Light Smoke Palm"
+- raw: "凌云指"
+  splits:
+  - text: "凌云指"
+    translated: "Heavenward Fingers"
+- raw: "烟雨六式"
+  splits:
+  - text: "烟雨六式"
+    translated: "Six Styles of Mist and Rain"
+- raw: "飞瀑剑法"
+  splits:
+  - text: "飞瀑剑法"
+    translated: "Waterfall Sword Technique"
+- raw: "天池心修"
+  splits:
+  - text: "天池心修"
+    translated: "Heavenly Pond Heart Cultivator"
+- raw: "临渊履冰"
+  splits:
+  - text: "临渊履冰"
+    translated: "Standing on thin ice near a precipice"
+- raw: "踏雪寻梅"
+  splits:
+  - text: "踏雪寻梅"
+    translated: "Snowy trail in search of plum blossoms"
+- raw: "寒霜掌"
+  splits:
+  - text: "寒霜掌"
+    translated: "Frost Palm"
+- raw: "寒袖拂穴"
+  splits:
+  - text: "寒袖拂穴"
+    translated: "Cold Sleeve strokes the acupoint"
+- raw: "素女冰心剑"
+  splits:
+  - text: "素女冰心剑"
+    translated: "Pure Heart Ice Maiden Sword"
+- raw: "长风落雁剑"
+  splits:
+  - text: "长风落雁剑"
+    translated: "Long Wind Fallen Swallow Sword"
+- raw: "天山融雪功"
+  splits:
+  - text: "天山融雪功"
+    translated: "Tianshan Snowmelt Skill"
+- raw: "踏雪无痕"
+  splits:
+  - text: "踏雪无痕"
+    translated: "Leave no trace in the snow"
+- raw: "控鹤功"
+  splits:
+  - text: "控鹤功"
+    translated: "Featherfall Technique"
+- raw: "飘雪穿云掌"
+  splits:
+  - text: "飘雪穿云掌"
+    translated: "Snow Drifts through Cloud Palm"
+- raw: "幻阴指"
+  splits:
+  - text: "幻阴指"
+    translated: "Yin Finger Technique"
+- raw: "夺魂三仙剑"
+  splits:
+  - text: "夺魂三仙剑"
+    translated: "Soul Stealing Three Immortal Swords"
+- raw: "风刀霜剑"
+  splits:
+  - text: "风刀霜剑"
+    translated: "Blade of Wind and Frost Sword"
+- raw: "玄冥真气"
+  splits:
+  - text: "玄冥真气"
+    translated: "True Qi of Xuan Ming"
+- raw: "瑶池漫步"
+  splits:
+  - text: "瑶池漫步"
+    translated: "Strolling Through Yaochi"
+- raw: "玄天指"
+  splits:
+  - text: "玄天指"
+    translated: "Heavenly Profound Finger Technique"
+- raw: "玄冥神掌"
+  splits:
+  - text: "玄冥神掌"
+    translated: "Palms of Frozen Annihilation"
+- raw: "清虚广寒剑"
+  splits:
+  - text: "清虚广寒剑"
+    translated: "Sword of Clear Void and Broad Cold"
+- raw: "九霄冲天剑"
+  splits:
+  - text: "九霄冲天剑"
+    translated: "Heavenward Sword of the Nine Heavens"
+- raw: "不老长春功"
+  splits:
+  - text: "不老长春功"
+    translated: "Eternal Spring Technique"
+- raw: "仙娥折梅"
+  splits:
+  - text: "仙娥折梅"
+    translated: "Immortal Maiden Breaks Branch of Plum"
+- raw: "白虹贯日掌"
+  splits:
+  - text: "白虹贯日掌"
+    translated: "Sun‑Piercing White Ribbon Palm"
+- raw: "逆转周天大法"
+  splits:
+  - text: "逆转周天大法"
+    translated: "Reverse Cycle Heaven Technique"
+- raw: "绝义归藏功"
+  splits:
+  - text: "绝义归藏功"
+    translated: "Absolute Righteousness and Hidden Power"
+- raw: "心狂归藏功"
+  splits:
+  - text: "心狂归藏功"
+    translated: "Calm the Wild Heart Technique"
+- raw: "龙胤归藏功"
+  splits:
+  - text: "龙胤归藏功"
+    translated: "Long Yin Guizang Gong"
+- raw: "守丹田"
+  splits:
+  - text: "守丹田"
+    translated: "Guard the Dan Tian"
+- raw: "八段锦"
+  splits:
+  - text: "八段锦"
+    translated: "Eight Section Silk Ribbon Exercise"
+- raw: "走钢索"
+  splits:
+  - text: "走钢索"
+    translated: "Tightrope walking"
+- raw: "钻火圈"
+  splits:
+  - text: "钻火圈"
+    translated: "Jump through hoops"
+- raw: "角抵法"
+  splits:
+  - text: "角抵法"
+    translated: "Gladiatorial method"
+- raw: "五禽戏"
+  splits:
+  - text: "五禽戏"
+    translated: "Five Animals Exercise"
+- raw: "猴拳"
+  splits:
+  - text: "猴拳"
+    translated: "Monkey Fist"
+- raw: "劈砖掌"
+  splits:
+  - text: "劈砖掌"
+    translated: "Cleave Brick Palm"
+- raw: "刺剑术"
+  splits:
+  - text: "刺剑术"
+    translated: "Swordsmanship"
+- raw: "剑器舞"
+  splits:
+  - text: "剑器舞"
+    translated: "Sword dance"
+- raw: "短刀术"
+  splits:
+  - text: "短刀术"
+    translated: "Shortsword Technique"
+- raw: "贼寇刀法"
+  splits:
+  - text: "贼寇刀法"
+    translated: "Bandit Blade Technique"
+- raw: "花枪法"
+  splits:
+  - text: "花枪法"
+    translated: "Spear Technique"
+- raw: "双节棍法"
+  splits:
+  - text: "双节棍法"
+    translated: "Staff technique"
+- raw: "铁扇功"
+  splits:
+  - text: "铁扇功"
+    translated: "Iron Fan Skill"
+- raw: "点穴笔"
+  splits:
+  - text: "点穴笔"
+    translated: "Acupressure pen"
+- raw: "飞箭要诀"
+  splits:
+  - text: "飞箭要诀"
+    translated: "Arrow‑Shooting Essentials"
+- raw: "飞石要诀"
+  splits:
+  - text: "飞石要诀"
+    translated: "Cannonball Technique"
+- raw: "须弥神功"
+  splits:
+  - text: "须弥神功"
+    translated: "Purifying Domain Divine Technique"
+- raw: "墨玉心诀"
+  splits:
+  - text: "墨玉心诀"
+    translated: "Mo Yu Heart Technique"
+- raw: "遁地潜行"
+  splits:
+  - text: "遁地潜行"
+    translated: "Tunnel through the earth"
+- raw: "凌霄天外"
+  splits:
+  - text: "凌霄天外"
+    translated: "Beyond the Heavenly Croton"
+- raw: "乾坤一气劲"
+  splits:
+  - text: "乾坤一气劲"
+    translated: "Cosmic Qi Power"
+- raw: "仙人指路"
+  splits:
+  - text: "仙人指路"
+    translated: "Mistress Points the Way"
+- raw: "混元掌力"
+  splits:
+  - text: "混元掌力"
+    translated: "Cosmic Palm Power"
+- raw: "皓月拳"
+  splits:
+  - text: "皓月拳"
+    translated: "Moonlit Fist"
+- raw: "达摩剑法"
+  splits:
+  - text: "达摩剑法"
+    translated: "Shaolin Swordsmanship"
+- raw: "重剑无锋"
+  splits:
+  - text: "重剑无锋"
+    translated: "A sword without a sharp edge"
+- raw: "风雪狂刀"
+  splits:
+  - text: "风雪狂刀"
+    translated: "Furious Snowstorm Blade"
+- raw: "秦王破阵刀"
+  splits:
+  - text: "秦王破阵刀"
+    translated: "Qin King's Array‑Piercing Blade"
+- raw: "飞虎提芦枪"
+  splits:
+  - text: "飞虎提芦枪"
+    translated: "Tiger Hawk Wields a Reed Gun"
+- raw: "天龙八棍法"
+  splits:
+  - text: "天龙八棍法"
+    translated: "Eight Staff Technique"
+- raw: "五火七翎扇"
+  splits:
+  - text: "五火七翎扇"
+    translated: "Five‑Fire Seven‑feather Fan"
+- raw: "六道轮回"
+  splits:
+  - text: "六道轮回"
+    translated: "Six realms of rebirth"
+- raw: "掌心雷"
+  splits:
+  - text: "掌心雷"
+    translated: "Hand grenade"
+- raw: "没羽弓术"
+  splits:
+  - text: "没羽弓术"
+    translated: "Feather‑Fleeing Arrow Technique"
+- raw: "摩诃无量功"
+  splits:
+  - text: "摩诃无量功"
+    translated: "Great Boundless Skill"
+- raw: "蚀骨销魂功"
+  splits:
+  - text: "蚀骨销魂功"
+    translated: "Bone‑Crushing Soul‑Soothing Skill"
+- raw: "驾雾腾云步"
+  splits:
+  - text: "驾雾腾云步"
+    translated: "Mist‑walking cloud‑stepping stance"
+- raw: "咫尺天涯"
+  splits:
+  - text: "咫尺天涯"
+    translated: "Near yet far"
+- raw: "阴阳大悲咒"
+  splits:
+  - text: "阴阳大悲咒"
+    translated: "Great Sorrow Dharma Formula of Yin and Yang"
+- raw: "太乙仙身"
+  splits:
+  - text: "太乙仙身"
+    translated: "Primordial One Immortal Body"
+- raw: "如来神掌"
+  splits:
+  - text: "如来神掌"
+    translated: "Buddha's Palm Technique"
+- raw: "万化归一指"
+  splits:
+  - text: "万化归一指"
+    translated: "One‑Finger Meditation Technique"
+- raw: "剑十三式"
+  splits:
+  - text: "剑十三式"
+    translated: "Thirteenth Sword Technique"
+- raw: "独孤剑法"
+  splits:
+  - text: "独孤剑法"
+    translated: "Solo Sword Technique"
+- raw: "无间魔刀"
+  splits:
+  - text: "无间魔刀"
+    translated: "Inferno Magic Blade"
+- raw: "生死劫刀法"
+  splits:
+  - text: "生死劫刀法"
+    translated: "Life and Death Saber Technique"
+- raw: "虬龙九变"
+  splits:
+  - text: "虬龙九变"
+    translated: "Nine Transformations of the Coiling Dragon"
+- raw: "十面埋伏"
+  splits:
+  - text: "十面埋伏"
+    translated: "Ambush on All Sides"
+- raw: "山河社稷笔"
+  splits:
+  - text: "山河社稷笔"
+    translated: "River Mountain and State Pen"
+- raw: "真龙霹雳鞭"
+  splits:
+  - text: "真龙霹雳鞭"
+    translated: "True Dragon Thunderstaff"
+- raw: "催命符"
+  splits:
+  - text: "催命符"
+    translated: "Life‑threatening spell"
+- raw: "后羿射日"
+  splits:
+  - text: "后羿射日"
+    translated: "Hou Yi Shoots the Sun"
+- raw: "星落九天"
+  splits:
+  - text: "星落九天"
+    translated: "Fallen Stars from Nine Heavens"
+- raw: "临时:老农&男;50;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "老农"
+    translated: "Old farmer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2"
+- raw: "雷彤"
+  splits:
+  - text: "雷彤"
+    translated: "Le Tong"
+- raw: "临时:乐山村长&男;50;-1;2;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "乐山村长"
+    translated: "Village Chief Le Shan"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;2;-3"
+- raw: "临时:乐山村长"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "乐山村长"
+    translated: "Village Chief Le Shan"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:村民甲&男;30;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民甲"
+    translated: "Villager A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-2"
+- raw: "临时:村民乙&女;20;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民乙"
+    translated: "Villager B"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-4"
+- raw: "临时:村民甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民甲"
+    translated: "Villager A"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:村民丙&男;40;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民丙"
+    translated: "Third Villager"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:村民丁&女;20;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民丁"
+    translated: "Villager Ding"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-2"
+- raw: "临时:村民乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民乙"
+    translated: "Villager B"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:村民甲&男;60;-1;0;-6"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民甲"
+    translated: "Villager A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};60;-1;0;-6"
+- raw: "临时:村民乙&女;40;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民乙"
+    translated: "Villager B"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:村民丙&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民丙"
+    translated: "Third Villager"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:村民丁&男;50;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民丁"
+    translated: "Villager Ding"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2"
+- raw: "临时:侠客甲&男;20;-1;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客甲"
+    translated: "Wanderer They continue on their journey"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1"
+- raw: "临时:侠客乙&女;30;0;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客乙"
+    translated: "Wanderer B"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;0;0"
+- raw: "临时:侠客丙&男;40;6;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客丙"
+    translated: "Wanderer C"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;6;2"
+- raw: "临时:侠客甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客甲"
+    translated: "Wanderer They continue on their journey"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客乙"
+    translated: "Wanderer B"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客丙"
+    translated: "Wanderer C"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客甲&男;40;3;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客甲"
+    translated: "Wanderer They continue on their journey"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;3;1"
+- raw: "临时:侠客乙&女;30;4;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客乙"
+    translated: "Wanderer B"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;4;2"
+- raw: "临时:侠客丙&女;30;12;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客丙"
+    translated: "Wanderer C"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;12;3"
+- raw: "临时:家丁甲&男;30;1;1;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁甲"
+    translated: "Guard A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;1;1;-4"
+- raw: "临时:家丁乙&男;40;1;2;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁乙"
+    translated: "Second attendant"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;1;2;-4"
+- raw: "临时:家丁甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁甲"
+    translated: "Guard A"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:民女&女;20;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "民女"
+    translated: "Ordinary woman"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-2"
+- raw: "临时:家丁乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁乙"
+    translated: "Second attendant"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:民女"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "民女"
+    translated: "Ordinary woman"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:狱卒&男;30;-1;1;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "狱卒"
+    translated: "Guardian"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-5"
+- raw: "临时:狱卒甲&男;30;-1;1;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "狱卒甲"
+    translated: "Guard One"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-5"
+- raw: "临时:狱卒乙&男;40;-1;1;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "狱卒乙"
+    translated: "Guard B"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-5"
+- raw: "临时:狱卒甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "狱卒甲"
+    translated: "Guard One"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:狱卒乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "狱卒乙"
+    translated: "Guard B"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:狱卒丙&男;20;-1;2;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "狱卒丙"
+    translated: "They approached Lord Wu"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;2;-5"
+- raw: "临时:狱卒丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "狱卒丙"
+    translated: "They approached Lord Wu"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子&男;30;28;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子"
+    translated: "Qingcheng Disciples"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;28;1"
+- raw: "临时:唐门弟子&男;40;1;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子"
+    translated: "Tang Clan disciples"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;1;2"
+- raw: "临时:唐门弟子"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子"
+    translated: "Tang Clan disciples"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子甲&男;30;28;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子甲"
+    translated: "Qingcheng Disciple A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;28;2"
+- raw: "临时:青城弟子乙&女;40;28;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子乙"
+    translated: "Qingcheng Disciple Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;28;1"
+- raw: "临时:青城弟子丙&男;20;28;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子丙"
+    translated: "Qingcheng Disciple Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;28;1"
+- raw: "临时:青城弟子甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子甲"
+    translated: "Qingcheng Disciple A"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子乙"
+    translated: "Qingcheng Disciple Yi"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子丙"
+    translated: "Qingcheng Disciple Bing"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:唐门弟子甲&男;40;1;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子甲"
+    translated: "Tang Clan Disciple A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;1;2"
+- raw: "临时:唐门弟子甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子甲"
+    translated: "Tang Clan Disciple A"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:唐门头领&男;40;1;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门头领"
+    translated: "Head of the Tang Clan"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;1;3"
+- raw: "临时:青城弟子甲&男;20;28;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子甲"
+    translated: "Qingcheng Disciple A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;28;1"
+- raw: "临时:青城弟子乙&女;30;28;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子乙"
+    translated: "Qingcheng Disciple Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;28;0"
+- raw: "临时:青城弟子丙&女;40;28;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "青城弟子丙"
+    translated: "Qingcheng Disciple Bing"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;28;0"
+- raw: "临时:百姓甲&男;40;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓甲"
+    translated: "Citizen A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2"
+- raw: "临时:百姓乙&女;30;-1;0;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓乙"
+    translated: "Citizen Bi Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-3"
+- raw: "临时:百姓丙&男;50;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓丙"
+    translated: "Citizen Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-4"
+- raw: "临时:百姓丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓丙"
+    translated: "Citizen Bing"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:百姓乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓乙"
+    translated: "Citizen Bi Yi"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:百姓甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓甲"
+    translated: "Citizen A"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:窃贼甲&男;40;-1;1;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "窃贼甲"
+    translated: "Thief A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-9"
+- raw: "临时:窃贼乙&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "窃贼乙"
+    translated: "Thief B"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:窃贼丙&女;20;-1;1;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "窃贼丙"
+    translated: "Thief C"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-8"
+- raw: "临时:窃贼丁&女;30;-1;1;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "窃贼丁"
+    translated: "Thief Ding"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-9"
+- raw: "临时:窃贼丁"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "窃贼丁"
+    translated: "Thief Ding"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:家丁甲&男;40;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁甲"
+    translated: "Guard A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:家丁乙&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁乙"
+    translated: "Second attendant"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:张大户&男;50;-1;0;-3;5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "张大户"
+    translated: "Mr. Zhang"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-3;5"
+- raw: "临时:家丁丙&男;20;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁丙"
+    translated: "Attendant Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-4"
+- raw: "临时:张大户"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "张大户"
+    translated: "Mr. Zhang"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:官差&男;40;-1;2;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "官差"
+    translated: "Officer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-5"
+- raw: "临时:捕头&男;30;-1;1;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "捕头"
+    translated: "Sheriff"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-5"
+- raw: "临时:渔夫&男;50;-1;0;-2;0;false;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "渔夫"
+    translated: "Fisherman"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2;0;false;0"
+- raw: "临时:小二&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "小二"
+    translated: "Waiter"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:铁掌恶徒甲&男;30;24;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒甲"
+    translated: "Aggressive Palm Bandit A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;24;3"
+- raw: "临时:铁掌恶徒乙&女;20;24;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒乙"
+    translated: "Evil Fists Thug B"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌恶徒丙&男;20;24;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒丙"
+    translated: "Evil Palm Bandit C Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;24;0"
+- raw: "临时:铁掌恶徒丁&男;30;24;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒丁"
+    translated: "Crooked Palm Villain Ding"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌恶徒甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒甲"
+    translated: "Aggressive Palm Bandit A"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌恶徒乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒乙"
+    translated: "Evil Fists Thug B"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌恶徒丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒丙"
+    translated: "Evil Palm Bandit C Bing"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌恶徒丁"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌恶徒丁"
+    translated: "Crooked Palm Villain Ding"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:官差&男;40;-1;4;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "官差"
+    translated: "Officer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-5"
+- raw: "临时:黑风头目&男;40;-1;1;-8;;true"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "黑风头目"
+    translated: "Leader of Black Wind"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-8;;true"
+- raw: "临时:黑风头目"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "黑风头目"
+    translated: "Leader of Black Wind"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:黑风头目甲&男;40;-1;2;-8;;true"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "黑风头目甲"
+    translated: "Black Wind Leader Armor"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-8;;true"
+- raw: "临时:黑风头目乙&女;30;-1;1;-8;;true"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "黑风头目乙"
+    translated: "Headless Chief Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8;;true"
+- raw: "临时:黑风头目甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "黑风头目甲"
+    translated: "Black Wind Leader Armor"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:黑风头目乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "黑风头目乙"
+    translated: "Headless Chief Yi"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众甲&男;30;24;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众甲"
+    translated: "Iron Palm Gang Member One"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌帮众乙&女;20;24;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众乙"
+    translated: "Iron Palm Gang members Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌帮众甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众甲"
+    translated: "Iron Palm Gang Member One"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众乙"
+    translated: "Iron Palm Gang members Yi"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众丙&男;20;24;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+    translated: "Iron Palm Gang Ting"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;24;0"
+- raw: "临时:铁掌帮众甲&男;20;24;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众甲"
+    translated: "Iron Palm Gang Member One"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;24;2"
+- raw: "临时:铁掌帮众乙&女;30;24;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众乙"
+    translated: "Iron Palm Gang members Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;24;1"
+- raw: "临时:铁掌帮众丙&男;20;24;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+    translated: "Iron Palm Gang Ting"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;24;3"
+- raw: "临时:铁掌帮众丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+    translated: "Iron Palm Gang Ting"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众丙&女;20;24;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+    translated: "Iron Palm Gang Ting"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;24;0"
+- raw: "临时:铁掌弟子甲&男;30;24;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子甲"
+    translated: "Disciple Jia of Iron Palm School"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;24;3"
+- raw: "临时:铁掌弟子乙&女;20;24;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子乙"
+    translated: "Disciple Yi of the Iron Palm Sect"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌弟子丙&男;20;24;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子丙"
+    translated: "Disciple Bing of Iron Palm Sect"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;24;2"
+- raw: "临时:铁掌弟子丁&女;20;24;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子丁"
+    translated: "Disciple Ding of the Iron Palm School"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌弟子戊&男;30;24;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子戊"
+    translated: "Disciple Wu of the Iron Palm School"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子乙"
+    translated: "Disciple Yi of the Iron Palm Sect"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌弟子丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子丙"
+    translated: "Disciple Bing of Iron Palm Sect"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌弟子甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌弟子甲"
+    translated: "Disciple Jia of Iron Palm School"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌援军甲&男;30;24;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌援军甲"
+    translated: "Iron Palm Reinforcement Trooper"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌援军乙&女;40;24;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌援军乙"
+    translated: "Second Reinforcement Palm Force"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;24;2"
+- raw: "临时:铁掌援军甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌援军甲"
+    translated: "Iron Palm Reinforcement Trooper"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌援军乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铁掌援军乙"
+    translated: "Second Reinforcement Palm Force"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:巴陵村民&男;50;-1;1;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "巴陵村民"
+    translated: "Villagers of Baling Village"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;1;-2"
+- raw: "临时:亡命徒乙&男;30;-1;2;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "亡命徒乙"
+    translated: "Convict B"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-8"
+- raw: "临时:亡命徒甲&男;30;-1;3;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "亡命徒甲"
+    translated: "Outlaw Armor"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-9"
+- raw: "临时:亡命徒丙&女;30;-1;2;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "亡命徒丙"
+    translated: "Convict Bing"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-9"
+- raw: "临时:亡命徒甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "亡命徒甲"
+    translated: "Outlaw Armor"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:药王弟子&女;30;2;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "药王弟子"
+    translated: "Disciple of Medicine King"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;2;2"
+- raw: "临时:药王弟子"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "药王弟子"
+    translated: "Disciple of Medicine King"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:牛二&男;30;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "牛二"
+    translated: "Niu Er"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-2"
+- raw: "临时:牛二"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "牛二"
+    translated: "Niu Er"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:奸商&男;40;-1;1;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "奸商"
+    translated: "Greedy merchant"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-3"
+- raw: "临时:武林人士甲&女;30;-1;2;-6"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武林人士甲"
+    translated: "Martial Arts Practitioner A"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-6"
+- raw: "临时:武林人士乙&男;30;-1;2;-7"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武林人士乙"
+    translated: "Wulin figure B"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-7"
+- raw: "临时:奸商"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "奸商"
+    translated: "Greedy merchant"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:老兵&男;70;-1;2;4;2;false;12"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "老兵"
+    translated: "Veteran"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};70;-1;2;4;2;false;12"
+- raw: "临时:丐帮弟子&男;40;3;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "丐帮弟子"
+    translated: "Disciple of the Beggar Sect"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;3;1"
+- raw: "临时:武当弟子甲&男;30;11;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子甲"
+    translated: "Wudang Disciple Jia"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;11;3"
+- raw: "临时:武当弟子乙&女;20;11;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子乙"
+    translated: "Wudang Disciple Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;11;3"
+- raw: "临时:武当弟子甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子甲"
+    translated: "Wudang Disciple Jia"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:武当弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子乙"
+    translated: "Wudang Disciple Yi"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:武当弟子丙&男;40;11;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子丙"
+    translated: "Wudang Disciple Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;11;4"
+- raw: "临时:武当弟子丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子丙"
+    translated: "Wudang Disciple Bing"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大隐弟子甲&女;40;9;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大隐弟子甲"
+    translated: "Disciple Jia of the Profound Hidden Sect"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;9;3"
+- raw: "临时:大隐弟子乙&男;30;9;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大隐弟子乙"
+    translated: "Disciple Yi of the Great Hidden Sect"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;9;3"
+- raw: "临时:大隐弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大隐弟子乙"
+    translated: "Disciple Yi of the Great Hidden Sect"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大隐探子&男;30;9;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大隐探子"
+    translated: "Hidden Blade Investigator"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;9;3"
+- raw: "临时:外门弟子甲&女;20;14;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "外门弟子甲"
+    translated: "Outer Gate Disciple Jia"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;14;0"
+- raw: "临时:外门弟子乙&男;20;14;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "外门弟子乙"
+    translated: "Second‑ranked outer gate disciple"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;14;0"
+- raw: "临时:外门弟子丙&男;30;14;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "外门弟子丙"
+    translated: "Outer Gate Disciple Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;14;0"
+- raw: "临时:外门弟子甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "外门弟子甲"
+    translated: "Outer Gate Disciple Jia"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:外门弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "外门弟子乙"
+    translated: "Second‑ranked outer gate disciple"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:农民&男;40;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "农民"
+    translated: "Farmer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2"
+- raw: "临时:渔夫&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "渔夫"
+    translated: "Fisherman"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:铸剑弟子甲&男;30;6;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铸剑弟子甲"
+    translated: "Student Smithsmith Jia"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;6;3"
+- raw: "临时:铸剑弟子乙&女;20;6;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铸剑弟子乙"
+    translated: "Disciple Yi of the Sword Forge"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;6;2"
+- raw: "临时:铸剑弟子甲"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铸剑弟子甲"
+    translated: "Student Smithsmith Jia"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铸剑弟子丙&男;20;6;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铸剑弟子丙"
+    translated: "Disciple Bing of the Sword Smelting School"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;6;1"
+- raw: "临时:铸剑弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铸剑弟子乙"
+    translated: "Disciple Yi of the Sword Forge"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铸剑弟子丁&女;20;6;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "铸剑弟子丁"
+    translated: "Smith Apprentice Ding"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;6;1"
+- raw: "临时:受伤强盗&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "受伤强盗"
+    translated: "Injured bandit"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:老伯&男;50;-1;0;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "老伯"
+    translated: "Old man"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-3"
+- raw: "临时:霸刀弟子甲&男;30;12;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "霸刀弟子甲"
+    translated: "Disciple One of the Dominant Blade Faction"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;12;2"
+- raw: "临时:霸刀弟子乙&女;20;12;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "霸刀弟子乙"
+    translated: "Disciple Yi of the Dominant Saber Sect"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;12;1"
+- raw: "临时:药王弟子&女;20;2;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "药王弟子"
+    translated: "Disciple of Medicine King"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;2;2"
+- raw: "临时:药王弟子&男;30;2;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "药王弟子"
+    translated: "Disciple of Medicine King"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;2;2"
+- raw: "临时:武当弟子&男;30;11;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子"
+    translated: "Wudang Disciple"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;11;2"
+- raw: "临时:峨眉弟子&女;30;14;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "峨眉弟子"
+    translated: "Emei Disciple"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;14;2"
+- raw: "临时:阎罗守卫&男;30;8;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "阎罗守卫"
+    translated: "Yan Luo Guardian"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;8;3"
+- raw: "临时:峨眉守卫&男;40;14;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "峨眉守卫"
+    translated: "Mount Emei Defender"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;14;3"
+- raw: "临时:血衣头目&男;30;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣头目"
+    translated: "Blood‑soaked Leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-9"
+- raw: "临时:血衣头目"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣头目"
+    translated: "Blood‑soaked Leader"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:血衣首领&女;30;-1;5;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣首领"
+    translated: "Blood‑Seared Leader"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;5;-9"
+- raw: "临时:血衣头目&男;40;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣头目"
+    translated: "Blood‑soaked Leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:血衣首领甲&男;40;7;5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣首领甲"
+    translated: "Bloodsoaked Leader Armor"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;7;5"
+- raw: "临时:血衣头目&女;30;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣头目"
+    translated: "Blood‑soaked Leader"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-9"
+- raw: "临时:血衣首领甲&女;30;-1;5;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣首领甲"
+    translated: "Bloodsoaked Leader Armor"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;5;-9"
+- raw: "临时:血衣首领乙&男;40;-1;5;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣首领乙"
+    translated: "Leader of the BloodCloth Clan Yi"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;5;-9"
+- raw: "临时:血衣头目甲&男;40;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣头目甲"
+    translated: "Bloodclothed Leader Armor"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:血衣头目乙&女;30;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣头目乙"
+    translated: "Blood Leader Theythem"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-9"
+- raw: "临时:血衣杀手&男;40;-1;3;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣杀手"
+    translated: "Bloodsoaked Assassin"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;3;-9"
+- raw: "临时:宝光方丈&男;60;-1;0;10;3;false;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "宝光方丈"
+    translated: "Bright Treasure Abbot"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};60;-1;0;10;3;false;1"
+- raw: "临时:宝光方丈"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "宝光方丈"
+    translated: "Bright Treasure Abbot"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:宝光大师&男;30;-1;0;10;2;false;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "宝光大师"
+    translated: "Venerable Bright Light"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;10;2;false;2"
+- raw: "临时:赵京娘&女;17;-1;0;-6;3;false;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "赵京娘"
+    translated: "Zhao Jingniang"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};17;-1;0;-6;3;false;3"
+- raw: "临时:宝光大师"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "宝光大师"
+    translated: "Venerable Bright Light"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:赵京娘"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "赵京娘"
+    translated: "Zhao Jingniang"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:掌柜&男;55;-1;1;-3;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "掌柜"
+    translated: "Shopkeeper"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};55;-1;1;-3;2"
+- raw: "临时:掌柜"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "掌柜"
+    translated: "Shopkeeper"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:说书人&男;70;-1;0;-6;2;false;5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "说书人"
+    translated: "Narrator"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};70;-1;0;-6;2;false;5"
+- raw: "临时:村民&男;40;-1;0;-2;2;false;9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村民"
+    translated: "Villagers"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2;2;false;9"
+- raw: "临时:大当家&男;26;-1;5;-8;5;false;6"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大当家"
+    translated: "Head Boss"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};26;-1;5;-8;5;false;6"
+- raw: "临时:张广儿&男;31;-1;5;-8;4;false;7"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "张广儿"
+    translated: "Zhang Guang'er"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};31;-1;5;-8;4;false;7"
+- raw: "临时:周进&男;28;-1;4;-8;3;false;8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "周进"
+    translated: "Zhou Jin"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};28;-1;4;-8;3;false;8"
+- raw: "临时:张广儿"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "张广儿"
+    translated: "Zhang Guang'er"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:周进"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "周进"
+    translated: "Zhou Jin"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大当家"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大当家"
+    translated: "Head Boss"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:说书人"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "说书人"
+    translated: "Narrator"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:丫鬟&女;20;-1;0;-6;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "丫鬟"
+    translated: "Maid"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-6;1"
+- raw: "临时:赵京娘&女;47;-1;3;-6;4;false;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "赵京娘"
+    translated: "Zhao Jingniang"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};47;-1;3;-6;4;false;4"
+- raw: "临时:血衣杀手&男;40;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣杀手"
+    translated: "Bloodsoaked Assassin"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:血衣杀手"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣杀手"
+    translated: "Bloodsoaked Assassin"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:醉鬼&男;30;-1;1;-6"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "醉鬼"
+    translated: "Drunkard"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-6"
+- raw: "临时:醉鬼"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "醉鬼"
+    translated: "Drunkard"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:朱大户&男;40;-1;1;-3;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "朱大户"
+    translated: "Mr. Zhu"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-3;3"
+- raw: "临时:朱大户"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "朱大户"
+    translated: "Mr. Zhu"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:钱捕头&男;40;-1;1;-5;2;false;10"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "钱捕头"
+    translated: "Detective Qin"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-5;2;false;10"
+- raw: "临时:小捕快&男;18;-1;3;-5;1;false;11"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "小捕快"
+    translated: "Young Constable"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};18;-1;3;-5;1;false;11"
+- raw: "临时:小捕快"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "小捕快"
+    translated: "Young Constable"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:钱捕头"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "钱捕头"
+    translated: "Detective Qin"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:家丁&男;30;-1;0;-4;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁"
+    translated: "Servant"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4;2"
+- raw: "临时:家丁"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "家丁"
+    translated: "Servant"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:强盗头目&男;40;-1;2;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "强盗头目"
+    translated: "Bandit leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-9"
+- raw: "临时:强盗首领&男;50;-1;4;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "强盗首领"
+    translated: "Bandit leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;4;-8"
+- raw: "临时:强盗首领"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "强盗首领"
+    translated: "Bandit leader"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:宫女&女;40;-1;0;-6;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "宫女"
+    translated: "Maidservant"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-6;2"
+- raw: "临时:农夫&男;50;-1;1;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "农夫"
+    translated: "Farmer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;1;-2"
+- raw: "临时:江老三&男;30;-1;3;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江老三"
+    translated: "Old Man Jiang San"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-8"
+- raw: "临时:江老七&男;30;-1;2;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江老七"
+    translated: "Old Man Jiang Qi Seven"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-8"
+- raw: "临时:江十二&男;20;-1;1;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江十二"
+    translated: "River Twelve"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-8"
+- raw: "临时:民女&女;40;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "民女"
+    translated: "Ordinary woman"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:侠客&男;20;-1;2;-7"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客"
+    translated: "Wanderer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;2;-7"
+- raw: "临时:江老三"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江老三"
+    translated: "Old Man Jiang San"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "侠客"
+    translated: "Wanderer"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:江老七"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江老七"
+    translated: "Old Man Jiang Qi Seven"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:江十二"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江十二"
+    translated: "River Twelve"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:江老大&男;50;17;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江老大"
+    translated: "Big Brother Jiang"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;17;3"
+- raw: "临时:江老大"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "江老大"
+    translated: "Big Brother Jiang"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:工匠&男;50;-1;2;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "工匠"
+    translated: "Craftsman"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;2;-4"
+- raw: "临时:学徒&女;20;-1;1;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "学徒"
+    translated: "Apprentice"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-4"
+- raw: "临时:弟子甲&男;30;0;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "弟子甲"
+    translated: "Disciple Jia"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;0;2"
+- raw: "临时:弟子乙&女;20;0;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "弟子乙"
+    translated: "Disciple Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;0;1"
+- raw: "临时:唐门弟子&男;30;1;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子"
+    translated: "Tang Clan disciples"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;1;3"
+- raw: "临时:小二&男;30;-1;0;-4;5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "小二"
+    translated: "Waiter"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4;5"
+- raw: "临时:百姓&女;30;-1;0;-3;5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓"
+    translated: "Common people"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-3;5"
+- raw: "临时:农民&男;30;-1;0;-2;5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "农民"
+    translated: "Farmer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-2;5"
+- raw: "临时:地痞头目&男;30;-1;3;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "地痞头目"
+    translated: "Ringleader of Thugs"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-8"
+- raw: "临时:小乞丐&男;15;-1;0;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "小乞丐"
+    translated: "Little beggar boy"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};15;-1;0;3"
+- raw: "临时:妇人&女;40;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "妇人"
+    translated: "Woman"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2"
+- raw: "临时:农夫&男;50;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "农夫"
+    translated: "Farmer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2"
+- raw: "临时:百姓&男;40;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓"
+    translated: "Common people"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:民女&女;30;-1;0;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "民女"
+    translated: "Ordinary woman"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:妇人"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "妇人"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:莺莺&女;24;0;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "莺莺"
+    translated: "Yingying"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};24;0;4"
+- raw: "临时:燕燕&女;22;-1;4;-6"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "燕燕"
+    translated: "Yan Yan"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};22;-1;4;-6"
+- raw: "临时:莺莺"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "莺莺"
+    translated: "Yingying"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:燕燕"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "燕燕"
+    translated: "Yan Yan"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:书生&男;22;-1;0;-6"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "书生"
+    translated: "Scholar"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};22;-1;0;-6"
+- raw: "临时:杂役&男;35;-1;1;-4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "杂役"
+    translated: "Janitor"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};35;-1;1;-4"
+- raw: "临时:杂役"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "杂役"
+    translated: "Janitor"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:书生"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "书生"
+    translated: "Scholar"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:官差&男;40;-1;3;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "官差"
+    translated: "Officer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;3;-5"
+- raw: "临时:工匠&男;40;-1;0;-4;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "工匠"
+    translated: "Craftsman"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4;2"
+- raw: "临时:金大坚&男;25;-1;2;-4;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "金大坚"
+    translated: "Jin Dajian"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};25;-1;2;-4;4"
+- raw: "临时:血衣头目&女;40;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "血衣头目"
+    translated: "Blood‑soaked Leader"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:金大坚"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "金大坚"
+    translated: "Jin Dajian"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:分舵长老&男;50;4;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "分舵长老"
+    translated: "Branch Elder"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;4;4"
+- raw: "临时:叛党头目&男;50;4;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "叛党头目"
+    translated: "Traitor leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;4;4"
+- raw: "临时:叛党头目"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "叛党头目"
+    translated: "Traitor leader"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:叛党头目&女;30;4;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "叛党头目"
+    translated: "Traitor leader"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;4;4"
+- raw: "临时:叛党头目&男;40;4;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "叛党头目"
+    translated: "Traitor leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;4;4"
+- raw: "临时:大内侍卫&男;30;-1;4;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大内侍卫"
+    translated: "Palace Guard"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-5"
+- raw: "临时:大内统领&男;40;-1;5;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大内统领"
+    translated: "Palace Commander‑in‑Chief"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;5;-5"
+- raw: "临时:山贼头目&男;40;-1;2;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "山贼头目"
+    translated: "Bandit leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-9"
+- raw: "临时:山贼头目"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "山贼头目"
+    translated: "Bandit leader"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:看守&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "看守"
+    translated: "Guard"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:地痞&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "地痞"
+    translated: "Thug"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:地痞"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "地痞"
+    translated: "Thug"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:百姓&随机;;-1;0;-2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "百姓"
+    translated: "Common people"
+  - subIndex: 2
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}:{1}&{2};;-1;0;-2"
+- raw: "临时:土匪&男;;-1;1;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "土匪"
+    translated: "Bandit"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};;-1;1;-8"
+- raw: "临时:强盗头目&男;40;-1;0;-8"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "强盗头目"
+    translated: "Bandit leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-8"
+- raw: "临时:管家&男;40;-1;0;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "管家"
+    translated: "Butler"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-3"
+- raw: "临时:牛富户&男;50;-1;1;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "牛富户"
+    translated: "Wealthy cattle owner"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;1;-3"
+- raw: "临时:牛富户"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "牛富户"
+    translated: "Wealthy cattle owner"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:赌徒&男;40;-1;2;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "赌徒"
+    translated: "Gamble addict"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-3"
+- raw: "临时:赌徒"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "赌徒"
+    translated: "Gamble addict"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:镖头&男;40;-1;1;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "镖头"
+    translated: "Messenger"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-5"
+- raw: "临时:邪道头目&女;40;-1;3;-10"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "邪道头目"
+    translated: "Chief Heretic Leader"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;3;-10"
+- raw: "临时:赌鬼&男;30;-1;3;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "赌鬼"
+    translated: "Gambling addict"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-3"
+- raw: "临时:邪道头目"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "邪道头目"
+    translated: "Chief Heretic Leader"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:女子&女;20;-1;2;-6"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "女子"
+    translated: "Girl"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;2;-6"
+- raw: "临时:邪道头目&男;30;-1;3;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "邪道头目"
+    translated: "Chief Heretic Leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-9"
+- raw: "临时:女子"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "女子"
+    translated: "Girl"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:丐帮弟子&男;30;3;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "丐帮弟子"
+    translated: "Disciple of the Beggar Sect"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;3;2"
+- raw: "临时:大隐弟子&女;20;9;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大隐弟子"
+    translated: "Hidden Grove Disciple"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;9;2"
+- raw: "临时:丐帮弟子"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "丐帮弟子"
+    translated: "Disciple of the Beggar Sect"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大隐弟子"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "大隐弟子"
+    translated: "Hidden Grove Disciple"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:邪道头目&女;40;-1;4;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "邪道头目"
+    translated: "Chief Heretic Leader"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:邪道头目&男;50;-1;5;-9"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "邪道头目"
+    translated: "Chief Heretic Leader"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;5;-9"
+- raw: "临时:衙役&男;20;-1;1;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "衙役"
+    translated: "Officer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-5"
+- raw: "临时:唐门弟子甲&男;40;1;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子甲"
+    translated: "Tang Clan Disciple A"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;1;3"
+- raw: "临时:唐门弟子乙&女;30;1;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子乙"
+    translated: "Tang Clan Disciple Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;1;2"
+- raw: "临时:唐门弟子丙&男;20;1;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子丙"
+    translated: "Tang Clan Disciple Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;1;1"
+- raw: "临时:唐门首领甲&男;50;1;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门首领甲"
+    translated: "Head of the Tang Clan"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;1;4"
+- raw: "临时:村长&男;50;-1;2;-3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "村长"
+    translated: "Village chief"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;2;-3"
+- raw: "临时:唐门弟子乙&女;20;1;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子乙"
+    translated: "Tang Clan Disciple Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;1;1"
+- raw: "临时:唐门弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "唐门弟子乙"
+    translated: "Tang Clan Disciple Yi"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:武当弟子甲&男;40;11;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子甲"
+    translated: "Wudang Disciple Jia"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;11;3"
+- raw: "临时:武当弟子乙&女;30;11;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子乙"
+    translated: "Wudang Disciple Yi"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;11;2"
+- raw: "临时:武当弟子丙&女;20;11;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子丙"
+    translated: "Wudang Disciple Bing"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;11;1"
+- raw: "临时:武当弟子丁&男;20;11;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "武当弟子丁"
+    translated: "Wudang Disciple Ding"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;11;0"
+- raw: "临时:官差&男;40;-1;5;-5"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "官差"
+    translated: "Officer"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;5;-5"
+- raw: "临时:飞龙弟子甲&男;30;4;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "飞龙弟子甲"
+    translated: "Disciple One of the Flying Dragon Disciples"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;4;3"
+- raw: "临时:飞龙弟子乙&女;30;4;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "飞龙弟子乙"
+    translated: "Disciple Yi of the Flying Dragon Sect"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;4;2"
+- raw: "临时:飞龙弟子丙&男;20;4;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "飞龙弟子丙"
+    translated: "Disciple Bing of the Flying Dragon School"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;4;1"
+- raw: "临时:飞龙弟子丁&女;20;4;0"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "飞龙弟子丁"
+    translated: "Dragon Disciple Ding"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;4;0"
+- raw: "临时:少林弟子甲&男;30;10;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "少林弟子甲"
+    translated: "Shaolin Disciple They studied diligently under the wise master's guidance."
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;10;3"
+- raw: "临时:少林弟子乙&男;30;10;2"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "少林弟子乙"
+    translated: "Shaolin Disciple Yi"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;10;2"
+- raw: "临时:少林弟子丙&男;20;10;1"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "少林弟子丙"
+    translated: "Shaolin Disciple Bing"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;10;1"
+- raw: "临时:少林弟子乙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "少林弟子乙"
+    translated: "Shaolin Disciple Yi"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:少林弟子丙"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "少林弟子丙"
+    translated: "Shaolin Disciple Bing"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山弟子&男;20;5;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "茅山弟子"
+    translated: "Moss Mountain Disciple"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};20;5;3"
+- raw: "临时:五毒弟子&女;20;7;3"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "五毒弟子"
+    translated: "Poisson Disciple"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};20;7;3"
+- raw: "临时:五毒弟子"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "五毒弟子"
+    translated: "Poisson Disciple"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山弟子"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "茅山弟子"
+    translated: "Moss Mountain Disciple"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山高手&女;30;5;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "茅山高手"
+    translated: "Moss Mountain Expert"
+  - subIndex: 2
+    text: "女"
+    translated: "Woman"
+  templates:
+  - template: "{0}:{1}&{2};30;5;4"
+- raw: "临时:五毒高手&男;30;7;4"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "五毒高手"
+    translated: "Master of the Five Venom Techniques"
+  - subIndex: 2
+    text: "男"
+    translated: "Man"
+  templates:
+  - template: "{0}:{1}&{2};30;7;4"
+- raw: "临时:五毒高手"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "五毒高手"
+    translated: "Master of the Five Venom Techniques"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山高手"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+  - subIndex: 1
+    text: "茅山高手"
+    translated: "Moss Mountain Expert"
+  templates:
+  - template: "{0}:{1}"
+- raw: "区域上限"
+  splits:
+  - text: "区域上限"
+    translated: "Area limit"
+- raw: "弟子上限"
+  splits:
+  - text: "弟子上限"
+    translated: "Disciple Cap Limit"
+- raw: "仓储容量"
+  splits:
+  - text: "仓储容量"
+    translated: "Storage capacity"
+- raw: "藏经容量"
+  splits:
+  - text: "藏经容量"
+    translated: "Taoist Canon Capacity"
+- raw: "学识经验"
+  splits:
+  - text: "学识经验"
+    translated: "Scholarly experience"
+- raw: "口才经验"
+  splits:
+  - text: "口才经验"
+    translated: "Communication skills experience"
+- raw: "锻造经验"
+  splits:
+  - text: "锻造经验"
+    translated: "Smithing experience"
+- raw: "采伐经验"
+  splits:
+  - text: "采伐经验"
+    translated: "Logging experience"
+- raw: "木匠"
+  splits:
+  - text: "木匠"
+    translated: "Carpenter"
+- raw: "石坊"
+  splits:
+  - text: "石坊"
+    translated: "Stone archway"
+- raw: "炼药经验"
+  splits:
+  - text: "炼药经验"
+    translated: "Alchemical experience"
+- raw: "木植经验"
+  splits:
+  - text: "木植经验"
+    translated: "Tree planting experience"
+- raw: "药房"
+  splits:
+  - text: "药房"
+    translated: "Pharmacy"
+- raw: "本地疗伤效率"
+  splits:
+  - text: "本地疗伤效率"
+    translated: "Local healing efficiency"
+- raw: "医术经验"
+  splits:
+  - text: "医术经验"
+    translated: "Medical experience"
+- raw: "毒术经验"
+  splits:
+  - text: "毒术经验"
+    translated: "Poison technique experience"
+- raw: "本地恢复效率"
+  splits:
+  - text: "本地恢复效率"
+    translated: "Local recovery efficiency"
+- raw: "烹饪经验"
+  splits:
+  - text: "烹饪经验"
+    translated: "Cooking experience"
+- raw: "摊贩"
+  splits:
+  - text: "摊贩"
+    translated: "Vendor"
+- raw: "磨坊"
+  splits:
+  - text: "磨坊"
+    translated: "Mill"
+- raw: "资源点产量"
+  splits:
+  - text: "资源点产量"
+    translated: "Resource point production"
+- raw: "本地资源点产量"
+  splits:
+  - text: "本地资源点产量"
+    translated: "Local resource point production"
+- raw: "珍宝铺"
+  splits:
+  - text: "珍宝铺"
+    translated: "Treasure Shop"
+- raw: "兵器铺"
+  splits:
+  - text: "兵器铺"
+    translated: "Weapon Shop"
+- raw: "材料铺"
+  splits:
+  - text: "材料铺"
+    translated: "Materials distribution begins now"
+- raw: "集市"
+  splits:
+  - text: "集市"
+    translated: "Marketplace"
+- raw: "本地建造速度"
+  splits:
+  - text: "本地建造速度"
+    translated: "Local construction speed"
+- raw: "客栈"
+  splits:
+  - text: "客栈"
+    translated: "Inn"
+- raw: "酒馆"
+  splits:
+  - text: "酒馆"
+    translated: "Tavern"
+- raw: "医馆"
+  splits:
+  - text: "医馆"
+    translated: "Medical Pavilion"
+- raw: "旅行速度"
+  splits:
+  - text: "旅行速度"
+    translated: "Travel speed"
+- raw: "工棚"
+  splits:
+  - text: "工棚"
+    translated: "Barracks"
+- raw: "祠堂"
+  splits:
+  - text: "祠堂"
+    translated: "Ancestral hall"
+- raw: "全域人口"
+  splits:
+  - text: "全域人口"
+    translated: "Global population"
+- raw: "全域治安"
+  splits:
+  - text: "全域治安"
+    translated: "Global law and order"
+- raw: "全域民心"
+  splits:
+  - text: "全域民心"
+    translated: "Global public sentiment"
+- raw: "全域防御"
+  splits:
+  - text: "全域防御"
+    translated: "Global Defense"
+- raw: "全员口才"
+  splits:
+  - text: "全员口才"
+    translated: "All‑Hands Public Speaking"
+- raw: "全员轻功"
+  splits:
+  - text: "全员轻功"
+    translated: "Everyone uses Qinggong"
+- raw: "射术经验"
+  splits:
+  - text: "射术经验"
+    translated: "Archery experience"
+- raw: "全员射术"
+  splits:
+  - text: "全员射术"
+    translated: "All‑arrow shooting skill"
+- raw: "全员医术"
+  splits:
+  - text: "全员医术"
+    translated: "All‑Clad Medical Skill"
+- raw: "拳掌经验"
+  splits:
+  - text: "拳掌经验"
+    translated: "Punching and palm striking experience"
+- raw: "全员拳掌"
+  splits:
+  - text: "全员拳掌"
+    translated: "All hands and fists engaged"
+- raw: "全员长兵"
+  splits:
+  - text: "全员长兵"
+    translated: "Full‑troop soldier"
+- raw: "长兵经验"
+  splits:
+  - text: "长兵经验"
+    translated: "Long‑sword experience"
+- raw: "全员经脉"
+  splits:
+  - text: "全员经脉"
+    translated: "All Meridians Activated"
+- raw: "全员奇门"
+  splits:
+  - text: "全员奇门"
+    translated: "All‑In Mystic Array"
+- raw: "全员炼药"
+  splits:
+  - text: "全员炼药"
+    translated: "All‑Personnel Alchemy Session"
+- raw: "全员剑法"
+  splits:
+  - text: "全员剑法"
+    translated: "All Sword Techniques"
+- raw: "全员锻造"
+  splits:
+  - text: "全员锻造"
+    translated: "All‑Item Forge"
+- raw: "全员毒术"
+  splits:
+  - text: "全员毒术"
+    translated: "All Poison Techniques"
+- raw: "全员力道"
+  splits:
+  - text: "全员力道"
+    translated: "Full Strength"
+- raw: "全员刀法"
+  splits:
+  - text: "全员刀法"
+    translated: "All Blade Techniques"
+- raw: "全员学识"
+  splits:
+  - text: "全员学识"
+    translated: "All‑encompassing knowledge"
+- raw: "全员体质"
+  splits:
+  - text: "全员体质"
+    translated: "All members' physical condition"
+- raw: "全员智力"
+  splits:
+  - text: "全员智力"
+    translated: "All participants' intellect"
+- raw: "全员意志"
+  splits:
+  - text: "全员意志"
+    translated: "All willpower"
+- raw: "刀法经验"
+  splits:
+  - text: "刀法经验"
+    translated: "Blade Technique Experience"
+- raw: "全员灵巧"
+  splits:
+  - text: "全员灵巧"
+    translated: "All agile"
+- raw: "剑法经验"
+  splits:
+  - text: "剑法经验"
+    translated: "Swordsmanship Experience"
+- raw: "全员内功"
+  splits:
+  - text: "全员内功"
+    translated: "All members neigong"
+- raw: "轻功经验"
+  splits:
+  - text: "轻功经验"
+    translated: "Qinggong Experience"
+- raw: "全员绝技"
+  splits:
+  - text: "全员绝技"
+    translated: "All super skills"
+- raw: "奇门经验"
+  splits:
+  - text: "奇门经验"
+    translated: "Dungeon XP"
+- raw: "绝技经验"
+  splits:
+  - text: "绝技经验"
+    translated: "Master Skill Experience"
+- raw: "内功经验"
+  splits:
+  - text: "内功经验"
+    translated: "Neigong experience"

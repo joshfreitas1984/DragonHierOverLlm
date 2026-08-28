@@ -991,8 +991,6 @@
 - raw: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
   splits:
   - text: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
 - raw: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
   splits:
   - text: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
@@ -2853,7 +2851,7 @@
 - raw: "传闻大隐掌门道无名已率领联军兵临<b>#PosText#</b>，不知双方这场惊天大战最终鹿死谁手。"
   splits:
   - text: "传闻大隐掌门道无名已率领联军兵临"
-    translated: "Rumor has it that Sect Master Dao Wuying has led the allied forces to the gates"
+    translated: "Whispers suggest that Sect Master Dao Wuming has led the allied forces to the gates of"
   - subIndex: 1
     text: "，不知双方这场惊天大战最终鹿死谁手。"
     translated: ",I wonder whose hand will ultimately claim the victory in this shocking great battle."
@@ -3271,9 +3269,7 @@
 - raw: "传闻长乐帮主乐无疾亲率大军兵临<b>#PosText#</b>城下，准备与叛徒卢玉麟决一死战。"
   splits:
   - text: "传闻长乐帮主乐无疾亲率大军兵临"
-    translated: "Rumor has it that Sect Master Yue Wuji personally led a large army to approach"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Changle Gang,长乐帮,"
+    translated: "Rumors claim that Sect Master Yue Wuji personally led a large army to approach"
   - subIndex: 1
     text: "城下，准备与叛徒卢玉麟决一死战。"
     translated: "Below the city walls, prepare to fight to the death with traitor Lu Yulin."
@@ -4957,8 +4953,6 @@
     translated: "The menu on the right can be used for other battle operations."
   - subIndex: 1
     text: "如移动，休息，使用物品等。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - template: "{0}\\n{1}"
 - raw: "右护法"

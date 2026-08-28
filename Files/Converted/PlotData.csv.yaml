@@ -203,7 +203,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -308,7 +308,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -2216,7 +2216,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -4637,7 +4637,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -4920,7 +4920,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -4994,7 +4994,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "今日一战后，望你们几个知耻后勇，加紧练功。"
     translated: "After today's battle, I hope you will redouble your efforts and train harder."
@@ -5156,7 +5156,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -5761,7 +5761,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -5846,7 +5846,7 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "嗯，如此一来，巴陵村的治安便上升了。"
     translated: "Thus, the law and order in Baling Village has improved."
@@ -5991,7 +5991,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -6069,7 +6069,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -6648,7 +6648,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -7466,7 +7466,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "怎么，还没玩够呐？"
     translated: "How come you're not done playing yet?"
@@ -7789,7 +7789,7 @@
     translated: "Yu Caiwei"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -8563,7 +8563,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -8696,7 +8696,7 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "徒儿知错了！"
     translated: "Pupil acknowledges the mistake!"
@@ -8871,7 +8871,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -8955,8 +8955,6 @@
     translated: "Right"
   - split: 10
     text: "#反馈#"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
 - raw: ",,,右,,,,,,,另外<b>任务达标后，还要再回正厅找为师复命，</b>\\n才算是真正完成，记住了吗？"
   splits:
   - split: 3
@@ -9043,13 +9041,13 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "这是#PlayerName#你第一次完成门派任务吧。"
     translated: "This is your first time completing a sect quest, #PlayerName#."
@@ -11392,11 +11390,11 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 8
     subIndex: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "哼，此恶贼终于丧命，所带赃物自是尽归我所有。"
     translated: "Hmph, this wicked villain finally met his end, so all the stolen goods naturally fall to me."
@@ -11407,7 +11405,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "无"
     translated: "None"
@@ -11428,7 +11426,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "黄豺"
     translated: "Yellow weasel"
@@ -11678,7 +11676,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -11714,7 +11712,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "严达开"
     translated: "Yan Dakaige"
@@ -11758,7 +11756,7 @@
     translated: "Jiang Wan"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -12078,7 +12076,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -13337,7 +13335,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "无"
     translated: "None"
@@ -13425,7 +13423,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -13557,7 +13555,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -13586,7 +13584,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -13681,7 +13679,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -13827,7 +13825,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -14333,7 +14331,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -14861,7 +14859,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -14990,7 +14988,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "不过眼下只要他无意帮助铁掌帮，也无需太过担心。"
     translated: "But for now, as long as he has no intention of helping the Iron Palm Gang, there is no need to worry too much."
@@ -22566,7 +22564,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -22810,7 +22808,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -23407,7 +23405,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -25709,7 +25707,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -25961,7 +25959,7 @@
     translated: "Yang Sichi"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -26139,7 +26137,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -26199,7 +26197,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -26336,7 +26334,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -26902,7 +26900,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -28260,7 +28258,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -28298,7 +28296,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -28307,7 +28305,7 @@
     translated: "Rain of Swords"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 8
     subIndex: 1
     text: "严达开"
@@ -28353,7 +28351,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "老三！他妈的，和你们拼了！"
     translated: "Third Brother! Damn it, let's fight together!"
@@ -28508,7 +28506,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -28686,7 +28684,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -28753,7 +28751,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -29533,7 +29531,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -31954,7 +31952,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -32022,7 +32020,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -33668,8 +33666,6 @@
     translated: "Left"
   - split: 10
     text: "师姐这"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 10
     template: "{0}……"
@@ -49965,7 +49961,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "陆仁谦"
     translated: "Lu Renqian"
@@ -50270,7 +50266,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -50379,7 +50375,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -50568,7 +50564,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -50642,7 +50638,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -50869,7 +50865,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -50937,7 +50933,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -51083,7 +51079,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -51215,7 +51211,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "哎呀，师傅，这破烂掉地上了，再送给你老人家就不合适了。"
     translated: "Oh, Master, this rag has fallen to the ground. It wouldn't be appropriate to give it to you again."
@@ -51232,7 +51228,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -51289,7 +51285,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -52735,7 +52731,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -53818,7 +53814,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -54006,7 +54002,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "公孙防"
     translated: "Gong Sun Fang"
@@ -54143,7 +54139,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -54242,7 +54238,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -54576,7 +54572,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -54925,7 +54921,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -55011,7 +55007,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -59299,7 +59295,7 @@
     translated: "Huangfu Qingshan"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -62374,7 +62370,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -62411,7 +62407,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "魏胥华"
     translated: "Wei Xuhua"
@@ -62610,7 +62606,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -62704,7 +62700,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -63052,7 +63048,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -63182,7 +63178,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -64358,7 +64354,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -64709,7 +64705,7 @@
     translated: "Shen Tui"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -85580,7 +85576,7 @@
     translated: "None"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -86245,7 +86241,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -86932,7 +86928,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -87760,7 +87756,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -87910,7 +87906,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "熊百胜"
     translated: "Xiong Baisheng"
@@ -88134,7 +88130,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -90090,7 +90086,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -90279,7 +90275,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -90468,7 +90464,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -101989,7 +101985,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "陆仁谦"
     translated: "Lu Renqian"
@@ -102103,7 +102099,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -102324,7 +102320,7 @@
     translated: "Lu Renqian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -102453,7 +102449,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -103006,7 +103002,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -103092,7 +103088,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -103145,7 +103141,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -103981,7 +103977,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -108360,7 +108356,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -108518,7 +108514,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "诸葛伶"
     translated: "Zhuge Ling"
@@ -109178,7 +109174,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "姜婉"
     translated: "Jiang Wan"
@@ -109657,7 +109653,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -109788,7 +109784,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "诸葛伶"
     translated: "Zhuge Ling"
@@ -112655,9 +112651,7 @@
     translated: "Left"
   - split: 10
     text: "哈哈哈，妹儿放心，大哥我自然早有防备。"
-    translated: "Haha, little sister, rest assured, I naturally had precautions."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Brother,大哥,"
+    translated: "Haha, little sister, rest assured, I naturally had precautions long ago."
   - split: 10
     subIndex: 1
     text: "说时迟那时快，只轻轻一闪，便避开那疾如闪电的乱剑！"
@@ -114423,7 +114417,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -114548,7 +114542,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -114766,7 +114760,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -115731,7 +115725,7 @@
     translated: "Right"
   - split: 10
     text: "放心放心，道无名这老小子以名士自居，不会出尔反尔的"
-    translated: "Relax, relax. Old Master Dao Wuying considers himself a scholar and won't go back on his word."
+    translated: "Relax, relax. Old Dao Wuming considers himself a man of reputation and won't go back on his word."
   - split: 10
     subIndex: 1
     text: "他要是敢不认账，我非得把他胡子揪下来几根不可！"
@@ -115743,7 +115737,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -116093,7 +116087,7 @@
   - split: 10
     subIndex: 1
     text: "这归墟秘典为何不能外传，绝不是因为我道无名自私自利，敝帚自珍！"
-    translated: "Why can't this Secret Canon of the Desolate Vastness be transmitted outward? It is not because I, Dao Wuning, am selfish and cherishes my own broom as if it were a treasure!"
+    translated: "Why can't the Secret Scroll of the Desolate Vastness be passed on externally? It is not because Dao Wuming is selfish and cherishes his own broom!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -116481,7 +116475,7 @@
   - split: 10
     subIndex: 1
     text: "这位小兄弟有古君子之风，我道无名佩服，佩服！"
-    translated: "This little brother has the grace of an ancient gentleman, and I, Dao Wuniming, admire you greatly!"
+    translated: "This little brother possesses the demeanor of an ancient gentleman, and I, Dao Wuming, admire you greatly!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -116789,7 +116783,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -116989,7 +116983,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -120612,7 +120606,7 @@
   - split: 10
     subIndex: 1
     text: "仙霞狗贼姜映泉，杀我全家，掳我妻儿，夺我钱财，禽兽不如！"
-    translated: "Xian Xia dog thief Jiang Yinquan, killed my entire family, kidnapped my wife and children, stole my wealth‑ you are no better than a beast!"
+    translated: "Xian Xia dog thief Jiang Yingquan, killed my entire family, kidnapped my wife and children, stole my wealth‑ you are no better than a beast!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -122627,7 +122621,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -122779,7 +122773,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -122926,7 +122920,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -123303,7 +123297,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -124704,7 +124698,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -124891,7 +124885,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "这段时间，望你们勤加练功，切莫懈怠。"
     translated: "During this time, I hope you practice diligently and don't slack off."
@@ -126192,9 +126186,7 @@
   - split: 10
     subIndex: 1
     text: "眼下得争分夺秒，恐怕没时间疗伤了。"
-    translated: "We must act quickly, fear there is no time for healing."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second,秒,"
+    translated: "We must act quickly, for there's probably no time for healing."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -126244,7 +126236,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -126365,7 +126357,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -126390,7 +126382,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -126419,7 +126411,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -126621,7 +126613,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -126688,7 +126680,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -126815,7 +126807,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -126860,7 +126852,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -126869,7 +126861,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "姜掌门，我这劈金碎玉掌，力道可有进步？"
     translated: "Sect Master Jiang, has my Split Gold Crush Jade Palm made any progress in terms of strength?"
@@ -127079,13 +127071,13 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "跑到此处应该就安全了吧，师傅，你的伤怎么样了？"
     translated: "Running here should be safe, Master. How are your injuries?"
@@ -127593,7 +127585,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -127917,7 +127909,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -128021,7 +128013,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -128180,7 +128172,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -128375,7 +128367,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -128500,7 +128492,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -128776,7 +128768,7 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "如此深夜喝上一碗热汤，确实不错。"
     translated: "Drinking a hot bowl of soup this late at night is indeed pleasant."
@@ -128793,7 +128785,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -128876,7 +128868,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -129333,7 +129325,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -129512,7 +129504,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -129582,17 +129574,17 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 8
     subIndex: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "师傅，弟子收到飞鸽传书，咱们终于要和铁掌帮决一胜负了吗？"
     translated: "Master, disciple has received the pigeon message. Are we finally going to settle our score with the Iron Palm Gang?"
@@ -129680,7 +129672,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -133246,7 +133238,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -133759,7 +133751,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -133768,7 +133760,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "姜映泉，吃我一掌！"
     translated: "Qing Yingshun, take this palm technique!"
@@ -133796,7 +133788,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "哼！那我也如数奉还！"
     translated: "Hmph! I'll return it in full measure too!"
@@ -133905,7 +133897,7 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "不就是梵文贝叶经么，我也会！"
     translated: "It's just Sanskrit palm leaf scriptures, I can do that too!"
@@ -133922,13 +133914,13 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "#PlayerName#竟能凭一己之力胜过夏天雄？"
     translated: "Could #PlayerName# really defeat Summer Yong on their own?"
@@ -134038,7 +134030,7 @@
     translated: "Rain of Swords"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 8
     subIndex: 1
     text: "夏天雄"
@@ -134061,7 +134053,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134083,7 +134075,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134105,7 +134097,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134127,7 +134119,7 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 8
     subIndex: 1
     text: "负50"
@@ -134148,11 +134140,11 @@
     translated: "Wind howls"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 8
     subIndex: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "姜映泉忍住剧痛催动真气，周身经脉渐渐鼓起，"
     translated: "Qiang Yingquan endured the intense pain and stimulated True Qi, causing their body's meridians to gradually swell."
@@ -134204,7 +134196,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134307,7 +134299,7 @@
     translated: "Gu Younian"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134340,7 +134332,7 @@
     translated: "Yu Caiwei"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134381,7 +134373,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -134416,7 +134408,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -134425,7 +134417,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "哈哈哈哈，我梵文贝叶经功力已然大成。"
     translated: "Haha, my Pali palm leaves technique has reached its peak."
@@ -134450,7 +134442,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "夏天雄"
     translated: "Summer Valor"
@@ -134509,7 +134501,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134551,7 +134543,7 @@
     translated: "Blast rocks apart"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "二人数十年的修为汇集于一点，瞬间碰撞，"
     translated: "Two decades of cultivation converged into one point, colliding instantly."
@@ -134660,7 +134652,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -134745,7 +134737,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -135100,7 +135092,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -135364,7 +135356,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -135389,7 +135381,7 @@
     translated: "Right"
   - split: 10
     text: "哈哈哈啊哈哈哈！姜映泉，若是当年我们能精诚合作，两派合而为一，"
-    translated: "Haha, hahaha! Jiang Yinquan, if back then we could have cooperated sincerely and merged the two factions into one,"
+    translated: "Haha, hahaha! Jiang Yingquan, if back then we could have cooperated sincerely and merged the two factions into one,"
   - split: 10
     subIndex: 1
     text: "或许早已称霸武林，我铁掌帮弟子，也不用再为下个月的粮饷发愁了！"
@@ -135434,7 +135426,7 @@
     translated: "None"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 8
     subIndex: 1
     text: "夏天雄"
@@ -137297,7 +137289,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -137907,7 +137899,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -138569,7 +138561,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -138872,7 +138864,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "为师毕竟已是不惑之年，早晚有一日会先诸位而去。"
     translated: "As my master is already in his forties, there will come a day when he will precede us all."
@@ -138967,7 +138959,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "雨人屠"
     translated: "Rainfall Executioner"
@@ -139048,7 +139040,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "雨人屠"
     translated: "Rainfall Executioner"
@@ -139057,7 +139049,7 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "唔！狗贼，休得逞凶！"
     translated: "Oh no! You scoundrel, stop your rampage!"
@@ -139139,7 +139131,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -139168,7 +139160,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -139204,7 +139196,7 @@
     translated: "Wei Xuhua"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -139373,7 +139365,7 @@
     translated: "Song Lian Ting"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -139441,7 +139433,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 2
     text: "宋廉庭"
     translated: "Song Lian Ting"
@@ -139485,7 +139477,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -139689,7 +139681,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -139739,7 +139731,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "不错，滥杀无辜本就于事无补，"
     translated: "Not good. Waging war and killing innocents doesn't help the situation."
@@ -142545,9 +142537,7 @@
   - split: 10
     subIndex: 1
     text: "我和阮芷得努力医治百姓，实在没有精力去对付黑道五鬼了。"
-    translated: "We need to focus on treating the people; we really don't have the energy to deal with the Black Society's Five Devils."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Ruan Zhi,阮芷,"
+    translated: "We need to work hard to treat the common people; we really don't have the energy to deal with the Black Society's Five Ghosts."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -150443,7 +150433,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -150469,7 +150459,7 @@
     translated: "Right"
   - split: 10
     text: "唔啊！大隐阁，道无名？！"
-    translated: "Ah! Great Hidden Pavilion, Wayless?!"
+    translated: "Ah! Great Hidden Pavilion, Dao Wuming?!"
   - split: 10
     subIndex: 1
     text: "你们给我等着！总有一天，我会夺回全部龙胤归藏功！"
@@ -150582,7 +150572,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -150612,7 +150602,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 2
     text: "阎罗王"
     translated: "King YanΝuo"
@@ -151106,7 +151096,7 @@
   - split: 10
     subIndex: 2
     text: "只得纷纷同意道无名的建议。"
-    translated: "All could only agree to Nameless's suggestion"
+    translated: "Could only reluctantly agree with Dao Wuming's suggestion."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -151974,7 +151964,7 @@
     translated: "Right"
   - split: 10
     text: "哎，一听说你师傅姜映泉老人家仙逝的消息，"
-    translated: "Ah, upon hearing the news of Master Jiang Yinquan's passing."
+    translated: "Ah, upon hearing the news of Master Jiang Yingquan's passing."
   - split: 10
     subIndex: 1
     text: "我当时就如同五雷轰顶，天塌地陷，大哭了三天三夜方才平息呐！"
@@ -153206,9 +153196,7 @@
   - split: 10
     subIndex: 1
     text: "刚才的一段插曲纷扰，也被这清风拂去。"
-    translated: "The brief commotion was swept away by the gentle breeze."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qingfeng,清风,"
+    translated: "The disturbance of that brief interlude was also swept away by the gentle breeze."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -161750,7 +161738,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -161779,7 +161767,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -161929,7 +161917,7 @@
     translated: "Player"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -162002,11 +161990,11 @@
     translated: "Left"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 8
     subIndex: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 10
     text: "吸人内力？世上竟有如此神奇的功法，今天真是大开眼界了。"
     translated: "Absorbing someone's Inner Power? There truly is a technique this miraculous. Today, my horizons have been greatly expanded."
@@ -162035,7 +162023,7 @@
     translated: "Player"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -162095,7 +162083,7 @@
     translated: "Bai Yuntian"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -170301,7 +170289,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -170321,7 +170309,7 @@
     translated: "Right"
   - split: 10
     text: "道无名？好久不见！"
-    translated: "Nameless Way? Long time no see!"
+    translated: "Dao Wuming? Long time no see!"
   - split: 10
     subIndex: 1
     text: "你能亲自前来，看来我真是面子不小。"
@@ -170378,7 +170366,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -170464,7 +170452,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 2
     text: "阎罗王"
     translated: "King YanΝuo"
@@ -170854,7 +170842,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -171056,7 +171044,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -171149,7 +171137,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -171246,7 +171234,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -171477,7 +171465,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -171507,7 +171495,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -186005,7 +185993,7 @@
     translated: "Sima Deyuan"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -186479,7 +186467,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -186773,7 +186761,7 @@
     translated: "Think Zhong Lan"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -187035,7 +187023,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -187170,7 +187158,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -187254,7 +187242,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -188256,7 +188244,7 @@
     translated: "Left"
   - split: 10
     text: "正好，这大隐阁主道无名，以及峨眉掌门司马德源，"
-    translated: "Just right, this Great Hidden Pavilion is led by Dao Wuning, and the Sword Sect's Master Sima Deyuan."
+    translated: "Exactly, this Great Hidden Pavilion Leader Dao Wuming and Sima Deyuan, the Abbot of Emei Mountain,"
   - split: 10
     subIndex: 1
     text: "皆参与过围攻武统领，抢夺归藏功之事。"
@@ -188294,7 +188282,7 @@
   - split: 10
     subIndex: 1
     text: "这道无名和大隐阁，也正是阻碍我们大计的罪魁祸首！"
-    translated: "This unnamed one and the Great Hidden Pavilion are precisely the masterminds behind our setbacks!"
+    translated: "This Dao Wuming and Great Hidden Pavilion are precisely the masterminds behind the obstacles we face!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -188535,7 +188523,7 @@
     translated: "Player"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -188843,7 +188831,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 2
     text: "阎罗王"
     translated: "King YanΝuo"
@@ -189089,7 +189077,7 @@
   - split: 10
     subIndex: 1
     text: "不过道无名跃起的力道已老，终究没能踏上城楼，"
-    translated: "But though the unnamed Daoist leaped with considerable strength, he ultimately failed to reach the city walls."
+    translated: "However, Dao Wuming's strength had weakened, and in the end, he couldn't reach the city tower."
   - split: 10
     subIndex: 2
     text: "最终只得缓缓落在大门下方。"
@@ -189478,7 +189466,7 @@
     translated: "Sima Deyuan"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -189571,7 +189559,7 @@
     translated: "Horn"
   - split: 10
     text: "听闻道无名下令，黑压压一片中原联军开始在狭窄的山道上且战且退。"
-    translated: "Hearing Dao Wuningming's order, the Central Plains Allied Army began to retreat while fighting on the narrow mountain path."
+    translated: "Upon hearing Dao Wuming's order, the dense army of Central Plains began to retreat while fighting on the narrow mountain path."
   - split: 10
     subIndex: 1
     text: "缓缓退至鬼门关射程之外后，众人寻了道旁一平坦之处，扎营休息，清点损失。"
@@ -189675,7 +189663,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -189829,7 +189817,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -189888,7 +189876,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -189947,7 +189935,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -189991,7 +189979,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -190463,7 +190451,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -190657,7 +190645,7 @@
     translated: "Dragon roars"
   - split: 10
     text: "曲罢，道无名也不言语，缓缓起身，"
-    translated: "After finishing, Dou Wuming fell silent and slowly stood up."
+    translated: "After finishing, Dao Wuming did not say anything, rising slowly."
   - split: 10
     subIndex: 1
     text: "周身袖袍鼓起，忽然爆发出一阵强大吸力。"
@@ -191632,7 +191620,7 @@
     translated: "Left"
   - split: 10
     text: "道无名阁主为了替我们争取时间，自愿一个人留下来拖住阎罗殿大军。"
-    translated: "The nameless Dao Master stayed behind voluntarily to buy us time against Yama Hall's army."
+    translated: "Dao Wuming, the Pavilion Master, volunteered to stay behind alone to hold off Yama Hall's army to buy us time."
   - split: 10
     subIndex: 1
     text: "眼下......只怕是凶多吉少了......"
@@ -191756,7 +191744,7 @@
     translated: "Wind howls"
   - split: 10
     text: "众人赶忙跑出门外，只见道无名催动轻功自空中飘然而下，"
-    translated: "Everyone hurried to run outside, where they saw Dao Wuying descend gracefully from the sky using lightness."
+    translated: "Everyone hurried to run outside, where they saw Dao Wuming descend gracefully from the sky using his lightness technique."
   - split: 10
     subIndex: 1
     text: "虽然满身鲜血，但神情依旧自若。"
@@ -191770,7 +191758,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -191784,11 +191772,11 @@
     translated: "Right"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 8
     subIndex: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 8
     subIndex: 2
     text: "负1"
@@ -191831,7 +191819,7 @@
     translated: "None"
   - split: 10
     text: "你们将道无名扶入屋内，替他包扎疗伤。"
-    translated: "You helped Wuying inside and tended to his wounds."
+    translated: "You helped Dao Wuming inside the house and treated his injuries."
   - split: 10
     subIndex: 1
     text: "随后将武绝义练成归藏功，与五毒金刚一同进攻乐山镇之事一一道来。"
@@ -192022,7 +192010,7 @@
     translated: "Right"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 10
     text: "#PlayerName#，万掌门，今日一战若无你们二位鼎力相助，"
     translated: "#PlayerName#, Sect Master Wan, today's battle would not have been won without your two powerful aid."
@@ -192105,7 +192093,7 @@
     translated: "Sima Deyuan"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -192282,7 +192270,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -192387,7 +192375,7 @@
     translated: "Shout"
   - split: 10
     text: "行至一处山谷，道无名示意各位当心敌袭，"
-    translated: "Arriving at a valley, Nameless Daoist warned everyone to beware of an enemy attack."
+    translated: "Arriving at a valley, Dao Wuming cautioned everyone to be wary of an enemy assault."
   - split: 10
     subIndex: 1
     text: "话音未落，只听一声断喝，一名大汉现身在前拦住去路，"
@@ -192409,7 +192397,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 2
     text: "武绝义"
     translated: "Wu Jueyi"
@@ -192542,7 +192530,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -192701,7 +192689,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -192773,7 +192761,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 2
     text: "阎罗王"
     translated: "King YanΝuo"
@@ -192879,7 +192867,7 @@
   - split: 10
     subIndex: 1
     text: "以一人之力独斗道无名，司马德源，万仞山三派掌门，"
-    translated: "Fighting alone against Dao Wuying, Sima Deyuan, and the Wan Renshan Sect Leaders"
+    translated: "Fighting the Sect Leaders of Dao Wuming, Sima Deyuan, and Wan Renshan alone with one's own strength"
   - split: 10
     subIndex: 2
     text: "竟丝毫不落下风！"
@@ -192922,7 +192910,7 @@
     translated: "Left"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 10
     text: "这武绝义有归藏功罡气护体，"
     translated: "This Wu Jueyi has protective Essence Seclusion Power surging through his body."
@@ -192939,7 +192927,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -193003,7 +192991,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -193077,7 +193065,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -193098,7 +193086,7 @@
     translated: "Left"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 8
     subIndex: 1
     text: "负50"
@@ -193143,7 +193131,7 @@
   - split: 10
     subIndex: 1
     text: "运起十二成归藏功功力，向道无名攻来！"
-    translated: "Warming up all twelve layers of Guizang Gongfa, he struck back at Dao Wunamei!"
+    translated: "Summoning all twelve‑tenths of my Guizang Gong power, I attack Dao Wuming!"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
@@ -193462,7 +193450,7 @@
   - split: 10
     subIndex: 2
     text: "直贯正在比拼内力的道无名和武绝义二人。"
-    translated: "Zhi Gan is competing in Inner Power with Dao Wuyiming and Wu Jueyi."
+    translated: "Zhi Gan is competing in Inner Power with Dao Wuming and Wu Jueyi."
   templates:
   - split: 6
     template: "SpeEffect/{0}"
@@ -193547,7 +193535,7 @@
     translated: "None"
   - split: 10
     text: "道无名这边已然口吐鲜血，只能勉力支撑，"
-    translated: "Dowanming was spitting blood and could only struggle to maintain his stance."
+    translated: "Dao Wuming has already spat out blood and can only struggle to maintain his stance."
   - split: 10
     subIndex: 1
     text: "而武绝义那边状况更糟，竟赫然被白云天斩断一臂，血如泉涌！"
@@ -193630,7 +193618,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 2
     text: "司马德源"
     translated: "Sima Deyuan"
@@ -193851,7 +193839,7 @@
     translated: "Wan Renshan"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -193954,7 +193942,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -194015,7 +194003,7 @@
     translated: "Think Zhong Lan"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -194104,7 +194092,7 @@
     translated: "Left"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 10
     text: "额......哈哈，何必如此麻烦，劳李真人费心了。"
     translated: "Uh... haha, no need for such trouble. Thank you for your concern, Master Immortal Li."
@@ -194121,7 +194109,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -194165,7 +194153,7 @@
   splits:
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "右"
     translated: "Right"
@@ -194717,7 +194705,7 @@
     translated: "Right"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 8
     subIndex: 1
     text: "思中澜"
@@ -200119,7 +200107,7 @@
   - split: 10
     subIndex: 1
     text: "他在道无名阁主疗伤的闭关室外护法。"
-    translated: "He guarded outside the meditation room where Dao Wuning Pavilion's master was recuperating."
+    translated: "He guarded outside the meditation room of Doctor Wuming at the Dao Wuming Pavilion while the master was cultivating to recover from injuries."
   - split: 10
     subIndex: 2
     text: "我取了一部分药，让他拿去给道阁主调理伤势。"
@@ -200749,7 +200737,7 @@
   - split: 10
     subIndex: 1
     text: "（说罢慌忙掏出钥匙，打开道无名闭关之室的大门）"
-    translated: "(Saying this, he hastily produced a key and opened the door to the unnamed seclusion chamber.)"
+    translated: "(Saying this, he hurriedly pulled out a key and opened the door to Dao Wuming's seclusion chamber.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -200775,7 +200763,7 @@
     translated: "None"
   - split: 10
     text: "只见端坐在蒲团上的道无名面色枯槁，遍体黝黑，"
-    translated: "While correcting, also verify: ‑ They are sitting upright on the zafu with a withered face and their entire body is darkened."
+    translated: "Only to see Dao Wuming sitting upright on the lotus seat with a gaunt face and a body entirely darkened."
   - split: 10
     subIndex: 1
     text: "见你们打开大门，竟然毫无反应。"
@@ -200794,7 +200782,7 @@
   - split: 10
     subIndex: 1
     text: "（大叫一声，扑上前去抱住道无名）"
-    translated: "(yell loudly, rush forward to hug Dao Wuying)"
+    translated: "(Screaming out, rushing forward to embrace Dao Wuming)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -200813,7 +200801,7 @@
     translated: "Left"
   - split: 8
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 10
     text: "道阁主状况如何？"
     translated: "How is Dao Pavilion's master doing?"
@@ -201097,7 +201085,7 @@
     translated: "None"
   - split: 10
     text: "你走上前去，查看道无名的尸体。"
-    translated: "You approached to examine the unnamed corpse"
+    translated: "You walked up to examine the body of Dao Wuming."
   - split: 10
     subIndex: 1
     text: "只见一代高手，如今盘坐在蒲团之上化为一具枯尸，实在是令人感慨万千。"
@@ -201446,7 +201434,7 @@
   - split: 10
     subIndex: 1
     text: "不难确认其中一个足迹正是道无名留下的。"
-    translated: "It's not hard to confirm that one of the footprints was left by Dao Wuning."
+    translated: "It's not difficult to confirm that one of the footprints was left by Dao Wuming."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -201478,7 +201466,7 @@
     translated: "None"
   - split: 10
     text: "你环视了房间一圈，只见闭关室正中央，正是道无名所坐的蒲团。"
-    translated: "You scanned the room, and there in the exact center of the seclusion chamber was the zafu where Dao Wuying sat."
+    translated: "You scanned the room, and there, in the exact center of the seclusion chamber, was the zafu where Dao Wuming sat."
   - split: 10
     subIndex: 1
     text: "蒲团一旁，散落着刚刚被思中澜一掌拍碎的小桌碎片。"
@@ -201497,7 +201485,7 @@
   - split: 10
     subIndex: 1
     text: "根据干粮剩余的数量判断，道无名应该在数十天前便已亡故了。"
-    translated: "Given the amount of rations remaining, Dao Wuying must have passed away several weeks ago."
+    translated: "Based on the amount of rations remaining, Dao Wuming must have passed away over a dozen days ago."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -202415,7 +202403,7 @@
   - split: 10
     subIndex: 1
     text: "如果这大门一直紧闭，你又是如何把药交给道无名阁主的呢？"
-    translated: "How could you deliver the medicine to Dao Wuning's Pavilion Lord if the main gate is always closed?"
+    translated: "If this great gate remains tightly shut, how did you manage to give the medicine to Master Dao Wuming?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -203558,7 +203546,7 @@
   - split: 10
     subIndex: 1
     text: "那还有另外一点，这室内为何只有道无名和思中澜二人的脚印呢？"
-    translated: "Another point is why are there only Dao Wuying and Si Zhonglan's footprints in this room?"
+    translated: "Another point is why are there only Dao Wuming and Si Zhonglan's footprints indoors?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -204243,7 +204231,7 @@
     translated: "Left"
   - split: 10
     text: "结合此前推理，道无名显然是在桌子上刻下了凶手的姓名，"
-    translated: "Combining previous reasoning, Dao Wuning clearly carved the murderer's name on the table."
+    translated: "Combining the previous reasoning, it is clear that Dao Wuming carved the murderer's name on the table."
   - split: 10
     subIndex: 1
     text: "思！中！澜！你说是也不是！"
@@ -204667,7 +204655,7 @@
     translated: "Right"
   - split: 10
     text: "确实如#PlayerName#所料，看道无名在蒲团上咽气后，"
-    translated: "As expected by #PlayerName#, after watching Dao Wuying expire on the cushion."
+    translated: "Indeed, as #PlayerName# expected, after Dao Wuming breathed his last on the cushion."
   - split: 10
     subIndex: 1
     text: "我便将花瓶的碎片打扫出去，埋在了花圃中。"
@@ -205129,7 +205117,7 @@
   - split: 10
     subIndex: 1
     text: "却看到各位在和思中澜副阁主打得难解难分......我道无名阁主眼下又在何处？"
-    translated: "But I see that Vice‑Dean Si Zhonglan is engaged in a heated debate with the various Deans... Where is Dean Nameless now?"
+    translated: "But I see you're evenly matched with Deputy Pavilion Master Si Zhonglan... Where is Dao Wuming Pavilion Master now?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -205302,7 +205290,7 @@
   - split: 10
     subIndex: 1
     text: "才能告慰道无名阁主和白云子的在天之灵了。"
-    translated: "This willconsole the spirits of Lord Wuyuming and White Cloud Zi in heaven."
+    translated: "This can bring peace to the souls of Lord Dao Wuming and Baiyunzi in heaven."
   templates:
   - split: 8
     template: "HeroLeaveForce;{0}"
@@ -205858,7 +205846,7 @@
     translated: "Right"
   - split: 10
     text: "此外，大隐阁主道无名，一代宗师，武艺超群，"
-    translated: "Additionally, the Great Hidden Pavilion's principal path is unnamed, a living grandmaster, with superb martial arts skills."
+    translated: "Additionally, Great Concealed Pavilion's master Dao Wumu is a living legend, a martial arts master unparalleled in his time."
   - split: 10
     subIndex: 1
     text: "虽隐于山野，却始终心怀苍生。"
@@ -207229,7 +207217,7 @@
   - split: 10
     subIndex: 1
     text: "毒害白云天姑娘和道无名阁主的是思中澜思大侠，"
-    translated: "Poisoned Miss Bai Yuntian and the Master of Dao Wuying Pavilion was Si Zhonglan, Great Hero Si."
+    translated: "Poisoned Bai Yuntian Miss and Dao Wuming Pavilion Lord by Think Zhilan Think Great Hero."
   - split: 10
     subIndex: 2
     text: "和我阎罗殿又有什么关系。"
@@ -242013,7 +242001,7 @@
     translated: "Right"
   - split: 10
     text: "毕竟大隐阁此前遭逢剧变，阁主道无名身亡，副阁主思中澜叛逃，"
-    translated: "After all, the Great Hidden Pavilion previously underwent a dramatic upheaval, with Lord Dao Wuying deceased and Deputy Pavilion Master Si Zhonglan defected."
+    translated: "The Great Hidden Pavilion had previously undergone a dramatic change, with Pavilion Master Dao Wuming deceased and Deputy Pavilion Master Si Zhonglan defected."
   - split: 10
     subIndex: 1
     text: "正是群龙无首，虚弱不堪之时，以阎罗王之性格，很可能会趁火打劫。"
@@ -243718,9 +243706,7 @@
   - split: 10
     subIndex: 1
     text: "哈哈哈，你这小姑娘，日后师傅把这功夫教你便是。"
-    translated: "Haha, you little girl, one day I'll teach you these skills."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Master,师傅,"
+    translated: "Haha, you little girl, someday I'll teach you these skills."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -248389,7 +248375,7 @@
     translated: "Left"
   - split: 10
     text: "此前道无名阁主新丧，思中澜叛逃，我大隐阁群龙无首，一片混乱。"
-    translated: "Previously, with the new master of Dao Wuying Pavilion recently deceased and Shi Zhonglan rebelling and fleeing, our Great Hidden Pavilion was leaderless and in complete chaos."
+    translated: "Previously, the new master of Dao Wuming Pavilion had passed away, and Shi Zhonglan had defected, leaving the Great Hidden Pavilion leaderless and in chaos."
   - split: 10
     subIndex: 1
     text: "也是张真人您仗义出手，替本门维持秩序，招募新人，"
@@ -259311,7 +259297,7 @@
     translated: "Left"
   - split: 10
     text: "不错，计心狂还给思中澜下蛊，借其之手害死了道无名阁主和白云天姑娘。"
-    translated: "Not bad. Jixinkuang also enchanted Si Zhonglan, using her to kill the Dao Wumeiming Pavilion Master and Miss Bai Yuntian."
+    translated: "Not bad. Jixin Kuang also used a venomous insect to harm Dao Wuming and Bai Yuntian."
   - split: 10
     subIndex: 1
     text: "此贼恶贯满盈，流毒无穷，也不知他究竟是为何，要做下这么多坏事。"
@@ -267386,8 +267372,6 @@
     subIndex: 1
     text: "未曾听闻过施主的大名，还望见谅。"
     translated: "I have never heard of your great name before; please forgive me."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Benefactor,施主,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -282614,8 +282598,6 @@
     subIndex: 1
     text: "时候不早，兄弟就先行告辞了，咱们后会有期！"
     translated: "It's getting late, so I'll take my leave first. We'll meet again another time!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Brother,兄弟,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -287897,9 +287879,7 @@
     translated: "Left"
   - split: 10
     text: "哦！想起来了，这四人后来跟赵点检一起，共斗黄沙寨二当家三当家。"
-    translated: "Oh! I remember now. These four later fought against the Second and Third Masters of Huang Sha Zhai together with Zhao Jianjian."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Boss,二当家,"
+    translated: "Oh! I remember now. These four later fought together with Zhao Jianjian against the Second and Third Masters of Huangsha Village."
   - split: 10
     subIndex: 1
     text: "也算是弃暗投明，改邪归正了。"
@@ -297393,7 +297373,7 @@
   - split: 9
     subIndex: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 9
     subIndex: 2
     text: "思中澜"
@@ -299210,7 +299190,7 @@
     translated: "Right"
   - split: 10
     text: "说起来，原本大隐阁主道无名，似乎最为符合前面的条件。"
-    translated: "To be honest, the original Great Hidden Pavilion Master Dao Wuning seemed to best fit the conditions mentioned earlier."
+    translated: "To be precise, originally, Great Hidden Pavilion Master Dao Wuming seems to best fit the conditions mentioned earlier."
   - split: 10
     subIndex: 1
     text: "只是他老人家已经为奸贼思中澜所害，想必不可能是大统领。"
@@ -315546,9 +315526,7 @@
   - split: 10
     subIndex: 1
     text: "呵呵，当时他一路送你回福州，姐姐我就看出你们两不对劲。"
-    translated: "Haha, back then when he saw you all the way back to Fuzhou, I could tell something wasn't right between you two."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Older Sister,姐姐,"
+    translated: "Haha, at the time, when he escorted you back to Fuzhou, I could tell there was something off between you two."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -349958,9 +349936,7 @@
     translated: "Right"
   - split: 10
     text: "此外他还暗中授意分舵长老，将军械输送给血衣盟加强武装。"
-    translated: "Additionally, he secretly instructed the Deputy Leader of the branch to supply weapons to strengthen the Blood Robe Alliance's defenses."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "General,将军,Elder,长老,"
+    translated: "Moreover, he secretly instructed the deputy elders of the branch factions to supply weaponry to the Bloodrobe Alliance to strengthen their armed forces."
   - split: 10
     subIndex: 1
     text: "并在京城街头巷尾，散布姜婉是先皇后人的消息。"
@@ -356066,13 +356042,13 @@
     translated: "Middle‑aged Zhao Yizong"
   - split: 2
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
   - split: 10
     text: "道无名阁主，各位武林同道，此事当真没有回旋之余地了？"
-    translated: "Dao Wumengge Lord, fellow practitioners of the Wulin, is there truly no room for negotiation on this matter?"
+    translated: "Pavilion Master Dao Wuming, fellow practitioners of the Wulin, is there truly no room for negotiation on this matter?"
 - raw: ",,,左,,,,,,,我飞龙门精锐皆在此处，战端一开，必定尸横遍野，血流漂橹。\\n这场盛会也将变为一桩武林浩劫，还望各位三思！"
   splits:
   - split: 3
@@ -362029,9 +362005,7 @@
     translated: "Wind howls"
   - split: 10
     text: "哈哈哈哈，王寨主，兄弟来迟一步，莫要见怪。"
-    translated: "Haha, Fort Master Wang, I came a step too late. Don't be angry."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Brother,兄弟,"
+    translated: "Hahahaha, Fort Master Wang, I came a step too late, don't be annoyed."
   templates:
   - split: 6
     template: "SpeEffect/{0}"
@@ -376240,9 +376214,7 @@
     translated: "Left"
   - split: 10
     text: "好！余师姐，今天不练会，我杨思迟就不睡觉了！"
-    translated: "OK! Senior Yi, I won't sleep tonight until we practice!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yang Sichi,杨思迟,"
+    translated: "Okay! Senior Teacher Ye, I won't sleep tonight until we practice!"
 - raw: ",玩家,,左,,,,,GetSpeReward;113,,大家这么干劲十足，我这做掌门的也不能落下。\\n好，咱们今天就一同参悟这高人武学！"
   splits:
   - split: 1
@@ -376647,7 +376619,7 @@
   - split: 10
     subIndex: 1
     text: "本门阁主道无名遭奸人毒害，横死大理，"
-    translated: "The nameless patriarch of the Great Door sect was poisoned by a wicked person and died suddenly in Dali."
+    translated: "The Lord of Dali, Dao Wuming, died a violent death at the hands of a wicked person."
   - split: 10
     subIndex: 2
     text: "副阁主思中澜则突围叛逃，至今下落不明......"
@@ -376666,7 +376638,7 @@
   - split: 10
     subIndex: 1
     text: "没想到道无名这老小子一世英名，竟落得这么个下场，"
-    translated: "I never expected Old Fellow Dao Wuxing to end up with such a fate despite his lifelong reputation for valor."
+    translated: "I never expected Old Man Wuming, with his entire life of illustrious reputation, to end up like this."
   - split: 10
     subIndex: 2
     text: "真是可悲，可叹呐！"
@@ -377293,7 +377265,7 @@
     translated: "Right"
   - split: 10
     text: "哎，道无名阁主新丧之时，本门确实是阵脚大乱。"
-    translated: "Alas, when Master of Dao Wuying Pavilion passed away, our sect was indeed in a state of chaos."
+    translated: "Alas, when Master of Dao Wuming Pavilion passed away, our sect was indeed in utter disarray."
   - split: 10
     subIndex: 1
     text: "好在有吴忧大侠出山协助，方才勉强维持住局势稳定。"
@@ -379661,7 +379633,7 @@
   splits:
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -380026,7 +379998,7 @@
   - split: 9
     subIndex: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "此外为师身上若有什么看得上的物件，"
     translated: "Besides, if there are any items on me that you find satisfactory,"
@@ -380667,7 +380639,7 @@
   splits:
   - split: 1
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "左"
     translated: "Left"
@@ -380711,7 +380683,7 @@
     translated: "Player"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -380747,7 +380719,7 @@
     translated: "Left"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "多谢师父夸奖。"
     translated: "Thank you, Master, for your kind words"
@@ -382842,7 +382814,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -382889,7 +382861,7 @@
   splits:
   - split: 1
     text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
   - split: 3
     text: "左"
     translated: "Left"
@@ -387978,9 +387950,7 @@
   - split: 10
     subIndex: 1
     text: "本大侠手中这剑可不是摆设，姑娘，告辞！"
-    translated: "This sword in my hand is no mere ornament, Miss. Goodbye!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Great Hero,大侠,"
+    translated: "This sword in my hand is not for show, Miss. Goodbye!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -392855,7 +392825,7 @@
     translated: "Lin Yunshang"
   - split: 2
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 3
     text: "右"
     translated: "Right"
@@ -393440,7 +393410,7 @@
     translated: "Right"
   - split: 8
     text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
   - split: 10
     text: "如今仙霞派发展壮大，"
     translated: "Now the Xianxia Sect has grown significantly"
@@ -395595,9 +395565,7 @@
   - split: 10
     subIndex: 1
     text: "我韩嵩混迹江湖多年，岂能不知？"
-    translated: "I have mixed in the underworld for many years; how could I not know?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Jianghu,江湖,Han Song,韩嵩,"
+    translated: "I've mixed in the Jianghu for many years; how could I not know?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -404236,8 +404204,6 @@
   - split: 10
     subIndex: 1
     text: "莫要辜负了唐掌门一片好心。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - split: 8
     template: "FinishEventMission|PlotStartTutorial;{0}"
@@ -410735,7 +410701,7 @@
     translated: "Right"
   - split: 10
     text: "没想到，当年道无名阁主都未能攻克的险关，"
-    translated: "Unexpectedly, even the Lord of Dao Nameless Pavilion was unable to overcome this perilous pass back then."
+    translated: "Unexpectedly, even the Hall Master of Dao Wuming back then was unable to conquer this perilous pass."
   - split: 10
     subIndex: 1
     text: "今日就这样被#PlayerName#拿下了。"
@@ -415039,7 +415005,7 @@
     translated: "Left"
   - split: 10
     text: "否则，不仅对不起已故的道无名阁主，"
-    translated: "Otherwise, it would be a disservice to the late Dao Wuying Pavilion Master."
+    translated: "Otherwise, it would not only be a disservice to the late Master Wuming Dao but also..."
   - split: 10
     subIndex: 1
     text: "大隐阁其余长老可能也会因此不满，甚至发动弹劾。"
@@ -422642,8 +422608,6 @@
     translated: "Left"
   - split: 10
     text: "待京城风波彻底平息后，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - split: 10
     subIndex: 1
     text: "我会尽快点起兵马，前去讨伐飞龙门。"
@@ -433806,7 +433770,7 @@
     translated: "Right"
   - split: 10
     text: "道无名？呵呵，我都没见过他几面。"
-    translated: "Nameless Way? Haha, I haven't even seen him in person."
+    translated: "Dao Wuming? Haha, I haven't even seen him a few times."
   - split: 10
     subIndex: 1
     text: "这害死之事，从何而来啊！"
@@ -433821,7 +433785,7 @@
     translated: "Right"
   - split: 10
     text: "再说了，这道无名乃是大隐阁阁主，"
-    translated: "Moreover, this anonymous figure is the Lord of the Great Hidden Pavilion."
+    translated: "Moreover, Dao Wuming is the Pavilion Master of the Great Hidden Pavilion."
   - split: 10
     subIndex: 1
     text: "大隐阁都没来寻仇，你们茅山派凑什么热闹？"
@@ -433839,7 +433803,7 @@
     translated: "He Zudao"
   - split: 10
     text: "大隐阁阁主道无名丰神俊逸，智慧超群，"
-    translated: "Great Hidden Pavilion's master, Dao Wuying, is handsomely elegant and incredibly wise."
+    translated: "Great Hidden Pavilion's lord, Dao Wuming, is handsomely charismatic and incredibly wise."
   - split: 10
     subIndex: 1
     text: "本就是贫道之挚友。"
@@ -433910,7 +433874,7 @@
     translated: "Right"
   - split: 10
     text: "哎呀呀，阁下与道无名好友情深，"
-    translated: "Ah, your friendship with Dao Wuying is deep."
+    translated: "Ah, Your Excellency and Dao Wuming have a deep friendship."
   - split: 10
     subIndex: 1
     text: "我都感动得快落泪了呢！"
@@ -439414,8 +439378,6 @@
   - split: 10
     text: "阿弥陀佛，施主所言就算有理，"
     translated: "Amituofo, even if what you say is reasonable,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Benefactor,施主,"
   - split: 10
     subIndex: 1
     text: "但战端已起，我方也无路可退了。"

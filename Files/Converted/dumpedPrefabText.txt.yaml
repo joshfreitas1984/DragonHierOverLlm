@@ -1620,7 +1620,7 @@
 - raw: "先皇周世宗柴荣，神武雄略，一代明主。"
   splits:
   - text: "先皇周世宗柴荣，神武雄略，一代明主。"
-    translated: "Emperor Zhou Shizong Taiwu Chengong, valiant and stratagemic, a enlightened ruler of his age."
+    translated: "The former Emperor Chai Rong, Emperor Shizong of Later Zhou, was a mighty and strategic ruler, a wise sovereign of his age."
 - raw: "入群会友"
   splits:
   - text: "入群会友"
@@ -2387,7 +2387,7 @@
 - raw: "图鉴"
   splits:
   - text: "图鉴"
-    translated: "Pokedex"
+    translated: "Compendium"
 - raw: "在各大门派统治下，中原迎来了一时的安宁。"
   splits:
   - text: "在各大门派统治下，中原迎来了一时的安宁。"

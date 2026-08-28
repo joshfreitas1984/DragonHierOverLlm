@@ -32,40 +32,22 @@ public class MainPlugin : BasePlugin
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         Harmony.CreateAndPatchAll(typeof(MainPlugin));
         Harmony.CreateAndPatchAll(typeof(ResourceIoPatches));
-        Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));
-        // Nested patch class - Harmony.CreateAndPatchAll(Type) does not recurse into nested types,
-        // so AssetBundleLoadAssetPatch (which needs its own [HarmonyTargetMethod] to resolve the
-        // ambiguous AssetBundle.LoadAsset(string) overload - see PrefabTextPatches.cs) must be
-        // patched explicitly.
+        Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));        
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.AssetBundleLoadAssetPatch));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
-        //Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
-        Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
+        Harmony.CreateAndPatchAll(typeof(NameLengthPatches));        
         DynamicStringPatches.PatchAll();
-        Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
 
-        //DisableEastAsianTmpSettings();
+        //Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
+        //Harmony.CreateAndPatchAll(typeof(HardcodedHeroNamePatches));
+
+        Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
     }
 
     public void OnDestroy()
     {
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is destroyed!");
     }
-
-    //private void DisableEastAsianTmpSettings()
-    //{
-    //    var settings = TMP_Settings.instance;
-    //    if (settings != null)
-    //    {
-    //        SetPrivateField(settings, "m_linebreakingRules", null);
-    //        SetPrivateField(settings, "m_leadingCharacters", new TextAsset("("));
-    //        SetPrivateField(settings, "m_followingCharacters", new TextAsset(")"));
-    //        //SetPrivateField(settings, "m_GetFontFeaturesAtRuntime", false);
-
-    //        TMP_Settings.LoadLinebreakingRules();
-    //        Logger.LogMessage("Disabled East Asian TMP settings.");
-    //    }
-    //}
 
     private void SetPrivateField(object obj, string fieldName, object value)
     {

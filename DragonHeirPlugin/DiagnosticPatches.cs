@@ -187,6 +187,66 @@ internal static class DiagnosticPatches
     }
 
     /// <summary>
+    /// Mitigation for a NullReferenceException inside GameController.CountHeroData (a long
+    /// method chasing HeroSpeAddData/ForceSpeAddData/KungfuSkillLvData/equipment-slot pointer
+    /// chains) that was observed crashing a plot-triggered fight
+    /// (PlotController.FightInteractHeroFuc -&gt; BattleController.PrepareBattleMap -&gt;
+    /// BattleTeamPrepare -&gt; HeroData.CheckHeroDetailDirty -&gt; CountHeroData). Same root-cause
+    /// class as the previously-fixed GenerateHero/world-gen crash (a translated CSV column being
+    /// used as an internal dictionary lookup key - see
+    /// DragonHeirPlugin's KNOWN_ISSUES.md and Tests/docs/generatehero-unresolved-crash.md), just
+    /// triggered here by a different hero. Logs and swallows the exception (dumping the hero's
+    /// fields) rather than crashing the fight - narrow blast radius: only this hero's stat
+    /// recompute is skipped for this call, not the whole fight.
+    ///
+    /// IMPORTANT: per the decompiled body (Converter/output/_decompiled/_NoNamespace/
+    /// GameController/CountHeroData.c), hero.heroDetailDirty (offset +0x2d8) is ONLY cleared on
+    /// the method's single successful-completion path, right before its one `return;` - every
+    /// other path (all the null-guard checks throughout this long method) jumps to a
+    /// "does not return" throw helper instead, meaning the flag is NEVER cleared when this method
+    /// throws. HeroData.CheckHeroDetailDirty only calls CountHeroData when heroDetailDirty is
+    /// true, so if we merely swallow the exception without clearing the flag ourselves, every
+    /// subsequent CheckHeroDetailDirty call for this hero re-triggers CountHeroData -&gt; throws
+    /// -&gt; gets suppressed again, forever (observed as an infinite loop/hang during the fight
+    /// scene). Must clear hero.heroDetailDirty = false here to let the caller make progress.
+    /// </summary>
+    [HarmonyPatch(typeof(GameController), nameof(GameController.CountHeroData))]
+    [HarmonyFinalizer]
+    private static Exception CountHeroData_Finalizer(HeroData hero, Exception __exception)
+    {
+        if (__exception == null)
+            return null;
+
+        try
+        {
+            MainPlugin.Logger?.LogError(
+                $"DiagnosticPatches[GameController.CountHeroData]: threw and was suppressed for " +
+                $"heroID={hero?.heroID}, heroName={hero?.heroName}.\n" +
+                $"  hero dump: {(hero == null ? "null" : DumpMembersOneLine(hero))}\n{__exception}");
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.CountHeroData]: failed to dump hero on exception: {ex}");
+        }
+
+        try
+        {
+            // Must clear this ourselves - the real method never reaches its own
+            // "heroDetailDirty = false" assignment when it throws (see remarks above), so
+            // CheckHeroDetailDirty would otherwise keep re-invoking CountHeroData for this hero
+            // forever, looking like an infinite loop/hang.
+            if (hero != null)
+                hero.heroDetailDirty = false;
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.CountHeroData]: failed to clear heroDetailDirty: {ex}");
+        }
+
+        return null;
+    }
+
+    /// <summary>
     /// Bracket patch #3 for crash #2: GameController.RandomGenerateNPCItem(HeroData) is the next
     /// real call after the first CountHeroData following RandomGenerateNPCSkill (see
     /// CountHeroData_Postfix's remarks). Same reasoning: pinpoints whether the throw is inside

@@ -26116,3 +26116,6896 @@
 - raw: "，由#$PlayerName#大侠委托出售"
   splits:
   - text: "，由#$PlayerName#大侠委托出售"
+- raw: "孔武有力"
+  splits:
+  - text: "孔武有力"
+- raw: "拔山扛鼎"
+  splits:
+  - text: "拔山扛鼎"
+- raw: "手疾眼快"
+  splits:
+  - text: "手疾眼快"
+- raw: "七窍玲珑"
+  splits:
+  - text: "七窍玲珑"
+- raw: "足智多谋"
+  splits:
+  - text: "足智多谋"
+- raw: "聪慧绝伦"
+  splits:
+  - text: "聪慧绝伦"
+- raw: "动心忍性"
+  splits:
+  - text: "动心忍性"
+- raw: "百折不挠"
+  splits:
+  - text: "百折不挠"
+- raw: "强身健体"
+  splits:
+  - text: "强身健体"
+- raw: "钢筋铁骨"
+  splits:
+  - text: "钢筋铁骨"
+- raw: "运气自如"
+  splits:
+  - text: "运气自如"
+- raw: "奇经八脉"
+  splits:
+  - text: "奇经八脉"
+- raw: "内家"
+  splits:
+  - text: "内家"
+- raw: "内力精纯"
+  splits:
+  - text: "内力精纯"
+- raw: "炉火纯青"
+  splits:
+  - text: "炉火纯青"
+- raw: "飞檐走壁"
+  splits:
+  - text: "飞檐走壁"
+- raw: "神出鬼没"
+  splits:
+  - text: "神出鬼没"
+- raw: "身怀绝技"
+  splits:
+  - text: "身怀绝技"
+- raw: "绝艺超群"
+  splits:
+  - text: "绝艺超群"
+- raw: "拳不离手"
+  splits:
+  - text: "拳不离手"
+- raw: "铁手钢拳"
+  splits:
+  - text: "铁手钢拳"
+- raw: "御剑"
+  splits:
+  - text: "御剑"
+- raw: "剑随意动"
+  splits:
+  - text: "剑随意动"
+- raw: "人剑合一"
+  splits:
+  - text: "人剑合一"
+- raw: "耍刀"
+  splits:
+  - text: "耍刀"
+- raw: "横刀跃马"
+  splits:
+  - text: "横刀跃马"
+- raw: "一刀两断"
+  splits:
+  - text: "一刀两断"
+- raw: "舞枪弄棍"
+  splits:
+  - text: "舞枪弄棍"
+- raw: "枪扫六合"
+  splits:
+  - text: "枪扫六合"
+- raw: "旁门左道"
+  splits:
+  - text: "旁门左道"
+- raw: "奇门遁甲"
+  splits:
+  - text: "奇门遁甲"
+- raw: "百步穿杨"
+  splits:
+  - text: "百步穿杨"
+- raw: "例无虚发"
+  splits:
+  - text: "例无虚发"
+- raw: "外门"
+  splits:
+  - text: "外门"
+- raw: "坚若磐石"
+  splits:
+  - text: "坚若磐石"
+- raw: "刀枪不入"
+  splits:
+  - text: "刀枪不入"
+- raw: "掌风"
+  splits:
+  - text: "掌风"
+- raw: "排山倒海"
+  splits:
+  - text: "排山倒海"
+- raw: "剑气"
+  splits:
+  - text: "剑气"
+- raw: "气冲斗牛"
+  splits:
+  - text: "气冲斗牛"
+- raw: "刀锋"
+  splits:
+  - text: "刀锋"
+- raw: "削铁无声"
+  splits:
+  - text: "削铁无声"
+- raw: "枪芒"
+  splits:
+  - text: "枪芒"
+- raw: "枪出如龙"
+  splits:
+  - text: "枪出如龙"
+- raw: "奇技"
+  splits:
+  - text: "奇技"
+- raw: "奇异莫名"
+  splits:
+  - text: "奇异莫名"
+- raw: "惊弓"
+  splits:
+  - text: "惊弓"
+- raw: "摘叶飞花"
+  splits:
+  - text: "摘叶飞花"
+- raw: "脱胎换骨"
+  splits:
+  - text: "脱胎换骨"
+- raw: "羽化登仙"
+  splits:
+  - text: "羽化登仙"
+- raw: "不老长生"
+  splits:
+  - text: "不老长生"
+- raw: "内息灼热"
+  splits:
+  - text: "内息灼热"
+- raw: "焚身烈焰"
+  splits:
+  - text: "焚身烈焰"
+- raw: "内息冰寒"
+  splits:
+  - text: "内息冰寒"
+- raw: "刺骨奇寒"
+  splits:
+  - text: "刺骨奇寒"
+- raw: "阴阳调和"
+  splits:
+  - text: "阴阳调和"
+- raw: "先天真气"
+  splits:
+  - text: "先天真气"
+- raw: "混元一气"
+  splits:
+  - text: "混元一气"
+- raw: "至阳至刚"
+  splits:
+  - text: "至阳至刚"
+- raw: "至阴至柔"
+  splits:
+  - text: "至阴至柔"
+- raw: "刚柔并济"
+  splits:
+  - text: "刚柔并济"
+- raw: "物我两忘"
+  splits:
+  - text: "物我两忘"
+- raw: "移形换位"
+  splits:
+  - text: "移形换位"
+- raw: "陆地飞行"
+  splits:
+  - text: "陆地飞行"
+- raw: "扭转乾坤"
+  splits:
+  - text: "扭转乾坤"
+- raw: "不动如山"
+  splits:
+  - text: "不动如山"
+- raw: "神鬼莫测"
+  splits:
+  - text: "神鬼莫测"
+- raw: "以劲御气"
+  splits:
+  - text: "以劲御气"
+- raw: "艺成百家"
+  splits:
+  - text: "艺成百家"
+- raw: "武学宗师"
+  splits:
+  - text: "武学宗师"
+- raw: "返璞归真"
+  splits:
+  - text: "返璞归真"
+- raw: "起死回生"
+  splits:
+  - text: "起死回生"
+- raw: "天人合一"
+  splits:
+  - text: "天人合一"
+- raw: "功德圆满"
+  splits:
+  - text: "功德圆满"
+- raw: "即身成佛"
+  splits:
+  - text: "即身成佛"
+- raw: "太极圆转"
+  splits:
+  - text: "太极圆转"
+- raw: "轰天震地"
+  splits:
+  - text: "轰天震地"
+- raw: "十殿阎王"
+  splits:
+  - text: "十殿阎王"
+- raw: "力降十会"
+  splits:
+  - text: "力降十会"
+- raw: "术精岐黄"
+  splits:
+  - text: "术精岐黄"
+- raw: "五毒俱全"
+  splits:
+  - text: "五毒俱全"
+- raw: "见血封喉"
+  splits:
+  - text: "见血封喉"
+- raw: "见多识广"
+  splits:
+  - text: "见多识广"
+- raw: "学富五车"
+  splits:
+  - text: "学富五车"
+- raw: "口齿伶俐"
+  splits:
+  - text: "口齿伶俐"
+- raw: "舌灿莲花"
+  splits:
+  - text: "舌灿莲花"
+- raw: "劈荆斩棘"
+  splits:
+  - text: "劈荆斩棘"
+- raw: "铸山煮海"
+  splits:
+  - text: "铸山煮海"
+- raw: "精耕细作"
+  splits:
+  - text: "精耕细作"
+- raw: "万木争荣"
+  splits:
+  - text: "万木争荣"
+- raw: "千锤百炼"
+  splits:
+  - text: "千锤百炼"
+- raw: "鬼斧神工"
+  splits:
+  - text: "鬼斧神工"
+- raw: "对症下药"
+  splits:
+  - text: "对症下药"
+- raw: "烩不厌细"
+  splits:
+  - text: "烩不厌细"
+- raw: "炮凤烹龙"
+  splits:
+  - text: "炮凤烹龙"
+- raw: "毒医"
+  splits:
+  - text: "毒医"
+- raw: "以毒攻毒"
+  splits:
+  - text: "以毒攻毒"
+- raw: "毒手药王"
+  splits:
+  - text: "毒手药王"
+- raw: "医毒"
+  splits:
+  - text: "医毒"
+- raw: "强壮"
+  splits:
+  - text: "强壮"
+- raw: "魁梧奇伟"
+  splits:
+  - text: "魁梧奇伟"
+- raw: "天生神力"
+  splits:
+  - text: "天生神力"
+- raw: "瘦弱"
+  splits:
+  - text: "瘦弱"
+- raw: "瘦骨嶙峋"
+  splits:
+  - text: "瘦骨嶙峋"
+- raw: "缚鸡之力"
+  splits:
+  - text: "缚鸡之力"
+- raw: "机敏"
+  splits:
+  - text: "机敏"
+- raw: "随机应变"
+  splits:
+  - text: "随机应变"
+- raw: "巧捷万端"
+  splits:
+  - text: "巧捷万端"
+- raw: "笨手笨脚"
+  splits:
+  - text: "笨手笨脚"
+- raw: "东倒西歪"
+  splits:
+  - text: "东倒西歪"
+- raw: "聪慧"
+  splits:
+  - text: "聪慧"
+- raw: "天资过人"
+  splits:
+  - text: "天资过人"
+- raw: "旷世奇才"
+  splits:
+  - text: "旷世奇才"
+- raw: "傻头傻脑"
+  splits:
+  - text: "傻头傻脑"
+- raw: "痴傻蒙昧"
+  splits:
+  - text: "痴傻蒙昧"
+- raw: "勇敢"
+  splits:
+  - text: "勇敢"
+- raw: "身先士卒"
+  splits:
+  - text: "身先士卒"
+- raw: "临危不乱"
+  splits:
+  - text: "临危不乱"
+- raw: "懦弱"
+  splits:
+  - text: "懦弱"
+- raw: "战战兢兢"
+  splits:
+  - text: "战战兢兢"
+- raw: "胆小如鼠"
+  splits:
+  - text: "胆小如鼠"
+- raw: "康健"
+  splits:
+  - text: "康健"
+- raw: "容光焕发"
+  splits:
+  - text: "容光焕发"
+- raw: "百病不侵"
+  splits:
+  - text: "百病不侵"
+- raw: "多病"
+  splits:
+  - text: "多病"
+- raw: "身心交病"
+  splits:
+  - text: "身心交病"
+- raw: "旧病沉疴"
+  splits:
+  - text: "旧病沉疴"
+- raw: "顺脉"
+  splits:
+  - text: "顺脉"
+- raw: "脉络贯通"
+  splits:
+  - text: "脉络贯通"
+- raw: "先天气海"
+  splits:
+  - text: "先天气海"
+- raw: "滞脉"
+  splits:
+  - text: "滞脉"
+- raw: "脉络阻塞"
+  splits:
+  - text: "脉络阻塞"
+- raw: "经脉断绝"
+  splits:
+  - text: "经脉断绝"
+- raw: "正直"
+  splits:
+  - text: "正直"
+- raw: "公正不阿"
+  splits:
+  - text: "公正不阿"
+- raw: "浩气凛然"
+  splits:
+  - text: "浩气凛然"
+- raw: "阴险"
+  splits:
+  - text: "阴险"
+- raw: "不择手段"
+  splits:
+  - text: "不择手段"
+- raw: "笑里藏刀"
+  splits:
+  - text: "笑里藏刀"
+- raw: "宅心仁厚"
+  splits:
+  - text: "宅心仁厚"
+- raw: "慈悲为怀"
+  splits:
+  - text: "慈悲为怀"
+- raw: "残忍"
+  splits:
+  - text: "残忍"
+- raw: "心狠手辣"
+  splits:
+  - text: "心狠手辣"
+- raw: "灭心绝情"
+  splits:
+  - text: "灭心绝情"
+- raw: "气定神闲"
+  splits:
+  - text: "气定神闲"
+- raw: "心如止水"
+  splits:
+  - text: "心如止水"
+- raw: "暴躁"
+  splits:
+  - text: "暴躁"
+- raw: "性烈如火"
+  splits:
+  - text: "性烈如火"
+- raw: "怒发冲冠"
+  splits:
+  - text: "怒发冲冠"
+- raw: "幸运"
+  splits:
+  - text: "幸运"
+- raw: "福星高照"
+  splits:
+  - text: "福星高照"
+- raw: "不幸"
+  splits:
+  - text: "不幸"
+- raw: "命途多舛"
+  splits:
+  - text: "命途多舛"
+- raw: "天煞孤星"
+  splits:
+  - text: "天煞孤星"
+- raw: "美貌"
+  splits:
+  - text: "美貌"
+- raw: "明眸皓齿"
+  splits:
+  - text: "明眸皓齿"
+- raw: "倾国倾城"
+  splits:
+  - text: "倾国倾城"
+- raw: "丑陋"
+  splits:
+  - text: "丑陋"
+- raw: "面目狰狞"
+  splits:
+  - text: "面目狰狞"
+- raw: "百丑千拙"
+  splits:
+  - text: "百丑千拙"
+- raw: "锐眼"
+  splits:
+  - text: "锐眼"
+- raw: "目光炯炯"
+  splits:
+  - text: "目光炯炯"
+- raw: "明察秋毫"
+  splits:
+  - text: "明察秋毫"
+- raw: "弱视"
+  splits:
+  - text: "弱视"
+- raw: "视线模糊"
+  splits:
+  - text: "视线模糊"
+- raw: "雾里看花"
+  splits:
+  - text: "雾里看花"
+- raw: "谦逊"
+  splits:
+  - text: "谦逊"
+- raw: "不骄不躁"
+  splits:
+  - text: "不骄不躁"
+- raw: "虚怀若谷"
+  splits:
+  - text: "虚怀若谷"
+- raw: "刚愎"
+  splits:
+  - text: "刚愎"
+- raw: "盛气凌人"
+  splits:
+  - text: "盛气凌人"
+- raw: "唯我独尊"
+  splits:
+  - text: "唯我独尊"
+- raw: "忠诚"
+  splits:
+  - text: "忠诚"
+- raw: "忠心耿耿"
+  splits:
+  - text: "忠心耿耿"
+- raw: "至死不渝"
+  splits:
+  - text: "至死不渝"
+- raw: "桀骜不驯"
+  splits:
+  - text: "桀骜不驯"
+- raw: "离经叛道"
+  splits:
+  - text: "离经叛道"
+- raw: "勤奋"
+  splits:
+  - text: "勤奋"
+- raw: "孜孜不倦"
+  splits:
+  - text: "孜孜不倦"
+- raw: "废寝忘食"
+  splits:
+  - text: "废寝忘食"
+- raw: "懒惰"
+  splits:
+  - text: "懒惰"
+- raw: "游手好闲"
+  splits:
+  - text: "游手好闲"
+- raw: "无所用心"
+  splits:
+  - text: "无所用心"
+- raw: "节俭"
+  splits:
+  - text: "节俭"
+- raw: "精打细算"
+  splits:
+  - text: "精打细算"
+- raw: "取予有节"
+  splits:
+  - text: "取予有节"
+- raw: "浪费"
+  splits:
+  - text: "浪费"
+- raw: "挥霍无度"
+  splits:
+  - text: "挥霍无度"
+- raw: "穷奢极欲"
+  splits:
+  - text: "穷奢极欲"
+- raw: "练武"
+  splits:
+  - text: "练武"
+- raw: "武痴"
+  splits:
+  - text: "武痴"
+- raw: "武学天才"
+  splits:
+  - text: "武学天才"
+- raw: "学医"
+  splits:
+  - text: "学医"
+- raw: "济世神医"
+  splits:
+  - text: "济世神医"
+- raw: "习文"
+  splits:
+  - text: "习文"
+- raw: "雅士"
+  splits:
+  - text: "雅士"
+- raw: "文采斐然"
+  splits:
+  - text: "文采斐然"
+- raw: "务农"
+  splits:
+  - text: "务农"
+- raw: "农家"
+  splits:
+  - text: "农家"
+- raw: "在世神农"
+  splits:
+  - text: "在世神农"
+- raw: "能工巧匠"
+  splits:
+  - text: "能工巧匠"
+- raw: "经商"
+  splits:
+  - text: "经商"
+- raw: "善贾"
+  splits:
+  - text: "善贾"
+- raw: "囤积居奇"
+  splits:
+  - text: "囤积居奇"
+- raw: "从政"
+  splits:
+  - text: "从政"
+- raw: "仕官"
+  splits:
+  - text: "仕官"
+- raw: "位极人臣"
+  splits:
+  - text: "位极人臣"
+- raw: "杂学"
+  splits:
+  - text: "杂学"
+- raw: "通才"
+  splits:
+  - text: "通才"
+- raw: "博学多才"
+  splits:
+  - text: "博学多才"
+- raw: "淡泊"
+  splits:
+  - text: "淡泊"
+- raw: "隐士"
+  splits:
+  - text: "隐士"
+- raw: "避世绝俗"
+  splits:
+  - text: "避世绝俗"
+- raw: "儒术"
+  splits:
+  - text: "儒术"
+- raw: "儒生"
+  splits:
+  - text: "儒生"
+- raw: "鸿儒大学"
+  splits:
+  - text: "鸿儒大学"
+- raw: "修道"
+  splits:
+  - text: "修道"
+- raw: "道士"
+  splits:
+  - text: "道士"
+- raw: "仙风道骨"
+  splits:
+  - text: "仙风道骨"
+- raw: "学佛"
+  splits:
+  - text: "学佛"
+- raw: "禅师"
+  splits:
+  - text: "禅师"
+- raw: "四大皆空"
+  splits:
+  - text: "四大皆空"
+- raw: "行乞"
+  splits:
+  - text: "行乞"
+- raw: "化缘"
+  splits:
+  - text: "化缘"
+- raw: "卜算"
+  splits:
+  - text: "卜算"
+- raw: "相士"
+  splits:
+  - text: "相士"
+- raw: "未卜先知"
+  splits:
+  - text: "未卜先知"
+- raw: "侠义无双"
+  splits:
+  - text: "侠义无双"
+- raw: "嗜赌如命"
+  splits:
+  - text: "嗜赌如命"
+- raw: "赌运亨通"
+  splits:
+  - text: "赌运亨通"
+- raw: "酒鬼"
+  splits:
+  - text: "酒鬼"
+- raw: "放歌纵酒"
+  splits:
+  - text: "放歌纵酒"
+- raw: "醉生梦死"
+  splits:
+  - text: "醉生梦死"
+- raw: "食客"
+  splits:
+  - text: "食客"
+- raw: "大快朵颐"
+  splits:
+  - text: "大快朵颐"
+- raw: "饕餮盛宴"
+  splits:
+  - text: "饕餮盛宴"
+- raw: "收藏"
+  splits:
+  - text: "收藏"
+- raw: "去伪存真"
+  splits:
+  - text: "去伪存真"
+- raw: "慧眼独具"
+  splits:
+  - text: "慧眼独具"
+- raw: "骑术"
+  splits:
+  - text: "骑术"
+- raw: "纵马驰骋"
+  splits:
+  - text: "纵马驰骋"
+- raw: "一骑绝尘"
+  splits:
+  - text: "一骑绝尘"
+- raw: "读书"
+  splits:
+  - text: "读书"
+- raw: "博览群书"
+  splits:
+  - text: "博览群书"
+- raw: "皓首穷经"
+  splits:
+  - text: "皓首穷经"
+- raw: "瑶琴"
+  splits:
+  - text: "瑶琴"
+- raw: "余音绕梁"
+  splits:
+  - text: "余音绕梁"
+- raw: "鸾吟凤唱"
+  splits:
+  - text: "鸾吟凤唱"
+- raw: "弈棋"
+  splits:
+  - text: "弈棋"
+- raw: "棋高一着"
+  splits:
+  - text: "棋高一着"
+- raw: "神机妙算"
+  splits:
+  - text: "神机妙算"
+- raw: "书法"
+  splits:
+  - text: "书法"
+- raw: "笔走龙蛇"
+  splits:
+  - text: "笔走龙蛇"
+- raw: "铁画银钩"
+  splits:
+  - text: "铁画银钩"
+- raw: "绘画"
+  splits:
+  - text: "绘画"
+- raw: "丹青妙手"
+  splits:
+  - text: "丹青妙手"
+- raw: "妙至毫巅"
+  splits:
+  - text: "妙至毫巅"
+- raw: "吟诗"
+  splits:
+  - text: "吟诗"
+- raw: "文思泉涌"
+  splits:
+  - text: "文思泉涌"
+- raw: "七步成诗"
+  splits:
+  - text: "七步成诗"
+- raw: "狩猎"
+  splits:
+  - text: "狩猎"
+- raw: "飞鹰走犬"
+  splits:
+  - text: "飞鹰走犬"
+- raw: "苍鹰搏兔"
+  splits:
+  - text: "苍鹰搏兔"
+- raw: "云游"
+  splits:
+  - text: "云游"
+- raw: "游山玩水"
+  splits:
+  - text: "游山玩水"
+- raw: "浪迹天涯"
+  splits:
+  - text: "浪迹天涯"
+- raw: "静修"
+  splits:
+  - text: "静修"
+- raw: "蛰居偃伏"
+  splits:
+  - text: "蛰居偃伏"
+- raw: "面壁功深"
+  splits:
+  - text: "面壁功深"
+- raw: "舞技"
+  splits:
+  - text: "舞技"
+- raw: "舞态生风"
+  splits:
+  - text: "舞态生风"
+- raw: "羽衣蹁跹"
+  splits:
+  - text: "羽衣蹁跹"
+- raw: "随从"
+  splits:
+  - text: "随从"
+- raw: "唯命是从"
+  splits:
+  - text: "唯命是从"
+- raw: "精明强干"
+  splits:
+  - text: "精明强干"
+- raw: "军师"
+  splits:
+  - text: "军师"
+- raw: "排兵布阵"
+  splits:
+  - text: "排兵布阵"
+- raw: "运筹帷幄"
+  splits:
+  - text: "运筹帷幄"
+- raw: "领袖"
+  splits:
+  - text: "领袖"
+- raw: "胸怀大志"
+  splits:
+  - text: "胸怀大志"
+- raw: "雄才伟略"
+  splits:
+  - text: "雄才伟略"
+- raw: "先锋"
+  splits:
+  - text: "先锋"
+- raw: "奋勇当先"
+  splits:
+  - text: "奋勇当先"
+- raw: "背水一战"
+  splits:
+  - text: "背水一战"
+- raw: "守备"
+  splits:
+  - text: "守备"
+- raw: "戒备森严"
+  splits:
+  - text: "戒备森严"
+- raw: "严防死守"
+  splits:
+  - text: "严防死守"
+- raw: "游斗"
+  splits:
+  - text: "游斗"
+- raw: "快步流星"
+  splits:
+  - text: "快步流星"
+- raw: "千里奔袭"
+  splits:
+  - text: "千里奔袭"
+- raw: "精力充沛"
+  splits:
+  - text: "精力充沛"
+- raw: "腊八粥"
+  splits:
+  - text: "腊八粥"
+- raw: "微醺"
+  splits:
+  - text: "微醺"
+- raw: "大醉"
+  splits:
+  - text: "大醉"
+- raw: "酩酊"
+  splits:
+  - text: "酩酊"
+- raw: "宴会无趣"
+  splits:
+  - text: "宴会无趣"
+- raw: "宴会平平"
+  splits:
+  - text: "宴会平平"
+- raw: "宴会满意"
+  splits:
+  - text: "宴会满意"
+- raw: "宴会欢喜"
+  splits:
+  - text: "宴会欢喜"
+- raw: "宴会极乐"
+  splits:
+  - text: "宴会极乐"
+- raw: "赌运"
+  splits:
+  - text: "赌运"
+- raw: "霉运"
+  splits:
+  - text: "霉运"
+- raw: "论胜"
+  splits:
+  - text: "论胜"
+- raw: "论败"
+  splits:
+  - text: "论败"
+- raw: "轻症"
+  splits:
+  - text: "轻症"
+- raw: "中症"
+  splits:
+  - text: "中症"
+- raw: "重症"
+  splits:
+  - text: "重症"
+- raw: "危症"
+  splits:
+  - text: "危症"
+- raw: "气息不调"
+  splits:
+  - text: "气息不调"
+- raw: "内息紊乱"
+  splits:
+  - text: "内息紊乱"
+- raw: "经脉受阻"
+  splits:
+  - text: "经脉受阻"
+- raw: "断臂"
+  splits:
+  - text: "断臂"
+- raw: "跛足"
+  splits:
+  - text: "跛足"
+- raw: "目渺"
+  splits:
+  - text: "目渺"
+- raw: "理论心得"
+  splits:
+  - text: "理论心得"
+- raw: "实战心得"
+  splits:
+  - text: "实战心得"
+- raw: "机关木臂"
+  splits:
+  - text: "机关木臂"
+- raw: "机关石臂"
+  splits:
+  - text: "机关石臂"
+- raw: "机关铁臂"
+  splits:
+  - text: "机关铁臂"
+- raw: "机关木轮"
+  splits:
+  - text: "机关木轮"
+- raw: "机关石轮"
+  splits:
+  - text: "机关石轮"
+- raw: "机关铁轮"
+  splits:
+  - text: "机关铁轮"
+- raw: "机关木甲"
+  splits:
+  - text: "机关木甲"
+- raw: "机关石甲"
+  splits:
+  - text: "机关石甲"
+- raw: "机关铁甲"
+  splits:
+  - text: "机关铁甲"
+- raw: "机关大师"
+  splits:
+  - text: "机关大师"
+- raw: "鲁班在世"
+  splits:
+  - text: "鲁班在世"
+- raw: "机关义手"
+  splits:
+  - text: "机关义手"
+- raw: "手铐"
+  splits:
+  - text: "手铐"
+- raw: "脚镣"
+  splits:
+  - text: "脚镣"
+- raw: "登顶泰岳"
+  splits:
+  - text: "登顶泰岳"
+- raw: "负心人"
+  splits:
+  - text: "负心人"
+- raw: "修行心得"
+  splits:
+  - text: "修行心得"
+- raw: "刮骨疗毒"
+  splits:
+  - text: "刮骨疗毒"
+- raw: "百毒不侵"
+  splits:
+  - text: "百毒不侵"
+- raw: "背叛师门"
+  splits:
+  - text: "背叛师门"
+- raw: "吐纳法"
+  splits:
+  - text: "吐纳法"
+- raw: "脉络诀"
+  splits:
+  - text: "脉络诀"
+- raw: "气血功"
+  splits:
+  - text: "气血功"
+- raw: "飞毛腿"
+  splits:
+  - text: "飞毛腿"
+- raw: "轻身术"
+  splits:
+  - text: "轻身术"
+- raw: "梅花桩"
+  splits:
+  - text: "梅花桩"
+- raw: "铁布衫"
+  splits:
+  - text: "铁布衫"
+- raw: "千斤坠"
+  splits:
+  - text: "千斤坠"
+- raw: "胸口碎大石"
+  splits:
+  - text: "胸口碎大石"
+- raw: "十段锦长拳"
+  splits:
+  - text: "十段锦长拳"
+- raw: "禁军拳术"
+  splits:
+  - text: "禁军拳术"
+- raw: "木剑式"
+  splits:
+  - text: "木剑式"
+- raw: "禁军剑术"
+  splits:
+  - text: "禁军剑术"
+- raw: "拔刀功"
+  splits:
+  - text: "拔刀功"
+- raw: "劈柴刀法"
+  splits:
+  - text: "劈柴刀法"
+- raw: "禁军刀术"
+  splits:
+  - text: "禁军刀术"
+- raw: "太祖棍法"
+  splits:
+  - text: "太祖棍法"
+- raw: "猎户叉功"
+  splits:
+  - text: "猎户叉功"
+- raw: "禁军枪术"
+  splits:
+  - text: "禁军枪术"
+- raw: "三路鞭法"
+  splits:
+  - text: "三路鞭法"
+- raw: "伐木斧功"
+  splits:
+  - text: "伐木斧功"
+- raw: "禁军钩术"
+  splits:
+  - text: "禁军钩术"
+- raw: "飞镖要诀"
+  splits:
+  - text: "飞镖要诀"
+- raw: "飞针要诀"
+  splits:
+  - text: "飞针要诀"
+- raw: "飞刀要诀"
+  splits:
+  - text: "飞刀要诀"
+- raw: "开声贯气法"
+  splits:
+  - text: "开声贯气法"
+- raw: "气守丹田法"
+  splits:
+  - text: "气守丹田法"
+- raw: "舒筋通络法"
+  splits:
+  - text: "舒筋通络法"
+- raw: "四段功法"
+  splits:
+  - text: "四段功法"
+- raw: "玉带诀"
+  splits:
+  - text: "玉带诀"
+- raw: "五指点石功"
+  splits:
+  - text: "五指点石功"
+- raw: "排打硬功"
+  splits:
+  - text: "排打硬功"
+- raw: "鞭气劲"
+  splits:
+  - text: "鞭气劲"
+- raw: "实腹鼓气功"
+  splits:
+  - text: "实腹鼓气功"
+- raw: "热炎功"
+  splits:
+  - text: "热炎功"
+- raw: "草上飞"
+  splits:
+  - text: "草上飞"
+- raw: "泥潭功"
+  splits:
+  - text: "泥潭功"
+- raw: "走壁功"
+  splits:
+  - text: "走壁功"
+- raw: "鲤鱼跃龙门"
+  splits:
+  - text: "鲤鱼跃龙门"
+- raw: "一线穿"
+  splits:
+  - text: "一线穿"
+- raw: "雁回旋"
+  splits:
+  - text: "雁回旋"
+- raw: "跑铁索"
+  splits:
+  - text: "跑铁索"
+- raw: "穿帘步"
+  splits:
+  - text: "穿帘步"
+- raw: "缸沿功"
+  splits:
+  - text: "缸沿功"
+- raw: "铁球滚"
+  splits:
+  - text: "铁球滚"
+- raw: "开碑劲"
+  splits:
+  - text: "开碑劲"
+- raw: "龟甲功"
+  splits:
+  - text: "龟甲功"
+- raw: "石锁功"
+  splits:
+  - text: "石锁功"
+- raw: "拔山功"
+  splits:
+  - text: "拔山功"
+- raw: "倒踢腿"
+  splits:
+  - text: "倒踢腿"
+- raw: "柔身术"
+  splits:
+  - text: "柔身术"
+- raw: "拔钉功"
+  splits:
+  - text: "拔钉功"
+- raw: "闪战法"
+  splits:
+  - text: "闪战法"
+- raw: "铁牛犁地"
+  splits:
+  - text: "铁牛犁地"
+- raw: "乱弹琵琶"
+  splits:
+  - text: "乱弹琵琶"
+- raw: "八卦掌法"
+  splits:
+  - text: "八卦掌法"
+- raw: "通臂拳"
+  splits:
+  - text: "通臂拳"
+- raw: "燕青拳"
+  splits:
+  - text: "燕青拳"
+- raw: "野狐拳"
+  splits:
+  - text: "野狐拳"
+- raw: "螳螂拳"
+  splits:
+  - text: "螳螂拳"
+- raw: "八极拳"
+  splits:
+  - text: "八极拳"
+- raw: "赤尻连拳"
+  splits:
+  - text: "赤尻连拳"
+- raw: "连环掌法"
+  splits:
+  - text: "连环掌法"
+- raw: "岳家拳"
+  splits:
+  - text: "岳家拳"
+- raw: "形意拳"
+  splits:
+  - text: "形意拳"
+- raw: "八卦剑法"
+  splits:
+  - text: "八卦剑法"
+- raw: "连环剑法"
+  splits:
+  - text: "连环剑法"
+- raw: "雷震剑法"
+  splits:
+  - text: "雷震剑法"
+- raw: "白马剑法"
+  splits:
+  - text: "白马剑法"
+- raw: "云雾剑法"
+  splits:
+  - text: "云雾剑法"
+- raw: "无量剑法"
+  splits:
+  - text: "无量剑法"
+- raw: "迅剑诀"
+  splits:
+  - text: "迅剑诀"
+- raw: "闪剑"
+  splits:
+  - text: "闪剑"
+- raw: "开阖剑术"
+  splits:
+  - text: "开阖剑术"
+- raw: "迎风剑法"
+  splits:
+  - text: "迎风剑法"
+- raw: "八卦刀法"
+  splits:
+  - text: "八卦刀法"
+- raw: "六合刀法"
+  splits:
+  - text: "六合刀法"
+- raw: "螳螂刀法"
+  splits:
+  - text: "螳螂刀法"
+- raw: "劈挂刀法"
+  splits:
+  - text: "劈挂刀法"
+- raw: "铁门闩刀法"
+  splits:
+  - text: "铁门闩刀法"
+- raw: "辛酉刀法"
+  splits:
+  - text: "辛酉刀法"
+- raw: "雁行刀"
+  splits:
+  - text: "雁行刀"
+- raw: "地堂刀法"
+  splits:
+  - text: "地堂刀法"
+- raw: "青龙刀法"
+  splits:
+  - text: "青龙刀法"
+- raw: "南山刀法"
+  splits:
+  - text: "南山刀法"
+- raw: "八卦棍法"
+  splits:
+  - text: "八卦棍法"
+- raw: "罗家枪法"
+  splits:
+  - text: "罗家枪法"
+- raw: "灵猿棍法"
+  splits:
+  - text: "灵猿棍法"
+- raw: "五郎棍法"
+  splits:
+  - text: "五郎棍法"
+- raw: "形意枪"
+  splits:
+  - text: "形意枪"
+- raw: "中平枪法"
+  splits:
+  - text: "中平枪法"
+- raw: "八母枪术"
+  splits:
+  - text: "八母枪术"
+- raw: "杨家枪法"
+  splits:
+  - text: "杨家枪法"
+- raw: "千钧棍法"
+  splits:
+  - text: "千钧棍法"
+- raw: "牛头钢叉功"
+  splits:
+  - text: "牛头钢叉功"
+- raw: "八卦鞭法"
+  splits:
+  - text: "八卦鞭法"
+- raw: "开山斧"
+  splits:
+  - text: "开山斧"
+- raw: "黄沙万里鞭"
+  splits:
+  - text: "黄沙万里鞭"
+- raw: "碎石铁鞭"
+  splits:
+  - text: "碎石铁鞭"
+- raw: "九节鞭法"
+  splits:
+  - text: "九节鞭法"
+- raw: "海叟钩法"
+  splits:
+  - text: "海叟钩法"
+- raw: "连环对刺"
+  splits:
+  - text: "连环对刺"
+- raw: "铁蜈钩"
+  splits:
+  - text: "铁蜈钩"
+- raw: "清凉扇法"
+  splits:
+  - text: "清凉扇法"
+- raw: "闪电五连鞭"
+  splits:
+  - text: "闪电五连鞭"
+- raw: "掷短斧"
+  splits:
+  - text: "掷短斧"
+- raw: "梅花镖"
+  splits:
+  - text: "梅花镖"
+- raw: "玉蜂针"
+  splits:
+  - text: "玉蜂针"
+- raw: "白翎箭"
+  splits:
+  - text: "白翎箭"
+- raw: "枣核钉"
+  splits:
+  - text: "枣核钉"
+- raw: "甩袖箭"
+  splits:
+  - text: "甩袖箭"
+- raw: "棉套索"
+  splits:
+  - text: "棉套索"
+- raw: "系绳镖"
+  splits:
+  - text: "系绳镖"
+- raw: "铁莲花"
+  splits:
+  - text: "铁莲花"
+- raw: "飞手戟"
+  splits:
+  - text: "飞手戟"
+- raw: "硬气功"
+  splits:
+  - text: "硬气功"
+- raw: "归元吐纳功"
+  splits:
+  - text: "归元吐纳功"
+- raw: "心意气混元功"
+  splits:
+  - text: "心意气混元功"
+- raw: "金刚心法"
+  splits:
+  - text: "金刚心法"
+- raw: "轰天掣地诀"
+  splits:
+  - text: "轰天掣地诀"
+- raw: "普贤心经"
+  splits:
+  - text: "普贤心经"
+- raw: "灵台清明功"
+  splits:
+  - text: "灵台清明功"
+- raw: "紫气氤氲法"
+  splits:
+  - text: "紫气氤氲法"
+- raw: "沸血法"
+  splits:
+  - text: "沸血法"
+- raw: "软玄功"
+  splits:
+  - text: "软玄功"
+- raw: "燕子三抄水"
+  splits:
+  - text: "燕子三抄水"
+- raw: "上高楼"
+  splits:
+  - text: "上高楼"
+- raw: "壁虎游墙"
+  splits:
+  - text: "壁虎游墙"
+- raw: "磐罡步"
+  splits:
+  - text: "磐罡步"
+- raw: "金雁功"
+  splits:
+  - text: "金雁功"
+- raw: "白马悬蹄"
+  splits:
+  - text: "白马悬蹄"
+- raw: "天云步"
+  splits:
+  - text: "天云步"
+- raw: "翻腾术"
+  splits:
+  - text: "翻腾术"
+- raw: "别离步"
+  splits:
+  - text: "别离步"
+- raw: "陆地飞行术"
+  splits:
+  - text: "陆地飞行术"
+- raw: "四两拨千斤"
+  splits:
+  - text: "四两拨千斤"
+- raw: "铜头铁臂功"
+  splits:
+  - text: "铜头铁臂功"
+- raw: "隔山打牛"
+  splits:
+  - text: "隔山打牛"
+- raw: "一指金刚法"
+  splits:
+  - text: "一指金刚法"
+- raw: "千层纸功"
+  splits:
+  - text: "千层纸功"
+- raw: "分水功"
+  splits:
+  - text: "分水功"
+- raw: "柔骨摆柳功"
+  splits:
+  - text: "柔骨摆柳功"
+- raw: "卧虎功"
+  splits:
+  - text: "卧虎功"
+- raw: "乱环扑"
+  splits:
+  - text: "乱环扑"
+- raw: "霸王肘"
+  splits:
+  - text: "霸王肘"
+- raw: "摔碑手"
+  splits:
+  - text: "摔碑手"
+- raw: "追风短打"
+  splits:
+  - text: "追风短打"
+- raw: "惊涛掌"
+  splits:
+  - text: "惊涛掌"
+- raw: "猛禽手"
+  splits:
+  - text: "猛禽手"
+- raw: "铁砂掌"
+  splits:
+  - text: "铁砂掌"
+- raw: "合盘掌"
+  splits:
+  - text: "合盘掌"
+- raw: "伏虎拳"
+  splits:
+  - text: "伏虎拳"
+- raw: "大擒拿手"
+  splits:
+  - text: "大擒拿手"
+- raw: "铁琵琶手"
+  splits:
+  - text: "铁琵琶手"
+- raw: "二郎担山掌"
+  splits:
+  - text: "二郎担山掌"
+- raw: "飞星快剑"
+  splits:
+  - text: "飞星快剑"
+- raw: "快慢十八路"
+  splits:
+  - text: "快慢十八路"
+- raw: "泼墨剑法"
+  splits:
+  - text: "泼墨剑法"
+- raw: "北斗剑法"
+  splits:
+  - text: "北斗剑法"
+- raw: "雨打飞花剑"
+  splits:
+  - text: "雨打飞花剑"
+- raw: "浣花流水剑"
+  splits:
+  - text: "浣花流水剑"
+- raw: "一字电剑"
+  splits:
+  - text: "一字电剑"
+- raw: "周公剑法"
+  splits:
+  - text: "周公剑法"
+- raw: "五大夫剑"
+  splits:
+  - text: "五大夫剑"
+- raw: "霜花剑式"
+  splits:
+  - text: "霜花剑式"
+- raw: "八面破身刀"
+  splits:
+  - text: "八面破身刀"
+- raw: "逐浪刀法"
+  splits:
+  - text: "逐浪刀法"
+- raw: "鸳鸯刀法"
+  splits:
+  - text: "鸳鸯刀法"
+- raw: "五虎断门刀"
+  splits:
+  - text: "五虎断门刀"
+- raw: "八阵盘龙刀"
+  splits:
+  - text: "八阵盘龙刀"
+- raw: "春秋刀术"
+  splits:
+  - text: "春秋刀术"
+- raw: "百兽刀法"
+  splits:
+  - text: "百兽刀法"
+- raw: "荡寇刀法"
+  splits:
+  - text: "荡寇刀法"
+- raw: "雷鸣刀法"
+  splits:
+  - text: "雷鸣刀法"
+- raw: "泰山十八刀"
+  splits:
+  - text: "泰山十八刀"
+- raw: "二十四路枪势"
+  splits:
+  - text: "二十四路枪势"
+- raw: "泼水杖法"
+  splits:
+  - text: "泼水杖法"
+- raw: "六合大枪"
+  splits:
+  - text: "六合大枪"
+- raw: "小夜叉棍法"
+  splits:
+  - text: "小夜叉棍法"
+- raw: "醉八仙棍法"
+  splits:
+  - text: "醉八仙棍法"
+- raw: "蟠龙棍法"
+  splits:
+  - text: "蟠龙棍法"
+- raw: "大夜叉棍法"
+  splits:
+  - text: "大夜叉棍法"
+- raw: "百变菱枪"
+  splits:
+  - text: "百变菱枪"
+- raw: "问天枪诀"
+  splits:
+  - text: "问天枪诀"
+- raw: "空灵杖法"
+  splits:
+  - text: "空灵杖法"
+- raw: "狂风扫雷扇"
+  splits:
+  - text: "狂风扫雷扇"
+- raw: "蛇鹤八打"
+  splits:
+  - text: "蛇鹤八打"
+- raw: "金龙鞭法"
+  splits:
+  - text: "金龙鞭法"
+- raw: "夺命鞭法"
+  splits:
+  - text: "夺命鞭法"
+- raw: "乱披风锤法"
+  splits:
+  - text: "乱披风锤法"
+- raw: "精钢蟹钳功"
+  splits:
+  - text: "精钢蟹钳功"
+- raw: "普门杖法"
+  splits:
+  - text: "普门杖法"
+- raw: "盘根错节斧"
+  splits:
+  - text: "盘根错节斧"
+- raw: "回打软鞭式"
+  splits:
+  - text: "回打软鞭式"
+- raw: "呼延鞭法"
+  splits:
+  - text: "呼延鞭法"
+- raw: "八门飞刀术"
+  splits:
+  - text: "八门飞刀术"
+- raw: "乌叶镖"
+  splits:
+  - text: "乌叶镖"
+- raw: "龙须针"
+  splits:
+  - text: "龙须针"
+- raw: "铁链飞爪"
+  splits:
+  - text: "铁链飞爪"
+- raw: "流星锤"
+  splits:
+  - text: "流星锤"
+- raw: "银飞梭"
+  splits:
+  - text: "银飞梭"
+- raw: "铁索渔网"
+  splits:
+  - text: "铁索渔网"
+- raw: "含沙射影"
+  splits:
+  - text: "含沙射影"
+- raw: "刀叶扇"
+  splits:
+  - text: "刀叶扇"
+- raw: "乾坤飞轮"
+  splits:
+  - text: "乾坤飞轮"
+- raw: "潜渊心经"
+  splits:
+  - text: "潜渊心经"
+- raw: "五岳独尊功"
+  splits:
+  - text: "五岳独尊功"
+- raw: "乾元功"
+  splits:
+  - text: "乾元功"
+- raw: "潮起月盈功"
+  splits:
+  - text: "潮起月盈功"
+- raw: "太上十三经"
+  splits:
+  - text: "太上十三经"
+- raw: "水上漂"
+  splits:
+  - text: "水上漂"
+- raw: "七步追魂"
+  splits:
+  - text: "七步追魂"
+- raw: "八步赶蝉"
+  splits:
+  - text: "八步赶蝉"
+- raw: "踏空行"
+  splits:
+  - text: "踏空行"
+- raw: "飒沓流星步"
+  splits:
+  - text: "飒沓流星步"
+- raw: "虎鹤双形"
+  splits:
+  - text: "虎鹤双形"
+- raw: "真元护体"
+  splits:
+  - text: "真元护体"
+- raw: "五方揭谛功"
+  splits:
+  - text: "五方揭谛功"
+- raw: "熊形虎相"
+  splits:
+  - text: "熊形虎相"
+- raw: "雷霆万钧"
+  splits:
+  - text: "雷霆万钧"
+- raw: "飞凤手"
+  splits:
+  - text: "飞凤手"
+- raw: "缠丝擒拿手"
+  splits:
+  - text: "缠丝擒拿手"
+- raw: "百花错拳"
+  splits:
+  - text: "百花错拳"
+- raw: "劈金碎玉掌"
+  splits:
+  - text: "劈金碎玉掌"
+- raw: "分筋错骨手"
+  splits:
+  - text: "分筋错骨手"
+- raw: "追魂夺命剑"
+  splits:
+  - text: "追魂夺命剑"
+- raw: "子午十二剑"
+  splits:
+  - text: "子午十二剑"
+- raw: "点苍遗剑"
+  splits:
+  - text: "点苍遗剑"
+- raw: "无影乱剑"
+  splits:
+  - text: "无影乱剑"
+- raw: "越女剑法"
+  splits:
+  - text: "越女剑法"
+- raw: "两仪刀法"
+  splits:
+  - text: "两仪刀法"
+- raw: "羽衣刀法"
+  splits:
+  - text: "羽衣刀法"
+- raw: "空空玄玄刀"
+  splits:
+  - text: "空空玄玄刀"
+- raw: "东瀛刀术"
+  splits:
+  - text: "东瀛刀术"
+- raw: "升天斩"
+  splits:
+  - text: "升天斩"
+- raw: "阴符枪谱"
+  splits:
+  - text: "阴符枪谱"
+- raw: "灵蛇杖法"
+  splits:
+  - text: "灵蛇杖法"
+- raw: "燎原百击枪"
+  splits:
+  - text: "燎原百击枪"
+- raw: "焚天棍影"
+  splits:
+  - text: "焚天棍影"
+- raw: "百鸟朝凤枪"
+  splits:
+  - text: "百鸟朝凤枪"
+- raw: "毗卢鞭法"
+  splits:
+  - text: "毗卢鞭法"
+- raw: "子午鸳鸯钺"
+  splits:
+  - text: "子午鸳鸯钺"
+- raw: "判官笔法"
+  splits:
+  - text: "判官笔法"
+- raw: "月牙弯钩"
+  splits:
+  - text: "月牙弯钩"
+- raw: "开天辟地斧"
+  splits:
+  - text: "开天辟地斧"
+- raw: "雷公钻"
+  splits:
+  - text: "雷公钻"
+- raw: "子母如意珠"
+  splits:
+  - text: "子母如意珠"
+- raw: "腐骨针"
+  splits:
+  - text: "腐骨针"
+- raw: "赤链蛇锥"
+  splits:
+  - text: "赤链蛇锥"
+- raw: "阴冥砂"
+  splits:
+  - text: "阴冥砂"
+- raw: "六言真经"
+  splits:
+  - text: "六言真经"
+- raw: "先天功"
+  splits:
+  - text: "先天功"
+- raw: "元神出窍功"
+  splits:
+  - text: "元神出窍功"
+- raw: "如影随形"
+  splits:
+  - text: "如影随形"
+- raw: "攀云乘龙"
+  splits:
+  - text: "攀云乘龙"
+- raw: "嫦娥奔月"
+  splits:
+  - text: "嫦娥奔月"
+- raw: "刀枪不入法"
+  splits:
+  - text: "刀枪不入法"
+- raw: "蛤蟆奇功"
+  splits:
+  - text: "蛤蟆奇功"
+- raw: "梦斩真龙"
+  splits:
+  - text: "梦斩真龙"
+- raw: "泫然指法"
+  splits:
+  - text: "泫然指法"
+- raw: "大风云手"
+  splits:
+  - text: "大风云手"
+- raw: "龙爪十缠"
+  splits:
+  - text: "龙爪十缠"
+- raw: "无名剑法"
+  splits:
+  - text: "无名剑法"
+- raw: "天意剑诀"
+  splits:
+  - text: "天意剑诀"
+- raw: "太白剑意"
+  splits:
+  - text: "太白剑意"
+- raw: "万壑刀法"
+  splits:
+  - text: "万壑刀法"
+- raw: "雾隐云龙刀"
+  splits:
+  - text: "雾隐云龙刀"
+- raw: "战八方藏刀式"
+  splits:
+  - text: "战八方藏刀式"
+- raw: "披风七杀戟"
+  splits:
+  - text: "披风七杀戟"
+- raw: "傲世奇枪"
+  splits:
+  - text: "傲世奇枪"
+- raw: "当头棒喝"
+  splits:
+  - text: "当头棒喝"
+- raw: "银索金玲"
+  splits:
+  - text: "银索金玲"
+- raw: "龙头铁铡功"
+  splits:
+  - text: "龙头铁铡功"
+- raw: "五蟒狂鞭"
+  splits:
+  - text: "五蟒狂鞭"
+- raw: "阎王帖"
+  splits:
+  - text: "阎王帖"
+- raw: "追魂魔针"
+  splits:
+  - text: "追魂魔针"
+- raw: "善恶镖"
+  splits:
+  - text: "善恶镖"
+- raw: "元始天功"
+  splits:
+  - text: "元始天功"
+- raw: "飘飘欲仙"
+  splits:
+  - text: "飘飘欲仙"
+- raw: "虎啸龙吟"
+  splits:
+  - text: "虎啸龙吟"
+- raw: "照影神拳"
+  splits:
+  - text: "照影神拳"
+- raw: "诛仙剑法"
+  splits:
+  - text: "诛仙剑法"
+- raw: "九州风雷刀"
+  splits:
+  - text: "九州风雷刀"
+- raw: "大闹天宫棍"
+  splits:
+  - text: "大闹天宫棍"
+- raw: "碧海潮生曲"
+  splits:
+  - text: "碧海潮生曲"
+- raw: "多情飞刀"
+  splits:
+  - text: "多情飞刀"
+- raw: "哭面功"
+  splits:
+  - text: "哭面功"
+- raw: "爬竿术"
+  splits:
+  - text: "爬竿术"
+- raw: "耍狗熊"
+  splits:
+  - text: "耍狗熊"
+- raw: "石灰散"
+  splits:
+  - text: "石灰散"
+- raw: "金钱镖"
+  splits:
+  - text: "金钱镖"
+- raw: "刑场刀法"
+  splits:
+  - text: "刑场刀法"
+- raw: "怒面功"
+  splits:
+  - text: "怒面功"
+- raw: "走马灯"
+  splits:
+  - text: "走马灯"
+- raw: "虎口吞枪"
+  splits:
+  - text: "虎口吞枪"
+- raw: "银屑粉"
+  splits:
+  - text: "银屑粉"
+- raw: "铜蟾蜍"
+  splits:
+  - text: "铜蟾蜍"
+- raw: "两面三刀法"
+  splits:
+  - text: "两面三刀法"
+- raw: "知足常乐功"
+  splits:
+  - text: "知足常乐功"
+- raw: "脚踏飞燕"
+  splits:
+  - text: "脚踏飞燕"
+- raw: "嬉皮笑脸"
+  splits:
+  - text: "嬉皮笑脸"
+- raw: "长乐散"
+  splits:
+  - text: "长乐散"
+- raw: "长乐刀法"
+  splits:
+  - text: "长乐刀法"
+- raw: "笑里藏刀式"
+  splits:
+  - text: "笑里藏刀式"
+- raw: "活弥勒心法"
+  splits:
+  - text: "活弥勒心法"
+- raw: "得意春风步"
+  splits:
+  - text: "得意春风步"
+- raw: "放浪形骸"
+  splits:
+  - text: "放浪形骸"
+- raw: "极乐刺"
+  splits:
+  - text: "极乐刺"
+- raw: "游龙戏凤刀"
+  splits:
+  - text: "游龙戏凤刀"
+- raw: "一刀两断法"
+  splits:
+  - text: "一刀两断法"
+- raw: "喜怒哀乐大法"
+  splits:
+  - text: "喜怒哀乐大法"
+- raw: "日月凌空"
+  splits:
+  - text: "日月凌空"
+- raw: "千金一掷"
+  splits:
+  - text: "千金一掷"
+- raw: "醉阎罗刀法"
+  splits:
+  - text: "醉阎罗刀法"
+- raw: "恩断义绝刀法"
+  splits:
+  - text: "恩断义绝刀法"
+- raw: "醉梦鱼龙舞"
+  splits:
+  - text: "醉梦鱼龙舞"
+- raw: "净乐琉璃刀"
+  splits:
+  - text: "净乐琉璃刀"
+- raw: "阴手伤人法"
+  splits:
+  - text: "阴手伤人法"
+- raw: "走房檐"
+  splits:
+  - text: "走房檐"
+- raw: "心眼功"
+  splits:
+  - text: "心眼功"
+- raw: "毒蒺藜"
+  splits:
+  - text: "毒蒺藜"
+- raw: "绣花针"
+  splits:
+  - text: "绣花针"
+- raw: "三寸钉"
+  splits:
+  - text: "三寸钉"
+- raw: "袖里藏刀"
+  splits:
+  - text: "袖里藏刀"
+- raw: "七窍玲珑功"
+  splits:
+  - text: "七窍玲珑功"
+- raw: "鹞子翻身"
+  splits:
+  - text: "鹞子翻身"
+- raw: "隐匿术"
+  splits:
+  - text: "隐匿术"
+- raw: "错骨钩"
+  splits:
+  - text: "错骨钩"
+- raw: "牛毛针"
+  splits:
+  - text: "牛毛针"
+- raw: "青蜂钉"
+  splits:
+  - text: "青蜂钉"
+- raw: "机关弹刀"
+  splits:
+  - text: "机关弹刀"
+- raw: "九转飞芒功"
+  splits:
+  - text: "九转飞芒功"
+- raw: "金蝉脱壳"
+  splits:
+  - text: "金蝉脱壳"
+- raw: "袖里乾坤"
+  splits:
+  - text: "袖里乾坤"
+- raw: "银丝网"
+  splits:
+  - text: "银丝网"
+- raw: "断肠针"
+  splits:
+  - text: "断肠针"
+- raw: "穿心钉"
+  splits:
+  - text: "穿心钉"
+- raw: "飞叶斩片刀"
+  splits:
+  - text: "飞叶斩片刀"
+- raw: "百手千指功"
+  splits:
+  - text: "百手千指功"
+- raw: "鬼影重重"
+  splits:
+  - text: "鬼影重重"
+- raw: "绵里藏针"
+  splits:
+  - text: "绵里藏针"
+- raw: "孔雀翎"
+  splits:
+  - text: "孔雀翎"
+- raw: "玉髓冰魄针"
+  splits:
+  - text: "玉髓冰魄针"
+- raw: "碎颅钉"
+  splits:
+  - text: "碎颅钉"
+- raw: "百转千折刀"
+  splits:
+  - text: "百转千折刀"
+- raw: "天阴柔劲"
+  splits:
+  - text: "天阴柔劲"
+- raw: "观音泪"
+  splits:
+  - text: "观音泪"
+- raw: "暴雨梨花针"
+  splits:
+  - text: "暴雨梨花针"
+- raw: "七星透骨钉"
+  splits:
+  - text: "七星透骨钉"
+- raw: "万化玄机刀"
+  splits:
+  - text: "万化玄机刀"
+- raw: "漫天花雨"
+  splits:
+  - text: "漫天花雨"
+- raw: "九天罗候针"
+  splits:
+  - text: "九天罗候针"
+- raw: "千金要方"
+  splits:
+  - text: "千金要方"
+- raw: "悬绳功"
+  splits:
+  - text: "悬绳功"
+- raw: "推拿法"
+  splits:
+  - text: "推拿法"
+- raw: "微雨指法"
+  splits:
+  - text: "微雨指法"
+- raw: "化瘀掌"
+  splits:
+  - text: "化瘀掌"
+- raw: "药王针术"
+  splits:
+  - text: "药王针术"
+- raw: "采补养元功"
+  splits:
+  - text: "采补养元功"
+- raw: "采燕功"
+  splits:
+  - text: "采燕功"
+- raw: "回春丹方"
+  splits:
+  - text: "回春丹方"
+- raw: "指点十一式"
+  splits:
+  - text: "指点十一式"
+- raw: "春蚕掌"
+  splits:
+  - text: "春蚕掌"
+- raw: "芙蓉金针"
+  splits:
+  - text: "芙蓉金针"
+- raw: "金针伐脉术"
+  splits:
+  - text: "金针伐脉术"
+- raw: "灵鳌步"
+  splits:
+  - text: "灵鳌步"
+- raw: "金钗刮膜功"
+  splits:
+  - text: "金钗刮膜功"
+- raw: "凝血指"
+  splits:
+  - text: "凝血指"
+- raw: "摧心掌"
+  splits:
+  - text: "摧心掌"
+- raw: "天王补心针"
+  splits:
+  - text: "天王补心针"
+- raw: "扁鹊回春功"
+  splits:
+  - text: "扁鹊回春功"
+- raw: "女娲补天式"
+  splits:
+  - text: "女娲补天式"
+- raw: "移花接木"
+  splits:
+  - text: "移花接木"
+- raw: "九幽黄泉指"
+  splits:
+  - text: "九幽黄泉指"
+- raw: "药王毒手"
+  splits:
+  - text: "药王毒手"
+- raw: "扁鹊神针"
+  splits:
+  - text: "扁鹊神针"
+- raw: "神农本草秘要"
+  splits:
+  - text: "神农本草秘要"
+- raw: "枯骨生肉法"
+  splits:
+  - text: "枯骨生肉法"
+- raw: "大慈大悲指"
+  splits:
+  - text: "大慈大悲指"
+- raw: "化脉神掌"
+  splits:
+  - text: "化脉神掌"
+- raw: "无影神针"
+  splits:
+  - text: "无影神针"
+- raw: "黄帝秘经"
+  splits:
+  - text: "黄帝秘经"
+- raw: "灵犀一指"
+  splits:
+  - text: "灵犀一指"
+- raw: "敲碗诀"
+  splits:
+  - text: "敲碗诀"
+- raw: "野狗步"
+  splits:
+  - text: "野狗步"
+- raw: "快板功"
+  splits:
+  - text: "快板功"
+- raw: "五行六合拳"
+  splits:
+  - text: "五行六合拳"
+- raw: "快活十三掌"
+  splits:
+  - text: "快活十三掌"
+- raw: "铁扫帚"
+  splits:
+  - text: "铁扫帚"
+- raw: "花子棍"
+  splits:
+  - text: "花子棍"
+- raw: "内家数来宝"
+  splits:
+  - text: "内家数来宝"
+- raw: "鸟兽散"
+  splits:
+  - text: "鸟兽散"
+- raw: "花鼓戏"
+  splits:
+  - text: "花鼓戏"
+- raw: "沾衣十八跌"
+  splits:
+  - text: "沾衣十八跌"
+- raw: "醉拳"
+  splits:
+  - text: "醉拳"
+- raw: "拜年棍法"
+  splits:
+  - text: "拜年棍法"
+- raw: "双棍缠身"
+  splits:
+  - text: "双棍缠身"
+- raw: "莲花落心法"
+  splits:
+  - text: "莲花落心法"
+- raw: "死缠烂打"
+  splits:
+  - text: "死缠烂打"
+- raw: "布袋功"
+  splits:
+  - text: "布袋功"
+- raw: "莲花掌"
+  splits:
+  - text: "莲花掌"
+- raw: "铜锤手"
+  splits:
+  - text: "铜锤手"
+- raw: "莲花乱棍"
+  splits:
+  - text: "莲花乱棍"
+- raw: "哭丧棍法"
+  splits:
+  - text: "哭丧棍法"
+- raw: "混天功"
+  splits:
+  - text: "混天功"
+- raw: "逍遥游"
+  splits:
+  - text: "逍遥游"
+- raw: "妙手空空"
+  splits:
+  - text: "妙手空空"
+- raw: "鲲鹏拳法"
+  splits:
+  - text: "鲲鹏拳法"
+- raw: "铁蒲扇手"
+  splits:
+  - text: "铁蒲扇手"
+- raw: "奇门三才棍"
+  splits:
+  - text: "奇门三才棍"
+- raw: "威武棍法"
+  splits:
+  - text: "威武棍法"
+- raw: "混世天罡"
+  splits:
+  - text: "混世天罡"
+- raw: "虎落平阳"
+  splits:
+  - text: "虎落平阳"
+- raw: "睡梦罗汉拳"
+  splits:
+  - text: "睡梦罗汉拳"
+- raw: "酒仙散手"
+  splits:
+  - text: "酒仙散手"
+- raw: "吉祥如意棍"
+  splits:
+  - text: "吉祥如意棍"
+- raw: "黑白无常棍"
+  splits:
+  - text: "黑白无常棍"
+- raw: "降龙掌法"
+  splits:
+  - text: "降龙掌法"
+- raw: "打狗八绝棍"
+  splits:
+  - text: "打狗八绝棍"
+- raw: "禁军心法"
+  splits:
+  - text: "禁军心法"
+- raw: "从军行"
+  splits:
+  - text: "从军行"
+- raw: "举盾术"
+  splits:
+  - text: "举盾术"
+- raw: "薛家戟法"
+  splits:
+  - text: "薛家戟法"
+- raw: "岳家枪法"
+  splits:
+  - text: "岳家枪法"
+- raw: "舂米戈术"
+  splits:
+  - text: "舂米戈术"
+- raw: "四门刀法"
+  splits:
+  - text: "四门刀法"
+- raw: "羽林心法"
+  splits:
+  - text: "羽林心法"
+- raw: "衔枚疾走"
+  splits:
+  - text: "衔枚疾走"
+- raw: "铁桶功"
+  splits:
+  - text: "铁桶功"
+- raw: "折戟沉沙"
+  splits:
+  - text: "折戟沉沙"
+- raw: "回马枪术"
+  splits:
+  - text: "回马枪术"
+- raw: "泣血戈术"
+  splits:
+  - text: "泣血戈术"
+- raw: "斩马刀法"
+  splits:
+  - text: "斩马刀法"
+- raw: "孤烟心经"
+  splits:
+  - text: "孤烟心经"
+- raw: "策马过五关"
+  splits:
+  - text: "策马过五关"
+- raw: "陷阵之志"
+  splits:
+  - text: "陷阵之志"
+- raw: "飞龙长戟"
+  splits:
+  - text: "飞龙长戟"
+- raw: "潜龙枪诀"
+  splits:
+  - text: "潜龙枪诀"
+- raw: "铁马金戈"
+  splits:
+  - text: "铁马金戈"
+- raw: "劈天刀法"
+  splits:
+  - text: "劈天刀法"
+- raw: "潜龙心法"
+  splits:
+  - text: "潜龙心法"
+- raw: "长车踏破"
+  splits:
+  - text: "长车踏破"
+- raw: "明光照铁衣"
+  splits:
+  - text: "明光照铁衣"
+- raw: "十六路青龙戟"
+  splits:
+  - text: "十六路青龙戟"
+- raw: "定军枪"
+  splits:
+  - text: "定军枪"
+- raw: "干戈琢玉"
+  splits:
+  - text: "干戈琢玉"
+- raw: "百战刀法"
+  splits:
+  - text: "百战刀法"
+- raw: "龙城飞将步"
+  splits:
+  - text: "龙城飞将步"
+- raw: "满江红神功"
+  splits:
+  - text: "满江红神功"
+- raw: "八荒六合戟"
+  splits:
+  - text: "八荒六合戟"
+- raw: "碧血洗银枪"
+  splits:
+  - text: "碧血洗银枪"
+- raw: "退日戈术"
+  splits:
+  - text: "退日戈术"
+- raw: "镇魔斩妖刀"
+  splits:
+  - text: "镇魔斩妖刀"
+- raw: "帝王封禅功"
+  splits:
+  - text: "帝王封禅功"
+- raw: "惊鸿一点枪"
+  splits:
+  - text: "惊鸿一点枪"
+- raw: "内丹功"
+  splits:
+  - text: "内丹功"
+- raw: "卷云步"
+  splits:
+  - text: "卷云步"
+- raw: "布气诀"
+  splits:
+  - text: "布气诀"
+- raw: "十八连环破"
+  splits:
+  - text: "十八连环破"
+- raw: "清心咒"
+  splits:
+  - text: "清心咒"
+- raw: "安神咒"
+  splits:
+  - text: "安神咒"
+- raw: "清风剑法"
+  splits:
+  - text: "清风剑法"
+- raw: "静守谷神法"
+  splits:
+  - text: "静守谷神法"
+- raw: "御风咒"
+  splits:
+  - text: "御风咒"
+- raw: "长目飞耳功"
+  splits:
+  - text: "长目飞耳功"
+- raw: "跌打梅山咒"
+  splits:
+  - text: "跌打梅山咒"
+- raw: "咽喉骨鲠法"
+  splits:
+  - text: "咽喉骨鲠法"
+- raw: "定身咒"
+  splits:
+  - text: "定身咒"
+- raw: "茅山道剑"
+  splits:
+  - text: "茅山道剑"
+- raw: "玄门胎息功"
+  splits:
+  - text: "玄门胎息功"
+- raw: "服内元气诀"
+  splits:
+  - text: "服内元气诀"
+- raw: "关公朗真术"
+  splits:
+  - text: "关公朗真术"
+- raw: "引雷术"
+  splits:
+  - text: "引雷术"
+- raw: "勾魂咒"
+  splits:
+  - text: "勾魂咒"
+- raw: "天罡咒"
+  splits:
+  - text: "天罡咒"
+- raw: "御剑秘术"
+  splits:
+  - text: "御剑秘术"
+- raw: "五气朝元功"
+  splits:
+  - text: "五气朝元功"
+- raw: "金仙秘旨功"
+  splits:
+  - text: "金仙秘旨功"
+- raw: "瞬息千里"
+  splits:
+  - text: "瞬息千里"
+- raw: "神女报梦"
+  splits:
+  - text: "神女报梦"
+- raw: "寒天咒"
+  splits:
+  - text: "寒天咒"
+- raw: "地母雷网"
+  splits:
+  - text: "地母雷网"
+- raw: "钟馗斩妖剑"
+  splits:
+  - text: "钟馗斩妖剑"
+- raw: "龙虎金丹功"
+  splits:
+  - text: "龙虎金丹功"
+- raw: "冲虚神功"
+  splits:
+  - text: "冲虚神功"
+- raw: "万里神行"
+  splits:
+  - text: "万里神行"
+- raw: "三华聚顶"
+  splits:
+  - text: "三华聚顶"
+- raw: "三昧真火"
+  splits:
+  - text: "三昧真火"
+- raw: "神兵天将咒"
+  splits:
+  - text: "神兵天将咒"
+- raw: "玄真剑气"
+  splits:
+  - text: "玄真剑气"
+- raw: "遁甲天书"
+  splits:
+  - text: "遁甲天书"
+- raw: "天劫九重"
+  splits:
+  - text: "天劫九重"
+- raw: "打铁功"
+  splits:
+  - text: "打铁功"
+- raw: "木屐步"
+  splits:
+  - text: "木屐步"
+- raw: "木甲百重"
+  splits:
+  - text: "木甲百重"
+- raw: "寒泉剑法"
+  splits:
+  - text: "寒泉剑法"
+- raw: "鱼肠剑法"
+  splits:
+  - text: "鱼肠剑法"
+- raw: "宰鸡牛刀"
+  splits:
+  - text: "宰鸡牛刀"
+- raw: "百炼功"
+  splits:
+  - text: "百炼功"
+- raw: "铁履功"
+  splits:
+  - text: "铁履功"
+- raw: "双剑合璧"
+  splits:
+  - text: "双剑合璧"
+- raw: "青釭剑法"
+  splits:
+  - text: "青釭剑法"
+- raw: "胜邪剑法"
+  splits:
+  - text: "胜邪剑法"
+- raw: "乱麻刀法"
+  splits:
+  - text: "乱麻刀法"
+- raw: "千锤功"
+  splits:
+  - text: "千锤功"
+- raw: "名山寻路"
+  splits:
+  - text: "名山寻路"
+- raw: "铁甲千重"
+  splits:
+  - text: "铁甲千重"
+- raw: "巨阙重剑"
+  splits:
+  - text: "巨阙重剑"
+- raw: "承影剑法"
+  splits:
+  - text: "承影剑法"
+- raw: "庖丁解牛刀"
+  splits:
+  - text: "庖丁解牛刀"
+- raw: "炉火纯青功"
+  splits:
+  - text: "炉火纯青功"
+- raw: "踏破铁鞋功"
+  splits:
+  - text: "踏破铁鞋功"
+- raw: "百剑穿心"
+  splits:
+  - text: "百剑穿心"
+- raw: "破军剑法"
+  splits:
+  - text: "破军剑法"
+- raw: "干将莫邪剑"
+  splits:
+  - text: "干将莫邪剑"
+- raw: "分金刀术"
+  splits:
+  - text: "分金刀术"
+- raw: "万剑奇功"
+  splits:
+  - text: "万剑奇功"
+- raw: "金甲万重"
+  splits:
+  - text: "金甲万重"
+- raw: "赤霄斩蛇剑"
+  splits:
+  - text: "赤霄斩蛇剑"
+- raw: "含光无形剑"
+  splits:
+  - text: "含光无形剑"
+- raw: "屠龙要术"
+  splits:
+  - text: "屠龙要术"
+- raw: "无尽剑意"
+  splits:
+  - text: "无尽剑意"
+- raw: "引蛇术"
+  splits:
+  - text: "引蛇术"
+- raw: "泥鳅功"
+  splits:
+  - text: "泥鳅功"
+- raw: "迷虫香"
+  splits:
+  - text: "迷虫香"
+- raw: "蓝砂手"
+  splits:
+  - text: "蓝砂手"
+- raw: "五毒掌"
+  splits:
+  - text: "五毒掌"
+- raw: "朱蟾砂"
+  splits:
+  - text: "朱蟾砂"
+- raw: "五毒针"
+  splits:
+  - text: "五毒针"
+- raw: "泥鳅蛊"
+  splits:
+  - text: "泥鳅蛊"
+- raw: "腐尸功"
+  splits:
+  - text: "腐尸功"
+- raw: "蛇行步"
+  splits:
+  - text: "蛇行步"
+- raw: "炼蛊术"
+  splits:
+  - text: "炼蛊术"
+- raw: "金蛇缠丝手"
+  splits:
+  - text: "金蛇缠丝手"
+- raw: "灵蛇拳"
+  splits:
+  - text: "灵蛇拳"
+- raw: "腐尸毒"
+  splits:
+  - text: "腐尸毒"
+- raw: "碧磷针"
+  splits:
+  - text: "碧磷针"
+- raw: "阴蛇蛊"
+  splits:
+  - text: "阴蛇蛊"
+- raw: "五仙真灵诀"
+  splits:
+  - text: "五仙真灵诀"
+- raw: "蛤蟆纵跳"
+  splits:
+  - text: "蛤蟆纵跳"
+- raw: "迷魂息"
+  splits:
+  - text: "迷魂息"
+- raw: "三尸蜈蚣爪"
+  splits:
+  - text: "三尸蜈蚣爪"
+- raw: "化骨绵掌"
+  splits:
+  - text: "化骨绵掌"
+- raw: "断魂砂"
+  splits:
+  - text: "断魂砂"
+- raw: "饮血针"
+  splits:
+  - text: "饮血针"
+- raw: "狂癫蛊"
+  splits:
+  - text: "狂癫蛊"
+- raw: "天蚕吐丝功"
+  splits:
+  - text: "天蚕吐丝功"
+- raw: "蜈蚣遁地术"
+  splits:
+  - text: "蜈蚣遁地术"
+- raw: "摄魂大法"
+  splits:
+  - text: "摄魂大法"
+- raw: "千蛛万毒手"
+  splits:
+  - text: "千蛛万毒手"
+- raw: "赤炼神掌"
+  splits:
+  - text: "赤炼神掌"
+- raw: "孟婆散"
+  splits:
+  - text: "孟婆散"
+- raw: "赤炼神针"
+  splits:
+  - text: "赤炼神针"
+- raw: "情花蛊"
+  splits:
+  - text: "情花蛊"
+- raw: "五毒魔功"
+  splits:
+  - text: "五毒魔功"
+- raw: "天蛇诡步"
+  splits:
+  - text: "天蛇诡步"
+- raw: "天蚕手"
+  splits:
+  - text: "天蚕手"
+- raw: "五毒神掌"
+  splits:
+  - text: "五毒神掌"
+- raw: "鹤顶红"
+  splits:
+  - text: "鹤顶红"
+- raw: "黑血神针"
+  splits:
+  - text: "黑血神针"
+- raw: "害神蛊"
+  splits:
+  - text: "害神蛊"
+- raw: "蚩尤鬼降"
+  splits:
+  - text: "蚩尤鬼降"
+- raw: "万毒宝典"
+  splits:
+  - text: "万毒宝典"
+- raw: "金蚕王蛊"
+  splits:
+  - text: "金蚕王蛊"
+- raw: "黑尸诀"
+  splits:
+  - text: "黑尸诀"
+- raw: "飞沙走石"
+  splits:
+  - text: "飞沙走石"
+- raw: "鬼夜哭"
+  splits:
+  - text: "鬼夜哭"
+- raw: "夜行刀法"
+  splits:
+  - text: "夜行刀法"
+- raw: "红眼刀法"
+  splits:
+  - text: "红眼刀法"
+- raw: "僵尸拳"
+  splits:
+  - text: "僵尸拳"
+- raw: "招魂掌"
+  splits:
+  - text: "招魂掌"
+- raw: "杀意心法"
+  splits:
+  - text: "杀意心法"
+- raw: "邪鬼步"
+  splits:
+  - text: "邪鬼步"
+- raw: "鬼打墙"
+  splits:
+  - text: "鬼打墙"
+- raw: "鬼面刀法"
+  splits:
+  - text: "鬼面刀法"
+- raw: "阴风刀法"
+  splits:
+  - text: "阴风刀法"
+- raw: "绝户爪"
+  splits:
+  - text: "绝户爪"
+- raw: "血手印"
+  splits:
+  - text: "血手印"
+- raw: "阴阳磨"
+  splits:
+  - text: "阴阳磨"
+- raw: "幽冥步"
+  splits:
+  - text: "幽冥步"
+- raw: "鬼见愁"
+  splits:
+  - text: "鬼见愁"
+- raw: "夺命追魂刀"
+  splits:
+  - text: "夺命追魂刀"
+- raw: "修罗刀法"
+  splits:
+  - text: "修罗刀法"
+- raw: "鬼哭拳"
+  splits:
+  - text: "鬼哭拳"
+- raw: "朱砂掌"
+  splits:
+  - text: "朱砂掌"
+- raw: "混世魔功"
+  splits:
+  - text: "混世魔功"
+- raw: "百鬼夜行"
+  splits:
+  - text: "百鬼夜行"
+- raw: "群魔乱舞"
+  splits:
+  - text: "群魔乱舞"
+- raw: "天玄七煞刀"
+  splits:
+  - text: "天玄七煞刀"
+- raw: "阴阳乱刃"
+  splits:
+  - text: "阴阳乱刃"
+- raw: "黑龙十八手"
+  splits:
+  - text: "黑龙十八手"
+- raw: "抽髓掌"
+  splits:
+  - text: "抽髓掌"
+- raw: "苦海魔功"
+  splits:
+  - text: "苦海魔功"
+- raw: "无法无天步"
+  splits:
+  - text: "无法无天步"
+- raw: "炼狱破天劲"
+  splits:
+  - text: "炼狱破天劲"
+- raw: "饮血魔刀"
+  splits:
+  - text: "饮血魔刀"
+- raw: "销魂鬼刃"
+  splits:
+  - text: "销魂鬼刃"
+- raw: "神倒鬼跌拳"
+  splits:
+  - text: "神倒鬼跌拳"
+- raw: "九死离魂掌"
+  splits:
+  - text: "九死离魂掌"
+- raw: "万恶魔功"
+  splits:
+  - text: "万恶魔功"
+- raw: "血脉逆行"
+  splits:
+  - text: "血脉逆行"
+- raw: "杀人刀法"
+  splits:
+  - text: "杀人刀法"
+- raw: "龟息功"
+  splits:
+  - text: "龟息功"
+- raw: "灵虚步"
+  splits:
+  - text: "灵虚步"
+- raw: "抚琴清音"
+  splits:
+  - text: "抚琴清音"
+- raw: "胡笳十八拍"
+  splits:
+  - text: "胡笳十八拍"
+- raw: "琴棋书画功"
+  splits:
+  - text: "琴棋书画功"
+- raw: "星罗棋布"
+  splits:
+  - text: "星罗棋布"
+- raw: "七弦无形音"
+  splits:
+  - text: "七弦无形音"
+- raw: "棋盘四式"
+  splits:
+  - text: "棋盘四式"
+- raw: "永字八法"
+  splits:
+  - text: "永字八法"
+- raw: "丹青破穴"
+  splits:
+  - text: "丹青破穴"
+- raw: "天罗地网剑"
+  splits:
+  - text: "天罗地网剑"
+- raw: "无欲无情功"
+  splits:
+  - text: "无欲无情功"
+- raw: "横空挪移"
+  splits:
+  - text: "横空挪移"
+- raw: "阳春白雪"
+  splits:
+  - text: "阳春白雪"
+- raw: "手谈十九路"
+  splits:
+  - text: "手谈十九路"
+- raw: "泼墨成画功"
+  splits:
+  - text: "泼墨成画功"
+- raw: "玄音幻剑"
+  splits:
+  - text: "玄音幻剑"
+- raw: "梦蝶心经"
+  splits:
+  - text: "梦蝶心经"
+- raw: "凭虚临风"
+  splits:
+  - text: "凭虚临风"
+- raw: "文心雕龙"
+  splits:
+  - text: "文心雕龙"
+- raw: "高山流水"
+  splits:
+  - text: "高山流水"
+- raw: "乱点天元"
+  splits:
+  - text: "乱点天元"
+- raw: "裴将军功"
+  splits:
+  - text: "裴将军功"
+- raw: "生花妙笔"
+  splits:
+  - text: "生花妙笔"
+- raw: "阴阳奇剑"
+  splits:
+  - text: "阴阳奇剑"
+- raw: "太阳太玄功"
+  splits:
+  - text: "太阳太玄功"
+- raw: "太阴太玄功"
+  splits:
+  - text: "太阴太玄功"
+- raw: "螺旋九影"
+  splits:
+  - text: "螺旋九影"
+- raw: "霓裳羽衣舞"
+  splits:
+  - text: "霓裳羽衣舞"
+- raw: "广陵散曲功"
+  splits:
+  - text: "广陵散曲功"
+- raw: "呕血坐隐功"
+  splits:
+  - text: "呕血坐隐功"
+- raw: "春秋笔法"
+  splits:
+  - text: "春秋笔法"
+- raw: "画龙点睛"
+  splits:
+  - text: "画龙点睛"
+- raw: "天来剑术"
+  splits:
+  - text: "天来剑术"
+- raw: "归墟秘典"
+  splits:
+  - text: "归墟秘典"
+- raw: "天人感应步"
+  splits:
+  - text: "天人感应步"
+- raw: "轮回不灭法"
+  splits:
+  - text: "轮回不灭法"
+- raw: "静禅功"
+  splits:
+  - text: "静禅功"
+- raw: "挑水桶"
+  splits:
+  - text: "挑水桶"
+- raw: "铁裆功"
+  splits:
+  - text: "铁裆功"
+- raw: "少林长拳"
+  splits:
+  - text: "少林长拳"
+- raw: "少林棍法"
+  splits:
+  - text: "少林棍法"
+- raw: "稍子棍法"
+  splits:
+  - text: "稍子棍法"
+- raw: "月牙铲功"
+  splits:
+  - text: "月牙铲功"
+- raw: "罗汉护体功"
+  splits:
+  - text: "罗汉护体功"
+- raw: "蜻蜓点水"
+  splits:
+  - text: "蜻蜓点水"
+- raw: "遍体铜人"
+  splits:
+  - text: "遍体铜人"
+- raw: "罗汉拳法"
+  splits:
+  - text: "罗汉拳法"
+- raw: "韦陀掌"
+  splits:
+  - text: "韦陀掌"
+- raw: "天竺佛指"
+  splits:
+  - text: "天竺佛指"
+- raw: "齐眉棍法"
+  splits:
+  - text: "齐眉棍法"
+- raw: "梅花棍法"
+  splits:
+  - text: "梅花棍法"
+- raw: "伏魔铲法"
+  splits:
+  - text: "伏魔铲法"
+- raw: "菩提心法"
+  splits:
+  - text: "菩提心法"
+- raw: "九图六坐像"
+  splits:
+  - text: "九图六坐像"
+- raw: "一指禅"
+  splits:
+  - text: "一指禅"
+- raw: "少林龙爪手"
+  splits:
+  - text: "少林龙爪手"
+- raw: "去烦恼指"
+  splits:
+  - text: "去烦恼指"
+- raw: "扫落叶棍法"
+  splits:
+  - text: "扫落叶棍法"
+- raw: "五虎群羊棍"
+  splits:
+  - text: "五虎群羊棍"
+- raw: "大韦陀杵"
+  splits:
+  - text: "大韦陀杵"
+- raw: "袈裟伏魔功"
+  splits:
+  - text: "袈裟伏魔功"
+- raw: "少林归藏功"
+  splits:
+  - text: "少林归藏功"
+- raw: "一苇渡江"
+  splits:
+  - text: "一苇渡江"
+- raw: "金钟罩"
+  splits:
+  - text: "金钟罩"
+- raw: "般若掌"
+  splits:
+  - text: "般若掌"
+- raw: "无相劫指"
+  splits:
+  - text: "无相劫指"
+- raw: "疯魔棍法"
+  splits:
+  - text: "疯魔棍法"
+- raw: "大智无定棍法"
+  splits:
+  - text: "大智无定棍法"
+- raw: "菩提智慧杵"
+  splits:
+  - text: "菩提智慧杵"
+- raw: "阿罗汉神功"
+  splits:
+  - text: "阿罗汉神功"
+- raw: "无色无相身"
+  splits:
+  - text: "无色无相身"
+- raw: "佛门狮吼功"
+  splits:
+  - text: "佛门狮吼功"
+- raw: "大力金刚掌"
+  splits:
+  - text: "大力金刚掌"
+- raw: "拈花指"
+  splits:
+  - text: "拈花指"
+- raw: "如来千叶手"
+  splits:
+  - text: "如来千叶手"
+- raw: "大文殊杖法"
+  splits:
+  - text: "大文殊杖法"
+- raw: "紧那罗王棍法"
+  splits:
+  - text: "紧那罗王棍法"
+- raw: "金刚伏魔圈"
+  splits:
+  - text: "金刚伏魔圈"
+- raw: "易筋经"
+  splits:
+  - text: "易筋经"
+- raw: "洗髓经"
+  splits:
+  - text: "洗髓经"
+- raw: "金刚不坏神功"
+  splits:
+  - text: "金刚不坏神功"
+- raw: "达摩神杖"
+  splits:
+  - text: "达摩神杖"
+- raw: "武当太和功"
+  splits:
+  - text: "武当太和功"
+- raw: "八卦步"
+  splits:
+  - text: "八卦步"
+- raw: "武当软硬功"
+  splits:
+  - text: "武当软硬功"
+- raw: "武当长拳"
+  splits:
+  - text: "武当长拳"
+- raw: "武当绵掌"
+  splits:
+  - text: "武当绵掌"
+- raw: "武当丹剑"
+  splits:
+  - text: "武当丹剑"
+- raw: "松溪小花剑"
+  splits:
+  - text: "松溪小花剑"
+- raw: "武当混元桩"
+  splits:
+  - text: "武当混元桩"
+- raw: "九宫十八步"
+  splits:
+  - text: "九宫十八步"
+- raw: "子午盘功"
+  splits:
+  - text: "子午盘功"
+- raw: "九宫游身掌"
+  splits:
+  - text: "九宫游身掌"
+- raw: "金针指功"
+  splits:
+  - text: "金针指功"
+- raw: "柔云剑法"
+  splits:
+  - text: "柔云剑法"
+- raw: "玄门十三剑"
+  splits:
+  - text: "玄门十三剑"
+- raw: "元始周天功"
+  splits:
+  - text: "元始周天功"
+- raw: "武当归藏功"
+  splits:
+  - text: "武当归藏功"
+- raw: "四象疑步"
+  splits:
+  - text: "四象疑步"
+- raw: "金关玉锁诀"
+  splits:
+  - text: "金关玉锁诀"
+- raw: "昊天掌"
+  splits:
+  - text: "昊天掌"
+- raw: "无极玄功拳"
+  splits:
+  - text: "无极玄功拳"
+- raw: "绕指柔剑"
+  splits:
+  - text: "绕指柔剑"
+- raw: "两仪剑法"
+  splits:
+  - text: "两仪剑法"
+- raw: "纯阳无极功"
+  splits:
+  - text: "纯阳无极功"
+- raw: "天梯纵云步"
+  splits:
+  - text: "天梯纵云步"
+- raw: "柔易九转功"
+  splits:
+  - text: "柔易九转功"
+- raw: "伏魔证道拳"
+  splits:
+  - text: "伏魔证道拳"
+- raw: "太虚掌"
+  splits:
+  - text: "太虚掌"
+- raw: "丹凤朝阳剑"
+  splits:
+  - text: "丹凤朝阳剑"
+- raw: "三清化一剑"
+  splits:
+  - text: "三清化一剑"
+- raw: "先天无上罡气"
+  splits:
+  - text: "先天无上罡气"
+- raw: "北斗仙踪"
+  splits:
+  - text: "北斗仙踪"
+- raw: "阴阳调元法"
+  splits:
+  - text: "阴阳调元法"
+- raw: "日月明光掌"
+  splits:
+  - text: "日月明光掌"
+- raw: "太极拳法"
+  splits:
+  - text: "太极拳法"
+- raw: "太乙神剑"
+  splits:
+  - text: "太乙神剑"
+- raw: "真武荡魔剑"
+  splits:
+  - text: "真武荡魔剑"
+- raw: "太极神功"
+  splits:
+  - text: "太极神功"
+- raw: "道德真经"
+  splits:
+  - text: "道德真经"
+- raw: "太极剑道"
+  splits:
+  - text: "太极剑道"
+- raw: "铁脉功"
+  splits:
+  - text: "铁脉功"
+- raw: "铁膝功"
+  splits:
+  - text: "铁膝功"
+- raw: "铁头功"
+  splits:
+  - text: "铁头功"
+- raw: "开山刀法"
+  splits:
+  - text: "开山刀法"
+- raw: "骤雨刀法"
+  splits:
+  - text: "骤雨刀法"
+- raw: "银蛇枪法"
+  splits:
+  - text: "银蛇枪法"
+- raw: "十三太保横练"
+  splits:
+  - text: "十三太保横练"
+- raw: "黄沙落雁"
+  splits:
+  - text: "黄沙落雁"
+- raw: "铜皮铁骨功"
+  splits:
+  - text: "铜皮铁骨功"
+- raw: "撼地刀法"
+  splits:
+  - text: "撼地刀法"
+- raw: "狂风快刀"
+  splits:
+  - text: "狂风快刀"
+- raw: "西凉枪法"
+  splits:
+  - text: "西凉枪法"
+- raw: "童子金身功"
+  splits:
+  - text: "童子金身功"
+- raw: "猛将步"
+  splits:
+  - text: "猛将步"
+- raw: "黑砂刚体"
+  splits:
+  - text: "黑砂刚体"
+- raw: "霹雳雷震刀"
+  splits:
+  - text: "霹雳雷震刀"
+- raw: "断水流刀法"
+  splits:
+  - text: "断水流刀法"
+- raw: "七探盘龙枪"
+  splits:
+  - text: "七探盘龙枪"
+- raw: "霸王举鼎功"
+  splits:
+  - text: "霸王举鼎功"
+- raw: "千里横行"
+  splits:
+  - text: "千里横行"
+- raw: "金刀换掌功"
+  splits:
+  - text: "金刀换掌功"
+- raw: "英雄刀法"
+  splits:
+  - text: "英雄刀法"
+- raw: "嗔狂刀法"
+  splits:
+  - text: "嗔狂刀法"
+- raw: "寻龙枪诀"
+  splits:
+  - text: "寻龙枪诀"
+- raw: "霸王卸甲"
+  splits:
+  - text: "霸王卸甲"
+- raw: "天命刀法"
+  splits:
+  - text: "天命刀法"
+- raw: "缺月弯刀"
+  splits:
+  - text: "缺月弯刀"
+- raw: "霸王枪法"
+  splits:
+  - text: "霸王枪法"
+- raw: "霸刀一式"
+  splits:
+  - text: "霸刀一式"
+- raw: "抱元诀"
+  splits:
+  - text: "抱元诀"
+- raw: "倒骑驴"
+  splits:
+  - text: "倒骑驴"
+- raw: "通气法"
+  splits:
+  - text: "通气法"
+- raw: "八仙剑法"
+  splits:
+  - text: "八仙剑法"
+- raw: "碧波剑法"
+  splits:
+  - text: "碧波剑法"
+- raw: "天女散花篮"
+  splits:
+  - text: "天女散花篮"
+- raw: "灵宝毕法功"
+  splits:
+  - text: "灵宝毕法功"
+- raw: "泅水术"
+  splits:
+  - text: "泅水术"
+- raw: "丹砂诀"
+  splits:
+  - text: "丹砂诀"
+- raw: "风波十三式"
+  splits:
+  - text: "风波十三式"
+- raw: "流云剑术"
+  splits:
+  - text: "流云剑术"
+- raw: "芭蕉铁扇功"
+  splits:
+  - text: "芭蕉铁扇功"
+- raw: "长生真诀"
+  splits:
+  - text: "长生真诀"
+- raw: "乘风归"
+  splits:
+  - text: "乘风归"
+- raw: "剑气歌"
+  splits:
+  - text: "剑气歌"
+- raw: "花飞蝶舞剑"
+  splits:
+  - text: "花飞蝶舞剑"
+- raw: "沧海追风剑"
+  splits:
+  - text: "沧海追风剑"
+- raw: "天花引"
+  splits:
+  - text: "天花引"
+- raw: "仙人抚顶功"
+  splits:
+  - text: "仙人抚顶功"
+- raw: "青烟飞絮"
+  splits:
+  - text: "青烟飞絮"
+- raw: "灵剑幻花"
+  splits:
+  - text: "灵剑幻花"
+- raw: "溟海逐月剑"
+  splits:
+  - text: "溟海逐月剑"
+- raw: "朝阳一气剑"
+  splits:
+  - text: "朝阳一气剑"
+- raw: "冲天渔鼓"
+  splits:
+  - text: "冲天渔鼓"
+- raw: "紫微星诀"
+  splits:
+  - text: "紫微星诀"
+- raw: "凌波虚渡"
+  splits:
+  - text: "凌波虚渡"
+- raw: "大道剑诀"
+  splits:
+  - text: "大道剑诀"
+- raw: "碧海飞仙剑"
+  splits:
+  - text: "碧海飞仙剑"
+- raw: "纯阳剑法"
+  splits:
+  - text: "纯阳剑法"
+- raw: "铁拐化龙"
+  splits:
+  - text: "铁拐化龙"
+- raw: "五尺混天绫"
+  splits:
+  - text: "五尺混天绫"
+- raw: "敲爻歌诀"
+  splits:
+  - text: "敲爻歌诀"
+- raw: "天遁剑法"
+  splits:
+  - text: "天遁剑法"
+- raw: "坐忘功"
+  splits:
+  - text: "坐忘功"
+- raw: "猿公跳涧"
+  splits:
+  - text: "猿公跳涧"
+- raw: "凝心诀"
+  splits:
+  - text: "凝心诀"
+- raw: "鸭形拳"
+  splits:
+  - text: "鸭形拳"
+- raw: "三十六闭手"
+  splits:
+  - text: "三十六闭手"
+- raw: "静心剑法"
+  splits:
+  - text: "静心剑法"
+- raw: "临济十二庄"
+  splits:
+  - text: "临济十二庄"
+- raw: "峨眉归藏功"
+  splits:
+  - text: "峨眉归藏功"
+- raw: "峨眉虎步功"
+  splits:
+  - text: "峨眉虎步功"
+- raw: "清静归一法"
+  splits:
+  - text: "清静归一法"
+- raw: "至云纽丝拳"
+  splits:
+  - text: "至云纽丝拳"
+- raw: "白猿通臂拳"
+  splits:
+  - text: "白猿通臂拳"
+- raw: "猿公剑法"
+  splits:
+  - text: "猿公剑法"
+- raw: "灵悟自然功"
+  splits:
+  - text: "灵悟自然功"
+- raw: "步步生莲"
+  splits:
+  - text: "步步生莲"
+- raw: "莲花宝笈"
+  splits:
+  - text: "莲花宝笈"
+- raw: "金顶绵掌"
+  splits:
+  - text: "金顶绵掌"
+- raw: "峨眉鹰爪功"
+  splits:
+  - text: "峨眉鹰爪功"
+- raw: "回风拂柳剑"
+  splits:
+  - text: "回风拂柳剑"
+- raw: "莲花玄功"
+  splits:
+  - text: "莲花玄功"
+- raw: "灵狐拜月步"
+  splits:
+  - text: "灵狐拜月步"
+- raw: "七星横链"
+  splits:
+  - text: "七星横链"
+- raw: "兰花拂穴手"
+  splits:
+  - text: "兰花拂穴手"
+- raw: "金刚三昧掌"
+  splits:
+  - text: "金刚三昧掌"
+- raw: "玄女九式"
+  splits:
+  - text: "玄女九式"
+- raw: "梵文贝叶经"
+  splits:
+  - text: "梵文贝叶经"
+- raw: "舍身飞渡"
+  splits:
+  - text: "舍身飞渡"
+- raw: "金顶佛光"
+  splits:
+  - text: "金顶佛光"
+- raw: "天罡指穴功"
+  splits:
+  - text: "天罡指穴功"
+- raw: "天罡雷轰掌"
+  splits:
+  - text: "天罡雷轰掌"
+- raw: "灭心绝情剑"
+  splits:
+  - text: "灭心绝情剑"
+- raw: "三洞灵宝经"
+  splits:
+  - text: "三洞灵宝经"
+- raw: "诸天化身步"
+  splits:
+  - text: "诸天化身步"
+- raw: "易通法"
+  splits:
+  - text: "易通法"
+- raw: "麻雀跃"
+  splits:
+  - text: "麻雀跃"
+- raw: "爬铁索"
+  splits:
+  - text: "爬铁索"
+- raw: "蝎尾鞭"
+  splits:
+  - text: "蝎尾鞭"
+- raw: "扫拂尘"
+  splits:
+  - text: "扫拂尘"
+- raw: "铁脊矛突"
+  splits:
+  - text: "铁脊矛突"
+- raw: "子午流注功"
+  splits:
+  - text: "子午流注功"
+- raw: "鹰翼功"
+  splits:
+  - text: "鹰翼功"
+- raw: "磐石劲"
+  splits:
+  - text: "磐石劲"
+- raw: "五鬼追魂鞭"
+  splits:
+  - text: "五鬼追魂鞭"
+- raw: "龙凤双钩"
+  splits:
+  - text: "龙凤双钩"
+- raw: "搬山铁耙功"
+  splits:
+  - text: "搬山铁耙功"
+- raw: "奇门五转"
+  splits:
+  - text: "奇门五转"
+- raw: "大鹏展翅"
+  splits:
+  - text: "大鹏展翅"
+- raw: "花架门"
+  splits:
+  - text: "花架门"
+- raw: "金鳞巨蟒鞭"
+  splits:
+  - text: "金鳞巨蟒鞭"
+- raw: "翻天印"
+  splits:
+  - text: "翻天印"
+- raw: "贯甲破盾矛"
+  splits:
+  - text: "贯甲破盾矛"
+- raw: "上清气功"
+  splits:
+  - text: "上清气功"
+- raw: "倒踩三叠云"
+  splits:
+  - text: "倒踩三叠云"
+- raw: "龟藏豹隐"
+  splits:
+  - text: "龟藏豹隐"
+- raw: "鬼打狂鞭"
+  splits:
+  - text: "鬼打狂鞭"
+- raw: "太统法铃"
+  splits:
+  - text: "太统法铃"
+- raw: "北风百裂矛"
+  splits:
+  - text: "北风百裂矛"
+- raw: "离合神功"
+  splits:
+  - text: "离合神功"
+- raw: "七雁落长空"
+  splits:
+  - text: "七雁落长空"
+- raw: "回音搜魂术"
+  splits:
+  - text: "回音搜魂术"
+- raw: "生死一线鞭"
+  splits:
+  - text: "生死一线鞭"
+- raw: "乾坤日月圈"
+  splits:
+  - text: "乾坤日月圈"
+- raw: "玉石俱焚矛"
+  splits:
+  - text: "玉石俱焚矛"
+- raw: "斗转星移"
+  splits:
+  - text: "斗转星移"
+- raw: "非攻法"
+  splits:
+  - text: "非攻法"
+- raw: "迷踪步"
+  splits:
+  - text: "迷踪步"
+- raw: "口算功"
+  splits:
+  - text: "口算功"
+- raw: "木流马"
+  splits:
+  - text: "木流马"
+- raw: "机簧斧"
+  splits:
+  - text: "机簧斧"
+- raw: "飞蝗箭"
+  splits:
+  - text: "飞蝗箭"
+- raw: "明鬼诀"
+  splits:
+  - text: "明鬼诀"
+- raw: "坐五车"
+  splits:
+  - text: "坐五车"
+- raw: "相星术"
+  splits:
+  - text: "相星术"
+- raw: "青铜奔牛"
+  splits:
+  - text: "青铜奔牛"
+- raw: "机关伞"
+  splits:
+  - text: "机关伞"
+- raw: "连珠箭"
+  splits:
+  - text: "连珠箭"
+- raw: "天志术"
+  splits:
+  - text: "天志术"
+- raw: "八阵图步"
+  splits:
+  - text: "八阵图步"
+- raw: "举手摘星式"
+  splits:
+  - text: "举手摘星式"
+- raw: "玉石麒麟"
+  splits:
+  - text: "玉石麒麟"
+- raw: "六转孔明锁"
+  splits:
+  - text: "六转孔明锁"
+- raw: "神机箭"
+  splits:
+  - text: "神机箭"
+- raw: "本经阴符七术"
+  splits:
+  - text: "本经阴符七术"
+- raw: "云龙九现"
+  splits:
+  - text: "云龙九现"
+- raw: "指算玄通"
+  splits:
+  - text: "指算玄通"
+- raw: "燎原朱雀"
+  splits:
+  - text: "燎原朱雀"
+- raw: "遮天假手"
+  splits:
+  - text: "遮天假手"
+- raw: "五子追心箭"
+  splits:
+  - text: "五子追心箭"
+- raw: "河图洛书"
+  splits:
+  - text: "河图洛书"
+- raw: "千机万巧"
+  splits:
+  - text: "千机万巧"
+- raw: "地动青龙"
+  splits:
+  - text: "地动青龙"
+- raw: "傀儡牵丝术"
+  splits:
+  - text: "傀儡牵丝术"
+- raw: "元戎弩箭"
+  splits:
+  - text: "元戎弩箭"
+- raw: "武库战车"
+  splits:
+  - text: "武库战车"
+- raw: "公输遗匣"
+  splits:
+  - text: "公输遗匣"
+- raw: "雷火功"
+  splits:
+  - text: "雷火功"
+- raw: "疾电步"
+  splits:
+  - text: "疾电步"
+- raw: "铁手腕"
+  splits:
+  - text: "铁手腕"
+- raw: "铄心弹"
+  splits:
+  - text: "铄心弹"
+- raw: "火蒺藜"
+  splits:
+  - text: "火蒺藜"
+- raw: "霹雳枪法"
+  splits:
+  - text: "霹雳枪法"
+- raw: "烈阳心法"
+  splits:
+  - text: "烈阳心法"
+- raw: "风火轮"
+  splits:
+  - text: "风火轮"
+- raw: "硝石法"
+  splits:
+  - text: "硝石法"
+- raw: "震天雷"
+  splits:
+  - text: "震天雷"
+- raw: "突火筒"
+  splits:
+  - text: "突火筒"
+- raw: "烈阳枪法"
+  splits:
+  - text: "烈阳枪法"
+- raw: "江翻海沸功"
+  splits:
+  - text: "江翻海沸功"
+- raw: "雷车动地"
+  splits:
+  - text: "雷车动地"
+- raw: "伏硫黄法"
+  splits:
+  - text: "伏硫黄法"
+- raw: "霹雳雷火弹"
+  splits:
+  - text: "霹雳雷火弹"
+- raw: "猛火油"
+  splits:
+  - text: "猛火油"
+- raw: "震天枪式"
+  splits:
+  - text: "震天枪式"
+- raw: "祝融真火诀"
+  splits:
+  - text: "祝融真火诀"
+- raw: "电光火石"
+  splits:
+  - text: "电光火石"
+- raw: "伏火矾法"
+  splits:
+  - text: "伏火矾法"
+- raw: "飞火流星"
+  splits:
+  - text: "飞火流星"
+- raw: "铁嘴火鹞"
+  splits:
+  - text: "铁嘴火鹞"
+- raw: "奔雷枪诀"
+  splits:
+  - text: "奔雷枪诀"
+- raw: "黑火药法"
+  splits:
+  - text: "黑火药法"
+- raw: "连环子母弹"
+  splits:
+  - text: "连环子母弹"
+- raw: "神火飞鸦"
+  splits:
+  - text: "神火飞鸦"
+- raw: "火树银枪"
+  splits:
+  - text: "火树银枪"
+- raw: "灭世天雷"
+  splits:
+  - text: "灭世天雷"
+- raw: "吐姆功"
+  splits:
+  - text: "吐姆功"
+- raw: "转山行"
+  splits:
+  - text: "转山行"
+- raw: "天耳通"
+  splits:
+  - text: "天耳通"
+- raw: "灌顶法"
+  splits:
+  - text: "灌顶法"
+- raw: "如意宝杵"
+  splits:
+  - text: "如意宝杵"
+- raw: "飞轮功"
+  splits:
+  - text: "飞轮功"
+- raw: "持戒刀法"
+  splits:
+  - text: "持戒刀法"
+- raw: "宝瓶气功"
+  splits:
+  - text: "宝瓶气功"
+- raw: "顶礼功"
+  splits:
+  - text: "顶礼功"
+- raw: "天眼通"
+  splits:
+  - text: "天眼通"
+- raw: "密宗缩骨功"
+  splits:
+  - text: "密宗缩骨功"
+- raw: "三曼荼罗杵"
+  splits:
+  - text: "三曼荼罗杵"
+- raw: "往生轮"
+  splits:
+  - text: "往生轮"
+- raw: "往生刀法"
+  splits:
+  - text: "往生刀法"
+- raw: "不动明王功"
+  splits:
+  - text: "不动明王功"
+- raw: "神足通"
+  splits:
+  - text: "神足通"
+- raw: "金刚怒目"
+  splits:
+  - text: "金刚怒目"
+- raw: "降龙伏虎功"
+  splits:
+  - text: "降龙伏虎功"
+- raw: "金刚降魔杵"
+  splits:
+  - text: "金刚降魔杵"
+- raw: "五轮大法"
+  splits:
+  - text: "五轮大法"
+- raw: "金刚降魔刀"
+  splits:
+  - text: "金刚降魔刀"
+- raw: "摩揭陀瑜伽功"
+  splits:
+  - text: "摩揭陀瑜伽功"
+- raw: "转轮行空"
+  splits:
+  - text: "转轮行空"
+- raw: "释迦掷象"
+  splits:
+  - text: "释迦掷象"
+- raw: "瑜伽行地"
+  splits:
+  - text: "瑜伽行地"
+- raw: "大威德杵"
+  splits:
+  - text: "大威德杵"
+- raw: "无量转轮功"
+  splits:
+  - text: "无量转轮功"
+- raw: "阿鼻八刀"
+  splits:
+  - text: "阿鼻八刀"
+- raw: "大黑天降魔功"
+  splits:
+  - text: "大黑天降魔功"
+- raw: "密宗大手印"
+  splits:
+  - text: "密宗大手印"
+- raw: "宿命通"
+  splits:
+  - text: "宿命通"
+- raw: "无上大力杵"
+  splits:
+  - text: "无上大力杵"
+- raw: "观想日月轮"
+  splits:
+  - text: "观想日月轮"
+- raw: "无苦寂灭刀"
+  splits:
+  - text: "无苦寂灭刀"
+- raw: "大日如来功"
+  splits:
+  - text: "大日如来功"
+- raw: "龙象护法功"
+  splits:
+  - text: "龙象护法功"
+- raw: "因陀罗杵"
+  splits:
+  - text: "因陀罗杵"
+- raw: "凝冰诀"
+  splits:
+  - text: "凝冰诀"
+- raw: "踏雪行"
+  splits:
+  - text: "踏雪行"
+- raw: "采冰术"
+  splits:
+  - text: "采冰术"
+- raw: "碧罗掌"
+  splits:
+  - text: "碧罗掌"
+- raw: "朔风指"
+  splits:
+  - text: "朔风指"
+- raw: "天山剑法"
+  splits:
+  - text: "天山剑法"
+- raw: "吹雪剑法"
+  splits:
+  - text: "吹雪剑法"
+- raw: "寒梅心经"
+  splits:
+  - text: "寒梅心经"
+- raw: "雪泥鸿爪"
+  splits:
+  - text: "雪泥鸿爪"
+- raw: "傲霜诀"
+  splits:
+  - text: "傲霜诀"
+- raw: "五罗轻烟掌"
+  splits:
+  - text: "五罗轻烟掌"
+- raw: "凌云指"
+  splits:
+  - text: "凌云指"
+- raw: "烟雨六式"
+  splits:
+  - text: "烟雨六式"
+- raw: "飞瀑剑法"
+  splits:
+  - text: "飞瀑剑法"
+- raw: "天池心修"
+  splits:
+  - text: "天池心修"
+- raw: "临渊履冰"
+  splits:
+  - text: "临渊履冰"
+- raw: "踏雪寻梅"
+  splits:
+  - text: "踏雪寻梅"
+- raw: "寒霜掌"
+  splits:
+  - text: "寒霜掌"
+- raw: "寒袖拂穴"
+  splits:
+  - text: "寒袖拂穴"
+- raw: "素女冰心剑"
+  splits:
+  - text: "素女冰心剑"
+- raw: "长风落雁剑"
+  splits:
+  - text: "长风落雁剑"
+- raw: "天山融雪功"
+  splits:
+  - text: "天山融雪功"
+- raw: "踏雪无痕"
+  splits:
+  - text: "踏雪无痕"
+- raw: "控鹤功"
+  splits:
+  - text: "控鹤功"
+- raw: "飘雪穿云掌"
+  splits:
+  - text: "飘雪穿云掌"
+- raw: "幻阴指"
+  splits:
+  - text: "幻阴指"
+- raw: "夺魂三仙剑"
+  splits:
+  - text: "夺魂三仙剑"
+- raw: "风刀霜剑"
+  splits:
+  - text: "风刀霜剑"
+- raw: "玄冥真气"
+  splits:
+  - text: "玄冥真气"
+- raw: "瑶池漫步"
+  splits:
+  - text: "瑶池漫步"
+- raw: "玄天指"
+  splits:
+  - text: "玄天指"
+- raw: "玄冥神掌"
+  splits:
+  - text: "玄冥神掌"
+- raw: "清虚广寒剑"
+  splits:
+  - text: "清虚广寒剑"
+- raw: "九霄冲天剑"
+  splits:
+  - text: "九霄冲天剑"
+- raw: "不老长春功"
+  splits:
+  - text: "不老长春功"
+- raw: "仙娥折梅"
+  splits:
+  - text: "仙娥折梅"
+- raw: "白虹贯日掌"
+  splits:
+  - text: "白虹贯日掌"
+- raw: "逆转周天大法"
+  splits:
+  - text: "逆转周天大法"
+- raw: "绝义归藏功"
+  splits:
+  - text: "绝义归藏功"
+- raw: "心狂归藏功"
+  splits:
+  - text: "心狂归藏功"
+- raw: "龙胤归藏功"
+  splits:
+  - text: "龙胤归藏功"
+- raw: "守丹田"
+  splits:
+  - text: "守丹田"
+- raw: "八段锦"
+  splits:
+  - text: "八段锦"
+- raw: "走钢索"
+  splits:
+  - text: "走钢索"
+- raw: "钻火圈"
+  splits:
+  - text: "钻火圈"
+- raw: "角抵法"
+  splits:
+  - text: "角抵法"
+- raw: "五禽戏"
+  splits:
+  - text: "五禽戏"
+- raw: "猴拳"
+  splits:
+  - text: "猴拳"
+- raw: "劈砖掌"
+  splits:
+  - text: "劈砖掌"
+- raw: "刺剑术"
+  splits:
+  - text: "刺剑术"
+- raw: "剑器舞"
+  splits:
+  - text: "剑器舞"
+- raw: "短刀术"
+  splits:
+  - text: "短刀术"
+- raw: "贼寇刀法"
+  splits:
+  - text: "贼寇刀法"
+- raw: "花枪法"
+  splits:
+  - text: "花枪法"
+- raw: "双节棍法"
+  splits:
+  - text: "双节棍法"
+- raw: "铁扇功"
+  splits:
+  - text: "铁扇功"
+- raw: "点穴笔"
+  splits:
+  - text: "点穴笔"
+- raw: "飞箭要诀"
+  splits:
+  - text: "飞箭要诀"
+- raw: "飞石要诀"
+  splits:
+  - text: "飞石要诀"
+- raw: "须弥神功"
+  splits:
+  - text: "须弥神功"
+- raw: "墨玉心诀"
+  splits:
+  - text: "墨玉心诀"
+- raw: "遁地潜行"
+  splits:
+  - text: "遁地潜行"
+- raw: "凌霄天外"
+  splits:
+  - text: "凌霄天外"
+- raw: "乾坤一气劲"
+  splits:
+  - text: "乾坤一气劲"
+- raw: "仙人指路"
+  splits:
+  - text: "仙人指路"
+- raw: "混元掌力"
+  splits:
+  - text: "混元掌力"
+- raw: "皓月拳"
+  splits:
+  - text: "皓月拳"
+- raw: "达摩剑法"
+  splits:
+  - text: "达摩剑法"
+- raw: "重剑无锋"
+  splits:
+  - text: "重剑无锋"
+- raw: "风雪狂刀"
+  splits:
+  - text: "风雪狂刀"
+- raw: "秦王破阵刀"
+  splits:
+  - text: "秦王破阵刀"
+- raw: "飞虎提芦枪"
+  splits:
+  - text: "飞虎提芦枪"
+- raw: "天龙八棍法"
+  splits:
+  - text: "天龙八棍法"
+- raw: "五火七翎扇"
+  splits:
+  - text: "五火七翎扇"
+- raw: "六道轮回"
+  splits:
+  - text: "六道轮回"
+- raw: "掌心雷"
+  splits:
+  - text: "掌心雷"
+- raw: "没羽弓术"
+  splits:
+  - text: "没羽弓术"
+- raw: "摩诃无量功"
+  splits:
+  - text: "摩诃无量功"
+- raw: "蚀骨销魂功"
+  splits:
+  - text: "蚀骨销魂功"
+- raw: "驾雾腾云步"
+  splits:
+  - text: "驾雾腾云步"
+- raw: "咫尺天涯"
+  splits:
+  - text: "咫尺天涯"
+- raw: "阴阳大悲咒"
+  splits:
+  - text: "阴阳大悲咒"
+- raw: "太乙仙身"
+  splits:
+  - text: "太乙仙身"
+- raw: "如来神掌"
+  splits:
+  - text: "如来神掌"
+- raw: "万化归一指"
+  splits:
+  - text: "万化归一指"
+- raw: "剑十三式"
+  splits:
+  - text: "剑十三式"
+- raw: "独孤剑法"
+  splits:
+  - text: "独孤剑法"
+- raw: "无间魔刀"
+  splits:
+  - text: "无间魔刀"
+- raw: "生死劫刀法"
+  splits:
+  - text: "生死劫刀法"
+- raw: "虬龙九变"
+  splits:
+  - text: "虬龙九变"
+- raw: "十面埋伏"
+  splits:
+  - text: "十面埋伏"
+- raw: "山河社稷笔"
+  splits:
+  - text: "山河社稷笔"
+- raw: "真龙霹雳鞭"
+  splits:
+  - text: "真龙霹雳鞭"
+- raw: "催命符"
+  splits:
+  - text: "催命符"
+- raw: "后羿射日"
+  splits:
+  - text: "后羿射日"
+- raw: "星落九天"
+  splits:
+  - text: "星落九天"
+- raw: "临时:老农&男;50;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "老农"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2"
+- raw: "雷彤"
+  splits:
+  - text: "雷彤"
+- raw: "临时:乐山村长&男;50;-1;2;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "乐山村长"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;2;-3"
+- raw: "临时:乐山村长"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "乐山村长"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:村民甲&男;30;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-2"
+- raw: "临时:村民乙&女;20;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-4"
+- raw: "临时:村民甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:村民丙&男;40;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:村民丁&女;20;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民丁"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-2"
+- raw: "临时:村民乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:村民甲&男;60;-1;0;-6"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};60;-1;0;-6"
+- raw: "临时:村民乙&女;40;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:村民丙&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:村民丁&男;50;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民丁"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2"
+- raw: "临时:侠客甲&男;20;-1;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1"
+- raw: "临时:侠客乙&女;30;0;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;0;0"
+- raw: "临时:侠客丙&男;40;6;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;6;2"
+- raw: "临时:侠客甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客甲&男;40;3;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;3;1"
+- raw: "临时:侠客乙&女;30;4;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;4;2"
+- raw: "临时:侠客丙&女;30;12;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客丙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;12;3"
+- raw: "临时:家丁甲&男;30;1;1;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;1;1;-4"
+- raw: "临时:家丁乙&男;40;1;2;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;1;2;-4"
+- raw: "临时:家丁甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:民女&女;20;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "民女"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-2"
+- raw: "临时:家丁乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:民女"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "民女"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:狱卒&男;30;-1;1;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "狱卒"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-5"
+- raw: "临时:狱卒甲&男;30;-1;1;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "狱卒甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-5"
+- raw: "临时:狱卒乙&男;40;-1;1;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "狱卒乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-5"
+- raw: "临时:狱卒甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "狱卒甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:狱卒乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "狱卒乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:狱卒丙&男;20;-1;2;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "狱卒丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;2;-5"
+- raw: "临时:狱卒丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "狱卒丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子&男;30;28;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;28;1"
+- raw: "临时:唐门弟子&男;40;1;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;1;2"
+- raw: "临时:唐门弟子"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子甲&男;30;28;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;28;2"
+- raw: "临时:青城弟子乙&女;40;28;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;28;1"
+- raw: "临时:青城弟子丙&男;20;28;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;28;1"
+- raw: "临时:青城弟子甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:青城弟子丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:唐门弟子甲&男;40;1;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;1;2"
+- raw: "临时:唐门弟子甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:唐门头领&男;40;1;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门头领"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;1;3"
+- raw: "临时:青城弟子甲&男;20;28;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;28;1"
+- raw: "临时:青城弟子乙&女;30;28;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;28;0"
+- raw: "临时:青城弟子丙&女;40;28;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "青城弟子丙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;28;0"
+- raw: "临时:百姓甲&男;40;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2"
+- raw: "临时:百姓乙&女;30;-1;0;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-3"
+- raw: "临时:百姓丙&男;50;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-4"
+- raw: "临时:百姓丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:百姓乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:百姓甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:窃贼甲&男;40;-1;1;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "窃贼甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-9"
+- raw: "临时:窃贼乙&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "窃贼乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:窃贼丙&女;20;-1;1;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "窃贼丙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-8"
+- raw: "临时:窃贼丁&女;30;-1;1;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "窃贼丁"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-9"
+- raw: "临时:窃贼丁"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "窃贼丁"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:家丁甲&男;40;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:家丁乙&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:张大户&男;50;-1;0;-3;5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "张大户"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-3;5"
+- raw: "临时:家丁丙&男;20;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-4"
+- raw: "临时:张大户"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "张大户"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:官差&男;40;-1;2;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "官差"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-5"
+- raw: "临时:捕头&男;30;-1;1;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "捕头"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-5"
+- raw: "临时:渔夫&男;50;-1;0;-2;0;false;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "渔夫"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2;0;false;0"
+- raw: "临时:小二&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "小二"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:铁掌恶徒甲&男;30;24;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;24;3"
+- raw: "临时:铁掌恶徒乙&女;20;24;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌恶徒丙&男;20;24;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;24;0"
+- raw: "临时:铁掌恶徒丁&男;30;24;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒丁"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌恶徒甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌恶徒乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌恶徒丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌恶徒丁"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌恶徒丁"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:官差&男;40;-1;4;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "官差"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-5"
+- raw: "临时:黑风头目&男;40;-1;1;-8;;true"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "黑风头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-8;;true"
+- raw: "临时:黑风头目"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "黑风头目"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:黑风头目甲&男;40;-1;2;-8;;true"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "黑风头目甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-8;;true"
+- raw: "临时:黑风头目乙&女;30;-1;1;-8;;true"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "黑风头目乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8;;true"
+- raw: "临时:黑风头目甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "黑风头目甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:黑风头目乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "黑风头目乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众甲&男;30;24;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌帮众乙&女;20;24;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌帮众甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众丙&男;20;24;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;24;0"
+- raw: "临时:铁掌帮众甲&男;20;24;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;24;2"
+- raw: "临时:铁掌帮众乙&女;30;24;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;24;1"
+- raw: "临时:铁掌帮众丙&男;20;24;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;24;3"
+- raw: "临时:铁掌帮众丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌帮众丙&女;20;24;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌帮众丙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;24;0"
+- raw: "临时:铁掌弟子甲&男;30;24;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;24;3"
+- raw: "临时:铁掌弟子乙&女;20;24;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌弟子丙&男;20;24;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;24;2"
+- raw: "临时:铁掌弟子丁&女;20;24;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子丁"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;24;1"
+- raw: "临时:铁掌弟子戊&男;30;24;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子戊"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌弟子丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌弟子甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌弟子甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌援军甲&男;30;24;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌援军甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;24;2"
+- raw: "临时:铁掌援军乙&女;40;24;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌援军乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;24;2"
+- raw: "临时:铁掌援军甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌援军甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铁掌援军乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铁掌援军乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:巴陵村民&男;50;-1;1;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "巴陵村民"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;1;-2"
+- raw: "临时:亡命徒乙&男;30;-1;2;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "亡命徒乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-8"
+- raw: "临时:亡命徒甲&男;30;-1;3;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "亡命徒甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-9"
+- raw: "临时:亡命徒丙&女;30;-1;2;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "亡命徒丙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-9"
+- raw: "临时:亡命徒甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "亡命徒甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:药王弟子&女;30;2;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "药王弟子"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;2;2"
+- raw: "临时:药王弟子"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "药王弟子"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:牛二&男;30;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "牛二"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-2"
+- raw: "临时:牛二"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "牛二"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:奸商&男;40;-1;1;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "奸商"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-3"
+- raw: "临时:武林人士甲&女;30;-1;2;-6"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武林人士甲"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-6"
+- raw: "临时:武林人士乙&男;30;-1;2;-7"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武林人士乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-7"
+- raw: "临时:奸商"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "奸商"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:老兵&男;70;-1;2;4;2;false;12"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "老兵"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};70;-1;2;4;2;false;12"
+- raw: "临时:丐帮弟子&男;40;3;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "丐帮弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;3;1"
+- raw: "临时:武当弟子甲&男;30;11;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;11;3"
+- raw: "临时:武当弟子乙&女;20;11;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;11;3"
+- raw: "临时:武当弟子甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:武当弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:武当弟子丙&男;40;11;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;11;4"
+- raw: "临时:武当弟子丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大隐弟子甲&女;40;9;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大隐弟子甲"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;9;3"
+- raw: "临时:大隐弟子乙&男;30;9;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大隐弟子乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;9;3"
+- raw: "临时:大隐弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大隐弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大隐探子&男;30;9;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大隐探子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;9;3"
+- raw: "临时:外门弟子甲&女;20;14;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "外门弟子甲"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;14;0"
+- raw: "临时:外门弟子乙&男;20;14;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "外门弟子乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;14;0"
+- raw: "临时:外门弟子丙&男;30;14;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "外门弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;14;0"
+- raw: "临时:外门弟子甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "外门弟子甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:外门弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "外门弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:农民&男;40;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "农民"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2"
+- raw: "临时:渔夫&男;30;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "渔夫"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:铸剑弟子甲&男;30;6;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铸剑弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;6;3"
+- raw: "临时:铸剑弟子乙&女;20;6;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铸剑弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;6;2"
+- raw: "临时:铸剑弟子甲"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铸剑弟子甲"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铸剑弟子丙&男;20;6;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铸剑弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;6;1"
+- raw: "临时:铸剑弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铸剑弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:铸剑弟子丁&女;20;6;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "铸剑弟子丁"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;6;1"
+- raw: "临时:受伤强盗&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "受伤强盗"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:老伯&男;50;-1;0;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "老伯"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-3"
+- raw: "临时:霸刀弟子甲&男;30;12;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "霸刀弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;12;2"
+- raw: "临时:霸刀弟子乙&女;20;12;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "霸刀弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;12;1"
+- raw: "临时:药王弟子&女;20;2;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "药王弟子"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;2;2"
+- raw: "临时:药王弟子&男;30;2;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "药王弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;2;2"
+- raw: "临时:武当弟子&男;30;11;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;11;2"
+- raw: "临时:峨眉弟子&女;30;14;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "峨眉弟子"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;14;2"
+- raw: "临时:阎罗守卫&男;30;8;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "阎罗守卫"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;8;3"
+- raw: "临时:峨眉守卫&男;40;14;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "峨眉守卫"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;14;3"
+- raw: "临时:血衣头目&男;30;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-9"
+- raw: "临时:血衣头目"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣头目"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:血衣首领&女;30;-1;5;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣首领"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;5;-9"
+- raw: "临时:血衣头目&男;40;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:血衣首领甲&男;40;7;5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣首领甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;7;5"
+- raw: "临时:血衣头目&女;30;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣头目"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-9"
+- raw: "临时:血衣首领甲&女;30;-1;5;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣首领甲"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;5;-9"
+- raw: "临时:血衣首领乙&男;40;-1;5;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣首领乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;5;-9"
+- raw: "临时:血衣头目甲&男;40;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣头目甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:血衣头目乙&女;30;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣头目乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-9"
+- raw: "临时:血衣杀手&男;40;-1;3;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣杀手"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;3;-9"
+- raw: "临时:宝光方丈&男;60;-1;0;10;3;false;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "宝光方丈"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};60;-1;0;10;3;false;1"
+- raw: "临时:宝光方丈"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "宝光方丈"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:宝光大师&男;30;-1;0;10;2;false;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "宝光大师"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;10;2;false;2"
+- raw: "临时:赵京娘&女;17;-1;0;-6;3;false;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "赵京娘"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};17;-1;0;-6;3;false;3"
+- raw: "临时:宝光大师"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "宝光大师"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:赵京娘"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "赵京娘"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:掌柜&男;55;-1;1;-3;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "掌柜"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};55;-1;1;-3;2"
+- raw: "临时:掌柜"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "掌柜"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:说书人&男;70;-1;0;-6;2;false;5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "说书人"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};70;-1;0;-6;2;false;5"
+- raw: "临时:村民&男;40;-1;0;-2;2;false;9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村民"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2;2;false;9"
+- raw: "临时:大当家&男;26;-1;5;-8;5;false;6"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大当家"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};26;-1;5;-8;5;false;6"
+- raw: "临时:张广儿&男;31;-1;5;-8;4;false;7"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "张广儿"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};31;-1;5;-8;4;false;7"
+- raw: "临时:周进&男;28;-1;4;-8;3;false;8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "周进"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};28;-1;4;-8;3;false;8"
+- raw: "临时:张广儿"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "张广儿"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:周进"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "周进"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大当家"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大当家"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:说书人"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "说书人"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:丫鬟&女;20;-1;0;-6;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "丫鬟"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;0;-6;1"
+- raw: "临时:赵京娘&女;47;-1;3;-6;4;false;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "赵京娘"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};47;-1;3;-6;4;false;4"
+- raw: "临时:血衣杀手&男;40;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣杀手"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:血衣杀手"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣杀手"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:醉鬼&男;30;-1;1;-6"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "醉鬼"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-6"
+- raw: "临时:醉鬼"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "醉鬼"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:朱大户&男;40;-1;1;-3;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "朱大户"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-3;3"
+- raw: "临时:朱大户"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "朱大户"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:钱捕头&男;40;-1;1;-5;2;false;10"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "钱捕头"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-5;2;false;10"
+- raw: "临时:小捕快&男;18;-1;3;-5;1;false;11"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "小捕快"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};18;-1;3;-5;1;false;11"
+- raw: "临时:小捕快"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "小捕快"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:钱捕头"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "钱捕头"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:家丁&男;30;-1;0;-4;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4;2"
+- raw: "临时:家丁"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "家丁"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:强盗头目&男;40;-1;2;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "强盗头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-9"
+- raw: "临时:强盗首领&男;50;-1;4;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "强盗首领"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;4;-8"
+- raw: "临时:强盗首领"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "强盗首领"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:宫女&女;40;-1;0;-6;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "宫女"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-6;2"
+- raw: "临时:农夫&男;50;-1;1;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "农夫"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;1;-2"
+- raw: "临时:江老三&男;30;-1;3;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江老三"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-8"
+- raw: "临时:江老七&男;30;-1;2;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江老七"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;2;-8"
+- raw: "临时:江十二&男;20;-1;1;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江十二"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-8"
+- raw: "临时:民女&女;40;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "民女"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:侠客&男;20;-1;2;-7"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;2;-7"
+- raw: "临时:江老三"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江老三"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:侠客"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "侠客"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:江老七"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江老七"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:江十二"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江十二"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:江老大&男;50;17;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江老大"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;17;3"
+- raw: "临时:江老大"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "江老大"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:工匠&男;50;-1;2;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "工匠"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;2;-4"
+- raw: "临时:学徒&女;20;-1;1;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "学徒"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-4"
+- raw: "临时:弟子甲&男;30;0;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;0;2"
+- raw: "临时:弟子乙&女;20;0;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;0;1"
+- raw: "临时:唐门弟子&男;30;1;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;1;3"
+- raw: "临时:小二&男;30;-1;0;-4;5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "小二"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4;5"
+- raw: "临时:百姓&女;30;-1;0;-3;5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-3;5"
+- raw: "临时:农民&男;30;-1;0;-2;5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "农民"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-2;5"
+- raw: "临时:地痞头目&男;30;-1;3;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "地痞头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-8"
+- raw: "临时:小乞丐&男;15;-1;0;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "小乞丐"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};15;-1;0;3"
+- raw: "临时:妇人&女;40;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "妇人"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-2"
+- raw: "临时:农夫&男;50;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "农夫"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;0;-2"
+- raw: "临时:百姓&男;40;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4"
+- raw: "临时:民女&女;30;-1;0;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "民女"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;0;-4"
+- raw: "临时:妇人"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "妇人"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:莺莺&女;24;0;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "莺莺"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};24;0;4"
+- raw: "临时:燕燕&女;22;-1;4;-6"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "燕燕"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};22;-1;4;-6"
+- raw: "临时:莺莺"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "莺莺"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:燕燕"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "燕燕"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:书生&男;22;-1;0;-6"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "书生"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};22;-1;0;-6"
+- raw: "临时:杂役&男;35;-1;1;-4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "杂役"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};35;-1;1;-4"
+- raw: "临时:杂役"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "杂役"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:书生"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "书生"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:官差&男;40;-1;3;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "官差"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;3;-5"
+- raw: "临时:工匠&男;40;-1;0;-4;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "工匠"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-4;2"
+- raw: "临时:金大坚&男;25;-1;2;-4;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "金大坚"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};25;-1;2;-4;4"
+- raw: "临时:血衣头目&女;40;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "血衣头目"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:金大坚"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "金大坚"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:分舵长老&男;50;4;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "分舵长老"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;4;4"
+- raw: "临时:叛党头目&男;50;4;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "叛党头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;4;4"
+- raw: "临时:叛党头目"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "叛党头目"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:叛党头目&女;30;4;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "叛党头目"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;4;4"
+- raw: "临时:叛党头目&男;40;4;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "叛党头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;4;4"
+- raw: "临时:大内侍卫&男;30;-1;4;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大内侍卫"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;4;-5"
+- raw: "临时:大内统领&男;40;-1;5;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大内统领"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;5;-5"
+- raw: "临时:山贼头目&男;40;-1;2;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "山贼头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-9"
+- raw: "临时:山贼头目"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "山贼头目"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:看守&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "看守"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:地痞&男;30;-1;1;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "地痞"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;1;-8"
+- raw: "临时:地痞"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "地痞"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:百姓&随机;;-1;0;-2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "百姓"
+  - subIndex: 2
+    text: "随机"
+  templates:
+  - template: "{0}:{1}&{2};;-1;0;-2"
+- raw: "临时:土匪&男;;-1;1;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "土匪"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};;-1;1;-8"
+- raw: "临时:强盗头目&男;40;-1;0;-8"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "强盗头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-8"
+- raw: "临时:管家&男;40;-1;0;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "管家"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;0;-3"
+- raw: "临时:牛富户&男;50;-1;1;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "牛富户"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;1;-3"
+- raw: "临时:牛富户"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "牛富户"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:赌徒&男;40;-1;2;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "赌徒"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;2;-3"
+- raw: "临时:赌徒"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "赌徒"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:镖头&男;40;-1;1;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "镖头"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;1;-5"
+- raw: "临时:邪道头目&女;40;-1;3;-10"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "邪道头目"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;3;-10"
+- raw: "临时:赌鬼&男;30;-1;3;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "赌鬼"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-3"
+- raw: "临时:邪道头目"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "邪道头目"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:女子&女;20;-1;2;-6"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "女子"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;2;-6"
+- raw: "临时:邪道头目&男;30;-1;3;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "邪道头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;-1;3;-9"
+- raw: "临时:女子"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "女子"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:丐帮弟子&男;30;3;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "丐帮弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;3;2"
+- raw: "临时:大隐弟子&女;20;9;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大隐弟子"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;9;2"
+- raw: "临时:丐帮弟子"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "丐帮弟子"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:大隐弟子"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "大隐弟子"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:邪道头目&女;40;-1;4;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "邪道头目"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;4;-9"
+- raw: "临时:邪道头目&男;50;-1;5;-9"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "邪道头目"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;5;-9"
+- raw: "临时:衙役&男;20;-1;1;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "衙役"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;-1;1;-5"
+- raw: "临时:唐门弟子甲&男;40;1;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;1;3"
+- raw: "临时:唐门弟子乙&女;30;1;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;1;2"
+- raw: "临时:唐门弟子丙&男;20;1;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;1;1"
+- raw: "临时:唐门首领甲&男;50;1;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门首领甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;1;4"
+- raw: "临时:村长&男;50;-1;2;-3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "村长"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};50;-1;2;-3"
+- raw: "临时:唐门弟子乙&女;20;1;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;1;1"
+- raw: "临时:唐门弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "唐门弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:武当弟子甲&男;40;11;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;11;3"
+- raw: "临时:武当弟子乙&女;30;11;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;11;2"
+- raw: "临时:武当弟子丙&女;20;11;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子丙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;11;1"
+- raw: "临时:武当弟子丁&男;20;11;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "武当弟子丁"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;11;0"
+- raw: "临时:官差&男;40;-1;5;-5"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "官差"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};40;-1;5;-5"
+- raw: "临时:飞龙弟子甲&男;30;4;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "飞龙弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;4;3"
+- raw: "临时:飞龙弟子乙&女;30;4;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "飞龙弟子乙"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;4;2"
+- raw: "临时:飞龙弟子丙&男;20;4;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "飞龙弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;4;1"
+- raw: "临时:飞龙弟子丁&女;20;4;0"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "飞龙弟子丁"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;4;0"
+- raw: "临时:少林弟子甲&男;30;10;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "少林弟子甲"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;10;3"
+- raw: "临时:少林弟子乙&男;30;10;2"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "少林弟子乙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;10;2"
+- raw: "临时:少林弟子丙&男;20;10;1"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "少林弟子丙"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;10;1"
+- raw: "临时:少林弟子乙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "少林弟子乙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:少林弟子丙"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "少林弟子丙"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山弟子&男;20;5;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "茅山弟子"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};20;5;3"
+- raw: "临时:五毒弟子&女;20;7;3"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "五毒弟子"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};20;7;3"
+- raw: "临时:五毒弟子"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "五毒弟子"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山弟子"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "茅山弟子"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山高手&女;30;5;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "茅山高手"
+  - subIndex: 2
+    text: "女"
+  templates:
+  - template: "{0}:{1}&{2};30;5;4"
+- raw: "临时:五毒高手&男;30;7;4"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "五毒高手"
+  - subIndex: 2
+    text: "男"
+  templates:
+  - template: "{0}:{1}&{2};30;7;4"
+- raw: "临时:五毒高手"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "五毒高手"
+  templates:
+  - template: "{0}:{1}"
+- raw: "临时:茅山高手"
+  splits:
+  - text: "临时"
+  - subIndex: 1
+    text: "茅山高手"
+  templates:
+  - template: "{0}:{1}"
+- raw: "区域上限"
+  splits:
+  - text: "区域上限"
+- raw: "弟子上限"
+  splits:
+  - text: "弟子上限"
+- raw: "仓储容量"
+  splits:
+  - text: "仓储容量"
+- raw: "藏经容量"
+  splits:
+  - text: "藏经容量"
+- raw: "学识经验"
+  splits:
+  - text: "学识经验"
+- raw: "口才经验"
+  splits:
+  - text: "口才经验"
+- raw: "锻造经验"
+  splits:
+  - text: "锻造经验"
+- raw: "采伐经验"
+  splits:
+  - text: "采伐经验"
+- raw: "木匠"
+  splits:
+  - text: "木匠"
+- raw: "石坊"
+  splits:
+  - text: "石坊"
+- raw: "炼药经验"
+  splits:
+  - text: "炼药经验"
+- raw: "木植经验"
+  splits:
+  - text: "木植经验"
+- raw: "药房"
+  splits:
+  - text: "药房"
+- raw: "本地疗伤效率"
+  splits:
+  - text: "本地疗伤效率"
+- raw: "医术经验"
+  splits:
+  - text: "医术经验"
+- raw: "毒术经验"
+  splits:
+  - text: "毒术经验"
+- raw: "本地恢复效率"
+  splits:
+  - text: "本地恢复效率"
+- raw: "烹饪经验"
+  splits:
+  - text: "烹饪经验"
+- raw: "摊贩"
+  splits:
+  - text: "摊贩"
+- raw: "磨坊"
+  splits:
+  - text: "磨坊"
+- raw: "资源点产量"
+  splits:
+  - text: "资源点产量"
+- raw: "本地资源点产量"
+  splits:
+  - text: "本地资源点产量"
+- raw: "珍宝铺"
+  splits:
+  - text: "珍宝铺"
+- raw: "兵器铺"
+  splits:
+  - text: "兵器铺"
+- raw: "材料铺"
+  splits:
+  - text: "材料铺"
+- raw: "集市"
+  splits:
+  - text: "集市"
+- raw: "本地建造速度"
+  splits:
+  - text: "本地建造速度"
+- raw: "客栈"
+  splits:
+  - text: "客栈"
+- raw: "酒馆"
+  splits:
+  - text: "酒馆"
+- raw: "医馆"
+  splits:
+  - text: "医馆"
+- raw: "旅行速度"
+  splits:
+  - text: "旅行速度"
+- raw: "工棚"
+  splits:
+  - text: "工棚"
+- raw: "祠堂"
+  splits:
+  - text: "祠堂"
+- raw: "全域人口"
+  splits:
+  - text: "全域人口"
+- raw: "全域治安"
+  splits:
+  - text: "全域治安"
+- raw: "全域民心"
+  splits:
+  - text: "全域民心"
+- raw: "全域防御"
+  splits:
+  - text: "全域防御"
+- raw: "全员口才"
+  splits:
+  - text: "全员口才"
+- raw: "全员轻功"
+  splits:
+  - text: "全员轻功"
+- raw: "射术经验"
+  splits:
+  - text: "射术经验"
+- raw: "全员射术"
+  splits:
+  - text: "全员射术"
+- raw: "全员医术"
+  splits:
+  - text: "全员医术"
+- raw: "拳掌经验"
+  splits:
+  - text: "拳掌经验"
+- raw: "全员拳掌"
+  splits:
+  - text: "全员拳掌"
+- raw: "全员长兵"
+  splits:
+  - text: "全员长兵"
+- raw: "长兵经验"
+  splits:
+  - text: "长兵经验"
+- raw: "全员经脉"
+  splits:
+  - text: "全员经脉"
+- raw: "全员奇门"
+  splits:
+  - text: "全员奇门"
+- raw: "全员炼药"
+  splits:
+  - text: "全员炼药"
+- raw: "全员剑法"
+  splits:
+  - text: "全员剑法"
+- raw: "全员锻造"
+  splits:
+  - text: "全员锻造"
+- raw: "全员毒术"
+  splits:
+  - text: "全员毒术"
+- raw: "全员力道"
+  splits:
+  - text: "全员力道"
+- raw: "全员刀法"
+  splits:
+  - text: "全员刀法"
+- raw: "全员学识"
+  splits:
+  - text: "全员学识"
+- raw: "全员体质"
+  splits:
+  - text: "全员体质"
+- raw: "全员智力"
+  splits:
+  - text: "全员智力"
+- raw: "全员意志"
+  splits:
+  - text: "全员意志"
+- raw: "刀法经验"
+  splits:
+  - text: "刀法经验"
+- raw: "全员灵巧"
+  splits:
+  - text: "全员灵巧"
+- raw: "剑法经验"
+  splits:
+  - text: "剑法经验"
+- raw: "全员内功"
+  splits:
+  - text: "全员内功"
+- raw: "轻功经验"
+  splits:
+  - text: "轻功经验"
+- raw: "全员绝技"
+  splits:
+  - text: "全员绝技"
+- raw: "奇门经验"
+  splits:
+  - text: "奇门经验"
+- raw: "绝技经验"
+  splits:
+  - text: "绝技经验"
+- raw: "内功经验"
+  splits:
+  - text: "内功经验"

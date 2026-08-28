@@ -156,7 +156,7 @@ namespace Tests
             // AnimationState.SetAnimation - an exact-match Spine animation clip name. Column 25
             // (伤害顺序/Order of damage dealt) is Enum.Parse'd into skillDamageOrder.
             new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25] },
-            new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
+            //new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
             new() {Path = "MartialClubData.csv", PackageOutput = true },
             new() {Path = "MedData.csv", PackageOutput = true },
             // Internal routing key; see docs/gamefilehandling-reference.md.
@@ -176,7 +176,7 @@ namespace Tests
             // (性别/Gender, exact-matched against 男/女 - confirmed cause of the
             // GameController.GenerateHeroData ArgumentOutOfRangeException crash at new-game hero
             // generation when translated).
-            new() {Path = "SpeHeroData.csv", PackageOutput = true, SkipColumns = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
+            //new() {Path = "SpeHeroData.csv", PackageOutput = true, SkipColumns = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
             //new() {Path = "SpeHeroFaceData.csv", PackageOutput = true },
             new() {Path = "SummonData.csv", PackageOutput = true,  SkipColumns = [7]},
             // Structured lookup-key columns; see docs/gamefilehandling-reference.md.
@@ -196,7 +196,18 @@ namespace Tests
             new() {Path = "WeaponData.csv", PackageOutput = true },
 
             // Main dialogue table; column-specific repair is documented in the reference.
-            // Columns 3/4/5/6/8 are non-narrative asset/routing keys, not display text:
+            // Columns 1/2/3/4/5/6/8 are non-narrative asset/routing keys, not display text:
+            // - Columns 1/2 (角色左/角色右, speaker name) - NOT just a cosmetic display label as
+            //   originally assumed: confirmed 2026-08-28 that both columns also encode a
+            //   structured "临时:Name&Gender;Age;RelationLevel[;...]" temporary-NPC-spawn record
+            //   (e.g. "临时:莺莺&女;24;0;4", "临时:侠客甲&男;20;-1;1") on many rows, parsed by
+            //   the game at runtime to spawn a one-off NPC - translating the name/gender fragments
+            //   inside that record risks breaking the parse. Genuine plain speaker names (no
+            //   "临时:" prefix) are cosmetic-only, but the column can't be split further than
+            //   whole-column, so the whole column is skipped. The unrelated hardcoded-name lookup
+            //   hazard is still HardcodedHeroNamePatches.cs in DragonHeirPlugin (raw Chinese
+            //   literals baked into GameController.cs's own compiled code, matched against
+            //   WorldData.HerosDict which is keyed by SpeHeroData.csv's translated name column).
             // - Column 3 (高亮方/highlight side) exact-matched against "左"/"右"/"无"/"皆".
             // - Column 4 (背景图片/background image) - background sprite reference.
             // - Column 5 (背景音乐/background music) is concatenated/passed to
@@ -208,7 +219,7 @@ namespace Tests
             //   Component.SendMessage(this, functionName, ...) - a reflection-based call by name.
             // Column 9 (选项/choices) stays translated - it's covered by the CustomColumnRepair/
             // CustomColumnValidator delimiter-preservation pattern above, not SkipColumns.
-            new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [3, 4, 5, 6, 8] },
+            new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [1, 2, 3, 4, 5, 6, 7, 8] },
 
             // Flat prefab-text input; see docs/gamefilehandling-reference.md.
             new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
@@ -232,22 +243,6 @@ namespace Tests
             ("KungFuData.csv", [3]),
         ];
 
-        // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.
-        // The allowlist was sampled against real dumps; noisy/internal fields are intentionally absent.
-        // Field selection and exact-match setter rationale: docs/gamefilehandling-reference.md.
-        public static readonly string[] DynamicStringOtherTextFields =
-        [
-            "name", "eventName", "tutorialName", "showName", "bulletName", "fullName",
-            "jobName", "spellName", "pointName", "sourceName", "plotName",
-            "plotText", "tutorialText", "choiceText", "startRemindText", "describe",
-            "eventDescribe", "jobDescribe",
-        ];
-
-        // Runtime setter behavior: docs/gamefilehandling-reference.md.
-
-        // Extracts the repeated label from a structured stat modifier.
-        private static readonly Regex StatLabelRegex = new(@"^[^\d+\-]+", RegexOptions.Compiled);
-
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringLabelColumnSources =
         [
@@ -265,6 +260,24 @@ namespace Tests
             // (AreaBuildingRateChange.targetBuildingName, concatenated by GetAreaBuildRateChangeText).
             ("BuildingData.csv", [8, 9, 10, 11, 12]),
         ];
+
+        // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.
+        // The allowlist was sampled against real dumps; noisy/internal fields are intentionally absent.
+        // Field selection and exact-match setter rationale: docs/gamefilehandling-reference.md.
+        public static readonly string[] DynamicStringOtherTextFields =
+        [
+            "name", "eventName", "tutorialName", "showName", "bulletName", "fullName",
+            "jobName", "spellName", "pointName", "sourceName", "plotName",
+            "plotText", "tutorialText", "choiceText", "startRemindText", "describe",
+            "eventDescribe", "jobDescribe",
+        ];
+
+        // Runtime setter behavior: docs/gamefilehandling-reference.md.
+
+        // Extracts the repeated label from a structured stat modifier.
+        private static readonly Regex StatLabelRegex = new(@"^[^\d+\-]+", RegexOptions.Compiled);
+
+
 
         /// <summary>Extracts configured whole values and structured labels idempotently.</summary>
         public static void ExtractDynamicStringCandidatesFromColumns(string workingDirectory)
@@ -636,6 +649,10 @@ namespace Tests
                             }
                         }
                     }
+
+                    // Don't remove /n it makes lines even longer and less likely to wrap.
+                    // if (textFileToTranslate.Path == "PlotData.csv" && splits.Length > 10)
+                    //     splits[10] = splits[10].Replace("\\r\\n", " ").Replace("\\n", " ").Replace("\\r", " ");
 
                     line.Translated = RebuildCsvRow(splits);
 

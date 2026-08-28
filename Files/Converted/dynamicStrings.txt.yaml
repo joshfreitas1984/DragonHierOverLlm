@@ -1997,8 +1997,6 @@
 - raw: "#英文双引号#"
   splits:
   - text: "#英文双引号#"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
 - raw: "%\n\n特殊效果"
   splits:
   - text: "特殊效果"
@@ -12440,8 +12438,6 @@
     translated: "Thank you, Master! As a disciple, I will strive to be humble and diligent in my studies."
   - subIndex: 1
     text: "定不辜负师傅此番苦心栽培。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - template: "{0}\n{1}"
 - raw: "多谢捧场;ChangePlayerMoneyFinish;"
@@ -13331,7 +13327,7 @@
 - raw: "姜映泉"
   splits:
   - text: "姜映泉"
-    translated: "Jiang Yinquan"
+    translated: "Jiang Yingquan"
 - raw: "姬清梵"
   splits:
   - text: "姬清梵"
@@ -18890,8 +18886,6 @@
 - raw: "浊酒一杯家万里，燕然未勒归无计"
   splits:
   - text: "浊酒一杯家万里，燕然未勒归无计"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
 - raw: "海晏河清，仓禀充实，附近流民农户纷纷前往定居。"
   splits:
   - text: "海晏河清，仓禀充实，附近流民农户纷纷前往定居。"
@@ -21490,8 +21484,6 @@
 - raw: "落魄江湖载酒行，楚腰纤细掌中轻。十年一觉扬州梦，赢得青楼薄幸名。\n这烟花柳巷，自古以来便是名人雅士宴饮会客的不二场所。"
   splits:
   - text: "落魄江湖载酒行，楚腰纤细掌中轻。十年一觉扬州梦，赢得青楼薄幸名。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   - subIndex: 1
     text: "这烟花柳巷，自古以来便是名人雅士宴饮会客的不二场所。"
     translated: "This Red‑light District, Yanhua Xiang, has been the premier place for celebrities and refined scholars to entertain and meet guests since ancient times."
@@ -23253,9 +23245,7 @@
 - raw: "这吐纳法乃内功筑基之法，还望你好生参悟。\n待功力大成之后，方能修习更高深之武学。"
   splits:
   - text: "这吐纳法乃内功筑基之法，还望你好生参悟。"
-    translated: "This breathing technique is for establishing the foundation of internal skill; I hope you can deeply understand it."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Foundation Establishment,筑基,"
+    translated: "This breathing method is for establishing the foundation of internal skill; I hope you can deeply contemplate it."
   - subIndex: 1
     text: "待功力大成之后，方能修习更高深之武学。"
     translated: "Only after one's cultivation is complete can they practice more advanced martial arts."
@@ -23678,7 +23668,7 @@
 - raw: "道无名"
   splits:
   - text: "道无名"
-    translated: "Waynameless"
+    translated: "Dao Wuming"
 - raw: "道法"
   splits:
   - text: "道法"
@@ -25071,8 +25061,6 @@
     translated: "(Pinping) The feast, though not particularly sumptuous, was nonetheless lively and joyous."
   - subIndex: 1
     text: "饮宴过后只觉烦恼疲惫一扫而空，快哉快哉！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
   templates:
   - template: "{0}\n{1}"
 - raw: "（弟子晋升后全属性潜力+5，全武学潜力+5，全技艺潜力+2）"
@@ -25102,9 +25090,7 @@
 - raw: "（极乐）此宴只应天上有，人间能得几回闻。\n如此极尽华美之筵席只消稍作体会，怕是连宫廷御宴也再难入眼了。"
   splits:
   - text: "（极乐）此宴只应天上有，人间能得几回闻。"
-    translated: "(Paradise) Such a feast should only be found in heaven, and how often can one hear of it in the mortal world?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yingtian,应天,"
+    translated: "(The Blissful Land)This feast should only be in heaven, how often can one hear of it on Earth?"
   - subIndex: 1
     text: "如此极尽华美之筵席只消稍作体会，怕是连宫廷御宴也再难入眼了。"
     translated: "Such an exquisitely magnificent feast would likely make even the imperial banquets seem unremarkable by comparison."

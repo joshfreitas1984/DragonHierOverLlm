@@ -23,13 +23,13 @@ internal static class NameLengthPatches
             if (__instance.heroFamilyName != null)
             {
                 __instance.heroFamilyName.characterLimit = 10;
-                __instance.heroFamilyName.text = "Han";
+                //__instance.heroFamilyName.text = "Han"; <-- This must need something else
             }
 
             if (__instance.heroGivenName != null)
             {
                 __instance.heroGivenName.characterLimit = 10;
-                __instance.heroGivenName.text = "Li";
+                //__instance.heroGivenName.text = "Li";
             }
         }
         catch (System.Exception ex)
