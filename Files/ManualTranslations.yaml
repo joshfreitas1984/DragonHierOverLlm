@@ -1,3 +1,104 @@
 ﻿- raw: 影響：{0}
   result: "Impact: {0}"
   badtrans: true
+- raw: "#英文双引号#"
+  rawSimplified: "#英文双引号#"
+  rawTraditional: "#英文雙引號#"
+  result: "#English Double Quotation Marks#"
+  direct: English Double Quotes
+- raw: 定不辜负师傅此番苦心栽培。
+  rawSimplified: 定不辜负师傅此番苦心栽培。
+  rawTraditional: 定不辜負師傅此番苦心栽培。
+  result: I shall not fail my master after all their painstaking efforts to cultivate me.
+  direct: Surely not let down Master after this painstaking cultivation.
+- raw: 落魄江湖载酒行，楚腰纤细掌中轻。十年一觉扬州梦，赢得青楼薄幸名。
+  rawSimplified: 落魄江湖载酒行，楚腰纤细掌中轻。十年一觉扬州梦，赢得青楼薄幸名。
+  rawTraditional: 落魄江湖載酒行，楚腰纖細掌中輕。十年一覺揚州夢，贏得青樓薄倖名。
+  result: Down and out, I wandered the Jianghu with wine in hand; the slender waists of Chu were light enough to dance upon my palm. Ten years passed like a dream in Yangzhou, leaving me with a reputation for heartlessness among the pleasure quarters.
+  direct: Downcast, I travel the jianghu carrying wine; the slender waists of Chu are light in the palm. Ten years, one awakening from a Yangzhou dream; I earned a name for being faithless in the pleasure quarters.
+- raw: 饮宴过后只觉烦恼疲惫一扫而空，快哉快哉！
+  rawSimplified: 饮宴过后只觉烦恼疲惫一扫而空，快哉快哉！
+  rawTraditional: 飲宴過後只覺煩惱疲憊一掃而空，快哉快哉！
+  result: After the feast, all my troubles and weariness seem to have been swept away. How delightful! How delightful!
+  direct: After drinking and feasting, I feel my worries and fatigue swept away completely. How exhilarating! How exhilarating!
+- raw: 3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。
+  rawSimplified: 3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。
+  rawTraditional: 3月上旬清明節既是節氣，又是節日。正值春季氣清景明，萬物萌發，生機勃勃，也是民眾掃墓祭祖，追懷先人的節日。
+  result: The Qingming Festival falls in early March. It is both a solar term and a traditional festival. As spring brings clear skies and bright scenery, all things begin to sprout and thrive. It is also a time for people to tend to ancestral graves, make offerings to their ancestors, and commemorate those who came before them.
+  direct: In early March, the Qingming Festival is both a solar term and a festival. It occurs when the air is clear and the scenery bright in spring, with all things sprouting and full of vitality. It is also a festival for the people to sweep graves, honor ancestors, and remember those who came before.
+- raw: 浊酒一杯家万里，燕然未勒归无计
+  rawSimplified: 浊酒一杯家万里，燕然未勒归无计
+  rawTraditional: 濁酒一杯家萬里，燕然未勒歸無計
+  result: A cup of coarse wine, and home lies ten thousand li away; Yanran has yet to be inscribed, and I have no way to return.
+  direct: A cup of muddy wine, my home ten thousand li away; Yanran is not yet carved, so there is no plan to return.
+- raw: 12月初8乃释迦摩尼悟道成佛之日，家家户户会以各种谷物豆类，混合红枣花生莲子枸杞桂圆核桃等干果，佐以红糖白糖熬煮成一锅香甜浓郁的腊八粥以表纪念。
+  rawSimplified: 12月初8乃释迦摩尼悟道成佛之日，家家户户会以各种谷物豆类，混合红枣花生莲子枸杞桂圆核桃等干果，佐以红糖白糖熬煮成一锅香甜浓郁的腊八粥以表纪念。
+  rawTraditional: 12月初8乃釋迦摩尼悟道成佛之日，家家戶戶會以各種穀物豆類，混合紅棗花生蓮子枸杞桂圓核桃等乾果，佐以紅糖白糖熬煮成一鍋香甜濃郁的臘八粥以表紀念。
+  result: The eighth day of the twelfth lunar month marks the day Shakyamuni attained enlightenment and became a Buddha. Families commemorate it by simmering a rich, sweet Laba porridge made from various grains and beans, mixed with dried fruits and nuts such as red dates, peanuts, lotus seeds, goji berries, longan, and walnuts, sweetened with brown and white sugar.
+  direct: The eighth day of the twelfth month is the day Shakyamuni attained enlightenment and became a Buddha. Every household uses various grains and beans, mixed with dried fruits such as red dates, peanuts, lotus seeds, goji berries, longan, and walnuts, adding brown sugar and white sugar to boil a pot of sweet, rich Laba porridge as a commemoration.
+- raw: 武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔
+  rawSimplified: 武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔
+  rawTraditional: 武絕義融合了飛龍門帝王封禪功和崆峒派鬥轉星移，所創獨門絕技，出招方式與內息運行完全逆常理而行，詭異莫測，修習者稍有不慎便會走火入魔
+  result: Wu Jueyi's unique martial art, created by combining the Flying Dragon Gate's Imperial Fengshan Technique with the Kongtong Sect's Stars Shift and Stars Turn, employs attack methods and internal energy circulation that completely defy conventional principles. Its workings are strange and unpredictable, and practitioners who are even slightly careless may suffer qi deviation and fall into demonic madness.
+  direct: The unique skill created by Wu Jueyi combines the Flying Dragon Gate's Imperial Fengshan Technique and the Kongtong Sect's Stars Shift and Stars Turn. Its methods of attack and internal breath circulation proceed completely contrary to common sense, making it strange and unfathomable; practitioners who are the slightest bit careless will go berserk and fall prey to inner demons.
+- raw: 大巧不工，大道无名，此剑法仅有图谱却无固定招式，讲求随机应变，自然妙悟，对使用者剑法造诣要求极高
+  rawSimplified: 大巧不工，大道无名，此剑法仅有图谱却无固定招式，讲求随机应变，自然妙悟，对使用者剑法造诣要求极高
+  rawTraditional: 大巧不工，大道無名，此劍法僅有圖譜卻無固定招式，講求隨機應變，自然妙悟，對使用者劍法造詣要求極高
+  result: Great skill appears effortless, and the Great Way is nameless. This sword art exists only as a manual of diagrams, with no fixed techniques. It emphasizes adapting to circumstances and achieving natural insight, demanding an exceptionally high level of swordsmanship from its practitioner.
+  direct: Great skill does not labor; the Great Way has no name. This sword technique has only diagrams and no fixed moves, emphasizing adapting to changing circumstances and natural enlightenment. It places extremely high demands on the user's mastery of swordsmanship.
+- raw: 武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔
+  rawSimplified: 武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔
+  rawTraditional: 武絕義融合了飛龍門帝王封禪功和崆峒派鬥轉星移，所創獨門絕技，出招方式與內息運行完全逆常理而行，詭異莫測，修習者稍有不慎便會走火入魔
+  result: Wu Jueyi's unique martial art combines the Flying Dragon Gate's Imperial Fengshan Technique with the Kongtong Sect's Stars Shift and Stars Turn. Its attacks and internal energy circulation completely defy conventional principles, making it strange and unpredictable. Practitioners who are even slightly careless may suffer qi deviation and become possessed by inner demons.
+  direct: The unique technique created by Wu Jueyi combines the Flying Dragon Gate's Imperial Fengshan Technique and the Kongtong Sect's Stars Shift and Stars Turn. Its attack methods and internal breath circulation proceed completely contrary to normal principles, making it strange and unfathomable; practitioners who are slightly careless will deviate their qi and fall into demonic possession.
+- raw: "#反馈#"
+  rawSimplified: "#反馈#"
+  rawTraditional: "#反饋#"
+  result: "#Feedback#"
+- raw: 师姐这
+  rawSimplified: 师姐这
+  rawTraditional: 師姐這
+  result: Senior Sister, this
+  direct: Senior Sister, this
+  literal: Shījiě zhè
+- raw: 哈哈哈，妹儿放心，大哥我自然早有防备。
+  rawSimplified: 哈哈哈，妹儿放心，大哥我自然早有防备。
+  rawTraditional: 哈哈哈，妹兒放心，大哥我自然早有防備。
+  result: Hahaha, don't worry, sis. Big brother naturally came prepared.
+  direct: Hahaha, little sister, don't worry. Your big brother naturally made preparations long ago.
+- raw: 呵呵，咱们大师兄就算变成厉鬼，也是去找铁掌帮索命啊，
+  rawSimplified: 呵呵，咱们大师兄就算变成厉鬼，也是去找铁掌帮索命啊，
+  rawTraditional: 呵呵，咱們大師兄就算變成厲鬼，也是去找鐵掌幫索命啊，
+  result: Heh, even if our big senior brother became a vengeful ghost, he'd go after the Iron Palm Gang to claim their lives.
+  direct: Hehe, even if our eldest senior brother turned into a vengeful ghost, he'd still go to the Iron Palm Gang to demand their lives.
+- raw: 哈哈哈哈，王寨主，兄弟来迟一步，莫要见怪。
+  rawSimplified: 哈哈哈哈，王寨主，兄弟来迟一步，莫要见怪。
+  rawTraditional: 哈哈哈哈，王寨主，兄弟來遲一步，莫要見怪。
+  result: Hahahaha, Fort Master Wang, forgive your brother for arriving a little late.
+  direct: Hahahaha, Village Chief Wang, your brother arrived one step late; please don't take offense.
+- raw: 好！余师姐，今天不练会，我杨思迟就不睡觉了！
+  rawSimplified: 好！余师姐，今天不练会，我杨思迟就不睡觉了！
+  rawTraditional: 好！余師姐，今天不練會，我楊思遲就不睡覺了！
+  result: Good! Senior Sister Yu, if I don't master this today, I, Yang Sichi, won't sleep!
+  direct: Good! Senior Sister Yu, if I don't practice this today, I, Yang Sichi, won't go to sleep!
+- raw: 本大侠手中这剑可不是摆设，姑娘，告辞！
+  rawSimplified: 本大侠手中这剑可不是摆设，姑娘，告辞！
+  rawTraditional: 本大俠手中這劍可不是擺設，姑娘，告辭！
+  result: The sword in this great hero's hand is no mere decoration. Miss, farewell!
+  direct: The sword in this hero's hand is certainly not a mere ornament. Miss, I bid you farewell!
+# - raw: 我韩嵩混迹江湖多年，岂能不知？
+#   rawSimplified: 我韩嵩混迹江湖多年，岂能不知？
+#   rawTraditional: 我韓嵩混跡江湖多年，豈能不知？
+#   result: I, Han Song, have roamed the jianghu for many years. How could I not know?
+#   direct: I, Han Song, have wandered the jianghu for many years; how could I not know?
+#   literal: Wǒ Hán Sōng hùnjì jiānghú duōnián, qǐ néng bù zhī?
+- raw: 莫要辜负了唐掌门一片好心。
+  rawSimplified: 莫要辜负了唐掌门一片好心。
+  rawTraditional: 莫要辜負了唐掌門一片好心。
+  result: Do not disappoint Sect Leader Tang's good intentions.
+  direct: Do not let down Sect Leader Tang's kind intentions.
+- raw: 待京城风波彻底平息后，
+  rawSimplified: 待京城风波彻底平息后，
+  rawTraditional: 待京城風波徹底平息後，
+  result: Once the turmoil in the capital has completely subsided,
+  direct: After the disturbances in the capital have completely calmed down,

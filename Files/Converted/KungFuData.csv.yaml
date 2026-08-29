@@ -6541,7 +6541,7 @@
     translated: "Nameless Sword Technique"
   - split: 4
     text: "大巧不工，大道无名，此剑法仅有图谱却无固定招式，讲求随机应变，自然妙悟，对使用者剑法造诣要求极高"
-    translated: "The Great Dao does not rely on fineness; the named has no Great Dao. This sword technique has only a diagram and no fixed moves, emphasizing adaptability and natural understanding. It demands a high level of mastery in the user's sword technique."
+    translated: "Great skill appears effortless, and the Great Way is nameless. This sword art exists only as a manual of diagrams, with no fixed techniques. It emphasizes adapting to circumstances and achieving natural insight, demanding an exceptionally high level of swordsmanship from its practitioner."
   - split: 17
     text: "腹12"
     translated: "12 stomach"
@@ -23920,6 +23920,7 @@
     translated: "Reverse Cycle Heaven Technique"
   - split: 4
     text: "武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔"
+    translated: "Wu Jueyi's unique martial art, created by combining the Flying Dragon Gate's Imperial Fengshan Technique with the Kongtong Sect's Stars Shift and Stars Turn, employs attack methods and internal energy circulation that completely defy conventional principles. Its workings are strange and unpredictable, and practitioners who are even slightly careless may suffer qi deviation and fall into demonic madness."
 - raw: "993,内功,4,绝义归藏功,武绝义所夺得的龙胤归藏功一部分，融入了飞龙门心法后，变为一门可大大提升修为者力道和体魄，颇为霸道强悍的功法,,2,力道潜力1;意志潜力1;体质潜力1,生命上限130;内力上限70;内功8;力道8;意志8;体质12;外伤0.05;横练0.05;霸体0.05,,内功60;力道50;体质70,,,,0,-1,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 1

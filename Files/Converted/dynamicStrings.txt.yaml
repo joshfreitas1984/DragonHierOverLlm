@@ -1997,6 +1997,7 @@
 - raw: "#英文双引号#"
   splits:
   - text: "#英文双引号#"
+    translated: "#English Double Quotation Marks#"
 - raw: "%\n\n特殊效果"
   splits:
   - text: "特殊效果"
@@ -10452,7 +10453,7 @@
 - raw: "呵呵，大师兄嘴上说的好听，明明刚才已经吃了三四个了。\n别以为小爷没看见。"
   splits:
   - text: "呵呵，大师兄嘴上说的好听，明明刚才已经吃了三四个了。"
-    translated: "Haha, Senior Brother may say it sounds good, but you clearly ate three or four just now."
+    translated: "Haha, Big Senior Brother, you say it sounds good, but you just ate three or four already."
   - subIndex: 1
     text: "别以为小爷没看见。"
     translated: "Don't think Little Lord didn't notice"
@@ -12438,6 +12439,7 @@
     translated: "Thank you, Master! As a disciple, I will strive to be humble and diligent in my studies."
   - subIndex: 1
     text: "定不辜负师傅此番苦心栽培。"
+    translated: "I shall not fail my master after all their painstaking efforts to cultivate me."
   templates:
   - template: "{0}\n{1}"
 - raw: "多谢捧场;ChangePlayerMoneyFinish;"
@@ -18886,6 +18888,7 @@
 - raw: "浊酒一杯家万里，燕然未勒归无计"
   splits:
   - text: "浊酒一杯家万里，燕然未勒归无计"
+    translated: "A cup of coarse wine, and home lies ten thousand li away; Yanran has yet to be inscribed, and I have no way to return."
 - raw: "海晏河清，仓禀充实，附近流民农户纷纷前往定居。"
   splits:
   - text: "海晏河清，仓禀充实，附近流民农户纷纷前往定居。"
@@ -21484,6 +21487,7 @@
 - raw: "落魄江湖载酒行，楚腰纤细掌中轻。十年一觉扬州梦，赢得青楼薄幸名。\n这烟花柳巷，自古以来便是名人雅士宴饮会客的不二场所。"
   splits:
   - text: "落魄江湖载酒行，楚腰纤细掌中轻。十年一觉扬州梦，赢得青楼薄幸名。"
+    translated: "Down and out, I wandered the Jianghu with wine in hand; the slender waists of Chu were light enough to dance upon my palm. Ten years passed like a dream in Yangzhou, leaving me with a reputation for heartlessness among the pleasure quarters."
   - subIndex: 1
     text: "这烟花柳巷，自古以来便是名人雅士宴饮会客的不二场所。"
     translated: "This Red‑light District, Yanhua Xiang, has been the premier place for celebrities and refined scholars to entertain and meet guests since ancient times."
@@ -23245,7 +23249,7 @@
 - raw: "这吐纳法乃内功筑基之法，还望你好生参悟。\n待功力大成之后，方能修习更高深之武学。"
   splits:
   - text: "这吐纳法乃内功筑基之法，还望你好生参悟。"
-    translated: "This breathing method is for establishing the foundation of internal skill; I hope you can deeply contemplate it."
+    translated: "This breathing technique is for Foundation Establishment of internal skill; I hope you can deeply understand it."
   - subIndex: 1
     text: "待功力大成之后，方能修习更高深之武学。"
     translated: "Only after one's cultivation is complete can they practice more advanced martial arts."
@@ -25061,6 +25065,7 @@
     translated: "(Pinping) The feast, though not particularly sumptuous, was nonetheless lively and joyous."
   - subIndex: 1
     text: "饮宴过后只觉烦恼疲惫一扫而空，快哉快哉！"
+    translated: "After the feast, all my troubles and weariness seem to have been swept away. How delightful! How delightful!"
   templates:
   - template: "{0}\n{1}"
 - raw: "（弟子晋升后全属性潜力+5，全武学潜力+5，全技艺潜力+2）"
@@ -25090,7 +25095,7 @@
 - raw: "（极乐）此宴只应天上有，人间能得几回闻。\n如此极尽华美之筵席只消稍作体会，怕是连宫廷御宴也再难入眼了。"
   splits:
   - text: "（极乐）此宴只应天上有，人间能得几回闻。"
-    translated: "(The Blissful Land)This feast should only be in heaven, how often can one hear of it on Earth?"
+    translated: "(Paradise) Such a feast should only be found in heaven, and few can hear of it on Earth."
   - subIndex: 1
     text: "如此极尽华美之筵席只消稍作体会，怕是连宫廷御宴也再难入眼了。"
     translated: "Such an exquisitely magnificent feast would likely make even the imperial banquets seem unremarkable by comparison."

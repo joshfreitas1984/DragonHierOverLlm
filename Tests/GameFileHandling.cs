@@ -186,7 +186,7 @@ namespace Tests
             // (名字/Name) IS safe here though - GetSkillID's name lookup only scans
             // kungfuSkillDataBase, not the summon variant, so summon skill names aren't matched
             // against SpeHeroData.csv column 13 like regular KungFuData.csv names are.
-            new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [1, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25] },
+            new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [1, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25, 27, 28] },
             // Column 4 (加成对象/Target for buff) is exact-matched via String.Equals against
             // ForceSpeAddDataBase.name (cross-file lookup key). Column 8 (消耗资源/Consume
             // resources) goes through the same FUN_1817ff280 name-lookup dictionary used for
@@ -237,19 +237,12 @@ namespace Tests
         // Whole-phrase raw display sources; see docs/gamefilehandling-reference.md.
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringColumnSources =
         [
-            ("ForceData.csv", [1]),
-            // Column 5 (等级/position title, e.g. 掌门/副掌门) plus column 15 (绰号/nickname,
-            // e.g. "无为真人") - since 2026-08-29. SpeHeroData.csv is fully commented out of
-            // TextFilesToSplit (see the crash-avoidance note above that entry), so this file's
-            // display text never reaches the normal per-row CSV pipeline at all; nicknames were
-            // previously getting corrupted by DynamicStringPatches' bare single-character
-            // dictionary entries (e.g. "无"->"None", "为"->"For" matching inside "无为真人",
-            // producing "None For 真人") because no whole-phrase entry existed to win the
-            // longest-match-first ordering. Extracting the whole nickname here fixes every hero
-            // uniformly instead of manually patching one Raw value at a time.
-            ("SpeHeroData.csv", [5, 15]),
-            ("HeroTagData.csv", [1]),
-            ("KungFuData.csv", [3]),
+            ("AreaData.csv", [1, 2]),
+            ("BuildingData.csv", [1]),
+            ("ForceData.csv", [1, 2, 9, 10, 11]),
+            ("ForceSpeAddDataBase.csv", [1]),          
+            ("HeroTagData.csv", [1, 5, 6, 7, 10, 11]),
+            ("KungFuData.csv", [3, 7, 8, 9, 10, 13, 17, 18, 23, 24, 25]),
             // Column 2 (类别/Category) plus, since 2026-08-29, column 1 (名字/Name) - see the
             // defense-in-depth note below for why the name column was added.
             // Defense-in-depth (2026-08-29): column 1 on AreaData/ResourcePointData/
@@ -260,28 +253,41 @@ namespace Tests
             // "杭州甘泉" - AreaData.areaName + ResourcePointData.resourcePointName joined with
             // "\n") - those never flow through the CSV pipeline at all, only through
             // DynamicStringPatches' substring dictionary.
-            ("AreaData.csv", [1, 2]),
             ("ResourcePointData.csv", [1]),
             ("ResourcePointTypeData.csv", [1]),
-            ("BuildingData.csv", [1]),
+            ("SpeAddDataBase.csv", [1, 11]),
+            // Column 5 (等级/position title, e.g. 掌门/副掌门) plus column 15 (绰号/nickname,
+            // e.g. "无为真人") - since 2026-08-29. SpeHeroData.csv is fully commented out of
+            // TextFilesToSplit (see the crash-avoidance note above that entry), so this file's
+            // display text never reaches the normal per-row CSV pipeline at all; nicknames were
+            // previously getting corrupted by DynamicStringPatches' bare single-character
+            // dictionary entries (e.g. "无"->"None", "为"->"For" matching inside "无为真人",
+            // producing "None For 真人") because no whole-phrase entry existed to win the
+            // longest-match-first ordering. Extracting the whole nickname here fixes every hero
+            // uniformly instead of manually patching one Raw value at a time.
+            ("SpeHeroData.csv", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 18]),
+            ("SummonKungFuData.csv", [1, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25]),
+            ("TechDataBase.csv", [4, 8]),
         ];
 
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringLabelColumnSources =
         [
-            // 修炼效果/运功效果/威力系数/修炼需求/使用特效 - e.g. "内功1;经脉1", "生命上限20;内力上限20;内功4".
-            ("KungFuData.csv", [7, 8, 9, 10, 13]),
-            ("SummonKungFuData.csv", [7, 8, 9, 10, 13]),
-            // 资源/加成/守城效果 - e.g. "威望+2,药材+1", "技艺经验0.01", "速度+0.05".
-            ("ResourcePointTypeData.csv", [2, 3, 4]),
-            // 加成效果 - e.g. "伤害0.02", "学识4".
-            ("SkinDataBase.csv", [2]),
             // 每月产出/每月维护/加成/增加效率/升级消耗 - e.g. "威望+10", "银钱+100", "木匠-0.2;石坊-0.2".
             // Columns 8/9/10/12 match resource names against forceSpeAddDataBase's label list
             // (AreaBuildingDataBase.GetDescribe concatenates the raw label into the building info
             // panel); column 11's label is a cross-referenced building name
             // (AreaBuildingRateChange.targetBuildingName, concatenated by GetAreaBuildRateChangeText).
-            ("BuildingData.csv", [8, 9, 10, 11, 12]),
+            ("BuildingData.csv", [3, 8, 9, 10, 11, 12]),
+            ("HeroTagData.csv", [9]),
+            // 修炼效果/运功效果/威力系数/修炼需求/使用特效 - e.g. "内功1;经脉1", "生命上限20;内力上限20;内功4".
+            ("KungFuData.csv", [7, 8, 9, 10, 13]),
+            // 资源/加成/守城效果 - e.g. "威望+2,药材+1", "技艺经验0.01", "速度+0.05".
+            ("ResourcePointTypeData.csv", [2, 3, 4]),
+            // 加成效果 - e.g. "伤害0.02", "学识4".
+            ("SkinDataBase.csv", [2]),
+            ("SpeHeroData.csv", [11, 12, 14, 18]),
+            ("SummonKungFuData.csv", [7, 8, 9, 10, 13, 17]),
         ];
 
         // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.

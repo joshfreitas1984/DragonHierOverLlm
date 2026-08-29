@@ -1,2 +1,10 @@
 - raw: 道无名
   result: Dao Wuming
+- raw: "师"
+  translated: "Ma"
+  only: 
+    - "PlotData.csv"
+- raw: "师"
+  translated: "Senior"
+  only: 
+    - "dynamicStringsFromColumns.txt"

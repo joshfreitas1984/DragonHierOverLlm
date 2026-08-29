@@ -227,7 +227,7 @@
 - raw: "#PlayerName#，大师兄此前追踪黑风寨贼人许久未归，今日竟突然回到<b>仙霞派</b>啦！还望你赶快回来，一起看看是何情况。"
   splits:
   - text: "#PlayerName#，大师兄此前追踪黑风寨贼人许久未归，今日竟突然回到"
-    translated: "#PlayerName#, the Senior Brother has been tracking the bandits from Black Wind Grove for some time and has not returned. Yet, he suddenly returned today."
+    translated: "#PlayerName#, Big Senior Brother had been tracking the bandits from Black Wind Village for some time and had not returned, but he unexpectedly returned today."
   - subIndex: 1
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -983,7 +983,7 @@
 - raw: "12月初8乃释迦摩尼悟道成佛之日，家家户户会以各种谷物豆类，混合红枣花生莲子枸杞桂圆核桃等干果，佐以红糖白糖熬煮成一锅香甜浓郁的腊八粥以表纪念。"
   splits:
   - text: "12月初8乃释迦摩尼悟道成佛之日，家家户户会以各种谷物豆类，混合红枣花生莲子枸杞桂圆核桃等干果，佐以红糖白糖熬煮成一锅香甜浓郁的腊八粥以表纪念。"
-    translated: "At the beginning of January 12, the 8th, the day when Siddhartha Gautama attained enlightenment and became Buddha, households prepare a sweet and rich pot of Laba porridge by boiling various grains and beans mixed with dried fruits like large jujubes, peanuts, lotus seeds, goji berries, and walnuts, and sweeteners like red sugar and white sugar, to commemorate the occasion. 8"
+    translated: "The eighth day of the twelfth lunar month marks the day Shakyamuni attained enlightenment and became a Buddha. Families commemorate it by simmering a rich, sweet Laba porridge made from various grains and beans, mixed with dried fruits and nuts such as red dates, peanuts, lotus seeds, goji berries, longan, and walnuts, sweetened with brown and white sugar."
 - raw: "1月15日乃是一年中首个月圆之夜，各大城市皆会张灯结彩，举办赏花灯、猜灯谜、吃汤圆、舞鱼龙等活动。"
   splits:
   - text: "1月15日乃是一年中首个月圆之夜，各大城市皆会张灯结彩，举办赏花灯、猜灯谜、吃汤圆、舞鱼龙等活动。"
@@ -991,6 +991,7 @@
 - raw: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
   splits:
   - text: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
+    translated: "The Qingming Festival falls in early March. It is both a solar term and a traditional festival. As spring brings clear skies and bright scenery, all things begin to sprout and thrive. It is also a time for people to tend to ancestral graves, make offerings to their ancestors, and commemorate those who came before them."
 - raw: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
   splits:
   - text: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
@@ -3269,7 +3270,7 @@
 - raw: "传闻长乐帮主乐无疾亲率大军兵临<b>#PosText#</b>城下，准备与叛徒卢玉麟决一死战。"
   splits:
   - text: "传闻长乐帮主乐无疾亲率大军兵临"
-    translated: "Rumors claim that Sect Master Yue Wuji personally led a large army to approach"
+    translated: "It is said that Sect Master Yue Wuji of the Changle Gang personally led a massive army to approach."
   - subIndex: 1
     text: "城下，准备与叛徒卢玉麟决一死战。"
     translated: "Below the city walls, prepare to fight to the death with traitor Lu Yulin."
@@ -4424,7 +4425,7 @@
 - raw: "前往#TargetPlace#援救大师兄。"
   splits:
   - text: "前往#TargetPlace#援救大师兄。"
-    translated: "Go to #TargetPlace# to rescue Senior Brother"
+    translated: "Go to #TargetPlace# to rescue Big Senior Brother."
 - raw: "前往#TargetPlace#搜寻神兵踪迹。"
   splits:
   - text: "前往#TargetPlace#搜寻神兵踪迹。"
@@ -4953,6 +4954,7 @@
     translated: "The menu on the right can be used for other battle operations."
   - subIndex: 1
     text: "如移动，休息，使用物品等。"
+    translated: "If you need, use, or move items, rest, or perform other actions."
   templates:
   - template: "{0}\\n{1}"
 - raw: "右护法"
@@ -5987,7 +5989,7 @@
 - raw: "在#TargetPlace#，寻找师傅和大师兄的踪迹。"
   splits:
   - text: "在#TargetPlace#，寻找师傅和大师兄的踪迹。"
-    translated: "In #TargetPlace#, search for signs of Master and Senior Brother."
+    translated: "In #TargetPlace#, search for signs of the Master and Big Senior Brother."
 - raw: "在#TargetPlace#寻找封桩库宝藏。"
   splits:
   - text: "在#TargetPlace#寻找封桩库宝藏。"
@@ -10480,7 +10482,7 @@
 - raw: "终于寻回了魏胥华大师兄，回#TargetPlace#向师傅禀报情况。"
   splits:
   - text: "终于寻回了魏胥华大师兄，回#TargetPlace#向师傅禀报情况。"
-    translated: "Finally found Senior Brother Wei Xuhua, returning to #TargetPlace# to report the situation to Master."
+    translated: "Finally found Big Senior Brother Wei Xuhua, report back to Master in #TargetPlace#."
 - raw: "绕道而行"
   splits:
   - text: "绕道而行"

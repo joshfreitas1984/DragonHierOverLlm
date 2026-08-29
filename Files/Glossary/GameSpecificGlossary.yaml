@@ -168,6 +168,7 @@
   result: Yingtian
   allowalt: 
     - Heaven's will
+    - Heaven
     - Mandate of heaven
 - raw: 墨脱县
   result: Motuo County
@@ -454,7 +455,9 @@
 - raw: 彗.定
   result: Hui Ding
 - raw: 清.风
-  result: Qingfeng
+  result: Qing Feng
+  allowalt: 
+    - Breeze
 - raw: 李.云鹤
   result: Li Yunhe
 - raw: 吕.舞阳
@@ -622,7 +625,10 @@
 - raw: 李云鹤
   result: Li Yunhe
 - raw: 清风
-  result: Qingfeng
+  result: Qing Feng
+  allowalt: 
+    - Breeze  
+    - Qingfeng
 - raw: 彗定
   result: Hui Ding
 - raw: 皇甫斌

@@ -170,7 +170,7 @@
     translated: "Left"
   - split: 10
     text: "师"
-    translated: "Master"
+    translated: "Ma"
   - split: 10
     subIndex: 1
     text: "师傅？？！！你怎么不早说！"
@@ -583,7 +583,7 @@
     translated: "Left"
   - split: 10
     text: "嘿嘿，顾师兄武功高强，本门也就大师兄能压你一头，"
-    translated: "Hehe, Senior Brother Gu's martial arts is powerful. Only the Senior Brother can match you in our sect."
+    translated: "Haha, Senior Brother Ku's martial arts is formidable. Only Big Senior Brother can match you in our sect."
   - split: 10
     subIndex: 1
     text: "今天我这手三脚猫功夫，真是见笑了。"
@@ -1628,7 +1628,7 @@
     translated: "Left"
   - split: 10
     text: "大、大师兄？"
-    translated: "Big, Senior Brother?"
+    translated: "Big Senior Brother?"
   - split: 10
     subIndex: 1
     text: "嘿嘿，我们这不是刚入门没多久么，武功自是不济。"
@@ -1654,7 +1654,7 @@
     translated: "Right"
   - split: 10
     text: "哎，大师兄也是冷面热心肠，他说的话#PlayerName#不必太过放在心上。"
-    translated: "Ah, Senior Brother is cold‑faced but warm‑hearted. What he says about you, #PlayerName#, doesn't need to weigh too heavily on your mind."
+    translated: "Ah, Big Senior Brother may be cold‑faced but warm‑hearted. What he says about you, #PlayerName#, you don't need to take too seriously."
 - raw: ",,,右,,,,,,,#PlayerName#你的太祖长拳，通过此次切磋应该有所长进。\\n这正是通过战斗，来获取实战经验之法。"
   splits:
   - split: 3
@@ -2304,7 +2304,7 @@
   - split: 10
     subIndex: 1
     text: "只是大师兄魏胥华"
-    translated: "Just Senior Brother Wei Xuhua"
+    translated: "Just Big Senior Brother Wei Xuhua"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -2323,7 +2323,7 @@
     translated: "Left"
   - split: 10
     text: "#TargetInteractName#明察，可能是我学艺不精，大师兄也是恨铁不成钢"
-    translated: "#TargetInteractName#, keen‑eyed. Maybe I haven't mastered my skills well enough; Senior Brother is just desperate for me to improve."
+    translated: "#TargetInteractName#, I may be unskilled, and Big Senior Brother also hates to see iron that doesn't become steel."
   templates:
   - split: 10
     template: "{0}……"
@@ -2349,7 +2349,7 @@
     translated: "Right"
   - split: 10
     text: "虽说作为大师兄，胥华性格不够稳重，反倒有些桀骜不驯，"
-    translated: "Though as the senior master brother, Xu Hua's personality was not particularly steady, he instead had a certain rebellious spirit."
+    translated: "Though as the Big Senior Brother, Xu Hua's personality is not particularly steady, he instead comes across as rebellious and unruly."
   - split: 10
     subIndex: 1
     text: "但他品行不差，也并非什么奸恶之徒"
@@ -2531,7 +2531,7 @@
     translated: "Left"
   - split: 10
     text: "冷嘲热讽倒是不怕，只是#TargetInteractName#身为大师兄，"
-    translated: "Cold ridicule isn't something I'm afraid of, but as the Senior Brother, #TargetInteractName#"
+    translated: "Harsh criticism doesn't bother me, but as Big Senior Brother #TargetInteractName#,"
   - split: 10
     subIndex: 1
     text: "为何不念同门情分，屡屡为难我这一外门弟子？"
@@ -3979,7 +3979,7 @@
     translated: "Left"
   - split: 10
     text: "铁掌四杰，一群虫豸，我仙霞派大师兄魏胥华今天倒要领教领教！"
-    translated: "Four Masters of Iron Palm, a bunch of vermin. Today, Senior Brother Wei Xuhua of the Xianxia Sect shall teach you a lesson!"
+    translated: "Four Masters of Iron Palm, a group of pests, I, Big Senior Brother Wei Xuhua of the Xianxia Sect, shall test you today!"
 - raw: ",,,右,,,,,SourceHeroFightInteractHero;StudyFight-FightAddPlotDataBase~22,,放肆！吃我一掌！"
   splits:
   - split: 3
@@ -4110,7 +4110,7 @@
   - split: 10
     subIndex: 1
     text: "你只管在旁援护，看大师兄我教训这群小贼！"
-    translated: "Just stay beside and provide support. Watch as I teach these little thieves a lesson, Senior Brother!"
+    translated: "Just stand by and provide support. Watch as I teach these little thieves a lesson, Big Senior Brother!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -4882,7 +4882,7 @@
   - split: 10
     subIndex: 2
     text: "倒是让大师兄我有些刮目相看了。"
-    translated: "It's actually made the Senior Brother look at me in a new light."
+    translated: "It's actually made the Big Senior Brother look at me with new eyes."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -4897,7 +4897,7 @@
   - split: 10
     subIndex: 1
     text: "我这大师兄的位置，就让给你坐！"
-    translated: "Let me pass on my senior brother's position to you!"
+    translated: "Let me give you my big senior brother's seat!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -4908,7 +4908,7 @@
     translated: "Left"
   - split: 10
     text: "好！大师兄你等着！"
-    translated: "Good! Senior Brother, you wait!"
+    translated: "Good! Big Senior Brother, you wait!"
   - split: 10
     subIndex: 1
     text: "等我练成神功，定要叫你几句“魏师弟”！"
@@ -8955,6 +8955,7 @@
     translated: "Right"
   - split: 10
     text: "#反馈#"
+    translated: "#Feedback#"
 - raw: ",,,右,,,,,,,另外<b>任务达标后，还要再回正厅找为师复命，</b>\\n才算是真正完成，记住了吗？"
   splits:
   - split: 3
@@ -10737,7 +10738,7 @@
   - split: 10
     subIndex: 3
     text: "我堂堂大师兄，还轮不到你们两个来救。"
-    translated: "As my noble Senior Brother, it's still too early for you two to come save me."
+    translated: "I, the honorable Big Senior Brother, don't need you two to save me."
   templates:
   - split: 8
     template: "ChangeInjury;{0}-0-50"
@@ -10987,7 +10988,7 @@
   - split: 10
     subIndex: 1
     text: "我这做大师兄的岂能落后？"
-    translated: "How could this senior brother fall behind?"
+    translated: "How can the big senior brother fall behind?"
   templates:
   - split: 8
     template: "ChangeMaxFightSkill;{0}-4-2"
@@ -11289,7 +11290,7 @@
   - split: 10
     subIndex: 1
     text: "你们若是有事，我有何颜面做这大师兄？"
-    translated: "If you have matters, how can I bear to be the senior brother?"
+    translated: "If you have something to attend to, what face do I have to be the big senior brother?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -12701,7 +12702,7 @@
     translated: "Right"
   - split: 10
     text: "大、大师兄！都怪我学艺不精......"
-    translated: "Big, Senior Brother! It's all my fault for not mastering the skills well enough....."
+    translated: "Big Senior Brother! It's all my fault for not mastering the skills well enough..."
 - raw: ",魏胥华,公孙防,左,,,,,,,哼，教训师弟本是我大师兄的职责，\\n还轮不到铁掌帮狗贼插手！"
   splits:
   - split: 1
@@ -12715,7 +12716,7 @@
     translated: "Left"
   - split: 10
     text: "哼，教训师弟本是我大师兄的职责，"
-    translated: "Hmph, teaching the junior disciple is my senior brother's duty."
+    translated: "Hmph, instructing the junior disciple is the duty of my big senior brother."
   - split: 10
     subIndex: 1
     text: "还轮不到铁掌帮狗贼插手！"
@@ -13776,7 +13777,7 @@
     translated: "Left"
   - split: 10
     text: "云裳咱别理他，你大师兄就是整天牢骚满腹。"
-    translated: "Cloud Shirt, don't pay attention to him. Your senior brother is always full of complaints."
+    translated: "Cloud Clothes, let's not pay attention to him. Your Big Senior Brother is always full of complaints."
   - split: 10
     subIndex: 1
     text: "师姐带你去逛逛门派，熟悉熟悉，从今天起这儿就是你的家啦！"
@@ -26003,7 +26004,7 @@
   - split: 10
     subIndex: 1
     text: "与平日里仪表堂堂的大师兄形象截然不同。"
-    translated: "Contrastingly different from the grand and dignified appearance of Senior Brother on regular days."
+    translated: "Completely different from the dignified image of Big Senior Brother on normal days."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -26578,7 +26579,7 @@
     translated: "Right"
   - split: 10
     text: "你们只要听从大师兄魏胥华之指挥，同仇敌忾，精诚一致，"
-    translated: "You just need to follow Senior Brother Wei Xuhua's commands and unite in hatred against your enemies, with sincere and unified intentions."
+    translated: "You just need to follow Big Senior Brother Wei Xuhua's commands, unite in hatred against your enemies, and act with sincere unity."
   - split: 10
     subIndex: 1
     text: "定能赢下此战，将这黑风寨连根拔起！"
@@ -26698,7 +26699,7 @@
     translated: "Left"
   - split: 10
     text: "#TargetInteractName#莫慌，此次有师傅压阵，大师兄带队，保管万全。"
-    translated: "#TargetInteractName#, don't worry. This time, with Master overseeing and the Senior Brother leading the team, everything will be secure."
+    translated: "#TargetInteractName#, don't worry. This time, with Master present to oversee and Big Senior Brother leading the team, everything will be thoroughly secured."
 - raw: ",,魏胥华,右,,,,,,,哼，插科打诨倒是能手，\\n这次你们要是学艺不精，还不听指挥，就别指望我再出手相救了！"
   splits:
   - split: 2
@@ -26727,7 +26728,7 @@
     translated: "Right"
   - split: 10
     text: "大师兄又开始刀子嘴豆腐心了。"
-    translated: "Senior Brother started being sharp‑tongued but has a kind heart again."
+    translated: "Big Senior Brother is starting to be sharp‑tongued but has a kind heart again."
 - raw: ",,沈退,右,,,,,,,呵呵，不劳大师兄费心，危急关头我沈退自是跑得比谁都快。"
   splits:
   - split: 2
@@ -26738,7 +26739,7 @@
     translated: "Right"
   - split: 10
     text: "呵呵，不劳大师兄费心，危急关头我沈退自是跑得比谁都快。"
-    translated: "Haha, no need for Senior Brother to worry yourself; in times of crisis, I Shen Tui will surely run faster than anyone else."
+    translated: "Haha, no trouble for Big Senior Brother to worry about; in times of danger, I Shen Ti would surely run faster than anyone."
 - raw: ",,魏胥华,右,,,,,GetMainMission;7,,好了好了，闲话到此为止，整装出发，莫要延误时机。"
   splits:
   - split: 2
@@ -26767,7 +26768,7 @@
   - split: 10
     subIndex: 1
     text: "我身为大师兄不能坐视不理，只得出手相救。"
-    translated: "As the senior brother, I cannot sit idly by and must intervene to save you."
+    translated: "As the Big Senior Brother, I cannot sit idly by and must step in to rescue."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -27546,7 +27547,7 @@
     translated: "Quick Swords"
   - split: 10
     text: "大师兄身影一闪，便消失在夜色中。"
-    translated: "Senior Brother's figure flashed and vanished into the night."
+    translated: "Big Senior Brother's figure flashed and disappeared into the night."
   - split: 10
     subIndex: 1
     text: "只听得林中剑光闪动，啊啊几声惨叫，随后又归于寂静。"
@@ -27674,7 +27675,7 @@
     translated: "Left"
   - split: 10
     text: "嘿嘿，大师兄过奖了。"
-    translated: "Hehe, Senior Brother is being too kind"
+    translated: "Hehe, Big Senior Brother, you're being too kind."
   - split: 10
     subIndex: 1
     text: "这些日子我也是有好好练功的。"
@@ -27915,7 +27916,7 @@
     translated: "Left"
   - split: 10
     text: "嘿嘿，大师兄好功夫。"
-    translated: "Hehe, Senior Brother has great martial arts"
+    translated: "Hehe, Big Senior Brother, your skills are impressive."
 - raw: "142,林云裳,魏胥华,左,,,,,,,啊呀，师兄快看！"
   splits:
   - split: 1
@@ -29034,7 +29035,7 @@
   - split: 10
     subIndex: 1
     text: "仙霞派大师兄来了我都不怕，更何况你们两个小虾米。"
-    translated: "I'm not afraid when Senior Brother Xianxia Sect comes, let alone the two little shrimp you two are."
+    translated: "Even if Big Senior Brother of Xianxia Sect comes, I'm not afraid, let alone the two little shrimp you two are."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -29908,7 +29909,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#来了啊，大师兄正准备开始教咱们练功呢。"
-    translated: "#PlayerName# has arrived. Senior Brother is just getting ready to teach us how to train our skills."
+    translated: "#PlayerName# has arrived, Big Senior Brother was just getting ready to teach us how to practice our skills."
 - raw: ",,魏胥华,右,,,,,,,叽叽喳喳什么，还不赶快过来？"
   splits:
   - split: 2
@@ -29930,7 +29931,7 @@
     translated: "Left"
   - split: 10
     text: "是是是，大师兄"
-    translated: "Yes yes yes, Senior Brother"
+    translated: "Yes yes yes, Big Senior Brother"
   templates:
   - split: 10
     template: "{0}……"
@@ -29961,7 +29962,7 @@
   - split: 10
     subIndex: 1
     text: "作为大师兄，我自当略施惩戒，以儆效尤。"
-    translated: "As senior brother, it falls to me to mete out a light punishment to set an example for others."
+    translated: "As Big Senior Brother, it falls to me to mete out a light punishment to set an example for others."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -30402,7 +30403,7 @@
     translated: "Left"
   - split: 10
     text: "额，大师兄恕罪，我虽每日勤学苦练，但也只学得七八成的功力"
-    translated: "Ah, Senior Brother, forgive me. Though I diligently study and practice every day, I have only mastered about seven or eight tenths of the power."
+    translated: "Er, Big Senior Brother, I beg your pardon. Although I diligently study and practice every day, I can only master about seven or eight tenths of the power."
   templates:
   - split: 10
     template: "{0}……"
@@ -30746,7 +30747,7 @@
     translated: "Left"
   - split: 10
     text: "不愧是大师兄，我只怕练上一辈子，都使不出这种效果。"
-    translated: "Living up to the title of Senior Brother, I fear it would take me a lifetime to achieve such results."
+    translated: "Not surprising from Big Senior Brother. I fear it would take me a lifetime to achieve such results."
 - raw: ",林云裳,,左,,,,,,,大师兄武功出神入化，我连剑影都没有看清……"
   splits:
   - split: 1
@@ -30757,7 +30758,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄武功出神入化，我连剑影都没有看清"
-    translated: "Senior Brother's martial arts is beyond comprehension; I didn't even catch a glimpse of his sword shadows."
+    translated: "Big Senior Brother's martial arts is beyond comprehension; I couldn't even see his sword shadow."
   templates:
   - split: 10
     template: "{0}……"
@@ -30828,7 +30829,7 @@
     translated: "None"
   - split: 10
     text: "（抛下句狠话，大师兄便扭头拂袖而去，只留下你们在练武场上面面相觑）"
-    translated: "(Dumping a harsh word, the Senior Brother turned and swept his sleeve away, leaving only you all to stare at each other in the training ground)"
+    translated: "(Dropping a harsh word, Big Senior Brother turned and swept his sleeve, leaving only you to stare at each other in the training grounds)"
 - raw: ",杨思迟,,左,,,,,,,大师兄教导的是！我这就开始加倍努力！\\n呼！哈！呼！哈！"
   splits:
   - split: 1
@@ -30839,7 +30840,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄教导的是！我这就开始加倍努力！"
-    translated: "Senior Brother teaches us to work hard! I'll start putting in double the effort right away!"
+    translated: "Big Senior Brother teaches us to work hard! I'll start putting in double the effort right away!"
   - split: 10
     subIndex: 1
     text: "呼！哈！呼！哈！"
@@ -30860,7 +30861,7 @@
     translated: "Right"
   - split: 10
     text: "不知是不是错觉，总感觉大师兄变得"
-    translated: "I wonder if it's just a illusion, but I always feel that Senior Brother has changed."
+    translated: "It's probably just a guess, but I always feel that Big Senior Brother has changed."
   - split: 10
     subIndex: 1
     text: "温和一些了。"
@@ -30891,7 +30892,7 @@
   - split: 10
     subIndex: 1
     text: "再不认真练功，小心我向大师兄告状去！"
-    translated: "Practice your skills carefully, or I might tell the senior brother on you!"
+    translated: "Practice more seriously, or I might go tell Big Senior Brother on you!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -31825,7 +31826,7 @@
   - split: 10
     subIndex: 1
     text: "我一察觉事情不对，便拉着大师兄往回赶，"
-    translated: "I sensed something was amiss and dragged the senior brother back."
+    translated: "I sensed something was amiss and dragged Big Senior Brother back."
   - split: 10
     subIndex: 2
     text: "还好不算太迟呀。"
@@ -33666,6 +33667,7 @@
     translated: "Left"
   - split: 10
     text: "师姐这"
+    translated: "Senior Sister, this"
   templates:
   - split: 10
     template: "{0}……"
@@ -33796,7 +33798,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄！"
-    translated: "Senior Brother!"
+    translated: "Big Senior Brother!"
 - raw: ",,,右,,,,,,,大什么师兄，愣着干啥，还不快去药王谷把药取回来！\\n若是小师妹有三长两短，拿你们是问！"
   splits:
   - split: 3
@@ -33819,7 +33821,7 @@
     translated: "Left"
   - split: 10
     text: "可是大师兄......"
-    translated: "But Senior Brother..."
+    translated: "But Big Senior Brother..."
   - split: 10
     subIndex: 1
     text: "除了这一千两银子，药王谷还要一千钱药材才肯救人......"
@@ -33849,7 +33851,7 @@
     translated: "Left"
   - split: 10
     text: "好，多谢大师兄！"
-    translated: "Good, thank you, Senior Brother!"
+    translated: "Good, thank you, Big Senior Brother!"
   - split: 10
     subIndex: 1
     text: "顾师兄，咱们赶快去准备药材去！"
@@ -48936,7 +48938,7 @@
     translated: "Left"
   - split: 10
     text: "师"
-    translated: "Master"
+    translated: "Ma"
   - split: 10
     subIndex: 1
     text: "师傅！"
@@ -52003,7 +52005,7 @@
     translated: "Right"
   - split: 10
     text: "大师兄余师姐他们也在赶来的路上"
-    translated: "Senior Brother Yu and Senior Sister, as well as the others, are on their way."
+    translated: "Big Senior Brother Yu Senior Sister and the others are on their way as well."
   templates:
   - split: 10
     template: "{0}……"
@@ -52410,7 +52412,7 @@
   - split: 10
     subIndex: 1
     text: "你们在此地等大师兄，到时飞鸽联系。"
-    translated: "You wait here for Senior Brother. Later, we will contact each other using homing pigeons."
+    translated: "You wait here for Big Senior Brother. We will contact each other using homing pigeons when he arrives."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -52536,7 +52538,7 @@
     translated: "Wind howls"
   - split: 10
     text: "大师兄！"
-    translated: "Senior Brother!"
+    translated: "Big Senior Brother!"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
@@ -52666,7 +52668,7 @@
     translated: "Left"
   - split: 10
     text: "是，大师兄！"
-    translated: "Yes, Senior Brother!"
+    translated: "Yes, Big Senior Brother!"
   - split: 10
     subIndex: 1
     text: "我们安置完村民就赶回来。"
@@ -52745,7 +52747,7 @@
     translated: "Right"
   - split: 10
     text: "莫慌莫慌，你大师兄已把前因后果说与我听了。"
-    translated: "Don't worry, don't worry. Your senior brother has already told me the whole story."
+    translated: "Don't panic, don't panic; your Big Senior Brother has already told me the whole story."
 - raw: ",,,右,,,,,,,没想到这黑风寨贼人如此嚣张，\\n竟敢在光天化日之下烧掠村庄，绑架人质，简直无法无天。"
   splits:
   - split: 3
@@ -52952,7 +52954,7 @@
     translated: "Right"
   - split: 10
     text: "大师兄放心，这次定能将顾师兄安全救回。"
-    translated: "Senior Brother be assured; this time we will surely rescue Brother Gu safely."
+    translated: "Big Senior Brother, rest assured; this time we will surely save Senior Brother safely."
 - raw: ",,杨思迟,右,,,,,,,顾师兄……呜呜呜呜。\\n顾师兄从入门起便对我照顾有加，从没嫌弃过我愚笨。\\n我就算拼了这条命，也要把他救回来！"
   splits:
   - split: 2
@@ -53036,7 +53038,7 @@
   - split: 10
     subIndex: 1
     text: "大师兄已经前去探查了。"
-    translated: "Senior Brother has already gone to investigate"
+    translated: "Big Senior Brother has already gone to investigate."
   templates:
   - split: 4
     template: "PlotImage/{0}"
@@ -53193,7 +53195,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄？"
-    translated: "Senior Brother?"
+    translated: "Big Senior Brother?"
 - raw: ",,,右,,,,,,,我已探明贼人寨中，除了那大当家，\\n还有首领二人，头目三人，强盗七八人。"
   splits:
   - split: 3
@@ -53302,7 +53304,7 @@
     translated: "Right"
   - split: 10
     text: "我身为大师兄，若坐视顾师弟遭人折磨却无动于衷，与死狗何异？"
-    translated: "As the Senior Brother, if I merely watch as Gu Junior Brother is tormented without any concern, what am I different from a dead dog?"
+    translated: "As the Big Senior Brother, if I sit idly by as Gu Junior Brother is tormented by others, what am I no better than a dead dog?"
   - split: 10
     subIndex: 1
     text: "但你们若坚持要等师傅，我也不会强人所难。"
@@ -53320,7 +53322,7 @@
     translated: "Double Quick Slash"
   - split: 10
     text: "（言毕，大师兄面无表情，转身便以迅雷之速向敌营冲去。"
-    translated: "(After speaking, the Senior Brother's face remained expressionless as he turned and charged towards the enemy camp at incredible speed."
+    translated: "(With that said, Big Senior Brother's face remained expressionless as he turned and charged towards the enemy camp at blinding speed."
   - split: 10
     subIndex: 1
     text: "门口守卫未及反应，便一声闷哼，毙于剑下！）"
@@ -53340,7 +53342,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄！哎呀，怎么还是这么冲动啊......"
-    translated: "Senior Brother! Oh dear, how come you're still so impulsive..."
+    translated: "Big Senior Brother! Ah well, still so impulsive..."
 - raw: "274,魏胥华,熊百胜,左,,,,,,,大！当！家！放我顾师弟走，饶你不死。"
   splits:
   - split: 1
@@ -53417,7 +53419,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄一个人偷偷杀贼不带上我，未免不够义气。"
-    translated: "The senior brother went to kill the bandits alone without bringing me along; that's rather unbrotherly."
+    translated: "Big Senior Brother went alone to secretly deal with the bandits without taking me along; that's a bit unbrotherly."
 - raw: ",姜婉,,左,,,,,,,为了游年，只能拼了！\\n希望师傅老人家不要怪罪……"
   splits:
   - split: 1
@@ -53475,7 +53477,7 @@
   - split: 10
     subIndex: 1
     text: "若大师兄以为我们也能坐视不理，未免太看不起人了！"
-    translated: "If Senior Brother thinks we can just sit back and do nothing, he must think too little of us!"
+    translated: "If Big Senior Brother thinks we can just sit back and do nothing, he greatly underestimates us!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -63237,7 +63239,7 @@
     translated: "Right"
   - split: 10
     text: "胥华你身为大师兄，也算学有所成。"
-    translated: "Xu Hua, as Senior Brother, have you also achieved some success in your studies."
+    translated: "Xu Hua, as Big Senior Brother, you've also achieved quite a bit in your studies."
   - split: 10
     subIndex: 1
     text: "为师就命你去铁掌帮附近，打探黑风寨贼人情报。"
@@ -63267,7 +63269,7 @@
     translated: "Left"
   - split: 10
     text: "师傅，大师兄一人深入铁掌帮腹地，难免孤立无援，弟子愿一同前往！"
-    translated: "Master, Senior Brother, alone deep inside the Iron Palm Gang territory, is bound to be isolated and without aid. I am willing to go with you!"
+    translated: "Master, Big Senior Brother, one of you venturing deep into the Iron Palm Gang territory is bound to be isolated and without aid. I volunteer to go with you!"
 - raw: ",,,右,,,,,,,你呀，还是算了吧。\\n本次任务颇为凶险，别给你大师兄添乱了。"
   splits:
   - split: 3
@@ -63279,7 +63281,7 @@
   - split: 10
     subIndex: 1
     text: "本次任务颇为凶险，别给你大师兄添乱了。"
-    translated: "This task is quite dangerous; don't add trouble for your senior brother."
+    translated: "This task is quite dangerous. Don't add to Big Senior Brother's troubles."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -63326,7 +63328,7 @@
     translated: "Left"
   - split: 10
     text: "师傅放心，定不会给大师兄添乱！"
-    translated: "Master be assured; I surely won't cause trouble for Senior Brother!"
+    translated: "Master, please rest assured; I will definitely not cause trouble for Big Senior Brother!"
 - raw: "320,,,无,PlotImage/强盗山寨,,,,,,（你们隐匿身形，悄悄来到传闻中黑风寨贼人聚集之处。\\n只见火光闪烁，炊烟四起，一处小型山寨已近建设完成。）"
   splits:
   - split: 3
@@ -63375,7 +63377,7 @@
     translated: "Left"
   - split: 10
     text: "（小声）大师兄小心，前方有两名巡逻贼人。"
-    translated: "(low voice) Senior Brother, be careful. There are two patrolling bandits ahead."
+    translated: "(Brushed off) Big Senior Brother, be careful. There are two patrolling bandits ahead."
 - raw: ",,,右,,,,,,,（小声）潜在暗处，等他们接近。听我号令，一起动手！"
   splits:
   - split: 3
@@ -63476,7 +63478,7 @@
     translated: "Left"
   - split: 10
     text: "嘿嘿，和大师兄比还差得远。"
-    translated: "Haha, I'm still far behind Senior Brother"
+    translated: "Hehe, I'm still far behind Big Senior Brother."
 - raw: "322,玩家,,左,,BigMap1,,,ChangeAttri;玩家-1-2,,（连续几剑，都被那跟班格开）\\n糟了！贼人要呼救！"
   splits:
   - split: 1
@@ -63543,7 +63545,7 @@
   - split: 10
     subIndex: 1
     text: "嘿嘿嘿，今日状态不佳，大师兄见谅"
-    translated: "Hehehe, my senior brother, I'm not at my best today, please forgive me."
+    translated: "Hehehe, not in the best state today, Big Senior Brother, please forgive me."
   templates:
   - split: 10
     template: "{0}……{1}……"
@@ -63578,7 +63580,7 @@
     translated: "Wei Xuhua"
   - split: 10
     text: "大师兄稍等，待我将贼人尸体隐藏妥当。"
-    translated: "Senior Brother, please wait while I hide the bandits' body properly."
+    translated: "Big Senior Brother, wait a moment while I hide the thief's body properly."
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-2"
@@ -64084,7 +64086,7 @@
     translated: "Left"
   - split: 10
     text: "（小声）大师兄，贼人已经察觉，此地不宜久留。"
-    translated: "(Softly) Senior Brother, the criminals have already noticed us. We shouldn't stay here for long."
+    translated: "(Softly) Big Senior Brother, the bandits have noticed us. We shouldn't stay here for long."
 - raw: ",,,右,,,SpeEffect/风呼啸,,,,（小声）你先稍后，我还有事要办……\\n（话音未落，便催动轻功消失在夜色中）"
   splits:
   - split: 3
@@ -64115,7 +64117,7 @@
     translated: "Left"
   - split: 10
     text: "（小声）大师兄！"
-    translated: "(Softly) Senior Brother!"
+    translated: "(Big Senior Brother!)"
   - split: 10
     subIndex: 1
     text: "跑哪儿去了"
@@ -64177,7 +64179,7 @@
     translated: "Left"
   - split: 10
     text: "这大师兄怎么还不回来"
-    translated: "This senior brother still hasn't come back yet."
+    translated: "This big senior brother still hasn't come back."
   templates:
   - split: 10
     template: "{0}……"
@@ -64205,7 +64207,7 @@
     translated: "Left"
   - split: 10
     text: "这大师兄怎么还不回来"
-    translated: "This senior brother still hasn't come back yet."
+    translated: "This big senior brother still hasn't come back."
   templates:
   - split: 10
     template: "{0}……"
@@ -64332,7 +64334,7 @@
     translated: "Left"
   - split: 10
     text: "这，那就多谢大师兄了......"
-    translated: "This... I owe a debt to Senior Brother..."
+    translated: "This... I owe a debt to Big Senior Brother..."
 - raw: ",,,右,,,SpeEffect/风呼啸,,FinishEventMission,,这有什么好谢的？别婆婆妈妈，咱们走！"
   splits:
   - split: 3
@@ -64535,7 +64537,7 @@
     translated: "Player"
   - split: 10
     text: "作为大师兄为本门分忧，乃是分内之事。"
-    translated: "As senior brother, it's my duty to alleviate the burdens of our sect."
+    translated: "As Big Senior Brother, it's my duty to alleviate the burden for the sect."
   - split: 10
     subIndex: 1
     text: "这次任务#PlayerName#出力不小，我那份就给#PlayerName#好了。"
@@ -64558,11 +64560,11 @@
     translated: "Wei Xuhua"
   - split: 10
     text: "嘿嘿，谢谢师傅和大师兄"
-    translated: "Hehe, thanks, Master and Senior Brother"
+    translated: "Hehe, thanks, Master and Big Senior Brother"
   - split: 10
     subIndex: 1
     text: "哎呀，大师兄你怎么受伤了？"
-    translated: "Ah, Senior Brother, how did you get injured?"
+    translated: "Ah, Big Senior Brother, how did you get injured?"
   templates:
   - split: 8
     template: "ChangeMaxAttri;{0}-3-3"
@@ -64614,7 +64616,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄身先士卒，做出表率，"
-    translated: "Senior Brother led by example, setting a precedent."
+    translated: "Big Senior Brother led by example, setting a precedent."
   - split: 10
     subIndex: 1
     text: "我也要努力赶上了啊。"
@@ -84766,7 +84768,7 @@
   - split: 10
     subIndex: 1
     text: "（要是让师傅和大师兄听到这称号，非得揍死我不可。）"
-    translated: "If Master and Senior Brother heard this title, they would definitely beat me to death."
+    translated: "(If Master and Big Senior Brother heard this title, they would definitely beat me to death.)"
   - split: 10
     subIndex: 2
     text: "三位，告辞了！"
@@ -86017,7 +86019,7 @@
     translated: "Right"
   - split: 10
     text: "你们大师兄魏胥华的无影乱剑功力，仅在为师之下。"
-    translated: "Your senior brother Wei Xuhua's formless chaotic sword skills are only below those of your master."
+    translated: "Your Big Senior Brother Wei Xuhua's Shadowless Random Sword technique is second only to mine."
   - split: 10
     subIndex: 1
     text: "你们练功遇到什么不懂的，都可以去问他去。"
@@ -86363,7 +86365,7 @@
     translated: "Right"
   - split: 10
     text: "你们大师兄已探得，这铁掌帮与黑风寨近日就会发起进攻。"
-    translated: "Your senior brother has discovered that the Iron Palm Gang and Black Wind Camp will launch an attack soon."
+    translated: "Your Big Senior Brother has discovered that the Iron Palm Gang and Black Wind Camp will launch an attack soon."
   - split: 10
     subIndex: 1
     text: "他们竟敢直接奔袭本门总舵，显然是小瞧了我们仙霞派。"
@@ -86526,7 +86528,7 @@
     translated: "Right"
   - split: 10
     text: "此时就需要大师兄带着杨思迟，林云裳，"
-    translated: "At this time, the Senior Brother needs to lead Yang Sichi and Lin Yunshang."
+    translated: "At this time, Big Senior Brother needs to lead Yang Sichi and Lin Yunshang."
   - split: 10
     subIndex: 1
     text: "装作紧急驰援的样子赶往巴陵村。"
@@ -86548,7 +86550,7 @@
   - split: 10
     subIndex: 1
     text: "大师兄若是和我们走了，咱总舵能顶住敌袭吗？"
-    translated: "If Senior Brother leaves with us, can our main den hold its own against enemy attacks?"
+    translated: "If Big Senior Brother leaves with us, will our main den be able to withstand the enemy's assault?"
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -88581,7 +88583,7 @@
   - split: 10
     subIndex: 2
     text: "就是他们大师兄魏胥华有几分功夫。"
-    translated: "It's how much martial arts skill Senior Brother Wei Xuhua has."
+    translated: "It's how much fighting skill Big Senior Brother Wei Xuhua has."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -88792,7 +88794,7 @@
   - split: 10
     subIndex: 1
     text: "我这大师兄平日里过于严苛，不苟言笑，"
-    translated: "My senior brother is usually quite strict and doesn't joke around much."
+    translated: "My Big Senior Brother is usually overly strict, not speaking lightly."
   - split: 10
     subIndex: 2
     text: "对你们的关照和指点远远不够，还望你们不要记恨。"
@@ -88912,7 +88914,7 @@
     translated: "Right"
   - split: 10
     text: "大师兄！！！"
-    translated: "Senior Brother!!!"
+    translated: "Big Senior Brother!!!"
 - raw: ",,,左,,,,,,,好了好了，你们快走吧。\\n仙霞派未来的重担，就落在你们的肩上了。"
   splits:
   - split: 3
@@ -88939,7 +88941,7 @@
   - split: 10
     subIndex: 1
     text: "我魏胥华这大师兄虽不称职，但至少也不是什么孬种。"
-    translated: "I may not be a competent senior brother, Wei Xuhua, but at least I'm no coward."
+    translated: "Though I, Wei Xuhua, this big senior brother, may not be up to the job, at least I am not a quitter."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -88973,7 +88975,7 @@
     translated: "Right"
   - split: 10
     text: "大师兄！！！"
-    translated: "Senior Brother!!!"
+    translated: "Big Senior Brother!!!"
 - raw: ",,林云裳,右,,,,,,,杨师兄莫要冲动，糟蹋了大师兄的一番苦心呐！\\n快走吧快走吧！哎呀……"
   splits:
   - split: 2
@@ -88984,7 +88986,7 @@
     translated: "Right"
   - split: 10
     text: "杨师兄莫要冲动，糟蹋了大师兄的一番苦心呐！"
-    translated: "Senior Brother Yang, please don't act impulsively and spoil the great effort of Senior Brother!"
+    translated: "Senior Brother Yang, please don't act impulsively and spoil Big Senior Brother's painstaking efforts!"
   - split: 10
     subIndex: 1
     text: "快走吧快走吧！哎呀"
@@ -89723,7 +89725,7 @@
   - split: 10
     subIndex: 1
     text: "你，再敢对我大师兄出言不逊试试？"
-    translated: "You dare to be disrespectful to my senior brother again?"
+    translated: "You dare to speak disrespectfully to my Big Senior Brother again?"
   - split: 10
     subIndex: 2
     text: "快说，他到底在哪儿？！"
@@ -90496,7 +90498,7 @@
     translated: "Right"
   - split: 10
     text: "思迟，你这条命是你大师兄拼死换来的。"
-    translated: "Si Chi, this life is what your senior brother risked his own to save you with."
+    translated: "Si Chi, your life was risked to save by your Big Senior Brother."
   - split: 10
     subIndex: 1
     text: "若就这么回去送了，岂不是辜负了他一片苦心？"
@@ -90545,7 +90547,7 @@
     translated: "Right"
   - split: 10
     text: "你们起来，莫要灰心丧气，你们大师兄在天之灵看到也会不得安息！"
-    translated: "Rise up, do not lose heart. Even your senior brother in heaven would rest uneasily if he saw this!"
+    translated: "Get up, do not lose heart. Even your big senior brother in heaven would not find peace if he saw this!"
 - raw: ",,,右,,,,,ChangeMaxAttri;杨思迟-0-2|ChangeMaxAttri;杨思迟-3-2|ChangeMaxAttri;杨思迟-4-2,,只要你们刻苦练功，同心协力，相信邪不胜正，\\n我仙霞派定有夺回巴陵村，向铁掌帮讨回血债的一天！"
   splits:
   - split: 3
@@ -90755,7 +90757,7 @@
     translated: "Right"
   - split: 10
     text: "咱们刚遭铁掌帮偷袭，丢了巴陵村，你大师兄也"
-    translated: "We just suffered an ambush by the Iron Palm Gang and lost Baling Village. Your senior brother also"
+    translated: "We were just ambushed by the Iron Palm Gang and lost Baling Village. Your big senior brother is also"
   - split: 10
     subIndex: 1
     text: "眼下正是用人之际，这沈退却偏偏要在这时候作死，"
@@ -91860,7 +91862,7 @@
     translated: "Left"
   - split: 10
     text: "铁掌帮狗贼？哼哼，你们身上还压着我魏胥华大师兄的血债呢，"
-    translated: "Iron Palm Gang dogs? Hmph, your bodies are still burdened with the blood debt of my Senior Brother Wei Xuhua."
+    translated: "Iron Palm Gang dog thieves? Hmph, you still bear the blood debt of my Big Senior Brother Wei Xuhua."
   - split: 10
     subIndex: 1
     text: "竟敢不知死活到我仙霞派后山来，真是自投罗网！"
@@ -93429,7 +93431,7 @@
   - split: 10
     subIndex: 1
     text: "但毕竟是我大师兄，也不是你们铁掌帮能随便动的。"
-    translated: "But they are still my senior brother, and not someone the Iron Palm Gang can just move either."
+    translated: "But he is still my Big Senior Brother, and not someone your Iron Palm Gang can just move around."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -93559,7 +93561,7 @@
     translated: "Shen Tui"
   - split: 10
     text: "哼，此剑乃是为了报大师兄和顾师兄的仇，"
-    translated: "Hm, this sword is meant to avenge Senior Brother Master and Brother Gu."
+    translated: "Hmph, this sword is meant to avenge Big Senior Brother and Senior Brother Gu."
   - split: 10
     subIndex: 1
     text: "下辈子休要再行凶作恶，助纣为虐了！"
@@ -93970,7 +93972,7 @@
   - split: 10
     subIndex: 1
     text: "不仅丢了巴陵村，大师兄也"
-    translated: "Not only did Baling Village get lost, but Senior Brother also..."
+    translated: "Not only did Baling Village get lost, but Big Senior Brother also..."
   - split: 10
     subIndex: 2
     text: "下落不明。"
@@ -94223,7 +94225,7 @@
   - split: 10
     subIndex: 2
     text: "你们大师兄也力战身亡了？"
-    translated: "Did your senior brother also die in battle?"
+    translated: "Did even the Big Senior Brother perish in battle?"
   templates:
   - split: 10
     template: "……{0}\\n{1}\\n{2}"
@@ -94328,7 +94330,7 @@
     translated: "Left"
   - split: 10
     text: "可是！可是大师兄他"
-    translated: "But! But Senior Brother he"
+    translated: "But! But Big Senior Brother he"
   - split: 10
     subIndex: 1
     text: "这样不就白死了么"
@@ -94351,7 +94353,7 @@
   - split: 10
     subIndex: 1
     text: "我也知道，你和你这大师兄情同手足。"
-    translated: "I also know that you and your senior brother are like brothers."
+    translated: "I also know that you and your big senior brother are as close as brothers."
   - split: 10
     subIndex: 2
     text: "可是这行走江湖，难免有个三长两短，你还得节哀啊。"
@@ -94880,7 +94882,7 @@
   - split: 10
     subIndex: 1
     text: "会把巴陵村夺回来，替大师兄讨还血债的！"
-    translated: "We will retake Baling Village to avenge the blood debt for our senior brother!"
+    translated: "We will retake Baling Village and repay the blood debt for Big Senior Brother!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -94968,7 +94970,7 @@
   - split: 10
     subIndex: 1
     text: "可是眼下大师兄下落不明，咱们势单力薄，"
-    translated: "But Senior Brother is currently missing, and we are few in number and weak."
+    translated: "But Big Senior Brother is currently missing, and we are few in number and weak."
   - split: 10
     subIndex: 2
     text: "只能先韬光养晦，以图后计。"
@@ -94987,7 +94989,7 @@
   - split: 10
     subIndex: 1
     text: "不仅可以趁机削弱铁掌帮实力，还能顺便替大师兄报仇雪恨！"
-    translated: "Not only can we take the opportunity to weaken the Iron Palm Gang's strength, but we can also revenge Senior Brother!"
+    translated: "Not only can we weaken the Iron Palm Gang's strength, but we can also take this opportunity to avenge Big Senior Brother!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -95294,7 +95296,7 @@
   - split: 10
     subIndex: 1
     text: "为了仙霞派，为了替大师兄报仇，只好委屈你一次了。"
-    translated: "For the Xianxia Sect and to avenge Senior Brother, I have to ask for your temporary cooperation."
+    translated: "For the Xianxia Sect and to avenge Big Senior Brother, I have to ask for your forbearance this once."
   templates:
   - split: 8
     template: "ChangeHeroFavor;{0}-5"
@@ -95414,7 +95416,7 @@
     translated: "Right"
   - split: 10
     text: "我也是替大师兄报仇过于心切，才疏忽了小师妹的感受。"
-    translated: "I was too eager to avenge the Senior Brother and inadvertently overlooked the Little Junior Sister's feelings."
+    translated: "I acted too hastily to avenge Big Senior Brother and neglected Little Junior Sister's feelings."
   - split: 10
     subIndex: 1
     text: "小师妹，我向你赔个不是了！"
@@ -96579,7 +96581,7 @@
   - split: 10
     subIndex: 1
     text: "这次定要让你为大师兄偿命不可！"
-    translated: "This time, you must pay with your life for Senior Brother!"
+    translated: "This time, you must pay for your big senior brother's death."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -96627,7 +96629,7 @@
     translated: "Lin Yunshang"
   - split: 10
     text: "狗贼，给大师兄偿命来吧，看剑！"
-    translated: "Dog thief, come back to Senior Brother for your punishment. Look, sword!"
+    translated: "Dog thief, come back to Big Senior Brother for your punishment! Look, sword!"
   templates:
   - split: 6
     template: "SpeEffect/{0}"
@@ -100426,7 +100428,7 @@
   - split: 10
     subIndex: 1
     text: "不能让师伯像大师兄一样，也遭了铁掌帮毒手！"
-    translated: "We must not let Senior Sibling suffer the same fate as Senior Brother at the hands of the Iron Palm Gang!"
+    translated: "We cannot let Uncle suffer the same fate as Big Senior Brother at the hands of the Iron Palm Gang!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -108231,7 +108233,7 @@
   - split: 10
     subIndex: 1
     text: "然后你大师兄和陆师伯又相继遇难，"
-    translated: "Then your senior brother and Master Lu also succumbed to their misfortunes in succession."
+    translated: "Then your Big Senior Brother and Uncle Senior Landmaster met with misfortune in succession."
   - split: 10
     subIndex: 2
     text: "眼下此处已是危机四伏，不可久留了！"
@@ -111609,7 +111611,7 @@
     translated: "Left"
   - split: 10
     text: "我们怀疑，那人是我们仙霞派的大师兄，魏胥华。"
-    translated: "We suspect that person is our Xianxia Sect's Senior Brother Wei Xuhua."
+    translated: "We suspect that person is our Big Senior Brother, Wei Xuhua, from the Xianxia Sect."
   - split: 10
     subIndex: 1
     text: "他在巴陵村被铁掌帮打落悬崖，眼下生死未卜。"
@@ -111689,7 +111691,7 @@
   - split: 10
     subIndex: 2
     text: "如此看来，那人很可能是我们大师兄！"
-    translated: "So it seems that person is likely our Senior Brother!"
+    translated: "In that case, that person is very likely our Big Senior Brother!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -111911,7 +111913,7 @@
     translated: "Right"
   - split: 10
     text: "如今我救了你们大师兄一命，对仙霞派来说固然是侠义之举。"
-    translated: "Now that I have saved your Senior Brother's life, it is indeed a chivalrous act for the Xianxia Sect."
+    translated: "Now that I saved your Big Senior Brother, it is indeed a chivalrous act for the Xianxia Sect."
   - split: 10
     subIndex: 1
     text: "对于铁掌帮来说，不就是在助纣为虐了么？"
@@ -112651,7 +112653,7 @@
     translated: "Left"
   - split: 10
     text: "哈哈哈，妹儿放心，大哥我自然早有防备。"
-    translated: "Haha, little sister, rest assured, I naturally had precautions long ago."
+    translated: "Hahaha, don't worry, sis. Big brother naturally came prepared."
   - split: 10
     subIndex: 1
     text: "说时迟那时快，只轻轻一闪，便避开那疾如闪电的乱剑！"
@@ -113491,7 +113493,7 @@
   - split: 10
     subIndex: 1
     text: "竟是恢复了当年大师兄的潇洒神采！）"
-    translated: "It's the carefree demeanor of Senior Brother from back then!)"
+    translated: "It's the big senior brother's carefree again!)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -113600,7 +113602,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄！！！真的是你！！！"
-    translated: "Senior Brother!!! It really is you!!!"
+    translated: "Big Senior Brother!!! It really is you!!!"
 - raw: ",沈退,,左,,,,,,,哈哈哈哈，没想到魏师兄你一世英名，\\n竟落得个记忆全失，在这客栈里当杂役奴仆。"
   splits:
   - split: 1
@@ -113733,11 +113735,11 @@
     translated: "Left"
   - split: 10
     text: "大师兄，没想到时隔一年，又能和你并肩作战了！"
-    translated: "Senior Brother, I never expected to fight side by side with you again after a year!"
+    translated: "Big Senior Brother, I never expected to fight side by side with you again after a year!"
   - split: 10
     subIndex: 1
     text: "仙霞派#$PlayerName#，前来助大师兄一阵！"
-    translated: "Xianxia Sect, #$PlayerName#, come to aid Senior Brother in the battle!"
+    translated: "Xianxia Sect, #$PlayerName#, come to aid Big Senior Brother for a while!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -113758,7 +113760,7 @@
     translated: "Wei Xuhua"
   - split: 10
     text: "大师兄，我看你剑招生疏的很，"
-    translated: "Senior Brother, I see you're a bit lacking in sword techniques."
+    translated: "Big Senior Brother, I see you're a bit rusty with the sword."
   - split: 10
     subIndex: 1
     text: "就勉为其难，让你躲在我身后一回好了！"
@@ -113910,7 +113912,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄，你大病初愈，怎么还是这么爱逞强啊！"
-    translated: "Senior Brother, you're just recovering from a major illness, yet you still insist on being so strong‑willed!"
+    translated: "Big Senior Brother, you've just recovered from a major illness, yet you still love to be so strong‑willed!"
 - raw: ",,,右,,,,,,,呵呵，若不如此，我这大师兄，\\n岂不是要被#PlayerName#和沈退你们看扁了。"
   splits:
   - split: 3
@@ -113918,7 +113920,7 @@
     translated: "Right"
   - split: 10
     text: "呵呵，若不如此，我这大师兄，"
-    translated: "Haha, if not like this, I, this senior brother,"
+    translated: "Haha, if not like this, I, the Big Senior Brother,"
   - split: 10
     subIndex: 1
     text: "岂不是要被#PlayerName#和沈退你们看扁了。"
@@ -114084,7 +114086,7 @@
     translated: "Left"
   - split: 10
     text: "哈哈哈，我看大师兄你是还没清醒，"
-    translated: "Haha, I see, Senior Brother, you're still not fully awake."
+    translated: "Haha, I see, Big Senior Brother, you're still not fully awake."
   - split: 10
     subIndex: 1
     text: "这么一个破客栈的掌柜，也能是绝世高手？"
@@ -114125,7 +114127,7 @@
   - split: 10
     subIndex: 1
     text: "随后一路追踪过来，这才在此处找到大师兄你的。"
-    translated: "Only by tracking you all the way here have I finally found Senior Brother."
+    translated: "Then, after tracking you all the way, I finally found Big Senior Brother here."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -114339,7 +114341,7 @@
   - split: 10
     subIndex: 1
     text: "我身为大师兄，反倒浑浑噩噩躲在这客栈中打杂，真是"
-    translated: "As the senior brother, I find myself working menial tasks in this inn instead of leading. Truly,"
+    translated: "As the Big Senior Brother, I find myself working menial jobs in this inn, truly"
   - split: 10
     subIndex: 2
     text: "太没用了！"
@@ -114354,7 +114356,7 @@
     translated: "Left"
   - split: 10
     text: "哎，大师兄你不必自责。"
-    translated: "Ah, Senior Brother, there's no need for you to blame yourself."
+    translated: "Ah, Big Senior Brother, you don't need to blame yourself."
   - split: 10
     subIndex: 1
     text: "若不是你一直以来拼死守护，我们仙霞派怕是早就分崩离析了。"
@@ -114406,7 +114408,7 @@
     translated: "Wei Xuhua"
   - split: 10
     text: "好，大师兄，咱们这就出发！"
-    translated: "Good, Senior Brother, let's set off right away!"
+    translated: "Alright, Big Senior Brother, let's head out!"
   templates:
   - split: 8
     template: "PlotResetHeroSkin;{0}|FinishEventMission"
@@ -114423,7 +114425,7 @@
     translated: "Left"
   - split: 10
     text: "师傅！师傅！大师兄回来了，大师兄回来了！！！"
-    translated: "Master! Master! Senior Brother has returned, senior brother has returned!!!"
+    translated: "Master! Master! Big Senior Brother is back, Big Senior Brother is back!!!"
 - raw: ",,,右,,,,,,,咳咳，#PlayerName#，你是白日见鬼了吧，\\n你大师兄不是已经……"
   splits:
   - split: 3
@@ -114435,7 +114437,7 @@
   - split: 10
     subIndex: 1
     text: "你大师兄不是已经"
-    translated: "Your senior brother isn't already"
+    translated: "Your big senior brother isn't already"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -114479,7 +114481,7 @@
     translated: "Right"
   - split: 10
     text: "闹鬼啦！！！闹鬼啦！！！大师兄还魂啦！！！"
-    translated: "Ghosts!! Ghosts!! Senior Brother has returned from the dead!!"
+    translated: "Haunted!!!Haunted!!!Big Senior Brother has come back!!!"
 - raw: ",,,右,,,,,,,大师兄你饶我一命！我一定好好练功！保证不偷懒！！！"
   splits:
   - split: 3
@@ -114487,7 +114489,7 @@
     translated: "Right"
   - split: 10
     text: "大师兄你饶我一命！我一定好好练功！保证不偷懒！！！"
-    translated: "Senior Brother, spare my life! I promise to practice diligently! I won't slack off at all!!!"
+    translated: "Big Senior Brother, spare my life! I promise I will practice diligently! I will never be lazy!!!"
 - raw: ",,林云裳,右,,,,,ScreenBlack,,杨师兄你个猪头，哪有大白天闹鬼的……\\n大、大师兄？真是大师兄？？？"
   splits:
   - split: 2
@@ -114502,7 +114504,7 @@
   - split: 10
     subIndex: 1
     text: "大、大师兄？真是大师兄？？？"
-    translated: "Big, Senior Brother? Is it really Senior Brother???"
+    translated: "Big Senior Brother? Really Big Senior Brother???"
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -114604,7 +114606,7 @@
     translated: "Right"
   - split: 10
     text: "吓、吓死我了，大师兄，"
-    translated: "Scared me to death, Senior Brother"
+    translated: "Scared me to death, Big Senior Brother,"
   - split: 10
     subIndex: 1
     text: "我还真以为你变成厉鬼，回来索命了呢。"
@@ -114622,7 +114624,7 @@
     translated: "Left"
   - split: 10
     text: "呵呵，咱们大师兄就算变成厉鬼，也是去找铁掌帮索命啊，"
-    translated: "Haha, even if our senior brother turns into a fierce ghost, he would still go after the Iron Palm Gang for revenge."
+    translated: "Heh, even if our big senior brother became a vengeful ghost, he'd go after the Iron Palm Gang to claim their lives."
   - split: 10
     subIndex: 1
     text: "回来找你这不成器的臭小子做什么！"
@@ -114658,7 +114660,7 @@
     translated: "Right"
   - split: 10
     text: "大师兄，我看你身上还有些旧病沉疴，"
-    translated: "Senior Brother, I see you still have some old ailments lingering on your body."
+    translated: "Big Senior Brother, I see you still have some old ailments."
   - split: 10
     subIndex: 1
     text: "你等会随我去疗伤室包扎医治一番吧！"
@@ -114752,7 +114754,7 @@
   - split: 10
     subIndex: 1
     text: "这些公道，我魏胥华若不能亲手讨还回来，还有何颜面当你们大师兄！"
-    translated: "These are fair. If I, Wei Xuhua, cannot reclaim them with my own hands, what face do I have to be your senior brother!"
+    translated: "These are fair. If I, Wei Xuhua, cannot reclaim them with my own hands, what face do I have to be your big senior brother!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -114818,7 +114820,7 @@
     translated: "None"
   - split: 10
     text: "（原本笼罩在派内的阴云，如今也随着大师兄回归一扫而空。"
-    translated: "(The originally gloomy clouds hanging over the sect have now cleared with the return of Senior Brother."
+    translated: "(The originally gloomy clouds that hung over the sect have now cleared with Big Senior Brother's return."
   - split: 10
     subIndex: 1
     text: "众人皆是斗志昂扬，摩拳擦掌，准备着与铁掌帮决一死战！）"
@@ -117274,7 +117276,7 @@
   - split: 10
     subIndex: 1
     text: "由于没有长老，因此第二就是身为亲传弟子的大师兄魏胥华了。"
-    translated: "Since there is no Elder, the second in line is Senior Brother Wei Xuhua, my direct disciple."
+    translated: "Since there is no Elder, the second in line is the direct disciple and Big Senior Brother, Wei Xuhua."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -117288,7 +117290,7 @@
     translated: "Right"
   - split: 10
     text: "其实还有一个在外游历的师伯，武功应大师兄之上，只比师傅略逊一筹。"
-    translated: "Actually, there is also a Senior Uncle who travels outside. His martial arts should be superior to the Eldest Brother's, just slightly inferior to the Master's."
+    translated: "Actually, there is also a Senior Master who travels outside. His martial arts are superior to Big Senior Brother's, falling only slightly behind the Master."
   - split: 10
     subIndex: 1
     text: "只可惜他常年漂泊无踪，神龙见首不见尾。"
@@ -119242,7 +119244,7 @@
   - split: 10
     subIndex: 2
     text: "应该是刚才门派大比，和大师兄交手时受了点轻伤。"
-    translated: "It was a light injury from when he sparred with Senior Brother during the sect competition earlier."
+    translated: "It was a light injury from sparring with Big Senior Brother during the sect competition just now."
   templates:
   - split: 10
     template: "{0}…{1}\\n{2}"
@@ -119253,7 +119255,7 @@
     translated: "Right"
   - split: 10
     text: "魏胥华！你这个当大师兄的，怎么下手没轻没重？"
-    translated: "Wei Xuhua! As the senior brother, how can you be so heavy‑handed?"
+    translated: "Wei Xuhua! As the big senior brother, why are you not gentle enough in your actions?"
   - split: 10
     subIndex: 1
     text: "#PlayerName#都被你给打伤了！"
@@ -119346,7 +119348,7 @@
   - split: 10
     subIndex: 1
     text: "大师兄他就是这样，有时候严厉过头，一点人情味都没有。"
-    translated: "Senior Brother is just that way; sometimes he can be overly strict and completely lacks any warmth."
+    translated: "Big Senior Brother is just that way sometimes‑too strict, with no hint of warmth."
   - split: 10
     subIndex: 2
     text: "不过他也是刀子嘴豆腐心，#PlayerName#千万别记恨在心。"
@@ -119476,7 +119478,7 @@
     translated: "Left"
   - split: 10
     text: "顾师兄来疗伤室干啥？莫非你也被大师兄打伤了？"
-    translated: "Why is Senior Brother coming to the injury room? Could it be that you were also beaten by the Senior Brother?"
+    translated: "Why is Senior Brother coming to the healing room? Could it be that you were also beaten by Big Senior Brother?"
   - split: 10
     subIndex: 1
     text: "好家伙"
@@ -122743,7 +122745,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#与我同时入门，如今功力竟已不在大师兄之下，"
-    translated: "#PlayerName# entered the cultivation path at the same time as me, and now his strength has surpassed even the Senior Brother."
+    translated: "#PlayerName# entered the cultivation path with me, and now his cultivation has surpassed Big Senior Brother."
   - split: 10
     subIndex: 1
     text: "看来一定还是我不够努力！！！"
@@ -123349,7 +123351,7 @@
     translated: "Left"
   - split: 10
     text: "这次佯攻颇为凶险，而大师兄和我作为奇兵，还不能现身。"
-    translated: "This feint attack was rather perilous, and as the Senior Brother and I were to act as diversionary forces, we still could not make ourselves known."
+    translated: "This diversionary attack was rather perilous, and as the Big Senior Brother and I were acting as qibing, we could not make ourselves known."
   - split: 10
     subIndex: 1
     text: "所以只能劳烦采薇和#PlayerName#出手了。"
@@ -123460,7 +123462,7 @@
     translated: "Left"
   - split: 10
     text: "另外，我和大师兄要去准备些装神弄鬼的物件，到时候自有妙用。"
-    translated: "Additionally, Senior Brother and I need to prepare some props for a bit of mischief. There will be a clever use for them later."
+    translated: "Additionally, I and Big Senior Brother need to prepare some props for creating an atmosphere, and we'll have our use for them later."
 - raw: ",,魏胥华,右,,,,,,,装神弄鬼有什么妙用？顾师弟是准备把铁掌帮吓死不成？"
   splits:
   - split: 2
@@ -123479,7 +123481,7 @@
     translated: "Left"
   - split: 10
     text: "哈哈哈哈，差不太多，就是得委屈大师兄你一下。"
-    translated: "Haha, not too bad, but it does involve a bit of an inconvenience for Senior Brother."
+    translated: "Haha, not too bad, but it will temporarily put you, Big Senior Brother, in a bit of a bind."
   - split: 10
     subIndex: 1
     text: "个中缘由暂且保密，到时候你们就知道了。"
@@ -124033,7 +124035,7 @@
     translated: "Right"
   - split: 10
     text: "反观仙霞派，你师伯陆仁谦与大师兄魏胥华均已相继殒命，"
-    translated: "By contrast, at the Xianxia Sect, your senior brother Lu Renqian and senior master Wei Xuhua have both already met their demise."
+    translated: "By contrast, at the Xianxia Sect, both your senior Brother Lu Renqian and Big Senior Brother Wei Xuhua have already successively met their end."
   - split: 10
     subIndex: 1
     text: "同门顾游年也早就经脉尽断，不堪一战。"
@@ -125012,7 +125014,7 @@
     translated: "Right"
   - split: 10
     text: "师傅大师兄他们先走一步，已经出发了。"
-    translated: "Master Senior Brother and the rest have left first. They have already departed."
+    translated: "Master and Big Senior Brother left first; they have already departed."
   - split: 10
     subIndex: 1
     text: "咱们也趁着夜色北上，绕过巴陵村，到铁掌帮汇合。"
@@ -125746,7 +125748,7 @@
   - split: 10
     subIndex: 1
     text: "我们大师兄命硬的很，岂是你想收就收的？"
-    translated: "Our senior brother is very sturdy‑living. How could you just take him in?"
+    translated: "Our Big Senior Brother is incredibly tough‑luck. How could you just receive him?"
   templates:
   - split: 8
     template: "ChangeInjury;{0}-0-10"
@@ -125880,7 +125882,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄这时候就别逞强了，"
-    translated: "This senior brother shouldn't try so hard now."
+    translated: "Big Senior Brother, you shouldn't try to assert yourself now."
   - split: 10
     subIndex: 1
     text: "咱们师兄弟三人齐心，定能将此人拿下！"
@@ -126042,7 +126044,7 @@
     translated: "Left"
   - split: 10
     text: "哈哈，大师兄没听说过士别三日当刮目相看么？"
-    translated: "Haha, hasn't Senior Brother heard of the saying that a person should be viewed with new eyes after three days have passed?"
+    translated: "Haha, Big Senior Brother must not have heard of the saying a man changes so much in three days that he should be looked at with new eyes?"
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#也早已非吴下阿蒙了！"
@@ -126156,7 +126158,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄，顾师兄，你们可有受伤？"
-    translated: "Senior Brother, Master Brother, have you been injured?"
+    translated: "Big Senior Brother, Senior Brother Gu, have you been injured?"
   - split: 10
     subIndex: 1
     text: "需不需要包扎一下？"
@@ -126186,7 +126188,7 @@
   - split: 10
     subIndex: 1
     text: "眼下得争分夺秒，恐怕没时间疗伤了。"
-    translated: "We must act quickly, for there's probably no time for healing."
+    translated: "We must act quickly, we may not have time for healing now."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -128290,7 +128292,7 @@
     translated: "Right"
   - split: 10
     text: "身为本门大师兄，我岂能坐视不管。"
-    translated: "As the senior brother of this sect, how could I sit idly by."
+    translated: "As the Big Senior Brother of the sect, how could I sit and do nothing?"
   - split: 10
     subIndex: 1
     text: "在多分一份给我便是！"
@@ -128454,7 +128456,7 @@
     translated: "Right"
   - split: 10
     text: "嘿嘿，大师兄，我看你抓耳挠腮，苦思冥想。"
-    translated: "Hehe, Senior Brother, I see you scratching your head in deep thought."
+    translated: "Hehe, Big Senior Brother, I see you're scratching your head and deeply contemplating."
   - split: 10
     subIndex: 1
     text: "若是遇上什么难题别客气，尽管来问小爷好了！"
@@ -128477,7 +128479,7 @@
     translated: "Right"
   - split: 10
     text: "好好好，只是大师兄还需少抓头发，"
-    translated: "Alright, alright, but Senior Brother still needs to stop grabbing his hair."
+    translated: "Good good, it's just that Big Senior Brother needs to stop pulling my hair a bit."
   - split: 10
     subIndex: 1
     text: "免得一夜过去成了个秃子，啊哈哈哈。"
@@ -129385,7 +129387,7 @@
     translated: "Right"
   - split: 10
     text: "余师妹辛苦了，身为大师兄就这么睡了过去，实在不成体统......"
-    translated: "Junior Sister, it's quite troublesome for you. With the master senior brother falling asleep like this, it's really not proper..."
+    translated: "Junior Sister, you've worked hard. As the Big Senior Brother, I just fell asleep like this... it's really not setting a good example..."
 - raw: ",,杨思迟,右,,,,,,,（猛然从睡梦中惊醒）\\n什么，要和铁掌帮拼命了？！好，算我一个！！！"
   splits:
   - split: 2
@@ -129919,7 +129921,7 @@
     translated: "Left"
   - split: 10
     text: "身为本门大师兄，这种时候应当与仙霞派生死与共，绝无退却之理！"
-    translated: "As the senior brother of our sect, at a time like this, we should be life and death comrades with the Xianxia Sect; there is no room for retreat!"
+    translated: "As the sect's big senior brother, we should stand or fall together with the Xianxia Sect at a time like this!"
 - raw: ",余采薇,,左,,,,,,,近来我武功精进，正好以此大战试剑，不能错过。"
   splits:
   - split: 1
@@ -130769,7 +130771,7 @@
   - split: 10
     subIndex: 2
     text: "等此战回来，大师兄我破例跟你们痛饮一次！"
-    translated: "When I return from this battle, my Senior Brother will treat you all to a special drink!"
+    translated: "When I return from this battle, Big Senior Brother intends to indulge you all with a drinking session!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -132765,7 +132767,7 @@
   - split: 10
     subIndex: 1
     text: "师傅和大师兄却又不知为何，迟迟没有赶来。"
-    translated: "Master and Senior Brother have not arrived yet for some reason."
+    translated: "Master and Big Senior Brother have not arrived yet for some reason."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -132794,7 +132796,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#，要不你趁此时机，去村中寻找师傅和大师兄吧！"
-    translated: "#PlayerName#, why not take this chance to find your master and senior brother in the village?"
+    translated: "#PlayerName#, why don't you use this chance to find your master and big senior brother in the village?"
   - split: 10
     subIndex: 1
     text: "若是他们遇险，也好及时施以援手。"
@@ -132892,7 +132894,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#，你去村中找师傅和大师兄吧！"
-    translated: "#PlayerName#, go to the village and find your master and senior brother!"
+    translated: "#PlayerName#, go to the village to find your master and big senior brother!"
   - split: 10
     subIndex: 1
     text: "此处有我们，一定能守住！"
@@ -132951,7 +132953,7 @@
     translated: "Left"
   - split: 10
     text: "呼......呼......村中已经乱成一团了，该去哪儿找师傅和大师兄呢？"
-    translated: "Huff... huff... The village is in utter chaos. Where should I look for Master and Senior Brother?"
+    translated: "Huff... Huff... The village is in a complete uproar. Where should I look for Master and Big Senior Brother?"
 - raw: ",,临时:巴陵村民&男;50;-1;1;-2,左,close,,,,,,老伯老伯，我有一事想问....."
   splits:
   - split: 2
@@ -133071,7 +133073,7 @@
   - split: 10
     subIndex: 2
     text: "一旁靠在墙边的青年，正是大师兄魏胥华。"
-    translated: "The young man leaning against the wall was indeed Senior Brother Wei Xuhua."
+    translated: "The young man leaning against the wall was Big Senior Brother Wei Xuhua."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -133091,7 +133093,7 @@
     translated: "Wei Xuhua"
   - split: 10
     text: "大师兄！！！怎么回事，是谁伤了你？"
-    translated: "Senior Brother!! What's going on? Who hurt you?"
+    translated: "Big Senior Brother!!! What's going on? Who hurt you?"
   templates:
   - split: 8
     template: "ChangeInjury;{0}-0-100"
@@ -133147,7 +133149,7 @@
     translated: "Left"
   - split: 10
     text: "所以这些铁掌帮弟子，都是大师兄你杀的吗？"
-    translated: "So were all these Iron Palm Gang disciples killed by you, Senior Brother?"
+    translated: "So were all these Iron Palm Gang disciples killed by Big Senior Brother?"
   - split: 10
     subIndex: 1
     text: "那你伤势如何？我这就替你疗伤！"
@@ -133185,7 +133187,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄！好，我这就去，你一定要撑住！"
-    translated: "Senior Brother! Good, I'll go right away. You have to hang in there!"
+    translated: "Big Senior Brother! Good, I'll go right away. You must hold on!"
 - raw: ",无,无,无,,,,,,,一炷香之前，巴陵村地窖"
   splits:
   - split: 1
@@ -134251,7 +134253,7 @@
   - split: 10
     subIndex: 1
     text: "只是想到大师兄就在地窖门口，将他叫来咱们并肩作战！"
-    translated: "Just thinking about the Senior Brother being right at the cellar door, calling him so we can fight side by side!"
+    translated: "Just thinking about Big Senior Brother being right at the cellar door, calling him to join us in fighting side by side!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -135623,7 +135625,7 @@
   - split: 10
     subIndex: 1
     text: "我觉得......大师兄就比我更合适！"
-    translated: "I think... Senior Brother would be more suitable than me!"
+    translated: "I think... Big Senior Brother is more suitable than me!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -135675,7 +135677,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄......我看余师姐也是个不错的人选！"
-    translated: "Senior Brother... I think Senior Sister Yu is also a good choice!"
+    translated: "Big Senior Brother...... I think Senior Sister Yu is also a good choice!"
 - raw: ",,余采薇,右,,,,,,,我一心习武，根本管不来派内这么多繁杂事务。\\n#PlayerName#你就饶了我吧。"
   splits:
   - split: 2
@@ -138484,7 +138486,7 @@
   - split: 10
     subIndex: 2
     text: "身为本门大师兄，不可不以身作则，食这种不义之粮。"
-    translated: "As the senior brother of this sect, we cannot set a bad example by eating such unjust food."
+    translated: "As the big senior brother of this sect, you cannot set a bad example by eating this unjust food."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -139273,7 +139275,7 @@
     translated: "Left"
   - split: 10
     text: "对，大师兄说的正是，天地有正气，杂然赋流形！"
-    translated: "Yes, as Senior Brother said, Heaven and earth possess righteous energy, manifesting in various forms!"
+    translated: "Right, as Big Senior Brother said, Heaven and earth have righteous spirit, manifesting in various forms!"
 - raw: ",余采薇,,左,,,,,,,下则为河岳，上则为日星。"
   splits:
   - split: 1
@@ -142537,7 +142539,7 @@
   - split: 10
     subIndex: 1
     text: "我和阮芷得努力医治百姓，实在没有精力去对付黑道五鬼了。"
-    translated: "We need to work hard to treat the common people; we really don't have the energy to deal with the Black Society's Five Ghosts."
+    translated: "Ruan Zhi and I need to focus on treating the common people; we really don't have the energy to deal with the Black Society's Five Ghosts."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -151683,7 +151685,7 @@
   - split: 10
     subIndex: 1
     text: "仙霞派大师兄魏胥华立于殿前，手扶宝剑，声如洪钟，宣布仪式开始。"
-    translated: "Senior Brother Wei Xuhua of the Xianxia Sect stood at the front of the hall, holding a precious sword, his voice resounding like a loud bell, announcing the beginning of the ceremony."
+    translated: "Big Senior Brother Wei Xuhua of the Xianxia Sect stood in front of the throne, holding a treasure sword, his voice like a loud bell, announcing the start of the ceremony."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -151806,7 +151808,7 @@
   - split: 10
     subIndex: 2
     text: "接过了由大师兄亲自递上的掌门信物"
-    translated: "Accepted the Sect Leader token personally handed over by Senior Brother Leading‑Man."
+    translated: "Received the Sect Leader's token personally handed over by Big Senior Brother"
   - split: 10
     subIndex: 3
     text: "一柄古朴而威严的掌门令牌。"
@@ -151821,7 +151823,7 @@
     translated: "Left"
   - split: 10
     text: "咳咳......大师兄，诸位英雄豪杰。"
-    translated: "Cough cough..... Senior Brother, fellow heroes."
+    translated: "Cough cough......Big Senior Brother, esteemed heroes and adventurers."
   - split: 10
     subIndex: 1
     text: "感谢大家前来捧场，见证我#$PlayerName#继任仙霞派掌门之仪式。"
@@ -152191,7 +152193,7 @@
   - split: 10
     subIndex: 1
     text: "身为本门大师兄，我也会以身作则，为仙霞派赴汤蹈火，在所不辞。"
-    translated: "As the senior brother of this sect, I will set an example and risk my life for Xianxia Sect without hesitation."
+    translated: "As the big senior brother of our sect, I will also lead by example and risk my life for the Xianxia Sect, without hesitation."
   - split: 10
     subIndex: 2
     text: "这#PlotInteractItemName#是我准备的贺礼，你一并收下吧。"
@@ -152206,11 +152208,11 @@
     translated: "Left"
   - split: 10
     text: "大师兄还是这么一本正经呐......"
-    translated: "Senior Brother is still being so serious and proper...."
+    translated: "Big Senior Brother is still so serious..."
   - split: 10
     subIndex: 1
     text: "这些年来，大师兄你虽说表面上十分严厉，一直在鞭策我们这些后辈，"
-    translated: "These years, though Senior Brother has been remarkably strict on the surface and constantly pushed us juniors,"
+    translated: "These years, Big Senior Brother, although you have been quite stern on the surface and constantly spurred us juniors on,"
   - split: 10
     subIndex: 2
     text: "但实际上也一直在暗中关怀照顾。"
@@ -153196,7 +153198,7 @@
   - split: 10
     subIndex: 1
     text: "刚才的一段插曲纷扰，也被这清风拂去。"
-    translated: "The disturbance of that brief interlude was also swept away by the gentle breeze."
+    translated: "The brief disturbance was swept away by the gentle breeze."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -162635,7 +162637,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄说的正是。哎，只可惜本门与铁掌帮虽已和解，"
-    translated: "The Senior Brother said it precisely. Alas, though our sect has reconciled with the Iron Palm Gang,"
+    translated: "Big Senior Brother said it exactly. Ah, alas, though our sect has reconciled with the Iron Palm Gang,"
   - split: 10
     subIndex: 1
     text: "但在此前的连番鏖战中也是元气大伤，如今又处于各大门派夹缝之中。"
@@ -186935,7 +186937,7 @@
     translated: "Wei Xuhua"
   - split: 10
     text: "好、好快的剑！仙霞派大师兄，果然有两下子。"
-    translated: "Good, your sword is indeed quick! Senior Brother of the Xianxia Sect, you truly have some skill."
+    translated: "Good, your sword is indeed swift! Big Senior Brother of the Xianxia Sect, you really have some skill."
   templates:
   - split: 8
     template: "ChangeInjury;{0}-0-50|ChangeMaxFightSkill;{1}-4-2"
@@ -205846,7 +205848,7 @@
     translated: "Right"
   - split: 10
     text: "此外，大隐阁主道无名，一代宗师，武艺超群，"
-    translated: "Additionally, Great Concealed Pavilion's master Dao Wumu is a living legend, a martial arts master unparalleled in his time."
+    translated: "Moreover, Great Hidden Pavilion's master Dao Wuming is a living legend, a master of martial arts unparalleled in his generation."
   - split: 10
     subIndex: 1
     text: "虽隐于山野，却始终心怀苍生。"
@@ -243706,7 +243708,7 @@
   - split: 10
     subIndex: 1
     text: "哈哈哈，你这小姑娘，日后师傅把这功夫教你便是。"
-    translated: "Haha, you little girl, someday I'll teach you these skills."
+    translated: "Haha, you little girl, one day, your master will teach you these skills."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -266522,7 +266524,7 @@
   - split: 10
     subIndex: 1
     text: "大师兄，顾师兄，还有余师姐他们，都时常记挂着你呢。"
-    translated: "Senior Brother, Brother Gu, and Senior Sister Yu, among others, often think of you."
+    translated: "Big Senior Brother, Senior Brother Gu, and Senior Sister Yu, and the rest of them, often think of you."
   - split: 10
     subIndex: 2
     text: "你若是突然寻了短见，他们该有多伤心啊！"
@@ -267371,7 +267373,7 @@
   - split: 10
     subIndex: 1
     text: "未曾听闻过施主的大名，还望见谅。"
-    translated: "I have never heard of your great name before; please forgive me."
+    translated: "I have never heard the distinguished name of Master. I hope you will forgive me."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -282597,7 +282599,7 @@
   - split: 10
     subIndex: 1
     text: "时候不早，兄弟就先行告辞了，咱们后会有期！"
-    translated: "It's getting late, so I'll take my leave first. We'll meet again another time!"
+    translated: "It's late, so brother I'll take my leave first. We'll meet again another time!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -287879,7 +287881,7 @@
     translated: "Left"
   - split: 10
     text: "哦！想起来了，这四人后来跟赵点检一起，共斗黄沙寨二当家三当家。"
-    translated: "Oh! I remember now. These four later fought together with Zhao Jianjian against the Second and Third Masters of Huangsha Village."
+    translated: "Oh! I remember now. These four later fought against the Second Boss and Third Boss of Yellow Sand Camp together with Zhao Jianchecuan."
   - split: 10
     subIndex: 1
     text: "也算是弃暗投明，改邪归正了。"
@@ -315526,7 +315528,7 @@
   - split: 10
     subIndex: 1
     text: "呵呵，当时他一路送你回福州，姐姐我就看出你们两不对劲。"
-    translated: "Haha, at the time, when he escorted you back to Fuzhou, I could tell there was something off between you two."
+    translated: "Haha, back then when he sent you all the way back to Fuzhou, Older Sister, I could tell there was something off between you two."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -349936,7 +349938,7 @@
     translated: "Right"
   - split: 10
     text: "此外他还暗中授意分舵长老，将军械输送给血衣盟加强武装。"
-    translated: "Moreover, he secretly instructed the deputy elders of the branch factions to supply weaponry to the Bloodrobe Alliance to strengthen their armed forces."
+    translated: "Moreover, he covertly instructed the Deputy Elder of the Fenhun to supply arms to strengthen the Blood Robe Alliance's defenses."
   - split: 10
     subIndex: 1
     text: "并在京城街头巷尾，散布姜婉是先皇后人的消息。"
@@ -352602,7 +352604,7 @@
     translated: "Right"
   - split: 10
     text: "大、大师兄？各位！你们......你们怎么来了！"
-    translated: "Big, Senior Brother! Everyone! You... how did you all come!"
+    translated: "Big Senior Brother? Everyone! How did you all get here!"
 - raw: ",顾游年,,左,,,,,,,哈哈，姜师妹对我等关怀备至，照顾有加。\\n知恩不图报者，与畜生禽兽何异？"
   splits:
   - split: 1
@@ -362005,7 +362007,7 @@
     translated: "Wind howls"
   - split: 10
     text: "哈哈哈哈，王寨主，兄弟来迟一步，莫要见怪。"
-    translated: "Hahahaha, Fort Master Wang, I came a step too late, don't be annoyed."
+    translated: "Hahahaha, Fort Master Wang, forgive your brother for arriving a little late."
   templates:
   - split: 6
     template: "SpeEffect/{0}"
@@ -375729,7 +375731,7 @@
   - split: 10
     subIndex: 1
     text: "大师兄，你怎么看？"
-    translated: "Senior Brother, what do you think?"
+    translated: "Big Senior Brother, what's your take?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -375761,7 +375763,7 @@
     translated: "Right"
   - split: 10
     text: "大、大师兄息怒，余师姐定是有她的难处......"
-    translated: "Big, Senior Brother, please calm down. Sister Disciple Yu must have her own difficulties..."
+    translated: "Big Senior Brother, please calm down. Little Sister Sister has her own difficulties..."
 - raw: ",,沈退,右,,,,,,,余师姐向来醉心习武，岂会错过这种拜入绝世高人门下的机会？\\n我看，她肯定是不回来了了！"
   splits:
   - split: 2
@@ -376214,7 +376216,7 @@
     translated: "Left"
   - split: 10
     text: "好！余师姐，今天不练会，我杨思迟就不睡觉了！"
-    translated: "Okay! Senior Teacher Ye, I won't sleep tonight until we practice!"
+    translated: "Good! Senior Sister Yu, if I don't master this today, I, Yang Sichi, won't sleep!"
 - raw: ",玩家,,左,,,,,GetSpeReward;113,,大家这么干劲十足，我这做掌门的也不能落下。\\n好，咱们今天就一同参悟这高人武学！"
   splits:
   - split: 1
@@ -376638,7 +376640,7 @@
   - split: 10
     subIndex: 1
     text: "没想到道无名这老小子一世英名，竟落得这么个下场，"
-    translated: "I never expected Old Man Wuming, with his entire life of illustrious reputation, to end up like this."
+    translated: "I never thought that Old Dao Wuming, with a lifetime of illustrious reputation, would end up like this."
   - split: 10
     subIndex: 2
     text: "真是可悲，可叹呐！"
@@ -385709,7 +385711,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄，你和采薇去城内四处打探，"
-    translated: "Senior Brother, you and Caimei should go into the city to gather information from all directions."
+    translated: "Big Senior Brother, you and Caiwei go into the city to gather information from all sides."
   - split: 10
     subIndex: 1
     text: "将剩余唐门弟子清缴出去，然后部署好治安事务。"
@@ -387950,7 +387952,7 @@
   - split: 10
     subIndex: 1
     text: "本大侠手中这剑可不是摆设，姑娘，告辞！"
-    translated: "This sword in my hand is not for show, Miss. Goodbye!"
+    translated: "The sword in this great hero's hand is no mere decoration. Miss, farewell!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -390522,7 +390524,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄说得正是，待日后准备充分，咱们再上铁掌帮，"
-    translated: "The Senior Brother is right. We should wait until we are well‑prepared before heading to the Iron Palm Gang."
+    translated: "Big Senior Brother says it's right. Once we are properly prepared in the future, let's go to the Iron Palm Gang."
   - split: 10
     subIndex: 1
     text: "定能毕其功于一役，将其拿下。"
@@ -391520,7 +391522,7 @@
     translated: "Right"
   - split: 10
     text: "呵呵，说起来若没有铁掌帮，也没有我和大师兄的诸般奇遇。"
-    translated: "Haha, if it weren't for the Iron Palm Gang, I and my senior brother wouldn't have had all those amazing adventures."
+    translated: "Haha, if not for the Iron Palm Gang, neither my own nor Big Senior Brother's myriad adventures would have taken place."
   - split: 10
     subIndex: 1
     text: "这铁掌帮与我们，也算是渊源颇深了。"
@@ -392561,7 +392563,7 @@
   - split: 10
     subIndex: 1
     text: "大师兄跌落山崖，顾师兄也被打得经脉尽断......"
-    translated: "Senior Brother fell off a cliff, and Master Brother was also beaten to the point of severed meridians......"
+    translated: "Big Senior Brother fell off a cliff, and Senior Brother was also beaten to the point of severed meridians...."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -395565,7 +395567,7 @@
   - split: 10
     subIndex: 1
     text: "我韩嵩混迹江湖多年，岂能不知？"
-    translated: "I've mixed in the Jianghu for many years; how could I not know?"
+    translated: "I, Han Song, have roamed the Jianghu for many years. How could I not know?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -397596,7 +397598,7 @@
     translated: "Left"
   - split: 10
     text: "不愧是大师兄，这么快就有所斩获了。"
-    translated: "Not surprising it's the Senior Brother who has already made such swift progress."
+    translated: "Not surprising it's Big Senior Brother, making such swift progress already."
   - split: 10
     subIndex: 1
     text: "愿闻其详。"
@@ -399361,7 +399363,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄，还望你回去之后令弟子们做好准备。"
-    translated: "Senior Brother, I hope you will have the disciples ready upon your return."
+    translated: "Big Senior Brother, I hope you will have the disciples make preparations upon your return."
   - split: 10
     subIndex: 1
     text: "接下来，便要联合铁掌帮，一同进攻唐门总舵了。"
@@ -401507,7 +401509,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄，诸位弟子，"
-    translated: "Senior Brother, fellow disciples,"
+    translated: "Big Senior Brother, fellow disciples,"
   - split: 10
     subIndex: 1
     text: "劳烦你们将唐门残余势力清剿干净。"
@@ -403305,7 +403307,7 @@
     translated: "Right"
   - split: 10
     text: "大、大师兄他们很快就过来了，"
-    translated: "Big, Senior Brother and their group won't be far behind."
+    translated: "Da, the big senior brothers are coming over quickly."
   - split: 10
     subIndex: 1
     text: "唐嫣然，识相的就速、速速离去。"
@@ -404204,6 +404206,7 @@
   - split: 10
     subIndex: 1
     text: "莫要辜负了唐掌门一片好心。"
+    translated: "Do not disappoint Sect Leader Tang's good intentions."
   templates:
   - split: 8
     template: "FinishEventMission|PlotStartTutorial;{0}"
@@ -409469,7 +409472,7 @@
     translated: "Left"
   - split: 10
     text: "大师兄？可是......"
-    translated: "Senior Brother? But..."
+    translated: "Big Senior Brother? But..."
 - raw: ",,沈退,右,,,,,,,我看白云子自告奋勇，斗志满满，\\n#PlayerName#你就别扫人家的兴了吧！"
   splits:
   - split: 2
@@ -415005,7 +415008,7 @@
     translated: "Left"
   - split: 10
     text: "否则，不仅对不起已故的道无名阁主，"
-    translated: "Otherwise, it would not only be a disservice to the late Master Wuming Dao but also..."
+    translated: "Otherwise, it would not only be a disservice to the late Dao Wuming,"
   - split: 10
     subIndex: 1
     text: "大隐阁其余长老可能也会因此不满，甚至发动弹劾。"
@@ -422608,6 +422611,7 @@
     translated: "Left"
   - split: 10
     text: "待京城风波彻底平息后，"
+    translated: "Once the turmoil in the capital has completely subsided,"
   - split: 10
     subIndex: 1
     text: "我会尽快点起兵马，前去讨伐飞龙门。"
@@ -436058,7 +436062,7 @@
     translated: "Right"
   - split: 10
     text: "#PlayerName#放心，身为仙霞派大师兄，"
-    translated: "#PlayerName#, rest assured as the Senior Brother of the Xianxia Sect."
+    translated: "#PlayerName#, rest assured, as the Big Senior Brother of the Xianxia Sect,"
   - split: 10
     subIndex: 1
     text: "我魏胥华自当以身作则，奋勇争先！"
@@ -436271,7 +436275,7 @@
   - split: 10
     subIndex: 1
     text: "喜欢大师兄的故作严厉，顾师兄的循循善诱。"
-    translated: "Like Master Senior Brother's pretend sternness and Brother Senior Advisor's patient guidance."
+    translated: "Like Big Senior Brother's pretend sternness and Senior Brother's patient guidance."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -439377,7 +439381,7 @@
     translated: "Left"
   - split: 10
     text: "阿弥陀佛，施主所言就算有理，"
-    translated: "Amituofo, even if what you say is reasonable,"
+    translated: "Amituofo, Benefactor even if what you say is reasonable,"
   - split: 10
     subIndex: 1
     text: "但战端已起，我方也无路可退了。"
@@ -440901,7 +440905,7 @@
     translated: "Right"
   - split: 10
     text: "身为本门大师兄，必须以身作则......"
-    translated: "As the senior master brother of this sect, I must lead by example...."
+    translated: "As the big senior brother of the sect, I must lead by example......"
   - split: 10
     subIndex: 1
     text: "替各位打个下手吧。"
