@@ -639,9 +639,37 @@ internal static class DynamicStringPatches
     // alphanumeric, insert a single space between them. Punctuation/symbols (":", "?", "-", CJK
     // punctuation, etc.) and whitespace are never treated as needing a separator, since
     // `char.IsLetterOrDigit` returns false for those - so "Foo:架势" stays "Foo:Posture", not
-    // "Foo: Posture". The leading-space check reads the last character already written to the
-    // output (not the raw input) so it stays correct even when a previous replacement in this same
-    // pass already inserted a trailing space right before this match.
+    // "Foo: Posture".
+    //
+    // CONFIRMED BUG (2026-08-29, "Xianxia Sect<color=#8C8C8C>Outer Gate Disciple</color>" case):
+    // the naive boundary check above looks at the literal preceding/following character in the
+    // string, but TMP/UI rich-text tags (`<color=...>`, `</color>`, `<b>`, etc.) render as
+    // zero-width markup, not visible text - the *actual* on-screen neighbor of a match sitting
+    // right next to a tag is whatever is on the OTHER side of that tag, not the tag's `<`/`>`
+    // bracket itself. `<`/`>` are already non-alphanumeric so the old check correctly avoided
+    // inserting a space touching the bracket - but that also meant it never looked past the tag to
+    // find the real neighboring word, so "Sect" immediately followed by "<color=...>Outer..."
+    // rendered as "SectOuter Gate Disciple" with no visible gap. Fix: `EffectiveTrailingChar`/
+    // `EffectiveLeadingChar` strip any run of complete tags immediately at the edge being checked
+    // before looking at the character, so the visible "t" (end of "Sect") and "O" (start of
+    // "Outer") are compared directly, ignoring the tag markup between them.
+    private static readonly Regex TrailingTagsRegex = new(@"(<\/?[A-Za-z][^<>]*>)+$", RegexOptions.Compiled);
+    private static readonly Regex LeadingTagsRegex = new(@"^(<\/?[A-Za-z][^<>]*>)+", RegexOptions.Compiled);
+
+    // Last visible (non-tag) character in `s`, or null if `s` is empty/all tags.
+    private static char? EffectiveTrailingChar(string s)
+    {
+        var stripped = TrailingTagsRegex.Replace(s, string.Empty);
+        return stripped.Length > 0 ? stripped[stripped.Length - 1] : (char?)null;
+    }
+
+    // First visible (non-tag) character in `s`, or null if `s` is empty/all tags.
+    private static char? EffectiveLeadingChar(string s)
+    {
+        var stripped = LeadingTagsRegex.Replace(s, string.Empty);
+        return stripped.Length > 0 ? stripped[0] : (char?)null;
+    }
+
     private static string ReplaceWithWordBoundarySpacing(string input, string raw, string replacement)
     {
         var sb = new System.Text.StringBuilder();
@@ -651,8 +679,10 @@ internal static class DynamicStringPatches
         {
             sb.Append(input, startIndex, idx - startIndex);
 
-            if (sb.Length > 0 && replacement.Length > 0
-                && char.IsLetterOrDigit(sb[sb.Length - 1]) && char.IsLetterOrDigit(replacement[0]))
+            var prevChar = EffectiveTrailingChar(sb.ToString());
+            var replacementLeadChar = EffectiveLeadingChar(replacement);
+            if (prevChar.HasValue && replacementLeadChar.HasValue
+                && char.IsLetterOrDigit(prevChar.Value) && char.IsLetterOrDigit(replacementLeadChar.Value))
             {
                 sb.Append(' ');
             }
@@ -660,8 +690,10 @@ internal static class DynamicStringPatches
             sb.Append(replacement);
             startIndex = idx + raw.Length;
 
-            if (replacement.Length > 0 && char.IsLetterOrDigit(replacement[replacement.Length - 1])
-                && startIndex < input.Length && char.IsLetterOrDigit(input[startIndex]))
+            var replacementTrailChar = EffectiveTrailingChar(replacement);
+            var nextChar = startIndex < input.Length ? EffectiveLeadingChar(input.Substring(startIndex)) : null;
+            if (replacementTrailChar.HasValue && nextChar.HasValue
+                && char.IsLetterOrDigit(replacementTrailChar.Value) && char.IsLetterOrDigit(nextChar.Value))
             {
                 sb.Append(' ');
             }

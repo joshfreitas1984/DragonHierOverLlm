@@ -170,6 +170,14 @@ bare-label dictionary entry (see doc). Full wiring details for all four sources,
 `dynamicStringsFromColumns.txt` dedup behavior, and the dialogue-button fix:
 [`Tests/docs/dynamicstrings-pipeline-architecture.md`](../../Tests/docs/dynamicstrings-pipeline-architecture.md).
 
+**Known-bad reconstructed template Results are forced via `GameFileHandling.DynamicStringResultOverrides`**,
+applied by `ApplyDynamicStringResultOverrides` right after `PackageFinalTranslationAsync` packages
+each `DynamicStringsIL2CPP` file — never fix these by hand-editing `Files/Converted`/`Files/Mod`
+YAML directly, since a re-export or re-translation silently regenerates the unfixed value and
+undoes the edit. E.g. the `"{0}年{1}月{2}日"` save-slot date template reconstructs fragment
+translations with no separator (`"{0}Year{1}Month{2}Day"`) — overridden by exact `Raw` match to
+`"{0} Year {1} Month {2} Day"`.
+
 
 ## Working directory layout (`Files/`)
 

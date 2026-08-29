@@ -238,10 +238,31 @@ namespace Tests
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringColumnSources =
         [
             ("ForceData.csv", [1]),
-            ("SpeHeroData.csv", [5]),
+            // Column 5 (等级/position title, e.g. 掌门/副掌门) plus column 15 (绰号/nickname,
+            // e.g. "无为真人") - since 2026-08-29. SpeHeroData.csv is fully commented out of
+            // TextFilesToSplit (see the crash-avoidance note above that entry), so this file's
+            // display text never reaches the normal per-row CSV pipeline at all; nicknames were
+            // previously getting corrupted by DynamicStringPatches' bare single-character
+            // dictionary entries (e.g. "无"->"None", "为"->"For" matching inside "无为真人",
+            // producing "None For 真人") because no whole-phrase entry existed to win the
+            // longest-match-first ordering. Extracting the whole nickname here fixes every hero
+            // uniformly instead of manually patching one Raw value at a time.
+            ("SpeHeroData.csv", [5, 15]),
             ("HeroTagData.csv", [1]),
             ("KungFuData.csv", [3]),
-            ("AreaData.csv", [2]),
+            // Column 2 (类别/Category) plus, since 2026-08-29, column 1 (名字/Name) - see the
+            // defense-in-depth note below for why the name column was added.
+            // Defense-in-depth (2026-08-29): column 1 on AreaData/ResourcePointData/
+            // ResourcePointTypeData is already fully translated via the normal per-row CSV
+            // pipeline (none of them SkipColumns it), so this isn't filling a coverage gap. It's a
+            // safety net for runtime-composed strings that concatenate these names together
+            // outside any single CSV row (e.g. an owner-prefixed resource-point display list like
+            // "杭州甘泉" - AreaData.areaName + ResourcePointData.resourcePointName joined with
+            // "\n") - those never flow through the CSV pipeline at all, only through
+            // DynamicStringPatches' substring dictionary.
+            ("AreaData.csv", [1, 2]),
+            ("ResourcePointData.csv", [1]),
+            ("ResourcePointTypeData.csv", [1]),
             ("BuildingData.csv", [1]),
         ];
 
@@ -511,6 +532,54 @@ namespace Tests
             }
         }
 
+        // Forced Result overrides for specific, known-problematic DynamicStringsIL2CPP Raw
+        // templates, applied unconditionally at packaging time - see
+        // ApplyDynamicStringResultOverrides. Keyed by the exact Raw string (not the translated
+        // fragments), since the bug is in how CompoundFieldSplitter.Reconstruct glues translated
+        // fragments directly against the "{n}" placeholders with no separator, not in the
+        // fragment translations themselves (e.g. "年"->"Year" is a correct translation on its
+        // own). "{0}年{1}月{2}日" (a save-slot date built via DateTime.ToString(), see
+        // DynamicStringPatches.cs's _compiledTemplates comments) reconstructs to
+        // "{0}Year{1}Month{2}Day" with no fix, producing unreadable output like
+        // "1Year1Month17Day" - forced here to "{0} Year {1} Month {2} Day" instead.
+        private static readonly Dictionary<string, string> DynamicStringResultOverrides = new()
+        {
+            ["{0}年{1}月{2}日"] = "{0} Year {1} Month {2} Day",
+        };
+
+        // Re-reads the just-packaged Files/Mod/{textFile.Path}.yaml and force-overwrites any
+        // entry whose Raw matches DynamicStringResultOverrides, then rewrites the file. Runs
+        // AFTER DynamicStringWorkflow.PackageDynamicStringsAsync on every packaging pass -
+        // regardless of what's currently translated in Files/Converted - so a future re-export or
+        // re-translation of this raw string can never silently regress the fix (editing the
+        // Converted/Mod YAML directly, as done previously, gets undone the next time either step
+        // re-runs).
+        private static void ApplyDynamicStringResultOverrides(string workingDirectory, TextFileToSplit textFile)
+        {
+            var modPath = $"{workingDirectory}/Mod/{textFile.Path}.yaml";
+            if (!File.Exists(modPath))
+                return;
+
+            var deserializer = YamlHelper.CreateDeserializer();
+            var results = deserializer.Deserialize<List<DynamicStringResult>>(File.ReadAllText(modPath)) ?? new();
+
+            var changed = false;
+            foreach (var entry in results)
+            {
+                if (DynamicStringResultOverrides.TryGetValue(entry.Raw, out var forcedResult) && entry.Result != forcedResult)
+                {
+                    entry.Result = forcedResult;
+                    changed = true;
+                }
+            }
+
+            if (!changed)
+                return;
+
+            var serializer = YamlHelper.CreateSerializer();
+            File.WriteAllText(modPath, serializer.Serialize(results));
+        }
+
         public static void ExportPrefabTextAssetToCustomFormat(string workingDirectory)
         {
             foreach (var textFile in TextFilesToSplit.Where(t => t.TextFileType == TextFileType.PrefabText))
@@ -556,6 +625,12 @@ namespace Tests
                 var (passed, failed) = await DynamicStringWorkflow.PackageDynamicStringsAsync(workingDirectory, dynamicStringFile);
                 passedCount += passed;
                 failedCount += failed;
+
+                // Force known-bad reconstructed template results regardless of whatever
+                // translation currently sits in Files/Converted - see
+                // DynamicStringResultOverrides for why this can't just be fixed by editing the
+                // Converted/Mod YAML directly (re-export/re-translation would silently undo it).
+                ApplyDynamicStringResultOverrides(workingDirectory, dynamicStringFile);
             }
 
             await FileIteration.IterateTranslatedFilesAsync(workingDirectory,

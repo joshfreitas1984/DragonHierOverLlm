@@ -109,40 +109,39 @@
 - path: Canvas/PlotPanel/RightFace/Force
   sampleText: Jianghu<color=#8C8C8C>Warrior</color>
   idealFontSize: 14.0
-  alignment: TopLeft
+  alignment: TopRight
   allowWordWrap: true
-  adjustX: 15.0
-  adjustY: 20.0
+  allowAutoSizing: false
   adjustWidth: 100.0
 - path: Canvas/PlotPanel/RightFace/Name
   sampleText: 谭隆 Hard
   idealFontSize: 19.0
   alignment: TopRight
   allowWordWrap: true
+  allowAutoSizing: false
   adjustX: 5.0
   adjustY: 65.0
   adjustWidth: 100.0
 - path: Canvas/PlotPanel/LeftFace/Force
   sampleText: Xianxia Sect<color=#8C8C8C>Outer Gate Disciple</color>
   idealFontSize: 14.0
-  alignment: TopRight
+  alignment: TopLeft
   allowWordWrap: true
-  adjustX: -15.0
-  adjustY: 20.0
+  adjustX: 20.0
   adjustWidth: 100.0
 - path: Canvas/PlotPanel/LeftFace/Name
   sampleText: XiaoHu
   idealFontSize: 19.0
   alignment: TopLeft
   allowWordWrap: true
-  adjustX: -5.0
+  adjustX: -10.0
   adjustY: 65.0
   adjustWidth: 100.0
 - path: Canvas/HudPanel/ForceLabel
   sampleText: Xianxia Sect<color=#8C8C8C>Outer Gate Disciple</color>
   idealFontSize: 14.0
   allowWordWrap: false
-  adjustX: -20.0
+  adjustX: -5.0
 - path: Canvas/HudPanel/TimeLabel
   sampleText: 1Year2Month5Day
   idealFontSize: 14.0
@@ -244,3 +243,42 @@
   maxFontSize: 14.0
   allowWordWrap: true
   allowAutoSizing: true
+- path: Canvas/PlotPanel/PlotTextBack/PlotText
+  sampleText: "Hmph! In these turbulent times, the emperor is weak and hidden.\nIt was the time to proclaim my brother Zhao Yinzong as the successor and usher in a new dynasty."
+  idealFontSize: 18.0
+  allowWordWrap: true
+  allowAutoSizing: false
+- path: Canvas/PlotPanel/RightFace/NickName
+  sampleText: None For 真人
+  idealFontSize: 13.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustY: -25.0
+  adjustWidth: 100.0
+- path: Canvas/BattleUIPanel/NowActiveHero/NameBack/Name
+  sampleText: Zhao Yizong
+  idealFontSize: 17.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustY: 40.0
+  adjustWidth: 50.0
+- path: Canvas/BattleUIPanel/NowActiveHero/NameBack/Force
+  sampleText: 飞龙<color=#FD1430>Masters</color>
+  idealFontSize: 14.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustY: -10.0
+  adjustWidth: 50.0
+- path: Canvas/BattleUIPanel/ActionBar/ActionBarUnitRoot/*/TextBack/Text
+  sampleText: Zhang Qingpeng
+  idealFontSize: 12.0
+  allowWordWrap: false
+- path: Canvas/MissionPanel/MissionUI/MissionScrollView/Viewport/Content/MissionIconPrefab(Clone)/Title
+  sampleText: Just starting out(Xianxia Sect Temple Scriptures Pavilion)
+  idealFontSize: 12.0
+  minFontSize: 10.0
+  maxFontSize: 14.0
+  alignment: TopLeft
+  allowWordWrap: true
+  allowAutoSizing: true
+  adjustWidth: -50.0

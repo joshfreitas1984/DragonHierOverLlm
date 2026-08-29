@@ -8,12 +8,15 @@ using System.Text.RegularExpressions;
 namespace Tests;
 
 /// <summary>
-/// A single distinct Chinese string found while scanning assets, tagged with the field it was
-/// found on. Written as the full contents of dumpedOtherText.txt (every distinct string,
+/// A single distinct Chinese string found while scanning assets, tagged with the leaf field name
+/// it was found on and the full ancestor path (rooted at the owning script class name where
+/// resolvable, e.g. "SomeClass.innSearchNames.Array.data") so array/list elements - which
+/// AssetsTools.NET always names "data" at the leaf - can be traced back to the real field that
+/// holds them. Written as the full contents of dumpedOtherText.txt (every distinct string,
 /// including the primary m_Text/text ones) purely as a diagnostic/reference dump - not a
 /// translation input.
 /// </summary>
-public record DumpedTextEntry(string Raw, string Field);
+public record DumpedTextEntry(string Raw, string Field, string Path);
 
 /// <summary>
 /// Offline equivalent of FanslationStudio.Plugins.PrefabText.PrefabTextDumperService (see
@@ -82,11 +85,11 @@ public class AssetDumperWorkflowTests
         if (monoGeneratorAvailable)
             manager.MonoTempGenerator = new Cpp2IlTempGenerator(metadataPath, gameAssemblyPath);
 
-        // Maps each distinct Chinese string to the name of the field it was first found on (e.g.
-        // "m_Text"), purely for informational purposes when reviewing the output - the string
-        // itself is still deduplicated (dictionary keys are unique) even though it may appear on
-        // multiple fields/assets.
-        var exportedStrings = new Dictionary<string, string>();
+        // Maps each distinct Chinese string to the leaf field name it was first found on (e.g.
+        // "m_Text") plus the full ancestor path, purely for informational purposes when reviewing
+        // the output - the string itself is still deduplicated (dictionary keys are unique) even
+        // though it may appear on multiple fields/assets.
+        var exportedStrings = new Dictionary<string, (string LeafField, string Path)>();
 
         var assetFiles = Directory.GetFiles(dataDirectory, "*", SearchOption.AllDirectories)
             .Where(IsCandidateAssetFile)
@@ -140,13 +143,13 @@ public class AssetDumperWorkflowTests
         // This is not a translation input - it exists purely so the field name is easy to cross
         // reference when wiring up the runtime plugin's text-replacement matching later.
         var primaryStrings = exportedStrings
-            .Where(kv => IsPrimaryTextField(kv.Value))
+            .Where(kv => IsPrimaryTextField(kv.Value.LeafField))
             .Select(kv => kv.Key)
             .OrderBy(text => text)
             .ToList();
         var allEntries = exportedStrings
             .OrderBy(kv => kv.Key)
-            .Select(kv => new DumpedTextEntry(kv.Key, kv.Value))
+            .Select(kv => new DumpedTextEntry(kv.Key, kv.Value.LeafField, kv.Value.Path))
             .ToList();
 
         File.WriteAllLines(outputPath, primaryStrings);
@@ -200,7 +203,7 @@ public class AssetDumperWorkflowTests
     }
 
     private static void ScanFile(
-        AssetsManager manager, string path, Dictionary<string, string> exportedStrings, Dictionary<string, int> errorCounts,
+        AssetsManager manager, string path, Dictionary<string, (string LeafField, string Path)> exportedStrings, Dictionary<string, int> errorCounts,
         ref int scannedAssets, ref int monoBehavioursSkipped, ref int otherAssetsSkipped,
         ref int typeTreeAssetFiles, ref int noTypeTreeAssetFiles)
     {
@@ -250,7 +253,7 @@ public class AssetDumperWorkflowTests
     }
 
     private static void ScanAssetsFile(
-        AssetsManager manager, AssetsFileInstance instance, Dictionary<string, string> exportedStrings, Dictionary<string, int> errorCounts,
+        AssetsManager manager, AssetsFileInstance instance, Dictionary<string, (string LeafField, string Path)> exportedStrings, Dictionary<string, int> errorCounts,
         ref int scannedAssets, ref int monoBehavioursSkipped, ref int otherAssetsSkipped)
     {
         foreach (var info in instance.file.Metadata.AssetInfos)
@@ -291,7 +294,37 @@ public class AssetDumperWorkflowTests
                 continue;
             }
 
-            ExtractChineseText(baseField, exportedStrings);
+            // For MonoBehaviours, resolve the owning script's actual class name (e.g. "InnData")
+            // via the m_Script PPtr so the recorded path reads like "ClassName.fieldName..."
+            // instead of the generic "MonoBehaviour" type name. Falls back to the asset's own
+            // TypeName (e.g. "GameObject", "Transform") for everything else.
+            var rootLabel = info.TypeId == MonoBehaviourClassId
+                ? ResolveMonoScriptClassName(manager, instance, baseField) ?? baseField.TypeName
+                : baseField.TypeName;
+
+            ExtractChineseText(baseField, exportedStrings, rootLabel);
+        }
+    }
+
+    // Resolves a MonoBehaviour asset's "m_Script" PPtr to the actual game script class name (e.g.
+    // "InnData", "InnIconController") via MonoScript.m_ClassName. Best-effort: any failure (script
+    // asset missing, PPtr unresolved, etc.) falls back to null so the caller uses the generic
+    // asset TypeName instead.
+    private static string? ResolveMonoScriptClassName(AssetsManager manager, AssetsFileInstance instance, AssetTypeValueField baseField)
+    {
+        try
+        {
+            var scriptField = baseField["m_Script"];
+            if (scriptField == null || scriptField.IsDummy)
+                return null;
+
+            var external = manager.GetExtAsset(instance, scriptField, false, AssetReadFlags.None);
+            var classNameField = external.baseField?["m_ClassName"];
+            return classNameField != null && !classNameField.IsDummy ? classNameField.AsString : null;
+        }
+        catch
+        {
+            return null;
         }
     }
 
@@ -302,8 +335,15 @@ public class AssetDumperWorkflowTests
     // set of field names. TextAsset content is skipped upstream in ScanAssetsFile (see
     // TextAssetClassId), and MaxStringLength guards against any other field that happens to hold a
     // large blob rather than genuine short UI text.
-    private static void ExtractChineseText(AssetTypeValueField field, Dictionary<string, string> exportedStrings)
+    //
+    // "path" tracks the dotted ancestor chain down to (but not including) the current field, so
+    // array/list elements - which AssetsTools.NET always names "data" at the leaf regardless of
+    // the real field name - can still be traced back to the owning class/field (e.g.
+    // "InnData.innSearchNames.Array.data") instead of a bare, unhelpful "data".
+    private static void ExtractChineseText(AssetTypeValueField field, Dictionary<string, (string LeafField, string Path)> exportedStrings, string path)
     {
+        var currentPath = string.IsNullOrEmpty(path) ? field.FieldName : $"{path}.{field.FieldName}";
+
         if (field.Value != null && field.Value.ValueType == AssetValueType.String)
         {
             var text = field.AsString;
@@ -313,12 +353,12 @@ public class AssetDumperWorkflowTests
                 && !IgnoredFieldNames.Contains(field.FieldName))
             {
                 var normalized = text.Replace("\n", "\\n").Replace("\r", "");
-                exportedStrings.TryAdd(normalized, field.FieldName);
+                exportedStrings.TryAdd(normalized, (field.FieldName, currentPath));
             }
         }
 
         foreach (var child in field.Children)
-            ExtractChineseText(child, exportedStrings);
+            ExtractChineseText(child, exportedStrings, currentPath);
     }
 
     // "m_Name" is the GameObject/Asset's own name in the editor hierarchy (often set to a Chinese

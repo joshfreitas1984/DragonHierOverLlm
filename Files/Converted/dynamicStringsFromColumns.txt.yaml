@@ -43455,3 +43455,255 @@
   splits:
   - text: "河套马场"
     translated: "Hetao Horse Ranch"
+- raw: "京城"
+  splits:
+  - text: "京城"
+    translated: "Capital"
+- raw: "杭州"
+  splits:
+  - text: "杭州"
+    translated: "Hangzhou"
+- raw: "福州"
+  splits:
+  - text: "福州"
+    translated: "Fuzhou"
+- raw: "大理"
+  splits:
+  - text: "大理"
+    translated: "Dali"
+- raw: "幽州"
+  splits:
+  - text: "幽州"
+    translated: "Youzhou"
+- raw: "晋阳"
+  splits:
+  - text: "晋阳"
+    translated: "Jinyang"
+- raw: "成都"
+  splits:
+  - text: "成都"
+    translated: "Chengdu"
+- raw: "西凉"
+  splits:
+  - text: "西凉"
+    translated: "Xiliang"
+- raw: "江陵"
+  splits:
+  - text: "江陵"
+    translated: "Jiangling"
+- raw: "扬州"
+  splits:
+  - text: "扬州"
+    translated: "Yangzhou"
+- raw: "乐山镇"
+  splits:
+  - text: "乐山镇"
+    translated: "Leshan Town"
+- raw: "太平乡"
+  splits:
+  - text: "太平乡"
+    translated: "Taiping Township"
+- raw: "剑川镇"
+  splits:
+  - text: "剑川镇"
+    translated: "Jianchuan Town"
+- raw: "清远乡"
+  splits:
+  - text: "清远乡"
+    translated: "Qingyuan Township"
+- raw: "富阳镇"
+  splits:
+  - text: "富阳镇"
+    translated: "Fuyang Town"
+- raw: "那曲乡"
+  splits:
+  - text: "那曲乡"
+    translated: "Nagqu Township"
+- raw: "玉溪村"
+  splits:
+  - text: "玉溪村"
+    translated: "Yuxi Village"
+- raw: "灵台村"
+  splits:
+  - text: "灵台村"
+    translated: "Lingtai Village"
+- raw: "酒泉村"
+  splits:
+  - text: "酒泉村"
+    translated: "Jiuquan Village"
+- raw: "陇西县"
+  splits:
+  - text: "陇西县"
+    translated: "Longxi County"
+- raw: "河内乡"
+  splits:
+  - text: "河内乡"
+    translated: "Hanoi Township"
+- raw: "昌都镇"
+  splits:
+  - text: "昌都镇"
+    translated: "Qamdo Town"
+- raw: "怀柔村"
+  splits:
+  - text: "怀柔村"
+    translated: "Huairou Village"
+- raw: "当涂镇"
+  splits:
+  - text: "当涂镇"
+    translated: "Dangtu Town"
+- raw: "高邮镇"
+  splits:
+  - text: "高邮镇"
+    translated: "Gaoyou Town"
+- raw: "宁化乡"
+  splits:
+  - text: "宁化乡"
+    translated: "Ninghua Township"
+- raw: "襄垣村"
+  splits:
+  - text: "襄垣村"
+    translated: "Xiangyuan Village"
+- raw: "武邑乡"
+  splits:
+  - text: "武邑乡"
+    translated: "Wuyi Township"
+- raw: "云梦乡"
+  splits:
+  - text: "云梦乡"
+    translated: "Yunmeng Township"
+- raw: "逻娑"
+  splits:
+  - text: "逻娑"
+    translated: "Luosuo"
+- raw: "朱仙镇"
+  splits:
+  - text: "朱仙镇"
+    translated: "Zhuxian Town"
+- raw: "景德镇"
+  splits:
+  - text: "景德镇"
+    translated: "Jingdezhen"
+- raw: "佛山镇"
+  splits:
+  - text: "佛山镇"
+    translated: "Foshan Town"
+- raw: "腾冲府"
+  splits:
+  - text: "腾冲府"
+    translated: "Tengchong Prefecture"
+- raw: "板桥镇"
+  splits:
+  - text: "板桥镇"
+    translated: "Banqiao Town"
+- raw: "灵州"
+  splits:
+  - text: "灵州"
+    translated: "Lingzhou"
+- raw: "应天"
+  splits:
+  - text: "应天"
+    translated: "Yingtian"
+- raw: "墨脱县"
+  splits:
+  - text: "墨脱县"
+    translated: "Motuo County"
+- raw: "七里镇"
+  splits:
+  - text: "七里镇"
+    translated: "Qili Town"
+- raw: "永昌村"
+  splits:
+  - text: "永昌村"
+    translated: "Yongchang Village"
+- raw: "蚕丛村"
+  splits:
+  - text: "蚕丛村"
+    translated: "Cancong Village"
+- raw: "子午镇"
+  splits:
+  - text: "子午镇"
+    translated: "Ziwu Town"
+- raw: "章丘镇"
+  splits:
+  - text: "章丘镇"
+    translated: "Zhangqiu Town"
+- raw: "威远村"
+  splits:
+  - text: "威远村"
+    translated: "Weiyuan Village"
+- raw: "枫桥镇"
+  splits:
+  - text: "枫桥镇"
+    translated: "Fengqiao Town"
+- raw: "余杭镇"
+  splits:
+  - text: "余杭镇"
+    translated: "Yuhang Town"
+- raw: "普洱村"
+  splits:
+  - text: "普洱村"
+    translated: "Pu'er Village"
+- raw: "扶胥镇"
+  splits:
+  - text: "扶胥镇"
+    translated: "Fuxu Town"
+- raw: "瓷窑"
+  splits:
+  - text: "瓷窑"
+    translated: "Porcelain kiln"
+- raw: "玉矿"
+  splits:
+  - text: "玉矿"
+    translated: "Jasper mine"
+- raw: "湖泽"
+  splits:
+  - text: "湖泽"
+    translated: "Lake Marsh"
+- raw: "绸缎"
+  splits:
+  - text: "绸缎"
+    translated: "Silkcloth"
+- raw: "果园"
+  splits:
+  - text: "果园"
+    translated: "Orchard"
+- raw: "银矿"
+  splits:
+  - text: "银矿"
+    translated: "Silver mine"
+- raw: "茶山"
+  splits:
+  - text: "茶山"
+    translated: "Tea Hill"
+- raw: "药圃"
+  splits:
+  - text: "药圃"
+    translated: "Apothecary garden"
+- raw: "牧场"
+  splits:
+  - text: "牧场"
+    translated: "Pasture"
+- raw: "铜矿"
+  splits:
+  - text: "铜矿"
+    translated: "Copper mine"
+- raw: "铁矿"
+  splits:
+  - text: "铁矿"
+    translated: "Iron mine"
+- raw: "金矿"
+  splits:
+  - text: "金矿"
+    translated: "Gold mine"
+- raw: "盐矿"
+  splits:
+  - text: "盐矿"
+    translated: "Salt mine"
+- raw: "灵谷"
+  splits:
+  - text: "灵谷"
+    translated: "Spirit Grove"
+- raw: "古木"
+  splits:
+  - text: "古木"
+    translated: "Old woods"
