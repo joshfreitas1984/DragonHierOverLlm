@@ -50,11 +50,12 @@ namespace EnglishPatch;
 ///
 /// Pipeline (mirrors CSV/PrefabText - see FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow
 /// and Tests/GameFileHandling.cs):
-///   Converter --dynamic-string-candidates → review → merge into
-///   Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt → "1c. ExportDynamicStringsIntoTranslated"
-///   → "2. MergeFilesIntoTranslated" → translate → "6. Package to Game Files" produces
-///   Files/Mod/dynamicStrings.txt.yaml (flat `raw`/`result` list), deployed to
-///   BepInEx\plugins\resources\ alongside the CSV overrides.
+///   Converter --dynamic-string-candidates → auto-appended (no manual review step) into
+///   Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt (by
+///   GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap) → "1c.
+///   ExportDynamicStringsIntoTranslated" → "2. MergeFilesIntoTranslated" → translate → "6.
+///   Package to Game Files" produces Files/Mod/dynamicStrings.txt.yaml (flat `raw`/`result`
+///   list), deployed to BepInEx\plugins\resources\ alongside the CSV overrides.
 ///
 /// **Why substring replacement instead of `string.Format`-ing the call's arguments**: confirmed via
 /// earlier discovery-log testing that these concatenation call sites are frequently built from
@@ -318,6 +319,17 @@ internal static class DynamicStringPatches
         // the plugin never has to re-derive "does Raw look like a String.Format template" from
         // the raw text itself at runtime.
         public bool IsTemplate { get; set; }
+
+        // PERF (2026-08-29, framerate regression after word-boundary spacing was added): these two
+        // are the visible (tag-stripped) first/last character of Result, needed on every match by
+        // ReplaceWithWordBoundarySpacing's boundary check. They never change once the dictionary is
+        // loaded, so they're computed exactly once here (see LoadDictionary) instead of being
+        // recomputed via a regex scan of Result on every single match of every single dictionary
+        // entry, for every String.Concat/Format call and every TMP_Text/UI.Text setter in the
+        // running game - that repeated recompute (multiplied by hundreds of entries x every hot-path
+        // call) was the actual cause of the regression, not the boundary-check concept itself.
+        public char? ReplacementLeadChar { get; set; }
+        public char? ReplacementTrailChar { get; set; }
     }
 
     /// <summary>Loads dynamicStrings.txt.yaml (if present) and patches every public static
@@ -434,6 +446,15 @@ internal static class DynamicStringPatches
                 }
             }
 
+            // Precompute each entry's visible replacement edge chars once (see
+            // DictionaryEntry.ReplacementLeadChar/ReplacementTrailChar) rather than on every match
+            // at call time - see the perf note on those fields for why this matters.
+            foreach (var entry in entries)
+            {
+                entry.ReplacementLeadChar = EffectiveLeadingChar(entry.Result ?? string.Empty);
+                entry.ReplacementTrailChar = EffectiveTrailingChar(entry.Result ?? string.Empty);
+            }
+
             // Longest-fragment-first: entries are applied via sequential substring replace
             // (ApplyDictionary), so a shorter fragment that happens to be a substring of a longer
             // one (e.g. "势" vs "架势") must not get a chance to match first - it would corrupt the
@@ -456,13 +477,39 @@ internal static class DynamicStringPatches
             : new List<string>();
     }
 
+    // PERF (2026-08-29, "still a bit slow" follow-up): String.Concat/Format fire an enormous
+    // number of times per frame in a running Unity game (number formatting, asset path building,
+    // engine-internal string work, etc.), and the overwhelming majority of those calls involve no
+    // Chinese text at all. Every _dictionary/_templateDictionary entry's Raw is now guaranteed to
+    // contain at least one CJK character (see Tests/GameFileHandling.cs's
+    // RemoveNonChineseDynamicStringEntries, which filters the packaged YAML at packaging time), so
+    // a call whose result has zero CJK characters can NEVER match anything in either dictionary -
+    // skip the whole per-entry Contains()/regex scan for that overwhelmingly common case instead of
+    // paying for it on every single call. Plain char-range scan (no regex/allocation) so the gate
+    // itself is as cheap as possible.
+    private static bool ContainsCjk(string s)
+    {
+        foreach (var c in s)
+        {
+            // CJK Unified Ideographs (covers every confirmed Raw fragment seen so far) plus CJK
+            // Symbols and Punctuation (the fullwidth colon/comma etc. that can appear in a
+            // template's literal separator text, e.g. "：").
+            if ((c >= '\u4E00' && c <= '\u9FFF') || (c >= '\u3000' && c <= '\u303F'))
+                return true;
+        }
+        return false;
+    }
+
     // Applied to every patched String.Concat/Format overload's result. _dictionary is expected to
     // stay small (low hundreds of entries at most), so an unconditional per-call scan is cheap
     // relative to the sheer call volume of String.Concat/Format in a running Unity game; skip
-    // entirely when the dictionary is empty (e.g. before the pipeline has produced one yet).
+    // entirely when the dictionary is empty (e.g. before the pipeline has produced one yet) or when
+    // the result contains no Chinese at all (see ContainsCjk).
     private static void GenericPostfix(ref string __result)
     {
-        if (__result == null || _inFormatConcatPatch) return;
+        if (string.IsNullOrEmpty(__result) || _inFormatConcatPatch) return;
+        if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
+        if (!ContainsCjk(__result)) return;
 
         _inFormatConcatPatch = true;
         try
@@ -496,7 +543,8 @@ internal static class DynamicStringPatches
     // (varying position/arg count), so one prefix method covers all of them.
     private static void FormatPrefix(ref string format)
     {
-        if (format == null || _templateDictionary.Count == 0 || _inFormatConcatPatch) return;
+        if (string.IsNullOrEmpty(format) || _templateDictionary.Count == 0 || _inFormatConcatPatch) return;
+        if (!ContainsCjk(format)) return;
 
         _inFormatConcatPatch = true;
         try
@@ -543,6 +591,8 @@ internal static class DynamicStringPatches
         {
             var current = getText();
             if (string.IsNullOrEmpty(current)) return;
+            if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
+            if (!ContainsCjk(current)) return;
 
             var replaced = current;
             if (_compiledTemplates.Count > 0)
@@ -622,8 +672,10 @@ internal static class DynamicStringPatches
         foreach (var entry in dictionary)
         {
             if (string.IsNullOrEmpty(entry.Raw)) continue;
+
+
             if (result.Contains(entry.Raw))
-                result = ReplaceWithWordBoundarySpacing(result, entry.Raw, entry.Result ?? string.Empty);
+                result = ReplaceWithWordBoundarySpacing(result, entry);
         }
         return result;
     }
@@ -656,22 +708,104 @@ internal static class DynamicStringPatches
     private static readonly Regex TrailingTagsRegex = new(@"(<\/?[A-Za-z][^<>]*>)+$", RegexOptions.Compiled);
     private static readonly Regex LeadingTagsRegex = new(@"^(<\/?[A-Za-z][^<>]*>)+", RegexOptions.Compiled);
 
-    // Last visible (non-tag) character in `s`, or null if `s` is empty/all tags.
+    // One-time precompute helpers (see DictionaryEntry.ReplacementLeadChar/ReplacementTrailChar) -
+    // only ever called once per dictionary entry at load time, so the regex allocation here is a
+    // non-issue. Do NOT call these from the hot per-match path (ReplaceWithWordBoundarySpacing) -
+    // use EffectiveTrailingCharInBuilder/EffectiveLeadingCharAt instead, which scan in place with
+    // no allocation.
     private static char? EffectiveTrailingChar(string s)
     {
         var stripped = TrailingTagsRegex.Replace(s, string.Empty);
         return stripped.Length > 0 ? stripped[stripped.Length - 1] : (char?)null;
     }
 
-    // First visible (non-tag) character in `s`, or null if `s` is empty/all tags.
     private static char? EffectiveLeadingChar(string s)
     {
         var stripped = LeadingTagsRegex.Replace(s, string.Empty);
         return stripped.Length > 0 ? stripped[0] : (char?)null;
     }
 
-    private static string ReplaceWithWordBoundarySpacing(string input, string raw, string replacement)
+    // Allocation-free hot-path counterpart to EffectiveTrailingChar: walks backward from the end
+    // of `sb` directly via its indexer (no ToString() copy of the whole accumulated buffer),
+    // skipping over any complete tag(s) ("<...>"/"</...>") immediately at the end.
+    private static char? EffectiveTrailingCharInBuilder(System.Text.StringBuilder sb)
     {
+        var i = sb.Length - 1;
+        while (i >= 0)
+        {
+            if (sb[i] == '>')
+            {
+                var tagStart = FindTagStartBackward(sb, i);
+                if (tagStart >= 0)
+                {
+                    i = tagStart - 1;
+                    continue;
+                }
+            }
+            return sb[i];
+        }
+        return null;
+    }
+
+    // Finds the '<' that opens a tag closing at sb[closeIdx] ('>'), returning -1 if what precedes
+    // closeIdx isn't actually a well-formed tag (mirrors TrailingTagsRegex/LeadingTagsRegex's
+    // "<\/?[A-Za-z][^<>]*>" shape without allocating a substring to run a regex against).
+    private static int FindTagStartBackward(System.Text.StringBuilder sb, int closeIdx)
+    {
+        var j = closeIdx - 1;
+        while (j >= 0 && sb[j] != '<' && sb[j] != '>')
+            j--;
+        if (j < 0 || sb[j] != '<')
+            return -1;
+
+        var k = j + 1;
+        if (k <= closeIdx - 1 && sb[k] == '/')
+            k++;
+        return k <= closeIdx - 1 && char.IsLetter(sb[k]) ? j : -1;
+    }
+
+    // Allocation-free hot-path counterpart to EffectiveLeadingChar: walks forward from `startIndex`
+    // directly on `s` (no Substring() copy of the remaining tail), skipping over any complete
+    // tag(s) immediately at that position.
+    private static char? EffectiveLeadingCharAt(string s, int startIndex)
+    {
+        var i = startIndex;
+        while (i < s.Length)
+        {
+            if (s[i] == '<')
+            {
+                var tagEnd = FindTagEndForward(s, i);
+                if (tagEnd >= 0)
+                {
+                    i = tagEnd + 1;
+                    continue;
+                }
+            }
+            return s[i];
+        }
+        return null;
+    }
+
+    // Finds the '>' that closes a tag opening at s[openIdx] ('<'), returning -1 if what follows
+    // openIdx isn't actually a well-formed tag.
+    private static int FindTagEndForward(string s, int openIdx)
+    {
+        var j = openIdx + 1;
+        while (j < s.Length && s[j] != '<' && s[j] != '>')
+            j++;
+        if (j >= s.Length || s[j] != '>')
+            return -1;
+
+        var k = openIdx + 1;
+        if (k < j && s[k] == '/')
+            k++;
+        return k < j && char.IsLetter(s[k]) ? j : -1;
+    }
+
+    private static string ReplaceWithWordBoundarySpacing(string input, DictionaryEntry entry)
+    {
+        var raw = entry.Raw;
+        var replacement = entry.Result ?? string.Empty;
         var sb = new System.Text.StringBuilder();
         var startIndex = 0;
         int idx;
@@ -679,10 +813,9 @@ internal static class DynamicStringPatches
         {
             sb.Append(input, startIndex, idx - startIndex);
 
-            var prevChar = EffectiveTrailingChar(sb.ToString());
-            var replacementLeadChar = EffectiveLeadingChar(replacement);
-            if (prevChar.HasValue && replacementLeadChar.HasValue
-                && char.IsLetterOrDigit(prevChar.Value) && char.IsLetterOrDigit(replacementLeadChar.Value))
+            var prevChar = EffectiveTrailingCharInBuilder(sb);
+            if (prevChar.HasValue && entry.ReplacementLeadChar.HasValue
+                && char.IsLetterOrDigit(prevChar.Value) && char.IsLetterOrDigit(entry.ReplacementLeadChar.Value))
             {
                 sb.Append(' ');
             }
@@ -690,10 +823,9 @@ internal static class DynamicStringPatches
             sb.Append(replacement);
             startIndex = idx + raw.Length;
 
-            var replacementTrailChar = EffectiveTrailingChar(replacement);
-            var nextChar = startIndex < input.Length ? EffectiveLeadingChar(input.Substring(startIndex)) : null;
-            if (replacementTrailChar.HasValue && nextChar.HasValue
-                && char.IsLetterOrDigit(replacementTrailChar.Value) && char.IsLetterOrDigit(nextChar.Value))
+            var nextChar = startIndex < input.Length ? EffectiveLeadingCharAt(input, startIndex) : null;
+            if (entry.ReplacementTrailChar.HasValue && nextChar.HasValue
+                && char.IsLetterOrDigit(entry.ReplacementTrailChar.Value) && char.IsLetterOrDigit(nextChar.Value))
             {
                 sb.Append(' ');
             }

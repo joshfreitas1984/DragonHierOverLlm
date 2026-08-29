@@ -240,7 +240,7 @@ namespace Tests
             ("AreaData.csv", [1, 2]),
             ("BuildingData.csv", [1]),
             ("ForceData.csv", [1, 2, 9, 10, 11]),
-            ("ForceSpeAddDataBase.csv", [1]),          
+            ("ForceSpeAddDataBase.csv", [1]),
             ("HeroTagData.csv", [1, 5, 6, 7, 10, 11]),
             ("KungFuData.csv", [3, 7, 8, 9, 10, 13, 17, 18, 24]),
             // Column 2 (类别/Category) plus, since 2026-08-29, column 1 (名字/Name) - see the
@@ -400,7 +400,15 @@ namespace Tests
             File.AppendAllLines(outputPath, found);
         }
 
-        /// <summary>Refreshes IL2CPP string-map candidates and appends new entries idempotently.</summary>
+        /// <summary>
+        /// Refreshes IL2CPP string-map candidates and appends new entries idempotently directly
+        /// into the master <c>dynamicStrings.txt</c> dump - this is NOT a hand-curated/manually
+        /// reviewed file despite older doc comments claiming otherwise (there is no manual review
+        /// step in practice; the master dump IS whatever this method regenerates from the
+        /// Converter's <c>_dynamicStrings_candidates.txt</c> output). Also bootstraps the master
+        /// dump file itself the first time this runs (e.g. fresh clone / after deleting
+        /// Raw/Dumped), which is what "1c." depends on existing before it can export.
+        /// </summary>
         public static void ExtractDynamicStringCandidatesFromIl2CppStringMap(string workingDirectory)
         {
             var converterDir = Path.GetFullPath(Path.Combine(workingDirectory, "..", "Converter"));
@@ -443,21 +451,26 @@ namespace Tests
                 if (!File.Exists(candidatesPath)) return;
             }
 
-            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
-
+            // Dedup against the master dump itself only (idempotent re-runs never duplicate a
+            // line already recorded there). Deliberately does NOT also cross-check
+            // dynamicStringsFromColumns.txt - that file may already contain stale long-sentence
+            // candidates left over from an older version of this method that (incorrectly)
+            // appended here instead of to the master dump; treating those as "already seen" would
+            // permanently block this method from ever writing anything to dynamicStrings.txt. See
+            // the "dynamicStringsFromColumns.txt contamination" note in
+            // Tests/docs/dynamicstrings-pipeline-architecture.md for the one-time cleanup needed
+            // if that file still has this legacy contamination.
             var seen = new HashSet<string>();
             if (File.Exists(masterDumpPath))
                 seen.UnionWith(File.ReadAllLines(masterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
-            if (File.Exists(outputPath))
-                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
 
             var found = File.ReadAllLines(candidatesPath)
                 .Where(l => !string.IsNullOrEmpty(l))
                 .Where(seen.Add)
                 .ToList();
 
-            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
-            File.AppendAllLines(outputPath, found);
+            Directory.CreateDirectory(Path.GetDirectoryName(masterDumpPath)!);
+            File.AppendAllLines(masterDumpPath, found);
         }
 
         public static void ExportGameSpecificTextAssetsToCustomFormat(string workingDirectory)
@@ -586,6 +599,39 @@ namespace Tests
             File.WriteAllText(modPath, serializer.Serialize(results));
         }
 
+        // Drops junk dynamic-string dictionary entries whose Raw contains no Chinese characters at
+        // all (same detection pattern as DragonHeirPlugin/MainPlugin.cs's ChineseCharPattern /
+        // Tests/AssetDumperWorkflowTests.cs's ChineseCharPattern). Originally just a digit-only
+        // check (see the runtime symptom this prevents in DynamicStringPatches.cs's ApplyDictionary
+        // comment: "50%" -> "5 0 %", "100/100" -> "1 0 0 / 1 0 0"), but extended 2026-08-29 after
+        // finding the same class of bug from non-digit junk entries too - e.g. IL2CPP string-map
+        // candidate extraction occasionally captures a Unicode-range dump like
+        // "-.09AZ__az··ÀÖØöøıĴľŁ...一龥" (glyph-atlas coverage strings with only a token amount of
+        // trailing CJK) or plain ASCII/Latin identifiers with no Chinese at all. None of these ever
+        // need dictionary translation - only text containing real Chinese characters is ever a
+        // genuine translatable fragment - so the same filter now catches both digit-only AND any
+        // other non-CJK-containing Raw, rather than special-casing digits alone. Filtering here at
+        // packaging time (once, when Files/Mod/*.yaml is produced) means the plugin's runtime
+        // dictionary never has to re-check this per match on every hot-path call.
+        private static readonly Regex ChineseCharPattern = new(@"\p{IsCJKUnifiedIdeographs}", RegexOptions.Compiled);
+
+        private static void RemoveNonChineseDynamicStringEntries(string workingDirectory, TextFileToSplit textFile)
+        {
+            var modPath = $"{workingDirectory}/Mod/{textFile.Path}.yaml";
+            if (!File.Exists(modPath))
+                return;
+
+            var deserializer = YamlHelper.CreateDeserializer();
+            var results = deserializer.Deserialize<List<DynamicStringResult>>(File.ReadAllText(modPath)) ?? new();
+
+            var filtered = results.Where(entry => !string.IsNullOrEmpty(entry.Raw) && ChineseCharPattern.IsMatch(entry.Raw)).ToList();
+            if (filtered.Count == results.Count)
+                return;
+
+            var serializer = YamlHelper.CreateSerializer();
+            File.WriteAllText(modPath, serializer.Serialize(filtered));
+        }
+
         public static void ExportPrefabTextAssetToCustomFormat(string workingDirectory)
         {
             foreach (var textFile in TextFilesToSplit.Where(t => t.TextFileType == TextFileType.PrefabText))
@@ -637,6 +683,10 @@ namespace Tests
                 // DynamicStringResultOverrides for why this can't just be fixed by editing the
                 // Converted/Mod YAML directly (re-export/re-translation would silently undo it).
                 ApplyDynamicStringResultOverrides(workingDirectory, dynamicStringFile);
+
+                // Drop junk entries whose Raw has no Chinese at all - see
+                // RemoveNonChineseDynamicStringEntries.
+                RemoveNonChineseDynamicStringEntries(workingDirectory, dynamicStringFile);
             }
 
             await FileIteration.IterateTranslatedFilesAsync(workingDirectory,

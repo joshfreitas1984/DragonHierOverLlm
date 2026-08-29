@@ -4,17 +4,7 @@ namespace Tests;
 
 public class FileInputWorkflowTests
 {
-    [Fact(DisplayName = "0. Copy raws to Working Directory")]
-    public void CopyRaws()
-    {
-        var dumpedDirectory = $"{GameFileHandling.GameFolder}/BepinEx/plugins/raw";
-        var rawDirectory = $"{GameFileHandling.WorkingDirectory}/Raw/Dumped";
-
-        if (Directory.Exists(rawDirectory))
-            Directory.Delete(rawDirectory, true);
-
-        GameFileHandlingBase.CopyDirectory(dumpedDirectory, rawDirectory);
-    }
+   
 
     [Fact(DisplayName = "1. ExportAssetsIntoTranslated")]
     public void ExportAssetsIntoTranslated()
@@ -61,11 +51,14 @@ public class FileInputWorkflowTests
         //
         // Source 3: regenerates Converter/output/_dynamicStrings_candidates.txt FRESH (by shelling
         // out to the sibling Converter project) from the current Converter/output/_string_map.csv
-        // every run, rather than trusting whatever candidates file happens to already be on disk -
-        // see GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap's doc comment for
-        // why this exists (a stale candidates file previously hid genuinely-new strings after a
-        // game patch). No-ops gracefully if the Converter project hasn't produced a _string_map.csv
-        // yet (e.g. a fresh clone that hasn't run the full decompile pipeline).
+        // every run, rather than trusting whatever candidates file happens to already be on disk,
+        // and appends any genuinely-new entries STRAIGHT into the master dynamicStrings.txt dump
+        // (also bootstraps that file the first time it's missing entirely, e.g. fresh clone or
+        // after deleting Raw/Dumped) - there is no manual review/curation step in practice, despite
+        // older doc comments implying one; dynamicStrings.txt IS this candidates file, deduped and
+        // accumulated over time. No-ops gracefully if the Converter project hasn't produced a
+        // _string_map.csv yet (e.g. a fresh clone that hasn't run the full decompile pipeline) - in
+        // that case dynamicStrings.txt must already exist from a previous run or "1c." will fail.
         GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap(GameFileHandling.WorkingDirectory);
 
         GameFileHandling.ExportDynamicStringTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);

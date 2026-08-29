@@ -159,15 +159,18 @@ Hardcoded, runtime-assembled string literal fragments compiled directly into IL2
 `FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow` (`TextFileType.DynamicStringsIL2CPP` —
 NOT the older unrelated `TextFileType.DynamicStrings`), applied at runtime as an exact
 **substring** replace via `DragonHeirPlugin/DynamicStringPatches.cs` Harmony-postfixing
-`String.Concat`/`String.Format`. Four candidate-discovery sources feed
-`Files/Raw/Dumped/DynamicStrings/dynamicStrings*.txt`: (1) manually-curated master file reviewed
-from `Converter --dynamic-string-candidates`, (2) config-driven CSV-column sources
-(`GameFileHandling.DynamicStringColumnSources`), (3) config-driven allowlisted asset-dumper field
-names (`DynamicStringOtherTextFields`), (4) an auto-regenerating IL2CPP-string-map source that
-reruns `Converter` fresh each time. All four are run inline by `FileInputWorkflowTests`'s merged
-`"1c. ExportDynamicStringsIntoTranslated"` fact. Dialogue-option buttons additionally need a
-bare-label dictionary entry (see doc). Full wiring details for all four sources, the
-`dynamicStringsFromColumns.txt` dedup behavior, and the dialogue-button fix:
+`String.Concat`/`String.Format`. Three candidate-discovery sources feed
+`Files/Raw/Dumped/DynamicStrings/dynamicStrings*.txt`: (1) an auto-regenerating IL2CPP-string-map
+source (`GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap`) that reruns
+`Converter --dynamic-string-candidates` fresh each time and appends new entries straight into the
+master `dynamicStrings.txt` — there is no manual review/curation step, despite older doc wording;
+`dynamicStrings.txt` IS this candidates output, deduped and accumulated over time, (2)
+config-driven CSV-column sources (`GameFileHandling.DynamicStringColumnSources`), (3) config-driven
+allowlisted asset-dumper field names (`DynamicStringOtherTextFields`). Sources (2) and (3) both
+feed the separate `dynamicStringsFromColumns.txt` file. All three are run inline by
+`FileInputWorkflowTests`'s merged `"1c. ExportDynamicStringsIntoTranslated"` fact. Dialogue-option
+buttons additionally need a bare-label dictionary entry (see doc). Full wiring details for all
+three sources, the `dynamicStringsFromColumns.txt` dedup behavior, and the dialogue-button fix:
 [`Tests/docs/dynamicstrings-pipeline-architecture.md`](../../Tests/docs/dynamicstrings-pipeline-architecture.md).
 
 **Known-bad reconstructed template Results are forced via `GameFileHandling.DynamicStringResultOverrides`**,

@@ -61,7 +61,19 @@ public class AssetDumperWorkflowTests
     // real hardcoded UI text is never anywhere close to this long.
     private const int MaxStringLength = 2000;
 
-    [Fact(DisplayName = "Dump Chinese text from prefab/asset files")]
+    [Fact(DisplayName = "0. Copy raws to Working Directory")]
+    public void CopyRaws()
+    {
+        var dumpedDirectory = $"{GameFileHandling.GameFolder}/BepinEx/plugins/raw";
+        var rawDirectory = $"{GameFileHandling.WorkingDirectory}/Raw/Dumped";
+
+        if (Directory.Exists(rawDirectory))
+            Directory.Delete(rawDirectory, true);
+
+        GameFileHandlingBase.CopyDirectory(dumpedDirectory, rawDirectory);
+    }
+
+    [Fact(DisplayName = "0b. Dump Chinese text from prefab/asset files")]
     public void DumpChineseTextFromAssets()
     {
         var dataDirectory = $"{GameFileHandling.GameFolder}\\LongYinLiZhiZhuan_Data";

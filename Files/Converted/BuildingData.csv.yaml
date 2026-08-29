@@ -81,6 +81,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "长老"
@@ -97,6 +99,8 @@
     subIndex: 8
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 9
     text: "长老"
@@ -125,6 +129,8 @@
     subIndex: 15
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 16
     text: "查看科研"
@@ -149,6 +155,8 @@
     subIndex: 21
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 22
     text: "入门弟子"
@@ -165,6 +173,8 @@
     subIndex: 25
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 26
     text: "掌门"
@@ -181,6 +191,8 @@
     subIndex: 29
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 30
     text: "掌门"
@@ -278,6 +290,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "附庸"
@@ -298,6 +312,8 @@
     subIndex: 7
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 8
     text: "附庸"
@@ -326,6 +342,8 @@
     subIndex: 14
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 15
     text: "正式弟子"
@@ -342,6 +360,8 @@
     subIndex: 18
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 19
     text: "副掌门"
@@ -397,6 +417,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "附庸"
@@ -417,6 +439,8 @@
     subIndex: 7
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 8
     text: "附庸"
@@ -462,6 +486,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "附庸"
@@ -482,6 +508,8 @@
     subIndex: 9
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 10
     text: "附庸"
@@ -502,6 +530,8 @@
     subIndex: 14
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 15
     text: "附庸"
@@ -563,6 +593,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "鉴定"
@@ -575,6 +607,8 @@
     subIndex: 7
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 8
     text: "入门弟子"
@@ -591,6 +625,8 @@
     subIndex: 11
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 12
     text: "正式弟子"
@@ -607,6 +643,8 @@
     subIndex: 15
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 16
     text: "掌门"
@@ -669,6 +707,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "正式弟子"
@@ -685,6 +725,8 @@
     subIndex: 6
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 7
     text: "亲传弟子"
@@ -701,6 +743,8 @@
     subIndex: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 11
     text: "精烩"
@@ -713,6 +757,8 @@
     subIndex: 13
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 14
     text: "入门弟子"
@@ -780,6 +826,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "入门弟子"
@@ -796,6 +844,8 @@
     subIndex: 6
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 7
     text: "正式弟子"
@@ -820,6 +870,8 @@
     subIndex: 12
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 13
     text: "入门弟子"
@@ -887,6 +939,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "附庸"
@@ -907,6 +961,8 @@
     subIndex: 7
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 8
     text: "正式弟子"
@@ -964,6 +1020,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "附庸"
@@ -984,6 +1042,8 @@
     subIndex: 7
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 8
     text: "附庸"
@@ -1050,6 +1110,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "入门弟子"
@@ -1074,6 +1136,8 @@
     subIndex: 8
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 9
     text: "副掌门"
@@ -1143,6 +1207,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "无门派"
@@ -1171,6 +1237,8 @@
     subIndex: 11
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 12
     text: "经营"
@@ -1234,6 +1302,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "无门派"
@@ -1262,6 +1332,8 @@
     subIndex: 11
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 12
     text: "耕作"
@@ -1331,6 +1403,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "无门派"
@@ -1359,6 +1433,8 @@
     subIndex: 11
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 12
     text: "砍伐"
@@ -1428,6 +1504,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "无门派"
@@ -1456,6 +1534,8 @@
     subIndex: 11
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 12
     text: "挖掘"
@@ -1525,6 +1605,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "无门派"
@@ -1553,6 +1635,8 @@
     subIndex: 11
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 12
     text: "采收"
@@ -1825,6 +1909,8 @@
     subIndex: 14
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 15
     text: "投药"
@@ -1849,6 +1935,8 @@
     subIndex: 20
     text: "负4"
     translated: "‑4"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     text: "民心"
     translated: "Public sentiment"
@@ -1926,6 +2014,8 @@
     subIndex: 8
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 9
     text: "劝诱"
@@ -1950,6 +2040,8 @@
     subIndex: 14
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     text: "威望"
     translated: "Reputation"
@@ -2013,6 +2105,8 @@
     subIndex: 6
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 7
     text: "损毁"
@@ -2037,6 +2131,8 @@
     subIndex: 12
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     text: "治安"
     translated: "Public safety"
@@ -2092,6 +2188,8 @@
     subIndex: 4
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 5
     text: "探索"
@@ -2104,6 +2202,8 @@
     subIndex: 7
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 8
     text: "招募"
@@ -2116,6 +2216,8 @@
     subIndex: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 11
     text: "修缮"
@@ -2136,6 +2238,8 @@
     subIndex: 15
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 16
     text: "破坏"
@@ -2160,6 +2264,8 @@
     subIndex: 21
     text: "负3"
     translated: "‑3"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     text: "防御"
     translated: "Defense"
@@ -3637,6 +3743,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能0"
@@ -3699,6 +3807,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能1"
@@ -3711,6 +3821,8 @@
     subIndex: 5
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 6
     text: "门派功能1"
@@ -3769,6 +3881,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能2"
@@ -3831,6 +3945,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能3"
@@ -3893,6 +4009,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能4"
@@ -3951,6 +4069,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能5"
@@ -4019,6 +4139,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能6"
@@ -4031,6 +4153,8 @@
     subIndex: 5
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 6
     text: "门派功能6"
@@ -4093,6 +4217,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能7"
@@ -4151,6 +4277,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能8"
@@ -4221,6 +4349,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能9"
@@ -4283,6 +4413,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能10"
@@ -4345,6 +4477,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能11"
@@ -4407,6 +4541,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能12"
@@ -4465,6 +4601,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能13"
@@ -4523,6 +4661,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能14"
@@ -4581,6 +4721,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能15"
@@ -4643,6 +4785,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能16"
@@ -4709,6 +4853,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能17"
@@ -4721,6 +4867,8 @@
     subIndex: 5
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 6
     text: "门派功能17"
@@ -4779,6 +4927,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能18"
@@ -4841,6 +4991,8 @@
     subIndex: 2
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 7
     subIndex: 3
     text: "门派功能19"

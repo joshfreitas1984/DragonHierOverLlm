@@ -6260,6 +6260,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "顾游年"
@@ -6268,6 +6270,8 @@
     subIndex: 3
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "二人换上渔夫的衣装，挑着鱼，晃晃悠悠来到铁掌帮门口。"
     translated: "The two of them dressed as fishermen, carrying buckets of fish, and made their way slowly to the entrance of the Iron Palm Gang."
@@ -12427,6 +12431,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "你赶到时恰好看到这一幕，"
     translated: "You arrived just in time to see this scene."
@@ -14041,6 +14047,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我真的很感激"
@@ -14083,6 +14091,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我明白"
@@ -15881,10 +15891,14 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 2
     text: "徒儿该死啊！"
@@ -17652,6 +17666,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我这一路保护雷大小姐，可不是为了这点银子"
@@ -19168,10 +19184,14 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   templates:
   - split: 9
     template: "{0};ChangePlotDataBase;97|{1};ChangePlotDataBase;98|{2};ChangePlotDataBase;99"
@@ -21101,6 +21121,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "好"
@@ -21331,6 +21353,8 @@
     subIndex: 1
     text: "负16"
     translated: "‑16"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（猛力抹了把眼泪）姑娘，啥也别说了，"
     translated: "(Mightily wiped away tears) Miss, don't say anything else."
@@ -21359,6 +21383,8 @@
     subIndex: 1
     text: "负25"
     translated: "‑25"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "我这边还有十六两银子。你们两个呢，怎么说？"
     translated: "I have sixteen taels of silver here. What about the two of you?"
@@ -21380,6 +21406,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "我还剩二十五两，已经是一点都不剩了大哥。"
     translated: "I have twenty‑five taels left, which is already nothing at all, Senior Brother."
@@ -21470,6 +21498,8 @@
     subIndex: 1
     text: "负45"
     translated: "‑45"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "一二三四五"
     translated: "One two three four five"
@@ -22465,6 +22495,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "我虽非背后告密之人，"
     translated: "Though I did not betray him behind his back,"
@@ -23247,6 +23279,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我自幼跟随父母的商队走南闯北，"
@@ -23296,6 +23330,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "#PlayerName#你先回吧，"
@@ -25784,6 +25820,8 @@
     subIndex: 1
     text: "负40"
     translated: "‑40"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "总之，为师先替云裳运功调息。"
     translated: "In short, I will first help Yun Shang regulate her breathing and qi circulation."
@@ -25848,6 +25886,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "啊哟哟哟哟"
     translated: "Oh my goodness!"
@@ -25894,6 +25934,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "那是自然，师姐只管来。"
     translated: "Of course, Senior Sis just come in"
@@ -26602,6 +26644,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "是师傅！"
     translated: "Master!"
@@ -26620,6 +26664,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "好，为师还需去准备些引火易燃之物，你们先行出发，一路当心。"
     translated: "Good, I still need to prepare some flammable materials. You should set off first and be careful on your journey."
@@ -30418,6 +30464,8 @@
   - split: 10
     text: "我我我"
     translated: "I I I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   templates:
   - split: 10
     template: "{0}……"
@@ -34430,6 +34478,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（几招之下，那群马贼便被打的七零八落，无力再战，"
     translated: "(In just a few moves, that gang of bandits was left in shambles and unable to fight back."
@@ -34505,6 +34555,8 @@
     subIndex: 1
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（眼见不敌，你赶忙退到一旁，"
     translated: "(Failing to hold your ground, you hastily stepped aside,"
@@ -34717,6 +34769,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（几招之下，那群马贼便被打的七零八落，无力再战，"
     translated: "(In just a few moves, that gang of bandits was left in shambles and unable to fight back."
@@ -34799,6 +34853,8 @@
     subIndex: 1
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（眼见不敌，你赶忙退到一旁，"
     translated: "(Failing to hold your ground, you hastily stepped aside,"
@@ -34971,6 +35027,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（几招之下，那群马贼便被打的七零八落，无力再战，"
     translated: "(In just a few moves, that gang of bandits was left in shambles and unable to fight back."
@@ -35071,6 +35129,8 @@
     subIndex: 1
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（眼见不敌，你赶忙退到一旁，"
     translated: "(Failing to hold your ground, you hastily stepped aside,"
@@ -35289,6 +35349,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（几招之下，那群马贼便被打的七零八落，无力再战，"
     translated: "(In just a few moves, that gang of bandits was left in shambles and unable to fight back."
@@ -35407,6 +35469,8 @@
     subIndex: 1
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（眼见不敌，你赶忙退到一旁，"
     translated: "(Failing to hold your ground, you hastily stepped aside,"
@@ -38547,6 +38611,8 @@
     subIndex: 1
     text: "我我我"
     translated: "I I I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 2
     text: "老子就是戴壮！"
@@ -41138,6 +41204,8 @@
     subIndex: 1
     text: "负8"
     translated: "‑8"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "玩家"
@@ -41146,6 +41214,8 @@
     subIndex: 3
     text: "负9"
     translated: "‑9"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 4
     text: "王添翼"
@@ -41154,6 +41224,8 @@
     subIndex: 5
     text: "负9"
     translated: "‑9"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 6
     text: "郭勇锐"
@@ -41162,6 +41234,8 @@
     subIndex: 7
     text: "负9"
     translated: "‑9"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（当下分发衣物，乔装一番，"
     translated: "(Distribute clothes and disguise themselves,"
@@ -54381,6 +54455,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "顾师兄，你醒了？感觉如何？"
     translated: "Senior Brother Gu, you've awakened? How do you feel?"
@@ -56595,6 +56671,8 @@
     subIndex: 1
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 2
     text: "回药王谷"
@@ -59080,6 +59158,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我不配各位厚爱"
@@ -59204,6 +59284,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我愿一试！"
@@ -60220,6 +60302,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "我虽非背后告密之人，"
     translated: "Though I did not betray him behind his back,"
@@ -62841,6 +62925,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "话虽如此"
@@ -63161,6 +63247,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "放心小师妹，给师姐留着呢。"
     translated: "Relax, little junior sister; it's reserved for Senior Sister."
@@ -63520,6 +63608,8 @@
     subIndex: 1
     text: "负3"
     translated: "‑3"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（手起剑落将头目斩杀，随后回身一剑刺中跟班）"
     translated: "(A sword swing decapitated the leader, then a follow‑up strike killed the henchman.)"
@@ -66568,6 +66658,8 @@
     subIndex: 1
     text: "负300"
     translated: "‑300"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "岳无畏"
@@ -70187,6 +70279,8 @@
   - split: 10
     text: "（只见徐不平看似漫不经心，随意出手，"
     translated: "(JUST AS XU BUPING APPEAREDLY SEEMED NONCHALANT, HE DELIVERED A BLADE WITH UNDENIAL DISREGARD,"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "便将岳无畏密不透风的狂暴之攻势悉数化解。）"
@@ -74549,6 +74643,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（在一旁狱卒的催促之下，你们二人不得不悻悻然离开了牢房）"
     translated: "(Under the urging of the guards on the side, the two of you had no choice but to leave the cell grudgingly)"
@@ -74771,6 +74867,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "这五十两银子你收下，替王兄找个好大夫。"
     translated: "Receive these fifty taels of silver and find a good doctor for Brother Wang."
@@ -74795,6 +74893,8 @@
     subIndex: 1
     text: "负30"
     translated: "‑30"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "王添翼"
@@ -74803,6 +74903,8 @@
     subIndex: 3
     text: "负30"
     translated: "‑30"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 4
     text: "王添翼"
@@ -74811,6 +74913,8 @@
     subIndex: 5
     text: "负30"
     translated: "‑30"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（喜笑颜开，将银两收入囊中）"
     translated: "(smiling broadly, he tucked the silver coins into his pocket)"
@@ -76200,6 +76304,8 @@
     subIndex: 1
     text: "负9"
     translated: "‑9"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "玩家"
@@ -76208,6 +76314,8 @@
     subIndex: 3
     text: "负9"
     translated: "‑9"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 4
     text: "郭勇锐"
@@ -76216,6 +76324,8 @@
     subIndex: 5
     text: "负9"
     translated: "‑9"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（另一边你与郭勇锐戴壮三人，已将发烟物什安装妥当，"
     translated: "(Simultaneously, you and Guo Yongrui, along with Dai Zhuang, have already installed the incendiary devices properly,"
@@ -77237,10 +77347,14 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 2
     text: "我是被奸人所害"
@@ -77491,6 +77605,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "王添翼"
@@ -77499,6 +77615,8 @@
     subIndex: 3
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 4
     text: "王添翼"
@@ -77507,6 +77625,8 @@
     subIndex: 5
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哈哈哈哈，今天你们走运，能死在这群魔乱舞的功夫之下！"
     translated: "Hahahaha, today you're lucky to die under the skill of this chaotic group of demons!"
@@ -84462,6 +84582,8 @@
     subIndex: 1
     text: "负6"
     translated: "‑6"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "大哥，二哥，要不咱们离开这个伤心地，"
     translated: "Senior Brother, Second Brother, how about we leave this place that hurts your heart?"
@@ -88069,6 +88191,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我有些难受"
@@ -89272,6 +89396,8 @@
     subIndex: 2
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（趁着魏胥华不备，突然出手）小子看掌！"
     translated: "(Taking Wei Xuhua by surprise, he suddenly strikes) Kid, watch my palm technique!"
@@ -95563,6 +95689,8 @@
     subIndex: 1
     text: "负6"
     translated: "‑6"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "陆仁谦"
@@ -95571,6 +95699,8 @@
     subIndex: 3
     text: "负4"
     translated: "‑4"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（巴陵村口，铁掌帮弟子陆奇正教训着一名蓬头垢面的老杂役。"
     translated: "(In the entrance of Baling Village, Iron Palm Gang disciple Lu Qi is scolding a dirty and disheveled old laborer."
@@ -101188,6 +101318,8 @@
     subIndex: 1
     text: "负4"
     translated: "‑4"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（另外一边，巴陵村的铁掌帮分舵内，"
     translated: "(On the other side, inside the Iron Palm Gang's branch hall in Baling Village,"
@@ -102511,6 +102643,8 @@
     subIndex: 1
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "陆仁谦"
@@ -102519,6 +102653,8 @@
     subIndex: 3
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "呼"
     translated: "Huh"
@@ -103843,6 +103979,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "先下去......向师傅老人家赔罪去了"
@@ -105189,6 +105327,8 @@
     subIndex: 1
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（那半边脸充血肿胀起来，好似猪头一般）"
     translated: "(The other half of his face became flushed and swollen, resembling a pig's head.)"
@@ -105577,6 +105717,8 @@
     subIndex: 1
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（头昏脑涨，已分不清方向，"
     translated: "(headache and dizzy, unable to tell direction,"
@@ -108778,6 +108920,8 @@
     subIndex: 1
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 2
     text: "我不要当什么公主！"
@@ -109332,6 +109476,8 @@
     subIndex: 1
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 2
     text: "我也舍不得你们，呜呜呜呜呜呜！"
@@ -111249,6 +111395,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "原来如此，多谢老人家了，这十两银子请您收下。"
     translated: "So it is. Thank you, elder. Please accept these ten taels of silver."
@@ -111996,6 +112144,8 @@
     subIndex: 4
     text: "吧！"
     translated: "!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   templates:
   - split: 10
     template: "{0}……\\n{1}\\n{2}<b>{3}</b>{4}"
@@ -112476,6 +112626,8 @@
     subIndex: 1
     text: "负4"
     translated: "‑4"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "这仙居客栈客来客往，人声鼎沸，生意真是不错。"
     translated: "This fairy dwellers inn is bustling with guests coming and going, the noise level is high, and the business is really thriving."
@@ -116392,6 +116544,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "这归墟秘典我还是不学了！"
@@ -119417,6 +119571,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "呵呵，刚刚不是还逞能，说一点都不痛的么？"
     translated: "Haha, weren't you just boasting that it didn't hurt at all a moment ago?"
@@ -122056,6 +122212,8 @@
     subIndex: 1
     text: "负4"
     translated: "‑4"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（你带着三名铁掌帮弟子出了村，在山间七拐八绕，走了半天）"
     translated: "(You led three Iron Palm Gang disciples out of the village, winding your way through the mountains for half a day.)"
@@ -129467,6 +129625,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（说罢她盘膝坐下运功，不一会儿身上便腾起了阵阵真气，"
     translated: "(Saying this, she crossed her legs and sat down to cultivate. Soon, a array of True Qi rose from their body."
@@ -131570,6 +131730,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "杨思迟"
@@ -131578,6 +131740,8 @@
     subIndex: 3
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "你们将地上铁掌帮弟子的衣服换上，将染有血迹的部位撕去或藏起，"
     translated: "You will swap the clothes of the Iron Palm Gang disciples on the ground, removing or concealing any bloodstained areas."
@@ -132845,6 +133009,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "杨思迟"
@@ -132853,6 +133019,8 @@
     subIndex: 3
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（浑身是血，躺在门旁）"
     translated: "Covered in blood, lying beside the door"
@@ -134126,6 +134294,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "#$PlayerName#......夏天雄！"
     translated: "#$#$PlayerName#...Xiong Suming!"
@@ -134458,6 +134628,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "好！今天，便让你们仙霞派全派上下死个明白！！"
     translated: "Good! Today, let the entire Xianxia Sect understand their fate clearly!!"
@@ -136824,6 +136996,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "玩家"
@@ -139799,6 +139973,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "都伤成这样了，你就少说两句吧沈师弟。"
     translated: "Junior Disciple Shen, you should say less since you're injured like this."
@@ -139829,6 +140005,8 @@
     subIndex: 1
     text: "负4"
     translated: "‑4"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "转悠了半天，连人影也没见几个，更别提迟百城那恶贼了。"
     translated: "Roaming around for a while, I didn't see a single person, let alone that villain Bai Cheng."
@@ -143147,6 +143325,8 @@
     subIndex: 1
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "扬州医馆内灯火昏黄，万籁俱寂，"
     translated: "In the Medical Pavilion of Yangzhou, the lights were dim, and all was silent."
@@ -146183,6 +146363,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "好了好了，不就十两银子么，我替她付了便是。"
     translated: "Well, well, just ten taels of silver, I'll pay for her."
@@ -176700,6 +176882,8 @@
     subIndex: 1
     text: "负500"
     translated: "‑500"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "阮芷，这就是你之前在杭州做的准备？"
     translated: "Ruan Zhi, this is what you prepared in Hangzhou before?"
@@ -179075,6 +179259,8 @@
     subIndex: 1
     text: "负1920"
     translated: "‑1920"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哼！知罪就好！"
     translated: "Hmph! Just admit your guilt!"
@@ -181465,6 +181651,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "纵使天下为敌，我王添翼也宁死不屈！来战！！！"
     translated: "Even if the whole world stands against us, King Tengyi will never yield! Come and fight!!!"
@@ -191783,6 +191971,8 @@
     subIndex: 2
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "各位皆安然无恙，老夫也就放心了......咳咳咳咳！"
     translated: "Everyone is safe... I can breathe easy now... cough cough cough cough!"
@@ -193093,6 +193283,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "诸位，随我一起出手！"
     translated: "Ladies and gentlemen, let's strike together!"
@@ -193518,6 +193710,8 @@
     subIndex: 1
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "场上众人一时皆屏住呼吸，瞪大双眼，"
     translated: "The crowd held their breath and widened their eyes in anticipation."
@@ -196920,6 +197114,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "嗯，师傅放心。"
     translated: "Ah, Master, rest assured"
@@ -197642,6 +197838,8 @@
   - split: 10
     text: "唔！！！！！"
     translated: "!!!!!!!!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
 - raw: ",,,无,,,,,,,剑气在连番阻挡之下，终于力道散尽，\\n最后在阎罗王额头留下一个小口，一滴血泪缓缓滑落。"
   splits:
   - split: 3
@@ -198259,6 +198457,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "待司马德源与李潇湘疗伤完毕，再度奔赴战场，"
     translated: "After Sima Deyuan and Li Xiangxiang had finished tending to their injuries, they once again rushed back to the battlefield."
@@ -198289,6 +198489,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "咳咳咳咳，怎么回事，邪派联军这么快就退兵？"
     translated: "Cough cough cough cough, what's going on? How did the Allied Forces of Evil retreat so quickly?"
@@ -204524,6 +204726,8 @@
     subIndex: 3
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "非也非也，这件东西，道阁主死后就没法取走了。"
     translated: "Not quite. After the Dao Pavilion Lord's death, this item can no longer be taken away."
@@ -208971,6 +209175,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "大侠你在乱叫什么呢？我给你服了......特制的解毒药。"
     translated: "Great Hero, what are you shouting about? I've given you... specially prepared antidote."
@@ -211883,6 +212089,8 @@
     subIndex: 1
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "看你也是混江湖的，这点规矩不懂？"
     translated: "You seem to be familiar with the Jianghu; don't you know a little about the rules here?"
@@ -212224,6 +212432,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "呵呵，五十两银子，那可够买好几十张新渔网了，"
     translated: "Hehe, fifty taels of silver could buy dozens of new fishing nets."
@@ -217912,6 +218122,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "好，#PlayerName#果然不负所望。"
     translated: "Good, #PlayerName# has indeed lived up to expectations."
@@ -218109,6 +218321,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "吕大侠！我敬你是中原五侠，德高望重，"
     translated: "Great Hero Liu! I respect you as one of the Five Great Heroes of Central China, highly esteemed and virtuous."
@@ -218678,6 +218892,8 @@
     subIndex: 1
     text: "负30"
     translated: "‑30"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "自然不会。"
     translated: "Of course not"
@@ -227691,6 +227907,8 @@
     subIndex: 1
     text: "唔！！！！！"
     translated: "!!!!!!!!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -240471,6 +240689,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（见你们远去，当下松了口气，周身道袍猛然鼓起，"
     translated: "(Seeing you depart, he sighed in relief and his robes suddenly billowed out."
@@ -252584,6 +252804,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "唔！五毒教功夫果然诡异，"
     translated: "Ah! The Five Poisons Sect's martial arts truly are peculiar."
@@ -255531,6 +255753,8 @@
     subIndex: 2
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 3
     text: "思中澜"
@@ -255852,6 +256076,8 @@
     subIndex: 2
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "你既然发挥不出杀人刀法的全部威力，那这身功力留着也是浪费。"
     translated: "Since you can't fully unleash the power of the lethal blade technique, it's a waste to keep this strength."
@@ -255883,6 +256109,8 @@
     subIndex: 2
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "（话音刚落，思中澜将手按住重伤的阎罗王头顶，"
     translated: "(The moment the words fell, Sim Zhilan pressed his hand on Hell King's severely injured head,"
@@ -256993,6 +257221,8 @@
     subIndex: 2
     text: "负500"
     translated: "‑500"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "咦嘻嘻嘻嘻嘻嘻，额嘿嘿嘿额嘿嘿。"
     translated: "Ohahaha, hehehehehe"
@@ -261293,6 +261523,8 @@
     subIndex: 1
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "计心狂"
@@ -261301,6 +261533,8 @@
     subIndex: 3
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "泰山一战过后，小可夺得了大半部龙胤归藏功。"
     translated: "After the battle on Mount Tai, Xiao Ke obtained most of the Long Yuangui Cang Gong."
@@ -266473,6 +266707,8 @@
     subIndex: 1
     text: "呜呜呜呜呜呜呜呜呜！！！"
     translated: "AAAAAHHH!!!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -266908,6 +267144,8 @@
     subIndex: 1
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哼！身为仙霞派掌门，竟然连我都打不过！"
     translated: "Hmph! As the Sect Leader of Xianxia Sect, I can't even defeat you!"
@@ -279183,6 +279421,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "大师，在下武当派张文馨，救援来迟了。"
     translated: "Master, this is Zhang Wenxin from the Wudang Sect. The rescue came too late."
@@ -279373,6 +279613,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "诸位少侠......老衲恐怕命不久矣，"
     translated: "Dear fellow Young Heroes......I fear my days are numbered,"
@@ -283259,6 +283501,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "掌柜"
@@ -290990,6 +291234,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "钱捕头"
@@ -291154,6 +291400,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "小捕快"
@@ -311789,6 +312037,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哎，郭兄，你这血还没止住呢，"
     translated: "Ah, Brother Guo, your wound isn't even stopped yet."
@@ -314554,6 +314804,8 @@
     subIndex: 1
     text: "负500"
     translated: "‑500"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "雷震天"
@@ -314562,6 +314814,8 @@
     subIndex: 3
     text: "负250"
     translated: "‑250"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "没想到堂堂两派联姻的大婚庆典之上，"
     translated: "Never thought that a grand wedding celebration for the alliance of two major clans would be like this."
@@ -316415,6 +316669,8 @@
     subIndex: 2
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "老贼想走？吃我一发雷火弹先！"
     translated: "Old thief wants to run? Take a lightning fireball first!"
@@ -316812,6 +317068,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "你们支开长乐帮弟子，让他们去四下巡逻。"
     translated: "You dispatched the Changle Gang disciples to patrol the area."
@@ -320744,6 +321002,8 @@
     subIndex: 1
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "我这儿有几剂补血益气的药品，还有十两银子。"
     translated: "I have some tonics to boost blood and energy, and ten silver coins."
@@ -325719,6 +325979,8 @@
   - split: 10
     text: "我............"
     translated: "I......"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
 - raw: ",李云鹤,,左,,,,,,,谷主，雨人屠滥杀无辜，乃是因“神药”癫狂所致。\\n那些无辜者是死于血衣盟之阴谋，而非你救人之过。"
   splits:
   - split: 1
@@ -330727,6 +330989,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "咳咳咳咳......大小姐......"
     translated: "Cough cough cough... Miss..."
@@ -335218,6 +335482,8 @@
     subIndex: 2
     text: "负1"
     translated: "‑1"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哼，死罪难免，活罪难逃。"
     translated: "Hmph, death by inevitable, life by unbearable"
@@ -344827,6 +345093,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "慕容星辰离开后，你将重伤的上官凤放在地上，"
     translated: "After Murong Xingchen left, you placed the severely injured Shangguan Feng on the ground."
@@ -360175,6 +360443,8 @@
     subIndex: 1
     text: "负9"
     translated: "‑9"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "听闻梁山水寨在这一带招兵买马，广募天下绿林好汉。"
     translated: "Hear that Liangshan Water Margin is recruiting in these parts, calling for heroes from all under heaven."
@@ -362542,6 +362812,8 @@
     subIndex: 1
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "殷捕头，我正好带了些伤药，"
     translated: "Constable Yin, I happen to have some medicine for wounds."
@@ -364196,6 +364468,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "玩家"
@@ -372624,6 +372898,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "糟糕，这小子功力突飞猛进，看来这次是没戏了。"
     translated: "Crap, this kid's power has surged dramatically. looks like this time it's out of the question."
@@ -379228,6 +379504,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 8
     subIndex: 2
     text: "玩家"
@@ -381590,6 +381868,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "岳无畏！"
@@ -381732,6 +382012,8 @@
   - split: 10
     text: "我"
     translated: "I"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     subIndex: 1
     text: "我没办法"
@@ -384920,6 +385202,8 @@
   - split: 8
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "你们在成都城内四散探查一番，"
     translated: "You scattered about the city of Chengdu to thoroughly investigate."
@@ -385877,6 +386161,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "唔......百足之虫死而不僵。"
     translated: "Ugh... A spider may die, but its legs remain for a while."
@@ -390487,6 +390773,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "嗯，攻心为上，攻城为下。"
     translated: "Well, winning hearts is above all, conquering cities comes second."
@@ -390585,6 +390873,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "#PlayerName#，贵派弟子武艺不俗，"
     translated: "#PlayerName#, your sect's martial arts are quite proficient."
@@ -392727,6 +393017,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哼，韩掌门，我们后会有期，退兵！"
     translated: "Hmph, Sect Leader Han, we'll meet again another time. Withdraw your troops!"
@@ -395976,6 +396268,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "今日一战后，唐门折损了不少精锐。"
     translated: "After today's battle, the Tang Clan suffered significant losses among its elite forces."
@@ -396501,6 +396795,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哼，#PlayerName#，给老夫等着。"
     translated: "Hmph, #PlayerName#, wait for old man here"
@@ -397755,6 +398051,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "不过此事已过去二三十年了，"
     translated: "But this was over thirty years ago"
@@ -398119,6 +398417,8 @@
     subIndex: 1
     text: "负50"
     translated: "‑50"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "二位大侠真是菩萨心肠，"
     translated: "The two Great Heroes truly have the heart of bodhisattvas."
@@ -401652,6 +401952,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哼，#PlayerName#，蜀中唐门有仇必报。"
     translated: "Hmph, #PlayerName#, the Tang Clan of Shuzhong will avenge any wrong."
@@ -402953,6 +403255,8 @@
     subIndex: 3
     text: "负200"
     translated: "‑200"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "儿子，拖下去并非长久之计。"
     translated: "Son, dragging this out isn't a long‑term solution."
@@ -402991,6 +403295,8 @@
     subIndex: 3
     text: "负200"
     translated: "‑200"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "#PlayerName#，蜀中唐门有仇必报！"
     translated: "#PlayerName#, the Tang Clan of Shuzhong will seek revenge and redeem their shame!"
@@ -405713,6 +406019,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "呵呵呵呵，徒儿你功力确实恢复了一些。"
     translated: "Haha, disciple, your cultivation has indeed recovered somewhat."
@@ -405903,6 +406211,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "#PlayerName#所言虽有几分道理，"
     translated: "#PlayerName#'s words do have some merit"
@@ -407198,6 +407508,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "#PlayerName#，你适才所言虽有几分道理，"
     translated: "#PlayerName#, what you said just now has some merit."
@@ -408198,6 +408510,8 @@
   - split: 8
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "咳咳，#PlayerName#，此战是我武当胜了。"
     translated: "Cough cough, #PlayerName#, this battle is a win for Wudang."
@@ -411115,6 +411429,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "鬼门关久攻不下，"
     translated: "The Ghost Gate Pass has been difficult to conquer for a long time,"
@@ -413569,6 +413885,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哈哈哈哈，蚍蜉撼大树，可笑不自量。"
     translated: "Haha, a cicada trying to shake a big tree‑laughable and overestimating yourself."
@@ -420147,6 +420465,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "楚御史，真就不能再通融通融了吗......"
     translated: "Cu Yushi, can't you be a bit more flexible....."
@@ -420368,6 +420688,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "林御史，真就不能再通融通融了吗......"
     translated: "Magistrate Lin, can't you be a bit more flexible..."
@@ -420559,6 +420881,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "齐御史，真就不能再通融通融了吗......"
     translated: "Count Jiang, couldn't you be a bit more flexible..."
@@ -420802,6 +421126,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "张御史，真就不能再通融通融了吗......"
     translated: "Inspector Zhang, can't you be a bit more flexible....."
@@ -422671,6 +422997,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "飞龙门众将士拼死奋战，竟然同中原各派一起，"
     translated: "The soldiers of Flying Dragon Gate fought with utmost determination and actually managed to fight alongside the various factions from Central Plain together,"
@@ -425069,6 +425397,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "飞龙门城下，双方精锐尽出，"
     translated: "At the base of Flying Dragon Gate, both sides sent out their elite forces."
@@ -428414,6 +428744,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "#PlayerName#，虽然我有心相助，"
     translated: "#PlayerName#, although I have the heart to help,"
@@ -428806,6 +429138,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "呵呵，#PlayerName#，若你说不出个所以然来，"
     translated: "Haha, #PlayerName#, if you can't give a good reason,"
@@ -429242,6 +429576,8 @@
     subIndex: 1
     text: "负2"
     translated: "‑2"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "#PlayerName#，此番理由实在是没什么说服力。"
     translated: "#PlayerName#, this reason really lacks persuasiveness"
@@ -432896,6 +433232,8 @@
   - split: 8
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "茅山派？他们不是向来不问世事的么，"
     translated: "Maoshan Sect? Didn't they traditionally refrain from involvement in worldly affairs?"
@@ -432985,6 +433323,8 @@
   - split: 8
     text: "负5"
     translated: "‑5"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "小贼休走，咱们接着追！"
     translated: "Thief, don't run! Let's keep chasing them!"
@@ -433343,6 +433683,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "小贼休走，咱们接着追！"
     translated: "Thief, don't run! Let's keep chasing them!"
@@ -433447,6 +433789,8 @@
   - split: 8
     text: "负10"
     translated: "‑10"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "小贼休走，咱们接着追！"
     translated: "Thief, don't run! Let's keep chasing them!"
@@ -434510,6 +434854,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "哼！好一群中原大侠，"
     translated: "Hmph! What a group of Central Plain Heroes!"
@@ -434589,6 +434935,8 @@
   - split: 8
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "咳咳咳咳，多谢#PlayerName#仗义相助！"
     translated: "Cough cough cough, thank you #PlayerName# for your help!"
@@ -434774,6 +435122,8 @@
     subIndex: 1
     text: "负100"
     translated: "‑100"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "没想到#PlayerName#久负侠义之名，"
     translated: "Surprised, #PlayerName# has such a reputation for chivalry and righteousness."
@@ -434853,6 +435203,8 @@
   - split: 8
     text: "负20"
     translated: "‑20"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All caps"
   - split: 10
     text: "呵呵，可不是呢！这些中原大侠，"
     translated: "Haha, that's right! These Central Plain Heroes,"

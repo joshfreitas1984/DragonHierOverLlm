@@ -23,15 +23,17 @@ larger, otherwise data-driven runtime string.
   equally no game run needed): `Converter`'s `--dynamic-string-candidates` mode filters the
   already-extracted `output/_string_map.csv` (every string literal compiled into the game's IL2CPP
   binary - see `Converter/Services/StringMapExtractor.cs`) for CJK-containing values and writes the
-  distinct results to `output/_dynamicStrings_candidates.txt`, one per line. Run it with `--dll
-  <manifest-or-dummy-dll>` (only needs the DLL path to satisfy `Config.Validate`, no
-  `--binary`/`--ghidra` required) plus `--output ./output` and `--exclude-file
-  ../Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` to skip fragments already curated. Review
-  the candidates file (it includes plenty of noise - debug/internal strings, data already covered
-  by the CSV/PrefabText pipelines, etc.) and merge genuine hardcoded UI/dialogue fragments into
-  `Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` - one distinct literal fragment per line
-  (just the bare Chinese text, e.g. `架势` - not surrounding whitespace it happens to be
-  concatenated with).
+  distinct results to `output/_dynamicStrings_candidates.txt`, one per line.
+  `GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap` shells out to run this mode
+  (with `--exclude-file ../Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` to skip already-known
+  fragments) and appends any genuinely-new entries **directly into**
+  `Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` - there is no manual review/curation step in
+  practice; `dynamicStrings.txt` IS the accumulated, deduped output of this candidates file over
+  time, bootstrapped (created) the first time it's missing entirely (e.g. fresh clone or after
+  deleting `Raw/Dumped`). It still includes some noise (debug/internal strings, data already
+  covered by the CSV/PrefabText pipelines) since there's no filtering beyond dedup - see
+  `Services/StringMapExtractor.cs`'s `IsExoticScriptNoise` for the noise filtering that IS applied
+  before candidates are even written.
 - `GameFileHandling.TextFilesToSplit` has a `dynamicStrings.txt` entry with `TextFileType =
   TextFileType.DynamicStringsIL2CPP`.
 - **Second source, config-driven (not manually curated):** `GameFileHandling.DynamicStringColumnSources`

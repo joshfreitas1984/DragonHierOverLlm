@@ -19,6 +19,7 @@
     <Folder Include="Converted\" />
     <Folder Include="Mod\" />
     <Folder Include="Raw\Dumped\DynamicStrings\" />
+    <Folder Include="Raw\Dumped\PrefabText\" />
     <Folder Include="StructuredPrompts\" />
     <Folder Include="StandardPrompts\" />
     <Folder Include="Raw\Dumped\" />
