@@ -299,5 +299,17 @@ public class CompoundFieldSplitterTests
         Assert.Equal(["正是于巴蜀一带小有名气的门派", "仙霞派。"], fragments);
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
+
+    [Fact(DisplayName = "A quote pair whose opening mark is glued onto the end of the preceding fragment (with Chinese text right before it) still stays together as template literal text around the placeholder")]
+    public void QuotePairWithOpenMarkGluedToPrecedingFragmentStaysInTemplate()
+    {
+        var original = "我“{0}”修为远胜{1}，\n又何必班门弄斧？";
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal("{0}“⟦0⟧”{1}⟦1⟧，\n{2}", template);
+        Assert.Equal(["我", "修为远胜", "又何必班门弄斧？"], fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
 }
 

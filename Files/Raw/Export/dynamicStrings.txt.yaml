@@ -6095,13 +6095,13 @@
   - template: "⟦1⟧{0}⟦0⟧{1}\n{2}⟦1⟧{3}⟦0⟧{4}"
 - raw: "{1}之“{0}”精妙非常，\n我还需多加学习"
   splits:
-  - text: "之“"
+  - text: "之"
   - subIndex: 1
-    text: "”精妙非常，"
+    text: "精妙非常，"
   - subIndex: 2
     text: "我还需多加学习"
   templates:
-  - template: "⟦1⟧{0}⟦0⟧{1}\n{2}"
+  - template: "⟦1⟧{0}“⟦0⟧”{1}\n{2}"
 - raw: "{1}之理解颇为浅薄，\n还需多加学习才是"
   splits:
   - text: "之理解颇为浅薄，"
@@ -6143,13 +6143,13 @@
   - template: "⟦1⟧{0}+⟦0⟧%\n{1}⟦0⟧%{2}\n{3}<b>⟦2⟧</b>\n{4}⟦3⟧/{5}"
 - raw: "{1}可知这“{0}”之妙？\n容我娓娓道来"
   splits:
-  - text: "可知这“"
+  - text: "可知这"
   - subIndex: 1
-    text: "”之妙？"
+    text: "之妙？"
   - subIndex: 2
     text: "容我娓娓道来"
   templates:
-  - template: "⟦1⟧{0}⟦0⟧{1}\n{2}"
+  - template: "⟦1⟧{0}“⟦0⟧”{1}\n{2}"
 - raw: "{1}困难{0}</color>"
   splits:
   - text: "困难"
@@ -7129,13 +7129,13 @@
   - template: "{0}\n{1}"
 - raw: "不知对于“{0}”一事，\n{1}有何见地？"
   splits:
-  - text: "不知对于“"
+  - text: "不知对于"
   - subIndex: 1
-    text: "”一事，"
+    text: "一事，"
   - subIndex: 2
     text: "有何见地？"
   templates:
-  - template: "{0}⟦0⟧{1}\n⟦1⟧{2}"
+  - template: "{0}“⟦0⟧”{1}\n⟦1⟧{2}"
 - raw: "不知阁下想征收本门哪种资源？\n（每次征收1000点对方门派资源，每月最多1次）"
   splits:
   - text: "不知阁下想征收本门哪种资源？"
@@ -8611,11 +8611,11 @@
   - subIndex: 1
     text: "一席高论，"
   - subIndex: 2
-    text: "才知自己“"
+    text: "才知自己"
   - subIndex: 3
-    text: "”之贫弱"
+    text: "之贫弱"
   templates:
-  - template: "{0}⟦1⟧{1}\n{2}⟦0⟧{3}"
+  - template: "{0}⟦1⟧{1}\n{2}“⟦0⟧”{3}"
 - raw: "今日是新春佳节，为师也不絮絮叨叨，惹人厌烦了。\n你们热热闹闹去欢庆一番便是！"
   splits:
   - text: "今日是新春佳节，为师也不絮絮叨叨，惹人厌烦了。"
@@ -8771,13 +8771,13 @@
   splits:
   - text: "从往来客人口中得知，附近"
   - subIndex: 1
-    text: "周边似乎有一“"
+    text: "周边似乎有一"
   - subIndex: 2
-    text: "”之事发生。"
+    text: "之事发生。"
   - subIndex: 3
     text: "若是日后有空，不妨去查探一二。"
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧{2}\n{3}"
+  - template: "{0}⟦0⟧{1}“⟦1⟧”{2}\n{3}"
 - raw: "从服务端刷新当前用户信息"
   splits:
   - text: "从服务端刷新当前用户信息"
@@ -12357,15 +12357,15 @@
   splits:
   - text: "听这几人所言，原来竟是"
   - subIndex: 1
-    text: "周边，传出有一“"
+    text: "周边，传出有一"
   - subIndex: 2
-    text: "”的消息。"
+    text: "的消息。"
   - subIndex: 3
     text: "看来已有不少武林中人得知此事，前往一探究竟了。"
   - subIndex: 4
     text: "若是即刻动身前往，或许还有希望分口肉吃......"
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧{2}\n{3}\n{4}"
+  - template: "{0}⟦0⟧{1}“⟦1⟧”{2}\n{3}\n{4}"
 - raw: "听闻"
   splits:
   - text: "听闻"
@@ -13218,13 +13218,13 @@
   splits:
   - text: "哎呀#SourceInteractName#，我近来得到消息，"
   - subIndex: 1
-    text: "在周遭有“"
+    text: "在周遭有"
   - subIndex: 2
-    text: "”等事件发生，"
+    text: "等事件发生，"
   - subIndex: 3
     text: "本欲前往，奈何实在脱不开身。"
   templates:
-  - template: "{0}\n{1}⟦0⟧{2}\n{3}"
+  - template: "{0}\n{1}“⟦0⟧”{2}\n{3}"
 - raw: "哎呀#SourceInteractName#，我近来机缘巧合下得到一张藏宝图。\n本欲前往，奈何实在脱不开身。"
   splits:
   - text: "哎呀#SourceInteractName#，我近来机缘巧合下得到一张藏宝图。"
@@ -16895,13 +16895,13 @@
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "妙哉妙哉，本门得此《{0}》，真可谓如鱼得水，如虎添翼！\n#PlayerName#此次劳苦功高，本掌门自会记在心里。"
   splits:
-  - text: "妙哉妙哉，本门得此《"
+  - text: "妙哉妙哉，本门得此"
   - subIndex: 1
-    text: "》，真可谓如鱼得水，如虎添翼！"
+    text: "，真可谓如鱼得水，如虎添翼！"
   - subIndex: 2
     text: "#PlayerName#此次劳苦功高，本掌门自会记在心里。"
   templates:
-  - template: "{0}⟦0⟧{1}\n{2}"
+  - template: "{0}《⟦0⟧》{1}\n{2}"
 - raw: "妹"
   splits:
   - text: "妹"
@@ -18024,11 +18024,11 @@
   - template: "{0}\n{1}\n{2}"
 - raw: "少侠确认要在此闭关三十日，遗忘“{0}”这一天赋吗？"
   splits:
-  - text: "少侠确认要在此闭关三十日，遗忘“"
+  - text: "少侠确认要在此闭关三十日，遗忘"
   - subIndex: 1
-    text: "”这一天赋吗？"
+    text: "这一天赋吗？"
   templates:
-  - template: "{0}⟦0⟧{1}"
+  - template: "{0}“⟦0⟧”{1}"
 - raw: "少侠确认要在此闭关十日，遗忘这门#PlotInteractSkillName#吗？"
   splits:
   - text: "少侠确认要在此闭关十日，遗忘这门#PlotInteractSkillName#吗？"
@@ -19980,13 +19980,13 @@
   - template: "{0}⟦1⟧{1}⟦0⟧{2}"
 - raw: "我“{0}”修为远胜{1}，\n又何必班门弄斧？"
   splits:
-  - text: "我“"
+  - text: "我"
   - subIndex: 1
-    text: "”修为远胜"
+    text: "修为远胜"
   - subIndex: 2
     text: "又何必班门弄斧？"
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧，\n{2}"
+  - template: "{0}“⟦0⟧”{1}⟦1⟧，\n{2}"
 - raw: "我一片真心诚意，#PlayerName#竟毫不领情？\n也罢！既然你无情，就休要怪我无义，咱们后会有期！"
   splits:
   - text: "我一片真心诚意，#PlayerName#竟毫不领情？"
@@ -20040,13 +20040,13 @@
   - template: "{0}\n{1}"
 - raw: "我之“{0}”竟远不及{1}，\n惭愧惭愧"
   splits:
-  - text: "我之“"
+  - text: "我之"
   - subIndex: 1
-    text: "”竟远不及"
+    text: "竟远不及"
   - subIndex: 2
     text: "惭愧惭愧"
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧，\n{2}"
+  - template: "{0}“⟦0⟧”{1}⟦1⟧，\n{2}"
 - raw: "我之前得手一件珍宝，却始终无法辨明其真伪。\n#TargetInteractName#若不嫌弃，还请助我鉴别一二。\n（对方可鉴定学识要求{0}以下的珍宝，消耗1点好感）"
   splits:
   - text: "我之前得手一件珍宝，却始终无法辨明其真伪。"
@@ -20146,11 +20146,11 @@
   - template: "{0}⟦0⟧{1}"
 - raw: "我四处寻访得到这本《{0}》，还请掌门一阅。"
   splits:
-  - text: "我四处寻访得到这本《"
+  - text: "我四处寻访得到这本"
   - subIndex: 1
-    text: "》，还请掌门一阅。"
+    text: "，还请掌门一阅。"
   templates:
-  - template: "{0}⟦0⟧{1}"
+  - template: "{0}《⟦0⟧》{1}"
 - raw: "我在{0}{1}，若#PlayerName#能在{2}日内赶来助阵，必当感激不尽！"
   splits:
   - text: "我在"
@@ -25725,11 +25725,11 @@
   splits:
   - text: "消耗"
   - subIndex: 1
-    text: "天赋点领悟“"
+    text: "天赋点领悟"
   - subIndex: 2
-    text: "”吗？"
+    text: "吗？"
   templates:
-  - template: "{0}⟦1⟧{1}⟦0⟧{2}⟦2⟧"
+  - template: "{0}⟦1⟧{1}“⟦0⟧”{2}⟦2⟧"
 - raw: "消耗内力助其调息;SaveCrazyNpcHelp"
   splits:
   - text: "消耗内力助其调息"
@@ -26977,13 +26977,13 @@
   splits:
   - text: "看来"
   - subIndex: 1
-    text: "的“"
+    text: "的"
   - subIndex: 2
-    text: "”修为，"
+    text: "修为，"
   - subIndex: 3
     text: "不过平平而已"
   templates:
-  - template: "{0}⟦1⟧{1}⟦0⟧{2}\n{3}"
+  - template: "{0}⟦1⟧{1}“⟦0⟧”{2}\n{3}"
 - raw: "看来人已到齐...\n各位同门，我作为#SourceForceDescribe#，今日在此置办宴席不为别事，\n只为感谢各位历来尽心竭力，为我#SourceForceName#所立之功劳！"
   splits:
   - text: "看来人已到齐..."
@@ -32088,31 +32088,31 @@
   - template: "{0}⟦2⟧⟦3⟧{1}⟦0⟧⟦1⟧{2}"
 - raw: "这“{0}”乃我得意之处，\n{1}可有应对？"
   splits:
-  - text: "这“"
+  - text: "这"
   - subIndex: 1
-    text: "”乃我得意之处，"
+    text: "乃我得意之处，"
   - subIndex: 2
     text: "可有应对？"
   templates:
-  - template: "{0}⟦0⟧{1}\n⟦1⟧{2}"
+  - template: "{0}“⟦0⟧”{1}\n⟦1⟧{2}"
 - raw: "这“{0}”天赋，本就与我的武功路数不符。\n如今将其遗忘，正好腾出心力来探求其他所长！"
   splits:
-  - text: "这“"
+  - text: "这"
   - subIndex: 1
-    text: "”天赋，本就与我的武功路数不符。"
+    text: "天赋，本就与我的武功路数不符。"
   - subIndex: 2
     text: "如今将其遗忘，正好腾出心力来探求其他所长！"
   templates:
-  - template: "{0}⟦0⟧{1}\n{2}"
+  - template: "{0}“⟦0⟧”{1}\n{2}"
 - raw: "这“{0}”的精要之处，\n我早已了然于胸"
   splits:
-  - text: "这“"
+  - text: "这"
   - subIndex: 1
-    text: "”的精要之处，"
+    text: "的精要之处，"
   - subIndex: 2
     text: "我早已了然于胸"
   templates:
-  - template: "{0}⟦0⟧{1}\n{2}"
+  - template: "{0}“⟦0⟧”{1}\n{2}"
 - raw: "这一盛世在#$PlayerName#故去之后仍持续了{0}\n而此后历朝历代，百姓万民，也无不称颂怀念#$PlayerName#所开创的这一黄金时代。"
   splits:
   - text: "这一盛世在#$PlayerName#故去之后仍持续了"

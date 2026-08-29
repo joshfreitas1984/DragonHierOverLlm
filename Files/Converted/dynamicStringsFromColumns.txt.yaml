@@ -1521,8 +1521,6 @@
   splits:
   - text: "1"
     translated: "1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "武学"
   splits:
   - text: "武学"
@@ -1771,8 +1769,6 @@
   splits:
   - text: "0"
     translated: "0"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "高级"
   splits:
   - text: "高级"
@@ -44138,8 +44134,6 @@
   splits:
   - text: "-1"
     translated: "‑1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "稳重"
   splits:
   - text: "稳重"
@@ -45612,8 +45606,6 @@
   splits:
   - text: "6"
     translated: "6"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "蛰居偃伏;避世绝俗;气定神闲;铁画银钩;皓首穷经;博学多才;炉火纯青;绝艺超群;鸿儒大学;起死回生"
   splits:
   - text: "蛰居偃伏"
@@ -46956,8 +46948,6 @@
   splits:
   - text: "5"
     translated: "5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "笑里藏刀;心狠手辣;神出鬼没;例无虚发;惊弓;七窍玲珑;避世绝俗"
   splits:
   - text: "笑里藏刀"
@@ -47046,8 +47036,6 @@
   splits:
   - text: "4"
     translated: "4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "倾国倾城;穷奢极欲;排兵布阵;舌灿莲花;剑随意动;飞檐走壁;赌运亨通"
   splits:
   - text: "倾国倾城"
@@ -47246,8 +47234,6 @@
   splits:
   - text: "3"
     translated: "3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "不择手段;射术;轻功"
   splits:
   - text: "不择手段"
@@ -47290,8 +47276,6 @@
   splits:
   - text: "2"
     translated: "2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "性烈如火;长兵;绝技"
   splits:
   - text: "性烈如火"
@@ -48337,8 +48321,6 @@
   splits:
   - text: "7"
     translated: "7"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "内功/轻功/绝技"
   splits:
   - text: "内功"
@@ -48588,8 +48570,6 @@
   splits:
   - text: "15"
     translated: "15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "奇门/绝技/轻功"
   splits:
   - text: "奇门"
@@ -49041,8 +49021,6 @@
   splits:
   - text: "12"
     translated: "12"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "傅.砚之"
   splits:
   - text: "傅.砚之"

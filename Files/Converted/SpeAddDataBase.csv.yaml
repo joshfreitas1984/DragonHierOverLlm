@@ -2,9 +2,6 @@
   splits:
   - text: "序号"
     translated: "Number"
-  - split: 1
-    text: "特效"
-    translated: "Special effects"
   - split: 2
     text: "数值1%"
     translated: "1% value"
@@ -32,9 +29,6 @@
   - split: 10
     text: "描述"
     translated: "Description"
-  - split: 11
-    text: "特效价值类别"
-    translated: "Special Effect Value Category"
   - split: 12
     text: "不自动升级"
     translated: "Not upgrading automatically"
@@ -52,9 +46,6 @@
     translated: "Stackable"
 - raw: "0,力道,1,巨力,无力,0,0,0,0,0,+0.5%暴击\\n+0.5%断连\\n+1装备负重,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "力道"
-    translated: "Strength"
   - split: 3
     text: "巨力"
     translated: "Great force"
@@ -72,17 +63,11 @@
     subIndex: 2
     text: "+1装备负重"
     translated: "+1 load capacity for equipment"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
 - raw: "1,灵巧,1,巧捷,笨拙,0,0,0,0,0,+0.5%速度\\n+0.5%闪避\\n+0.5体力上限,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "灵巧"
-    translated: "Nimble"
   - split: 3
     text: "巧捷"
     translated: "Nimble"
@@ -100,17 +85,11 @@
     subIndex: 2
     text: "+0.5体力上限"
     translated: "+0.5 maximum stamina capacity"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
 - raw: "2,智力,1,慧根,愚钝,0,0,0,0,0,+0.5%命中\\n+0.5%卸力\\n+0.5%负面加成,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "智力"
-    translated: "Intelligence"
   - split: 3
     text: "慧根"
     translated: "Buddha nature"
@@ -128,17 +107,11 @@
     subIndex: 2
     text: "+0.5%负面加成"
     translated: "+0.5% Negative Bonus"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
 - raw: "3,意志,1,勇毅,萎靡,0,0,0,0,0,+0.5%反击\\n+0.5%护甲\\n+0.5%负面抗性,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "意志"
-    translated: "Willpower"
   - split: 3
     text: "勇毅"
     translated: "Bravery"
@@ -156,17 +129,11 @@
     subIndex: 2
     text: "+0.5%负面抗性"
     translated: "+0.5% Negative Resistance"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
 - raw: "4,体质,1,壮硕,瘦弱,0,0,0,0,0,+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "体质"
-    translated: "Physique"
   - split: 3
     text: "壮硕"
     translated: "Robust"
@@ -184,17 +151,11 @@
     subIndex: 2
     text: "+0.5%伤势抗性"
     translated: "+0.5% injury resistance"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
 - raw: "5,经脉,1,贯通,断绝,0,0,0,0,0,+2内力上限\\n+0.5%连击\\n+0.5%恢复效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "经脉"
-    translated: "Meridian"
   - split: 3
     text: "贯通"
     translated: "Penetrate"
@@ -212,17 +173,11 @@
     subIndex: 2
     text: "+0.5%恢复效率"
     translated: "+0.5% recovery efficiency"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
 - raw: "6,内功,1,内家,空乏,0,0,0,0,0,+1%内力上限,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "内功"
-    translated: "Neigong"
   - split: 3
     text: "内家"
     translated: "Internal kung fu"
@@ -232,14 +187,8 @@
   - split: 10
     text: "+1%内力上限"
     translated: "+1% Inner Power Cap"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "7,轻功,1,迅疾,迟慢,0,0,0,0,0,+1%速度,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "轻功"
-    translated: "Qinggong"
   - split: 3
     text: "迅疾"
     translated: "Swift"
@@ -249,14 +198,8 @@
   - split: 10
     text: "+1%速度"
     translated: "+1% Speed"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "8,绝技,1,独门,庸凡,0,0,0,0,0,+1%生命上限,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "绝技"
-    translated: "Ultimate Technique"
   - split: 3
     text: "独门"
     translated: "Family‑secret"
@@ -266,14 +209,8 @@
   - split: 10
     text: "+1%生命上限"
     translated: "+1% Health Maximum"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "9,拳掌,1,钢拳,残拳,0,0,0,0,0,提升拳掌伤害\\n降低受到的拳掌伤害,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "拳掌"
-    translated: "Fists and palms"
   - split: 3
     text: "钢拳"
     translated: "Iron Fist"
@@ -287,17 +224,11 @@
     subIndex: 1
     text: "降低受到的拳掌伤害"
     translated: "Reduce damage from fist and palm attacks"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
 - raw: "10,剑法,1,利剑,锈剑,0,0,0,0,0,提升剑法伤害\\n降低受到的剑法伤害,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "剑法"
-    translated: "Sword Art"
   - split: 3
     text: "利剑"
     translated: "Sharp Sword"
@@ -311,17 +242,11 @@
     subIndex: 1
     text: "降低受到的剑法伤害"
     translated: "Reduce damage from sword techniques"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
 - raw: "11,刀法,1,宝刀,钝刀,0,0,0,0,0,提升刀法伤害\\n降低受到的刀法伤害,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "刀法"
-    translated: "Blade Art"
   - split: 3
     text: "宝刀"
     translated: "Sharp Blade"
@@ -335,17 +260,11 @@
     subIndex: 1
     text: "降低受到的刀法伤害"
     translated: "Reduce damage from blade techniques"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
 - raw: "12,长兵,1,银枪,断枪,0,0,0,0,0,提升长兵伤害\\n降低受到的长兵伤害,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "长兵"
-    translated: "Long weapon"
   - split: 3
     text: "银枪"
     translated: "Silver Spear"
@@ -359,17 +278,11 @@
     subIndex: 1
     text: "降低受到的长兵伤害"
     translated: "Reduce damage from polearm attacks"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
 - raw: "13,奇门,1,奇异,无奇,0,0,0,0,0,提升奇门伤害\\n降低受到的奇门伤害,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "奇门"
-    translated: "Qi Men"
   - split: 3
     text: "奇异"
     translated: "Strange"
@@ -383,17 +296,11 @@
     subIndex: 1
     text: "降低受到的奇门伤害"
     translated: "Reduce damage from qimen attacks"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
 - raw: "14,射术,1,远射,咫尺,0,0,0,0,0,提升射术伤害\\n降低受到的射术伤害,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "射术"
-    translated: "Archery"
   - split: 3
     text: "远射"
     translated: "Long shot"
@@ -407,17 +314,11 @@
     subIndex: 1
     text: "降低受到的射术伤害"
     translated: "Reduce their arrow damage taken"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
 - raw: "15,内功威力,0.01,无,无,1,1,0,0,0,内功威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "内功威力"
-    translated: "Neigong power"
   - split: 3
     text: "无"
     translated: "None"
@@ -427,14 +328,8 @@
   - split: 10
     text: "内功威力"
     translated: "Neigong power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "16,轻功威力,0.01,无,无,1,1,0,0,0,轻功威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "轻功威力"
-    translated: "Qinggong power"
   - split: 3
     text: "无"
     translated: "None"
@@ -444,14 +339,8 @@
   - split: 10
     text: "轻功威力"
     translated: "Qinggong power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "17,绝技威力,0.01,无,无,1,1,0,0,0,绝技威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "绝技威力"
-    translated: "Ultimate technique power"
   - split: 3
     text: "无"
     translated: "None"
@@ -461,14 +350,8 @@
   - split: 10
     text: "绝技威力"
     translated: "Ultimate technique power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "18,拳掌威力,0.01,无,无,1,1,0,0,0,拳掌威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "拳掌威力"
-    translated: "Fist and palm attacks are powerful"
   - split: 3
     text: "无"
     translated: "None"
@@ -478,14 +361,8 @@
   - split: 10
     text: "拳掌威力"
     translated: "Fist and palm attacks are powerful"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "19,剑法威力,0.01,无,无,1,1,0,0,0,剑法威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "剑法威力"
-    translated: "Sword Technique Power"
   - split: 3
     text: "无"
     translated: "None"
@@ -495,14 +372,8 @@
   - split: 10
     text: "剑法威力"
     translated: "Sword Technique Power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "20,刀法威力,0.01,无,无,1,1,0,0,0,刀法威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "刀法威力"
-    translated: "Blade Technique Power"
   - split: 3
     text: "无"
     translated: "None"
@@ -512,14 +383,8 @@
   - split: 10
     text: "刀法威力"
     translated: "Blade Technique Power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "21,长兵威力,0.01,无,无,1,1,0,0,0,长兵威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "长兵威力"
-    translated: "Long‑range weapon power"
   - split: 3
     text: "无"
     translated: "None"
@@ -529,14 +394,8 @@
   - split: 10
     text: "长兵威力"
     translated: "Long‑range weapon power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "22,奇门威力,0.01,无,无,1,1,0,0,0,奇门威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "奇门威力"
-    translated: "Power of the I Ching"
   - split: 3
     text: "无"
     translated: "None"
@@ -546,14 +405,8 @@
   - split: 10
     text: "奇门威力"
     translated: "Power of the I Ching"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "23,射术威力,0.01,无,无,1,1,0,0,0,射术威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "射术威力"
-    translated: "Archery power"
   - split: 3
     text: "无"
     translated: "None"
@@ -563,14 +416,8 @@
   - split: 10
     text: "射术威力"
     translated: "Archery power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "24,医术,1,无,无,0,1,0,0,0,影响治疗外伤/内伤的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "医术"
-    translated: "Medicine"
   - split: 3
     text: "无"
     translated: "None"
@@ -584,17 +431,11 @@
     subIndex: 1
     text: "内伤的效率"
     translated: "Internal Injury's efficiency"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}/{1}"
 - raw: "25,毒术,1,无,无,0,1,0,0,0,影响用毒/解毒的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "毒术"
-    translated: "Poison Technique"
   - split: 3
     text: "无"
     translated: "None"
@@ -608,17 +449,11 @@
     subIndex: 1
     text: "解毒的效率"
     translated: "Efficiency of detoxification"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}/{1}"
 - raw: "26,学识,1,无,无,0,1,0,0,0,影响珍宝鉴定，论战，编纂秘籍，获取门派威望的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "学识"
-    translated: "Scholarship"
   - split: 3
     text: "无"
     translated: "None"
@@ -628,14 +463,8 @@
   - split: 10
     text: "影响珍宝鉴定，论战，编纂秘籍，获取门派威望的效率"
     translated: "Affects the efficiency of treasure appraisal, debates, compendium compilation, and sect reputation acquisition."
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "27,口才,1,无,无,0,1,0,0,0,影响交易价格，论战，获取门派银钱的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "口才"
-    translated: "Eloquence"
   - split: 3
     text: "无"
     translated: "None"
@@ -645,14 +474,8 @@
   - split: 10
     text: "影响交易价格，论战，获取门派银钱的效率"
     translated: "Affecting trade prices, debates, and the efficiency of obtaining sect silver coins"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "28,采伐,1,无,无,0,1,0,0,0,影响获取门派木料/矿石，破坏区域防御的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "采伐"
-    translated: "Logging"
   - split: 3
     text: "无"
     translated: "None"
@@ -666,17 +489,11 @@
     subIndex: 1
     text: "矿石，破坏区域防御的效率"
     translated: "Minerals, reducing the efficiency of defense in the destruction area"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}/{1}"
 - raw: "29,木植,1,无,无,0,1,0,0,0,影响获取门派粮食/药材，巩固区域防御的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "木植"
-    translated: "Forest Plant"
   - split: 3
     text: "无"
     translated: "None"
@@ -690,17 +507,11 @@
     subIndex: 1
     text: "药材，巩固区域防御的效率"
     translated: "Medicine, to enhance the efficiency of consolidating regional defenses"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}/{1}"
 - raw: "30,锻造,1,无,无,0,1,0,0,0,影响装备制作/强化，巩固/破坏区域治安的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "锻造"
-    translated: "Forging"
   - split: 3
     text: "无"
     translated: "None"
@@ -718,17 +529,11 @@
     subIndex: 2
     text: "破坏区域治安的效率"
     translated: "Efficiency in maintaining order in affected areas"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}/{1}/{2}"
 - raw: "31,炼药,1,无,无,0,1,0,0,0,影响丹药制作/强化，巩固/破坏区域人口的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "炼药"
-    translated: "Alchemy"
   - split: 3
     text: "无"
     translated: "None"
@@ -746,17 +551,11 @@
     subIndex: 2
     text: "破坏区域人口的效率"
     translated: "Efficiency in damaging the population"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}/{1}/{2}"
 - raw: "32,烹饪,1,无,无,0,1,0,0,0,影响饮食制作/强化，巩固/破坏区域民心的效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "烹饪"
-    translated: "Cooking"
   - split: 3
     text: "无"
     translated: "None"
@@ -774,17 +573,11 @@
     subIndex: 2
     text: "破坏区域民心的效率"
     translated: "Efficiency in undermining the morale of the affected area"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
   templates:
   - split: 10
     template: "{0}/{1}/{2}"
 - raw: "33,力道潜力,1,无,无,0,1,0,0,0,力道潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "力道潜力"
-    translated: "Strength Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -794,14 +587,8 @@
   - split: 10
     text: "力道潜力"
     translated: "Strength Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "34,灵巧潜力,1,无,无,0,1,0,0,0,灵巧潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "灵巧潜力"
-    translated: "Agile Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -811,14 +598,8 @@
   - split: 10
     text: "灵巧潜力"
     translated: "Agile Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "35,智力潜力,1,无,无,0,1,0,0,0,智力潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "智力潜力"
-    translated: "Intellectual potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -828,14 +609,8 @@
   - split: 10
     text: "智力潜力"
     translated: "Intellectual potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "36,意志潜力,1,无,无,0,1,0,0,0,意志潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "意志潜力"
-    translated: "Willpower potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -845,14 +620,8 @@
   - split: 10
     text: "意志潜力"
     translated: "Willpower potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "37,体质潜力,1,无,无,0,1,0,0,0,体质潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "体质潜力"
-    translated: "Physical potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -862,14 +631,8 @@
   - split: 10
     text: "体质潜力"
     translated: "Physical potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "38,经脉潜力,1,无,无,0,1,0,0,0,经脉潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "经脉潜力"
-    translated: "Vital Meridian Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -879,14 +642,8 @@
   - split: 10
     text: "经脉潜力"
     translated: "Vital Meridian Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "39,内功潜力,1,无,无,0,1,0,0,0,内功潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "内功潜力"
-    translated: "Neigong Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -896,14 +653,8 @@
   - split: 10
     text: "内功潜力"
     translated: "Neigong Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "40,轻功潜力,1,无,无,0,1,0,0,0,轻功潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "轻功潜力"
-    translated: "Qinggong Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -913,14 +664,8 @@
   - split: 10
     text: "轻功潜力"
     translated: "Qinggong Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "41,绝技潜力,1,无,无,0,1,0,0,0,绝技潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "绝技潜力"
-    translated: "Potential for ultimate technique"
   - split: 3
     text: "无"
     translated: "None"
@@ -930,14 +675,8 @@
   - split: 10
     text: "绝技潜力"
     translated: "Potential for ultimate technique"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "42,拳掌潜力,1,无,无,0,1,0,0,0,拳掌潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "拳掌潜力"
-    translated: "Punch Palm Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -947,14 +686,8 @@
   - split: 10
     text: "拳掌潜力"
     translated: "Punch Palm Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "43,剑法潜力,1,无,无,0,1,0,0,0,剑法潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "剑法潜力"
-    translated: "Potential in Sword Technique"
   - split: 3
     text: "无"
     translated: "None"
@@ -964,14 +697,8 @@
   - split: 10
     text: "剑法潜力"
     translated: "Potential in Sword Technique"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "44,刀法潜力,1,无,无,0,1,0,0,0,刀法潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "刀法潜力"
-    translated: "Blade Technique Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -981,14 +708,8 @@
   - split: 10
     text: "刀法潜力"
     translated: "Blade Technique Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "45,长兵潜力,1,无,无,0,1,0,0,0,长兵潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "长兵潜力"
-    translated: "Potential of Long Soldiers"
   - split: 3
     text: "无"
     translated: "None"
@@ -998,14 +719,8 @@
   - split: 10
     text: "长兵潜力"
     translated: "Potential of Long Soldiers"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "46,奇门潜力,1,无,无,0,1,0,0,0,奇门潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "奇门潜力"
-    translated: "Mystery Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1015,14 +730,8 @@
   - split: 10
     text: "奇门潜力"
     translated: "Mystery Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "47,射术潜力,1,无,无,0,1,0,0,0,射术潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "射术潜力"
-    translated: "Archery potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1032,14 +741,8 @@
   - split: 10
     text: "射术潜力"
     translated: "Archery potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "48,医术潜力,1,无,无,0,1,0,0,0,医术潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "医术潜力"
-    translated: "Potential in medicine"
   - split: 3
     text: "无"
     translated: "None"
@@ -1049,14 +752,8 @@
   - split: 10
     text: "医术潜力"
     translated: "Potential in medicine"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "49,毒术潜力,1,无,无,0,1,0,0,0,毒术潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "毒术潜力"
-    translated: "Poison Technique Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1066,14 +763,8 @@
   - split: 10
     text: "毒术潜力"
     translated: "Poison Technique Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "50,学识潜力,1,无,无,0,1,0,0,0,学识潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "学识潜力"
-    translated: "Scholarly potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1083,14 +774,8 @@
   - split: 10
     text: "学识潜力"
     translated: "Scholarly potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "51,口才潜力,1,无,无,0,1,0,0,0,口才潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "口才潜力"
-    translated: "Potential eloquence"
   - split: 3
     text: "无"
     translated: "None"
@@ -1100,14 +785,8 @@
   - split: 10
     text: "口才潜力"
     translated: "Potential eloquence"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "52,采伐潜力,1,无,无,0,1,0,0,0,采伐潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "采伐潜力"
-    translated: "Logging potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1117,14 +796,8 @@
   - split: 10
     text: "采伐潜力"
     translated: "Logging potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "53,木植潜力,1,无,无,0,1,0,0,0,木植潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "木植潜力"
-    translated: "Wood Cultivation Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1134,14 +807,8 @@
   - split: 10
     text: "木植潜力"
     translated: "Wood Cultivation Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "54,锻造潜力,1,无,无,0,1,0,0,0,锻造潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "锻造潜力"
-    translated: "Forge Potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1151,14 +818,8 @@
   - split: 10
     text: "锻造潜力"
     translated: "Forge Potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "55,炼药潜力,1,无,无,0,1,0,0,0,炼药潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "炼药潜力"
-    translated: "Alchemy potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1168,14 +829,8 @@
   - split: 10
     text: "炼药潜力"
     translated: "Alchemy potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "56,烹饪潜力,1,无,无,0,1,0,0,0,烹饪潜力,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "烹饪潜力"
-    translated: "Cooking potential"
   - split: 3
     text: "无"
     translated: "None"
@@ -1185,14 +840,8 @@
   - split: 10
     text: "烹饪潜力"
     translated: "Cooking potential"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "57,生命上限,2,长生,短命,0,0,0,0,0,生命上限,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "生命上限"
-    translated: "Health points"
   - split: 3
     text: "长生"
     translated: "Eternal Life"
@@ -1202,14 +851,8 @@
   - split: 10
     text: "生命上限"
     translated: "Health points"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "58,体力上限,5,焕发,疲敝,0,0,0,0,0,体力上限,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "体力上限"
-    translated: "Maximum stamina"
   - split: 3
     text: "焕发"
     translated: "Revive"
@@ -1219,14 +862,8 @@
   - split: 10
     text: "体力上限"
     translated: "Maximum stamina"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "59,内力上限,4,充盈,空虚,0,0,0,0,0,内力上限,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "内力上限"
-    translated: "Inner Power Cap"
   - split: 3
     text: "充盈"
     translated: "Overflowing"
@@ -1236,14 +873,8 @@
   - split: 10
     text: "内力上限"
     translated: "Inner Power Cap"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "60,伤害,0.01,强攻,羸弱,1,0,0,0,0,造成伤害,伤害,0,1,1,0,0"
   splits:
-  - split: 1
-    text: "伤害"
-    translated: "Damage"
   - split: 3
     text: "强攻"
     translated: "Storm attack"
@@ -1253,14 +884,8 @@
   - split: 10
     text: "造成伤害"
     translated: "Cause damage"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "61,护甲,0.5,铁壁,摧折,0,0,0,0,0,降低所受伤害,伤害,0,2,1,0,0"
   splits:
-  - split: 1
-    text: "护甲"
-    translated: "Armor"
   - split: 3
     text: "铁壁"
     translated: "Iron Wall"
@@ -1270,14 +895,8 @@
   - split: 10
     text: "降低所受伤害"
     translated: "Reduce damage taken"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "62,护甲率,0.01,重甲,弱甲,1,0,0,0,0,百分比提升护甲,伤害,0,2,1,0,0"
   splits:
-  - split: 1
-    text: "护甲率"
-    translated: "Armour rating"
   - split: 3
     text: "重甲"
     translated: "Heavy Armor"
@@ -1287,14 +906,8 @@
   - split: 10
     text: "百分比提升护甲"
     translated: "Percentage increase in armor"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "63,速度,0.01,轻快,笨重,1,0,0,0,0,行动速度,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "速度"
-    translated: "Speed"
   - split: 3
     text: "轻快"
     translated: "Lively"
@@ -1304,14 +917,8 @@
   - split: 10
     text: "行动速度"
     translated: "Movement speed"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "64,命中,0.01,精准,模糊,1,0,0,0,0,命中概率,伤害,0,1,1,0,0"
   splits:
-  - split: 1
-    text: "命中"
-    translated: "Hit Rate"
   - split: 3
     text: "精准"
     translated: "Precise"
@@ -1321,14 +928,8 @@
   - split: 10
     text: "命中概率"
     translated: "Hit Rate"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "65,闪避,0.01,闪转,支拙,1,0,0,0,0,躲闪攻击,伤害,0,2,1,0,0"
   splits:
-  - split: 1
-    text: "闪避"
-    translated: "Dodge"
   - split: 3
     text: "闪转"
     translated: "Dodge"
@@ -1338,14 +939,8 @@
   - split: 10
     text: "躲闪攻击"
     translated: "Avoid attack"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "66,暴击,0.01,凶暴,优柔,1,0,0,0,0,伤害加倍,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "暴击"
-    translated: "Critical hit"
   - split: 3
     text: "凶暴"
     translated: "Violent"
@@ -1355,14 +950,8 @@
   - split: 10
     text: "伤害加倍"
     translated: "Doubled damage"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "67,卸力,0.01,卸力,受力,1,0,0,0,0,伤害减半,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "卸力"
-    translated: "Force absorption"
   - split: 3
     text: "卸力"
     translated: "Force absorption"
@@ -1372,14 +961,8 @@
   - split: 10
     text: "伤害减半"
     translated: "Damage halved"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "68,反击,0.01,藏锋,尽出,1,0,0,0,0,行动条加倍,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "反击"
-    translated: "Counterattack"
   - split: 3
     text: "藏锋"
     translated: "Hide Sharpness"
@@ -1389,14 +972,8 @@
   - split: 10
     text: "行动条加倍"
     translated: "Action point doubled"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "69,压制,0.01,泰山,鸿毛,1,0,0,0,0,行动条减半,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "压制"
-    translated: "Suppress"
   - split: 3
     text: "泰山"
     translated: "Mount Tai"
@@ -1406,14 +983,8 @@
   - split: 10
     text: "行动条减半"
     translated: "Action point halved"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "70,连击,0.01,追击,磕绊,1,0,0,0,0,再次攻击,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "连击"
-    translated: "Combo"
   - split: 3
     text: "追击"
     translated: "Chase"
@@ -1423,14 +994,8 @@
   - split: 10
     text: "再次攻击"
     translated: "Attack again"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "71,断连,0.01,断腕,顺受,1,0,0,0,0,打断连击,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "断连"
-    translated: "Disconnect"
   - split: 3
     text: "断腕"
     translated: "Amputate"
@@ -1440,14 +1005,8 @@
   - split: 10
     text: "打断连击"
     translated: "Interrupt combo"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "72,经验获取,0.01,广博,浅陋,1,0,0,0,0,增加获取的经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "经验获取"
-    translated: "Experience gained"
   - split: 3
     text: "广博"
     translated: "Broad"
@@ -1457,14 +1016,8 @@
   - split: 10
     text: "增加获取的经验"
     translated: "Increase experience gained"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "73,恢复效率,0.01,丰沛,枯竭,1,0,0,0,0,增强恢复的效果,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "恢复效率"
-    translated: "Recovery efficiency"
   - split: 3
     text: "丰沛"
     translated: "Abundant"
@@ -1474,14 +1027,8 @@
   - split: 10
     text: "增强恢复的效果"
     translated: "Enhance the effectiveness of recovery"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "74,伤害抗性,0.01,无,无,1,1,0,0,0,降低所受伤害,伤害,0,2,1,0,0"
   splits:
-  - split: 1
-    text: "伤害抗性"
-    translated: "Damage resistance"
   - split: 3
     text: "无"
     translated: "None"
@@ -1491,14 +1038,8 @@
   - split: 10
     text: "降低所受伤害"
     translated: "Reduce damage taken"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "75,负面加成,0.01,险恶,平坦,1,0,0,0,0,增加施加负面效果的概率,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "负面加成"
-    translated: "Negative buffs"
   - split: 3
     text: "险恶"
     translated: "Treacherous"
@@ -1508,14 +1049,8 @@
   - split: 10
     text: "增加施加负面效果的概率"
     translated: "Increase the probability of applying negative effects"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "76,负面抗性,0.01,坚定,动摇,1,0,0,0,0,降低受到负面效果的概率,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "负面抗性"
-    translated: "Negative resistance"
   - split: 3
     text: "坚定"
     translated: "Resolute"
@@ -1525,14 +1060,8 @@
   - split: 10
     text: "降低受到负面效果的概率"
     translated: "Reduce the probability of suffering negative effects"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "77,伤势抗性,0.01,乌皮,薄皮,1,0,0,0,0,减少所受伤势,我方,0,2,1,0,0"
   splits:
-  - split: 1
-    text: "伤势抗性"
-    translated: "Wound resistance"
   - split: 3
     text: "乌皮"
     translated: "Black Leather"
@@ -1542,14 +1071,8 @@
   - split: 10
     text: "减少所受伤势"
     translated: "Reduce injuries sustained"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "78,失衡,0.01,颠簸,无,1,0,1,0,0,行动条-30%;体力-20,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "失衡"
-    translated: "Imbalance"
   - split: 3
     text: "颠簸"
     translated: "Jolt"
@@ -1563,17 +1086,11 @@
     subIndex: 1
     text: "体力"
     translated: "Strength"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-30%;{1}-20"
 - raw: "79,急速,0.01,白驹,无,1,0,1,0,0,行动条+30%;体力+20,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "急速"
-    translated: "Rapidly"
   - split: 3
     text: "白驹"
     translated: "Swift horse"
@@ -1587,17 +1104,11 @@
     subIndex: 1
     text: "体力"
     translated: "Strength"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+30%;{1}+20"
 - raw: "80,外伤,0.01,无,无,1,1,1,0,0,根据生命差造成外伤,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "外伤"
-    translated: "External Injury"
   - split: 3
     text: "无"
     translated: "None"
@@ -1607,14 +1118,8 @@
   - split: 10
     text: "根据生命差造成外伤"
     translated: "Based on the health difference, cause external injuries"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "81,内伤,0.01,无,无,1,1,1,0,0,根据内力差造成内伤,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "内伤"
-    translated: "Internal Injury"
   - split: 3
     text: "无"
     translated: "None"
@@ -1624,14 +1129,8 @@
   - split: 10
     text: "根据内力差造成内伤"
     translated: "Due to the difference in inner power causing internal injuries"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "82,毒素,0.01,无,无,1,1,1,0,0,根据毒术差造成中毒,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "毒素"
-    translated: "Poison"
   - split: 3
     text: "无"
     translated: "None"
@@ -1641,14 +1140,8 @@
   - split: 10
     text: "根据毒术差造成中毒"
     translated: "Due to the difference in poison technique, you have been poisoned."
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "83,吸血,0.01,无,无,1,1,1,0,0,吸取生命,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "吸血"
-    translated: "Vampire"
   - split: 3
     text: "无"
     translated: "None"
@@ -1658,14 +1151,8 @@
   - split: 10
     text: "吸取生命"
     translated: "Absorb health"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "84,吸内,0.02,无,无,1,1,1,0,0,吸取内力,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "吸内"
-    translated: "Inhale"
   - split: 3
     text: "无"
     translated: "None"
@@ -1675,14 +1162,8 @@
   - split: 10
     text: "吸取内力"
     translated: "Absorb inner power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "85,削内,0.04,无,无,1,1,1,0,0,削除内力,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "削内"
-    translated: "Eliminate internal enemies"
   - split: 3
     text: "无"
     translated: "None"
@@ -1692,14 +1173,8 @@
   - split: 10
     text: "削除内力"
     translated: "Delete Inner Power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "86,恢复,0.01,滋养,无,1,0,1,2,1,每回合+5%生命/内力,我方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "恢复"
-    translated: "Recovery"
   - split: 3
     text: "滋养"
     translated: "Nourish"
@@ -1713,17 +1188,11 @@
     subIndex: 1
     text: "内力"
     translated: "Inner Power"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}/{1}"
 - raw: "87,灼烧,0.01,阳炎,无,1,0,1,2,0,每回合-5%生命/内力,敌方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "灼烧"
-    translated: "Scorching"
   - split: 3
     text: "阳炎"
     translated: "Yang Yan"
@@ -1737,17 +1206,11 @@
     subIndex: 1
     text: "内力"
     translated: "Inner Power"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}/{1}"
 - raw: "88,疗伤,0.01,回春,无,1,0,1,3,1,每回合+5%生命,我方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "疗伤"
-    translated: "Healing"
   - split: 3
     text: "回春"
     translated: "Revival"
@@ -1757,14 +1220,8 @@
   - split: 10
     text: "每回合+5%生命"
     translated: "Every turn +5% health"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "89,流血,0.01,重创,无,1,0,1,3,0,每回合-5%生命,敌方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "流血"
-    translated: "Bleeding"
   - split: 3
     text: "重创"
     translated: "Severe damage"
@@ -1774,14 +1231,8 @@
   - split: 10
     text: "每回合-5%生命"
     translated: "Every turn ‑5% health"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "90,调息,0.01,蕴气,无,1,0,1,3,1,每回合+10%内力,我方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "调息"
-    translated: "Breathwork"
   - split: 3
     text: "蕴气"
     translated: "Nourishing qi"
@@ -1791,14 +1242,8 @@
   - split: 10
     text: "每回合+10%内力"
     translated: "Each turn +10% Inner Power"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "91,雷电,0.01,掣电,无,1,0,1,3,0,每回合-10%内力,敌方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "雷电"
-    translated: "Thunderbolt"
   - split: 3
     text: "掣电"
     translated: "Thunderstrike"
@@ -1808,14 +1253,8 @@
   - split: 10
     text: "每回合-10%内力"
     translated: "Each turn, ‑10% Inner Power"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "92,蓄力,0.01,厚积,无,1,0,1,2,1,每回合+15%体力,我方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "蓄力"
-    translated: "Build Up Energy"
   - split: 3
     text: "厚积"
     translated: "Well‑prepared"
@@ -1825,14 +1264,8 @@
   - split: 10
     text: "每回合+15%体力"
     translated: "Each turn +15% stamina"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "93,疲劳,0.01,力竭,无,1,0,1,2,0,每回合-15%体力,敌方,0,1,1,1,1"
   splits:
-  - split: 1
-    text: "疲劳"
-    translated: "Fatigue"
   - split: 3
     text: "力竭"
     translated: "Exhausted"
@@ -1842,14 +1275,8 @@
   - split: 10
     text: "每回合-15%体力"
     translated: "Each turn, regain ‑15% stamina"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "94,冰寒,0.01,阴寒,无,1,0,1,-1,0,速度/恢复效率-30%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "冰寒"
-    translated: "Icicles"
   - split: 3
     text: "阴寒"
     translated: "Yin Cold"
@@ -1863,17 +1290,11 @@
     subIndex: 1
     text: "恢复效率"
     translated: "Recovery efficiency"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}/{1}-30%"
 - raw: "95,无敌,0.005,不败,无,1,0,1,0,1,免疫伤害至下次受击,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "无敌"
-    translated: "Unbeatable"
   - split: 3
     text: "不败"
     translated: "Undefeated"
@@ -1883,14 +1304,8 @@
   - split: 10
     text: "免疫伤害至下次受击"
     translated: "Damage from immunity lasts until next hit"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "96,眩晕,0.01,万钧,无,1,0,1,1,0,跳过回合,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "眩晕"
-    translated: "Dizziness"
   - split: 3
     text: "万钧"
     translated: "Ten‑thousand‑jun"
@@ -1900,14 +1315,8 @@
   - split: 10
     text: "跳过回合"
     translated: "Skip turn"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "97,手臂点穴,0.01,无,无,1,1,1,-1,0,禁用武功,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "手臂点穴"
-    translated: "Arm point pressing"
   - split: 3
     text: "无"
     translated: "None"
@@ -1917,14 +1326,8 @@
   - split: 10
     text: "禁用武功"
     translated: "Disable martial arts skills"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "98,腿足点穴,0.01,无,无,1,1,1,-1,0,无法移动;禁用轻功,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "腿足点穴"
-    translated: "Leg and foot acupressure"
   - split: 3
     text: "无"
     translated: "None"
@@ -1938,17 +1341,11 @@
     subIndex: 1
     text: "禁用轻功"
     translated: "Disable Qinggong"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0};{1}"
 - raw: "99,心胸点穴,0.01,无,无,1,1,1,-1,0,力道/经脉-30%;禁用内功,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "心胸点穴"
-    translated: "Heart Point Acupressure"
   - split: 3
     text: "无"
     translated: "None"
@@ -1966,17 +1363,11 @@
     subIndex: 2
     text: "禁用内功"
     translated: "Disable Neigong"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}/{1}-30%;{2}"
 - raw: "100,腰腹点穴,0.01,无,无,1,1,1,-1,0,灵巧/体质-30%;禁用绝技,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "腰腹点穴"
-    translated: "Stomach and waist acupressure points"
   - split: 3
     text: "无"
     translated: "None"
@@ -1994,17 +1385,11 @@
     subIndex: 2
     text: "禁用绝技"
     translated: "Disable Ultimate Technique"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}/{1}-30%;{2}"
 - raw: "101,头颈点穴,0.01,无,无,1,1,1,-1,0,智力/意志/负面抗性-30%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "头颈点穴"
-    translated: "Neck point pressing"
   - split: 3
     text: "无"
     translated: "None"
@@ -2022,17 +1407,11 @@
     subIndex: 2
     text: "负面抗性"
     translated: "Negative resistance"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}/{1}/{2}-30%"
 - raw: "102,虚弱,0.01,虚弱,无,1,0,1,3,0,伤害-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "虚弱"
-    translated: "Weak"
   - split: 3
     text: "虚弱"
     translated: "Weak"
@@ -2042,17 +1421,11 @@
   - split: 10
     text: "伤害"
     translated: "Damage"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "103,横练,0.01,横练,无,1,0,1,2,1,护甲+50%,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "横练"
-    translated: "Horizontal training"
   - split: 3
     text: "横练"
     translated: "Horizontal training"
@@ -2062,17 +1435,11 @@
   - split: 10
     text: "护甲"
     translated: "Armor"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "104,破甲,0.01,破甲,无,1,0,1,3,0,护甲-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "破甲"
-    translated: "Pierce armor"
   - split: 3
     text: "破甲"
     translated: "Pierce armor"
@@ -2082,17 +1449,11 @@
   - split: 10
     text: "护甲"
     translated: "Armor"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "105,轻灵,0.01,轻灵,无,1,0,1,2,1,速度+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "轻灵"
-    translated: "Nimble"
   - split: 3
     text: "轻灵"
     translated: "Nimble"
@@ -2102,17 +1463,11 @@
   - split: 10
     text: "速度"
     translated: "Speed"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "106,迟缓,0.01,迟缓,无,1,0,1,2,0,速度-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "迟缓"
-    translated: "Lagging"
   - split: 3
     text: "迟缓"
     translated: "Lagging"
@@ -2122,17 +1477,11 @@
   - split: 10
     text: "速度"
     translated: "Speed"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "107,鹰眼,0.01,鹰视,无,1,0,1,3,1,命中+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "鹰眼"
-    translated: "Eagle Eye"
   - split: 3
     text: "鹰视"
     translated: "Eagle Eye"
@@ -2142,17 +1491,11 @@
   - split: 10
     text: "命中"
     translated: "Hit Rate"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "108,目盲,0.01,刺目,无,1,0,1,3,0,命中-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "目盲"
-    translated: "Blind"
   - split: 3
     text: "刺目"
     translated: "Blinding"
@@ -2162,17 +1505,11 @@
   - split: 10
     text: "命中"
     translated: "Hit Rate"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "109,飘逸,0.01,飘逸,无,1,0,1,2,1,闪避+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "飘逸"
-    translated: "Elegant"
   - split: 3
     text: "飘逸"
     translated: "Elegant"
@@ -2182,17 +1519,11 @@
   - split: 10
     text: "闪避"
     translated: "Dodge"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "110,笨拙,0.01,笨拙,无,1,0,1,2,0,闪避-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "笨拙"
-    translated: "Clumsy"
   - split: 3
     text: "笨拙"
     translated: "Clumsy"
@@ -2202,17 +1533,11 @@
   - split: 10
     text: "闪避"
     translated: "Dodge"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "111,霸体,0.01,霸体,无,1,0,1,1,1,受伤-50%,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "霸体"
-    translated: "Invincibility"
   - split: 3
     text: "霸体"
     translated: "Invincibility"
@@ -2222,17 +1547,11 @@
   - split: 10
     text: "受伤"
     translated: "Injured"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "112,弱点,0.01,弱点,无,1,0,1,2,0,受伤+50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "弱点"
-    translated: "Weakness"
   - split: 3
     text: "弱点"
     translated: "Weakness"
@@ -2242,17 +1561,11 @@
   - split: 10
     text: "受伤"
     translated: "Injured"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "113,疯魔,0.01,疯魔,无,1,0,1,2,1,伤害/暴击+30%;敌我不分,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "疯魔"
-    translated: "Mad Despair"
   - split: 3
     text: "疯魔"
     translated: "Mad Despair"
@@ -2270,17 +1583,11 @@
     subIndex: 2
     text: "敌我不分"
     translated: "Friend or foe"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}/{1}+30%;{2}"
 - raw: "114,混乱,0.01,混乱,无,1,0,1,2,0,敌我不分,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "混乱"
-    translated: "Chaos"
   - split: 3
     text: "混乱"
     translated: "Chaos"
@@ -2290,14 +1597,8 @@
   - split: 10
     text: "敌我不分"
     translated: "Friend or foe"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "115,死战,0.01,背水,无,1,0,1,0,0,双方生命越少伤害越高,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "死战"
-    translated: "All‑Out Battle"
   - split: 3
     text: "背水"
     translated: "On the banks of the river"
@@ -2307,14 +1608,8 @@
   - split: 10
     text: "双方生命越少伤害越高"
     translated: "Less health results in higher damage"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "116,穿甲,0.01,锐利,无,1,0,1,0,0,无视护甲,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "穿甲"
-    translated: "Penetration"
   - split: 3
     text: "锐利"
     translated: "Sharp"
@@ -2324,14 +1619,8 @@
   - split: 10
     text: "无视护甲"
     translated: "Pierces armor"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "117,壮骨,0.01,壮骨,无,1,0,1,3,1,力道+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "壮骨"
-    translated: "Strengthen bone"
   - split: 3
     text: "壮骨"
     translated: "Strengthen bone"
@@ -2341,17 +1630,11 @@
   - split: 10
     text: "力道"
     translated: "Strength"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "118,断骨,0.01,断骨,无,1,0,1,2,0,力道-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "断骨"
-    translated: "Broken bone"
   - split: 3
     text: "断骨"
     translated: "Broken bone"
@@ -2361,17 +1644,11 @@
   - split: 10
     text: "力道"
     translated: "Strength"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "119,舒筋,0.01,舒筋,无,1,0,1,3,1,灵巧+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "舒筋"
-    translated: "Stretch tendons"
   - split: 3
     text: "舒筋"
     translated: "Stretch tendons"
@@ -2381,17 +1658,11 @@
   - split: 10
     text: "灵巧"
     translated: "Nimble"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "120,伤筋,0.01,伤筋,无,1,0,1,2,0,灵巧-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "伤筋"
-    translated: "Sprain"
   - split: 3
     text: "伤筋"
     translated: "Sprain"
@@ -2401,17 +1672,11 @@
   - split: 10
     text: "灵巧"
     translated: "Nimble"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "121,醒脑,0.01,醒脑,无,1,0,1,3,1,智力+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "醒脑"
-    translated: "Refresh their minds"
   - split: 3
     text: "醒脑"
     translated: "Refresh their minds"
@@ -2421,17 +1686,11 @@
   - split: 10
     text: "智力"
     translated: "Intelligence"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "122,震脑,0.01,震脑,无,1,0,1,2,0,智力-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "震脑"
-    translated: "Brain shock"
   - split: 3
     text: "震脑"
     translated: "Brain shock"
@@ -2441,17 +1700,11 @@
   - split: 10
     text: "智力"
     translated: "Intelligence"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "123,定神,0.01,定神,无,1,0,1,3,1,意志+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "定神"
-    translated: "Focus"
   - split: 3
     text: "定神"
     translated: "Focus"
@@ -2461,17 +1714,11 @@
   - split: 10
     text: "意志"
     translated: "Willpower"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "124,乱神,0.01,乱神,无,1,0,1,2,0,意志-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "乱神"
-    translated: "Mad God"
   - split: 3
     text: "乱神"
     translated: "Mad God"
@@ -2481,17 +1728,11 @@
   - split: 10
     text: "意志"
     translated: "Willpower"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "125,活血,0.01,活血,无,1,0,1,3,1,体质+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "活血"
-    translated: "Promote blood circulation"
   - split: 3
     text: "活血"
     translated: "Promote blood circulation"
@@ -2501,17 +1742,11 @@
   - split: 10
     text: "体质"
     translated: "Physique"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "126,凝血,0.01,凝血,无,1,0,1,2,0,体质-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "凝血"
-    translated: "Blood clotting"
   - split: 3
     text: "凝血"
     translated: "Blood clotting"
@@ -2521,17 +1756,11 @@
   - split: 10
     text: "体质"
     translated: "Physique"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "127,通脉,0.01,通脉,无,1,0,1,3,1,经脉+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "通脉"
-    translated: "Tonify Meridians"
   - split: 3
     text: "通脉"
     translated: "Tonify Meridians"
@@ -2541,17 +1770,11 @@
   - split: 10
     text: "经脉"
     translated: "Meridian"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "128,截脉,0.01,截脉,无,1,0,1,2,0,经脉-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "截脉"
-    translated: "Cut pulse"
   - split: 3
     text: "截脉"
     translated: "Cut pulse"
@@ -2561,17 +1784,11 @@
   - split: 10
     text: "经脉"
     translated: "Meridian"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "129,复生,0.01,无,无,1,1,1,0,0,被击倒后恢复全状态,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "复生"
-    translated: "Resurrection"
   - split: 3
     text: "无"
     translated: "None"
@@ -2581,14 +1798,8 @@
   - split: 10
     text: "被击倒后恢复全状态"
     translated: "Recovery to full health after being knocked down"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "130,反伤,0.01,软猬,无,1,0,1,0,0,受伤时反馈伤害,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "反伤"
-    translated: "Piercing damage"
   - split: 3
     text: "软猬"
     translated: "Soft Hedgehog"
@@ -2598,14 +1809,8 @@
   - split: 10
     text: "受伤时反馈伤害"
     translated: "Feedback damage when injured"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "131,反伤吸内,0.02,无,无,1,1,1,0,0,受伤时吸取内力,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "反伤吸内"
-    translated: "Penetration Absorbs Damage"
   - split: 3
     text: "无"
     translated: "None"
@@ -2615,14 +1820,8 @@
   - split: 10
     text: "受伤时吸取内力"
     translated: "Absorb inner power when injured"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "132,反伤削内,0.04,无,无,1,1,1,0,0,受伤时削除内力,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "反伤削内"
-    translated: "Penetration Reduction"
   - split: 3
     text: "无"
     translated: "None"
@@ -2632,14 +1831,8 @@
   - split: 10
     text: "受伤时削除内力"
     translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "133,击退,1,无,无,0,1,1,0,0,将目标击退,敌方,1,1,1,1,0"
   splits:
-  - split: 1
-    text: "击退"
-    translated: "Repel"
   - split: 3
     text: "无"
     translated: "None"
@@ -2649,14 +1842,8 @@
   - split: 10
     text: "将目标击退"
     translated: "Push back the target"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "134,拉近,1,无,无,0,1,1,0,0,将目标拉近,敌方,1,1,1,1,0"
   splits:
-  - split: 1
-    text: "拉近"
-    translated: "Zoom in"
   - split: 3
     text: "无"
     translated: "None"
@@ -2666,14 +1853,8 @@
   - split: 10
     text: "将目标拉近"
     translated: "Pull the target closer"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "135,慧眼,0.01,慧眼,无,1,0,1,3,1,暴击+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "慧眼"
-    translated: "Sharp‑eyed"
   - split: 3
     text: "慧眼"
     translated: "Sharp‑eyed"
@@ -2683,17 +1864,11 @@
   - split: 10
     text: "暴击"
     translated: "Critical hit"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "136,昏沉,0.01,昏沉,无,1,0,1,3,0,暴击-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "昏沉"
-    translated: "Drowsiness"
   - split: 3
     text: "昏沉"
     translated: "Drowsiness"
@@ -2703,17 +1878,11 @@
   - split: 10
     text: "暴击"
     translated: "Critical hit"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "137,铜皮,0.01,铜皮,无,1,0,1,2,1,卸力+50%,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "铜皮"
-    translated: "Brass skin"
   - split: 3
     text: "铜皮"
     translated: "Brass skin"
@@ -2723,17 +1892,11 @@
   - split: 10
     text: "卸力"
     translated: "Force absorption"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "138,脆弱,0.01,脆弱,无,1,0,1,2,0,卸力-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "脆弱"
-    translated: "Fragile"
   - split: 3
     text: "脆弱"
     translated: "Fragile"
@@ -2743,17 +1906,11 @@
   - split: 10
     text: "卸力"
     translated: "Force absorption"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "139,不屈,0.01,不屈,无,1,0,1,2,1,反击+50%,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "不屈"
-    translated: "Indomitable"
   - split: 3
     text: "不屈"
     translated: "Indomitable"
@@ -2763,17 +1920,11 @@
   - split: 10
     text: "反击"
     translated: "Counterattack"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "140,重碾,0.01,重碾,无,1,0,1,3,1,压制+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "重碾"
-    translated: "Repeatedly crushed"
   - split: 3
     text: "重碾"
     translated: "Repeatedly crushed"
@@ -2783,17 +1934,11 @@
   - split: 10
     text: "压制"
     translated: "Suppress"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "141,连绵,0.01,连绵,无,1,0,1,3,1,连击+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "连绵"
-    translated: "Continuous"
   - split: 3
     text: "连绵"
     translated: "Continuous"
@@ -2803,17 +1948,11 @@
   - split: 10
     text: "连击"
     translated: "Combo"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "142,断腕,0.01,断腕,无,1,0,1,3,0,连击-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "断腕"
-    translated: "Amputate"
   - split: 3
     text: "断腕"
     translated: "Amputate"
@@ -2823,17 +1962,11 @@
   - split: 10
     text: "连击"
     translated: "Combo"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "143,断招,0.01,断招,无,1,0,1,2,1,断连+50%,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "断招"
-    translated: "Counterattack"
   - split: 3
     text: "断招"
     translated: "Counterattack"
@@ -2843,17 +1976,11 @@
   - split: 10
     text: "断连"
     translated: "Disconnect"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "144,阻滞,0.01,阻滞,无,1,0,1,2,0,断连-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "阻滞"
-    translated: "Obstacle"
   - split: 3
     text: "阻滞"
     translated: "Obstacle"
@@ -2863,17 +1990,11 @@
   - split: 10
     text: "断连"
     translated: "Disconnect"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "145,杀机,0.01,杀机,无,1,0,1,3,1,伤害+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "杀机"
-    translated: "Killer intent"
   - split: 3
     text: "杀机"
     translated: "Killer intent"
@@ -2883,17 +2004,11 @@
   - split: 10
     text: "伤害"
     translated: "Damage"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "146,康复,0.01,康复,无,1,0,1,3,1,恢复效率+50%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "康复"
-    translated: "Recovery"
   - split: 3
     text: "康复"
     translated: "Recovery"
@@ -2903,17 +2018,11 @@
   - split: 10
     text: "恢复效率"
     translated: "Recovery efficiency"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "147,不愈,0.01,不愈,无,1,0,1,3,0,恢复效率-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "不愈"
-    translated: "Unhealed"
   - split: 3
     text: "不愈"
     translated: "Unhealed"
@@ -2923,17 +2032,11 @@
   - split: 10
     text: "恢复效率"
     translated: "Recovery efficiency"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "148,坚毅,0.01,坚毅,无,1,0,1,2,1,负面抗性+50%,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "坚毅"
-    translated: "Resilience"
   - split: 3
     text: "坚毅"
     translated: "Resilience"
@@ -2943,17 +2046,11 @@
   - split: 10
     text: "负面抗性"
     translated: "Negative resistance"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+50%"
 - raw: "149,动摇,0.01,动摇,无,1,0,1,2,0,负面抗性-50%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "动摇"
-    translated: "Shake"
   - split: 3
     text: "动摇"
     translated: "Shake"
@@ -2963,17 +2060,11 @@
   - split: 10
     text: "负面抗性"
     translated: "Negative resistance"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-50%"
 - raw: "150,内劲,0.01,无,无,1,1,1,0,0,根据内力差造成真伤,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "内劲"
-    translated: "Internal strength"
   - split: 3
     text: "无"
     translated: "None"
@@ -2983,14 +2074,8 @@
   - split: 10
     text: "根据内力差造成真伤"
     translated: "Based on the difference in inner power causing true damage"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "151,真伤,0.01,无,无,1,1,1,0,0,无法防御的固定伤害,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "真伤"
-    translated: "True damage"
   - split: 3
     text: "无"
     translated: "None"
@@ -3000,14 +2085,8 @@
   - split: 10
     text: "无法防御的固定伤害"
     translated: "Unblockable fixed damage"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "152,回血,0.001,回血,无,1,0,1,0,0,每回合百分比恢复生命,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "回血"
-    translated: "Healing"
   - split: 3
     text: "回血"
     translated: "Healing"
@@ -3017,14 +2096,8 @@
   - split: 10
     text: "每回合百分比恢复生命"
     translated: "Percentage recovery of Health per turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "153,回内,0.0015,回内,无,1,0,1,0,0,每回合百分比恢复内力,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "回内"
-    translated: "Inside"
   - split: 3
     text: "回内"
     translated: "Inside"
@@ -3034,14 +2107,8 @@
   - split: 10
     text: "每回合百分比恢复内力"
     translated: "Recover Inner Power Percentage Per Turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "154,回体,0.2,回体,无,0,0,1,0,0,每回合恢复体力,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "回体"
-    translated: "Restore Health"
   - split: 3
     text: "回体"
     translated: "Restore Health"
@@ -3051,14 +2118,8 @@
   - split: 10
     text: "每回合恢复体力"
     translated: "Recover stamina each turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "155,自愈,0.5,无,无,0,1,1,0,0,每回合消耗内力治疗伤势,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "自愈"
-    translated: "Self‑healing"
   - split: 3
     text: "无"
     translated: "None"
@@ -3068,14 +2129,8 @@
   - split: 10
     text: "每回合消耗内力治疗伤势"
     translated: "Every turn consumes Inner Power to heal injuries."
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "156,护头,1,护头,无,0,0,1,0,0,每回合提升头部架势,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "护头"
-    translated: "Protect your head"
   - split: 3
     text: "护头"
     translated: "Protect your head"
@@ -3085,14 +2140,8 @@
   - split: 10
     text: "每回合提升头部架势"
     translated: "Increase head stance each turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "157,护心,1,护心,无,0,0,1,0,0,每回合提升心部架势,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "护心"
-    translated: "Heart protection"
   - split: 3
     text: "护心"
     translated: "Heart protection"
@@ -3102,14 +2151,8 @@
   - split: 10
     text: "每回合提升心部架势"
     translated: "Increase Heart Aura each turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "158,护胸,1,护胸,无,0,0,1,0,0,每回合提升胸部架势,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "护胸"
-    translated: "Breastplate"
   - split: 3
     text: "护胸"
     translated: "Breastplate"
@@ -3119,14 +2162,8 @@
   - split: 10
     text: "每回合提升胸部架势"
     translated: "Increase chest stance each turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "159,护腹,1,护腹,无,0,0,1,0,0,每回合提升腹部架势,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "护腹"
-    translated: "Abdominal protector"
   - split: 3
     text: "护腹"
     translated: "Abdominal protector"
@@ -3136,14 +2173,8 @@
   - split: 10
     text: "每回合提升腹部架势"
     translated: "Increase abdominal stance each turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "160,护手,1,护手,无,0,0,1,0,0,每回合提升手部架势,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "护手"
-    translated: "Hand guard"
   - split: 3
     text: "护手"
     translated: "Hand guard"
@@ -3153,14 +2184,8 @@
   - split: 10
     text: "每回合提升手部架势"
     translated: "Increase hand stance by each turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "161,护足,1,护足,无,0,0,1,0,0,每回合提升足部架势,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "护足"
-    translated: "Footrest"
   - split: 3
     text: "护足"
     translated: "Footrest"
@@ -3170,14 +2195,8 @@
   - split: 10
     text: "每回合提升足部架势"
     translated: "Increase leg stance each turn"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "162,护体真气,0.02,无,无,1,1,1,0,0,消耗内力抵消伤害,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "护体真气"
-    translated: "Bodyguard True Qi"
   - split: 3
     text: "无"
     translated: "None"
@@ -3187,14 +2206,8 @@
   - split: 10
     text: "消耗内力抵消伤害"
     translated: "Consume Inner Power to Counter Damage"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "163,反弹,0.005,无,无,1,1,1,0,0,降低所受伤害并反弹,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "反弹"
-    translated: "Bounce"
   - split: 3
     text: "无"
     translated: "None"
@@ -3204,14 +2217,8 @@
   - split: 10
     text: "降低所受伤害并反弹"
     translated: "Reduce damage taken and retaliate"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "164,减伤,0.5,减伤,无,0,0,1,0,0,固定减少伤害,我方,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "减伤"
-    translated: "Damage Reduction"
   - split: 3
     text: "减伤"
     translated: "Damage Reduction"
@@ -3221,14 +2228,8 @@
   - split: 10
     text: "固定减少伤害"
     translated: "Fixed reduced damage"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "165,定身,0.01,无,无,1,1,1,-1,0,停止行动条,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "定身"
-    translated: "Stun"
   - split: 3
     text: "无"
     translated: "None"
@@ -3238,14 +2239,8 @@
   - split: 10
     text: "停止行动条"
     translated: "Action halt order"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
 - raw: "166,移距,0.2,无,无,0,1,1,0,0,改变移动距离,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "移距"
-    translated: "Move distance"
   - split: 3
     text: "无"
     translated: "None"
@@ -3255,14 +2250,8 @@
   - split: 10
     text: "改变移动距离"
     translated: "Change movement distance"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "167,神行,0.01,遁地,无,1,0,1,3,1,移动距离+75%,我方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "神行"
-    translated: "Swift Step"
   - split: 3
     text: "遁地"
     translated: "Burrow through the earth"
@@ -3272,17 +2261,11 @@
   - split: 10
     text: "移动距离"
     translated: "Distance moved"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}+75%"
 - raw: "168,裂膝,0.01,裂膝,无,1,0,1,2,0,移动距离-75%,敌方,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "裂膝"
-    translated: "Split‑knee"
   - split: 3
     text: "裂膝"
     translated: "Split‑knee"
@@ -3292,17 +2275,11 @@
   - split: 10
     text: "移动距离"
     translated: "Distance moved"
-  - split: 11
-    text: "敌方"
-    translated: "Enemy"
   templates:
   - split: 10
     template: "{0}-75%"
 - raw: "169,破招,0.01,无,无,1,1,1,0,0,无视守招的架势防御,伤害,0,1,1,1,0"
   splits:
-  - split: 1
-    text: "破招"
-    translated: "Counterattack"
   - split: 3
     text: "无"
     translated: "None"
@@ -3312,14 +2289,8 @@
   - split: 10
     text: "无视守招的架势防御"
     translated: "Ignoring the guard's defensive stance"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "170,拆招,0.01,无,无,1,1,1,0,0,无视攻招的架势削减,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "拆招"
-    translated: "Counterattack"
   - split: 3
     text: "无"
     translated: "None"
@@ -3329,14 +2300,8 @@
   - split: 10
     text: "无视攻招的架势削减"
     translated: "Ignoring the attack stance to reduce its power"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "171,斗转,0.01,无,无,1,1,1,0,0,转移攻击至周边三格,伤害,0,2,1,1,0"
   splits:
-  - split: 1
-    text: "斗转"
-    translated: "Stars turn"
   - split: 3
     text: "无"
     translated: "None"
@@ -3346,14 +2311,8 @@
   - split: 10
     text: "转移攻击至周边三格"
     translated: "Transfer attack to the surrounding three squares"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "172,声望获取,0.01,无,无,1,1,1,0,0,声望获取,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "声望获取"
-    translated: "Reputation Points Earned"
   - split: 3
     text: "无"
     translated: "None"
@@ -3363,14 +2322,8 @@
   - split: 10
     text: "声望获取"
     translated: "Reputation Points Earned"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "173,功绩获取,0.01,无,无,1,1,1,0,0,弟子功绩,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "功绩获取"
-    translated: "Achievement Unlocked"
   - split: 3
     text: "无"
     translated: "None"
@@ -3380,14 +2333,8 @@
   - split: 10
     text: "弟子功绩"
     translated: "Disciple's Achievements"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "174,旅行速度,0.01,无,无,1,1,1,0,0,旅行速度,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "旅行速度"
-    translated: "Travel speed"
   - split: 3
     text: "无"
     translated: "None"
@@ -3397,14 +2344,8 @@
   - split: 10
     text: "旅行速度"
     translated: "Travel speed"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "175,疗伤效率,0.01,无,无,1,1,1,0,0,疗伤效率,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "疗伤效率"
-    translated: "Healing efficiency"
   - split: 3
     text: "无"
     translated: "None"
@@ -3414,14 +2355,8 @@
   - split: 10
     text: "疗伤效率"
     translated: "Healing efficiency"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "176,实战经验,0.02,无,无,1,1,1,0,0,实战经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "实战经验"
-    translated: "Combat experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3431,14 +2366,8 @@
   - split: 10
     text: "实战经验"
     translated: "Combat experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "177,理论经验,0.02,无,无,1,1,1,0,0,理论经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "理论经验"
-    translated: "Theoretical experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3448,14 +2377,8 @@
   - split: 10
     text: "理论经验"
     translated: "Theoretical experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "178,技艺经验,0.01,无,无,1,1,1,0,0,技艺经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "技艺经验"
-    translated: "Skill and experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3465,14 +2388,8 @@
   - split: 10
     text: "技艺经验"
     translated: "Skill and experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "179,内功经验,0.04,无,无,1,1,1,0,0,内功经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "内功经验"
-    translated: "Neigong experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3482,14 +2399,8 @@
   - split: 10
     text: "内功经验"
     translated: "Neigong experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "180,轻功经验,0.04,无,无,1,1,1,0,0,轻功经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "轻功经验"
-    translated: "Qinggong Experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3499,14 +2410,8 @@
   - split: 10
     text: "轻功经验"
     translated: "Qinggong Experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "181,绝技经验,0.04,无,无,1,1,1,0,0,绝技经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "绝技经验"
-    translated: "Master Skill Experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3516,14 +2421,8 @@
   - split: 10
     text: "绝技经验"
     translated: "Master Skill Experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "182,拳掌经验,0.04,无,无,1,1,1,0,0,拳掌经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "拳掌经验"
-    translated: "Punching and palm striking experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3533,14 +2432,8 @@
   - split: 10
     text: "拳掌经验"
     translated: "Punching and palm striking experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "183,剑法经验,0.04,无,无,1,1,1,0,0,剑法经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "剑法经验"
-    translated: "Swordsmanship Experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3550,14 +2443,8 @@
   - split: 10
     text: "剑法经验"
     translated: "Swordsmanship Experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "184,刀法经验,0.04,无,无,1,1,1,0,0,刀法经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "刀法经验"
-    translated: "Blade Technique Experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3567,14 +2454,8 @@
   - split: 10
     text: "刀法经验"
     translated: "Blade Technique Experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "185,长兵经验,0.04,无,无,1,1,1,0,0,长兵经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "长兵经验"
-    translated: "Long‑sword experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3584,14 +2465,8 @@
   - split: 10
     text: "长兵经验"
     translated: "Long‑sword experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "186,奇门经验,0.04,无,无,1,1,1,0,0,奇门经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "奇门经验"
-    translated: "Dungeon XP"
   - split: 3
     text: "无"
     translated: "None"
@@ -3601,14 +2476,8 @@
   - split: 10
     text: "奇门经验"
     translated: "Dungeon XP"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "187,射术经验,0.04,无,无,1,1,1,0,0,射术经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "射术经验"
-    translated: "Archery experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3618,14 +2487,8 @@
   - split: 10
     text: "射术经验"
     translated: "Archery experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "188,医术经验,0.04,无,无,1,1,1,0,0,医术经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "医术经验"
-    translated: "Medical experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3635,14 +2498,8 @@
   - split: 10
     text: "医术经验"
     translated: "Medical experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "189,毒术经验,0.04,无,无,1,1,1,0,0,毒术经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "毒术经验"
-    translated: "Poison technique experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3652,14 +2509,8 @@
   - split: 10
     text: "毒术经验"
     translated: "Poison technique experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "190,学识经验,0.04,无,无,1,1,1,0,0,学识经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "学识经验"
-    translated: "Scholarly experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3669,14 +2520,8 @@
   - split: 10
     text: "学识经验"
     translated: "Scholarly experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "191,口才经验,0.04,无,无,1,1,1,0,0,口才经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "口才经验"
-    translated: "Communication skills experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3686,14 +2531,8 @@
   - split: 10
     text: "口才经验"
     translated: "Communication skills experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "192,采伐经验,0.04,无,无,1,1,1,0,0,采伐经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "采伐经验"
-    translated: "Logging experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3703,14 +2542,8 @@
   - split: 10
     text: "采伐经验"
     translated: "Logging experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "193,木植经验,0.04,无,无,1,1,1,0,0,木植经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "木植经验"
-    translated: "Tree planting experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3720,14 +2553,8 @@
   - split: 10
     text: "木植经验"
     translated: "Tree planting experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "194,锻造经验,0.04,无,无,1,1,1,0,0,锻造经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "锻造经验"
-    translated: "Smithing experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3737,14 +2564,8 @@
   - split: 10
     text: "锻造经验"
     translated: "Smithing experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "195,炼药经验,0.04,无,无,1,1,1,0,0,炼药经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "炼药经验"
-    translated: "Alchemical experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3754,14 +2575,8 @@
   - split: 10
     text: "炼药经验"
     translated: "Alchemical experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "196,烹饪经验,0.04,无,无,1,1,1,0,0,烹饪经验,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "烹饪经验"
-    translated: "Cooking experience"
   - split: 3
     text: "无"
     translated: "None"
@@ -3771,14 +2586,8 @@
   - split: 10
     text: "烹饪经验"
     translated: "Cooking experience"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "197,买卖优势,0.01,无,无,1,1,1,0,0,买卖优势,伤害,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "买卖优势"
-    translated: "Advantage of Buying and Selling"
   - split: 3
     text: "无"
     translated: "None"
@@ -3788,14 +2597,8 @@
   - split: 10
     text: "买卖优势"
     translated: "Advantage of Buying and Selling"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "198,拳掌距离,1,无,无,0,1,1,0,0,拳掌攻击距离,我方,1,0,1,0,0"
   splits:
-  - split: 1
-    text: "拳掌距离"
-    translated: "Fist and palm distance"
   - split: 3
     text: "无"
     translated: "None"
@@ -3805,14 +2608,8 @@
   - split: 10
     text: "拳掌攻击距离"
     translated: "Punch and palm attack range"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "199,剑法距离,1,无,无,0,1,1,0,0,剑法攻击距离,我方,1,0,1,0,0"
   splits:
-  - split: 1
-    text: "剑法距离"
-    translated: "Sword technique range"
   - split: 3
     text: "无"
     translated: "None"
@@ -3822,14 +2619,8 @@
   - split: 10
     text: "剑法攻击距离"
     translated: "Sword technique attack range"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "200,刀法距离,1,无,无,0,1,1,0,0,刀法攻击距离,我方,1,0,1,0,0"
   splits:
-  - split: 1
-    text: "刀法距离"
-    translated: "Blade technique distance"
   - split: 3
     text: "无"
     translated: "None"
@@ -3839,14 +2630,8 @@
   - split: 10
     text: "刀法攻击距离"
     translated: "Blade Technique Attack Range"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "201,长兵距离,1,无,无,0,1,1,0,0,长兵攻击距离,我方,1,0,1,0,0"
   splits:
-  - split: 1
-    text: "长兵距离"
-    translated: "Long‑range weaponry"
   - split: 3
     text: "无"
     translated: "None"
@@ -3856,14 +2641,8 @@
   - split: 10
     text: "长兵攻击距离"
     translated: "Long‑range attack distance"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "202,奇门距离,1,无,无,0,1,1,0,0,奇门攻击距离,我方,1,0,1,0,0"
   splits:
-  - split: 1
-    text: "奇门距离"
-    translated: "Distance from Qi Men"
   - split: 3
     text: "无"
     translated: "None"
@@ -3873,14 +2652,8 @@
   - split: 10
     text: "奇门攻击距离"
     translated: "Odd Door attack range"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "203,射术距离,1,无,无,0,1,1,0,0,射术攻击距离,我方,1,0,1,0,0"
   splits:
-  - split: 1
-    text: "射术距离"
-    translated: "Archery distance"
   - split: 3
     text: "无"
     translated: "None"
@@ -3890,14 +2663,8 @@
   - split: 10
     text: "射术攻击距离"
     translated: "Archery attack range"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "204,坐骑加成,0.004,无,无,1,1,1,0,0,坐骑加成轻功/力道/体质/意志,我方,0,0,0,1,0"
   splits:
-  - split: 1
-    text: "坐骑加成"
-    translated: "Mount bonus"
   - split: 3
     text: "无"
     translated: "None"
@@ -3919,17 +2686,11 @@
     subIndex: 3
     text: "意志"
     translated: "Willpower"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
   templates:
   - split: 10
     template: "{0}/{1}/{2}/{3}"
 - raw: "205,装备强化,0.002,无,无,1,1,1,0,0,提升装备基础效果,我方,0,0,0,1,0"
   splits:
-  - split: 1
-    text: "装备强化"
-    translated: "Equipment Strengthening"
   - split: 3
     text: "无"
     translated: "None"
@@ -3939,14 +2700,8 @@
   - split: 10
     text: "提升装备基础效果"
     translated: "Enhance base equipment effects"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "206,药性,0.02,无,无,1,1,0,0,0,提升药食效果并降低耐药,我方,0,0,1,1,0"
   splits:
-  - split: 1
-    text: "药性"
-    translated: "Drug properties"
   - split: 3
     text: "无"
     translated: "None"
@@ -3956,14 +2711,8 @@
   - split: 10
     text: "提升药食效果并降低耐药"
     translated: "Enhance the effects of food and medicine while reducing resistance"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "207,装备负重,1,重装,简装,0,1,0,0,0,提升装备负重,我方,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "装备负重"
-    translated: "Equipment load limit"
   - split: 3
     text: "重装"
     translated: "Rearmed"
@@ -3973,14 +2722,8 @@
   - split: 10
     text: "提升装备负重"
     translated: "Increase equipment burden capacity"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "208,机关伤害,0.02,无,无,1,1,1,0,0,提升机关建构的伤害,我方,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "机关伤害"
-    translated: "Mechanical damage"
   - split: 3
     text: "无"
     translated: "None"
@@ -3990,14 +2733,8 @@
   - split: 10
     text: "提升机关建构的伤害"
     translated: "Increase the damage of mechanism construction"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "209,机关速度,0.02,无,无,1,1,1,0,0,提升机关建构的速度,我方,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "机关速度"
-    translated: "Mechanism speed"
   - split: 3
     text: "无"
     translated: "None"
@@ -4007,14 +2744,8 @@
   - split: 10
     text: "提升机关建构的速度"
     translated: "Speed up the construction of mechanisms"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "210,机关耐久,0.02,无,无,1,1,1,0,0,提升机关建构的生命,我方,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "机关耐久"
-    translated: "Mechanism Durability"
   - split: 3
     text: "无"
     translated: "None"
@@ -4024,14 +2755,8 @@
   - split: 10
     text: "提升机关建构的生命"
     translated: "Boost the health of the mechanism construction"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "211,城防耐久,0.02,无,无,1,1,1,0,0,提升城防建筑耐久,我方,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "城防耐久"
-    translated: "City defense durability"
   - split: 3
     text: "无"
     translated: "None"
@@ -4041,14 +2766,8 @@
   - split: 10
     text: "提升城防建筑耐久"
     translated: "Increase the durability of city defense structures"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "212,好感获取,0.01,无,无,1,1,1,0,0,提升好感获取,我方,0,0,0,0,0"
   splits:
-  - split: 1
-    text: "好感获取"
-    translated: "Attraction Gain"
   - split: 3
     text: "无"
     translated: "None"
@@ -4058,14 +2777,8 @@
   - split: 10
     text: "提升好感获取"
     translated: "Increase affection points"
-  - split: 11
-    text: "我方"
-    translated: "Our side"
 - raw: "213,本门武学威力,0.01,无,无,1,1,0,0,0,本门武学威力,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "本门武学威力"
-    translated: "The power of this martial arts style"
   - split: 3
     text: "无"
     translated: "None"
@@ -4075,14 +2788,8 @@
   - split: 10
     text: "本门武学威力"
     translated: "The power of this martial arts style"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"
 - raw: "214,恶名减少,0.005,无,无,1,1,0,0,0,减少恶名,伤害,0,0,1,0,0"
   splits:
-  - split: 1
-    text: "恶名减少"
-    translated: "Reputation decrease"
   - split: 3
     text: "无"
     translated: "None"
@@ -4092,6 +2799,3 @@
   - split: 10
     text: "减少恶名"
     translated: "Reduce notoriety"
-  - split: 11
-    text: "伤害"
-    translated: "Damage"

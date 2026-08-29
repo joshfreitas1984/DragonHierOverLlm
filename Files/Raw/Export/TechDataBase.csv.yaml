@@ -7,623 +7,375 @@
     text: "描述"
   - split: 3
     text: "大类"
-  - split: 4
-    text: "加成对象"
   - split: 5
     text: "加成数值"
   - split: 6
     text: "固定成长"
   - split: 7
     text: "科研难度"
-  - split: 8
-    text: "消耗资源"
 - raw: "0,开宗立派,开宗立派,0,区域上限,1,TRUE,4,银钱"
   splits:
   - split: 1
     text: "开宗立派"
   - split: 2
     text: "开宗立派"
-  - split: 4
-    text: "区域上限"
-  - split: 8
-    text: "银钱"
 - raw: "1,人力管理,人力管理,0,弟子上限,2,FALSE,2,粮食"
   splits:
   - split: 1
     text: "人力管理"
   - split: 2
     text: "人力管理"
-  - split: 4
-    text: "弟子上限"
-  - split: 8
-    text: "粮食"
 - raw: "2,仓储管理,仓储管理,0,仓储容量,1,TRUE,1,粮食"
   splits:
   - split: 1
     text: "仓储管理"
   - split: 2
     text: "仓储管理"
-  - split: 4
-    text: "仓储容量"
-  - split: 8
-    text: "粮食"
 - raw: "3,疗伤管理,疗伤管理,0,疗伤效率,0.01,FALSE,1,药材"
   splits:
   - split: 1
     text: "疗伤管理"
   - split: 2
     text: "疗伤管理"
-  - split: 4
-    text: "疗伤效率"
-  - split: 8
-    text: "药材"
 - raw: "4,恢复管理,恢复管理,0,恢复效率,0.02,FALSE,1,药材"
   splits:
   - split: 1
     text: "恢复管理"
   - split: 2
     text: "恢复管理"
-  - split: 4
-    text: "恢复效率"
-  - split: 8
-    text: "药材"
 - raw: "5,建造管理,建造管理,0,建造速度,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "建造管理"
   - split: 2
     text: "建造管理"
-  - split: 4
-    text: "建造速度"
-  - split: 8
-    text: "银钱"
 - raw: "6,旅行管理,旅行管理,0,旅行速度,0.01,FALSE,1,银钱"
   splits:
   - split: 1
     text: "旅行管理"
   - split: 2
     text: "旅行管理"
-  - split: 4
-    text: "旅行速度"
-  - split: 8
-    text: "银钱"
 - raw: "7,生产管理,生产管理,0,资源点产量,0.01,FALSE,1,粮食"
   splits:
   - split: 1
     text: "生产管理"
   - split: 2
     text: "生产管理"
-  - split: 4
-    text: "资源点产量"
-  - split: 8
-    text: "粮食"
 - raw: "8,功绩管理,功绩管理,0,弟子功绩,0.02,FALSE,1,威望"
   splits:
   - split: 1
     text: "功绩管理"
   - split: 2
     text: "功绩管理"
-  - split: 4
-    text: "弟子功绩"
-  - split: 8
-    text: "威望"
 - raw: "9,科研管理,科研管理,0,科研效率,0.04,FALSE,1,银钱"
   splits:
   - split: 1
     text: "科研管理"
   - split: 2
     text: "科研管理"
-  - split: 4
-    text: "科研效率"
-  - split: 8
-    text: "银钱"
 - raw: "10,基础训练,基础训练,1,实战经验,0.01,FALSE,2,银钱"
   splits:
   - split: 1
     text: "基础训练"
   - split: 2
     text: "基础训练"
-  - split: 4
-    text: "实战经验"
-  - split: 8
-    text: "银钱"
 - raw: "11,文书管理,文书管理,1,理论经验,0.01,FALSE,2,银钱"
   splits:
   - split: 1
     text: "文书管理"
   - split: 2
     text: "文书管理"
-  - split: 4
-    text: "理论经验"
-  - split: 8
-    text: "银钱"
 - raw: "12,内功纲要,内功纲要,1,内功经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "内功纲要"
   - split: 2
     text: "内功纲要"
-  - split: 4
-    text: "内功经验"
-  - split: 8
-    text: "银钱"
 - raw: "13,轻功纲要,轻功纲要,1,轻功经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "轻功纲要"
   - split: 2
     text: "轻功纲要"
-  - split: 4
-    text: "轻功经验"
-  - split: 8
-    text: "银钱"
 - raw: "14,绝技纲要,绝技纲要,1,绝技经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "绝技纲要"
   - split: 2
     text: "绝技纲要"
-  - split: 4
-    text: "绝技经验"
-  - split: 8
-    text: "银钱"
 - raw: "15,拳掌纲要,拳掌纲要,1,拳掌经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "拳掌纲要"
   - split: 2
     text: "拳掌纲要"
-  - split: 4
-    text: "拳掌经验"
-  - split: 8
-    text: "银钱"
 - raw: "16,剑法纲要,剑法纲要,1,剑法经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "剑法纲要"
   - split: 2
     text: "剑法纲要"
-  - split: 4
-    text: "剑法经验"
-  - split: 8
-    text: "银钱"
 - raw: "17,刀法纲要,刀法纲要,1,刀法经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "刀法纲要"
   - split: 2
     text: "刀法纲要"
-  - split: 4
-    text: "刀法经验"
-  - split: 8
-    text: "银钱"
 - raw: "18,长兵纲要,长兵纲要,1,长兵经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "长兵纲要"
   - split: 2
     text: "长兵纲要"
-  - split: 4
-    text: "长兵经验"
-  - split: 8
-    text: "银钱"
 - raw: "19,奇门纲要,奇门纲要,1,奇门经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "奇门纲要"
   - split: 2
     text: "奇门纲要"
-  - split: 4
-    text: "奇门经验"
-  - split: 8
-    text: "银钱"
 - raw: "20,射术纲要,射术纲要,1,射术经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "射术纲要"
   - split: 2
     text: "射术纲要"
-  - split: 4
-    text: "射术经验"
-  - split: 8
-    text: "银钱"
 - raw: "21,日常修习,日常修习,2,技艺经验,0.01,FALSE,3,银钱"
   splits:
   - split: 1
     text: "日常修习"
   - split: 2
     text: "日常修习"
-  - split: 4
-    text: "技艺经验"
-  - split: 8
-    text: "银钱"
 - raw: "22,医术纲要,医术纲要,2,医术经验,0.02,FALSE,1,药材"
   splits:
   - split: 1
     text: "医术纲要"
   - split: 2
     text: "医术纲要"
-  - split: 4
-    text: "医术经验"
-  - split: 8
-    text: "药材"
 - raw: "23,毒术纲要,毒术纲要,2,毒术经验,0.02,FALSE,1,药材"
   splits:
   - split: 1
     text: "毒术纲要"
   - split: 2
     text: "毒术纲要"
-  - split: 4
-    text: "毒术经验"
-  - split: 8
-    text: "药材"
 - raw: "24,学识纲要,学识纲要,2,学识经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "学识纲要"
   - split: 2
     text: "学识纲要"
-  - split: 4
-    text: "学识经验"
-  - split: 8
-    text: "银钱"
 - raw: "25,口才纲要,口才纲要,2,口才经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
     text: "口才纲要"
   - split: 2
     text: "口才纲要"
-  - split: 4
-    text: "口才经验"
-  - split: 8
-    text: "银钱"
 - raw: "26,采伐纲要,采伐纲要,2,采伐经验,0.02,FALSE,1,粮食"
   splits:
   - split: 1
     text: "采伐纲要"
   - split: 2
     text: "采伐纲要"
-  - split: 4
-    text: "采伐经验"
-  - split: 8
-    text: "粮食"
 - raw: "27,木植纲要,木植纲要,2,木植经验,0.02,FALSE,1,木料"
   splits:
   - split: 1
     text: "木植纲要"
   - split: 2
     text: "木植纲要"
-  - split: 4
-    text: "木植经验"
-  - split: 8
-    text: "木料"
 - raw: "28,锻造纲要,锻造纲要,2,锻造经验,0.02,FALSE,1,矿石"
   splits:
   - split: 1
     text: "锻造纲要"
   - split: 2
     text: "锻造纲要"
-  - split: 4
-    text: "锻造经验"
-  - split: 8
-    text: "矿石"
 - raw: "29,炼药纲要,炼药纲要,2,炼药经验,0.02,FALSE,1,药材"
   splits:
   - split: 1
     text: "炼药纲要"
   - split: 2
     text: "炼药纲要"
-  - split: 4
-    text: "炼药经验"
-  - split: 8
-    text: "药材"
 - raw: "30,烹饪纲要,烹饪纲要,2,烹饪经验,0.02,FALSE,1,粮食"
   splits:
   - split: 1
     text: "烹饪纲要"
   - split: 2
     text: "烹饪纲要"
-  - split: 4
-    text: "烹饪经验"
-  - split: 8
-    text: "粮食"
 - raw: "31,力道训练,力道训练,3,全员力道,1,TRUE,3,银钱"
   splits:
   - split: 1
     text: "力道训练"
   - split: 2
     text: "力道训练"
-  - split: 4
-    text: "全员力道"
-  - split: 8
-    text: "银钱"
 - raw: "32,灵巧训练,灵巧训练,3,全员灵巧,1,TRUE,3,银钱"
   splits:
   - split: 1
     text: "灵巧训练"
   - split: 2
     text: "灵巧训练"
-  - split: 4
-    text: "全员灵巧"
-  - split: 8
-    text: "银钱"
 - raw: "33,智力训练,智力训练,3,全员智力,1,TRUE,3,银钱"
   splits:
   - split: 1
     text: "智力训练"
   - split: 2
     text: "智力训练"
-  - split: 4
-    text: "全员智力"
-  - split: 8
-    text: "银钱"
 - raw: "34,意志训练,意志训练,3,全员意志,1,TRUE,3,银钱"
   splits:
   - split: 1
     text: "意志训练"
   - split: 2
     text: "意志训练"
-  - split: 4
-    text: "全员意志"
-  - split: 8
-    text: "银钱"
 - raw: "35,体质训练,体质训练,3,全员体质,1,TRUE,3,银钱"
   splits:
   - split: 1
     text: "体质训练"
   - split: 2
     text: "体质训练"
-  - split: 4
-    text: "全员体质"
-  - split: 8
-    text: "银钱"
 - raw: "36,经脉训练,经脉训练,3,全员经脉,1,TRUE,3,银钱"
   splits:
   - split: 1
     text: "经脉训练"
   - split: 2
     text: "经脉训练"
-  - split: 4
-    text: "全员经脉"
-  - split: 8
-    text: "银钱"
 - raw: "37,内功训练,内功训练,3,全员内功,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "内功训练"
   - split: 2
     text: "内功训练"
-  - split: 4
-    text: "全员内功"
-  - split: 8
-    text: "银钱"
 - raw: "38,轻功训练,轻功训练,3,全员轻功,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "轻功训练"
   - split: 2
     text: "轻功训练"
-  - split: 4
-    text: "全员轻功"
-  - split: 8
-    text: "银钱"
 - raw: "39,绝技训练,绝技训练,3,全员绝技,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "绝技训练"
   - split: 2
     text: "绝技训练"
-  - split: 4
-    text: "全员绝技"
-  - split: 8
-    text: "银钱"
 - raw: "40,拳掌训练,拳掌训练,3,全员拳掌,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "拳掌训练"
   - split: 2
     text: "拳掌训练"
-  - split: 4
-    text: "全员拳掌"
-  - split: 8
-    text: "银钱"
 - raw: "41,剑法训练,剑法训练,3,全员剑法,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "剑法训练"
   - split: 2
     text: "剑法训练"
-  - split: 4
-    text: "全员剑法"
-  - split: 8
-    text: "银钱"
 - raw: "42,刀法训练,刀法训练,3,全员刀法,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "刀法训练"
   - split: 2
     text: "刀法训练"
-  - split: 4
-    text: "全员刀法"
-  - split: 8
-    text: "银钱"
 - raw: "43,长兵训练,长兵训练,3,全员长兵,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "长兵训练"
   - split: 2
     text: "长兵训练"
-  - split: 4
-    text: "全员长兵"
-  - split: 8
-    text: "银钱"
 - raw: "44,奇门训练,奇门训练,3,全员奇门,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "奇门训练"
   - split: 2
     text: "奇门训练"
-  - split: 4
-    text: "全员奇门"
-  - split: 8
-    text: "银钱"
 - raw: "45,射术训练,射术训练,3,全员射术,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "射术训练"
   - split: 2
     text: "射术训练"
-  - split: 4
-    text: "全员射术"
-  - split: 8
-    text: "银钱"
 - raw: "46,医术训练,医术训练,3,全员医术,1,TRUE,1,药材"
   splits:
   - split: 1
     text: "医术训练"
   - split: 2
     text: "医术训练"
-  - split: 4
-    text: "全员医术"
-  - split: 8
-    text: "药材"
 - raw: "47,毒术训练,毒术训练,3,全员毒术,1,TRUE,1,药材"
   splits:
   - split: 1
     text: "毒术训练"
   - split: 2
     text: "毒术训练"
-  - split: 4
-    text: "全员毒术"
-  - split: 8
-    text: "药材"
 - raw: "48,学识训练,学识训练,3,全员学识,1,TRUE,1,银钱"
   splits:
   - split: 1
     text: "学识训练"
   - split: 2
     text: "学识训练"
-  - split: 4
-    text: "全员学识"
-  - split: 8
-    text: "银钱"
 - raw: "49,口才训练,口才训练,3,全员口才,1,TRUE,1,银钱"
   splits:
   - split: 1
     text: "口才训练"
   - split: 2
     text: "口才训练"
-  - split: 4
-    text: "全员口才"
-  - split: 8
-    text: "银钱"
 - raw: "50,采伐训练,采伐训练,3,全员采伐,1,TRUE,1,粮食"
   splits:
   - split: 1
     text: "采伐训练"
   - split: 2
     text: "采伐训练"
-  - split: 4
-    text: "全员采伐"
-  - split: 8
-    text: "粮食"
 - raw: "51,木植训练,木植训练,3,全员木植,1,TRUE,1,木料"
   splits:
   - split: 1
     text: "木植训练"
   - split: 2
     text: "木植训练"
-  - split: 4
-    text: "全员木植"
-  - split: 8
-    text: "木料"
 - raw: "52,锻造训练,锻造训练,3,全员锻造,1,TRUE,1,矿石"
   splits:
   - split: 1
     text: "锻造训练"
   - split: 2
     text: "锻造训练"
-  - split: 4
-    text: "全员锻造"
-  - split: 8
-    text: "矿石"
 - raw: "53,炼药训练,炼药训练,3,全员炼药,1,TRUE,1,药材"
   splits:
   - split: 1
     text: "炼药训练"
   - split: 2
     text: "炼药训练"
-  - split: 4
-    text: "全员炼药"
-  - split: 8
-    text: "药材"
 - raw: "54,烹饪训练,烹饪训练,3,全员烹饪,1,TRUE,1,粮食"
   splits:
   - split: 1
     text: "烹饪训练"
   - split: 2
     text: "烹饪训练"
-  - split: 4
-    text: "全员烹饪"
-  - split: 8
-    text: "粮食"
 - raw: "55,巡逻治安,巡逻治安,0,全域治安,1,TRUE,4,银钱"
   splits:
   - split: 1
     text: "巡逻治安"
   - split: 2
     text: "巡逻治安"
-  - split: 4
-    text: "全域治安"
-  - split: 8
-    text: "银钱"
 - raw: "56,赈济民心,赈济民心,0,全域民心,1,TRUE,4,银钱"
   splits:
   - split: 1
     text: "赈济民心"
   - split: 2
     text: "赈济民心"
-  - split: 4
-    text: "全域民心"
-  - split: 8
-    text: "银钱"
 - raw: "57,稳固防御,稳固防御,0,全域防御,1,TRUE,4,银钱"
   splits:
   - split: 1
     text: "稳固防御"
   - split: 2
     text: "稳固防御"
-  - split: 4
-    text: "全域防御"
-  - split: 8
-    text: "银钱"
 - raw: "58,户籍人口,户籍人口,0,全域人口,5,TRUE,4,粮食"
   splits:
   - split: 1
     text: "户籍人口"
   - split: 2
     text: "户籍人口"
-  - split: 4
-    text: "全域人口"
-  - split: 8
-    text: "粮食"
 - raw: "59,城防工事,城防工事,0,城防耐久,0.02,FALSE,1,木料"
   splits:
   - split: 1
     text: "城防工事"
   - split: 2
     text: "城防工事"
-  - split: 4
-    text: "城防耐久"
-  - split: 8
-    text: "木料"
 - raw: "60,分舵管理,分舵管理,0,区域上限,1,TRUE,4,银钱"
   splits:
   - split: 1
     text: "分舵管理"
   - split: 2
     text: "分舵管理"
-  - split: 4
-    text: "区域上限"
-  - split: 8
-    text: "银钱"

@@ -3,9 +3,6 @@
   - split: 1
     text: "名字"
     translated: "Name"
-  - split: 2
-    text: "类别"
-    translated: "Category"
   - split: 4
     text: "初始占领门派"
     translated: "Initial Occupied Sect"
@@ -41,9 +38,6 @@
   - split: 1
     text: "京城"
     translated: "Capital City"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "棋谱"
     translated: "Chess notation"
@@ -52,9 +46,6 @@
   - split: 1
     text: "杭州"
     translated: "Hangzhou"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "字帖"
     translated: "Calligraphy model sheet"
@@ -63,9 +54,6 @@
   - split: 1
     text: "福州"
     translated: "Fuzhou"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "木材"
     translated: "Wood"
@@ -81,9 +69,6 @@
   - split: 1
     text: "大理"
     translated: "Dali"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "食材"
     translated: "Ingredients"
@@ -99,9 +84,6 @@
   - split: 1
     text: "幽州"
     translated: "Youzhou"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "香炉"
     translated: "Incense burner"
@@ -110,9 +92,6 @@
   - split: 1
     text: "晋阳"
     translated: "Jinyang"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "画本"
     translated: "Comic book"
@@ -121,9 +100,6 @@
   - split: 1
     text: "成都"
     translated: "Chengdu"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "酒器"
     translated: "Wine vessel"
@@ -132,9 +108,6 @@
   - split: 1
     text: "西凉"
     translated: "Xiliang"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "珠玉"
     translated: "Jewel"
@@ -143,9 +116,6 @@
   - split: 1
     text: "江陵"
     translated: "Jiangling"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "史书"
     translated: "Chronicles"
@@ -154,9 +124,6 @@
   - split: 1
     text: "扬州"
     translated: "Yangzhou"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "服饰"
     translated: "Clothing"
@@ -165,9 +132,6 @@
   - split: 1
     text: "乐山镇"
     translated: "Leshan Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -176,9 +140,6 @@
   - split: 1
     text: "太平乡"
     translated: "Taiping Township"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -187,9 +148,6 @@
   - split: 1
     text: "剑川镇"
     translated: "Jianchuan Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -198,9 +156,6 @@
   - split: 1
     text: "清远乡"
     translated: "Qingyuan Township"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -209,9 +164,6 @@
   - split: 1
     text: "富阳镇"
     translated: "Fuyang Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -220,9 +172,6 @@
   - split: 1
     text: "那曲乡"
     translated: "Nagqu Township"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -231,9 +180,6 @@
   - split: 1
     text: "玉溪村"
     translated: "Yuxi Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -242,9 +188,6 @@
   - split: 1
     text: "灵台村"
     translated: "Lingtai Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -253,9 +196,6 @@
   - split: 1
     text: "酒泉村"
     translated: "Jiuquan Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -264,9 +204,6 @@
   - split: 1
     text: "陇西县"
     translated: "Longxi County"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -275,9 +212,6 @@
   - split: 1
     text: "河内乡"
     translated: "Hanoi Township"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -286,9 +220,6 @@
   - split: 1
     text: "昌都镇"
     translated: "Qamdo Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -297,9 +228,6 @@
   - split: 1
     text: "巴陵村"
     translated: "Baling Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -308,9 +236,6 @@
   - split: 1
     text: "怀柔村"
     translated: "Huairou Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -319,9 +244,6 @@
   - split: 1
     text: "当涂镇"
     translated: "Dangtu Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -330,9 +252,6 @@
   - split: 1
     text: "高邮镇"
     translated: "Gaoyou Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -341,9 +260,6 @@
   - split: 1
     text: "宁化乡"
     translated: "Ninghua Township"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -352,9 +268,6 @@
   - split: 1
     text: "襄垣村"
     translated: "Xiangyuan Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -363,9 +276,6 @@
   - split: 1
     text: "武邑乡"
     translated: "Wuyi Township"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -374,9 +284,6 @@
   - split: 1
     text: "云梦乡"
     translated: "Yunmeng Township"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -385,9 +292,6 @@
   - split: 1
     text: "长乐帮"
     translated: "Changle Gang"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -396,9 +300,6 @@
   - split: 1
     text: "唐门"
     translated: "Tang Clan"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -407,9 +308,6 @@
   - split: 1
     text: "药王谷"
     translated: "Medicine King Valley"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -418,9 +316,6 @@
   - split: 1
     text: "丐帮"
     translated: "Beggar Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -429,9 +324,6 @@
   - split: 1
     text: "飞龙门"
     translated: "Flying Dragon Gate"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -440,9 +332,6 @@
   - split: 1
     text: "茅山派"
     translated: "Maoshan Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -451,9 +340,6 @@
   - split: 1
     text: "铸剑山庄"
     translated: "Swordforging Manor"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -462,9 +348,6 @@
   - split: 1
     text: "五毒教"
     translated: "Five Poisons Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -473,9 +356,6 @@
   - split: 1
     text: "阎罗殿"
     translated: "Yama Hall"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -484,9 +364,6 @@
   - split: 1
     text: "大隐阁"
     translated: "Great Hidden Pavilion"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -495,9 +372,6 @@
   - split: 1
     text: "少林寺"
     translated: "Shaolin Temple"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -506,9 +380,6 @@
   - split: 1
     text: "武当派"
     translated: "Wudang Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -517,9 +388,6 @@
   - split: 1
     text: "霸刀门"
     translated: "Tyrant Blade Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -528,9 +396,6 @@
   - split: 1
     text: "蓬莱派"
     translated: "Penglai Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -539,9 +404,6 @@
   - split: 1
     text: "峨眉派"
     translated: "Emei Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -550,9 +412,6 @@
   - split: 1
     text: "崆峒派"
     translated: "Kongtong Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -561,9 +420,6 @@
   - split: 1
     text: "神机门"
     translated: "Divine Mechanism Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -572,9 +428,6 @@
   - split: 1
     text: "霹雳堂"
     translated: "Thunderclap Hall"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -583,9 +436,6 @@
   - split: 1
     text: "金刚密宗"
     translated: "Vajrayana Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -594,9 +444,6 @@
   - split: 1
     text: "天山派"
     translated: "Tianshan Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -605,9 +452,6 @@
   - split: 1
     text: "聚义门"
     translated: "Righteous Alliance Gate"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -616,9 +460,6 @@
   - split: 1
     text: "黄河帮"
     translated: "Yellow River Gang"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -627,9 +468,6 @@
   - split: 1
     text: "八卦门"
     translated: "Bagua Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -638,9 +476,6 @@
   - split: 1
     text: "海沙帮"
     translated: "Sea Sand Gang"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -649,9 +484,6 @@
   - split: 1
     text: "铁掌帮"
     translated: "Iron Palm Gang"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -660,9 +492,6 @@
   - split: 1
     text: "仙霞派"
     translated: "Xianxia Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -671,9 +500,6 @@
   - split: 1
     text: "巨鲸帮"
     translated: "Giant Whale Gang"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -682,9 +508,6 @@
   - split: 1
     text: "金龙帮"
     translated: "Golden Dragon Gang"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -693,9 +516,6 @@
   - split: 1
     text: "青城派"
     translated: "Qingcheng Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -704,9 +524,6 @@
   - split: 1
     text: "伏牛派"
     translated: "Funiu Sect"
-  - split: 2
-    text: "门派"
-    translated: "Sect"
   - split: 10
     text: "无"
     translated: "None"
@@ -715,9 +532,6 @@
   - split: 1
     text: "逻娑"
     translated: "Luosuo"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "药引"
     translated: "Medicine guide"
@@ -726,9 +540,6 @@
   - split: 1
     text: "朱仙镇"
     translated: "Zhuxian Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -737,9 +548,6 @@
   - split: 1
     text: "景德镇"
     translated: "Jingdezhen"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -748,9 +556,6 @@
   - split: 1
     text: "佛山镇"
     translated: "Foshan Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -759,9 +564,6 @@
   - split: 1
     text: "腾冲府"
     translated: "Tengchong Prefecture"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -770,9 +572,6 @@
   - split: 1
     text: "板桥镇"
     translated: "Banqiao Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -781,9 +580,6 @@
   - split: 1
     text: "灵州"
     translated: "Lingzhou"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "乐器"
     translated: "Musical instrument"
@@ -792,9 +588,6 @@
   - split: 1
     text: "应天"
     translated: "Yingtian"
-  - split: 2
-    text: "城市"
-    translated: "City"
   - split: 10
     text: "典籍"
     translated: "Ancient texts"
@@ -803,9 +596,6 @@
   - split: 1
     text: "墨脱县"
     translated: "Motuo County"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -814,9 +604,6 @@
   - split: 1
     text: "七里镇"
     translated: "Qili Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -825,9 +612,6 @@
   - split: 1
     text: "永昌村"
     translated: "Yongchang Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -836,9 +620,6 @@
   - split: 1
     text: "蚕丛村"
     translated: "Cancong Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -847,9 +628,6 @@
   - split: 1
     text: "子午镇"
     translated: "Ziwu Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -858,9 +636,6 @@
   - split: 1
     text: "章丘镇"
     translated: "Zhangqiu Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -869,9 +644,6 @@
   - split: 1
     text: "威远村"
     translated: "Weiyuan Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -880,9 +652,6 @@
   - split: 1
     text: "枫桥镇"
     translated: "Fengqiao Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -891,9 +660,6 @@
   - split: 1
     text: "余杭镇"
     translated: "Yuhang Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -902,9 +668,6 @@
   - split: 1
     text: "普洱村"
     translated: "Pu'er Village"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"
@@ -913,9 +676,6 @@
   - split: 1
     text: "扶胥镇"
     translated: "Fuxu Town"
-  - split: 2
-    text: "村镇"
-    translated: "Village"
   - split: 10
     text: "无"
     translated: "None"

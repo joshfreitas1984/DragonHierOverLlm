@@ -511,14 +511,20 @@ internal static class DynamicStringPatches
         if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
         if (!ContainsCjk(__result)) return;
 
+        // TEMP DIAGNOSTIC - see matching note in FormatPrefix above.
+        var isDiagTarget = __result.Contains("向来秉持") || __result.Contains("Has always upheld");
+        if (isDiagTarget) SafeDebugLog($"[GenericPostfix] ENTER __result={DebugEscape(__result)}");
+
         _inFormatConcatPatch = true;
         try
         {
             var result = __result;
             if (_compiledTemplates.Count > 0)
                 result = ApplyTemplates(result, _compiledTemplates);
+            if (isDiagTarget) SafeDebugLog($"[GenericPostfix] AFTER templates={DebugEscape(result)}");
             if (_dictionary.Count > 0)
                 result = ApplyDictionary(result, _dictionary);
+            if (isDiagTarget) SafeDebugLog($"[GenericPostfix] AFTER dictionary={DebugEscape(result)}");
             __result = result;
         }
         catch (Exception ex)
@@ -546,10 +552,25 @@ internal static class DynamicStringPatches
         if (string.IsNullOrEmpty(format) || _templateDictionary.Count == 0 || _inFormatConcatPatch) return;
         if (!ContainsCjk(format)) return;
 
+        // TEMP DIAGNOSTIC (2026-08-29, "向来秉持" template not translating - see repo memory):
+        // confirms whether FormatPrefix is entered AT ALL for this exact call, and whether the
+        // literal entry.Raw Contains match against `format` succeeds, before guessing further.
+        // Remove once root-caused (see dragonheirplugin.instructions.md's established pattern for
+        // this: docs/dynamicstringpatches-template-regex-bug.md's SafeDebugLog precedent).
+        var isDiagTarget = format.Contains("向来秉持");
+        if (isDiagTarget) SafeDebugLog($"[FormatPrefix] ENTER format={DebugEscape(format)}");
+
         _inFormatConcatPatch = true;
         try
         {
+            if (isDiagTarget)
+            {
+                var formatSnapshot = format;
+                var matchedEntry = _templateDictionary.FirstOrDefault(e => !string.IsNullOrEmpty(e.Raw) && formatSnapshot.Contains(e.Raw));
+                SafeDebugLog($"[FormatPrefix] exact-raw-match={matchedEntry != null} matchedRaw={DebugEscape(matchedEntry?.Raw)}");
+            }
             format = ApplyDictionary(format, _templateDictionary);
+            if (isDiagTarget) SafeDebugLog($"[FormatPrefix] AFTER format={DebugEscape(format)}");
         }
         catch (Exception ex)
         {
@@ -558,6 +579,20 @@ internal static class DynamicStringPatches
         finally
         {
             _inFormatConcatPatch = false;
+        }
+    }
+
+    private static string DebugEscape(string s) => s?.Replace("\\", "\\\\").Replace("\n", "\\n").Replace("\r", "\\r");
+
+    private static void SafeDebugLog(string message)
+    {
+        try
+        {
+            File.AppendAllText(Path.Combine(PluginDir, "dynamicstring_debug.log"), $"{DateTime.Now:HH:mm:ss.fff} {message}{Environment.NewLine}");
+        }
+        catch
+        {
+            // Diagnostic-only, never let logging failure affect the actual patch behavior.
         }
     }
 
@@ -594,11 +629,16 @@ internal static class DynamicStringPatches
             if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
             if (!ContainsCjk(current)) return;
 
+            var isDiagTarget = current.Contains("向来秉持") || current.Contains("Has always upheld");
+            if (isDiagTarget) SafeDebugLog($"[ApplyToComponentText] ENTER current={DebugEscape(current)}");
+
             var replaced = current;
             if (_compiledTemplates.Count > 0)
                 replaced = ApplyTemplates(replaced, _compiledTemplates);
+            if (isDiagTarget) SafeDebugLog($"[ApplyToComponentText] AFTER templates={DebugEscape(replaced)}");
             if (_dictionary.Count > 0)
                 replaced = ApplyDictionary(replaced, _dictionary);
+            if (isDiagTarget) SafeDebugLog($"[ApplyToComponentText] AFTER dictionary={DebugEscape(replaced)}");
             if (replaced == current) return;
 
             _inTextSetterPostfix = true;

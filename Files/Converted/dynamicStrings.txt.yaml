@@ -429,8 +429,7 @@
     translated: "If you can continue to pledge loyalty to my #TargetForceName#, that would be most welcome."
   - subIndex: 2
     text: "但阁下若想另谋高就，本掌门也不便阻拦"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "But if you wish to seek a higher position elsewhere, this Sect Leader finds it inconvenient to obstruct."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "#PlayerName#乐善好施，侠义心肠果然名不虚传。\n此番情谊我一定铭记于心。"
@@ -714,9 +713,7 @@
     translated: "#PlayerName# attending the meeting for the first time, still needs to learn more. For this month, let's continue."
   - subIndex: 1
     text: "吧"
-    translated: "OK"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Okay"
   templates:
   - template: "{0}<b>⟦0⟧</b>{1}"
 - raw: "#PlayerName#功力果然高深莫测！\n若能拜你为师，我的武艺想必也能大为精进。"
@@ -1047,8 +1044,6 @@
   - subIndex: 1
     text: "吗？"
     translated: "?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 2
     text: "#PlayerName#虽非本门弟子，但在江湖中声名显赫，且与本座私交甚笃。"
     translated: "#PlayerName# is not an official disciple of our sect, yet he is renowned in the Jianghu, and our personal relationship is very close."
@@ -1066,9 +1061,7 @@
     translated: "#PlayerName# has a point. Then let's follow your advice and launch an offensive this month."
   - subIndex: 1
     text: "吧"
-    translated: "OK"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Okay"
   templates:
   - template: "{0}<b>⟦0⟧</b>{1}"
 - raw: "#PlayerName#所言确有道理。那就依你所言，本月转而进行<b>{0}</b>吧"
@@ -1077,9 +1070,7 @@
     translated: "#PlayerName# has a point. Then let's proceed as you suggested this month."
   - subIndex: 1
     text: "吧"
-    translated: "OK"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Okay"
   templates:
   - template: "{0}<b>⟦0⟧</b>{1}"
 - raw: "#PlayerName#所言虽有几分道理，但终究难以服众。本月还是继续<b>{0}</b>吧"
@@ -1088,9 +1079,7 @@
     translated: "#PlayerName#'s words have some merit, but they still struggle to convince everyone. This month, we should continue as planned."
   - subIndex: 1
     text: "吧"
-    translated: "OK"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Okay"
   templates:
   - template: "{0}<b>⟦0⟧</b>{1}"
 - raw: "#PlayerName#所言虽有几分道理，但终究难以服众。本月还是继续进攻<b>{0}</b>吧"
@@ -1099,9 +1088,7 @@
     translated: "#PlayerName#'s words may have some merit, but they still struggle to convince everyone. This month, we should continue our offensive."
   - subIndex: 1
     text: "吧"
-    translated: "OK"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Okay"
   templates:
   - template: "{0}<b>⟦0⟧</b>{1}"
 - raw: "#PlayerName#所说，不过陈词滥调，老生常谈而已。\n如今这江湖乱世之中，还需以实力为重，\n仅凭“道义”二字便想劝他人罢手，未免异想天开了。#PlayerName#请回吧！"
@@ -2295,8 +2282,7 @@
     translated: "#SourceInteractName# don't lose heart; remember that while magic is one step ahead, wisdom is ten steps forward."
   - subIndex: 1
     text: "只要吾辈中，像#PlayerName#这样的侠义之士不灭，"
-    translated: "As long as knights like #PlayerName# do not perish among us,"
-    flaggedForRetranslation: true
+    translated: "As long as righteous warriors like #PlayerName# are not extinguished among us,"
   - subIndex: 2
     text: "这天下终有海晏河清的一天！"
     translated: "There will finally be a day when the rivers and seas are clear!"
@@ -4599,8 +4585,6 @@
   splits:
   - text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   templates:
   - template: "<color=green>[{0}]</color>"
 - raw: "<color=green>经验已满\n在闭关室突破</color>"
@@ -6037,8 +6021,7 @@
     translated: "? I have mastered this martial art."
   - subIndex: 1
     text: "恐怕无需#PlayerName#再传授一遍了吧"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Probably doesn't need to be taught to #PlayerName# again, right?"
   templates:
   - template: "⟦0⟧{0}\n{1}"
 - raw: "{0}吗？我已学会这门武功，恐怕无需#PlayerName#再传授一遍了吧"
@@ -7870,16 +7853,16 @@
   - template: "⟦1⟧{0}⟦0⟧{1}\n{2}⟦1⟧{3}⟦0⟧{4}"
 - raw: "{1}之“{0}”精妙非常，\n我还需多加学习"
   splits:
-  - text: "之“"
-    translated: "'of"
+  - text: "之"
+    translated: "Of"
   - subIndex: 1
-    text: "”精妙非常，"
-    translated: "Exceedingly ingenious,'"
+    text: "精妙非常，"
+    translated: "Very ingenious,"
   - subIndex: 2
     text: "我还需多加学习"
     translated: "I still need to study more"
   templates:
-  - template: "⟦1⟧{0}⟦0⟧{1}\n{2}"
+  - template: "⟦1⟧{0}“⟦0⟧”{1}\n{2}"
 - raw: "{1}之理解颇为浅薄，\n还需多加学习才是"
   splits:
   - text: "之理解颇为浅薄，"
@@ -7933,16 +7916,16 @@
   - template: "⟦1⟧{0}+⟦0⟧%\n{1}⟦0⟧%{2}\n{3}<b>⟦2⟧</b>\n{4}⟦3⟧/{5}"
 - raw: "{1}可知这“{0}”之妙？\n容我娓娓道来"
   splits:
-  - text: "可知这“"
-    translated: "'Can it be that this"
+  - text: "可知这"
+    translated: "Can it be known that this"
   - subIndex: 1
-    text: "”之妙？"
-    translated: "Subtlety?'"
+    text: "之妙？"
+    translated: "Its subtlety?"
   - subIndex: 2
     text: "容我娓娓道来"
     translated: "Allow me to tell you in detail"
   templates:
-  - template: "⟦1⟧{0}⟦0⟧{1}\n{2}"
+  - template: "⟦1⟧{0}“⟦0⟧”{1}\n{2}"
 - raw: "{1}困难{0}</color>"
   splits:
   - text: "困难"
@@ -8142,8 +8125,6 @@
   - subIndex: 1
     text: "吗？"
     translated: "?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 2
     text: "此举需消耗"
     translated: "This action requires consumption of"
@@ -9195,17 +9176,16 @@
   - template: "{0}\n{1}"
 - raw: "不知对于“{0}”一事，\n{1}有何见地？"
   splits:
-  - text: "不知对于“"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+  - text: "不知对于"
+    translated: "I wonder about"
   - subIndex: 1
-    text: "”一事，"
-    translated: "One matter,'"
+    text: "一事，"
+    translated: "One thing,"
   - subIndex: 2
     text: "有何见地？"
     translated: "What's your opinion?"
   templates:
-  - template: "{0}⟦0⟧{1}\n⟦1⟧{2}"
+  - template: "{0}“⟦0⟧”{1}\n⟦1⟧{2}"
 - raw: "不知阁下想征收本门哪种资源？\n（每次征收1000点对方门派资源，每月最多1次）"
   splits:
   - text: "不知阁下想征收本门哪种资源？"
@@ -9297,9 +9277,7 @@
     translated: ",One must apprentice under the Sect Leader and may not privately take on disciples."
   - subIndex: 2
     text: "此前混迹江湖之时所拜师傅或所收弟子，也都就此作罢，还望知悉。"
-    translated: "Previously, those I served as a disciple under or those I taught in the Jianghu are no longer with me. I hope you understand."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Master,师傅,"
+    translated: "Disciples and masters from my time wandering the Jianghu have all parted ways, I hope you understand."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "不过为师向来赏罚分明，\n若是有人去年好吃懒做，偷奸耍滑，疏于练功或是不务门派正事，\n为师可就只好赏他一顿板子了哦！"
@@ -10552,8 +10530,6 @@
   - subIndex: 1
     text: "吗？"
     translated: "?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 2
     text: "耗时"
     translated: "Time‑consuming"
@@ -11142,13 +11118,13 @@
     text: "一席高论，"
     translated: "A profound remark,"
   - subIndex: 2
-    text: "才知自己“"
-    translated: "'only to realize that"
+    text: "才知自己"
+    translated: "Only to realize"
   - subIndex: 3
-    text: "”之贫弱"
-    translated: "Its poverty and weakness'"
+    text: "之贫弱"
+    translated: "Poverty and weakness"
   templates:
-  - template: "{0}⟦1⟧{1}\n{2}⟦0⟧{3}"
+  - template: "{0}⟦1⟧{1}\n{2}“⟦0⟧”{3}"
 - raw: "今日是新春佳节，为师也不絮絮叨叨，惹人厌烦了。\n你们热热闹闹去欢庆一番便是！"
   splits:
   - text: "今日是新春佳节，为师也不絮絮叨叨，惹人厌烦了。"
@@ -11348,16 +11324,16 @@
   - text: "从往来客人口中得知，附近"
     translated: "From travelers, I learned that nearby"
   - subIndex: 1
-    text: "周边似乎有一“"
-    translated: "'Seems there is a"
+    text: "周边似乎有一"
+    translated: "It seems there is something nearby"
   - subIndex: 2
-    text: "”之事发生。"
-    translated: "Has occurred'"
+    text: "之事发生。"
+    translated: "Incident occurred"
   - subIndex: 3
     text: "若是日后有空，不妨去查探一二。"
     translated: "If you have some free time in the future, you might want to investigate further."
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧{2}\n{3}"
+  - template: "{0}⟦0⟧{1}“⟦1⟧”{2}\n{3}"
 - raw: "从服务端刷新当前用户信息"
   splits:
   - text: "从服务端刷新当前用户信息"
@@ -11920,9 +11896,7 @@
     translated: "Rumor"
   - subIndex: 1
     text: "折戟沙场，从此消失在茫茫江湖之中。"
-    translated: "Fell in battle, from then on vanished into the vast world of martial arts."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Jianghu,江湖,"
+    translated: "Falling in battle, he vanished into the vast Jianghu."
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "传闻{0}花费{3}银两招募了{1}，以填补{2}之空缺。"
@@ -12333,9 +12307,7 @@
     translated: "You plotted for several days and finally determined the escape route."
   - subIndex: 1
     text: "这一日趁着守卫松懈，运起轻功一路躲藏，终于来到大牢门口。"
-    translated: "On this day, taking advantage of the guards' laxity, he mobilized his light agile skills to hide, finally arriving at the entrance of the great prison."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qinggong,轻功,"
+    translated: "On this day, taking advantage of the guards' laxity, he used Qinggong to dodge and weave, finally reaching the entrance of the great prison."
   - subIndex: 2
     text: "只需要打败门口零星几名守卫，便可最终逃出生天。"
     translated: "Just defeat the scattered guards at the entrance, and you can finally escape."
@@ -12356,8 +12328,7 @@
     translated: "You won this challenge,"
   - subIndex: 1
     text: "可以从藏经阁内选择一本秘籍作为奖励。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "You can choose a secret manual from within the Repository to receive as a reward."
   templates:
   - template: "{0}\n{1}"
 - raw: "你赢得了江湖挑战，可从商人身上任选一物作为奖品。"
@@ -13968,9 +13939,7 @@
 - raw: "刻苦练功，扎实本门武学根基"
   splits:
   - text: "刻苦练功，扎实本门武学根基"
-    translated: "PRACTICE DILIGENTLY TO STRENGTHEN THE FOUNDATIONS OF OUR SCHOOL'S WUGU WUYI"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Train diligently in martial arts, strengthening the fundamental roots of our school's combat techniques"
 - raw: "前些日子行走江湖时，恰好遇上件趣事。\n今日得空，不妨与#PlayerName#说道说道。"
   splits:
   - text: "前些日子行走江湖时，恰好遇上件趣事。"
@@ -14443,9 +14412,7 @@
     translated: "Beiming Xue"
   - subIndex: 1
     text: "负6"
-    translated: "‑6"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "6 is negative"
   templates:
   - template: "{0}-{1}-⟦0⟧"
 - raw: "北怪"
@@ -15993,11 +15960,11 @@
   - text: "听这几人所言，原来竟是"
     translated: "According to what these people said, it turns out that"
   - subIndex: 1
-    text: "周边，传出有一“"
-    translated: "'Surrounding the area, there came a"
+    text: "周边，传出有一"
+    translated: "Surrounding him, a noise began to spread"
   - subIndex: 2
-    text: "”的消息。"
-    translated: "News'"
+    text: "的消息。"
+    translated: "Message"
   - subIndex: 3
     text: "看来已有不少武林中人得知此事，前往一探究竟了。"
     translated: "It seems that quite a few individuals from the Wulin have already learned of this and are heading there to investigate."
@@ -16005,7 +15972,7 @@
     text: "若是即刻动身前往，或许还有希望分口肉吃......"
     translated: "If we set out right away, there might still be a chance to get a piece of the meat to eat....."
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧{2}\n{3}\n{4}"
+  - template: "{0}⟦0⟧{1}“⟦1⟧”{2}\n{3}\n{4}"
 - raw: "听闻"
   splits:
   - text: "听闻"
@@ -16253,9 +16220,7 @@
     translated: "Haha, it doesn't matter who the old man is."
   - subIndex: 1
     text: "重要的是，老朽这儿有一批前辈高人所遗奇珍异宝，欲留待赠与有缘人。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior,前辈,"
+    translated: "What's important is that I have a collection of treasured relics left by seniors, intended as a gift for those who are destined to receive them."
   templates:
   - template: "{0}\n{1}"
 - raw: "呵呵呵呵，说起来，往年都是为师给你们发红包。\n今天竟然让为师领上红包了，当真是风水轮流转呐！"
@@ -17111,16 +17076,16 @@
   - text: "哎呀#SourceInteractName#，我近来得到消息，"
     translated: "Oh, #SourceInteractName#, I've recently received some news,"
   - subIndex: 1
-    text: "在周遭有“"
-    translated: "'with surrounding"
+    text: "在周遭有"
+    translated: "Surrounded by"
   - subIndex: 2
-    text: "”等事件发生，"
-    translated: "Then these events occur,'"
+    text: "等事件发生，"
+    translated: "When the event occurs,"
   - subIndex: 3
     text: "本欲前往，奈何实在脱不开身。"
     translated: "Intent on going, yet I simply cannot free myself."
   templates:
-  - template: "{0}\n{1}⟦0⟧{2}\n{3}"
+  - template: "{0}\n{1}“⟦0⟧”{2}\n{3}"
 - raw: "哎呀#SourceInteractName#，我近来机缘巧合下得到一张藏宝图。\n本欲前往，奈何实在脱不开身。"
   splits:
   - text: "哎呀#SourceInteractName#，我近来机缘巧合下得到一张藏宝图。"
@@ -17237,8 +17202,7 @@
 - raw: "哎呀，不知不觉已日斜西山了......\n每每与#SourceInteractName#谈天，总能畅所欲言，乐而忘返，\n“不知东方之既白”也，#SourceInteractName#可有同感？"
   splits:
   - text: "哎呀，不知不觉已日斜西山了......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Oh, I didn't realize it was already sunset..."
   - subIndex: 1
     text: "每每与#SourceInteractName#谈天，总能畅所欲言，乐而忘返，"
     translated: "Discussing with #SourceInteractName# always allows me to speak my mind and forget to return, finding great joy in the conversation."
@@ -18578,8 +18542,6 @@
   - subIndex: 2
     text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 3
     text: "最终还是棋差一着，落败而归。"
     translated: "Ultimately, it was a move too late, resulting in a defeat."
@@ -18595,8 +18557,6 @@
   - subIndex: 2
     text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 3
     text: "最终还是棋差一着，落败而归。"
     translated: "Ultimately, it was a move too late, resulting in a defeat."
@@ -18860,9 +18820,7 @@
 - raw: "善哉善哉，施主积德行善，广结佛缘，日后必定大有成就。"
   splits:
   - text: "善哉善哉，施主积德行善，广结佛缘，日后必定大有成就。"
-    translated: "Well done, well done. Your benevolence and good deeds have widely cultivated Buddhist connections, and you will surely achieve great success in the future."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Benefactor,施主,"
+    translated: "Well well, benefactor, your good deeds and kindness have widely cultivated Buddhist connections. You are bound to achieve great success in the future."
 - raw: "善意"
   splits:
   - text: "善意"
@@ -21265,17 +21223,13 @@
 - raw: "好吧;FurtherInteractWithNPC"
   splits:
   - text: "好吧"
-    translated: "OK"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Okay"
   templates:
   - template: "{0};FurtherInteractWithNPC"
 - raw: "好吧;HideInteractUI"
   splits:
   - text: "好吧"
-    translated: "OK"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Okay"
   templates:
   - template: "{0};HideInteractUI"
 - raw: "好吧好吧;HideInteractUI"
@@ -21909,16 +21863,16 @@
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "妙哉妙哉，本门得此《{0}》，真可谓如鱼得水，如虎添翼！\n#PlayerName#此次劳苦功高，本掌门自会记在心里。"
   splits:
-  - text: "妙哉妙哉，本门得此《"
-    translated: "'Brilliant! Our sect has obtained the {variable}"
+  - text: "妙哉妙哉，本门得此"
+    translated: "Brilliant! Our sect has gained this."
   - subIndex: 1
-    text: "》，真可谓如鱼得水，如虎添翼！"
-    translated: ">, it's truly like a fish in water, like adding wings to a tiger!'"
+    text: "，真可谓如鱼得水，如虎添翼！"
+    translated: ",It's truly like a fish in water, a tiger getting wings!"
   - subIndex: 2
     text: "#PlayerName#此次劳苦功高，本掌门自会记在心里。"
     translated: "#PlayerName#, this time you have made significant contributions, and I will certainly remember it in my heart."
   templates:
-  - template: "{0}⟦0⟧{1}\n{2}"
+  - template: "{0}《⟦0⟧》{1}\n{2}"
 - raw: "妹"
   splits:
   - text: "妹"
@@ -21985,9 +21939,7 @@
     translated: "Commission?"
   - subIndex: 1
     text: "完成对方委托提升好感"
-    translated: "Translate all Chinese characters in this sentence to English."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Commission,委托,"
+    translated: "Complete the commission to raise reputation"
   templates:
   - template: "{0};AskNPCMission;;;♦{1}"
 - raw: "姜婉"
@@ -22027,9 +21979,7 @@
     translated: "Jiang Wan"
   - subIndex: 1
     text: "负3"
-    translated: "‑3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "3 has been defeated"
   templates:
   - template: "{0}-{1}"
 - raw: "姜师姐，正所谓读万卷书行万里路。\n我都在山上乖乖练了这么多天功了，也得下山历练历练不是？"
@@ -23367,13 +23317,13 @@
   - template: "{0}\n{1}\n{2}"
 - raw: "少侠确认要在此闭关三十日，遗忘“{0}”这一天赋吗？"
   splits:
-  - text: "少侠确认要在此闭关三十日，遗忘“"
-    translated: "'Young Hero, are you sure you want to retreat and meditate for thirty days and forget about"
+  - text: "少侠确认要在此闭关三十日，遗忘"
+    translated: "Young Hero, are you sure you want to seclude yourself for thirty days and forget?"
   - subIndex: 1
-    text: "”这一天赋吗？"
-    translated: "This talent, right?'"
+    text: "这一天赋吗？"
+    translated: "This potential ability, right?"
   templates:
-  - template: "{0}⟦0⟧{1}"
+  - template: "{0}“⟦0⟧”{1}"
 - raw: "少侠确认要在此闭关十日，遗忘这门#PlotInteractSkillName#吗？"
   splits:
   - text: "少侠确认要在此闭关十日，遗忘这门#PlotInteractSkillName#吗？"
@@ -24000,9 +23950,7 @@
     translated: "Though he failed to achieve any great deeds, he was driven by a passionate spirit."
   - subIndex: 2
     text: "也在江湖中留下了“愚侠”的美名。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Jianghu,江湖,"
+    translated: "Also left a good name in the Jianghu as the Foolish Hero."
   - subIndex: 3
     text: "他的事迹不断激励着资质平平者，勇敢踏上习武这条道路"
     translated: "His achievements continue to inspire those with average talent to bravely embark on the path of martial arts."
@@ -24950,8 +24898,6 @@
   - subIndex: 1
     text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 2
     text: "定要让你"
     translated: "You must be made to see this"
@@ -25743,8 +25689,7 @@
     translated: "Just making you run around for nothing, I feel a bit guilty too."
   - subIndex: 2
     text: "前几日恰好得了本秘籍，还请收下，作为我#TargetForceName#的谢礼好了。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The other day, I precisely obtained this secret technique. May I offer it to you as a token of gratitude for #TargetForceName#?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "慷慨赠送;GiveNpcAskItem"
@@ -25800,8 +25745,6 @@
   splits:
   - text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。\n敢问阁下尊姓大名，寻我有何贵干？"
   splits:
   - text: "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。"
@@ -25846,8 +25789,6 @@
   splits:
   - text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 1
     text: "向来秉持"
     translated: "Has always upheld"
@@ -25863,8 +25804,6 @@
   splits:
   - text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 1
     text: "向来秉持"
     translated: "Has always upheld"
@@ -25883,8 +25822,6 @@
   splits:
   - text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 1
     text: "武馆素来以"
     translated: "The martial arts dojo has always been known to"
@@ -25900,8 +25837,6 @@
   splits:
   - text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 1
     text: "，若#PlayerName#本月得空，还望能来"
     translated: ",If #PlayerName# is free this month, it would be great if you could come."
@@ -25912,18 +25847,16 @@
   - template: "{0}⟦1⟧{1}⟦0⟧{2}"
 - raw: "我“{0}”修为远胜{1}，\n又何必班门弄斧？"
   splits:
-  - text: "我“"
-    translated: "'I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+  - text: "我"
+    translated: "I"
   - subIndex: 1
-    text: "”修为远胜"
-    translated: "Cultivation far exceeds'"
+    text: "修为远胜"
+    translated: "Much stronger in cultivation"
   - subIndex: 2
     text: "又何必班门弄斧？"
     translated: "Why show off in front of a master carpenter?"
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧，\n{2}"
+  - template: "{0}“⟦0⟧”{1}⟦1⟧，\n{2}"
 - raw: "我一片真心诚意，#PlayerName#竟毫不领情？\n也罢！既然你无情，就休要怪我无义，咱们后会有期！"
   splits:
   - text: "我一片真心诚意，#PlayerName#竟毫不领情？"
@@ -25992,16 +25925,16 @@
   - template: "{0}\n{1}"
 - raw: "我之“{0}”竟远不及{1}，\n惭愧惭愧"
   splits:
-  - text: "我之“"
-    translated: "'My"
+  - text: "我之"
+    translated: "I who"
   - subIndex: 1
-    text: "”竟远不及"
-    translated: "Turns out it's far inferior'"
+    text: "竟远不及"
+    translated: "Is far less than"
   - subIndex: 2
     text: "惭愧惭愧"
     translated: "Embarrassed embarrassed"
   templates:
-  - template: "{0}⟦0⟧{1}⟦1⟧，\n{2}"
+  - template: "{0}“⟦0⟧”{1}⟦1⟧，\n{2}"
 - raw: "我之前得手一件珍宝，却始终无法辨明其真伪。\n#TargetInteractName#若不嫌弃，还请助我鉴别一二。\n（对方可鉴定学识要求{0}以下的珍宝，消耗1点好感）"
   splits:
   - text: "我之前得手一件珍宝，却始终无法辨明其真伪。"
@@ -26130,13 +26063,13 @@
   - template: "{0}⟦0⟧{1}"
 - raw: "我四处寻访得到这本《{0}》，还请掌门一阅。"
   splits:
-  - text: "我四处寻访得到这本《"
-    translated: "'I searched far and wide to obtain this"
+  - text: "我四处寻访得到这本"
+    translated: "I traveled far and wide to obtain this book."
   - subIndex: 1
-    text: "》，还请掌门一阅。"
-    translated: ">, I still request that Sect Master take the time to read this.'"
+    text: "，还请掌门一阅。"
+    translated: ",Still hoping the Sect Leader will take a look."
   templates:
-  - template: "{0}⟦0⟧{1}"
+  - template: "{0}《⟦0⟧》{1}"
 - raw: "我在{0}{1}，若#PlayerName#能在{2}日内赶来助阵，必当感激不尽！"
   splits:
   - text: "我在"
@@ -26182,9 +26115,7 @@
 - raw: "我对{0}忠心耿耿，任劳任怨，没想到竟落得这般下场，真是可悲可叹啊！\n事已至此，多说无益，#SourceInteractName#我们后会有期！"
   splits:
   - text: "我对"
-    translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "I oppose"
   - subIndex: 1
     text: "忠心耿耿，任劳任怨，没想到竟落得这般下场，真是可悲可叹啊！"
     translated: "Loyal to the core, willing to bear any hardship, never imagined ending up this way‑truly lamentable and pitiable!"
@@ -29250,8 +29181,7 @@
     translated: "Since #PlayerName# is making such a request, I am not unreasonable either."
   - subIndex: 1
     text: "有了这些银两，回到门派后也多少有个交代，既然如此就不多做打扰了，就此告辞！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "With these silver coins, I will at least have something to report back to the sect. Since that's the case, I won't trouble you any more. Goodbye!"
   templates:
   - template: "{0}\n{1}"
 - raw: "既然是#PlayerName#相求，我义不容辞，便随你走一趟吧！"
@@ -29853,8 +29783,7 @@
 - raw: "暂时没有;ChangeMeetNpcPlot"
   splits:
   - text: "暂时没有"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "There are no temporary changes at this time."
   templates:
   - template: "{0};ChangeMeetNpcPlot"
 - raw: "暗下毒手;PoisonInteractHeroSure"
@@ -31145,8 +31074,7 @@
     translated: "Haha, since this person is already dead,"
   - subIndex: 1
     text: "其所携秘籍装备，自当尽数归我#$PlayerName#所有！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "The secret manuals and equipment he carries should all be handed over to {#$PlayerName#}!"
   templates:
   - template: "{0}\n{1}"
 - raw: "桀桀桀桀，竟敢打我这千里名驹的主意，真是活得不耐烦了！\n小子，乖乖受死！"
@@ -31228,9 +31156,7 @@
 - raw: "桃李春风一杯酒，江湖夜雨十年灯"
   splits:
   - text: "桃李春风一杯酒，江湖夜雨十年灯"
-    translated: "Cherry blossoms and plum blossoms in spring breeze with a cup of wine, ten years of night rain in the rivers and seas with a lamp"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Jianghu,江湖,"
+    translated: "A cup of wine in the spring breeze under the peach and plum blossoms, ten years of lamp light in the night rain of the Jianghu."
 - raw: "梁门"
   splits:
   - text: "梁门"
@@ -32370,8 +32296,7 @@
     translated: "The combat tournament has officially begun! Please warm up and proceed to compete one‑on‑one!"
   - subIndex: 1
     text: "只要在比赛中取得前三名，就能获得赏银与奖品以示鼓励。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "As long as you place in the top three in the competition, you will receive a reward in the form of reward silver and prizes to encourage you."
   - subIndex: 2
     text: "望各位大侠奋勇争先，各展拳脚，最终都能取得满意名次！"
     translated: "I hope all of you Great Heroes will bravely compete and showcase your skills, ultimately achieving satisfying rankings!"
@@ -33345,15 +33270,13 @@
   - text: "消耗"
     translated: "Consume"
   - subIndex: 1
-    text: "天赋点领悟“"
-    translated: "'Gift Point Insight"
+    text: "天赋点领悟"
+    translated: "Talent point insight"
   - subIndex: 2
-    text: "”吗？"
-    translated: "?'"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    text: "吗？"
+    translated: "?"
   templates:
-  - template: "{0}⟦1⟧{1}⟦0⟧{2}⟦2⟧"
+  - template: "{0}⟦1⟧{1}“⟦0⟧”{2}⟦2⟧"
 - raw: "消耗内力助其调息;SaveCrazyNpcHelp"
   splits:
   - text: "消耗内力助其调息"
@@ -34155,9 +34078,7 @@
     translated: "Player"
   - subIndex: 1
     text: "负50"
-    translated: "‑50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "50 is defeated"
   templates:
   - template: "{0}-2-{1}"
 - raw: "玩家-200"
@@ -34615,13 +34536,10 @@
     translated: "Free and carefree during the weekdays, exploring mountains and waters wherever I went."
   - subIndex: 2
     text: "一旦仙霞派弟子遭遇强敌，她便会从天而降一招取胜，随后飘然而去。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Once an Xianxia Sect disciple faces a powerful opponent, she descends from the sky with a single move to secure victory, then disappears in a gentle breeze."
   - subIndex: 3
     text: "以至于在江湖中，留下了仙霞派之人有仙子护体的传说。"
-    translated: "Thus, in the Jianghu, there is the legend that the person of Xianxiamen has Immortal Protection."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Xianxia Sect,仙霞派,"
+    translated: "Thus, in the Jianghu, there arose the legend that the Xianxia Sect had daoists protected by fairy essences."
   templates:
   - template: "{0}\n{1}\n{2}\n{3}"
 - raw: "白玉杯"
@@ -34955,24 +34873,23 @@
   - text: "看来"
     translated: "Seems like"
   - subIndex: 1
-    text: "的“"
-    translated: "'of the"
+    text: "的"
+    translated: "Of"
   - subIndex: 2
-    text: "”修为，"
-    translated: "Cultivation,'"
+    text: "修为，"
+    translated: "Cultivation"
   - subIndex: 3
     text: "不过平平而已"
     translated: "But rather ordinary"
   templates:
-  - template: "{0}⟦1⟧{1}⟦0⟧{2}\n{3}"
+  - template: "{0}⟦1⟧{1}“⟦0⟧”{2}\n{3}"
 - raw: "看来人已到齐...\n各位同门，我作为#SourceForceDescribe#，今日在此置办宴席不为别事，\n只为感谢各位历来尽心竭力，为我#SourceForceName#所立之功劳！"
   splits:
   - text: "看来人已到齐..."
     translated: "It seems everyone is here..."
   - subIndex: 1
     text: "各位同门，我作为#SourceForceDescribe#，今日在此置办宴席不为别事，"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Fellow disciples, as the leader of the #SourceForceDescribe#, I am hosting this banquet today for no other reason,"
   - subIndex: 2
     text: "只为感谢各位历来尽心竭力，为我#SourceForceName#所立之功劳！"
     translated: "To express my sincere gratitude to all of you for your dedicated efforts for #SourceForceName#!"
@@ -35447,8 +35364,6 @@
   - subIndex: 1
     text: "吗？"
     translated: "?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "确定要认输吗？"
@@ -35502,8 +35417,6 @@
   - subIndex: 1
     text: "吗？"
     translated: "?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "确认取出;ItemOutExternalStorageSure"
@@ -36184,8 +36097,7 @@
 - raw: "符法点不足！"
   splits:
   - text: "符法点不足！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Insufficient magical points!"
 - raw: "第{0}件"
   splits:
   - text: "第"
@@ -36988,8 +36900,6 @@
   - subIndex: 1
     text: "予"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   templates:
   - template: "{0}\n{1}"
 - raw: "给予"
@@ -37482,8 +37392,6 @@
   - subIndex: 2
     text: "我"
     translated: "I"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   - subIndex: 3
     text: "对"
     translated: "For"
@@ -37714,9 +37622,7 @@
     translated: "Overreaching"
   - subIndex: 1
     text: "负3"
-    translated: "‑3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "3 has been defeated"
   templates:
   - template: "{0};GetTreasureMapReward;0-{1}"
 - raw: "自动"
@@ -39085,8 +38991,6 @@
   - subIndex: 1
     text: "吗？"
     translated: "?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "要进行何种难度的{0}？\n难度越高，便可以获得越多的银钱奖励。\n但如果失败，损失的声望也会越多。"
@@ -39864,27 +39768,19 @@
 - raw: "负1"
   splits:
   - text: "负1"
-    translated: "‑1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Negative1"
 - raw: "负2"
   splits:
   - text: "负2"
-    translated: "‑2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Negative2"
 - raw: "负3"
   splits:
   - text: "负3"
-    translated: "‑3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Negative3"
 - raw: "负4"
   splits:
   - text: "负4"
-    translated: "‑4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
+    translated: "Negative4"
 - raw: "负重 x"
   splits:
   - text: "负重"
@@ -40825,8 +40721,7 @@
     translated: "The eloquent contest has officially begun! Please have the participants step forward to prepare and proceed in pairs for the debate!"
   - subIndex: 1
     text: "只要在比赛中取得前三名，就能获得赏银与奖品以示鼓励。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "As long as you place in the top three in the competition, you will receive a reward in the form of reward silver and prizes to encourage you."
   - subIndex: 2
     text: "望各位大侠妙语连珠，舌灿莲花，最终都能取得满意名次！"
     translated: "I hope each of you Great Heroes will have clever words flowing like a blooming lotus, and ultimately achieve a satisfactory ranking!"
@@ -41604,40 +41499,40 @@
   - template: "{0}⟦2⟧⟦3⟧{1}⟦0⟧⟦1⟧{2}"
 - raw: "这“{0}”乃我得意之处，\n{1}可有应对？"
   splits:
-  - text: "这“"
-    translated: "'This"
+  - text: "这"
+    translated: "This"
   - subIndex: 1
-    text: "”乃我得意之处，"
-    translated: "This is my forte,'"
+    text: "乃我得意之处，"
+    translated: "This is my forte,"
   - subIndex: 2
     text: "可有应对？"
     translated: "Is there a response?"
   templates:
-  - template: "{0}⟦0⟧{1}\n⟦1⟧{2}"
+  - template: "{0}“⟦0⟧”{1}\n⟦1⟧{2}"
 - raw: "这“{0}”天赋，本就与我的武功路数不符。\n如今将其遗忘，正好腾出心力来探求其他所长！"
   splits:
-  - text: "这“"
-    translated: "'This"
+  - text: "这"
+    translated: "This"
   - subIndex: 1
-    text: "”天赋，本就与我的武功路数不符。"
-    translated: "Talent just doesn't match my martial arts style.'"
+    text: "天赋，本就与我的武功路数不符。"
+    translated: "Talent just doesn't align with my fighting style."
   - subIndex: 2
     text: "如今将其遗忘，正好腾出心力来探求其他所长！"
     translated: "Forgetting it now allows me to focus on other strengths!"
   templates:
-  - template: "{0}⟦0⟧{1}\n{2}"
+  - template: "{0}“⟦0⟧”{1}\n{2}"
 - raw: "这“{0}”的精要之处，\n我早已了然于胸"
   splits:
-  - text: "这“"
-    translated: "'This"
+  - text: "这"
+    translated: "This"
   - subIndex: 1
-    text: "”的精要之处，"
-    translated: "Essence of it,'"
+    text: "的精要之处，"
+    translated: "Essence of it"
   - subIndex: 2
     text: "我早已了然于胸"
     translated: "I have it all figured out"
   templates:
-  - template: "{0}⟦0⟧{1}\n{2}"
+  - template: "{0}“⟦0⟧”{1}\n{2}"
 - raw: "这一盛世在#$PlayerName#故去之后仍持续了{0}\n而此后历朝历代，百姓万民，也无不称颂怀念#$PlayerName#所开创的这一黄金时代。"
   splits:
   - text: "这一盛世在#$PlayerName#故去之后仍持续了"
@@ -42702,8 +42597,7 @@
 - raw: "选择装备;ChooseBreakEquipment"
   splits:
   - text: "选择装备"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Choose all characters in this sentence to English."
   templates:
   - template: "{0};ChooseBreakEquipment"
 - raw: "选择赔礼;ReleaseHateWithNpcGiftChoose"
@@ -43160,8 +43054,7 @@
 - raw: "那是自然，明年我还要接着吃枣泥月饼呢！"
   splits:
   - text: "那是自然，明年我还要接着吃枣泥月饼呢！"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "Of course, next year I will have to eat the jujube paste mooncakes again!"
 - raw: "那盗贼将你打的鼻青脸肿，\n你趁他一个不备，向后纵越几步，然后落荒而逃！"
   splits:
   - text: "那盗贼将你打的鼻青脸肿，"
@@ -44001,8 +43894,6 @@
   splits:
   - text: "问号"
     translated: "?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
 - raw: "问各位借点银子花花"
   splits:
   - text: "问各位借点银子花花"
@@ -44060,8 +43951,7 @@
     translated: "Are you {#PlayerForceDescribe#} {#$PlayerName#}? I've heard much about you!"
   - subIndex: 1
     text: "在下#TargetForceDescribe##$TargetInteractName#。"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Failed"
+    translated: "I am #TargetForceDescribe#. It's nice to meet you, #$TargetInteractName#."
   templates:
   - template: "{0}\n{1}"
 - raw: "阁下可是#SourceForceName#掌门#$SourceInteractName#？\n久仰久仰！在下#$TargetInteractName#。"
@@ -44389,8 +44279,7 @@
 - raw: "附近多有行侠仗义之士，四邻几近夜不闭户，路不拾遗。"
   splits:
   - text: "附近多有行侠仗义之士，四邻几近夜不闭户，路不拾遗。"
-    translated: "There are many chivalrous knights‑errant in the vicinity, making the neighbors nearly as safe as leaving doors unlocked at night or finding no lost items on the streets."
-    flaggedForRetranslation: true
+    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
 - raw: "陆仁谦"
   splits:
   - text: "陆仁谦"
@@ -45779,8 +45668,6 @@
   - subIndex: 3
     text: "点）"
     translated: ")"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All caps"
   templates:
   - template: "{0}\n{1}\n{2}⟦0⟧{3}"
 - raw: "，并购买了{0}"

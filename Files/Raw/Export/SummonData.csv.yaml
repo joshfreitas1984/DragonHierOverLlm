@@ -12,8 +12,6 @@
     text: "移动距离"
   - split: 6
     text: "技能"
-  - split: 7
-    text: "攻击音效"
   - split: 8
     text: "建筑"
   templates:
@@ -27,29 +25,14 @@
   splits:
   - split: 1
     text: "木流马"
-  - split: 7
-    text: "振波土石"
-  templates:
-  - split: 7
-    template: "SpeEffect/{0}"
 - raw: "2,青铜奔牛,1,20,1.2,3,6;2,SpeEffect/振波土石,FALSE"
   splits:
   - split: 1
     text: "青铜奔牛"
-  - split: 7
-    text: "振波土石"
-  templates:
-  - split: 7
-    template: "SpeEffect/{0}"
 - raw: "3,玉石麒麟,2,35,1,4,6;3,SpeEffect/振波土石,FALSE"
   splits:
   - split: 1
     text: "玉石麒麟"
-  - split: 7
-    text: "振波土石"
-  templates:
-  - split: 7
-    template: "SpeEffect/{0}"
 - raw: "4,燎原朱雀,3,60,1,6,0;4,Eagle,FALSE"
   splits:
   - split: 1
@@ -58,11 +41,6 @@
   splits:
   - split: 1
     text: "地动青龙"
-  - split: 7
-    text: "龙吼"
-  templates:
-  - split: 7
-    template: "SpeEffect/{0}"
 - raw: "6,分舵,4,300,1.5,0,7,WoodenSummonAttack,TRUE"
   splits:
   - split: 1
@@ -71,20 +49,10 @@
   splits:
   - split: 1
     text: "战鼓"
-  - split: 7
-    text: "士气上升"
-  templates:
-  - split: 7
-    template: "SpeEffect/{0}"
 - raw: "8,公输遗匣,5,50,1.5,4,7;8;2;4;5;9,SpeEffect/剑雨,FALSE"
   splits:
   - split: 1
     text: "公输遗匣"
-  - split: 7
-    text: "剑雨"
-  templates:
-  - split: 7
-    template: "SpeEffect/{0}"
 - raw: "9,总舵,5,500,2,0,7;8;10,WoodenSummonAttack,TRUE"
   splits:
   - split: 1
