@@ -155,7 +155,7 @@ namespace Tests
             // Column 21 (动作/Action) is animationName, passed to SkeletonData.FindAnimation/
             // AnimationState.SetAnimation - an exact-match Spine animation clip name. Column 25
             // (伤害顺序/Order of damage dealt) is Enum.Parse'd into skillDamageOrder.
-            new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25] },
+            new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
             //new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
             new() {Path = "MartialClubData.csv", PackageOutput = true },
             new() {Path = "MedData.csv", PackageOutput = true },
@@ -186,7 +186,7 @@ namespace Tests
             // (名字/Name) IS safe here though - GetSkillID's name lookup only scans
             // kungfuSkillDataBase, not the summon variant, so summon skill names aren't matched
             // against SpeHeroData.csv column 13 like regular KungFuData.csv names are.
-            new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [1, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25, 27, 28] },
+            new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
             // Column 4 (加成对象/Target for buff) is exact-matched via String.Equals against
             // ForceSpeAddDataBase.name (cross-file lookup key). Column 8 (消耗资源/Consume
             // resources) goes through the same FUN_1817ff280 name-lookup dictionary used for
@@ -242,7 +242,7 @@ namespace Tests
             ("ForceData.csv", [1, 2, 9, 10, 11]),
             ("ForceSpeAddDataBase.csv", [1]),          
             ("HeroTagData.csv", [1, 5, 6, 7, 10, 11]),
-            ("KungFuData.csv", [3, 7, 8, 9, 10, 13, 17, 18, 23, 24, 25]),
+            ("KungFuData.csv", [3, 7, 8, 9, 10, 13, 17, 18, 24]),
             // Column 2 (类别/Category) plus, since 2026-08-29, column 1 (名字/Name) - see the
             // defense-in-depth note below for why the name column was added.
             // Defense-in-depth (2026-08-29): column 1 on AreaData/ResourcePointData/
@@ -266,7 +266,7 @@ namespace Tests
             // longest-match-first ordering. Extracting the whole nickname here fixes every hero
             // uniformly instead of manually patching one Raw value at a time.
             ("SpeHeroData.csv", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 18]),
-            ("SummonKungFuData.csv", [1, 7, 8, 9, 10, 13, 17, 18, 21, 23, 24, 25]),
+            ("SummonKungFuData.csv", [1, 13, 24]),
             ("TechDataBase.csv", [4, 8]),
         ];
 
@@ -287,7 +287,7 @@ namespace Tests
             // 加成效果 - e.g. "伤害0.02", "学识4".
             ("SkinDataBase.csv", [2]),
             ("SpeHeroData.csv", [11, 12, 14, 18]),
-            ("SummonKungFuData.csv", [7, 8, 9, 10, 13, 17]),
+            ("SummonKungFuData.csv", [13]),
         ];
 
         // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.

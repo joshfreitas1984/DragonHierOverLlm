@@ -43,3 +43,9 @@
   full narrative behind `PrefabTextPatches`: a wrong-scope correction for `plotText`/`describe`
   fields, why lifecycle-callback patches were rejected, an `is`/`as` interop-safety finding, and
   the scene-embedded-UI coverage gap fix.
+- [`docs/resourceio-generic-bytearray-classpointerstore-crash.md`](docs/resourceio-generic-bytearray-classpointerstore-crash.md)
+  — `ta.bytes` (`Il2CppStructArray<byte>`, a generic wrapper) started throwing
+  `Il2CppClassPointerStore<byte>` cctor `NullReferenceException` for every TextAsset, isolated to
+  `ResourceIoPatches` since it was the only patch touching a generic struct-array type; fixed by
+  reading bytes via raw native calls instead (`GetTextAssetBytesRaw`), not by regenerating
+  interop/cache (which does not fix this).

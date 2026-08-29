@@ -18,6 +18,7 @@
   <ItemGroup>
     <Folder Include="Converted\" />
     <Folder Include="Mod\" />
+    <Folder Include="Raw\Dumped\DynamicStrings\" />
     <Folder Include="StructuredPrompts\" />
     <Folder Include="StandardPrompts\" />
     <Folder Include="Raw\Dumped\" />

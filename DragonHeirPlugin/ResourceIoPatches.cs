@@ -1,8 +1,10 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using HarmonyLib;
+using Il2CppInterop.Runtime;
 using UnityEngine;
 
 namespace EnglishPatch;
@@ -79,7 +81,17 @@ internal static class ResourceIoPatches
             // (SpeHeroFaceData.csv) is actually GBK-encoded on disk. Reading that asset via .text
             // silently mangles every CJK cell into U+FFFD replacement characters with no error -
             // the corruption is irreversible once dumped that way. See DecodeAssetBytes.
-            byte[] rawBytes = ta.bytes;
+            //
+            // NOTE: read via GetTextAssetBytesRaw, NOT the generated `ta.bytes` property. That
+            // property returns Il2CppStructArray<byte>, a GENERIC IL2CPP wrapper type - a
+            // confirmed-unsafe pattern per dragonheirplugin.instructions.md ("Any generic Il2Cpp
+            // interop call... anywhere in this plugin"). It forces
+            // Il2CppClassPointerStore<byte>'s static ctor to run for the first time (this is the
+            // only place in the whole plugin that touches a byte[]/struct array), and that cctor
+            // has been observed to throw NullReferenceException even after a full BepInEx
+            // interop/cache/unity-libs regen - see
+            // DragonHeirPlugin/docs/resourceio-generic-bytearray-classpointerstore-crash.md.
+            byte[] rawBytes = GetTextAssetBytesRaw(ta);
             var text = DecodeAssetBytes(rawBytes, path);
 
             var rawFile = Path.Combine(RawDir, sanitizedPath + ".csv");
@@ -108,6 +120,50 @@ internal static class ResourceIoPatches
         {
             MainPlugin.Logger?.LogError($"ResourceIoPatches.Load_Postfix failed for '{path}': {ex}");
         }
+    }
+
+    /// <summary>
+    /// Reads TextAsset.bytes without ever constructing the generic Il2CppStructArray&lt;byte&gt;
+    /// wrapper (see remarks on the call site in Load_Postfix). Invokes the native
+    /// TextAsset::get_bytes getter directly via non-generic IL2CPP runtime calls and reads the
+    /// resulting native byte array's contents straight out of its raw memory layout: an
+    /// Il2CppObject header (class pointer + monitor, 2 pointers) followed by the array's bounds
+    /// pointer and max_length field (1 pointer each), then the raw element data - matching
+    /// Il2CppArrayBase's own (private) ArrayStartPointer computation.
+    /// </summary>
+    private static unsafe byte[] GetTextAssetBytesRaw(TextAsset ta)
+    {
+        var objPtr = ta.Pointer;
+        var klass = IL2CPP.il2cpp_object_get_class(objPtr);
+        var method = IL2CPP.il2cpp_class_get_method_from_name(klass, "get_bytes", 0);
+        if (method == IntPtr.Zero)
+        {
+            throw new InvalidOperationException("TextAsset::get_bytes native method not found");
+        }
+
+        var exception = IntPtr.Zero;
+        var arrayPtr = IL2CPP.il2cpp_runtime_invoke(method, objPtr, null, ref exception);
+        if (exception != IntPtr.Zero)
+        {
+            throw new InvalidOperationException("Native invocation of TextAsset::get_bytes threw an IL2CPP exception");
+        }
+
+        if (arrayPtr == IntPtr.Zero)
+        {
+            return Array.Empty<byte>();
+        }
+
+        var length = (int)IL2CPP.il2cpp_array_length(arrayPtr);
+        if (length <= 0)
+        {
+            return Array.Empty<byte>();
+        }
+
+        var headerSize = 4 * IntPtr.Size; // klass + monitor + bounds + max_length
+        var dataPtr = IntPtr.Add(arrayPtr, headerSize);
+        var result = new byte[length];
+        Marshal.Copy(dataPtr, result, 0, length);
+        return result;
     }
 
     /// <summary>

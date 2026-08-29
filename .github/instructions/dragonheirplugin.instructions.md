@@ -178,6 +178,18 @@ catch (ReflectionTypeLoadException ex) { types = ex.Types.Where(t => t != null).
 Wrap any interop-touching plugin code in try/catch regardless — treat the IL2CPP host as
 potentially unstable and fail safe (log, leave original values untouched) rather than throwing.
 
+## `ResourceIoPatches` — never read `TextAsset.bytes` directly (generic wrapper crash)
+
+Don't call `TextAsset.bytes` (the generated property) — its return type is
+`Il2CppStructArray<byte>`, a generic IL2CPP wrapper, which is confirmed-unsafe per the rules above
+and has been observed to throw a `NullReferenceException` deep in
+`Il2CppClassPointerStore<byte>`'s static ctor (survives a full interop/cache/unity-libs regen —
+not a metadata-staleness issue). Use `ResourceIoPatches.GetTextAssetBytesRaw(TextAsset)` instead,
+which invokes the native `get_bytes` getter and reads the resulting array via raw pointer/`Marshal.Copy`
+instead of constructing any generic wrapper. See
+`DragonHeirPlugin/docs/resourceio-generic-bytearray-classpointerstore-crash.md` for the full
+investigation.
+
 ## `ResourceIoPatches` — CSV override strategy (whole-file replace, not row merge)
 
 `ResourceIoPatches.Load_Postfix` patches `Resources.Load` to dump every loaded `TextAsset` to
