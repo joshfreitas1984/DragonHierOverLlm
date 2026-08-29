@@ -179,7 +179,7 @@
 - raw: "#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往欲一展身手"
   splits:
   - text: "#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往欲一展身手"
-    translated: "#PlayerForceName#The annual Sect Combat Tournament is currently underway, and disciples from all quarters are heading there to showcase their skills."
+    translated: "#PlayerForceName# The annual Sect Combat Tournament is currently underway, and disciples from all quarters are heading there to showcase their skills."
 - raw: "#PlayerForceName#此后屹立数百年，香火绵延不绝，"
   splits:
   - text: "#PlayerForceName#此后屹立数百年，香火绵延不绝，"
@@ -386,19 +386,19 @@
 - raw: "#PosText#城中正在举办一场#DifficultyItemText#拍卖大会，各种名品利器云集一堂，附近富商豪绅纷纷前往欲争相抢购。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyItemText#拍卖大会，各种名品利器云集一堂，附近富商豪绅纷纷前往欲争相抢购。"
-    translated: "#PosText#A grand #DifficultyItemText# auction is taking place in the city, gathering various exquisite weapons and treasures. Nearby wealthy merchants and noble families are flocking there to vie for the best buys."
+    translated: "#PosText# A grand #DifficultyItemText# auction is taking place in the city, gathering various exquisite weapons and treasures. Nearby wealthy merchants and noble families are flocking there to vie for the best buys."
 - raw: "#PosText#城中正在举办一场#DifficultyRateText#比武大赛，强者云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyRateText#比武大赛，强者云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
-    translated: "#PosText#A #DifficultyRateText# martial arts tournament is currently taking place in the city, attracting powerful contenders with generous prizes, and martial artists from nearby are flocking there to test their skills."
+    translated: "#PosText# A #DifficultyRateText# martial arts tournament is currently taking place in the city, attracting powerful contenders with generous prizes, and martial artists from nearby are flocking there to test their skills."
 - raw: "#PosText#城中正在举办一场#DifficultyRateText#赛马大会，名马云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyRateText#赛马大会，名马云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
-    translated: "#PosText#The city is hosting a #DifficultyRateText# Horse Racing Festival, drawing in renowned horsemen from all over, with generous rewards, and nearby Wulin individuals are flocking there to test their skills."
+    translated: "#PosText# The city is hosting a #DifficultyRateText# Horse Racing Festival, drawing in renowned horsemen from all over, with generous rewards, and nearby Wulin individuals are flocking there to test their skills."
 - raw: "#PosText#城中正在举办一场#DifficultyRateText#辩才大赛，强者云集，奖励丰厚，附近文人雅士纷纷前往欲一试高下。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyRateText#辩才大赛，强者云集，奖励丰厚，附近文人雅士纷纷前往欲一试高下。"
-    translated: "#PosText#A #DifficultyRateText# Difficulty Contest is currently taking place in the city, attracting powerful contenders with generous rewards, and nearby scholars and literati are flocking to test their skills."
+    translated: "#PosText# A #DifficultyRateText# Difficulty Contest is currently taking place in the city, attracting powerful contenders with generous rewards, and nearby scholars and literati are flocking to test their skills."
 - raw: "#SourceHeroName#希望我将之护送到#TargetPlace#去。"
   splits:
   - text: "#SourceHeroName#希望我将之护送到#TargetPlace#去。"
@@ -509,7 +509,7 @@
 - raw: "#TargetInteractName#你语无伦次，言不及义，\\n休要在这边误人子弟了！"
   splits:
   - text: "#TargetInteractName#你语无伦次，言不及义，"
-    translated: "#TargetInteractName#you ramble on incoherently, making no sense"
+    translated: "#TargetInteractName# you ramble on incoherently, making no sense"
   - subIndex: 1
     text: "休要在这边误人子弟了！"
     translated: "Don't waste your time teaching someone wrong!"
@@ -579,7 +579,7 @@
 - raw: "#TargetPlace#愿以高价收购一件#BountyHeroItemDescribe#，有意者请速联系。"
   splits:
   - text: "#TargetPlace#愿以高价收购一件#BountyHeroItemDescribe#，有意者请速联系。"
-    translated: "#TargetPlace#will purchase #BountyHeroItemDescribe# at a high price. Please contact us if you are interested."
+    translated: "#TargetPlace# will purchase #BountyHeroItemDescribe# at a high price. Please contact us if you are interested."
 - raw: "#TargetPlace#有一笔#BountyDebtsMoney#两欠款已拖延数日未还，若有人能代为追收，可得其五成作为酬劳。"
   splits:
   - text: "#TargetPlace#有一笔#BountyDebtsMoney#两欠款已拖延数日未还，若有人能代为追收，可得其五成作为酬劳。"
@@ -603,7 +603,7 @@
 - raw: "#TargetPlace#自恃酒量过人，屡屡纵饮狂歌，放浪形骸，还望有大侠能去挫挫他的锐气。"
   splits:
   - text: "#TargetPlace#自恃酒量过人，屡屡纵饮狂歌，放浪形骸，还望有大侠能去挫挫他的锐气。"
-    translated: "#TargetPlace#reckoned his liquor tolerance to be exceptional and frequently drank to excess, singing wildly and behaving recklessly. He still hoped that a Great Hero might come along to temper his sharp spirit."
+    translated: "#TargetPlace# reckoned his liquor tolerance to be exceptional and frequently drank to excess, singing wildly and behaving recklessly. He still hoped that a Great Hero might come along to temper his sharp spirit."
 - raw: "#TargetPlace#近日修习#MissionRequireType#遭遇颇多艰难困惑，若有此间高手愿加以指点，自当以厚礼相赠。"
   splits:
   - text: "#TargetPlace#近日修习#MissionRequireType#遭遇颇多艰难困惑，若有此间高手愿加以指点，自当以厚礼相赠。"
@@ -619,7 +619,7 @@
 - raw: "#TargetPlace#近期有一批工作，急需精通#MissionRequireType#之能人异士，若得相助，事成后必有重谢。"
   splits:
   - text: "#TargetPlace#近期有一批工作，急需精通#MissionRequireType#之能人异士，若得相助，事成后必有重谢。"
-    translated: "#TargetPlace#has a recent batch of tasks that urgently require individuals skilled in #MissionRequireType#. If you can assist, there will be significant rewards upon completion."
+    translated: "#TargetPlace# has a recent batch of tasks that urgently require individuals skilled in #MissionRequireType#. If you can assist, there will be significant rewards upon completion."
 - raw: "<b>#PosText#</b>近来流言四起，传闻先皇周世宗柴荣仍有血脉留存世间，一时间街谈巷议，众说纷纭。"
   splits:
   - text: "近来流言四起，传闻先皇周世宗柴荣仍有血脉留存世间，一时间街谈巷议，众说纷纭。"
@@ -1728,7 +1728,7 @@
     translated: "Overseer of the town's populace under their jurisdiction"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -1746,7 +1746,7 @@
     translated: "Director of civilian affairs in the towns under their administration"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -1764,7 +1764,7 @@
     translated: "Overseeing the law and order of the towns under his jurisdiction"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -1782,7 +1782,7 @@
     translated: "Overseeing the defense of the towns under his jurisdiction"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -1818,7 +1818,7 @@
     translated: "Head of Sect Medical and Wellness Affairs"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -1836,7 +1836,7 @@
     translated: "Head of Sect Document and Jingzang Affairs"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -1854,7 +1854,7 @@
     translated: "Director of Sect Construction Affairs"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -1872,7 +1872,7 @@
     translated: "Sect discipline and reward‑punishment matters"
   - subIndex: 1
     text: "提升任职者#EffectSkill#经验#ForceJobExpRate#"
-    translated: "Increase the experience rate for the job holder#EffectSkill#ForceJobExpRate#"
+    translated: "Increase the experience rate for the job holder #EffectSkill# #ForceJobExpRate#"
   - subIndex: 2
     text: "同时根据任职者"
     translated: "While holding the document, they glanced at the name, Li Ming, and then continued reading."
@@ -4510,11 +4510,11 @@
 - raw: "助#$SourceInteractName#一臂之力"
   splits:
   - text: "助#$SourceInteractName#一臂之力"
-    translated: "Offer you#$SourceInteractName#a helping hand"
+    translated: "Offer you #$SourceInteractName# a helping hand"
 - raw: "助#$TargetInteractName#一臂之力"
   splits:
   - text: "助#$TargetInteractName#一臂之力"
-    translated: "Give#$TargetInteractName#a helping hand"
+    translated: "Give #$TargetInteractName# a helping hand"
 - raw: "助#SourceForceName#一臂之力"
   splits:
   - text: "助#SourceForceName#一臂之力"
@@ -4845,7 +4845,7 @@
 - raw: "只可惜我#$SourceInteractName#纵横江湖多年，却仍旧茕茕孑立，形影相吊。\\n不知有谁能与我共度佳期，同赏明月呢？\\n（可以邀请好感50以上的异性共度七夕）"
   splits:
   - text: "只可惜我#$SourceInteractName#纵横江湖多年，却仍旧茕茕孑立，形影相吊。"
-    translated: "Unfortunately, I#$SourceInteractName# have roamed the Jianghu for many years, yet I remain solitary, standing alone in the world."
+    translated: "Unfortunately, I #$SourceInteractName# have roamed the Jianghu for many years, yet I remain solitary, standing alone in the world."
   - subIndex: 1
     text: "不知有谁能与我共度佳期，同赏明月呢？"
     translated: "Who knows if there is anyone who can share this delightful occasion and admire the bright moon with me?"
@@ -4939,7 +4939,7 @@
 - raw: "可恶，竟敢光天化日之下，偷我#$TargetInteractName#的东西！小贼休走！......"
   splits:
   - text: "可恶，竟敢光天化日之下，偷我#$TargetInteractName#的东西！小贼休走！......"
-    translated: "Damn it, you dare to steal from me#$TargetInteractName# in broad daylight! Little thief, don't run!......"
+    translated: "Damn it, you dare to steal from me #$TargetInteractName# in broad daylight! Little thief, don't run!......"
 - raw: "可携带的负重有限，请多加注意。"
   splits:
   - text: "可携带的负重有限，请多加注意。"
@@ -6015,7 +6015,7 @@
 - raw: "在下#$PlayerName#"
   splits:
   - text: "在下#$PlayerName#"
-    translated: "Player#$PlayerName#"
+    translated: "Player #$PlayerName#"
 - raw: "在其势力范围内，声望与掌控力更远在朝廷之上。"
   splits:
   - text: "在其势力范围内，声望与掌控力更远在朝廷之上。"
@@ -6575,7 +6575,7 @@
     translated: "So cold... and yet so hot...ahaha..."
   - subIndex: 1
     text: "我#$TargetInteractName#神功已成，天下无敌......"
-    translated: "I#$TargetInteractName# have mastered the divine technique, invincible under heaven......"
+    translated: "I #$TargetInteractName# have mastered the divine technique, invincible under heaven......"
   templates:
   - template: "{0}\\n{1}"
 - raw: "好友拜访"
@@ -6908,7 +6908,7 @@
     translated: "Through acquiring resources for the Sect, completing Sect commissions, or boosting merit by fulfilling monthly Sect tasks."
   - subIndex: 2
     text: "积累#UpgradeForceLvNeedContributionNum#功绩并习得#UpgradeForceLvNeedSkillNum#门上乘武学后，可在"
-    translated: "Accumulate#UpgradeForceLvNeedContributionNum#credits and learn#UpgradeForceLvNeedSkillNum# martial arts techniques, after which you can"
+    translated: "Accumulate #UpgradeForceLvNeedContributionNum# credits and learn #UpgradeForceLvNeedSkillNum# martial arts techniques, after which you can"
   - subIndex: 3
     text: "门派正厅"
     translated: "Sect main hall"
@@ -6926,7 +6926,7 @@
     translated: "By acquiring resources for the sect or completing sect tasks monthly to boost merits"
   - subIndex: 2
     text: "积累#UpgradeForceLvNeedContributionNum#功绩并习得#UpgradeForceLvNeedSkillNum#门基础武学后，可在"
-    translated: "Accumulate#UpgradeForceLvNeedContributionNum#credits and learn#UpgradeForceLvNeedSkillNum#basic martial arts skills, after which you can"
+    translated: "Accumulate #UpgradeForceLvNeedContributionNum# credits and learn #UpgradeForceLvNeedSkillNum# basic martial arts skills, after which you can"
   - subIndex: 3
     text: "门派正厅"
     translated: "Sect main hall"
@@ -6944,7 +6944,7 @@
     translated: "Through acquiring resources for the Sect, completing Sect commissions, or boosting merit by fulfilling monthly Sect tasks."
   - subIndex: 2
     text: "积累#UpgradeForceLvNeedContributionNum#功绩并习得#UpgradeForceLvNeedSkillNum#门进阶武学后，可在"
-    translated: "Accumulate#UpgradeForceLvNeedContributionNum#merit and learn#UpgradeForceLvNeedSkillNum#advanced martial arts, after which you can"
+    translated: "Accumulate #UpgradeForceLvNeedContributionNum# merit and learn #UpgradeForceLvNeedSkillNum# advanced martial arts, after which you can"
   - subIndex: 3
     text: "门派正厅"
     translated: "Sect main hall"
@@ -7491,7 +7491,7 @@
     translated: "Disciples who are permitted to study within the sect are the cultivable talents that the sect focuses on nurturing."
   - subIndex: 1
     text: "提升任职者门派功绩#ForceJobExpRate#"
-    translated: "Increase the job merit of the sect member#ForceJobExpRate#"
+    translated: "Increase the job merit of the sect member #ForceJobExpRate#"
   templates:
   - template: "{0}\\n\\n{1}"
 - raw: "得罪了"
@@ -8151,7 +8151,7 @@
     translated: "Sect Master's Left Arm, in charge of the sect's offensive and defensive operations"
   - subIndex: 1
     text: "提升任职者力量智力体质#ForceJobAttriNum#"
-    translated: "Increase the job attributes of the appointee in strength, intelligence, and constitution#ForceJobAttriNum#"
+    translated: "Increase the job attributes of the appointee in strength, intelligence, and constitution #ForceJobAttriNum#"
   templates:
   - template: "{0}\\n\\n{1}"
 - raw: "掌门仪式"
@@ -9993,7 +9993,7 @@
 - raw: "真是冤家路窄，既然#TargetInteractName#你非要挡道，可就别怪我不客气了！"
   splits:
   - text: "真是冤家路窄，既然#TargetInteractName#你非要挡道，可就别怪我不客气了！"
-    translated: "True enemies meet on a narrow road; since you#TargetInteractName# insist on blocking my way, don't blame me for being unfriendly!"
+    translated: "True enemies meet on a narrow road; since you #TargetInteractName# insist on blocking my way, don't blame me for being unfriendly!"
 - raw: "真是无理取闹，同门的师兄弟们早就看你不顺眼很久了！"
   splits:
   - text: "真是无理取闹，同门的师兄弟们早就看你不顺眼很久了！"
@@ -11740,7 +11740,7 @@
 - raw: "近来江湖风闻，有人在悬赏我#$TargetInteractName#这颗项上人头。\\n不知#PlayerName#可有什么头绪？"
   splits:
   - text: "近来江湖风闻，有人在悬赏我#$TargetInteractName#这颗项上人头。"
-    translated: "Lately, there have been rumors in the Jianghu that someone is offering a reward for my#$TargetInteractName#head on this necklace."
+    translated: "Lately, there have been rumors in the Jianghu that someone is offering a reward for my #$TargetInteractName# head on this necklace."
   - subIndex: 1
     text: "不知#PlayerName#可有什么头绪？"
     translated: "Don't you have any clues, #PlayerName#?"
@@ -12699,7 +12699,7 @@
 - raw: "阁下可是#$PlayerName#？能在此处相遇，真是有缘。"
   splits:
   - text: "阁下可是#$PlayerName#？能在此处相遇，真是有缘。"
-    translated: "Are you#$PlayerName#? It's fate that we meet here."
+    translated: "Are you #$PlayerName#? It's fate that we meet here."
 - raw: "阁下是..."
   splits:
   - text: "阁下是..."

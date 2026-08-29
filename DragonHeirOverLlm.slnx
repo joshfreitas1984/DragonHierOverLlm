@@ -1,7 +1,4 @@
 <Solution>
-  <Folder Name="/Converter/">
-    <Project Path="Converter/ReflectCheck/ReflectCheck.csproj" />
-  </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
     <File Path="readme.md" />

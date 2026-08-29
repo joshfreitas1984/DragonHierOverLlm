@@ -49,3 +49,9 @@
   `ResourceIoPatches` since it was the only patch touching a generic struct-array type; fixed by
   reading bytes via raw native calls instead (`GetTextAssetBytesRaw`), not by regenerating
   interop/cache (which does not fix this).
+- [`docs/dynamicstringpatches-cjk-placeholder-fallback.md`](docs/dynamicstringpatches-cjk-placeholder-fallback.md)
+  — why some `isTemplate: true` templates' own translated literal connector text was silently
+  skipped when their `{n}` placeholder is legitimately CJK data (sect/title names); the
+  CJK-inclusive `PermissivePattern` fallback fix, its verification harness methodology, and a
+  confirmed (not just theoretical) residual risk around `BlockingRawEntries` coverage.
+

@@ -92,6 +92,19 @@ public class TranslationWorkflowTests
         {
             // Look for Number then "coin" or "wen" or "money" or "quan" or "liang", get the number portion
             (@"(\d+)(\s*)(coin|wen|money|quan|liang)", "$1 coin"),
+
+            // Game placeholder tokens (#PlayerName#, #$TargetInteractName#, etc.) can end up glued
+            // directly onto adjacent translated words with no space, since the translated sentence
+            // doesn't preserve the original Chinese's lack of word-spacing around the token. Insert
+            // a space on whichever side is missing one, without touching sides that already have a
+            // space, punctuation, or are at the start/end of the string.
+            // Two placeholder tokens can appear back-to-back sharing a single '#' between them
+            // (e.g. "#TargetForceDescribe#$TargetInteractName#" - only 3 '#' chars total, not 4),
+            // so the token pattern must match the whole chain in one go (`(?:\$?\w+#)+`) - otherwise
+            // the letter at the end of the first token's name gets treated as a real translated
+            // word glued to the second token, and a space gets wrongly inserted *inside* the chain.
+            (@"(#(?:\$?\w+#)+)([A-Za-z])", "$1 $2"),
+            (@"([A-Za-z])(#(?:\$?\w+#)+)", "$1 $2"),
         };
 
         await TranslationWorkflow.CleanUpSomeRegexes(GameFileHandling.WorkingDirectory,

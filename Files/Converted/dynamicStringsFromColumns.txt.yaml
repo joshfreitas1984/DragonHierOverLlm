@@ -10672,7 +10672,7 @@
 - raw: "截脉0.08"
   splits:
   - text: "截脉0.08"
-    translated: "Pulse 0.08 has been incorrectly removed from the translation."
+    translated: "Cut pulse 0.08"
 - raw: "铁索渔网"
   splits:
   - text: "铁索渔网"
@@ -14605,7 +14605,7 @@
 - raw: "奇门潜力2;奇门1;智力1"
   splits:
   - text: "奇门潜力2"
-    translated: "2 has been incorrectly removed from the translation."
+    translated: "Qimen Potential 2"
   - subIndex: 1
     text: "奇门1"
     translated: "Mystic 1"
@@ -15178,7 +15178,7 @@
     translated: "Internal Injury 0.08"
   - subIndex: 1
     text: "截脉0.08"
-    translated: "Pulse 0.08 has been incorrectly removed from the translation."
+    translated: "Cut pulse 0.08"
   templates:
   - template: "{0};{1}"
 - raw: "胸9;心8;腹8"
@@ -15431,7 +15431,7 @@
 - raw: "奇门潜力2;意志潜力1;意志2"
   splits:
   - text: "奇门潜力2"
-    translated: "2 has been incorrectly removed from the translation."
+    translated: "Qimen Potential 2"
   - subIndex: 1
     text: "意志潜力1"
     translated: "Potential willpower 1"
@@ -20375,7 +20375,7 @@
     translated: "Pulse Reviver 0.05"
   - subIndex: 1
     text: "截脉0.05"
-    translated: "0.05 has been incorrectly removed from the translation."
+    translated: "Cut 0.05's pulse"
   templates:
   - template: "{0};{1}"
 - raw: "威武棍法"
@@ -23615,7 +23615,7 @@
 - raw: "奇门潜力2;意志潜力2"
   splits:
   - text: "奇门潜力2"
-    translated: "2 has been incorrectly removed from the translation."
+    translated: "Qimen Potential 2"
   - subIndex: 1
     text: "意志潜力2"
     translated: "Potential willpower 2"
@@ -26218,7 +26218,7 @@
 - raw: "奇门潜力2;奇门1;意志1"
   splits:
   - text: "奇门潜力2"
-    translated: "2 has been incorrectly removed from the translation."
+    translated: "Qimen Potential 2"
   - subIndex: 1
     text: "奇门1"
     translated: "Mystic 1"
@@ -34080,7 +34080,7 @@
     translated: "Regulate 0.05‑breath"
   - subIndex: 2
     text: "截脉0.05"
-    translated: "0.05 has been incorrectly removed from the translation."
+    translated: "Cut 0.05's pulse"
   templates:
   - template: "{0};{1};{2}"
 - raw: "头12;胸12"
@@ -36105,7 +36105,7 @@
 - raw: "奇门潜力2;奇门1;灵巧1"
   splits:
   - text: "奇门潜力2"
-    translated: "2 has been incorrectly removed from the translation."
+    translated: "Qimen Potential 2"
   - subIndex: 1
     text: "奇门1"
     translated: "Mystic 1"
@@ -37205,7 +37205,7 @@
 - raw: "奇门潜力2;智力潜力1;意志潜力1"
   splits:
   - text: "奇门潜力2"
-    translated: "2 has been incorrectly removed from the translation."
+    translated: "Qimen Potential 2"
   - subIndex: 1
     text: "智力潜力1"
     translated: "Intellectual potential 1"
@@ -39360,7 +39360,7 @@
 - raw: "奇门潜力2;智力潜力1;奇门1;力道1"
   splits:
   - text: "奇门潜力2"
-    translated: "2 has been incorrectly removed from the translation."
+    translated: "Qimen Potential 2"
   - subIndex: 1
     text: "智力潜力1"
     translated: "Intellectual potential 1"
@@ -40123,7 +40123,7 @@
     translated: "Palm Strike to the Heart Point 0.05"
   - subIndex: 6
     text: "截脉0.05"
-    translated: "0.05 has been incorrectly removed from the translation."
+    translated: "Cut 0.05's pulse"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
 - raw: "瑶池漫步"

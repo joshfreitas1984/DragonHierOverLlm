@@ -1616,7 +1616,7 @@
   splits:
   - split: 10
     text: "#PlayerName#不知不觉已入派数月了，在这山上可还住的习惯？"
-    translated: "#PlayerName#you've been part of the sect for months already. Are you getting used to living on this mountain?"
+    translated: "#PlayerName# you've been part of the sect for months already. Are you getting used to living on this mountain?"
 - raw: ",,,左,,,,,,,禀#TargetInteractName#，这山上虽说与世隔绝，\\n但胜在景色优美，鸟语花香。"
   splits:
   - split: 10
@@ -2297,7 +2297,7 @@
   - split: 10
     subIndex: 3
     text: "以后复兴本门的重任，就包在我#$PlayerName#身上！"
-    translated: "#$PlayerName#$ has been incorrectly removed from the translation! The heavy responsibility of reviving our sect will fall on $PlayerName$'s shoulders!"
+    translated: "The heavy responsibility of reviving our sect falls on {#$PlayerName#}'s shoulder!"
   templates:
   - split: 10
     template: "{0}~{1}~{2}\\n{3}"
@@ -2961,7 +2961,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#今天也跟你们拼了！"
-    translated: "I#$PlayerName# are going all out today too!"
+    translated: "I #$PlayerName# are going all out today too!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -19371,7 +19371,7 @@
   splits:
   - split: 10
     text: "嘿嘿，我就说#TargetInteractName#不会如此绝情，走吧！"
-    translated: "Hehe, I knew #TargetInteractName#wouldn't be this ruthless. Let's go!"
+    translated: "Hehe, I knew #TargetInteractName# wouldn't be this ruthless. Let's go!"
 - raw: "151,杨思迟,公孙防,右,,,,,,,臭小子！上次看在你师兄的面上饶你一命。\\n这次还敢当你两位爷爷的道，真是活的不耐烦了？"
   splits:
   - split: 10
@@ -20340,7 +20340,7 @@
   splits:
   - split: 10
     text: "#PlayerName#刚才那招是怎么使出的，真是厉害，等会一定要教教我！"
-    translated: "#PlayerName#just showed me that move‑quite impressive. I have to learn it from him later!"
+    translated: "#PlayerName# just showed me that move‑quite impressive. I have to learn it from him later!"
 - raw: ",,,左,,,,,,,好说好说，小师妹有命，怎敢不从。"
   splits:
   - split: 10
@@ -24275,7 +24275,7 @@
   splits:
   - split: 10
     text: "哼，我#SourceForceDescribe##$SourceInteractName#，"
-    translated: "Hmph, I#SourceForceDescribe##$SourceInteractName#"
+    translated: "Hmph, I #SourceForceDescribe##$SourceInteractName#"
   - split: 10
     subIndex: 1
     text: "今天就算豁出这条命，也要给老百姓除害！"
@@ -28736,7 +28736,7 @@
   splits:
   - split: 10
     text: "可师傅"
-    translated: "Master"
+    translated: "But Master"
   templates:
   - split: 10
     template: "{0}……"
@@ -38390,7 +38390,7 @@
   - split: 10
     subIndex: 2
     text: "若把顾兄治好，你#$PlayerName#名字倒过来写！"
-    translated: "If I cure Brother Gu, you#$PlayerName# write your name backwards!"
+    translated: "If I cure Brother Gu, you #$PlayerName# write your name backwards!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -41270,7 +41270,7 @@
   splits:
   - split: 10
     text: "师姐放心，我#$PlayerName#料理这些小贼不在话下。"
-    translated: "Senior Sister, rest assured. I#$PlayerName# can handle these bandits with ease."
+    translated: "Senior Sister, rest assured. I #$PlayerName# can handle these bandits with ease."
   - split: 10
     subIndex: 1
     text: "只是你自己多加小心！"
@@ -54408,7 +54408,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#随我们一道冲进去，定能将她轻松擒获！"
-    translated: "#PlayerName# has been incorrectly removed from the translation. Join us in charging in, and we can easily capture her!"
+    translated: "Join us in rushing in, #PlayerName#, and we can easily capture her!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -63043,7 +63043,7 @@
   splits:
   - split: 10
     text: "师姐放心，我#$PlayerName#早晚有一天，"
-    translated: "Senior Sister, rest assured. I#$PlayerName# will have my revenge one day."
+    translated: "Senior Sister, rest assured. I #$PlayerName# will have my revenge one day."
   - split: 10
     subIndex: 1
     text: "会把巴陵村夺回来，替大师兄讨还血债的！"
@@ -65848,7 +65848,7 @@
   splits:
   - split: 10
     text: "小师妹放心，我#$PlayerName#行走江湖这么些年，"
-    translated: "Junior Sister, rest assured. I#$PlayerName# have walked the Jianghu for so many years,"
+    translated: "Junior Sister, rest assured. I #$PlayerName# have walked the Jianghu for so many years,"
   - split: 10
     subIndex: 1
     text: "见过的优质食材没有一千也有八百，保证替你寻一个来！"
@@ -72702,7 +72702,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#就算拼了这条小命，也会保护师姐安全的！"
-    translated: "I#$PlayerName# will risk my life to protect Senior Sis!"
+    translated: "I #$PlayerName# will risk my life to protect Senior Sis!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -77293,7 +77293,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#就是上刀山，下油锅，也要把这东西弄来！"
-    translated: "I#$PlayerName# will go through fire and water to get this thing!"
+    translated: "I #$PlayerName# will go through fire and water to get this thing!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -88068,7 +88068,7 @@
   - split: 10
     subIndex: 1
     text: "总之，我杨思迟全凭#PlayerName#吩咐就是！"
-    translated: "In short, I Yang Sichi will follow your#PlayerName# instructions completely!"
+    translated: "In short, I Yang Sichi will follow your #PlayerName# instructions completely!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -89984,7 +89984,7 @@
   splits:
   - split: 10
     text: "师傅，我#$PlayerName#岂是那种贪生怕死之人？"
-    translated: "Master, I#$PlayerName# am not a man who fears death."
+    translated: "Master, I #$PlayerName# am not a man who fears death."
   - split: 10
     subIndex: 1
     text: "只是想到大师兄就在地窖门口，将他叫来咱们并肩作战！"
@@ -92734,7 +92734,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#就是死这儿，从这仙霞山上跳下去，也不会吃一口！"
-    translated: "I#$PlayerName# will die here, jumping off this Immortal Sparrow Mountain, and it won't even give me a bite!"
+    translated: "I #$PlayerName# will die here, jumping off this Immortal Sparrow Mountain, and it won't even give me a bite!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -94399,7 +94399,7 @@
   splits:
   - split: 10
     text: "#PlayerName#愿意帮忙？那便太好了！"
-    translated: "#PlayerName#wants to help? That's great!"
+    translated: "#PlayerName# wants to help? That's great!"
   - split: 10
     subIndex: 1
     text: "我需要麻黄，甘草，黄芩，金银花，连翘等，此处山上应该长了不少。"
@@ -94678,7 +94678,7 @@
   splits:
   - split: 10
     text: "说什么呢阮芷？人家#$PlayerName#侠义心肠，乃是为了查明疫病而来。"
-    translated: "What are you saying, Ruan Zhi? We#$PlayerName# have a righteous heart, coming here to investigate the epidemic."
+    translated: "What are you saying, Ruan Zhi? We #$PlayerName# have a righteous heart, coming here to investigate the epidemic."
   - split: 10
     subIndex: 1
     text: "才不像你一样，贪图什么悬赏呢！"
@@ -101780,7 +101780,7 @@
   splits:
   - split: 10
     text: "我#$PlayerName#，承蒙师长厚爱，同门信赖，今日接任仙霞派掌门之位。"
-    translated: "I#$PlayerName#, with the generous love and trust from senior instructors and fellow disciples, I have been appointed to the position of Sect Leader of the Xianxia Sect today."
+    translated: "I #$PlayerName#, with the generous love and trust from senior instructors and fellow disciples, I have been appointed to the position of Sect Leader of the Xianxia Sect today."
   - split: 10
     subIndex: 1
     text: "今日在各位见证之下，我郑重宣誓，将以先师姜映泉为榜样，"
@@ -103541,7 +103541,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#愿与司马掌门，共抗阎罗殿！"
-    translated: "I#$PlayerName# pledge to stand alongside Sect Leader Sima against Yama Hall!"
+    translated: "I #$PlayerName# pledge to stand alongside Sect Leader Sima against Yama Hall!"
   - split: 10
     subIndex: 2
     text: "相信若是先师还在世，也定会做出同样的决定。"
@@ -106044,7 +106044,7 @@
   - split: 10
     subIndex: 1
     text: "姜映泉是我们掌门#$PlayerName#的师傅，不是已经仙逝了么......."
-    translated: "Qiang Yingquan is Master#$PlayerName#. Didn't he already pass away......."
+    translated: "Qiang Yingquan is Master #$PlayerName#. Didn't he already pass away......."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107124,7 +107124,7 @@
   splits:
   - split: 10
     text: "#PlayerName#此言倒也有几分道理。"
-    translated: "#PlayerName#That does have some merit to it"
+    translated: "#PlayerName# That does have some merit to it"
   - split: 10
     subIndex: 1
     text: "那该如何是好呢......"
@@ -123288,7 +123288,7 @@
   splits:
   - split: 10
     text: "既然二位有此决心，那我#$PlayerName#岂能不舍命陪君子？"
-    translated: "Since you two are determined, how can I#$PlayerName# not risk my life to be a true gentleman's companion?"
+    translated: "Since you two are determined, how can I #$PlayerName# not risk my life to be a true gentleman's companion?"
 - raw: ",,,左,,,,TRUE,,,今日我们三人共斗厉苍穹，不死不休！"
   splits:
   - split: 10
@@ -149220,7 +149220,7 @@
   splits:
   - split: 10
     text: "#PlayerName#此次出力甚多，我也就不再隐瞒了。"
-    translated: "#PlayerName#put in a lot of effort this time, so I won't hold back anymore."
+    translated: "#PlayerName# put in a lot of effort this time, so I won't hold back anymore."
   - split: 10
     subIndex: 1
     text: "此乃江湖中鲜为人知的一桩陈年旧案，且听我慢慢道来。"
@@ -159008,7 +159008,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#武功高强，一点伤都没有。"
-    translated: "I#$PlayerName# has powerful martial arts and isn't injured at all."
+    translated: "I #$PlayerName# has powerful martial arts and isn't injured at all."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -180488,7 +180488,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#不妨助你一臂之力！"
-    translated: "I#$PlayerName# will lend you a hand!"
+    translated: "I #$PlayerName# will lend you a hand!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -180512,7 +180512,7 @@
   - split: 10
     subIndex: 1
     text: "大师莫慌，我#$PlayerName#前来助你！"
-    translated: "Master, don't panic. They#$PlayerName# have come to help you!"
+    translated: "Master, don't panic. They #$PlayerName# have come to help you!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -193002,7 +193002,7 @@
   splits:
   - split: 10
     text: "我#$PlayerName#纵横江湖这么多年，见过不贪的官，见过不奸的商，"
-    translated: "I#$PlayerName# have wandered through the Jianghu for so many years and have seen officials who are not greedy, and merchants who are not deceitful,"
+    translated: "I #$PlayerName# have wandered through the Jianghu for so many years and have seen officials who are not greedy, and merchants who are not deceitful,"
   - split: 10
     subIndex: 1
     text: "唯独没见过忧国忧民的土匪强盗。"
@@ -205320,7 +205320,7 @@
   splits:
   - split: 10
     text: "就是就是，看看人家#$PlayerName#，胸有成竹，气定神闲，"
-    translated: "Sure sure, look at you#$PlayerName#, full of confidence, calm and collected,"
+    translated: "Sure sure, look at you #$PlayerName#, full of confidence, calm and collected,"
   - split: 10
     subIndex: 1
     text: "再看看你那没出息的样子！"
@@ -206862,7 +206862,7 @@
   splits:
   - split: 10
     text: "放心，今日我#$PlayerName#只要一息尚存，"
-    translated: "Rest assured, today as long as I have a breath, I#$PlayerName# will just barely hold on."
+    translated: "Rest assured, today as long as I have a breath, I #$PlayerName# will just barely hold on."
   - split: 10
     subIndex: 1
     text: "就不会让此残片落入贼手。"
@@ -208031,7 +208031,7 @@
   splits:
   - split: 10
     text: "不错，金龙生你恶贯满盈，我#$PlayerName#今日便要以你之血，"
-    translated: "Not bad, Jin Longsheng, you have committed heinous crimes. Today, I#$PlayerName# shall take your blood."
+    translated: "Not bad, Jin Longsheng, you have committed heinous crimes. Today, I #$PlayerName# shall take your blood."
   - split: 10
     subIndex: 1
     text: "祭奠周世宗柴荣，以及这么多年来无数中原侠士之冤魂！"
@@ -226673,7 +226673,7 @@
   splits:
   - split: 10
     text: "#PlayerName#此言虽有道理，可......"
-    translated: "#PlayerName#This has some merit, but..."
+    translated: "#PlayerName# This has some merit, but..."
 - raw: ",雷殷殷,,左,,,,,,,哎呀，小翼子你就别婆婆妈妈的了。\\n男子汉大丈夫，该承担责任的时候可不能逃避！"
   splits:
   - split: 10
@@ -233145,7 +233145,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#行走江湖，向来是一身正气，光明磊落。"
-    translated: "I#$PlayerName# walk the Jianghu, always with righteous spirit, open and aboveboard."
+    translated: "I #$PlayerName# walk the Jianghu, always with righteous spirit, open and aboveboard."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -238422,7 +238422,7 @@
   - split: 10
     subIndex: 1
     text: "但在我#$PlayerName#心中，却永远光洁如新，胜过一切神兵利器。"
-    translated: "But in my#$PlayerName# heart, it remains forever pristine and superior to all divine weapons."
+    translated: "But in my #$PlayerName# heart, it remains forever pristine and superior to all divine weapons."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -240010,7 +240010,7 @@
   splits:
   - split: 10
     text: "想我#$PlayerName#成年之后，就一直胸怀壮志，"
-    translated: "Ever since I#$PlayerName# came of age, I have always harbored ambitious dreams,"
+    translated: "Ever since I #$PlayerName# came of age, I have always harbored ambitious dreams,"
   - split: 10
     subIndex: 1
     text: "想凭借自己的能力，在这江湖中一展拳脚。"
@@ -245309,7 +245309,7 @@
   - split: 10
     subIndex: 1
     text: "让父老乡亲见识见识我#$PlayerName#的硬气功夫！"
-    translated: "Let my fellow villagers see the firmness of my#$PlayerName# fists!"
+    translated: "Let my fellow villagers see the firmness of my #$PlayerName# fists!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -245350,7 +245350,7 @@
   - split: 10
     subIndex: 1
     text: "“铁金刚”#$PlayerName#前来一同表演。"
-    translated: "Steel Iron#$PlayerName# comes to perform together"
+    translated: "Steel Iron #$PlayerName# comes to perform together"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -250610,7 +250610,7 @@
   - split: 10
     subIndex: 1
     text: "但我#$PlayerName#堂堂大侠，岂是那种抢夺他人之物的恶贼？"
-    translated: "But#$PlayerName#, how can you be a Great Hero and snatch someone else's belongings like a villain?"
+    translated: "But #$PlayerName#, how can you be a Great Hero and snatch someone else's belongings like a villain?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -254263,7 +254263,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#与#PlayerForceName#，会与大隐阁同仇敌忾，共同进退，还请放心。"
-    translated: "I#$PlayerName# and #PlayerForceName#, will stand shoulder to shoulder with the Great Hidden Pavilion, advancing and retreating together. Please rest assured."
+    translated: "I #$PlayerName# and #PlayerForceName#, will stand shoulder to shoulder with the Great Hidden Pavilion, advancing and retreating together. Please rest assured."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -261703,7 +261703,7 @@
   splits:
   - split: 10
     text: "我#$PlayerName#正想凭借着胸中的这股浩然正气，试上一试。"
-    translated: "I#$PlayerName# was just about to test my righteous energy."
+    translated: "I #$PlayerName# was just about to test my righteous energy."
   - split: 10
     subIndex: 1
     text: "即便大事不成，大不了到时候再回头寻求自保之法。"
@@ -264761,7 +264761,7 @@
   - split: 10
     subIndex: 1
     text: "竟然真让#$PlayerName#和你们这群毛头小子一举解决了。"
-    translated: "#$PlayerName# has been incorrectly removed from the translation. Surprisingly, $PlayerName and that group of newcomers really took care of us in one go."
+    translated: "Surprisingly, #$PlayerName# and these greenhorns really managed to take them down in one go."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -264860,7 +264860,7 @@
   - split: 10
     subIndex: 1
     text: "我#$PlayerName#愿扶持左右。"
-    translated: "I#$PlayerName#wishes to stand by your side"
+    translated: "I #$PlayerName# wishes to stand by your side"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -269328,7 +269328,7 @@
   splits:
   - split: 10
     text: "我#$PlayerName#，今日便秉承历任掌门之志，"
-    translated: "I#$PlayerName#, today I will uphold the resolve of the previous Sect Leaders."
+    translated: "I #$PlayerName#, today I will uphold the resolve of the previous Sect Leaders."
   - split: 10
     subIndex: 1
     text: "兴兵讨贼，除暴安良。"
@@ -280602,7 +280602,7 @@
   - split: 10
     subIndex: 2
     text: "我#$PlayerName#岂是言而无信之人。"
-    translated: "I#$PlayerName# am not a man of empty promises."
+    translated: "I #$PlayerName# am not a man of empty promises."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -283554,7 +283554,7 @@
   splits:
   - split: 10
     text: "楚御史，我#$PlayerName#平定小诸葛谋反有功。"
-    translated: "Inspector Chu, I#$PlayerName# subdued the traitorous Lesser Zhuge and achieved a great honor."
+    translated: "Inspector Chu, I #$PlayerName# subdued the traitorous Lesser Zhuge and achieved a great honor."
   - split: 10
     subIndex: 1
     text: "还入宫查明周世宗死因，诛杀了罪魁祸首金龙生。"
@@ -283975,7 +283975,7 @@
   splits:
   - split: 10
     text: "呵呵，#PlayerName#说笑了。"
-    translated: "Haha,#PlayerName#is just joking"
+    translated: "Haha,#PlayerName# is just joking"
   - split: 10
     subIndex: 1
     text: "四位御史中，我乃是最老实敦厚，笨嘴拙舌之人。"
@@ -294371,7 +294371,7 @@
   - split: 10
     subIndex: 1
     text: "但#$PlayerName#此番调停，也算替我省了不少事。"
-    translated: "But this time you#$PlayerName# mediated the conflict, you've saved me a lot of trouble."
+    translated: "But this time you #$PlayerName# mediated the conflict, you've saved me a lot of trouble."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -294623,7 +294623,7 @@
   splits:
   - split: 10
     text: "诸位，我#$PlayerName#自继任仙霞派掌门以来，一直承蒙各位支持。"
-    translated: "Ladies and gentlemen, #$PlayerName# has been incorrectly removed from the translation since I succeeded as the Sect Leader of Xianxia Sect, I have always been supported by all of you."
+    translated: "Ladies and gentlemen, #$PlayerName# has been supported by all of you since I succeeded as the Sect Leader of Xianxia Sect."
   - split: 10
     subIndex: 1
     text: "历经阎罗殿肆虐，血衣盟阴谋等劫难，勉力维持下来。"
@@ -295456,7 +295456,7 @@
   splits:
   - split: 10
     text: "我#$PlayerName#立志平定乱世，"
-    translated: "I#$PlayerName# vow to bring stability to the chaotic world,"
+    translated: "I #$PlayerName# vow to bring stability to the chaotic world,"
   - split: 10
     subIndex: 1
     text: "今日这京城一战，就是我横扫中原武林之始。"
@@ -297515,7 +297515,7 @@
   splits:
   - split: 10
     text: "#PlayerName#你是当之无愧的武林盟主，"
-    translated: "#PlayerName#you are truly the Alliance Leader of the Wulin."
+    translated: "#PlayerName# you are truly the Alliance Leader of the Wulin."
   - split: 10
     subIndex: 1
     text: "我丐帮也愿听阁下之号令。"

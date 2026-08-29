@@ -257,8 +257,22 @@ complementary mechanism for genuine `String.Format` call sites — the two don't
   `{n}` tokens (see `BuildCompiledTemplate`).
 
 Full investigation narrative (three chained misdiagnoses before finding the real
-`Regex.Escape` bug — worth reading if a similar template silently fails to fire again) is in
+`Regex.Escape` bug — worth reading if a similar template silently fires again) is in
 [`DragonHeirPlugin/docs/dynamicstringpatches-template-regex-bug.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-template-regex-bug.md).
+
+**Update (2026-08-29) — CJK-inclusive placeholder fallback**: `CompiledTemplate` now also has a
+`PermissivePattern`, tried only when the strict `Pattern` (whose placeholder capture excludes CJK,
+per bug #3/#4) fails to match. This handles templates whose `{n}` placeholder is legitimately
+substituted with real CJK data (e.g. a sect/title name), which the strict pattern can never match
+— without the fallback, the template's own translated literal connector text was skipped entirely.
+**Residual risk**: the permissive fallback's safety against reproducing bug #3 (over-matching into
+unrelated CJK) currently depends entirely on `CompiledTemplate.BlockingRawEntries` already covering
+the relevant literal segment (i.e. a longer bare dictionary entry exists) — it is NOT inherently
+safe just because the fallback is "only reached when the strict pattern fails," since a
+CJK-placeholder template's strict pattern *always* fails by construction. If a new bug-#3-style
+over-match is reported for a CJK-placeholder template, check `BlockingRawEntries` coverage first.
+Full detail (including the verification harness methodology):
+[`DragonHeirPlugin/docs/dynamicstringpatches-cjk-placeholder-fallback.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-cjk-placeholder-fallback.md).
 
 ## Dynamic-string dictionary: `DynamicStringColumnSources`/`DynamicStringLabelColumnSources` (2026-08-27)
 

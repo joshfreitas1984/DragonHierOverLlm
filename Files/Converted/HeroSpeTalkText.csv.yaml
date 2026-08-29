@@ -386,14 +386,14 @@
     translated: "If we meet in battle someday, be sure to be more cautious."
   - split: 6
     text: "#PlayerName#这身功夫循规蹈矩，实在无趣。"
-    translated: "#PlayerName#this martial skill follows the rules too closely, truly uninteresting."
+    translated: "#PlayerName# this martial skill follows the rules too closely, truly uninteresting."
   - split: 6
     subIndex: 1
     text: "等老子心情好，哪天指点你几招！"
     translated: "Wait until I'm in a good mood; I'll show you a few moves some day!"
   - split: 7
     text: "#PlayerName#近来功力突飞猛进，老朽果然没看错人。"
-    translated: "#PlayerName#has made remarkable progress in his cultivation lately. Old Man truly didn't make a wrong judgment on you."
+    translated: "#PlayerName# has made remarkable progress in his cultivation lately. Old Man truly didn't make a wrong judgment on you."
   - split: 8
     text: "#PlayerName#和师傅老人家比，不知武功谁高谁低？"
     translated: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills."

@@ -144,6 +144,29 @@ internal static class DynamicStringPatches
     // want) instead of over-matching into someone else's text.
     private const string PlaceholderCaptureClass = @"[^\p{IsCJKUnifiedIdeographs}\p{IsCJKSymbolsandPunctuation}\p{IsCJKCompatibilityIdeographs}]";
 
+    // PLAN B (2026-08-29, "{0}向来秉持{1}之道..." template not translating - see repo memory
+    // dynamicstring-cjk-placeholder-template-fallback-plan.md): bug #3's CJK-exclusion fix above
+    // is correct for placeholders whose real runtime value is always plain numeric/date/ASCII
+    // data, but some templates' "{n}" placeholders are legitimately substituted with CJK text
+    // (e.g. a sect name or title from HeroData). For those, the strict PlaceholderCaptureClass can
+    // never match, so the WHOLE template - including its own translated literal connector text -
+    // is skipped, even though the connectors don't depend on the placeholder values at all. This
+    // permissive, CJK-inclusive capture class is tried only as a FALLBACK, after the strict
+    // pattern has already failed to match (see ApplyTemplates) - so a template whose strict pattern
+    // already matches successfully never reaches the fallback.
+    // RESIDUAL RISK (confirmed via throwaway harness, not just theoretical): a template whose
+    // strict pattern currently fails to match a bug-#3-shaped input (e.g. "经验{0}%" against
+    // "经验倍率＋0%") WILL reach this permissive fallback and CAN reproduce the original bug #3
+    // over-match, UNLESS CompiledTemplate.BlockingRawEntries already protects that literal segment
+    // (i.e. a longer bare dictionary entry like "经验倍率" exists and is auto-populated as a
+    // blocking entry - see BlockingRawEntries' own comment). This holds for every bug #3/#4 case
+    // confirmed so far, because those over-matches were always into text that also forms a real,
+    // curated whole-phrase dictionary entry - but if a NEW bug-#3-shaped over-match is ever
+    // reported against a template that also has a legitimately-CJK placeholder (so it can't just
+    // rely on the strict pattern), check BlockingRawEntries coverage FIRST before assuming this is
+    // a novel failure mode.
+    private const string PermissivePlaceholderCaptureClass = @".";
+
     // A single dictionary template entry, precompiled into a structural matcher: Pattern captures
     // each "{n}" placeholder as a named group ("p0", "p1", ...) around the template's literal
     // (translated) separator text, so it matches the template's *shape* regardless of how the
@@ -156,6 +179,13 @@ internal static class DynamicStringPatches
     private sealed class CompiledTemplate
     {
         public Regex Pattern;
+
+        // PLAN B fallback pattern - identical shape/literal segments as Pattern, but placeholder
+        // captures use PermissivePlaceholderCaptureClass (CJK-inclusive) instead of the strict
+        // non-CJK PlaceholderCaptureClass. Only ever consulted by ApplyTemplates when Pattern
+        // fails to match - see PermissivePlaceholderCaptureClass's comment for why this can't
+        // regress bug #3/#4.
+        public Regex PermissivePattern;
         public string ReplacementPattern;
         public List<string> LiteralSegments;
 
@@ -242,6 +272,7 @@ internal static class DynamicStringPatches
     {
         var raw = entry.Raw ?? string.Empty;
         var patternBuilder = new System.Text.StringBuilder();
+        var permissivePatternBuilder = new System.Text.StringBuilder();
         var literalSegments = new List<string>();
         var lastIndex = 0;
         var tokenIndex = 0;
@@ -251,17 +282,23 @@ internal static class DynamicStringPatches
             var literal = raw.Substring(lastIndex, placeholder.Index - lastIndex);
             if (literal.Length > 0)
             {
-                patternBuilder.Append(Regex.Escape(literal));
+                var escapedLiteral = Regex.Escape(literal);
+                patternBuilder.Append(escapedLiteral);
+                permissivePatternBuilder.Append(escapedLiteral);
                 literalSegments.Add(literal);
             }
 
             if (placeholder.Groups[1].Success)
             {
-                patternBuilder.Append($"(?<p{placeholder.Groups[1].Value}>{PlaceholderCaptureClass}+?)");
+                var groupName = $"p{placeholder.Groups[1].Value}";
+                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}+?)");
+                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}+?)");
             }
             else
             {
-                patternBuilder.Append($"(?<tok{tokenIndex}>{PlaceholderCaptureClass}+?)");
+                var groupName = $"tok{tokenIndex}";
+                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}+?)");
+                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}+?)");
                 tokenIndex++;
             }
 
@@ -271,7 +308,9 @@ internal static class DynamicStringPatches
         var trailingLiteral = raw.Substring(lastIndex);
         if (trailingLiteral.Length > 0)
         {
-            patternBuilder.Append(Regex.Escape(trailingLiteral));
+            var escapedTrailingLiteral = Regex.Escape(trailingLiteral);
+            patternBuilder.Append(escapedTrailingLiteral);
+            permissivePatternBuilder.Append(escapedTrailingLiteral);
             literalSegments.Add(trailingLiteral);
         }
 
@@ -287,6 +326,7 @@ internal static class DynamicStringPatches
         return new CompiledTemplate
         {
             Pattern = new Regex(patternBuilder.ToString(), RegexOptions.Compiled),
+            PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled),
             ReplacementPattern = replacementPattern,
             LiteralSegments = literalSegments,
         };
@@ -511,20 +551,22 @@ internal static class DynamicStringPatches
         if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
         if (!ContainsCjk(__result)) return;
 
-        // TEMP DIAGNOSTIC - see matching note in FormatPrefix above.
-        var isDiagTarget = __result.Contains("向来秉持") || __result.Contains("Has always upheld");
-        if (isDiagTarget) SafeDebugLog($"[GenericPostfix] ENTER __result={DebugEscape(__result)}");
-
+        // Guard MUST be set before any diagnostic logging below - see CONFIRMED BUG (2026-08-29,
+        // OutOfMemoryException/infinite-recursion case): DebugEscape's string.Replace chain and
+        // the `$"..."` interpolation calls used by SafeDebugLog themselves compile to
+        // System.String.Concat calls, which re-enter this very postfix. Setting the guard first
+        // makes that re-entry an immediate no-op instead of looping forever (same recursion class
+        // as docs/dynamicstringpatches-template-regex-bug.md's original MainPlugin.Logger bug -
+        // any code path invoked from inside this method, diagnostic or not, must run only after
+        // the guard is set).
         _inFormatConcatPatch = true;
         try
         {
             var result = __result;
             if (_compiledTemplates.Count > 0)
                 result = ApplyTemplates(result, _compiledTemplates);
-            if (isDiagTarget) SafeDebugLog($"[GenericPostfix] AFTER templates={DebugEscape(result)}");
             if (_dictionary.Count > 0)
                 result = ApplyDictionary(result, _dictionary);
-            if (isDiagTarget) SafeDebugLog($"[GenericPostfix] AFTER dictionary={DebugEscape(result)}");
             __result = result;
         }
         catch (Exception ex)
@@ -552,25 +594,13 @@ internal static class DynamicStringPatches
         if (string.IsNullOrEmpty(format) || _templateDictionary.Count == 0 || _inFormatConcatPatch) return;
         if (!ContainsCjk(format)) return;
 
-        // TEMP DIAGNOSTIC (2026-08-29, "向来秉持" template not translating - see repo memory):
-        // confirms whether FormatPrefix is entered AT ALL for this exact call, and whether the
-        // literal entry.Raw Contains match against `format` succeeds, before guessing further.
-        // Remove once root-caused (see dragonheirplugin.instructions.md's established pattern for
-        // this: docs/dynamicstringpatches-template-regex-bug.md's SafeDebugLog precedent).
-        var isDiagTarget = format.Contains("向来秉持");
-        if (isDiagTarget) SafeDebugLog($"[FormatPrefix] ENTER format={DebugEscape(format)}");
-
+        // Guard MUST be set before any diagnostic logging below - see the recursion note in
+        // GenericPostfix above (same root cause applies here: DebugEscape/SafeDebugLog's own
+        // string operations compile to Concat calls that would otherwise re-enter unguarded).
         _inFormatConcatPatch = true;
         try
         {
-            if (isDiagTarget)
-            {
-                var formatSnapshot = format;
-                var matchedEntry = _templateDictionary.FirstOrDefault(e => !string.IsNullOrEmpty(e.Raw) && formatSnapshot.Contains(e.Raw));
-                SafeDebugLog($"[FormatPrefix] exact-raw-match={matchedEntry != null} matchedRaw={DebugEscape(matchedEntry?.Raw)}");
-            }
             format = ApplyDictionary(format, _templateDictionary);
-            if (isDiagTarget) SafeDebugLog($"[FormatPrefix] AFTER format={DebugEscape(format)}");
         }
         catch (Exception ex)
         {
@@ -579,20 +609,6 @@ internal static class DynamicStringPatches
         finally
         {
             _inFormatConcatPatch = false;
-        }
-    }
-
-    private static string DebugEscape(string s) => s?.Replace("\\", "\\\\").Replace("\n", "\\n").Replace("\r", "\\r");
-
-    private static void SafeDebugLog(string message)
-    {
-        try
-        {
-            File.AppendAllText(Path.Combine(PluginDir, "dynamicstring_debug.log"), $"{DateTime.Now:HH:mm:ss.fff} {message}{Environment.NewLine}");
-        }
-        catch
-        {
-            // Diagnostic-only, never let logging failure affect the actual patch behavior.
         }
     }
 
@@ -622,6 +638,10 @@ internal static class DynamicStringPatches
     {
         if (_inTextSetterPostfix) return;
 
+        // Guard set up-front (before diagnostic logging) for the same reason as
+        // GenericPostfix/FormatPrefix above: SafeDebugLog/DebugEscape's own string operations
+        // could otherwise re-enter this same setter postfix via a nested .text write.
+        _inTextSetterPostfix = true;
         try
         {
             var current = getText();
@@ -629,25 +649,22 @@ internal static class DynamicStringPatches
             if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
             if (!ContainsCjk(current)) return;
 
-            var isDiagTarget = current.Contains("向来秉持") || current.Contains("Has always upheld");
-            if (isDiagTarget) SafeDebugLog($"[ApplyToComponentText] ENTER current={DebugEscape(current)}");
-
             var replaced = current;
             if (_compiledTemplates.Count > 0)
                 replaced = ApplyTemplates(replaced, _compiledTemplates);
-            if (isDiagTarget) SafeDebugLog($"[ApplyToComponentText] AFTER templates={DebugEscape(replaced)}");
             if (_dictionary.Count > 0)
                 replaced = ApplyDictionary(replaced, _dictionary);
-            if (isDiagTarget) SafeDebugLog($"[ApplyToComponentText] AFTER dictionary={DebugEscape(replaced)}");
             if (replaced == current) return;
 
-            _inTextSetterPostfix = true;
-            try { setText(replaced); }
-            finally { _inTextSetterPostfix = false; }
+            setText(replaced);
         }
         catch (Exception ex)
         {
             MainPlugin.Logger.LogError($"[DynamicStringPatches] Text setter postfix failed: {ex}");
+        }
+        finally
+        {
+            _inTextSetterPostfix = false;
         }
     }
 
@@ -669,15 +686,24 @@ internal static class DynamicStringPatches
             if (template.LiteralSegments.Count > 0 && !template.LiteralSegments.All(result.Contains))
                 continue;
 
-            if (!template.Pattern.IsMatch(result))
-                continue;
+            // PLAN B: try the strict (non-CJK-capture) pattern first - unchanged bug #3/#4
+            // behavior. Only fall back to the permissive (CJK-inclusive) pattern when the strict
+            // one fails to match at all, so templates that already match correctly today never
+            // reach the more permissive path (see PermissivePlaceholderCaptureClass's comment).
+            var pattern = template.Pattern;
+            if (!pattern.IsMatch(result))
+            {
+                pattern = template.PermissivePattern;
+                if (!pattern.IsMatch(result))
+                    continue;
+            }
 
             // See CompiledTemplate.BlockingRawEntries (CONFIRMED BUG #4) - captures the text at
             // the start of this template's pass so per-match overlap checks are computed against
             // a stable snapshot (Regex.Replace's MatchEvaluator runs against this same original
             // string for every match before any replacement is written back).
             var beforeThisTemplate = result;
-            result = template.Pattern.Replace(result, m =>
+            result = pattern.Replace(result, m =>
                 template.BlockingRawEntries.Count > 0 && OverlapsBlockingEntry(beforeThisTemplate, m, template.BlockingRawEntries)
                     ? m.Value
                     : m.Result(template.ReplacementPattern));

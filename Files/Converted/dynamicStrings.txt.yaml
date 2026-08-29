@@ -44,7 +44,7 @@
     translated: "#$PlayerName#! You have committed numerous evil deeds, and in the Jianghu, everyone is entitled to seek your downfall."
   - subIndex: 1
     text: "今日我#$TargetInteractName#就要替天行道，将你捉拿归案！"
-    translated: "Today, I#$TargetInteractName# will mete out justice as the law demands and arrest you!"
+    translated: "Today, I #$TargetInteractName# will mete out justice as the law demands and arrest you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#$PlayerName#！天堂有路你不走，地狱无门你偏自投，\n今日便要将你我的新仇旧恨一齐算清！"
@@ -176,7 +176,7 @@
     translated: "#$TargetInteractName#! You've been deliberately opposing me at every turn lately, so our grievances run deep."
   - subIndex: 1
     text: "今天我#$SourceInteractName#便要和你分个高下！"
-    translated: "Today, I#$SourceInteractName# will settle who's better!"
+    translated: "Today, I #$SourceInteractName# will settle who's better!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerForceName#与本门不甚和睦，恐怕还不能将本门任务委托于你。\n(需要至少40点门派好感。)"
@@ -296,7 +296,7 @@
     translated: "One's cultivation is still shallow"
   - subIndex: 1
     text: "想要指点我#$TargetInteractName#，恐怕还早了一些。"
-    translated: "You probably haven't earned the right to give me#$TargetInteractName#advice yet."
+    translated: "You probably haven't earned the right to give me #$TargetInteractName# advice yet."
   templates:
   - template: "#PlayerName#⟦0⟧{0}\n{1}"
 - raw: "#PlayerName#一席话令我醍醐灌顶，人在江湖，身不由己，金盆洗手，谈何容易？\n在此乱世之中，并无真正避世绝俗，可享永世清净的隐居之所。\n我已打消退隐江湖的念头了，多谢#PlayerName#提点！"
@@ -792,7 +792,7 @@
 - raw: "#PlayerName#可算来了，师兄弟们都等急了。"
   splits:
   - text: "#PlayerName#可算来了，师兄弟们都等急了。"
-    translated: "#PlayerName#has finally arrived; the brothers and seniors have been waiting anxiously."
+    translated: "#PlayerName# has finally arrived; the brothers and seniors have been waiting anxiously."
 - raw: "#PlayerName#咱们此前多有误会，方才互生嫌隙。\n今日便诚心诚意向你致个歉，以表我#$TargetInteractName#化干戈为玉帛之诚意。"
   splits:
   - text: "#PlayerName#咱们此前多有误会，方才互生嫌隙。"
@@ -808,7 +808,7 @@
     translated: "#PlayerName# We had many misunderstandings before, which led to our mutual resentment just now."
   - subIndex: 1
     text: "这#PlotInteractItemName#请你收下，以表我#$TargetInteractName#化干戈为玉帛之诚意。"
-    translated: "This#PlotInteractItemName#is offered to you as a token of my#$TargetInteractName#intent to turn swords into plowshares."
+    translated: "This #PlotInteractItemName# is offered to you as a token of my #$TargetInteractName# intent to turn swords into plowshares."
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#咱们此前多有误会，方才互生嫌隙。\n这{0}两银子请你收下，以表我#$TargetInteractName#化干戈为玉帛之诚意。"
@@ -1455,7 +1455,7 @@
     translated: "#PlayerName#'s martial arts skills are truly formidable"
   - subIndex: 1
     text: "我#$TargetInteractName#技不如人，甘拜下风。"
-    translated: "I#$TargetInteractName#is skilled beyond me, and I willingly admit defeat."
+    translated: "I #$TargetInteractName# is skilled beyond me, and I willingly admit defeat."
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#武功着实高强，佩服佩服。"
@@ -2025,10 +2025,10 @@
 - raw: "#PlayerName#这三脚猫的功夫着实惹人发笑。\n想要让我#$TargetInteractName#折服，恐怕还要再多练几年。"
   splits:
   - text: "#PlayerName#这三脚猫的功夫着实惹人发笑。"
-    translated: "#PlayerName#this meager skill is truly amusing"
+    translated: "#PlayerName# this meager skill is truly amusing"
   - subIndex: 1
     text: "想要让我#$TargetInteractName#折服，恐怕还要再多练几年。"
-    translated: "To make me#$TargetInteractName#surrender, I probably need to train for a few more years."
+    translated: "To make me #$TargetInteractName# surrender, I probably need to train for a few more years."
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#这个月没有空闲吗？可不要借口偷懒哦。"
@@ -2038,7 +2038,7 @@
 - raw: "#PlayerName#这药怎么味道有些刺鼻......\n（神情有些疑惑，服下丹药）"
   splits:
   - text: "#PlayerName#这药怎么味道有些刺鼻......"
-    translated: "#PlayerName#why does this medicine have such a pungent smell..."
+    translated: "#PlayerName# why does this medicine have such a pungent smell..."
   - subIndex: 1
     text: "（神情有些疑惑，服下丹药）"
     translated: "(Slightly puzzled, he swallowed the pill.)"
@@ -2521,7 +2521,7 @@
 - raw: "#SourceInteractName#眼下如有空闲，不妨前去探查一番，\n若当真有所收获，可别忘了我的一份功劳啊，哈哈！"
   splits:
   - text: "#SourceInteractName#眼下如有空闲，不妨前去探查一番，"
-    translated: "#SourceInteractName#If you have some free time, you might want to go and check it out."
+    translated: "#SourceInteractName# If you have some free time, you might want to go and check it out."
   - subIndex: 1
     text: "若当真有所收获，可别忘了我的一份功劳啊，哈哈！"
     translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
@@ -2530,7 +2530,7 @@
 - raw: "#SourceInteractName#眼下如有空闲，不妨前去搜寻一番，\n若当真找到了宝藏，可别忘了我的一份功劳啊，哈哈！"
   splits:
   - text: "#SourceInteractName#眼下如有空闲，不妨前去搜寻一番，"
-    translated: "#SourceInteractName#If you have some free time, you might want to go and look around."
+    translated: "#SourceInteractName# If you have some free time, you might want to go and look around."
   - subIndex: 1
     text: "若当真找到了宝藏，可别忘了我的一份功劳啊，哈哈！"
     translated: "If you do find the treasure, don't forget my contribution! Ha ha!"
@@ -2800,16 +2800,16 @@
 - raw: "#TargetInteractName#你心狠手辣，作恶多端。\n今日我#$PlayerName#就要替天行道，将你捉拿归案！"
   splits:
   - text: "#TargetInteractName#你心狠手辣，作恶多端。"
-    translated: "#TargetInteractName# has been incorrectly removed from the translation. You are ruthless and have committed numerous wicked deeds."
+    translated: "#TargetInteractName# You are ruthless and perpetually wicked"
   - subIndex: 1
     text: "今日我#$PlayerName#就要替天行道，将你捉拿归案！"
-    translated: "Today, I#$PlayerName# will take justice into my own hands and arrest you!"
+    translated: "Today, I #$PlayerName# will take justice into my own hands and arrest you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#TargetInteractName#你愁眉不展，唉声叹气，似乎有什么难言之隐，\n不知是否有我帮得上忙的地方。"
   splits:
   - text: "#TargetInteractName#你愁眉不展，唉声叹气，似乎有什么难言之隐，"
-    translated: "#TargetInteractName#You furrow your brow and sigh, as if burdened by some unsaid worry."
+    translated: "#TargetInteractName# You furrow your brow and sigh, as if burdened by some unsaid worry."
   - subIndex: 1
     text: "不知是否有我帮得上忙的地方。"
     translated: "I wonder if there's anything I can help with."
@@ -3132,7 +3132,7 @@
 - raw: "#TargetInteractName#许久未见，不知近况如何？"
   splits:
   - text: "#TargetInteractName#许久未见，不知近况如何？"
-    translated: "'#TargetInteractName#' has been incorrectly removed from the translation. Long time no see, '#TargetInteractName#'. How have you been lately?"
+    translated: "Long time no see, '#TargetInteractName#'. Wondering how you've been lately?"
 - raw: "#TargetInteractName#说的也有道理...\n既然如此，这几两买酒钱就请#TargetInteractName#收下，作为舟车劳顿之补偿，\n还望高抬贵手，留此地一个安宁。"
   splits:
   - text: "#TargetInteractName#说的也有道理..."
@@ -3196,7 +3196,7 @@
 - raw: "#TargetInteractName#这些珍宝虽绝非凡品，我依然全部鉴定了出来。\n各位父老乡亲们若是心悦诚服，还望打赏一二，也不枉我这一番辛苦！"
   splits:
   - text: "#TargetInteractName#这些珍宝虽绝非凡品，我依然全部鉴定了出来。"
-    translated: "#TargetInteractName#These treasures may be extraordinary, but I still identified all of them."
+    translated: "#TargetInteractName# These treasures may be extraordinary, but I still identified all of them."
   - subIndex: 1
     text: "各位父老乡亲们若是心悦诚服，还望打赏一二，也不枉我这一番辛苦！"
     translated: "If the villagers are truly content and willing, a small donation would be greatly appreciated! It wouldn't be in vain for me to put in so much effort!"
@@ -10423,7 +10423,7 @@
     translated: "I've heard much about #PlayerForceDescribe##$PlayerName#, and indeed, you do not disappoint."
   - subIndex: 1
     text: "在下#TargetForceDescribe##$TargetInteractName#，还请关照。"
-    translated: "#TargetForceDescribe# has been incorrectly removed from the translation. Underling, please look after #$TargetInteractName#."
+    translated: "#TargetForceDescribe#, please look after #$TargetInteractName#"
   templates:
   - template: "{0}\n{1}"
 - raw: "久闻#TargetInteractName#慧心妙舌，广见洽闻，今日我便来讨教一番！"
@@ -16692,7 +16692,7 @@
     translated: "Haha, high moral character, truly the wind of a great hero."
   - subIndex: 1
     text: "#PlayerName#，能得你这一赤诚好友，我#$TargetInteractName#此生足矣。"
-    translated: "#PlayerName#, to have you as this sincere friend, I#$TargetInteractName# have lived a fulfilling life."
+    translated: "#PlayerName#, to have you as this sincere friend, I #$TargetInteractName# have lived a fulfilling life."
   - subIndex: 2
     text: "江湖路远，各自珍重，咱们后会有期！"
     translated: "Jianghu road long, each take care, we'll meet again!"
@@ -19419,7 +19419,7 @@
 - raw: "在下#TargetForceDescribe##$TargetInteractName#，\n初次见面，不胜荣幸，还请#PlayerName#日后多多指教！"
   splits:
   - text: "在下#TargetForceDescribe##$TargetInteractName#，"
-    translated: "I am #TargetForceDescribe#$TargetInteractName#"
+    translated: "I am #TargetForceDescribe# #$TargetInteractName#"
   - subIndex: 1
     text: "初次见面，不胜荣幸，还请#PlayerName#日后多多指教！"
     translated: "Nice to meet you! I look forward to your future guidance, #PlayerName#!"
@@ -19428,7 +19428,7 @@
 - raw: "在下#TargetForceDescribe##$TargetInteractName#，\n此次特地前来拜访#SourceForceDescribe##$SourceInteractName#"
   splits:
   - text: "在下#TargetForceDescribe##$TargetInteractName#，"
-    translated: "I am #TargetForceDescribe#$TargetInteractName#"
+    translated: "I am #TargetForceDescribe# #$TargetInteractName#"
   - subIndex: 1
     text: "此次特地前来拜访#SourceForceDescribe##$SourceInteractName#"
     translated: "This time, I specially came to visit #SourceForceDescribe##$SourceInteractName#."
@@ -21979,7 +21979,7 @@
     translated: "Jiang Wan"
   - subIndex: 1
     text: "负3"
-    translated: "3 has been defeated"
+    translated: "Negative3"
   templates:
   - template: "{0}-{1}"
 - raw: "姜师姐，正所谓读万卷书行万里路。\n我都在山上乖乖练了这么多天功了，也得下山历练历练不是？"
@@ -22905,7 +22905,7 @@
 - raw: "将这#PlotInteractItemName#改装到机关兽上，可以针对某些特效进行强化。\n此后30日内召唤的所有机关兽，便都能从中获益......"
   splits:
   - text: "将这#PlotInteractItemName#改装到机关兽上，可以针对某些特效进行强化。"
-    translated: "Modify this#PlotInteractItemName#to a mechanism beast, it can enhance certain effects."
+    translated: "Modify this #PlotInteractItemName# to a mechanism beast, it can enhance certain effects."
   - subIndex: 1
     text: "此后30日内召唤的所有机关兽，便都能从中获益......"
     translated: "Within the next 30 days, all summoned mechanisms will benefit from this..."
@@ -23900,11 +23900,11 @@
 - raw: "师"
   splits:
   - text: "师"
-    translated: "Master"
+    translated: "Senior"
 - raw: "师伯"
   splits:
   - text: "师伯"
-    translated: "Senior master"
+    translated: "Senior Uncle"
 - raw: "师侄"
   splits:
   - text: "师侄"
@@ -25748,7 +25748,7 @@
 - raw: "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。\n敢问阁下尊姓大名，寻我有何贵干？"
   splits:
   - text: "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。"
-    translated: "I#$PlayerName# is new to the Jianghu and doesn't seem to recognize someone like you."
+    translated: "I #$PlayerName# is new to the Jianghu and doesn't seem to recognize someone like you."
   - subIndex: 1
     text: "敢问阁下尊姓大名，寻我有何贵干？"
     translated: "May I ask your esteemed name, sir? What brings you to seek me out?"
@@ -25757,7 +25757,7 @@
 - raw: "我#$PlayerName#技不如人，甘拜下风。要杀要剐，悉听尊便！\n（当前成功率为{0}%。对方行事越接近戒律/凶狠，以及自身口才越高，越有可能逃过一劫。）"
   splits:
   - text: "我#$PlayerName#技不如人，甘拜下风。要杀要剐，悉听尊便！"
-    translated: "I#$PlayerName#are no match for me. I submit humbly. Do with me as you will!"
+    translated: "I #$PlayerName# are no match for me. I submit humbly. Do with me as you will!"
   - subIndex: 1
     text: "（当前成功率为"
     translated: "(Current success rate is"
@@ -25772,7 +25772,7 @@
 - raw: "我#$TargetInteractName#也算是闻名一方的绿林豪杰！识相的快快束手就擒，免得场血光之灾！"
   splits:
   - text: "我#$TargetInteractName#也算是闻名一方的绿林豪杰！识相的快快束手就擒，免得场血光之灾！"
-    translated: "I#$TargetInteractName# is also a notorious bandit hero in these parts! If you value your life, surrender now and avoid bloodshed!"
+    translated: "I #$TargetInteractName# is also a notorious bandit hero in these parts! If you value your life, surrender now and avoid bloodshed!"
 - raw: "我#TargetForceName#与#SourceForceName#素来交好。\n此次特地带数名#TargetForceDescribe#弟子前来，\n是想要与贵派以武论友，切磋交流一番。"
   splits:
   - text: "我#TargetForceName#与#SourceForceName#素来交好。"
@@ -27329,7 +27329,7 @@
 - raw: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。\n从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
   splits:
   - text: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。"
-    translated: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I#$SourceInteractName# came out on top."
+    translated: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top."
   - subIndex: 1
     text: "从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
     translated: "From today onward, all the merits and achievements of the Dragon Lineage #SourceForceName# belong to me!"
@@ -30664,7 +30664,7 @@
     translated: "Has our sect had any matters to attend to lately?"
   - subIndex: 1
     text: "#PlayerName#只管吩咐便是。"
-    translated: "#PlayerName#just give the orders"
+    translated: "#PlayerName# just give the orders"
   templates:
   - template: "{0}\n{1}"
 - raw: "本馆医术精湛，深受周遭武林人士及百姓信赖。\n阁下身上若有什么疑难杂症，旧病沉疴，只管交给在下便是。\n（当前伤势：外伤{0}/内伤{1}/中毒{2}）"
@@ -31200,7 +31200,7 @@
     translated: "Debt should be repaid, which is only right."
   - subIndex: 1
     text: "只是#SourceInteractName#这般上门讨债，着实有些拂了我#$TargetInteractName#的脸面。"
-    translated: "Just coming here to demand payment like this#SourceInteractName# has genuinely offended my #$TargetInteractName#'s dignity."
+    translated: "Just coming here to demand payment like this #SourceInteractName# has genuinely offended my #$TargetInteractName#'s dignity."
   - subIndex: 2
     text: "这样好了，若#SourceInteractName#能胜过我一招半式，我便乖乖将欠款奉上！"
     translated: "Alright, if #SourceInteractName# can best me in one or two moves, I'll gladly pay off my debt!"
@@ -34422,7 +34422,7 @@
     translated: "Adversity reveals true loyalty, as does a storm reveal strong grass."
   - subIndex: 1
     text: "我#$PlayerName#时至今日，才知#TargetInteractName#乃真义士也。"
-    translated: "By the way of#$PlayerName#, I have come to realize that #TargetInteractName# is indeed a true gentleman."
+    translated: "By the way of #$PlayerName#, I have come to realize that #TargetInteractName# is indeed a true gentleman."
   - subIndex: 2
     text: "待我重见天日，必不忘此番恩情。"
     translated: "When I see the light of day again, I will not forget this kindness."
@@ -34596,7 +34596,7 @@
 - raw: "皇帝诏曰，#$PlayerName#执掌#PlayerForceName#以来，兢兢业业，保境安民，\n故特此敕封你为<b>{0}</b>，并增加封邑一处。\n还望卿戒骄戒躁，继续恪尽职守，为国效力。"
   splits:
   - text: "皇帝诏曰，#$PlayerName#执掌#PlayerForceName#以来，兢兢业业，保境安民，"
-    translated: "The Emperor decrees: Since#$PlayerName# took charge of #PlayerForceName#, you have worked diligently, safeguarding the territory and ensuring the well‑being of the people."
+    translated: "The Emperor decrees: Since #$PlayerName# took charge of #PlayerForceName#, you have worked diligently, safeguarding the territory and ensuring the well‑being of the people."
   - subIndex: 1
     text: "故特此敕封你为"
     translated: "Hence, I hereby appoint you as"
@@ -37622,7 +37622,7 @@
     translated: "Overreaching"
   - subIndex: 1
     text: "负3"
-    translated: "3 has been defeated"
+    translated: "Negative3"
   templates:
   - template: "{0};GetTreasureMapReward;0-{1}"
 - raw: "自动"
@@ -38438,7 +38438,7 @@
     translated: "A fly trying to move a tree, acting beyond its capacity."
   - subIndex: 1
     text: "既然#$SourceInteractName#你执意与我为敌，那只管出手便是！"
-    translated: "Since you#$SourceInteractName# are determined to be my enemy, just strike!"
+    translated: "Since you #$SourceInteractName# are determined to be my enemy, just strike!"
   - subIndex: 2
     text: "二人战斗中，剩余"
     translated: "In the fight between the two, the remaining"
@@ -42977,7 +42977,7 @@
 - raw: "那怎么行！我#$SourceInteractName#就算砸锅卖铁，\n也不能让你这样的好姑娘卖身为奴为婢啊！"
   splits:
   - text: "那怎么行！我#$SourceInteractName#就算砸锅卖铁，"
-    translated: "That won't do! Even if I#$SourceInteractName# sell everything I have,"
+    translated: "That won't do! Even if I #$SourceInteractName# sell everything I have,"
   - subIndex: 1
     text: "也不能让你这样的好姑娘卖身为奴为婢啊！"
     translated: "You can't make a good girl like you sell herself into slavery!"
