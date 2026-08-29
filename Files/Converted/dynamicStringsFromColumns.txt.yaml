@@ -31185,7 +31185,7 @@
 - raw: "读取"
   splits:
   - text: "读取"
-    translated: "Read"
+    translated: "Load"
 - raw: "谁能挡我！;HideInteractUI"
   splits:
   - text: "谁能挡我！"
@@ -43271,3 +43271,187 @@
   splits:
   - text: "内功经验"
     translated: "Neigong experience"
+- raw: "农田"
+  splits:
+  - text: "农田"
+    translated: "Crop Field"
+- raw: "森林"
+  splits:
+  - text: "森林"
+    translated: "Forest"
+- raw: "矿场"
+  splits:
+  - text: "矿场"
+    translated: "Minefield"
+- raw: "药园"
+  splits:
+  - text: "药园"
+    translated: "Herb Garden"
+- raw: "驿站"
+  splits:
+  - text: "驿站"
+    translated: "Inn"
+- raw: "民宅"
+  splits:
+  - text: "民宅"
+    translated: "Residential house"
+- raw: "驻所"
+  splits:
+  - text: "驻所"
+    translated: "Resident"
+- raw: "园林"
+  splits:
+  - text: "园林"
+    translated: "Garden"
+- raw: "客房"
+  splits:
+  - text: "客房"
+    translated: "Guest room"
+- raw: "仓房"
+  splits:
+  - text: "仓房"
+    translated: "Granary"
+- raw: "校场"
+  splits:
+  - text: "校场"
+    translated: "Arena"
+- raw: "静室"
+  splits:
+  - text: "静室"
+    translated: "Quiet Room"
+- raw: "私塾"
+  splits:
+  - text: "私塾"
+    translated: "Private school"
+- raw: "皇宫"
+  splits:
+  - text: "皇宫"
+    translated: "Palace"
+- raw: "大运河"
+  splits:
+  - text: "大运河"
+    translated: "Grand Canal"
+- raw: "甘棠港"
+  splits:
+  - text: "甘棠港"
+    translated: "Camphor Port"
+- raw: "崇圣寺"
+  splits:
+  - text: "崇圣寺"
+    translated: "Chongsheng Temple"
+- raw: "长城"
+  splits:
+  - text: "长城"
+    translated: "Great Wall"
+- raw: "晋祠"
+  splits:
+  - text: "晋祠"
+    translated: "Jin Temple"
+- raw: "都江堰"
+  splits:
+  - text: "都江堰"
+    translated: "Dujiangyan"
+- raw: "莫高窟"
+  splits:
+  - text: "莫高窟"
+    translated: "Mogao Caves"
+- raw: "黄鹤楼"
+  splits:
+  - text: "黄鹤楼"
+    translated: "Yellow Crane Tower"
+- raw: "烟花柳巷"
+  splits:
+  - text: "烟花柳巷"
+    translated: "Red Light District"
+- raw: "布达拉宫"
+  splits:
+  - text: "布达拉宫"
+    translated: "Potala Palace"
+- raw: "销金窟"
+  splits:
+  - text: "销金窟"
+    translated: "Den of vice"
+- raw: "暗室"
+  splits:
+  - text: "暗室"
+    translated: "Darkroom"
+- raw: "万花谷"
+  splits:
+  - text: "万花谷"
+    translated: "Valley of a Hundred Flowers"
+- raw: "大会台"
+  splits:
+  - text: "大会台"
+    translated: "Grand Stage"
+- raw: "赛马场"
+  splits:
+  - text: "赛马场"
+    translated: "Racetrack"
+- raw: "华阳洞"
+  splits:
+  - text: "华阳洞"
+    translated: "Yang Cave"
+- raw: "剑池"
+  splits:
+  - text: "剑池"
+    translated: "Sword Pool"
+- raw: "万毒池"
+  splits:
+  - text: "万毒池"
+    translated: "Pond of a Thousand Poisons"
+- raw: "鬼门关"
+  splits:
+  - text: "鬼门关"
+    translated: "Narrow escape"
+- raw: "星辰楼"
+  splits:
+  - text: "星辰楼"
+    translated: "Starry Sky Tower"
+- raw: "铜人阵"
+  splits:
+  - text: "铜人阵"
+    translated: "Phalanx of Bronze Figures"
+- raw: "紫霄宫"
+  splits:
+  - text: "紫霄宫"
+    translated: "Purple Heaven Palace"
+- raw: "试刀台"
+  splits:
+  - text: "试刀台"
+    translated: "Test Blade Platform"
+- raw: "蓬莱阁"
+  splits:
+  - text: "蓬莱阁"
+    translated: "Penglai Pavilion"
+- raw: "金顶"
+  splits:
+  - text: "金顶"
+    translated: "Golden Peak"
+- raw: "七十二洞"
+  splits:
+  - text: "七十二洞"
+    translated: "Seventy‑Two Caves"
+- raw: "机关坊"
+  splits:
+  - text: "机关坊"
+    translated: "Mechanism Ward"
+- raw: "火炼室"
+  splits:
+  - text: "火炼室"
+    translated: "Forge Room"
+- raw: "灵塔殿"
+  splits:
+  - text: "灵塔殿"
+    translated: "Temple of the Spiritual Tower"
+- raw: "玄冰池"
+  splits:
+  - text: "玄冰池"
+    translated: "Pond of Black Ice"
+- raw: "应天书院"
+  splits:
+  - text: "应天书院"
+    translated: "Yingtian Academy"
+- raw: "河套马场"
+  splits:
+  - text: "河套马场"
+    translated: "Hetao Horse Ranch"

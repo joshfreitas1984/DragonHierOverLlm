@@ -623,9 +623,51 @@ internal static class DynamicStringPatches
         {
             if (string.IsNullOrEmpty(entry.Raw)) continue;
             if (result.Contains(entry.Raw))
-                result = result.Replace(entry.Raw, entry.Result ?? string.Empty);
+                result = ReplaceWithWordBoundarySpacing(result, entry.Raw, entry.Result ?? string.Empty);
         }
         return result;
+    }
+
+    // Plain substring replace smashes words together whenever a translated fragment lands
+    // directly next to another word with no separator in the original raw text - the source
+    // Chinese never needed a space there (CJK doesn't rely on whitespace for word boundaries), but
+    // the English replacement does, e.g. "Slot" + "架势" + "Info" -> "Slot" + "Posture" + "Info"
+    // becomes "SlotPostureInfo" instead of "Slot Posture Info". Fix: after substituting, look at
+    // the character immediately preceding/following the match; if it's alphanumeric (letter or
+    // digit - `char.IsLetterOrDigit` also treats CJK ideographs as letters, so an untranslated
+    // Chinese neighbor still counts) and the adjoining edge of the replacement text is also
+    // alphanumeric, insert a single space between them. Punctuation/symbols (":", "?", "-", CJK
+    // punctuation, etc.) and whitespace are never treated as needing a separator, since
+    // `char.IsLetterOrDigit` returns false for those - so "Foo:架势" stays "Foo:Posture", not
+    // "Foo: Posture". The leading-space check reads the last character already written to the
+    // output (not the raw input) so it stays correct even when a previous replacement in this same
+    // pass already inserted a trailing space right before this match.
+    private static string ReplaceWithWordBoundarySpacing(string input, string raw, string replacement)
+    {
+        var sb = new System.Text.StringBuilder();
+        var startIndex = 0;
+        int idx;
+        while ((idx = input.IndexOf(raw, startIndex, StringComparison.Ordinal)) >= 0)
+        {
+            sb.Append(input, startIndex, idx - startIndex);
+
+            if (sb.Length > 0 && replacement.Length > 0
+                && char.IsLetterOrDigit(sb[sb.Length - 1]) && char.IsLetterOrDigit(replacement[0]))
+            {
+                sb.Append(' ');
+            }
+
+            sb.Append(replacement);
+            startIndex = idx + raw.Length;
+
+            if (replacement.Length > 0 && char.IsLetterOrDigit(replacement[replacement.Length - 1])
+                && startIndex < input.Length && char.IsLetterOrDigit(input[startIndex]))
+            {
+                sb.Append(' ');
+            }
+        }
+        sb.Append(input, startIndex, input.Length - startIndex);
+        return sb.ToString();
     }
 }
 

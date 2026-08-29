@@ -121,7 +121,7 @@ namespace Tests
             // BuildingData load loop. Column 11 (增加效率/Increase efficiency) stores its
             // label half as AreaBuildingRateChange.targetBuildingName, a building-name lookup key.
             // Translating any of these breaks the corresponding lookup.
-            new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [8, 9, 10, 11, 12] },
+            new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
             new() {Path = "FoodData.csv", PackageOutput = true },
             // Column 2 (行事风格/Operating style) is exact-matched against the hardcoded literal
             // "中庸" in ForceData.cs (String.Equals(this.forceStyle,"中庸",0)) to drive sect
@@ -241,6 +241,8 @@ namespace Tests
             ("SpeHeroData.csv", [5]),
             ("HeroTagData.csv", [1]),
             ("KungFuData.csv", [3]),
+            ("AreaData.csv", [2]),
+            ("BuildingData.csv", [1]),
         ];
 
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>

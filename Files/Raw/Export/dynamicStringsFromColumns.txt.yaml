@@ -33009,3 +33009,141 @@
 - raw: "内功经验"
   splits:
   - text: "内功经验"
+- raw: "农田"
+  splits:
+  - text: "农田"
+- raw: "森林"
+  splits:
+  - text: "森林"
+- raw: "矿场"
+  splits:
+  - text: "矿场"
+- raw: "药园"
+  splits:
+  - text: "药园"
+- raw: "驿站"
+  splits:
+  - text: "驿站"
+- raw: "民宅"
+  splits:
+  - text: "民宅"
+- raw: "驻所"
+  splits:
+  - text: "驻所"
+- raw: "园林"
+  splits:
+  - text: "园林"
+- raw: "客房"
+  splits:
+  - text: "客房"
+- raw: "仓房"
+  splits:
+  - text: "仓房"
+- raw: "校场"
+  splits:
+  - text: "校场"
+- raw: "静室"
+  splits:
+  - text: "静室"
+- raw: "私塾"
+  splits:
+  - text: "私塾"
+- raw: "皇宫"
+  splits:
+  - text: "皇宫"
+- raw: "大运河"
+  splits:
+  - text: "大运河"
+- raw: "甘棠港"
+  splits:
+  - text: "甘棠港"
+- raw: "崇圣寺"
+  splits:
+  - text: "崇圣寺"
+- raw: "长城"
+  splits:
+  - text: "长城"
+- raw: "晋祠"
+  splits:
+  - text: "晋祠"
+- raw: "都江堰"
+  splits:
+  - text: "都江堰"
+- raw: "莫高窟"
+  splits:
+  - text: "莫高窟"
+- raw: "黄鹤楼"
+  splits:
+  - text: "黄鹤楼"
+- raw: "烟花柳巷"
+  splits:
+  - text: "烟花柳巷"
+- raw: "布达拉宫"
+  splits:
+  - text: "布达拉宫"
+- raw: "销金窟"
+  splits:
+  - text: "销金窟"
+- raw: "暗室"
+  splits:
+  - text: "暗室"
+- raw: "万花谷"
+  splits:
+  - text: "万花谷"
+- raw: "大会台"
+  splits:
+  - text: "大会台"
+- raw: "赛马场"
+  splits:
+  - text: "赛马场"
+- raw: "华阳洞"
+  splits:
+  - text: "华阳洞"
+- raw: "剑池"
+  splits:
+  - text: "剑池"
+- raw: "万毒池"
+  splits:
+  - text: "万毒池"
+- raw: "鬼门关"
+  splits:
+  - text: "鬼门关"
+- raw: "星辰楼"
+  splits:
+  - text: "星辰楼"
+- raw: "铜人阵"
+  splits:
+  - text: "铜人阵"
+- raw: "紫霄宫"
+  splits:
+  - text: "紫霄宫"
+- raw: "试刀台"
+  splits:
+  - text: "试刀台"
+- raw: "蓬莱阁"
+  splits:
+  - text: "蓬莱阁"
+- raw: "金顶"
+  splits:
+  - text: "金顶"
+- raw: "七十二洞"
+  splits:
+  - text: "七十二洞"
+- raw: "机关坊"
+  splits:
+  - text: "机关坊"
+- raw: "火炼室"
+  splits:
+  - text: "火炼室"
+- raw: "灵塔殿"
+  splits:
+  - text: "灵塔殿"
+- raw: "玄冰池"
+  splits:
+  - text: "玄冰池"
+- raw: "应天书院"
+  splits:
+  - text: "应天书院"
+- raw: "河套马场"
+  splits:
+  - text: "河套马场"

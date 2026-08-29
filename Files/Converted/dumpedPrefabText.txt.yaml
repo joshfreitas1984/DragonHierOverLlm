@@ -2331,7 +2331,7 @@
 - raw: "启程"
   splits:
   - text: "启程"
-    translated: "Departure"
+    translated: "Begin Journey"
 - raw: "周世宗之后，继任皇位者皆碌碌庸才，难以服众。"
   splits:
   - text: "周世宗之后，继任皇位者皆碌碌庸才，难以服众。"
@@ -5565,7 +5565,7 @@
 - raw: "读取"
   splits:
   - text: "读取"
-    translated: "Read"
+    translated: "Load"
 - raw: "调息(快捷键X)\\n♦生命+5% 内力+10%\\n♦体力+30\\n♦恢复10%已损失架势"
   splits:
   - text: "调息"
