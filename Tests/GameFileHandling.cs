@@ -121,7 +121,7 @@ namespace Tests
             // BuildingData load loop. Column 11 (增加效率/Increase efficiency) stores its
             // label half as AreaBuildingRateChange.targetBuildingName, a building-name lookup key.
             // Translating any of these breaks the corresponding lookup.
-            new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
+            new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
             new() {Path = "FoodData.csv", PackageOutput = true, SkipColumns = [1, 15]  },
             // Column 2 (行事风格/Operating style) is exact-matched against the hardcoded literal
             // "中庸" in ForceData.cs (String.Equals(this.forceStyle,"中庸",0)) to drive sect
@@ -293,6 +293,8 @@ namespace Tests
             // (AreaBuildingDataBase.GetDescribe concatenates the raw label into the building info
             // panel); column 11's label is a cross-referenced building name
             // (AreaBuildingRateChange.targetBuildingName, concatenated by GetAreaBuildRateChangeText).
+            // Column 7 (互动选项) is NOT a Label<sign><number> cell - see
+            // DynamicStringInteractionOptionColumnSources below for its own extractor.
             ("BuildingData.csv", [3, 8, 9, 10, 11, 12]),
             ("HeroTagData.csv", [9]),
             // 修炼效果/运功效果/威力系数/修炼需求/使用特效 - e.g. "内功1;经脉1", "生命上限20;内力上限20;内功4".
@@ -323,6 +325,19 @@ namespace Tests
             ("SpeHeroData.csv", [1]),
         ];
 
+        // BuildingData.csv column 7 (互动选项/Interactive options) holds ';'-separated items shaped
+        // like "Name?Description-Condition-TriggerId" (description optional, e.g. "交易--
+        // ShowBuildingShop" has none) where AreaBuildingDataBase concatenates Name (and, when
+        // present, Description) into the building's clickable option list shown to the player;
+        // Condition (我/非我/敌/长老/... combined with &/|) and TriggerId are internal routing
+        // never displayed raw. This doesn't fit the Label<sign><number> shape handled by
+        // DynamicStringLabelColumnSources, so it gets its own extractor
+        // (InteractionOptionRegex) that pulls just Name and Description.
+        public static readonly (string CsvFileName, int[] Columns)[] DynamicStringInteractionOptionColumnSources =
+        [
+            ("BuildingData.csv", [7]),
+        ];
+
         // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.
         // The allowlist was sampled against real dumps; noisy/internal fields are intentionally absent.
         // Field selection and exact-match setter rationale: docs/gamefilehandling-reference.md.
@@ -338,6 +353,10 @@ namespace Tests
 
         // Extracts the repeated label from a structured stat modifier.
         private static readonly Regex StatLabelRegex = new(@"^[^\d+\-]+", RegexOptions.Compiled);
+
+        // Extracts the Name (group 1) and optional Description (group 3) from a
+        // "Name?Description-Condition-TriggerId" interactive-option item.
+        private static readonly Regex InteractionOptionRegex = new(@"^([^?\-]+)(\?([^-]*))?-", RegexOptions.Compiled);
 
 
 
@@ -392,6 +411,18 @@ namespace Tests
                 ExtractFrom(csvFileName, columns, cell => cell
                     .Split([';', ','], StringSplitOptions.RemoveEmptyEntries)
                     .Select(item => StatLabelRegex.Match(item).Value));
+            }
+
+            foreach (var (csvFileName, columns) in DynamicStringInteractionOptionColumnSources)
+            {
+                ExtractFrom(csvFileName, columns, cell => cell
+                    .Split(';', StringSplitOptions.RemoveEmptyEntries)
+                    .SelectMany(item =>
+                    {
+                        var match = InteractionOptionRegex.Match(item);
+                        if (!match.Success) return [];
+                        return new[] { match.Groups[1].Value, match.Groups[3].Value };
+                    }));
             }
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);

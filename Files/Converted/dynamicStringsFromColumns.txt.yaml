@@ -51196,3 +51196,915 @@
   splits:
   - text: "软弓"
     translated: "Soft bow"
+- raw: "查看弟子相关信息"
+  splits:
+  - text: "查看弟子相关信息"
+    translated: "Check Disciple Information"
+- raw: "门派职位"
+  splits:
+  - text: "门派职位"
+    translated: "Sect position"
+- raw: "管理门派特殊职位"
+  splits:
+  - text: "管理门派特殊职位"
+    translated: "Manage special positions in the sect"
+- raw: "设定弟子行动方针"
+  splits:
+  - text: "设定弟子行动方针"
+    translated: "Set the junior disciple's action strategy"
+- raw: "与其他门派进行外交"
+  splits:
+  - text: "与其他门派进行外交"
+    translated: "Engage in diplomacy with other sects"
+- raw: "门派科研"
+  splits:
+  - text: "门派科研"
+    translated: "Sect Research"
+- raw: "查看门派科研情况"
+  splits:
+  - text: "查看门派科研情况"
+    translated: "View the sect's research status"
+- raw: "查看科研"
+  splits:
+  - text: "查看科研"
+    translated: "Check research"
+- raw: "门派委托"
+  splits:
+  - text: "门派委托"
+    translated: "Sect Commission"
+- raw: "完成门派委托获取银钱和门派功绩"
+  splits:
+  - text: "完成门派委托获取银钱和门派功绩"
+    translated: "Complete the Sect Commission to earn silver and Sect merits."
+- raw: "向周遭区域发起攻击"
+  splits:
+  - text: "向周遭区域发起攻击"
+    translated: "Attack the surrounding area"
+- raw: "外交派遣"
+  splits:
+  - text: "外交派遣"
+    translated: "Diplomatic mission"
+- raw: "派遣信使进行外交"
+  splits:
+  - text: "派遣信使进行外交"
+    translated: "Dispatch diplomats for diplomacy"
+- raw: "别派委托"
+  splits:
+  - text: "别派委托"
+    translated: "Don't assign commissions"
+- raw: "完成别派委托获取银钱和别派功绩"
+  splits:
+  - text: "完成别派委托获取银钱和别派功绩"
+    translated: "Complete other faction commissions to earn silver and merits from other factions"
+- raw: "功绩兑换武学/服装/特殊建筑"
+  splits:
+  - text: "功绩兑换武学"
+    translated: "Merit Exchange Martial Techniques"
+  - subIndex: 1
+    text: "服装"
+    translated: "Clothing"
+  - subIndex: 2
+    text: "特殊建筑"
+    translated: "Special buildings"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "阅读藏经阁秘籍获取理论经验"
+  splits:
+  - text: "阅读藏经阁秘籍获取理论经验"
+    translated: "Read the scriptures in the Scripture Pavilion to gain theoretical experience."
+- raw: "阅读行囊/仓库秘籍获取理论经验"
+  splits:
+  - text: "阅读行囊"
+    translated: "Read the inventory"
+  - subIndex: 1
+    text: "仓库秘籍获取理论经验"
+    translated: "Warehouse secret skill acquisition theoretical experience"
+  templates:
+  - template: "{0}/{1}"
+- raw: "对秘籍进行整合/抄录/默写"
+  splits:
+  - text: "对秘籍进行整合"
+    translated: "Integrate the secretskicheng"
+  - subIndex: 1
+    text: "抄录"
+    translated: "Copy"
+  - subIndex: 2
+    text: "默写"
+    translated: "Recite"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "管理藏书"
+  splits:
+  - text: "管理藏书"
+    translated: "Manage the library"
+- raw: "管理藏经阁内藏书"
+  splits:
+  - text: "管理藏经阁内藏书"
+    translated: "Manage the books in the Scripture Pavilion"
+- raw: "练习武功获取实战经验"
+  splits:
+  - text: "练习武功获取实战经验"
+    translated: "Practice martial arts to gain practical combat experience"
+- raw: "与门派弟子进行切磋"
+  splits:
+  - text: "与门派弟子进行切磋"
+    translated: "Spar with Sect apprentices"
+- raw: "修炼内功/轻功/绝技获取实战经验"
+  splits:
+  - text: "修炼内功"
+    translated: "Cultivate neigong"
+  - subIndex: 1
+    text: "轻功"
+    translated: "Qinggong"
+  - subIndex: 2
+    text: "绝技获取实战经验"
+    translated: "Master advanced techniques through practical experience"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "突破抵达瓶颈的武学"
+  splits:
+  - text: "突破抵达瓶颈的武学"
+    translated: "Breaking through the bottleneck in martial arts proficiency"
+- raw: "消耗天赋点领悟天赋"
+  splits:
+  - text: "消耗天赋点领悟天赋"
+    translated: "Spend Talent Points to Understand Talents"
+- raw: "祭典"
+  splits:
+  - text: "祭典"
+    translated: "Festival"
+- raw: "获取门派威望\n技能影响：学识"
+  splits:
+  - text: "获取门派威望"
+    translated: "Acquire Sect Prestige"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "学识"
+    translated: "Scholarship"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "鉴定"
+  splits:
+  - text: "鉴定"
+    translated: "Identification"
+- raw: "鉴定珍宝"
+  splits:
+  - text: "鉴定珍宝"
+    translated: "Appraise Treasures"
+- raw: "管理门派展厅"
+  splits:
+  - text: "管理门派展厅"
+    translated: "Manage the Sect Exhibition Hall"
+- raw: "与门派弟子宴饮提升忠诚"
+  splits:
+  - text: "与门派弟子宴饮提升忠诚"
+    translated: "Dine with Sect Disciples to Boost Loyalty"
+- raw: "制作装备"
+  splits:
+  - text: "制作装备"
+    translated: "Craft equipment"
+- raw: "煅烧"
+  splits:
+  - text: "煅烧"
+    translated: "Firing"
+- raw: "强化装备"
+  splits:
+  - text: "强化装备"
+    translated: "Enhance equipment"
+- raw: "制作饮食"
+  splits:
+  - text: "制作饮食"
+    translated: "Preparing food"
+- raw: "强化饮食"
+  splits:
+  - text: "强化饮食"
+    translated: "Strengthened diet"
+- raw: "制作丹药"
+  splits:
+  - text: "制作丹药"
+    translated: "Preparing elixirs"
+- raw: "强化丹药"
+  splits:
+  - text: "强化丹药"
+    translated: "Strengthening Elixir"
+- raw: "对物品进行淬毒/下毒/消毒"
+  splits:
+  - text: "对物品进行淬毒"
+    translated: "Poison the item"
+  - subIndex: 1
+    text: "下毒"
+    translated: "Poisoning"
+  - subIndex: 2
+    text: "消毒"
+    translated: "Disinfection"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "坐诊"
+  splits:
+  - text: "坐诊"
+    translated: "On duty"
+- raw: "为周边受伤侠士疗伤治病"
+  splits:
+  - text: "为周边受伤侠士疗伤治病"
+    translated: "Treat wounded warriors nearby"
+- raw: "休养恢复状态"
+  splits:
+  - text: "休养恢复状态"
+    translated: "Recover health and status"
+- raw: "存放物品"
+  splits:
+  - text: "存放物品"
+    translated: "Store items"
+- raw: "门派金库"
+  splits:
+  - text: "门派金库"
+    translated: "Sect Treasury"
+- raw: "管理门派银钱"
+  splits:
+  - text: "管理门派银钱"
+    translated: "Manage sect finances"
+- raw: "查看门派仓库"
+  splits:
+  - text: "查看门派仓库"
+    translated: "View Sect Warehouse"
+- raw: "管理售价"
+  splits:
+  - text: "管理售价"
+    translated: "Manage Selling Price"
+- raw: "管理门派仓库物品售价"
+  splits:
+  - text: "管理门派仓库物品售价"
+    translated: "Manage the selling prices of items in the sect's warehouse"
+- raw: "获取门派银钱\n技能影响：口才"
+  splits:
+  - text: "获取门派银钱"
+    translated: "Acquire Sect Silver"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "口才"
+    translated: "Eloquence"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "放债"
+  splits:
+  - text: "放债"
+    translated: "Loan shark"
+- raw: "增加资源储量\n技能影响：口才 学识"
+  splits:
+  - text: "增加资源储量"
+    translated: "Increase resource reserves"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "口才"
+    translated: "Eloquence"
+  - subIndex: 3
+    text: "学识"
+    translated: "Scholarship"
+  templates:
+  - template: "{0}\n{1}：{2} {3}"
+- raw: "窃取门派银钱\n技能影响：口才"
+  splits:
+  - text: "窃取门派银钱"
+    translated: "Steal the Sect's silver coins"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "口才"
+    translated: "Eloquence"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "耕作"
+  splits:
+  - text: "耕作"
+    translated: "Farming"
+- raw: "获取门派粮食\n技能影响：木植"
+  splits:
+  - text: "获取门派粮食"
+    translated: "Acquire Sect Food Grain"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "木植"
+    translated: "Forest Plant"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "育种"
+  splits:
+  - text: "育种"
+    translated: "Breeding"
+- raw: "增加资源储量\n技能影响：木植 学识"
+  splits:
+  - text: "增加资源储量"
+    translated: "Increase resource reserves"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "木植"
+    translated: "Forest Plant"
+  - subIndex: 3
+    text: "学识"
+    translated: "Scholarship"
+  templates:
+  - template: "{0}\n{1}：{2} {3}"
+- raw: "窃取门派粮食\n技能影响：木植"
+  splits:
+  - text: "窃取门派粮食"
+    translated: "Steal from the sect's food stores"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "木植"
+    translated: "Forest Plant"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "砍伐"
+  splits:
+  - text: "砍伐"
+    translated: "Cut down"
+- raw: "获取门派木料\n技能影响：采伐"
+  splits:
+  - text: "获取门派木料"
+    translated: "Acquire Sect Timber"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "采伐"
+    translated: "Logging"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "勘探"
+  splits:
+  - text: "勘探"
+    translated: "Exploration"
+- raw: "增加资源储量\n技能影响：采伐 学识"
+  splits:
+  - text: "增加资源储量"
+    translated: "Increase resource reserves"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "采伐"
+    translated: "Logging"
+  - subIndex: 3
+    text: "学识"
+    translated: "Scholarship"
+  templates:
+  - template: "{0}\n{1}：{2} {3}"
+- raw: "窃取门派木料\n技能影响：采伐"
+  splits:
+  - text: "窃取门派木料"
+    translated: "Steal Sect timber"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "采伐"
+    translated: "Logging"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "挖掘"
+  splits:
+  - text: "挖掘"
+    translated: "Digging"
+- raw: "获取门派矿石\n技能影响：采伐"
+  splits:
+  - text: "获取门派矿石"
+    translated: "Acquire Sect Ore"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "采伐"
+    translated: "Logging"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "窃取门派矿石\n技能影响：采伐"
+  splits:
+  - text: "窃取门派矿石"
+    translated: "Steal Sect minerals"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "采伐"
+    translated: "Logging"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "采收"
+  splits:
+  - text: "采收"
+    translated: "Harvest"
+- raw: "获取门派药材\n技能影响：木植"
+  splits:
+  - text: "获取门派药材"
+    translated: "Acquire Sect Herbal Medicines"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "木植"
+    translated: "Forest Plant"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "窃取门派药材\n技能影响：木植"
+  splits:
+  - text: "窃取门派药材"
+    translated: "Steal Sect herbs"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "木植"
+    translated: "Forest Plant"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "积累官府功绩提升官职"
+  splits:
+  - text: "积累官府功绩提升官职"
+    translated: "Accumulate government achievements to advance in official rank"
+- raw: "用官府功绩兑换物品/护卫"
+  splits:
+  - text: "用官府功绩兑换物品"
+    translated: "Exchange items for official achievements"
+  - subIndex: 1
+    text: "护卫"
+    translated: "Guard"
+  templates:
+  - template: "{0}/{1}"
+- raw: "官府委托"
+  splits:
+  - text: "官府委托"
+    translated: "Government Commission"
+- raw: "完成官府委托获取银钱和官府功绩"
+  splits:
+  - text: "完成官府委托获取银钱和官府功绩"
+    translated: "Complete the commission from the government to obtain silver and increase government merits"
+- raw: "管理自身恶名"
+  splits:
+  - text: "管理自身恶名"
+    translated: "Manage one's own reputation for ill"
+- raw: "资源贸易"
+  splits:
+  - text: "资源贸易"
+    translated: "Resource trade"
+- raw: "买卖门派资源"
+  splits:
+  - text: "买卖门派资源"
+    translated: "Trading sect resources"
+- raw: "打探周边随机事件"
+  splits:
+  - text: "打探周边随机事件"
+    translated: "Explore random events in the vicinity"
+- raw: "赚取少量银钱"
+  splits:
+  - text: "赚取少量银钱"
+    translated: "Earn a little silver coin"
+- raw: "义诊"
+  splits:
+  - text: "义诊"
+    translated: "Free clinic"
+- raw: "增加区域人口\n技能影响：炼药"
+  splits:
+  - text: "增加区域人口"
+    translated: "Increase the population in the area"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "炼药"
+    translated: "Alchemy"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "降低区域人口\n技能影响：炼药"
+  splits:
+  - text: "降低区域人口"
+    translated: "Decrease the population in the area"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "炼药"
+    translated: "Alchemy"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "卖艺"
+  splits:
+  - text: "卖艺"
+    translated: "Perform for hire"
+- raw: "通过卖艺赚取银钱"
+  splits:
+  - text: "通过卖艺赚取银钱"
+    translated: "Earn silver through busking"
+- raw: "江湖委托"
+  splits:
+  - text: "江湖委托"
+    translated: "Jianghu Commission"
+- raw: "完成江湖委托获取银钱和江湖声望"
+  splits:
+  - text: "完成江湖委托获取银钱和江湖声望"
+    translated: "Complete Jianghu commissions to earn silver and fame in the Jianghu."
+- raw: "施舍"
+  splits:
+  - text: "施舍"
+    translated: "Charity"
+- raw: "增加区域民心\n技能影响：烹饪"
+  splits:
+  - text: "增加区域民心"
+    translated: "Increase public sentiment in the region"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "烹饪"
+    translated: "Cooking"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "劝诱"
+  splits:
+  - text: "劝诱"
+    translated: "Enticement"
+- raw: "降低区域民心\n技能影响：烹饪"
+  splits:
+  - text: "降低区域民心"
+    translated: "Reduce regional morale"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "烹饪"
+    translated: "Cooking"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "提升当地治安并减少恶名"
+  splits:
+  - text: "提升当地治安并减少恶名"
+    translated: "Improve local law and order and reduce notoriety"
+- raw: "整备"
+  splits:
+  - text: "整备"
+    translated: "Preparation"
+- raw: "增加区域治安\n技能影响：锻造"
+  splits:
+  - text: "增加区域治安"
+    translated: "Increase public safety in the area"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "锻造"
+    translated: "Forging"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "损毁"
+  splits:
+  - text: "损毁"
+    translated: "Destruction"
+- raw: "降低区域治安\n技能影响：锻造"
+  splits:
+  - text: "降低区域治安"
+    translated: "Decrease regional law and order"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "锻造"
+    translated: "Forging"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "查看分舵相关情报"
+  splits:
+  - text: "查看分舵相关情报"
+    translated: "Check information on sub‑fortresses"
+- raw: "探索区域获取门派资源"
+  splits:
+  - text: "探索区域获取门派资源"
+    translated: "Explore the area to acquire Sect resources"
+- raw: "招募门派弟子"
+  splits:
+  - text: "招募门派弟子"
+    translated: "Recruit Sect Disciples"
+- raw: "修缮"
+  splits:
+  - text: "修缮"
+    translated: "Renovation"
+- raw: "增加区域防御\n技能影响：木植"
+  splits:
+  - text: "增加区域防御"
+    translated: "Increase area defense"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "木植"
+    translated: "Forest Plant"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "破坏"
+  splits:
+  - text: "破坏"
+    translated: "Destruction"
+- raw: "降低区域防御\n技能影响：采掘"
+  splits:
+  - text: "降低区域防御"
+    translated: "Lower area defense"
+  - subIndex: 1
+    text: "技能影响"
+    translated: "Skill impact"
+  - subIndex: 2
+    text: "采掘"
+    translated: "Mining"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "马车"
+  splits:
+  - text: "马车"
+    translated: "Horse‑drawn carriage"
+- raw: "乘坐马车快速前往其他城市"
+  splits:
+  - text: "乘坐马车快速前往其他城市"
+    translated: "Ride the carriage quickly to other cities"
+- raw: "馆藏武学"
+  splits:
+  - text: "馆藏武学"
+    translated: "Collected Martial Arts Styles"
+- raw: "学习馆内所藏武学"
+  splits:
+  - text: "学习馆内所藏武学"
+    translated: "Study the martial arts techniques housed in the academy"
+- raw: "自行练习"
+  splits:
+  - text: "自行练习"
+    translated: "Practice on your own"
+- raw: "雇佣陪练"
+  splits:
+  - text: "雇佣陪练"
+    translated: "Hire a training partner"
+- raw: "与武师进行切磋"
+  splits:
+  - text: "与武师进行切磋"
+    translated: "Spar with martial artists"
+- raw: "挑战武师抢夺馆内秘籍"
+  splits:
+  - text: "挑战武师抢夺馆内秘籍"
+    translated: "Challenge the martial artists to steal secret manuals from the academy"
+- raw: "与周边侠士宴饮增进关系"
+  splits:
+  - text: "与周边侠士宴饮增进关系"
+    translated: "Socialize and improve relations with nearby warriors by feasting together."
+- raw: "与侠士掷骰赌博一试手气"
+  splits:
+  - text: "与侠士掷骰赌博一试手气"
+    translated: "Challenge the xia Shi to a game of dice to test their luck"
+- raw: "雇佣保镖随行护卫"
+  splits:
+  - text: "雇佣保镖随行护卫"
+    translated: "Hire a guard to accompany you for protection"
+- raw: "勋阶"
+  splits:
+  - text: "勋阶"
+    translated: "Rank"
+- raw: "进贡"
+  splits:
+  - text: "进贡"
+    translated: "Tribute"
+- raw: "奇材"
+  splits:
+  - text: "奇材"
+    translated: "Odd talent"
+- raw: "兵器"
+  splits:
+  - text: "兵器"
+    translated: "Weapons"
+- raw: "珍馐"
+  splits:
+  - text: "珍馐"
+    translated: "Delicacy"
+- raw: "遗忘武学"
+  splits:
+  - text: "遗忘武学"
+    translated: "Forgotten Martial Arts"
+- raw: "遗忘天赋"
+  splits:
+  - text: "遗忘天赋"
+    translated: "Forgotten talent"
+- raw: "招贤"
+  splits:
+  - text: "招贤"
+    translated: "Recruit Talent"
+- raw: "灵药"
+  splits:
+  - text: "灵药"
+    translated: "Elixir"
+- raw: "提升口才潜力"
+  splits:
+  - text: "提升口才潜力"
+    translated: "Improve verbal skills potential"
+- raw: "销金"
+  splits:
+  - text: "销金"
+    translated: "Gold dust"
+- raw: "提升射术潜力"
+  splits:
+  - text: "提升射术潜力"
+    translated: "Enhance shooting skill potential"
+- raw: "暗器"
+  splits:
+  - text: "暗器"
+    translated: "Hidden Weapon"
+- raw: "杀手订单"
+  splits:
+  - text: "杀手订单"
+    translated: "Assassin Contract"
+- raw: "提升医术潜力"
+  splits:
+  - text: "提升医术潜力"
+    translated: "Improve medical skill potential"
+- raw: "提升拳掌潜力"
+  splits:
+  - text: "提升拳掌潜力"
+    translated: "Enhance punching and palm potential"
+- raw: "铁掌"
+  splits:
+  - text: "铁掌"
+    translated: "Iron Palm"
+- raw: "提升长兵潜力"
+  splits:
+  - text: "提升长兵潜力"
+    translated: "Boost long‑soldier potential"
+- raw: "枪术"
+  splits:
+  - text: "枪术"
+    translated: "Gun combat"
+- raw: "提升炼药潜力"
+  splits:
+  - text: "提升炼药潜力"
+    translated: "Increase alchemical potential"
+- raw: "丹引"
+  splits:
+  - text: "丹引"
+    translated: "Dan Yin"
+- raw: "提升锻造潜力"
+  splits:
+  - text: "提升锻造潜力"
+    translated: "Enhance forging potential"
+- raw: "天工"
+  splits:
+  - text: "天工"
+    translated: "Heavenly Artisan"
+- raw: "拆解"
+  splits:
+  - text: "拆解"
+    translated: "Disassemble"
+- raw: "提升毒术潜力"
+  splits:
+  - text: "提升毒术潜力"
+    translated: "Enhance poison skill potential"
+- raw: "提升采伐潜力"
+  splits:
+  - text: "提升采伐潜力"
+    translated: "Increase logging potential"
+- raw: "试炼"
+  splits:
+  - text: "试炼"
+    translated: "Trial"
+- raw: "提升轻功潜力"
+  splits:
+  - text: "提升轻功潜力"
+    translated: "Boost Qinggong Potential"
+- raw: "博引"
+  splits:
+  - text: "博引"
+    translated: "Wide‑ranging"
+- raw: "提升生命上限"
+  splits:
+  - text: "提升生命上限"
+    translated: "Increase maximum health"
+- raw: "禅宗修行"
+  splits:
+  - text: "禅宗修行"
+    translated: "Zen meditation"
+- raw: "提升内力上限"
+  splits:
+  - text: "提升内力上限"
+    translated: "Increase maximum inner power"
+- raw: "道法修行"
+  splits:
+  - text: "道法修行"
+    translated: "Daoist cultivation"
+- raw: "提升刀法潜力"
+  splits:
+  - text: "提升刀法潜力"
+    translated: "Enhance Blade Technique Potential"
+- raw: "试刀"
+  splits:
+  - text: "试刀"
+    translated: "Test blade"
+- raw: "提升剑法潜力"
+  splits:
+  - text: "提升剑法潜力"
+    translated: "Enhance Swordsmanship Potential"
+- raw: "万剑"
+  splits:
+  - text: "万剑"
+    translated: "Ten Thousand Swords"
+- raw: "提升木植潜力"
+  splits:
+  - text: "提升木植潜力"
+    translated: "Boost tree potential"
+- raw: "自然修行"
+  splits:
+  - text: "自然修行"
+    translated: "Natural Cultivation"
+- raw: "提升奇门潜力"
+  splits:
+  - text: "提升奇门潜力"
+    translated: "Enhance their potential in the Jiemen practice"
+- raw: "提升学识潜力"
+  splits:
+  - text: "提升学识潜力"
+    translated: "Boost scholarly potential"
+- raw: "机关"
+  splits:
+  - text: "机关"
+    translated: "Mechanism"
+- raw: "提升烹饪潜力"
+  splits:
+  - text: "提升烹饪潜力"
+    translated: "Boost cooking potential"
+- raw: "重烩"
+  splits:
+  - text: "重烩"
+    translated: "Stewed Again"
+- raw: "提升绝技潜力"
+  splits:
+  - text: "提升绝技潜力"
+    translated: "Boost their Potential for Ultimate Technique"
+- raw: "密宗修行"
+  splits:
+  - text: "密宗修行"
+    translated: "Tibetan Buddhist practice"
+- raw: "提升内功潜力"
+  splits:
+  - text: "提升内功潜力"
+    translated: "Enhance Neigong Potential"
+- raw: "购买"
+  splits:
+  - text: "购买"
+    translated: "Purchase"
+- raw: "书房"
+  splits:
+  - text: "书房"
+    translated: "Study"
+- raw: "♦阅读秘籍\n♦编纂秘籍"
+  splits:
+  - text: "阅读秘籍"
+    translated: "Read the cheat sheet"
+  - subIndex: 1
+    text: "编纂秘籍"
+    translated: "Compile the secret scrolls"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "练功房"
+  splits:
+  - text: "练功房"
+    translated: "Training Room"
+- raw: "♦自行练习\n♦突破\n♦天赋"
+  splits:
+  - text: "自行练习"
+    translated: "Practice on your own"
+  - subIndex: 1
+    text: "突破"
+    translated: "Breakthrough"
+  - subIndex: 2
+    text: "天赋"
+    translated: "Gift"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "管理个人展厅"
+  splits:
+  - text: "管理个人展厅"
+    translated: "Manage Personal Exhibition Hall"
+- raw: "修缮升级"
+  splits:
+  - text: "修缮升级"
+    translated: "Renovation upgrade"
+- raw: "提升私宅等级"
+  splits:
+  - text: "提升私宅等级"
+    translated: "Upgrade Private Residence Level"
+- raw: "名驹"
+  splits:
+  - text: "名驹"
+    translated: "Prize Horse"

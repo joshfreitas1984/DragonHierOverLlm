@@ -38452,3 +38452,687 @@
 - raw: "软弓"
   splits:
   - text: "软弓"
+- raw: "查看弟子相关信息"
+  splits:
+  - text: "查看弟子相关信息"
+- raw: "门派职位"
+  splits:
+  - text: "门派职位"
+- raw: "管理门派特殊职位"
+  splits:
+  - text: "管理门派特殊职位"
+- raw: "设定弟子行动方针"
+  splits:
+  - text: "设定弟子行动方针"
+- raw: "与其他门派进行外交"
+  splits:
+  - text: "与其他门派进行外交"
+- raw: "门派科研"
+  splits:
+  - text: "门派科研"
+- raw: "查看门派科研情况"
+  splits:
+  - text: "查看门派科研情况"
+- raw: "查看科研"
+  splits:
+  - text: "查看科研"
+- raw: "门派委托"
+  splits:
+  - text: "门派委托"
+- raw: "完成门派委托获取银钱和门派功绩"
+  splits:
+  - text: "完成门派委托获取银钱和门派功绩"
+- raw: "向周遭区域发起攻击"
+  splits:
+  - text: "向周遭区域发起攻击"
+- raw: "外交派遣"
+  splits:
+  - text: "外交派遣"
+- raw: "派遣信使进行外交"
+  splits:
+  - text: "派遣信使进行外交"
+- raw: "别派委托"
+  splits:
+  - text: "别派委托"
+- raw: "完成别派委托获取银钱和别派功绩"
+  splits:
+  - text: "完成别派委托获取银钱和别派功绩"
+- raw: "功绩兑换武学/服装/特殊建筑"
+  splits:
+  - text: "功绩兑换武学"
+  - subIndex: 1
+    text: "服装"
+  - subIndex: 2
+    text: "特殊建筑"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "阅读藏经阁秘籍获取理论经验"
+  splits:
+  - text: "阅读藏经阁秘籍获取理论经验"
+- raw: "阅读行囊/仓库秘籍获取理论经验"
+  splits:
+  - text: "阅读行囊"
+  - subIndex: 1
+    text: "仓库秘籍获取理论经验"
+  templates:
+  - template: "{0}/{1}"
+- raw: "对秘籍进行整合/抄录/默写"
+  splits:
+  - text: "对秘籍进行整合"
+  - subIndex: 1
+    text: "抄录"
+  - subIndex: 2
+    text: "默写"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "管理藏书"
+  splits:
+  - text: "管理藏书"
+- raw: "管理藏经阁内藏书"
+  splits:
+  - text: "管理藏经阁内藏书"
+- raw: "练习武功获取实战经验"
+  splits:
+  - text: "练习武功获取实战经验"
+- raw: "与门派弟子进行切磋"
+  splits:
+  - text: "与门派弟子进行切磋"
+- raw: "修炼内功/轻功/绝技获取实战经验"
+  splits:
+  - text: "修炼内功"
+  - subIndex: 1
+    text: "轻功"
+  - subIndex: 2
+    text: "绝技获取实战经验"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "突破抵达瓶颈的武学"
+  splits:
+  - text: "突破抵达瓶颈的武学"
+- raw: "消耗天赋点领悟天赋"
+  splits:
+  - text: "消耗天赋点领悟天赋"
+- raw: "祭典"
+  splits:
+  - text: "祭典"
+- raw: "获取门派威望\n技能影响：学识"
+  splits:
+  - text: "获取门派威望"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "学识"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "鉴定"
+  splits:
+  - text: "鉴定"
+- raw: "鉴定珍宝"
+  splits:
+  - text: "鉴定珍宝"
+- raw: "管理门派展厅"
+  splits:
+  - text: "管理门派展厅"
+- raw: "与门派弟子宴饮提升忠诚"
+  splits:
+  - text: "与门派弟子宴饮提升忠诚"
+- raw: "制作装备"
+  splits:
+  - text: "制作装备"
+- raw: "煅烧"
+  splits:
+  - text: "煅烧"
+- raw: "强化装备"
+  splits:
+  - text: "强化装备"
+- raw: "制作饮食"
+  splits:
+  - text: "制作饮食"
+- raw: "强化饮食"
+  splits:
+  - text: "强化饮食"
+- raw: "制作丹药"
+  splits:
+  - text: "制作丹药"
+- raw: "强化丹药"
+  splits:
+  - text: "强化丹药"
+- raw: "对物品进行淬毒/下毒/消毒"
+  splits:
+  - text: "对物品进行淬毒"
+  - subIndex: 1
+    text: "下毒"
+  - subIndex: 2
+    text: "消毒"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "坐诊"
+  splits:
+  - text: "坐诊"
+- raw: "为周边受伤侠士疗伤治病"
+  splits:
+  - text: "为周边受伤侠士疗伤治病"
+- raw: "休养恢复状态"
+  splits:
+  - text: "休养恢复状态"
+- raw: "存放物品"
+  splits:
+  - text: "存放物品"
+- raw: "门派金库"
+  splits:
+  - text: "门派金库"
+- raw: "管理门派银钱"
+  splits:
+  - text: "管理门派银钱"
+- raw: "查看门派仓库"
+  splits:
+  - text: "查看门派仓库"
+- raw: "管理售价"
+  splits:
+  - text: "管理售价"
+- raw: "管理门派仓库物品售价"
+  splits:
+  - text: "管理门派仓库物品售价"
+- raw: "获取门派银钱\n技能影响：口才"
+  splits:
+  - text: "获取门派银钱"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "口才"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "放债"
+  splits:
+  - text: "放债"
+- raw: "增加资源储量\n技能影响：口才 学识"
+  splits:
+  - text: "增加资源储量"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "口才"
+  - subIndex: 3
+    text: "学识"
+  templates:
+  - template: "{0}\n{1}：{2} {3}"
+- raw: "窃取门派银钱\n技能影响：口才"
+  splits:
+  - text: "窃取门派银钱"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "口才"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "耕作"
+  splits:
+  - text: "耕作"
+- raw: "获取门派粮食\n技能影响：木植"
+  splits:
+  - text: "获取门派粮食"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "木植"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "育种"
+  splits:
+  - text: "育种"
+- raw: "增加资源储量\n技能影响：木植 学识"
+  splits:
+  - text: "增加资源储量"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "木植"
+  - subIndex: 3
+    text: "学识"
+  templates:
+  - template: "{0}\n{1}：{2} {3}"
+- raw: "窃取门派粮食\n技能影响：木植"
+  splits:
+  - text: "窃取门派粮食"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "木植"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "砍伐"
+  splits:
+  - text: "砍伐"
+- raw: "获取门派木料\n技能影响：采伐"
+  splits:
+  - text: "获取门派木料"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "采伐"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "勘探"
+  splits:
+  - text: "勘探"
+- raw: "增加资源储量\n技能影响：采伐 学识"
+  splits:
+  - text: "增加资源储量"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "采伐"
+  - subIndex: 3
+    text: "学识"
+  templates:
+  - template: "{0}\n{1}：{2} {3}"
+- raw: "窃取门派木料\n技能影响：采伐"
+  splits:
+  - text: "窃取门派木料"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "采伐"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "挖掘"
+  splits:
+  - text: "挖掘"
+- raw: "获取门派矿石\n技能影响：采伐"
+  splits:
+  - text: "获取门派矿石"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "采伐"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "窃取门派矿石\n技能影响：采伐"
+  splits:
+  - text: "窃取门派矿石"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "采伐"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "采收"
+  splits:
+  - text: "采收"
+- raw: "获取门派药材\n技能影响：木植"
+  splits:
+  - text: "获取门派药材"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "木植"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "窃取门派药材\n技能影响：木植"
+  splits:
+  - text: "窃取门派药材"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "木植"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "积累官府功绩提升官职"
+  splits:
+  - text: "积累官府功绩提升官职"
+- raw: "用官府功绩兑换物品/护卫"
+  splits:
+  - text: "用官府功绩兑换物品"
+  - subIndex: 1
+    text: "护卫"
+  templates:
+  - template: "{0}/{1}"
+- raw: "官府委托"
+  splits:
+  - text: "官府委托"
+- raw: "完成官府委托获取银钱和官府功绩"
+  splits:
+  - text: "完成官府委托获取银钱和官府功绩"
+- raw: "管理自身恶名"
+  splits:
+  - text: "管理自身恶名"
+- raw: "资源贸易"
+  splits:
+  - text: "资源贸易"
+- raw: "买卖门派资源"
+  splits:
+  - text: "买卖门派资源"
+- raw: "打探周边随机事件"
+  splits:
+  - text: "打探周边随机事件"
+- raw: "赚取少量银钱"
+  splits:
+  - text: "赚取少量银钱"
+- raw: "义诊"
+  splits:
+  - text: "义诊"
+- raw: "增加区域人口\n技能影响：炼药"
+  splits:
+  - text: "增加区域人口"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "炼药"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "降低区域人口\n技能影响：炼药"
+  splits:
+  - text: "降低区域人口"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "炼药"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "卖艺"
+  splits:
+  - text: "卖艺"
+- raw: "通过卖艺赚取银钱"
+  splits:
+  - text: "通过卖艺赚取银钱"
+- raw: "江湖委托"
+  splits:
+  - text: "江湖委托"
+- raw: "完成江湖委托获取银钱和江湖声望"
+  splits:
+  - text: "完成江湖委托获取银钱和江湖声望"
+- raw: "施舍"
+  splits:
+  - text: "施舍"
+- raw: "增加区域民心\n技能影响：烹饪"
+  splits:
+  - text: "增加区域民心"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "烹饪"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "劝诱"
+  splits:
+  - text: "劝诱"
+- raw: "降低区域民心\n技能影响：烹饪"
+  splits:
+  - text: "降低区域民心"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "烹饪"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "提升当地治安并减少恶名"
+  splits:
+  - text: "提升当地治安并减少恶名"
+- raw: "整备"
+  splits:
+  - text: "整备"
+- raw: "增加区域治安\n技能影响：锻造"
+  splits:
+  - text: "增加区域治安"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "锻造"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "损毁"
+  splits:
+  - text: "损毁"
+- raw: "降低区域治安\n技能影响：锻造"
+  splits:
+  - text: "降低区域治安"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "锻造"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "查看分舵相关情报"
+  splits:
+  - text: "查看分舵相关情报"
+- raw: "探索区域获取门派资源"
+  splits:
+  - text: "探索区域获取门派资源"
+- raw: "招募门派弟子"
+  splits:
+  - text: "招募门派弟子"
+- raw: "修缮"
+  splits:
+  - text: "修缮"
+- raw: "增加区域防御\n技能影响：木植"
+  splits:
+  - text: "增加区域防御"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "木植"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "破坏"
+  splits:
+  - text: "破坏"
+- raw: "降低区域防御\n技能影响：采掘"
+  splits:
+  - text: "降低区域防御"
+  - subIndex: 1
+    text: "技能影响"
+  - subIndex: 2
+    text: "采掘"
+  templates:
+  - template: "{0}\n{1}：{2}"
+- raw: "马车"
+  splits:
+  - text: "马车"
+- raw: "乘坐马车快速前往其他城市"
+  splits:
+  - text: "乘坐马车快速前往其他城市"
+- raw: "馆藏武学"
+  splits:
+  - text: "馆藏武学"
+- raw: "学习馆内所藏武学"
+  splits:
+  - text: "学习馆内所藏武学"
+- raw: "自行练习"
+  splits:
+  - text: "自行练习"
+- raw: "雇佣陪练"
+  splits:
+  - text: "雇佣陪练"
+- raw: "与武师进行切磋"
+  splits:
+  - text: "与武师进行切磋"
+- raw: "挑战武师抢夺馆内秘籍"
+  splits:
+  - text: "挑战武师抢夺馆内秘籍"
+- raw: "与周边侠士宴饮增进关系"
+  splits:
+  - text: "与周边侠士宴饮增进关系"
+- raw: "与侠士掷骰赌博一试手气"
+  splits:
+  - text: "与侠士掷骰赌博一试手气"
+- raw: "雇佣保镖随行护卫"
+  splits:
+  - text: "雇佣保镖随行护卫"
+- raw: "勋阶"
+  splits:
+  - text: "勋阶"
+- raw: "进贡"
+  splits:
+  - text: "进贡"
+- raw: "奇材"
+  splits:
+  - text: "奇材"
+- raw: "兵器"
+  splits:
+  - text: "兵器"
+- raw: "珍馐"
+  splits:
+  - text: "珍馐"
+- raw: "遗忘武学"
+  splits:
+  - text: "遗忘武学"
+- raw: "遗忘天赋"
+  splits:
+  - text: "遗忘天赋"
+- raw: "招贤"
+  splits:
+  - text: "招贤"
+- raw: "灵药"
+  splits:
+  - text: "灵药"
+- raw: "提升口才潜力"
+  splits:
+  - text: "提升口才潜力"
+- raw: "销金"
+  splits:
+  - text: "销金"
+- raw: "提升射术潜力"
+  splits:
+  - text: "提升射术潜力"
+- raw: "暗器"
+  splits:
+  - text: "暗器"
+- raw: "杀手订单"
+  splits:
+  - text: "杀手订单"
+- raw: "提升医术潜力"
+  splits:
+  - text: "提升医术潜力"
+- raw: "提升拳掌潜力"
+  splits:
+  - text: "提升拳掌潜力"
+- raw: "铁掌"
+  splits:
+  - text: "铁掌"
+- raw: "提升长兵潜力"
+  splits:
+  - text: "提升长兵潜力"
+- raw: "枪术"
+  splits:
+  - text: "枪术"
+- raw: "提升炼药潜力"
+  splits:
+  - text: "提升炼药潜力"
+- raw: "丹引"
+  splits:
+  - text: "丹引"
+- raw: "提升锻造潜力"
+  splits:
+  - text: "提升锻造潜力"
+- raw: "天工"
+  splits:
+  - text: "天工"
+- raw: "拆解"
+  splits:
+  - text: "拆解"
+- raw: "提升毒术潜力"
+  splits:
+  - text: "提升毒术潜力"
+- raw: "提升采伐潜力"
+  splits:
+  - text: "提升采伐潜力"
+- raw: "试炼"
+  splits:
+  - text: "试炼"
+- raw: "提升轻功潜力"
+  splits:
+  - text: "提升轻功潜力"
+- raw: "博引"
+  splits:
+  - text: "博引"
+- raw: "提升生命上限"
+  splits:
+  - text: "提升生命上限"
+- raw: "禅宗修行"
+  splits:
+  - text: "禅宗修行"
+- raw: "提升内力上限"
+  splits:
+  - text: "提升内力上限"
+- raw: "道法修行"
+  splits:
+  - text: "道法修行"
+- raw: "提升刀法潜力"
+  splits:
+  - text: "提升刀法潜力"
+- raw: "试刀"
+  splits:
+  - text: "试刀"
+- raw: "提升剑法潜力"
+  splits:
+  - text: "提升剑法潜力"
+- raw: "万剑"
+  splits:
+  - text: "万剑"
+- raw: "提升木植潜力"
+  splits:
+  - text: "提升木植潜力"
+- raw: "自然修行"
+  splits:
+  - text: "自然修行"
+- raw: "提升奇门潜力"
+  splits:
+  - text: "提升奇门潜力"
+- raw: "提升学识潜力"
+  splits:
+  - text: "提升学识潜力"
+- raw: "机关"
+  splits:
+  - text: "机关"
+- raw: "提升烹饪潜力"
+  splits:
+  - text: "提升烹饪潜力"
+- raw: "重烩"
+  splits:
+  - text: "重烩"
+- raw: "提升绝技潜力"
+  splits:
+  - text: "提升绝技潜力"
+- raw: "密宗修行"
+  splits:
+  - text: "密宗修行"
+- raw: "提升内功潜力"
+  splits:
+  - text: "提升内功潜力"
+- raw: "购买"
+  splits:
+  - text: "购买"
+- raw: "书房"
+  splits:
+  - text: "书房"
+- raw: "♦阅读秘籍\n♦编纂秘籍"
+  splits:
+  - text: "阅读秘籍"
+  - subIndex: 1
+    text: "编纂秘籍"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "练功房"
+  splits:
+  - text: "练功房"
+- raw: "♦自行练习\n♦突破\n♦天赋"
+  splits:
+  - text: "自行练习"
+  - subIndex: 1
+    text: "突破"
+  - subIndex: 2
+    text: "天赋"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "管理个人展厅"
+  splits:
+  - text: "管理个人展厅"
+- raw: "修缮升级"
+  splits:
+  - text: "修缮升级"
+- raw: "提升私宅等级"
+  splits:
+  - text: "提升私宅等级"
+- raw: "名驹"
+  splits:
+  - text: "名驹"
