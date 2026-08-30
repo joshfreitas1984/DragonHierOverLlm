@@ -1088,10 +1088,24 @@ internal static class DynamicStringPatches
     private static string ApplyTemplates(string input, List<CompiledTemplate> templates)
     {
         var result = input;
+        // PERF (2026-08-31): character-membership pre-filter, same approach as ApplyDictionary.
+        // Built once from `input`; safe because template replacements only ever re-insert
+        // characters already in `input` (English literals + captured substrings of it), so a
+        // character absent from `input` is absent from `result` at every step (no false negatives).
+        var presentChars = BuildCharSet(input);
         foreach (var template in templates)
         {
-            if (template.LiteralSegments.Count > 0 && !template.LiteralSegments.All(result.Contains))
-                continue;
+            // Cheap O(1)-per-segment reject before the O(length) Contains scans (and the regex):
+            // if any literal segment's first character is absent from the input, that segment
+            // cannot be a substring, so LiteralSegments.All(Contains) would be false anyway.
+            if (template.LiteralSegments.Count > 0)
+            {
+                var missingChar = false;
+                foreach (var seg in template.LiteralSegments)
+                    if (seg.Length > 0 && !presentChars.Contains(seg[0])) { missingChar = true; break; }
+                if (missingChar || !template.LiteralSegments.All(result.Contains))
+                    continue;
+            }
 
             // PLAN B: try the strict (non-CJK-capture) pattern first - unchanged bug #3/#4
             // behavior. Only fall back to the permissive (CJK-inclusive) pattern when the strict
