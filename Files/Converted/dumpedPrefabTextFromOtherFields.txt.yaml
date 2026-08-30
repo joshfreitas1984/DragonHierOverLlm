@@ -248,7 +248,7 @@
     translated: "Xianju Inn"
   - subIndex: 3
     text: "，请吴忧掌柜重回大隐阁主持大局。"
-    translated: ",Please have Shopkeeper Wu You return to the Great Hidden Pavilion to take charge."
+    translated: ", Please have Shopkeeper Wu You return to the Great Hidden Pavilion to take charge."
   - subIndex: 4
     text: "听闻你此前曾有恩于她，若能同我一道劝她出山，定当感激不尽！"
     translated: "Hearing that you once did her a favor, if you can persuade her to come out of seclusion with me, I would be eternally grateful!"
@@ -310,7 +310,7 @@
     translated: "Xianxia Sect"
   - subIndex: 2
     text: "，要把我带到飞龙门去！这该如何是好？求你快回门派替我出出主意！"
-    translated: ",Take me to Flying Dragon Gate! What should I do? Please hurry back to the sect and give me some advice!"
+    translated: ", Take me to Flying Dragon Gate! What should I do? Please hurry back to the sect and give me some advice!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#你是第一次来吧！\\n此处是本门领地，此前师傅派我来巡查过几次，\\n我带你参观参观？"
@@ -674,7 +674,7 @@
     translated: "The Immortal Residence Inn to the southeast of the gate"
   - subIndex: 1
     text: "，近来传闻有许多武林高手出没，似乎将有大事发生。"
-    translated: ",Lately, there have been many rumors of Wulin shouclassed wandering around, as if a significant event is about to occur."
+    translated: ", Lately, there have been many rumors of Wulin shouclassed wandering around, as if a significant event is about to occur."
   - subIndex: 2
     text: "#PlayerName#若"
     translated: "#PlayerName# if"
@@ -1527,7 +1527,7 @@
     translated: "This month, the Transmission Conference will be held."
   - subIndex: 2
     text: "，将本门绝学无影乱剑传授给各位弟子。"
-    translated: ",Teach all of you disciples the ultimate technique, Shadowless Random Sword."
+    translated: ", Teach all of you disciples the ultimate technique, Shadowless Random Sword."
   - subIndex: 3
     text: "还望#PlayerName#速回门派参加，切莫错过。"
     translated: "I hope #PlayerName# returns to the Sect soon to participate, don't miss it."
@@ -2152,7 +2152,7 @@
     translated: "News of the Xianxia Sect consecutively defeating the Capital and Flying Dragon Gate shook the Wulin. The major sects in Central China convened"
   - subIndex: 1
     text: "，共商应对之策。"
-    translated: ",Discuss strategies to respond to challenges. Deal with the situation together."
+    translated: ", Discuss strategies to respond to challenges. Deal with the situation together."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "仙霞铁掌两派弟子汇集于<b>#PosText#内</b>，准备共同进军讨伐唐门总舵。"
@@ -2164,7 +2164,7 @@
     translated: "#PosText# inside"
   - subIndex: 2
     text: "，准备共同进军讨伐唐门总舵。"
-    translated: ",Prepare to march together to attack the Tang Clan's main den."
+    translated: ", Prepare to march together to attack the Tang Clan's main den."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "任务系统"
@@ -2590,7 +2590,7 @@
     translated: "It's said that one of the Seven Evil Men, Rainbutcher, has appeared."
   - subIndex: 1
     text: "，想必此地又将掀起一阵腥风血雨。"
-    translated: ",There will likely be another bloodshed here"
+    translated: ", There will likely be another bloodshed here"
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻上官凤在<b>#PosText#</b>一带疯狂搜寻某件宝藏，已有走火入魔之迹象。"
@@ -2855,7 +2855,7 @@
     translated: "Whispers suggest that Sect Master Dao Wuming has led the allied forces to the gates of"
   - subIndex: 1
     text: "，不知双方这场惊天大战最终鹿死谁手。"
-    translated: ",I wonder whose hand will ultimately claim the victory in this shocking great battle."
+    translated: ", I wonder whose hand will ultimately claim the victory in this shocking great battle."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻大隐阁叛徒思中澜为了躲避各派追杀，眼下在<b>#PosText#</b>城内暂避风头。"
@@ -2937,7 +2937,7 @@
     translated: "Prepare troops and weapons, making a great show of force"
   - subIndex: 2
     text: "，准备共同出兵攻打阎罗殿。"
-    translated: ",Prepare to march together to attack Yama Hall."
+    translated: ", Prepare to march together to attack Yama Hall."
   templates:
   - template: "{0}<b>#PosText#</b>{1}‌{2}"
 - raw: "传闻广南西路山贼头领曾镇海被侠士追捕，眼下躲藏到了<b>#PosText#城内</b>。"
@@ -3079,7 +3079,7 @@
     translated: "Jinyang"
   - subIndex: 2
     text: "，似乎正在寻找龙泉寺方丈，有重要之事相询。"
-    translated: ",It seems you are looking for the Abbot of Longquan Temple; there is an important matter you wish to discuss."
+    translated: ", It seems you are looking for the Abbot of Longquan Temple; there is an important matter you wish to discuss."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻武当副掌门张文馨已得知江湖百晓金龙生的下落，眼下正在<b>#PosText#</b>一带搜寻此人。"
@@ -3134,7 +3134,7 @@
     translated: "Xianxia Sect"
   - subIndex: 2
     text: "，不知是有何大事发生。"
-    translated: ",I wonder what important matter has arisen"
+    translated: ", I wonder what important matter has arisen"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻药王谷掌门突然现身<b>仙霞派</b>，不知是有何大事发生。"
@@ -3146,7 +3146,7 @@
     translated: "Xianxia Sect"
   - subIndex: 2
     text: "，不知是有何大事发生。"
-    translated: ",I wonder what important matter has arisen"
+    translated: ", I wonder what important matter has arisen"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻药王谷正副掌门突然一同现身<b>仙霞派</b>，看来此地必是有什么惊天大事发生。"
@@ -3158,7 +3158,7 @@
     translated: "Xianxia Sect"
   - subIndex: 2
     text: "，看来此地必是有什么惊天大事发生。"
-    translated: ",It seems there must have been some earth‑shattering event here."
+    translated: ", It seems there must have been some earth‑shattering event here."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻近日上官凤与麾下四大杀手一齐现身<b>#PosText#</b>，不知又在谋划什么大计。"
@@ -3167,7 +3167,7 @@
     translated: "Rumors have it that Shangguan Feng and his four top assassins appeared together recently."
   - subIndex: 1
     text: "，不知又在谋划什么大计。"
-    translated: ",I wonder what great plan he is plotting again."
+    translated: ", I wonder what great plan he is plotting again."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻近来<b>峨嵋派</b>收到一封奇怪信件，似乎出自五毒教掌门之手，不知是何用意。"
@@ -3324,7 +3324,7 @@
     translated: "Shaolin Temple"
   - subIndex: 2
     text: "，不知道又要掀起什么风浪。"
-    translated: ",I wonder what storm they're stirring up again."
+    translated: ", I wonder what storm they're stirring up again."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻阎罗殿等邪派联军已兵临<b>#PosText#</b>城下，准备先拿这西南小派开刀，为日后大举进军中原祭旗立威。"
@@ -3342,7 +3342,7 @@
     translated: "Rumor has it that traitor Wang Tianyi of Qingcheng suddenly launched an attack."
   - subIndex: 1
     text: "，不知此人做出这等狂妄之举究竟有何意图。"
-    translated: ",I wonder what intent this person has with such arrogant actions."
+    translated: ", I wonder what intent this person has with such arrogant actions."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻青城弟子王添翼因盗窃师门银票，被<b>成都</b>官府判处发配边疆，不日便要施行。"
@@ -3384,7 +3384,7 @@
     translated: "Rumor has it that Sect Leader Zhao Polu of Flying Dragon Gate has already gone to"
   - subIndex: 1
     text: "，准备着手调查近来分舵的军械失窃案件。"
-    translated: ",Prepare to investigate the recent weapons theft cases at the branch locations."
+    translated: ", Prepare to investigate the recent weapons theft cases at the branch locations."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻黄河双煞在<b>#PosText#</b>四处劫掠，为非作歹，已有侠士领受江湖追缉令前往抓捕。"
@@ -3561,7 +3561,7 @@
     translated: "You cover your faces and follow the route you previously scouts out."
   - subIndex: 1
     text: "一路绕过巡逻岗哨，偷偷潜入藏经阁内。"
-    translated: "Stealthily sneak into the Library of Scrolls, bypassing the patrol posts."
+    translated: "Stealthily sneak into the Scripture Pavilion by bypassing patrol posts."
   templates:
   - template: "{0}\\n{1}"
 - raw: "你你你...你们是不是没长眼？没看见我们官兵正在押运税银吗？\\n快快让开去路，饶饶饶你们惊驾之罪......"
@@ -3704,7 +3704,7 @@
 - raw: "你的太祖长拳已修炼至瓶颈，如不突破，就无法继续升级。\\n请点击闭关室内的“突破”按钮，开始突破！"
   splits:
   - text: "你的太祖长拳已修炼至瓶颈，如不突破，就无法继续升级。"
-    translated: "Your great‑grandfather's Taijiquan has reached a bottleneck. If you don't break through it, you won't be able to upgrade further."
+    translated: "Your Great Ancestor Long Fist has reached a bottleneck. If you don't break it, you won't be able to upgrade any further."
   - subIndex: 1
     text: "请点击闭关室内的“突破”按钮，开始突破！"
     translated: "Click the Breakthrough button inside the Seclusion Room to begin your breakthrough!"
@@ -3767,7 +3767,7 @@
     translated: "Using hotkeys"
   - subIndex: 2
     text: "，可快速显示"
-    translated: ",Quick display"
+    translated: ", Quick display"
   - subIndex: 3
     text: "隐藏任务栏。"
     translated: "Hide the taskbar"
@@ -3953,7 +3953,7 @@
 - raw: "入门弟子可以修习藏经阁内绿色进阶武功，\\n从而大大提升自身修为。"
   splits:
   - text: "入门弟子可以修习藏经阁内绿色进阶武功，"
-    translated: "Junior disciples can practice the green‑level advanced martial arts in the Cangjingge."
+    translated: "Entrance disciples can practice the green‑level advanced martial arts in the Scripture Pavilion."
   - subIndex: 1
     text: "从而大大提升自身修为。"
     translated: "Thus significantly enhancing their cultivation"
@@ -4077,7 +4077,7 @@
 - raw: "再点击建筑下方的黑色区域，即可离开藏经阁。"
   splits:
   - text: "再点击建筑下方的黑色区域，即可离开藏经阁。"
-    translated: "Click on the black area below the building to exit the Sutra Repository."
+    translated: "Click on the black area below the building to leave the Scripture Pavilion."
 - raw: "最后，点击“告辞”即可结束交互"
   splits:
   - text: "最后，点击“告辞”即可结束交互"
@@ -4566,19 +4566,19 @@
 - raw: "升为入门弟子后，你可在藏经阁内阅读更高深的秘籍。\\n请先进入藏经阁。"
   splits:
   - text: "升为入门弟子后，你可在藏经阁内阅读更高深的秘籍。"
-    translated: "Promoted to Novice Disciple, you may now read more advanced scriptures in the Scripture Repository."
+    translated: "Promoted to an Entry Disciple, you may then read more advanced manuals in the Scripture Pavilion."
   - subIndex: 1
     text: "请先进入藏经阁。"
-    translated: "Please enter the Tripitaka Archive first"
+    translated: "Please enter the Scripture Pavilion first"
   templates:
   - template: "{0}\\n{1}"
 - raw: "升为正式弟子后，你可在藏经阁内进行秘籍编纂。\\n请先进入藏经阁。"
   splits:
   - text: "升为正式弟子后，你可在藏经阁内进行秘籍编纂。"
-    translated: "While being recognized as a formal disciple, they may transcribe scriptures in the Repository of Scriptures."
+    translated: "Promoted to a formal disciple, you may compile treatises in the Scripture Pavilion."
   - subIndex: 1
     text: "请先进入藏经阁。"
-    translated: "Please enter the Tripitaka Archive first"
+    translated: "Please enter the Scripture Pavilion first"
   templates:
   - template: "{0}\\n{1}"
 - raw: "升为长老后，你可在正厅内进行弟子管理。\\n请先进入门派正厅。"
@@ -4782,13 +4782,13 @@
 - raw: "另外，你还需要管理藏经阁，并为弟子配置合适的秘籍。\\n弟子会自动阅读这些秘籍，并持续修炼武功。\\n藏经阁内的秘籍品质越高，弟子的修炼速度也越快。"
   splits:
   - text: "另外，你还需要管理藏经阁，并为弟子配置合适的秘籍。"
-    translated: "Additionally, you also need to manage the Scripture Repository and assign appropriate secret arts to your disciples."
+    translated: "Additionally, you also need to manage the Scripture Pavilion and assign appropriate scriptures to your disciples."
   - subIndex: 1
     text: "弟子会自动阅读这些秘籍，并持续修炼武功。"
     translated: "Disciples will automatically read these manuals and continuously practice martial arts."
   - subIndex: 2
     text: "藏经阁内的秘籍品质越高，弟子的修炼速度也越快。"
-    translated: "The higher the quality of the scriptures in the Zangjingge, the faster the apprentice's cultivation speed."
+    translated: "The higher the quality of the scriptures in the Scripture Pavilion, the faster the apprentice's cultivation speed."
   templates:
   - template: "{0}\\n{1}\\n{2}"
 - raw: "另外，如果能吃到星星，\\n也可以使连击数加3"
@@ -5193,7 +5193,7 @@
     translated: "Youth Hero Conference"
   - subIndex: 4
     text: "，到时候肯定万人空巷，热闹非凡。我与#PlayerName#身为少年英雄中的佼佼者，自是不能错过！"
-    translated: ",By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName#, I can't miss it!"
+    translated: ", By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName#, I can't miss it!"
   templates:
   - template: "{0}<b>{1}</b>{2}<b>{3}</b>{4}"
 - raw: "听说<b>#PosText#</b>内一名女子正四处搜罗精良珍宝，不知所为何事。"
@@ -5223,7 +5223,7 @@
     translated: "This month, Senior Master will return to the Xianxia Sect to visit Master."
   - subIndex: 2
     text: "，#PlayerName#别忘了回来见见他老人家。"
-    translated: ",#PlayerName#, don't forget to come back and meet him in person."
+    translated: ", #PlayerName#, don't forget to come back and meet him in person."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "听说三个捕快为争夺功劳，竟对同僚大打出手，导致要犯逃跑。现下此三人已被押解至<b>#PosText#</b>等候发落。"
@@ -5265,7 +5265,7 @@
     translated: "Xianxia Sect"
   - subIndex: 2
     text: "，准备兑现之前和姜师姐的承诺。#PlayerName#别忘了回来一道迎接。"
-    translated: ",Prepare to fulfill the promise made to Senior Sister Jiang before. #PlayerName#, don't forget to come back to welcome her together."
+    translated: ", Prepare to fulfill the promise made to Senior Sister Jiang before. #PlayerName#, don't forget to come back to welcome her together."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "听说在#PosText#一带有名刁蛮女子四处惹是生非，引发了不少骚乱。"
@@ -5341,7 +5341,7 @@
     translated: "I heard that the Great Hero Guo Huai recently invited the leaders of various sects to meet at the foot of Mount Tai."
   - subIndex: 1
     text: "，共商第三次泰岳大典举办事宜。"
-    translated: ",Discuss the details for holding the third Taiye Grand Ceremony."
+    translated: ", Discuss the details for holding the third Taiye Grand Ceremony."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "听闻峨眉掌门司马德源突然星夜兼程赶往<b>#PosText#</b>，不知有何大事发生。"
@@ -5350,7 +5350,7 @@
     translated: "Hearing that Sect Leader Sima Deyuan of Emei Sect suddenly rushed toward"
   - subIndex: 1
     text: "，不知有何大事发生。"
-    translated: ",I wonder what important matter has arisen"
+    translated: ", I wonder what important matter has arisen"
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "听闻巴蜀名宿姜映泉<b>本月在仙霞派内</b>举办寿宴，周遭武林人士纷纷前往道贺。"
@@ -5434,7 +5434,7 @@
     translated: "I heard that Wudang Zhang Wenxin and Medical Hero Huangfu Bin are heading together."
   - subIndex: 1
     text: "，以阎罗王遗命之名，要求阎罗殿归还此前本属药王谷治下的佛山镇和清远乡。"
-    translated: ",By the decree of King Yama, I demand that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
+    translated: ", By the decree of King Yama, I demand that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "听闻近来四大御史之一驾临<b>青城派</b>，欲对抓捕岳无畏的几位少侠予以嘉奖。"
@@ -5446,7 +5446,7 @@
     translated: "Qingcheng Sect"
   - subIndex: 2
     text: "，欲对抓捕岳无畏的几位少侠予以嘉奖。"
-    translated: ",To commend the Young Heroes who apprehended Yue Woweifu."
+    translated: ", To commend the Young Heroes who apprehended Yue Woweifu."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "听闻近来有侠士前往<b>乐山镇</b>抓捕悍匪戴壮，在当地惹出了不小的骚动。"
@@ -5479,7 +5479,7 @@
     translated: "Heard that the Quelu Alliance is preparing to march on Baling Village, the Wudang Sect Leader has already gone in person."
   - subIndex: 1
     text: "，准备共商防御事宜。"
-    translated: ",Prepare to discuss defense matters together"
+    translated: ", Prepare to discuss defense matters together"
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "听闻长乐帮将在<b>#PosText#</b>举行盛大花车游行，长乐帮主乐无疾将亲演舞蹈，以感谢城内百姓支持。"
@@ -5512,7 +5512,7 @@
     translated: "Qingcheng Sect"
   - subIndex: 2
     text: "，欲向掌门禀报此事。"
-    translated: ",Want to report this matter to the Sect Leader."
+    translated: ", Want to report this matter to the Sect Leader."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "听闻黄河五鬼岳无畏被侠客追杀，一路向西南逃亡，如今在<b>#PosText#</b>城内躲藏。"
@@ -5997,13 +5997,13 @@
 - raw: "在一个月内提升太祖长拳一重功力，以赢得与师兄顾游年的赌约。\\n<i>理论经验：在藏经阁阅读秘籍\\n实战经验：在练武场练习或切磋</i>"
   splits:
   - text: "在一个月内提升太祖长拳一重功力，以赢得与师兄顾游年的赌约。"
-    translated: "Boost the first level of Wuzhu Changquan within a month to win the bet with Senior Brother Gu Younian."
+    translated: "Boost the Great Ancestor Long Fist by one rank of cultivation within a month to win the bet with Senior Brother Gu Younian."
   - subIndex: 1
     text: "理论经验"
     translated: "Theoretical experience"
   - subIndex: 2
     text: "在藏经阁阅读秘籍"
-    translated: "Read the scrolls in the Jingshuge"
+    translated: "In the Scripture Pavilion, read the secret manuals"
   - subIndex: 3
     text: "实战经验"
     translated: "Combat experience"
@@ -6176,11 +6176,11 @@
 - raw: "在藏经阁#TargetPlace#。"
   splits:
   - text: "在藏经阁#TargetPlace#。"
-    translated: "In the Repository Pavilion #TargetPlace#"
+    translated: "In the Scripture Pavilion #TargetPlace#"
 - raw: "在藏经阁内可以学习新的武功。\\n请选择“阅读藏书”。"
   splits:
   - text: "在藏经阁内可以学习新的武功。"
-    translated: "They can learn new martial arts skills in the Zang Jing ge."
+    translated: "In the Scripture Pavilion, you can learn new martial arts."
   - subIndex: 1
     text: "请选择“阅读藏书”。"
     translated: "Select Read Treasured Books"
@@ -6237,13 +6237,13 @@
     translated: "If we can continuously accumulate the sect's contributions and elevate its status,"
   - subIndex: 2
     text: "还可以阅读藏经阁中的高深秘籍，习得该门派的绝世武功。"
-    translated: "You can also read the profound and secret scriptures in the Scripture Repository, learning the Sect's world‑renowned martial arts."
+    translated: "You can also read the high‑level secret classics in the Scripture Pavilion to learn the sect's world‑renowned martial arts techniques."
   templates:
   - template: "{0}\\n{1}\\n{2}"
 - raw: "在闭关室突破瓶颈，将太祖长拳修炼至十重功力"
   splits:
   - text: "在闭关室突破瓶颈，将太祖长拳修炼至十重功力"
-    translated: "Break through the bottleneck in the meditation chamber and refine the Ancestor Founder Long Fist to the tenth level of power"
+    translated: "Break through the bottleneck in the meditation chamber and cultivate the Great Ancestor Long Fist to the tenth level of power."
 - raw: "地图上的水域和山脉会极大降低移动速度，\\n若可能的话，尽量绕开这些地形移动。"
   splits:
   - text: "地图上的水域和山脉会极大降低移动速度，"
@@ -6860,7 +6860,7 @@
     translated: "Theoretical experience"
   - subIndex: 2
     text: "在藏经阁阅读秘籍"
-    translated: "Read the scrolls in the Jingshuge"
+    translated: "In the Scripture Pavilion, read the secret manuals"
   - subIndex: 3
     text: "实战经验"
     translated: "Combat experience"
@@ -6886,7 +6886,7 @@
 - raw: "将潮起月盈功，劈金碎玉掌和无影乱剑均修炼至六重以上，然后去藏经阁进行参悟。"
   splits:
   - text: "将潮起月盈功，劈金碎玉掌和无影乱剑均修炼至六重以上，然后去藏经阁进行参悟。"
-    translated: "Cultivate Rising Tide and Full Moon Technique, Split Gold Shatter Jade Palm, and Shadowless Luanjian to the sixth level or above, then go to the Scripture Repository Pavilion for enlightenment."
+    translated: "Cultivate the Tide Rises and Moon is Full Technique, the Split Gold Crumble Jade Palm, and the Invisible Chaos Sword to the sixth stage or above, then go to the Scripture Pavilion to gain insight."
 - raw: "将解药带回#TargetPlace#，替吴忧解毒。"
   splits:
   - text: "将解药带回#TargetPlace#，替吴忧解毒。"
@@ -8224,7 +8224,7 @@
 - raw: "提升门派职位可以增加月俸，学习藏经阁内更高级的武功，\\n并解锁更多门派功能，可谓好处多多。"
   splits:
   - text: "提升门派职位可以增加月俸，学习藏经阁内更高级的武功，"
-    translated: "While elevating their position within the sect can increase monthly stipends and permit the study of more advanced martial arts in the Sutra Repository, they must also ensure their actions align with the sect's teachings and values."
+    translated: "Raising your position in the sect can increase your monthly stipend and allow you to learn more advanced martial arts from the Scripture Pavilion."
   - subIndex: 1
     text: "并解锁更多门派功能，可谓好处多多。"
     translated: "And unlock more sect features, certainly a boon."
@@ -8376,7 +8376,7 @@
     translated: "Base value"
   - subIndex: 2
     text: "，表示角色该属性的基础数值。"
-    translated: ",Show the base value for the character's attribute."
+    translated: ", Show the base value for the character's attribute."
   - subIndex: 3
     text: "一般通过修炼武功，才能进行提升。"
     translated: "Through training martial arts, they can achieve advancement."
@@ -8391,7 +8391,7 @@
     translated: "Potential Points"
   - subIndex: 2
     text: "，表示角色该属性的最大上限。"
-    translated: ",Display the maximum limit for the character's attribute."
+    translated: ", Display the maximum limit for the character's attribute."
   - subIndex: 3
     text: "基础值无论如何提升都无法超过潜力值，因此需额外注意。"
     translated: "No matter how the base value is improved, it cannot exceed the potential value; therefore, extra attention is needed."
@@ -8699,7 +8699,7 @@
 - raw: "本门藏经阁内所藏的秘籍，按照等级罗列在此处。"
   splits:
   - text: "本门藏经阁内所藏的秘籍，按照等级罗列在此处。"
-    translated: "The secret manuals stored in this sect's cang jing ge are listed here according to their rank."
+    translated: "The Secret Manuals stored in this Sect's Scripture Pavilion are listed here according to their ranks."
 - raw: "朱雀堂主"
   splits:
   - text: "朱雀堂主"
@@ -9283,7 +9283,7 @@
     translated: "Reading each word consumes patience"
   - subIndex: 1
     text: "初始耐心由藏经阁建筑的等级，和你对应的武功技能值决定。"
-    translated: "Initial patience is determined by the level of the Tripitaka Pavilion structure and your corresponding martial skill points."
+    translated: "Initial patience is determined by the level of the Scripture Pavilion building and your corresponding martial arts skill value."
   templates:
   - template: "{0}\\n{1}"
 - raw: "每项均分为<b>总和值</b>，<b>基础值</b>和<b>潜力值</b>。"
@@ -9389,7 +9389,7 @@
     translated: "Jianghu rumor has it that the felling boy who received martial teachings hid in"
   - subIndex: 1
     text: "，有一名魔道高手已前去抢夺神功。"
-    translated: ",A mage expert has gone to steal the divine technique."
+    translated: ", A mage expert has gone to steal the divine technique."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "江湖传闻在<b>#PosText#</b>有匹名驹出没，爱马之人纷纷前往欲寻得其踪迹。"
@@ -9423,7 +9423,7 @@
     translated: "Jiangling Southern Region"
   - subIndex: 2
     text: "，听说已有仙霞派义士前去捉拿。"
-    translated: ",I hear that there are already Xianxia Sect heroes going to apprehend them."
+    translated: ", I hear that there are already Xianxia Sect heroes going to apprehend them."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "江湖风闻，神偷慕容星辰要对<b>#PosText#</b>内的大户下手，一时间人心惶惶，城内富商人人自危。"
@@ -9474,7 +9474,7 @@
     translated: "Hurry back to the Sect"
   - subIndex: 2
     text: "，随我一道求求情吧！"
-    translated: ",Come beg with me!"
+    translated: ", Come beg with me!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "沈退受罚"
@@ -10014,10 +10014,10 @@
 - raw: "眼下，顾游年师兄正在藏经阁内等候。\\n点击“藏经阁”按钮，进入其中与他汇合吧！"
   splits:
   - text: "眼下，顾游年师兄正在藏经阁内等候。"
-    translated: "Currently, Senior Brother Gu Younian is waiting in the Repository of Scriptures."
+    translated: "Currently, Senior Brother Gu Younian is waiting in the Scripture Pavilion."
   - subIndex: 1
     text: "点击“藏经阁”按钮，进入其中与他汇合吧！"
-    translated: "Click the Tripitaka Pavilion button and join him inside!"
+    translated: "Click the Scripture Pavilion button and enter to meet up with him!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "眼下你已经结识了江湖中不少侠士。\\n通过此处的名录按钮，\\n你可以搜索查看他们的状态和所在位置。"
@@ -10041,7 +10041,7 @@
     translated: "Speed back to the sect"
   - subIndex: 2
     text: "，准备与铁掌帮决一死战！"
-    translated: ",Prepare to fight the Iron Palm Gang to the death!"
+    translated: ", Prepare to fight the Iron Palm Gang to the death!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "眼前一名疯疯癫癫的乞丐躺在路边，一遍哼唱着不知来由的乡野小调，\\n一遍痛饮着葫芦中的酒水，眉宇间竟颇有几分闲适自在之乐趣。"
@@ -10309,7 +10309,7 @@
     translated: "When breaking through, you can choose to select the martial arts manual of your desired skill, or consume medicinal pills or food to assist in the breakthrough."
   - subIndex: 1
     text: "其中秘籍包括你身上的和藏经阁内的，都可以进行选择。"
-    translated: "Among the jiji including those on your person and those in the Zangjingge, they can make their choices."
+    translated: "Among the Secret Techniques including those on your person and in the Scripture Pavilion, you can make your selection."
   templates:
   - template: "{0}\\n{1}"
 - raw: "突破瓶颈"
@@ -10351,7 +10351,7 @@
     translated: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered there."
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺天下第一这一无上荣耀。"
-    translated: ",Prepare to debate the way through martial arts, to test our skills and vie for the supreme honor of being the number one under heaven."
+    translated: ", Prepare to debate the way through martial arts, to test our skills and vie for the supreme honor of being the number one under heaven."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集<b>#PosText#</b>，准备以武论道，一较高下，争夺归藏功以及天下第一这一无上荣耀。"
@@ -10360,7 +10360,7 @@
     translated: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered there."
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺归藏功以及天下第一这一无上荣耀。"
-    translated: ",Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
+    translated: ", Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "第二届泰岳大典"
@@ -10373,7 +10373,7 @@
     translated: "The Second Taiyue Grand Ceremony officially convened on Jade Emperor Peak of Mount Tai, with various sect leaders gathering."
   - subIndex: 1
     text: "，共同商议龙胤归藏功之归属。"
-    translated: ",Ponder the Return of the Dragon Conceal Their Merit Together."
+    translated: ", Ponder the Return of the Dragon Conceal Their Merit Together."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "算了，随便逛逛便好"
@@ -10522,7 +10522,7 @@
     translated: "Theoretical experience"
   - subIndex: 2
     text: "在藏经阁阅读秘籍"
-    translated: "Read the scrolls in the Jingshuge"
+    translated: "In the Scripture Pavilion, read the secret manuals"
   - subIndex: 3
     text: "实战经验"
     translated: "Combat experience"
@@ -10678,7 +10678,7 @@
     translated: "Speed back to the sect"
   - subIndex: 3
     text: "，与师兄弟共商大计。"
-    translated: ",Discuss major plans with Senior Brothers"
+    translated: ", Discuss major plans with Senior Brothers"
   templates:
   - template: "{0}\\n{1}<b>{2}</b>{3}"
 - raw: "腊八"
@@ -10883,7 +10883,7 @@
 - raw: "藏经阁内不仅可以阅读藏书，\\n也可以阅读随身携带的秘籍。"
   splits:
   - text: "藏经阁内不仅可以阅读藏书，"
-    translated: "You can also read the stored books in the Tripitaka Pavilion."
+    translated: "In the Scripture Pavilion, one can not only read the stored books,"
   - subIndex: 1
     text: "也可以阅读随身携带的秘籍。"
     translated: "You can also read the secret techniques you carry with you."
@@ -10892,7 +10892,7 @@
 - raw: "藏经阁是阅读秘籍之场所。\\n所有秘籍，都要在此处才能进行参阅。"
   splits:
   - text: "藏经阁是阅读秘籍之场所。"
-    translated: "The Tripitaka Pavilion is a place for reading secret texts."
+    translated: "The Scripture Pavilion is a place to read secret scrolls."
   - subIndex: 1
     text: "所有秘籍，都要在此处才能进行参阅。"
     translated: "All manuals must be accessed here"
@@ -11295,7 +11295,7 @@
 - raw: "请点击太祖长拳秘籍，开始阅读吧！"
   splits:
   - text: "请点击太祖长拳秘籍，开始阅读吧！"
-    translated: "Click on the Taizu Changquan Miji to start reading!"
+    translated: "Please click on the Great Ancestor Long Fist Manual to start reading!"
 - raw: "请点击锤子按钮进入建造模式。"
   splits:
   - text: "请点击锤子按钮进入建造模式。"
@@ -11418,7 +11418,7 @@
     translated: "All 90% off"
   - subIndex: 3
     text: "，仅剩一天！"
-    translated: ",Only one day left!"
+    translated: ", Only one day left!"
   - subIndex: 4
     text: "机不可失，过期不候了噢！"
     translated: "This offer won't last, so don't miss it!"
@@ -11439,7 +11439,7 @@
     translated: "Many Wulin practitioners have gone there in advance."
   - subIndex: 4
     text: "，欲一睹这场空前绝后之盛会。"
-    translated: ",To catch a glimpse of this unprecedented grand festival."
+    translated: ", To catch a glimpse of this unprecedented grand festival."
   templates:
   - template: "{0}<b>{1}</b>{2}\\n{3}<b>#PosText#</b>{4}"
 - raw: "赶回#TargetPlace#保护姜婉。"
@@ -11678,7 +11678,7 @@
     translated: "Recently, the Tang Clan and Thunderclap Hall have widely issued invitations, inviting heroes from all under heaven to attend the grand wedding celebration of Tang Li and Lei Yanyan. People from the Jianghu have flocked to attend."
   - subIndex: 1
     text: "，欲一睹这次联姻之盛况。"
-    translated: ",To witness the grandeur of this marriage alliance."
+    translated: ", To witness the grandeur of this marriage alliance."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "近来峨眉派在<b>大理</b>明察暗访，细致搜寻此前下毒害人的凶手，听说已有些眉目。"
@@ -11734,7 +11734,7 @@
     translated: "Lately, the Waterbandits known as the Thirteen Heroes of the River have been continually harassing."
   - subIndex: 1
     text: "，使得当地百姓怨声载道，叫苦不迭。"
-    translated: ",This has caused local villagers to complain loudly, suffering greatly. the people to complain loudly and express their suffering endlessly."
+    translated: ", This has caused local villagers to complain loudly, suffering greatly. the people to complain loudly and express their suffering endlessly."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "近来江湖风闻，有人在悬赏我#$TargetInteractName#这颗项上人头。\\n不知#PlayerName#可有什么头绪？"
@@ -11759,7 +11759,7 @@
     translated: "Rush back to the sect"
   - subIndex: 2
     text: "，可与师兄一道前去擒贼。"
-    translated: ",Can go to capture the thief with Senior Brother."
+    translated: ", Can go to capture the thief with Senior Brother."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "近来长江下游光华四射，气冲斗牛，星象显示有神兵利器问世。\\n传说铸剑山庄弟子正在<b>#PosText#</b>一带搜寻线索。"
@@ -12296,7 +12296,7 @@
 - raw: "选择“太祖长拳”即可开始练习，\\n从而获取实战经验。"
   splits:
   - text: "选择“太祖长拳”即可开始练习，"
-    translated: "Select Taizu Changquan to start practicing"
+    translated: "Choose Great Ancestor Long Fist to begin practicing."
   - subIndex: 1
     text: "从而获取实战经验。"
     translated: "To gain practical experience"
@@ -12318,7 +12318,7 @@
 - raw: "选择突破目标“太祖长拳”，正式开始突破。"
   splits:
   - text: "选择突破目标“太祖长拳”，正式开始突破。"
-    translated: "Choose the breakthrough target Taizu Changquan and officially begin the breakthrough."
+    translated: "Choose breakthrough objective Great Ancestor Long Fist, officially begin breakthrough."
 - raw: "选用的辅助品越珍贵，突破效率越高。\\n提升建筑等级和对应武学技能，也可以增加突破效率。"
   splits:
   - text: "选用的辅助品越珍贵，突破效率越高。"
@@ -13136,7 +13136,7 @@
     translated: "Click on the highlighted area, or press"
   - subIndex: 1
     text: "，可以向相邻地图格移动。"
-    translated: ",You can move to adjacent map squares"
+    translated: ", You can move to adjacent map squares"
   - subIndex: 2
     text: "每步都只消耗一点耐力。"
     translated: "Each step only consumes one point of stamina."

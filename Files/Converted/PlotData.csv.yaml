@@ -429,7 +429,7 @@
   splits:
   - split: 10
     text: "如今你根基未稳，连最简单的太祖长拳都使不连贯。"
-    translated: "Now that your foundations are still unstable, you cannot even perform the simplest Tai Chi Long Fist seamlessly."
+    translated: "Now that your foundation is still unstable, you cannot even perform the simplest Great Ancestor Long Fist smoothly."
   - split: 10
     subIndex: 1
     text: "我看你得先"
@@ -437,7 +437,7 @@
   - split: 10
     subIndex: 2
     text: "阅读太祖长拳秘籍，积累理论经验"
-    translated: "Read the Secret Manual of Taizu Changquan, Accumulate Theoretical Experience"
+    translated: "Read the Great Ancestor Long Fist manual and accumulate theoretical experience."
   - split: 10
     subIndex: 3
     text: "才行。"
@@ -453,11 +453,11 @@
   - split: 10
     subIndex: 1
     text: "本门藏经阁"
-    translated: "This School's Repository Hall"
+    translated: "This Door's Scripture Pavilion"
   - split: 10
     subIndex: 2
     text: "中，把太祖长拳秘籍翻出来。"
-    translated: "Then, I'll go through and transcribe the Taizu Changquan secret manual."
+    translated: "In the middle, flip out the Great Ancestor Long Fist secret manual."
   - split: 10
     subIndex: 3
     text: "你收拾下就过来，别又到处乱逛去了。"
@@ -469,7 +469,7 @@
   splits:
   - split: 10
     text: "本门藏经阁"
-    translated: "This School's Repository Hall"
+    translated: "This Door's Scripture Pavilion"
   - split: 10
     subIndex: 1
     text: "吗？是！师兄我马上就来。"
@@ -481,7 +481,7 @@
   splits:
   - split: 10
     text: "哇，本门藏经阁，雕梁画栋，藏书无数，当真气派啊。"
-    translated: "Wow, the sect's Zang Jingge treasury hall is adorned with carved beams and painted rafters, housing countless books. Truly a grand spectacle of True Qi."
+    translated: "Wow, the Scripture Pavilion of our sect is adorned with carved beams and painted rafters, housing countless books. Truly a grand spectacle of True Qi."
 - raw: ",,,右,,,,,,,听你这惊讶的口气，怕是入门之后，还没来过这儿吧？"
   splits:
   - split: 10
@@ -528,7 +528,7 @@
   - split: 10
     subIndex: 2
     text: "，只需一经运用，便能持续发挥加成效果。"
-    translated: ",Once applied, it continues to provide enhancement benefits."
+    translated: ", Once applied, it continues to provide enhancement benefits."
   - split: 10
     subIndex: 3
     text: "功法等级越高，提供的加成效果便越强。"
@@ -548,7 +548,7 @@
   - split: 10
     subIndex: 2
     text: "，比方说这太祖长拳，"
-    translated: "For example, this Taijiquan"
+    translated: ", For example, this Great Ancestor Long Fist,"
   - split: 10
     subIndex: 3
     text: "乃是在战斗中真正克敌制胜的攻击性招式。"
@@ -564,7 +564,7 @@
   splits:
   - split: 10
     text: "原来如此，难怪我这太祖长拳使出来软绵无力，"
-    translated: "So that explains why my great‑grandfather's long fist style comes off as soft and weak when I perform it."
+    translated: "So that explains why my Great Ancestor Long Fist comes out soft and feeble."
   - split: 10
     subIndex: 1
     text: "像在给人捶背一般"
@@ -596,7 +596,7 @@
   - split: 10
     subIndex: 1
     text: "所以说眼下当务之急，要先专心将这太祖长拳练习纯熟。"
-    translated: "So for now, the top priority is to focus on mastering the Taizu Changquan."
+    translated: "So for now, the top priority is to focus and practice the Great Ancestor Long Fist proficiently."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -608,7 +608,7 @@
   - split: 10
     subIndex: 1
     text: "可这太祖长拳应该如何精进，还请师兄赐教！"
-    translated: "How should I advance my practice of the Ancestor Fist, I beg you, Senior Brother, to enlighten me!"
+    translated: "How should the Great Ancestor Long Fist be advanced further, I beg you, Senior Brother, to enlighten me!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -636,7 +636,7 @@
   - split: 10
     subIndex: 5
     text: "，此二者缺一不可。"
-    translated: "These two are indispensable. Both are essential."
+    translated: ", These two are indispensable. Both are essential."
   templates:
   - split: 10
     template: "{0}\\n{1}<b>{2}</b>{3}<b>{4}</b>{5}"
@@ -660,7 +660,7 @@
   splits:
   - split: 10
     text: "我已在本门藏经阁内，寻到这本太祖长拳的秘籍。"
-    translated: "While correcting, I have found the secret manual for the Ancestor's Long Fist inside this temple's jingjuan ge."
+    translated: "I have found the secret text of the Great Ancestor Long Fist in this sect's Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "你先好好参阅，等理论经验烂熟于心，我再教你提升实战经验之法。"
@@ -677,7 +677,7 @@
   splits:
   - split: 10
     text: "师兄，我已读完太祖长拳秘籍了。"
-    translated: "Senior Brother, I have finished reading the Secret Manual of Taizu Changquan."
+    translated: "Senior Brother, I have finished reading the Great Ancestor Long Fist secret manual."
 - raw: ",,,左,,,,,,,嘿嘿，不读不要紧，一读吓一跳。\\n我之前的招式确实错漏百出，也难怪师傅要大发雷霆了。"
   splits:
   - split: 10
@@ -710,7 +710,7 @@
   - split: 10
     subIndex: 1
     text: "不过是太祖长拳而已，好像练成什么绝世武功了似的。"
-    translated: "It's just the Grandfather's Long Fist, not some world‑shaking martial art."
+    translated: "It's just the Great Ancestor Long Fist; it's as if I've mastered some world‑shaking martial art."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -831,7 +831,7 @@
   splits:
   - split: 10
     text: "呵，藏经阁不去，练武场也不来，"
-    translated: "Huh, didn't go to the Tripitaka Repository, so didn't come to the Training Ground either."
+    translated: "Ah, if I don't visit the Scripture Pavilion, I won't come to the Training Ground either."
   - split: 10
     subIndex: 1
     text: "#PlayerName#你入门之后，难不成只在食堂和宿舍转悠？"
@@ -907,7 +907,7 @@
   splits:
   - split: 10
     text: "你这太祖长拳功夫刚达三重境界，"
-    translated: "Your Taijichangquan skills have just reached the third realm."
+    translated: "Your mastery of Great Ancestor Long Fist is just at the third realm."
   - split: 10
     subIndex: 1
     text: "不如就先在此处自行练习一次，如何？"
@@ -1190,7 +1190,7 @@
   splits:
   - split: 10
     text: "#PlayerName#你的太祖长拳，通过此次切磋应该有所长进。"
-    translated: "#PlayerName#, your Great‑Great Grandfather Long Fist should have made some progress through this exchange."
+    translated: "#PlayerName#, your Great Ancestor Long Fist should have progressed through this sparring."
   - split: 10
     subIndex: 1
     text: "这正是通过战斗，来获取实战经验之法。"
@@ -1206,7 +1206,7 @@
   - split: 10
     subIndex: 1
     text: "在藏经阁读书获取理论经验"
-    translated: "Read books in the Scripture Repository to gain theoretical experience"
+    translated: "Read books in the Scripture Pavilion to gain theoretical experience"
   - split: 10
     subIndex: 2
     text: "通过"
@@ -1238,7 +1238,7 @@
   splits:
   - split: 10
     text: "#PlayerName#你这太祖长拳尚只有三、四重功力，"
-    translated: "#PlayerName#, your Tai Chi Changquan is only at the third or fourth level of proficiency."
+    translated: "#PlayerName#, your Great Ancestor Long Fist is still at the third or fourth level of power."
   - split: 10
     subIndex: 1
     text: "依我看还得再花上一个月，方能提升到下一重功力。"
@@ -1250,7 +1250,7 @@
   splits:
   - split: 10
     text: "一个月？！这太祖长拳乃是江湖中最粗浅的拳法。"
-    translated: "One month?! This Taijichangquan is one of the most basic martial arts in the Jianghu."
+    translated: "One month?! The Great Ancestor Long Fist is one of the most basic martial arts styles in the Jianghu."
   - split: 10
     subIndex: 1
     text: "若这都要练一个月，猴年马月才能成为武林大侠啊！"
@@ -1306,7 +1306,7 @@
   - split: 10
     subIndex: 2
     text: "在一个月内，将太祖长拳提升一重功力"
-    translated: "Within a month, raise the Senior Ancestor Long Fist skill one level of power."
+    translated: "In a month, elevate the Great Ancestor Long Fist by one level of power."
   - split: 10
     subIndex: 3
     text: "我便将前几日机缘巧合得的一本秘籍，拱手相赠与你，如何？"
@@ -1346,7 +1346,7 @@
   splits:
   - split: 10
     text: "呼，这太祖长拳看似简单，但却是百拳之基。"
-    translated: "Hmm, this Ancestor's Long Fist might seem simple, but it is the foundation of a hundred styles."
+    translated: "Huh, this Great Ancestor Long Fist may seem simple, but it is the foundation of a hundred styles."
   - split: 10
     subIndex: 1
     text: "一旦练习起来，便不知不觉忘了时间。"
@@ -1407,7 +1407,7 @@
   - split: 10
     subIndex: 1
     text: "不过你可知，这太祖长拳虽是最粗浅的拳法，却蕴含着不少深刻道理。"
-    translated: "But did you know that while the Taizu Longquan is one of the simplest fist techniques, it contains many profound principles."
+    translated: "However, you should know that while the Great Ancestor Long Fist is one of the simplest fist techniques, it contains numerous profound principles."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -1431,7 +1431,7 @@
   - split: 10
     subIndex: 1
     text: "都是从这太祖长拳开始练习，一步一步踏上武学之路的。"
-    translated: "It all began with practicing the Tai Zuan Changquan, and step by step, they embarked on their martial arts journey."
+    translated: "All started with practicing the Great Ancestor Long Fist, step by step embarking on the path of martial arts."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -1455,7 +1455,7 @@
   splits:
   - split: 10
     text: "还望#PlayerName#能以这太祖长拳为始，"
-    translated: "I hope #PlayerName# can begin with the Taizu Changquan."
+    translated: "I hope that #PlayerName# can begin with the Great Ancestor Long Fist."
   - split: 10
     subIndex: 1
     text: "不断修炼武艺，提升境界。"
@@ -1516,7 +1516,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#若是整天使一手太祖长拳，让外人见了怕是要笑掉大牙。"
-    translated: "#PlayerName# if they saw #PlayerName# perform the Taizu Changquan for an entire day, outsiders might laugh their heads off."
+    translated: "If #PlayerName# were to fully master the Great Ancestor Long Fist, outsiders might laugh their heads off when they see it."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -1596,7 +1596,7 @@
   splits:
   - split: 10
     text: "（看来要先努力把这太祖长拳修炼到第十重，"
-    translated: "(It seems I need to first strive to cultivate Tai Zuan Changquan to the tenth level,"
+    translated: "(Seems I need to first work hard to cultivate the Great Ancestor Long Fist to the tenth level,"
   - split: 10
     subIndex: 1
     text: "才能在"
@@ -2482,7 +2482,7 @@
   splits:
   - split: 10
     text: "这太祖长拳里的弓步冲拳，我已经练了几日，"
-    translated: "This advancing punch in the Ancestor's Long Fist's bow stance, I have been practicing it for several days."
+    translated: "This bow step rushing fist from the Great Ancestor Long Fist, I have been practicing it for several days."
   - split: 10
     subIndex: 1
     text: "感觉算是掌握的七七八八，不信你看我这手！"
@@ -5335,7 +5335,7 @@
   - split: 10
     subIndex: 1
     text: "，遵命师傅。"
-    translated: ",As ordered, Master"
+    translated: ", As ordered, Master"
   templates:
   - split: 10
     template: "{0} {1}"
@@ -15643,7 +15643,7 @@
   - split: 10
     subIndex: 3
     text: "，就是个不错的选择。"
-    translated: "It's a pretty good choice"
+    translated: ", It's a pretty good choice"
   templates:
   - split: 10
     template: "{0}\\n{1}<b>{2}</b>{3}"
@@ -20465,7 +20465,7 @@
   - split: 10
     subIndex: 1
     text: "藏经阁"
-    translated: "Temple Scriptures Pavilion"
+    translated: "Scripture Pavilion"
   - split: 10
     subIndex: 2
     text: "内。"
@@ -20860,7 +20860,7 @@
   splits:
   - split: 10
     text: "啊！是藏经阁！"
-    translated: "Ah! It's the Treasure Repository Hall!"
+    translated: "Ah! It's the Scripture Pavilion!"
   - split: 10
     subIndex: 1
     text: "难道那贼人是盯上了我们仙霞派的武功秘籍？"
@@ -20872,7 +20872,7 @@
   splits:
   - split: 10
     text: "有此可能！总之事不宜迟，我这就去藏经阁查探。"
-    translated: "There's a possibility! Anyway, time waits for no man, I'll head to the Tripitaka Repository right away."
+    translated: "There's a possibility! Anyway, time is of the essence, so I'll head to the Scripture Pavilion right away."
   - split: 10
     subIndex: 1
     text: "#TargetInteractName#你一个人留在这儿也有些危险，干脆随我一道去吧！"
@@ -20889,7 +20889,7 @@
   splits:
   - split: 10
     text: "这藏经阁黑灯瞎火的，啥都看不清啊。"
-    translated: "The Tripitaka Tower is pitch black, I can't see anything."
+    translated: "This Scripture Pavilion is pitch dark; I can't see anything."
 - raw: ",,,右,,,,,,,#PlayerName#先别点火折子，\\n若是这贼人躲在藏经阁内，只怕打草惊蛇了。"
   splits:
   - split: 10
@@ -20898,7 +20898,7 @@
   - split: 10
     subIndex: 1
     text: "若是这贼人躲在藏经阁内，只怕打草惊蛇了。"
-    translated: "If the thief is hiding in the Scripture Repository Pavilion, we might just scare him away."
+    translated: "If the thief is hiding in the Scripture Pavilion, we might just scare him off."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20945,7 +20945,7 @@
   - split: 10
     subIndex: 1
     text: "你们偷偷摸摸在藏经阁干啥？"
-    translated: "What are you sneaking around in the Archive Tower for?"
+    translated: "What are you sneaking around in the Scripture Pavilion for?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20970,7 +20970,7 @@
   - split: 10
     subIndex: 1
     text: "你们偷偷摸摸在藏经阁干啥？"
-    translated: "What are you sneaking around in the Archive Tower for?"
+    translated: "What are you sneaking around in the Scripture Pavilion for?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -30680,7 +30680,7 @@
   - split: 10
     subIndex: 2
     text: "，号召有志之士追缉恶徒，为民除害，"
-    translated: "Call upon those who wish to join to hunt down the villains and protect the people."
+    translated: ", Call upon those who wish to join to hunt down the villains and protect the people."
   - split: 10
     subIndex: 3
     text: "如此一来，便不需动用各大门派的精锐力量。"
@@ -31374,7 +31374,7 @@
   - split: 10
     subIndex: 2
     text: "，发布了什么"
-    translated: ",what did they release?"
+    translated: ", what did they release?"
   - split: 10
     subIndex: 3
     text: "江湖追缉令"
@@ -33568,7 +33568,7 @@
   - split: 10
     subIndex: 1
     text: "师弟你放进藏经阁内，让大家一道参详，方能知己知彼百战不殆。"
-    translated: "Junior Disciple, you should place it in the Repository Hall for everyone to study together. This way, we can know ourselves and our enemies, ensuring victory in a hundred battles."
+    translated: "Junior Disciple, you should place it in the Scripture Pavilion so that everyone can study it together. This way, we can know ourselves and our enemies, ensuring we never lose in a hundred battles."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -37485,7 +37485,7 @@
   - split: 10
     subIndex: 1
     text: "便放入本门藏经阁内，供大家一起参阅好了。"
-    translated: "Why not place it in our sect's Canon Repository for everyone to study together?"
+    translated: "Then place it in our Scripture Pavilion for everyone to review together."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -40076,7 +40076,7 @@
   - split: 10
     subIndex: 4
     text: "，也是巧妇难为无米之炊。"
-    translated: "It's also like a skilled housewife finds it hard to cook a meal when there's no rice."
+    translated: ", It's also like a skilled housewife finds it hard to cook a meal when there's no rice."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}<b>{3}</b>{4}"
@@ -55190,7 +55190,7 @@
   - split: 10
     subIndex: 1
     text: "，好险好险，没想到我们三兄弟能九死一生，逃得此劫，"
-    translated: "Fortunately, fortunately. I never expected that the three brothers could survive such perilous odds and escape this calamity."
+    translated: ", Fortunately, fortunately. I never expected that the three brothers could survive such perilous odds and escape this calamity."
   - split: 10
     subIndex: 2
     text: "回想起来还真有些心有余悸"
@@ -61326,7 +61326,7 @@
   - split: 10
     subIndex: 1
     text: "只是这无影乱剑秘籍，位于本门藏经阁深处。"
-    translated: "But this shadowless chaotic sword technique is located deep within our sect's treasure library."
+    translated: "Just this Shadowless Random Sword Technique is located deep within the Scripture Pavilion of our sect."
   - split: 10
     subIndex: 2
     text: "我还得寻个好时机，才能下手。"
@@ -61463,7 +61463,7 @@
   - split: 10
     subIndex: 1
     text: "值此万籁俱寂之时，忽见得一道黑影自暗处窜出，径直向着藏经阁冲去。）"
-    translated: "At this moment when all was silent, a dark shadow darted out from the darkness and raced directly towards the Scripture Repository.)"
+    translated: "At this moment, when all was silent, a dark shadow darted out from the darkness and raced directly towards the Scripture Pavilion.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61475,7 +61475,7 @@
   - split: 10
     subIndex: 1
     text: "不一会儿便来到藏经阁门前。）"
-    translated: "Before long, we arrived at the entrance of the Scripture Repository Hall.)"
+    translated: "Before long, they arrived at the Scripture Pavilion door.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61483,7 +61483,7 @@
   splits:
   - split: 10
     text: "看守藏经阁，还真是个又凄冷又无聊的苦差事。"
-    translated: "Watching over the Library really is a dreary and boring chore."
+    translated: "Watching over the Scripture Pavilion really is a grim and boring chore."
   - split: 10
     subIndex: 1
     text: "有这闲时，去练练武功该多好。"
@@ -61523,7 +61523,7 @@
   - split: 10
     subIndex: 1
     text: "咱俩走了，这藏经阁岂不是无人看守了？"
-    translated: "We're leaving together, won't this archive tower be unattended?"
+    translated: "Let's go, won't the Scripture Pavilion be unattended then?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61555,7 +61555,7 @@
   - split: 10
     subIndex: 1
     text: "那黑影见此时机也不犹豫，立刻闪身进入藏经阁内。）"
-    translated: "The black shadow did not hesitate at this opportunity and immediately darted into the Scripture Repository Hall.)"
+    translated: "That shadow did not hesitate at this opportunity and immediately darted into the Scripture Pavilion.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61567,7 +61567,7 @@
   - split: 10
     subIndex: 1
     text: "只见他轻车熟路来到藏经阁内部，稍加翻找便寻出了一本秘籍，"
-    translated: "He navigated the scripture repository with ease and quickly found a secret manuscript after a brief search."
+    translated: "He navigated the Scripture Pavilion with ease, quickly finding a secret manual after a brief search."
   - split: 10
     subIndex: 2
     text: "正是仙霞派的镇派绝学"
@@ -61583,7 +61583,7 @@
   splits:
   - split: 10
     text: "（将秘籍揣入怀中，趁守卫未回，沈退赶忙窜出藏经阁，"
-    translated: "(Putting the scroll in his pocket, Shen Tui quickly darted out of the Temple Repository before the guards returned."
+    translated: "(Putting the secret scroll in his arms, taking advantage of the guard not returning, Shen Tui hastily darted out of the Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "随后又在派内七拐八绕，避开岗哨，"
@@ -61945,7 +61945,7 @@
   splits:
   - split: 10
     text: "你潜入藏经阁偷盗的样子，倒是驾轻就熟，"
-    translated: "Your stealthy way of sneaking into the Cangjingge to steal is quite proficient."
+    translated: "You're quite adept at sneaking into the Scripture Pavilion to steal, I must say."
   - split: 10
     subIndex: 1
     text: "像是此中老手，不像演的"
@@ -62294,7 +62294,7 @@
   - split: 10
     subIndex: 2
     text: "太祖长拳吗！！！"
-    translated: "Is it Tai Chi Long Fist!!!"
+    translated: "Great Ancestor Long Fist, huh!!!"
   templates:
   - split: 10
     template: "{0}……\\n{1}……{2}"
@@ -63011,7 +63011,7 @@
   - split: 10
     subIndex: 1
     text: "我准备放进藏经阁里，供师兄弟们参阅，也好一同精进武艺。"
-    translated: "I am going to store it in the Canon Repository for my fellow brothers and sisters to study. This way, we can all improve our martial arts together."
+    translated: "I will put it in the Scripture Pavilion for senior brothers and fellow brothers to refer to, so we can all improve our martial arts together."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -65374,7 +65374,7 @@
   - split: 10
     subIndex: 1
     text: "我太祖长拳都学了十天半个月，老人家你这功夫一时半会哪搞得懂？"
-    translated: "I have been practicing my great‑grandfather's long fist for ten or more days, and old man, how could you expect me to understand it quickly?"
+    translated: "I've been practicing the Great Ancestor Long Fist for ten or more days, and you expect an old man to understand it quickly?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -78849,7 +78849,7 @@
   - split: 10
     subIndex: 1
     text: "聊起当年你偷睡懒觉被师傅责骂，顾师兄带你去藏经阁学习太祖长拳的往事，仿佛还在昨日。"
-    translated: "While recounting the time when they used to sneak in for extra sleep and got scolded by their Master, and how Senior Brother Gu took them to the Zangjingge to learn Tai Zu Changquan, it feels like it was just yesterday."
+    translated: "Recalling how you used to sneak in and sleep in, and Master scolded you. Then Senior Brother took you to the Scripture Pavilion to learn Great Ancestor Long Fist‑seems like it was just yesterday."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -79115,7 +79115,7 @@
   - split: 10
     subIndex: 3
     text: "，他手上或许有这个“排行榜”。"
-    translated: ",He might have this ranking list"
+    translated: ", He might have this ranking list"
   templates:
   - split: 10
     template: "{0}\\n{1}<b>{2}</b>{3}"
@@ -79559,7 +79559,7 @@
   splits:
   - split: 10
     text: "咦？亏得我千辛万苦，好不容易把这太祖长拳练至第九重，"
-    translated: "Huh? I went through so much trouble to finally master the Taijizu Changquan up to its ninth level."
+    translated: "Hey? I struggled so much to finally perfect Great Ancestor Long Fist to the ninth level."
   - split: 10
     subIndex: 1
     text: "明明理论经验与实战经验也都积攒充分。"
@@ -79648,7 +79648,7 @@
   splits:
   - split: 10
     text: "顾师兄，我千辛万苦，好不容易把这太祖长拳修炼到第九重了。"
-    translated: "Senior Brother Gu, I went through great hardships and finally mastered the Taizun Changquan to its ninth level."
+    translated: "Senior Brother, after much hardship, I finally managed to cultivate the Great Ancestor Long Fist to its ninth level."
   - split: 10
     subIndex: 1
     text: "然后如你所教的那样，把理论经验和实战经验也都充分积累了。"
@@ -79672,7 +79672,7 @@
   splits:
   - split: 10
     text: "连这太祖长拳都练不到第十重，还怎么惩奸除恶，匡扶正义！"
-    translated: "How can he still fight evil and uphold justice if he hasn't even reached the tenth level of the Ancestor's Long Fist?"
+    translated: "How can one expect to punish evil and uphold justice if they can't even master the Great Ancestor Long Fist to the tenth level!"
   - split: 10
     subIndex: 1
     text: "还怎么振兴咱们仙霞派啊！呜呜呜啊啊啊，我不甘心！"
@@ -79684,7 +79684,7 @@
   splits:
   - split: 10
     text: "#PlayerName#你这么短的时间里，就把太祖长拳修炼至第九重了？！"
-    translated: "#PlayerName#, you've mastered the Ninth Level of Taizu Changquan in such a short time?!"
+    translated: "#PlayerName#, you've mastered the Great Ancestor Long Fist up to the ninth level in such a short time?!"
   - split: 10
     subIndex: 1
     text: "莫慌莫慌，此事怪我，没有和你说明。"
@@ -79696,7 +79696,7 @@
   splits:
   - split: 10
     text: "我本想过几天，等到#PlayerName#这太祖长拳练得差不多了，再加以指点。"
-    translated: "I planned to wait a few days until #PlayerName# had mastered the Basic Long Fist pretty well before offering further guidance."
+    translated: "I had planned to wait a few days, until #PlayerName# had mastered the Great Ancestor Long Fist, and then give some guidance."
   - split: 10
     subIndex: 1
     text: "没想到你进展如此迅速，这么快就遇到了“"
@@ -79716,7 +79716,7 @@
   - split: 10
     subIndex: 1
     text: "太祖长拳这种基础武功，只会在第九重升级到第十重时，遇到一次瓶颈。"
-    translated: "The basic martial art Taizong Changquan only encounters a bottleneck once, when upgrading from the ninth level to the tenth."
+    translated: "This basic martial art, Great Ancestor Long Fist, only encounters a bottleneck once, when upgrading from the ninth level to the tenth level."
   templates:
   - split: 10
     template: "{0}\\n<b>{1}</b>"
@@ -79761,7 +79761,7 @@
   - split: 10
     subIndex: 5
     text: "，还能给武功提供额外的加成效果。"
-    translated: "Can also provide additional bonus effects to martial arts skills."
+    translated: ", Can also provide additional bonus effects to martial arts skills."
   templates:
   - split: 10
     template: "{0}<b>{1}</b>{2}\\n{3}<b>{4}</b>{5}"
@@ -79877,7 +79877,7 @@
   splits:
   - split: 10
     text: "杨师兄来得正好，我这太祖长拳刚刚大成，正好来和你练练手！"
-    translated: "Fellow Senior Brother, you've arrived just in time. I have just mastered the Tai Chi Long Fist, so let's practice together!"
+    translated: "Senior Brother, you've come just in time. I've just mastered the Great Ancestor Long Fist, so let's practice together!"
 - raw: ",,,右,,,,,FightInteractHero;StudyFight-FightAddPlotDataBase~486----Arena,,啊？才没几天#PlayerName#这太祖长拳就练成了？\\n我功夫低微，还请手下留情啊！"
   splits:
   - split: 10
@@ -79899,7 +79899,7 @@
   splits:
   - split: 10
     text: "嚯！#PlayerName#这太祖长拳力道好生威猛，"
-    translated: "Wow! #PlayerName#, this Tai Chi Chuan is really powerful and impressive in terms of strength."
+    translated: "Hah! #PlayerName#, your Great Ancestor Long Fist displays remarkable strength!"
   - split: 10
     subIndex: 1
     text: "和上次切磋时相比，简直不像一个人呐！"
@@ -79939,7 +79939,7 @@
   - split: 10
     subIndex: 1
     text: "这太祖长拳只是江湖中最粗浅的功夫，"
-    translated: "This is merely one of the most basic martial arts techniques in the Jianghu."
+    translated: "This Great Ancestor Long Fist is merely the most rudimentary skill in the Jianghu."
   - split: 10
     subIndex: 2
     text: "#PlayerName#想靠这就振兴仙霞派，怕是还差十万八千里呢。"
@@ -79983,7 +79983,7 @@
   - split: 10
     subIndex: 2
     text: "然后再去藏经阁，学习更高深的本门武学吧。"
-    translated: "Then head to the Scripture Repository to learn more advanced sect martial arts."
+    translated: "Then head to the Scripture Pavilion to learn even more advanced martial arts of our sect."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -80040,7 +80040,7 @@
   - split: 10
     subIndex: 2
     text: "藏经阁"
-    translated: "Temple Scriptures Pavilion"
+    translated: "Scripture Pavilion"
   - split: 10
     subIndex: 3
     text: "中。"
@@ -80249,7 +80249,7 @@
   - split: 10
     subIndex: 1
     text: "其一，便是去购买相应的武功秘籍，然后来藏经阁阅读即可。"
-    translated: "The first step is to purchase the corresponding martial arts manuals and then read them in the Treasure Canon Pavilion."
+    translated: "First, one needs to purchase the corresponding martial arts manuals and then read them in the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -80305,11 +80305,11 @@
   splits:
   - split: 10
     text: "其三，也是最简单的方法，便是来本门的藏经阁，直接阅读藏书即可。"
-    translated: "Thirdly, and most simply, one can go to the scripture hall of this sect and directly read the stored books."
+    translated: "Third, and the simplest method, is to come to the Scripture Pavilion of this sect and directly read the stored books."
   - split: 10
     subIndex: 1
     text: "缺点是，你只能阅读藏经阁内收藏的秘籍，"
-    translated: "The downside is that you can only read scrolls housed in the Tangjingge."
+    translated: "The downside is that you can only read the techniques stored in the Scripture Pavilion."
   - split: 10
     subIndex: 2
     text: "同时如果是新学习武功的话，需要消耗一定的门派功绩。"
@@ -80325,7 +80325,7 @@
   - split: 10
     subIndex: 1
     text: "总之眼下，#PlayerName#还是去试试在这藏经阁内阅读藏书吧！"
-    translated: "Anyway, go give it a try and read the scriptures inside this scripture repository, #PlayerName#!"
+    translated: "Total, for now, #PlayerName# should still give it a try and read the scriptures in the Scripture Pavilion!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81244,7 +81244,7 @@
   - split: 10
     subIndex: 1
     text: "倒是#PlayerName#若有空，别忘了去藏经阁看看这次新得的秘籍。"
-    translated: "Instead, if #PlayerName# has some time, don't forget to check out the new scrolls in the Scripture Repository."
+    translated: "#PlayerName#, if you have time, don't forget to check out the Scripture Pavilion to see the new manuals this time."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81699,7 +81699,7 @@
   - split: 10
     subIndex: 1
     text: "你们拿到门派藏经阁去，给大家一道修习。"
-    translated: "Take it to their Sect's Zangjingge Treasury Pavilion and share it with everyone for cultivation."
+    translated: "Take it to the Scripture Pavilion of the Sect for everyone to practice."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -82569,7 +82569,7 @@
   - split: 10
     subIndex: 2
     text: "你干脆拿去放入藏经阁，供大家一起参阅。"
-    translated: "You might as well put it in the Tripitaka Repository for everyone to study together."
+    translated: "You might as well put it in the Scripture Pavilion for everyone to study together."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -85041,7 +85041,7 @@
   splits:
   - split: 10
     text: "只见余采薇脚下生风，一个雀跃，轻巧落在铁掌帮藏经阁二楼，"
-    translated: "I could see Yu Caiwei landing lightly with a spring, gracefully settling on the second floor of the Iron Palm Gang's scripture hall."
+    translated: "Only to see Yu Caiwei dashing forward, leaping lightly and landing on the second floor of the Iron Palm Gang's Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "随后一脚踢开窗户，翻身入内。"
@@ -85057,7 +85057,7 @@
   - split: 10
     subIndex: 1
     text: "不一会儿，藏经阁内便燃起了熊熊大火。"
-    translated: "Before long, the Tripitaka Repository caught fire, with blazing flames engulfing it."
+    translated: "Before long, the Scripture Pavilion was engulfed in roaring flames."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -85086,7 +85086,7 @@
   - split: 10
     subIndex: 1
     text: "这藏经阁一烧，铁掌帮便元气大伤了。"
-    translated: "With the Zangjingge burned down, the Iron Palm Gang suffered a severe setback."
+    translated: "With the burning of the Scripture Pavilion, the Iron Palm Gang suffered a severe blow to its strength."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -85494,7 +85494,7 @@
   splits:
   - split: 10
     text: "师傅，采薇从铁掌帮藏经阁内夺来了劈金碎玉掌，及一些其它武功秘籍。"
-    translated: "Master, Caimei took the Split Gold Shatter Jade Palm technique and some other martial arts manuals from the Iron Palm Gang's Canon Hall."
+    translated: "Master, Caivei took the Split Gold Crush Jade Palm technique and some other secret martial arts manuals from the Scripture Pavilion of the Iron Palm Gang."
 - raw: ",,,右,,,,,GetSpeReward;59,,好！这劈金碎玉掌原本也是祖师绝学，加上潮起月盈功和无影乱剑，\\n这样本门也算集齐祖师传下来的三门武功了。"
   splits:
   - split: 10
@@ -85511,7 +85511,7 @@
   splits:
   - split: 10
     text: "游年，你将这些秘籍都放入本门藏经阁内。"
-    translated: "Younian, you have placed all these treatises in our sect's library."
+    translated: "Younian, you've placed all these secret manuals in our sect's Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "大家一同参阅，方能知己知彼，百战不殆。"
@@ -85731,7 +85731,7 @@
   - split: 10
     subIndex: 1
     text: "所以这段时间以来，我一直在藏经阁认真参悟。"
-    translated: "So during this time, I have been diligently contemplating in the Scripture Repository."
+    translated: "So during this time, I have been diligently meditating in the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -85739,7 +85739,7 @@
   splits:
   - split: 10
     text: "我说这段时间，沈师兄怎么天天待在藏经阁，"
-    translated: "I said during this time, how come Senior Brother Shen spends his days in the Scripture Repository?"
+    translated: "I said during this time, how could Senior Brother Shen stay in the Scripture Pavilion every day?"
   - split: 10
     subIndex: 1
     text: "都不见下山看戏听曲儿去了，原来是为了此事。"
@@ -86017,7 +86017,7 @@
   - split: 10
     subIndex: 1
     text: "随后便在藏经阁内对着三本秘籍苦苦思索起来。"
-    translated: "He then sat in deep thought within the scripture repository, pondering over three secret manuals."
+    translated: "He then pondered intensely over the three secret manuals in the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -86053,7 +86053,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，你将大家召集到这藏经阁，"
-    translated: "#PlayerName#, you gathered everyone to the Canon Repository."
+    translated: "#PlayerName#, you gathered everyone to the Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "是已经找到了这三本秘籍中所隐藏的秘密？"
@@ -86386,7 +86386,7 @@
   - split: 10
     subIndex: 1
     text: "今天咱们师徒便在这藏经阁内通宵参悟，定要把这梵文贝叶经给拼凑出来！"
-    translated: "Today, let our master‑disciple duo decipher the Sanskrit palm leaves in the Zangjingge through the night and make sure we put together these Buddhist texts!"
+    translated: "Today, let's work through the Scripture Pavilion all night, and we must piece together these Sanskrit palm‑leaf scriptures!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -86394,7 +86394,7 @@
   splits:
   - split: 10
     text: "夜幕降临，月上树梢，平野星垂，虫鸣如缕，仙霞派藏经阁内一派灯火通明，"
-    translated: "As night fell, the moon hung over the treetops, and stars sparkled in the open plain. The chirping of insects was like a delicate thread. In the Zangjingge of the Xianxia Sect, it was brightly lit."
+    translated: "As night fell, the moon rose over the treetops, and stars dotted the plain, their twinkling like whispers of light. Inside the Scripture Pavilion of the Xianxia Sect, the room was brightly lit."
   - split: 10
     subIndex: 1
     text: "掌门姜映泉与一众弟子正伏案奋笔疾书，面前摆满了从三本秘籍中抄录下来的各式残页。"
@@ -86716,7 +86716,7 @@
   - split: 10
     subIndex: 1
     text: "一抹粉色朝霞透过窗框，柔和映照在藏经阁书案上。"
-    translated: "A soft pink dawn shone through the window frame and gently illuminated the scripture shelf in the library."
+    translated: "A streak of pink dawn filtered through the window frame, softly illuminating the Scripture Pavilion's desk."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -87863,7 +87863,7 @@
   - split: 10
     subIndex: 1
     text: "回想当年，#PlayerName#被师傅责骂，向师兄我求教太祖长拳修炼之法的情景，"
-    translated: "Recall the time when #PlayerName# was scolded by Master and came to me as Senior Brother for guidance on practicing the Taizu Changquan,"
+    translated: "Recalling the time when #PlayerName# was scolded by my Master and sought advice from me, Senior Brother, about the cultivation method of the Great Ancestor Long Fist,"
   - split: 10
     subIndex: 2
     text: "历历在目仿佛就在昨日，其实已过去五六年了。"
@@ -87879,7 +87879,7 @@
   - split: 10
     subIndex: 1
     text: "当年我连本门藏经阁在哪儿都找不到，还好有你指点......"
-    translated: "Back then, I couldn't even find the location of our sect's Zangjingge archive hall. Luckily, you showed me the way..."
+    translated: "Back then, I couldn't even find where our sect's Scripture Pavilion was, so it's good you showed me..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -93027,7 +93027,7 @@
   - split: 10
     subIndex: 1
     text: "为师已经放入本门藏经阁中了。"
-    translated: "Master has already placed it in our sect's Zangjingge repository."
+    translated: "The master has already placed it in the Scripture Pavilion of the sect."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -97247,7 +97247,7 @@
   - split: 10
     subIndex: 1
     text: "因此特意从藏经阁内取出一套秘传武功，供各位选择。"
-    translated: "Therefore, I specially retrieved a set of secret martial arts from the Scripture Repository for everyone to choose from."
+    translated: "Therefore, a set of secret martial arts was specially taken from the Scripture Pavilion for you to choose from."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -99603,7 +99603,7 @@
   splits:
   - split: 10
     text: "显然我少林寺藏经阁，便是封存此秘籍的最佳之所！"
-    translated: "Clearly, the Shaolin Temple's Repository Hall is the perfect place to seal away this secret scroll!"
+    translated: "Clearly, the Scripture Pavilion of the Shaolin Temple is the best place to seal away this secret scroll!"
 - raw: ",张青蓬,,左,,,,,,,方丈此言差矣，\\n不论是武功修为还是道德名望，我武当比你少林也是不遑多让。"
   splits:
   - split: 10
@@ -101988,7 +101988,7 @@
   splits:
   - split: 10
     text: "哈哈，想当年连藏经阁都找不到的#$PlayerName#，如今竟成一派之掌门了。"
-    translated: "Haha, back in the day, #$PlayerName# couldn't even find the Zang Jingge library, but now you've become the Head of the Sect."
+    translated: "Haha, back in the day, #$PlayerName# couldn't even find the Scripture Pavilion, and now you've become the Sect Leader of a school of thought."
   - split: 10
     subIndex: 1
     text: "当年送你的那本《御剑要术》，现在也是拿不出手了。"
@@ -102339,7 +102339,7 @@
   - split: 10
     subIndex: 2
     text: "，师傅却一直没跟我们提起过。"
-    translated: "Yet, the Master never mentioned it to us."
+    translated: ", Yet, the Master never mentioned it to us."
   templates:
   - split: 10
     template: "{0}<b>{1}</b>{2}"
@@ -107140,7 +107140,7 @@
   - split: 10
     subIndex: 1
     text: "等巡逻的僧众一走远，我便施展轻功翻进去，咱们到时候在藏经阁汇合！"
-    translated: "Once the patrolling monks are out of sight, I'll use lightness to sneak in. Let's meet up in the Treasure Repository Hall later!"
+    translated: "Once the patrolling monks are far enough away, I'll use Qinggong to get in. Let's meet up at the Scripture Pavilion later!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107170,11 +107170,11 @@
   splits:
   - split: 10
     text: "这儿便是少林寺藏经阁了吗？"
-    translated: "Is this where the Treasure Archive Pavilion of the Shaolin Temple is located?"
+    translated: "Is this the Scripture Pavilion of the Shaolin Temple?"
   - split: 10
     subIndex: 1
     text: "看着确实挺气派的，比起我们峨眉派藏经阁还要高大宽敞些。"
-    translated: "It does indeed look impressive. This hall is even taller and more spacious than the scripture hall of our Emei Sect."
+    translated: "It does look quite impressive, and it's even taller and more spacious than our Emei Sect's Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107211,7 +107211,7 @@
   splits:
   - split: 10
     text: "老衲法号“如是”，乃是这少林寺藏经阁的看守。"
-    translated: "I am Venerable Rushi, the guardian of the Buddhist Canon Hall at Shaolin Temple."
+    translated: "I am Venerable Thus Come, and I am the custodian of the Scripture Pavilion at Shaolin Temple."
   - split: 10
     subIndex: 1
     text: "每日都在此处扫地掸灰，修禅养性。"
@@ -107267,7 +107267,7 @@
   - split: 10
     subIndex: 1
     text: "老衲在这藏经阁内枯坐三十年，早已放下分别之心。"
-    translated: "I sat in this Repository of Scriptures for thirty years and long ago let go of discriminative thoughts."
+    translated: "I have sat in this Scripture Pavilion for thirty years, long since letting go of such distinctions."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107303,7 +107303,7 @@
   - split: 10
     subIndex: 1
     text: "只是不知来本派藏经阁内，又有何贵干呢？"
-    translated: "I just wonder what important business brings you to the Daoist Canon Hall of our sect?"
+    translated: "I just wonder what important business brings you to the Scripture Pavilion of our sect?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107323,7 +107323,7 @@
   splits:
   - split: 10
     text: "哎，这藏经阁内经书，非少林寺弟子不得参详，"
-    translated: "Ah, the scriptures within this Pagoda of Scripture can only be studied by Shaolin Temple disciples."
+    translated: "Ah, the scriptures within the Scripture Pavilion are not to be studied by anyone other than Shaolin Temple disciples."
   - split: 10
     subIndex: 1
     text: "还望云施主莫要随手翻阅。"
@@ -107339,7 +107339,7 @@
   - split: 10
     subIndex: 1
     text: "这藏经阁内的典籍不让外人翻阅，又如何普度众生呢？"
-    translated: "These sacred texts within the Zang Jingge are not accessible to outsiders, how then can they benefit all beings?"
+    translated: "How can the scriptures in the Scripture Pavilion benefit all living beings if they are not accessible to outsiders?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107395,7 +107395,7 @@
   - split: 10
     subIndex: 1
     text: "以施主的天资，参禅十年之后，自可参阅这藏经阁内大部分经书典籍。"
-    translated: "With your talent as a benefactor, you can review most of the scriptures in the Repository Pavilion after ten years of studying Zen."
+    translated: "Benefactor with your talent, you can review most of the scriptures in the Scripture Pavilion ten years after studying Zen."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107575,7 +107575,7 @@
   - split: 10
     subIndex: 1
     text: "再打下去，这藏经阁内的经书可要遭殃了......"
-    translated: "Keep fighting, and all the scriptures in this scripture repository are going to suffer..."
+    translated: "If they keep fighting, the scriptures in the Scripture Pavilion are going to suffer..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107690,7 +107690,7 @@
   splits:
   - split: 10
     text: "既然你我有缘，此后一个月，你便每日来这藏经阁内，"
-    translated: "Since our paths have crossed, come to the Library of Scriptures every day for the next month."
+    translated: "Since our paths have crossed, you shall visit the Scripture Pavilion every day for the next month."
   - split: 10
     subIndex: 1
     text: "我自会将少林禅学之精要传授于你。"
@@ -107748,7 +107748,7 @@
   splits:
   - split: 10
     text: "不过没想到少林寺藏经阁内，竟还有这样一位高深莫测的老僧，"
-    translated: "But I never expected there to be a mystifying old monk in the scripture hall of Shaolin Temple."
+    translated: "But I never expected there to be a mystifying old monk in the Scripture Pavilion of Shaolin Temple."
   - split: 10
     subIndex: 1
     text: "似乎在江湖中没听过此人的名号，也不知是何来历。"
@@ -107776,7 +107776,7 @@
   - split: 10
     subIndex: 1
     text: "怎么，之前少林藏经阁内那位高僧讲经，你已经全听完了？"
-    translated: "How could that be? Didn't you listen to all the abbot's lectures in the Shaolin Tripitaka Hall before?"
+    translated: "How could that be? You've already listened to all of the high monk's sermons in the Shaolin Scripture Pavilion?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -107946,7 +107946,7 @@
   - split: 10
     subIndex: 1
     text: "在高手手中，便是太祖长拳也能发挥出惊天之威力。"
-    translated: "In skilled hands, Taizong Changquan can also unleash shocking power."
+    translated: "In the hands of a master, even the Great Ancestor Long Fist can unleash breathtaking power."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -140662,7 +140662,7 @@
   - split: 10
     subIndex: 3
     text: "，老朽随后便来碰头。"
-    translated: ",I will meet you shortly"
+    translated: ", I will meet you shortly"
   templates:
   - split: 10
     template: "{0}\\n{1}<b>{2}</b>{3}"
@@ -179290,7 +179290,7 @@
   splits:
   - split: 10
     text: "后来又潜入少林寺藏经阁，和里面的老和尚打得天昏地暗......"
-    translated: "Later, he sneaked into the Shaolin Temple's Zang Jing ge and beat up the old monks inside until the sky turned dark..."
+    translated: "Later, he sneaked into the Scripture Pavilion of the Shaolin Temple and fought the old monks until the sky turned dark and the earth shook...."
   - split: 10
     subIndex: 1
     text: "你这光荣事迹，真是三天三夜都说不完呢......"
@@ -179470,7 +179470,7 @@
   splits:
   - split: 10
     text: "还能有假？她怕被我制住，如今站在藏经阁窗台上不愿下来，"
-    translated: "There can be no fake. Fearing that I might restrain her, she now stands on the platform outside the Scripture Repository Pavilion and refuses to come down."
+    translated: "No more pretense. She fears I might restrain her, so she now stands on the Scripture Pavilion's window ledge and refuses to come down."
   - split: 10
     subIndex: 1
     text: "准备见你最后一面之后就跳楼！"
@@ -179482,7 +179482,7 @@
   splits:
   - split: 10
     text: "听闻此言，你随小诸葛赶忙一路跑到藏经阁上，"
-    translated: "Hearing this, you hastily ran to the Library Tower with Xiao Zhuge."
+    translated: "Hearing this, you hastily ran all the way to the Scripture Pavilion with Little Zhuozi."
   - split: 10
     subIndex: 1
     text: "只见姜婉果真站在窗口，双眼通红，神情决绝，"
@@ -180284,7 +180284,7 @@
   - split: 10
     subIndex: 1
     text: "一路抵达了少林寺重地藏经阁。"
-    translated: "The journey brought us to the inner sanctum of the Shaolin Temple, the Treasures Sutra Pavilion."
+    translated: "You have arrived at the Shaolin Temple's Scripture Pavilion, a vital location."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -180292,7 +180292,7 @@
   splits:
   - split: 10
     text: "这儿是......藏经阁？"
-    translated: "This is... the Repository Tower?"
+    translated: "Here is... the Scripture Pavilion?"
   - split: 10
     subIndex: 1
     text: "这两个家伙莫非是为了窃取少林秘籍而来？"
@@ -180304,11 +180304,11 @@
   splits:
   - split: 10
     text: "见二人闪身进入藏经阁内，你便也悄悄跟了进去。"
-    translated: "Seeing the two slip into the Library of Scrolls, you quietly followed in."
+    translated: "Seeing the two people dart into the Scripture Pavilion, you slip in after them quietly."
   - split: 10
     subIndex: 1
     text: "只见藏经阁内灯影摇曳，一片寂静，只有一名老僧正在整理书架。"
-    translated: "Only the flickering lampshadows and silence filled the scripture hall, with an old monk methodically arranging the bookshelves."
+    translated: "In the Scripture Pavilion, the lights flickered, casting a quiet scene with an old monk organizing the bookshelves."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -180328,7 +180328,7 @@
   splits:
   - split: 10
     text: "哼，堂堂少林寺藏经阁，中原佛门武学圣地，我还以为是什么卧虎藏龙之处。"
-    translated: "Hmph. The Shaolin Temple's Tripitaka Pavilion, a holy land of martial arts for the Buddhist sect in Central Plains‑I thought it was known for hiding dragons and tigers."
+    translated: "Hmph, the Scripture Pavilion of the Shaolin Temple, a holy land of martial arts and Buddhist teachings in Central China. I thought it would be a place hidden with tigers and dragons."
   - split: 10
     subIndex: 1
     text: "没想到只有一个老和尚看守，真是浪费功夫。"
@@ -180357,7 +180357,7 @@
   splits:
   - split: 10
     text: "无妨！你既是藏经阁看守，应该知道数年前第二次泰岳大典，"
-    translated: "No problem! As the guardian of the Scripture Repository, you should know about the second Taiyue Ceremony several years ago,"
+    translated: "No problem! As the guard of the Scripture Pavilion, you should know about the Second Taiyue Grand Ceremony a few years ago,"
   - split: 10
     subIndex: 1
     text: "贵派的空闻方丈抢走了老子的一部分秘籍吧！"
@@ -180398,7 +180398,7 @@
   splits:
   - split: 10
     text: "其中一份，就被空闻方丈带回少林，想必就收在这藏经阁内。"
-    translated: "One of them was taken back to the Shaolin Temple by Venerable Kongwen and must be kept in the Archive Pavilion."
+    translated: "One of them was taken back to Shaolin by Venerable Kongwen, and I presume it is kept in the Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "大师既然身为出家人，自当将这不义之财物归原主！"
@@ -180410,7 +180410,7 @@
   splits:
   - split: 10
     text: "阿弥陀佛，这份归藏功确实正在这藏经阁内。"
-    translated: "Amituofo. This Guizang Skill is indeed found within this Depository of Scriptures."
+    translated: "Amituofo. This Guichang Skill is indeed practiced within the Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "但本寺争夺此功并非觊觎其威力，而是为了避免其落于奸邪之手。"
@@ -180525,7 +180525,7 @@
   splits:
   - split: 10
     text: "好功夫！难怪这偌大的藏经阁只有大师一人看守，"
-    translated: "Great skill! No wonder this vast scripture hall is guarded by only one master."
+    translated: "Good kung fu! No wonder the Scripture Pavilion is guarded by only one master."
   - split: 10
     subIndex: 1
     text: "原来是艺高人胆大！"
@@ -180565,7 +180565,7 @@
   - split: 10
     subIndex: 1
     text: "只见少林空闻方丈率领着大批僧众，正匆忙向藏经阁赶来。"
-    translated: "Only to see the Abbot of Shaolin Kongwen leading a large group of monks rushing over towards the Repository Pavilion."
+    translated: "The Shaolin Abbot Kongwen led a large group of monks rushing towards the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -180599,7 +180599,7 @@
   - split: 10
     subIndex: 1
     text: "向藏经阁外众僧迎面走去。"
-    translated: "Walking towards the monks outside the Scripture Repository."
+    translated: "Approaching the Scripture Pavilion, I meet a group of monks facing me."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -180607,7 +180607,7 @@
   splits:
   - split: 10
     text: "如是师伯，听说藏经阁内有骚乱打斗之声，"
-    translated: "If it's Uncle Senior Master, I heard there's chaos and fighting in the Treasure Hall."
+    translated: "If Master Senior Brother, I heard there was chaos and fighting in the Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "我怀疑有奸贼趁着寺内火起，想要前来盗宝，"
@@ -180663,7 +180663,7 @@
   - split: 10
     subIndex: 1
     text: "这藏经阁有师伯把守，自是万无一失。"
-    translated: "This repository is guarded by senior masters, so it is naturally foolproof."
+    translated: "This Scripture Pavilion is guarded by Senior Uncle, so it is naturally foolproof."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -181518,7 +181518,7 @@
   splits:
   - split: 10
     text: "哼哼，还得多谢当日，那少林藏经阁内老僧之提点。"
-    translated: "Hmph. I should thank the old monk from the Shaolin Sutra Repository for his guidance back then."
+    translated: "Hmph, I still need to thank the old monk from the Scripture Pavilion of the Shaolin Temple for his guidance back then."
   - split: 10
     subIndex: 1
     text: "老子如今欲平定天下，仅靠武力征伐可是远远不够......"
@@ -183284,7 +183284,7 @@
   - split: 10
     subIndex: 3
     text: "，分管四方事务。"
-    translated: ",Oversee affairs in all four directions"
+    translated: ", Oversee affairs in all four directions"
   templates:
   - split: 10
     template: "{0}\\n{1}<b>{2}</b>{3}"
@@ -187183,7 +187183,7 @@
   splits:
   - split: 10
     text: "方丈，老子只是想去贵寺藏经阁内，向里面的老和尚问上两句话。"
-    translated: "Abbot, I merely wish to ask an elder monk a couple of questions in the sutra repository of your temple."
+    translated: "Abbot, I merely wish to ask an old monk a couple of questions in the Scripture Pavilion of your temple."
   - split: 10
     subIndex: 1
     text: "问完就走，这都不行吗！"
@@ -187195,7 +187195,7 @@
   splits:
   - split: 10
     text: "哼！藏经阁乃本寺重地，岂容你们这些邪魔外道随意进出？"
-    translated: "Hmph! The Tripitaka Tower is a sacred place of this temple; how dare you, these heretics and outsiders, enter and exit at will?"
+    translated: "Hmph! The Scripture Pavilion is a sacred place of this temple; how dare you common heretics and outsiders enter and exit at will?"
   - split: 10
     subIndex: 1
     text: "武殿主，老衲看你是想盗取阁内的秘籍吧！"
@@ -187329,7 +187329,7 @@
   - split: 10
     subIndex: 1
     text: "藏经阁若无人看守，岂不是......"
-    translated: "If the Zangjingge is not guarded by anyone, isn't it... problematic?"
+    translated: "If the Scripture Pavilion is unattended, wouldn't it be..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -187349,7 +187349,7 @@
   splits:
   - split: 10
     text: "您这么多年以来，从未离开过藏经阁。"
-    translated: "You have never left the Repository Tower all these years."
+    translated: "You have never left the Scripture Pavilion all these years."
   - split: 10
     subIndex: 1
     text: "怎么今天突然出关，也不事先通知一声......"
@@ -187361,11 +187361,11 @@
   splits:
   - split: 10
     text: "呵呵呵呵，空闻你身在藏经阁内，心却在藏经阁外。"
-    translated: "Haha, even though Kong Wen is inside the Sutra Repository Pavilion, his heart lies outside it."
+    translated: "Haha, although Kong Wen is in the Scripture Pavilion, his heart is outside."
   - split: 10
     subIndex: 1
     text: "老僧我身在藏经阁外，心却在藏经阁内，有什么分别？"
-    translated: "As an old monk, I stand outside the Repository Tower, yet my heart resides within. What difference does it make?"
+    translated: "As an old monk, I may stand outside the Scripture Pavilion, yet my heart resides within‑what difference does it make?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -187433,7 +187433,7 @@
   splits:
   - split: 10
     text: "前日在藏经阁中，"
-    translated: "On the day before, in the Repository Pavilion,"
+    translated: "On the previous day in the Scripture Pavilion,"
   - split: 10
     subIndex: 1
     text: "老子一见到大师你，便觉得颇为眼熟。"
@@ -187477,7 +187477,7 @@
   - split: 10
     subIndex: 2
     text: "，应当肩负平定天下之使命。"
-    translated: ",Should shoulder the mission of stabilizing the world."
+    translated: ", Should shoulder the mission of stabilizing the world."
   - split: 10
     subIndex: 3
     text: "哼，老子本对这种鬼神之说不屑一顾，不过胞兄却是深信不疑。"
@@ -187773,7 +187773,7 @@
   splits:
   - split: 10
     text: "所以贫僧这些年来，一直在藏经阁内苦修，"
-    translated: "So these years, I have been diligently practicing in the Scripture Repository."
+    translated: "So these past years, the monk has been diligently practicing in the Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "为的正是一边面壁思过，一边参悟此番因果之间的禅机。"
@@ -187837,7 +187837,7 @@
   - split: 10
     subIndex: 1
     text: "在藏经阁内闭关思过，不问世事了。"
-    translated: "Sequestering myself in the Repository Pavilion to meditate and reflect on my wrongdoings, I shall no longer concern myself with worldly affairs."
+    translated: "Sequestered in the Scripture Pavilion to meditate and reflect, I shall no longer concern myself with worldly affairs."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -187982,7 +187982,7 @@
   splits:
   - split: 10
     text: "阿弥陀佛，善哉善哉。贫僧还需回藏经阁内继续修行，"
-    translated: "Amituofo. Well done, well done. I still need to return to the Tripitaka Repository for more practice."
+    translated: "Amituofo. Well done, well done. I still need to return to the Scripture Pavilion to continue my cultivation."
   - split: 10
     subIndex: 1
     text: "望诸位施主佛光普照，一路顺遂，告辞！"
@@ -203332,7 +203332,7 @@
   splits:
   - split: 10
     text: "此事晚辈倒也不清楚，不过据少林藏经阁内高僧所言，"
-    translated: "This matter is unclear to me as well, but according to what the senior monks in the Shaolin Tripitaka Library say,"
+    translated: "This matter, the junior is not quite clear on, but according to what the high monks in the Shaolin Scripture Pavilion said,"
   - split: 10
     subIndex: 1
     text: "柴荣，赵胤宗，白云天三人皆为龙胤之人，"
@@ -251766,7 +251766,7 @@
   - split: 10
     subIndex: 3
     text: "，他手上或许有这个“排行榜”。"
-    translated: ",He might have this ranking list"
+    translated: ", He might have this ranking list"
   templates:
   - split: 10
     template: "{0}\\n{1}<b>{2}</b>{3}"
@@ -256233,7 +256233,7 @@
   - split: 10
     subIndex: 1
     text: "想当年#PlayerName#初出茅庐之时，可是连藏经阁和练武场在哪儿都找不着呢。"
-    translated: "Back in the day when #PlayerName# first stepped out of seclusion, they couldn't even find where the Treasure Repository and Training Grounds were."
+    translated: "Back in the day when #PlayerName# first stepped out, they couldn't even find the Scripture Pavilion or the Training Grounds."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -263294,7 +263294,7 @@
   - split: 10
     subIndex: 1
     text: "要积累理论经验需要在藏经阁阅读秘籍。"
-    translated: "To accumulate theoretical experience, you need to read the ancient texts in the Archive Pavilion."
+    translated: "To accumulate theoretical experience, you need to read the secrets in the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -272223,7 +272223,7 @@
   - split: 10
     subIndex: 1
     text: "不就是唐门藏经阁看守太严，一直没机会去偷秘籍么......"
-    translated: "Isn't it just that the Tang Clan Repository Guard is too strict, and we never had a chance to steal the secret scrolls..."
+    translated: "Isn't it just that the Scripture Pavilion of the Tang Clan is guarded too strictly, and we've never had an opportunity to steal the secret scrolls?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -272247,7 +272247,7 @@
   - split: 10
     subIndex: 1
     text: "那咱去藏经阁“借阅”一番，也算名正言顺。"
-    translated: "Let's go to the Tripitaka Archive for a borrowed reading, and that would be above board."
+    translated: "Let's go to the Scripture Pavilion borrow some texts; that way, it'll be aboveboard."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -287991,7 +287991,7 @@
   - split: 10
     subIndex: 1
     text: "今天难得，您老人家怎么从藏经阁出来了？"
-    translated: "Today's quite rare; how did you manage to leave the Scripture Repository?"
+    translated: "Today, I must say, how come you, venerable one, have emerged from the Scripture Pavilion?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -288007,7 +288007,7 @@
   - split: 10
     subIndex: 2
     text: "老衲在藏经阁内都听到了。"
-    translated: "I heard it even within the Scripture Repository Hall."
+    translated: "I heard it within the Scripture Pavilion"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -288229,7 +288229,7 @@
   - split: 10
     subIndex: 1
     text: "师伯我，不过是藏经阁内一扫地老头罢了。"
-    translated: "Senior Apprentice Brother, I'm just an old man who sweeps the scriptures hall."
+    translated: "Sifu, I'm just an old man who sweeps in the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -288245,7 +288245,7 @@
   - split: 10
     subIndex: 2
     text: "我该回藏经阁了。"
-    translated: "I should return to the Scripture Repository"
+    translated: "I should head back to the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"

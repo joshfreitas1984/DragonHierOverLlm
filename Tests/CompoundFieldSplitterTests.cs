@@ -311,5 +311,41 @@ public class CompoundFieldSplitterTests
         Assert.Equal(["我", "修为远胜", "又何必班门弄斧？"], fragments);
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
+
+    [Fact(DisplayName = "Reconstruct inserts a word-boundary space between literal template text and an adjacent translated fragment, skipping past HTML tags")]
+    public void ReconstructInsertsWordBoundarySpaceAroundTranslatedFragmentAcrossTags()
+    {
+        var (template, fragments) = CompoundFieldSplitter.Decompose("和<b>外功</b>不同，以太祖长拳为例");
+
+        var translated = fragments.Select(f => f switch
+        {
+            "和" => "And",
+            "外功" => "External Skill",
+            "不同，以太祖长拳为例" => ", For example this Taijiquan",
+            _ => f,
+        }).ToList();
+
+        Assert.Equal(
+            "And <b>External Skill</b>, For example this Taijiquan",
+            CompoundFieldSplitter.Reconstruct(template, translated));
+    }
+
+    [Fact(DisplayName = "Reconstruct does not insert a word-boundary space around a literal '\\n' escape sequence")]
+    public void ReconstructDoesNotInsertSpaceAroundLiteralNewlineEscape()
+    {
+        var original = "门派的占领区域达到上限后，\\n就无法占领新的区域";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        var translated = fragments.Select(f => f switch
+        {
+            "门派的占领区域达到上限后，" => "Once the sect's occupied area reaches the limit,",
+            "就无法占领新的区域" => "no new area can be occupied",
+            _ => f,
+        }).ToList();
+
+        Assert.Equal(
+            "Once the sect's occupied area reaches the limit,\\nno new area can be occupied",
+            CompoundFieldSplitter.Reconstruct(template, translated));
+    }
 }
 

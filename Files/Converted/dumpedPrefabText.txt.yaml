@@ -47,7 +47,7 @@
     translated: "GreenBean,"
   - subIndex: 6
     text: "，云起龙骧，小云，谦谦，黄国，狗狗"
-    translated: ",Rising Clouds and Ascending Dragons, Xiao Yun, Humble Hum, Yellow State, Doggies"
+    translated: ", Rising Clouds and Ascending Dragons, Xiao Yun, Humble Hum, Yellow State, Doggies"
   - subIndex: 7
     text: "测试"
     translated: "Test"
@@ -539,7 +539,7 @@
     translated: "Enabling cheat mode will prevent achievement unlocks and may cause unknown issues."
   - subIndex: 7
     text: "，请谨慎使用。"
-    translated: ",Please use this cautiously"
+    translated: ", Please use this cautiously"
   templates:
   - template: "♦{0}ctrl+~{1}/{2}\\n♦{3}/{4}/{5}\\n<color=red>♦{6}bug{7}</color>"
 - raw: "♦弟子会根据方针设定的优先级自行安排行动。\\n♦优先级最高5，最低0。\\n♦按住左Shift可将优先级直接设置为5。\\n♦按住左Ctrl可将优先级直接设置为0。"
@@ -593,10 +593,10 @@
     translated: "Allow learning any new martial arts technique"
   - subIndex: 3
     text: "仅藏经阁"
-    translated: "Only in the Tripitaka Treasury Hall"
+    translated: "Only Scripture Pavilion"
   - subIndex: 4
     text: "只允许学习藏经阁内新武功"
-    translated: "Only new martial arts from the Tripitaka Pavilion are allowed to be learned."
+    translated: "Only new martial arts from the Scripture Pavilion may be studied."
   - subIndex: 5
     text: "禁止"
     translated: "No permission"
@@ -656,7 +656,7 @@
     translated: "Monthly production limit"
   - subIndex: 4
     text: "，建造消耗-5%，建造速度"
-    translated: ",Construction consumes ‑5% resources, construction speed"
+    translated: ", Construction consumes ‑5% resources, construction speed"
   - subIndex: 5
     text: "加快科研"
     translated: "Speed up research and development"
@@ -671,7 +671,7 @@
     translated: "Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level"
   - subIndex: 9
     text: "，招募消耗-5%，月俸消耗"
-    translated: ",Recruitment costs ‑5% consumed, monthly salary costs consumed"
+    translated: ", Recruitment costs ‑5% consumed, monthly salary costs consumed"
   templates:
   - template: "♦{0}AI{1}：\\n—{2}：{3}+{4}+5%\\n—{5}：{6}+5%\\n—{7}：{8}+{9}-2.5%"
 - raw: "♦消毒可以去除物品所带毒性。"
@@ -878,7 +878,7 @@
 - raw: "♦藏经阁秘籍可提升门派所有弟子修炼该武学的速度。\\n♦秘籍越稀有加成越高。\\n(此加成对玩家无效)"
   splits:
   - text: "藏经阁秘籍可提升门派所有弟子修炼该武学的速度。"
-    translated: "The scriptures in the Scripture Depository can enhance the speed at which all disciples of the Sect practice this martial art."
+    translated: "The Scripture Pavilion's secret texts can increase the speed at which all disciples in the sect practice this martial art."
   - subIndex: 1
     text: "秘籍越稀有加成越高。"
     translated: "The more rare the secret technique, the higher the bonus."
@@ -1323,7 +1323,7 @@
 - raw: "仅藏经阁"
   splits:
   - text: "仅藏经阁"
-    translated: "Only in the Tripitaka Treasury Hall"
+    translated: "Only Scripture Pavilion"
 - raw: "仅限非剧情信件"
   splits:
   - text: "仅限非剧情信件"
@@ -5962,7 +5962,7 @@
     translated: "Boost the Sect's Status"
   - subIndex: 3
     text: "藏经阁阅读新秘籍"
-    translated: "Reading New Scriptures in the Scripture Repository"
+    translated: "Scripture Pavilion reads new secret manuals"
   - subIndex: 4
     text: "门派仓库兑换物品"
     translated: "Sect warehouse item exchange"

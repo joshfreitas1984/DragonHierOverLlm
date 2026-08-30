@@ -80,7 +80,7 @@
 - raw: "放在藏经阁内的秘籍会根据品质，\\n提升全门派修习该武学的速度。"
   splits:
   - text: "放在藏经阁内的秘籍会根据品质，"
-    translated: "The secret scrolls placed in the Treasury Pavilion will be ranked according to their quality,"
+    translated: "Placed in the Scripture Pavilion, the manuals will be ranked according to their quality,"
   - subIndex: 1
     text: "提升全门派修习该武学的速度。"
     translated: "Increase the speed at which all sects practice this martial art."

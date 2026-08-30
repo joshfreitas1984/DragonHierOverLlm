@@ -102,3 +102,11 @@
   rawTraditional: 待京城風波徹底平息後，
   result: Once the turmoil in the capital has completely subsided,
   direct: After the disturbances in the capital have completely calmed down,
+# - raw: "师"
+#   result: "Ma"
+#   only: 
+#     - "PlotData.csv"
+# - raw: "师"
+#   result: "Senior"
+#   only: 
+#     - "dynamicStringsFromColumns.txt"

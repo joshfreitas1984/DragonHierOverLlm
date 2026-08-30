@@ -177,7 +177,7 @@
   - split: 7
     subIndex: 1
     text: "阅读藏经阁秘籍获取理论经验"
-    translated: "Read the scriptures in the Tripitaka Pavilion to gain theoretical experience."
+    translated: "Read the scriptures in the Scripture Pavilion to gain theoretical experience."
   - split: 7
     subIndex: 2
     text: "我"
@@ -241,7 +241,7 @@
   - split: 7
     subIndex: 17
     text: "管理藏经阁内藏书"
-    translated: "Manage the books in the Repository Archive"
+    translated: "Manage the books in the Scripture Pavilion"
   - split: 7
     subIndex: 18
     text: "我"
@@ -257,7 +257,7 @@
   - split: 7
     subIndex: 21
     text: "偷窃藏经阁内藏书"
-    translated: "Stealing books from the Cangjingge Cangjingge is a repository of scriptures."
+    translated: "Stealing books from the Scripture Pavilion"
   - split: 7
     subIndex: 22
     text: "非我"

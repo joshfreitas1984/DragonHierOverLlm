@@ -953,7 +953,7 @@
     translated: "#PlayerName# has already taken a master"
   - subIndex: 1
     text: "，江湖规矩一徒不拜二师，你还是请回吧！"
-    translated: ",Jianghu rules forbid a disciple from serving two masters; you had best return!"
+    translated: ", Jianghu rules forbid a disciple from serving two masters; you had best return!"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "#PlayerName#当真要挑战我#$TargetInteractName#吗？"
@@ -1363,7 +1363,7 @@
     translated: "Recruit Subordinate Sects"
   - subIndex: 3
     text: "，需消耗门派威望"
-    translated: ",Need to consume Sect Prestige"
+    translated: ", Need to consume Sect Prestige"
   - subIndex: 4
     text: "点"
     translated: "Click"
@@ -1749,7 +1749,7 @@
     translated: "Having received a recommendation today, I will join from now on."
   - subIndex: 4
     text: "，以效犬马之劳！"
-    translated: ",To serve with zeal!"
+    translated: ", To serve with zeal!"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}\n{3}⟦1⟧{4}"
 - raw: "#PlayerName#真是贵人多忘事呐。\n我本月才刚刚传授过你武功，还需积累一些新的心得才是。"
@@ -2324,7 +2324,7 @@
     translated: "(This #SourceInteractName# has never gotten along with me..."
   - subIndex: 2
     text: "，这出锤用上"
-    translated: ",Use this hammer"
+    translated: ", Use this hammer"
   - subIndex: 3
     text: "成力气便是。）"
     translated: "It is the essence energy)"
@@ -2339,7 +2339,7 @@
     translated: "(This #SourceInteractName# has never gotten along with me..."
   - subIndex: 2
     text: "，这腿脚用上"
-    translated: ",Put those legs to use"
+    translated: ", Put those legs to use"
   - subIndex: 3
     text: "成功力便是。）"
     translated: "Success lies in that)"
@@ -2617,7 +2617,7 @@
     translated: "#SourceInteractName#, you accumulated a total of merit points last year."
   - subIndex: 1
     text: "，乃是本门功劳第一。"
-    translated: ",It is the top achievement of this sect."
+    translated: ", It is the top achievement of this sect."
   - subIndex: 2
     text: "这本#PlotInteractItemName#秘籍是为师去年偶然所得，你拿去好好参悟吧。"
     translated: "This scroll, #PlotInteractItemName#, was a chance discovery of my teacher last year. Take it and contemplate it carefully."
@@ -2629,7 +2629,7 @@
     translated: "#SourceInteractName#, you accumulated a total of merit points last year."
   - subIndex: 1
     text: "，乃是本门功劳第一。"
-    translated: ",It is the top achievement of this sect."
+    translated: ", It is the top achievement of this sect."
   - subIndex: 2
     text: "这本#PlotInteractItemName#秘籍是掌门我去年偶然所得，你拿去好好参悟吧。"
     translated: "This #PlotInteractItemName# manual is from last year when I, the Sect Leader, happened to obtain it. Take it and ponder it well."
@@ -2776,7 +2776,7 @@
     translated: "Now, I, Sect Leader, have no choice but to expel them."
   - subIndex: 2
     text: "，望你日后能在江湖中自己闯出一片天地。"
-    translated: ",I hope you can carve out your own territory in the Jianghu someday."
+    translated: ", I hope you can carve out your own territory in the Jianghu someday."
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "#TargetInteractName#你为本门尽忠职守，可谓功勋卓著，\n本掌门向来唯才是举，赏罚分明，今日就特此晋升你为本门{0}。"
@@ -2853,7 +2853,7 @@
     translated: "Current Arena Battle Success Rate"
   - subIndex: 3
     text: "，预计增加恶名"
-    translated: ",Expected increase in notoriety"
+    translated: ", Expected increase in notoriety"
   - subIndex: 4
     text: "点。"
     translated: "Dot"
@@ -2874,7 +2874,7 @@
     translated: "Current strategy success rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ",Expected increase in notoriety"
+    translated: ", Expected increase in notoriety"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -2895,7 +2895,7 @@
     translated: "Current grapple success rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ",Expected increase in notoriety"
+    translated: ", Expected increase in notoriety"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -2918,7 +2918,7 @@
     translated: "Want to take this from me?"
   - subIndex: 2
     text: "，只怕还得好好修炼才行。"
-    translated: ",We probably need to train a lot more."
+    translated: ", We probably need to train a lot more."
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "#TargetInteractName#将此前{0}之遭遇向你娓娓道来......"
@@ -4155,7 +4155,7 @@
     translated: "Is"
   - subIndex: 1
     text: "，如今我已修得"
-    translated: ",Now I have attained"
+    translated: ", Now I have attained"
   - subIndex: 2
     text: "重功力，"
     translated: "Build strength"
@@ -4197,7 +4197,7 @@
     translated: "Add new Sect functionality"
   - subIndex: 3
     text: "藏经阁"
-    translated: "Temple Scriptures Pavilion"
+    translated: "Scripture Pavilion"
   - subIndex: 4
     text: "编纂秘籍"
     translated: "Compile the secret scrolls"
@@ -4293,13 +4293,13 @@
     translated: "Add new Sect functionality"
   - subIndex: 3
     text: "藏经阁"
-    translated: "Temple Scriptures Pavilion"
+    translated: "Scripture Pavilion"
   - subIndex: 4
     text: "管理藏书"
     translated: "Manage the library"
   - subIndex: 5
     text: "调整藏经阁"
-    translated: "Adjust the Tripitaka Archive"
+    translated: "Adjust the Scripture Pavilion"
   - subIndex: 6
     text: "仓库"
     translated: "Warehouse"
@@ -4413,7 +4413,7 @@
     translated: "Raise the sect's status through the disciple's position."
   - subIndex: 4
     text: "提升门派地位可在藏经阁阅读更高级秘籍，并解锁更多门派功能。"
-    translated: "Boosting your sect's status allows you to read more advanced scriptures in the Scripture Repository, and unlocks additional sect features."
+    translated: "Boosting your Sect's status allows you to read more advanced texts in the Scripture Pavilion and unlocks additional Sect features."
   templates:
   - template: "<b>{0}</b>\n{1}\n<i><color=#696969>♦{2}-{3}\n♦{4}</color></i>"
 - raw: "<b>每个月都需参加门派会议</b>\n获得60%门派加成效果\n<i><color=#696969>新增门派功能：\n♦(正厅)门派委托：领取门派委托\n♦(祠堂)鉴定：主动鉴定珍宝\n♦(仓库)门派金库：捐献银两\n♦制作功能：精烩/炼药/用毒</color></i>"
@@ -5373,7 +5373,7 @@
 - raw: "{0}<b>{1}</b>{2}，买卖价格{3}。"
   splits:
   - text: "，买卖价格"
-    translated: ",Buy‑sell price"
+    translated: ", Buy‑sell price"
   templates:
   - template: "⟦0⟧<b>⟦1⟧</b>⟦2⟧{0}⟦3⟧。"
 - raw: "{0}<b>作恶导致禁用{1}个月</b></color>"
@@ -5598,7 +5598,7 @@
     translated: "Warehouse purchased"
   - subIndex: 2
     text: "，花费银两"
-    translated: ",Spend silver coins"
+    translated: ", Spend silver coins"
   templates:
   - template: "⟦0⟧{0}⟦3⟧{1}⟦1⟧{2}⟦2⟧"
 - raw: "{0}仓库添加了 {1}"
@@ -5724,7 +5724,7 @@
     translated: "Sect"
   - subIndex: 1
     text: "，换取门派银钱"
-    translated: ",Exchange for Sect Silver"
+    translated: ", Exchange for Sect Silver"
   - subIndex: 2
     text: "两。"
     translated: "Two"
@@ -5787,7 +5787,7 @@
     translated: "Created"
   - subIndex: 1
     text: "，由于门派仓库已满只得放入行囊"
-    translated: ",Since the sect's warehouse is full, it can only be placed in the backpack."
+    translated: ", Since the sect's warehouse is full, it can only be placed in the backpack."
   - subIndex: 2
     text: "消耗"
     translated: "Consume"
@@ -5835,7 +5835,7 @@
     translated: "Good fortune smiles on the virtuous"
   - subIndex: 1
     text: "，学会了武功"
-    translated: ",Learned martial arts"
+    translated: ", Learned martial arts"
   templates:
   - template: "⟦0⟧{0}⟦2⟧{1}⟦1⟧。"
 - raw: "{0}吉人天相，寻得前朝皇家宝库，获得了{1}等诸多珍宝。"
@@ -5901,7 +5901,7 @@
     translated: "Warehouse donated"
   - subIndex: 2
     text: "，获取功绩"
-    translated: ",Earn merits"
+    translated: ", Earn merits"
   templates:
   - template: "⟦0⟧{0}⟦3⟧{1}⟦1⟧{2}⟦2⟧"
 - raw: "{0}向来秉持{1}之道，{4}。\n我身为{2}，自是应当{3}。"
@@ -5916,7 +5916,7 @@
     translated: "I being"
   - subIndex: 3
     text: "，自是应当"
-    translated: ",This should then be the case"
+    translated: ", This should then be the case"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦4⟧。\n{2}⟦2⟧{3}⟦3⟧。"
 - raw: "{0}向猎户了解了周边信息"
@@ -6075,7 +6075,7 @@
     translated: "Oh"
   - subIndex: 1
     text: "，快多吃些草料，等会咱还要继续赶路。"
-    translated: ",Hurry up and eat more hay. We still have to continue our journey later."
+    translated: ", Hurry up and eat more hay. We still have to continue our journey later."
   templates:
   - template: "⟦0⟧{0}⟦0⟧{1}"
 - raw: "{0}周边"
@@ -6390,7 +6390,7 @@
     translated: "Name, silver dollars"
   - subIndex: 4
     text: "，声望"
-    translated: ",Reputation"
+    translated: ", Reputation"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧{2}⟦2⟧{3}+⟦3⟧{4}+⟦4⟧。"
 - raw: "{0}在{1}参加{6}，勇夺第{2}名，银两+{3}，{4}，并获得了奖品{5}。"
@@ -6402,13 +6402,13 @@
     translated: "Participate"
   - subIndex: 2
     text: "，勇夺第"
-    translated: ",Win the first"
+    translated: ", Win the first"
   - subIndex: 3
     text: "名，银两"
     translated: "Name, silver dollars"
   - subIndex: 4
     text: "，并获得了奖品"
-    translated: ",And won the prize"
+    translated: ", And won the prize"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦6⟧{2}⟦2⟧{3}+⟦3⟧，⟦4⟧{4}⟦5⟧。"
 - raw: "{0}在{1}四下探索之时，意外发现了{2}。"
@@ -6429,10 +6429,10 @@
     translated: "Completed an important commission, renown"
   - subIndex: 2
     text: "，银两"
-    translated: ",Silver taels"
+    translated: ", Silver taels"
   - subIndex: 3
     text: "，并获得了"
-    translated: ",And obtained"
+    translated: ", And obtained"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}⟦4⟧。"
 - raw: "{0}在{1}开展治理，使该地{2}提升了{3}点。"
@@ -6543,7 +6543,7 @@
     translated: "Attacked"
   - subIndex: 2
     text: "，血战一场最终"
-    translated: ",After a fierce battle"
+    translated: ", After a fierce battle"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧。"
 - raw: "{0}在{1}辛勤劳作，为门派收获了{2}。"
@@ -6567,10 +6567,10 @@
     translated: "Encounter, Reputation"
   - subIndex: 3
     text: "，银两"
-    translated: ",Silver taels"
+    translated: ", Silver taels"
   - subIndex: 4
     text: "，并获得了"
-    translated: ",And obtained"
+    translated: ", And obtained"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧{2}⟦2⟧{3}⟦3⟧{4}⟦4⟧。"
 - raw: "{0}在{1}闲逛之时，意外获取了{2}两银钱。"
@@ -6957,7 +6957,7 @@
     translated: "'Create《"
   - subIndex: 2
     text: "秘籍放入藏经阁，供全派弟子参阅。"
-    translated: "The secret technique has been placed in the Tripitaka Pavilion for all sect disciples to study."
+    translated: "Scrolls placed in the Scripture Pavilion for all sect disciples to peruse."
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧》⟦3⟧{2}"
 - raw: "{0}掌门{1}用《{2}》{3}替换了藏经阁内的《{2}》{4}秘籍，供全派弟子参阅。"
@@ -6969,7 +6969,7 @@
     translated: "'Using《"
   - subIndex: 2
     text: "替换了藏经阁内的《"
-    translated: "'Replaced the scriptures in the Tripitaka Pavilion with"
+    translated: "'replaced the Scripture Pavilion's《"
   - subIndex: 3
     text: "秘籍，供全派弟子参阅。"
     translated: "Manual, provided for the entire sect's disciples to refer to."
@@ -7020,7 +7020,7 @@
     translated: "Under control"
   - subIndex: 2
     text: "，最终"
-    translated: ",Finally"
+    translated: ", Finally"
   templates:
   - template: "⟦0⟧{0}⟦2⟧{1}⟦1⟧{2}⟦3⟧。"
 - raw: "{0}效果已结束！"
@@ -7305,7 +7305,7 @@
     translated: "Refined"
   - subIndex: 1
     text: "，由于门派仓库已满只得放入行囊"
-    translated: ",Since the sect's warehouse is full, it can only be placed in the backpack."
+    translated: ", Since the sect's warehouse is full, it can only be placed in the backpack."
   - subIndex: 2
     text: "消耗"
     translated: "Consume"
@@ -7350,7 +7350,7 @@
     translated: "Cooked"
   - subIndex: 1
     text: "，由于门派仓库已满只得放入行囊"
-    translated: ",Since the sect's warehouse is full, it can only be placed in the backpack."
+    translated: ", Since the sect's warehouse is full, it can only be placed in the backpack."
   - subIndex: 2
     text: "消耗"
     translated: "Consume"
@@ -7572,7 +7572,7 @@
 - raw: "{0}藏经阁添加了藏书《{1}》。"
   splits:
   - text: "藏经阁添加了藏书《"
-    translated: "'The Repository Pavilion added the preservation of the Classic Texts."
+    translated: "'The Scripture Pavilion has added the scripture 《"
   templates:
   - template: "⟦0⟧{0}⟦1⟧》。"
 - raw: "{0}表演;ChooseCoachWork;{1}"
@@ -8895,7 +8895,7 @@
     translated: "I challenged it not long ago"
   - subIndex: 1
     text: "之藏经阁。"
-    translated: "In the Repository of Scriptures,"
+    translated: "To the Scripture Pavilion"
   - subIndex: 2
     text: "至少要等"
     translated: "At least you have to wait"
@@ -9220,7 +9220,7 @@
     translated: "For level"
   - subIndex: 3
     text: "，可提升宴会"
-    translated: ",Can enhance the banquet"
+    translated: ", Can enhance the banquet"
   - subIndex: 4
     text: "点基础评分和"
     translated: "Click on the basic score and"
@@ -9274,7 +9274,7 @@
     translated: "But once you join me,"
   - subIndex: 1
     text: "，便需拜掌门为师且不得私自收徒。"
-    translated: ",One must apprentice under the Sect Leader and may not privately take on disciples."
+    translated: ", One must apprentice under the Sect Leader and may not privately take on disciples."
   - subIndex: 2
     text: "此前混迹江湖之时所拜师傅或所收弟子，也都就此作罢，还望知悉。"
     translated: "Disciples and masters from my time wandering the Jianghu have all parted ways, I hope you understand."
@@ -10445,7 +10445,7 @@
     translated: "Current stealth success rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ",Expected increase in notoriety"
+    translated: ", Expected increase in notoriety"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -10951,7 +10951,7 @@
     translated: "Who dares to enter my premises?"
   - subIndex: 1
     text: "藏经阁重地！"
-    translated: "Holy Archive Hall!"
+    translated: "Sacred Scripture Pavilion!"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "什么狗屁家丁，老子不干了，谁爱干谁干去！"
@@ -11784,7 +11784,7 @@
     translated: "Warehouse"
   - subIndex: 3
     text: "藏经阁内秘籍记载的武学"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "Scripture Pavilion records of martial arts techniques"
   templates:
   - template: "{0};ForceTeachNewBookToNPC;;;♦{1}/{2}/{3}"
 - raw: "传说青城叛徒王添翼逃出中原后，代替岳无畏成了黑道第四鬼，被唤作“笑面鬼”。\n曾经的英雄侠少，如今竟助纣为虐，堕入邪道，实在令人不齿！"
@@ -11911,7 +11911,7 @@
     translated: "Silver recruited"
   - subIndex: 3
     text: "，以填补"
-    translated: ",To fill in"
+    translated: ", To fill in"
   - subIndex: 4
     text: "之空缺。"
     translated: "Void"
@@ -11936,7 +11936,7 @@
     translated: "Rumors say that"
   - subIndex: 1
     text: "，一位名为"
-    translated: ",A person named"
+    translated: ", A person named"
   - subIndex: 2
     text: "的"
     translated: "Of"
@@ -12264,7 +12264,7 @@
     translated: "You were beaten to severe injuries by that group of assassins, so you had to shout loudly when they weren't paying attention."
   - subIndex: 1
     text: "，怎么现在才来相助！”"
-    translated: ",Why did you only come to help now!'"
+    translated: ", Why did you only come to help now!'"
   - subIndex: 2
     text: "在杀手们惊慌错愕之时，迅速向后纵越几步，然后落荒而逃！"
     translated: "As the assassins panicked, he quickly leaped a few steps back and then fled into the wilderness!"
@@ -12288,7 +12288,7 @@
     translated: "As"
   - subIndex: 2
     text: "，叛离门派会固定增加"
-    translated: ",Leaving the Sect will fixedly increase"
+    translated: ", Leaving the Sect will fixedly increase"
   - subIndex: 3
     text: "点恶名，且"
     translated: "Gain notoriety, and"
@@ -12328,7 +12328,7 @@
     translated: "You won this challenge,"
   - subIndex: 1
     text: "可以从藏经阁内选择一本秘籍作为奖励。"
-    translated: "You can choose a secret manual from within the Repository to receive as a reward."
+    translated: "You can choose a secret technique from the Scripture Pavilion as a reward."
   templates:
   - template: "{0}\n{1}"
 - raw: "你赢得了江湖挑战，可从商人身上任选一物作为奖品。"
@@ -12675,7 +12675,7 @@
 - raw: "偷窃藏经阁内藏书"
   splits:
   - text: "偷窃藏经阁内藏书"
-    translated: "Stealing books from the Cangjingge Cangjingge is a repository of scriptures."
+    translated: "Stealing books from the Scripture Pavilion"
 - raw: "偷窃门派仓库内物品"
   splits:
   - text: "偷窃门派仓库内物品"
@@ -13406,7 +13406,7 @@
 - raw: "几名藏经阁守卫将你打的鼻青脸肿，\n你只得趁他们一个不备，向后纵越几步，然后落荒而逃！"
   splits:
   - text: "几名藏经阁守卫将你打的鼻青脸肿，"
-    translated: "Several defenders from the Scripture Repository beat you until you were bruised and swollen."
+    translated: "Several Scripture Pavilion guards beat you until your nose was swollen and your face was bruised."
   - subIndex: 1
     text: "你只得趁他们一个不备，向后纵越几步，然后落荒而逃！"
     translated: "You must take advantage of their unpreparedness to leap back a few steps and then flee for your life!"
@@ -13415,10 +13415,10 @@
 - raw: "几名藏经阁守卫被你击倒在地，再也无力反抗。\n你迅速来到藏经阁书架前，准备查看此次的战利品。"
   splits:
   - text: "几名藏经阁守卫被你击倒在地，再也无力反抗。"
-    translated: "Several guards from the Scripture Repository fell to the ground under your attack and could no longer resist."
+    translated: "Several Scripture Pavilion guards were knocked to the ground by you and can no longer resist."
   - subIndex: 1
     text: "你迅速来到藏经阁书架前，准备查看此次的战利品。"
-    translated: "You quickly approached the shelves of the Treasure Repository Pavilion, preparing to check the loot from this battle."
+    translated: "You quickly approached the Scripture Pavilion's bookshelves, ready to check the loot from this battle."
   templates:
   - template: "{0}\n{1}"
 - raw: "几招过后，你被恶霸打得鼻青脸肿，\n见有一处空隙，立刻催动轻功逃跑开去，\n只听得背后传来阵阵讥笑谩骂之声......"
@@ -14653,7 +14653,7 @@
 - raw: "历经险阻，总算进入这藏经阁内。\n不过此处守备森严，书架前亦有对应级别弟子看守。\n眼下......应当如何行事为好呢？"
   splits:
   - text: "历经险阻，总算进入这藏经阁内。"
-    translated: "After enduring numerous dangers, I have finally entered the Cangjingge."
+    translated: "After facing numerous dangers, I finally entered the Scripture Pavilion."
   - subIndex: 1
     text: "不过此处守备森严，书架前亦有对应级别弟子看守。"
     translated: "But the area is heavily guarded, and junior disciples of the corresponding level also watch over the bookshelves."
@@ -15443,7 +15443,7 @@
     translated: "Just draft a letter to severely disgrace him."
   - subIndex: 1
     text: "，便可降低双方之间的关系。"
-    translated: ",This can lower the relationship between the two parties."
+    translated: ", This can lower the relationship between the two parties."
   - subIndex: 2
     text: "确认要如此行事吗？"
     translated: "Are you sure you want to proceed like this?"
@@ -15610,7 +15610,7 @@
     translated: "Sadly, I haven't mastered that yet"
   - subIndex: 1
     text: "，又何来指教一说呢？"
-    translated: ",Then what justification do you have to give advice?"
+    translated: ", Then what justification do you have to give advice?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "可惜我还有事...;ChangeMeetNpcPlot"
@@ -15638,7 +15638,7 @@
     translated: "#PlayerName# must defeat"
   - subIndex: 4
     text: "，方能证明自己之武功修为堪当本门"
-    translated: ",Can prove his martial arts proficiency deserves to be part of this sect"
+    translated: ", Can prove his martial arts proficiency deserves to be part of this sect"
   - subIndex: 5
     text: "之重任。"
     translated: "Great responsibility"
@@ -15940,7 +15940,7 @@
     translated: "I heard #TargetInteractName# recently got an item"
   - subIndex: 1
     text: "，不妨让我观赏一番如何？"
-    translated: ",Why don't you watch how it's done?"
+    translated: ", Why don't you watch how it's done?"
   - subIndex: 2
     text: "力道，体质和绝技超过对方越多且好感越高，成功率越高。"
     translated: "The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate."
@@ -15949,7 +15949,7 @@
     translated: "Current Raid Success Rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ",Expected increase in notoriety"
+    translated: ", Expected increase in notoriety"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -15983,7 +15983,7 @@
     translated: "Heard that #PlayerName# got something recently"
   - subIndex: 1
     text: "，此物我也寻觅良久，一直苦于未能得手。"
-    translated: ",I have searched for this item for a long time and have always struggled to obtain it."
+    translated: ", I have searched for this item for a long time and have always struggled to obtain it."
   - subIndex: 2
     text: "不知#PlayerName#可否成人之美，将这"
     translated: "I wonder if #PlayerName# can help make this happen."
@@ -16261,7 +16261,7 @@
     translated: "Operate in our sect's money house for a few days."
   - subIndex: 3
     text: "，方能顺利完成。"
-    translated: ",Can be completed successfully"
+    translated: ", Can be completed successfully"
   templates:
   - template: "{0}\n{1}<b>{2}</b>{3}"
 - raw: "呵呵，你们两个啊，\n上辈子一定是饿死鬼投胎，这辈子才会这么好吃懒做。"
@@ -16875,7 +16875,7 @@
     translated: "I have long admired martial arts, but have struggled to obtain them."
   - subIndex: 2
     text: "不久前刚打探好通路，准备潜入其藏经阁内一饱眼福，"
-    translated: "Not long ago, I had just secured the route and was preparing to sneak into the Repository Pavilion to enjoy the view."
+    translated: "Not long ago, I had just scouted the route and was preparing to sneak into the Scripture Pavilion to enjoy the view."
   - subIndex: 3
     text: "不知#PlayerName#是否愿意在旁做个援手？"
     translated: "Don't know if you're willing to lend a hand to #PlayerName#?"
@@ -18977,7 +18977,7 @@
     translated: "Operate in our sect's money house for a few days."
   - subIndex: 3
     text: "，想来不难完成。"
-    translated: ",It shouldn't be difficult to accomplish"
+    translated: ", It shouldn't be difficult to accomplish"
   templates:
   - template: "{0}\n{1}<b>{2}</b>{3}"
 - raw: "嗯，确有道理。\n既然如此，我便安排弟子们做好准备，\n就在本门比武场上与你等切磋一二。"
@@ -19168,7 +19168,7 @@
     translated: "Due to recruitment"
   - subIndex: 1
     text: "，所有门派对"
-    translated: ",All sects in"
+    translated: ", All sects in"
   - subIndex: 2
     text: "好感"
     translated: "Goodwill"
@@ -19444,7 +19444,7 @@
     translated: "I have been practicing recently"
   - subIndex: 1
     text: "，颇有一些心得领悟。"
-    translated: ",Has gained some valuable insights"
+    translated: ", Has gained some valuable insights"
   - subIndex: 2
     text: "不知#TargetInteractName#可愿与我以武论道，一试这"
     translated: "Do you, #TargetInteractName#, wish to meet as friends through martial arts and test your skills?"
@@ -19459,7 +19459,7 @@
     translated: "I have been practicing recently"
   - subIndex: 1
     text: "，颇有一些心得领悟。"
-    translated: ",Has gained some valuable insights"
+    translated: ", Has gained some valuable insights"
   - subIndex: 2
     text: "不知#TargetInteractName#可愿与我讲经说法，一试这"
     translated: "Unknown #TargetInteractName#, would you be willing to lecture and discuss with me to try this out?"
@@ -19474,7 +19474,7 @@
     translated: "I have been practicing recently"
   - subIndex: 1
     text: "，颇有一些心得领悟。"
-    translated: ",Has gained some valuable insights"
+    translated: ", Has gained some valuable insights"
   - subIndex: 2
     text: "不知#TargetInteractName#可愿花费三日时间，听我讲解这"
     translated: "Unknown #TargetInteractName#, are you willing to spend three days listening to me explain this?"
@@ -19563,7 +19563,7 @@
     translated: "(Current cultivation efficiency"
   - subIndex: 3
     text: "，预计每日可获取修行经验"
-    translated: ",Expected daily cultivation experience gain"
+    translated: ", Expected daily cultivation experience gain"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}⟦2⟧%{3}⟦2⟧）"
 - raw: "在此处分发药物，免费问诊，可使民众身体康健，百病不侵。"
@@ -19579,7 +19579,7 @@
     translated: "Extra"
   - subIndex: 2
     text: "，以贴补本门所用。在"
-    translated: ",To cover the expenses of this school"
+    translated: ", To cover the expenses of this school"
   - subIndex: 3
     text: "几天？"
     translated: "Several days?"
@@ -19600,7 +19600,7 @@
     translated: "Retrieve"
   - subIndex: 2
     text: "，可以提升我的"
-    translated: ",Can boost me"
+    translated: ", Can boost me"
   - subIndex: 3
     text: "功绩。"
     translated: "Achievements"
@@ -20414,13 +20414,13 @@
     translated: "The current title of the Great Hero is"
   - subIndex: 1
     text: "，可以提升本门占领区域上限"
-    translated: ",Can increase the upper limit of occupied areas for this school"
+    translated: ", Can increase the upper limit of occupied areas for this school"
   - subIndex: 2
     text: "，好感加成"
-    translated: ",Goodwill Boost"
+    translated: ", Goodwill Boost"
   - subIndex: 3
     text: "，恶名减少"
-    translated: ",Reputation decrease"
+    translated: ", Reputation decrease"
   - subIndex: 4
     text: "官府功绩为"
     translated: "Government service merits are"
@@ -21675,7 +21675,7 @@
     translated: "Remaining monthly battle engagements"
   - subIndex: 5
     text: "，是否要向周边区域发起进攻？"
-    translated: ",Should we initiate an attack on the surrounding areas?"
+    translated: ", Should we initiate an attack on the surrounding areas?"
   templates:
   - template: "{0}/{1}/{2}⟦0⟧{3}⟦1⟧%。\n{4}⟦2⟧/⟦3⟧{5}"
 - raw: "如今本门占领/附庸/同盟区域共计{0}处，已占天下江山之{1}%。\n本月已达出征次数上限({2}次)，弟子们还需再休养整备一段时间。{3}"
@@ -21699,7 +21699,7 @@
     translated: "Times"
   - subIndex: 6
     text: "，弟子们还需再休养整备一段时间。"
-    translated: ",The disciples still need some time to rest and prepare."
+    translated: ", The disciples still need some time to rest and prepare."
   templates:
   - template: "{0}/{1}/{2}⟦0⟧{3}⟦1⟧%。\n{4}(⟦2⟧{5}){6}⟦3⟧"
 - raw: "如各位所见，\n本门的江湖地位为<b>{0}</b>。\n看来应进一步<b>{1}</b>才是。"
@@ -21855,7 +21855,7 @@
     translated: "Brilliant! Our sect has gained this."
   - subIndex: 1
     text: "，真可谓如获至宝，爱不忍释！"
-    translated: ",True treasure, love it too much to put down!"
+    translated: ", True treasure, love it too much to put down!"
   - subIndex: 2
     text: "#PlayerName#此次劳苦功高，本掌门自会记在心里。"
     translated: "#PlayerName#, this time you have made significant contributions, and I will certainly remember it in my heart."
@@ -21867,7 +21867,7 @@
     translated: "Brilliant! Our sect has gained this."
   - subIndex: 1
     text: "，真可谓如鱼得水，如虎添翼！"
-    translated: ",It's truly like a fish in water, a tiger getting wings!"
+    translated: ", It's truly like a fish in water, a tiger getting wings!"
   - subIndex: 2
     text: "#PlayerName#此次劳苦功高，本掌门自会记在心里。"
     translated: "#PlayerName#, this time you have made significant contributions, and I will certainly remember it in my heart."
@@ -21970,7 +21970,7 @@
     translated: "Speed back to the sect"
   - subIndex: 3
     text: "，和大家一起想想办法！"
-    translated: ",Let's think of a solution together!"
+    translated: ", Let's think of a solution together!"
   templates:
   - template: "{0}-{1}<b>{2}</b>{3}"
 - raw: "姜婉-负3"
@@ -23197,7 +23197,7 @@
     translated: "Young Hero, this performance"
   - subIndex: 1
     text: "，令我等大开眼界，受益良多。"
-    translated: ",It broadens our horizons and benefits us greatly."
+    translated: ", It broadens our horizons and benefits us greatly."
   - subIndex: 2
     text: "这"
     translated: "This"
@@ -23264,7 +23264,7 @@
     translated: "The Young Hero currently deters in the Jianghu."
   - subIndex: 1
     text: "，是否要降低威慑呢？"
-    translated: ",Should we lower the deterrent?"
+    translated: ", Should we lower the deterrent?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "少侠目前在江湖中恶名为{0}，是否要洗心革面，重归正道呢？"
@@ -23273,7 +23273,7 @@
     translated: "Young Hero is currently known in the Jianghu as"
   - subIndex: 1
     text: "，是否要洗心革面，重归正道呢？"
-    translated: ",Do you want to reform and return to the right path?"
+    translated: ", Do you want to reform and return to the right path?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "少侠目前尚无官职。虽说武林中人很多不屑与咱朝廷为伍，\n但若在官府中谋个职位，也能为日后行走江湖提供颇多便利。"
@@ -23291,13 +23291,13 @@
     translated: "The current official position of Young Hero is"
   - subIndex: 1
     text: "，月俸"
-    translated: ",Monthly salary"
+    translated: ", Monthly salary"
   - subIndex: 2
     text: "两，声望加成"
     translated: "Two, Reputation Bonus"
   - subIndex: 3
     text: "，恶名减少"
-    translated: ",Reputation decrease"
+    translated: ", Reputation decrease"
   - subIndex: 4
     text: "官府功绩为"
     translated: "Government service merits are"
@@ -23367,7 +23367,7 @@
     translated: "For level"
   - subIndex: 4
     text: "，可提升宴会"
-    translated: ",Can enhance the banquet"
+    translated: ", Can enhance the banquet"
   - subIndex: 5
     text: "点基础评分和"
     translated: "Click on the basic score and"
@@ -24167,7 +24167,7 @@
     translated: "And pledged allegiance to"
   - subIndex: 1
     text: "，两派关系因此降低"
-    translated: ",Relations between the two factions therefore deteriorated"
+    translated: ", Relations between the two factions therefore deteriorated"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧"
 - raw: "幸会幸会;ChangeMeetNpcPlot"
@@ -24936,7 +24936,7 @@
     translated: "Got this"
   - subIndex: 1
     text: "，定能叫我如虎添翼"
-    translated: ",Will definitely make me even more formidable"
+    translated: ", Will definitely make me even more formidable"
   templates:
   - template: "{0}⟦1⟧{1}"
 - raw: "得好好参照医书，辨认出各种药材才行。"
@@ -25839,7 +25839,7 @@
     translated: "I"
   - subIndex: 1
     text: "，若#PlayerName#本月得空，还望能来"
-    translated: ",If #PlayerName# is free this month, it would be great if you could come."
+    translated: ", If #PlayerName# is free this month, it would be great if you could come."
   - subIndex: 2
     text: "与吾小聚一番。"
     translated: "Dine with me for a while"
@@ -26045,7 +26045,7 @@
     translated: "I got this a few days ago"
   - subIndex: 1
     text: "，若不嫌弃还请收下作为谢礼。"
-    translated: ",If you don't mind, please accept this as a token of appreciation."
+    translated: ", If you don't mind, please accept this as a token of appreciation."
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "我劫道多年，刀下亡魂无数！要钱还是要命，自己选吧！"
@@ -26058,7 +26058,7 @@
     translated: "I sought far and wide to obtain this."
   - subIndex: 1
     text: "，还请掌门一看。"
-    translated: ",Still hoping the Sect Leader would take a look."
+    translated: ", Still hoping the Sect Leader would take a look."
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "我四处寻访得到这本《{0}》，还请掌门一阅。"
@@ -26067,7 +26067,7 @@
     translated: "I traveled far and wide to obtain this book."
   - subIndex: 1
     text: "，还请掌门一阅。"
-    translated: ",Still hoping the Sect Leader will take a look."
+    translated: ", Still hoping the Sect Leader will take a look."
   templates:
   - template: "{0}《⟦0⟧》{1}"
 - raw: "我在{0}{1}，若#PlayerName#能在{2}日内赶来助阵，必当感激不尽！"
@@ -26076,7 +26076,7 @@
     translated: "I am"
   - subIndex: 1
     text: "，若#PlayerName#能在"
-    translated: ",If #PlayerName# can"
+    translated: ", If #PlayerName# can"
   - subIndex: 2
     text: "日内赶来助阵，必当感激不尽！"
     translated: "Come to help today, and I will be eternally grateful!"
@@ -26167,7 +26167,7 @@
     translated: "I have trained under"
   - subIndex: 1
     text: "，江湖规矩一徒不拜二师，"
-    translated: ",Jianghu rules dictate that one does not serve two masters."
+    translated: ", Jianghu rules dictate that one does not serve two masters."
   - subIndex: 2
     text: "#PlayerName#还是请回吧！"
     translated: "#PlayerName#, please return!"
@@ -26293,7 +26293,7 @@
     translated: "Current theft success rate"
   - subIndex: 3
     text: "，预计增加恶名"
-    translated: ",Expected increase in notoriety"
+    translated: ", Expected increase in notoriety"
   - subIndex: 4
     text: "点。"
     translated: "Dot"
@@ -26368,7 +26368,7 @@
     translated: "I am going to seclude myself in the mountains; I won't need this."
   - subIndex: 1
     text: "，#PlayerName#只管拿去，以备不时之需。"
-    translated: ",#PlayerName# just take it, just in case"
+    translated: ", #PlayerName# just take it, just in case"
   - subIndex: 2
     text: "江湖路远，各自珍重，咱们后会有期！"
     translated: "Jianghu road long, each take care, we'll meet again!"
@@ -26691,7 +26691,7 @@
     translated: "I've been lately"
   - subIndex: 1
     text: "，若#PlayerName#闲来无事，还望能到"
-    translated: ",If #PlayerName# has some free time, I hope you can come"
+    translated: ", If #PlayerName# has some free time, I hope you can come"
   - subIndex: 2
     text: "与吾小聚一番。"
     translated: "Dine with me for a while"
@@ -26751,7 +26751,7 @@
     translated: "(The opponent's level cannot exceed"
   - subIndex: 2
     text: "，或为徒弟"
-    translated: ",Or be an apprentice"
+    translated: ", Or be an apprentice"
   - subIndex: 3
     text: "情侣"
     translated: "Couple"
@@ -26828,7 +26828,7 @@
     translated: "I joined today thanks to #PlayerName#'s recommendation"
   - subIndex: 2
     text: "，以效犬马之劳！"
-    translated: ",To serve with zeal!"
+    translated: ", To serve with zeal!"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "戒律"
@@ -29376,7 +29376,7 @@
     translated: "Come to visit me"
   - subIndex: 3
     text: "，不知"
-    translated: ",Unknown"
+    translated: ", Unknown"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}⟦1⟧{3}⟦3⟧？"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一丛繁茂异常的植物，里面似乎生长有珍稀药材，\n不知#PlayerName#是否知晓应当如何采摘？"
@@ -31441,13 +31441,13 @@
     translated: "This"
   - subIndex: 1
     text: "，论"
-    translated: ",Discuss"
+    translated: ", Discuss"
   - subIndex: 2
     text: "，而"
-    translated: ",And"
+    translated: ", And"
   - subIndex: 3
     text: "，且"
-    translated: ",And"
+    translated: ", And"
   - subIndex: 4
     text: "总体而言是一件"
     translated: "Overall, it is an item"
@@ -31603,7 +31603,7 @@
     translated: "For level"
   - subIndex: 3
     text: "，可提升宴会"
-    translated: ",Can enhance the banquet"
+    translated: ", Can enhance the banquet"
   - subIndex: 4
     text: "点基础评分和"
     translated: "Click on the basic score and"
@@ -32642,7 +32642,7 @@
     translated: "Fine wine"
   - subIndex: 3
     text: "，#PlayerName#若能在"
-    translated: ",#PlayerName# If he could just"
+    translated: ", #PlayerName# If he could just"
   - subIndex: 4
     text: "三十日内"
     translated: "Within thirty days"
@@ -33523,7 +33523,7 @@
 - raw: "潜入藏经阁"
   splits:
   - text: "潜入藏经阁"
-    translated: "Sneak into the Treasury Pavilion"
+    translated: "Sneak into the Scripture Pavilion"
 - raw: "潜力"
   splits:
   - text: "潜力"
@@ -34602,7 +34602,7 @@
     translated: "Hence, I hereby appoint you as"
   - subIndex: 2
     text: "，并增加封邑一处。"
-    translated: ",And grant an additional fief"
+    translated: ", And grant an additional fief"
   - subIndex: 3
     text: "还望卿戒骄戒躁，继续恪尽职守，为国效力。"
     translated: "I hope you remain humble and diligent, and continue to serve the country faithfully."
@@ -34617,7 +34617,7 @@
     translated: "Hereby promote you to"
   - subIndex: 2
     text: "，并再加封邑一处。"
-    translated: ",And grant him an additional fiefdom"
+    translated: ", And grant him an additional fiefdom"
   - subIndex: 3
     text: "还望卿戒骄戒躁，继续恪尽职守，为国效力。"
     translated: "I hope you remain humble and diligent, and continue to serve the country faithfully."
@@ -34981,7 +34981,7 @@
     translated: "Whose achievements are the most fruitful"
   - subIndex: 2
     text: "，你做的很好"
-    translated: ",You did a great job"
+    translated: ", You did a great job"
   - subIndex: 3
     text: "这个是奖励，收下吧。"
     translated: "This is a reward, take it"
@@ -36119,7 +36119,7 @@
     translated: "This is a"
   - subIndex: 3
     text: "，起拍价"
-    translated: ",Starting bid"
+    translated: ", Starting bid"
   - subIndex: 4
     text: "两。"
     translated: "Two"
@@ -36143,7 +36143,7 @@
     translated: "Two and this"
   - subIndex: 4
     text: "，贵派威望也会因此提升"
-    translated: ",Your faction's prestige will also increase as a result."
+    translated: ", Your faction's prestige will also increase as a result."
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -36644,7 +36644,7 @@
     translated: "Finally prepared, just need to navigate through a maze before we can start the challenge."
   - subIndex: 1
     text: "这藏经阁分为"
-    translated: "This Sanjiange is divided into"
+    translated: "This Scripture Pavilion is divided into"
   - subIndex: 2
     text: "层区域，层数越高秘籍越稀有，但挑战也越困难。"
     translated: "Higher floors yield rarer scrolls, but the challenge increases as well."
@@ -37858,7 +37858,7 @@
     translated: "While making the effort, I finally cleared the secret passage, and after navigating through the underground maze, I could reach the place where sacred scriptures are stored."
   - subIndex: 1
     text: "这藏经阁分为"
-    translated: "This Sanjiange is divided into"
+    translated: "This Scripture Pavilion is divided into"
   - subIndex: 2
     text: "层区域，层数越高秘籍越稀有，但守备也越森严。"
     translated: "Upper floors have rarer scrolls, but the defenses are also more stringent."
@@ -37950,7 +37950,7 @@
     translated: "If you wish to conquer"
   - subIndex: 1
     text: "，先拿下此地可降低后续攻城战之难度。"
-    translated: ",Taking this place first will reduce the difficulty of subsequent sieges."
+    translated: ", Taking this place first will reduce the difficulty of subsequent sieges."
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "若想晋升至下一勋阶则需要{0}功绩"
@@ -38047,7 +38047,7 @@
     translated: "Secure both of these"
   - subIndex: 2
     text: "，也是一件美事"
-    translated: ",It's also a beautiful thing"
+    translated: ", It's also a beautiful thing"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}"
 - raw: "若能以{0}之法点化世人，也算为#PlayerForceName#立下功德一件。\n只是不知，应当以何种方式教化对方？"
@@ -38068,7 +38068,7 @@
     translated: "If I could gather my fellow disciples to conquer this place"
   - subIndex: 1
     text: "，便能将其物产归为己有，"
-    translated: ",And thereby claim ownership of its produce,"
+    translated: ", And thereby claim ownership of its produce,"
   - subIndex: 2
     text: "不仅对本门发展大有裨益，日后进攻"
     translated: "Not only does this greatly benefit the development of this art, but it will also be useful in future attacks."
@@ -38387,7 +38387,7 @@
 - raw: "藏经阁"
   splits:
   - text: "藏经阁"
-    translated: "Temple Scriptures Pavilion"
+    translated: "Scripture Pavilion"
 - raw: "虎落平阳;"
   splits:
   - text: "虎落平阳"
@@ -40268,7 +40268,7 @@
     translated: "Why not secretly collect here if you're not prepared?"
   - subIndex: 2
     text: "，以贴补本门所用。在"
-    translated: ",To cover the expenses of this school"
+    translated: ", To cover the expenses of this school"
   - subIndex: 3
     text: "几天？"
     translated: "Several days?"
@@ -40440,7 +40440,7 @@
     translated: "As head of the sect"
   - subIndex: 1
     text: "，#PlayerName#你已学有所成，同时立下了足够的功勋。"
-    translated: ",#PlayerName#, you have mastered your skills and earned sufficient merits."
+    translated: ", #PlayerName#, you have mastered your skills and earned sufficient merits."
   - subIndex: 2
     text: "若你想从本门出师，去江湖中行侠仗义、四处闯荡，本掌门也不会阻拦。"
     translated: "If you wish to leave the sect and go into the Jianghu to right wrongs and wander far and wide, I, the Sect Leader, will not hinder you."
@@ -41170,7 +41170,7 @@
     translated: "For"
   - subIndex: 6
     text: "，修炼需要"
-    translated: ",Training requires"
+    translated: ", Training requires"
   - subIndex: 7
     text: "日和"
     translated: "Peaceful Day"
@@ -41200,7 +41200,7 @@
     translated: "Potential is"
   - subIndex: 6
     text: "，修炼需要"
-    translated: ",Training requires"
+    translated: ", Training requires"
   - subIndex: 7
     text: "日和"
     translated: "Peaceful Day"
@@ -41230,7 +41230,7 @@
     translated: "For"
   - subIndex: 6
     text: "，修炼需要"
-    translated: ",Training requires"
+    translated: ", Training requires"
   - subIndex: 7
     text: "日和"
     translated: "Peaceful Day"
@@ -41269,7 +41269,7 @@
     translated: "Consume goodwill to requisition this item"
   - subIndex: 4
     text: "，超过好感上限"
-    translated: ",Exceeded max affinity"
+    translated: ", Exceeded max affinity"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n({3}⟦1⟧{4})"
 - raw: "这{0}实在珍贵，我不愿赠与他人。\n还望#PlayerName#莫要强人所难。\n(不能索取品级高于对方身份的物品)"
@@ -41302,7 +41302,7 @@
     translated: "Requesting this item will consume their goodwill"
   - subIndex: 4
     text: "，超过好感上限"
-    translated: ",Exceeded max affinity"
+    translated: ", Exceeded max affinity"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n({3}⟦1⟧{4})"
 - raw: "这{0}实在珍贵，我得来也颇为不易，难以割舍。\n若日后再寻得此等物件，必定慷慨相赠。"
@@ -41332,10 +41332,10 @@
     translated: "Using this item requires consuming Sect prestige"
   - subIndex: 4
     text: "，弟子好感"
-    translated: ",Disciple goodwill"
+    translated: ", Disciple goodwill"
   - subIndex: 5
     text: "，忠诚"
-    translated: ",Loyalty"
+    translated: ", Loyalty"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n({3}⟦2⟧{4}-⟦1⟧{5}-⟦1⟧)"
 - raw: "这{0}实在珍贵，我得来也颇为不易，难以割舍。\n若非恩深义重之人，只怕不可贸然赠与。\n(索取此物品需消耗好感{1})"
@@ -41479,7 +41479,7 @@
     translated: "This"
   - subIndex: 1
     text: "，非得值"
-    translated: ",Have to be"
+    translated: ", Have to be"
   - subIndex: 2
     text: "两不可"
     translated: "Neither nor"
@@ -41560,7 +41560,7 @@
     translated: "#PlayerName#'s current wins are"
   - subIndex: 2
     text: "，下一场的对手是英雄谱中排行"
-    translated: ",The next opponent is ranked on the Hero Roll."
+    translated: ", The next opponent is ranked on the Hero Roll."
   - subIndex: 3
     text: "名左右的侠客，"
     translated: "Wanderers to the left and right,"
@@ -41907,7 +41907,7 @@
     translated: "#PlayerName#'s current wins are"
   - subIndex: 2
     text: "，下一场的对手是五名英雄谱中排行"
-    translated: ",The next opponent is ranked among the Five Heroes."
+    translated: ", The next opponent is ranked among the Five Heroes."
   - subIndex: 3
     text: "名左右的侠客，"
     translated: "Wanderers to the left and right,"
@@ -42157,7 +42157,7 @@
     translated: "#PlayerName#'s current wins are"
   - subIndex: 2
     text: "，下一场的对手是"
-    translated: ",Next opponent is"
+    translated: ", Next opponent is"
   - subIndex: 3
     text: "已经准备妥当吗？"
     translated: "Are you ready?"
@@ -42337,7 +42337,7 @@
     translated: "This door"
   - subIndex: 1
     text: "，本就与我的武功路数不符。"
-    translated: ",This is not in line with my martial arts style."
+    translated: ", This is not in line with my martial arts style."
   - subIndex: 2
     text: "如今将其遗忘，正好腾出心力来修习其他武学！"
     translated: "Forget about it now to free up your mind for practicing other martial arts!"
@@ -42365,7 +42365,7 @@
 - raw: "进入藏经阁"
   splits:
   - text: "进入藏经阁"
-    translated: "Enter the Scripture Repository Hall"
+    translated: "Enter the Scripture Pavilion"
 - raw: "进招吧"
   splits:
   - text: "进招吧"
@@ -42950,7 +42950,7 @@
     translated: "So it is decided. Please go to your respective destinations, disciples."
   - subIndex: 1
     text: "，汇合后由我带领出击，定要一举从"
-    translated: ",Converging, I will lead the assault and ensure we secure a decisive victory."
+    translated: ", Converging, I will lead the assault and ensure we secure a decisive victory."
   - subIndex: 2
     text: "手中夺下此地！"
     translated: "Seize control of this area!"
@@ -43990,10 +43990,10 @@
     translated: "The Medical Pavilion's current skill level is"
   - subIndex: 5
     text: "，你的医术技能为"
-    translated: ",Your medical skill level is"
+    translated: ", Your medical skill level is"
   - subIndex: 6
     text: "，效果取二者之和。"
-    translated: ",The effect is the sum of both"
+    translated: ", The effect is the sum of both"
   templates:
   - template: "{0}⟦0⟧{1}⟦4⟧{2}⟦1⟧{3}\n({4}⟦2⟧{5}⟦3⟧{6})"
 - raw: "阁下想在{0}解毒几天？每日消耗{4}银两，降低{1}中毒。\n(医馆当前医术为{2}，你的毒术技能为{3}，效果取二者之和。)"
@@ -44014,10 +44014,10 @@
     translated: "The Medical Pavilion's current skill level is"
   - subIndex: 5
     text: "，你的毒术技能为"
-    translated: ",Your Poison Skills are"
+    translated: ", Your Poison Skills are"
   - subIndex: 6
     text: "，效果取二者之和。"
-    translated: ",The effect is the sum of both"
+    translated: ", The effect is the sum of both"
   templates:
   - template: "{0}⟦0⟧{1}⟦4⟧{2}⟦1⟧{3}\n({4}⟦2⟧{5}⟦3⟧{6})"
 - raw: "阁下想在{0}调息几天？每日消耗{4}银两，降低{1}内伤。\n(医馆当前医术为{2}，你的医术内功技能平均为{3}，效果取二者之和。)"
@@ -44038,10 +44038,10 @@
     translated: "The Medical Pavilion's current skill level is"
   - subIndex: 5
     text: "，你的医术内功技能平均为"
-    translated: ",Your average Internal Skill in Medicine is"
+    translated: ", Your average Internal Skill in Medicine is"
   - subIndex: 6
     text: "，效果取二者之和。"
-    translated: ",The effect is the sum of both"
+    translated: ", The effect is the sum of both"
   templates:
   - template: "{0}⟦0⟧{1}⟦4⟧{2}⟦1⟧{3}\n({4}⟦2⟧{5}⟦3⟧{6})"
 - raw: "阁下想要挑战我{0}，以赢取仓库内物品吗？"
@@ -44050,7 +44050,7 @@
     translated: "You wish to challenge me?"
   - subIndex: 1
     text: "，以赢取仓库内物品吗？"
-    translated: ",To win the items in the warehouse?"
+    translated: ", To win the items in the warehouse?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "阁下想要挑战我{0}，以赢取藏经阁内秘籍吗？"
@@ -44059,7 +44059,7 @@
     translated: "You wish to challenge me?"
   - subIndex: 1
     text: "，以赢取藏经阁内秘籍吗？"
-    translated: ",To win the secret scrolls from the Scripture Pavilion?"
+    translated: ", To win the secret scrolls from the Scripture Pavilion?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "阁下武功超绝，技压群雄，实在是让人敬佩不已！"
@@ -44267,7 +44267,7 @@
 - raw: "附庸藏经阁"
   splits:
   - text: "附庸藏经阁"
-    translated: "Vassal of the Cangjingge"
+    translated: "Appendage to the Scripture Pavilion"
 - raw: "附庸门派"
   splits:
   - text: "附庸门派"
@@ -45673,10 +45673,10 @@
 - raw: "，并购买了{0}"
   splits:
   - text: "，并购买了"
-    translated: ",Bought"
+    translated: ", Bought"
   templates:
   - template: "{0}⟦0⟧"
 - raw: "，由#$PlayerName#大侠委托出售"
   splits:
   - text: "，由#$PlayerName#大侠委托出售"
-    translated: ",By Great Hero #$PlayerName# Commissioned for Sale"
+    translated: ", By Great Hero #$PlayerName# Commissioned for Sale"
