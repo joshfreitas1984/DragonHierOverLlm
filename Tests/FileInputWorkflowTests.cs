@@ -4,7 +4,7 @@ namespace Tests;
 
 public class FileInputWorkflowTests
 {
-   
+
 
     [Fact(DisplayName = "1. ExportAssetsIntoTranslated")]
     public void ExportAssetsIntoTranslated()
@@ -44,6 +44,12 @@ public class FileInputWorkflowTests
         // doc comment for why these need their own dictionary entries instead of relying on
         // DynamicStringPatches' bare single-character fallback entries.
         GameFileHandling.ExtractDynamicStringCandidatesFromColumns(GameFileHandling.WorkingDirectory);
+
+        // Source 1b: SpeHeroData family/given-name halves, written to their OWN dedicated
+        // heroNameParts.txt (NOT merged into dynamicStringsFromColumns.txt above) - see
+        // GameFileHandling.ExtractHeroNamePartCandidates' doc comment for why these must stay out
+        // of DynamicStringPatches' global substring-replace dictionary.
+        GameFileHandling.ExtractHeroNamePartCandidates(GameFileHandling.WorkingDirectory);
 
         // Source 2 (formerly "Source 2" here, extracting from dumpedOtherText.txt) now runs in
         // "1b" above instead, feeding the PrefabText pipeline rather than this one - see

@@ -359,5 +359,44 @@ Full investigation narrative (the wrong-scope correction, the lifecycle-callback
 the `is`/`as` interop-safety finding, and the scene-loading coverage gap) is in
 `DragonHeirPlugin/docs/prefabtextpatches-full-investigation.md`.
 
+## `HeroNamePatches` — relationship-title translation for `GameController.GetHeroName`
 
+`GameController.GetHeroName(int,int)`/`GetHeroName(HeroData,HeroData)` natively compute a
+relationship title (surname/given-name + relation word, e.g. "姜师姐") via field-offset branching
+that isn't worth reimplementing. `HeroNamePatches` (registered via
+`Harmony.CreateAndPatchAll(typeof(HeroNamePatches))` in `MainPlugin.Load()`) instead
+Harmony-**postfixes** both overloads and translates the already-computed Chinese `__result`:
+standalone titles (`StandaloneTitles`), a known relation-word suffix stripped off the end and
+translated (`RelationSuffixes`, longest-match-first) with the remaining prefix looked up via
+`TranslateNamePart`, a trailing "儿" child-affix strip, or (fallback) the bare string looked up
+the same way.
+
+**`TranslateNamePart` is `HeroNamePatches`' own private, exact-match dictionary — NOT
+`DynamicStringPatches.TranslateFragment`/its global substring-replace dictionary.** A bare
+one/two-character surname is too easy to accidentally match as a substring inside unrelated
+Chinese text elsewhere in the game, so name parts are packaged to their own
+`heroNameParts.txt.yaml` (deliberately NOT named `dynamicStrings*`, so `DynamicStringPatches`'
+`DictionaryFilePattern` glob never picks it up) and loaded separately via
+`HeroNamePatches.LoadNamePartDictionary()` (called once from `MainPlugin.Load()`, before
+`Harmony.CreateAndPatchAll(typeof(HeroNamePatches))`). Pipeline-side:
+`Tests/GameFileHandling.cs`'s `ExtractHeroNamePartCandidates`/`DynamicStringNamePartColumnSources`
+extract `SpeHeroData.csv` column 1's "Family.Given" compound into
+`Raw/Dumped/DynamicStrings/heroNameParts.txt` as two standalone raw fragments (not just the whole
+dotted string, since `HeroData` strips the "." separator at load time), which flows through the
+same generic `DynamicStringsIL2CPP`/`DynamicStringWorkflow` export/translate/package pipeline as
+`dynamicStrings.txt` (the `TextFileType` enum value is just plumbing for reusing that pipeline —
+it does **not** mean the packaged file is merged into the plugin's dynamic-string dictionary).
+See `HeroNamePatches.cs`'s own class doc comment for the full per-case rationale.
+
+**Gotcha (2026-08-30, confirmed): `LoadNamePartDictionary` must search recursively.** The
+packaged `heroNameParts.txt.yaml` deploys to `BepInEx\plugins\resources\GameData\`, one level
+deeper than `resources\` itself (same layout as `dynamicStrings*.txt.yaml`). A flat
+`Path.Combine(resourcesDir, fileName)` + `File.Exists` check silently never finds it — no
+exception, just an empty `_namePartDictionary`, so every `GetHeroName` postfix call falls back to
+leaving the surname/given-name part as untranslated Chinese (e.g. "姜 Senior Sister") while the
+relation-word suffix still translates correctly, making it look like only "half" the patch is
+working. Fixed by searching with `Directory.GetFiles(resourcesDir, fileName,
+SearchOption.AllDirectories)`, mirroring `DynamicStringPatches.FindResourceFiles`. If a future
+lookup dictionary is added anywhere in this plugin, default to a recursive search under
+`resources\` rather than a flat path check.
 

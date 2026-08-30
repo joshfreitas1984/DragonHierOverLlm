@@ -232,6 +232,17 @@ namespace Tests
 
             // Additional dynamic-string source; see docs/gamefilehandling-reference.md.
             new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+
+            // SpeHeroData family/given-name halves - a DEDICATED file, deliberately NOT named
+            // "dynamicStrings*" so it never matches DynamicStringPatches' DictionaryFilePattern
+            // glob and never gets merged into that plugin's global substring-replace dictionary
+            // (a bare one/two-character surname is far too easy to accidentally match as a
+            // substring of unrelated Chinese text elsewhere in the game). Reuses the same
+            // DynamicStringsIL2CPP export/translate/package plumbing (see DynamicStringWorkflow -
+            // it is generic over TextFileToSplit.Path, nothing here is hardcoded to "dynamicStrings"
+            // specifically), but the packaged heroNameParts.txt.yaml is loaded and applied ONLY by
+            // HeroNamePatches' own private, exact-match dictionary - see HeroNamePatches.cs.
+            new() {Path = "heroNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
         ];
 
         // Whole-phrase raw display sources; see docs/gamefilehandling-reference.md.
@@ -288,6 +299,24 @@ namespace Tests
             ("SkinDataBase.csv", [2]),
             ("SpeHeroData.csv", [11, 12, 14, 18]),
             ("SummonKungFuData.csv", [13]),
+        ];
+
+        // CSV columns holding a "."-joined compound value where each half needs its own standalone
+        // translated entry, not just the whole joined string. SpeHeroData.csv column 1 (名字/Name,
+        // e.g. "姜.映泉") is the only known case: GameDataController strips the "." separator when
+        // loading the row into HeroData, storing the family-name half in HeroData.heroFamilyName
+        // ("姜") and the full name (family+given, no dot) in HeroData.heroName - so a dictionary
+        // entry for the whole dotted string (already extracted via DynamicStringColumnSources
+        // above) never matches anything at runtime; the family name and given name need to exist
+        // as their own raw candidates so GameController.GetHeroName's relation-title concatenation
+        // (see DragonHeirPlugin/HeroNamePatches.cs) and its bare given-name "former lover" case can
+        // translate each part independently. Consumed by ExtractHeroNamePartCandidates, which
+        // writes into the dedicated heroNameParts.txt file (NOT dynamicStringsFromColumns.txt) -
+        // see that TextFileToSplit entry's comment for why these must stay out of the global
+        // DynamicStringPatches substring-replace dictionary.
+        public static readonly (string CsvFileName, int[] Columns)[] DynamicStringNamePartColumnSources =
+        [
+            ("SpeHeroData.csv", [1]),
         ];
 
         // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.
@@ -359,6 +388,58 @@ namespace Tests
                 ExtractFrom(csvFileName, columns, cell => cell
                     .Split([';', ','], StringSplitOptions.RemoveEmptyEntries)
                     .Select(item => StatLabelRegex.Match(item).Value));
+            }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
+
+        /// <summary>
+        /// Extracts SpeHeroData's "."-joined family/given-name halves (see
+        /// DynamicStringNamePartColumnSources) into their OWN dedicated dump file
+        /// (Raw/Dumped/DynamicStrings/heroNameParts.txt) - deliberately separate from
+        /// dynamicStrings.txt/dynamicStringsFromColumns.txt so these short name fragments never
+        /// end up merged into DynamicStringPatches' global substring-replace dictionary (see the
+        /// "heroNameParts.txt" TextFileToSplit entry's comment). Idempotent: re-running never
+        /// duplicates an already-extracted value.
+        /// </summary>
+        public static void ExtractHeroNamePartCandidates(string workingDirectory)
+        {
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/heroNameParts.txt";
+
+            var seen = new HashSet<string>();
+            if (File.Exists(outputPath))
+                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+
+            var found = new List<string>();
+
+            foreach (var (csvFileName, columns) in DynamicStringNamePartColumnSources)
+            {
+                var csvPath = $"{workingDirectory}/Raw/Dumped/GameData/{csvFileName}";
+                if (!File.Exists(csvPath)) continue;
+
+                // Skip the header row.
+                foreach (var line in File.ReadAllLines(csvPath).Skip(1))
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+
+                    var fields = ParseCsvRow(line);
+                    foreach (var column in columns)
+                    {
+                        if (column >= fields.Length) continue;
+
+                        var cell = fields[column];
+                        if (string.IsNullOrWhiteSpace(cell)) continue;
+
+                        foreach (var value in cell.Split('.', StringSplitOptions.RemoveEmptyEntries))
+                        {
+                            if (string.IsNullOrWhiteSpace(value)) continue;
+                            if (!seen.Add(value)) continue;
+
+                            found.Add(value);
+                        }
+                    }
+                }
             }
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);

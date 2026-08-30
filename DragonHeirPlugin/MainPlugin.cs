@@ -32,10 +32,12 @@ public class MainPlugin : BasePlugin
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         Harmony.CreateAndPatchAll(typeof(MainPlugin));
         Harmony.CreateAndPatchAll(typeof(ResourceIoPatches));
-        Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));        
+        Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.AssetBundleLoadAssetPatch));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
-        Harmony.CreateAndPatchAll(typeof(NameLengthPatches));        
+        Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
+        HeroNamePatches.LoadNamePartDictionary();
+        Harmony.CreateAndPatchAll(typeof(HeroNamePatches));
         DynamicStringPatches.PatchAll();
 
         //Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));

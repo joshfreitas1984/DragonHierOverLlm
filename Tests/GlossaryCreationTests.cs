@@ -183,5 +183,5 @@ public class GlossaryCreationTests
                 await Task.CompletedTask;
             });
         File.WriteAllLines($"{workingDirectory}/TestResults/GlossaryExport/ExportNameData.yaml", glossary);
-    }
+    }    
 }

@@ -1,6 +1,7 @@
 ﻿using FanslationStudio.LlmKit.Configuration;
 using FanslationStudio.LlmKit.Utility;
 using FanslationStudio.LlmKit.Workflow;
+using ToolGood.Words;
 using static FanslationStudio.LlmKit.GameFileHandlingBase;
 
 namespace Tests;
@@ -122,5 +123,41 @@ public class TranslationWorkflowTests
         var yaml = serializer.Serialize(failures);
         File.WriteAllText($"{workingDirectory}/TestResults/FailedTranslations.yaml", yaml);
         File.WriteAllLines($"{workingDirectory}/TestResults/ForManualTrans.yaml", forTheGlossary);
+    }
+
+    [Fact(DisplayName = "7. Reset hero names")]
+    public async Task ResetHeroNames()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var config = ConfigurationExtensions.GetConfiguration(workingDirectory);
+
+        var output = new List<string>();
+
+        await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
+            GameFileHandling.TextFilesToSplit,
+            async (outputFile, textFileToTranslate, fileLines) =>
+            {
+                if (textFileToTranslate.Path != "heroNameParts.txt")
+                    return;
+
+                foreach (var line in fileLines)
+                {
+                    for (int i = 0; i < line.Splits.Count; i++)
+                    {
+                        var raw = line.Splits[i].Text;
+                        var pinyin = WordsHelper.GetPinyin(raw).ToLower();
+                        pinyin = char.ToUpper(pinyin[0]) + pinyin.Substring(1, pinyin.Length - 1);
+
+                        line.Splits[i].Translated = pinyin;
+                    }
+                }
+
+                var serializer = YamlHelper.CreateSerializer();
+                var content = serializer.Serialize(fileLines);
+
+                File.WriteAllText($"{workingDirectory}/Converted/heroNameParts.txt.yaml", content);
+
+                await Task.CompletedTask;
+            });
     }
 }

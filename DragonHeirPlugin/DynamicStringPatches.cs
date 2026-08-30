@@ -732,6 +732,12 @@ internal static class DynamicStringPatches
         return false;
     }
 
+    // Public entry point for other patch classes (e.g. HeroNamePatches) that need to translate a
+    // raw Chinese fragment - such as a family/given name sliced out of a native string
+    // concatenation - using this same loaded substring dictionary, outside of the
+    // Concat/Format/text-setter hooks this class patches itself.
+    public static string TranslateFragment(string input) => ApplyDictionary(input, _dictionary);
+
     private static string ApplyDictionary(string input, List<DictionaryEntry> dictionary)
     {
         var result = input;
