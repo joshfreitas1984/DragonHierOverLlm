@@ -79699,15 +79699,15 @@
     translated: "I had planned to wait a few days, until #PlayerName# had mastered the Great Ancestor Long Fist, and then give some guidance."
   - split: 10
     subIndex: 1
-    text: "没想到你进展如此迅速，这么快就遇到了“"
-    translated: "'I didn't expect your progress to be so rapid; you've encountered a “"
+    text: "没想到你进展如此迅速，这么快就遇到了"
+    translated: "I didn't expect your progress to be so rapid; you've encountered a "
   - split: 10
     subIndex: 2
     text: "瓶颈"
     translated: "Bottleneck"
   templates:
   - split: 10
-    template: "{0}\\n{1}<b>{2}</b>”！"
+    template: "{0}\\n{1}“<b>{2}</b>”！"
 - raw: ",,,右,,,,,,,需知习武练功，人人都会遇到瓶颈，此事并无什么稀奇。\\n<b>太祖长拳这种基础武功，只会在第九重升级到第十重时，遇到一次瓶颈。</b>"
   splits:
   - split: 10
