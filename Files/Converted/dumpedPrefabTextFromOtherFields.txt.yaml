@@ -1003,10 +1003,10 @@
 - raw: "一名#TargetForceDescribe#在山门口徘徊已久，\\n似乎是为拜访本派掌门而来。"
   splits:
   - text: "一名#TargetForceDescribe#在山门口徘徊已久，"
-    translated: "A member of the Target Force, #TargetForceDescribe#, has been loitering by the mountain gate for a while."
+    translated: "A member of #TargetForceDescribe# has been loitering by the mountain gate for a while."
   - subIndex: 1
     text: "似乎是为拜访本派掌门而来。"
-    translated: "It seems you have come to visit the Sect Master."
+    translated: "It seems they have come to visit the Sect Master."
   templates:
   - template: "{0}\\n{1}"
 - raw: "一名作恶多端的魔头近日在#TargetPlace#显露踪迹，此人武功高强，心狠手辣，还望武林人士尽快将其捉拿归案。"

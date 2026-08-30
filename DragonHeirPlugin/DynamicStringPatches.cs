@@ -86,6 +86,9 @@ internal static class DynamicStringPatches
     // LoadDictionary) so adding a new source file never requires a plugin-side path change.
     private const string DictionaryFilePattern = "dynamicStrings*.txt.yaml";
 
+    // TEMP DIAGNOSTIC file path - see ApplyToComponentText's residual-CJK log block.
+    private static readonly string ResidualCjkLogFile = Path.Combine(PluginDir, "residual_cjk_debug.log");
+
     // PrefabTextPatches.cs's own dictionary files (same "raw"/"result" flat-list shape, no
     // "isTemplate" key). Merged in at startup (see LoadDictionary) so quest-name/place-name-style
     // whole-phrase strings that PrefabTextPatches only exact-matches (e.g. "初出茅庐") are ALSO
@@ -522,6 +525,31 @@ internal static class DynamicStringPatches
                         if (string.IsNullOrEmpty(entry.Raw) || !existingRaw.Add(entry.Raw))
                             continue;
 
+                        // CONFIRMED BUG (2026-08-30, "此次特地前来拜访" screenshot case,
+                        // found right after this merge was added): dumpedPrefabText*.txt.yaml's
+                        // Raw/Result values use a DIFFERENT newline-escaping convention than
+                        // dynamicStrings.txt.yaml's own native entries. AssetDumperWorkflowTests
+                        // pre-escapes a real line break into a literal two-char "\n" (backslash +
+                        // n) BEFORE writing the YAML (see PrefabTextPatches.NormalizeForLookup's
+                        // comment), so after YamlDotNet parses the double-quoted YAML scalar,
+                        // entry.Raw/Result here still contain that literal two-char sequence.
+                        // dynamicStrings.txt.yaml's own entries, by contrast, embed a PLAIN YAML
+                        // "\n" escape directly (e.g. "，\n此次..."), which YamlDotNet decodes to a
+                        // REAL newline CHARACTER - the convention every dynamicStrings
+                        // template/fragment (and Concat/Format/TMP_Text runtime string) actually
+                        // uses. An earlier attempt fixed this by normalizing the RUNTIME string at
+                        // match time (real newline -> literal "\n") - this was WRONG: it broke
+                        // every pre-existing dynamicStrings template containing a real newline
+                        // (e.g. "在下#TargetForceDescribe##$TargetInteractName#，\n此次特地前来拜访..."
+                        // at line ~7383), since the runtime string's real newline no longer
+                        // matched their real-newline literal segments once converted away. Correct
+                        // fix: convert ONLY the merged-in PrefabText entries here, once, at load
+                        // time, into dynamicStrings' own real-newline convention - no runtime
+                        // normalization needed anywhere.
+                        entry.Raw = entry.Raw.Replace("\\n", "\n");
+                        if (entry.Result != null)
+                            entry.Result = entry.Result.Replace("\\n", "\n");
+
                         // PrefabText's own dictionary files never carry an "isTemplate" key
                         // (PrefabTextPatches only ever does exact whole-string matching, it has no
                         // template concept), so it always deserializes as false here regardless of
@@ -631,17 +659,12 @@ internal static class DynamicStringPatches
         _inFormatConcatPatch = true;
         try
         {
-            // NormalizeForLookup/DenormalizeFromLookup - see their comments below: dictionary/
-            // template Raw values loaded from the flat YAML dumps store multi-line text with a
-            // literal "\n" (two chars), but a real Concat/Format result can already contain an
-            // actual newline character baked in from source, so match against the normalized form
-            // and denormalize the final result back before returning it.
-            var result = NormalizeForLookup(__result);
+            var result = __result;
             if (_compiledTemplates.Count > 0)
                 result = ApplyTemplates(result, _compiledTemplates);
             if (_dictionary.Count > 0)
                 result = ApplyDictionary(result, _dictionary);
-            __result = DenormalizeFromLookup(result);
+            __result = result;
         }
         catch (Exception ex)
         {
@@ -674,10 +697,7 @@ internal static class DynamicStringPatches
         _inFormatConcatPatch = true;
         try
         {
-            // See NormalizeForLookup/DenormalizeFromLookup's comments - same real-newline-vs-
-            // literal-"\n" mismatch can occur in a still-templated format string as in an
-            // already-formatted Concat/Format result.
-            format = DenormalizeFromLookup(ApplyDictionary(NormalizeForLookup(format), _templateDictionary));
+            format = ApplyDictionary(format, _templateDictionary);
         }
         catch (Exception ex)
         {
@@ -688,27 +708,6 @@ internal static class DynamicStringPatches
             _inFormatConcatPatch = false;
         }
     }
-
-    // CONFIRMED BUG (2026-08-30, "在 One个 Month Inside Improve Great Ancestor Long Fist..."
-    // screenshot case): a long whole-phrase dictionary entry merged in from
-    // dumpedPrefabTextFromOtherFields.txt.yaml (e.g. a quest task description followed by an
-    // italic hint block on the next line) failed to match at all here, even though every shorter
-    // word within it matched fine individually via its own standalone fragment entry - the giveaway
-    // that this is the SAME newline-escaping bug PrefabTextPatches.cs already fixed for its own
-    // exact-match lookup (see PrefabTextPatches.NormalizeForLookup's comment): dumped/packaged
-    // dictionary Raw values collapse a real line-break into a literal "\n" (backslash + n, two
-    // chars - see AssetDumperWorkflowTests.cs's `text.Replace("\n", "\\n")`), but a live
-    // Concat/Format result or TMP_Text/UI.Text component's runtime text contains an ACTUAL newline
-    // character at that position - so any dictionary/template entry whose literal text spans
-    // across an embedded line break can never match via a plain substring/regex check against the
-    // untouched runtime string. Normalizing the runtime string into the same escaped form before
-    // matching (and denormalizing the result back afterward) fixes this the same way
-    // PrefabTextPatches already does for its own single exact-match lookup - this is the
-    // substring/regex-matching equivalent, needed at every entry point here (GenericPostfix,
-    // FormatPrefix, ApplyToComponentText) since none of them previously did this normalization.
-    private static string NormalizeForLookup(string text) => text.Replace("\n", "\\n").Replace("\r", string.Empty);
-
-    private static string DenormalizeFromLookup(string text) => text.Replace("\\n", "\n");
 
     // Sink-level patch: catches text that reaches a TMP_Text/UI.Text component regardless of how
     // it was built (concatenation, string.Format, or - the case String.Concat/Format patching
@@ -747,15 +746,29 @@ internal static class DynamicStringPatches
             if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
             if (!ContainsCjk(current)) return;
 
-            // See NormalizeForLookup/DenormalizeFromLookup's comment above FormatPrefix - a live
-            // component's .text can contain a real newline where dictionary/template Raw values
-            // only ever store a literal "\n".
-            var replaced = NormalizeForLookup(current);
+            var replaced = current;
             if (_compiledTemplates.Count > 0)
                 replaced = ApplyTemplates(replaced, _compiledTemplates);
             if (_dictionary.Count > 0)
                 replaced = ApplyDictionary(replaced, _dictionary);
-            replaced = DenormalizeFromLookup(replaced);
+
+            // TEMP DIAGNOSTIC (2026-08-30, "仙霞.派"/"伏牛派" ForceDescribe untranslated-residue
+            // investigation - see repo memory forcedescribe-residual-cjk-investigation.md): logs
+            // the raw pre-translation and final post-translation text whenever CJK survives after
+            // both passes ran, to a SEPARATE file via direct File.AppendAllText (never
+            // MainPlugin.Logger - see the logger re-entrancy note on GenericPostfix above; same
+            // risk applies here). Remove once the root cause of these two force-describe cases is
+            // confirmed and fixed.
+            if (ContainsCjk(replaced))
+            {
+                try
+                {
+                    File.AppendAllText(ResidualCjkLogFile,
+                        $"[{DateTime.Now:HH:mm:ss.fff}] RAW='{current}' FINAL='{replaced}'{Environment.NewLine}");
+                }
+                catch { /* best-effort diagnostic only */ }
+            }
+
             if (replaced == current) return;
 
             setText(replaced);
