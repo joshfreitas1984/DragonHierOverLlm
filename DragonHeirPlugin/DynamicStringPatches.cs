@@ -86,6 +86,22 @@ internal static class DynamicStringPatches
     // LoadDictionary) so adding a new source file never requires a plugin-side path change.
     private const string DictionaryFilePattern = "dynamicStrings*.txt.yaml";
 
+    // PrefabTextPatches.cs's own dictionary files (same "raw"/"result" flat-list shape, no
+    // "isTemplate" key). Merged in at startup (see LoadDictionary) so quest-name/place-name-style
+    // whole-phrase strings that PrefabTextPatches only exact-matches (e.g. "初出茅庐") are ALSO
+    // available as a substring fragment - or, for entries containing the game's own "#Token#"
+    // placeholders (e.g. quest-task descriptions like "前往#TargetPlace#与顾师兄汇合。"), as a
+    // compiled template - for ApplyDictionary/ApplyTemplates to catch when the same text is
+    // concatenated/substituted with other runtime data at a call site PrefabTextPatches' exact
+    // whole-string match can never see (e.g. the quest tracker's "questName(placeName)", or a
+    // quest task description with its "#TargetPlace#" token already substituted with real place
+    // text - confirmed 2026-08-30 for both cases). Doing this merge here (rather than manually
+    // duplicating quest-name-style entries into the dynamicStrings source data) makes it
+    // repeatable: PrefabTextWorkflow's dumped/translated entries are already the single source of
+    // truth for these phrases, so any future addition/edit there is picked up automatically on
+    // next plugin load with no separate copy step.
+    private const string PrefabTextFilePattern = "dumpedPrefabText*.txt.yaml";
+
     private static List<DictionaryEntry> _dictionary = new();
 
     // Entries flagged isTemplate: true in the packaged YAML (FanslationStudio.LlmKit's
@@ -486,6 +502,59 @@ internal static class DynamicStringPatches
                 }
             }
 
+            // Merge in PrefabTextPatches' own dictionary files as additional bare fragments/
+            // templates (see PrefabTextFilePattern's comment above) - deduped against Raw values
+            // already present above, so an explicit dynamicStrings entry (which may be worded/
+            // context-tuned differently) always wins over a merged-in prefab-text one for the
+            // same raw phrase.
+            var existingRaw = new HashSet<string>(entries.Select(e => e.Raw).Where(r => !string.IsNullOrEmpty(r)));
+            var mergedFromPrefabText = 0;
+            foreach (var path in FindResourceFiles(PrefabTextFilePattern))
+            {
+                try
+                {
+                    var yaml = File.ReadAllText(path);
+                    var fileEntries = deserializer.Deserialize<List<DictionaryEntry>>(yaml);
+                    if (fileEntries == null) continue;
+
+                    foreach (var entry in fileEntries)
+                    {
+                        if (string.IsNullOrEmpty(entry.Raw) || !existingRaw.Add(entry.Raw))
+                            continue;
+
+                        // PrefabText's own dictionary files never carry an "isTemplate" key
+                        // (PrefabTextPatches only ever does exact whole-string matching, it has no
+                        // template concept), so it always deserializes as false here regardless of
+                        // shape. But some "other field" entries (e.g. quest-task descriptions) DO
+                        // contain the game's own "#Token#"-style localization placeholders (e.g.
+                        // "前往#TargetPlace#与顾师兄汇合。") which get substituted with real
+                        // (already-translated) text by the game BEFORE this string ever reaches a
+                        // patched call/setter - so merging such an entry in as a bare fragment
+                        // would never match (the literal "#TargetPlace#" text is long gone by
+                        // then). Detect this via the same PlaceholderOrTokenRegex
+                        // BuildCompiledTemplate already uses, and route these into the template
+                        // dictionary instead so they get compiled into a structural/regex matcher
+                        // (confirmed 2026-08-30: quest tracker showing "Proceed Xianxia Sect
+                        // Training Grounds And 顾 Senior Brother 汇 Merge。" - the whole-phrase
+                        // entry never matched at all, so only isolated bare fragments elsewhere in
+                        // dynamicStrings.txt.yaml applied, leaving "顾"/"汇"/"。" untranslated).
+                        entry.IsTemplate = PlaceholderOrTokenRegex.IsMatch(entry.Raw);
+                        entries.Add(entry);
+                        mergedFromPrefabText++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to load '{path}': {ex}");
+                }
+            }
+
+            if (mergedFromPrefabText > 0)
+            {
+                MainPlugin.Logger.LogInfo(
+                    $"[DynamicStringPatches] Merged {mergedFromPrefabText} additional fragment(s) from '{PrefabTextFilePattern}'.");
+            }
+
             // Precompute each entry's visible replacement edge chars once (see
             // DictionaryEntry.ReplacementLeadChar/ReplacementTrailChar) rather than on every match
             // at call time - see the perf note on those fields for why this matters.
@@ -562,12 +631,17 @@ internal static class DynamicStringPatches
         _inFormatConcatPatch = true;
         try
         {
-            var result = __result;
+            // NormalizeForLookup/DenormalizeFromLookup - see their comments below: dictionary/
+            // template Raw values loaded from the flat YAML dumps store multi-line text with a
+            // literal "\n" (two chars), but a real Concat/Format result can already contain an
+            // actual newline character baked in from source, so match against the normalized form
+            // and denormalize the final result back before returning it.
+            var result = NormalizeForLookup(__result);
             if (_compiledTemplates.Count > 0)
                 result = ApplyTemplates(result, _compiledTemplates);
             if (_dictionary.Count > 0)
                 result = ApplyDictionary(result, _dictionary);
-            __result = result;
+            __result = DenormalizeFromLookup(result);
         }
         catch (Exception ex)
         {
@@ -600,7 +674,10 @@ internal static class DynamicStringPatches
         _inFormatConcatPatch = true;
         try
         {
-            format = ApplyDictionary(format, _templateDictionary);
+            // See NormalizeForLookup/DenormalizeFromLookup's comments - same real-newline-vs-
+            // literal-"\n" mismatch can occur in a still-templated format string as in an
+            // already-formatted Concat/Format result.
+            format = DenormalizeFromLookup(ApplyDictionary(NormalizeForLookup(format), _templateDictionary));
         }
         catch (Exception ex)
         {
@@ -611,6 +688,27 @@ internal static class DynamicStringPatches
             _inFormatConcatPatch = false;
         }
     }
+
+    // CONFIRMED BUG (2026-08-30, "在 One个 Month Inside Improve Great Ancestor Long Fist..."
+    // screenshot case): a long whole-phrase dictionary entry merged in from
+    // dumpedPrefabTextFromOtherFields.txt.yaml (e.g. a quest task description followed by an
+    // italic hint block on the next line) failed to match at all here, even though every shorter
+    // word within it matched fine individually via its own standalone fragment entry - the giveaway
+    // that this is the SAME newline-escaping bug PrefabTextPatches.cs already fixed for its own
+    // exact-match lookup (see PrefabTextPatches.NormalizeForLookup's comment): dumped/packaged
+    // dictionary Raw values collapse a real line-break into a literal "\n" (backslash + n, two
+    // chars - see AssetDumperWorkflowTests.cs's `text.Replace("\n", "\\n")`), but a live
+    // Concat/Format result or TMP_Text/UI.Text component's runtime text contains an ACTUAL newline
+    // character at that position - so any dictionary/template entry whose literal text spans
+    // across an embedded line break can never match via a plain substring/regex check against the
+    // untouched runtime string. Normalizing the runtime string into the same escaped form before
+    // matching (and denormalizing the result back afterward) fixes this the same way
+    // PrefabTextPatches already does for its own single exact-match lookup - this is the
+    // substring/regex-matching equivalent, needed at every entry point here (GenericPostfix,
+    // FormatPrefix, ApplyToComponentText) since none of them previously did this normalization.
+    private static string NormalizeForLookup(string text) => text.Replace("\n", "\\n").Replace("\r", string.Empty);
+
+    private static string DenormalizeFromLookup(string text) => text.Replace("\\n", "\n");
 
     // Sink-level patch: catches text that reaches a TMP_Text/UI.Text component regardless of how
     // it was built (concatenation, string.Format, or - the case String.Concat/Format patching
@@ -649,11 +747,15 @@ internal static class DynamicStringPatches
             if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
             if (!ContainsCjk(current)) return;
 
-            var replaced = current;
+            // See NormalizeForLookup/DenormalizeFromLookup's comment above FormatPrefix - a live
+            // component's .text can contain a real newline where dictionary/template Raw values
+            // only ever store a literal "\n".
+            var replaced = NormalizeForLookup(current);
             if (_compiledTemplates.Count > 0)
                 replaced = ApplyTemplates(replaced, _compiledTemplates);
             if (_dictionary.Count > 0)
                 replaced = ApplyDictionary(replaced, _dictionary);
+            replaced = DenormalizeFromLookup(replaced);
             if (replaced == current) return;
 
             setText(replaced);
