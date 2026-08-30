@@ -79616,11 +79616,11 @@
   splits:
   - split: 10
     text: "咳咳咳额咳咳！#PlayerName#没看到我正闭关修炼呢么"
-    translated: "Cough cough! #PlayerName# wasn't you meditating just now?"
+    translated: "Cough cough! #PlayerName# can't you see I'm in seclusion training?"
   - split: 10
     subIndex: 1
     text: "被你这么一惊，差点是走火入魔啊！"
-    translated: "You nearly went astray by giving me such a start!"
+    translated: "You startled me so much, I almost lost control!"
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -79700,7 +79700,7 @@
   - split: 10
     subIndex: 1
     text: "没想到你进展如此迅速，这么快就遇到了“"
-    translated: "'I didn't expect your progress to be so rapid; you've encountered"
+    translated: "'I didn't expect your progress to be so rapid; you've encountered a “"
   - split: 10
     subIndex: 2
     text: "瓶颈"

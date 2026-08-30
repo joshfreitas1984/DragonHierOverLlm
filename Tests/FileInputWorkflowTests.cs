@@ -67,6 +67,13 @@ public class FileInputWorkflowTests
         // that case dynamicStrings.txt must already exist from a previous run or "1c." will fail.
         GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap(GameFileHandling.WorkingDirectory);
 
+        // Source 4: splits ';'-joined structured-record candidates (only ever found whole inside
+        // a binary literal dumped by Source 3 above, e.g. "包扎;HospitalCureExternalInjury;;;
+        // 技能影响:医术") into their own standalone Name/Description-style fragments - see
+        // GameFileHandling.ExtractStructuredRecordFragmentCandidates' doc comment. Must run after
+        // Source 3, which is what refreshes the master dump this reads from.
+        GameFileHandling.ExtractStructuredRecordFragmentCandidates(GameFileHandling.WorkingDirectory);
+
         GameFileHandling.ExportDynamicStringTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
     }
 

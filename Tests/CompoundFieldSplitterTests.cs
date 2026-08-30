@@ -312,6 +312,32 @@ public class CompoundFieldSplitterTests
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
 
+    [Fact(DisplayName = "A quote pair whose opening mark is glued onto the end of a fragment and whose closing mark is embedded inside a later literal (past an intervening HTML tag) still stays together as template literal text around the placeholder")]
+    public void QuotePairWithOpenMarkGluedToFragmentAndCloseMarkPastHtmlTagStaysInTemplate()
+    {
+        var original = "我本想过几天，等到#PlayerName#这太祖长拳练得差不多了，再加以指点。\\n没想到你进展如此迅速，这么快就遇到了“<b>瓶颈</b>”！";
+        var options = new CompoundFieldSplitterOptions
+        {
+            PlaceholderPatterns = [new Regex(@"#\w+#", RegexOptions.Compiled)]
+        };
+
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original, options);
+
+        // The opening "“" must stay glued to the sentence in fragment {1} and the closing "”"
+        // must stay in the template literal right before the "！" - not get pulled into fragment
+        // {2} (the previous bug produced template "{0}\\n{1}<b>{2}</b>”！", stranding the opening
+        // quote inside fragment {1} with no matching close anywhere in the template).
+        Assert.Equal("{0}\\n{1}“<b>{2}</b>”！", template);
+        Assert.Equal(
+            [
+                "我本想过几天，等到#PlayerName#这太祖长拳练得差不多了，再加以指点。",
+                "没想到你进展如此迅速，这么快就遇到了",
+                "瓶颈"
+            ],
+            fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
     [Fact(DisplayName = "Reconstruct inserts a word-boundary space between literal template text and an adjacent translated fragment, skipping past HTML tags")]
     public void ReconstructInsertsWordBoundarySpaceAroundTranslatedFragmentAcrossTags()
     {

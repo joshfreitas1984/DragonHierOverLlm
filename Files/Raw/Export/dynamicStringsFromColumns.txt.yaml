@@ -39136,3 +39136,1895 @@
 - raw: "名驹"
   splits:
   - text: "名驹"
+- raw: "(不观战)"
+  splits:
+  - text: "不观战"
+  templates:
+  - template: "({0})"
+- raw: "不观看其他角色之间的对战"
+  splits:
+  - text: "不观看其他角色之间的对战"
+- raw: "(观战)"
+  splits:
+  - text: "观战"
+  templates:
+  - template: "({0})"
+- raw: "其他角色对战时会询问是否观看"
+  splits:
+  - text: "其他角色对战时会询问是否观看"
+- raw: "10000两"
+  splits:
+  - text: "10000两"
+- raw: "1000两"
+  splits:
+  - text: "1000两"
+- raw: "100两"
+  splits:
+  - text: "100两"
+- raw: "10天"
+  splits:
+  - text: "10天"
+- raw: "15天"
+  splits:
+  - text: "15天"
+- raw: "1天"
+  splits:
+  - text: "1天"
+- raw: "2000两"
+  splits:
+  - text: "2000两"
+- raw: "5000两"
+  splits:
+  - text: "5000两"
+- raw: "500两"
+  splits:
+  - text: "500两"
+- raw: "5天"
+  splits:
+  - text: "5天"
+- raw: "<color=#{1}>第{0}层</color>"
+  splits:
+  - text: "第"
+  - subIndex: 1
+    text: "层"
+  templates:
+  - template: "<color=#⟦1⟧>{0}⟦0⟧{1}</color>"
+- raw: "学识{2}排除"
+  splits:
+  - text: "学识"
+  - subIndex: 1
+    text: "排除"
+  templates:
+  - template: "{0}⟦2⟧{1}"
+- raw: "{0}周边情报"
+  splits:
+  - text: "周边情报"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "{0}宴会({1}日)"
+  splits:
+  - text: "宴会"
+  - subIndex: 1
+    text: "日"
+  templates:
+  - template: "⟦0⟧{0}(⟦1⟧{1})"
+- raw: "基础评分{5}\n基础加成{6}%"
+  splits:
+  - text: "基础评分"
+  - subIndex: 1
+    text: "基础加成"
+  templates:
+  - template: "{0}⟦5⟧\n{1}⟦6⟧%"
+- raw: "{0}教化"
+  splits:
+  - text: "教化"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "♦以{0}教化贼人\n♦获取声望和{0}修行经验"
+  splits:
+  - text: "以"
+  - subIndex: 1
+    text: "教化贼人"
+  - subIndex: 2
+    text: "获取声望和"
+  - subIndex: 3
+    text: "修行经验"
+  templates:
+  - template: "♦{0}⟦0⟧{1}\n♦{2}⟦0⟧{3}"
+- raw: "{0}表演"
+  splits:
+  - text: "表演"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "{0}难度"
+  splits:
+  - text: "难度"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "一个都答不上..."
+  splits:
+  - text: "一个都答不上..."
+- raw: "一探究竟"
+  splits:
+  - text: "一探究竟"
+- raw: "一番感激"
+  splits:
+  - text: "一番感激"
+- raw: "一言为定"
+  splits:
+  - text: "一言为定"
+- raw: "一较高下"
+  splits:
+  - text: "一较高下"
+- raw: "万份感谢"
+  splits:
+  - text: "万份感谢"
+- raw: "不妨一看"
+  splits:
+  - text: "不妨一看"
+- raw: "不客气了"
+  splits:
+  - text: "不客气了"
+- raw: "不必客气"
+  splits:
+  - text: "不必客气"
+- raw: "不感兴趣"
+  splits:
+  - text: "不感兴趣"
+- raw: "不自量力"
+  splits:
+  - text: "不自量力"
+- raw: "不醉不归！"
+  splits:
+  - text: "不醉不归！"
+- raw: "与{0}分享"
+  splits:
+  - text: "与"
+  - subIndex: 1
+    text: "分享"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "个人赠礼"
+  splits:
+  - text: "个人赠礼"
+- raw: "中级嘉奖"
+  splits:
+  - text: "中级嘉奖"
+- raw: "中额红包"
+  splits:
+  - text: "中额红包"
+- raw: "中额赠礼"
+  splits:
+  - text: "中额赠礼"
+- raw: "强盗头目&随机"
+  splits:
+  - text: "强盗头目"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "事件难度+0.5"
+  splits:
+  - text: "事件难度"
+  templates:
+  - template: "{0}+0.5"
+- raw: "怪盗&随机"
+  splits:
+  - text: "怪盗"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.2"
+  splits:
+  - text: "随机0.2"
+- raw: "事件难度+1"
+  splits:
+  - text: "事件难度"
+  templates:
+  - template: "{0}+1"
+- raw: "恶贼头目&随机"
+  splits:
+  - text: "恶贼头目"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.3"
+  splits:
+  - text: "随机0.3"
+- raw: "恶霸头目&随机"
+  splits:
+  - text: "恶霸头目"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "杀手头目&随机"
+  splits:
+  - text: "杀手头目"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.4"
+  splits:
+  - text: "随机0.4"
+- raw: "盗贼&随机"
+  splits:
+  - text: "盗贼"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.6"
+  splits:
+  - text: "随机0.6"
+- raw: "逃犯&随机"
+  splits:
+  - text: "逃犯"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "邪道头目&随机"
+  splits:
+  - text: "邪道头目"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.1"
+  splits:
+  - text: "随机0.1"
+- raw: "随机0"
+  splits:
+  - text: "随机0"
+- raw: "马贼头目&随机"
+  splits:
+  - text: "马贼头目"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.5"
+  splits:
+  - text: "随机0.5"
+- raw: "魔头&随机"
+  splits:
+  - text: "魔头"
+  - subIndex: 1
+    text: "随机"
+  templates:
+  - template: "{0}&{1}"
+- raw: "事件难度+1.5"
+  splits:
+  - text: "事件难度"
+  templates:
+  - template: "{0}+1.5"
+- raw: "为其践行"
+  splits:
+  - text: "为其践行"
+- raw: "举手之劳"
+  splits:
+  - text: "举手之劳"
+- raw: "义不容辞"
+  splits:
+  - text: "义不容辞"
+- raw: "乖乖交钱"
+  splits:
+  - text: "乖乖交钱"
+- raw: "乘机开溜"
+  splits:
+  - text: "乘机开溜"
+- raw: "乞讨"
+  splits:
+  - text: "乞讨"
+- raw: "买下宝物"
+  splits:
+  - text: "买下宝物"
+- raw: "了解周遭情况"
+  splits:
+  - text: "了解周遭情况"
+- raw: "了解远处情况"
+  splits:
+  - text: "了解远处情况"
+- raw: "二人平分"
+  splits:
+  - text: "二人平分"
+- raw: "二位住手，要打就打我吧"
+  splits:
+  - text: "二位住手，要打就打我吧"
+- raw: "♦好友关系好感获取+10%，好感消耗-10%\n♦对好友作恶，恶名x200%"
+  splits:
+  - text: "好友关系好感获取+10%，好感消耗"
+  - subIndex: 1
+    text: "对好友作恶，恶名"
+  templates:
+  - template: "♦{0}-10%\n♦{1}x200%"
+- raw: "♦亲密关系好感获取+20%，好感消耗-20%\n♦对亲友作恶，恶名x400%"
+  splits:
+  - text: "亲密关系好感获取+20%，好感消耗"
+  - subIndex: 1
+    text: "对亲友作恶，恶名"
+  templates:
+  - template: "♦{0}-20%\n♦{1}x400%"
+- raw: "以武论道"
+  splits:
+  - text: "以武论道"
+- raw: "以理说服"
+  splits:
+  - text: "以理说服"
+- raw: "伏地恳求"
+  splits:
+  - text: "伏地恳求"
+- raw: "休养"
+  splits:
+  - text: "休养"
+- raw: "传授"
+  splits:
+  - text: "传授"
+- raw: "♦传授弟子武功无好感要求\n♦武功品级不能超过对方身份等级\n♦每月最多一次"
+  splits:
+  - text: "传授弟子武功无好感要求"
+  - subIndex: 1
+    text: "武功品级不能超过对方身份等级"
+  - subIndex: 2
+    text: "每月最多一次"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "传授技艺潜力"
+  splits:
+  - text: "传授技艺潜力"
+- raw: "♦你的潜力比对方高出越多，效果越好\n♦提升2点好感"
+  splits:
+  - text: "你的潜力比对方高出越多，效果越好"
+  - subIndex: 1
+    text: "提升2点好感"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "传授技艺经验"
+  splits:
+  - text: "传授技艺经验"
+- raw: "♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
+  splits:
+  - text: "你的技艺比对方高出越多，效果越好"
+  - subIndex: 1
+    text: "提升2点好感"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "传授此武学"
+  splits:
+  - text: "传授此武学"
+- raw: "传授此秘籍"
+  splits:
+  - text: "传授此秘籍"
+- raw: "传授武学"
+  splits:
+  - text: "传授武学"
+- raw: "♦传授自己掌握的武学"
+  splits:
+  - text: "传授自己掌握的武学"
+  templates:
+  - template: "♦{0}"
+- raw: "传授秘籍"
+  splits:
+  - text: "传授秘籍"
+- raw: "♦传授背包/仓库/藏经阁内秘籍记载的武学"
+  splits:
+  - text: "传授背包"
+  - subIndex: 1
+    text: "仓库"
+  - subIndex: 2
+    text: "藏经阁内秘籍记载的武学"
+  templates:
+  - template: "♦{0}/{1}/{2}"
+- raw: "低价出售({0}两)"
+  splits:
+  - text: "低价出售"
+  - subIndex: 1
+    text: "两"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "使用钥匙"
+  splits:
+  - text: "使用钥匙"
+- raw: "修习{0}口诀"
+  splits:
+  - text: "修习"
+  - subIndex: 1
+    text: "口诀"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "修习{0}潜力"
+  splits:
+  - text: "修习"
+  - subIndex: 1
+    text: "潜力"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "修改本门弟子折扣"
+  splits:
+  - text: "修改本门弟子折扣"
+- raw: "修改非本门弟子折扣"
+  splits:
+  - text: "修改非本门弟子折扣"
+- raw: "修炼{0}"
+  splits:
+  - text: "修炼"
+  templates:
+  - template: "{0}⟦0⟧"
+- raw: "修行..."
+  splits:
+  - text: "修行..."
+- raw: "停战{0}个月"
+  splits:
+  - text: "停战"
+  - subIndex: 1
+    text: "个月"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "至少需{2}门派好感\n消耗{3}门派好感"
+  splits:
+  - text: "至少需"
+  - subIndex: 1
+    text: "门派好感"
+  - subIndex: 2
+    text: "消耗"
+  - subIndex: 3
+    text: "门派好感"
+  templates:
+  - template: "{0}⟦2⟧{1}\n{2}⟦3⟧{3}"
+- raw: "充分休息"
+  splits:
+  - text: "充分休息"
+- raw: "先生高义，万分感谢"
+  splits:
+  - text: "先生高义，万分感谢"
+- raw: "先追上我再说"
+  splits:
+  - text: "先追上我再说"
+- raw: "免费赠与"
+  splits:
+  - text: "免费赠与"
+- raw: "免费赠送"
+  splits:
+  - text: "免费赠送"
+- raw: "兑换该武学"
+  splits:
+  - text: "兑换该武学"
+- raw: "入朝主政"
+  splits:
+  - text: "入朝主政"
+- raw: "入朝掌兵"
+  splits:
+  - text: "入朝掌兵"
+- raw: "入派"
+  splits:
+  - text: "入派"
+- raw: "♦邀请眷侣加入自己门派"
+  splits:
+  - text: "邀请眷侣加入自己门派"
+  templates:
+  - template: "♦{0}"
+- raw: "入队"
+  splits:
+  - text: "入队"
+- raw: "♦邀请对方入队30天\n♦{0}{2}"
+  splits:
+  - text: "邀请对方入队30天"
+  templates:
+  - template: "♦{0}\n♦⟦0⟧⟦2⟧"
+- raw: "内功 吐纳法"
+  splits:
+  - text: "内功"
+  - subIndex: 1
+    text: "吐纳法"
+  templates:
+  - template: "{0} {1}"
+- raw: "♦与对方结束师徒关系"
+  splits:
+  - text: "与对方结束师徒关系"
+  templates:
+  - template: "♦{0}"
+- raw: "出征！"
+  splits:
+  - text: "出征！"
+- raw: "出手伤人"
+  splits:
+  - text: "出手伤人"
+- raw: "♦重伤对方\n♦增加10恶名"
+  splits:
+  - text: "重伤对方"
+  - subIndex: 1
+    text: "增加10恶名"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "出手吧"
+  splits:
+  - text: "出手吧"
+- raw: "出手吧！"
+  splits:
+  - text: "出手吧！"
+- raw: "出手威逼"
+  splits:
+  - text: "出手威逼"
+- raw: "出手阻止"
+  splits:
+  - text: "出手阻止"
+- raw: "出钱了事"
+  splits:
+  - text: "出钱了事"
+- raw: "分手"
+  splits:
+  - text: "分手"
+- raw: "♦结束情侣关系\n♦降低100点好感\n♦固定增加20恶名"
+  splits:
+  - text: "结束情侣关系"
+  - subIndex: 1
+    text: "降低100点好感"
+  - subIndex: 2
+    text: "固定增加20恶名"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "分文不取"
+  splits:
+  - text: "分文不取"
+- raw: "分而食之"
+  splits:
+  - text: "分而食之"
+- raw: "切磋出师"
+  splits:
+  - text: "切磋出师"
+- raw: "初级嘉奖"
+  splits:
+  - text: "初级嘉奖"
+- raw: "别生气啊"
+  splits:
+  - text: "别生气啊"
+- raw: "刷新展品"
+  splits:
+  - text: "刷新展品"
+- raw: "割据一方"
+  splits:
+  - text: "割据一方"
+- raw: "劝入门派"
+  splits:
+  - text: "劝入门派"
+- raw: "动之以理"
+  splits:
+  - text: "动之以理"
+- raw: "助{0}一臂之力"
+  splits:
+  - text: "助"
+  - subIndex: 1
+    text: "一臂之力"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "劫狱"
+  splits:
+  - text: "劫狱"
+- raw: "♦获取贼人身上一件物品\n♦增加少许恶名"
+  splits:
+  - text: "获取贼人身上一件物品"
+  - subIndex: 1
+    text: "增加少许恶名"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "包在我身上"
+  splits:
+  - text: "包在我身上"
+- raw: "包扎"
+  splits:
+  - text: "包扎"
+- raw: "技能影响:"
+  splits:
+  - text: "技能影响"
+  templates:
+  - template: "{0}:"
+- raw: "千恩万谢"
+  splits:
+  - text: "千恩万谢"
+- raw: "单次指点"
+  splits:
+  - text: "单次指点"
+- raw: "参赛"
+  splits:
+  - text: "参赛"
+- raw: "友善..."
+  splits:
+  - text: "友善..."
+- raw: "受教了"
+  splits:
+  - text: "受教了"
+- raw: "只是借你一看罢了"
+  splits:
+  - text: "只是借你一看罢了"
+- raw: "只管开口便是！"
+  splits:
+  - text: "只管开口便是！"
+- raw: "只管砸来便是！"
+  splits:
+  - text: "只管砸来便是！"
+- raw: "只管考验便是！"
+  splits:
+  - text: "只管考验便是！"
+- raw: "只管走起便是！"
+  splits:
+  - text: "只管走起便是！"
+- raw: "只能出手了"
+  splits:
+  - text: "只能出手了"
+- raw: "只要一半价格"
+  splits:
+  - text: "只要一半价格"
+- raw: "可惜可惜"
+  splits:
+  - text: "可惜可惜"
+- raw: "同行"
+  splits:
+  - text: "同行"
+- raw: "♦邀请眷侣加入队伍\n♦无好感消耗"
+  splits:
+  - text: "邀请眷侣加入队伍"
+  - subIndex: 1
+    text: "无好感消耗"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "后会有期"
+  splits:
+  - text: "后会有期"
+- raw: "听我一言"
+  splits:
+  - text: "听我一言"
+- raw: "告辞"
+  splits:
+  - text: "告辞"
+- raw: "告辞！"
+  splits:
+  - text: "告辞！"
+- raw: "哼，还好我早有准备！"
+  splits:
+  - text: "哼，还好我早有准备！"
+- raw: "唔......"
+  splits:
+  - text: "唔......"
+- raw: "唯唯诺诺"
+  splits:
+  - text: "唯唯诺诺"
+- raw: "♦降低20好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "降低20好感"
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "嘉奖"
+  splits:
+  - text: "嘉奖"
+- raw: "♦以银两或珍宝嘉奖弟子\n♦提升弟子好感，忠诚和门派功绩\n♦每月最多一次"
+  splits:
+  - text: "以银两或珍宝嘉奖弟子"
+  - subIndex: 1
+    text: "提升弟子好感，忠诚和门派功绩"
+  - subIndex: 2
+    text: "每月最多一次"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "围观"
+  splits:
+  - text: "围观"
+- raw: "均价出售({0}两)"
+  splits:
+  - text: "均价出售"
+  - subIndex: 1
+    text: "两"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "坐镇指挥"
+  splits:
+  - text: "坐镇指挥"
+- raw: "垫付一半欠款"
+  splits:
+  - text: "垫付一半欠款"
+- raw: "垫付全部欠款"
+  splits:
+  - text: "垫付全部欠款"
+- raw: "垫付欠款"
+  splits:
+  - text: "垫付欠款"
+- raw: "多少给点吧"
+  splits:
+  - text: "多少给点吧"
+- raw: "多谢"
+  splits:
+  - text: "多谢"
+- raw: "多谢大侠"
+  splits:
+  - text: "多谢大侠"
+- raw: "多谢捧场"
+  splits:
+  - text: "多谢捧场"
+- raw: "大张旗鼓"
+  splits:
+  - text: "大张旗鼓"
+- raw: "迎战大量守卫\n获取高品质秘籍"
+  splits:
+  - text: "迎战大量守卫"
+  - subIndex: 1
+    text: "获取高品质秘籍"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "大胆表白"
+  splits:
+  - text: "大胆表白"
+- raw: "大胆贼人！"
+  splits:
+  - text: "大胆贼人！"
+- raw: "大额红包"
+  splits:
+  - text: "大额红包"
+- raw: "大额赠礼"
+  splits:
+  - text: "大额赠礼"
+- raw: "天赐良机"
+  splits:
+  - text: "天赐良机"
+- raw: "好个强敌！"
+  splits:
+  - text: "好个强敌！"
+- raw: "好险好险..."
+  splits:
+  - text: "好险好险..."
+- raw: "好，一起上吧！"
+  splits:
+  - text: "好，一起上吧！"
+- raw: "好，我们合力对敌！"
+  splits:
+  - text: "好，我们合力对敌！"
+- raw: "好，我们合力除贼！"
+  splits:
+  - text: "好，我们合力除贼！"
+- raw: "好，算我一个！"
+  splits:
+  - text: "好，算我一个！"
+- raw: "如此便好..."
+  splits:
+  - text: "如此便好..."
+- raw: "委托？"
+  splits:
+  - text: "委托？"
+- raw: "♦完成对方委托提升好感"
+  splits:
+  - text: "完成对方委托提升好感"
+  templates:
+  - template: "♦{0}"
+- raw: "娓娓道来"
+  splits:
+  - text: "娓娓道来"
+- raw: "学习技艺潜力"
+  splits:
+  - text: "学习技艺潜力"
+- raw: "♦对方潜力比你高出越多，效果越好\n♦消耗10点好感(师傅好感消耗减半)"
+  splits:
+  - text: "对方潜力比你高出越多，效果越好"
+  - subIndex: 1
+    text: "消耗10点好感"
+  - subIndex: 2
+    text: "师傅好感消耗减半"
+  templates:
+  - template: "♦{0}\n♦{1}({2})"
+- raw: "学习技艺经验"
+  splits:
+  - text: "学习技艺经验"
+- raw: "♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
+  splits:
+  - text: "对方技艺比你高出越多，效果越好"
+  - subIndex: 1
+    text: "消耗4点好感"
+  - subIndex: 2
+    text: "师傅好感消耗减半"
+  templates:
+  - template: "♦{0}\n♦{1}({2})"
+- raw: "学艺不精"
+  splits:
+  - text: "学艺不精"
+- raw: "完全恢复"
+  splits:
+  - text: "完全恢复"
+- raw: "完成巡查"
+  splits:
+  - text: "完成巡查"
+- raw: "官员进贡"
+  splits:
+  - text: "官员进贡"
+- raw: "容我娓娓道来"
+  splits:
+  - text: "容我娓娓道来"
+- raw: "对于{0}我有几分心得"
+  splits:
+  - text: "对于"
+  - subIndex: 1
+    text: "我有几分心得"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "小心为上"
+  splits:
+  - text: "小心为上"
+- raw: "小贼休走！"
+  splits:
+  - text: "小贼休走！"
+- raw: "小额红包"
+  splits:
+  - text: "小额红包"
+- raw: "小额赠礼"
+  splits:
+  - text: "小额赠礼"
+- raw: "就学这个！"
+  splits:
+  - text: "就学这个！"
+- raw: "尽绵薄之力"
+  splits:
+  - text: "尽绵薄之力"
+- raw: "履约伤人"
+  splits:
+  - text: "履约伤人"
+- raw: "巨额红包"
+  splits:
+  - text: "巨额红包"
+- raw: "帮助五毒教"
+  splits:
+  - text: "帮助五毒教"
+- raw: "帮助官差对抗暴民"
+  splits:
+  - text: "帮助官差对抗暴民"
+- raw: "帮助暴民对抗官差"
+  splits:
+  - text: "帮助暴民对抗官差"
+- raw: "帮助茅山派"
+  splits:
+  - text: "帮助茅山派"
+- raw: "平分银两"
+  splits:
+  - text: "平分银两"
+- raw: "开个玩笑"
+  splits:
+  - text: "开个玩笑"
+- raw: "开始修习"
+  splits:
+  - text: "开始修习"
+- raw: "开始修炼"
+  splits:
+  - text: "开始修炼"
+- raw: "开始动工吧"
+  splits:
+  - text: "开始动工吧"
+- raw: "开始对饮"
+  splits:
+  - text: "开始对饮"
+- raw: "开始探听"
+  splits:
+  - text: "开始探听"
+- raw: "开始舌战"
+  splits:
+  - text: "开始舌战"
+- raw: "开始论战"
+  splits:
+  - text: "开始论战"
+- raw: "开始遗忘"
+  splits:
+  - text: "开始遗忘"
+- raw: "开席对饮"
+  splits:
+  - text: "开席对饮"
+- raw: "开战"
+  splits:
+  - text: "开战"
+- raw: "开诊"
+  splits:
+  - text: "开诊"
+- raw: "开赌！"
+  splits:
+  - text: "开赌！"
+- raw: "张口结舌"
+  splits:
+  - text: "张口结舌"
+- raw: "强行越狱"
+  splits:
+  - text: "强行越狱"
+- raw: "归还资源"
+  splits:
+  - text: "归还资源"
+- raw: "征召"
+  splits:
+  - text: "征召"
+- raw: "♦征召弟子入队\n♦无好感消耗"
+  splits:
+  - text: "征召弟子入队"
+  - subIndex: 1
+    text: "无好感消耗"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "征收资源"
+  splits:
+  - text: "征收资源"
+- raw: "征用"
+  splits:
+  - text: "征用"
+- raw: "♦消耗门派威望征用物品\n♦降低弟子少许好感和忠诚\n♦每月最多一次"
+  splits:
+  - text: "消耗门派威望征用物品"
+  - subIndex: 1
+    text: "降低弟子少许好感和忠诚"
+  - subIndex: 2
+    text: "每月最多一次"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "循循善诱"
+  splits:
+  - text: "循循善诱"
+- raw: "花费三日"
+  splits:
+  - text: "花费三日"
+- raw: "微额红包"
+  splits:
+  - text: "微额红包"
+- raw: "恶贼住手！"
+  splits:
+  - text: "恶贼住手！"
+- raw: "恶贼受死！"
+  splits:
+  - text: "恶贼受死！"
+- raw: "悉心指点"
+  splits:
+  - text: "悉心指点"
+- raw: "悍然出手"
+  splits:
+  - text: "悍然出手"
+- raw: "情势所逼"
+  splits:
+  - text: "情势所逼"
+- raw: "惭愧惭愧"
+  splits:
+  - text: "惭愧惭愧"
+- raw: "愿闻其详"
+  splits:
+  - text: "愿闻其详"
+- raw: "慰问"
+  splits:
+  - text: "慰问"
+- raw: "慷慨相让"
+  splits:
+  - text: "慷慨相让"
+- raw: "成为{0}门客"
+  splits:
+  - text: "成为"
+  - subIndex: 1
+    text: "门客"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "成功了"
+  splits:
+  - text: "成功了"
+- raw: "我来助你！"
+  splits:
+  - text: "我来助你！"
+- raw: "我来相助！"
+  splits:
+  - text: "我来相助！"
+- raw: "我还有事"
+  splits:
+  - text: "我还有事"
+- raw: "我这就走"
+  splits:
+  - text: "我这就走"
+- raw: "所见略同"
+  splits:
+  - text: "所见略同"
+- raw: "打开宝箱"
+  splits:
+  - text: "打开宝箱"
+- raw: "打扰了"
+  splits:
+  - text: "打扰了"
+- raw: "扭头就跑"
+  splits:
+  - text: "扭头就跑"
+- raw: "抄录功法"
+  splits:
+  - text: "抄录功法"
+- raw: "把地契拿来吧"
+  splits:
+  - text: "把地契拿来吧"
+- raw: "抓捕归案"
+  splits:
+  - text: "抓捕归案"
+- raw: "♦抢夺对方一件物品\n♦根据物品价值增加恶名"
+  splits:
+  - text: "抢夺对方一件物品"
+  - subIndex: 1
+    text: "根据物品价值增加恶名"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "♦抢夺对方约一半的银两\n♦根据抢夺数额增加恶名"
+  splits:
+  - text: "抢夺对方约一半的银两"
+  - subIndex: 1
+    text: "根据抢夺数额增加恶名"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "招揽"
+  splits:
+  - text: "招揽"
+- raw: "♦邀请对方加入你的门派"
+  splits:
+  - text: "邀请对方加入你的门派"
+  templates:
+  - template: "♦{0}"
+- raw: "招揽入派"
+  splits:
+  - text: "招揽入派"
+- raw: "♦将贼人招揽入派\n♦降低全门派好感和全弟子忠诚"
+  splits:
+  - text: "将贼人招揽入派"
+  - subIndex: 1
+    text: "降低全门派好感和全弟子忠诚"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "拜入{0}"
+  splits:
+  - text: "拜入"
+  templates:
+  - template: "{0}⟦0⟧"
+- raw: "拜师"
+  splits:
+  - text: "拜师"
+- raw: "拜谢离去"
+  splits:
+  - text: "拜谢离去"
+- raw: "指点"
+  splits:
+  - text: "指点"
+- raw: "♦指点弟子武功无好感要求\n♦每月最多三次"
+  splits:
+  - text: "指点弟子武功无好感要求"
+  - subIndex: 1
+    text: "每月最多三次"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "挽留"
+  splits:
+  - text: "挽留"
+- raw: "♦延长入队时间30天\n♦{0}"
+  splits:
+  - text: "延长入队时间30天"
+  templates:
+  - template: "♦{0}\n♦⟦0⟧"
+- raw: "捉拿归案"
+  splits:
+  - text: "捉拿归案"
+- raw: "♦将贼人捉拿归案\n♦获取对应悬赏和官府功绩"
+  splits:
+  - text: "将贼人捉拿归案"
+  - subIndex: 1
+    text: "获取对应悬赏和官府功绩"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "捐献"
+  splits:
+  - text: "捐献"
+- raw: "捐纳100官府功绩"
+  splits:
+  - text: "捐纳100官府功绩"
+- raw: "捐纳200官府功绩"
+  splits:
+  - text: "捐纳200官府功绩"
+- raw: "捐纳50官府功绩"
+  splits:
+  - text: "捐纳50官府功绩"
+- raw: "收集资源\n每月一次"
+  splits:
+  - text: "收集资源"
+  - subIndex: 1
+    text: "每月一次"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "接受挑战"
+  splits:
+  - text: "接受挑战"
+- raw: "接受致歉"
+  splits:
+  - text: "接受致歉"
+- raw: "提升天赋"
+  splits:
+  - text: "提升天赋"
+- raw: "提取"
+  splits:
+  - text: "提取"
+- raw: "搜寻稀有材料"
+  splits:
+  - text: "搜寻稀有材料"
+- raw: "携手归隐"
+  splits:
+  - text: "携手归隐"
+- raw: "撕毁盟约"
+  splits:
+  - text: "撕毁盟约"
+- raw: "门派好感-20\n休战3个月"
+  splits:
+  - text: "门派好感"
+  - subIndex: 1
+    text: "休战3个月"
+  templates:
+  - template: "{0}-20\n{1}"
+- raw: "收下奖品"
+  splits:
+  - text: "收下奖品"
+- raw: "收下酬劳"
+  splits:
+  - text: "收下酬劳"
+- raw: "收取罚金"
+  splits:
+  - text: "收取罚金"
+- raw: "收取赠礼"
+  splits:
+  - text: "收取赠礼"
+- raw: "收徒"
+  splits:
+  - text: "收徒"
+- raw: "收集普通资源"
+  splits:
+  - text: "收集普通资源"
+- raw: "放你一马"
+  splits:
+  - text: "放你一马"
+- raw: "敌对..."
+  splits:
+  - text: "敌对..."
+- raw: "敬酒不吃吃罚酒"
+  splits:
+  - text: "敬酒不吃吃罚酒"
+- raw: "斗胆向两位一齐讨教"
+  splits:
+  - text: "斗胆向两位一齐讨教"
+- raw: "斗胆挑战"
+  splits:
+  - text: "斗胆挑战"
+- raw: "斗胆挑战！"
+  splits:
+  - text: "斗胆挑战！"
+- raw: "斩草除根"
+  splits:
+  - text: "斩草除根"
+- raw: "断义"
+  splits:
+  - text: "断义"
+- raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
+  splits:
+  - text: "与对方断绝结义关系"
+  - subIndex: 1
+    text: "降低100点好感"
+  - subIndex: 2
+    text: "固定增加20恶名"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "断交"
+  splits:
+  - text: "断交"
+- raw: "♦与对方断绝好友关系\n♦降低50点好感\n♦固定增加10恶名"
+  splits:
+  - text: "与对方断绝好友关系"
+  - subIndex: 1
+    text: "降低50点好感"
+  - subIndex: 2
+    text: "固定增加10恶名"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "施以惩戒"
+  splits:
+  - text: "施以惩戒"
+- raw: "施以重罚"
+  splits:
+  - text: "施以重罚"
+- raw: "施展内功抵御毒瘴"
+  splits:
+  - text: "施展内功抵御毒瘴"
+- raw: "施展绝技挖掘遗迹"
+  splits:
+  - text: "施展绝技挖掘遗迹"
+- raw: "施展绝技震碎巨石"
+  splits:
+  - text: "施展绝技震碎巨石"
+- raw: "施展轻功攀登绝壁"
+  splits:
+  - text: "施展轻功攀登绝壁"
+- raw: "施舍银两"
+  splits:
+  - text: "施舍银两"
+- raw: "无意争夺，你们请便"
+  splits:
+  - text: "无意争夺，你们请便"
+- raw: "无话可说"
+  splits:
+  - text: "无话可说"
+- raw: "早该如此"
+  splits:
+  - text: "早该如此"
+- raw: "是我唐突了"
+  splits:
+  - text: "是我唐突了"
+- raw: "是我疏忽了"
+  splits:
+  - text: "是我疏忽了"
+- raw: "是我走眼了"
+  splits:
+  - text: "是我走眼了"
+- raw: "晓之以情"
+  splits:
+  - text: "晓之以情"
+- raw: "暂不招新"
+  splits:
+  - text: "暂不招新"
+- raw: "暗中下毒"
+  splits:
+  - text: "暗中下毒"
+- raw: "暗中逃跑"
+  splits:
+  - text: "暗中逃跑"
+- raw: "暴力破解"
+  splits:
+  - text: "暴力破解"
+- raw: "替民众补交一半税赋"
+  splits:
+  - text: "替民众补交一半税赋"
+- raw: "替民众补交全部税赋"
+  splits:
+  - text: "替民众补交全部税赋"
+- raw: "来战"
+  splits:
+  - text: "来战"
+- raw: "来战！"
+  splits:
+  - text: "来战！"
+- raw: "查看功绩"
+  splits:
+  - text: "查看功绩"
+- raw: "欢迎之至"
+  splits:
+  - text: "欢迎之至"
+- raw: "欣然同意"
+  splits:
+  - text: "欣然同意"
+- raw: "欣然收下"
+  splits:
+  - text: "欣然收下"
+- raw: "正有此意"
+  splits:
+  - text: "正有此意"
+- raw: "正面出手"
+  splits:
+  - text: "正面出手"
+- raw: "此仇必报"
+  splits:
+  - text: "此仇必报"
+- raw: "武艺劝说"
+  splits:
+  - text: "武艺劝说"
+- raw: "求医"
+  splits:
+  - text: "求医"
+- raw: "求取材料"
+  splits:
+  - text: "求取材料"
+- raw: "求取灵药"
+  splits:
+  - text: "求取灵药"
+- raw: "求取物品"
+  splits:
+  - text: "求取物品"
+- raw: "求取美食"
+  splits:
+  - text: "求取美食"
+- raw: "求取药引"
+  splits:
+  - text: "求取药引"
+- raw: "求取装备"
+  splits:
+  - text: "求取装备"
+- raw: "求取陨铁"
+  splits:
+  - text: "求取陨铁"
+- raw: "求取食材"
+  splits:
+  - text: "求取食材"
+- raw: "求情说理"
+  splits:
+  - text: "求情说理"
+- raw: "江湖进贡"
+  splits:
+  - text: "江湖进贡"
+- raw: "没错，只能得罪二位了！"
+  splits:
+  - text: "没错，只能得罪二位了！"
+- raw: "♦治疗全伤势10点"
+  splits:
+  - text: "治疗全伤势10点"
+  templates:
+  - template: "♦{0}"
+- raw: "泰岳大典"
+  splits:
+  - text: "泰岳大典"
+- raw: "洗耳恭听"
+  splits:
+  - text: "洗耳恭听"
+- raw: "溜之大吉"
+  splits:
+  - text: "溜之大吉"
+- raw: "满意离去"
+  splits:
+  - text: "满意离去"
+- raw: "满载而归"
+  splits:
+  - text: "满载而归"
+- raw: "照单全收"
+  splits:
+  - text: "照单全收"
+- raw: "物归原主"
+  splits:
+  - text: "物归原主"
+- raw: "物色优良人手"
+  splits:
+  - text: "物色优良人手"
+- raw: "物色优良人选"
+  splits:
+  - text: "物色优良人选"
+- raw: "物色普通人手"
+  splits:
+  - text: "物色普通人手"
+- raw: "物色普通人选"
+  splits:
+  - text: "物色普通人选"
+- raw: "物色顶尖人手"
+  splits:
+  - text: "物色顶尖人手"
+- raw: "物色顶尖人选"
+  splits:
+  - text: "物色顶尖人选"
+- raw: "牺牲声望"
+  splits:
+  - text: "牺牲声望"
+- raw: "狗官受死！"
+  splits:
+  - text: "狗官受死！"
+- raw: "狡兔三窟"
+  splits:
+  - text: "狡兔三窟"
+- raw: "独吞财宝"
+  splits:
+  - text: "独吞财宝"
+- raw: "狮子大开口"
+  splits:
+  - text: "狮子大开口"
+- raw: "献上银两"
+  splits:
+  - text: "献上银两"
+- raw: "珍宝赠礼"
+  splits:
+  - text: "珍宝赠礼"
+- raw: "甜言蜜语"
+  splits:
+  - text: "甜言蜜语"
+- raw: "♦与对方进行论战，失败降低25好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "与对方进行论战，失败降低25好感"
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "略加惩戒"
+  splits:
+  - text: "略加惩戒"
+- raw: "略知一二"
+  splits:
+  - text: "略知一二"
+- raw: "痛下狠手"
+  splits:
+  - text: "痛下狠手"
+- raw: "看好了"
+  splits:
+  - text: "看好了"
+- raw: "看招！"
+  splits:
+  - text: "看招！"
+- raw: "真是倒霉"
+  splits:
+  - text: "真是倒霉"
+- raw: "确认兑换"
+  splits:
+  - text: "确认兑换"
+- raw: "确认征用"
+  splits:
+  - text: "确认征用"
+- raw: "♦赠礼或消耗好感降低对方忠诚\n♦对方忠诚低于好感度20%，便会加入你的门派"
+  splits:
+  - text: "赠礼或消耗好感降低对方忠诚"
+  - subIndex: 1
+    text: "对方忠诚低于好感度20%，便会加入你的门派"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "稍作休息"
+  splits:
+  - text: "稍作休息"
+- raw: "窃取物品"
+  splits:
+  - text: "窃取物品"
+- raw: "立志从商"
+  splits:
+  - text: "立志从商"
+- raw: "笑纳了"
+  splits:
+  - text: "笑纳了"
+- raw: "算了，小命要紧"
+  splits:
+  - text: "算了，小命要紧"
+- raw: "算你识相！"
+  splits:
+  - text: "算你识相！"
+- raw: "♦增加{1}恶名"
+  splits:
+  - text: "增加"
+  - subIndex: 1
+    text: "恶名"
+  templates:
+  - template: "♦{0}⟦1⟧{1}"
+- raw: "粗略挖掘"
+  splits:
+  - text: "粗略挖掘"
+- raw: "粗略选取"
+  splits:
+  - text: "粗略选取"
+- raw: "精挑细选"
+  splits:
+  - text: "精挑细选"
+- raw: "糟糕，这下大意了！"
+  splits:
+  - text: "糟糕，这下大意了！"
+- raw: "终于开始了"
+  splits:
+  - text: "终于开始了"
+- raw: "结为同盟"
+  splits:
+  - text: "结为同盟"
+- raw: "需100门派好感\n结盟后永久停战且援军+1\n可进攻盟友的相邻区域\n好感低于80会自动断盟"
+  splits:
+  - text: "需100门派好感"
+  - subIndex: 1
+    text: "结盟后永久停战且援军"
+  - subIndex: 2
+    text: "可进攻盟友的相邻区域"
+  - subIndex: 3
+    text: "好感低于80会自动断盟"
+  templates:
+  - template: "{0}\n{1}+1\n{2}\n{3}"
+- raw: "结婚"
+  splits:
+  - text: "结婚"
+- raw: "♦举办婚宴正式结为夫妻{0}"
+  splits:
+  - text: "举办婚宴正式结为夫妻"
+  templates:
+  - template: "♦{0}⟦0⟧"
+- raw: "结缘"
+  splits:
+  - text: "结缘"
+- raw: "给予嘉奖"
+  splits:
+  - text: "给予嘉奖"
+- raw: "给点医药费吧"
+  splits:
+  - text: "给点医药费吧"
+- raw: "绝技 千斤坠"
+  splits:
+  - text: "绝技"
+  - subIndex: 1
+    text: "千斤坠"
+  templates:
+  - template: "{0} {1}"
+- raw: "绝技硬闯"
+  splits:
+  - text: "绝技硬闯"
+- raw: "绝离"
+  splits:
+  - text: "绝离"
+- raw: "♦结束夫妻关系\n♦降低150点好感\n♦固定增加40恶名"
+  splits:
+  - text: "结束夫妻关系"
+  - subIndex: 1
+    text: "降低150点好感"
+  - subIndex: 2
+    text: "固定增加40恶名"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "继续追踪"
+  splits:
+  - text: "继续追踪"
+- raw: "缴纳罚金"
+  splits:
+  - text: "缴纳罚金"
+- raw: "罢了罢了"
+  splits:
+  - text: "罢了罢了"
+- raw: "羞愧难当"
+  splits:
+  - text: "羞愧难当"
+- raw: "背后偷袭"
+  splits:
+  - text: "背后偷袭"
+- raw: "0-负3"
+  splits:
+  - text: "负3"
+  templates:
+  - template: "0-{0}"
+- raw: "自己留下"
+  splits:
+  - text: "自己留下"
+- raw: "自投罗网！"
+  splits:
+  - text: "自投罗网！"
+- raw: "花言巧语"
+  splits:
+  - text: "花言巧语"
+- raw: "莫慌，我来助你！"
+  splits:
+  - text: "莫慌，我来助你！"
+- raw: "获取药品"
+  splits:
+  - text: "获取药品"
+- raw: "♦获取随机药品"
+  splits:
+  - text: "获取随机药品"
+  templates:
+  - template: "♦{0}"
+- raw: "要求双倍价格"
+  splits:
+  - text: "要求双倍价格"
+- raw: "解开手铐"
+  splits:
+  - text: "解开手铐"
+- raw: "解开脚镣"
+  splits:
+  - text: "解开脚镣"
+- raw: "解毒"
+  splits:
+  - text: "解毒"
+- raw: "让渡功绩100点"
+  splits:
+  - text: "让渡功绩100点"
+- raw: "让渡功绩200点"
+  splits:
+  - text: "让渡功绩200点"
+- raw: "让渡功绩50点"
+  splits:
+  - text: "让渡功绩50点"
+- raw: "讲经说法"
+  splits:
+  - text: "讲经说法"
+- raw: "论战劝解"
+  splits:
+  - text: "论战劝解"
+- raw: "诚心相求"
+  splits:
+  - text: "诚心相求"
+- raw: "诚恳道歉"
+  splits:
+  - text: "诚恳道歉"
+- raw: "♦降低15好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "降低15好感"
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "误会一场"
+  splits:
+  - text: "误会一场"
+- raw: "说干就干"
+  splits:
+  - text: "说干就干"
+- raw: "说情道理"
+  splits:
+  - text: "说情道理"
+- raw: "诶诶，别跑啊！"
+  splits:
+  - text: "诶诶，别跑啊！"
+- raw: "诶都别走啊！"
+  splits:
+  - text: "诶都别走啊！"
+- raw: "请二位先选"
+  splits:
+  - text: "请二位先选"
+- raw: "请听我一言"
+  splits:
+  - text: "请听我一言"
+- raw: "请指教！"
+  splits:
+  - text: "请指教！"
+- raw: "请教{0}潜力"
+  splits:
+  - text: "请教"
+  - subIndex: 1
+    text: "潜力"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "请教功法"
+  splits:
+  - text: "请教功法"
+- raw: "请笑纳"
+  splits:
+  - text: "请笑纳"
+- raw: "谁敢挡我！"
+  splits:
+  - text: "谁敢挡我！"
+- raw: "调解说和"
+  splits:
+  - text: "调解说和"
+- raw: "购买{0}木料"
+  splits:
+  - text: "购买"
+  - subIndex: 1
+    text: "木料"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买{0}矿石"
+  splits:
+  - text: "购买"
+  - subIndex: 1
+    text: "矿石"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买{0}粮食"
+  splits:
+  - text: "购买"
+  - subIndex: 1
+    text: "粮食"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买{0}药材"
+  splits:
+  - text: "购买"
+  - subIndex: 1
+    text: "药材"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买库存"
+  splits:
+  - text: "购买库存"
+- raw: "购买材料"
+  splits:
+  - text: "购买材料"
+- raw: "购药"
+  splits:
+  - text: "购药"
+- raw: "♦降低少量警觉度\n♦增加少量熟络度"
+  splits:
+  - text: "降低少量警觉度"
+  - subIndex: 1
+    text: "增加少量熟络度"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "赐予资源"
+  splits:
+  - text: "赐予资源"
+- raw: "赔礼谢罪"
+  splits:
+  - text: "赔礼谢罪"
+- raw: "赠与{0}两"
+  splits:
+  - text: "赠与"
+  - subIndex: 1
+    text: "两"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "赠送礼物"
+  splits:
+  - text: "赠送礼物"
+- raw: "♦降低10好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "降低10好感"
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "赠送赔礼"
+  splits:
+  - text: "赠送赔礼"
+- raw: "走为上策"
+  splits:
+  - text: "走为上策"
+- raw: "走好不送"
+  splits:
+  - text: "走好不送"
+- raw: "赶尽杀绝"
+  splits:
+  - text: "赶尽杀绝"
+- raw: "♦追杀成功后，夺取其所有物品装备\n♦与对方门派和亲友结仇\n♦根据对方身份等级增加大量恶名，每月最多1次"
+  splits:
+  - text: "追杀成功后，夺取其所有物品装备"
+  - subIndex: 1
+    text: "与对方门派和亲友结仇"
+  - subIndex: 2
+    text: "根据对方身份等级增加大量恶名，每月最多1次"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "超高价出售({0}两)"
+  splits:
+  - text: "超高价出售"
+  - subIndex: 1
+    text: "两"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "路见不平，自当拔刀相助"
+  splits:
+  - text: "路见不平，自当拔刀相助"
+- raw: "转念一想"
+  splits:
+  - text: "转念一想"
+- raw: "轻功 轻身术"
+  splits:
+  - text: "轻功"
+  - subIndex: 1
+    text: "轻身术"
+  templates:
+  - template: "{0} {1}"
+- raw: "轻功赶上"
+  splits:
+  - text: "轻功赶上"
+- raw: "轻功躲避"
+  splits:
+  - text: "轻功躲避"
+- raw: "还是算了"
+  splits:
+  - text: "还是算了"
+- raw: "这...也只能如此了"
+  splits:
+  - text: "这...也只能如此了"
+- raw: "这些徒儿均已掌握"
+  splits:
+  - text: "这些徒儿均已掌握"
+- raw: "这有何难"
+  splits:
+  - text: "这有何难"
+- raw: "进攻"
+  splits:
+  - text: "进攻"
+- raw: "连续指点"
+  splits:
+  - text: "连续指点"
+- raw: "♦消耗剩余指点次数\n♦对方武学满级或超过你时自动停止"
+  splits:
+  - text: "消耗剩余指点次数"
+  - subIndex: 1
+    text: "对方武学满级或超过你时自动停止"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "退隐？"
+  splits:
+  - text: "退隐？"
+- raw: "♦询问对方关于退隐江湖之事"
+  splits:
+  - text: "询问对方关于退隐江湖之事"
+  templates:
+  - template: "♦{0}"
+- raw: "选择弟子"
+  splits:
+  - text: "选择弟子"
+- raw: "选择挖掘"
+  splits:
+  - text: "选择挖掘"
+- raw: "选择秘籍"
+  splits:
+  - text: "选择秘籍"
+- raw: "选贤举能"
+  splits:
+  - text: "选贤举能"
+- raw: "速战速决"
+  splits:
+  - text: "速战速决"
+- raw: "迎战守卫\n获取中品质秘籍"
+  splits:
+  - text: "迎战守卫"
+  - subIndex: 1
+    text: "获取中品质秘籍"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "遗忘“{0}”"
+  splits:
+  - text: "遗忘“"
+  templates:
+  - template: "{0}⟦0⟧”"
+- raw: "避人耳目"
+  splits:
+  - text: "避人耳目"
+- raw: "避免战斗\n获取低品质秘籍"
+  splits:
+  - text: "避免战斗"
+  - subIndex: 1
+    text: "获取低品质秘籍"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "那便来吧"
+  splits:
+  - text: "那便来吧"
+- raw: "那便来吧！"
+  splits:
+  - text: "那便来吧！"
+- raw: "那只好硬闯了"
+  splits:
+  - text: "那只好硬闯了"
+- raw: "那我就买下了"
+  splits:
+  - text: "那我就买下了"
+- raw: "那是自然"
+  splits:
+  - text: "那是自然"
+- raw: "采掘陨铁"
+  splits:
+  - text: "采掘陨铁"
+- raw: "采集{0}"
+  splits:
+  - text: "采集"
+  templates:
+  - template: "{0}⟦0⟧"
+- raw: "鉴定物品"
+  splits:
+  - text: "鉴定物品"
+- raw: "针锋相对"
+  splits:
+  - text: "针锋相对"
+- raw: "银两利诱"
+  splits:
+  - text: "银两利诱"
+- raw: "门派亲善"
+  splits:
+  - text: "门派亲善"
+- raw: "门派盟约"
+  splits:
+  - text: "门派盟约"
+- raw: "门派羞辱"
+  splits:
+  - text: "门派羞辱"
+- raw: "门派进贡"
+  splits:
+  - text: "门派进贡"
+- raw: "♦雇佣对方加入队伍15天\n♦根据对方战力消耗银钱"
+  splits:
+  - text: "雇佣对方加入队伍15天"
+  - subIndex: 1
+    text: "根据对方战力消耗银钱"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "静静等待"
+  splits:
+  - text: "静静等待"
+- raw: "骇然出手"
+  splits:
+  - text: "骇然出手"
+- raw: "高人，我来助你！"
+  splits:
+  - text: "高人，我来助你！"
+- raw: "高价出售({0}两)"
+  splits:
+  - text: "高价出售"
+  - subIndex: 1
+    text: "两"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "高级嘉奖"
+  splits:
+  - text: "高级嘉奖"
+- raw: "黄袍加身"
+  splits:
+  - text: "黄袍加身"
+- raw: "默默看戏"
+  splits:
+  - text: "默默看戏"

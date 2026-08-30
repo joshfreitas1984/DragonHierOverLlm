@@ -358,9 +358,24 @@ namespace Tests
         // "Name?Description-Condition-TriggerId" interactive-option item.
         private static readonly Regex InteractionOptionRegex = new(@"^([^?\-]+)(\?([^-]*))?-", RegexOptions.Compiled);
 
+        // Identifies a bare ASCII PascalCase/camelCase field (e.g. "HospitalCureExternalInjury",
+        // "AskHeroMakeFriend") - the game's own internal trigger/event routing id. Used as a
+        // heuristic signal (see ExtractStructuredRecordFragmentCandidates) that a ';'-joined
+        // IL2CPP-scanned candidate is a genuine structured record (Name;TriggerId;Condition...;
+        // Description - the same general shape DynamicStringInteractionOptionColumnSources
+        // already recognizes for BuildingData.csv's "互动选项" cells, just with a different
+        // delimiter ordering: '?'/'-' there vs plain ';' here), rather than ordinary dialogue text
+        // that happens to contain a stray ASCII ';'.
+        private static readonly Regex AsciiIdentifierFieldRegex = new(@"^[A-Za-z][A-Za-z0-9]*$", RegexOptions.Compiled);
 
+        // Matches a "<label>:<value>[ <value2>...]" / "<label>：<value>..." sub-shape found inside
+        // one field of a structured record - e.g. "技能影响:医术", "技能影响:医术 内功". Group 1
+        // captures the label (with colon) as its own standalone candidate; group 2 captures the
+        // space-separated value(s) that follow, split further below.
+        private static readonly Regex LabeledFieldRegex = new(@"^([\p{IsCJKUnifiedIdeographs}]+[:：])(.+)$", RegexOptions.Compiled);
 
         /// <summary>Extracts configured whole values and structured labels idempotently.</summary>
+
         public static void ExtractDynamicStringCandidatesFromColumns(string workingDirectory)
         {
             var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
@@ -423,6 +438,89 @@ namespace Tests
                         if (!match.Success) return [];
                         return new[] { match.Groups[1].Value, match.Groups[3].Value };
                     }));
+            }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
+
+        /// <summary>
+        /// Scans the master IL2CPP-scanned dump (dynamicStrings.txt) for ';'-joined structured-
+        /// record candidates - the same general "Name;TriggerId;Condition...;Description" shape
+        /// DynamicStringInteractionOptionColumnSources already recognizes for BuildingData.csv's
+        /// "互动选项" cells (there shaped "Name?Description-Condition-TriggerId" - same idea,
+        /// different delimiter ordering), except these particular records are hardcoded string
+        /// literals baked directly into game code (e.g. clinic/hospital interaction menu entries -
+        /// confirmed 2026-08-30, "技能 影响:医术" screenshot case) rather than CSV-driven, so the
+        /// IL2CPP scan has no notion of this field shape and dumps the WHOLE ';'-joined literal as
+        /// one candidate, e.g. "包扎;HospitalCureExternalInjury;;;技能影响:医术". Only the
+        /// individual CJK-containing fields (Name/Description) are ever actually displayed on
+        /// screen, never the whole joined literal, so the whole-string dictionary entry this
+        /// produces can never match at runtime; DynamicStringPatches' bare dictionary then falls
+        /// back to whatever shorter standalone fragments happen to exist, corrupting text like
+        /// "技能影响:医术" into "Skills 影响:Medicine".
+        ///
+        /// Fix: split every dump line on ';', identify it as a genuine structured record via
+        /// AsciiIdentifierFieldRegex (at least one field must be a bare ASCII trigger-id - the
+        /// same signal that distinguishes a real record from ordinary dialogue that happens to
+        /// contain a stray ASCII ';'), and emit each remaining CJK-containing field as its own
+        /// standalone candidate - further splitting a "<label>:<value>" shaped field (see
+        /// LabeledFieldRegex) into the label and each individual space-separated value. A field
+        /// with no such label shape (e.g. a plain Name like "包扎", or a multi-line "♦..." bullet
+        /// description) is kept whole, consistent with how multi-line literals are treated
+        /// elsewhere in this pipeline (see StringMapExtractor.ExtractDynamicStringCandidates'
+        /// doc comment).
+        ///
+        /// Must run AFTER ExtractDynamicStringCandidatesFromIl2CppStringMap, which is what
+        /// populates/refreshes the master dump this reads from. Idempotent: re-running never
+        /// duplicates an already-extracted value.
+        /// </summary>
+        public static void ExtractStructuredRecordFragmentCandidates(string workingDirectory)
+        {
+            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
+            if (!File.Exists(masterDumpPath)) return;
+
+            var seen = new HashSet<string>();
+            seen.UnionWith(File.ReadAllLines(masterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
+            if (File.Exists(outputPath))
+                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+
+            var found = new List<string>();
+
+            void AddCandidate(string value)
+            {
+                if (string.IsNullOrWhiteSpace(value)) return;
+                if (!ChineseCharPattern.IsMatch(value)) return;
+                if (!seen.Add(value)) return;
+                found.Add(value);
+            }
+
+            foreach (var line in File.ReadAllLines(masterDumpPath))
+            {
+                if (string.IsNullOrEmpty(line)) continue;
+
+                var fields = line.Split(';');
+                if (fields.Length < 3) continue;
+                if (!fields.Any(f => AsciiIdentifierFieldRegex.IsMatch(f))) continue;
+
+                foreach (var field in fields)
+                {
+                    if (string.IsNullOrWhiteSpace(field)) continue;
+                    if (!ChineseCharPattern.IsMatch(field)) continue;
+
+                    var labeled = LabeledFieldRegex.Match(field);
+                    if (labeled.Success)
+                    {
+                        AddCandidate(labeled.Groups[1].Value);
+                        foreach (var value in labeled.Groups[2].Value.Split([' ', '\u3000'], StringSplitOptions.RemoveEmptyEntries))
+                            AddCandidate(value);
+                    }
+                    else
+                    {
+                        AddCandidate(field);
+                    }
+                }
             }
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);

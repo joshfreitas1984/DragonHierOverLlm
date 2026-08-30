@@ -449,7 +449,7 @@ internal static class DynamicStringPatches
                 // CJK-permissive on both patterns (not just the fallback) - a merged run's value
                 // is frequently a legitimately-CJK force name, so the strict non-CJK class would
                 // never match here at all. See CONFIRMED BUG #6 above for the quantifier choice.
-                var runQuantifier = (lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1) ? "+" : "+?";
+                var runQuantifier = (lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1) ? "*" : "*?";
                 patternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{runQuantifier})");
                 permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{runQuantifier})");
 
@@ -483,8 +483,21 @@ internal static class DynamicStringPatches
             }
 
             // See CONFIRMED BUG #6 above for the quantifier choice.
+            //
+            // CONFIRMED BUG #7 (2026-08-30, "获 Victory 条件" screenshot case - the "获胜条件：
+            // \n{0}击败敌方{1}" template): a "+"/"+?" (one-or-more) quantifier can never match a
+            // placeholder whose real runtime value is the EMPTY STRING (e.g. this template's {0}
+            // is blank whenever there's no time-limit prefix condition, leaving the runtime text
+            // as plain "获胜条件：\n击败敌方全体"). When that happens, both Pattern and
+            // PermissivePattern fail to match, the whole template (including its own translated
+            // literal connector text) is skipped, and the bare ApplyDictionary substring pass
+            // mangles the untranslated CJK with unrelated short fragment entries instead. Fix:
+            // use "*"/"*?" (zero-or-more) so a genuinely-empty substituted value still lets the
+            // template match and translate its literal text - this only widens the minimum
+            // repeat count, the CJK-exclusion character class (bug #3) and BlockingRawEntries
+            // overlap guard (bug #4) are unchanged, so it does not reopen either of those.
             var isLastGroup = idx == placeholderMatches.Count - 1;
-            var quantifier = (lastGroupIsUnanchored && isLastGroup) ? "+" : "+?";
+            var quantifier = (lastGroupIsUnanchored && isLastGroup) ? "*" : "*?";
             if (placeholder.Groups[1].Success)
             {
                 var groupName = $"p{placeholder.Groups[1].Value}";
