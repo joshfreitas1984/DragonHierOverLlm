@@ -1158,15 +1158,50 @@ internal static class DynamicStringPatches
     private static string ApplyDictionary(string input, List<DictionaryEntry> dictionary)
     {
         var result = input;
+
+        // PERF (2026-08-30, battle-flood stutter after the ~2,900-entry
+        // dynamicStringsFromColumns growth): this used to Contains()-scan EVERY entry
+        // unconditionally. That was fine while _dictionary stayed "low hundreds" (see
+        // GenericPostfix's note) but it is O(entries) per call, and the String.Concat/Format and
+        // TMP_Text/UI.Text setters this runs from fire many CJK-bearing strings per frame during a
+        // big battle (damage numbers, skill/status text). Once the packaged dictionary grew into
+        // the thousands the per-string scan started costing visibly (~1s hitch when the text
+        // floods in). Fix: compute the set of characters actually present once, then skip any
+        // entry whose Raw cannot possibly be a substring because one of its characters is absent -
+        // a cheap O(1) membership test that rejects the overwhelming majority of non-matching
+        // entries before doing any Contains()/Replace work.
+        //
+        // Behaviour-preserving: the loop still visits every entry in the same order and only skips
+        // ones that provably cannot match (a missing character means Contains() would have returned
+        // false anyway). The set is rebuilt lazily after any replacement - which only happens on an
+        // actual match, so it is rare - so an inserted Result that itself carries characters is
+        // still reflected for the remaining entries. Testing a single representative character (the
+        // first of Raw) is a correct necessary condition: every character of Raw, including the
+        // first, must be present for Raw to occur as a substring.
+        HashSet<char> presentChars = null;
         foreach (var entry in dictionary)
         {
             if (string.IsNullOrEmpty(entry.Raw)) continue;
 
+            presentChars ??= BuildCharSet(result);
+            if (!presentChars.Contains(entry.Raw[0])) continue;
 
             if (result.Contains(entry.Raw))
+            {
                 result = ReplaceWithWordBoundarySpacing(result, entry);
+                presentChars = null; // result changed - rebuild lazily on next use
+            }
         }
         return result;
+    }
+
+    // Character-membership set for ApplyDictionary's pre-filter - allocated at most once per call
+    // (and re-allocated only after an actual replacement), never on the zero-match common path.
+    private static HashSet<char> BuildCharSet(string s)
+    {
+        var set = new HashSet<char>(s.Length);
+        foreach (var c in s) set.Add(c);
+        return set;
     }
 
     // Plain substring replace smashes words together whenever a translated fragment lands
