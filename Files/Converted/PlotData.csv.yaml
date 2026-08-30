@@ -11737,7 +11737,7 @@
   - split: 10
     subIndex: 1
     text: "眼下大小姐你行踪已经暴露，也不知道有多少贼眼盯着哟！"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Right now, Miss, your whereabouts have already been exposed, and who knows how many thief eyes are watching you!"
   - split: 10
     subIndex: 2
     text: "小命要紧，接下来咱们低调行事，千万莫再招人显眼了。"
@@ -79700,7 +79700,7 @@
   - split: 10
     subIndex: 1
     text: "没想到你进展如此迅速，这么快就遇到了"
-    translated: "I didn't expect your progress to be so rapid; you've encountered a "
+    translated: "I didn't expect your progress to be so rapid; you've encountered a"
   - split: 10
     subIndex: 2
     text: "瓶颈"
@@ -203226,7 +203226,7 @@
   - split: 10
     subIndex: 1
     text: "上面正好写着八个大字，“天地玄黄，宇宙洪荒”。"
-    translated: "The following sentence contains untranslated Chinese characters: They walked into the ancient forest of Tian Di."
+    translated: "Above it exactly reads eight large characters: Tian Di Xuan Huang, Yu Zou Hong Kuang."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218794,7 +218794,7 @@
   splits:
   - split: 10
     text: "切，我血衣盟势力庞大，高手众多。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Cut, my Blood Cloth Alliance has great power and many experts."
   - split: 10
     subIndex: 1
     text: "区区一个飞凤钱庄，毁就毁了无伤大雅。"
@@ -231593,7 +231593,7 @@
   splits:
   - split: 10
     text: "封、封桩库宝藏......我的封桩库宝藏怎么全是空的！！！"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact. Why are all my items in the Vault of Seals empty!!!"
+    translated: "Why are all my vault treasures empty!!!"
   - split: 10
     subIndex: 1
     text: "不可能，一定是有人在搞鬼......"

@@ -2524,7 +2524,7 @@
     translated: "#SourceInteractName# If you have some free time, you might want to go and check it out."
   - subIndex: 1
     text: "若当真有所收获，可别忘了我的一份功劳啊，哈哈！"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "If there is any gain, don't forget to count my contribution, haha!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#SourceInteractName#眼下如有空闲，不妨前去搜寻一番，\n若当真找到了宝藏，可别忘了我的一份功劳啊，哈哈！"
@@ -4782,7 +4782,7 @@
     translated: "Left"
   - subIndex: 1
     text: "对比当前装备"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "Compare current equipment"
   templates:
   - template: "<i><color=grey>{0}Shift{1}</color></i>"
 - raw: "<i><color=grey>左Shift查看详情</color></i>"
@@ -6369,7 +6369,7 @@
     translated: "Participate"
   - subIndex: 2
     text: "拍卖大会，花费"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "Auction Conference, expenditure"
   - subIndex: 3
     text: "两购得一件"
     translated: "Two purchased a single item"
@@ -7425,7 +7425,7 @@
 - raw: "{0}的突破加成在装备后生效"
   splits:
   - text: "的突破加成在装备后生效"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "The breakthrough bonus takes effect after equipping"
   templates:
   - template: "⟦0⟧{0}"
 - raw: "{0}的立场向{1}{2}改变了"
@@ -13253,7 +13253,7 @@
 - raw: "冲关成功率{0}%\n经验{1}"
   splits:
   - text: "冲关成功率"
-    translated: "Translate all Chinese characters in this sentence to english."
+    translated: "Probability of success in clearing the level"
   - subIndex: 1
     text: "经验"
     translated: "Experience"
@@ -15626,7 +15626,7 @@
 - raw: "可惜本门目前并无合适的{0}来进行考核，就由{1}来代劳好了。\n#PlayerName#需得击败{1}，方能证明自己之武功修为堪当本门{0}之重任。"
   splits:
   - text: "可惜本门目前并无合适的"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Unfortunately, there is currently no suitable candidate in our sect."
   - subIndex: 1
     text: "来进行考核，就由"
     translated: "To conduct the evaluation, let's proceed with"
@@ -16166,10 +16166,10 @@
 - raw: "呜呜呜呜呜呜！小女子本就命苦，如今又被说成是什么骗子。\n也罢，小女子这就去悬梁自尽，以证自身清白。"
   splits:
   - text: "呜呜呜呜呜呜！小女子本就命苦，如今又被说成是什么骗子。"
-    translated: "Woo woo woo woo woo! The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Wu wu wu wu wu wu! Little miss already has a hard life, and now I'm also called a scammer."
   - subIndex: 1
     text: "也罢，小女子这就去悬梁自尽，以证自身清白。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Well then, this maiden shall go and hang herself to prove her innocence."
   templates:
   - template: "{0}\n{1}"
 - raw: "呜呜呜呜呜呜，小女子的父亲好赌，前些日子欠下了一大笔赌债。\n母亲又生了重病，借了许多钱求医问药，至今仍不见起色。"
@@ -17824,7 +17824,7 @@
 - raw: "哪来不长眼的毛头小子，竟然敢闯咱们山寨送死？\n弟兄们，给我细细切做臊子！"
   splits:
   - text: "哪来不长眼的毛头小子，竟然敢闯咱们山寨送死？"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Where did this reckless youngster come from, daring to intrude upon our mountain stronghold and seek death?"
   - subIndex: 1
     text: "弟兄们，给我细细切做臊子！"
     translated: "Brothers, cut it finely for the stew!"
@@ -20381,7 +20381,7 @@
     translated: "The rank of the Great Hero is already at the pinnacle that can be reached by those in the Wulin."
   - subIndex: 1
     text: "月盈则缺，水满则溢，还是不要太过贪心为妙。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Full moon turns to wane, water overflows its bounds‑best not to be too greedy."
   templates:
   - template: "{0}\n{1}"
 - raw: "大侠的武功实在高强，小的竟毫无还手之力。\n若是拜入大侠门下，岂不是也能学到这些精妙武学？\n我#$TargetInteractName#从此拜入#PlayerForceName#门下，以后咱们一起吃香的喝辣的！"
@@ -23251,7 +23251,7 @@
     translated: "The official position of the Young Hero is already at the pinnacle that people in the Wulin can attain."
   - subIndex: 1
     text: "月盈则缺，水满则溢，还是不要太过贪心为妙。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Full moon turns to wane, water overflows its bounds‑best not to be too greedy."
   templates:
   - template: "{0}\n{1}"
 - raw: "少侠的队伍已经满员，还是改日再说吧。"
@@ -26583,7 +26583,7 @@
     translated: "Now that #PlayerName# has not forsaken me, I shall go through fire and water to repay your kindness."
   - subIndex: 2
     text: "效犬马之劳！"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "Serve with devotion!"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "我虽无门无派，在江湖中少了份依靠，\n却也不必遵守门派那些清规戒律，落得一个逍遥快活。"
@@ -26610,7 +26610,7 @@
     translated: "Though I am in the Jianghu, my heart remains steadfast in the desire to serve, alas, I lack the means to find my way in."
   - subIndex: 1
     text: "官爷若行个方便，替我在府内挂名谋个差事，定当感激不尽！"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "If Your Excellency could do me a favor and get me a position in the household, I would be eternally grateful!"
   templates:
   - template: "{0}\n{1}"
 - raw: "我行走江湖多年，也一直在寻找高手切磋演武，\n一方面是为了检验脑中想象是否准确，\n另一方面也是为了穷尽天下武学之真谛神髓。"
@@ -28182,7 +28182,7 @@
 - raw: "提升强化等级至+{6}\n{0}需要建筑等级 {1}级</color>\n{2}需要{5}技能 {3}</color>\n{4}"
   splits:
   - text: "提升强化等级至"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "Increase the refinement level to"
   - subIndex: 1
     text: "需要建筑等级"
     translated: "Need building level"
@@ -29433,7 +29433,7 @@
     translated: "It's you, #PlayerName#! You timed it just right!"
   - subIndex: 1
     text: "我适才发现一群毒性异常的蛇虫，里面似乎混杂有珍稀毒物，"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "I just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何捉捕？"
     translated: "Unknown #PlayerName# whether you know how to capture?"
@@ -31359,7 +31359,7 @@
 - raw: "正式结为夫妻"
   splits:
   - text: "正式结为夫妻"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "Formally become husband and wife"
 - raw: "正所谓见者有份，#PlayerName#你若是不把这宝藏分一半给我，\n未免就有些说不过去了吧！"
   splits:
   - text: "正所谓见者有份，#PlayerName#你若是不把这宝藏分一半给我，"
@@ -32777,7 +32777,7 @@
     translated: "It's fine, it's fine. During the Spring Festival, it's always the younger generation who receive gifts."
   - subIndex: 1
     text: "哪有给长辈发红包的，岂不是乱了辈分？"
-    translated: "How can we give red envelopes to elders? Translate all Chinese characters in this sentence to English."
+    translated: "How is giving red envelopes to elders appropriate? That wouldn't be respecting the hierarchy, would it?"
   templates:
   - template: "{0}\n{1}"
 - raw: "没想到#SourceInteractName#竟是如此斤斤计较，一毛不拔之人。\n罢了罢了，这钱你拿去便是！"
@@ -34122,7 +34122,7 @@
 - raw: "玲珑剔透，韵味盎然，此物想必出自名家之手，可谓收获颇丰。"
   splits:
   - text: "玲珑剔透，韵味盎然，此物想必出自名家之手，可谓收获颇丰。"
-    translated: "Delicate and refined, with a lasting charm, this must be the work of a master. The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Delicately carved, exuding a refined charm‑this must be the work of a master, truly a bountiful harvest."
 - raw: "玳瑁"
   splits:
   - text: "玳瑁"
@@ -36478,7 +36478,7 @@
 - raw: "糟糕，好像错过了门派会议！"
   splits:
   - text: "糟糕，好像错过了门派会议！"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Oh, it seems like I missed the Sect meeting!"
 - raw: "糟糕，溜之大吉吧;DeathFightHeroFinish"
   splits:
   - text: "糟糕，溜之大吉吧"
@@ -39058,7 +39058,7 @@
 - raw: "角色获取的额外内力上限"
   splits:
   - text: "角色获取的额外内力上限"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "Additional Inner Power cap the character can acquire"
 - raw: "角色获取的额外生命上限"
   splits:
   - text: "角色获取的额外生命上限"
@@ -39467,7 +39467,7 @@
 - raw: "诶，本届辩才大会竟是一名参与侠士都没有么...\n罢了罢了，那就下届再会吧。"
   splits:
   - text: "诶，本届辩才大会竟是一名参与侠士都没有么..."
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact..."
+    translated: "Hey, there isn't even a wuxia participant in this debate conference..."
   - subIndex: 1
     text: "罢了罢了，那就下届再会吧。"
     translated: "All right, all right, then let's meet in the next iteration."
@@ -44279,7 +44279,7 @@
 - raw: "附近多有行侠仗义之士，四邻几近夜不闭户，路不拾遗。"
   splits:
   - text: "附近多有行侠仗义之士，四邻几近夜不闭户，路不拾遗。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "There are many chivalrous and righteous individuals nearby, making the area nearly as safe as night‑time doors left unlocked and lost items not picked up on the streets."
 - raw: "陆仁谦"
   splits:
   - text: "陆仁谦"
@@ -44747,7 +44747,7 @@
 - raw: "需遗忘后置天赋{0}"
   splits:
   - text: "需遗忘后置天赋"
-    translated: "Translate all Chinese characters in this sentence to English."
+    translated: "Need to Forget Prior Talent"
   templates:
   - template: "{0}⟦0⟧"
 - raw: "霸业"

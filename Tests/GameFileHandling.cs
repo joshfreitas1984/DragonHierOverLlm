@@ -279,7 +279,7 @@ namespace Tests
             // producing "None For 真人") because no whole-phrase entry existed to win the
             // longest-match-first ordering. Extracting the whole nickname here fixes every hero
             // uniformly instead of manually patching one Raw value at a time.
-            ("SpeHeroData.csv", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 18]),
+            ("SpeHeroData.csv", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 18]),
             ("SummonKungFuData.csv", [1, 13, 24]),
             ("TechDataBase.csv", [4, 8]),
             ("WeaponData.csv", [1]),

@@ -10068,7 +10068,7 @@
     translated: "Just as you were about to reach the end, several figures suddenly appeared and surrounded you from all sides."
   - subIndex: 1
     text: "看来这群土匪已准备多时，特地选在你们最疲惫且松懈的旅程终点，出手劫财！"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact."
+    translated: "It seems these bandits have been planning this for some time, specifically choosing the end of your most fatigued and complacent journey to strike and rob you!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "瞒天过海"
@@ -12054,7 +12054,7 @@
 - raw: "这山洞地处荒野，周边却有诸多行人与车马留下的踪迹，想必这便是传说中藏宝之所，不知是何人已捷足先登。\\n不论如何，想取得宝藏，只怕免不了一场恶战了。\\n（此处颇为凶险，建议携带队友前往）"
   splits:
   - text: "这山洞地处荒野，周边却有诸多行人与车马留下的踪迹，想必这便是传说中藏宝之所，不知是何人已捷足先登。"
-    translated: "This cave is located in the wilderness, yet there are numerous traces left by passersby and carriages around it. The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact. I wonder if someone has already beaten me to it."
+    translated: "This cave is located in the wilderness, yet there are numerous traces left by passersby and carriages around it. It seems this is the legendary place where treasures are hidden. I wonder if someone has already beaten me to it."
   - subIndex: 1
     text: "不论如何，想取得宝藏，只怕免不了一场恶战了。"
     translated: "No matter what, it seems we'll have to face a fierce battle to obtain the treasure."
@@ -12066,7 +12066,7 @@
 - raw: "这废墟地处荒野，周边却有诸多行人与车马留下的踪迹，想必这便是传说中藏宝之所，不知是何人已捷足先登。\\n而且这地宫实在是幽深广阔，若想取得宝藏，只怕免不了艰辛一场了。\\n（此处颇为凶险，建议携带队友前往）"
   splits:
   - text: "这废墟地处荒野，周边却有诸多行人与车马留下的踪迹，想必这便是传说中藏宝之所，不知是何人已捷足先登。"
-    translated: "This ruin is located in the wilderness, yet there are numerous traces left by passersby and carriages around it. The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact. I wonder if someone has already beaten me to it."
+    translated: "This ruins are located in the wilderness, yet there are numerous traces left by passersby and carriages around it. I wonder if someone has already beaten me to it."
   - subIndex: 1
     text: "而且这地宫实在是幽深广阔，若想取得宝藏，只怕免不了艰辛一场了。"
     translated: "And this underground palace is truly deep and vast. If we want to obtain the treasures, we might have to endure a arduous journey."
@@ -12090,7 +12090,7 @@
 - raw: "这是一处临时搭建的驿站，供往来商旅歇脚喂马所用。\\n帆布拼接而成的帘蓬下，风尘仆仆的旅人们坐在简陋的桌椅间，用粗劣瓷碗大口啜饮着茶水。"
   splits:
   - text: "这是一处临时搭建的驿站，供往来商旅歇脚喂马所用。"
-    translated: "The following sentence contains untranslated Chinese characters. Translate all Chinese characters to English while keeping the rest of the sentence intact. This is a makeshift resting post for travelers and merchants to rest and feed their horses."
+    translated: "This is a temporarily set‑up inn for travelers and merchants to rest and feed their horses."
   - subIndex: 1
     text: "帆布拼接而成的帘蓬下，风尘仆仆的旅人们坐在简陋的桌椅间，用粗劣瓷碗大口啜饮着茶水。"
     translated: "Under the canopy pieced together from canvas, weary travelers sit at simple tables and chairs, taking big gulps of coarse porcelain bowls of tea."

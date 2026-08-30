@@ -41028,3 +41028,312 @@
 - raw: "默默看戏"
   splits:
   - text: "默默看戏"
+- raw: "金风玉露"
+  splits:
+  - text: "金风玉露"
+- raw: "净乐琉璃"
+  splits:
+  - text: "净乐琉璃"
+- raw: "铁算盘"
+  splits:
+  - text: "铁算盘"
+- raw: "九天鬼手"
+  splits:
+  - text: "九天鬼手"
+- raw: "杀人无形"
+  splits:
+  - text: "杀人无形"
+- raw: "玉面医仙"
+  splits:
+  - text: "玉面医仙"
+- raw: "穿林妙手"
+  splits:
+  - text: "穿林妙手"
+- raw: "铁碗残拳"
+  splits:
+  - text: "铁碗残拳"
+- raw: "大醉侠"
+  splits:
+  - text: "大醉侠"
+- raw: "潜龙勿用"
+  splits:
+  - text: "潜龙勿用"
+- raw: "小卧龙"
+  splits:
+  - text: "小卧龙"
+- raw: "玄微法师"
+  splits:
+  - text: "玄微法师"
+- raw: "洞真法师"
+  splits:
+  - text: "洞真法师"
+- raw: "铸铁仙翁"
+  splits:
+  - text: "铸铁仙翁"
+- raw: "百炼神剑"
+  splits:
+  - text: "百炼神剑"
+- raw: "销魂蚀骨"
+  splits:
+  - text: "销魂蚀骨"
+- raw: "毒手琴心"
+  splits:
+  - text: "毒手琴心"
+- raw: "黑爪"
+  splits:
+  - text: "黑爪"
+- raw: "十殿冥主"
+  splits:
+  - text: "十殿冥主"
+- raw: "阴冥诡士"
+  splits:
+  - text: "阴冥诡士"
+- raw: "空谷幽兰"
+  splits:
+  - text: "空谷幽兰"
+- raw: "黑白无常"
+  splits:
+  - text: "黑白无常"
+- raw: "无双国士"
+  splits:
+  - text: "无双国士"
+- raw: "天剑客"
+  splits:
+  - text: "天剑客"
+- raw: "霓裳仙子"
+  splits:
+  - text: "霓裳仙子"
+- raw: "德高望重"
+  splits:
+  - text: "德高望重"
+- raw: "金身罗汉"
+  splits:
+  - text: "金身罗汉"
+- raw: "佛痴"
+  splits:
+  - text: "佛痴"
+- raw: "无为真人"
+  splits:
+  - text: "无为真人"
+- raw: "文逸真人"
+  splits:
+  - text: "文逸真人"
+- raw: "清虚真人"
+  splits:
+  - text: "清虚真人"
+- raw: "力大无穷"
+  splits:
+  - text: "力大无穷"
+- raw: "算无遗策"
+  splits:
+  - text: "算无遗策"
+- raw: "都灵子"
+  splits:
+  - text: "都灵子"
+- raw: "云鹏子"
+  splits:
+  - text: "云鹏子"
+- raw: "白眉真人"
+  splits:
+  - text: "白眉真人"
+- raw: "潇湘真人"
+  splits:
+  - text: "潇湘真人"
+- raw: "白云子"
+  splits:
+  - text: "白云子"
+- raw: "紫髯道人"
+  splits:
+  - text: "紫髯道人"
+- raw: "绝情道人"
+  splits:
+  - text: "绝情道人"
+- raw: "天工巧匠"
+  splits:
+  - text: "天工巧匠"
+- raw: "病鲁班"
+  splits:
+  - text: "病鲁班"
+- raw: "掣地霹雳"
+  splits:
+  - text: "掣地霹雳"
+- raw: "烁金枪"
+  splits:
+  - text: "烁金枪"
+- raw: "燎原火凤"
+  splits:
+  - text: "燎原火凤"
+- raw: "龙象护法"
+  splits:
+  - text: "龙象护法"
+- raw: "灵童转世"
+  splits:
+  - text: "灵童转世"
+- raw: "慧眼明王"
+  splits:
+  - text: "慧眼明王"
+- raw: "天山仙子"
+  splits:
+  - text: "天山仙子"
+- raw: "雪山飞鸿"
+  splits:
+  - text: "雪山飞鸿"
+- raw: "冷月寒江"
+  splits:
+  - text: "冷月寒江"
+- raw: "铁掌双雄"
+  splits:
+  - text: "铁掌双雄"
+- raw: "铁掌四杰"
+  splits:
+  - text: "铁掌四杰"
+- raw: "绝情断义"
+  splits:
+  - text: "绝情断义"
+- raw: "骷髅红粉"
+  splits:
+  - text: "骷髅红粉"
+- raw: "雨夜狂屠"
+  splits:
+  - text: "雨夜狂屠"
+- raw: "刺骨冰寒"
+  splits:
+  - text: "刺骨冰寒"
+- raw: "诡计毒谋"
+  splits:
+  - text: "诡计毒谋"
+- raw: "摘月偷星"
+  splits:
+  - text: "摘月偷星"
+- raw: "四大杀手"
+  splits:
+  - text: "四大杀手"
+- raw: "刀劳鬼"
+  splits:
+  - text: "刀劳鬼"
+- raw: "拘魂鬼"
+  splits:
+  - text: "拘魂鬼"
+- raw: "痨病鬼"
+  splits:
+  - text: "痨病鬼"
+- raw: "山魈鬼"
+  splits:
+  - text: "山魈鬼"
+- raw: "魍魉鬼"
+  splits:
+  - text: "魍魉鬼"
+- raw: "黄河双煞"
+  splits:
+  - text: "黄河双煞"
+- raw: "乐善好施"
+  splits:
+  - text: "乐善好施"
+- raw: "入林龙"
+  splits:
+  - text: "入林龙"
+- raw: "化虎成龙"
+  splits:
+  - text: "化虎成龙"
+- raw: "翻江镇海"
+  splits:
+  - text: "翻江镇海"
+- raw: "及时雨"
+  splits:
+  - text: "及时雨"
+- raw: "乐山大患"
+  splits:
+  - text: "乐山大患"
+- raw: "西北四骏"
+  splits:
+  - text: "西北四骏"
+- raw: "神拳无敌"
+  splits:
+  - text: "神拳无敌"
+- raw: "富可敌国"
+  splits:
+  - text: "富可敌国"
+- raw: "智计无双"
+  splits:
+  - text: "智计无双"
+- raw: "黑风寨大当家"
+  splits:
+  - text: "黑风寨大当家"
+- raw: "黑风寨二当家"
+  splits:
+  - text: "黑风寨二当家"
+- raw: "黑风寨三当家"
+  splits:
+  - text: "黑风寨三当家"
+- raw: "黑风四贼"
+  splits:
+  - text: "黑风四贼"
+- raw: "大隐琴侠"
+  splits:
+  - text: "大隐琴侠"
+- raw: "霸刀狂侠"
+  splits:
+  - text: "霸刀狂侠"
+- raw: "中原大侠"
+  splits:
+  - text: "中原大侠"
+- raw: "蓬莱奇侠"
+  splits:
+  - text: "蓬莱奇侠"
+- raw: "茅山道侠"
+  splits:
+  - text: "茅山道侠"
+- raw: "敕封御史之风"
+  splits:
+  - text: "敕封御史之风"
+- raw: "敕封御史之林"
+  splits:
+  - text: "敕封御史之林"
+- raw: "敕封御史之火"
+  splits:
+  - text: "敕封御史之火"
+- raw: "敕封御史之山"
+  splits:
+  - text: "敕封御史之山"
+- raw: "玉面判官"
+  splits:
+  - text: "玉面判官"
+- raw: "江湖百晓"
+  splits:
+  - text: "江湖百晓"
+- raw: "侠盗四奇"
+  splits:
+  - text: "侠盗四奇"
+- raw: "小霹雳"
+  splits:
+  - text: "小霹雳"
+- raw: "侠盗四丑"
+  splits:
+  - text: "侠盗四丑"
+- raw: "拳佛"
+  splits:
+  - text: "拳佛"
+- raw: "陆地剑仙"
+  splits:
+  - text: "陆地剑仙"
+- raw: "横刀灭九州"
+  splits:
+  - text: "横刀灭九州"
+- raw: "铁枪破宇宙"
+  splits:
+  - text: "铁枪破宇宙"
+- raw: "出奇必胜"
+  splits:
+  - text: "出奇必胜"
+- raw: "百步穿针"
+  splits:
+  - text: "百步穿针"
+- raw: "百骰百胜"
+  splits:
+  - text: "百骰百胜"
+- raw: "滚地雷"
+  splits:
+  - text: "滚地雷"
+- raw: "白衣秀士"
+  splits:
+  - text: "白衣秀士"

@@ -543,7 +543,15 @@ internal static class DynamicStringPatches
         return new CompiledTemplate
         {
             Pattern = new Regex(patternBuilder.ToString(), RegexOptions.Compiled),
-            PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled),
+            // Singleline so the permissive "." placeholder capture class can span embedded
+            // newlines too - CONFIRMED BUG (2026-08-30, "#TargetInteractName#将此前{0}之遭遇向你
+            // 娓娓道来......" template not translating): a runtime {0} value can itself be a
+            // multi-line composite (e.g. a reward block with a literal "\n" between reputation/
+            // silver-tael lines), but plain "." never matches "\n" without Singleline, so the
+            // permissive fallback failed IsMatch just like the strict pattern, and the whole
+            // template (including its own translated literal connector text) was skipped in favor
+            // of the bare-fragment ApplyDictionary pass, producing garbled per-character output.
+            PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled | RegexOptions.Singleline),
             ReplacementPattern = replacementPattern,
             LiteralSegments = literalSegments,
         };
@@ -795,6 +803,49 @@ internal static class DynamicStringPatches
                     $"[DynamicStringPatches] Merged {mergedFromPrefabText} additional fragment(s) from '{PrefabTextFilePattern}'.");
             }
 
+            // CONFIRMED BUG (2026-08-30, "没事没事(咽下口鲜血)" screenshot case): many
+            // dynamicStrings entries are IL2CPP-compiled dialogue OPTION literals shaped
+            // "DisplayLabel;EventKey[;extraArgs...]" (Raw) / "TranslatedLabel;EventKey[;extraArgs...]"
+            // (Result) - the trailing ";EventKey..." segments are the game's own callback/flag
+            // data, never actually rendered on screen; only the label BEFORE the first ';' is
+            // shown. Because ApplyDictionary only ever does a literal `result.Contains(entry.Raw)`
+            // check, an entry whose Raw still carries its ";EventKey" suffix can NEVER match
+            // against the real on-screen text (which omits that suffix entirely), silently making
+            // the whole-phrase entry dead weight. When the label's own bare form doesn't already
+            // exist as a separate entry (e.g. "没事没事(咽下口鲜血)" is unique to this one option,
+            // unlike bare "没事没事" which exists elsewhere on its own), the label falls through to
+            // shorter substring fragments instead, producing garbled partial translations (e.g.
+            // "没事没事(咽下口鲜血)" -> "It's okay, it's okay(咽 Down 口鲜血)" - only bare "没事没事"
+            // and an unrelated standalone "下"->"Down" entry matched). Fix: for every non-template
+            // entry whose Raw contains ';', also register a supplemental bare entry for just the
+            // label segment (text before the first ';') mapped to Result's own text before its
+            // first ';' - translation always preserves the trailing segments verbatim, so the
+            // split points line up 1:1. Skipped if a label-only entry already exists (an explicit
+            // dedicated entry always wins) or if the label is empty.
+            var existingRawForLabels = new HashSet<string>(entries.Select(e => e.Raw).Where(r => !string.IsNullOrEmpty(r)));
+            var labelEntries = new List<DictionaryEntry>();
+            foreach (var entry in entries)
+            {
+                if (entry.IsTemplate || string.IsNullOrEmpty(entry.Raw)) continue;
+                var semiIndex = entry.Raw.IndexOf(';');
+                if (semiIndex <= 0) continue;
+
+                var rawLabel = entry.Raw.Substring(0, semiIndex);
+                if (!existingRawForLabels.Add(rawLabel)) continue;
+
+                var result = entry.Result ?? string.Empty;
+                var resultSemiIndex = result.IndexOf(';');
+                var resultLabel = resultSemiIndex >= 0 ? result.Substring(0, resultSemiIndex) : result;
+
+                labelEntries.Add(new DictionaryEntry { Raw = rawLabel, Result = resultLabel });
+            }
+            entries.AddRange(labelEntries);
+            if (labelEntries.Count > 0)
+            {
+                MainPlugin.Logger.LogInfo(
+                    $"[DynamicStringPatches] Added {labelEntries.Count} supplemental label-only fragment(s) split from ';'-suffixed dialogue option entries.");
+            }
+
             // Precompute each entry's visible replacement edge chars once (see
             // DictionaryEntry.ReplacementLeadChar/ReplacementTrailChar) rather than on every match
             // at call time - see the perf note on those fields for why this matters.
@@ -850,6 +901,19 @@ internal static class DynamicStringPatches
     }
 
     private const string ResidualCjkDebugLogFileName = "residualCjkDebug.log";
+
+    public static void ClearResidualCjkDebugLog()
+    {
+        try
+        {
+            var path = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
+            if (File.Exists(path)) File.Delete(path);
+        }
+        catch
+        {
+            // Best-effort diagnostic only - never let a logging failure affect translation.
+        }
+    }
 
     // Gated by MainPlugin.ResidualCjkDebugEnabled (off by default - see its own comment). When
     // enabled, logs the before/after text for any call where CJK characters remain after both the

@@ -54594,3 +54594,415 @@
   splits:
   - text: "默默看戏"
     translated: "Watch silently"
+- raw: "金风玉露"
+  splits:
+  - text: "金风玉露"
+    translated: "Golden wind and jade dew"
+- raw: "净乐琉璃"
+  splits:
+  - text: "净乐琉璃"
+    translated: "Jingle Luliu"
+- raw: "铁算盘"
+  splits:
+  - text: "铁算盘"
+    translated: "Iron calculator"
+- raw: "九天鬼手"
+  splits:
+  - text: "九天鬼手"
+    translated: "Nine Heaven Ghost Hand"
+- raw: "杀人无形"
+  splits:
+  - text: "杀人无形"
+    translated: "Invisible killer"
+- raw: "玉面医仙"
+  splits:
+  - text: "玉面医仙"
+    translated: "Face of Jade Medical Immortal"
+- raw: "穿林妙手"
+  splits:
+  - text: "穿林妙手"
+    translated: "Mystic Hand Through the Woods"
+- raw: "铁碗残拳"
+  splits:
+  - text: "铁碗残拳"
+    translated: "Iron Bowl Fists"
+- raw: "大醉侠"
+  splits:
+  - text: "大醉侠"
+    translated: "Drunk Hero"
+- raw: "潜龙勿用"
+  splits:
+  - text: "潜龙勿用"
+    translated: "Do Not Stifle the Ascending Dragon"
+- raw: "小卧龙"
+  splits:
+  - text: "小卧龙"
+    translated: "Young Dragon‑Origin"
+- raw: "玄微法师"
+  splits:
+  - text: "玄微法师"
+    translated: "Mystic Master Xuanwei"
+- raw: "洞真法师"
+  splits:
+  - text: "洞真法师"
+    translated: "True Void Monk"
+- raw: "铸铁仙翁"
+  splits:
+  - text: "铸铁仙翁"
+    translated: "Cast‑iron Sage"
+- raw: "百炼神剑"
+  splits:
+  - text: "百炼神剑"
+    translated: "Celestial Sword Refined a Hundred Times"
+- raw: "销魂蚀骨"
+  splits:
+  - text: "销魂蚀骨"
+    translated: "Heart‑stirring and bone‑quaking"
+- raw: "毒手琴心"
+  splits:
+  - text: "毒手琴心"
+    translated: "Poison‑Finger Harp Soul"
+- raw: "黑爪"
+  splits:
+  - text: "黑爪"
+    translated: "Black Claw"
+- raw: "十殿冥主"
+  splits:
+  - text: "十殿冥主"
+    translated: "Ten Lords of the Netherworld"
+- raw: "阴冥诡士"
+  splits:
+  - text: "阴冥诡士"
+    translated: "Shadowcraft Master"
+- raw: "空谷幽兰"
+  splits:
+  - text: "空谷幽兰"
+    translated: "Gorge‑Dwelling Orchid"
+- raw: "黑白无常"
+  splits:
+  - text: "黑白无常"
+    translated: "Black and White Officials"
+- raw: "无双国士"
+  splits:
+  - text: "无双国士"
+    translated: "Unmatched National Scholar"
+- raw: "天剑客"
+  splits:
+  - text: "天剑客"
+    translated: "Heavenly Swordmaster"
+- raw: "霓裳仙子"
+  splits:
+  - text: "霓裳仙子"
+    translated: "Fairy Nishang"
+- raw: "德高望重"
+  splits:
+  - text: "德高望重"
+    translated: "Well‑respected"
+- raw: "金身罗汉"
+  splits:
+  - text: "金身罗汉"
+    translated: "Golden Body Arhat"
+- raw: "佛痴"
+  splits:
+  - text: "佛痴"
+    translated: "Buddhist Obsessed"
+- raw: "无为真人"
+  splits:
+  - text: "无为真人"
+    translated: "Immortal Wuwei"
+- raw: "文逸真人"
+  splits:
+  - text: "文逸真人"
+    translated: "Immortal Wen Yi"
+- raw: "清虚真人"
+  splits:
+  - text: "清虚真人"
+    translated: "Immortal Qingqi"
+- raw: "力大无穷"
+  splits:
+  - text: "力大无穷"
+    translated: "Unlimited strength"
+- raw: "算无遗策"
+  splits:
+  - text: "算无遗策"
+    translated: "Calculating without omission"
+- raw: "都灵子"
+  splits:
+  - text: "都灵子"
+    translated: "Tulingsi"
+- raw: "云鹏子"
+  splits:
+  - text: "云鹏子"
+    translated: "Yun Pengzi"
+- raw: "白眉真人"
+  splits:
+  - text: "白眉真人"
+    translated: "Immortal White Eyebrow"
+- raw: "潇湘真人"
+  splits:
+  - text: "潇湘真人"
+    translated: "Xiaoxiang Immortal"
+- raw: "白云子"
+  splits:
+  - text: "白云子"
+    translated: "White Cloud Apprentice"
+- raw: "紫髯道人"
+  splits:
+  - text: "紫髯道人"
+    translated: "Bearded Daoist"
+- raw: "绝情道人"
+  splits:
+  - text: "绝情道人"
+    translated: "Discordia Daoist"
+- raw: "天工巧匠"
+  splits:
+  - text: "天工巧匠"
+    translated: "Master Craftsman"
+- raw: "病鲁班"
+  splits:
+  - text: "病鲁班"
+    translated: "Clever Lu Ban"
+- raw: "掣地霹雳"
+  splits:
+  - text: "掣地霹雳"
+    translated: "Earthshaking Thunderbolt"
+- raw: "烁金枪"
+  splits:
+  - text: "烁金枪"
+    translated: "Blazing Spear"
+- raw: "燎原火凤"
+  splits:
+  - text: "燎原火凤"
+    translated: "Blazing Phoenix"
+- raw: "龙象护法"
+  splits:
+  - text: "龙象护法"
+    translated: "Dragon Elephant Guardian"
+- raw: "灵童转世"
+  splits:
+  - text: "灵童转世"
+    translated: "Reincarnation of a Child Prodigy"
+- raw: "慧眼明王"
+  splits:
+  - text: "慧眼明王"
+    translated: "Bright Eye King"
+- raw: "天山仙子"
+  splits:
+  - text: "天山仙子"
+    translated: "Tianshan Fairy"
+- raw: "雪山飞鸿"
+  splits:
+  - text: "雪山飞鸿"
+    translated: "Snow Mountain Flying Eagle"
+- raw: "冷月寒江"
+  splits:
+  - text: "冷月寒江"
+    translated: "Cold Moon, Frozen River"
+- raw: "铁掌双雄"
+  splits:
+  - text: "铁掌双雄"
+    translated: "Dual Iron Palm Experts"
+- raw: "铁掌四杰"
+  splits:
+  - text: "铁掌四杰"
+    translated: "Four Palm Masters"
+- raw: "绝情断义"
+  splits:
+  - text: "绝情断义"
+    translated: "Cut Off Emotions and Loyalties"
+- raw: "骷髅红粉"
+  splits:
+  - text: "骷髅红粉"
+    translated: "Skull Red Powder"
+- raw: "雨夜狂屠"
+  splits:
+  - text: "雨夜狂屠"
+    translated: "Night Rain Slaughterfest"
+- raw: "刺骨冰寒"
+  splits:
+  - text: "刺骨冰寒"
+    translated: "Bone‑chilling cold"
+- raw: "诡计毒谋"
+  splits:
+  - text: "诡计毒谋"
+    translated: "Deceitful schemes"
+- raw: "摘月偷星"
+  splits:
+  - text: "摘月偷星"
+    translated: "Pluck Moon, Steal Stars"
+- raw: "四大杀手"
+  splits:
+  - text: "四大杀手"
+    translated: "Four Assassins"
+- raw: "刀劳鬼"
+  splits:
+  - text: "刀劳鬼"
+    translated: "Butcher Ghost"
+- raw: "拘魂鬼"
+  splits:
+  - text: "拘魂鬼"
+    translated: "SoulCatcher"
+- raw: "痨病鬼"
+  splits:
+  - text: "痨病鬼"
+    translated: "Tubercular ghost"
+- raw: "山魈鬼"
+  splits:
+  - text: "山魈鬼"
+    translated: "Yamony Ghost"
+- raw: "魍魉鬼"
+  splits:
+  - text: "魍魉鬼"
+    translated: "Goblin demon"
+- raw: "黄河双煞"
+  splits:
+  - text: "黄河双煞"
+    translated: "Yellow River Dual Fiends"
+- raw: "乐善好施"
+  splits:
+  - text: "乐善好施"
+    translated: "Charitable"
+- raw: "入林龙"
+  splits:
+  - text: "入林龙"
+    translated: "Dragon Enters the Forest"
+- raw: "化虎成龙"
+  splits:
+  - text: "化虎成龙"
+    translated: "Transform into a tiger and become a dragon"
+- raw: "翻江镇海"
+  splits:
+  - text: "翻江镇海"
+    translated: "Turn the River and Calm the Sea"
+- raw: "及时雨"
+  splits:
+  - text: "及时雨"
+    translated: "Rainmaker"
+- raw: "乐山大患"
+  splits:
+  - text: "乐山大患"
+    translated: "Leshan great calamity"
+- raw: "西北四骏"
+  splits:
+  - text: "西北四骏"
+    translated: "Four Great Horses of the Northwest"
+- raw: "神拳无敌"
+  splits:
+  - text: "神拳无敌"
+    translated: "Invincible Fist"
+- raw: "富可敌国"
+  splits:
+  - text: "富可敌国"
+    translated: "Rich enough to rival a nation"
+- raw: "智计无双"
+  splits:
+  - text: "智计无双"
+    translated: "Ingenious beyond compare"
+- raw: "黑风寨大当家"
+  splits:
+  - text: "黑风寨大当家"
+    translated: "Great Leader of Black Wind Ridge"
+- raw: "黑风寨二当家"
+  splits:
+  - text: "黑风寨二当家"
+    translated: "Second Boss"
+- raw: "黑风寨三当家"
+  splits:
+  - text: "黑风寨三当家"
+    translated: "Third Master of Black Wind Manor"
+- raw: "黑风四贼"
+  splits:
+  - text: "黑风四贼"
+    translated: "Four Bandits of Black Wind"
+- raw: "大隐琴侠"
+  splits:
+  - text: "大隐琴侠"
+    translated: "Great Hidden Harp"
+- raw: "霸刀狂侠"
+  splits:
+  - text: "霸刀狂侠"
+    translated: "Frenzied Blade"
+- raw: "中原大侠"
+  splits:
+  - text: "中原大侠"
+    translated: "Great Hero of Central Plains"
+- raw: "蓬莱奇侠"
+  splits:
+  - text: "蓬莱奇侠"
+    translated: "Penglai Strange Hero"
+- raw: "茅山道侠"
+  splits:
+  - text: "茅山道侠"
+    translated: "Moshan Daoist Hero"
+- raw: "敕封御史之风"
+  splits:
+  - text: "敕封御史之风"
+    translated: "Imperial Censor Wind"
+- raw: "敕封御史之林"
+  splits:
+  - text: "敕封御史之林"
+    translated: "Imperial Censor Lin"
+- raw: "敕封御史之火"
+  splits:
+  - text: "敕封御史之火"
+    translated: "Imperial Censor's Flame"
+- raw: "敕封御史之山"
+  splits:
+  - text: "敕封御史之山"
+    translated: "Vice‑Adjudicator Mountain"
+- raw: "玉面判官"
+  splits:
+  - text: "玉面判官"
+    translated: "Face of Jade Official"
+- raw: "江湖百晓"
+  splits:
+  - text: "江湖百晓"
+    translated: "Jianghu Bai Xiao"
+- raw: "侠盗四奇"
+  splits:
+  - text: "侠盗四奇"
+    translated: "Thief and Four Quirks"
+- raw: "小霹雳"
+  splits:
+  - text: "小霹雳"
+    translated: "Little Thunderbolt"
+- raw: "侠盗四丑"
+  splits:
+  - text: "侠盗四丑"
+    translated: "Thief Quartet"
+- raw: "拳佛"
+  splits:
+  - text: "拳佛"
+    translated: "Punch Buddha"
+- raw: "陆地剑仙"
+  splits:
+  - text: "陆地剑仙"
+    translated: "Land Sword Immortal"
+- raw: "横刀灭九州"
+  splits:
+  - text: "横刀灭九州"
+    translated: "Slash to Annihilate Nine Provinces"
+- raw: "铁枪破宇宙"
+  splits:
+  - text: "铁枪破宇宙"
+    translated: "Spear Through the Universe"
+- raw: "出奇必胜"
+  splits:
+  - text: "出奇必胜"
+    translated: "Surprise attacks always win"
+- raw: "百步穿针"
+  splits:
+  - text: "百步穿针"
+    translated: "Hundred‑step needle‑threading"
+- raw: "百骰百胜"
+  splits:
+  - text: "百骰百胜"
+    translated: "Hundred Dice, Hundred Wins"
+- raw: "滚地雷"
+  splits:
+  - text: "滚地雷"
+    translated: "Tumble mine"
+- raw: "白衣秀士"
+  splits:
+  - text: "白衣秀士"
+    translated: "White‑robed Gentleman"

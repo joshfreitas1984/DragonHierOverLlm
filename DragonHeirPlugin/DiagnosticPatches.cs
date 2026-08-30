@@ -49,21 +49,21 @@ internal static class DiagnosticPatches
     /// DynamicStringPatches' global substring-replace dictionary by the time it reaches here.
     /// Pure logging - does not change behavior. Remove once the root cause is confirmed/fixed.
     /// </summary>
-    [HarmonyPatch(typeof(ItemData), nameof(ItemData.GetItemIconName))]
-    [HarmonyPostfix]
-    private static void GetItemIconName_Postfix(ItemData __instance, ref string __result)
-    {
-        try
-        {
-            MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[ItemData.GetItemIconName]: type={__instance?.type}, subType={__instance?.subType}, " +
-                $"name='{__instance?.name}', itemID={__instance?.itemID} -> iconName='{__result}'");
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[ItemData.GetItemIconName]: failed to dump item: {ex}");
-        }
-    }
+    //[HarmonyPatch(typeof(ItemData), nameof(ItemData.GetItemIconName))]
+    //[HarmonyPostfix]
+    //private static void GetItemIconName_Postfix(ItemData __instance, ref string __result)
+    //{
+    //    try
+    //    {
+    //        MainPlugin.Logger?.LogInfo(
+    //            $"DiagnosticPatches[ItemData.GetItemIconName]: type={__instance?.type}, subType={__instance?.subType}, " +
+    //            $"name='{__instance?.name}', itemID={__instance?.itemID} -> iconName='{__result}'");
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        MainPlugin.Logger?.LogError($"DiagnosticPatches[ItemData.GetItemIconName]: failed to dump item: {ex}");
+    //    }
+    //}
 
     /// <summary>
     /// Bracket patch for the same investigation: logs every "IconAtlas" sprite lookup
@@ -74,23 +74,23 @@ internal static class DiagnosticPatches
     /// avoid noise from the many other atlases (UIAtlas, etc.) this same method also serves.
     /// Pure logging - does not change behavior. Remove once the root cause is confirmed/fixed.
     /// </summary>
-    [HarmonyPatch(typeof(TextureController), nameof(TextureController.LoadAtlasSprite))]
-    [HarmonyPostfix]
-    private static void LoadAtlasSprite_Postfix(string atlasPath, string spriteName, ref UnityEngine.Sprite __result)
-    {
-        try
-        {
-            if (atlasPath != "IconAtlas")
-                return;
+    //[HarmonyPatch(typeof(TextureController), nameof(TextureController.LoadAtlasSprite))]
+    //[HarmonyPostfix]
+    //private static void LoadAtlasSprite_Postfix(string atlasPath, string spriteName, ref UnityEngine.Sprite __result)
+    //{
+    //    try
+    //    {
+    //        if (atlasPath != "IconAtlas")
+    //            return;
 
-            MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[TextureController.LoadAtlasSprite]: atlasPath='{atlasPath}', spriteName='{spriteName}' -> resolved={(__result != null)}");
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[TextureController.LoadAtlasSprite]: failed to log lookup: {ex}");
-        }
-    }
+    //        MainPlugin.Logger?.LogInfo(
+    //            $"DiagnosticPatches[TextureController.LoadAtlasSprite]: atlasPath='{atlasPath}', spriteName='{spriteName}' -> resolved={(__result != null)}");
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        MainPlugin.Logger?.LogError($"DiagnosticPatches[TextureController.LoadAtlasSprite]: failed to log lookup: {ex}");
+    //    }
+    //}
 
        
 

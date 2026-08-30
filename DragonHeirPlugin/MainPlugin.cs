@@ -28,6 +28,8 @@ public class MainPlugin : BasePlugin
     {
         Logger = base.Log;
 
+        DynamicStringPatches.ClearResidualCjkDebugLog();
+
         ResidualCjkDebugEnabled = Config.Bind(
             "Debug",
             "ResidualCjkDebugLogging",
@@ -51,7 +53,6 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
         HeroNamePatches.LoadNamePartDictionary();
         Harmony.CreateAndPatchAll(typeof(HeroNamePatches));
-        Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
         DynamicStringPatches.PatchAll();
         // Must patch AFTER DynamicStringPatches.PatchAll() - ItemIconPatches.
         // GetItemIconName_Postfix calls DynamicStringPatches.ReverseTranslate, which reads the

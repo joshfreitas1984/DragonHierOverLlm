@@ -245,7 +245,7 @@
   allowAutoSizing: true
 - path: Canvas/PlotPanel/PlotTextBack/PlotText
   sampleText: "Hmph! In these turbulent times, the emperor is weak and hidden.\nIt was the time to proclaim my brother Zhao Yinzong as the successor and usher in a new dynasty."
-  idealFontSize: 18.0
+  idealFontSize: 16.0
   allowWordWrap: true
   allowAutoSizing: false
 - path: Canvas/PlotPanel/RightFace/NickName
