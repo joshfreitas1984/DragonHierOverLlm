@@ -29,6 +29,7 @@ public class MainPlugin : BasePlugin
         Logger = base.Log;
 
         DynamicStringPatches.ClearResidualCjkDebugLog();
+        UnityLogCapture.DeleteLogFile();
 
         ResidualCjkDebugEnabled = Config.Bind(
             "Debug",
@@ -54,6 +55,7 @@ public class MainPlugin : BasePlugin
         HeroNamePatches.LoadNamePartDictionary();
         Harmony.CreateAndPatchAll(typeof(HeroNamePatches));
         DynamicStringPatches.PatchAll();
+        
         // Must patch AFTER DynamicStringPatches.PatchAll() - ItemIconPatches.
         // GetItemIconName_Postfix calls DynamicStringPatches.ReverseTranslate, which reads the
         // reverse dictionary that PatchAll() populates.

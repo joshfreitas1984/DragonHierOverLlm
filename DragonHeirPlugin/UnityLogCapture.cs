@@ -59,9 +59,23 @@ namespace EnglishPatch;
 /// </summary>
 internal static class UnityLogCapture
 {
+    // Detailed hook, formatting, and interop rationale: docs/unitylogcapture-reference.md.
     private static readonly string PluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".";
     private static readonly string LogFile = Path.Combine(PluginDir, "unity-log.txt");
     private static readonly object WriteLock = new();
+
+    public static void DeleteLogFile()
+    {
+        try
+        {
+            if (File.Exists(LogFile))
+                File.Delete(LogFile);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"UnityLogCapture.DeleteLogFile failed: {ex}");
+        }
+    }
 
     private static void Write(string level, object message)
     {
