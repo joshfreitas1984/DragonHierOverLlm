@@ -54,4 +54,15 @@
   skipped when their `{n}` placeholder is legitimately CJK data (sect/title names); the
   CJK-inclusive `PermissivePattern` fallback fix, its verification harness methodology, and a
   confirmed (not just theoretical) residual risk around `BlockingRawEntries` coverage.
+- [`docs/dynamicstringpatches-adjacent-placeholder-merge.md`](docs/dynamicstringpatches-adjacent-placeholder-merge.md)
+  — CONFIRMED BUG #5: templates with zero-literal-gap adjacent placeholders (e.g. force-name +
+  title pairs) had no regex anchor and degenerated to 1-char captures, corrupting output (`巨
+  鲸帮...`, `仙霞.派`); the per-run safe-merge-vs-reject fix in `BuildCompiledTemplate` and a
+  `Match.Index`-vs-list-index dictionary-keying pitfall hit while implementing it. Also covers
+  CONFIRMED BUG #6 (same root cause, applies when a placeholder/token is the LAST thing in `Raw`
+  with no trailing literal - greedy-quantifier fix for that one final group), CONFIRMED BUG #7
+  (widened the per-run safety check to tolerate whitespace-only gaps in `Result`, not just fully
+  glued markers - fixed 3/5 of a batch of over-eagerly-rejected templates), and a flagged-but-
+  unfixed side finding: `dumpedPrefabTextFromOtherFields.txt.yaml`'s `"在下#$PlayerName#"` template
+  is dangerously over-generic and can false-positive-match as a prefix inside unrelated dialogue.
 

@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
@@ -17,9 +18,21 @@ public class MainPlugin : BasePlugin
     public const string ChineseCharPattern = @".*\p{IsCJKUnifiedIdeographs}.*";
     internal static new ManualLogSource Logger;
 
+    // Off by default - flip via BepInEx's generated config file (BepInEx\config\<GUID>.cfg,
+    // section "Debug") to have DynamicStringPatches append before/after text for every call that
+    // still contains residual CJK characters after both the template and bare-fragment passes to
+    // residualCjkDebug.log next to the plugin DLL. See DynamicStringPatches.LogResidualCjkDebug.
+    internal static ConfigEntry<bool> ResidualCjkDebugEnabled;
+
     public override void Load()
     {
         Logger = base.Log;
+
+        ResidualCjkDebugEnabled = Config.Bind(
+            "Debug",
+            "ResidualCjkDebugLogging",
+            false,
+            "When true, DynamicStringPatches logs before/after text to residualCjkDebug.log for every call that still contains untranslated CJK characters after both the template and bare-fragment passes. Leave off unless actively debugging a translation gap - this is a per-call diagnostic and will grow the log file quickly.");
 
         // Register codepage 936 (GBK) support - .NET Core only ships Unicode encodings by
         // default. Some game TextAssets (e.g. SpeHeroFaceData) are GBK-encoded rather than
@@ -38,7 +51,12 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
         HeroNamePatches.LoadNamePartDictionary();
         Harmony.CreateAndPatchAll(typeof(HeroNamePatches));
+        Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
         DynamicStringPatches.PatchAll();
+        // Must patch AFTER DynamicStringPatches.PatchAll() - ItemIconPatches.
+        // GetItemIconName_Postfix calls DynamicStringPatches.ReverseTranslate, which reads the
+        // reverse dictionary that PatchAll() populates.
+        Harmony.CreateAndPatchAll(typeof(ItemIconPatches));
 
         //Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
         //Harmony.CreateAndPatchAll(typeof(HardcodedHeroNamePatches));

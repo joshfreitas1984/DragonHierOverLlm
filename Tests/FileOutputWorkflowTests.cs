@@ -27,6 +27,9 @@ public class FileOutputWorkflowTests
         GameFileHandlingBase.CopyDirectory($"{workingDirectory}/Resizers", $"{releaseFolder}/BepInEx/resizers", true);
         GameFileHandlingBase.CopyDirectory($"{workingDirectory}/Mod", $"{releaseFolder}/BepInEx/plugins/resources/GameData", true);
 
+        // Delete the auto added resizers
+        File.Delete($"{releaseFolder}/BepInEx/resizers/zzAddedResizers.yaml");
+
         ZipFile.CreateFromDirectory($"{releaseFolder}", $"{releaseFolder}/../EnglishPatch-{version}.zip");
         await Task.CompletedTask;
     }

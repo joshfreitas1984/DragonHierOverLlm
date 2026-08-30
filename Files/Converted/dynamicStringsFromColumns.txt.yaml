@@ -50516,3 +50516,683 @@
     translated: "Brotherhood by blood"
   templates:
   - template: "{0}:"
+- raw: "炖老母鸡"
+  splits:
+  - text: "炖老母鸡"
+    translated: "Slow‑cooked old hen"
+- raw: "天麻鱼头"
+  splits:
+  - text: "天麻鱼头"
+    translated: "Tianma Fish Head"
+- raw: "沙苑甲鱼汤"
+  splits:
+  - text: "沙苑甲鱼汤"
+    translated: "Shayuan Soft‑Shelled Turtle Soup"
+- raw: "参茸熊掌"
+  splits:
+  - text: "参茸熊掌"
+    translated: "Ginseng Deer Antler Bear Paw"
+- raw: "十全大补汤"
+  splits:
+  - text: "十全大补汤"
+    translated: "Decocted Decoction of All‑Nourishing Herbs"
+- raw: "雄黄酒"
+  splits:
+  - text: "雄黄酒"
+    translated: "Yellow rice wine"
+- raw: "乌龙茶"
+  splits:
+  - text: "乌龙茶"
+    translated: "Oolong tea"
+- raw: "蛇酒"
+  splits:
+  - text: "蛇酒"
+    translated: "Wine made from snake meat"
+- raw: "肉桂茶"
+  splits:
+  - text: "肉桂茶"
+    translated: "Cinnamon tea"
+- raw: "三鞭酒"
+  splits:
+  - text: "三鞭酒"
+    translated: "Three‑horn liquor"
+- raw: "铁观音茶"
+  splits:
+  - text: "铁观音茶"
+    translated: "Tieguanyin tea"
+- raw: "鹿胎酒"
+  splits:
+  - text: "鹿胎酒"
+    translated: "Fetus alcohol"
+- raw: "白牡丹茶"
+  splits:
+  - text: "白牡丹茶"
+    translated: "White Peony Tea"
+- raw: "虎骨酒"
+  splits:
+  - text: "虎骨酒"
+    translated: "Tiger Bone Wine"
+- raw: "大红袍茶"
+  splits:
+  - text: "大红袍茶"
+    translated: "Big Red Robe Tea"
+- raw: "龙脑酒"
+  splits:
+  - text: "龙脑酒"
+    translated: "Dragon Brain Wine"
+- raw: "凤凰水仙茶"
+  splits:
+  - text: "凤凰水仙茶"
+    translated: "Phoenix Dianhua Tea"
+- raw: "烧饼"
+  splits:
+  - text: "烧饼"
+    translated: "Pancake"
+- raw: "肉包"
+  splits:
+  - text: "肉包"
+    translated: "Meat bun"
+- raw: "煎饺"
+  splits:
+  - text: "煎饺"
+    translated: "Pan‑fried dumplings"
+- raw: "烧鸡"
+  splits:
+  - text: "烧鸡"
+    translated: "Roast chicken"
+- raw: "红烧肉"
+  splits:
+  - text: "红烧肉"
+    translated: "Braised pork"
+- raw: "乳猪"
+  splits:
+  - text: "乳猪"
+    translated: "Roast suckling pig"
+- raw: "绿茶"
+  splits:
+  - text: "绿茶"
+    translated: "Green tea"
+- raw: "烧刀子"
+  splits:
+  - text: "烧刀子"
+    translated: "Burn Blade"
+- raw: "龙井茶"
+  splits:
+  - text: "龙井茶"
+    translated: "West Lake Longjing tea"
+- raw: "竹叶青"
+  splits:
+  - text: "竹叶青"
+    translated: "Bamboo Leaf Tea"
+- raw: "碧螺春茶"
+  splits:
+  - text: "碧螺春茶"
+    translated: "Biluochun tea"
+- raw: "葡萄酒"
+  splits:
+  - text: "葡萄酒"
+    translated: "Grape Wine"
+- raw: "毛峰茶"
+  splits:
+  - text: "毛峰茶"
+    translated: "Mao Feng tea"
+- raw: "新丰酒"
+  splits:
+  - text: "新丰酒"
+    translated: "New Harvest Wine"
+- raw: "云雾茶"
+  splits:
+  - text: "云雾茶"
+    translated: "Cloud Mist Tea"
+- raw: "杜康酒"
+  splits:
+  - text: "杜康酒"
+    translated: "Dukang Wine"
+- raw: "太平猴魁茶"
+  splits:
+  - text: "太平猴魁茶"
+    translated: "Taiping Houkui tea"
+- raw: "桂圆枸杞粥"
+  splits:
+  - text: "桂圆枸杞粥"
+    translated: "Longan and Goji Berry Porridge"
+- raw: "茯苓糕"
+  splits:
+  - text: "茯苓糕"
+    translated: "Poria Pudding"
+- raw: "当归炖羊肉"
+  splits:
+  - text: "当归炖羊肉"
+    translated: "Chinese Angelica and Lamb Soup"
+- raw: "虫草老鸭煲"
+  splits:
+  - text: "虫草老鸭煲"
+    translated: "Abalone and Cordyceps Soup"
+- raw: "四君子汤"
+  splits:
+  - text: "四君子汤"
+    translated: "Four Gentlemen Decoction"
+- raw: "烩八珍"
+  splits:
+  - text: "烩八珍"
+    translated: "Stewed eight delicacies"
+- raw: "清酒"
+  splits:
+  - text: "清酒"
+    translated: "Rice wine"
+- raw: "红茶"
+  splits:
+  - text: "红茶"
+    translated: "Black tea"
+- raw: "花雕酒"
+  splits:
+  - text: "花雕酒"
+    translated: "Shanghu Fortified Wine"
+- raw: "工夫茶"
+  splits:
+  - text: "工夫茶"
+    translated: "Afternoon Tea"
+- raw: "女儿红"
+  splits:
+  - text: "女儿红"
+    translated: "Red Daughter Wine"
+- raw: "古树茶"
+  splits:
+  - text: "古树茶"
+    translated: "Ancient tree tea"
+- raw: "桑落酒"
+  splits:
+  - text: "桑落酒"
+    translated: "Dew Fallen Wine"
+- raw: "九曲红梅茶"
+  splits:
+  - text: "九曲红梅茶"
+    translated: "Nine Bends Crimson Cherry Tea"
+- raw: "猴儿酿"
+  splits:
+  - text: "猴儿酿"
+    translated: "Monkey brew"
+- raw: "金骏眉茶"
+  splits:
+  - text: "金骏眉茶"
+    translated: "Golden Monkey Tea"
+- raw: "换骨醪"
+  splits:
+  - text: "换骨醪"
+    translated: "Bone‑Transforming Decoction"
+- raw: "正山小种茶"
+  splits:
+  - text: "正山小种茶"
+    translated: "Zhengshan Xiazhong tea"
+- raw: "骡子"
+  splits:
+  - text: "骡子"
+    translated: "Mule"
+- raw: "驴子"
+  splits:
+  - text: "驴子"
+    translated: "Donkey"
+- raw: "跛脚马"
+  splits:
+  - text: "跛脚马"
+    translated: "Limping horse"
+- raw: "小马"
+  splits:
+  - text: "小马"
+    translated: "Little Horse"
+- raw: "劣马"
+  splits:
+  - text: "劣马"
+    translated: "Poor horse"
+- raw: "矮马"
+  splits:
+  - text: "矮马"
+    translated: "Pony"
+- raw: "驮马"
+  splits:
+  - text: "驮马"
+    translated: "Pack horse"
+- raw: "瘦马"
+  splits:
+  - text: "瘦马"
+    translated: "Weak horse"
+- raw: "大马"
+  splits:
+  - text: "大马"
+    translated: "Laba"
+- raw: "烈马"
+  splits:
+  - text: "烈马"
+    translated: "Wild Horse"
+- raw: "军马"
+  splits:
+  - text: "军马"
+    translated: "Military horses"
+- raw: "快马"
+  splits:
+  - text: "快马"
+    translated: "Rapid horse"
+- raw: "战马"
+  splits:
+  - text: "战马"
+    translated: "Battlehorse"
+- raw: "河曲马"
+  splits:
+  - text: "河曲马"
+    translated: "Riverbend Horse"
+- raw: "西南马"
+  splits:
+  - text: "西南马"
+    translated: "Southwest Horse"
+- raw: "山地马"
+  splits:
+  - text: "山地马"
+    translated: "Mountain horse"
+- raw: "蒙古马"
+  splits:
+  - text: "蒙古马"
+    translated: "Mongolian horse"
+- raw: "哈萨克马"
+  splits:
+  - text: "哈萨克马"
+    translated: "Kazakh horses"
+- raw: "伊犁马"
+  splits:
+  - text: "伊犁马"
+    translated: "Ili horse"
+- raw: "乌孙马"
+  splits:
+  - text: "乌孙马"
+    translated: "Ussu Horse"
+- raw: "五花马"
+  splits:
+  - text: "五花马"
+    translated: "Five‑colored horse"
+- raw: "白兔马"
+  splits:
+  - text: "白兔马"
+    translated: "White Rabbit Horse"
+- raw: "枣红马"
+  splits:
+  - text: "枣红马"
+    translated: "Chestnut horse"
+- raw: "绿耳马"
+  splits:
+  - text: "绿耳马"
+    translated: "Green Ear Horse"
+- raw: "白义马"
+  splits:
+  - text: "白义马"
+    translated: "White Meaning Horse"
+- raw: "青骓马"
+  splits:
+  - text: "青骓马"
+    translated: "Qingzhui Horse"
+- raw: "华骝马"
+  splits:
+  - text: "华骝马"
+    translated: "Golden Lion Horse"
+- raw: "黄骠马"
+  splits:
+  - text: "黄骠马"
+    translated: "Chestnut horse"
+- raw: "骕骦马"
+  splits:
+  - text: "骕骦马"
+    translated: "Stallion"
+- raw: "玉花骢"
+  splits:
+  - text: "玉花骢"
+    translated: "White Cloud Steed"
+- raw: "奔宵马"
+  splits:
+  - text: "奔宵马"
+    translated: "Swift Heaven Horse"
+- raw: "纤离马"
+  splits:
+  - text: "纤离马"
+    translated: "Xianli Ma"
+- raw: "乌骓马"
+  splits:
+  - text: "乌骓马"
+    translated: "Swift Black Stallion"
+- raw: "白蹄乌"
+  splits:
+  - text: "白蹄乌"
+    translated: "White horse"
+- raw: "什伐赤"
+  splits:
+  - text: "什伐赤"
+    translated: "Shifachi"
+- raw: "拳毛驹"
+  splits:
+  - text: "拳毛驹"
+    translated: "Foal with mane"
+- raw: "斑豹马"
+  splits:
+  - text: "斑豹马"
+    translated: "Leopard Horse"
+- raw: "赤骥马"
+  splits:
+  - text: "赤骥马"
+    translated: "Red Steed"
+- raw: "麒麟兽"
+  splits:
+  - text: "麒麟兽"
+    translated: "Qilin beast"
+- raw: "照夜白"
+  splits:
+  - text: "照夜白"
+    translated: "Zhonghuabeiyang"
+- raw: "汗血马"
+  splits:
+  - text: "汗血马"
+    translated: "Blood‑sweat horse"
+- raw: "赤兔马"
+  splits:
+  - text: "赤兔马"
+    translated: "Red Horse"
+- raw: "的卢马"
+  splits:
+  - text: "的卢马"
+    translated: "Qilu horse"
+- raw: "绝影马"
+  splits:
+  - text: "绝影马"
+    translated: "Shadow Rush Horse"
+- raw: "特勒骠"
+  splits:
+  - text: "特勒骠"
+    translated: "Tellerion"
+- raw: "神凫马"
+  splits:
+  - text: "神凫马"
+    translated: "Divine Duck Horse"
+- raw: "飒露紫"
+  splits:
+  - text: "飒露紫"
+    translated: "Slapuizi"
+- raw: "白龙驹"
+  splits:
+  - text: "白龙驹"
+    translated: "White Dragon Horse"
+- raw: "补血丹"
+  splits:
+  - text: "补血丹"
+    translated: "Blood‑Replenishing Pill"
+- raw: "小还丹"
+  splits:
+  - text: "小还丹"
+    translated: "Small Restoring Pill"
+- raw: "大还丹"
+  splits:
+  - text: "大还丹"
+    translated: "Great Restorative Pill"
+- raw: "人参养荣丸"
+  splits:
+  - text: "人参养荣丸"
+    translated: "Reishi and Ginseng Tonifying Pill"
+- raw: "玉洞黑石丹"
+  splits:
+  - text: "玉洞黑石丹"
+    translated: "E‑black‑stone‑pill Cave"
+- raw: "万灵回生散"
+  splits:
+  - text: "万灵回生散"
+    translated: "Revival Powder of All Spirits"
+- raw: "益气散"
+  splits:
+  - text: "益气散"
+    translated: "Reinforce Qi Powder"
+- raw: "行气丹"
+  splits:
+  - text: "行气丹"
+    translated: "Qi Regulation Pill"
+- raw: "逍遥丹"
+  splits:
+  - text: "逍遥丹"
+    translated: "Free Spirit Pill"
+- raw: "参苓白术散"
+  splits:
+  - text: "参苓白术散"
+    translated: "Participating Ginseng and Atractylodes Decoction"
+- raw: "济生养气丸"
+  splits:
+  - text: "济生养气丸"
+    translated: "Jisheng Naiqi Pills"
+- raw: "紫霄玄关散"
+  splits:
+  - text: "紫霄玄关散"
+    translated: "Purple Heaven Dao Gate Dispersion"
+- raw: "八珍散"
+  splits:
+  - text: "八珍散"
+    translated: "Eight Treasure Powder"
+- raw: "无常丹"
+  splits:
+  - text: "无常丹"
+    translated: "Impermanence Pill"
+- raw: "紫金丹"
+  splits:
+  - text: "紫金丹"
+    translated: "Golden Lotus Pill"
+- raw: "天王补心丹"
+  splits:
+  - text: "天王补心丹"
+    translated: "Tian Wang Bu Xin Dan"
+- raw: "生生造化丹"
+  splits:
+  - text: "生生造化丹"
+    translated: "Life‑Breathing Elixirs"
+- raw: "九转还魂丹"
+  splits:
+  - text: "九转还魂丹"
+    translated: "Nine‑Turn Life‑Returning Pill"
+- raw: "止血散"
+  splits:
+  - text: "止血散"
+    translated: "Blood Stop Powder"
+- raw: "金疮散"
+  splits:
+  - text: "金疮散"
+    translated: "Tiger Balm"
+- raw: "三七跌打散"
+  splits:
+  - text: "三七跌打散"
+    translated: "Sanqi Injury Relief Powder"
+- raw: "接骨七厘散"
+  splits:
+  - text: "接骨七厘散"
+    translated: "Seven‑Ingredient Bone Setting Powder"
+- raw: "血府逐瘀散"
+  splits:
+  - text: "血府逐瘀散"
+    translated: "Blood Mansion Blood‑Expelling Powder"
+- raw: "天香断续散"
+  splits:
+  - text: "天香断续散"
+    translated: "Fragrant Heaven Intermittent Powder"
+- raw: "通络丹"
+  splits:
+  - text: "通络丹"
+    translated: "Tonifying Pill"
+- raw: "紫藤丹"
+  splits:
+  - text: "紫藤丹"
+    translated: "Purple Wisteria Pill"
+- raw: "牛黄血竭丹"
+  splits:
+  - text: "牛黄血竭丹"
+    translated: "Orchid Bull Blood‑Resolving Pill"
+- raw: "田七鲨胆丹"
+  splits:
+  - text: "田七鲨胆丹"
+    translated: "Seven‑Point Shark Gallbladder Pill"
+- raw: "三黄宝腊丹"
+  splits:
+  - text: "三黄宝腊丹"
+    translated: "Three‑Herb Treasure Wax Pill"
+- raw: "还阳正气丹"
+  splits:
+  - text: "还阳正气丹"
+    translated: "Yang Restoring Pill"
+- raw: "黄连丸"
+  splits:
+  - text: "黄连丸"
+    translated: "Coptis Root Pill"
+- raw: "荆防丸"
+  splits:
+  - text: "荆防丸"
+    translated: "Jingfang Wan"
+- raw: "六味地黄丸"
+  splits:
+  - text: "六味地黄丸"
+    translated: "Six Flavor Rehmannia Pill"
+- raw: "天心解毒丸"
+  splits:
+  - text: "天心解毒丸"
+    translated: "Heart Heaven Detox Pill"
+- raw: "金花玉露丸"
+  splits:
+  - text: "金花玉露丸"
+    translated: "Golden Lotus Jade Dew Pill"
+- raw: "龙涎净厄丸"
+  splits:
+  - text: "龙涎净厄丸"
+    translated: "Dragon's Breath Purification Pills"
+- raw: "手甲"
+  splits:
+  - text: "手甲"
+    translated: "Bracelets"
+- raw: "指刺"
+  splits:
+  - text: "指刺"
+    translated: "Stab"
+- raw: "钩爪"
+  splits:
+  - text: "钩爪"
+    translated: "Claw"
+- raw: "指虎"
+  splits:
+  - text: "指虎"
+    translated: "Monkey glove"
+- raw: "拳套"
+  splits:
+  - text: "拳套"
+    translated: "Gloves"
+- raw: "指环"
+  splits:
+  - text: "指环"
+    translated: "Ring"
+- raw: "重剑"
+  splits:
+  - text: "重剑"
+    translated: "Heavy Sword"
+- raw: "短剑"
+  splits:
+  - text: "短剑"
+    translated: "Short sword"
+- raw: "细剑"
+  splits:
+  - text: "细剑"
+    translated: "Fine Sword"
+- raw: "长剑"
+  splits:
+  - text: "长剑"
+    translated: "Long sword"
+- raw: "大剑"
+  splits:
+  - text: "大剑"
+    translated: "Great Sword"
+- raw: "软剑"
+  splits:
+  - text: "软剑"
+    translated: "Soft Sword"
+- raw: "重刀"
+  splits:
+  - text: "重刀"
+    translated: "Heavy Blade"
+- raw: "短刀"
+  splits:
+  - text: "短刀"
+    translated: "Short knife"
+- raw: "唐刀"
+  splits:
+  - text: "唐刀"
+    translated: "Saber"
+- raw: "朴刀"
+  splits:
+  - text: "朴刀"
+    translated: "Cutlass"
+- raw: "大刀"
+  splits:
+  - text: "大刀"
+    translated: "Big Blade"
+- raw: "弯刀"
+  splits:
+  - text: "弯刀"
+    translated: "Scimitar"
+- raw: "长戟"
+  splits:
+  - text: "长戟"
+    translated: "Long spear"
+- raw: "长枪"
+  splits:
+  - text: "长枪"
+    translated: "Long spear"
+- raw: "长叉"
+  splits:
+  - text: "长叉"
+    translated: "Long fork"
+- raw: "长戈"
+  splits:
+  - text: "长戈"
+    translated: "Long Spear"
+- raw: "长矛"
+  splits:
+  - text: "长矛"
+    translated: "Pike"
+- raw: "长棍"
+  splits:
+  - text: "长棍"
+    translated: "Long staff"
+- raw: "飞轮"
+  splits:
+  - text: "飞轮"
+    translated: "Flywheel"
+- raw: "判笔"
+  splits:
+  - text: "判笔"
+    translated: "Judgment_pen"
+- raw: "软鞭"
+  splits:
+  - text: "软鞭"
+    translated: "Soft whip"
+- raw: "铁扇"
+  splits:
+  - text: "铁扇"
+    translated: "Iron Fan"
+- raw: "长弓"
+  splits:
+  - text: "长弓"
+    translated: "Longbow"
+- raw: "短弓"
+  splits:
+  - text: "短弓"
+    translated: "Short bow"
+- raw: "曲弓"
+  splits:
+  - text: "曲弓"
+    translated: "Curved bow"
+- raw: "直弓"
+  splits:
+  - text: "直弓"
+    translated: "Drawn bow"
+- raw: "硬弓"
+  splits:
+  - text: "硬弓"
+    translated: "Hardbow"
+- raw: "软弓"
+  splits:
+  - text: "软弓"
+    translated: "Soft bow"

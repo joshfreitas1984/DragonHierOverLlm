@@ -8,4 +8,5 @@
   <Project Path="DragonHeirPlugin/GamePlugin.csproj" />
   <Project Path="Files/Files.csproj" />
   <Project Path="Tests/Tests.csproj" />
+  <Project Path="Verify/Verify.csproj" />
 </Solution>

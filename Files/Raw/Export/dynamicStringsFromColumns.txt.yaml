@@ -37942,3 +37942,513 @@
   - text: "结义"
   templates:
   - template: "{0}:"
+- raw: "炖老母鸡"
+  splits:
+  - text: "炖老母鸡"
+- raw: "天麻鱼头"
+  splits:
+  - text: "天麻鱼头"
+- raw: "沙苑甲鱼汤"
+  splits:
+  - text: "沙苑甲鱼汤"
+- raw: "参茸熊掌"
+  splits:
+  - text: "参茸熊掌"
+- raw: "十全大补汤"
+  splits:
+  - text: "十全大补汤"
+- raw: "雄黄酒"
+  splits:
+  - text: "雄黄酒"
+- raw: "乌龙茶"
+  splits:
+  - text: "乌龙茶"
+- raw: "蛇酒"
+  splits:
+  - text: "蛇酒"
+- raw: "肉桂茶"
+  splits:
+  - text: "肉桂茶"
+- raw: "三鞭酒"
+  splits:
+  - text: "三鞭酒"
+- raw: "铁观音茶"
+  splits:
+  - text: "铁观音茶"
+- raw: "鹿胎酒"
+  splits:
+  - text: "鹿胎酒"
+- raw: "白牡丹茶"
+  splits:
+  - text: "白牡丹茶"
+- raw: "虎骨酒"
+  splits:
+  - text: "虎骨酒"
+- raw: "大红袍茶"
+  splits:
+  - text: "大红袍茶"
+- raw: "龙脑酒"
+  splits:
+  - text: "龙脑酒"
+- raw: "凤凰水仙茶"
+  splits:
+  - text: "凤凰水仙茶"
+- raw: "烧饼"
+  splits:
+  - text: "烧饼"
+- raw: "肉包"
+  splits:
+  - text: "肉包"
+- raw: "煎饺"
+  splits:
+  - text: "煎饺"
+- raw: "烧鸡"
+  splits:
+  - text: "烧鸡"
+- raw: "红烧肉"
+  splits:
+  - text: "红烧肉"
+- raw: "乳猪"
+  splits:
+  - text: "乳猪"
+- raw: "绿茶"
+  splits:
+  - text: "绿茶"
+- raw: "烧刀子"
+  splits:
+  - text: "烧刀子"
+- raw: "龙井茶"
+  splits:
+  - text: "龙井茶"
+- raw: "竹叶青"
+  splits:
+  - text: "竹叶青"
+- raw: "碧螺春茶"
+  splits:
+  - text: "碧螺春茶"
+- raw: "葡萄酒"
+  splits:
+  - text: "葡萄酒"
+- raw: "毛峰茶"
+  splits:
+  - text: "毛峰茶"
+- raw: "新丰酒"
+  splits:
+  - text: "新丰酒"
+- raw: "云雾茶"
+  splits:
+  - text: "云雾茶"
+- raw: "杜康酒"
+  splits:
+  - text: "杜康酒"
+- raw: "太平猴魁茶"
+  splits:
+  - text: "太平猴魁茶"
+- raw: "桂圆枸杞粥"
+  splits:
+  - text: "桂圆枸杞粥"
+- raw: "茯苓糕"
+  splits:
+  - text: "茯苓糕"
+- raw: "当归炖羊肉"
+  splits:
+  - text: "当归炖羊肉"
+- raw: "虫草老鸭煲"
+  splits:
+  - text: "虫草老鸭煲"
+- raw: "四君子汤"
+  splits:
+  - text: "四君子汤"
+- raw: "烩八珍"
+  splits:
+  - text: "烩八珍"
+- raw: "清酒"
+  splits:
+  - text: "清酒"
+- raw: "红茶"
+  splits:
+  - text: "红茶"
+- raw: "花雕酒"
+  splits:
+  - text: "花雕酒"
+- raw: "工夫茶"
+  splits:
+  - text: "工夫茶"
+- raw: "女儿红"
+  splits:
+  - text: "女儿红"
+- raw: "古树茶"
+  splits:
+  - text: "古树茶"
+- raw: "桑落酒"
+  splits:
+  - text: "桑落酒"
+- raw: "九曲红梅茶"
+  splits:
+  - text: "九曲红梅茶"
+- raw: "猴儿酿"
+  splits:
+  - text: "猴儿酿"
+- raw: "金骏眉茶"
+  splits:
+  - text: "金骏眉茶"
+- raw: "换骨醪"
+  splits:
+  - text: "换骨醪"
+- raw: "正山小种茶"
+  splits:
+  - text: "正山小种茶"
+- raw: "骡子"
+  splits:
+  - text: "骡子"
+- raw: "驴子"
+  splits:
+  - text: "驴子"
+- raw: "跛脚马"
+  splits:
+  - text: "跛脚马"
+- raw: "小马"
+  splits:
+  - text: "小马"
+- raw: "劣马"
+  splits:
+  - text: "劣马"
+- raw: "矮马"
+  splits:
+  - text: "矮马"
+- raw: "驮马"
+  splits:
+  - text: "驮马"
+- raw: "瘦马"
+  splits:
+  - text: "瘦马"
+- raw: "大马"
+  splits:
+  - text: "大马"
+- raw: "烈马"
+  splits:
+  - text: "烈马"
+- raw: "军马"
+  splits:
+  - text: "军马"
+- raw: "快马"
+  splits:
+  - text: "快马"
+- raw: "战马"
+  splits:
+  - text: "战马"
+- raw: "河曲马"
+  splits:
+  - text: "河曲马"
+- raw: "西南马"
+  splits:
+  - text: "西南马"
+- raw: "山地马"
+  splits:
+  - text: "山地马"
+- raw: "蒙古马"
+  splits:
+  - text: "蒙古马"
+- raw: "哈萨克马"
+  splits:
+  - text: "哈萨克马"
+- raw: "伊犁马"
+  splits:
+  - text: "伊犁马"
+- raw: "乌孙马"
+  splits:
+  - text: "乌孙马"
+- raw: "五花马"
+  splits:
+  - text: "五花马"
+- raw: "白兔马"
+  splits:
+  - text: "白兔马"
+- raw: "枣红马"
+  splits:
+  - text: "枣红马"
+- raw: "绿耳马"
+  splits:
+  - text: "绿耳马"
+- raw: "白义马"
+  splits:
+  - text: "白义马"
+- raw: "青骓马"
+  splits:
+  - text: "青骓马"
+- raw: "华骝马"
+  splits:
+  - text: "华骝马"
+- raw: "黄骠马"
+  splits:
+  - text: "黄骠马"
+- raw: "骕骦马"
+  splits:
+  - text: "骕骦马"
+- raw: "玉花骢"
+  splits:
+  - text: "玉花骢"
+- raw: "奔宵马"
+  splits:
+  - text: "奔宵马"
+- raw: "纤离马"
+  splits:
+  - text: "纤离马"
+- raw: "乌骓马"
+  splits:
+  - text: "乌骓马"
+- raw: "白蹄乌"
+  splits:
+  - text: "白蹄乌"
+- raw: "什伐赤"
+  splits:
+  - text: "什伐赤"
+- raw: "拳毛驹"
+  splits:
+  - text: "拳毛驹"
+- raw: "斑豹马"
+  splits:
+  - text: "斑豹马"
+- raw: "赤骥马"
+  splits:
+  - text: "赤骥马"
+- raw: "麒麟兽"
+  splits:
+  - text: "麒麟兽"
+- raw: "照夜白"
+  splits:
+  - text: "照夜白"
+- raw: "汗血马"
+  splits:
+  - text: "汗血马"
+- raw: "赤兔马"
+  splits:
+  - text: "赤兔马"
+- raw: "的卢马"
+  splits:
+  - text: "的卢马"
+- raw: "绝影马"
+  splits:
+  - text: "绝影马"
+- raw: "特勒骠"
+  splits:
+  - text: "特勒骠"
+- raw: "神凫马"
+  splits:
+  - text: "神凫马"
+- raw: "飒露紫"
+  splits:
+  - text: "飒露紫"
+- raw: "白龙驹"
+  splits:
+  - text: "白龙驹"
+- raw: "补血丹"
+  splits:
+  - text: "补血丹"
+- raw: "小还丹"
+  splits:
+  - text: "小还丹"
+- raw: "大还丹"
+  splits:
+  - text: "大还丹"
+- raw: "人参养荣丸"
+  splits:
+  - text: "人参养荣丸"
+- raw: "玉洞黑石丹"
+  splits:
+  - text: "玉洞黑石丹"
+- raw: "万灵回生散"
+  splits:
+  - text: "万灵回生散"
+- raw: "益气散"
+  splits:
+  - text: "益气散"
+- raw: "行气丹"
+  splits:
+  - text: "行气丹"
+- raw: "逍遥丹"
+  splits:
+  - text: "逍遥丹"
+- raw: "参苓白术散"
+  splits:
+  - text: "参苓白术散"
+- raw: "济生养气丸"
+  splits:
+  - text: "济生养气丸"
+- raw: "紫霄玄关散"
+  splits:
+  - text: "紫霄玄关散"
+- raw: "八珍散"
+  splits:
+  - text: "八珍散"
+- raw: "无常丹"
+  splits:
+  - text: "无常丹"
+- raw: "紫金丹"
+  splits:
+  - text: "紫金丹"
+- raw: "天王补心丹"
+  splits:
+  - text: "天王补心丹"
+- raw: "生生造化丹"
+  splits:
+  - text: "生生造化丹"
+- raw: "九转还魂丹"
+  splits:
+  - text: "九转还魂丹"
+- raw: "止血散"
+  splits:
+  - text: "止血散"
+- raw: "金疮散"
+  splits:
+  - text: "金疮散"
+- raw: "三七跌打散"
+  splits:
+  - text: "三七跌打散"
+- raw: "接骨七厘散"
+  splits:
+  - text: "接骨七厘散"
+- raw: "血府逐瘀散"
+  splits:
+  - text: "血府逐瘀散"
+- raw: "天香断续散"
+  splits:
+  - text: "天香断续散"
+- raw: "通络丹"
+  splits:
+  - text: "通络丹"
+- raw: "紫藤丹"
+  splits:
+  - text: "紫藤丹"
+- raw: "牛黄血竭丹"
+  splits:
+  - text: "牛黄血竭丹"
+- raw: "田七鲨胆丹"
+  splits:
+  - text: "田七鲨胆丹"
+- raw: "三黄宝腊丹"
+  splits:
+  - text: "三黄宝腊丹"
+- raw: "还阳正气丹"
+  splits:
+  - text: "还阳正气丹"
+- raw: "黄连丸"
+  splits:
+  - text: "黄连丸"
+- raw: "荆防丸"
+  splits:
+  - text: "荆防丸"
+- raw: "六味地黄丸"
+  splits:
+  - text: "六味地黄丸"
+- raw: "天心解毒丸"
+  splits:
+  - text: "天心解毒丸"
+- raw: "金花玉露丸"
+  splits:
+  - text: "金花玉露丸"
+- raw: "龙涎净厄丸"
+  splits:
+  - text: "龙涎净厄丸"
+- raw: "手甲"
+  splits:
+  - text: "手甲"
+- raw: "指刺"
+  splits:
+  - text: "指刺"
+- raw: "钩爪"
+  splits:
+  - text: "钩爪"
+- raw: "指虎"
+  splits:
+  - text: "指虎"
+- raw: "拳套"
+  splits:
+  - text: "拳套"
+- raw: "指环"
+  splits:
+  - text: "指环"
+- raw: "重剑"
+  splits:
+  - text: "重剑"
+- raw: "短剑"
+  splits:
+  - text: "短剑"
+- raw: "细剑"
+  splits:
+  - text: "细剑"
+- raw: "长剑"
+  splits:
+  - text: "长剑"
+- raw: "大剑"
+  splits:
+  - text: "大剑"
+- raw: "软剑"
+  splits:
+  - text: "软剑"
+- raw: "重刀"
+  splits:
+  - text: "重刀"
+- raw: "短刀"
+  splits:
+  - text: "短刀"
+- raw: "唐刀"
+  splits:
+  - text: "唐刀"
+- raw: "朴刀"
+  splits:
+  - text: "朴刀"
+- raw: "大刀"
+  splits:
+  - text: "大刀"
+- raw: "弯刀"
+  splits:
+  - text: "弯刀"
+- raw: "长戟"
+  splits:
+  - text: "长戟"
+- raw: "长枪"
+  splits:
+  - text: "长枪"
+- raw: "长叉"
+  splits:
+  - text: "长叉"
+- raw: "长戈"
+  splits:
+  - text: "长戈"
+- raw: "长矛"
+  splits:
+  - text: "长矛"
+- raw: "长棍"
+  splits:
+  - text: "长棍"
+- raw: "飞轮"
+  splits:
+  - text: "飞轮"
+- raw: "判笔"
+  splits:
+  - text: "判笔"
+- raw: "软鞭"
+  splits:
+  - text: "软鞭"
+- raw: "铁扇"
+  splits:
+  - text: "铁扇"
+- raw: "长弓"
+  splits:
+  - text: "长弓"
+- raw: "短弓"
+  splits:
+  - text: "短弓"
+- raw: "曲弓"
+  splits:
+  - text: "曲弓"
+- raw: "直弓"
+  splits:
+  - text: "直弓"
+- raw: "硬弓"
+  splits:
+  - text: "硬弓"
+- raw: "软弓"
+  splits:
+  - text: "软弓"

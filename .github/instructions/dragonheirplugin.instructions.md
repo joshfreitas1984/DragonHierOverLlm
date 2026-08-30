@@ -274,6 +274,54 @@ over-match is reported for a CJK-placeholder template, check `BlockingRawEntries
 Full detail (including the verification harness methodology):
 [`DragonHeirPlugin/docs/dynamicstringpatches-cjk-placeholder-fallback.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-cjk-placeholder-fallback.md).
 
+**Update (2026-08-30) — short (<=2-char) bare-dictionary entries only apply when standalone**:
+`ApplyDictionary`'s bare (non-template) fragment pass has many very short entries (single CJK
+characters, e.g. `"胜"`→`"Victory"`, plus 2-character ones like `"敌方"`→`"Enemy"`). A plain
+substring replace let these match in the middle of a longer untranslated compound with no
+dedicated entry (e.g. `获胜`/`击败敌方全体` → `获 Victory`/`击败 Enemy Everyone`), producing
+incoherent output. Fix (`ReplaceWithWordBoundarySpacing`/`IsCjkChar`/
+`ShortEntryBoundaryCheckMaxLength`): an entry with `Raw.Length <= 2` is only applied when its
+CJK-starting edge does NOT sit directly against another CJK character in the input; otherwise that
+occurrence is left untouched so the compound stays fully untranslated (better than half-translated
+garbage) pending a proper whole-phrase dictionary entry. **Deliberately NOT generalized to longer
+(3+-character) entries** — tried and rejected: it caused a genuinely specific, complete
+whole-phrase entry to fail to apply merely because an unrelated single stray character next to it
+(with no dictionary coverage) was CJK, losing a perfectly good translation instead of just leaving
+one adjacent character untranslated. Verified via a throwaway `TempVerify/` harness (deleted after
+use) against the motivating string plus a longer-entry-not-regressed case before landing.
+
+**Update (2026-08-30) — CONFIRMED BUG #9, tag-hidden CJK neighbor defeats the short-entry boundary
+check**: the check above originally compared the RAW previous/next character (`input[idx - 1]`/
+`input[matchEnd]`) to decide if a short entry was standalone. But rich-text tags (`<color=...>`,
+`</color>`) can sit directly between a short entry and its true visible CJK neighbor (e.g.
+`"一场<color=#8C8C8C>武者</color>比武大赛"` — the character right before `武者` is `>`, not the
+real neighbor `场`), which hid the neighbor from the check entirely and let `"武者"`→`"Warrior"`
+incorrectly split out of the untranslated compound `一场武者比武大赛`. Fix: the boundary check now
+uses a tag-aware lookback/lookahead (`EffectiveTrailingCharBefore`/`EffectiveLeadingCharAt` — the
+same tag-skipping approach already used elsewhere in this method for word-boundary spacing)
+instead of the raw adjacent character. Verified via a throwaway harness against the exact reported
+string (now stays fully untranslated) plus a standalone control case (`"A武者B"`, still translates
+correctly).
+
+**Update (2026-08-30) — PrefabText-merged templates: "在下#$PlayerName#" prefix false-positive
+remains flagged/unfixed (a full-match-anchor fix was tried and REVERTED)**: templates merged in
+from PrefabTextPatches' own dictionary files (see `LoadDictionary`'s merge loop) can have very weak
+anchors (e.g. `"在下#$PlayerName#"` — a 2-char literal with no trailing anchor at all) since
+PrefabTextPatches only ever did exact whole-string matching. Compiled into the ordinary template
+dictionary, `ApplyTemplates` matches/replaces anywhere in the input by default, so such an entry
+could false-positive-match as a mere *prefix* inside unrelated dialogue starting with the same
+short literal. A fix anchoring every PrefabText-merged template's compiled pattern to the entire
+input (`\A...\z`) was tried and **reverted** — it broke far more legitimate templates than it
+protected, since these merged templates are routinely embedded inside a larger runtime string with
+extra trailing content (e.g. `"#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往
+欲一展身手"` followed by a `"\n<color=...>★★★★</color>"` rating suffix Raw never accounts for) —
+requiring true end-of-input made the whole template fail to match whenever ANY trailing content
+followed it, which is the common case, not the exception. **Do not re-attempt a blanket full-match
+anchor for this class of template.** Any real fix needs to be scoped much more narrowly (e.g. only
+reject compiling a template whose leading literal is both very short AND whose last placeholder has
+zero trailing literal to bound it — the actual dangerous combination). Full detail:
+[`DragonHeirPlugin/docs/dynamicstringpatches-adjacent-placeholder-merge.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-adjacent-placeholder-merge.md).
+
 ## Dynamic-string dictionary: `DynamicStringColumnSources`/`DynamicStringLabelColumnSources` (2026-08-27)
 
 `DynamicStringPatches.ApplyDictionary`'s plain substring-replace can corrupt whole-phrase

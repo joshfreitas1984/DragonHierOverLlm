@@ -37,268 +37,62 @@ internal static class DiagnosticPatches
     //    DumpGameDataController("ResetPlayerTag");
     //}
 
-    /// <summary>
-    /// Diagnostic aid for an ArgumentOutOfRangeException seen in Player.log at
-    /// GameController.GenerateHero -&gt; StartNewGame -&gt; Start (fully stripped stack trace, no
-    /// line numbers). The known label-lookup fixes for HeroData.RandomAttriAndSkill
-    /// (SpeHeroData.csv columns 11/12/18, ForceData.csv columns 9/10/11 - see
-    /// Tests/GameFileHandling.cs) are already confirmed present in the packaged Files/Mod/*.csv,
-    /// so this is a DIFFERENT crash. Static analysis of the decompiled pseudocode
-    /// (Converter/output/_NoNamespace/GameController.cs's GenerateHero body) found a hardcoded
-    /// ThrowArgumentOutOfRangeException tied to per-force/per-chapter-tier hero-count bookkeeping
-    /// built from `this.worldData.Forces`, but the exact field/count involved could not be
-    /// resolved with confidence (heavy local-variable reuse across the decompiled body - the same
-    /// `lVarN` name gets reassigned dozens of times). Rather than keep guessing from pseudocode,
-    /// this Prefix dumps `worldData.Forces.Count` plus every public field/property on each Force
-    /// entry (name/count for collection-typed members) immediately BEFORE GenerateHero runs, so
-    /// the next crash's log capture gives us real field names/counts instead of another round of
-    /// offset arithmetic. Remove once the actual out-of-range field is identified and the real fix
-    /// is in place (this is pure logging - it does not change behavior).
-    /// </summary>
-    [HarmonyPatch(typeof(GameController), nameof(GameController.GenerateHero))]
-    [HarmonyPrefix]
-    private static void GenerateHero_Prefix(GameController __instance)
-    {
-        try
-        {
-            var worldData = __instance?.worldData;
-            if (worldData == null)
-            {
-                MainPlugin.Logger?.LogWarning("DiagnosticPatches[GenerateHero]: worldData is null");
-                return;
-            }
-
-            var forces = worldData.Forces;
-            if (forces == null)
-            {
-                MainPlugin.Logger?.LogWarning("DiagnosticPatches[GenerateHero]: worldData.Forces is null");
-                return;
-            }
-
-            var sb = new StringBuilder();
-            sb.AppendLine($"DiagnosticPatches[GenerateHero]: worldData.Forces.Count = {forces.Count}");
-
-            int index = 0;
-            foreach (var force in forces)
-            {
-                sb.AppendLine($"  Force[{index}]: {DumpMembersOneLine(force)}");
-                index++;
-            }
-
-            MainPlugin.Logger?.LogInfo(sb.ToString());
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[GenerateHero]: failed to dump worldData.Forces: {ex}");
-        }
-    }
-
-    /// <summary>
-    /// Diagnostic aid for the still-unresolved GenerateHero crash now that a captured log
-    /// showed the exception is caught at GenerateHero_Finalizer (NOT UpgradeSkill_Finalizer) -
-    /// meaning this occurrence takes a code path that never reaches GameController.UpgradeSkill.
-    /// Static analysis of the decompiled pseudocode (Converter/output/_NoNamespace/GameController.cs
-    /// GenerateHero body, ~line 7100-7150) found a shorter "custom/free game" setup path (gated by
-    /// GameDataController.playerPrefData == 1) that calls HeroData.GetSkill(player, new
-    /// KungfuSkillLvData(9), ...) and then immediately does a raw, unresolved indexer call
-    /// (FUN_180002f80) using `player.kungfuSkills.Count - 1` as the index BEFORE UpgradeSkill is
-    /// invoked - that indexer call is the likely real throw site, but the decompiler couldn't
-    /// resolve it to a named/patchable method. HeroData.GetSkill is the last real, hookable call
-    /// before that point, so this Postfix logs the hero's kungfuSkills.Count immediately after it
-    /// runs. If the next crash log capture stops right after one of these lines instead of
-    /// showing more of them, that identifies the failing hero/count pair for the real fix.
-    /// Extended (per repo-memory plan correction: no Mono.Cecil/static-DLL tooling against
-    /// IL2CPP - ground truth must come from runtime reflection) to also dump every public
-    /// field/property on the live HeroData instance itself via DumpMembersOneLine, since the
-    /// unresolved indexer likely reads a List-typed field ON HeroData (not GameDataController) -
-    /// this full dump is the best chance of spotting the real field/count by name in a live
-    /// capture. Paired with AICheckSkill_Postfix below to bracket the risky block. Pure logging -
-    /// does not change behavior. Remove once the actual out-of-range indexer is identified and
-    /// fixed.
-    /// </summary>
-    [HarmonyPatch(typeof(HeroData), nameof(HeroData.GetSkill))]
-    [HarmonyPostfix]
-    private static void GetSkill_Postfix(HeroData __instance, KungfuSkillLvData skillLvData)
-    {
-        try
-        {
-            var kungfuSkills = __instance?.kungfuSkills;
-            MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[HeroData.GetSkill]: heroID={__instance?.heroID}, heroName={__instance?.heroName}, " +
-                $"kungfuSkills.Count={(kungfuSkills == null ? "null" : kungfuSkills.Count.ToString())}, " +
-                $"skillLvData={(skillLvData == null ? "null" : DumpMembersOneLine(skillLvData))}");
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[HeroData.GetSkill]: failed to dump hero: {ex}");
-        }
-    }
-
-    /// <summary>
-    /// Bracket patch for the still-unresolved crash #2 (see GetSkill_Postfix's remarks above and
-    /// the repo-memory plan). UPDATED after a real capture showed AICheckSkill IS reached
-    /// (heroID=1, "Jiang Yingquan", a speHero) with the crash immediately after - decompiled
-    /// analysis (Converter/output/_NoNamespace/GameController.cs) found this call is actually the
-    /// LAST statement in GameController.RandomGenerateNPCSkill(HeroData hero), which then
-    /// `return`s straight back to its caller, GenerateHeroData - so the crash is NOT here, it's
-    /// somewhere in GenerateHeroData's code that runs right after RandomGenerateNPCSkill returns
-    /// (CountHeroData -> RandomGenerateNPCItem -> CountHeroData again, per all 3
-    /// GenerateHeroData overloads). See the new bracket patches below on those methods. Logs when
-    /// this call is actually reached for a given hero. Pure logging - does not change behavior.
-    /// Remove once the actual out-of-range indexer is identified and fixed.
-    /// </summary>
-    [HarmonyPatch(typeof(AIController), nameof(AIController.AICheckSkill))]
-    [HarmonyPostfix]
-    private static void AICheckSkill_Postfix(HeroData hero)
-    {
-        try
-        {
-            MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[AIController.AICheckSkill]: reached for heroID={hero?.heroID}, heroName={hero?.heroName}");
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[AIController.AICheckSkill]: failed to dump hero: {ex}");
-        }
-    }
-
-    /// <summary>
-    /// Bracket patch #2 for crash #2: GameController.CountHeroData(HeroData) is called twice
-    /// right after RandomGenerateNPCSkill returns (see AICheckSkill_Postfix's remarks). If a
-    /// crash capture shows "AICheckSkill" for a hero with NO matching "CountHeroData" line right
-    /// after, the throw is confirmed to be inside CountHeroData's own body (a long method with
-    /// many ForceSpeAddData.Get(...) indexed accesses - see GameController.cs ~line 13452) rather
-    /// than in code between the two calls. Pure logging - does not change behavior. Remove once
-    /// the actual out-of-range indexer is identified and fixed.
-    /// </summary>
-    [HarmonyPatch(typeof(GameController), nameof(GameController.CountHeroData))]
-    [HarmonyPostfix]
-    private static void CountHeroData_Postfix(HeroData hero)
-    {
-        try
-        {
-            MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[GameController.CountHeroData]: reached for heroID={hero?.heroID}, heroName={hero?.heroName}");
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.CountHeroData]: failed to dump hero: {ex}");
-        }
-    }
-
-    /// <summary>
-    /// Mitigation for a NullReferenceException inside GameController.CountHeroData (a long
-    /// method chasing HeroSpeAddData/ForceSpeAddData/KungfuSkillLvData/equipment-slot pointer
-    /// chains) that was observed crashing a plot-triggered fight
-    /// (PlotController.FightInteractHeroFuc -&gt; BattleController.PrepareBattleMap -&gt;
-    /// BattleTeamPrepare -&gt; HeroData.CheckHeroDetailDirty -&gt; CountHeroData). Same root-cause
-    /// class as the previously-fixed GenerateHero/world-gen crash (a translated CSV column being
-    /// used as an internal dictionary lookup key - see
-    /// DragonHeirPlugin's KNOWN_ISSUES.md and Tests/docs/generatehero-unresolved-crash.md), just
-    /// triggered here by a different hero. Logs and swallows the exception (dumping the hero's
-    /// fields) rather than crashing the fight - narrow blast radius: only this hero's stat
-    /// recompute is skipped for this call, not the whole fight.
-    ///
-    /// IMPORTANT: per the decompiled body (Converter/output/_decompiled/_NoNamespace/
-    /// GameController/CountHeroData.c), hero.heroDetailDirty (offset +0x2d8) is ONLY cleared on
-    /// the method's single successful-completion path, right before its one `return;` - every
-    /// other path (all the null-guard checks throughout this long method) jumps to a
-    /// "does not return" throw helper instead, meaning the flag is NEVER cleared when this method
-    /// throws. HeroData.CheckHeroDetailDirty only calls CountHeroData when heroDetailDirty is
-    /// true, so if we merely swallow the exception without clearing the flag ourselves, every
-    /// subsequent CheckHeroDetailDirty call for this hero re-triggers CountHeroData -&gt; throws
-    /// -&gt; gets suppressed again, forever (observed as an infinite loop/hang during the fight
-    /// scene). Must clear hero.heroDetailDirty = false here to let the caller make progress.
-    /// </summary>
-    [HarmonyPatch(typeof(GameController), nameof(GameController.CountHeroData))]
-    [HarmonyFinalizer]
-    private static Exception CountHeroData_Finalizer(HeroData hero, Exception __exception)
-    {
-        if (__exception == null)
-            return null;
-
-        try
-        {
-            MainPlugin.Logger?.LogError(
-                $"DiagnosticPatches[GameController.CountHeroData]: threw and was suppressed for " +
-                $"heroID={hero?.heroID}, heroName={hero?.heroName}.\n" +
-                $"  hero dump: {(hero == null ? "null" : DumpMembersOneLine(hero))}\n{__exception}");
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.CountHeroData]: failed to dump hero on exception: {ex}");
-        }
-
-        try
-        {
-            // Must clear this ourselves - the real method never reaches its own
-            // "heroDetailDirty = false" assignment when it throws (see remarks above), so
-            // CheckHeroDetailDirty would otherwise keep re-invoking CountHeroData for this hero
-            // forever, looking like an infinite loop/hang.
-            if (hero != null)
-                hero.heroDetailDirty = false;
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.CountHeroData]: failed to clear heroDetailDirty: {ex}");
-        }
-
-        return null;
-    }
-
-    /// <summary>
-    /// Bracket patch #3 for crash #2: GameController.RandomGenerateNPCItem(HeroData) is the next
-    /// real call after the first CountHeroData following RandomGenerateNPCSkill (see
-    /// CountHeroData_Postfix's remarks). Same reasoning: pinpoints whether the throw is inside
-    /// this method's own body vs. elsewhere. Pure logging - does not change behavior. Remove once
-    /// the actual out-of-range indexer is identified and fixed.
-    /// </summary>
-    [HarmonyPatch(typeof(GameController), nameof(GameController.RandomGenerateNPCItem))]
-    [HarmonyPostfix]
-    private static void RandomGenerateNPCItem_Postfix(HeroData hero)
-    {
-        try
-        {
-            MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[GameController.RandomGenerateNPCItem]: reached for heroID={hero?.heroID}, heroName={hero?.heroName}");
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.RandomGenerateNPCItem]: failed to dump hero: {ex}");
-        }
-    }
-
     
-
-    private static void LogGenerateHeroDataExtra(
-        string overloadTag, GameController instance, int belongForceID, float heroForceLv, HeroData heroDataBase)
+    /// <summary>
+    /// Diagnostic aid for the Horse/Food/Med item-icon investigation (see chat 2026-08-30):
+    /// ItemData.GetItemIconName() falls through to `return this.name;` for item types 1 (Food),
+    /// 2 (Med), and the type-6/no-saddle default case (Horse), meaning the sprite lookup key used
+    /// by TextureController.LoadAtlasSprite("IconAtlas", key) IS the item's raw Chinese display
+    /// name for those three types only - every other type builds a purely numeric/id-based key.
+    /// Logs the returned icon name plus the source item's type/subType/name so a live capture
+    /// shows definitively whether the key is still raw Chinese or has already been corrupted by
+    /// DynamicStringPatches' global substring-replace dictionary by the time it reaches here.
+    /// Pure logging - does not change behavior. Remove once the root cause is confirmed/fixed.
+    /// </summary>
+    [HarmonyPatch(typeof(ItemData), nameof(ItemData.GetItemIconName))]
+    [HarmonyPostfix]
+    private static void GetItemIconName_Postfix(ItemData __instance, ref string __result)
     {
         try
         {
             MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[GameController.GenerateHeroData]({overloadTag} extra): " +
-                $"Forces.Count={instance?.worldData?.Forces?.Count.ToString() ?? "null"}, " +
-                $"belongForceID(param)={belongForceID}, heroForceLv(param)={heroForceLv}\n" +
-                $"  heroDataBase dump: {(heroDataBase == null ? "null" : DumpMembersOneLine(heroDataBase))}");
+                $"DiagnosticPatches[ItemData.GetItemIconName]: type={__instance?.type}, subType={__instance?.subType}, " +
+                $"name='{__instance?.name}', itemID={__instance?.itemID} -> iconName='{__result}'");
         }
         catch (Exception ex)
         {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.GenerateHeroData]({overloadTag} extra): failed to dump: {ex}");
+            MainPlugin.Logger?.LogError($"DiagnosticPatches[ItemData.GetItemIconName]: failed to dump item: {ex}");
         }
     }
 
-    private static void LogGenerateHeroDataReturned(HeroData result)
+    /// <summary>
+    /// Bracket patch for the same investigation: logs every "IconAtlas" sprite lookup
+    /// (TextureController.LoadAtlasSprite) with the exact spriteName requested and whether it
+    /// resolved to a non-null Sprite, so a live capture pinpoints whether a Food/Med/Horse icon
+    /// lookup is failing because the key is already-translated English text (no matching sprite
+    /// in IconAtlas) rather than the original raw Chinese name. Filters to "IconAtlas" only to
+    /// avoid noise from the many other atlases (UIAtlas, etc.) this same method also serves.
+    /// Pure logging - does not change behavior. Remove once the root cause is confirmed/fixed.
+    /// </summary>
+    [HarmonyPatch(typeof(TextureController), nameof(TextureController.LoadAtlasSprite))]
+    [HarmonyPostfix]
+    private static void LoadAtlasSprite_Postfix(string atlasPath, string spriteName, ref UnityEngine.Sprite __result)
     {
         try
         {
+            if (atlasPath != "IconAtlas")
+                return;
+
             MainPlugin.Logger?.LogInfo(
-                $"DiagnosticPatches[GameController.GenerateHeroData]: returned heroID={result?.heroID}, heroName={result?.heroName}");
+                $"DiagnosticPatches[TextureController.LoadAtlasSprite]: atlasPath='{atlasPath}', spriteName='{spriteName}' -> resolved={(__result != null)}");
         }
         catch (Exception ex)
         {
-            MainPlugin.Logger?.LogError($"DiagnosticPatches[GameController.GenerateHeroData]: failed to dump result: {ex}");
+            MainPlugin.Logger?.LogError($"DiagnosticPatches[TextureController.LoadAtlasSprite]: failed to log lookup: {ex}");
         }
     }
+
+       
 
     /// <summary>
     /// Reflects over an object's public fields and properties and renders them as a single

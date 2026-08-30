@@ -1370,7 +1370,7 @@
   splits:
   - split: 10
     text: "哈哈，#TargetInteractName#早啊！"
-    translated: "HAHA, #TargetInteractName#, good morning!"
+    translated: "Haha, #TargetInteractName#, good morning!"
   - split: 10
     subIndex: 1
     text: "我昨日夜观天象，算出#TargetInteractName#你今天要破费了！"
@@ -1467,11 +1467,11 @@
   splits:
   - split: 10
     text: "想来总有一天，能够真正超越师兄我，成为独当一面，威震江湖的大侠！"
-    translated: "I suppose there will come a day when you truly surpass me, my senior brother, to become a Great Hero who stands alone and intimidates the Jianghu!"
+    translated: "I suppose there will come a day when you truly surpass me, your senior brother, to become a Great Hero who stands alone and intimidates the Jianghu!"
   - split: 10
     subIndex: 1
     text: "这样也就不枉师兄我一番苦心了。"
-    translated: "This way, my senior brother's efforts have not been in vain."
+    translated: "This way, your senior brother's efforts have not been in vain."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -15056,7 +15056,7 @@
   splits:
   - split: 10
     text: "嘻嘻，#PlayerName#太过夸张啦。"
-    translated: "HAHA, #PlayerName# really went overboard!"
+    translated: "Haha, #PlayerName# really went overboard!"
   - split: 10
     subIndex: 1
     text: "我这里还有剩了些练手的菜肴，#PlayerName#若不嫌弃的话也收下吧。"
@@ -40176,7 +40176,7 @@
   splits:
   - split: 10
     text: "嘻嘻，#PlayerName#太过夸张啦。"
-    translated: "HAHA, #PlayerName# really went overboard!"
+    translated: "Haha, #PlayerName# really went overboard!"
   - split: 10
     subIndex: 1
     text: "我这里还有剩了些练手的菜肴，#PlayerName#若不嫌弃的话也收下吧。"
@@ -65947,7 +65947,7 @@
   splits:
   - split: 10
     text: "嘻嘻，#PlayerName#太过夸张啦。"
-    translated: "HAHA, #PlayerName# really went overboard!"
+    translated: "Haha, #PlayerName# really went overboard!"
   - split: 10
     subIndex: 1
     text: "我这里还有剩了些练手的菜肴，#PlayerName#若不嫌弃的话也收下吧。"

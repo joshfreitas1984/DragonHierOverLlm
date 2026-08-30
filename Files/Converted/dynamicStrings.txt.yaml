@@ -5367,7 +5367,7 @@
     translated: "Chapter"
   - subIndex: 2
     text: "重"
-    translated: "RePEAT"
+    translated: "Repeat"
   templates:
   - template: "⟦0⟧({0} {1}⟦1⟧{2})</color>"
 - raw: "{0}<b>{1}</b>{2}，买卖价格{3}。"
@@ -36218,7 +36218,7 @@
     translated: "Chapter"
   - subIndex: 1
     text: "重"
-    translated: "RePEAT"
+    translated: "Repeat"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "等了数时，却并无病人上门求诊，看来这附近颇为太平，也算是一桩好事。"
@@ -43294,7 +43294,7 @@
 - raw: "重"
   splits:
   - text: "重"
-    translated: "RePEAT"
+    translated: "Repeat"
 - raw: "重新选择;ChooseQingMingFestivalPlot"
   splits:
   - text: "重新选择"

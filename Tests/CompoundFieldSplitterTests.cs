@@ -48,7 +48,7 @@ public class CompoundFieldSplitterTests
             _ => f,
         }).ToList();
 
-        Assert.Equal("{0}Year{1}Month{2}Day", CompoundFieldSplitter.Reconstruct(template, translated));
+        Assert.Equal("{0} Year {1} Month {2} Day", CompoundFieldSplitter.Reconstruct(template, translated));
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
 

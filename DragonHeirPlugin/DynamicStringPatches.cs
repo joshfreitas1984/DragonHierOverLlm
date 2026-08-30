@@ -86,9 +86,6 @@ internal static class DynamicStringPatches
     // LoadDictionary) so adding a new source file never requires a plugin-side path change.
     private const string DictionaryFilePattern = "dynamicStrings*.txt.yaml";
 
-    // TEMP DIAGNOSTIC file path - see ApplyToComponentText's residual-CJK log block.
-    private static readonly string ResidualCjkLogFile = Path.Combine(PluginDir, "residual_cjk_debug.log");
-
     // PrefabTextPatches.cs's own dictionary files (same "raw"/"result" flat-list shape, no
     // "isTemplate" key). Merged in at startup (see LoadDictionary) so quest-name/place-name-style
     // whole-phrase strings that PrefabTextPatches only exact-matches (e.g. "初出茅庐") are ALSO
@@ -106,6 +103,15 @@ internal static class DynamicStringPatches
     private const string PrefabTextFilePattern = "dumpedPrefabText*.txt.yaml";
 
     private static List<DictionaryEntry> _dictionary = new();
+
+    // Reverse lookup (translated Result -> original raw Chinese), built once in PatchAll. Needed
+    // for the rare case where a data field is used as an internal lookup/asset key (not just
+    // displayed) AFTER already being run through this dictionary's substring replace somewhere
+    // upstream (e.g. via a String.Concat/Format call in the game's own CSV-row-loading code) - see
+    // ItemIconPatches.cs's GetItemIconName_Postfix for the confirmed motivating case (Food/Med/
+    // Horse item icon names). First-wins on duplicate Result values (exact full-string matches
+    // are expected here, not the partial/substring matches ApplyDictionary handles elsewhere).
+    private static readonly Dictionary<string, string> _reverseDictionary = new();
 
     // Entries flagged isTemplate: true in the packaged YAML (FanslationStudio.LlmKit's
     // DynamicStringResult.IsTemplate - set at packaging time, not re-derived here) contain a
@@ -295,33 +301,206 @@ internal static class DynamicStringPatches
         var literalSegments = new List<string>();
         var lastIndex = 0;
         var tokenIndex = 0;
+        var result = entry.Result ?? string.Empty;
 
-        foreach (Match placeholder in PlaceholderOrTokenRegex.Matches(raw))
+        // CONFIRMED BUG #5 (2026-08-30, "巨 鲸帮.../仙霞.派..." screenshot case - the
+        // "在下#TargetForceDescribe##$TargetInteractName#，\n此次特地前来拜访
+        // #SourceForceDescribe##$SourceInteractName#" template): when two placeholder/token
+        // markers sit DIRECTLY ADJACENT in Raw with ZERO literal text between them (e.g.
+        // "#TargetForceDescribe##$TargetInteractName#" - no separator at all), there is NO anchor
+        // in the input for a lazy "+?" capture to bound itself against - the regex engine simply
+        // grabs the minimum 1 character for the first capture and hands everything else to the
+        // second, since IsMatch/Replace only need SOME match, not a maximal one. Confirmed via a
+        // throwaway harness reproducing this exact template against the real runtime string
+        // ("在下巨鲸帮<color=...>外门弟子</color>YuLingZhu，\n此次特地前来拜访仙霞派<color=...>
+        // 掌门</color>姜映泉"): tok0 (#TargetForceDescribe#) captured only "巨", tok1
+        // (#$TargetInteractName#) captured the REMAINING "鲸帮<color=...>外门弟子</color>
+        // YuLingZhu" - and since the template's Result has a literal space between the two
+        // placeholders ("#TargetForceDescribe# #$TargetInteractName#"), this rendered as
+        // "巨 鲸帮..." (force name torn in half by a bogus space). Worse, the trailing
+        // "#SourceForceDescribe##$SourceInteractName#" pair (also adjacent, AND at the very end of
+        // Raw with no trailing literal to anchor it either) similarly captured just "仙"+"霞",
+        // leaving "派<color=...>掌门</color>姜映泉" outside the match entirely, and Result's own
+        // trailing "." literal got glued onto the truncated capture ("仙霞."), explaining the
+        // "仙霞.派" corruption. This can never be fixed by choosing greedy vs. lazy quantifiers -
+        // greedy would just tear the boundary the OTHER way (first capture eating everything,
+        // second reduced to 1 char) - there is fundamentally no information in the input to know
+        // where one adjacent token's substituted value ends and the next begins.
+        //
+        // FIRST FIX ATTEMPT (rejected, see below): unconditionally skipping ANY template
+        // containing an adjacent-placeholder run was too conservative - it also threw away
+        // perfectly safe templates like "胜负已分，夺冠者乃是...#SourceForceDescribe#
+        // #$SourceInteractName#！..." whose Result ALSO keeps that exact pair glued adjacent
+        // (result: "The winner is...#SourceForceDescribe##$SourceInteractName#!..."), losing
+        // translation of all of that template's OTHER literal connector text for no reason - the
+        // ambiguity that makes bug #5 dangerous only exists when Result actually needs to insert
+        // something (e.g. a space) BETWEEN the two adjacent values, which requires knowing where
+        // one placeholder's substituted value ends and the next begins - information that simply
+        // isn't present when Result keeps them glued too.
+        //
+        // ACTUAL FIX: for each maximal run of 2+ raw placeholders with zero literal between them,
+        // check whether Result's text contains that EXACT SAME concatenated marker sequence
+        // verbatim (e.g. "#SourceForceDescribe##$SourceInteractName#"):
+        //  - If YES (safe case): Result treats the pair exactly as glued as Raw does, so there is
+        //    no need to split them at all - the whole run compiles into ONE combined wildcard
+        //    capture group (using the CJK-permissive class, since a merged run's value is very
+        //    often a legitimately-CJK force name) that is captured and re-emitted VERBATIM,
+        //    unsplit, in place of that exact literal marker-run substring in Result. The run's
+        //    combined captured text still passes through the ordinary bare-fragment
+        //    ApplyDictionary pass afterward (this template only translates the surrounding literal
+        //    connector text), so e.g. "巨鲸帮"/"仙霞派"/"外门弟子"/"掌门" inside the merged span
+        //    still get translated correctly on their own, just not by this template.
+        //  - If NO (unsafe case, e.g. the Target pair above, where Result wants a space between
+        //    them): still fundamentally unbounded - keep the previous conservative behavior of
+        //    refusing to compile this template at all (skip it, log a warning, same "return null"
+        //    pattern PatchAll already uses for a template that throws while compiling).
+        var placeholderMatches = PlaceholderOrTokenRegex.Matches(raw).Cast<Match>().ToList();
+
+        // Identify maximal runs (start/end inclusive indices into placeholderMatches) of 2+
+        // consecutive matches separated by zero raw literal text.
+        var runs = new List<(int Start, int End)>();
         {
-            var literal = raw.Substring(lastIndex, placeholder.Index - lastIndex);
-            if (literal.Length > 0)
+            var i = 0;
+            while (i < placeholderMatches.Count)
             {
-                var escapedLiteral = Regex.Escape(literal);
-                patternBuilder.Append(escapedLiteral);
-                permissivePatternBuilder.Append(escapedLiteral);
-                literalSegments.Add(literal);
+                var j = i;
+                while (j + 1 < placeholderMatches.Count
+                       && placeholderMatches[j + 1].Index == placeholderMatches[j].Index + placeholderMatches[j].Length)
+                    j++;
+                if (j > i) runs.Add((i, j));
+                i = j + 1;
+            }
+        }
+
+        // Validate every run is safe BEFORE building any pattern text - reject the whole template
+        // immediately if any run is unsafe.
+        //
+        // "Safe" now means: Result contains this run's markers, IN ORDER, separated by nothing
+        // but WHITESPACE (was previously: separated by nothing at all, i.e. glued verbatim).
+        // Widening this to tolerate whitespace-only gaps fixes a large batch of templates that
+        // were being needlessly rejected in full just because Result adds a cosmetic space
+        // between the two values (e.g. "#TargetForceDescribe# #$TargetInteractName#") - that
+        // space carries no information we'd need to reconstruct a split point for, so the whole
+        // run can still be merged into one verbatim pass-through capture exactly as the fully-
+        // glued case is, just also swallowing that whitespace (the merged capture's own value
+        // rarely needs an extra space injected into the middle of a force-name/hero-name pair
+        // anyway - e.g. "Giant Whale GangYuLingZhu" reads acceptably, and is vastly preferable to
+        // losing the whole template's other literal connector text to a full rejection).
+        // A gap containing anything else (real translated words, punctuation reordering, etc. -
+        // e.g. "#TargetForceDescribe#. It's nice to meet you, #$TargetInteractName#.") means
+        // Result depends on knowing exactly where one value ends and the next begins, which this
+        // template's Raw gives us no way to determine - genuinely unsafe, template still rejected.
+        var runResultSpan = new Dictionary<int, string>(); // keyed by run Start index
+        foreach (var (start, end) in runs)
+        {
+            var runPattern = string.Join(@"\s*", Enumerable.Range(start, end - start + 1).Select(k => Regex.Escape(placeholderMatches[k].Value)));
+            var runMatch = Regex.Match(result, runPattern);
+            if (!runMatch.Success)
+            {
+                MainPlugin.Logger.LogWarning(
+                    $"[DynamicStringPatches] Skipping template with adjacent placeholders that Result splits apart (cannot be safely bounded by regex): '{raw}'");
+                return null;
+            }
+            runResultSpan[start] = runMatch.Value;
+        }
+
+        // CONFIRMED BUG #6 (2026-08-30, "仙.霞派" screenshot case - the "...此次特地前来拜访
+        // #SourceForceDescribe##$SourceInteractName#" template, which has NOTHING after the
+        // placeholder pair): the same "no anchor to bound a lazy capture against" root cause as
+        // bug #5 also applies when a placeholder/token (or merged run) is the LAST thing in Raw,
+        // with zero trailing literal text - there is nothing after it in the pattern to force the
+        // lazy "+?" quantifier to expand, so it matches the minimum 1 character and leaves the
+        // rest of the actual value untouched by this template (which then gets partially handled,
+        // partially not, by the following bare-fragment pass - explaining a force/hero name being
+        // torn apart even though it isn't adjacent to another placeholder). Fix: when the FINAL
+        // group in the template has no trailing literal to anchor it, make that one group GREEDY
+        // ("+" instead of "+?") instead - since there is nothing after it in the pattern, greedy
+        // naturally consumes up to the end of the current input text (or up to the next newline
+        // for the CJK-permissive "." class, which doesn't match newlines by default), which is
+        // the correct behavior for a placeholder that is genuinely the last piece of displayed
+        // text. Every OTHER group (with something after it, even just another group) keeps its
+        // lazy quantifier unchanged - this is a targeted fix for the specific unanchored-at-the-
+        // end case, not a blanket greedy-everywhere change.
+        var lastGroupIsUnanchored = placeholderMatches.Count > 0
+            && placeholderMatches[^1].Index + placeholderMatches[^1].Length == raw.Length;
+
+        var runStartToEnd = runs.ToDictionary(r => r.Start, r => r.End);
+        var runIndex = 0;
+        var idx = 0;
+        while (idx < placeholderMatches.Count)
+        {
+            if (runStartToEnd.TryGetValue(idx, out var runEnd))
+            {
+                // Merged run: one combined pass-through capture spanning the whole run, bounded
+                // only by whatever literal precedes/follows the WHOLE run (not between its
+                // members) - see the safety analysis above for why this is sound.
+                var runStartMatch = placeholderMatches[idx];
+                var runEndMatch = placeholderMatches[runEnd];
+                var literal = raw.Substring(lastIndex, runStartMatch.Index - lastIndex);
+                if (literal.Length > 0)
+                {
+                    var escapedLiteral = Regex.Escape(literal);
+                    patternBuilder.Append(escapedLiteral);
+                    permissivePatternBuilder.Append(escapedLiteral);
+                    literalSegments.Add(literal);
+                }
+
+                var groupName = $"run{runIndex}";
+                // CJK-permissive on both patterns (not just the fallback) - a merged run's value
+                // is frequently a legitimately-CJK force name, so the strict non-CJK class would
+                // never match here at all. See CONFIRMED BUG #6 above for the quantifier choice.
+                var runQuantifier = (lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1) ? "+" : "+?";
+                patternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{runQuantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{runQuantifier})");
+
+                // Replace this run's first occurrence of its Result span (markers plus any
+                // whitespace-only gap between them - see the safety check above) with a
+                // sentinel, so the ordinary per-placeholder walk below (which still handles every
+                // OTHER, non-merged placeholder normally) skips straight over it - the sentinel is
+                // swapped for a real "${runN}" reference afterward.
+                var resultSpan = runResultSpan[idx];
+                var sentinelIdx = result.IndexOf(resultSpan, StringComparison.Ordinal);
+                if (sentinelIdx >= 0)
+                {
+                    var sentinel = $"\u0001RUN{runIndex}\u0001";
+                    result = result.Substring(0, sentinelIdx) + sentinel + result.Substring(sentinelIdx + resultSpan.Length);
+                }
+
+                lastIndex = runEndMatch.Index + runEndMatch.Length;
+                idx = runEnd + 1;
+                runIndex++;
+                continue;
             }
 
+            var placeholder = placeholderMatches[idx];
+            var singleLiteral = raw.Substring(lastIndex, placeholder.Index - lastIndex);
+            if (singleLiteral.Length > 0)
+            {
+                var escapedLiteral = Regex.Escape(singleLiteral);
+                patternBuilder.Append(escapedLiteral);
+                permissivePatternBuilder.Append(escapedLiteral);
+                literalSegments.Add(singleLiteral);
+            }
+
+            // See CONFIRMED BUG #6 above for the quantifier choice.
+            var isLastGroup = idx == placeholderMatches.Count - 1;
+            var quantifier = (lastGroupIsUnanchored && isLastGroup) ? "+" : "+?";
             if (placeholder.Groups[1].Success)
             {
                 var groupName = $"p{placeholder.Groups[1].Value}";
-                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}+?)");
-                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}+?)");
+                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{quantifier})");
             }
             else
             {
                 var groupName = $"tok{tokenIndex}";
-                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}+?)");
-                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}+?)");
+                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{quantifier})");
                 tokenIndex++;
             }
 
             lastIndex = placeholder.Index + placeholder.Length;
+            idx++;
         }
 
         var trailingLiteral = raw.Substring(lastIndex);
@@ -334,13 +513,19 @@ internal static class DynamicStringPatches
         }
 
         var replacementTokenIndex = 0;
-        var replacementPattern = PlaceholderOrTokenRegex.Replace(entry.Result ?? string.Empty, m =>
+        var replacementPattern = PlaceholderOrTokenRegex.Replace(result, m =>
         {
             if (m.Groups[1].Success) return $"${{p{m.Groups[1].Value}}}";
             var name = $"tok{replacementTokenIndex}";
             replacementTokenIndex++;
             return $"${{{name}}}";
         });
+
+        // Swap each run's sentinel back to a real "${runN}" backreference now that the ordinary
+        // per-placeholder Replace pass above (which never sees the sentinel text, since it
+        // contains no "{n}"/"#Token#" markers) has finished.
+        for (var r = 0; r < runIndex; r++)
+            replacementPattern = replacementPattern.Replace($"\u0001RUN{r}\u0001", $"${{run{r}}}");
 
         return new CompiledTemplate
         {
@@ -403,6 +588,20 @@ internal static class DynamicStringPatches
             var loaded = LoadDictionary();
             _templateDictionary = loaded.Where(e => e.IsTemplate).ToList();
             _dictionary = loaded.Where(e => !e.IsTemplate).ToList();
+
+            // See _reverseDictionary's own comment above. Built from _dictionary only (not
+            // templates - a template's Result is a structural pattern, not a literal string, so
+            // there's no sensible reverse mapping for it). Iterate in the already-established
+            // longest-Raw-first order but only keep the FIRST Result seen for a given key (i.e.
+            // prefer the entry whose Raw is longest) so an ambiguous short Result never overwrites
+            // a more specific one.
+            foreach (var entry in _dictionary)
+            {
+                if (string.IsNullOrEmpty(entry.Result)) continue;
+                if (!_reverseDictionary.ContainsKey(entry.Result))
+                    _reverseDictionary[entry.Result] = entry.Raw;
+            }
+
             _compiledTemplates = _templateDictionary
                 .Select(entry =>
                 {
@@ -637,6 +836,35 @@ internal static class DynamicStringPatches
         return false;
     }
 
+    private const string ResidualCjkDebugLogFileName = "residualCjkDebug.log";
+
+    // Gated by MainPlugin.ResidualCjkDebugEnabled (off by default - see its own comment). When
+    // enabled, logs the before/after text for any call where CJK characters remain after both the
+    // template and bare-fragment passes, to help pin down translation gaps (missing dictionary
+    // entries, a rejected/mis-firing template, a hero/force name composed by a method this plugin
+    // doesn't hook, etc.) without needing to re-add this logging by hand each time. Uses
+    // File.AppendAllText directly (never MainPlugin.Logger) - see GenericPostfix's comment on why
+    // Logger calls from inside these patched methods can recurse into String.Concat/Format and
+    // loop forever; this same reasoning applies to any diagnostic logging added here.
+    private static void LogResidualCjkDebug(string stage, string before, string after)
+    {
+        if (MainPlugin.ResidualCjkDebugEnabled?.Value != true) return;
+        if (!ContainsCjk(after)) return;
+
+        try
+        {
+            var path = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
+            File.AppendAllText(path,
+                $"[{DateTime.Now:HH:mm:ss.fff}] {stage}{Environment.NewLine}" +
+                $"  before: {before}{Environment.NewLine}" +
+                $"  after:  {after}{Environment.NewLine}");
+        }
+        catch
+        {
+            // Best-effort diagnostic only - never let a logging failure affect translation.
+        }
+    }
+
     // Applied to every patched String.Concat/Format overload's result. _dictionary is expected to
     // stay small (low hundreds of entries at most), so an unconditional per-call scan is cheap
     // relative to the sheer call volume of String.Concat/Format in a running Unity game; skip
@@ -659,11 +887,13 @@ internal static class DynamicStringPatches
         _inFormatConcatPatch = true;
         try
         {
-            var result = __result;
+            var original = __result;
+            var result = original;
             if (_compiledTemplates.Count > 0)
                 result = ApplyTemplates(result, _compiledTemplates);
             if (_dictionary.Count > 0)
                 result = ApplyDictionary(result, _dictionary);
+            LogResidualCjkDebug("GenericPostfix", original, result);
             __result = result;
         }
         catch (Exception ex)
@@ -697,7 +927,9 @@ internal static class DynamicStringPatches
         _inFormatConcatPatch = true;
         try
         {
+            var original = format;
             format = ApplyDictionary(format, _templateDictionary);
+            LogResidualCjkDebug("FormatPrefix", original, format);
         }
         catch (Exception ex)
         {
@@ -751,24 +983,7 @@ internal static class DynamicStringPatches
                 replaced = ApplyTemplates(replaced, _compiledTemplates);
             if (_dictionary.Count > 0)
                 replaced = ApplyDictionary(replaced, _dictionary);
-
-            // TEMP DIAGNOSTIC (2026-08-30, "仙霞.派"/"伏牛派" ForceDescribe untranslated-residue
-            // investigation - see repo memory forcedescribe-residual-cjk-investigation.md): logs
-            // the raw pre-translation and final post-translation text whenever CJK survives after
-            // both passes ran, to a SEPARATE file via direct File.AppendAllText (never
-            // MainPlugin.Logger - see the logger re-entrancy note on GenericPostfix above; same
-            // risk applies here). Remove once the root cause of these two force-describe cases is
-            // confirmed and fixed.
-            if (ContainsCjk(replaced))
-            {
-                try
-                {
-                    File.AppendAllText(ResidualCjkLogFile,
-                        $"[{DateTime.Now:HH:mm:ss.fff}] RAW='{current}' FINAL='{replaced}'{Environment.NewLine}");
-                }
-                catch { /* best-effort diagnostic only */ }
-            }
-
+            LogResidualCjkDebug("ApplyToComponentText", current, replaced);
             if (replaced == current) return;
 
             setText(replaced);
@@ -852,6 +1067,16 @@ internal static class DynamicStringPatches
     // concatenation - using this same loaded substring dictionary, outside of the
     // Concat/Format/text-setter hooks this class patches itself.
     public static string TranslateFragment(string input) => ApplyDictionary(input, _dictionary);
+
+    // Public entry point for patch classes that need to undo this dictionary's substring replace -
+    // see _reverseDictionary's comment and ItemIconPatches.GetItemIconName_Postfix for the
+    // motivating case. Returns the original raw Chinese text for an EXACT translated match, or the
+    // input unchanged if it isn't a recognized whole-string translation result.
+    public static string ReverseTranslate(string translated)
+    {
+        if (string.IsNullOrEmpty(translated)) return translated;
+        return _reverseDictionary.TryGetValue(translated, out var raw) ? raw : translated;
+    }
 
     private static string ApplyDictionary(string input, List<DictionaryEntry> dictionary)
     {

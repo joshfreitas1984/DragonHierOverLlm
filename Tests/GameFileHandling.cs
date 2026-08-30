@@ -122,7 +122,7 @@ namespace Tests
             // label half as AreaBuildingRateChange.targetBuildingName, a building-name lookup key.
             // Translating any of these breaks the corresponding lookup.
             new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
-            new() {Path = "FoodData.csv", PackageOutput = true },
+            new() {Path = "FoodData.csv", PackageOutput = true, SkipColumns = [1, 15]  },
             // Column 2 (行事风格/Operating style) is exact-matched against the hardcoded literal
             // "中庸" in ForceData.cs (String.Equals(this.forceStyle,"中庸",0)) to drive sect
             // behavior - translating it breaks that check, so it must stay raw alongside the
@@ -139,7 +139,7 @@ namespace Tests
             // docs/skipcolumns-stringtospeadddata-family.md). Its actual display text is captured
             // separately for translation via DynamicStringColumnSources below.
             new() {Path = "HeroTagData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
-            new() {Path = "HorseData.csv", PackageOutput = true },
+            new() {Path = "HorseData.csv", PackageOutput = true, SkipColumns = [1] },
             new() {Path = "InnData.csv", PackageOutput = true },
             // Structured lookup-key columns; see docs/gamefilehandling-reference.md and
             // docs/spehero-relationship-and-skillfocus-crashes.md (column 3/Name is exact-matched
@@ -158,7 +158,7 @@ namespace Tests
             new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
             //new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
             new() {Path = "MartialClubData.csv", PackageOutput = true },
-            new() {Path = "MedData.csv", PackageOutput = true },
+            new() {Path = "MedData.csv", PackageOutput = true, SkipColumns = [1, 15] },
             // Internal routing key; see docs/gamefilehandling-reference.md.
             new() {Path = "NameData.csv", PackageOutput = true, SkipColumns = [0] },
             new() {Path = "ResourcePointData.csv", PackageOutput = true },
@@ -193,7 +193,7 @@ namespace Tests
             // force/weapon name resolution elsewhere. Column 1 (名称/Name) is only stored raw.
             new() {Path = "TechDataBase.csv", PackageOutput = true, SkipColumns = [4, 8] },
             new() {Path = "TipsData.csv", PackageOutput = true },
-            new() {Path = "WeaponData.csv", PackageOutput = true },
+            new() {Path = "WeaponData.csv", PackageOutput = true, SkipColumns = [1] },
 
             // Main dialogue table; column-specific repair is documented in the reference.
             // Columns 1/2/3/4/5/6/8 are non-narrative asset/routing keys, not display text:
@@ -250,10 +250,13 @@ namespace Tests
         [
             ("AreaData.csv", [1, 2]),
             ("BuildingData.csv", [1]),
+            ("FoodData.csv", [1, 15]),
             ("ForceData.csv", [1, 2, 9, 10, 11]),
             ("ForceSpeAddDataBase.csv", [1]),
+            ("HorseData.csv", [1]),
             ("HeroTagData.csv", [1, 5, 6, 7, 10, 11]),
             ("KungFuData.csv", [3, 7, 8, 9, 10, 13, 17, 18, 24]),
+            ("MedData.csv", [1, 15]),
             // Column 2 (类别/Category) plus, since 2026-08-29, column 1 (名字/Name) - see the
             // defense-in-depth note below for why the name column was added.
             // Defense-in-depth (2026-08-29): column 1 on AreaData/ResourcePointData/
@@ -279,6 +282,7 @@ namespace Tests
             ("SpeHeroData.csv", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 18]),
             ("SummonKungFuData.csv", [1, 13, 24]),
             ("TechDataBase.csv", [4, 8]),
+            ("WeaponData.csv", [1]),
         ];
 
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>

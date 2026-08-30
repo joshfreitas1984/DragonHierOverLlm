@@ -28,10 +28,10 @@
   splits:
   - split: 1
     text: "骡子"
-    translated: "Donkey"
+    translated: "Mule"
   - split: 2
     text: "马和驴杂交而成，体质结实，肢蹄强健，多见于民间"
-    translated: "Mule, resulting from the hybridization of horse and donkey, is robust in physique with strong hooves, and is commonly found among the people."
+    translated: "Mule resulting from the hybridization of horse and donkey, is robust in physique with strong hooves, and is commonly found among the people."
 - raw: "1,驴子,四肢瘦弱，躯干短小的畜类，速度缓慢但刻苦耐劳,0,5,20,5,20,200"
   splits:
   - split: 1
