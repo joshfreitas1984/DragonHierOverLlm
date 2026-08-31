@@ -5424,7 +5424,7 @@
 - raw: "{0}{1}方"
   splits:
   - text: "方"
-    translated: "Fang"
+    translated: "Direction"
   templates:
   - template: "⟦0⟧⟦1⟧{0}"
 - raw: "{0}{1}日</color>"
@@ -19311,7 +19311,7 @@
     translated: "In"
   - subIndex: 1
     text: "岗哨巡查"
-    translated: "Sentinel patrol"
+    translated: "Sentry Post Patrol"
   - subIndex: 2
     text: "次"
     translated: "Times"
@@ -23594,11 +23594,11 @@
 - raw: "岗哨"
   splits:
   - text: "岗哨"
-    translated: "Sentinel"
+    translated: "Sentry Post"
 - raw: "岗哨巡查"
   splits:
   - text: "岗哨巡查"
-    translated: "Sentinel patrol"
+    translated: "Sentry Post Patrol"
 - raw: "岳无畏"
   splits:
   - text: "岳无畏"

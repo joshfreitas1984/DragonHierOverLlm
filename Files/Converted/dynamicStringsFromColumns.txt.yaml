@@ -405,7 +405,7 @@
 - raw: "岗哨"
   splits:
   - text: "岗哨"
-    translated: "Sentinel"
+    translated: "Sentry Post"
 - raw: "分舵"
   splits:
   - text: "分舵"
@@ -433,7 +433,7 @@
 - raw: "材料铺"
   splits:
   - text: "材料铺"
-    translated: "Materials distribution begins now"
+    translated: "Materials Shop"
 - raw: "民宅"
   splits:
   - text: "民宅"

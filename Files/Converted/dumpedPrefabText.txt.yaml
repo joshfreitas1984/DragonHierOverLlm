@@ -3221,7 +3221,7 @@
     translated: "Attacking fellow disciples or loved ones will cause your notoriety to increase exponentially."
   - subIndex: 5
     text: "每月缓慢衰减，可通过岗哨巡查或行侠仗义降低，也可在官府缴纳罚金清空。"
-    translated: "Decays slowly over time and can be reduced through patrols or acts of heroism. It can also be cleared by paying a fine to the authorities."
+    translated: "Decreases slowly over time and can be reduced through patrolling sentry posts or performing acts of chivalry. It can also be cleared by paying a fine to the official government."
   templates:
   - template: "{0}\\n♦{1}/{2}\\n♦{3}+50%。\\n♦{4}\\n♦{5}"
 - raw: "悬赏9999两"

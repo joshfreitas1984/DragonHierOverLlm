@@ -3561,7 +3561,7 @@
     translated: "You cover your faces and follow the route you previously scouts out."
   - subIndex: 1
     text: "一路绕过巡逻岗哨，偷偷潜入藏经阁内。"
-    translated: "Stealthily sneak into the Scripture Pavilion by bypassing patrol posts."
+    translated: "Navigate around the patrol sentry post and sneak into the Scripture Pavilion."
   templates:
   - template: "{0}\\n{1}"
 - raw: "你你你...你们是不是没长眼？没看见我们官兵正在押运税银吗？\\n快快让开去路，饶饶饶你们惊驾之罪......"
@@ -7192,7 +7192,7 @@
 - raw: "师傅命我去巴陵村岗哨巡查以维持治安。"
   splits:
   - text: "师傅命我去巴陵村岗哨巡查以维持治安。"
-    translated: "Master sent me to patrol the Baling Village outpost to maintain law and order."
+    translated: "Master sent me to check the Sentry Post in Baling Village to maintain law and order."
 - raw: "师傅大寿"
   splits:
   - text: "师傅大寿"

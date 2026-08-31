@@ -78,7 +78,7 @@ public class MainPlugin : BasePlugin
         SkipKnownNonCjkComponentsEnabled = Config.Bind(
             "Performance",
             "SkipKnownNonCjkComponents",
-            true,
+            false,
             "When true, once a Text/TMP_Text component has been observed with no CJK content, DynamicStringPatches stops checking it again for the rest of the session. Off by default - risky for any component that can be reused/recycled for different content later, since a subsequent switch to CJK content on that same instance would never be detected or translated.");
 
         SpeedUpPlotTextTypewriterEnabled = Config.Bind(

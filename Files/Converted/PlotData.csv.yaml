@@ -4181,7 +4181,7 @@
   - split: 10
     subIndex: 1
     text: "巴陵村岗哨"
-    translated: "Baling Village Outpost"
+    translated: "Baling Village Sentry Post"
   - split: 10
     subIndex: 2
     text: "进行一次"
@@ -61587,7 +61587,7 @@
   - split: 10
     subIndex: 1
     text: "随后又在派内七拐八绕，避开岗哨，"
-    translated: "Then he made several twists and turns within the faction, avoiding the guards."
+    translated: "Then he made several twists and turns within the faction, avoiding the sentry posts."
   - split: 10
     subIndex: 2
     text: "最后竟施展轻功，翻出高大的院墙，向着山下一路跑去。）"
@@ -83172,7 +83172,7 @@
   splits:
   - split: 10
     text: "沈退，你去铁掌帮周边打探情报，摸清巡逻岗哨，"
-    translated: "Shen Tui, go gather intelligence around the Iron Palm Gang's perimeter and identify their patrol posts."
+    translated: "Shen Tui, you go to the perimeter of the Iron Palm Gang to gather intelligence and locate the patrol sentry posts."
   - split: 10
     subIndex: 1
     text: "替咱们寻一条最优的奇袭路线。"
