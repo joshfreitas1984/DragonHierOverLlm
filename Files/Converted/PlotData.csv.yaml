@@ -22314,7 +22314,7 @@
   - split: 10
     subIndex: 1
     text: "我们这就回去凑齐一千两银子，再求师傅从库房内调拨一千钱药材出来。"
-    translated: "We will head back right away to gather one thousand and two silver taels. Then we can ask Master to transfer one thousand coins worth of medicine from the treasury."
+    translated: "We will head back right away to gather one thousand silver taels. Then we can ask Master to transfer one thousand coins worth of medicine from the treasury."
   - split: 10
     subIndex: 2
     text: "只有尽早拿到药方，才能治好小师妹不是？"
@@ -143698,7 +143698,7 @@
     translated: "No thank you"
   - split: 10
     text: "多谢#PlayerName#成人之美！这1000两银子还请收下。"
-    translated: "Thanks for helping out, #PlayerName#! Please accept these 1000 two silver pieces."
+    translated: "Thanks for helping out, #PlayerName#! Please accept these 1000 silver pieces."
   templates:
   - split: 9
     template: "{0};ChangePlotDataBase;816|{1};ChangePlotDataBase;817"

@@ -16,7 +16,7 @@
     translated: "The little one earned some money not long ago."
   - subIndex: 2
     text: "两银子，正好孝敬您老人家。"
-    translated: "Two silver coins, just right as a tribute to you, sir."
+    translated: "silver coins, just right as a tribute to you, sir."
   templates:
   - template: "{0}\n{1}<b>⟦0⟧</b>{2}"
 - raw: "#$PlayerName#大肆羞辱了#$TargetInteractName#一番，二人不欢而散。({0})"
@@ -820,7 +820,7 @@
     translated: "This"
   - subIndex: 2
     text: "两银子请你收下，以表我#$TargetInteractName#化干戈为玉帛之诚意。"
-    translated: "Two silver coins, please accept them as a token of '#$TargetInteractName#''s sincerity to turn swords into plowshares."
+    translated: "silver coins, please accept them as a token of '#$TargetInteractName#''s sincerity to turn swords into plowshares."
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "#PlayerName#啊，今天是你初次参加本门大比，感想如何？"
@@ -5862,7 +5862,7 @@
     translated: "High stars shine upon you, uncovering lost treasure, and you gained from looting it."
   - subIndex: 1
     text: "两银钱。"
-    translated: "Two silver coins"
+    translated: "silver coins"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}吉星高照，得到一枚灵果，服食后内力上限增加{1}。"
@@ -9159,7 +9159,7 @@
     translated: "Before I knew it, I had amassed"
   - subIndex: 1
     text: "两白银的财富。"
-    translated: "Two silver pieces of wealth"
+    translated: "silver pieces of wealth"
   - subIndex: 2
     text: "若是将这笔巨款专心投入到商界经营中，或许是个不错的选择。"
     translated: "If this huge sum were devoted entirely to business operations, it might be a good choice."
@@ -17466,7 +17466,7 @@
     translated: "How about this, #TargetInteractName#, you handle"
   - subIndex: 3
     text: "两银子来赔罪，我便放你一马。"
-    translated: "Two silver pieces for compensation, and I will let you off."
+    translated: "silver pieces for compensation, and I will let you off."
   templates:
   - template: "{0}\n{1}\n{2}⟦0⟧{3}"
 - raw: "哎，我近日正欲游历山川，增长见闻，\n只是苦于周遭路途艰险，盗匪猖獗，始终不得成行。\n若#PlayerName#眼下有空，还望能与我一路同行，互相也好有个照应。"
@@ -17773,7 +17773,7 @@
     translated: "Oh? Considering our friendship, if {#PlayerName#} can afford it,"
   - subIndex: 1
     text: "两银子作为酬劳，"
-    translated: "Two silver coins as payment"
+    translated: "silver coins as payment"
   - subIndex: 2
     text: "那接下来十五日，我便贴身护卫，保你周全！"
     translated: "For the next fifteen days, I will be your personal guard, ensuring your safety!"
@@ -31858,7 +31858,7 @@
     translated: "This"
   - subIndex: 2
     text: "两银子，自然都应该归我所有！"
-    translated: "Two silver coins naturally should belong to me!"
+    translated: "silver coins naturally should belong to me!"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "此言甚是，待我瞧瞧......\n呀，原来这是一古代木箱，其中除各种散碎残骸，还剩有两件宝物，\n观其品相，确是世间罕有，价值不菲。"
@@ -32627,7 +32627,7 @@
     translated: "I need to pay in full now"
   - subIndex: 2
     text: "两的罚金，方能将当前的恶名与悬赏一笔勾销。"
-    translated: "Two fines will be enough to clear the current infamy and bounty."
+    translated: "silver coins will be enough to clear the current infamy and bounty."
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "江湖救急，师傅他老人家突然要我去<b>寻{0}美酒</b>，#PlayerName#若能在<b>三十日内</b>带一瓶给我，必当感激不尽！"
@@ -32695,7 +32695,7 @@
 - raw: "江老二"
   splits:
   - text: "江老二"
-    translated: "Old Man Two Jiang"
+    translated: "Old Man Jiang Er"
 - raw: "江老五"
   splits:
   - text: "江老五"
@@ -35147,7 +35147,7 @@
     translated: "The property in question is currently on sale, requiring only"
   - subIndex: 1
     text: "两银子便可。"
-    translated: "Two silver coins will do"
+    translated: "silver coins will do"
   - subIndex: 2
     text: "买下这处房产后，少侠便可在此休憩，读书或存储物品了。"
     translated: "Buy this property, and the Young Hero can rest, read, or store items here."
@@ -36122,7 +36122,7 @@
     translated: ", Starting bid"
   - subIndex: 4
     text: "两。"
-    translated: "Two"
+    translated: "Taels"
   - subIndex: 5
     text: "请各位做好准备，进入唱价环节！"
     translated: "Please prepare for the bidding process!"
@@ -36140,7 +36140,7 @@
     translated: "Reward is in cash"
   - subIndex: 3
     text: "两和这"
-    translated: "Two and this"
+    translated: "taels and this"
   - subIndex: 4
     text: "，贵派威望也会因此提升"
     translated: ", Your faction's prestige will also increase as a result."
@@ -36167,7 +36167,7 @@
     translated: "!The reward is money."
   - subIndex: 3
     text: "两。"
-    translated: "Two"
+    translated: "taels."
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}"
 - raw: "第{0}名是{1}！奖励是银钱{2}两以及这{3}。"
@@ -38019,7 +38019,7 @@
     translated: "Can spend"
   - subIndex: 2
     text: "两银钱，让商家重新进一批货瞧瞧。"
-    translated: "Two silver coins to let the merchant try and get a fresh batch of goods."
+    translated: "silver coins to let the merchant try and get a fresh batch of goods."
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "若是有{0}两银钱的话，我自然会考虑一下此事。\n(降低10点忠诚)"
@@ -38028,7 +38028,7 @@
     translated: "If there is"
   - subIndex: 1
     text: "两银钱的话，我自然会考虑一下此事。"
-    translated: "With two silver coins, I will certainly consider the matter."
+    translated: "With silver coins, I will certainly consider the matter."
   - subIndex: 2
     text: "降低10点忠诚"
     translated: "Decrease 10 points of loyalty"
@@ -38862,7 +38862,7 @@
     translated: "Renovating and upgrading this property will require"
   - subIndex: 1
     text: "两银子以及"
-    translated: "Two silver coins and"
+    translated: "silver coins and"
   - subIndex: 2
     text: "天时间，"
     translated: "Time passed,"
@@ -38954,7 +38954,7 @@
     translated: "(as"
   - subIndex: 2
     text: "每提取100两银钱消耗"
-    translated: "To extract 100 two silver pieces consumes"
+    translated: "To extract 100 silver pieces consumes"
   - subIndex: 3
     text: "点门派功绩）"
     translated: "Select Sect Achievements)"
@@ -40099,7 +40099,7 @@
     translated: "Gift"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "taels"
   templates:
   - template: "{0}⟦0⟧{1};NPCMissionGiveMoney;;0/⟦0⟧"
 - raw: "赠与药品;NPCMissionGiveMed"
@@ -40298,7 +40298,7 @@
     translated: "High‑priced sale"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "taels"
   templates:
   - template: "{0}(⟦0⟧{1});GiveNpcBountyItemPriceSure;4"
 - raw: "越狱"
@@ -42073,7 +42073,7 @@
     translated: "This way, I'm carrying a total of this"
   - subIndex: 1
     text: "两银票，你先收下。"
-    translated: "Two silver notes, you may take them first."
+    translated: "silver coins, you may take them first."
   - subIndex: 2
     text: "剩下不够的，我尽快想办法去凑齐！"
     translated: "I'll do my best to make up for the shortfall as soon as possible!"
@@ -42274,7 +42274,7 @@
     translated: "With your current talent, seclusion for fifteen days here will require"
   - subIndex: 3
     text: "两银钱，预计可获得"
-    translated: "Two silver coins are expected to yield"
+    translated: "silver coins are expected to yield"
   - subIndex: 4
     text: "点天赋。"
     translated: "Select talents"
@@ -43127,7 +43127,7 @@
     translated: "You seized the down payment for the assassin from the scattered belongings on the ground."
   - subIndex: 2
     text: "两银子"
-    translated: "Two silver coins"
+    translated: "silver coins"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "那群袭击者将你打的鼻青脸肿，你趁他们一个不备，向后纵越几步，然后落荒而逃！"
@@ -43862,7 +43862,7 @@
     translated: "Sect silver consumption includes the total monthly stipends of disciples"
   - subIndex: 2
     text: "两"
-    translated: "Two"
+    translated: "taels"
   - subIndex: 3
     text: "若月底门派银钱告罄，会导致全派弟子忠诚"
     translated: "If the sect's silver runs out by the end of the month, it will affect all disciples' loyalty."
@@ -44446,7 +44446,7 @@
     translated: "Carry silver coins with you for"
   - subIndex: 1
     text: "两。"
-    translated: "Two"
+    translated: "taels."
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "隐匿身形;HideInteractUI"
@@ -45220,7 +45220,7 @@
     translated: "Selling at a high price"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "Taels"
   templates:
   - template: "{0}(⟦0⟧{1});GiveNpcBountyItemPriceSure;3"
 - raw: "高僧"
