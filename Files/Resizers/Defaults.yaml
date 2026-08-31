@@ -315,3 +315,23 @@
   sampleText: Reduce Qingyuan Township Of Public safety 8 Click
   idealFontSize: 12.0
   allowWordWrap: true
+- path: Canvas/CraftUIPanel/EquipLittleType/*/Text
+  sampleText: Headband
+  idealFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/CraftUIPanel/EquipSubTypeChooseGrid/*/Label
+  sampleText: "Martial \nVessel"
+  idealFontSize: 16.0
+  allowWordWrap: true
+- path: Canvas/BranchUIPanel/BranchUI/BranchLeaderSettingRoot/BranchLeaderSettingTab(Clone)/*/*Text
+  sampleText: Resource threshold
+  idealFontSize: 12.0
+  maxFontSize: 12.0
+  alignment: Center
+  allowWordWrap: true
+  allowAutoSizing: true
+- path: Canvas/BranchUIPanel/BranchUI/*/Text
+  sampleText: Sub-branch office
+  idealFontSize: 20.0
+  allowWordWrap: true
+  adjustWidth: -50.0

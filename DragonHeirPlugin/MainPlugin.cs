@@ -106,6 +106,7 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(ResourceIoPatches));
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.AssetBundleLoadAssetPatch));
+        Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.GlobalDataAddChildPatch));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
         HeroNamePatches.LoadNamePartDictionary();

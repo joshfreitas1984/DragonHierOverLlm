@@ -684,6 +684,16 @@ internal static class DynamicStringPatches
         ApplyToComponentText(__instance, () => __instance.text, v => __instance.text = v);
     }
 
+    // NGUI's own label type - has its own get_text()/set_text(string), entirely separate from
+    // UnityEngine.UI.Text/TMP_Text, so it was invisible to this sink patch until confirmed missing
+    // (see PrefabTextPatches.cs's UiLabelSetText_Postfix for the same gap on the exact-match side).
+    [HarmonyPatch(typeof(UILabel), nameof(UILabel.text), MethodType.Setter)]
+    [HarmonyPostfix]
+    private static void UiLabelSetText_Postfix(UILabel __instance)
+    {
+        ApplyToComponentText(__instance, () => __instance.text, v => __instance.text = v);
+    }
+
     private static void ApplyToComponentText(object instance, Func<string> getText, Action<string> setText)
     {
         if (_inTextSetterPostfix) return;

@@ -25,6 +25,7 @@ internal static class PrefabTextPatches
     private static Dictionary<string, string> _replacements;
     private static Il2CppSystem.Type _tmpTextType;
     private static Il2CppSystem.Type _uiTextType;
+    private static Il2CppSystem.Type _uiLabelType;
 
     private static Dictionary<string, string> Replacements
     {
@@ -92,6 +93,10 @@ internal static class PrefabTextPatches
     // interop safety notes above.
     private static Il2CppSystem.Type TmpTextType => _tmpTextType ??= Il2CppType.From(typeof(TMP_Text));
     private static Il2CppSystem.Type UiTextType => _uiTextType ??= Il2CppType.From(typeof(Text));
+    // NGUI's own label type - has its own get_text()/set_text(string), entirely separate from
+    // UnityEngine.UI.Text/TMP_Text, confirmed via live diagnostic: a Dropdown's captionText
+    // (UI.Text) renders fine, but a static NGUI UILabel sitting next to it never got touched.
+    private static Il2CppSystem.Type UiLabelType => _uiLabelType ??= Il2CppType.From(typeof(UILabel));
 
     [HarmonyPatch(typeof(Resources), nameof(Resources.Load), new[] { typeof(string), typeof(Il2CppSystem.Type) })]
     [HarmonyPostfix]
@@ -165,6 +170,151 @@ internal static class PrefabTextPatches
         }
     }
 
+    // Coverage gap found investigating BranchLeaderSettingTab(Clone) (game code calls
+    // GlobalData.AddChild -> Object.Instantiate(prefabField, parent) directly on an
+    // already-in-memory prefab reference, never routed through Resources.Load/AssetBundle.LoadAsset).
+    // Instantiate copies serialized field values natively without invoking the managed text
+    // setters our other hooks rely on, so any statically-baked (never runtime-reassigned) label
+    // text on such a clone was never reachable by any existing hook. Mirrors the non-generic
+    // overload-targeting approach AssetBundleLoadAssetPatch uses, since Object.Instantiate has
+    // several non-generic overloads besides the generic Instantiate<T> convenience wrapper.
+    [HarmonyPatch(typeof(UnityEngine.Object), nameof(UnityEngine.Object.Instantiate), new[] { typeof(UnityEngine.Object) })]
+    [HarmonyPostfix]
+    private static void Instantiate1_Postfix(ref UnityEngine.Object __result) => InstantiatePostfix(ref __result);
+
+    [HarmonyPatch(typeof(UnityEngine.Object), nameof(UnityEngine.Object.Instantiate), new[] { typeof(UnityEngine.Object), typeof(Transform) })]
+    [HarmonyPostfix]
+    private static void Instantiate2_Postfix(ref UnityEngine.Object __result) => InstantiatePostfix(ref __result);
+
+    [HarmonyPatch(typeof(UnityEngine.Object), nameof(UnityEngine.Object.Instantiate), new[] { typeof(UnityEngine.Object), typeof(Transform), typeof(bool) })]
+    [HarmonyPostfix]
+    private static void Instantiate3_Postfix(ref UnityEngine.Object __result) => InstantiatePostfix(ref __result);
+
+    [HarmonyPatch(typeof(UnityEngine.Object), nameof(UnityEngine.Object.Instantiate), new[] { typeof(UnityEngine.Object), typeof(Vector3), typeof(Quaternion) })]
+    [HarmonyPostfix]
+    private static void Instantiate4_Postfix(ref UnityEngine.Object __result) => InstantiatePostfix(ref __result);
+
+    [HarmonyPatch(typeof(UnityEngine.Object), nameof(UnityEngine.Object.Instantiate), new[] { typeof(UnityEngine.Object), typeof(Vector3), typeof(Quaternion), typeof(Transform) })]
+    [HarmonyPostfix]
+    private static void Instantiate5_Postfix(ref UnityEngine.Object __result) => InstantiatePostfix(ref __result);
+
+    // Confirmed via live playtest: BranchLeaderSettingTab(Clone) is reached through
+    // GlobalData.AddChild, which internally calls the GENERIC Object.Instantiate<T>(...)
+    // convenience overload. That generic method can NOT be safely Harmony-patched itself - IL2CPP
+    // shares one native method body across every reference-type T (GameObject, ColorGrading,
+    // Bloom, ...), so detouring the "closed to GameObject" MethodInfo intercepts calls for every
+    // T and force-casts unrelated types to GameObject, crashing the game (confirmed - see
+    // /memories/repo/il2cpp-generic-instantiate-patch-danger.md). Patching this game-specific
+    // wrapper method directly instead is safe: it's a concrete, non-shared method with its own
+    // real GameObject return type. GlobalData has multiple overloaded AddChild methods (confirmed
+    // via HarmonyException: AmbiguousMatchException), so resolved via reflection like
+    // AssetBundleLoadAssetPatch instead of a plain [HarmonyPatch(typeof(GlobalData), "AddChild")].
+    [HarmonyPatch(typeof(GlobalData))]
+    internal static class GlobalDataAddChildPatch
+    {
+        [HarmonyTargetMethod]
+        private static MethodBase TargetMethod()
+        {
+            return typeof(GlobalData)
+                .GetMethods(BindingFlags.Public | BindingFlags.Static)
+                .Single(m => m.Name == "AddChild"
+                    && !m.IsGenericMethod
+                    && m.ReturnType == typeof(GameObject)
+                    && m.GetParameters() is [{ ParameterType.Name: "GameObject" }, { ParameterType.Name: "GameObject" }]);
+        }
+
+        [HarmonyPostfix]
+        private static void Postfix(ref GameObject __result)
+        {
+            try
+            {
+                if (__result == null || Replacements.Count == 0)
+                    return;
+
+                ProcessGameObjectRecursive(__result);
+            }
+            catch (Exception ex)
+            {
+                MainPlugin.Logger?.LogError($"PrefabTextPatches.GlobalDataAddChildPatch failed: {ex}");
+            }
+        }
+    }
+
+    private static void InstantiatePostfix(ref UnityEngine.Object __result)
+    {
+        try
+        {
+            if (__result == null || Replacements.Count == 0 || !IsGameObject(__result))
+                return;
+
+            var go = new GameObject(__result.Pointer);
+            ProcessGameObjectRecursive(go);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"PrefabTextPatches.Instantiate_Postfix failed: {ex}");
+        }
+    }
+
+    // Second, independent theory for the same still-Chinese symptom: Dropdown/TMP_Dropdown's own
+    // RefreshShownValue() assigns captionText.text FROM its serialized `options` list (separate
+    // baked data from any Text/TMP_Text component), and may run as engine-internal/AOT code that
+    // never routes through the interop-patched TMP_Text.text/UI.Text.text setters at all (same
+    // AOT-bypass class as the documented native String.Format case). Patched by string name since
+    // RefreshShownValue is protected - re-applies the exact-match dictionary to captionText AFTER
+    // Unity's own logic has (potentially) just overwritten it back to the raw baked value.
+    [HarmonyPatch(typeof(Dropdown), "RefreshShownValue")]
+    [HarmonyPostfix]
+    private static void DropdownRefreshShownValue_Postfix(Dropdown __instance)
+    {
+        try
+        {
+            var caption = __instance?.captionText;
+            DiagLog("Dropdown.RefreshShownValue", $"name='{__instance?.name}' captionText='{caption?.text}'");
+            if (Replacements.Count == 0) return;
+            if (caption != null)
+                ReplaceIfKnown(caption.text, v => caption.text = v);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"PrefabTextPatches.DropdownRefreshShownValue_Postfix failed: {ex}");
+        }
+    }
+
+    [HarmonyPatch(typeof(TMP_Dropdown), "RefreshShownValue")]
+    [HarmonyPostfix]
+    private static void TmpDropdownRefreshShownValue_Postfix(TMP_Dropdown __instance)
+    {
+        try
+        {
+            var caption = __instance?.captionText;
+            DiagLog("TMP_Dropdown.RefreshShownValue", $"name='{__instance?.name}' captionText='{caption?.text}'");
+            if (Replacements.Count == 0) return;
+            if (caption != null)
+                ReplaceIfKnown(caption.text, v => caption.text = v);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"PrefabTextPatches.TmpDropdownRefreshShownValue_Postfix failed: {ex}");
+        }
+    }
+
+    // TEMPORARY diagnostic for the still-unresolved UpgradePriorityText investigation - remove
+    // once resolved. Writes directly to a file (never MainPlugin.Logger, to avoid any reentrancy
+    // risk) so a single playtest shows exactly which hooks fire, in what order, with what text.
+    private static void DiagLog(string stage, string detail)
+    {
+        try
+        {
+            var path = Path.Combine(PluginDir, "prefabTextDiag.log");
+            File.AppendAllText(path, $"[{DateTime.Now:HH:mm:ss.fff}] [{stage}] {detail}{Environment.NewLine}");
+        }
+        catch { /* best-effort */ }
+    }
+
+    private static bool IsDiagTarget(string text, string goName) =>
+        (text != null && text.Contains("优先")) || (goName != null && goName.Contains("UpgradePriority"));
+
     // AssetBundle.LoadAsset(string) has no requested-Type parameter to check like Resources.Load
     // does, so the object's real IL2CPP class is queried directly instead of casting - same
     // non-generic technique as UnityLogCapture.FormatMessage.
@@ -196,11 +346,27 @@ internal static class PrefabTextPatches
         ApplyExactMatchToComponentText(() => __instance.text, v => __instance.text = v);
     }
 
+    [HarmonyPatch(typeof(UILabel), nameof(UILabel.text), MethodType.Setter)]
+    [HarmonyPostfix]
+    [HarmonyPriority(Priority.First)]
+    private static void UiLabelSetText_Postfix(UILabel __instance)
+    {
+        ApplyExactMatchToComponentText(() => __instance.text, v => __instance.text = v);
+    }
+
     // Detailed rationale and invariants: docs/prefabtextpatches-agent-reference.md
     private static void ApplyExactMatchToComponentText(Func<string> getText, Action<string> setText)
     {
-        if (_inTextSetterPostfix || Replacements.Count == 0)
+        if (_inTextSetterPostfix)
             return;
+
+        if (Replacements.Count == 0)
+        {
+            var probe = getText();
+            if (IsDiagTarget(probe, null))
+                DiagLog("SetterPostfix", $"SKIPPED - Replacements dictionary is EMPTY. current='{probe}'");
+            return;
+        }
 
         try
         {
@@ -208,13 +374,23 @@ internal static class PrefabTextPatches
             if (string.IsNullOrEmpty(current))
                 return;
 
+            if (IsDiagTarget(current, null))
+                DiagLog("SetterPostfix", $"current='{current}'");
+
             var lookupKey = NormalizeForLookup(current);
             if (!Replacements.TryGetValue(lookupKey, out var replacement) || replacement == lookupKey)
+            {
+                if (IsDiagTarget(current, null))
+                    DiagLog("SetterPostfix", $"NO DICTIONARY MATCH for '{current}' (normalized='{lookupKey}')");
                 return;
+            }
 
             _inTextSetterPostfix = true;
             try { setText(DenormalizeFromLookup(replacement)); }
             finally { _inTextSetterPostfix = false; }
+
+            if (IsDiagTarget(current, null))
+                DiagLog("SetterPostfix", $"REPLACED '{current}' -> '{replacement}'");
         }
         catch (Exception ex)
         {
@@ -256,6 +432,22 @@ internal static class PrefabTextPatches
             MainPlugin.Logger?.LogError($"PrefabTextPatches: failed reading UI.Text components: {ex}");
         }
 
+        try
+        {
+            foreach (var component in go.GetComponents(UiLabelType))
+            {
+                if (component == null)
+                    continue;
+
+                var uiLabel = new UILabel(component.Pointer);
+                ReplaceIfKnown(uiLabel.text, replacement => uiLabel.text = replacement);
+            }
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"PrefabTextPatches: failed reading UILabel components: {ex}");
+        }
+
         Transform transform;
         try
         {
@@ -288,8 +480,19 @@ internal static class PrefabTextPatches
         if (string.IsNullOrEmpty(currentText))
             return;
 
+        if (IsDiagTarget(currentText, null))
+            DiagLog("ProcessGameObjectRecursive", $"found current='{currentText}'");
+
         if (Replacements.TryGetValue(NormalizeForLookup(currentText), out var replacement))
+        {
             setText(DenormalizeFromLookup(replacement));
+            if (IsDiagTarget(currentText, null))
+                DiagLog("ProcessGameObjectRecursive", $"REPLACED '{currentText}' -> '{replacement}'");
+        }
+        else if (IsDiagTarget(currentText, null))
+        {
+            DiagLog("ProcessGameObjectRecursive", $"NO DICTIONARY MATCH for '{currentText}'");
+        }
     }
 
     // Detailed rationale and invariants: docs/prefabtextpatches-agent-reference.md

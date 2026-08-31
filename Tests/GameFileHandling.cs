@@ -1005,6 +1005,8 @@ namespace Tests
 
                     if (!failed)
                     {
+                        //Reverse the Hyphen to a normal hyphen so it can be read in the game
+                        line.Translated = line.Translated.Replace("\u2011", "-"); 
                         outputLines.Add(line.Translated);
                     }
                     else
