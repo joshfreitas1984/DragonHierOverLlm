@@ -52127,19 +52127,19 @@
 - raw: "10000两"
   splits:
   - text: "10000两"
-    translated: "10000 two"
+    translated: "10000 Taels"
 - raw: "1000两"
   splits:
   - text: "1000两"
-    translated: "1000 two"
+    translated: "1000 Taels"
 - raw: "100两"
   splits:
   - text: "100两"
-    translated: "100 pairs"
+    translated: "100 Taels"
 - raw: "10天"
   splits:
   - text: "10天"
-    translated: "10 day"
+    translated: "10 days"
 - raw: "15天"
   splits:
   - text: "15天"
@@ -52147,23 +52147,23 @@
 - raw: "1天"
   splits:
   - text: "1天"
-    translated: "1 days"
+    translated: "1 day"
 - raw: "2000两"
   splits:
   - text: "2000两"
-    translated: "2000 pairs"
+    translated: "2000 Taels"
 - raw: "5000两"
   splits:
   - text: "5000两"
-    translated: "5000 seconds"
+    translated: "5000 Taels"
 - raw: "500两"
   splits:
   - text: "500两"
-    translated: "500 pairs"
+    translated: "500 Taels"
 - raw: "5天"
   splits:
   - text: "5天"
-    translated: "5 day"
+    translated: "5 days"
 - raw: "<color=#{1}>第{0}层</color>"
   splits:
   - text: "第"
@@ -52608,7 +52608,7 @@
     translated: "Sell at a low price"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "Taels"
   templates:
   - template: "{0}(⟦0⟧{1})"
 - raw: "使用钥匙"
@@ -52995,7 +52995,7 @@
     translated: "Sell at average price"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "Taels"
   templates:
   - template: "{0}(⟦0⟧{1})"
 - raw: "坐镇指挥"
@@ -54321,7 +54321,7 @@
     translated: "Gift"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "Taels"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "赠送礼物"
@@ -54371,7 +54371,7 @@
     translated: "High‑priced sale"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "Taels"
   templates:
   - template: "{0}(⟦0⟧{1})"
 - raw: "路见不平，自当拔刀相助"
@@ -54575,7 +54575,7 @@
     translated: "Selling at a high price"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "Taels"    
   templates:
   - template: "{0}(⟦0⟧{1})"
 - raw: "高级嘉奖"
