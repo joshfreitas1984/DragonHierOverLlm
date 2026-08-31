@@ -3340,7 +3340,7 @@
   splits:
   - split: 10
     text: "采薇啊，不可无礼！怎么和前辈说话呢！"
-    translated: "Vie, you can't be so disrespectful! How are you speaking to a senior?!"
+    translated: "Caiwei, you can't be so disrespectful! How are you speaking to a senior?!"
 - raw: ",,,右,,,,,,,哈哈，无妨！小姑娘天真烂漫，我也颇为欢喜。\\n若不是姜掌门捷足先登，我怕是早已将她收入门下了。"
   splits:
   - split: 10
@@ -5851,7 +5851,7 @@
   splits:
   - split: 10
     text: "（悄声）余师姐，咱们怎么说，还继续跟吗？"
-    translated: "(Qiaosheng) Yu Shizi, women zenme shuo, haoxieng tangmi ma?"
+    translated: "(Softly) Senior Sister Yu, what do you think? Should we keep following?"
 - raw: ",,,右,,,,,,,（悄声）跟，等找到寨子，把他们一网打尽。"
   splits:
   - split: 10
@@ -5883,7 +5883,7 @@
   splits:
   - split: 10
     text: "哪来不长眼的，敢盯你爷爷的梢，找死！"
-    translated: "Where do you come off it, daring to stare at my grandpa's rear end, courting death!"
+    translated: "Which blind fool dares tail your grandpa? You're courting death!"
 - raw: ",余采薇,,左,,,,,StartSpeFight;2,,哎呀，#PlayerName#当心，我来解决！"
   splits:
   - split: 10
@@ -5898,7 +5898,7 @@
   splits:
   - split: 10
     text: "对面这点功夫，还伤不到师姐我。"
-    translated: "This little skill wouldn't hurt Senior Sis of mine."
+    translated: "Those skills of theirs aren't enough to hurt me, your senior sister."
   - split: 10
     subIndex: 1
     text: "倒是#PlayerName#你刚才临危不乱，意外地挺可靠嘛。"
@@ -5973,7 +5973,7 @@
   splits:
   - split: 10
     text: "竟敢伤我#TargetInteractName#，真是岂有此理！"
-    translated: "Dared to hurt me, #TargetInteractName#, really beyond reason!"
+    translated: "They dared to hurt #TargetInteractName#, this is outrageous!"
   - split: 10
     subIndex: 1
     text: "我再去追他们一追！"
@@ -6038,7 +6038,7 @@
   splits:
   - split: 10
     text: "采薇受伤了？可有大碍？"
-    translated: "Vie injured? Is it serious?"
+    translated: "Caiwei you are injured? Is it serious?"
 - raw: ",,,左,,,,,,,没事师傅，一点轻伤而已。"
   splits:
   - split: 10
@@ -6088,12 +6088,12 @@
   splits:
   - split: 10
     text: "#PlayerName#，你怎么跟着采薇一言不发啊。"
-    translated: "#PlayerName#, why are you silent following Ci Wei?"
+    translated: "#PlayerName#, why are you silent following Ciawei?"
 - raw: ",,,左,,,,,,,余师姐……是为了保护徒儿方才受伤，徒儿罪该万死！"
   splits:
   - split: 10
     text: "余师姐"
-    translated: "Senior Sister Xu"
+    translated: "Senior Sister Yu"
   - split: 10
     subIndex: 1
     text: "是为了保护徒儿方才受伤，徒儿罪该万死！"
@@ -6134,7 +6134,7 @@
   splits:
   - split: 10
     text: "为师念你保护师姐还算有功，就罚你扫一天的地。"
-    translated: "Master, since you did protect Senior Sis, I'll punish you by making you sweep the floor for a day."
+    translated: "Since you did earn some merit for protecting your senior sister, I'll only punish you by making you sweep the grounds for a day."
   - split: 10
     subIndex: 1
     text: "这边有些伤药，你们拿去用吧！"
@@ -16863,7 +16863,7 @@
   splits:
   - split: 10
     text: "余师姐"
-    translated: "Senior Sister Xu"
+    translated: "Senior Sister Yu"
   - split: 10
     subIndex: 1
     text: "顾师兄"
@@ -34399,7 +34399,7 @@
   splits:
   - split: 10
     text: "大师兄余师姐他们也在赶来的路上"
-    translated: "Big Senior Brother Yu Senior Sister and the others are on their way as well."
+    translated: "Big Senior Brother, Senior Sister Yu and the others are on their way as well."
   templates:
   - split: 10
     template: "{0}……"
@@ -36063,7 +36063,7 @@
   splits:
   - split: 10
     text: "采薇！"
-    translated: "Vie!"
+    translated: "Caiwei!"
 - raw: ",,,左,,,,,,,在。"
   splits:
   - split: 10
@@ -61507,7 +61507,7 @@
   splits:
   - split: 10
     text: "采薇你看看你，让你多穿两件。"
-    translated: "Vie, look at yourself. I made you wear a few more pieces."
+    translated: "Caiwei, look at yourself. I made you wear a few more pieces."
   - split: 10
     subIndex: 1
     text: "我房里正好有几件厚衣裳，走，跟我回房添上去！"
@@ -85031,7 +85031,7 @@
   splits:
   - split: 10
     text: "采薇，依计行事。"
-    translated: "Vie, follow the plan"
+    translated: "Caiwei, follow the plan"
 - raw: ",,,右,,,,,,,嗯。"
   splits:
   - split: 10
@@ -87027,7 +87027,7 @@
   - split: 10
     subIndex: 1
     text: "采薇你辛苦了，快去疗伤室养伤去吧，"
-    translated: "Vie, you've worked hard. Go to the healing room to rest and recover."
+    translated: "Caiwei, you've worked hard. Go to the healing room to rest and recover."
   - split: 10
     subIndex: 2
     text: "这边的收尾工作，就交给我和#PlayerName#好了。"
@@ -88802,7 +88802,7 @@
   splits:
   - split: 10
     text: "余师姐！正好快顶不住了，快来援手！"
-    translated: "Senior Brother Yu! I'm about to collapse; come give me a hand!"
+    translated: "Senior Sister Yu! I'm about to collapse; come give me a hand!"
 - raw: ",,,左,,,,,,,莫慌莫慌，正好把溃兵连同援军一道收拾掉好！\\n仙霞派余采薇，前来讨教！"
   splits:
   - split: 10
@@ -253078,7 +253078,7 @@
   splits:
   - split: 10
     text: "余师姐，你跟那高人学得如何了？"
-    translated: "Senior Brother Yu, how are your studies with the high‑ranking scholar going?"
+    translated: "Senior sister Yu, how are your studies with the high‑ranking scholar going?"
   - split: 10
     subIndex: 1
     text: "可有领悟到什么好招式？"

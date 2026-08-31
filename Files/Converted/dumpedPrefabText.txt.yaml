@@ -978,7 +978,7 @@
 - raw: "10两"
   splits:
   - text: "10两"
-    translated: "10 pairs"
+    translated: "10 taels"
 - raw: "10天"
   splits:
   - text: "10天"
@@ -986,7 +986,7 @@
 - raw: "15两"
   splits:
   - text: "15两"
-    translated: "15 two"
+    translated: "15 taels"
 - raw: "20日"
   splits:
   - text: "20日"
@@ -1013,7 +1013,7 @@
 - raw: "5两"
   splits:
   - text: "5两"
-    translated: "5 pairs"
+    translated: "5 taels"
 - raw: "6到20位数字或字母"
   splits:
   - text: "6到20位数字或字母"

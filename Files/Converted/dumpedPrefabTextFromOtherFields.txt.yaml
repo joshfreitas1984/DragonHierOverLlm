@@ -583,7 +583,7 @@
 - raw: "#TargetPlace#有一笔#BountyDebtsMoney#两欠款已拖延数日未还，若有人能代为追收，可得其五成作为酬劳。"
   splits:
   - text: "#TargetPlace#有一笔#BountyDebtsMoney#两欠款已拖延数日未还，若有人能代为追收，可得其五成作为酬劳。"
-    translated: "#TargetPlace# has two #BountyDebtsMoney# debts that have been outstanding for several days. If anyone can recover these debts on their behalf, they will receive 50% of the amount as a reward."
+    translated: "#TargetPlace# has #BountyDebtsMoney# taels of debts that have been outstanding for several days. If anyone can recover these debts on their behalf, they will receive 50% of the amount as a reward."
 - raw: "#TargetPlace#有商队遭劫，魏胥华师兄深陷苦战，必须尽快前往支援。"
   splits:
   - text: "#TargetPlace#有商队遭劫，魏胥华师兄深陷苦战，必须尽快前往支援。"

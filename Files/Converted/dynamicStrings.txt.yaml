@@ -22873,7 +22873,7 @@
 - raw: "寻得仇家踪迹"
   splits:
   - text: "寻得仇家踪迹"
-    translated: "Found the whereabouts of the enemycejiao"
+    translated: "Found the enemy's trail"
 - raw: "寻找物品"
   splits:
   - text: "寻找物品"
@@ -25428,7 +25428,7 @@
     translated: "Bounty"
   - subIndex: 1
     text: "两"
-    translated: "Two"
+    translated: "Taels"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "悬锺"

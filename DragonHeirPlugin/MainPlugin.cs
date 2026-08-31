@@ -56,6 +56,14 @@ public class MainPlugin : BasePlugin
     // PlotTextPatches.
     internal static ConfigEntry<bool> PreTranslatePlotTextEnabled;
 
+    // On by default - toggle off if a future game patch fixes this at the source. See
+    // PlotInteractControllerPatches for the full rationale: PlotInteractController.OnClick only
+    // dispatches choiceData.callFuc (e.g. RobHeroItemChoose) when choiceData.costResource is
+    // non-null, but no-cost choices (e.g. PlotData.csv's 夺取物件/RobHeroItemChoose entries, which
+    // have no cost column at all) leave costResource null, so those choice buttons are clickable
+    // but silently do nothing.
+    internal static ConfigEntry<bool> FixNoCostChoiceClickEnabled;
+
     public override void Load()
     {
         Logger = base.Log;
@@ -93,6 +101,12 @@ public class MainPlugin : BasePlugin
             true,
             "When true, PlotPanel dialogue text is translated up front before the typewriter tween starts, so the reveal shows already-translated text instead of raw Chinese being retranslated on every tween step. Off by default until verified live - see PlotTextPatches.");
 
+        FixNoCostChoiceClickEnabled = Config.Bind(
+            "Game Bugfixes",
+            "FixNoCostChoiceClick",
+            false,
+            "When true, PlotInteractController's dialogue choice buttons that have no cost resource (e.g. the 夺取物件/RobHeroItemChoose choices) actually fire their callFuc instead of silently doing nothing, working around a gap in the base game where the dispatch is only reached when choiceData.costResource is non-null. Turn off if a future game patch fixes this at the source. See PlotInteractControllerPatches.");
+
         // Register codepage 936 (GBK) support - .NET Core only ships Unicode encodings by
         // default. Some game TextAssets (e.g. SpeHeroFaceData) are GBK-encoded rather than
         // UTF-8, and Unity's TextAsset.text getter always assumes UTF-8, silently mangling
@@ -123,6 +137,8 @@ public class MainPlugin : BasePlugin
         {
             Logger.LogError($"Failed to patch PlotTextPatches: {ex}");
         }
+
+        Harmony.CreateAndPatchAll(typeof(PlotInteractControllerPatches));
 
         DynamicStringPatches.PatchAll();
 
