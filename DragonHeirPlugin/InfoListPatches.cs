@@ -3,16 +3,10 @@ using HarmonyLib;
 
 namespace EnglishPatch;
 
-// Source-level hook for the HUD InfoList scrolling message log (see HudController.infoList /
-// InfoTextList). Translates each small incoming message via DynamicStringPatches' shared
-// templates/dictionary pipeline before InfoTextList ever wraps it in a "[y.m.d]" timestamp and
-// appends it to its internal Paragraph buffer / Text.text - far cheaper than letting the
-// sink-level Text.text setter patch re-scan/diff the ever-growing accumulated log text on every
-// single append. Also marks the underlying textLabel component as a trusted append-only source
-// (DynamicStringPatches.MarkTrustedAppendOnlySource) so that setter patch only ever checks the
-// newly grown suffix, not the whole accumulated buffer, on every append. Kept in its own
-// file/Harmony instance so it's not mixed in with the general String.Concat/Format and
-// Text.text setter patches in DynamicStringPatches.cs.
+// Source-level pre-translation hook for the HUD InfoList scrolling message log (InfoTextList),
+// sibling of BattleInfoPatches for the battle combat log. Also marks the underlying textLabel
+// as a trusted append-only source so the sink-level setter patch skips full-buffer rescans.
+// Full rationale/pattern: docs/battleinfopatches-trusted-append-only-source.md
 internal static class InfoListPatches
 {
     // Tracks which InfoTextList instances have already had their textLabel marked as a trusted

@@ -577,7 +577,7 @@
   - split: 15
     subIndex: 1
     text: "轻功经验+20%，采伐经验"
-    translated: "Qinggong experience +20%, woodcutting experience"
+    translated: "Qinggong experience +20%, Resource Gathering experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"

@@ -755,7 +755,7 @@
 - raw: "采伐"
   splits:
   - text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
 - raw: "马匹:2"
   splits:
   - text: "马匹"
@@ -799,7 +799,7 @@
 - raw: "采伐;锻造"
   splits:
   - text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   - subIndex: 1
     text: "锻造"
     translated: "Forging"
@@ -1376,7 +1376,7 @@
 - raw: "采伐经验"
   splits:
   - text: "采伐经验"
-    translated: "Logging experience"
+    translated: "Resource Gathering Experience"
 - raw: "木植经验"
   splits:
   - text: "木植经验"
@@ -1472,7 +1472,7 @@
 - raw: "全员采伐"
   splits:
   - text: "全员采伐"
-    translated: "All clear"
+    translated: "All Resource Gathering"
 - raw: "全员木植"
   splits:
   - text: "全员木植"
@@ -3720,7 +3720,7 @@
     translated: "Trombino2"
   - subIndex: 2
     text: "采伐1"
-    translated: "Cut Wood 1"
+    translated: "Resource Gathering 1"
   templates:
   - template: "{0};{1};{2}"
 - raw: "奇门5"
@@ -43565,7 +43565,7 @@
 - raw: "采伐潜力"
   splits:
   - text: "采伐潜力"
-    translated: "Logging potential"
+    translated: "Resource Gathering Potential"
 - raw: "木植潜力"
   splits:
   - text: "木植潜力"
@@ -44542,7 +44542,7 @@
 - raw: "采伐/锻造"
   splits:
   - text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   - subIndex: 1
     text: "锻造"
     translated: "Forging"
@@ -45595,7 +45595,7 @@
     translated: "Qinggong"
   - subIndex: 4
     text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   templates:
   - template: "{0};{1};{2};{3};{4}"
 - raw: "道.无名"
@@ -51540,7 +51540,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   templates:
   - template: "{0}\n{1}：{2}"
 - raw: "勘探"
@@ -51556,7 +51556,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   - subIndex: 3
     text: "学识"
     translated: "Scholarship"
@@ -51571,7 +51571,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   templates:
   - template: "{0}\n{1}：{2}"
 - raw: "挖掘"
@@ -51587,7 +51587,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   templates:
   - template: "{0}\n{1}：{2}"
 - raw: "窃取门派矿石\n技能影响：采伐"
@@ -51599,7 +51599,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   templates:
   - template: "{0}\n{1}：{2}"
 - raw: "采收"
@@ -51974,7 +51974,7 @@
 - raw: "提升采伐潜力"
   splits:
   - text: "提升采伐潜力"
-    translated: "Increase logging potential"
+    translated: "Increase resource gathering potential"
 - raw: "试炼"
   splits:
   - text: "试炼"
@@ -54961,7 +54961,7 @@
 - raw: "侠盗四奇"
   splits:
   - text: "侠盗四奇"
-    translated: "Thief and Four Quirks"
+    translated: "Four Legendary Thieves"
 - raw: "小霹雳"
   splits:
   - text: "小霹雳"

@@ -190574,7 +190574,7 @@
   - split: 10
     subIndex: 1
     text: "不如改叫做“侠盗四奇”，如何？"
-    translated: "How about changing it to Thief Quartet?"
+    translated: "How about changing it to Four Legendary Thieves?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -190582,7 +190582,7 @@
   splits:
   - split: 10
     text: "“侠盗四奇”？好名字！好名字！"
-    translated: "Thief Quadrum? Great name! Great name!"
+    translated: "Four Legendary Thieves? Great name! Great name!"
   - split: 10
     subIndex: 1
     text: "兄弟，我敬你一杯！"
@@ -191381,7 +191381,7 @@
   splits:
   - split: 10
     text: "话说赵点检领着侠盗四奇兄弟与赵京娘，离了悦来客栈。"
-    translated: "Captain Zhao led them away from the Yue Lai Inn along with Brother Jingmang."
+    translated: "It was said that Inspector Zhao led the Four Legendary Thieves, his brothers, and Zhao Jingniang away from the YueLai Inn."
   - split: 10
     subIndex: 1
     text: "便马不停蹄一路南下，终于在天黑之前赶到了河内乡。"
@@ -191605,7 +191605,7 @@
   splits:
   - split: 10
     text: "赵胤宗与侠盗四奇商议好计策，准备明日会会这黄沙寨，"
-    translated: "Zhao Yizong consulted with the Four Heroes of Chivalry on their strategy and planned to meet Yellow Sand Camp tomorrow."
+    translated: "Zhao Yizong and the Four Legendary Thieves discussed their strategy and planned to meet Yellow Sand Camp tomorrow."
   - split: 10
     subIndex: 1
     text: "便各自回房养精蓄锐，自是一夜无话。"
@@ -191641,7 +191641,7 @@
   splits:
   - split: 10
     text: "而赵胤宗和侠盗四奇，则依计行事，"
-    translated: "And Zhao Yizong and the Four Heroes of Thievery followed the plan."
+    translated: "And Zhao Yizong and the Four Legendary Thieves followed the plan accordingly."
   - split: 10
     subIndex: 1
     text: "从旁闪身而出，拦住这群响马的去路。"
@@ -191747,7 +191747,7 @@
   splits:
   - split: 10
     text: "赵胤宗与侠盗四奇交换了眼神，"
-    translated: "Zhao Yinzong exchanged glances with the Four Odd Bandits."
+    translated: "Zhaoyingzong exchanged glances with the Four Legendary Thieves."
   - split: 10
     subIndex: 1
     text: "原来几人昨晚定下的计策，乃是假意将赵京娘献给大当家。"
@@ -192820,7 +192820,7 @@
   - split: 10
     subIndex: 1
     text: "辞别了大当家与黄沙寨一众响马后，赵胤宗带着侠盗四奇和赵京娘，"
-    translated: "After bidding farewell to the Big Boss and the bandits of Huangsha Camp, Zhao Yizong, along with the Four Oddities of the Rogue and Zhao Jingniang,"
+    translated: "After bidding farewell to the Big Boss and the outlaws of Yellow Sand Camp, Zhao Yizong, along with the Four Legendary Thieves and Zhao Jingniang,"
   - split: 10
     subIndex: 2
     text: "离开河内乡，继续往京城南面的京娘家中去也！"
@@ -193635,7 +193635,7 @@
   - split: 10
     subIndex: 1
     text: "“侠盗四奇”"
-    translated: "Four Heroes of the Jade Rabbit Thief'"
+    translated: "Four Legendary Thieves"
   - split: 10
     subIndex: 2
     text: "与赵点检有约，"
@@ -193937,7 +193937,7 @@
   splits:
   - split: 10
     text: "之后为表谢意，爹娘留赵公子与侠盗四奇在府上驻留数日，"
-    translated: "After expressing gratitude, my parents allowed Young Lord Zhao and the Four Odd Rogues to stay in the estate for a few days."
+    translated: "After expressing gratitude, my parents allowed Young Lord Zhao and the Four Legendary Thieves to stay in the mansion for a few days."
   - split: 10
     subIndex: 1
     text: "每日好酒好菜款待着，自不必多言。"
@@ -193969,7 +193969,7 @@
   - split: 10
     subIndex: 2
     text: "随后便带着侠盗四奇，就此辞别离去......"
-    translated: "Then he took leave of the Four Merry Rogues and departed..."
+    translated: "Then he departed with the Four Legendary Thieves......"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -194200,7 +194200,7 @@
   - split: 10
     subIndex: 2
     text: "原本被唤作“侠盗四丑”，后来改作“侠盗四奇”。"
-    translated: "Originally known as Four Fools Bandit, it was later changed to Four Strange Bandits."
+    translated: "Originally known as Four Disgraceful Thieves, it was later changed to Four Legendary Thieves."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -194268,7 +194268,7 @@
   - split: 10
     subIndex: 2
     text: "只要找到这“侠盗四奇”，就定能顺藤摸瓜，问出赵点检的消息！"
-    translated: "As long as we find this Thief Quartet, we can surely follow the trail to learn about Zhao Dianjian's whereabouts!"
+    translated: "Just find these Four Legendary Thieves, and we'll surely follow the leads to learn about Zhao Dianjian's whereabouts!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -194486,7 +194486,7 @@
   - split: 10
     subIndex: 1
     text: "便要开始搜寻那四位老者，“侠盗四奇”了。"
-    translated: "To begin searching for those four elders, the Four Odd Rogues."
+    translated: "We must now begin searching for the Four Elderly Masters, Four Legendary Thieves."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -194564,7 +194564,7 @@
   splits:
   - split: 10
     text: "否则，这侠盗四奇又为何要出手保护京娘？"
-    translated: "Otherwise, why would these Four Eccentrics step in to protect Jing Niang?"
+    translated: "Otherwise, why would the Four Legendary Thieves step in to protect Jing Niang?"
   - split: 10
     subIndex: 1
     text: "不是正好遵从赵点检指令，杀人灭口么？"
@@ -194592,7 +194592,7 @@
   - split: 10
     subIndex: 1
     text: "只要找到这侠盗四奇，真相自然水落石出！"
-    translated: "As long as we find these Four Odd Rogues, the truth will naturally come to light!"
+    translated: "As long as we find the Four Legendary Thieves, the truth will naturally come to light!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -194695,7 +194695,7 @@
   - split: 10
     subIndex: 1
     text: "不过也确认了这四人，正是传说中的“侠盗四奇”。"
-    translated: "But it also confirmed that these four individuals are indeed the legendary Four Rogues."
+    translated: "However, it has confirmed that these four individuals are indeed the legendary Four Legendary Thieves."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -194756,7 +194756,7 @@
   - split: 10
     subIndex: 1
     text: "我看这侠盗四奇出手相救，显然是还胸怀侠义之心。"
-    translated: "I see that when these Four Odd Rogues acted to save us, it's clear they still have a heart for chivalry."
+    translated: "I see the Four Legendary Thieves intervening to save us, clearly they still hold onto a sense of chivalry."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -194764,7 +194764,7 @@
   splits:
   - split: 10
     text: "我准备与#PlayerName#你一道前去，说服侠盗四奇为了武林安危，"
-    translated: "I am ready to go with you, #PlayerName#, to persuade the Four Odd Rogues for the safety of the Wulin."
+    translated: "I am prepared to go with you, #PlayerName#, to persuade the Four Legendary Thieves to act for the safety of the Wu Lin."
   - split: 10
     subIndex: 1
     text: "说出赵点检之下落，不知你意下如何？"
@@ -195337,7 +195337,7 @@
   splits:
   - split: 10
     text: "敢问老人家，是否就是传说中的“侠盗四奇”中的天残！"
-    translated: "May I ask, elderly sir, are you the legendary Bandit Hero with the Heavenly Imperfection?"
+    translated: "May I ask, elderly sir, are you none other than Tiancan, one of the Four Legendary Thieves!"
   - split: 10
     subIndex: 1
     text: "赵胤宗赵点检，想必你也颇为熟悉吧！"
@@ -196006,7 +196006,7 @@
   splits:
   - split: 10
     text: "想必阁下便是传说中“侠盗四奇”中的地缺了吧！"
-    translated: "I presume you are the legendary Four Heroes of Thievery known as Di Que!"
+    translated: "You must be the legendary thief known as Di Qie from the Four Legendary Thieves!"
 - raw: ",,,右,,,DigDirt,,,,........................"
 - raw: ",,,左,,,,,,,前辈！血衣盟大统领正在危及武林众生，\\n还望你能以侠义为重，出手相助！"
   splits:
@@ -196502,7 +196502,7 @@
   splits:
   - split: 10
     text: "这位前辈，敢问可是“侠盗四奇”中的南丑？"
-    translated: "This senior, may I ask if you are the Southern Ugly from the Four Rogues Heroes?"
+    translated: "This senior, may I ask if you are the South Ugly from the Four Legendary Thieves?"
 - raw: ",,,右,,,,,,,啊哈哈哈，二位若是不想要画，那就请回吧。\\n老夫还要接着做生意，赚下个月例钱呢！"
   splits:
   - split: 10
@@ -197763,7 +197763,7 @@
   splits:
   - split: 10
     text: "不知前辈可是侠盗四奇中的北怪老前辈，还请明示......"
-    translated: "Unknown senior, are you the Elder Northern Strange from the Four Oddities Bandit? I beg for your clarification..."
+    translated: "Unknown senior, are you the Elder Northern Monster from the Four Legendary Thieves? I beg you to clarify..."
 - raw: ",玩家,,左,,,,,,,听闻四位前辈，乃是赵点检赵胤宗的贴身侍卫，\\n不知此事是否当真？"
   splits:
   - split: 10
@@ -197821,7 +197821,7 @@
   splits:
   - split: 10
     text: "却见侠盗四奇另外三位，天残地缺与南丑，"
-    translated: "But there were the other three of the Four Heroes: Tian's Cuoqie and Di's Que, along with Nan Wu."
+    translated: "But there were the other three of the Four Legendary Thieves: Tian Can Di Qie and Nan Chou."
   - split: 10
     subIndex: 1
     text: "早已在此推杯换盏，把酒言欢。"
@@ -199823,7 +199823,7 @@
   splits:
   - split: 10
     text: "对了，据赵点检的贴身侍卫侠盗四奇所说，"
-    translated: "Right, according to the bodyguard known as Thief Quadrimony of Captain Zhao."
+    translated: "Right, according to the bodyguard of Commander Zhao, the Four Legendary Thieves,"
   - split: 10
     subIndex: 1
     text: "赵点检离开皇宫时，曾与一名神秘老道发生过冲突，"
@@ -200186,7 +200186,7 @@
   splits:
   - split: 10
     text: "（此话倒是与侠盗四奇对上了，"
-    translated: "(This remark surprisingly aligns with the Four Heroes of Might and Right,"
+    translated: "(This remark surprisingly matches the Four Legendary Thieves,"
   - split: 10
     subIndex: 1
     text: "赵点检与老道交手过后，带回了一张碎纸片，"
@@ -200400,7 +200400,7 @@
   splits:
   - split: 10
     text: "最后，据侠盗四奇所言，"
-    translated: "Finally, as per the Four Heroes of Thievery,"
+    translated: "Finally, according to the Four Legendary Thieves,"
   - split: 10
     subIndex: 1
     text: "柴世宗秘召赵点检入宫，为的正是血衣盟的一桩惊天阴谋。"
@@ -203001,7 +203001,7 @@
   - split: 10
     subIndex: 1
     text: "直至到京城中，寻得隐居多年的侠盗四奇。"
-    translated: "Until reaching the capital city, where the legendary thief Quatuor discovered his long‑secluded residence."
+    translated: "Until in the Capital, where I found the Four Legendary Thieves, who had been in hiding for many years."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -207493,7 +207493,7 @@
   splits:
   - split: 10
     text: "各位英雄，侠盗四奇前来助阵！"
-    translated: "Heroes, the Four Rogues are here to lend a hand!"
+    translated: "Heroes, Four Legendary Thieves are here to assist!"
 - raw: ",地缺,,左,,,SpeEffect/风呼啸,,,,金龙生，没想到当年泰岳大典，\\n竟是你在背后搞鬼！"
   splits:
   - split: 10
@@ -207590,7 +207590,7 @@
   - split: 10
     subIndex: 2
     text: "一雪前耻，夺回这侠盗四奇之名！"
-    translated: "Reclaim the title of the Four Heroes of Roguery and wash our shame!"
+    translated: "Restore our honor and reclaim the name of Four Legendary Thieves!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -207796,7 +207796,7 @@
   splits:
   - split: 10
     text: "我们侠盗四奇也随#PlayerName#一道，"
-    translated: "We, the Four Rogues, also follow #PlayerName#"
+    translated: "We, the Four Legendary Thieves, also join you, #PlayerName#."
   - split: 10
     subIndex: 1
     text: "不可让此贼再逍遥法外。"
@@ -208132,7 +208132,7 @@
   splits:
   - split: 10
     text: "如假包换，毕竟我这侠盗四奇四位兄弟，总不会认错人的。"
-    translated: "It's the real deal; after all, these four brothers of mine as a thief would never mistake someone else."
+    translated: "It's the real deal; after all, I've known these Four Legendary Thieves, my fellow brothers, for too long to mistake one another."
 - raw: ",天残,,左,,,,,,,赵将军！我们四人愿意继续为您鞍前马后，唯首是瞻！"
   splits:
   - split: 10
@@ -208206,7 +208206,7 @@
   splits:
   - split: 10
     text: "我与侠盗四奇，早已是力不从心，勉力支撑。"
-    translated: "I am already struggling to keep up with the Four Heroes of Thievery."
+    translated: "I have long since reached my limits with the Four Legendary Thieves, barely managing to hold on."
   - split: 10
     subIndex: 1
     text: "郭大侠，你还是放我们这把老骨头吧！"

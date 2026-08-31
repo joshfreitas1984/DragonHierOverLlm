@@ -1,24 +1,20 @@
 using System;
 using HarmonyLib;
+using UnityEngine.UI;
 
 namespace EnglishPatch;
 
-// Source-level hook for the BATTLE combat log (BattleController.AddInfoText). Sibling of
-// InfoListPatches (which covers the HUD InfoTextList scrolling log) - the battle log is a
-// different component (BattleController's own infoText), so it was never covered by that patch.
-//
-// The battle log's text component accumulates every combat line for the whole fight. Without a
-// source-level patch, the sink-level Text/TMP setter patch (DynamicStringPatches
-// .ApplyToComponentText) re-scans the entire ever-growing accumulated buffer through the full
-// templates+dictionary pipeline on every single append - O(n) work per attack, so the per-attack
-// lag compounds as the battle runs longer (confirmed in-game: delay grows with fight length).
-//
-// Translating each incoming line HERE, before BattleController appends it, keeps the accumulated
-// buffer fully English, so ApplyToComponentText's ContainsCjk(current) short-circuit fires and the
-// expensive pipeline never runs against the whole log again. Exactly the pattern InfoListPatches
-// uses for the HUD log. Kept in its own file/Harmony instance for the same reason.
+// Source-level pre-translation hook for the BATTLE combat log (BattleController.AddInfoText),
+// sibling of InfoListPatches for the HUD log. Also marks the underlying Text component as a
+// trusted append-only source so the sink-level setter patch skips full-buffer rescans.
+// Full rationale/pattern: docs/battleinfopatches-trusted-append-only-source.md
 internal static class BattleInfoPatches
 {
+    // Tracks which BattleController instances have already had their infoText's Text component
+    // marked as a trusted append-only source, so the GetComponent lookup only ever runs once per
+    // instance instead of on every single AddInfoText() call.
+    private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<BattleController, object> _markedInstances = new();
+
     public static void PatchAll()
     {
         try
@@ -35,10 +31,31 @@ internal static class BattleInfoPatches
 
     [HarmonyPatch(typeof(BattleController), nameof(BattleController.AddInfoText), new[] { typeof(string), typeof(bool) })]
     [HarmonyPrefix]
-    private static void AddInfoText_Prefix(ref string addInfo)
+    private static void AddInfoText_Prefix(BattleController __instance, ref string addInfo)
     {
         if (string.IsNullOrEmpty(addInfo) || DynamicStringPatches._inFormatConcatPatch) return;
         if (!DynamicStringPatches.HasTranslationData) return;
+
+        // Same one-time-per-instance marking as InfoListPatches.TranslateInfoListSourceText - only
+        // recorded once the Text component is actually available, so a call before the component's
+        // UI is fully initialized retries on the next AddInfoText().
+        if (__instance != null && !_markedInstances.TryGetValue(__instance, out _))
+        {
+            try
+            {
+                var textLabel = __instance.infoText != null ? __instance.infoText.GetComponent<Text>() : null;
+                if (textLabel != null)
+                {
+                    DynamicStringPatches.MarkTrustedAppendOnlySource(textLabel);
+                    _markedInstances.Add(__instance, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                MainPlugin.Logger.LogError($"[BattleInfoPatches] MarkTrustedAppendOnlySource failed: {ex}");
+            }
+        }
+
         if (!DynamicStringPatches.ContainsCjk(addInfo)) return;
 
         // Same re-entrancy guard as InfoListPatches/GenericPostfix - RunGenericPipeline can log via

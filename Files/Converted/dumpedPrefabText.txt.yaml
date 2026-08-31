@@ -407,7 +407,7 @@
 - raw: "<b>采伐</b>\\n影响获取门派木料/矿石，以及破坏区域防御的效率"
   splits:
   - text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   - subIndex: 1
     text: "影响获取门派木料"
     translated: "Affecting Sect Timber Acquisition"
@@ -5777,11 +5777,11 @@
 - raw: "采伐"
   splits:
   - text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
 - raw: "采伐+10\\n种植+10"
   splits:
   - text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   - subIndex: 1
     text: "种植"
     translated: "Cultivation"
@@ -5907,7 +5907,7 @@
     translated: "Long weapon"
   - subIndex: 1
     text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
   templates:
   - template: "{0}+5\\n{1}+5"
 - raw: "长兵武器"

@@ -8,3 +8,9 @@
   result: Sentry Post
 - raw: 钱庄
   result: Bank
+- raw: 采伐
+  result: Resource Gathering
+  allowalt:
+    - Gather Resources
+- raw: "侠盗四奇"
+  result: "Four Legendary Thieves"

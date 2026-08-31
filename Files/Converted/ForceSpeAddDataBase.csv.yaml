@@ -165,7 +165,7 @@
   splits:
   - split: 2
     text: "采伐经验"
-    translated: "Logging experience"
+    translated: "Resource Gathering Experience"
 - raw: "31,木植经验,木植经验,TRUE,0.02"
   splits:
   - split: 2
@@ -285,7 +285,7 @@
   splits:
   - split: 2
     text: "全员采伐"
-    translated: "All clear"
+    translated: "All Resource Gathering"
 - raw: "55,全员木植,全员木植,FALSE,1"
   splits:
   - split: 2

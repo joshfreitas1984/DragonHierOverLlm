@@ -28230,7 +28230,7 @@
 - raw: "提升采伐潜力;FinishHiddenSmith;4"
   splits:
   - text: "提升采伐潜力"
-    translated: "Increase logging potential"
+    translated: "Increase resource gathering potential"
   templates:
   - template: "{0};FinishHiddenSmith;4"
 - raw: "提升锻造潜力;FinishHiddenSmith;3"
@@ -29424,7 +29424,7 @@
     translated: "I just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何采伐？"
-    translated: "Do you know how to cut down trees, #PlayerName#?"
+    translated: "Do you know, #PlayerName#, how to gather Resources?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一群毒性异常的蛇虫，里面似乎混杂有珍稀毒物，\n不知#PlayerName#是否知晓应当如何捉捕？"
@@ -38606,7 +38606,7 @@
     translated: "There stretches a fertile mineral vein rich with various minerals, offering a bounty of resources to exploit."
   - subIndex: 2
     text: "但若要从中挑选精品，非得有高超采伐技巧不可。"
-    translated: "But to select the finest pieces, one must have exquisite cutting skills."
+    translated: "But to pick out the finest pieces, one must possess exquisite resource gathering skills."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "行至一处{0}时，\n突然窜出{1}道人影，将你的去路拦住！"
@@ -38645,7 +38645,7 @@
     translated: "Lofty trees stand toweringly, offering plenty of timber at a glance."
   - subIndex: 2
     text: "但若要从中挑选精品，非得有高超采伐技巧不可。"
-    translated: "But to select the finest pieces, one must have exquisite cutting skills."
+    translated: "But to pick out the finest pieces, one must possess exquisite resource gathering skills."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "行至一水草丰茂之处，只见鸟语花香之间，\n赫然是一片生机勃勃的河谷，一眼望去有诸多食材可供取用。\n但若要从中挑选精品，非得有高超木植技巧不可。"
@@ -43266,7 +43266,7 @@
 - raw: "采伐"
   splits:
   - text: "采伐"
-    translated: "Logging"
+    translated: "Resource Gathering"
 - raw: "采掘陨铁;FinishSpeStone;2;;;DigAndCut/"
   splits:
   - text: "采掘陨铁"

@@ -694,6 +694,67 @@ internal static class DynamicStringPatches
         ApplyToComponentText(__instance, () => __instance.text, v => __instance.text = v);
     }
 
+    // AreaBuildController.BuildChoiceButtonClicked re-derives which build action was clicked by
+    // comparing the clicked button's rendered label against LTLocalization.GetText("升级")/
+    // "迁移"/"拆除" etc. With the game's own language left at "CN", that call returns the raw
+    // Chinese key untouched, while the button's label already went through the sink-level setter
+    // patches above and got translated - so the comparison always fails and the click silently
+    // no-ops (looks like a permanently disabled button).
+    //
+    // Deliberately scoped to just these known routing literals, NOT every GetText call - many
+    // other call sites (e.g. HeroSearchController's Tasks) pass a raw data-field value straight
+    // through GetText, and those may still need to compare equal to an intentionally-untranslated
+    // (SkipColumns) raw CSV field elsewhere; translating GetText's result unconditionally for
+    // every caller would risk breaking that comparison in the opposite direction instead.
+    // TutorialController's targetBuilding is the same class of bug but is fixed separately below
+    // (a dynamic value, not a fixed literal, so it doesn't fit this whitelist).
+    private static readonly HashSet<string> BuildActionRoutingKeys = new()
+    {
+        "升级", "迁移", "拆除", "新建", "取消建造", "取消升级", "取消拆除",
+    };
+
+    [HarmonyPatch(typeof(LTLocalization), nameof(LTLocalization.GetText), new[] { typeof(string), typeof(bool), typeof(bool) })]
+    [HarmonyPostfix]
+    private static void LtLocalizationGetText_Postfix(string key, ref string __result)
+    {
+        if (_inFormatConcatPatch || string.IsNullOrEmpty(__result) || !BuildActionRoutingKeys.Contains(key)) return;
+
+        _inFormatConcatPatch = true;
+        try
+        {
+            __result = RunGenericPipeline(__result);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[DynamicStringPatches] LtLocalizationGetText_Postfix failed: {ex}");
+        }
+        finally
+        {
+            _inFormatConcatPatch = false;
+        }
+    }
+
+    // TutorialController.TutorialFindBuildingButton/TutorialFindBuildingChoiceButton locate a
+    // build/quick-button by scanning a grid for the child whose rendered label text equals
+    // LTLocalization.GetText(targetBuilding) - same class of bug as the build-action routing
+    // keys above, but targetBuilding is a dynamic building name rather than a fixed literal, so
+    // it's translated at the call site instead of widening the GetText key whitelist.
+    [HarmonyPatch(typeof(TutorialController), nameof(TutorialController.TutorialFindBuildingButton))]
+    [HarmonyPrefix]
+    private static void TutorialFindBuildingButton_Prefix(ref string targetBuilding)
+    {
+        if (!string.IsNullOrEmpty(targetBuilding))
+            targetBuilding = RunGenericPipeline(targetBuilding);
+    }
+
+    [HarmonyPatch(typeof(TutorialController), nameof(TutorialController.TutorialFindBuildingChoiceButton))]
+    [HarmonyPrefix]
+    private static void TutorialFindBuildingChoiceButton_Prefix(ref string targetBuilding)
+    {
+        if (!string.IsNullOrEmpty(targetBuilding))
+            targetBuilding = RunGenericPipeline(targetBuilding);
+    }
+
     private static void ApplyToComponentText(object instance, Func<string> getText, Action<string> setText)
     {
         if (_inTextSetterPostfix) return;

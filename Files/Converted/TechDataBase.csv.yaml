@@ -232,10 +232,10 @@
   splits:
   - split: 1
     text: "采伐纲要"
-    translated: "Logging Regulation"
+    translated: "Resource Gathering Guidelines"
   - split: 2
     text: "采伐纲要"
-    translated: "Logging Regulation"
+    translated: "Resource Gathering Guidelines"
 - raw: "27,木植纲要,木植纲要,2,木植经验,0.02,FALSE,1,木料"
   splits:
   - split: 1
@@ -424,10 +424,10 @@
   splits:
   - split: 1
     text: "采伐训练"
-    translated: "Logging training"
+    translated: "Resource Gathering Training"
   - split: 2
     text: "采伐训练"
-    translated: "Logging training"
+    translated: "Resource Gathering Training"
 - raw: "51,木植训练,木植训练,3,全员木植,1,TRUE,1,木料"
   splits:
   - split: 1

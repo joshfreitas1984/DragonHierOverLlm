@@ -77,4 +77,9 @@
 - [`docs/dynamicstringpatches-agent-reference.md`](docs/dynamicstringpatches-agent-reference.md)
   — concise ownership, ordering, loading, template, re-entrancy, performance, and change-checklist
   reference for agents editing `DynamicStringPatches.cs`.
+- [`docs/battleinfopatches-trusted-append-only-source.md`](docs/battleinfopatches-trusted-append-only-source.md)
+  — the trusted-append-only-source pattern shared by `BattleInfoPatches`/`InfoListPatches`, and a
+  CONFIRMED BUG where `BattleInfoPatches` translated each battle-log line but never called
+  `MarkTrustedAppendOnlySource` on the underlying `Text` component, silently defeating the
+  sink-patch fast path (fixed).
 

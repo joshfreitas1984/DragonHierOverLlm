@@ -1,18 +1,6 @@
-- path: Canvas/BattleUIPanel/NowActiveHero/NameBack/Name
-  sampleText: Zhao Yizong
-  idealFontSize: 17.0
-  alignment: TopLeft
-  allowWordWrap: true
-  adjustY: 40.0
-  adjustWidth: 50.0
-- path: Canvas/BattleUIPanel/NowActiveHero/NameBack/Force
-  sampleText: 飞龙<color=#FD1430>Masters</color>
-  idealFontSize: 14.0
-  alignment: TopLeft
-  allowWordWrap: true
-  adjustY: -10.0
-  adjustWidth: 50.0
-- path: Canvas/BattleUIPanel/ActionBar/ActionBarUnitRoot/*/TextBack/Text
-  sampleText: Zhang Qingpeng
+- path: Canvas/BattleUIPanel/NowActiveHero/NameBack/NickName
+  sampleText: Well-respected
   idealFontSize: 12.0
-  allowWordWrap: false
+  alignment: TopRight
+  allowWordWrap: true
+  adjustWidth: 100.0

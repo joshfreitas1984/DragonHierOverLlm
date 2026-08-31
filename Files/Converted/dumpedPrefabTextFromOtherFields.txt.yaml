@@ -1937,7 +1937,7 @@
     translated: "The nine life skills are respectively"
   - subIndex: 1
     text: "医术，毒术，学识，口才，采伐，木植，锻造，炼药，烹饪。"
-    translated: "Medicine, poison‑making, knowledge, eloquence, logging, timber, smithing, alchemy, cooking."
+    translated: "Medicine, Toxin Techniques, Knowledge, Eloquence, Resource Gathering, Wood Crafting, Smithing, Alchemy, Cooking."
   templates:
   - template: "{0}：\\n{1}"
 - raw: "也有人说他抵达北辽，在当地乱局中留下了足迹。"
@@ -3855,7 +3855,7 @@
 - raw: "侠盗四奇"
   splits:
   - text: "侠盗四奇"
-    translated: "Thief and Four Quirks"
+    translated: "Four Legendary Thieves"
 - raw: "侧击背击"
   splits:
   - text: "侧击背击"
@@ -13162,3 +13162,1744 @@
   splits:
   - text: "龙胤立志"
     translated: "Long Yin vows"
+- raw: "阎罗殿大军已兵临我<b>聚义门</b>城下，我聚义门虽势单力薄，却也绝不会屈服于邪道淫威！\\n我准备率领全派上下作殊死一搏，还请#PlayerName#前来见证！"
+  splits:
+  - text: "阎罗殿大军已兵临我"
+    translated: "Yama Hall's army has advanced to face me."
+  - subIndex: 1
+    text: "聚义门"
+    translated: "Righteous Alliance Gate"
+  - subIndex: 2
+    text: "城下，我聚义门虽势单力薄，却也绝不会屈服于邪道淫威！"
+    translated: "Below the city walls, though our Righteous Alliance Gate may be outnumbered and outmatched, we will never yield to the wicked's evil intimidation!"
+  - subIndex: 3
+    text: "我准备率领全派上下作殊死一搏，还请#PlayerName#前来见证！"
+    translated: "I am prepared to lead the entire faction in a desperate battle. Please come, #PlayerName#, to witness!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，见字如面。近来长乐帮弟子已集结完毕，不日便会兵临<b>杭州</b>城下。还请您莫忘与妾身之约定，率#PlayerForceName#精锐前来助阵。\\n若能成功光复杭州，擒拿贼人卢玉麟，妾身必当结草衔环以报君恩！"
+  splits:
+  - text: "#PlayerName#，见字如面。近来长乐帮弟子已集结完毕，不日便会兵临"
+    translated: "#PlayerName#, see the words as if I were facing you. Recently, the disciples of the Changle Gang have gathered, and they will soon be at the gates."
+  - subIndex: 1
+    text: "杭州"
+    translated: "Hangzhou"
+  - subIndex: 2
+    text: "城下。还请您莫忘与妾身之约定，率#PlayerForceName#精锐前来助阵。"
+    translated: "At the city gate, I implore you not to forget our agreement, and bring the #PlayerForceName# elites to assist."
+  - subIndex: 3
+    text: "若能成功光复杭州，擒拿贼人卢玉麟，妾身必当结草衔环以报君恩！"
+    translated: "If we can successfully recover Hangzhou and capture Lu Yulan, I will surely repay your grace with a thousand acts of kindness!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你<b>尽快回门派</b>商议大事！"
+  splits:
+  - text: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你"
+    translated: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will receive him kindly."
+  - subIndex: 1
+    text: "尽快回门派"
+    translated: "Hurry back to the sect"
+  - subIndex: 2
+    text: "商议大事！"
+    translated: "Confer on important matters!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，小生近来苦读经史典籍，已然成竹在胸。这次前往<b>朱仙镇南方</b>，定能一鼓作气说服那伙强盗改邪归正，你只管等小生的佳讯吧！"
+  splits:
+  - text: "#PlayerName#，小生近来苦读经史典籍，已然成竹在胸。这次前往"
+    translated: "#PlayerName#, I have recently immersed myself in the study of classical texts and historical works, and I am now fully prepared. This time, I will go..."
+  - subIndex: 1
+    text: "朱仙镇南方"
+    translated: "Southern Zhuxian Town"
+  - subIndex: 2
+    text: "，定能一鼓作气说服那伙强盗改邪归正，你只管等小生的佳讯吧！"
+    translated: ", You'll surely convince those bandits to reform with one go, so just wait for my good news!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，小生这些日子苦练武功，总算小有所成。事不过三，这次前往<b>朱仙镇北方</b>定要一雪前耻，教那群强盗改过自新，重新做人！"
+  splits:
+  - text: "#PlayerName#，小生这些日子苦练武功，总算小有所成。事不过三，这次前往"
+    translated: "#PlayerName#, these days I've been diligently training my martial arts, and I've finally made some progress. Misfortunes never come singly, so this time I'm going..."
+  - subIndex: 1
+    text: "朱仙镇北方"
+    translated: "Northern Zhuxian Town"
+  - subIndex: 2
+    text: "定要一雪前耻，教那群强盗改过自新，重新做人！"
+    translated: "You must seek revenge and teach those robbers to reform and start anew!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#$PlayerName#少侠，此前花石纲能平安抵达京城，全赖你鼎力援助。为感谢一路护送之恩，帮主想亲自嘉奖。还望你能抽空来<b>长乐帮</b>领取奖赏，万勿推辞！"
+  splits:
+  - text: "#$PlayerName#少侠，此前花石纲能平安抵达京城，全赖你鼎力援助。为感谢一路护送之恩，帮主想亲自嘉奖。还望你能抽空来"
+    translated: "#$PlayerName#, previously, the Flower and Stone Transport was able to safely arrive in the Capital, all thanks to your generous assistance. To express my gratitude for your escort, I, the Gang Leader, wish to personally reward you. I hope you can make time to come."
+  - subIndex: 1
+    text: "长乐帮"
+    translated: "Changle Gang"
+  - subIndex: 2
+    text: "领取奖赏，万勿推辞！"
+    translated: "Accept the reward; do not hesitate!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#$PlayerName#少侠，长乐帮押运花石纲的队伍即将出发，还望你按照此前约定来<b>杭州</b>汇合，护卫这批珍宝之周全。"
+  splits:
+  - text: "#$PlayerName#少侠，长乐帮押运花石纲的队伍即将出发，还望你按照此前约定来"
+    translated: "#$PlayerName#, Young Hero, the team from the Changle Gang is about to depart for escort duty. We hope you'll honor our previous agreement."
+  - subIndex: 1
+    text: "杭州"
+    translated: "Hangzhou"
+  - subIndex: 2
+    text: "汇合，护卫这批珍宝之周全。"
+    translated: "Converge to fully safeguard these treasures"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我在<b>大理北方</b>发现一出好戏，你若感兴趣尽可前来看个热闹。"
+  splits:
+  - text: "#PlayerName#，我在"
+    translated: "#PlayerName#, I am"
+  - subIndex: 1
+    text: "大理北方"
+    translated: "Northern Dali"
+  - subIndex: 2
+    text: "发现一出好戏，你若感兴趣尽可前来看个热闹。"
+    translated: "Find yourself a good show; if you're interested, feel free to come and enjoy the spectacle."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向<b>大理</b>发起进攻！事态紧急，还望您依照金顶大会之约定，率领仙霞派精锐弟子尽快前来支援！"
+  splits:
+  - text: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向"
+    translated: "#$PlayerName#, Sect Leader of the Cultivated Community, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against"
+  - subIndex: 1
+    text: "大理"
+    translated: "Dali"
+  - subIndex: 2
+    text: "发起进攻！事态紧急，还望您依照金顶大会之约定，率领仙霞派精锐弟子尽快前来支援！"
+    translated: "Initiate the attack! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，大事不好！五毒金刚大军眼下已与阎罗王合兵一处，进逼<b>大理</b>城下。\\n还望#PlayerName#尽快率领#PlayerForceName#精锐前来支援！"
+  splits:
+  - text: "#PlayerName#，大事不好！五毒金刚大军眼下已与阎罗王合兵一处，进逼"
+    translated: "#PlayerName#, big trouble! The Five Venom Golden Army has now joined forces with King Yama, advancing towards us."
+  - subIndex: 1
+    text: "大理"
+    translated: "Dali"
+  - subIndex: 2
+    text: "城下。"
+    translated: "Below the city walls"
+  - subIndex: 3
+    text: "还望#PlayerName#尽快率领#PlayerForceName#精锐前来支援！"
+    translated: "I hope #PlayerName# can quickly lead the #PlayerForceName# elite to come support us!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，邪派联军再度兵临城下，如今<b>大理</b>已危如累卵。然为了中原武林之安危，尽管希望渺茫，老朽仍将率峨眉全体弟子做最后一搏。\\n#PlayerName#若能率#PlayerForceName#前来助最后一臂之力，必当感激不尽。"
+  splits:
+  - text: "#PlayerName#，邪派联军再度兵临城下，如今"
+    translated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now"
+  - subIndex: 1
+    text: "大理"
+    translated: "Dali"
+  - subIndex: 2
+    text: "已危如累卵。然为了中原武林之安危，尽管希望渺茫，老朽仍将率峨眉全体弟子做最后一搏。"
+    translated: "Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand."
+  - subIndex: 3
+    text: "#PlayerName#若能率#PlayerForceName#前来助最后一臂之力，必当感激不尽。"
+    translated: "#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "我峨眉与中原各大门派已在<b>大理城内</b>合兵一处，准备共同出兵攻打阎罗殿。为了中原武林之安危，还望#PlayerName#前来助一臂之力！"
+  splits:
+  - text: "我峨眉与中原各大门派已在"
+    translated: "I, the Meishan Sect, along with the major sects in Central Plains,"
+  - subIndex: 1
+    text: "大理城内"
+    translated: "In the city of Dali"
+  - subIndex: 2
+    text: "合兵一处，准备共同出兵攻打阎罗殿。为了中原武林之安危，还望#PlayerName#前来助一臂之力！"
+    translated: "Unite our forces, prepare to launch an assault on Yama Hall together. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "老朽与峨眉弟子在<b>大理城内</b>追查在白云子药中下毒之人，如今已有些眉目。\\n还望#PlayerName#前来一同查明真相，好尽早将凶手绳之以法！"
+  splits:
+  - text: "老朽与峨眉弟子在"
+    translated: "The old man and the Emei disciple are"
+  - subIndex: 1
+    text: "大理城内"
+    translated: "In the city of Dali"
+  - subIndex: 2
+    text: "追查在白云子药中下毒之人，如今已有些眉目。"
+    translated: "The investigation into the poisoner in Baiyunzi's medicine has begun to take shape."
+  - subIndex: 3
+    text: "还望#PlayerName#前来一同查明真相，好尽早将凶手绳之以法！"
+    translated: "I hope #PlayerName# will come to help us uncover the truth as soon as possible to bring the murderer to justice!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "老朽近来收到了一封奇怪信件，竟是出自五毒教龙凤娥掌教之手。\\n信中内容似乎与白云天有关，还望#PlayerName#能来<b>峨眉派</b>与老朽一同商量对策。"
+  splits:
+  - text: "老朽近来收到了一封奇怪信件，竟是出自五毒教龙凤娥掌教之手。"
+    translated: "The old man has recently received a strange letter from Long Feng'e, the Sect Master of the Five Poisons Sect."
+  - subIndex: 1
+    text: "信中内容似乎与白云天有关，还望#PlayerName#能来"
+    translated: "The content of the letter seems to be related to Bai Yuntian. I hope you, #PlayerName#, can come."
+  - subIndex: 2
+    text: "峨眉派"
+    translated: "Emei Sect"
+  - subIndex: 3
+    text: "与老朽一同商量对策。"
+    translated: "Confer with me to devise a strategy"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "我们兄弟三个在<b>晋阳</b>寻得了那贼人高首的踪迹，还望#PlayerName#速来一道擒贼！"
+  splits:
+  - text: "我们兄弟三个在"
+    translated: "We three brothers are"
+  - subIndex: 1
+    text: "晋阳"
+    translated: "Jinyang"
+  - subIndex: 2
+    text: "寻得了那贼人高首的踪迹，还望#PlayerName#速来一道擒贼！"
+    translated: "Found the thief's head #PlayerName#, please come quickly to apprehend him!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，听闻师傅死讯，我也不准备独活。\\n我准备于近日自尽，去九泉下陪师傅作伴。\\n还望你能赶来<b>飞龙门</b>，与我见上最后一面。"
+  splits:
+  - text: "#PlayerName#，听闻师傅死讯，我也不准备独活。"
+    translated: "#PlayerName#, hearing of Master's passing, I do not intend to survive alone either."
+  - subIndex: 1
+    text: "我准备于近日自尽，去九泉下陪师傅作伴。"
+    translated: "I am preparing to take my own life in the near future, to accompany my Master in the underworld."
+  - subIndex: 2
+    text: "还望你能赶来"
+    translated: "I hope you can come"
+  - subIndex: 3
+    text: "飞龙门"
+    translated: "Flying Dragon Gate"
+  - subIndex: 4
+    text: "，与我见上最后一面。"
+    translated: ", Meet me for the last time"
+  templates:
+  - template: "{0}\\n{1}\\n{2}<b>{3}</b>{4}"
+- raw: "#PlayerName#，我想到个办法，兴许可以治好顾游年师兄断绝的经脉。\\n你手边若有<b>精良级以上珍宝</b>，还请带来<b>飞龙门</b>借师姐一用！"
+  splits:
+  - text: "#PlayerName#，我想到个办法，兴许可以治好顾游年师兄断绝的经脉。"
+    translated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian."
+  - subIndex: 1
+    text: "你手边若有"
+    translated: "If you have access to"
+  - subIndex: 2
+    text: "精良级以上珍宝"
+    translated: "Exquisite‑grade treasures"
+  - subIndex: 3
+    text: "，还请带来"
+    translated: ", Still please bring it"
+  - subIndex: 4
+    text: "飞龙门"
+    translated: "Flying Dragon Gate"
+  - subIndex: 5
+    text: "借师姐一用！"
+    translated: "Borrow from Senior Sis!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}<b>{4}</b>{5}"
+- raw: "#PlayerName#！诸葛姐姐将你上次所寻珍宝进献给皇上，果真求得了圣旨！你快<b>回仙霞派</b>和顾师兄接旨，然后去大隐阁好好治病疗伤。"
+  splits:
+  - text: "#PlayerName#！诸葛姐姐将你上次所寻珍宝进献给皇上，果真求得了圣旨！你快"
+    translated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry."
+  - subIndex: 1
+    text: "回仙霞派"
+    translated: "Return to the Xianxia Sect"
+  - subIndex: 2
+    text: "和顾师兄接旨，然后去大隐阁好好治病疗伤。"
+    translated: "And receive the imperial decree from Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "<b>本月会在门内为师傅举办寿宴，#PlayerName#莫要忘了准备礼物。</b>若惹得师父他老人家生气，可别怪师姐我没提醒你。"
+  splits:
+  - text: "本月会在门内为师傅举办寿宴，#PlayerName#莫要忘了准备礼物。"
+    translated: "This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift."
+  - subIndex: 1
+    text: "若惹得师父他老人家生气，可别怪师姐我没提醒你。"
+    translated: "If you anger Master, don't blame Senior Sister for not warning you."
+  templates:
+  - template: "<b>{0}</b>{1}"
+- raw: "不知#PlayerName#近来练功可有懈怠？若是得空，不妨来与师姐我切磋切磋。"
+  splits:
+  - text: "不知#PlayerName#近来练功可有懈怠？若是得空，不妨来与师姐我切磋切磋。"
+    translated: "Unknown, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
+- raw: "魏师兄遭贼人围攻，事态紧急，#PlayerName#<b>速回门派</b>救援！"
+  splits:
+  - text: "魏师兄遭贼人围攻，事态紧急，#PlayerName#"
+    translated: "Senior Brother Wei is under attack by bandits; the situation is urgent, #PlayerName#."
+  - subIndex: 1
+    text: "速回门派"
+    translated: "Speed back to the sect"
+  - subIndex: 2
+    text: "救援！"
+    translated: "Rescue!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "为师欲寻一弟子，拜会青城派周莫知掌门。#PlayerName#若愿前往，可<b>速回门派领命</b>。"
+  splits:
+  - text: "为师欲寻一弟子，拜会青城派周莫知掌门。#PlayerName#若愿前往，可"
+    translated: "My master wishes to seek a disciple and meet the Sect Master Zhou Mozhi of the Qingcheng Sect. If #PlayerName# is willing to go, you may"
+  - subIndex: 1
+    text: "速回门派领命"
+    translated: "Speed back to the Sect to receive your mission."
+  templates:
+  - template: "{0}<b>{1}</b>。"
+- raw: "几位师兄已探得情报，铁掌帮近几日就将和黑风寨一道大举进攻。#PlayerName#<b>速回门派</b>，协助师兄部署防御。"
+  splits:
+  - text: "几位师兄已探得情报，铁掌帮近几日就将和黑风寨一道大举进攻。#PlayerName#"
+    translated: "Several senior brothers have obtained intelligence that the Iron Palm Gang will launch a major attack in conjunction with Black Wind Camp in the near days. #PlayerName#"
+  - subIndex: 1
+    text: "速回门派"
+    translated: "Speed back to the sect"
+  - subIndex: 2
+    text: "，协助师兄部署防御。"
+    translated: ", Assist Senior Brother in deploying the defense"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+  splits:
+  - text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+    translated: "Heard that the Tang Clan plans to hold a grand alliance wedding with Thunderclap Hall recently, inviting major sects from Bashu to attend. Too bad my affairs have been busy lately, so I hope you, my disciple, can go on my behalf to offer congratulations."
+- raw: "近来七大恶人之一雨人屠现身<b>江陵东方</b>，此人武功高强，穷凶极恶，为免当地百姓受戮，为师先去抵挡，还望仙霞派弟子速速前来支援！"
+  splits:
+  - text: "近来七大恶人之一雨人屠现身"
+    translated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared."
+  - subIndex: 1
+    text: "江陵东方"
+    translated: "Jiangling Eastern"
+  - subIndex: 2
+    text: "，此人武功高强，穷凶极恶，为免当地百姓受戮，为师先去抵挡，还望仙霞派弟子速速前来支援！"
+    translated: ", This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，<b>京城</b>之中发生一起璞玉劫案，很可能与血衣盟之阴谋有关。你若能前来助我一同查明此案，自当感激不尽！"
+  splits:
+  - text: "京城"
+    translated: "Capital"
+  - subIndex: 1
+    text: "之中发生一起璞玉劫案，很可能与血衣盟之阴谋有关。你若能前来助我一同查明此案，自当感激不尽！"
+    translated: "A jade robbery has occurred, and it is likely related to the Blood Robe Alliance's conspiracy. If you can come to assist me in investigating this case, I would be incredibly grateful!"
+  templates:
+  - template: "#PlayerName#，<b>{0}</b>{1}"
+- raw: "#PlayerName#，各大门派已如约会师于<b>阎罗殿北方</b>鬼门关下，还望你尽快前来指挥进攻。"
+  splits:
+  - text: "#PlayerName#，各大门派已如约会师于"
+    translated: "#PlayerName#, various sects have gathered as scheduled"
+  - subIndex: 1
+    text: "阎罗殿北方"
+    translated: "Yama Hall's northern area"
+  - subIndex: 2
+    text: "鬼门关下，还望你尽快前来指挥进攻。"
+    translated: "In the Land of Death, I hope you will come quickly to command the attack."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，听闻你此前击败了血衣盟西统领上官凤，并见到了貌似是赵胤宗的神秘老将。\\n还望你能来<b>丐帮</b>一趟道明情况，郭大侠与金先生交情匪浅，或许能借此说服他透露金先生之下落。"
+  splits:
+  - text: "#PlayerName#，听闻你此前击败了血衣盟西统领上官凤，并见到了貌似是赵胤宗的神秘老将。"
+    translated: "#PlayerName#, you heard about your previous victory over Shangguan Feng, the West Leader of the Blood Robe Alliance, and your encounter with what seems to be Zhao Yizong's mysterious old general."
+  - subIndex: 1
+    text: "还望你能来"
+    translated: "I hope you can come"
+  - subIndex: 2
+    text: "丐帮"
+    translated: "Beggar Sect"
+  - subIndex: 3
+    text: "一趟道明情况，郭大侠与金先生交情匪浅，或许能借此说服他透露金先生之下落。"
+    translated: "A journey to elucidate the situation might reveal that Great Hero Guo and Mr. Jin have a deep friendship, perhaps enabling him to persuade Mr. Jin to disclose his whereabouts."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，听闻圣上已特许你入宫查案。咱们这就去<b>京城</b>准备入宫，一同查明周世宗暴毙之真相。或许还能借此机会，找出血衣盟大统领之真实身份。"
+  splits:
+  - text: "#PlayerName#，听闻圣上已特许你入宫查案。咱们这就去"
+    translated: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head there now."
+  - subIndex: 1
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 2
+    text: "准备入宫，一同查明周世宗暴毙之真相。或许还能借此机会，找出血衣盟大统领之真实身份。"
+    translated: "Prepare to enter the palace to jointly investigate the true cause of Zhou Shizong's sudden death. Perhaps this can also provide an opportunity to uncover the true identity of Bloodclothe Alliance's Grand Commander."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，听闻血衣盟东统领卢玉麟已经伏诛，其在扬州城内的总舵位置也被你得知。\\n师傅想请你和武绝义一道会于<b>神机门</b>内，共商抓捕计心狂，铲除血衣盟之大计。"
+  splits:
+  - text: "#PlayerName#，听闻血衣盟东统领卢玉麟已经伏诛，其在扬州城内的总舵位置也被你得知。"
+    translated: "#PlayerName#, you've learned that Lu Yulan, the eastern commander of the Blood Cloth Alliance, has been executed. His main base in Yangzhou has also been revealed to you."
+  - subIndex: 1
+    text: "师傅想请你和武绝义一道会于"
+    translated: "Master wants to have you meet Wu Jueyi together."
+  - subIndex: 2
+    text: "神机门"
+    translated: "Divine Mechanism Sect"
+  - subIndex: 3
+    text: "内，共商抓捕计心狂，铲除血衣盟之大计。"
+    translated: "They met to discuss plans for capturing Heartkuang and eliminating the Blood Clothing Alliance."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，在丐帮弟子帮助之下，我已将那侠盗四奇的下落查的七七八八了。\\n还望你能来<b>京城</b>助一臂之力，与我同去拜会这四位隐世高人。"
+  splits:
+  - text: "#PlayerName#，在丐帮弟子帮助之下，我已将那侠盗四奇的下落查的七七八八了。"
+    translated: "#PlayerName#, with the help of the Beggar Sect disciples, I've found out pretty much everything about the Four Legendary Thieves."
+  - subIndex: 1
+    text: "还望你能来"
+    translated: "I hope you can come"
+  - subIndex: 2
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 3
+    text: "助一臂之力，与我同去拜会这四位隐世高人。"
+    translated: "Help me out and join me in paying a visit to these four hermits."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，我与武殿主已准备妥当。咱们便如此前约定，在<b>晋阳城内</b>汇合。随后一同前往龙泉寺，寻宝光方丈询问赵胤宗下落去。"
+  splits:
+  - text: "#PlayerName#，我与武殿主已准备妥当。咱们便如此前约定，在"
+    translated: "#PlayerName#, I have prepared with Martial Pinnacle Lord as agreed. Let's proceed as we planned."
+  - subIndex: 1
+    text: "晋阳城内"
+    translated: "Within the city of Jinyang"
+  - subIndex: 2
+    text: "汇合。随后一同前往龙泉寺，寻宝光方丈询问赵胤宗下落去。"
+    translated: "Converge. Then head to Longquan Temple to inquire with Abbot Treasure Light about Zhao Yizong's whereabouts."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我在<b>武当派南方</b>一带巡逻之际，突遭逐鹿盟袭击，一时难以脱身。\\n还望你尽快率众前来援救，感激不尽！"
+  splits:
+  - text: "#PlayerName#，我在"
+    translated: "#PlayerName#, I am"
+  - subIndex: 1
+    text: "武当派南方"
+    translated: "Wudang Sect Southern Branch"
+  - subIndex: 2
+    text: "一带巡逻之际，突遭逐鹿盟袭击，一时难以脱身。"
+    translated: "While on patrol, we suddenly came under attack by the Battle Deer Alliance and found it difficult to extricate ourselves."
+  - subIndex: 3
+    text: "还望你尽快率众前来援救，感激不尽！"
+    translated: "I hope you can send aid as soon as possible – I would be infinitely grateful!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，我费了好一番口舌，终于从郭大侠处问得了金龙生的踪迹。\\n眼下正在<b>幽州北方</b>一带搜寻其踪迹，还望你能来助一臂之力，也好将血衣盟大统领之身份问个清楚。"
+  splits:
+  - text: "#PlayerName#，我费了好一番口舌，终于从郭大侠处问得了金龙生的踪迹。"
+    translated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo."
+  - subIndex: 1
+    text: "眼下正在"
+    translated: "Currently,"
+  - subIndex: 2
+    text: "幽州北方"
+    translated: "Northern Youzhou"
+  - subIndex: 3
+    text: "一带搜寻其踪迹，还望你能来助一臂之力，也好将血衣盟大统领之身份问个清楚。"
+    translated: "Search far and wide to find his trail, and I hope you can come to lend a hand. This way, we can clarify my position as the Blood Clothes Alliance Grand Leader."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，武绝义突然率众前来拜会<b>武当</b>山门。若你近日得空，还望前来替助我等压阵，以免此人又搞出什么乱子。"
+  splits:
+  - text: "#PlayerName#，武绝义突然率众前来拜会"
+    translated: "#PlayerName#, Wu Jueyi suddenly arrived with everyone to pay a visit."
+  - subIndex: 1
+    text: "武当"
+    translated: "Wudang"
+  - subIndex: 2
+    text: "山门。若你近日得空，还望前来替助我等压阵，以免此人又搞出什么乱子。"
+    translated: "Mountain Gate. If you have some free time recently, we still hope you can come to assist us in keeping this person in check, to prevent any more disturbances."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，江陵失守之后，中原武林面对逐鹿盟大军已无险可守，岌岌可危。\\n师傅已邀请各派掌门于<b>武当</b>紫霄宫召开大会，还望你一同前来商议对策。"
+  splits:
+  - text: "#PlayerName#，江陵失守之后，中原武林面对逐鹿盟大军已无险可守，岌岌可危。"
+    translated: "#PlayerName#, after the fall of Jiangling, the Central Plain Wulin faced the Qulu Alliance army with no advantage, in dire straits."
+  - subIndex: 1
+    text: "师傅已邀请各派掌门于"
+    translated: "Master has invited the leaders of various sects to"
+  - subIndex: 2
+    text: "武当"
+    translated: "Wudang"
+  - subIndex: 3
+    text: "紫霄宫召开大会，还望你一同前来商议对策。"
+    translated: "The Purple Heaven Palace is convening a grand meeting, and I hope you will join us to discuss strategies."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，逐鹿盟将于阎罗殿总舵召开大会，传闻恶贼计心狂也于附近现身，不知又在策划什么阴谋诡计。\\n你我与计心狂皆有血海深仇，还望你能来<b>阎罗殿</b>，助我一道擒拿此贼！"
+  splits:
+  - text: "#PlayerName#，逐鹿盟将于阎罗殿总舵召开大会，传闻恶贼计心狂也于附近现身，不知又在策划什么阴谋诡计。"
+    translated: "#PlayerName#, the Swallow Coalition will hold a grand assembly in Yama Hall's main den. Rumor has it that the villainous villain Ji Xinkuang has also appeared nearby. Who knows what sinister plots he might be hatching."
+  - subIndex: 1
+    text: "你我与计心狂皆有血海深仇，还望你能来"
+    translated: "You, I, and Jianxin Kuang all have a deep‑seated grudge against each other, so I hope you can come."
+  - subIndex: 2
+    text: "阎罗殿"
+    translated: "Yama Hall"
+  - subIndex: 3
+    text: "，助我一道擒拿此贼！"
+    translated: ", Help me take down this thief!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "我父亲阎罗王临死前还有一遗愿，希望阎罗殿将侵占的佛山镇和清远乡归还给药王谷。\\n#PlayerName#你若能来<b>佛山镇</b>，与我们一同说服镇守此地的阎罗殿部众，那就再好不过了！"
+  splits:
+  - text: "我父亲阎罗王临死前还有一遗愿，希望阎罗殿将侵占的佛山镇和清远乡归还给药王谷。"
+    translated: "My father, King Yama, had one last wish before he died, hoping that Yama Hall would return the occupied Foshan Town and Qingyuan Township to Medicine King Valley."
+  - subIndex: 1
+    text: "#PlayerName#你若能来"
+    translated: "#PlayerName#, if you can make it here"
+  - subIndex: 2
+    text: "佛山镇"
+    translated: "Foshan Town"
+  - subIndex: 3
+    text: "，与我们一同说服镇守此地的阎罗殿部众，那就再好不过了！"
+    translated: ", And it would be perfect if we could persuade the inhabitants of Yama Hall guarding this place!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，探子来报，逐鹿盟大军已经出发，不日便会抵达巴陵村。\\n贫道已率武当精锐下山驰援，还望#PlayerName#尽快前往<b>巴陵村</b>主持防务。"
+  splits:
+  - text: "#PlayerName#，探子来报，逐鹿盟大军已经出发，不日便会抵达巴陵村。"
+    translated: "#PlayerName#, scouts report that Zhuulu League's main force has set out and will soon arrive in Baling Village."
+  - subIndex: 1
+    text: "贫道已率武当精锐下山驰援，还望#PlayerName#尽快前往"
+    translated: "I have led the Wudang elite down the mountain to reinforce, so I hope #PlayerName# will head there as soon as possible."
+  - subIndex: 2
+    text: "巴陵村"
+    translated: "Baling Village"
+  - subIndex: 3
+    text: "主持防务。"
+    translated: "Command defense"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，武当、阎罗和神机三派精锐已准备完毕。\\n还望你尽快率众前来<b>神机门</b>汇合，与我等一道出兵，围剿扬州城内的血衣盟总舵！"
+  splits:
+  - text: "#PlayerName#，武当、阎罗和神机三派精锐已准备完毕。"
+    translated: "#PlayerName#, Wudang, Yanlu and Shengji's elite forces are ready."
+  - subIndex: 1
+    text: "还望你尽快率众前来"
+    translated: "I look forward to your prompt arrival with your followers."
+  - subIndex: 2
+    text: "神机门"
+    translated: "Divine Mechanism Sect"
+  - subIndex: 3
+    text: "汇合，与我等一道出兵，围剿扬州城内的血衣盟总舵！"
+    translated: "Converge with us and march to battle, to besiege the Blood Robe Alliance's main hall in Yangzhou!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，贫道与各派掌门准备召开会议，商议追捕思中澜，救援文馨之事。\\n若你能来<b>武当派</b>一同出谋划策，那便再好不过。"
+  splits:
+  - text: "#PlayerName#，贫道与各派掌门准备召开会议，商议追捕思中澜，救援文馨之事。"
+    translated: "#PlayerName#, I and the leaders of various factions are preparing to hold a meeting to discuss the pursuit of Si Zhonglan and the rescue of Wen Xin."
+  - subIndex: 1
+    text: "若你能来"
+    translated: "If you can come"
+  - subIndex: 2
+    text: "武当派"
+    translated: "Wudang Sect"
+  - subIndex: 3
+    text: "一同出谋划策，那便再好不过。"
+    translated: "To plan and strategize together, that would be perfect."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，贫道已与阎罗殿主武绝义相约于<b>江陵</b>城内共商抓捕计心狂之事，还望你前来一同谋划大计。"
+  splits:
+  - text: "#PlayerName#，贫道已与阎罗殿主武绝义相约于"
+    translated: "#PlayerName#, I have made an appointment with Lord Wu Jueyi of Yama Hall."
+  - subIndex: 1
+    text: "江陵"
+    translated: "Jiangling"
+  - subIndex: 2
+    text: "城内共商抓捕计心狂之事，还望你前来一同谋划大计。"
+    translated: "The matter of devising a strategy to apprehend the maniac has been discussed within the city walls, and we hope you will join us to plan this significant undertaking."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，近来有丐帮弟子在<b>成都城内</b>发现了思中澜之踪迹。\\n贫道已率追凶小队前去捉拿，还望你尽快赶来助一臂之力！"
+  splits:
+  - text: "#PlayerName#，近来有丐帮弟子在"
+    translated: "#PlayerName#, lately there have been Beggar Sect disciples in"
+  - subIndex: 1
+    text: "成都城内"
+    translated: "Within Chengdu City"
+  - subIndex: 2
+    text: "发现了思中澜之踪迹。"
+    translated: "Traced the whereabouts of Si Zhonglan"
+  - subIndex: 3
+    text: "贫道已率追凶小队前去捉拿，还望你尽快赶来助一臂之力！"
+    translated: "The hermit has led the investigation team to proceed with the pursuit and arrest. I hope you can come as soon as possible to lend a hand!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，逐鹿盟大军已逼近江陵，情势万分危急。\\n贫道与本门精锐在巴陵村外遭金刚宗袭扰，一时难以脱身，望你尽快前去救援<b>江陵</b>，我等随后赶来！"
+  splits:
+  - text: "#PlayerName#，逐鹿盟大军已逼近江陵，情势万分危急。"
+    translated: "#PlayerName#, the Alliance Army has advanced close to Jiangling, the situation is extremely critical."
+  - subIndex: 1
+    text: "贫道与本门精锐在巴陵村外遭金刚宗袭扰，一时难以脱身，望你尽快前去救援"
+    translated: "The Daoist and the core members of our sect were ambushed by the Golden Indestructible Sect outside Baling Village. We are temporarily unable to extricate ourselves; I hope you can send aid as soon as possible."
+  - subIndex: 2
+    text: "江陵"
+    translated: "Jiangling"
+  - subIndex: 3
+    text: "，我等随后赶来！"
+    translated: ", We'll arrive soon!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，阎罗王果真率领逐鹿盟大军近抵<b>武当</b>山下，准备进攻本门总舵。\\n今生死存亡在此一战，你若能尽快率众前来支援，武当上下必当感激于心！"
+  splits:
+  - text: "#PlayerName#，阎罗王果真率领逐鹿盟大军近抵"
+    translated: "#PlayerName#, King Yanluo has indeed led the Zhuulu League's main force near the border."
+  - subIndex: 1
+    text: "武当"
+    translated: "Wudang"
+  - subIndex: 2
+    text: "山下，准备进攻本门总舵。"
+    translated: "Shanyang, prepare to attack our sect's main den."
+  - subIndex: 3
+    text: "今生死存亡在此一战，你若能尽快率众前来支援，武当上下必当感激于心！"
+    translated: "Now, the outcome of life and death hangs in this single battle. If you can swiftly rally your forces to support us, Wudang Shangxia will surely be eternally grateful!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#想必已得知<b>京城大会</b>之消息，还望你尽快来<b>京城</b>汇合，与贫道和司马掌门共商大计。"
+  splits:
+  - text: "#PlayerName#想必已得知"
+    translated: "#PlayerName# I presume you've already heard about this."
+  - subIndex: 1
+    text: "京城大会"
+    translated: "Capital Grand Assembly"
+  - subIndex: 2
+    text: "之消息，还望你尽快来"
+    translated: "The message, I hope you will come as soon as possible."
+  - subIndex: 3
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 4
+    text: "汇合，与贫道和司马掌门共商大计。"
+    translated: "Converge here and discuss major strategies with me, the Sect Leader, and Master Sima."
+  templates:
+  - template: "{0}<b>{1}</b>{2}<b>{3}</b>{4}"
+- raw: "上次在成都未能捉住思中澜，实在可惜。此后我方小队继续一路追踪，终于将他堵截在大理城内。\\n这次定不能再让此恶贼逃离法网，还望#PlayerName#尽快赶来<b>大理</b>，一同将其捉拿归案！"
+  splits:
+  - text: "上次在成都未能捉住思中澜，实在可惜。此后我方小队继续一路追踪，终于将他堵截在大理城内。"
+    translated: "Last time in Chengdu, we failed to catch Si Zhonglan, which was really a pity. Our squad continued the pursuit and finally cornered him in Dali."
+  - subIndex: 1
+    text: "这次定不能再让此恶贼逃离法网，还望#PlayerName#尽快赶来"
+    translated: "This time, we must not let this evil rogue escape justice. I hope #PlayerName# can arrive as soon as possible."
+  - subIndex: 2
+    text: "大理"
+    translated: "Dali"
+  - subIndex: 3
+    text: "，一同将其捉拿归案！"
+    translated: ", Arrest them and bring them in!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "我等一路追踪，即将在剑川镇截住思中澜那恶贼。还望#PlayerName#尽快来<b>剑川镇</b>汇合，务必在他躲入丛林前将其擒拿！"
+  splits:
+  - text: "我等一路追踪，即将在剑川镇截住思中澜那恶贼。还望#PlayerName#尽快来"
+    translated: "We have been tracking him all the way, and are about to intercept Sir Si Zhonglan in Jianchuan Town. I hope you, #PlayerName#, can come as soon as possible."
+  - subIndex: 1
+    text: "剑川镇"
+    translated: "Jianchuan Town"
+  - subIndex: 2
+    text: "汇合，务必在他躲入丛林前将其擒拿！"
+    translated: "Converge and capture him before he can retreat into the jungle!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "眼下思中澜已逃入西南密林之中，只剩下最后一站<b>五毒教</b>总舵了。\\n还望#PlayerName#统帅精锐，尽快赶往五毒教接应我等，一同挫败思中澜之阴谋。这场惊天追捕，或许就要迎来最终决战了。"
+  splits:
+  - text: "眼下思中澜已逃入西南密林之中，只剩下最后一站"
+    translated: "Now, Shi Zhonglan has fled into the southwest dense forest, leaving only the final station."
+  - subIndex: 1
+    text: "五毒教"
+    translated: "Five Poisons Sect"
+  - subIndex: 2
+    text: "总舵了。"
+    translated: "Main base"
+  - subIndex: 3
+    text: "还望#PlayerName#统帅精锐，尽快赶往五毒教接应我等，一同挫败思中澜之阴谋。这场惊天追捕，或许就要迎来最终决战了。"
+    translated: "I hope #PlayerName# will lead the elite forces and hurry to the Five Poisons Sect to assist us. Together, we must thwart Sir Zhonglan Si's sinister plot. This epic manhunt may well be drawing to its final confrontation."
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#$PlayerName#施主！我和清风在<b>杭州城西方</b>探得了小股强盗探子的踪迹，还望你能前来汇合，与我们一鼓作气将其剿灭！"
+  splits:
+  - text: "#$PlayerName#施主！我和清风在"
+    translated: "#$PlayerName#! Benefactor! I and Qing Feng are"
+  - subIndex: 1
+    text: "杭州城西方"
+    translated: "Western Hangzhou City"
+  - subIndex: 2
+    text: "探得了小股强盗探子的踪迹，还望你能前来汇合，与我们一鼓作气将其剿灭！"
+    translated: "Having located a small band of bandit scouts, I hope you can join us so we can eradicate them with one swift strike!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，上官凤突然异动不断，很可能是找到了封桩宝库的重要线索！望你尽快赶来<b>襄垣村</b>，与我一同夺宝。"
+  splits:
+  - text: "#PlayerName#，上官凤突然异动不断，很可能是找到了封桩宝库的重要线索！望你尽快赶来"
+    translated: "#PlayerName#, Shangguan Feng suddenly started making frequent movements, which is very likely to be an important clue to the sealed treasure vault! I hope you can come as soon as possible!"
+  - subIndex: 1
+    text: "襄垣村"
+    translated: "Xiangyuan Village"
+  - subIndex: 2
+    text: "，与我一同夺宝。"
+    translated: ", Join me in treasure hunting"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，剩下三大杀手仍不死心，一直在<b>襄垣村</b>搜寻宝藏。\\n看他们没头苍蝇似的到处乱挖，当真是有趣的很。你若得空，不妨来瞧瞧他们的傻样！"
+  splits:
+  - text: "#PlayerName#，剩下三大杀手仍不死心，一直在"
+    translated: "#PlayerName#, the three remaining killers are not giving up and continue to"
+  - subIndex: 1
+    text: "襄垣村"
+    translated: "Xiangyuan Village"
+  - subIndex: 2
+    text: "搜寻宝藏。"
+    translated: "Search for treasure"
+  - subIndex: 3
+    text: "看他们没头苍蝇似的到处乱挖，当真是有趣的很。你若得空，不妨来瞧瞧他们的傻样！"
+    translated: "Watching them dig around like aimless flies is rather amusing. If you have the time, you might want to come and see their foolish antics!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，我已在<b>襄垣村</b>内寻得上官凤与四大杀手踪迹。你尽快赶来汇合，以免封桩库宝藏被他们捷足先登了！"
+  splits:
+  - text: "#PlayerName#，我已在"
+    translated: "#PlayerName#, I have already"
+  - subIndex: 1
+    text: "襄垣村"
+    translated: "Xiangyuan Village"
+  - subIndex: 2
+    text: "内寻得上官凤与四大杀手踪迹。你尽快赶来汇合，以免封桩库宝藏被他们捷足先登了！"
+    translated: "You have located Shangguan Feng and the Four Great Assassins. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来<b>丐帮</b>一同商议对策。"
+  splits:
+  - text: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来"
+    translated: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come along."
+  - subIndex: 1
+    text: "丐帮"
+    translated: "Beggar Sect"
+  - subIndex: 2
+    text: "一同商议对策。"
+    translated: "Discuss strategies together"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "近来有一恶徒闯入<b>乐山镇</b>为非作歹，闹得整个村子鸡犬不宁。还请#PlayerName#出手教训下这家伙，感激不尽！"
+  splits:
+  - text: "近来有一恶徒闯入"
+    translated: "Lately, a villain has intruded"
+  - subIndex: 1
+    text: "乐山镇"
+    translated: "Leshan Town"
+  - subIndex: 2
+    text: "为非作歹，闹得整个村子鸡犬不宁。还请#PlayerName#出手教训下这家伙，感激不尽！"
+    translated: "Misbehaving like this, he's causing the entire village no peace. Please #PlayerName#, intervene and give him a lesson. I'd be very grateful!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "黑道大会即将在<b>腾冲府</b>召开，#PlayerName#别忘了前来与兄弟几个汇合，咱们一道探探这龙潭虎穴。"
+  splits:
+  - text: "黑道大会即将在"
+    translated: "The Black Society Conference is about to take place."
+  - subIndex: 1
+    text: "腾冲府"
+    translated: "Tengchong Prefecture"
+  - subIndex: 2
+    text: "召开，#PlayerName#别忘了前来与兄弟几个汇合，咱们一道探探这龙潭虎穴。"
+    translated: "Convene, #PlayerName#, don't forget to join your fellow brothers to explore this den of dragons and tigers together."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我近来也感染疫病，加上连日操劳，恐怕时日无多。还望你尽快带药王谷前往<b>扬州城内</b>救治，切莫让疫病蔓延，使百姓遭殃，云鹤在此拜谢了！"
+  splits:
+  - text: "#PlayerName#，我近来也感染疫病，加上连日操劳，恐怕时日无多。还望你尽快带药王谷前往"
+    translated: "#PlayerName#, lately I have also been afflicted with the plague. Coupled with the continuous strain of my duties, I fear my time is limited. I hope you will hurry and bring the Medicine King Valley's remedy."
+  - subIndex: 1
+    text: "扬州城内"
+    translated: "Yangzhou city inside"
+  - subIndex: 2
+    text: "救治，切莫让疫病蔓延，使百姓遭殃，云鹤在此拜谢了！"
+    translated: "Healing the sick, prevent the epidemic from spreading and causing suffering to the people. Crane thanks you for this!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，近来阮芷罹患疫病，卧床不起，<b>扬州城内</b>内染病者也越来越多，眼看难以控制。我实在无计可施，不得不求你再次出手相助！"
+  splits:
+  - text: "#PlayerName#，近来阮芷罹患疫病，卧床不起，"
+    translated: "#PlayerName#, recently Ruan Zhi has fallen ill with an epidemic disease and has been bedridden."
+  - subIndex: 1
+    text: "扬州城内"
+    translated: "Yangzhou city inside"
+  - subIndex: 2
+    text: "内染病者也越来越多，眼看难以控制。我实在无计可施，不得不求你再次出手相助！"
+    translated: "There are now too many infected, and it looks like I can't control the situation. I have no choice but to ask you for your help again!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，难得的好消息！近来扬州疫病已彻底平息，师傅还把我晋升为亲传弟子了！\\n另外听说，御史大人也会亲临<b>扬州城</b>，请你定要前来一同领赏。"
+  splits:
+  - text: "#PlayerName#，难得的好消息！近来扬州疫病已彻底平息，师傅还把我晋升为亲传弟子了！"
+    translated: "#PlayerName#, wonderful news! The plague in Yangzhou has finally been completely quelled, and my master has even promoted me to a direct disciple!"
+  - subIndex: 1
+    text: "另外听说，御史大人也会亲临"
+    translated: "Additionally, it's said that Lord Imperial Censor will also be present in person."
+  - subIndex: 2
+    text: "扬州城"
+    translated: "Yangzhou City"
+  - subIndex: 3
+    text: "，请你定要前来一同领赏。"
+    translated: ", Please come and receive your reward together"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "近来<b>扬州城内</b>疫病横行，屡治不止，我与阮芷正在追查传染源头，似乎与黑道五鬼迟百城有关。还望#PlayerName#前来，同我等一道阻止其恶行！"
+  splits:
+  - text: "近来"
+    translated: "Recently"
+  - subIndex: 1
+    text: "扬州城内"
+    translated: "Yangzhou city inside"
+  - subIndex: 2
+    text: "疫病横行，屡治不止，我与阮芷正在追查传染源头，似乎与黑道五鬼迟百城有关。还望#PlayerName#前来，同我等一道阻止其恶行！"
+    translated: "Pandemics raging unchecked, despite repeated efforts to contain them, Ruan Zhi and I are currently tracking the source of infection, which seems to be associated with Black Organization's Five Ghosts Bai Bicheng. I hope #PlayerName# will come and help us stop their evil deeds!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我这段时间一直躲在<b>怀柔村西方</b>苦练武艺。但近来似乎有邪道寻得我行踪，只怕又要来抢夺神功。还望你能前来助我一臂之力！"
+  splits:
+  - text: "#PlayerName#，我这段时间一直躲在"
+    translated: "#PlayerName#, I've been hiding during this time"
+  - subIndex: 1
+    text: "怀柔村西方"
+    translated: "Huairou Village West"
+  - subIndex: 2
+    text: "苦练武艺。但近来似乎有邪道寻得我行踪，只怕又要来抢夺神功。还望你能前来助我一臂之力！"
+    translated: "Train diligently in martial arts. But lately, it seems that evil forces have found my whereabouts, and they might try to steal my divine techniques again. I hope you can come and lend me a hand!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#$PlayerName#掌门，阎罗殿主近日来竟亲自杀上<b>峨眉</b>山，要求以比武定胜负。不知此人有何阴谋，还望你前来助阵，以防不测！"
+  splits:
+  - text: "#$PlayerName#掌门，阎罗殿主近日来竟亲自杀上"
+    translated: "#$PlayerName#'S Sect Leader, the Lord of Yama Hall has actually personally come to attack recently."
+  - subIndex: 1
+    text: "峨眉"
+    translated: "Emei"
+  - subIndex: 2
+    text: "山，要求以比武定胜负。不知此人有何阴谋，还望你前来助阵，以防不测！"
+    translated: "Shan demands a trial by combat to settle the matter. I wonder what deceit this person might have, so I hope you will come to aid us in case of unforeseen events!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，<b>峨眉金顶大会</b>即将如约召开，还望你能代表仙霞派前来共商大计！"
+  splits:
+  - text: "峨眉金顶大会"
+    translated: "Great Assembly at Jin Ding, Emei Mountain"
+  - subIndex: 1
+    text: "即将如约召开，还望你能代表仙霞派前来共商大计！"
+    translated: "We look forward to your attendance as a representative of the Xianxia Sect to discuss major matters!"
+  templates:
+  - template: "#PlayerName#，<b>{0}</b>{1}"
+- raw: "#PlayerName#，四大御史突然一起来到<b>仙霞派</b>内，莫不是你又干了什么坏事？\\n你若不想被抓，这段时间就别回来了，免得到时候锒铛入狱，还得我给你送饭。"
+  splits:
+  - text: "#PlayerName#，四大御史突然一起来到"
+    translated: "#PlayerName#, the Four Grand Censors suddenly arrived together."
+  - subIndex: 1
+    text: "仙霞派"
+    translated: "Xianxia Sect"
+  - subIndex: 2
+    text: "内，莫不是你又干了什么坏事？"
+    translated: "Hey, didn't you do something bad again?"
+  - subIndex: 3
+    text: "你若不想被抓，这段时间就别回来了，免得到时候锒铛入狱，还得我给你送饭。"
+    translated: "If you don't want to get caught, don't come back during this time. Otherwise, you might end up in jail, and I'll have to bring you food."
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，有个小姑娘突然跑到山门口长跪不起，说什么也要拜掌门为师。你快回来和我一道劝劝她，免得咱仙霞派被武林中人说闲话。"
+  splits:
+  - text: "#PlayerName#，有个小姑娘突然跑到山门口长跪不起，说什么也要拜掌门为师。你快回来和我一道劝劝她，免得咱仙霞派被武林中人说闲话。"
+    translated: "#PlayerName#, a young girl suddenly ran to the foot of the mountain and kneeled uncontrollably at the entrance. She insists on worshipping you as her teacher. Hurry back and come with me to persuade her; otherwise, the Wulin might say bad things about our Xianxia Sect."
+- raw: "#PlayerName#还记得顾游年师兄为我求医之事吗？我眼下也想投桃报李报答此恩情，还望#PlayerName#出手相助！"
+  splits:
+  - text: "#PlayerName#还记得顾游年师兄为我求医之事吗？我眼下也想投桃报李报答此恩情，还望#PlayerName#出手相助！"
+    translated: "#PlayerName#, do you remember when Senior Brother Gu Younian sought medical help for me? I want to repay this favor now, so I hope you can lend a hand!"
+- raw: "杨思迟师兄许久未归，怕是在<b>云梦乡西面</b>又遇上麻烦了。#PlayerName#快去找找他吧！"
+  splits:
+  - text: "杨思迟师兄许久未归，怕是在"
+    translated: "Senior Brother Yang Sichi has been absent for a long time, likely still dealing with something."
+  - subIndex: 1
+    text: "云梦乡西面"
+    translated: "Yunmeng Township's western side"
+  - subIndex: 2
+    text: "又遇上麻烦了。#PlayerName#快去找找他吧！"
+    translated: "Trouble again. #PlayerName#, go find him quickly!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "<b>京城</b>中流言四起，传闻周世宗柴荣血脉尚存人世，而且似乎与姜婉姑娘有关！还望#PlayerName#前来说明情况，以免为时过晚！"
+  splits:
+  - text: "京城"
+    translated: "Capital"
+  - subIndex: 1
+    text: "中流言四起，传闻周世宗柴荣血脉尚存人世，而且似乎与姜婉姑娘有关！还望#PlayerName#前来说明情况，以免为时过晚！"
+    translated: "Rumors are swirling, suggesting that the bloodline of Zhou Shizong Chai Rong still exists in the world, and seems to be connected to Miss Jiang Wan! We hope you, #PlayerName#, will come forward to clarify the situation to prevent it from becoming too late!"
+  templates:
+  - template: "<b>{0}</b>{1}"
+- raw: "#PlayerName#！大事不好，我师傅被飞天魔君牛无极堵在了<b>西凉城中</b>。还望您能前来助我一臂之力，共同救师傅性命！"
+  splits:
+  - text: "#PlayerName#！大事不好，我师傅被飞天魔君牛无极堵在了"
+    translated: "#PlayerName#! Big trouble, my master is being held by Heavenly Flying Demon Sovereign Niu Wuji."
+  - subIndex: 1
+    text: "西凉城中"
+    translated: "Xiliang City"
+  - subIndex: 2
+    text: "。还望您能前来助我一臂之力，共同救师傅性命！"
+    translated: ".I hope you can come to lend me your strength and help save Master's life!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，<b>京城</b>中屡屡发生武器失窃案件，想来定是血衣盟所为。还望你前来一同查明此案，莫要让贼人奸计得逞！"
+  splits:
+  - text: "京城"
+    translated: "Capital"
+  - subIndex: 1
+    text: "中屡屡发生武器失窃案件，想来定是血衣盟所为。还望你前来一同查明此案，莫要让贼人奸计得逞！"
+    translated: "There have been frequent cases of weapons theft in the region, no doubt the Blood Robe Alliance is behind it. I hope you will come to investigate this case with us, so we do not let the villains' schemes succeed!"
+  templates:
+  - template: "#PlayerName#，<b>{0}</b>{1}"
+- raw: "#PlayerName#，<b>京城</b>之中异变频发，不知血衣盟有何阴谋。还望你依照此前约定，来助我等一同查明真相。"
+  splits:
+  - text: "京城"
+    translated: "Capital"
+  - subIndex: 1
+    text: "之中异变频发，不知血衣盟有何阴谋。还望你依照此前约定，来助我等一同查明真相。"
+    translated: "With anomalies occurring, I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
+  templates:
+  - template: "#PlayerName#，<b>{0}</b>{1}"
+- raw: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。\\n还望你尽快来<b>飞龙门</b>，一同寻找姜婉姑娘的下落！"
+  splits:
+  - text: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。"
+    translated: "#PlayerName#, indeed one crisis after another! The sudden disappearance of Miss Jiang Wan, who was always well‑protected, is very likely the work of Zhao Polu's inner circle within Flying Dragon Gate."
+  - subIndex: 1
+    text: "还望你尽快来"
+    translated: "I hope you will come as soon as possible."
+  - subIndex: 2
+    text: "飞龙门"
+    translated: "Flying Dragon Gate"
+  - subIndex: 3
+    text: "，一同寻找姜婉姑娘的下落！"
+    translated: ", Together, let's find out the whereabouts of Miss Jiang Wan!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，我们准备近日入宫，向皇上弹劾诸葛伶谋反之罪。\\n还望你同我们一道向皇上陈明利害干系，说服他下旨释放赵掌门，捉拿诸葛伶！"
+  splits:
+  - text: "#PlayerName#，我们准备近日入宫，向皇上弹劾诸葛伶谋反之罪。"
+    translated: "#PlayerName#, we are preparing to enter the palace soon to impeach Zhuge Ling for treason against the emperor."
+  - subIndex: 1
+    text: "还望你同我们一道向皇上陈明利害干系，说服他下旨释放赵掌门，捉拿诸葛伶！"
+    translated: "I hope you will join us in presenting the stakes to the emperor and persuading him to issue an edict to release Sect Leader Zhao and apprehend Zhuge Ling!"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "#PlayerName#，朝廷已同意掌门比武之事，场地也已准备妥当，望你尽快来<b>京城</b>参与比试。"
+  splits:
+  - text: "#PlayerName#，朝廷已同意掌门比武之事，场地也已准备妥当，望你尽快来"
+    translated: "#PlayerName#, the court has agreed to the Sect Leader's competition, and the venue is already prepared. Please come as soon as possible."
+  - subIndex: 1
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 2
+    text: "参与比试。"
+    translated: "Participate in the trial"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，皇上已下旨同意贵派执掌京城防务，还望你速回<b>仙霞派</b>总舵接旨，然后尽快进京完成交接仪式。\\n有情报称飞龙门近来异动频频，还望你们做足准备，以防不测。"
+  splits:
+  - text: "#PlayerName#，皇上已下旨同意贵派执掌京城防务，还望你速回"
+    translated: "#PlayerName#, the Emperor has issued an edict agreeing for your sect to take charge of the capital's defense. Please return swiftly."
+  - subIndex: 1
+    text: "仙霞派"
+    translated: "Xianxia Sect"
+  - subIndex: 2
+    text: "总舵接旨，然后尽快进京完成交接仪式。"
+    translated: "Head to the main base to receive the orders, then proceed to the capital as soon as possible to complete the handover ceremony."
+  - subIndex: 3
+    text: "有情报称飞龙门近来异动频频，还望你们做足准备，以防不测。"
+    translated: "There has been intelligence that the Flying Dragon Gate has been acting unusually lately. I hope you are well prepared to prevent any unforeseen incidents."
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，眼下京城安定，时机已至。望你自<b>京城</b>集结弟子后尽快出发，剿灭飞龙门，永绝后患。"
+  splits:
+  - text: "#PlayerName#，眼下京城安定，时机已至。望你自"
+    translated: "#PlayerName#, with the capital now at peace, the opportunity has arrived. I hope you will act soon."
+  - subIndex: 1
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 2
+    text: "集结弟子后尽快出发，剿灭飞龙门，永绝后患。"
+    translated: "Assemble the disciples and depart, exterminate the Flying Dragon Gate, to permanently eradicate the threat."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，计心狂已密信孟婆娑，准备引老夫去他们的陷阱中。\\n你和张文馨便如此前约定，在后面远远跟着压阵。切记莫要轻举妄动，露了马脚！"
+  splits:
+  - text: "#PlayerName#，计心狂已密信孟婆娑，准备引老夫去他们的陷阱中。"
+    translated: "#PlayerName#, the mad heart has secretly sent a message to Meng Poshuo, planning to lure Old Man into their trap."
+  - subIndex: 1
+    text: "你和张文馨便如此前约定，在后面远远跟着压阵。切记莫要轻举妄动，露了马脚！"
+    translated: "You and Zhang Wenxin will follow behind, as previously agreed, keeping a distance to hold the position. Remember, do not act rashly and give away your presence!"
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在<b>少林寺</b>内！\\n老子先行一步，你和文逸真人随后赶来，一同会会这家伙去！"
+  splits:
+  - text: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在"
+    translated: "Though Father did not find any clues about his cousin Zhao Yizong, he did discover a person who is likely closely related, and this person is currently hiding."
+  - subIndex: 1
+    text: "少林寺"
+    translated: "Shaolin Temple"
+  - subIndex: 2
+    text: "内！"
+    translated: "In!"
+  - subIndex: 3
+    text: "老子先行一步，你和文逸真人随后赶来，一同会会这家伙去！"
+    translated: "Old Immortal Wen Yi, you should follow behind and catch up! Go meet this guy with me!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "大当家王伦突然发难，要将宋明公一派人马赶出梁山。还望#PlayerName#先行前去救援，以免山寨落入王伦手中。\\n我会率领官军随后赶来，一同围剿这伙恶贼。"
+  splits:
+  - text: "大当家王伦突然发难，要将宋明公一派人马赶出梁山。还望#PlayerName#先行前去救援，以免山寨落入王伦手中。"
+    translated: "The big boss Wang Lun suddenly struck, intending to expel Song Minggong and his faction from Liangshan. We hope that #PlayerName# can go to rescue them first, to prevent the mountain stronghold from falling into Wang Lun's hands."
+  - subIndex: 1
+    text: "我会率领官军随后赶来，一同围剿这伙恶贼。"
+    translated: "I will lead the official troops to arrive shortly and join forces to suppress this gang of bandits."
+  templates:
+  - template: "{0}\\n{1}"
+- raw: "近日一路追捕，终于在<b>扬州北方</b>追上了王伦残党。此人诡计多端，我担心其中有诈，还望#PlayerName#前来压阵，好联手共除此大害。"
+  splits:
+  - text: "近日一路追捕，终于在"
+    translated: "Recently, we've been on their tail, and finally caught up with them today."
+  - subIndex: 1
+    text: "扬州北方"
+    translated: "Northern Yangzhou"
+  - subIndex: 2
+    text: "追上了王伦残党。此人诡计多端，我担心其中有诈，还望#PlayerName#前来压阵，好联手共除此大害。"
+    translated: "Caught up with Wang Lang's remnants. This person is cunning, and I fear there might be a trap. I hope #PlayerName# will come to reinforce us, so we can join forces to eliminate this great evil together."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我在<b>应天城中</b>被一伙恶人盯上，似乎欲行不轨之事。还望你尽快赶来搭救，感激不尽！"
+  splits:
+  - text: "#PlayerName#，我在"
+    translated: "#PlayerName#, I am"
+  - subIndex: 1
+    text: "应天城中"
+    translated: "Yingtian City"
+  - subIndex: 2
+    text: "被一伙恶人盯上，似乎欲行不轨之事。还望你尽快赶来搭救，感激不尽！"
+    translated: "Seemingly targeted by a gang of villains with ill intentions. I hope you can come to rescue me as soon as possible; I would be infinitely grateful!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "大事不好！大事不妙！御史大人真要将我们兄弟三个革职查办了！还望#PlayerName#能来<b>京城</b>，替兄弟们求求情，说几句好话！"
+  splits:
+  - text: "大事不好！大事不妙！御史大人真要将我们兄弟三个革职查办了！还望#PlayerName#能来"
+    translated: "Big trouble! Serious trouble! Lord Censor truly intends to demote and investigate us three brothers! Hoping you, #PlayerName#, can come to help."
+  - subIndex: 1
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 2
+    text: "，替兄弟们求求情，说几句好话！"
+    translated: ", Plead for your brothers and say a few kind words!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "我近日在应天城内寻欢作乐时，听说了一桩奇事：几个月前，有一渔民从江中网出了个“水猴子”。#PlayerName#若感兴趣，就来<b>应天城内</b>与我一聚！"
+  splits:
+  - text: "我近日在应天城内寻欢作乐时，听说了一桩奇事"
+    translated: "I heard a strange tale while enjoying myself in Yingtian City recently."
+  - subIndex: 1
+    text: "几个月前，有一渔民从江中网出了个“水猴子”。#PlayerName#若感兴趣，就来"
+    translated: "A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come and take a look."
+  - subIndex: 2
+    text: "应天城内"
+    translated: "City of Yingtian"
+  - subIndex: 3
+    text: "与我一聚！"
+    translated: "Meet me!"
+  templates:
+  - template: "{0}：{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，我在卢玉麟身边潜伏多时，已深得其信任。近来此人异动不断，血衣盟可能正谋划一桩大事！还望你和郭兄尽快来<b>长乐帮</b>商量对策。"
+  splits:
+  - text: "#PlayerName#，我在卢玉麟身边潜伏多时，已深得其信任。近来此人异动不断，血衣盟可能正谋划一桩大事！还望你和郭兄尽快来"
+    translated: "#PlayerName#, I have been infiltrating near Lu Yulan for some time and have gained his trust. Recently, this person has been making frequent moves. The Blood Clothing Alliance might be planning a significant event! I hope you and Brother Guo can come as soon as possible."
+  - subIndex: 1
+    text: "长乐帮"
+    translated: "Changle Gang"
+  - subIndex: 2
+    text: "商量对策。"
+    translated: "Discuss strategies"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，长乐帮近日会在<b>杭州城</b>内举行花车游巡。届时卢玉麟会趁机下手，暗害长乐帮主乐无疾。还望你率领#PlayerForceName#精锐，前来阻止其阴谋。"
+  splits:
+  - text: "#PlayerName#，长乐帮近日会在"
+    translated: "#PlayerName#, Changle Gang will be active recently"
+  - subIndex: 1
+    text: "杭州城"
+    translated: "Hangzhou City"
+  - subIndex: 2
+    text: "内举行花车游巡。届时卢玉麟会趁机下手，暗害长乐帮主乐无疾。还望你率领#PlayerForceName#精锐，前来阻止其阴谋。"
+    translated: "An elaborate flower parade will take place within the city. Lu Yulin intends to take this opportunity to strike secretly and harm Sect Master Yue Wuji of the Changle Gang. We hope you will lead your elite #PlayerForceName# forces to prevent his plot."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#可有耳闻，<b>京城</b>正在举办一场少年英雄大会。我虽武功平平却也想开开眼界，#PlayerName#来一道凑个热闹如何？"
+  splits:
+  - text: "#PlayerName#可有耳闻，"
+    translated: "#PlayerName# must have heard of it"
+  - subIndex: 1
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 2
+    text: "正在举办一场少年英雄大会。我虽武功平平却也想开开眼界，#PlayerName#来一道凑个热闹如何？"
+    translated: "A young heroes assembly is underway. Though my martial arts are ordinary, I still want to broaden my horizons. How about you, #PlayerName#, joining in to add some excitement?"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来<b>青城派</b>，与兄弟一同领赏！"
+  splits:
+  - text: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来"
+    translated: "Heard there's a Cishi coming to commend our brave act of apprehending Yue Wufei. #PlayerName# hurry up."
+  - subIndex: 1
+    text: "青城派"
+    translated: "Qingcheng Sect"
+  - subIndex: 2
+    text: "，与兄弟一同领赏！"
+    translated: ", Collect your reward with your Brother!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来<b>青城派</b>替我做证，以免师傅不信。"
+  splits:
+  - text: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来"
+    translated: "I am preparing to report to Master about the Black Society Conference matter. May I have#PlayerName#come, please?"
+  - subIndex: 1
+    text: "青城派"
+    translated: "Qingcheng Sect"
+  - subIndex: 2
+    text: "替我做证，以免师傅不信。"
+    translated: "Testify for me to prevent the master from not believing."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "近来传闻<b>成都</b>城内有个淫贼胡作非为，#PlayerName#何不与我一道将其捉拿归案？"
+  splits:
+  - text: "近来传闻"
+    translated: "Lately there have been rumors"
+  - subIndex: 1
+    text: "成都"
+    translated: "Chengdu"
+  - subIndex: 2
+    text: "城内有个淫贼胡作非为，#PlayerName#何不与我一道将其捉拿归案？"
+    translated: "In the city, there is a lecherous criminal causing chaos. #PlayerName#, why not join me in catching him?"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！听说丐帮掌法刚猛无比，乃武林之最，我准备前去讨教讨教。咱们到时候在<b>丐帮</b>碰头，一起开开眼界！"
+  splits:
+  - text: "#PlayerName#！听说丐帮掌法刚猛无比，乃武林之最，我准备前去讨教讨教。咱们到时候在"
+    translated: "#PlayerName#! I've heard the Palm Techniques of the Beggar Sect are incredibly fierce, the pinnacle of the Wulin. I'm preparing to go and learn from them. Let's meet up when the time comes."
+  - subIndex: 1
+    text: "丐帮"
+    translated: "Beggar Sect"
+  - subIndex: 2
+    text: "碰头，一起开开眼界！"
+    translated: "Let's meet and broaden our horizons together!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！听说少林功夫冠绝天下，乃佛门正宗，我准备前去讨教讨教。咱们到时候在<b>少林寺</b>碰头，一起开开眼界！"
+  splits:
+  - text: "#PlayerName#！听说少林功夫冠绝天下，乃佛门正宗，我准备前去讨教讨教。咱们到时候在"
+    translated: "#PlayerName#! I've heard that Shaolin martial arts are supreme under heaven, the authentic school of Buddhism. I'm preparing to go and seek guidance. Let's meet up when the time comes."
+  - subIndex: 1
+    text: "少林寺"
+    translated: "Shaolin Temple"
+  - subIndex: 2
+    text: "碰头，一起开开眼界！"
+    translated: "Let's meet and broaden our horizons together!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！听说有个叫<b>大隐阁</b>的门派，隐居山林，高深莫测，我准备去讨教讨教，你要不要一起开开眼界？"
+  splits:
+  - text: "#PlayerName#！听说有个叫"
+    translated: "#PlayerName#! I heard there's someone named"
+  - subIndex: 1
+    text: "大隐阁"
+    translated: "Great Hidden Pavilion"
+  - subIndex: 2
+    text: "的门派，隐居山林，高深莫测，我准备去讨教讨教，你要不要一起开开眼界？"
+    translated: "From our sect, which dwells in seclusion amidst the mountains, comes much that is profound and hard to fathom. I'm prepared to go seek some teachings and insights; would you like to join me to broaden our horizons?"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！听说武当功夫精妙绝伦，乃道家正宗，我准备去讨教讨教。你要不要和我在<b>武当派</b>山下碰头，一起开开眼界？"
+  splits:
+  - text: "#PlayerName#！听说武当功夫精妙绝伦，乃道家正宗，我准备去讨教讨教。你要不要和我在"
+    translated: "#PlayerName#!I've heard that Wudang kung fu is incredibly exquisite and the genuine article of Taoism. I'm planning to go and seek instruction. Would you like to join me in this quest?"
+  - subIndex: 1
+    text: "武当派"
+    translated: "Wudang Sect"
+  - subIndex: 2
+    text: "山下碰头，一起开开眼界？"
+    translated: "Meet at the foot of the mountain and broaden our horizons together?"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！师傅带师兄师姐前往大理，总算没人管我了！我准备偷溜出去玩上几日，苦于不识道路，还望你能来<b>峨眉派</b>带我下山！"
+  splits:
+  - text: "#PlayerName#！师傅带师兄师姐前往大理，总算没人管我了！我准备偷溜出去玩上几日，苦于不识道路，还望你能来"
+    translated: "#PlayerName#! Master takes Senior Brother and Senior Sister to Dali, so finally no one is bothering me! I was planning to sneak out and have a few days of fun, but I'm worried about not knowing the way. If you could come with, that would be great!"
+  - subIndex: 1
+    text: "峨眉派"
+    translated: "Emei Sect"
+  - subIndex: 2
+    text: "带我下山！"
+    translated: "Take me down the mountain!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "阎罗王亲率一支精锐，企图偷袭我药王谷治下的<b>佛山镇</b>。事态紧急，望#PlayerName#尽快率众前来支援！"
+  splits:
+  - text: "阎罗王亲率一支精锐，企图偷袭我药王谷治下的"
+    translated: "King Diyu personally led a elite force, attempting to launch a stealth attack on the territories under the Medicine King Valley."
+  - subIndex: 1
+    text: "佛山镇"
+    translated: "Foshan Town"
+  - subIndex: 2
+    text: "。事态紧急，望#PlayerName#尽快率众前来支援！"
+    translated: ". The situation is urgent; we hope #PlayerName# will lead your forces to come provide support as soon as possible!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "阎罗王夺取佛山镇后才过了十数日，便又率兵前来攻打<b>清远乡</b>。\\n眼下中原各派援军在巴陵村被拖住，只有仰仗#PlayerName#再次出手相助了！"
+  splits:
+  - text: "阎罗王夺取佛山镇后才过了十数日，便又率兵前来攻打"
+    translated: "After Yanluo Wang seized Foshan Town, he led his troops back there to attack just a dozen days later."
+  - subIndex: 1
+    text: "清远乡"
+    translated: "Qingyuan Township"
+  - subIndex: 2
+    text: "眼下中原各派援军在巴陵村被拖住，只有仰仗#PlayerName#再次出手相助了！"
+    translated: "Currently, the reinforcements from various sects in Central Plains are stalled in Baling Village, so they can only rely on #PlayerName# to intervene again!"
+  templates:
+  - template: "{0}<b>{1}</b>。\\n{2}"
+- raw: "#PlayerName#好久不见，若阁下近日无事，还请来<b>铸剑山庄</b>一叙，在下有一事相求。"
+  splits:
+  - text: "#PlayerName#好久不见，若阁下近日无事，还请来"
+    translated: "#PlayerName# Long time no see. If you have some free time recently, please come by."
+  - subIndex: 1
+    text: "铸剑山庄"
+    translated: "Swordforging Manor"
+  - subIndex: 2
+    text: "一叙，在下有一事相求。"
+    translated: "Pleased to meet you. I have a favor to ask."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。\\n还望#PlayerName#前来<b>铸剑山庄</b>护卫，以保神兵顺利铸成。"
+  splits:
+  - text: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。"
+    translated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference."
+  - subIndex: 1
+    text: "还望#PlayerName#前来"
+    translated: "Hope to see #PlayerName# here"
+  - subIndex: 2
+    text: "铸剑山庄"
+    translated: "Swordforging Manor"
+  - subIndex: 3
+    text: "护卫，以保神兵顺利铸成。"
+    translated: "Guard, to ensure the smooth completion of the divine weapon."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "我方联军在<b>乐山镇内</b>已休整完毕，准备不日启程撤回大理，再图后计。\\n还望#PlayerName#率#PlayerForceName#精锐前来援护，事成之后，自当重谢！"
+  splits:
+  - text: "我方联军在"
+    translated: "Our allied forces are"
+  - subIndex: 1
+    text: "乐山镇内"
+    translated: "In Leshan Town"
+  - subIndex: 2
+    text: "已休整完毕，准备不日启程撤回大理，再图后计。"
+    translated: "Ready and well‑rested, we are set to depart for Dali soon, to plan our next move."
+  - subIndex: 3
+    text: "还望#PlayerName#率#PlayerForceName#精锐前来援护，事成之后，自当重谢！"
+    translated: "I hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "老夫已于<b>阎罗殿北方</b>一带，探明了通往鬼门关之道路。还望#PlayerName#率领本门精锐，尽快前来攻克此地！"
+  splits:
+  - text: "老夫已于"
+    translated: "Old Man I have already"
+  - subIndex: 1
+    text: "阎罗殿北方"
+    translated: "Yama Hall's northern area"
+  - subIndex: 2
+    text: "一带，探明了通往鬼门关之道路。还望#PlayerName#率领本门精锐，尽快前来攻克此地！"
+    translated: "One path has been cleared to the Gates of Hell. May #PlayerName# lead the finest of our sect to conquer this place as soon as possible!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，兄弟仨已经寻得了那慕容星辰的老巢，就在<b>襄垣村</b>一处破屋内，还望#PlayerName#速速前来，一同擒贼。"
+  splits:
+  - text: "#PlayerName#，兄弟仨已经寻得了那慕容星辰的老巢，就在"
+    translated: "#PlayerName#, brothers have already located Murong Xingchen's den, which is right"
+  - subIndex: 1
+    text: "襄垣村"
+    translated: "Xiangyuan Village"
+  - subIndex: 2
+    text: "一处破屋内，还望#PlayerName#速速前来，一同擒贼。"
+    translated: "A dilapidated house still hopes that #PlayerName# comes quickly to help capture the thief together."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，大事不妙！不知是谁走漏了风声，都点检墓的消息传得满城风雨，不少武林人士都跑来寻宝了！\\n你多带些人手尽快来<b>朱仙镇</b>汇合，免得被这些家伙捷足先登。"
+  splits:
+  - text: "#PlayerName#，大事不妙！不知是谁走漏了风声，都点检墓的消息传得满城风雨，不少武林人士都跑来寻宝了！"
+    translated: "#PlayerName#, trouble ahead! It seems that someone has leaked the news, and word of the tomb excavation has spread like wildfire throughout the city. Many martial artists have come to seek treasure!"
+  - subIndex: 1
+    text: "你多带些人手尽快来"
+    translated: "Bring more people and come as soon as possible."
+  - subIndex: 2
+    text: "朱仙镇"
+    translated: "Zhuxian Town"
+  - subIndex: 3
+    text: "汇合，免得被这些家伙捷足先登。"
+    translated: "Converge to avoid letting these guys get there first."
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，皇天不负苦心人，咱兄弟三终于在<b>河内乡</b>又找着了慕容星辰那贼婆娘的踪迹。\\n还请你尽快前来，好一同将她捉拿归案！"
+  splits:
+  - text: "#PlayerName#，皇天不负苦心人，咱兄弟三终于在"
+    translated: "#PlayerName#, heaven does not forsake those who work hard, our three brothers have finally made it in the end."
+  - subIndex: 1
+    text: "河内乡"
+    translated: "Hanoi Township"
+  - subIndex: 2
+    text: "又找着了慕容星辰那贼婆娘的踪迹。"
+    translated: "Found the traces of Murong Xingchen again"
+  - subIndex: 3
+    text: "还请你尽快前来，好一同将她捉拿归案！"
+    translated: "I implore you to come as soon as possible so we can apprehend her together!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "兄弟三个押送黄河双煞到了<b>京城西面</b>，似乎被贼人同伙给盯上了，事情紧急还请#PlayerName#速来救个场子！"
+  splits:
+  - text: "兄弟三个押送黄河双煞到了"
+    translated: "Brother three escorted the Twin Fiends of the Yellow River here."
+  - subIndex: 1
+    text: "京城西面"
+    translated: "Capital's western side"
+  - subIndex: 2
+    text: "，似乎被贼人同伙给盯上了，事情紧急还请#PlayerName#速来救个场子！"
+    translated: ", Seems the thief's accomplices have taken notice. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "听说神偷慕容星辰要在哥几个的地界上作恶，我们弟兄仨已在<b>京城</b>布下天罗地网等她上钩，只要#PlayerName#前来相助，保管万无一失。"
+  splits:
+  - text: "听说神偷慕容星辰要在哥几个的地界上作恶，我们弟兄仨已在"
+    translated: "I've heard that the thief Murong Xingchen is causing trouble in our crew's territory. The three of us are already on high alert."
+  - subIndex: 1
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 2
+    text: "布下天罗地网等她上钩，只要#PlayerName#前来相助，保管万无一失。"
+    translated: "Set a heavenly net to lure her in. With your help, #PlayerName#, we can ensure it's foolproof."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "我们兄弟仨已将贼人高首押送归案了，#PlayerName#速来<b>飞龙门</b>一同领赏！"
+  splits:
+  - text: "我们兄弟仨已将贼人高首押送归案了，#PlayerName#速来"
+    translated: "We brothers have already delivered the thief Gao to the authorities, #PlayerName# come quickly."
+  - subIndex: 1
+    text: "飞龙门"
+    translated: "Flying Dragon Gate"
+  - subIndex: 2
+    text: "一同领赏！"
+    translated: "Let's receive the reward together!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，听闻王添翼兄弟已经杀上<b>青城山</b>，恐怕是想和周莫知那老贼同归于尽。\\n项问天兄弟等人已经出发，还望你也多带些人手，一同去为他讨还公道！"
+  splits:
+  - text: "#PlayerName#，听闻王添翼兄弟已经杀上"
+    translated: "#PlayerName#, hearing that Brother Wang Tianyi has already advanced"
+  - subIndex: 1
+    text: "青城山"
+    translated: "Qingcheng Mountain"
+  - subIndex: 2
+    text: "，恐怕是想和周莫知那老贼同归于尽。"
+    translated: ", He probably wanted to die together with Old Scoundrel Zhou Mozi."
+  - subIndex: 3
+    text: "项问天兄弟等人已经出发，还望你也多带些人手，一同去为他讨还公道！"
+    translated: "Xiang Wentian Brother and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，我们在<b>当涂镇北方</b>一带，寻得了那笑面虎的踪迹。还望你尽快前来一同堵截此人，定要将他的身份弄个清楚！"
+  splits:
+  - text: "#PlayerName#，我们在"
+    translated: "#PlayerName#, we are"
+  - subIndex: 1
+    text: "当涂镇北方"
+    translated: "Northern Dangtu Town"
+  - subIndex: 2
+    text: "一带，寻得了那笑面虎的踪迹。还望你尽快前来一同堵截此人，定要将他的身份弄个清楚！"
+    translated: "Following this lead, we found the Silver‑Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我爹在<b>清远乡西方</b>眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
+  splits:
+  - text: "#PlayerName#，我爹在"
+    translated: "#PlayerName#, my father is here"
+  - subIndex: 1
+    text: "清远乡西方"
+    translated: "Qingyuan Township West"
+  - subIndex: 2
+    text: "眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
+    translated: "Seems we're about to catch up with the Five Ghosts of the underworld. I hope you can join me to prevent Father from accidentally injuring Brother Wang Tianyi."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在<b>应天北方</b>一带将其截住。\\n望你前来助我们一臂之力，联手将此人捉拿归案！"
+  splits:
+  - text: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在"
+    translated: "#PlayerName#, we have been chasing the villain Lu Yulan all the way, and we are finally here."
+  - subIndex: 1
+    text: "应天北方"
+    translated: "Northern Yingtian"
+  - subIndex: 2
+    text: "一带将其截住。"
+    translated: "One stopped it"
+  - subIndex: 3
+    text: "望你前来助我们一臂之力，联手将此人捉拿归案！"
+    translated: "I look forward to your help in apprehending this person!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，昔日山谷一战后我继续搜索，总算在<b>玉溪村</b>又寻得了王添翼的踪迹。还望你尽快前来，与我一同劝他重回正道！"
+  splits:
+  - text: "#PlayerName#，昔日山谷一战后我继续搜索，总算在"
+    translated: "#PlayerName#, after the battle in the valley, I continued my search and finally managed to find"
+  - subIndex: 1
+    text: "玉溪村"
+    translated: "Yuxi Village"
+  - subIndex: 2
+    text: "又寻得了王添翼的踪迹。还望你尽快前来，与我一同劝他重回正道！"
+    translated: "I have located Wang Tianyi again. I hope you will come as soon as possible to persuade him to return to the right path with me!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，王添翼兄弟就要被发配充军了，咱们这就去<b>成都</b>汇合，准备劫狱大计！"
+  splits:
+  - text: "#PlayerName#，王添翼兄弟就要被发配充军了，咱们这就去"
+    translated: "#PlayerName#, Brother Wang Tianyi is about to be sent to the frontier as a soldier. Let's go now."
+  - subIndex: 1
+    text: "成都"
+    translated: "Chengdu"
+  - subIndex: 2
+    text: "汇合，准备劫狱大计！"
+    translated: "Converge and prepare for the great prison break!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，这些日子爹爹一直在追踪黑道五鬼，听说他们已逃到了<b>景德镇</b>内，还望你赶快去截住王添翼，免得他被我爹爹误伤！"
+  splits:
+  - text: "#PlayerName#，这些日子爹爹一直在追踪黑道五鬼，听说他们已逃到了"
+    translated: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to"
+  - subIndex: 1
+    text: "景德镇"
+    translated: "Jingdezhen"
+  - subIndex: 2
+    text: "内，还望你赶快去截住王添翼，免得他被我爹爹误伤！"
+    translated: "Inside, I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！最近听到风声，王添翼兄弟在<b>大理北方</b>被唐门和青城派堵上了，咱们得赶紧前去搭救才行。"
+  splits:
+  - text: "#PlayerName#！最近听到风声，王添翼兄弟在"
+    translated: "#PlayerName#! Recently heard some rumors, Wang Tianyi Brother is"
+  - subIndex: 1
+    text: "大理北方"
+    translated: "Northern Dali"
+  - subIndex: 2
+    text: "被唐门和青城派堵上了，咱们得赶紧前去搭救才行。"
+    translated: "Blocked by the Tang Clan and Qingcheng Sect, we need to hurry and go rescue them."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！我刚听说王添翼兄弟被抓的消息，真是岂有此理！咱们赶快去<b>成都</b>汇合，你和我说说到底是怎么回事！"
+  splits:
+  - text: "#PlayerName#！我刚听说王添翼兄弟被抓的消息，真是岂有此理！咱们赶快去"
+    translated: "#PlayerName#!I just heard that Brother Wang Tianyi has been arrested. This is outrageous! Let's go quickly."
+  - subIndex: 1
+    text: "成都"
+    translated: "Chengdu"
+  - subIndex: 2
+    text: "汇合，你和我说说到底是怎么回事！"
+    translated: "Meet up, tell me exactly what's going on!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#！我在<b>杭州北方</b>寻得了笑面鬼的踪迹，还望你来一道截住此人，定要问清他跟王添翼兄弟是什么关系！"
+  splits:
+  - text: "#PlayerName#！我在"
+    translated: "#PlayerName#! I am"
+  - subIndex: 1
+    text: "杭州北方"
+    translated: "Northern Hangzhou"
+  - subIndex: 2
+    text: "寻得了笑面鬼的踪迹，还望你来一道截住此人，定要问清他跟王添翼兄弟是什么关系！"
+    translated: "Found the trail of the Smiling Ghost, I hope you will come along to intercept this person. We must find out exactly what relationship he has with Brother Wang Tianyi!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "<b>第二届泰岳大典</b>已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
+  splits:
+  - text: "第二届泰岳大典"
+    translated: "Second Taiyue Grand Festival"
+  - subIndex: 1
+    text: "已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
+    translated: "Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
+  templates:
+  - template: "<b>{0}</b>{1}"
+- raw: "上次被岳无畏侥幸逃脱，这次总算又在<b>成都</b>追上这狗贼。我想到个绝妙的捉贼之策，只是还缺两位帮手。望#PlayerName#与添翼兄一道前来相助，合咱们三人之力定能一举擒贼！"
+  splits:
+  - text: "上次被岳无畏侥幸逃脱，这次总算又在"
+    translated: "Last time Ye Wowe escaped by a lucky chance, this time we finally managed to catch up with him."
+  - subIndex: 1
+    text: "成都"
+    translated: "Chengdu"
+  - subIndex: 2
+    text: "追上这狗贼。我想到个绝妙的捉贼之策，只是还缺两位帮手。望#PlayerName#与添翼兄一道前来相助，合咱们三人之力定能一举擒贼！"
+    translated: "Catch up with this dog. I've come up with a brilliant plan to catch the thief, but I still need two helpers. I hope #PlayerName# and Brother Adder Wing can join us to help out. With our combined strength, we're sure to catch the thief in one go!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "我一路追捕贼人岳无畏，总算在<b>陇西县</b>寻得其踪迹。还请#PlayerName#前来助我一同擒贼！"
+  splits:
+  - text: "我一路追捕贼人岳无畏，总算在"
+    translated: "I chased after the thief Yue Wuxie all the way, and finally caught up with him."
+  - subIndex: 1
+    text: "陇西县"
+    translated: "Longxi County"
+  - subIndex: 2
+    text: "寻得其踪迹。还请#PlayerName#前来助我一同擒贼！"
+    translated: "Track down their whereabouts. Please come here, #PlayerName#, to help me catch the thieves!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "我爹听闻黑道大会之事，准备近日在<b>江陵</b>举办大会商讨对策。届时必定群雄云集，盛况空前，#PlayerName#定要前来凑凑热闹！"
+  splits:
+  - text: "我爹听闻黑道大会之事，准备近日在"
+    translated: "My father heard about the organized crime conference and is preparing to attend in the near future."
+  - subIndex: 1
+    text: "江陵"
+    translated: "Jiangling"
+  - subIndex: 2
+    text: "举办大会商讨对策。届时必定群雄云集，盛况空前，#PlayerName#定要前来凑凑热闹！"
+    translated: "Hold a grand conference to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#$PlayerName#掌门！司马德源掌门已与我们商定好计策，还望你能来<b>峨眉派</b>汇合，与我们一道夺回大理！"
+  splits:
+  - text: "#$PlayerName#掌门！司马德源掌门已与我们商定好计策，还望你能来"
+    translated: "#$PlayerName#, Sect Leader! Sima Deyuan, the Sect Leader, has already devised a strategy with us. We hope you can come."
+  - subIndex: 1
+    text: "峨眉派"
+    translated: "Emei Sect"
+  - subIndex: 2
+    text: "汇合，与我们一道夺回大理！"
+    translated: "Converge with us to retake Dali!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，<b>第三次泰岳大典</b>即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。\\n天下兴亡，武林安危皆在此一战，还望你多带些高手前来助阵，以免不测！"
+  splits:
+  - text: "第三次泰岳大典"
+    translated: "Third Tai Yue Grand Ceremony"
+  - subIndex: 1
+    text: "即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。"
+    translated: "It will soon take place. At that time, I hope you and the leaders of various sects will follow the plan. When Golden Dragon appears, we should act simultaneously to take him down."
+  - subIndex: 2
+    text: "天下兴亡，武林安危皆在此一战，还望你多带些高手前来助阵，以免不测！"
+    translated: "The rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+  templates:
+  - template: "#PlayerName#，<b>{0}</b>{1}\\n{2}"
+- raw: "#PlayerName#，我与犬子已将恶贼凤南飞堵在<b>灵台村</b>内，奈何此人还请了不少血衣盟高手压阵。望你多带些人手前来相助，以免此贼又逃脱法网！"
+  splits:
+  - text: "#PlayerName#，我与犬子已将恶贼凤南飞堵在"
+    translated: "#PlayerName#, I and my son have already cornered the evil villain Feng Nanfei."
+  - subIndex: 1
+    text: "灵台村"
+    translated: "Lingtai Village"
+  - subIndex: 2
+    text: "内，奈何此人还请了不少血衣盟高手压阵。望你多带些人手前来相助，以免此贼又逃脱法网！"
+    translated: "Inner, how could this person have invited several Blood Robe Alliance experts to oversee the situation? Please bring more people to assist; otherwise, this scoundrel might escape punishment again!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我将在<b>京城</b>嘉奖抓捕曾镇海之侠士，还望你抽空前来领赏，切莫推辞。"
+  splits:
+  - text: "#PlayerName#，我将在"
+    translated: "#PlayerName#, I will be"
+  - subIndex: 1
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 2
+    text: "嘉奖抓捕曾镇海之侠士，还望你抽空前来领赏，切莫推辞。"
+    translated: "Reward those who captured Zheng Zhenhai; we hope you will take the time to come claim your reward. Please do not decline."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于<b>板桥镇</b>。\\n表面上为共商第三次泰岳大典事宜，实则是为告知金龙生就是血衣盟大统领之真相，并部署会上抓捕此人之计策。\\n还请你届时定要前来参加，并将此前调查之来龙去脉尽数道明。"
+  splits:
+  - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
+    translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
+  - subIndex: 1
+    text: "板桥镇"
+    translated: "Banqiao Town"
+  - subIndex: 2
+    text: "表面上为共商第三次泰岳大典事宜，实则是为告知金龙生就是血衣盟大统领之真相，并部署会上抓捕此人之计策。"
+    translated: "Surface‑level, this meeting is to discuss the third Taiyue grand ceremony, but in reality, it is to reveal that Jinlongsheng is the grand leader of the Blood Robe League, and to plan to arrest him during the meeting."
+  - subIndex: 3
+    text: "还请你届时定要前来参加，并将此前调查之来龙去脉尽数道明。"
+    translated: "I still hope you will come and share the full details of your previous investigation."
+  templates:
+  - template: "{0}<b>{1}</b>。\\n{2}\\n{3}"
+- raw: "#PlayerName#，爹爹与我不日便会前往<b>唐门</b>，举办联姻大典。你和郭勇锐若是能来替我加油打气，那便再好不过了！"
+  splits:
+  - text: "#PlayerName#，爹爹与我不日便会前往"
+    translated: "#PlayerName#, Father and I won't be far away soon."
+  - subIndex: 1
+    text: "唐门"
+    translated: "Tang Clan"
+  - subIndex: 2
+    text: "，举办联姻大典。你和郭勇锐若是能来替我加油打气，那便再好不过了！"
+    translated: ", Attend the alliance ceremony. If you and Guo Yongrui can come to cheer me on, that would be perfect!"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，两派弟子已整备完毕，还望你回仙霞派统帅大军。此战若能取胜，便可一举击溃唐门，平定蜀中！"
+  splits:
+  - text: "#PlayerName#，两派弟子已整备完毕，还望你回仙霞派统帅大军。此战若能取胜，便可一举击溃唐门，平定蜀中！"
+    translated: "#PlayerName#, the disciples of both sects are now ready. I hope you return to the Xianxia Sect to command the great army. If we win this battle, we can defeat the Tang Clan once and for all and bring peace to Sichuan!"
+- raw: "#PlayerName#，唐逸影已经中计，如今亲率唐门精锐潜伏在<b>仙霞派南方</b>一带。还望你依计行事，里应外合，定能打他们个措手不及。"
+  splits:
+  - text: "#PlayerName#，唐逸影已经中计，如今亲率唐门精锐潜伏在"
+    translated: "#PlayerName#, Tang Yiying has fallen for the trap, and now personally leads the Tang Clan's elite forces in hiding."
+  - subIndex: 1
+    text: "仙霞派南方"
+    translated: "Xianxia Sect Southern Branch"
+  - subIndex: 2
+    text: "一带。还望你依计行事，里应外合，定能打他们个措手不及。"
+    translated: "One move. I still hope you carry out the plan as planned, from the inside and outside, to catch them off guard."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，我与吕舞阳兄弟一路追击，终于将曾镇海堵在了<b>江陵城内</b>。\\n还望你尽快前来，与我们一同捉拿此贼！"
+  splits:
+  - text: "#PlayerName#，我与吕舞阳兄弟一路追击，终于将曾镇海堵在了"
+    translated: "#PlayerName#, I chased with Brother Lv Wuyang and finally cornered Zeng Zhenhai."
+  - subIndex: 1
+    text: "江陵城内"
+    translated: "Within Jiangling City"
+  - subIndex: 2
+    text: "还望你尽快前来，与我们一同捉拿此贼！"
+    translated: "I look forward to your swift arrival so we can apprehend this villain together!"
+  templates:
+  - template: "{0}<b>{1}</b>。\\n{2}"
+- raw: "#PlayerName#，我在<b>西凉</b>城中追查那名犯下血案的江洋大盗，如今已得了些线索。还望你能来助一臂之力，好早日将此恶贼绳之于法。"
+  splits:
+  - text: "#PlayerName#，我在"
+    translated: "#PlayerName#, I am"
+  - subIndex: 1
+    text: "西凉"
+    translated: "Xiliang"
+  - subIndex: 2
+    text: "城中追查那名犯下血案的江洋大盗，如今已得了些线索。还望你能来助一臂之力，好早日将此恶贼绳之于法。"
+    translated: "They have gathered some leads in their pursuit of the notorious bandit responsible for the recent bloodshed in the city. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，飞凤钱庄的犯罪证据我已暗中收集完毕，同时布下天罗地网。\\n还望你依此前约定，来<b>西凉</b>擒拿恶贼凤南飞，为西凉父老乡亲讨还公道！"
+  splits:
+  - text: "#PlayerName#，飞凤钱庄的犯罪证据我已暗中收集完毕，同时布下天罗地网。"
+    translated: "#PlayerName#, I have secretly gathered the evidence of crime at the Feifeng Bank, and simultaneously set a Heaven's Net in the sky."
+  - subIndex: 1
+    text: "还望你依此前约定，来"
+    translated: "I still look forward to your coming as we agreed beforehand."
+  - subIndex: 2
+    text: "西凉"
+    translated: "Xiliang"
+  - subIndex: 3
+    text: "擒拿恶贼凤南飞，为西凉父老乡亲讨还公道！"
+    translated: "Capture the evil bandit Feng Nanfei and seek justice for the people of Xiliang!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "昔日仙居客栈一战后，吕舞阳已逃至<b>陇西县南方</b>一带，可能想在此处与曾镇海及四大杀手汇合。\\n还望#PlayerName#多带些人手前来相助，这次定要将他们一网打尽。"
+  splits:
+  - text: "昔日仙居客栈一战后，吕舞阳已逃至"
+    translated: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to"
+  - subIndex: 1
+    text: "陇西县南方"
+    translated: "Southern Longxi County"
+  - subIndex: 2
+    text: "一带，可能想在此处与曾镇海及四大杀手汇合。"
+    translated: "One hopes to meet Zheng Zhenhai and the Four Killers here."
+  - subIndex: 3
+    text: "还望#PlayerName#多带些人手前来相助，这次定要将他们一网打尽。"
+    translated: "I hope #PlayerName# brings more people to help this time. We must capture them all."
+  templates:
+  - template: "{0}<b>{1}</b>{2}\\n{3}"
+- raw: "#PlayerName#，中原联军已兵临京城城下，是时候在总舵内集结兵力，进行最终决战了。"
+  splits:
+  - text: "#PlayerName#，中原联军已兵临京城城下，是时候在总舵内集结兵力，进行最终决战了。"
+    translated: "#PlayerName#, the Central Plains Coalition has brought their troops to the gates of the Capital. It's time to gather our forces in the main den and prepare for the final battle."
+- raw: "#PlayerName#，师傅既已入土为安，按江湖规矩是时候邀请武林同道，在<b>仙霞派内</b>举办掌门继任仪式了，还望你尽快回来做好准备。"
+  splits:
+  - text: "#PlayerName#，师傅既已入土为安，按江湖规矩是时候邀请武林同道，在"
+    translated: "#PlayerName#, since Master has passed away and found eternal rest, according to the rules of the Jianghu, it is time to invite fellow practitioners of the Wulin."
+  - subIndex: 1
+    text: "仙霞派内"
+    translated: "Inside the Xianxia Sect"
+  - subIndex: 2
+    text: "举办掌门继任仪式了，还望你尽快回来做好准备。"
+    translated: "Hold the succeeding Sect Leader ceremony soon, and I hope you will return promptly to prepare."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，近来<b>铁掌帮铁矿</b>守备空虚，正是我们夺取此地的绝佳时机。还望你尽快前来指挥大局。"
+  splits:
+  - text: "#PlayerName#，近来"
+    translated: "#PlayerName#, lately"
+  - subIndex: 1
+    text: "铁掌帮铁矿"
+    translated: "Iron Palm Gang Iron Mine"
+  - subIndex: 2
+    text: "守备空虚，正是我们夺取此地的绝佳时机。还望你尽快前来指挥大局。"
+    translated: "With the defenses weak, this is our perfect opportunity to take control. Please come as soon as possible to take command."
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，近来江湖风云突变，我有一计想与你和各位师兄妹探讨，还望你回<b>仙霞派</b>一同商议此事。"
+  splits:
+  - text: "#PlayerName#，近来江湖风云突变，我有一计想与你和各位师兄妹探讨，还望你回"
+    translated: "#PlayerName#, lately the Jianghu has seen sudden changes. I have a plan I would like to discuss with you and the other senior and junior brothers and sisters. I hope you can return."
+  - subIndex: 1
+    text: "仙霞派"
+    translated: "Xianxia Sect"
+  - subIndex: 2
+    text: "一同商议此事。"
+    translated: "Discuss this together"
+  templates:
+  - template: "{0}<b>{1}</b>{2}"
+- raw: "#PlayerName#，铁掌帮近来军心涣散，败相已显。还望你返回门派主持大局，咱们一鼓作气拿下铁掌帮！"
+  splits:
+  - text: "#PlayerName#，铁掌帮近来军心涣散，败相已显。还望你返回门派主持大局，咱们一鼓作气拿下铁掌帮！"
+    translated: "#PlayerName#, the Iron Palm Gang's morale has recently been deteriorating, and the signs of defeat are clear. I hope you return to the Sect to take charge and lead us to victory against the Iron Palm Gang!"
+- raw: "#PlayerName#速回门派，我已查到那皇甫青衫的真实身份了！"
+  splits:
+  - text: "#PlayerName#速回门派，我已查到那皇甫青衫的真实身份了！"
+    translated: "#PlayerName#, return to the Sect. I have already found out the true identity of Huangfu Qingshan!"
+- raw: "<b>巴陵村</b>突遭不明贼人袭击，#PlayerName#速速前来救援！"
+  splits:
+  - text: "巴陵村"
+    translated: "Baling Village"
+  - subIndex: 1
+    text: "突遭不明贼人袭击，#PlayerName#速速前来救援！"
+    translated: "Attacked by unknown bandits, #PlayerName# come to rescue us quickly!"
+  templates:
+  - template: "<b>{0}</b>{1}"
+- raw: "不知何故药王谷又派人前来为我治病，#PlayerName#可有头绪？"
+  splits:
+  - text: "不知何故药王谷又派人前来为我治病，#PlayerName#可有头绪？"
+    translated: "For some reason, Medicine King Valley has sent someone to treat me again. #PlayerName#, do you have any clues?"
+- raw: "药王掌门又要来仙霞派拜访，可几次三番也不过徒劳而已。#PlayerName#与我一道劝她放弃如何？"
+  splits:
+  - text: "药王掌门又要来仙霞派拜访，可几次三番也不过徒劳而已。#PlayerName#与我一道劝她放弃如何？"
+    translated: "The Sect Leader of the Medicine King is planning to visit the Xianxia Sect again, but all her efforts have been in vain so far. Why don't #PlayerName# and I persuade her to give up?"
+- raw: "大事不好！朝廷突然下令让我们捉拿赵破虏掌门！\\n还望#PlayerName#尽快赶来<b>京城</b>，劝大家莫要轻举妄动，错怪好人！"
+  splits:
+  - text: "大事不好！朝廷突然下令让我们捉拿赵破虏掌门！"
+    translated: "Big trouble! The court suddenly ordered us to capture Zhao Polu, the Sect Leader!"
+  - subIndex: 1
+    text: "还望#PlayerName#尽快赶来"
+    translated: "I hope #PlayerName# can come as soon as possible."
+  - subIndex: 2
+    text: "京城"
+    translated: "Capital"
+  - subIndex: 3
+    text: "，劝大家莫要轻举妄动，错怪好人！"
+    translated: ", Advise everyone not to act rashly and wrongfully blame the good!"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"
+- raw: "#PlayerName#，大事不妙！白云天姑娘状况恶化，眼看性命就要不保！\\n我已飞鸽传书峨眉司马掌门，还望你尽快赶来<b>五毒教</b>，与我们一同商议对策"
+  splits:
+  - text: "#PlayerName#，大事不妙！白云天姑娘状况恶化，眼看性命就要不保！"
+    translated: "#PlayerName#, trouble ahead! Miss Bai Yuntian's condition is worsening; she may not make it!"
+  - subIndex: 1
+    text: "我已飞鸽传书峨眉司马掌门，还望你尽快赶来"
+    translated: "I have sent a message to Sect Leader Sima of Mount Emei via homing pigeon. I hope you can hurry over."
+  - subIndex: 2
+    text: "五毒教"
+    translated: "Five Poisons Sect"
+  - subIndex: 3
+    text: "，与我们一同商议对策"
+    translated: ", Join us in devising a strategy"
+  templates:
+  - template: "{0}\\n{1}<b>{2}</b>{3}"

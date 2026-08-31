@@ -349,6 +349,20 @@ namespace Tests
             "eventDescribe", "jobDescribe",
         ];
 
+        // "startCallSpeFuc"'s raw shape is a speFuc call convention (like tutorialSpeFuc/
+        // clickCallFuc/callParam), not plain display text: "PlotGetNewMail;<HeroName>-<Message>
+        // [-true]". Only the embedded <Message> is real, untranslated player-facing text (shown
+        // in a mail notification); the hero name and optional trailing "-true" flag must stay
+        // untouched, so this field is deliberately absent from DynamicStringOtherTextFields above
+        // and handled via structured extraction instead - see ExtractDynamicStringCandidatesFromOtherText.
+        private static readonly Regex PlotGetNewMailRegex =
+            new(@"^PlotGetNewMail;[^-]+-(.+?)(?:-true)?$", RegexOptions.Compiled);
+
+        // "spellEffectString"'s raw shape is "<CJK label><signed number>" with no delimiter (e.g.
+        // "伤害-0.04"), the same shape DynamicStringLabelColumnSources already extracts from CSV
+        // columns via StatLabelRegex below. Only the label is translatable text.
+        private static readonly string[] DynamicStringLabelOtherTextFields = ["spellEffectString"];
+
         // Runtime setter behavior: docs/gamefilehandling-reference.md.
 
         // Extracts the repeated label from a structured stat modifier.
@@ -594,17 +608,51 @@ namespace Tests
             if (File.Exists(outputPath))
                 seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
 
+            // Labels are dedup'd against the DynamicStrings files instead - a different output domain.
+            var labelsOutputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
+            var labelsMasterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
+            var seenLabels = new HashSet<string>();
+            if (File.Exists(labelsMasterDumpPath))
+                seenLabels.UnionWith(File.ReadAllLines(labelsMasterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
+            if (File.Exists(labelsOutputPath))
+                seenLabels.UnionWith(File.ReadAllLines(labelsOutputPath).Where(l => !string.IsNullOrEmpty(l)));
+
             var allowedFields = new HashSet<string>(DynamicStringOtherTextFields, StringComparer.OrdinalIgnoreCase);
+            var labelFields = new HashSet<string>(DynamicStringLabelOtherTextFields, StringComparer.OrdinalIgnoreCase);
 
             // Use dictionaries because the dumped-entry record has no parameterless constructor.
             var deserializer = YamlHelper.CreateDeserializer();
             var entries = deserializer.Deserialize<List<Dictionary<string, string>>>(File.ReadAllText(otherTextPath)) ?? [];
 
             var found = new List<string>();
+            var foundLabels = new List<string>();
             foreach (var entry in entries)
             {
                 if (!entry.TryGetValue("raw", out var raw) || string.IsNullOrWhiteSpace(raw)) continue;
-                if (!entry.TryGetValue("field", out var field) || !allowedFields.Contains(field)) continue;
+                if (!entry.TryGetValue("field", out var field)) continue;
+
+                if (string.Equals(field, "startCallSpeFuc", StringComparison.OrdinalIgnoreCase))
+                {
+                    var match = PlotGetNewMailRegex.Match(raw);
+                    if (!match.Success) continue;
+
+                    var message = match.Groups[1].Value;
+                    if (string.IsNullOrWhiteSpace(message) || !seen.Add(message)) continue;
+
+                    found.Add(message);
+                    continue;
+                }
+
+                if (labelFields.Contains(field))
+                {
+                    var label = StatLabelRegex.Match(raw).Value;
+                    if (string.IsNullOrWhiteSpace(label) || !seenLabels.Add(label)) continue;
+
+                    foundLabels.Add(label);
+                    continue;
+                }
+
+                if (!allowedFields.Contains(field)) continue;
                 if (!seen.Add(raw)) continue;
 
                 found.Add(raw);
@@ -612,6 +660,12 @@ namespace Tests
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
             File.AppendAllLines(outputPath, found);
+
+            if (foundLabels.Count > 0)
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(labelsOutputPath)!);
+                File.AppendAllLines(labelsOutputPath, foundLabels);
+            }
         }
 
         /// <summary>

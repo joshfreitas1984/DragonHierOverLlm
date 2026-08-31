@@ -795,7 +795,7 @@
     translated: "None"
   - split: 10
     text: "采伐潜力"
-    translated: "Logging potential"
+    translated: "Resource Gathering Potential"
 - raw: "53,木植潜力,1,无,无,0,1,0,0,0,木植潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -2541,7 +2541,7 @@
     translated: "None"
   - split: 10
     text: "采伐经验"
-    translated: "Logging experience"
+    translated: "Resource Gathering Experience"
 - raw: "193,木植经验,0.04,无,无,1,1,1,0,0,木植经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
