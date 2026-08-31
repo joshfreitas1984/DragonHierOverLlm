@@ -78,6 +78,12 @@
     <Reference Include="Il2Cppmscorlib">
       <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
     </Reference>
+    <!-- PlotController's dialogue typewriter reveal is driven by DOTweenModuleUI.DOText(TMP_Text,
+         string, float, ...) - referenced so PlotTextPatches (or similar) can prefix-patch its
+         duration parameter. -->
+    <Reference Include="DOTween">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\DOTween.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="Build">

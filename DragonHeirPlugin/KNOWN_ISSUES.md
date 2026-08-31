@@ -43,12 +43,21 @@
   full narrative behind `PrefabTextPatches`: a wrong-scope correction for `plotText`/`describe`
   fields, why lifecycle-callback patches were rejected, an `is`/`as` interop-safety finding, and
   the scene-embedded-UI coverage gap fix.
+- [`docs/prefabtextpatches-agent-reference.md`](docs/prefabtextpatches-agent-reference.md) — concise
+  ownership, hook-ordering, exact-match, newline, interop, and change-checklist reference for
+  agents editing `PrefabTextPatches.cs`.
 - [`docs/resourceio-generic-bytearray-classpointerstore-crash.md`](docs/resourceio-generic-bytearray-classpointerstore-crash.md)
   — `ta.bytes` (`Il2CppStructArray<byte>`, a generic wrapper) started throwing
   `Il2CppClassPointerStore<byte>` cctor `NullReferenceException` for every TextAsset, isolated to
   `ResourceIoPatches` since it was the only patch touching a generic struct-array type; fixed by
   reading bytes via raw native calls instead (`GetTextAssetBytesRaw`), not by regenerating
   interop/cache (which does not fix this).
+- [`docs/resourceiopatches-agent-reference.md`](docs/resourceiopatches-agent-reference.md) — concise
+  whole-file override, raw-byte decoding, encoding fallback, interop-safety, and change-checklist
+  reference for agents editing `ResourceIoPatches.cs`.
+- [`docs/unitylogcapture-reference.md`](docs/unitylogcapture-reference.md) — concise hook,
+  formatting, interop-safety, and change-checklist reference for agents editing
+  `UnityLogCapture.cs`.
 - [`docs/dynamicstringpatches-cjk-placeholder-fallback.md`](docs/dynamicstringpatches-cjk-placeholder-fallback.md)
   — why some `isTemplate: true` templates' own translated literal connector text was silently
   skipped when their `{n}` placeholder is legitimately CJK data (sect/title names); the
@@ -65,4 +74,7 @@
   glued markers - fixed 3/5 of a batch of over-eagerly-rejected templates), and a flagged-but-
   unfixed side finding: `dumpedPrefabTextFromOtherFields.txt.yaml`'s `"在下#$PlayerName#"` template
   is dangerously over-generic and can false-positive-match as a prefix inside unrelated dialogue.
+- [`docs/dynamicstringpatches-agent-reference.md`](docs/dynamicstringpatches-agent-reference.md)
+  — concise ownership, ordering, loading, template, re-entrancy, performance, and change-checklist
+  reference for agents editing `DynamicStringPatches.cs`.
 
