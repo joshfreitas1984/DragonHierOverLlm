@@ -130,6 +130,10 @@ public class MainPlugin : BasePlugin
         // and shared re-entrancy guard already being loaded.
         InfoListPatches.PatchAll();
 
+        // Sibling of InfoListPatches for the BATTLE combat log (BattleController.AddInfoText) -
+        // same dependency on DynamicStringPatches.PatchAll() having run first.
+        BattleInfoPatches.PatchAll();
+
         // Must patch AFTER DynamicStringPatches.PatchAll() - ItemIconPatches.
         // GetItemIconName_Postfix calls DynamicStringPatches.ReverseTranslate, which reads the
         // reverse dictionary that PatchAll() populates.
