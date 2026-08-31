@@ -24,6 +24,8 @@ public class FileOutputWorkflowTests
         string releaseFolder = $"{GameFileHandling.GameFolder}/ReleaseFolder/Files";
         var workingDirectory = GameFileHandling.WorkingDirectory;
 
+        TextResizerTests.MoveResizersIntoPathBasedFiles();
+
         GameFileHandlingBase.CopyDirectory($"{workingDirectory}/Resizers", $"{releaseFolder}/BepInEx/resizers", true);
         GameFileHandlingBase.CopyDirectory($"{workingDirectory}/Mod", $"{releaseFolder}/BepInEx/plugins/resources/GameData", true);
 

@@ -1,0 +1,9 @@
+- path: Canvas/MissionPanel/MissionUI/MissionScrollView/Viewport/Content/MissionIconPrefab(Clone)/Title
+  sampleText: Just starting out(Xianxia Sect Temple Scriptures Pavilion)
+  idealFontSize: 12.0
+  minFontSize: 10.0
+  maxFontSize: 14.0
+  alignment: TopLeft
+  allowWordWrap: true
+  allowAutoSizing: true
+  adjustWidth: -50.0

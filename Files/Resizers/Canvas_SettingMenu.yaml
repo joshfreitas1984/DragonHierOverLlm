@@ -1,0 +1,4 @@
+- path: Canvas/SettingMenu/SettingRoot/*/Label
+  sampleText: Fight camera follows
+  idealFontSize: 15.0
+  allowWordWrap: false

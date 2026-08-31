@@ -1,0 +1,23 @@
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/*/Text
+  sampleText: Government offices
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/Back/BuildingName
+  sampleText: Sentinel
+  idealFontSize: 14.0
+  allowWordWrap: false
+  allowAutoSizing: false
+  adjustWidth: 100.0
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildTitle/Text
+  sampleText: Building
+  idealFontSize: 25.0
+  allowWordWrap: false
+- path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/BuildingLv
+  sampleText: 0
+  idealFontSize: 11.0
+  allowWordWrap: false
+- path: Canvas/AreaUIPanel/AreaUIBelow/AreaTitle/Text
+  sampleText: Baling Village
+  idealFontSize: 20.0
+  allowWordWrap: true
+  adjustWidth: 50.0

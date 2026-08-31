@@ -1,0 +1,26 @@
+- path: Canvas/MainMenu/AchButton/Text
+  sampleText: Achievements List
+  idealFontSize: 20.0
+  allowWordWrap: true
+  adjustY: -40.0
+  adjustWidth: 70.0
+- path: Canvas/MainMenu/StaffButton/Text
+  sampleText: Roster of Personnel
+  idealFontSize: 20.0
+  allowWordWrap: true
+  adjustY: -40.0
+  adjustWidth: 70.0
+- path: Canvas/MainMenu/InfoButton/Text
+  sampleText: Update Log
+  idealFontSize: 20.0
+  allowWordWrap: true
+  adjustY: -40.0
+  adjustWidth: 70.0
+- path: Canvas/MainMenu/Load/Text
+  sampleText: Read
+  idealFontSize: 32.0
+  allowWordWrap: true
+- path: Canvas/MainMenu/Start/Text
+  sampleText: Departure
+  idealFontSize: 32.0
+  allowWordWrap: true

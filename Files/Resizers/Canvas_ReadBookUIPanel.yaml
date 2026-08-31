@@ -1,0 +1,15 @@
+- path: Canvas/ReadBookUIPanel/Scroll/BookName
+  sampleText: Great Ancestor Long Fist
+  idealFontSize: 34.0
+  alignment: Center
+  allowWordWrap: true
+  adjustWidth: 150.0
+- path: Canvas/ReadBookUIPanel/Scroll/BookRare
+  sampleText: Ancient Edition
+  idealFontSize: 24.0
+  allowWordWrap: true
+  adjustWidth: 100.0
+- path: Canvas/ReadBookUIPanel/Paper/TextGrid/*/NameText
+  sampleText: Prepare
+  idealFontSize: 12.0
+  allowAutoSizing: true

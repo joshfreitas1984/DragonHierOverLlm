@@ -1,0 +1,10 @@
+- path: Canvas/HudPanel/ForceLabel
+  sampleText: Xianxia Sect<color=#8C8C8C>Outer Gate Disciple</color>
+  idealFontSize: 14.0
+  allowWordWrap: false
+  adjustX: -5.0
+- path: Canvas/HudPanel/TimeLabel
+  sampleText: 1Year2Month5Day
+  idealFontSize: 14.0
+  allowWordWrap: false
+  adjustY: 10.0

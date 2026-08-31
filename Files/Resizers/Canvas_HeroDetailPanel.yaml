@@ -1,0 +1,57 @@
+- path: Canvas/HeroDetailPanel/Skill/SkillSlot*/Text
+  sampleText: External Skill
+  idealFontSize: 14.0
+  adjustWidth: 30.0
+- path: Canvas/HeroDetailPanel/Skill/SkillTabGrid/*/Label
+  sampleText: Qinggong
+  idealFontSize: 14.0
+  allowWordWrap: true
+  adjustWidth: 25.0
+- path: Canvas/HeroDetailPanel/TagList/Viewport/Content/HeroTagIconPrefab(Clone)/Text
+  sampleText: Loyal to the core
+  idealFontSize: 15.0
+  minFontSize: 10.0
+  maxFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/HeroDetailPanel/Force
+  sampleText: Xianxia Sect<color=#8C8C8C>Outer Gate Disciple</color>
+  idealFontSize: 18.0
+  alignment: Center
+  allowWordWrap: true
+  adjustX: 10.0
+  adjustY: -20.0
+  adjustWidth: 75.0
+- path: Canvas/HeroDetailPanel/Name
+  sampleText: Yang Sichi
+  idealFontSize: 24.0
+  alignment: Center
+  allowWordWrap: true
+  adjustX: -30.0
+  adjustY: 40.0
+  adjustWidth: 75.0
+- path: Canvas/HeroDetailPanel/AllLeaveTeamButton/Text
+  sampleText: All units stand down
+  idealFontSize: 15.0
+  allowWordWrap: true
+- path: Canvas/HeroDetailPanel/Life/Lover/Text
+  sampleText: Husband and wife
+  alignment: Right
+  allowWordWrap: true
+  adjustX: -25.0
+  adjustWidth: 50.0
+- path: Canvas/HeroDetailPanel/Life/Teacher/Text
+  sampleText: Master
+  idealFontSize: 19.0
+  allowWordWrap: true
+  adjustX: -20.0
+  adjustWidth: 50.0
+- path: Canvas/HeroDetailPanel/Life/*/Text
+  sampleText: Disciple
+  idealFontSize: 15.0
+  allowWordWrap: true
+  adjustWidth: 50.0
+- path: Canvas/HeroDetailPanel/Item/ItemTabGrid/*/Label
+  sampleText: Equipment
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustWidth: 20.0

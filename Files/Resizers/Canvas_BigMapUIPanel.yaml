@@ -1,0 +1,4 @@
+- path: Canvas/BigMapUIPanel/AreaUIPanel/BigMapAreaUI(Clone)/AreaUI/AreaName/Label
+  sampleText: 湖泽
+  idealFontSize: 17.0
+  allowWordWrap: true

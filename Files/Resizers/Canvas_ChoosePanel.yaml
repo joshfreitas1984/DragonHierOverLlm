@@ -1,0 +1,16 @@
+- path: Canvas/ChoosePanel/ChoosePanelRoot/LvFlitterAllOn/Text
+  sampleText: Full settings
+  idealFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/ChoosePanel/ChoosePanelRoot/LvFlitterAllOff/Text
+  sampleText: Shut down all rooms
+  idealFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/ChoosePanel/ChoosePanelRoot/TypeFlitterAllOn/Text
+  sampleText: Full settings
+  idealFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/ChoosePanel/ChoosePanelRoot/TypeFlitterAllOff/Text
+  sampleText: Shut down all rooms
+  idealFontSize: 12.0
+  allowWordWrap: true

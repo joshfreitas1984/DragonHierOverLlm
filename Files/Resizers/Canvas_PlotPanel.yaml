@@ -1,0 +1,52 @@
+- path: Canvas/PlotPanel/RightFace/Force
+  sampleText: Jianghu<color=#8C8C8C>Warrior</color>
+  idealFontSize: 14.0
+  alignment: TopRight
+  allowWordWrap: true
+  allowAutoSizing: false
+  adjustWidth: 100.0
+- path: Canvas/PlotPanel/RightFace/Name
+  sampleText: 谭隆 Hard
+  idealFontSize: 19.0
+  alignment: TopRight
+  allowWordWrap: true
+  allowAutoSizing: false
+  adjustX: 5.0
+  adjustY: 65.0
+  adjustWidth: 100.0
+- path: Canvas/PlotPanel/LeftFace/Force
+  sampleText: Xianxia Sect<color=#8C8C8C>Outer Gate Disciple</color>
+  idealFontSize: 14.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustX: 20.0
+  adjustWidth: 100.0
+- path: Canvas/PlotPanel/LeftFace/Name
+  sampleText: XiaoHu
+  idealFontSize: 19.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustX: -10.0
+  adjustY: 65.0
+  adjustWidth: 100.0
+- path: Canvas/PlotPanel/InteractGrid/PlotInteractPrefab(Clone)/Label
+  sampleText: 是 Shen Tui 在 None 理取闹
+  minFontSize: 10.0
+  maxFontSize: 14.0
+  allowWordWrap: true
+  allowAutoSizing: true
+- path: Canvas/PlotPanel/PlotTextBack/PlotText
+  sampleText: >-
+    Hmph! In these turbulent times, the emperor is weak and hidden.
+
+    It was the time to proclaim my brother Zhao Yinzong as the successor and usher in a new dynasty.
+  idealFontSize: 16.0
+  allowWordWrap: true
+  allowAutoSizing: false
+- path: Canvas/PlotPanel/RightFace/NickName
+  sampleText: None For 真人
+  idealFontSize: 13.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustY: -25.0
+  adjustWidth: 100.0

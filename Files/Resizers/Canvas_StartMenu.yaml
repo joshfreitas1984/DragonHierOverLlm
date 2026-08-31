@@ -1,0 +1,36 @@
+- path: Canvas/StartMenu/StartMenuRoot/*/*Title/Text
+  sampleText: Attribute potential 60
+  idealFontSize: 17.0
+  allowWordWrap: true
+- path: Canvas/StartMenu/StartMenuRoot/TagRoot/TagList*/Viewport/Content/HeroTagIconPrefab(Clone)/Text
+  sampleText: Uproot mountains and overturn cauldrons
+  idealFontSize: 14.0
+  minFontSize: 10.0
+  maxFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/StartMenu/StartMenuRoot/TagRoot/SelfTagList/Viewport/Content/HeroTagIconPrefab(Clone)/Text
+  sampleText: Mobilize the heart and toughen the nature
+  idealFontSize: 15.0
+  minFontSize: 10.0
+  maxFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/StartMenu/StartMenuRoot/BirthRoot/0/*/Label
+  sampleText: Ordinary Folk
+  idealFontSize: 24.0
+  allowWordWrap: true
+  adjustX: 50.0
+  adjustWidth: 100.0
+- path: Canvas/StartMenu/StartMenuRoot/SettingRoot/CustomDifficulty/Achievement
+  sampleText: '[Can unlock achievements]'
+  idealFontSize: 14.0
+  allowWordWrap: false
+  adjustX: -140.0
+  adjustY: -20.0
+- path: Canvas/StartMenu/StartMenuRoot/SettingRoot/CustomDifficulty/DifficultyTotalLv
+  sampleText: Balance0
+  idealFontSize: 28.0
+  allowWordWrap: false
+- path: Canvas/StartMenu/StartMenuRoot/SettingRoot/CustomDifficulty/Grid/*/Text
+  sampleText: Experience multiplier +0%
+  idealFontSize: 12.0
+  allowWordWrap: false

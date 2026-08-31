@@ -1,0 +1,20 @@
+- path: Canvas/GameMenuPanel/GameInfoBack/GameInfo
+  sampleText: >-
+    Mode: Story Mode
+
+    Difficulty: Advance in the face of difficulty
+  idealFontSize: 20.0
+  allowWordWrap: false
+- path: Canvas/GameMenuPanel/GameInfoBack/ChapterInfo
+  sampleText: >-
+    Chapter 1 Chapter Shu Central Immortal Clouds Gleaming with Dawn Light
+
+    The great trend of the world：
+
+    Global notoriety correction 0%
+     Sect Forbidden Attack resources 
+     Sect Forbidden Attack town 
+     Sect Forbidden Attack the Capital/Main Den
+  idealFontSize: 14.0
+  allowWordWrap: true
+  adjustWidth: 200.0

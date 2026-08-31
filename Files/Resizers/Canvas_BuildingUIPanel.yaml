@@ -1,0 +1,13 @@
+- path: Canvas/BuildingUIPanel/BuildingUI/Level
+  sampleText: 0Level
+  idealFontSize: 20.0
+  allowWordWrap: true
+  adjustWidth: 50.0
+- path: Canvas/BuildingUIPanel/BuildingUI/Name
+  sampleText: Government offices
+  idealFontSize: 60.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustX: 150.0
+  adjustY: 10.0
+  adjustWidth: 500.0

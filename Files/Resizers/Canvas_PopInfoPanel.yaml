@@ -1,0 +1,28 @@
+- path: Canvas/PopInfoPanel/QuickDetail/ResourcePointDetail/Back/Text
+  sampleText: >-
+    <size=18>Baling Village 湖泽</size>
+
+    Faction Xianxia Sect
+
+
+    Monthly production
+
+    Food grain +60
+
+    Wood +120
+
+
+    Productivity
+
+    120%
+
+
+    Special effects
+
+    <color=#00B400>Construction speed+2%</color>
+
+    Defense effect
+
+    <color=#00B400>City defense durability+10%</color>
+  idealFontSize: 12.0
+  allowWordWrap: false
