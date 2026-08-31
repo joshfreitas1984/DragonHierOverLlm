@@ -3372,7 +3372,7 @@
 - raw: "传闻飞凤钱庄庄主凤南飞在<b>#PosText#</b>设下宴席，邀请侠义七子之首项问天共商大事。"
   splits:
   - text: "传闻飞凤钱庄庄主凤南飞在"
-    translated: "Rumors say that Feng Nanfei, the Manor Master of Feifeng Money Manor, is"
+    translated: "Whispers circulated about Manor Master Feng Nanfei of the Flying Phoenix Bank."
   - subIndex: 1
     text: "设下宴席，邀请侠义七子之首项问天共商大事。"
     translated: "Set a banquet to invite the leader of the Righteous Seven, Xiang Wentian, to discuss important matters together."
@@ -4389,7 +4389,7 @@
 - raw: "前往#TargetPlace#打听关于飞凤钱庄的信息。"
   splits:
   - text: "前往#TargetPlace#打听关于飞凤钱庄的信息。"
-    translated: "Head to #TargetPlace# to gather information about the Fei Feng Money House."
+    translated: "Go to #TargetPlace# to gather information about the Fei Feng Bank."
 - raw: "前往#TargetPlace#探查唐门防御情况。\\n<i>♦如果武当/峨眉/大隐/聚义/青城门派好感在80以上，可在战斗中获得援助\\n♦先占领成都周边资源，可降低后续攻城战难度</i>"
   splits:
   - text: "前往#TargetPlace#探查唐门防御情况。"
@@ -8672,7 +8672,7 @@
     translated: "Let's choose the simplest way for this time."
   - subIndex: 1
     text: "通过在钱庄内经营，来收集银钱吧！"
-    translated: "Operate within the money shop to collect silver coins!"
+    translated: "Operate inside the bank to collect silver coins!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "本次端午赛马大会盛况空前，奖品丰厚，规格高过日常赛马许多，错过实在可惜。\\n不妨披挂上马，大展雄威，与其他参赛者一较高下。"
@@ -8886,7 +8886,7 @@
 - raw: "此后他凭借这笔资金成立钱庄，广纳田产，专心于营商之道"
   splits:
   - text: "此后他凭借这笔资金成立钱庄，广纳田产，专心于营商之道"
-    translated: "Afterwards, he established a money shop with this capital, widely acquiring farmlands, and focusing entirely on business endeavors."
+    translated: "Afterward, he established a bank with this capital, widely acquired farmland, and focused on business endeavors."
 - raw: "此地荒无人烟，周边却有诸多行人与车马留下的踪迹，想必这便是传说中石碑出土之所，不知是何人已捷足先登。\\n不论如何，想取得石碑，需要先找到传说中那处地宫的入口。\\n<color=red>（此处极为凶险，建议携带多名强力队友前往）</color>"
   splits:
   - text: "此地荒无人烟，周边却有诸多行人与车马留下的踪迹，想必这便是传说中石碑出土之所，不知是何人已捷足先登。"
@@ -9262,7 +9262,7 @@
     translated: "Each sect quest can be completed in multiple ways. For example, to collect silver coins,"
   - subIndex: 1
     text: "可以通过在钱庄经营、探索资源区域、去敌对门派偷窃，"
-    translated: "You can operate at the money shop, explore resource areas, and steal from rival sects."
+    translated: "You can operate at the bank, explore resource areas, and steal from rival sects."
   - subIndex: 2
     text: "甚至直接将私房钱上交门派金库，都可以完成。"
     translated: "Even turning over personal savings directly to the sect treasury can be considered complete."
@@ -11461,7 +11461,7 @@
 - raw: "跟随小乞丐前往#TargetPlace#，打听关于飞凤钱庄的信息。"
   splits:
   - text: "跟随小乞丐前往#TargetPlace#，打听关于飞凤钱庄的信息。"
-    translated: "Follow the little beggar to #TargetPlace# to gather information about the Feifeng Money House."
+    translated: "Follow the little beggar to #TargetPlace# to gather information about the Feifeng Bank."
 - raw: "跟随武绝义前往#TargetPlace#，寻找计心狂之踪迹。"
   splits:
   - text: "跟随武绝义前往#TargetPlace#，寻找计心狂之踪迹。"
@@ -12978,7 +12978,7 @@
 - raw: "飞凤钱庄"
   splits:
   - text: "飞凤钱庄"
-    translated: "Phoenix Finance House"
+    translated: "Phoenix Bank"
 - raw: "飞刀"
   splits:
   - text: "飞刀"

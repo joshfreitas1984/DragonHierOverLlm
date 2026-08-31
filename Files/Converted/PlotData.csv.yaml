@@ -6266,7 +6266,7 @@
   splits:
   - split: 9
     text: "钱庄"
-    translated: "Money Shop"
+    translated: "Bank"
   - split: 9
     subIndex: 1
     text: "农田"
@@ -149124,7 +149124,7 @@
   - split: 10
     subIndex: 1
     text: "而且全是出自西凉最大的钱庄，飞凤钱庄名下的票号。"
-    translated: "And they all come from the draft offices under the Feifeng Moneyhouse in Xiliang, which is the largest moneyhouse there."
+    translated: "And they all came from the largest money shop under the Feifeng Bank in Xiliang."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -149136,7 +149136,7 @@
   - split: 10
     subIndex: 1
     text: "就算存钱也应该去福州一带的钱庄，怎么会跑到千里之外西凉呢？"
-    translated: "Even if they were saving money, they should have gone to a money shop in Fuzhou. How could they end up a thousand miles away in Xiliang?"
+    translated: "Even if you are saving money, you should go to the banks in Fuzhou. How could you end up all the way in Xiliang, a thousand miles away?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -149156,11 +149156,11 @@
   splits:
   - split: 10
     text: "所以我怀疑，这西凉飞凤钱庄，可能与曾镇海有不可告人之干系。"
-    translated: "So I suspect that the Xiliang Flying Phoenix Money House might have some unspeakable connection with Zeng Zhenhai."
+    translated: "So I suspect that the Xiliang Flying Phoenix Bank might have some unsavory dealings with Zeng Zhenhai."
   - split: 10
     subIndex: 1
     text: "或许他当年的同伙，眼下就潜伏在飞凤钱庄中。"
-    translated: "Perhaps his accomplices from back then are hiding right now in the Flying Phoenix Money House."
+    translated: "Perhaps his contemporaries from back then are lurking right now in the Flying Phoenix Bank."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -149172,7 +149172,7 @@
   - split: 10
     subIndex: 1
     text: "那就劳烦项少侠去西凉的飞凤钱庄探查情报，若是得到什么线索，还请尽快告知于我。"
-    translated: "Then I request that Young Hero Xiang go to the Flying Phoenix Money House in Xiliang to investigate. If you obtain any leads, please inform me as soon as possible."
+    translated: "Then I request that Young Hero Xiaogang visit the Phoenix Bank in Xiliang to gather intelligence. If you obtain any leads, please inform me as soon as possible."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -149617,7 +149617,7 @@
   splits:
   - split: 10
     text: "好！项少侠，你去西凉飞凤钱庄打探情报，"
-    translated: "Okay! Young Hero Xia, you go to the West Xiliang Phoenix Flying Money House to gather intelligence."
+    translated: "Okay! Young Hero Xiao, you go to Xiliang Flying Phoenix Bank to gather intelligence."
   - split: 10
     subIndex: 1
     text: "我留在京城中继续搜寻线索。这次定要将此案件，查个水落石出。"
@@ -214487,7 +214487,7 @@
   - split: 10
     subIndex: 1
     text: "开设的飞凤钱庄，也算是闻名遐迩。"
-    translated: "The Flying Phoenix Moneyhouse is also quite renowned."
+    translated: "The Flying Phoenix Bank is also quite renowned."
   - split: 10
     subIndex: 2
     text: "承蒙此地百姓厚爱，得了个乐善好施的名号。"
@@ -215149,7 +215149,7 @@
   splits:
   - split: 10
     text: "当时我们在曾镇海身上，搜出了几张飞凤钱庄的银票。"
-    translated: "At the time, we searched Zheng Zhenhai and found several silver bills from Fei Feng Money House."
+    translated: "At the time, we found several silver notes from the Fei Feng Bank on Zeng Zhenhai."
   - split: 10
     subIndex: 1
     text: "凤员外，你想必对此不陌生吧。"
@@ -215170,7 +215170,7 @@
   - split: 10
     subIndex: 1
     text: "此人身上，又怎会有我西凉飞凤钱庄的银票呢？"
-    translated: "How could there be a silver ticket from the Xiliang Feifeng Money Shop on this person?"
+    translated: "How could there be a money order from the Xiliang Feifeng Bank on this person?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215194,7 +215194,7 @@
   - split: 10
     subIndex: 1
     text: "他们兴许是想要重演一遍雨夜惨案，将阁下钱庄中的资财洗劫一空！"
-    translated: "They might want to replay the tragic rainstorm incident, plundering all the assets from Sir's money shop!"
+    translated: "They might want to reenact the rainy night massacre, plundering all the assets in your bank!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215202,7 +215202,7 @@
   splits:
   - split: 10
     text: "啊？！这这这，难怪在下也听说钱庄被江洋大盗给盯上，"
-    translated: "Ah?! This... This is why I've also heard that the money shop has been targeted by a big‑time thief!"
+    translated: "Ah?! Indeed, it's no wonder I've also heard that the bank is being targeted by a major bandit."
   - split: 10
     subIndex: 1
     text: "原来果真确有其事......"
@@ -215483,7 +215483,7 @@
   - split: 10
     subIndex: 1
     text: "已寻得那企图洗劫飞凤钱庄的江洋大盗之线索？"
-    translated: "Have we found clues regarding the bandit who tried to rob Feifeng Money House?"
+    translated: "Have we found the clue of the gangster who tried to rob the Feifeng Bank?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215524,7 +215524,7 @@
   - split: 10
     subIndex: 1
     text: "似乎都听说过飞凤钱庄被江洋大盗盯上这一消息。"
-    translated: "Seems like everyone has heard about Feifeng Money House being targeted by a professional bandit."
+    translated: "It seems that everyone has heard about the Bank of Fiery Phoenix attracting the attention of a master robber."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215565,7 +215565,7 @@
   - split: 10
     subIndex: 1
     text: "此后我怀疑过，是不是飞凤钱庄的竞争对手在散布假消息，"
-    translated: "After that, I suspected that it might be the competitors of Flying Phoenix Money Shop spreading false rumors."
+    translated: "After that, I wondered if the competitors of Feifeng Bank were spreading false rumors."
   - split: 10
     subIndex: 2
     text: "想要以此引发民众恐慌，产生挤兑。"
@@ -215581,7 +215581,7 @@
   - split: 10
     subIndex: 1
     text: "那不知这西凉城中，飞凤钱庄有几家竞争对手呢？"
-    translated: "That said, how many competitors does the Phoenix Money Exchange have in Xiliang City?"
+    translated: "That brings up an interesting point: how many competitors does the Phoenix Bank have in Xiliang City?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215610,7 +215610,7 @@
   - split: 10
     subIndex: 1
     text: "发现这西凉城中，确实只有这一家飞凤钱庄。"
-    translated: "Sure, this Xiliang city indeed only has one Phoenix Money House."
+    translated: "Indeed, there is only this Phoenix Bank in Xiliang City."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215618,7 +215618,7 @@
   splits:
   - split: 10
     text: "其他钱庄，很多都因为不明原因，"
-    translated: "Other money shops have also shut down for no apparent reason."
+    translated: "Other banks have also shut down for unknown reasons."
   - split: 10
     subIndex: 1
     text: "或倒闭，或撤店，总之是一家都没有留下。"
@@ -215638,7 +215638,7 @@
   - split: 10
     subIndex: 2
     text: "怎会只有这一家钱庄存活下来呢......"
-    translated: "How come only this money shop survived..."
+    translated: "How is it that only this bank survived...?"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -215658,7 +215658,7 @@
   splits:
   - split: 10
     text: "如此行为，会大大损害其钱庄之声誉，实在不符合商业逻辑，"
-    translated: "While such behavior would severely damage their money house's reputation and is utterly illogical, it could also strain relationships with other prominent families."
+    translated: "Such behavior would greatly damage their bank's reputation and is decidedly against commercial logic."
   - split: 10
     subIndex: 1
     text: "不像是他这样一名豪商大贾会做出来的事情。"
@@ -215704,7 +215704,7 @@
   splits:
   - split: 10
     text: "嗯......此前曾镇海身上也搜出了飞凤钱庄的银票，"
-    translated: "Hmm...Previously, Fengfeng Moneyhouse's silver tickets were also found on Zhenhai."
+    translated: "Hmm... Previously, Silver Tickets from Flying Phoenix Bank were also found on Zhenhai."
   - split: 10
     subIndex: 1
     text: "兴许此事没我们想的那么简单。"
@@ -215716,11 +215716,11 @@
   splits:
   - split: 10
     text: "不过如今我们对飞凤钱庄知之甚少，不妨先在城中继续寻访，"
-    translated: "But nowadays we know very little about Phoenix Wing Money House. Let's continue to search for information in the city first."
+    translated: "But nowadays, we know very little about the Feifeng Bank. Let's continue to inquire within the city first."
   - split: 10
     subIndex: 1
     text: "搜集一些关于飞凤钱庄和凤南飞此人的信息。"
-    translated: "Gather some information about Feifeng Money Shop and the person Feng Nanfei."
+    translated: "Gather some information about the Flying Phoenix Bank and the person Feng Nanfei."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215826,7 +215826,7 @@
   - split: 10
     subIndex: 1
     text: "我问问你，这西凉城内的飞凤钱庄，你可听说过？"
-    translated: "I'll ask you: Have you ever heard of the Phoenix Money House in Xiliang City?"
+    translated: "I'll ask you: Have you heard of the Flying Phoenix Bank in Xiliang City?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215838,7 +215838,7 @@
   - split: 10
     subIndex: 1
     text: "这飞凤钱庄的老板凤南飞，可是西凉城中远近闻名的大善人啊。"
-    translated: "This Feng Nanfei, the owner of Feifeng Money House, is a Great Benefactor well‑known throughout Xiliang City."
+    translated: "This Feng Nanfei, the owner of Feifeng Bank, is a far‑famed Great Benefactor in Xiliang City."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -215979,7 +215979,7 @@
   splits:
   - split: 10
     text: "敢问姑娘，可清楚这飞凤钱庄的老板，"
-    translated: "May I ask, Miss, do you know where the owner of the Flying Phoenix Money House is?"
+    translated: "May I ask, Miss, are you clear about the owner of the Flying Phoenix Bank?"
   - split: 10
     subIndex: 1
     text: "凤南飞员外是何来历？"
@@ -216011,7 +216011,7 @@
   - split: 10
     subIndex: 1
     text: "开了飞凤钱庄后，也是成了西凉城内最大的富户。"
-    translated: "Opening the Phoenix Flight Money Exchange made him one of the wealthiest households in Xiliang City."
+    translated: "Opening the Phoenix Flight Bank became the richest household in Xiliang City."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -216060,11 +216060,11 @@
   splits:
   - split: 10
     text: "那姑娘你可知道，城内为何只有飞凤钱庄一家独大，"
-    translated: "That girl, do you know why Fengfeng Money House is the only dominant one in the city?"
+    translated: "That miss, do you know why the Phoenix Bank is the only dominant one in the city?"
   - split: 10
     subIndex: 1
     text: "其他钱庄是为何都开不下去了呢？"
-    translated: "Why are all the other money shops failing to stay afloat?"
+    translated: "Why are all the other banks unable to stay afloat?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -216080,7 +216080,7 @@
   - split: 10
     subIndex: 2
     text: "所以百姓们都只在飞凤钱庄中借款存钱。"
-    translated: "So all the villagers only borrow and save money at Phoenix Flying Money House."
+    translated: "So all the people only borrow and save money at the Feifeng Bank."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -216088,7 +216088,7 @@
   splits:
   - split: 10
     text: "其他钱庄或是知难而退，或是竞争不过，"
-    translated: "Other money shops either gave up in the face of difficulty or couldn't compete."
+    translated: "Other banks either gave up in the face of difficulty or couldn't compete."
   - split: 10
     subIndex: 1
     text: "总之都是关门大吉了。"
@@ -216100,7 +216100,7 @@
   splits:
   - split: 10
     text: "哼哼，这飞凤钱庄竟能如此大方，当真是件奇事了。"
-    translated: "Hmph. It's truly a remarkable thing that the Flying Phoenix Money House can be so generous."
+    translated: "Hmph. It's truly a wonder that the Flying Phoenix Bank can be so generous."
   - split: 10
     subIndex: 1
     text: "好，多有打扰，告辞了！"
@@ -216141,7 +216141,7 @@
   splits:
   - split: 10
     text: "此外她所说的，关于飞凤钱庄一家独大的原因，"
-    translated: "Besides, the reason why Feifeng Money House dominates alone, as she said,"
+    translated: "Additionally, the reason why Fengfeng Bank holds such a dominant position, as she mentioned,"
   - split: 10
     subIndex: 1
     text: "也实在站不住脚。"
@@ -216153,11 +216153,11 @@
   splits:
   - split: 10
     text: "钱庄盈利，皆是靠的存钱与借钱之间的利息差。"
-    translated: "The profit of the money shop comes from the difference in interest between lending and depositing."
+    translated: "The profit of the bank comes from the interest difference between lending and depositing money."
   - split: 10
     subIndex: 1
     text: "哪有什么钱庄会存款利息高，又免去借款利息呢？"
-    translated: "How can there be a money shop that offers high deposit interest yet waives loan interest?"
+    translated: "How can there be a bank that offers high deposit interest rates while waiving loan interest?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -216165,7 +216165,7 @@
   splits:
   - split: 10
     text: "若飞凤钱庄真这样做，那早就关门大吉了，"
-    translated: "If Flying Phoenix Money Shop really did that, it would have closed down long ago."
+    translated: "If Flying Phoenix Bank truly did that, it would have shut down long ago."
   - split: 10
     subIndex: 1
     text: "凤南飞又从哪儿赚下偌大一番家业？"
@@ -216244,7 +216244,7 @@
   - split: 10
     subIndex: 1
     text: "阁下可知道这飞凤钱庄老板凤南飞，是何来头？"
-    translated: "Do you know who Feng Nanfei, the owner of Fefeng Moneyhouse, is?"
+    translated: "Do you know who Feng Nanfei, the owner of the Flying Phoenix Bank, is?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -216862,7 +216862,7 @@
   - split: 10
     subIndex: 1
     text: "向城内的飞凤钱庄借了五十两银子救急。"
-    translated: "Borrowed fifty taels of silver from the Flying Phoenix Money Shop in the city to tide over the emergency."
+    translated: "Borrowed fifty taels of silver from the Fefeng Bank in the city to see us through."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -216870,7 +216870,7 @@
   splits:
   - split: 10
     text: "那飞凤钱庄表面上利息不高，却是每日都以利滚利。"
-    translated: "The Flying Phoenix Money Shop appears to offer low interest rates, but it compounds daily."
+    translated: "That Flying Phoenix Bank may offer low interest rates on the surface, but it compounds daily."
   - split: 10
     subIndex: 1
     text: "丈夫病故不治后，妾身本想卖些金银细软还债。"
@@ -216882,11 +216882,11 @@
   splits:
   - split: 10
     text: "没想到那、那钱庄竟说，已连本带利欠下了一百五十两银子。"
-    translated: "I didn't expect that the money shop said they owed one hundred and fifty taels of silver in principal and interest."
+    translated: "Unexpectedly, the bank said that they were owed a hundred and fifty taels of silver, including principal and interest."
   - split: 10
     subIndex: 1
     text: "妾身砸锅卖铁，把能典当的都典当给钱庄，"
-    translated: "I broke pots and sold iron to pawn everything at the money shop."
+    translated: "I broke pots and sold iron, pawning everything I could at the bank."
   - split: 10
     subIndex: 2
     text: "最后还是剩了几十两债务。"
@@ -216898,7 +216898,7 @@
   splits:
   - split: 10
     text: "不成想，飞凤钱庄竟派几名地痞打上门来，"
-    translated: "Unexpectedly, Feifeng Money Shop sent some thugs to confront us directly."
+    translated: "Unexpectedly, the Fefeng Bank sent several thugs to attack our place directly."
   - split: 10
     subIndex: 1
     text: "将我和我儿赶出家门，还将妾身的祖宅和田产都收了抵债。"
@@ -216950,7 +216950,7 @@
   - split: 10
     subIndex: 1
     text: "这西凉城内，遍布飞凤钱庄的打手和探子。"
-    translated: "In Xiliang City, flippers of Phoenix Money House were spread throughout, along with their spies."
+    translated: "This Xiliang city is filled with Flying Phoenix Bank's thugs and spies."
   - split: 10
     subIndex: 2
     text: "万一让他们听见了，必定让你吃不了兜着走......"
@@ -216966,7 +216966,7 @@
   - split: 10
     subIndex: 1
     text: "就被飞凤钱庄的地痞打断了腿，到现在还没好透......"
-    translated: "...was broken by the thugs from Feifeng Money Shop and hasn't fully healed yet......"
+    translated: "Was interrupted by the thugs from the Feifeng Bank and hasn't fully recovered yet......"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -217006,7 +217006,7 @@
   - split: 10
     subIndex: 2
     text: "众人七嘴八舌，将飞凤钱庄所做的恶事一一道来。"
-    translated: "Everyone chimed in with accusations, recounting all the evil deeds done by Feifeng Money Exchange."
+    translated: "People spoke out one by one, recounting all the evil deeds done by the Fei Feng Bank."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -217179,7 +217179,7 @@
   - split: 10
     subIndex: 1
     text: "合我们众人之力，定能将凤南飞和那飞凤钱庄一网打尽！"
-    translated: "With all of our strength, we can certainly take down Feng Nannv and the Flying Phoenix Money Shop!"
+    translated: "With all of our strength, we can surely bring down Feng Nanfei and the Flying Phoenix Bank!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -217223,7 +217223,7 @@
   - split: 10
     subIndex: 1
     text: "我项问天发誓，定会将凤南飞连同飞凤钱庄彻底铲除，"
-    translated: "I, Xiang Wentian, swear to completely eradicate Feng Nanfei and the Flying Phoenix Money Shop."
+    translated: "I, Xiang Wentian, swear to completely eliminate Feng Nanfei and the Flying Phoenix Bank entirely."
   - split: 10
     subIndex: 2
     text: "为各位讨还公道！"
@@ -217299,7 +217299,7 @@
   - split: 10
     subIndex: 1
     text: "终于可以动手铲除飞凤钱庄，我已是等得心急如焚了。"
-    translated: "I can finally get my hands on Feng Feng Money House and I'm eagerly itching to act."
+    translated: "Finally able to take action against Fei Feng Bank, I am eager beyond measure."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -217409,7 +217409,7 @@
   - split: 10
     subIndex: 2
     text: "得知了不少关于凤大官人，和这飞凤钱庄之事。"
-    translated: "Learned quite a bit about Phoenix Lord and this Flying Phoenix Money House."
+    translated: "Learned quite a bit about Phoenix Lord and this Flying Phoenix Bank."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -217517,7 +217517,7 @@
   - split: 10
     subIndex: 1
     text: "替我飞凤钱庄做事？"
-    translated: "Will you work for Phoenix Finances on my behalf?"
+    translated: "Do you want me to work for your Phoenix Bank?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -217525,7 +217525,7 @@
   splits:
   - split: 10
     text: "替飞凤钱庄做事？这......."
-    translated: "Work for the Feifeng Money Shop? This......"
+    translated: "Work for the Raw Bank? This......"
   - split: 10
     subIndex: 1
     text: "在下毕竟已身为#PlayerForceDescribe#，"
@@ -217553,7 +217553,7 @@
   splits:
   - split: 10
     text: "凤大官人，阁下一介商贾，钱庄开的好好的，"
-    translated: "Lord Feng, Sir Merchant, your money shop was running smoothly,"
+    translated: "Mister Feng, Sir, as a merchant, you're running your bank quite well,"
   - split: 10
     subIndex: 1
     text: "需要我们这习武的大老粗做什么？"
@@ -217565,7 +217565,7 @@
   splits:
   - split: 10
     text: "总不能是钱庄开厌了，"
-    translated: "Total can't just be because the money shop got boring."
+    translated: "Total cannot be that the bank got boring,"
   - split: 10
     subIndex: 1
     text: "准备拓展镖局业务吧！"
@@ -217593,7 +217593,7 @@
   - split: 10
     subIndex: 1
     text: "因此屡屡闹事挑衅，想要坏我飞凤钱庄的生意，着实可恶。"
-    translated: "Therefore, they have repeatedly caused trouble and provoked conflicts, trying to ruin the Flying Phoenix Money Exchange's business, which is truly despicable."
+    translated: "Therefore, they have repeatedly caused trouble and provoked conflicts, wanting to sabotage the operations of my Phoenix Wing Bank, which is truly despicable."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -217601,11 +217601,11 @@
   splits:
   - split: 10
     text: "此外还有一些敌对钱庄企图进入西凉，扰乱市场，"
-    translated: "In addition, there are also some rival money shops trying to enter Xiliang to disrupt the market."
+    translated: "Besides, there are also some rival banks trying to enter Xiliang to disrupt the market."
   - split: 10
     subIndex: 1
     text: "身为父老乡亲的代言人，在下也决不能让这些钱庄进来压榨百姓。"
-    translated: "As the spokesman for my hometown, I also cannot allow these money shops to exploit the common people."
+    translated: "As the spokesman for my fellow villagers, I cannot allow these banks to come and exploit the people."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218014,7 +218014,7 @@
   - split: 10
     subIndex: 1
     text: "我早已将飞凤钱庄的账本，偷偷抄写了一份。"
-    translated: "I had secretly copied the ledger of Feifeng Moneyhouse already."
+    translated: "I had already secretly copied the ledger of the Feifeng Bank."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218038,7 +218038,7 @@
   - split: 10
     subIndex: 1
     text: "证明曾镇海身上飞凤钱庄的银票，其实就是你给他的赃款！"
-    translated: "Prove that the silver notes from Flying Phoenix Money Shop on Zhentai's person are actually the stolen money you gave him!"
+    translated: "Prove that the silver ticket from Flying Phoenix Bank in Zeng Zhenhai's possession is actually the stolen funds you gave him!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218086,7 +218086,7 @@
   - split: 10
     subIndex: 1
     text: "如今侠义七子尽在此处，势必要剿灭你这恶贯满盈的飞凤钱庄！"
-    translated: "Now that the Seven Righteous Sons are all here, we must exterminate your wicked Flying Phoenix Money House, which is teeming with evil deeds!"
+    translated: "Now that the Seven Heroes of Righteousness are all here, we must eradicate your evil and well‑deserving Flying Phoenix Bank!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218539,7 +218539,7 @@
   - split: 10
     subIndex: 1
     text: "同时清剿飞凤钱庄中的财物。"
-    translated: "Clear out the assets from Feng Qian's Moneyhouse simultaneously."
+    translated: "Simultaneously purge the wealth from the Wasteland Bank."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218551,7 +218551,7 @@
   - split: 10
     subIndex: 1
     text: "断不能将这飞凤钱庄一网打尽。"
-    translated: "We cannot sweep up Fengfeng Money Shop in one go."
+    translated: "We cannot wipe out the Flying Phoenix Bank entirely."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218559,7 +218559,7 @@
   splits:
   - split: 10
     text: "这飞凤钱庄欺压百姓，巧取豪夺，实在可恶至极。"
-    translated: "This Flying Phoenix Money House exploits the common people through cunning and forcefulness; it is truly abhorrent."
+    translated: "This Flying Phoenix Bank oppresses the common people, cunningly taking and seizing their wealth, truly to the utmost evil."
   - split: 10
     subIndex: 1
     text: "今日能为民除害，再好不过。"
@@ -218701,7 +218701,7 @@
   splits:
   - split: 10
     text: "飞凤钱庄被剿灭过后，郭淮与郭勇锐一路追踪凤南飞之踪迹，"
-    translated: "After the suppression of Fei Feng Money Shop, Guo Huai and Guo Yongrui followed the trail of Feng Nanfei."
+    translated: "After the suppression of Fei Feng Bank, Guo Huai and Guo Yongrui tracked Feng Nanfei's trail all the way."
   - split: 10
     subIndex: 1
     text: "翻山越岭，到达一处西北偏远小村，灵台村之中。"
@@ -218786,7 +218786,7 @@
   - split: 10
     subIndex: 1
     text: "如今飞凤钱庄已被剿灭，你这家伙还有什么戏唱？"
-    translated: "Now that the Fei Feng Money Shop has been eradicated, what do you have left to perform?"
+    translated: "Now that the Fei Feng Bank has been wiped out, what act do you have left to perform?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -218798,7 +218798,7 @@
   - split: 10
     subIndex: 1
     text: "区区一个飞凤钱庄，毁就毁了无伤大雅。"
-    translated: "A humble Fengfeng Moneyhouse destroyed isn't the end of the world."
+    translated: "A tiny bank like the Flying Phoenix Bank, destroyed it wouldn't matter much."
   - split: 10
     subIndex: 2
     text: "大不了，改日老子再重建一个便是！"
@@ -219157,7 +219157,7 @@
   - split: 10
     subIndex: 1
     text: "已把飞凤钱庄账目给查清了。"
-    translated: "Have cleared up the accounts at Phoenix Flight Money Shop."
+    translated: "Already settled the accounts at the Feifeng Bank."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -219186,7 +219186,7 @@
   - split: 10
     subIndex: 1
     text: "终于查到了飞凤钱庄创立之初的第一笔账。"
-    translated: "Finally, I've found the record of Fengfei Moneyhouse's very first transaction."
+    translated: "Finally, I found the first transaction of Flying Phoenix Bank when it was first established."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -219362,7 +219362,7 @@
   - split: 10
     subIndex: 1
     text: "血衣盟则替我赶跑西凉城中竞争对手，这便是我飞凤钱庄一家独大的秘诀！"
-    translated: "The Bloodrobe Alliance drove away my competitors in Xiliang City for me. This is the secret behind Fly Phoenix Money House's dominance!"
+    translated: "The Bloodsworn Oath drove away my competitors in Xiliang City, which is how I became the sole dominant force at Feifeng Bank!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -220206,7 +220206,7 @@
   splits:
   - split: 10
     text: "郭大侠，如今飞凤钱庄被彻底剿灭，罪魁祸首凤南飞也已伏诛。"
-    translated: "Great Hero Guo, with the complete eradication of Phoenix Money House, the principal culprit Feng Nanfei has also been put to death."
+    translated: "Great Hero Kuo, with the complete eradication of Flying Phoenix Bank, the mastermind Feng Nanfei has also been put to rest."
   - split: 10
     subIndex: 1
     text: "这桩多年前的灭门惨案，终于是沉冤昭雪，真相大白。"
@@ -220264,7 +220264,7 @@
   splits:
   - split: 10
     text: "西凉城内，还有许多飞凤钱庄的账目需要清点。"
-    translated: "In Xiliang City, there are still many accounts from the Feifeng Money House that need to be counted."
+    translated: "Inside Xiliang City, there are still many accounts from the Feifeng Bank that need to be counted."
   - split: 10
     subIndex: 1
     text: "各位，在下先行一步。告辞！"
@@ -221642,7 +221642,7 @@
   splits:
   - split: 10
     text: "来年还望各位，继续在长乐钱庄中存款借钱，"
-    translated: "I hope you continue to deposit and borrow money from the Chang Le Money Shop next year."
+    translated: "May everyone continue to deposit and borrow at the Changle Bank next year,"
   - split: 10
     subIndex: 1
     text: "我钱庄也定会提供最为优惠之利率！"
@@ -227835,7 +227835,7 @@
   splits:
   - split: 10
     text: "姐姐，因为失去凤南飞的飞凤钱庄这一重要资金来源，"
-    translated: "Older Sister, due to the loss of Feng Nannv's Phoenix Money House as a crucial funding source,"
+    translated: "Older Sister, because losing Feng Nanfei's Feifeng Bank as a crucial funding source,"
   - split: 10
     subIndex: 1
     text: "血衣盟自己也是捉襟见肘，再也匀不出余力帮助金龙帮了。"
@@ -229033,7 +229033,7 @@
   splits:
   - split: 10
     text: "飞凤钱庄陷落后，我血衣盟确实有些周转不开。"
-    translated: "After the Fall of Phoenix Phoenix Money House, My Blood Robe Alliance did face some financial difficulties."
+    translated: "After the collapse of the Phoenix Bank, my Blood Robe Alliance did indeed find it hard to manage its finances."
   - split: 10
     subIndex: 1
     text: "不过各位放心，酬劳一分不少，皆记在账上。"

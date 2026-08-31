@@ -1,0 +1,8 @@
+- path: Canvas/CraftUIPanel/EquipLittleType/*/Text
+  sampleText: Headband
+  idealFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/CraftUIPanel/EquipSubTypeChooseGrid/*/Label
+  sampleText: "Martial \nVessel"
+  idealFontSize: 16.0
+  allowWordWrap: true

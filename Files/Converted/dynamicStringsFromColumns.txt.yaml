@@ -369,7 +369,7 @@
 - raw: "钱庄"
   splits:
   - text: "钱庄"
-    translated: "Money Shop"
+    translated: "Bank"
 - raw: "农田"
   splits:
   - text: "农田"

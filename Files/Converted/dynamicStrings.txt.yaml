@@ -16258,7 +16258,7 @@
     translated: "This matter of collecting silver coins requires"
   - subIndex: 2
     text: "去本门的钱庄中经营几日"
-    translated: "Operate in our sect's money house for a few days."
+    translated: "Go operate in the door's bank for a few days."
   - subIndex: 3
     text: "，方能顺利完成。"
     translated: ", Can be completed successfully"
@@ -18974,7 +18974,7 @@
     translated: "This matter of collecting silver, we only need"
   - subIndex: 2
     text: "去本门的钱庄中经营几日"
-    translated: "Operate in our sect's money house for a few days."
+    translated: "Go operate in the door's bank for a few days."
   - subIndex: 3
     text: "，想来不难完成。"
     translated: ", It shouldn't be difficult to accomplish"
@@ -28820,7 +28820,7 @@
 - raw: "方"
   splits:
   - text: "方"
-    translated: "Fang"
+    translated: "Direction"
 - raw: "方向"
   splits:
   - text: "方向"
@@ -43429,7 +43429,7 @@
 - raw: "钱庄"
   splits:
   - text: "钱庄"
-    translated: "Money Shop"
+    translated: "Bank"
 - raw: "钱捕头"
   splits:
   - text: "钱捕头"
