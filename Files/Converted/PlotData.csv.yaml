@@ -10298,7 +10298,7 @@
   splits:
   - split: 10
     text: "添翼兄，我也来助你一臂之力！"
-    translated: "Brother Tiyi, I'll lend you my support as well!"
+    translated: "Brother Tianyi, I'll lend you a hand too!"
 - raw: ",,,右,,,,,StartSpeFight;8,,我的妈天瓜子哟！怎么一下子来了啷个多人！"
   splits:
   - split: 10
@@ -10419,7 +10419,7 @@
   splits:
   - split: 10
     text: "又听得轰隆一声！那二人合抱的大树被瞬间炸断，"
-    translated: "Then came another thunderous boom! The two-person-wide tree was blasted in half in an instant,"
+    translated: "Then came another thunderous boom! The two‑person‑wide tree was blasted in half in an instant,"
   - split: 10
     subIndex: 1
     text: "上半截树干连接着茂盛树冠吱呀呀轰然倒塌，竟向着那贼人压去。"
@@ -10470,7 +10470,7 @@
   splits:
   - split: 10
     text: "娘"
-    translated: "Miss"
+    translated: "Daughter"
   - split: 10
     subIndex: 1
     text: "我滴个亲娘哟！姑奶奶饶命！姑奶奶饶命！"
@@ -10491,7 +10491,7 @@
   - split: 10
     subIndex: 1
     text: "哼，本大小姐心善，看在你叫我姑奶奶的份上，今天就饶你一命！"
-    translated: "Hmph. This young lady has a kind heart. Since you called me 'Great-Aunt,' I'll spare your life today!"
+    translated: "Hmph. This young lady has a kind heart. Since you called me 'Great‑Aunt,' I'll spare your life today!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10499,7 +10499,7 @@
   splits:
   - split: 10
     text: "不过小翼子啊，这种贼人，你刚刚出手救他作甚？"
-    translated: "But Little Yi, why did you save this scoundrel just now?"
+    translated: "But Little Yizi, why did you save this rogue just now?"
 - raw: ",,,左,,,,,,,哎呀，我看他跟咱过招时，还是留了情的嘛，想来也不是啥子大奸大恶之人。\\n要是乱杀无辜，岂不把咱雷大小姐的名声给搞臭了？"
   splits:
   - split: 10
@@ -10508,7 +10508,7 @@
   - split: 10
     subIndex: 1
     text: "要是乱杀无辜，岂不把咱雷大小姐的名声给搞臭了？"
-    translated: "Would indiscriminately killing innocents ruin Lady Lei's reputation?"
+    translated: "If we start indiscriminately killing innocents, wouldn't that ruin Miss Lei's reputation?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10536,7 +10536,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子你想的到挺周全的嘛，不错不错！"
-    translated: "Little Yi, you've thought of everything! Not bad at all!"
+    translated: "Little Yizi, you've thought through this quite thoroughly. Not bad at all!"
   templates:
   - split: 10
     template: "{0}~{1}"
@@ -10544,7 +10544,7 @@
   splits:
   - split: 10
     text: "哈哈，还是我们雷大小姐心善手软，一身好武艺，王某佩服得不得了！"
-    translated: "Haha, it's Lady Lei who shows kindness and mercy, with such excellent martial arts skills. Wang Sheng admires you greatly!"
+    translated: "Haha, it's Miss Lei again who shows such a kind heart and soft hand despite her martial skills, Wang Zhang admires you greatly!"
 - raw: ",玩家,王添翼,右,,,,,,,当然还有#PlayerName#啦，多谢你来给我们扎起！"
   splits:
   - split: 10
@@ -10636,7 +10636,7 @@
   splits:
   - split: 10
     text: "这不？雷大小姐听说成都附近有个恶贼，叫做"
-    translated: "This is indeed the case. Lady Lei heard that there's a wicked bandit near Chengdu, named"
+    translated: "Isn't that so? Miss Lei heard there's a wicked bandit near Chengdu, called"
   - split: 10
     subIndex: 1
     text: "戴壮"
@@ -10693,7 +10693,7 @@
   splits:
   - split: 10
     text: "若是伤了老百姓，炸了民宅啥子的，不就糟了雷大小姐的侠义之名了！"
-    translated: "If we hurt the common people or blow up their houses, wouldn't that ruin Lady Lei's reputation for chivalry and righteousness!"
+    translated: "If they hurt the common people or blow up civilian houses, it would ruin Miss Lei's righteous reputation!"
 - raw: ",,,右,,,,,,,嗯，有点道理，就听你的，走吧！"
   splits:
   - split: 10
@@ -10741,7 +10741,7 @@
   splits:
   - split: 10
     text: "只是这添翼兄，好歹也是一堂堂七尺男儿，"
-    translated: "But Brother Feathered Wings, at least he's a full‑grown man."
+    translated: "But Brother Tianyi, at the very least, is a full‑fledged man of seven feet."
   - split: 10
     subIndex: 1
     text: "怎的跟个仆人似的鞍前马后，极尽谄媚之能事？"
@@ -10841,7 +10841,7 @@
   - split: 10
     subIndex: 1
     text: "我雷殷殷炸塌的房子，关小翼子什么事？"
-    translated: "What does Guan Xiayi have to do with the house that I Leiyin blew up?"
+    translated: "What does Little Yizi have to do with the collapse of my house, Lei Yinyin?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10894,7 +10894,7 @@
   splits:
   - split: 10
     text: "哼，如此一来便没事了吧，小翼子我们走！"
-    translated: "Hm, then there's nothing to worry about. Little Wing, let's go!"
+    translated: "Hmph. With that, we should be good. Little Yizi, let's go!"
 - raw: ",,,右,,,,,,,慢着！"
   splits:
   - split: 10
@@ -10909,7 +10909,7 @@
   splits:
   - split: 10
     text: "够了够了，只是雷大小姐，"
-    translated: "Enough enough, just Lady Lei"
+    translated: "Enough already, it's just Miss Lei"
   - split: 10
     subIndex: 1
     text: "贵派霹雳堂有使者送来书信一封，要我务必转交给你。"
@@ -10934,7 +10934,7 @@
   - split: 10
     subIndex: 2
     text: "哎呀，毕竟父女情深，雷大小姐您还是拆开看看吧。"
-    translated: "Ah well, considering the deep bond between father and daughter, why don't you open it and see?"
+    translated: "Ah well, considering the deep father‑daughter bond, Miss Lei, you might want to open it and see."
   templates:
   - split: 10
     template: "{0}：{1}\\n{2}"
@@ -10979,7 +10979,7 @@
   splits:
   - split: 10
     text: "不必了，让小翼子跟着就好。"
-    translated: "No need, let Xiao Yi Zi follow along."
+    translated: "No need, let Little Yizi follow along"
 - raw: ",,,右,,,,,,,这……哈哈，看来大小姐对本门这添翼真是情有独钟啊，\\n也好也好，只是一路上还是尽量低调行事，莫要再生争端了。"
   splits:
   - split: 10
@@ -11004,7 +11004,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子，我们走吧！"
-    translated: "Little Wing, let's go!"
+    translated: "Little Yizi, let's go!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -11175,7 +11175,7 @@
   splits:
   - split: 10
     text: "嗨，什么重谢不重谢的都是其次，添翼兄有求，我自然义不容辞！"
-    translated: "Hi, whether or not to thank me is secondary; Brother Tiyi has a request, and I naturally can't refuse!"
+    translated: "Hi, whether or not to thank me is secondary; Brother Tianyi, if you have any requests, I naturally cannot refuse!"
   - split: 10
     subIndex: 1
     text: "（嘿嘿，到时霹雳堂若是给上几张银票，岂不是发大财了！）"
@@ -11211,7 +11211,7 @@
   splits:
   - split: 10
     text: "本大小姐回去前，要顺道去江陵再游览一番，小翼子你可明白？"
-    translated: "Before I go back, I intend to pay another visit to Jiangling. Do you understand, Little Wing?"
+    translated: "Before I go back, I intend to pay another visit to Jiangling. Do you understand, Little Yizi?"
 - raw: ",,,右,,,,,,,哎呀，顺路倒是顺路，\\n可就怕回头再生出啥子事情哦……"
   splits:
   - split: 10
@@ -11636,7 +11636,7 @@
   - split: 10
     subIndex: 1
     text: "我霹雳堂雷殷殷雷大小姐，用小小一枚石子吓退两名恶贼的传说！"
-    translated: "I am Lei YinYin, the Young Master of Thunderclap Hall, with the tale of scaring off two villains with but a tiny pebble!"
+    translated: "I, Miss Lei Yin Yin of Thunderclap Hall, the tale of scaring off two bandits with just a tiny pebble!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -11644,7 +11644,7 @@
   splits:
   - split: 10
     text: "而且小翼子小翼子你看到了吗！"
-    translated: "And Little Wing, did you see that, Little Wing!?"
+    translated: "And you saw Little Yizi Little Yizi!"
   - split: 10
     subIndex: 1
     text: "我那石子丢的好准，嗖的一声，正中脑门！那家伙当时的表情"
@@ -11704,7 +11704,7 @@
   splits:
   - split: 10
     text: "额，虽然感觉雷大小姐好像领悟到了诀窍，"
-    translated: "Ah, although it feels like Lady Le seems to have grasped the gist,"
+    translated: "Uh, although it seems that Miss Lei has grasped the gist,"
   - split: 10
     subIndex: 1
     text: "怎么感觉不是什么好事呢。"
@@ -11753,7 +11753,7 @@
   - split: 10
     subIndex: 1
     text: "这个小翼子，真是人如其名，小心翼翼的很。"
-    translated: "This little Winged One truly lives up to its name‑extremely cautious."
+    translated: "This Little Yizi is indeed as cautious as his name suggests."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -11853,7 +11853,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子！是不是你出卖了我！"
-    translated: "Little Wing! Did you betray me!"
+    translated: "Little Yizi! Did you betray me!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -11995,7 +11995,7 @@
   splits:
   - split: 10
     text: "小翼子，让你收你就收，这是你应得的。"
-    translated: "Little Wing, if I order you to submit, you should submit‑it's what you deserve."
+    translated: "Little Yizi, if you're meant to receive it, then receive it. This is yours."
 - raw: ",,,无,,,,,,,雷殷殷见状夺过银票，塞入王添翼怀中。\\n王添翼依旧是一副欲言又止的样子，雷殷殷见状似乎明白了什么。"
   splits:
   - split: 10
@@ -12016,7 +12016,7 @@
   - split: 10
     subIndex: 1
     text: "我和小翼子说几句话再回去，可好？"
-    translated: "Can I have a few words with Little Wing before we go back, okay?"
+    translated: "Can I chat with Little Yizi for a moment before we go back?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -12045,7 +12045,7 @@
   - split: 10
     subIndex: 1
     text: "我这一路保护雷大小姐，可不是为了这点银子"
-    translated: "I protected Lady Lei all this way not just for a little silver."
+    translated: "I protected Miss Lei all the way, not just for this small amount of silver."
   templates:
   - split: 10
     template: "{0}……{1}……"
@@ -12112,7 +12112,7 @@
   - split: 10
     subIndex: 2
     text: "小翼子你可明白？"
-    translated: "Do you understand, Little Wing?"
+    translated: "Little Yizi, do you understand?"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -12164,7 +12164,7 @@
   splits:
   - split: 10
     text: "小翼子，这些天来谢谢你了。"
-    translated: "Little Wing, thanks for everything these past days."
+    translated: "Little Yizi, thank you these days"
 - raw: ",,,左,,,,,,,不谢！"
   splits:
   - split: 10
@@ -12196,7 +12196,7 @@
   splits:
   - split: 10
     text: "好啦好啦，小翼子，以后有缘再见吧"
-    translated: "Alright, little wing, let's meet again sometime"
+    translated: "Alright, alright, Little Yizi. Let's meet again some other time."
   - split: 10
     subIndex: 1
     text: "对了，你知道我当时在成都买的香粉和胭脂，一盒值几两黄金吗？"
@@ -24970,7 +24970,7 @@
   splits:
   - split: 10
     text: "添翼兄说的不错，无功不受禄，这钱还是留作村子他用吧！"
-    translated: "Brother Tengyi said it's only fair; no gain, no reward. Let's keep this money for the village's use!"
+    translated: "Brother Tianyi said it's only right not to receive a reward for no work. It's better to keep this money for the village!"
 - raw: ",,,右,,,,,ChangePlotDataBase;214,,两位少侠高风亮节，老朽叹服。"
   splits:
   - split: 10
@@ -25026,7 +25026,7 @@
   splits:
   - split: 10
     text: "戴壮兄，若日后村子遇到麻烦，不妨飞鸽传书我和添翼兄，"
-    translated: "Brother Dai Zhuang, if the village faces trouble in the future, consider sending a message to me and Brother Tian Yi via homing pigeon."
+    translated: "Brother Daizhuang, if the village runs into trouble in the future, feel free to send a message to me and Brother Tianyi via homing pigeon."
   - split: 10
     subIndex: 1
     text: "若有帮得上忙的，定来助一臂之力。"
@@ -44904,7 +44904,7 @@
   splits:
   - split: 10
     text: "哈哈哈哈，小翼子放心，这次没带。"
-    translated: "Haha, Little Wing, rest assured, I didn't bring it this time."
+    translated: "Haha, Little Yizi, you can relax; I didn't bring it this time."
   - split: 10
     subIndex: 1
     text: "石子倒是带了几枚，关键时刻吓人够用了。"
@@ -44940,7 +44940,7 @@
   splits:
   - split: 10
     text: "嘻嘻嘻嘻，小翼子你尽出馊主意，"
-    translated: "Haha, Little Wing, you keep coming up with bad ideas."
+    translated: "Haha, Little Yizi, you're always coming up with bad ideas."
   - split: 10
     subIndex: 1
     text: "在堂堂少年英雄大会上这么玩，怕不是回去爹爹又要给我关禁闭了。"
@@ -45266,7 +45266,7 @@
   splits:
   - split: 10
     text: "小翼子，你这身功夫倒有点进步。"
-    translated: "Little Wing, your martial arts have made some progress."
+    translated: "Little Yizi, you've made some progress with your martial arts."
   - split: 10
     subIndex: 1
     text: "今天还有些时间，咱们去这京城里看看戏逛逛街，怎么样？"
@@ -45346,7 +45346,7 @@
   splits:
   - split: 10
     text: "等这茬结束了，再寻#PlayerName#与添翼兄好好喝几杯！"
-    translated: "After this batch is over, I'll find #PlayerName# and Brother Tiyi to have a few drinks together!"
+    translated: "After this batch is over, I'll find #PlayerName#{} and Brother Tianyi{} to have a few drinks together!"
   - split: 10
     subIndex: 1
     text: "先走一步，告辞！"
@@ -45784,7 +45784,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，等我飞鸽通知，到时候叫上添翼兄弟一起。"
-    translated: "#PlayerName#, wait for my pigeon post. When the time comes, fellow Tianyi and I will join you."
+    translated: "#PlayerName#, wait for my homing pigeon message. When the time comes, call on Brother Tianyi to join us."
   - split: 10
     subIndex: 1
     text: "咱们三兄弟在巴蜀一地，给贼人来个瓮中捉鳖！"
@@ -46312,7 +46312,7 @@
   splits:
   - split: 10
     text: "不行不行，这不是让添翼兄弟送死么。"
-    translated: "No no, this would be making Brother Tengyue go to his death."
+    translated: "No no, this would be asking Brother Tianyi to suicide."
   - split: 10
     subIndex: 1
     text: "我武功最高，我来断后！"
@@ -46544,7 +46544,7 @@
   splits:
   - split: 10
     text: "添翼兄，#PlayerName#，此次若无两位兄弟鼎力相助，怕是凶多吉少！"
-    translated: "Adder Brother,#PlayerName#, without the support of the two brothers, it might have been very dangerous!"
+    translated: "Brother Tianyi, #PlayerName#, if not for the two of us, this might end very badly!"
 - raw: ",,,左,,,,,GetSpeReward;38,,兄弟我身无长物，没什么好报答的，\\n这本丐帮轻功，就送给两位兄弟参详参详吧。"
   splits:
   - split: 10
@@ -46586,7 +46586,7 @@
   - split: 10
     subIndex: 2
     text: "我这中毒未解，手上没力气，添翼兄慢点慢点"
-    translated: "I'm still poisoned, so I don't have much strength in my hands. Brother Tengyi, please go slower, slower."
+    translated: "I'm still poisoned, so I don't have much strength in my hands. Brother Tianyi, please go slow, slow down."
   templates:
   - split: 10
     template: "{0}……{1}\\n{2}……"
@@ -46854,7 +46854,7 @@
   splits:
   - split: 10
     text: "（个老狐狸，要是禀报了你，估计又要骂王添翼兄弟狗拿耗子多管闲事了。）"
-    translated: "(A old fox would likely criticize Brother Wang Tianyi for meddlesome dog catching mice if he reported you.)"
+    translated: "(A old fox; if I reported you, they'd likely scold Brother Tianyi for meddling like a dog chasing a mouse.)"
 - raw: ",王添翼,,右,,,,,,,哦~是那位郭淮郭大侠的爱子是吧。\\n哈哈哈，看来你俩关系处的不错，\\n说明为师让好生结交此人的嘱托，你是放在心里了啊。"
   splits:
   - split: 10
@@ -46984,7 +46984,7 @@
   - split: 10
     subIndex: 1
     text: "向那霹雳堂提亲，迎娶雷大小姐，不就名正言顺，门当户对了么？"
-    translated: "Proposing to Thunderclap Hall to marry Lady Lei, doesn't that make everything aboveboard and match perfectly in rank and status?"
+    translated: "Proposing to Thunderclap Hall and marrying Miss Lei wouldn't that make everything aboveboard and match the social standings?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -46996,7 +46996,7 @@
   - split: 10
     subIndex: 1
     text: "我这土老帽儿，咋可能跟雷大小姐般配噻。"
-    translated: "A country bumpkin like me, how could I match up with Lady Lightning?"
+    translated: "I, a country bumpkin, could never match up with Miss Lei."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -47699,7 +47699,7 @@
   - split: 10
     subIndex: 1
     text: "没有啊！雷大小姐大喜的日子，我，我高兴还来不及嘞！"
-    translated: "No way! On Lady Lei's joyous day, I'm more than happy to be here!"
+    translated: "No way! Miss Lei's big day, I'm more than happy to be here!"
   templates:
   - split: 10
     template: "{0}…{1}"
@@ -47711,7 +47711,7 @@
   - split: 10
     subIndex: 1
     text: "兄弟几个谁不知道，你早就倾心于雷大小姐了？"
-    translated: "Who among us brothers doesn't know that you've had a crush on Lady Lei for a long time?"
+    translated: "Who among us brothers doesn't know that you've had a crush on Miss Lei for a long time?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -47731,7 +47731,7 @@
   splits:
   - split: 10
     text: "哎，王兄，你与雷大小姐毕竟身份悬殊，这种事情也强求不来。"
-    translated: "Ah, Brother Wang, your status differs greatly from Lady Lei's. Such matters cannot be forced."
+    translated: "Ah, Brother Wang, the disparity in your statuses with Miss Lei naturally makes such matters unforced."
   - split: 10
     subIndex: 1
     text: "俗话说天涯何处无芳草，大丈夫何患无妻，王兄放宽心，早晚定有良缘相会。"
@@ -48629,7 +48629,7 @@
   splits:
   - split: 10
     text: "周掌门，添翼兄在江湖中交游甚广，颇负侠名，"
-    translated: "Sect Leader Zhou, they Brother Addwings are well‑known in the Jianghu and have a high reputation for chivalry."
+    translated: "Master Zhou, Brother Tianyi is well‑known in the Jianghu and widely respected for his chivalrous deeds."
   - split: 10
     subIndex: 1
     text: "想来不是作奸犯科之徒，我看此事必有隐情。"
@@ -48759,7 +48759,7 @@
   splits:
   - split: 10
     text: "咳咳，雷大小姐果真是兰心蕙质，伶牙俐齿。"
-    translated: "Cough cough, Lady Lei truly possesses a refined heart and sharp wit."
+    translated: "Cough cough, Miss Lei truly is delicate and intelligent, sharp‑tongued."
   - split: 10
     subIndex: 1
     text: "周掌门，你就卖我一个面子，暂且放此人一马。"
@@ -48844,7 +48844,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子怎会这样"
-    translated: "How could Little Wing act like this?"
+    translated: "Little Yizi wouldn't behave like this"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -48878,7 +48878,7 @@
   splits:
   - split: 10
     text: "眼下怎么办，我看小翼子被押送到成都官府，也是凶多吉少"
-    translated: "What do we do now? I see Little Wing is likely in great danger, being taken to the Chengdu authorities."
+    translated: "What do we do now? I see Little Yizi being escorted to the Chengdu authorities, and it's likely he won't make it."
   - split: 10
     subIndex: 1
     text: "要不我们劫囚车去？"
@@ -48930,7 +48930,7 @@
   - split: 10
     subIndex: 2
     text: "这狗日的周莫知，对小翼子下手竟如此狠毒，"
-    translated: "This damned Zhou Mozi struck Xiao Yizizi so cruelly."
+    translated: "This damned Zhou Mozi dealt such a vicious blow to Little Yizi."
   - split: 10
     subIndex: 3
     text: "像是有什么深仇大恨似的。"
@@ -48959,7 +48959,7 @@
   splits:
   - split: 10
     text: "那就好，还好小翼子有你们这些朋友。"
-    translated: "That's good; it's fortunate that Xiao Yi has friends like you."
+    translated: "That's good; it's fortunate that Little Yizi has friends like you."
   - split: 10
     subIndex: 1
     text: "对了，出门时爹爹给了本秘籍要我好生参悟。"
@@ -48983,11 +48983,11 @@
   splits:
   - split: 10
     text: "我眼下被大姐和唐门中人严密看管，没法和你们一道营救小翼子。"
-    translated: "I am currently being closely watched by my senior sister and members of the Tang Clan, so I cannot join you in rescuing Little Wing."
+    translated: "I am currently under the strict watch of my big sister and members of the Tang Clan, so I cannot join you in rescuing Little Yizi."
   - split: 10
     subIndex: 1
     text: "#PlayerName#，你就当是我的一点心意，一定要救下小翼子"
-    translated: "#PlayerName#, just consider this as my token of appreciation. You must save Little Yi."
+    translated: "#PlayerName#, just consider this a token of my appreciation. You must save Little Yizi."
   - split: 10
     subIndex: 2
     text: "我得回去了。"
@@ -49066,7 +49066,7 @@
   splits:
   - split: 10
     text: "添翼兄弟偷窃师门的银票？不会不会，肯定不会。"
-    translated: "Aeros and Feather Brother stole the silver tickets from our sect? Not likely, not at all."
+    translated: "Brother Tianyi wouldn't steal the temple's silver tickets. Not likely, not likely, definitely not."
   - split: 10
     subIndex: 1
     text: "我郭勇锐敢以性命担保，他不会是那种人！"
@@ -49078,7 +49078,7 @@
   splits:
   - split: 10
     text: "添翼兄弟心怀侠义，为了抓捕恶贼便是连性命都能不顾。"
-    translated: "Fellow Winged Brothers harbor chivalrous spirits. To capture the villains, they dare risk their very lives."
+    translated: "Brother Tianyi and his fellow brave‑hearted, would not hesitate to risk his life to capture the evil bandits."
   - split: 10
     subIndex: 1
     text: "如今怎么可能为了区区千两银票，就做出这等恶行？"
@@ -49106,7 +49106,7 @@
   splits:
   - split: 10
     text: "添翼兄弟才入狱还没几天，这官府怎得定罪如此之快？"
-    translated: "Brother Tiyi and his companions have only just been incarcerated, yet the authorities have already sentenced them so swiftly?"
+    translated: "Brother Tianyi has only been in prison for a few days, and the officials have already sentenced him so quickly?"
 - raw: ",,,左,,,,,,,听说他是俯首认罪了，加上又人赃并获。\\n不过我看这其中定有蹊跷，怕是有人勾结官府，\\n想要将此案做成铁案，方才如此着急将他发配充军。"
   splits:
   - split: 10
@@ -49127,7 +49127,7 @@
   splits:
   - split: 10
     text: "添翼兄弟认罪了？哼，我看怕是有贼人在诬陷伪造！"
-    translated: "Adder Brothers admitted guilt? Hm, I think there's a traitor framing them!"
+    translated: "Brother Tianyi admitted to the crime? Hmph, I suspect there's a thief framing him!"
   - split: 10
     subIndex: 1
     text: "#PlayerName#，咱们这就去监牢探望王兄，将个中原委问个清楚去。"
@@ -49168,7 +49168,7 @@
   splits:
   - split: 10
     text: "他妈的，添翼兄弟侠肝义胆，光明磊落，"
-    translated: "Damnit, Tiyi Brother is righteous and courageous, straightforward and honest."
+    translated: "Damn, Brother Tianyi is chivalrous and brave, straightforward and honest."
   - split: 10
     subIndex: 1
     text: "如今竟被关在这种鬼地方，落得和这群大奸大恶之人一起，真是没天理了！"
@@ -49197,7 +49197,7 @@
   splits:
   - split: 10
     text: "添翼兄弟！我和#PlayerName#前来探望你了！"
-    translated: "Wings Brothers! I and #PlayerName# came to visit you!"
+    translated: "Brother Tianyi! I and #PlayerName# came to visit you!"
 - raw: ",,,无,,,,,,,（只见阴暗的囚室中，有两个身影。\\n其中一个左手拿着酒壶，右手拿着一只烧鸡，正胡吃海塞着。\\n另外一个则趴在地上，似乎已经奄奄一息了。）"
   splits:
   - split: 10
@@ -49240,7 +49240,7 @@
   splits:
   - split: 10
     text: "我王添翼兄弟呢？"
-    translated: "Where is my brother Wang Tianyi?"
+    translated: "Where is my brother Tianyi?"
 - raw: ",,,左,,,,,,,（向地上那气息奄奄的身影撇撇嘴）\\n你们小兄弟躺地上睡觉呢。"
   splits:
   - split: 10
@@ -49273,7 +49273,7 @@
   splits:
   - split: 10
     text: "你！你个混蛋！我添翼兄弟若是有个三长两短，你就等死吧！"
-    translated: "You! You damn bastard! If anything happens to my winged brother, you're done for!"
+    translated: "You! You damn scoundrel! If anything happens to my Brother Tianyi, you're done for!"
 - raw: ",,,左,,,,,,,哈哈哈哈哈哈，你爷爷我在这大牢里，本来就在等死。\\n怎么的，有本事你进来揍你爷爷我呀，哈哈哈哈啊哈哈，来呀来呀！"
   splits:
   - split: 10
@@ -49310,7 +49310,7 @@
   - split: 10
     subIndex: 1
     text: "添翼兄弟！狗贼！哪个狗贼把你害成这副样子！"
-    translated: "Fellow brothers! Dog traitor! Which dog traitor harmed you this way!"
+    translated: "Brother Tianyi! You bastard! Which bastard hurt you this way!"
   - split: 10
     subIndex: 2
     text: "我定要把他碎尸万段！"
@@ -49391,7 +49391,7 @@
   splits:
   - split: 10
     text: "添翼兄弟，你等着，我郭勇锐不把你救出去，誓不为人！"
-    translated: "Wing‑Added Brother, wait for me. I, Guo Yongrui, swear I won't be a person if I don't save you!"
+    translated: "Brother Tianyi, you wait and see. I, Guo Yongrui, swear I won't be a man if I don't rescue you!"
 - raw: ",,临时:狱卒&男;30;-1;1;-5,右,,,,,ScreenBlack,,大呼小叫，吵吵什么呢？\\n探视时间到了，你们两个，快走快走！"
   splits:
   - split: 10
@@ -49454,7 +49454,7 @@
   splits:
   - split: 10
     text: "那你们凭什么将添翼兄弟和那狗贼岳无畏关在一起？"
-    translated: "Why are you keeping Brother Tiyi and that dog‑faced traitor Yue Wowe together?"
+    translated: "Why do you have the right to keep Brother Tianyi and that dog‑faced traitor Yue Wuvei in the same cell?"
   - split: 10
     subIndex: 1
     text: "看看他都被揍成啥样了？"
@@ -49538,7 +49538,7 @@
   splits:
   - split: 10
     text: "狗日的！添翼兄弟要是有个三长两短，我拿你是问！"
-    translated: "Damn it! If something happens to Fellow Winged, I'll make you pay!"
+    translated: "Darn it! If anything happens to Brother Tianyi, I'll make you pay!"
 - raw: ",,,右,,,,,,,是，是，小的清楚，小的清楚。\\n小的这就吩咐，找个大夫帮王添翼治伤去。"
   splits:
   - split: 10
@@ -49589,7 +49589,7 @@
   splits:
   - split: 10
     text: "那什么唐门少主唐离是个什么来头，为何要如此欺辱我添翼兄弟？"
-    translated: "What's the background of Tang Clan Young Master Tang Li? Why does he treat Brother Tengyi in such a humiliating manner?"
+    translated: "What's the background of Young Master Tang Clan Tang Li? Why does he bully me, Brother Tianyi, so much?"
 - raw: ",,,左,,,,,,,哎，此事说来话长……\\n（将王添翼在成都街头英雄救美，意外将唐离的脸划伤之事一一道来）"
   splits:
   - split: 10
@@ -49724,7 +49724,7 @@
   - split: 10
     subIndex: 1
     text: "他妈的，算了算了，添翼兄弟三番两次救我，我又岂能见死不救？"
-    translated: "Damn it, forget it. Wing Brother saved me twice, how could I just leave him to die?"
+    translated: "Damn it, forget it, forget it. Brother Tianyi has saved me twice now, how could I just leave him to die?"
   - split: 10
     subIndex: 2
     text: "这次就算豁出性命，也要把他劫出来！"
@@ -49827,7 +49827,7 @@
   splits:
   - split: 10
     text: "添翼兄弟即将被发配充军，此时可拖沓不得！"
-    translated: "Tengyi Brothers must not dally now as they are about to be dispatched for military service!"
+    translated: "Brother Tianyi is about to be sent to the frontier as a soldier. There's no time for delay now!"
   - split: 10
     subIndex: 1
     text: "戴壮兄弟也被我拉来了。"
@@ -49856,7 +49856,7 @@
   splits:
   - split: 10
     text: "戴壮，想当年你和王添翼兄弟也是有些交情的，"
-    translated: "Dai Zhuang, back in the day you had some camaraderie with Brother Wang Tianyi."
+    translated: "Dai Zhuang, back in the day, you had some dealings with Brother Tianyi Wang."
   - split: 10
     subIndex: 1
     text: "怎能眼睁睁看着他为奸人所害？我真是看错你了！"
@@ -49884,7 +49884,7 @@
   - split: 10
     subIndex: 1
     text: "别忘了，你能加入丐帮，这王添翼兄弟也有功劳不是？"
-    translated: "Don't forget that you could join the Beggar Sect, and Brother Wang Tiaoyi also deserves some credit for that, right?"
+    translated: "Don't forget that you could join the Beggar Sect, and Brother Tianyi also deserves some credit for that, right?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -49896,6 +49896,7 @@
   - split: 10
     subIndex: 1
     text: "他奶奶的，我乐山大患戴壮，就陪你们再干一票！"
+    translated: "Damn it, Le Shan Dahuai Dai Zhuang will accompany you for one more job!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -50787,11 +50788,11 @@
   splits:
   - split: 10
     text: "添翼兄弟，我和#PlayerName#前来营救，快起来吧！"
-    translated: "Fellow Brothers of Feathered Wings, #PlayerName# and I have come to rescue you. Wake up quickly!"
+    translated: "Brother Tianyi, I and #PlayerName# have come to rescue you. Wake up quickly!"
   - split: 10
     subIndex: 1
     text: "添翼兄弟"
-    translated: "Fellow Brothers Addition Wings"
+    translated: "Brother Tianyi"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -50804,7 +50805,7 @@
   splits:
   - split: 10
     text: "这这这这不是添翼兄弟啊？此人怎么会在添翼兄弟的牢中？"
-    translated: "This, this, this isn't Brother Feathered Wings, is it? How did this person end up in Brother Feathered Wings' jail?"
+    translated: "Isn't this Brother Tianyi? How could this person be in Brother Tianyi's prison?"
 - raw: ",玩家,,左,,,,,,,嗯，这“岳无畏”也换了个人。\\n我看此二人有些面熟，像是这牢里的狱卒啊……"
   splits:
   - split: 10
@@ -50829,7 +50830,7 @@
   - split: 10
     subIndex: 2
     text: "是添翼兄弟和岳无畏越狱了！"
-    translated: "It's Brother Tiyi and Yue Wowe escaping from prison!"
+    translated: "It's Brother Tianyi and Yue Wowei who escaped from prison!"
   templates:
   - split: 10
     template: "{0}……\\n{1}……{2}"
@@ -50841,7 +50842,7 @@
   - split: 10
     subIndex: 1
     text: "添翼兄弟和那狗贼岳无畏不共戴天，怎么可能一道越狱！"
-    translated: "Tianyi and Brother Yue Woweifu cannot live under the same sky, how could they possibly escape together!"
+    translated: "Brother Tianyi and that dog Yue Wowe cannot live under the same sky, how could they possibly escape together!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -51286,7 +51287,7 @@
   - split: 10
     subIndex: 2
     text: "王添翼兄弟"
-    translated: "Brother Wang Tianyi"
+    translated: "Brother Tianyi"
   - split: 10
     subIndex: 3
     text: "看在同门的份上，饶我一命"
@@ -51314,7 +51315,7 @@
   splits:
   - split: 10
     text: "谢谢添翼兄弟！谢谢王大侠！"
-    translated: "Thanks, Brother Featherwing! Thanks, Wang Great Hero!"
+    translated: "Thanks, Brother Tianyi! Thanks, Hero Wang!"
   - split: 10
     subIndex: 1
     text: "（向牢房出口爬去）"
@@ -51440,7 +51441,7 @@
   - split: 10
     subIndex: 1
     text: "咳咳咳咳，王添翼兄弟没救出来，我们兄弟三倒是差点被呛死。咳咳！"
-    translated: "Cough cough cough cough. Brother Wang Tianyi wasn't rescued, but we three brothers almost choked to death. Cough cough!"
+    translated: "Cough cough cough cough! Brother Tianyi nearly choked to death, and the three of us almost suffocated. Cough cough!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -51468,7 +51469,7 @@
   splits:
   - split: 10
     text: "哎，可是王添翼兄弟，到底跑哪儿去了呢？"
-    translated: "Ah, but where on earth has Brother Wang Tianyi gone?"
+    translated: "Ah, but where on earth has Brother Tianyi run off to?"
 - raw: ",,,左,,,,,AddWorldNews;传闻贼人王添翼与黑道五鬼岳无畏勾结，杀害了数名狱卒与青城弟子后趁乱越狱，\\n巴蜀一地为此人心惶惶，江湖侠士皆欲将此二贼早日捉拿归案。,,咳咳，王兄吉人天相，说不定现在已经逃出生天了。\\n等风平浪静了，咱们再接着打探他的下落。"
   splits:
   - split: 10
@@ -52242,7 +52243,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟！总算找到你这家伙了！"
-    translated: "Brother Wang Tianyi! I finally found you!"
+    translated: "Brother Tianyi! Finally found you, you guys!"
   - split: 10
     subIndex: 1
     text: "刚才的话我们都听见了，你果然不是那种作奸犯科之徒！"
@@ -52538,7 +52539,7 @@
   splits:
   - split: 10
     text: "好，添翼兄是被诬陷的，可你岳无畏却是实打实的恶贯满盈，坏事做尽。"
-    translated: "Okay, Tianyi Brother was framed, but Yue Wowe is indeed a notorious villain who has done all sorts of wicked deeds."
+    translated: "Good, Brother Tianyi was framed, but your Lord Yue Wuve is genuinely overflowing with evil deeds."
   - split: 10
     subIndex: 1
     text: "除恶务需尽，我中原小侠郭勇锐，怎能放过你这等恶徒？"
@@ -52655,7 +52656,7 @@
   splits:
   - split: 10
     text: "添翼兄弟，你说什么呢？"
-    translated: "Fellow Winged Brother, what are you saying?"
+    translated: "Brother Tianyi, what are you saying?"
 - raw: ",,,左,,,,,,,三位，我们兄弟缘分至此已尽，只能就此别过了。"
   splits:
   - split: 10
@@ -52726,7 +52727,7 @@
   - split: 10
     subIndex: 1
     text: "添翼兄弟，我在你眼里，竟然是这种人？！"
-    translated: "Wing‑Adding Brother, you're saying I'm this kind of person in your eyes?!"
+    translated: "Brother Tianyi, you think of me as this kind of person?!"
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -56225,7 +56226,7 @@
   splits:
   - split: 10
     text: "要不这样，我看王添翼兄弟，跟咱们几个颇为投缘，"
-    translated: "Why don't we do it this way? I think Wang Tianyi, Brother, gets along quite well with us."
+    translated: "Why don't we do it this way? I think Brother Tianyi and us hit it off quite well."
   - split: 10
     subIndex: 1
     text: "干脆以后，你就跟咱兄弟几个一起混吧！"
@@ -116180,7 +116181,7 @@
   - split: 10
     subIndex: 1
     text: "此人的言辞谈吐也带有几分巴蜀口音，确实与王添翼兄弟颇为相似！"
-    translated: "This person also has a distinct Ba‑Shu accent in their speech, indeed very similar to Brother Wang Tianyi!"
+    translated: "This person's speech also carries a hint of the Ba‑Shu accent, indeed very similar to Brother Tianyi!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -116188,7 +116189,7 @@
   splits:
   - split: 10
     text: "昔日云南大理一战后，王添翼兄弟便销声匿迹，仿佛人间蒸发一般。"
-    translated: "After the battle in Dali, Yunnan, Wang Tianyi and his brother vanished without a trace, as if they had disappeared from this world."
+    translated: "After the battle in Dali, Yunnan, Brother Tianyi vanished without a trace, as if he had evaporated from the mortal world."
   - split: 10
     subIndex: 1
     text: "难道他真改头换面，堕入邪道，成了黑道五鬼一员？！"
@@ -116204,7 +116205,7 @@
   - split: 10
     subIndex: 1
     text: "我敢打包票，这江湖中最不可能加入黑道五鬼的，便是王添翼兄弟了！"
-    translated: "I can guarantee that Brother Wang Tianyi is the last to join the Black Society's Five Evils in this Jianghu!"
+    translated: "I can guarantee that among the people in this Jianghu, Brother Tianyi is the least likely to join the Black Sect's Five Demons!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -116241,7 +116242,7 @@
   splits:
   - split: 10
     text: "哎，若是这“笑面鬼”当真是王添翼兄弟，也不知该如何面对。"
-    translated: "Ah, if this Smiling Devil is really Brother Wang Tianyi, I wonder how to face him."
+    translated: "Ah, if this Smiling Ghost is indeed Brother Tianyi, I wonder how to face him."
   - split: 10
     subIndex: 1
     text: "......希望是我杞人忧天了吧。"
@@ -116475,7 +116476,7 @@
   splits:
   - split: 10
     text: "无妨！添翼兄你回来了就好。"
-    translated: "No problem! Brother Tiyi, it's good that you're back."
+    translated: "No problem! Brother Tianyi, you're back, that's good."
   - split: 10
     subIndex: 1
     text: "你快随我一道去找爹爹说明情况，他老人家定能还你清白！"
@@ -116515,7 +116516,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟！这黑道五鬼行凶作恶，皆是些奸邪之徒。"
-    translated: "Brother Wang Tianyi! These five ghosts of the underworld who commit evil deeds are all vicious scoundrels."
+    translated: "Brother Tianyi! These Five Ghosts of the underworld are all wicked villains."
   - split: 10
     subIndex: 1
     text: "你岂能如此自甘堕落，与他们同流合污？"
@@ -116600,7 +116601,7 @@
   - split: 10
     subIndex: 1
     text: "添翼兄，得罪了！"
-    translated: "Brother Tiyi, I apologize!"
+    translated: "Brother Tianyi, forgive me!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -116671,7 +116672,7 @@
   splits:
   - split: 10
     text: "#PlayerName#！我已问清楚了，那笑面鬼果真是王添翼兄弟......"
-    translated: "#PlayerName#! I've gotten a clear answer; that smiley ghost is indeed Brother Wang Tianyi..."
+    translated: "#PlayerName#! I have clarified the matter; that smiling ghost is indeed Brother Tianyi..."
 - raw: ",,费彬,右,,,,TRUE,,,哈哈，又来了个送死的，给我全杀了！"
   splits:
   - split: 10
@@ -116783,7 +116784,7 @@
   - split: 10
     subIndex: 1
     text: "王添翼兄弟不是已经销声匿迹多年了么？"
-    translated: "Isn't Brother Wang Tienyi already long out of sight and sound?"
+    translated: "Isn't Brother Tianyi already long out of sight and sound?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -116815,7 +116816,7 @@
   splits:
   - split: 10
     text: "不错！想当年王添翼兄弟也是少年英雄，侠名远扬，如今竟和黑道五鬼沆瀣一气。"
-    translated: "Not bad! Back in the day, Wang Tianyi, my brother, was a young hero with a renowned chivalrous reputation. Now, he's actually associating with the Five Ghosts of the underworld."
+    translated: "Not bad! Back in the day, Brother Tianyi was a young hero, famed for his chivalry. Now, he's even allied with the Five Ghosts of the underworld."
   - split: 10
     subIndex: 1
     text: "作为兄弟，我自当把他带回正道，替他洗刷冤屈！"
@@ -116851,7 +116852,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，添翼兄天性纯良，胸怀侠义，你我都再清楚不过。"
-    translated: "#PlayerName#, Addwings Brother is inherently kind‑hearted and upholds chivalry. We both know this all too well."
+    translated: "#PlayerName#, Brother Tianyi is inherently kind and righteous, and we both know this only too well."
   - split: 10
     subIndex: 1
     text: "作为兄弟，岂能眼睁睁看着他堕入邪道，万劫不复？"
@@ -116879,7 +116880,7 @@
   - split: 10
     subIndex: 1
     text: "哎，按照他这倔脾气，只怕是要和王添翼兄弟死磕到底了。"
-    translated: "Ah, with his stubborn temperament, he's likely to deadlock with Wang Tianyi Brothers all the way."
+    translated: "Ah, with his stubborn nature, he's likely to deadlock with Brother Tianyi until the very end."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -118532,7 +118533,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟！你怎么也在此助纣为虐？"
-    translated: "Brother Wang Tianyi! How could you also be helping the wicked here?"
+    translated: "Brother Tianyi! How could you also be helping the wicked here?"
 - raw: ",,,右,,,,,,,......#PlayerName#......事已至此，你还是快逃吧！"
   splits:
   - split: 10
@@ -119082,7 +119083,7 @@
   - split: 10
     subIndex: 1
     text: "哎，只希望别牵连到王添翼兄弟............"
-    translated: "Ah, I just hope this doesn't involve Brother Wang Tianyi............"
+    translated: "Ah, I only hope that Brother Tianyi isn't caught up in this........."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -120521,7 +120522,7 @@
   splits:
   - split: 10
     text: "你是小翼子，王添翼？"
-    translated: "Are you Little Wing, Wang Tianyi?"
+    translated: "Are you Little Yizi, Wang Tianyi?"
 - raw: ",,,右,,,,,,,（一听到王添翼此名，如筛糠般颤抖起来）？\\n什、什么王添翼？"
   splits:
   - split: 10
@@ -120543,11 +120544,11 @@
   splits:
   - split: 10
     text: "那你怎会知道我是雷大小姐？"
-    translated: "Then how do you know I am Lady Lei?"
+    translated: "How could you know that I am Miss Lei?"
   - split: 10
     subIndex: 1
     text: "小翼子别装模作样了，你烧成灰我都认识！"
-    translated: "Little Wing, stop acting around me. I still recognize you even if you're reduced to ashes!"
+    translated: "Little Yizi, stop acting around me. Even if you turn to ashes, I would still recognize you!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -120601,7 +120602,7 @@
   splits:
   - split: 10
     text: "#PlayerName#！小翼子得了失心疯了，"
-    translated: "#PlayerName#! Little Wing has gone mad."
+    translated: "#PlayerName#! Little Yizi has lost his mind."
   - split: 10
     subIndex: 1
     text: "一直在说自己是什么笑面鬼，你快跟我一道把他打醒！"
@@ -120642,12 +120643,12 @@
   splits:
   - split: 10
     text: "王兄，我和雷大小姐不想伤你性命，快停手吧！"
-    translated: "Brother Wang, Lady Lei and I don't want to harm your life. Please stop!"
+    translated: "Brother Wang, Miss Lei and I don't want to harm you. Please stop!"
 - raw: ",雷殷殷,,左,,,,TRUE,,,小翼子你疯了吗？对我和#PlayerName#下这种狠手！"
   splits:
   - split: 10
     text: "小翼子你疯了吗？对我和#PlayerName#下这种狠手！"
-    translated: "Little Wing, are you crazy? You went all out on me and #PlayerName#!"
+    translated: "Little Yizi, have you gone mad? You used such harsh tactics on me and #PlayerName#!"
 - raw: ",玩家,,左,,,,,,,郭淮郭大侠很快就要追来，\\n只怕到时候你凶多吉少，现在收手还为时未晚！"
   splits:
   - split: 10
@@ -120900,7 +120901,7 @@
   splits:
   - split: 10
     text: "哎，添翼兄被唐门和青城派陷害，在中原武林已是人人喊打，走投无路。"
-    translated: "Alas, Brother Tiyi was framed by the Tang Clan and Qingcheng Sect. In Central Wulin, he is shunned by all and has no way out."
+    translated: "Ah, Brother Tianyi has been framed by the Tang Clan and Qingcheng Sect. In the Central Plains Wulin, he is shunned by all and has nowhere to turn."
   - split: 10
     subIndex: 1
     text: "他只有加入黑道五鬼，借助厉苍穹的手段，才有一线报仇雪恨之机会。"
@@ -120936,7 +120937,7 @@
   splits:
   - split: 10
     text: "......#PlayerName#，我其实心里清楚......小翼子他朴实善良，"
-    translated: "......#PlayerName#, I actually know deep down... Xia Yi Zi is sincere and kind,..."
+    translated: "......#PlayerName#, I actually know deep down... Little Yizi is sincere and kind,..."
   - split: 10
     subIndex: 1
     text: "若非情势所逼，加上被仇恨冲昏了头脑，他绝不会成为这种行凶作恶之人。"
@@ -121145,7 +121146,7 @@
   splits:
   - split: 10
     text: "好！王添翼兄弟，我果然没看错人！"
-    translated: "Good! Brother Wang Tianyi, I really didn't make a wrong judgment on you!"
+    translated: "Okay! Brother Tianyi, I really didn't mistake you!"
   - split: 10
     subIndex: 1
     text: "这战八方藏刀式，乃是我的成名绝学，"
@@ -121384,7 +121385,7 @@
   - split: 10
     subIndex: 1
     text: "我还有何颜面再见雷大小姐，郭勇锐和#$PlayerName#......"
-    translated: "How can I face Lady Lei again, Guo Yongrui, and #$PlayerName#..."
+    translated: "How can I face Miss Lei, Guo Yongrui, and {#$PlayerName#} again..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -121404,7 +121405,7 @@
   splits:
   - split: 10
     text: "（高声叫喊）王添翼兄弟，适才陷阱出了些纰漏，"
-    translated: "(Highly shouting) Brother Wang Tiyi, the trap we set earlier had some flaws."
+    translated: "(Behind me, loudly) Brother Tianyi, the trap had some flaws just now,"
   - split: 10
     subIndex: 1
     text: "引发的落石将山谷的出路也给封死了。"
@@ -121428,7 +121429,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟，眼下大哥我在这山崖之上，也是爱莫能助了。"
-    translated: "Brother Wang Tianyi, right now I'm at the cliff's edge, and there's nothing I can do about it."
+    translated: "Brother Tianyi, right now I am helpless up here on this cliff."
   - split: 10
     subIndex: 1
     text: "你尽量将郭淮拖住，到时候咱们去玉溪村汇合，多多保重！"
@@ -121445,7 +121446,7 @@
   splits:
   - split: 10
     text: "呵呵呵呵，王添翼兄弟，多多保重！"
-    translated: "Haha, Brother Wang Tianyi, take care!"
+    translated: "Haha, Brother Tianyi Wang, take care!"
 - raw: ",,无,无,,,,,,,（厉苍穹言罢，便毫不犹豫扭头离去，\\n费彬在山崖上投下了一个不屑的眼神，随后也冷笑着离去）"
   splits:
   - split: 10
@@ -121878,7 +121879,7 @@
   - split: 10
     subIndex: 1
     text: "王添翼兄弟......是被冤枉的......"
-    translated: "Brother Wang Tianyi... is wronged..."
+    translated: "Brother Tianyi... is innocent..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -121886,7 +121887,7 @@
   splits:
   - split: 10
     text: "咳咳，王、王添翼兄弟呢？！"
-    translated: "Cough cough, Wang, Brother Wang Tianyi, where is he?!"
+    translated: "Cough cough, King, Brother Tianyi!"
 - raw: ",,,无,,,,,,,众人扭头看去，没想到刚才拼掌之时未能注意，\\n这王添翼在群魔乱舞功法的催动之下，已然狂奔而去，不知所踪。"
   splits:
   - split: 10
@@ -122518,7 +122519,7 @@
   splits:
   - split: 10
     text: "厉苍穹！我王添翼兄弟在哪儿，快把他交出来！"
-    translated: "Liyang Tianyi! Where is my Brother Liyang? Hand him over quickly!"
+    translated: "Leyi Ciqiu! Where is my brother Tianyi? Hand him over quickly!"
 - raw: ",,,右,,,,,,,哼，哪来的毛头小子，能一路追到玉溪村也是不容易。\\n老子今天刚得了大统领的嘉奖，心情不错，不和你计较！"
   splits:
   - split: 10
@@ -122581,7 +122582,7 @@
   splits:
   - split: 10
     text: "郭兄！还没找到王添翼兄弟，你怎么就和厉苍穹打起来了？"
-    translated: "Brother Guo! You haven't found Brother Wang Tianyi yet. How did you start fighting with Li Cangqiong?"
+    translated: "Brother Gui! You haven't found Brother Tianyi Wang yet. How did you start fighting with Li Cangqiong?"
 - raw: ",,,右,,,,,,,#PlayerName#，这厉苍穹刀法好生厉害，先来助拳再说！"
   splits:
   - split: 10
@@ -122840,7 +122841,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟，这刀劳鬼厉苍穹恶贯满盈，坏事做尽。"
-    translated: "Brother Wang TIANyi, this ghost Liulai Guwei has committed countless wicked deeds and his evil is now fully reaped."
+    translated: "Brother Tianyi, this ghost Cangqiong has committed countless evil deeds, his evil is now at its peak."
   - split: 10
     subIndex: 1
     text: "眼下正是将他就地正法的绝佳时机，你可不能再助纣为虐了！"
@@ -122852,7 +122853,7 @@
   splits:
   - split: 10
     text: "说得对！王添翼兄弟，咱们一起拿下厉苍穹。"
-    translated: "Right! Brother Wang Tianting, let's take down Li Ciqiong together."
+    translated: "Right! Brother Tianyi, let's take down Li Ciqiong together."
   - split: 10
     subIndex: 1
     text: "然后去跟我爹解释清楚，他定会为你洗刷冤屈的！"
@@ -122993,7 +122994,7 @@
   - split: 10
     subIndex: 1
     text: "我和郭勇锐，还有雷殷殷雷大小姐，一直都坚信你胸怀侠义，定有重归正道的一天！"
-    translated: "I have always believed with Guo Yongrui and Lady Lei Yinyin that you possess chivalrous spirit and will return to the right path someday!"
+    translated: "Me and Guo Yongrui, along with Miss Lei, have always believed that with your sense of right and wrong, you will return to the path of righteousness someday!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -123022,7 +123023,7 @@
   - split: 10
     subIndex: 1
     text: "但就算是要再让我跟爹爹打一架，我也会誓死护你周全的，王添翼兄弟！"
-    translated: "But even if you want me to fight another round with Father, I will swear to protect you with my life, Brother Wang Tianyi!"
+    translated: "But even if you want me to fight another round with Father, I will fight to protect you at all costs, Brother Tianyi!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -123110,7 +123111,7 @@
   splits:
   - split: 10
     text: "咳咳咳咳，王添翼兄弟，"
-    translated: "Cough cough cough cough, Brother Wang Tianyi,"
+    translated: "Cough cough cough cough, Brother Tianyi,"
   - split: 10
     subIndex: 1
     text: "你总算醒悟过来，我果然没看错你！"
@@ -123461,7 +123462,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟！厉苍穹，拿命来！"
-    translated: "Brother Wang Tiyi! Li Ciqiong, here's your life!"
+    translated: "Brother Tianyi! Li Ciqiong, come to fight with your life!"
   - split: 10
     subIndex: 1
     text: "（用尽全身力气击出一招降龙掌法，正中厉苍穹胸口）"
@@ -123638,7 +123639,7 @@
   - split: 10
     subIndex: 1
     text: "不要将我的死讯告知雷大小姐......就说我人间蒸发了......"
-    translated: "Do not tell Miss Xiaoxia that I died... Just say I vanished from the mortal world..."
+    translated: "Don't tell Miss Lei about my death... Just say I disappeared from the mortal world..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -123654,7 +123655,7 @@
   - split: 10
     subIndex: 2
     text: "王添翼兄弟。"
-    translated: "Brother Wang Tianyi"
+    translated: "Brother Tianyi"
   templates:
   - split: 10
     template: "{0}…{1}…{2}"
@@ -123710,7 +123711,7 @@
   - split: 10
     subIndex: 1
     text: "只要你们能够记住，只要你们几位兄弟，还有雷大小姐能够记住！"
-    translated: "As long as you and your fellow brothers, and Lady Lei can remember!"
+    translated: "As long as you, my fellow brothers and Miss Lei, can remember!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -123800,7 +123801,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟虽说遭人诬陷，一度行差踏错落入邪道。"
-    translated: "Brother Wang Tianyi, though falsely accused and for a time straying onto the wrong path, has since corrected his ways."
+    translated: "Brother Tianyi, despite being falsely accused by others, once strayed and fell into the wrong path."
   - split: 10
     subIndex: 1
     text: "但他最终能幡然悔悟，与厉苍穹同归于尽，"
@@ -123816,7 +123817,7 @@
   splits:
   - split: 10
     text: "可是王添翼兄弟立下了如此大功，凭什么只能孤零零安葬于此，"
-    translated: "But Wang Tianyi, Brother, has achieved such great feats, why must he be buried here all alone?"
+    translated: "But Brother Tianyi has achieved such great feats, why should he be buried here all alone?"
   - split: 10
     subIndex: 1
     text: "他的义举也只有我们二人知晓......"
@@ -123836,7 +123837,7 @@
   - split: 10
     subIndex: 1
     text: "明明王添翼兄弟为人善良，胸怀侠义，"
-    translated: "Clearly Wang Tianyi, his brother, is kind‑hearted and embodies chivalry."
+    translated: "Brother Tianyi is known to be kind and has a chivalrous righteousness."
   - split: 10
     subIndex: 2
     text: "为什么屡屡遭人诬陷，在江湖这中处处碰壁？"
@@ -123912,7 +123913,7 @@
   splits:
   - split: 10
     text: "而像王添翼兄弟这样的好人，"
-    translated: "And good guys like Brother Wang Tianyi"
+    translated: "And good people like Brother Tianyi,"
   - split: 10
     subIndex: 1
     text: "也就断然不会再像如今这样蒙受冤屈，历尽劫难了。"
@@ -123964,7 +123965,7 @@
   splits:
   - split: 10
     text: "我感觉这侠义，如同王添翼兄弟的墓碑压在我肩上一般，"
-    translated: "I feel this chivalry as if Brother Wang Tianyong's tombstone presses down on my shoulders."
+    translated: "I feel this chivalry weighs upon my shoulders like Brother Tianyi's tombstone."
   - split: 10
     subIndex: 1
     text: "有千钧之重！当真是胜过五岳泰山！"
@@ -124017,7 +124018,7 @@
   splits:
   - split: 10
     text: "顺便也要继承王添翼兄弟的遗志，行侠仗义，锄强扶弱，"
-    translated: "You should also carry forward Brother Wang Tianye's legacy by being a righteous hero, upholding justice, and protecting the weak from the strong."
+    translated: "By the way, you should also inherit Brother Tianyi's will to be a righteous hero, uphold justice, and help the weak."
   - split: 10
     subIndex: 1
     text: "做个堂堂正正的好男儿，大侠客！"
@@ -124029,7 +124030,7 @@
   splits:
   - split: 10
     text: "好，郭兄能够立下如此大志，想必王添翼兄弟在天之灵也会深感欣慰。"
-    translated: "Good, Brother Guo has set such a grand goal. It can be imagined that Brother Wang Tianshi's spirit would feel deeply gratified."
+    translated: "Good, Brother Guo has set such a great goal. No doubt, Brother Tianyi in heaven would also feel deeply relieved."
 - raw: ",,,左,,,,,ChangeHeroFavor;郭勇锐-10,,时候不早，我就先行告辞了。\\n郭兄日后浪迹江湖若是遇到什么困难，只管寻我开口便是。"
   splits:
   - split: 10
@@ -124050,7 +124051,7 @@
   - split: 10
     subIndex: 1
     text: "我留在此地再陪王添翼兄弟一会儿，告辞！"
-    translated: "I will stay here a while longer to accompany Brother Wang Tianyi, and bid you farewell!"
+    translated: "I'll stay here a bit longer to accompany Brother Tianyi, and bid you farewell!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -205331,7 +205332,7 @@
   splits:
   - split: 10
     text: "小翼子你要是敢临时打退党鼓，"
-    translated: "Little Wing if you dare to raise the secessionist banner at the last minute,..."
+    translated: "Little Yizi, if you dare to start a last‑minute party rebellion,"
   - split: 10
     subIndex: 1
     text: "当心我就再也不理你了！"
@@ -207374,7 +207375,7 @@
   splits:
   - split: 10
     text: "小翼子好样的。"
-    translated: "Little Wing did great"
+    translated: "Little Yizi, great job"
   - split: 10
     subIndex: 1
     text: "看本大小姐用霹雳雷火弹，把他们砸个稀巴烂！"
@@ -209548,7 +209549,7 @@
   - split: 10
     subIndex: 1
     text: "总感觉这家伙......和王添翼兄弟有几分神似......"
-    translated: "Total feel like this guy... has a bit of a resemblance to Brother Wang Tianyi..."
+    translated: "He always gives me the impression of being somewhat like Brother Tianyi..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -209556,7 +209557,7 @@
   splits:
   - split: 10
     text: "不过王添翼兄弟多年前已死于厉苍穹之手，乃是我和郭勇锐亲手埋葬。"
-    translated: "However, Brother Wang Tianyi died at the hands of Li Ciqiong many years ago, and it was I and Guo Yongrui who buried him ourselves."
+    translated: "But Brother Tianyi died at the hands of Li Ciqiong many years ago, and it was me and Guo Yongrui who buried him ourselves."
   - split: 10
     subIndex: 1
     text: "况且这家伙心狠手辣，行事风格也截然不同。"
@@ -209726,7 +209727,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，雷大小姐，好久不见！"
-    translated: "#PlayerName#, Lady Leisi, long time no see!"
+    translated: "#PlayerName#, Miss Lei, nice to see you again!"
   - split: 10
     subIndex: 1
     text: "你们怎会也在此处？"
@@ -209783,7 +209784,7 @@
   - split: 10
     subIndex: 1
     text: "你是王添翼，小翼子？！"
-    translated: "You are Wang Tianyi, Little Wing?!"
+    translated: "You are Wang Tianyi, Little Yizi?!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -209796,7 +209797,7 @@
   - split: 10
     subIndex: 1
     text: "王添翼兄弟多年前就已经殒命，这总不会有假......"
-    translated: "Brother Wang Tianyi has been deceased for many years... This can't be wrong..."
+    translated: "Brother Tianyi has been deceased for many years, so this can't be false......"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -209820,7 +209821,7 @@
   - split: 10
     subIndex: 1
     text: "你这家伙，到底和王添翼兄弟什么关系？"
-    translated: "What exactly is your relationship with Brother Wang Tianyi?"
+    translated: "What's your relationship with Brother Tianyi, man?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -209856,7 +209857,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子，哪里走！......你这笨蛋，给我等着！"
-    translated: "Little Wing, where are you going!... You stupid person, wait for me!"
+    translated: "Little Yizi, where do you think you're going!... You idiot, wait for me!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -209934,7 +209935,7 @@
   splits:
   - split: 10
     text: "我是觉得此人有六七分神似......可当年王添翼兄弟死于恶贼厉苍穹之手，"
-    translated: "I feel there's a six or seven tenths resemblance to this person... Yet, Brother Wang Tianyi died at the hands of the wicked villain Li Ciqiong back then."
+    translated: "I feel there's a six or seven out of ten resemblance... But back then, Brother Tianyi was killed by the villain Li Qiutong."
   - split: 10
     subIndex: 1
     text: "是我和#PlayerName#亲手埋的，总不能诈尸了吧？"
@@ -209963,7 +209964,7 @@
   splits:
   - split: 10
     text: "哼，若真是如此，那小翼子未免太绝情了。"
-    translated: "Hmph. If that's the case, Little Wing is being rather unfeeling."
+    translated: "Hmph, if that's the case, Little Yizi seems rather heartless."
   - split: 10
     subIndex: 1
     text: "这么多年都没再联络过大家，浪费了本大小姐多少眼泪......"
@@ -209975,7 +209976,7 @@
   splits:
   - split: 10
     text: "哎，王添翼兄弟在江湖中已无容身之地。"
-    translated: "Ah, Brother Wang Tianyi has no place in the Jianghu anymore."
+    translated: "Ah, Brother Tianyi has no place in the Jianghu anymore."
   - split: 10
     subIndex: 1
     text: "他如此绝情，或许是另有一番苦衷。"
@@ -209987,7 +209988,7 @@
   splits:
   - split: 10
     text: "不管别人怎么看王添翼兄弟，"
-    translated: "No matter how others see Brother Wang Tianyi,"
+    translated: "No matter how others see Brother Tianyi,"
   - split: 10
     subIndex: 1
     text: "我郭勇锐知道他是个顶天立地的好汉子，这便足够了。"
@@ -210003,7 +210004,7 @@
   - split: 10
     subIndex: 1
     text: "看看他究竟和王添翼兄弟是什么关系！"
-    translated: "See what exactly the relationship is between him and Brother Wang Tianyi!"
+    translated: "See just what relationship he has with Brother Tianyi!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -210181,7 +210182,7 @@
   - split: 10
     subIndex: 1
     text: "雷大小姐，郭兄，我来助你们一臂之力！"
-    translated: "Miss Le, Brother Guo, I'll lend you my support!"
+    translated: "Miss Lei, Brother Guo, I'll lend you a hand!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -210254,7 +210255,7 @@
   splits:
   - split: 10
     text: "好啊，小翼子，你既然执迷不悟，"
-    translated: "Sure, Little Wing, since you remain obstinate,"
+    translated: "Alright, Little Yizi, since you remain obstinate,"
   - split: 10
     subIndex: 1
     text: "那我就把你打醒为止！"
@@ -210285,7 +210286,7 @@
   - split: 10
     subIndex: 1
     text: "王添翼兄弟，有本事咱们再来过！"
-    translated: "Brother Wang Tianyi, if you're up for it, let's do it again!"
+    translated: "Brother Tianyi, if you're up for it, let's do it again!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -210887,7 +210888,7 @@
   - split: 10
     subIndex: 1
     text: "这次是真把雷大小姐的心给伤透了。"
-    translated: "This time, Lady Lei truly broke her heart."
+    translated: "This has truly broken Miss Lei's heart"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -210923,7 +210924,7 @@
   - split: 10
     subIndex: 1
     text: "总之，不能让王添翼兄弟一错再错，误了雷大小姐的终身大事。"
-    translated: "In short, we must not allow Wang Tianyi Brother to make the same mistake again and ruin Lady Lei's lifelong affairs."
+    translated: "In short, we cannot let Brother Tianyi keep making mistakes and ruin Miss Lei's lifelong affairs."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -211387,7 +211388,7 @@
   splits:
   - split: 10
     text: "哎，看来今次雷大小姐是下定决心，"
-    translated: "Ah, it seems Lady Lei has really made up her mind this time."
+    translated: "Ah, it seems Miss Lei has really made up her mind this time."
   - split: 10
     subIndex: 1
     text: "要嫁给唐离那登徒子了。"
@@ -211411,7 +211412,7 @@
   splits:
   - split: 10
     text: "更何况雷大小姐被王添翼伤透了心后，"
-    translated: "Moreover, Lady Leishan's heart was deeply hurt by Wang Tianyi."
+    translated: "Moreover, Miss Lei's heart was thoroughly hurt by Wang Tianyi."
   - split: 10
     subIndex: 1
     text: "已决心要以肩负起霹雳堂的兴衰重任了。"
@@ -211423,7 +211424,7 @@
   splits:
   - split: 10
     text: "什么兴衰重任，我只知道强迫雷大小姐嫁给唐离这种恶徒，"
-    translated: "What rise and fall of fate, I only know that forcing Lady Lei to marry such a villain Tang Li is wrong."
+    translated: "What burden of rise and fall, I only know that forcing Miss Lei to marry such an evil villain Tang Li is wrong."
   - split: 10
     subIndex: 1
     text: "绝非侠义之举！"
@@ -211940,7 +211941,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟！他来此处做什么？"
-    translated: "Brother Wang TIANyi! Why has he come here?"
+    translated: "Brother Tianyi! Why has he come here?"
 - raw: ",玩家,,左,,,,,,,不清楚，咱们还是先看看情况再说......"
   splits:
   - split: 10
@@ -213031,7 +213032,7 @@
   - split: 10
     subIndex: 1
     text: "莫非是追杀王添翼兄弟去了？"
-    translated: "Could they be chasing after Brother Wang Tianyi?"
+    translated: "Could they be chasing after Brother Tianyi?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -213044,7 +213045,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟此前被他们陷害，如今又搅乱了联姻大典。"
-    translated: "Shang Tianyi, his brother, was framed by them before and is now disrupting the grand marriage ceremony."
+    translated: "Brother Tianyi was framed by them before, and now he has disrupted the grand marriage ceremony."
   - split: 10
     subIndex: 1
     text: "以我对唐门和周莫知那老贼的了解，"
@@ -213076,7 +213077,7 @@
   - split: 10
     subIndex: 1
     text: "郭兄，咱们尽快跟过去，免得王添翼兄弟遭遇不测。"
-    translated: "Brother Guo, let's hurry and follow them. We don't want Brother Wang Tianyi to encounter any trouble."
+    translated: "Brother Gao, let's hurry and follow them to make sure Brother Tianyi doesn't encounter any trouble."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -213099,7 +213100,7 @@
   splits:
   - split: 10
     text: "我担心小翼子遭逢不测，所以偷偷溜回来了。"
-    translated: "I worried that Little Wing might meet with some misfortune, so I sneaked back."
+    translated: "I worry that Little Yizi might be in danger, so I sneaked back."
   - split: 10
     subIndex: 1
     text: "唐门和青城派看样子肯定会对他动手，咱们必须尽快去救他！"
@@ -213111,7 +213112,7 @@
   splits:
   - split: 10
     text: "哎，王添翼这小子执迷不悟，真是辜负了雷大小姐一片苦心。"
-    translated: "Ah, Wang Tianyi this boy is stubborn and unrepentant. He truly has let Lady Lei Xiao's painstaking efforts go to waste."
+    translated: "Alas, Wang Tianyi this lad is stubbornly blind to the truth, truly disappointing Miss Lei's painstaking efforts."
 - raw: ",雷彤,,左,,,,,,,殷殷，我说跑哪里去了！你回来做什么？"
   splits:
   - split: 10
@@ -213386,7 +213387,7 @@
   splits:
   - split: 10
     text: "小翼子，多年以前，你不远千里送我回福州。"
-    translated: "Little Wing, many years ago, you sent me back to Fuzhou from afar."
+    translated: "Little Yizi, many years ago, you sent me back to Fuzhou from afar."
   - split: 10
     subIndex: 1
     text: "这份情谊，我雷殷殷今天必须还你！"
@@ -213501,7 +213502,7 @@
   splits:
   - split: 10
     text: "添翼兄弟当心，不可相信这狗贼的胡言乱语！"
-    translated: "Adder Brothers be careful; do not believe this dog thief's nonsense!"
+    translated: "Brother Tianyi, be careful and do not believe this dog thief's nonsense!"
 - raw: ",王添翼,,右,,,,,,,师傅怎么会骗你呢......添翼啊，你就为了青城派......"
   splits:
   - split: 10
@@ -213549,7 +213550,7 @@
   - split: 10
     subIndex: 1
     text: "今天我便要为王添翼兄弟讨还公道！"
-    translated: "Today I shall seek justice for Brother Wang!"
+    translated: "Today, I shall speak up for Brother Tianyi!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -213724,7 +213725,7 @@
   splits:
   - split: 10
     text: "小、小翼子，你没事吧？"
-    translated: "Little Wing, are you okay?"
+    translated: "Little Yizi, are you okay?"
   - split: 10
     subIndex: 1
     text: "那老贼刺中你哪儿了？"
@@ -213800,7 +213801,7 @@
   splits:
   - split: 10
     text: "小翼子，你也别再装疯卖傻了！"
-    translated: "Little Wing, stop pretending to be crazy!"
+    translated: "Little Yizi, stop pretending to be crazy too!"
   - split: 10
     subIndex: 1
     text: "什么“笑面虎”，真是太难听了！"
@@ -213860,7 +213861,7 @@
   splits:
   - split: 10
     text: "小翼子，还有#PlayerName#，郭勇锐，"
-    translated: "Little Wing, and #PlayerName#, Guo Yongrui"
+    translated: "Little Yizi, and #PlayerName#, Guo Yongrui,"
   - split: 10
     subIndex: 1
     text: "和你们在江湖中经历了这么多风浪，我才明白了一个最重要的道理。"
@@ -213888,7 +213889,7 @@
   splits:
   - split: 10
     text: "小翼子，其实当年你千里送我回福州时，"
-    translated: "Little Wing, actually when you sent me back to Fuzhou from a thousand miles away back then,..."
+    translated: "Little Yizi, actually, when you sent me back to Fuzhou from afar back then,"
   - split: 10
     subIndex: 1
     text: "我就应该发现，你这个家伙身上就带着这两件宝物，"
@@ -213965,7 +213966,7 @@
   - split: 10
     subIndex: 1
     text: "好了好了，小翼子你别激动，"
-    translated: "Alright, alright, Xiao Yizi, don't get so excited."
+    translated: "Alright, alright, Little Yizi, don't get so excited."
   - split: 10
     subIndex: 2
     text: "我们先替你包扎伤口再说。"
@@ -213993,7 +213994,7 @@
   splits:
   - split: 10
     text: "我说小翼子你怎么突然起死回生了，"
-    translated: "I say, Little Wingzi, how did you suddenly come back to life?"
+    translated: "I say, Little Yizi, how did you suddenly come back to life?"
   - split: 10
     subIndex: 1
     text: "原来是那血衣盟“神药”的功效。"
@@ -214105,7 +214106,7 @@
   - split: 10
     subIndex: 1
     text: "王添翼兄弟，你身在其中也非长久之计。"
-    translated: "Brother Wang Tianyi, staying in this situation isn't a long‑term solution for you either."
+    translated: "Brother Tianyi, being caught in it isn't a long‑term solution for you."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -214254,7 +214255,7 @@
   splits:
   - split: 10
     text: "啊，那这样小翼子岂不是很危险？"
-    translated: "Ah, doesn't that make Little Wing very dangerous?"
+    translated: "Ah, so Little Yizi would be quite dangerous then?"
 - raw: ",,,右,,,,,,,哈哈哈哈，雷大小姐不必担心。\\n承蒙各位不离不弃，这点危险又算得了什么？"
   splits:
   - split: 10
@@ -214295,7 +214296,7 @@
   splits:
   - split: 10
     text: "小翼子！那你......千万要小心......"
-    translated: "Little Wing! You... must be extra careful..."
+    translated: "Little Yizi! You... must be incredibly careful..."
 - raw: ",,,右,,,,,,,大小姐放心，我命硬的很。\\n这么多年下来，什么周莫知，唐离，岳无畏，厉苍穹，\\n有哪个奈何的了我的！"
   splits:
   - split: 10
@@ -220817,7 +220818,7 @@
   - split: 10
     subIndex: 2
     text: "咱们虽说有王添翼兄弟作为内应，却还是势单力孤了些。"
-    translated: "Although we have Wang Tianyi as our brother inside, we are still somewhat outnumbered and outmatched."
+    translated: "Though we have Brother Tianyi Wang as an inside ally, we are still somewhat fighting alone."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -222470,7 +222471,7 @@
   splits:
   - split: 10
     text: "王添翼兄弟，"
-    translated: "Brother Wang Tianting,"
+    translated: "Brother Tianyi"
   - split: 10
     subIndex: 1
     text: "你果然是好样的，多加保重！"
@@ -222858,7 +222859,7 @@
   - split: 10
     subIndex: 1
     text: "说起来#PlayerName#，你可有见到王添翼兄弟？"
-    translated: "Speaking of #PlayerName#, have you seen Brother Wang Tianyi?"
+    translated: "Speaking of you, #PlayerName#, have you seen Brother Tianyi?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -222902,7 +222903,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，听说小翼子被困杭州城中，身陷险境。"
-    translated: "#PlayerName#, I heard that Little Wing is trapped in Hangzhou, in grave danger."
+    translated: "#PlayerName#, I heard Little Yizi is trapped in Hangzhou, in dire straits."
   - split: 10
     subIndex: 1
     text: "我实在不放心，方才带着两名霹雳堂弟子前来相救。"
@@ -222926,7 +222927,7 @@
   splits:
   - split: 10
     text: "那怎么行？不救出小翼子我就不走！"
-    translated: "How can that be? I won't leave until Little Wing is rescued!"
+    translated: "How can that be? I won't leave until Little Yizi is rescued!"
 - raw: ",,无,无,,,SpeEffect/风呼啸,,,,话音刚落，未及你阻拦，\\n雷殷殷便催动轻功，向杭州城下跃去。"
   splits:
   - split: 10
@@ -222943,7 +222944,7 @@
   splits:
   - split: 10
     text: "狗贼，小翼子在哪儿！"
-    translated: "Traitor, where's Xiao Yizizi!"
+    translated: "Traitor, where is Little Yizi!"
 - raw: ",,,右,,,,,,,哪来的小妮子，找死！！！"
   splits:
   - split: 10
@@ -223150,7 +223151,7 @@
   splits:
   - split: 10
     text: "不愧是小翼子，还算有几分骨气！"
-    translated: "Not to boast, Young Wing still has some backbone!"
+    translated: "Truly, Little Yizi still has a bit of backbone!"
   - split: 10
     subIndex: 1
     text: "看本大小姐用霹雳雷火弹，炸他个天翻地覆！"
@@ -223293,7 +223294,7 @@
   splits:
   - split: 10
     text: "小翼子！混蛋我和你拼了！"
-    translated: "Little Wing! Bastard, let's fight!"
+    translated: "Little Yizi! Bastard, I'll take you on!"
 - raw: ",,,右,,,,,,,哼，今日碍事之人颇多，老夫改日再取你性命。\\n各位，后会有期！"
   splits:
   - split: 10
@@ -223326,7 +223327,7 @@
   splits:
   - split: 10
     text: "小翼子，你、你没事吧？"
-    translated: "Little Wing, are you okay?"
+    translated: "Little Yizi, are you okay?"
 - raw: ",,,右,,,,,ChangeInjury;王添翼-0-负20,,咳咳咳咳......大小姐......\\n我已烧毁贼人暗藏神药之据点......可算是将功赎罪了......"
   splits:
   - split: 10
@@ -223525,7 +223526,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子，咱们赶快出发，别让那家伙跑了。"
-    translated: "Little Wing, let's hurry. Don't let that guy get away."
+    translated: "Little Yizi, let's hurry. Don't let that guy escape."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -223788,7 +223789,7 @@
   splits:
   - split: 10
     text: "不见棺材不掉泪，小翼子，"
-    translated: "Seeing is believing, Little Wing"
+    translated: "Seeing is believing, Little Yizi"
   - split: 10
     subIndex: 1
     text: "咱们一起教训教训这家伙。"
@@ -223829,7 +223830,7 @@
   splits:
   - split: 10
     text: "想碰雷大小姐，先过我这关！"
-    translated: "Want to challenge Miss BoomBoom? First, you have to get past me!"
+    translated: "Want to touch Miss Lei? First, you have to pass me!"
 - raw: "1196,玩家,王添翼,左,,,,,,,王兄，雷大小姐，我和郭兄前来助阵！"
   splits:
   - split: 10
@@ -224060,7 +224061,7 @@
   splits:
   - split: 10
     text: "吕舞阳虽走，不是还有王添翼兄弟么？"
-    translated: "Lu Wuyang may have left, but there's still Brother Wang Tianyi, right?"
+    translated: "Lv Wuyang may have left, but isn't there still Brother Tianyi Wang?"
   - split: 10
     subIndex: 1
     text: "只要胸怀侠义者，皆是我们七子之一员。"
@@ -224561,7 +224562,7 @@
   splits:
   - split: 10
     text: "小翼子信里说，他助我们击败卢玉麟后，已经了无牵挂。"
-    translated: "Little Wingzi Xinyi said that after helping us defeat Lu Yulan, he no longer has any worries."
+    translated: "Little Yizi wrote in his letter that after helping us defeat Lu Yulin, he no longer has any worries."
   - split: 10
     subIndex: 1
     text: "自己作恶太多，又为武林所不容......"
@@ -224597,7 +224598,7 @@
   - split: 10
     subIndex: 1
     text: "王添翼兄弟此举，岂不是上门送死？！"
-    translated: "Brother Wang Tianyi's actions here, aren't they asking for death at the door?!"
+    translated: "Brother Tianyi's move here, isn't it asking to die at our door?!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -224605,7 +224606,7 @@
   splits:
   - split: 10
     text: "小翼子当真是有骨气。"
-    translated: "Little Wing truly has some backbone"
+    translated: "Little Yizi truly has some backbone"
   - split: 10
     subIndex: 1
     text: "好，那本大小姐就陪他一起，闯青城山去！"
@@ -224621,7 +224622,7 @@
   - split: 10
     subIndex: 1
     text: "我郭勇锐当年发过誓，必须替王添翼兄弟洗刷冤屈！"
-    translated: "I, Guo Yongrui, vowed back then that I must clear Brother Wang Tianyi's name!"
+    translated: "I, Guo Yongrui, swore back then that I must clear Brother Tianyi's name!"
   - split: 10
     subIndex: 2
     text: "今天正好一起打上青城派，给他伸张正义。"
@@ -224645,11 +224646,11 @@
   splits:
   - split: 10
     text: "#PlayerName#，我们是世间为数不多，知道小翼子冤屈的人了......"
-    translated: "#PlayerName#, we are among the few in this world who know of Little Yi's injustice..."
+    translated: "#PlayerName#, we are among the few in the world who know of Little Yizi's injustice..."
   - split: 10
     subIndex: 1
     text: "若是连我们都不去救他，小翼子定会死在周莫知手上的！"
-    translated: "If even we don't save him, Little Yi Zi will surely die at Zhou Mozhi's hand!"
+    translated: "If even we don't save him, Little Yizi will surely die at Zhou Mozhi's hands!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -224709,7 +224710,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，王添翼兄弟侠肝义胆，不知怎会成了欺师灭祖的青城叛徒？"
-    translated: "#PlayerName#, Brother Wang Tianyi, with his chivalrous and righteous heart, how could he have become a traitorous Qingcheng that disgraces his ancestors?"
+    translated: "#PlayerName#, Brother Tianyi, how did you become a rebellious traitor of Qingcheng who disrespects your teacher and ancestors?"
   - split: 10
     subIndex: 1
     text: "听你们适才所言，这其中似乎有所冤屈？"
@@ -224742,7 +224743,7 @@
   splits:
   - split: 10
     text: "真是岂有此理！我说王添翼兄弟怎会与传闻中截然不同，"
-    translated: "This is simply unreasonable! I never thought Brother Wang Tianyi would be so different from what was rumored."
+    translated: "True nonsense! I never thought Brother Tianyi would be so different from the rumors."
   - split: 10
     subIndex: 1
     text: "原来是被周莫知和唐门给设计诬陷了！"
@@ -224778,7 +224779,7 @@
   splits:
   - split: 10
     text: "阿弥陀佛，王添翼兄弟冒死烧毁血衣盟神药，又助我等擒获卢玉麟。"
-    translated: "Amituofo. Brother Wang Tianyi risked his life to burn the blood‑cloth and divine medicine, and also helped us capture Lu Yulan."
+    translated: "Amituofo. Brother Tianyi risked his life to burn the blood robe and divine medicine, and also helped us capture Lu Yulan."
   - split: 10
     subIndex: 1
     text: "咱们理应知恩图报，帮他洗刷冤屈才是。"
@@ -224806,7 +224807,7 @@
   - split: 10
     subIndex: 1
     text: "我定要随郭兄一道，去给王添翼兄弟讨还公道！"
-    translated: "I will go with Brother Gu to seek justice for Brother Wang Tianyi!"
+    translated: "I shall go with Brother Guo to seek justice for Brother Tianyi!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -224842,7 +224843,7 @@
   splits:
   - split: 10
     text: "能得到各位出手相助，看来王添翼兄弟是有救了。"
-    translated: "Getting the brothers to lend a hand seems like Wang Tianyi has a chance."
+    translated: "With the help of everyone, it seems Brother Tianyi is saved."
   - split: 10
     subIndex: 1
     text: "届时我也会一道杀上青城派，为王兄讨还公道！"
@@ -224887,7 +224888,7 @@
   - split: 10
     subIndex: 1
     text: "便前往青城山，等候王添翼兄弟，告辞！"
-    translated: "Head to Qingcheng Mountain to await Brother Wang Tianyi and bid farewell!"
+    translated: "He then headed to Qingcheng Mountain to await Brother Tianyi and bid farewell!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -225262,7 +225263,7 @@
   - split: 10
     subIndex: 1
     text: "我绝不会助纣为虐，帮你这狗贼诬陷忠良，坑害王添翼兄弟！"
-    translated: "I will never help you frame the loyal Sheng for your own gain, betraying Brother Wang Tianyi!"
+    translated: "I will never aid in persecuting the loyal and righteous, helping you, dog, to frame Brother Tianyi!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -225304,7 +225305,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，郭兄，雷大小姐！"
-    translated: "#PlayerName#, Brother Guo, Miss Le!"
+    translated: "#PlayerName#, Brother Guo, Miss Lei!"
   - split: 10
     subIndex: 1
     text: "你、你们这是何苦......"
@@ -225316,7 +225317,7 @@
   splits:
   - split: 10
     text: "小翼子，我们和你并肩作战那么多次，"
-    translated: "Little Wing, we've fought by your side so many times,"
+    translated: "Little Yizi, we've fought alongside you so many times,"
   - split: 10
     subIndex: 1
     text: "又岂能眼睁睁看着你孤身赴死？"
@@ -225705,7 +225706,7 @@
   - split: 10
     subIndex: 1
     text: "明明是他伙同血衣盟，妄图谋害王添翼兄弟。"
-    translated: "Clearly, it was him who conspired with the Blood Robe Alliance to plotted to harm Brother Wang Tianyi."
+    translated: "Obviously, it was him conspiring with the Bloodrobe Alliance to plot the harm of Brother Tianyi."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -225741,7 +225742,7 @@
   - split: 10
     subIndex: 1
     text: "我深知王添翼兄弟之清白，又岂能因为您的威逼，"
-    translated: "I fully understand the innocence of Brother Wang Tianyi, and how could I possibly let your intimidation sway me?"
+    translated: "I deeply know Brother Tianyi's innocence, and how could I possibly let your intimidation sway me?"
   - split: 10
     subIndex: 2
     text: "而放弃心中之正义？"
@@ -225885,7 +225886,7 @@
   - split: 10
     subIndex: 1
     text: "我今日便要替王添翼兄弟，将你就地正法！"
-    translated: "I shall execute you on the spot for Brother Wang Tianyi today!"
+    translated: "I shall execute you on the spot, fellow Brother Tianyi!"
   templates:
   - split: 9
     template: "{0};RobHeroItemChoose;{1}"
@@ -225901,6 +225902,8 @@
   - split: 10
     text: "诸位青城弟子，难道王添翼兄弟的遭遇，还不足以让你们寒心吗？"
     translated: "Fellow disciples of Qingcheng, is Wang Tianyi's experience not enough to chill your hearts?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Brother Tianyi,添翼兄,"
   - split: 10
     subIndex: 1
     text: "胆敢阻拦我者，与此老贼同罪！"
@@ -225945,7 +225948,7 @@
   - split: 10
     subIndex: 1
     text: "确实不用脏了我的手，王添翼兄弟，你来定夺吧！"
-    translated: "Indeed, let it not dirty your hands, Brother Wang Tianyi. Leave the decision to you!"
+    translated: "Indeed, let me not dirty my hands, Brother Tianyi. Leave it to you to decide!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -226114,7 +226117,7 @@
   splits:
   - split: 10
     text: "小翼子当心！"
-    translated: "Little Wing, be careful!"
+    translated: "Little Yizi, be careful!"
 - raw: ",王添翼,,左,,,SpeEffect/风呼啸,,,,周莫知，你果然如我所料！"
   splits:
   - split: 10
@@ -226266,7 +226269,7 @@
   splits:
   - split: 10
     text: "慢着！还有小翼子的事情得说清楚！"
-    translated: "Hold on! We need to clarify Little Wing's situation too!"
+    translated: "Hold on! We need to clarify Little Yizi's situation too!"
 - raw: ",,,右,,,,,,,雷大小姐？此话怎讲！"
   splits:
   - split: 10
@@ -226276,7 +226279,7 @@
   splits:
   - split: 10
     text: "小翼子乃是遭唐门陷害，方才蒙冤入狱的。"
-    translated: "Little Wing was framed by the Tang Clan and only ended up in prison as a result."
+    translated: "Little Yizi was wrongfully imprisoned after the Tang Clan framed him."
   - split: 10
     subIndex: 1
     text: "所以他搅乱我霹雳堂与你唐门联姻，也算是一报还一报，"
@@ -226296,7 +226299,7 @@
   - split: 10
     subIndex: 1
     text: "或是派人暗杀小翼子了！"
-    translated: "Or they sent someone to assassinate Little Wing!"
+    translated: "Or they sent someone to assassinate Little Yizi!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -226349,7 +226352,7 @@
   splits:
   - split: 10
     text: "嘻嘻，小翼子，这样事情就彻底解决了。"
-    translated: "Haha, Little Wing, this matter is thoroughly resolved."
+    translated: "Haha, Little Yizi, this solves the matter completely."
 - raw: ",,,右,,,,,,,雷大小姐......#PlayerName#.......郭勇锐兄弟，\\n还有侠义七子，郭大侠，乐帮主，\\n你们的大恩大德，我王添翼无以为报。"
   splits:
   - split: 10
@@ -226476,7 +226479,7 @@
   splits:
   - split: 10
     text: "我早有此意！王添翼兄弟为了铲除血衣盟，不惜孤身犯险，"
-    translated: "I had this in mind already! Brother Wang Tianyi risked his life alone to eliminate the Blood Robe Alliance."
+    translated: "I had this idea long ago! Brother Tianyi risked everything alone to eliminate the Blood Robe League."
   - split: 10
     subIndex: 1
     text: "更是凭一己之力烧毁卢玉麟之神药。"
@@ -226564,7 +226567,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子，你来我们霹雳堂好了，保证不会亏待你！"
-    translated: "Little Wing, you can come to Thunderclap Hall; we won't shortchange you!"
+    translated: "Little Yizi, you'll do well in Thunderclap Hall; we promise we won't treat you badly!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -226677,7 +226680,7 @@
   splits:
   - split: 10
     text: "哎呀，小翼子你就别婆婆妈妈的了。"
-    translated: "Ah, Little Yi, just stop being so fussypants."
+    translated: "Ah, Little Yizi, just stop being so fussing."
   - split: 10
     subIndex: 1
     text: "男子汉大丈夫，该承担责任的时候可不能逃避！"
@@ -226782,7 +226785,7 @@
   splits:
   - split: 10
     text: "那是自然......雷大小姐用霹雳雷火弹，炸塌了成都几间民居。"
-    translated: "That's natural.... Lady Lei used Thunderbolt Lightning Fire Bombs to collapse several civilian houses in Chengdu."
+    translated: "That's natural......Miss Lei used thunderfire bombs to collapse several civilian houses in Chengdu."
   - split: 10
     subIndex: 1
     text: "这等“英雄事迹”，我肯定得记一辈子！"
@@ -226830,7 +226833,7 @@
   splits:
   - split: 10
     text: "我想，小翼子能有今日之结局，"
-    translated: "I believe Little Wing's fate today was inevitable."
+    translated: "I think Little Yizi could have ended up this way."
   - split: 10
     subIndex: 1
     text: "乃是因为他不论如何沉沦，皆不放弃心中之希望和正义！"
@@ -226858,7 +226861,7 @@
   - split: 10
     subIndex: 1
     text: "还有雷大小姐这位红颜知己，也可谓是功不可没。"
-    translated: "And Lady Lei, this red‑haired confidante, could also be considered to have made significant contributions."
+    translated: "And Miss Lei, with her feminine wisdom, can also be said to have made significant contributions."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -256877,7 +256880,7 @@
   splits:
   - split: 10
     text: "添翼兄弟"
-    translated: "Fellow Brothers Addition Wings"
+    translated: "Brother Tianyi"
   - split: 10
     subIndex: 1
     text: "快"
@@ -266080,7 +266083,7 @@
   - split: 10
     subIndex: 1
     text: "然后再迎娶雷大小姐，嘿嘿嘿嘿......"
-    translated: "And then marry Lady Lei with great pleasure... hehehe..."
+    translated: "...and then marry Miss Lei, hehehe..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -270228,7 +270231,7 @@
   splits:
   - split: 10
     text: "王、王添翼兄弟！你怎会来此？"
-    translated: "Brother Wang, Wang Tianting! How did you end up here?"
+    translated: "Brother Wang, Brother Tianyi! How did you come here?"
 - raw: ",,,右,,,,,,,听闻#PlayerName#要惩奸除恶，平定唐门。\\n我这做兄弟的，岂能不来助一臂之力？"
   splits:
   - split: 10
@@ -270298,7 +270301,7 @@
   splits:
   - split: 10
     text: "原来如此。没想到当年炸塌无数民房的雷大小姐，"
-    translated: "So it's like this. I never expected that Lady Lei, who caused the collapse of countless civilian buildings back then,"
+    translated: "Original as expected. I never thought that the Miss Lei who bombed countless civilian buildings back then was Miss Lei herself."
   - split: 10
     subIndex: 1
     text: "如今已是深谙火药之法了。"
@@ -270314,7 +270317,7 @@
   - split: 10
     subIndex: 1
     text: "可不能让你和小翼子把我看扁了！"
-    translated: "You can't let Little Wing and me down like this!"
+    translated: "You can't let Little Yizi or me get the better of you!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -290119,7 +290122,7 @@
   - split: 10
     subIndex: 1
     text: "怎么不去找王添翼兄弟？"
-    translated: "Why not go find Brother Wang Tianyi?"
+    translated: "Why don't you go find Brother Tianyi?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -290127,7 +290130,7 @@
   splits:
   - split: 10
     text: "哎呀，小翼子那家伙，"
-    translated: "Oh, that Winged guy..."
+    translated: "Oh, Little Yizi that guy,"
   - split: 10
     subIndex: 1
     text: "每次都被本大小姐炸得灰头土脸的，真没意思。"
@@ -290139,11 +290142,11 @@
   splits:
   - split: 10
     text: "咳咳咳咳，看来雷大小姐火器功夫又有精进，"
-    translated: "Cough cough cough cough. It seems Lady Lei has made further advancements in her firearm skills."
+    translated: "Cough cough cough cough. It seems Miss Lei has further improved her firearm skills."
   - split: 10
     subIndex: 1
     text: "竟然连添翼兄都不是对手了。"
-    translated: "Even Brother Tengyi can't be his opponent anymore."
+    translated: "Even Brother Tianyi isn't a match for him."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -290161,7 +290164,7 @@
   splits:
   - split: 10
     text: "哎，雷大小姐，想必你也知道。"
-    translated: "Oh, Lady Lei, I'm sure you know as well."
+    translated: "Ah, Miss Lei, I daresay you know as well."
   - split: 10
     subIndex: 1
     text: "此前你爹爹在少林和中原各大门派结盟，"
@@ -290244,7 +290247,7 @@
   splits:
   - split: 10
     text: "这有什么好说服的，#PlayerName#你待我跟小翼子恩重如山！"
-    translated: "There's no need to persuade me, #PlayerName#. You owe me as much as Little Yi!"
+    translated: "There's nothing to persuade you of that,#PlayerName#, I owe you as much as Little Yizi!"
   - split: 10
     subIndex: 1
     text: "这么点小事我都不帮忙，以后还怎么在江湖上混？"
@@ -290260,7 +290263,7 @@
   - split: 10
     subIndex: 1
     text: "我和小翼子都会很伤心的！"
-    translated: "Both Xiao Yizi and I will be very sad!"
+    translated: "Both Little Yizi and I will be very sad!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -290299,7 +290302,7 @@
     translated: "Discuss another time"
   - split: 10
     text: "雷大小姐果然是个爽快人呐......"
-    translated: "Miss Leイ is truly a straightforward person..."
+    translated: "Miss Lei is indeed a straightforward person..."
   - split: 10
     subIndex: 1
     text: "那要不要再加些筹码，让她替我多求求情呢？"
@@ -290325,12 +290328,12 @@
   splits:
   - split: 10
     text: "嘿嘿，那就多谢雷大小姐了！"
-    translated: "Hehe, thank you very much, Lady Lei!"
+    translated: "Hehe, thank you very much, Miss Lei!"
 - raw: ",,,右,,,,,FinishEventMission,,不用谢不用谢，下次见到小翼子，\\n让他赶紧过来陪我练霹雳雷火弹就行。"
   splits:
   - split: 10
     text: "不用谢不用谢，下次见到小翼子，"
-    translated: "You're welcome. Next time you see Little Wing,"
+    translated: "You're welcome. Next time you see Little Yizi,"
   - split: 10
     subIndex: 1
     text: "让他赶紧过来陪我练霹雳雷火弹就行。"
@@ -291251,7 +291254,7 @@
   - split: 10
     subIndex: 1
     text: "一提起雷大小姐，还是幅情窦初开的样子。"
-    translated: "Just mentioning Lady Lei still gives her that innocent crush vibe."
+    translated: "Just mentioning Miss Lei still makes her seem like she's just fallen in love."
   templates:
   - split: 10
     template: "{0}\\n{1}"

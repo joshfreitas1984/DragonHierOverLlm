@@ -14495,7 +14495,7 @@
 - raw: "#PlayerName#，听闻王添翼兄弟已经杀上<b>青城山</b>，恐怕是想和周莫知那老贼同归于尽。\\n项问天兄弟等人已经出发，还望你也多带些人手，一同去为他讨还公道！"
   splits:
   - text: "#PlayerName#，听闻王添翼兄弟已经杀上"
-    translated: "#PlayerName#, hearing that Brother Wang Tianyi has already advanced"
+    translated: "#PlayerName#, hearing that Brother Tianyi has already advanced"
   - subIndex: 1
     text: "青城山"
     translated: "Qingcheng Mountain"
@@ -14528,7 +14528,7 @@
     translated: "Qingyuan Township West"
   - subIndex: 2
     text: "眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
-    translated: "Seems we're about to catch up with the Five Ghosts of the underworld. I hope you can join me to prevent Father from accidentally injuring Brother Wang Tianyi."
+    translated: "Seemingly on the verge of catching up with the Black Society's Five Devils. I hope you can come to meet me and surely prevent Father from accidentally injuring Brother Tianyi."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在<b>应天北方</b>一带将其截住。\\n望你前来助我们一臂之力，联手将此人捉拿归案！"
@@ -14561,7 +14561,7 @@
 - raw: "#PlayerName#，王添翼兄弟就要被发配充军了，咱们这就去<b>成都</b>汇合，准备劫狱大计！"
   splits:
   - text: "#PlayerName#，王添翼兄弟就要被发配充军了，咱们这就去"
-    translated: "#PlayerName#, Brother Wang Tianyi is about to be sent to the frontier as a soldier. Let's go now."
+    translated: "#PlayerName#, Brother Tianyi is about to be sent to the frontier as a soldier. Let's go now."
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
@@ -14585,7 +14585,7 @@
 - raw: "#PlayerName#！最近听到风声，王添翼兄弟在<b>大理北方</b>被唐门和青城派堵上了，咱们得赶紧前去搭救才行。"
   splits:
   - text: "#PlayerName#！最近听到风声，王添翼兄弟在"
-    translated: "#PlayerName#! Recently heard some rumors, Wang Tianyi Brother is"
+    translated: "#PlayerName#! Recently heard that Brother Tianyi has"
   - subIndex: 1
     text: "大理北方"
     translated: "Northern Dali"
@@ -14597,7 +14597,7 @@
 - raw: "#PlayerName#！我刚听说王添翼兄弟被抓的消息，真是岂有此理！咱们赶快去<b>成都</b>汇合，你和我说说到底是怎么回事！"
   splits:
   - text: "#PlayerName#！我刚听说王添翼兄弟被抓的消息，真是岂有此理！咱们赶快去"
-    translated: "#PlayerName#!I just heard that Brother Wang Tianyi has been arrested. This is outrageous! Let's go quickly."
+    translated: "#PlayerName#!I just heard that Brother Tianyi has been arrested. This is outrageous! Let's go right away."
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
@@ -14615,7 +14615,7 @@
     translated: "Northern Hangzhou"
   - subIndex: 2
     text: "寻得了笑面鬼的踪迹，还望你来一道截住此人，定要问清他跟王添翼兄弟是什么关系！"
-    translated: "Found the trail of the Smiling Ghost, I hope you will come along to intercept this person. We must find out exactly what relationship he has with Brother Wang Tianyi!"
+    translated: "Now that we've located the Grinning Ghost, I hope you'll join me in intercepting this person. We must find out exactly what relation he has to Brother Tianyi!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "<b>第二届泰岳大典</b>已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
@@ -14636,7 +14636,7 @@
     translated: "Chengdu"
   - subIndex: 2
     text: "追上这狗贼。我想到个绝妙的捉贼之策，只是还缺两位帮手。望#PlayerName#与添翼兄一道前来相助，合咱们三人之力定能一举擒贼！"
-    translated: "Catch up with this dog. I've come up with a brilliant plan to catch the thief, but I still need two helpers. I hope #PlayerName# and Brother Adder Wing can join us to help out. With our combined strength, we're sure to catch the thief in one go!"
+    translated: "Catch this dog thief. I've come up with a brilliant plan to catch him, but I still need two helpers. I hope #PlayerName# and Brother Tianyi can join us to help out. With the three of us, we're sure to catch the thief in one go!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "我一路追捕贼人岳无畏，总算在<b>陇西县</b>寻得其踪迹。还请#PlayerName#前来助我一同擒贼！"

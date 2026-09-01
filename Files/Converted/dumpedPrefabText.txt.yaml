@@ -527,7 +527,7 @@
     translated: "Close the console"
   - subIndex: 3
     text: "上"
-    translated: "Up"
+    translated: "Top"
   - subIndex: 4
     text: "下方向键切换上条"
     translated: "Down arrow key to switch to the previous option."

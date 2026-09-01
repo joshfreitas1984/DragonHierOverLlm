@@ -892,8 +892,26 @@ internal static class DynamicStringPatches
         return false;
     }
 
+    // Bounds MultiPassTemplateApplicationEnabled's repeat loop - see that flag's comment.
+    private const int MaxTemplatePasses = 3;
+
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private static string ApplyTemplates(string input, List<CompiledTemplate> templates)
+    {
+        var result = ApplyTemplatesSinglePass(input, templates);
+        if (MainPlugin.MultiPassTemplateApplicationEnabled?.Value == true)
+        {
+            for (var pass = 1; pass < MaxTemplatePasses; pass++)
+            {
+                var next = ApplyTemplatesSinglePass(result, templates);
+                if (next == result) break;
+                result = next;
+            }
+        }
+        return result;
+    }
+
+    private static string ApplyTemplatesSinglePass(string input, List<CompiledTemplate> templates)
     {
         var result = input;
         HashSet<char> presentChars = null;

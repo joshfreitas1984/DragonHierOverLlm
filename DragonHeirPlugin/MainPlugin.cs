@@ -64,6 +64,17 @@ public class MainPlugin : BasePlugin
     // but silently do nothing.
     internal static ConfigEntry<bool> FixNoCostChoiceClickEnabled;
 
+    // Off by default (dicey/unverified) - a "recollection" dialogue template (e.g.
+    // "#TargetInteractName#将此前{0}之遭遇向你娓娓道来......") can embed another already-formatted
+    // template's output (a plot-event/world-news sentence, e.g. "{0}在{1}遭逢{5}奇遇...") as its own
+    // {0} value. ApplyTemplates normally tries every template exactly once per call in list order,
+    // so if one template's own literal-segment/trigger-char precheck only becomes satisfiable
+    // after another template further down the list has already run (order-dependent), the earlier
+    // one is never retried. When true, ApplyTemplates repeats its full pass over all templates
+    // (bounded, stops early once a pass makes no change) instead of running once, to catch that
+    // class of gap. See DynamicStringPatches.ApplyTemplates.
+    internal static ConfigEntry<bool> MultiPassTemplateApplicationEnabled;
+
     public override void Load()
     {
         Logger = base.Log;
@@ -76,6 +87,12 @@ public class MainPlugin : BasePlugin
             "ResidualCjkDebugLogging",
             false,
             "When true, DynamicStringPatches logs before/after text to residualCjkDebug.log for every call that still contains untranslated CJK characters after both the template and bare-fragment passes. Leave off unless actively debugging a translation gap - this is a per-call diagnostic and will grow the log file quickly.");
+
+        MultiPassTemplateApplicationEnabled = Config.Bind(
+            "Performance",
+            "MultiPassTemplateApplication",
+            true,
+            "When true, DynamicStringPatches.ApplyTemplates repeats its pass over all compiled templates (bounded, stops once a pass makes no change) instead of trying each template exactly once, to catch order-dependent nested-template gaps (e.g. a recollection dialogue embedding an already-formatted world-event sentence). Off by default - unverified/speculative fix, enable only while investigating a known nested-template translation gap.");
 
         AppendOnlySuffixTranslationEnabled = Config.Bind(
             "Performance",

@@ -54575,7 +54575,7 @@
     translated: "Selling at a high price"
   - subIndex: 1
     text: "两"
-    translated: "Taels"    
+    translated: "Taels"
   templates:
   - template: "{0}(⟦0⟧{1})"
 - raw: "高级嘉奖"
