@@ -6512,7 +6512,7 @@
   - split: 10
     subIndex: 1
     text: "要不#TargetInteractName#咱们一起去看看？"
-    translated: "Why don't you and #TargetInteractName# go check it out together?"
+    translated: "Why don't #TargetInteractName# and I go check it out together?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -6819,7 +6819,7 @@
   - split: 10
     subIndex: 1
     text: "陆师伯既是师傅的兄长，不知为何从未在派内见过？"
-    translated: "Land Master being your master's elder brother, I wonder why I have never seen him within the sect?"
+    translated: "Since Senior Uncle Lu is Master's elder brother, I wonder why I've never seen him in the sect?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10230,7 +10230,7 @@
   - split: 10
     subIndex: 2
     text: "这就叫鹬蚌相争，渔翁得利。"
-    translated: "This is called the fowler profiting from the quarrel between the snipe and the clam."
+    translated: "That's what you call letting the heron and the clam fight while the fisherman profits."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -10391,7 +10391,7 @@
   splits:
   - split: 10
     text: "（咦，好像没扔准，爹爹教我的手法还没练熟）"
-    translated: "(Uh, it seems I didn't throw accurately. Father hasn't mastered the technique I was taught yet.)"
+    translated: "(Uh, it seems I didn't throw accurately. I have not mastered the technique Father taught me yet.)"
   - split: 10
     subIndex: 1
     text: "看到没！本大小姐故意扔偏，饶你一条狗命，还不快快投降！"
@@ -10419,7 +10419,7 @@
   splits:
   - split: 10
     text: "又听得轰隆一声！那二人合抱的大树被瞬间炸断，"
-    translated: "Another thunderous boom echoed! The tree, which required both of them to hug it, was instantly blasted in half."
+    translated: "Then came another thunderous boom! The two-person-wide tree was blasted in half in an instant,"
   - split: 10
     subIndex: 1
     text: "上半截树干连接着茂盛树冠吱呀呀轰然倒塌，竟向着那贼人压去。"
@@ -10436,7 +10436,7 @@
   splits:
   - split: 10
     text: "留神！"
-    translated: "Beware!"
+    translated: "Look out!"
 - raw: ",,,无,,,,,,,王添翼大喝一声随后飞身扑出，将贼人推将开去。\\n随后一阵巨响，树干坠地，重重倾覆在这二人之间。"
   splits:
   - split: 10
@@ -10453,7 +10453,7 @@
   splits:
   - split: 10
     text: "好险好险，跟耍杂技一样。"
-    translated: "What a close call, like performing acrobatics"
+    translated: "That was a close one. It was like performing a stunt!"
 - raw: ",雷殷殷,,左,,,,,,,（啊呀，又扔偏了）\\n哼，本小姐已饶你两次了，事不过三！"
   splits:
   - split: 10
@@ -10462,7 +10462,7 @@
   - split: 10
     subIndex: 1
     text: "哼，本小姐已饶你两次了，事不过三！"
-    translated: "Hmph, Miss I've shown you mercy twice already; there can be no third time!"
+    translated: "Hmph, This young miss has shown you mercy twice already; there can be no third time!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10470,11 +10470,11 @@
   splits:
   - split: 10
     text: "娘"
-    translated: "Daughter"
+    translated: "Miss"
   - split: 10
     subIndex: 1
     text: "我滴个亲娘哟！姑奶奶饶命！姑奶奶饶命！"
-    translated: "Oh my dear lady! Begging your mercy! Begging your mercy!"
+    translated: "Oh Great Aunt, please spare me! Please spare me!"
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -10491,7 +10491,7 @@
   - split: 10
     subIndex: 1
     text: "哼，本大小姐心善，看在你叫我姑奶奶的份上，今天就饶你一命！"
-    translated: "Hmph, Miss Indulgent is kind‑hearted. Considering you called me Auntie, I'll spare your life today!"
+    translated: "Hmph. This young lady has a kind heart. Since you called me 'Great-Aunt,' I'll spare your life today!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10499,7 +10499,7 @@
   splits:
   - split: 10
     text: "不过小翼子啊，这种贼人，你刚刚出手救他作甚？"
-    translated: "But Xiao Yi Zi, why did you save this scoundrel just now?"
+    translated: "But Little Yi, why did you save this scoundrel just now?"
 - raw: ",,,左,,,,,,,哎呀，我看他跟咱过招时，还是留了情的嘛，想来也不是啥子大奸大恶之人。\\n要是乱杀无辜，岂不把咱雷大小姐的名声给搞臭了？"
   splits:
   - split: 10
@@ -10536,7 +10536,7 @@
   - split: 10
     subIndex: 1
     text: "小翼子你想的到挺周全的嘛，不错不错！"
-    translated: "Little Wing, you've thought of everything! Not bad at all!"
+    translated: "Little Yi, you've thought of everything! Not bad at all!"
   templates:
   - split: 10
     template: "{0}~{1}"
@@ -10544,7 +10544,7 @@
   splits:
   - split: 10
     text: "哈哈，还是我们雷大小姐心善手软，一身好武艺，王某佩服得不得了！"
-    translated: "Haha, it's Lady Leixiao who shows kindness and mercy, with such excellent martial arts skills. Wang Sheng admires you greatly!"
+    translated: "Haha, it's Lady Lei who shows kindness and mercy, with such excellent martial arts skills. Wang Sheng admires you greatly!"
 - raw: ",玩家,王添翼,右,,,,,,,当然还有#PlayerName#啦，多谢你来给我们扎起！"
   splits:
   - split: 10
@@ -10563,7 +10563,7 @@
   - split: 10
     subIndex: 1
     text: "只是不知添翼兄你怎么会在此捉贼，这位雷大小姐又是？"
-    translated: "I just wonder how Brother Tiyi ended up catching thieves here. And who is this Miss Leilei?"
+    translated: "I just wonder how Brother Tianyi ended up catching thieves here. And who is this Miss Lei?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10579,7 +10579,7 @@
   - split: 10
     subIndex: 2
     text: "这次从屋头偷跑出来，一路上就是游山玩水、打抱不平。"
-    translated: "This time running away from home, I've been sightseeing and righting wrongs along the way."
+    translated: "This time, she snuck out of the house and spent the whole journey sightseeing, exploring the countryside, and standing up for those who couldn't defend themselves."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -10587,12 +10587,12 @@
   splits:
   - split: 10
     text: "什么偷跑出来，是游历懂吗？游！历！"
-    translated: "What sneaked out was the adventurer, right? Adven‑tur‑er!"
+    translated: "What do you mean, sneaking out? I was traveling! Traveling!"
 - raw: ",,王添翼,右,,,,,,,说漏嘴了，说漏嘴了。\\n雷大小姐正好“游历”到我们青城派地盘上，被师傅老人家晓得了，\\n就专门喊我一路护着，不要让她出啥子事情。"
   splits:
   - split: 10
     text: "说漏嘴了，说漏嘴了。"
-    translated: "Blabbed it, blabbed it"
+    translated: "I let that slip. I let that slip."
   - split: 10
     subIndex: 1
     text: "雷大小姐正好“游历”到我们青城派地盘上，被师傅老人家晓得了，"
@@ -10680,7 +10680,7 @@
   - split: 10
     subIndex: 2
     text: "本大小姐准备去教训此人，小翼子你前面带路吧！"
-    translated: "Miss me, I'm going to give this person a lesson. Little Yizi, lead the way!"
+    translated: "This young lady is going to teach this fellow a lesson. Little Yizi, lead the way!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -49884,7 +49884,7 @@
   - split: 10
     subIndex: 1
     text: "别忘了，你能加入丐帮，这王添翼兄弟也有功劳不是？"
-    translated: "Don't forget that you could join the Beggar Sect, and Brother Wang Tiaoying also deserves some credit for that, right?"
+    translated: "Don't forget that you could join the Beggar Sect, and Brother Wang Tiaoyi also deserves some credit for that, right?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -49896,7 +49896,6 @@
   - split: 10
     subIndex: 1
     text: "他奶奶的，我乐山大患戴壮，就陪你们再干一票！"
-    translated: "By heaven and earth, Le Shan Da Huai Dai Zhuang, I'll pull one more job with you!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -116076,7 +116075,7 @@
   - split: 9
     subIndex: 1
     text: "王添翼"
-    translated: "Wang Tiaoyi"
+    translated: "Wang Tianyi"
   - split: 10
     text: "狗贼哪里走！"
     translated: "Traitor, where are you going!"
@@ -122056,7 +122055,7 @@
   splits:
   - split: 10
     text: "王添翼在清远乡山谷中与郭大侠一战，已过去数日。"
-    translated: "Wang Tiaoyi's battle with Hero Guo in the valley of Qingyuan Township has been going on for several days."
+    translated: "Wang Tianyi's battle with Hero Guo in the valley of Qingyuan Township has been going on for several days."
   - split: 10
     subIndex: 1
     text: "他此后一路逃亡，终于来到玉溪村内一僻静之处，"
@@ -163139,7 +163138,7 @@
   - split: 10
     subIndex: 1
     text: "结果鹬蚌相争渔翁得利，让武绝义和计心狂这两恶贼得了便宜。"
-    translated: "Resulting from the strife between the snipe and clam, the fisherman benefited, allowing Wu Jueyi and Ji Xingkuang, these two villains, to gain an advantage."
+    translated: "In the end, the heron and the clam fought while the fisherman profited, letting those two villains, Wu Jueyi and Ji Xinkuang, reap the rewards."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -256986,7 +256985,7 @@
   splits:
   - split: 10
     text: "王添翼"
-    translated: "Wang Tiaoyi"
+    translated: "Wang Tianyi"
   - split: 10
     subIndex: 1
     text: "跟你一起越狱的可是爷爷我"

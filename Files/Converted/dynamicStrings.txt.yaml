@@ -33991,11 +33991,11 @@
 - raw: "王添翼"
   splits:
   - text: "王添翼"
-    translated: "Wang Tiaoyi"
+    translated: "Wang Tianyi"
 - raw: "王添翼-2"
   splits:
   - text: "王添翼"
-    translated: "Wang Tiaoyi"
+    translated: "Wang Tianyi"
   templates:
   - template: "{0}-2"
 - raw: "王添翼奋起了！"
