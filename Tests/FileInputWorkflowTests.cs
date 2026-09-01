@@ -5,14 +5,13 @@ namespace Tests;
 public class FileInputWorkflowTests
 {
 
-
     [Fact(DisplayName = "1. ExportAssetsIntoTranslated")]
     public void ExportAssetsIntoTranslated()
     {
         GameFileHandling.ExportGameSpecificTextAssetsToCustomFormat(GameFileHandling.WorkingDirectory);
     }
 
-    [Fact(DisplayName = "1b. ExportPrefabTextIntoTranslated")]
+    [Fact(DisplayName = "2. ExportPrefabTextIntoTranslated")]
     public void ExportPrefabTextIntoTranslated()
     {
         // Must run before the export below, which exports whatever ends up in
@@ -29,62 +28,101 @@ public class FileInputWorkflowTests
         GameFileHandling.ExportPrefabTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
     }
 
-    [Fact(DisplayName = "1c. ExportDynamicStringsIntoTranslated")]
-    public void ExportDynamicStringsIntoTranslated()
+    [Fact(DisplayName = "3. ExtractIl2CppStringMapCandidates")]
+    public void ExtractIl2CppStringMapCandidates()
     {
-        // Both remaining automated candidate-extraction sources run first, in-process, so this
-        // single fact covers the whole dynamic-strings workflow end to end - both are
-        // idempotent/safe to re-run (already-extracted values are never duplicated) and must run
-        // before the export below, which exports whatever ends up in
-        // Raw/Dumped/DynamicStrings/*.txt (including dynamicStringsFromColumns.txt, which both
-        // populate).
-        //
-        // Source 1: config-driven extraction of whole-phrase strings (force/sect names, hero rank
-        // tags, etc.) from specific CSV columns - see GameFileHandling.DynamicStringColumnSources'
-        // doc comment for why these need their own dictionary entries instead of relying on
-        // DynamicStringPatches' bare single-character fallback entries.
-        GameFileHandling.ExtractDynamicStringCandidatesFromColumns(GameFileHandling.WorkingDirectory);
-
-        // Source 1b: SpeHeroData family/given-name halves, written to their OWN dedicated
-        // heroNameParts.txt (NOT merged into dynamicStringsFromColumns.txt above) - see
-        // GameFileHandling.ExtractHeroNamePartCandidates' doc comment for why these must stay out
-        // of DynamicStringPatches' global substring-replace dictionary.
-        GameFileHandling.ExtractHeroNamePartCandidates(GameFileHandling.WorkingDirectory);
-
-        // Source 2 (formerly "Source 2" here, extracting from dumpedOtherText.txt) now runs in
-        // "1b" above instead, feeding the PrefabText pipeline rather than this one - see
-        // ExtractDynamicStringCandidatesFromOtherText's doc comment.
-        //
-        // Source 3: regenerates Converter/output/_dynamicStrings_candidates.txt FRESH (by shelling
-        // out to the sibling Converter project) from the current Converter/output/_string_map.csv
-        // every run, rather than trusting whatever candidates file happens to already be on disk,
-        // and appends any genuinely-new entries STRAIGHT into the master dynamicStrings.txt dump
-        // (also bootstraps that file the first time it's missing entirely, e.g. fresh clone or
-        // after deleting Raw/Dumped) - there is no manual review/curation step in practice, despite
-        // older doc comments implying one; dynamicStrings.txt IS this candidates file, deduped and
-        // accumulated over time. No-ops gracefully if the Converter project hasn't produced a
-        // _string_map.csv yet (e.g. a fresh clone that hasn't run the full decompile pipeline) - in
-        // that case dynamicStrings.txt must already exist from a previous run or "1c." will fail.
+        // Regenerates Converter/output/_dynamicStrings_candidates.txt FRESH (by shelling out to
+        // the sibling Converter project) from the current Converter/output/_string_map.csv every
+        // run, and appends any genuinely-new entries straight into the master dynamicStrings.txt
+        // dump (also bootstraps that file the first time it's missing entirely). No-ops
+        // gracefully if the Converter project hasn't produced a _string_map.csv yet - in that
+        // case dynamicStrings.txt must already exist from a previous run or "1f." will find
+        // nothing new to work from.
         GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap(GameFileHandling.WorkingDirectory);
+    }
 
-        // Source 4: splits ';'-joined structured-record candidates (only ever found whole inside
-        // a binary literal dumped by Source 3 above, e.g. "包扎;HospitalCureExternalInjury;;;
-        // 技能影响:医术") into their own standalone Name/Description-style fragments - see
+    [Fact(DisplayName = "4a. ExtractColumnCandidates")]
+    public void ExtractColumnCandidates()
+    {
+        // Config-driven extraction of whole-phrase strings (force/sect names, hero rank tags,
+        // etc.) from specific CSV columns - see GameFileHandling.DynamicStringColumnSources' doc
+        // comment for why these need their own dictionary entries instead of relying on
+        // DynamicStringPatches' bare single-character fallback entries. Writes only
+        // dynamicStringsFromColumns.txt. Idempotent (re-running never duplicates within this
+        // file); cross-file duplicates are handled separately by "1i.".
+        GameFileHandling.ExtractDynamicStringCandidatesFromColumns(GameFileHandling.WorkingDirectory);
+    }
+
+    [Fact(DisplayName = "4b. ExtractHeroNamePartCandidates")]
+    public void ExtractHeroNamePartCandidates()
+    {
+        // SpeHeroData family/given-name halves, written to their OWN dedicated heroNameParts.txt
+        // (never merged into DynamicStringPatches' global substring-replace dictionary) - see
+        // GameFileHandling.ExtractHeroNamePartCandidates' doc comment.
+        GameFileHandling.ExtractHeroNamePartCandidates(GameFileHandling.WorkingDirectory);
+    }
+
+
+
+    [Fact(DisplayName = "4c ExtractStructuredRecordFragmentCandidates")]
+    public void ExtractStructuredRecordFragmentCandidates()
+    {
+        // Splits ';'-joined structured-record candidates (only ever found whole inside a binary
+        // literal dumped by "3.", e.g. "包扎;HospitalCureExternalInjury;;;技能影响:医术") into
+        // their own standalone Name/Description-style fragments - see
         // GameFileHandling.ExtractStructuredRecordFragmentCandidates' doc comment. Must run after
-        // Source 3, which is what refreshes the master dump this reads from.
+        // "3.", which is what refreshes the master dynamicStrings.txt dump this reads from.
+        // Writes only dynamicStringsFromStructuredFragments.txt.
         GameFileHandling.ExtractStructuredRecordFragmentCandidates(GameFileHandling.WorkingDirectory);
+    }
 
+    [Fact(DisplayName = "4d. ExtractOtherFieldLabelCandidates")]
+    public void ExtractOtherFieldLabelCandidates()
+    {
+        // Stat-label fragments (e.g. "spellEffectString") parsed out of dumpedOtherText.txt
+        // (the same source "1b." reads) - see GameFileHandling.ExtractOtherFieldLabelCandidates'
+        // doc comment. Writes only dynamicStringsFromOtherFieldLabels.txt.
+        GameFileHandling.ExtractOtherFieldLabelCandidates(GameFileHandling.WorkingDirectory);
+    }
+
+    [Fact(DisplayName = "4e. ExtractPoetryCandidates")]
+    public void ExtractPoetryCandidates()
+    {
+        // Poem minigame ("对诗") title/author/paragraph-line candidates read directly from the
+        // JSON TextAsset/PoetryData.txt - see PoetryDataWorkflow.ExtractPoetryCandidates' doc
+        // comment. Writes only dynamicStringsPoetry.txt.
+        PoetryDataWorkflow.ExtractPoetryCandidates(GameFileHandling.WorkingDirectory);
+    }
+
+    [Fact(DisplayName = "5. DedupeDynamicStringFiles")]
+    public void DedupeDynamicStringFiles()
+    {
+        // Final, authoritative cross-file dedup pass over every Raw/Dumped/DynamicStrings/*.txt
+        // file - safe/idempotent regardless of which of 1c-1h ran, how many times, or in what
+        // order. See GameFileHandling.DedupeDynamicStringFiles' doc comment for the priority
+        // order used when a value exists in more than one file.
+        GameFileHandling.DedupeDynamicStringFiles(GameFileHandling.WorkingDirectory);
+    }
+
+    [Fact(DisplayName = "6. ExportDynamicStringFilesIntoTranslated")]
+    public void ExportDynamicStringFilesIntoTranslated()
+    {
+        // Pure "serialize whatever's on disk now" step - exports every configured
+        // DynamicStringsIL2CPP file (dynamicStrings.txt, dynamicStringsFromColumns.txt,
+        // dynamicStringsFromStructuredFragments.txt, dynamicStringsFromOtherFieldLabels.txt,
+        // dynamicStringsPoetry.txt, heroNameParts.txt) into Files/Converted/*.yaml. Must run after
+        // 1c-1i have populated/deduped Raw/Dumped/DynamicStrings/*.txt.
         GameFileHandling.ExportDynamicStringTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
     }
 
-    [Fact(DisplayName = "2. MergeFilesIntoTranslated")]
+    [Fact(DisplayName = "99. MergeFilesIntoTranslated")]
     public async Task MergeFilesIntoTranslated()
     {
         await GameFileHandlingBase
             .MergeFilesIntoTranslatedAsync(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
     }
 
-    [Fact(DisplayName = "99. Check File Lines Match")]
+    [Fact(DisplayName = "999. Check File Lines Match")]
     public void CheckFileLinesMatch()
     {
         var badFiles = GameFileHandlingBase

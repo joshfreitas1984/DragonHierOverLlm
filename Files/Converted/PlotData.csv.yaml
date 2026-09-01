@@ -225901,9 +225901,7 @@
   splits:
   - split: 10
     text: "诸位青城弟子，难道王添翼兄弟的遭遇，还不足以让你们寒心吗？"
-    translated: "Fellow disciples of Qingcheng, is Wang Tianyi's experience not enough to chill your hearts?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Brother Tianyi,添翼兄,"
+    translated: "Fellow disciples of Qingcheng, is Brother Wang Tianyi's experience not enough to chill your hearts?"
   - split: 10
     subIndex: 1
     text: "胆敢阻拦我者，与此老贼同罪！"

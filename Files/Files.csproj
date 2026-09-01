@@ -20,7 +20,6 @@
     <Folder Include="Mod\" />
     <Folder Include="Raw\Dumped\DynamicStrings\" />
     <Folder Include="Raw\Dumped\PrefabText\" />
-    <Folder Include="Raw\Dumped\" />
     <Folder Include="Raw\Export\" />
     <Folder Include="TestResults\Failed\" />
     <Folder Include="TestResults\Glossary\" />

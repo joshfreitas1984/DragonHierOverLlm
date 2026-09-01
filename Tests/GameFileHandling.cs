@@ -233,6 +233,21 @@ namespace Tests
             // Additional dynamic-string source; see docs/gamefilehandling-reference.md.
             new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
+            // ';'-joined structured-record fragments parsed out of dynamicStrings.txt - split into
+            // its own file (was previously mixed into dynamicStringsFromColumns.txt) so each
+            // dynamic-string file's provenance is unambiguous. See
+            // ExtractStructuredRecordFragmentCandidates.
+            new() {Path = "dynamicStringsFromStructuredFragments.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+
+            // Stat-label fragments parsed out of dumpedOtherText.txt (e.g. "spellEffectString")
+            // - split into its own file (was previously mixed into dynamicStringsFromColumns.txt).
+            // See ExtractOtherFieldLabelCandidates.
+            new() {Path = "dynamicStringsFromOtherFieldLabels.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+
+            // Poetry minigame ("对诗" fill-in-the-blank) candidates extracted directly from the
+            // JSON TextAsset/PoetryData.txt - see PoetryDataWorkflow.ExtractPoetryCandidates.
+            new() {Path = "dynamicStringsPoetry.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+
             // SpeHeroData family/given-name halves - a DEDICATED file, deliberately NOT named
             // "dynamicStrings*" so it never matches DynamicStringPatches' DictionaryFilePattern
             // glob and never gets merged into that plugin's global substring-replace dictionary
@@ -388,18 +403,35 @@ namespace Tests
         // space-separated value(s) that follow, split further below.
         private static readonly Regex LabeledFieldRegex = new(@"^([\p{IsCJKUnifiedIdeographs}]+[:：])(.+)$", RegexOptions.Compiled);
 
+        // Directory holding every dynamic-string dump/candidate file (dynamicStrings.txt,
+        // dynamicStringsFromColumns.txt, dynamicStringsFromStructuredFragments.txt,
+        // dynamicStringsFromOtherFieldLabels.txt, dynamicStringsPoetry.txt, heroNameParts.txt).
+        internal static string DynamicStringsDumpDirectory(string workingDirectory) =>
+            $"{workingDirectory}/Raw/Dumped/DynamicStrings";
+
+        /// <summary>
+        /// Unions every raw value already present in ONE dynamic-string dump file (this
+        /// extractor's own output file) - just enough for re-run idempotency. Deliberately does
+        /// NOT cross-check every other dynamic-string file: that's DedupeDynamicStringFiles' job
+        /// alone (the one authoritative cross-file pass, run once at "1i."), so each extractor
+        /// stays independent of every other one and doesn't care what order 1c-1h ran in.
+        /// </summary>
+        internal static HashSet<string> GetExistingDynamicStringValues(string outputPath)
+        {
+            var seen = new HashSet<string>();
+            if (File.Exists(outputPath))
+                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+
+            return seen;
+        }
+
         /// <summary>Extracts configured whole values and structured labels idempotently.</summary>
 
         public static void ExtractDynamicStringCandidatesFromColumns(string workingDirectory)
         {
-            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
             var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
 
-            var seen = new HashSet<string>();
-            if (File.Exists(masterDumpPath))
-                seen.UnionWith(File.ReadAllLines(masterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
-            if (File.Exists(outputPath))
-                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+            var seen = GetExistingDynamicStringValues(outputPath);
 
             var found = new List<string>();
 
@@ -492,13 +524,10 @@ namespace Tests
         public static void ExtractStructuredRecordFragmentCandidates(string workingDirectory)
         {
             var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
-            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromStructuredFragments.txt";
             if (!File.Exists(masterDumpPath)) return;
 
-            var seen = new HashSet<string>();
-            seen.UnionWith(File.ReadAllLines(masterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
-            if (File.Exists(outputPath))
-                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+            var seen = GetExistingDynamicStringValues(outputPath);
 
             var found = new List<string>();
 
@@ -554,9 +583,7 @@ namespace Tests
         {
             var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/heroNameParts.txt";
 
-            var seen = new HashSet<string>();
-            if (File.Exists(outputPath))
-                seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
+            var seen = GetExistingDynamicStringValues(outputPath);
 
             var found = new List<string>();
 
@@ -597,7 +624,8 @@ namespace Tests
         public static void ExtractDynamicStringCandidatesFromOtherText(string workingDirectory)
         {
             var otherTextPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedOtherText.txt";
-            if (!File.Exists(otherTextPath)) return;
+            if (!File.Exists(otherTextPath))
+                throw new InvalidOperationException("You need to run Dump Chinese Text");
 
             var masterDumpPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedPrefabText.txt";
             var outputPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedPrefabTextFromOtherFields.txt";
@@ -608,15 +636,6 @@ namespace Tests
             if (File.Exists(outputPath))
                 seen.UnionWith(File.ReadAllLines(outputPath).Where(l => !string.IsNullOrEmpty(l)));
 
-            // Labels are dedup'd against the DynamicStrings files instead - a different output domain.
-            var labelsOutputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromColumns.txt";
-            var labelsMasterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
-            var seenLabels = new HashSet<string>();
-            if (File.Exists(labelsMasterDumpPath))
-                seenLabels.UnionWith(File.ReadAllLines(labelsMasterDumpPath).Where(l => !string.IsNullOrEmpty(l)));
-            if (File.Exists(labelsOutputPath))
-                seenLabels.UnionWith(File.ReadAllLines(labelsOutputPath).Where(l => !string.IsNullOrEmpty(l)));
-
             var allowedFields = new HashSet<string>(DynamicStringOtherTextFields, StringComparer.OrdinalIgnoreCase);
             var labelFields = new HashSet<string>(DynamicStringLabelOtherTextFields, StringComparer.OrdinalIgnoreCase);
 
@@ -625,7 +644,6 @@ namespace Tests
             var entries = deserializer.Deserialize<List<Dictionary<string, string>>>(File.ReadAllText(otherTextPath)) ?? [];
 
             var found = new List<string>();
-            var foundLabels = new List<string>();
             foreach (var entry in entries)
             {
                 if (!entry.TryGetValue("raw", out var raw) || string.IsNullOrWhiteSpace(raw)) continue;
@@ -643,14 +661,8 @@ namespace Tests
                     continue;
                 }
 
-                if (labelFields.Contains(field))
-                {
-                    var label = StatLabelRegex.Match(raw).Value;
-                    if (string.IsNullOrWhiteSpace(label) || !seenLabels.Add(label)) continue;
-
-                    foundLabels.Add(label);
-                    continue;
-                }
+                // Labels are now extracted separately - see ExtractOtherFieldLabelCandidates.
+                if (labelFields.Contains(field)) continue;
 
                 if (!allowedFields.Contains(field)) continue;
                 if (!seen.Add(raw)) continue;
@@ -660,12 +672,45 @@ namespace Tests
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
             File.AppendAllLines(outputPath, found);
+        }
 
-            if (foundLabels.Count > 0)
+        /// <summary>
+        /// Extracts the stat-label sub-source (e.g. "spellEffectString") out of
+        /// dumpedOtherText.txt into its OWN dedicated file
+        /// (Raw/Dumped/DynamicStrings/dynamicStringsFromOtherFieldLabels.txt) - split out of
+        /// dynamicStringsFromColumns.txt (formerly written there by
+        /// ExtractDynamicStringCandidatesFromOtherText) so each dynamic-string file's provenance
+        /// is unambiguous. Idempotent: re-running never duplicates an already-extracted value.
+        /// </summary>
+        public static void ExtractOtherFieldLabelCandidates(string workingDirectory)
+        {
+            var otherTextPath = $"{workingDirectory}/Raw/Dumped/PrefabText/dumpedOtherText.txt";
+            if (!File.Exists(otherTextPath)) return;
+
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsFromOtherFieldLabels.txt";
+            var seen = GetExistingDynamicStringValues(outputPath);
+
+            var labelFields = new HashSet<string>(DynamicStringLabelOtherTextFields, StringComparer.OrdinalIgnoreCase);
+
+            // Use dictionaries because the dumped-entry record has no parameterless constructor.
+            var deserializer = YamlHelper.CreateDeserializer();
+            var entries = deserializer.Deserialize<List<Dictionary<string, string>>>(File.ReadAllText(otherTextPath)) ?? [];
+
+            var found = new List<string>();
+            foreach (var entry in entries)
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(labelsOutputPath)!);
-                File.AppendAllLines(labelsOutputPath, foundLabels);
+                if (!entry.TryGetValue("raw", out var raw) || string.IsNullOrWhiteSpace(raw)) continue;
+                if (!entry.TryGetValue("field", out var field)) continue;
+                if (!labelFields.Contains(field)) continue;
+
+                var label = StatLabelRegex.Match(raw).Value;
+                if (string.IsNullOrWhiteSpace(label) || !seen.Add(label)) continue;
+
+                found.Add(label);
             }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
         }
 
         /// <summary>
@@ -739,6 +784,51 @@ namespace Tests
 
             Directory.CreateDirectory(Path.GetDirectoryName(masterDumpPath)!);
             File.AppendAllLines(masterDumpPath, found);
+        }
+
+        // Fixed priority order for cross-file dedup: when a raw value exists in more than one
+        // dynamic-string dump file, it's kept in whichever file appears EARLIEST here and removed
+        // from the rest. Any file under Raw/Dumped/DynamicStrings/ not listed here is treated as
+        // lowest priority (kept last).
+        private static readonly string[] DynamicStringDedupePriorityOrder =
+        [
+            "dynamicStrings.txt",
+            "dynamicStringsFromColumns.txt",
+            "dynamicStringsFromStructuredFragments.txt",
+            "dynamicStringsFromOtherFieldLabels.txt",
+            "dynamicStringsPoetry.txt",
+        ];
+
+        /// <summary>
+        /// Final, authoritative cross-file dedup pass for Raw/Dumped/DynamicStrings/*.txt - the
+        /// one place duplicates across files get resolved, regardless of which extraction Facts
+        /// ran, how many times, or in what order (each extractor only needs to avoid duplicating
+        /// within its OWN file via GetExistingDynamicStringValues; this pass handles anything that
+        /// ends up in more than one file). Safe/idempotent - re-running when there are no
+        /// cross-file duplicates left is a no-op.
+        /// </summary>
+        public static void DedupeDynamicStringFiles(string workingDirectory)
+        {
+            var dir = DynamicStringsDumpDirectory(workingDirectory);
+            if (!Directory.Exists(dir)) return;
+
+            var files = Directory.GetFiles(dir, "dynamic*.txt")
+                .OrderBy(f =>
+                {
+                    var index = Array.IndexOf(DynamicStringDedupePriorityOrder, Path.GetFileName(f));
+                    return index < 0 ? int.MaxValue : index;
+                })
+                .ToList();
+
+            var seen = new HashSet<string>();
+            foreach (var file in files)
+            {
+                var lines = File.ReadAllLines(file);
+                var deduped = lines.Where(l => string.IsNullOrEmpty(l) || seen.Add(l)).ToList();
+
+                if (deduped.Count != lines.Length)
+                    File.WriteAllLines(file, deduped);
+            }
         }
 
         public static void ExportGameSpecificTextAssetsToCustomFormat(string workingDirectory)
@@ -1060,7 +1150,7 @@ namespace Tests
                     if (!failed)
                     {
                         //Reverse the Hyphen to a normal hyphen so it can be read in the game
-                        line.Translated = line.Translated.Replace("\u2011", "-"); 
+                        line.Translated = line.Translated.Replace("\u2011", "-");
                         outputLines.Add(line.Translated);
                     }
                     else

@@ -1,9 +1,6 @@
 - raw: "京城"
   splits:
   - text: "京城"
-- raw: "城市"
-  splits:
-  - text: "城市"
 - raw: "杭州"
   splits:
   - text: "杭州"
@@ -34,9 +31,6 @@
 - raw: "乐山镇"
   splits:
   - text: "乐山镇"
-- raw: "村镇"
-  splits:
-  - text: "村镇"
 - raw: "太平乡"
   splits:
   - text: "太平乡"
@@ -70,9 +64,6 @@
 - raw: "昌都镇"
   splits:
   - text: "昌都镇"
-- raw: "巴陵村"
-  splits:
-  - text: "巴陵村"
 - raw: "怀柔村"
   splits:
   - text: "怀柔村"
@@ -97,9 +88,6 @@
 - raw: "长乐帮"
   splits:
   - text: "长乐帮"
-- raw: "门派"
-  splits:
-  - text: "门派"
 - raw: "唐门"
   splits:
   - text: "唐门"
@@ -244,39 +232,9 @@
 - raw: "扶胥镇"
   splits:
   - text: "扶胥镇"
-- raw: "正厅"
-  splits:
-  - text: "正厅"
-- raw: "藏经阁"
-  splits:
-  - text: "藏经阁"
-- raw: "练武场"
-  splits:
-  - text: "练武场"
-- raw: "闭关室"
-  splits:
-  - text: "闭关室"
 - raw: "祠堂"
   splits:
   - text: "祠堂"
-- raw: "工匠坊"
-  splits:
-  - text: "工匠坊"
-- raw: "炼丹炉"
-  splits:
-  - text: "炼丹炉"
-- raw: "疗伤室"
-  splits:
-  - text: "疗伤室"
-- raw: "宿舍"
-  splits:
-  - text: "宿舍"
-- raw: "仓库"
-  splits:
-  - text: "仓库"
-- raw: "钱庄"
-  splits:
-  - text: "钱庄"
 - raw: "农田"
   splits:
   - text: "农田"
@@ -289,30 +247,15 @@
 - raw: "药园"
   splits:
   - text: "药园"
-- raw: "官府"
-  splits:
-  - text: "官府"
 - raw: "集市"
   splits:
   - text: "集市"
 - raw: "客栈"
   splits:
   - text: "客栈"
-- raw: "告示"
-  splits:
-  - text: "告示"
-- raw: "岗哨"
-  splits:
-  - text: "岗哨"
-- raw: "分舵"
-  splits:
-  - text: "分舵"
 - raw: "驿站"
   splits:
   - text: "驿站"
-- raw: "武馆"
-  splits:
-  - text: "武馆"
 - raw: "医馆"
   splits:
   - text: "医馆"
@@ -463,18 +406,171 @@
 - raw: "玄冰池"
   splits:
   - text: "玄冰池"
-- raw: "私宅"
-  splits:
-  - text: "私宅"
 - raw: "应天书院"
   splits:
   - text: "应天书院"
 - raw: "河套马场"
   splits:
   - text: "河套马场"
-- raw: "中庸"
+- raw: "腊八粥"
   splits:
-  - text: "中庸"
+  - text: "腊八粥"
+- raw: "炖老母鸡"
+  splits:
+  - text: "炖老母鸡"
+- raw: "天麻鱼头"
+  splits:
+  - text: "天麻鱼头"
+- raw: "沙苑甲鱼汤"
+  splits:
+  - text: "沙苑甲鱼汤"
+- raw: "参茸熊掌"
+  splits:
+  - text: "参茸熊掌"
+- raw: "十全大补汤"
+  splits:
+  - text: "十全大补汤"
+- raw: "雄黄酒"
+  splits:
+  - text: "雄黄酒"
+- raw: "乌龙茶"
+  splits:
+  - text: "乌龙茶"
+- raw: "蛇酒"
+  splits:
+  - text: "蛇酒"
+- raw: "肉桂茶"
+  splits:
+  - text: "肉桂茶"
+- raw: "三鞭酒"
+  splits:
+  - text: "三鞭酒"
+- raw: "铁观音茶"
+  splits:
+  - text: "铁观音茶"
+- raw: "鹿胎酒"
+  splits:
+  - text: "鹿胎酒"
+- raw: "白牡丹茶"
+  splits:
+  - text: "白牡丹茶"
+- raw: "虎骨酒"
+  splits:
+  - text: "虎骨酒"
+- raw: "大红袍茶"
+  splits:
+  - text: "大红袍茶"
+- raw: "龙脑酒"
+  splits:
+  - text: "龙脑酒"
+- raw: "凤凰水仙茶"
+  splits:
+  - text: "凤凰水仙茶"
+- raw: "烧饼"
+  splits:
+  - text: "烧饼"
+- raw: "肉包"
+  splits:
+  - text: "肉包"
+- raw: "煎饺"
+  splits:
+  - text: "煎饺"
+- raw: "烧鸡"
+  splits:
+  - text: "烧鸡"
+- raw: "红烧肉"
+  splits:
+  - text: "红烧肉"
+- raw: "乳猪"
+  splits:
+  - text: "乳猪"
+- raw: "绿茶"
+  splits:
+  - text: "绿茶"
+- raw: "烧刀子"
+  splits:
+  - text: "烧刀子"
+- raw: "龙井茶"
+  splits:
+  - text: "龙井茶"
+- raw: "竹叶青"
+  splits:
+  - text: "竹叶青"
+- raw: "碧螺春茶"
+  splits:
+  - text: "碧螺春茶"
+- raw: "葡萄酒"
+  splits:
+  - text: "葡萄酒"
+- raw: "毛峰茶"
+  splits:
+  - text: "毛峰茶"
+- raw: "新丰酒"
+  splits:
+  - text: "新丰酒"
+- raw: "云雾茶"
+  splits:
+  - text: "云雾茶"
+- raw: "杜康酒"
+  splits:
+  - text: "杜康酒"
+- raw: "太平猴魁茶"
+  splits:
+  - text: "太平猴魁茶"
+- raw: "桂圆枸杞粥"
+  splits:
+  - text: "桂圆枸杞粥"
+- raw: "茯苓糕"
+  splits:
+  - text: "茯苓糕"
+- raw: "当归炖羊肉"
+  splits:
+  - text: "当归炖羊肉"
+- raw: "虫草老鸭煲"
+  splits:
+  - text: "虫草老鸭煲"
+- raw: "四君子汤"
+  splits:
+  - text: "四君子汤"
+- raw: "烩八珍"
+  splits:
+  - text: "烩八珍"
+- raw: "清酒"
+  splits:
+  - text: "清酒"
+- raw: "红茶"
+  splits:
+  - text: "红茶"
+- raw: "花雕酒"
+  splits:
+  - text: "花雕酒"
+- raw: "工夫茶"
+  splits:
+  - text: "工夫茶"
+- raw: "女儿红"
+  splits:
+  - text: "女儿红"
+- raw: "古树茶"
+  splits:
+  - text: "古树茶"
+- raw: "桑落酒"
+  splits:
+  - text: "桑落酒"
+- raw: "九曲红梅茶"
+  splits:
+  - text: "九曲红梅茶"
+- raw: "猴儿酿"
+  splits:
+  - text: "猴儿酿"
+- raw: "金骏眉茶"
+  splits:
+  - text: "金骏眉茶"
+- raw: "换骨醪"
+  splits:
+  - text: "换骨醪"
+- raw: "正山小种茶"
+  splits:
+  - text: "正山小种茶"
 - raw: "轻功;刀法;射术"
   splits:
   - text: "轻功"
@@ -484,17 +580,11 @@
     text: "射术"
   templates:
   - template: "{0};{1};{2}"
-- raw: "口才"
-  splits:
-  - text: "口才"
 - raw: "珍宝:1.5"
   splits:
   - text: "珍宝"
   templates:
   - template: "{0}:1.5"
-- raw: "霸业"
-  splits:
-  - text: "霸业"
 - raw: "绝技;射术;刀法"
   splits:
   - text: "绝技"
@@ -504,9 +594,6 @@
     text: "刀法"
   templates:
   - template: "{0};{1};{2}"
-- raw: "毒术"
-  splits:
-  - text: "毒术"
 - raw: "材料:1.5"
   splits:
   - text: "材料"
@@ -533,9 +620,6 @@
   - text: "丹药"
   templates:
   - template: "{0}:2"
-- raw: "仁义"
-  splits:
-  - text: "仁义"
 - raw: "拳掌;长兵;绝技"
   splits:
   - text: "拳掌"
@@ -566,9 +650,6 @@
     text: "刀法"
   templates:
   - template: "{0};{1};{2}"
-- raw: "采伐"
-  splits:
-  - text: "采伐"
 - raw: "马匹:2"
   splits:
   - text: "马匹"
@@ -583,9 +664,6 @@
     text: "剑法"
   templates:
   - template: "{0};{1};{2}"
-- raw: "炼药"
-  splits:
-  - text: "炼药"
 - raw: "丹药:1.5"
   splits:
   - text: "丹药"
@@ -683,9 +761,6 @@
     text: "拳掌"
   templates:
   - template: "{0};{1};{2};{3}"
-- raw: "医术"
-  splits:
-  - text: "医术"
 - raw: "秘籍:1"
   splits:
   - text: "秘籍"
@@ -723,9 +798,6 @@
     text: "绝技"
   templates:
   - template: "{0};{1};{2}"
-- raw: "烹饪"
-  splits:
-  - text: "烹饪"
 - raw: "饮食:1"
   splits:
   - text: "饮食"
@@ -740,9 +812,6 @@
     text: "奇门"
   templates:
   - template: "{0};{1};{2}"
-- raw: "学识"
-  splits:
-  - text: "学识"
 - raw: "秘籍:0.5"
   splits:
   - text: "秘籍"
@@ -757,9 +826,6 @@
     text: "拳掌"
   templates:
   - template: "{0};{1};{2}"
-- raw: "木植"
-  splits:
-  - text: "木植"
 - raw: "材料:1"
   splits:
   - text: "材料"
@@ -809,9 +875,6 @@
     text: "长兵"
   templates:
   - template: "{0};{1};{2}"
-- raw: "锻造"
-  splits:
-  - text: "锻造"
 - raw: "材料:2"
   splits:
   - text: "材料"
@@ -854,9 +917,6 @@
     text: "长兵"
   templates:
   - template: "{0};{1};{2}"
-- raw: "无"
-  splits:
-  - text: "无"
 - raw: "丹药:0.5"
   splits:
   - text: "丹药"
@@ -912,9 +972,6 @@
   - text: "装备"
   templates:
   - template: "{0}:0.5"
-- raw: "剑法"
-  splits:
-  - text: "剑法"
 - raw: "轻功;射术"
   splits:
   - text: "轻功"
@@ -973,21 +1030,12 @@
 - raw: "旅行速度"
   splits:
   - text: "旅行速度"
-- raw: "实战经验"
-  splits:
-  - text: "实战经验"
-- raw: "理论经验"
-  splits:
-  - text: "理论经验"
 - raw: "疗伤效率"
   splits:
   - text: "疗伤效率"
 - raw: "本地疗伤效率"
   splits:
   - text: "本地疗伤效率"
-- raw: "恢复效率"
-  splits:
-  - text: "恢复效率"
 - raw: "本地恢复效率"
   splits:
   - text: "本地恢复效率"
@@ -1150,60 +1198,183 @@
 - raw: "城防耐久"
   splits:
   - text: "城防耐久"
-- raw: "力道"
+- raw: "骡子"
   splits:
-  - text: "力道"
+  - text: "骡子"
+- raw: "驴子"
+  splits:
+  - text: "驴子"
+- raw: "跛脚马"
+  splits:
+  - text: "跛脚马"
+- raw: "小马"
+  splits:
+  - text: "小马"
+- raw: "劣马"
+  splits:
+  - text: "劣马"
+- raw: "矮马"
+  splits:
+  - text: "矮马"
+- raw: "驮马"
+  splits:
+  - text: "驮马"
+- raw: "瘦马"
+  splits:
+  - text: "瘦马"
+- raw: "大马"
+  splits:
+  - text: "大马"
+- raw: "烈马"
+  splits:
+  - text: "烈马"
+- raw: "军马"
+  splits:
+  - text: "军马"
+- raw: "快马"
+  splits:
+  - text: "快马"
+- raw: "战马"
+  splits:
+  - text: "战马"
+- raw: "河曲马"
+  splits:
+  - text: "河曲马"
+- raw: "西南马"
+  splits:
+  - text: "西南马"
+- raw: "山地马"
+  splits:
+  - text: "山地马"
+- raw: "蒙古马"
+  splits:
+  - text: "蒙古马"
+- raw: "哈萨克马"
+  splits:
+  - text: "哈萨克马"
+- raw: "伊犁马"
+  splits:
+  - text: "伊犁马"
+- raw: "乌孙马"
+  splits:
+  - text: "乌孙马"
+- raw: "五花马"
+  splits:
+  - text: "五花马"
+- raw: "白兔马"
+  splits:
+  - text: "白兔马"
+- raw: "枣红马"
+  splits:
+  - text: "枣红马"
+- raw: "绿耳马"
+  splits:
+  - text: "绿耳马"
+- raw: "白义马"
+  splits:
+  - text: "白义马"
+- raw: "青骓马"
+  splits:
+  - text: "青骓马"
+- raw: "华骝马"
+  splits:
+  - text: "华骝马"
+- raw: "黄骠马"
+  splits:
+  - text: "黄骠马"
+- raw: "骕骦马"
+  splits:
+  - text: "骕骦马"
+- raw: "玉花骢"
+  splits:
+  - text: "玉花骢"
+- raw: "奔宵马"
+  splits:
+  - text: "奔宵马"
+- raw: "纤离马"
+  splits:
+  - text: "纤离马"
+- raw: "乌骓马"
+  splits:
+  - text: "乌骓马"
+- raw: "白蹄乌"
+  splits:
+  - text: "白蹄乌"
+- raw: "什伐赤"
+  splits:
+  - text: "什伐赤"
+- raw: "拳毛驹"
+  splits:
+  - text: "拳毛驹"
+- raw: "斑豹马"
+  splits:
+  - text: "斑豹马"
+- raw: "赤骥马"
+  splits:
+  - text: "赤骥马"
+- raw: "麒麟兽"
+  splits:
+  - text: "麒麟兽"
+- raw: "照夜白"
+  splits:
+  - text: "照夜白"
+- raw: "汗血马"
+  splits:
+  - text: "汗血马"
+- raw: "赤兔马"
+  splits:
+  - text: "赤兔马"
+- raw: "的卢马"
+  splits:
+  - text: "的卢马"
+- raw: "绝影马"
+  splits:
+  - text: "绝影马"
+- raw: "特勒骠"
+  splits:
+  - text: "特勒骠"
+- raw: "神凫马"
+  splits:
+  - text: "神凫马"
+- raw: "飒露紫"
+  splits:
+  - text: "飒露紫"
+- raw: "白龙驹"
+  splits:
+  - text: "白龙驹"
 - raw: "1"
   splits:
   - text: "1"
-- raw: "武学"
-  splits:
-  - text: "武学"
 - raw: "孔武有力"
   splits:
   - text: "孔武有力"
 - raw: "拔山扛鼎"
   splits:
   - text: "拔山扛鼎"
-- raw: "灵巧"
-  splits:
-  - text: "灵巧"
 - raw: "手疾眼快"
   splits:
   - text: "手疾眼快"
 - raw: "七窍玲珑"
   splits:
   - text: "七窍玲珑"
-- raw: "智力"
-  splits:
-  - text: "智力"
 - raw: "足智多谋"
   splits:
   - text: "足智多谋"
 - raw: "聪慧绝伦"
   splits:
   - text: "聪慧绝伦"
-- raw: "意志"
-  splits:
-  - text: "意志"
 - raw: "动心忍性"
   splits:
   - text: "动心忍性"
 - raw: "百折不挠"
   splits:
   - text: "百折不挠"
-- raw: "体质"
-  splits:
-  - text: "体质"
 - raw: "强身健体"
   splits:
   - text: "强身健体"
 - raw: "钢筋铁骨"
   splits:
   - text: "钢筋铁骨"
-- raw: "经脉"
-  splits:
-  - text: "经脉"
 - raw: "运气自如"
   splits:
   - text: "运气自如"
@@ -1219,27 +1390,18 @@
 - raw: "炉火纯青"
   splits:
   - text: "炉火纯青"
-- raw: "轻功"
-  splits:
-  - text: "轻功"
 - raw: "飞檐走壁"
   splits:
   - text: "飞檐走壁"
 - raw: "神出鬼没"
   splits:
   - text: "神出鬼没"
-- raw: "绝技"
-  splits:
-  - text: "绝技"
 - raw: "身怀绝技"
   splits:
   - text: "身怀绝技"
 - raw: "绝艺超群"
   splits:
   - text: "绝艺超群"
-- raw: "拳掌"
-  splits:
-  - text: "拳掌"
 - raw: "拳不离手"
   splits:
   - text: "拳不离手"
@@ -1264,27 +1426,18 @@
 - raw: "一刀两断"
   splits:
   - text: "一刀两断"
-- raw: "长兵"
-  splits:
-  - text: "长兵"
 - raw: "舞枪弄棍"
   splits:
   - text: "舞枪弄棍"
 - raw: "枪扫六合"
   splits:
   - text: "枪扫六合"
-- raw: "奇门"
-  splits:
-  - text: "奇门"
 - raw: "旁门左道"
   splits:
   - text: "旁门左道"
 - raw: "奇门遁甲"
   splits:
   - text: "奇门遁甲"
-- raw: "射术"
-  splits:
-  - text: "射术"
 - raw: "百步穿杨"
   splits:
   - text: "百步穿杨"
@@ -1342,9 +1495,6 @@
 - raw: "0"
   splits:
   - text: "0"
-- raw: "高级"
-  splits:
-  - text: "高级"
 - raw: "羽化登仙"
   splits:
   - text: "羽化登仙"
@@ -1420,9 +1570,6 @@
 - raw: "武学宗师"
   splits:
   - text: "武学宗师"
-- raw: "登峰造极"
-  splits:
-  - text: "登峰造极"
 - raw: "返璞归真"
   splits:
   - text: "返璞归真"
@@ -1450,9 +1597,6 @@
 - raw: "力降十会"
   splits:
   - text: "力降十会"
-- raw: "技艺"
-  splits:
-  - text: "技艺"
 - raw: "术精岐黄"
   splits:
   - text: "术精岐黄"
@@ -1498,9 +1642,6 @@
 - raw: "对症下药"
   splits:
   - text: "对症下药"
-- raw: "灵丹妙药"
-  splits:
-  - text: "灵丹妙药"
 - raw: "烩不厌细"
   splits:
   - text: "烩不厌细"
@@ -1525,9 +1666,6 @@
 - raw: "瘦弱"
   splits:
   - text: "瘦弱"
-- raw: "天生"
-  splits:
-  - text: "天生"
 - raw: "魁梧奇伟"
   splits:
   - text: "魁梧奇伟"
@@ -1561,9 +1699,6 @@
 - raw: "聪慧"
   splits:
   - text: "聪慧"
-- raw: "愚钝"
-  splits:
-  - text: "愚钝"
 - raw: "天资过人"
   splits:
   - text: "天资过人"
@@ -1651,9 +1786,6 @@
 - raw: "笑里藏刀"
   splits:
   - text: "笑里藏刀"
-- raw: "仁慈"
-  splits:
-  - text: "仁慈"
 - raw: "残忍"
   splits:
   - text: "残忍"
@@ -1669,9 +1801,6 @@
 - raw: "灭心绝情"
   splits:
   - text: "灭心绝情"
-- raw: "冷静"
-  splits:
-  - text: "冷静"
 - raw: "暴躁"
   splits:
   - text: "暴躁"
@@ -1762,9 +1891,6 @@
 - raw: "忠诚"
   splits:
   - text: "忠诚"
-- raw: "叛逆"
-  splits:
-  - text: "叛逆"
 - raw: "忠心耿耿"
   splits:
   - text: "忠心耿耿"
@@ -1816,9 +1942,6 @@
 - raw: "练武"
   splits:
   - text: "练武"
-- raw: "志向"
-  splits:
-  - text: "志向"
 - raw: "武痴"
   splits:
   - text: "武痴"
@@ -1828,9 +1951,6 @@
 - raw: "学医"
   splits:
   - text: "学医"
-- raw: "医师"
-  splits:
-  - text: "医师"
 - raw: "济世神医"
   splits:
   - text: "济世神医"
@@ -1852,12 +1972,6 @@
 - raw: "在世神农"
   splits:
   - text: "在世神农"
-- raw: "学徒"
-  splits:
-  - text: "学徒"
-- raw: "工匠"
-  splits:
-  - text: "工匠"
 - raw: "能工巧匠"
   splits:
   - text: "能工巧匠"
@@ -1942,21 +2056,9 @@
 - raw: "未卜先知"
   splits:
   - text: "未卜先知"
-- raw: "游侠"
-  splits:
-  - text: "游侠"
-- raw: "侠客"
-  splits:
-  - text: "侠客"
 - raw: "侠义无双"
   splits:
   - text: "侠义无双"
-- raw: "赌徒"
-  splits:
-  - text: "赌徒"
-- raw: "喜好"
-  splits:
-  - text: "喜好"
 - raw: "嗜赌如命"
   splits:
   - text: "嗜赌如命"
@@ -2092,9 +2194,6 @@
 - raw: "随从"
   splits:
   - text: "随从"
-- raw: "战法"
-  splits:
-  - text: "战法"
 - raw: "唯命是从"
   splits:
   - text: "唯命是从"
@@ -2149,18 +2248,9 @@
 - raw: "精力充沛"
   splits:
   - text: "精力充沛"
-- raw: "特效"
-  splits:
-  - text: "特效"
-- raw: "腊八粥"
-  splits:
-  - text: "腊八粥"
 - raw: "微醺"
   splits:
   - text: "微醺"
-- raw: "痛饮"
-  splits:
-  - text: "痛饮"
 - raw: "大醉"
   splits:
   - text: "大醉"
@@ -2290,39 +2380,6 @@
 - raw: "百毒不侵"
   splits:
   - text: "百毒不侵"
-- raw: "天下第一"
-  splits:
-  - text: "天下第一"
-- raw: "归隐田园"
-  splits:
-  - text: "归隐田园"
-- raw: "豪商巨贾"
-  splits:
-  - text: "豪商巨贾"
-- raw: "功成名就"
-  splits:
-  - text: "功成名就"
-- raw: "禁军统领"
-  splits:
-  - text: "禁军统领"
-- raw: "权势滔天"
-  splits:
-  - text: "权势滔天"
-- raw: "名门大派"
-  splits:
-  - text: "名门大派"
-- raw: "武林盟主"
-  splits:
-  - text: "武林盟主"
-- raw: "终归一统"
-  splits:
-  - text: "终归一统"
-- raw: "鸾凤和鸣"
-  splits:
-  - text: "鸾凤和鸣"
-- raw: "终生监禁"
-  splits:
-  - text: "终生监禁"
 - raw: "背叛师门"
   splits:
   - text: "背叛师门"
@@ -2497,9 +2554,6 @@
 - raw: "绝技10"
   splits:
   - text: "绝技10"
-- raw: "太祖长拳"
-  splits:
-  - text: "太祖长拳"
 - raw: "拳掌1"
   splits:
   - text: "拳掌1"
@@ -2521,9 +2575,6 @@
 - raw: "胸10"
   splits:
   - text: "胸10"
-- raw: "拳"
-  splits:
-  - text: "拳"
 - raw: "十段锦长拳"
   splits:
   - text: "十段锦长拳"
@@ -2590,9 +2641,6 @@
 - raw: "手10"
   splits:
   - text: "手10"
-- raw: "剑"
-  splits:
-  - text: "剑"
 - raw: "木剑式"
   splits:
   - text: "木剑式"
@@ -2660,9 +2708,6 @@
 - raw: "心10"
   splits:
   - text: "心10"
-- raw: "刀"
-  splits:
-  - text: "刀"
 - raw: "劈柴刀法"
   splits:
   - text: "劈柴刀法"
@@ -2792,9 +2837,6 @@
 - raw: "头6"
   splits:
   - text: "头6"
-- raw: "鞭"
-  splits:
-  - text: "鞭"
 - raw: "伐木斧功"
   splits:
   - text: "伐木斧功"
@@ -2837,9 +2879,6 @@
 - raw: "手12"
   splits:
   - text: "手12"
-- raw: "对刺"
-  splits:
-  - text: "对刺"
 - raw: "飞镖要诀"
   splits:
   - text: "飞镖要诀"
@@ -4814,9 +4853,6 @@
 - raw: "飘逸0.08"
   splits:
   - text: "飘逸0.08"
-- raw: "扇"
-  splits:
-  - text: "扇"
 - raw: "闪电五连鞭"
   splits:
   - text: "闪电五连鞭"
@@ -4942,9 +4978,6 @@
 - raw: "射术15"
   splits:
   - text: "射术15"
-- raw: "弓"
-  splits:
-  - text: "弓"
 - raw: "枣核钉"
   splits:
   - text: "枣核钉"
@@ -9743,9 +9776,6 @@
     text: "足9"
   templates:
   - template: "{0};{1}"
-- raw: "轮"
-  splits:
-  - text: "轮"
 - raw: "判官笔法"
   splits:
   - text: "判官笔法"
@@ -9795,9 +9825,6 @@
     text: "腹7"
   templates:
   - template: "{0};{1}"
-- raw: "笔"
-  splits:
-  - text: "笔"
 - raw: "月牙弯钩"
   splits:
   - text: "月牙弯钩"
@@ -11718,9 +11745,6 @@
     text: "腹4"
   templates:
   - template: "{0};{1};{2}"
-- raw: "琴"
-  splits:
-  - text: "琴"
 - raw: "多情飞刀"
   splits:
   - text: "多情飞刀"
@@ -32637,15 +32661,120 @@
     text: "胸5"
   templates:
   - template: "{0};{1}"
+- raw: "补血丹"
+  splits:
+  - text: "补血丹"
+- raw: "小还丹"
+  splits:
+  - text: "小还丹"
+- raw: "大还丹"
+  splits:
+  - text: "大还丹"
+- raw: "人参养荣丸"
+  splits:
+  - text: "人参养荣丸"
+- raw: "玉洞黑石丹"
+  splits:
+  - text: "玉洞黑石丹"
+- raw: "万灵回生散"
+  splits:
+  - text: "万灵回生散"
+- raw: "益气散"
+  splits:
+  - text: "益气散"
+- raw: "行气丹"
+  splits:
+  - text: "行气丹"
+- raw: "逍遥丹"
+  splits:
+  - text: "逍遥丹"
+- raw: "参苓白术散"
+  splits:
+  - text: "参苓白术散"
+- raw: "济生养气丸"
+  splits:
+  - text: "济生养气丸"
+- raw: "紫霄玄关散"
+  splits:
+  - text: "紫霄玄关散"
+- raw: "八珍散"
+  splits:
+  - text: "八珍散"
+- raw: "无常丹"
+  splits:
+  - text: "无常丹"
+- raw: "紫金丹"
+  splits:
+  - text: "紫金丹"
+- raw: "天王补心丹"
+  splits:
+  - text: "天王补心丹"
+- raw: "生生造化丹"
+  splits:
+  - text: "生生造化丹"
+- raw: "九转还魂丹"
+  splits:
+  - text: "九转还魂丹"
+- raw: "止血散"
+  splits:
+  - text: "止血散"
+- raw: "金疮散"
+  splits:
+  - text: "金疮散"
+- raw: "三七跌打散"
+  splits:
+  - text: "三七跌打散"
+- raw: "接骨七厘散"
+  splits:
+  - text: "接骨七厘散"
+- raw: "血府逐瘀散"
+  splits:
+  - text: "血府逐瘀散"
+- raw: "天香断续散"
+  splits:
+  - text: "天香断续散"
+- raw: "通络丹"
+  splits:
+  - text: "通络丹"
+- raw: "紫藤丹"
+  splits:
+  - text: "紫藤丹"
+- raw: "牛黄血竭丹"
+  splits:
+  - text: "牛黄血竭丹"
+- raw: "田七鲨胆丹"
+  splits:
+  - text: "田七鲨胆丹"
+- raw: "三黄宝腊丹"
+  splits:
+  - text: "三黄宝腊丹"
+- raw: "还阳正气丹"
+  splits:
+  - text: "还阳正气丹"
+- raw: "黄连丸"
+  splits:
+  - text: "黄连丸"
+- raw: "荆防丸"
+  splits:
+  - text: "荆防丸"
+- raw: "六味地黄丸"
+  splits:
+  - text: "六味地黄丸"
+- raw: "天心解毒丸"
+  splits:
+  - text: "天心解毒丸"
+- raw: "金花玉露丸"
+  splits:
+  - text: "金花玉露丸"
+- raw: "龙涎净厄丸"
+  splits:
+  - text: "龙涎净厄丸"
 - raw: "瓷窑"
   splits:
   - text: "瓷窑"
 - raw: "玉矿"
   splits:
   - text: "玉矿"
-- raw: "甘泉"
-  splits:
-  - text: "甘泉"
 - raw: "湖泽"
   splits:
   - text: "湖泽"
@@ -32685,15 +32814,6 @@
 - raw: "古木"
   splits:
   - text: "古木"
-- raw: "伤害"
-  splits:
-  - text: "伤害"
-- raw: "内功"
-  splits:
-  - text: "内功"
-- raw: "刀法"
-  splits:
-  - text: "刀法"
 - raw: "内功威力"
   splits:
   - text: "内功威力"
@@ -32793,138 +32913,39 @@
 - raw: "烹饪潜力"
   splits:
   - text: "烹饪潜力"
-- raw: "生命上限"
-  splits:
-  - text: "生命上限"
-- raw: "体力上限"
-  splits:
-  - text: "体力上限"
-- raw: "内力上限"
-  splits:
-  - text: "内力上限"
-- raw: "护甲"
-  splits:
-  - text: "护甲"
 - raw: "护甲率"
   splits:
   - text: "护甲率"
-- raw: "速度"
-  splits:
-  - text: "速度"
-- raw: "命中"
-  splits:
-  - text: "命中"
-- raw: "闪避"
-  splits:
-  - text: "闪避"
-- raw: "暴击"
-  splits:
-  - text: "暴击"
-- raw: "卸力"
-  splits:
-  - text: "卸力"
-- raw: "反击"
-  splits:
-  - text: "反击"
-- raw: "压制"
-  splits:
-  - text: "压制"
-- raw: "连击"
-  splits:
-  - text: "连击"
-- raw: "断连"
-  splits:
-  - text: "断连"
-- raw: "经验获取"
-  splits:
-  - text: "经验获取"
-- raw: "伤害抗性"
-  splits:
-  - text: "伤害抗性"
-- raw: "负面加成"
-  splits:
-  - text: "负面加成"
-- raw: "我方"
-  splits:
-  - text: "我方"
-- raw: "负面抗性"
-  splits:
-  - text: "负面抗性"
-- raw: "伤势抗性"
-  splits:
-  - text: "伤势抗性"
 - raw: "失衡"
   splits:
   - text: "失衡"
-- raw: "敌方"
-  splits:
-  - text: "敌方"
 - raw: "急速"
   splits:
   - text: "急速"
-- raw: "外伤"
-  splits:
-  - text: "外伤"
-- raw: "内伤"
-  splits:
-  - text: "内伤"
 - raw: "毒素"
   splits:
   - text: "毒素"
-- raw: "吸血"
-  splits:
-  - text: "吸血"
-- raw: "吸内"
-  splits:
-  - text: "吸内"
 - raw: "削内"
   splits:
   - text: "削内"
 - raw: "恢复"
   splits:
   - text: "恢复"
-- raw: "灼烧"
-  splits:
-  - text: "灼烧"
 - raw: "疗伤"
   splits:
   - text: "疗伤"
 - raw: "流血"
   splits:
   - text: "流血"
-- raw: "调息"
-  splits:
-  - text: "调息"
 - raw: "雷电"
   splits:
   - text: "雷电"
 - raw: "蓄力"
   splits:
   - text: "蓄力"
-- raw: "疲劳"
-  splits:
-  - text: "疲劳"
-- raw: "冰寒"
-  splits:
-  - text: "冰寒"
 - raw: "无敌"
   splits:
   - text: "无敌"
-- raw: "眩晕"
-  splits:
-  - text: "眩晕"
-- raw: "手臂点穴"
-  splits:
-  - text: "手臂点穴"
-- raw: "腿足点穴"
-  splits:
-  - text: "腿足点穴"
-- raw: "心胸点穴"
-  splits:
-  - text: "心胸点穴"
-- raw: "腰腹点穴"
-  splits:
-  - text: "腰腹点穴"
 - raw: "头颈点穴"
   splits:
   - text: "头颈点穴"
@@ -32961,9 +32982,6 @@
 - raw: "疯魔"
   splits:
   - text: "疯魔"
-- raw: "混乱"
-  splits:
-  - text: "混乱"
 - raw: "死战"
   splits:
   - text: "死战"
@@ -33126,15 +33144,6 @@
 - raw: "裂膝"
   splits:
   - text: "裂膝"
-- raw: "破招"
-  splits:
-  - text: "破招"
-- raw: "拆招"
-  splits:
-  - text: "拆招"
-- raw: "斗转"
-  splits:
-  - text: "斗转"
 - raw: "声望获取"
   splits:
   - text: "声望获取"
@@ -33174,15 +33183,6 @@
 - raw: "装备负重"
   splits:
   - text: "装备负重"
-- raw: "机关伤害"
-  splits:
-  - text: "机关伤害"
-- raw: "机关速度"
-  splits:
-  - text: "机关速度"
-- raw: "机关耐久"
-  splits:
-  - text: "机关耐久"
 - raw: "好感获取"
   splits:
   - text: "好感获取"
@@ -33195,24 +33195,9 @@
 - raw: "姜.映泉"
   splits:
   - text: "姜.映泉"
-- raw: "男"
-  splits:
-  - text: "男"
-- raw: "默认"
-  splits:
-  - text: "默认"
-- raw: "掌门"
-  splits:
-  - text: "掌门"
 - raw: "-1"
   splits:
   - text: "-1"
-- raw: "稳重"
-  splits:
-  - text: "稳重"
-- raw: "聪颖"
-  splits:
-  - text: "聪颖"
 - raw: "平常/善良"
   splits:
   - text: "平常"
@@ -33259,15 +33244,6 @@
 - raw: "陆.仁谦"
   splits:
   - text: "陆.仁谦"
-- raw: "长老"
-  splits:
-  - text: "长老"
-- raw: "固执"
-  splits:
-  - text: "固执"
-- raw: "平平"
-  splits:
-  - text: "平平"
 - raw: "戒律/中立"
   splits:
   - text: "戒律"
@@ -33298,9 +33274,6 @@
 - raw: "魏.胥华"
   splits:
   - text: "魏.胥华"
-- raw: "亲传弟子"
-  splits:
-  - text: "亲传弟子"
 - raw: "无序/冷酷"
   splits:
   - text: "无序"
@@ -33331,18 +33304,6 @@
 - raw: "余.采薇"
   splits:
   - text: "余.采薇"
-- raw: "女"
-  splits:
-  - text: "女"
-- raw: "正式弟子"
-  splits:
-  - text: "正式弟子"
-- raw: "纯粹"
-  splits:
-  - text: "纯粹"
-- raw: "究极"
-  splits:
-  - text: "究极"
 - raw: "平常/冷酷"
   splits:
   - text: "平常"
@@ -33373,12 +33334,6 @@
 - raw: "顾.游年"
   splits:
   - text: "顾.游年"
-- raw: "潇洒"
-  splits:
-  - text: "潇洒"
-- raw: "超群"
-  splits:
-  - text: "超群"
 - raw: "无序/仁慈"
   splits:
   - text: "无序"
@@ -33416,12 +33371,6 @@
 - raw: "沈.退"
   splits:
   - text: "沈.退"
-- raw: "入门弟子"
-  splits:
-  - text: "入门弟子"
-- raw: "轻佻"
-  splits:
-  - text: "轻佻"
 - raw: "守序/中立"
   splits:
   - text: "守序"
@@ -33450,9 +33399,6 @@
 - raw: "姜.婉"
   splits:
   - text: "姜.婉"
-- raw: "忠厚"
-  splits:
-  - text: "忠厚"
 - raw: "守序/善良"
   splits:
   - text: "守序"
@@ -33490,12 +33436,6 @@
 - raw: "杨.思迟"
   splits:
   - text: "杨.思迟"
-- raw: "外门弟子"
-  splits:
-  - text: "外门弟子"
-- raw: "简单"
-  splits:
-  - text: "简单"
 - raw: "混乱/仁慈"
   splits:
   - text: "混乱"
@@ -33533,9 +33473,6 @@
 - raw: "林.云裳"
   splits:
   - text: "林.云裳"
-- raw: "灵活"
-  splits:
-  - text: "灵活"
 - raw: "轻功/剑法/刀法"
   splits:
   - text: "轻功"
@@ -33595,12 +33532,12 @@
     text: "善贾"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "金风玉露"
+  splits:
+  - text: "金风玉露"
 - raw: "云.彩衣"
   splits:
   - text: "云.彩衣"
-- raw: "副掌门"
-  splits:
-  - text: "副掌门"
 - raw: "平常/中立"
   splits:
   - text: "平常"
@@ -33623,6 +33560,9 @@
     text: "智力"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "净乐琉璃"
+  splits:
+  - text: "净乐琉璃"
 - raw: "师傅:10"
   splits:
   - text: "师傅"
@@ -33631,9 +33571,6 @@
 - raw: "卢.玉麟"
   splits:
   - text: "卢.玉麟"
-- raw: "算计"
-  splits:
-  - text: "算计"
 - raw: "无序/凶狠"
   splits:
   - text: "无序"
@@ -33656,6 +33593,9 @@
     text: "仕官"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "铁算盘"
+  splits:
+  - text: "铁算盘"
 - raw: "唐.逸影"
   splits:
   - text: "唐.逸影"
@@ -33692,6 +33632,9 @@
     text: "明察秋毫"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "九天鬼手"
+  splits:
+  - text: "九天鬼手"
 - raw: "亲属:14/15"
   splits:
   - text: "亲属"
@@ -33747,6 +33690,9 @@
     text: "摘叶飞花"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "杀人无形"
+  splits:
+  - text: "杀人无形"
 - raw: "皇甫.青衫"
   splits:
   - text: "皇甫.青衫"
@@ -33785,6 +33731,9 @@
     text: "刮骨疗毒"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "玉面医仙"
+  splits:
+  - text: "玉面医仙"
 - raw: "亲属:17"
   splits:
   - text: "亲属"
@@ -33814,6 +33763,9 @@
     text: "以毒攻毒"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "穿林妙手"
+  splits:
+  - text: "穿林妙手"
 - raw: "朱.断岳"
   splits:
   - text: "朱.断岳"
@@ -33845,6 +33797,9 @@
     text: "掌风"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "铁碗残拳"
+  splits:
+  - text: "铁碗残拳"
 - raw: "结义:19"
   splits:
   - text: "结义"
@@ -33879,6 +33834,9 @@
     text: "枪芒"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "大醉侠"
+  splits:
+  - text: "大醉侠"
 - raw: "赵.破虏"
   splits:
   - text: "赵.破虏"
@@ -33908,6 +33866,9 @@
     text: "身先士卒"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "潜龙勿用"
+  splits:
+  - text: "潜龙勿用"
 - raw: "诸葛.伶"
   splits:
   - text: "诸葛.伶"
@@ -33935,6 +33896,9 @@
     text: "临危不乱"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "小卧龙"
+  splits:
+  - text: "小卧龙"
 - raw: "南宫.瑶"
   splits:
   - text: "南宫.瑶"
@@ -33955,6 +33919,9 @@
     text: "淡泊"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "玄微法师"
+  splits:
+  - text: "玄微法师"
 - raw: "葛.知远"
   splits:
   - text: "葛.知远"
@@ -33975,6 +33942,9 @@
     text: "仕官"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "洞真法师"
+  splits:
+  - text: "洞真法师"
 - raw: "欧.长兵"
   splits:
   - text: "欧.长兵"
@@ -34004,6 +33974,9 @@
     text: "不择手段"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "铸铁仙翁"
+  splits:
+  - text: "铸铁仙翁"
 - raw: "祖.心炎"
   splits:
   - text: "祖.心炎"
@@ -34026,6 +33999,9 @@
     text: "性烈如火"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "百炼神剑"
+  splits:
+  - text: "百炼神剑"
 - raw: "龙.凤娥"
   splits:
   - text: "龙.凤娥"
@@ -34055,6 +34031,9 @@
     text: "离经叛道"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "销魂蚀骨"
+  splits:
+  - text: "销魂蚀骨"
 - raw: "亲属:27"
   splits:
   - text: "亲属"
@@ -34082,6 +34061,9 @@
     text: "宅心仁厚"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "毒手琴心"
+  splits:
+  - text: "毒手琴心"
 - raw: "石.崇虎"
   splits:
   - text: "石.崇虎"
@@ -34104,6 +34086,9 @@
     text: "医师"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "黑爪"
+  splits:
+  - text: "黑爪"
 - raw: "阎.罗王"
   splits:
   - text: "阎.罗王"
@@ -34144,6 +34129,9 @@
     text: "刀锋"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "十殿冥主"
+  splits:
+  - text: "十殿冥主"
 - raw: "仇人:36/39/42/120"
   splits:
   - text: "仇人"
@@ -34178,6 +34166,9 @@
     text: "通才"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "阴冥诡士"
+  splits:
+  - text: "阴冥诡士"
 - raw: "孟.婆娑"
   splits:
   - text: "孟.婆娑"
@@ -34200,6 +34191,9 @@
     text: "瑶琴"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "空谷幽兰"
+  splits:
+  - text: "空谷幽兰"
 - raw: "常.无黑"
   splits:
   - text: "常.无黑"
@@ -34216,6 +34210,9 @@
     text: "劈荆斩棘"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "黑白无常"
+  splits:
+  - text: "黑白无常"
 - raw: "结义:33"
   splits:
   - text: "结义"
@@ -34317,6 +34314,9 @@
     text: "起死回生"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "无双国士"
+  splits:
+  - text: "无双国士"
 - raw: "朋友:37"
   splits:
   - text: "朋友"
@@ -34344,6 +34344,9 @@
     text: "剑随意动"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "天剑客"
+  splits:
+  - text: "天剑客"
 - raw: "姬.清梵"
   splits:
   - text: "姬.清梵"
@@ -34366,6 +34369,9 @@
     text: "公正不阿"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "霓裳仙子"
+  splits:
+  - text: "霓裳仙子"
 - raw: "空闻.大师"
   splits:
   - text: "空闻.大师"
@@ -34397,6 +34403,9 @@
     text: "不骄不躁"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "德高望重"
+  splits:
+  - text: "德高望重"
 - raw: "空见.大师"
   splits:
   - text: "空见.大师"
@@ -34421,6 +34430,9 @@
     text: "暴躁"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "金身罗汉"
+  splits:
+  - text: "金身罗汉"
 - raw: "如是.大师"
   splits:
   - text: "如是.大师"
@@ -34445,6 +34457,9 @@
     text: "虚怀若谷"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "佛痴"
+  splits:
+  - text: "佛痴"
 - raw: "张.青蓬"
   splits:
   - text: "张.青蓬"
@@ -34476,6 +34491,9 @@
     text: "掌风"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "无为真人"
+  splits:
+  - text: "无为真人"
 - raw: "亲属:43"
   splits:
   - text: "亲属"
@@ -34512,6 +34530,9 @@
     text: "经脉"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "文逸真人"
+  splits:
+  - text: "文逸真人"
 - raw: "宋.廉庭"
   splits:
   - text: "宋.廉庭"
@@ -34536,6 +34557,9 @@
     text: "剑气"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "清虚真人"
+  splits:
+  - text: "清虚真人"
 - raw: "项.元霸"
   splits:
   - text: "项.元霸"
@@ -34565,6 +34589,9 @@
     text: "脉络阻塞"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "力大无穷"
+  splits:
+  - text: "力大无穷"
 - raw: "宇文.极"
   splits:
   - text: "宇文.极"
@@ -34585,6 +34612,9 @@
     text: "排兵布阵"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "算无遗策"
+  splits:
+  - text: "算无遗策"
 - raw: "吕.寻峰"
   splits:
   - text: "吕.寻峰"
@@ -34614,6 +34644,9 @@
     text: "气冲斗牛"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "都灵子"
+  splits:
+  - text: "都灵子"
 - raw: "庄.晓梦"
   splits:
   - text: "庄.晓梦"
@@ -34643,6 +34676,9 @@
     text: "剑气"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "云鹏子"
+  splits:
+  - text: "云鹏子"
 - raw: "司马.德源"
   splits:
   - text: "司马.德源"
@@ -34665,6 +34701,9 @@
     text: "丑陋"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "白眉真人"
+  splits:
+  - text: "白眉真人"
 - raw: "李.潇湘"
   splits:
   - text: "李.潇湘"
@@ -34685,6 +34724,9 @@
     text: "木植"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "潇湘真人"
+  splits:
+  - text: "潇湘真人"
 - raw: "白.云天"
   splits:
   - text: "白.云天"
@@ -34709,6 +34751,9 @@
     text: "吉人天相"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "白云子"
+  splits:
+  - text: "白云子"
 - raw: "曲.自封"
   splits:
   - text: "曲.自封"
@@ -34736,6 +34781,9 @@
     text: "临危不乱"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "紫髯道人"
+  splits:
+  - text: "紫髯道人"
 - raw: "闻.惊鸿"
   splits:
   - text: "闻.惊鸿"
@@ -34756,6 +34804,9 @@
     text: "身先士卒"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "绝情道人"
+  splits:
+  - text: "绝情道人"
 - raw: "墨.璇玑"
   splits:
   - text: "墨.璇玑"
@@ -34782,6 +34833,9 @@
     text: "脉络阻塞"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "天工巧匠"
+  splits:
+  - text: "天工巧匠"
 - raw: "亲属:55"
   splits:
   - text: "亲属"
@@ -34820,6 +34874,9 @@
     text: "滞脉"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "病鲁班"
+  splits:
+  - text: "病鲁班"
 - raw: "雷.震天"
   splits:
   - text: "雷.震天"
@@ -34849,6 +34906,9 @@
     text: "多病"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "掣地霹雳"
+  splits:
+  - text: "掣地霹雳"
 - raw: "亲属:57/58/151"
   splits:
   - text: "亲属"
@@ -34883,6 +34943,9 @@
     text: "瘦骨嶙峋"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "烁金枪"
+  splits:
+  - text: "烁金枪"
 - raw: "亲属:58/151"
   splits:
   - text: "亲属"
@@ -34910,6 +34973,9 @@
     text: "天资过人"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "燎原火凤"
+  splits:
+  - text: "燎原火凤"
 - raw: "亲属:151"
   splits:
   - text: "亲属"
@@ -34937,6 +35003,9 @@
     text: "灵丹妙药"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "龙象护法"
+  splits:
+  - text: "龙象护法"
 - raw: "金刚.法王"
   splits:
   - text: "金刚.法王"
@@ -34957,6 +35026,9 @@
     text: "先天气海"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "灵童转世"
+  splits:
+  - text: "灵童转世"
 - raw: "真言.法王"
   splits:
   - text: "真言.法王"
@@ -34984,6 +35056,9 @@
     text: "对症下药"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "慧眼明王"
+  splits:
+  - text: "慧眼明王"
 - raw: "凌.北渊"
   splits:
   - text: "凌.北渊"
@@ -35006,6 +35081,9 @@
     text: "避世绝俗"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "天山仙子"
+  splits:
+  - text: "天山仙子"
 - raw: "云.九霄"
   splits:
   - text: "云.九霄"
@@ -35026,6 +35104,9 @@
     text: "忠诚"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "雪山飞鸿"
+  splits:
+  - text: "雪山飞鸿"
 - raw: "江.映寒"
   splits:
   - text: "江.映寒"
@@ -35044,6 +35125,9 @@
     text: "余音绕梁"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "冷月寒江"
+  splits:
+  - text: "冷月寒江"
 - raw: "夏.天雄"
   splits:
   - text: "夏.天雄"
@@ -35074,6 +35158,9 @@
     text: "暴躁"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "铁掌双雄"
+  splits:
+  - text: "铁掌双雄"
 - raw: "韩.嵩"
   splits:
   - text: "韩.嵩"
@@ -35100,6 +35187,9 @@
     text: "懒惰"
   templates:
   - template: "{0};{1};{2}"
+- raw: "铁掌四杰"
+  splits:
+  - text: "铁掌四杰"
 - raw: "吕.子芳"
   splits:
   - text: "吕.子芳"
@@ -35261,6 +35351,9 @@
     text: "绝艺超群"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "绝情断义"
+  splits:
+  - text: "绝情断义"
 - raw: "黄.泉"
   splits:
   - text: "黄.泉"
@@ -35304,6 +35397,9 @@
     text: "奇异莫名"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "骷髅红粉"
+  splits:
+  - text: "骷髅红粉"
 - raw: "雨.人屠"
   splits:
   - text: "雨.人屠"
@@ -35324,6 +35420,9 @@
     text: "笨手笨脚"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "雨夜狂屠"
+  splits:
+  - text: "雨夜狂屠"
 - raw: "上官.凤"
   splits:
   - text: "上官.凤"
@@ -35347,6 +35446,9 @@
     text: "赌运亨通"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "刺骨冰寒"
+  splits:
+  - text: "刺骨冰寒"
 - raw: "计.心狂"
   splits:
   - text: "计.心狂"
@@ -35369,6 +35471,9 @@
     text: "神出鬼没"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "诡计毒谋"
+  splits:
+  - text: "诡计毒谋"
 - raw: "慕容.星辰"
   splits:
   - text: "慕容.星辰"
@@ -35391,6 +35496,9 @@
     text: "福星高照"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "摘月偷星"
+  splits:
+  - text: "摘月偷星"
 - raw: "幽.冥"
   splits:
   - text: "幽.冥"
@@ -35407,6 +35515,9 @@
     text: "叛逆"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "四大杀手"
+  splits:
+  - text: "四大杀手"
 - raw: "魅.影"
   splits:
   - text: "魅.影"
@@ -35467,6 +35578,9 @@
     text: "外门"
   templates:
   - template: "{0};{1};{2}"
+- raw: "刀劳鬼"
+  splits:
+  - text: "刀劳鬼"
 - raw: "迟.百城"
   splits:
   - text: "迟.百城"
@@ -35482,6 +35596,9 @@
     text: "轻功"
   templates:
   - template: "{0};{1};{2}"
+- raw: "拘魂鬼"
+  splits:
+  - text: "拘魂鬼"
 - raw: "费.彬"
   splits:
   - text: "费.彬"
@@ -35498,6 +35615,9 @@
     text: "五毒俱全"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "痨病鬼"
+  splits:
+  - text: "痨病鬼"
 - raw: "岳.无畏"
   splits:
   - text: "岳.无畏"
@@ -35513,6 +35633,9 @@
     text: "绝技"
   templates:
   - template: "{0};{1};{2}"
+- raw: "山魈鬼"
+  splits:
+  - text: "山魈鬼"
 - raw: "高.首"
   splits:
   - text: "高.首"
@@ -35525,6 +35648,9 @@
     text: "懒惰"
   templates:
   - template: "{0};{1};{2}"
+- raw: "魍魉鬼"
+  splits:
+  - text: "魍魉鬼"
 - raw: "王.彪"
   splits:
   - text: "王.彪"
@@ -35537,6 +35663,9 @@
     text: "赌徒"
   templates:
   - template: "{0};{1};{2}"
+- raw: "黄河双煞"
+  splits:
+  - text: "黄河双煞"
 - raw: "结义:97;师傅:73"
   splits:
   - text: "结义"
@@ -35575,6 +35704,9 @@
     text: "学识"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "乐善好施"
+  splits:
+  - text: "乐善好施"
 - raw: "裘.龙"
   splits:
   - text: "裘.龙"
@@ -35587,6 +35719,9 @@
     text: "浪费"
   templates:
   - template: "{0};{1};{2}"
+- raw: "入林龙"
+  splits:
+  - text: "入林龙"
 - raw: "张.成化"
   splits:
   - text: "张.成化"
@@ -35599,6 +35734,9 @@
     text: "勤奋"
   templates:
   - template: "{0};{1};{2}"
+- raw: "化虎成龙"
+  splits:
+  - text: "化虎成龙"
 - raw: "曾.镇海"
   splits:
   - text: "曾.镇海"
@@ -35611,6 +35749,9 @@
     text: "面目狰狞"
   templates:
   - template: "{0};{1};{2}"
+- raw: "翻江镇海"
+  splits:
+  - text: "翻江镇海"
 - raw: "宋.明公"
   splits:
   - text: "宋.明公"
@@ -35625,6 +35766,9 @@
     text: "领袖"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "及时雨"
+  splits:
+  - text: "及时雨"
 - raw: "戴.壮"
   splits:
   - text: "戴.壮"
@@ -35639,6 +35783,9 @@
     text: "务农"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "乐山大患"
+  splits:
+  - text: "乐山大患"
 - raw: "马.应龙"
   splits:
   - text: "马.应龙"
@@ -35651,6 +35798,9 @@
     text: "大快朵颐"
   templates:
   - template: "{0};{1};{2}"
+- raw: "西北四骏"
+  splits:
+  - text: "西北四骏"
 - raw: "亲属:105/106/107"
   splits:
   - text: "亲属"
@@ -35718,6 +35868,9 @@
     text: "愚钝"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "神拳无敌"
+  splits:
+  - text: "神拳无敌"
 - raw: "结义:109/110"
   splits:
   - text: "结义"
@@ -35737,6 +35890,9 @@
     text: "愚钝"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "富可敌国"
+  splits:
+  - text: "富可敌国"
 - raw: "结义:110"
   splits:
   - text: "结义"
@@ -35756,6 +35912,9 @@
     text: "傻头傻脑"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "智计无双"
+  splits:
+  - text: "智计无双"
 - raw: "熊.百胜"
   splits:
   - text: "熊.百胜"
@@ -35772,6 +35931,9 @@
     text: "挥霍无度"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "黑风寨大当家"
+  splits:
+  - text: "黑风寨大当家"
 - raw: "朱.全"
   splits:
   - text: "朱.全"
@@ -35782,6 +35944,9 @@
     text: "残忍"
   templates:
   - template: "{0};{1}"
+- raw: "黑风寨二当家"
+  splits:
+  - text: "黑风寨二当家"
 - raw: "严.达开"
   splits:
   - text: "严.达开"
@@ -35792,6 +35957,9 @@
     text: "勇敢"
   templates:
   - template: "{0};{1}"
+- raw: "黑风寨三当家"
+  splits:
+  - text: "黑风寨三当家"
 - raw: "冯.虎"
   splits:
   - text: "冯.虎"
@@ -35802,6 +35970,9 @@
     text: "随从"
   templates:
   - template: "{0};{1}"
+- raw: "黑风四贼"
+  splits:
+  - text: "黑风四贼"
 - raw: "朋友:115/116/117"
   splits:
   - text: "朋友"
@@ -35874,6 +36045,9 @@
     text: "儒术"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "大隐琴侠"
+  splits:
+  - text: "大隐琴侠"
 - raw: "孟.经世"
   splits:
   - text: "孟.经世"
@@ -35901,6 +36075,9 @@
     text: "笔走龙蛇"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "霸刀狂侠"
+  splits:
+  - text: "霸刀狂侠"
 - raw: "郭.淮"
   splits:
   - text: "郭.淮"
@@ -35934,6 +36111,9 @@
     text: "钢筋铁骨"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "中原大侠"
+  splits:
+  - text: "中原大侠"
 - raw: "吕.天行"
   splits:
   - text: "吕.天行"
@@ -35961,6 +36141,9 @@
     text: "剑气"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "蓬莱奇侠"
+  splits:
+  - text: "蓬莱奇侠"
 - raw: "何.足道"
   splits:
   - text: "何.足道"
@@ -35981,6 +36164,9 @@
     text: "卜算"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "茅山道侠"
+  splits:
+  - text: "茅山道侠"
 - raw: "楚.风疾"
   splits:
   - text: "楚.风疾"
@@ -35999,6 +36185,9 @@
     text: "领袖"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "敕封御史之风"
+  splits:
+  - text: "敕封御史之风"
 - raw: "结义:124/125/126"
   splits:
   - text: "结义"
@@ -36024,6 +36213,9 @@
     text: "游斗"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "敕封御史之林"
+  splits:
+  - text: "敕封御史之林"
 - raw: "结义:125/126"
   splits:
   - text: "结义"
@@ -36047,6 +36239,9 @@
     text: "先锋"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "敕封御史之火"
+  splits:
+  - text: "敕封御史之火"
 - raw: "结义:126"
   splits:
   - text: "结义"
@@ -36070,6 +36265,9 @@
     text: "守备"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "敕封御史之山"
+  splits:
+  - text: "敕封御史之山"
 - raw: "项.问天"
   splits:
   - text: "项.问天"
@@ -36257,6 +36455,9 @@
     text: "命途多舛"
   templates:
   - template: "{0};{1};{2}"
+- raw: "玉面判官"
+  splits:
+  - text: "玉面判官"
 - raw: "师傅:124"
   splits:
   - text: "师傅"
@@ -36314,6 +36515,9 @@
     text: "武学宗师"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "江湖百晓"
+  splits:
+  - text: "江湖百晓"
 - raw: "天.残"
   splits:
   - text: "天.残"
@@ -36349,6 +36553,9 @@
     text: "武学宗师"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "侠盗四奇"
+  splits:
+  - text: "侠盗四奇"
 - raw: "地.缺"
   splits:
   - text: "地.缺"
@@ -36697,6 +36904,9 @@
     text: "叛逆"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "小霹雳"
+  splits:
+  - text: "小霹雳"
 - raw: "赵.胤宗"
   splits:
   - text: "赵.胤宗"
@@ -36718,6 +36928,9 @@
     text: "身怀绝技"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "侠盗四丑"
+  splits:
+  - text: "侠盗四丑"
 - raw: "中年地.缺"
   splits:
   - text: "中年地.缺"
@@ -36814,21 +37027,39 @@
 - raw: "张.弥勒"
   splits:
   - text: "张.弥勒"
+- raw: "拳佛"
+  splits:
+  - text: "拳佛"
 - raw: "陆.沉舟"
   splits:
   - text: "陆.沉舟"
+- raw: "陆地剑仙"
+  splits:
+  - text: "陆地剑仙"
 - raw: "王.霸"
   splits:
   - text: "王.霸"
+- raw: "横刀灭九州"
+  splits:
+  - text: "横刀灭九州"
 - raw: "龙.灭"
   splits:
   - text: "龙.灭"
+- raw: "铁枪破宇宙"
+  splits:
+  - text: "铁枪破宇宙"
 - raw: "罗.八怪"
   splits:
   - text: "罗.八怪"
+- raw: "出奇必胜"
+  splits:
+  - text: "出奇必胜"
 - raw: "菲.燕子"
   splits:
   - text: "菲.燕子"
+- raw: "百步穿针"
+  splits:
+  - text: "百步穿针"
 - raw: "叶.寒"
   splits:
   - text: "叶.寒"
@@ -36843,6 +37074,9 @@
     text: "游戏人间"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "百骰百胜"
+  splits:
+  - text: "百骰百胜"
 - raw: "李.天临"
   splits:
   - text: "李.天临"
@@ -36867,6 +37101,9 @@
     text: "强壮"
   templates:
   - template: "{0};{1}"
+- raw: "滚地雷"
+  splits:
+  - text: "滚地雷"
 - raw: "王.伦"
   splits:
   - text: "王.伦"
@@ -36877,6 +37114,9 @@
     text: "刚愎"
   templates:
   - template: "{0};{1}"
+- raw: "白衣秀士"
+  splits:
+  - text: "白衣秀士"
 - raw: "急速0.06;击退1"
   splits:
   - text: "急速0.06"
@@ -36908,39 +37148,108 @@
     text: "迟缓0.08"
   templates:
   - template: "{0};{1};{2}"
-- raw: "银钱"
+- raw: "手甲"
   splits:
-  - text: "银钱"
-- raw: "粮食"
+  - text: "手甲"
+- raw: "指刺"
   splits:
-  - text: "粮食"
-- raw: "药材"
+  - text: "指刺"
+- raw: "钩爪"
   splits:
-  - text: "药材"
-- raw: "威望"
+  - text: "钩爪"
+- raw: "指虎"
   splits:
-  - text: "威望"
-- raw: "木料"
+  - text: "指虎"
+- raw: "拳套"
   splits:
-  - text: "木料"
-- raw: "矿石"
+  - text: "拳套"
+- raw: "指环"
   splits:
-  - text: "矿石"
-- raw: "人口"
+  - text: "指环"
+- raw: "重剑"
   splits:
-  - text: "人口"
-- raw: "治安"
+  - text: "重剑"
+- raw: "短剑"
   splits:
-  - text: "治安"
-- raw: "民心"
+  - text: "短剑"
+- raw: "细剑"
   splits:
-  - text: "民心"
-- raw: "人口上限"
+  - text: "细剑"
+- raw: "长剑"
   splits:
-  - text: "人口上限"
-- raw: "防御"
+  - text: "长剑"
+- raw: "大剑"
   splits:
-  - text: "防御"
+  - text: "大剑"
+- raw: "软剑"
+  splits:
+  - text: "软剑"
+- raw: "重刀"
+  splits:
+  - text: "重刀"
+- raw: "短刀"
+  splits:
+  - text: "短刀"
+- raw: "唐刀"
+  splits:
+  - text: "唐刀"
+- raw: "朴刀"
+  splits:
+  - text: "朴刀"
+- raw: "大刀"
+  splits:
+  - text: "大刀"
+- raw: "弯刀"
+  splits:
+  - text: "弯刀"
+- raw: "长戟"
+  splits:
+  - text: "长戟"
+- raw: "长枪"
+  splits:
+  - text: "长枪"
+- raw: "长叉"
+  splits:
+  - text: "长叉"
+- raw: "长戈"
+  splits:
+  - text: "长戈"
+- raw: "长矛"
+  splits:
+  - text: "长矛"
+- raw: "长棍"
+  splits:
+  - text: "长棍"
+- raw: "飞轮"
+  splits:
+  - text: "飞轮"
+- raw: "判笔"
+  splits:
+  - text: "判笔"
+- raw: "软鞭"
+  splits:
+  - text: "软鞭"
+- raw: "铁扇"
+  splits:
+  - text: "铁扇"
+- raw: "长弓"
+  splits:
+  - text: "长弓"
+- raw: "短弓"
+  splits:
+  - text: "短弓"
+- raw: "曲弓"
+  splits:
+  - text: "曲弓"
+- raw: "直弓"
+  splits:
+  - text: "直弓"
+- raw: "硬弓"
+  splits:
+  - text: "硬弓"
+- raw: "软弓"
+  splits:
+  - text: "软弓"
 - raw: "天赋:钢筋铁骨"
   splits:
   - text: "天赋"
@@ -37914,9 +38223,6 @@
     text: "快步流星"
   templates:
   - template: "{0}:{1}"
-- raw: "内力"
-  splits:
-  - text: "内力"
 - raw: "朋友:"
   splits:
   - text: "朋友"
@@ -37942,516 +38248,6 @@
   - text: "结义"
   templates:
   - template: "{0}:"
-- raw: "炖老母鸡"
-  splits:
-  - text: "炖老母鸡"
-- raw: "天麻鱼头"
-  splits:
-  - text: "天麻鱼头"
-- raw: "沙苑甲鱼汤"
-  splits:
-  - text: "沙苑甲鱼汤"
-- raw: "参茸熊掌"
-  splits:
-  - text: "参茸熊掌"
-- raw: "十全大补汤"
-  splits:
-  - text: "十全大补汤"
-- raw: "雄黄酒"
-  splits:
-  - text: "雄黄酒"
-- raw: "乌龙茶"
-  splits:
-  - text: "乌龙茶"
-- raw: "蛇酒"
-  splits:
-  - text: "蛇酒"
-- raw: "肉桂茶"
-  splits:
-  - text: "肉桂茶"
-- raw: "三鞭酒"
-  splits:
-  - text: "三鞭酒"
-- raw: "铁观音茶"
-  splits:
-  - text: "铁观音茶"
-- raw: "鹿胎酒"
-  splits:
-  - text: "鹿胎酒"
-- raw: "白牡丹茶"
-  splits:
-  - text: "白牡丹茶"
-- raw: "虎骨酒"
-  splits:
-  - text: "虎骨酒"
-- raw: "大红袍茶"
-  splits:
-  - text: "大红袍茶"
-- raw: "龙脑酒"
-  splits:
-  - text: "龙脑酒"
-- raw: "凤凰水仙茶"
-  splits:
-  - text: "凤凰水仙茶"
-- raw: "烧饼"
-  splits:
-  - text: "烧饼"
-- raw: "肉包"
-  splits:
-  - text: "肉包"
-- raw: "煎饺"
-  splits:
-  - text: "煎饺"
-- raw: "烧鸡"
-  splits:
-  - text: "烧鸡"
-- raw: "红烧肉"
-  splits:
-  - text: "红烧肉"
-- raw: "乳猪"
-  splits:
-  - text: "乳猪"
-- raw: "绿茶"
-  splits:
-  - text: "绿茶"
-- raw: "烧刀子"
-  splits:
-  - text: "烧刀子"
-- raw: "龙井茶"
-  splits:
-  - text: "龙井茶"
-- raw: "竹叶青"
-  splits:
-  - text: "竹叶青"
-- raw: "碧螺春茶"
-  splits:
-  - text: "碧螺春茶"
-- raw: "葡萄酒"
-  splits:
-  - text: "葡萄酒"
-- raw: "毛峰茶"
-  splits:
-  - text: "毛峰茶"
-- raw: "新丰酒"
-  splits:
-  - text: "新丰酒"
-- raw: "云雾茶"
-  splits:
-  - text: "云雾茶"
-- raw: "杜康酒"
-  splits:
-  - text: "杜康酒"
-- raw: "太平猴魁茶"
-  splits:
-  - text: "太平猴魁茶"
-- raw: "桂圆枸杞粥"
-  splits:
-  - text: "桂圆枸杞粥"
-- raw: "茯苓糕"
-  splits:
-  - text: "茯苓糕"
-- raw: "当归炖羊肉"
-  splits:
-  - text: "当归炖羊肉"
-- raw: "虫草老鸭煲"
-  splits:
-  - text: "虫草老鸭煲"
-- raw: "四君子汤"
-  splits:
-  - text: "四君子汤"
-- raw: "烩八珍"
-  splits:
-  - text: "烩八珍"
-- raw: "清酒"
-  splits:
-  - text: "清酒"
-- raw: "红茶"
-  splits:
-  - text: "红茶"
-- raw: "花雕酒"
-  splits:
-  - text: "花雕酒"
-- raw: "工夫茶"
-  splits:
-  - text: "工夫茶"
-- raw: "女儿红"
-  splits:
-  - text: "女儿红"
-- raw: "古树茶"
-  splits:
-  - text: "古树茶"
-- raw: "桑落酒"
-  splits:
-  - text: "桑落酒"
-- raw: "九曲红梅茶"
-  splits:
-  - text: "九曲红梅茶"
-- raw: "猴儿酿"
-  splits:
-  - text: "猴儿酿"
-- raw: "金骏眉茶"
-  splits:
-  - text: "金骏眉茶"
-- raw: "换骨醪"
-  splits:
-  - text: "换骨醪"
-- raw: "正山小种茶"
-  splits:
-  - text: "正山小种茶"
-- raw: "骡子"
-  splits:
-  - text: "骡子"
-- raw: "驴子"
-  splits:
-  - text: "驴子"
-- raw: "跛脚马"
-  splits:
-  - text: "跛脚马"
-- raw: "小马"
-  splits:
-  - text: "小马"
-- raw: "劣马"
-  splits:
-  - text: "劣马"
-- raw: "矮马"
-  splits:
-  - text: "矮马"
-- raw: "驮马"
-  splits:
-  - text: "驮马"
-- raw: "瘦马"
-  splits:
-  - text: "瘦马"
-- raw: "大马"
-  splits:
-  - text: "大马"
-- raw: "烈马"
-  splits:
-  - text: "烈马"
-- raw: "军马"
-  splits:
-  - text: "军马"
-- raw: "快马"
-  splits:
-  - text: "快马"
-- raw: "战马"
-  splits:
-  - text: "战马"
-- raw: "河曲马"
-  splits:
-  - text: "河曲马"
-- raw: "西南马"
-  splits:
-  - text: "西南马"
-- raw: "山地马"
-  splits:
-  - text: "山地马"
-- raw: "蒙古马"
-  splits:
-  - text: "蒙古马"
-- raw: "哈萨克马"
-  splits:
-  - text: "哈萨克马"
-- raw: "伊犁马"
-  splits:
-  - text: "伊犁马"
-- raw: "乌孙马"
-  splits:
-  - text: "乌孙马"
-- raw: "五花马"
-  splits:
-  - text: "五花马"
-- raw: "白兔马"
-  splits:
-  - text: "白兔马"
-- raw: "枣红马"
-  splits:
-  - text: "枣红马"
-- raw: "绿耳马"
-  splits:
-  - text: "绿耳马"
-- raw: "白义马"
-  splits:
-  - text: "白义马"
-- raw: "青骓马"
-  splits:
-  - text: "青骓马"
-- raw: "华骝马"
-  splits:
-  - text: "华骝马"
-- raw: "黄骠马"
-  splits:
-  - text: "黄骠马"
-- raw: "骕骦马"
-  splits:
-  - text: "骕骦马"
-- raw: "玉花骢"
-  splits:
-  - text: "玉花骢"
-- raw: "奔宵马"
-  splits:
-  - text: "奔宵马"
-- raw: "纤离马"
-  splits:
-  - text: "纤离马"
-- raw: "乌骓马"
-  splits:
-  - text: "乌骓马"
-- raw: "白蹄乌"
-  splits:
-  - text: "白蹄乌"
-- raw: "什伐赤"
-  splits:
-  - text: "什伐赤"
-- raw: "拳毛驹"
-  splits:
-  - text: "拳毛驹"
-- raw: "斑豹马"
-  splits:
-  - text: "斑豹马"
-- raw: "赤骥马"
-  splits:
-  - text: "赤骥马"
-- raw: "麒麟兽"
-  splits:
-  - text: "麒麟兽"
-- raw: "照夜白"
-  splits:
-  - text: "照夜白"
-- raw: "汗血马"
-  splits:
-  - text: "汗血马"
-- raw: "赤兔马"
-  splits:
-  - text: "赤兔马"
-- raw: "的卢马"
-  splits:
-  - text: "的卢马"
-- raw: "绝影马"
-  splits:
-  - text: "绝影马"
-- raw: "特勒骠"
-  splits:
-  - text: "特勒骠"
-- raw: "神凫马"
-  splits:
-  - text: "神凫马"
-- raw: "飒露紫"
-  splits:
-  - text: "飒露紫"
-- raw: "白龙驹"
-  splits:
-  - text: "白龙驹"
-- raw: "补血丹"
-  splits:
-  - text: "补血丹"
-- raw: "小还丹"
-  splits:
-  - text: "小还丹"
-- raw: "大还丹"
-  splits:
-  - text: "大还丹"
-- raw: "人参养荣丸"
-  splits:
-  - text: "人参养荣丸"
-- raw: "玉洞黑石丹"
-  splits:
-  - text: "玉洞黑石丹"
-- raw: "万灵回生散"
-  splits:
-  - text: "万灵回生散"
-- raw: "益气散"
-  splits:
-  - text: "益气散"
-- raw: "行气丹"
-  splits:
-  - text: "行气丹"
-- raw: "逍遥丹"
-  splits:
-  - text: "逍遥丹"
-- raw: "参苓白术散"
-  splits:
-  - text: "参苓白术散"
-- raw: "济生养气丸"
-  splits:
-  - text: "济生养气丸"
-- raw: "紫霄玄关散"
-  splits:
-  - text: "紫霄玄关散"
-- raw: "八珍散"
-  splits:
-  - text: "八珍散"
-- raw: "无常丹"
-  splits:
-  - text: "无常丹"
-- raw: "紫金丹"
-  splits:
-  - text: "紫金丹"
-- raw: "天王补心丹"
-  splits:
-  - text: "天王补心丹"
-- raw: "生生造化丹"
-  splits:
-  - text: "生生造化丹"
-- raw: "九转还魂丹"
-  splits:
-  - text: "九转还魂丹"
-- raw: "止血散"
-  splits:
-  - text: "止血散"
-- raw: "金疮散"
-  splits:
-  - text: "金疮散"
-- raw: "三七跌打散"
-  splits:
-  - text: "三七跌打散"
-- raw: "接骨七厘散"
-  splits:
-  - text: "接骨七厘散"
-- raw: "血府逐瘀散"
-  splits:
-  - text: "血府逐瘀散"
-- raw: "天香断续散"
-  splits:
-  - text: "天香断续散"
-- raw: "通络丹"
-  splits:
-  - text: "通络丹"
-- raw: "紫藤丹"
-  splits:
-  - text: "紫藤丹"
-- raw: "牛黄血竭丹"
-  splits:
-  - text: "牛黄血竭丹"
-- raw: "田七鲨胆丹"
-  splits:
-  - text: "田七鲨胆丹"
-- raw: "三黄宝腊丹"
-  splits:
-  - text: "三黄宝腊丹"
-- raw: "还阳正气丹"
-  splits:
-  - text: "还阳正气丹"
-- raw: "黄连丸"
-  splits:
-  - text: "黄连丸"
-- raw: "荆防丸"
-  splits:
-  - text: "荆防丸"
-- raw: "六味地黄丸"
-  splits:
-  - text: "六味地黄丸"
-- raw: "天心解毒丸"
-  splits:
-  - text: "天心解毒丸"
-- raw: "金花玉露丸"
-  splits:
-  - text: "金花玉露丸"
-- raw: "龙涎净厄丸"
-  splits:
-  - text: "龙涎净厄丸"
-- raw: "手甲"
-  splits:
-  - text: "手甲"
-- raw: "指刺"
-  splits:
-  - text: "指刺"
-- raw: "钩爪"
-  splits:
-  - text: "钩爪"
-- raw: "指虎"
-  splits:
-  - text: "指虎"
-- raw: "拳套"
-  splits:
-  - text: "拳套"
-- raw: "指环"
-  splits:
-  - text: "指环"
-- raw: "重剑"
-  splits:
-  - text: "重剑"
-- raw: "短剑"
-  splits:
-  - text: "短剑"
-- raw: "细剑"
-  splits:
-  - text: "细剑"
-- raw: "长剑"
-  splits:
-  - text: "长剑"
-- raw: "大剑"
-  splits:
-  - text: "大剑"
-- raw: "软剑"
-  splits:
-  - text: "软剑"
-- raw: "重刀"
-  splits:
-  - text: "重刀"
-- raw: "短刀"
-  splits:
-  - text: "短刀"
-- raw: "唐刀"
-  splits:
-  - text: "唐刀"
-- raw: "朴刀"
-  splits:
-  - text: "朴刀"
-- raw: "大刀"
-  splits:
-  - text: "大刀"
-- raw: "弯刀"
-  splits:
-  - text: "弯刀"
-- raw: "长戟"
-  splits:
-  - text: "长戟"
-- raw: "长枪"
-  splits:
-  - text: "长枪"
-- raw: "长叉"
-  splits:
-  - text: "长叉"
-- raw: "长戈"
-  splits:
-  - text: "长戈"
-- raw: "长矛"
-  splits:
-  - text: "长矛"
-- raw: "长棍"
-  splits:
-  - text: "长棍"
-- raw: "飞轮"
-  splits:
-  - text: "飞轮"
-- raw: "判笔"
-  splits:
-  - text: "判笔"
-- raw: "软鞭"
-  splits:
-  - text: "软鞭"
-- raw: "铁扇"
-  splits:
-  - text: "铁扇"
-- raw: "长弓"
-  splits:
-  - text: "长弓"
-- raw: "短弓"
-  splits:
-  - text: "短弓"
-- raw: "曲弓"
-  splits:
-  - text: "曲弓"
-- raw: "直弓"
-  splits:
-  - text: "直弓"
-- raw: "硬弓"
-  splits:
-  - text: "硬弓"
-- raw: "软弓"
-  splits:
-  - text: "软弓"
 - raw: "查看弟子相关信息"
   splits:
   - text: "查看弟子相关信息"
@@ -39136,2204 +38932,3 @@
 - raw: "名驹"
   splits:
   - text: "名驹"
-- raw: "(不观战)"
-  splits:
-  - text: "不观战"
-  templates:
-  - template: "({0})"
-- raw: "不观看其他角色之间的对战"
-  splits:
-  - text: "不观看其他角色之间的对战"
-- raw: "(观战)"
-  splits:
-  - text: "观战"
-  templates:
-  - template: "({0})"
-- raw: "其他角色对战时会询问是否观看"
-  splits:
-  - text: "其他角色对战时会询问是否观看"
-- raw: "10000两"
-  splits:
-  - text: "10000两"
-- raw: "1000两"
-  splits:
-  - text: "1000两"
-- raw: "100两"
-  splits:
-  - text: "100两"
-- raw: "10天"
-  splits:
-  - text: "10天"
-- raw: "15天"
-  splits:
-  - text: "15天"
-- raw: "1天"
-  splits:
-  - text: "1天"
-- raw: "2000两"
-  splits:
-  - text: "2000两"
-- raw: "5000两"
-  splits:
-  - text: "5000两"
-- raw: "500两"
-  splits:
-  - text: "500两"
-- raw: "5天"
-  splits:
-  - text: "5天"
-- raw: "<color=#{1}>第{0}层</color>"
-  splits:
-  - text: "第"
-  - subIndex: 1
-    text: "层"
-  templates:
-  - template: "<color=#⟦1⟧>{0}⟦0⟧{1}</color>"
-- raw: "学识{2}排除"
-  splits:
-  - text: "学识"
-  - subIndex: 1
-    text: "排除"
-  templates:
-  - template: "{0}⟦2⟧{1}"
-- raw: "{0}周边情报"
-  splits:
-  - text: "周边情报"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "{0}宴会({1}日)"
-  splits:
-  - text: "宴会"
-  - subIndex: 1
-    text: "日"
-  templates:
-  - template: "⟦0⟧{0}(⟦1⟧{1})"
-- raw: "基础评分{5}\n基础加成{6}%"
-  splits:
-  - text: "基础评分"
-  - subIndex: 1
-    text: "基础加成"
-  templates:
-  - template: "{0}⟦5⟧\n{1}⟦6⟧%"
-- raw: "{0}教化"
-  splits:
-  - text: "教化"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "♦以{0}教化贼人\n♦获取声望和{0}修行经验"
-  splits:
-  - text: "以"
-  - subIndex: 1
-    text: "教化贼人"
-  - subIndex: 2
-    text: "获取声望和"
-  - subIndex: 3
-    text: "修行经验"
-  templates:
-  - template: "♦{0}⟦0⟧{1}\n♦{2}⟦0⟧{3}"
-- raw: "{0}表演"
-  splits:
-  - text: "表演"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "{0}难度"
-  splits:
-  - text: "难度"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "一个都答不上..."
-  splits:
-  - text: "一个都答不上..."
-- raw: "一探究竟"
-  splits:
-  - text: "一探究竟"
-- raw: "一番感激"
-  splits:
-  - text: "一番感激"
-- raw: "一言为定"
-  splits:
-  - text: "一言为定"
-- raw: "一较高下"
-  splits:
-  - text: "一较高下"
-- raw: "万份感谢"
-  splits:
-  - text: "万份感谢"
-- raw: "不妨一看"
-  splits:
-  - text: "不妨一看"
-- raw: "不客气了"
-  splits:
-  - text: "不客气了"
-- raw: "不必客气"
-  splits:
-  - text: "不必客气"
-- raw: "不感兴趣"
-  splits:
-  - text: "不感兴趣"
-- raw: "不自量力"
-  splits:
-  - text: "不自量力"
-- raw: "不醉不归！"
-  splits:
-  - text: "不醉不归！"
-- raw: "与{0}分享"
-  splits:
-  - text: "与"
-  - subIndex: 1
-    text: "分享"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "个人赠礼"
-  splits:
-  - text: "个人赠礼"
-- raw: "中级嘉奖"
-  splits:
-  - text: "中级嘉奖"
-- raw: "中额红包"
-  splits:
-  - text: "中额红包"
-- raw: "中额赠礼"
-  splits:
-  - text: "中额赠礼"
-- raw: "强盗头目&随机"
-  splits:
-  - text: "强盗头目"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "事件难度+0.5"
-  splits:
-  - text: "事件难度"
-  templates:
-  - template: "{0}+0.5"
-- raw: "怪盗&随机"
-  splits:
-  - text: "怪盗"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.2"
-  splits:
-  - text: "随机0.2"
-- raw: "事件难度+1"
-  splits:
-  - text: "事件难度"
-  templates:
-  - template: "{0}+1"
-- raw: "恶贼头目&随机"
-  splits:
-  - text: "恶贼头目"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.3"
-  splits:
-  - text: "随机0.3"
-- raw: "恶霸头目&随机"
-  splits:
-  - text: "恶霸头目"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "杀手头目&随机"
-  splits:
-  - text: "杀手头目"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.4"
-  splits:
-  - text: "随机0.4"
-- raw: "盗贼&随机"
-  splits:
-  - text: "盗贼"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.6"
-  splits:
-  - text: "随机0.6"
-- raw: "逃犯&随机"
-  splits:
-  - text: "逃犯"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "邪道头目&随机"
-  splits:
-  - text: "邪道头目"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.1"
-  splits:
-  - text: "随机0.1"
-- raw: "随机0"
-  splits:
-  - text: "随机0"
-- raw: "马贼头目&随机"
-  splits:
-  - text: "马贼头目"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.5"
-  splits:
-  - text: "随机0.5"
-- raw: "魔头&随机"
-  splits:
-  - text: "魔头"
-  - subIndex: 1
-    text: "随机"
-  templates:
-  - template: "{0}&{1}"
-- raw: "事件难度+1.5"
-  splits:
-  - text: "事件难度"
-  templates:
-  - template: "{0}+1.5"
-- raw: "为其践行"
-  splits:
-  - text: "为其践行"
-- raw: "举手之劳"
-  splits:
-  - text: "举手之劳"
-- raw: "义不容辞"
-  splits:
-  - text: "义不容辞"
-- raw: "乖乖交钱"
-  splits:
-  - text: "乖乖交钱"
-- raw: "乘机开溜"
-  splits:
-  - text: "乘机开溜"
-- raw: "乞讨"
-  splits:
-  - text: "乞讨"
-- raw: "买下宝物"
-  splits:
-  - text: "买下宝物"
-- raw: "了解周遭情况"
-  splits:
-  - text: "了解周遭情况"
-- raw: "了解远处情况"
-  splits:
-  - text: "了解远处情况"
-- raw: "二人平分"
-  splits:
-  - text: "二人平分"
-- raw: "二位住手，要打就打我吧"
-  splits:
-  - text: "二位住手，要打就打我吧"
-- raw: "♦好友关系好感获取+10%，好感消耗-10%\n♦对好友作恶，恶名x200%"
-  splits:
-  - text: "好友关系好感获取+10%，好感消耗"
-  - subIndex: 1
-    text: "对好友作恶，恶名"
-  templates:
-  - template: "♦{0}-10%\n♦{1}x200%"
-- raw: "♦亲密关系好感获取+20%，好感消耗-20%\n♦对亲友作恶，恶名x400%"
-  splits:
-  - text: "亲密关系好感获取+20%，好感消耗"
-  - subIndex: 1
-    text: "对亲友作恶，恶名"
-  templates:
-  - template: "♦{0}-20%\n♦{1}x400%"
-- raw: "以武论道"
-  splits:
-  - text: "以武论道"
-- raw: "以理说服"
-  splits:
-  - text: "以理说服"
-- raw: "伏地恳求"
-  splits:
-  - text: "伏地恳求"
-- raw: "休养"
-  splits:
-  - text: "休养"
-- raw: "传授"
-  splits:
-  - text: "传授"
-- raw: "♦传授弟子武功无好感要求\n♦武功品级不能超过对方身份等级\n♦每月最多一次"
-  splits:
-  - text: "传授弟子武功无好感要求"
-  - subIndex: 1
-    text: "武功品级不能超过对方身份等级"
-  - subIndex: 2
-    text: "每月最多一次"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "传授技艺潜力"
-  splits:
-  - text: "传授技艺潜力"
-- raw: "♦你的潜力比对方高出越多，效果越好\n♦提升2点好感"
-  splits:
-  - text: "你的潜力比对方高出越多，效果越好"
-  - subIndex: 1
-    text: "提升2点好感"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "传授技艺经验"
-  splits:
-  - text: "传授技艺经验"
-- raw: "♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
-  splits:
-  - text: "你的技艺比对方高出越多，效果越好"
-  - subIndex: 1
-    text: "提升2点好感"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "传授此武学"
-  splits:
-  - text: "传授此武学"
-- raw: "传授此秘籍"
-  splits:
-  - text: "传授此秘籍"
-- raw: "传授武学"
-  splits:
-  - text: "传授武学"
-- raw: "♦传授自己掌握的武学"
-  splits:
-  - text: "传授自己掌握的武学"
-  templates:
-  - template: "♦{0}"
-- raw: "传授秘籍"
-  splits:
-  - text: "传授秘籍"
-- raw: "♦传授背包/仓库/藏经阁内秘籍记载的武学"
-  splits:
-  - text: "传授背包"
-  - subIndex: 1
-    text: "仓库"
-  - subIndex: 2
-    text: "藏经阁内秘籍记载的武学"
-  templates:
-  - template: "♦{0}/{1}/{2}"
-- raw: "低价出售({0}两)"
-  splits:
-  - text: "低价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "使用钥匙"
-  splits:
-  - text: "使用钥匙"
-- raw: "修习{0}口诀"
-  splits:
-  - text: "修习"
-  - subIndex: 1
-    text: "口诀"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "修习{0}潜力"
-  splits:
-  - text: "修习"
-  - subIndex: 1
-    text: "潜力"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "修改本门弟子折扣"
-  splits:
-  - text: "修改本门弟子折扣"
-- raw: "修改非本门弟子折扣"
-  splits:
-  - text: "修改非本门弟子折扣"
-- raw: "修炼{0}"
-  splits:
-  - text: "修炼"
-  templates:
-  - template: "{0}⟦0⟧"
-- raw: "修行..."
-  splits:
-  - text: "修行..."
-- raw: "停战{0}个月"
-  splits:
-  - text: "停战"
-  - subIndex: 1
-    text: "个月"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "至少需{2}门派好感\n消耗{3}门派好感"
-  splits:
-  - text: "至少需"
-  - subIndex: 1
-    text: "门派好感"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "门派好感"
-  templates:
-  - template: "{0}⟦2⟧{1}\n{2}⟦3⟧{3}"
-- raw: "充分休息"
-  splits:
-  - text: "充分休息"
-- raw: "先生高义，万分感谢"
-  splits:
-  - text: "先生高义，万分感谢"
-- raw: "先追上我再说"
-  splits:
-  - text: "先追上我再说"
-- raw: "免费赠与"
-  splits:
-  - text: "免费赠与"
-- raw: "免费赠送"
-  splits:
-  - text: "免费赠送"
-- raw: "兑换该武学"
-  splits:
-  - text: "兑换该武学"
-- raw: "入朝主政"
-  splits:
-  - text: "入朝主政"
-- raw: "入朝掌兵"
-  splits:
-  - text: "入朝掌兵"
-- raw: "入派"
-  splits:
-  - text: "入派"
-- raw: "♦邀请眷侣加入自己门派"
-  splits:
-  - text: "邀请眷侣加入自己门派"
-  templates:
-  - template: "♦{0}"
-- raw: "入队"
-  splits:
-  - text: "入队"
-- raw: "♦邀请对方入队30天\n♦{0}{2}"
-  splits:
-  - text: "邀请对方入队30天"
-  templates:
-  - template: "♦{0}\n♦⟦0⟧⟦2⟧"
-- raw: "内功 吐纳法"
-  splits:
-  - text: "内功"
-  - subIndex: 1
-    text: "吐纳法"
-  templates:
-  - template: "{0} {1}"
-- raw: "♦与对方结束师徒关系"
-  splits:
-  - text: "与对方结束师徒关系"
-  templates:
-  - template: "♦{0}"
-- raw: "出征！"
-  splits:
-  - text: "出征！"
-- raw: "出手伤人"
-  splits:
-  - text: "出手伤人"
-- raw: "♦重伤对方\n♦增加10恶名"
-  splits:
-  - text: "重伤对方"
-  - subIndex: 1
-    text: "增加10恶名"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "出手吧"
-  splits:
-  - text: "出手吧"
-- raw: "出手吧！"
-  splits:
-  - text: "出手吧！"
-- raw: "出手威逼"
-  splits:
-  - text: "出手威逼"
-- raw: "出手阻止"
-  splits:
-  - text: "出手阻止"
-- raw: "出钱了事"
-  splits:
-  - text: "出钱了事"
-- raw: "分手"
-  splits:
-  - text: "分手"
-- raw: "♦结束情侣关系\n♦降低100点好感\n♦固定增加20恶名"
-  splits:
-  - text: "结束情侣关系"
-  - subIndex: 1
-    text: "降低100点好感"
-  - subIndex: 2
-    text: "固定增加20恶名"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "分文不取"
-  splits:
-  - text: "分文不取"
-- raw: "分而食之"
-  splits:
-  - text: "分而食之"
-- raw: "切磋出师"
-  splits:
-  - text: "切磋出师"
-- raw: "初级嘉奖"
-  splits:
-  - text: "初级嘉奖"
-- raw: "别生气啊"
-  splits:
-  - text: "别生气啊"
-- raw: "刷新展品"
-  splits:
-  - text: "刷新展品"
-- raw: "割据一方"
-  splits:
-  - text: "割据一方"
-- raw: "劝入门派"
-  splits:
-  - text: "劝入门派"
-- raw: "动之以理"
-  splits:
-  - text: "动之以理"
-- raw: "助{0}一臂之力"
-  splits:
-  - text: "助"
-  - subIndex: 1
-    text: "一臂之力"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "劫狱"
-  splits:
-  - text: "劫狱"
-- raw: "♦获取贼人身上一件物品\n♦增加少许恶名"
-  splits:
-  - text: "获取贼人身上一件物品"
-  - subIndex: 1
-    text: "增加少许恶名"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "包在我身上"
-  splits:
-  - text: "包在我身上"
-- raw: "包扎"
-  splits:
-  - text: "包扎"
-- raw: "技能影响:"
-  splits:
-  - text: "技能影响"
-  templates:
-  - template: "{0}:"
-- raw: "千恩万谢"
-  splits:
-  - text: "千恩万谢"
-- raw: "单次指点"
-  splits:
-  - text: "单次指点"
-- raw: "参赛"
-  splits:
-  - text: "参赛"
-- raw: "友善..."
-  splits:
-  - text: "友善..."
-- raw: "受教了"
-  splits:
-  - text: "受教了"
-- raw: "只是借你一看罢了"
-  splits:
-  - text: "只是借你一看罢了"
-- raw: "只管开口便是！"
-  splits:
-  - text: "只管开口便是！"
-- raw: "只管砸来便是！"
-  splits:
-  - text: "只管砸来便是！"
-- raw: "只管考验便是！"
-  splits:
-  - text: "只管考验便是！"
-- raw: "只管走起便是！"
-  splits:
-  - text: "只管走起便是！"
-- raw: "只能出手了"
-  splits:
-  - text: "只能出手了"
-- raw: "只要一半价格"
-  splits:
-  - text: "只要一半价格"
-- raw: "可惜可惜"
-  splits:
-  - text: "可惜可惜"
-- raw: "同行"
-  splits:
-  - text: "同行"
-- raw: "♦邀请眷侣加入队伍\n♦无好感消耗"
-  splits:
-  - text: "邀请眷侣加入队伍"
-  - subIndex: 1
-    text: "无好感消耗"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "后会有期"
-  splits:
-  - text: "后会有期"
-- raw: "听我一言"
-  splits:
-  - text: "听我一言"
-- raw: "告辞"
-  splits:
-  - text: "告辞"
-- raw: "告辞！"
-  splits:
-  - text: "告辞！"
-- raw: "哼，还好我早有准备！"
-  splits:
-  - text: "哼，还好我早有准备！"
-- raw: "唔......"
-  splits:
-  - text: "唔......"
-- raw: "唯唯诺诺"
-  splits:
-  - text: "唯唯诺诺"
-- raw: "♦降低20好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "降低20好感"
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "嘉奖"
-  splits:
-  - text: "嘉奖"
-- raw: "♦以银两或珍宝嘉奖弟子\n♦提升弟子好感，忠诚和门派功绩\n♦每月最多一次"
-  splits:
-  - text: "以银两或珍宝嘉奖弟子"
-  - subIndex: 1
-    text: "提升弟子好感，忠诚和门派功绩"
-  - subIndex: 2
-    text: "每月最多一次"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "围观"
-  splits:
-  - text: "围观"
-- raw: "均价出售({0}两)"
-  splits:
-  - text: "均价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "坐镇指挥"
-  splits:
-  - text: "坐镇指挥"
-- raw: "垫付一半欠款"
-  splits:
-  - text: "垫付一半欠款"
-- raw: "垫付全部欠款"
-  splits:
-  - text: "垫付全部欠款"
-- raw: "垫付欠款"
-  splits:
-  - text: "垫付欠款"
-- raw: "多少给点吧"
-  splits:
-  - text: "多少给点吧"
-- raw: "多谢"
-  splits:
-  - text: "多谢"
-- raw: "多谢大侠"
-  splits:
-  - text: "多谢大侠"
-- raw: "多谢捧场"
-  splits:
-  - text: "多谢捧场"
-- raw: "大张旗鼓"
-  splits:
-  - text: "大张旗鼓"
-- raw: "迎战大量守卫\n获取高品质秘籍"
-  splits:
-  - text: "迎战大量守卫"
-  - subIndex: 1
-    text: "获取高品质秘籍"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "大胆表白"
-  splits:
-  - text: "大胆表白"
-- raw: "大胆贼人！"
-  splits:
-  - text: "大胆贼人！"
-- raw: "大额红包"
-  splits:
-  - text: "大额红包"
-- raw: "大额赠礼"
-  splits:
-  - text: "大额赠礼"
-- raw: "天赐良机"
-  splits:
-  - text: "天赐良机"
-- raw: "好个强敌！"
-  splits:
-  - text: "好个强敌！"
-- raw: "好险好险..."
-  splits:
-  - text: "好险好险..."
-- raw: "好，一起上吧！"
-  splits:
-  - text: "好，一起上吧！"
-- raw: "好，我们合力对敌！"
-  splits:
-  - text: "好，我们合力对敌！"
-- raw: "好，我们合力除贼！"
-  splits:
-  - text: "好，我们合力除贼！"
-- raw: "好，算我一个！"
-  splits:
-  - text: "好，算我一个！"
-- raw: "如此便好..."
-  splits:
-  - text: "如此便好..."
-- raw: "委托？"
-  splits:
-  - text: "委托？"
-- raw: "♦完成对方委托提升好感"
-  splits:
-  - text: "完成对方委托提升好感"
-  templates:
-  - template: "♦{0}"
-- raw: "娓娓道来"
-  splits:
-  - text: "娓娓道来"
-- raw: "学习技艺潜力"
-  splits:
-  - text: "学习技艺潜力"
-- raw: "♦对方潜力比你高出越多，效果越好\n♦消耗10点好感(师傅好感消耗减半)"
-  splits:
-  - text: "对方潜力比你高出越多，效果越好"
-  - subIndex: 1
-    text: "消耗10点好感"
-  - subIndex: 2
-    text: "师傅好感消耗减半"
-  templates:
-  - template: "♦{0}\n♦{1}({2})"
-- raw: "学习技艺经验"
-  splits:
-  - text: "学习技艺经验"
-- raw: "♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
-  splits:
-  - text: "对方技艺比你高出越多，效果越好"
-  - subIndex: 1
-    text: "消耗4点好感"
-  - subIndex: 2
-    text: "师傅好感消耗减半"
-  templates:
-  - template: "♦{0}\n♦{1}({2})"
-- raw: "学艺不精"
-  splits:
-  - text: "学艺不精"
-- raw: "完全恢复"
-  splits:
-  - text: "完全恢复"
-- raw: "完成巡查"
-  splits:
-  - text: "完成巡查"
-- raw: "官员进贡"
-  splits:
-  - text: "官员进贡"
-- raw: "容我娓娓道来"
-  splits:
-  - text: "容我娓娓道来"
-- raw: "对于{0}我有几分心得"
-  splits:
-  - text: "对于"
-  - subIndex: 1
-    text: "我有几分心得"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "小心为上"
-  splits:
-  - text: "小心为上"
-- raw: "小贼休走！"
-  splits:
-  - text: "小贼休走！"
-- raw: "小额红包"
-  splits:
-  - text: "小额红包"
-- raw: "小额赠礼"
-  splits:
-  - text: "小额赠礼"
-- raw: "就学这个！"
-  splits:
-  - text: "就学这个！"
-- raw: "尽绵薄之力"
-  splits:
-  - text: "尽绵薄之力"
-- raw: "履约伤人"
-  splits:
-  - text: "履约伤人"
-- raw: "巨额红包"
-  splits:
-  - text: "巨额红包"
-- raw: "帮助五毒教"
-  splits:
-  - text: "帮助五毒教"
-- raw: "帮助官差对抗暴民"
-  splits:
-  - text: "帮助官差对抗暴民"
-- raw: "帮助暴民对抗官差"
-  splits:
-  - text: "帮助暴民对抗官差"
-- raw: "帮助茅山派"
-  splits:
-  - text: "帮助茅山派"
-- raw: "平分银两"
-  splits:
-  - text: "平分银两"
-- raw: "开个玩笑"
-  splits:
-  - text: "开个玩笑"
-- raw: "开始修习"
-  splits:
-  - text: "开始修习"
-- raw: "开始修炼"
-  splits:
-  - text: "开始修炼"
-- raw: "开始动工吧"
-  splits:
-  - text: "开始动工吧"
-- raw: "开始对饮"
-  splits:
-  - text: "开始对饮"
-- raw: "开始探听"
-  splits:
-  - text: "开始探听"
-- raw: "开始舌战"
-  splits:
-  - text: "开始舌战"
-- raw: "开始论战"
-  splits:
-  - text: "开始论战"
-- raw: "开始遗忘"
-  splits:
-  - text: "开始遗忘"
-- raw: "开席对饮"
-  splits:
-  - text: "开席对饮"
-- raw: "开战"
-  splits:
-  - text: "开战"
-- raw: "开诊"
-  splits:
-  - text: "开诊"
-- raw: "开赌！"
-  splits:
-  - text: "开赌！"
-- raw: "张口结舌"
-  splits:
-  - text: "张口结舌"
-- raw: "强行越狱"
-  splits:
-  - text: "强行越狱"
-- raw: "归还资源"
-  splits:
-  - text: "归还资源"
-- raw: "征召"
-  splits:
-  - text: "征召"
-- raw: "♦征召弟子入队\n♦无好感消耗"
-  splits:
-  - text: "征召弟子入队"
-  - subIndex: 1
-    text: "无好感消耗"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "征收资源"
-  splits:
-  - text: "征收资源"
-- raw: "征用"
-  splits:
-  - text: "征用"
-- raw: "♦消耗门派威望征用物品\n♦降低弟子少许好感和忠诚\n♦每月最多一次"
-  splits:
-  - text: "消耗门派威望征用物品"
-  - subIndex: 1
-    text: "降低弟子少许好感和忠诚"
-  - subIndex: 2
-    text: "每月最多一次"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "循循善诱"
-  splits:
-  - text: "循循善诱"
-- raw: "花费三日"
-  splits:
-  - text: "花费三日"
-- raw: "微额红包"
-  splits:
-  - text: "微额红包"
-- raw: "恶贼住手！"
-  splits:
-  - text: "恶贼住手！"
-- raw: "恶贼受死！"
-  splits:
-  - text: "恶贼受死！"
-- raw: "悉心指点"
-  splits:
-  - text: "悉心指点"
-- raw: "悍然出手"
-  splits:
-  - text: "悍然出手"
-- raw: "情势所逼"
-  splits:
-  - text: "情势所逼"
-- raw: "惭愧惭愧"
-  splits:
-  - text: "惭愧惭愧"
-- raw: "愿闻其详"
-  splits:
-  - text: "愿闻其详"
-- raw: "慰问"
-  splits:
-  - text: "慰问"
-- raw: "慷慨相让"
-  splits:
-  - text: "慷慨相让"
-- raw: "成为{0}门客"
-  splits:
-  - text: "成为"
-  - subIndex: 1
-    text: "门客"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "成功了"
-  splits:
-  - text: "成功了"
-- raw: "我来助你！"
-  splits:
-  - text: "我来助你！"
-- raw: "我来相助！"
-  splits:
-  - text: "我来相助！"
-- raw: "我还有事"
-  splits:
-  - text: "我还有事"
-- raw: "我这就走"
-  splits:
-  - text: "我这就走"
-- raw: "所见略同"
-  splits:
-  - text: "所见略同"
-- raw: "打开宝箱"
-  splits:
-  - text: "打开宝箱"
-- raw: "打扰了"
-  splits:
-  - text: "打扰了"
-- raw: "扭头就跑"
-  splits:
-  - text: "扭头就跑"
-- raw: "抄录功法"
-  splits:
-  - text: "抄录功法"
-- raw: "把地契拿来吧"
-  splits:
-  - text: "把地契拿来吧"
-- raw: "抓捕归案"
-  splits:
-  - text: "抓捕归案"
-- raw: "♦抢夺对方一件物品\n♦根据物品价值增加恶名"
-  splits:
-  - text: "抢夺对方一件物品"
-  - subIndex: 1
-    text: "根据物品价值增加恶名"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "♦抢夺对方约一半的银两\n♦根据抢夺数额增加恶名"
-  splits:
-  - text: "抢夺对方约一半的银两"
-  - subIndex: 1
-    text: "根据抢夺数额增加恶名"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "招揽"
-  splits:
-  - text: "招揽"
-- raw: "♦邀请对方加入你的门派"
-  splits:
-  - text: "邀请对方加入你的门派"
-  templates:
-  - template: "♦{0}"
-- raw: "招揽入派"
-  splits:
-  - text: "招揽入派"
-- raw: "♦将贼人招揽入派\n♦降低全门派好感和全弟子忠诚"
-  splits:
-  - text: "将贼人招揽入派"
-  - subIndex: 1
-    text: "降低全门派好感和全弟子忠诚"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "拜入{0}"
-  splits:
-  - text: "拜入"
-  templates:
-  - template: "{0}⟦0⟧"
-- raw: "拜师"
-  splits:
-  - text: "拜师"
-- raw: "拜谢离去"
-  splits:
-  - text: "拜谢离去"
-- raw: "指点"
-  splits:
-  - text: "指点"
-- raw: "♦指点弟子武功无好感要求\n♦每月最多三次"
-  splits:
-  - text: "指点弟子武功无好感要求"
-  - subIndex: 1
-    text: "每月最多三次"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "挽留"
-  splits:
-  - text: "挽留"
-- raw: "♦延长入队时间30天\n♦{0}"
-  splits:
-  - text: "延长入队时间30天"
-  templates:
-  - template: "♦{0}\n♦⟦0⟧"
-- raw: "捉拿归案"
-  splits:
-  - text: "捉拿归案"
-- raw: "♦将贼人捉拿归案\n♦获取对应悬赏和官府功绩"
-  splits:
-  - text: "将贼人捉拿归案"
-  - subIndex: 1
-    text: "获取对应悬赏和官府功绩"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "捐献"
-  splits:
-  - text: "捐献"
-- raw: "捐纳100官府功绩"
-  splits:
-  - text: "捐纳100官府功绩"
-- raw: "捐纳200官府功绩"
-  splits:
-  - text: "捐纳200官府功绩"
-- raw: "捐纳50官府功绩"
-  splits:
-  - text: "捐纳50官府功绩"
-- raw: "收集资源\n每月一次"
-  splits:
-  - text: "收集资源"
-  - subIndex: 1
-    text: "每月一次"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "接受挑战"
-  splits:
-  - text: "接受挑战"
-- raw: "接受致歉"
-  splits:
-  - text: "接受致歉"
-- raw: "提升天赋"
-  splits:
-  - text: "提升天赋"
-- raw: "提取"
-  splits:
-  - text: "提取"
-- raw: "搜寻稀有材料"
-  splits:
-  - text: "搜寻稀有材料"
-- raw: "携手归隐"
-  splits:
-  - text: "携手归隐"
-- raw: "撕毁盟约"
-  splits:
-  - text: "撕毁盟约"
-- raw: "门派好感-20\n休战3个月"
-  splits:
-  - text: "门派好感"
-  - subIndex: 1
-    text: "休战3个月"
-  templates:
-  - template: "{0}-20\n{1}"
-- raw: "收下奖品"
-  splits:
-  - text: "收下奖品"
-- raw: "收下酬劳"
-  splits:
-  - text: "收下酬劳"
-- raw: "收取罚金"
-  splits:
-  - text: "收取罚金"
-- raw: "收取赠礼"
-  splits:
-  - text: "收取赠礼"
-- raw: "收徒"
-  splits:
-  - text: "收徒"
-- raw: "收集普通资源"
-  splits:
-  - text: "收集普通资源"
-- raw: "放你一马"
-  splits:
-  - text: "放你一马"
-- raw: "敌对..."
-  splits:
-  - text: "敌对..."
-- raw: "敬酒不吃吃罚酒"
-  splits:
-  - text: "敬酒不吃吃罚酒"
-- raw: "斗胆向两位一齐讨教"
-  splits:
-  - text: "斗胆向两位一齐讨教"
-- raw: "斗胆挑战"
-  splits:
-  - text: "斗胆挑战"
-- raw: "斗胆挑战！"
-  splits:
-  - text: "斗胆挑战！"
-- raw: "斩草除根"
-  splits:
-  - text: "斩草除根"
-- raw: "断义"
-  splits:
-  - text: "断义"
-- raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
-  splits:
-  - text: "与对方断绝结义关系"
-  - subIndex: 1
-    text: "降低100点好感"
-  - subIndex: 2
-    text: "固定增加20恶名"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "断交"
-  splits:
-  - text: "断交"
-- raw: "♦与对方断绝好友关系\n♦降低50点好感\n♦固定增加10恶名"
-  splits:
-  - text: "与对方断绝好友关系"
-  - subIndex: 1
-    text: "降低50点好感"
-  - subIndex: 2
-    text: "固定增加10恶名"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "施以惩戒"
-  splits:
-  - text: "施以惩戒"
-- raw: "施以重罚"
-  splits:
-  - text: "施以重罚"
-- raw: "施展内功抵御毒瘴"
-  splits:
-  - text: "施展内功抵御毒瘴"
-- raw: "施展绝技挖掘遗迹"
-  splits:
-  - text: "施展绝技挖掘遗迹"
-- raw: "施展绝技震碎巨石"
-  splits:
-  - text: "施展绝技震碎巨石"
-- raw: "施展轻功攀登绝壁"
-  splits:
-  - text: "施展轻功攀登绝壁"
-- raw: "施舍银两"
-  splits:
-  - text: "施舍银两"
-- raw: "无意争夺，你们请便"
-  splits:
-  - text: "无意争夺，你们请便"
-- raw: "无话可说"
-  splits:
-  - text: "无话可说"
-- raw: "早该如此"
-  splits:
-  - text: "早该如此"
-- raw: "是我唐突了"
-  splits:
-  - text: "是我唐突了"
-- raw: "是我疏忽了"
-  splits:
-  - text: "是我疏忽了"
-- raw: "是我走眼了"
-  splits:
-  - text: "是我走眼了"
-- raw: "晓之以情"
-  splits:
-  - text: "晓之以情"
-- raw: "暂不招新"
-  splits:
-  - text: "暂不招新"
-- raw: "暗中下毒"
-  splits:
-  - text: "暗中下毒"
-- raw: "暗中逃跑"
-  splits:
-  - text: "暗中逃跑"
-- raw: "暴力破解"
-  splits:
-  - text: "暴力破解"
-- raw: "替民众补交一半税赋"
-  splits:
-  - text: "替民众补交一半税赋"
-- raw: "替民众补交全部税赋"
-  splits:
-  - text: "替民众补交全部税赋"
-- raw: "来战"
-  splits:
-  - text: "来战"
-- raw: "来战！"
-  splits:
-  - text: "来战！"
-- raw: "查看功绩"
-  splits:
-  - text: "查看功绩"
-- raw: "欢迎之至"
-  splits:
-  - text: "欢迎之至"
-- raw: "欣然同意"
-  splits:
-  - text: "欣然同意"
-- raw: "欣然收下"
-  splits:
-  - text: "欣然收下"
-- raw: "正有此意"
-  splits:
-  - text: "正有此意"
-- raw: "正面出手"
-  splits:
-  - text: "正面出手"
-- raw: "此仇必报"
-  splits:
-  - text: "此仇必报"
-- raw: "武艺劝说"
-  splits:
-  - text: "武艺劝说"
-- raw: "求医"
-  splits:
-  - text: "求医"
-- raw: "求取材料"
-  splits:
-  - text: "求取材料"
-- raw: "求取灵药"
-  splits:
-  - text: "求取灵药"
-- raw: "求取物品"
-  splits:
-  - text: "求取物品"
-- raw: "求取美食"
-  splits:
-  - text: "求取美食"
-- raw: "求取药引"
-  splits:
-  - text: "求取药引"
-- raw: "求取装备"
-  splits:
-  - text: "求取装备"
-- raw: "求取陨铁"
-  splits:
-  - text: "求取陨铁"
-- raw: "求取食材"
-  splits:
-  - text: "求取食材"
-- raw: "求情说理"
-  splits:
-  - text: "求情说理"
-- raw: "江湖进贡"
-  splits:
-  - text: "江湖进贡"
-- raw: "没错，只能得罪二位了！"
-  splits:
-  - text: "没错，只能得罪二位了！"
-- raw: "♦治疗全伤势10点"
-  splits:
-  - text: "治疗全伤势10点"
-  templates:
-  - template: "♦{0}"
-- raw: "泰岳大典"
-  splits:
-  - text: "泰岳大典"
-- raw: "洗耳恭听"
-  splits:
-  - text: "洗耳恭听"
-- raw: "溜之大吉"
-  splits:
-  - text: "溜之大吉"
-- raw: "满意离去"
-  splits:
-  - text: "满意离去"
-- raw: "满载而归"
-  splits:
-  - text: "满载而归"
-- raw: "照单全收"
-  splits:
-  - text: "照单全收"
-- raw: "物归原主"
-  splits:
-  - text: "物归原主"
-- raw: "物色优良人手"
-  splits:
-  - text: "物色优良人手"
-- raw: "物色优良人选"
-  splits:
-  - text: "物色优良人选"
-- raw: "物色普通人手"
-  splits:
-  - text: "物色普通人手"
-- raw: "物色普通人选"
-  splits:
-  - text: "物色普通人选"
-- raw: "物色顶尖人手"
-  splits:
-  - text: "物色顶尖人手"
-- raw: "物色顶尖人选"
-  splits:
-  - text: "物色顶尖人选"
-- raw: "牺牲声望"
-  splits:
-  - text: "牺牲声望"
-- raw: "狗官受死！"
-  splits:
-  - text: "狗官受死！"
-- raw: "狡兔三窟"
-  splits:
-  - text: "狡兔三窟"
-- raw: "独吞财宝"
-  splits:
-  - text: "独吞财宝"
-- raw: "狮子大开口"
-  splits:
-  - text: "狮子大开口"
-- raw: "献上银两"
-  splits:
-  - text: "献上银两"
-- raw: "珍宝赠礼"
-  splits:
-  - text: "珍宝赠礼"
-- raw: "甜言蜜语"
-  splits:
-  - text: "甜言蜜语"
-- raw: "♦与对方进行论战，失败降低25好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "与对方进行论战，失败降低25好感"
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "略加惩戒"
-  splits:
-  - text: "略加惩戒"
-- raw: "略知一二"
-  splits:
-  - text: "略知一二"
-- raw: "痛下狠手"
-  splits:
-  - text: "痛下狠手"
-- raw: "看好了"
-  splits:
-  - text: "看好了"
-- raw: "看招！"
-  splits:
-  - text: "看招！"
-- raw: "真是倒霉"
-  splits:
-  - text: "真是倒霉"
-- raw: "确认兑换"
-  splits:
-  - text: "确认兑换"
-- raw: "确认征用"
-  splits:
-  - text: "确认征用"
-- raw: "♦赠礼或消耗好感降低对方忠诚\n♦对方忠诚低于好感度20%，便会加入你的门派"
-  splits:
-  - text: "赠礼或消耗好感降低对方忠诚"
-  - subIndex: 1
-    text: "对方忠诚低于好感度20%，便会加入你的门派"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "稍作休息"
-  splits:
-  - text: "稍作休息"
-- raw: "窃取物品"
-  splits:
-  - text: "窃取物品"
-- raw: "立志从商"
-  splits:
-  - text: "立志从商"
-- raw: "笑纳了"
-  splits:
-  - text: "笑纳了"
-- raw: "算了，小命要紧"
-  splits:
-  - text: "算了，小命要紧"
-- raw: "算你识相！"
-  splits:
-  - text: "算你识相！"
-- raw: "♦增加{1}恶名"
-  splits:
-  - text: "增加"
-  - subIndex: 1
-    text: "恶名"
-  templates:
-  - template: "♦{0}⟦1⟧{1}"
-- raw: "粗略挖掘"
-  splits:
-  - text: "粗略挖掘"
-- raw: "粗略选取"
-  splits:
-  - text: "粗略选取"
-- raw: "精挑细选"
-  splits:
-  - text: "精挑细选"
-- raw: "糟糕，这下大意了！"
-  splits:
-  - text: "糟糕，这下大意了！"
-- raw: "终于开始了"
-  splits:
-  - text: "终于开始了"
-- raw: "结为同盟"
-  splits:
-  - text: "结为同盟"
-- raw: "需100门派好感\n结盟后永久停战且援军+1\n可进攻盟友的相邻区域\n好感低于80会自动断盟"
-  splits:
-  - text: "需100门派好感"
-  - subIndex: 1
-    text: "结盟后永久停战且援军"
-  - subIndex: 2
-    text: "可进攻盟友的相邻区域"
-  - subIndex: 3
-    text: "好感低于80会自动断盟"
-  templates:
-  - template: "{0}\n{1}+1\n{2}\n{3}"
-- raw: "结婚"
-  splits:
-  - text: "结婚"
-- raw: "♦举办婚宴正式结为夫妻{0}"
-  splits:
-  - text: "举办婚宴正式结为夫妻"
-  templates:
-  - template: "♦{0}⟦0⟧"
-- raw: "结缘"
-  splits:
-  - text: "结缘"
-- raw: "给予嘉奖"
-  splits:
-  - text: "给予嘉奖"
-- raw: "给点医药费吧"
-  splits:
-  - text: "给点医药费吧"
-- raw: "绝技 千斤坠"
-  splits:
-  - text: "绝技"
-  - subIndex: 1
-    text: "千斤坠"
-  templates:
-  - template: "{0} {1}"
-- raw: "绝技硬闯"
-  splits:
-  - text: "绝技硬闯"
-- raw: "绝离"
-  splits:
-  - text: "绝离"
-- raw: "♦结束夫妻关系\n♦降低150点好感\n♦固定增加40恶名"
-  splits:
-  - text: "结束夫妻关系"
-  - subIndex: 1
-    text: "降低150点好感"
-  - subIndex: 2
-    text: "固定增加40恶名"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "继续追踪"
-  splits:
-  - text: "继续追踪"
-- raw: "缴纳罚金"
-  splits:
-  - text: "缴纳罚金"
-- raw: "罢了罢了"
-  splits:
-  - text: "罢了罢了"
-- raw: "羞愧难当"
-  splits:
-  - text: "羞愧难当"
-- raw: "背后偷袭"
-  splits:
-  - text: "背后偷袭"
-- raw: "0-负3"
-  splits:
-  - text: "负3"
-  templates:
-  - template: "0-{0}"
-- raw: "自己留下"
-  splits:
-  - text: "自己留下"
-- raw: "自投罗网！"
-  splits:
-  - text: "自投罗网！"
-- raw: "花言巧语"
-  splits:
-  - text: "花言巧语"
-- raw: "莫慌，我来助你！"
-  splits:
-  - text: "莫慌，我来助你！"
-- raw: "获取药品"
-  splits:
-  - text: "获取药品"
-- raw: "♦获取随机药品"
-  splits:
-  - text: "获取随机药品"
-  templates:
-  - template: "♦{0}"
-- raw: "要求双倍价格"
-  splits:
-  - text: "要求双倍价格"
-- raw: "解开手铐"
-  splits:
-  - text: "解开手铐"
-- raw: "解开脚镣"
-  splits:
-  - text: "解开脚镣"
-- raw: "解毒"
-  splits:
-  - text: "解毒"
-- raw: "让渡功绩100点"
-  splits:
-  - text: "让渡功绩100点"
-- raw: "让渡功绩200点"
-  splits:
-  - text: "让渡功绩200点"
-- raw: "让渡功绩50点"
-  splits:
-  - text: "让渡功绩50点"
-- raw: "讲经说法"
-  splits:
-  - text: "讲经说法"
-- raw: "论战劝解"
-  splits:
-  - text: "论战劝解"
-- raw: "诚心相求"
-  splits:
-  - text: "诚心相求"
-- raw: "诚恳道歉"
-  splits:
-  - text: "诚恳道歉"
-- raw: "♦降低15好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "降低15好感"
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "误会一场"
-  splits:
-  - text: "误会一场"
-- raw: "说干就干"
-  splits:
-  - text: "说干就干"
-- raw: "说情道理"
-  splits:
-  - text: "说情道理"
-- raw: "诶诶，别跑啊！"
-  splits:
-  - text: "诶诶，别跑啊！"
-- raw: "诶都别走啊！"
-  splits:
-  - text: "诶都别走啊！"
-- raw: "请二位先选"
-  splits:
-  - text: "请二位先选"
-- raw: "请听我一言"
-  splits:
-  - text: "请听我一言"
-- raw: "请指教！"
-  splits:
-  - text: "请指教！"
-- raw: "请教{0}潜力"
-  splits:
-  - text: "请教"
-  - subIndex: 1
-    text: "潜力"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "请教功法"
-  splits:
-  - text: "请教功法"
-- raw: "请笑纳"
-  splits:
-  - text: "请笑纳"
-- raw: "谁敢挡我！"
-  splits:
-  - text: "谁敢挡我！"
-- raw: "调解说和"
-  splits:
-  - text: "调解说和"
-- raw: "购买{0}木料"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "木料"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买{0}矿石"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "矿石"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买{0}粮食"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "粮食"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买{0}药材"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "药材"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买库存"
-  splits:
-  - text: "购买库存"
-- raw: "购买材料"
-  splits:
-  - text: "购买材料"
-- raw: "购药"
-  splits:
-  - text: "购药"
-- raw: "♦降低少量警觉度\n♦增加少量熟络度"
-  splits:
-  - text: "降低少量警觉度"
-  - subIndex: 1
-    text: "增加少量熟络度"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "赐予资源"
-  splits:
-  - text: "赐予资源"
-- raw: "赔礼谢罪"
-  splits:
-  - text: "赔礼谢罪"
-- raw: "赠与{0}两"
-  splits:
-  - text: "赠与"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "赠送礼物"
-  splits:
-  - text: "赠送礼物"
-- raw: "♦降低10好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "降低10好感"
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "赠送赔礼"
-  splits:
-  - text: "赠送赔礼"
-- raw: "走为上策"
-  splits:
-  - text: "走为上策"
-- raw: "走好不送"
-  splits:
-  - text: "走好不送"
-- raw: "赶尽杀绝"
-  splits:
-  - text: "赶尽杀绝"
-- raw: "♦追杀成功后，夺取其所有物品装备\n♦与对方门派和亲友结仇\n♦根据对方身份等级增加大量恶名，每月最多1次"
-  splits:
-  - text: "追杀成功后，夺取其所有物品装备"
-  - subIndex: 1
-    text: "与对方门派和亲友结仇"
-  - subIndex: 2
-    text: "根据对方身份等级增加大量恶名，每月最多1次"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "超高价出售({0}两)"
-  splits:
-  - text: "超高价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "路见不平，自当拔刀相助"
-  splits:
-  - text: "路见不平，自当拔刀相助"
-- raw: "转念一想"
-  splits:
-  - text: "转念一想"
-- raw: "轻功 轻身术"
-  splits:
-  - text: "轻功"
-  - subIndex: 1
-    text: "轻身术"
-  templates:
-  - template: "{0} {1}"
-- raw: "轻功赶上"
-  splits:
-  - text: "轻功赶上"
-- raw: "轻功躲避"
-  splits:
-  - text: "轻功躲避"
-- raw: "还是算了"
-  splits:
-  - text: "还是算了"
-- raw: "这...也只能如此了"
-  splits:
-  - text: "这...也只能如此了"
-- raw: "这些徒儿均已掌握"
-  splits:
-  - text: "这些徒儿均已掌握"
-- raw: "这有何难"
-  splits:
-  - text: "这有何难"
-- raw: "进攻"
-  splits:
-  - text: "进攻"
-- raw: "连续指点"
-  splits:
-  - text: "连续指点"
-- raw: "♦消耗剩余指点次数\n♦对方武学满级或超过你时自动停止"
-  splits:
-  - text: "消耗剩余指点次数"
-  - subIndex: 1
-    text: "对方武学满级或超过你时自动停止"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "退隐？"
-  splits:
-  - text: "退隐？"
-- raw: "♦询问对方关于退隐江湖之事"
-  splits:
-  - text: "询问对方关于退隐江湖之事"
-  templates:
-  - template: "♦{0}"
-- raw: "选择弟子"
-  splits:
-  - text: "选择弟子"
-- raw: "选择挖掘"
-  splits:
-  - text: "选择挖掘"
-- raw: "选择秘籍"
-  splits:
-  - text: "选择秘籍"
-- raw: "选贤举能"
-  splits:
-  - text: "选贤举能"
-- raw: "速战速决"
-  splits:
-  - text: "速战速决"
-- raw: "迎战守卫\n获取中品质秘籍"
-  splits:
-  - text: "迎战守卫"
-  - subIndex: 1
-    text: "获取中品质秘籍"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "遗忘“{0}”"
-  splits:
-  - text: "遗忘“"
-  templates:
-  - template: "{0}⟦0⟧”"
-- raw: "避人耳目"
-  splits:
-  - text: "避人耳目"
-- raw: "避免战斗\n获取低品质秘籍"
-  splits:
-  - text: "避免战斗"
-  - subIndex: 1
-    text: "获取低品质秘籍"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "那便来吧"
-  splits:
-  - text: "那便来吧"
-- raw: "那便来吧！"
-  splits:
-  - text: "那便来吧！"
-- raw: "那只好硬闯了"
-  splits:
-  - text: "那只好硬闯了"
-- raw: "那我就买下了"
-  splits:
-  - text: "那我就买下了"
-- raw: "那是自然"
-  splits:
-  - text: "那是自然"
-- raw: "采掘陨铁"
-  splits:
-  - text: "采掘陨铁"
-- raw: "采集{0}"
-  splits:
-  - text: "采集"
-  templates:
-  - template: "{0}⟦0⟧"
-- raw: "鉴定物品"
-  splits:
-  - text: "鉴定物品"
-- raw: "针锋相对"
-  splits:
-  - text: "针锋相对"
-- raw: "银两利诱"
-  splits:
-  - text: "银两利诱"
-- raw: "门派亲善"
-  splits:
-  - text: "门派亲善"
-- raw: "门派盟约"
-  splits:
-  - text: "门派盟约"
-- raw: "门派羞辱"
-  splits:
-  - text: "门派羞辱"
-- raw: "门派进贡"
-  splits:
-  - text: "门派进贡"
-- raw: "♦雇佣对方加入队伍15天\n♦根据对方战力消耗银钱"
-  splits:
-  - text: "雇佣对方加入队伍15天"
-  - subIndex: 1
-    text: "根据对方战力消耗银钱"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "静静等待"
-  splits:
-  - text: "静静等待"
-- raw: "骇然出手"
-  splits:
-  - text: "骇然出手"
-- raw: "高人，我来助你！"
-  splits:
-  - text: "高人，我来助你！"
-- raw: "高价出售({0}两)"
-  splits:
-  - text: "高价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "高级嘉奖"
-  splits:
-  - text: "高级嘉奖"
-- raw: "黄袍加身"
-  splits:
-  - text: "黄袍加身"
-- raw: "默默看戏"
-  splits:
-  - text: "默默看戏"
-- raw: "金风玉露"
-  splits:
-  - text: "金风玉露"
-- raw: "净乐琉璃"
-  splits:
-  - text: "净乐琉璃"
-- raw: "铁算盘"
-  splits:
-  - text: "铁算盘"
-- raw: "九天鬼手"
-  splits:
-  - text: "九天鬼手"
-- raw: "杀人无形"
-  splits:
-  - text: "杀人无形"
-- raw: "玉面医仙"
-  splits:
-  - text: "玉面医仙"
-- raw: "穿林妙手"
-  splits:
-  - text: "穿林妙手"
-- raw: "铁碗残拳"
-  splits:
-  - text: "铁碗残拳"
-- raw: "大醉侠"
-  splits:
-  - text: "大醉侠"
-- raw: "潜龙勿用"
-  splits:
-  - text: "潜龙勿用"
-- raw: "小卧龙"
-  splits:
-  - text: "小卧龙"
-- raw: "玄微法师"
-  splits:
-  - text: "玄微法师"
-- raw: "洞真法师"
-  splits:
-  - text: "洞真法师"
-- raw: "铸铁仙翁"
-  splits:
-  - text: "铸铁仙翁"
-- raw: "百炼神剑"
-  splits:
-  - text: "百炼神剑"
-- raw: "销魂蚀骨"
-  splits:
-  - text: "销魂蚀骨"
-- raw: "毒手琴心"
-  splits:
-  - text: "毒手琴心"
-- raw: "黑爪"
-  splits:
-  - text: "黑爪"
-- raw: "十殿冥主"
-  splits:
-  - text: "十殿冥主"
-- raw: "阴冥诡士"
-  splits:
-  - text: "阴冥诡士"
-- raw: "空谷幽兰"
-  splits:
-  - text: "空谷幽兰"
-- raw: "黑白无常"
-  splits:
-  - text: "黑白无常"
-- raw: "无双国士"
-  splits:
-  - text: "无双国士"
-- raw: "天剑客"
-  splits:
-  - text: "天剑客"
-- raw: "霓裳仙子"
-  splits:
-  - text: "霓裳仙子"
-- raw: "德高望重"
-  splits:
-  - text: "德高望重"
-- raw: "金身罗汉"
-  splits:
-  - text: "金身罗汉"
-- raw: "佛痴"
-  splits:
-  - text: "佛痴"
-- raw: "无为真人"
-  splits:
-  - text: "无为真人"
-- raw: "文逸真人"
-  splits:
-  - text: "文逸真人"
-- raw: "清虚真人"
-  splits:
-  - text: "清虚真人"
-- raw: "力大无穷"
-  splits:
-  - text: "力大无穷"
-- raw: "算无遗策"
-  splits:
-  - text: "算无遗策"
-- raw: "都灵子"
-  splits:
-  - text: "都灵子"
-- raw: "云鹏子"
-  splits:
-  - text: "云鹏子"
-- raw: "白眉真人"
-  splits:
-  - text: "白眉真人"
-- raw: "潇湘真人"
-  splits:
-  - text: "潇湘真人"
-- raw: "白云子"
-  splits:
-  - text: "白云子"
-- raw: "紫髯道人"
-  splits:
-  - text: "紫髯道人"
-- raw: "绝情道人"
-  splits:
-  - text: "绝情道人"
-- raw: "天工巧匠"
-  splits:
-  - text: "天工巧匠"
-- raw: "病鲁班"
-  splits:
-  - text: "病鲁班"
-- raw: "掣地霹雳"
-  splits:
-  - text: "掣地霹雳"
-- raw: "烁金枪"
-  splits:
-  - text: "烁金枪"
-- raw: "燎原火凤"
-  splits:
-  - text: "燎原火凤"
-- raw: "龙象护法"
-  splits:
-  - text: "龙象护法"
-- raw: "灵童转世"
-  splits:
-  - text: "灵童转世"
-- raw: "慧眼明王"
-  splits:
-  - text: "慧眼明王"
-- raw: "天山仙子"
-  splits:
-  - text: "天山仙子"
-- raw: "雪山飞鸿"
-  splits:
-  - text: "雪山飞鸿"
-- raw: "冷月寒江"
-  splits:
-  - text: "冷月寒江"
-- raw: "铁掌双雄"
-  splits:
-  - text: "铁掌双雄"
-- raw: "铁掌四杰"
-  splits:
-  - text: "铁掌四杰"
-- raw: "绝情断义"
-  splits:
-  - text: "绝情断义"
-- raw: "骷髅红粉"
-  splits:
-  - text: "骷髅红粉"
-- raw: "雨夜狂屠"
-  splits:
-  - text: "雨夜狂屠"
-- raw: "刺骨冰寒"
-  splits:
-  - text: "刺骨冰寒"
-- raw: "诡计毒谋"
-  splits:
-  - text: "诡计毒谋"
-- raw: "摘月偷星"
-  splits:
-  - text: "摘月偷星"
-- raw: "四大杀手"
-  splits:
-  - text: "四大杀手"
-- raw: "刀劳鬼"
-  splits:
-  - text: "刀劳鬼"
-- raw: "拘魂鬼"
-  splits:
-  - text: "拘魂鬼"
-- raw: "痨病鬼"
-  splits:
-  - text: "痨病鬼"
-- raw: "山魈鬼"
-  splits:
-  - text: "山魈鬼"
-- raw: "魍魉鬼"
-  splits:
-  - text: "魍魉鬼"
-- raw: "黄河双煞"
-  splits:
-  - text: "黄河双煞"
-- raw: "乐善好施"
-  splits:
-  - text: "乐善好施"
-- raw: "入林龙"
-  splits:
-  - text: "入林龙"
-- raw: "化虎成龙"
-  splits:
-  - text: "化虎成龙"
-- raw: "翻江镇海"
-  splits:
-  - text: "翻江镇海"
-- raw: "及时雨"
-  splits:
-  - text: "及时雨"
-- raw: "乐山大患"
-  splits:
-  - text: "乐山大患"
-- raw: "西北四骏"
-  splits:
-  - text: "西北四骏"
-- raw: "神拳无敌"
-  splits:
-  - text: "神拳无敌"
-- raw: "富可敌国"
-  splits:
-  - text: "富可敌国"
-- raw: "智计无双"
-  splits:
-  - text: "智计无双"
-- raw: "黑风寨大当家"
-  splits:
-  - text: "黑风寨大当家"
-- raw: "黑风寨二当家"
-  splits:
-  - text: "黑风寨二当家"
-- raw: "黑风寨三当家"
-  splits:
-  - text: "黑风寨三当家"
-- raw: "黑风四贼"
-  splits:
-  - text: "黑风四贼"
-- raw: "大隐琴侠"
-  splits:
-  - text: "大隐琴侠"
-- raw: "霸刀狂侠"
-  splits:
-  - text: "霸刀狂侠"
-- raw: "中原大侠"
-  splits:
-  - text: "中原大侠"
-- raw: "蓬莱奇侠"
-  splits:
-  - text: "蓬莱奇侠"
-- raw: "茅山道侠"
-  splits:
-  - text: "茅山道侠"
-- raw: "敕封御史之风"
-  splits:
-  - text: "敕封御史之风"
-- raw: "敕封御史之林"
-  splits:
-  - text: "敕封御史之林"
-- raw: "敕封御史之火"
-  splits:
-  - text: "敕封御史之火"
-- raw: "敕封御史之山"
-  splits:
-  - text: "敕封御史之山"
-- raw: "玉面判官"
-  splits:
-  - text: "玉面判官"
-- raw: "江湖百晓"
-  splits:
-  - text: "江湖百晓"
-- raw: "侠盗四奇"
-  splits:
-  - text: "侠盗四奇"
-- raw: "小霹雳"
-  splits:
-  - text: "小霹雳"
-- raw: "侠盗四丑"
-  splits:
-  - text: "侠盗四丑"
-- raw: "拳佛"
-  splits:
-  - text: "拳佛"
-- raw: "陆地剑仙"
-  splits:
-  - text: "陆地剑仙"
-- raw: "横刀灭九州"
-  splits:
-  - text: "横刀灭九州"
-- raw: "铁枪破宇宙"
-  splits:
-  - text: "铁枪破宇宙"
-- raw: "出奇必胜"
-  splits:
-  - text: "出奇必胜"
-- raw: "百步穿针"
-  splits:
-  - text: "百步穿针"
-- raw: "百骰百胜"
-  splits:
-  - text: "百骰百胜"
-- raw: "滚地雷"
-  splits:
-  - text: "滚地雷"
-- raw: "白衣秀士"
-  splits:
-  - text: "白衣秀士"

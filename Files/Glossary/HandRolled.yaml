@@ -20,3 +20,5 @@
   result: "Miss Lei"
 - raw: "添翼兄"
   result: "Brother Tianyi"
+  allowalt:
+    - "Brother Wang Tianyi"

@@ -1,0 +1,2486 @@
+- raw: "(不观战)"
+  splits:
+  - text: "不观战"
+    translated: "No spectator mode"
+  templates:
+  - template: "({0})"
+- raw: "不观看其他角色之间的对战"
+  splits:
+  - text: "不观看其他角色之间的对战"
+    translated: "Not watching the battle between other characters"
+- raw: "(观战)"
+  splits:
+  - text: "观战"
+    translated: "Spectate"
+  templates:
+  - template: "({0})"
+- raw: "其他角色对战时会询问是否观看"
+  splits:
+  - text: "其他角色对战时会询问是否观看"
+    translated: "Other characters will ask if you want to watch when they are battling."
+- raw: "10000两"
+  splits:
+  - text: "10000两"
+    translated: "10000 two"
+- raw: "1000两"
+  splits:
+  - text: "1000两"
+    translated: "1000 two"
+- raw: "100两"
+  splits:
+  - text: "100两"
+    translated: "100 pairs"
+- raw: "10天"
+  splits:
+  - text: "10天"
+    translated: "10 day"
+- raw: "15天"
+  splits:
+  - text: "15天"
+    translated: "15 days"
+- raw: "1天"
+  splits:
+  - text: "1天"
+    translated: "1 days"
+- raw: "2000两"
+  splits:
+  - text: "2000两"
+    translated: "2000 pairs"
+- raw: "5000两"
+  splits:
+  - text: "5000两"
+    translated: "5000 seconds"
+- raw: "500两"
+  splits:
+  - text: "500两"
+    translated: "500 pairs"
+- raw: "5天"
+  splits:
+  - text: "5天"
+    translated: "5 day"
+- raw: "<color=#{1}>第{0}层</color>"
+  splits:
+  - text: "第"
+    translated: "Chapter"
+  - subIndex: 1
+    text: "层"
+    translated: "Layer"
+  templates:
+  - template: "<color=#⟦1⟧>{0}⟦0⟧{1}</color>"
+- raw: "学识{2}排除"
+  splits:
+  - text: "学识"
+    translated: "Scholarship"
+  - subIndex: 1
+    text: "排除"
+    translated: "Exclude"
+  templates:
+  - template: "{0}⟦2⟧{1}"
+- raw: "{0}周边情报"
+  splits:
+  - text: "周边情报"
+    translated: "Surrounding intelligence"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "{0}宴会({1}日)"
+  splits:
+  - text: "宴会"
+    translated: "Banquet"
+  - subIndex: 1
+    text: "日"
+    translated: "Day"
+  templates:
+  - template: "⟦0⟧{0}(⟦1⟧{1})"
+- raw: "基础评分{5}\n基础加成{6}%"
+  splits:
+  - text: "基础评分"
+    translated: "Base score"
+  - subIndex: 1
+    text: "基础加成"
+    translated: "Base bonus"
+  templates:
+  - template: "{0}⟦5⟧\n{1}⟦6⟧%"
+- raw: "{0}教化"
+  splits:
+  - text: "教化"
+    translated: "Education"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "♦以{0}教化贼人\n♦获取声望和{0}修行经验"
+  splits:
+  - text: "以"
+    translated: "With"
+  - subIndex: 1
+    text: "教化贼人"
+    translated: "Civilize the bandits"
+  - subIndex: 2
+    text: "获取声望和"
+    translated: "Gain reputation and"
+  - subIndex: 3
+    text: "修行经验"
+    translated: "Training experience"
+  templates:
+  - template: "♦{0}⟦0⟧{1}\n♦{2}⟦0⟧{3}"
+- raw: "{0}表演"
+  splits:
+  - text: "表演"
+    translated: "Performance"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "{0}难度"
+  splits:
+  - text: "难度"
+    translated: "Difficulty"
+  templates:
+  - template: "⟦0⟧{0}"
+- raw: "一个都答不上..."
+  splits:
+  - text: "一个都答不上..."
+    translated: "Not a single one can answer..."
+- raw: "一探究竟"
+  splits:
+  - text: "一探究竟"
+    translated: "Get to the bottom of it"
+- raw: "一番感激"
+  splits:
+  - text: "一番感激"
+    translated: "Deepest gratitude"
+- raw: "一言为定"
+  splits:
+  - text: "一言为定"
+    translated: "A word is as good as a vow."
+- raw: "一较高下"
+  splits:
+  - text: "一较高下"
+    translated: "To test each other's skills"
+- raw: "万份感谢"
+  splits:
+  - text: "万份感谢"
+    translated: "Thousands of thanks"
+- raw: "不妨一看"
+  splits:
+  - text: "不妨一看"
+    translated: "Why not take a look?"
+- raw: "不客气了"
+  splits:
+  - text: "不客气了"
+    translated: "You're welcome"
+- raw: "不必客气"
+  splits:
+  - text: "不必客气"
+    translated: "You're welcome"
+- raw: "不感兴趣"
+  splits:
+  - text: "不感兴趣"
+    translated: "Not interested"
+- raw: "不自量力"
+  splits:
+  - text: "不自量力"
+    translated: "Overreach"
+- raw: "不醉不归！"
+  splits:
+  - text: "不醉不归！"
+    translated: "Not drunk, not home!"
+- raw: "与{0}分享"
+  splits:
+  - text: "与"
+    translated: "And"
+  - subIndex: 1
+    text: "分享"
+    translated: "Share"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "个人赠礼"
+  splits:
+  - text: "个人赠礼"
+    translated: "Personal Gift"
+- raw: "中级嘉奖"
+  splits:
+  - text: "中级嘉奖"
+    translated: "Middle Award"
+- raw: "中额红包"
+  splits:
+  - text: "中额红包"
+    translated: "Middle‑sized red envelope"
+- raw: "中额赠礼"
+  splits:
+  - text: "中额赠礼"
+    translated: "Mid‑tier Gift"
+- raw: "强盗头目&随机"
+  splits:
+  - text: "强盗头目"
+    translated: "Bandit leader"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "事件难度+0.5"
+  splits:
+  - text: "事件难度"
+    translated: "Event difficulty"
+  templates:
+  - template: "{0}+0.5"
+- raw: "怪盗&随机"
+  splits:
+  - text: "怪盗"
+    translated: "Thief King"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.2"
+  splits:
+  - text: "随机0.2"
+    translated: "Random 0.2"
+- raw: "事件难度+1"
+  splits:
+  - text: "事件难度"
+    translated: "Event difficulty"
+  templates:
+  - template: "{0}+1"
+- raw: "恶贼头目&随机"
+  splits:
+  - text: "恶贼头目"
+    translated: "Chief villain"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.3"
+  splits:
+  - text: "随机0.3"
+    translated: "Random 0.3"
+- raw: "恶霸头目&随机"
+  splits:
+  - text: "恶霸头目"
+    translated: "Bullseye Boss"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "杀手头目&随机"
+  splits:
+  - text: "杀手头目"
+    translated: "Boss Killer"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.4"
+  splits:
+  - text: "随机0.4"
+    translated: "Random 0.4"
+- raw: "盗贼&随机"
+  splits:
+  - text: "盗贼"
+    translated: "Thief"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.6"
+  splits:
+  - text: "随机0.6"
+    translated: "Random 0.6"
+- raw: "逃犯&随机"
+  splits:
+  - text: "逃犯"
+    translated: "Fugitive"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "邪道头目&随机"
+  splits:
+  - text: "邪道头目"
+    translated: "Chief Heretic Leader"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.1"
+  splits:
+  - text: "随机0.1"
+    translated: "Random 0.1"
+- raw: "随机0"
+  splits:
+  - text: "随机0"
+    translated: "Random 0"
+- raw: "马贼头目&随机"
+  splits:
+  - text: "马贼头目"
+    translated: "Bandit leader"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "随机0.5"
+  splits:
+  - text: "随机0.5"
+    translated: "Random 0.5"
+- raw: "魔头&随机"
+  splits:
+  - text: "魔头"
+    translated: "Demon king"
+  - subIndex: 1
+    text: "随机"
+    translated: "Randomly"
+  templates:
+  - template: "{0}&{1}"
+- raw: "事件难度+1.5"
+  splits:
+  - text: "事件难度"
+    translated: "Event difficulty"
+  templates:
+  - template: "{0}+1.5"
+- raw: "为其践行"
+  splits:
+  - text: "为其践行"
+    translated: "To uphold it"
+- raw: "举手之劳"
+  splits:
+  - text: "举手之劳"
+    translated: "A piece of cake"
+- raw: "义不容辞"
+  splits:
+  - text: "义不容辞"
+    translated: "Cannot shirk the duty"
+- raw: "乖乖交钱"
+  splits:
+  - text: "乖乖交钱"
+    translated: "Pay up willingly"
+- raw: "乘机开溜"
+  splits:
+  - text: "乘机开溜"
+    translated: "Grab the opportunity to slip away"
+- raw: "乞讨"
+  splits:
+  - text: "乞讨"
+    translated: "Begging"
+- raw: "买下宝物"
+  splits:
+  - text: "买下宝物"
+    translated: "Buy the treasure"
+- raw: "了解周遭情况"
+  splits:
+  - text: "了解周遭情况"
+    translated: "Understand the surroundings"
+- raw: "了解远处情况"
+  splits:
+  - text: "了解远处情况"
+    translated: "Understand the situation far away"
+- raw: "二人平分"
+  splits:
+  - text: "二人平分"
+    translated: "They split it evenly"
+- raw: "二位住手，要打就打我吧"
+  splits:
+  - text: "二位住手，要打就打我吧"
+    translated: "Two of you stop. You can hit me instead."
+- raw: "♦好友关系好感获取+10%，好感消耗-10%\n♦对好友作恶，恶名x200%"
+  splits:
+  - text: "好友关系好感获取+10%，好感消耗"
+    translated: "Friendship affinity gain +10%, affinity consumption"
+  - subIndex: 1
+    text: "对好友作恶，恶名"
+    translated: "Marring a friend, gaining notoriety"
+  templates:
+  - template: "♦{0}-10%\n♦{1}x200%"
+- raw: "♦亲密关系好感获取+20%，好感消耗-20%\n♦对亲友作恶，恶名x400%"
+  splits:
+  - text: "亲密关系好感获取+20%，好感消耗"
+    translated: "Intimate Relationship Goodwill Gain +20%, Goodwill Consumption"
+  - subIndex: 1
+    text: "对亲友作恶，恶名"
+    translated: "Doing evil to relatives and friends, acquiring a wicked reputation"
+  templates:
+  - template: "♦{0}-20%\n♦{1}x400%"
+- raw: "以武论道"
+  splits:
+  - text: "以武论道"
+    translated: "Discourse on Dao through Martial Arts"
+- raw: "以理说服"
+  splits:
+  - text: "以理说服"
+    translated: "Persuade with reason"
+- raw: "伏地恳求"
+  splits:
+  - text: "伏地恳求"
+    translated: "Kneel humbly"
+- raw: "休养"
+  splits:
+  - text: "休养"
+    translated: "Recovery"
+- raw: "传授"
+  splits:
+  - text: "传授"
+    translated: "Teach"
+- raw: "♦传授弟子武功无好感要求\n♦武功品级不能超过对方身份等级\n♦每月最多一次"
+  splits:
+  - text: "传授弟子武功无好感要求"
+    translated: "Teach disciples martial arts without any favor points requirement"
+  - subIndex: 1
+    text: "武功品级不能超过对方身份等级"
+    translated: "Combat skill grade cannot exceed the other party's status grade."
+  - subIndex: 2
+    text: "每月最多一次"
+    translated: "At most once a month"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "传授技艺潜力"
+  splits:
+  - text: "传授技艺潜力"
+    translated: "Potential to impart skills"
+- raw: "♦你的潜力比对方高出越多，效果越好\n♦提升2点好感"
+  splits:
+  - text: "你的潜力比对方高出越多，效果越好"
+    translated: "The greater the potential difference between you and the other person, the better the effect."
+  - subIndex: 1
+    text: "提升2点好感"
+    translated: "Increase 2 points of favor"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "传授技艺经验"
+  splits:
+  - text: "传授技艺经验"
+    translated: "Share skill and experience"
+- raw: "♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
+  splits:
+  - text: "你的技艺比对方高出越多，效果越好"
+    translated: "The better the disparity in your skill compared to the opponent, the better the effect."
+  - subIndex: 1
+    text: "提升2点好感"
+    translated: "Increase 2 points of favor"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "传授此武学"
+  splits:
+  - text: "传授此武学"
+    translated: "Teach this martial art"
+- raw: "传授此秘籍"
+  splits:
+  - text: "传授此秘籍"
+    translated: "Teach this secret technique"
+- raw: "传授武学"
+  splits:
+  - text: "传授武学"
+    translated: "Teach martial arts"
+- raw: "♦传授自己掌握的武学"
+  splits:
+  - text: "传授自己掌握的武学"
+    translated: "Teach the martial arts techniques he knows"
+  templates:
+  - template: "♦{0}"
+- raw: "传授秘籍"
+  splits:
+  - text: "传授秘籍"
+    translated: "Bestow the secret manual"
+- raw: "♦传授背包/仓库/藏经阁内秘籍记载的武学"
+  splits:
+  - text: "传授背包"
+    translated: "Backpack Training"
+  - subIndex: 1
+    text: "仓库"
+    translated: "Warehouse"
+  - subIndex: 2
+    text: "藏经阁内秘籍记载的武学"
+    translated: "Scripture Pavilion records of martial arts techniques"
+  templates:
+  - template: "♦{0}/{1}/{2}"
+- raw: "低价出售({0}两)"
+  splits:
+  - text: "低价出售"
+    translated: "Sell at a low price"
+  - subIndex: 1
+    text: "两"
+    translated: "Taels"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "使用钥匙"
+  splits:
+  - text: "使用钥匙"
+    translated: "Use the key"
+- raw: "修习{0}口诀"
+  splits:
+  - text: "修习"
+    translated: "Practice"
+  - subIndex: 1
+    text: "口诀"
+    translated: "Mnemonic"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "修习{0}潜力"
+  splits:
+  - text: "修习"
+    translated: "Practice"
+  - subIndex: 1
+    text: "潜力"
+    translated: "Potential"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "修改本门弟子折扣"
+  splits:
+  - text: "修改本门弟子折扣"
+    translated: "Modify discount for this disciple"
+- raw: "修改非本门弟子折扣"
+  splits:
+  - text: "修改非本门弟子折扣"
+    translated: "Modify discount for non‑disciples"
+- raw: "修炼{0}"
+  splits:
+  - text: "修炼"
+    translated: "Cultivate"
+  templates:
+  - template: "{0}⟦0⟧"
+- raw: "修行..."
+  splits:
+  - text: "修行..."
+    translated: "Practice..."
+- raw: "停战{0}个月"
+  splits:
+  - text: "停战"
+    translated: "Ceasefire"
+  - subIndex: 1
+    text: "个月"
+    translated: "Months"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "至少需{2}门派好感\n消耗{3}门派好感"
+  splits:
+  - text: "至少需"
+    translated: "At least needs"
+  - subIndex: 1
+    text: "门派好感"
+    translated: "Sect Favor"
+  - subIndex: 2
+    text: "消耗"
+    translated: "Consume"
+  - subIndex: 3
+    text: "门派好感"
+    translated: "Sect Favor"
+  templates:
+  - template: "{0}⟦2⟧{1}\n{2}⟦3⟧{3}"
+- raw: "充分休息"
+  splits:
+  - text: "充分休息"
+    translated: "Sufficient rest"
+- raw: "先生高义，万分感谢"
+  splits:
+  - text: "先生高义，万分感谢"
+    translated: "Sir, it is my honor, and I am deeply grateful."
+- raw: "先追上我再说"
+  splits:
+  - text: "先追上我再说"
+    translated: "Catch up with me first"
+- raw: "免费赠与"
+  splits:
+  - text: "免费赠与"
+    translated: "Free gift"
+- raw: "免费赠送"
+  splits:
+  - text: "免费赠送"
+    translated: "Free gift"
+- raw: "兑换该武学"
+  splits:
+  - text: "兑换该武学"
+    translated: "Exchange this martial art skill"
+- raw: "入朝主政"
+  splits:
+  - text: "入朝主政"
+    translated: "Govern in the Capital"
+- raw: "入朝掌兵"
+  splits:
+  - text: "入朝掌兵"
+    translated: "Command the army upon entering the capital"
+- raw: "入派"
+  splits:
+  - text: "入派"
+    translated: "Join the Fated Ones"
+- raw: "♦邀请眷侣加入自己门派"
+  splits:
+  - text: "邀请眷侣加入自己门派"
+    translated: "Invite couples to join your sect"
+  templates:
+  - template: "♦{0}"
+- raw: "入队"
+  splits:
+  - text: "入队"
+    translated: "Join the queue"
+- raw: "♦邀请对方入队30天\n♦{0}{2}"
+  splits:
+  - text: "邀请对方入队30天"
+    translated: "Invite the other party to join the queue for 30 days"
+  templates:
+  - template: "♦{0}\n♦⟦0⟧⟦2⟧"
+- raw: "内功 吐纳法"
+  splits:
+  - text: "内功"
+    translated: "Neigong"
+  - subIndex: 1
+    text: "吐纳法"
+    translated: "Breathing technique"
+  templates:
+  - template: "{0} {1}"
+- raw: "♦与对方结束师徒关系"
+  splits:
+  - text: "与对方结束师徒关系"
+    translated: "End the master‑apprentice relationship with the other party"
+  templates:
+  - template: "♦{0}"
+- raw: "出征！"
+  splits:
+  - text: "出征！"
+    translated: "March to battle!"
+- raw: "出手伤人"
+  splits:
+  - text: "出手伤人"
+    translated: "Assault and battery"
+- raw: "♦重伤对方\n♦增加10恶名"
+  splits:
+  - text: "重伤对方"
+    translated: "Inflicted serious injuries on the opponent"
+  - subIndex: 1
+    text: "增加10恶名"
+    translated: "Increase10Notoriety"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "出手吧"
+  splits:
+  - text: "出手吧"
+    translated: "Go ahead and do it"
+- raw: "出手吧！"
+  splits:
+  - text: "出手吧！"
+    translated: "Go for it!"
+- raw: "出手威逼"
+  splits:
+  - text: "出手威逼"
+    translated: "Force with a show of strength"
+- raw: "出手阻止"
+  splits:
+  - text: "出手阻止"
+    translated: "Step in to stop"
+- raw: "出钱了事"
+  splits:
+  - text: "出钱了事"
+    translated: "It's better to just pay up"
+- raw: "分手"
+  splits:
+  - text: "分手"
+    translated: "Breakup"
+- raw: "♦结束情侣关系\n♦降低100点好感\n♦固定增加20恶名"
+  splits:
+  - text: "结束情侣关系"
+    translated: "End the romantic relationship"
+  - subIndex: 1
+    text: "降低100点好感"
+    translated: "Decrease 100 points of goodwill"
+  - subIndex: 2
+    text: "固定增加20恶名"
+    translated: "Fixed increase 20 Notorious Rating"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "分文不取"
+  splits:
+  - text: "分文不取"
+    translated: "Not a cent for free"
+- raw: "分而食之"
+  splits:
+  - text: "分而食之"
+    translated: "Divide and conquer"
+- raw: "切磋出师"
+  splits:
+  - text: "切磋出师"
+    translated: "Refine through sparring"
+- raw: "初级嘉奖"
+  splits:
+  - text: "初级嘉奖"
+    translated: "Basic Award"
+- raw: "别生气啊"
+  splits:
+  - text: "别生气啊"
+    translated: "Don't get upset"
+- raw: "刷新展品"
+  splits:
+  - text: "刷新展品"
+    translated: "Refresh exhibits"
+- raw: "割据一方"
+  splits:
+  - text: "割据一方"
+    translated: "Govern a region"
+- raw: "劝入门派"
+  splits:
+  - text: "劝入门派"
+    translated: "AdviseEntry"
+- raw: "动之以理"
+  splits:
+  - text: "动之以理"
+    translated: "Reason with them"
+- raw: "助{0}一臂之力"
+  splits:
+  - text: "助"
+    translated: "Help"
+  - subIndex: 1
+    text: "一臂之力"
+    translated: "A helping hand"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "劫狱"
+  splits:
+  - text: "劫狱"
+    translated: "Prison Break"
+- raw: "♦获取贼人身上一件物品\n♦增加少许恶名"
+  splits:
+  - text: "获取贼人身上一件物品"
+    translated: "Retrieve an item from the bandit's body"
+  - subIndex: 1
+    text: "增加少许恶名"
+    translated: "Increase a little notoriety"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "包在我身上"
+  splits:
+  - text: "包在我身上"
+    translated: "Leave it to me"
+- raw: "包扎"
+  splits:
+  - text: "包扎"
+    translated: "Bandage"
+- raw: "技能影响:"
+  splits:
+  - text: "技能影响"
+    translated: "Skill impact"
+  templates:
+  - template: "{0}:"
+- raw: "千恩万谢"
+  splits:
+  - text: "千恩万谢"
+    translated: "Thousand thanks"
+- raw: "单次指点"
+  splits:
+  - text: "单次指点"
+    translated: "Single guidance"
+- raw: "参赛"
+  splits:
+  - text: "参赛"
+    translated: "To compete"
+- raw: "友善..."
+  splits:
+  - text: "友善..."
+    translated: "Friendly..."
+- raw: "受教了"
+  splits:
+  - text: "受教了"
+    translated: "Learned a lot"
+- raw: "只是借你一看罢了"
+  splits:
+  - text: "只是借你一看罢了"
+    translated: "Just a quick look, that's all"
+- raw: "只管开口便是！"
+  splits:
+  - text: "只管开口便是！"
+    translated: "Just speak up!"
+- raw: "只管砸来便是！"
+  splits:
+  - text: "只管砸来便是！"
+    translated: "Just keep attacking!"
+- raw: "只管考验便是！"
+  splits:
+  - text: "只管考验便是！"
+    translated: "Just test me then!"
+- raw: "只管走起便是！"
+  splits:
+  - text: "只管走起便是！"
+    translated: "Just get moving!"
+- raw: "只能出手了"
+  splits:
+  - text: "只能出手了"
+    translated: "We had to act now"
+- raw: "只要一半价格"
+  splits:
+  - text: "只要一半价格"
+    translated: "As long as it's half the price"
+- raw: "可惜可惜"
+  splits:
+  - text: "可惜可惜"
+    translated: "Pity pity"
+- raw: "同行"
+  splits:
+  - text: "同行"
+    translated: "Colleague"
+- raw: "♦邀请眷侣加入队伍\n♦无好感消耗"
+  splits:
+  - text: "邀请眷侣加入队伍"
+    translated: "Invite the couple to join the team"
+  - subIndex: 1
+    text: "无好感消耗"
+    translated: "No affection points consumption"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "后会有期"
+  splits:
+  - text: "后会有期"
+    translated: "See you later"
+- raw: "听我一言"
+  splits:
+  - text: "听我一言"
+    translated: "Hear me out"
+- raw: "告辞"
+  splits:
+  - text: "告辞"
+    translated: "Goodbye"
+- raw: "告辞！"
+  splits:
+  - text: "告辞！"
+    translated: "Goodbye!"
+- raw: "哼，还好我早有准备！"
+  splits:
+  - text: "哼，还好我早有准备！"
+    translated: "Hmph, good thing I was prepared!"
+- raw: "唔......"
+  splits:
+  - text: "唔......"
+    translated: "Umm...."
+- raw: "唯唯诺诺"
+  splits:
+  - text: "唯唯诺诺"
+    translated: "Timidly"
+- raw: "♦降低20好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "降低20好感"
+    translated: "Reduce 20favor"
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+    translated: "If affection is less than 50, the romantic relationship will be severed."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "嘉奖"
+  splits:
+  - text: "嘉奖"
+    translated: "Reward"
+- raw: "♦以银两或珍宝嘉奖弟子\n♦提升弟子好感，忠诚和门派功绩\n♦每月最多一次"
+  splits:
+  - text: "以银两或珍宝嘉奖弟子"
+    translated: "Reward disciples with silver or precious treasures"
+  - subIndex: 1
+    text: "提升弟子好感，忠诚和门派功绩"
+    translated: "Increase apprentice goodwill, loyalty, and sect merit points"
+  - subIndex: 2
+    text: "每月最多一次"
+    translated: "At most once a month"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "围观"
+  splits:
+  - text: "围观"
+    translated: "Gathering around"
+- raw: "均价出售({0}两)"
+  splits:
+  - text: "均价出售"
+    translated: "Sell at average price"
+  - subIndex: 1
+    text: "两"
+    translated: "Taels"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "坐镇指挥"
+  splits:
+  - text: "坐镇指挥"
+    translated: "Command from the rear"
+- raw: "垫付一半欠款"
+  splits:
+  - text: "垫付一半欠款"
+    translated: "Pay half of the outstanding debt upfront"
+- raw: "垫付全部欠款"
+  splits:
+  - text: "垫付全部欠款"
+    translated: "Pay off all outstanding debts"
+- raw: "垫付欠款"
+  splits:
+  - text: "垫付欠款"
+    translated: "Advance payment for outstanding debt"
+- raw: "多少给点吧"
+  splits:
+  - text: "多少给点吧"
+    translated: "How much should I give?"
+- raw: "多谢"
+  splits:
+  - text: "多谢"
+    translated: "Thank you"
+- raw: "多谢大侠"
+  splits:
+  - text: "多谢大侠"
+    translated: "Thank you, Great Hero"
+- raw: "多谢捧场"
+  splits:
+  - text: "多谢捧场"
+    translated: "Thanks for coming"
+- raw: "大张旗鼓"
+  splits:
+  - text: "大张旗鼓"
+    translated: "With great fanfare"
+- raw: "迎战大量守卫\n获取高品质秘籍"
+  splits:
+  - text: "迎战大量守卫"
+    translated: "Engage numerous defenders"
+  - subIndex: 1
+    text: "获取高品质秘籍"
+    translated: "Obtain high‑quality elixirs"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "大胆表白"
+  splits:
+  - text: "大胆表白"
+    translated: "Boldly confess your feelings"
+- raw: "大胆贼人！"
+  splits:
+  - text: "大胆贼人！"
+    translated: "Bold thief!"
+- raw: "大额红包"
+  splits:
+  - text: "大额红包"
+    translated: "Large red envelope"
+- raw: "大额赠礼"
+  splits:
+  - text: "大额赠礼"
+    translated: "Generous gift"
+- raw: "天赐良机"
+  splits:
+  - text: "天赐良机"
+    translated: "Heavenly opportunity"
+- raw: "好个强敌！"
+  splits:
+  - text: "好个强敌！"
+    translated: "Great adversary!"
+- raw: "好险好险..."
+  splits:
+  - text: "好险好险..."
+    translated: "What a close call..."
+- raw: "好，一起上吧！"
+  splits:
+  - text: "好，一起上吧！"
+    translated: "Alright, let's go together!"
+- raw: "好，我们合力对敌！"
+  splits:
+  - text: "好，我们合力对敌！"
+    translated: "Okay, let's work together to fight the enemy!"
+- raw: "好，我们合力除贼！"
+  splits:
+  - text: "好，我们合力除贼！"
+    translated: "Good, let's join forces to eliminate the bandits!"
+- raw: "好，算我一个！"
+  splits:
+  - text: "好，算我一个！"
+    translated: "Sure, count me in!"
+- raw: "如此便好..."
+  splits:
+  - text: "如此便好..."
+    translated: "So it is as it should be..."
+- raw: "委托？"
+  splits:
+  - text: "委托？"
+    translated: "Commission?"
+- raw: "♦完成对方委托提升好感"
+  splits:
+  - text: "完成对方委托提升好感"
+    translated: "Complete the commission to raise reputation"
+  templates:
+  - template: "♦{0}"
+- raw: "娓娓道来"
+  splits:
+  - text: "娓娓道来"
+    translated: "Told with great detail"
+- raw: "学习技艺潜力"
+  splits:
+  - text: "学习技艺潜力"
+    translated: "Potential to learn a skill"
+- raw: "♦对方潜力比你高出越多，效果越好\n♦消耗10点好感(师傅好感消耗减半)"
+  splits:
+  - text: "对方潜力比你高出越多，效果越好"
+    translated: "The greater the potential difference between your opponent and you, the better the effect."
+  - subIndex: 1
+    text: "消耗10点好感"
+    translated: "Consume 10 points of favor"
+  - subIndex: 2
+    text: "师傅好感消耗减半"
+    translated: "Master affection consumption reduced by half"
+  templates:
+  - template: "♦{0}\n♦{1}({2})"
+- raw: "学习技艺经验"
+  splits:
+  - text: "学习技艺经验"
+    translated: "Skillcraft experience"
+- raw: "♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
+  splits:
+  - text: "对方技艺比你高出越多，效果越好"
+    translated: "While their skill is better than yours, the effect is also enhanced."
+  - subIndex: 1
+    text: "消耗4点好感"
+    translated: "Consume 4 points of goodwill"
+  - subIndex: 2
+    text: "师傅好感消耗减半"
+    translated: "Master affection consumption reduced by half"
+  templates:
+  - template: "♦{0}\n♦{1}({2})"
+- raw: "学艺不精"
+  splits:
+  - text: "学艺不精"
+    translated: "Lackluster training"
+- raw: "完全恢复"
+  splits:
+  - text: "完全恢复"
+    translated: "Fully recovered"
+- raw: "完成巡查"
+  splits:
+  - text: "完成巡查"
+    translated: "Completed the patrol"
+- raw: "官员进贡"
+  splits:
+  - text: "官员进贡"
+    translated: "Official tribute"
+- raw: "容我娓娓道来"
+  splits:
+  - text: "容我娓娓道来"
+    translated: "Allow me to tell you in detail"
+- raw: "对于{0}我有几分心得"
+  splits:
+  - text: "对于"
+    translated: "For"
+  - subIndex: 1
+    text: "我有几分心得"
+    translated: "I have a few insights into it"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "小心为上"
+  splits:
+  - text: "小心为上"
+    translated: "Better safe than sorry"
+- raw: "小贼休走！"
+  splits:
+  - text: "小贼休走！"
+    translated: "Thief, do not escape!"
+- raw: "小额红包"
+  splits:
+  - text: "小额红包"
+    translated: "Small red envelope"
+- raw: "小额赠礼"
+  splits:
+  - text: "小额赠礼"
+    translated: "Small gift"
+- raw: "就学这个！"
+  splits:
+  - text: "就学这个！"
+    translated: "Study this!"
+- raw: "尽绵薄之力"
+  splits:
+  - text: "尽绵薄之力"
+    translated: "Do my best"
+- raw: "履约伤人"
+  splits:
+  - text: "履约伤人"
+    translated: "Breaching the contract harmed someone"
+- raw: "巨额红包"
+  splits:
+  - text: "巨额红包"
+    translated: "Huge red envelope"
+- raw: "帮助五毒教"
+  splits:
+  - text: "帮助五毒教"
+    translated: "Help the Five Poisons Sect"
+- raw: "帮助官差对抗暴民"
+  splits:
+  - text: "帮助官差对抗暴民"
+    translated: "Help the officials resist the rioters"
+- raw: "帮助暴民对抗官差"
+  splits:
+  - text: "帮助暴民对抗官差"
+    translated: "Help the mob resist the officials"
+- raw: "帮助茅山派"
+  splits:
+  - text: "帮助茅山派"
+    translated: "Help the Maoshan Sect"
+- raw: "平分银两"
+  splits:
+  - text: "平分银两"
+    translated: "Split the silver equally"
+- raw: "开个玩笑"
+  splits:
+  - text: "开个玩笑"
+    translated: "Just joking"
+- raw: "开始修习"
+  splits:
+  - text: "开始修习"
+    translated: "Begin training"
+- raw: "开始修炼"
+  splits:
+  - text: "开始修炼"
+    translated: "Start cultivating"
+- raw: "开始动工吧"
+  splits:
+  - text: "开始动工吧"
+    translated: "Let's get construction started"
+- raw: "开始对饮"
+  splits:
+  - text: "开始对饮"
+    translated: "Begin to drink together"
+- raw: "开始探听"
+  splits:
+  - text: "开始探听"
+    translated: "Start gathering information"
+- raw: "开始舌战"
+  splits:
+  - text: "开始舌战"
+    translated: "Begin verbal sparring"
+- raw: "开始论战"
+  splits:
+  - text: "开始论战"
+    translated: "Start debating"
+- raw: "开始遗忘"
+  splits:
+  - text: "开始遗忘"
+    translated: "Begin to forget"
+- raw: "开席对饮"
+  splits:
+  - text: "开席对饮"
+    translated: "Raise a glass to toast"
+- raw: "开战"
+  splits:
+  - text: "开战"
+    translated: "Start the battle"
+- raw: "开诊"
+  splits:
+  - text: "开诊"
+    translated: "Start the clinic"
+- raw: "开赌！"
+  splits:
+  - text: "开赌！"
+    translated: "Place the bets!"
+- raw: "张口结舌"
+  splits:
+  - text: "张口结舌"
+    translated: "Speechless"
+- raw: "强行越狱"
+  splits:
+  - text: "强行越狱"
+    translated: "Forcibly escape from prison"
+- raw: "归还资源"
+  splits:
+  - text: "归还资源"
+    translated: "Return resources"
+- raw: "征召"
+  splits:
+  - text: "征召"
+    translated: "Conscript"
+- raw: "♦征召弟子入队\n♦无好感消耗"
+  splits:
+  - text: "征召弟子入队"
+    translated: "Recruit disciples to join the team"
+  - subIndex: 1
+    text: "无好感消耗"
+    translated: "No affection points consumption"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "征收资源"
+  splits:
+  - text: "征收资源"
+    translated: "Resource taxation"
+- raw: "征用"
+  splits:
+  - text: "征用"
+    translated: "Expropriation"
+- raw: "♦消耗门派威望征用物品\n♦降低弟子少许好感和忠诚\n♦每月最多一次"
+  splits:
+  - text: "消耗门派威望征用物品"
+    translated: "Spend Sect Prestige to Mobilize Items"
+  - subIndex: 1
+    text: "降低弟子少许好感和忠诚"
+    translated: "Decrease apprentice's likeability and loyalty slightly"
+  - subIndex: 2
+    text: "每月最多一次"
+    translated: "At most once a month"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "循循善诱"
+  splits:
+  - text: "循循善诱"
+    translated: "Patiently guide"
+- raw: "花费三日"
+  splits:
+  - text: "花费三日"
+    translated: "Spending three days"
+- raw: "微额红包"
+  splits:
+  - text: "微额红包"
+    translated: "Tiny Red Envelope"
+- raw: "恶贼住手！"
+  splits:
+  - text: "恶贼住手！"
+    translated: "Bandit, stop!"
+- raw: "恶贼受死！"
+  splits:
+  - text: "恶贼受死！"
+    translated: "Bandit, die!"
+- raw: "悉心指点"
+  splits:
+  - text: "悉心指点"
+    translated: "Patiently guiding"
+- raw: "悍然出手"
+  splits:
+  - text: "悍然出手"
+    translated: "Brutally intervened"
+- raw: "情势所逼"
+  splits:
+  - text: "情势所逼"
+    translated: "Forced by circumstances"
+- raw: "惭愧惭愧"
+  splits:
+  - text: "惭愧惭愧"
+    translated: "Embarrassed embarrassed"
+- raw: "愿闻其详"
+  splits:
+  - text: "愿闻其详"
+    translated: "I would like to hear the details"
+- raw: "慰问"
+  splits:
+  - text: "慰问"
+    translated: "Comfort"
+- raw: "慷慨相让"
+  splits:
+  - text: "慷慨相让"
+    translated: "Generously yield"
+- raw: "成为{0}门客"
+  splits:
+  - text: "成为"
+    translated: "Become"
+  - subIndex: 1
+    text: "门客"
+    translated: "Retainer"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "成功了"
+  splits:
+  - text: "成功了"
+    translated: "Successfully accomplished it"
+- raw: "我来助你！"
+  splits:
+  - text: "我来助你！"
+    translated: "I'll help you!"
+- raw: "我来相助！"
+  splits:
+  - text: "我来相助！"
+    translated: "I'll lend a hand!"
+- raw: "我还有事"
+  splits:
+  - text: "我还有事"
+    translated: "I have more things to do"
+- raw: "我这就走"
+  splits:
+  - text: "我这就走"
+    translated: "I'll be on my way now"
+- raw: "所见略同"
+  splits:
+  - text: "所见略同"
+    translated: "We agree on this"
+- raw: "打开宝箱"
+  splits:
+  - text: "打开宝箱"
+    translated: "Open the treasure chest"
+- raw: "打扰了"
+  splits:
+  - text: "打扰了"
+    translated: "Excuse me"
+- raw: "扭头就跑"
+  splits:
+  - text: "扭头就跑"
+    translated: "Turn and run"
+- raw: "抄录功法"
+  splits:
+  - text: "抄录功法"
+    translated: "Copy the cultivation technique"
+- raw: "把地契拿来吧"
+  splits:
+  - text: "把地契拿来吧"
+    translated: "Bring me the deed to the land"
+- raw: "抓捕归案"
+  splits:
+  - text: "抓捕归案"
+    translated: "Arrest and detain"
+- raw: "♦抢夺对方一件物品\n♦根据物品价值增加恶名"
+  splits:
+  - text: "抢夺对方一件物品"
+    translated: "Steal an item from the opponent"
+  - subIndex: 1
+    text: "根据物品价值增加恶名"
+    translated: "Based on the item's value, notoriety increases"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "♦抢夺对方约一半的银两\n♦根据抢夺数额增加恶名"
+  splits:
+  - text: "抢夺对方约一半的银两"
+    translated: "Take about half of the opponent's silver coins"
+  - subIndex: 1
+    text: "根据抢夺数额增加恶名"
+    translated: "Based on the amount stolen, reputation points are increased."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "招揽"
+  splits:
+  - text: "招揽"
+    translated: "Recruit"
+- raw: "♦邀请对方加入你的门派"
+  splits:
+  - text: "邀请对方加入你的门派"
+    translated: "Invite the other party to join your sect."
+  templates:
+  - template: "♦{0}"
+- raw: "招揽入派"
+  splits:
+  - text: "招揽入派"
+    translated: "Recruit into the sect"
+- raw: "♦将贼人招揽入派\n♦降低全门派好感和全弟子忠诚"
+  splits:
+  - text: "将贼人招揽入派"
+    translated: "Attract the bandits into the sect"
+  - subIndex: 1
+    text: "降低全门派好感和全弟子忠诚"
+    translated: "Reduce the Affection of all Sects and the Loyalty of all Disciples"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "拜入{0}"
+  splits:
+  - text: "拜入"
+    translated: "Join under"
+  templates:
+  - template: "{0}⟦0⟧"
+- raw: "拜师"
+  splits:
+  - text: "拜师"
+    translated: "Become a disciple"
+- raw: "拜谢离去"
+  splits:
+  - text: "拜谢离去"
+    translated: "Thank you and depart"
+- raw: "指点"
+  splits:
+  - text: "指点"
+    translated: "Guide"
+- raw: "♦指点弟子武功无好感要求\n♦每月最多三次"
+  splits:
+  - text: "指点弟子武功无好感要求"
+    translated: "Guide disciples in martial arts without requiring good will"
+  - subIndex: 1
+    text: "每月最多三次"
+    translated: "No more than three times per month"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "挽留"
+  splits:
+  - text: "挽留"
+    translated: "Retain"
+- raw: "♦延长入队时间30天\n♦{0}"
+  splits:
+  - text: "延长入队时间30天"
+    translated: "Extend queue time by 30 days"
+  templates:
+  - template: "♦{0}\n♦⟦0⟧"
+- raw: "捉拿归案"
+  splits:
+  - text: "捉拿归案"
+    translated: "Arrest and bring to justice"
+- raw: "♦将贼人捉拿归案\n♦获取对应悬赏和官府功绩"
+  splits:
+  - text: "将贼人捉拿归案"
+    translated: "Arrest the criminals and bring them to justice"
+  - subIndex: 1
+    text: "获取对应悬赏和官府功绩"
+    translated: "Retrieve the corresponding bounty and official merit"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "捐献"
+  splits:
+  - text: "捐献"
+    translated: "Donate"
+- raw: "捐纳100官府功绩"
+  splits:
+  - text: "捐纳100官府功绩"
+    translated: "Donate 100 official merit"
+- raw: "捐纳200官府功绩"
+  splits:
+  - text: "捐纳200官府功绩"
+    translated: "Donate 200 official merit"
+- raw: "捐纳50官府功绩"
+  splits:
+  - text: "捐纳50官府功绩"
+    translated: "Donate to 50 official merit"
+- raw: "收集资源\n每月一次"
+  splits:
+  - text: "收集资源"
+    translated: "Collect resources"
+  - subIndex: 1
+    text: "每月一次"
+    translated: "Once a month"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "接受挑战"
+  splits:
+  - text: "接受挑战"
+    translated: "Accept the challenge"
+- raw: "接受致歉"
+  splits:
+  - text: "接受致歉"
+    translated: "Accept the apology"
+- raw: "提升天赋"
+  splits:
+  - text: "提升天赋"
+    translated: "Boost their talents"
+- raw: "提取"
+  splits:
+  - text: "提取"
+    translated: "Extract"
+- raw: "搜寻稀有材料"
+  splits:
+  - text: "搜寻稀有材料"
+    translated: "Search for rare materials"
+- raw: "携手归隐"
+  splits:
+  - text: "携手归隐"
+    translated: "Hand in hand into seclusion"
+- raw: "撕毁盟约"
+  splits:
+  - text: "撕毁盟约"
+    translated: "Rip the treaty to shreds"
+- raw: "门派好感-20\n休战3个月"
+  splits:
+  - text: "门派好感"
+    translated: "Sect Favor"
+  - subIndex: 1
+    text: "休战3个月"
+    translated: "Ceasefire for 3 months"
+  templates:
+  - template: "{0}-20\n{1}"
+- raw: "收下奖品"
+  splits:
+  - text: "收下奖品"
+    translated: "Accept the prize"
+- raw: "收下酬劳"
+  splits:
+  - text: "收下酬劳"
+    translated: "Accept the reward"
+- raw: "收取罚金"
+  splits:
+  - text: "收取罚金"
+    translated: "Collect the fine"
+- raw: "收取赠礼"
+  splits:
+  - text: "收取赠礼"
+    translated: "Accept a gift"
+- raw: "收徒"
+  splits:
+  - text: "收徒"
+    translated: "Recruit apprentices"
+- raw: "收集普通资源"
+  splits:
+  - text: "收集普通资源"
+    translated: "Gather common resources"
+- raw: "放你一马"
+  splits:
+  - text: "放你一马"
+    translated: "Let you off the hook"
+- raw: "敌对..."
+  splits:
+  - text: "敌对..."
+    translated: "Hostile..."
+- raw: "敬酒不吃吃罚酒"
+  splits:
+  - text: "敬酒不吃吃罚酒"
+    translated: "Decline the offer but accept the punishment"
+- raw: "斗胆向两位一齐讨教"
+  splits:
+  - text: "斗胆向两位一齐讨教"
+    translated: "Dare to seek advice from both of you together."
+- raw: "斗胆挑战"
+  splits:
+  - text: "斗胆挑战"
+    translated: "Dare to challenge"
+- raw: "斗胆挑战！"
+  splits:
+  - text: "斗胆挑战！"
+    translated: "Dare to challenge!"
+- raw: "斩草除根"
+  splits:
+  - text: "斩草除根"
+    translated: "Root out the problem"
+- raw: "断义"
+  splits:
+  - text: "断义"
+    translated: "Cut Meaning"
+- raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
+  splits:
+  - text: "与对方断绝结义关系"
+    translated: "Cut off sworn brotherhood ties with the other party"
+  - subIndex: 1
+    text: "降低100点好感"
+    translated: "Decrease 100 points of goodwill"
+  - subIndex: 2
+    text: "固定增加20恶名"
+    translated: "Fixed increase 20 Notorious Rating"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "断交"
+  splits:
+  - text: "断交"
+    translated: "Break off relations"
+- raw: "♦与对方断绝好友关系\n♦降低50点好感\n♦固定增加10恶名"
+  splits:
+  - text: "与对方断绝好友关系"
+    translated: "Cut off the friendship with the other person"
+  - subIndex: 1
+    text: "降低50点好感"
+    translated: "Decrease 50 points of favor"
+  - subIndex: 2
+    text: "固定增加10恶名"
+    translated: "Fixed increase 10 notoriety"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "施以惩戒"
+  splits:
+  - text: "施以惩戒"
+    translated: "Inflict punishment"
+- raw: "施以重罚"
+  splits:
+  - text: "施以重罚"
+    translated: "Mete out severe punishment"
+- raw: "施展内功抵御毒瘴"
+  splits:
+  - text: "施展内功抵御毒瘴"
+    translated: "Deploy internal skill to ward off poisonous miasma"
+- raw: "施展绝技挖掘遗迹"
+  splits:
+  - text: "施展绝技挖掘遗迹"
+    translated: "Deploy ultimate skill to excavate ancient ruins"
+- raw: "施展绝技震碎巨石"
+  splits:
+  - text: "施展绝技震碎巨石"
+    translated: "Perform the ultimate technique to shatter the giant rock"
+- raw: "施展轻功攀登绝壁"
+  splits:
+  - text: "施展轻功攀登绝壁"
+    translated: "Perform qinggong to climb the sheer cliff"
+- raw: "施舍银两"
+  splits:
+  - text: "施舍银两"
+    translated: "Donate silver coins"
+- raw: "无意争夺，你们请便"
+  splits:
+  - text: "无意争夺，你们请便"
+    translated: "No need for contention, go ahead"
+- raw: "无话可说"
+  splits:
+  - text: "无话可说"
+    translated: "No words to say"
+- raw: "早该如此"
+  splits:
+  - text: "早该如此"
+    translated: "This should have happened earlier"
+- raw: "是我唐突了"
+  splits:
+  - text: "是我唐突了"
+    translated: "I was presumptuous"
+- raw: "是我疏忽了"
+  splits:
+  - text: "是我疏忽了"
+    translated: "I was careless"
+- raw: "是我走眼了"
+  splits:
+  - text: "是我走眼了"
+    translated: "I must be seeing things"
+- raw: "晓之以情"
+  splits:
+  - text: "晓之以情"
+    translated: "Reason with someone emotionally"
+- raw: "暂不招新"
+  splits:
+  - text: "暂不招新"
+    translated: "No new members are being recruited currently"
+- raw: "暗中下毒"
+  splits:
+  - text: "暗中下毒"
+    translated: "Poisoning in secret"
+- raw: "暗中逃跑"
+  splits:
+  - text: "暗中逃跑"
+    translated: "Steal away in secret"
+- raw: "暴力破解"
+  splits:
+  - text: "暴力破解"
+    translated: "Brute force attack"
+- raw: "替民众补交一半税赋"
+  splits:
+  - text: "替民众补交一半税赋"
+    translated: "To pay half of the taxes on behalf of the citizens"
+- raw: "替民众补交全部税赋"
+  splits:
+  - text: "替民众补交全部税赋"
+    translated: "Help the populace to make up all the taxes due"
+- raw: "来战"
+  splits:
+  - text: "来战"
+    translated: "Come and fight"
+- raw: "来战！"
+  splits:
+  - text: "来战！"
+    translated: "Come and fight!"
+- raw: "查看功绩"
+  splits:
+  - text: "查看功绩"
+    translated: "Check Achievements"
+- raw: "欢迎之至"
+  splits:
+  - text: "欢迎之至"
+    translated: "Welcome most warmly"
+- raw: "欣然同意"
+  splits:
+  - text: "欣然同意"
+    translated: "Happily agreed"
+- raw: "欣然收下"
+  splits:
+  - text: "欣然收下"
+    translated: "Happily accepted"
+- raw: "正有此意"
+  splits:
+  - text: "正有此意"
+    translated: "That's the idea"
+- raw: "正面出手"
+  splits:
+  - text: "正面出手"
+    translated: "Take the initiative"
+- raw: "此仇必报"
+  splits:
+  - text: "此仇必报"
+    translated: "This grudge must be avenged"
+- raw: "武艺劝说"
+  splits:
+  - text: "武艺劝说"
+    translated: "Martial arts persuasion"
+- raw: "求医"
+  splits:
+  - text: "求医"
+    translated: "Seek medical help"
+- raw: "求取材料"
+  splits:
+  - text: "求取材料"
+    translated: "Acquire materials"
+- raw: "求取灵药"
+  splits:
+  - text: "求取灵药"
+    translated: "Seek the elixir"
+- raw: "求取物品"
+  splits:
+  - text: "求取物品"
+    translated: "Retrieve the item"
+- raw: "求取美食"
+  splits:
+  - text: "求取美食"
+    translated: "Seeking delicious food"
+- raw: "求取药引"
+  splits:
+  - text: "求取药引"
+    translated: "Seek the herb"
+- raw: "求取装备"
+  splits:
+  - text: "求取装备"
+    translated: "Gear acquisition"
+- raw: "求取陨铁"
+  splits:
+  - text: "求取陨铁"
+    translated: "Retrieve meteoric iron"
+- raw: "求取食材"
+  splits:
+  - text: "求取食材"
+    translated: "Fetch the ingredients"
+- raw: "求情说理"
+  splits:
+  - text: "求情说理"
+    translated: "Plead and reason"
+- raw: "江湖进贡"
+  splits:
+  - text: "江湖进贡"
+    translated: "Jianghu tribute"
+- raw: "没错，只能得罪二位了！"
+  splits:
+  - text: "没错，只能得罪二位了！"
+    translated: "Alright, I can only offend the two of you!"
+- raw: "♦治疗全伤势10点"
+  splits:
+  - text: "治疗全伤势10点"
+    translated: "Heal all injuries 10 points"
+  templates:
+  - template: "♦{0}"
+- raw: "泰岳大典"
+  splits:
+  - text: "泰岳大典"
+    translated: "Tai Yue Grand Ceremony"
+- raw: "洗耳恭听"
+  splits:
+  - text: "洗耳恭听"
+    translated: "Listen attentively"
+- raw: "溜之大吉"
+  splits:
+  - text: "溜之大吉"
+    translated: "Skedaddle"
+- raw: "满意离去"
+  splits:
+  - text: "满意离去"
+    translated: "Leave satisfied"
+- raw: "满载而归"
+  splits:
+  - text: "满载而归"
+    translated: "Come back with a full load"
+- raw: "照单全收"
+  splits:
+  - text: "照单全收"
+    translated: "Accept without reservation"
+- raw: "物归原主"
+  splits:
+  - text: "物归原主"
+    translated: "Return to the original owner"
+- raw: "物色优良人手"
+  splits:
+  - text: "物色优良人手"
+    translated: "Hire skilled personnel"
+- raw: "物色优良人选"
+  splits:
+  - text: "物色优良人选"
+    translated: "Identify top candidates"
+- raw: "物色普通人手"
+  splits:
+  - text: "物色普通人手"
+    translated: "Hunt for ordinary people"
+- raw: "物色普通人选"
+  splits:
+  - text: "物色普通人选"
+    translated: "Search for ordinary candidates"
+- raw: "物色顶尖人手"
+  splits:
+  - text: "物色顶尖人手"
+    translated: "Hunt for top talent"
+- raw: "物色顶尖人选"
+  splits:
+  - text: "物色顶尖人选"
+    translated: "Identify top candidates"
+- raw: "牺牲声望"
+  splits:
+  - text: "牺牲声望"
+    translated: "Sacrifice reputation"
+- raw: "狗官受死！"
+  splits:
+  - text: "狗官受死！"
+    translated: "Begone, traitorous official!"
+- raw: "狡兔三窟"
+  splits:
+  - text: "狡兔三窟"
+    translated: "A fox has three dens"
+- raw: "独吞财宝"
+  splits:
+  - text: "独吞财宝"
+    translated: "Swallowing the treasure whole"
+- raw: "狮子大开口"
+  splits:
+  - text: "狮子大开口"
+    translated: "Open wide the lion's mouth"
+- raw: "献上银两"
+  splits:
+  - text: "献上银两"
+    translated: "Present some silver coins"
+- raw: "珍宝赠礼"
+  splits:
+  - text: "珍宝赠礼"
+    translated: "Treasure gift"
+- raw: "甜言蜜语"
+  splits:
+  - text: "甜言蜜语"
+    translated: "Sweet nothings"
+- raw: "♦与对方进行论战，失败降低25好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "与对方进行论战，失败降低25好感"
+    translated: "Engage in a debate with the other party, failure reduces 25 good will."
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+    translated: "If affection is less than 50, the romantic relationship will be severed."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "略加惩戒"
+  splits:
+  - text: "略加惩戒"
+    translated: "Mild punishment"
+- raw: "略知一二"
+  splits:
+  - text: "略知一二"
+    translated: "Have a basic understanding"
+- raw: "痛下狠手"
+  splits:
+  - text: "痛下狠手"
+    translated: "Strike hard"
+- raw: "看好了"
+  splits:
+  - text: "看好了"
+    translated: "Look well"
+- raw: "看招！"
+  splits:
+  - text: "看招！"
+    translated: "Here it comes!"
+- raw: "真是倒霉"
+  splits:
+  - text: "真是倒霉"
+    translated: "Truly unlucky"
+- raw: "确认兑换"
+  splits:
+  - text: "确认兑换"
+    translated: "Confirm exchange"
+- raw: "确认征用"
+  splits:
+  - text: "确认征用"
+    translated: "Confirm requisition"
+- raw: "♦赠礼或消耗好感降低对方忠诚\n♦对方忠诚低于好感度20%，便会加入你的门派"
+  splits:
+  - text: "赠礼或消耗好感降低对方忠诚"
+    translated: "Gift‑giving or expending goodwill to lower their loyalty"
+  - subIndex: 1
+    text: "对方忠诚低于好感度20%，便会加入你的门派"
+    translated: "If the other party's loyalty is below 20% of their affinity, they will join your sect."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "稍作休息"
+  splits:
+  - text: "稍作休息"
+    translated: "Take a moment to rest"
+- raw: "窃取物品"
+  splits:
+  - text: "窃取物品"
+    translated: "Steal items"
+- raw: "立志从商"
+  splits:
+  - text: "立志从商"
+    translated: "Determined to enter business"
+- raw: "笑纳了"
+  splits:
+  - text: "笑纳了"
+    translated: "Accepted with pleasure"
+- raw: "算了，小命要紧"
+  splits:
+  - text: "算了，小命要紧"
+    translated: "Forget it, my life is more important"
+- raw: "算你识相！"
+  splits:
+  - text: "算你识相！"
+    translated: "You know when to stop!"
+- raw: "♦增加{1}恶名"
+  splits:
+  - text: "增加"
+    translated: "Increase"
+  - subIndex: 1
+    text: "恶名"
+    translated: "Reputation"
+  templates:
+  - template: "♦{0}⟦1⟧{1}"
+- raw: "粗略挖掘"
+  splits:
+  - text: "粗略挖掘"
+    translated: "Rough excavation"
+- raw: "粗略选取"
+  splits:
+  - text: "粗略选取"
+    translated: "Roughly select"
+- raw: "精挑细选"
+  splits:
+  - text: "精挑细选"
+    translated: "Carefully selected"
+- raw: "糟糕，这下大意了！"
+  splits:
+  - text: "糟糕，这下大意了！"
+    translated: "Oh no, I've been too careless this time!"
+- raw: "终于开始了"
+  splits:
+  - text: "终于开始了"
+    translated: "Finally, it's started"
+- raw: "结为同盟"
+  splits:
+  - text: "结为同盟"
+    translated: "Form an alliance"
+- raw: "需100门派好感\n结盟后永久停战且援军+1\n可进攻盟友的相邻区域\n好感低于80会自动断盟"
+  splits:
+  - text: "需100门派好感"
+    translated: "Translate 100 Sect Favor"
+  - subIndex: 1
+    text: "结盟后永久停战且援军"
+    translated: "Alliance established for permanent peace and reinforcements"
+  - subIndex: 2
+    text: "可进攻盟友的相邻区域"
+    translated: "Adjacent areas that can be attacked by allies"
+  - subIndex: 3
+    text: "好感低于80会自动断盟"
+    translated: "Favor below 80 will automatically cut the alliance."
+  templates:
+  - template: "{0}\n{1}+1\n{2}\n{3}"
+- raw: "结婚"
+  splits:
+  - text: "结婚"
+    translated: "Get married"
+- raw: "♦举办婚宴正式结为夫妻{0}"
+  splits:
+  - text: "举办婚宴正式结为夫妻"
+    translated: "Have a wedding banquet to formally become husband and wife"
+  templates:
+  - template: "♦{0}⟦0⟧"
+- raw: "结缘"
+  splits:
+  - text: "结缘"
+    translated: "Buddy up"
+- raw: "给予嘉奖"
+  splits:
+  - text: "给予嘉奖"
+    translated: "Give commendation"
+- raw: "给点医药费吧"
+  splits:
+  - text: "给点医药费吧"
+    translated: "Can you give me some medical expenses?"
+- raw: "绝技 千斤坠"
+  splits:
+  - text: "绝技"
+    translated: "Ultimate Technique"
+  - subIndex: 1
+    text: "千斤坠"
+    translated: "Gravitational pull"
+  templates:
+  - template: "{0} {1}"
+- raw: "绝技硬闯"
+  splits:
+  - text: "绝技硬闯"
+    translated: "Master Skill Charge Bravely"
+- raw: "绝离"
+  splits:
+  - text: "绝离"
+    translated: "Sever"
+- raw: "♦结束夫妻关系\n♦降低150点好感\n♦固定增加40恶名"
+  splits:
+  - text: "结束夫妻关系"
+    translated: "End the marital relationship"
+  - subIndex: 1
+    text: "降低150点好感"
+    translated: "Decrease 150 points of favor"
+  - subIndex: 2
+    text: "固定增加40恶名"
+    translated: "Fixed increase 40 notoriety"
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "继续追踪"
+  splits:
+  - text: "继续追踪"
+    translated: "Keep tracking"
+- raw: "缴纳罚金"
+  splits:
+  - text: "缴纳罚金"
+    translated: "Pay the fine"
+- raw: "罢了罢了"
+  splits:
+  - text: "罢了罢了"
+    translated: "Alright, alright"
+- raw: "羞愧难当"
+  splits:
+  - text: "羞愧难当"
+    translated: "Ashen with shame"
+- raw: "背后偷袭"
+  splits:
+  - text: "背后偷袭"
+    translated: "Rear attack"
+- raw: "0-负3"
+  splits:
+  - text: "负3"
+    translated: "Negative3"
+  templates:
+  - template: "0-{0}"
+- raw: "自己留下"
+  splits:
+  - text: "自己留下"
+    translated: "Leave it to me"
+- raw: "自投罗网！"
+  splits:
+  - text: "自投罗网！"
+    translated: "Self‑inflicted trap!"
+- raw: "花言巧语"
+  splits:
+  - text: "花言巧语"
+    translated: "Sweettalk"
+- raw: "莫慌，我来助你！"
+  splits:
+  - text: "莫慌，我来助你！"
+    translated: "Don't panic, I'll help you!"
+- raw: "获取药品"
+  splits:
+  - text: "获取药品"
+    translated: "Obtain medicine"
+- raw: "♦获取随机药品"
+  splits:
+  - text: "获取随机药品"
+    translated: "Get random medicine"
+  templates:
+  - template: "♦{0}"
+- raw: "要求双倍价格"
+  splits:
+  - text: "要求双倍价格"
+    translated: "Require double the price"
+- raw: "解开手铐"
+  splits:
+  - text: "解开手铐"
+    translated: "Unlock the handcuffs"
+- raw: "解开脚镣"
+  splits:
+  - text: "解开脚镣"
+    translated: "Unsheathe the ankle chains"
+- raw: "解毒"
+  splits:
+  - text: "解毒"
+    translated: "Detoxify"
+- raw: "让渡功绩100点"
+  splits:
+  - text: "让渡功绩100点"
+    translated: "Transfer 100 points of merit"
+- raw: "让渡功绩200点"
+  splits:
+  - text: "让渡功绩200点"
+    translated: "Transfer 200 points of accomplishment"
+- raw: "让渡功绩50点"
+  splits:
+  - text: "让渡功绩50点"
+    translated: "Transfer 50 merits points"
+- raw: "讲经说法"
+  splits:
+  - text: "讲经说法"
+    translated: "Teach and preach"
+- raw: "论战劝解"
+  splits:
+  - text: "论战劝解"
+    translated: "Argument Mediation"
+- raw: "诚心相求"
+  splits:
+  - text: "诚心相求"
+    translated: "Honestly beseech"
+- raw: "诚恳道歉"
+  splits:
+  - text: "诚恳道歉"
+    translated: "Humbly apologize"
+- raw: "♦降低15好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "降低15好感"
+    translated: "Reduce 15's goodwill"
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+    translated: "If affection is less than 50, the romantic relationship will be severed."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "误会一场"
+  splits:
+  - text: "误会一场"
+    translated: "A misunderstanding"
+- raw: "说干就干"
+  splits:
+  - text: "说干就干"
+    translated: "Get right to it"
+- raw: "说情道理"
+  splits:
+  - text: "说情道理"
+    translated: "Reason with someone"
+- raw: "诶诶，别跑啊！"
+  splits:
+  - text: "诶诶，别跑啊！"
+    translated: "Oh, don't run away!"
+- raw: "诶都别走啊！"
+  splits:
+  - text: "诶都别走啊！"
+    translated: "Hey, don't go yet!"
+- raw: "请二位先选"
+  splits:
+  - text: "请二位先选"
+    translated: "Please let the two of you choose first."
+- raw: "请听我一言"
+  splits:
+  - text: "请听我一言"
+    translated: "Please hear me out"
+- raw: "请指教！"
+  splits:
+  - text: "请指教！"
+    translated: "Please instruct!"
+- raw: "请教{0}潜力"
+  splits:
+  - text: "请教"
+    translated: "Consult"
+  - subIndex: 1
+    text: "潜力"
+    translated: "Potential"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "请教功法"
+  splits:
+  - text: "请教功法"
+    translated: "Seeking Advice Skill"
+- raw: "请笑纳"
+  splits:
+  - text: "请笑纳"
+    translated: "Please accept it with a smile"
+- raw: "谁敢挡我！"
+  splits:
+  - text: "谁敢挡我！"
+    translated: "Who dares stop me!"
+- raw: "调解说和"
+  splits:
+  - text: "调解说和"
+    translated: "Mediation and negotiation"
+- raw: "购买{0}木料"
+  splits:
+  - text: "购买"
+    translated: "Purchase"
+  - subIndex: 1
+    text: "木料"
+    translated: "Wood"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买{0}矿石"
+  splits:
+  - text: "购买"
+    translated: "Purchase"
+  - subIndex: 1
+    text: "矿石"
+    translated: "Mineral"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买{0}粮食"
+  splits:
+  - text: "购买"
+    translated: "Purchase"
+  - subIndex: 1
+    text: "粮食"
+    translated: "Food grain"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买{0}药材"
+  splits:
+  - text: "购买"
+    translated: "Purchase"
+  - subIndex: 1
+    text: "药材"
+    translated: "Herbs"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "购买库存"
+  splits:
+  - text: "购买库存"
+    translated: "Purchase inventory"
+- raw: "购买材料"
+  splits:
+  - text: "购买材料"
+    translated: "Purchase materials"
+- raw: "购药"
+  splits:
+  - text: "购药"
+    translated: "Buy medicine"
+- raw: "♦降低少量警觉度\n♦增加少量熟络度"
+  splits:
+  - text: "降低少量警觉度"
+    translated: "Lower alertness slightly"
+  - subIndex: 1
+    text: "增加少量熟络度"
+    translated: "Increase a little familiarity"
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "赐予资源"
+  splits:
+  - text: "赐予资源"
+    translated: "Grant resources"
+- raw: "赔礼谢罪"
+  splits:
+  - text: "赔礼谢罪"
+    translated: "Apologize and seek forgiveness"
+- raw: "赠与{0}两"
+  splits:
+  - text: "赠与"
+    translated: "Gift"
+  - subIndex: 1
+    text: "两"
+    translated: "Taels"
+  templates:
+  - template: "{0}⟦0⟧{1}"
+- raw: "赠送礼物"
+  splits:
+  - text: "赠送礼物"
+    translated: "Gift a present"
+- raw: "♦降低10好感\n♦若好感小于50会断绝情侣关系"
+  splits:
+  - text: "降低10好感"
+    translated: "Lower 10's favor"
+  - subIndex: 1
+    text: "若好感小于50会断绝情侣关系"
+    translated: "If affection is less than 50, the romantic relationship will be severed."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "赠送赔礼"
+  splits:
+  - text: "赠送赔礼"
+    translated: "Gift of apology"
+- raw: "走为上策"
+  splits:
+  - text: "走为上策"
+    translated: "Flight is the best strategy"
+- raw: "走好不送"
+  splits:
+  - text: "走好不送"
+    translated: "Walk well and goodbye"
+- raw: "赶尽杀绝"
+  splits:
+  - text: "赶尽杀绝"
+    translated: "Exterminate utterly"
+- raw: "♦追杀成功后，夺取其所有物品装备\n♦与对方门派和亲友结仇\n♦根据对方身份等级增加大量恶名，每月最多1次"
+  splits:
+  - text: "追杀成功后，夺取其所有物品装备"
+    translated: "After successfully tracking down the target, acquire all of their items and equipment."
+  - subIndex: 1
+    text: "与对方门派和亲友结仇"
+    translated: "Clinch a grudge with the other sect and one's kin and friends"
+  - subIndex: 2
+    text: "根据对方身份等级增加大量恶名，每月最多1次"
+    translated: "Increase notoriety significantly based on the other party's rank, with a maximum of 1 times per month."
+  templates:
+  - template: "♦{0}\n♦{1}\n♦{2}"
+- raw: "超高价出售({0}两)"
+  splits:
+  - text: "超高价出售"
+    translated: "High‑priced sale"
+  - subIndex: 1
+    text: "两"
+    translated: "Taels"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "路见不平，自当拔刀相助"
+  splits:
+  - text: "路见不平，自当拔刀相助"
+    translated: "Seeing injustice, one should naturally intervene to help."
+- raw: "转念一想"
+  splits:
+  - text: "转念一想"
+    translated: "Thought otherwise"
+- raw: "轻功 轻身术"
+  splits:
+  - text: "轻功"
+    translated: "Qinggong"
+  - subIndex: 1
+    text: "轻身术"
+    translated: "Featherfall Technique"
+  templates:
+  - template: "{0} {1}"
+- raw: "轻功赶上"
+  splits:
+  - text: "轻功赶上"
+    translated: "Qinggong catches up"
+- raw: "轻功躲避"
+  splits:
+  - text: "轻功躲避"
+    translated: "Qinggong to dodge"
+- raw: "还是算了"
+  splits:
+  - text: "还是算了"
+    translated: "Forget it"
+- raw: "这...也只能如此了"
+  splits:
+  - text: "这...也只能如此了"
+    translated: "This... can only be for the best."
+- raw: "这些徒儿均已掌握"
+  splits:
+  - text: "这些徒儿均已掌握"
+    translated: "These disciples have all mastered"
+- raw: "这有何难"
+  splits:
+  - text: "这有何难"
+    translated: "What's so difficult about that?"
+- raw: "进攻"
+  splits:
+  - text: "进攻"
+    translated: "Attack"
+- raw: "连续指点"
+  splits:
+  - text: "连续指点"
+    translated: "Continuous guidance"
+- raw: "♦消耗剩余指点次数\n♦对方武学满级或超过你时自动停止"
+  splits:
+  - text: "消耗剩余指点次数"
+    translated: "Consume remaining directional inputs"
+  - subIndex: 1
+    text: "对方武学满级或超过你时自动停止"
+    translated: "When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "退隐？"
+  splits:
+  - text: "退隐？"
+    translated: "Retirement?"
+- raw: "♦询问对方关于退隐江湖之事"
+  splits:
+  - text: "询问对方关于退隐江湖之事"
+    translated: "Inquiring about the person's retirement from the Jianghu"
+  templates:
+  - template: "♦{0}"
+- raw: "选择弟子"
+  splits:
+  - text: "选择弟子"
+    translated: "Choose Disciple"
+- raw: "选择挖掘"
+  splits:
+  - text: "选择挖掘"
+    translated: "Choose mining"
+- raw: "选择秘籍"
+  splits:
+  - text: "选择秘籍"
+    translated: "Choose a potion"
+- raw: "选贤举能"
+  splits:
+  - text: "选贤举能"
+    translated: "Choose the worthy and capable"
+- raw: "速战速决"
+  splits:
+  - text: "速战速决"
+    translated: "Quick victory"
+- raw: "迎战守卫\n获取中品质秘籍"
+  splits:
+  - text: "迎战守卫"
+    translated: "Challenge the Guardians"
+  - subIndex: 1
+    text: "获取中品质秘籍"
+    translated: "Acquire Medium‑Quality Secret Techniques"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "遗忘“{0}”"
+  splits:
+  - text: "遗忘“"
+    translated: "'Forget"
+  templates:
+  - template: "{0}⟦0⟧”"
+- raw: "避人耳目"
+  splits:
+  - text: "避人耳目"
+    translated: "Out of earshot"
+- raw: "避免战斗\n获取低品质秘籍"
+  splits:
+  - text: "避免战斗"
+    translated: "Avoid battle"
+  - subIndex: 1
+    text: "获取低品质秘籍"
+    translated: "Acquire low‑quality spells"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "那便来吧"
+  splits:
+  - text: "那便来吧"
+    translated: "Let's begin then"
+- raw: "那便来吧！"
+  splits:
+  - text: "那便来吧！"
+    translated: "Let's do it then!"
+- raw: "那只好硬闯了"
+  splits:
+  - text: "那只好硬闯了"
+    translated: "Well, we'll just have to force our way through."
+- raw: "那我就买下了"
+  splits:
+  - text: "那我就买下了"
+    translated: "I'll buy it then"
+- raw: "那是自然"
+  splits:
+  - text: "那是自然"
+    translated: "That is natural"
+- raw: "采掘陨铁"
+  splits:
+  - text: "采掘陨铁"
+    translated: "Mining meteoric iron"
+- raw: "采集{0}"
+  splits:
+  - text: "采集"
+    translated: "Gather"
+  templates:
+  - template: "{0}⟦0⟧"
+- raw: "鉴定物品"
+  splits:
+  - text: "鉴定物品"
+    translated: "Identify Item"
+- raw: "针锋相对"
+  splits:
+  - text: "针锋相对"
+    translated: "Direct confrontation"
+- raw: "银两利诱"
+  splits:
+  - text: "银两利诱"
+    translated: "Silver temptation"
+- raw: "门派亲善"
+  splits:
+  - text: "门派亲善"
+    translated: "Sect friendliness"
+- raw: "门派盟约"
+  splits:
+  - text: "门派盟约"
+    translated: "Sect Alliance"
+- raw: "门派羞辱"
+  splits:
+  - text: "门派羞辱"
+    translated: "Sect humiliation"
+- raw: "门派进贡"
+  splits:
+  - text: "门派进贡"
+    translated: "Sect tribute"
+- raw: "♦雇佣对方加入队伍15天\n♦根据对方战力消耗银钱"
+  splits:
+  - text: "雇佣对方加入队伍15天"
+    translated: "Hire the other party to join the team for 15 days"
+  - subIndex: 1
+    text: "根据对方战力消耗银钱"
+    translated: "Based on the opponent's combat power, they expend silver money."
+  templates:
+  - template: "♦{0}\n♦{1}"
+- raw: "静静等待"
+  splits:
+  - text: "静静等待"
+    translated: "Quietly wait"
+- raw: "骇然出手"
+  splits:
+  - text: "骇然出手"
+    translated: "Startle into action"
+- raw: "高人，我来助你！"
+  splits:
+  - text: "高人，我来助你！"
+    translated: "Mighty one, I come to aid you!"
+- raw: "高价出售({0}两)"
+  splits:
+  - text: "高价出售"
+    translated: "Selling at a high price"
+  - subIndex: 1
+    text: "两"
+    translated: "Taels"
+  templates:
+  - template: "{0}(⟦0⟧{1})"
+- raw: "高级嘉奖"
+  splits:
+  - text: "高级嘉奖"
+    translated: "High Commendation"
+- raw: "黄袍加身"
+  splits:
+  - text: "黄袍加身"
+    translated: "Donning the Yellow Robe"
+- raw: "默默看戏"
+  splits:
+  - text: "默默看戏"
+    translated: "Watch silently"

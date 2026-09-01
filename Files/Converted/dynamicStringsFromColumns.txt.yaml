@@ -2,10 +2,6 @@
   splits:
   - text: "京城"
     translated: "Capital"
-- raw: "城市"
-  splits:
-  - text: "城市"
-    translated: "City"
 - raw: "杭州"
   splits:
   - text: "杭州"
@@ -46,10 +42,6 @@
   splits:
   - text: "乐山镇"
     translated: "Leshan Town"
-- raw: "村镇"
-  splits:
-  - text: "村镇"
-    translated: "Village"
 - raw: "太平乡"
   splits:
   - text: "太平乡"
@@ -94,10 +86,6 @@
   splits:
   - text: "昌都镇"
     translated: "Qamdo Town"
-- raw: "巴陵村"
-  splits:
-  - text: "巴陵村"
-    translated: "Baling Village"
 - raw: "怀柔村"
   splits:
   - text: "怀柔村"
@@ -130,10 +118,6 @@
   splits:
   - text: "长乐帮"
     translated: "Changle Gang"
-- raw: "门派"
-  splits:
-  - text: "门派"
-    translated: "Sect"
 - raw: "唐门"
   splits:
   - text: "唐门"
@@ -326,50 +310,10 @@
   splits:
   - text: "扶胥镇"
     translated: "Fuxu Town"
-- raw: "正厅"
-  splits:
-  - text: "正厅"
-    translated: "Main Hall"
-- raw: "藏经阁"
-  splits:
-  - text: "藏经阁"
-    translated: "Scripture Pavilion"
-- raw: "练武场"
-  splits:
-  - text: "练武场"
-    translated: "Training Grounds"
-- raw: "闭关室"
-  splits:
-  - text: "闭关室"
-    translated: "Seclusion Room"
 - raw: "祠堂"
   splits:
   - text: "祠堂"
     translated: "Ancestral hall"
-- raw: "工匠坊"
-  splits:
-  - text: "工匠坊"
-    translated: "Workshop"
-- raw: "炼丹炉"
-  splits:
-  - text: "炼丹炉"
-    translated: "Alchemical furnace"
-- raw: "疗伤室"
-  splits:
-  - text: "疗伤室"
-    translated: "Healing Room"
-- raw: "宿舍"
-  splits:
-  - text: "宿舍"
-    translated: "Dormitory"
-- raw: "仓库"
-  splits:
-  - text: "仓库"
-    translated: "Warehouse"
-- raw: "钱庄"
-  splits:
-  - text: "钱庄"
-    translated: "Bank"
 - raw: "农田"
   splits:
   - text: "农田"
@@ -386,10 +330,6 @@
   splits:
   - text: "药园"
     translated: "Herb Garden"
-- raw: "官府"
-  splits:
-  - text: "官府"
-    translated: "Government offices"
 - raw: "集市"
   splits:
   - text: "集市"
@@ -398,26 +338,10 @@
   splits:
   - text: "客栈"
     translated: "Inn"
-- raw: "告示"
-  splits:
-  - text: "告示"
-    translated: "Notice"
-- raw: "岗哨"
-  splits:
-  - text: "岗哨"
-    translated: "Sentry Post"
-- raw: "分舵"
-  splits:
-  - text: "分舵"
-    translated: "Sub‑branch office"
 - raw: "驿站"
   splits:
   - text: "驿站"
     translated: "Inn"
-- raw: "武馆"
-  splits:
-  - text: "武馆"
-    translated: "Martial arts dojo"
 - raw: "医馆"
   splits:
   - text: "医馆"
@@ -618,10 +542,6 @@
   splits:
   - text: "玄冰池"
     translated: "Pond of Black Ice"
-- raw: "私宅"
-  splits:
-  - text: "私宅"
-    translated: "Private residence"
 - raw: "应天书院"
   splits:
   - text: "应天书院"
@@ -630,10 +550,218 @@
   splits:
   - text: "河套马场"
     translated: "Hetao Horse Ranch"
-- raw: "中庸"
+- raw: "腊八粥"
   splits:
-  - text: "中庸"
-    translated: "Moderation"
+  - text: "腊八粥"
+    translated: "Eight Treasure Porridge"
+- raw: "炖老母鸡"
+  splits:
+  - text: "炖老母鸡"
+    translated: "Slow‑cooked old hen"
+- raw: "天麻鱼头"
+  splits:
+  - text: "天麻鱼头"
+    translated: "Tianma Fish Head"
+- raw: "沙苑甲鱼汤"
+  splits:
+  - text: "沙苑甲鱼汤"
+    translated: "Shayuan Soft‑Shelled Turtle Soup"
+- raw: "参茸熊掌"
+  splits:
+  - text: "参茸熊掌"
+    translated: "Ginseng Deer Antler Bear Paw"
+- raw: "十全大补汤"
+  splits:
+  - text: "十全大补汤"
+    translated: "Decocted Decoction of All‑Nourishing Herbs"
+- raw: "雄黄酒"
+  splits:
+  - text: "雄黄酒"
+    translated: "Yellow rice wine"
+- raw: "乌龙茶"
+  splits:
+  - text: "乌龙茶"
+    translated: "Oolong tea"
+- raw: "蛇酒"
+  splits:
+  - text: "蛇酒"
+    translated: "Wine made from snake meat"
+- raw: "肉桂茶"
+  splits:
+  - text: "肉桂茶"
+    translated: "Cinnamon tea"
+- raw: "三鞭酒"
+  splits:
+  - text: "三鞭酒"
+    translated: "Three‑horn liquor"
+- raw: "铁观音茶"
+  splits:
+  - text: "铁观音茶"
+    translated: "Tieguanyin tea"
+- raw: "鹿胎酒"
+  splits:
+  - text: "鹿胎酒"
+    translated: "Fetus alcohol"
+- raw: "白牡丹茶"
+  splits:
+  - text: "白牡丹茶"
+    translated: "White Peony Tea"
+- raw: "虎骨酒"
+  splits:
+  - text: "虎骨酒"
+    translated: "Tiger Bone Wine"
+- raw: "大红袍茶"
+  splits:
+  - text: "大红袍茶"
+    translated: "Big Red Robe Tea"
+- raw: "龙脑酒"
+  splits:
+  - text: "龙脑酒"
+    translated: "Dragon Brain Wine"
+- raw: "凤凰水仙茶"
+  splits:
+  - text: "凤凰水仙茶"
+    translated: "Phoenix Dianhua Tea"
+- raw: "烧饼"
+  splits:
+  - text: "烧饼"
+    translated: "Pancake"
+- raw: "肉包"
+  splits:
+  - text: "肉包"
+    translated: "Meat bun"
+- raw: "煎饺"
+  splits:
+  - text: "煎饺"
+    translated: "Pan‑fried dumplings"
+- raw: "烧鸡"
+  splits:
+  - text: "烧鸡"
+    translated: "Roast chicken"
+- raw: "红烧肉"
+  splits:
+  - text: "红烧肉"
+    translated: "Braised pork"
+- raw: "乳猪"
+  splits:
+  - text: "乳猪"
+    translated: "Roast suckling pig"
+- raw: "绿茶"
+  splits:
+  - text: "绿茶"
+    translated: "Green tea"
+- raw: "烧刀子"
+  splits:
+  - text: "烧刀子"
+    translated: "Burn Blade"
+- raw: "龙井茶"
+  splits:
+  - text: "龙井茶"
+    translated: "West Lake Longjing tea"
+- raw: "竹叶青"
+  splits:
+  - text: "竹叶青"
+    translated: "Bamboo Leaf Tea"
+- raw: "碧螺春茶"
+  splits:
+  - text: "碧螺春茶"
+    translated: "Biluochun tea"
+- raw: "葡萄酒"
+  splits:
+  - text: "葡萄酒"
+    translated: "Grape Wine"
+- raw: "毛峰茶"
+  splits:
+  - text: "毛峰茶"
+    translated: "Mao Feng tea"
+- raw: "新丰酒"
+  splits:
+  - text: "新丰酒"
+    translated: "New Harvest Wine"
+- raw: "云雾茶"
+  splits:
+  - text: "云雾茶"
+    translated: "Cloud Mist Tea"
+- raw: "杜康酒"
+  splits:
+  - text: "杜康酒"
+    translated: "Dukang Wine"
+- raw: "太平猴魁茶"
+  splits:
+  - text: "太平猴魁茶"
+    translated: "Taiping Houkui tea"
+- raw: "桂圆枸杞粥"
+  splits:
+  - text: "桂圆枸杞粥"
+    translated: "Longan and Goji Berry Porridge"
+- raw: "茯苓糕"
+  splits:
+  - text: "茯苓糕"
+    translated: "Poria Pudding"
+- raw: "当归炖羊肉"
+  splits:
+  - text: "当归炖羊肉"
+    translated: "Chinese Angelica and Lamb Soup"
+- raw: "虫草老鸭煲"
+  splits:
+  - text: "虫草老鸭煲"
+    translated: "Abalone and Cordyceps Soup"
+- raw: "四君子汤"
+  splits:
+  - text: "四君子汤"
+    translated: "Four Gentlemen Decoction"
+- raw: "烩八珍"
+  splits:
+  - text: "烩八珍"
+    translated: "Stewed eight delicacies"
+- raw: "清酒"
+  splits:
+  - text: "清酒"
+    translated: "Rice wine"
+- raw: "红茶"
+  splits:
+  - text: "红茶"
+    translated: "Black tea"
+- raw: "花雕酒"
+  splits:
+  - text: "花雕酒"
+    translated: "Shanghu Fortified Wine"
+- raw: "工夫茶"
+  splits:
+  - text: "工夫茶"
+    translated: "Afternoon Tea"
+- raw: "女儿红"
+  splits:
+  - text: "女儿红"
+    translated: "Red Daughter Wine"
+- raw: "古树茶"
+  splits:
+  - text: "古树茶"
+    translated: "Ancient tree tea"
+- raw: "桑落酒"
+  splits:
+  - text: "桑落酒"
+    translated: "Dew Fallen Wine"
+- raw: "九曲红梅茶"
+  splits:
+  - text: "九曲红梅茶"
+    translated: "Nine Bends Crimson Cherry Tea"
+- raw: "猴儿酿"
+  splits:
+  - text: "猴儿酿"
+    translated: "Monkey brew"
+- raw: "金骏眉茶"
+  splits:
+  - text: "金骏眉茶"
+    translated: "Golden Monkey Tea"
+- raw: "换骨醪"
+  splits:
+  - text: "换骨醪"
+    translated: "Bone‑Transforming Decoction"
+- raw: "正山小种茶"
+  splits:
+  - text: "正山小种茶"
+    translated: "Zhengshan Xiazhong tea"
 - raw: "轻功;刀法;射术"
   splits:
   - text: "轻功"
@@ -646,20 +774,12 @@
     translated: "Archery"
   templates:
   - template: "{0};{1};{2}"
-- raw: "口才"
-  splits:
-  - text: "口才"
-    translated: "Eloquence"
 - raw: "珍宝:1.5"
   splits:
   - text: "珍宝"
     translated: "Treasure"
   templates:
   - template: "{0}:1.5"
-- raw: "霸业"
-  splits:
-  - text: "霸业"
-    translated: "Prosperity"
 - raw: "绝技;射术;刀法"
   splits:
   - text: "绝技"
@@ -672,10 +792,6 @@
     translated: "Blade Art"
   templates:
   - template: "{0};{1};{2}"
-- raw: "毒术"
-  splits:
-  - text: "毒术"
-    translated: "Poison Technique"
 - raw: "材料:1.5"
   splits:
   - text: "材料"
@@ -709,10 +825,6 @@
     translated: "Elixir"
   templates:
   - template: "{0}:2"
-- raw: "仁义"
-  splits:
-  - text: "仁义"
-    translated: "Righteousness and benevolence"
 - raw: "拳掌;长兵;绝技"
   splits:
   - text: "拳掌"
@@ -752,10 +864,6 @@
     translated: "Blade Art"
   templates:
   - template: "{0};{1};{2}"
-- raw: "采伐"
-  splits:
-  - text: "采伐"
-    translated: "Resource Gathering"
 - raw: "马匹:2"
   splits:
   - text: "马匹"
@@ -774,10 +882,6 @@
     translated: "Sword Art"
   templates:
   - template: "{0};{1};{2}"
-- raw: "炼药"
-  splits:
-  - text: "炼药"
-    translated: "Alchemy"
 - raw: "丹药:1.5"
   splits:
   - text: "丹药"
@@ -904,10 +1008,6 @@
     translated: "Fists and palms"
   templates:
   - template: "{0};{1};{2};{3}"
-- raw: "医术"
-  splits:
-  - text: "医术"
-    translated: "Medicine"
 - raw: "秘籍:1"
   splits:
   - text: "秘籍"
@@ -956,10 +1056,6 @@
     translated: "Ultimate Technique"
   templates:
   - template: "{0};{1};{2}"
-- raw: "烹饪"
-  splits:
-  - text: "烹饪"
-    translated: "Cooking"
 - raw: "饮食:1"
   splits:
   - text: "饮食"
@@ -978,10 +1074,6 @@
     translated: "Qi Men"
   templates:
   - template: "{0};{1};{2}"
-- raw: "学识"
-  splits:
-  - text: "学识"
-    translated: "Scholarship"
 - raw: "秘籍:0.5"
   splits:
   - text: "秘籍"
@@ -1000,10 +1092,6 @@
     translated: "Fists and palms"
   templates:
   - template: "{0};{1};{2}"
-- raw: "木植"
-  splits:
-  - text: "木植"
-    translated: "Forest Plant"
 - raw: "材料:1"
   splits:
   - text: "材料"
@@ -1067,10 +1155,6 @@
     translated: "Long weapon"
   templates:
   - template: "{0};{1};{2}"
-- raw: "锻造"
-  splits:
-  - text: "锻造"
-    translated: "Forging"
 - raw: "材料:2"
   splits:
   - text: "材料"
@@ -1125,10 +1209,6 @@
     translated: "Long weapon"
   templates:
   - template: "{0};{1};{2}"
-- raw: "无"
-  splits:
-  - text: "无"
-    translated: "None"
 - raw: "丹药:0.5"
   splits:
   - text: "丹药"
@@ -1198,10 +1278,6 @@
     translated: "Equipment"
   templates:
   - template: "{0}:0.5"
-- raw: "剑法"
-  splits:
-  - text: "剑法"
-    translated: "Sword Art"
 - raw: "轻功;射术"
   splits:
   - text: "轻功"
@@ -1277,14 +1353,6 @@
   splits:
   - text: "旅行速度"
     translated: "Travel speed"
-- raw: "实战经验"
-  splits:
-  - text: "实战经验"
-    translated: "Combat experience"
-- raw: "理论经验"
-  splits:
-  - text: "理论经验"
-    translated: "Theoretical experience"
 - raw: "疗伤效率"
   splits:
   - text: "疗伤效率"
@@ -1293,10 +1361,6 @@
   splits:
   - text: "本地疗伤效率"
     translated: "Local healing efficiency"
-- raw: "恢复效率"
-  splits:
-  - text: "恢复效率"
-    translated: "Recovery efficiency"
 - raw: "本地恢复效率"
   splits:
   - text: "本地恢复效率"
@@ -1513,18 +1577,202 @@
   splits:
   - text: "城防耐久"
     translated: "City defense durability"
-- raw: "力道"
+- raw: "骡子"
   splits:
-  - text: "力道"
-    translated: "Strength"
+  - text: "骡子"
+    translated: "Mule"
+- raw: "驴子"
+  splits:
+  - text: "驴子"
+    translated: "Donkey"
+- raw: "跛脚马"
+  splits:
+  - text: "跛脚马"
+    translated: "Limping horse"
+- raw: "小马"
+  splits:
+  - text: "小马"
+    translated: "Little Horse"
+- raw: "劣马"
+  splits:
+  - text: "劣马"
+    translated: "Poor horse"
+- raw: "矮马"
+  splits:
+  - text: "矮马"
+    translated: "Pony"
+- raw: "驮马"
+  splits:
+  - text: "驮马"
+    translated: "Pack horse"
+- raw: "瘦马"
+  splits:
+  - text: "瘦马"
+    translated: "Weak horse"
+- raw: "大马"
+  splits:
+  - text: "大马"
+    translated: "Laba"
+- raw: "烈马"
+  splits:
+  - text: "烈马"
+    translated: "Wild Horse"
+- raw: "军马"
+  splits:
+  - text: "军马"
+    translated: "Military horses"
+- raw: "快马"
+  splits:
+  - text: "快马"
+    translated: "Rapid horse"
+- raw: "战马"
+  splits:
+  - text: "战马"
+    translated: "Battlehorse"
+- raw: "河曲马"
+  splits:
+  - text: "河曲马"
+    translated: "Riverbend Horse"
+- raw: "西南马"
+  splits:
+  - text: "西南马"
+    translated: "Southwest Horse"
+- raw: "山地马"
+  splits:
+  - text: "山地马"
+    translated: "Mountain horse"
+- raw: "蒙古马"
+  splits:
+  - text: "蒙古马"
+    translated: "Mongolian horse"
+- raw: "哈萨克马"
+  splits:
+  - text: "哈萨克马"
+    translated: "Kazakh horses"
+- raw: "伊犁马"
+  splits:
+  - text: "伊犁马"
+    translated: "Ili horse"
+- raw: "乌孙马"
+  splits:
+  - text: "乌孙马"
+    translated: "Ussu Horse"
+- raw: "五花马"
+  splits:
+  - text: "五花马"
+    translated: "Five‑colored horse"
+- raw: "白兔马"
+  splits:
+  - text: "白兔马"
+    translated: "White Rabbit Horse"
+- raw: "枣红马"
+  splits:
+  - text: "枣红马"
+    translated: "Chestnut horse"
+- raw: "绿耳马"
+  splits:
+  - text: "绿耳马"
+    translated: "Green Ear Horse"
+- raw: "白义马"
+  splits:
+  - text: "白义马"
+    translated: "White Meaning Horse"
+- raw: "青骓马"
+  splits:
+  - text: "青骓马"
+    translated: "Qingzhui Horse"
+- raw: "华骝马"
+  splits:
+  - text: "华骝马"
+    translated: "Golden Lion Horse"
+- raw: "黄骠马"
+  splits:
+  - text: "黄骠马"
+    translated: "Chestnut horse"
+- raw: "骕骦马"
+  splits:
+  - text: "骕骦马"
+    translated: "Stallion"
+- raw: "玉花骢"
+  splits:
+  - text: "玉花骢"
+    translated: "White Cloud Steed"
+- raw: "奔宵马"
+  splits:
+  - text: "奔宵马"
+    translated: "Swift Heaven Horse"
+- raw: "纤离马"
+  splits:
+  - text: "纤离马"
+    translated: "Xianli Ma"
+- raw: "乌骓马"
+  splits:
+  - text: "乌骓马"
+    translated: "Swift Black Stallion"
+- raw: "白蹄乌"
+  splits:
+  - text: "白蹄乌"
+    translated: "White horse"
+- raw: "什伐赤"
+  splits:
+  - text: "什伐赤"
+    translated: "Shifachi"
+- raw: "拳毛驹"
+  splits:
+  - text: "拳毛驹"
+    translated: "Foal with mane"
+- raw: "斑豹马"
+  splits:
+  - text: "斑豹马"
+    translated: "Leopard Horse"
+- raw: "赤骥马"
+  splits:
+  - text: "赤骥马"
+    translated: "Red Steed"
+- raw: "麒麟兽"
+  splits:
+  - text: "麒麟兽"
+    translated: "Qilin beast"
+- raw: "照夜白"
+  splits:
+  - text: "照夜白"
+    translated: "Zhonghuabeiyang"
+- raw: "汗血马"
+  splits:
+  - text: "汗血马"
+    translated: "Blood‑sweat horse"
+- raw: "赤兔马"
+  splits:
+  - text: "赤兔马"
+    translated: "Red Horse"
+- raw: "的卢马"
+  splits:
+  - text: "的卢马"
+    translated: "Qilu horse"
+- raw: "绝影马"
+  splits:
+  - text: "绝影马"
+    translated: "Shadow Rush Horse"
+- raw: "特勒骠"
+  splits:
+  - text: "特勒骠"
+    translated: "Tellerion"
+- raw: "神凫马"
+  splits:
+  - text: "神凫马"
+    translated: "Divine Duck Horse"
+- raw: "飒露紫"
+  splits:
+  - text: "飒露紫"
+    translated: "Slapuizi"
+- raw: "白龙驹"
+  splits:
+  - text: "白龙驹"
+    translated: "White Dragon Horse"
 - raw: "1"
   splits:
   - text: "1"
     translated: "1"
-- raw: "武学"
-  splits:
-  - text: "武学"
-    translated: "Martial arts"
 - raw: "孔武有力"
   splits:
   - text: "孔武有力"
@@ -1533,10 +1781,6 @@
   splits:
   - text: "拔山扛鼎"
     translated: "Uproot mountains and overturn cauldrons"
-- raw: "灵巧"
-  splits:
-  - text: "灵巧"
-    translated: "Nimble"
 - raw: "手疾眼快"
   splits:
   - text: "手疾眼快"
@@ -1545,10 +1789,6 @@
   splits:
   - text: "七窍玲珑"
     translated: "Seven‑orifices clear‑thinking"
-- raw: "智力"
-  splits:
-  - text: "智力"
-    translated: "Intelligence"
 - raw: "足智多谋"
   splits:
   - text: "足智多谋"
@@ -1557,10 +1797,6 @@
   splits:
   - text: "聪慧绝伦"
     translated: "Peerlessly wise"
-- raw: "意志"
-  splits:
-  - text: "意志"
-    translated: "Willpower"
 - raw: "动心忍性"
   splits:
   - text: "动心忍性"
@@ -1569,10 +1805,6 @@
   splits:
   - text: "百折不挠"
     translated: "Unyielding"
-- raw: "体质"
-  splits:
-  - text: "体质"
-    translated: "Physique"
 - raw: "强身健体"
   splits:
   - text: "强身健体"
@@ -1581,10 +1813,6 @@
   splits:
   - text: "钢筋铁骨"
     translated: "Steel frame"
-- raw: "经脉"
-  splits:
-  - text: "经脉"
-    translated: "Meridian"
 - raw: "运气自如"
   splits:
   - text: "运气自如"
@@ -1605,10 +1833,6 @@
   splits:
   - text: "炉火纯青"
     translated: "Mature beyond measure"
-- raw: "轻功"
-  splits:
-  - text: "轻功"
-    translated: "Qinggong"
 - raw: "飞檐走壁"
   splits:
   - text: "飞檐走壁"
@@ -1617,10 +1841,6 @@
   splits:
   - text: "神出鬼没"
     translated: "Invisible"
-- raw: "绝技"
-  splits:
-  - text: "绝技"
-    translated: "Ultimate Technique"
 - raw: "身怀绝技"
   splits:
   - text: "身怀绝技"
@@ -1629,10 +1849,6 @@
   splits:
   - text: "绝艺超群"
     translated: "Superb Artistry"
-- raw: "拳掌"
-  splits:
-  - text: "拳掌"
-    translated: "Fists and palms"
 - raw: "拳不离手"
   splits:
   - text: "拳不离手"
@@ -1665,10 +1881,6 @@
   splits:
   - text: "一刀两断"
     translated: "Cut off completely"
-- raw: "长兵"
-  splits:
-  - text: "长兵"
-    translated: "Long weapon"
 - raw: "舞枪弄棍"
   splits:
   - text: "舞枪弄棍"
@@ -1677,10 +1889,6 @@
   splits:
   - text: "枪扫六合"
     translated: "Gun sweeps the six directions"
-- raw: "奇门"
-  splits:
-  - text: "奇门"
-    translated: "Qi Men"
 - raw: "旁门左道"
   splits:
   - text: "旁门左道"
@@ -1689,10 +1897,6 @@
   splits:
   - text: "奇门遁甲"
     translated: "Qi Men Dun Jia"
-- raw: "射术"
-  splits:
-  - text: "射术"
-    translated: "Archery"
 - raw: "百步穿杨"
   splits:
   - text: "百步穿杨"
@@ -1769,10 +1973,6 @@
   splits:
   - text: "0"
     translated: "0"
-- raw: "高级"
-  splits:
-  - text: "高级"
-    translated: "Senior"
 - raw: "羽化登仙"
   splits:
   - text: "羽化登仙"
@@ -1873,10 +2073,6 @@
   splits:
   - text: "武学宗师"
     translated: "Martial Sage"
-- raw: "登峰造极"
-  splits:
-  - text: "登峰造极"
-    translated: "Reach the pinnacle"
 - raw: "返璞归真"
   splits:
   - text: "返璞归真"
@@ -1913,10 +2109,6 @@
   splits:
   - text: "力降十会"
     translated: "Force ten meetings"
-- raw: "技艺"
-  splits:
-  - text: "技艺"
-    translated: "Skill"
 - raw: "术精岐黄"
   splits:
   - text: "术精岐黄"
@@ -1977,10 +2169,6 @@
   splits:
   - text: "对症下药"
     translated: "Prescribe the remedy to the illness"
-- raw: "灵丹妙药"
-  splits:
-  - text: "灵丹妙药"
-    translated: "Wonder drug"
 - raw: "烩不厌细"
   splits:
   - text: "烩不厌细"
@@ -2013,10 +2201,6 @@
   splits:
   - text: "瘦弱"
     translated: "Weak"
-- raw: "天生"
-  splits:
-  - text: "天生"
-    translated: "Naturally"
 - raw: "魁梧奇伟"
   splits:
   - text: "魁梧奇伟"
@@ -2061,10 +2245,6 @@
   splits:
   - text: "聪慧"
     translated: "Wise"
-- raw: "愚钝"
-  splits:
-  - text: "愚钝"
-    translated: "Stupid"
 - raw: "天资过人"
   splits:
   - text: "天资过人"
@@ -2181,10 +2361,6 @@
   splits:
   - text: "笑里藏刀"
     translated: "Smile Conceals a Dagger"
-- raw: "仁慈"
-  splits:
-  - text: "仁慈"
-    translated: "Merciful"
 - raw: "残忍"
   splits:
   - text: "残忍"
@@ -2205,10 +2381,6 @@
   splits:
   - text: "灭心绝情"
     translated: "Heartless and emotionless"
-- raw: "冷静"
-  splits:
-  - text: "冷静"
-    translated: "Stay calm"
 - raw: "暴躁"
   splits:
   - text: "暴躁"
@@ -2329,10 +2501,6 @@
   splits:
   - text: "忠诚"
     translated: "Loyalty"
-- raw: "叛逆"
-  splits:
-  - text: "叛逆"
-    translated: "Rebellion"
 - raw: "忠心耿耿"
   splits:
   - text: "忠心耿耿"
@@ -2401,10 +2569,6 @@
   splits:
   - text: "练武"
     translated: "Training in martial arts"
-- raw: "志向"
-  splits:
-  - text: "志向"
-    translated: "Aspiration"
 - raw: "武痴"
   splits:
   - text: "武痴"
@@ -2417,10 +2581,6 @@
   splits:
   - text: "学医"
     translated: "Study medicine"
-- raw: "医师"
-  splits:
-  - text: "医师"
-    translated: "Doctor"
 - raw: "济世神医"
   splits:
   - text: "济世神医"
@@ -2449,14 +2609,6 @@
   splits:
   - text: "在世神农"
     translated: "Timeless Shen Nong"
-- raw: "学徒"
-  splits:
-  - text: "学徒"
-    translated: "Apprentice"
-- raw: "工匠"
-  splits:
-  - text: "工匠"
-    translated: "Craftsman"
 - raw: "能工巧匠"
   splits:
   - text: "能工巧匠"
@@ -2569,26 +2721,10 @@
   splits:
   - text: "未卜先知"
     translated: "Foreknow the future"
-- raw: "游侠"
-  splits:
-  - text: "游侠"
-    translated: "Ranger"
-- raw: "侠客"
-  splits:
-  - text: "侠客"
-    translated: "Wanderer"
 - raw: "侠义无双"
   splits:
   - text: "侠义无双"
     translated: "Indestructible Chivalry"
-- raw: "赌徒"
-  splits:
-  - text: "赌徒"
-    translated: "Gamble addict"
-- raw: "喜好"
-  splits:
-  - text: "喜好"
-    translated: "Preferences"
 - raw: "嗜赌如命"
   splits:
   - text: "嗜赌如命"
@@ -2769,10 +2905,6 @@
   splits:
   - text: "随从"
     translated: "Attendant"
-- raw: "战法"
-  splits:
-  - text: "战法"
-    translated: "Battle strategy"
 - raw: "唯命是从"
   splits:
   - text: "唯命是从"
@@ -2845,22 +2977,10 @@
   splits:
   - text: "精力充沛"
     translated: "Full of energy"
-- raw: "特效"
-  splits:
-  - text: "特效"
-    translated: "Special effects"
-- raw: "腊八粥"
-  splits:
-  - text: "腊八粥"
-    translated: "Eight Treasure Porridge"
 - raw: "微醺"
   splits:
   - text: "微醺"
     translated: "Tipsy"
-- raw: "痛饮"
-  splits:
-  - text: "痛饮"
-    translated: "Drunken revelry"
 - raw: "大醉"
   splits:
   - text: "大醉"
@@ -3033,50 +3153,6 @@
   splits:
   - text: "百毒不侵"
     translated: "Invulnerable to toxins"
-- raw: "天下第一"
-  splits:
-  - text: "天下第一"
-    translated: "Number One Under Heaven"
-- raw: "归隐田园"
-  splits:
-  - text: "归隐田园"
-    translated: "Retire to the countryside"
-- raw: "豪商巨贾"
-  splits:
-  - text: "豪商巨贾"
-    translated: "Rich merchants and industrialists"
-- raw: "功成名就"
-  splits:
-  - text: "功成名就"
-    translated: "Success and fame achieved"
-- raw: "禁军统领"
-  splits:
-  - text: "禁军统领"
-    translated: "Commander of the Forbidden Army"
-- raw: "权势滔天"
-  splits:
-  - text: "权势滔天"
-    translated: "Overwhelming Power"
-- raw: "名门大派"
-  splits:
-  - text: "名门大派"
-    translated: "Elite Family Sect"
-- raw: "武林盟主"
-  splits:
-  - text: "武林盟主"
-    translated: "Alliance Leader"
-- raw: "终归一统"
-  splits:
-  - text: "终归一统"
-    translated: "Ultimately unified"
-- raw: "鸾凤和鸣"
-  splits:
-  - text: "鸾凤和鸣"
-    translated: "Dragon and phoenix resonate"
-- raw: "终生监禁"
-  splits:
-  - text: "终生监禁"
-    translated: "Life imprisonment"
 - raw: "背叛师门"
   splits:
   - text: "背叛师门"
@@ -3310,10 +3386,6 @@
   splits:
   - text: "绝技10"
     translated: "Ultimate Technique 10"
-- raw: "太祖长拳"
-  splits:
-  - text: "太祖长拳"
-    translated: "Great Ancestor Long Fist"
 - raw: "拳掌1"
   splits:
   - text: "拳掌1"
@@ -3342,10 +3414,6 @@
   splits:
   - text: "胸10"
     translated: "10 chest"
-- raw: "拳"
-  splits:
-  - text: "拳"
-    translated: "Fist"
 - raw: "十段锦长拳"
   splits:
   - text: "十段锦长拳"
@@ -3434,10 +3502,6 @@
   splits:
   - text: "手10"
     translated: "10 hand"
-- raw: "剑"
-  splits:
-  - text: "剑"
-    translated: "Sword"
 - raw: "木剑式"
   splits:
   - text: "木剑式"
@@ -3527,10 +3591,6 @@
   splits:
   - text: "心10"
     translated: "10 heart"
-- raw: "刀"
-  splits:
-  - text: "刀"
-    translated: "Knife"
 - raw: "劈柴刀法"
   splits:
   - text: "劈柴刀法"
@@ -3703,10 +3763,6 @@
   splits:
   - text: "头6"
     translated: "Head 6"
-- raw: "鞭"
-  splits:
-  - text: "鞭"
-    translated: "Whip"
 - raw: "伐木斧功"
   splits:
   - text: "伐木斧功"
@@ -3763,10 +3819,6 @@
   splits:
   - text: "手12"
     translated: "12 hand"
-- raw: "对刺"
-  splits:
-  - text: "对刺"
-    translated: "Stabbing attack"
 - raw: "飞镖要诀"
   splits:
   - text: "飞镖要诀"
@@ -6374,10 +6426,6 @@
   splits:
   - text: "飘逸0.08"
     translated: "Elegant 0.08"
-- raw: "扇"
-  splits:
-  - text: "扇"
-    translated: "Fan"
 - raw: "闪电五连鞭"
   splits:
   - text: "闪电五连鞭"
@@ -6542,10 +6590,6 @@
   splits:
   - text: "射术15"
     translated: "Archery15"
-- raw: "弓"
-  splits:
-  - text: "弓"
-    translated: "Bow"
 - raw: "枣核钉"
   splits:
   - text: "枣核钉"
@@ -12884,10 +12928,6 @@
     translated: "9 feet"
   templates:
   - template: "{0};{1}"
-- raw: "轮"
-  splits:
-  - text: "轮"
-    translated: "Turn"
 - raw: "判官笔法"
   splits:
   - text: "判官笔法"
@@ -12952,10 +12992,6 @@
     translated: "7 stomach"
   templates:
   - template: "{0};{1}"
-- raw: "笔"
-  splits:
-  - text: "笔"
-    translated: "Pen"
 - raw: "月牙弯钩"
   splits:
   - text: "月牙弯钩"
@@ -15497,10 +15533,6 @@
     translated: "4 abdomen"
   templates:
   - template: "{0};{1};{2}"
-- raw: "琴"
-  splits:
-  - text: "琴"
-    translated: "Qin"
 - raw: "多情飞刀"
   splits:
   - text: "多情飞刀"
@@ -43374,6 +43406,150 @@
     translated: "5 chest"
   templates:
   - template: "{0};{1}"
+- raw: "补血丹"
+  splits:
+  - text: "补血丹"
+    translated: "Blood‑Replenishing Pill"
+- raw: "小还丹"
+  splits:
+  - text: "小还丹"
+    translated: "Small Restoring Pill"
+- raw: "大还丹"
+  splits:
+  - text: "大还丹"
+    translated: "Great Restorative Pill"
+- raw: "人参养荣丸"
+  splits:
+  - text: "人参养荣丸"
+    translated: "Reishi and Ginseng Tonifying Pill"
+- raw: "玉洞黑石丹"
+  splits:
+  - text: "玉洞黑石丹"
+    translated: "E‑black‑stone‑pill Cave"
+- raw: "万灵回生散"
+  splits:
+  - text: "万灵回生散"
+    translated: "Revival Powder of All Spirits"
+- raw: "益气散"
+  splits:
+  - text: "益气散"
+    translated: "Reinforce Qi Powder"
+- raw: "行气丹"
+  splits:
+  - text: "行气丹"
+    translated: "Qi Regulation Pill"
+- raw: "逍遥丹"
+  splits:
+  - text: "逍遥丹"
+    translated: "Free Spirit Pill"
+- raw: "参苓白术散"
+  splits:
+  - text: "参苓白术散"
+    translated: "Participating Ginseng and Atractylodes Decoction"
+- raw: "济生养气丸"
+  splits:
+  - text: "济生养气丸"
+    translated: "Jisheng Naiqi Pills"
+- raw: "紫霄玄关散"
+  splits:
+  - text: "紫霄玄关散"
+    translated: "Purple Heaven Dao Gate Dispersion"
+- raw: "八珍散"
+  splits:
+  - text: "八珍散"
+    translated: "Eight Treasure Powder"
+- raw: "无常丹"
+  splits:
+  - text: "无常丹"
+    translated: "Impermanence Pill"
+- raw: "紫金丹"
+  splits:
+  - text: "紫金丹"
+    translated: "Golden Lotus Pill"
+- raw: "天王补心丹"
+  splits:
+  - text: "天王补心丹"
+    translated: "Tian Wang Bu Xin Dan"
+- raw: "生生造化丹"
+  splits:
+  - text: "生生造化丹"
+    translated: "Life‑Breathing Elixirs"
+- raw: "九转还魂丹"
+  splits:
+  - text: "九转还魂丹"
+    translated: "Nine‑Turn Life‑Returning Pill"
+- raw: "止血散"
+  splits:
+  - text: "止血散"
+    translated: "Blood Stop Powder"
+- raw: "金疮散"
+  splits:
+  - text: "金疮散"
+    translated: "Tiger Balm"
+- raw: "三七跌打散"
+  splits:
+  - text: "三七跌打散"
+    translated: "Sanqi Injury Relief Powder"
+- raw: "接骨七厘散"
+  splits:
+  - text: "接骨七厘散"
+    translated: "Seven‑Ingredient Bone Setting Powder"
+- raw: "血府逐瘀散"
+  splits:
+  - text: "血府逐瘀散"
+    translated: "Blood Mansion Blood‑Expelling Powder"
+- raw: "天香断续散"
+  splits:
+  - text: "天香断续散"
+    translated: "Fragrant Heaven Intermittent Powder"
+- raw: "通络丹"
+  splits:
+  - text: "通络丹"
+    translated: "Tonifying Pill"
+- raw: "紫藤丹"
+  splits:
+  - text: "紫藤丹"
+    translated: "Purple Wisteria Pill"
+- raw: "牛黄血竭丹"
+  splits:
+  - text: "牛黄血竭丹"
+    translated: "Orchid Bull Blood‑Resolving Pill"
+- raw: "田七鲨胆丹"
+  splits:
+  - text: "田七鲨胆丹"
+    translated: "Seven‑Point Shark Gallbladder Pill"
+- raw: "三黄宝腊丹"
+  splits:
+  - text: "三黄宝腊丹"
+    translated: "Three‑Herb Treasure Wax Pill"
+- raw: "还阳正气丹"
+  splits:
+  - text: "还阳正气丹"
+    translated: "Yang Restoring Pill"
+- raw: "黄连丸"
+  splits:
+  - text: "黄连丸"
+    translated: "Coptis Root Pill"
+- raw: "荆防丸"
+  splits:
+  - text: "荆防丸"
+    translated: "Jingfang Wan"
+- raw: "六味地黄丸"
+  splits:
+  - text: "六味地黄丸"
+    translated: "Six Flavor Rehmannia Pill"
+- raw: "天心解毒丸"
+  splits:
+  - text: "天心解毒丸"
+    translated: "Heart Heaven Detox Pill"
+- raw: "金花玉露丸"
+  splits:
+  - text: "金花玉露丸"
+    translated: "Golden Lotus Jade Dew Pill"
+- raw: "龙涎净厄丸"
+  splits:
+  - text: "龙涎净厄丸"
+    translated: "Dragon's Breath Purification Pills"
 - raw: "瓷窑"
   splits:
   - text: "瓷窑"
@@ -43382,10 +43558,6 @@
   splits:
   - text: "玉矿"
     translated: "Jasper mine"
-- raw: "甘泉"
-  splits:
-  - text: "甘泉"
-    translated: "Sweet Spring"
 - raw: "湖泽"
   splits:
   - text: "湖泽"
@@ -43438,18 +43610,6 @@
   splits:
   - text: "古木"
     translated: "Old woods"
-- raw: "伤害"
-  splits:
-  - text: "伤害"
-    translated: "Damage"
-- raw: "内功"
-  splits:
-  - text: "内功"
-    translated: "Neigong"
-- raw: "刀法"
-  splits:
-  - text: "刀法"
-    translated: "Blade Art"
 - raw: "内功威力"
   splits:
   - text: "内功威力"
@@ -43582,118 +43742,22 @@
   splits:
   - text: "烹饪潜力"
     translated: "Cooking potential"
-- raw: "生命上限"
-  splits:
-  - text: "生命上限"
-    translated: "Health points"
-- raw: "体力上限"
-  splits:
-  - text: "体力上限"
-    translated: "Maximum stamina"
-- raw: "内力上限"
-  splits:
-  - text: "内力上限"
-    translated: "Inner Power Cap"
-- raw: "护甲"
-  splits:
-  - text: "护甲"
-    translated: "Armor"
 - raw: "护甲率"
   splits:
   - text: "护甲率"
     translated: "Armour rating"
-- raw: "速度"
-  splits:
-  - text: "速度"
-    translated: "Speed"
-- raw: "命中"
-  splits:
-  - text: "命中"
-    translated: "Hit Rate"
-- raw: "闪避"
-  splits:
-  - text: "闪避"
-    translated: "Dodge"
-- raw: "暴击"
-  splits:
-  - text: "暴击"
-    translated: "Critical hit"
-- raw: "卸力"
-  splits:
-  - text: "卸力"
-    translated: "Force absorption"
-- raw: "反击"
-  splits:
-  - text: "反击"
-    translated: "Counterattack"
-- raw: "压制"
-  splits:
-  - text: "压制"
-    translated: "Suppress"
-- raw: "连击"
-  splits:
-  - text: "连击"
-    translated: "Combo"
-- raw: "断连"
-  splits:
-  - text: "断连"
-    translated: "Disconnect"
-- raw: "经验获取"
-  splits:
-  - text: "经验获取"
-    translated: "Experience gained"
-- raw: "伤害抗性"
-  splits:
-  - text: "伤害抗性"
-    translated: "Damage resistance"
-- raw: "负面加成"
-  splits:
-  - text: "负面加成"
-    translated: "Negative buffs"
-- raw: "我方"
-  splits:
-  - text: "我方"
-    translated: "Our side"
-- raw: "负面抗性"
-  splits:
-  - text: "负面抗性"
-    translated: "Negative resistance"
-- raw: "伤势抗性"
-  splits:
-  - text: "伤势抗性"
-    translated: "Wound resistance"
 - raw: "失衡"
   splits:
   - text: "失衡"
     translated: "Imbalance"
-- raw: "敌方"
-  splits:
-  - text: "敌方"
-    translated: "Enemy"
 - raw: "急速"
   splits:
   - text: "急速"
     translated: "Rapidly"
-- raw: "外伤"
-  splits:
-  - text: "外伤"
-    translated: "External Injury"
-- raw: "内伤"
-  splits:
-  - text: "内伤"
-    translated: "Internal Injury"
 - raw: "毒素"
   splits:
   - text: "毒素"
     translated: "Poison"
-- raw: "吸血"
-  splits:
-  - text: "吸血"
-    translated: "Vampire"
-- raw: "吸内"
-  splits:
-  - text: "吸内"
-    translated: "Inhale"
 - raw: "削内"
   splits:
   - text: "削内"
@@ -43702,10 +43766,6 @@
   splits:
   - text: "恢复"
     translated: "Recovery"
-- raw: "灼烧"
-  splits:
-  - text: "灼烧"
-    translated: "Scorching"
 - raw: "疗伤"
   splits:
   - text: "疗伤"
@@ -43714,10 +43774,6 @@
   splits:
   - text: "流血"
     translated: "Bleeding"
-- raw: "调息"
-  splits:
-  - text: "调息"
-    translated: "Breathwork"
 - raw: "雷电"
   splits:
   - text: "雷电"
@@ -43726,38 +43782,10 @@
   splits:
   - text: "蓄力"
     translated: "Build Up Energy"
-- raw: "疲劳"
-  splits:
-  - text: "疲劳"
-    translated: "Fatigue"
-- raw: "冰寒"
-  splits:
-  - text: "冰寒"
-    translated: "Icicles"
 - raw: "无敌"
   splits:
   - text: "无敌"
     translated: "Unbeatable"
-- raw: "眩晕"
-  splits:
-  - text: "眩晕"
-    translated: "Dizziness"
-- raw: "手臂点穴"
-  splits:
-  - text: "手臂点穴"
-    translated: "Arm point pressing"
-- raw: "腿足点穴"
-  splits:
-  - text: "腿足点穴"
-    translated: "Leg and foot acupressure"
-- raw: "心胸点穴"
-  splits:
-  - text: "心胸点穴"
-    translated: "Heart Point Acupressure"
-- raw: "腰腹点穴"
-  splits:
-  - text: "腰腹点穴"
-    translated: "Stomach and waist acupressure points"
 - raw: "头颈点穴"
   splits:
   - text: "头颈点穴"
@@ -43806,10 +43834,6 @@
   splits:
   - text: "疯魔"
     translated: "Mad Despair"
-- raw: "混乱"
-  splits:
-  - text: "混乱"
-    translated: "Chaos"
 - raw: "死战"
   splits:
   - text: "死战"
@@ -44026,18 +44050,6 @@
   splits:
   - text: "裂膝"
     translated: "Split‑knee"
-- raw: "破招"
-  splits:
-  - text: "破招"
-    translated: "Counterattack"
-- raw: "拆招"
-  splits:
-  - text: "拆招"
-    translated: "Counterattack"
-- raw: "斗转"
-  splits:
-  - text: "斗转"
-    translated: "Stars turn"
 - raw: "声望获取"
   splits:
   - text: "声望获取"
@@ -44090,18 +44102,6 @@
   splits:
   - text: "装备负重"
     translated: "Equipment load limit"
-- raw: "机关伤害"
-  splits:
-  - text: "机关伤害"
-    translated: "Mechanical damage"
-- raw: "机关速度"
-  splits:
-  - text: "机关速度"
-    translated: "Mechanism speed"
-- raw: "机关耐久"
-  splits:
-  - text: "机关耐久"
-    translated: "Mechanism Durability"
 - raw: "好感获取"
   splits:
   - text: "好感获取"
@@ -44118,30 +44118,10 @@
   splits:
   - text: "姜.映泉"
     translated: "Jiang Yingquan"
-- raw: "男"
-  splits:
-  - text: "男"
-    translated: "Man"
-- raw: "默认"
-  splits:
-  - text: "默认"
-    translated: "Default"
-- raw: "掌门"
-  splits:
-  - text: "掌门"
-    translated: "Sect Master"
 - raw: "-1"
   splits:
   - text: "-1"
     translated: "‑1"
-- raw: "稳重"
-  splits:
-  - text: "稳重"
-    translated: "Reliable"
-- raw: "聪颖"
-  splits:
-  - text: "聪颖"
-    translated: "Clever"
 - raw: "平常/善良"
   splits:
   - text: "平常"
@@ -44203,18 +44183,6 @@
   splits:
   - text: "陆.仁谦"
     translated: "Lu Renqian"
-- raw: "长老"
-  splits:
-  - text: "长老"
-    translated: "Elder"
-- raw: "固执"
-  splits:
-  - text: "固执"
-    translated: "Stubborn"
-- raw: "平平"
-  splits:
-  - text: "平平"
-    translated: "Evenly"
 - raw: "戒律/中立"
   splits:
   - text: "戒律"
@@ -44255,10 +44223,6 @@
   splits:
   - text: "魏.胥华"
     translated: "Wei Xuhua"
-- raw: "亲传弟子"
-  splits:
-  - text: "亲传弟子"
-    translated: "Direct disciple"
 - raw: "无序/冷酷"
   splits:
   - text: "无序"
@@ -44299,22 +44263,6 @@
   splits:
   - text: "余.采薇"
     translated: "Yu Caiwei"
-- raw: "女"
-  splits:
-  - text: "女"
-    translated: "Woman"
-- raw: "正式弟子"
-  splits:
-  - text: "正式弟子"
-    translated: "Formal disciple"
-- raw: "纯粹"
-  splits:
-  - text: "纯粹"
-    translated: "Purely"
-- raw: "究极"
-  splits:
-  - text: "究极"
-    translated: "Ultimate"
 - raw: "平常/冷酷"
   splits:
   - text: "平常"
@@ -44355,14 +44303,6 @@
   splits:
   - text: "顾.游年"
     translated: "Gu Younian"
-- raw: "潇洒"
-  splits:
-  - text: "潇洒"
-    translated: "Graceful"
-- raw: "超群"
-  splits:
-  - text: "超群"
-    translated: "Superb"
 - raw: "无序/仁慈"
   splits:
   - text: "无序"
@@ -44412,14 +44352,6 @@
   splits:
   - text: "沈.退"
     translated: "Shen Tui"
-- raw: "入门弟子"
-  splits:
-  - text: "入门弟子"
-    translated: "Novice Disciple"
-- raw: "轻佻"
-  splits:
-  - text: "轻佻"
-    translated: "Flippant"
 - raw: "守序/中立"
   splits:
   - text: "守序"
@@ -44457,10 +44389,6 @@
   splits:
   - text: "姜.婉"
     translated: "Jiang Wan"
-- raw: "忠厚"
-  splits:
-  - text: "忠厚"
-    translated: "Honesty"
 - raw: "守序/善良"
   splits:
   - text: "守序"
@@ -44510,14 +44438,6 @@
   splits:
   - text: "杨.思迟"
     translated: "Yang Sichi"
-- raw: "外门弟子"
-  splits:
-  - text: "外门弟子"
-    translated: "Outer Gate Disciple"
-- raw: "简单"
-  splits:
-  - text: "简单"
-    translated: "Simple"
 - raw: "混乱/仁慈"
   splits:
   - text: "混乱"
@@ -44567,10 +44487,6 @@
   splits:
   - text: "林.云裳"
     translated: "Lin Yunshang"
-- raw: "灵活"
-  splits:
-  - text: "灵活"
-    translated: "Flexible"
 - raw: "轻功/剑法/刀法"
   splits:
   - text: "轻功"
@@ -44650,14 +44566,14 @@
     translated: "Skillful Trader"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "金风玉露"
+  splits:
+  - text: "金风玉露"
+    translated: "Golden wind and jade dew"
 - raw: "云.彩衣"
   splits:
   - text: "云.彩衣"
     translated: "Yun Caiyi"
-- raw: "副掌门"
-  splits:
-  - text: "副掌门"
-    translated: "Vice Sect Leader"
 - raw: "平常/中立"
   splits:
   - text: "平常"
@@ -44688,6 +44604,10 @@
     translated: "Intelligence"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "净乐琉璃"
+  splits:
+  - text: "净乐琉璃"
+    translated: "Jingle Luliu"
 - raw: "师傅:10"
   splits:
   - text: "师傅"
@@ -44698,10 +44618,6 @@
   splits:
   - text: "卢.玉麟"
     translated: "Lu Yulin"
-- raw: "算计"
-  splits:
-  - text: "算计"
-    translated: "Plot against"
 - raw: "无序/凶狠"
   splits:
   - text: "无序"
@@ -44732,6 +44648,10 @@
     translated: "Become a government official"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "铁算盘"
+  splits:
+  - text: "铁算盘"
+    translated: "Iron calculator"
 - raw: "唐.逸影"
   splits:
   - text: "唐.逸影"
@@ -44781,6 +44701,10 @@
     translated: "Keen‑eyed"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "九天鬼手"
+  splits:
+  - text: "九天鬼手"
+    translated: "Nine Heaven Ghost Hand"
 - raw: "亲属:14/15"
   splits:
   - text: "亲属"
@@ -44855,6 +44779,10 @@
     translated: "Falling Leaf Flutter"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "杀人无形"
+  splits:
+  - text: "杀人无形"
+    translated: "Invisible killer"
 - raw: "皇甫.青衫"
   splits:
   - text: "皇甫.青衫"
@@ -44907,6 +44835,10 @@
     translated: "Cutting out the poison"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "玉面医仙"
+  splits:
+  - text: "玉面医仙"
+    translated: "Face of Jade Medical Immortal"
 - raw: "亲属:17"
   splits:
   - text: "亲属"
@@ -44947,6 +44879,10 @@
     translated: "Fight poison with poison"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "穿林妙手"
+  splits:
+  - text: "穿林妙手"
+    translated: "Mystic Hand Through the Woods"
 - raw: "朱.断岳"
   splits:
   - text: "朱.断岳"
@@ -44990,6 +44926,10 @@
     translated: "Palmslash"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "铁碗残拳"
+  splits:
+  - text: "铁碗残拳"
+    translated: "Iron Bowl Fists"
 - raw: "结义:19"
   splits:
   - text: "结义"
@@ -45036,6 +44976,10 @@
     translated: "Spear Glow"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "大醉侠"
+  splits:
+  - text: "大醉侠"
+    translated: "Drunk Hero"
 - raw: "赵.破虏"
   splits:
   - text: "赵.破虏"
@@ -45076,6 +45020,10 @@
     translated: "Lead by example"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "潜龙勿用"
+  splits:
+  - text: "潜龙勿用"
+    translated: "Do Not Stifle the Ascending Dragon"
 - raw: "诸葛.伶"
   splits:
   - text: "诸葛.伶"
@@ -45113,6 +45061,10 @@
     translated: "Remain calm in crisis"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "小卧龙"
+  splits:
+  - text: "小卧龙"
+    translated: "Young Dragon‑Origin"
 - raw: "南宫.瑶"
   splits:
   - text: "南宫.瑶"
@@ -45141,6 +45093,10 @@
     translated: "Tranquil"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "玄微法师"
+  splits:
+  - text: "玄微法师"
+    translated: "Mystic Master Xuanwei"
 - raw: "葛.知远"
   splits:
   - text: "葛.知远"
@@ -45169,6 +45125,10 @@
     translated: "Become a government official"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "洞真法师"
+  splits:
+  - text: "洞真法师"
+    translated: "True Void Monk"
 - raw: "欧.长兵"
   splits:
   - text: "欧.长兵"
@@ -45209,6 +45169,10 @@
     translated: "Stop at nothing"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "铸铁仙翁"
+  splits:
+  - text: "铸铁仙翁"
+    translated: "Cast‑iron Sage"
 - raw: "祖.心炎"
   splits:
   - text: "祖.心炎"
@@ -45240,6 +45204,10 @@
     translated: "As fierce as fire"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "百炼神剑"
+  splits:
+  - text: "百炼神剑"
+    translated: "Celestial Sword Refined a Hundred Times"
 - raw: "龙.凤娥"
   splits:
   - text: "龙.凤娥"
@@ -45280,6 +45248,10 @@
     translated: "Heretical"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "销魂蚀骨"
+  splits:
+  - text: "销魂蚀骨"
+    translated: "Heart‑stirring and bone‑quaking"
 - raw: "亲属:27"
   splits:
   - text: "亲属"
@@ -45317,6 +45289,10 @@
     translated: "Kind and benevolent"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "毒手琴心"
+  splits:
+  - text: "毒手琴心"
+    translated: "Poison‑Finger Harp Soul"
 - raw: "石.崇虎"
   splits:
   - text: "石.崇虎"
@@ -45348,6 +45324,10 @@
     translated: "Doctor"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "黑爪"
+  splits:
+  - text: "黑爪"
+    translated: "Black Claw"
 - raw: "阎.罗王"
   splits:
   - text: "阎.罗王"
@@ -45403,6 +45383,10 @@
     translated: "Blade Edge"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "十殿冥主"
+  splits:
+  - text: "十殿冥主"
+    translated: "Ten Lords of the Netherworld"
 - raw: "仇人:36/39/42/120"
   splits:
   - text: "仇人"
@@ -45449,6 +45433,10 @@
     translated: "Renaissance Man"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "阴冥诡士"
+  splits:
+  - text: "阴冥诡士"
+    translated: "Shadowcraft Master"
 - raw: "孟.婆娑"
   splits:
   - text: "孟.婆娑"
@@ -45480,6 +45468,10 @@
     translated: "Yaqin"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "空谷幽兰"
+  splits:
+  - text: "空谷幽兰"
+    translated: "Gorge‑Dwelling Orchid"
 - raw: "常.无黑"
   splits:
   - text: "常.无黑"
@@ -45502,6 +45494,10 @@
     translated: "Cut through obstacles"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "黑白无常"
+  splits:
+  - text: "黑白无常"
+    translated: "Black and White Officials"
 - raw: "结义:33"
   splits:
   - text: "结义"
@@ -45639,6 +45635,10 @@
     translated: "Resurrect from the dead"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "无双国士"
+  splits:
+  - text: "无双国士"
+    translated: "Unmatched National Scholar"
 - raw: "朋友:37"
   splits:
   - text: "朋友"
@@ -45676,6 +45676,10 @@
     translated: "Sword moves at will"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "天剑客"
+  splits:
+  - text: "天剑客"
+    translated: "Heavenly Swordmaster"
 - raw: "姬.清梵"
   splits:
   - text: "姬.清梵"
@@ -45707,6 +45711,10 @@
     translated: "Impartial"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "霓裳仙子"
+  splits:
+  - text: "霓裳仙子"
+    translated: "Fairy Nishang"
 - raw: "空闻.大师"
   splits:
   - text: "空闻.大师"
@@ -45750,6 +45758,10 @@
     translated: "Neither arrogant nor anxious"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "德高望重"
+  splits:
+  - text: "德高望重"
+    translated: "Well‑respected"
 - raw: "空见.大师"
   splits:
   - text: "空见.大师"
@@ -45784,6 +45796,10 @@
     translated: "Irritable"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "金身罗汉"
+  splits:
+  - text: "金身罗汉"
+    translated: "Golden Body Arhat"
 - raw: "如是.大师"
   splits:
   - text: "如是.大师"
@@ -45818,6 +45834,10 @@
     translated: "Empty as a valley"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "佛痴"
+  splits:
+  - text: "佛痴"
+    translated: "Buddhist Obsessed"
 - raw: "张.青蓬"
   splits:
   - text: "张.青蓬"
@@ -45861,6 +45881,10 @@
     translated: "Palmslash"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "无为真人"
+  splits:
+  - text: "无为真人"
+    translated: "Immortal Wuwei"
 - raw: "亲属:43"
   splits:
   - text: "亲属"
@@ -45910,6 +45934,10 @@
     translated: "Meridian"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "文逸真人"
+  splits:
+  - text: "文逸真人"
+    translated: "Immortal Wen Yi"
 - raw: "宋.廉庭"
   splits:
   - text: "宋.廉庭"
@@ -45944,6 +45972,10 @@
     translated: "Sword aura"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "清虚真人"
+  splits:
+  - text: "清虚真人"
+    translated: "Immortal Qingqi"
 - raw: "项.元霸"
   splits:
   - text: "项.元霸"
@@ -45984,6 +46016,10 @@
     translated: "Blocked meridian"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "力大无穷"
+  splits:
+  - text: "力大无穷"
+    translated: "Unlimited strength"
 - raw: "宇文.极"
   splits:
   - text: "宇文.极"
@@ -46012,6 +46048,10 @@
     translated: "Arranging troops on the battlefield"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "算无遗策"
+  splits:
+  - text: "算无遗策"
+    translated: "Calculating without omission"
 - raw: "吕.寻峰"
   splits:
   - text: "吕.寻峰"
@@ -46052,6 +46092,10 @@
     translated: "Boast to the stars"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "都灵子"
+  splits:
+  - text: "都灵子"
+    translated: "Tulingsi"
 - raw: "庄.晓梦"
   splits:
   - text: "庄.晓梦"
@@ -46092,6 +46136,10 @@
     translated: "Sword aura"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "云鹏子"
+  splits:
+  - text: "云鹏子"
+    translated: "Yun Pengzi"
 - raw: "司马.德源"
   splits:
   - text: "司马.德源"
@@ -46123,6 +46171,10 @@
     translated: "Ugly"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "白眉真人"
+  splits:
+  - text: "白眉真人"
+    translated: "Immortal White Eyebrow"
 - raw: "李.潇湘"
   splits:
   - text: "李.潇湘"
@@ -46151,6 +46203,10 @@
     translated: "Forest Plant"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "潇湘真人"
+  splits:
+  - text: "潇湘真人"
+    translated: "Xiaoxiang Immortal"
 - raw: "白.云天"
   splits:
   - text: "白.云天"
@@ -46185,6 +46241,10 @@
     translated: "Good fortune smiles on you"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "白云子"
+  splits:
+  - text: "白云子"
+    translated: "White Cloud Apprentice"
 - raw: "曲.自封"
   splits:
   - text: "曲.自封"
@@ -46222,6 +46282,10 @@
     translated: "Remain calm in crisis"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "紫髯道人"
+  splits:
+  - text: "紫髯道人"
+    translated: "Bearded Daoist"
 - raw: "闻.惊鸿"
   splits:
   - text: "闻.惊鸿"
@@ -46250,6 +46314,10 @@
     translated: "Lead by example"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "绝情道人"
+  splits:
+  - text: "绝情道人"
+    translated: "Discordia Daoist"
 - raw: "墨.璇玑"
   splits:
   - text: "墨.璇玑"
@@ -46287,6 +46355,10 @@
     translated: "Blocked meridian"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "天工巧匠"
+  splits:
+  - text: "天工巧匠"
+    translated: "Master Craftsman"
 - raw: "亲属:55"
   splits:
   - text: "亲属"
@@ -46339,6 +46411,10 @@
     translated: "Stop pulse"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "病鲁班"
+  splits:
+  - text: "病鲁班"
+    translated: "Clever Lu Ban"
 - raw: "雷.震天"
   splits:
   - text: "雷.震天"
@@ -46379,6 +46455,10 @@
     translated: "Ill often"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "掣地霹雳"
+  splits:
+  - text: "掣地霹雳"
+    translated: "Earthshaking Thunderbolt"
 - raw: "亲属:57/58/151"
   splits:
   - text: "亲属"
@@ -46425,6 +46505,10 @@
     translated: "Bony"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "烁金枪"
+  splits:
+  - text: "烁金枪"
+    translated: "Blazing Spear"
 - raw: "亲属:58/151"
   splits:
   - text: "亲属"
@@ -46462,6 +46546,10 @@
     translated: "Gifted"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "燎原火凤"
+  splits:
+  - text: "燎原火凤"
+    translated: "Blazing Phoenix"
 - raw: "亲属:151"
   splits:
   - text: "亲属"
@@ -46499,6 +46587,10 @@
     translated: "Wonder drug"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "龙象护法"
+  splits:
+  - text: "龙象护法"
+    translated: "Dragon Elephant Guardian"
 - raw: "金刚.法王"
   splits:
   - text: "金刚.法王"
@@ -46527,6 +46619,10 @@
     translated: "Primordial Qi Sea"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "灵童转世"
+  splits:
+  - text: "灵童转世"
+    translated: "Reincarnation of a Child Prodigy"
 - raw: "真言.法王"
   splits:
   - text: "真言.法王"
@@ -46564,6 +46660,10 @@
     translated: "Prescribe the remedy to the illness"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "慧眼明王"
+  splits:
+  - text: "慧眼明王"
+    translated: "Bright Eye King"
 - raw: "凌.北渊"
   splits:
   - text: "凌.北渊"
@@ -46595,6 +46695,10 @@
     translated: "Withdrawn from the world"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "天山仙子"
+  splits:
+  - text: "天山仙子"
+    translated: "Tianshan Fairy"
 - raw: "云.九霄"
   splits:
   - text: "云.九霄"
@@ -46623,6 +46727,10 @@
     translated: "Loyalty"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "雪山飞鸿"
+  splits:
+  - text: "雪山飞鸿"
+    translated: "Snow Mountain Flying Eagle"
 - raw: "江.映寒"
   splits:
   - text: "江.映寒"
@@ -46648,6 +46756,10 @@
     translated: "Resonant echoes linger in the hall"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "冷月寒江"
+  splits:
+  - text: "冷月寒江"
+    translated: "Cold Moon, Frozen River"
 - raw: "夏.天雄"
   splits:
   - text: "夏.天雄"
@@ -46689,6 +46801,10 @@
     translated: "Irritable"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "铁掌双雄"
+  splits:
+  - text: "铁掌双雄"
+    translated: "Dual Iron Palm Experts"
 - raw: "韩.嵩"
   splits:
   - text: "韩.嵩"
@@ -46724,6 +46840,10 @@
     translated: "Laziness"
   templates:
   - template: "{0};{1};{2}"
+- raw: "铁掌四杰"
+  splits:
+  - text: "铁掌四杰"
+    translated: "Four Palm Masters"
 - raw: "吕.子芳"
   splits:
   - text: "吕.子芳"
@@ -46940,6 +47060,10 @@
     translated: "Superb Artistry"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8}"
+- raw: "绝情断义"
+  splits:
+  - text: "绝情断义"
+    translated: "Cut Off Emotions and Loyalties"
 - raw: "黄.泉"
   splits:
   - text: "黄.泉"
@@ -47000,6 +47124,10 @@
     translated: "Strange and inexplicable"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "骷髅红粉"
+  splits:
+  - text: "骷髅红粉"
+    translated: "Skull Red Powder"
 - raw: "雨.人屠"
   splits:
   - text: "雨.人屠"
@@ -47028,6 +47156,10 @@
     translated: "Clumsy"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "雨夜狂屠"
+  splits:
+  - text: "雨夜狂屠"
+    translated: "Night Rain Slaughterfest"
 - raw: "上官.凤"
   splits:
   - text: "上官.凤"
@@ -47060,6 +47192,10 @@
     translated: "Lucky in gambling"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "刺骨冰寒"
+  splits:
+  - text: "刺骨冰寒"
+    translated: "Bone‑chilling cold"
 - raw: "计.心狂"
   splits:
   - text: "计.心狂"
@@ -47091,6 +47227,10 @@
     translated: "Invisible"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "诡计毒谋"
+  splits:
+  - text: "诡计毒谋"
+    translated: "Deceitful schemes"
 - raw: "慕容.星辰"
   splits:
   - text: "慕容.星辰"
@@ -47122,6 +47262,10 @@
     translated: "Lucky stars shining high"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7}"
+- raw: "摘月偷星"
+  splits:
+  - text: "摘月偷星"
+    translated: "Pluck Moon, Steal Stars"
 - raw: "幽.冥"
   splits:
   - text: "幽.冥"
@@ -47144,6 +47288,10 @@
     translated: "Rebellion"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "四大杀手"
+  splits:
+  - text: "四大杀手"
+    translated: "Four Assassins"
 - raw: "魅.影"
   splits:
   - text: "魅.影"
@@ -47226,6 +47374,10 @@
     translated: "Outer Gate"
   templates:
   - template: "{0};{1};{2}"
+- raw: "刀劳鬼"
+  splits:
+  - text: "刀劳鬼"
+    translated: "Butcher Ghost"
 - raw: "迟.百城"
   splits:
   - text: "迟.百城"
@@ -47246,6 +47398,10 @@
     translated: "Qinggong"
   templates:
   - template: "{0};{1};{2}"
+- raw: "拘魂鬼"
+  splits:
+  - text: "拘魂鬼"
+    translated: "SoulCatcher"
 - raw: "费.彬"
   splits:
   - text: "费.彬"
@@ -47268,10 +47424,18 @@
     translated: "All poisons are present"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "痨病鬼"
+  splits:
+  - text: "痨病鬼"
+    translated: "Tubercular ghost"
 - raw: "岳.无畏"
   splits:
   - text: "岳.无畏"
     translated: "Yue Wuwei"
+- raw: "2"
+  splits:
+  - text: "2"
+    translated: "2"
 - raw: "性烈如火;长兵;绝技"
   splits:
   - text: "性烈如火"
@@ -47284,6 +47448,10 @@
     translated: "Ultimate Technique"
   templates:
   - template: "{0};{1};{2}"
+- raw: "山魈鬼"
+  splits:
+  - text: "山魈鬼"
+    translated: "Yamony Ghost"
 - raw: "高.首"
   splits:
   - text: "高.首"
@@ -47300,6 +47468,10 @@
     translated: "Laziness"
   templates:
   - template: "{0};{1};{2}"
+- raw: "魍魉鬼"
+  splits:
+  - text: "魍魉鬼"
+    translated: "Goblin demon"
 - raw: "王.彪"
   splits:
   - text: "王.彪"
@@ -47316,6 +47488,10 @@
     translated: "Gamble addict"
   templates:
   - template: "{0};{1};{2}"
+- raw: "黄河双煞"
+  splits:
+  - text: "黄河双煞"
+    translated: "Yellow River Dual Fiends"
 - raw: "结义:97;师傅:73"
   splits:
   - text: "结义"
@@ -47366,6 +47542,10 @@
     translated: "Scholarship"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "乐善好施"
+  splits:
+  - text: "乐善好施"
+    translated: "Charitable"
 - raw: "裘.龙"
   splits:
   - text: "裘.龙"
@@ -47382,6 +47562,10 @@
     translated: "Waste"
   templates:
   - template: "{0};{1};{2}"
+- raw: "入林龙"
+  splits:
+  - text: "入林龙"
+    translated: "Dragon Enters the Forest"
 - raw: "张.成化"
   splits:
   - text: "张.成化"
@@ -47398,6 +47582,10 @@
     translated: "Diligence"
   templates:
   - template: "{0};{1};{2}"
+- raw: "化虎成龙"
+  splits:
+  - text: "化虎成龙"
+    translated: "Transform into a tiger and become a dragon"
 - raw: "曾.镇海"
   splits:
   - text: "曾.镇海"
@@ -47414,6 +47602,10 @@
     translated: "With a fierce expression"
   templates:
   - template: "{0};{1};{2}"
+- raw: "翻江镇海"
+  splits:
+  - text: "翻江镇海"
+    translated: "Turn the River and Calm the Sea"
 - raw: "宋.明公"
   splits:
   - text: "宋.明公"
@@ -47433,6 +47625,10 @@
     translated: "Leader"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "及时雨"
+  splits:
+  - text: "及时雨"
+    translated: "Rainmaker"
 - raw: "戴.壮"
   splits:
   - text: "戴.壮"
@@ -47452,6 +47648,10 @@
     translated: "Farm"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "乐山大患"
+  splits:
+  - text: "乐山大患"
+    translated: "Leshan great calamity"
 - raw: "马.应龙"
   splits:
   - text: "马.应龙"
@@ -47468,6 +47668,10 @@
     translated: "Enjoy oneself to the fullest"
   templates:
   - template: "{0};{1};{2}"
+- raw: "西北四骏"
+  splits:
+  - text: "西北四骏"
+    translated: "Four Great Horses of the Northwest"
 - raw: "亲属:105/106/107"
   splits:
   - text: "亲属"
@@ -47556,6 +47760,10 @@
     translated: "Stupid"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "神拳无敌"
+  splits:
+  - text: "神拳无敌"
+    translated: "Invincible Fist"
 - raw: "结义:109/110"
   splits:
   - text: "结义"
@@ -47581,6 +47789,10 @@
     translated: "Stupid"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "富可敌国"
+  splits:
+  - text: "富可敌国"
+    translated: "Rich enough to rival a nation"
 - raw: "结义:110"
   splits:
   - text: "结义"
@@ -47606,6 +47818,10 @@
     translated: "Stupid and silly"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "智计无双"
+  splits:
+  - text: "智计无双"
+    translated: "Ingenious beyond compare"
 - raw: "熊.百胜"
   splits:
   - text: "熊.百胜"
@@ -47628,6 +47844,10 @@
     translated: "Wasteful"
   templates:
   - template: "{0};{1};{2};{3};{4}"
+- raw: "黑风寨大当家"
+  splits:
+  - text: "黑风寨大当家"
+    translated: "Great Leader of Black Wind Ridge"
 - raw: "朱.全"
   splits:
   - text: "朱.全"
@@ -47641,6 +47861,10 @@
     translated: "Cruel"
   templates:
   - template: "{0};{1}"
+- raw: "黑风寨二当家"
+  splits:
+  - text: "黑风寨二当家"
+    translated: "Second Boss"
 - raw: "严.达开"
   splits:
   - text: "严.达开"
@@ -47654,6 +47878,10 @@
     translated: "Brave"
   templates:
   - template: "{0};{1}"
+- raw: "黑风寨三当家"
+  splits:
+  - text: "黑风寨三当家"
+    translated: "Third Master of Black Wind Manor"
 - raw: "冯.虎"
   splits:
   - text: "冯.虎"
@@ -47667,6 +47895,10 @@
     translated: "Attendant"
   templates:
   - template: "{0};{1}"
+- raw: "黑风四贼"
+  splits:
+  - text: "黑风四贼"
+    translated: "Four Bandits of Black Wind"
 - raw: "朋友:115/116/117"
   splits:
   - text: "朋友"
@@ -47761,6 +47993,10 @@
     translated: "Confucianism"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "大隐琴侠"
+  splits:
+  - text: "大隐琴侠"
+    translated: "Great Hidden Harp"
 - raw: "孟.经世"
   splits:
   - text: "孟.经世"
@@ -47798,6 +48034,10 @@
     translated: "Brush moves like dragonsisciendi"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "霸刀狂侠"
+  splits:
+  - text: "霸刀狂侠"
+    translated: "Frenzied Blade"
 - raw: "郭.淮"
   splits:
   - text: "郭.淮"
@@ -47844,6 +48084,10 @@
     translated: "Steel frame"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "中原大侠"
+  splits:
+  - text: "中原大侠"
+    translated: "Great Hero of Central Plains"
 - raw: "吕.天行"
   splits:
   - text: "吕.天行"
@@ -47881,6 +48125,10 @@
     translated: "Sword aura"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "蓬莱奇侠"
+  splits:
+  - text: "蓬莱奇侠"
+    translated: "Penglai Strange Hero"
 - raw: "何.足道"
   splits:
   - text: "何.足道"
@@ -47909,6 +48157,10 @@
     translated: "Fortune Teller"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "茅山道侠"
+  splits:
+  - text: "茅山道侠"
+    translated: "Moshan Daoist Hero"
 - raw: "楚.风疾"
   splits:
   - text: "楚.风疾"
@@ -47934,6 +48186,10 @@
     translated: "Leader"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "敕封御史之风"
+  splits:
+  - text: "敕封御史之风"
+    translated: "Imperial Censor Wind"
 - raw: "结义:124/125/126"
   splits:
   - text: "结义"
@@ -47968,6 +48224,10 @@
     translated: "Duel"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
+- raw: "敕封御史之林"
+  splits:
+  - text: "敕封御史之林"
+    translated: "Imperial Censor Lin"
 - raw: "结义:125/126"
   splits:
   - text: "结义"
@@ -47999,6 +48259,10 @@
     translated: "Vanguard"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "敕封御史之火"
+  splits:
+  - text: "敕封御史之火"
+    translated: "Imperial Censor's Flame"
 - raw: "结义:126"
   splits:
   - text: "结义"
@@ -48030,6 +48294,10 @@
     translated: "Garrison"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "敕封御史之山"
+  splits:
+  - text: "敕封御史之山"
+    translated: "Vice‑Adjudicator Mountain"
 - raw: "项.问天"
   splits:
   - text: "项.问天"
@@ -48284,6 +48552,10 @@
     translated: "With a tumultuous fate"
   templates:
   - template: "{0};{1};{2}"
+- raw: "玉面判官"
+  splits:
+  - text: "玉面判官"
+    translated: "Face of Jade Official"
 - raw: "师傅:124"
   splits:
   - text: "师傅"
@@ -48362,6 +48634,10 @@
     translated: "Martial Sage"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "江湖百晓"
+  splits:
+  - text: "江湖百晓"
+    translated: "Jianghu Bai Xiao"
 - raw: "天.残"
   splits:
   - text: "天.残"
@@ -48411,6 +48687,10 @@
     translated: "Martial Sage"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}"
+- raw: "侠盗四奇"
+  splits:
+  - text: "侠盗四奇"
+    translated: "Four Legendary Thieves"
 - raw: "地.缺"
   splits:
   - text: "地.缺"
@@ -48897,6 +49177,10 @@
     translated: "Rebellion"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "小霹雳"
+  splits:
+  - text: "小霹雳"
+    translated: "Little Thunderbolt"
 - raw: "赵.胤宗"
   splits:
   - text: "赵.胤宗"
@@ -48926,6 +49210,10 @@
     translated: "Master of extraordinary skills"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
+- raw: "侠盗四丑"
+  splits:
+  - text: "侠盗四丑"
+    translated: "Thief Quartet"
 - raw: "中年地.缺"
   splits:
   - text: "中年地.缺"
@@ -49058,26 +49346,50 @@
   splits:
   - text: "张.弥勒"
     translated: "Zhang Mile"
+- raw: "拳佛"
+  splits:
+  - text: "拳佛"
+    translated: "Punch Buddha"
 - raw: "陆.沉舟"
   splits:
   - text: "陆.沉舟"
     translated: "Lu Chenzhou"
+- raw: "陆地剑仙"
+  splits:
+  - text: "陆地剑仙"
+    translated: "Land Sword Immortal"
 - raw: "王.霸"
   splits:
   - text: "王.霸"
     translated: "Wang Ba"
+- raw: "横刀灭九州"
+  splits:
+  - text: "横刀灭九州"
+    translated: "Slash to Annihilate Nine Provinces"
 - raw: "龙.灭"
   splits:
   - text: "龙.灭"
     translated: "Long Mie"
+- raw: "铁枪破宇宙"
+  splits:
+  - text: "铁枪破宇宙"
+    translated: "Spear Through the Universe"
 - raw: "罗.八怪"
   splits:
   - text: "罗.八怪"
     translated: "Luo Bagua"
+- raw: "出奇必胜"
+  splits:
+  - text: "出奇必胜"
+    translated: "Surprise attacks always win"
 - raw: "菲.燕子"
   splits:
   - text: "菲.燕子"
     translated: "Fei Yanzi"
+- raw: "百步穿针"
+  splits:
+  - text: "百步穿针"
+    translated: "Hundred‑step needle‑threading"
 - raw: "叶.寒"
   splits:
   - text: "叶.寒"
@@ -49097,6 +49409,10 @@
     translated: "Game of Life"
   templates:
   - template: "{0};{1};{2};{3}"
+- raw: "百骰百胜"
+  splits:
+  - text: "百骰百胜"
+    translated: "Hundred Dice, Hundred Wins"
 - raw: "李.天临"
   splits:
   - text: "李.天临"
@@ -49129,6 +49445,10 @@
     translated: "Strong"
   templates:
   - template: "{0};{1}"
+- raw: "滚地雷"
+  splits:
+  - text: "滚地雷"
+    translated: "Tumble mine"
 - raw: "王.伦"
   splits:
   - text: "王.伦"
@@ -49142,6 +49462,10 @@
     translated: "Stubborn"
   templates:
   - template: "{0};{1}"
+- raw: "白衣秀士"
+  splits:
+  - text: "白衣秀士"
+    translated: "White‑robed Gentleman"
 - raw: "急速0.06;击退1"
   splits:
   - text: "急速0.06"
@@ -49183,50 +49507,142 @@
     translated: "Lagging0.08"
   templates:
   - template: "{0};{1};{2}"
-- raw: "银钱"
+- raw: "手甲"
   splits:
-  - text: "银钱"
-    translated: "Money"
-- raw: "粮食"
+  - text: "手甲"
+    translated: "Bracelets"
+- raw: "指刺"
   splits:
-  - text: "粮食"
-    translated: "Food grain"
-- raw: "药材"
+  - text: "指刺"
+    translated: "Stab"
+- raw: "钩爪"
   splits:
-  - text: "药材"
-    translated: "Herbs"
-- raw: "威望"
+  - text: "钩爪"
+    translated: "Claw"
+- raw: "指虎"
   splits:
-  - text: "威望"
-    translated: "Reputation"
-- raw: "木料"
+  - text: "指虎"
+    translated: "Monkey glove"
+- raw: "拳套"
   splits:
-  - text: "木料"
-    translated: "Wood"
-- raw: "矿石"
+  - text: "拳套"
+    translated: "Gloves"
+- raw: "指环"
   splits:
-  - text: "矿石"
-    translated: "Mineral"
-- raw: "人口"
+  - text: "指环"
+    translated: "Ring"
+- raw: "重剑"
   splits:
-  - text: "人口"
-    translated: "Population"
-- raw: "治安"
+  - text: "重剑"
+    translated: "Heavy Sword"
+- raw: "短剑"
   splits:
-  - text: "治安"
-    translated: "Public safety"
-- raw: "民心"
+  - text: "短剑"
+    translated: "Short sword"
+- raw: "细剑"
   splits:
-  - text: "民心"
-    translated: "Public sentiment"
-- raw: "人口上限"
+  - text: "细剑"
+    translated: "Fine Sword"
+- raw: "长剑"
   splits:
-  - text: "人口上限"
-    translated: "Population cap"
-- raw: "防御"
+  - text: "长剑"
+    translated: "Long sword"
+- raw: "大剑"
   splits:
-  - text: "防御"
-    translated: "Defense"
+  - text: "大剑"
+    translated: "Great Sword"
+- raw: "软剑"
+  splits:
+  - text: "软剑"
+    translated: "Soft Sword"
+- raw: "重刀"
+  splits:
+  - text: "重刀"
+    translated: "Heavy Blade"
+- raw: "短刀"
+  splits:
+  - text: "短刀"
+    translated: "Short knife"
+- raw: "唐刀"
+  splits:
+  - text: "唐刀"
+    translated: "Saber"
+- raw: "朴刀"
+  splits:
+  - text: "朴刀"
+    translated: "Cutlass"
+- raw: "大刀"
+  splits:
+  - text: "大刀"
+    translated: "Big Blade"
+- raw: "弯刀"
+  splits:
+  - text: "弯刀"
+    translated: "Scimitar"
+- raw: "长戟"
+  splits:
+  - text: "长戟"
+    translated: "Long spear"
+- raw: "长枪"
+  splits:
+  - text: "长枪"
+    translated: "Long spear"
+- raw: "长叉"
+  splits:
+  - text: "长叉"
+    translated: "Long fork"
+- raw: "长戈"
+  splits:
+  - text: "长戈"
+    translated: "Long Spear"
+- raw: "长矛"
+  splits:
+  - text: "长矛"
+    translated: "Pike"
+- raw: "长棍"
+  splits:
+  - text: "长棍"
+    translated: "Long staff"
+- raw: "飞轮"
+  splits:
+  - text: "飞轮"
+    translated: "Flywheel"
+- raw: "判笔"
+  splits:
+  - text: "判笔"
+    translated: "Judgment_pen"
+- raw: "软鞭"
+  splits:
+  - text: "软鞭"
+    translated: "Soft whip"
+- raw: "铁扇"
+  splits:
+  - text: "铁扇"
+    translated: "Iron Fan"
+- raw: "长弓"
+  splits:
+  - text: "长弓"
+    translated: "Longbow"
+- raw: "短弓"
+  splits:
+  - text: "短弓"
+    translated: "Short bow"
+- raw: "曲弓"
+  splits:
+  - text: "曲弓"
+    translated: "Curved bow"
+- raw: "直弓"
+  splits:
+  - text: "直弓"
+    translated: "Drawn bow"
+- raw: "硬弓"
+  splits:
+  - text: "硬弓"
+    translated: "Hardbow"
+- raw: "软弓"
+  splits:
+  - text: "软弓"
+    translated: "Soft bow"
 - raw: "天赋:钢筋铁骨"
   splits:
   - text: "天赋"
@@ -50478,10 +50894,6 @@
     translated: "Quickstep"
   templates:
   - template: "{0}:{1}"
-- raw: "内力"
-  splits:
-  - text: "内力"
-    translated: "Inner Power"
 - raw: "朋友:"
   splits:
   - text: "朋友"
@@ -50512,686 +50924,6 @@
     translated: "Brotherhood by blood"
   templates:
   - template: "{0}:"
-- raw: "炖老母鸡"
-  splits:
-  - text: "炖老母鸡"
-    translated: "Slow‑cooked old hen"
-- raw: "天麻鱼头"
-  splits:
-  - text: "天麻鱼头"
-    translated: "Tianma Fish Head"
-- raw: "沙苑甲鱼汤"
-  splits:
-  - text: "沙苑甲鱼汤"
-    translated: "Shayuan Soft‑Shelled Turtle Soup"
-- raw: "参茸熊掌"
-  splits:
-  - text: "参茸熊掌"
-    translated: "Ginseng Deer Antler Bear Paw"
-- raw: "十全大补汤"
-  splits:
-  - text: "十全大补汤"
-    translated: "Decocted Decoction of All‑Nourishing Herbs"
-- raw: "雄黄酒"
-  splits:
-  - text: "雄黄酒"
-    translated: "Yellow rice wine"
-- raw: "乌龙茶"
-  splits:
-  - text: "乌龙茶"
-    translated: "Oolong tea"
-- raw: "蛇酒"
-  splits:
-  - text: "蛇酒"
-    translated: "Wine made from snake meat"
-- raw: "肉桂茶"
-  splits:
-  - text: "肉桂茶"
-    translated: "Cinnamon tea"
-- raw: "三鞭酒"
-  splits:
-  - text: "三鞭酒"
-    translated: "Three‑horn liquor"
-- raw: "铁观音茶"
-  splits:
-  - text: "铁观音茶"
-    translated: "Tieguanyin tea"
-- raw: "鹿胎酒"
-  splits:
-  - text: "鹿胎酒"
-    translated: "Fetus alcohol"
-- raw: "白牡丹茶"
-  splits:
-  - text: "白牡丹茶"
-    translated: "White Peony Tea"
-- raw: "虎骨酒"
-  splits:
-  - text: "虎骨酒"
-    translated: "Tiger Bone Wine"
-- raw: "大红袍茶"
-  splits:
-  - text: "大红袍茶"
-    translated: "Big Red Robe Tea"
-- raw: "龙脑酒"
-  splits:
-  - text: "龙脑酒"
-    translated: "Dragon Brain Wine"
-- raw: "凤凰水仙茶"
-  splits:
-  - text: "凤凰水仙茶"
-    translated: "Phoenix Dianhua Tea"
-- raw: "烧饼"
-  splits:
-  - text: "烧饼"
-    translated: "Pancake"
-- raw: "肉包"
-  splits:
-  - text: "肉包"
-    translated: "Meat bun"
-- raw: "煎饺"
-  splits:
-  - text: "煎饺"
-    translated: "Pan‑fried dumplings"
-- raw: "烧鸡"
-  splits:
-  - text: "烧鸡"
-    translated: "Roast chicken"
-- raw: "红烧肉"
-  splits:
-  - text: "红烧肉"
-    translated: "Braised pork"
-- raw: "乳猪"
-  splits:
-  - text: "乳猪"
-    translated: "Roast suckling pig"
-- raw: "绿茶"
-  splits:
-  - text: "绿茶"
-    translated: "Green tea"
-- raw: "烧刀子"
-  splits:
-  - text: "烧刀子"
-    translated: "Burn Blade"
-- raw: "龙井茶"
-  splits:
-  - text: "龙井茶"
-    translated: "West Lake Longjing tea"
-- raw: "竹叶青"
-  splits:
-  - text: "竹叶青"
-    translated: "Bamboo Leaf Tea"
-- raw: "碧螺春茶"
-  splits:
-  - text: "碧螺春茶"
-    translated: "Biluochun tea"
-- raw: "葡萄酒"
-  splits:
-  - text: "葡萄酒"
-    translated: "Grape Wine"
-- raw: "毛峰茶"
-  splits:
-  - text: "毛峰茶"
-    translated: "Mao Feng tea"
-- raw: "新丰酒"
-  splits:
-  - text: "新丰酒"
-    translated: "New Harvest Wine"
-- raw: "云雾茶"
-  splits:
-  - text: "云雾茶"
-    translated: "Cloud Mist Tea"
-- raw: "杜康酒"
-  splits:
-  - text: "杜康酒"
-    translated: "Dukang Wine"
-- raw: "太平猴魁茶"
-  splits:
-  - text: "太平猴魁茶"
-    translated: "Taiping Houkui tea"
-- raw: "桂圆枸杞粥"
-  splits:
-  - text: "桂圆枸杞粥"
-    translated: "Longan and Goji Berry Porridge"
-- raw: "茯苓糕"
-  splits:
-  - text: "茯苓糕"
-    translated: "Poria Pudding"
-- raw: "当归炖羊肉"
-  splits:
-  - text: "当归炖羊肉"
-    translated: "Chinese Angelica and Lamb Soup"
-- raw: "虫草老鸭煲"
-  splits:
-  - text: "虫草老鸭煲"
-    translated: "Abalone and Cordyceps Soup"
-- raw: "四君子汤"
-  splits:
-  - text: "四君子汤"
-    translated: "Four Gentlemen Decoction"
-- raw: "烩八珍"
-  splits:
-  - text: "烩八珍"
-    translated: "Stewed eight delicacies"
-- raw: "清酒"
-  splits:
-  - text: "清酒"
-    translated: "Rice wine"
-- raw: "红茶"
-  splits:
-  - text: "红茶"
-    translated: "Black tea"
-- raw: "花雕酒"
-  splits:
-  - text: "花雕酒"
-    translated: "Shanghu Fortified Wine"
-- raw: "工夫茶"
-  splits:
-  - text: "工夫茶"
-    translated: "Afternoon Tea"
-- raw: "女儿红"
-  splits:
-  - text: "女儿红"
-    translated: "Red Daughter Wine"
-- raw: "古树茶"
-  splits:
-  - text: "古树茶"
-    translated: "Ancient tree tea"
-- raw: "桑落酒"
-  splits:
-  - text: "桑落酒"
-    translated: "Dew Fallen Wine"
-- raw: "九曲红梅茶"
-  splits:
-  - text: "九曲红梅茶"
-    translated: "Nine Bends Crimson Cherry Tea"
-- raw: "猴儿酿"
-  splits:
-  - text: "猴儿酿"
-    translated: "Monkey brew"
-- raw: "金骏眉茶"
-  splits:
-  - text: "金骏眉茶"
-    translated: "Golden Monkey Tea"
-- raw: "换骨醪"
-  splits:
-  - text: "换骨醪"
-    translated: "Bone‑Transforming Decoction"
-- raw: "正山小种茶"
-  splits:
-  - text: "正山小种茶"
-    translated: "Zhengshan Xiazhong tea"
-- raw: "骡子"
-  splits:
-  - text: "骡子"
-    translated: "Mule"
-- raw: "驴子"
-  splits:
-  - text: "驴子"
-    translated: "Donkey"
-- raw: "跛脚马"
-  splits:
-  - text: "跛脚马"
-    translated: "Limping horse"
-- raw: "小马"
-  splits:
-  - text: "小马"
-    translated: "Little Horse"
-- raw: "劣马"
-  splits:
-  - text: "劣马"
-    translated: "Poor horse"
-- raw: "矮马"
-  splits:
-  - text: "矮马"
-    translated: "Pony"
-- raw: "驮马"
-  splits:
-  - text: "驮马"
-    translated: "Pack horse"
-- raw: "瘦马"
-  splits:
-  - text: "瘦马"
-    translated: "Weak horse"
-- raw: "大马"
-  splits:
-  - text: "大马"
-    translated: "Laba"
-- raw: "烈马"
-  splits:
-  - text: "烈马"
-    translated: "Wild Horse"
-- raw: "军马"
-  splits:
-  - text: "军马"
-    translated: "Military horses"
-- raw: "快马"
-  splits:
-  - text: "快马"
-    translated: "Rapid horse"
-- raw: "战马"
-  splits:
-  - text: "战马"
-    translated: "Battlehorse"
-- raw: "河曲马"
-  splits:
-  - text: "河曲马"
-    translated: "Riverbend Horse"
-- raw: "西南马"
-  splits:
-  - text: "西南马"
-    translated: "Southwest Horse"
-- raw: "山地马"
-  splits:
-  - text: "山地马"
-    translated: "Mountain horse"
-- raw: "蒙古马"
-  splits:
-  - text: "蒙古马"
-    translated: "Mongolian horse"
-- raw: "哈萨克马"
-  splits:
-  - text: "哈萨克马"
-    translated: "Kazakh horses"
-- raw: "伊犁马"
-  splits:
-  - text: "伊犁马"
-    translated: "Ili horse"
-- raw: "乌孙马"
-  splits:
-  - text: "乌孙马"
-    translated: "Ussu Horse"
-- raw: "五花马"
-  splits:
-  - text: "五花马"
-    translated: "Five‑colored horse"
-- raw: "白兔马"
-  splits:
-  - text: "白兔马"
-    translated: "White Rabbit Horse"
-- raw: "枣红马"
-  splits:
-  - text: "枣红马"
-    translated: "Chestnut horse"
-- raw: "绿耳马"
-  splits:
-  - text: "绿耳马"
-    translated: "Green Ear Horse"
-- raw: "白义马"
-  splits:
-  - text: "白义马"
-    translated: "White Meaning Horse"
-- raw: "青骓马"
-  splits:
-  - text: "青骓马"
-    translated: "Qingzhui Horse"
-- raw: "华骝马"
-  splits:
-  - text: "华骝马"
-    translated: "Golden Lion Horse"
-- raw: "黄骠马"
-  splits:
-  - text: "黄骠马"
-    translated: "Chestnut horse"
-- raw: "骕骦马"
-  splits:
-  - text: "骕骦马"
-    translated: "Stallion"
-- raw: "玉花骢"
-  splits:
-  - text: "玉花骢"
-    translated: "White Cloud Steed"
-- raw: "奔宵马"
-  splits:
-  - text: "奔宵马"
-    translated: "Swift Heaven Horse"
-- raw: "纤离马"
-  splits:
-  - text: "纤离马"
-    translated: "Xianli Ma"
-- raw: "乌骓马"
-  splits:
-  - text: "乌骓马"
-    translated: "Swift Black Stallion"
-- raw: "白蹄乌"
-  splits:
-  - text: "白蹄乌"
-    translated: "White horse"
-- raw: "什伐赤"
-  splits:
-  - text: "什伐赤"
-    translated: "Shifachi"
-- raw: "拳毛驹"
-  splits:
-  - text: "拳毛驹"
-    translated: "Foal with mane"
-- raw: "斑豹马"
-  splits:
-  - text: "斑豹马"
-    translated: "Leopard Horse"
-- raw: "赤骥马"
-  splits:
-  - text: "赤骥马"
-    translated: "Red Steed"
-- raw: "麒麟兽"
-  splits:
-  - text: "麒麟兽"
-    translated: "Qilin beast"
-- raw: "照夜白"
-  splits:
-  - text: "照夜白"
-    translated: "Zhonghuabeiyang"
-- raw: "汗血马"
-  splits:
-  - text: "汗血马"
-    translated: "Blood‑sweat horse"
-- raw: "赤兔马"
-  splits:
-  - text: "赤兔马"
-    translated: "Red Horse"
-- raw: "的卢马"
-  splits:
-  - text: "的卢马"
-    translated: "Qilu horse"
-- raw: "绝影马"
-  splits:
-  - text: "绝影马"
-    translated: "Shadow Rush Horse"
-- raw: "特勒骠"
-  splits:
-  - text: "特勒骠"
-    translated: "Tellerion"
-- raw: "神凫马"
-  splits:
-  - text: "神凫马"
-    translated: "Divine Duck Horse"
-- raw: "飒露紫"
-  splits:
-  - text: "飒露紫"
-    translated: "Slapuizi"
-- raw: "白龙驹"
-  splits:
-  - text: "白龙驹"
-    translated: "White Dragon Horse"
-- raw: "补血丹"
-  splits:
-  - text: "补血丹"
-    translated: "Blood‑Replenishing Pill"
-- raw: "小还丹"
-  splits:
-  - text: "小还丹"
-    translated: "Small Restoring Pill"
-- raw: "大还丹"
-  splits:
-  - text: "大还丹"
-    translated: "Great Restorative Pill"
-- raw: "人参养荣丸"
-  splits:
-  - text: "人参养荣丸"
-    translated: "Reishi and Ginseng Tonifying Pill"
-- raw: "玉洞黑石丹"
-  splits:
-  - text: "玉洞黑石丹"
-    translated: "E‑black‑stone‑pill Cave"
-- raw: "万灵回生散"
-  splits:
-  - text: "万灵回生散"
-    translated: "Revival Powder of All Spirits"
-- raw: "益气散"
-  splits:
-  - text: "益气散"
-    translated: "Reinforce Qi Powder"
-- raw: "行气丹"
-  splits:
-  - text: "行气丹"
-    translated: "Qi Regulation Pill"
-- raw: "逍遥丹"
-  splits:
-  - text: "逍遥丹"
-    translated: "Free Spirit Pill"
-- raw: "参苓白术散"
-  splits:
-  - text: "参苓白术散"
-    translated: "Participating Ginseng and Atractylodes Decoction"
-- raw: "济生养气丸"
-  splits:
-  - text: "济生养气丸"
-    translated: "Jisheng Naiqi Pills"
-- raw: "紫霄玄关散"
-  splits:
-  - text: "紫霄玄关散"
-    translated: "Purple Heaven Dao Gate Dispersion"
-- raw: "八珍散"
-  splits:
-  - text: "八珍散"
-    translated: "Eight Treasure Powder"
-- raw: "无常丹"
-  splits:
-  - text: "无常丹"
-    translated: "Impermanence Pill"
-- raw: "紫金丹"
-  splits:
-  - text: "紫金丹"
-    translated: "Golden Lotus Pill"
-- raw: "天王补心丹"
-  splits:
-  - text: "天王补心丹"
-    translated: "Tian Wang Bu Xin Dan"
-- raw: "生生造化丹"
-  splits:
-  - text: "生生造化丹"
-    translated: "Life‑Breathing Elixirs"
-- raw: "九转还魂丹"
-  splits:
-  - text: "九转还魂丹"
-    translated: "Nine‑Turn Life‑Returning Pill"
-- raw: "止血散"
-  splits:
-  - text: "止血散"
-    translated: "Blood Stop Powder"
-- raw: "金疮散"
-  splits:
-  - text: "金疮散"
-    translated: "Tiger Balm"
-- raw: "三七跌打散"
-  splits:
-  - text: "三七跌打散"
-    translated: "Sanqi Injury Relief Powder"
-- raw: "接骨七厘散"
-  splits:
-  - text: "接骨七厘散"
-    translated: "Seven‑Ingredient Bone Setting Powder"
-- raw: "血府逐瘀散"
-  splits:
-  - text: "血府逐瘀散"
-    translated: "Blood Mansion Blood‑Expelling Powder"
-- raw: "天香断续散"
-  splits:
-  - text: "天香断续散"
-    translated: "Fragrant Heaven Intermittent Powder"
-- raw: "通络丹"
-  splits:
-  - text: "通络丹"
-    translated: "Tonifying Pill"
-- raw: "紫藤丹"
-  splits:
-  - text: "紫藤丹"
-    translated: "Purple Wisteria Pill"
-- raw: "牛黄血竭丹"
-  splits:
-  - text: "牛黄血竭丹"
-    translated: "Orchid Bull Blood‑Resolving Pill"
-- raw: "田七鲨胆丹"
-  splits:
-  - text: "田七鲨胆丹"
-    translated: "Seven‑Point Shark Gallbladder Pill"
-- raw: "三黄宝腊丹"
-  splits:
-  - text: "三黄宝腊丹"
-    translated: "Three‑Herb Treasure Wax Pill"
-- raw: "还阳正气丹"
-  splits:
-  - text: "还阳正气丹"
-    translated: "Yang Restoring Pill"
-- raw: "黄连丸"
-  splits:
-  - text: "黄连丸"
-    translated: "Coptis Root Pill"
-- raw: "荆防丸"
-  splits:
-  - text: "荆防丸"
-    translated: "Jingfang Wan"
-- raw: "六味地黄丸"
-  splits:
-  - text: "六味地黄丸"
-    translated: "Six Flavor Rehmannia Pill"
-- raw: "天心解毒丸"
-  splits:
-  - text: "天心解毒丸"
-    translated: "Heart Heaven Detox Pill"
-- raw: "金花玉露丸"
-  splits:
-  - text: "金花玉露丸"
-    translated: "Golden Lotus Jade Dew Pill"
-- raw: "龙涎净厄丸"
-  splits:
-  - text: "龙涎净厄丸"
-    translated: "Dragon's Breath Purification Pills"
-- raw: "手甲"
-  splits:
-  - text: "手甲"
-    translated: "Bracelets"
-- raw: "指刺"
-  splits:
-  - text: "指刺"
-    translated: "Stab"
-- raw: "钩爪"
-  splits:
-  - text: "钩爪"
-    translated: "Claw"
-- raw: "指虎"
-  splits:
-  - text: "指虎"
-    translated: "Monkey glove"
-- raw: "拳套"
-  splits:
-  - text: "拳套"
-    translated: "Gloves"
-- raw: "指环"
-  splits:
-  - text: "指环"
-    translated: "Ring"
-- raw: "重剑"
-  splits:
-  - text: "重剑"
-    translated: "Heavy Sword"
-- raw: "短剑"
-  splits:
-  - text: "短剑"
-    translated: "Short sword"
-- raw: "细剑"
-  splits:
-  - text: "细剑"
-    translated: "Fine Sword"
-- raw: "长剑"
-  splits:
-  - text: "长剑"
-    translated: "Long sword"
-- raw: "大剑"
-  splits:
-  - text: "大剑"
-    translated: "Great Sword"
-- raw: "软剑"
-  splits:
-  - text: "软剑"
-    translated: "Soft Sword"
-- raw: "重刀"
-  splits:
-  - text: "重刀"
-    translated: "Heavy Blade"
-- raw: "短刀"
-  splits:
-  - text: "短刀"
-    translated: "Short knife"
-- raw: "唐刀"
-  splits:
-  - text: "唐刀"
-    translated: "Saber"
-- raw: "朴刀"
-  splits:
-  - text: "朴刀"
-    translated: "Cutlass"
-- raw: "大刀"
-  splits:
-  - text: "大刀"
-    translated: "Big Blade"
-- raw: "弯刀"
-  splits:
-  - text: "弯刀"
-    translated: "Scimitar"
-- raw: "长戟"
-  splits:
-  - text: "长戟"
-    translated: "Long spear"
-- raw: "长枪"
-  splits:
-  - text: "长枪"
-    translated: "Long spear"
-- raw: "长叉"
-  splits:
-  - text: "长叉"
-    translated: "Long fork"
-- raw: "长戈"
-  splits:
-  - text: "长戈"
-    translated: "Long Spear"
-- raw: "长矛"
-  splits:
-  - text: "长矛"
-    translated: "Pike"
-- raw: "长棍"
-  splits:
-  - text: "长棍"
-    translated: "Long staff"
-- raw: "飞轮"
-  splits:
-  - text: "飞轮"
-    translated: "Flywheel"
-- raw: "判笔"
-  splits:
-  - text: "判笔"
-    translated: "Judgment_pen"
-- raw: "软鞭"
-  splits:
-  - text: "软鞭"
-    translated: "Soft whip"
-- raw: "铁扇"
-  splits:
-  - text: "铁扇"
-    translated: "Iron Fan"
-- raw: "长弓"
-  splits:
-  - text: "长弓"
-    translated: "Longbow"
-- raw: "短弓"
-  splits:
-  - text: "短弓"
-    translated: "Short bow"
-- raw: "曲弓"
-  splits:
-  - text: "曲弓"
-    translated: "Curved bow"
-- raw: "直弓"
-  splits:
-  - text: "直弓"
-    translated: "Drawn bow"
-- raw: "硬弓"
-  splits:
-  - text: "硬弓"
-    translated: "Hardbow"
-- raw: "软弓"
-  splits:
-  - text: "软弓"
-    translated: "Soft bow"
 - raw: "查看弟子相关信息"
   splits:
   - text: "查看弟子相关信息"
@@ -52104,2901 +51836,3 @@
   splits:
   - text: "名驹"
     translated: "Prize Horse"
-- raw: "(不观战)"
-  splits:
-  - text: "不观战"
-    translated: "No spectator mode"
-  templates:
-  - template: "({0})"
-- raw: "不观看其他角色之间的对战"
-  splits:
-  - text: "不观看其他角色之间的对战"
-    translated: "Not watching the battle between other characters"
-- raw: "(观战)"
-  splits:
-  - text: "观战"
-    translated: "Spectate"
-  templates:
-  - template: "({0})"
-- raw: "其他角色对战时会询问是否观看"
-  splits:
-  - text: "其他角色对战时会询问是否观看"
-    translated: "Other characters will ask if you want to watch when they are battling."
-- raw: "10000两"
-  splits:
-  - text: "10000两"
-    translated: "10000 Taels"
-- raw: "1000两"
-  splits:
-  - text: "1000两"
-    translated: "1000 Taels"
-- raw: "100两"
-  splits:
-  - text: "100两"
-    translated: "100 Taels"
-- raw: "10天"
-  splits:
-  - text: "10天"
-    translated: "10 days"
-- raw: "15天"
-  splits:
-  - text: "15天"
-    translated: "15 days"
-- raw: "1天"
-  splits:
-  - text: "1天"
-    translated: "1 day"
-- raw: "2000两"
-  splits:
-  - text: "2000两"
-    translated: "2000 Taels"
-- raw: "5000两"
-  splits:
-  - text: "5000两"
-    translated: "5000 Taels"
-- raw: "500两"
-  splits:
-  - text: "500两"
-    translated: "500 Taels"
-- raw: "5天"
-  splits:
-  - text: "5天"
-    translated: "5 days"
-- raw: "<color=#{1}>第{0}层</color>"
-  splits:
-  - text: "第"
-    translated: "Chapter"
-  - subIndex: 1
-    text: "层"
-    translated: "Layer"
-  templates:
-  - template: "<color=#⟦1⟧>{0}⟦0⟧{1}</color>"
-- raw: "学识{2}排除"
-  splits:
-  - text: "学识"
-    translated: "Scholarship"
-  - subIndex: 1
-    text: "排除"
-    translated: "Exclude"
-  templates:
-  - template: "{0}⟦2⟧{1}"
-- raw: "{0}周边情报"
-  splits:
-  - text: "周边情报"
-    translated: "Surrounding intelligence"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "{0}宴会({1}日)"
-  splits:
-  - text: "宴会"
-    translated: "Banquet"
-  - subIndex: 1
-    text: "日"
-    translated: "Day"
-  templates:
-  - template: "⟦0⟧{0}(⟦1⟧{1})"
-- raw: "基础评分{5}\n基础加成{6}%"
-  splits:
-  - text: "基础评分"
-    translated: "Base score"
-  - subIndex: 1
-    text: "基础加成"
-    translated: "Base bonus"
-  templates:
-  - template: "{0}⟦5⟧\n{1}⟦6⟧%"
-- raw: "{0}教化"
-  splits:
-  - text: "教化"
-    translated: "Education"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "♦以{0}教化贼人\n♦获取声望和{0}修行经验"
-  splits:
-  - text: "以"
-    translated: "With"
-  - subIndex: 1
-    text: "教化贼人"
-    translated: "Civilize the bandits"
-  - subIndex: 2
-    text: "获取声望和"
-    translated: "Gain reputation and"
-  - subIndex: 3
-    text: "修行经验"
-    translated: "Training experience"
-  templates:
-  - template: "♦{0}⟦0⟧{1}\n♦{2}⟦0⟧{3}"
-- raw: "{0}表演"
-  splits:
-  - text: "表演"
-    translated: "Performance"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "{0}难度"
-  splits:
-  - text: "难度"
-    translated: "Difficulty"
-  templates:
-  - template: "⟦0⟧{0}"
-- raw: "一个都答不上..."
-  splits:
-  - text: "一个都答不上..."
-    translated: "Not a single one can answer..."
-- raw: "一探究竟"
-  splits:
-  - text: "一探究竟"
-    translated: "Get to the bottom of it"
-- raw: "一番感激"
-  splits:
-  - text: "一番感激"
-    translated: "Deepest gratitude"
-- raw: "一言为定"
-  splits:
-  - text: "一言为定"
-    translated: "A word is as good as a vow."
-- raw: "一较高下"
-  splits:
-  - text: "一较高下"
-    translated: "To test each other's skills"
-- raw: "万份感谢"
-  splits:
-  - text: "万份感谢"
-    translated: "Thousands of thanks"
-- raw: "不妨一看"
-  splits:
-  - text: "不妨一看"
-    translated: "Why not take a look?"
-- raw: "不客气了"
-  splits:
-  - text: "不客气了"
-    translated: "You're welcome"
-- raw: "不必客气"
-  splits:
-  - text: "不必客气"
-    translated: "You're welcome"
-- raw: "不感兴趣"
-  splits:
-  - text: "不感兴趣"
-    translated: "Not interested"
-- raw: "不自量力"
-  splits:
-  - text: "不自量力"
-    translated: "Overreach"
-- raw: "不醉不归！"
-  splits:
-  - text: "不醉不归！"
-    translated: "Not drunk, not home!"
-- raw: "与{0}分享"
-  splits:
-  - text: "与"
-    translated: "And"
-  - subIndex: 1
-    text: "分享"
-    translated: "Share"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "个人赠礼"
-  splits:
-  - text: "个人赠礼"
-    translated: "Personal Gift"
-- raw: "中级嘉奖"
-  splits:
-  - text: "中级嘉奖"
-    translated: "Middle Award"
-- raw: "中额红包"
-  splits:
-  - text: "中额红包"
-    translated: "Middle‑sized red envelope"
-- raw: "中额赠礼"
-  splits:
-  - text: "中额赠礼"
-    translated: "Mid‑tier Gift"
-- raw: "强盗头目&随机"
-  splits:
-  - text: "强盗头目"
-    translated: "Bandit leader"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "事件难度+0.5"
-  splits:
-  - text: "事件难度"
-    translated: "Event difficulty"
-  templates:
-  - template: "{0}+0.5"
-- raw: "怪盗&随机"
-  splits:
-  - text: "怪盗"
-    translated: "Thief King"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.2"
-  splits:
-  - text: "随机0.2"
-    translated: "Random 0.2"
-- raw: "事件难度+1"
-  splits:
-  - text: "事件难度"
-    translated: "Event difficulty"
-  templates:
-  - template: "{0}+1"
-- raw: "恶贼头目&随机"
-  splits:
-  - text: "恶贼头目"
-    translated: "Chief villain"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.3"
-  splits:
-  - text: "随机0.3"
-    translated: "Random 0.3"
-- raw: "恶霸头目&随机"
-  splits:
-  - text: "恶霸头目"
-    translated: "Bullseye Boss"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "杀手头目&随机"
-  splits:
-  - text: "杀手头目"
-    translated: "Boss Killer"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.4"
-  splits:
-  - text: "随机0.4"
-    translated: "Random 0.4"
-- raw: "盗贼&随机"
-  splits:
-  - text: "盗贼"
-    translated: "Thief"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.6"
-  splits:
-  - text: "随机0.6"
-    translated: "Random 0.6"
-- raw: "逃犯&随机"
-  splits:
-  - text: "逃犯"
-    translated: "Fugitive"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "邪道头目&随机"
-  splits:
-  - text: "邪道头目"
-    translated: "Chief Heretic Leader"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.1"
-  splits:
-  - text: "随机0.1"
-    translated: "Random 0.1"
-- raw: "随机0"
-  splits:
-  - text: "随机0"
-    translated: "Random 0"
-- raw: "马贼头目&随机"
-  splits:
-  - text: "马贼头目"
-    translated: "Bandit leader"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "随机0.5"
-  splits:
-  - text: "随机0.5"
-    translated: "Random 0.5"
-- raw: "魔头&随机"
-  splits:
-  - text: "魔头"
-    translated: "Demon king"
-  - subIndex: 1
-    text: "随机"
-    translated: "Randomly"
-  templates:
-  - template: "{0}&{1}"
-- raw: "事件难度+1.5"
-  splits:
-  - text: "事件难度"
-    translated: "Event difficulty"
-  templates:
-  - template: "{0}+1.5"
-- raw: "为其践行"
-  splits:
-  - text: "为其践行"
-    translated: "To uphold it"
-- raw: "举手之劳"
-  splits:
-  - text: "举手之劳"
-    translated: "A piece of cake"
-- raw: "义不容辞"
-  splits:
-  - text: "义不容辞"
-    translated: "Cannot shirk the duty"
-- raw: "乖乖交钱"
-  splits:
-  - text: "乖乖交钱"
-    translated: "Pay up willingly"
-- raw: "乘机开溜"
-  splits:
-  - text: "乘机开溜"
-    translated: "Grab the opportunity to slip away"
-- raw: "乞讨"
-  splits:
-  - text: "乞讨"
-    translated: "Begging"
-- raw: "买下宝物"
-  splits:
-  - text: "买下宝物"
-    translated: "Buy the treasure"
-- raw: "了解周遭情况"
-  splits:
-  - text: "了解周遭情况"
-    translated: "Understand the surroundings"
-- raw: "了解远处情况"
-  splits:
-  - text: "了解远处情况"
-    translated: "Understand the situation far away"
-- raw: "二人平分"
-  splits:
-  - text: "二人平分"
-    translated: "They split it evenly"
-- raw: "二位住手，要打就打我吧"
-  splits:
-  - text: "二位住手，要打就打我吧"
-    translated: "Two of you stop. You can hit me instead."
-- raw: "♦好友关系好感获取+10%，好感消耗-10%\n♦对好友作恶，恶名x200%"
-  splits:
-  - text: "好友关系好感获取+10%，好感消耗"
-    translated: "Friendship affinity gain +10%, affinity consumption"
-  - subIndex: 1
-    text: "对好友作恶，恶名"
-    translated: "Marring a friend, gaining notoriety"
-  templates:
-  - template: "♦{0}-10%\n♦{1}x200%"
-- raw: "♦亲密关系好感获取+20%，好感消耗-20%\n♦对亲友作恶，恶名x400%"
-  splits:
-  - text: "亲密关系好感获取+20%，好感消耗"
-    translated: "Intimate Relationship Goodwill Gain +20%, Goodwill Consumption"
-  - subIndex: 1
-    text: "对亲友作恶，恶名"
-    translated: "Doing evil to relatives and friends, acquiring a wicked reputation"
-  templates:
-  - template: "♦{0}-20%\n♦{1}x400%"
-- raw: "以武论道"
-  splits:
-  - text: "以武论道"
-    translated: "Discourse on Dao through Martial Arts"
-- raw: "以理说服"
-  splits:
-  - text: "以理说服"
-    translated: "Persuade with reason"
-- raw: "伏地恳求"
-  splits:
-  - text: "伏地恳求"
-    translated: "Kneel humbly"
-- raw: "休养"
-  splits:
-  - text: "休养"
-    translated: "Recovery"
-- raw: "传授"
-  splits:
-  - text: "传授"
-    translated: "Teach"
-- raw: "♦传授弟子武功无好感要求\n♦武功品级不能超过对方身份等级\n♦每月最多一次"
-  splits:
-  - text: "传授弟子武功无好感要求"
-    translated: "Teach disciples martial arts without any favor points requirement"
-  - subIndex: 1
-    text: "武功品级不能超过对方身份等级"
-    translated: "Combat skill grade cannot exceed the other party's status grade."
-  - subIndex: 2
-    text: "每月最多一次"
-    translated: "At most once a month"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "传授技艺潜力"
-  splits:
-  - text: "传授技艺潜力"
-    translated: "Potential to impart skills"
-- raw: "♦你的潜力比对方高出越多，效果越好\n♦提升2点好感"
-  splits:
-  - text: "你的潜力比对方高出越多，效果越好"
-    translated: "The greater the potential difference between you and the other person, the better the effect."
-  - subIndex: 1
-    text: "提升2点好感"
-    translated: "Increase 2 points of favor"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "传授技艺经验"
-  splits:
-  - text: "传授技艺经验"
-    translated: "Share skill and experience"
-- raw: "♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
-  splits:
-  - text: "你的技艺比对方高出越多，效果越好"
-    translated: "The better the disparity in your skill compared to the opponent, the better the effect."
-  - subIndex: 1
-    text: "提升2点好感"
-    translated: "Increase 2 points of favor"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "传授此武学"
-  splits:
-  - text: "传授此武学"
-    translated: "Teach this martial art"
-- raw: "传授此秘籍"
-  splits:
-  - text: "传授此秘籍"
-    translated: "Teach this secret technique"
-- raw: "传授武学"
-  splits:
-  - text: "传授武学"
-    translated: "Teach martial arts"
-- raw: "♦传授自己掌握的武学"
-  splits:
-  - text: "传授自己掌握的武学"
-    translated: "Teach the martial arts techniques he knows"
-  templates:
-  - template: "♦{0}"
-- raw: "传授秘籍"
-  splits:
-  - text: "传授秘籍"
-    translated: "Bestow the secret manual"
-- raw: "♦传授背包/仓库/藏经阁内秘籍记载的武学"
-  splits:
-  - text: "传授背包"
-    translated: "Backpack Training"
-  - subIndex: 1
-    text: "仓库"
-    translated: "Warehouse"
-  - subIndex: 2
-    text: "藏经阁内秘籍记载的武学"
-    translated: "Scripture Pavilion records of martial arts techniques"
-  templates:
-  - template: "♦{0}/{1}/{2}"
-- raw: "低价出售({0}两)"
-  splits:
-  - text: "低价出售"
-    translated: "Sell at a low price"
-  - subIndex: 1
-    text: "两"
-    translated: "Taels"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "使用钥匙"
-  splits:
-  - text: "使用钥匙"
-    translated: "Use the key"
-- raw: "修习{0}口诀"
-  splits:
-  - text: "修习"
-    translated: "Practice"
-  - subIndex: 1
-    text: "口诀"
-    translated: "Mnemonic"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "修习{0}潜力"
-  splits:
-  - text: "修习"
-    translated: "Practice"
-  - subIndex: 1
-    text: "潜力"
-    translated: "Potential"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "修改本门弟子折扣"
-  splits:
-  - text: "修改本门弟子折扣"
-    translated: "Modify discount for this disciple"
-- raw: "修改非本门弟子折扣"
-  splits:
-  - text: "修改非本门弟子折扣"
-    translated: "Modify discount for non‑disciples"
-- raw: "修炼{0}"
-  splits:
-  - text: "修炼"
-    translated: "Cultivate"
-  templates:
-  - template: "{0}⟦0⟧"
-- raw: "修行..."
-  splits:
-  - text: "修行..."
-    translated: "Practice..."
-- raw: "停战{0}个月"
-  splits:
-  - text: "停战"
-    translated: "Ceasefire"
-  - subIndex: 1
-    text: "个月"
-    translated: "Months"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "至少需{2}门派好感\n消耗{3}门派好感"
-  splits:
-  - text: "至少需"
-    translated: "At least needs"
-  - subIndex: 1
-    text: "门派好感"
-    translated: "Sect Favor"
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "门派好感"
-    translated: "Sect Favor"
-  templates:
-  - template: "{0}⟦2⟧{1}\n{2}⟦3⟧{3}"
-- raw: "充分休息"
-  splits:
-  - text: "充分休息"
-    translated: "Sufficient rest"
-- raw: "先生高义，万分感谢"
-  splits:
-  - text: "先生高义，万分感谢"
-    translated: "Sir, it is my honor, and I am deeply grateful."
-- raw: "先追上我再说"
-  splits:
-  - text: "先追上我再说"
-    translated: "Catch up with me first"
-- raw: "免费赠与"
-  splits:
-  - text: "免费赠与"
-    translated: "Free gift"
-- raw: "免费赠送"
-  splits:
-  - text: "免费赠送"
-    translated: "Free gift"
-- raw: "兑换该武学"
-  splits:
-  - text: "兑换该武学"
-    translated: "Exchange this martial art skill"
-- raw: "入朝主政"
-  splits:
-  - text: "入朝主政"
-    translated: "Govern in the Capital"
-- raw: "入朝掌兵"
-  splits:
-  - text: "入朝掌兵"
-    translated: "Command the army upon entering the capital"
-- raw: "入派"
-  splits:
-  - text: "入派"
-    translated: "Join the Fated Ones"
-- raw: "♦邀请眷侣加入自己门派"
-  splits:
-  - text: "邀请眷侣加入自己门派"
-    translated: "Invite couples to join your sect"
-  templates:
-  - template: "♦{0}"
-- raw: "入队"
-  splits:
-  - text: "入队"
-    translated: "Join the queue"
-- raw: "♦邀请对方入队30天\n♦{0}{2}"
-  splits:
-  - text: "邀请对方入队30天"
-    translated: "Invite the other party to join the queue for 30 days"
-  templates:
-  - template: "♦{0}\n♦⟦0⟧⟦2⟧"
-- raw: "内功 吐纳法"
-  splits:
-  - text: "内功"
-    translated: "Neigong"
-  - subIndex: 1
-    text: "吐纳法"
-    translated: "Breathing technique"
-  templates:
-  - template: "{0} {1}"
-- raw: "♦与对方结束师徒关系"
-  splits:
-  - text: "与对方结束师徒关系"
-    translated: "End the master‑apprentice relationship with the other party"
-  templates:
-  - template: "♦{0}"
-- raw: "出征！"
-  splits:
-  - text: "出征！"
-    translated: "March to battle!"
-- raw: "出手伤人"
-  splits:
-  - text: "出手伤人"
-    translated: "Assault and battery"
-- raw: "♦重伤对方\n♦增加10恶名"
-  splits:
-  - text: "重伤对方"
-    translated: "Inflicted serious injuries on the opponent"
-  - subIndex: 1
-    text: "增加10恶名"
-    translated: "Increase10Notoriety"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "出手吧"
-  splits:
-  - text: "出手吧"
-    translated: "Go ahead and do it"
-- raw: "出手吧！"
-  splits:
-  - text: "出手吧！"
-    translated: "Go for it!"
-- raw: "出手威逼"
-  splits:
-  - text: "出手威逼"
-    translated: "Force with a show of strength"
-- raw: "出手阻止"
-  splits:
-  - text: "出手阻止"
-    translated: "Step in to stop"
-- raw: "出钱了事"
-  splits:
-  - text: "出钱了事"
-    translated: "It's better to just pay up"
-- raw: "分手"
-  splits:
-  - text: "分手"
-    translated: "Breakup"
-- raw: "♦结束情侣关系\n♦降低100点好感\n♦固定增加20恶名"
-  splits:
-  - text: "结束情侣关系"
-    translated: "End the romantic relationship"
-  - subIndex: 1
-    text: "降低100点好感"
-    translated: "Decrease 100 points of goodwill"
-  - subIndex: 2
-    text: "固定增加20恶名"
-    translated: "Fixed increase 20 Notorious Rating"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "分文不取"
-  splits:
-  - text: "分文不取"
-    translated: "Not a cent for free"
-- raw: "分而食之"
-  splits:
-  - text: "分而食之"
-    translated: "Divide and conquer"
-- raw: "切磋出师"
-  splits:
-  - text: "切磋出师"
-    translated: "Refine through sparring"
-- raw: "初级嘉奖"
-  splits:
-  - text: "初级嘉奖"
-    translated: "Basic Award"
-- raw: "别生气啊"
-  splits:
-  - text: "别生气啊"
-    translated: "Don't get upset"
-- raw: "刷新展品"
-  splits:
-  - text: "刷新展品"
-    translated: "Refresh exhibits"
-- raw: "割据一方"
-  splits:
-  - text: "割据一方"
-    translated: "Govern a region"
-- raw: "劝入门派"
-  splits:
-  - text: "劝入门派"
-    translated: "AdviseEntry"
-- raw: "动之以理"
-  splits:
-  - text: "动之以理"
-    translated: "Reason with them"
-- raw: "助{0}一臂之力"
-  splits:
-  - text: "助"
-    translated: "Help"
-  - subIndex: 1
-    text: "一臂之力"
-    translated: "A helping hand"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "劫狱"
-  splits:
-  - text: "劫狱"
-    translated: "Prison Break"
-- raw: "♦获取贼人身上一件物品\n♦增加少许恶名"
-  splits:
-  - text: "获取贼人身上一件物品"
-    translated: "Retrieve an item from the bandit's body"
-  - subIndex: 1
-    text: "增加少许恶名"
-    translated: "Increase a little notoriety"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "包在我身上"
-  splits:
-  - text: "包在我身上"
-    translated: "Leave it to me"
-- raw: "包扎"
-  splits:
-  - text: "包扎"
-    translated: "Bandage"
-- raw: "技能影响:"
-  splits:
-  - text: "技能影响"
-    translated: "Skill impact"
-  templates:
-  - template: "{0}:"
-- raw: "千恩万谢"
-  splits:
-  - text: "千恩万谢"
-    translated: "Thousand thanks"
-- raw: "单次指点"
-  splits:
-  - text: "单次指点"
-    translated: "Single guidance"
-- raw: "参赛"
-  splits:
-  - text: "参赛"
-    translated: "To compete"
-- raw: "友善..."
-  splits:
-  - text: "友善..."
-    translated: "Friendly..."
-- raw: "受教了"
-  splits:
-  - text: "受教了"
-    translated: "Learned a lot"
-- raw: "只是借你一看罢了"
-  splits:
-  - text: "只是借你一看罢了"
-    translated: "Just a quick look, that's all"
-- raw: "只管开口便是！"
-  splits:
-  - text: "只管开口便是！"
-    translated: "Just speak up!"
-- raw: "只管砸来便是！"
-  splits:
-  - text: "只管砸来便是！"
-    translated: "Just keep attacking!"
-- raw: "只管考验便是！"
-  splits:
-  - text: "只管考验便是！"
-    translated: "Just test me then!"
-- raw: "只管走起便是！"
-  splits:
-  - text: "只管走起便是！"
-    translated: "Just get moving!"
-- raw: "只能出手了"
-  splits:
-  - text: "只能出手了"
-    translated: "We had to act now"
-- raw: "只要一半价格"
-  splits:
-  - text: "只要一半价格"
-    translated: "As long as it's half the price"
-- raw: "可惜可惜"
-  splits:
-  - text: "可惜可惜"
-    translated: "Pity pity"
-- raw: "同行"
-  splits:
-  - text: "同行"
-    translated: "Colleague"
-- raw: "♦邀请眷侣加入队伍\n♦无好感消耗"
-  splits:
-  - text: "邀请眷侣加入队伍"
-    translated: "Invite the couple to join the team"
-  - subIndex: 1
-    text: "无好感消耗"
-    translated: "No affection points consumption"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "后会有期"
-  splits:
-  - text: "后会有期"
-    translated: "See you later"
-- raw: "听我一言"
-  splits:
-  - text: "听我一言"
-    translated: "Hear me out"
-- raw: "告辞"
-  splits:
-  - text: "告辞"
-    translated: "Goodbye"
-- raw: "告辞！"
-  splits:
-  - text: "告辞！"
-    translated: "Goodbye!"
-- raw: "哼，还好我早有准备！"
-  splits:
-  - text: "哼，还好我早有准备！"
-    translated: "Hmph, good thing I was prepared!"
-- raw: "唔......"
-  splits:
-  - text: "唔......"
-    translated: "Umm...."
-- raw: "唯唯诺诺"
-  splits:
-  - text: "唯唯诺诺"
-    translated: "Timidly"
-- raw: "♦降低20好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "降低20好感"
-    translated: "Reduce 20favor"
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-    translated: "If affection is less than 50, the romantic relationship will be severed."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "嘉奖"
-  splits:
-  - text: "嘉奖"
-    translated: "Reward"
-- raw: "♦以银两或珍宝嘉奖弟子\n♦提升弟子好感，忠诚和门派功绩\n♦每月最多一次"
-  splits:
-  - text: "以银两或珍宝嘉奖弟子"
-    translated: "Reward disciples with silver or precious treasures"
-  - subIndex: 1
-    text: "提升弟子好感，忠诚和门派功绩"
-    translated: "Increase apprentice goodwill, loyalty, and sect merit points"
-  - subIndex: 2
-    text: "每月最多一次"
-    translated: "At most once a month"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "围观"
-  splits:
-  - text: "围观"
-    translated: "Gathering around"
-- raw: "均价出售({0}两)"
-  splits:
-  - text: "均价出售"
-    translated: "Sell at average price"
-  - subIndex: 1
-    text: "两"
-    translated: "Taels"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "坐镇指挥"
-  splits:
-  - text: "坐镇指挥"
-    translated: "Command from the rear"
-- raw: "垫付一半欠款"
-  splits:
-  - text: "垫付一半欠款"
-    translated: "Pay half of the outstanding debt upfront"
-- raw: "垫付全部欠款"
-  splits:
-  - text: "垫付全部欠款"
-    translated: "Pay off all outstanding debts"
-- raw: "垫付欠款"
-  splits:
-  - text: "垫付欠款"
-    translated: "Advance payment for outstanding debt"
-- raw: "多少给点吧"
-  splits:
-  - text: "多少给点吧"
-    translated: "How much should I give?"
-- raw: "多谢"
-  splits:
-  - text: "多谢"
-    translated: "Thank you"
-- raw: "多谢大侠"
-  splits:
-  - text: "多谢大侠"
-    translated: "Thank you, Great Hero"
-- raw: "多谢捧场"
-  splits:
-  - text: "多谢捧场"
-    translated: "Thanks for coming"
-- raw: "大张旗鼓"
-  splits:
-  - text: "大张旗鼓"
-    translated: "With great fanfare"
-- raw: "迎战大量守卫\n获取高品质秘籍"
-  splits:
-  - text: "迎战大量守卫"
-    translated: "Engage numerous defenders"
-  - subIndex: 1
-    text: "获取高品质秘籍"
-    translated: "Obtain high‑quality elixirs"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "大胆表白"
-  splits:
-  - text: "大胆表白"
-    translated: "Boldly confess your feelings"
-- raw: "大胆贼人！"
-  splits:
-  - text: "大胆贼人！"
-    translated: "Bold thief!"
-- raw: "大额红包"
-  splits:
-  - text: "大额红包"
-    translated: "Large red envelope"
-- raw: "大额赠礼"
-  splits:
-  - text: "大额赠礼"
-    translated: "Generous gift"
-- raw: "天赐良机"
-  splits:
-  - text: "天赐良机"
-    translated: "Heavenly opportunity"
-- raw: "好个强敌！"
-  splits:
-  - text: "好个强敌！"
-    translated: "Great adversary!"
-- raw: "好险好险..."
-  splits:
-  - text: "好险好险..."
-    translated: "What a close call..."
-- raw: "好，一起上吧！"
-  splits:
-  - text: "好，一起上吧！"
-    translated: "Alright, let's go together!"
-- raw: "好，我们合力对敌！"
-  splits:
-  - text: "好，我们合力对敌！"
-    translated: "Okay, let's work together to fight the enemy!"
-- raw: "好，我们合力除贼！"
-  splits:
-  - text: "好，我们合力除贼！"
-    translated: "Good, let's join forces to eliminate the bandits!"
-- raw: "好，算我一个！"
-  splits:
-  - text: "好，算我一个！"
-    translated: "Sure, count me in!"
-- raw: "如此便好..."
-  splits:
-  - text: "如此便好..."
-    translated: "So it is as it should be..."
-- raw: "委托？"
-  splits:
-  - text: "委托？"
-    translated: "Commission?"
-- raw: "♦完成对方委托提升好感"
-  splits:
-  - text: "完成对方委托提升好感"
-    translated: "Complete the commission to raise reputation"
-  templates:
-  - template: "♦{0}"
-- raw: "娓娓道来"
-  splits:
-  - text: "娓娓道来"
-    translated: "Told with great detail"
-- raw: "学习技艺潜力"
-  splits:
-  - text: "学习技艺潜力"
-    translated: "Potential to learn a skill"
-- raw: "♦对方潜力比你高出越多，效果越好\n♦消耗10点好感(师傅好感消耗减半)"
-  splits:
-  - text: "对方潜力比你高出越多，效果越好"
-    translated: "The greater the potential difference between your opponent and you, the better the effect."
-  - subIndex: 1
-    text: "消耗10点好感"
-    translated: "Consume 10 points of favor"
-  - subIndex: 2
-    text: "师傅好感消耗减半"
-    translated: "Master affection consumption reduced by half"
-  templates:
-  - template: "♦{0}\n♦{1}({2})"
-- raw: "学习技艺经验"
-  splits:
-  - text: "学习技艺经验"
-    translated: "Skillcraft experience"
-- raw: "♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
-  splits:
-  - text: "对方技艺比你高出越多，效果越好"
-    translated: "While their skill is better than yours, the effect is also enhanced."
-  - subIndex: 1
-    text: "消耗4点好感"
-    translated: "Consume 4 points of goodwill"
-  - subIndex: 2
-    text: "师傅好感消耗减半"
-    translated: "Master affection consumption reduced by half"
-  templates:
-  - template: "♦{0}\n♦{1}({2})"
-- raw: "学艺不精"
-  splits:
-  - text: "学艺不精"
-    translated: "Lackluster training"
-- raw: "完全恢复"
-  splits:
-  - text: "完全恢复"
-    translated: "Fully recovered"
-- raw: "完成巡查"
-  splits:
-  - text: "完成巡查"
-    translated: "Completed the patrol"
-- raw: "官员进贡"
-  splits:
-  - text: "官员进贡"
-    translated: "Official tribute"
-- raw: "容我娓娓道来"
-  splits:
-  - text: "容我娓娓道来"
-    translated: "Allow me to tell you in detail"
-- raw: "对于{0}我有几分心得"
-  splits:
-  - text: "对于"
-    translated: "For"
-  - subIndex: 1
-    text: "我有几分心得"
-    translated: "I have a few insights into it"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "小心为上"
-  splits:
-  - text: "小心为上"
-    translated: "Better safe than sorry"
-- raw: "小贼休走！"
-  splits:
-  - text: "小贼休走！"
-    translated: "Thief, do not escape!"
-- raw: "小额红包"
-  splits:
-  - text: "小额红包"
-    translated: "Small red envelope"
-- raw: "小额赠礼"
-  splits:
-  - text: "小额赠礼"
-    translated: "Small gift"
-- raw: "就学这个！"
-  splits:
-  - text: "就学这个！"
-    translated: "Study this!"
-- raw: "尽绵薄之力"
-  splits:
-  - text: "尽绵薄之力"
-    translated: "Do my best"
-- raw: "履约伤人"
-  splits:
-  - text: "履约伤人"
-    translated: "Breaching the contract harmed someone"
-- raw: "巨额红包"
-  splits:
-  - text: "巨额红包"
-    translated: "Huge red envelope"
-- raw: "帮助五毒教"
-  splits:
-  - text: "帮助五毒教"
-    translated: "Help the Five Poisons Sect"
-- raw: "帮助官差对抗暴民"
-  splits:
-  - text: "帮助官差对抗暴民"
-    translated: "Help the officials resist the rioters"
-- raw: "帮助暴民对抗官差"
-  splits:
-  - text: "帮助暴民对抗官差"
-    translated: "Help the mob resist the officials"
-- raw: "帮助茅山派"
-  splits:
-  - text: "帮助茅山派"
-    translated: "Help the Maoshan Sect"
-- raw: "平分银两"
-  splits:
-  - text: "平分银两"
-    translated: "Split the silver equally"
-- raw: "开个玩笑"
-  splits:
-  - text: "开个玩笑"
-    translated: "Just joking"
-- raw: "开始修习"
-  splits:
-  - text: "开始修习"
-    translated: "Begin training"
-- raw: "开始修炼"
-  splits:
-  - text: "开始修炼"
-    translated: "Start cultivating"
-- raw: "开始动工吧"
-  splits:
-  - text: "开始动工吧"
-    translated: "Let's get construction started"
-- raw: "开始对饮"
-  splits:
-  - text: "开始对饮"
-    translated: "Begin to drink together"
-- raw: "开始探听"
-  splits:
-  - text: "开始探听"
-    translated: "Start gathering information"
-- raw: "开始舌战"
-  splits:
-  - text: "开始舌战"
-    translated: "Begin verbal sparring"
-- raw: "开始论战"
-  splits:
-  - text: "开始论战"
-    translated: "Start debating"
-- raw: "开始遗忘"
-  splits:
-  - text: "开始遗忘"
-    translated: "Begin to forget"
-- raw: "开席对饮"
-  splits:
-  - text: "开席对饮"
-    translated: "Raise a glass to toast"
-- raw: "开战"
-  splits:
-  - text: "开战"
-    translated: "Start the battle"
-- raw: "开诊"
-  splits:
-  - text: "开诊"
-    translated: "Start the clinic"
-- raw: "开赌！"
-  splits:
-  - text: "开赌！"
-    translated: "Place the bets!"
-- raw: "张口结舌"
-  splits:
-  - text: "张口结舌"
-    translated: "Speechless"
-- raw: "强行越狱"
-  splits:
-  - text: "强行越狱"
-    translated: "Forcibly escape from prison"
-- raw: "归还资源"
-  splits:
-  - text: "归还资源"
-    translated: "Return resources"
-- raw: "征召"
-  splits:
-  - text: "征召"
-    translated: "Conscript"
-- raw: "♦征召弟子入队\n♦无好感消耗"
-  splits:
-  - text: "征召弟子入队"
-    translated: "Recruit disciples to join the team"
-  - subIndex: 1
-    text: "无好感消耗"
-    translated: "No affection points consumption"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "征收资源"
-  splits:
-  - text: "征收资源"
-    translated: "Resource taxation"
-- raw: "征用"
-  splits:
-  - text: "征用"
-    translated: "Expropriation"
-- raw: "♦消耗门派威望征用物品\n♦降低弟子少许好感和忠诚\n♦每月最多一次"
-  splits:
-  - text: "消耗门派威望征用物品"
-    translated: "Spend Sect Prestige to Mobilize Items"
-  - subIndex: 1
-    text: "降低弟子少许好感和忠诚"
-    translated: "Decrease apprentice's likeability and loyalty slightly"
-  - subIndex: 2
-    text: "每月最多一次"
-    translated: "At most once a month"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "循循善诱"
-  splits:
-  - text: "循循善诱"
-    translated: "Patiently guide"
-- raw: "花费三日"
-  splits:
-  - text: "花费三日"
-    translated: "Spending three days"
-- raw: "微额红包"
-  splits:
-  - text: "微额红包"
-    translated: "Tiny Red Envelope"
-- raw: "恶贼住手！"
-  splits:
-  - text: "恶贼住手！"
-    translated: "Bandit, stop!"
-- raw: "恶贼受死！"
-  splits:
-  - text: "恶贼受死！"
-    translated: "Bandit, die!"
-- raw: "悉心指点"
-  splits:
-  - text: "悉心指点"
-    translated: "Patiently guiding"
-- raw: "悍然出手"
-  splits:
-  - text: "悍然出手"
-    translated: "Brutally intervened"
-- raw: "情势所逼"
-  splits:
-  - text: "情势所逼"
-    translated: "Forced by circumstances"
-- raw: "惭愧惭愧"
-  splits:
-  - text: "惭愧惭愧"
-    translated: "Embarrassed embarrassed"
-- raw: "愿闻其详"
-  splits:
-  - text: "愿闻其详"
-    translated: "I would like to hear the details"
-- raw: "慰问"
-  splits:
-  - text: "慰问"
-    translated: "Comfort"
-- raw: "慷慨相让"
-  splits:
-  - text: "慷慨相让"
-    translated: "Generously yield"
-- raw: "成为{0}门客"
-  splits:
-  - text: "成为"
-    translated: "Become"
-  - subIndex: 1
-    text: "门客"
-    translated: "Retainer"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "成功了"
-  splits:
-  - text: "成功了"
-    translated: "Successfully accomplished it"
-- raw: "我来助你！"
-  splits:
-  - text: "我来助你！"
-    translated: "I'll help you!"
-- raw: "我来相助！"
-  splits:
-  - text: "我来相助！"
-    translated: "I'll lend a hand!"
-- raw: "我还有事"
-  splits:
-  - text: "我还有事"
-    translated: "I have more things to do"
-- raw: "我这就走"
-  splits:
-  - text: "我这就走"
-    translated: "I'll be on my way now"
-- raw: "所见略同"
-  splits:
-  - text: "所见略同"
-    translated: "We agree on this"
-- raw: "打开宝箱"
-  splits:
-  - text: "打开宝箱"
-    translated: "Open the treasure chest"
-- raw: "打扰了"
-  splits:
-  - text: "打扰了"
-    translated: "Excuse me"
-- raw: "扭头就跑"
-  splits:
-  - text: "扭头就跑"
-    translated: "Turn and run"
-- raw: "抄录功法"
-  splits:
-  - text: "抄录功法"
-    translated: "Copy the cultivation technique"
-- raw: "把地契拿来吧"
-  splits:
-  - text: "把地契拿来吧"
-    translated: "Bring me the deed to the land"
-- raw: "抓捕归案"
-  splits:
-  - text: "抓捕归案"
-    translated: "Arrest and detain"
-- raw: "♦抢夺对方一件物品\n♦根据物品价值增加恶名"
-  splits:
-  - text: "抢夺对方一件物品"
-    translated: "Steal an item from the opponent"
-  - subIndex: 1
-    text: "根据物品价值增加恶名"
-    translated: "Based on the item's value, notoriety increases"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "♦抢夺对方约一半的银两\n♦根据抢夺数额增加恶名"
-  splits:
-  - text: "抢夺对方约一半的银两"
-    translated: "Take about half of the opponent's silver coins"
-  - subIndex: 1
-    text: "根据抢夺数额增加恶名"
-    translated: "Based on the amount stolen, reputation points are increased."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "招揽"
-  splits:
-  - text: "招揽"
-    translated: "Recruit"
-- raw: "♦邀请对方加入你的门派"
-  splits:
-  - text: "邀请对方加入你的门派"
-    translated: "Invite the other party to join your sect."
-  templates:
-  - template: "♦{0}"
-- raw: "招揽入派"
-  splits:
-  - text: "招揽入派"
-    translated: "Recruit into the sect"
-- raw: "♦将贼人招揽入派\n♦降低全门派好感和全弟子忠诚"
-  splits:
-  - text: "将贼人招揽入派"
-    translated: "Attract the bandits into the sect"
-  - subIndex: 1
-    text: "降低全门派好感和全弟子忠诚"
-    translated: "Reduce the Affection of all Sects and the Loyalty of all Disciples"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "拜入{0}"
-  splits:
-  - text: "拜入"
-    translated: "Join under"
-  templates:
-  - template: "{0}⟦0⟧"
-- raw: "拜师"
-  splits:
-  - text: "拜师"
-    translated: "Become a disciple"
-- raw: "拜谢离去"
-  splits:
-  - text: "拜谢离去"
-    translated: "Thank you and depart"
-- raw: "指点"
-  splits:
-  - text: "指点"
-    translated: "Guide"
-- raw: "♦指点弟子武功无好感要求\n♦每月最多三次"
-  splits:
-  - text: "指点弟子武功无好感要求"
-    translated: "Guide disciples in martial arts without requiring good will"
-  - subIndex: 1
-    text: "每月最多三次"
-    translated: "No more than three times per month"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "挽留"
-  splits:
-  - text: "挽留"
-    translated: "Retain"
-- raw: "♦延长入队时间30天\n♦{0}"
-  splits:
-  - text: "延长入队时间30天"
-    translated: "Extend queue time by 30 days"
-  templates:
-  - template: "♦{0}\n♦⟦0⟧"
-- raw: "捉拿归案"
-  splits:
-  - text: "捉拿归案"
-    translated: "Arrest and bring to justice"
-- raw: "♦将贼人捉拿归案\n♦获取对应悬赏和官府功绩"
-  splits:
-  - text: "将贼人捉拿归案"
-    translated: "Arrest the criminals and bring them to justice"
-  - subIndex: 1
-    text: "获取对应悬赏和官府功绩"
-    translated: "Retrieve the corresponding bounty and official merit"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "捐献"
-  splits:
-  - text: "捐献"
-    translated: "Donate"
-- raw: "捐纳100官府功绩"
-  splits:
-  - text: "捐纳100官府功绩"
-    translated: "Donate 100 official merit"
-- raw: "捐纳200官府功绩"
-  splits:
-  - text: "捐纳200官府功绩"
-    translated: "Donate 200 official merit"
-- raw: "捐纳50官府功绩"
-  splits:
-  - text: "捐纳50官府功绩"
-    translated: "Donate to 50 official merit"
-- raw: "收集资源\n每月一次"
-  splits:
-  - text: "收集资源"
-    translated: "Collect resources"
-  - subIndex: 1
-    text: "每月一次"
-    translated: "Once a month"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "接受挑战"
-  splits:
-  - text: "接受挑战"
-    translated: "Accept the challenge"
-- raw: "接受致歉"
-  splits:
-  - text: "接受致歉"
-    translated: "Accept the apology"
-- raw: "提升天赋"
-  splits:
-  - text: "提升天赋"
-    translated: "Boost their talents"
-- raw: "提取"
-  splits:
-  - text: "提取"
-    translated: "Extract"
-- raw: "搜寻稀有材料"
-  splits:
-  - text: "搜寻稀有材料"
-    translated: "Search for rare materials"
-- raw: "携手归隐"
-  splits:
-  - text: "携手归隐"
-    translated: "Hand in hand into seclusion"
-- raw: "撕毁盟约"
-  splits:
-  - text: "撕毁盟约"
-    translated: "Rip the treaty to shreds"
-- raw: "门派好感-20\n休战3个月"
-  splits:
-  - text: "门派好感"
-    translated: "Sect Favor"
-  - subIndex: 1
-    text: "休战3个月"
-    translated: "Ceasefire for 3 months"
-  templates:
-  - template: "{0}-20\n{1}"
-- raw: "收下奖品"
-  splits:
-  - text: "收下奖品"
-    translated: "Accept the prize"
-- raw: "收下酬劳"
-  splits:
-  - text: "收下酬劳"
-    translated: "Accept the reward"
-- raw: "收取罚金"
-  splits:
-  - text: "收取罚金"
-    translated: "Collect the fine"
-- raw: "收取赠礼"
-  splits:
-  - text: "收取赠礼"
-    translated: "Accept a gift"
-- raw: "收徒"
-  splits:
-  - text: "收徒"
-    translated: "Recruit apprentices"
-- raw: "收集普通资源"
-  splits:
-  - text: "收集普通资源"
-    translated: "Gather common resources"
-- raw: "放你一马"
-  splits:
-  - text: "放你一马"
-    translated: "Let you off the hook"
-- raw: "敌对..."
-  splits:
-  - text: "敌对..."
-    translated: "Hostile..."
-- raw: "敬酒不吃吃罚酒"
-  splits:
-  - text: "敬酒不吃吃罚酒"
-    translated: "Decline the offer but accept the punishment"
-- raw: "斗胆向两位一齐讨教"
-  splits:
-  - text: "斗胆向两位一齐讨教"
-    translated: "Dare to seek advice from both of you together."
-- raw: "斗胆挑战"
-  splits:
-  - text: "斗胆挑战"
-    translated: "Dare to challenge"
-- raw: "斗胆挑战！"
-  splits:
-  - text: "斗胆挑战！"
-    translated: "Dare to challenge!"
-- raw: "斩草除根"
-  splits:
-  - text: "斩草除根"
-    translated: "Root out the problem"
-- raw: "断义"
-  splits:
-  - text: "断义"
-    translated: "Cut Meaning"
-- raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
-  splits:
-  - text: "与对方断绝结义关系"
-    translated: "Cut off sworn brotherhood ties with the other party"
-  - subIndex: 1
-    text: "降低100点好感"
-    translated: "Decrease 100 points of goodwill"
-  - subIndex: 2
-    text: "固定增加20恶名"
-    translated: "Fixed increase 20 Notorious Rating"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "断交"
-  splits:
-  - text: "断交"
-    translated: "Break off relations"
-- raw: "♦与对方断绝好友关系\n♦降低50点好感\n♦固定增加10恶名"
-  splits:
-  - text: "与对方断绝好友关系"
-    translated: "Cut off the friendship with the other person"
-  - subIndex: 1
-    text: "降低50点好感"
-    translated: "Decrease 50 points of favor"
-  - subIndex: 2
-    text: "固定增加10恶名"
-    translated: "Fixed increase 10 notoriety"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "施以惩戒"
-  splits:
-  - text: "施以惩戒"
-    translated: "Inflict punishment"
-- raw: "施以重罚"
-  splits:
-  - text: "施以重罚"
-    translated: "Mete out severe punishment"
-- raw: "施展内功抵御毒瘴"
-  splits:
-  - text: "施展内功抵御毒瘴"
-    translated: "Deploy internal skill to ward off poisonous miasma"
-- raw: "施展绝技挖掘遗迹"
-  splits:
-  - text: "施展绝技挖掘遗迹"
-    translated: "Deploy ultimate skill to excavate ancient ruins"
-- raw: "施展绝技震碎巨石"
-  splits:
-  - text: "施展绝技震碎巨石"
-    translated: "Perform the ultimate technique to shatter the giant rock"
-- raw: "施展轻功攀登绝壁"
-  splits:
-  - text: "施展轻功攀登绝壁"
-    translated: "Perform qinggong to climb the sheer cliff"
-- raw: "施舍银两"
-  splits:
-  - text: "施舍银两"
-    translated: "Donate silver coins"
-- raw: "无意争夺，你们请便"
-  splits:
-  - text: "无意争夺，你们请便"
-    translated: "No need for contention, go ahead"
-- raw: "无话可说"
-  splits:
-  - text: "无话可说"
-    translated: "No words to say"
-- raw: "早该如此"
-  splits:
-  - text: "早该如此"
-    translated: "This should have happened earlier"
-- raw: "是我唐突了"
-  splits:
-  - text: "是我唐突了"
-    translated: "I was presumptuous"
-- raw: "是我疏忽了"
-  splits:
-  - text: "是我疏忽了"
-    translated: "I was careless"
-- raw: "是我走眼了"
-  splits:
-  - text: "是我走眼了"
-    translated: "I must be seeing things"
-- raw: "晓之以情"
-  splits:
-  - text: "晓之以情"
-    translated: "Reason with someone emotionally"
-- raw: "暂不招新"
-  splits:
-  - text: "暂不招新"
-    translated: "No new members are being recruited currently"
-- raw: "暗中下毒"
-  splits:
-  - text: "暗中下毒"
-    translated: "Poisoning in secret"
-- raw: "暗中逃跑"
-  splits:
-  - text: "暗中逃跑"
-    translated: "Steal away in secret"
-- raw: "暴力破解"
-  splits:
-  - text: "暴力破解"
-    translated: "Brute force attack"
-- raw: "替民众补交一半税赋"
-  splits:
-  - text: "替民众补交一半税赋"
-    translated: "To pay half of the taxes on behalf of the citizens"
-- raw: "替民众补交全部税赋"
-  splits:
-  - text: "替民众补交全部税赋"
-    translated: "Help the populace to make up all the taxes due"
-- raw: "来战"
-  splits:
-  - text: "来战"
-    translated: "Come and fight"
-- raw: "来战！"
-  splits:
-  - text: "来战！"
-    translated: "Come and fight!"
-- raw: "查看功绩"
-  splits:
-  - text: "查看功绩"
-    translated: "Check Achievements"
-- raw: "欢迎之至"
-  splits:
-  - text: "欢迎之至"
-    translated: "Welcome most warmly"
-- raw: "欣然同意"
-  splits:
-  - text: "欣然同意"
-    translated: "Happily agreed"
-- raw: "欣然收下"
-  splits:
-  - text: "欣然收下"
-    translated: "Happily accepted"
-- raw: "正有此意"
-  splits:
-  - text: "正有此意"
-    translated: "That's the idea"
-- raw: "正面出手"
-  splits:
-  - text: "正面出手"
-    translated: "Take the initiative"
-- raw: "此仇必报"
-  splits:
-  - text: "此仇必报"
-    translated: "This grudge must be avenged"
-- raw: "武艺劝说"
-  splits:
-  - text: "武艺劝说"
-    translated: "Martial arts persuasion"
-- raw: "求医"
-  splits:
-  - text: "求医"
-    translated: "Seek medical help"
-- raw: "求取材料"
-  splits:
-  - text: "求取材料"
-    translated: "Acquire materials"
-- raw: "求取灵药"
-  splits:
-  - text: "求取灵药"
-    translated: "Seek the elixir"
-- raw: "求取物品"
-  splits:
-  - text: "求取物品"
-    translated: "Retrieve the item"
-- raw: "求取美食"
-  splits:
-  - text: "求取美食"
-    translated: "Seeking delicious food"
-- raw: "求取药引"
-  splits:
-  - text: "求取药引"
-    translated: "Seek the herb"
-- raw: "求取装备"
-  splits:
-  - text: "求取装备"
-    translated: "Gear acquisition"
-- raw: "求取陨铁"
-  splits:
-  - text: "求取陨铁"
-    translated: "Retrieve meteoric iron"
-- raw: "求取食材"
-  splits:
-  - text: "求取食材"
-    translated: "Fetch the ingredients"
-- raw: "求情说理"
-  splits:
-  - text: "求情说理"
-    translated: "Plead and reason"
-- raw: "江湖进贡"
-  splits:
-  - text: "江湖进贡"
-    translated: "Jianghu tribute"
-- raw: "没错，只能得罪二位了！"
-  splits:
-  - text: "没错，只能得罪二位了！"
-    translated: "Alright, I can only offend the two of you!"
-- raw: "♦治疗全伤势10点"
-  splits:
-  - text: "治疗全伤势10点"
-    translated: "Heal all injuries 10 points"
-  templates:
-  - template: "♦{0}"
-- raw: "泰岳大典"
-  splits:
-  - text: "泰岳大典"
-    translated: "Tai Yue Grand Ceremony"
-- raw: "洗耳恭听"
-  splits:
-  - text: "洗耳恭听"
-    translated: "Listen attentively"
-- raw: "溜之大吉"
-  splits:
-  - text: "溜之大吉"
-    translated: "Skedaddle"
-- raw: "满意离去"
-  splits:
-  - text: "满意离去"
-    translated: "Leave satisfied"
-- raw: "满载而归"
-  splits:
-  - text: "满载而归"
-    translated: "Come back with a full load"
-- raw: "照单全收"
-  splits:
-  - text: "照单全收"
-    translated: "Accept without reservation"
-- raw: "物归原主"
-  splits:
-  - text: "物归原主"
-    translated: "Return to the original owner"
-- raw: "物色优良人手"
-  splits:
-  - text: "物色优良人手"
-    translated: "Hire skilled personnel"
-- raw: "物色优良人选"
-  splits:
-  - text: "物色优良人选"
-    translated: "Identify top candidates"
-- raw: "物色普通人手"
-  splits:
-  - text: "物色普通人手"
-    translated: "Hunt for ordinary people"
-- raw: "物色普通人选"
-  splits:
-  - text: "物色普通人选"
-    translated: "Search for ordinary candidates"
-- raw: "物色顶尖人手"
-  splits:
-  - text: "物色顶尖人手"
-    translated: "Hunt for top talent"
-- raw: "物色顶尖人选"
-  splits:
-  - text: "物色顶尖人选"
-    translated: "Identify top candidates"
-- raw: "牺牲声望"
-  splits:
-  - text: "牺牲声望"
-    translated: "Sacrifice reputation"
-- raw: "狗官受死！"
-  splits:
-  - text: "狗官受死！"
-    translated: "Begone, traitorous official!"
-- raw: "狡兔三窟"
-  splits:
-  - text: "狡兔三窟"
-    translated: "A fox has three dens"
-- raw: "独吞财宝"
-  splits:
-  - text: "独吞财宝"
-    translated: "Swallowing the treasure whole"
-- raw: "狮子大开口"
-  splits:
-  - text: "狮子大开口"
-    translated: "Open wide the lion's mouth"
-- raw: "献上银两"
-  splits:
-  - text: "献上银两"
-    translated: "Present some silver coins"
-- raw: "珍宝赠礼"
-  splits:
-  - text: "珍宝赠礼"
-    translated: "Treasure gift"
-- raw: "甜言蜜语"
-  splits:
-  - text: "甜言蜜语"
-    translated: "Sweet nothings"
-- raw: "♦与对方进行论战，失败降低25好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "与对方进行论战，失败降低25好感"
-    translated: "Engage in a debate with the other party, failure reduces 25 good will."
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-    translated: "If affection is less than 50, the romantic relationship will be severed."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "略加惩戒"
-  splits:
-  - text: "略加惩戒"
-    translated: "Mild punishment"
-- raw: "略知一二"
-  splits:
-  - text: "略知一二"
-    translated: "Have a basic understanding"
-- raw: "痛下狠手"
-  splits:
-  - text: "痛下狠手"
-    translated: "Strike hard"
-- raw: "看好了"
-  splits:
-  - text: "看好了"
-    translated: "Look well"
-- raw: "看招！"
-  splits:
-  - text: "看招！"
-    translated: "Here it comes!"
-- raw: "真是倒霉"
-  splits:
-  - text: "真是倒霉"
-    translated: "Truly unlucky"
-- raw: "确认兑换"
-  splits:
-  - text: "确认兑换"
-    translated: "Confirm exchange"
-- raw: "确认征用"
-  splits:
-  - text: "确认征用"
-    translated: "Confirm requisition"
-- raw: "♦赠礼或消耗好感降低对方忠诚\n♦对方忠诚低于好感度20%，便会加入你的门派"
-  splits:
-  - text: "赠礼或消耗好感降低对方忠诚"
-    translated: "Gift‑giving or expending goodwill to lower their loyalty"
-  - subIndex: 1
-    text: "对方忠诚低于好感度20%，便会加入你的门派"
-    translated: "If the other party's loyalty is below 20% of their affinity, they will join your sect."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "稍作休息"
-  splits:
-  - text: "稍作休息"
-    translated: "Take a moment to rest"
-- raw: "窃取物品"
-  splits:
-  - text: "窃取物品"
-    translated: "Steal items"
-- raw: "立志从商"
-  splits:
-  - text: "立志从商"
-    translated: "Determined to enter business"
-- raw: "笑纳了"
-  splits:
-  - text: "笑纳了"
-    translated: "Accepted with pleasure"
-- raw: "算了，小命要紧"
-  splits:
-  - text: "算了，小命要紧"
-    translated: "Forget it, my life is more important"
-- raw: "算你识相！"
-  splits:
-  - text: "算你识相！"
-    translated: "You know when to stop!"
-- raw: "♦增加{1}恶名"
-  splits:
-  - text: "增加"
-    translated: "Increase"
-  - subIndex: 1
-    text: "恶名"
-    translated: "Reputation"
-  templates:
-  - template: "♦{0}⟦1⟧{1}"
-- raw: "粗略挖掘"
-  splits:
-  - text: "粗略挖掘"
-    translated: "Rough excavation"
-- raw: "粗略选取"
-  splits:
-  - text: "粗略选取"
-    translated: "Roughly select"
-- raw: "精挑细选"
-  splits:
-  - text: "精挑细选"
-    translated: "Carefully selected"
-- raw: "糟糕，这下大意了！"
-  splits:
-  - text: "糟糕，这下大意了！"
-    translated: "Oh no, I've been too careless this time!"
-- raw: "终于开始了"
-  splits:
-  - text: "终于开始了"
-    translated: "Finally, it's started"
-- raw: "结为同盟"
-  splits:
-  - text: "结为同盟"
-    translated: "Form an alliance"
-- raw: "需100门派好感\n结盟后永久停战且援军+1\n可进攻盟友的相邻区域\n好感低于80会自动断盟"
-  splits:
-  - text: "需100门派好感"
-    translated: "Translate 100 Sect Favor"
-  - subIndex: 1
-    text: "结盟后永久停战且援军"
-    translated: "Alliance established for permanent peace and reinforcements"
-  - subIndex: 2
-    text: "可进攻盟友的相邻区域"
-    translated: "Adjacent areas that can be attacked by allies"
-  - subIndex: 3
-    text: "好感低于80会自动断盟"
-    translated: "Favor below 80 will automatically cut the alliance."
-  templates:
-  - template: "{0}\n{1}+1\n{2}\n{3}"
-- raw: "结婚"
-  splits:
-  - text: "结婚"
-    translated: "Get married"
-- raw: "♦举办婚宴正式结为夫妻{0}"
-  splits:
-  - text: "举办婚宴正式结为夫妻"
-    translated: "Have a wedding banquet to formally become husband and wife"
-  templates:
-  - template: "♦{0}⟦0⟧"
-- raw: "结缘"
-  splits:
-  - text: "结缘"
-    translated: "Buddy up"
-- raw: "给予嘉奖"
-  splits:
-  - text: "给予嘉奖"
-    translated: "Give commendation"
-- raw: "给点医药费吧"
-  splits:
-  - text: "给点医药费吧"
-    translated: "Can you give me some medical expenses?"
-- raw: "绝技 千斤坠"
-  splits:
-  - text: "绝技"
-    translated: "Ultimate Technique"
-  - subIndex: 1
-    text: "千斤坠"
-    translated: "Gravitational pull"
-  templates:
-  - template: "{0} {1}"
-- raw: "绝技硬闯"
-  splits:
-  - text: "绝技硬闯"
-    translated: "Master Skill Charge Bravely"
-- raw: "绝离"
-  splits:
-  - text: "绝离"
-    translated: "Sever"
-- raw: "♦结束夫妻关系\n♦降低150点好感\n♦固定增加40恶名"
-  splits:
-  - text: "结束夫妻关系"
-    translated: "End the marital relationship"
-  - subIndex: 1
-    text: "降低150点好感"
-    translated: "Decrease 150 points of favor"
-  - subIndex: 2
-    text: "固定增加40恶名"
-    translated: "Fixed increase 40 notoriety"
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "继续追踪"
-  splits:
-  - text: "继续追踪"
-    translated: "Keep tracking"
-- raw: "缴纳罚金"
-  splits:
-  - text: "缴纳罚金"
-    translated: "Pay the fine"
-- raw: "罢了罢了"
-  splits:
-  - text: "罢了罢了"
-    translated: "Alright, alright"
-- raw: "羞愧难当"
-  splits:
-  - text: "羞愧难当"
-    translated: "Ashen with shame"
-- raw: "背后偷袭"
-  splits:
-  - text: "背后偷袭"
-    translated: "Rear attack"
-- raw: "0-负3"
-  splits:
-  - text: "负3"
-    translated: "Negative3"
-  templates:
-  - template: "0-{0}"
-- raw: "自己留下"
-  splits:
-  - text: "自己留下"
-    translated: "Leave it to me"
-- raw: "自投罗网！"
-  splits:
-  - text: "自投罗网！"
-    translated: "Self‑inflicted trap!"
-- raw: "花言巧语"
-  splits:
-  - text: "花言巧语"
-    translated: "Sweettalk"
-- raw: "莫慌，我来助你！"
-  splits:
-  - text: "莫慌，我来助你！"
-    translated: "Don't panic, I'll help you!"
-- raw: "获取药品"
-  splits:
-  - text: "获取药品"
-    translated: "Obtain medicine"
-- raw: "♦获取随机药品"
-  splits:
-  - text: "获取随机药品"
-    translated: "Get random medicine"
-  templates:
-  - template: "♦{0}"
-- raw: "要求双倍价格"
-  splits:
-  - text: "要求双倍价格"
-    translated: "Require double the price"
-- raw: "解开手铐"
-  splits:
-  - text: "解开手铐"
-    translated: "Unlock the handcuffs"
-- raw: "解开脚镣"
-  splits:
-  - text: "解开脚镣"
-    translated: "Unsheathe the ankle chains"
-- raw: "解毒"
-  splits:
-  - text: "解毒"
-    translated: "Detoxify"
-- raw: "让渡功绩100点"
-  splits:
-  - text: "让渡功绩100点"
-    translated: "Transfer 100 points of merit"
-- raw: "让渡功绩200点"
-  splits:
-  - text: "让渡功绩200点"
-    translated: "Transfer 200 points of accomplishment"
-- raw: "让渡功绩50点"
-  splits:
-  - text: "让渡功绩50点"
-    translated: "Transfer 50 merits points"
-- raw: "讲经说法"
-  splits:
-  - text: "讲经说法"
-    translated: "Teach and preach"
-- raw: "论战劝解"
-  splits:
-  - text: "论战劝解"
-    translated: "Argument Mediation"
-- raw: "诚心相求"
-  splits:
-  - text: "诚心相求"
-    translated: "Honestly beseech"
-- raw: "诚恳道歉"
-  splits:
-  - text: "诚恳道歉"
-    translated: "Humbly apologize"
-- raw: "♦降低15好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "降低15好感"
-    translated: "Reduce 15's goodwill"
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-    translated: "If affection is less than 50, the romantic relationship will be severed."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "误会一场"
-  splits:
-  - text: "误会一场"
-    translated: "A misunderstanding"
-- raw: "说干就干"
-  splits:
-  - text: "说干就干"
-    translated: "Get right to it"
-- raw: "说情道理"
-  splits:
-  - text: "说情道理"
-    translated: "Reason with someone"
-- raw: "诶诶，别跑啊！"
-  splits:
-  - text: "诶诶，别跑啊！"
-    translated: "Oh, don't run away!"
-- raw: "诶都别走啊！"
-  splits:
-  - text: "诶都别走啊！"
-    translated: "Hey, don't go yet!"
-- raw: "请二位先选"
-  splits:
-  - text: "请二位先选"
-    translated: "Please let the two of you choose first."
-- raw: "请听我一言"
-  splits:
-  - text: "请听我一言"
-    translated: "Please hear me out"
-- raw: "请指教！"
-  splits:
-  - text: "请指教！"
-    translated: "Please instruct!"
-- raw: "请教{0}潜力"
-  splits:
-  - text: "请教"
-    translated: "Consult"
-  - subIndex: 1
-    text: "潜力"
-    translated: "Potential"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "请教功法"
-  splits:
-  - text: "请教功法"
-    translated: "Seeking Advice Skill"
-- raw: "请笑纳"
-  splits:
-  - text: "请笑纳"
-    translated: "Please accept it with a smile"
-- raw: "谁敢挡我！"
-  splits:
-  - text: "谁敢挡我！"
-    translated: "Who dares stop me!"
-- raw: "调解说和"
-  splits:
-  - text: "调解说和"
-    translated: "Mediation and negotiation"
-- raw: "购买{0}木料"
-  splits:
-  - text: "购买"
-    translated: "Purchase"
-  - subIndex: 1
-    text: "木料"
-    translated: "Wood"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买{0}矿石"
-  splits:
-  - text: "购买"
-    translated: "Purchase"
-  - subIndex: 1
-    text: "矿石"
-    translated: "Mineral"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买{0}粮食"
-  splits:
-  - text: "购买"
-    translated: "Purchase"
-  - subIndex: 1
-    text: "粮食"
-    translated: "Food grain"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买{0}药材"
-  splits:
-  - text: "购买"
-    translated: "Purchase"
-  - subIndex: 1
-    text: "药材"
-    translated: "Herbs"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "购买库存"
-  splits:
-  - text: "购买库存"
-    translated: "Purchase inventory"
-- raw: "购买材料"
-  splits:
-  - text: "购买材料"
-    translated: "Purchase materials"
-- raw: "购药"
-  splits:
-  - text: "购药"
-    translated: "Buy medicine"
-- raw: "♦降低少量警觉度\n♦增加少量熟络度"
-  splits:
-  - text: "降低少量警觉度"
-    translated: "Lower alertness slightly"
-  - subIndex: 1
-    text: "增加少量熟络度"
-    translated: "Increase a little familiarity"
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "赐予资源"
-  splits:
-  - text: "赐予资源"
-    translated: "Grant resources"
-- raw: "赔礼谢罪"
-  splits:
-  - text: "赔礼谢罪"
-    translated: "Apologize and seek forgiveness"
-- raw: "赠与{0}两"
-  splits:
-  - text: "赠与"
-    translated: "Gift"
-  - subIndex: 1
-    text: "两"
-    translated: "Taels"
-  templates:
-  - template: "{0}⟦0⟧{1}"
-- raw: "赠送礼物"
-  splits:
-  - text: "赠送礼物"
-    translated: "Gift a present"
-- raw: "♦降低10好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "降低10好感"
-    translated: "Lower 10's favor"
-  - subIndex: 1
-    text: "若好感小于50会断绝情侣关系"
-    translated: "If affection is less than 50, the romantic relationship will be severed."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "赠送赔礼"
-  splits:
-  - text: "赠送赔礼"
-    translated: "Gift of apology"
-- raw: "走为上策"
-  splits:
-  - text: "走为上策"
-    translated: "Flight is the best strategy"
-- raw: "走好不送"
-  splits:
-  - text: "走好不送"
-    translated: "Walk well and goodbye"
-- raw: "赶尽杀绝"
-  splits:
-  - text: "赶尽杀绝"
-    translated: "Exterminate utterly"
-- raw: "♦追杀成功后，夺取其所有物品装备\n♦与对方门派和亲友结仇\n♦根据对方身份等级增加大量恶名，每月最多1次"
-  splits:
-  - text: "追杀成功后，夺取其所有物品装备"
-    translated: "After successfully tracking down the target, acquire all of their items and equipment."
-  - subIndex: 1
-    text: "与对方门派和亲友结仇"
-    translated: "Clinch a grudge with the other sect and one's kin and friends"
-  - subIndex: 2
-    text: "根据对方身份等级增加大量恶名，每月最多1次"
-    translated: "Increase notoriety significantly based on the other party's rank, with a maximum of 1 times per month."
-  templates:
-  - template: "♦{0}\n♦{1}\n♦{2}"
-- raw: "超高价出售({0}两)"
-  splits:
-  - text: "超高价出售"
-    translated: "High‑priced sale"
-  - subIndex: 1
-    text: "两"
-    translated: "Taels"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "路见不平，自当拔刀相助"
-  splits:
-  - text: "路见不平，自当拔刀相助"
-    translated: "Seeing injustice, one should naturally intervene to help."
-- raw: "转念一想"
-  splits:
-  - text: "转念一想"
-    translated: "Thought otherwise"
-- raw: "轻功 轻身术"
-  splits:
-  - text: "轻功"
-    translated: "Qinggong"
-  - subIndex: 1
-    text: "轻身术"
-    translated: "Featherfall Technique"
-  templates:
-  - template: "{0} {1}"
-- raw: "轻功赶上"
-  splits:
-  - text: "轻功赶上"
-    translated: "Qinggong catches up"
-- raw: "轻功躲避"
-  splits:
-  - text: "轻功躲避"
-    translated: "Qinggong to dodge"
-- raw: "还是算了"
-  splits:
-  - text: "还是算了"
-    translated: "Forget it"
-- raw: "这...也只能如此了"
-  splits:
-  - text: "这...也只能如此了"
-    translated: "This... can only be for the best."
-- raw: "这些徒儿均已掌握"
-  splits:
-  - text: "这些徒儿均已掌握"
-    translated: "These disciples have all mastered"
-- raw: "这有何难"
-  splits:
-  - text: "这有何难"
-    translated: "What's so difficult about that?"
-- raw: "进攻"
-  splits:
-  - text: "进攻"
-    translated: "Attack"
-- raw: "连续指点"
-  splits:
-  - text: "连续指点"
-    translated: "Continuous guidance"
-- raw: "♦消耗剩余指点次数\n♦对方武学满级或超过你时自动停止"
-  splits:
-  - text: "消耗剩余指点次数"
-    translated: "Consume remaining directional inputs"
-  - subIndex: 1
-    text: "对方武学满级或超过你时自动停止"
-    translated: "When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "退隐？"
-  splits:
-  - text: "退隐？"
-    translated: "Retirement?"
-- raw: "♦询问对方关于退隐江湖之事"
-  splits:
-  - text: "询问对方关于退隐江湖之事"
-    translated: "Inquiring about the person's retirement from the Jianghu"
-  templates:
-  - template: "♦{0}"
-- raw: "选择弟子"
-  splits:
-  - text: "选择弟子"
-    translated: "Choose Disciple"
-- raw: "选择挖掘"
-  splits:
-  - text: "选择挖掘"
-    translated: "Choose mining"
-- raw: "选择秘籍"
-  splits:
-  - text: "选择秘籍"
-    translated: "Choose a potion"
-- raw: "选贤举能"
-  splits:
-  - text: "选贤举能"
-    translated: "Choose the worthy and capable"
-- raw: "速战速决"
-  splits:
-  - text: "速战速决"
-    translated: "Quick victory"
-- raw: "迎战守卫\n获取中品质秘籍"
-  splits:
-  - text: "迎战守卫"
-    translated: "Challenge the Guardians"
-  - subIndex: 1
-    text: "获取中品质秘籍"
-    translated: "Acquire Medium‑Quality Secret Techniques"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "遗忘“{0}”"
-  splits:
-  - text: "遗忘“"
-    translated: "'Forget"
-  templates:
-  - template: "{0}⟦0⟧”"
-- raw: "避人耳目"
-  splits:
-  - text: "避人耳目"
-    translated: "Out of earshot"
-- raw: "避免战斗\n获取低品质秘籍"
-  splits:
-  - text: "避免战斗"
-    translated: "Avoid battle"
-  - subIndex: 1
-    text: "获取低品质秘籍"
-    translated: "Acquire low‑quality spells"
-  templates:
-  - template: "{0}\n{1}"
-- raw: "那便来吧"
-  splits:
-  - text: "那便来吧"
-    translated: "Let's begin then"
-- raw: "那便来吧！"
-  splits:
-  - text: "那便来吧！"
-    translated: "Let's do it then!"
-- raw: "那只好硬闯了"
-  splits:
-  - text: "那只好硬闯了"
-    translated: "Well, we'll just have to force our way through."
-- raw: "那我就买下了"
-  splits:
-  - text: "那我就买下了"
-    translated: "I'll buy it then"
-- raw: "那是自然"
-  splits:
-  - text: "那是自然"
-    translated: "That is natural"
-- raw: "采掘陨铁"
-  splits:
-  - text: "采掘陨铁"
-    translated: "Mining meteoric iron"
-- raw: "采集{0}"
-  splits:
-  - text: "采集"
-    translated: "Gather"
-  templates:
-  - template: "{0}⟦0⟧"
-- raw: "鉴定物品"
-  splits:
-  - text: "鉴定物品"
-    translated: "Identify Item"
-- raw: "针锋相对"
-  splits:
-  - text: "针锋相对"
-    translated: "Direct confrontation"
-- raw: "银两利诱"
-  splits:
-  - text: "银两利诱"
-    translated: "Silver temptation"
-- raw: "门派亲善"
-  splits:
-  - text: "门派亲善"
-    translated: "Sect friendliness"
-- raw: "门派盟约"
-  splits:
-  - text: "门派盟约"
-    translated: "Sect Alliance"
-- raw: "门派羞辱"
-  splits:
-  - text: "门派羞辱"
-    translated: "Sect humiliation"
-- raw: "门派进贡"
-  splits:
-  - text: "门派进贡"
-    translated: "Sect tribute"
-- raw: "♦雇佣对方加入队伍15天\n♦根据对方战力消耗银钱"
-  splits:
-  - text: "雇佣对方加入队伍15天"
-    translated: "Hire the other party to join the team for 15 days"
-  - subIndex: 1
-    text: "根据对方战力消耗银钱"
-    translated: "Based on the opponent's combat power, they expend silver money."
-  templates:
-  - template: "♦{0}\n♦{1}"
-- raw: "静静等待"
-  splits:
-  - text: "静静等待"
-    translated: "Quietly wait"
-- raw: "骇然出手"
-  splits:
-  - text: "骇然出手"
-    translated: "Startle into action"
-- raw: "高人，我来助你！"
-  splits:
-  - text: "高人，我来助你！"
-    translated: "Mighty one, I come to aid you!"
-- raw: "高价出售({0}两)"
-  splits:
-  - text: "高价出售"
-    translated: "Selling at a high price"
-  - subIndex: 1
-    text: "两"
-    translated: "Taels"
-  templates:
-  - template: "{0}(⟦0⟧{1})"
-- raw: "高级嘉奖"
-  splits:
-  - text: "高级嘉奖"
-    translated: "High Commendation"
-- raw: "黄袍加身"
-  splits:
-  - text: "黄袍加身"
-    translated: "Donning the Yellow Robe"
-- raw: "默默看戏"
-  splits:
-  - text: "默默看戏"
-    translated: "Watch silently"
-- raw: "金风玉露"
-  splits:
-  - text: "金风玉露"
-    translated: "Golden wind and jade dew"
-- raw: "净乐琉璃"
-  splits:
-  - text: "净乐琉璃"
-    translated: "Jingle Luliu"
-- raw: "铁算盘"
-  splits:
-  - text: "铁算盘"
-    translated: "Iron calculator"
-- raw: "九天鬼手"
-  splits:
-  - text: "九天鬼手"
-    translated: "Nine Heaven Ghost Hand"
-- raw: "杀人无形"
-  splits:
-  - text: "杀人无形"
-    translated: "Invisible killer"
-- raw: "玉面医仙"
-  splits:
-  - text: "玉面医仙"
-    translated: "Face of Jade Medical Immortal"
-- raw: "穿林妙手"
-  splits:
-  - text: "穿林妙手"
-    translated: "Mystic Hand Through the Woods"
-- raw: "铁碗残拳"
-  splits:
-  - text: "铁碗残拳"
-    translated: "Iron Bowl Fists"
-- raw: "大醉侠"
-  splits:
-  - text: "大醉侠"
-    translated: "Drunk Hero"
-- raw: "潜龙勿用"
-  splits:
-  - text: "潜龙勿用"
-    translated: "Do Not Stifle the Ascending Dragon"
-- raw: "小卧龙"
-  splits:
-  - text: "小卧龙"
-    translated: "Young Dragon‑Origin"
-- raw: "玄微法师"
-  splits:
-  - text: "玄微法师"
-    translated: "Mystic Master Xuanwei"
-- raw: "洞真法师"
-  splits:
-  - text: "洞真法师"
-    translated: "True Void Monk"
-- raw: "铸铁仙翁"
-  splits:
-  - text: "铸铁仙翁"
-    translated: "Cast‑iron Sage"
-- raw: "百炼神剑"
-  splits:
-  - text: "百炼神剑"
-    translated: "Celestial Sword Refined a Hundred Times"
-- raw: "销魂蚀骨"
-  splits:
-  - text: "销魂蚀骨"
-    translated: "Heart‑stirring and bone‑quaking"
-- raw: "毒手琴心"
-  splits:
-  - text: "毒手琴心"
-    translated: "Poison‑Finger Harp Soul"
-- raw: "黑爪"
-  splits:
-  - text: "黑爪"
-    translated: "Black Claw"
-- raw: "十殿冥主"
-  splits:
-  - text: "十殿冥主"
-    translated: "Ten Lords of the Netherworld"
-- raw: "阴冥诡士"
-  splits:
-  - text: "阴冥诡士"
-    translated: "Shadowcraft Master"
-- raw: "空谷幽兰"
-  splits:
-  - text: "空谷幽兰"
-    translated: "Gorge‑Dwelling Orchid"
-- raw: "黑白无常"
-  splits:
-  - text: "黑白无常"
-    translated: "Black and White Officials"
-- raw: "无双国士"
-  splits:
-  - text: "无双国士"
-    translated: "Unmatched National Scholar"
-- raw: "天剑客"
-  splits:
-  - text: "天剑客"
-    translated: "Heavenly Swordmaster"
-- raw: "霓裳仙子"
-  splits:
-  - text: "霓裳仙子"
-    translated: "Fairy Nishang"
-- raw: "德高望重"
-  splits:
-  - text: "德高望重"
-    translated: "Well‑respected"
-- raw: "金身罗汉"
-  splits:
-  - text: "金身罗汉"
-    translated: "Golden Body Arhat"
-- raw: "佛痴"
-  splits:
-  - text: "佛痴"
-    translated: "Buddhist Obsessed"
-- raw: "无为真人"
-  splits:
-  - text: "无为真人"
-    translated: "Immortal Wuwei"
-- raw: "文逸真人"
-  splits:
-  - text: "文逸真人"
-    translated: "Immortal Wen Yi"
-- raw: "清虚真人"
-  splits:
-  - text: "清虚真人"
-    translated: "Immortal Qingqi"
-- raw: "力大无穷"
-  splits:
-  - text: "力大无穷"
-    translated: "Unlimited strength"
-- raw: "算无遗策"
-  splits:
-  - text: "算无遗策"
-    translated: "Calculating without omission"
-- raw: "都灵子"
-  splits:
-  - text: "都灵子"
-    translated: "Tulingsi"
-- raw: "云鹏子"
-  splits:
-  - text: "云鹏子"
-    translated: "Yun Pengzi"
-- raw: "白眉真人"
-  splits:
-  - text: "白眉真人"
-    translated: "Immortal White Eyebrow"
-- raw: "潇湘真人"
-  splits:
-  - text: "潇湘真人"
-    translated: "Xiaoxiang Immortal"
-- raw: "白云子"
-  splits:
-  - text: "白云子"
-    translated: "White Cloud Apprentice"
-- raw: "紫髯道人"
-  splits:
-  - text: "紫髯道人"
-    translated: "Bearded Daoist"
-- raw: "绝情道人"
-  splits:
-  - text: "绝情道人"
-    translated: "Discordia Daoist"
-- raw: "天工巧匠"
-  splits:
-  - text: "天工巧匠"
-    translated: "Master Craftsman"
-- raw: "病鲁班"
-  splits:
-  - text: "病鲁班"
-    translated: "Clever Lu Ban"
-- raw: "掣地霹雳"
-  splits:
-  - text: "掣地霹雳"
-    translated: "Earthshaking Thunderbolt"
-- raw: "烁金枪"
-  splits:
-  - text: "烁金枪"
-    translated: "Blazing Spear"
-- raw: "燎原火凤"
-  splits:
-  - text: "燎原火凤"
-    translated: "Blazing Phoenix"
-- raw: "龙象护法"
-  splits:
-  - text: "龙象护法"
-    translated: "Dragon Elephant Guardian"
-- raw: "灵童转世"
-  splits:
-  - text: "灵童转世"
-    translated: "Reincarnation of a Child Prodigy"
-- raw: "慧眼明王"
-  splits:
-  - text: "慧眼明王"
-    translated: "Bright Eye King"
-- raw: "天山仙子"
-  splits:
-  - text: "天山仙子"
-    translated: "Tianshan Fairy"
-- raw: "雪山飞鸿"
-  splits:
-  - text: "雪山飞鸿"
-    translated: "Snow Mountain Flying Eagle"
-- raw: "冷月寒江"
-  splits:
-  - text: "冷月寒江"
-    translated: "Cold Moon, Frozen River"
-- raw: "铁掌双雄"
-  splits:
-  - text: "铁掌双雄"
-    translated: "Dual Iron Palm Experts"
-- raw: "铁掌四杰"
-  splits:
-  - text: "铁掌四杰"
-    translated: "Four Palm Masters"
-- raw: "绝情断义"
-  splits:
-  - text: "绝情断义"
-    translated: "Cut Off Emotions and Loyalties"
-- raw: "骷髅红粉"
-  splits:
-  - text: "骷髅红粉"
-    translated: "Skull Red Powder"
-- raw: "雨夜狂屠"
-  splits:
-  - text: "雨夜狂屠"
-    translated: "Night Rain Slaughterfest"
-- raw: "刺骨冰寒"
-  splits:
-  - text: "刺骨冰寒"
-    translated: "Bone‑chilling cold"
-- raw: "诡计毒谋"
-  splits:
-  - text: "诡计毒谋"
-    translated: "Deceitful schemes"
-- raw: "摘月偷星"
-  splits:
-  - text: "摘月偷星"
-    translated: "Pluck Moon, Steal Stars"
-- raw: "四大杀手"
-  splits:
-  - text: "四大杀手"
-    translated: "Four Assassins"
-- raw: "刀劳鬼"
-  splits:
-  - text: "刀劳鬼"
-    translated: "Butcher Ghost"
-- raw: "拘魂鬼"
-  splits:
-  - text: "拘魂鬼"
-    translated: "SoulCatcher"
-- raw: "痨病鬼"
-  splits:
-  - text: "痨病鬼"
-    translated: "Tubercular ghost"
-- raw: "山魈鬼"
-  splits:
-  - text: "山魈鬼"
-    translated: "Yamony Ghost"
-- raw: "魍魉鬼"
-  splits:
-  - text: "魍魉鬼"
-    translated: "Goblin demon"
-- raw: "黄河双煞"
-  splits:
-  - text: "黄河双煞"
-    translated: "Yellow River Dual Fiends"
-- raw: "乐善好施"
-  splits:
-  - text: "乐善好施"
-    translated: "Charitable"
-- raw: "入林龙"
-  splits:
-  - text: "入林龙"
-    translated: "Dragon Enters the Forest"
-- raw: "化虎成龙"
-  splits:
-  - text: "化虎成龙"
-    translated: "Transform into a tiger and become a dragon"
-- raw: "翻江镇海"
-  splits:
-  - text: "翻江镇海"
-    translated: "Turn the River and Calm the Sea"
-- raw: "及时雨"
-  splits:
-  - text: "及时雨"
-    translated: "Rainmaker"
-- raw: "乐山大患"
-  splits:
-  - text: "乐山大患"
-    translated: "Leshan great calamity"
-- raw: "西北四骏"
-  splits:
-  - text: "西北四骏"
-    translated: "Four Great Horses of the Northwest"
-- raw: "神拳无敌"
-  splits:
-  - text: "神拳无敌"
-    translated: "Invincible Fist"
-- raw: "富可敌国"
-  splits:
-  - text: "富可敌国"
-    translated: "Rich enough to rival a nation"
-- raw: "智计无双"
-  splits:
-  - text: "智计无双"
-    translated: "Ingenious beyond compare"
-- raw: "黑风寨大当家"
-  splits:
-  - text: "黑风寨大当家"
-    translated: "Great Leader of Black Wind Ridge"
-- raw: "黑风寨二当家"
-  splits:
-  - text: "黑风寨二当家"
-    translated: "Second Boss"
-- raw: "黑风寨三当家"
-  splits:
-  - text: "黑风寨三当家"
-    translated: "Third Master of Black Wind Manor"
-- raw: "黑风四贼"
-  splits:
-  - text: "黑风四贼"
-    translated: "Four Bandits of Black Wind"
-- raw: "大隐琴侠"
-  splits:
-  - text: "大隐琴侠"
-    translated: "Great Hidden Harp"
-- raw: "霸刀狂侠"
-  splits:
-  - text: "霸刀狂侠"
-    translated: "Frenzied Blade"
-- raw: "中原大侠"
-  splits:
-  - text: "中原大侠"
-    translated: "Great Hero of Central Plains"
-- raw: "蓬莱奇侠"
-  splits:
-  - text: "蓬莱奇侠"
-    translated: "Penglai Strange Hero"
-- raw: "茅山道侠"
-  splits:
-  - text: "茅山道侠"
-    translated: "Moshan Daoist Hero"
-- raw: "敕封御史之风"
-  splits:
-  - text: "敕封御史之风"
-    translated: "Imperial Censor Wind"
-- raw: "敕封御史之林"
-  splits:
-  - text: "敕封御史之林"
-    translated: "Imperial Censor Lin"
-- raw: "敕封御史之火"
-  splits:
-  - text: "敕封御史之火"
-    translated: "Imperial Censor's Flame"
-- raw: "敕封御史之山"
-  splits:
-  - text: "敕封御史之山"
-    translated: "Vice‑Adjudicator Mountain"
-- raw: "玉面判官"
-  splits:
-  - text: "玉面判官"
-    translated: "Face of Jade Official"
-- raw: "江湖百晓"
-  splits:
-  - text: "江湖百晓"
-    translated: "Jianghu Bai Xiao"
-- raw: "侠盗四奇"
-  splits:
-  - text: "侠盗四奇"
-    translated: "Four Legendary Thieves"
-- raw: "小霹雳"
-  splits:
-  - text: "小霹雳"
-    translated: "Little Thunderbolt"
-- raw: "侠盗四丑"
-  splits:
-  - text: "侠盗四丑"
-    translated: "Thief Quartet"
-- raw: "拳佛"
-  splits:
-  - text: "拳佛"
-    translated: "Punch Buddha"
-- raw: "陆地剑仙"
-  splits:
-  - text: "陆地剑仙"
-    translated: "Land Sword Immortal"
-- raw: "横刀灭九州"
-  splits:
-  - text: "横刀灭九州"
-    translated: "Slash to Annihilate Nine Provinces"
-- raw: "铁枪破宇宙"
-  splits:
-  - text: "铁枪破宇宙"
-    translated: "Spear Through the Universe"
-- raw: "出奇必胜"
-  splits:
-  - text: "出奇必胜"
-    translated: "Surprise attacks always win"
-- raw: "百步穿针"
-  splits:
-  - text: "百步穿针"
-    translated: "Hundred‑step needle‑threading"
-- raw: "百骰百胜"
-  splits:
-  - text: "百骰百胜"
-    translated: "Hundred Dice, Hundred Wins"
-- raw: "滚地雷"
-  splits:
-  - text: "滚地雷"
-    translated: "Tumble mine"
-- raw: "白衣秀士"
-  splits:
-  - text: "白衣秀士"
-    translated: "White‑robed Gentleman"
