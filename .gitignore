@@ -7,7 +7,8 @@
 TextAsset/
 
 # Converter specific
-Converter/output/
+Converter/output/_decompiled
+Converter/output/_ghidra_project
 Converter/ghidra/
 
 # Mod specific
