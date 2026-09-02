@@ -248,6 +248,10 @@ namespace Tests
             // JSON TextAsset/PoetryData.txt - see PoetryDataWorkflow.ExtractPoetryCandidates.
             new() {Path = "dynamicStringsPoetry.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
+            // Banquet/drinking minigame poem-quote comma-split halves - see
+            // DrinkQuoteWorkflow.ExtractDrinkQuoteCandidates.
+            new() {Path = "dynamicStringsDrinkQuotes.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+
             // SpeHeroData family/given-name halves - a DEDICATED file, deliberately NOT named
             // "dynamicStrings*" so it never matches DynamicStringPatches' DictionaryFilePattern
             // glob and never gets merged into that plugin's global substring-replace dictionary
@@ -797,6 +801,7 @@ namespace Tests
             "dynamicStringsFromStructuredFragments.txt",
             "dynamicStringsFromOtherFieldLabels.txt",
             "dynamicStringsPoetry.txt",
+            "dynamicStringsDrinkQuotes.txt",
         ];
 
         /// <summary>

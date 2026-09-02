@@ -48,7 +48,16 @@ public class TextResizerTests
         foreach (var (key, entries) in groups)
         {
             var outputPath = Path.Combine(resizersFolder, $"{key}.yaml");
-            File.WriteAllText(outputPath, serializer.Serialize(entries));
+
+            var existingEntries = File.Exists(outputPath)
+                ? deserializer.Deserialize<List<Dictionary<string, object>>>(File.ReadAllText(outputPath)) ?? []
+                : [];
+
+            var merged = existingEntries.Concat(entries)
+                .OrderBy(entry => entry.TryGetValue("path", out var pathValue) ? pathValue as string : null, StringComparer.Ordinal)
+                .ToList();
+
+            File.WriteAllText(outputPath, serializer.Serialize(merged));
         }
     }
     [Fact] // Can only be run when VS is running in admin

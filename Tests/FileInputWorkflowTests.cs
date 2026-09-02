@@ -94,6 +94,17 @@ public class FileInputWorkflowTests
         PoetryDataWorkflow.ExtractPoetryCandidates(GameFileHandling.WorkingDirectory);
     }
 
+    [Fact(DisplayName = "4f. ExtractDrinkQuoteCandidates")]
+    public void ExtractDrinkQuoteCandidates()
+    {
+        // Banquet/drinking minigame poem-quote comma-split halves, read directly from
+        // DrinkUIController's decompiled DrinkPoemText list (the game splits each line on "，"
+        // and displays the two halves as separate floating-text bubbles) - see
+        // DrinkQuoteWorkflow.ExtractDrinkQuoteCandidates' doc comment. Requires Converter output
+        // to already exist; no-ops otherwise. Writes only dynamicStringsDrinkQuotes.txt.
+        DrinkQuoteWorkflow.ExtractDrinkQuoteCandidates(GameFileHandling.WorkingDirectory);
+    }
+
     [Fact(DisplayName = "5. DedupeDynamicStringFiles")]
     public void DedupeDynamicStringFiles()
     {
