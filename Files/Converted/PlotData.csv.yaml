@@ -14034,9 +14034,7 @@
   splits:
   - split: 10
     text: "二弟！我和你们拼了！"
-    translated: "Brother Two! I'll fight alongside you!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Second Brother! I'll fight alongside you!"
 - raw: ",吴谋,,左,,,,,,,二哥！兵书有云，忍无可忍，无需再忍，杀！"
   splits:
   - split: 10
@@ -25749,9 +25747,7 @@
   splits:
   - split: 10
     text: "哦？我和我这二弟还没吃过活人心肝，想必鲜美无比啊！"
-    translated: "Oh? My younger brother and I haven't tasted human heart before, so it must be incredibly delicious!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Oh? My Second Brother and I haven't tried fresh human hearts before, so they must be incredibly delicious!"
 - raw: ",,马悍,右,,,,,,,来来来，戴兄快给我两表演一个，\\n吃过这厮的心肝，咱们也算是“肝胆相照”的好弟兄了。"
   splits:
   - split: 10
@@ -26071,9 +26067,7 @@
   splits:
   - split: 10
     text: "哎哟！二弟你他妈没长眼睛吗？"
-    translated: "Ouch! Brother Two, are you blind or something?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Ow! Second Brother, don't you have any eyes in your head?"
 - raw: ",,马悍,右,,,,,,,怪事怪事，这小子似醉非醉，东倒西歪，\\n打出来的拳路完全不合常理，却能让我们处处吃瘪。"
   splits:
   - split: 10
@@ -26179,9 +26173,7 @@
   splits:
   - split: 10
     text: "休要伤我二弟，接招！"
-    translated: "Don't hurt my younger brother; here's my move!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Don't hurt my Second Brother; here's my move!"
 - raw: ",徐不平,,左,,,,,UpgradeHeroSkill;郭勇锐-396-1,,此人这招黑虎掏心直来直往，不可硬拼。\\n你只需要使出“太白醉酒”，避其锋芒，攻其后背即可。"
   splits:
   - split: 10
@@ -31558,9 +31550,7 @@
   splits:
   - split: 10
     text: "哎呀二弟，你干什么呢？"
-    translated: "Oh Brother Two, what are you doing?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Oh, Second Brother, what are you doing?"
   - split: 10
     subIndex: 1
     text: "追兵就在屁股后面，不要命了你！"
@@ -43551,9 +43541,7 @@
   - split: 10
     subIndex: 1
     text: "二弟三弟，今天咱们飞龙三杰，扬名立万之机会来了！"
-    translated: "Brothers Two and Three, today is our chance to fly dragon triad and gain fame and reputation!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Second Brother and Third Brother, today our trio of Flying Dragon Heroes has the chance to make a name for ourselves!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -54946,9 +54934,7 @@
   splits:
   - split: 10
     text: "二弟，三弟，#PlayerName#，"
-    translated: "Brother Two, Brother Three, #PlayerName#,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Second Brother, Third Brother,#PlayerName#,"
   - split: 10
     subIndex: 1
     text: "你们过来干什么？"
@@ -150125,9 +150111,7 @@
   splits:
   - split: 10
     text: "那还愣着做什么，二弟，三弟，咱们接着追！"
-    translated: "What are you two brothers still waiting for? Let's keep pursuing!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "What are you waiting for, Second Brother, Third Brother, let's keep chasing!"
 - raw: ",,吴谋,右,,,,,ChangeHeroFavor;汪财-5,,好！#PlayerName#我们先走一步。\\n万一日后寻得这女贼的踪迹，请你再来帮忙一起捉拿。"
   splits:
   - split: 10
@@ -151456,9 +151440,7 @@
   splits:
   - split: 10
     text: "甚好什么甚好？二弟，你不会失心疯了吧？"
-    translated: "Very good, what's very good? Brother Two, are you losing your mind?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Second Brother,二弟,"
+    translated: "Very good, very good? Second Brother, are you losing your mind?"
 - raw: ",,,右,,,,,,,哎呀，大哥你看，这贼婆娘和血衣盟打个你死我活，两败俱伤，\\n咱们不是正好螳螂捕蝉，黄雀在后？"
   splits:
   - split: 10
