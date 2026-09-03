@@ -1486,7 +1486,7 @@
   splits:
   - split: 4
     text: "长乐帮入门弟子时常与其他帮派中人争抢地盘与档口，此时以怒面示人，可以吓退竞争者"
-    translated: "New disciples of the Changle Gang often compete with members from other gangs for territory and stalls. At such times, showing an angry face can intimidate competitors."
+    translated: "Initiate Disciples of Changle Gang frequently compete with other guild members for territories and stalls. At this time, showing a furious expression can intimidate the competitors."
 - raw: "295,轻功,1,走马灯,走马灯般绕敌旋转之步法，待到敌人眼花缭乱，心神烦躁之时，往往使用者自己也头晕目眩,,1,轻功1;意志1,轻功6;意志6;混乱0.06,,轻功15;意志10,,,,0,0,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1516,7 +1516,7 @@
   splits:
   - split: 4
     text: "长乐帮正式弟子有时需要迎送贵客，此时摆出知足常乐之笑脸，方为生财之道"
-    translated: "Disciples of the Changle Gang formally sometimes need to greet esteemed guests, so they should always wear a contented smile, for that is the way to bring in wealth."
+    translated: "Formal Disciples of Changle Gang sometimes need to welcome and see off guests, and at such times, they should display a contented smile, which is the way to earn money."
 - raw: "301,轻功,2,脚踏飞燕,此步法善于运用巧劲，腾空之时，灵动轻盈，若踏飞燕而上,,1,轻功2;力道1,轻功6;力道6;灵巧6;速度0.08,,轻功30;力道15;灵巧15,,,,0,0,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1838,7 +1838,7 @@
   splits:
   - split: 4
     text: "基础点穴手法，药王谷入门弟子常借修习此功夫来辨认穴位，学习经脉走向"
-    translated: "Basic acupressure techniques, often practiced by new disciples of the Medicine King Valley to recognize acupoints and learn the flow of meridians."
+    translated: "Basic acupoint pressing techniques, commonly practiced by Initiate Disciples of the Medicine King Valley to recognize acupoints and learn the flow of meridians."
 - raw: "364,拳掌,1,春蚕掌,此掌法擅长久战，招式以守代攻，绵密无比，劲道如春蚕吐丝般缠绕敌人，令其疲敝不堪,8,1,拳掌1;体质1,,体质2;拳掌2;内力0.1,拳掌15;体质10,\"1,1,1\",\"7,0,0\",疲劳0.1,8,2,0,手8,胸14;手8,,,skill0_1,,网缠-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2018,7 +2018,7 @@
   splits:
   - split: 4
     text: "暗藏在民间戏曲莲花落中的进阶内功心法，若能演唱此贯口，证明此人已步入丐帮正式弟子之行列"
-    translated: "Hidden within the folk opera Lianhua Luo lies advanced Neigong Heart Methods. To recite this passage fluently demonstrates that they have become an official disciple of the Beggar Sect."
+    translated: "Hidden within the folk opera Lotus Fall, advanced neigong and heart method techniques are embedded. Being able to perform this guan kou proves that one has entered the ranks of the Beggar Sect's formal disciples."
 - raw: "400,轻功,2,死缠烂打,叫花子行乞时，紧跟目标、不断纠缠之身法。一旦缠住目标，便如同牛皮糖一般，撕扯不下，甩脱不开,,0.8,轻功2;力道1,轻功9;力道9;笨拙0.08;负面加成0.04,,轻功25;力道15,,,,0,3,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3078,7 +3078,7 @@
   splits:
   - split: 4
     text: "大隐阁武功不善争强斗狠，只求与世无争之意，因此入门弟子皆需修习琴棋书画等修身养性之法"
-    translated: "The Great Hidden Pavilion's martial arts do not seek dominance or conflict; they aim for a harmonious coexistence with the world. Therefore, all new disciples must practice cultivation methods such as playing music, chess, calligraphy, and painting to nurture their spirits and nature."
+    translated: "Great Hidden Pavilion's martial arts do not seek to excel in brute strength or aggression; they only aim for harmony with the world. Therefore, initiate disciples must practice arts such as playing the zither, chess, calligraphy, and painting to cultivate their spirits and nature."
 - raw: "612,轻功,1,笔走龙蛇,以脚沾水，在地面挥洒行书之步法，其所成文字矫健活泼，潇洒大气，颇有几分嬉戏之意趣,,1,轻功1;灵巧1,轻功6;灵巧6;闪避0.06,,轻功20;灵巧10,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3337,7 +3337,7 @@
   splits:
   - split: 4
     text: "少林外门弟子常用，以齐眉长棍使出之棍法，要求身棍合一，力透棍尖，出棍时风声呼啸，圆转有力，颇有几分威势"
-    translated: "Shaolin external sect disciples commonly use long staffs, employing techniques where the body and staff move as one. The force must penetrate the tip of the staff. When delivering strikes, there's a whistling wind sound, with a circular and powerful motion that exudes a certain degree of imposing presence."
+    translated: "Shaolin outer disciples frequently use long staff techniques, requiring body and staff to move as one, with force penetrating the staff's tip. When the staff is wielded, there's a whistling sound, round and powerful, giving off a considerable presence."
 - raw: "661,长兵,1,梅花棍法,以虚招为主，颇具观赏性之棍法，其招式棍击两头，四面开花，舞得水泼不入，除少林弟子外也深得杂耍卖艺者喜爱,11,0.9,长兵1;意志1,,意志2;长兵2;内力0.1,长兵15;意志10,\"1,1,1\",\"7,0,0\",蓄力0.06,9,10,0,腹14,腹13,,,skill3_2,,花散-Target-Grid-Happen;打击2-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4038,7 +4038,7 @@
   splits:
   - split: 4
     text: "峨眉入门弟子必须熟记之口诀，有凝聚心神，锻炼智慧之功效"
-    translated: "New apprentices must memorize this mnemonic to focus their minds and sharpen their wisdom."
+    translated: "Initiate Disciples of Emei Mountain must memorize this mantra, which helps to focus the mind and hone wisdom."
 - raw: "797,拳掌,0,鸭形拳,峨眉山养鸭道士所创，身体左摇右摆，前后晃动，古朴笨拙中隐藏着奇特的拳法技巧,11,0.9,拳掌1,,智力2;拳掌1;内力0.1,拳掌5,\"3,1,1\",\"0,0,0\",笨拙0.04,6,14,0,足12,足12,,,skill0_0,,乱刃-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4418,7 +4418,7 @@
   splits:
   - split: 4
     text: "专门锻炼手指臂膀的灵巧功夫，乃神机门正式弟子必修科目，若修习不精，打造机关时难免错漏百出"
-    translated: "Special finger and arm dexterity techniques are mandatory subjects for official disciples of the Divine Mechanism Sect. If not diligently practiced, mistakes in crafting mechanisms are bound to occur."
+    translated: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms."
 - raw: "873,奇门,2,玉石麒麟,以玉石装饰的铜制麒麟，奔跑纵跃颇为华丽好看，绕敌人移动时口中会不时喷出箭矢暗器，令人防不胜防,,1.1,奇门2;意志1,,,奇门30;智力30,\"0,1,1\",\"0,0,0\",,16,16,4,,,3,1,craft,,组装-Target-Grid-Start;烟雾-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4847,7 +4847,7 @@
   splits:
   - split: 4
     text: "天山派武功多走阴寒套路，以内力凝水成冰，乃入门弟子之必修心法"
-    translated: "The Tianshan Sect's martial arts often follow a Yin‑cold approach, using inner power to condense water into ice‑this Heart Method is a mandatory practice for new disciples."
+    translated: "The Tianshan Sect's martial arts often follow Yin Cold approaches, using inner power to condense water into ice, which is a required Heart Method for initiate disciples."
 - raw: "956,轻功,0,踏雪行,天山苦寒，积雪深厚，外门弟子在山道上洒扫庭除，挑水担柴，颇要几分脚力,,0.9,轻功1,轻功4;灵巧2;体质2;轻灵0.04,,轻功5,,,,0,19,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4

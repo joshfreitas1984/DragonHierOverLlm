@@ -10846,7 +10846,7 @@
 - raw: "亲传弟子及以下方能参赛"
   splits:
   - text: "亲传弟子及以下方能参赛"
-    translated: "Apprentices and below are eligible to compete"
+    translated: "Direct Disciple and Below Are Eligible to Compete"
 - raw: "亲卫"
   splits:
   - text: "亲卫"
@@ -12849,7 +12849,7 @@
 - raw: "入门弟子"
   splits:
   - text: "入门弟子"
-    translated: "Novice Disciple"
+    translated: "Initiate Disciple"
 - raw: "入门需要:"
   splits:
   - text: "入门需要"
@@ -19979,7 +19979,7 @@
 - raw: "外门弟子"
   splits:
   - text: "外门弟子"
-    translated: "Outer Gate Disciple"
+    translated: "Outer Disciple"
 - raw: "外面天寒地冻，#PlayerName#快进来暖和暖和。\n师兄弟们正生火烧水，准备煮粥呢。"
   splits:
   - text: "外面天寒地冻，#PlayerName#快进来暖和暖和。"
@@ -43702,7 +43702,7 @@
 - raw: "门客虽不算正式弟子，但仍可使用部分派内设施。\n此外，也不用受门规繁文缛节之限制，不知#PlayerName#意下如何？\n(成为门客后需为#TargetForceName#效力180日，提前叛离会受到惩罚)"
   splits:
   - text: "门客虽不算正式弟子，但仍可使用部分派内设施。"
-    translated: "While courtesans are not considered official disciples, they can still use some of the internal facilities."
+    translated: "Though retainers are not formal disciples, they may still use some of the internal facilities."
   - subIndex: 1
     text: "此外，也不用受门规繁文缛节之限制，不知#PlayerName#意下如何？"
     translated: "Moreover, you won't be restricted by the complicated rules of the sect. What do you think, #PlayerName#?"

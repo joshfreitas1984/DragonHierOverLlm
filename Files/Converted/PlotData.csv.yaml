@@ -1843,7 +1843,7 @@
   - split: 10
     subIndex: 1
     text: "为何不念同门情分，屡屡为难我这一外门弟子？"
-    translated: "Why don't you recall the brotherhood among fellow disciples and constantly make life difficult for this outer gate disciple?"
+    translated: "Why don't you honor our fellow student bond and stop making things difficult for this outer disciple?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -4585,7 +4585,7 @@
   - split: 10
     subIndex: 1
     text: "你们几个外门弟子，快去将比武场收拾妥当，半个时辰内！"
-    translated: "You outer gate disciples, quickly prepare the arena! Do it within a half hour!"
+    translated: "You outer disciples, go and make the arena ready in half an hour!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -4937,7 +4937,7 @@
   splits:
   - split: 10
     text: "这两名亲传弟子本情同手足，在巴蜀行侠仗义，威名远扬，"
-    translated: "These two adopted disciples were like brothers in arms, traveling through Bashu to right wrongs and gaining fame far and wide."
+    translated: "These two direct disciples were like brothers in all but blood, wandering the lands of Bashu to right wrongs and gain renown far and wide."
   - split: 10
     subIndex: 1
     text: "江湖人尊称“寒梅双子”。"
@@ -20000,7 +20000,7 @@
   - split: 10
     subIndex: 1
     text: "你们两位同为本门正式弟子，功夫仅在师傅和我之下，"
-    translated: "You two are official disciples of our sect, ranking only below Master and me in martial arts."
+    translated: "You two are both formal disciples of our sect, ranking below only the Master and me in martial arts."
   - split: 10
     subIndex: 2
     text: "正好也给师弟师妹们，演示本门武学飞星快剑的精要所在。"
@@ -20119,7 +20119,7 @@
   - split: 10
     subIndex: 1
     text: "你两作为入门弟子，也在本门学习了数年有余，"
-    translated: "You two, as entry‑level disciples, have studied within the sect for more than a few years."
+    translated: "You two, as initiate disciples, have also studied within the sect for several years."
   - split: 10
     subIndex: 2
     text: "此次比试不必客气，只管将近来武学感悟皆尽使出便可。"
@@ -20172,7 +20172,7 @@
   splits:
   - split: 10
     text: "你们作为入门弟子，本门的基础武学连环剑法还练得不甚纯熟。"
-    translated: "As entry disciples of this sect, you have yet to fully master our basic martial arts technique, the Linked Sword Art."
+    translated: "As initiate disciples, you still haven't mastered the Chain Sword Technique, the fundamental martial art of our sect."
   - split: 10
     subIndex: 1
     text: "还得以游年和采薇为榜样，好好精进武艺才行。"
@@ -20197,7 +20197,7 @@
   splits:
   - split: 10
     text: "你们作为入门弟子，本门的基础武学连环剑法还练得不甚纯熟。"
-    translated: "As entry disciples of this sect, you have yet to fully master our basic martial arts technique, the Linked Sword Art."
+    translated: "As initiate disciples, you still haven't mastered the Chain Sword Technique, the fundamental martial art of our sect."
   - split: 10
     subIndex: 1
     text: "还得以游年和采薇为榜样，好好精进武艺才行。"
@@ -21851,7 +21851,7 @@
   - split: 10
     subIndex: 1
     text: "可这少年当时不过十六七岁，最多也就是个内门弟子，怎敢夸下此等海口？"
-    translated: "But the youth was merely sixteen or seventeen at the time, at most just an Inner Gate cultivator. How could he dare to make such a bold claim?"
+    translated: "But this youth was no more than sixteen or seventeen at the time, at most just an Inner Disciple. How could he dare to make such a bold claim?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -26668,7 +26668,7 @@
   - split: 10
     subIndex: 1
     text: "既已实在无处可去，就加入丐帮随我习武，从这入门弟子做起吧！"
-    translated: "Since there's nowhere else to go, why not join the Beggar Sect and learn martial arts with me? Start as an entry‑level disciple!"
+    translated: "Since you have nowhere else to go, join the Beggar Sect and train with me. Start out as an Initiate Disciple!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -28585,7 +28585,7 @@
   splits:
   - split: 10
     text: "这事儿咋看都邪门得很，我又只是外门弟子，"
-    translated: "This seems quite suspicious to me, and I'm just an outer sect disciple."
+    translated: "This seems pretty strange to me, and I'm just an outer disciple."
   - split: 10
     subIndex: 1
     text: "怕是把这事儿抖出来，就算师傅老人家信任我，"
@@ -28908,7 +28908,7 @@
   splits:
   - split: 10
     text: "不过要与郭淮的爱子结交，你作为我青城派外门弟子，地位未免太低微了些"
-    translated: "But to befriend Guo Huai's son, you as an outer gate disciple of our Qingcheng Sect are too lowly in status."
+    translated: "But to befriend Guo Huai's son, as an outer disciple of our Qingcheng Sect, your status is a bit too low for this."
   templates:
   - split: 10
     template: "{0}……"
@@ -28916,7 +28916,7 @@
   splits:
   - split: 10
     text: "这样，今天为师就晋升你为本门的入门弟子！"
-    translated: "Thus, today I advance you as an entry disciple of our sect!"
+    translated: "Thus, today I will promote you to be an Initiate Disciple of our sect!"
 - raw: ",,,左,,,,,,,师傅，我这资质平平，况且才入门一两年，\\n啥都还没学到手呢……"
   splits:
   - split: 10
@@ -28933,11 +28933,11 @@
   splits:
   - split: 10
     text: "诶，你一直以来兢兢业业，恪尽职守，当外门弟子实在屈才。"
-    translated: "Hey, you've been working hard and fulfilling your duties all along. It's a waste to have such talent as an outer gate disciple."
+    translated: "Hey, you've been working diligently and conscientiously all along. Being an outer disciple is really a waste of your talents."
   - split: 10
     subIndex: 1
     text: "为师心意已决，来人，这就吩咐下去，将王添翼升为入门弟子。"
-    translated: "Master has made up their mind. Attendants, carry out the order immediately and promote Wang Tianyi to Junior Disciple."
+    translated: "My mind is made up. Come, issue the order right away to promote Wang Tianyi to Initiate Disciple."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -29017,7 +29017,7 @@
   splits:
   - split: 10
     text: "哈哈，恭喜王兄晋升入门弟子啊。"
-    translated: "Ha ha, congratulations Brother Wang on advancing to Novice Disciple."
+    translated: "Ha ha, Congratulations, Brother Wang, on your promotion to Initiate Disciple."
 - raw: ",,,右,,,,,,,哎。"
   splits:
   - split: 10
@@ -29101,7 +29101,7 @@
   splits:
   - split: 10
     text: "今天我又被师傅破格提拔成入门弟子，"
-    translated: "Today, I was specially promoted by my Master to become an entry‑level disciple."
+    translated: "Today, my Master broke the usual rules to promote me to an Initiate Disciple."
   - split: 10
     subIndex: 1
     text: "只怕师兄弟们心里更不舒服了，"
@@ -36164,7 +36164,7 @@
   splits:
   - split: 10
     text: "弟子愿降为外门弟子，为师弟师妹们退位让贤。"
-    translated: "Disciple wishes to lower myself and become an outer door disciple, stepping down for the junior brothers and sisters."
+    translated: "Disciple wishes to descend to become an outer disciple, stepping aside for the junior brothers and sisters."
 - raw: ",,玩家,右,,,,,,,顾师兄！你为本门受此重伤，\\n若不加以奖赏，岂非寒了其他师兄弟的心？"
   splits:
   - split: 10
@@ -36225,7 +36225,7 @@
   splits:
   - split: 10
     text: "婉儿，退儿，你们二人作为入门弟子，也修行了有些时日了。"
-    translated: "Wan'er, Tuer, as entry‑level disciples, you two have practiced for some time now."
+    translated: "Wen'er, Tuirui, as initiate disciples, you two have practiced for some time now."
   - split: 10
     subIndex: 1
     text: "眼下为师便晋升进门两位为"
@@ -36333,7 +36333,7 @@
   splits:
   - split: 10
     text: "你虽为外门弟子，却是习武最勤之人。"
-    translated: "Though you are an outer gate disciple, you are the most diligent in training."
+    translated: "Though you are an outer disciple, you are the most diligent in martial arts practice."
   - split: 10
     subIndex: 1
     text: "每遇凶险，常常奋不顾身，冲锋陷阵。"
@@ -36349,7 +36349,7 @@
   - split: 10
     subIndex: 1
     text: "内门弟子"
-    translated: "Inner Gate Disciple"
+    translated: "Inner Disciple"
   - split: 10
     subIndex: 2
     text: "思迟你若能持之以恒，笃志力行，必能厚积薄发，大器晚成。"
@@ -45258,7 +45258,7 @@
   - split: 10
     subIndex: 1
     text: "和一群入门弟子打的有来有回，也不怕旁人笑掉大牙？"
-    translated: "Fighting back and forth with a group of novice disciples isn't he afraid others will laugh at him?"
+    translated: "Fighting back and forth with a group of initiate disciples isn't something you're afraid will make others laugh at you?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -46924,7 +46924,7 @@
   - split: 10
     subIndex: 1
     text: "如此一来，再在本门当入门弟子，也不太合适了。"
-    translated: "Thus, it's no longer quite appropriate for me to be an entry‑level disciple in this sect."
+    translated: "In that case, it's not quite appropriate for me to be an initiate disciple in this sect anymore."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -46932,7 +46932,7 @@
   splits:
   - split: 10
     text: "为师今天，就晋升你为本门的正式弟子！"
-    translated: "Master today elevates you to be an official disciple of our sect!"
+    translated: "Master today, I promote you to a Formal Disciple of our sect!"
   - split: 10
     subIndex: 1
     text: "望你继续为本门尽忠效力，莫要辜负为师对你的期望啊！"
@@ -59188,7 +59188,7 @@
   splits:
   - split: 10
     text: "那铁掌帮说什么佯攻佯攻，其实两大长老连同亲传弟子都来了，"
-    translated: "That Iron Palm Gang talked about feint attacks, but in reality, both the Elders and their directly taught disciples have come."
+    translated: "That Iron Palm Gang talked about feint attacks, but in reality, both the Elders and their direct disciples have come."
   - split: 10
     subIndex: 1
     text: "就是为了夺取本门的巴陵村而来的！"
@@ -67545,7 +67545,7 @@
   splits:
   - split: 10
     text: "你们几个，带上分舵入门弟子，负责白天巡逻。"
-    translated: "You guys should take the branch entrance disciples and be responsible for daytime patrols."
+    translated: "You guys should take the initiate disciples from the branch headquarters and be responsible for patrolling during the day."
   - split: 10
     subIndex: 1
     text: "另外几个，带上总舵调来的弟子，负责晚上巡逻。"
@@ -78987,11 +78987,11 @@
   - split: 10
     subIndex: 1
     text: "大抵分为外门弟子，入门弟子，正式弟子，"
-    translated: "It generally divides into Outer Gate Disciples, Initiate Disciples, and Formal Disciples."
+    translated: "In general, they are divided into Outer Disciples, Initiate Disciples, and Formal Disciples."
   - split: 10
     subIndex: 2
     text: "亲传弟子，长老，掌门这六个级别。"
-    translated: "Apprentice, Elder, Sect Master – these are the six levels."
+    translated: "Direct Disciple, Elder, Sect Leader – these are the six levels."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -79039,15 +79039,15 @@
   splits:
   - split: 10
     text: "不算这位师伯，本门武功第三第四，就是身为正式弟子的采薇和我了。"
-    translated: "Not counting this senior uncle, the third and fourth ranked martial arts skills in our sect are mine and Cultivate Dust's."
+    translated: "Without counting Senior Elder, the third and fourth ranked martial arts skills in our sect are held by Formal Disciple Cai Wei and me."
   - split: 10
     subIndex: 1
     text: "然后下来，是身为入门弟子的沈退和姜婉。"
-    translated: "Then come Shen Tui and Jiang Wan, who are the junior disciples."
+    translated: "Next down are Initiate Disciple Shen Tui and Jiang Wan."
   - split: 10
     subIndex: 2
     text: "最后便是身为外门弟子的杨思迟了。"
-    translated: "Next is Yang Sichi, who is an outer gate disciple."
+    translated: "And there is Yang Sichi, an Outer Disciple."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -83747,7 +83747,7 @@
   - split: 10
     subIndex: 1
     text: "好几名亲传弟子与正式弟子都死于非命。"
-    translated: "Several of his directly taught disciples and formal students died under mysterious circumstances."
+    translated: "Several direct disciples and formal disciples died under mysterious circumstances."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -97267,7 +97267,7 @@
   splits:
   - split: 10
     text: "这秘传武功，更是非同小可，少林亲传弟子以下皆不得参阅，"
-    translated: "This secret martial art is particularly significant; even disciples of the Shaolin who are not direct pupils are forbidden to study it."
+    translated: "This secret martial art is particularly significant; direct disciples of the Shaolin and below are not permitted to refer to it."
   - split: 10
     subIndex: 1
     text: "足见方丈对几位少侠的厚爱与信赖之情。"
@@ -99951,7 +99951,7 @@
   splits:
   - split: 10
     text: "没想到你年纪轻轻，竟然已是峨眉掌门司马德源长老的亲传弟子，真是人不可貌相。"
-    translated: "I never expected that you, being so young, would already be the personal disciple of Elder Sima Deyuan, Sect Leader of Mount Mei. Truly, one cannot judge a person by their appearance."
+    translated: "Unexpectedly, you are already a direct disciple of Sect Leader and Elder Sima Deyuan of Mount Mei at such a young age. Truly, one can't judge a person by their appearance."
   - split: 10
     subIndex: 1
     text: "不过你刚才说，这赵胤宗还埋下了一个宝藏，又是怎么回事？"
@@ -102221,7 +102221,7 @@
   - split: 10
     subIndex: 1
     text: "当时#PlayerName#你，还是仙霞派的外门弟子。"
-    translated: "Back then, #PlayerName#, you were still an outer gate disciple of the Xianxia Sect."
+    translated: "Back then, #PlayerName#, you were still an Outer Disciple of the Xianxia Sect."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -115406,7 +115406,7 @@
   - split: 10
     subIndex: 1
     text: "小僧乃是少林亲传弟子彗定，受方丈之托前来调查这税银劫案。"
-    translated: "I am Hui Ding, a Shaolin disciple directly taught by the abbot. I have come to investigate this tax silver robbery as per the abbot's request."
+    translated: "I am Hui Ding, a Direct Disciple of Shaolin, sent by the Abbot to investigate this tax silver robbery."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -140186,7 +140186,7 @@
   - split: 10
     subIndex: 1
     text: "此地战事凶险，你们这些外门弟子过来作甚？"
-    translated: "This place is perilous; why have you inner door disciples come here?"
+    translated: "The battle here is dangerous. Why have you outer disciples come over?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -157587,7 +157587,7 @@
   - split: 10
     subIndex: 2
     text: "掌门你却不慌不忙，只派出几名亲传弟子。"
-    translated: "The Sect Leader moved calmly and only dispatched several personally trained disciples."
+    translated: "The Sect Leader remained calm and only sent out a few direct disciples."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -210965,7 +210965,7 @@
   - split: 10
     subIndex: 1
     text: "但身为本门亲传弟子，一直恪尽职守，兢兢业业。"
-    translated: "But as the master's own disciple, I have always fulfilled my duties diligently and conscientiously."
+    translated: "But as a direct disciple of the sect, I have always fulfilled my duties with diligence and dedication."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -226807,7 +226807,7 @@
   splits:
   - split: 10
     text: "想当年初次见面，王兄还是青城外门弟子，操着一口巴蜀方言。"
-    translated: "Back then when we first met, Brother Wang was still an outer gate disciple of Qingcheng, speaking in Ba‑Shu dialect."
+    translated: "Back in the day when we first met, Brother Wang was still an Outer Disciple from Qingcheng, speaking in Ba‑Shu dialect."
   - split: 10
     subIndex: 1
     text: "如今一转眼间，已成了独当一面的大侠。"
@@ -251690,11 +251690,11 @@
   - split: 10
     subIndex: 1
     text: "大抵分为外门弟子，入门弟子，正式弟子，"
-    translated: "It generally divides into Outer Gate Disciples, Initiate Disciples, and Formal Disciples."
+    translated: "In general, they are divided into Outer Disciples, Initiate Disciples, and Formal Disciples."
   - split: 10
     subIndex: 2
     text: "亲传弟子，长老，掌门这六个级别。"
-    translated: "Apprentice, Elder, Sect Master – these are the six levels."
+    translated: "Direct Disciple, Elder, Sect Leader – these are the six levels."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -288405,7 +288405,7 @@
   splits:
   - split: 10
     text: "此人短短数十年间，就从外门弟子跃升成绝顶高手，"
-    translated: "This person rose from an outer door disciple to become a top‑tier expert in just a few short decades."
+    translated: "This person rose from an Outer Disciple to a top‑tier expert in just a few decades."
   - split: 10
     subIndex: 1
     text: "而且还把仙霞派发展成天下第一大派。"

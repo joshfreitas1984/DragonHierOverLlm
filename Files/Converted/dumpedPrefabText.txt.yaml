@@ -1628,7 +1628,7 @@
 - raw: "入门弟子"
   splits:
   - text: "入门弟子"
-    translated: "Novice Disciple"
+    translated: "Initiate Disciple"
 - raw: "全体出战"
   splits:
   - text: "全体出战"
@@ -3856,7 +3856,7 @@
     translated: "Promotion"
   - subIndex: 1
     text: "入门弟子"
-    translated: "Novice Disciple"
+    translated: "Initiate Disciple"
   - subIndex: 2
     text: "条件"
     translated: "Conditions"
@@ -4122,7 +4122,7 @@
     translated: "Wudang"
   - subIndex: 1
     text: "外门弟子百衲衣"
-    translated: "Outer Gate Disciple Bahetee Cloak"
+    translated: "Outer Disciple Patchwork Robe"
   templates:
   - template: "{0}\\n{1}"
 - raw: "武当武当"
@@ -4135,7 +4135,7 @@
     translated: "Wudang Sect"
   - subIndex: 1
     text: "亲传弟子道袍道"
-    translated: "Apprentice Worn Dao Robe"
+    translated: "Direct Disciple wore the Daoist robe"
   templates:
   - template: "{0}\\n{1}"
 - raw: "武林盟主"
@@ -5437,7 +5437,7 @@
     translated: "Attack the Yellow River Gang"
   - subIndex: 1
     text: "外门弟子"
-    translated: "Outer Gate Disciple"
+    translated: "Outer Disciple"
   - subIndex: 2
     text: "东门惊乐1次"
     translated: "East Gate: Delighted by Joy 1 Times"
@@ -5818,11 +5818,11 @@
 - raw: "金刚密宗亲传弟子"
   splits:
   - text: "金刚密宗亲传弟子"
-    translated: "Vajrayana Sect Disciple Passed Down Directly"
+    translated: "Direct Disciple of the Vajrayana Sect"
 - raw: "金刚密宗入门弟子"
   splits:
   - text: "金刚密宗入门弟子"
-    translated: "Vajrayana Sect Novice Disciple"
+    translated: "Vajrayana Sect Initiate Disciple"
 - raw: "金龙生处已解锁藏宝阁功能"
   splits:
   - text: "金龙生处已解锁藏宝阁功能"
@@ -5853,7 +5853,7 @@
 - raw: "铸剑山庄外门弟子"
   splits:
   - text: "铸剑山庄外门弟子"
-    translated: "Swordforging Manor Outer Hall Disciple"
+    translated: "Swordforging Manor Outer Disciple"
 - raw: "铸造"
   splits:
   - text: "铸造"

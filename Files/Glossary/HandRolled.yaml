@@ -44,3 +44,21 @@
   result: "Senior Brother Gu"
 - raw: 沈退
   result: "Shen Tui"
+- raw: 入门弟
+  result: "Initiate Disciple"
+- raw: 外门弟子
+  result: "Outer Disciple"
+- raw: 内门弟子
+  result: "Inner Disciple"
+- raw: 亲传弟子
+  result: "Direct Disciple"
+- raw: 正式弟子
+  result: "Formal Disciple"
+
+
+- raw: 采薇
+  result: "Caiwei"
+- raw: 胥华
+  result: "Xuhua"
+- raw: 映泉
+  result: "Yingquan"

@@ -5247,7 +5247,7 @@
 - raw: "作为入门弟子，你现在只能学习最基础的武功。\\n初次修习某一秘籍，是需要消耗一定门派功绩的。\\n如果已学会该功法，则可以免费阅读。"
   splits:
   - text: "作为入门弟子，你现在只能学习最基础的武功。"
-    translated: "As an entry‑level disciple, you can only learn the most basic martial arts now."
+    translated: "As an Initiate Disciple, you can only learn the most basic martial arts for now."
   - subIndex: 1
     text: "初次修习某一秘籍，是需要消耗一定门派功绩的。"
     translated: "Initial study of a particular danji requires a certain amount of Sect merits."
@@ -5694,7 +5694,7 @@
 - raw: "入门弟子可以修习藏经阁内绿色进阶武功，\\n从而大大提升自身修为。"
   splits:
   - text: "入门弟子可以修习藏经阁内绿色进阶武功，"
-    translated: "Entrance disciples can practice the green‑level advanced martial arts in the Scripture Pavilion."
+    translated: "Initiate Disciples can practice the green advanced martial arts in the Scripture Pavilion."
   - subIndex: 1
     text: "从而大大提升自身修为。"
     translated: "Thus significantly enhancing their cultivation"
@@ -6307,7 +6307,7 @@
 - raw: "升为入门弟子后，你可在藏经阁内阅读更高深的秘籍。\\n请先进入藏经阁。"
   splits:
   - text: "升为入门弟子后，你可在藏经阁内阅读更高深的秘籍。"
-    translated: "Promoted to an Entry Disciple, you may then read more advanced manuals in the Scripture Pavilion."
+    translated: "Promoted to the status of Initiate Disciple, you may now read more advanced scriptures in the Scripture Pavilion."
   - subIndex: 1
     text: "请先进入藏经阁。"
     translated: "Please enter the Scripture Pavilion first"
@@ -6334,7 +6334,7 @@
 - raw: "升任亲传弟子后，\\n你获得了在本门控制区域内营造建筑的权限。"
   splits:
   - text: "升任亲传弟子后，"
-    translated: "Promoted to personal disciple,"
+    translated: "Promoted to Direct Disciple,"
   - subIndex: 1
     text: "你获得了在本门控制区域内营造建筑的权限。"
     translated: "You have been granted the authority to construct buildings within this zone."
@@ -10296,11 +10296,11 @@
 - raw: "晋升亲传弟子"
   splits:
   - text: "晋升亲传弟子"
-    translated: "Promote personal disciple"
+    translated: "Promote Direct Disciple"
 - raw: "晋升入门弟子"
   splits:
   - text: "晋升入门弟子"
-    translated: "Promote them to xuezhe"
+    translated: "Ascend to Initiate Disciple"
 - raw: "晋升正式弟子"
   splits:
   - text: "晋升正式弟子"
