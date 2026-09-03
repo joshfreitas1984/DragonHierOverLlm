@@ -6953,28 +6953,28 @@
   - text: "掌门"
     translated: "Sect Master"
   - subIndex: 1
-    text: "将《"
-    translated: "'Create《"
+    text: "将"
+    translated: "Shift"
   - subIndex: 2
     text: "秘籍放入藏经阁，供全派弟子参阅。"
     translated: "Scrolls placed in the Scripture Pavilion for all sect disciples to peruse."
   templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧》⟦3⟧{2}"
+  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}"
 - raw: "{0}掌门{1}用《{2}》{3}替换了藏经阁内的《{2}》{4}秘籍，供全派弟子参阅。"
   splits:
   - text: "掌门"
     translated: "Sect Master"
   - subIndex: 1
-    text: "用《"
-    translated: "'Using《"
+    text: "用"
+    translated: "Use"
   - subIndex: 2
-    text: "替换了藏经阁内的《"
-    translated: "'replaced the Scripture Pavilion's《"
+    text: "替换了藏经阁内的"
+    translated: "Replaced the Scripture Pavilion with"
   - subIndex: 3
     text: "秘籍，供全派弟子参阅。"
     translated: "Manual, provided for the entire sect's disciples to refer to."
   templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧》⟦3⟧{2}⟦2⟧》⟦4⟧{3}"
+  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}《⟦2⟧》⟦4⟧{3}"
 - raw: "{0}接任了{1}掌门之位。"
   splits:
   - text: "接任了"
@@ -7571,10 +7571,10 @@
   - template: "⟦0⟧{0}：⟦1⟧[⟦2⟧]"
 - raw: "{0}藏经阁添加了藏书《{1}》。"
   splits:
-  - text: "藏经阁添加了藏书《"
-    translated: "'The Scripture Pavilion has added the scripture 《"
+  - text: "藏经阁添加了藏书"
+    translated: "Scripture Pavilion has added more scriptures"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧》。"
+  - template: "⟦0⟧{0}《⟦1⟧》。"
 - raw: "{0}表演;ChooseCoachWork;{1}"
   splits:
   - text: "表演"
@@ -7997,13 +7997,13 @@
   - template: "⟦1⟧{0}\n⟦0⟧"
 - raw: "{1}的“{0}”，\n竟与我不相上下"
   splits:
-  - text: "的“"
-    translated: "'of the"
+  - text: "的"
+    translated: "Of"
   - subIndex: 1
     text: "竟与我不相上下"
     translated: "Turns out we are on equal footing"
   templates:
-  - template: "⟦1⟧{0}⟦0⟧”，\n{1}"
+  - template: "⟦1⟧{0}“⟦0⟧”，\n{1}"
 - raw: "{1}言语中颇多纰漏之处，\n只恐贻笑大方"
   splits:
   - text: "言语中颇多纰漏之处，"
@@ -9122,13 +9122,13 @@
   - text: "不知"
     translated: "Unknown"
   - subIndex: 1
-    text: "之“"
-    translated: "'of"
+    text: "之"
+    translated: "Of"
   - subIndex: 2
     text: "与我相比孰强孰弱？"
     translated: "Who is stronger compared to me?"
   templates:
-  - template: "{0}⟦1⟧{1}⟦0⟧”，\n{2}"
+  - template: "{0}⟦1⟧{1}“⟦0⟧”，\n{2}"
 - raw: "不知不觉杯盘狼藉，夜色已浓，也该是回房休息的时候了。\n哎，人有悲欢离合，月有阴晴圆缺，\n希望来年我们师兄弟们还能在此欢聚一堂，共度中秋。"
   splits:
   - text: "不知不觉杯盘狼藉，夜色已浓，也该是回房休息的时候了。"
@@ -11470,10 +11470,10 @@
   - template: "{0}⟦1⟧{1}\n{2}⟦0⟧{3}"
 - raw: "以我现在的烹饪技能（{0}），{1}"
   splits:
-  - text: "以我现在的烹饪技能（"
-    translated: "(With my current cooking skills,"
+  - text: "以我现在的烹饪技能"
+    translated: "With my current cooking skills"
   templates:
-  - template: "{0}⟦0⟧），⟦1⟧"
+  - template: "{0}（⟦0⟧），⟦1⟧"
 - raw: "以我的修为坐镇指挥可为本门提供<b>{5}%</b>战力加成。\n双方将各派战力前{2}名的弟子出阵，预计最终战力为：\n<b>{0}{7} {3}\n{1}{8} {4}</b>\n想必此战将以<b>我方{9}</b>告终，确认要开战吗？"
   splits:
   - text: "以我的修为坐镇指挥可为本门提供"
@@ -12439,22 +12439,22 @@
   - template: "{0}⟦0⟧{1}⟦1⟧{2}"
 - raw: "便是这“{0}”，\n我苦思冥想，依旧记不起这空白之处，本应是哪句才对......"
   splits:
-  - text: "便是这“"
-    translated: "'It is this"
+  - text: "便是这"
+    translated: "It is this"
   - subIndex: 1
     text: "我苦思冥想，依旧记不起这空白之处，本应是哪句才对......"
     translated: "I racked my brains but still couldn't recall this blank spot. It should have been..."
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "便用这“{0}”，\n令你心服口服"
   splits:
-  - text: "便用这“"
-    translated: "'Use this"
+  - text: "便用这"
+    translated: "Use this"
   - subIndex: 1
     text: "令你心服口服"
     translated: "Convince you beyond a shadow of a doubt"
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "保命要紧;HideInteractUI"
   splits:
   - text: "保命要紧"
@@ -22767,13 +22767,13 @@
   - template: "{0}⟦0⟧{1};ForceLeaderAnswerQuestion;0;;;⟦1⟧/⟦2⟧"
 - raw: "对于“{0}”，\n我颇有几分见解"
   splits:
-  - text: "对于“"
-    translated: "'For"
+  - text: "对于"
+    translated: "For"
   - subIndex: 1
     text: "我颇有几分见解"
     translated: "I have a certain insight"
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "对你的"
   splits:
   - text: "对你的"
@@ -29505,8 +29505,8 @@
     translated: "Who dares to challenge me in battle?"
 - raw: "是否自动阅读《{0}》？\n当前{4}最高经验纪录{1}点\n自动练习可得{2}%({3}点)"
   splits:
-  - text: "是否自动阅读《"
-    translated: "'Do you want to automatically read the 'Agreement'?"
+  - text: "是否自动阅读"
+    translated: "Do you want to enable automatic reading?"
   - subIndex: 1
     text: "当前"
     translated: "Current"
@@ -29523,7 +29523,7 @@
     text: "点"
     translated: "Click"
   templates:
-  - template: "{0}⟦0⟧》？\n{1}⟦4⟧{2}⟦1⟧{3}\n{4}⟦2⟧%(⟦3⟧{5})"
+  - template: "{0}《⟦0⟧》？\n{1}⟦4⟧{2}⟦1⟧{3}\n{4}⟦2⟧%(⟦3⟧{5})"
 - raw: "是否要针对攻略地点提出建议？"
   splits:
   - text: "是否要针对攻略地点提出建议？"
@@ -33403,43 +33403,43 @@
 - raw: "溜之大吉;DeathFightHeroFinish"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
   templates:
   - template: "{0};DeathFightHeroFinish"
 - raw: "溜之大吉;FinishFightForSpeItem;lose-{0}-{1}"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
   templates:
   - template: "{0};FinishFightForSpeItem;lose-⟦0⟧-⟦1⟧"
 - raw: "溜之大吉;FinishJiangWanLeaveForce"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
   templates:
   - template: "{0};FinishJiangWanLeaveForce"
 - raw: "溜之大吉;FinishPlayerFight"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
   templates:
   - template: "{0};FinishPlayerFight"
 - raw: "溜之大吉;GiveUpEventMission"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
   templates:
   - template: "{0};GiveUpEventMission"
 - raw: "溜之大吉;HideInteractUI"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
   templates:
   - template: "{0};HideInteractUI"
 - raw: "溜了溜了;HideInteractUI"
   splits:
   - text: "溜了溜了"
-    translated: "Bai bai!"
+    translated: "Time to go"
   templates:
   - template: "{0};HideInteractUI"
 - raw: "溢出"
@@ -35642,8 +35642,8 @@
   - template: "{0};DeleteItemExternalStorageSure"
 - raw: "确认阅读《{0}{1}》？\n(消耗{2}天{3}){4}"
   splits:
-  - text: "确认阅读《"
-    translated: "'Confirm reading of"
+  - text: "确认阅读"
+    translated: "Confirm read"
   - subIndex: 1
     text: "消耗"
     translated: "Consume"
@@ -35651,7 +35651,7 @@
     text: "天"
     translated: "Sky"
   templates:
-  - template: "{0}⟦0⟧⟦1⟧》？\n({1}⟦2⟧{2}⟦3⟧)⟦4⟧"
+  - template: "{0}《⟦0⟧⟦1⟧》？\n({1}⟦2⟧{2}⟦3⟧)⟦4⟧"
 - raw: "碎石"
   splits:
   - text: "碎石"
@@ -37933,13 +37933,13 @@
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "若不通晓“{0}”，\n功夫再高又有何用？"
   splits:
-  - text: "若不通晓“"
-    translated: "'If one does not understand “"
+  - text: "若不通晓"
+    translated: "If you do not understand"
   - subIndex: 1
     text: "功夫再高又有何用？"
     translated: "No matter how high one's kung fu is, what use is it?"
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "若将你所说的话如数奉还，又该如何应对？"
   splits:
   - text: "若将你所说的话如数奉还，又该如何应对？"
@@ -42710,10 +42710,10 @@
     translated: "Forget"
 - raw: "遗忘“{0}”;SpeRemoveTagChoose;{1}"
   splits:
-  - text: "遗忘“"
-    translated: "'Forget"
+  - text: "遗忘"
+    translated: "Forget"
   templates:
-  - template: "{0}⟦0⟧”;SpeRemoveTagChoose;⟦1⟧"
+  - template: "{0}“⟦0⟧”;SpeRemoveTagChoose;⟦1⟧"
 - raw: "遭到贼人袭击"
   splits:
   - text: "遭到贼人袭击"
@@ -44121,10 +44121,10 @@
   - template: "{0}⟦0⟧{1}"
 - raw: "阅读《{0}》"
   splits:
-  - text: "阅读《"
-    translated: "'read"
+  - text: "阅读"
+    translated: "Read"
   templates:
-  - template: "{0}⟦0⟧》"
+  - template: "{0}《⟦0⟧》"
 - raw: "阅读秘籍"
   splits:
   - text: "阅读秘籍"

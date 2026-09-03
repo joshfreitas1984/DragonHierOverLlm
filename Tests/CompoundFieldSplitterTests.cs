@@ -52,6 +52,39 @@ public class CompoundFieldSplitterTests
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
 
+    [Fact(DisplayName = "A book-title bracket pair split apart by literal '{n}' placeholders stays together as template literal text, even when the closing mark never became its own fragment")]
+    public void BookTitleBracketPairSplitByPlaceholdersStaysInTemplate()
+    {
+        var original = "确认阅读《{0}{1}》？\n(消耗{2}天{3}){4}";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal(["确认阅读", "消耗", "天"], fragments);
+        Assert.DoesNotContain('\u300A', string.Concat(fragments)); // "《" must not end up inside a translatable fragment
+        Assert.Contains('\u300A', template); // "《" belongs in the template as literal text
+        Assert.Equal("{0}\u300A⟦0⟧⟦1⟧\u300B？\n({1}⟦2⟧{2}⟦3⟧)⟦4⟧", template);
+    }
+
+    [Theory(DisplayName = "Every boundary mark pair - not just the book-title brackets - stays out of the fragment when its close mark lands inside the very next literal without becoming its own fragment")]
+    [InlineData('\u201C', '\u201D')] // “ ”
+    [InlineData('\u2018', '\u2019')] // ‘ ’
+    [InlineData('\uFF08', '\uFF09')] // （ ）
+    [InlineData('\u3008', '\u3009')] // 〈 〉
+    [InlineData('\u300C', '\u300D')] // 「 」
+    [InlineData('\u300E', '\u300F')] // 『 』
+    [InlineData('\u3010', '\u3011')] // 【 】
+    [InlineData('\u3016', '\u3017')] // 〖 〗
+    public void AllBoundaryMarkPairsStayOutOfFragmentWhenCloseLandsInNextLiteral(char open, char close)
+    {
+        var original = $"确认阅读{open}{{0}}{{1}}{close}？\n(消耗{{2}}天{{3}}){{4}}";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal(["确认阅读", "消耗", "天"], fragments);
+        Assert.DoesNotContain(open, string.Concat(fragments));
+        Assert.DoesNotContain(close, string.Concat(fragments));
+        Assert.Contains(open, template);
+        Assert.Contains(close, template);
+    }
+
     [Fact(DisplayName = "Compound cell with role separators still splits into multiple fragments")]
     public void CompoundCellWithRoleSeparatorsStillSplits()
     {
@@ -335,6 +368,25 @@ public class CompoundFieldSplitterTests
                 "瓶颈"
             ],
             fragments);
+        Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
+    }
+
+    [Theory(DisplayName = "Every boundary mark pair - not just curly quotes - stays together as template literal text when its close mark starts a fragment with the open mark stuck at the end of an earlier fragment, past both an intervening HTML tag and an unrelated fragment")]
+    [InlineData('\u201C', '\u201D')] // “ ”
+    [InlineData('\u2018', '\u2019')] // ‘ ’
+    [InlineData('\uFF08', '\uFF09')] // （ ）
+    [InlineData('\u3008', '\u3009')] // 〈 〉
+    [InlineData('\u300C', '\u300D')] // 「 」
+    [InlineData('\u300E', '\u300F')] // 『 』
+    [InlineData('\u3010', '\u3011')] // 【 】
+    [InlineData('\u3016', '\u3017')] // 〖 〗
+    public void QuotePairWithCloseMarkStartingFragmentAndOpenMarkTwoTokensBackStaysInTemplate(char open, char close)
+    {
+        var original = $"他说{open}<b>你好</b>{close}很高兴";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        Assert.Equal($"{{0}}{open}<b>{{1}}</b>{close}{{2}}", template);
+        Assert.Equal(["他说", "你好", "很高兴"], fragments);
         Assert.Equal(original, CompoundFieldSplitter.Reconstruct(template, fragments));
     }
 

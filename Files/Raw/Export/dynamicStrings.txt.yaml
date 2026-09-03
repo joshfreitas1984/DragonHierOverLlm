@@ -5387,22 +5387,22 @@
   splits:
   - text: "掌门"
   - subIndex: 1
-    text: "将《"
+    text: "将"
   - subIndex: 2
     text: "秘籍放入藏经阁，供全派弟子参阅。"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧》⟦3⟧{2}"
+  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}"
 - raw: "{0}掌门{1}用《{2}》{3}替换了藏经阁内的《{2}》{4}秘籍，供全派弟子参阅。"
   splits:
   - text: "掌门"
   - subIndex: 1
-    text: "用《"
+    text: "用"
   - subIndex: 2
-    text: "替换了藏经阁内的《"
+    text: "替换了藏经阁内的"
   - subIndex: 3
     text: "秘籍，供全派弟子参阅。"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧》⟦3⟧{2}⟦2⟧》⟦4⟧{3}"
+  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}《⟦2⟧》⟦4⟧{3}"
 - raw: "{0}接任了{1}掌门之位。"
   splits:
   - text: "接任了"
@@ -5870,9 +5870,9 @@
   - template: "⟦0⟧{0}：⟦1⟧[⟦2⟧]"
 - raw: "{0}藏经阁添加了藏书《{1}》。"
   splits:
-  - text: "藏经阁添加了藏书《"
+  - text: "藏经阁添加了藏书"
   templates:
-  - template: "⟦0⟧{0}⟦1⟧》。"
+  - template: "⟦0⟧{0}《⟦1⟧》。"
 - raw: "{0}表演;ChooseCoachWork;{1}"
   splits:
   - text: "表演"
@@ -6209,11 +6209,11 @@
   - template: "⟦1⟧{0}\n⟦0⟧"
 - raw: "{1}的“{0}”，\n竟与我不相上下"
   splits:
-  - text: "的“"
+  - text: "的"
   - subIndex: 1
     text: "竟与我不相上下"
   templates:
-  - template: "⟦1⟧{0}⟦0⟧”，\n{1}"
+  - template: "⟦1⟧{0}“⟦0⟧”，\n{1}"
 - raw: "{1}言语中颇多纰漏之处，\n只恐贻笑大方"
   splits:
   - text: "言语中颇多纰漏之处，"
@@ -7088,11 +7088,11 @@
   splits:
   - text: "不知"
   - subIndex: 1
-    text: "之“"
+    text: "之"
   - subIndex: 2
     text: "与我相比孰强孰弱？"
   templates:
-  - template: "{0}⟦1⟧{1}⟦0⟧”，\n{2}"
+  - template: "{0}⟦1⟧{1}“⟦0⟧”，\n{2}"
 - raw: "不知不觉杯盘狼藉，夜色已浓，也该是回房休息的时候了。\n哎，人有悲欢离合，月有阴晴圆缺，\n希望来年我们师兄弟们还能在此欢聚一堂，共度中秋。"
   splits:
   - text: "不知不觉杯盘狼藉，夜色已浓，也该是回房休息的时候了。"
@@ -8883,9 +8883,9 @@
   - template: "{0}⟦1⟧{1}\n{2}⟦0⟧{3}"
 - raw: "以我现在的烹饪技能（{0}），{1}"
   splits:
-  - text: "以我现在的烹饪技能（"
+  - text: "以我现在的烹饪技能"
   templates:
-  - template: "{0}⟦0⟧），⟦1⟧"
+  - template: "{0}（⟦0⟧），⟦1⟧"
 - raw: "以我的修为坐镇指挥可为本门提供<b>{5}%</b>战力加成。\n双方将各派战力前{2}名的弟子出阵，预计最终战力为：\n<b>{0}{7} {3}\n{1}{8} {4}</b>\n想必此战将以<b>我方{9}</b>告终，确认要开战吗？"
   splits:
   - text: "以我的修为坐镇指挥可为本门提供"
@@ -9623,18 +9623,18 @@
   - template: "{0}⟦0⟧{1}⟦1⟧{2}"
 - raw: "便是这“{0}”，\n我苦思冥想，依旧记不起这空白之处，本应是哪句才对......"
   splits:
-  - text: "便是这“"
+  - text: "便是这"
   - subIndex: 1
     text: "我苦思冥想，依旧记不起这空白之处，本应是哪句才对......"
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "便用这“{0}”，\n令你心服口服"
   splits:
-  - text: "便用这“"
+  - text: "便用这"
   - subIndex: 1
     text: "令你心服口服"
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "保命要紧;HideInteractUI"
   splits:
   - text: "保命要紧"
@@ -17603,11 +17603,11 @@
   - template: "{0}⟦0⟧{1};ForceLeaderAnswerQuestion;0;;;⟦1⟧/⟦2⟧"
 - raw: "对于“{0}”，\n我颇有几分见解"
   splits:
-  - text: "对于“"
+  - text: "对于"
   - subIndex: 1
     text: "我颇有几分见解"
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "对你的"
   splits:
   - text: "对你的"
@@ -22806,7 +22806,7 @@
   - text: "是何人敢与我一战？"
 - raw: "是否自动阅读《{0}》？\n当前{4}最高经验纪录{1}点\n自动练习可得{2}%({3}点)"
   splits:
-  - text: "是否自动阅读《"
+  - text: "是否自动阅读"
   - subIndex: 1
     text: "当前"
   - subIndex: 2
@@ -22818,7 +22818,7 @@
   - subIndex: 5
     text: "点"
   templates:
-  - template: "{0}⟦0⟧》？\n{1}⟦4⟧{2}⟦1⟧{3}\n{4}⟦2⟧%(⟦3⟧{5})"
+  - template: "{0}《⟦0⟧》？\n{1}⟦4⟧{2}⟦1⟧{3}\n{4}⟦2⟧%(⟦3⟧{5})"
 - raw: "是否要针对攻略地点提出建议？"
   splits:
   - text: "是否要针对攻略地点提出建议？"
@@ -27570,13 +27570,13 @@
   - template: "{0};DeleteItemExternalStorageSure"
 - raw: "确认阅读《{0}{1}》？\n(消耗{2}天{3}){4}"
   splits:
-  - text: "确认阅读《"
+  - text: "确认阅读"
   - subIndex: 1
     text: "消耗"
   - subIndex: 2
     text: "天"
   templates:
-  - template: "{0}⟦0⟧⟦1⟧》？\n({1}⟦2⟧{2}⟦3⟧)⟦4⟧"
+  - template: "{0}《⟦0⟧⟦1⟧》？\n({1}⟦2⟧{2}⟦3⟧)⟦4⟧"
 - raw: "碎石"
   splits:
   - text: "碎石"
@@ -29330,11 +29330,11 @@
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "若不通晓“{0}”，\n功夫再高又有何用？"
   splits:
-  - text: "若不通晓“"
+  - text: "若不通晓"
   - subIndex: 1
     text: "功夫再高又有何用？"
   templates:
-  - template: "{0}⟦0⟧”，\n{1}"
+  - template: "{0}“⟦0⟧”，\n{1}"
 - raw: "若将你所说的话如数奉还，又该如何应对？"
   splits:
   - text: "若将你所说的话如数奉还，又该如何应对？"
@@ -33023,9 +33023,9 @@
   - text: "遗忘"
 - raw: "遗忘“{0}”;SpeRemoveTagChoose;{1}"
   splits:
-  - text: "遗忘“"
+  - text: "遗忘"
   templates:
-  - template: "{0}⟦0⟧”;SpeRemoveTagChoose;⟦1⟧"
+  - template: "{0}“⟦0⟧”;SpeRemoveTagChoose;⟦1⟧"
 - raw: "遭到贼人袭击"
   splits:
   - text: "遭到贼人袭击"
@@ -34114,9 +34114,9 @@
   - template: "{0}⟦0⟧{1}"
 - raw: "阅读《{0}》"
   splits:
-  - text: "阅读《"
+  - text: "阅读"
   templates:
-  - template: "{0}⟦0⟧》"
+  - template: "{0}《⟦0⟧》"
 - raw: "阅读秘籍"
   splits:
   - text: "阅读秘籍"

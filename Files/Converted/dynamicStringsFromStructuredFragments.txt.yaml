@@ -1736,7 +1736,7 @@
 - raw: "溜之大吉"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
 - raw: "满意离去"
   splits:
   - text: "满意离去"
@@ -2367,10 +2367,10 @@
   - template: "{0}\n{1}"
 - raw: "遗忘“{0}”"
   splits:
-  - text: "遗忘“"
-    translated: "'Forget"
+  - text: "遗忘"
+    translated: "Forget"
   templates:
-  - template: "{0}⟦0⟧”"
+  - template: "{0}“⟦0⟧”"
 - raw: "避人耳目"
   splits:
   - text: "避人耳目"

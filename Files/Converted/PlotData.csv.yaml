@@ -6939,7 +6939,7 @@
   splits:
   - split: 10
     text: "诶"
-    translated: "Hey"
+    translated: "Oh"
   - split: 10
     subIndex: 1
     text: "好吧，师伯慢走。"
@@ -13977,7 +13977,7 @@
   - split: 10
     subIndex: 4
     text: "回"
-    translated: "Back"
+    translated: "Return"
   templates:
   - split: 10
     template: "{0}\\n{1}~{2}~{3}~{4}~"
@@ -14373,7 +14373,7 @@
   - split: 10
     subIndex: 4
     text: "啊"
-    translated: "Ah"
+    translated: "Oh"
   - split: 10
     subIndex: 5
     text: "小女子三年之前，老母病亡，和家中老父，相依为命。"
@@ -37175,7 +37175,7 @@
   splits:
   - split: 10
     text: "啊"
-    translated: "Ah"
+    translated: "Oh"
   - split: 10
     subIndex: 1
     text: "你们遇上她了？"
@@ -55047,7 +55047,7 @@
   - split: 10
     subIndex: 5
     text: "回"
-    translated: "Back"
+    translated: "Return"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}~{3}~{4}~{5}~"
@@ -60202,7 +60202,7 @@
   - split: 10
     subIndex: 3
     text: "合"
-    translated: "Agreed"
+    translated: "Agree"
   - split: 10
     subIndex: 4
     text: "败"
@@ -67045,7 +67045,7 @@
   - split: 10
     subIndex: 1
     text: "合"
-    translated: "Agreed"
+    translated: "Agree"
   - split: 10
     subIndex: 2
     text: "败"
@@ -68466,7 +68466,7 @@
   - split: 10
     subIndex: 3
     text: "雄"
-    translated: "Lion"
+    translated: "Hero"
   - split: 10
     subIndex: 4
     text: "我看你"
@@ -70304,7 +70304,7 @@
   - split: 10
     subIndex: 1
     text: "啊"
-    translated: "Ah"
+    translated: "Oh"
   - split: 10
     subIndex: 2
     text: "什么情况"
@@ -79473,7 +79473,7 @@
   splits:
   - split: 10
     text: "啊"
-    translated: "Ah"
+    translated: "Oh"
   - split: 10
     subIndex: 1
     text: "哈哈哈，金先生不必自责。"
@@ -85619,7 +85619,7 @@
   - split: 10
     subIndex: 1
     text: "合"
-    translated: "Agreed"
+    translated: "Agree"
   - split: 10
     subIndex: 2
     text: "败"
@@ -152233,7 +152233,7 @@
   - split: 10
     subIndex: 4
     text: "回"
-    translated: "Back"
+    translated: "Return"
   templates:
   - split: 10
     template: "{0}\\n{1}~{2}~{3}~{4}~"
@@ -196830,7 +196830,7 @@
   splits:
   - split: 10
     text: "啊"
-    translated: "Ah"
+    translated: "Oh"
   - split: 10
     subIndex: 1
     text: "你小子还逛上街了？"
@@ -207473,7 +207473,7 @@
   - split: 10
     subIndex: 4
     text: "回"
-    translated: "Back"
+    translated: "Return"
   templates:
   - split: 10
     template: "{0}\\n{1}~{2}~{3}~{4}~"
@@ -239329,7 +239329,7 @@
   - split: 10
     subIndex: 4
     text: "回"
-    translated: "Back"
+    translated: "Return"
   templates:
   - split: 10
     template: "{0}\\n{1}~{2}~{3}~{4}~"
@@ -252028,7 +252028,7 @@
   splits:
   - split: 10
     text: "啊"
-    translated: "Ah"
+    translated: "Oh"
   - split: 10
     subIndex: 1
     text: "哈哈哈，金先生不必自责。"
@@ -256062,7 +256062,7 @@
   - split: 10
     subIndex: 3
     text: "大小姐，这两个贼人好生凶狠，"
-    translated: "Miss Big Sister, these two bandits are really vicious."
+    translated: "Big Sister Miss Lei, these two bandits are really vicious."
   - split: 10
     subIndex: 4
     text: "眼下事情紧急，要不你还是用那霹雳雷火弹解围吧！"
@@ -260558,7 +260558,7 @@
   splits:
   - split: 10
     text: "姜师姐，各位同门，我#$PlayerName#能有今日，"
-    translated: "Senior Sister Jiang, fellow disciples, I#$PlayerName# would not have reached this day without your support."
+    translated: "Senior Sister Jiang, fellow disciples, I #$PlayerName# would not have reached this day without your support."
   - split: 10
     subIndex: 1
     text: "离不开各位一路以来的关心照顾，悉心提点。"

@@ -2089,7 +2089,7 @@
 - raw: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来<b>青城派</b>替我做证，以免师傅不信。"
   splits:
   - text: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来"
-    translated: "I am preparing to report to Master about the Black Society Conference matter. May I have#PlayerName#come, please?"
+    translated: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come, please?"
   - subIndex: 1
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -11391,7 +11391,7 @@
 - raw: "溜之大吉"
   splits:
   - text: "溜之大吉"
-    translated: "Skedaddle"
+    translated: "Time to make myself scarce"
 - raw: "漏"
   splits:
   - text: "漏"

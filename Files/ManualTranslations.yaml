@@ -110,3 +110,7 @@
 #   result: "Senior"
 #   only: 
 #     - "dynamicStringsFromColumns.txt"
+- raw: "溜了溜了"
+  result: "Time to go"
+- raw: "溜之大吉"
+  result: "Time to make myself scarce"
