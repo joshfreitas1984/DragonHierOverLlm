@@ -75,6 +75,17 @@ public class MainPlugin : BasePlugin
     // class of gap. See DynamicStringPatches.ApplyTemplates.
     internal static ConfigEntry<bool> MultiPassTemplateApplicationEnabled;
 
+    // Off by default until verified live - baked into each compiled template at PatchAll time
+    // (requires a restart to take effect, unlike most other toggles here), so a merged
+    // adjacent-placeholder run's capture excludes sentence-terminal punctuation (。！？…/ASCII
+    // '.'/newline). Fixes a false-anchor case where a template's leading literal (e.g. a common
+    // single character like "在") also opens an earlier, unrelated sentence, causing the
+    // unanchored regex search to lock onto that wrong occurrence and swallow the unrelated
+    // sentence into the capture - which then trips BlockingRawEntries and blocks the whole
+    // template, leaving the real text to fall through to word-by-word bare translation. See
+    // DynamicStringPatches.SentenceBoundaryAwarePermissiveClass.
+    internal static ConfigEntry<bool> SentenceBoundaryAwareTemplateCaptureEnabled;
+
     public override void Load()
     {
         Logger = base.Log;
@@ -93,6 +104,12 @@ public class MainPlugin : BasePlugin
             "MultiPassTemplateApplication",
             true,
             "When true, DynamicStringPatches.ApplyTemplates repeats its pass over all compiled templates (bounded, stops once a pass makes no change) instead of trying each template exactly once, to catch order-dependent nested-template gaps (e.g. a recollection dialogue embedding an already-formatted world-event sentence). Off by default - unverified/speculative fix, enable only while investigating a known nested-template translation gap.");
+
+        SentenceBoundaryAwareTemplateCaptureEnabled = Config.Bind(
+            "Performance",
+            "SentenceBoundaryAwareTemplateCapture",
+            true,
+            "When true, a merged adjacent-placeholder template run can no longer capture across sentence-terminal punctuation (。！？…/ASCII '.'/newline), preventing an unanchored template match from locking onto an earlier unrelated sentence that happens to share the template's leading literal character. Off by default until verified live - requires a game restart to take effect since templates are compiled once at startup. See DynamicStringPatches.BuildCompiledTemplate.");
 
         AppendOnlySuffixTranslationEnabled = Config.Bind(
             "Performance",

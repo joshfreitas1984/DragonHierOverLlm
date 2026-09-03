@@ -377,6 +377,26 @@ namespace Tests
             ("SpeHeroData.csv", [1]),
         ];
 
+        // PlotData.csv columns 1/2 (角色左/角色右, speaker name) are SkipColumns'd entirely (see
+        // that entry's comment) because the whole cell can also be a structured
+        // "临时:Name&Gender;Age;RelationLevel[;...]" temporary-NPC-spawn record parsed by
+        // PlotController.GetHeroData/GetTempPlotHeroData at runtime (confirmed: strips the
+        // "临时:" prefix, splits on '&' then ';' - see Converter/output/_NoNamespace/PlotController.cs
+        // ~line 1514/1561) - the resulting HeroData's name is just the bare Name fragment (e.g.
+        // "老农"), which is what actually gets displayed as the NPC's nameplate/dialogue speaker
+        // text at runtime, NOT the whole raw cell. Since the column is skipped, that Name fragment
+        // is never seen by the normal per-row CSV pipeline, and unlike a plain speaker name (e.g.
+        // "王添翼", already covered via SpeHeroData's own name columns) it's genuinely new text that
+        // exists nowhere else - so it's never picked up by any other extraction source either
+        // (confirmed 2026-09-03 investigating an untranslated "老农" NPC nameplate). Extracted here
+        // as its own standalone candidate (bare, no "临时:" prefix, no "&..." suffix) via
+        // TempNpcNameRegex so it gets picked up by DynamicStringPatches' ordinary substring dictionary
+        // at runtime, same mechanism as the existing bare "临时:X" entries already in dynamicStrings.txt.
+        public static readonly (string CsvFileName, int[] Columns)[] DynamicStringTempNpcNameColumnSources =
+        [
+            ("PlotData.csv", [1, 2]),
+        ];
+
         // BuildingData.csv column 7 (互动选项/Interactive options) holds ';'-separated items shaped
         // like "Name?Description-Condition-TriggerId" (description optional, e.g. "交易--
         // ShowBuildingShop" has none) where AreaBuildingDataBase concatenates Name (and, when
@@ -423,6 +443,11 @@ namespace Tests
         // Extracts the Name (group 1) and optional Description (group 3) from a
         // "Name?Description-Condition-TriggerId" interactive-option item.
         private static readonly Regex InteractionOptionRegex = new(@"^([^?\-]+)(\?([^-]*))?-", RegexOptions.Compiled);
+
+        // Extracts the Name (group 1) from a "临时:Name" / "临时:Name&Gender;Age;RelationLevel[;...]"
+        // temporary-NPC-spawn record - see DynamicStringTempNpcNameColumnSources above. A cell
+        // with no "临时:" prefix (an ordinary plain speaker name) simply doesn't match.
+        private static readonly Regex TempNpcNameRegex = new(@"^临时:([^&]+)", RegexOptions.Compiled);
 
         // Identifies a bare ASCII PascalCase/camelCase field (e.g. "HospitalCureExternalInjury",
         // "AskHeroMakeFriend") - the game's own internal trigger/event routing id. Used as a
@@ -521,6 +546,15 @@ namespace Tests
                         if (!match.Success) return [];
                         return new[] { match.Groups[1].Value, match.Groups[3].Value };
                     }));
+            }
+
+            foreach (var (csvFileName, columns) in DynamicStringTempNpcNameColumnSources)
+            {
+                ExtractFrom(csvFileName, columns, cell =>
+                {
+                    var match = TempNpcNameRegex.Match(cell);
+                    return match.Success ? [match.Groups[1].Value] : [];
+                });
             }
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);

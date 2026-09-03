@@ -39067,3 +39067,189 @@
 - raw: "毒气桶"
   splits:
   - text: "毒气桶"
+- raw: "老农"
+  splits:
+  - text: "老农"
+- raw: "乐山村长"
+  splits:
+  - text: "乐山村长"
+- raw: "村民甲"
+  splits:
+  - text: "村民甲"
+- raw: "村民乙"
+  splits:
+  - text: "村民乙"
+- raw: "村民丙"
+  splits:
+  - text: "村民丙"
+- raw: "村民丁"
+  splits:
+  - text: "村民丁"
+- raw: "侠客甲"
+  splits:
+  - text: "侠客甲"
+- raw: "侠客乙"
+  splits:
+  - text: "侠客乙"
+- raw: "侠客丙"
+  splits:
+  - text: "侠客丙"
+- raw: "狱卒甲"
+  splits:
+  - text: "狱卒甲"
+- raw: "狱卒乙"
+  splits:
+  - text: "狱卒乙"
+- raw: "狱卒丙"
+  splits:
+  - text: "狱卒丙"
+- raw: "唐门头领"
+  splits:
+  - text: "唐门头领"
+- raw: "百姓乙"
+  splits:
+  - text: "百姓乙"
+- raw: "百姓丙"
+  splits:
+  - text: "百姓丙"
+- raw: "张大户"
+  splits:
+  - text: "张大户"
+- raw: "家丁丙"
+  splits:
+  - text: "家丁丙"
+- raw: "渔夫"
+  splits:
+  - text: "渔夫"
+- raw: "铁掌援军甲"
+  splits:
+  - text: "铁掌援军甲"
+- raw: "铁掌援军乙"
+  splits:
+  - text: "铁掌援军乙"
+- raw: "巴陵村民"
+  splits:
+  - text: "巴陵村民"
+- raw: "牛二"
+  splits:
+  - text: "牛二"
+- raw: "奸商"
+  splits:
+  - text: "奸商"
+- raw: "武林人士甲"
+  splits:
+  - text: "武林人士甲"
+- raw: "武林人士乙"
+  splits:
+  - text: "武林人士乙"
+- raw: "老兵"
+  splits:
+  - text: "老兵"
+- raw: "丐帮弟子"
+  splits:
+  - text: "丐帮弟子"
+- raw: "大隐弟子甲"
+  splits:
+  - text: "大隐弟子甲"
+- raw: "大隐弟子乙"
+  splits:
+  - text: "大隐弟子乙"
+- raw: "大隐探子"
+  splits:
+  - text: "大隐探子"
+- raw: "外门弟子甲"
+  splits:
+  - text: "外门弟子甲"
+- raw: "外门弟子乙"
+  splits:
+  - text: "外门弟子乙"
+- raw: "外门弟子丙"
+  splits:
+  - text: "外门弟子丙"
+- raw: "受伤强盗"
+  splits:
+  - text: "受伤强盗"
+- raw: "老伯"
+  splits:
+  - text: "老伯"
+- raw: "霸刀弟子甲"
+  splits:
+  - text: "霸刀弟子甲"
+- raw: "霸刀弟子乙"
+  splits:
+  - text: "霸刀弟子乙"
+- raw: "峨眉守卫"
+  splits:
+  - text: "峨眉守卫"
+- raw: "宝光方丈"
+  splits:
+  - text: "宝光方丈"
+- raw: "宝光大师"
+  splits:
+  - text: "宝光大师"
+- raw: "说书人"
+  splits:
+  - text: "说书人"
+- raw: "丫鬟"
+  splits:
+  - text: "丫鬟"
+- raw: "宫女"
+  splits:
+  - text: "宫女"
+- raw: "弟子甲"
+  splits:
+  - text: "弟子甲"
+- raw: "弟子乙"
+  splits:
+  - text: "弟子乙"
+- raw: "小乞丐"
+  splits:
+  - text: "小乞丐"
+- raw: "妇人"
+  splits:
+  - text: "妇人"
+- raw: "分舵长老"
+  splits:
+  - text: "分舵长老"
+- raw: "大内侍卫"
+  splits:
+  - text: "大内侍卫"
+- raw: "大内统领"
+  splits:
+  - text: "大内统领"
+- raw: "管家"
+  splits:
+  - text: "管家"
+- raw: "大隐弟子"
+  splits:
+  - text: "大隐弟子"
+- raw: "唐门首领甲"
+  splits:
+  - text: "唐门首领甲"
+- raw: "村长"
+  splits:
+  - text: "村长"
+- raw: "武当弟子丁"
+  splits:
+  - text: "武当弟子丁"
+- raw: "飞龙弟子甲"
+  splits:
+  - text: "飞龙弟子甲"
+- raw: "飞龙弟子乙"
+  splits:
+  - text: "飞龙弟子乙"
+- raw: "飞龙弟子丙"
+  splits:
+  - text: "飞龙弟子丙"
+- raw: "飞龙弟子丁"
+  splits:
+  - text: "飞龙弟子丁"
+- raw: "少林弟子甲"
+  splits:
+  - text: "少林弟子甲"
+- raw: "少林弟子乙"
+  splits:
+  - text: "少林弟子乙"
+- raw: "少林弟子丙"
+  splits:
+  - text: "少林弟子丙"

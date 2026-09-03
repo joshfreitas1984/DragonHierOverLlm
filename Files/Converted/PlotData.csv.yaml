@@ -8481,7 +8481,7 @@
   splits:
   - split: 10
     text: "公、公、公孙师弟，莫要这小、小、小儿多费口舌，"
-    translated: "Public, public, Junior Disciple Gong, don't waste too much mouthwork on this little boy."
+    translated: "Ju-Ju-Junior Disciple Gong, don't waste too much words on this sm-sm-small brat."
   - split: 10
     subIndex: 1
     text: "我来教、教、教训他一顿便是！"
@@ -8503,11 +8503,11 @@
   splits:
   - split: 10
     text: "小子，知道爷爷我的厉、厉、厉害了吧！"
-    translated: "Kid, do you know how powerful Grandpa I am, how, how powerful!"
+    translated: "Kid, do you know how powerful your grandpa is? I am p-p-powerful!"
   - split: 10
     subIndex: 1
     text: "快快投降，饶、饶、饶你不死！"
-    translated: "Hurry and surrender, or I'll spare your life!"
+    translated: "Hurry and su-su-surrender, and I'll spare your life!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -8541,7 +8541,7 @@
   - split: 10
     subIndex: 1
     text: "你就向我磕一百个响头，我便放你走吧！"
-    translated: "You will kneel and strike one hundred reverent blows, and then I will let you go!"
+    translated: "You will kneel and take one hundred reverent blows, and then I will let you go!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -8570,7 +8570,7 @@
   - split: 10
     subIndex: 1
     text: "便趁机又撒出一把沙土，将公孙防眼睛迷住。"
-    translated: "While correcting, they took the opportunity to sprinkle more sand into Gong Fang's eyes, blinding them."
+    translated: "You took the opportunity to sprinkle more sand into Gong Fang's eyes, blinding him."
   - split: 10
     subIndex: 2
     text: "随后跃到杨思迟身旁。"
@@ -10873,7 +10873,7 @@
   splits:
   - split: 10
     text: "说罢雷殷殷从怀中掏出一叠银票，甩给周莫知。"
-    translated: "Having said this, Lei Yin Yin pulled out a stack of silver bills from her bosom and tossed them to Zhou Mozi."
+    translated: "Having said this, Lei Yinyin pulled out a stack of silver bills from her bosom and tossed them to Zhou Mozi."
   - split: 10
     subIndex: 1
     text: "只见周莫知粗点了数目，那张老脸上盘根错节的皱纹瞬间根根舒展开来，"
@@ -10950,7 +10950,7 @@
   splits:
   - split: 10
     text: "雷殷殷接过信撕开封泥，当下阅读起来。"
-    translated: "Re YinYin took the letter, broke the seal, and read it right away."
+    translated: "Lei Yinyin took the letter, broke the seal, and read it right away."
   - split: 10
     subIndex: 1
     text: "只见她面色阴晴不定，看到最后更是素手一挥，将信撕了个粉碎。"
@@ -10988,7 +10988,7 @@
   - split: 10
     subIndex: 1
     text: "哈哈，看来大小姐对本门这添翼真是情有独钟啊，"
-    translated: "Haha, it seems Miss Head of the Family is particularly fond of this Wing Addition for our sect."
+    translated: "Haha, it seems like the young miss is really quite fond of our Tianyi here."
   - split: 10
     subIndex: 2
     text: "也好也好，只是一路上还是尽量低调行事，莫要再生争端了。"
@@ -11074,7 +11074,7 @@
   splits:
   - split: 10
     text: "倒是大小姐你嘞，生在有钱人家里，"
-    translated: "It's actually you, the Miss Big, born into a wealthy family."
+    translated: "It's you, the Miss Big, born into a wealthy family,"
   - split: 10
     subIndex: 1
     text: "穿的是绫罗绸缎，吃的是山珍海味，"
@@ -11102,11 +11102,11 @@
   splits:
   - split: 10
     text: "诶？这不就是#PlayerName#蛮？"
-    translated: "Hey? Isn't this just #PlayerName#'s brute?"
+    translated: "Hey? Isn’t that #PlayerName#?"
   - split: 10
     subIndex: 1
     text: "诶呀，看来刚刚那几幕，全让你当做笑话看了去么。"
-    translated: "Oh dear, so you saw all that just as a joke?"
+    translated: "Oh, so you thought all of that just now was just a joke?"
   templates:
   - split: 10
     template: "{0}\\n{1}"

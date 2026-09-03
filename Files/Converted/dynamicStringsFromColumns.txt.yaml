@@ -52016,3 +52016,248 @@
   splits:
   - text: "毒气桶"
     translated: "Poison barrel"
+- raw: "老农"
+  splits:
+  - text: "老农"
+    translated: "Old farmer"
+- raw: "乐山村长"
+  splits:
+  - text: "乐山村长"
+    translated: "Village Chief Yusanshan"
+- raw: "村民甲"
+  splits:
+  - text: "村民甲"
+    translated: "Villager A"
+- raw: "村民乙"
+  splits:
+  - text: "村民乙"
+    translated: "Second Villager"
+- raw: "村民丙"
+  splits:
+  - text: "村民丙"
+    translated: "Villager Ding"
+- raw: "村民丁"
+  splits:
+  - text: "村民丁"
+    translated: "Village Resident Ding"
+- raw: "侠客甲"
+  splits:
+  - text: "侠客甲"
+- raw: "侠客乙"
+  splits:
+  - text: "侠客乙"
+    translated: "Wanderer Second"
+- raw: "侠客丙"
+  splits:
+  - text: "侠客丙"
+- raw: "狱卒甲"
+  splits:
+  - text: "狱卒甲"
+    translated: "Guard A"
+- raw: "狱卒乙"
+  splits:
+  - text: "狱卒乙"
+    translated: "Prisoner Guard B"
+- raw: "狱卒丙"
+  splits:
+  - text: "狱卒丙"
+    translated: "Guardian Bing"
+- raw: "唐门头领"
+  splits:
+  - text: "唐门头领"
+    translated: "Head of the Tang Clan"
+- raw: "百姓乙"
+  splits:
+  - text: "百姓乙"
+    translated: "Citizen Bing"
+- raw: "百姓丙"
+  splits:
+  - text: "百姓丙"
+    translated: "Citizen Bing"
+- raw: "张大户"
+  splits:
+  - text: "张大户"
+    translated: "Mr. Zhang"
+- raw: "家丁丙"
+  splits:
+  - text: "家丁丙"
+    translated: "Servant Bing"
+- raw: "渔夫"
+  splits:
+  - text: "渔夫"
+    translated: "Fisherman"
+- raw: "铁掌援军甲"
+  splits:
+  - text: "铁掌援军甲"
+    translated: "Auxiliary Iron Palm Armor"
+- raw: "铁掌援军乙"
+  splits:
+  - text: "铁掌援军乙"
+    translated: "Iron Palm Auxiliary Force"
+- raw: "巴陵村民"
+  splits:
+  - text: "巴陵村民"
+    translated: "Baling Village residents"
+- raw: "牛二"
+  splits:
+  - text: "牛二"
+    translated: "Niu Er"
+- raw: "奸商"
+  splits:
+  - text: "奸商"
+    translated: "Cheater"
+- raw: "武林人士甲"
+  splits:
+  - text: "武林人士甲"
+    translated: "Wulin member A"
+- raw: "武林人士乙"
+  splits:
+  - text: "武林人士乙"
+    translated: "Wulin member B"
+- raw: "老兵"
+  splits:
+  - text: "老兵"
+    translated: "Veteran"
+- raw: "丐帮弟子"
+  splits:
+  - text: "丐帮弟子"
+    translated: "Beggar Sect disciple"
+- raw: "大隐弟子甲"
+  splits:
+  - text: "大隐弟子甲"
+    translated: "Disciple Jia of the Great Hidden Sect"
+- raw: "大隐弟子乙"
+  splits:
+  - text: "大隐弟子乙"
+    translated: "Disciple Yi of the Hidden Path"
+- raw: "大隐探子"
+  splits:
+  - text: "大隐探子"
+    translated: "Hidden Assassin"
+- raw: "外门弟子甲"
+  splits:
+  - text: "外门弟子甲"
+    translated: "Junior Apprentice"
+- raw: "外门弟子乙"
+  splits:
+  - text: "外门弟子乙"
+    translated: "Apprentice"
+- raw: "外门弟子丙"
+  splits:
+  - text: "外门弟子丙"
+- raw: "受伤强盗"
+  splits:
+  - text: "受伤强盗"
+    translated: "Injured bandit"
+- raw: "老伯"
+  splits:
+  - text: "老伯"
+    translated: "Old man"
+- raw: "霸刀弟子甲"
+  splits:
+  - text: "霸刀弟子甲"
+    translated: "Disciple Jia of the Dominant Saber School"
+- raw: "霸刀弟子乙"
+  splits:
+  - text: "霸刀弟子乙"
+    translated: "Disciple Yi of the Dominant Blade Sect"
+- raw: "峨眉守卫"
+  splits:
+  - text: "峨眉守卫"
+    translated: "Everbright Defender"
+- raw: "宝光方丈"
+  splits:
+  - text: "宝光方丈"
+    translated: "Bright Treasure Abbot"
+- raw: "宝光大师"
+  splits:
+  - text: "宝光大师"
+    translated: "Venerable Guangguang"
+- raw: "说书人"
+  splits:
+  - text: "说书人"
+    translated: "Storyteller"
+- raw: "丫鬟"
+  splits:
+  - text: "丫鬟"
+    translated: "Maid"
+- raw: "宫女"
+  splits:
+  - text: "宫女"
+    translated: "Maid"
+- raw: "弟子甲"
+  splits:
+  - text: "弟子甲"
+    translated: "Disciple A"
+- raw: "弟子乙"
+  splits:
+  - text: "弟子乙"
+    translated: "Disciple Yi"
+- raw: "小乞丐"
+  splits:
+  - text: "小乞丐"
+    translated: "Little beggar"
+- raw: "妇人"
+  splits:
+  - text: "妇人"
+    translated: "Woman"
+- raw: "分舵长老"
+  splits:
+  - text: "分舵长老"
+    translated: "Senior Deputy Leader"
+- raw: "大内侍卫"
+  splits:
+  - text: "大内侍卫"
+    translated: "Palace guard"
+- raw: "大内统领"
+  splits:
+  - text: "大内统领"
+    translated: "In‑Residence Commander"
+- raw: "管家"
+  splits:
+  - text: "管家"
+    translated: "Butler"
+- raw: "大隐弟子"
+  splits:
+  - text: "大隐弟子"
+    translated: "Great Hidden Disciple"
+- raw: "唐门首领甲"
+  splits:
+  - text: "唐门首领甲"
+    translated: "Tang Clan Leader"
+- raw: "村长"
+  splits:
+  - text: "村长"
+    translated: "Village chief"
+- raw: "武当弟子丁"
+  splits:
+  - text: "武当弟子丁"
+    translated: "Wudang Disciple Ding"
+- raw: "飞龙弟子甲"
+  splits:
+  - text: "飞龙弟子甲"
+    translated: "Dragon Disciple"
+- raw: "飞龙弟子乙"
+  splits:
+  - text: "飞龙弟子乙"
+    translated: "Disciple Yi of the Flying Dragon School"
+- raw: "飞龙弟子丙"
+  splits:
+  - text: "飞龙弟子丙"
+    translated: "Dragon Disciple Bing"
+- raw: "飞龙弟子丁"
+  splits:
+  - text: "飞龙弟子丁"
+    translated: "Disciple Ding of the Dragon Flying Disciples"
+- raw: "少林弟子甲"
+  splits:
+  - text: "少林弟子甲"
+    translated: "Shaolin Disciple A"
+- raw: "少林弟子乙"
+  splits:
+  - text: "少林弟子乙"
+    translated: "Shaolin Disciple"
+- raw: "少林弟子丙"
+  splits:
+  - text: "少林弟子丙"
+    translated: "Shaolin Disciple Bing"

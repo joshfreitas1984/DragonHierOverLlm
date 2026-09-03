@@ -138,6 +138,13 @@ internal static class DynamicStringPatches
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private const string PermissivePlaceholderCaptureClass = @".";
 
+    // Gated by MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled - excludes common
+    // sentence-terminal punctuation (fullwidth period/bang/question mark, ellipsis, ASCII '.',
+    // newline) from a merged run's capture so an unanchored regex search can't lock onto an
+    // earlier, unrelated occurrence of the run's leading literal that sits before a sentence
+    // boundary (see docs/dynamicstringpatches-blocked-template-false-anchor.md).
+    private const string SentenceBoundaryAwarePermissiveClass = @"[^。！？…\.\n]";
+
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private sealed class CompiledTemplate
     {
@@ -231,8 +238,11 @@ internal static class DynamicStringPatches
                 // is frequently a legitimately-CJK force name, so the strict non-CJK class would
                 // never match here at all. See CONFIRMED BUG #6 above for the quantifier choice.
                 var runQuantifier = (lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1) ? "*" : "*?";
-                patternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{runQuantifier})");
-                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{runQuantifier})");
+                var runCaptureClass = MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true
+                    ? SentenceBoundaryAwarePermissiveClass
+                    : PermissivePlaceholderCaptureClass;
+                patternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
 
                 // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
                 var resultSpan = runResultSpan[idx];
@@ -989,6 +999,25 @@ internal static class DynamicStringPatches
     {
         if (string.IsNullOrEmpty(translated)) return translated;
         return _reverseDictionary.TryGetValue(translated, out var raw) ? raw : translated;
+    }
+
+    // Reverses a sprite key built at runtime as `<rawPrefix><rawSuffix>` via a plain String.Concat
+    // (e.g. HorseIconController.Update's mounted-horse "IconAtlas" key `this.targetHorseData.name +
+    // "大"` - see AtlasIconPatches.LoadAtlasSprite_Prefix). GenericPostfix translates that whole
+    // concatenated result (longest-match-first), so `translated` arrives as
+    // `<translated rawPrefix><translated rawSuffix>` with no separator. Translates rawSuffix
+    // forward the same way the game's own call would have, strips it back off if present, then
+    // reverse-translates the remaining prefix. Returns the input unchanged if the suffix isn't
+    // found or the prefix has no known raw form.
+    public static string ReverseTranslateSuffixed(string translated, string rawSuffix)
+    {
+        if (string.IsNullOrEmpty(translated) || string.IsNullOrEmpty(rawSuffix)) return translated;
+        var translatedSuffix = TranslateFragment(rawSuffix);
+        if (string.IsNullOrEmpty(translatedSuffix) || !translated.EndsWith(translatedSuffix, StringComparison.Ordinal))
+            return translated;
+        var prefix = translated.Substring(0, translated.Length - translatedSuffix.Length);
+        var rawPrefix = ReverseTranslate(prefix);
+        return rawPrefix == prefix ? translated : rawPrefix + rawSuffix;
     }
 
     // Perf: builds the Raw[0] -> entries index consumed by ApplyDictionary, from an already
