@@ -140,6 +140,19 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.GlobalDataAddChildPatch));
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
+
+        // Wrapped separately - unverified Harmony binding for "Awake" against this build's real
+        // interop metadata must not take down every patch registered below it (see PlotTextPatches
+        // below for the same defensive pattern).
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(ExploreDataDumpPatches));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch ExploreDataDumpPatches: {ex}");
+        }
+
         HeroNamePatches.LoadNamePartDictionary();
         Harmony.CreateAndPatchAll(typeof(HeroNamePatches));
 

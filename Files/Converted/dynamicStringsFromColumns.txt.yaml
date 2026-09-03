@@ -51836,3 +51836,107 @@
   splits:
   - text: "名驹"
     translated: "Prize Horse"
+- raw: "道路"
+  splits:
+  - text: "道路"
+    translated: "Road"
+- raw: "平原"
+  splits:
+  - text: "平原"
+    translated: "Plain"
+- raw: "山脉"
+  splits:
+  - text: "山脉"
+    translated: "Mountains"
+- raw: "沼泽"
+  splits:
+  - text: "沼泽"
+    translated: "Swamp"
+- raw: "营地"
+  splits:
+  - text: "营地"
+    translated: "Campgrounds"
+- raw: "地图"
+  splits:
+  - text: "地图"
+    translated: "Map"
+- raw: "塔楼"
+  splits:
+  - text: "塔楼"
+    translated: "Tower"
+- raw: "垃圾"
+  splits:
+  - text: "垃圾"
+    translated: "Trash"
+- raw: "宝箱"
+  splits:
+  - text: "宝箱"
+    translated: "Treasure chest"
+- raw: "废屋"
+  splits:
+  - text: "废屋"
+    translated: "Abandoned house"
+- raw: "人烟"
+  splits:
+  - text: "人烟"
+    translated: "Habitat"
+- raw: "温泉"
+  splits:
+  - text: "温泉"
+    translated: "Hot spring"
+- raw: "毒池"
+  splits:
+  - text: "毒池"
+    translated: "Poison Pool"
+- raw: "荒坟"
+  splits:
+  - text: "荒坟"
+    translated: "Desolate tomb"
+- raw: "行商"
+  splits:
+  - text: "行商"
+    translated: "Merchant"
+- raw: "小屋"
+  splits:
+  - text: "小屋"
+    translated: "Cottage"
+- raw: "古迹"
+  splits:
+  - text: "古迹"
+    translated: "Ancient ruins"
+- raw: "锁箱"
+  splits:
+  - text: "锁箱"
+    translated: "Locked chest"
+- raw: "破庙"
+  splits:
+  - text: "破庙"
+    translated: "Ruined temple"
+- raw: "暗道"
+  splits:
+  - text: "暗道"
+    translated: "Secret passage"
+- raw: "绝世高人"
+  splits:
+  - text: "绝世高人"
+    translated: "Peerless Expert"
+- raw: "高人遗刻"
+  splits:
+  - text: "高人遗刻"
+    translated: "Ancient inscription"
+- raw: "庙会"
+  splits:
+  - text: "庙会"
+    translated: "Fair"
+- raw: "资源"
+  splits:
+  - text: "资源"
+    translated: "Resources"
+- raw: "桃源"
+  splits:
+  - text: "桃源"
+    translated: "Peach Blossom Spring"
+- raw: "遗迹"
+  splits:
+  - text: "遗迹"
+    translated: "Ruins"

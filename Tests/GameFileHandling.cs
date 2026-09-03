@@ -302,6 +302,17 @@ namespace Tests
             ("SummonKungFuData.csv", [1, 13, 24]),
             ("TechDataBase.csv", [4, 8]),
             ("WeaponData.csv", [1]),
+
+            // ExploreController-embedded lists (Road/Plane/Forest/Mountain/River ground names,
+            // per-tile event/content type names, per-map biome flavor names) - not loaded via any
+            // Resources.Load(TextAsset) call, so there's no override load-point for the normal
+            // row-based CSV pipeline. Dumped live at runtime by
+            // DragonHeirPlugin/ExploreDataDumpPatches.cs into these same GameData-shaped raw CSVs
+            // purely so this column-source extractor can read them; only ever consumed as
+            // dynamic-string dictionary entries, never packaged/repackaged as a CSV file.
+            ("ExploreTileGroundDataBase.csv", [0]),
+            ("ExploreTileTypeDataBase.csv", [0]),
+            ("ExploreMapTypeDataBase.csv", [0]),
         ];
 
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>

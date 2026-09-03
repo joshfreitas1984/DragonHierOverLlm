@@ -118,12 +118,6 @@ public class AssetDumperWorkflowTests
         // available" vs. a genuinely malformed file.
         var errorCounts = new Dictionary<string, int>();
 
-        // TEMP diagnostic (2026-09-03): confirms whether ExploreController (owner of the
-        // ExploreTileGroundDataBase list holding the missing 平原/etc. ground-type names) is
-        // ever successfully deserialized at all, vs. silently one of the handful of
-        // MonoBehaviours the scan can't resolve. Remove once the root cause is confirmed.
-        var exploreRootLabelsSeen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-
         foreach (var path in assetFiles)
         {
             try
@@ -131,7 +125,7 @@ public class AssetDumperWorkflowTests
                 ScanFile(
                     manager, path, exportedStrings, errorCounts,
                     ref scannedAssets, ref monoBehavioursSkipped, ref otherAssetsSkipped,
-                    ref typeTreeAssetFiles, ref noTypeTreeAssetFiles, exploreRootLabelsSeen);
+                    ref typeTreeAssetFiles, ref noTypeTreeAssetFiles);
             }
             catch (Exception ex)
             {
@@ -223,7 +217,7 @@ public class AssetDumperWorkflowTests
     private static void ScanFile(
         AssetsManager manager, string path, Dictionary<string, (string LeafField, string Path)> exportedStrings, Dictionary<string, int> errorCounts,
         ref int scannedAssets, ref int monoBehavioursSkipped, ref int otherAssetsSkipped,
-        ref int typeTreeAssetFiles, ref int noTypeTreeAssetFiles, HashSet<string> exploreRootLabelsSeen)
+        ref int typeTreeAssetFiles, ref int noTypeTreeAssetFiles)
     {
         var ext = Path.GetExtension(path).ToLowerInvariant();
 
@@ -235,7 +229,7 @@ public class AssetDumperWorkflowTests
             var instance = manager.LoadAssetsFile(path, false);
             LoadClassDatabaseIfNeeded(manager, instance);
             CountTypeTree(instance, ref typeTreeAssetFiles, ref noTypeTreeAssetFiles);
-            ScanAssetsFile(manager, instance, exportedStrings, errorCounts, ref scannedAssets, ref monoBehavioursSkipped, ref otherAssetsSkipped, exploreRootLabelsSeen);
+            ScanAssetsFile(manager, instance, exportedStrings, errorCounts, ref scannedAssets, ref monoBehavioursSkipped, ref otherAssetsSkipped);
             return;
         }
 
@@ -250,7 +244,7 @@ public class AssetDumperWorkflowTests
             var instance = manager.LoadAssetsFileFromBundle(bundle, i, false);
             LoadClassDatabaseIfNeeded(manager, instance);
             CountTypeTree(instance, ref typeTreeAssetFiles, ref noTypeTreeAssetFiles);
-            ScanAssetsFile(manager, instance, exportedStrings, errorCounts, ref scannedAssets, ref monoBehavioursSkipped, ref otherAssetsSkipped, exploreRootLabelsSeen);
+            ScanAssetsFile(manager, instance, exportedStrings, errorCounts, ref scannedAssets, ref monoBehavioursSkipped, ref otherAssetsSkipped);
         }
     }
 
@@ -272,7 +266,7 @@ public class AssetDumperWorkflowTests
 
     private static void ScanAssetsFile(
         AssetsManager manager, AssetsFileInstance instance, Dictionary<string, (string LeafField, string Path)> exportedStrings, Dictionary<string, int> errorCounts,
-        ref int scannedAssets, ref int monoBehavioursSkipped, ref int otherAssetsSkipped, HashSet<string> exploreRootLabelsSeen)
+        ref int scannedAssets, ref int monoBehavioursSkipped, ref int otherAssetsSkipped)
     {
         foreach (var info in instance.file.Metadata.AssetInfos)
         {
@@ -319,10 +313,6 @@ public class AssetDumperWorkflowTests
             var rootLabel = info.TypeId == MonoBehaviourClassId
                 ? ResolveMonoScriptClassName(manager, instance, baseField) ?? baseField.TypeName
                 : baseField.TypeName;
-
-            // TEMP diagnostic (2026-09-03): see declaration in DumpChineseTextFromAssets.
-            if (rootLabel.IndexOf("explore", StringComparison.OrdinalIgnoreCase) >= 0)
-                exploreRootLabelsSeen.Add(rootLabel);
 
             ExtractChineseText(baseField, exportedStrings, rootLabel);
         }
