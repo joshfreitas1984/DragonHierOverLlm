@@ -13607,7 +13607,7 @@
   - split: 10
     subIndex: 1
     text: "这古董乃是从商朝传下来的九天神鼎，由姜太公亲手打造，"
-    translated: "This antique was passed down from the Shang Dynasty, known as the Jiuy Tian Shen Ding, crafted by Duke Zhou with his own hands."
+    translated: "This antique is the Nine Heaven Sacred Tripod passed down from the Shang Dynasty, crafted by Duke Zhou with his own hands."
   - split: 10
     subIndex: 2
     text: "几位既然喜欢，就一千两便宜卖了！"
@@ -13623,7 +13623,7 @@
   - split: 10
     subIndex: 1
     text: "一千两？！这这这，大哥，咱买不起啊！"
-    translated: "One thousand two? No, no, no, Senior Brother, we can't afford it!"
+    translated: "One thousand Taels? No, no, no, Senior Brother, we can't afford it!"
   templates:
   - split: 10
     template: "{0}…{1}"
@@ -13693,7 +13693,7 @@
   splits:
   - split: 10
     text: "汪哥！你这就过分了！"
-    translated: "Wang they! You're taking this too far!"
+    translated: "Brother Wang! You're taking this too far!"
   - split: 10
     subIndex: 1
     text: "人家要价一千两，你一下还到二百两，有这么做生意的吗？"
@@ -13713,7 +13713,7 @@
   splits:
   - split: 10
     text: "是啊是啊，旺财你太过分了，我看干脆"
-    translated: "Yeah yeah, Wangcai, you went too far. I think we should just..."
+    translated: "Yeah yeah, Wangcai, you've gone too far. I think we should just"
   - split: 10
     subIndex: 1
     text: "八百两！"
@@ -13725,7 +13725,7 @@
   splits:
   - split: 10
     text: "你们两个猪脑子，哪有替对面抬价的啊！"
-    translated: "You two dumbasses, who raises the other side's bid?"
+    translated: "You two are dumbasses. Who raises the price for the other side?"
 - raw: ",,,右,,,,,,,好了好了，三位大侠莫要再争。\\n这位汪兄学识广博，令人佩服，看来这鼎确非姜太公所造。\\n那就干脆卖你们二百两，一口价！"
   splits:
   - split: 10
@@ -13754,7 +13754,7 @@
   - split: 10
     subIndex: 2
     text: "哈哈，大哥二哥，我们要发财啦！"
-    translated: "Haha, Senior Brother and Second Brother, we're going to strike it rich!"
+    translated: "Haha, Big Brother and Second Brother, we're going to strike it rich!"
   templates:
   - split: 10
     template: "{0}……{1}\\n{2}"
@@ -13816,7 +13816,7 @@
   splits:
   - split: 10
     text: "完了大哥！这这这是个假货！"
-    translated: "Finished, Senior Brother! This is a fake!"
+    translated: "Finished, Big Brother! This is a fake!"
 - raw: ",,,右,,,,,,,（两眼一翻，忽然收起笑容，变了副凶神恶煞的模样）\\n怎么，钱货两清，可没得耍赖，告辞了各位！"
   splits:
   - split: 10
@@ -13833,7 +13833,7 @@
   splits:
   - split: 10
     text: "不许走！混蛋！竟敢骗到你爷爷我郝大力头上来了！"
-    translated: "No moving! Jerk! You dare to trick my grandfather, Hao Dali!"
+    translated: "No moving! Bastard! You dare to pull one over on Grandpa Hao Dali!"
 - raw: ",汪财,,左,,,,,,,二百！二百两！那可是我们三全部家当啊！\\n全完啦！"
   splits:
   - split: 10
@@ -13854,7 +13854,7 @@
   - split: 10
     subIndex: 1
     text: "呜呜呜呜，求你了把钱还我们吧！"
-    translated: "Wu wu wu wu, beg you to return the money to us!"
+    translated: "Wu wu wu wu, I beg you to return the money to us!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -13872,7 +13872,7 @@
   splits:
   - split: 10
     text: "钱是我拿古董卖给你们，换的呀？怎么了？"
-    translated: "Was the money from selling antiquities to you guys? What's the problem?"
+    translated: "Didn't I get the money by selling antiquities to you? What's the problem?"
 - raw: ",,,左,,,,,,,那古董呢？"
   splits:
   - split: 10
@@ -13892,7 +13892,7 @@
   splits:
   - split: 10
     text: "钱是我拿古董卖给你们，换的呀？怎么了？"
-    translated: "Was the money from selling antiquities to you guys? What's the problem?"
+    translated: "Didn't I get the money by selling antiquities to you? What's the problem?"
 - raw: ",,,左,,,,,,,那……"
   splits:
   - split: 10
@@ -14035,6 +14035,8 @@
   - split: 10
     text: "二弟！我和你们拼了！"
     translated: "Brother Two! I'll fight alongside you!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
 - raw: ",吴谋,,左,,,,,,,二哥！兵书有云，忍无可忍，无需再忍，杀！"
   splits:
   - split: 10
@@ -25748,6 +25750,8 @@
   - split: 10
     text: "哦？我和我这二弟还没吃过活人心肝，想必鲜美无比啊！"
     translated: "Oh? My younger brother and I haven't tasted human heart before, so it must be incredibly delicious!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
 - raw: ",,马悍,右,,,,,,,来来来，戴兄快给我两表演一个，\\n吃过这厮的心肝，咱们也算是“肝胆相照”的好弟兄了。"
   splits:
   - split: 10
@@ -26068,6 +26072,8 @@
   - split: 10
     text: "哎哟！二弟你他妈没长眼睛吗？"
     translated: "Ouch! Brother Two, are you blind or something?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
 - raw: ",,马悍,右,,,,,,,怪事怪事，这小子似醉非醉，东倒西歪，\\n打出来的拳路完全不合常理，却能让我们处处吃瘪。"
   splits:
   - split: 10
@@ -26174,6 +26180,8 @@
   - split: 10
     text: "休要伤我二弟，接招！"
     translated: "Don't hurt my younger brother; here's my move!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
 - raw: ",徐不平,,左,,,,,UpgradeHeroSkill;郭勇锐-396-1,,此人这招黑虎掏心直来直往，不可硬拼。\\n你只需要使出“太白醉酒”，避其锋芒，攻其后背即可。"
   splits:
   - split: 10
@@ -31551,6 +31559,8 @@
   - split: 10
     text: "哎呀二弟，你干什么呢？"
     translated: "Oh Brother Two, what are you doing?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
   - split: 10
     subIndex: 1
     text: "追兵就在屁股后面，不要命了你！"
@@ -43542,6 +43552,8 @@
     subIndex: 1
     text: "二弟三弟，今天咱们飞龙三杰，扬名立万之机会来了！"
     translated: "Brothers Two and Three, today is our chance to fly dragon triad and gain fame and reputation!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -54935,6 +54947,8 @@
   - split: 10
     text: "二弟，三弟，#PlayerName#，"
     translated: "Brother Two, Brother Three, #PlayerName#,"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
   - split: 10
     subIndex: 1
     text: "你们过来干什么？"
@@ -150112,6 +150126,8 @@
   - split: 10
     text: "那还愣着做什么，二弟，三弟，咱们接着追！"
     translated: "What are you two brothers still waiting for? Let's keep pursuing!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
 - raw: ",,吴谋,右,,,,,ChangeHeroFavor;汪财-5,,好！#PlayerName#我们先走一步。\\n万一日后寻得这女贼的踪迹，请你再来帮忙一起捉拿。"
   splits:
   - split: 10
@@ -151441,6 +151457,8 @@
   - split: 10
     text: "甚好什么甚好？二弟，你不会失心疯了吧？"
     translated: "Very good, what's very good? Brother Two, are you losing your mind?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Second Brother,二弟,"
 - raw: ",,,右,,,,,,,哎呀，大哥你看，这贼婆娘和血衣盟打个你死我活，两败俱伤，\\n咱们不是正好螳螂捕蝉，黄雀在后？"
   splits:
   - split: 10

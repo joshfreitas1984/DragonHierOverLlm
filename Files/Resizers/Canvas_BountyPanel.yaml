@@ -1,0 +1,12 @@
+- path: Canvas/BountyPanel/Grid/BountyIconPrefab(Clone)/Money
+  sampleText: Silver taels:308
+  idealFontSize: 12.0
+  allowWordWrap: false
+  adjustX: -20.0
+  adjustY: 25.0
+- path: Canvas/BountyPanel/Grid/BountyIconPrefab(Clone)/Time
+  sampleText: 限 Time 15 days
+  idealFontSize: 12.0
+  allowWordWrap: false
+  adjustX: 20.0
+  adjustY: 25.0
