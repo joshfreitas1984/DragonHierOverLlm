@@ -42,8 +42,13 @@
   result: "Senior Brother Yang"
 - raw: 顾师兄
   result: "Senior Brother Gu"
+- raw: 陆师伯
+  result: Martial Uncle Lu
+  allowalt:
+    - Uncle Lu
 - raw: 沈退
   result: "Shen Tui"
+
 - raw: 入门弟
   result: "Initiate Disciple"
 - raw: 外门弟子
@@ -58,7 +63,21 @@
 
 - raw: 采薇
   result: "Caiwei"
+  exclude:
+    - dynamicStringsPoetry.txt
 - raw: 胥华
   result: "Xuhua"
+  exclude:
+    - dynamicStringsPoetry.txt
 - raw: 映泉
   result: "Yingquan"
+  exclude:
+    - dynamicStringsPoetry.txt
+- raw: 游年
+  result: "Younian"
+  exclude:
+    - dynamicStringsPoetry.txt
+- raw: 思迟
+  result: "Sichi"
+  exclude:
+    - dynamicStringsPoetry.txt

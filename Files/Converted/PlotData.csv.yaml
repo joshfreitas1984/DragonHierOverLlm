@@ -1682,7 +1682,7 @@
   splits:
   - split: 10
     text: "哈哈，胥华怎么了？他可是对你冷嘲热讽，极尽打击之能事啊？"
-    translated: "Haha, what's wrong with Xu Hua? He was the one who mocked you mercilessly and did his best to undermine you!"
+    translated: "Haha, what's wrong with Xuhua? He was mercilessly mocking and criticizing you, wasn't he?"
 - raw: ",,,左,,,,,,,#TargetInteractName#明察，可能是我学艺不精，大师兄也是恨铁不成钢……"
   splits:
   - split: 10
@@ -1695,7 +1695,7 @@
   splits:
   - split: 10
     text: "哎，胥华的性格为师自然了解，"
-    translated: "Ah, Master naturally understands Xu Hua's temperament"
+    translated: "Ah, Master naturally understands Xuhua's personality"
   - split: 10
     subIndex: 1
     text: "他自幼孤苦，从小拜在仙霞派门下，对本门忠心耿耿。"
@@ -1707,7 +1707,7 @@
   splits:
   - split: 10
     text: "虽说作为大师兄，胥华性格不够稳重，反倒有些桀骜不驯，"
-    translated: "Though as the Big Senior Brother, Xu Hua's personality is not particularly steady, he instead comes across as rebellious and unruly."
+    translated: "Though Xuhua, as the Big Senior Brother, may not be particularly steady in personality, he instead comes across as somewhat rebellious and untamed."
   - split: 10
     subIndex: 1
     text: "但他品行不差，也并非什么奸恶之徒"
@@ -1735,7 +1735,7 @@
   splits:
   - split: 10
     text: "所以胥华所言，你不必放在心上，只管好好练功。"
-    translated: "So you don't need to worry about what Xu Hua said; just focus on practicing your skills."
+    translated: "So you don't need to worry about what Xuhua said; just focus on practicing your cultivation."
   - split: 10
     subIndex: 1
     text: "假以时日，待到武功有成，他自会对你刮目相看。"
@@ -2204,7 +2204,7 @@
   splits:
   - split: 10
     text: "#PlayerName#怎么和思迟师弟似的，一天天的就知练功练功，真不怕无聊死啊。"
-    translated: "#PlayerName# how can you be like your Junior Disciple Si Chi, day after day just practicing cultivation. Don't you fear that you might get bored to death?"
+    translated: "#PlayerName# acts just like Sichi Junior Disciple, day in and day out, just training. Don't you get bored to death?"
 - raw: ",,,右,,,,,,,今朝有酒今朝醉，人生得意须尽欢。\\n你看师兄我懒懒散散，武功修为也没落下太多啊。"
   splits:
   - split: 10
@@ -2273,7 +2273,7 @@
   splits:
   - split: 10
     text: "呵呵，自从你和思迟入门以来，师傅可没少替你们操心。"
-    translated: "Haha, since you and Si Chi began your training, Master has had plenty on his hands taking care of both of you."
+    translated: "Haha, since you and Sichi started your training, Master hasn't spared any effort worrying about you two."
   - split: 10
     subIndex: 1
     text: "你们呀，也要好好练功，学成武艺，早日替门派分忧解难。"
@@ -2325,7 +2325,7 @@
   - split: 10
     subIndex: 1
     text: "思迟那儿，我也去寻一件给他就是。"
-    translated: "In Si Chi's place, I'll go find one for him too."
+    translated: "At Sichi's place, I'll also go look for something to give him."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -3294,7 +3294,7 @@
   - split: 10
     subIndex: 1
     text: "牧人驱犊返，猎马带禽归。相顾无相识，长歌怀采薇。"
-    translated: "Shepherds drive their cattle back, hunters return with game in hand. No one we see here is known to us; singing long, I miss the Flaxen Berries."
+    translated: "Shepherds drive their calves back, hunters return with game in hand. No one to recognize, I sing longingly of Caiwei."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -3773,7 +3773,7 @@
   - split: 10
     subIndex: 1
     text: "哎，真是不让为师省心，这样吧，思迟！思迟在吗？"
-    translated: "Ah, truly keeping Master at odds. Well then, Si Chi! Is Si Chi here?"
+    translated: "Ah, truly troubling Master. Listen up, Sichi! Is Sichi here?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -4355,7 +4355,7 @@
   splits:
   - split: 10
     text: "这样吧，游年啊，你为人机敏，武功也有小成，"
-    translated: "How about this, You Nian, you're perceptive and have made some progress in your martial arts."
+    translated: "How about this, Younian, you're sharp‑minded and have made some progress in martial arts,"
   - split: 10
     subIndex: 1
     text: "为师便命你去铁掌帮探查情报，看看他们最近有何动向，"
@@ -4804,7 +4804,7 @@
   - split: 10
     subIndex: 1
     text: "只是一来此事说来话长，#PlayerName#和思迟尚且年幼，过早知晓此事不过平添烦恼。"
-    translated: "Just to explain, this matter is rather complicated. #PlayerName# and Si Chi are still quite young, and being made too aware of it at an early age would only add unnecessary worry."
+    translated: "Just to explain, this matter is rather complex. #PlayerName# and Sichi were still quite young, and being made too aware of it too early would only add unnecessary troubles."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -5284,7 +5284,7 @@
   splits:
   - split: 10
     text: "胥华，游年，采薇，你们三人这段时间去巴陵村周遭多加打探，增强戒备。"
-    translated: "Xu Hua, You Nian, Caimei, the three of you should increase your surveillance around Baling Village and strengthen your vigilance."
+    translated: "Xuhua, Younian, Caiwei, you three should increase your surveillance around Baling Village and strengthen your vigilance over this period."
   - split: 10
     subIndex: 1
     text: "若能查得那“黑风寨”的情报，便再好不过。"
@@ -5323,7 +5323,7 @@
   - split: 10
     subIndex: 1
     text: "这段时间，你和思迟也给为师好好留在山上练功，别整天想着下山乱逛！"
-    translated: "These days, you and Si Chi should focus on practicing your skills up here. Don't keep wandering around the mountain town all day!"
+    translated: "These days, you and Sichi should stay and practice your skills on the mountain. Don't keep thinking about going down the mountain to roam around!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -5541,7 +5541,7 @@
   splits:
   - split: 10
     text: "采薇何事如此着急？"
-    translated: "Why are you in such a rush, Xi Wei?"
+    translated: "Why are you in such a rush, Caiwei?"
 - raw: ",,,左,,,,,,,弟子在巴陵村巡逻之时，听一名每日上山打柴的樵夫说，\\n在巴陵村东边的小径上，时常能看到一些武林人士和凶恶之徒出没的身影。"
   splits:
   - split: 10
@@ -5574,7 +5574,7 @@
   - split: 10
     subIndex: 1
     text: "这样吧，采薇你便去那樵夫所说的小径上埋伏，"
-    translated: "Alright, Cai Wei, you go and ambush on the path that the woodcutter mentioned."
+    translated: "Alright, Caiwei, you go ambush on the path the woodcutter mentioned."
   - split: 10
     subIndex: 2
     text: "看看是否真有什么武林人士出没。"
@@ -6088,7 +6088,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，你怎么跟着采薇一言不发啊。"
-    translated: "#PlayerName#, why are you silent following Ciawei?"
+    translated: "#PlayerName#, why are you silent and not speaking a word with Caiwei."
 - raw: ",,,左,,,,,,,余师姐……是为了保护徒儿方才受伤，徒儿罪该万死！"
   splits:
   - split: 10
@@ -6807,7 +6807,7 @@
   - split: 10
     subIndex: 2
     text: "比他年长个几岁，你们叫我陆师伯便可。"
-    translated: "A few years older than him, you can call me Lu Senior Master."
+    translated: "A few years older than him, you may call me Martial Uncle Lu."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -6815,11 +6815,11 @@
   splits:
   - split: 10
     text: "原来是陆师伯，在下#$PlayerName#，在仙霞派弟子中入门最晚。"
-    translated: "It's Master Lu. I am #$PlayerName#, one of the latest disciples to enter the Xianxia Sect."
+    translated: "It turns out it's Martial Uncle Lu. My name is #$PlayerName#, and I joined the Xianxia Sect last among the disciples."
   - split: 10
     subIndex: 1
     text: "陆师伯既是师傅的兄长，不知为何从未在派内见过？"
-    translated: "Since Senior Uncle Lu is Master's elder brother, I wonder why I've never seen him in the sect?"
+    translated: "Martial Uncle Lu is your master's elder brother. For some reason, I've never seen him within the sect before."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -8207,7 +8207,7 @@
   splits:
   - split: 10
     text: "胥华你过来，为师这就运功为你疗伤。"
-    translated: "Xu Hua, come here. They will now use their neigong to heal your wounds."
+    translated: "Xuhua, come here. I'll start using my cultivation to heal your wounds."
 - raw: ",魏胥华,,左,,,,,,,不必…劳烦师傅！弟子还能…再战……\\n（话音未落，魏胥华便因为精疲力竭，昏厥过去。）"
   splits:
   - split: 10
@@ -8352,7 +8352,7 @@
   - split: 10
     subIndex: 1
     text: "咦，思迟跑哪儿去了？"
-    translated: "Hey, where did Si Chi run off to?"
+    translated: "Eh, Sichi ran off somewhere?"
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -9423,7 +9423,7 @@
   splits:
   - split: 10
     text: "#$PlayerName#，还有思迟啊，"
-    translated: "#$PlayerName#, and Si chi too"
+    translated: "#$PlayerName#, and Sichi too,"
   - split: 10
     subIndex: 1
     text: "你们作为师兄，与云裳年纪相仿，她如今父母双亡，孤苦无依，"
@@ -15551,7 +15551,7 @@
   splits:
   - split: 10
     text: "嗯，胥华说的也有道理。"
-    translated: "Hmm, Xu Hua makes a valid point"
+    translated: "Well, Xuhua makes a valid point"
   - split: 10
     subIndex: 1
     text: "这样，你们先依计行事，去巴陵村各处散播假消息。"
@@ -15965,7 +15965,7 @@
   splits:
   - split: 10
     text: "游年啊，此前差你去成都的事务，是否办妥了？"
-    translated: "Yoann, have you taken care of the matter in Chengdu as I asked before?"
+    translated: "Younian, previously, did you complete the matter that was sent to Chengdu?"
 - raw: ",,,左,,,,,,,回师傅，均已准备妥当。\\n那谭记商号听说我们此趟是为剿匪，很乐意借出闲置的商队服装以及车马行囊。"
   splits:
   - split: 10
@@ -16111,7 +16111,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#，思迟，云裳，婉儿，"
-    translated: "#PlayerName#, Si Chi, Yun Shang, Wan Er"
+    translated: "#PlayerName#, Sichi, Yunshang, Wan'er,"
   - split: 10
     subIndex: 2
     text: "这儿正好四套商人服装，你们换上后便可出发。"
@@ -17356,7 +17356,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#，婉儿，思迟，你们好生照顾小师妹和剩余伤员。"
-    translated: "#PlayerName#, Wan'er, Si chi, take good care of the little junior sister and the remaining wounded."
+    translated: "#PlayerName#, Waner, Sichi, take good care of the junior sister and the remaining wounded."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -17575,7 +17575,7 @@
   splits:
   - split: 10
     text: "胥华回来了？"
-    translated: "Has Xu Hua returned?"
+    translated: "Xuhua is back?"
   - split: 10
     subIndex: 1
     text: "你前去追踪黑风寨贼人，怎的这么久才回来？"
@@ -17665,7 +17665,7 @@
   - split: 10
     subIndex: 1
     text: "胥华，我去帮你弄身干净衣服，再拿些吃的过来。"
-    translated: "Xu Hua, I'll go get you some clean clothes and bring you something to eat."
+    translated: "Xuhua, I'll get you some clean clothes and some food."
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -17726,7 +17726,7 @@
   splits:
   - split: 10
     text: "思迟速去召集所有弟子，带上兵刃来正厅集合。"
-    translated: "Si Chi, hurry and gather all the disciples in the main hall. Make sure they bring their weapons."
+    translated: "Sichi, quickly gather all the disciples and bring weapons to assemble in the main hall."
 - raw: ",,,左,,,,,ScreenBlack,,是，这就去！"
   splits:
   - split: 10
@@ -17948,7 +17948,7 @@
   splits:
   - split: 10
     text: "依为师看来，游年此计甚妙，诸位弟子有何见解？"
-    translated: "As Master, I believe Young Year's plan is quite ingenious. What are your disciples' opinions on this?"
+    translated: "From Master's perspective, Younian's plan is quite ingenious. What are your disciples' thoughts on this?"
 - raw: ",魏胥华,,左,,,,,,,弟子也赞同。"
   splits:
   - split: 10
@@ -17958,7 +17958,7 @@
   splits:
   - split: 10
     text: "胥华这么快就准备妥当了？"
-    translated: "Xu Hua has prepared everything this quickly?"
+    translated: "Is Xuhua prepared this quickly?"
   - split: 10
     subIndex: 1
     text: "好，为师届时会独自潜入寨内，"
@@ -18017,7 +18017,7 @@
   - split: 10
     subIndex: 1
     text: "游年，沈退，你们两随我，一同准备陷阱路障之材料。"
-    translated: "Yoann, Shen Tui, you two follow me to prepare the materials for the traps and obstacles."
+    translated: "Younian, Shen Tui, you two follow me and prepare the materials for the traps and obstacles."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -18156,7 +18156,7 @@
   splits:
   - split: 10
     text: "胥华，我去帮你弄身干净衣服，再拿些吃的过来。"
-    translated: "Xu Hua, I'll go get you some clean clothes and bring you something to eat."
+    translated: "Xuhua, I'll get you some clean clothes and some food."
 - raw: ",,,左,,,,,,,#TargetInteractName#不必了。\\n此次追踪不成，我责任深重，这就面壁思过去。"
   splits:
   - split: 10
@@ -18173,7 +18173,7 @@
   splits:
   - split: 10
     text: "诶诶胥华"
-    translated: "Ah Xu Hua"
+    translated: "Hey Xuhua"
   - split: 10
     subIndex: 1
     text: "这计策失败，我们都有责任，何苦一味埋怨自己。"
@@ -18185,7 +18185,7 @@
   splits:
   - split: 10
     text: "哎，胥华性子向来如此，随他去吧。"
-    translated: "Ah, Xu Hua's temperament has always been like this, let him go."
+    translated: "Ah, Xuhua's temperament has always been like this, let him go."
 - raw: ",,,左,,,,,,,各位弟子不必自责，\\n上次一战，黑风寨元气大伤，已难成威胁。\\n各位只要专心练功，自能震慑贼人不敢再为非作歹。"
   splits:
   - split: 10
@@ -18211,7 +18211,7 @@
   splits:
   - split: 10
     text: "还是不太放心胥华，我去给他送点热粥去。"
-    translated: "I'm still not entirely reassured about Xu Hua, so I'll go and bring him some warm porridge."
+    translated: "Still not entirely reassured about Xuhua, I'll go give him some hot porridge."
 - raw: "136,玩家,余采薇,左,,,,,,,余师姐！"
   splits:
   - split: 10
@@ -18298,7 +18298,7 @@
   splits:
   - split: 10
     text: "不用了不用了，差不多得了。思迟把这儿挖的快跟萝卜坑似的了。"
-    translated: "No, no, it's fine like this. I've dug here so much it's starting to look like a rut for carrots."
+    translated: "No, no, it's fine like this. Sichi has dug here so much it's starting to look like a bunch of potato holes."
 - raw: ",,杨思迟,右,,,,,ChangeInjury;杨思迟-0-10,,嘿嘿，顾师兄又在取笑我了。"
   splits:
   - split: 10
@@ -18638,7 +18638,7 @@
   splits:
   - split: 10
     text: "游年采薇，左边那波人多，我们三个解决。"
-    translated: "Lv Nian Cai Wei, with more people on the left side, let's handle that group together."
+    translated: "Younian Caiwei, the group on the left is larger, let's handle it with the three of us."
   - split: 10
     subIndex: 1
     text: "#PlayerName#，右边那波人少，你们出手拿下。"
@@ -19147,7 +19147,7 @@
   splits:
   - split: 10
     text: "胥华，游年，采薇，你们三人轻功较高，"
-    translated: "Xu Hua, You Nian, Cai Wei, you three have relatively high lightness."
+    translated: "Xuhua, Younian, Caiwei, the three of you have fairly good lightness."
   - split: 10
     subIndex: 1
     text: "趁现在火势不大，随为师再进寨中搜寻一番，"
@@ -19290,7 +19290,7 @@
   - split: 10
     subIndex: 1
     text: "胥华，游年，你二人留在附近打探几日，看看可有漏网之鱼。"
-    translated: "Xu Hua and You Nian, the two of you stay nearby to scout for a few days. See if there are any remaining foes."
+    translated: "Xuhua, Younian, you two stay and scout the area for a few days to see if there are any remaining enemies."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -19349,7 +19349,7 @@
   splits:
   - split: 10
     text: "啊，思迟他学艺未精，怕别是遇上什么歹人了。"
-    translated: "Ah, Si Chi's skill is still undeveloped; they might have encountered some bad people."
+    translated: "Ah, Sichi is still unskilled in his art, so I fear he might have run into some evil people instead."
 - raw: ",,,左,,,,,,,反正今天闲来无事，要不师姐你随我去巴陵村看看情况，顺便也巡逻一番？"
   splits:
   - split: 10
@@ -19363,7 +19363,7 @@
   - split: 10
     subIndex: 1
     text: "罢了罢了，少了思迟，这功练着也没啥意思，我随你走一遭。"
-    translated: "Well, well, with Shi Chi gone, practicing this skill doesn't really make much sense. I'll accompany you on this journey."
+    translated: "Well, well, with Sichi missing, practicing this technique doesn't really have much point. I'll accompany you for this journey."
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -19752,7 +19752,7 @@
   splits:
   - split: 10
     text: "既然今日有此机会，这修葺事务，为师就交给游年你来全权安排吧。"
-    translated: "Since we have this chance today, I'll leave the renovation matters in your hands, Yuan."
+    translated: "Since we have this chance today, I'll leave the renovation matters in your hands, Younian."
 - raw: ",,,右,,,,,ScreenBlack,,是师傅！"
   splits:
   - split: 10
@@ -19783,7 +19783,7 @@
   - split: 10
     subIndex: 1
     text: "下面砌砖立柱的重活累活，就交给我和思迟便可。"
-    translated: "The heavy and tiring work of laying bricks and setting columns will be handled by me and Si Chi."
+    translated: "The heavy and strenuous work of laying bricks and setting columns will be handled by me and Sichi."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20012,7 +20012,7 @@
   splits:
   - split: 10
     text: "久闻采薇师姐天资过人，武艺超群，今天正好讨教讨教，"
-    translated: "I've heard that Senior Sishui has extraordinary talents and unmatched combat skills. Today is a good day to seek your guidance."
+    translated: "I've heard that Senior Sishijie Caiwei has exceptional talent and unparalleled martial arts skills. Today, I exactly discuss, let's learn from you."
   - split: 10
     subIndex: 1
     text: "还望给我这师弟留点面子啊"
@@ -20176,7 +20176,7 @@
   - split: 10
     subIndex: 1
     text: "还得以游年和采薇为榜样，好好精进武艺才行。"
-    translated: "One must strive to improve their martial arts by following the examples of You Nian and Cai Wei."
+    translated: "One must strive to improve their martial arts by following the examples of Younian and Caiwei."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20201,7 +20201,7 @@
   - split: 10
     subIndex: 1
     text: "还得以游年和采薇为榜样，好好精进武艺才行。"
-    translated: "One must strive to improve their martial arts by following the examples of You Nian and Cai Wei."
+    translated: "One must strive to improve their martial arts by following the examples of Younian and Caiwei."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20591,7 +20591,7 @@
   splits:
   - split: 10
     text: "采薇"
-    translated: "Eating Wild Vegetables"
+    translated: "Caiwei"
   - split: 10
     subIndex: 1
     text: "没事的，#PlayerName#不是那种人"
@@ -21301,7 +21301,7 @@
   splits:
   - split: 10
     text: "胥华，游年，近几日你们要加强巡逻戒备，免得又有事端发生。"
-    translated: "Xu Hua, You Nian, for the past few days you need to strengthen your patrols and vigilance to avoid any further incidents."
+    translated: "Xuhua, Younian, in recent days, you should strengthen your patrols and guard against any incidents from occurring again."
 - raw: ",,,左,,,,,,,是师傅！"
   splits:
   - split: 10
@@ -21311,7 +21311,7 @@
   splits:
   - split: 10
     text: "采薇，近些日子你就陪着你姜师姐，时刻注意些。"
-    translated: "Cai Wei, lately you should accompany Senior Sister Jiang and be more vigilant."
+    translated: "Caiwei, lately you should stay by Senior Sister Jiang's side and be more mindful."
 - raw: ",,,左,,,,,,,嗯。"
   splits:
   - split: 10
@@ -21466,7 +21466,7 @@
   splits:
   - split: 10
     text: "哼，游年你有这闲心思耍贫嘴，还不如去外面买点药材回来，这药罐已经见底啦。"
-    translated: "Hmph, You Tian, if you have the spare time to be so witty, it would be better to go buy some herbs outside. The medicine pot is already empty."
+    translated: "Hmph, Younian, if you have the leisure to chatter like that, it would be better to go buy some herbs outside. This cauldron is already empty."
 - raw: ",,,右,,,,,,,在这儿叽叽喳喳的，只会打扰小师妹休息。"
   splits:
   - split: 10
@@ -33151,7 +33151,7 @@
   - split: 10
     subIndex: 1
     text: "我会吩咐胥华游年他们加强戒备的。"
-    translated: "I will instruct Xu Hua Younian to step up their vigilance."
+    translated: "I will instruct Xuhua and Younian to step up their precautions."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -33387,7 +33387,7 @@
   splits:
   - split: 10
     text: "诶，采薇，不可无礼。"
-    translated: "Hey, Caifei, don't be rude"
+    translated: "Hey, Caiwei, don't be rude"
 - raw: ",,陆仁谦,右,,,,,,,哈哈哈无妨无妨，初生牛犊不怕虎。\\n小妮子年纪尚浅，看不清师伯我的妙招也属正常。"
   splits:
   - split: 10
@@ -34775,7 +34775,7 @@
   splits:
   - split: 10
     text: "那就好，采薇轻功高强，必能不辱使命。"
-    translated: "Good to hear that. Caifei's qinggong is powerful; she will surely not disgrace her mission."
+    translated: "That's good to hear. Caiwei's Qinggong is strong, she will surely not shame her mission."
   - split: 10
     subIndex: 1
     text: "哼，当年黑风寨虽被彻底摧毁，但还漏了个大当家，"
@@ -34819,7 +34819,7 @@
   - split: 10
     subIndex: 1
     text: "我这就回去和师傅商议对策，定会将游年安全救出！"
-    translated: "I'll go back and consult with Master to ensure Yuanyear's safe rescue!"
+    translated: "I will return and consult with Master about the strategy to ensure Younian's safety!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -34887,7 +34887,7 @@
   splits:
   - split: 10
     text: "眼下当务之急是救出游年，"
-    translated: "The top priority now is to rescue Younv."
+    translated: "The top priority now is to rescue Younian."
   - split: 10
     subIndex: 1
     text: "可若不知道那群贼人藏匿的地点，为师也无计可施。"
@@ -34907,7 +34907,7 @@
   splits:
   - split: 10
     text: "师傅，收到采薇的飞鸽传书！"
-    translated: "Master, I have received Fei Ge Zhen Shu from Caimei!"
+    translated: "Master, received Caiwei's pigeon message!"
   - split: 10
     subIndex: 1
     text: "贼人就隐藏在"
@@ -34971,7 +34971,7 @@
   splits:
   - split: 10
     text: "这样，胥华你领其余弟子，去营地周遭埋伏下来。"
-    translated: "So, Xu Hua, you lead the other disciples to set up a ambush around the camp."
+    translated: "Okay, Xuhua, lead the other disciples and set up a ambush around the camp."
   - split: 10
     subIndex: 1
     text: "先稳住阵脚，探明情报，莫要贸然出击！"
@@ -35054,7 +35054,7 @@
   splits:
   - split: 10
     text: "游年吉人天相，定会没事的。"
-    translated: "With good fortune and favorable circumstances, things will turn out fine."
+    translated: "Younian Jiren Tianxiang, ding hui wu si de."
   - split: 10
     subIndex: 1
     text: "眼下咱们别再浪费时间，赶紧分头出发吧！"
@@ -35142,7 +35142,7 @@
   - split: 10
     subIndex: 1
     text: "思迟，云裳，到时候你们在几位师兄身后援护，莫要逞强冲在前面。"
-    translated: "Xi Sicheng, Yun Shang, when the time comes, stay behind your senior brothers to support them. Don't try to be brave and rush to the front."
+    translated: "Sichi, Yunshang, when the time comes, stay behind the senior brothers to support them. Don't try to be brave and rush to the front."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -35171,7 +35171,7 @@
   - split: 10
     subIndex: 1
     text: "可眼下游年生死未卜，这怎么等得及"
-    translated: "With the future uncertain, how can we afford to wait?"
+    translated: "Younian's fate is yet to be determined, how can we wait for that?"
   templates:
   - split: 10
     template: "{0}…{1}……"
@@ -35205,7 +35205,7 @@
   - split: 10
     subIndex: 1
     text: "采薇，另外三名头目就交给你解决。"
-    translated: "Vai Wei, handle the other three leaders"
+    translated: "Caiwei, the other three leaders are up to you."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -35223,7 +35223,7 @@
   splits:
   - split: 10
     text: "姜婉，沈退，你们二人且战且走，伺机营救游年。"
-    translated: "Jiang Wan, Shen Tui, you two should fight while retreating and look for an opportunity to rescue You Nian."
+    translated: "Jiang Wan, Shen Tui, you two should fight while retreating and look for an opportunity to rescue Younian."
 - raw: ",姜婉,,左,,,,,,,可师傅他……"
   splits:
   - split: 10
@@ -35333,7 +35333,7 @@
   splits:
   - split: 10
     text: "为了游年，只能拼了！"
-    translated: "For Youth's Sake, We Must Go All Out!"
+    translated: "For Younian, I'll give it my all!"
   - split: 10
     subIndex: 1
     text: "希望师傅老人家不要怪罪"
@@ -35702,7 +35702,7 @@
   splits:
   - split: 10
     text: "胥华，你在此处打扫战场，记住，莫留活口。"
-    translated: "Xu Hua, clean up here on the battlefield. Remember, leave no survivors."
+    translated: "Xuhua, you will clean up here. Make sure to leave no survivors."
 - raw: ",,魏胥华,右,,,,,FinishEventMission,,是，师傅。"
   splits:
   - split: 10
@@ -35738,7 +35738,7 @@
   splits:
   - split: 10
     text: "思迟你别冲动，刚才一战的伤口还在流血呢。"
-    translated: "Xici, don't be impulsive. The wounds from our battle just now are still bleeding."
+    translated: "Sichi, don't act impulsively. The wound from just now's battle is still bleeding."
   - split: 10
     subIndex: 1
     text: "快过来，我替你包扎。"
@@ -35882,7 +35882,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#，采薇"
-    translated: "#PlayerName#, Cai Wei"
+    translated: "#PlayerName#, Caiwei"
   - split: 10
     subIndex: 2
     text: "咳咳咳额咳咳！"
@@ -35939,7 +35939,7 @@
   splits:
   - split: 10
     text: "游年自幼习武，天赋过人，"
-    translated: "Youyuan practiced martial arts from a young age and possesses exceptional talent."
+    translated: "Younian practiced martial arts from a young age and possesses exceptional talent."
   - split: 10
     subIndex: 1
     text: "如今忽然成了废人，自会有些消沉。"
@@ -35992,7 +35992,7 @@
   splits:
   - split: 10
     text: "游年伤势已经好转大半，哎，可惜内力一直无法恢复。"
-    translated: "Yuno's injuries have improved significantly, alas, his inner power continues to elude recovery."
+    translated: "Younian's injuries have improved greatly, sigh, too bad his inner power continues to fail to recover."
   - split: 10
     subIndex: 1
     text: "本门缺了他，实在是缺了一大助力。"
@@ -36028,7 +36028,7 @@
   splits:
   - split: 10
     text: "胥华！"
-    translated: "Xu Hua!"
+    translated: "Xuhua!"
 - raw: ",,,左,,,,,,,弟子在。"
   splits:
   - split: 10
@@ -36073,7 +36073,7 @@
   splits:
   - split: 10
     text: "你此前只身犯险，以一己之力救下游年，劳苦功高，"
-    translated: "You previously braved the peril alone and saved Luo Yan with your own efforts, earning great merit."
+    translated: "You previously braved the danger alone, risking everything to save Younian, and your efforts have been great."
   - split: 10
     subIndex: 1
     text: "特此晋升你为本门"
@@ -36126,7 +36126,7 @@
   splits:
   - split: 10
     text: "游年！"
-    translated: "Happy New Year!"
+    translated: "Younian!"
 - raw: ",,,左,,,,,,,咳咳咳，弟子在。"
   splits:
   - split: 10
@@ -36220,7 +36220,7 @@
   splits:
   - split: 10
     text: "这才对嘛。游年你放宽心思，安心养伤便是。"
-    translated: "That's right. You should relax and focus on healing, Xiao Nian."
+    translated: "This is right. Younian, open your mind and focus on healing."
 - raw: ",姜婉,,右,,,,,,,婉儿，退儿，你们二人作为入门弟子，也修行了有些时日了。\\n眼下为师便晋升进门两位为<b>正式弟子</b>。"
   splits:
   - split: 10
@@ -36320,7 +36320,7 @@
   splits:
   - split: 10
     text: "思迟！"
-    translated: "Think slow!"
+    translated: "Sichi!"
 - raw: ",杨思迟,,左,,,,,,,师傅，我我我我……"
   splits:
   - split: 10
@@ -36353,7 +36353,7 @@
   - split: 10
     subIndex: 2
     text: "思迟你若能持之以恒，笃志力行，必能厚积薄发，大器晚成。"
-    translated: "If you can persist and apply yourself diligently, you will surely accumulate knowledge to eventually achieve great success later in life."
+    translated: "Sichi, if you can persevere and apply yourself wholeheartedly, you will surely accumulate knowledge and skills before making a great breakthrough, achieving great success later in life."
   templates:
   - split: 10
     template: "{0}<b>{1}</b>。\\n{2}"
@@ -37451,7 +37451,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#，思迟，云裳，请受我一拜！"
-    translated: "#PlayerName#, Si Chi, Yun Shang, please bow to me!"
+    translated: "#PlayerName#, Sichi, Yunshang, please kneel before me!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -40198,7 +40198,7 @@
   splits:
   - split: 10
     text: "#PlayerName#今日可有看到思迟啊？"
-    translated: "#PlayerName#, did you see Si Chi today?"
+    translated: "#PlayerName#, did you see Sichi today?"
 - raw: ",,,左,,,,,,,杨师兄？没啊，师姐寻他有事？"
   splits:
   - split: 10
@@ -40229,7 +40229,7 @@
   splits:
   - split: 10
     text: "哼，思迟可不像你，整天想着怎么偷懒耍滑。"
-    translated: "Hmph, Si Chi doesn't seem like you‑always thinking of ways to slack off."
+    translated: "Hm, Sichi doesn't seem to be like you, always thinking about how to slack off."
   - split: 10
     subIndex: 1
     text: "他就是不吃饭不睡觉，这每天的练功也从不会落下。"
@@ -40253,7 +40253,7 @@
   - split: 10
     subIndex: 1
     text: "可若思迟真遇上歹人受了伤，那可如何是好"
-    translated: "If Tai Zhen were to meet an evil person and get injured, what would we do?"
+    translated: "If Sichi really meets a bad person and gets hurt, what are we to do?"
   templates:
   - split: 10
     template: "{0}……{1}……"
@@ -40261,7 +40261,7 @@
   splits:
   - split: 10
     text: "你顾师兄重伤未愈，若思迟又有什么三长两短，我可怎么和师傅交代"
-    translated: "You see, Senior Brother Gu is still badly injured. If Aspiration continues to be reckless and something happens to him, how can I explain this to our Master?"
+    translated: "You, Senior Brother Gu, are severely injured and still not recovered. If Sichi were to encounter any misfortune, how could I explain it to Master?"
   templates:
   - split: 10
     template: "{0}……"
@@ -40285,7 +40285,7 @@
   - split: 10
     subIndex: 1
     text: "思迟还没吃早饭，我给他带一份，#PlayerName#你也拿着路上吃。"
-    translated: "Si Chi hasn't had breakfast yet, I'll bring him a portion. #PlayerName#, you can hold onto another one for the road."
+    translated: "Sichi hasn't eaten breakfast yet, so I brought him a portion. #PlayerName#, you can also take this to eat on the way."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -40509,7 +40509,7 @@
   splits:
   - split: 10
     text: "哎，别追了别追了，思迟你看看你都伤成什么样子了。"
-    translated: "Oh, stop chasing her already, Si Chi, look at how hurt you've become."
+    translated: "Ah, stop it, stop it. Sichi, look at how hurt you are."
 - raw: ",,,左,,,,,,,师姐没事，我都习惯了……哎哟哎哟！看来是受了内伤。"
   splits:
   - split: 10
@@ -41368,7 +41368,7 @@
   - split: 10
     subIndex: 1
     text: "胥华，你与游年去掩杀一阵，莫要放跑了余党。"
-    translated: "Xu Hua, go with You Nian to finish off the remaining enemies and don't let any escape."
+    translated: "Xuhua, go with Younian to finish off the remaining enemies and don't let any escape."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -41933,7 +41933,7 @@
   splits:
   - split: 10
     text: "我已差采薇游年巡查巴陵，巩固防御去了。"
-    translated: "I have sent Dai Wei You Nian to patrol Ba Ling and reinforce defenses."
+    translated: "I have sent Caiwei and Younian to patrol Baleng and reinforce defenses."
   - split: 10
     subIndex: 1
     text: "只可惜我在明，敌在暗，加之黄鹤盟约尚在，如今还不可轻举妄动。"
@@ -41945,7 +41945,7 @@
   splits:
   - split: 10
     text: "胥华你身为大师兄，也算学有所成。"
-    translated: "Xu Hua, as Big Senior Brother, you've also achieved quite a bit in your studies."
+    translated: "Xuhua, as the Big Senior Brother, you've also achieved a lot in your studies."
   - split: 10
     subIndex: 1
     text: "为师就命你去铁掌帮附近，打探黑风寨贼人情报。"
@@ -41995,7 +41995,7 @@
   splits:
   - split: 10
     text: "既然胥华同意，那你就一道前往，"
-    translated: "Since Xi Hua agrees, you should go together."
+    translated: "Since Xuhua agrees, you should go together"
   - split: 10
     subIndex: 1
     text: "注意安全，莫要轻敌冒进。"
@@ -42770,7 +42770,7 @@
   splits:
   - split: 10
     text: "嗯，胥华此言有理，万一本门总舵失守，"
-    translated: "Well, Xu Hua makes a valid point. If the main hall of our sect falls,"
+    translated: "Hmm, Xuhua has a point. If the main den of our sect falls..."
   - split: 10
     subIndex: 1
     text: "轻则死伤惨重，重则百年基业毁于一旦"
@@ -42863,7 +42863,7 @@
   - split: 10
     subIndex: 1
     text: "哎，胥华还是这么爱逞强。"
-    translated: "Oh, Xu Hua still loves to be stubborn."
+    translated: "Ah, Xuhua is still so stubborn"
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -56528,7 +56528,7 @@
   splits:
   - split: 10
     text: "此前，胥华在黑风寨探得了铁掌帮的阴谋，"
-    translated: "Previously, Xu Hua gathered intelligence on the Iron Palm Gang's plot at Black Wind Camp."
+    translated: "Previously, Xuhua had infiltrated Black Gale Camp and uncovered the Iron Palm Gang's plot."
   - split: 10
     subIndex: 1
     text: "为师尚未和你们一一说明。"
@@ -56688,7 +56688,7 @@
   splits:
   - split: 10
     text: "哎，思迟啊，为师也知这习武之事，需得循序渐进。"
-    translated: "Ah, Si Chi, as my teacher also knows, the way of cultivation requires gradual progression."
+    translated: "Ah, Sichi, as my teacher also knows, this practice of martial arts must proceed step by step."
   - split: 10
     subIndex: 1
     text: "只是如今生死存亡之际，为师也只好病急乱投医了。"
@@ -56700,7 +56700,7 @@
   splits:
   - split: 10
     text: "思迟，云裳，还有#PlayerName#，"
-    translated: "Si Chi, Yun Shang, and #PlayerName#,"
+    translated: "Sichi, Yunshang, and {#PlayerName#},"
   - split: 10
     subIndex: 1
     text: "你们入门时间段，修为尚浅，学习这无影乱剑不必急于求成，"
@@ -56778,7 +56778,7 @@
   - split: 10
     subIndex: 1
     text: "至于采薇和游年，你们修为本就已经足够。"
-    translated: "As for Cai Wei and You Nian, your cultivation is already more than sufficient."
+    translated: "As for Caiwei and Younian, your cultivation is already sufficient."
   - split: 10
     subIndex: 2
     text: "在这无影乱剑上还需多花些心思，好好精进。"
@@ -56819,7 +56819,7 @@
   splits:
   - split: 10
     text: "胥华，你的无影乱剑，尚有进步之空间。"
-    translated: "Xu Hua, your Shadowless Chaos Sword technique still has room for improvement."
+    translated: "Xuhua, your elusive flurry of blades still has room for improvement."
   - split: 10
     subIndex: 1
     text: "这些日子为师也会对你悉心指导，以求突破。"
@@ -57000,7 +57000,7 @@
   - split: 10
     subIndex: 1
     text: "胥华，通知各位师兄弟，到正厅集合！"
-    translated: "Xu Hua, notify all brothers and seniors to gather in the main hall!"
+    translated: "Xuhua, notify all senior and fellow brothers to gather in the main hall!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -57041,7 +57041,7 @@
   - split: 10
     subIndex: 1
     text: "害得云裳父母身亡，也害得游年身受重伤，经脉尽断。"
-    translated: "It led to the deaths of Yun Shang's parents and severe injuries for You Nian, breaking all his meridians."
+    translated: "It also caused Yun Shang's parents to die, and left Younian seriously injured, with all his meridians severed."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -57231,7 +57231,7 @@
   - split: 10
     subIndex: 1
     text: "采薇便与#PlayerName#在山道上与贼人游斗，"
-    translated: "Vai Wei sparred with the bandits on the mountain path with #PlayerName#."
+    translated: "Caiwei spars with #PlayerName# against bandits on the mountain path."
   - split: 10
     subIndex: 2
     text: "随后假装战败逃跑，不断诱敌深入。"
@@ -57299,7 +57299,7 @@
   splits:
   - split: 10
     text: "采薇，这诱敌深入颇为凶险，本当由我与你一同前去的。"
-    translated: "Cai Wei, luring the enemy deeper is quite dangerous. It should have been me accompanying you."
+    translated: "Caiwei, luring the enemy deeper is quite perilous. It should have been you and me going together."
   - split: 10
     subIndex: 1
     text: "只是我这重伤未愈，怕到时候拖了后腿，所以才让#PlayerName#代劳。"
@@ -58272,7 +58272,7 @@
   - split: 10
     subIndex: 1
     text: "游年，你带着几位师弟，把这些尸首收殓了吧。"
-    translated: "Yuyuann, bring your junior disciples and take care of these corpses."
+    translated: "Younian, see to it that your junior disciples handle the proper disposition of these bodies."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -58685,7 +58685,7 @@
   - split: 10
     subIndex: 1
     text: "思迟，我一直嫌弃你愚笨，平日里没有少责骂你，"
-    translated: "Si Chi, I've always despised your stupidity and haven't spared you my criticism on a daily basis."
+    translated: "Sichi, I have always despised your foolishness and often scolded you on a daily basis."
   - split: 10
     subIndex: 2
     text: "但其实你一直努力练功，我也看在眼里。"
@@ -58697,7 +58697,7 @@
   splits:
   - split: 10
     text: "思迟，还有林师妹，我向你们道个歉。"
-    translated: "Si Chi, and Younger Sister Lin, I apologize to you both."
+    translated: "Sichi, and Junior Sister Lin, I apologize to you both."
   - split: 10
     subIndex: 1
     text: "我这大师兄平日里过于严苛，不苟言笑，"
@@ -59135,7 +59135,7 @@
   splits:
   - split: 10
     text: "思迟，云裳？魏师兄去哪儿了？"
-    translated: "Xisi, Yunchang? Where did Senior Brother Wei go?"
+    translated: "Sichi, Yuchang? Where's Senior Brother Wei?"
 - raw: ",,,右,,,,,,,呼……呼……魏师兄…魏师兄被贼人…围在巴陵村了…\\n顾师兄…你们…你们怎么来了……"
   splits:
   - split: 10
@@ -59459,7 +59459,7 @@
   splits:
   - split: 10
     text: "胥华真掉下悬崖了？"
-    translated: "Did Xu Hua really fall off the cliff?"
+    translated: "Did Xu Xuhua really fall off the cliff?"
   - split: 10
     subIndex: 1
     text: "我不信，我不信！"
@@ -59837,7 +59837,7 @@
   splits:
   - split: 10
     text: "思迟，你这条命是你大师兄拼死换来的。"
-    translated: "Si Chi, your life was risked to save by your Big Senior Brother."
+    translated: "Sichi, your life was riskily saved by Big Senior Brother."
   - split: 10
     subIndex: 1
     text: "若就这么回去送了，岂不是辜负了他一片苦心？"
@@ -63127,7 +63127,7 @@
   splits:
   - split: 10
     text: "只可惜采薇和婉儿她们另有谋划，无暇抽身，"
-    translated: "Too bad Vi and Wen'er have other plans and are too busy to spare time for this."
+    translated: "Unfortunately, Caiwei and Weyer and the others have their own plans and are too busy to spare any time."
   - split: 10
     subIndex: 1
     text: "只能劳烦#PlayerName#你了！"
@@ -64517,7 +64517,7 @@
   - split: 10
     subIndex: 2
     text: "哼哼，有你们三个在手，不怕姜映泉那老东西不就范。"
-    translated: "Mmph, with the three of you in hand, I'm not afraid that Old Jang Yiquan won't submit."
+    translated: "Hmph, with the three of you, I'm not afraid that Old Thing Jiang Yingquan won't submit."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -64752,7 +64752,7 @@
   splits:
   - split: 10
     text: "陆、陆师伯，您轻功高强，我们自是不及。"
-    translated: "Lu, Senior Master Lu, your Qinggong is powerful; we certainly can't compare."
+    translated: "Lu, Martial Uncle Lu, your qinggong is superb; we certainly can't match."
   - split: 10
     subIndex: 1
     text: "不过您老怎么会在此处？而且还一副杂役打扮？"
@@ -66829,7 +66829,7 @@
   splits:
   - split: 10
     text: "是陆仁谦陆师伯！"
-    translated: "It's Lu Renqian, Uncle Master Lu!"
+    translated: "It's Martial Uncle Lu, Lin Renqian!"
   - split: 10
     subIndex: 1
     text: "他此前不是伪装成杂役，在巴陵村打探情报么？"
@@ -68036,7 +68036,7 @@
   splits:
   - split: 10
     text: "映泉，咱们师兄弟两个，有多久没并肩作战过了？"
-    translated: "Map Quan, how long has it been since our fellow brothers fought side by side?"
+    translated: "Yingquan, how long has it been since our two senior brothers fought side by side?"
   - split: 10
     subIndex: 1
     text: "咳咳咳咳咳，今天能再痛痛快快打一场，也算是一桩乐事！"
@@ -68082,7 +68082,7 @@
   splits:
   - split: 10
     text: "我无大碍，就是陆师伯受了些伤。"
-    translated: "I am fine, but Senior Master Lu was injured."
+    translated: "I'm fine, just Martial Uncle Lu got a few injuries."
   - split: 10
     subIndex: 1
     text: "铁掌帮人多势众，你们自己也多加小心！"
@@ -68094,7 +68094,7 @@
   splits:
   - split: 10
     text: "大家保护陆师伯，莫要让贼人趁机得手了。"
-    translated: "Protect Uncle Lu, don't let the villains take advantage."
+    translated: "Everyone protect Martial Uncle Lu; don't let the thieves take advantage."
 - raw: ",,陆仁谦,右,,,,,,,我堂堂师伯，岂需要你们这群臭小子保护？\\n滚滚滚，一边去，看师伯我大展神威！"
   splits:
   - split: 10
@@ -68111,7 +68111,7 @@
   splits:
   - split: 10
     text: "铁掌狗贼，竟敢伤我陆师伯，看招！"
-    translated: "Fist‑wielding dog thief, dare to injure Uncle Lushi of mine, here's my move!"
+    translated: "The Iron Palm Trick, dare to hurt Martial Uncle Lu, here's my move!"
 - raw: ",,,右,,,,,,夺取物件;RobHeroItemChoose;叶一鸣,唔！岂有此理！\\n区区仙霞弟子，竟能伤我至此......"
   splits:
   - split: 9
@@ -68153,7 +68153,7 @@
   - split: 10
     subIndex: 1
     text: "再练几年，肯定能赶上你陆师伯。"
-    translated: "Practice for a few more years and I'm sure I can catch up to Uncle Landmaster."
+    translated: "Train for a few more years, and I'm sure I can catch up to Martial Uncle Lu."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -68161,7 +68161,7 @@
   splits:
   - split: 10
     text: "哎，事到如今，陆师伯您老人家就别逞强了。"
-    translated: "Ah, Uncle Senior Lu, there's no need for you to strain yourself now."
+    translated: "Ah, by now, Martial Uncle Lu, you should stop showing off."
   - split: 10
     subIndex: 1
     text: "当心，铁掌帮又围上来了！"
@@ -68656,7 +68656,7 @@
   - split: 10
     subIndex: 1
     text: "只是你陆师伯"
-    translated: "Just your Lu Senior Advisor"
+    translated: "Just your Martial Uncle Lu"
   - split: 10
     subIndex: 2
     text: "暂且还没回来。"
@@ -68668,7 +68668,7 @@
   splits:
   - split: 10
     text: "陆师伯？"
-    translated: "Uncle Lu?"
+    translated: "Martial Uncle Lu?"
   - split: 10
     subIndex: 1
     text: "他老人家武功高强，经验老到，应该没事的"
@@ -68680,7 +68680,7 @@
   splits:
   - split: 10
     text: "不不不不好了！陆师伯回来了！"
-    translated: "No, no, not good! Uncle Lu is back!"
+    translated: "No, no, not good! Martial Uncle Lu is back!"
   - split: 10
     subIndex: 1
     text: "#PlayerName#，师傅，你们快去看看吧！"
@@ -68692,7 +68692,7 @@
   splits:
   - split: 10
     text: "啊？陆师伯回来了，这不是好事么？"
-    translated: "Oh? Uncle Lu has returned. Isn't that good news?"
+    translated: "Ah? Martial Uncle Lu has returned. Isn't that good news?"
 - raw: ",,,右,,,,,,,他他他受了重伤，心脉都碎了，眼看，眼看就要不行了！\\n（说罢竟捂着脸呜咽起来）呜呜呜呜呜呜，陆师伯……"
   splits:
   - split: 10
@@ -68701,7 +68701,7 @@
   - split: 10
     subIndex: 1
     text: "（说罢竟捂着脸呜咽起来）呜呜呜呜呜呜，陆师伯"
-    translated: "Saying this, he covered his face and sobbed. Wu‑wu‑wu‑wu‑wu, Senior Master Lu."
+    translated: "Saying this, he covered his face and sobbed. Weep weep weep, Martial Uncle Lu"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -68953,7 +68953,7 @@
   - split: 10
     subIndex: 2
     text: "你对我们仙霞派的大恩大德，我姜映泉永世不忘！"
-    translated: "You Qingyang's great kindness to our Xianxia Sect will be remembered forever by me!"
+    translated: "You have rendered the great kindness of the Xianxia Sect to us, Master Jiang Yingquan will never forget!"
   templates:
   - split: 10
     template: "{0}……{1}\\n{2}"
@@ -69381,7 +69381,7 @@
   splits:
   - split: 10
     text: "（众人围了上去，抱住陆师伯的遗体，"
-    translated: "(The crowd surrounded and embraced Uncle Landi's body,"
+    translated: "(More people surrounded and hugged Martial Uncle Lu's body,"
   - split: 10
     subIndex: 1
     text: "哭喊之声顿时汇成一片，久久不停"
@@ -69393,7 +69393,7 @@
   splits:
   - split: 10
     text: "（此后，你们在仙霞派后山，为陆师伯举办了简单的葬礼，"
-    translated: "(Afterwards, you held a simple funeral for Uncle Lu on the back mountain of the Xianxia Sect,"
+    translated: "(Since then, you held a simple funeral for Martial Uncle Lu on the back mountain of the Xianxia Sect,"
   - split: 10
     subIndex: 1
     text: "寻了一处风光秀美，鸟语花香的好去处，将他的遗体安葬其间。）"
@@ -69405,7 +69405,7 @@
   splits:
   - split: 10
     text: "（坟包之上，赫然屹立着师傅姜映泉亲手篆刻的墓碑，"
-    translated: "(Above the grave mound stands a tombstone inscribed by Master Jiang Yinqian with his own hands,"
+    translated: "(Above the grave mound, stands starkly the tombstone inscribed by Master Jiang Yingquan with his own hands,"
   - split: 10
     subIndex: 1
     text: "上书一行大字"
@@ -72533,7 +72533,7 @@
   - split: 10
     subIndex: 1
     text: "然后你大师兄和陆师伯又相继遇难，"
-    translated: "Then your Big Senior Brother and Uncle Senior Landmaster met with misfortune in succession."
+    translated: "Then your big senior brother and Martial Uncle Lu met with misfortune successively."
   - split: 10
     subIndex: 2
     text: "眼下此处已是危机四伏，不可久留了！"
@@ -73415,7 +73415,7 @@
   splits:
   - split: 10
     text: "游年，你大伤未愈，还得好好疗养，"
-    translated: "Yoann, you haven't fully recovered from your injuries and need to take good care of yourself."
+    translated: "Younian, you haven't fully recovered from your injuries and still need to take good care of yourself."
   - split: 10
     subIndex: 1
     text: "我去了飞龙门之后，也会四下为你打探疗伤办法的，"
@@ -73455,7 +73455,7 @@
   splits:
   - split: 10
     text: "采薇，你也是天赋异禀，什么武功一学就会。"
-    translated: "Cai Wei, you too have a natural gift; you learn martial arts effortlessly."
+    translated: "Caiwei, you're also a prodigy. You can learn martial arts so easily."
   - split: 10
     subIndex: 1
     text: "就是一练起功来，就废寝忘食，把什么都忘了。"
@@ -74034,7 +74034,7 @@
   splits:
   - split: 10
     text: "游年，这三位新弟子初来乍到，派内许多事务还很陌生。"
-    translated: "You Year, these three new disciples are still unfamiliar with many affairs within the sect after just arriving."
+    translated: "Younian, these three new disciples are just starting out, so many internal affairs of the sect are still quite unfamiliar to them."
   - split: 10
     subIndex: 1
     text: "眼下本门数你资历最高，就带着他们好好逛逛，熟悉熟悉吧！"
@@ -75946,7 +75946,7 @@
   splits:
   - split: 10
     text: "他奶奶的，竟敢侮辱陆师伯，看我不教训他们！"
-    translated: "By Jupiter, daring to insult Uncle Lu, I'll teach them a lesson!"
+    translated: "Damn it, daring to insult Martial Uncle Lu, I'll show them who's boss!"
 - raw: ",,,左,,,,,,,慢着慢着，沈师兄，眼下毕竟是在别人的地界，\\n还是先找魏师兄要紧，别节外生枝了！"
   splits:
   - split: 10
@@ -76904,7 +76904,7 @@
   splits:
   - split: 10
     text: "陆师伯他竟然！"
-    translated: "Uncle Lu actually!"
+    translated: "Martial Uncle Lu actually!"
   - split: 10
     subIndex: 1
     text: "折在了铁掌帮的手上"
@@ -77007,7 +77007,7 @@
   - split: 10
     subIndex: 1
     text: "胥华！！！这是怎"
-    translated: "Xu Hua!! How could this be!?"
+    translated: "Xuhua!!! How is this possible?"
   - split: 10
     subIndex: 2
     text: "怎么回事？"
@@ -77058,7 +77058,7 @@
   splits:
   - split: 10
     text: "没想到啊没想到，胥华你遭逢如此绝境，竟能平安归来。"
-    translated: "Who would have thought, Xu Hua. You managed to return safely after facing such an absolute dead end."
+    translated: "Who would have thought, Xuhua, that you could return safely after facing such an absolute despair."
   - split: 10
     subIndex: 1
     text: "看来真是祖师她老人家在天之灵庇佑，才能化险为夷。"
@@ -77179,7 +77179,7 @@
   - split: 10
     subIndex: 1
     text: "游年，采薇，劳烦你们这就去校场上与我过招，帮我尽快想起剩下的招式。"
-    translated: "Younian, Caipei, would you mind going to the training ground and sparring with me? I need to quickly remember the rest of the moves."
+    translated: "Younian, Caiwei, would you mind going to the training ground right away and sparring with me? I need to quickly remember the rest of the techniques."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -77204,7 +77204,7 @@
   splits:
   - split: 10
     text: "铁掌帮狗贼将我打落悬崖，夺占巴陵村，再加上陆师伯的血债，"
-    translated: "The Iron Palm Gang's dog thief knocked me off a cliff, seized Baling Village, and added Uncle Lu's blood debt to it."
+    translated: "The Iron Palm Gang's dog traitors threw me off a cliff, seizing Baling Village. Adding to that, Martial Uncle Lu's blood feud."
   - split: 10
     subIndex: 1
     text: "这些公道，我魏胥华若不能亲手讨还回来，还有何颜面当你们大师兄！"
@@ -77216,7 +77216,7 @@
   splits:
   - split: 10
     text: "胥华一回来就干劲十足呢！"
-    translated: "Xu Hua returns and is full of energy right away!"
+    translated: "Xuhua comes back full of energy and enthusiasm!"
   - split: 10
     subIndex: 1
     text: "好，那其他弟子也不要落下，大家齐心协力，秣马厉兵，"
@@ -77589,7 +77589,7 @@
   splits:
   - split: 10
     text: "如今终于找到方法，可以治好游年了，"
-    translated: "We've finally found a method to cure Xiao Nian."
+    translated: "Now, we have finally found a method to cure Younian."
   - split: 10
     subIndex: 1
     text: "哪怕只有一丝机会，我这个做师姐的，也应该拼尽全力不是！"
@@ -78971,7 +78971,7 @@
   splits:
   - split: 10
     text: "我和采薇在本门内尚且称不上高手，何况在卧虎藏龙的武林中呢。"
-    translated: "We may not be considered experts even within our own sect, let alone in the Wulin, where hidden talents and dragons lie in wait."
+    translated: "In our sect, Li and Caiwei are far from being experts, let alone in the Wulin where hidden talents lie in wait."
   - split: 10
     subIndex: 1
     text: "#PlayerName#初入江湖未久，不了解情况也是正常。"
@@ -79039,7 +79039,7 @@
   splits:
   - split: 10
     text: "不算这位师伯，本门武功第三第四，就是身为正式弟子的采薇和我了。"
-    translated: "Without counting Senior Elder, the third and fourth ranked martial arts skills in our sect are held by Formal Disciple Cai Wei and me."
+    translated: "Apart from Uncle Senior, the third and fourth ranking martial arts skills in our sect are held by Formal Disciple Caiwei and me."
   - split: 10
     subIndex: 1
     text: "然后下来，是身为入门弟子的沈退和姜婉。"
@@ -79135,7 +79135,7 @@
   splits:
   - split: 10
     text: "采薇你每日在山上埋头练功，没听说过这些风闻也正常。"
-    translated: "Cai Wei, you spend your days practicing martial arts in the mountains. It's normal that you haven't heard about these rumors."
+    translated: "Caiwei, you bury yourself in cultivation every day on the mountain. It's normal you haven't heard these rumors."
   - split: 10
     subIndex: 1
     text: "这金龙生的出身和来历皆是不明，似乎是突然出现在江湖中的一位奇人。"
@@ -80779,7 +80779,7 @@
   splits:
   - split: 10
     text: "我再去敲打敲打胥华去，"
-    translated: "I'll go knock on Xu Hua's door again."
+    translated: "I'll go beat beat Xuhua again"
   - split: 10
     subIndex: 1
     text: "以后要是再敢伤你一根小指头，我非得给他点颜色瞧瞧！"
@@ -81228,11 +81228,11 @@
   splits:
   - split: 10
     text: "不过陆师伯嘴上虽说跟师傅八字不合，但他们两位感情还是挺深厚的。"
-    translated: "However, although Uncle Lu said he and Master did not get along according to the saying, their bond was still quite deep."
+    translated: "However, although Martial Uncle Lu and Master don't get along well on paper, their emotional bond is quite deep."
   - split: 10
     subIndex: 1
     text: "不然陆师伯也不会一接到师傅的飞鸽传书，就来这乐山镇追查。"
-    translated: "Otherwise, Senior Master Lu wouldn't have come to Leshan Town right after receiving his master's pigeon post to investigate."
+    translated: "Otherwise, Martial Uncle Lu wouldn't have come to Leshan Town to investigate as soon as he received Master's pigeon message."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81569,7 +81569,7 @@
   splits:
   - split: 10
     text: "陆师伯？我看师傅飞鸽传书，说你先来此地探查了，"
-    translated: "Uncle Master? I saw your message delivered by homing pigeon that you came here first to investigate."
+    translated: "Martial Uncle Lu? I see Master sent a pigeon to say you came here to investigate first."
   - split: 10
     subIndex: 1
     text: "怎么这么晚才到？"
@@ -81832,7 +81832,7 @@
   - split: 10
     subIndex: 1
     text: "决定把掌门之位传给陆师伯的师弟，也就是咱们师傅的。"
-    translated: "Deciding to pass the Sect Leader position to Junior Disciple Senior Landscapist, who is also our Master."
+    translated: "Decided to pass the position of Sect Leader to Martial Uncle Lu's junior disciple, which is our Master's."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81840,7 +81840,7 @@
   splits:
   - split: 10
     text: "陆师伯掌门之位被夺，自是怒不可遏，"
-    translated: "Uncle Lu, the Sect Leader, was deprived of his position as Sect Leader, and he was naturally furious beyond measure."
+    translated: "Martial Uncle Lu, who was the Sect Leader, became furious when his position as Sect Leader was stolen."
   - split: 10
     subIndex: 1
     text: "这才愤而离派，下山行走江湖去的。"
@@ -81924,7 +81924,7 @@
   splits:
   - split: 10
     text: "陆师伯？"
-    translated: "Uncle Lu?"
+    translated: "Martial Uncle Lu?"
 - raw: ",,,右,,,,,,,#PlayerName#？你怎会在此处？"
   splits:
   - split: 10
@@ -81934,7 +81934,7 @@
   splits:
   - split: 10
     text: "先前收到了陆师伯你的飞鸽传书，特意前来查探查探。"
-    translated: "Previously, Uncle Lu's doves brought a message, so I specially came to take a look."
+    translated: "Previously, I received your dispatch from Martial Uncle Lu and came especially to check things out."
 - raw: ",,,右,,,,,,,这巴陵村眼下已经是铁掌帮地界了，你这小孩子家家的还是快走吧。\\n万一被发现了，师伯我可不一定保得住你。"
   splits:
   - split: 10
@@ -82358,7 +82358,7 @@
   splits:
   - split: 10
     text: "多谢陆师伯。"
-    translated: "Thanks Uncle Lu"
+    translated: "Thanks to Martial Uncle Lu"
   - split: 10
     subIndex: 1
     text: "不过看你穿这身杂役服饰，还真有些不适应"
@@ -82577,7 +82577,7 @@
   splits:
   - split: 10
     text: "陆师伯，这既是你的家传武功，会不会有些不合适"
-    translated: "Uncle Lu, since this is your family's martial art, might it be a bit inappropriate?"
+    translated: "Martial Uncle Lu, since this is your family's martial art, wouldn't it be a bit inappropriate?"
   templates:
   - split: 10
     template: "{0}……"
@@ -82613,7 +82613,7 @@
   splits:
   - split: 10
     text: "好，陆师伯你多保重。"
-    translated: "Good, Lu Senior Master, take care"
+    translated: "Good, Martial Uncle Lu. Take care."
   - split: 10
     subIndex: 1
     text: "等你回来，咱们和师傅师兄弟一道并肩杀敌！"
@@ -82832,7 +82832,7 @@
   - split: 10
     subIndex: 1
     text: "如今胥华和游年都已回归，本门也算一扫此前损兵折将之阴霾。"
-    translated: "Now that Xu Hua and You Nian have returned, our sect can finally shake off the gloom of previous losses."
+    translated: "Now that Xuhua and Younian have returned, our sect can finally shed the shadow of previous losses."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -82892,7 +82892,7 @@
   - split: 10
     subIndex: 1
     text: "也好早日替你们陆师伯报仇雪恨！"
-    translated: "So that Uncle Lu can have his revenge sooner!"
+    translated: "So that Uncle Lu can finally have his revenge!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -82924,7 +82924,7 @@
   splits:
   - split: 10
     text: "嗯，游年说的确也有理，那眼下该如何是好？"
-    translated: "Hmm, Yuanian does have a point. What should we do now?"
+    translated: "Hmm, Younian does have a point. What should we do now?"
 - raw: ",,,左,,,,,,,依弟子看，咱们也可以使一个调虎离山之计。\\n先佯攻巴陵村，然后趁乱北上，攻击铁掌帮的总舵！"
   splits:
   - split: 10
@@ -82945,7 +82945,7 @@
   - split: 10
     subIndex: 1
     text: "游年此计是否有些"
-    translated: "Is this strategy of yours perhaps a bit rash?"
+    translated: "Younian, is this strategy perhaps a bit..."
   - split: 10
     subIndex: 2
     text: "太过凶险了？"
@@ -82969,7 +82969,7 @@
   splits:
   - split: 10
     text: "哈哈哈哈，游年说的是。"
-    translated: "Haha, Yuan Nian is right"
+    translated: "Haha, Younian is right"
   - split: 10
     subIndex: 1
     text: "若在平日，为师绝不会行此险招。"
@@ -83005,7 +83005,7 @@
   splits:
   - split: 10
     text: "游年此计虽妙，却还有一隐患。"
-    translated: "Though this plan is ingenious, it still has one potential flaw."
+    translated: "Younian's strategy is clever, but it still has one hidden danger."
   - split: 10
     subIndex: 1
     text: "那便是这黄鹤之盟，约定了门派之间不可互相攻伐。"
@@ -83114,7 +83114,7 @@
   splits:
   - split: 10
     text: "游年，这计策还需要作何准备，便交给你来安排好了。"
-    translated: "Yun Nian, there's no need for further preparation; I'll leave it to you to make the arrangements."
+    translated: "Younian, what preparations do we need to make for this strategy? I'll leave it to you to arrange everything."
 - raw: ",,,左,,,,,,,嗯，首先咱们需要佯攻一次巴陵村，\\n装出被师伯之死冲昏了头脑，要和铁掌帮决一死战的样子。"
   splits:
   - split: 10
@@ -83147,7 +83147,7 @@
   - split: 10
     subIndex: 1
     text: "所以只能劳烦采薇和#PlayerName#出手了。"
-    translated: "So only Fei Mei and #PlayerName# can step in."
+    translated: "So it can only be Caiwei and #PlayerName# who step up."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -83189,7 +83189,7 @@
   splits:
   - split: 10
     text: "思迟，云裳，你们二人去准备些强盗装束，"
-    translated: "Si Chi, Yun Chang, you two go prepare some bandit costumes."
+    translated: "Sichi, Yunshang, you two go prepare some bandit costumes."
   - split: 10
     subIndex: 1
     text: "到时候假扮成黑风寨中人时，自是用得上。"
@@ -83271,7 +83271,7 @@
   - split: 10
     subIndex: 1
     text: "仙霞派余采薇，前来为陆师伯报仇！"
-    translated: "Xianxia Sect's Yu Caiwei has come to avenge Uncle Lu!"
+    translated: "Xianxia Sect's Yu Caiwei comes forward to avenge Martial Uncle Lu!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -83310,7 +83310,7 @@
   - split: 10
     subIndex: 1
     text: "还说什么，要给他们陆师伯报仇......"
-    translated: "What are you talking about, wanting to take revenge for Uncle Landi...?"
+    translated: "What else is there to say? We must take revenge for Martial Uncle Lu..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -83381,7 +83381,7 @@
   splits:
   - split: 10
     text: "狗贼听着，为了替陆师伯报仇，"
-    translated: "Listen up, dog thief. I'm avenging Uncle Lu."
+    translated: "Dog thief, listen up. To avenge Martial Uncle Lu,"
   - split: 10
     subIndex: 1
     text: "我们仙霞派不日就会来巴陵村，和你们决一死战，给我等着吧！"
@@ -83594,7 +83594,7 @@
   - split: 10
     subIndex: 1
     text: "陆师伯之血债，夺取巴陵之仇恨，迟早都要你们百倍奉还。"
-    translated: "The blood debt of Senior Master Lu, and the grudge for Ba Ling, will eventually be repaid to you a hundredfold."
+    translated: "Blood debt to Martial Uncle Lu, and the hatred for Duopabaling, will be repaid a hundredfold by you sooner or later."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -84067,7 +84067,7 @@
   splits:
   - split: 10
     text: "那就有劳采薇了。"
-    translated: "That's where I come in, Dai Fei"
+    translated: "That's all on you, Caiwei"
   - split: 10
     subIndex: 1
     text: "此次佯攻既已完成，必能吸引夏天雄向巴陵村调集弟子，加强防守。"
@@ -84079,7 +84079,7 @@
   splits:
   - split: 10
     text: "等游年他们准备妥当，咱们便向铁掌帮总舵发动奇袭！"
-    translated: "When Yu Nian has everything prepared, let's launch a surprise attack on the Iron Palm Gang's main den!"
+    translated: "When Younian and his group are ready, we'll launch a surprise attack on the Iron Palm Gang's main den!"
 - raw: ",,,右,,,,,ChangeHeroFavor;姜映泉-5,,这段时间，望你们勤加练功，切莫懈怠。\\n与铁掌帮决战之日，想来也不太遥远了......"
   splits:
   - split: 10
@@ -84927,7 +84927,7 @@
   splits:
   - split: 10
     text: "为陆师伯报仇，杀啊啊啊啊！"
-    translated: "Revenge for Uncle Lu, kill! Kill! Kill!"
+    translated: "For Martial Uncle Lu, kill! Kill! Kill!"
 - raw: ",林云裳,,左,,,,,StartSpeFight;104,,杨师兄你别冲动，小心箭塔！"
   splits:
   - split: 10
@@ -85494,7 +85494,7 @@
   splits:
   - split: 10
     text: "师傅，采薇从铁掌帮藏经阁内夺来了劈金碎玉掌，及一些其它武功秘籍。"
-    translated: "Master, Caivei took the Split Gold Crush Jade Palm technique and some other secret martial arts manuals from the Scripture Pavilion of the Iron Palm Gang."
+    translated: "Master, Caiwei obtained the Split Gold Crush Jade Palm technique from the Scripture Pavilion of the Iron Palm Gang, along with some other secret martial arts manuals."
 - raw: ",,,右,,,,,GetSpeReward;59,,好！这劈金碎玉掌原本也是祖师绝学，加上潮起月盈功和无影乱剑，\\n这样本门也算集齐祖师传下来的三门武功了。"
   splits:
   - split: 10
@@ -85715,7 +85715,7 @@
   - split: 10
     subIndex: 2
     text: "陆师伯牺牲性命，从巴陵村偷来了潮起月盈功，"
-    translated: "Uncle Lu sacrificed his life to steal the Taoqi Yueying Skill from Baling Village."
+    translated: "Martial Uncle Lu sacrificed his life to steal the Tidesurge Moonful Technique from Baling Village."
   - split: 10
     subIndex: 3
     text: "然后咱们又在奇袭铁掌帮时，夺回了劈金碎玉掌！"
@@ -85895,7 +85895,7 @@
   - split: 10
     subIndex: 2
     text: "看来游年此法也行不通。"
-    translated: "It seems this method won't work either"
+    translated: "It seems that Younian's method won't work either."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -86317,7 +86317,7 @@
   splits:
   - split: 10
     text: "师傅说的是。采薇，咱们将这五十六组散页分作两份，"
-    translated: "Master says right. Cuifei, we shall divide these fifty‑six loose pages into two portions,"
+    translated: "Master says right. Caiwei, let's divide these fifty‑six loose pages into two parts."
   - split: 10
     subIndex: 1
     text: "另外一半由我来组合好了！"
@@ -86695,7 +86695,7 @@
   splits:
   - split: 10
     text: "咳咳，看采薇如此专注，咱们也别再嬉笑打闹了。"
-    translated: "Cough cough, since Caivei is so focused, let's stop joking around."
+    translated: "Cough, cough. Seeing Caiwei so focused, let's stop laughing and joking around."
   - split: 10
     subIndex: 1
     text: "大家继续努力，争取早日完工！"
@@ -87080,7 +87080,7 @@
   splits:
   - split: 10
     text: "采薇果真天资超群，能够这么快就将这梵文贝叶经运用自如。"
-    translated: "Viveka truly has exceptional talent, able to master this Sanskrit palm leaf text so quickly."
+    translated: "Caiwei truly possesses exceptional talent, able to handle these Sanskrit palm leaves so skillfully."
 - raw: ",,,右,,,,,,,还望诸位弟子也迎头赶上，好好修习这一奇功，切莫懈怠。\\n毕竟过不多时，我们就要与铁掌帮在巴陵村决一死战了。"
   splits:
   - split: 10
@@ -87284,11 +87284,11 @@
   - split: 10
     subIndex: 1
     text: "劫杀云裳父母之商队，断我爱徒游年之经脉，"
-    translated: "Attacked Cloud Shirt's parents' caravans, severed my beloved apprentice You Zhou's meridians,"
+    translated: "The caravan that ambushed and slew Yunshang's parents, severed the meridians of my beloved disciple Younian,"
   - split: 10
     subIndex: 2
     text: "出兵强占巴陵村，还将胥华打落悬崖，险些丧命！"
-    translated: "Sending troops to forcibly occupy Baling Village and even pushing Xu Hua off a cliff, nearly killing him!"
+    translated: "Marching troops to forcibly occupy Baling Village and even pushed Xuhua off a cliff, nearly killing him!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -87641,7 +87641,7 @@
   splits:
   - split: 10
     text: "思迟，你也不必过于拼命，"
-    translated: "Si Chi, you don't have to work so hard either."
+    translated: "Sichi, you don't have to work so hard either."
   - split: 10
     subIndex: 1
     text: "若真陷入险境，切记还是保全性命要紧。"
@@ -88843,7 +88843,7 @@
   splits:
   - split: 10
     text: "游年你怎么来的这么晚？"
-    translated: "Why are you so late, Younnian?"
+    translated: "Younian, why are you so late?"
   - split: 10
     subIndex: 1
     text: "我们这儿可是鏖战许久了。"
@@ -88860,7 +88860,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，思迟，你们能坚守至此，已难能可贵。"
-    translated: "#PlayerName#, Si Chi, it's already commendable that you've held out this long."
+    translated: "#PlayerName#, Sichi, you being able to hold out until now is already quite valuable."
   - split: 10
     subIndex: 1
     text: "接下来就交给我们，将这些援军和残兵一网打尽好了！"
@@ -88989,7 +88989,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，趁此机会，把思迟给救回来！"
-    translated: "#PlayerName#, seize this chance to save Shi Cishi back!"
+    translated: "#PlayerName#, seize this opportunity to save Sichi back!"
   - split: 10
     subIndex: 1
     text: "跟我冲！"
@@ -89732,7 +89732,7 @@
   splits:
   - split: 10
     text: "姜映泉，吃我一掌！"
-    translated: "Qing Yingshun, take this palm technique!"
+    translated: "Yingquan, take a palm strike from me!"
 - raw: ",,,左,,,,,ChangeInjury;夏天雄-0-20,,唔......这招无影乱剑，回敬给你！"
   splits:
   - split: 10
@@ -89785,7 +89785,7 @@
   splits:
   - split: 10
     text: "只见夏天雄催动内功，周身真气汹涌澎湃，举掌就要向姜映泉攻去！"
-    translated: "Only to see Summer Xiaoxiong activate his neigong, causing true qi to surge throughout his body. He was about to raise his palm and attack Jiang Yinqian!"
+    translated: "Only to see Summer Xiaoyong activate his internal skill, true qi surging throughout his body, raising his palm to attack Yingquan Jiang!"
 - raw: ",玩家,,左,,,,,StartSpeFight;109,,师傅！狗贼夏天雄！我和你拼了！"
   splits:
   - split: 10
@@ -89979,7 +89979,7 @@
   splits:
   - split: 10
     text: "胥华！"
-    translated: "Xu Hua!"
+    translated: "Xuhua!"
 - raw: ",玩家,,左,,,,,,,师傅，我#$PlayerName#岂是那种贪生怕死之人？\\n只是想到大师兄就在地窖门口，将他叫来咱们并肩作战！"
   splits:
   - split: 10
@@ -90054,7 +90054,7 @@
   splits:
   - split: 10
     text: "采薇，思迟，云裳......你们各自小心，夏天雄有为师来对付！"
-    translated: "Cai Wei, Si Chi, Yun Shang... take care for yourselves. Xiaoyong has a master coming to deal with you!"
+    translated: "Caiwei, Sichi, Yunshang..... Each of you be careful! Summer Xiong has a master coming to deal with you!"
 - raw: "557,姜映泉,夏天雄,左,,,,,ChangeInjury;夏天雄-0-50,,夏天雄！如今我仙霞派上下一心，你已不是对手！"
   splits:
   - split: 10
@@ -90244,7 +90244,7 @@
   splits:
   - split: 10
     text: "姜映泉！原来如此。"
-    translated: "Qin Jiangying! I see now."
+    translated: "Yingquan Jiang! So that's how it is."
   - split: 10
     subIndex: 1
     text: "没想到我夏天雄一世英明，到头来还是中了你的计！哈哈哈啊哈哈！"
@@ -90277,7 +90277,7 @@
   splits:
   - split: 10
     text: "胥华，各位弟子，"
-    translated: "Xu Hua, fellow disciples,"
+    translated: "Xuhua, fellow disciples,"
   - split: 10
     subIndex: 1
     text: "为师时间所剩不多，有几句嘱托"
@@ -90293,7 +90293,7 @@
   splits:
   - split: 10
     text: "胥华你是本门大弟子，性格刚正不屈，和你陆师伯倒有几分相像。"
-    translated: "Xu Hua, you are the senior disciple of our sect. Your character is straightforward and unyielding, much like your land master uncle."
+    translated: "Xuhua, you are the senior disciple of our sect, with a straightforward and unyielding personality. You and Martial Uncle Lu have a few things in common."
   - split: 10
     subIndex: 1
     text: "还望你日后教导师弟师妹们之时......莫要急躁，"
@@ -90331,7 +90331,7 @@
   splits:
   - split: 10
     text: "采薇，你天资超群，但思虑单纯。"
-    translated: "Cai Wei, you have exceptional talent, but your thoughts are simple."
+    translated: "Caiwei, you have exceptional talent, but your thoughts are simple."
   - split: 10
     subIndex: 1
     text: "需知这江湖中除了习武，还有太多太多......需要顾虑之事。"
@@ -90369,7 +90369,7 @@
   splits:
   - split: 10
     text: "思迟，你虽说有些迟钝，武功进步也慢，但刻苦努力，志虑忠纯。"
-    translated: "Si Chi, although you are somewhat slow and your martial arts progress is slow, your diligence and sincerity are evident."
+    translated: "Sichi, though you may be a bit slow and your martial arts progress is slower, you are diligent and sincere in your efforts."
   - split: 10
     subIndex: 1
     text: "还望你不要气馁，为师一直都相信，咳咳咳你定有成为大侠的一天！"
@@ -91185,7 +91185,7 @@
   splits:
   - split: 10
     text: "随后你们将师傅的遗体运回仙霞后山，安葬在了陆仁谦陆师伯旁。"
-    translated: "Then you will transport Master's body back to the rear mountain of Xianxie and bury it beside Senior Brother Lu Renqian."
+    translated: "Then you will transport Master's body back to the Rear Mountain of Immortal Orchid and bury it next to Martial Uncle Lu."
   - split: 10
     subIndex: 1
     text: "高大的墓碑之上，篆刻一行大字"
@@ -92170,7 +92170,7 @@
   - split: 10
     subIndex: 1
     text: "便让游年陪同#$PlayerName#，一道前去剿匪便是。"
-    translated: "Let Yu Nian accompany you, #$PlayerName#, to deal with the bandits."
+    translated: "Let Younian accompany you, #$PlayerName#, to go and suppress the bandits."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -93349,7 +93349,7 @@
   splits:
   - split: 10
     text: "胥华，这雨人屠虽说双眼已被退儿用石灰粉迷住，但还是极难对付。"
-    translated: "Xu Hua, while the Rainman Slayer's eyes have been blinded with lime powder by Te'er, he remains extremely difficult to handle."
+    translated: "Xuhua, despite Ret's lime powder having blinded Rain Executioner's eyes, he is still extremely difficult to handle."
   - split: 10
     subIndex: 1
     text: "你们去寻武当派支援，这儿有为师抵挡！"
@@ -101784,7 +101784,7 @@
   - split: 10
     subIndex: 1
     text: "今日在各位见证之下，我郑重宣誓，将以先师姜映泉为榜样，"
-    translated: "Today, in your presence, I solemnly swear to follow the example of my revered predecessor Jiang Yinqquan."
+    translated: "Today, in your witness, I solemnly swear to follow the example of my revered predecessor, Master Yingquan."
   - split: 10
     subIndex: 2
     text: "秉持侠义，守护仙霞，恪尽职守，九死不悔。"
@@ -105632,7 +105632,7 @@
   - split: 10
     subIndex: 1
     text: "采薇你可得手下收着点，万一把小姑娘打伤，我可就没法跟司马掌门交代了。"
-    translated: "Cai Wei, you have to be gentle. If you injure the little girl, I won't be able to explain to Sect Leader Sima."
+    translated: "Caiwei, you have to be careful with your hand. If you accidentally injure the little girl, I won't be able to explain it to Master Palm."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -105690,7 +105690,7 @@
   - split: 10
     subIndex: 1
     text: "采薇姐姐你要是想学，我就教你吧！"
-    translated: "Older Sister Caipei, if you want to learn, I'll teach you!"
+    translated: "Older Sister Caiwei, if you want to learn, I'll teach you!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -253003,7 +253003,7 @@
   splits:
   - split: 10
     text: "以采薇的性格，我觉得不会如此。"
-    translated: "Based on Vi's personality, I don't think that would happen."
+    translated: "Given Caiwei's personality, I don't think she would do that."
   - split: 10
     subIndex: 1
     text: "大师兄，你怎么看？"
@@ -258304,7 +258304,7 @@
   splits:
   - split: 10
     text: "万掌门侠肝义胆，胸怀之浩然正气，不在我师傅姜映泉之下。"
-    translated: "Sect Leader Wan's benevolent heart and righteous courage, as well as their upright spirit, are no less than those of Master Jiang Yinqian."
+    translated: "Master Palm Leader's chivalry and righteousness in his heart, and his upright spirit are no less than those of my Master Jiang Yingquan."
   - split: 10
     subIndex: 1
     text: "我又自小受师傅教诲，“天地有正气”。"
@@ -261350,7 +261350,7 @@
   splits:
   - split: 10
     text: "思迟，云天，你们还在这练武场上做什么？"
-    translated: "Si Chi, Yuntian, what are you two still doing on the training ground?"
+    translated: "Sichi, Yundian, what are you two still doing in the training grounds?"
 - raw: ",,,右,,,,,,,姜师姐？杨师兄在传授我本门绝学劈金碎玉掌呢。"
   splits:
   - split: 10
@@ -261360,7 +261360,7 @@
   splits:
   - split: 10
     text: "思迟你自己火候未至，"
-    translated: "Si Chi, you are not ready yet"
+    translated: "Sichi, you are not yet at the right stage."
   - split: 10
     subIndex: 1
     text: "可别把我们白师妹给教歪了啊。"
@@ -263744,7 +263744,7 @@
   splits:
   - split: 10
     text: "哎，思迟你虽武艺小有所成，但也不能太过逞强。"
-    translated: "Ah, Si Chi, while your martial arts have shown some progress, you shouldn't overexert yourself."
+    translated: "Ah, Sichi, while you have made some progress in your martial arts, you shouldn't overexert yourself."
 - raw: ",,,右,,,,,,,诸位，我用攒的私房钱买了些疗伤丹药，\\n大家拿去分了，以备不时之需。"
   splits:
   - split: 10
@@ -264733,7 +264733,7 @@
   splits:
   - split: 10
     text: "诶，游年此言差矣。"
-    translated: "Oh, Yu Nian, you're mistaken there"
+    translated: "Hey, Younian, that's not quite right"
   - split: 10
     subIndex: 1
     text: "为师已将掌门之位传于#$PlayerName#了。"
@@ -264815,7 +264815,7 @@
   splits:
   - split: 10
     text: "呵呵，思迟，为师什么时候诓骗过你？"
-    translated: "Haha, Si Chi, when has your master ever tricked you?"
+    translated: "Haha, Sichi, when has your master ever deceived you?"
 - raw: ",,,左,,,,,,,太好了太好了！师傅要回来了！\\n这么大的事，应该赶紧昭告天下才是啊！"
   splits:
   - split: 10
@@ -266930,7 +266930,7 @@
   splits:
   - split: 10
     text: "思迟，你可知这些唐门弟子，"
-    translated: "Si Chi, do you know these Tang Clan disciples,"
+    translated: "Sichi, do you know these Tang Clan disciples,"
   - split: 10
     subIndex: 1
     text: "也都是有父有母，有家有室之人。"
@@ -267562,7 +267562,7 @@
   splits:
   - split: 10
     text: "我和思迟听闻派内有刀兵打斗之声，方才急急忙忙赶来。"
-    translated: "My brother Si Chi and I heard the sound of sword fighting within the sect and hurried here just now."
+    translated: "I and Sichi heard the sound of swords clashing within the sect and rushed over hastily."
   - split: 10
     subIndex: 1
     text: "#PlayerName#，小白师妹，你们可有受伤？"
@@ -285759,7 +285759,7 @@
   splits:
   - split: 10
     text: "思迟，云裳，#PlayerName#，"
-    translated: "Si Chi, Yun Shang, #PlayerName#,"
+    translated: "Sichi, Yunshang, #PlayerName#,"
   - split: 10
     subIndex: 1
     text: "能回仙霞派和你们在一起，"

@@ -944,6 +944,7 @@ namespace Tests
         private static readonly Dictionary<string, string> DynamicStringResultOverrides = new()
         {
             ["{0}年{1}月{2}日"] = "{0} Year {1} Month {2} Day",
+            ["{0}级"] = "Level {0}",
         };
 
         // Re-reads the just-packaged Files/Mod/{textFile.Path}.yaml and force-overwrites any

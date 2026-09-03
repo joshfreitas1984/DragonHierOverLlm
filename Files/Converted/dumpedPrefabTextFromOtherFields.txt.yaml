@@ -6162,7 +6162,7 @@
 - raw: "前往#TargetPlace#接应陆师伯。"
   splits:
   - text: "前往#TargetPlace#接应陆师伯。"
-    translated: "Head to #TargetPlace# to meet Master Lu"
+    translated: "Go to #TargetPlace# to meet Uncle Lu"
 - raw: "前往#TargetPlace#援救大师兄。"
   splits:
   - text: "前往#TargetPlace#援救大师兄。"
@@ -7097,7 +7097,7 @@
 - raw: "听闻巴蜀名宿姜映泉<b>本月在仙霞派内</b>举办寿宴，周遭武林人士纷纷前往道贺。"
   splits:
   - text: "听闻巴蜀名宿姜映泉"
-    translated: "Heard of the renowned master of Bashu, Jiang Yinqian"
+    translated: "Heard of the renowned player Jiang Yingquan from Bashu"
   - subIndex: 1
     text: "本月在仙霞派内"
     translated: "This month within the Xianxia Sect"
@@ -7357,7 +7357,7 @@
 - raw: "咦？思迟啊，怎么垂头丧气的？\\n怎么没见你的马匹呢？"
   splits:
   - text: "咦？思迟啊，怎么垂头丧气的？"
-    translated: "Hey? Si Chi, why are you so dejected?"
+    translated: "Huh? Sichi, why are you looking so depressed?"
   - subIndex: 1
     text: "怎么没见你的马匹呢？"
     translated: "Where's your horse?"
@@ -9254,7 +9254,7 @@
 - raw: "思迟你此趟也有功劳，去库房再领匹好马便是，\\n你们退下吧。"
   splits:
   - text: "思迟你此趟也有功劳，去库房再领匹好马便是，"
-    translated: "Xi Chi, you also deserve a share of the credit this time. Go get a good horse from the stable."
+    translated: "Sichi, you have merit this time as well. Go to the stable and get a fine horse."
   - subIndex: 1
     text: "你们退下吧。"
     translated: "Step back"
@@ -9263,15 +9263,15 @@
 - raw: "思迟求教"
   splits:
   - text: "思迟求教"
-    translated: "Sichzi seeks advice"
+    translated: "Sichi, may I ask you something?"
 - raw: "思迟行侠"
   splits:
   - text: "思迟行侠"
-    translated: "Thoughtful Wanderer"
+    translated: "Sichi Wields Valor"
 - raw: "思迟行侠(三)"
   splits:
   - text: "思迟行侠"
-    translated: "Thoughtful Wanderer"
+    translated: "Sichi Wields Valor"
   - subIndex: 1
     text: "三"
     translated: "Three"
@@ -9280,7 +9280,7 @@
 - raw: "思迟行侠(二)"
   splits:
   - text: "思迟行侠"
-    translated: "Thoughtful Wanderer"
+    translated: "Sichi Wields Valor"
   - subIndex: 1
     text: "二"
     translated: "Two"
@@ -9289,7 +9289,7 @@
 - raw: "思迟行侠(四)"
   splits:
   - text: "思迟行侠"
-    translated: "Thoughtful Wanderer"
+    translated: "Sichi Wields Valor"
   - subIndex: 1
     text: "四"
     translated: "Four"
@@ -9298,11 +9298,11 @@
 - raw: "思迟行侠三"
   splits:
   - text: "思迟行侠三"
-    translated: "Think Slow and Act Brave Three"
+    translated: "Sichi Wields Valor Three"
 - raw: "思迟行侠二"
   splits:
   - text: "思迟行侠二"
-    translated: "Thoughtful Roaming Xi Er"
+    translated: "Sichi Roams as a Hero II"
 - raw: "总之，不妨点击开始，试上一试！"
   splits:
   - text: "总之，不妨点击开始，试上一试！"
@@ -11356,7 +11356,7 @@
 - raw: "游年受伤后，本门人手愈发捉襟见肘，为师决定在派内召开大会，晋升一批弟子职位。事关重大，#PlayerName#务必<b>回门派参与</b>。"
   splits:
   - text: "游年受伤后，本门人手愈发捉襟见肘，为师决定在派内召开大会，晋升一批弟子职位。事关重大，#PlayerName#务必"
-    translated: "After Senior Yuniu's injury, our sect has become increasingly short‑staffed. Master has decided to hold a grand meeting within the sect to promote a batch of disciples to higher positions. This matter is of great importance, #PlayerName#, you must attend."
+    translated: "After Younian was injured, our sect's manpower has become increasingly strained. I have decided to convene a grand meeting within the sect to promote the positions of several disciples. This matter is of great importance, so #PlayerName# must attend."
   - subIndex: 1
     text: "回门派参与"
     translated: "Return to the Sect to Participate"
@@ -12410,7 +12410,7 @@
 - raw: "胥华和游年皆已康复，眼下正是重夺巴陵村，替你陆师伯报仇雪恨之良机。\\n还望#PlayerName#<b>速回门派</b>，与师兄弟共商大计。"
   splits:
   - text: "胥华和游年皆已康复，眼下正是重夺巴陵村，替你陆师伯报仇雪恨之良机。"
-    translated: "Xu Hua and You Nian have both recovered, and this is the perfect opportunity to retake Baling Village and avenge Uncle Landi for you."
+    translated: "Xuhua and Younian are both fully recovered. This is the perfect opportunity to retake Baling Village and avenge your Martial Uncle Lu."
   - subIndex: 1
     text: "还望#PlayerName#"
     translated: "I hope, #PlayerName#"
@@ -13313,7 +13313,7 @@
 - raw: "近两月胥华将在<b>练武场</b>上主持门派大练功，此乃同门切磋比试、增进武艺之良机，徒儿千万不要错过。"
   splits:
   - text: "近两月胥华将在"
-    translated: "Xu Hua will be absent for the next two months."
+    translated: "Xuhua will be joining us in the next two months."
   - subIndex: 1
     text: "练武场"
     translated: "Training Grounds"
@@ -14255,11 +14255,11 @@
 - raw: "采薇下山"
   splits:
   - text: "采薇下山"
-    translated: "Xiaoshan the Down the Mountain"
+    translated: "Caiwei descends the mountain"
 - raw: "采薇下山(三)"
   splits:
   - text: "采薇下山"
-    translated: "Xiaoshan the Down the Mountain"
+    translated: "Caiwei descends the mountain"
   - subIndex: 1
     text: "三"
     translated: "Three"
@@ -14268,7 +14268,7 @@
 - raw: "采薇下山(二)"
   splits:
   - text: "采薇下山"
-    translated: "Xiaoshan the Down the Mountain"
+    translated: "Caiwei descends the mountain"
   - subIndex: 1
     text: "二"
     translated: "Two"
@@ -14277,7 +14277,7 @@
 - raw: "采薇下山(四)"
   splits:
   - text: "采薇下山"
-    translated: "Xiaoshan the Down the Mountain"
+    translated: "Caiwei descends the mountain"
   - subIndex: 1
     text: "四"
     translated: "Four"
@@ -14286,19 +14286,19 @@
 - raw: "采薇下山三"
   splits:
   - text: "采薇下山三"
-    translated: "Cai Wei descended the mountain three times"
+    translated: "Caiwei descended the mountain three"
 - raw: "采薇下山二"
   splits:
   - text: "采薇下山二"
-    translated: "Xiaoshan Er Descends the Mountain"
+    translated: "Caiwei Descends the Mountain Two"
 - raw: "采薇下山四"
   splits:
   - text: "采薇下山四"
-    translated: "Vai descended the mountain four"
+    translated: "Caiwei Descends the Mountain Four"
 - raw: "采薇学剑"
   splits:
   - text: "采薇学剑"
-    translated: "Study Swordsmanship"
+    translated: "Caiwei learns swordsmanship"
 - raw: "重出江湖"
   splits:
   - text: "重出江湖"
