@@ -258,6 +258,8 @@
   splits:
   - text: "#PlayerName#，姜师姐房中有不少物件失窃，咱们派内怕是遭了贼了！你若无甚要事，就赶快回来和我们一起捉贼。"
     translated: "#PlayerName#, Sister Qiang's chambers have had many items stolen. Our sect might have been raided by bandits! If you have no pressing matters, come back quickly so we can catch the thieves together."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
 - raw: "#PlayerName#，师傅有要事召集大家商议，还望你<b>速回门派</b>！"
   splits:
   - text: "#PlayerName#，师傅有要事召集大家商议，还望你"
