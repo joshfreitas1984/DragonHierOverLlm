@@ -5783,7 +5783,7 @@
   splits:
   - split: 10
     text: "二哥！"
-    translated: "Brother Two!"
+    translated: "Second Brother!"
 - raw: ",韩狼,,左,,,,,,,二哥~"
   splits:
   - split: 10
@@ -5839,7 +5839,7 @@
   splits:
   - split: 10
     text: "哈哈，我黄豺也是要有寨子的人了，想想就兴奋！"
-    translated: "Haha, I'm starting to have villagers in my wolverine tribe, just thinking about it gets me excited!"
+    translated: "Haha, I'm a Huang Chai too, and I'm going to have a village now! That's exciting to think about!"
   - split: 10
     subIndex: 1
     text: "走走走！"
@@ -7481,7 +7481,7 @@
   splits:
   - split: 10
     text: "（小声）哎呀师姐，这招叫虚张声势！"
-    translated: "(Loudly) Oh, Senior Sister, this move is called xu zhang shengshi (false pretense to create a threatening appearance)!"
+    translated: "(Low voice) Oh, Senior Sister, this move is called creating a false impression!"
   - split: 10
     subIndex: 1
     text: "（高声大呼）魏师兄拖住贼人，我们四下合围，将他们一网打尽！"
@@ -7595,7 +7595,7 @@
   splits:
   - split: 10
     text: "二哥！不敢不敢"
-    translated: "Brother Two! No way, no way!"
+    translated: "Second Brother! No, no, I dare not."
   templates:
   - split: 10
     template: "{0}……"
@@ -7627,7 +7627,7 @@
   splits:
   - split: 10
     text: "二哥威武！二哥英明！"
-    translated: "Brother Two is awesome! Brother Two is wise!"
+    translated: "Second Brother is mighty! Second Brother is wise!"
   - split: 10
     subIndex: 1
     text: "诶诶！仙霞派的臭小子，你们三个快快投降，饶你们狗命！"
@@ -7643,7 +7643,7 @@
   - split: 10
     subIndex: 1
     text: "他旁边两个看着又年纪轻轻，肯定不难对付！"
-    translated: "The two next to him look quite young, so they shouldn't be easy to handle!"
+    translated: "The two next to him look quite young, so they should be easy to handle!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -7716,7 +7716,7 @@
   splits:
   - split: 10
     text: "二、二、二哥，这些家伙明明已鏖战许久，"
-    translated: "Two, Two Older Brother, these guys have clearly been battling for a long time,"
+    translated: "Se-Se-Second Brother, these guys have clearly been battling for a long time,"
   - split: 10
     subIndex: 1
     text: "怎的还如此厉害！要不咱们还是"
@@ -7744,7 +7744,7 @@
   splits:
   - split: 10
     text: "二、二、二哥，这小子明明已身受重伤，"
-    translated: "Two, Two, Elder Brother Two, this kid is clearly already severely injured."
+    translated: "Se-Se-Second Brother, this kid is clearly injured severely."
   - split: 10
     subIndex: 1
     text: "怎的还如此难缠！要不咱们还是"
@@ -7919,7 +7919,7 @@
   splits:
   - split: 10
     text: "姜师姐见机立刻拉住你的手，向林中逃遁而去"
-    translated: "Cixi Jing immediately grabbed your hand and fled into the woods."
+    translated: "Senior Sister Jiang immediately grabbed your hand and fled into the woods."
   templates:
   - split: 10
     template: "{0}……"
@@ -13905,7 +13905,7 @@
   splits:
   - split: 10
     text: "啊呀二哥，我算看明白了"
-    translated: "Oh Brother Two, I finally see it clearly."
+    translated: "Ah, Second Brother, I finally see it clearly."
   - split: 10
     subIndex: 1
     text: "他说的没错，咱不占理，走吧走吧。"
@@ -14039,7 +14039,7 @@
   splits:
   - split: 10
     text: "二哥！兵书有云，忍无可忍，无需再忍，杀！"
-    translated: "Brother Two! The Art of War states, when there is nothing else to endure, one must strike!"
+    translated: "Second Brother! The Art of War says, when there is nothing else to endure, there is no need to hesitate; kill!"
 - raw: ",玩家,,左,,,,,,,（再这样下去要闹出人命了啊，必须出手了）\\n等等，你们这几个地痞流氓，竟敢到我仙霞派地界上来撒野，\\n三位兄弟我来助你们！"
   splits:
   - split: 10
@@ -14564,7 +14564,7 @@
   splits:
   - split: 10
     text: "二哥你这就不地道了，大哥都发话了。"
-    translated: "Second Senior Brother, you're not being fair. Big Senior Brother has spoken."
+    translated: "Second Brother, you're not being fair. Big Brother has already spoken."
   - split: 10
     subIndex: 1
     text: "兄弟几个谁不知道，你在贴身内衣，还有靴子里藏了私房钱啊？"
@@ -14841,7 +14841,7 @@
   splits:
   - split: 10
     text: "大哥，二哥，我掐指一算"
-    translated: "Senior Brother, Second Senior Brother, I've done a finger calculation."
+    translated: "Big Brother, Second Brother, I've calculated it with a flick of my fingers."
   - split: 10
     subIndex: 1
     text: "看来咱们又被骗了。"
@@ -16981,7 +16981,7 @@
   splits:
   - split: 10
     text: "二哥他们下去，怕不是要整什么幺蛾子。"
-    translated: "Brother Two and the others going down probably want to cause some trouble."
+    translated: "Second Brother and his group going down isn't likely to cause some trouble, is it?"
 - raw: ",,朱全,右,,,,,,,怎么的，咱弟兄们把这陷坑团团围住，还怕他打洞逃跑不成？"
   splits:
   - split: 10
@@ -17003,7 +17003,7 @@
   splits:
   - split: 10
     text: "哈哈哈原来如此，要不怎么说二哥是本山寨王牌军师呢，"
-    translated: "Haha, I see now. No wonder Big Brother is called the ace strategist of our gang."
+    translated: "Haha, I see now. No wonder they call Second Brother the ace strategist of our bandit army."
   - split: 10
     subIndex: 1
     text: "果真是神机妙算，佩服佩服！"
@@ -17083,12 +17083,12 @@
   splits:
   - split: 10
     text: "豹二哥！！！我和你们拼了！！！"
-    translated: "Brother Erba!!! I'll fight with you!!"
+    translated: "Second Brother!!! I'll fight you to the end!!!"
 - raw: ",,,无,,,,,ChangeInjury;韩狼-0-20,,见刘豹毙命，韩狼瞬间红了双眼，\\n一时冲动竟想跳下陷坑，要与你们以命相搏！"
   splits:
   - split: 10
     text: "见刘豹毙命，韩狼瞬间红了双眼，"
-    translated: "Seeing Liu Bao perish, Han Wolf's eyes instantly turned red."
+    translated: "Seeing Liu Bao die, Han Lang's eyes instantly turned red."
   - split: 10
     subIndex: 1
     text: "一时冲动竟想跳下陷坑，要与你们以命相搏！"
@@ -17160,7 +17160,7 @@
   splits:
   - split: 10
     text: "你们，一个不留！！！全要为豹二哥陪葬！！！"
-    translated: "You, not one to be spared!!! All of you will accompany Brother Bao Er in death!!!"
+    translated: "You, not one to be spared!!! All of you will be sacrificial offeringsSecond Brother!!!"
 - raw: "128,玩家,沈退,左,,,,,,,#TargetInteractName#，你来啦！"
   splits:
   - split: 10
@@ -17194,7 +17194,7 @@
   splits:
   - split: 10
     text: "（那韩狼虽渐处下风，竟像疯了般不闪不避，"
-    translated: "(Even though Han Wolf was gradually losing ground, he seemed to have lost his mind, not dodging or avoiding at all,"
+    translated: "(Though Han Lang was gradually on the defensive, he seemed to have gone mad, not dodging or avoiding at all,"
   - split: 10
     subIndex: 1
     text: "出手尽是杀招，全无防守之意）"
@@ -17218,7 +17218,7 @@
   splits:
   - split: 10
     text: "豹二哥"
-    translated: "Brother Bao Er"
+    translated: "Second Brother"
   - split: 10
     subIndex: 1
     text: "我好恨"
@@ -17230,7 +17230,7 @@
   splits:
   - split: 10
     text: "只见韩狼踉踉跄跄，扑倒在刘豹的尸身之上，就此也一命呜呼。"
-    translated: "Only to stagger and fall on Liu Bao's corpse, Han Wolf also breathed his last."
+    translated: "Han Lang fainted and died next to Liu Bao's corpse."
 - raw: ",,余采薇,右,,,,,ChangeHeroFavor;余采薇-5|ChangeMaxAttri;余采薇-1-2,,#PlayerName#手脚挺快，\\n竟抢在我前头料理了此人。"
   splits:
   - split: 10
@@ -17257,7 +17257,7 @@
   splits:
   - split: 10
     text: "（那韩狼渐处上风，更是疯了般不闪不避，"
-    translated: "(The Han Wolf gradually took the upper hand and became even more reckless, not dodging or avoiding anything."
+    translated: "(As Han Lang gradually gained the upper hand, he became even more frenzied, not dodging or avoiding at all,"
   - split: 10
     subIndex: 1
     text: "出手尽是杀招，全无防守之意）"
@@ -17281,7 +17281,7 @@
   splits:
   - split: 10
     text: "豹二哥"
-    translated: "Brother Bao Er"
+    translated: "Second Brother"
   - split: 10
     subIndex: 1
     text: "我好恨"
@@ -17293,7 +17293,7 @@
   splits:
   - split: 10
     text: "只见韩狼踉踉跄跄，扑倒在刘豹的尸身之上，就此也一命呜呼。"
-    translated: "Only to stagger and fall on Liu Bao's corpse, Han Wolf also breathed his last."
+    translated: "Han Lang fainted and died next to Liu Bao's corpse."
 - raw: ",玩家,,左,,,,,ChangePlotDataBase;131,,哎呀，魏师兄为了救我们被迫出手，只怕这后续追踪之事要受到影响了。"
   splits:
   - split: 10
@@ -44571,7 +44571,7 @@
   splits:
   - split: 10
     text: "二哥别乱说话！多谢林统领！"
-    translated: "Brother Two, don't speak recklessly! Thank Captain Lin!"
+    translated: "Second Brother, don't say such things! Thank Commander Lin!"
   - split: 10
     subIndex: 1
     text: "我们三兄弟一定兢兢业业，尽忠职守，"
@@ -44689,7 +44689,7 @@
   splits:
   - split: 10
     text: "二哥所言极是，走着？"
-    translated: "Brother Two said it's true. Shall we go then?"
+    translated: "Second Brother speaks truly, shall we go?"
 - raw: ",,郝大力,右,,,,,,,走着！"
   splits:
   - split: 10
@@ -53741,7 +53741,7 @@
   splits:
   - split: 10
     text: "汪二哥，你负责第二道防线，天罗地网！"
-    translated: "Brother Er, you're in charge of the second line of defense, the Heavenly Web!"
+    translated: "Second Brother Wang, you are in charge of the second line of defense, the Heavenly Web!"
   - split: 10
     subIndex: 1
     text: "在房顶之上，隐藏了一张密织渔网，"
@@ -55631,7 +55631,7 @@
   splits:
   - split: 10
     text: "呜呜呜呜呜呜，大哥，二哥！"
-    translated: "Woo woo woo woo woo, Senior Brother, Second Senior Brother!"
+    translated: "Woo woo woo woo woo, Big Brother, Second Brother!"
 - raw: ",,郝大力,右,,,,TRUE,,,二弟，三弟！\\n（一边抹眼泪一边抽泣）别哭！男儿有泪不轻弹，不许哭！"
   splits:
   - split: 10
@@ -56027,7 +56027,7 @@
   splits:
   - split: 10
     text: "哼！二哥啊，这大哥怕是脑子不好使了，"
-    translated: "Hm! Senior Brother Ah, this Senior Brother probably isn't thinking straight."
+    translated: "Hm! Second Brother, this Big Brother seems to have a bit of a dull mind."
   - split: 10
     subIndex: 1
     text: "约咱们来这种鸡不拉屎鸟不生蛋的地方干啥？喝西北风吗？"
@@ -56323,7 +56323,7 @@
   splits:
   - split: 10
     text: "二哥迟百城擅使暗器功夫，"
-    translated: "Eldest Brother Cao Baicheng is skilled in using Hidden Weapons techniques,"
+    translated: "Second Brother Cai Bancheng excels in hidden weapon skills,"
   - split: 10
     subIndex: 1
     text: "神不知鬼不觉，杀人于千里之外，"
@@ -95973,7 +95973,7 @@
   - split: 10
     subIndex: 1
     text: "二哥，咱们接下来怎么办？"
-    translated: "Brother Two, what should we do next?"
+    translated: "Second Brother, what should we do next?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -96022,7 +96022,7 @@
   splits:
   - split: 10
     text: "二哥，你没事吧！这小妮子好生古怪，怎么还会起死回生啊？"
-    translated: "Brother Two, are you alright! That little girl is really peculiar. How could she bring someone back from the dead?"
+    translated: "Second Brother, are you alright! This little girl is really peculiar. How could she bring someone back to life?"
 - raw: ",,,左,,,,,,,咳咳咳咳，我听到动静便故意装死。\\n没想到果然骗过了你们两个狗贼！"
   splits:
   - split: 10
@@ -96051,7 +96051,7 @@
   splits:
   - split: 10
     text: "死到临头还敢嘴硬，二哥，咱们一齐上！"
-    translated: "Facing death and still talking back, Brother Two, let's go together!"
+    translated: "Dead already, you still dare to be stubborn, Second Brother! Let's go together!"
 - raw: "597,无,无,无,,,GroupFight,,,,听得医馆内传来兵刃交加之声，一旁的病人纷纷大声吵嚷起来，\\n周边的街坊领居也抄起农具和厨刀，涌进了医馆之中。"
   splits:
   - split: 10
@@ -96649,7 +96649,7 @@
   splits:
   - split: 10
     text: "二哥！！！"
-    translated: "Big Brother!!"
+    translated: "Second Brother!!!"
 - raw: ",,厉苍穹,右,,,,,,,无影神针......药王谷掌门！这下碰上硬点子了。\\n算了，留得青山在不怕没柴烧，老三老四，咱们撤！"
   splits:
   - split: 10
@@ -192016,7 +192016,7 @@
   splits:
   - split: 10
     text: "二哥不必废话，此处弟兄都是咱们心腹。"
-    translated: "Brother Two need not waste words here; all are our confidants."
+    translated: "Second Brother, no need to waste words here; all brothers are our confidants."
   - split: 10
     subIndex: 1
     text: "大家一拥而上先结果了大当家，然后再去寻那小娘子。"
@@ -192380,7 +192380,7 @@
   splits:
   - split: 10
     text: "二、二哥！臭小子！"
-    translated: "Two, Elder Brother! Stinking brat!"
+    translated: "Two, Second Brother! Stinking brat!"
   - split: 10
     subIndex: 1
     text: "爷爷我神功护体，刀枪不入，有种来跟爷爷斗！"
@@ -193571,7 +193571,7 @@
   splits:
   - split: 10
     text: "二哥，人家是老当益壮，你这是老当益弱了。"
-    translated: "Brother Two, I'm getting stronger with age, but you're weakening as you get older."
+    translated: "Second Brother, I'm getting stronger with age, but you're getting weaker."
   - split: 10
     subIndex: 1
     text: "看来是平日缺少锻炼所致。"

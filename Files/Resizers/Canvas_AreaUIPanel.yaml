@@ -13,7 +13,7 @@
   idealFontSize: 25.0
   allowWordWrap: false
 - path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/BuildingLv
-  sampleText: 0
+  sampleText: "0"
   idealFontSize: 11.0
   allowWordWrap: false
 - path: Canvas/AreaUIPanel/AreaUIBelow/AreaTitle/Text

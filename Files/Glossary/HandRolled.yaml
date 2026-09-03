@@ -22,3 +22,11 @@
   result: "Brother Tianyi"
   allowalt:
     - "Brother Wang Tianyi"
+- raw: "黄豺"
+  result: "Huang Chai"
+- raw: "韩狼"
+  result: "Han Lang"
+- raw: "二哥"
+  result: "Second Brother"
+- raw: "严达开"
+  result: "Yan Dakai"
