@@ -944,8 +944,28 @@ namespace Tests
         private static readonly Dictionary<string, string> DynamicStringResultOverrides = new()
         {
             ["{0}年{1}月{2}日"] = "{0} Year {1} Month {2} Day",
-            ["{0}级"] = "Level {0}",
         };
+
+        // Same purpose as DynamicStringResultOverrides but for template FRAGMENTS that recur with
+        // different placeholder indices inside otherwise-varying surrounding templates (e.g.
+        // "{0}级"/"{1}级"/"{2}级", or "{0}级{1}"/"{1}级{2}" - the same "Level N" reader stat
+        // concatenation, just from different call sites/wrappers, so neither the index nor the
+        // surrounding text is fixed). Applied as SUBSTRING fixups against the already-translated
+        // Result (not rebuilt from Raw), so the rest of the sentence's real translation survives -
+        // Reconstruct glues the translated "级"->"Level" fragment directly against the "{n}"
+        // placeholder with no separator/reordering, e.g. "{0}Level"/"{0} Level", so these just fix
+        // that specific adjacency.
+        private static readonly (Regex Pattern, MatchEvaluator Evaluator)[] DynamicStringRegexResultOverrides =
+        [
+            // "{i}Level{j}"/"{i} Level {j}" -> "Level {i} {j}" - must run before the standalone
+            // rule below so the trailing "{j}" isn't left to match on its own first.
+            (new Regex(@"\{(\d+)\}\s*Level\s*\{(\d+)\}", RegexOptions.Compiled),
+                m => $"Level {{{m.Groups[1].Value}}} {{{m.Groups[2].Value}}}"),
+
+            // "{i}Level"/"{i} Level" standalone -> "Level {i}".
+            (new Regex(@"\{(\d+)\}\s*Level\b", RegexOptions.Compiled),
+                m => $"Level {{{m.Groups[1].Value}}}"),
+        ];
 
         // Re-reads the just-packaged Files/Mod/{textFile.Path}.yaml and force-overwrites any
         // entry whose Raw matches DynamicStringResultOverrides, then rewrites the file. Runs
@@ -966,7 +986,21 @@ namespace Tests
             var changed = false;
             foreach (var entry in results)
             {
-                if (DynamicStringResultOverrides.TryGetValue(entry.Raw, out var forcedResult) && entry.Result != forcedResult)
+                string? forcedResult = null;
+
+                if (DynamicStringResultOverrides.TryGetValue(entry.Raw, out var exactResult))
+                    forcedResult = exactResult;
+                else
+                {
+                    var fixedResult = entry.Result;
+                    foreach (var (pattern, evaluator) in DynamicStringRegexResultOverrides)
+                        fixedResult = pattern.Replace(fixedResult, evaluator);
+
+                    if (fixedResult != entry.Result)
+                        forcedResult = fixedResult;
+                }
+
+                if (forcedResult != null && entry.Result != forcedResult)
                 {
                     entry.Result = forcedResult;
                     changed = true;

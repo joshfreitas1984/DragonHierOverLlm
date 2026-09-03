@@ -373,5 +373,23 @@ public class CompoundFieldSplitterTests
             "Once the sect's occupied area reaches the limit,\\nno new area can be occupied",
             CompoundFieldSplitter.Reconstruct(template, translated));
     }
+
+    [Fact(DisplayName = "Reconstruct adds spacing around adjacent raw format placeholders and around a closing paren before a translated fragment")]
+    public void ReconstructAddsSpacingAroundAdjacentRawPlaceholdersAndClosingParen()
+    {
+        var original = "{3}{0}({1}级)提升{2}级";
+        var (template, fragments) = CompoundFieldSplitter.Decompose(original);
+
+        var translated = fragments.Select(f => f switch
+        {
+            "级" => "Level",
+            "提升" => "Improve",
+            _ => f,
+        }).ToList();
+
+        Assert.Equal(
+            "{3} {0} ({1} Level) Improve {2} Level",
+            CompoundFieldSplitter.Reconstruct(template, translated));
+    }
 }
 
