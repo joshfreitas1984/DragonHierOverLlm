@@ -1001,25 +1001,6 @@ internal static class DynamicStringPatches
         return _reverseDictionary.TryGetValue(translated, out var raw) ? raw : translated;
     }
 
-    // Reverses a sprite key built at runtime as `<rawPrefix><rawSuffix>` via a plain String.Concat
-    // (e.g. HorseIconController.Update's mounted-horse "IconAtlas" key `this.targetHorseData.name +
-    // "大"` - see AtlasIconPatches.LoadAtlasSprite_Prefix). GenericPostfix translates that whole
-    // concatenated result (longest-match-first), so `translated` arrives as
-    // `<translated rawPrefix><translated rawSuffix>` with no separator. Translates rawSuffix
-    // forward the same way the game's own call would have, strips it back off if present, then
-    // reverse-translates the remaining prefix. Returns the input unchanged if the suffix isn't
-    // found or the prefix has no known raw form.
-    public static string ReverseTranslateSuffixed(string translated, string rawSuffix)
-    {
-        if (string.IsNullOrEmpty(translated) || string.IsNullOrEmpty(rawSuffix)) return translated;
-        var translatedSuffix = TranslateFragment(rawSuffix);
-        if (string.IsNullOrEmpty(translatedSuffix) || !translated.EndsWith(translatedSuffix, StringComparison.Ordinal))
-            return translated;
-        var prefix = translated.Substring(0, translated.Length - translatedSuffix.Length);
-        var rawPrefix = ReverseTranslate(prefix);
-        return rawPrefix == prefix ? translated : rawPrefix + rawSuffix;
-    }
-
     // Perf: builds the Raw[0] -> entries index consumed by ApplyDictionary, from an already
     // longest-first-sorted entry list (see LoadDictionary's OrderByDescending) - each bucket
     // preserves that same relative ordering since it's a single forward pass over the sorted list.

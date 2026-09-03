@@ -84,25 +84,11 @@ internal static class AtlasIconPatches
 
     [HarmonyPatch(typeof(TextureController), nameof(TextureController.LoadAtlasSprite))]
     [HarmonyPrefix]
-    private static void LoadAtlasSprite_Prefix(string atlasPath, ref string spriteName)
+    private static void LoadAtlasSprite_Prefix(ref string spriteName)
     {
         if (string.IsNullOrEmpty(spriteName)) return;
         if (_reverseSpriteNameDictionary.TryGetValue(spriteName, out var raw))
-        {
             spriteName = raw;
-            return;
-        }
-
-        // Mounted/equipped horse HUD icon (confirmed 2026-09-03 with the Mongolian horse -
-        // Converter/output/_NoNamespace/HorseIconController.cs's `Update()` builds its "IconAtlas"
-        // key inline as `String.Concat(this.targetHorseData.name, "大")` rather than via
-        // `ItemData.GetItemIconName()`, so ItemIconPatches' fix never sees this call site.
-        // `targetHorseData.name` is raw Chinese (HorseData.csv name column is SkipColumns'd out of
-        // the per-row CSV pipeline - see DynamicStringColumnSources), but that Concat call is
-        // itself patched by DynamicStringPatches' global postfix, which translates the whole
-        // concatenated result before it ever reaches here.
-        if (atlasPath == "IconAtlas")
-            spriteName = DynamicStringPatches.ReverseTranslateSuffixed(spriteName, "大");
     }
 }
 
