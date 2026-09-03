@@ -5214,7 +5214,7 @@
 - raw: "余师姐一路跟踪黑风寨贼人，发现顾师兄被关押在#TargetPlace#。与师兄弟分头前往准备劫狱。"
   splits:
   - text: "余师姐一路跟踪黑风寨贼人，发现顾师兄被关押在#TargetPlace#。与师兄弟分头前往准备劫狱。"
-    translated: "Senior Sister Yu has been tracking the bandits from Black Gale Camp all along and discovered that Brother Ku is being detained in #TargetPlace#. She and the other fellow brothers are splitting up to prepare for a prison break."
+    translated: "Senior Sister Yu tracked the bandits from Black Gale Village all the way, discovering that Senior Brother Gu is imprisoned at #TargetPlace#. She and the fellow brothers plan to split up and prepare for a prison break."
 - raw: "余师姐在#TargetPlace#发现了可疑踪迹，与她一同前去埋伏调查。"
   splits:
   - text: "余师姐在#TargetPlace#发现了可疑踪迹，与她一同前去埋伏调查。"
@@ -6402,7 +6402,7 @@
 - raw: "去#TargetPlace#后山，给面壁思过的沈退师兄送饭。"
   splits:
   - text: "去#TargetPlace#后山，给面壁思过的沈退师兄送饭。"
-    translated: "Go to the back mountain of #TargetPlace# to deliver meals to Senior Brother Shen Tu, who is facing the wall in contemplation."
+    translated: "Go to #TargetPlace# behind mountain and deliver food to Senior Brother Shen Tui, who is undergoing penance."
 - raw: "去#TargetPlace#搜寻窃贼的踪迹。"
   splits:
   - text: "去#TargetPlace#搜寻窃贼的踪迹。"
@@ -11209,7 +11209,7 @@
 - raw: "沈退偷学铁掌帮武功之事被发现了！眼下师傅正要狠狠责罚他。#PlayerName#<b>快回门派</b>，随我一道求求情吧！"
   splits:
   - text: "沈退偷学铁掌帮武功之事被发现了！眼下师傅正要狠狠责罚他。#PlayerName#"
-    translated: "Scrimshank's secret study of the Iron Palm Gang's martial arts has been discovered! Right now, Master is about to severely punish him. #PlayerName#"
+    translated: "Scandal! Master is about to severely punish Shen Tui for his attempt to secretly learn the Iron Palm Gang's martial arts. #PlayerName#"
   - subIndex: 1
     text: "快回门派"
     translated: "Hurry back to the Sect"
@@ -11225,7 +11225,7 @@
 - raw: "沈退师兄发现本门后山似有异动，与他一同去#TargetPlace#探明究竟。"
   splits:
   - text: "沈退师兄发现本门后山似有异动，与他一同去#TargetPlace#探明究竟。"
-    translated: "Scattered Retreat Senior Brother found that there seemed to be some activity at the rear mountain of our sect, and he went to #TargetPlace# with him to investigate the truth."
+    translated: "Senior Brother Shen Tui discovered some unusual activity on the rear mountain of our sect and went to #TargetPlace# to investigate with him."
 - raw: "沈退师兄近来鬼鬼祟祟，不知在<b>#PosText#</b>搞些什么东西。"
   splits:
   - text: "沈退师兄近来鬼鬼祟祟，不知在"
@@ -11238,7 +11238,7 @@
 - raw: "沈退面壁思过也快一个月了，#PlayerName#若是有空，帮我去后山给他送个饭如何？"
   splits:
   - text: "沈退面壁思过也快一个月了，#PlayerName#若是有空，帮我去后山给他送个饭如何？"
-    translated: "Scen Tian has been meditating and reflecting for nearly a month. Why don't you ask #PlayerName# to take some food to the back mountain for him?"
+    translated: "Shen Tui has been meditating and reflecting for nearly a month. #PlayerName#, if you have some free time, could you help me take some food to the back mountain to deliver it to him?"
 - raw: "沙尘"
   splits:
   - text: "沙尘"

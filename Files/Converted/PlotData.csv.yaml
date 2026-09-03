@@ -400,7 +400,7 @@
   splits:
   - split: 10
     text: "嘿嘿，顾师兄武功高强，本门也就大师兄能压你一头，"
-    translated: "Haha, Senior Brother Ku's martial arts is formidable. Only Big Senior Brother can match you in our sect."
+    translated: "Haha, Senior Brother Gu's martial arts are strong. In our sect, only Big Senior Brother can match you."
   - split: 10
     subIndex: 1
     text: "今天我这手三脚猫功夫，真是见笑了。"
@@ -1274,7 +1274,7 @@
   splits:
   - split: 10
     text: "顾师兄没听过，士别三日当刮目相看吗？"
-    translated: "Junior Senior Brother hasn't heard of treating someone with new eyes after three days, has he?"
+    translated: "Senior Brother Gu hasn't heard of never regard a departed scholar with the old eye?"
   - split: 10
     subIndex: 1
     text: "我今天听了师傅和顾师兄你的教诲，已经决心痛改前非，刻苦练功了！"
@@ -1670,7 +1670,7 @@
   splits:
   - split: 10
     text: "沈退师兄和余采薇师姐武学天资极高，时常指点我修习武艺，"
-    translated: "Scen Tui, Senior Brother, and Sister Yu Caiwei have exceptionally high martial talent and often guide me in practicing martial arts."
+    translated: "Senior Brother Shen Tui and Senior Sister Yu Caiwei have extremely high martial arts talent, often guiding me in the practice of martial arts."
   - split: 10
     subIndex: 1
     text: "只是大师兄魏胥华"
@@ -4396,7 +4396,7 @@
   - split: 10
     subIndex: 1
     text: "顾师兄一人前往，若是遇上铁掌帮众，势单力孤，岂不危险。"
-    translated: "Gu's Senior Brother going alone could be dangerous if he encounters the Iron Palm Gang; he would be outnumbered and outmatched."
+    translated: "If Senior Brother Gu goes alone, he might be in danger if he encounters the Iron Palm Gang; he would be outnumbered and outmatched."
   - split: 10
     subIndex: 2
     text: "嘿嘿，不如"
@@ -5163,7 +5163,7 @@
   splits:
   - split: 10
     text: "杨师兄听说过刻舟求剑吗？"
-    translated: "Has Senior Brother heard of the story of trying to cut a boat to seek a sword?"
+    translated: "Has Senior Brother Yang heard of the story of trying to cut a boat to retrieve a sword?"
 - raw: ",,,右,,,,,,,呵呵，一柄本就轻巧无比的宝剑，落入这浩浩汤汤的长江水中，\\n自会顺流而下，不知漂荡多远。"
   splits:
   - split: 10
@@ -6868,7 +6868,7 @@
   - split: 10
     subIndex: 2
     text: "另一个杨思迟杨师兄，他智慧超群，远胜于我。"
-    translated: "Another Yang Sichi, my Senior Brother, is far more brilliant in wisdom than me."
+    translated: "Another Senior Brother Yang Sichi, his wisdom far surpasses mine."
   templates:
   - split: 10
     template: "{0}…{1}\\n{2}"
@@ -7347,11 +7347,11 @@
   - split: 10
     subIndex: 2
     text: "沈退师兄怕是又偷溜玩耍去了，"
-    translated: "Scattered Retreat Senior Brother probably sneaked off to play again."
+    translated: "Senior Brother Shen Tui likely slipped away to play again."
   - split: 10
     subIndex: 3
     text: "眼下门内只有我和杨师兄在把守。"
-    translated: "Now inside the gate, only Brother Yang and I are guarding."
+    translated: "Right now, only Senior Brother Yang and I are guarding the entrance."
   templates:
   - split: 10
     template: "{0}……{1}\\n{2}\\n{3}"
@@ -7363,7 +7363,7 @@
   - split: 10
     subIndex: 1
     text: "加上魏师兄本身武功高强，想来支撑一段时间问题不大。"
-    translated: "With Wei Senior Brother's own martial arts prowess, it shouldn't be a problem for him to sustain himself for some time."
+    translated: "With Senior Brother Wei himself being highly skilled in martial arts, it shouldn't be a problem for him to support the pillar for a while."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -8015,7 +8015,7 @@
   splits:
   - split: 10
     text: "哼，若此时逃跑，只怕魏师兄日后更要看扁了我！"
-    translated: "Hmph. If I were to flee now, Wei Senior Brother might come to beat me up even more in the future!"
+    translated: "Hmph. If I were to run now, Senior Brother Wei might beat me up even more in the future!"
 - raw: ",姜婉,,左,,,,,,,魏师兄，我也不愿再跑了！\\n今日就是死在此处，我姜婉无怨无悔！"
   splits:
   - split: 10
@@ -8036,7 +8036,7 @@
   - split: 10
     subIndex: 1
     text: "替魏师兄你打掩护，尽量拖延时间。"
-    translated: "Protect your senior brother by distracting them and buying as much time as possible."
+    translated: "Protect Senior Brother Wei by buying us some time."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -8253,7 +8253,7 @@
   splits:
   - split: 10
     text: "姜师姐，我们走吧，免得打扰师傅为魏师兄疗伤。"
-    translated: "Senior Sister Jiang, let's go. We don't want to disturb Master treating Brother Wei's injuries."
+    translated: "Senior Sister Jiang, let's go. We don't want to disturb Master tending to Senior Brother Wei's injuries."
 - raw: ",姜婉,,左,,,,,ScreenBlack,,……嗯……"
   splits:
   - split: 10
@@ -8768,7 +8768,7 @@
   - split: 10
     subIndex: 1
     text: "杨师兄可被他们打的够呛......"
-    translated: "Fang Senior Brother was hit quite hard by them..."
+    translated: "Senior Brother Yang was given quite a beating by them......"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -15474,7 +15474,7 @@
   splits:
   - split: 10
     text: "顾师兄此计甚妙，只是如此杀几个贼人，"
-    translated: "Senior Brother, this plan is brilliant. However, killing just a few bandits like this..."
+    translated: "Senior Brother Gu, this plan is ingenious. But killing just a few bandits like this..."
   - split: 10
     subIndex: 1
     text: "还是无从得知黑风寨具体位置，终究没法将他们斩草除根。"
@@ -16616,7 +16616,7 @@
   splits:
   - split: 10
     text: "说罢沈退转身就走，很快便消失在山道上。"
-    translated: "After speaking, they turned around and walked away, soon disappearing down the mountain path."
+    translated: "Shen Tui finished speaking and turned around, leaving soon after, his figure disappearing down the mountain path."
 - raw: ",,,右,,,,,,,哼，这护卫也自顾自逃跑了。\\n你们大势已去，还不快快求饶！"
   splits:
   - split: 10
@@ -17775,7 +17775,7 @@
   splits:
   - split: 10
     text: "我看魏师兄在地图上画出了山寨位置，乃是在巴陵村北方一处山坳之中。"
-    translated: "I saw Wei Senior Brother mark the location of the mountain stronghold on the map. It is in a valley to the north of Baling Village."
+    translated: "I saw Senior Brother Wei mark the location of the mountain hideout on the map. It's in a mountain hollow to the north of Baling Village."
 - raw: ",,,左,,,,,,,此寨三面环山，只有一处正门，\\n寨中大部分精锐，都集中在正门守卫。\\n如此看来，确实是易守难攻。"
   splits:
   - split: 10
@@ -18074,7 +18074,7 @@
   splits:
   - split: 10
     text: "呵呵，不劳大师兄费心，危急关头我沈退自是跑得比谁都快。"
-    translated: "Haha, no trouble for Big Senior Brother to worry about; in times of danger, I Shen Ti would surely run faster than anyone."
+    translated: "Haha, no need for Big Senior Brother to worry, in times of crisis I Shen Tui will run faster than anyone."
 - raw: ",,魏胥华,右,,,,,GetMainMission;7,,好了好了，闲话到此为止，整装出发，莫要延误时机。"
   splits:
   - split: 10
@@ -18233,7 +18233,7 @@
   splits:
   - split: 10
     text: "（小声）好的师姐，顾师兄他们到了吗？"
-    translated: "(Softly) Okay, Senior Sister, have Brother Gu and the others arrived yet?"
+    translated: "(Softly) Alright Senior Sister, have Senior Brother Gu and the others arrived?"
 - raw: ",,,右,,,,,,,到了到了，去前面挖陷阱去了。\\n我在这附近放风，看看有没有黑风寨探子往来。"
   splits:
   - split: 10
@@ -18303,7 +18303,7 @@
   splits:
   - split: 10
     text: "嘿嘿，顾师兄又在取笑我了。"
-    translated: "Hehe, Senior Brother Ku is teasing me again."
+    translated: "Hehe, Senior Brother Gu is teasing me again."
 - raw: ",,,右,,,,TRUE,,,（倒退几步，忽然脚下一歪，跌入坑内）\\n哎哟！有陷阱！"
   splits:
   - split: 10
@@ -19471,7 +19471,7 @@
   splits:
   - split: 10
     text: "杨师兄看，他双掌攻来，却只需如此这般"
-    translated: "Fang Senior Brother, look. He attacks with both palms, but you only need to do it like this."
+    translated: "Senior Brother Yang, watch as he attacks with both palms, yet it requires only this."
   templates:
   - split: 10
     template: "{0}……"
@@ -19670,7 +19670,7 @@
   splits:
   - split: 10
     text: "好了好了，师姐别念叨了，杨师兄可没你这么快的身手"
-    translated: "Alright, alright, Senior Sister, stop complaining. Fgy Senior Brother doesn't move as quickly as you do."
+    translated: "Alright, alright, Senior Sister, stop fussing. Senior Brother Yang doesn't move as fast as you do."
   - split: 10
     subIndex: 1
     text: "话说回来，这好好地房顶怎么突然塌了一块？"
@@ -19762,7 +19762,7 @@
   splits:
   - split: 10
     text: "魏师兄，沈师兄，你们两个去清点物资，然后找几个脚夫运送过来。"
-    translated: "Senior Brothers Wei and Shen, please go check the supplies and find some porters to transport them over."
+    translated: "Senior Brother Wei, Senior Brother Shen, you two go and count the supplies, then find some porters to transport them over."
   - split: 10
     subIndex: 1
     text: "木材石料这些，可别遗漏了啊。"
@@ -20293,7 +20293,7 @@
   splits:
   - split: 10
     text: "魏师兄未免小瞧我了。"
-    translated: "Wei Senior Brother underrates me a bit"
+    translated: "Senior Brother Wei undervalues me"
   - split: 10
     subIndex: 1
     text: "杨师兄，你和小师妹一起来吧，我承受得住！"
@@ -21132,7 +21132,7 @@
   splits:
   - split: 10
     text: "顾师兄，魏师兄！"
-    translated: "Senior Brothers Gu and Wei!"
+    translated: "Senior Brother Gu, Senior Brother Wei!"
 - raw: ",,,右,,,,,,,辛苦你们了。\\n我一察觉事情不对，便拉着大师兄往回赶，\\n还好不算太迟呀。"
   splits:
   - split: 10
@@ -22381,7 +22381,7 @@
   splits:
   - split: 10
     text: "哎，本来以为凭着顾师兄早年救过药王弟子这层关系，能顺利求到药方。"
-    translated: "Ah, I thought that with Senior Brother Raw saving the Medicine King's disciple many years ago, getting the recipe would be smooth."
+    translated: "Ah, I thought that with Senior Brother Gu's early rescue of the Medicine King's disciple, I could easily obtain the prescription."
   - split: 10
     subIndex: 1
     text: "没想到那药王谷翻脸不认账，竟狮子大开口，"
@@ -22413,7 +22413,7 @@
   splits:
   - split: 10
     text: "哎，我和顾师兄想着，回来找师兄弟们凑点，"
-    translated: "Ah, Brother Gu and I thought we would come back and gather some from the other brothers and sisters."
+    translated: "Ah, my fellow and Senior Brother Gu thought we should come back and gather some from the other brothers and sisters."
   - split: 10
     subIndex: 1
     text: "然后能否让师傅他老人家，从仓房中支一些先用着"
@@ -33690,7 +33690,7 @@
   splits:
   - split: 10
     text: "（师傅与顾师兄姜师姐三人站在山门口，迎接着四方武林宾客，"
-    translated: "(Master, along with Senior Brother Jiang and Senior Sister Jiang, stood at the entrance of the mountain, greeting guests from the Wulin."
+    translated: "(Master, Senior Brother Gu, and Senior Sister Jiang stand at the mountain gate, welcoming guests from the Wulin."
   - split: 10
     subIndex: 1
     text: "也都是满面春风，喜笑颜开。）"
@@ -34473,7 +34473,7 @@
   splits:
   - split: 10
     text: "顾师兄！我们来了！"
-    translated: "Senior Brother Ku! We've come!"
+    translated: "Senior Brother Gu! We've come!"
 - raw: ",顾游年,,左,,,,,,,#PlayerName#，此人武功高强，你们几个不是对手，\\n快去请师傅前来，这里有我顶住就行！"
   splits:
   - split: 10
@@ -34616,12 +34616,12 @@
   splits:
   - split: 10
     text: "顾师兄！狗贼休要伤我顾师兄！"
-    translated: "Senior Brother Ku! Don't hurt Senior Brother Ku!"
+    translated: "Senior Brother Gu! Don't hurt Senior Brother Gu!"
 - raw: ",,,右,,,,,,,哈哈哈哈，你顾师兄我就绑带回寨子中去。\\n若想救他，带上一万两银子来换，否则，就等着收尸吧！\\n小的们，咱们撤！"
   splits:
   - split: 10
     text: "哈哈哈哈，你顾师兄我就绑带回寨子中去。"
-    translated: "Haha, Brother Gu, I'll tie you back to the village."
+    translated: "Hahahaha, I'll bind you back to the village, Senior Brother Gu."
   - split: 10
     subIndex: 1
     text: "若想救他，带上一万两银子来换，否则，就等着收尸吧！"
@@ -34637,11 +34637,11 @@
   splits:
   - split: 10
     text: "（你们拼死向前想要救回顾师兄，奈何贼人实在人多势众。"
-    translated: "(You struggled desperately to save Senior Brother HuiGu, but the bandits were simply too numerous for you."
+    translated: "(You desperately tried to rush forward to save Senior Brother Gu, but the bandits were simply too numerous."
   - split: 10
     subIndex: 1
     text: "只能眼睁睁看着顾师兄被贼人劫持而去。）"
-    translated: "I could only watch helplessly as Gu Senior Brother was kidnapped by bandits.)"
+    translated: "Could only watch helplessly as Senior Brother Gu was abducted by bandits.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -34685,7 +34685,7 @@
   - split: 10
     subIndex: 1
     text: "顾师兄是为了保护我们才"
-    translated: "Gu Senior Brother protected us for this reason."
+    translated: "Senior Brother Gu protected us"
   - split: 10
     subIndex: 2
     text: "呜呜呜呜呜"
@@ -34710,7 +34710,7 @@
   - split: 10
     subIndex: 2
     text: "放心，师傅定能想出办法解救顾师兄的。"
-    translated: "Rest assured, Master will surely think of a way to rescue Senior Brother Ku."
+    translated: "Rest assured, Master will certainly come up with a way to save Senior Brother Gu."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -34751,7 +34751,7 @@
   - split: 10
     subIndex: 1
     text: "我们寡不敌众，顾师兄他"
-    translated: "We are outnumbered, so we need to look out for Senior Brother."
+    translated: "We are outmatched, Senior Brother Gu"
   - split: 10
     subIndex: 2
     text: "最后被贼人劫走了！"
@@ -35029,7 +35029,7 @@
   splits:
   - split: 10
     text: "大师兄放心，这次定能将顾师兄安全救回。"
-    translated: "Big Senior Brother, rest assured; this time we will surely save Senior Brother safely."
+    translated: "Big Senior Brother, rest assured; this time we will definitely save Senior Brother Gu safely."
 - raw: ",,杨思迟,右,,,,,,,顾师兄……呜呜呜呜。\\n顾师兄从入门起便对我照顾有加，从没嫌弃过我愚笨。\\n我就算拼了这条命，也要把他救回来！"
   splits:
   - split: 10
@@ -35042,7 +35042,7 @@
   - split: 10
     subIndex: 2
     text: "顾师兄从入门起便对我照顾有加，从没嫌弃过我愚笨。"
-    translated: "Senior Brother Ku has taken good care of me since I started out, never rejecting my foolishness."
+    translated: "Senior Brother Gu has taken good care of me since I started, and has never rejected me for my clumsiness."
   - split: 10
     subIndex: 3
     text: "我就算拼了这条命，也要把他救回来！"
@@ -35358,7 +35358,7 @@
   splits:
   - split: 10
     text: "顾师兄与我们情同手足，恩义深厚，"
-    translated: "Gu Senior Brother is like family to us, with deep bonds of kindness and duty."
+    translated: "Senior Brother Gu is like family to us, with deep bonds of loyalty and kindness."
   - split: 10
     subIndex: 1
     text: "若大师兄以为我们也能坐视不理，未免太看不起人了！"
@@ -35434,7 +35434,7 @@
   splits:
   - split: 10
     text: "顾师兄！"
-    translated: "Senior Brother Ku!"
+    translated: "Senior Brother Gu!"
 - raw: ",,顾游年,右,,,,,,,快走……何必如此糊涂……"
   splits:
   - split: 10
@@ -35750,7 +35750,7 @@
   splits:
   - split: 10
     text: "师傅！顾师兄状况如何？"
-    translated: "Master! How is Gu Senior Brother?"
+    translated: "Master! How is Senior Brother Gu?"
 - raw: ",,,右,,,,,,,（面色苍白，看来是内力消耗过度）\\n咳咳咳，我用尽手段，算是保住他的性命了。"
   splits:
   - split: 10
@@ -35767,7 +35767,7 @@
   splits:
   - split: 10
     text: "那就好！我还真以为顾师兄是"
-    translated: "That's good! I really thought Senior Brother Ku would be"
+    translated: "That's good! I really thought Senior Brother Gu was"
   - split: 10
     subIndex: 1
     text: "凶多吉少了。"
@@ -35987,7 +35987,7 @@
   splits:
   - split: 10
     text: "师傅，顾师兄近来状况如何？"
-    translated: "Master, how has Senior Brother Ku been lately?"
+    translated: "Master, how is Senior Brother Gu doing lately?"
 - raw: ",,,右,,,,,,,游年伤势已经好转大半，哎，可惜内力一直无法恢复。\\n本门缺了他，实在是缺了一大助力。"
   splits:
   - split: 10
@@ -36499,7 +36499,7 @@
   - split: 10
     subIndex: 1
     text: "既然这药王谷能治好我的病，说不定也能治好顾师兄呢？"
-    translated: "Since Medicine King Valley can cure my illness, it might also be able to heal Senior Brother Ku's condition."
+    translated: "Since Medicine King Valley can cure my illness, it might also cure Senior Brother Gu?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -36535,7 +36535,7 @@
   - split: 10
     subIndex: 1
     text: "顾师兄待我恩重如山，他们若是不肯，"
-    translated: "Senior Brother Ku treated me with a mountain of kindness. If they are unwilling,"
+    translated: "Senior Brother Gu shows me a deep and mountainous kind of kindness. If they are unwilling,"
   - split: 10
     subIndex: 2
     text: "我就在药王谷门口跪下磕头，磕到他们答应为止！"
@@ -36551,7 +36551,7 @@
   - split: 10
     subIndex: 1
     text: "顾师兄平日里对我也多有照顾，悉心指导我习武练功。"
-    translated: "Senior Brother Ku has taken good care of me and patiently guided me in my martial arts training."
+    translated: "Senior Brother Gu has taken good care of me on a daily basis, carefully guiding me in my martial arts training."
   - split: 10
     subIndex: 2
     text: "若是就这么弃他不顾，我#$PlayerName#岂不是猪狗不如？"
@@ -36580,7 +36580,7 @@
   splits:
   - split: 10
     text: "杨师兄你凑什么热闹？"
-    translated: "Why are you hanging around, Senior Brother?"
+    translated: "Senior Brother Yang, what are you making all this noise for?"
   - split: 10
     subIndex: 1
     text: "去去去，师傅布置的练功任务完成了没？"
@@ -36608,7 +36608,7 @@
   splits:
   - split: 10
     text: "杨师兄不练功了？还真是太阳从西边出来了。"
-    translated: "Is Senior Brother Yong not practicing cultivation? Truly, the sun is setting in the west."
+    translated: "Senior Brother Yang isn't training anymore? Truly, the sun is setting in the west."
   - split: 10
     subIndex: 1
     text: "好吧好吧，那我们三个就一起便是。"
@@ -37123,7 +37123,7 @@
   splits:
   - split: 10
     text: "顾师兄！顾师兄！"
-    translated: "Senior Brother Ku! Senior Brother Ku!"
+    translated: "Senior Brother Gu! Senior Brother Gu!"
 - raw: ",,,右,,,,,,,咳咳咳咳，一惊一乍的干啥呢#PlayerName#？"
   splits:
   - split: 10
@@ -37252,7 +37252,7 @@
   - split: 10
     subIndex: 1
     text: "随后她熟练地抽出一包银针，以极快速度刺向顾师兄周身各大要穴。）"
-    translated: "She then skillfully drew out a packet of silver needles and pierced Gu Senior Brother's major acupoints at an incredibly rapid speed.)"
+    translated: "She then skillfully drew out a packet of silver needles and swiftly stabbed them into Senior Brother Gu's major acupoints.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -37284,7 +37284,7 @@
   splits:
   - split: 10
     text: "顾师兄！你感觉如何？"
-    translated: "Senior Brother Ku! How do you feel?"
+    translated: "Senior Brother Gu! How do you feel?"
 - raw: ",,,右,,,,,SpePlotFuc;29,,（忽然吐出一大口黑血）\\n咳咳咳咳咳……感觉经脉有些通畅了……身上也有些气力了！"
   splits:
   - split: 10
@@ -37493,7 +37493,7 @@
   splits:
   - split: 10
     text: "顾师兄你好生休养，莫要胡思乱想。"
-    translated: "Senior Brother Ku, take good care and don't indulge in idle thoughts."
+    translated: "Senior Brother Gu, take good care and don't indulge in idle thoughts."
   - split: 10
     subIndex: 1
     text: "说不定那药王谷姑娘会找到办法，把你彻底治好的！"
@@ -38943,7 +38943,7 @@
   splits:
   - split: 10
     text: "顾师兄！本门师兄弟中，我本最敬重你。"
-    translated: "Senior Brother! Among the brothers in our sect, I revered you most."
+    translated: "Senior Brother Gu! Among the brothers in our sect, I respected you the most."
   - split: 10
     subIndex: 1
     text: "可如今你怎的如此不识好歹，真是浪费了我们还有皇甫掌门一片好心！"
@@ -40273,7 +40273,7 @@
   - split: 10
     subIndex: 1
     text: "杨师兄吉人天相，或许只是迷路罢了。"
-    translated: "Senior Brother Yong has had good fortune, perhaps he is just lost."
+    translated: "Senior Brother Yang has had good fortune, perhaps he is just lost."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -40560,7 +40560,7 @@
   splits:
   - split: 10
     text: "我反正是习惯了，不过杨师兄你以后尽量别招惹太厉害的人物。"
-    translated: "I'm used to it anyway, but try not to provoke too powerful individuals, Fang Senior Brother."
+    translated: "I've gotten used to it anyway, but try not to provoke too powerful figures, Senior Brother Yang."
   - split: 10
     subIndex: 1
     text: "若是把什么七大恶人招来了，怕是师傅也救不了你咯！"
@@ -42905,7 +42905,7 @@
   splits:
   - split: 10
     text: "你快随我一道去劝劝师傅，饶你沈师兄一次！"
-    translated: "Hasten to go with me and persuade your Master to spare your Senior Brother Scenic once!"
+    translated: "You had better come with me to persuade our master to spare your senior brother Shen!"
 - raw: ",,,左,,,,,,,哦……沈师兄偷学铁掌帮武功？\\n我也……有所耳闻就是了。"
   splits:
   - split: 10
@@ -43016,7 +43016,7 @@
   - split: 10
     subIndex: 1
     text: "要到猴年马月才能夺回巴陵村，为魏师兄报仇！"
-    translated: "It could be another monkey's year and ox month before we can retake Baling Village and avenge Wei Senior Brother!"
+    translated: "We must wait until the monkeys' and horses' months to reclaim Baling Village and avenge Senior Brother Wei!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -43024,7 +43024,7 @@
   splits:
   - split: 10
     text: "大胆！还敢提你魏师兄！"
-    translated: "Dare to mention your Wei Senior Brother!"
+    translated: "Dare to bring up Senior Brother Wei!"
   - split: 10
     subIndex: 1
     text: "他才刚丧命于你学的这些铁掌武功之下，你可记得！"
@@ -43105,7 +43105,7 @@
   - split: 10
     subIndex: 1
     text: "一人做事一人当，我沈退甘愿受罚！"
-    translated: "One person's actions, one person bears the consequences! I, Shen Tai, willingly accept the punishment!"
+    translated: "One person's actions, one person bears the consequences! Shen Tui willingly accepts the punishment!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -43196,7 +43196,7 @@
   splits:
   - split: 10
     text: "事已至此，沈退你就去后山将就一个月吧。"
-    translated: "Since it's come to this, stay in the back mountain for about a month."
+    translated: "Now that it has come to this, Shen Tui, you'll just have to spend a month in the back mountain."
   - split: 10
     subIndex: 1
     text: "按照门规，师傅已经是从轻发落了。"
@@ -44815,7 +44815,7 @@
   splits:
   - split: 10
     text: "哼，不过一群土鸡瓦犬而已，让我沈退来讨教讨教。"
-    translated: "Hmph, just a bunch of mud chickens and curs. Let me see what Brother Shen has to teach me."
+    translated: "Hmph, just a bunch of dirt chickens and scoundrels. Let me, Shen Tui, show you a thing or two."
 - raw: ",,戴壮,右,,,,,,,#PlayerName#，郭兄王兄，我戴壮也来凑个热闹，\\n还请三位手下留情，别给我打的鼻青脸肿的！"
   splits:
   - split: 10
@@ -58312,7 +58312,7 @@
   - split: 10
     subIndex: 1
     text: "魏师兄他们有危险，我这就出发去救援！"
-    translated: "My senior brother and the others are in danger; I'm heading out to rescue them right away!"
+    translated: "Senior Brother Wei and the others are in danger. I'm heading out to rescue them right away!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -59393,7 +59393,7 @@
   - split: 10
     subIndex: 1
     text: "快把我魏师兄还回来！"
-    translated: "Quickly return my Wei Senior Brother!"
+    translated: "Quickly return my Senior Brother Wei!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -59471,7 +59471,7 @@
   splits:
   - split: 10
     text: "连我魏师兄都敢动，今天小爷要把你们碎尸万段。"
-    translated: "Even my Wei Senior Brother dares not to provoke today; I will tear you all to pieces."
+    translated: "Even Senior Brother Wei dares to provoke me today; I'll make you all suffer a thousand deaths."
 - raw: ",顾游年,,左,,,,TRUE,SpePlotFuc;49,,各位当心，莫要冲动……\\n是可忍孰不可忍，我也冲动一回，杀！！！！！"
   splits:
   - split: 10
@@ -59520,7 +59520,7 @@
   - split: 10
     subIndex: 1
     text: "我就放其他人一条生路，去替你们魏师兄收尸去吧！"
-    translated: "I'll give someone else a way out and let them go to retrieve your Senior Brother's body!"
+    translated: "I'll give the others a chance to live. Let them go and bury your body, Senior Brother Wei!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -60013,7 +60013,7 @@
   - split: 10
     subIndex: 1
     text: "眼下正是用人之际，这沈退却偏偏要在这时候作死，"
-    translated: "It's crucial to have people right now, and Shen retreats just has to suicidally act at this moment."
+    translated: "It's precisely when we need people the most, and this Shen Tui has to go and provoke trouble right now."
   - split: 10
     subIndex: 2
     text: "真是"
@@ -61884,7 +61884,7 @@
   - split: 10
     subIndex: 1
     text: "将沈退团团围住，显然是埋伏已久。）"
-    translated: "Surrounding Shen Tietuan and trapping him clearly shows they had been ambushed for some time.)"
+    translated: "Clearly, they have been ambushed for some time and are now surrounding Shen Tui.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -62114,7 +62114,7 @@
   splits:
   - split: 10
     text: "沈退你这家伙，明明就差点被这家伙跑脱了，"
-    translated: "Scenic Retreat, you really came close to letting this guy escape."
+    translated: "Shen Tui, you guy nearly let this guy get away."
   - split: 10
     subIndex: 1
     text: "还好有#PlayerName#在此压阵！"
@@ -63077,7 +63077,7 @@
   splits:
   - split: 10
     text: "顾师兄！你飞鸽传书寻我来这巴陵村，究竟有何大计？"
-    translated: "Senior Brother Ku! You sent me a message by pigeon to Baling Village. What great plan do you have for me?"
+    translated: "Senior Brother Gu! You sent me a message by homing pigeon to bring me to Baling Village. What great plan do you have for me?"
 - raw: ",,,右,,,,,,,嘘！小声点，这巴陵村眼下可是铁掌帮的地界。\\n咱们得小心谨慎，避人耳目才行。"
   splits:
   - split: 10
@@ -63200,7 +63200,7 @@
   splits:
   - split: 10
     text: "所以顾师兄的意思，是想趁他一个人巡逻的时候，"
-    translated: "So Senior Brother Ku's intention is to want to take advantage of when he is patrolling alone."
+    translated: "So Senior Brother Gu's intention is to catch him when he's patrolling alone."
   - split: 10
     subIndex: 1
     text: "咱们一起出手，把这小贼拿下？"
@@ -64411,7 +64411,7 @@
   splits:
   - split: 10
     text: "就是就是，这小贼作恶多端，害死咱们魏师兄，活该千刀万剐。"
-    translated: "Exactly, this little thief has committed countless evil deeds and killed our Wei Senior Brother. He deserves to be sliced a thousand times and hacked apart a myriad of times."
+    translated: "Just as I said, this little thief has committed numerous evil deeds, killing our Senior Brother Wei, so he deserves to be cut into a thousand pieces."
   - split: 10
     subIndex: 1
     text: "这种死法，已经是便宜他了。"
@@ -69877,7 +69877,7 @@
   - split: 10
     subIndex: 2
     text: "虽说上次杨师兄大发神威，把那铁掌帮狄坤的手都打断了，但毕竟只是一时走运。"
-    translated: "Though Fang Senior Brother demonstrated incredible prowess last time and broke Di Kun's hand from the Iron Palm Gang, it was ultimately just a matter of good fortune."
+    translated: "Though Senior Brother Yang demonstrated incredible prowess last time, breaking Di Kun's hand from the Iron Palm Gang, it was ultimately just a matter of good fortune."
   templates:
   - split: 10
     template: "{0}……{1}\\n{2}"
@@ -71711,7 +71711,7 @@
   splits:
   - split: 10
     text: "（当下会意）嗨，杨师兄这你别管。"
-    translated: "(Hanghai, Xiang Senior Brother, you just don't need to worry about this.)"
+    translated: "(For now, you know what I mean) Hey, Senior Brother Yang, you don't need to worry about it."
   - split: 10
     subIndex: 1
     text: "小师妹的花雕东坡肉，可是一绝啊，今天又能大饱口福咯。"
@@ -72237,7 +72237,7 @@
   splits:
   - split: 10
     text: "哎哟喂，不敢当不敢当，我可没你杨师兄这么“聪明”的徒弟。"
-    translated: "Ah dear, I dare not accept such praise. I don't have a student as intelligent as you, Yang Senior Brother."
+    translated: "Ah, no no, I couldn't compare to your Senior Brother Yang in any way."
   - split: 10
     subIndex: 1
     text: "要是传出去，我老朱怕是要被江湖中人笑死，不敢当不敢当！"
@@ -72456,7 +72456,7 @@
   - split: 10
     subIndex: 1
     text: "杨师兄你还真是"
-    translated: "You're truly a Senior Brother"
+    translated: "Senior Brother Yang, you really are"
   - split: 10
     subIndex: 2
     text: "傻人有傻福啊。"
@@ -74250,7 +74250,7 @@
   splits:
   - split: 10
     text: "哎，确实。不过你魏师兄水性上佳，"
-    translated: "Ah, true. But your Wei Senior Brother is particularly adept at swimming."
+    translated: "Ah, true. But your Senior Brother Wei is quite proficient in swimming."
   - split: 10
     subIndex: 1
     text: "我还是抱着点期望，万一他大难不死呢？"
@@ -76045,7 +76045,7 @@
   splits:
   - split: 10
     text: "这杂役虽说不会武功，但长相还真像咱们魏师兄呐！"
-    translated: "This lowly servant may not have martial arts skills, but he does resemble our Wei Senior Brother!"
+    translated: "This lackie, though he doesn't know martial arts, does look quite like Senior Brother Wei!"
   - split: 10
     subIndex: 1
     text: "沈师兄，咱们要不要出手相救？"
@@ -76884,7 +76884,7 @@
   splits:
   - split: 10
     text: "（你闻言叹了口气，将魏师兄坠落山崖后，巴陵村被铁掌帮攻占，"
-    translated: "(You sighed upon hearing this, for after Senior Brother fell off the cliff, Baling Village was conquered by the Iron Palm Gang."
+    translated: "(You sighed upon hearing this. After Senior Brother Wei fell off the cliff, Baling Village was seized by the Iron Palm Gang,"
   - split: 10
     subIndex: 1
     text: "以及之后，你们替魏师兄报仇，击杀几名铁掌弟子，"
@@ -77029,7 +77029,7 @@
   splits:
   - split: 10
     text: "杨师兄你个猪头，哪有大白天闹鬼的"
-    translated: "Fatty Senior Brother, there are no ghosts during the day, right?"
+    translated: "Senior Brother Yang, what kind of pigheaded fool do you take me for? There are no ghosts in broad daylight."
   - split: 10
     subIndex: 1
     text: "大、大师兄？真是大师兄？？？"
@@ -77450,7 +77450,7 @@
   - split: 10
     subIndex: 1
     text: "既是为了治好顾师兄，那就是分内之事，赴汤蹈火，在所不辞！"
-    translated: "It's within my duty to treat Senior Brother Ku and risk my life for his cure!"
+    translated: "It is only right that I risk my life and dive into boiling water for Senior Brother Gu to regain his health!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -78792,7 +78792,7 @@
   splits:
   - split: 10
     text: "好了好了，顾师兄你就别跟我客气了。"
-    translated: "Alright, alright, Senior Brother Ku, you don't have to be so polite to me."
+    translated: "Alright, alright, Senior Brother Gu, you don't have to be so polite to me."
   - split: 10
     subIndex: 1
     text: "几位，我这就带着顾师兄回去巩固疗伤。"
@@ -78849,7 +78849,7 @@
   - split: 10
     subIndex: 1
     text: "聊起当年你偷睡懒觉被师傅责骂，顾师兄带你去藏经阁学习太祖长拳的往事，仿佛还在昨日。"
-    translated: "Recalling how you used to sneak in and sleep in, and Master scolded you. Then Senior Brother took you to the Scripture Pavilion to learn Great Ancestor Long Fist‑seems like it was just yesterday."
+    translated: "Talking about how you used to sneak in for extra sleep and get scolded by your master, and how Senior Brother Gu took you to the Scripture Pavilion to learn the Great Ancestor Long Fist seems like it was just yesterday."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -79055,7 +79055,7 @@
   splits:
   - split: 10
     text: "原来如此，多谢顾师兄指点。"
-    translated: "Thus it is. Thank you, Senior Brother, for your guidance."
+    translated: "So it is. Thank you, Senior Brother Gu, for your guidance."
   - split: 10
     subIndex: 1
     text: "听了这一席话，才知山外有山，人外有人呐。"
@@ -79611,7 +79611,7 @@
   splits:
   - split: 10
     text: "顾师兄！顾师兄！！！大事不好了！"
-    translated: "Senior Brother Ku! Senior Brother Ku!!! Something terrible has happened!"
+    translated: "Senior Brother Gu! Senior Brother Gu!!! Something severely adverse happened!"
 - raw: ",,,右,,,,,,,咳咳咳额咳咳！#PlayerName#没看到我正闭关修炼呢么……\\n被你这么一惊，差点是走火入魔啊！"
   splits:
   - split: 10
@@ -79648,7 +79648,7 @@
   splits:
   - split: 10
     text: "顾师兄，我千辛万苦，好不容易把这太祖长拳修炼到第九重了。"
-    translated: "Senior Brother, after much hardship, I finally managed to cultivate the Great Ancestor Long Fist to its ninth level."
+    translated: "Senior Brother Gu, I went through countless hardships and finally managed to cultivate the Great Ancestor Long Fist to the ninth level."
   - split: 10
     subIndex: 1
     text: "然后如你所教的那样，把理论经验和实战经验也都充分积累了。"
@@ -79857,7 +79857,7 @@
   splits:
   - split: 10
     text: "那就多谢顾师兄了，我这就去试试。"
-    translated: "Thank Senior Brother Ku for the advice. I'll go try it out right away."
+    translated: "Thank you, Senior Brother Gu. I'll go try it out right away."
 - raw: "485,玩家,顾游年,左,,,,,,,哈哈哈哈哈，成功啦成功啦，我的太祖长拳终于大成啦！"
   splits:
   - split: 10
@@ -79877,7 +79877,7 @@
   splits:
   - split: 10
     text: "杨师兄来得正好，我这太祖长拳刚刚大成，正好来和你练练手！"
-    translated: "Senior Brother, you've come just in time. I've just mastered the Great Ancestor Long Fist, so let's practice together!"
+    translated: "Senior Brother Yang has arrived just in time. I have just mastered the Great Ancestor Long Fist, so let's practice together!"
 - raw: ",,,右,,,,,FightInteractHero;StudyFight-FightAddPlotDataBase~486----Arena,,啊？才没几天#PlayerName#这太祖长拳就练成了？\\n我功夫低微，还请手下留情啊！"
   splits:
   - split: 10
@@ -80115,7 +80115,7 @@
   - split: 10
     subIndex: 1
     text: "接下来应该如何继续精进，还请顾师兄指教！"
-    translated: "How should I continue to improve further, I'm still hoping for Senior Brother's guidance!"
+    translated: "How should I continue to improve further, I'm still looking to Senior Brother Gu for guidance!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -80631,7 +80631,7 @@
   splits:
   - split: 10
     text: "顾师兄来疗伤室干啥？莫非你也被大师兄打伤了？"
-    translated: "Why is Senior Brother coming to the healing room? Could it be that you were also beaten by Big Senior Brother?"
+    translated: "Why is Senior Brother Gu coming to the healing room? Could it be that you were also beaten by Big Senior Brother?"
   - split: 10
     subIndex: 1
     text: "好家伙"
@@ -80717,7 +80717,7 @@
   splits:
   - split: 10
     text: "嘿嘿，那就多谢顾师兄了。"
-    translated: "Hehe, thank you, Senior Brother Ku"
+    translated: "Hehe, thank you, Senior Brother Gu"
 - raw: ",,,左,,,,,,,话说我受伤之事，只有姜师姐和魏师兄知晓。\\n顾师兄你又是怎么知道的？还正好带着丹药过来。"
   splits:
   - split: 10
@@ -80726,7 +80726,7 @@
   - split: 10
     subIndex: 1
     text: "顾师兄你又是怎么知道的？还正好带着丹药过来。"
-    translated: "How did Senior Brother know again? And you just happened to bring some medicinal pills."
+    translated: "Senior Brother Gu, how did you know about this? And you even brought medicinal pills here."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81256,7 +81256,7 @@
   - split: 10
     subIndex: 1
     text: "（顾师兄果然改不了老性子，又开始劝学了"
-    translated: "(Senior Brother Ku indeed couldn't change his old nature and started advising me to study again."
+    translated: "(Senior Brother Gu truly can't shake his old nature; he's starting to advise on studies again."
   templates:
   - split: 10
     template: "{0}\\n{1}……）"
@@ -81504,7 +81504,7 @@
   splits:
   - split: 10
     text: "当然是你爷爷，仙霞派沈退是也！"
-    translated: "Of course it's your grandfather, Xianxia Sect Shen Ti!"
+    translated: "Of course it's your grandfather, Xianxia Sect's Shen Tui!"
   - split: 10
     subIndex: 1
     text: "哈哈哈哈，来找我呀，来抓我呀。"
@@ -81732,7 +81732,7 @@
   splits:
   - split: 10
     text: "好好好，不过沈师兄你那些手段，终究有违侠义，"
-    translated: "Alright, alright, but those methods of yours, Scared Senior Brother, still go against chivalry."
+    translated: "Alright, alright, but your methods, Senior Brother Shen, still go against the spirit of chivalry."
   - split: 10
     subIndex: 1
     text: "以后还是少用为妙。"
@@ -82714,7 +82714,7 @@
   splits:
   - split: 10
     text: "人各有命，杨师兄何必勉强。"
-    translated: "Everyone has their fate, Senior Brother. Why force yourself?"
+    translated: "Everyone has their fate, Senior Brother Yang. There's no need for you to force it."
   - split: 10
     subIndex: 1
     text: "咱们以后多向#PlayerName#请教请教，一定也会有所进步的！"
@@ -85817,7 +85817,7 @@
   splits:
   - split: 10
     text: "你们将前因后果，以及沈退的猜测，向师傅和师兄弟们一一道来............"
-    translated: "You will recount the entire sequence of events, from beginning to end, and Shen Tuo's speculations to Master and fellow senior brothers........."
+    translated: "You will recount the events, from beginning to end, and Shen Tui's conjectures to Master and the other brothers and sisters........."
 - raw: ",,姜映泉,右,,,,,,,原来如此，“分则两败，合能成王”，\\n若真如退儿所言，确实有可能是要把这三本秘籍结合起来。"
   splits:
   - split: 10
@@ -86618,7 +86618,7 @@
   splits:
   - split: 10
     text: "沈退你天天唱戏听曲，火气大得很，这汤你可得少喝。"
-    translated: "Scrimshaw, you've been singing and listening to music every day, so your temper is pretty bad. You should drink less of this soup."
+    translated: "Shen Tui, you sing plays and listen to music every day, so you have a big temper. You should drink less of this soup."
   - split: 10
     subIndex: 1
     text: "不像我经脉尽断，身子虚弱，我得再喝上一碗！"
@@ -87039,7 +87039,7 @@
   splits:
   - split: 10
     text: "顾师兄不必担心，这梵文贝叶经奇妙无比，可以调息养伤。"
-    translated: "Senior Brother Ku, there is no need to worry. This Pali palm leaf text is astonishingly miraculous and can help regulate breathing and aid in recovery."
+    translated: "Senior Brother Gu need not worry. This Sanskrit palm‑leaf text is marvelously powerful and can help regulate breathing and aid in healing."
   - split: 10
     subIndex: 1
     text: "我边写边练，已是得了五六重功力了。"
@@ -88016,7 +88016,7 @@
   splits:
   - split: 10
     text: "顾师兄......各位师兄妹，"
-    translated: "Senior Brother Ku... Fellow senior brothers and sisters,"
+    translated: "Senior Brother Gu... fellow senior brothers and sisters,"
   - split: 10
     subIndex: 1
     text: "有你们与我#$PlayerName#并肩作战，此次定能得胜而回，"
@@ -89083,7 +89083,7 @@
   - split: 10
     subIndex: 1
     text: "此处有我和顾师兄，放心吧。"
-    translated: "Here is Brother Gu and me. Don't worry."
+    translated: "I'm here with Senior Brother Gu, so don’t worry."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -90959,7 +90959,7 @@
   splits:
   - split: 10
     text: "那沈退沈师兄？"
-    translated: "That Shen Tui, Senior Brother?"
+    translated: "That Senior Brother Shen Tui?"
 - raw: ",,沈退,右,,,,,,,呵呵，你真放心，把仙霞派掌门之位交到小爷手里？\\n不怕师傅老人家，半夜到床头找你啊？"
   splits:
   - split: 10
@@ -90980,7 +90980,7 @@
   - split: 10
     subIndex: 1
     text: "杨师兄？小师妹？"
-    translated: "Senior Brother? Junior Sister?"
+    translated: "Senior Brother Yang? Little Junior Sister?"
   templates:
   - split: 10
     template: "{0}…{1}"
@@ -91769,7 +91769,7 @@
   - split: 10
     subIndex: 1
     text: "像你沈退沈师兄那样大手大脚，胡乱花钱了。"
-    translated: "Like your Scattered Retreat Senior Brother, you are being careless with money."
+    translated: "Like your Senior Brother Shen Shen Tui, you spend money freely and recklessly."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -102134,7 +102134,7 @@
   - split: 10
     subIndex: 1
     text: "我和杨师兄都会努力练功，不会拖大家后腿的。"
-    translated: "My brother Senior Fyang and I will work hard on our training; we won't hold everyone back."
+    translated: "Myself and Senior Brother Yang will both train hard and not hold everyone back."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -146819,7 +146819,7 @@
   - split: 10
     subIndex: 1
     text: "阁下来我药王谷有何贵干？总不能是你顾师兄旧病复发了吧......"
-    translated: "Why have you come to Medicine King Valley? You can't be here because your senior brother's old illness flared up again..."
+    translated: "Why have you come to Medicine King Valley? You couldn't have come to relapse into your old illness, Senior Brother Gu..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -160126,7 +160126,7 @@
   - split: 10
     subIndex: 1
     text: "去大隐阁治好你顾游年顾师兄，我就没一点功劳吗？"
-    translated: "If I go to the Great Hidden Pavilion to treat you, Gu Younian, Senior Brother, won't I have any merit at all?"
+    translated: "Did I not deserve any credit for sending Senior Brother Gu Younian to the Great Hidden Pavilion to be healed?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -256241,7 +256241,7 @@
   splits:
   - split: 10
     text: "嘿嘿，顾师兄就别揭人短处了。"
-    translated: "Hehe, Senior Brother Ku, you don't need to point out my weaknesses."
+    translated: "Hehe, Senior Brother Gu, please don't expose others' weaknesses."
   - split: 10
     subIndex: 1
     text: "多亏了你当年指导，才有今日之#$PlayerName#。"
@@ -258807,7 +258807,7 @@
   splits:
   - split: 10
     text: "我和顾师兄对于近来门派之发展有些想法，想与大家商量商量。"
-    translated: "My senior brother Ku and I have some thoughts on the recent development of our sect. We would like to discuss these with everyone."
+    translated: "Senior Brother Gu and I have some thoughts on the recent development of our sect. We would like to discuss them with everyone."
 - raw: ",,杨思迟,右,,,,,,,有啥好商量的，#PlayerName#只管吩咐。\\n你说让大家往东，我杨思迟肯定不会往西。"
   splits:
   - split: 10
@@ -259592,7 +259592,7 @@
   splits:
   - split: 10
     text: "顾师兄，劳烦你去安抚城内百姓，"
-    translated: "Senior Brother Ku, could you please calm the citizens in the city?"
+    translated: "Senior Brother Gu, could you please console the civilians in the city?"
   - split: 10
     subIndex: 1
     text: "告诉他们我仙霞派会广施仁政，保境安民，"
@@ -260481,7 +260481,7 @@
   splits:
   - split: 10
     text: "沈师兄，这名号给你，你担得住吗？"
-    translated: "Senior Brother, I'm giving you this title‑can you live up to it?"
+    translated: "Senior Brother Shen, I'm giving you this title. Can you live up to it?"
   - split: 10
     subIndex: 1
     text: "不怕一下山就被乱刀砍死啊！"
@@ -261278,7 +261278,7 @@
   splits:
   - split: 10
     text: "杨师兄好功夫啊！"
-    translated: "Your senior brother's kung fu is really impressive!"
+    translated: "Senior Brother Yang's kung fu is amazing!"
 - raw: ",,,左,,,,,,,哈哈哈哈，白师妹过奖了。你毕竟入门未久，还得多练。\\n假以时日，定也能达到师兄我这般实力。"
   splits:
   - split: 10
@@ -262053,7 +262053,7 @@
   splits:
   - split: 10
     text: "嘿嘿，顾师兄过奖了。"
-    translated: "Hehe, Senior Brother Ku overstates it"
+    translated: "Hehe, Senior Brother Gu is too kind"
   - split: 10
     subIndex: 1
     text: "我只是不想辜负师傅当年的嘱托，也不想让你们失望。"
@@ -262125,7 +262125,7 @@
   splits:
   - split: 10
     text: "顾师兄的意思是，我们应当主动出击，"
-    translated: "Gu Senior Brother's meaning is that we should take the initiative to attack."
+    translated: "Senior Brother Gu means we should take the initiative to attack."
   - split: 10
     subIndex: 1
     text: "进一步扩张势力范围？"
@@ -262171,7 +262171,7 @@
   splits:
   - split: 10
     text: "确实有些头绪了......顾师兄你有什么想法？"
-    translated: "Indeed, I have some clues now... Senior Brother Ku, what's your thoughts?"
+    translated: "I have some ideas......Senior Brother Gu, what do you think?"
 - raw: ",,,右,,,,,,,呵呵，我正好也有些主意。\\n如此看来，兴许咱们可以对上一对。"
   splits:
   - split: 10
@@ -262216,7 +262216,7 @@
   splits:
   - split: 10
     text: "嗯，我猜顾师兄也会想到此事。"
-    translated: "Hmm, I guess Senior Brother Ku would also have thought of this."
+    translated: "Hmm, I guess Senior Brother Gu would have thought of this as well."
   - split: 10
     subIndex: 1
     text: "这铁掌帮自夏天雄死后，一直未能完全恢复元气。"
@@ -262280,7 +262280,7 @@
   splits:
   - split: 10
     text: "顾师兄，那还有什么好犹豫的？"
-    translated: "Senior Brother Ku, what's left to hesitate about?"
+    translated: "Senior Brother Gu, what's left to hesitate about?"
   - split: 10
     subIndex: 1
     text: "咱们赶紧召集弟子，准备出征......"
@@ -262316,7 +262316,7 @@
   splits:
   - split: 10
     text: "顾师兄说的在理，那咱们应该怎么做？"
-    translated: "The Senior Brother's words make sense. So, what should we do?"
+    translated: "Senior Brother Gu makes a good point. So what should we do?"
 - raw: ",,,右,,,,,,,咱们也有多年没有去过铁掌帮了，不妨再去打探一次。\\n看看韩嵩将铁掌帮经营得如何，其座下弟子又有多少高手。"
   splits:
   - split: 10
@@ -264404,7 +264404,7 @@
   - split: 10
     subIndex: 1
     text: "大师兄跌落山崖，顾师兄也被打得经脉尽断......"
-    translated: "Big Senior Brother fell off a cliff, and Senior Brother was also beaten to the point of severed meridians...."
+    translated: "Big Senior Brother fell off a cliff, and Senior Brother Gu was also beaten to the point of severed meridians......"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -265733,7 +265733,7 @@
   - split: 10
     subIndex: 1
     text: "被这沈退寻得机会绑入牢中，一番酷刑折磨。"
-    translated: "Captured by Shen Tieshun's opportunity, he was subjected to severe torture in the prison."
+    translated: "Captured and imprisoned by Shen Tui's opportunity, he endured a series of brutal tortures."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -272288,7 +272288,7 @@
   - split: 10
     subIndex: 1
     text: "难得沈师兄这么勤奋好学，我岂能不奉陪？"
-    translated: "Hardly ever does Senior Brother Scen work so diligently and studiously; how could I not join in?"
+    translated: "Hard as it is to see Senior Brother Shen study so diligently, how could I not join in?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -286856,7 +286856,7 @@
   - split: 10
     subIndex: 1
     text: "顾师兄，可不能把功劳全归我头上。"
-    translated: "Senior Brother Ku, you can't take all the credit for this."
+    translated: "Senior Brother Gu, you can't take all the credit for this."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -290697,7 +290697,7 @@
   splits:
   - split: 10
     text: "顾师兄说的不错，若想确保此战取胜，"
-    translated: "Senior Brother Ku said it well. If we want to ensure our victory in this battle,"
+    translated: "Senior Brother Gu said well. If we want to ensure our victory in this battle,"
   - split: 10
     subIndex: 1
     text: "不仅需要削弱对方兵力，还需为本门寻找更多外援。"
@@ -294931,7 +294931,7 @@
   - split: 10
     subIndex: 1
     text: "喜欢大师兄的故作严厉，顾师兄的循循善诱。"
-    translated: "Like Big Senior Brother's pretend sternness and Senior Brother's patient guidance."
+    translated: "Likes Master Big Senior Brother's pretended sternness and Senior Brother Gu's gentle guidance."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -294943,7 +294943,7 @@
   - split: 10
     subIndex: 1
     text: "沈师兄的玩世不恭，杨师兄的勤能补拙。"
-    translated: "Scrim Senior Brother's carefree attitude, Fyng Senior Brother's diligence making up for his deficiencies."
+    translated: "Senior Brother Shen's carefree attitude, and Senior Brother Yang's diligence making up for his shortcomings."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -297895,7 +297895,7 @@
   splits:
   - split: 10
     text: "好你个杨师兄，居然学会偷奸耍滑了！"
-    translated: "Good you little Yang Senior Brother, you've actually learned to play dirty!"
+    translated: "Senior Brother Yang, you actually learned to cheat and be sly!"
   - split: 10
     subIndex: 1
     text: "......话说回来，白云子，你的记忆当真恢复了吗？"
