@@ -321,6 +321,22 @@ namespace Tests
             ("ExplodeObstacleDataBase.csv", [0]),
         ];
 
+        /// <summary>
+        /// CSV name columns that are ALSO used verbatim as an atlas sprite lookup key at runtime
+        /// (e.g. InnIconController.Init calling TextureController.LoadAtlasSprite("AreaIconAtlas",
+        /// innData.innName) - see DragonHeirPlugin/AtlasIconPatches.cs). Unlike
+        /// DynamicStringColumnSources, these columns are ALREADY translated whole-string via the
+        /// normal per-row CSV pipeline (not re-sent through the LLM here) - PackageFinalTranslationAsync
+        /// just also copies each row's already-translated (Text, Translated) pair for these columns
+        /// out into a dedicated flat raw/result file (e.g. innIconNames.txt.yaml) so the plugin can
+        /// reverse-translate the sprite key via a small private exact-match dictionary instead of
+        /// DynamicStringPatches' much larger fragment-substitution dictionary.
+        /// </summary>
+        public static readonly (string CsvFileName, int Column, string OutputFileName)[] AtlasSpriteNameColumnSources =
+        [
+            ("InnData.csv", 1, "innIconNames.txt"),
+        ];
+
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringLabelColumnSources =
         [
@@ -1104,12 +1120,18 @@ namespace Tests
                 RemoveNonChineseDynamicStringEntries(workingDirectory, dynamicStringFile);
             }
 
+            // Collected alongside the normal CSV packaging below - see AtlasSpriteNameColumnSources.
+            var atlasSpriteNamePairs = new Dictionary<string, List<(string Raw, string Result)>>();
+
             await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
                 csvTextFiles,
                 async (outputFile, textFileToTranslate, fileLines) =>
             {
                 var failedLines = new List<string>();
                 var outputLines = new List<string>();
+                var atlasSpriteNameSources = AtlasSpriteNameColumnSources
+                    .Where(s => s.CsvFileName == textFileToTranslate.Path)
+                    .ToArray();
 
                 foreach (var line in fileLines)
                 {
@@ -1195,6 +1217,17 @@ namespace Tests
                                 failed = true;
                                 break;
                             }
+
+                            // Also copy this row's already-translated (Text, Translated) pair for
+                            // any AtlasSpriteNameColumnSources column - see that array's comment.
+                            foreach (var source in atlasSpriteNameSources.Where(s => s.Column == split.Split))
+                            {
+                                if (string.IsNullOrEmpty(split.Text) || string.IsNullOrEmpty(split.Translated))
+                                    continue;
+                                if (!atlasSpriteNamePairs.TryGetValue(source.OutputFileName, out var pairs))
+                                    atlasSpriteNamePairs[source.OutputFileName] = pairs = new();
+                                pairs.Add((split.Text, split.Translated));
+                            }
                         }
                     }
 
@@ -1226,9 +1259,28 @@ namespace Tests
                 await Task.CompletedTask;
             });
 
+            // Write out the small, dedicated atlas-sprite-name lookup file(s) collected above -
+            // see AtlasSpriteNameColumnSources. Flat raw/result YAML, same shape as the packaged
+            // dynamicStrings*.txt.yaml files, so the plugin's existing DictionaryEntry
+            // deserializer can load it directly.
+            foreach (var (outputFileName, pairs) in atlasSpriteNamePairs)
+            {
+                var deduped = pairs
+                    .GroupBy(p => p.Raw)
+                    .Select(g => g.First());
+
+                var yamlLines = deduped.Select(p =>
+                    $"- raw: \"{EscapeYamlDoubleQuoted(p.Raw)}\"\n  result: \"{EscapeYamlDoubleQuoted(p.Result)}\"");
+
+                File.WriteAllText($"{outputPath}/{outputFileName}.yaml", string.Join("\n", yamlLines) + "\n");
+            }
 
             Console.WriteLine($"Passed: {passedCount}");
             Console.WriteLine($"Failed: {failedCount}");
         }
+
+        // Minimal YAML double-quoted scalar escaping (backslash and double-quote only - none of
+        // these source strings are expected to contain other control characters).
+        private static string EscapeYamlDoubleQuoted(string s) => s.Replace("\\", "\\\\").Replace("\"", "\\\"");
     }
 }

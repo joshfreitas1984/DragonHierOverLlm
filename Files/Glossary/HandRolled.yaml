@@ -81,6 +81,16 @@
   result: "Sichi"
   exclude:
     - dynamicStringsPoetry.txt
+- raw: 常无黑
+  result: "Chang Wuhei"
+  exclude:
+    - dynamicStringsPoetry.txt
+- raw: 无黑
+  result: "Wuhei"
+  exclude:
+    - dynamicStringsPoetry.txt
+
+
 
 - raw: 二弟
   result: "Second Brother"

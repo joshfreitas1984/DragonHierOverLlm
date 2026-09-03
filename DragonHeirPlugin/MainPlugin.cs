@@ -141,6 +141,9 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
 
+        AtlasIconPatches.LoadSpriteNameDictionary();
+        Harmony.CreateAndPatchAll(typeof(AtlasIconPatches));
+
         // Wrapped separately - unverified Harmony binding for "Awake" against this build's real
         // interop metadata must not take down every patch registered below it (see PlotTextPatches
         // below for the same defensive pattern).
