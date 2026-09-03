@@ -3661,9 +3661,7 @@
   splits:
   - split: 10
     text: "姜师姐不必担心，我和#PlayerName#也会努力练功，"
-    translated: "Jiang Senior Sister need not worry; I and #PlayerName# will also work hard to cultivate."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, you don't need to worry. Both #PlayerName# and I will also work hard to practice our skills."
   - split: 10
     subIndex: 1
     text: "争取早日替大家分忧解难的。"
@@ -3675,9 +3673,7 @@
   splits:
   - split: 10
     text: "嗯！姜师姐，"
-    translated: "Hmm! Sister Senior Jiang,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Hmm! Senior Sister Jiang,"
   - split: 10
     subIndex: 1
     text: "大家一道努力，定能保我仙霞派平安！"
@@ -5746,7 +5742,7 @@
   - split: 10
     subIndex: 1
     text: "余师姐向你使了个颜色，你两便一前一后悄悄跟了上去。"
-    translated: "Second Senior Yu gave you a subtle signal, and you followed discreetly from the front and back."
+    translated: "Senior Sister Yu winked at you and you followed discreetly, one in front and one behind."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -9415,9 +9411,7 @@
   splits:
   - split: 10
     text: "姜师姐拉着小师妹径直向厅外走去，"
-    translated: "Qian Senior Sister pulled Little Junior Sister out of the hall."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang pulled Little Junior Sister out of the hall."
   - split: 10
     subIndex: 1
     text: "两人脸上仍挂着泪水，却已挡不住嘴角萌发的盈盈笑意。"
@@ -15613,9 +15607,7 @@
   splits:
   - split: 10
     text: "姜师姐把我救下后，就是送到这村中找大夫医治。"
-    translated: "After Sister Qiang rescued me, she sent me to this village to see a doctor for treatment."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "After Senior Sister Jiang saved me, she took me to this village to see a doctor for treatment."
   - split: 10
     subIndex: 1
     text: "如今重回故地，还真有几分亲切。"
@@ -16397,7 +16389,7 @@
   splits:
   - split: 10
     text: "余师姐和沈师兄还在前面那辆车上！"
-    translated: "Junior Senior Brother and Senior Brother Yuan are still in the car ahead!"
+    translated: "Senior Sister Yu and Senior Brother Shen are still in the car in front!"
 - raw: ",,,无,,,,,,,林云裳毫不犹豫向陷坑冲去，姜婉想伸手拉扯却已不及，\\n那纤细的身影顿时消失在坑内的滚滚烟尘之中。"
   splits:
   - split: 10
@@ -16583,7 +16575,7 @@
   splits:
   - split: 10
     text: "如今顾师兄余师姐生死未卜，咱就算拼命，也不过做了贼人的刀下鬼。"
-    translated: "Now that the fates of Senior Brother Gu and Miss Senior Yu are uncertain, even if we fight to the death, we will merely be the victims of the villains' blades."
+    translated: "Now that the fates of Senior Brother Gu and Senior Sister Yu are uncertain, even if we fight to the death, we will only be the enemies' victims."
   - split: 10
     subIndex: 1
     text: "不如就分头散开逃跑，再去寻援军回来。"
@@ -17394,7 +17386,7 @@
   splits:
   - split: 10
     text: "此次小师妹能救出顾师兄和余师姐，真是立了大功了。"
-    translated: "This time, Little Junior Sister was able to rescue Senior Brother Gu and Senior Sisier Yu, truly establishing a great merit."
+    translated: "This time, Little Junior Sister was able to rescue Senior Brother Gu and Senior Sister Yu. Truly a major achievement."
   - split: 10
     subIndex: 1
     text: "希望她能平安无事啊。"
@@ -18050,9 +18042,7 @@
   splits:
   - split: 10
     text: "哎呀呀，看来姜师姐和林师妹，是把压箱底子的好东西拿出来了啊。"
-    translated: "Oh, it seems Qiang Senior Sister and Lin Junior Sister have brought out their treasured items."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Oh, it seems that Senior Sister Jiang and Junior Sister Lin have brought out their best treasures."
 - raw: ",,,右,,,,,,,#PlayerName#啊，大难临头，你还有心情在这儿贫嘴。"
   splits:
   - split: 10
@@ -18226,7 +18216,7 @@
   splits:
   - split: 10
     text: "余师姐！"
-    translated: "Senior Yu!"
+    translated: "Senior Sister Yu!"
 - raw: ",,,右,,,,,,,嘘~小声些，再往前走便是黑风寨地界了。"
   splits:
   - split: 10
@@ -19789,9 +19779,7 @@
   splits:
   - split: 10
     text: "姜师姐，余师姐，你们身姿轻巧，房顶上铺设瓦砾就劳烦你们了。"
-    translated: "Qian Senior Sister, Yu Senior Sister, with your agile figures, could you please handle the tiles on the roof?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, Senior Sister Yu, you move so lightly. Could you please help lay the tiles on the roof?"
   - split: 10
     subIndex: 1
     text: "下面砌砖立柱的重活累活，就交给我和思迟便可。"
@@ -20542,9 +20530,7 @@
   splits:
   - split: 10
     text: "是啊，兴许是被我们温柔善良、蕙质兰心的姜师姐给感化了，也说不定呢？"
-    translated: "Maybe Sister‑Qing was moved by our kindness and gentle nature, who knows?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Perhaps Senior Sister Jiang, with her gentle kindness and noble spirit, has been touched and changed, has she not?"
 - raw: ",,,右,,,,,,,哼，又在这儿耍贫嘴。\\n再不认真练功，小心我向大师兄告状去！"
   splits:
   - split: 10
@@ -20597,9 +20583,7 @@
   - split: 10
     subIndex: 1
     text: "我对姜师姐向来敬重无比，余师姐你可不能血口喷人呐！"
-    translated: "I have always held Senior Qiang in the highest regard; Senior Yu, you must not slander her!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "I have always held Senior Sister Jiang in the highest respect, so you, Senior Sister Yu, must not speak so recklessly!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20619,9 +20603,7 @@
   splits:
   - split: 10
     text: "就是就是，所以姜师姐，到底发生了什么事？"
-    translated: "Yeah, so Sister Qiang, what really happened?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Exactly, so, Senior Sister Jiang, what exactly happened?"
 - raw: ",,,右,,,,,,,此事……实在有些难以启齿。"
   splits:
   - split: 10
@@ -20638,9 +20620,7 @@
   splits:
   - split: 10
     text: "你姜师姐吃过饭回房后，发现房中一片凌乱。"
-    translated: "After Sister Senior Jiang returned to her room after eating, she found it in a mess."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "After eating and returning to her room, Senior Sister Jiang found the room in a mess."
   - split: 10
     subIndex: 1
     text: "抽屉柜子被翻得乱七八糟，东西也扔的遍地都是，看来是遭贼了。"
@@ -20727,9 +20707,7 @@
   - split: 10
     subIndex: 1
     text: "姜师姐你别担心，有师傅和师兄们在，定能将那小贼绳之以法。"
-    translated: "Qian Senior Sister, don't worry. With Master and the senior brothers around, we are certain to bring that little thief to justice."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, don't worry. With Master and the senior brothers here, we're certain to bring that little thief to justice."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20825,9 +20803,7 @@
   splits:
   - split: 10
     text: "姜师姐的厢房遭贼了，我在这里搜寻贼人呢。"
-    translated: "Qing Senior Sister's side room was burglarized. I am searching for the thief here."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang's quarters have been robbed, and I am searching for the thief here."
 - raw: ",,,右,,,,,,,适才听到外面有动静，我以为是贼人来了，才慌忙躲进箱中的。\\n没想到是#PlayerName#你……"
   splits:
   - split: 10
@@ -21092,9 +21068,7 @@
   splits:
   - split: 10
     text: "哎呀，现在房中只有余师姐陪着姜师姐"
-    translated: "Oh well, Qiushi Senior Sister is currently the only one here with Shiqian Senior Sister."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Oh, Senior Sister Jiang is currently accompanied only by Senior Sister Yu in the room."
   - split: 10
     subIndex: 1
     text: "岂不是危险？！"
@@ -21143,9 +21117,7 @@
   splits:
   - split: 10
     text: "动我姜师姐的歪心思，杀啊！！！！！"
-    translated: "Attack!!! My Daoist Senior Sister's twisted thoughts must be punished!!!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Attacking Senior Sister Jiang's twisted thoughts, kill!!!!!"
 - raw: ",林云裳,,左,,,,,,,（顺势呼喊起来）师傅师兄们抓贼啊，抓贼啊！莫让贼人走脱了去！"
   splits:
   - split: 10
@@ -21261,9 +21233,7 @@
   splits:
   - split: 10
     text: "姜师姐，余师姐，你们没受伤吧！"
-    translated: "Qiong Senior Sister, Yu Senior Sister, are you guys okay!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, Senior Sister Yu, did you get hurt!"
 - raw: ",,姜婉,右,,,,,ChangeMaxFightSkill;余采薇-1-2,,没事没事，那人只轻点了我们几招，并未下狠手。"
   splits:
   - split: 10
@@ -21341,9 +21311,7 @@
   splits:
   - split: 10
     text: "采薇，近些日子你就陪着你姜师姐，时刻注意些。"
-    translated: "Caiwei, for these past days, make sure to stay by Sister‑Qi's side and be more vigilant."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Cai Wei, lately you should accompany Senior Sister Jiang and be more vigilant."
 - raw: ",,,左,,,,,,,嗯。"
   splits:
   - split: 10
@@ -21430,9 +21398,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#，姜师姐，我感觉已经好多了"
-    translated: "#PlayerName#, Jiang Senior Sister, I feel much better already."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "#PlayerName#, Senior Sister Jiang, I feel much better already."
   templates:
   - split: 10
     template: "{0}……\\n{1}……"
@@ -21490,16 +21456,12 @@
   splits:
   - split: 10
     text: "（姜师姐颇为熟练地吹凉药汤，用嘴唇试过温度，随后缓缓喂进小师妹口中）"
-    translated: "Qiang Senior Sister skillfully blew on the cool medicinal soup, tested its temperature with her lips, then slowly fed it into Little Junior Sister's mouth."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang blew on the cooling medicinal soup skillfully, tested the temperature with her lips, and then slowly fed it to the little junior sister's mouth."
 - raw: ",顾游年,,左,,,,,,,还好有人美心善的姜师姐在此坐镇，否则我们这些大老粗只怕要手足无措了。"
   splits:
   - split: 10
     text: "还好有人美心善的姜师姐在此坐镇，否则我们这些大老粗只怕要手足无措了。"
-    translated: "Fortunately, Sister Senior Jiang, who is kind‑hearted and beautiful, is here to oversee things; otherwise, we rough fellows might have been at a loss."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Fortunately, there's still the kind Senior Sister Jiang here to oversee things, or else we rough guys would have been at a loss."
 - raw: ",,,右,,,,,,,哼，游年你有这闲心思耍贫嘴，还不如去外面买点药材回来，这药罐已经见底啦。"
   splits:
   - split: 10
@@ -21526,9 +21488,7 @@
   splits:
   - split: 10
     text: "好啦好啦，你就听姜师姐的，好生静养。"
-    translated: "Alright, alright. Just follow Sister Qiang's advice and rest properly."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Alright, alright. Just listen to Senior Sister Jiang and take good care to rest."
   - split: 10
     subIndex: 1
     text: "#PlayerName#，咱也听姜师姐安排，去买点药材去。"
@@ -22495,7 +22455,7 @@
   splits:
   - split: 10
     text: "余师姐？"
-    translated: "Senior Yu?"
+    translated: "Senior Sister Yu?"
 - raw: ",,,右,,,,,,,刚才的话我已全听见了。\\n我虽然身上向来不留积蓄，但此前替江陵大户押了几趟镖，报酬正好派上用场。"
   splits:
   - split: 10
@@ -33730,9 +33690,7 @@
   splits:
   - split: 10
     text: "（师傅与顾师兄姜师姐三人站在山门口，迎接着四方武林宾客，"
-    translated: "(Master, Senior Brother Gu Qiang, and Senior Sister Qiang are standing at the mountain gate, welcoming guests from all quarters of the Wulin."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "(Master, along with Senior Brother Jiang and Senior Sister Jiang, stood at the entrance of the mountain, greeting guests from the Wulin."
   - split: 10
     subIndex: 1
     text: "也都是满面春风，喜笑颜开。）"
@@ -33756,9 +33714,7 @@
   - split: 10
     subIndex: 1
     text: "今天你姜师姐和林师妹可是烧了不少好菜呢。"
-    translated: "Today, Junior Sister Jiang and Younger Sister Lin cooked up some delicious dishes."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Today, Senior Sister Jiang and Junior Sister Lin cooked up some delicious dishes."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -34305,9 +34261,7 @@
   - split: 10
     subIndex: 1
     text: "还要有姜师姐。"
-    translated: "Still need Sister Senior Jiang"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Still need Senior Sister Jiang"
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -34315,9 +34269,7 @@
   splits:
   - split: 10
     text: "姜师姐，此处贼人已经解决。"
-    translated: "Senior Jiang, the bandits here have been dealt with."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, the bandits here have been taken care of."
   - split: 10
     subIndex: 1
     text: "咱们赶紧往村子中去救顾师兄吧！"
@@ -34717,7 +34669,7 @@
   splits:
   - split: 10
     text: "（余师姐微微颔首，随后便催动轻功，"
-    translated: "(Dao Yeshi nodded slightly, then used her lightness technique,"
+    translated: "(Senior Sister Yu nodded slightly, then activated her lightness technique,"
   - split: 10
     subIndex: 1
     text: "两三个燕子抄水轻巧起落，便消失在视野中。）"
@@ -34811,7 +34763,7 @@
   splits:
   - split: 10
     text: "不过眼下余师姐还在追踪这伙贼人的去向，"
-    translated: "However, Senior Master Yu is still tracking the whereabouts of these thieves."
+    translated: "But for now, Senior Sister Yu is still tracking the whereabouts of these rogues."
   - split: 10
     subIndex: 1
     text: "若能探得顾师兄下落，她定会飞鸽传书回门派报信的。"
@@ -35543,7 +35495,7 @@
   splits:
   - split: 10
     text: "（趁着场面混乱，不知何时余师姐已绕到一旁，悄悄接近三人。）"
-    translated: "(Availing himself of the chaotic moment, Senior Sishyi managed to sneak up on the three individuals from the side without anyone noticing.)"
+    translated: "(Availing herself of the chaotic moment, Senior Sister Yu had sneaked around and quietly approached the three of them at an unknown point in time.)"
 - raw: ",,,左,,,SpeEffect/响亮刀鸣,,ChangeInjury;公孙防-0-20,,（如同一道白练破空而出，以肉眼难辨之速度冲向顾游年）\\n给我放手。"
   splits:
   - split: 10
@@ -35760,9 +35712,7 @@
   splits:
   - split: 10
     text: "姜师姐！顾师兄状况如何？"
-    translated: "Qin Senior Sister! How is Gu Senior Brother?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang! How is Senior Brother Gu?"
 - raw: ",,,右,,,,,,,师傅正在替他疗伤……状况不太乐观。\\n咱们现在疗伤室外等候，别进去添乱了。"
   splits:
   - split: 10
@@ -35948,9 +35898,7 @@
   - split: 10
     subIndex: 1
     text: "姜师姐说过你吉人天相，一定会好起来的！"
-    translated: "Qiong Senior Sister said that as a person with good fortune, you will definitely get better!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang said you are a person who will have good fortune, and you will definitely get better!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -40482,9 +40430,7 @@
   splits:
   - split: 10
     text: "这种恶徒，一个字都不能信，杨师兄我和姜师姐来助你！"
-    translated: "This villain cannot be trusted at all, Senior Brother Yang, I and Sister Jing will assist you!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "This villain cannot be trusted; a single word from him is lies. Senior Brother Yang, I and Senior Sister Jiang will assist you!"
 - raw: ",,,右,,,,,StartSpeFight;51,,哎这又何苦，如此可就难以收场了。\\n小的们，莫留活口！"
   splits:
   - split: 10
@@ -40541,9 +40487,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，姜师姐你们去求援，我来断后！"
-    translated: "#PlayerName#, Sister Qiang, go seek reinforcements; I'll hold them off!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "#PlayerName#, Senior Sister Jiang, you go seek reinforcements, I'll cover your retreat!"
 - raw: "305,杨思迟,张成化,右,,,,,,,算了算了，各位如此执着，我就卖个面子。\\n先走一步，告辞！"
   splits:
   - split: 10
@@ -40904,7 +40848,7 @@
   splits:
   - split: 10
     text: "余师姐别乱说话！"
-    translated: "Senior Sister, don't speak out of turn!"
+    translated: "Senior Sister Yu, don't speak recklessly!"
 - raw: ",,,右,,,,,,,呵呵，没事没事，小姑娘志气高远，并非坏事。\\n不过这文逸真人避世绝俗，不见外人，我代她和你们过两招如何？"
   splits:
   - split: 10
@@ -41057,7 +41001,7 @@
   splits:
   - split: 10
     text: "余师姐说什么呢？"
-    translated: "What did Senior Sishisista say?"
+    translated: "What does Senior Sister Yu say?"
   - split: 10
     subIndex: 1
     text: "初生牛犊不怕虎，前辈你莫要与她一般见识。"
@@ -41346,9 +41290,7 @@
   - split: 10
     subIndex: 2
     text: "姜师姐怎么受伤了？"
-    translated: "How did Sister Senior Jiang get injured?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "How did Senior Sister Jiang get injured?"
   templates:
   - split: 10
     template: "{0}……\\n{1}\\n{2}"
@@ -41535,9 +41477,7 @@
   splits:
   - split: 10
     text: "等等，不对！你是之前偷姜师姐贴身衣物的淫贼！"
-    translated: "Wait, no! You're the pervert who stole Senior Instructor Jiang's personal clothing!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Wait, no! You're the pervert who stole Senior Sister Jiang's personal clothing!"
   - split: 10
     subIndex: 1
     text: "身形和武功路数一模一样！"
@@ -41577,9 +41517,7 @@
   - split: 10
     subIndex: 1
     text: "查案就查案，和我姜师姐的贴身衣物有什么关系！"
-    translated: "Investigating cases has nothing to do with my Senior Sister Qiang's personal clothes!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Investigating the case is one thing, but what does it have to do with Senior Sister Jiang's personal belongings!"
   - split: 10
     subIndex: 2
     text: "淫贼看剑！"
@@ -41595,9 +41533,7 @@
   - split: 10
     subIndex: 1
     text: "包括这次的杀手，皆与你姜师姐的身世有关！"
-    translated: "Including this latest assassin, all are related to Senior Sis Jiang's background!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Including this latest assassin, all are related to Senior Sister Jiang's background!"
   - split: 10
     subIndex: 2
     text: "你们不知其中利害，方才有此误会。"
@@ -41877,14 +41813,12 @@
   splits:
   - split: 10
     text: "姜师姐！"
-    translated: "Senior Jiang!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang!"
 - raw: ",,,左,,,,,,,余师姐，师傅？你们怎么都在？吓我一跳……\\n呵呵，我已不是什么姜婉了，连姓甚名谁都不晓得……"
   splits:
   - split: 10
     text: "余师姐，师傅？你们怎么都在？吓我一跳"
-    translated: "Sister Senior Master, Master? Why are you all here? Scared me a jump."
+    translated: "Senior Sister Yu, Master? Why are you both here? Scared me for a moment."
   - split: 10
     subIndex: 1
     text: "呵呵，我已不是什么姜婉了，连姓甚名谁都不晓得"
@@ -41940,9 +41874,7 @@
   - split: 10
     subIndex: 1
     text: "姜师姐上次重病蒙你照护，今天我来给你疗伤，走吧！"
-    translated: "Qian Shi‑zijie took care of me when I was seriously ill last time, so today it's my turn to heal you. Let's go!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, you took care of me when I was seriously ill last time. Today, I'm here to heal your wounds. Let's go!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -43220,9 +43152,7 @@
   splits:
   - split: 10
     text: "姜师姐，自作孽不可活，我犯了门规，自当受罚。"
-    translated: "Senior Jiang, suffering the consequences of one's own actions, I broke the sect rules and must face the punishment."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, suffering the consequences of one's own actions, I broke the sect rules and thus deserve the punishment."
   - split: 10
     subIndex: 1
     text: "只是我心中不服，凭什么仙霞派弟子就不能学铁掌帮武功？"
@@ -43371,9 +43301,7 @@
   splits:
   - split: 10
     text: "姜师姐，真是刀子嘴，豆腐心啊。"
-    translated: "Cao Shi‑xian is really sharp‑tongued and tender‑hearted"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang truly has a sharp tongue and a kind heart."
   - split: 10
     subIndex: 1
     text: "我看不出三天，她肯定得送饭到后山去。"
@@ -57400,7 +57328,7 @@
   splits:
   - split: 10
     text: "我功夫可没那么弱，不需要余师姐处处保护。"
-    translated: "My kung fu isn't that weak; I don't need Senior Sis Yu to protect me everywhere."
+    translated: "My kung fu isn't that weak; I don't need Senior Sister Yu to protect me all the time."
   - split: 10
     subIndex: 1
     text: "顾师兄你可别小瞧了我啊！"
@@ -57416,7 +57344,7 @@
   - split: 10
     subIndex: 1
     text: "你和余师姐互相援护，且战且退，将敌人引诱至门派大门口即可！"
-    translated: "You and Senior Apprentice Sister Yu support each other in battle, fighting while retreating, to lead the enemies to the entrance of the Sect!"
+    translated: "You and Senior Sister Yu should support each other while fighting and retreating, leading the enemies to the entrance of the Sect!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -57610,7 +57538,7 @@
   splits:
   - split: 10
     text: "（你和余师姐来到山下，装作普通巡逻弟子，开始静待敌人来袭）"
-    translated: "(You and Yu Senior Sister arrive at the foot of the mountain, posing as ordinary patrol disciples, starting to silently await the enemy's attack.)"
+    translated: "(You and Senior Sister Yu go down the mountain, pretending to be ordinary patrol disciples, starting to wait quietly for the enemies to attack.)"
 - raw: ",,,无,,,Horses,,,,（过了约莫个把时辰，远处忽然扬其阵阵尘土，\\n有许多杂乱急促的马蹄和脚步声正在快速接近。）"
   splits:
   - split: 10
@@ -57770,7 +57698,7 @@
   - split: 10
     subIndex: 1
     text: "余师姐快撤，师傅叮嘱过咱们不要恋战！"
-    translated: "Sister Master, withdraw quickly! Master told us not to engage in prolonged battles!"
+    translated: "Senior Sister Yu, retreat quickly! Master has told us not to engage in prolonged battles!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -57786,11 +57714,11 @@
   splits:
   - split: 10
     text: "（一把拉住余师姐，狠命往回拽）"
-    translated: "(grabbed Senior Sishijie and pulled her back with all his strength)"
+    translated: "(grabbing Senior Sister Yu and pulling her back with all his strength)"
   - split: 10
     subIndex: 1
     text: "哎呀余师姐，算我输了，可别误了本门的大事啊！"
-    translated: "Oh Sister Senior Yu, count me as the loser. Please don't mess up our sect's big affairs!"
+    translated: "Ah, Senior Sister Yu, consider me defeated. Please do not delay the Daoist Gate's important matter!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -57976,7 +57904,7 @@
   splits:
   - split: 10
     text: "哎呀余师姐，都什么时候了，等击退了贼人再说！"
-    translated: "Oh Sister Senior Yu, it's already time! Let's talk about repelling the bandits after that!"
+    translated: "Oh, Senior Sister Yu, it's too late now! Let's discuss it after we repel the bandits!"
 - raw: ",,,无,,,,,,,（话音刚落，为首的数十名贼人已经冲上山顶，向着门口杀来）"
   splits:
   - split: 10
@@ -60168,9 +60096,7 @@
   splits:
   - split: 10
     text: "呵呵，姜师姐说一看到你就生气，所以就差我来了。"
-    translated: "Haha, Sister Instructor Jiang said she got angry as soon as she saw you, so that's why I was called in."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Haha, Senior Sister Jiang said she got angry as soon as she saw you, so she sent me instead."
 - raw: ",,,右,,,,,,,……哼，婉儿她到底是妇人之仁，岂能理解我的鸿鹄之志。"
   splits:
   - split: 10
@@ -60878,9 +60804,7 @@
   - split: 10
     subIndex: 1
     text: "看看姜师姐和小师妹又做了什么拿手好菜"
-    translated: "See what Junior Sister Jiang and Little Junior Sister have cooked up again."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Check out what Senior Sister Jiang and Little Junior Sister are making for their signature dishes."
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -62378,9 +62302,7 @@
   splits:
   - split: 10
     text: "沈师兄，余师姐，姜师姐？怎么都走远了？"
-    translated: "Senior Brothers Shen and Qin, Senior Sister Yu and Jiang, why have you all moved so far away?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Brother Shen, Senior Sister Yu, Senior Sister Jiang? Why have you all walked so far away?"
   - split: 10
     subIndex: 1
     text: "你们三个"
@@ -62401,9 +62323,7 @@
   splits:
   - split: 10
     text: "姜师姐，我看到你的飞鸽传书了，"
-    translated: "Senior Jiang, I saw your pigeon message"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, I saw your pigeon message."
   - split: 10
     subIndex: 1
     text: "你怎么突然想到要去飞龙门一趟？"
@@ -63046,9 +62966,7 @@
   splits:
   - split: 10
     text: "姜师姐，你出来啦"
-    translated: "Cousin Jiang, you're out now"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, you're out now"
   - split: 10
     subIndex: 1
     text: "怎么眼睛红红的，嘴上还挂着笑？失心疯啦？"
@@ -63076,9 +62994,7 @@
   - split: 10
     subIndex: 1
     text: "一向天性纯良，一说谎就脸红的姜师姐，竟也学会这种伎俩了？"
-    translated: "Could the Senior Sister Jing, who used to be so innocent and blush when she lied, have also learned such tricks?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, who has always been innocent and blushes when she lies‑has she also learned this trick?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -66069,7 +65985,7 @@
   - split: 10
     subIndex: 1
     text: "余师姐，怎么又想到要去寻访高手了？"
-    translated: "Senior Yu, why have you started thinking about seeking out powerful cultivators again?"
+    translated: "Senior Sister Yu, why have you started thinking about seeking out powerful warriors again?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -66426,9 +66342,7 @@
   - split: 10
     subIndex: 1
     text: "我看这乐无疾的相貌，跟咱姜师姐和小师妹，也就半斤八两"
-    translated: "From looking at Yue Wuji's appearance, she's about on par with Master Sister Jiang and our little junior sister."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "I find Yue Wuji's appearance to be about on par with Senior Sister Jiang and Little Junior Sister."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -66731,7 +66645,7 @@
   splits:
   - split: 10
     text: "余师姐！你不要命啦！"
-    translated: "Senior Master Yu! Are you trying to die?!"
+    translated: "Senior Sister Yu! You're not trying to kill yourself, right!"
   - split: 10
     subIndex: 1
     text: "幸好这长乐帮主大人有大量，处处手下留情，"
@@ -66799,7 +66713,7 @@
   - split: 10
     subIndex: 1
     text: "不过余师姐，你以后还是别这么莽撞了，万一惹恼了人家"
-    translated: "But Senior Sishixi, you really shouldn't be so reckless in the future. You might anger someone by accident."
+    translated: "But, Senior Sister Yu, you really shouldn't be so reckless in the future. Who knows if you might offend someone."
   templates:
   - split: 10
     template: "{0}……\\n{1}……"
@@ -66833,7 +66747,7 @@
   splits:
   - split: 10
     text: "余师姐，这些东西，都是你刚才这么短时间里就学到的？"
-    translated: "Sister Senior Yu, did you learn all of this in such a short time just now?"
+    translated: "Senior Sister Yu, did you learn all of this in such a short time just now?"
   - split: 10
     subIndex: 1
     text: "太快了点吧"
@@ -66861,9 +66775,7 @@
   - split: 10
     subIndex: 1
     text: "带点回去给姜师姐和小师妹尝尝。"
-    translated: "Take some back for Auntie Jiang and Little Junior Sister to taste."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Take some back and let Senior Sister Jiang and Little Junior Sister try it."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -72757,9 +72669,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#，师弟师妹们，姜师姐从来没求过你们什么，"
-    translated: "#PlayerName#, junior disciples and junior sister, Qian Senior Sister has never asked of you anything."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "#PlayerName#, junior disciples, Senior Sister Jiang has never asked for anything from you."
   - split: 10
     subIndex: 2
     text: "今天求你们了，别赶我走，我想留在仙霞派，和你们一起"
@@ -72776,9 +72686,7 @@
   splits:
   - split: 10
     text: "师傅！姜师姐已经失去了家人，不能再失去我们了。"
-    translated: "Master! Sister Qiang has already lost her family and can't afford to lose us too."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Master! Senior Sister Jiang has already lost her family and can't afford to lose us as well."
   - split: 10
     subIndex: 1
     text: "师傅你就让她留下吧！"
@@ -72814,9 +72722,7 @@
   splits:
   - split: 10
     text: "是啊是啊，若姜师姐走了，"
-    translated: "Yeah, yeah, if Senior Sister Jiaqiang leaves,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Yes, yes, if Senior Sister Jiang leaves,"
   - split: 10
     subIndex: 1
     text: "咱仙霞派不就像鱼离了水，草没了根似得，丢了主心骨啊！"
@@ -72828,9 +72734,7 @@
   splits:
   - split: 10
     text: "师傅，我也还有好多菜式，没跟姜师姐学会呢！"
-    translated: "Master, I still have many dishes left to learn from Qiang Senior Sister!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Master, I still have many dishes left to learn from Senior Sister Jiang!"
   - split: 10
     subIndex: 1
     text: "让她留下来吧"
@@ -73052,9 +72956,7 @@
   - split: 10
     subIndex: 3
     text: "我只想在仙霞派，当大家的姜师姐就行了"
-    translated: "I just want to be Qiong Senior Sis in the Xianxia Sect."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "I just want to be Senior Sister Jiang for everyone in the Xianxia Sect."
   templates:
   - split: 10
     template: "{0}……{1}……{2}\\n{3}……"
@@ -73139,9 +73041,7 @@
   splits:
   - split: 10
     text: "姜师姐！"
-    translated: "Senior Jiang!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang!"
 - raw: ",,姜婉,右,,,,,,,（惨然一笑，两行热泪滚落脸颊）\\n小师妹，#PlayerName#，师傅，各位，\\n我虽也舍不得你们。"
   splits:
   - split: 10
@@ -73603,9 +73503,7 @@
   splits:
   - split: 10
     text: "（罕见地表情严肃起来）姜师姐，我明白。"
-    translated: "(Quietly adopting a serious expression,) Senior Qiang, I understand."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "(Sterribly Serious) Senior Sister Jiang, I understand"
 - raw: ",杨思迟,,右,,,,,,,杨师弟，你虽然天资不高，却是本门练功最勤快的一个。\\n师姐一直怕你太过刻苦练坏了身子，\\n记住天冷了要添衣，累了就多休息，别勉强自己。"
   splits:
   - split: 10
@@ -73638,9 +73536,7 @@
   splits:
   - split: 10
     text: "不勉强！姜师姐！你的恩情，我杨思迟永远不会忘掉的！"
-    translated: "No pressure! Sister Senior Jiang! I, Yang Sichi, will never forget your kindness!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "No pressure! Senior Sister Jiang! I, Yang Sichi, will never forget your kindness!"
   - split: 10
     subIndex: 1
     text: "我这就刻苦练功去！嚯！！！！！哈！！！！！"
@@ -73689,9 +73585,7 @@
   splits:
   - split: 10
     text: "姜师姐，谢谢你，入门以来你对我最为关照。"
-    translated: "Qiong Senior Sister, thank you. Since I entered the sect, you have been most considerate to me."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, thank you. Since I entered the sect, you have taken the best care of me."
   - split: 10
     subIndex: 1
     text: "我一定会将仙霞派打理地井井有条的，你就放心吧！"
@@ -77366,9 +77260,7 @@
   splits:
   - split: 10
     text: "姜师姐，好久不见！"
-    translated: "Senior Jiang, long time no see!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, long time no see!"
   - split: 10
     subIndex: 1
     text: "你这是练了什么功法，怎么感觉越来越年轻漂亮了呀？"
@@ -77409,9 +77301,7 @@
   splits:
   - split: 10
     text: "只是姜师姐，你怎么突然想到要搜罗珍宝，"
-    translated: "Just Sister Qiang, why did you suddenly think of gathering treasures?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Just Senior Sister Jiang, why did you suddenly start collecting treasures?"
   - split: 10
     subIndex: 1
     text: "是准备给自己攒嫁妆了？"
@@ -77556,9 +77446,7 @@
   splits:
   - split: 10
     text: "（赶忙扶住）哎呀姜师姐！不敢当不敢当！"
-    translated: "Hastily supported Ah Yi Qiang! That's too kind!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "(Hurriedly supported) Oh, Senior Sister Jiang! It's too kind, too kind!"
   - split: 10
     subIndex: 1
     text: "既是为了治好顾师兄，那就是分内之事，赴汤蹈火，在所不辞！"
@@ -77888,9 +77776,7 @@
   - split: 10
     subIndex: 1
     text: "当今圣上不是喜欢奇珍异宝么，我就替姜师姐寻了件珍宝进献过去。"
-    translated: "Since the current emperor enjoys rare treasures, I found a precious item for Qian Senior Sister to offer him."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Doesn't His Majesty the current emperor enjoy rare treasures? So I found a precious item for Senior Sister Jiang to present to him."
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -77898,9 +77784,7 @@
   splits:
   - split: 10
     text: "加上飞龙门的诸葛掌门，看在姜师姐这前朝公主的面子上，"
-    translated: "Add the Sect Leader of Flying Dragon Gate out of face for Young Lady Princess Qiang."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Adding Flying Dragon Gate's Master Zhu, out of Senior Sister Jiang's former royal princess's face,"
   - split: 10
     subIndex: 1
     text: "替咱们在皇上面前求情，这不就求来这道圣旨了么！"
@@ -77912,9 +77796,7 @@
   splits:
   - split: 10
     text: "原来是#PlayerName#和姜师姐，"
-    translated: "Originally, it was #PlayerName# and Senior Jiang"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "It was #PlayerName# and Senior Sister Jiang"
   - split: 10
     subIndex: 1
     text: "这等大事，你们怎么也不跟我商量商量？"
@@ -77947,9 +77829,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#和姜师姐，你们的大恩大德，我顾游年铭记于心，绝不敢忘！"
-    translated: "#PlayerName# and Senior Jiang, the great kindness you have shown me, I Gu Younian will never forget!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "#PlayerName# and Senior Sister Jiang, your great kindness and favors are deeply engrained in my heart, Gu Younian, and I would never forget them!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -79067,7 +78947,7 @@
   splits:
   - split: 10
     text: "观看顾师兄和余师姐两位高手比武，"
-    translated: "Watching Senior Brothers Gu and Yu's skilled martial arts duel,"
+    translated: "Watching the skilled combat between Senior Brother Gu and Senior Sister Yu,"
   - split: 10
     subIndex: 1
     text: "实在是赏心悦目，令我也心潮澎湃啊。"
@@ -82976,9 +82856,7 @@
   - split: 10
     subIndex: 1
     text: "自可以名正言顺把姜师姐接回来。"
-    translated: "You can openly and rightfully bring Sister Qiang back."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "You can bring Senior Sister Jiang back with every right to do so."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -83362,7 +83240,7 @@
   splits:
   - split: 10
     text: "余师姐，那咱们就依计行事，去巴陵村大闹一番吧。"
-    translated: "Sister Senior Yu, let's proceed as planned and create a commotion in Baling Village."
+    translated: "Senior Sister Yu, let's proceed as planned and cause a ruckus in Baling Village."
 - raw: ",,,右,,,,,,,嗯，我先去巴陵村探查，到时候在村口汇合。\\n#PlayerName#路上多小心。"
   splits:
   - split: 10
@@ -83471,7 +83349,7 @@
   - split: 10
     subIndex: 1
     text: "（猛出几招攻向余师姐要害）"
-    translated: "(Focus several attacks on Sister Senior Yu's vital points)"
+    translated: "(Fly through several attacks targeting Senior Sister Yu's vital points)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -83736,7 +83614,7 @@
   splits:
   - split: 10
     text: "（向余师姐使了个眼色，二人赶忙催动轻功，向山下跑去）"
-    translated: "(Sent a glance to Senior Sishijie, the two hurriedly activated their lightness and ran down the mountain)"
+    translated: "(Sent Senior Sister Yu a glance, the two hurriedly activated their lightness and ran down the mountain)"
 - raw: ",临时:铁掌帮众丙,,左,,,,,,,咳咳咳咳，韩长老，要不要叫人去追？"
   splits:
   - split: 10
@@ -84105,7 +83983,7 @@
   splits:
   - split: 10
     text: "师傅未免太小瞧我和余师姐了。"
-    translated: "Master undervalues me and Senior Sishixi"
+    translated: "Master must think too little of me and Senior Sister Yu."
   - split: 10
     subIndex: 1
     text: "弟子此番佯攻，在巴陵村可是闹出了不小的动静。"
@@ -86352,7 +86230,7 @@
   splits:
   - split: 10
     text: "余师姐，这、这么快？"
-    translated: "Senior Yu, this, so soon?"
+    translated: "Senior Sister Yu, this, so soon?"
 - raw: ",,,右,,,,,,,也没那么难，我将这三页放在一起看时，\\n这口诀便像是一字一句从脑海中跳出来一般。"
   splits:
   - split: 10
@@ -86528,7 +86406,7 @@
   splits:
   - split: 10
     text: "余师姐，我这边还有一处不明，"
-    translated: "Senior Yu, I still have one thing that's unclear here."
+    translated: "Senior Sister Yu, I still have one thing that's unclear here."
   - split: 10
     subIndex: 1
     text: "你看是应该顺着写，还是反过来......."
@@ -86792,7 +86670,7 @@
   - split: 10
     subIndex: 1
     text: "对了，余师姐还没喝上呢，我这碗给她好了。"
-    translated: "Right, Sister Senior Yu hasn't had a sip yet. I'll give her this bowl."
+    translated: "Right, Senior Sister Yu hasn't had a taste yet. I'll give her this bowl."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -86846,7 +86724,7 @@
   splits:
   - split: 10
     text: "余师姐，你要不去休息会吧，一晚上都没合眼。"
-    translated: "Yi Senior Sister, why don't you go get some rest? You didn't sleep at all last night."
+    translated: "Senior Sister Yu, why don't you go rest for a while? You haven't closed your eyes all night."
 - raw: ",,,右,,,,,,,没事没事，我这儿还剩最后几句心法口诀。\\n此处极为艰深精妙。容不得半点打断。"
   splits:
   - split: 10
@@ -86958,7 +86836,7 @@
   splits:
   - split: 10
     text: "余师姐！你没事吧！"
-    translated: "Senior Yu! Are you alright!"
+    translated: "Senior Sister Yu! Are you okay!"
 - raw: ",,,右,,,,,,,（轻拭嘴角的血迹，手中笔仍不停）\\n摒除杂念，心如止水，云海听涛，内观自在......"
   splits:
   - split: 10
@@ -86985,7 +86863,7 @@
   splits:
   - split: 10
     text: "小师妹，余师姐如此我也心有不忍。"
-    translated: "Junior Sister, if Senior Sister acts like this, I can't help but feel sorry for her."
+    translated: "Little Junior Sister, I too feel pity for Senior Sister Yu."
   - split: 10
     subIndex: 1
     text: "可此时打断，只怕前功尽弃了！"
@@ -87104,7 +86982,7 @@
   splits:
   - split: 10
     text: "（抹着断线珍珠般的眼泪）呜呜呜呜呜，余师姐，余师姐都吐血了。"
-    translated: "Sniffle sniffle sniffle sniffle, Senior Yu, Senior Yu almost vomited blood."
+    translated: "(Crying tears like strings of pearls) Wuhuahuahuahuahua, Senior Sister Yu, Senior Sister Yu has even coughed up blood."
   - split: 10
     subIndex: 1
     text: "不过总算写出来了，太好了！太好了！"
@@ -87644,7 +87522,7 @@
   splits:
   - split: 10
     text: "余师姐，这次请你多多关照了。"
-    translated: "Senior Yu, please look after me this time."
+    translated: "Senior Sister Yu, please look after me this time."
 - raw: ",余采薇,,左,,,,,,,嗯，小师妹，你在我背后见机行事，\\n莫要逞强，师姐我定能保你安全。"
   splits:
   - split: 10
@@ -88174,7 +88052,7 @@
   splits:
   - split: 10
     text: "等师傅从南门，顾师兄从西门，余师姐从东门轮流发动进攻后，"
-    translated: "After Master attacks from the South Gate, Senior Brother Gu from the West Gate, and Senior Sis Yu from the East Gate in turn,"
+    translated: "After the Master attacks from the South Gate, Senior Brother Gu from the West Gate, and Senior Sister Yu from the East Gate in turn,"
   - split: 10
     subIndex: 1
     text: "咱们最后一个动手，一举攻下巴陵村北门！"
@@ -91266,7 +91144,7 @@
   splits:
   - split: 10
     text: "余师姐，小师妹，你们去检查伤员，将受伤的村民送医治疗。"
-    translated: "Senior Sister Ye, junior sister, check the injured and send the wounded villagers to the hospital for treatment."
+    translated: "Senior Sister Yu, Junior Sister, go check on the wounded, and send the injured villagers to the hospital for treatment."
   - split: 10
     subIndex: 1
     text: "若是有铁掌帮的伤员，也包扎一番，送还他们总舵便是。"
@@ -91447,9 +91325,7 @@
   splits:
   - split: 10
     text: "姜师姐！"
-    translated: "Senior Jiang!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang!"
 - raw: ",,,右,,,,,,,#PlayerName#，你怎么也来这江陵城中啊？"
   splits:
   - split: 10
@@ -92111,9 +91987,7 @@
   splits:
   - split: 10
     text: "姜师姐，这是......"
-    translated: "Senior Jiang, this is..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, this is..."
 - raw: ",,,右,,,,,,,这是你刚刚看中的那双靴子，换上看看，合不合身？"
   splits:
   - split: 10
@@ -92123,9 +91997,7 @@
   splits:
   - split: 10
     text: "哎呀姜师姐，今天你都借了私房钱给我了，这靴子我可不能再收了。"
-    translated: "Oh Sister Qiang, you've already lent me your personal funds today. I can't accept these boots either."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Ah, Senior Sister Jiang, since you've already lent me your private funds today, I can't accept these boots either."
 - raw: ",,,右,,,,,,,好啦好啦，师姐我可是存了不少私房钱的，不差这三瓜两枣。"
   splits:
   - split: 10
@@ -92724,9 +92596,7 @@
   splits:
   - split: 10
     text: "姜师姐，这是......"
-    translated: "Senior Jiang, this is..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, this is..."
   - split: 10
     subIndex: 1
     text: "我和#PlayerName#刚从江陵采买的粮食，正要运去仓库呢。"
@@ -92827,9 +92697,7 @@
   splits:
   - split: 10
     text: "哎呀姜师姐，我这不也是为了咱们仙霞派考虑么。"
-    translated: "Ah Sister Qiang, I was just trying to think of the best for our Xianxia Sect."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Ah, Senior Sister Jiang, I'm just thinking of the best for the Xianxia Sect."
   - split: 10
     subIndex: 1
     text: "派内粮仓告罄，眼下去江陵采买又不太来得及，"
@@ -105724,7 +105592,7 @@
   splits:
   - split: 10
     text: "哎呀余师姐，人家只是峨眉派杂役弟子，"
-    translated: "Oh Sister Senior Yu, I'm just an Emei Sect menial disciple."
+    translated: "Ah, Senior Sister Yu, I'm just an Emei Sect menial disciple."
   - split: 10
     subIndex: 1
     text: "你见人就冲上去切磋两招，别把人家吓坏了......"
@@ -105858,7 +105726,7 @@
   splits:
   - split: 10
     text: "没想到余师姐这么快就落败了，"
-    translated: "I didn't expect Senior Sishisui to lose so quickly."
+    translated: "I didn't expect Senior Sister Yu to fall so quickly."
   - split: 10
     subIndex: 1
     text: "想必是手下留情太多，怕伤着这小姑娘。"
@@ -105882,7 +105750,7 @@
   splits:
   - split: 10
     text: "好了好了，仙霞派也逛了，和余师姐也切磋过了。"
-    translated: "Alright, alright. We've also visited the Xianxia Sect and sparred with Senior Sis Yu."
+    translated: "Alright, alright, we've toured the Xianxia Sect, and we've sparred with Senior Sister Yu."
   - split: 10
     subIndex: 1
     text: "这下#TargetInteractName#可以乖乖回峨眉了吧！"
@@ -179597,9 +179465,7 @@
   splits:
   - split: 10
     text: "我收到她的飞鸽传书了，姜师姐真、真准备......寻短见？"
-    translated: "I received her dovescript message. Senior Sishijie is really considering... ending it all?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "I received her carrier pigeon message, Senior Sister Jiang is truly... planning to... end it all?"
 - raw: ",,,右,,,,,,,还能有假？她怕被我制住，如今站在藏经阁窗台上不愿下来，\\n准备见你最后一面之后就跳楼！"
   splits:
   - split: 10
@@ -179654,9 +179520,7 @@
   splits:
   - split: 10
     text: "姜师姐！你你你快从窗台上下来，别想不开啊！"
-    translated: "Senior Jiang! Please come down from the window ledge quickly, don't be so impulsive!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang! Please come down from the window ledge! Don't do something you might regret!"
 - raw: ",,,右,,,,,,,#PlayerName#，你可算来了。\\n我准备见你最后一面，然后便去陪师傅他老人家。"
   splits:
   - split: 10
@@ -179685,9 +179549,7 @@
   splits:
   - split: 10
     text: "姜师姐，事出突然，况且这也并非你的责任啊！"
-    translated: "Senior Jiang, this came as a sudden turn of events, and besides, this isn't really your responsibility!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, this came as a sudden turn of events, and besides, this is not your responsibility either!"
 - raw: ",,,右,,,,,,,#PlayerName#无需多言！我这就去九泉之下，向师傅赔罪！"
   splits:
   - split: 10
@@ -179697,9 +179559,7 @@
   splits:
   - split: 10
     text: "慢着！姜师姐！"
-    translated: "Wait! Sister Senior Jiang!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Halt! Senior Sister Jiang!"
   - split: 10
     subIndex: 1
     text: "师傅临走前，叮嘱我继任仙霞派掌门后，"
@@ -179715,9 +179575,7 @@
   splits:
   - split: 10
     text: "若姜师姐真寻了短见，"
-    translated: "If Sister Qiang really ended her own life,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "If Senior Sister Jiang really did take her own life,"
   - split: 10
     subIndex: 1
     text: "那我便也辜负了师傅遗命，罪该万死。"
@@ -179765,9 +179623,7 @@
   splits:
   - split: 10
     text: "姜师姐，无需多言。"
-    translated: "Senior Jiang, no need for further words"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, no need for further words."
   - split: 10
     subIndex: 1
     text: "我数一二三，咱们一起跳下去！"
@@ -179806,9 +179662,7 @@
   splits:
   - split: 10
     text: "姜师姐你先下来。"
-    translated: "Senior Instructor Jiang, please come down first"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, you come down first"
 - raw: ",,,右,,,ItemGet,,,,行行行，我先下来......哎......\\n动不动就寻死觅活，真是小孩子脾气。"
   splits:
   - split: 10
@@ -179882,9 +179736,7 @@
   splits:
   - split: 10
     text: "姜师姐，你保证不再寻死觅活了？"
-    translated: "Qing Senior Sister, do you promise not to try and kill yourself anymore?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, can you ensure you will no longer try to take your own life? promise you won't try to kill yourself anymore?"
 - raw: ",,,右,,,,,,,好了好了，保证不保证不，总行了吧。"
   splits:
   - split: 10
@@ -180062,9 +179914,7 @@
   splits:
   - split: 10
     text: "呵呵，姜师姐您这么英姿飒爽，人美心善，"
-    translated: "Haha, Sister Senior Jiang, you are so spirited and graceful. You are not only beautiful but also kind‑hearted."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Haha, Senior Sister Jiang, you are so spirited and graceful. You are not only beautiful but also kind‑hearted."
   - split: 10
     subIndex: 1
     text: "就算从楼上跳下来摔得鼻青脸肿，师兄师弟们也能认得。"
@@ -180080,9 +179930,7 @@
   - split: 10
     subIndex: 1
     text: "敢拿你姜师姐开涮了是吧？看我不揍你！"
-    translated: "You're going to make fun of Senior Sisheng Qiang, are you? Just wait till I beat you up!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Are you kidding me with Senior Sister Jiang? Just wait and see!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -180090,9 +179938,7 @@
   splits:
   - split: 10
     text: "姜师姐，怎么突然寻我前来，"
-    translated: "Senior Master Jiang, why did you suddenly seek me out?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, why have you come to seek me out suddenly?"
   - split: 10
     subIndex: 1
     text: "不知有何急事？"
@@ -180149,9 +179995,7 @@
   splits:
   - split: 10
     text: "姜师姐没事吧，可有被伤到？"
-    translated: "Is Sister Senior Jiang alright? Did she get injured at all?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang is alright, right? Was she hurt at all?"
 - raw: ",,,右,,,,,ChangePlotDataBase;1005,,哼，我还没那么娇气！\\n你这功夫练得不错，总算没辜负师傅的教诲。"
   splits:
   - split: 10
@@ -180180,9 +180024,7 @@
   splits:
   - split: 10
     text: "姜、姜师姐饶命啊......"
-    translated: "Qing, Senior Sister Qing, spare me..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, spare my life..."
   - split: 10
     subIndex: 1
     text: "我今天闹肚子，状态不佳，"
@@ -180256,9 +180098,7 @@
   splits:
   - split: 10
     text: "诸葛掌门也是担心姜师姐你的安危，"
-    translated: "The Sect Master Zhu Geliang is also worried about your safety, Sister Qiang."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Master Zhuo Luo is also worried about Senior Sister Jiang's safety."
   - split: 10
     subIndex: 1
     text: "方才如此坚决。"
@@ -233433,9 +233273,7 @@
   splits:
   - split: 10
     text: "姜师姐？她不是眼下在飞龙门中了么？"
-    translated: "Qing Senior Sister? Isn't she right now in the Flying Dragon Gate?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang? Isn't she currently in the Flying Dragon Gate?"
   - split: 10
     subIndex: 1
     text: "怎会和血衣盟阴谋扯上关系？"
@@ -233493,9 +233331,7 @@
   splits:
   - split: 10
     text: "咳咳......这个......姜师姐父母与诸葛伶掌门交情匪浅，"
-    translated: "Cough cough.... Well... Sister Instructor Jiang's parents have a rather close relationship with Sect Leader Zhuo Leng."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Cough cough...... Um... Senior Sister Jiang's parents have a very close relationship with Sect Leader Zhuge Ling."
   - split: 10
     subIndex: 1
     text: "二老遭奸人所害后，托孤于诸葛掌门。"
@@ -233519,9 +233355,7 @@
   splits:
   - split: 10
     text: "姜师姐父母仇家甚多，"
-    translated: "Qiang Senior Sister's parents have many enemies"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang's parents had many enemies"
   - split: 10
     subIndex: 1
     text: "飞龙门内又人多眼杂，怕走漏了风声。"
@@ -233569,9 +233403,7 @@
   splits:
   - split: 10
     text: "啊？那这么说来，姜师姐岂不是有危险！"
-    translated: "Ah? So Sister Senior Qiang must be in danger then!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Ah? That being the case, isn't Senior Sister Jiang in danger!"
 - raw: ",,,右,,,,,,,姑娘放心，姜婉眼下正在飞龙门内。\\n诸葛伶掌门已指派专人看守，可保万无一失。"
   splits:
   - split: 10
@@ -233600,9 +233432,7 @@
   splits:
   - split: 10
     text: "诸位御史大人放心，姜师姐待我恩重如山。"
-    translated: "Lords of the Imperial Censors, rest assured. Senior Jiang treated me with great kindness."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Lords of the Imperial Censorate, rest assured that Senior Sister Jiang treats me with profound kindness."
   - split: 10
     subIndex: 1
     text: "我定当竭尽所能，将这伙贼人一网打尽。"
@@ -233654,9 +233484,7 @@
   - split: 10
     subIndex: 1
     text: "决不能让贼人得逞，让姜师姐落入险境。"
-    translated: "We must not let the villains succeed and put Sister Qiang in danger."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "We must not let the villains succeed and put Senior Sister Jiang in danger."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -235422,9 +235250,7 @@
   splits:
   - split: 10
     text: "有劳诸葛掌门保护姜师姐！"
-    translated: "Thank Sect Leader Zhuge for protecting Senior Instructor Jiang!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Palm Master Zhuge, may I ask to protect Senior Sister Jiang!"
   - split: 10
     subIndex: 1
     text: "我们定会查明此事，挫败血衣盟之阴谋。"
@@ -235573,9 +235399,7 @@
   - split: 10
     subIndex: 1
     text: "他们散播此消息，可能正是想对你姜师姐动手！"
-    translated: "They might be spreading this message precisely to target Senior Instructor Jiang!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "They might be spreading this message precisely to target your Senior Sister Jiang!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -235624,9 +235448,7 @@
   splits:
   - split: 10
     text: "不错，姜师姐正是先皇周世宗柴荣的后人，本名柴婉！"
-    translated: "Pretty good. Qian Shijiejie is indeed a descendant of the former emperor Zhou Shizong Duan Ren. Her original name is Chai Wan!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Not bad. Senior Sister Jiang is indeed a descendant of Emperor Zhou Shizong, known by the name Chang Wan in her family."
 - raw: ",,,右,,,,TRUE,,,好家伙，果然如此！"
   splits:
   - split: 10
@@ -235648,9 +235470,7 @@
   splits:
   - split: 10
     text: "但我还不甚明白，姜师姐虽说是先皇后人，"
-    translated: "But I still don't fully understand. Although Senior Sis Jiang is from the former imperial family,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "But I still do not fully understand. Senior Sister Jiang, although she is from the former imperial family,"
   - split: 10
     subIndex: 1
     text: "但她既无实权，又无军队，最多也只有一个虚名而已。"
@@ -235662,9 +235482,7 @@
   splits:
   - split: 10
     text: "血衣盟如此大费周章想对姜师姐下手，究竟是为了什么？"
-    translated: "Why would the Blood Robe Alliance go to such great lengths to attack Senior Brother Jiang?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Why would the Blood Cloak Alliance go to such great lengths to target Senior Sister Jiang?"
   - split: 10
     subIndex: 1
     text: "难道真只为勒索赎金不成！"
@@ -235971,9 +235789,7 @@
   - split: 10
     subIndex: 1
     text: "他们是想借助姜师姐先皇后人之身份，"
-    translated: "They wanted to leverage Senior Fellow Jiang's former imperial consort status."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "They wanted to leverage Senior Sister Jiang's former imperial consort identity."
   - split: 10
     subIndex: 2
     text: "假借其名号，使造反行为更加名正言顺！"
@@ -236021,9 +235837,7 @@
   splits:
   - split: 10
     text: "除非......姜师姐已经在他们手中了！"
-    translated: "Unless... Qiang Senior Sister is already in their hands!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Unless... Senior Sister Jiang is already in their hands!"
 - raw: ",,齐焱,右,,,,,,,#PlayerName#，你的意思是，飞龙门中有内鬼？"
   splits:
   - split: 10
@@ -236037,9 +235851,7 @@
   - split: 10
     subIndex: 1
     text: "姜师姐是先皇后人这一秘密，只有仙霞派师兄弟和飞龙门高层知晓。"
-    translated: "The secret that Sister Senior Qiang is a descendant of the former imperial family is known only to the senior brothers and sisters of the Xianxia Sect and the high‑ranking members of the Flying Dragon Gate."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "The secret that Senior Sister Jiang is from the imperial family is known only to the fellow brothers and sisters of the Xianxia Sect and the high‑ranking officials of the Flying Dragon Gate."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -236087,9 +235899,7 @@
   - split: 10
     subIndex: 1
     text: "随后假借姜师姐先皇后人名号，举兵造反！"
-    translated: "Then he pretended to use Lady Jian's imperial consort name and raised an army to rebel!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Then, under the pretense of Senior Sister Jiang's posthumous name, they rose in rebellion!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -237150,9 +236960,7 @@
   splits:
   - split: 10
     text: "楚御史，听闻姜师姐突然失踪？！此事当真？"
-    translated: "Xu Yushi, did Senior Sis Qiang suddenly go missing? Is this truly the case?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Counselor Chu, have you heard that Senior Sister Jiang has suddenly gone missing?! Is this true?"
 - raw: ",,,右,,,,,,,#PlayerName#，此等要紧之事，\\n我岂敢胡言乱语？"
   splits:
   - split: 10
@@ -237169,9 +236977,7 @@
   splits:
   - split: 10
     text: "姜师姐明明一直在飞龙门内，"
-    translated: "Qiang Senior Sister was clearly inside the Flying Dragon Gate all along."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang was clearly inside the Flying Dragon Gate the whole time."
   - split: 10
     subIndex: 1
     text: "加上她身份特殊，护卫周密，怎会发生这种事......"
@@ -237319,9 +237125,7 @@
   splits:
   - split: 10
     text: "狗贼，姜师姐被你们劫到哪儿去了？"
-    translated: "Traitor dog, where have you taken Auntie Jiang?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Traitor, where have you taken Senior Sister Jiang?"
   - split: 10
     subIndex: 1
     text: "速速把她交出来！"
@@ -237833,9 +237637,7 @@
   - split: 10
     subIndex: 1
     text: "难道你们就是劫走我姜师姐的叛党？！"
-    translated: "Could it be that you're the traitors who kidnapped my senior Sister Qiang?!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Could it be that you are the rebels who kidnapped Senior Sister Jiang?!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -237879,9 +237681,7 @@
   splits:
   - split: 10
     text: "姜师姐，这究竟是怎么一回事？"
-    translated: "Senior Jiang, what on earth is going on here?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, what exactly is going on here?"
   - split: 10
     subIndex: 1
     text: "他们当真只是护送你到此，而非是劫走的！"
@@ -237898,15 +237698,11 @@
   splits:
   - split: 10
     text: "姜师姐待我恩重如山，这点危险算什么？"
-    translated: "Senior Jiang treats me with deep affection, what about this danger?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang treated me with profound kindness, what danger is this?"
   - split: 10
     subIndex: 1
     text: "姜师姐，还望你尽快说明情况，以免误了大事。"
-    translated: "Senior Jiang, I hope they can explain the situation as soon as possible to avoid delaying important matters."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, I hope you will explain the situation as soon as possible to avoid delaying important matters."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -238268,9 +238064,7 @@
   splits:
   - split: 10
     text: "就是！敢欺负我姜师姐，"
-    translated: "Right! Dared to bully my Jiang Senior Sister,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Just it! Daring to bully my Senior Sister Jiang,"
   - split: 10
     subIndex: 1
     text: "叫你们尝尝小爷的手段！"
@@ -238286,9 +238080,7 @@
   - split: 10
     subIndex: 1
     text: "姜师姐有难，我杨思迟岂能不拼死相救？"
-    translated: "Jiang Senior Sister is in danger; how could I, Yang Sichi, fail to risk my life to save her?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang is in danger, how could I, Yang Sichi, fail to risk my life to save her?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -238296,9 +238088,7 @@
   splits:
   - split: 10
     text: "姜师姐，我这么多年来也每天都勤学苦练，"
-    translated: "Sister Qiang, I have been diligently practicing every day over these many years."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, I have been diligently practicing every day over these many years,"
   - split: 10
     subIndex: 1
     text: "一刻也没有忘记师傅老人家和你的教诲！"
@@ -238373,9 +238163,7 @@
   - split: 10
     subIndex: 1
     text: "就不会让你动姜师姐一根汗毛！"
-    translated: "You won't be able to so much as ruffle Senior Instructor Jiang's hair!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "You won't so much as touch Senior Sister Jiang's hair!"
   templates:
   - split: 9
     template: "{0};RobHeroItemChoose;{1}"
@@ -238399,9 +238187,7 @@
   - split: 10
     subIndex: 1
     text: "就不会让你动姜师姐一根汗毛！"
-    translated: "You won't be able to so much as ruffle Senior Instructor Jiang's hair!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "You won't so much as touch Senior Sister Jiang's hair!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -238616,9 +238402,7 @@
   splits:
   - split: 10
     text: "姜师姐，别再说这种见外的话了。"
-    translated: "Qian Shi‑xi, stop saying such formal things"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, don't keep speaking in such formal terms."
   - split: 10
     subIndex: 1
     text: "当年我#$PlayerName#初入仙霞，一无所有之时，"
@@ -238634,9 +238418,7 @@
   splits:
   - split: 10
     text: "姜师姐，你当年送的甲胄和靴子，虽然早已破旧不堪，"
-    translated: "Qing Senior Sister, although the armor and boots you gave me long ago are now in tatters,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, although the armor and boots you gave me long ago are now in tatters,"
   - split: 10
     subIndex: 1
     text: "但在我#$PlayerName#心中，却永远光洁如新，胜过一切神兵利器。"
@@ -238661,9 +238443,7 @@
   splits:
   - split: 10
     text: "姜师姐只要你愿意，仙霞派便永远是你的家，"
-    translated: "Jiang Senior Sister, as long as you are willing, the Xianxia Sect will always be your home."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, as long as you are willing, the Xianxia Sect will always be your home."
   - split: 10
     subIndex: 1
     text: "我和各位同门永远在家里等着你！"
@@ -238687,9 +238467,7 @@
   splits:
   - split: 10
     text: "姜师姐，再也没人能逼你走了，"
-    translated: "Qing Senior Sister, no one can force you to leave anymore."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, no one can force you to leave anymore."
   - split: 10
     subIndex: 1
     text: "这次你想待多久就待多久。"
@@ -238960,9 +238738,7 @@
   splits:
   - split: 10
     text: "小诸葛虽失了姜师姐这一杀手锏，"
-    translated: "Though Xiao Zhuge lost Qiang Shi‑xian as his trump card,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Though Xiaozhuge has lost Senior Sister Jiang as his trump card,"
   - split: 10
     subIndex: 1
     text: "但以她的性格，恐怕也不会坐以待毙。"
@@ -252347,7 +252123,7 @@
   - split: 10
     subIndex: 1
     text: "余师姐，怎么又想到要去寻访高手了？"
-    translated: "Senior Yu, why have you started thinking about seeking out powerful cultivators again?"
+    translated: "Senior Sister Yu, why have you started thinking about seeking out powerful warriors again?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -252673,7 +252449,7 @@
   splits:
   - split: 10
     text: "余师姐说什么呢？归墟秘典内力如此深厚，"
-    translated: "What did Senior Sishier say? Such profound Inner Power in the Book of Secrets from the Void,"
+    translated: "What does Senior Sister Yu say? Such profound Inner Power in the Enmity Void Secret Classic,"
   - split: 10
     subIndex: 1
     text: "就算对方全力来袭，一时半会也难以取胜。"
@@ -252813,7 +252589,7 @@
   - split: 10
     subIndex: 1
     text: "余师姐，这次又准备去招惹哪位武林名宿？"
-    translated: "Senior Sister, whom Wulin elder are you planning to provoke this time?"
+    translated: "Senior Sister Yu, are you planning to provoke another Wulin master this time?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -253215,7 +252991,7 @@
   splits:
   - split: 10
     text: "哎......余师姐怎么这么久都没回来......"
-    translated: "Oh... Sister Senior Yu hasn't come back yet..."
+    translated: "Ah......Senior Sister Yu hasn't come back for so long......"
   - split: 10
     subIndex: 1
     text: "不会真退出仙霞派，拜在那前辈高人门下了吧！"
@@ -253251,12 +253027,12 @@
   splits:
   - split: 10
     text: "大、大师兄息怒，余师姐定是有她的难处......"
-    translated: "Big Senior Brother, please calm down. Little Sister Sister has her own difficulties..."
+    translated: "Big Senior Brother, please calm down. Senior Sister Yu must have her own difficulties..."
 - raw: ",,沈退,右,,,,,,,余师姐向来醉心习武，岂会错过这种拜入绝世高人门下的机会？\\n我看，她肯定是不回来了了！"
   splits:
   - split: 10
     text: "余师姐向来醉心习武，岂会错过这种拜入绝世高人门下的机会？"
-    translated: "Junior Sibei has always been passionate about martial arts. How could she miss an opportunity to join the sect of a peerless master?"
+    translated: "Senior Sister Yu has always been passionate about martial arts. How could she miss an opportunity to join the school of a peerless master?"
   - split: 10
     subIndex: 1
     text: "我看，她肯定是不回来了了！"
@@ -253272,7 +253048,7 @@
   - split: 10
     subIndex: 1
     text: "余师姐岂是像你想的那种......薄情寡义之徒！"
-    translated: "Junior Sister Yu is not like that kind of... callous person!"
+    translated: "Senior Sister Yu is not someone like what you think... a heartless and indifferent person!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -253285,7 +253061,7 @@
   splits:
   - split: 10
     text: "余师姐！你终于回来了！"
-    translated: "Senior Yu! You've finally returned!"
+    translated: "Senior Sister Yu! You finally returned!"
   - split: 10
     subIndex: 1
     text: "我们......还以为你不回来了呢......"
@@ -253338,7 +253114,7 @@
   splits:
   - split: 10
     text: "啊？这么着急？余师姐，手下留情啊！"
-    translated: "Huh? So urgent? Senior Sishu, hold your hand!"
+    translated: "Ah? So hurried? Senior Sister Yu, be easy on me!"
 - raw: "1396,玩家,余采薇,左,,BigMap13,,,ChangeHeroFavor;余采薇-10,,承让承让，这高人的武学果然神奇。\\n一个月不见，余师姐的功力已经大为精进了。"
   splits:
   - split: 10
@@ -253387,7 +253163,7 @@
   - split: 10
     subIndex: 1
     text: "昔日余师姐指点之恩，无论多少绝世武功都报答不了。"
-    translated: "The gratitude for my former senior's guidance cannot be repaid by even the most supreme martial arts."
+    translated: "The gratitude for Senior Sister Yu's guidance cannot be repaid by even the most supreme martial arts."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -253449,7 +253225,7 @@
   - split: 10
     subIndex: 1
     text: "一个月不见，余师姐的功力竟已突飞猛进到这种地步......"
-    translated: "Not seeing Senior Apprentice Sister Ye for a month, her cultivation has progressed to this extent..."
+    translated: "A month has passed, and Senior Sister Yu's cultivation has progressed to this extent..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -260782,9 +260558,7 @@
   splits:
   - split: 10
     text: "姜师姐，各位同门，我#$PlayerName#能有今日，"
-    translated: "Qing Senior Sister, fellow disciples, I #$PlayerName# owe all of this to you."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, fellow disciples, I#$PlayerName# would not have reached this day without your support."
   - split: 10
     subIndex: 1
     text: "离不开各位一路以来的关心照顾，悉心提点。"
@@ -261581,9 +261355,7 @@
   splits:
   - split: 10
     text: "姜师姐？杨师兄在传授我本门绝学劈金碎玉掌呢。"
-    translated: "Qing Senior Sister? Yang Senior Brother is teaching me our sect's secret art, the Split Gold Shatter Jade Palm."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang? Senior Brother Yang is teaching me our sect's utmost secret technique, the Split Gold Crush Jade Palm."
 - raw: ",,,左,,,,,,,思迟你自己火候未至，\\n可别把我们白师妹给教歪了啊。"
   splits:
   - split: 10
@@ -261763,9 +261535,7 @@
   splits:
   - split: 10
     text: "姜师姐，如今乱世尚未平定，怕是一波未平一波又起......"
-    translated: "Qing Senior Sis, with the chaos still unresolved, fear that one wave will be followed by another..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, with the world in chaos and unrest yet to be stabilized, it's likely that one wave has just subsided while another rises..."
 - raw: ",,杨思迟,右,,,,,,,#PlayerName#，此、此话怎讲啊？"
   splits:
   - split: 10
@@ -263283,7 +263053,7 @@
   splits:
   - split: 10
     text: "余师姐，那你把当年我的招式演练出来看看，"
-    translated: "Junior Sister Yu, why don't you demonstrate the techniques I used back then for me to see?"
+    translated: "Senior Sister Yu, then show me the kung fu I performed back then."
   - split: 10
     subIndex: 1
     text: "兴许我能想起来一点？"
@@ -263307,7 +263077,7 @@
   splits:
   - split: 10
     text: "余师姐好厉害啊！"
-    translated: "Senior Master Sister is really formidable!"
+    translated: "Senior Sister Yu is really impressive!"
 - raw: ",,,右,,,,,ChangeMaxAttri;白云天-all-1,,白师妹，怎么样，可有想起些什么来？"
   splits:
   - split: 10
@@ -263334,7 +263104,7 @@
   splits:
   - split: 10
     text: "咳咳，余师姐，白云子大病初愈，"
-    translated: "Cough, Sister Yu, Baiyunzi has just recovered from a serious illness."
+    translated: "Cough, cough, Senior Sister Yu, Baiyunzi has just recovered from a major illness."
   - split: 10
     subIndex: 1
     text: "你也不必如此操之过急。"
@@ -267224,9 +266994,7 @@
   - split: 10
     subIndex: 1
     text: "我和姜师姐可不是什么绣花枕头！"
-    translated: "Qiang Senior Sis and I aren't just flower pillows!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "We are not just pretty flowers on a pillow, Senior Sister Jiang!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -269657,9 +269425,7 @@
   - split: 10
     subIndex: 1
     text: "你要是被毒倒了，到时候还得我和姜师姐照顾你。"
-    translated: "Then Sister‑Qiang and I will have to take care of you if you get poisoned."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "If you get poisoned, Senior Sister Jiang and I will have to take care of you then."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -279025,9 +278791,7 @@
   splits:
   - split: 10
     text: "嗨，姜师姐何必杞人忧天。"
-    translated: "Hi, Sister Qiang, why worry unnecessarily"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Hi, Senior Sister Jiang, there's no need to worry unnecessarily."
   - split: 10
     subIndex: 1
     text: "今朝有酒今朝醉，"
@@ -285810,9 +285574,7 @@
   splits:
   - split: 10
     text: "切，之前小诸葛阴谋叛乱，还挟持咱们姜师姐。"
-    translated: "Cut it out. Before that, Little Zhuge plotted a rebellion and even held our Senior Sister Qiang hostage."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Well, Little Zhuge plotted a rebellion and even kidnapped Senior Sister Jiang."
   - split: 10
     subIndex: 1
     text: "现在赵破虏又抗旨不从，不肯把京城交给咱们。"
@@ -287138,9 +286900,7 @@
   splits:
   - split: 10
     text: "嗯，若是没有姜师姐这柴家后人出马，"
-    translated: "Well, if it weren't for Junior Sister Jiang from the Ji family stepping in,"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Hmm, if not for Senior Sister Jiang from the Jiang family making an appearance,"
   - split: 10
     subIndex: 1
     text: "恐怕飞龙门就算战至最后一兵一卒，"
@@ -287156,9 +286916,7 @@
   splits:
   - split: 10
     text: "姜师姐，这次多谢你了，"
-    translated: "Senior Jiang, thank you this time"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, thank you this time"
   - split: 10
     subIndex: 1
     text: "为了我们，愿意承担起先皇公主这个身份。"
@@ -287191,9 +286949,7 @@
   splits:
   - split: 10
     text: "小师妹说得对！虽然还是叫姜师姐更顺耳......"
-    translated: "Junior Sister is right! Although calling her Senior Sister sounds more pleasant..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Junior Sister said it right! Although it still sounds better to call her Senior Sister Jiang..."
 - raw: ",,楚风疾,右,,,,,,,咳咳，恭喜诸位了，\\n不仅入主京城，如今还收服了飞龙门。"
   splits:
   - split: 10

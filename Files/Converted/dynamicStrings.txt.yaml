@@ -21275,9 +21275,7 @@
 - raw: "好啊，没练几天功，就敢跟你姜师姐叫板了是吧？\n我可不会手下留情！"
   splits:
   - text: "好啊，没练几天功，就敢跟你姜师姐叫板了是吧？"
-    translated: "Sure, you've only been practicing for a few days and you're already challenging Senior Practitioner Jiang, huh?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Alright, you've only been practicing for a few days and you dare to challenge Senior Sister Jiang, right?"
   - subIndex: 1
     text: "我可不会手下留情！"
     translated: "I won't hold back!"
@@ -21987,9 +21985,7 @@
 - raw: "姜师姐，正所谓读万卷书行万里路。\n我都在山上乖乖练了这么多天功了，也得下山历练历练不是？"
   splits:
   - text: "姜师姐，正所谓读万卷书行万里路。"
-    translated: "Qing Senior Sister, as the saying goes, reading ten thousand books and traveling ten thousand miles."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "Senior Sister Jiang, as the saying goes, read ten thousand books and travel ten thousand miles."
   - subIndex: 1
     text: "我都在山上乖乖练了这么多天功了，也得下山历练历练不是？"
     translated: "I've been diligently training up the mountain for so many days, so it's time to go down and gain some experience, right?"

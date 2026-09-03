@@ -257,9 +257,7 @@
 - raw: "#PlayerName#，姜师姐房中有不少物件失窃，咱们派内怕是遭了贼了！你若无甚要事，就赶快回来和我们一起捉贼。"
   splits:
   - text: "#PlayerName#，姜师姐房中有不少物件失窃，咱们派内怕是遭了贼了！你若无甚要事，就赶快回来和我们一起捉贼。"
-    translated: "#PlayerName#, Sister Qiang's chambers have had many items stolen. Our sect might have been raided by bandits! If you have no pressing matters, come back quickly so we can catch the thieves together."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Senior Sister Jiang,姜师姐,"
+    translated: "#PlayerName#, several items have been stolen from Senior Sister Jiang's room. Our sect might have been raided by bandits! If you have no urgent matters, come back quickly so we can catch the thieves together."
 - raw: "#PlayerName#，师傅有要事召集大家商议，还望你<b>速回门派</b>！"
   splits:
   - text: "#PlayerName#，师傅有要事召集大家商议，还望你"
@@ -5220,7 +5218,7 @@
 - raw: "余师姐在#TargetPlace#发现了可疑踪迹，与她一同前去埋伏调查。"
   splits:
   - text: "余师姐在#TargetPlace#发现了可疑踪迹，与她一同前去埋伏调查。"
-    translated: "My Senior Yu discovered suspicious traces in #TargetPlace#, and I accompanied her to set up a ambush for an investigation."
+    translated: "Senior Sister Yu discovered suspicious traces in #TargetPlace#, and we went together to set up a ambush for further investigation."
 - raw: "余采薇习武遭遇瓶颈，与她一道去#TargetPlace#寻找传说中的隐世高人。"
   splits:
   - text: "余采薇习武遭遇瓶颈，与她一道去#TargetPlace#寻找传说中的隐世高人。"

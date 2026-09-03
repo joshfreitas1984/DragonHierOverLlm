@@ -32,3 +32,7 @@
   result: "Yan Dakai"
 - raw: "姜师姐"
   result: "Senior Sister Jiang"
+- raw: 余师姐
+  result: "Senior Sister Yu"
+- raw: 沈师兄
+  result: "Senior Brother Shen"
