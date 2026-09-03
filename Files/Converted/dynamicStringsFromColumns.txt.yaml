@@ -51940,3 +51940,79 @@
   splits:
   - text: "遗迹"
     translated: "Ruins"
+- raw: "灌木"
+  splits:
+  - text: "灌木"
+    translated: "Bush"
+- raw: "枯木"
+  splits:
+  - text: "枯木"
+    translated: "Withered tree"
+- raw: "块石"
+  splits:
+  - text: "块石"
+    translated: "Stone block"
+- raw: "树木"
+  splits:
+  - text: "树木"
+    translated: "Trees"
+- raw: "瓦罐"
+  splits:
+  - text: "瓦罐"
+    translated: "Earthenware pot"
+- raw: "木桶"
+  splits:
+  - text: "木桶"
+    translated: "Barrel"
+- raw: "木箱"
+  splits:
+  - text: "木箱"
+    translated: "Wooden chest"
+- raw: "板车"
+  splits:
+  - text: "板车"
+    translated: "Handcart"
+- raw: "造景"
+  splits:
+  - text: "造景"
+    translated: "Scenery"
+- raw: "雕像"
+  splits:
+  - text: "雕像"
+    translated: "Statue"
+- raw: "花瓶"
+  splits:
+  - text: "花瓶"
+    translated: "Vase"
+- raw: "屏风"
+  splits:
+  - text: "屏风"
+    translated: "Screen partition"
+- raw: "椅凳"
+  splits:
+  - text: "椅凳"
+    translated: "Chairs and stools"
+- raw: "方桌"
+  splits:
+  - text: "方桌"
+    translated: "Round table"
+- raw: "木柜"
+  splits:
+  - text: "木柜"
+    translated: "Wooden chest"
+- raw: "造像"
+  splits:
+  - text: "造像"
+    translated: "Sculpture"
+- raw: "火焰桶"
+  splits:
+  - text: "火焰桶"
+    translated: "Flame bucket"
+- raw: "爆炸桶"
+  splits:
+  - text: "爆炸桶"
+    translated: "Bomb bucket"
+- raw: "毒气桶"
+  splits:
+  - text: "毒气桶"
+    translated: "Poison barrel"

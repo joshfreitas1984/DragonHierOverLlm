@@ -89083,7 +89083,7 @@
   - split: 10
     subIndex: 1
     text: "此处有我和顾师兄，放心吧。"
-    translated: "I'm here with Senior Brother Gu, so don’t worry."
+    translated: "I'm here with Senior Brother Gu, so don't worry."
   templates:
   - split: 10
     template: "{0}\\n{1}"

@@ -39010,3 +39010,60 @@
 - raw: "遗迹"
   splits:
   - text: "遗迹"
+- raw: "灌木"
+  splits:
+  - text: "灌木"
+- raw: "枯木"
+  splits:
+  - text: "枯木"
+- raw: "块石"
+  splits:
+  - text: "块石"
+- raw: "树木"
+  splits:
+  - text: "树木"
+- raw: "瓦罐"
+  splits:
+  - text: "瓦罐"
+- raw: "木桶"
+  splits:
+  - text: "木桶"
+- raw: "木箱"
+  splits:
+  - text: "木箱"
+- raw: "板车"
+  splits:
+  - text: "板车"
+- raw: "造景"
+  splits:
+  - text: "造景"
+- raw: "雕像"
+  splits:
+  - text: "雕像"
+- raw: "花瓶"
+  splits:
+  - text: "花瓶"
+- raw: "屏风"
+  splits:
+  - text: "屏风"
+- raw: "椅凳"
+  splits:
+  - text: "椅凳"
+- raw: "方桌"
+  splits:
+  - text: "方桌"
+- raw: "木柜"
+  splits:
+  - text: "木柜"
+- raw: "造像"
+  splits:
+  - text: "造像"
+- raw: "火焰桶"
+  splits:
+  - text: "火焰桶"
+- raw: "爆炸桶"
+  splits:
+  - text: "爆炸桶"
+- raw: "毒气桶"
+  splits:
+  - text: "毒气桶"

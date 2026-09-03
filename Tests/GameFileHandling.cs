@@ -313,6 +313,12 @@ namespace Tests
             ("ExploreTileGroundDataBase.csv", [0]),
             ("ExploreTileTypeDataBase.csv", [0]),
             ("ExploreMapTypeDataBase.csv", [0]),
+
+            // BattleController-embedded obstacle name lists (e.g. "雕像"/statue, "城墙"/wall) -
+            // same class of problem, combat screen instead of explore map. Dumped by the same
+            // ExploreDataDumpPatches.cs (despite the file name, it now covers both screens).
+            ("ObstacleDataBase.csv", [0]),
+            ("ExplodeObstacleDataBase.csv", [0]),
         ];
 
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>

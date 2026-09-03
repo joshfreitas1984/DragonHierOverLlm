@@ -18,6 +18,9 @@ namespace EnglishPatch;
 // also embedded on ExploreController: ExploreTileTypeDataBase (per-tile event/content type, e.g.
 // ruins/ambush camps/resource spots) and ExploreMapTypeDataBase (per-map "biome" flavor name).
 // Dumped alongside for the same reason - neither has a CSV/asset source either.
+//
+// BattleController.obstacleDataBase/explodeObstacleDataBase (obstacleName, e.g. "雕像"/statue,
+// "城墙"/wall - the combat-screen equivalent) have the exact same problem, dumped below too.
 internal static class ExploreDataDumpPatches
 {
     private static readonly string PluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".";
@@ -39,6 +42,27 @@ internal static class ExploreDataDumpPatches
         catch (System.Exception ex)
         {
             MainPlugin.Logger?.LogError($"ExploreDataDumpPatches: Awake_Postfix failed: {ex}");
+        }
+    }
+
+    // BattleController's own obstacle name lists (e.g. "雕像"/statue, "城墙"/wall) - same
+    // embedded-MonoBehaviour-list problem as ExploreController's lists above, just on the combat
+    // screen instead of the explore map.
+    [HarmonyPatch(typeof(BattleController), "Awake")]
+    [HarmonyPostfix]
+    private static void BattleAwake_Postfix(BattleController __instance)
+    {
+        try
+        {
+            Directory.CreateDirectory(RawDir);
+            DumpNameList("ObstacleDataBase", __instance.obstacleDataBase?.Count ?? 0,
+                i => __instance.obstacleDataBase[i].obstacleName);
+            DumpNameList("ExplodeObstacleDataBase", __instance.explodeObstacleDataBase?.Count ?? 0,
+                i => __instance.explodeObstacleDataBase[i].obstacleName);
+        }
+        catch (System.Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"ExploreDataDumpPatches: BattleAwake_Postfix failed: {ex}");
         }
     }
 
