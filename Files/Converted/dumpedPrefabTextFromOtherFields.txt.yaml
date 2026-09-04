@@ -3758,6 +3758,8 @@
   splits:
   - text: "云裳重病"
     translated: "Yun Shang is severely ill"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
 - raw: "云鹤求援"
   splits:
   - text: "云鹤求援"

@@ -66,6 +66,8 @@
   splits:
   - text: "云裳"
     translated: "Yunchang"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
 - raw: "乐"
   splits:
   - text: "乐"
@@ -422,6 +424,8 @@
   splits:
   - text: "法王"
     translated: "Fawang"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Dharma King,法王,"
 - raw: "金刚"
   splits:
   - text: "金刚"
@@ -986,6 +990,8 @@
   splits:
   - text: "炼气"
     translated: "Lianqi"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qi Refining,炼气,"
 - raw: "士"
   splits:
   - text: "士"

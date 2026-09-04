@@ -7028,7 +7028,7 @@
   splits:
   - split: 10
     text: "这日常杂务，皆有赖师姐安排妥当，"
-    translated: "All of these daily chores are arranged properly by Senior Sishis."
+    translated: "This daily chores, are all relied upon by Senior Sis for proper arrangement."
   - split: 10
     subIndex: 1
     text: "本门离了师姐，那不像鱼儿离了水一样呀！"
@@ -7073,7 +7073,7 @@
   splits:
   - split: 10
     text: "嗯，按照师姐的吩咐，那长辈应该就住在这户"
-    translated: "Hmm, according to Senior Sishis' instructions, the elder should be living in this household."
+    translated: "Hmm, according to Senior Sis's instructions, the elder should live in this household."
   templates:
   - split: 10
     template: "{0}……"
@@ -8481,7 +8481,7 @@
   splits:
   - split: 10
     text: "公、公、公孙师弟，莫要这小、小、小儿多费口舌，"
-    translated: "Ju-Ju-Junior Disciple Gong, don't waste too much words on this sm-sm-small brat."
+    translated: "Ju‑Ju‑Junior Disciple Gong, don't waste too much words on this sm‑sm‑small brat."
   - split: 10
     subIndex: 1
     text: "我来教、教、教训他一顿便是！"
@@ -8503,11 +8503,11 @@
   splits:
   - split: 10
     text: "小子，知道爷爷我的厉、厉、厉害了吧！"
-    translated: "Kid, do you know how powerful your grandpa is? I am p-p-powerful!"
+    translated: "Kid, do you know how powerful your grandpa is? I am p‑p‑powerful!"
   - split: 10
     subIndex: 1
     text: "快快投降，饶、饶、饶你不死！"
-    translated: "Hurry and su-su-surrender, and I'll spare your life!"
+    translated: "Hurry and su‑su‑surrender, and I'll spare your life!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -9028,12 +9028,14 @@
   splits:
   - split: 10
     text: "姜婉师姐眼眶也是一红，赶紧上前将她紧紧搂在怀中。"
-    translated: "Sishisister Jiang Wan's eyes also welled up with tears, and she quickly stepped forward to hug her tightly."
+    translated: "Senior Sister Jiang Wan's eyes also welled up, and she quickly stepped forward to hug her tightly."
 - raw: ",,,左,,,,,,,苦命的小姑娘，云裳……你的爹和娘……"
   splits:
   - split: 10
     text: "苦命的小姑娘，云裳"
     translated: "Poor little Miss, Yun Shang"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "你的爹和娘"
@@ -9194,6 +9196,8 @@
     subIndex: 2
     text: "如今见到云裳同我一般孤苦无依，触景生情，伤心不已。"
     translated: "Seeing Yun Chang in the same lonely state as me, feelings welled up, bringing me to great sorrow."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -9202,6 +9206,8 @@
   - split: 10
     text: "因此徒儿想要任性一回，求师傅收下云裳，待她如待我一般，"
     translated: "Therefore, the disciple wishes to be a bit disobedient and asks Master to accept Yun Shang, treating her as you treat me."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "徒儿愿从此做牛做马，报答师傅您老人家的恩情。"
@@ -9241,7 +9247,9 @@
   - split: 10
     subIndex: 1
     text: "本门眼下打杂人手确实不足，师傅不妨就收了她吧！"
-    translated: "The current shortage of wuwu personnel in our xuexie is indeed pressing. Master, why not take her on?"
+    translated: "Our sect currently lacks manpower for menial tasks, so why don't you take her on as a disciple?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Master,师傅,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -9384,6 +9392,8 @@
   - split: 10
     text: "云裳咱别理他，你大师兄就是整天牢骚满腹。"
     translated: "Cloud Clothes, let's not pay attention to him. Your Big Senior Brother is always full of complaints."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "师姐带你去逛逛门派，熟悉熟悉，从今天起这儿就是你的家啦！"
@@ -9428,6 +9438,8 @@
     subIndex: 1
     text: "你们作为师兄，与云裳年纪相仿，她如今父母双亡，孤苦无依，"
     translated: "As senior brothers, you are of a similar age to Yun Shang. She is now an orphan with no parents and leads a lonely life."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 2
     text: "所以你们平日在生活和练武中，还要勤于关心，多加照顾才是。"
@@ -11102,7 +11114,7 @@
   splits:
   - split: 10
     text: "诶？这不就是#PlayerName#蛮？"
-    translated: "Hey? Isn’t that #PlayerName#?"
+    translated: "Hey? Isn't that #PlayerName#?"
   - split: 10
     subIndex: 1
     text: "诶呀，看来刚刚那几幕，全让你当做笑话看了去么。"
@@ -15359,6 +15371,8 @@
     subIndex: 1
     text: "云裳的父母，也是丧命于此"
     translated: "Yun Shang's parents also perished here"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -15383,6 +15397,8 @@
   - split: 10
     text: "云裳放心，于公于私，为师都会想办法替你报仇。"
     translated: "Cloud Clothes can rest assured; for both public and private reasons, Master will find a way to seek revenge for you."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "只是这黑风寨贼人实在谨慎狡猾，"
@@ -16074,6 +16090,8 @@
     subIndex: 2
     text: "早日将这黑风寨贼人绳之以法，也好告慰云裳父母在天之灵。"
     translated: "Soon bring these bandits from Black Wind Camp to justice, to console the spirits of Cloud Shirt's parents."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -17135,6 +17153,8 @@
   - split: 10
     text: "#PlayerName#，云裳情况如何？"
     translated: "How is Cloud Clothes doing, #PlayerName#?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
 - raw: ",玩家,,左,,,,,,,已经昏过去了，并无大碍，我已将她安置妥当。"
   splits:
   - split: 10
@@ -17247,7 +17267,7 @@
   splits:
   - split: 10
     text: "呵呵，这等小贼，不劳师姐出手。"
-    translated: "Haha, this petty thief doesn't require Senior Sishis intervention."
+    translated: "Haha, such a petty thief, no need for Senior Sister to intervene."
 - raw: ",,姜婉,右,,,,,ChangePlotDataBase;131,,哎，也是一对亡命鸳鸯，下辈子别再行凶作恶了。"
   splits:
   - split: 10
@@ -17429,6 +17449,8 @@
     subIndex: 2
     text: "此次战况如何，云裳又是为何受伤啊？"
     translated: "How did the battle go, and why was Yun Shang injured?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}……\\n{1}\\n{2}"
@@ -17466,6 +17488,8 @@
   - split: 10
     text: "总之，为师先替云裳运功调息。"
     translated: "In short, I will first help Yun Shang regulate her breathing and qi circulation."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "婉儿，你也替两位师弟疗伤去吧。"
@@ -17492,6 +17516,8 @@
     subIndex: 1
     text: "只是我还有些担心云裳，等下替你们包扎过后，再去照顾照顾她。"
     translated: "I'm just a bit worried about Yun Shang. After I help bandage all of you up, I'll go see her and make sure she's okay."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -17984,6 +18010,8 @@
     subIndex: 1
     text: "此战事关本门荣辱，更是要替云裳父母，以及巴陵村父老乡亲报仇雪恨。"
     translated: "This battle concerns the honor of our sect and is also about avenging the deaths of Yun Chang's parents and the villagers of Baling Village."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -19229,6 +19257,8 @@
   - split: 10
     text: "好啦好啦，云裳别这么见外。"
     translated: "All right, all right, Yushang, don't be so formal."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "你入了我仙霞派便就是一家人了，日后在本门安心住下便是。"
@@ -20012,7 +20042,7 @@
   splits:
   - split: 10
     text: "久闻采薇师姐天资过人，武艺超群，今天正好讨教讨教，"
-    translated: "I've heard that Senior Sishijie Caiwei has exceptional talent and unparalleled martial arts skills. Today, I exactly discuss, let's learn from you."
+    translated: "I've heard that Senior Sister Caiwei has extraordinary talent and superb martial arts. Today is the perfect opportunity to learn from you."
   - split: 10
     subIndex: 1
     text: "还望给我这师弟留点面子啊"
@@ -20318,6 +20348,8 @@
   - split: 10
     text: "好，#PlayerName#，云裳得罪了！"
     translated: "Alright, #PlayerName#, Yun Shang has offended you!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
 - raw: ",,,左,,,,,StartSpeFight;23,,喂喂喂，你们来真的？？？"
   splits:
   - split: 10
@@ -21477,6 +21509,8 @@
   - split: 10
     text: "怎么会，看到#PlayerName#和顾师兄，云裳开心得很"
     translated: "Why, seeing #PlayerName# and Senior Brother Gu make Yun Shang so happy."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "一定会更快好起来的！咳咳咳额咳咳！"
@@ -36382,6 +36416,8 @@
     subIndex: 1
     text: "云裳你入门时间尚短，根基未稳，此次为师就不晋升你的职位了。"
     translated: "Yun Shang, since your entry time is still short and your foundation is not yet stable, this teacher will not promote your position this time."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -57042,6 +57078,8 @@
     subIndex: 1
     text: "害得云裳父母身亡，也害得游年身受重伤，经脉尽断。"
     translated: "It also caused Yun Shang's parents to die, and left Younian seriously injured, with all his meridians severed."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -57835,7 +57873,7 @@
   splits:
   - split: 10
     text: "（师姐认真起来，真是有几分恐怖）"
-    translated: "(Sishisister can be truly intimidating when she's serious)"
+    translated: "(When Senior Sister focuses, she can be rather intimidating)"
   - split: 10
     subIndex: 1
     text: "误了大事，当心师傅责罚，咱们快走！"
@@ -59136,6 +59174,8 @@
   - split: 10
     text: "思迟，云裳？魏师兄去哪儿了？"
     translated: "Sichi, Yuchang? Where's Senior Brother Wei?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
 - raw: ",,,右,,,,,,,呼……呼……魏师兄…魏师兄被贼人…围在巴陵村了…\\n顾师兄…你们…你们怎么来了……"
   splits:
   - split: 10
@@ -59443,6 +59483,8 @@
   - split: 10
     text: "魏师兄！！！魏师兄都是为了保护我和云裳，才"
     translated: "Senior Brother Wei!! Senior Brother Wei protected me and Yun Shang."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "狗贼！我跟你们势不两立！！！"
@@ -62462,7 +62504,7 @@
   splits:
   - split: 10
     text: "师姐说的也有道理，那咱们尽快出发吧。"
-    translated: "Sishier said that makes sense, so let's head out as soon as possible."
+    translated: "Senior Sister made a valid point. Let's head out as soon as possible."
   - split: 10
     subIndex: 1
     text: "拖得久了，说不定走漏风声，到时候想去都去不成了！"
@@ -73353,10 +73395,14 @@
   - split: 10
     text: "（将云裳搂在怀中，软言抚慰）"
     translated: "(hug Yun Shang close and comfort her gently with soft words)"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "云裳，别哭了别哭了，好像师姐我要死了一样。"
     translated: "Yun Shang, stop crying, stop crying. It's as if Senior Sister is going to die."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 2
     text: "以后每年，我都做月饼和腊八粥，寄回来给你吃好不好！"
@@ -87406,6 +87452,8 @@
   - split: 10
     text: "为了给爹娘报仇，就算只有云裳一人，也要去跟铁掌帮决一死战！"
     translated: "To avenge his father and mother, even if it's just Yun Shang, he must confront the Iron Palm Gang in a final battle!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
 - raw: ",玩家,,左,,,,,,,小师妹，各位师兄，我#$PlayerName#愿与大家共进退！"
   splits:
   - split: 10
@@ -90399,6 +90447,8 @@
   - split: 10
     text: "云裳，你年纪尚小，为师本最担心你......"
     translated: "Yun Shang, you are still quite young. I was most worried about you..."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "不过看到你师兄师姐们如此懂事争气......"
@@ -91070,6 +91120,8 @@
     subIndex: 2
     text: "算云裳求你了好吗？"
     translated: "Please, Cloud Clothes?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -91078,6 +91130,8 @@
   - split: 10
     text: "云裳......好......"
     translated: "Yun Shang... quite..."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "既然如此，那我就勉为其难接任这掌门之位。"
@@ -109430,6 +109484,8 @@
   - split: 10
     text: "云裳也会加倍小心，不会给大家添麻烦的。"
     translated: "Yun Shang will also be extra careful and won't cause anyone trouble."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
 - raw: ",,,左,,,,,,,好，此战乃是我仙霞派出蜀的第一战，\\n各位师兄妹们历练多年，如今武艺也皆已小有所成。"
   splits:
   - split: 10
@@ -135642,7 +135698,7 @@
   - split: 10
     subIndex: 1
     text: "哦，除了适才被思阁主一掌拍碎的那个小方桌。"
-    translated: "Oh, except for the small square table that was shattered by Master Sishie earlier."
+    translated: "Oh, apart from that little square table that Pavilion Master Si had just smashed to pieces with a single palm strike."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -264573,6 +264629,8 @@
   - split: 10
     text: "呵呵呵呵，云裳几年未见，"
     translated: "Haha, Yun Shang, it's been a few years since we last met."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "当年的小丫头已经长这么高了。"
@@ -264601,6 +264659,8 @@
     subIndex: 1
     text: "还一直念着云裳的手艺呢。"
     translated: "Still thinking about Yun Shang's craftsmanship"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -267084,6 +267144,8 @@
   - split: 10
     text: "婉儿，云裳，脏活累活就交给师兄我们几个。"
     translated: "Wen'er, Yunchang, let the dirty and tiring work be handled by our senior brothers."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Yunshang,云裳,"
   - split: 10
     subIndex: 1
     text: "你们负责打扫战场，收拾残局便可。"

@@ -30366,19 +30366,19 @@
 - raw: "本战功绩第{0}名乃是{1}，\n{2}"
   splits:
   - text: "本战功绩第"
-    translated: "This battle's merit rank "
+    translated: "This battle's merit rank"
   - subIndex: 1
     text: "名乃是"
-    translated: "goes to"
+    translated: "Goes to"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧，\n⟦2⟧"
 - raw: "本战功绩第{0}名乃是我自己啊，\n本人身为掌门，得此战功也是理所当然，就不自吹自擂了。"
   splits:
   - text: "本战功绩第"
-    translated: "This battle's merit rank "
+    translated: "This battle's merit rank"
   - subIndex: 1
     text: "名乃是我自己啊，"
-    translated: "goes to me myself,"
+    translated: "Goes to me myself,"
   - subIndex: 2
     text: "本人身为掌门，得此战功也是理所当然，就不自吹自擂了。"
     translated: "As the Sect Leader, such battle merits are only fitting, so I won't boast about them."

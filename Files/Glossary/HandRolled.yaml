@@ -89,8 +89,7 @@
   result: "Wuhei"
   exclude:
     - dynamicStringsPoetry.txt
-
-
-
 - raw: 二弟
   result: "Second Brother"
+- raw: 云裳
+  result: "Yunshang"

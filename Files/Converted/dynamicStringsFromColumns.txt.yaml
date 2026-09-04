@@ -52043,6 +52043,7 @@
 - raw: "侠客甲"
   splits:
   - text: "侠客甲"
+    translated: "Martial Hero A"
 - raw: "侠客乙"
   splits:
   - text: "侠客乙"
@@ -52050,6 +52051,7 @@
 - raw: "侠客丙"
   splits:
   - text: "侠客丙"
+    translated: "Hero C"
 - raw: "狱卒甲"
   splits:
   - text: "狱卒甲"
@@ -52138,13 +52140,20 @@
   splits:
   - text: "外门弟子甲"
     translated: "Junior Apprentice"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Outer Disciple,外门弟子,"
 - raw: "外门弟子乙"
   splits:
   - text: "外门弟子乙"
     translated: "Apprentice"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Outer Disciple,外门弟子,"
 - raw: "外门弟子丙"
   splits:
   - text: "外门弟子丙"
+    translated: "Junior Apprentice Assistant"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Outer Disciple,外门弟子,"
 - raw: "受伤强盗"
   splits:
   - text: "受伤强盗"
