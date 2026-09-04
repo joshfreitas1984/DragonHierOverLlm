@@ -138,8 +138,8 @@ public class MainPlugin : BasePlugin
         FixNoCostChoiceClickEnabled = Config.Bind(
             "Game Bugfixes",
             "FixNoCostChoiceClick",
-            false,
-            "When true, PlotInteractController's dialogue choice buttons that have no cost resource (e.g. the 夺取物件/RobHeroItemChoose choices) actually fire their callFuc instead of silently doing nothing, working around a gap in the base game where the dispatch is only reached when choiceData.costResource is non-null. Turn off if a future game patch fixes this at the source. See PlotInteractControllerPatches.");
+            true,
+            "When true, PlotInteractController's dialogue choice buttons that have no cost resource (e.g. the 夺取物件/RobHeroItemChoose choices, and the resource-point-attack 开战/坐镇指挥 choices) actually fire their callFuc instead of silently doing nothing, working around a gap in the base game where the dispatch is only reached when choiceData.costResource is non-null. Turn off if a future game patch fixes this at the source. See PlotInteractControllerPatches.");
 
         // Register codepage 936 (GBK) support - .NET Core only ships Unicode encodings by
         // default. Some game TextAssets (e.g. SpeHeroFaceData) are GBK-encoded rather than
@@ -190,6 +190,17 @@ public class MainPlugin : BasePlugin
 
         Harmony.CreateAndPatchAll(typeof(PlotInteractControllerPatches));
 
+        // Wrapped separately - unverified against this build's real interop metadata, must not
+        // take down every other patch registered below it (see PlotTextPatches above).
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(HeroSearchPatches));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch HeroSearchPatches: {ex}");
+        }
+
         DynamicStringPatches.PatchAll();
 
         // Must patch AFTER DynamicStringPatches.PatchAll() - relies on its dictionary/templates
@@ -205,7 +216,7 @@ public class MainPlugin : BasePlugin
         // reverse dictionary that PatchAll() populates.
         Harmony.CreateAndPatchAll(typeof(ItemIconPatches));
 
-        //Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
+        Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
         //Harmony.CreateAndPatchAll(typeof(HardcodedHeroNamePatches));
 
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");

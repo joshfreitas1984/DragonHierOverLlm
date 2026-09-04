@@ -106,6 +106,19 @@ namespace Tests
 
         public static string RebuildCsvRow(IEnumerable<string> fields) => CompoundFieldSplitter.RebuildCsvRow(fields);
 
+        // Strips a trailing comma (and any trailing whitespace) from a translated cell - see the
+        // call site in PackageFinalTranslationAsync for why a comma directly before RebuildCsvRow's
+        // closing quote is unsafe for this game's own CSV reader. Internal (not private) so
+        // FileValidationTests can exercise it directly.
+        internal static string StripTrailingCommaBeforeQuote(string field)
+        {
+            if (string.IsNullOrEmpty(field))
+                return field;
+
+            var trimmed = field.TrimEnd();
+            return trimmed.EndsWith(',') ? trimmed.TrimEnd(',').TrimEnd() : field;
+        }
+
         public static readonly TextFileToSplit[] TextFilesToSplit = [
             new() {Path = "AchievementData.csv", PackageOutput = true },
             // Skip-column rationale: docs/gamefilehandling-reference.md. Column 2 (类别/Category)
@@ -1268,6 +1281,22 @@ namespace Tests
                     // Don't remove /n it makes lines even longer and less likely to wrap.
                     // if (textFileToTranslate.Path == "PlotData.csv" && splits.Length > 10)
                     //     splits[10] = splits[10].Replace("\\r\\n", " ").Replace("\\n", " ").Replace("\\r", " ");
+
+                    // A translated cell ending in a bare comma (e.g. an LLM ending a sentence with
+                    // "," instead of a period) is always safe per RFC 4180 quoting, but the game's
+                    // own hand-rolled CSV parser (LTCSVLoader) miscounts quote balance when a
+                    // quoted field's content ends in ",\"" - it treats the record as still open and
+                    // silently merges the NEXT row into it, permanently dropping that next row from
+                    // whatever dictionary/list it should have populated (see KungFuData.csv id=733's
+                    // description swallowing id=734's row entirely). Skipped columns keep the raw
+                    // row's byte-for-byte value and must not be touched.
+                    for (var i = 0; i < splits.Length; i++)
+                    {
+                        if (textFileToTranslate.SkipColumns.Contains(i))
+                            continue;
+
+                        splits[i] = StripTrailingCommaBeforeQuote(splits[i]);
+                    }
 
                     line.Translated = RebuildCsvRow(splits);
 

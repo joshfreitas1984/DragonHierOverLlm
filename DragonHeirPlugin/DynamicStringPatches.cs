@@ -272,17 +272,25 @@ internal static class DynamicStringPatches
             // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
             var isLastGroup = idx == placeholderMatches.Count - 1;
             var quantifier = (lastGroupIsUnanchored && isLastGroup) ? "*" : "*?";
+            // A trailing unanchored single placeholder is just as prone as a merged run to
+            // greedily swallowing past a sentence boundary into unrelated text (see the
+            // "本战功绩第{0}名乃是{1}" investigation) - apply the same sentence-boundary-aware
+            // permissive class here, not just in the merged-run branch above.
+            var singleCaptureClass = (lastGroupIsUnanchored && isLastGroup
+                    && MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true)
+                ? SentenceBoundaryAwarePermissiveClass
+                : PermissivePlaceholderCaptureClass;
             if (placeholder.Groups[1].Success)
             {
                 var groupName = $"p{placeholder.Groups[1].Value}";
                 patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
-                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{quantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{quantifier})");
             }
             else
             {
                 var groupName = $"tok{tokenIndex}";
                 patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
-                permissivePatternBuilder.Append($"(?<{groupName}>{PermissivePlaceholderCaptureClass}{quantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{quantifier})");
                 tokenIndex++;
             }
 
@@ -727,7 +735,8 @@ internal static class DynamicStringPatches
     [HarmonyPostfix]
     private static void LtLocalizationGetText_Postfix(string key, ref string __result)
     {
-        if (_inFormatConcatPatch || string.IsNullOrEmpty(__result) || !BuildActionRoutingKeys.Contains(key)) return;
+        if (_inFormatConcatPatch || string.IsNullOrEmpty(__result)) return;
+        if (!BuildActionRoutingKeys.Contains(key) && !_inHeroSearchNameCompare) return;
 
         _inFormatConcatPatch = true;
         try
@@ -742,6 +751,41 @@ internal static class DynamicStringPatches
         {
             _inFormatConcatPatch = false;
         }
+    }
+
+    // HeroSearchController.RegenerateHeroIcon/RefreshFliter compare each hero's name against the
+    // search InputField's text via LTLocalization.GetText(rawName) followed by String.Contains.
+    // The InputField shows/accepts the already-translated (English) text, but GetText returns the
+    // raw untranslated (Chinese) result for this dynamic, per-hero key - so the comparison never
+    // matches and the hero list always renders empty regardless of what's typed. Same bug class as
+    // the build-action routing keys above, but scoped by call-site (bracketing flag) instead of a
+    // fixed key whitelist since the hero name key is dynamic, matching the TutorialController
+    // dynamic-value pattern just above.
+    [ThreadStatic]
+    private static bool _inHeroSearchNameCompare;
+
+    [HarmonyPatch(typeof(HeroSearchController), nameof(HeroSearchController.RegenerateHeroIcon))]
+    [HarmonyPrefix]
+    private static void HeroSearchRegenerateHeroIcon_Prefix() => _inHeroSearchNameCompare = true;
+
+    [HarmonyPatch(typeof(HeroSearchController), nameof(HeroSearchController.RegenerateHeroIcon))]
+    [HarmonyFinalizer]
+    private static Exception HeroSearchRegenerateHeroIcon_Finalizer(Exception __exception)
+    {
+        _inHeroSearchNameCompare = false;
+        return __exception;
+    }
+
+    [HarmonyPatch(typeof(HeroSearchController), nameof(HeroSearchController.RefreshFliter))]
+    [HarmonyPrefix]
+    private static void HeroSearchRefreshFliter_Prefix() => _inHeroSearchNameCompare = true;
+
+    [HarmonyPatch(typeof(HeroSearchController), nameof(HeroSearchController.RefreshFliter))]
+    [HarmonyFinalizer]
+    private static Exception HeroSearchRefreshFliter_Finalizer(Exception __exception)
+    {
+        _inHeroSearchNameCompare = false;
+        return __exception;
     }
 
     // TutorialController.TutorialFindBuildingButton/TutorialFindBuildingChoiceButton locate a
