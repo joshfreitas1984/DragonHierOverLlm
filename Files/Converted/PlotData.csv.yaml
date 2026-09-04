@@ -3229,7 +3229,7 @@
   splits:
   - split: 10
     text: "不必客气，我来寻你们姜掌门。"
-    translated: "Not at all; I came to seek out Sect Master Jiang."
+    translated: "No need to be polite; I have come to seek out Sect Leader Jiang."
   - split: 10
     subIndex: 1
     text: "只管通报，就说峨眉派潇湘真人前来拜会。"
@@ -3349,7 +3349,7 @@
   - split: 10
     subIndex: 1
     text: "若不是姜掌门捷足先登，我怕是早已将她收入门下了。"
-    translated: "If it weren't for Sect Master Jiang securing the opportunity first, I might have already taken her into my sect."
+    translated: "If it weren't for Sect Leader Jiang securing the opportunity first, I fear I would have already enrolled her in my sect."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -3456,7 +3456,7 @@
   - split: 10
     subIndex: 1
     text: "还望姜掌门细读之后尽快回信一封，掌门师兄他静候佳音。"
-    translated: "I hope Master Qian will read this carefully and reply as soon as possible. Brother Sect Leader is looking forward to your reply."
+    translated: "I still hope that Sect Leader Jiang will read this carefully and reply as soon as possible. Senior Brother Sect Leader is eagerly awaiting your response."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -8933,7 +8933,7 @@
   splits:
   - split: 10
     text: "不！姜掌门一日不见我，我就一日不起身！"
-    translated: "No! As long as Qiang Sect Leader does not see me, I will not rise!"
+    translated: "No! Sect Leader Jiang does not see me, I will not get up for a day!"
 - raw: ",,,左,,,,,,,哎呀，这……好吧好吧，我再去求求师傅！"
   splits:
   - split: 10
@@ -9033,9 +9033,7 @@
   splits:
   - split: 10
     text: "苦命的小姑娘，云裳"
-    translated: "Poor little Miss, Yun Shang"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Poor little Miss Yunshang"
   - split: 10
     subIndex: 1
     text: "你的爹和娘"
@@ -9195,9 +9193,7 @@
   - split: 10
     subIndex: 2
     text: "如今见到云裳同我一般孤苦无依，触景生情，伤心不已。"
-    translated: "Seeing Yun Chang in the same lonely state as me, feelings welled up, bringing me to great sorrow."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Seeing Yunshang as lonely and abandoned as myself, the sight tugs at my heartstrings, causing me immense sorrow."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -9205,9 +9201,7 @@
   splits:
   - split: 10
     text: "因此徒儿想要任性一回，求师傅收下云裳，待她如待我一般，"
-    translated: "Therefore, the disciple wishes to be a bit disobedient and asks Master to accept Yun Shang, treating her as you treat me."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Therefore, the disciple wishes to be a bit naughty and beg Master to accept Yunshang, treating her as you treat me."
   - split: 10
     subIndex: 1
     text: "徒儿愿从此做牛做马，报答师傅您老人家的恩情。"
@@ -9247,9 +9241,7 @@
   - split: 10
     subIndex: 1
     text: "本门眼下打杂人手确实不足，师傅不妨就收了她吧！"
-    translated: "Our sect currently lacks manpower for menial tasks, so why don't you take her on as a disciple?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Master,师傅,"
+    translated: "Our sect currently does indeed lack administrative personnel, Master might as well take her on!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -9391,9 +9383,7 @@
   splits:
   - split: 10
     text: "云裳咱别理他，你大师兄就是整天牢骚满腹。"
-    translated: "Cloud Clothes, let's not pay attention to him. Your Big Senior Brother is always full of complaints."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang, let's not pay attention to him. Your big senior brother is always full of complaints."
   - split: 10
     subIndex: 1
     text: "师姐带你去逛逛门派，熟悉熟悉，从今天起这儿就是你的家啦！"
@@ -9437,9 +9427,7 @@
   - split: 10
     subIndex: 1
     text: "你们作为师兄，与云裳年纪相仿，她如今父母双亡，孤苦无依，"
-    translated: "As senior brothers, you are of a similar age to Yun Shang. She is now an orphan with no parents and leads a lonely life."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "As senior brothers, you are of similar age to Yunshang. She has lost both her parents and is now alone and destitute."
   - split: 10
     subIndex: 2
     text: "所以你们平日在生活和练武中，还要勤于关心，多加照顾才是。"
@@ -9939,7 +9927,7 @@
   - split: 10
     subIndex: 1
     text: "想来你是姜掌门新收的弟子吧。"
-    translated: "You must be the new disciple of Master Jiang."
+    translated: "You must be the new disciple that Sect Leader Jiang has taken under his wing."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -9959,7 +9947,7 @@
   splits:
   - split: 10
     text: "嗯，才思敏捷，不卑不亢，姜掌门收了个好徒弟啊。"
-    translated: "Hmm, quick‑witted and neither servile nor overbearing‑Qiang Sect Leader has indeed acquired an excellent apprentice."
+    translated: "Hmm, quick‑witted and neither submissive nor overbearing‑Sect Leader Jiang has recruited a fine apprentice."
 - raw: ",,,左,,,,,,,掌门过奖了！\\n师傅叮嘱这封书信和这份薄礼，一定亲手交到周掌门手里，\\n还请笑纳。"
   splits:
   - split: 10
@@ -9980,7 +9968,7 @@
   splits:
   - split: 10
     text: "哎呀都是老朋友了，你们姜掌门还是如此客气。"
-    translated: "Ah well, old friends as they say. Your Sect Leader Qin still remains so polite."
+    translated: "Ah, you're all old friends. Sect Leader Jiang, as always, is so courteous."
   - split: 10
     subIndex: 1
     text: "那我也只有却之不恭了。"
@@ -15370,9 +15358,7 @@
   - split: 10
     subIndex: 1
     text: "云裳的父母，也是丧命于此"
-    translated: "Yun Shang's parents also perished here"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang's parents also perished here"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -15396,9 +15382,7 @@
   splits:
   - split: 10
     text: "云裳放心，于公于私，为师都会想办法替你报仇。"
-    translated: "Cloud Clothes can rest assured; for both public and private reasons, Master will find a way to seek revenge for you."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang, for both public and private matters, the master will think of ways to take revenge for you."
   - split: 10
     subIndex: 1
     text: "只是这黑风寨贼人实在谨慎狡猾，"
@@ -16089,9 +16073,7 @@
   - split: 10
     subIndex: 2
     text: "早日将这黑风寨贼人绳之以法，也好告慰云裳父母在天之灵。"
-    translated: "Soon bring these bandits from Black Wind Camp to justice, to console the spirits of Cloud Shirt's parents."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Soon bring these bandits from Black Wind Camp to justice, to also console the spirits of Yunshang's parents in heaven."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -17152,9 +17134,7 @@
   splits:
   - split: 10
     text: "#PlayerName#，云裳情况如何？"
-    translated: "How is Cloud Clothes doing, #PlayerName#?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "#PlayerName#, how is Yunshang doing?"
 - raw: ",玩家,,左,,,,,,,已经昏过去了，并无大碍，我已将她安置妥当。"
   splits:
   - split: 10
@@ -17448,9 +17428,7 @@
   - split: 10
     subIndex: 2
     text: "此次战况如何，云裳又是为何受伤啊？"
-    translated: "How did the battle go, and why was Yun Shang injured?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "How did the battle go, and why was Yunshang injured?"
   templates:
   - split: 10
     template: "{0}……\\n{1}\\n{2}"
@@ -17487,9 +17465,7 @@
   splits:
   - split: 10
     text: "总之，为师先替云裳运功调息。"
-    translated: "In short, I will first help Yun Shang regulate her breathing and qi circulation."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "In summary, Master will first help Yunshang regulate her breath and qi."
   - split: 10
     subIndex: 1
     text: "婉儿，你也替两位师弟疗伤去吧。"
@@ -17515,9 +17491,7 @@
   - split: 10
     subIndex: 1
     text: "只是我还有些担心云裳，等下替你们包扎过后，再去照顾照顾她。"
-    translated: "I'm just a bit worried about Yun Shang. After I help bandage all of you up, I'll go see her and make sure she's okay."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "I'm just a bit worried about Yunshang. After tending to your wounds, I'll go check on her."
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -18009,9 +17983,7 @@
   - split: 10
     subIndex: 1
     text: "此战事关本门荣辱，更是要替云裳父母，以及巴陵村父老乡亲报仇雪恨。"
-    translated: "This battle concerns the honor of our sect and is also about avenging the deaths of Yun Chang's parents and the villagers of Baling Village."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "This battle concerns the honor of our sect and is also about avenging the parents of Yunshang and the fellow villagers of Baling Village."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -19256,9 +19228,7 @@
   splits:
   - split: 10
     text: "好啦好啦，云裳别这么见外。"
-    translated: "All right, all right, Yushang, don't be so formal."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Alright, alright, Yunshang, don't be so formal"
   - split: 10
     subIndex: 1
     text: "你入了我仙霞派便就是一家人了，日后在本门安心住下便是。"
@@ -20347,9 +20317,7 @@
   splits:
   - split: 10
     text: "好，#PlayerName#，云裳得罪了！"
-    translated: "Alright, #PlayerName#, Yun Shang has offended you!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Good, #PlayerName#, Yunshang offended you!"
 - raw: ",,,左,,,,,StartSpeFight;23,,喂喂喂，你们来真的？？？"
   splits:
   - split: 10
@@ -21508,9 +21476,7 @@
   splits:
   - split: 10
     text: "怎么会，看到#PlayerName#和顾师兄，云裳开心得很"
-    translated: "Why, seeing #PlayerName# and Senior Brother Gu make Yun Shang so happy."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "How could Yunshang be so happy seeing #PlayerName# and Senior Brother Gu?"
   - split: 10
     subIndex: 1
     text: "一定会更快好起来的！咳咳咳额咳咳！"
@@ -33811,7 +33777,7 @@
   splits:
   - split: 10
     text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门福如东海，寿比南山。"
-    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Master Jiang as much fortune as the Eastern Sea and as long life as the Southern Mountain."
+    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Leader Jiang longevity like the sea and immortality like the southern mountains."
   - split: 10
     subIndex: 1
     text: "掌门特意嘱托我带来这件#PlotInteractItemName#，还请收下。"
@@ -33823,7 +33789,7 @@
   splits:
   - split: 10
     text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门松鹤延年，福寿双全。"
-    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Master Jiang a long life like the immortal crane, and may his blessings and longevity be twin blessings."
+    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Leader Jiang a long and healthy life, may blessings and longevity be ever present."
   - split: 10
     subIndex: 1
     text: "我还带了件#PlotInteractItemName#作为贺礼，请姜掌门笑纳。"
@@ -33835,7 +33801,7 @@
   splits:
   - split: 10
     text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门松柏长青，日月昌明。"
-    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Master Qingpine may have a long and flourishing life, and may the sun and moon shine brightly and prosperously."
+    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Leader Jiang eternal longevity and prosperity under the sun and moon."
   - split: 10
     subIndex: 1
     text: "这件#PlotInteractItemName#聊表心意，还望莫要嫌弃。"
@@ -33859,7 +33825,7 @@
   splits:
   - split: 10
     text: "#SourceForceDescribe##$SourceInteractName#，祝姜掌门"
-    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Master Jiang well"
+    translated: "#SourceForceDescribe##$SourceInteractName#, wish Sect Leader Jiang well"
   templates:
   - split: 10
     template: "{0}……"
@@ -33904,7 +33870,7 @@
   - split: 10
     subIndex: 1
     text: "我们夏掌门特意叮嘱，要把这礼物交给姜掌门。"
-    translated: "Our Sect Leader Xia specifically instructed us to give this gift to Qi Patriarch."
+    translated: "Our Sect Leader Xia specifically instructed us to hand this gift to Sect Leader Jiang."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -34110,7 +34076,7 @@
   splits:
   - split: 10
     text: "（台下共同向姜掌门敬酒，"
-    translated: "(below, everyone raised their cups in toast to Sect Master Jiang,"
+    translated: "(The audience collectively raises their glasses in honor of Sect Leader Jiang,"
   - split: 10
     subIndex: 1
     text: "随后便觥筹交错，开席畅饮，欢声笑语，好不热闹。）"
@@ -36415,9 +36381,7 @@
   - split: 10
     subIndex: 1
     text: "云裳你入门时间尚短，根基未稳，此次为师就不晋升你的职位了。"
-    translated: "Yun Shang, since your entry time is still short and your foundation is not yet stable, this teacher will not promote your position this time."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang, you have not been with us long and your foundation is still unstable. This time, I will not promote your position."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -41422,7 +41386,7 @@
   splits:
   - split: 10
     text: "姜掌门不必过谦，我也是探查到相关情报，"
-    translated: "Qian Sect Leader need not be so modest‑I also obtained relevant intelligence."
+    translated: "Sect Leader Jiang need not be so modest. I also gathered relevant intelligence."
   - split: 10
     subIndex: 1
     text: "贼人可能会对贵派姜婉姑娘图谋不轨，才特意选在今日拜访。"
@@ -57077,9 +57041,7 @@
   - split: 10
     subIndex: 1
     text: "害得云裳父母身亡，也害得游年身受重伤，经脉尽断。"
-    translated: "It also caused Yun Shang's parents to die, and left Younian seriously injured, with all his meridians severed."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "It caused Yunshang's parents to die, and also left Younian severely injured, with his meridians completely severed."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -59173,9 +59135,7 @@
   splits:
   - split: 10
     text: "思迟，云裳？魏师兄去哪儿了？"
-    translated: "Sichi, Yuchang? Where's Senior Brother Wei?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Sichi, Yunshang? Where's Senior Brother Wei?"
 - raw: ",,,右,,,,,,,呼……呼……魏师兄…魏师兄被贼人…围在巴陵村了…\\n顾师兄…你们…你们怎么来了……"
   splits:
   - split: 10
@@ -59482,9 +59442,7 @@
   splits:
   - split: 10
     text: "魏师兄！！！魏师兄都是为了保护我和云裳，才"
-    translated: "Senior Brother Wei!! Senior Brother Wei protected me and Yun Shang."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Senior Brother Wei!!! Senior Brother Wei protected me and Yunshang just to"
   - split: 10
     subIndex: 1
     text: "狗贼！我跟你们势不两立！！！"
@@ -59618,7 +59576,7 @@
   splits:
   - split: 10
     text: "姜掌门又说笑了，我早就派弟子去放出消息，"
-    translated: "Qian Sect Master is just joking. I sent disciples to spread the news long ago."
+    translated: "Sect Leader Jiang is jesting again. I sent disciples to spread the word long ago,"
   - split: 10
     subIndex: 1
     text: "这巴陵村明明是你们护卫不周，被那群黑风寨强盗给占据了。"
@@ -59662,7 +59620,7 @@
   - split: 10
     subIndex: 1
     text: "姜掌门，你若没有真凭实据，就这样血口喷人，那我可就要向你讨个公道了."
-    translated: "Qian Sect Leader, if you have no solid evidence to make such unfounded accusations against me, I will demand justice from you."
+    translated: "Sect Leader Jiang, if you have no real proof, accusing me like this, I will demand a fair hearing from you."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -59686,7 +59644,7 @@
   splits:
   - split: 10
     text: "姜掌门，咱们在这儿辩上三天三夜，也辩不出分晓。"
-    translated: "Master Jiang, no matter how long we debate for three days and three nights, we still won't reach a conclusion."
+    translated: "Sect Leader Jiang, no matter how long we debate for three days and three nights, we still won't reach a conclusion."
 - raw: ",,,右,,,,,,,久闻你的无影乱剑又有精进，\\n咱们也有多年没有交过手了，今天干脆讨教讨教！"
   splits:
   - split: 10
@@ -59732,7 +59690,7 @@
   - split: 10
     subIndex: 2
     text: "姜掌门，无影乱剑果然名不虚传，佩服佩服。"
-    translated: "Master Qiang, the Flickering Scatter Sword lives up to its reputation; I am truly impressed."
+    translated: "Sect Leader Jiang, your Shadow Disarray Swords truly live up to their reputation. Well done, well done."
   templates:
   - split: 10
     template: "{0}……{1}……\\n{2}"
@@ -59821,7 +59779,7 @@
   splits:
   - split: 10
     text: "呵呵，好好好，姜掌门走好不送！"
-    translated: "Haha, very well, Sect Master Jiang, have a good journey!"
+    translated: "Haha, very well, Sect Leader Jiang, have a good journey!"
   - split: 10
     subIndex: 1
     text: "你大徒弟葬身之处，就在村外那处山崖上，我就不同你们一道收尸去了。"
@@ -62830,7 +62788,7 @@
   - split: 10
     subIndex: 1
     text: "姜掌门将你一手抚养长大，确实不易，也算作是我的谢礼了。"
-    translated: "Qing Sect Leader raised you to adulthood with great effort, and I consider this a token of gratitude."
+    translated: "Sect Leader Jiang nurtured you and raised you with great effort, so this can be considered my gratitude."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -72918,7 +72876,7 @@
   splits:
   - split: 10
     text: "姜掌门，你说！我岂能不竭心尽力，保护婉儿的安全？"
-    translated: "Qian Sect Master, you say! How could I not spare no effort to protect Wenda's safety?"
+    translated: "Sect Leader Jiang, you say! How could I not spare no effort to protect Wan'er's safety?"
   - split: 10
     subIndex: 1
     text: "若是她出了岔子，我九泉之下，有何颜面去见先皇和那位大人？"
@@ -73394,15 +73352,11 @@
   splits:
   - split: 10
     text: "（将云裳搂在怀中，软言抚慰）"
-    translated: "(hug Yun Shang close and comfort her gently with soft words)"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "(Hold Yunshang close, soothe softly in a gentle voice)"
   - split: 10
     subIndex: 1
     text: "云裳，别哭了别哭了，好像师姐我要死了一样。"
-    translated: "Yun Shang, stop crying, stop crying. It's as if Senior Sister is going to die."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang, stop crying, stop crying. It's as if Senior Sister is about to die."
   - split: 10
     subIndex: 2
     text: "以后每年，我都做月饼和腊八粥，寄回来给你吃好不好！"
@@ -73655,7 +73609,7 @@
   splits:
   - split: 10
     text: "姜掌门，我就先告辞了！"
-    translated: "Sect Master Jiang, I'll take my leave first!"
+    translated: "Sect Leader Jiang, I'll take my leave first!"
 - raw: ",,姜婉,右,,,,,,,师傅……婉儿走了！"
   splits:
   - split: 10
@@ -73809,7 +73763,7 @@
   - split: 10
     subIndex: 1
     text: "婉儿在飞龙门的安全和生活都万份妥帖，姜掌门尽管放心！"
-    translated: "Wend'er's safety and living at Flying Dragon Gate are all taken care of, Sect Master Jiang!"
+    translated: "Wen'er's safety and living at Flying Dragon Gate are all taken care of! Sect Leader Jiang, please rest assured!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -73901,7 +73855,7 @@
   - split: 10
     subIndex: 1
     text: "也是为了感谢姜掌门这么多年来，尽心尽力，保护先皇血脉的义举。"
-    translated: "It is also to thank Sect Master Jiang for his devoted efforts over the years in protecting the imperial bloodline."
+    translated: "It is also to thank Sect Leader Jiang for his dedicated efforts over the years, protecting the bloodline of the former emperor."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -73999,7 +73953,7 @@
   - split: 10
     subIndex: 1
     text: "拜见姜掌门！弟子定当誓死效力！）"
-    translated: "Meeting Sect Master Jiang! I vow to dedicate my life to serving you!)"
+    translated: "Greeting Sect Leader Jiang! Disciple will certainly devote myself wholeheartedly!)"
   templates:
   - split: 10
     template: "{0}：\\n{1}"
@@ -74023,7 +73977,7 @@
   splits:
   - split: 10
     text: "实话说，婉儿虽身在飞龙门，可还一直心系着姜掌门和仙霞派。"
-    translated: "To be honest, though Wan'er is at Flying Dragon Gate, her heart remains with Master Qiang and the Xianxia Sect."
+    translated: "To be honest, Wan'er, although she is with Flying Dragon Gate, still always thinks of Sect Leader Jiang and the Xianxia Sect."
   - split: 10
     subIndex: 1
     text: "我这诸葛大姐看在眼里，还真是有些嫉妒呢！"
@@ -74051,7 +74005,7 @@
   splits:
   - split: 10
     text: "姜掌门放心，婉儿毕竟是先皇遗孤。"
-    translated: "Qian Sect Leader rest assured, Wan'er is after all the imperial orphan of the previous emperor."
+    translated: "Sect Leader Jiang rest assured, Wan'er is after all the orphan of the former emperor."
   - split: 10
     subIndex: 1
     text: "我待婉儿自会视如己出，与亲生女儿一般无二。"
@@ -74067,7 +74021,7 @@
   - split: 10
     subIndex: 1
     text: "姜掌门，告辞！"
-    translated: "Sect Master Jiang, farewell!"
+    translated: "Sect Leader Jiang, farewell!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -85298,7 +85252,7 @@
   splits:
   - split: 10
     text: "姜掌门，你将我这总舵搅得天翻地覆，还想说走就走？"
-    translated: "Qian Sect Leader, you've caused utter chaos in my main den. Do you really think you can just leave now?"
+    translated: "Sect Leader Jiang, you've caused utter chaos in my main den. Do you really think you can just leave now?"
 - raw: ",,,右,,,,,StartSpeFight;105,,你仙霞派与我铁掌帮师出同源，\\n不知这些日子来姜掌门功力可有进步？待我我试上一试！"
   splits:
   - split: 10
@@ -85327,7 +85281,7 @@
   splits:
   - split: 10
     text: "姜掌门，我近来倒是有不少武学感悟，请你赐教了......"
-    translated: "Qian Sect Master, I have had quite a few martial insights lately. Please enlighten me..."
+    translated: "Sect Leader Jiang, I've had quite a few martial insights recently. Please enlighten me..."
   - split: 10
     subIndex: 1
     text: "看掌！！！"
@@ -85339,7 +85293,7 @@
   splits:
   - split: 10
     text: "姜掌门，我这劈金碎玉掌，力道可有进步？"
-    translated: "Sect Master Jiang, has my Split Gold Crush Jade Palm made any progress in terms of strength?"
+    translated: "Sect Leader Jiang, has my Split Gold Crumble Jade Palm made any progress in terms of strength?"
 - raw: ",,,左,,,,,,,唔...夏帮主功力确有进步，不过我仙霞派也没有故步自封。\\n只是夏帮主之内力，并不像是潮起月盈功所至......"
   splits:
   - split: 10
@@ -87451,9 +87405,7 @@
   splits:
   - split: 10
     text: "为了给爹娘报仇，就算只有云裳一人，也要去跟铁掌帮决一死战！"
-    translated: "To avenge his father and mother, even if it's just Yun Shang, he must confront the Iron Palm Gang in a final battle!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "To avenge my father and mother, even if it's just Yunshang going alone, I must face the Iron Palm Gang in a final battle!"
 - raw: ",玩家,,左,,,,,,,小师妹，各位师兄，我#$PlayerName#愿与大家共进退！"
   splits:
   - split: 10
@@ -89407,7 +89359,7 @@
   splits:
   - split: 10
     text: "哈哈哈哈哈，姜掌门，你可知道，这石室是什么来头？"
-    translated: "Haha, Sect Master Jiang, do you know what this stone chamber is all about?"
+    translated: "Haha, Sect Leader Jiang, do you know what this stone chamber is all about?"
 - raw: ",,,右,,,,,,,我如此慎重守着这石室，不光是为了我们铁掌帮，\\n也是为了你仙霞派啊！"
   splits:
   - split: 10
@@ -89511,7 +89463,7 @@
   - split: 10
     subIndex: 2
     text: "姜掌门，你说是不是？"
-    translated: "Sect Master Jiang, is that right?"
+    translated: "Sect Leader Jiang, is that right?"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -89621,7 +89573,7 @@
   splits:
   - split: 10
     text: "姜掌门，原来你也破解了其中奥秘。"
-    translated: "Qian Sect Leader, I see you've also unraveled the mysteries within."
+    translated: "Sect Leader Jiang, I see you've also figured out the mysteries involved."
   - split: 10
     subIndex: 1
     text: "不亏是能与我夏天雄相争多年，不分胜负之人。"
@@ -89715,7 +89667,7 @@
   splits:
   - split: 10
     text: "姜掌门，你现在若肯跪地求饶，拜在我夏天雄门下，"
-    translated: "Qian Sect Leader, if you now kneel and beg for mercy, agree to serve under my Summer Hero sect,"
+    translated: "Sect Leader Jiang, if you now kneel and beg for mercy, and swear allegiance to my Summer Might Sect,"
   - split: 10
     subIndex: 1
     text: "我自会将仙霞派吸纳为铁掌帮分舵，不会为难你与你那些弟子们。"
@@ -89807,7 +89759,7 @@
   splits:
   - split: 10
     text: "姜掌门，事到如今何必再困兽犹斗。"
-    translated: "Qian Sect Master, why fight a losing battle now?"
+    translated: "Sect Leader Jiang, why continue to fight like a caged animal now that things have come to this."
   - split: 10
     subIndex: 1
     text: "你虽也习得了梵文贝叶经，但功力尚浅，"
@@ -90446,9 +90398,7 @@
   splits:
   - split: 10
     text: "云裳，你年纪尚小，为师本最担心你......"
-    translated: "Yun Shang, you are still quite young. I was most worried about you..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang, you are still young. I was most worried about you..."
   - split: 10
     subIndex: 1
     text: "不过看到你师兄师姐们如此懂事争气......"
@@ -90658,7 +90608,7 @@
   splits:
   - split: 10
     text: "姜掌门，到那时你还能保持本心，坚守正道，"
-    translated: "Qian Sect Leader, by then you can still uphold your true heart and adhere to the right path,"
+    translated: "Sect Leader Jiang, by then, you can still uphold your true nature and adhere to the righteous path."
   - split: 10
     subIndex: 1
     text: "绝不行任何不义之事吗？"
@@ -91119,9 +91069,7 @@
   - split: 10
     subIndex: 2
     text: "算云裳求你了好吗？"
-    translated: "Please, Cloud Clothes?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang, please, okay?"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -91129,9 +91077,7 @@
   splits:
   - split: 10
     text: "云裳......好......"
-    translated: "Yun Shang... quite..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang... so..."
   - split: 10
     subIndex: 1
     text: "既然如此，那我就勉为其难接任这掌门之位。"
@@ -93504,7 +93450,7 @@
   splits:
   - split: 10
     text: "姜掌门莫慌，武当派宋廉庭前来援手！"
-    translated: "Qing Sect Leader, don't panic. Wudang Sect's Song Lanting is coming to lend a hand!"
+    translated: "Sect Leader Jiang, don't panic! Wudang Sect's Song Leinting is coming to lend a hand!"
 - raw: ",,,右,,,,,,,宋掌门！可算来了，快一道制住这恶贼！"
   splits:
   - split: 10
@@ -93590,7 +93536,7 @@
   - split: 10
     subIndex: 1
     text: "只能多谢姜掌门仗义出手了！"
-    translated: "Only Qian Sect Leader could have come to the rescue with such righteousness!"
+    translated: "Only we can thank Sect Leader Jiang for your righteous intervention!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -93610,11 +93556,11 @@
   splits:
   - split: 10
     text: "姜掌门侠肝义胆，我宋廉庭佩服！"
-    translated: "Qian Sect Leader is righteous and brave‑hearted; I, Song Linting, admire you!"
+    translated: "Sect Leader Jiang is chivalrous and righteous‑I Song honestly admire!"
   - split: 10
     subIndex: 1
     text: "我看姜掌门和仙霞派诸位少侠，均是受了些伤。"
-    translated: "I see that both Master Jiang and the Young Heroes of the Xianxia Sect have all sustained some injuries."
+    translated: "I see that Sect Leader Jiang and the various Young Heroes of the Xianxia Sect have all sustained some injuries."
   - split: 10
     subIndex: 2
     text: "这些丹药乃是我武当派的疗伤秘宝，就赠与各位聊表谢意好了。"
@@ -93647,7 +93593,7 @@
   - split: 10
     subIndex: 1
     text: "姜掌门，咱们后会有期！"
-    translated: "Sect Master Jiang, we'll meet again!"
+    translated: "Sect Leader Jiang, we'll meet again!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -101926,11 +101872,11 @@
   splits:
   - split: 10
     text: "咱们巴蜀武林，失去了姜掌门，就如同鱼离了水，草离了根。"
-    translated: "Our Ba Shu Wulin is like a fish out of water and grass without roots without Master Jiang."
+    translated: "Our Ba Shu Wulin is like a fish out of water, a blade without its handle, without the leadership of Sect Leader Jiang."
   - split: 10
     subIndex: 1
     text: "哎，我好恨，若是当时能在姜掌门身旁与他并肩作战，"
-    translated: "Ah, I wish so much. If only I could have fought by Master Qiang's side back then."
+    translated: "Ah, I wish I could have stood by Sect Leader Jiang and fought alongside him then."
   - split: 10
     subIndex: 2
     text: "若能替他而死，我周莫知也心甘情愿！"
@@ -102010,7 +101956,7 @@
   - split: 10
     subIndex: 1
     text: "有你继承仙霞派大统，姜掌门在天之灵想必也能含笑。"
-    translated: "With you inheriting the leadership of Xianxia Sect, Director Qiang's spirit in heaven would surely smile."
+    translated: "With you inheriting the leadership of the Xianxia Sect, Sect Leader Jiang's spirit in heaven would likely smile."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -106615,7 +106561,7 @@
   splits:
   - split: 10
     text: "明明就是他们先侮辱#$PlayerName#的师傅姜掌门，"
-    translated: "Obviously, it was them who first insulted Master Jiang, the Sect Leader of #$PlayerName#."
+    translated: "Obviously, it was them who first insulted #$PlayerName#'s master, Sect Leader Jiang."
   - split: 10
     subIndex: 1
     text: "我让他们道歉他们不肯，这才打起来的！"
@@ -106679,7 +106625,7 @@
   splits:
   - split: 10
     text: "给我跪下，向姜掌门在天之灵告慰致歉！"
-    translated: "Kneel down and offer a sincere apology to Qiang Sect Leader's heavenly spirit!"
+    translated: "Kneel down and offer condolences and apologies to the late Sect Leader Jiang!"
 - raw: ",,临时:武当弟子乙,右,,,ItemGet,,,,（扑通一声跪下，连连磕头）\\n姜掌门，我出言不逊，向您道歉。"
   splits:
   - split: 10
@@ -109483,9 +109429,7 @@
   splits:
   - split: 10
     text: "云裳也会加倍小心，不会给大家添麻烦的。"
-    translated: "Yun Shang will also be extra careful and won't cause anyone trouble."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Yunshang will also be extra careful and won't cause any trouble for everyone."
 - raw: ",,,左,,,,,,,好，此战乃是我仙霞派出蜀的第一战，\\n各位师兄妹们历练多年，如今武艺也皆已小有所成。"
   splits:
   - split: 10
@@ -158898,7 +158842,7 @@
   splits:
   - split: 10
     text: "宋师伯常说，姜掌门是江湖中最后一位仁侠。"
-    translated: "Senior Uncle Song often said that Jiang Sect Leader is the last hero among the Jianghu."
+    translated: "Senior Master Song often said that Sect Leader Jiang is the last Virtuous Hero in the Jianghu."
   - split: 10
     subIndex: 1
     text: "今日见到各位，方知此言非虚！"
@@ -256159,7 +256103,7 @@
   - split: 10
     subIndex: 1
     text: "还夺得了少年英雄大会的魁首，姜掌门真是收了个好徒弟啊。"
-    translated: "He also won the top spot in the Young Heroes Conference. Master Qian has truly gotten a good apprentice."
+    translated: "He also won the top prize at the Young Heroes Conference. Truly, Sect Leader Jiang has secured himself an excellent disciple."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -257968,7 +257912,7 @@
   - split: 10
     subIndex: 1
     text: "可惜姜掌门已逝，否则老夫也想认识认识这位正气凛然之仁侠。"
-    translated: "Unfortunately, Master Qiang is no longer with us, otherwise I would also have liked to get to know this righteous and noble person."
+    translated: "Sadly, Sect Leader Jiang is no longer with us, otherwise, I would have also liked to meet this righteous and noble hero."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -264628,9 +264572,7 @@
   splits:
   - split: 10
     text: "呵呵呵呵，云裳几年未见，"
-    translated: "Haha, Yun Shang, it's been a few years since we last met."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Haha, Yunshang, it's been a few years since we last met."
   - split: 10
     subIndex: 1
     text: "当年的小丫头已经长这么高了。"
@@ -264658,9 +264600,7 @@
   - split: 10
     subIndex: 1
     text: "还一直念着云裳的手艺呢。"
-    translated: "Still thinking about Yun Shang's craftsmanship"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Still thinking about Yunshang's craftsmanship"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -267143,9 +267083,7 @@
   splits:
   - split: 10
     text: "婉儿，云裳，脏活累活就交给师兄我们几个。"
-    translated: "Wen'er, Yunchang, let the dirty and tiring work be handled by our senior brothers."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Yunshang,云裳,"
+    translated: "Wan'er, Yunshang, let the dirty and tiring work be handled by Senior Brother and us."
   - split: 10
     subIndex: 1
     text: "你们负责打扫战场，收拾残局便可。"

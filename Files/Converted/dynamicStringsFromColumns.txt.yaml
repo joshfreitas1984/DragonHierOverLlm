@@ -52139,21 +52139,15 @@
 - raw: "外门弟子甲"
   splits:
   - text: "外门弟子甲"
-    translated: "Junior Apprentice"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Outer Disciple,外门弟子,"
+    translated: "Outer Disciple A"
 - raw: "外门弟子乙"
   splits:
   - text: "外门弟子乙"
-    translated: "Apprentice"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Outer Disciple,外门弟子,"
+    translated: "Outer Disciple B"
 - raw: "外门弟子丙"
   splits:
   - text: "外门弟子丙"
-    translated: "Junior Apprentice Assistant"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Outer Disciple,外门弟子,"
+    translated: "Outer Disciple C"
 - raw: "受伤强盗"
   splits:
   - text: "受伤强盗"
