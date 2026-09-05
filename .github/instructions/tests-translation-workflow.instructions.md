@@ -48,96 +48,27 @@ decomposition/reconstruction), write plain xUnit tests against pure functions �
 ## Asset dumper (`AssetDumperWorkflowTests.cs`) — finding hardcoded Chinese in prefabs/assets
 
 `AssetDumperWorkflowTests.DumpChineseTextFromAssets` is a standalone, one-off discovery tool (not
-part of the numbered pipeline) that scans `<GameFileHandling.GameFolder>\LongYinLiZhiZhuan_Data`
-for Chinese text baked directly into prefabs/`MonoBehaviour`/`TextAsset` serialized fields — the
-kind of hardcoded UI text that never goes through the CSV pipeline above. It's the offline
-counterpart to `FanslationStudio.Plugins.Shared`'s `PrefabTextDumperService`
-(`G:\FanslationStudio.Plugins\FanslationStudio.Plugins.Shared\PrefabText\PrefabTextDumperService.cs`),
-which walks *loaded* GameObjects at runtime via Harmony + UnityEngine reflection — that approach
-can't run here since `Tests` has no Unity runtime. Instead this test uses `AssetsTools.NET` to
-statically parse the `.assets`/`.bundle`/`.unity3d` files on disk: **IL2CPP only affects how the
-game's compiled code is generated, not the Unity `SerializedFile` container format** these asset
-files use, so no game process, Harmony, or IL2CPP-awareness is needed to read them.
+part of the numbered pipeline) that statically scans `<GameFileHandling.GameFolder>\LongYinLiZhiZhuan_Data`
+assets via `AssetsTools.NET` for Chinese text baked into prefabs/`MonoBehaviour`/`TextAsset`
+fields — hardcoded UI text that never goes through the CSV pipeline. Output is split into
+`Files/Raw/Dumped/PrefabText/dumpedPrefabText.txt` (feeds the numbered workflow directly, see
+"PrefabText pipeline" below) and a diagnostic-only `dumpedOtherText.txt`.
 
-- **Unlike `PrefabTextDumperService`** (which only scans standalone external bundles reachable via
-  `AssetBundle.LoadFromFile` at runtime, since Unity's monolithic internal files aren't loadable
-  that way), this offline scan opens `globalgamemanagers`/`level*`/`sharedassets*` directly too —
-  they use the same `SerializedFile` format as a standalone `.assets` file, just without a
-  dedicated extension, and `AssetsManager.LoadAssetsFile` reads them fine regardless of extension.
-  Only genuinely unparseable companion payloads are filtered out by `IsCandidateAssetFile`:
-  `.resS`/`.resource` files are raw data blobs (audio/texture bytes) referenced by a
-  `StreamingInfo` elsewhere and have no `SerializedFile` header of their own, and `.manifest` is
-  plain-text bundle metadata — all three fail with `AssetsTools`' "signature not supported" if
-  scanned directly. `ScanFile` dispatches purely on extension: `.unity3d`/`.assetbundle`/`.bundle`
-  go through the `AssetBundleFile`/`LoadBundleFile` path, everything else (`.assets` or no
-  extension at all) is opened directly via `LoadAssetsFile`.
-- Walks every deserialized field on every asset (not a fixed field-name allowlist like
-  `m_text`/`m_Text`) looking for a string value matching the same
-  `\p{IsCJKUnifiedIdeographs}`-based pattern as `DragonHeirPlugin/MainPlugin.cs`'s
-  `ChineseCharPattern`, and writes unique matches to
-  `Files/Raw/Dumped/PrefabText/dumpedPrefabText.txt` (mirroring the runtime dumper's output shape).
-- **`classdata.tpk` (optional) covers built-in engine types only** — download one from
-  https://github.com/nesrak1/AssetsTools.NET/releases and place it at `Tests/classdata.tpk` (path
-  is `AssetDumperWorkflowTests.ClassDataTpkPath`) if a release build stripped type trees for
-  engine classes like `Texture2D`/`GameObject`. It does **not** help `MonoBehaviour` assets at
-  all — a `MonoBehaviour`'s field layout is defined by the game's own script code, which
-  `classdata.tpk` has no knowledge of.
-- **`MonoBehaviour` fields (where most hardcoded UI text actually lives) require the
-  `Cpp2IlTempGenerator` from the `AssetsTools.NET.Cpp2IL` package instead.** `TextMeshProUGUI`,
-  `UI.Text`, and any custom UI script are all `MonoBehaviour`-derived components — without a
-  `MonoTempGenerator` wired up, `AssetsManager.GetBaseField` either throws or returns only the
-  generic `Object`/`MonoBehaviour` header fields (`m_Script`/`m_Name`), silently missing the actual
-  text field. The test wires `manager.MonoTempGenerator = new Cpp2IlTempGenerator(metadataPath,
-  gameAssemblyPath)` using the same `GameAssembly.dll` +
-  `<data-dir>\il2cpp_data\Metadata\global-metadata.dat` paths `Converter/Program.cs` auto-discovers
-  for this same game (see `converter.instructions.md`'s "`--game-dir` auto-discovers" table) — both
-  files already exist on disk for this game, no separate download needed, unlike `classdata.tpk`.
-  **A near-empty result from this test essentially always means the scan couldn't resolve
-  `MonoBehaviour` fields, not that no Chinese prefab text exists** — check the printed
-  `monoBehavioursSkipped` count in the test output before concluding "there's nothing there"; if it
-  is high (or `GameAssembly.dll`/`global-metadata.dat` weren't found), the scan never actually
-  looked at that text at all.
+- **Prerequisites**: `Tests/classdata.tpk` (built-in engine types) and a working
+  `Cpp2IlTempGenerator` wire-up (`MonoBehaviour` fields) are both required, or the scan silently
+  finds little/nothing — check the printed `monoBehavioursSkipped` count before concluding no
+  Chinese prefab text exists.
 - **`Samboy063.LibCpp2IL` is pinned to `2022.1.0-pre-release.13`** (with `AssetRipper.Primitives
-  2.1.0`) in `Tests.csproj` — do not bump without re-verifying, plain restore picks a version that
-  breaks MonoBehaviour resolution 100% of the time. A `classdata.tpk` (from `nesrak1/UABEA`'s
-  releases, not `AssetsTools.NET`'s own) at `Tests/classdata.tpk` is also required for built-in
-  engine types. Full version-pin investigation and classdata.tpk root cause in
-  [`Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md`](../../Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md).
-- Noise filtering: `m_Name`/`first` fields excluded via `IgnoredFieldNames` in `ExtractChineseText`
-  (a path-based heuristic was tried and removed — didn't reliably catch the noise). `TextAsset`
-  assets (`m_Script`, whole
-  embedded file contents) are skipped entirely before field-walking, and a `MaxStringLength = 2000`
-  cap guards against any other unexpectedly huge string field.
-- **Output is split into two files (Aug 2026)** by `IsPrimaryTextField` (exact, case-insensitive
-  match on `"m_Text"` or `"text"` — the actual field names `UI.Text`/`TMP_Text` use for their
-  rendered-text field, confirmed from a real dump): `dumpedPrefabText.txt` gets ONLY those strings,
-  one plain string per line with no field-name suffix — this is deliberately just a flat text file,
-  matching what `PrefabTextWorkflow.ExportPrefabTextToCustomFormat` (see below) expects to read.
-  Everything else found by the generic field walk (`plotText`, `tutorialText`, `choiceText`,
-  `eventDescribe`, `startRemindText`, etc. — real dialogue/plot text living on custom
-  `MonoBehaviour` fields, not the component's own displayed-text field) goes to the sibling
-  `dumpedOtherText.txt` in the original diagnostic `{text}\t[{field}]` format and is **not** fed
-  into the translation pipeline.
-- **`dumpedPrefabText.txt` now feeds directly into the numbered workflow** via
-  `GameFileHandling.ExportPrefabTextAssetToCustomFormat` (`FileInputWorkflowTests`'s
-  `"1b. ExportPrefabTextIntoTranslated"`, run right after step 1, before step 2's merge) — this is
-  no longer purely a read-only discovery step. See "PrefabText pipeline" below.
-- **`IsPrimaryTextField`'s `"m_Text"`/`"text"` allowlist misses real displayed text on several
-  other `MonoBehaviour` fields** (`name`, `eventName`/`tutorialName`/`showName`/`bulletName`/
-  `fullName`/`jobName`/`spellName`/`pointName`/`sourceName`/`plotName`) — these land in
-  `dumpedOtherText.txt` only. Handled via the automated dynamic-string extraction sources
-  (`ExtractDynamicStringCandidatesFromOtherText`/`ExtractDynamicStringCandidatesFromIl2CppStringMap`/
-  `DynamicStringOtherTextFields`, see DynamicStringsIL2CPP pipeline below) rather than widening
-  `IsPrimaryTextField` (risky — `data`/`targetName` mix real content with internal asset/UI names
-  on the same field, deliberately excluded).
-- **A "primary" `text`/`m_Text` field can still miss `PrefabTextPatches.cs`'s load-time scan if the
-  value is set at runtime rather than baked into the prefab.** Fixed generally:
-  `PrefabTextPatches.cs` also postfixes `TMP_Text.text`/`UI.Text.text` setters (same sink-level
-  pattern `DynamicStringPatches.cs` uses) doing an EXACT whole-string lookup against its own
-  `Replacements` dictionary, at `[HarmonyPriority(Priority.First)]` so it always runs before
-  `DynamicStringPatches`' bare-fragment postfix. Genuinely runtime-COMPOSED strings still fall
-  through unmodified to `DynamicStringPatches`' template/fragment matching. Full investigation
-  narrative (both findings) in [`Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md`](../../Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md).
+  2.1.0`) in `Tests.csproj` — do not bump without re-verifying; a plain restore picks a version
+  that breaks MonoBehaviour resolution 100% of the time.
+- A "primary" `text`/`m_Text` field can still miss `PrefabTextPatches.cs`'s load-time scan if the
+  value is set at runtime rather than baked into the prefab — handled generally via
+  `PrefabTextPatches.cs` postfixing `TMP_Text.text`/`UI.Text.text` setters, not per-string
+  overrides.
+
+Full architecture (tool design, `ScanFile`/`classdata.tpk`/`Cpp2IlTempGenerator` details, noise
+filtering, `IsPrimaryTextField` output split, and the version-pin investigation) is in
+[`Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md`](../../Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md).
 
 ## PrefabText pipeline (`dumpedPrefabText.txt` → `Files/Mod/dumpedPrefabText.txt.yaml`)
 

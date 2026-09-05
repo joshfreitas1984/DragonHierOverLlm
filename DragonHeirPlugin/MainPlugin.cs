@@ -217,6 +217,7 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(ItemIconPatches));
 
         Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
+        Harmony.CreateAndPatchAll(typeof(AttriLvDiagnosticPatches));
         //Harmony.CreateAndPatchAll(typeof(HardcodedHeroNamePatches));
 
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");

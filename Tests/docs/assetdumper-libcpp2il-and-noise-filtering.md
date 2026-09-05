@@ -3,6 +3,59 @@
 > Read this when working on `AssetDumperWorkflowTests.cs` — either the `Cpp2IL`/`classdata.tpk`
 > setup, or deciding which `MonoBehaviour` field names should feed the pipeline.
 
+## Overview: what `AssetDumperWorkflowTests.DumpChineseTextFromAssets` does
+
+A standalone, one-off discovery tool (not part of the numbered pipeline) that scans
+`<GameFileHandling.GameFolder>\LongYinLiZhiZhuan_Data` for Chinese text baked directly into
+prefabs/`MonoBehaviour`/`TextAsset` serialized fields — hardcoded UI text that never goes through
+the CSV pipeline. It's the offline counterpart to `FanslationStudio.Plugins.Shared`'s
+`PrefabTextDumperService` (walks *loaded* GameObjects at runtime via Harmony + UnityEngine
+reflection, which can't run here since `Tests` has no Unity runtime). Instead it uses
+`AssetsTools.NET` to statically parse `.assets`/`.bundle`/`.unity3d` files: IL2CPP only affects how
+the game's compiled code is generated, not the Unity `SerializedFile` container format, so no game
+process/Harmony/IL2CPP-awareness is needed to read them.
+
+- Unlike `PrefabTextDumperService` (external bundles only), this scan also opens
+  `globalgamemanagers`/`level*`/`sharedassets*` directly — same `SerializedFile` format, just no
+  extension, and `AssetsManager.LoadAssetsFile` reads them regardless. `IsCandidateAssetFile`
+  filters out `.resS`/`.resource` (raw data blobs, no `SerializedFile` header) and `.manifest`
+  (plain-text bundle metadata). `ScanFile` dispatches on extension:
+  `.unity3d`/`.assetbundle`/`.bundle` → `AssetBundleFile`/`LoadBundleFile`; everything else
+  (`.assets` or no extension) → `LoadAssetsFile` directly.
+- Walks every deserialized field on every asset (not a fixed allowlist) for a string matching the
+  same `\p{IsCJKUnifiedIdeographs}` pattern as `DragonHeirPlugin/MainPlugin.cs`'s
+  `ChineseCharPattern`, writing unique matches to `Files/Raw/Dumped/PrefabText/dumpedPrefabText.txt`.
+- `classdata.tpk` (optional, from `nesrak1/UABEA` releases) covers built-in engine types
+  (`Texture2D`/`GameObject`) only when a release build stripped their type trees — it does not
+  help `MonoBehaviour` assets, whose field layout is defined by the game's own script code.
+  `MonoBehaviour` fields (where most hardcoded UI text lives) instead require
+  `Cpp2IlTempGenerator` from `AssetsTools.NET.Cpp2IL`, wired via `manager.MonoTempGenerator = new
+  Cpp2IlTempGenerator(metadataPath, gameAssemblyPath)` using the same `GameAssembly.dll` +
+  `global-metadata.dat` paths `Converter/Program.cs` auto-discovers for this game. A near-empty
+  result almost always means the scan couldn't resolve `MonoBehaviour` fields — check the printed
+  `monoBehavioursSkipped` count before concluding no Chinese prefab text exists.
+- Noise filtering: `m_Name`/`first` fields excluded via `IgnoredFieldNames` (a path-based
+  heuristic was tried and removed — didn't reliably catch the noise). `TextAsset` assets are
+  skipped entirely before field-walking, and `MaxStringLength = 2000` guards against unexpectedly
+  huge string fields.
+- Output is split by `IsPrimaryTextField` (exact, case-insensitive match on `"m_Text"`/`"text"` —
+  the field names `UI.Text`/`TMP_Text` use for their rendered-text field): `dumpedPrefabText.txt`
+  gets ONLY those strings, one per line, matching what `PrefabTextWorkflow.ExportPrefabTextToCustomFormat`
+  expects. Everything else from the generic field walk (`plotText`, `tutorialText`, `choiceText`,
+  `eventDescribe`, `startRemindText`, etc.) goes to `dumpedOtherText.txt` in `{text}\t[{field}]`
+  format and is diagnostic only — not fed into the translation pipeline.
+- `dumpedPrefabText.txt` feeds directly into the numbered workflow via
+  `GameFileHandling.ExportPrefabTextAssetToCustomFormat` (`FileInputWorkflowTests`'s
+  `"1b. ExportPrefabTextIntoTranslated"`, run right after step 1, before step 2's merge) — see
+  `Tests/docs/prefabtext-pipeline-architecture.md`.
+- `IsPrimaryTextField`'s allowlist misses real displayed text on several other fields (`name`,
+  `eventName`/`tutorialName`/`showName`/`bulletName`/`fullName`/`jobName`/`spellName`/`pointName`/
+  `sourceName`/`plotName`) — these land in `dumpedOtherText.txt` only. Handled via the automated
+  dynamic-string extraction sources (`ExtractDynamicStringCandidatesFromOtherText`/
+  `ExtractDynamicStringCandidatesFromIl2CppStringMap`/`DynamicStringOtherTextFields`, see
+  `Tests/docs/dynamicstrings-pipeline-architecture.md`) rather than widening `IsPrimaryTextField`
+  (risky — `data`/`targetName` mix real content with internal asset/UI names on the same field).
+
 ## `Samboy063.LibCpp2IL` NuGet version pin investigation
 
 `AssetsTools.NET.Cpp2IL` 3.0.4's nuspec only declares a *minimum* dependency on

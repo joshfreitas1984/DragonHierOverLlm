@@ -238,22 +238,7 @@ internal static class DynamicStringPatches
                 // is frequently a legitimately-CJK force name, so the strict non-CJK class would
                 // never match here at all. See CONFIRMED BUG #6 above for the quantifier choice.
                 var runQuantifier = (lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1) ? "*" : "*?";
-                // A run with nothing before it in Raw has no left anchor either - bound it the same
-                // way a leading-unanchored single placeholder is bounded below, instead of letting it
-                // search from the very start of the string for the run's own following literal.
-                if (idx == 0 && runStartMatch.Index == 0) runQuantifier = "{1,10}?";
-                // CONFIRMED BUG (2026-09-06): this used to apply the sentence-boundary-aware
-                // (\n-excluding) class to EVERY merged run whenever the toggle was on, not just an
-                // unanchored trailing run - unlike the single-placeholder branch below, which
-                // already gates on `lastGroupIsUnanchored && isLastGroup`. A run bounded by literal
-                // text on BOTH sides (e.g. "天下大势：{4}{0}门派 ...") is never at risk of the
-                // runaway-past-a-sentence-boundary failure mode this class exists to prevent, but
-                // its captured span can legitimately contain a literal "\n" (e.g. {4} substituted
-                // with an actual newline) - excluding \n there just makes the whole template fail
-                // to match at all. Only use the \n-excluding class for the same
-                // unanchored-trailing case the single-placeholder branch already restricts to.
-                var runIsUnanchoredTrailing = lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1;
-                var runCaptureClass = (runIsUnanchoredTrailing && MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true)
+                var runCaptureClass = MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true
                     ? SentenceBoundaryAwarePermissiveClass
                     : PermissivePlaceholderCaptureClass;
                 patternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
@@ -295,26 +280,17 @@ internal static class DynamicStringPatches
                     && MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true)
                 ? SentenceBoundaryAwarePermissiveClass
                 : PermissivePlaceholderCaptureClass;
-            // CONFIRMED BUG (2026-09-04): a placeholder/token with nothing before it in Raw (e.g.
-            // "#SourceForceName#功绩") has no left anchor - its permissive capture searched from
-            // the very start of the WHOLE rendered string for its own trailing literal, so it
-            // happily swallowed an unrelated, unrecognized template's own leading literal text
-            // (e.g. "CaoLight: 本战" out of a completely different "本战功绩第..." template) as if
-            // it were this token's value. Bound the PERMISSIVE capture to a plausible name length
-            // instead of leaving it unbounded - the strict (non-CJK) pattern doesn't need this,
-            // it's already bounded away from CJK content.
-            var permissiveQuantifier = (idx == 0 && placeholder.Index == 0) ? "{1,10}?" : quantifier;
             if (placeholder.Groups[1].Success)
             {
                 var groupName = $"p{placeholder.Groups[1].Value}";
                 patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
-                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{permissiveQuantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{quantifier})");
             }
             else
             {
                 var groupName = $"tok{tokenIndex}";
                 patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
-                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{permissiveQuantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{quantifier})");
                 tokenIndex++;
             }
 
@@ -414,20 +390,6 @@ internal static class DynamicStringPatches
                     }
                 })
                 .Where(t => t != null)
-                .ToList();
-
-            // CONFIRMED BUG (2026-09-04): _templateDictionary's inherited longest-Raw-first order
-            // (see LoadDictionary) counts placeholder/token bracket syntax ("{0}", "#Name#") as
-            // "length", which lets a short, generic single-token template like
-            // "#SourceForceName#功绩" (20 raw chars, almost all placeholder syntax) sort AHEAD of a
-            // longer, far more specific template like "本战功绩第{0}名乃是{1}，\n{2}" (19 raw chars,
-            // but 10 literal chars) purely by coincidence - so the generic template's unanchored
-            // token permissively swallows the specific template's own leading literal text first,
-            // consuming its "功绩" before the specific template ever gets a chance to match its own
-            // longer "本战功绩第" literal. Re-sort by actual literal content instead, so the more
-            // specific (more literal text) template always gets first refusal.
-            _compiledTemplates = _compiledTemplates
-                .OrderByDescending(t => t.LiteralSegments.Sum(s => s.Length))
                 .ToList();
 
             // See CompiledTemplate.BlockingRawEntries for why this exists: computed once here
