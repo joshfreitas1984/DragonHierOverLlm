@@ -323,4 +323,283 @@ public static class TemplateBlockingRepro
         }
         Console.WriteLine($"Final result: \"{result.Replace("\n", "\\n")}\"");
     }
+
+    // Full, merged-run-aware copy of DynamicStringPatches.BuildCompiledTemplate (2026-09-06) -
+    // the trimmed-down BuildCompiledTemplate above can't compile the "天下大势：{4}{0}..." template
+    // correctly since it has an adjacent-placeholder run ({4}{0}) that needs the "runs" merging
+    // logic to be bounded safely.
+    private static CompiledTemplate? BuildCompiledTemplateFull(DictEntry entry, bool sentenceBoundaryAware)
+    {
+        var raw = entry.Raw;
+        var patternBuilder = new StringBuilder();
+        var permissivePatternBuilder = new StringBuilder();
+        var literalSegments = new List<string>();
+        var lastIndex = 0;
+        var tokenIndex = 0;
+        var result = entry.Result ?? "";
+
+        var placeholderMatches = PlaceholderOrTokenRegex.Matches(raw).Cast<Match>().ToList();
+
+        var runs = new List<(int Start, int End)>();
+        {
+            var i = 0;
+            while (i < placeholderMatches.Count)
+            {
+                var j = i;
+                while (j + 1 < placeholderMatches.Count
+                       && placeholderMatches[j + 1].Index == placeholderMatches[j].Index + placeholderMatches[j].Length)
+                    j++;
+                if (j > i) runs.Add((i, j));
+                i = j + 1;
+            }
+        }
+
+        var runResultSpan = new Dictionary<int, string>();
+        foreach (var (start, end) in runs)
+        {
+            var runPattern = string.Join(@"\s*", Enumerable.Range(start, end - start + 1).Select(k => Regex.Escape(placeholderMatches[k].Value)));
+            var runMatch = Regex.Match(result, runPattern);
+            if (!runMatch.Success)
+            {
+                Console.WriteLine($"  [BuildCompiledTemplateFull] Skipping template with adjacent placeholders Result splits apart: '{raw}'");
+                return null;
+            }
+            runResultSpan[start] = runMatch.Value;
+        }
+
+        var lastGroupIsUnanchored = placeholderMatches.Count > 0
+            && placeholderMatches[^1].Index + placeholderMatches[^1].Length == raw.Length;
+
+        var runStartToEnd = runs.ToDictionary(r => r.Start, r => r.End);
+        var runIndex = 0;
+        var idx = 0;
+        while (idx < placeholderMatches.Count)
+        {
+            if (runStartToEnd.TryGetValue(idx, out var runEnd))
+            {
+                var runStartMatch = placeholderMatches[idx];
+                var runEndMatch = placeholderMatches[runEnd];
+                var literal = raw.Substring(lastIndex, runStartMatch.Index - lastIndex);
+                if (literal.Length > 0)
+                {
+                    var escapedLiteral = Regex.Escape(literal);
+                    patternBuilder.Append(escapedLiteral);
+                    permissivePatternBuilder.Append(escapedLiteral);
+                    literalSegments.Add(literal);
+                }
+
+                var groupName = $"run{runIndex}";
+                var runQuantifier = (lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1) ? "*" : "*?";
+                if (idx == 0 && runStartMatch.Index == 0) runQuantifier = "{1,10}?";
+                var runIsUnanchoredTrailing = lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1;
+                var runCaptureClass = (runIsUnanchoredTrailing && sentenceBoundaryAware) ? SentenceBoundaryAwarePermissiveClass : PermissivePlaceholderCaptureClass;
+                patternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
+
+                var resultSpan = runResultSpan[idx];
+                var sentinelIdx = result.IndexOf(resultSpan, StringComparison.Ordinal);
+                if (sentinelIdx >= 0)
+                {
+                    var sentinel = $"\u0001RUN{runIndex}\u0001";
+                    result = result.Substring(0, sentinelIdx) + sentinel + result.Substring(sentinelIdx + resultSpan.Length);
+                }
+
+                lastIndex = runEndMatch.Index + runEndMatch.Length;
+                idx = runEnd + 1;
+                runIndex++;
+                continue;
+            }
+
+            var placeholder = placeholderMatches[idx];
+            var singleLiteral = raw.Substring(lastIndex, placeholder.Index - lastIndex);
+            if (singleLiteral.Length > 0)
+            {
+                var escapedLiteral = Regex.Escape(singleLiteral);
+                patternBuilder.Append(escapedLiteral);
+                permissivePatternBuilder.Append(escapedLiteral);
+                literalSegments.Add(singleLiteral);
+            }
+
+            var isLastGroup = idx == placeholderMatches.Count - 1;
+            var quantifier = (lastGroupIsUnanchored && isLastGroup) ? "*" : "*?";
+            var singleCaptureClass = (lastGroupIsUnanchored && isLastGroup && sentenceBoundaryAware)
+                ? SentenceBoundaryAwarePermissiveClass
+                : PermissivePlaceholderCaptureClass;
+            var permissiveQuantifier = (idx == 0 && placeholder.Index == 0) ? "{1,10}?" : quantifier;
+            if (placeholder.Groups[1].Success)
+            {
+                var groupName = $"p{placeholder.Groups[1].Value}";
+                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{permissiveQuantifier})");
+            }
+            else
+            {
+                var groupName = $"tok{tokenIndex}";
+                patternBuilder.Append($"(?<{groupName}>{PlaceholderCaptureClass}{quantifier})");
+                permissivePatternBuilder.Append($"(?<{groupName}>{singleCaptureClass}{permissiveQuantifier})");
+                tokenIndex++;
+            }
+
+            lastIndex = placeholder.Index + placeholder.Length;
+            idx++;
+        }
+
+        var trailingLiteral = raw.Substring(lastIndex);
+        if (trailingLiteral.Length > 0)
+        {
+            var escapedTrailingLiteral = Regex.Escape(trailingLiteral);
+            patternBuilder.Append(escapedTrailingLiteral);
+            permissivePatternBuilder.Append(escapedTrailingLiteral);
+            literalSegments.Add(trailingLiteral);
+        }
+
+        var replacementTokenIndex = 0;
+        var replacementPattern = PlaceholderOrTokenRegex.Replace(result, m =>
+        {
+            if (m.Groups[1].Success) return $"${{p{m.Groups[1].Value}}}";
+            var name = $"tok{replacementTokenIndex}";
+            replacementTokenIndex++;
+            return $"${{{name}}}";
+        });
+
+        for (var r = 0; r < runIndex; r++)
+            replacementPattern = replacementPattern.Replace($"\u0001RUN{r}\u0001", $"${{run{r}}}");
+
+        return new CompiledTemplate
+        {
+            Pattern = new Regex(patternBuilder.ToString(), RegexOptions.Compiled),
+            PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled | RegexOptions.Singleline),
+            ReplacementPattern = replacementPattern,
+            LiteralSegments = literalSegments,
+        };
+    }
+
+    // Repro for the 2026-09-06 regression report: "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇
+    // {4}门派 {3}攻击京城/总舵" (world-situation chapter-intro block) rendering with several
+    // fragments left untranslated ("势：", "击", "击城镇", "击 Capital/总舵") instead of using this
+    // template's own "The great trend of the world..." translation at all.
+    public static void RunWorldSituationRepro(string modDir)
+    {
+        Console.WriteLine();
+        Console.WriteLine("=== RunWorldSituationRepro (2026-09-06 regression) ===");
+        var entries = LoadModDictionaries(modDir);
+        var dictionary = entries.Where(e => !e.IsTemplate).ToList();
+        var templateEntries = entries.Where(e => e.IsTemplate).ToList();
+
+        const string targetRaw = "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵";
+        var targetEntry = entries.FirstOrDefault(e => e.Raw == targetRaw);
+        if (targetEntry == null) { Console.WriteLine("Target template entry not found!"); return; }
+        Console.WriteLine($"Target result: {targetEntry.Result!.Replace("\n", "\\n")}");
+
+        const string before = "第1章 蜀中仙云映霞光\n天下大势：\n全局恶名修正0%\n门派 不可攻击资源\n门派 不可攻击城镇\n门派 不可攻击京城/总舵";
+
+        var compiled = BuildCompiledTemplateFull(targetEntry, sentenceBoundaryAware: true);
+        if (compiled == null) { Console.WriteLine("Failed to compile target template."); return; }
+        var compiledNonSba = BuildCompiledTemplateFull(targetEntry, sentenceBoundaryAware: false);
+        Console.WriteLine($"Non-SBA permissive pattern matched: {compiledNonSba!.PermissivePattern.IsMatch(before)}");
+        Console.WriteLine($"LiteralSegments: {string.Join(" | ", compiled.LiteralSegments.Select(s => s.Replace("\n", "\\n")))}");
+
+        compiled.BlockingRawEntries = dictionary
+            .Where(e => !string.IsNullOrEmpty(e.Raw)
+                && compiled.LiteralSegments.Any(seg => seg.Length > 0 && e.Raw.Contains(seg) && e.Raw.Length > seg.Length))
+            .Select(e => e.Raw)
+            .Distinct()
+            .ToList();
+        Console.WriteLine($"BlockingRawEntries count: {compiled.BlockingRawEntries.Count}");
+        foreach (var b in compiled.BlockingRawEntries)
+            Console.WriteLine($"  blocking raw: \"{b.Replace("\n", "\\n")}\"");
+
+        var literalsAllPresent = compiled.LiteralSegments.All(before.Contains);
+        Console.WriteLine($"All literal segments present in 'before': {literalsAllPresent}");
+
+        Console.WriteLine($"Strict pattern regex: {compiled.Pattern}");
+        Console.WriteLine($"Permissive pattern regex: {compiled.PermissivePattern}");
+        var strictMatch = compiled.Pattern.Match(before);
+        Console.WriteLine($"Strict pattern matched: {strictMatch.Success}");
+        var permissiveMatch = compiled.PermissivePattern.Match(before);
+        Console.WriteLine($"Permissive pattern matched: {permissiveMatch.Success}");
+
+        // Diagnostic: duplicate named group "p4" appears 3x in the raw ("{4}" used as a repeated
+        // newline-separator token) - construct an equivalent pattern with UNIQUED group names to
+        // see if the duplicate-name reuse itself is what breaks the match.
+        var seen = new Dictionary<string, int>();
+        var uniquedPatternText = Regex.Replace(compiled.PermissivePattern.ToString(), @"\(\?<(\w+)>", m =>
+        {
+            var name = m.Groups[1].Value;
+            var count = seen.TryGetValue(name, out var c) ? c + 1 : 0;
+            seen[name] = count;
+            return $"(?<{name}_{count}>";
+        });
+        Console.WriteLine($"Uniqued pattern: {uniquedPatternText}");
+        var uniquedPermissive = new Regex(uniquedPatternText, RegexOptions.Singleline);
+        Console.WriteLine($"Uniqued-group-name permissive pattern matched: {uniquedPermissive.IsMatch(before)}");
+
+        // Diagnostic: test each literal segment boundary incrementally to find where the whole
+        // pattern stops matching, by testing progressively longer literal-only prefixes.
+        var prefixPattern = new StringBuilder();
+        var literalsSoFar = new List<string>();
+        foreach (var seg in compiled.LiteralSegments)
+        {
+            literalsSoFar.Add(seg);
+            prefixPattern.Append(Regex.Escape(seg)).Append(".*?");
+            var partial = new Regex(prefixPattern.ToString(), RegexOptions.Singleline);
+            Console.WriteLine($"  After literal \"{seg.Replace("\n", "\\n")}\": partial-prefix-regex matches 'before' = {partial.IsMatch(before)}");
+        }
+        if (permissiveMatch.Success)
+        {
+            Console.WriteLine($"  Match span: [{permissiveMatch.Index}, {permissiveMatch.Index + permissiveMatch.Length}) = \"{permissiveMatch.Value.Replace("\n", "\\n")}\"");
+            var blocked = OverlapsBlockingEntry(before, permissiveMatch, compiled.BlockingRawEntries, out var culprit);
+            Console.WriteLine($"  Blocked: {blocked}" + (blocked ? $" (culprit: \"{culprit!.Replace("\n", "\\n")}\")" : ""));
+            if (!blocked)
+                Console.WriteLine($"  Reconstructed replacement: \"{permissiveMatch.Result(compiled.ReplacementPattern).Replace("\n", "\\n")}\"");
+        }
+
+        // Full pipeline trace: build every template with the merged-run-aware builder, re-sort by
+        // literal length (the actual PatchAll fix), then run ApplyTemplatesSinglePass end to end.
+        Console.WriteLine();
+        Console.WriteLine("--- Full ApplyTemplatesSinglePass trace (merged-run-aware, real order) ---");
+        var compiledList = new List<(DictEntry Entry, CompiledTemplate Compiled)>();
+        foreach (var t in templateEntries)
+        {
+            var c = BuildCompiledTemplateFull(t, sentenceBoundaryAware: true);
+            if (c == null) continue;
+            c.BlockingRawEntries = dictionary
+                .Where(e => !string.IsNullOrEmpty(e.Raw)
+                    && c.LiteralSegments.Any(seg => seg.Length > 0 && e.Raw.Contains(seg) && e.Raw.Length > seg.Length))
+                .Select(e => e.Raw)
+                .Distinct()
+                .ToList();
+            compiledList.Add((t, c));
+        }
+        compiledList = compiledList.OrderByDescending(x => x.Compiled.LiteralSegments.Sum(s => s.Length)).ToList();
+
+        var result = before;
+        var fired = 0;
+        foreach (var (entry, c) in compiledList)
+        {
+            if (c.LiteralSegments.Count > 0 && !c.LiteralSegments.All(result.Contains)) continue;
+
+            var pattern = c.Pattern;
+            if (!pattern.IsMatch(result))
+            {
+                pattern = c.PermissivePattern;
+                if (!pattern.IsMatch(result)) continue;
+            }
+
+            var beforeThis = result;
+            result = pattern.Replace(result, m =>
+                c.BlockingRawEntries.Count > 0 && OverlapsBlockingEntry(beforeThis, m, c.BlockingRawEntries, out _)
+                    ? m.Value
+                    : m.Result(c.ReplacementPattern));
+
+            if (result != beforeThis)
+            {
+                fired++;
+                Console.WriteLine($"[{fired}] Template raw: \"{entry.Raw.Replace("\n", "\\n")}\"");
+                Console.WriteLine($"    before: \"{beforeThis.Replace("\n", "\\n")}\"");
+                Console.WriteLine($"    after:  \"{result.Replace("\n", "\\n")}\"");
+            }
+        }
+        Console.WriteLine($"Final result: \"{result.Replace("\n", "\\n")}\"");
+    }
 }

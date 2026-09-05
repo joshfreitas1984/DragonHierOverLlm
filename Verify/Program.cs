@@ -348,6 +348,7 @@ class Program
         Console.WriteLine(_failures == 0 ? "ALL SCENARIOS PASSED" : $"{_failures} SCENARIO(S) FAILED");
 
         VerifyRepro.TemplateBlockingRepro.Run(@"G:\DragonHierOverLlm\Files\Mod");
+        VerifyRepro.TemplateBlockingRepro.RunWorldSituationRepro(@"G:\DragonHierOverLlm\Files\Mod");
     }
 }
 

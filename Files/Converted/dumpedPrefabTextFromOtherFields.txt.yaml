@@ -5961,19 +5961,19 @@
 - raw: "别派挑衅"
   splits:
   - text: "别派挑衅"
-    translated: "Don't provoke them"
+    translated: "Rival Sect Provocation"
 - raw: "别派来访"
   splits:
   - text: "别派来访"
-    translated: "Don't send any more visitors"
+    translated: "Other Sects Visit"
 - raw: "别派比试"
   splits:
   - text: "别派比试"
-    translated: "Don't arrange a trial match"
+    translated: "Compete with Other Sects"
 - raw: "别派盗匪"
   splits:
   - text: "别派盗匪"
-    translated: "Don't dispatch bandits"
+    translated: "Bandits from rival sects"
 - raw: "到#TargetPlace#，找顾游年师兄赢取赌约。"
   splits:
   - text: "到#TargetPlace#，找顾游年师兄赢取赌约。"
@@ -13441,7 +13441,7 @@
 - raw: "近来想为师兄们做几道好菜，苦于派内实在缺乏食材。若#PlayerName#不嫌麻烦，还请出手相助，拜托了！"
   splits:
   - text: "近来想为师兄们做几道好菜，苦于派内实在缺乏食材。若#PlayerName#不嫌麻烦，还请出手相助，拜托了！"
-    translated: "Recently, #PlayerName# has been wanting to cook a few good dishes for the senior brothers, but #PlayerName# is struggling due to the lack of ingredients within the sect. If #PlayerName# is not too bothered, could you lend a hand and help procure some? Thank you!"
+    translated: "Recently, I have been wanting to cook a few good dishes for my senior brothers, but I am struggling due to the lack of ingredients within the sect. If #PlayerName# is not too bothered, could you lend a hand and help procure some? Thank you!"
 - raw: "近来扬州出现了不明疫病，侠义七子李云鹤在<b>#PosText#</b>一带搜集治病所需之药材。"
   splits:
   - text: "近来扬州出现了不明疫病，侠义七子李云鹤在"

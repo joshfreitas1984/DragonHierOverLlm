@@ -242,7 +242,18 @@ internal static class DynamicStringPatches
                 // way a leading-unanchored single placeholder is bounded below, instead of letting it
                 // search from the very start of the string for the run's own following literal.
                 if (idx == 0 && runStartMatch.Index == 0) runQuantifier = "{1,10}?";
-                var runCaptureClass = MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true
+                // CONFIRMED BUG (2026-09-06): this used to apply the sentence-boundary-aware
+                // (\n-excluding) class to EVERY merged run whenever the toggle was on, not just an
+                // unanchored trailing run - unlike the single-placeholder branch below, which
+                // already gates on `lastGroupIsUnanchored && isLastGroup`. A run bounded by literal
+                // text on BOTH sides (e.g. "天下大势：{4}{0}门派 ...") is never at risk of the
+                // runaway-past-a-sentence-boundary failure mode this class exists to prevent, but
+                // its captured span can legitimately contain a literal "\n" (e.g. {4} substituted
+                // with an actual newline) - excluding \n there just makes the whole template fail
+                // to match at all. Only use the \n-excluding class for the same
+                // unanchored-trailing case the single-placeholder branch already restricts to.
+                var runIsUnanchoredTrailing = lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1;
+                var runCaptureClass = (runIsUnanchoredTrailing && MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true)
                     ? SentenceBoundaryAwarePermissiveClass
                     : PermissivePlaceholderCaptureClass;
                 patternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
