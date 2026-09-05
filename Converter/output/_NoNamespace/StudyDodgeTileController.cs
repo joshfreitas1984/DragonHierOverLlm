@@ -92,7 +92,8 @@ public class StudyDodgeTileController
             if (lVar2 == null) throw; // [null/range check failed]
             fVar7 = (float)AudioSource.get_volume(lVar2,0);
             AudioSource.set_volume
-                      (lVar2,fVar7 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                      (lVar2,fVar7 * GameController.CheckShowSpeHero,0)
+            ;
             lVar2 = Component.GetComponent(this,DAT_181d6ab40);
             if (lVar2 == null) throw; // [null/range check failed]
             AudioSource.Play(lVar2,0);
@@ -129,17 +130,17 @@ public class StudyDodgeTileController
     // RVA   : 0xB8BB20   Offset: 0xB8A320   Length: 0x177
     private void NailBack()
     {
-        var pStatics = *(int64*)(DAT_181d82e70 + 184);
+        var pStudyDodgePlayer = *(int64*)(StudyDodgePlayer_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         this.nailOut = 0;
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = *(int64 *)(pStudyDodgePlayer + 8);
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 104);
           uVar2 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             FUN_181801c10(lVar1,uVar2,DAT_181d61e78);
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = *(int64 *)(pStudyDodgePlayer + 8);
             if (lVar1 != null) {
               lVar1 = *(int64 *)(lVar1 + 96);
               uVar2 = Component.get_gameObject(this,0);
@@ -163,8 +164,6 @@ public class StudyDodgeTileController
     // RVA   : 0xB8BCA0   Offset: 0xB8A4A0   Length: 0x5
     private void <Update>b__7_0()
     {
-        void FUN_180b8bca0(int64 this)
-        {
         this.nailOut = 1;
     }
 
@@ -172,8 +171,6 @@ public class StudyDodgeTileController
     // RVA   : 0xB8BCB0   Offset: 0xB8A4B0   Length: 0x7
     private void <Update>b__7_1()
     {
-        void FUN_180b8bcb0(uint64 this)
-        {
         StudyDodgeTileController.NailBack(this,0);
     }
 

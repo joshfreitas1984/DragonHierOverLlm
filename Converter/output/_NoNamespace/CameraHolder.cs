@@ -524,8 +524,6 @@ public class CameraHolder
     // RVA   : 0x9EF150   Offset: 0x9ED950   Length: 0x2A
     private static float ClampAngle(float angle, float min, float max)
     {
-        void FUN_1809ef150(float angle,uint64 min,uint64 max)
-        {
         if (angle < -360.0) {
           angle = angle + 360.0;
         }

@@ -14,7 +14,6 @@ public class BuildingButtonController
     // RVA   : 0xBB5CD0   Offset: 0xBB44D0   Length: 0x226
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -52,8 +51,9 @@ public class BuildingButtonController
             throw; // [null/range check failed]
           }
         }
-        if (*pStatics != 0) {
-          GameController.ShowTextOnMouse(*pStatics,"功能未解锁！",0);
+        if (GameController._instance != null) {
+          GameController.ShowTextOnMouse
+                    (GameController._instance,"功能未解锁！",0);
           return;
         }
     }

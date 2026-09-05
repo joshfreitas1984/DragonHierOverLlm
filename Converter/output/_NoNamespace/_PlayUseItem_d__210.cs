@@ -90,7 +90,7 @@ public class <PlayUseItem>d__210
         if (lVar7 == null) throw; // [null/range check failed]
         *(uint8 *)(lVar7 + 0x128) = 1;
 
-        if ((lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8)?.itemID) == null) throw; // [null/range check failed]
+        if ((lVar6 = GameController.difficultyExtraPoint?.itemID) == null) throw; // [null/range check failed]
         iVar4 = PlayerPrefDictionary.GetInt(lVar6,"FightViewFollow",0);
         if (iVar4 == 1) {
           if (this.targetUnit == null) throw; // [null/range check failed]

@@ -110,7 +110,8 @@ public class StudyUniquePlayer
                    (lVar4 = GameObject.GetComponent(this.shieldSpe,DAT_181d9e558)) != null) {
                   fVar8 = (float)AudioSource.get_volume(lVar4,0);
                   AudioSource.set_volume
-                            (lVar4,fVar8 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                            (lVar4,fVar8 * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) +
+                                                     16),0);
                   return;
                 }
               }
@@ -136,7 +137,6 @@ public class StudyUniquePlayer
         var pStatics_3070 = *(int64*)(DAT_181d83070 + 184);
         var pStatics_6c68 = *(int64*)(DAT_181d86c68 + 184);
         var pStatics_c9b8 = *(int64*)(DAT_181d7c9b8 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
         float fVar3;
         float fVar4;
         int iVar5;
@@ -274,7 +274,8 @@ public class StudyUniquePlayer
                            lVar8 == null)) throw; // [null/range check failed]
                         fVar17 = (float)AudioSource.get_volume(lVar8,0);
                         AudioSource.set_volume
-                                  (lVar8,fVar17 * *(float *)(pStatics_e010 + 16),0
+                                  (lVar8,fVar17 * *(float *)(*(int64 *)
+                                                              (GameController_StaticsPtr + 184) + 16),0
                                   );
                       }
                     }
@@ -400,7 +401,8 @@ public class StudyUniquePlayer
                                lVar8 == null)) throw; // [null/range check failed]
                             fVar17 = (float)AudioSource.get_volume(lVar8,0);
                             AudioSource.set_volume
-                                      (lVar8,fVar17 * *(float *)(pStatics_e010 +
+                                      (lVar8,fVar17 * *(float *)(*(int64 *)
+                                                                  (GameController_StaticsPtr + 184) +
                                                                 16),0);
                           }
                           if (*plVar1 != 0) {
@@ -424,30 +426,30 @@ public class StudyUniquePlayer
     // RVA   : 0xB97070   Offset: 0xB95870   Length: 0x3EB
     public void PlayerOnHit(bool hit)
     {
-        var pStatics_3070 = *(int64*)(DAT_181d83070 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d83070 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        if (((*pStatics_df90 != 0) &&
-            (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-           (lVar1 = WorldData.Player(lVar1,0)) != null) {
-          if (*(float *)(lVar1 + 0x178) <= 0.0) {
+        if (((GameController._instance != null) &&
+            (lVar1 = GameController._instance.worldData) != null)
+           && (lVar1 = WorldData.Player(lVar1,0)) != null) {
+          if (lVar1.skinUnlockData <= 0.0) {
             if ((this.playerSkeleton != null) &&
                (lVar1 = SkeletonAnimation.get_AnimationState(this.playerSkeleton,0), lVar1 != null
                )) {
               AnimationState.SetAnimation(lVar1,1,"die",0,0);
-              if ((*pStatics_df90 != 0) &&
-                 (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar1 = GameController._instance.worldData,
+                 lVar1 != null)) {
                 lVar1 = WorldData.Player(lVar1,0);
-                if ((((*pStatics_df90 != 0) &&
-                     (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                    (lVar2 = WorldData.Player(lVar2,0)) != null) &&
+                if ((((GameController._instance != null) &&
+                     (lVar2 = GameController._instance.worldData,
+                     lVar2 != null)) && (lVar2 = WorldData.Player(lVar2,0)) != null) &&
                    (uVar3 = HeroData.GetHeroDieSound(lVar2,0), lVar1 != null)) {
                   HeroData.PlayHeroSound(lVar1,uVar3,0x3f000000,0xbf800000,0);
-                  if (*pStatics_3070 != 0) {
+                  if (*pStatics != 0) {
                     uVar3 = StudyUniqueSkillController.FinishStudyUniqueSkill
-                                      (*pStatics_3070,0,0);
+                                      (*pStatics,0,0);
                     FUN_180d837c0(this,uVar3,0);
                     return;
                   }
@@ -468,12 +470,12 @@ public class StudyUniquePlayer
                  lVar1 != null)) {
                 AnimationState.AddEmptyAnimation(lVar1,1,0x3dcccccd,0,0);
                 lVar1 = FUN_18046c0a0(0);
-                if ((lVar1 != null) && (*(int64 *)(lVar1 + 32) != 0)) {
-                  lVar1 = WorldData.Player(*(int64 *)(lVar1 + 32),0);
+                if ((lVar1 != null) && (lVar1.villageAreaID != null)) {
+                  lVar1 = WorldData.Player(lVar1.villageAreaID,0);
                   lVar2 = FUN_18046c0a0(0);
                   if ((lVar2 != null) &&
-                     (((*(int64 *)(lVar2 + 32) != 0 &&
-                       (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) != null) &&
+                     (((lVar2.villageAreaID != null &&
+                       (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) &&
                       (uVar3 = HeroData.GetHeroHurtSound(lVar2,0), lVar1 != null)))) {
                     HeroData.PlayHeroSound(lVar1,uVar3,0x3f000000,0xbf800000,0);
                     return;

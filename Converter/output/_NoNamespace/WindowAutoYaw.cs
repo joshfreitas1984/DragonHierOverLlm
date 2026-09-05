@@ -108,8 +108,6 @@ public class WindowAutoYaw
     // RVA   : 0x9E72E0   Offset: 0x9E5AE0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1809e72e0(int64 this)
-        {
         this.yawAmount = 0x41a00000;
         FUN_18044ef50(this,0);
     }

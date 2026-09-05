@@ -59,7 +59,9 @@ public class <AnimateProperties>d__6
           uVar5 = AnimationCurve.Evaluate(*(int64 *)(lVar2 + 40),*(uint32 *)(lVar2 + 48),0);
           lVar3 = *(int64 *)(lVar2 + 32);
           if (lVar3 != null) {
-            FUN_1810a7430(lVar3,*(uint32 *)(*(int64 *)(DAT_181d7c938 + 184) + 124),uVar5,0);
+            FUN_1810a7430(lVar3,*(uint32 *)
+                                 (*(int64 *)(_AnimateProperties_d__6_StaticsPtr + 184) + 124),uVar5,0
+                         );
             fVar1 = *(float *)(lVar2 + 48);
             fVar6 = (float)Time.get_deltaTime(0);
             fVar7 = (float)Random.Range(0x3e4ccccd,0x3e99999a,0);

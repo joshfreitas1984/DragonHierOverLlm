@@ -371,12 +371,12 @@ public class AreaBuildingIconController
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 221) != false) {
             return;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+          lVar1 = AreaBuildController._instance;
           if (lVar1 == null) throw; // [null/range check failed]
           if (!lVar1.missionDatas) {
             lVar1 = this.buildingData;
@@ -390,7 +390,7 @@ public class AreaBuildingIconController
                   return;
                 }
                 uVar2 = this.buildingData;
-                lVar1 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                lVar1 = PlotController.LeftFaceHideOffset;
                 lVar4 = Component.get_transform(this,0);
                 if ((lVar4 != null) &&
                    (puVar5 = (uint64 *)Transform.get_position(local_18,lVar4,0), lVar1 != null)) {
@@ -405,7 +405,7 @@ public class AreaBuildingIconController
           }
           lVar1 = FUN_1807e85e0(0);
           if (lVar1 == null) throw; // [null/range check failed]
-          if (*(char *)(lVar1 + 49) == false) {
+          if (!lVar1.buildModeMovingBuilding) {
             lVar1 = FUN_1807e85e0(0);
             uVar2 = Component.get_gameObject(this,0);
             if (lVar1 != null) {
@@ -492,9 +492,9 @@ public class AreaBuildingIconController
           SkeletonExtensions.SetColor(*(uint64 *)(lVar1 + 192),&local_18,0);
           lVar4 = Component.GetComponent(this,DAT_181d6ccc0);
           lVar1 = this.buildingData;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+          lVar2 = AreaBuildController._instance;
           if ((lVar2 != null) && (lVar1 != null)) {
-            uVar5 = AreaBuildingData.GetBuildingText(lVar1,1,*(uint8 *)(lVar2 + 48),1,0);
+            uVar5 = AreaBuildingData.GetBuildingText(lVar1,1,lVar2.buildMode,1,0);
             if (lVar4 != null) {
               *(uint64 *)(lVar4 + 24) = uVar5;
               return;
@@ -508,7 +508,7 @@ public class AreaBuildingIconController
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.OnDrag(lVar1,delta,0);
           return;
@@ -520,7 +520,7 @@ public class AreaBuildingIconController
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.OnScroll(lVar1,delta,0);
           return;

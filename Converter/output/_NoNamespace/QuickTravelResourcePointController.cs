@@ -20,22 +20,22 @@ public class QuickTravelResourcePointController
     // RVA   : 0xC50340   Offset: 0xC4EB40   Length: 0x348
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d66570 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         this.hightLight = 0;
-        uVar2 = *(uint64 *)(pStatics + 72);
+        uVar2 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
-          if (*(int64 *)(pStatics + 72) == 0) throw; // [null/range check failed]
+          if (MouseController.hoveredUI == null)
+          throw; // [null/range check failed]
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if ((*(int64 *)(pStatics + 72) == 0) ||
+            if ((MouseController.hoveredUI == null) ||
                (lVar3 = GameObject.GetComponent()) == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar3 + 24) != 0) {
-              if ((((*(int64 *)(pStatics + 72) == 0) ||
+              if ((((MouseController.hoveredUI == null) ||
                    (lVar3 = GameObject.GetComponent()) == null) || (*(int64 *)(lVar3 + 24) == 0)
                   ) || (this.resourcePointData == null)) throw; // [null/range check failed]
               if (*(int *)(*(int64 *)(lVar3 + 24) + 60) ==
@@ -85,16 +85,15 @@ public class QuickTravelResourcePointController
     // RVA   : 0xC4FE00   Offset: 0xC4E600   Length: 0x533
     public void RefreshState()
     {
-        var pStatics_ede0 = *(int64*)(DAT_181d6ede0 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pStatics = *(int64*)(DAT_181d6ede0 + 184);
         bool cVar1;
         long lVar3;
         ulong local_38;
         uint local_30;
         ulong local_28;
         ulong uStack_20;
-        if (*(int *)(pStatics_ef00 + 8) == 1) {
-          lVar3 = *(int64 *)(pStatics_ef00 + 24);
+        if (PlotController.LeftFaceHideOffset == 1) {
+          lVar3 = PlotController.CheckHideChoice;
           if ((this.resourcePointData == null) || (lVar3 == null)) throw; // [null/range check failed]
           cVar1 = FUN_181815240(lVar3,this.resourcePointData.connectAreaID,DAT_181d67bf8)
           ;
@@ -107,10 +106,10 @@ public class QuickTravelResourcePointController
             else {
           }
           plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          if ((*pStatics_ede0 == 0) || (plVar2 == (int64 *)0))
+          if ((*pStatics == 0) || (plVar2 == (int64 *)0))
           throw; // [null/range check failed]
           (**(code **)(*plVar2 + 0x2c8))
-                    (plVar2,*(uint8 *)(*pStatics_ede0 + 128),
+                    (plVar2,*(uint8 *)(*pStatics + 128),
                      *(uint64 *)(*plVar2 + 0x2d0));
         }
         plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
@@ -152,8 +151,8 @@ public class QuickTravelResourcePointController
           puVar5 = (uint64 *)Vector3.get_zero(&local_28,0);
         }
         else {
-          if (*pStatics_ede0 == 0) throw; // [null/range check failed]
-          if (*(char *)(*pStatics_ede0 + 128) == false) goto LAB_180c501b2;
+          if (*pStatics == 0) throw; // [null/range check failed]
+          if (*(char *)(*pStatics + 128) == false) goto LAB_180c501b2;
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"AreaNameBack",0);

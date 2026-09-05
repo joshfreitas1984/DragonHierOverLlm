@@ -34,7 +34,6 @@ public class <PlayBattleUnitAttack>d__220
     // RVA   : 0xB23B10   Offset: 0xB22310   Length: 0x7EA
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         ulong uVar1;
         uint uVar2;
         long lVar3;
@@ -108,11 +107,12 @@ public class <PlayBattleUnitAttack>d__220
             uStack_40 = puVar12[2];
             uStack_3c = puVar12[3];
             BattleUnit.ShowTextOnHead(lVar8,uVar11,&local_48,18,24,"UIAtlas",0,0,0);
-            if ((*(int64 *)(lVar3 + 0x110) != 0) && (*pStatics != 0)) {
+            if ((*(int64 *)(lVar3 + 0x110) != 0) &&
+               (GameController._instance != null)) {
               GameController.CountHeroData
-                        (*pStatics,
+                        (GameController._instance,
                          *(uint64 *)(*(int64 *)(lVar3 + 0x110) + 64),0);
-              lVar8 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+              lVar8 = GameController.difficultyExtraPoint;
               if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
                 iVar6 = PlayerPrefDictionary.GetInt(lVar8,"FightViewFollow",0);
                 if (iVar6 == 1) {
@@ -153,7 +153,7 @@ public class <PlayBattleUnitAttack>d__220
                     }
                     plVar13[4] = lVar8;
                     il2cpp_internal(plVar13 + 4,lVar8);
-                    lVar8 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x498);
+                    lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x498);
                     if ((*(int64 *)(lVar3 + 0x110) != 0) &&
                        (lVar10 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64)) != null) {
                       lVar10 = HeroData.GetNowActiveSkill(lVar10,0);

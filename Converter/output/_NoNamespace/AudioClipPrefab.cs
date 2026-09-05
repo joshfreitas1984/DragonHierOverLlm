@@ -35,8 +35,6 @@ public class AudioClipPrefab
     // RVA   : 0x7F6230   Offset: 0x7F4A30   Length: 0xF
     public void /*ctor*/()
     {
-        void FUN_1807f6230(int64 this)
-        {
         this.areaTypeID = 0xffffffffffffffff;
         ZhSegment.Initialize(this,0);
     }

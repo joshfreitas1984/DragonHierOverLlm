@@ -26,7 +26,6 @@ public class TranslateImage
     // RVA   : 0xA654C0   Offset: 0xA63CC0   Length: 0x1A9
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -37,7 +36,7 @@ public class TranslateImage
         cVar2 = String.op_Inequality(uVar3,"TitleScene",0);
         if (!cVar2) {
           uVar3 = this.nowLanguage;
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) {
         LAB_180a65664:
                           // WARNING: Subroutine does not return
@@ -46,7 +45,7 @@ public class TranslateImage
           uVar4 = PlayerPrefDictionary.GetString(lVar1,"Language",0);
           cVar2 = String.op_Inequality(uVar3,uVar4,0);
           if (cVar2) {
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = GameController.difficultyExtraPoint;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) goto LAB_180a65664;
             uVar3 = PlayerPrefDictionary.GetString(lVar1,"Language",0);
             this.nowLanguage = uVar3;
@@ -76,7 +75,7 @@ public class TranslateImage
         }
         lVar5 = Component.GetComponent(this,DAT_181d6bc40);
         lVar1 = this.targetSprite;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar2 = GameController.difficultyExtraPoint;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
           uVar4 = PlayerPrefDictionary.GetString(lVar2,"Language",0);
           cVar3 = FUN_1816fd990(uVar4,"CN",0);

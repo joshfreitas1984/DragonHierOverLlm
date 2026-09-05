@@ -39,8 +39,6 @@ public class UIButtonActivate
     // RVA   : 0x13BD8C0   Offset: 0x13BC0C0   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_1813bd8c0(int64 this)
-        {
         this.state = 1;
         FUN_18044ef50(this,0);
     }

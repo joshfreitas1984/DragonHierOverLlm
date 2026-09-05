@@ -78,7 +78,7 @@ public class <Dying>d__80
           if (iVar1 == 2) {
             this.<>1__state = 0xffffffff;
         LAB_1808c8da4:
-            lVar6 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+            lVar6 = PlotController.StopWarCostFavor;
             if (lVar6 == null) {
         LAB_1808c8ffc:
                           // WARNING: Subroutine does not return

@@ -104,8 +104,6 @@ public class UIWidget
     // RVA   : 0x228550   Offset: 0x226D50   Length: 0x8
     public OnRenderCallback get_onRender()
     {
-        uint64 FUN_180228550(int64 this)
-        {
         return *(uint64 *)(this + 200);
     }
 
@@ -169,9 +167,7 @@ public class UIWidget
     // RVA   : 0x9D93D0   Offset: 0x9D7BD0   Length: 0xE
     public Vector4 get_drawRegion()
     {
-        uint64 * FUN_1809d93d0(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x104);
         *this = *(uint64 *)(param_2 + 252);
         this[1] = uVar1;
@@ -221,8 +217,6 @@ public class UIWidget
     // RVA   : 0x9D9CB0   Offset: 0x9D84B0   Length: 0x7
     public int get_width()
     {
-        uint32 FUN_1809d9cb0(int64 this)
-        {
         return this.mWidth;
     }
 
@@ -280,8 +274,6 @@ public class UIWidget
     // RVA   : 0x9D96C0   Offset: 0x9D7EC0   Length: 0x7
     public int get_height()
     {
-        uint32 FUN_1809d96c0(int64 this)
-        {
         return this.mHeight;
     }
 
@@ -336,9 +328,7 @@ public class UIWidget
     // RVA   : 0x9D93C0   Offset: 0x9D7BC0   Length: 0xE
     public Color get_color()
     {
-        uint64 * FUN_1809d93c0(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 152);
         *this = *(uint64 *)(param_2 + 144);
         this[1] = uVar1;
@@ -386,8 +376,6 @@ public class UIWidget
     // RVA   : 0x9D80D0   Offset: 0x9D68D0   Length: 0x69
     public void SetColorNoAlpha(Color c)
     {
-        void FUN_1809d80d0(int64 *this,float *c)
-        {
         float fVar1;
         float fVar2;
         if (((*(float *)(this + 18) == *c) &&
@@ -409,8 +397,6 @@ public class UIWidget
     // RVA   : 0x9D9380   Offset: 0x9D7B80   Length: 0x9
     public override float get_alpha()
     {
-        uint32 FUN_1809d9380(int64 this)
-        {
         return *(uint32 *)(this + 156);
     }
 
@@ -418,8 +404,6 @@ public class UIWidget
     // RVA   : 0x9DA080   Offset: 0x9D8880   Length: 0x2B
     public override void set_alpha(float value)
     {
-        void FUN_1809da080(int64 *this,float value)
-        {
         float fVar1;
         fVar1 = *(float *)((int64)this + 156);
         if (fVar1 != value) {
@@ -460,8 +444,6 @@ public class UIWidget
     // RVA   : 0x9D9B20   Offset: 0x9D8320   Length: 0x7
     public Pivot get_rawPivot()
     {
-        uint32 FUN_1809d9b20(int64 this)
-        {
         return this.mPivot;
     }
 
@@ -485,8 +467,6 @@ public class UIWidget
     // RVA   : 0x9D9B20   Offset: 0x9D8320   Length: 0x7
     public Pivot get_pivot()
     {
-        uint32 FUN_1809d9b20(int64 this)
-        {
         return this.mPivot;
     }
 
@@ -569,8 +549,6 @@ public class UIWidget
     // RVA   : 0x27AF80   Offset: 0x279780   Length: 0x7
     public int get_depth()
     {
-        uint32 FUN_18027af80(int64 this)
-        {
         return this.mDepth;
     }
 
@@ -1027,8 +1005,6 @@ public class UIWidget
     // RVA   : 0x9D9C10   Offset: 0x9D8410   Length: 0x7
     public Vector2 get_relativeSize()
     {
-        void FUN_1809d9c10(void)
-        {
         Vector2.get_one(0);
     }
 
@@ -2367,8 +2343,6 @@ public class UIWidget
     // RVA   : 0x9D7B40   Offset: 0x9D6340   Length: 0x16
     private void OnApplicationPause(bool paused)
     {
-        void FUN_1809d7b40(int64 *this,char paused)
-        {
         if (!paused) {
                           // WARNING: Could not recover jumptable at 0x0001809d7b4e. Too many branches
                           // WARNING: Treating indirect jump as call
@@ -2389,8 +2363,6 @@ public class UIWidget
     // RVA   : 0x9D7B60   Offset: 0x9D6360   Length: 0x7
     private void OnDestroy()
     {
-        void FUN_1809d7b60(uint64 this)
-        {
         UIWidget.RemoveFromPanel(this,0);
     }
 

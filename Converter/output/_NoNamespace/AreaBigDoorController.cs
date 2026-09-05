@@ -43,7 +43,7 @@ public class AreaBigDoorController
     private void OnClick()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.ReturnBigMapButtonClicked(lVar1,0);
           return;

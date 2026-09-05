@@ -111,8 +111,6 @@ public class SelfDestroy
     // RVA   : 0x968800   Offset: 0x967000   Length: 0xE
     private void OnDisable()
     {
-        void FUN_180968800(int64 this)
-        {
         if (this.destroyWhenDisable) {
           SelfDestroy.DestroySelf(this,0);
           return;
@@ -123,8 +121,6 @@ public class SelfDestroy
     // RVA   : 0x968B70   Offset: 0x967370   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180968b70(int64 this)
-        {
         this.lifeTime = 0xbf800000;
         FUN_18044ef50(this,0);
     }

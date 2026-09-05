@@ -48,9 +48,9 @@ public class GameMenuController
     // RVA   : 0xCBCA60   Offset: 0xCBB260   Length: 0xFEC
     public void ShowGameMenu()
     {
-        var pStatics_1c88 = *(int64*)(DAT_181d91c88 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pChapterController = *(int64*)(ChapterController_StaticsPtr + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -114,7 +114,7 @@ public class GameMenuController
                           uVar4 = Transform.Find(lVar3,"GameInfo",0);
                           cVar2 = Object.op_Inequality(uVar4,0,0);
                           if (cVar2) {
-                            uVar4 = **(uint64 **)(DAT_181d4df90 + 184);
+                            uVar4 = GameController._instance;
                             cVar2 = Object.op_Inequality(uVar4,0,0);
                             if (cVar2) {
                               if ((((this.gameMenu == null) ||
@@ -124,9 +124,11 @@ public class GameMenuController
                                  (lVar3 = Transform.Find(lVar3,"GameInfo",0)) == null)
                               throw; // [null/range check failed]
                               uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                              lVar3 = *(int64 *)(pStatics_ef00 + 184);
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar9 = *(int64 *)(*pStatics_df90 + 32),
+                              lVar3 = *(int64 *)
+                                       (pPlotController + 184);
+                              if (((GameController._instance == null) ||
+                                  (lVar9 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar9 == null)) || (lVar3 == null)) throw; // [null/range check failed]
                               uVar12 = *(uint32 *)(lVar9 + 156);
                               if (*(uint32 *)(lVar3 + 24) <= uVar12) {
@@ -146,9 +148,11 @@ public class GameMenuController
                                  (lVar3 = Transform.Find(lVar3,"GameInfo",0)) == null)
                               throw; // [null/range check failed]
                               lVar9 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-                              lVar3 = *(int64 *)(pStatics_ef00 + 200);
-                              if ((*pStatics_df90 == 0) ||
-                                 (lVar10 = *(int64 *)(*pStatics_df90 + 32),
+                              lVar3 = *(int64 *)(pPlotController + 200)
+                              ;
+                              if ((GameController._instance == null) ||
+                                 (lVar10 = *(int64 *)
+                                            (GameController._instance + 32),
                                  lVar10 == null)) throw; // [null/range check failed]
                               iVar1 = *(int *)(lVar10 + 160);
                               lVar10 = FUN_18046c0a0(0);
@@ -173,11 +177,13 @@ public class GameMenuController
                             uVar4 = Transform.Find(lVar3,"ChapterInfo",0);
                             cVar2 = Object.op_Inequality(uVar4,0,0);
                             if (cVar2) {
-                              uVar4 = *(uint64 *)(pStatics_1c88 + 8);
+                              uVar4 = *(uint64 *)
+                                       (pChapterController + 8);
                               cVar2 = Object.op_Inequality(uVar4,0,0);
                               if (cVar2) {
-                                if ((*pStatics_df90 == 0) ||
-                                   (lVar3 = *(int64 *)(*pStatics_df90 + 32),
+                                if ((GameController._instance == null) ||
+                                   (lVar3 = *(int64 *)
+                                             (GameController._instance + 32),
                                    lVar3 == null)) throw; // [null/range check failed]
                                 if (*(int *)(lVar3 + 156) == 1) {
                                   if ((((this.gameMenu == null) ||
@@ -217,11 +223,11 @@ public class GameMenuController
                                     throw; // [null/range check failed]
                                     iVar1 = *(int *)(*(int64 *)(lVar3 + 32) + 16);
                                     uVar8 = GlobalData.GetNumText(iVar1 + 1,0);
-                                    lVar3 = *pStatics_1c88;
-                                    if (((*pStatics_df90 == 0) ||
+                                    lVar3 = ChapterController.chapterTitles;
+                                    if (((GameController._instance == null) ||
                                         (lVar9 = *(int64 *)
-                                                  (*pStatics_df90 + 32),
-                                        lVar9 == null)) || (lVar3 == null)) throw; // [null/range check failed]
+                                                  (GameController._instance +
+                                                  32), lVar9 == null)) || (lVar3 == null)) throw; // [null/range check failed]
                                     uVar7 = FUN_180002f80(lVar3,*(uint32 *)(lVar9 + 16),
                                                           DAT_181d7c9c0);
                                     lVar3 = FUN_18046bd00(0);
@@ -256,8 +262,9 @@ public class GameMenuController
                                     (lVar3 = Transform.Find(lVar3,"CustomDifficultyIcon",0)) == null)))
                                 throw; // [null/range check failed]
                                 lVar3 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-                                if ((((*pStatics_df90 == 0) ||
-                                     (lVar9 = *(int64 *)(*pStatics_df90 + 32),
+                                if ((((GameController._instance == null) ||
+                                     (lVar9 = *(int64 *)
+                                               (GameController._instance + 32),
                                      lVar9 == null)) || (lVar9 = *(int64 *)(lVar9 + 0x260)) == null)
                                    || (uVar4 = CustomDifficultyData.GetCustomDifficultyFullDescribe
                                                          (lVar9,0), lVar3 == null)) throw; // [null/range check failed]
@@ -269,7 +276,8 @@ public class GameMenuController
                                 plVar13 = plVar5;
                               }
                               NGUITools.PlaySound(plVar13,0);
-                              lVar3 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                              lVar3 = *(int64 *)
+                                       (pGameController + 32);
                               if (lVar3 != null) {
                                 GameDataController.SavePlayerprefData(lVar3,0);
                                 return;
@@ -345,26 +353,24 @@ public class GameMenuController
     // RVA   : 0xCBC410   Offset: 0xCBAC10   Length: 0x62D
     public void SaveButtonClicked()
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 == null) throw; // [null/range check failed]
         cVar1 = GameDataController.HaveTask(lVar2,0);
         if (!cVar1) {
-          if (*(int64 *)(lVar2 + 48) == 0) throw; // [null/range check failed]
-          cVar1 = GameSaveData.CheckAllFinished(*(int64 *)(lVar2 + 48),0);
+          if (lVar2.enterAreaHateAttackHero == null) throw; // [null/range check failed]
+          cVar1 = GameSaveData.CheckAllFinished(lVar2.enterAreaHateAttackHero,0);
           if (!cVar1) goto LAB_180cbc959;
-          uVar3 = *(uint64 *)(pStatics_0c98 + 8);
+          uVar3 = BattleController.AttackAreaTypeStartMovePower;
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (!cVar1) {
         LAB_180cbc6ed:
-            uVar3 = *(uint64 *)(pStatics_b128 + 80);
+            uVar3 = PlotController.StopWarCostFavor;
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
-              lVar2 = *(int64 *)(pStatics_b128 + 80);
+              lVar2 = PlotController.StopWarCostFavor;
               if (lVar2 == null) throw; // [null/range check failed]
               if (*(int *)(lVar2 + 36) != 0) {
                 lVar2 = FUN_18046c0a0(0);
@@ -376,8 +382,8 @@ public class GameMenuController
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
               lVar2 = FUN_18046c3a0(0);
-              if ((lVar2 == null) || (*(int64 *)(lVar2 + 40) == 0)) throw; // [null/range check failed]
-              cVar1 = GameObject.get_activeSelf(*(int64 *)(lVar2 + 40),0);
+              if ((lVar2 == null) || (lVar2.needAutoSave == null)) throw; // [null/range check failed]
+              cVar1 = GameObject.get_activeSelf(lVar2.needAutoSave,0);
               if (cVar1) {
                 lVar2 = FUN_18046c0a0(0);
                 uVar3 = "会议中无法存档！";
@@ -390,7 +396,7 @@ public class GameMenuController
             }
             throw; // [null/range check failed]
           }
-          lVar2 = *(int64 *)(pStatics_0c98 + 8);
+          lVar2 = BattleController.AttackAreaTypeStartMovePower;
           if (lVar2 == null) throw; // [null/range check failed]
           cVar1 = ExploreController.IsExploring(lVar2,0);
           if (!cVar1) goto LAB_180cbc6ed;
@@ -399,7 +405,7 @@ public class GameMenuController
         }
         else {
         LAB_180cbc959:
-          lVar2 = **(int64 **)(DAT_181d4df90 + 184);
+          lVar2 = GameController._instance;
           uVar3 = "演算中无法存档！";
         }
         joined_r0x000180cbc6d8:
@@ -419,15 +425,15 @@ public class GameMenuController
     // RVA   : 0xCBC150   Offset: 0xCBA950   Length: 0x1F6
     public void LoadButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         bool cVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 48)) != null) {
           cVar2 = GameSaveData.CheckAllFinished(lVar1,0);
           if (!cVar2) {
-            if (*pStatics != 0) {
-              GameController.ShowTextOnMouse(*pStatics,"存档中无法读档！",0);
+            if (GameController._instance != null) {
+              GameController.ShowTextOnMouse
+                        (GameController._instance,"存档中无法读档！",0);
               plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar4 = (int64 *)0;
               if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {

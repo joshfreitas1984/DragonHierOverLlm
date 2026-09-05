@@ -25,8 +25,6 @@ public class Destroy
     // RVA   : 0x92BB00   Offset: 0x92A300   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_18092bb00(int64 this)
-        {
         this.lifetime = 0x40000000;
         FUN_18044ef50(this,0);
     }

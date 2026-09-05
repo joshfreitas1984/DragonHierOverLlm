@@ -66,7 +66,6 @@ public class SimpleDetail
     // RVA   : 0x96EEE0   Offset: 0x96D6E0   Length: 0xB51
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d66570 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar4;
@@ -95,7 +94,7 @@ public class SimpleDetail
             SimpleDetail.RefreshPosition(this,0);
           }
         }
-        uVar4 = *(uint64 *)(pStatics + 72);
+        uVar4 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (!cVar1) {
           uVar4 = MouseController.get_hoveredObject(0);
@@ -106,11 +105,11 @@ public class SimpleDetail
           }
         }
         uVar4 = this.nowShowObject;
-        uVar5 = *(uint64 *)(pStatics + 72);
+        uVar5 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar5,0,0);
         if (!cVar1) {
         LAB_18096f2e9:
-          uVar5 = *(uint64 *)(pStatics + 72);
+          uVar5 = MouseController.hoveredUI;
           cVar1 = Object.op_Inequality(uVar5,0,0);
           if (!cVar1) {
         LAB_18096f4fc:
@@ -125,16 +124,16 @@ public class SimpleDetail
                 lVar2 = MouseController.get_hoveredObject(0);
                 if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181da12b0)) == null)
                 goto LAB_18096fa2c;
-                if (*(int64 *)(lVar2 + 24) != 0) {
+                if (lVar2.buildModeButton != null) {
                   lVar2 = MouseController.get_hoveredObject(0);
                   if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181da12b0)) == null)
                   goto LAB_18096fa2c;
-                  cVar1 = String.op_Inequality(*(uint64 *)(lVar2 + 24),"",0);
+                  cVar1 = String.op_Inequality(lVar2.buildModeButton,"",0);
                   if (cVar1) {
                     uVar5 = MouseController.get_hoveredObject(0);
-                    lVar2 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+                    lVar2 = AreaBuildController._instance;
                     if (lVar2 == null) goto LAB_18096fa2c;
-                    uVar6 = *(uint64 *)(lVar2 + 56);
+                    uVar6 = lVar2.buildTargetObj;
                     cVar1 = Object.op_Inequality(uVar5,uVar6,0);
                     if (cVar1) {
                       uVar5 = MouseController.get_hoveredObject(0);
@@ -149,50 +148,52 @@ public class SimpleDetail
             this.nowShowObject = 0;
           }
           else {
-            lVar2 = *(int64 *)(pStatics + 72);
+            lVar2 = MouseController.hoveredUI;
             if (lVar2 == null) goto LAB_18096fa2c;
             uVar5 = GameObject.GetComponent(lVar2,DAT_181da1fb0);
             cVar1 = Object.op_Inequality(uVar5,0,0);
             if (!cVar1) goto LAB_18096f4fc;
-            lVar2 = *(int64 *)(pStatics + 72);
+            lVar2 = MouseController.hoveredUI;
             if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181da1fb0)) == null)
             goto LAB_18096fa2c;
-            if (*(int64 *)(lVar2 + 24) == 0) goto LAB_18096f4fc;
-            lVar2 = *(int64 *)(pStatics + 72);
+            if (lVar2.buildModeButton == null) goto LAB_18096f4fc;
+            lVar2 = MouseController.hoveredUI;
             if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181da1fb0)) == null)
             goto LAB_18096fa2c;
-            cVar1 = String.op_Inequality(*(uint64 *)(lVar2 + 24),"",0);
+            cVar1 = String.op_Inequality(lVar2.buildModeButton,"",0);
             if (!cVar1) goto LAB_18096f4fc;
-            this.nowShowObject = *(uint64 *)(pStatics + 72);
+            this.nowShowObject =
+                 MouseController.hoveredUI;
+            il2cpp_internal(this + 40);
             if ((this.nowShowObject == null) ||
                (lVar2 = GameObject.GetComponent(this.nowShowObject,DAT_181da1fb0)) == null
                ) goto LAB_18096fa2c;
-            uVar5 = *(uint64 *)(lVar2 + 32);
+            uVar5 = lVar2.buildChoiceButtonPrefab;
           }
         }
         else {
-          lVar2 = *(int64 *)(pStatics + 72);
+          lVar2 = MouseController.hoveredUI;
           if (lVar2 == null) goto LAB_18096fa2c;
           uVar5 = GameObject.GetComponent(lVar2,DAT_181da12b0);
           cVar1 = Object.op_Inequality(uVar5,0,0);
           if (!cVar1) goto LAB_18096f2e9;
-          lVar2 = *(int64 *)(pStatics + 72);
+          lVar2 = MouseController.hoveredUI;
           if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181da12b0)) == null)
           goto LAB_18096fa2c;
-          if (*(int64 *)(lVar2 + 24) == 0) goto LAB_18096f2e9;
-          lVar2 = *(int64 *)(pStatics + 72);
+          if (lVar2.buildModeButton == null) goto LAB_18096f2e9;
+          lVar2 = MouseController.hoveredUI;
           if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181da12b0)) == null)
           goto LAB_18096fa2c;
-          cVar1 = String.op_Inequality(*(uint64 *)(lVar2 + 24),"",0);
+          cVar1 = String.op_Inequality(lVar2.buildModeButton,"",0);
           if (!cVar1) goto LAB_18096f2e9;
-          uVar5 = *(uint64 *)(pStatics + 72);
+          uVar5 = MouseController.hoveredUI;
           this.nowShowObject = uVar5;
         LAB_18096f784:
           il2cpp_internal(this + 40,uVar5);
           if ((this.nowShowObject == null) ||
              (lVar2 = GameObject.GetComponent(this.nowShowObject,DAT_181da12b0)) == null)
           goto LAB_18096fa2c;
-          uVar5 = *(uint64 *)(lVar2 + 24);
+          uVar5 = lVar2.buildModeButton;
         }
         this.nowShowText = uVar5;
         uVar5 = this.nowShowObject;

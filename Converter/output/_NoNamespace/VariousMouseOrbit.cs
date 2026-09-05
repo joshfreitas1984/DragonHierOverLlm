@@ -204,7 +204,8 @@ public class VariousMouseOrbit
     // RVA   : 0x9DC970   Offset: 0x9DB170   Length: 0x36
     private float ClampAngle(float ag, float min, float max)
     {
-        void FUN_1809dc970(uint64 this,float ag,uint32 min,uint32 max)
+        void VariousMouseOrbit.ClampAngle
+                     (uint64 this,float ag,uint32 min,uint32 max)
         {
         if (ag < -360.0) {
           ag = ag + 360.0;
@@ -219,8 +220,6 @@ public class VariousMouseOrbit
     // RVA   : 0x9DCE50   Offset: 0x9DB650   Length: 0x2A
     public void /*ctor*/()
     {
-        void FUN_1809dce50(int64 this)
-        {
         this.xSpeed = 0x437a0000;
         this.ySpeed = 0x42f00000;
         this.yMinLimit = 0xc1a00000;

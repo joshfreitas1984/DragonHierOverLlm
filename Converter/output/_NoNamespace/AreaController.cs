@@ -164,34 +164,29 @@ public class AreaController
     // RVA   : 0xA29950   Offset: 0xA28150   Length: 0x58
     public static AreaController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        return PlotController.LaBaFestivelResultTalkText;
     }
 
     // Token : 0x6000A2F
     // RVA   : 0xA1B0D0   Offset: 0xA198D0   Length: 0x11E
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         bool cVar1;
         ulong uVar2;
-        uVar2 = *(uint64 *)(pStatics + 56);
+        uVar2 = PlotController.LaBaFestivelResultTalkText;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
           uVar2 = Component.get_gameObject(this,0);
           Object.Destroy(uVar2,0);
           return;
         }
-        puVar3 = (uint64 *)(pStatics + 56);
-        *puVar3 = this;
-        il2cpp_internal(puVar3,this);
+        PlotController.LaBaFestivelResultTalkText = this;
     }
 
     // Token : 0x6000A30
     // RVA   : 0x8E7DC0   Offset: 0x8E65C0   Length: 0x12
     private void Start()
     {
-        void FUN_1808e7dc0(int64 this)
-        {
         this.areaData = 0;
     }
 
@@ -199,8 +194,6 @@ public class AreaController
     // RVA   : 0xA26B20   Offset: 0xA25320   Length: 0x354
     private void Update()
     {
-        var pStatics_0bb8 = *(int64*)(DAT_181d90bb8 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -387,10 +380,10 @@ public class AreaController
             goto LAB_180a27356;
           }
         }
-        if (((*pStatics_df90 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
-        if (-1 < *(int *)(lVar5 + 192)) {
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null)
+           || (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
+        if (-1 < lVar5.playerBetrayForceBadTime) {
           lVar5 = FUN_18046c0a0(0);
           if (lVar5 == null) throw; // [null/range check failed]
           cVar2 = GameController.HaveSpeUI(lVar5,1,0);
@@ -400,38 +393,38 @@ public class AreaController
             cVar2 = PlotController.HaveNoPlotWait(lVar5,0);
             if (cVar2) {
               lVar5 = FUN_18046c0a0(0);
-              if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                 (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 216)) == null)
+              if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                 (lVar5 = *(int64 *)(lVar5.villageAreaID + 216)) == null)
               throw; // [null/range check failed]
               cVar2 = FUN_1808ab750(lVar5,46,DAT_181d99e30);
               if (!cVar2) {
                 lVar5 = FUN_18046c0a0(0);
-                if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                   (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                   (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                 throw; // [null/range check failed]
                 lVar5 = HeroData.GetForce(lVar5,0,0);
                 if (lVar5 != null) {
                   lVar5 = FUN_18046c0a0(0);
-                  if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                      (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                  if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                      (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                      (lVar5 = HeroData.GetForce(lVar5,0,0)) == null) throw; // [null/range check failed]
-                  iVar12 = *(int *)(lVar5 + 56);
+                  iVar12 = lVar5.Inns;
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
-                  if (iVar12 == *(int *)(lVar5 + 192)) {
+                  if (iVar12 == lVar5.playerBetrayForceBadTime) {
                     lVar5 = FUN_18046c0a0(0);
-                    if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                    if (*(char *)(*(int64 *)(lVar5 + 32) + 184) != false) {
+                    if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                    if (*(char *)(lVar5.villageAreaID + 184) != false) {
                       lVar5 = FUN_18046c0a0(0);
-                      if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                         (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168)) == null)
+                      if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                         (lVar5 = *(int64 *)(lVar5.villageAreaID + 168)) == null)
                       throw; // [null/range check failed]
-                      if (*(int *)(lVar5 + 16) == 1) {
+                      if (lVar5.chapter == 1) {
                         lVar5 = FUN_18046c0a0(0);
-                        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                        if (*(int *)(*(int64 *)(lVar5 + 32) + 156) == 0) {
+                        if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                        if (*(int *)(lVar5.villageAreaID + 156) == 0) {
                           lVar5 = FUN_18046c440(0);
                           if (lVar5 == null) throw; // [null/range check failed]
                           PlotController.AddPlotDataBase(lVar5,46);
@@ -449,19 +442,19 @@ public class AreaController
               if (fVar14 <= 0.0) {
                 this.checkPlotTime = 0x3e4ccccd;
                 lVar5 = FUN_18046c0a0(0);
-                if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                if (*(int *)(*(int64 *)(lVar5 + 32) + 156) == 1) {
+                if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                if (*(int *)(lVar5.villageAreaID + 156) == 1) {
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
                   lVar5 = HeroData.GetForce(lVar5,0,0);
                   if (lVar5 == null) {
                     lVar5 = FUN_18046c0a0(0);
-                    if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                       ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
+                    if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                       ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
                         (lVar5 = HeroData.GetArea(lVar5,0)) == null))) throw; // [null/range check failed]
-                    if (*(int *)(lVar5 + 72) == 2) {
+                    if (lVar5.Forces == 2) {
                       lVar5 = FUN_18046c760(0);
                       if (lVar5 == null) throw; // [null/range check failed]
                       TutorialController.StartTutorial(lVar5,"拜入门派",0);
@@ -469,52 +462,52 @@ public class AreaController
                   }
                 }
                 lVar5 = FUN_18046c0a0(0);
-                if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                    (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                    (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                    (*(int64 *)(lVar5 + 0x2e8) == 0)) throw; // [null/range check failed]
                 if (0 < *(int *)(*(int64 *)(lVar5 + 0x2e8) + 24)) {
                   lVar5 = FUN_18046c760(0);
                   if (lVar5 == null) throw; // [null/range check failed]
                   TutorialController.StartTutorial(lVar5,"任务系统",0);
                 }
-                if (*pStatics_0bb8 == 0) throw; // [null/range check failed]
+                if (WorldEventController._instance == null) throw; // [null/range check failed]
                 cVar2 = WorldEventController.HaveTutorialWorldEvent
-                                  (*pStatics_0bb8,0);
+                                  (WorldEventController._instance,0);
                 if (cVar2) {
                   lVar5 = FUN_18046c760(0);
                   if (lVar5 == null) throw; // [null/range check failed]
                   TutorialController.StartTutorial(lVar5,"传闻系统",0);
                 }
                 lVar5 = FUN_18046c0a0(0);
-                if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                if (7 < *(int *)(*(int64 *)(lVar5 + 32) + 0x1a8)) {
+                if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                if (7 < *(int *)(lVar5.villageAreaID + 0x1a8)) {
                   lVar5 = FUN_18046c760(0);
                   if (lVar5 == null) throw; // [null/range check failed]
                   TutorialController.StartTutorial(lVar5,"查看名录",0);
                 }
                 lVar5 = FUN_18046c0a0(0);
-                if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                   (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                   (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                 throw; // [null/range check failed]
                 lVar5 = HeroData.GetForce(lVar5,0,0);
                 if (lVar5 == null) {
         LAB_180a28301:
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
                   lVar5 = HeroData.GetForce(lVar5,0,0);
                   if (lVar5 == null) goto LAB_180a2844d;
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
                   iVar4 = *(int *)(lVar5 + 132);
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
                       (lVar5 = HeroData.GetArea(lVar5,0)) == null))) throw; // [null/range check failed]
-                  if (iVar4 == *(int *)(lVar5 + 112)) {
+                  if (iVar4 == lVar5.lastRandomWorldEventDay) {
                     cVar2 = GameController.MeetCondition("亲传弟子",0,0);
                     if (cVar2) {
                       lVar5 = FUN_18046c760(0);
@@ -525,32 +518,33 @@ public class AreaController
                 }
                 else {
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
                       (lVar5 = HeroData.GetForce(lVar5,0,0)) == null))) throw; // [null/range check failed]
-                  iVar12 = *(int *)(lVar5 + 56);
+                  iVar12 = lVar5.Inns;
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
-                  if (iVar12 != *(int *)(lVar5 + 192)) goto LAB_180a28301;
+                  if (iVar12 != lVar5.playerBetrayForceBadTime) goto LAB_180a28301;
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x100)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = *(int64 *)(lVar5.villageAreaID + 0x100)) == null)
                   throw; // [null/range check failed]
                   cVar2 = FUN_1818279a0(lVar5,"内功修炼",DAT_181d7c4d0);
                   if (!cVar2) {
                     while( true ) {
-                      if ((((*pStatics_df90 == 0) ||
-                           (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                      if ((((GameController._instance == null) ||
+                           (lVar5 = *(int64 *)
+                                     (GameController._instance + 32),
                            lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null) ||
-                         (*(int64 *)(lVar5 + 0x260) == 0)) throw; // [null/range check failed]
-                      if (*(int *)(*(int64 *)(lVar5 + 0x260) + 24) <= iVar4) goto LAB_180a27d7f;
+                         (lVar5.customDifficultyData == null)) throw; // [null/range check failed]
+                      if (*(int *)(lVar5.customDifficultyData + 24) <= iVar4) goto LAB_180a27d7f;
                       lVar5 = FUN_18046c0a0(0);
-                      if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                         ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
-                          ((*(int64 *)(lVar5 + 0x260) == 0 ||
-                           (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 0x260),iVar4,DAT_181d6ade8),
+                      if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                         ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
+                          ((lVar5.customDifficultyData == null ||
+                           (lVar5 = FUN_180002f80(lVar5.customDifficultyData,iVar4,DAT_181d6ade8),
                            lVar5 == null)))))) throw; // [null/range check failed]
                       iVar12 = KungfuSkillLvData.Type(lVar5);
                       if (iVar12 < 3) break;
@@ -562,8 +556,8 @@ public class AreaController
                   }
         LAB_180a27d7f:
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
                   fVar14 = (float)HeroData.GetHpPercent(lVar5,0);
                   if (fVar14 <= 0.6) {
@@ -574,15 +568,15 @@ public class AreaController
                   }
                   else {
                     lVar5 = FUN_18046c0a0(0);
-                    if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                       (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                    if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                       (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                     throw; // [null/range check failed]
                     fVar14 = (float)HeroData.GetManaPercent(lVar5,0);
                     if (fVar14 <= 0.6) goto LAB_180a27e3b;
                   }
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
                   fVar14 = (float)HeroData.GetTotalInjury(lVar5,0);
                   if (10.0 <= fVar14) {
@@ -591,27 +585,27 @@ public class AreaController
                     TutorialController.StartTutorial(lVar5,"治疗伤势",0);
                   }
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
-                      (*(int64 *)(lVar5 + 0x220) == 0)))) throw; // [null/range check failed]
-                  fVar14 = *(float *)(*(int64 *)(lVar5 + 0x220) + 28);
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
+                      (lVar5.speBookStorageSpeAdd == null)))) throw; // [null/range check failed]
+                  fVar14 = *(float *)(lVar5.speBookStorageSpeAdd + 28);
                   lVar5 = FUN_18046c0a0(0);
-                  if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                      (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
-                     (*(int64 *)(lVar5 + 0x220) == 0)) throw; // [null/range check failed]
-                  if (0.8 <= fVar14 / *(float *)(*(int64 *)(lVar5 + 0x220) + 32)) {
+                  if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                      (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
+                     (lVar5.speBookStorageSpeAdd == null)) throw; // [null/range check failed]
+                  if (0.8 <= fVar14 / *(float *)(lVar5.speBookStorageSpeAdd + 32)) {
                     lVar5 = FUN_18046c760(0);
                     if (lVar5 == null) throw; // [null/range check failed]
                     TutorialController.StartTutorial(lVar5,"私人仓库",0);
                   }
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
-                  fVar14 = *(float *)(lVar5 + 0x1c0);
+                  fVar14 = lVar5.playerBookWriter;
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
                   iVar4 = HeroData.GetUpgradeForceLvNeedContribution(lVar5,0x3f800000,0);
                   if ((float)iVar4 <= fVar14) {
@@ -649,18 +643,18 @@ public class AreaController
                   if (lVar5 == null) throw; // [null/range check failed]
                   TutorialController.StartTutorial(lVar5,"掌门教程",0);
                   lVar5 = FUN_18046c0a0(0);
-                  if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                  if (*(int *)(*(int64 *)(lVar5 + 32) + 156) == 0) {
+                  if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                  if (*(int *)(lVar5.villageAreaID + 156) == 0) {
                     lVar5 = FUN_18046c0a0(0);
-                    if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                    if (*(int *)(*(int64 *)(lVar5 + 32) + 16) >= 3)
+                    if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                    if (*(int *)(lVar5.villageAreaID + 16) >= 3)
                     {
                       }
                       else {
                     }
                     lVar5 = FUN_18046c0a0(0);
-                    if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                    if (*(char *)(*(int64 *)(lVar5 + 32) + 0x10c) == false) goto LAB_180a2844d;
+                    if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                    if (*(char *)(lVar5.villageAreaID + 0x10c) == false) goto LAB_180a2844d;
                   }
                   lVar5 = FUN_18046c760(0);
                   uVar6 = "攻城略地";
@@ -670,21 +664,21 @@ public class AreaController
                 }
         LAB_180a2844d:
                 lVar5 = FUN_18046c0a0(0);
-                if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                   (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                   (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                 throw; // [null/range check failed]
                 lVar5 = HeroData.GetForce(lVar5,0,0);
                 if (lVar5 != null) {
                   cVar2 = GameController.MeetCondition("掌门",0,0);
                   if (cVar2) {
                     lVar5 = FUN_18046c0a0(0);
-                    if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                        (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                    if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                        (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                        (lVar5 = HeroData.GetForce(lVar5,0,0)) == null) throw; // [null/range check failed]
-                    iVar4 = *(int *)(lVar5 + 16);
+                    iVar4 = lVar5.chapter;
                     lVar5 = FUN_18046c0a0(0);
-                    if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                       ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
+                    if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                       ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
                         ((lVar5 = HeroData.GetArea(lVar5,0), lVar5 == null ||
                          (lVar5 = AreaData.GetForce(lVar5,0)) == null))))) throw; // [null/range check failed]
                     if (iVar4 == *(int *)(lVar5 + 60)) {
@@ -692,14 +686,14 @@ public class AreaController
                       if (lVar5 == null) throw; // [null/range check failed]
                       TutorialController.StartTutorial(lVar5,"附庸门派",0);
                       lVar5 = FUN_18046c0a0(0);
-                      if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                          (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                      if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                          (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                          ((lVar5 = HeroData.GetArea(lVar5,0), lVar5 == null ||
                           (lVar5 = AreaData.GetForce(lVar5,0)) == null))) throw; // [null/range check failed]
                       if (*(char *)(lVar5 + 36) != false) {
                         lVar5 = FUN_18046c0a0(0);
-                        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-                        if (*(char *)(*(int64 *)(lVar5 + 32) + 0x10c) != false) {
+                        if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+                        if (*(char *)(lVar5.villageAreaID + 0x10c) != false) {
                           lVar5 = FUN_18046c760(0);
                           if (lVar5 == null) throw; // [null/range check failed]
                           TutorialController.StartTutorial(lVar5,"附庸兑换",0);
@@ -709,18 +703,18 @@ public class AreaController
                   }
                 }
                 lVar5 = FUN_18046c0a0(0);
-                if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                    (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                    (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                    (lVar5 = HeroData.GetArea(lVar5,0)) == null) throw; // [null/range check failed]
-                if (*(int *)(lVar5 + 72) != 2) {
+                if (lVar5.Forces != 2) {
                   lVar5 = FUN_18046c0a0(0);
-                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                     (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                  if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                     (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                   throw; // [null/range check failed]
                   if (100.0 <= *(float *)(lVar5 + 0x1c4)) {
                     lVar5 = FUN_18046c0a0(0);
-                    if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                       (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
+                    if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                       (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null)
                     throw; // [null/range check failed]
                     if (*(char *)(lVar5 + 0x1ac) == false) {
                       lVar5 = FUN_18046c760(0);
@@ -731,7 +725,7 @@ public class AreaController
                 }
                 lVar5 = FUN_18046c760(0);
                 if (lVar5 == null) throw; // [null/range check failed]
-                if (*(char *)(lVar5 + 56) == false) {
+                if (!lVar5.Inns) {
                   lVar5 = FUN_18046c0a0(0);
                   lVar10 = FUN_18046c0a0(0);
                   if (((lVar10 == null) || (*(int64 *)(lVar10 + 32) == 0)) ||
@@ -759,7 +753,7 @@ public class AreaController
           UIGrid.set_repositionNow(lVar5,1,0);
           lVar5 = new WarpText_d__8(0,0);
           if (lVar5 == null) throw; // [null/range check failed]
-          *(int64 *)(lVar5 + 32) = this;
+          lVar5.villageAreaID = this;
           FUN_180d837c0(this,lVar5,0);
         }
         AreaController.FreshAreaInfo(this,0,0);
@@ -789,13 +783,13 @@ public class AreaController
                      (lVar5 = GameObject.get_transform(this.heroIconGrid,0)) == null) ||
                     (lVar5 = Transform.GetChild(lVar5,iVar4,0)) == null) ||
                    (lVar5 = Component.GetComponent(lVar5,DAT_181d6b8c0)) == null) break;
-                lVar5 = *(int64 *)(lVar5 + 32);
+                lVar5 = lVar5.villageAreaID;
                 if (((this.heroIconGrid == null) ||
                     (lVar10 = GameObject.get_transform(this.heroIconGrid,0)) == null) ||
                    ((lVar10 = Transform.GetChild(lVar10,iVar4,0), lVar10 == null ||
                     ((Transform.Find(lVar10,"Back"), lVar5 == null ||
                      (lVar5 = HeroData.GetSkeletonGraphic(lVar5)) == null))))) break;
-                *(uint8 *)(lVar5 + 0x118) = 0;
+                lVar5.monthPartyTime = 0;
               }
             }
             throw; // [null/range check failed]
@@ -818,13 +812,13 @@ public class AreaController
                    (lVar5 = GameObject.get_transform(this.heroIconGrid,0)) == null) ||
                   (lVar5 = Transform.GetChild(lVar5,iVar4,0)) == null) ||
                  (lVar5 = Component.GetComponent(lVar5,DAT_181d6b8c0)) == null) throw; // [null/range check failed]
-              lVar5 = *(int64 *)(lVar5 + 32);
+              lVar5 = lVar5.villageAreaID;
               if (((this.heroIconGrid == null) ||
                   (lVar10 = GameObject.get_transform(this.heroIconGrid,0)) == null) ||
                  ((lVar10 = Transform.GetChild(lVar10,iVar4,0), lVar10 == null ||
                   ((Transform.Find(lVar10,"Back"), lVar5 == null ||
                    (lVar5 = HeroData.GetSkeletonGraphic(lVar5)) == null))))) throw; // [null/range check failed]
-              *(uint8 *)(lVar5 + 0x118) = 1;
+              lVar5.monthPartyTime = 1;
             }
           }
           return;
@@ -917,7 +911,7 @@ public class AreaController
         this[0] = 0.0;
         this[1] = 0.0;
         this[2] = 0.0;
-        lVar7 = DAT_181d4ef00;
+        lVar7 = PlotController_StaticsPtr;
         if (lVar6 != null) {
           iVar4 = *(int *)(lVar6 + 184);
           iVar5 = *(int *)(lVar6 + 188);
@@ -931,13 +925,13 @@ public class AreaController
           if (((bVar3 & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
             il2cpp_runtime_class_init();
             fVar8 = *this;
-            lVar7 = DAT_181d4ef00;
+            lVar7 = PlotController_StaticsPtr;
           }
           fVar9 = (param_4 + param_4) - 1.0;
           if ((*(float *)(plVar7 + 168) * 0.5 * fVar9) / param_4 + fVar10 < fVar1) {
             if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar7 = DAT_181d4ef00;
+              lVar7 = PlotController_StaticsPtr;
             }
             lVar6 = plVar7;
             this[1] = (float)((uint64)*(uint64 *)this >> 32);
@@ -948,12 +942,12 @@ public class AreaController
           }
           if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
             il2cpp_runtime_class_init();
-            lVar7 = DAT_181d4ef00;
+            lVar7 = PlotController_StaticsPtr;
           }
           if (fVar8 < fVar10 - (*(float *)(plVar7 + 168) * 0.5 * fVar9) / param_4) {
             if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar7 = DAT_181d4ef00;
+              lVar7 = PlotController_StaticsPtr;
             }
             fVar1 = *(float *)(plVar7 + 168);
             this[1] = (float)((uint64)*(uint64 *)this >> 32);
@@ -963,7 +957,7 @@ public class AreaController
           uVar2 = *(uint64 *)this;
           if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
             il2cpp_runtime_class_init();
-            lVar7 = DAT_181d4ef00;
+            lVar7 = PlotController_StaticsPtr;
           }
           fStack_94 = (float)((uint64)uVar2 >> 32);
           fVar1 = *(float *)(plVar7 + 172);
@@ -971,7 +965,7 @@ public class AreaController
             fVar1 = *this;
             if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar7 = DAT_181d4ef00;
+              lVar7 = PlotController_StaticsPtr;
             }
             lVar6 = plVar7;
             *this = fVar1;
@@ -982,7 +976,7 @@ public class AreaController
           uVar2 = *(uint64 *)this;
           if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
             il2cpp_runtime_class_init();
-            lVar7 = DAT_181d4ef00;
+            lVar7 = PlotController_StaticsPtr;
           }
           fVar1 = *(float *)(plVar7 + 172);
           fStack_94 = (float)((uint64)uVar2 >> 32);
@@ -990,7 +984,7 @@ public class AreaController
             fVar1 = *this;
             if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar7 = DAT_181d4ef00;
+              lVar7 = PlotController_StaticsPtr;
             }
             lVar6 = plVar7;
             *this = fVar1;
@@ -1109,7 +1103,7 @@ public class AreaController
     private void InitAreaGround()
     {
         var plVar2 = *(int64*)(lVar2 + 184);
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar2;
         ulong uVar3;
         long lVar4;
@@ -1126,19 +1120,19 @@ public class AreaController
         uint local_50;
         long local_48;
         long local_40;
-        local_40 = (int64)*(int *)(pStatics + 0x20c);
-        local_48 = (int64)*(int *)(pStatics + 0x208);
+        local_40 = (int64)*(int *)(pPlotController + 0x20c);
+        local_48 = (int64)*(int *)(pPlotController + 0x208);
         lVar2 = FUN_1800d6020(DAT_181d848c0,&local_48);
         this.gridUnits = lVar2;
         uVar3 = il2cpp_internal(DAT_181d6e2b0);
         FUN_180f58a90(uVar3,DAT_181d61af8);
         this.gridPool = uVar3;
         iVar9 = 0;
-        lVar2 = DAT_181d4ef00;
+        lVar2 = PlotController_StaticsPtr;
         do {
           if (((*(byte *)(lVar2 + 0x133) & 4) != 0) && (*(int *)(lVar2 + 224) == 0)) {
             il2cpp_runtime_class_init();
-            lVar2 = DAT_181d4ef00;
+            lVar2 = PlotController_StaticsPtr;
           }
           if (*(int *)(plVar2 + 0x20c) <= iVar9) {
             return;
@@ -1147,7 +1141,7 @@ public class AreaController
           while( true ) {
             if (((*(byte *)(lVar2 + 0x133) & 4) != 0) && (*(int *)(lVar2 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar2 = DAT_181d4ef00;
+              lVar2 = PlotController_StaticsPtr;
             }
             if (*(int *)(plVar2 + 0x208) <= iVar8) break;
             lVar4 = *plVar1;
@@ -1197,7 +1191,7 @@ public class AreaController
             if (lVar2 == null) goto LAB_180a245c9;
             GameObject.SetActive(lVar2,0);
             iVar8 = iVar8 + 1;
-            lVar2 = DAT_181d4ef00;
+            lVar2 = PlotController_StaticsPtr;
           }
           iVar9 = iVar9 + 1;
         } while( true );
@@ -1207,36 +1201,37 @@ public class AreaController
     // RVA   : 0xA25C00   Offset: 0xA24400   Length: 0x390
     public void ReturnBigMapButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-          if (*(char *)(lVar2 + 0x108) != false) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
+          if (lVar2.openLeaveForce) {
         LAB_180a25f72:
             AreaController.PlayerLeaveArea(this,0);
             return;
           }
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null
+             ) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               lVar2 = HeroData.GetForce(lVar2,0,0);
               if (lVar2 == null) goto LAB_180a25f72;
               lVar2 = FUN_18046c0a0(0);
-              if ((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) {
-                lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0);
+              if ((lVar2 != null) && (lVar2.villageAreaID != null)) {
+                lVar2 = WorldData.Player(lVar2.villageAreaID,0);
                 if (lVar2 != null) {
-                  iVar1 = *(int *)(lVar2 + 192);
+                  iVar1 = lVar2.playerBetrayForceBadTime;
                   lVar2 = FUN_18046c0a0(0);
-                  if ((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) {
-                    lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0);
+                  if ((lVar2 != null) && (lVar2.villageAreaID != null)) {
+                    lVar2 = WorldData.Player(lVar2.villageAreaID,0);
                     if (lVar2 != null) {
                       lVar2 = HeroData.GetForce(lVar2,0,0);
                       if (lVar2 != null) {
-                        if (iVar1 != *(int *)(lVar2 + 56)) goto LAB_180a25f72;
+                        if (iVar1 != lVar2.Inns) goto LAB_180a25f72;
                         lVar2 = FUN_18046c440(0);
                         lVar3 = il2cpp_internal(DAT_181d72a30);
                         FUN_180f58a90(lVar3,DAT_181d7c250);
@@ -1265,10 +1260,7 @@ public class AreaController
     // RVA   : 0xA24CB0   Offset: 0xA234B0   Length: 0x7AC
     public void PlayerLeaveArea()
     {
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
         var pStatics_8ad8 = *(int64*)(DAT_181d88ad8 + 184);
-        var pStatics_baa8 = *(int64*)(DAT_181d8baa8 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         bool cVar1;
         long lVar2;
@@ -1276,13 +1268,14 @@ public class AreaController
         long lVar6;
         uint[] local_res18 = new uint[4];
         local_res18[0] = 0;
-        if ((*pStatics_df90 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
           lVar2 = WorldData.Player(lVar2,0);
           if ((lVar2 != null) && (lVar6 = this.areaData) != null) {
             if (*(int *)(lVar2 + 192) == lVar6.areaID) {
-              if (*pStatics_df90 == 0) throw; // [null/range check failed]
-              GameController.PlayerLeaveArea(*pStatics_df90,0);
+              if (GameController._instance == null) throw; // [null/range check failed]
+              GameController.PlayerLeaveArea(GameController._instance,0);
               local_res18[0] = FUN_180d8cf10(0,4);
               uVar3 = Int32.ToString(local_res18,0);
               uVar3 = String.Concat("Sound/SoundEffect/Door/BigDoor",uVar3,0);
@@ -1297,9 +1290,9 @@ public class AreaController
             }
             cVar1 = FUN_1816fd990(lVar6.areaName,"巴陵村",0);
             if (cVar1) {
-              if ((*pStatics_df90 == 0) ||
-                 (lVar2 = *(int64 *)(*pStatics_df90 + 32)) == null)
-              throw; // [null/range check failed]
+              if ((GameController._instance == null) ||
+                 (lVar2 = GameController._instance.worldData,
+                 lVar2 == null)) throw; // [null/range check failed]
               lVar2 = WorldData.Player(lVar2,0);
               if (lVar2 == null) throw; // [null/range check failed]
               cVar1 = HeroData.HaveMission(lVar2,"巴陵盗匪",0);
@@ -1308,7 +1301,7 @@ public class AreaController
                 TutorialController.StartTutorial(*pStatics_8ad8,"视野系统",0);
               }
             }
-            lVar2 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+            lVar2 = AreaBuildController._instance;
             if (lVar2 != null) {
               AreaBuildController.ChangeBuildMode(lVar2,0,0);
               AreaController.ResetAreaMap(this,0);
@@ -1324,22 +1317,23 @@ public class AreaController
                     if (this.areaObj != null) {
                       GameObject.SetActive(this.areaObj,0,0);
                       this.areaData = 0;
-                      lVar2 = *(int64 *)(pStatics_baa8 + 16);
-                      if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 88)) != null) {
+
+                      if ((lVar2 = GameController.CheckShowSpeHero?.buildMoveIcon) != null) {
                         GameObject.SetActive(lVar2,1,0);
-                        lVar2 = *(int64 *)(pStatics_baa8 + 16);
-                        if ((*pStatics_df90 != 0) &&
-                           (lVar6 = *(int64 *)(*pStatics_df90 + 32),
+                        lVar2 = GameController.CheckShowSpeHero;
+                        if ((GameController._instance != null) &&
+                           (lVar6 = *(int64 *)
+                                     (GameController._instance + 32),
                            lVar6 != null)) {
                           uVar3 = WorldData.Player(lVar6,0);
                           if (lVar2 != null) {
                             BigMapController.RefreshBigMapNPC(lVar2,uVar3,0);
-                            lVar2 = *(int64 *)(pStatics_baa8 + 16);
+                            lVar2 = GameController.CheckShowSpeHero;
                             if (lVar2 != null) {
                               BigMapController.PlayBigMapControlAnim(lVar2,0);
-                              if (*pStatics_2bf0 != 0) {
+                              if (CloudAnimController._instance != null) {
                                 CloudAnimController.PlayerCloudAnim
-                                          (*pStatics_2bf0,0);
+                                          (CloudAnimController._instance,0);
                                 return;
                               }
                             }
@@ -1492,10 +1486,8 @@ public class AreaController
     // RVA   : 0xA1EB80   Offset: 0xA1D380   Length: 0x386B
     public void GenerateAreaMap(AreaData targetAreaData)
     {
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         uint uVar1;
         bool cVar2;
         int iVar3;
@@ -1710,22 +1702,23 @@ public class AreaController
         this.areaData = targetAreaData;
         local_748 = plVar24;
         il2cpp_internal(plVar24,targetAreaData);
-        if ((*pStatics_e188 != 0) &&
-           (lVar8 = *(int64 *)(*pStatics_e188 + 32)) != null) {
+        if ((*pStatics != 0) &&
+           (lVar8 = *(int64 *)(*pStatics + 32)) != null) {
           GameObject.SetActive(lVar8,0,0);
-          if ((*pStatics_e188 != 0) &&
-             (lVar8 = *(int64 *)(*pStatics_e188 + 40)) != null) {
+          if ((*pStatics != 0) &&
+             (lVar8 = *(int64 *)(*pStatics + 40)) != null) {
             GameObject.SetActive(lVar8,0,0);
-            if ((*pStatics_e188 != 0) &&
-               (lVar8 = *(int64 *)(*pStatics_e188 + 48)) != null) {
+            if ((*pStatics != 0) &&
+               (lVar8 = *(int64 *)(*pStatics + 48)) != null) {
               GameObject.SetActive(lVar8,1,0);
-              lVar8 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+              lVar8 = GameController.CheckShowSpeHero;
               if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 88)) != null) {
                 GameObject.SetActive(lVar8,0,0);
                 if (this.areaObj != null) {
                   GameObject.SetActive(this.areaObj,1,0);
-                  if (*pStatics_2bf0 != 0) {
-                    CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+                  if (CloudAnimController._instance != null) {
+                    CloudAnimController.PlayerCloudAnim
+                              (CloudAnimController._instance,0);
                     if (this.areaGridRoot != null) {
                       lVar7 = GameObject.get_transform(this.areaGridRoot,0);
                       lVar8 = *plVar24;
@@ -1929,13 +1922,16 @@ public class AreaController
                                   if (0 < iVar3) {
                                     do {
                                       if (bVar26) {
-                                        lVar8 = *(int64 *)(pStatics_7630 + 24);
+                                        lVar8 = *(int64 *)
+                                                 (pPlotController + 24);
                                       }
                                       else if (iVar4 < iVar21) {
-                                        lVar8 = *(int64 *)(pStatics_7630 + 32);
+                                        lVar8 = *(int64 *)
+                                                 (pPlotController + 32);
                                       }
                                       else {
-                                        lVar8 = *(int64 *)(pStatics_7630 + 40);
+                                        lVar8 = *(int64 *)
+                                                 (pPlotController + 40);
                                       }
                                       if (((this.areaGridRoot == null) ||
                                           (lVar7 = GameObject.get_transform
@@ -2138,9 +2134,11 @@ public class AreaController
                                                                   *(uint32 *)(lVar8 + 68),0),
                                        lVar9 == null)) goto LAB_180a223c8;
                                     if (*(int *)(lVar9 + 48) != -3) {
-                                      local_540 = *(float *)(pStatics_ef00 + 0x15c);
+                                      local_540 = *(float *)(*(int64 *)
+                                                              (PlotController_StaticsPtr + 184) + 0x15c);
                                       local_7b8 = *(uint64 *)
-                                                   (pStatics_ef00 + 0x154);
+                                                   (pPlotController +
+                                                   0x154);
                                       fVar27 = local_540 / 1.5;
                                       uStack_7b0 = CONCAT44((int)((uint64)uStack_7b0 >> 32),local_540
                                                            );
@@ -2184,9 +2182,11 @@ public class AreaController
                                       if (*(int *)(lVar9 + 48) != -3) goto LAB_180a2080b;
                                     }
                                     uVar11 = String.Concat(uVar11,"5",0);
-                                    local_510 = *(float *)(pStatics_ef00 + 0x15c);
+                                    local_510 = *(float *)(pPlotController
+                                                          + 0x15c);
                                     local_7b8 = *(uint64 *)
-                                                 (pStatics_ef00 + 0x154);
+                                                 (pPlotController + 0x154)
+                                    ;
                                     fVar27 = local_510 / 1.5;
                                     uStack_7b0 = CONCAT44((int)((uint64)uStack_7b0 >> 32),local_510);
                                     fVar31 = (float)local_7b8 / 1.5;
@@ -2207,9 +2207,11 @@ public class AreaController
                                   uVar15 = "5";
                                   if (*(int *)(lVar9 + 48) != -3) {
                                     uVar11 = String.Concat(uVar11,"2",0);
-                                    local_500 = *(float *)(pStatics_ef00 + 0x15c);
+                                    local_500 = *(float *)(pPlotController
+                                                          + 0x15c);
                                     local_7b8 = *(uint64 *)
-                                                 (pStatics_ef00 + 0x154);
+                                                 (pPlotController + 0x154)
+                                    ;
                                     fVar27 = local_500 / 1.5;
                                     uStack_7b0 = CONCAT44((int)((uint64)uStack_7b0 >> 32),local_500);
                                     fVar31 = (float)local_7b8 / 1.5;
@@ -2257,9 +2259,11 @@ public class AreaController
                                       if (*(int *)(lVar9 + 48) != -3) goto LAB_180a2080b;
                                     }
                                     uVar11 = String.Concat(uVar11,"4",0);
-                                    local_530 = *(float *)(pStatics_ef00 + 0x15c);
+                                    local_530 = *(float *)(pPlotController
+                                                          + 0x15c);
                                     local_7b8 = *(uint64 *)
-                                                 (pStatics_ef00 + 0x154);
+                                                 (pPlotController + 0x154)
+                                    ;
                                     fVar27 = local_530 / 1.5;
                                     uStack_7b0 = CONCAT44((int)((uint64)uStack_7b0 >> 32),local_530);
                                     fVar31 = (float)local_7b8 / 1.5;
@@ -2280,9 +2284,11 @@ public class AreaController
                                     uVar15 = "4";
                                     if (*(int *)(lVar9 + 48) != -3) {
                                       uVar11 = String.Concat(uVar11,"3",0);
-                                      local_520 = *(float *)(pStatics_ef00 + 0x15c);
+                                      local_520 = *(float *)(*(int64 *)
+                                                              (PlotController_StaticsPtr + 184) + 0x15c);
                                       local_7b8 = *(uint64 *)
-                                                   (pStatics_ef00 + 0x154);
+                                                   (pPlotController +
+                                                   0x154);
                                       fVar27 = local_520 / 1.5;
                                       uStack_7b0 = CONCAT44((int)((uint64)uStack_7b0 >> 32),local_520
                                                            );
@@ -2728,15 +2734,18 @@ public class AreaController
                               do {
                                 fVar33 = -1.0;
                                 if (bVar25 < 2) {
-                                  lVar8 = *(int64 *)(pStatics_7630 + 24);
+                                  lVar8 = *(int64 *)
+                                           (pPlotController + 24);
                                 }
                                 else {
                                   fVar28 = (float)Random.get_value(0);
                                   if (0.5 <= fVar28) {
-                                    lVar8 = *(int64 *)(pStatics_7630 + 40);
+                                    lVar8 = *(int64 *)
+                                             (pPlotController + 40);
                                   }
                                   else {
-                                    lVar8 = *(int64 *)(pStatics_7630 + 32);
+                                    lVar8 = *(int64 *)
+                                             (pPlotController + 32);
                                   }
                                 }
                                 if (((this.areaGridRoot == null) ||
@@ -2907,7 +2916,8 @@ public class AreaController
                                   puVar13 = (uint64 *)Vector3.get_one(local_740,0);
                                   local_798 = *puVar13;
                                   local_790 = *(float *)(puVar13 + 1);
-                                  fVar27 = *(float *)(pStatics_7630 + 16);
+                                  fVar27 = *(float *)(pPlotController +
+                                                     16);
                                   local_750 = local_790 * fVar27;
                                   local_758 = CONCAT44(local_798._4_4_ * fVar27,(float)local_798 * fVar27)
                                   ;
@@ -3115,7 +3125,6 @@ public class AreaController
     // RVA   : 0xA26110   Offset: 0xA24910   Length: 0x618
     public void SetBackGroundSkeleton(GameObject backgroundObj, string backgroundType, int backgroundSkinID, float xScale)
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         void AreaController.SetBackGroundSkeleton
                      (uint64 this,int64 backgroundObj,uint64 backgroundType,uint32 backgroundSkinID,
                      float xScale)
@@ -3134,40 +3143,43 @@ public class AreaController
         plVar7 = (int64 *)0;
         while( true ) {
           while( true ) {
-            if (*pStatics == 0) throw; // [null/range check failed]
+            if (PlotController._instance == null) throw; // [null/range check failed]
             iVar6 = (int)plVar7;
-            if (*(int *)(*pStatics + 24) <= iVar6) {
+            if (PlotController._instance.plotHappen <= iVar6) {
               return;
             }
-            if (*pStatics == 0) throw; // [null/range check failed]
-            uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0);
+            if (PlotController._instance == null) throw; // [null/range check failed]
+            uVar2 = FUN_180002f80(PlotController._instance,plVar7,DAT_181d7c9c0);
             uVar2 = String.Format("Skeleton/Background/{0}/{1}/skeleton_SkeletonData",backgroundType,uVar2,0);
             uVar2 = Resources.Load(uVar2,0);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (backgroundObj == null) throw; // [null/range check failed]
             if (cVar1) break;
             lVar3 = GameObject.get_transform(backgroundObj,0);
-            if ((((*pStatics == 0) ||
-                 (uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0),
-                 lVar3 == null)) || (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) ||
+            if ((((PlotController._instance == null) ||
+                 (uVar2 = FUN_180002f80(PlotController._instance,plVar7,
+                                        DAT_181d7c9c0), lVar3 == null)) ||
+                (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) ||
                (lVar3 = Component.get_gameObject(lVar3,0)) == null) throw; // [null/range check failed]
             GameObject.SetActive(lVar3,0,0);
             plVar7 = (int64 *)(uint64)(iVar6 + 1);
           }
           lVar3 = GameObject.get_transform(backgroundObj,0);
-          if (((*pStatics == 0) ||
-              (uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0),
-              lVar3 == null)) || (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) break;
+          if (((PlotController._instance == null) ||
+              (uVar2 = FUN_180002f80(PlotController._instance,plVar7,
+                                     DAT_181d7c9c0), lVar3 == null)) ||
+             (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) break;
           lVar3 = Component.get_gameObject(lVar3,0);
           if (lVar3 == null) break;
           GameObject.SetActive(lVar3,1,0);
           lVar3 = GameObject.get_transform(backgroundObj,0);
-          if (((*pStatics == 0) ||
-              (uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0),
-              lVar3 == null)) || (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) break;
+          if (((PlotController._instance == null) ||
+              (uVar2 = FUN_180002f80(PlotController._instance,plVar7,
+                                     DAT_181d7c9c0), lVar3 == null)) ||
+             (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) break;
           lVar3 = Component.GetComponent(lVar3,DAT_181d6cd40);
-          if (*pStatics == 0) break;
-          uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0);
+          if (PlotController._instance == null) break;
+          uVar2 = FUN_180002f80(PlotController._instance,plVar7,DAT_181d7c9c0);
           uVar2 = String.Format("Skeleton/Background/{0}/{1}/skeleton_SkeletonData",backgroundType,uVar2,0);
           plVar4 = (int64 *)Resources.Load(uVar2,0);
           if (lVar3 == null) break;
@@ -3176,32 +3188,34 @@ public class AreaController
           }
           *(int64 **)(lVar3 + 24) = plVar5;
           lVar3 = GameObject.get_transform(backgroundObj,0);
-          if (((*pStatics == 0) ||
-              (uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0),
-              lVar3 == null)) || (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) break;
+          if (((PlotController._instance == null) ||
+              (uVar2 = FUN_180002f80(PlotController._instance,plVar7,
+                                     DAT_181d7c9c0), lVar3 == null)) ||
+             (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) break;
           lVar3 = Component.GetComponent(lVar3,DAT_181d6cd40);
           uVar2 = Int32.ToString(local_res20,0);
           uVar2 = String.Concat("skin",uVar2,0);
           if (lVar3 == null) break;
           *(uint64 *)(lVar3 + 32) = uVar2;
           lVar3 = GameObject.get_transform(backgroundObj,0);
-          if (((*pStatics == 0) ||
-              (uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0),
-              lVar3 == null)) ||
+          if (((PlotController._instance == null) ||
+              (uVar2 = FUN_180002f80(PlotController._instance,plVar7,
+                                     DAT_181d7c9c0), lVar3 == null)) ||
              ((lVar3 = Transform.Find(lVar3,uVar2,0), lVar3 == null ||
               (plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6cd40),
               plVar4 == (int64 *)0)))) break;
           (**(code **)(*plVar4 + 0x1c8))(plVar4,1,0);
           lVar3 = GameObject.get_transform(backgroundObj,0);
-          if ((((*pStatics == 0) ||
-               (uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0),
-               lVar3 == null)) || (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) ||
+          if ((((PlotController._instance == null) ||
+               (uVar2 = FUN_180002f80(PlotController._instance,plVar7,
+                                      DAT_181d7c9c0), lVar3 == null)) ||
+              (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) ||
              (lVar3 = Component.GetComponent(lVar3,DAT_181d6cd40)) == null) break;
           SkeletonAnimation.set_AnimationName(lVar3,"idle",0);
           lVar3 = GameObject.get_transform(backgroundObj,0);
-          if ((*pStatics == 0) ||
-             (uVar2 = FUN_180002f80(*pStatics,plVar7,DAT_181d7c9c0),
-             lVar3 == null)) break;
+          if ((PlotController._instance == null) ||
+             (uVar2 = FUN_180002f80(PlotController._instance,plVar7,DAT_181d7c9c0
+                                   ), lVar3 == null)) break;
           lVar3 = Transform.Find(lVar3,uVar2,0);
           if (lVar3 == null) break;
           local_38 = CONCAT44(0x40000000,xScale + xScale);
@@ -3814,12 +3828,12 @@ public class AreaController
                     lVar6 = this.areaData;
                     if (lVar6 == null) throw; // [null/range check failed]
                     uVar10 = lVar6.backgroundType;
-                    if (((*(byte *)(DAT_181d87630 + 0x133) & 4) != 0) &&
-                       (*(int *)(DAT_181d87630 + 224) == 0)) {
-                      il2cpp_runtime_class_init(DAT_181d87630);
+                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                       (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                      il2cpp_runtime_class_init(PlotController_StaticsPtr);
                       lVar6 = this.areaData;
                     }
-                    lVar2 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 8);
+                    lVar2 = PlotController.LeftFaceHideOffset;
                     if ((lVar6 == null) ||
                        (uVar5 = Int32.Parse(lVar6.backgroundType,0), lVar2 == null))
                     throw; // [null/range check failed]
@@ -4780,7 +4794,6 @@ public class AreaController
     // RVA   : 0xA1DE70   Offset: 0xA1C670   Length: 0x607
     public void FreshAreaRandomEvent()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         ulong uVar2;
         bool cVar3;
         uint uVar4;
@@ -4800,20 +4813,20 @@ public class AreaController
         byte[] local_38 = new byte[32];
         iVar13 = 0;
         while( true ) {
-          if (((*pStatics == 0) ||
-              (lVar5 = *(int64 *)(*pStatics + 32)) == null) ||
-             (lVar5 = *(int64 *)(lVar5 + 104)) == null) break;
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData, lVar5 == null
+              )) || (lVar5 = lVar5.AreaMapRandomEventDatas) == null) break;
           if (lVar5.Count <= iVar13) {
             AreaController.FreshAreaEventButton(this,0);
             return;
           }
           lVar5 = FUN_18046c0a0(0);
-          if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-             (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 104)) == null) break;
+          if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+             (lVar5 = *(int64 *)(lVar5.villageAreaID + 104)) == null) break;
           lVar5 = FUN_180002f80(lVar5,iVar13,DAT_181d5e680);
-          if (((lVar5 == null) || (this.areaData == null)) || (*(int64 *)(lVar5 + 64) == 0)
+          if (((lVar5 == null) || (this.areaData == null)) || (lVar5.ResourcePoints == null)
              ) break;
-          cVar3 = FUN_181815240(*(int64 *)(lVar5 + 64),
+          cVar3 = FUN_181815240(lVar5.ResourcePoints,
                                 this.areaData.areaID,DAT_181d67bf8);
           if (cVar3) {
             iVar12 = 0;
@@ -5118,14 +5131,15 @@ public class AreaController
     // RVA   : 0xA24C00   Offset: 0xA23400   Length: 0xA3
     public void OnScroll(float delta)
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         uint uVar2;
         if (!this.startAniming) {
           fVar1 = this.nowScale;
           uVar2 = FUN_1810a8ba0(fVar1 + delta,
-                                *(uint32 *)(pStatics + 16),
-                                *(uint32 *)(pStatics + 20),0);
+                                *(uint32 *)(pPlotController + 16),
+                                *(uint32 *)(pPlotController + 20),0)
+          ;
           this.nowScale = uVar2;
         }
     }
@@ -5156,9 +5170,9 @@ public class AreaController
           fVar5 = (float)Random.Range();
           fVar5 = fVar5 + (float)(iVar1 + -1) * 0.5;
           fVar6 = (float)(*(int *)(direction + 184) + -1) * 0.5;
-          if (((fVar3 < 0.3) && ((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0)) &&
-             (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-            il2cpp_runtime_class_init(DAT_181d4ef00);
+          if (((fVar3 < 0.3) && ((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0)) &&
+             (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+            il2cpp_runtime_class_init(PlotController_StaticsPtr);
           }
         }
         else {
@@ -5169,9 +5183,9 @@ public class AreaController
               fVar4 = (float)Random.Range();
               iVar2 = *(int *)(direction + 188);
               fVar4 = fVar4 + (float)(iVar1 + -1) * 0.5;
-              if (((fVar3 < 0.3) && ((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0)) &&
-                 (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                il2cpp_runtime_class_init(DAT_181d4ef00);
+              if (((fVar3 < 0.3) && ((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0)) &&
+                 (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                il2cpp_runtime_class_init(PlotController_StaticsPtr);
               }
               fVar5 = (float)Random.Range();
               fVar5 = fVar5 + (float)(iVar2 + -1) * 0.5;
@@ -5182,9 +5196,9 @@ public class AreaController
               fVar4 = (float)Random.Range();
               iVar2 = *(int *)(direction + 188);
               fVar4 = fVar4 + (float)(iVar1 + -1) * 0.5;
-              if (((fVar3 < 0.3) && ((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0)) &&
-                 (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                il2cpp_runtime_class_init(DAT_181d4ef00);
+              if (((fVar3 < 0.3) && ((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0)) &&
+                 (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                il2cpp_runtime_class_init(PlotController_StaticsPtr);
               }
               fVar5 = (float)Random.Range();
               fVar5 = fVar5 + (float)(iVar2 + -1) * 0.5;
@@ -5196,9 +5210,9 @@ public class AreaController
           fVar5 = (float)Random.Range();
           fVar5 = fVar5 + (float)(iVar1 + -1) * 0.5;
           fVar6 = (float)(*(int *)(direction + 184) + -1) * 0.5;
-          if (((fVar3 < 0.3) && ((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0)) &&
-             (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-            il2cpp_runtime_class_init(DAT_181d4ef00);
+          if (((fVar3 < 0.3) && ((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0)) &&
+             (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+            il2cpp_runtime_class_init(PlotController_StaticsPtr);
           }
         }
         fVar4 = (float)Random.Range();
@@ -5325,7 +5339,7 @@ public class AreaController
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         LAB_180a1d790:
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x600);
+        lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x600);
         if (lVar2 == null) goto LAB_180a1de5c;
         if (iVar10 < lVar2.areaName) {
           if (this.areaData == null) goto LAB_180a1de5c;
@@ -5549,7 +5563,7 @@ public class AreaController
             if (((lVar1 == null) || (lVar2 = GameObject.get_transform(lVar1,0)) == null) ||
                (lVar2 = Transform.Find(lVar2,"Text",0)) == null) break;
             uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
-            lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x508);
+            lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x508);
             if (((this.areaData == null) ||
                 (lVar4 = this.areaData.areaTreasurePriceData) == null) ||
                ((lVar4 = FUN_180002f80(lVar4,iVar9,DAT_181d55758), lVar4 == null || (lVar2 == null)))) break;
@@ -5647,14 +5661,14 @@ public class AreaController
     // RVA   : 0xA1AC70   Offset: 0xA19470   Length: 0x1A2
     public void AreaHeroListButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         if (this.areaData != null) {
           lVar2 = AreaData.GetInsideHeros(this.areaData,0);
-          if ((*pStatics != 0) &&
-             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar1 = GameController._instance.worldData) != null
+             ) {
             uVar3 = WorldData.Player(lVar1,0);
             if (lVar2 != null) {
               FUN_181801c10(lVar2,uVar3,DAT_181d640f8);
@@ -5676,7 +5690,7 @@ public class AreaController
         var pStatics = *(int64*)(DAT_181d92370 + 184);
         long lVar1;
         long lVar2;
-        lVar1 = **(int64 **)(DAT_181d6c960 + 184);
+        lVar1 = PlotController._instance;
         if ((*pStatics != 0) &&
            (lVar2 = *(int64 *)(*pStatics + 72)) != null) {
           lVar2 = GameObject.GetComponent(lVar2,DAT_181d9fb20);
@@ -5713,7 +5727,7 @@ public class AreaController
     // RVA   : 0xA28D00   Offset: 0xA27500   Length: 0xB22
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         lVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(lVar1,DAT_181d7c250);
@@ -5722,7 +5736,7 @@ public class AreaController
           FUN_181827900(lVar1,"Under",DAT_181d7c3d0);
           FUN_181827900(lVar1,"Above",DAT_181d7c3d0);
           FUN_181827900(lVar1,"Cover",DAT_181d7c3d0);
-          plVar2 = pStatics;
+          plVar2 = pPlotController;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           lVar1 = il2cpp_internal(DAT_181d6f030);
@@ -5735,11 +5749,9 @@ public class AreaController
             FUN_181814fa0(lVar1,15,DAT_181d67a78);
             FUN_181814fa0(lVar1,13,DAT_181d67a78);
             FUN_181814fa0(lVar1,10,DAT_181d67a78);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
-            *(uint32 *)(pStatics + 16) = 0x3f19999a;
-            *(uint32 *)(pStatics + 20) = 0x3fc00000;
+            PlotController.LeftFaceHideOffset = lVar1;
+            *(uint32 *)(pPlotController + 16) = 0x3f19999a;
+            *(uint32 *)(pPlotController + 20) = 0x3fc00000;
             lVar1 = il2cpp_internal(DAT_181d72a30);
             FUN_180f58a90(lVar1,DAT_181d7c250);
             if (lVar1 != null) {
@@ -5759,9 +5771,7 @@ public class AreaController
               FUN_181827900(lVar1,"民宅竖排_3",DAT_181d7c3d0);
               FUN_181827900(lVar1,"民宅竖排_4",DAT_181d7c3d0);
               FUN_181827900(lVar1,"民宅竖排_5",DAT_181d7c3d0);
-              plVar2 = (int64 *)(pStatics + 24);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              PlotController.CheckHideChoice = lVar1;
               lVar1 = il2cpp_internal(DAT_181d72a30);
               FUN_180f58a90(lVar1,DAT_181d7c250);
               if (lVar1 != null) {
@@ -5781,9 +5791,7 @@ public class AreaController
                 FUN_181827900(lVar1,"民宅横排上_3",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"民宅横排上_4",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"民宅横排上_5",DAT_181d7c3d0);
-                plVar2 = (int64 *)(pStatics + 32);
-                *plVar2 = lVar1;
-                il2cpp_internal(plVar2,lVar1);
+                PlotController.SpringFestivelRewardLvTalkText = lVar1;
                 lVar1 = il2cpp_internal(DAT_181d72a30);
                 FUN_180f58a90(lVar1,DAT_181d7c250);
                 if (lVar1 != null) {
@@ -5803,9 +5811,7 @@ public class AreaController
                   FUN_181827900(lVar1,"民宅横排下_3",DAT_181d7c3d0);
                   FUN_181827900(lVar1,"民宅横排下_4",DAT_181d7c3d0);
                   FUN_181827900(lVar1,"民宅横排下_5",DAT_181d7c3d0);
-                  plVar2 = (int64 *)(pStatics + 40);
-                  *plVar2 = lVar1;
-                  il2cpp_internal(plVar2,lVar1);
+                  PlotController.LanternFestivelRewardLvTalkText = lVar1;
                   lVar1 = il2cpp_internal(DAT_181d72a30);
                   FUN_180f58a90(lVar1,DAT_181d7c250);
                   if (lVar1 != null) {
@@ -5837,9 +5843,7 @@ public class AreaController
                     FUN_181827900(lVar1,"民宅横排下_3",DAT_181d7c3d0);
                     FUN_181827900(lVar1,"民宅横排下_4",DAT_181d7c3d0);
                     FUN_181827900(lVar1,"民宅横排下_5",DAT_181d7c3d0);
-                    plVar2 = (int64 *)(pStatics + 48);
-                    *plVar2 = lVar1;
-                    il2cpp_internal(plVar2,lVar1);
+                    PlotController.LaBaFestivelScoreLvTalkText = lVar1;
                     return;
                   }
                 }
@@ -5853,8 +5857,6 @@ public class AreaController
     // RVA   : 0xA269C0   Offset: 0xA251C0   Length: 0x8
     private void <GenerateAreaMap>b__66_0()
     {
-        void FUN_180a269c0(int64 this)
-        {
         this.startAniming = 0;
     }
 

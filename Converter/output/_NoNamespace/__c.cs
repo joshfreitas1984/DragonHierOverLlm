@@ -24,8 +24,9 @@ public class <>c
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = new ZhSegment(0);
-        puVar1 = *(uint64 **)(DAT_181d6e288 + 184);
+        uVar2 = il2cpp_internal(ZhDictionary_StaticsPtr);
+        ZhSegment.Initialize(uVar2,0);
+        puVar1 = *(uint64 **)(ZhDictionary_StaticsPtr + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }
@@ -136,7 +137,7 @@ public class <>c
         ulong uVar2;
         ulong uVar3;
         uVar2 = Application.get_streamingAssetsPath(0);
-        uVar1 = **(uint64 **)(DAT_181d6c508 + 184);
+        uVar1 = ZhDictionary._dictionaryDirectory;
         uVar3 = String.Concat(name,".txt",0);
         Path.Combine(uVar2,uVar1,uVar3,0);
     }

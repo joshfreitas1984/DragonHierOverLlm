@@ -74,7 +74,6 @@ public class TranslateText
     // RVA   : 0xA65B40   Offset: 0xA64340   Length: 0x1A9
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -85,7 +84,7 @@ public class TranslateText
         cVar2 = String.op_Inequality(uVar3,"TitleScene",0);
         if (!cVar2) {
           uVar3 = this.nowLanguage;
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) {
         LAB_180a65ce4:
                           // WARNING: Subroutine does not return
@@ -94,7 +93,7 @@ public class TranslateText
           uVar4 = PlayerPrefDictionary.GetString(lVar1,"Language",0);
           cVar2 = String.op_Inequality(uVar3,uVar4,0);
           if (cVar2) {
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = GameController.difficultyExtraPoint;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) goto LAB_180a65ce4;
             uVar3 = PlayerPrefDictionary.GetString(lVar1,"Language",0);
             this.nowLanguage = uVar3;

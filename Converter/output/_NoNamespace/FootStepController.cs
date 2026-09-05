@@ -32,7 +32,7 @@ public class FootStepController
     // RVA   : 0xBA6B00   Offset: 0xBA5300   Length: 0x2DF
     public void Init(SkeletonAnimation targetSkeleton)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -50,7 +50,8 @@ public class FootStepController
                 lVar3 = *(int64 *)(lVar3 + 192);
                 if (lVar3 != null) {
                   uVar2 = Skeleton.FindBone(lVar3,*(uint64 *)
-                                                    (pStatics + 0x1b8),0);
+                                                    (pPlotController +
+                                                    0x1b8),0);
                   this.leftFootBone = uVar2;
                   if (this.skeleton != null) {
                     lVar3 = Component.GetComponent(this.skeleton,DAT_181d6cd40);
@@ -58,11 +59,12 @@ public class FootStepController
                       if (*(int64 *)(lVar3 + 192) != 0) {
                         uVar2 = Skeleton.FindBone(*(int64 *)(lVar3 + 192),
                                                    *(uint64 *)
-                                                    (pStatics + 0x1c0),0);
+                                                    (pPlotController +
+                                                    0x1c0),0);
                         this.rightFootBone = uVar2;
                         iVar5 = 0;
                         while( true ) {
-                          lVar3 = *(int64 *)(pStatics + 0x1d0);
+                          lVar3 = *(int64 *)(pPlotController + 0x1d0);
                           if (lVar3 == null) break;
                           if (lVar3.Count <= iVar5) {
                             return;
@@ -72,7 +74,7 @@ public class FootStepController
                           lVar4 = Component.GetComponent(this.skeleton,DAT_181d6cd40);
                           if (lVar4 == null) break;
                           lVar4 = *(int64 *)(lVar4 + 192);
-                          lVar1 = *(int64 *)(pStatics + 0x1d0);
+                          lVar1 = *(int64 *)(pPlotController + 0x1d0);
                           if (lVar1 == null) break;
                           uVar2 = FUN_180002f80(lVar1,iVar5,DAT_181d7c9c0);
                           if (lVar4 == null) break;
@@ -327,13 +329,12 @@ public class FootStepController
     // RVA   : 0xBA6580   Offset: 0xBA4D80   Length: 0x570
     private void HandleEvent(TrackEntry trackEntry, Event e)
     {
+        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         var pStatics_0f00 = *(int64*)(DAT_181d50f00 + 184);
         var pStatics_1200 = *(int64*)(DAT_181d51200 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
         var pStatics_e090 = *(int64*)(DAT_181d4e090 + 184);
         var pStatics_ede0 = *(int64*)(DAT_181d6ede0 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
-        var pStatics_f230 = *(int64*)(DAT_181d7f230 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -343,13 +344,13 @@ public class FootStepController
         float local_20;
         byte[] local_18 = new byte[8];
         float local_10;
-        if (*pStatics_c960 != 0) {
-          if (*(char *)(*pStatics_c960 + 24) != false) {
+        if (PlotController._instance != null) {
+          if (PlotController._instance.plotHappen) {
             return;
           }
-          if ((*pStatics_f230 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_f230 + 40)) == null)
-          throw; // [null/range check failed]
+          if ((*p_ShowItemAnim_d__32 == 0) ||
+             (lVar4 = *(int64 *)(*p_ShowItemAnim_d__32 + 40),
+             lVar4 == null)) throw; // [null/range check failed]
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (cVar2) {
             return;
@@ -394,7 +395,7 @@ public class FootStepController
             if (*(int64 *)(e + 16) == 0) throw; // [null/range check failed]
             cVar2 = FUN_1816fd990(*(uint64 *)(*(int64 *)(e + 16) + 16),"rightfootstep",0);
             if (!cVar2) {
-              lVar4 = *(int64 *)(pStatics_ef00 + 0x1c8);
+              lVar4 = *(int64 *)(pPlotController + 0x1c8);
               if ((*(int64 *)(e + 16) == 0) || (lVar4 == null)) throw; // [null/range check failed]
               cVar2 = FUN_1818279a0(lVar4,*(uint64 *)(*(int64 *)(e + 16) + 16),
                                     DAT_181d7c4d0);
@@ -402,7 +403,7 @@ public class FootStepController
                 return;
               }
               lVar4 = this.horseFootBones;
-              lVar1 = *(int64 *)(pStatics_ef00 + 0x1c8);
+              lVar1 = *(int64 *)(pPlotController + 0x1c8);
               if ((*(int64 *)(e + 16) == 0) || (lVar1 == null)) throw; // [null/range check failed]
               uVar3 = FUN_1817ff280(lVar1,*(uint64 *)(*(int64 *)(e + 16) + 16),
                                     DAT_181d7c648);

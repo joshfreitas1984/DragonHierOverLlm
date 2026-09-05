@@ -212,16 +212,16 @@ public class GameAccountController
     // RVA   : 0x78F4A0   Offset: 0x78DCA0   Length: 0x176
     private void LoginSuccess()
     {
-        var pStatics = *(int64*)(DAT_181d8ff60 + 184);
+        var pGameAccountController = *(int64*)(GameAccountController_StaticsPtr + 184);
         long lVar1;
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = *(int64 *)(pGameAccountController + 40);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           if (*(char *)(lVar1 + 16) != false) {
         LAB_18078f5ff:
             GameAccountController.LoginFinalFinish(this,0,0);
             return;
           }
-          lVar1 = *(int64 *)(pStatics + 40);
+          lVar1 = *(int64 *)(pGameAccountController + 40);
           if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
             if (*(char *)(lVar1 + 17) == false) goto LAB_18078f5ff;
             if (this.LoginMenu != null) {

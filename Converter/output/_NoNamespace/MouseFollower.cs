@@ -14,7 +14,7 @@ public class MouseFollower
     // RVA   : 0xAF93F0   Offset: 0xAF7BF0   Length: 0x2F0
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d58a38 + 184);
+        var pMouseFollower = *(int64*)(MouseFollower_StaticsPtr + 184);
         uint uVar1;
         ulong uVar2;
         bool cVar3;
@@ -29,11 +29,11 @@ public class MouseFollower
         cVar3 = Input.GetMouseButton(0,0);
         lVar5 = this.Trails;
         if (!cVar3) {
-          lVar4 = *(int64 *)(pStatics + 16);
+          lVar4 = *(int64 *)(pMouseFollower + 16);
           if (lVar4 == null) {
-            uVar2 = **(uint64 **)(DAT_181d58a38 + 184);
+            uVar2 = **(uint64 **)(MouseFollower_StaticsPtr + 184);
             lVar4 = new OnTooltipCB(uVar2,DAT_181d7f3e8,DAT_181d73388);
-            plVar9 = (int64 *)(pStatics + 16);
+            plVar9 = (int64 *)(pMouseFollower + 16);
             *plVar9 = lVar4;
             il2cpp_internal(plVar9,lVar4);
           }
@@ -43,11 +43,11 @@ public class MouseFollower
           }
         }
         else {
-          lVar4 = *(int64 *)(pStatics + 8);
+          lVar4 = *(int64 *)(pMouseFollower + 8);
           if (lVar4 == null) {
-            uVar2 = **(uint64 **)(DAT_181d58a38 + 184);
+            uVar2 = **(uint64 **)(MouseFollower_StaticsPtr + 184);
             lVar4 = new OnTooltipCB(uVar2,DAT_181d7f368,DAT_181d73388);
-            plVar9 = (int64 *)(pStatics + 8);
+            plVar9 = (int64 *)(pMouseFollower + 8);
             *plVar9 = lVar4;
             il2cpp_internal(plVar9,lVar4);
           }

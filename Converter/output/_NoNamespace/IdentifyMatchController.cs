@@ -66,8 +66,7 @@ public class IdentifyMatchController
     // RVA   : 0xB6C4D0   Offset: 0xB6ACD0   Length: 0x399
     public void ShowIdentifyMatchUI(float _difficulty, string _fightEndCallFuc)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         void IdentifyMatchController.ShowIdentifyMatchUI
                      (int64 this,uint32 _difficulty,uint64 _fightEndCallFuc)
         {
@@ -91,15 +90,15 @@ public class IdentifyMatchController
           lVar4 = Transform.Find(lVar4,"HeroIcon",0);
           if (lVar4 == null) throw; // [null/range check failed]
           uVar5 = Component.get_gameObject(lVar4,0);
-          if (*pStatics_e188 == 0) throw; // [null/range check failed]
-          uVar1 = *(uint64 *)(*pStatics_e188 + 144);
+          if (*pStatics == 0) throw; // [null/range check failed]
+          uVar1 = *(uint64 *)(*pStatics + 144);
           uVar5 = GlobalData.AddChild(uVar5,uVar1,0);
           this.playerIcon = uVar5;
           if (this.playerIcon == null) throw; // [null/range check failed]
           lVar4 = GameObject.GetComponent(this.playerIcon,DAT_181d9fb20);
-          if ((*pStatics_df90 == 0) ||
-             (lVar2 = *(int64 *)(*pStatics_df90 + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar2 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           uVar5 = WorldData.Player(lVar2,0);
           if (lVar4 == null) throw; // [null/range check failed]
           *(uint64 *)(lVar4 + 32) = uVar5;
@@ -133,13 +132,13 @@ public class IdentifyMatchController
     // RVA   : 0xB6BE20   Offset: 0xB6A620   Length: 0x281
     public void HideIdentifyMatchUI()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             HeroData.ChangeLivingSkillExp

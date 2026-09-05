@@ -95,7 +95,7 @@ public class <BattleUnitAttackStart>d__222
                         (lVar5 = KungfuSkillLvData.DataBase(lVar5,0)) != null))) {
                       if (fVar12 <= (float)*(int *)(lVar5 + 52) * 0.05) {
                         lVar5 = *(int64 *)(lVar10 + 0x110);
-                        lVar6 = *(int64 *)(*(int64 *)(DAT_181d8b6a8 + 184) + 80);
+                        lVar6 = BattleUnit.UseSkillTalk;
                         if (lVar6 == null) throw; // [null/range check failed]
                         uVar4 = FUN_180d8cf10(0,*(uint32 *)(lVar6 + 24),0);
                         if (*(uint32 *)(lVar6 + 24) <= uVar4) {
@@ -253,7 +253,8 @@ public class <BattleUnitAttackStart>d__222
                                   (lVar6 = HeroData.GetNowActiveSkill(lVar6,0)) == null) ||
                                  (lVar6 = KungfuSkillLvData.DataBase(lVar6,0)) == null) break;
                               iVar2 = *(int *)(lVar6 + 52);
-                              lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                              lVar6 = *(int64 *)
+                                       (*(int64 *)(GameController_StaticsPtr + 184) + 32);
                               if (lVar6 == null) break;
                               lVar6 = *(int64 *)(lVar6 + 56);
                               if ((((*(int64 *)(lVar10 + 0x110) == 0) ||

@@ -98,25 +98,22 @@ public class TradeUIController
     // RVA   : 0xACB310   Offset: 0xAC9B10   Length: 0x58
     public static TradeUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d88158 + 184) + 8);
+        return PlotController.LeftFaceHideOffset;
     }
 
     // Token : 0x6002280
     // RVA   : 0xAC65C0   Offset: 0xAC4DC0   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d88158 + 184) + 8);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        PlotController.LeftFaceHideOffset = this;
     }
 
     // Token : 0x6002281
     // RVA   : 0xAC6890   Offset: 0xAC5090   Length: 0x1ECB
     public void FreshResourceLabel()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         long lVar3;
         byte uVar4;
         bool cVar5;
@@ -155,9 +152,9 @@ public class TradeUIController
               (lVar6 = Component.get_transform(this.leftResourceLabel,0)) == null) ||
              (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
           lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-          if ((*pStatics_6270 == 0) ||
+          if ((*pStatics == 0) ||
              (uVar9 = TextureController.LoadAtlasSprite
-                                (*pStatics_6270,"UIAtlas","银钱",0),
+                                (*pStatics,"UIAtlas","银钱",0),
              lVar6 == null)) throw; // [null/range check failed]
           Image.set_sprite(lVar6,uVar9,0);
           plVar7 = this.leftResourceLabel;
@@ -180,9 +177,9 @@ public class TradeUIController
               (lVar6 = Component.get_transform(this.rightResourceLabel,0)) == null) ||
              (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
           lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-          if ((*pStatics_6270 == 0) ||
+          if ((*pStatics == 0) ||
              (uVar9 = TextureController.LoadAtlasSprite
-                                (*pStatics_6270,"UIAtlas","银钱",0),
+                                (*pStatics,"UIAtlas","银钱",0),
              lVar6 == null)) throw; // [null/range check failed]
           Image.set_sprite(lVar6,uVar9,0);
           plVar7 = this.rightResourceLabel;
@@ -205,7 +202,7 @@ public class TradeUIController
               (lVar6 = Component.get_transform(this.deltaResourceLabel,0)) == null) ||
              (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
           lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-          lVar12 = *pStatics_6270;
+          lVar12 = *pStatics;
           uVar9 = "银钱";
         joined_r0x000180ac76d6:
           if ((lVar12 == null) ||
@@ -235,9 +232,9 @@ public class TradeUIController
                   (lVar6 = Component.get_transform(this.leftResourceLabel,0)) == null) ||
                  (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
               lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              if ((*pStatics_6270 == 0) ||
+              if ((*pStatics == 0) ||
                  (uVar9 = TextureController.LoadAtlasSprite
-                                    (*pStatics_6270,"UIAtlas","功绩",0),
+                                    (*pStatics,"UIAtlas","功绩",0),
                  lVar6 == null)) throw; // [null/range check failed]
               Image.set_sprite(lVar6,uVar9,0);
               plVar7 = this.leftResourceLabel;
@@ -278,7 +275,7 @@ public class TradeUIController
                   (lVar6 = Component.get_transform(this.deltaResourceLabel,0)) == null) ||
                  (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
               lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              lVar12 = *pStatics_6270;
+              lVar12 = *pStatics;
               uVar9 = "功绩";
             }
             else {
@@ -298,9 +295,9 @@ public class TradeUIController
                   (lVar6 = Component.get_transform(this.leftResourceLabel,0)) == null) ||
                  (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
               lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              if ((*pStatics_6270 == 0) ||
+              if ((*pStatics == 0) ||
                  (uVar9 = TextureController.LoadAtlasSprite
-                                    (*pStatics_6270,"UIAtlas","官府功绩",0),
+                                    (*pStatics,"UIAtlas","官府功绩",0),
                  lVar6 == null)) throw; // [null/range check failed]
               Image.set_sprite(lVar6,uVar9,0);
               plVar7 = this.leftResourceLabel;
@@ -339,7 +336,7 @@ public class TradeUIController
                   (lVar6 = Component.get_transform(this.deltaResourceLabel,0)) == null) ||
                  (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
               lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              lVar12 = *pStatics_6270;
+              lVar12 = *pStatics;
               uVar9 = "官府功绩";
             }
             goto joined_r0x000180ac76d6;
@@ -430,7 +427,7 @@ public class TradeUIController
                      (lVar6 = this.leftList.targetItemList) != null) {
                     if (0.0 <= *(float *)(lVar6 + 32)) {
                       if (*(float *)(lVar6 + 32) < *(float *)(lVar6 + 28)) {
-                        lVar6 = pStatics_ef00;
+                        lVar6 = pPlotController;
                         uVar15 = *(uint32 *)(lVar6 + 0x2f8);
                         uVar16 = *(uint32 *)(lVar6 + 0x2fc);
                         uVar17 = *(uint32 *)(lVar6 + 0x300);
@@ -504,7 +501,7 @@ public class TradeUIController
                                    lVar6 != null)) {
                                   if (0.0 <= *(float *)(lVar6 + 32)) {
                                     if (*(float *)(lVar6 + 32) < *(float *)(lVar6 + 28)) {
-                                      lVar6 = pStatics_ef00;
+                                      lVar6 = pPlotController;
                                       uVar15 = *(uint32 *)(lVar6 + 0x2f8);
                                       uVar16 = *(uint32 *)(lVar6 + 0x2fc);
                                       uVar17 = *(uint32 *)(lVar6 + 0x300);
@@ -570,16 +567,29 @@ public class TradeUIController
                                                  lVar6 != null)) {
                                                 uVar9 = Component.GetComponent(lVar6,DAT_181d6d8c0);
                                                 lVar6 = *(int64 *)
-                                                         (pStatics_ef00 + 0x4a8);
+                                                         (pPlotController
+                                                         + 0x4a8);
                                                 if (lVar6 != null) {
                                                   if (*(uint32 *)(lVar6 + 24) < 4) {
                                                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                                   }
                                                   uVar11 = *(uint64 *)
                                                             (*(int64 *)(lVar6 + 16) + 56);
-                                                  if ((((*pStatics_df90 != 0) &&
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init(GameController_StaticsPtr);
+                                                  }
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init(GameController_StaticsPtr);
+                                                  }
+                                                  if ((((GameController._instance
+                                                         != 0) &&
                                                        (lVar6 = *(int64 *)
-                                                                 (*pStatics_df90 +
+                                                                 (**(int64 **)
+                                                                    (GameController_StaticsPtr + 184) +
                                                                  32), lVar6 != null)) &&
                                                       (lVar6 = WorldData.Player(lVar6,0)) != null) &&
                                                      (lVar6 = *(int64 *)(lVar6 + 0x168)) != null) {
@@ -595,11 +605,19 @@ public class TradeUIController
                                                       lVar6 = GameObject.GetComponent
                                                                         (this.leftDiscount,
                                                                          DAT_181da12b0);
-                                                      if (((*pStatics_df90 != 0) &&
+                                                      if (((*(byte *)(GameController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(GameController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init
+                                                                  (GameController_StaticsPtr);
+                                                      }
+                                                      if (((**(int64 **)
+                                                              (GameController_StaticsPtr + 184) != 0) &&
                                                           (lVar12 = *(int64 *)
                                                                      (**(int64 **)
-                                                                        (DAT_181d4df90 + 184) + 32),
-                                                          lVar12 != null)) &&
+                                                                        (GameController_StaticsPtr + 184)
+                                                                     + 32), lVar12 != null)) &&
                                                          (lVar12 = WorldData.Player(lVar12,0),
                                                          lVar12 != null)) {
                                                         local_res8[0] =
@@ -608,13 +626,21 @@ public class TradeUIController
                                                         local_res8[0] = local_res8[0] * 100.0;
                                                         uVar9 = Single.ToString(local_res8,"f0",
                                                                                  0);
-                                                        if (((*pStatics_df90 != 0)
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) != 0)
                                                             && (lVar12 = *(int64 *)
                                                                           (**(int64 **)
-                                                                             (DAT_181d4df90 + 184) + 32
-                                                                          ), lVar12 != null)) &&
-                                                           (lVar12 = WorldData.Player(lVar12,0),
-                                                           lVar12 != null)) {
+                                                                             (GameController_StaticsPtr +
+                                                                             184) + 32), lVar12 != null))
+                                                           && (lVar12 = WorldData.Player(lVar12,0),
+                                                              lVar12 != null)) {
                                                           local_res8[0] =
                                                                (float)HeroData.GetTradeValueRate
                                                                                 (lVar12,0,0);
@@ -650,6 +676,12 @@ public class TradeUIController
                                                         lVar6 == null)) throw; // [null/range check failed]
                                                         uVar9 = Component.GetComponent
                                                                           (lVar6,DAT_181d6d8c0);
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         lVar6 = FUN_18046c0a0(0);
                                                         if (lVar6 == null) throw; // [null/range check failed]
                                                         if (((this.rightList == null) ||
@@ -722,6 +754,12 @@ public class TradeUIController
                                                           bVar14 = false;
                                                         }
                                                         else {
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar12 = FUN_18046bac0(0);
                                                           if (lVar12 == null) throw; // [null/range check failed]
                                                           bVar14 = *(int64 *)(lVar12 + 88) != 0;
@@ -730,6 +768,12 @@ public class TradeUIController
                                                         if (lVar6 != null) {
                                                           GameObject.SetActive(lVar6,bVar14,0);
                                                           if (this.useAreaItemPrice) {
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
                                                             lVar6 = FUN_18046bac0(0);
                                                             if (lVar6 == null) throw; // [null/range check failed]
                                                             if (*(int64 *)(lVar6 + 88) != 0) {
@@ -742,6 +786,12 @@ public class TradeUIController
                                                         "Text",0), lVar6 != null)) {
                                                           uVar9 = Component.GetComponent
                                                                             (lVar6,DAT_181d6d8c0);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar6 = FUN_18046bac0(0);
                                                           if ((lVar6 != null) &&
                                                              (*(int64 *)(lVar6 + 88) != 0)) {
@@ -773,41 +823,67 @@ public class TradeUIController
                                                           il2cpp_internal((uint64 *)(lVar6 + 24)
                                                                               ,uVar9);
                                                           while( true ) {
-                                                            lVar6 = *(int64 *)
-                                                                     (*(int64 *)(DAT_181d87630 + 184)
-                                                                     + 56);
-                                                            if (((lVar6 == null) ||
-                                                                (lVar6 = *(int64 *)(lVar6 + 88),
-                                                                lVar6 == null)) ||
-                                                               (lVar6 = *(int64 *)(lVar6 + 224),
-                                                               lVar6 == null)) break;
-                                                            if (*(int *)(lVar6 + 24) <= iVar13)
-                                                            goto LAB_180ac85d8;
-                                                            if ((this.areaDiscount == null) ||
-                                                               (lVar6 = GameObject.GetComponent
-                                                                                  (*(int64 *)
-                                                                                    (this + 152),
-                                                                                   DAT_181da12b0),
-                                                               lVar6 == null)) break;
-                                                            puVar2 = (uint64 *)(lVar6 + 24);
-                                                            uVar9 = *puVar2;
-                                                            lVar6 = FUN_18046bac0(0);
-                                                            if (((lVar6 == null) ||
-                                                                (*(int64 *)(lVar6 + 88) == 0)) ||
-                                                               ((lVar6 = *(int64 *)
-                                                                          (*(int64 *)(lVar6 + 88) +
-                                                                          224), lVar6 == null ||
-                                                                (lVar6 = FUN_180002f80(lVar6,iVar13,
-                                                                                       DAT_181d55758),
-                                                                lVar6 == null)))) break;
-                                                            uVar11 = AreaTreasurePriceData.GetDescribe
-                                                                               (lVar6,0);
-                                                            uVar9 = String.Concat(uVar9,"\n",
-                                                                                   uVar11,0);
-                                                            *puVar2 = uVar9;
-                                                            il2cpp_internal(puVar2);
-                                                            iVar13 = iVar13 + 1;
-                                                          }
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
+                                                            }
+                                                            if (!DAT_181e6a737) {
+                                                              il2cpp_internal(&
+                                                        PlotController_StaticsPtr);
+                                                        DAT_181e6a737 = true;
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (PlotController_StaticsPtr);
+                                                        }
+                                                        lVar6 = *(int64 *)
+                                                                 (*(int64 *)
+                                                                   (PlotController_StaticsPtr + 184) +
+                                                                 56);
+                                                        if (((lVar6 == null) ||
+                                                            (lVar6 = *(int64 *)(lVar6 + 88),
+                                                            lVar6 == null)) ||
+                                                           (lVar6 = *(int64 *)(lVar6 + 224),
+                                                           lVar6 == null)) break;
+                                                        if (*(int *)(lVar6 + 24) <= iVar13)
+                                                        goto LAB_180ac85d8;
+                                                        if ((this.areaDiscount == null) ||
+                                                           (lVar6 = GameObject.GetComponent
+                                                                              (*(int64 *)
+                                                                                (this + 152),
+                                                                               DAT_181da12b0), lVar6 == null)
+                                                           ) break;
+                                                        puVar2 = (uint64 *)(lVar6 + 24);
+                                                        uVar9 = *puVar2;
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        lVar6 = FUN_18046bac0(0);
+                                                        if (((lVar6 == null) ||
+                                                            (*(int64 *)(lVar6 + 88) == 0)) ||
+                                                           ((lVar6 = *(int64 *)
+                                                                      (*(int64 *)(lVar6 + 88) + 224)
+                                                            , lVar6 == null ||
+                                                            (lVar6 = FUN_180002f80(lVar6,iVar13,
+                                                                                   DAT_181d55758),
+                                                            lVar6 == null)))) break;
+                                                        uVar11 = AreaTreasurePriceData.GetDescribe
+                                                                           (lVar6,0);
+                                                        uVar9 = String.Concat(uVar9,"\n",uVar11,
+                                                                               0);
+                                                        *puVar2 = uVar9;
+                                                        il2cpp_internal(puVar2);
+                                                        iVar13 = iVar13 + 1;
+                                                        }
                                                         }
                                                         }
                                                         }
@@ -924,7 +1000,6 @@ public class TradeUIController
     // RVA   : 0xAC8760   Offset: 0xAC6F60   Length: 0x430
     public void HideTradeUI()
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -965,10 +1040,10 @@ public class TradeUIController
                       (lVar5,uVar2,"IconAtlas",uVar3,"ItemLose",0x3f800000,0x40a00000,&local_18,0);
           }
         }
-        lVar5 = *(int64 *)(pStatics + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (lVar5 == null) throw; // [null/range check failed]
         if (*(int64 *)(lVar5 + 88) != 0) {
-          lVar5 = *(int64 *)(pStatics + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) throw; // [null/range check failed]
           if (-1 < *(int *)(lVar5 + 112)) {
             if (this.rightList == null) throw; // [null/range check failed]
@@ -1067,7 +1142,7 @@ public class TradeUIController
           if (((lVar3 == null) || (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"RightLabel",0)) == null) throw; // [null/range check failed]
           uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-          lVar3 = **(int64 **)(DAT_181d88158 + 184);
+          lVar3 = PlotController._instance;
           if (lVar3 == null) throw; // [null/range check failed]
           if (lVar3.itemGrid <= targetType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1267,7 +1342,7 @@ public class TradeUIController
           if (((lVar3 == null) || (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"RightLabel",0)) == null) throw; // [null/range check failed]
           uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-          lVar3 = **(int64 **)(DAT_181d88158 + 184);
+          lVar3 = PlotController._instance;
           if (lVar3 == null) throw; // [null/range check failed]
           if (lVar3.itemGrid <= targetType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1467,7 +1542,7 @@ public class TradeUIController
           if (((lVar3 == null) || (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"RightLabel",0)) == null) throw; // [null/range check failed]
           uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-          lVar3 = **(int64 **)(DAT_181d88158 + 184);
+          lVar3 = PlotController._instance;
           if (lVar3 == null) throw; // [null/range check failed]
           if (lVar3.itemGrid <= targetType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1667,7 +1742,7 @@ public class TradeUIController
           if (((lVar3 == null) || (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"RightLabel",0)) == null) throw; // [null/range check failed]
           uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-          lVar3 = **(int64 **)(DAT_181d88158 + 184);
+          lVar3 = PlotController._instance;
           if (lVar3 == null) throw; // [null/range check failed]
           if (lVar3.itemGrid <= targetType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1806,10 +1881,7 @@ public class TradeUIController
     // RVA   : 0xAC6640   Offset: 0xAC4E40   Length: 0x18
     public bool CanSell()
     {
-        int FUN_180ac6640(int64 this)
-        {
-        uint3 uVar1;
-        uint32 uVar2;
+        uint uVar2;
         uVar2 = this.tradeUIType - 2;
         uVar1 = (uint3)(uVar2 >> 8);
         if ((uVar2 & 0xfffffffd) == 0) {
@@ -1822,8 +1894,6 @@ public class TradeUIController
     // RVA   : 0xAC6630   Offset: 0xAC4E30   Length: 0x8
     public bool CanBuy()
     {
-        bool FUN_180ac6630(int64 this)
-        {
         return this.tradeUIType != 3;
     }
 
@@ -1944,7 +2014,6 @@ public class TradeUIController
     // RVA   : 0xAC8BA0   Offset: 0xAC73A0   Length: 0xFFC
     public void RealManageTrade()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar2;
         long lVar3;
         bool cVar4;
@@ -1996,7 +2065,7 @@ public class TradeUIController
               if ((((lVar6 == null) || (this.leftList == null)) ||
                   (lVar7 = this.leftList.targetItemList) == null) ||
                  (lVar6.itemListInteractType == null)) goto LAB_180ac9b97;
-              lVar6 = WorldData.GetHero(lVar6.itemListInteractType,*(uint32 *)(lVar7 + 16),0);
+              lVar6 = WorldData.GetHero(lVar6.itemListInteractType,lVar7.chapter,0);
               if (lVar6 == null) goto LAB_180ac9b97;
               HeroData.ChangeMoney(lVar6,this.deltaMoney,1,0);
             }
@@ -2027,7 +2096,7 @@ public class TradeUIController
               if ((((lVar6 == null) || (this.rightList == null)) ||
                   (lVar7 = this.rightList.targetItemList) == null) ||
                  (lVar6.itemListInteractType == null)) goto LAB_180ac9b97;
-              lVar6 = WorldData.GetHero(lVar6.itemListInteractType,*(uint32 *)(lVar7 + 16),0);
+              lVar6 = WorldData.GetHero(lVar6.itemListInteractType,lVar7.chapter,0);
               if (lVar6 == null) goto LAB_180ac9b97;
               HeroData.ChangeMoney(lVar6,-this.deltaMoney,1,0);
             }
@@ -2089,7 +2158,7 @@ public class TradeUIController
                       if (lVar7.itemGrid <= uVar10) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
-                      lVar3 = *(int64 *)(lVar12 + *(int64 *)(lVar7 + 16));
+                      lVar3 = *(int64 *)(lVar12 + lVar7.chapter);
                       if (lVar3 == null) goto LAB_180ac9b97;
                       plVar9 = (int64 *)(uint64)(uVar10 + 1);
                       lVar7 = this.rightOutList;
@@ -2121,11 +2190,11 @@ public class TradeUIController
                       ;
                     }
                     else {
-                      if ((((*pStatics == 0) ||
+                      if ((((GameController._instance == null) ||
                            (this.leftList == null)) ||
                           (lVar6 = this.leftList.targetItemList) == null) ||
-                         (lVar7 = *(int64 *)(*pStatics + 32)) == null
-                         ) goto LAB_180ac9b97;
+                         (lVar7 = GameController._instance.worldData,
+                         lVar7 == null)) goto LAB_180ac9b97;
                       lVar6 = WorldData.GetHero(lVar7,*(uint32 *)(lVar6 + 16),0);
                       if ((this.rightOutList == null) || (lVar6 == null)) goto LAB_180ac9b97;
                       uVar8 = CONCAT44(uVar5,0xffffffff);
@@ -2144,10 +2213,11 @@ public class TradeUIController
                                   (lVar6,this.leftOutList.targetItemList,0);
                       }
                       else {
-                        if ((((*pStatics == 0) ||
+                        if ((((GameController._instance == null) ||
                              (this.rightList == null)) ||
                             (lVar6 = this.rightList.targetItemList) == null) ||
-                           (lVar7 = *(int64 *)(*pStatics + 32),
+                           (lVar7 = *(int64 *)
+                                     (GameController._instance + 32),
                            lVar7 == null)) goto LAB_180ac9b97;
                         lVar6 = WorldData.GetHero(lVar7,*(uint32 *)(lVar6 + 16),0);
                         if ((this.leftOutList == null) || (lVar6 == null)) goto LAB_180ac9b97;
@@ -2172,11 +2242,12 @@ public class TradeUIController
                                  ) {
                                 cVar4 = ItemListData.BelongHero(lVar6,0);
                                 if (cVar4) {
-                                  if ((((*pStatics == 0) ||
+                                  if ((((GameController._instance == null) ||
                                        (this.rightList == null)) ||
                                       (lVar6 = this.rightList.targetItemList,
                                       lVar6 == null)) ||
-                                     ((lVar7 = *(int64 *)(*pStatics + 32)
+                                     ((lVar7 = *(int64 *)
+                                                (GameController._instance + 32)
                                       , lVar7 == null ||
                                       (lVar6 = WorldData.GetHero(lVar7,*(uint32 *)(lVar6 + 16),0),
                                       lVar6 == null)))) goto LAB_180ac9b97;
@@ -2187,13 +2258,13 @@ public class TradeUIController
                                    lVar6 != null)) {
                                   cVar4 = ItemListData.BelongHero(lVar6,0);
                                   if (cVar4) {
-                                    if ((((*pStatics == 0) ||
+                                    if ((((GameController._instance == null) ||
                                          (this.leftList == null)) ||
                                         (lVar6 = this.leftList.targetItemList,
                                         lVar6 == null)) ||
                                        ((lVar7 = *(int64 *)
-                                                  (*pStatics + 32),
-                                        lVar7 == null ||
+                                                  (GameController._instance +
+                                                  32), lVar7 == null ||
                                         (lVar6 = WorldData.GetHero(lVar7,*(uint32 *)(lVar6 + 16),0)
                                         , lVar6 == null)))) goto LAB_180ac9b97;
                                     *(uint8 *)(lVar6 + 0x2d8) = 1;
@@ -2223,7 +2294,7 @@ public class TradeUIController
                     if (lVar7.itemGrid <= uVar10) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    if (*(int64 *)(lVar12 + *(int64 *)(lVar7 + 16)) == 0) break;
+                    if (*(int64 *)(lVar12 + lVar7.chapter) == 0) break;
                     cVar4 = ItemData.Equiped();
                     if (cVar4) {
                       lVar7 = FUN_18046c0a0(0);
@@ -2262,7 +2333,7 @@ public class TradeUIController
                 if (lVar7.itemGrid <= uVar10) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (*(int64 *)(lVar12 + *(int64 *)(lVar7 + 16)) == 0) break;
+                if (*(int64 *)(lVar12 + lVar7.chapter) == 0) break;
                 cVar4 = ItemData.Equiped();
                 if (cVar4) {
                   lVar7 = FUN_18046c0a0(0);
@@ -2299,9 +2370,11 @@ public class TradeUIController
           goto LAB_180ac9b97;
           cVar4 = ItemListData.BelongHero(lVar6,0);
           if (cVar4) {
-            if ((((*pStatics == 0) || (this.rightList == null)) ||
+            if ((((GameController._instance == null) ||
+                 (this.rightList == null)) ||
                 (lVar6 = this.rightList.targetItemList) == null) ||
-               ((lVar7 = *(int64 *)(*pStatics + 32), lVar7 == null ||
+               ((lVar7 = GameController._instance.worldData,
+                lVar7 == null ||
                 (lVar6 = WorldData.GetHero(lVar7,*(uint32 *)(lVar6 + 16),0)) == null)))
             goto LAB_180ac9b97;
             uVar5 = 0;
@@ -2311,9 +2384,11 @@ public class TradeUIController
              (lVar6 = this.leftList.targetItemList) != null) {
             cVar4 = ItemListData.BelongHero(lVar6,0);
             if (!cVar4) goto LAB_180ac9645;
-            if ((((*pStatics != 0) && (this.leftList != null)) &&
+            if ((((GameController._instance != null) &&
+                 (this.leftList != null)) &&
                 (lVar6 = this.leftList.targetItemList) != null) &&
-               ((lVar7 = *(int64 *)(*pStatics + 32), lVar7 != null &&
+               ((lVar7 = GameController._instance.worldData,
+                lVar7 != null &&
                 (lVar6 = WorldData.GetHero(lVar7,*(uint32 *)(lVar6 + 16),0)) != null))) {
               uVar5 = 0;
               HeroData.ChangeLivingSkillExp(lVar6,3);
@@ -2327,7 +2402,7 @@ public class TradeUIController
         if (lVar7.itemGrid <= uVar10) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        lVar12 = *(int64 *)(lVar6 + *(int64 *)(lVar7 + 16));
+        lVar12 = *(int64 *)(lVar6 + lVar7.chapter);
         if (lVar12 == null) goto LAB_180ac9b97;
         lVar7 = this.leftOutList;
         lVar6 = lVar6 + 8;
@@ -2568,7 +2643,7 @@ public class TradeUIController
           FUN_181827900(lVar2,"门派仓库",DAT_181d7c3d0);
           FUN_181827900(lVar2,"给予",DAT_181d7c3d0);
           FUN_181827900(lVar2,"官府仓库",DAT_181d7c3d0);
-          plVar1 = *(int64 **)(DAT_181d88158 + 184);
+          plVar1 = *(int64 **)(PlotController_StaticsPtr + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;

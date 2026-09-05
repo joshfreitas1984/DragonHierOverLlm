@@ -81,8 +81,6 @@ public class UIToggle
     // RVA   : 0x16997D0   Offset: 0x1697FD0   Length: 0x2F
     public void set_value(bool value)
     {
-        void FUN_1816997d0(int64 this,char value)
-        {
         if (!this.mStarted) {
           this.startsActive = value;
         }
@@ -136,8 +134,6 @@ public class UIToggle
     // RVA   : 0x16997D0   Offset: 0x1697FD0   Length: 0x2F
     public void set_isChecked(bool value)
     {
-        void FUN_1816997d0(int64 this,char value)
-        {
         if (!this.mStarted) {
           this.startsActive = value;
         }
@@ -156,19 +152,19 @@ public class UIToggle
     // RVA   : 0x1698610   Offset: 0x1696E10   Length: 0x14B
     public static UIToggle GetActiveToggle(int group)
     {
-        var pStatics = *(int64*)(DAT_181d8b2d8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         uint uVar4;
         uVar4 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= (int)uVar4) {
+          if (UIPlayAnimation.current == null) break;
+          if (UIPlayAnimation.current.target <= (int)uVar4) {
             return 0;
           }
-          if ((*pStatics == 0) ||
-             (lVar1 = *(int64 *)(*pStatics + 16)) == null) break;
+          if ((UIPlayAnimation.current == null) ||
+             (lVar1 = *(int64 *)(UIPlayAnimation.current + 16), lVar1 == null
+             )) break;
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -190,9 +186,8 @@ public class UIToggle
     // RVA   : 0x16989B0   Offset: 0x16971B0   Length: 0x81
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181d8b2d8 + 184);
-        if (*pStatics != 0) {
-          FUN_18154cb60(*pStatics,this,DAT_181d81f18);
+        if (UIPlayAnimation.current != null) {
+          FUN_18154cb60(UIPlayAnimation.current,this,DAT_181d81f18);
           return;
         }
     }
@@ -201,9 +196,8 @@ public class UIToggle
     // RVA   : 0x1698920   Offset: 0x1697120   Length: 0x81
     private void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181d8b2d8 + 184);
-        if (*pStatics != 0) {
-          FUN_18154eb70(*pStatics,this,DAT_181d81f98);
+        if (UIPlayAnimation.current != null) {
+          FUN_18154eb70(UIPlayAnimation.current,this,DAT_181d81f98);
           return;
         }
     }
@@ -313,7 +307,7 @@ public class UIToggle
             cVar1 = Collider.get_enabled(lVar2,0);
           }
           if (cVar1) {
-            if (*(int *)(*(int64 *)(DAT_181d8a458 + 184) + 212) != -2) {
+            if (UICamera.currentTouchID != -2) {
               if (!this.mStarted) {
                 this.startsActive = !this.startsActive;
                 return;
@@ -331,7 +325,7 @@ public class UIToggle
     // RVA   : 0x1698A40   Offset: 0x1697240   Length: 0x886
     public void Set(bool state, bool notify)
     {
-        var pStatics = *(int64*)(DAT_181d8b2d8 + 184);
+        var pUIPlayAnimation = *(int64*)(UIPlayAnimation_StaticsPtr + 184);
         long lVar1;
         bool cVar2;
         ulong uVar4;
@@ -358,14 +352,14 @@ public class UIToggle
             bVar3 = state;
           }
           if (bVar3 != 0) {
-            if (*pStatics == 0) throw; // [null/range check failed]
-            iVar8 = *(int *)(*pStatics + 24);
+            if (UIPlayAnimation.current == null) throw; // [null/range check failed]
+            iVar8 = UIPlayAnimation.current.target;
             uVar9 = uVar10;
             if (0 < iVar8) {
               do {
-                if ((*pStatics == 0) ||
-                   (lVar6 = *(int64 *)(*pStatics + 16)) == null)
-                throw; // [null/range check failed]
+                if ((UIPlayAnimation.current == null) ||
+                   (lVar6 = *(int64 *)(UIPlayAnimation.current + 16),
+                   lVar6 == null)) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar6 + 24) <= uVar9) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -379,13 +373,13 @@ public class UIToggle
                     UIToggle.Set(lVar6,0,1,0);
                   }
                 }
-                if (*pStatics == 0) throw; // [null/range check failed]
-                if (*(int *)(*pStatics + 24) == iVar8) {
+                if (UIPlayAnimation.current == null) throw; // [null/range check failed]
+                if (UIPlayAnimation.current.target == iVar8) {
                   uVar9 = uVar9 + 1;
                 }
                 else {
-                  if (*pStatics == 0) throw; // [null/range check failed]
-                  iVar8 = *(int *)(*pStatics + 24);
+                  if (UIPlayAnimation.current == null) throw; // [null/range check failed]
+                  iVar8 = UIPlayAnimation.current.target;
                   uVar9 = uVar10;
                 }
               } while ((int)uVar9 < iVar8);
@@ -436,10 +430,10 @@ public class UIToggle
           }
         LAB_181698d8a:
           if (notify) {
-            uVar4 = *(uint64 *)(pStatics + 8);
+            uVar4 = *(uint64 *)(pUIPlayAnimation + 8);
             cVar2 = Object.op_Equality(uVar4,0,0);
             if (cVar2) {
-              plVar7 = (int64 *)(pStatics + 8);
+              plVar7 = (int64 *)(pUIPlayAnimation + 8);
               lVar6 = *plVar7;
               *plVar7 = this;
               il2cpp_internal(plVar7,this);
@@ -466,7 +460,7 @@ public class UIToggle
                 uVar4 = this.onChange;
                 EventDelegate.Execute(uVar4,0);
               }
-              plVar7 = (int64 *)(pStatics + 8);
+              plVar7 = (int64 *)(pUIPlayAnimation + 8);
               *plVar7 = lVar6;
               il2cpp_internal(plVar7,lVar6);
             }
@@ -604,7 +598,7 @@ public class UIToggle
     {
         ulong uVar2;
         uVar2 = new BetterList_1(DAT_181d81e98);
-        puVar1 = *(uint64 **)(DAT_181d8b2d8 + 184);
+        puVar1 = *(uint64 **)(UIPlayAnimation_StaticsPtr + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

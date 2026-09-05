@@ -29,8 +29,6 @@ public class BranchLeaderSettingTabController
     // RVA   : 0xCE7FA0   Offset: 0xCE67A0   Length: 0xE
     private void Update()
     {
-        void FUN_180ce7fa0(int64 this)
-        {
         if (!this.inited) {
           BranchLeaderSettingTabController.Init(this,0);
           return;
@@ -296,9 +294,8 @@ public class BranchLeaderSettingTabController
     // RVA   : 0xCE7160   Offset: 0xCE5960   Length: 0xD86
     public void RefreshHeroIcon()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -354,19 +351,20 @@ public class BranchLeaderSettingTabController
                 lVar2 = Component.get_transform(this,0);
                 if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"HeroIcon",0)) != null) {
                   uVar3 = Component.get_gameObject(lVar2,0);
-                  if (*pStatics_e188 != 0) {
-                    uVar1 = *(uint64 *)(*pStatics_e188 + 144);
+                  if (*pStatics != 0) {
+                    uVar1 = *(uint64 *)(*pStatics + 144);
                     lVar2 = GlobalData.AddChild(uVar3,uVar1,0);
                     if ((lVar2 != null) &&
                        (lVar4 = GameObject.GetComponent(lVar2,DAT_181d9fb20)) != null) {
                       *(uint8 *)(lVar4 + 88) = 1;
                       lVar4 = GameObject.GetComponent(lVar2,DAT_181d9fb20);
-                      if ((((*pStatics_df90 != 0) &&
+                      if ((((GameController._instance != null) &&
                            (this.targetArea != null)) &&
-                          (lVar7 = *(int64 *)(*pStatics_df90 + 32), lVar7 != null
-                          )) && (uVar3 = WorldData.GetHero(lVar7,*(uint32 *)
-                                                                   (this.targetArea + 0x118)
-                                                            ,0), lVar4 != null)) {
+                          (lVar7 = GameController._instance.worldData
+                          , lVar7 != null)) &&
+                         (uVar3 = WorldData.GetHero(lVar7,*(uint32 *)
+                                                            (this.targetArea + 0x118),0),
+                         lVar4 != null)) {
                         *(uint64 *)(lVar4 + 32) = uVar3;
                         lVar4 = GameObject.GetComponent(lVar2);
                         if (lVar4 != null) {
@@ -395,14 +393,15 @@ public class BranchLeaderSettingTabController
                                       lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
                                       plVar6 = (int64 *)FUN_1800d60b0(DAT_181d7f180,7);
                                       lVar7 = GameObject.GetComponent(lVar2,DAT_181d9fb20);
-                                      if ((lVar7 != null) && (*(int64 *)(lVar7 + 32) != 0)) {
+                                      if ((lVar7 != null) && (lVar7.villageAreaID != null)) {
                                         fVar9 = (float)HeroData.GetTotalAttir
-                                                                 (*(int64 *)(lVar7 + 32),0);
-                                        lVar7 = *(int64 *)(pStatics_ef00 + 0x490)
+                                                                 (lVar7.villageAreaID,0);
+                                        lVar7 = *(int64 *)
+                                                 (pPlotController + 0x490)
                                         ;
                                         if (lVar7 != null) {
                                           local_res18[0] =
-                                               (fVar9 * 5.0) / ((float)*(int *)(lVar7 + 24) * 10.0);
+                                               (fVar9 * 5.0) / ((float)lVar7.cityAreaID * 10.0);
                                           lVar7 = Single.ToString(local_res18,"+0;-0;0",0);
                                           if (plVar6 != (int64 *)0) {
                                             if ((lVar7 != null) &&
@@ -421,14 +420,15 @@ public class BranchLeaderSettingTabController
                                             plVar6[4] = lVar7;
                                             il2cpp_internal(plVar6 + 4,lVar7);
                                             lVar7 = GameObject.GetComponent(lVar2,DAT_181d9fb20);
-                                            if ((lVar7 != null) && (*(int64 *)(lVar7 + 32) != 0)) {
+                                            if ((lVar7 != null) && (lVar7.villageAreaID != null)) {
                                               fVar9 = (float)HeroData.GetTotalAttir
-                                                                       (*(int64 *)(lVar7 + 32),0);
+                                                                       (lVar7.villageAreaID,0);
                                               lVar7 = *(int64 *)
-                                                       (pStatics_ef00 + 0x490);
+                                                       (pPlotController +
+                                                       0x490);
                                               if (lVar7 != null) {
                                                 local_res18[0] =
-                                                     fVar9 / ((float)*(int *)(lVar7 + 24) * 10.0);
+                                                     fVar9 / ((float)lVar7.cityAreaID * 10.0);
                                                 lVar7 = Single.ToString(local_res18,"+0;-0;0",0);
                                                 if ((lVar7 != null) &&
                                                    (lVar8 = il2cpp_internal(lVar7,*(uint64 *)
@@ -446,15 +446,16 @@ public class BranchLeaderSettingTabController
                                                 plVar6[5] = lVar7;
                                                 il2cpp_internal(plVar6 + 5,lVar7);
                                                 lVar7 = GameObject.GetComponent(lVar2,DAT_181d9fb20);
-                                                if ((lVar7 != null) && (*(int64 *)(lVar7 + 32) != 0)) {
+                                                if ((lVar7 != null) && (lVar7.villageAreaID != null)) {
                                                   fVar9 = (float)HeroData.GetTotalFightSkill
-                                                                           (*(int64 *)(lVar7 + 32),0)
+                                                                           (lVar7.villageAreaID,0)
                                                   ;
                                                   lVar7 = *(int64 *)
-                                                           (pStatics_ef00 + 0x498);
+                                                           (*(int64 *)
+                                                             (PlotController_StaticsPtr + 184) + 0x498);
                                                   if (lVar7 != null) {
                                                     local_res18[0] =
-                                                         fVar9 / ((float)*(int *)(lVar7 + 24) * 10.0);
+                                                         fVar9 / ((float)lVar7.cityAreaID * 10.0);
                                                     lVar7 = Single.ToString(local_res18,"+0;-0;0",0);
                                                     if ((lVar7 != null) &&
                                                        (lVar8 = il2cpp_internal(lVar7,*(uint64 *)
@@ -473,18 +474,19 @@ public class BranchLeaderSettingTabController
                                                     plVar6[6] = lVar7;
                                                     il2cpp_internal(plVar6 + 6,lVar7);
                                                     lVar7 = GameObject.GetComponent(lVar2,DAT_181d9fb20);
-                                                    if ((lVar7 != null) && (*(int64 *)(lVar7 + 32) != 0)
+                                                    if ((lVar7 != null) && (lVar7.villageAreaID != null)
                                                        ) {
                                                       fVar9 = (float)HeroData.GetTotalLivingSkill
                                                                                (*(int64 *)
                                                                                  (lVar7 + 32),0);
                                                       lVar7 = *(int64 *)
-                                                               (pStatics_ef00 +
+                                                               (*(int64 *)
+                                                                 (PlotController_StaticsPtr + 184) +
                                                                0x4a8);
                                                       if (lVar7 != null) {
                                                         local_res18[0] =
                                                              (fVar9 * 0.25) /
-                                                             (float)*(int *)(lVar7 + 24);
+                                                             (float)lVar7.cityAreaID;
                                                         lVar7 = Single.ToString(local_res18,"+0;-0;0"
                                                                                  ,0);
                                                         if ((lVar7 != null) &&
@@ -506,10 +508,10 @@ public class BranchLeaderSettingTabController
                                                         lVar7 = GameObject.GetComponent
                                                                           (lVar2,DAT_181d9fb20);
                                                         if ((lVar7 != null) &&
-                                                           (*(int64 *)(lVar7 + 32) != 0)) {
+                                                           (lVar7.villageAreaID != null)) {
                                                           local_res20[0] =
                                                                HeroData.GetTotalAttir
-                                                                         (*(int64 *)(lVar7 + 32),0);
+                                                                         (lVar7.villageAreaID,0);
                                                           lVar7 = il2cpp_value_box(DAT_181d7d0b8,
                                                                                    local_res20);
                                                           if ((lVar7 != null) &&
@@ -529,7 +531,7 @@ public class BranchLeaderSettingTabController
                                                         lVar7 = GameObject.GetComponent
                                                                           (lVar2,DAT_181d9fb20);
                                                         if ((lVar7 != null) &&
-                                                           (*(int64 *)(lVar7 + 32) != 0)) {
+                                                           (lVar7.villageAreaID != null)) {
                                                           local_58 = HeroData.GetTotalFightSkill
                                                                                (*(int64 *)
                                                                                  (lVar7 + 32),0);
@@ -614,37 +616,37 @@ public class BranchLeaderSettingTabController
                                   lVar4 = Component.GetComponent(lVar4,DAT_181d6af40);
                                   lVar7 = FUN_18046c0a0(0);
                                   if (((lVar7 != null) && (this.targetArea != null)) &&
-                                     ((*(int64 *)(lVar7 + 32) != 0 &&
-                                      ((lVar7 = WorldData.GetHero(*(int64 *)(lVar7 + 32),
+                                     ((lVar7.villageAreaID != null &&
+                                      ((lVar7 = WorldData.GetHero(lVar7.villageAreaID,
                                                                    *(uint32 *)
                                                                     (this.targetArea + 0x118
                                                                     ),0), lVar7 != null && (lVar4 != null))))))
                                   {
-                                    Selectable.set_interactable(lVar4,*(int *)(lVar7 + 152) < 1,0);
+                                    Selectable.set_interactable(lVar4,lVar7.cheating < 1,0);
                                     lVar4 = Component.get_transform(this,0);
                                     if ((lVar4 != null) &&
                                        (lVar4 = Transform.Find(lVar4,"ClearButton",0)) != null) {
                                       lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
                                       lVar7 = FUN_18046c0a0(0);
                                       if ((((lVar7 != null) && (this.targetArea != null)) &&
-                                          (*(int64 *)(lVar7 + 32) != 0)) &&
-                                         (lVar7 = WorldData.GetHero(*(int64 *)(lVar7 + 32),
+                                          (lVar7.villageAreaID != null)) &&
+                                         (lVar7 = WorldData.GetHero(lVar7.villageAreaID,
                                                                      *(uint32 *)
                                                                       (this.targetArea +
                                                                       0x118),0), lVar7 != null)) {
                                         uVar3 = "撤除职位";
-                                        if (0 < *(int *)(lVar7 + 152)) {
+                                        if (0 < lVar7.cheating) {
                                           lVar7 = FUN_18046c0a0(0);
                                           if (((lVar7 == null) || (this.targetArea == null)) ||
-                                             ((*(int64 *)(lVar7 + 32) == 0 ||
-                                              (lVar7 = WorldData.GetHero(*(int64 *)(lVar7 + 32),
+                                             ((lVar7.villageAreaID == null ||
+                                              (lVar7 = WorldData.GetHero(lVar7.villageAreaID,
                                                                           *(uint32 *)
                                                                            (this.targetArea
                                                                            + 0x118),0), lVar7 == null)))) {
                           // WARNING: Subroutine does not return
                                             FUN_1800d6620();
                                           }
-                                          local_res20[0] = *(uint32 *)(lVar7 + 152);
+                                          local_res20[0] = lVar7.cheating;
                                           uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
                                           uVar3 = String.Format("撤除职位\n冷却{0}天",uVar3,0);
                                         }

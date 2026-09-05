@@ -34,7 +34,7 @@ public class <EndParty>d__59
     // RVA   : 0x8C9A50   Offset: 0x8C8250   Length: 0x5E9
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d6b060 + 184);
+        var p_FinishParty_d__58 = *(int64*)(_FinishParty_d__58_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         uint uVar3;
@@ -83,7 +83,7 @@ public class <EndParty>d__59
           PartyController.GetMaxHeroLv(lVar1,0);
           if (*(int64 *)(lVar1 + 168) != 0) {
             uVar3 = Mathf.RoundToInt();
-            lVar2 = *(int64 *)(pStatics + 24);
+            lVar2 = *(int64 *)(p_FinishParty_d__58 + 24);
             if ((lVar2 != null) && (iVar4 = Mathf.Clamp(uVar3,0,*(int *)(lVar2 + 24) + -1,0), lVar5 != null))
             {
               HeroData.AddTag(lVar5,iVar4 + 0x14e,0x41200000,0,1,1,0);
@@ -97,7 +97,7 @@ public class <EndParty>d__59
                 auVar9._0_4_ = ((float)auVar8._0_8_ + fVar7) -
                                (float)*(int *)(*(int64 *)(lVar1 + 176) + 184);
                 uVar3 = Mathf.RoundToInt(auVar9._0_8_,0);
-                lVar2 = *(int64 *)(pStatics + 24);
+                lVar2 = *(int64 *)(p_FinishParty_d__58 + 24);
                 if (lVar2 == null) throw; // [null/range check failed]
                 iVar4 = Mathf.Clamp(uVar3,0,*(int *)(lVar2 + 24) + -1,0);
                 HeroData.AddTag(lVar5,iVar4 + 0x14e,0x41200000,0,1,1,0);

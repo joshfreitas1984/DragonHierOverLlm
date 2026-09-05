@@ -20,7 +20,7 @@ public class NGUIDebug
     // RVA   : 0xAFD010   Offset: 0xAFB810   Length: 0x57
     public static bool get_debugRaycast()
     {
-        return **(uint8 **)(DAT_181d669f0 + 184);
+        return NGUIDebug.mRayDebug;
     }
 
     // Token : 0x600034B
@@ -28,7 +28,7 @@ public class NGUIDebug
     public static void set_debugRaycast(bool value)
     {
         bool cVar1;
-        **(char **)(DAT_181d669f0 + 184) = value;
+        NGUIDebug.mRayDebug = value;
         if (value) {
           cVar1 = Application.get_isPlaying(0);
           if (cVar1) {
@@ -42,19 +42,16 @@ public class NGUIDebug
     // RVA   : 0xAFBC90   Offset: 0xAFA490   Length: 0x171
     public static void CreateInstance()
     {
-        var pStatics = *(int64*)(DAT_181d669f0 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        uVar3 = *(uint64 *)(pStatics + 16);
+        uVar3 = NGUIDebug.mInstance;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (cVar1) {
           lVar2 = new GameObject("_NGUI Debug",0);
           if (lVar2 != null) {
             uVar3 = GameObject.AddComponent(lVar2,DAT_181d9c9b8);
-            puVar4 = (uint64 *)(pStatics + 16);
-            *puVar4 = uVar3;
-            il2cpp_internal(puVar4,uVar3);
+            NGUIDebug.mInstance = uVar3;
             Object.DontDestroyOnLoad(lVar2,0);
             return;
           }
@@ -67,7 +64,6 @@ public class NGUIDebug
     // RVA   : 0xAFC100   Offset: 0xAFA900   Length: 0x15D
     private static void LogString(string text)
     {
-        var pStatics = *(int64*)(DAT_181d669f0 + 184);
         long lVar1;
         bool cVar2;
         cVar2 = Application.get_isPlaying(0);
@@ -75,14 +71,14 @@ public class NGUIDebug
           Debug.Log(text,0);
           return;
         }
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = NGUIDebug.mLines;
         if (lVar1 != null) {
           if (20 < *(int *)(lVar1 + 24)) {
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = NGUIDebug.mLines;
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_18182b220(lVar1,0,DAT_181d7c7c8);
           }
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = NGUIDebug.mLines;
           if (lVar1 != null) {
             FUN_181827900(lVar1,text,DAT_181d7c3d0);
             NGUIDebug.CreateInstance(0);
@@ -180,7 +176,7 @@ public class NGUIDebug
     public static void Clear()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d669f0 + 184) + 8);
+        lVar1 = NGUIDebug.mLines;
         if (lVar1 != null) {
           FUN_180f56130(lVar1,DAT_181d7c450);
           return;
@@ -272,7 +268,6 @@ public class NGUIDebug
     // RVA   : 0xAFC4D0   Offset: 0xAFACD0   Length: 0xA84
     private void OnGUI()
     {
-        var pStatics = *(int64*)(DAT_181d669f0 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -295,7 +290,7 @@ public class NGUIDebug
         local_res18[0] = 0;
         local_res20[0] = 0;
         FUN_1809981e0(&local_88,0x40a00000,0x40a00000,0x447a0000,0x41b00000,0);
-        if (**(char **)(DAT_181d669f0 + 184) != false) {
+        if (NGUIDebug.mRayDebug) {
           local_res18[0] = UICamera.get_currentScheme(0);
           plVar4 = (int64 *)il2cpp_value_box(DAT_181d67f10,local_res18);
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
@@ -413,7 +408,7 @@ public class NGUIDebug
           if (cVar3) {
             uVar5 = String.Concat(uVar5,", disabled controller",0);
           }
-          if (*(char *)(*(int64 *)(DAT_181d8a458 + 184) + 90) != false) {
+          if (UICamera.ignoreControllerInput) {
             uVar5 = String.Concat(uVar5,", ignore controller",0);
           }
           cVar3 = UICamera.get_inputHasFocus(0);
@@ -445,7 +440,7 @@ public class NGUIDebug
           fVar11 = (float)FUN_180d904a0(&local_88,0);
           FUN_18044f4c0(&local_88,fVar11 + 1.0,0);
         }
-        lVar8 = *(int64 *)(pStatics + 8);
+        lVar8 = NGUIDebug.mLines;
         if (lVar8 != null) {
           iVar1 = *(int *)(lVar8 + 24);
           if (0 < iVar1) {
@@ -458,7 +453,7 @@ public class NGUIDebug
               GUI.set_color(&local_78,0);
               uVar2 = uStack_80;
               uVar5 = local_88;
-              lVar8 = *(int64 *)(pStatics + 8);
+              lVar8 = NGUIDebug.mLines;
               if (lVar8 == null) throw; // [null/range check failed]
               uVar9 = FUN_180002f80(lVar8,iVar10,DAT_181d7c9c0);
               local_78 = uVar5;
@@ -474,7 +469,7 @@ public class NGUIDebug
               GUI.set_color(&local_78,0);
               uVar2 = uStack_80;
               uVar5 = local_88;
-              lVar8 = *(int64 *)(pStatics + 8);
+              lVar8 = NGUIDebug.mLines;
               if (lVar8 == null) throw; // [null/range check failed]
               uVar9 = FUN_180002f80(lVar8,iVar10,DAT_181d7c9c0);
               local_78 = uVar5;
@@ -502,17 +497,12 @@ public class NGUIDebug
     // RVA   : 0xAFCF60   Offset: 0xAFB760   Length: 0xAB
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d669f0 + 184);
         ulong uVar1;
-        **(uint8 **)(DAT_181d669f0 + 184) = 0;
+        NGUIDebug.mRayDebug = 0;
         uVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(uVar1,DAT_181d7c250);
-        puVar2 = (uint64 *)(pStatics + 8);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
-        puVar2 = (uint64 *)(pStatics + 16);
-        *puVar2 = 0;
-        il2cpp_internal(puVar2,0);
+        NGUIDebug.mLines = uVar1;
+        NGUIDebug.mInstance = 0;
     }
 
 }

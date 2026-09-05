@@ -37,8 +37,7 @@ public class UIQuitController
     // RVA   : 0x1582520   Offset: 0x1580D20   Length: 0x40B
     public void OnExcapeButtonClicked()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e090 = *(int64*)(DAT_181d4e090 + 184);
+        var pStatics = *(int64*)(DAT_181d4e090 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -94,13 +93,13 @@ public class UIQuitController
             lVar8 = lVar8 + 8;
             if (lVar3 == null) throw; // [null/range check failed]
           }
-          uVar6 = **(uint64 **)(DAT_181d4df90 + 184);
+          uVar6 = GameController._instance;
           cVar1 = Object.op_Inequality(uVar6,0,0);
           if (!cVar1) {
             return;
           }
-          if (*pStatics_df90 != 0) {
-            cVar1 = GameController.CanSaveLoad(*pStatics_df90,1,0);
+          if (GameController._instance != null) {
+            cVar1 = GameController.CanSaveLoad(GameController._instance,1,0);
             uVar6 = "Sound/SoundEffect/WrongClick";
             if (!cVar1) {
         LAB_18158286a:
@@ -111,8 +110,8 @@ public class UIQuitController
               NGUITools.PlaySound(plVar7,0);
               return;
             }
-            if ((*pStatics_e090 != 0) &&
-               (lVar3 = *(int64 *)(*pStatics_e090 + 24)) != null) {
+            if ((*pStatics != 0) &&
+               (lVar3 = *(int64 *)(*pStatics + 24)) != null) {
               cVar1 = GameObject.get_activeSelf(lVar3,0);
               if (cVar1) {
                 return;

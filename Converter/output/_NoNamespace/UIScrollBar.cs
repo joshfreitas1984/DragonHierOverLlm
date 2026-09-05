@@ -20,8 +20,6 @@ public class UIScrollBar
     // RVA   : 0x1689B50   Offset: 0x1688350   Length: 0x7
     public float get_scrollValue()
     {
-        void FUN_181689b50(uint64 this)
-        {
         UIProgressBar.get_value(this,0);
     }
 
@@ -29,8 +27,6 @@ public class UIScrollBar
     // RVA   : 0x1689CE0   Offset: 0x16884E0   Length: 0x8
     public void set_scrollValue(float value)
     {
-        void FUN_181689ce0(uint64 this,uint64 value)
-        {
         UIProgressBar.set_value(this,value,0);
     }
 
@@ -38,8 +34,6 @@ public class UIScrollBar
     // RVA   : 0x15DE190   Offset: 0x15DC990   Length: 0x9
     public float get_barSize()
     {
-        uint32 FUN_1815de190(int64 this)
-        {
         return this.mSize;
     }
 
@@ -78,8 +72,6 @@ public class UIScrollBar
     // RVA   : 0x1689AD0   Offset: 0x16882D0   Length: 0x4C
     protected override void Upgrade()
     {
-        void FUN_181689ad0(int64 this)
-        {
         if (this.mDir != 2) {
           *(uint32 *)(this + 56) = this.mScroll;
           if (this.mDir != null) {
@@ -361,8 +353,6 @@ public class UIScrollBar
     // RVA   : 0x1689B20   Offset: 0x1688320   Length: 0x29
     public void /*ctor*/()
     {
-        void FUN_181689b20(int64 this)
-        {
         this.mSize = 0x3f800000;
         this.mDir = 2;
         *(uint32 *)(this + 120) = 0x3f800000;

@@ -178,8 +178,6 @@ public class BetterList`1
     // RVA   : 0x154E550   Offset: 0x154CD50   Length: 0x13
     public void Release()
     {
-        void FUN_18154e550(int64 this)
-        {
         *(uint32 *)(this + 24) = 0;
         *(uint64 *)(this + 16) = 0;
     }

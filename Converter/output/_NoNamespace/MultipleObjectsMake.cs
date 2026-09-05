@@ -202,8 +202,6 @@ public class MultipleObjectsMake
     // RVA   : 0xAFA1B0   Offset: 0xAF89B0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180afa1b0(int64 this)
-        {
         *(uint32 *)(this + 100) = 0xbf800000;
         TrailRenderer_Base.ctor(this,0);
     }

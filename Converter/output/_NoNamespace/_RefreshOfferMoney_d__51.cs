@@ -67,7 +67,7 @@ public class <RefreshOfferMoney>d__51
         *(uint32 *)(lVar1 + 72) = 3;
         AuctionController.SetOfferHero(lVar1,this.newOfferHero,0);
         AuctionController.SetOfferMoney(lVar1);
-        *(uint32 *)(lVar1 + 148) = **(uint32 **)(DAT_181d8a1a8 + 184);
+        *(uint32 *)(lVar1 + 148) = AuctionController.offerRoundTotalTime;
         if (*(int64 *)(lVar1 + 152) != 0) {
           lVar7 = *(int64 *)(lVar1 + 120);
           if (*(int64 *)(lVar1 + 112) == 0) throw; // [null/range check failed]
@@ -91,7 +91,7 @@ public class <RefreshOfferMoney>d__51
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar3 = lVar7[uVar2];
-          lVar7 = *(int64 *)(*(int64 *)(DAT_181d8a1a8 + 184) + 8);
+          lVar7 = AuctionController.offerHeroTalk;
           if (lVar7 == null) throw; // [null/range check failed]
           uVar2 = FUN_180d8cf10(0,*(uint32 *)(lVar7 + 24),0);
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
@@ -144,7 +144,7 @@ public class <RefreshOfferMoney>d__51
                        lVar9[uVar2];
                   il2cpp_internal();
                   fVar10 = (float)Random.Range();
-                  fVar10 = fVar10 * **(float **)(DAT_181d8a1a8 + 184);
+                  fVar10 = fVar10 * AuctionController.offerRoundTotalTime;
                   goto LAB_180b26378;
                 }
                 break;

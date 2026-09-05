@@ -71,7 +71,6 @@ public class UIDragDropItem
     // RVA   : 0x13D5DB0   Offset: 0x13D45B0   Length: 0x20B
     public static bool IsDragged(GameObject go)
     {
-        var pStatics = *(int64*)(DAT_181d8a658 + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
@@ -89,11 +88,11 @@ public class UIDragDropItem
         int64 local_28;
         bVar5 = 0;
         aiStack_64[3] = 0;
-        if (*pStatics == 0) {
+        if (UIDragDropItem.draggedItems == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_1817ff240(&local_38,*pStatics,DAT_181d81b78);
+        FUN_1817ff240(&local_38,UIDragDropItem.draggedItems,DAT_181d81b78);
         local_50 = local_38;
         uStack_4c = uStack_34;
         uStack_48 = uStack_30;
@@ -158,13 +157,12 @@ public class UIDragDropItem
     // RVA   : 0x13D63E0   Offset: 0x13D4BE0   Length: 0x275
     protected virtual void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         ulong uVar2;
         if (*(char *)((int64)this + 121) != false) {
           *(uint8 *)((int64)this + 121) = 0;
           (**(code **)(*this + 600))(this,0,*(uint64 *)(*this + 0x260));
-          uVar1 = *(uint64 *)(pStatics + 0x118);
+          uVar1 = UICamera.onPress;
           uVar2 = new OnTooltipCB(this,DAT_181d9c960,0);
           plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
           plVar6 = (int64 *)0;
@@ -178,8 +176,8 @@ public class UIDragDropItem
               FUN_1800d6070(plVar3,DAT_181d67e90);
             }
           }
-          *(int64 **)(pStatics + 0x118) = plVar4;
-          uVar1 = *(uint64 *)(pStatics + 0x100);
+          UICamera.onPress = plVar4;
+          uVar1 = UICamera.onClick;
           uVar2 = new OnTooltipCB(this,DAT_181d9c8d8,0);
           plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
           plVar4 = plVar6;
@@ -192,8 +190,8 @@ public class UIDragDropItem
               FUN_1800d6070(plVar3,DAT_181d68490);
             }
           }
-          *(int64 **)(pStatics + 0x100) = plVar4;
-          uVar1 = *(uint64 *)(pStatics + 0x180);
+          UICamera.onClick = plVar4;
+          uVar1 = UICamera.onMouseMove;
           uVar2 = new OnTooltipCB(this,*(uint64 *)(*this + 0x220),0);
           plVar4 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
           if (plVar4 != (int64 *)0) {
@@ -205,9 +203,7 @@ public class UIDragDropItem
               FUN_1800d6070(plVar4);
             }
           }
-          puVar5 = (uint64 *)(pStatics + 0x180);
-          *puVar5 = plVar6;
-          il2cpp_internal(puVar5,plVar6);
+          UICamera.onMouseMove = plVar6;
         }
     }
 
@@ -226,16 +222,15 @@ public class UIDragDropItem
     // RVA   : 0x13D7CE0   Offset: 0x13D64E0   Length: 0x187
     protected virtual void OnPress(bool isPressed)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         float fVar2;
         if (this.interactable) {
-          if (*(int *)(pStatics + 212) != -2) {
-            if (*(int *)(pStatics + 212) != -3) {
+          if (UICamera.currentTouchID != -2) {
+            if (UICamera.currentTouchID != -3) {
               if (!isPressed) {
                 if (this.mPressed) {
                   lVar1 = this.mTouch;
-                  if ((lVar1 == *(int64 *)(pStatics + 224)) &&
+                  if ((lVar1 == UICamera.currentTouch) &&
                      ((this.mPressed = 0, !this.mDragging ||
                       (!this.clickToDrag)))) {
                     this.mTouch = 0;
@@ -245,7 +240,7 @@ public class UIDragDropItem
               }
               else if (!this.mPressed) {
                 this.mTouch =
-                     *(uint64 *)(pStatics + 224);
+                     UICamera.currentTouch;
                 il2cpp_internal();
                 fVar2 = (float)RealTime.get_time(0);
                 this.mPressed = 1;
@@ -260,32 +255,30 @@ public class UIDragDropItem
     // RVA   : 0x13D5FF0   Offset: 0x13D47F0   Length: 0x3E9
     protected virtual void OnClick()
     {
-        var pStatics_a458 = *(int64*)(DAT_181d8a458 + 184);
-        var pStatics_a658 = *(int64*)(DAT_181d8a658 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
         int iVar4;
         ulong uVar6;
-        iVar1 = *(int *)(pStatics_a658 + 8);
+        iVar1 = UIDragDropItem.mIgnoreClick;
         iVar4 = Time.get_frameCount(0);
         if (((iVar1 != iVar4) && (*(char *)((int64)this + 28) != false)) &&
            (*(char *)((int64)this + 121) == false)) {
-          if (*(int *)(pStatics_a458 + 212) == -1) {
-            if (*pStatics_a658 == 0) {
+          if (UICamera.currentTouchID == -1) {
+            if (UIDragDropItem.draggedItems == null) {
         LAB_1813d63b3:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(*pStatics_a658 + 24) == 0) {
-              this[16] = *(int64 *)(pStatics_a458 + 224);
+            if (UIDragDropItem.draggedItems.restriction == null) {
+              this[16] = UICamera.currentTouch;
               il2cpp_internal();
               plVar5 = (int64 *)
                        (**(code **)(*this + 0x1f8))(this,*(uint64 *)(*this + 0x200));
               if (*(char *)((int64)this + 28) != false) {
                 cVar3 = Object.op_Inequality(plVar5,0,0);
                 if (cVar3) {
-                  uVar2 = *(uint64 *)(pStatics_a458 + 0x180);
+                  uVar2 = UICamera.onMouseMove;
                   uVar6 = il2cpp_internal(DAT_181d68290);
                   if (plVar5 == (int64 *)0) goto LAB_1813d63b3;
                   OnTooltipCB.ctor(uVar6,plVar5,*(uint64 *)(*plVar5 + 0x220),0);
@@ -301,8 +294,8 @@ public class UIDragDropItem
                       FUN_1800d6070(plVar7,DAT_181d68290);
                     }
                   }
-                  *(int64 **)(pStatics_a458 + 0x180) = plVar9;
-                  uVar2 = *(uint64 *)(pStatics_a458 + 0x118);
+                  UICamera.onMouseMove = plVar9;
+                  uVar2 = UICamera.onPress;
                   uVar6 = new OnTooltipCB(plVar5,DAT_181d9c960,0);
                   plVar7 = (int64 *)Delegate.Combine(uVar2,uVar6,0);
                   plVar9 = plVar10;
@@ -315,8 +308,8 @@ public class UIDragDropItem
                       FUN_1800d6070(plVar7,DAT_181d67e90);
                     }
                   }
-                  *(int64 **)(pStatics_a458 + 0x118) = plVar9;
-                  uVar2 = *(uint64 *)(pStatics_a458 + 0x100);
+                  UICamera.onPress = plVar9;
+                  uVar2 = UICamera.onClick;
                   uVar6 = new OnTooltipCB(plVar5,DAT_181d9c8d8,0);
                   plVar5 = (int64 *)Delegate.Combine(uVar2,uVar6,0);
                   if (plVar5 != (int64 *)0) {
@@ -328,9 +321,7 @@ public class UIDragDropItem
                       FUN_1800d6070(plVar5);
                     }
                   }
-                  puVar8 = (uint64 *)(pStatics_a458 + 0x100);
-                  *puVar8 = plVar10;
-                  il2cpp_internal(puVar8,plVar10);
+                  UICamera.onClick = plVar10;
                 }
               }
             }
@@ -342,19 +333,18 @@ public class UIDragDropItem
     // RVA   : 0x13D79E0   Offset: 0x13D61E0   Length: 0x2FD
     protected void OnGlobalPress(GameObject go, bool state)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         uint uVar2;
         ulong uVar3;
         if (state) {
-          if (*(int *)(pStatics + 212) != -1) {
+          if (UICamera.currentTouchID != -1) {
             uVar2 = Time.get_frameCount(0);
-            *(uint32 *)(*(int64 *)(DAT_181d8a658 + 184) + 8) = uVar2;
+            UIDragDropItem.mIgnoreClick = uVar2;
             if (*(char *)((int64)this + 121) != false) {
               *(uint8 *)((int64)this + 121) = 0;
               (**(code **)(*this + 600))(this,0,*(uint64 *)(*this + 0x260));
             }
-            uVar1 = *(uint64 *)(pStatics + 0x118);
+            uVar1 = UICamera.onPress;
             uVar3 = new OnTooltipCB(this,DAT_181d9c960,0);
             plVar4 = (int64 *)Delegate.Remove(uVar1,uVar3,0);
             plVar7 = (int64 *)0;
@@ -368,8 +358,8 @@ public class UIDragDropItem
                 FUN_1800d6070(plVar4,DAT_181d67e90);
               }
             }
-            *(int64 **)(pStatics + 0x118) = plVar5;
-            uVar1 = *(uint64 *)(pStatics + 0x100);
+            UICamera.onPress = plVar5;
+            uVar1 = UICamera.onClick;
             uVar3 = new OnTooltipCB(this,DAT_181d9c8d8,0);
             plVar4 = (int64 *)Delegate.Remove(uVar1,uVar3,0);
             plVar5 = plVar7;
@@ -382,8 +372,8 @@ public class UIDragDropItem
                 FUN_1800d6070(plVar4,DAT_181d68490);
               }
             }
-            *(int64 **)(pStatics + 0x100) = plVar5;
-            uVar1 = *(uint64 *)(pStatics + 0x180);
+            UICamera.onClick = plVar5;
+            uVar1 = UICamera.onMouseMove;
             uVar3 = new OnTooltipCB(this,*(uint64 *)(*this + 0x220),0);
             plVar5 = (int64 *)Delegate.Remove(uVar1,uVar3,0);
             if (plVar5 != (int64 *)0) {
@@ -395,9 +385,7 @@ public class UIDragDropItem
                 FUN_1800d6070(plVar5);
               }
             }
-            puVar6 = (uint64 *)(pStatics + 0x180);
-            *puVar6 = plVar7;
-            il2cpp_internal(puVar6,plVar7);
+            UICamera.onMouseMove = plVar7;
           }
         }
     }
@@ -406,13 +394,12 @@ public class UIDragDropItem
     // RVA   : 0x13D76E0   Offset: 0x13D5EE0   Length: 0x2F4
     protected void OnGlobalClick(GameObject go)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         uint uVar2;
         ulong uVar3;
         uVar2 = Time.get_frameCount(0);
-        *(uint32 *)(*(int64 *)(DAT_181d8a658 + 184) + 8) = uVar2;
-        if (*(int *)(pStatics + 212) == -1) {
+        UIDragDropItem.mIgnoreClick = uVar2;
+        if (UICamera.currentTouchID == -1) {
           if (*(char *)((int64)this + 121) == false) goto LAB_1813d77fa;
         }
         else {
@@ -422,7 +409,7 @@ public class UIDragDropItem
         *(uint8 *)((int64)this + 121) = 0;
         (**(code **)(*this + 600))(this,go,*(uint64 *)(*this + 0x260));
         LAB_1813d77fa:
-        uVar1 = *(uint64 *)(pStatics + 0x118);
+        uVar1 = UICamera.onPress;
         uVar3 = new OnTooltipCB(this,DAT_181d9c960,0);
         plVar4 = (int64 *)Delegate.Remove(uVar1,uVar3,0);
         plVar7 = (int64 *)0;
@@ -436,8 +423,8 @@ public class UIDragDropItem
             FUN_1800d6070(plVar4,DAT_181d67e90);
           }
         }
-        *(int64 **)(pStatics + 0x118) = plVar5;
-        uVar1 = *(uint64 *)(pStatics + 0x100);
+        UICamera.onPress = plVar5;
+        uVar1 = UICamera.onClick;
         uVar3 = new OnTooltipCB(this,DAT_181d9c8d8,0);
         plVar4 = (int64 *)Delegate.Remove(uVar1,uVar3,0);
         plVar5 = plVar7;
@@ -450,8 +437,8 @@ public class UIDragDropItem
             FUN_1800d6070(plVar4,DAT_181d68490);
           }
         }
-        *(int64 **)(pStatics + 0x100) = plVar5;
-        uVar1 = *(uint64 *)(pStatics + 0x180);
+        UICamera.onClick = plVar5;
+        uVar1 = UICamera.onMouseMove;
         uVar3 = new OnTooltipCB(this,*(uint64 *)(*this + 0x220),0);
         plVar5 = (int64 *)Delegate.Remove(uVar1,uVar3,0);
         if (plVar5 != (int64 *)0) {
@@ -463,9 +450,7 @@ public class UIDragDropItem
             FUN_1800d6070(plVar5);
           }
         }
-        puVar6 = (uint64 *)(pStatics + 0x180);
-        *puVar6 = plVar7;
-        il2cpp_internal(puVar6,plVar7);
+        UICamera.onMouseMove = plVar7;
     }
 
     // Token : 0x6000103
@@ -497,7 +482,7 @@ public class UIDragDropItem
         if ((*(char *)((int64)this + 30) != false) &&
            (cVar3 = Behaviour.get_enabled(this,0), cVar3)) {
           lVar2 = this[16];
-          if (lVar2 == *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224)) {
+          if (lVar2 == UICamera.currentTouch) {
             iVar1 = (int)this[3];
             if (iVar1 != 0) {
               if (iVar1 == 1) {
@@ -534,7 +519,6 @@ public class UIDragDropItem
     // RVA   : 0x13D7E70   Offset: 0x13D6670   Length: 0x625
     public virtual UIDragDropItem StartDragging()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -660,11 +644,9 @@ public class UIDragDropItem
                           (**(code **)(*plVar10 + 0x208))(plVar10,uVar2,*(uint64 *)(*plVar10 + 0x210))
                           ;
                           (**(code **)(*plVar10 + 0x238))(plVar10,*(uint64 *)(*plVar10 + 0x240));
-                          if (*(int64 *)(pStatics + 224) == 0) {
+                          if (UICamera.currentTouch == null) {
                             lVar3 = *plVar9;
-                            plVar11 = (int64 *)(pStatics + 224);
-                            *plVar11 = lVar3;
-                            il2cpp_internal(plVar11,lVar3);
+                            UICamera.currentTouch = lVar3;
                           }
                           *plVar9 = 0;
                           il2cpp_internal(plVar9,0);
@@ -712,7 +694,7 @@ public class UIDragDropItem
             (*(char *)((int64)this + 121) != false)) &&
            (cVar1 = Behaviour.get_enabled(this,0), cVar1)) {
           lVar2 = this[16];
-          if (lVar2 == *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224)) {
+          if (lVar2 == UICamera.currentTouch) {
             lVar2 = this[10];
             cVar1 = Object.op_Inequality(lVar2,0,0);
             if (!cVar1) {
@@ -740,21 +722,21 @@ public class UIDragDropItem
     // RVA   : 0x13D72F0   Offset: 0x13D5AF0   Length: 0x174
     protected virtual void OnDragEnd()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         if ((*(char *)((int64)this + 30) != false) &&
            (cVar1 = Behaviour.get_enabled(this,0), cVar1)) {
           lVar3 = this[16];
-          if (lVar3 == *(int64 *)(pStatics + 224)) {
-            uVar2 = RaycastHit.get_collider(pStatics + 136,0);
+          if (lVar3 == UICamera.currentTouch) {
+            uVar2 = RaycastHit.get_collider(pUICamera + 136,0);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (!cVar1) {
               uVar2 = 0;
             }
             else {
-              lVar3 = RaycastHit.get_collider(pStatics + 136,0);
+              lVar3 = RaycastHit.get_collider(pUICamera + 136,0);
               if (lVar3 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -773,8 +755,6 @@ public class UIDragDropItem
     // RVA   : 0x13D8520   Offset: 0x13D6D20   Length: 0x1C
     public void StopDragging(GameObject go)
     {
-        void FUN_1813d8520(int64 *this,uint64 go)
-        {
         if (*(char *)((int64)this + 121) != false) {
           *(uint8 *)((int64)this + 121) = 0;
                           // WARNING: Could not recover jumptable at 0x0001813d8534. Too many branches
@@ -788,17 +768,16 @@ public class UIDragDropItem
     // RVA   : 0x13D6D80   Offset: 0x13D5580   Length: 0x562
     protected virtual void OnDragDropStart()
     {
-        var pStatics = *(int64*)(DAT_181d8a658 + 184);
         bool cVar3;
         ulong uVar4;
         long lVar5;
         ulong local_18;
         uint local_10;
-        if (*pStatics != 0) {
-          cVar3 = FUN_1818279a0(*pStatics,this,DAT_181d81af8);
+        if (UIDragDropItem.draggedItems != null) {
+          cVar3 = FUN_1818279a0(UIDragDropItem.draggedItems,this,DAT_181d81af8);
           if (!cVar3) {
-            if (*pStatics == 0) throw; // [null/range check failed]
-            FUN_181827900(*pStatics,this,DAT_181d81a78);
+            if (UIDragDropItem.draggedItems == null) throw; // [null/range check failed]
+            FUN_181827900(UIDragDropItem.draggedItems,this,DAT_181d81a78);
           }
           uVar4 = this.mDragScrollView;
           cVar3 = Object.op_Inequality(uVar4,0,0);
@@ -1067,9 +1046,8 @@ public class UIDragDropItem
     // RVA   : 0x13D6660   Offset: 0x13D4E60   Length: 0x93
     protected virtual void OnDragDropEnd(GameObject surface)
     {
-        var pStatics = *(int64*)(DAT_181d8a658 + 184);
-        if (*pStatics != 0) {
-          FUN_181801c10(*pStatics,this,DAT_181d81bf8);
+        if (UIDragDropItem.draggedItems != null) {
+          FUN_181801c10(UIDragDropItem.draggedItems,this,DAT_181d81bf8);
           this.mParent = 0;
           return;
         }
@@ -1118,10 +1096,10 @@ public class UIDragDropItem
         ulong uVar2;
         uVar2 = il2cpp_internal(DAT_181d73830);
         FUN_180f58a90(uVar2,DAT_181d819f8);
-        puVar1 = *(uint64 **)(DAT_181d8a658 + 184);
+        puVar1 = *(uint64 **)(UIDragDropItem_StaticsPtr + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
-        *(uint32 *)(*(int64 *)(DAT_181d8a658 + 184) + 8) = 0;
+        UIDragDropItem.mIgnoreClick = 0;
     }
 
 }

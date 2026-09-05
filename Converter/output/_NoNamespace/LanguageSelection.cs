@@ -26,7 +26,7 @@ public class LanguageSelection
     // RVA   : 0xA84AB0   Offset: 0xA832B0   Length: 0x152
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181d56760 + 184);
+        var pLanguageSelection = *(int64*)(LanguageSelection_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -34,11 +34,11 @@ public class LanguageSelection
         LanguageSelection.Refresh(this,0);
         if (this.mList != null) {
           uVar1 = this.mList.onChange;
-          lVar3 = *(int64 *)(pStatics + 8);
+          lVar3 = *(int64 *)(pLanguageSelection + 8);
           if (lVar3 == null) {
-            uVar2 = **(uint64 **)(DAT_181d56760 + 184);
+            uVar2 = **(uint64 **)(LanguageSelection_StaticsPtr + 184);
             lVar3 = new OnTooltipCB(uVar2,DAT_181d7dc68,0);
-            plVar4 = (int64 *)(pStatics + 8);
+            plVar4 = (int64 *)(pLanguageSelection + 8);
             *plVar4 = lVar3;
             il2cpp_internal(plVar4,lVar3);
           }
@@ -51,8 +51,6 @@ public class LanguageSelection
     // RVA   : 0xA848B0   Offset: 0xA830B0   Length: 0xE
     private void OnEnable()
     {
-        void FUN_180a848b0(int64 this)
-        {
         if (this.mStarted) {
           LanguageSelection.Refresh(this,0);
           return;
@@ -117,8 +115,6 @@ public class LanguageSelection
     // RVA   : 0xA848C0   Offset: 0xA830C0   Length: 0x7
     private void OnLocalize()
     {
-        void FUN_180a848c0(uint64 this)
-        {
         LanguageSelection.Refresh(this,0);
     }
 

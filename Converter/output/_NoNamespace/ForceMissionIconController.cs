@@ -10,8 +10,7 @@ public class ForceMissionIconController
     // RVA   : 0x77EF20   Offset: 0x77D720   Length: 0x560
     public void OnClick()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -22,8 +21,8 @@ public class ForceMissionIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (*pStatics_df90 == 0) throw; // [null/range check failed]
-        cVar1 = GameController.HaveSpeUI(*pStatics_df90,1,0);
+        if (GameController._instance == null) throw; // [null/range check failed]
+        cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
         uVar7 = "Sound/SoundEffect/WrongClick";
         if (cVar1) {
         LAB_18077f423:
@@ -35,8 +34,8 @@ public class ForceMissionIconController
           NGUITools.PlaySound(plVar8,0);
           return;
         }
-        if ((*pStatics_e188 == 0) ||
-           (lVar2 = *(int64 *)(*pStatics_e188 + 32)) == null)
+        if ((*pStatics == 0) ||
+           (lVar2 = *(int64 *)(*pStatics + 32)) == null)
         throw; // [null/range check failed]
         cVar1 = GameObject.get_activeSelf(lVar2,0);
         uVar7 = "Sound/SoundEffect/WrongClick";

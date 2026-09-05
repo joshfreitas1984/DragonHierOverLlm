@@ -44,8 +44,7 @@ public class LoadSceneController
     // RVA   : 0xA85650   Offset: 0xA83E50   Length: 0x6B0
     private void Start()
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         bool cVar1;
         uint uVar2;
         uint uVar3;
@@ -61,10 +60,10 @@ public class LoadSceneController
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (!cVar1) {
           plVar5 = this.tipsText;
-          lVar7 = *(int64 *)(pStatics_e010 + 32);
+          lVar7 = GameController.lockObj;
           if (lVar7 == null) throw; // [null/range check failed]
           lVar7 = *(int64 *)(lVar7 + 0x1c8);
-          lVar8 = *(int64 *)(pStatics_e010 + 32);
+          lVar8 = GameController.lockObj;
           if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 0x1c8)) == null) throw; // [null/range check failed]
           uVar2 = FUN_180d8cf10(0,*(uint32 *)(lVar8 + 24),0);
           if (lVar7 == null) throw; // [null/range check failed]
@@ -79,8 +78,8 @@ public class LoadSceneController
           LTLocalization.CheckTextFont(plVar5,0);
         }
         else {
-          if (((*pStatics_1570 == 0) ||
-              (lVar7 = Component.get_gameObject(*pStatics_1570,0)) == null) ||
+          if (((*pStatics == 0) ||
+              (lVar7 = Component.get_gameObject(*pStatics,0)) == null) ||
              (lVar7 = GameObject.GetComponent(lVar7,DAT_181d9e558)) == null) throw; // [null/range check failed]
           AudioSource.Stop(lVar7,0);
           lVar7 = this.videoClip;
@@ -144,7 +143,7 @@ public class LoadSceneController
           if (!cVar1) {
             return;
           }
-          lVar7 = *(int64 *)(pStatics_e010 + 32);
+          lVar7 = GameController.lockObj;
           lVar8 = GameObject.FindGameObjectWithTag("LoadSaveIDTag",0);
           if (lVar8 != null) {
             uVar4 = Object.get_name(lVar8,0);
@@ -422,7 +421,7 @@ public class LoadSceneController
             return;
           }
         }
-        if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+        if (PlotController._instance == 1) {
           lVar5 = RailManager.get_Instance(0);
           if (lVar5 == null) throw; // [null/range check failed]
           if (*(char *)(lVar5 + 25) != false) {

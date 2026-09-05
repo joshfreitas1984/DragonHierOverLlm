@@ -14,8 +14,6 @@ public class _ObjectsMakeBase
     // RVA   : 0xB30CF0   Offset: 0xB2F4F0   Length: 0x12
     public float GetRandomValue(float value)
     {
-        void FUN_180b30cf0(uint64 this,uint32 value)
-        {
         Random.Range(value ^ 0x80000000,value,0);
     }
 
@@ -23,8 +21,6 @@ public class _ObjectsMakeBase
     // RVA   : 0xB30CE0   Offset: 0xB2F4E0   Length: 0xB
     public float GetRandomValue2(float value)
     {
-        void FUN_180b30ce0(uint64 this,uint64 value)
-        {
         Random.Range(0,value,0);
     }
 

@@ -32,8 +32,6 @@ public class UI2DSprite
     // RVA   : 0xA76E30   Offset: 0xA75630   Length: 0x8
     public Sprite get_sprite2D()
     {
-        uint64 FUN_180a76e30(int64 this)
-        {
         return this.mSprite;
     }
 
@@ -150,8 +148,6 @@ public class UI2DSprite
     // RVA   : 0xA76B40   Offset: 0xA75340   Length: 0x8
     public bool get_fixedAspect()
     {
-        uint8 FUN_180a76b40(int64 this)
-        {
         return this.mFixedAspect;
     }
 
@@ -210,8 +206,6 @@ public class UI2DSprite
     // RVA   : 0xA76C40   Offset: 0xA75440   Length: 0x9
     public override float get_pixelSize()
     {
-        uint32 FUN_180a76c40(int64 this)
-        {
         return this.mPixelSize;
     }
 
@@ -312,9 +306,7 @@ public class UI2DSprite
     // RVA   : 0xA76570   Offset: 0xA74D70   Length: 0xE
     public override Vector4 get_border()
     {
-        uint64 * FUN_180a76570(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x210);
         *this = *(uint64 *)(param_2 + 0x208);
         this[1] = uVar1;
@@ -325,8 +317,6 @@ public class UI2DSprite
     // RVA   : 0xA76E40   Offset: 0xA75640   Length: 0x86
     public override void set_border(Vector4 value)
     {
-        void FUN_180a76e40(int64 *this,float *value)
-        {
         float fVar1;
         float fVar2;
         float fVar3;

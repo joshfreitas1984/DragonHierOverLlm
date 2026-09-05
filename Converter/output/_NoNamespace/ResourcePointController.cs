@@ -38,7 +38,6 @@ public class ResourcePointController
     // RVA   : 0xC64680   Offset: 0xC62E80   Length: 0x496
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181d8baa8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -55,14 +54,14 @@ public class ResourcePointController
                 uVar4 = TextureController.LoadAtlasSprite(lVar1,"ResourcePointAtlas",uVar4,0);
                 if (lVar3 != null) {
                   SpriteRenderer.set_sprite(lVar3,uVar4,0);
-                  lVar3 = *(int64 *)(pStatics + 16);
+                  lVar3 = GameController.CheckShowSpeHero;
                   if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 208)) != null) {
                     lVar3 = GameObject.get_transform(lVar3,0);
                     if (lVar3 != null) {
                       lVar3 = Transform.Find(lVar3,"AreaUIPanel",0);
                       if (lVar3 != null) {
                         uVar4 = Component.get_gameObject(lVar3,0);
-                        lVar3 = *(int64 *)(pStatics + 16);
+                        lVar3 = GameController.CheckShowSpeHero;
                         if (lVar3 != null) {
                           uVar2 = *(uint64 *)(lVar3 + 216);
                           uVar4 = GlobalData.AddChild(uVar4,uVar2,0);
@@ -168,11 +167,11 @@ public class ResourcePointController
           Transform.set_localScale(lVar4,&local_48,0);
         }
         else {
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+          lVar4 = GameController.CheckShowSpeHero;
           if (lVar4 == null) throw; // [null/range check failed]
           fVar9 = (float)BigMapController.BigMapNowScale(lVar4,0);
           lVar4 = this.pointUIRoot;
-          if (fVar9 < **(float **)(DAT_181d8baa8 + 184)) {
+          if (fVar9 < GameController._instance) {
             if ((lVar4 == null) || (lVar4 = GameObject.GetComponent(lVar4)) == null) throw; // [null/range check failed]
             fVar9 = (float)CanvasGroup.get_alpha(lVar4);
             if (fVar9 != 0.0) {
@@ -397,7 +396,7 @@ public class ResourcePointController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+        lVar1 = GameController.CheckShowSpeHero;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           BigMapController.SetPlayerMoveTargetArea(lVar1,uVar2,0);

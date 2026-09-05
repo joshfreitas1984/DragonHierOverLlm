@@ -37,8 +37,7 @@ public class SureStartButtonController
     // RVA   : 0xB9BA40   Offset: 0xB9A240   Length: 0x634
     private void Update()
     {
-        var pStatics_15f0 = *(int64*)(DAT_181d815f0 + 184);
-        var pStatics_4e18 = *(int64*)(DAT_181d64e18 + 184);
+        var pSureStartButtonController = *(int64*)(SureStartButtonController_StaticsPtr + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -80,11 +79,11 @@ public class SureStartButtonController
               if (this.cover == null) goto LAB_180b9c069;
               uVar4 = Component.get_transform(this.cover,0);
               uVar4 = ShortcutExtensions.DOScale(uVar4,0x41f00000,0x3f800000,0);
-              lVar5 = *(int64 *)(pStatics_4e18 + 8);
+              lVar5 = *(int64 *)(pSureStartButtonController + 8);
               if (lVar5 == null) {
-                uVar1 = **(uint64 **)(DAT_181d64e18 + 184);
+                uVar1 = **(uint64 **)(SureStartButtonController_StaticsPtr + 184);
                 lVar5 = new OnTooltipCB(uVar1,DAT_181d8be10,0);
-                plVar7 = (int64 *)(pStatics_4e18 + 8);
+                plVar7 = (int64 *)(pSureStartButtonController + 8);
                 *plVar7 = lVar5;
                 il2cpp_internal(plVar7,lVar5);
               }
@@ -95,14 +94,15 @@ public class SureStartButtonController
               goto LAB_180b9c069;
               uVar4 = Component.GetComponent(lVar5,DAT_181d6d8c0);
               DOTweenModuleUI.DOFade(uVar4,0,0x3f000000,0);
-              lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+              lVar5 = GameController.difficultyExtraPoint;
               if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 16)) == null) goto LAB_180b9c069;
               iVar3 = PlayerPrefDictionary.GetInt(lVar5,"NewGameTime",0);
               PlayerPrefDictionary.SetKey(lVar5,"NewGameTime",iVar3 + 1,0);
             }
           }
-          if ((*pStatics_15f0 == 0) ||
-             (lVar5 = *(int64 *)(*pStatics_15f0 + 48)) == null) {
+          if ((StartMenuController._instance == null) ||
+             (lVar5 = StartMenuController._instance.backMountain,
+             lVar5 == null)) {
         LAB_180b9c069:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -164,17 +164,16 @@ public class SureStartButtonController
     // RVA   : 0xB9B690   Offset: 0xB99E90   Length: 0x2C7
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181d815f0 + 184);
         bool cVar1;
         long lVar2;
-        if ((*pStatics == 0) ||
-           (lVar2 = *(int64 *)(*pStatics + 72)) == null)
-        throw; // [null/range check failed]
+        if ((StartMenuController._instance == null) ||
+           (lVar2 = StartMenuController._instance.heroFamilyName,
+           lVar2 == null)) throw; // [null/range check failed]
         cVar1 = FUN_1816fd990(*(uint64 *)(lVar2 + 0x170),"",0);
         if (!cVar1) {
-          if ((*pStatics == 0) ||
-             (lVar2 = *(int64 *)(*pStatics + 80)) == null)
-          throw; // [null/range check failed]
+          if ((StartMenuController._instance == null) ||
+             (lVar2 = StartMenuController._instance.heroGivenName,
+             lVar2 == null)) throw; // [null/range check failed]
           cVar1 = FUN_1816fd990(*(uint64 *)(lVar2 + 0x170),"",0);
           if (!cVar1) {
             this.pointerDown = 1;
@@ -186,8 +185,9 @@ public class SureStartButtonController
             throw; // [null/range check failed]
           }
         }
-        if (*pStatics != 0) {
-          StartMenuController.ShowTextOnMouse(*pStatics,"请完整设置角色姓名！",0);
+        if (StartMenuController._instance != null) {
+          StartMenuController.ShowTextOnMouse
+                    (StartMenuController._instance,"请完整设置角色姓名！",0);
           plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
           plVar4 = (int64 *)0;
           if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {

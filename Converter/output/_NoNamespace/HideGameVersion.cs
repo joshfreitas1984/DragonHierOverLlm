@@ -18,7 +18,7 @@ public class HideGameVersion
     private void Awake()
     {
         long lVar1;
-        if (**(int **)(DAT_181d4ef00 + 184) == this.targetVersion) {
+        if (PlotController._instance == this.targetVersion) {
           lVar1 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             GameObject.SetActive(lVar1,this.activeMode,0);

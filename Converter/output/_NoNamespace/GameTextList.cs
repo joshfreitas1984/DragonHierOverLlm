@@ -110,8 +110,6 @@ public class GameTextList
     // RVA   : 0xA2F850   Offset: 0xA2E050   Length: 0x6
     public float get_scrollValue()
     {
-        uint32 FUN_180a2f850(int64 this)
-        {
         return this.mScroll;
     }
 
@@ -358,7 +356,7 @@ public class GameTextList
             *(int64 *)(lVar1 + 40) = text;
             *(uint32 *)(lVar1 + 32) = type;
             plVar2 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-            lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x418);
+            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
             if (lVar4 != null) {
               if (lVar4.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -470,7 +468,7 @@ public class GameTextList
             *(int64 *)(lVar1 + 40) = param_3;
             *(uint32 *)(lVar1 + 32) = info;
             plVar2 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-            lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x418);
+            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
             if (lVar4 != null) {
               if (lVar4.size <= info) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -582,7 +580,7 @@ public class GameTextList
             *(int64 *)(lVar1 + 40) = time;
             *(uint32 *)(lVar1 + 32) = type;
             plVar2 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-            lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x418);
+            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
             if (lVar4 != null) {
               if (lVar4.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -670,7 +668,6 @@ public class GameTextList
     // RVA   : 0xA2E7D0   Offset: 0xA2CFD0   Length: 0x50C
     protected void Rebuild()
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
         uint uVar1;
         long lVar2;
         bool cVar4;
@@ -691,8 +688,8 @@ public class GameTextList
           this.mLastWidth = *(uint32 *)(lVar6 + 164);
           this.mLastHeight = *(uint32 *)(lVar6 + 168);
           UILabel.UpdateNGUIText(lVar6,0);
-          *(uint32 *)(pStatics + 64) = 1000000;
-          *(uint32 *)(pStatics + 72) = 1000000;
+          NGUIText.rectHeight = 1000000;
+          NGUIText.regionHeight = 1000000;
           this.mTotalLines = 0;
           lVar6 = GameTextList.get_paragraphs(this,0);
           plVar10 = plVar11;

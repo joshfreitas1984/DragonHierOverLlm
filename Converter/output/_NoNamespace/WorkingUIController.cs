@@ -71,27 +71,23 @@ public class WorkingUIController
     // RVA   : 0x9E8E10   Offset: 0x9E7610   Length: 0x58
     public static WorkingUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
+        return PlotController.LeftFaceHideOffset;
     }
 
     // Token : 0x6002321
     // RVA   : 0x9E7770   Offset: 0x9E5F70   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        PlotController.LeftFaceHideOffset = this;
     }
 
     // Token : 0x6002322
     // RVA   : 0x9E83B0   Offset: 0x9E6BB0   Length: 0xA0F
     private void Update()
     {
-        var pStatics_0b30 = *(int64*)(DAT_181d90b30 + 184);
-        var pStatics_1d80 = *(int64*)(DAT_181d51d80 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_f230 = *(int64*)(DAT_181d7f230 + 184);
+        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d51d80 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -133,15 +129,15 @@ public class WorkingUIController
                 uVar6 = String.Format("({0})",uVar6,0);
               }
               LTLocalization.SetText(uVar5,uVar6,0);
-              if (*pStatics_c960 != 0) {
-                if (*(char *)(*pStatics_c960 + 24) == false) {
-                  if ((*pStatics_f230 == 0) ||
-                     (lVar4 = *(int64 *)(*pStatics_f230 + 40)) == null)
-                  throw; // [null/range check failed]
+              if (PlotController._instance != null) {
+                if (!PlotController._instance.plotHappen) {
+                  if ((*p_ShowItemAnim_d__32 == 0) ||
+                     (lVar4 = *(int64 *)(*p_ShowItemAnim_d__32 + 40)
+                     , lVar4 == null)) throw; // [null/range check failed]
                   cVar2 = GameObject.get_activeSelf(lVar4,0);
                   if (!cVar2) {
-                    if (*pStatics_1d80 == 0) throw; // [null/range check failed]
-                    cVar2 = HudController.HudPanelActive(*pStatics_1d80,0);
+                    if (*pStatics == 0) throw; // [null/range check failed]
+                    cVar2 = HudController.HudPanelActive(*pStatics,0);
                     if (!cVar2) {
                       if ((((this.workingUI != null) &&
                            (lVar4 = GameObject.get_transform(this.workingUI,0), lVar4 != null
@@ -153,7 +149,7 @@ public class WorkingUIController
                           uVar9 = 0x3f800000;
                         }
                         else {
-                          lVar1 = *(int64 *)(pStatics_e010 + 8);
+                          lVar1 = GameController.difficultyExtraPoint;
                           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null)
                           throw; // [null/range check failed]
                           iVar3 = PlayerPrefDictionary.GetInt(lVar1,"TestMode",0);
@@ -224,9 +220,9 @@ public class WorkingUIController
                             fVar10 = (float)RealTime.get_deltaTime(0);
                             fVar10 = fVar10 + fVar11;
                             this.nextDayTime = fVar10;
-                            fVar11 = **(float **)(DAT_181d90b30 + 184);
+                            fVar11 = PlotController._instance;
                             if (this.skipping) {
-                              lVar4 = *(int64 *)(pStatics_e010 + 8);
+                              lVar4 = GameController.difficultyExtraPoint;
                               if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 16)) == null)
                               throw; // [null/range check failed]
                               iVar3 = PlayerPrefDictionary.GetInt(lVar4,"TestMode",0);
@@ -270,11 +266,11 @@ public class WorkingUIController
                             if (lVar4 != null) {
                               GameController.ChangeHour(lVar4,0x41c00000,0);
                               if (this.leftWorkingDay < 1) {
-                                fVar12 = *(float *)(pStatics_0b30 + 4);
+                                fVar12 = *(float *)(pPlotController + 4);
                                 fVar12 = fVar12 + fVar12;
                               }
                               else {
-                                fVar12 = *(float *)(pStatics_0b30 + 4);
+                                fVar12 = *(float *)(pPlotController + 4);
                               }
                               this.leftPauseTime = fVar12;
                               return;
@@ -342,7 +338,8 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = callFuc;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181d90b30 + 184) + 4);
+          this.leftPauseTime =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4);
           this.workingFuc = param_4;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -384,7 +381,8 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = callFuc;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181d90b30 + 184) + 4);
+          this.leftPauseTime =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4);
           this.workingFuc = callFucParam;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -426,7 +424,8 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = dayNum;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181d90b30 + 184) + 4);
+          this.leftPauseTime =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4);
           this.workingFuc = callFuc;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -468,7 +467,8 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = param_3;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181d90b30 + 184) + 4);
+          this.leftPauseTime =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4);
           this.workingFuc = param_4;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -510,7 +510,8 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = dayNum;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181d90b30 + 184) + 4);
+          this.leftPauseTime =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4);
           this.workingFuc = callFuc;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -552,7 +553,8 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = dayNum;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181d90b30 + 184) + 4);
+          this.leftPauseTime =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4);
           this.workingFuc = callFuc;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -636,7 +638,7 @@ public class WorkingUIController
         if ((workResultType != 1) && (uVar2 = "", workResultType == 2)) {
           uVar2 = "\n(失手)";
         }
-        lVar6 = **(int64 **)(DAT_181d4df90 + 184);
+        lVar6 = GameController._instance;
         uVar1 = Single.ToString(local_res18,"+0;-0;0",0);
         uVar2 = String.Concat(uVar1,uVar2,0);
         if (((this.workingUI != null) &&
@@ -712,7 +714,7 @@ public class WorkingUIController
             lVar2 = Transform.Find(lVar2,"Icon",0);
             if (lVar2 != null) {
               plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d6bc40);
-              lVar2 = *(int64 *)(DAT_181d4ef00 + 184);
+              lVar2 = *(int64 *)(PlotController_StaticsPtr + 184);
               if (plVar3 != (int64 *)0) {
                 local_18 = *(uint32 *)(lVar2 + 0x390);
                 uStack_14 = *(uint32 *)(lVar2 + 0x394);
@@ -744,7 +746,7 @@ public class WorkingUIController
               lVar1 = Transform.Find(lVar1,"Icon",0);
               if (lVar1 != null) {
                 plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d6bc40);
-                lVar1 = *(int64 *)(DAT_181d4ef00 + 184);
+                lVar1 = *(int64 *)(PlotController_StaticsPtr + 184);
                 if (plVar2 != (int64 *)0) {
                   local_18 = *(uint32 *)(lVar1 + 0x390);
                   uStack_14 = *(uint32 *)(lVar1 + 0x394);
@@ -788,8 +790,8 @@ public class WorkingUIController
     // RVA   : 0x9E8DC0   Offset: 0x9E75C0   Length: 0x4E
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181d90b30 + 184) = 0x3f800000;
-        *(uint32 *)(*(int64 *)(DAT_181d90b30 + 184) + 4) = 0x3e800000;
+        PlotController._instance = 0x3f800000;
+        *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4) = 0x3e800000;
     }
 
 }

@@ -39,9 +39,9 @@ public class SpinWithMouse
         ulong local_38;
         ulong uStack_30;
         byte[] local_28 = new byte[32];
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 != null) {
-          *(uint32 *)(lVar7 + 112) = 0;
+          lVar7.clickNotification = 0;
           uVar1 = this.target;
           cVar3 = Object.op_Inequality(uVar1,0,0);
           fVar8 = delta * -0.5 * this.speed;
@@ -88,8 +88,6 @@ public class SpinWithMouse
     // RVA   : 0xC6E240   Offset: 0xC6CA40   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180c6e240(int64 this)
-        {
         this.speed = 0x3f800000;
         FUN_18044ef50(this,0);
     }

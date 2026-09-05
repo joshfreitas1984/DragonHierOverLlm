@@ -98,16 +98,14 @@ public class FightMatchController
     // RVA   : 0xBA4AB0   Offset: 0xBA32B0   Length: 0x58
     public static FightMatchController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181da1ba0 + 184) + 56);
+        return PlotController.LaBaFestivelResultTalkText;
     }
 
     // Token : 0x600141B
     // RVA   : 0xBA1930   Offset: 0xBA0130   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181da1ba0 + 184) + 56);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        PlotController.LaBaFestivelResultTalkText = this;
     }
 
     // Token : 0x600141C
@@ -204,7 +202,7 @@ public class FightMatchController
         uVar6 = "掌门大会";
         if (!this.isForceGroupMatch) {
           if (!this.isForceMatch) {
-            lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x400);
+            lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x400);
             uVar5 = Mathf.RoundToInt(this.matchDifficulty * 0.5,0);
             if (lVar7 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar7 + 24) <= uVar5) {
@@ -295,7 +293,6 @@ public class FightMatchController
     // RVA   : 0xBA1FA0   Offset: 0xBA07A0   Length: 0x4D9
     public static List<ItemData> GenerateFightMatchRewardItemList(FightMatchType matchType, float difficulty, bool _isForceMatch, bool _isForceGroupMatch)
     {
-        var pStatics = *(int64*)(DAT_181d51d28 + 184);
         int64 FightMatchController.GenerateFightMatchRewardItemList
                          (int matchType,float difficulty,char _isForceMatch,char _isForceGroupMatch)
         {
@@ -311,7 +308,7 @@ public class FightMatchController
         float fVar10;
         lVar3 = il2cpp_internal(DAT_181d6f430);
         FUN_180f58a90(lVar3,DAT_181d691f0);
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4c8);
+        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4c8);
         if (lVar4 == null) goto LAB_180ba2474;
         uVar1 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
         if (matchType == null) {
@@ -380,13 +377,11 @@ public class FightMatchController
           iVar8 = iVar8 + 1;
           iVar7 = iVar7 + 2;
           if (5 < iVar7) {
-            lVar4 = *(int64 *)(pStatics + 8);
+            lVar4 = FightMatchController.AreaFightMatchMoneyReward;
             if (lVar4 == null) {
-              uVar6 = **(uint64 **)(DAT_181d51d28 + 184);
+              uVar6 = FightMatchController.AreaFightMatchResultString;
               var lVar4 = new OnTooltipCB(uVar6,DAT_181d7a788,DAT_181d86118);
-              plVar5 = (int64 *)(pStatics + 8);
-              *plVar5 = lVar4;
-              il2cpp_internal(plVar5,lVar4);
+              FightMatchController.AreaFightMatchMoneyReward = lVar4;
             }
             List_1.Sort(lVar3,lVar4,DAT_181d69670);
             return lVar3;
@@ -513,7 +508,7 @@ public class FightMatchController
         if (this.fightMatchPanel != null) {
           GameObject.SetActive(this.fightMatchPanel,0,0);
           if (this.fightMatchType == null) {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+            lVar1 = PlotController.StopWarCostFavor;
             lVar6 = this.nowFightMatchCouple;
             if (lVar6 != null) {
               uVar3 = lVar6.heroList0;
@@ -526,7 +521,7 @@ public class FightMatchController
             }
           }
           else {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d9aa90 + 184) + 32);
+            lVar1 = PlotController.SpringFestivelRewardLvTalkText;
             if ((this.nowFightMatchCouple != null) &&
                (lVar6 = this.nowFightMatchCouple.heroList0) != null) {
               if (lVar6.heroList0 == null) {
@@ -850,15 +845,15 @@ public class FightMatchController
     // RVA   : 0xBA1DE0   Offset: 0xBA05E0   Length: 0x1B7
     public bool FightCoupleHavePlayer(FightMatchCouple targetCouple)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
         bool cVar3;
         ulong uVar4;
         if (targetCouple != null) {
           lVar1 = *(int64 *)(targetCouple + 24);
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null
+             ) {
             uVar4 = WorldData.Player(lVar2,0);
             if (lVar1 != null) {
               cVar3 = FUN_1818279a0(lVar1,uVar4,DAT_181d63ef8);
@@ -866,8 +861,9 @@ public class FightMatchController
                 return true;
               }
               lVar1 = *(int64 *)(targetCouple + 32);
-              if ((*pStatics != 0) &&
-                 (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar2 = GameController._instance.worldData,
+                 lVar2 != null)) {
                 uVar4 = WorldData.Player(lVar2,0);
                 if (lVar1 != null) {
                   uVar4 = FUN_1818279a0(lVar1,uVar4,DAT_181d63ef8);
@@ -883,7 +879,6 @@ public class FightMatchController
     // RVA   : 0xBA1B30   Offset: 0xBA0330   Length: 0x22C
     public void EndFightMatch()
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         long lVar2;
         ulong uVar3;
         int[] local_res8 = new int[2];
@@ -910,8 +905,8 @@ public class FightMatchController
             GlobalData.DeleteAllChild(uVar3);
             local_res8[0] = local_res8[0] + 1;
           } while (local_res8[0] < 3);
-          if (*pStatics != 0) {
-            lVar2 = Component.get_gameObject(*pStatics,0);
+          if (PlotController._instance != null) {
+            lVar2 = Component.get_gameObject(PlotController._instance,0);
             if (lVar2 != null) {
               GameObject.SendMessage(lVar2,this.endMatchCallPlot,0);
               return;
@@ -937,7 +932,6 @@ public class FightMatchController
     // RVA   : 0xBA25C0   Offset: 0xBA0DC0   Length: 0x5E7
     public void RefreshNextButton(int nextID)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -985,9 +979,9 @@ public class FightMatchController
           lVar5 = *(int64 *)(lVar4 + lVar5._items);
           if (lVar5 == null) throw; // [null/range check failed]
           lVar5 = lVar5.Count;
-          if (((*pStatics == 0) ||
-              (lVar1 = *(int64 *)(*pStatics + 32)) == null) ||
-             (uVar3 = WorldData.Player(lVar1,0), lVar5 == null)) throw; // [null/range check failed]
+          if (((GameController._instance == null) ||
+              (lVar1 = GameController._instance.worldData, lVar1 == null
+              )) || (uVar3 = WorldData.Player(lVar1,0), lVar5 == null)) throw; // [null/range check failed]
           cVar2 = FUN_1818279a0(lVar5,uVar3,DAT_181d63ef8);
           if (!cVar2) {
             lVar5 = this.fightMatchCoupleList;
@@ -1061,13 +1055,13 @@ public class FightMatchController
     // RVA   : 0xBA24D0   Offset: 0xBA0CD0   Length: 0xE1
     public void NextButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         if (!this.skipping) {
           FightMatchController.StartFightRound(this,0);
           return;
         }
-        if (*pStatics != 0) {
-          GameController.ShowTextOnMouse(*pStatics,"快进中",0);
+        if (GameController._instance != null) {
+          GameController.ShowTextOnMouse
+                    (GameController._instance,"快进中",0);
           return;
         }
     }
@@ -1076,8 +1070,6 @@ public class FightMatchController
     // RVA   : 0xBA3A80   Offset: 0xBA2280   Length: 0x12
     public void SkipButtonClicked()
     {
-        void FUN_180ba3a80(int64 this)
-        {
         FightMatchController.SetSkippingState(this,!this.skipping,0);
     }
 
@@ -1116,7 +1108,7 @@ public class FightMatchController
               lVar1 = Transform.Find(lVar1,"Icon",0);
               if (lVar1 != null) {
                 plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d6bc40);
-                lVar1 = *(int64 *)(DAT_181d4ef00 + 184);
+                lVar1 = *(int64 *)(PlotController_StaticsPtr + 184);
                 if (plVar2 != (int64 *)0) {
                   local_18 = *(uint32 *)(lVar1 + 0x390);
                   uStack_14 = *(uint32 *)(lVar1 + 0x394);
@@ -1160,7 +1152,7 @@ public class FightMatchController
     // RVA   : 0xBA4640   Offset: 0xBA2E40   Length: 0x46E
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181da1ba0 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         lVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(lVar1,DAT_181d7c250);
@@ -1168,7 +1160,7 @@ public class FightMatchController
           FUN_181827900(lVar1,"阁下武功超绝，技压群雄，实在是让人敬佩不已！",DAT_181d7c3d0);
           FUN_181827900(lVar1,"阁下功夫高强，与冠军不逞多让，只可惜棋差一着，令人扼腕。",DAT_181d7c3d0);
           FUN_181827900(lVar1,"阁下身手不俗，奈何发挥不佳，只能屈居第三，还望不要灰心气馁。",DAT_181d7c3d0);
-          plVar2 = pStatics;
+          plVar2 = pPlotController;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           lVar1 = il2cpp_internal(DAT_181d6f030);
@@ -1177,16 +1169,14 @@ public class FightMatchController
             FUN_181814fa0(lVar1,100,DAT_181d67a78);
             FUN_181814fa0(lVar1,40,DAT_181d67a78);
             FUN_181814fa0(lVar1,20,DAT_181d67a78);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            PlotController.LeftFaceHideOffset = lVar1;
             lVar1 = il2cpp_internal(DAT_181d6f030);
             FUN_180f58a90(lVar1,DAT_181d678f8);
             if (lVar1 != null) {
               FUN_181814fa0(lVar1,5,DAT_181d67a78);
               FUN_181814fa0(lVar1,2,DAT_181d67a78);
               FUN_181814fa0(lVar1,1,DAT_181d67a78);
-              plVar2 = (int64 *)(pStatics + 16);
+              plVar2 = (int64 *)(pPlotController + 16);
               *plVar2 = lVar1;
               il2cpp_internal(plVar2,lVar1);
               lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -1195,36 +1185,28 @@ public class FightMatchController
                 FUN_181827900(lVar1,"一年以来你的武功进步如此迅速，为师真为你感到高兴！",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"只差数招便夺得第一，不必灰心，明年再接再厉。",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"你的功夫小有所成，但仍有进步空间，切勿骄傲自满。",DAT_181d7c3d0);
-                plVar2 = (int64 *)(pStatics + 24);
-                *plVar2 = lVar1;
-                il2cpp_internal(plVar2,lVar1);
+                PlotController.CheckHideChoice = lVar1;
                 lVar1 = il2cpp_internal(DAT_181d6f030);
                 FUN_180f58a90(lVar1,DAT_181d678f8);
                 if (lVar1 != null) {
                   FUN_181814fa0(lVar1,200,DAT_181d67a78);
                   FUN_181814fa0(lVar1,80,DAT_181d67a78);
                   FUN_181814fa0(lVar1,40,DAT_181d67a78);
-                  plVar2 = (int64 *)(pStatics + 32);
-                  *plVar2 = lVar1;
-                  il2cpp_internal(plVar2,lVar1);
+                  PlotController.SpringFestivelRewardLvTalkText = lVar1;
                   lVar1 = il2cpp_internal(DAT_181d6f030);
                   FUN_180f58a90(lVar1,DAT_181d678f8);
                   if (lVar1 != null) {
                     FUN_181814fa0(lVar1,25,DAT_181d67a78);
                     FUN_181814fa0(lVar1,10,DAT_181d67a78);
                     FUN_181814fa0(lVar1,5,DAT_181d67a78);
-                    plVar2 = (int64 *)(pStatics + 40);
-                    *plVar2 = lVar1;
-                    il2cpp_internal(plVar2,lVar1);
+                    PlotController.LanternFestivelRewardLvTalkText = lVar1;
                     lVar1 = il2cpp_internal(DAT_181d72a30);
                     FUN_180f58a90(lVar1,DAT_181d7c250);
                     if (lVar1 != null) {
                       FUN_181827900(lVar1,"阁下舌灿莲花，技压群雄，实在是让人敬佩不已！",DAT_181d7c3d0);
                       FUN_181827900(lVar1,"阁下口若悬河，与冠军不逞多让，只可惜棋差一着，令人扼腕。",DAT_181d7c3d0);
                       FUN_181827900(lVar1,"阁下口才不俗，奈何发挥不佳，只能屈居第三，还望不要灰心气馁。",DAT_181d7c3d0);
-                      plVar2 = (int64 *)(pStatics + 48);
-                      *plVar2 = lVar1;
-                      il2cpp_internal(plVar2,lVar1);
+                      PlotController.LaBaFestivelScoreLvTalkText = lVar1;
                       return;
                     }
                   }

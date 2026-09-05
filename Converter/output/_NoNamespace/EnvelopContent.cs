@@ -32,8 +32,6 @@ public class EnvelopContent
     // RVA   : 0x934D90   Offset: 0x933590   Length: 0xB
     private void Start()
     {
-        void FUN_180934d90(int64 this)
-        {
         this.mStarted = 1;
         EnvelopContent.Execute(this,0);
     }
@@ -42,8 +40,6 @@ public class EnvelopContent
     // RVA   : 0x934D80   Offset: 0x933580   Length: 0xE
     private void OnEnable()
     {
-        void FUN_180934d80(int64 this)
-        {
         if (this.mStarted) {
           EnvelopContent.Execute(this,0);
           return;
@@ -124,8 +120,6 @@ public class EnvelopContent
     // RVA   : 0x934DA0   Offset: 0x9335A0   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_180934da0(int64 this)
-        {
         this.ignoreDisabled = 1;
         FUN_18044ef50(this,0);
     }

@@ -134,8 +134,6 @@ public class NewMaterialChange
     // RVA   : 0x46CBF0   Offset: 0x46B3F0   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_18046cbf0(int64 this)
-        {
         this.isupfactor = 1;
         FUN_18044ef50(this,0);
     }

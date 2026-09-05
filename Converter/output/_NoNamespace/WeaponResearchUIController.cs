@@ -58,8 +58,7 @@ public class WeaponResearchUIController
     // RVA   : 0x9E1A70   Offset: 0x9E0270   Length: 0xC55
     public void ShowWeaponResearchUI()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         long lVar2;
         int iVar3;
@@ -77,15 +76,16 @@ public class WeaponResearchUIController
               lVar4 = Transform.Find(lVar4,"Title",0);
               if (lVar4 != null) {
                 uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-                lVar4 = *(int64 *)(pStatics_ef00 + 0x498);
-                if ((*pStatics_df90 != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-                  lVar2 = *(int64 *)(lVar2 + 80);
+                lVar4 = *(int64 *)(pPlotController + 0x498);
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData,
+                   lVar2 != null)) {
+                  lVar2 = lVar2.Heros;
                   if (lVar2 != null) {
-                    if (*(int *)(lVar2 + 24) == 0) {
+                    if (lVar2.cityAreaID == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    lVar2 = *(int64 *)(*(int64 *)(lVar2 + 16) + 32);
+                    lVar2 = *(int64 *)(lVar2.chapter + 32);
                     if (lVar2 != null) {
                       iVar3 = HeroData.GetWeaponResearchWeaponType(lVar2,0);
                       if (lVar4 != null) {
@@ -104,16 +104,18 @@ public class WeaponResearchUIController
                               lVar4 = Transform.Find(lVar4,"Label",0);
                               if (lVar4 != null) {
                                 uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-                                lVar4 = *(int64 *)(pStatics_ef00 + 0x498);
-                                if ((*pStatics_df90 != 0) &&
-                                   (lVar2 = *(int64 *)(*pStatics_df90 + 32),
+                                lVar4 = *(int64 *)
+                                         (pPlotController + 0x498);
+                                if ((GameController._instance != null) &&
+                                   (lVar2 = *(int64 *)
+                                             (GameController._instance + 32),
                                    lVar2 != null)) {
-                                  lVar2 = *(int64 *)(lVar2 + 80);
+                                  lVar2 = lVar2.Heros;
                                   if (lVar2 != null) {
-                                    if (*(int *)(lVar2 + 24) == 0) {
+                                    if (lVar2.cityAreaID == null) {
                                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                     }
-                                    lVar2 = *(int64 *)(*(int64 *)(lVar2 + 16) + 32);
+                                    lVar2 = *(int64 *)(lVar2.chapter + 32);
                                     if (lVar2 != null) {
                                       iVar3 = HeroData.GetWeaponResearchWeaponType(lVar2,0);
                                       if (lVar4 != null) {
@@ -132,10 +134,11 @@ public class WeaponResearchUIController
                                             lVar4 = Transform.Find(lVar4,"ResearchLv",0);
                                             if (lVar4 != null) {
                                               uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-                                              if (((*pStatics_df90 != 0) &&
-                                                  (lVar4 = *(int64 *)
-                                                            (*pStatics_df90 + 32)
-                                                  , lVar4 != null)) &&
+                                              if (((GameController._instance != null
+                                                   ) && (lVar4 = *(int64 *)
+                                                                  (**(int64 **)
+                                                                     (GameController_StaticsPtr + 184) +
+                                                                  32), lVar4 != null)) &&
                                                  (lVar4 = *(int64 *)(lVar4 + 0x1e8)) != null) {
                                                 uVar6 = Int32.ToString(lVar4 + 16,0);
                                                 uVar6 = String.Concat("等级",uVar6,0);
@@ -149,20 +152,30 @@ public class WeaponResearchUIController
                                                       uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0)
                                                       ;
                                                       lVar4 = *(int64 *)
-                                                               (pStatics_ef00 +
+                                                               (*(int64 *)
+                                                                 (PlotController_StaticsPtr + 184) +
                                                                0x498);
-                                                      if ((*pStatics_df90 != 0) &&
+                                                      if (((*(byte *)(GameController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(GameController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init
+                                                                  (GameController_StaticsPtr);
+                                                      }
+                                                      if ((**(int64 **)
+                                                             (GameController_StaticsPtr + 184) != 0) &&
                                                          (lVar2 = *(int64 *)
-                                                                   (*pStatics_df90
-                                                                   + 32), lVar2 != null)) {
-                                                        lVar2 = *(int64 *)(lVar2 + 80);
+                                                                   (**(int64 **)
+                                                                      (GameController_StaticsPtr + 184) +
+                                                                   32), lVar2 != null)) {
+                                                        lVar2 = lVar2.Heros;
                                                         if (lVar2 != null) {
-                                                          if (*(int *)(lVar2 + 24) == 0) {
+                                                          if (lVar2.cityAreaID == null) {
                                                             ThrowHelper.ThrowArgumentOutOfRangeException
                                                                       (0);
                                                           }
                                                           lVar2 = *(int64 *)
-                                                                   (*(int64 *)(lVar2 + 16) + 32);
+                                                                   (lVar2.chapter + 32);
                                                           if (lVar2 != null) {
                                                             iVar3 = HeroData.GetWeaponResearchWeaponType
                                                                               (lVar2,0);
@@ -174,11 +187,19 @@ public class WeaponResearchUIController
                                                         uVar6 = *(uint64 *)
                                                                  (*(int64 *)(lVar4 + 16) + 32 +
                                                                  (int64)(int)(iVar3 + 3U) * 8);
-                                                        if (((*pStatics_df90 != 0)
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) != 0)
                                                             && (lVar4 = *(int64 *)
                                                                          (**(int64 **)
-                                                                            (DAT_181d4df90 + 184) + 32)
-                                                               , lVar4 != null)) &&
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar4 != null)) &&
                                                            (lVar4 = *(int64 *)(lVar4 + 0x1e8),
                                                            lVar4 != null)) {
                                                           local_res8[0] = *(uint32 *)(lVar4 + 16);
@@ -200,104 +221,176 @@ public class WeaponResearchUIController
                                                         if (lVar4 != null) {
                                                           uVar5 = Component.GetComponent
                                                                             (lVar4,DAT_181d6d8c0);
-                                                          if (((*pStatics_df90 != 0
-                                                               ) && (lVar4 = *(int64 *)
-                                                                              (**(int64 **)
-                                                                                 (DAT_181d4df90 + 184) +
-                                                                              32), lVar4 != null)) &&
-                                                             (lVar4 = *(int64 *)(lVar4 + 0x1e8),
-                                                             lVar4 != null)) {
+                                                          if (!DAT_181e6a735) {
+                                                            il2cpp_internal(&GameController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a735 = true;
+                                                          }
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (GameController_StaticsPtr);
+                                                          }
+                                                          if (((**(int64 **)
+                                                                  (GameController_StaticsPtr + 184) != 0)
+                                                              && (lVar4 = *(int64 *)
+                                                                           (**(int64 **)
+                                                                              (GameController_StaticsPtr +
+                                                                              184) + 32), lVar4 != null))
+                                                             && (lVar4 = *(int64 *)(lVar4 + 0x1e8),
+                                                                lVar4 != null)) {
                                                             uVar6 = Single.ToString(lVar4 + 20,
                                                                                      "f0",0);
-                                                            if (((*pStatics_df90 !=
-                                                                  0) && (lVar4 = *(int64 *)
-                                                                                  (**(int64 **)
-                                                                                     (DAT_181d4df90 + 184
-                                                                                     ) + 32), lVar4 != null
-                                                                        )) &&
-                                                               (lVar4 = *(int64 *)(lVar4 + 0x1e8),
-                                                               lVar4 != null)) {
-                                                              iVar3 = *(int *)(lVar4 + 16);
-                                                              local_res18[0] =
-                                                                   (float)((iVar3 + 2) * (iVar3 + 1)) *
-                                                                   0.5;
-                                                              uVar7 = il2cpp_value_box(DAT_181d7d0b8,
-                                                                                       local_res18);
-                                                              uVar6 = String.Format("{0}/{1}",uVar6,
-                                                                                     uVar7,0);
-                                                              LTLocalization.SetText(uVar5,uVar6,0);
-                                                              if (this.weaponResearchUI != null) {
-                                                                lVar4 = GameObject.get_transform
-                                                                                  (*(int64 *)
-                                                                                    (this + 24),0);
-                                                                if (lVar4 != null) {
-                                                                  lVar4 = Transform.Find(lVar4,
-                                                        "ExpBarBack",0);
-                                                        if (lVar4 != null) {
-                                                          lVar4 = Transform.Find(lVar4,"ExpBar",0);
-                                                          if (lVar4 != null) {
-                                                            lVar4 = Component.GetComponent
-                                                                              (lVar4,DAT_181d6bc40);
-                                                            if (((*pStatics_df90 !=
-                                                                  0) && (lVar2 = *(int64 *)
-                                                                                  (**(int64 **)
-                                                                                     (DAT_181d4df90 + 184
-                                                                                     ) + 32), lVar2 != null
-                                                                        )) &&
-                                                               (lVar2 = *(int64 *)(lVar2 + 0x1e8),
-                                                               lVar2 != null)) {
-                                                              fVar1 = *(float *)(lVar2 + 20);
-                                                              if (((*(byte *)(DAT_181d4df90 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4df90 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init();
-                                                              }
-                                                              if ((((*pStatics_df90
-                                                                     != 0) &&
-                                                                   (lVar2 = *(int64 *)
-                                                                             (**(int64 **)
-                                                                                (DAT_181d4df90 + 184) +
-                                                                             32), lVar2 != null)) &&
-                                                                  (lVar2 = *(int64 *)(lVar2 + 0x1e8),
-                                                                  lVar2 != null)) && (lVar4 != null)) {
-                                                                iVar3 = *(int *)(lVar2 + 16);
-                                                                Image.set_fillAmount
-                                                                          (lVar4,fVar1 / ((float)((iVar3 +
-                                                                                                  2) * (
-                                                        iVar3 + 1)) * 0.5),0);
-                                                        if (((*pStatics_df90 != 0)
+                                                            if (!DAT_181e6a735) {
+                                                              il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) != 0)
                                                             && (lVar4 = *(int64 *)
                                                                          (**(int64 **)
-                                                                            (DAT_181d4df90 + 184) + 32)
-                                                               , lVar4 != null)) &&
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar4 != null)) &&
                                                            (lVar4 = *(int64 *)(lVar4 + 0x1e8),
                                                            lVar4 != null)) {
-                                                          if (0 < *(int *)(lVar4 + 40)) {
-                                                            if (((*pStatics_df90 ==
-                                                                  0) || (lVar4 = *(int64 *)
-                                                                                  (**(int64 **)
-                                                                                     (DAT_181d4df90 + 184
-                                                                                     ) + 32), lVar4 == null
-                                                                        )) ||
-                                                               (lVar4 = *(int64 *)(lVar4 + 0x1e8),
-                                                               lVar4 == null)) {
-        LAB_1809e26c0:
-                          // WARNING: Subroutine does not return
-                                                              FUN_1800d6620();
-                                                            }
-                                                            if (*(int64 *)(lVar4 + 24) != 0) {
-                                                              if (((*(byte *)(DAT_181d4df90 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4df90 + 224) == 0)) {
+                                                          iVar3 = *(int *)(lVar4 + 16);
+                                                          local_res18[0] =
+                                                               (float)((iVar3 + 2) * (iVar3 + 1)) * 0.5;
+                                                          uVar7 = il2cpp_value_box(DAT_181d7d0b8,
+                                                                                   local_res18);
+                                                          uVar6 = String.Format("{0}/{1}",uVar6,uVar7
+                                                                                 ,0);
+                                                          LTLocalization.SetText(uVar5,uVar6,0);
+                                                          if (this.weaponResearchUI != null) {
+                                                            lVar4 = GameObject.get_transform
+                                                                              (*(int64 *)
+                                                                                (this + 24),0);
+                                                            if (lVar4 != null) {
+                                                              lVar4 = Transform.Find(lVar4,"ExpBarBack",
+                                                                                      0);
+                                                              if (lVar4 != null) {
+                                                                lVar4 = Transform.Find(lVar4,
+                                                        "ExpBar",0);
+                                                        if (lVar4 != null) {
+                                                          lVar4 = Component.GetComponent
+                                                                            (lVar4,DAT_181d6bc40);
+                                                          if (!DAT_181e6a735) {
+                                                            il2cpp_internal(&GameController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a735 = true;
+                                                          }
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          if (((**(int64 **)
+                                                                  (GameController_StaticsPtr + 184) != 0)
+                                                              && (lVar2 = *(int64 *)
+                                                                           (**(int64 **)
+                                                                              (GameController_StaticsPtr +
+                                                                              184) + 32), lVar2 != null))
+                                                             && (lVar2 = lVar2.weaponResearchData,
+                                                                lVar2 != null)) {
+                                                            fVar1 = *(float *)(lVar2 + 20);
+                                                            if (!DAT_181e6a735) {
+                                                              il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        if ((((**(int64 **)
+                                                                 (GameController_StaticsPtr + 184) != 0)
+                                                             && (lVar2 = *(int64 *)
+                                                                          (**(int64 **)
+                                                                             (GameController_StaticsPtr +
+                                                                             184) + 32), lVar2 != null))
+                                                            && (lVar2 = lVar2.weaponResearchData,
+                                                               lVar2 != null)) && (lVar4 != null)) {
+                                                          iVar3 = lVar2.chapter;
+                                                          Image.set_fillAmount
+                                                                    (lVar4,fVar1 / ((float)((iVar3 + 2) *
+                                                                                           (iVar3 + 1)) *
+                                                                                   0.5),0);
+                                                          if (!DAT_181e6a735) {
+                                                            il2cpp_internal(&GameController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a735 = true;
+                                                          }
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          if (((**(int64 **)
+                                                                  (GameController_StaticsPtr + 184) != 0)
+                                                              && (lVar4 = *(int64 *)
+                                                                           (**(int64 **)
+                                                                              (GameController_StaticsPtr +
+                                                                              184) + 32), lVar4 != null))
+                                                             && (lVar4 = *(int64 *)(lVar4 + 0x1e8),
+                                                                lVar4 != null)) {
+                                                            if (0 < *(int *)(lVar4 + 40)) {
+                                                              if (((*(byte *)(GameController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(GameController_StaticsPtr +
+                                                                          224) == 0)) {
                                                                 il2cpp_runtime_class_init();
                                                               }
-                                                              lVar4 = FUN_18046c0a0(0);
-                                                              if (((lVar4 == null) ||
-                                                                  (*(int64 *)(lVar4 + 32) == 0)) ||
-                                                                 (lVar4 = *(int64 *)
-                                                                           (*(int64 *)(lVar4 + 32) +
-                                                                           0x1e8), lVar4 == null))
-                                                              goto LAB_1809e26c0;
+                                                              if (!DAT_181e6a735) {
+                                                                il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) == 0)
+                                                            || (lVar4 = *(int64 *)
+                                                                         (**(int64 **)
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar4 == null)) ||
+                                                           (lVar4 = *(int64 *)(lVar4 + 0x1e8),
+                                                           lVar4 == null)) {
+        LAB_1809e26c0:
+                          // WARNING: Subroutine does not return
+                                                          FUN_1800d6620();
+                                                        }
+                                                        if (*(int64 *)(lVar4 + 24) != 0) {
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          lVar4 = FUN_18046c0a0(0);
+                                                          if (((lVar4 == null) ||
+                                                              (*(int64 *)(lVar4 + 32) == 0)) ||
+                                                             (lVar4 = *(int64 *)
+                                                                       (*(int64 *)(lVar4 + 32) +
+                                                                       0x1e8), lVar4 == null))
+                                                          goto LAB_1809e26c0;
 
                                                         WeaponResearchUIController.CreateResearchTargetItemIcon
                                                                   (this,*(uint64 *)(lVar4 + 24),0
@@ -307,6 +400,11 @@ public class WeaponResearchUIController
                                                         WeaponResearchUIController.RefreshUI(this,0);
                                                         plVar8 = (int64 *)
                                                                  Resources.Load("Sound/SoundEffect/OpenBook",0);
+                                                        if (((*(byte *)(NGUITools_StaticsPtr + 0x133) & 4)
+                                                             != 0) &&
+                                                           (*(int *)(NGUITools_StaticsPtr + 224) == 0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         plVar9 = (int64 *)0;
                                                         if ((plVar8 != (int64 *)0) &&
                                                            (*plVar8 == DAT_181d8a228)) {
@@ -361,8 +459,7 @@ public class WeaponResearchUIController
     // RVA   : 0x9E0370   Offset: 0x9DEB70   Length: 0xEBD
     public void RefreshUI()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -376,11 +473,11 @@ public class WeaponResearchUIController
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        if (((*pStatics_df90 == 0) ||
-            (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar4 = *(int64 *)(lVar4 + 0x1e8)) == null) goto LAB_1809e121c;
+        if (((GameController._instance == null) ||
+            (lVar4 = GameController._instance.worldData) == null)
+           || (lVar4 = lVar4.weaponResearchData) == null) goto LAB_1809e121c;
         lVar1 = this.weaponResearchUI;
-        if (*(int *)(lVar4 + 40) < 1) {
+        if (lVar4.forceAreaID < 1) {
           if ((((lVar1 == null) || (lVar4 = GameObject.get_transform(lVar1,0)) == null) ||
               (lVar4 = Transform.Find(lVar4,"SureButton",0)) == null) ||
              (lVar4 = Transform.Find(lVar4,"Label",0)) == null) {
@@ -395,7 +492,7 @@ public class WeaponResearchUIController
              ((lVar4 = Transform.Find(lVar4,"SureButton",0), lVar4 == null ||
               (lVar4 = Transform.Find(lVar4,"Label",0)) == null))) goto LAB_1809e121c;
           plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d6d8c0);
-          lVar4 = pStatics_ef00;
+          lVar4 = pPlotController;
           if (plVar6 == (int64 *)0) goto LAB_1809e121c;
           local_28 = *(uint32 *)(lVar4 + 0x370);
           uStack_24 = *(uint32 *)(lVar4 + 0x374);
@@ -441,28 +538,28 @@ public class WeaponResearchUIController
             uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
             if ((((this.researchTargetItemIcon == null) ||
                  (lVar4 = GameObject.GetComponent(this.researchTargetItemIcon,DAT_181da0070),
-                 lVar4 == null)) || (*(int64 *)(lVar4 + 32) == 0)) ||
-               ((lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 96), lVar4 == null ||
-                (lVar4 = *(int64 *)(lVar4 + 40)) == null))) goto LAB_1809e1222;
+                 lVar4 == null)) || (lVar4.villageAreaID == null)) ||
+               ((lVar4 = *(int64 *)(lVar4.villageAreaID + 96), lVar4 == null ||
+                (lVar4 = lVar4.forceAreaID) == null))) goto LAB_1809e1222;
             uVar7 = HeroSpeAddData.GetDescribe(lVar4,1,1,1,0,0);
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x498);
-            if ((*pStatics_df90 == 0) ||
-               (lVar1 = *(int64 *)(*pStatics_df90 + 32)) == null)
-            goto LAB_1809e1222;
-            lVar1 = *(int64 *)(lVar1 + 80);
+            lVar4 = *(int64 *)(pPlotController + 0x498);
+            if ((GameController._instance == null) ||
+               (lVar1 = GameController._instance.worldData,
+               lVar1 == null)) goto LAB_1809e1222;
+            lVar1 = lVar1.Heros;
             if (lVar1 == null) goto LAB_1809e1222;
-            if (*(int *)(lVar1 + 24) == 0) {
+            if (lVar1.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 32);
+            lVar1 = *(int64 *)(lVar1.chapter + 32);
             if ((lVar1 == null) || (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar1,0), lVar4 == null))
             goto LAB_1809e1222;
-            if (*(uint32 *)(lVar4 + 24) <= iVar3 + 3U) {
+            if (lVar4.cityAreaID <= iVar3 + 3U) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar7 = String.Format("{1}特效\n{0}",uVar7,
                                    *(uint64 *)
-                                    (*(int64 *)(lVar4 + 16) + 32 + (int64)(int)(iVar3 + 3U) * 8)
+                                    (lVar4.chapter + 32 + (int64)(int)(iVar3 + 3U) * 8)
                                    ,0);
             LTLocalization.SetText(uVar5,uVar7,0);
             lVar4 = this.researchTargetClearButton;
@@ -483,24 +580,24 @@ public class WeaponResearchUIController
               (lVar4 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
              (lVar4 = Transform.Find(lVar4,"ResearchText",0)) == null) goto LAB_1809e121c;
           uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-          lVar4 = *(int64 *)(pStatics_ef00 + 0x498);
-          if ((*pStatics_df90 == 0) ||
-             (lVar1 = *(int64 *)(*pStatics_df90 + 32)) == null)
-          goto LAB_1809e121c;
-          lVar1 = *(int64 *)(lVar1 + 80);
+          lVar4 = *(int64 *)(pPlotController + 0x498);
+          if ((GameController._instance == null) ||
+             (lVar1 = GameController._instance.worldData) == null
+             ) goto LAB_1809e121c;
+          lVar1 = lVar1.Heros;
           if (lVar1 == null) goto LAB_1809e121c;
-          if (*(int *)(lVar1 + 24) == 0) {
+          if (lVar1.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 32);
+          lVar1 = *(int64 *)(lVar1.chapter + 32);
           if ((lVar1 == null) || (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar1,0), lVar4 == null))
           goto LAB_1809e121c;
-          if (*(uint32 *)(lVar4 + 24) <= iVar3 + 3U) {
+          if (lVar4.cityAreaID <= iVar3 + 3U) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar7 = String.Format("消耗{0}武器\n研究获取经验",
                                  *(uint64 *)
-                                  (*(int64 *)(lVar4 + 16) + 32 + (int64)(int)(iVar3 + 3U) * 8),0
+                                  (lVar4.chapter + 32 + (int64)(int)(iVar3 + 3U) * 8),0
                                 );
           LTLocalization.SetText(uVar5,uVar7,0);
           lVar4 = this.researchTargetClearButton;
@@ -542,10 +639,10 @@ public class WeaponResearchUIController
               (lVar4 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
              (lVar4 = Transform.Find(lVar4,"ResearchText",0)) == null) goto LAB_1809e1228;
           uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-          if (((*pStatics_df90 == 0) ||
-              (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-             (lVar4 = *(int64 *)(lVar4 + 0x1e8)) == null) goto LAB_1809e1228;
-          local_res18[0] = *(uint32 *)(lVar4 + 40);
+          if (((GameController._instance == null) ||
+              (lVar4 = GameController._instance.worldData, lVar4 == null
+              )) || (lVar4 = lVar4.weaponResearchData) == null) goto LAB_1809e1228;
+          local_res18[0] = lVar4.forceAreaID;
           uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
           local_res20[0] = WeaponResearchUIController.GetExpNum(this,0);
           uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
@@ -555,29 +652,29 @@ public class WeaponResearchUIController
               (lVar4 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
              (lVar4 = Transform.Find(lVar4,"ResearchExtraAdd",0)) == null) goto LAB_1809e1228;
           uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-          if ((((*pStatics_df90 == 0) ||
-               (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-              (lVar4 = *(int64 *)(lVar4 + 0x1e8)) == null) ||
-             (lVar4 = *(int64 *)(lVar4 + 32)) == null) goto LAB_1809e1228;
+          if ((((GameController._instance == null) ||
+               (lVar4 = GameController._instance.worldData,
+               lVar4 == null)) || (lVar4 = lVar4.weaponResearchData) == null) ||
+             (lVar4 = lVar4.villageAreaID) == null) goto LAB_1809e1228;
           uVar7 = HeroSpeAddData.GetDescribe(lVar4,1,1,1,0,0);
-          lVar4 = *(int64 *)(pStatics_ef00 + 0x498);
-          if ((*pStatics_df90 == 0) ||
-             (lVar1 = *(int64 *)(*pStatics_df90 + 32)) == null)
-          goto LAB_1809e1228;
-          lVar1 = *(int64 *)(lVar1 + 80);
+          lVar4 = *(int64 *)(pPlotController + 0x498);
+          if ((GameController._instance == null) ||
+             (lVar1 = GameController._instance.worldData) == null
+             ) goto LAB_1809e1228;
+          lVar1 = lVar1.Heros;
           if (lVar1 == null) goto LAB_1809e1228;
-          if (*(int *)(lVar1 + 24) == 0) {
+          if (lVar1.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 32);
+          lVar1 = *(int64 *)(lVar1.chapter + 32);
           if ((lVar1 == null) || (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar1,0), lVar4 == null))
           goto LAB_1809e1228;
-          if (*(uint32 *)(lVar4 + 24) <= iVar3 + 3U) {
+          if (lVar4.cityAreaID <= iVar3 + 3U) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar7 = String.Format("{1}特效\n{0}",uVar7,
                                  *(uint64 *)
-                                  (*(int64 *)(lVar4 + 16) + 32 + (int64)(int)(iVar3 + 3U) * 8),0
+                                  (lVar4.chapter + 32 + (int64)(int)(iVar3 + 3U) * 8),0
                                 );
           LTLocalization.SetText(uVar5,uVar7,0);
           lVar4 = this.researchTargetClearButton;
@@ -633,42 +730,44 @@ public class WeaponResearchUIController
     // RVA   : 0x9E1230   Offset: 0x9DFA30   Length: 0x416
     public void ResearchButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         uint uVar2;
         long lVar3;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          lVar1 = *(int64 *)(lVar1 + 0x1e8);
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          lVar1 = lVar1.weaponResearchData;
           if ((this.researchTargetItemIcon != null) &&
              ((lVar3 = GameObject.GetComponent(this.researchTargetItemIcon,DAT_181da0070), lVar3 != null
               && (lVar1 != null)))) {
-            *(uint64 *)(lVar1 + 24) = *(uint64 *)(lVar3 + 32);
-            if ((*pStatics != 0) &&
-               (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-              lVar1 = *(int64 *)(lVar1 + 0x1e8);
+            lVar1.cityAreaID = *(uint64 *)(lVar3 + 32);
+            if ((GameController._instance != null) &&
+               (lVar1 = GameController._instance.worldData,
+               lVar1 != null)) {
+              lVar1 = lVar1.weaponResearchData;
               uVar2 = WeaponResearchUIController.GetResearchDay(this,0);
               if (lVar1 != null) {
-                *(uint32 *)(lVar1 + 40) = uVar2;
-                if ((*pStatics != 0) &&
-                   (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-                  lVar1 = *(int64 *)(lVar1 + 0x1e8);
+                lVar1.forceAreaID = uVar2;
+                if ((GameController._instance != null) &&
+                   (lVar1 = GameController._instance.worldData,
+                   lVar1 != null)) {
+                  lVar1 = lVar1.weaponResearchData;
                   if ((this.researchTargetItemIcon != null) &&
                      ((((lVar3 = GameObject.GetComponent(this.researchTargetItemIcon,DAT_181da0070),
                         lVar3 != null && (*(int64 *)(lVar3 + 32) != 0)) &&
                        (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 96)) != null) &&
                       ((lVar3 = *(int64 *)(lVar3 + 40), lVar3 != null &&
                        (plVar4 = (int64 *)HeroSpeAddData.Clone(lVar3,0), lVar1 != null)))))) {
-                    *(int64 **)(lVar1 + 32) = plVar4;
-                    if ((*pStatics != 0) &&
-                       (lVar1 = *(int64 *)(*pStatics + 32)) != null)
-                    {
-                      lVar1 = *(int64 *)(lVar1 + 80);
+                    lVar1.villageAreaID = plVar4;
+                    if ((GameController._instance != null) &&
+                       (lVar1 = GameController._instance.worldData,
+                       lVar1 != null)) {
+                      lVar1 = lVar1.Heros;
                       if (lVar1 != null) {
-                        if (*(int *)(lVar1 + 24) == 0) {
+                        if (lVar1.cityAreaID == null) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
-                        lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 32);
+                        lVar1 = *(int64 *)(lVar1.chapter + 32);
                         if (((this.researchTargetItemIcon != null) &&
                             (lVar3 = GameObject.GetComponent(this.researchTargetItemIcon,DAT_181da0070)
                             , lVar3 != null)) && (lVar1 != null)) {
@@ -696,7 +795,6 @@ public class WeaponResearchUIController
     // RVA   : 0x9E1650   Offset: 0x9DFE50   Length: 0x378
     public void ResearchTargetButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
         bool cVar3;
@@ -736,14 +834,15 @@ public class WeaponResearchUIController
           local_30 = 0xffffffff;
           uVar5 = il2cpp_value_box(DAT_181d5b2f8,&local_30);
           FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-            lVar2 = *(int64 *)(lVar2 + 80);
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null
+             ) {
+            lVar2 = lVar2.Heros;
             if (lVar2 != null) {
-              if (*(int *)(lVar2 + 24) == 0) {
+              if (lVar2.cityAreaID == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              lVar2 = *(int64 *)(*(int64 *)(lVar2 + 16) + 32);
+              lVar2 = *(int64 *)(lVar2.chapter + 32);
               if (lVar2 != null) {
                 local_2c = HeroData.GetWeaponResearchWeaponType(lVar2,0);
                 uVar5 = il2cpp_value_box(DAT_181d5b2f8,&local_2c);

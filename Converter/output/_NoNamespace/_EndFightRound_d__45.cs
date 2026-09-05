@@ -37,7 +37,7 @@ public class <EndFightRound>d__45
     // RVA   : 0x8C9050   Offset: 0x8C7850   Length: 0x9B4
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar3;
         long lVar5;
@@ -110,7 +110,7 @@ public class <EndFightRound>d__45
                     puVar4 = (uint64 *)Transform.get_position(&local_38,lVar5,0);
                     uVar7 = *puVar4;
                     uVar9 = *(uint32 *)(puVar4 + 1);
-                    lVar5 = pStatics;
+                    lVar5 = pPlotController;
                     if (lVar3 != null) {
                       local_28 = *(uint32 *)(lVar5 + 0x280);
                       uStack_24 = *(uint32 *)(lVar5 + 0x284);
@@ -138,7 +138,7 @@ public class <EndFightRound>d__45
               puVar4 = (uint64 *)Transform.get_position(&local_38,lVar5,0);
               uVar7 = *puVar4;
               uVar9 = *(uint32 *)(puVar4 + 1);
-              lVar5 = pStatics;
+              lVar5 = pPlotController;
               if (lVar3 == null) throw; // [null/range check failed]
               local_28 = *(uint32 *)(lVar5 + 0x280);
               uStack_24 = *(uint32 *)(lVar5 + 0x284);
@@ -216,7 +216,7 @@ public class <EndFightRound>d__45
               puVar4 = (uint64 *)Transform.get_position(&local_38,lVar5,0);
               uVar7 = *puVar4;
               uVar9 = *(uint32 *)(puVar4 + 1);
-              lVar5 = pStatics;
+              lVar5 = pPlotController;
               if (lVar3 == null) throw; // [null/range check failed]
               local_28 = *(uint32 *)(lVar5 + 0x280);
               uStack_24 = *(uint32 *)(lVar5 + 0x284);

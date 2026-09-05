@@ -67,7 +67,6 @@ public class BranchUIController
     // RVA   : 0xCE9280   Offset: 0xCE7A80   Length: 0x8B7
     public void ShowBranchUI(AreaData targetArea)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         ulong uVar1;
         ulong uVar3;
         long lVar4;
@@ -126,17 +125,18 @@ public class BranchUIController
                                 lVar4 = GameObject.GetComponent(lVar4,DAT_181d9ebb8);
                                 if (this.areaData != null) {
                                   lVar6 = AreaData.GetForce(this.areaData,0);
-                                  if ((*pStatics != 0) &&
-                                     (lVar7 = *(int64 *)(*pStatics + 32),
+                                  if ((GameController._instance != null) &&
+                                     (lVar7 = *(int64 *)
+                                               (GameController._instance + 32),
                                      lVar7 != null)) {
                                     lVar7 = WorldData.Player(lVar7,0);
                                     if (lVar7 != null) {
                                       lVar7 = HeroData.GetForce(lVar7,0,0);
                                       if (lVar6 == lVar7) {
-                                        if ((*pStatics == 0) ||
+                                        if ((GameController._instance == null) ||
                                            (lVar6 = *(int64 *)
-                                                     (*pStatics + 32),
-                                           lVar6 == null)) throw; // [null/range check failed]
+                                                     (GameController._instance +
+                                                     32), lVar6 == null)) throw; // [null/range check failed]
                                         lVar6 = WorldData.Player(lVar6,0);
                                         if (lVar6 == null) throw; // [null/range check failed]
                                         plVar10 = (int64 *)(uint64)(3 < *(int *)(lVar6 + 184));
@@ -145,18 +145,19 @@ public class BranchUIController
                                         *(char *)(lVar4 + 24) = (char)plVar10;
                                         if (this.areaData != null) {
                                           lVar4 = AreaData.GetForce(this.areaData,0);
-                                          if ((*pStatics != 0) &&
+                                          if ((GameController._instance != null) &&
                                              (lVar6 = *(int64 *)
-                                                       (*pStatics + 32),
-                                             lVar6 != null)) {
+                                                       (GameController._instance
+                                                       + 32), lVar6 != null)) {
                                             lVar6 = WorldData.Player(lVar6,0);
                                             if (lVar6 != null) {
                                               lVar6 = HeroData.GetForce(lVar6,0,0);
                                               if (lVar4 == lVar6) {
-                                                if ((*pStatics != 0) &&
-                                                   (lVar4 = *(int64 *)
-                                                             (*pStatics + 32
-                                                             ), lVar4 != null)) {
+                                                if ((GameController._instance !=
+                                                     0) && (lVar4 = *(int64 *)
+                                                                     (**(int64 **)
+                                                                        (GameController_StaticsPtr + 184)
+                                                                     + 32), lVar4 != null)) {
                                                   lVar4 = WorldData.Player(lVar4,0);
                                                   if (lVar4 != null) {
                                                     lVar6 = this.branchUI;
@@ -181,6 +182,12 @@ public class BranchUIController
                                                           plVar2 = (int64 *)
                                                                    Component.GetComponent
                                                                              (lVar4,DAT_181d6d8c0);
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar4 = FUN_18046c100(0);
                                                           if ((lVar4 != null) &&
                                                              (lVar4 = *(int64 *)(lVar4 + 56),
@@ -582,7 +589,7 @@ public class BranchUIController
                        ((lVar4 = Transform.Find(lVar4,uVar5), lVar4 == null ||
                         (lVar4 = Transform.Find(lVar4,"Upgrade")) == null))) break;
                     lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
-                    lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3d0);
+                    lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3d0);
                     if (lVar7 == null) break;
                     if (*(uint32 *)(lVar7 + 24) < 4) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);

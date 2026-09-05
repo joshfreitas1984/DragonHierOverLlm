@@ -47,7 +47,7 @@ public class ResourcePointUIController
               lVar3 = Transform.Find(lVar3,"Circle",0);
               if (lVar3 == null) throw; // [null/range check failed]
               plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
-              lVar3 = *(int64 *)(DAT_181d4ef00 + 184);
+              lVar3 = *(int64 *)(PlotController_StaticsPtr + 184);
               if (plVar4 == (int64 *)0) throw; // [null/range check failed]
               local_18 = *(uint32 *)(lVar3 + 0x2e8);
               uStack_14 = *(uint32 *)(lVar3 + 0x2ec);

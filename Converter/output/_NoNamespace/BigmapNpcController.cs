@@ -515,7 +515,7 @@ public class BigmapNpcController
           }
           this.inHillBuff = 0;
         }
-        lVar9 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 24);
+        lVar9 = PlotController.CheckHideChoice;
         if (((this.heroData == null) ||
             (lVar12 = this.heroData.heroAIData) == null) || (lVar9 == null))
         throw; // [null/range check failed]
@@ -616,10 +616,10 @@ public class BigmapNpcController
         }
         LAB_180cd876f:
         BigmapNpcController.ManageFollowerMove(this,0);
-        lVar9 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+        lVar9 = GameController.CheckShowSpeHero;
         if (lVar9 == null) throw; // [null/range check failed]
         fVar16 = (float)BigMapController.BigMapNowScale(lVar9,0);
-        if (fVar16 < **(float **)(DAT_181d8baa8 + 184)) {
+        if (fVar16 < GameController._instance) {
           BigmapNpcController.SetAllSkeletonActive(this,0,0);
           if (this.heroSimpleSprite == null) throw; // [null/range check failed]
           cVar8 = GameObject.get_activeSelf(this.heroSimpleSprite,0);
@@ -856,17 +856,16 @@ public class BigmapNpcController
     // RVA   : 0xCD8E60   Offset: 0xCD7660   Length: 0x176
     public float GetBigMapExtraScale(float extraScale)
     {
-        var pStatics = *(int64*)(DAT_181d8baa8 + 184);
         float fVar1;
         float fVar2;
         long lVar3;
         float fVar4;
-        fVar1 = **(float **)(DAT_181d8baa8 + 184);
-        lVar3 = *(int64 *)(pStatics + 16);
+        fVar1 = GameController._instance;
+        lVar3 = GameController.CheckShowSpeHero;
         if (lVar3 != null) {
           fVar4 = (float)BigMapController.BigMapNowScale(lVar3,0);
-          fVar2 = **(float **)(DAT_181d8baa8 + 184);
-          lVar3 = *(int64 *)(pStatics + 16);
+          fVar2 = GameController._instance;
+          lVar3 = GameController.CheckShowSpeHero;
           if (lVar3 != null) {
             Mathf.Max(lVar3,((fVar1 - fVar4) * extraScale) / (fVar2 - *(float *)(lVar3 + 28)) + 1.0,0);
             return;
@@ -1169,7 +1168,7 @@ public class BigmapNpcController
           if (nextPos < *originPos) {
             if (targetSkeleton == null) throw; // [null/range check failed]
             lVar2 = GameObject.get_transform(targetSkeleton,0);
-            lVar4 = *(int64 *)(DAT_181d4ef00 + 184);
+            lVar4 = *(int64 *)(PlotController_StaticsPtr + 184);
             if (lVar2 == null) throw; // [null/range check failed]
             local_38 = *(uint32 *)(lVar4 + 0x688);
             uStack_34 = *(uint32 *)(lVar4 + 0x68c);
@@ -1887,19 +1886,18 @@ public class BigmapNpcController
     // RVA   : 0xCDAA90   Offset: 0xCD9290   Length: 0x16E
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d8baa8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.heroData != null) {
           if (this.heroData.heroID == null) {
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.PlayerStopMove(lVar1,0);
               return;
             }
           }
           else {
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             uVar2 = Component.get_gameObject(this,0);
             if (lVar1 != null) {
               BigMapController.SetPlayerMoveTargetArea(lVar1,uVar2,0);
@@ -2083,7 +2081,8 @@ public class BigmapNpcController
                                       return;
                                     }
                                     uVar8 = this.heroData;
-                                    lVar3 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 40);
+                                    lVar3 = *(int64 *)
+                                             (*(int64 *)(PlotController_StaticsPtr + 184) + 40);
                                     lVar5 = GameObject.GetComponent(target,DAT_181d9fba8);
                                     if (((lVar5 != null) && (lVar5.summonLv != null)) &&
                                        (lVar5 = *(int64 *)(lVar5.summonLv + 24),
@@ -2194,7 +2193,7 @@ public class BigmapNpcController
           return true;
         }
         fVar3 = *(float *)(targetHeroData + 0x1c8);
-        if (fVar3 < *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 300)) {
+        if (fVar3 < *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 300)) {
           return false;
         }
         if (*(int *)(targetHeroData + 88) == 0) {
@@ -2400,8 +2399,6 @@ public class BigmapNpcController
     // RVA   : 0xCDCB60   Offset: 0xCDB360   Length: 0x8
     private void <StartSelfShow>b__59_0()
     {
-        void FUN_180cdcb60(int64 this)
-        {
         this.selfShowing = 0;
     }
 

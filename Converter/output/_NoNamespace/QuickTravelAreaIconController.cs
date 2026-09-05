@@ -40,8 +40,7 @@ public class QuickTravelAreaIconController
     // RVA   : 0xBEF200   Offset: 0xBEDA00   Length: 0x922
     private void Update()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_6570 = *(int64*)(DAT_181d66570 + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -50,25 +49,25 @@ public class QuickTravelAreaIconController
         uint uStack_10;
         uint32 uStack_c;
         this.hightLight = 0;
-        uVar2 = *(uint64 *)(pStatics_6570 + 72);
+        uVar2 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
-          lVar3 = *(int64 *)(pStatics_6570 + 72);
+          lVar3 = MouseController.hoveredUI;
           if (lVar3 == null) goto LAB_180befb1d;
           uVar2 = GameObject.GetComponent(lVar3,DAT_181da05c0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            lVar3 = *(int64 *)(pStatics_6570 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180befb1d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181da05c0);
             if (lVar3 == null) goto LAB_180befb1d;
             if (lVar3.areaName == null) goto LAB_180bef4d6;
-            lVar3 = *(int64 *)(pStatics_6570 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180befb1d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181da05c0);
             if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180befb1d;
             if (*(char *)(lVar3.areaName + 97) != false) goto LAB_180bef4d6;
-            lVar3 = *(int64 *)(pStatics_6570 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180befb1d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181da05c0);
             if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180befb1d;
@@ -80,22 +79,22 @@ public class QuickTravelAreaIconController
             goto LAB_180bef885;
           }
         LAB_180bef4d6:
-          lVar3 = *(int64 *)(pStatics_6570 + 72);
+          lVar3 = MouseController.hoveredUI;
           if (lVar3 == null) goto LAB_180befb1d;
           uVar2 = GameObject.GetComponent(lVar3,DAT_181da0538);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            lVar3 = *(int64 *)(pStatics_6570 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180befb1d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181da0538);
             if (lVar3 == null) goto LAB_180befb1d;
             if (lVar3.areaName != null) {
-              lVar3 = *(int64 *)(pStatics_6570 + 72);
+              lVar3 = MouseController.hoveredUI;
               if (lVar3 == null) goto LAB_180befb1d;
               lVar3 = GameObject.GetComponent(lVar3,DAT_181da0538);
               if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180befb1d;
               if (*(char *)(lVar3.areaName + 97) == false) {
-                lVar3 = *(int64 *)(pStatics_6570 + 72);
+                lVar3 = MouseController.hoveredUI;
                 if (lVar3 == null) goto LAB_180befb1d;
                 lVar3 = GameObject.GetComponent(lVar3,DAT_181da0538);
                 if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180befb1d;
@@ -107,15 +106,17 @@ public class QuickTravelAreaIconController
               }
             }
           }
-          if (*(int64 *)(pStatics_6570 + 72) == 0) goto LAB_180befb1d;
+          if (MouseController.hoveredUI == null)
+          goto LAB_180befb1d;
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (*(int64 *)(pStatics_6570 + 72) == 0) goto LAB_180befb1d;
+            if (MouseController.hoveredUI == null)
+            goto LAB_180befb1d;
             lVar3 = GameObject.GetComponent();
             if (lVar3 == null) goto LAB_180befb1d;
             if (lVar3.areaName != null) {
-              lVar3 = *(int64 *)(pStatics_6570 + 72);
+              lVar3 = MouseController.hoveredUI;
               if (lVar3 == null) goto LAB_180befb1d;
               lVar3 = GameObject.GetComponent(lVar3,DAT_181da29b0);
               if ((((lVar3 == null) || (lVar3.areaName == null)) ||
@@ -125,7 +126,8 @@ public class QuickTravelAreaIconController
               cVar1 = FUN_181815240(lVar3,this.areaData.areaID,
                                     DAT_181d67bf8);
               if (!cVar1) {
-                if (*(int64 *)(pStatics_6570 + 72) == 0) goto LAB_180befb1d;
+                if (MouseController.hoveredUI == null)
+                goto LAB_180befb1d;
                 lVar3 = GameObject.GetComponent();
                 if (((lVar3 == null) || (lVar3.areaName == null)) ||
                    (this.areaData == null)) goto LAB_180befb1d;
@@ -187,18 +189,18 @@ public class QuickTravelAreaIconController
             lVar3 = *plVar5;
             goto LAB_180befaf7;
           }
-          if (*pStatics_6270 == 0) goto LAB_180befb1d;
+          if (*pStatics == 0) goto LAB_180befb1d;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics_6270,"WorldMapAtlas","任务目标",0);
+                            (*pStatics,"WorldMapAtlas","任务目标",0);
           if (plVar5 == (int64 *)0) goto LAB_180befb1d;
           Image.set_sprite(plVar5,uVar2,0);
           plVar5 = this.missionTarget;
           puVar4 = (uint32 *)FUN_181098a50(&local_18,0);
         }
         else {
-          if (*pStatics_6270 == 0) goto LAB_180befb1d;
+          if (*pStatics == 0) goto LAB_180befb1d;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics_6270,"WorldMapAtlas","问号",0);
+                            (*pStatics,"WorldMapAtlas","问号",0);
           if (plVar5 == (int64 *)0) goto LAB_180befb1d;
           Image.set_sprite(plVar5,uVar2,0);
           plVar5 = this.missionTarget;

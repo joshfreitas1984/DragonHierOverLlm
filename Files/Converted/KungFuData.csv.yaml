@@ -1191,7 +1191,7 @@
   splits:
   - split: 4
     text: "东瀛武士之刀法，招法看似简单，实则强调对人体力道之极致运用，无需内力修为便能发挥威力"
-    translated: "The East Asian warrior's Blade Technique appears simple, yet it emphasizes the utmost application of strength to the body. This technique can release significant power without requiring great Inner Power cultivation."
+    translated: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
 - raw: "236,刀法,3,升天斩,猛将所传，刀势自下而上攻击骑兵之招数，据说由臂力惊人者使用，能挑飞战马,20,1,刀法潜力1;刀法1;力道1,,力道3;刀法2;内力0.2,刀法45;力道30,\"4,0,0\",\"4,1,3\",死战0.05;失衡0.05,22,-1,0,头16;胸6,头8;胸4,,,skill2_1,,升龙斩-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -2468,7 +2468,7 @@
   splits:
   - split: 4
     text: "茅山独门轻功，需双腿肌肉放松，完全以内劲驱动腿脚。因而不损耗体力，内息越深厚者其奔行速度越快，耐力越久"
-    translated: "Moss Mountain unique lightness skill requires relaxed leg muscles and is fully driven by inner qi. Therefore, it does not consume physical energy. Those with deeper inner qi can run faster and endure for longer periods."
+    translated: "Moutian's unique Qinggong requires the relaxation of leg muscles, entirely driven by inner qi. Therefore, it does not consume stamina; the faster and longer one can run as their inner qi is more profound."
 - raw: "490,绝技,4,三华聚顶,将精气神混合为一，并凝聚于头顶玄关一窍的道家绝妙法门，功成者可革故鼎新，脱胎换骨，心神进入圣明境界,,1.2,绝技潜力2;绝技1;智力1,绝技6;智力12;意志12;醒脑0.06;护体真气0.12;负面抗性0.04,,绝技60;智力50;意志30,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3844,7 +3844,7 @@
   splits:
   - split: 4
     text: "霸刀门主虽资质愚钝但天生神力，因此刀招极为简朴，却能将人体力道发挥至极限，一刀之下，便有轰天裂地，劈山断海之威"
-    translated: "Although the Tyrant Blade Sect Master has mediocre innate talent, he possesses extraordinary strength. Therefore, his sword techniques are extremely simple, yet they can fully unleash human physical strength to the extreme. With a single slash, it can have the power to shake heaven and split earth, cleave mountains and sever seas."
+    translated: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
 - raw: "761,内功,0,抱元诀,蓬莱派入门心法，有屏息凝神，保养元气之功效，修道练剑之人多有修习,,1,内功1,生命上限10;内力上限30;内功4;经脉4;剑法威力0.04,,内功5;经脉5,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4

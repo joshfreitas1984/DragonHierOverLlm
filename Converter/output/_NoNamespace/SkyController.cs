@@ -136,7 +136,7 @@ public class SkyController
     // RVA   : 0x976F90   Offset: 0x975790   Length: 0x8EA
     public GameObject GenerateCloud(SkyObjType skyObjType, bool fromBorder, bool fromStart)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         ulong uVar2;
         ulong uVar3;
@@ -288,7 +288,7 @@ public class SkyController
             fVar8 = *(float *)(lVar4 + 52);
           }
           else if (skyObjType == 1) {
-            fVar8 = *(float *)(pStatics + 172);
+            fVar8 = *(float *)(pPlotController + 172);
             fVar8 = fVar8 + fVar8;
           }
           else {
@@ -301,7 +301,7 @@ public class SkyController
             fVar11 = *(float *)(lVar4 + 52);
           }
           else if (skyObjType == 1) {
-            fVar11 = *(float *)(pStatics + 172);
+            fVar11 = *(float *)(pPlotController + 172);
             fVar11 = fVar11 + fVar11;
           }
           else {
@@ -403,7 +403,7 @@ public class SkyController
     // RVA   : 0x976960   Offset: 0x975160   Length: 0x627
     public void GenerateBird(SkyObjType skyObjType, bool fromBorder)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -499,7 +499,7 @@ public class SkyController
                               fVar10 = *(float *)(lVar5 + 52);
                             }
                             else if (skyObjType == 1) {
-                              fVar10 = *(float *)(pStatics + 172);
+                              fVar10 = *(float *)(pPlotController + 172);
                               fVar10 = fVar10 + fVar10;
                             }
                             else {
@@ -512,7 +512,7 @@ public class SkyController
                               fVar6 = *(float *)(lVar5 + 52);
                             }
                             else if (skyObjType == 1) {
-                              fVar6 = *(float *)(pStatics + 172);
+                              fVar6 = *(float *)(pPlotController + 172);
                               fVar6 = fVar6 + fVar6;
                             }
                             uVar7 = Random.Range(fVar10 * -0.5,fVar6 * 0.5,0);
@@ -588,7 +588,7 @@ public class SkyController
         long lVar1;
         ulong uVar2;
         if (skyObjType == null) {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+          lVar1 = GameController.CheckShowSpeHero;
           if (lVar1 == null) throw; // [null/range check failed]
           lVar1 = *(int64 *)(lVar1 + 64);
         }
@@ -620,7 +620,7 @@ public class SkyController
     // RVA   : 0x977880   Offset: 0x976080   Length: 0x159
     public float GetMapSize(SkyObjType skyObjType, bool mapWidth)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         long lVar2;
         if (skyObjType == null) {
@@ -643,10 +643,10 @@ public class SkyController
           return 0.0;
         }
         if (mapWidth) {
-          fVar1 = *(float *)(pStatics + 168);
+          fVar1 = *(float *)(pPlotController + 168);
           return fVar1 + fVar1;
         }
-        fVar1 = *(float *)(pStatics + 172);
+        fVar1 = *(float *)(pPlotController + 172);
         return fVar1 + fVar1;
     }
 
@@ -654,37 +654,36 @@ public class SkyController
     // RVA   : 0x9779E0   Offset: 0x9761E0   Length: 0x2CC
     public float GetScaleAlphaPercent(SkyObjType skyObjType)
     {
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
-        var pStatics_baa8 = *(int64*)(DAT_181d8baa8 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         long lVar2;
         float fVar3;
         float fVar4;
         if (skyObjType != null) {
           if (skyObjType == 1) {
-            fVar4 = *(float *)(pStatics_7630 + 20);
-            lVar2 = *(int64 *)(pStatics_7630 + 56);
+            fVar4 = *(float *)(pPlotController + 20);
+            lVar2 = PlotController.LaBaFestivelResultTalkText;
             if (lVar2 == null) throw; // [null/range check failed]
             fVar3 = (float)AreaController.AreaMapNowScale(lVar2,0);
             fVar4 = (fVar4 - fVar3) /
-                    (*(float *)(pStatics_7630 + 20) -
-                    *(float *)(pStatics_7630 + 16));
+                    (*(float *)(pPlotController + 20) -
+                    *(float *)(pPlotController + 16));
           }
           else {
             fVar4 = 0.0;
           }
           return fVar4;
         }
-        lVar2 = *(int64 *)(pStatics_baa8 + 16);
+        lVar2 = GameController.CheckShowSpeHero;
         if (lVar2 != null) {
           fVar4 = *(float *)(lVar2 + 24);
-          lVar2 = *(int64 *)(pStatics_baa8 + 16);
+          lVar2 = GameController.CheckShowSpeHero;
           if (lVar2 != null) {
             fVar3 = (float)BigMapController.BigMapNowScale(lVar2,0);
-            lVar2 = *(int64 *)(pStatics_baa8 + 16);
+            lVar2 = GameController.CheckShowSpeHero;
             if (lVar2 != null) {
               fVar1 = *(float *)(lVar2 + 24);
-              lVar2 = *(int64 *)(pStatics_baa8 + 16);
+              lVar2 = GameController.CheckShowSpeHero;
               if (lVar2 != null) {
                 return (fVar4 - fVar3) / (fVar1 - *(float *)(lVar2 + 28));
               }

@@ -611,16 +611,16 @@ public class UIAtlas
     // RVA   : 0xA79310   Offset: 0xA77B10   Length: 0x12E
     public virtual void SortAlphabetically()
     {
-        var pStatics = *(int64*)(DAT_181d67d98 + 184);
+        var pUIAtlas = *(int64*)(UIAtlas_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
         lVar1 = this.mSprites;
-        lVar3 = *(int64 *)(pStatics + 8);
+        lVar3 = *(int64 *)(pUIAtlas + 8);
         if (lVar3 == null) {
-          uVar2 = **(uint64 **)(DAT_181d67d98 + 184);
+          uVar2 = **(uint64 **)(UIAtlas_StaticsPtr + 184);
           lVar3 = new OnTooltipCB(uVar2,DAT_181d8e188,DAT_181d86598);
-          plVar4 = (int64 *)(pStatics + 8);
+          plVar4 = (int64 *)(pUIAtlas + 8);
           *plVar4 = lVar3;
           il2cpp_internal(plVar4,lVar3);
         }

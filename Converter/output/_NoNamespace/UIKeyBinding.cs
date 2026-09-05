@@ -168,7 +168,7 @@ public class UIKeyBinding
     protected virtual void OnSubmit()
     {
         bool cVar1;
-        if (*(int *)(*(int64 *)(DAT_181d8a458 + 184) + 216) == (int)this[3]) {
+        if (UICamera.mCurrentKey == (int)this[3]) {
           cVar1 = (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
           if (cVar1) {
             *(uint8 *)((int64)this + 36) = 1;
@@ -180,13 +180,12 @@ public class UIKeyBinding
     // RVA   : 0x10F47B0   Offset: 0x10F2FB0   Length: 0x54
     protected virtual bool IsModifierActive()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         if (this != 0) {
           if (this == 3) {
-            lVar2 = *(int64 *)(pStatics + 24);
+            lVar2 = UICamera.GetKey;
             if (lVar2 == null) {
         LAB_1810f47a6:
                           // WARNING: Subroutine does not return
@@ -196,19 +195,19 @@ public class UIKeyBinding
             if (cVar1) {
               return true;
             }
-            lVar2 = *(int64 *)(pStatics + 24);
+            lVar2 = UICamera.GetKey;
             if (lVar2 == null) goto LAB_1810f47a6;
             cVar1 = GetKeyStateFunc.Invoke(lVar2,0x133,0);
           }
           else {
             if (this == 2) {
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x132,0);
               if (cVar1) {
                 return true;
               }
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               uVar3 = 0x131;
             }
@@ -217,37 +216,37 @@ public class UIKeyBinding
                 if (this != 4) {
                   return false;
                 }
-                lVar2 = *(int64 *)(pStatics + 24);
+                lVar2 = UICamera.GetKey;
                 if (lVar2 != null) {
                   cVar1 = GetKeyStateFunc.Invoke(lVar2,0x134,0);
                   if (cVar1) {
                     return false;
                   }
-                  lVar2 = *(int64 *)(pStatics + 24);
+                  lVar2 = UICamera.GetKey;
                   if (lVar2 != null) {
                     cVar1 = GetKeyStateFunc.Invoke(lVar2,0x133,0);
                     if (cVar1) {
                       return false;
                     }
-                    lVar2 = *(int64 *)(pStatics + 24);
+                    lVar2 = UICamera.GetKey;
                     if (lVar2 != null) {
                       cVar1 = GetKeyStateFunc.Invoke(lVar2,0x132,0);
                       if (cVar1) {
                         return false;
                       }
-                      lVar2 = *(int64 *)(pStatics + 24);
+                      lVar2 = UICamera.GetKey;
                       if (lVar2 != null) {
                         cVar1 = GetKeyStateFunc.Invoke(lVar2,0x131,0);
                         if (cVar1) {
                           return false;
                         }
-                        lVar2 = *(int64 *)(pStatics + 24);
+                        lVar2 = UICamera.GetKey;
                         if (lVar2 != null) {
                           cVar1 = GetKeyStateFunc.Invoke(lVar2,0x130,0);
                           if (cVar1) {
                             return false;
                           }
-                          lVar2 = *(int64 *)(pStatics + 24);
+                          lVar2 = UICamera.GetKey;
                           if (lVar2 != null) {
                             cVar1 = GetKeyStateFunc.Invoke(lVar2,0x12f,0);
                             return !cVar1;
@@ -259,13 +258,13 @@ public class UIKeyBinding
                 }
                 goto LAB_1810f47a6;
               }
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x130,0);
               if (cVar1) {
                 return true;
               }
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               uVar3 = 0x12f;
             }
@@ -282,13 +281,12 @@ public class UIKeyBinding
     // RVA   : 0x10F4390   Offset: 0x10F2B90   Length: 0x41B
     public static bool IsModifierActive(Modifier modifier)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         if (modifier != null) {
           if (modifier == 3) {
-            lVar2 = *(int64 *)(pStatics + 24);
+            lVar2 = UICamera.GetKey;
             if (lVar2 == null) {
         LAB_1810f47a6:
                           // WARNING: Subroutine does not return
@@ -298,19 +296,19 @@ public class UIKeyBinding
             if (cVar1) {
               return true;
             }
-            lVar2 = *(int64 *)(pStatics + 24);
+            lVar2 = UICamera.GetKey;
             if (lVar2 == null) goto LAB_1810f47a6;
             cVar1 = GetKeyStateFunc.Invoke(lVar2,0x133,0);
           }
           else {
             if (modifier == 2) {
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x132,0);
               if (cVar1) {
                 return true;
               }
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               uVar3 = 0x131;
             }
@@ -319,37 +317,37 @@ public class UIKeyBinding
                 if (modifier != 4) {
                   return false;
                 }
-                lVar2 = *(int64 *)(pStatics + 24);
+                lVar2 = UICamera.GetKey;
                 if (lVar2 != null) {
                   cVar1 = GetKeyStateFunc.Invoke(lVar2,0x134,0);
                   if (cVar1) {
                     return false;
                   }
-                  lVar2 = *(int64 *)(pStatics + 24);
+                  lVar2 = UICamera.GetKey;
                   if (lVar2 != null) {
                     cVar1 = GetKeyStateFunc.Invoke(lVar2,0x133,0);
                     if (cVar1) {
                       return false;
                     }
-                    lVar2 = *(int64 *)(pStatics + 24);
+                    lVar2 = UICamera.GetKey;
                     if (lVar2 != null) {
                       cVar1 = GetKeyStateFunc.Invoke(lVar2,0x132,0);
                       if (cVar1) {
                         return false;
                       }
-                      lVar2 = *(int64 *)(pStatics + 24);
+                      lVar2 = UICamera.GetKey;
                       if (lVar2 != null) {
                         cVar1 = GetKeyStateFunc.Invoke(lVar2,0x131,0);
                         if (cVar1) {
                           return false;
                         }
-                        lVar2 = *(int64 *)(pStatics + 24);
+                        lVar2 = UICamera.GetKey;
                         if (lVar2 != null) {
                           cVar1 = GetKeyStateFunc.Invoke(lVar2,0x130,0);
                           if (cVar1) {
                             return false;
                           }
-                          lVar2 = *(int64 *)(pStatics + 24);
+                          lVar2 = UICamera.GetKey;
                           if (lVar2 != null) {
                             cVar1 = GetKeyStateFunc.Invoke(lVar2,0x12f,0);
                             return !cVar1;
@@ -361,13 +359,13 @@ public class UIKeyBinding
                 }
                 goto LAB_1810f47a6;
               }
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x130,0);
               if (cVar1) {
                 return true;
               }
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UICamera.GetKey;
               if (lVar2 == null) goto LAB_1810f47a6;
               uVar3 = 0x12f;
             }
@@ -384,7 +382,6 @@ public class UIKeyBinding
     // RVA   : 0x10F4DA0   Offset: 0x10F35A0   Length: 0x2D6
     protected virtual void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar4;
@@ -401,14 +398,14 @@ public class UIKeyBinding
         if (!cVar2) {
           return;
         }
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = UICamera.GetKeyDown;
         if (lVar1 == null) {
         LAB_1810f5071:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         cVar2 = GetKeyStateFunc.Invoke(lVar1,(int)this[3],0);
-        lVar1 = *(int64 *)(pStatics + 16);
+        lVar1 = UICamera.GetKeyUp;
         if (lVar1 == null) goto LAB_1810f5071;
         bVar3 = GetKeyStateFunc.Invoke(lVar1,(int)this[3],0);
         if (cVar2) {
@@ -416,12 +413,12 @@ public class UIKeyBinding
         }
         if ((*(uint32 *)(this + 4) & 0xfffffffd) == 0) {
           if (cVar2) {
-            *(uint32 *)(pStatics + 212) = 0xffffffff;
+            UICamera.currentTouchID = 0xffffffff;
             UICamera.set_currentKey((int)this[3],0);
             (**(code **)(*this + 0x1d8))(this,1,*(uint64 *)(*this + 0x1e0));
           }
           if ((*(byte *)((int64)this + 38) & bVar3) != 0) {
-            *(uint32 *)(pStatics + 212) = 0xffffffff;
+            UICamera.currentTouchID = 0xffffffff;
             UICamera.set_currentKey((int)this[3],0);
             (**(code **)(*this + 0x1d8))(this,0,*(uint64 *)(*this + 0x1e0));
             (**(code **)(*this + 0x1e8))(this,*(uint64 *)(*this + 0x1f0));
@@ -605,40 +602,39 @@ public class UIKeyBinding
     // RVA   : 0x10F3C50   Offset: 0x10F2450   Length: 0x227
     public static Modifier GetActiveModifier()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         bool cVar2;
-        lVar1 = *(int64 *)(pStatics + 24);
+        lVar1 = UICamera.GetKey;
         if (lVar1 != null) {
           cVar2 = GetKeyStateFunc.Invoke(lVar1,0x134,0);
           if (cVar2) {
             return 3;
           }
-          lVar1 = *(int64 *)(pStatics + 24);
+          lVar1 = UICamera.GetKey;
           if (lVar1 != null) {
             cVar2 = GetKeyStateFunc.Invoke(lVar1,0x133,0);
             if (cVar2) {
               return 3;
             }
-            lVar1 = *(int64 *)(pStatics + 24);
+            lVar1 = UICamera.GetKey;
             if (lVar1 != null) {
               cVar2 = GetKeyStateFunc.Invoke(lVar1,0x130,0);
               if (cVar2) {
                 return 1;
               }
-              lVar1 = *(int64 *)(pStatics + 24);
+              lVar1 = UICamera.GetKey;
               if (lVar1 != null) {
                 cVar2 = GetKeyStateFunc.Invoke(lVar1,0x12f,0);
                 if (cVar2) {
                   return 1;
                 }
-                lVar1 = *(int64 *)(pStatics + 24);
+                lVar1 = UICamera.GetKey;
                 if (lVar1 != null) {
                   cVar2 = GetKeyStateFunc.Invoke(lVar1,0x132,0);
                   if (cVar2) {
                     return 2;
                   }
-                  lVar1 = *(int64 *)(pStatics + 24);
+                  lVar1 = UICamera.GetKey;
                   if (lVar1 != null) {
                     cVar2 = GetKeyStateFunc.Invoke(lVar1,0x131,0);
                     if (cVar2) {

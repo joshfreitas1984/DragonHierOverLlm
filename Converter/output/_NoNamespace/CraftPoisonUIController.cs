@@ -614,7 +614,6 @@ public class CraftPoisonUIController
     // RVA   : 0xA4A910   Offset: 0xA49110   Length: 0x73A
     public void RefreshCraftPoisonInfo()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         bool cVar3;
         long lVar4;
@@ -632,9 +631,9 @@ public class CraftPoisonUIController
         uint uStack_30;
         uint32 uStack_2c;
         local_res18[0] = 0;
-        if (((*pStatics == 0) ||
-            (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
-           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180a4b03f;
+        if (((GameController._instance == null) ||
+            (lVar4 = GameController._instance.worldData) == null)
+           || (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180a4b03f;
         cVar3 = HeroData.HaveForceFunction(lVar4,7);
         lVar4 = this.poisonUIPanel;
         if (!cVar3) {
@@ -690,10 +689,10 @@ public class CraftPoisonUIController
             if (cVar3) {
               if ((((this.poisonMaterialItemIcon == null) ||
                    (lVar4 = GameObject.GetComponent(this.poisonMaterialItemIcon,DAT_181da0070),
-                   lVar4 == null)) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                 (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 128)) == null)
+                   lVar4 == null)) || (lVar4.villageAreaID == null)) ||
+                 (lVar4 = *(int64 *)(lVar4.villageAreaID + 128)) == null)
               goto LAB_180a4b03f;
-              uVar9 = HeroSpeAddData.op_Addition(uVar9,*(uint64 *)(lVar4 + 16),0);
+              uVar9 = HeroSpeAddData.op_Addition(uVar9,lVar4.chapter,0);
             }
             uVar7 = this.poisonMaterialItemIconSub;
             cVar3 = Object.op_Inequality(uVar7,0,0);
@@ -701,10 +700,10 @@ public class CraftPoisonUIController
               if (((this.poisonMaterialItemIconSub == null) ||
                   (lVar4 = GameObject.GetComponent(this.poisonMaterialItemIconSub,DAT_181da0070),
                   lVar4 == null)) ||
-                 ((*(int64 *)(lVar4 + 32) == 0 ||
-                  (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 128)) == null)))
+                 ((lVar4.villageAreaID == null ||
+                  (lVar4 = *(int64 *)(lVar4.villageAreaID + 128)) == null)))
               goto LAB_180a4b03f;
-              uVar9 = HeroSpeAddData.op_Addition(uVar9,*(uint64 *)(lVar4 + 16),0);
+              uVar9 = HeroSpeAddData.op_Addition(uVar9,lVar4.chapter,0);
             }
             fVar11 = (float)CraftPoisonUIController.GetChangePoisonNum(this,0);
             lVar4 = HeroSpeAddData.op_Multiply(uVar9,fVar11 * 0.01,0);
@@ -742,7 +741,7 @@ public class CraftPoisonUIController
               if (lVar4 != null) {
                 Selectable.set_interactable(lVar4,0,0);
                 plVar2 = this.PoisonExtraAdd;
-                lVar4 = *(int64 *)(DAT_181d4ef00 + 184);
+                lVar4 = *(int64 *)(PlotController_StaticsPtr + 184);
                 if (plVar2 != (int64 *)0) {
                   local_38 = *(uint32 *)(lVar4 + 0x2e8);
                   uStack_34 = *(uint32 *)(lVar4 + 0x2ec);
@@ -818,7 +817,6 @@ public class CraftPoisonUIController
     // RVA   : 0xA490F0   Offset: 0xA478F0   Length: 0x227
     public float GetChangePoisonNum()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         float fVar1;
         bool cVar2;
         long lVar3;
@@ -826,14 +824,15 @@ public class CraftPoisonUIController
         ulong uVar5;
         float fVar6;
         uint uVar7;
-        if ((*pStatics != 0) &&
-           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null)
+        {
           lVar3 = WorldData.Player(lVar3,0);
-          if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 0x168)) != null) {
-            if (*(uint32 *)(lVar3 + 24) < 2) {
+          if ((lVar3 = lVar3?.showRoomChangeFame) != null) {
+            if (lVar3.cityAreaID < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            fVar1 = *(float *)(*(int64 *)(lVar3 + 16) + 36);
+            fVar1 = *(float *)(lVar3.chapter + 36);
             fVar6 = 0.0;
             uVar7 = 0;
             uVar5 = this.poisonMaterialItemIcon;
@@ -841,8 +840,8 @@ public class CraftPoisonUIController
             if (cVar2) {
               if (this.poisonMaterialItemIcon == null) throw; // [null/range check failed]
               lVar3 = GameObject.GetComponent(this.poisonMaterialItemIcon,DAT_181da0070);
-              if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-              uVar5 = ItemData.GetMaterialExtraCraftRate(*(int64 *)(lVar3 + 32),0);
+              if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+              uVar5 = ItemData.GetMaterialExtraCraftRate(lVar3.villageAreaID,0);
               uVar7 = (uint32)((uint64)uVar5 >> 32);
               fVar6 = (float)uVar5 + 0.0;
             }
@@ -854,8 +853,8 @@ public class CraftPoisonUIController
             }
             if (this.poisonMaterialItemIconSub != null) {
               lVar3 = GameObject.GetComponent(this.poisonMaterialItemIconSub,DAT_181da0070);
-              if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-                fVar4 = (float)ItemData.GetMaterialExtraCraftRate(*(int64 *)(lVar3 + 32),0);
+              if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+                fVar4 = (float)ItemData.GetMaterialExtraCraftRate(lVar3.villageAreaID,0);
                 fVar6 = fVar6 + fVar4;
                 goto LAB_180a492ee;
               }
@@ -884,6 +883,7 @@ public class CraftPoisonUIController
     // RVA   : 0xA49770   Offset: 0xA47F70   Length: 0x1FA
     public void PoisonButtonClicked()
     {
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
@@ -895,8 +895,8 @@ public class CraftPoisonUIController
           plVar7 = plVar6;
         }
         NGUITools.PlaySound(plVar7,0);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x580);
+        lVar2 = PlotController.LeftFaceHideOffset;
+        lVar3 = *(int64 *)(pPlotController + 0x580);
         if (lVar3 != null) {
           uVar1 = this.craftPoisonType;
           if (*(uint32 *)(lVar3 + 24) <= uVar1) {

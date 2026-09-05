@@ -53,7 +53,7 @@ public class TankController
     // RVA   : 0xABCF10   Offset: 0xABB710   Length: 0x709
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d65d98 + 184);
+        var pTankController = *(int64*)(TankController_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -153,20 +153,20 @@ public class TankController
         }
         lVar6 = this.TankTrackTrails;
         if (0.0 < ABS(this._moveSpeed)) {
-          lVar5 = *(int64 *)(pStatics + 8);
+          lVar5 = *(int64 *)(pTankController + 8);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(DAT_181d65d98 + 184);
+            uVar1 = **(uint64 **)(TankController_StaticsPtr + 184);
             lVar5 = new OnTooltipCB(uVar1,DAT_181d8c710,DAT_181d73308);
-            plVar8 = (int64 *)(pStatics + 8);
+            plVar8 = (int64 *)(pTankController + 8);
             goto LAB_180abd347;
           }
         }
         else {
-          lVar5 = *(int64 *)(pStatics + 16);
+          lVar5 = *(int64 *)(pTankController + 16);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(DAT_181d65d98 + 184);
+            uVar1 = **(uint64 **)(TankController_StaticsPtr + 184);
             lVar5 = new OnTooltipCB(uVar1,DAT_181d8c790,DAT_181d73308);
-            plVar8 = (int64 *)(pStatics + 16);
+            plVar8 = (int64 *)(pTankController + 16);
         LAB_180abd347:
             *plVar8 = lVar5;
             il2cpp_internal(plVar8,lVar5);

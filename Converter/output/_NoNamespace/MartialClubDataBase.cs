@@ -40,7 +40,7 @@ public class MartialClubDataBase
         int iVar4;
         iVar4 = 0;
         while( true ) {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 0x1d0)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar2 + 24) <= iVar4) {
             return 0;

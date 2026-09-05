@@ -73,7 +73,7 @@ public class GridUnitData
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar1 = PlotController.StopWarCostFavor;
         if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 0x100)) == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -100,7 +100,7 @@ public class GridUnitData
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar1 = PlotController.StopWarCostFavor;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 0x100)) != null) {
           if (**(uint32 **)(lVar1 + 16) <= this.column) {
             uVar3 = il2cpp_internal();

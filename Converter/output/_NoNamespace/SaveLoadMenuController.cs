@@ -32,22 +32,19 @@ public class SaveLoadMenuController
     // RVA   : 0xC68D40   Offset: 0xC67540   Length: 0x58
     public static SaveLoadMenuController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d79ad0 + 184) + 8);
+        return SaveLoadMenuController._instance;
     }
 
     // Token : 0x600204C
     // RVA   : 0xC665E0   Offset: 0xC64DE0   Length: 0xE0
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d79ad0 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = SaveLoadMenuController._instance;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (cVar2) {
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = this;
-          il2cpp_internal(puVar3,this);
+          SaveLoadMenuController._instance = this;
         }
     }
 
@@ -55,7 +52,6 @@ public class SaveLoadMenuController
     // RVA   : 0xC66DD0   Offset: 0xC655D0   Length: 0xD70
     public void RefreshSlot(int slotID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -69,7 +65,7 @@ public class SaveLoadMenuController
         ulong local_28;
         ulong uStack_20;
         local_res10[0] = slotID;
-        lVar3 = *(int64 *)(pStatics + 32);
+        lVar3 = GameController.lockObj;
         if (lVar3 == null) throw; // [null/range check failed]
         cVar1 = GameDataController.HaveSave(lVar3,local_res10[0],0);
         if (!cVar1) {
@@ -134,7 +130,7 @@ public class SaveLoadMenuController
           puVar6 = (uint64 *)Vector3.get_zero(&local_28,0);
         }
         else {
-          lVar3 = *(int64 *)(pStatics + 32);
+          lVar3 = GameController.lockObj;
           if ((lVar3 == null) ||
              (lVar3 = GameDataController.GetSaveInfo(lVar3,local_res10[0],0)) == null)
           throw; // [null/range check failed]
@@ -377,7 +373,15 @@ public class SaveLoadMenuController
                                                   local_res20[0] = 0;
                                                   while( true ) {
                                                     iVar1 = local_res20[0];
-                                                    if (**(int **)(DAT_181d79ad0 + 184) <= iVar1) break;
+                                                    if (((*(byte *)(SaveLoadMenuController_StaticsPtr +
+                                                                   0x133) & 4) != 0) &&
+                                                       (*(int *)(SaveLoadMenuController_StaticsPtr + 224)
+                                                        == 0)) {
+                                                      il2cpp_runtime_class_init
+                                                                (SaveLoadMenuController_StaticsPtr);
+                                                    }
+                                                    if (**(int **)(SaveLoadMenuController_StaticsPtr +
+                                                                  184) <= iVar1) break;
                                                     if (this.saveSlot == null)
                                                     throw; // [null/range check failed]
                                                     lVar2 = GameObject.get_transform
@@ -398,8 +402,16 @@ public class SaveLoadMenuController
                                                     uStack_80 = CONCAT44(uStack_80._4_4_,0x3f800000);
                                                     Transform.set_localScale(lVar2,&local_88,0);
                                                     iVar1 = local_res20[0];
+                                                    if (((*(byte *)(SaveLoadMenuController_StaticsPtr +
+                                                                   0x133) & 4) != 0) &&
+                                                       (*(int *)(SaveLoadMenuController_StaticsPtr + 224)
+                                                        == 0)) {
+                                                      il2cpp_runtime_class_init
+                                                                (SaveLoadMenuController_StaticsPtr);
+                                                    }
                                                     lVar2 = this.saveSlot;
-                                                    if (iVar1 == **(int **)(DAT_181d79ad0 + 184) + -1) {
+                                                    if (iVar1 == **(int **)(
+                                                        SaveLoadMenuController_StaticsPtr + 184) + -1) {
                                                       if (lVar2 == null) throw; // [null/range check failed]
                                                       lVar2 = GameObject.get_transform(lVar2,0);
                                                       uVar3 = Int32.ToString(local_res20,0);
@@ -443,13 +455,20 @@ public class SaveLoadMenuController
                                                           }
                                                           LTLocalization.SetText(uVar7,uVar3,0);
                                                           while( true ) {
-                                                            if (**(int **)(DAT_181d79ad0 + 184) <= iVar8)
-                                                            break;
-                                                            SaveLoadMenuController.RefreshSlot
-                                                                      (this,iVar8,0);
-                                                            iVar8 = iVar8 + 1;
-                                                          }
-                                                          return;
+                                                            if (((*(byte *)(
+                                                        SaveLoadMenuController_StaticsPtr + 0x133) & 4) !=
+                                                        0) && (*(int *)(SaveLoadMenuController_StaticsPtr
+                                                                       + 224) == 0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (SaveLoadMenuController_StaticsPtr);
+                                                        }
+                                                        if (**(int **)(SaveLoadMenuController_StaticsPtr +
+                                                                      184) <= iVar8) break;
+                                                        SaveLoadMenuController.RefreshSlot
+                                                                  (this,iVar8,0);
+                                                        iVar8 = iVar8 + 1;
+                                                        }
+                                                        return;
                                                         }
                                                       }
                                                     }
@@ -555,7 +574,7 @@ public class SaveLoadMenuController
               if (!cVar2) {
                 uVar6 = Int32.ToString(local_res10,0);
                 uVar3 = Int32.Parse(uVar6,0);
-                lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                lVar5 = GameController.lockObj;
                 if (lVar5 != null) {
                   GameDataController.Save(lVar5,uVar3,0);
                   SaveLoadMenuController.UnshowLoadMenu(this,0);
@@ -627,7 +646,7 @@ public class SaveLoadMenuController
         long lVar1;
         uint uVar2;
         uVar2 = Int32.Parse(param,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           GameDataController.Save(lVar1,uVar2,0);
           SaveLoadMenuController.UnshowLoadMenu(this,0);
@@ -649,7 +668,7 @@ public class SaveLoadMenuController
         if (iVar1 == -1) {
           return "";
         }
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 != null) {
           lVar2 = GameDataController.GetSaveInfo(lVar2,iVar1,0);
           if (lVar2 != null) {
@@ -672,9 +691,9 @@ public class SaveLoadMenuController
         ulong uVar6;
         iVar4 = -1;
         iVar5 = 0;
-        uVar6 = *(uint64 *)(*(int64 *)(DAT_181d9a210 + 184) + 16);
+        uVar6 = *(uint64 *)(*(int64 *)(SaveLoadMenuController_StaticsPtr + 184) + 16);
         do {
-          if (**(int **)(DAT_181d79ad0 + 184) <= iVar5) {
+          if (SaveLoadMenuController.saveSlotNum <= iVar5) {
             return iVar4;
           }
           lVar2 = FUN_18046c100(0);
@@ -720,7 +739,7 @@ public class SaveLoadMenuController
         ulong uVar4;
         uint[] local_res8 = new uint[8];
         local_res8[0] = saveID;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar3 = GameController.lockObj;
         if (lVar3 != null) {
           cVar1 = GameDataController.HaveSave(lVar3,local_res8[0],0);
           if (!cVar1) {
@@ -785,7 +804,7 @@ public class SaveLoadMenuController
         }
         NGUITools.PlaySound(plVar4,0);
         uVar2 = Int32.Parse(param,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           GameDataController.DeleteSave(lVar1,uVar2,0);
           SaveLoadMenuController.RefreshSlot(this,uVar2,0);
@@ -804,15 +823,13 @@ public class SaveLoadMenuController
     // RVA   : 0xC68D00   Offset: 0xC67500   Length: 0x39
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181d79ad0 + 184) = 11;
+        SaveLoadMenuController.saveSlotNum = 11;
     }
 
     // Token : 0x600205A
     // RVA   : 0xC68A90   Offset: 0xC67290   Length: 0x5
     private void <ShowLoadMenu>b__11_0()
     {
-        void FUN_180c68a90(int64 this)
-        {
         this.showing = 0;
     }
 

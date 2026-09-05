@@ -53,14 +53,14 @@ public class ResearchUIController
     // RVA   : 0xC64270   Offset: 0xC62A70   Length: 0x58
     public static ResearchUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d77350 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(ResearchTechController_StaticsPtr + 184) + 8);
     }
 
     // Token : 0x6002032
     // RVA   : 0xC62670   Offset: 0xC60E70   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d77350 + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(ResearchTechController_StaticsPtr + 184) + 8);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -85,7 +85,7 @@ public class ResearchUIController
         uint32 uStack_1c;
         int64 local_18;
         this.inited = 1;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 160)) != null) {
           lVar2 = FUN_1808acf30(lVar2,DAT_181d94530);
           if (lVar2 != null) {
@@ -175,7 +175,6 @@ public class ResearchUIController
     // RVA   : 0xC63A30   Offset: 0xC62230   Length: 0x63C
     public void ShowResearchUI(ResearchUIType _researchUIType, ForceData _targetForce)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -202,10 +201,10 @@ public class ResearchUIController
         uVar4 = Single.ToString(local_res8,"f0",0);
         uVar4 = String.Format("研究速率 {0}%",uVar4,0);
         LTLocalization.SetText(uVar3,uVar4,0);
-        if (((*pStatics == 0) ||
-            (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-           (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
-        if (*(char *)(lVar2 + 180) == false) {
+        if (((GameController._instance == null) ||
+            (lVar2 = GameController._instance.worldData) == null)
+           || (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
+        if (!lVar2.hour) {
         LAB_180c63e2e:
           if (((this.researchUI == null) ||
               (lVar2 = GameObject.get_transform(this.researchUI,0)) == null) ||
@@ -214,10 +213,10 @@ public class ResearchUIController
           GameObject.SetActive(lVar2,0,0);
         }
         else {
-          if ((((*pStatics == 0) ||
-               (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-              (lVar2 = WorldData.Player(lVar2,0)) == null) || (this.targetForce == null))
-          throw; // [null/range check failed]
+          if ((((GameController._instance == null) ||
+               (lVar2 = GameController._instance.worldData,
+               lVar2 == null)) || (lVar2 = WorldData.Player(lVar2,0)) == null) ||
+             (this.targetForce == null)) throw; // [null/range check failed]
           if (lVar2.totalPopulation != this.targetForce.forceID)
           goto LAB_180c63e2e;
           if (((this.researchUI == null) ||
@@ -373,11 +372,10 @@ public class ResearchUIController
     // RVA   : 0xC62540   Offset: 0xC60D40   Length: 0x122
     public void AutoResearchButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
-        if (*pStatics != 0) {
-          lVar1 = *(int64 *)(*pStatics + 32);
+        if (GameController._instance != null) {
+          lVar1 = GameController._instance.worldData;
           if (this.researchUI != null) {
             lVar2 = GameObject.get_transform(this.researchUI,0);
             if (lVar2 != null) {
@@ -385,7 +383,7 @@ public class ResearchUIController
               if (lVar2 != null) {
                 lVar2 = Component.GetComponent(lVar2,DAT_181d6da40);
                 if ((lVar2 != null) && (lVar1 != null)) {
-                  *(uint8 *)(lVar1 + 0x240) = *(uint8 *)(lVar2 + 0x118);
+                  lVar1.autoResearch = *(uint8 *)(lVar2 + 0x118);
                   return;
                 }
               }
@@ -672,7 +670,7 @@ public class ResearchUIController
           uVar2 = "资源不足！";
         }
         else {
-          lVar7 = **(int64 **)(DAT_181d4df90 + 184);
+          lVar7 = GameController._instance;
           uVar2 = "需要升级门派正厅！";
         }
         if (lVar7 != null) {
@@ -773,7 +771,7 @@ public class ResearchUIController
     // RVA   : 0xC64230   Offset: 0xC62A30   Length: 0x39
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181d77350 + 184) = 3;
+        **(uint32 **)(ResearchTechController_StaticsPtr + 184) = 3;
     }
 
 }

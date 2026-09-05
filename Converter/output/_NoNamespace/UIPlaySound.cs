@@ -227,8 +227,6 @@ public class UIPlaySound
     // RVA   : 0x1579460   Offset: 0x1577C60   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_181579460(int64 this)
-        {
         this.volume = 0x3f800000;
         this.pitch = 0x3f800000;
         FUN_18044ef50(this,0);

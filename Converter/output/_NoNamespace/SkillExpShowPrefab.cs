@@ -285,10 +285,12 @@ public class SkillExpShowPrefab
                                           fVar6 = (float)KungfuSkillLvData.SkillGetMaxExp(lVar2,1);
                                           if (lVar5 != null) {
                                             Image.set_fillAmount(lVar5,fVar8 / fVar6,0);
-                                            uVar7 = Mathf.Max(**(uint32 **)(DAT_181d7deb0 + 184),
+                                            uVar7 = Mathf.Max(**(uint32 **)
+                                                                 (SkillExpShowPrefab_StaticsPtr + 184),
                                                                this.totalExp /
                                                                (float)(*(uint32 **)
-                                                                        (DAT_181d7deb0 + 184))[1],0);
+                                                                        (SkillExpShowPrefab_StaticsPtr +
+                                                                        184))[1],0);
                                             this.changeExpSpeed = uVar7;
                                             if (this.targetSkill != null) {
                                               this.originLv =
@@ -301,8 +303,8 @@ public class SkillExpShowPrefab
                                                 fVar8 = (float)AudioSource.get_volume(lVar2,0);
                                                 AudioSource.set_volume
                                                           (lVar2,fVar8 * *(float *)(*(int64 *)
-                                                                                     (DAT_181d4e010 + 184
-                                                                                     ) + 16),0);
+                                                                                     (
+                                                        GameController_StaticsPtr + 184) + 16),0);
                                               }
                                               SkillExpShowPrefab.RefreshUI(this,0);
                                               return;
@@ -338,8 +340,8 @@ public class SkillExpShowPrefab
     // RVA   : 0x972370   Offset: 0x970B70   Length: 0x4E
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181d7deb0 + 184) = 0x42480000;
-        *(uint32 *)(*(int64 *)(DAT_181d7deb0 + 184) + 4) = 0x40000000;
+        SkillExpShowPrefab.minSpeed = 0x42480000;
+        SkillExpShowPrefab.maxTime = 0x40000000;
     }
 
 }

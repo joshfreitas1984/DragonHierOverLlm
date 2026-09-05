@@ -339,8 +339,6 @@ public class UIEventListener
     // RVA   : 0x10E6D50   Offset: 0x10E5550   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1810e6d50(int64 this)
-        {
         this.needsActiveCollider = 1;
         FUN_18044ef50(this,0);
     }

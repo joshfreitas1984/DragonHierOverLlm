@@ -34,9 +34,9 @@ public class <HeroEnteringParty>d__54
     // RVA   : 0x8CAF80   Offset: 0x8C9780   Length: 0x186F
     private virtual bool MoveNext()
     {
+        var p_FinishParty_d__58 = *(int64*)(_FinishParty_d__58_StaticsPtr + 184);
         var plVar14 = *(int64*)(lVar14 + 184);
-        var pStatics_b060 = *(int64*)(DAT_181d6b060 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         int iVar2;
         uint uVar3;
         uint uVar4;
@@ -289,8 +289,8 @@ public class <HeroEnteringParty>d__54
             uVar6 = Int32.ToString(local_res18,0);
             if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,uVar6,0)) == null) goto LAB_1808cc7ea;
             uVar6 = Component.get_gameObject(lVar5,0);
-            if (*pStatics_e188 == 0) goto LAB_1808cc7ea;
-            uVar8 = *(uint64 *)(*pStatics_e188 + 144);
+            if (*pStatics == 0) goto LAB_1808cc7ea;
+            uVar8 = *(uint64 *)(*pStatics + 144);
             lVar5 = GlobalData.AddChild(uVar6,uVar8,0);
             plVar1 = (int64 *)(lVar14 + 216);
             *plVar1 = lVar5;
@@ -383,7 +383,7 @@ public class <HeroEnteringParty>d__54
                   lVar7 = FUN_18046c440(0);
                   if (lVar7 == null) goto LAB_1808cc7ea;
                   PlotController.SetPlotItem(lVar7,lVar5,1,0);
-                  lVar5 = *(int64 *)(pStatics_b060 + 16);
+                  lVar5 = *(int64 *)(p_FinishParty_d__58 + 16);
                   if (lVar5 == null) goto LAB_1808cc7ea;
                   uVar4 = FUN_180d8cf10(0,*(uint32 *)(lVar5 + 24),0);
                   if (*(uint32 *)(lVar5 + 24) <= uVar4) {
@@ -413,14 +413,14 @@ public class <HeroEnteringParty>d__54
                                               *(int *)(*(int64 *)(lVar14 + 192) + 24) + -1,
                                               DAT_181d643f8), lVar5 == null)) goto LAB_1808cc7ea;
                     if (*(char *)(lVar5 + 0x120) == false) {
-                      lVar5 = *(int64 *)(*(int64 *)(DAT_181d6c960 + 184) + 88);
+                      lVar5 = PlotController.FirstMeetTalkText;
                       if (lVar5 == null) goto LAB_1808cc7ea;
                       uVar3 = FUN_180d8cf10(0,*(uint32 *)(lVar5 + 24),0);
                       uVar6 = FUN_180002f80(lVar5,uVar3,DAT_181d7c9c0);
                       goto LAB_1808cb65b;
                     }
                   }
-                  lVar5 = *(int64 *)(pStatics_b060 + 8);
+                  lVar5 = *(int64 *)(p_FinishParty_d__58 + 8);
                   if (lVar5 == null) goto LAB_1808cc7ea;
                   uVar4 = FUN_180d8cf10(0,*(uint32 *)(lVar5 + 24),0);
                   if (*(uint32 *)(lVar5 + 24) <= uVar4) {

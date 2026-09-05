@@ -13,7 +13,7 @@ public class AttriPresetButtonController
         long lVar1;
         uint uVar2;
         ulong uVar3;
-        lVar1 = **(int64 **)(DAT_181d815f0 + 184);
+        lVar1 = StartMenuController._instance;
         uVar3 = Object.get_name(this,0);
         uVar2 = Int32.Parse(uVar3,0);
         if (lVar1 != null) {

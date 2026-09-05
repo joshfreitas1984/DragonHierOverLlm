@@ -41,8 +41,6 @@ public class UISnapshotPoint
     // RVA   : 0x168EBE0   Offset: 0x168D3E0   Length: 0x27
     public void /*ctor*/()
     {
-        void FUN_18168ebe0(int64 this)
-        {
         this.isOrthographic = 1;
         this.nearClip = 0xc2c80000;
         this.farClip = 0x42c80000;

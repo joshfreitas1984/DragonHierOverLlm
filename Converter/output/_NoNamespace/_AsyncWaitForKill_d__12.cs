@@ -70,8 +70,6 @@ public class <AsyncWaitForKill>d__12
     // RVA   : 0x21C390   Offset: 0x21AB90   Length: 0xC
     private virtual void SetStateMachine(IAsyncStateMachine stateMachine)
     {
-        void FUN_18021c390(int64 this,uint64 stateMachine)
-        {
         AsyncTaskMethodBuilder.SetStateMachine(this + 8,stateMachine,0);
     }
 

@@ -64,7 +64,8 @@ public class HeroHandBookIconController
                                 if (lVar5 != null) {
                                   lVar5 = HeroData.GetSkeletonGraphic(lVar5,uVar6,0);
                                   this.skeletonGraphic = lVar5;
-                                  lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+                                  lVar5 = *(int64 *)
+                                           (*(int64 *)(GameController_StaticsPtr + 184) + 8);
                                   if (lVar5 != null) {
                                     lVar5 = lVar5.isSummon;
                                     if (this.heroData != null) {
@@ -128,11 +129,11 @@ public class HeroHandBookIconController
         ulong uVar5;
         ulong uVar6;
         lVar1 = this.skeletonGraphic;
-        uVar6 = *(uint64 *)(*(int64 *)(DAT_181d66570 + 184) + 72);
+        uVar6 = MouseController.hoveredUI;
         uVar5 = Component.get_gameObject(this,0);
         cVar3 = Object.op_Inequality(uVar6,uVar5,0);
         if (!cVar3) {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+          lVar2 = GameController.difficultyExtraPoint;
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = *(int64 *)(lVar2 + 16);
           if (this.heroData == null) throw; // [null/range check failed]

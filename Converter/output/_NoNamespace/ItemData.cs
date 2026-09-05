@@ -266,7 +266,7 @@ public class ItemData
     // RVA   : 0xB73EA0   Offset: 0xB726A0   Length: 0x660
     public string GetItemIconName()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         long lVar3;
         ulong uVar4;
@@ -402,8 +402,8 @@ public class ItemData
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         case 4:
-          if (**(int **)(DAT_181d4ef00 + 184) == 2) {
-            lVar6 = *(int64 *)(pStatics + 0x510);
+          if (PlotController._instance == 2) {
+            lVar6 = *(int64 *)(pPlotController + 0x510);
             if ((lVar6 == null) ||
                (lVar6 = FUN_180127f50(lVar6,(int64)this.subType,
                                       (int64)this.itemLv), lVar6 == null))
@@ -420,7 +420,7 @@ public class ItemData
           uVar8 = String.Format("珍宝{0}_{1}",uVar8,uVar7,0);
           break;
         case 5:
-          lVar6 = *(int64 *)(pStatics + 0x530);
+          lVar6 = *(int64 *)(pPlotController + 0x530);
           if (lVar6 == null) {
         LAB_180b744f9:
                           // WARNING: Subroutine does not return
@@ -481,19 +481,18 @@ public class ItemData
     // RVA   : 0xB73990   Offset: 0xB72190   Length: 0x117
     public bool DetectPoisonNum()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         if (this.poisonNumDetected) {
           return true;
         }
-        if ((((*pStatics != 0) &&
-             (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
-            (lVar1 = WorldData.Player(lVar1,0)) != null) &&
-           (lVar1 = *(int64 *)(lVar1 + 0x168)) != null) {
-          if (*(uint32 *)(lVar1 + 24) < 2) {
+        if ((((GameController._instance != null) &&
+             (lVar1 = GameController._instance.worldData) != null
+             ) && (lVar1 = WorldData.Player(lVar1,0)) != null) &&
+           (lVar1 = lVar1.showRoomChangeFame) != null) {
+          if (lVar1.cityAreaID < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (this.poisonNum <= *(float *)(*(int64 *)(lVar1 + 16) + 36)) {
+          if (this.poisonNum <= *(float *)(lVar1.chapter + 36)) {
             return true;
           }
           return false;
@@ -673,7 +672,7 @@ public class ItemData
     // RVA   : 0xB74780   Offset: 0xB72F80   Length: 0x80
     public string GetItemTypeDescribe(bool italic)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -686,7 +685,7 @@ public class ItemData
         case 2:
         case 5:
         case 6:
-          lVar1 = *(int64 *)(pStatics + 0x4e8);
+          lVar1 = *(int64 *)(pPlotController + 0x4e8);
           if (lVar1 == null) goto LAB_180b74a27;
           uVar4 = this.itemLv;
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
@@ -697,17 +696,17 @@ public class ItemData
                             (this.type,this.subType,0);
           uVar2 = String.Concat(uVar2,uVar3,0);
           uVar2 = GlobalData.GenerateRareLvColorText(uVar2,this.itemLv,0);
-          lVar1 = *(int64 *)(pStatics + 0x500);
+          lVar1 = *(int64 *)(pPlotController + 0x500);
           break;
         case 3:
           if ((this.bookData == null) ||
              (lVar1 = BookData.DataBase(this.bookData,0)) == null)
           goto LAB_180b74a27;
           uVar2 = KungfuSkillData.TypeDescribe(lVar1,0);
-          lVar1 = *(int64 *)(pStatics + 0x4f8);
+          lVar1 = *(int64 *)(pPlotController + 0x4f8);
           break;
         case 4:
-          lVar1 = *(int64 *)(pStatics + 0x4e8);
+          lVar1 = *(int64 *)(pPlotController + 0x4e8);
           if (lVar1 == null) goto LAB_180b74a27;
           uVar2 = FUN_180002f80(lVar1,this.itemLv,DAT_181d7c9c0);
           uVar3 = GlobalData.GetItemTypeString
@@ -747,7 +746,7 @@ public class ItemData
         long lVar3;
         uVar2 = this.rareLv;
         lVar3 = (int64)(int)uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4f8);
+        lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4f8);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0,uVar2);
@@ -808,19 +807,19 @@ public class ItemData
     // RVA   : 0xB75D80   Offset: 0xB74580   Length: 0x115
     public ItemData SetMaterialData(int _subType, int _itemLv, int _rareLv)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         this.subType = _subType;
         this.itemLv = _itemLv;
         this.rareLv = _rareLv;
-        lVar1 = *(int64 *)(pStatics + 0x4e8);
+        lVar1 = *(int64 *)(pPlotController + 0x4e8);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= _itemLv) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar2 = lVar1[_itemLv];
-          lVar1 = *(int64 *)(pStatics + 0x530);
+          lVar1 = *(int64 *)(pPlotController + 0x530);
           if (lVar1 != null) {
             if (*(uint32 *)(lVar1 + 24) <= _subType) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -859,7 +858,7 @@ public class ItemData
         long lVar2;
         if (this.bookData != null) {
           this.bookData.skillID = _skillID;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4f8);
+          lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4f8);
           if (lVar2 != null) {
             uVar1 = Mathf.Clamp(_rareLv,0,*(int *)(lVar2 + 24) + -1,0);
             this.rareLv = uVar1;
@@ -899,7 +898,7 @@ public class ItemData
         uVar3 = Mathf.Clamp(_itemLv,0,5);
         this.itemLv = uVar3;
         this.subType = _subType;
-        lVar8 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x510);
+        lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x510);
         if (lVar8 != null) {
           if (*lVar8.fullIdentified <= _subType) {
             uVar9 = il2cpp_internal();
@@ -1062,7 +1061,7 @@ public class ItemData
           lVar3 = this.materialData.extraAddData;
           goto LAB_180b75ac3;
         }
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar3 = GameController.lockObj;
         if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 56)) != null) {
           iVar1 = *(int *)(lVar3 + 24);
           while( true ) {
@@ -1125,7 +1124,7 @@ public class ItemData
           uVar2 = Mathf.RoundToInt(((float)lVar3.enhanceLv * 0.2 + 1.0) * fVar4 * fVar6 * fVar5 *
                                     ((float)lVar3.speEnhanceLv * 0.1 + 1.0),0);
           this.value = uVar2;
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5d0);
+          lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5d0);
           if (lVar3 == null) goto LAB_180b73965;
           fVar4 = (float)FUN_1800d6780(lVar3,this.subType,DAT_181d796d8);
           iVar1 = this.itemLv;
@@ -1314,14 +1313,14 @@ public class ItemData
     // RVA   : 0xB73CF0   Offset: 0xB724F0   Length: 0xFA
     public int GetContributionCost(int heroID)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           lVar1 = WorldData.GetHero(lVar1,heroID,0);
           if (lVar1 != null) {
-            if (*(char *)(lVar1 + 180) != false) {
+            if (lVar1.hour) {
               return 0;
             }
             uVar2 = Mathf.RoundToInt((float)this.value * 0.1,0);
@@ -1341,15 +1340,15 @@ public class ItemData
     // RVA   : 0xB74AB0   Offset: 0xB732B0   Length: 0x107
     public int GetReadBookContributionCost(int heroID)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         float fVar3;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           lVar1 = WorldData.GetHero(lVar1,heroID,0);
           if (lVar1 != null) {
-            if (*(char *)(lVar1 + 180) != false) {
+            if (lVar1.hour) {
               return 0;
             }
             fVar3 = (float)FUN_1801f7f00(0x40000000);
@@ -1582,7 +1581,7 @@ public class ItemData
         uint uVar1;
         bool cVar2;
         ulong uVar3;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
         LAB_180b756aa:
           cVar2 = FUN_180d6ca90(this.checkName,0);
           if (!cVar2) {
@@ -1594,7 +1593,7 @@ public class ItemData
           }
         }
         else {
-          if (*(char *)(*(int64 *)(DAT_181d4ef00 + 184) + 4) != false) goto LAB_180b756aa;
+          if (*(char *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4) != false) goto LAB_180b756aa;
         }
         cVar2 = FUN_180d6ca90(this.setName,0);
         if (!cVar2) {

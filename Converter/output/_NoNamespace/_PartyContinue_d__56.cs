@@ -38,7 +38,6 @@ public class <PartyContinue>d__56
     private virtual bool MoveNext()
     {
         var plVar2 = *(int64*)(lVar2 + 184);
-        var pStatics = *(int64*)(DAT_181d9d3c0 + 184);
         uint uVar1;
         long lVar2;
         uint uVar3;
@@ -193,7 +192,7 @@ public class <PartyContinue>d__56
           local_98 = uVar7;
           local_90 = uVar3;
           GameController.ShowTextAtPos(lVar5,uVar6,&local_98,20,&local_88,0);
-          if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+          if (PlotController._instance != 2) {
             lVar4 = *(int64 *)(lVar2 + 192);
             lVar5 = **(int64 **)(DAT_181d51180 + 184);
             if (lVar4 == null) throw; // [null/range check failed]
@@ -204,7 +203,7 @@ public class <PartyContinue>d__56
             uVar6 = lVar4[uVar1];
             fVar12 = (float)Random.get_value(0);
             if (0.5 <= fVar12) {
-              lVar4 = *(int64 *)(pStatics + 24);
+              lVar4 = DrinkUIController.DrinkPoemText;
               if (lVar4 == null) throw; // [null/range check failed]
               uVar3 = FUN_180d8cf10(0,*(uint32 *)(lVar4 + 24),0);
               lVar4 = FUN_180002f80(lVar4,uVar3,DAT_181d7c9c0);
@@ -212,7 +211,7 @@ public class <PartyContinue>d__56
               uVar7 = String.Replace(lVar4,"，","\n",0);
             }
             else {
-              lVar4 = *(int64 *)(pStatics + 16);
+              lVar4 = DrinkUIController.DrinkTalkText;
               if (lVar4 == null) throw; // [null/range check failed]
               uVar3 = FUN_180d8cf10(0,*(uint32 *)(lVar4 + 24),0);
               uVar7 = FUN_180002f80(lVar4,uVar3,DAT_181d7c9c0);

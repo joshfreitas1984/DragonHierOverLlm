@@ -215,8 +215,7 @@ public class InfoController
     // RVA   : 0xB6D4A0   Offset: 0xB6BCA0   Length: 0x782
     public void RealAddInfoTab(InfoTabData newInfoTab)
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -238,7 +237,7 @@ public class InfoController
         uint64 uStack_20;
         local_28 = 0;
         uStack_20 = 0;
-        lVar2 = *(int64 *)(pStatics_e010 + 8);
+        lVar2 = GameController.difficultyExtraPoint;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
           iVar1 = PlayerPrefDictionary.GetInt(lVar2,"RightPopInfo",0);
           if (iVar1 == 1) {
@@ -268,7 +267,7 @@ public class InfoController
                       lVar3 = GameObject.get_transform(lVar2,0);
                       if (lVar3 != null) {
                         lVar3 = Transform.Find(lVar3,"Back",0);
-                        lVar8 = *(int64 *)(pStatics_e010 + 8);
+                        lVar8 = GameController.difficultyExtraPoint;
                         if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
                           iVar1 = PlayerPrefDictionary.GetInt(lVar8,"RightPopInfo",0);
                           if (iVar1 == 1) {
@@ -308,9 +307,9 @@ public class InfoController
                                 lVar3 = Transform.Find(lVar3,"Pic",0);
                                 if (lVar3 == null) throw; // [null/range check failed]
                                 lVar3 = Component.GetComponent(lVar3,DAT_181d6bc40);
-                                if (*pStatics_6270 == 0) throw; // [null/range check failed]
+                                if (*pStatics == 0) throw; // [null/range check failed]
                                 uVar4 = TextureController.LoadAtlasSprite
-                                                  (*pStatics_6270,
+                                                  (*pStatics,
                                                    *(uint64 *)(newInfoTab + 24),
                                                    *(uint64 *)(newInfoTab + 32),0);
                                 if (lVar3 == null) throw; // [null/range check failed]
@@ -415,43 +414,43 @@ public class InfoController
     // RVA   : 0xB6DC30   Offset: 0xB6C430   Length: 0x397
     public void RealAddInfo(InfoData newInfo)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
         long lVar4;
         while( true ) {
-          if (((*pStatics == 0) ||
-              (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
-             (lVar4 = *(int64 *)(lVar4 + 208)) == null) throw; // [null/range check failed]
-          iVar1 = *(int *)(lVar4 + 24);
-          if (iVar1 < **(int **)(DAT_181d5a6f8 + 184)) break;
+          if (((GameController._instance == null) ||
+              (lVar4 = GameController._instance.worldData, lVar4 == null
+              )) || (lVar4 = lVar4.infos) == null) throw; // [null/range check failed]
+          iVar1 = lVar4.cityAreaID;
+          if (iVar1 < InfoTextList.paragraphHistory) break;
           lVar4 = FUN_18046c0a0(0);
-          if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-             (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 208)) == null) throw; // [null/range check failed]
+          if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+             (lVar4 = *(int64 *)(lVar4.villageAreaID + 208)) == null) throw; // [null/range check failed]
           FUN_18182b220(lVar4,0,DAT_181d66ef8);
         }
-        if (((*pStatics != 0) &&
-            (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar4 = *(int64 *)(lVar4 + 208)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar4 = GameController._instance.worldData) != null)
+           && (lVar4 = lVar4.infos) != null) {
           FUN_181827900(lVar4,newInfo,DAT_181d66df8);
           if (this.infoText != null) {
             lVar4 = GameObject.GetComponent(this.infoText,DAT_181d9fed8);
-            if ((*pStatics != 0) &&
-               (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-              lVar2 = *(int64 *)(lVar2 + 208);
-              if ((((*pStatics != 0) &&
-                   (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
-                  (lVar3 = *(int64 *)(lVar3 + 208)) != null) && (lVar2 != null)) {
-                iVar1 = *(int *)(lVar3 + 24);
-                if (*(uint32 *)(lVar2 + 24) <= iVar1 - 1U) {
+            if ((GameController._instance != null) &&
+               (lVar2 = GameController._instance.worldData,
+               lVar2 != null)) {
+              lVar2 = lVar2.infos;
+              if ((((GameController._instance != null) &&
+                   (lVar3 = GameController._instance.worldData,
+                   lVar3 != null)) && (lVar3 = lVar3.infos) != null) && (lVar2 != null)) {
+                iVar1 = lVar3.cityAreaID;
+                if (lVar2.cityAreaID <= iVar1 - 1U) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 if ((lVar4 != null) &&
-                   (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 16) + 24 + (int64)iVar1 * 8),
+                   (lVar2 = *(int64 *)(lVar2.chapter + 24 + (int64)iVar1 * 8),
                    lVar2 != null)) {
-                  InfoTextList.Add(lVar4,*(uint32 *)(lVar2 + 16),*(uint64 *)(lVar2 + 24),
-                                    *(uint64 *)(lVar2 + 32),1,0);
+                  InfoTextList.Add(lVar4,lVar2.chapter,lVar2.cityAreaID,
+                                    lVar2.villageAreaID,1,0);
                   return;
                 }
               }
@@ -474,7 +473,6 @@ public class InfoController
     // RVA   : 0xB6D260   Offset: 0xB6BA60   Length: 0x237
     public void BuildInfoList()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
         int iVar3;
@@ -486,11 +484,11 @@ public class InfoController
               BetterList_1.Clear(lVar1,DAT_181d82318);
               iVar3 = 0;
               while( true ) {
-                if (((*pStatics == 0) ||
-                    (lVar1 = *(int64 *)(*pStatics + 32)) == null) ||
-                   (lVar1 = *(int64 *)(lVar1 + 208)) == null) throw; // [null/range check failed]
+                if (((GameController._instance == null) ||
+                    (lVar1 = GameController._instance.worldData,
+                    lVar1 == null)) || (lVar1 = lVar1.infos) == null) throw; // [null/range check failed]
                 lVar2 = this.infoText;
-                if (*(int *)(lVar1 + 24) <= iVar3) break;
+                if (lVar1.cityAreaID <= iVar3) break;
                 if (lVar2 == null) throw; // [null/range check failed]
                 lVar1 = GameObject.GetComponent(lVar2,DAT_181d9fed8);
                 lVar2 = FUN_18046c0a0(0);
@@ -506,7 +504,7 @@ public class InfoController
               if (lVar2 != null) {
                 lVar1 = GameObject.GetComponent(lVar2,DAT_181d9fed8);
                 if (lVar1 != null) {
-                  *(uint8 *)(lVar1 + 72) = 1;
+                  lVar1.Forces = 1;
                   return;
                 }
               }

@@ -35,14 +35,14 @@ public class ManageTagController
     // RVA   : 0xA8DC30   Offset: 0xA8C430   Length: 0x57
     public static ManageTagController get_Instance()
     {
-        return **(uint64 **)(DAT_181d627f0 + 184);
+        return ManageTagController._instance;
     }
 
     // Token : 0x600188A
     // RVA   : 0xA8BD20   Offset: 0xA8A520   Length: 0x61
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d627f0 + 184);
+        puVar1 = *(uint64 **)(ManageTagController_StaticsPtr + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -59,7 +59,7 @@ public class ManageTagController
         iVar4 = 0;
         while( true ) {
           local_res18[0] = iVar4;
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d627f0 + 184) + 8);
+          lVar1 = ManageTagController.availableCategory;
           if (lVar1 == null) break;
           if (lVar1.Count <= iVar4) {
             return;
@@ -125,8 +125,8 @@ public class ManageTagController
     // RVA   : 0xA8CDD0   Offset: 0xA8B5D0   Length: 0x60C
     public void ShowManageTagUI(HeroData _targetHero, bool _useMoney)
     {
-        var pStatics_27f0 = *(int64*)(DAT_181d627f0 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pManageTagController = *(int64*)(ManageTagController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -160,8 +160,8 @@ public class ManageTagController
               lVar6 = Transform.Find(lVar6,"TargetHero",0);
               if (lVar6 != null) {
                 uVar7 = Component.get_gameObject(lVar6,0);
-                if (*pStatics_e188 != 0) {
-                  uVar1 = *(uint64 *)(*pStatics_e188 + 144);
+                if (*pStatics != 0) {
+                  uVar1 = *(uint64 *)(*pStatics + 144);
                   uVar7 = GlobalData.AddChild(uVar7,uVar1,0);
                   this.newObj = uVar7;
                   if (this.newObj != null) {
@@ -176,7 +176,8 @@ public class ManageTagController
                             lVar6 = GameObject.GetComponent(this.newObj,DAT_181d9fb20);
                             if (lVar6 != null) {
                               HeroIconController.AutoSetName(lVar6,0);
-                              lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                              lVar6 = *(int64 *)
+                                       (*(int64 *)(GameController_StaticsPtr + 184) + 32);
                               if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 0x198)) != null) {
                                 lVar6 = FUN_1808acf30(lVar6,DAT_181d94d28);
                                 if (lVar6 != null) {
@@ -195,7 +196,8 @@ public class ManageTagController
                                         ManageTagController.FreshManageTagUI(this,0);
                                         return;
                                       }
-                                      lVar8 = *(int64 *)(pStatics_27f0 + 8);
+                                      lVar8 = *(int64 *)
+                                               (pManageTagController + 8);
                                       if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                                         FUN_1800d6620();
@@ -208,7 +210,8 @@ public class ManageTagController
                                                             DAT_181d7c4d0);
                                     } while (!cVar3);
                                     lVar8 = this.allTagList;
-                                    lVar2 = *(int64 *)(pStatics_27f0 + 8);
+                                    lVar2 = *(int64 *)
+                                             (pManageTagController + 8);
                                     if (lVar2 == null) {
                           // WARNING: Subroutine does not return
                                       FUN_1800d6620();
@@ -348,7 +351,8 @@ public class ManageTagController
                                   if (*(int *)(lVar9.heroTagData + 24) <= (int)uVar14) {
                                     iVar4 = 0;
                                     while( true ) {
-                                      lVar9 = *(int64 *)(*(int64 *)(DAT_181d627f0 + 184) + 8);
+                                      lVar9 = *(int64 *)
+                                               (*(int64 *)(ManageTagController_StaticsPtr + 184) + 8);
                                       if (lVar9 == null) break;
                                       if (lVar9.summonLv <= iVar4) {
                                         return;
@@ -579,7 +583,7 @@ public class ManageTagController
     // RVA   : 0xA8BE70   Offset: 0xA8A670   Length: 0x480
     public bool CheckMeetOneCondition(HeroData checkHero, string requirement)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         ManageTagController.CheckMeetOneCondition(uint64 this,int64 checkHero,int64 requirement)
         {
@@ -618,18 +622,18 @@ public class ManageTagController
         uVar4 = Regex.Replace(requirement,"[^\\u4e00-\\u9fa5]","",0);
         uVar5 = Regex.Replace(requirement,"[\\u4e00-\\u9fa5]","",0);
         fVar8 = (float)Single.Parse(uVar5,0);
-        lVar7 = *(int64 *)(pStatics + 0x490);
+        lVar7 = *(int64 *)(pPlotController + 0x490);
         if (lVar7 == null) goto LAB_180a8c2eb;
         cVar2 = FUN_1818279a0(lVar7,uVar4,DAT_181d7c4d0);
         if (!cVar2) {
         LAB_180a8c08a:
-          lVar7 = *(int64 *)(pStatics + 0x498);
+          lVar7 = *(int64 *)(pPlotController + 0x498);
           if (lVar7 == null) goto LAB_180a8c2eb;
           cVar2 = FUN_1818279a0(lVar7,uVar4,DAT_181d7c4d0);
           if (cVar2) {
             if (checkHero == null) goto LAB_180a8c2eb;
             lVar7 = *(int64 *)(checkHero + 0x140);
-            lVar6 = *(int64 *)(pStatics + 0x498);
+            lVar6 = *(int64 *)(pPlotController + 0x498);
             if (lVar6 == null) goto LAB_180a8c2eb;
             uVar3 = FUN_1817ff280(lVar6,uVar4,DAT_181d7c648);
             if (lVar7 == null) goto LAB_180a8c2eb;
@@ -639,7 +643,7 @@ public class ManageTagController
             pfVar1 = (float *)(*(int64 *)(lVar7 + 16) + 32 + (int64)(int)uVar3 * 4);
             if (*pfVar1 <= fVar8 && fVar8 != *pfVar1) goto LAB_180a8c240;
           }
-          lVar7 = *(int64 *)(pStatics + 0x4a8);
+          lVar7 = *(int64 *)(pPlotController + 0x4a8);
           if (lVar7 == null) goto LAB_180a8c2eb;
           cVar2 = FUN_1818279a0(lVar7,uVar4,DAT_181d7c4d0);
           if (cVar2) {
@@ -649,7 +653,7 @@ public class ManageTagController
               FUN_1800d6620();
             }
             lVar7 = *(int64 *)(checkHero + 0x158);
-            lVar6 = *(int64 *)(pStatics + 0x4a8);
+            lVar6 = *(int64 *)(pPlotController + 0x4a8);
             if (lVar6 == null) goto LAB_180a8c2eb;
             uVar3 = FUN_1817ff280(lVar6,uVar4,DAT_181d7c648);
             if (lVar7 == null) goto LAB_180a8c2eb;
@@ -665,7 +669,7 @@ public class ManageTagController
         else {
           if (checkHero == null) goto LAB_180a8c2eb;
           lVar7 = *(int64 *)(checkHero + 0x128);
-          lVar6 = *(int64 *)(pStatics + 0x490);
+          lVar6 = *(int64 *)(pPlotController + 0x490);
           if (lVar6 == null) goto LAB_180a8c2eb;
           uVar3 = FUN_1817ff280(lVar6,uVar4,DAT_181d7c648);
           if (lVar7 == null) goto LAB_180a8c2eb;
@@ -695,7 +699,7 @@ public class ManageTagController
             ManageTagController.UnderstandTag(this,tagIDString,0);
             return;
           }
-          lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar5 = GameController.lockObj;
           uVar2 = Int32.Parse(tagIDString,0);
           if (lVar5 != null) {
             lVar5 = GameDataController.GetTagDataBase(lVar5,uVar2,0);
@@ -723,7 +727,7 @@ public class ManageTagController
               if (lVar1 == null) throw; // [null/range check failed]
               HeroData.ChangeMoney(lVar1,-iVar4,1,0);
             }
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
+            lVar1 = PlotController.LeftFaceHideOffset;
             if (lVar5 != null) {
               uVar6 = String.Format("领悟{0}",*(uint64 *)(lVar5 + 24),0);
               uVar2 = HeroTagDataBase.GetCostTime(lVar5,0);
@@ -740,13 +744,12 @@ public class ManageTagController
     // RVA   : 0xA8D8A0   Offset: 0xA8C0A0   Length: 0x1FA
     public void UnderstandTag(string tagIDString)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         uint uVar2;
         long lVar3;
         uint uVar4;
         lVar1 = this.targetHero;
-        lVar3 = *(int64 *)(pStatics + 32);
+        lVar3 = GameController.lockObj;
         uVar2 = Int32.Parse(tagIDString,0);
         if (lVar3 != null) {
           lVar3 = GameDataController.GetTagDataBase(lVar3,uVar2,0);
@@ -761,7 +764,7 @@ public class ManageTagController
                 ManageTagController.FreshManageTagUI(this,0);
                 if (this.targetHero != null) {
                   if (this.targetHero.heroID == null) {
-                    lVar1 = *(int64 *)(pStatics + 32);
+                    lVar1 = GameController.lockObj;
                     if (lVar1 == null) throw; // [null/range check failed]
                     GameDataController.ChangeAchStats(lVar1,12,0x3f800000);
                   }
@@ -795,9 +798,7 @@ public class ManageTagController
           FUN_181827900(lVar1,"志向",DAT_181d7c3d0);
           FUN_181827900(lVar1,"喜好",DAT_181d7c3d0);
           FUN_181827900(lVar1,"战法",DAT_181d7c3d0);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181d627f0 + 184) + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          ManageTagController.availableCategory = lVar1;
           return;
         }
     }

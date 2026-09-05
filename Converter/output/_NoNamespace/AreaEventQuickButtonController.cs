@@ -118,11 +118,10 @@ public class AreaEventQuickButtonController
     // RVA   : 0x7EC960   Offset: 0x7EB160   Length: 0x250
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+        lVar1 = AreaBuildController._instance;
         if (lVar1 != null) {
-          if (*(char *)(lVar1 + 48) != false) {
+          if (lVar1.buildMode) {
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar3 = (int64 *)0;
             if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
@@ -131,10 +130,11 @@ public class AreaEventQuickButtonController
             NGUITools.PlaySound(plVar3,0);
             return;
           }
-          if (*pStatics != 0) {
+          if (PlotController._instance != null) {
             PlotController.StartPlotEvent
-                      (*pStatics,this.targetEventData,0);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+                      (PlotController._instance,this.targetEventData,0
+                      );
+            lVar1 = PlotController.LaBaFestivelResultTalkText;
             if (lVar1 != null) {
               *(uint8 *)(lVar1 + 225) = 1;
               return;
@@ -147,17 +147,18 @@ public class AreaEventQuickButtonController
     // RVA   : 0x7ECBC0   Offset: 0x7EB3C0   Length: 0x17C
     public void OnPointerEnter()
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(pStatics + 56);
-        lVar2 = *(int64 *)(pStatics + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
+        lVar2 = PlotController.LaBaFestivelResultTalkText;
         if (lVar2 != null) {
           uVar3 = AreaController.GetEventObj(lVar2,this.targetEventData,0);
           if (lVar1 != null) {
             AreaController.FocusOnTarget
-                      (lVar1,uVar3,*(uint32 *)(pStatics + 20),0);
+                      (lVar1,uVar3,*(uint32 *)(pPlotController + 20)
+                       ,0);
             if (this.targetEventData != null) {
               this.targetEventData.hovered = 1;
               return;
@@ -177,7 +178,7 @@ public class AreaEventQuickButtonController
     public GameObject EventObj()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.GetEventObj(lVar1,this.targetEventData,0);
           return;
@@ -188,8 +189,6 @@ public class AreaEventQuickButtonController
     // RVA   : 0x7ECFE0   Offset: 0x7EB7E0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1807ecfe0(int64 this)
-        {
         this.refreshTime = 0x3e4ccccd;
         FUN_18044ef50(this,0);
     }

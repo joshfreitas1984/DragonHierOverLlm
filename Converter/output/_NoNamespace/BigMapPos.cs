@@ -122,8 +122,6 @@ public class BigMapPos
     // RVA   : 0xCD5DC0   Offset: 0xCD45C0   Length: 0x23
     public Vector2 ToVector2()
     {
-        uint64 FUN_180cd5da0(int64 this,float param_2)
-        {
         return CONCAT44(this.y * param_2,param_2 * this.x);
     }
 
@@ -131,8 +129,6 @@ public class BigMapPos
     // RVA   : 0xCD5DA0   Offset: 0xCD45A0   Length: 0x1A
     public Vector2 ToVector2(float multi)
     {
-        uint64 FUN_180cd5da0(int64 this,float multi)
-        {
         return CONCAT44(this.y * multi,multi * this.x);
     }
 

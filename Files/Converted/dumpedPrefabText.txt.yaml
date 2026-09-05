@@ -1388,7 +1388,7 @@
     translated: "Inner Power"
   - subIndex: 4
     text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
   - subIndex: 5
     text: "恢复5%已损失架势"
     translated: "Restore 5% Stance Lost"
@@ -1462,7 +1462,7 @@
 - raw: "体力\\n♦体力小于50时，每减少1点-1%连击/闪避。\\n♦体力恢复可超上限，每超上限1点+0.5%连击/命中。\\n♦体力超上限时，每回合衰减超出部分50%(最少5点)。"
   splits:
   - text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
   - subIndex: 1
     text: "体力小于50时，每减少1点-1%连击"
     translated: "When your stamina is less than 50, every 1 point decrease grants ‑1% chance to combo."
@@ -3502,7 +3502,7 @@
     translated: "Shortcut keys"
   - subIndex: 2
     text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
   - subIndex: 3
     text: "恢复15%已损失架势"
     translated: "Restore 15% Stance Damaged"
@@ -5581,7 +5581,7 @@
     translated: "Inner Power"
   - subIndex: 4
     text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
   - subIndex: 5
     text: "恢复10%已损失架势"
     translated: "Restore 10% Stance Lost"

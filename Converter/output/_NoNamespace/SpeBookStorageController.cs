@@ -32,14 +32,14 @@ public class SpeBookStorageController
     // RVA   : 0x97B8A0   Offset: 0x97A0A0   Length: 0x57
     public static SpeBookStorageController get_Instance()
     {
-        return **(uint64 **)(DAT_181d7efb0 + 184);
+        return SpeBookStorageController._instance;
     }
 
     // Token : 0x60020C2
     // RVA   : 0x97A620   Offset: 0x978E20   Length: 0x61
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d7efb0 + 184);
+        puVar1 = *(uint64 **)(SpeBookStorageController_StaticsPtr + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -91,8 +91,7 @@ public class SpeBookStorageController
     // RVA   : 0x97AF00   Offset: 0x979700   Length: 0x3F8
     public void RefreshUI()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         ulong uVar1;
         long lVar2;
         long lVar3;
@@ -103,14 +102,14 @@ public class SpeBookStorageController
         GlobalData.DeleteAllChild(uVar1,0);
         iVar5 = 0;
         while( true ) {
-          if ((((*pStatics_df90 == 0) ||
-               (lVar2 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-              (lVar2 = *(int64 *)(lVar2 + 0x218)) == null) ||
-             (lVar2 = *(int64 *)(lVar2 + 40)) == null) throw; // [null/range check failed]
+          if ((((GameController._instance == null) ||
+               (lVar2 = GameController._instance.worldData,
+               lVar2 == null)) || (lVar2 = lVar2.speBookStorage) == null) ||
+             (lVar2 = lVar2.forceAreaID) == null) throw; // [null/range check failed]
           uVar1 = this.bookGrid;
-          if (*(int *)(lVar2 + 24) <= iVar5) break;
-          if (*pStatics_e188 == 0) throw; // [null/range check failed]
-          uVar4 = *(uint64 *)(*pStatics_e188 + 160);
+          if (lVar2.cityAreaID <= iVar5) break;
+          if (*pStatics == 0) throw; // [null/range check failed]
+          uVar4 = *(uint64 *)(*pStatics + 160);
           uVar1 = GlobalData.AddChild(uVar1,uVar4,0);
           this.temp = uVar1;
           if (this.temp == null) throw; // [null/range check failed]
@@ -121,11 +120,11 @@ public class SpeBookStorageController
              (lVar3 = *(int64 *)(lVar3 + 40)) == null) throw; // [null/range check failed]
           uVar1 = FUN_180002f80(lVar3,iVar5);
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint64 *)(lVar2 + 32) = uVar1;
+          lVar2.villageAreaID = uVar1;
           if (this.temp == null) throw; // [null/range check failed]
           lVar2 = GameObject.GetComponent(this.temp,DAT_181da0070);
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar2 + 40) = 1;
+          lVar2.forceAreaID = 1;
           if (this.temp == null) throw; // [null/range check failed]
           lVar2 = GameObject.GetComponent(this.temp,DAT_181da0070);
           if (lVar2 == null) throw; // [null/range check failed]
@@ -135,9 +134,9 @@ public class SpeBookStorageController
         GlobalData.SortChild(uVar1,0);
         if (this.speAddText != null) {
           uVar1 = GameObject.GetComponent(this.speAddText,DAT_181da1eb0);
-          if (((*pStatics_df90 != 0) &&
-              (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar2 = *(int64 *)(lVar2 + 0x220)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar2 = GameController._instance.worldData, lVar2 != null
+              )) && (lVar2 = lVar2.speBookStorageSpeAdd) != null) {
             uVar4 = HeroSpeAddData.GetDescribe(lVar2,1,1,2,0,0);
             LTLocalization.SetText(uVar1,uVar4,0);
             return;
@@ -176,23 +175,24 @@ public class SpeBookStorageController
     // RVA   : 0x97A690   Offset: 0x978E90   Length: 0x22B
     public void PutInBookChoosen()
     {
-        var pStatics_2370 = *(int64*)(DAT_181d92370 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d92370 + 184);
         long lVar1;
         long lVar2;
-        if ((*pStatics_df90 != 0) &&
-           (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           lVar1 = WorldData.Player(lVar1,0);
-          if ((*pStatics_2370 != 0) &&
-             (lVar2 = *(int64 *)(*pStatics_2370 + 72)) != null) {
+          if ((*pStatics != 0) &&
+             (lVar2 = *(int64 *)(*pStatics + 72)) != null) {
             lVar2 = GameObject.GetComponent(lVar2,DAT_181da0070);
             if ((lVar2 != null) && (lVar1 != null)) {
               HeroData.LoseItem(lVar1,*(uint64 *)(lVar2 + 32),1,0);
-              if ((*pStatics_df90 != 0) &&
-                 (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-                lVar1 = *(int64 *)(lVar1 + 0x218);
-                if ((*pStatics_2370 != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics_2370 + 72)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar1 = GameController._instance.worldData,
+                 lVar1 != null)) {
+                lVar1 = lVar1.speBookStorage;
+                if ((*pStatics != 0) &&
+                   (lVar2 = *(int64 *)(*pStatics + 72)) != null) {
                   lVar2 = GameObject.GetComponent(lVar2,DAT_181da0070);
                   if ((lVar2 != null) && (lVar1 != null)) {
                     ItemListData.GetItem(lVar1,*(uint64 *)(lVar2 + 32),0,0);
@@ -234,23 +234,24 @@ public class SpeBookStorageController
     // RVA   : 0x97B3B0   Offset: 0x979BB0   Length: 0x241
     public void TakeOutBookChoosen()
     {
-        var pStatics_2370 = *(int64*)(DAT_181d92370 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d92370 + 184);
         long lVar1;
         long lVar2;
-        if ((*pStatics_df90 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-          lVar2 = *(int64 *)(lVar2 + 0x218);
-          if ((*pStatics_2370 != 0) &&
-             (lVar1 = *(int64 *)(*pStatics_2370 + 72)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
+          lVar2 = lVar2.speBookStorage;
+          if ((*pStatics != 0) &&
+             (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
             lVar1 = GameObject.GetComponent(lVar1,DAT_181da0070);
             if ((lVar1 != null) && (lVar2 != null)) {
               ItemListData.LoseItem(lVar2,*(uint64 *)(lVar1 + 32),0,0);
-              if ((*pStatics_df90 != 0) &&
-                 (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar2 = GameController._instance.worldData,
+                 lVar2 != null)) {
                 lVar2 = WorldData.Player(lVar2,0);
-                if ((*pStatics_2370 != 0) &&
-                   (lVar1 = *(int64 *)(*pStatics_2370 + 72)) != null) {
+                if ((*pStatics != 0) &&
+                   (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
                   lVar1 = GameObject.GetComponent(lVar1,DAT_181da0070);
                   if ((lVar1 != null) && (lVar2 != null)) {
                     HeroData.GetItem(lVar2,*(uint64 *)(lVar1 + 32),1,0,0xffffffff,0,0);
@@ -269,27 +270,26 @@ public class SpeBookStorageController
     // RVA   : 0x97AA30   Offset: 0x979230   Length: 0x4CA
     public void RefreshBookStorageSpeAdd()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
         long lVar4;
         int iVar5;
         float fVar6;
-        if (((*pStatics != 0) &&
-            (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar2 = *(int64 *)(lVar2 + 0x220)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar2 = GameController._instance.worldData) != null)
+           && (lVar2 = lVar2.speBookStorageSpeAdd) != null) {
           HeroSpeAddData.Reset(lVar2,0);
           iVar5 = 0;
           while( true ) {
-            if ((((*pStatics == 0) ||
-                 (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-                (lVar2 = *(int64 *)(lVar2 + 0x218)) == null) ||
-               (lVar2 = *(int64 *)(lVar2 + 40)) == null) throw; // [null/range check failed]
-            if (*(int *)(lVar2 + 24) <= iVar5) break;
+            if ((((GameController._instance == null) ||
+                 (lVar2 = GameController._instance.worldData,
+                 lVar2 == null)) || (lVar2 = lVar2.speBookStorage) == null) ||
+               (lVar2 = lVar2.forceAreaID) == null) throw; // [null/range check failed]
+            if (lVar2.cityAreaID <= iVar5) break;
             lVar2 = FUN_18046c0a0(0);
-            if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
-            lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 0x220);
+            if ((lVar2 == null) || (lVar2.villageAreaID == null)) throw; // [null/range check failed]
+            lVar2 = *(int64 *)(lVar2.villageAreaID + 0x220);
             lVar3 = FUN_18046c0a0(0);
             if ((lVar3 == null) ||
                (((*(int64 *)(lVar3 + 32) == 0 ||
@@ -300,14 +300,14 @@ public class SpeBookStorageController
             lVar3 = BookData.DataBase(*(int64 *)(lVar3 + 112),0);
             if (lVar3 == null) throw; // [null/range check failed]
             iVar1 = *(int *)(lVar3 + 48);
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d7efb0 + 184) + 8);
-            if ((((*pStatics == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
-                (lVar4 = *(int64 *)(lVar4 + 0x218)) == null) ||
-               (lVar4 = *(int64 *)(lVar4 + 40)) == null) throw; // [null/range check failed]
+            lVar3 = SpeBookStorageController.bookAddSkillNum;
+            if ((((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData,
+                 lVar4 == null)) || (lVar4 = lVar4.speBookStorage) == null) ||
+               (lVar4 = lVar4.forceAreaID) == null) throw; // [null/range check failed]
             lVar4 = FUN_180002f80(lVar4,iVar5,DAT_181d69770);
-            if ((lVar4 == null) || (*(int64 *)(lVar4 + 112) == 0)) throw; // [null/range check failed]
-            lVar4 = BookData.DataBase(*(int64 *)(lVar4 + 112),0);
+            if ((lVar4 == null) || (lVar4.lastRandomWorldEventDay == null)) throw; // [null/range check failed]
+            lVar4 = BookData.DataBase(lVar4.lastRandomWorldEventDay,0);
             if ((lVar4 == null) || (lVar3 == null)) throw; // [null/range check failed]
             fVar6 = (float)FUN_1800d6780(lVar3,*(uint32 *)(lVar4 + 52),DAT_181d796d8);
             lVar3 = FUN_18046c0a0(0);
@@ -319,8 +319,9 @@ public class SpeBookStorageController
             HeroSpeAddData.Change(lVar2,iVar1 + 6,((float)*(int *)(lVar3 + 64) * 0.2 + 1.0) * fVar6,0);
             iVar5 = iVar5 + 1;
           }
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null
+             ) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               *(uint8 *)(lVar2 + 0x2d8) = 1;
@@ -351,9 +352,7 @@ public class SpeBookStorageController
           FUN_181805690(lVar1,0x3f800000,DAT_181d79458);
           FUN_181805690(lVar1,0x40000000,DAT_181d79458);
           FUN_181805690(lVar1,0x40400000,DAT_181d79458);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181d7efb0 + 184) + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          SpeBookStorageController.bookAddSkillNum = lVar1;
           return;
         }
     }

@@ -71,32 +71,30 @@ public class AreaBuildController
     // RVA   : 0xA13E10   Offset: 0xA12610   Length: 0x58
     public static AreaBuildController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+        return AreaBuildController._instance;
     }
 
     // Token : 0x6000A15
     // RVA   : 0xA0D9A0   Offset: 0xA0C1A0   Length: 0x11E
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d87338 + 184);
         bool cVar1;
         ulong uVar2;
-        uVar2 = *(uint64 *)(pStatics + 16);
+        uVar2 = AreaBuildController._instance;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
           uVar2 = Component.get_gameObject(this,0);
           Object.Destroy(uVar2,0);
           return;
         }
-        puVar3 = (uint64 *)(pStatics + 16);
-        *puVar3 = this;
-        il2cpp_internal(puVar3,this);
+        AreaBuildController._instance = this;
     }
 
     // Token : 0x6000A16
     // RVA   : 0xA13040   Offset: 0xA11840   Length: 0xBB5
     private void Update()
     {
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -107,7 +105,7 @@ public class AreaBuildController
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar3 = PlotController.LaBaFestivelResultTalkText;
         if (lVar3 == null) goto LAB_180a13bf0;
         if (*(int64 *)(lVar3 + 88) == 0) {
           return;
@@ -137,7 +135,7 @@ public class AreaBuildController
             Selectable.set_interactable(lVar3,0,0);
             if (this.buildModeButton == null) goto LAB_180a13bf0;
             lVar3 = GameObject.GetComponent(this.buildModeButton,DAT_181da12b0);
-            lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3d0);
+            lVar6 = *(int64 *)(pPlotController + 0x3d0);
             if (lVar6 == null) goto LAB_180a13bf0;
             if (*(uint32 *)(lVar6 + 24) < 4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -145,7 +143,7 @@ public class AreaBuildController
             uVar2 = GlobalData.GenerateRareLvColorText
                               (*(uint64 *)(*(int64 *)(lVar6 + 16) + 56),3);
             uVar2 = String.Format("<b>建造模式</b>(需要 {0})\n",uVar2,0);
-            uVar2 = String.Concat(uVar2,**(uint64 **)(DAT_181d87338 + 184),0);
+            uVar2 = String.Concat(uVar2,AreaBuildController.BuildModeButtonDescribe,0);
           }
           else {
             if ((lVar3 == null) || (lVar3 = GameObject.GetComponent(lVar3,DAT_181d9ee60)) == null)
@@ -153,7 +151,8 @@ public class AreaBuildController
             Selectable.set_interactable(lVar3,1,0);
             if (this.buildModeButton == null) goto LAB_180a13bf0;
             lVar3 = GameObject.GetComponent(this.buildModeButton,DAT_181da12b0);
-            uVar2 = String.Concat("<b>建造模式</b>\n",**(uint64 **)(DAT_181d87338 + 184),0);
+            uVar2 = String.Concat("<b>建造模式</b>\n",AreaBuildController.BuildModeButtonDescribe,
+                                   0);
           }
           if (lVar3 == null) goto LAB_180a13bf0;
           *(uint64 *)(lVar3 + 24) = uVar2;
@@ -372,8 +371,6 @@ public class AreaBuildController
     // RVA   : 0xA0E5F0   Offset: 0xA0CDF0   Length: 0xF
     public void BuildModeButtonClicked()
     {
-        void FUN_180a0e5f0(int64 this)
-        {
         AreaBuildController.ChangeBuildMode(this,!this.buildMode,0);
     }
 
@@ -381,8 +378,6 @@ public class AreaBuildController
     // RVA   : 0xA0F060   Offset: 0xA0D860   Length: 0xA
     public void EndBuildMode()
     {
-        void FUN_180a0f060(uint64 this)
-        {
         AreaBuildController.ChangeBuildMode(this,0,0);
     }
 
@@ -390,8 +385,7 @@ public class AreaBuildController
     // RVA   : 0xA0EB40   Offset: 0xA0D340   Length: 0x3F1
     public void ChangeBuildMode(bool _buildMode)
     {
-        var pStatics_6278 = *(int64*)(DAT_181d96278 + 184);
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
+        var pStatics = *(int64*)(DAT_181d96278 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar5;
@@ -420,14 +414,14 @@ public class AreaBuildController
             if (!this.buildMode) {
               AreaBuildController.CloseBuildMenu(this,0);
             }
-            if (*pStatics_6278 != 0) {
+            if (*pStatics != 0) {
               CursorManager.ChangeCursorType
-                        (*pStatics_6278,-(this.buildMode) & 2,0)
+                        (*pStatics,-(this.buildMode) & 2,0)
               ;
-              lVar1 = *(int64 *)(pStatics_7630 + 56);
+              lVar1 = PlotController.LaBaFestivelResultTalkText;
               if (lVar1 != null) {
                 AreaController.SetBuildModeUI(lVar1,this.buildMode,0);
-                lVar1 = *(int64 *)(pStatics_7630 + 56);
+                lVar1 = PlotController.LaBaFestivelResultTalkText;
                 if (lVar1 != null) {
                   lVar6 = *(int64 *)(lVar1 + 160);
                   plVar3 = (int64 *)0;
@@ -505,9 +499,9 @@ public class AreaBuildController
     // RVA   : 0xA0F070   Offset: 0xA0D870   Length: 0xAB8
     public void GenerateBuildNewButton(int targetBuildingID)
     {
-        var pStatics_7338 = *(int64*)(DAT_181d87338 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pAreaBuildController = *(int64*)(AreaBuildController_StaticsPtr + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -535,7 +529,7 @@ public class AreaBuildController
               (lVar6 = GameObject.get_transform(this.newObj,0)) != null) &&
              (lVar6 = Transform.Find(lVar6,"Text",0)) != null) {
             uVar8 = Component.GetComponent(lVar6,DAT_181d6d8c0);
-            lVar6 = *(int64 *)(pStatics_e010 + 32);
+            lVar6 = GameController.lockObj;
             if (((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 224)) != null) &&
                (lVar6 = FUN_1817cc780(lVar6,targetBuildingID,DAT_181d925f0)) != null) {
               LTLocalization.SetText(uVar8,*(uint64 *)(lVar6 + 24),0);
@@ -545,20 +539,21 @@ public class AreaBuildController
                 *(uint32 *)(lVar6 + 24) = targetBuildingID;
                 if (this.newObj != null) {
                   lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-                  lVar9 = *(int64 *)(pStatics_e010 + 32);
+                  lVar9 = GameController.lockObj;
                   if ((lVar9 != null) && (lVar9 = *(int64 *)(lVar9 + 224)) != null) {
                     lVar9 = FUN_1817cc780(lVar9,targetBuildingID,DAT_181d925f0);
-                    lVar3 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+                    lVar3 = PlotController.LaBaFestivelResultTalkText;
                     if ((lVar3 != null) && (lVar9 != null)) {
                       uVar8 = AreaBuildingDataBase.GetBuildingText
                                         (lVar9,0,1,1,0x3f800000,1,*(uint64 *)(lVar3 + 88),0);
                       if (lVar6 != null) {
                         *(uint64 *)(lVar6 + 24) = uVar8;
-                        if ((*pStatics_df90 != 0) &&
-                           (lVar6 = *(int64 *)(*pStatics_df90 + 32),
+                        if ((GameController._instance != null) &&
+                           (lVar6 = *(int64 *)
+                                     (GameController._instance + 32),
                            lVar6 != null)) {
                           lVar6 = WorldData.GetHeroForce(lVar6,0,0);
-                          lVar9 = *(int64 *)(pStatics_e010 + 32);
+                          lVar9 = GameController.lockObj;
                           if (((lVar9 != null) && (lVar9 = *(int64 *)(lVar9 + 224)) != null) &&
                              (lVar9 = FUN_1817cc780(lVar9,targetBuildingID,DAT_181d925f0)) != null) {
                             uVar8 = *(uint64 *)(lVar9 + 80);
@@ -572,11 +567,13 @@ public class AreaBuildController
                                    lVar6 == null)) throw; // [null/range check failed]
                                 Selectable.set_interactable(lVar6,0,0);
                               }
-                              if (((*pStatics_df90 != 0) &&
-                                  (lVar6 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance != null) &&
+                                  (lVar6 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar6 != null)) && (lVar6 = WorldData.Player(lVar6,0)) != null) {
                                 iVar1 = *(int *)(lVar6 + 184);
-                                if (iVar1 < *(int *)(pStatics_7338 + 28)) {
+                                if (iVar1 < *(int *)(pAreaBuildController
+                                                    + 28)) {
                                   if ((this.newObj == null) ||
                                      (lVar6 = GameObject.GetComponent
                                                         (this.newObj,DAT_181d9ee60),
@@ -585,8 +582,10 @@ public class AreaBuildController
                                   if (this.newObj == null) throw; // [null/range check failed]
                                   lVar6 = GameObject.GetComponent
                                                     (this.newObj,DAT_181da12b0);
-                                  lVar9 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3d0);
-                                  uVar2 = *(uint32 *)(pStatics_7338 + 28);
+                                  lVar9 = *(int64 *)
+                                           (pPlotController + 0x3d0);
+                                  uVar2 = *(uint32 *)(pAreaBuildController +
+                                                   28);
                                   if (lVar9 == null) throw; // [null/range check failed]
                                   if (*(uint32 *)(lVar9 + 24) <= uVar2) {
                                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -596,7 +595,9 @@ public class AreaBuildController
                                                       (*(int64 *)(lVar9 + 16) + 32 +
                                                       (int64)(int)uVar2 * 8),
                                                      *(uint32 *)
-                                                      (pStatics_7338 + 28),0);
+                                                      (*(int64 *)
+                                                        (AreaBuildController_StaticsPtr + 184) + 28),0)
+                                  ;
                                   uVar8 = String.Format("需要 {0}\n\n",uVar8,0);
                                   if (((this.newObj == null) ||
                                       (lVar9 = GameObject.GetComponent
@@ -607,7 +608,8 @@ public class AreaBuildController
                                   *(uint64 *)(lVar6 + 24) = uVar8;
                                 }
                                 uVar8 = this.newObj;
-                                lVar6 = *(int64 *)(pStatics_e010 + 32);
+                                lVar6 = *(int64 *)
+                                         (pGameController + 32);
                                 if (((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 224)) != null) &&
                                    (lVar6 = FUN_1817cc780(lVar6,targetBuildingID,DAT_181d925f0)) != null) {
                                   uVar7 = String.Concat("Skeleton/Building/",*(uint64 *)(lVar6 + 32),
@@ -618,7 +620,8 @@ public class AreaBuildController
                                   fVar13 = local_40 * 0.5;
                                   local_58 = CONCAT44((float)((uint64)local_48 >> 32) * 0.5,
                                                       (float)local_48 * 0.5);
-                                  lVar6 = *(int64 *)(pStatics_e010 + 32);
+                                  lVar6 = *(int64 *)
+                                           (pGameController + 32);
                                   if (((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 224)) != null)
                                      && (lVar6 = FUN_1817cc780(lVar6,targetBuildingID,DAT_181d925f0),
                                         uVar4 = "idle", lVar6 != null)) {
@@ -660,16 +663,17 @@ public class AreaBuildController
     // RVA   : 0xA0FB30   Offset: 0xA0E330   Length: 0x14D
     public int GetMaxSpeBuildingNum()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          if (4 < *(int *)(lVar1 + 160)) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          if (4 < lVar1.gameDifficulty) {
             return '\a';
           }
-          if ((*pStatics != 0) &&
-             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-            return (2 < *(int *)(lVar1 + 160)) + '\x05';
+          if ((GameController._instance != null) &&
+             (lVar1 = GameController._instance.worldData) != null
+             ) {
+            return (2 < lVar1.gameDifficulty) + '\x05';
           }
         }
     }
@@ -678,11 +682,9 @@ public class AreaBuildController
     // RVA   : 0xA105A0   Offset: 0xA0EDA0   Length: 0x28FE
     public void SetBuildTarget(GameObject target)
     {
-        var pStatics_6278 = *(int64*)(DAT_181d96278 + 184);
-        var pStatics_7338 = *(int64*)(DAT_181d87338 + 184);
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pAreaBuildController = *(int64*)(AreaBuildController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d96278 + 184);
         bool cVar1;
         byte uVar2;
         uint uVar3;
@@ -708,15 +710,15 @@ public class AreaBuildController
            (lVar6 = Transform.Find(lVar6,"Content",0)) == null) goto LAB_180a12e81;
         uVar7 = Component.get_gameObject(lVar6,0);
         GlobalData.DeleteAllChild(uVar7,0);
-        if ((*pStatics_6278 == 0) ||
-           (CursorManager.ChangeCursorType(*pStatics_6278,2), target == null))
+        if ((*pStatics == 0) ||
+           (CursorManager.ChangeCursorType(*pStatics,2), target == null))
         goto LAB_180a12e81;
         uVar7 = GameObject.GetComponent(target,DAT_181d9e4d0);
         cVar1 = Object.op_Inequality(uVar7,0,0);
         if (cVar1) {
           lVar6 = GameObject.GetComponent(target,DAT_181d9e4d0);
-          if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-          if (*(int *)(*(int64 *)(lVar6 + 24) + 48) == 0) {
+          if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+          if (*(int *)(lVar6.cityAreaID + 48) == 0) {
             plVar8 = (int64 *)Resources.Load("Sound/SoundEffect/Button/WoodButton",0);
             plVar14 = (int64 *)0;
             plVar12 = plVar14;
@@ -724,22 +726,22 @@ public class AreaBuildController
               plVar12 = plVar8;
             }
             NGUITools.PlaySound(plVar12,0);
-            if (*pStatics_6278 != 0) {
-              CursorManager.ChangeCursorType(*pStatics_6278,3);
+            if (*pStatics != 0) {
+              CursorManager.ChangeCursorType(*pStatics,3);
               AreaBuildController.ShowBuildNewPanel(this,1,0);
               plVar8 = plVar14;
               while( true ) {
-                lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
-                if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 232)) == null) goto LAB_180a12e81;
-                if (*(uint32 *)(lVar6 + 24) < 6) {
+
+                if ((lVar6 = GameController.lockObj?.PlotEventLog) == null) goto LAB_180a12e81;
+                if (lVar6.cityAreaID < 6) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 72);
+                lVar6 = *(int64 *)(lVar6.chapter + 72);
                 if (lVar6 == null) goto LAB_180a12e81;
-                if (*(int *)(lVar6 + 24) <= (int)plVar8) break;
+                if (lVar6.cityAreaID <= (int)plVar8) break;
                 lVar6 = FUN_18046c100(0);
                 if (lVar6 == null) goto LAB_180a12e81;
-                lVar6 = *(int64 *)(lVar6 + 224);
+                lVar6 = lVar6.missionFinished;
                 lVar9 = FUN_18046c100(0);
                 if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 232)) == null) goto LAB_180a12e81;
                 if (*(uint32 *)(lVar9 + 24) < 6) {
@@ -748,15 +750,15 @@ public class AreaBuildController
                 lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 72);
                 if (((lVar9 == null) || (uVar3 = FUN_1800d6750(lVar9,plVar8,DAT_181d68270), lVar6 == null)) ||
                    (lVar6 = FUN_1817cc780(lVar6,uVar3,DAT_181d925f0)) == null) goto LAB_180a12e81;
-                if (*(int *)(lVar6 + 120) == 0) {
+                if (lVar6.WorldEventDatasSaveRecord == null) {
         LAB_180a10ced:
-                  lVar6 = FUN_18046c100(0);
-                  if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 232)) == null)
+
+                  if ((lVar6 = FUN_18046c100(0)?.PlotEventLog) == null)
                   goto LAB_180a12e81;
-                  if (*(uint32 *)(lVar6 + 24) < 6) {
+                  if (lVar6.cityAreaID < 6) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
-                  lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 72);
+                  lVar6 = *(int64 *)(lVar6.chapter + 72);
                   if (lVar6 == null) goto LAB_180a12e81;
                   uVar3 = FUN_1800d6750(lVar6,plVar8);
                   AreaBuildController.GenerateBuildNewButton(this,uVar3);
@@ -764,7 +766,7 @@ public class AreaBuildController
                 else {
                   lVar6 = FUN_18046c100(0);
                   if (lVar6 == null) goto LAB_180a12e81;
-                  lVar6 = *(int64 *)(lVar6 + 224);
+                  lVar6 = lVar6.missionFinished;
                   lVar9 = FUN_18046c100(0);
                   if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 232)) == null)
                   goto LAB_180a12e81;
@@ -774,14 +776,14 @@ public class AreaBuildController
                   lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 72);
                   if (((lVar9 == null) || (uVar3 = FUN_1800d6750(lVar9,plVar8,DAT_181d68270), lVar6 == null)) ||
                      (lVar6 = FUN_1817cc780(lVar6,uVar3,DAT_181d925f0)) == null) goto LAB_180a12e81;
-                  if (*(int *)(lVar6 + 120) == 1) {
+                  if (lVar6.WorldEventDatasSaveRecord == 1) {
                     lVar6 = FUN_18046bac0(0);
-                    if ((lVar6 == null) || (*(int64 *)(lVar6 + 88) == 0)) goto LAB_180a12e81;
-                    if (*(int *)(*(int64 *)(lVar6 + 88) + 72) != 2) goto LAB_180a10ced;
+                    if ((lVar6 == null) || (lVar6.TempHeros == null)) goto LAB_180a12e81;
+                    if (*(int *)(lVar6.TempHeros + 72) != 2) goto LAB_180a10ced;
                   }
                   lVar6 = FUN_18046c100(0);
                   if (lVar6 == null) goto LAB_180a12e81;
-                  lVar6 = *(int64 *)(lVar6 + 224);
+                  lVar6 = lVar6.missionFinished;
                   lVar9 = FUN_18046c100(0);
                   if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 232)) == null)
                   goto LAB_180a12e81;
@@ -791,23 +793,23 @@ public class AreaBuildController
                   lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 72);
                   if (((lVar9 == null) || (uVar3 = FUN_1800d6750(lVar9,plVar8,DAT_181d68270), lVar6 == null)) ||
                      (lVar6 = FUN_1817cc780(lVar6,uVar3)) == null) goto LAB_180a12e81;
-                  if (*(int *)(lVar6 + 120) == 2) {
+                  if (lVar6.WorldEventDatasSaveRecord == 2) {
                     lVar6 = FUN_18046bac0(0);
-                    if ((lVar6 == null) || (*(int64 *)(lVar6 + 88) == 0)) goto LAB_180a12e81;
-                    if (*(int *)(*(int64 *)(lVar6 + 88) + 72) == 2) goto LAB_180a10ced;
+                    if ((lVar6 == null) || (lVar6.TempHeros == null)) goto LAB_180a12e81;
+                    if (*(int *)(lVar6.TempHeros + 72) == 2) goto LAB_180a10ced;
                   }
                 }
                 plVar8 = (int64 *)(uint64)((int)plVar8 + 1);
               }
               lVar6 = FUN_18046bac0(0);
-              if ((lVar6 != null) && (*(int64 *)(lVar6 + 88) != 0)) {
-                iVar4 = *(int *)(*(int64 *)(lVar6 + 88) + 16);
+              if ((lVar6 != null) && (lVar6.TempHeros != null)) {
+                iVar4 = *(int *)(lVar6.TempHeros + 16);
                 lVar6 = FUN_18046c0a0(0);
-                if ((((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) &&
-                    (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) != null) &&
+                if ((((lVar6 != null) && (lVar6.villageAreaID != null)) &&
+                    (lVar6 = WorldData.Player(lVar6.villageAreaID,0)) != null) &&
                    (lVar6 = HeroData.GetForce(lVar6,0,0)) != null) {
                   lVar9 = this.buildNewPanel;
-                  if (iVar4 == *(int *)(lVar6 + 56)) {
+                  if (iVar4 == lVar6.Inns) {
                     if (((lVar9 != null) && (lVar6 = GameObject.get_transform(lVar9,0)) != null) &&
                        ((lVar6 = Transform.Find(lVar6,"SpeBuildNumBack",0), lVar6 != null &&
                         (lVar6 = Component.get_gameObject(lVar6,0)) != null))) {
@@ -818,8 +820,8 @@ public class AreaBuildController
                                 (lVar6 = Transform.Find(lVar6,"Text",0)) != null))) {
                         plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
                         lVar6 = FUN_18046bac0(0);
-                        if ((lVar6 != null) && (*(int64 *)(lVar6 + 88) != 0)) {
-                          local_res8[0] = AreaData.GetSpeBuildingNum(*(int64 *)(lVar6 + 88),0);
+                        if ((lVar6 != null) && (lVar6.TempHeros != null)) {
+                          local_res8[0] = AreaData.GetSpeBuildingNum(lVar6.TempHeros,0);
                           uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
                           local_res10[0] = AreaBuildController.GetMaxSpeBuildingNum(this,0);
                           uVar10 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
@@ -828,8 +830,8 @@ public class AreaBuildController
                           if (plVar8 != (int64 *)0) {
                             (**(code **)(*plVar8 + 0x5e8))(plVar8,uVar7,*(uint64 *)(*plVar8 + 0x5f0));
                             lVar6 = FUN_18046bac0(0);
-                            if ((lVar6 != null) && (*(int64 *)(lVar6 + 88) != 0)) {
-                              iVar4 = AreaData.GetSpeBuildingNum(*(int64 *)(lVar6 + 88),0);
+                            if ((lVar6 != null) && (lVar6.TempHeros != null)) {
+                              iVar4 = AreaData.GetSpeBuildingNum(lVar6.TempHeros,0);
                               iVar5 = AreaBuildController.GetMaxSpeBuildingNum(this,0);
                               if (iVar5 <= iVar4) {
                                 return;
@@ -871,15 +873,15 @@ public class AreaBuildController
           }
           NGUITools.PlaySound(plVar12,0);
           lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-          if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-          if (*(int *)(*(int64 *)(lVar6 + 24) + 16) == -1) {
+          if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+          if (*(int *)(lVar6.cityAreaID + 16) == -1) {
             lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) {
+            if ((lVar6 == null) || (lVar6.cityAreaID == null)) {
         LAB_180a12e81:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (0 < *(int *)(*(int64 *)(lVar6 + 24) + 32)) {
+            if (0 < *(int *)(lVar6.cityAreaID + 32)) {
               return;
             }
             AreaBuildController.ShowBuildChoiceGrid(this,1,0);
@@ -893,11 +895,11 @@ public class AreaBuildController
             uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0);
             LTLocalization.SetText(uVar7,"拆除",0);
             lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-            iVar4 = *(int *)(*(int64 *)(lVar6 + 24) + 20);
+            if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+            iVar4 = *(int *)(lVar6.cityAreaID + 20);
             lVar6 = FUN_18046bac0(0);
-            if (((lVar6 == null) || (*(int64 *)(lVar6 + 88) == 0)) ||
-               (lVar6 = AreaData.GetCenterBuilding(*(int64 *)(lVar6 + 88),0)) == null)
+            if (((lVar6 == null) || (lVar6.TempHeros == null)) ||
+               (lVar6 = AreaData.GetCenterBuilding(lVar6.TempHeros,0)) == null)
             goto LAB_180a12e81;
             if (*(int *)(lVar6 + 20) < iVar4) {
               if ((this.newObj == null) ||
@@ -910,8 +912,8 @@ public class AreaBuildController
               Selectable.set_interactable(lVar6,0,0);
               if (this.newObj == null) goto LAB_180a12e99;
               lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-              uVar7 = *(uint64 *)(pStatics_ef00 + 0x2c8);
-              lVar9 = *(int64 *)(pStatics_7630 + 56);
+              uVar7 = *(uint64 *)(pPlotController + 0x2c8);
+              lVar9 = PlotController.LaBaFestivelResultTalkText;
               if ((((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 88)) == null) ||
                   (lVar9 = AreaData.GetCenterBuilding(lVar9,0)) == null) ||
                  (lVar9 = AreaBuildingData.DataBase(lVar9,0)) == null) goto LAB_180a12e99;
@@ -922,36 +924,38 @@ public class AreaBuildController
               uVar10 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
               uVar7 = String.Format("需要\n{0} {1}级</color>\n\n",uVar7,uVar10,0);
               if (lVar6 == null) goto LAB_180a12e99;
-              *(uint64 *)(lVar6 + 24) = uVar7;
+              lVar6.cityAreaID = uVar7;
             }
             lVar6 = FUN_18046c0a0(0);
-            if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
-               (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) == null) goto LAB_180a12e81;
-            iVar4 = *(int *)(lVar6 + 184);
-            if (iVar4 < *(int *)(pStatics_7338 + 32)) {
+            if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+               (lVar6 = WorldData.Player(lVar6.villageAreaID,0)) == null) goto LAB_180a12e81;
+            iVar4 = lVar6.forceMeetingStarted;
+            if (iVar4 < AreaBuildController.DestroyBuildNeedForceLv) {
               if ((this.newObj == null) ||
                  (lVar6 = GameObject.GetComponent(this.newObj,DAT_181d9ee60),
                  lVar6 == null)) goto LAB_180a12e81;
               Selectable.set_interactable(lVar6,0,0);
               if (this.newObj == null) goto LAB_180a12e81;
               lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-              lVar9 = *(int64 *)(pStatics_ef00 + 0x3d0);
+              lVar9 = *(int64 *)(pPlotController + 0x3d0);
               if (lVar9 == null) goto LAB_180a12e81;
-              uVar7 = FUN_180002f80(lVar9,*(uint32 *)(pStatics_7338 + 32),
+              uVar7 = FUN_180002f80(lVar9,*(uint32 *)
+                                           (pAreaBuildController + 32),
                                     DAT_181d7c9c0);
               uVar7 = GlobalData.GenerateRareLvColorText
-                                (uVar7,*(uint32 *)(pStatics_7338 + 32),0);
+                                (uVar7,*(uint32 *)
+                                        (pAreaBuildController + 32),0);
               uVar7 = String.Format("需要 {0}\n\n",uVar7,0);
               if (((this.newObj == null) ||
                   (lVar9 = GameObject.GetComponent(this.newObj,DAT_181da12b0),
                   lVar9 == null)) ||
                  (uVar7 = String.Concat(uVar7,*(uint64 *)(lVar9 + 24),0), lVar6 == null))
               goto LAB_180a12e81;
-              *(uint64 *)(lVar6 + 24) = uVar7;
+              lVar6.cityAreaID = uVar7;
             }
             lVar6 = FUN_18046c0a0(0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180a12e81;
-            lVar6 = WorldData.GetHeroForce(*(int64 *)(lVar6 + 32),0,0);
+            if ((lVar6 == null) || (lVar6.villageAreaID == null)) goto LAB_180a12e81;
+            lVar6 = WorldData.GetHeroForce(lVar6.villageAreaID,0,0);
             lVar9 = GameObject.GetComponent(target,DAT_181d9e2b0);
             if ((lVar9 == null) ||
                ((*(int64 *)(lVar9 + 24) == 0 ||
@@ -970,10 +974,10 @@ public class AreaBuildController
             puVar13 = (uint64 *)(lVar6 + 24);
             uVar7 = *puVar13;
             lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-            uVar10 = AreaBuildingData.GetDestroyCostText(*(int64 *)(lVar6 + 24),0);
+            if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+            uVar10 = AreaBuildingData.GetDestroyCostText(lVar6.cityAreaID,0);
             lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
+            if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
             uVar11 = AreaBuildingData.GetObstacleRemoveCostResource();
             uVar11 = GlobalData.GetResourceDescribe(uVar11,0);
             uVar7 = String.Concat(uVar7,uVar10,"\n",uVar11,0);
@@ -981,17 +985,17 @@ public class AreaBuildController
           }
           else {
             lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-            if (*(int *)(*(int64 *)(lVar6 + 24) + 24) < 1) {
+            if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+            if (*(int *)(lVar6.cityAreaID + 24) < 1) {
               lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-              if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-              if (*(int *)(*(int64 *)(lVar6 + 24) + 28) < 1) {
+              if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+              if (*(int *)(lVar6.cityAreaID + 28) < 1) {
                 lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-                if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-                if (*(int *)(*(int64 *)(lVar6 + 24) + 32) < 1) {
+                if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+                if (*(int *)(lVar6.cityAreaID + 32) < 1) {
                   lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-                  if (((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) ||
-                     (lVar6 = AreaBuildingData.DataBase(*(int64 *)(lVar6 + 24),0)) == null)
+                  if (((lVar6 == null) || (lVar6.cityAreaID == null)) ||
+                     (lVar6 = AreaBuildingData.DataBase(lVar6.cityAreaID,0)) == null)
                   goto LAB_180a12e81;
                   if (*(char *)(lVar6 + 52) == false) {
                     uVar7 = this.buildChoiceGrid;
@@ -1010,39 +1014,40 @@ public class AreaBuildController
                     if (((lVar9 == null) || (*(int64 *)(lVar9 + 24) == 0)) ||
                        (uVar7 = AreaBuildingData.GetDestroyCostText(*(int64 *)(lVar9 + 24),0),
                        lVar6 == null)) goto LAB_180a12e81;
-                    *(uint64 *)(lVar6 + 24) = uVar7;
+                    lVar6.cityAreaID = uVar7;
                     lVar6 = FUN_18046c0a0(0);
-                    if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
-                       (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) == null)
+                    if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+                       (lVar6 = WorldData.Player(lVar6.villageAreaID,0)) == null)
                     goto LAB_180a12e81;
-                    iVar4 = *(int *)(lVar6 + 184);
-                    if (iVar4 < *(int *)(pStatics_7338 + 32)) {
+                    iVar4 = lVar6.forceMeetingStarted;
+                    if (iVar4 < AreaBuildController.DestroyBuildNeedForceLv) {
                       if ((this.newObj == null) ||
                          (lVar6 = GameObject.GetComponent(this.newObj,DAT_181d9ee60),
                          lVar6 == null)) goto LAB_180a12e81;
                       Selectable.set_interactable(lVar6,0,0);
                       if (this.newObj == null) goto LAB_180a12e81;
                       lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-                      lVar9 = *(int64 *)(pStatics_ef00 + 0x3d0);
+                      lVar9 = *(int64 *)(pPlotController + 0x3d0);
                       if (lVar9 == null) goto LAB_180a12e81;
                       uVar7 = FUN_180002f80(lVar9,*(uint32 *)
-                                                   (pStatics_7338 + 32),
-                                            DAT_181d7c9c0);
+                                                   (pAreaBuildController +
+                                                   32),DAT_181d7c9c0);
                       uVar7 = GlobalData.GenerateRareLvColorText
-                                        (uVar7,*(uint32 *)(pStatics_7338 + 32)
-                                         ,0);
+                                        (uVar7,*(uint32 *)
+                                                (pAreaBuildController +
+                                                32),0);
                       uVar7 = String.Format("需要 {0}\n\n",uVar7,0);
                       if (((this.newObj == null) ||
                           (lVar9 = GameObject.GetComponent(this.newObj,DAT_181da12b0),
                           lVar9 == null)) ||
                          (uVar7 = String.Concat(uVar7,*(uint64 *)(lVar9 + 24),0), lVar6 == null))
                       goto LAB_180a12e81;
-                      *(uint64 *)(lVar6 + 24) = uVar7;
+                      lVar6.cityAreaID = uVar7;
                     }
                   }
                   lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-                  if (((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) ||
-                     (lVar6 = AreaBuildingData.DataBase(*(int64 *)(lVar6 + 24),0)) == null)
+                  if (((lVar6 == null) || (lVar6.cityAreaID == null)) ||
+                     (lVar6 = AreaBuildingData.DataBase(lVar6.cityAreaID,0)) == null)
                   goto LAB_180a12e81;
                   if (*(char *)(lVar6 + 53) == false) {
                     uVar7 = this.buildChoiceGrid;
@@ -1064,44 +1069,45 @@ public class AreaBuildController
                     uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
                     uVar7 = String.Format("消耗 ({0}天)",uVar7,0);
                     if (lVar6 == null) goto LAB_180a12e81;
-                    *(uint64 *)(lVar6 + 24) = uVar7;
+                    lVar6.cityAreaID = uVar7;
                     lVar6 = FUN_18046c0a0(0);
-                    if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
-                       (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) == null)
+                    if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+                       (lVar6 = WorldData.Player(lVar6.villageAreaID,0)) == null)
                     goto LAB_180a12e81;
-                    iVar4 = *(int *)(lVar6 + 184);
-                    if (iVar4 < *(int *)(pStatics_7338 + 36)) {
+                    iVar4 = lVar6.forceMeetingStarted;
+                    if (iVar4 < AreaBuildController.MoveBuildNeedForceLv) {
                       if ((this.newObj == null) ||
                          (lVar6 = GameObject.GetComponent(this.newObj,DAT_181d9ee60),
                          lVar6 == null)) goto LAB_180a12e81;
                       Selectable.set_interactable(lVar6,0,0);
                       if (this.newObj == null) goto LAB_180a12e81;
                       lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-                      lVar9 = *(int64 *)(pStatics_ef00 + 0x3d0);
+                      lVar9 = *(int64 *)(pPlotController + 0x3d0);
                       if (lVar9 == null) goto LAB_180a12e81;
                       uVar7 = FUN_180002f80(lVar9,*(uint32 *)
-                                                   (pStatics_7338 + 36),
-                                            DAT_181d7c9c0);
+                                                   (pAreaBuildController +
+                                                   36),DAT_181d7c9c0);
                       uVar7 = GlobalData.GenerateRareLvColorText
-                                        (uVar7,*(uint32 *)(pStatics_7338 + 36)
-                                         ,0);
+                                        (uVar7,*(uint32 *)
+                                                (pAreaBuildController +
+                                                36),0);
                       uVar7 = String.Format("需要 {0}\n\n",uVar7,0);
                       if (((this.newObj == null) ||
                           (lVar9 = GameObject.GetComponent(this.newObj,DAT_181da12b0),
                           lVar9 == null)) ||
                          (uVar7 = String.Concat(uVar7,*(uint64 *)(lVar9 + 24),0), lVar6 == null))
                       goto LAB_180a12e81;
-                      *(uint64 *)(lVar6 + 24) = uVar7;
+                      lVar6.cityAreaID = uVar7;
                     }
                   }
                   lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-                  if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e93;
-                  if (*(int *)(*(int64 *)(lVar6 + 24) + 20) < 10) {
+                  if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e93;
+                  if (*(int *)(lVar6.cityAreaID + 20) < 10) {
                     lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-                    if (((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) ||
-                       (lVar6 = AreaBuildingData.DataBase(*(int64 *)(lVar6 + 24),0)) == null)
+                    if (((lVar6 == null) || (lVar6.cityAreaID == null)) ||
+                       (lVar6 = AreaBuildingData.DataBase(lVar6.cityAreaID,0)) == null)
                     goto LAB_180a12e93;
-                    cVar1 = String.op_Inequality(*(uint64 *)(lVar6 + 24),"私宅",0);
+                    cVar1 = String.op_Inequality(lVar6.cityAreaID,"私宅",0);
                     if (cVar1) {
                       uVar7 = this.buildChoiceGrid;
                       uVar10 = this.buildChoiceButtonPrefab;
@@ -1126,7 +1132,7 @@ public class AreaBuildController
                       if (((lVar9 == null) || (*(int64 *)(lVar9 + 24) == 0)) ||
                          (uVar7 = AreaBuildingData.GetUpgradeDescribe(*(int64 *)(lVar9 + 24),0),
                          lVar6 == null)) goto LAB_180a12e93;
-                      *(uint64 *)(lVar6 + 24) = uVar7;
+                      lVar6.cityAreaID = uVar7;
                     }
                   }
                   if ((this.buildChoiceGrid == null) ||
@@ -1137,12 +1143,12 @@ public class AreaBuildController
               }
             }
             lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) {
+            if ((lVar6 == null) || (lVar6.cityAreaID == null)) {
         LAB_180a12e93:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(char *)(*(int64 *)(lVar6 + 24) + 36) != false) {
+            if (*(char *)(lVar6.cityAreaID + 36) != false) {
               return;
             }
             iVar4 = -1;
@@ -1152,20 +1158,20 @@ public class AreaBuildController
             uVar7 = GlobalData.AddChild(uVar7,uVar10,0);
             this.newObj = uVar7;
             lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e93;
-            if (*(int *)(*(int64 *)(lVar6 + 24) + 24) < 1) {
+            if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e93;
+            if (*(int *)(lVar6.cityAreaID + 24) < 1) {
               lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-              if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e93;
-              if (*(int *)(*(int64 *)(lVar6 + 24) + 28) < 1) {
+              if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e93;
+              if (*(int *)(lVar6.cityAreaID + 28) < 1) {
                 lVar6 = GameObject.GetComponent(target,DAT_181d9e2b0);
-                if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e93;
-                if (0 < *(int *)(*(int64 *)(lVar6 + 24) + 32)) {
+                if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e93;
+                if (0 < *(int *)(lVar6.cityAreaID + 32)) {
                   if (((this.newObj == null) ||
                       (lVar6 = GameObject.get_transform(this.newObj,0)) == null) ||
                      (lVar6 = Transform.Find(lVar6,"Text",0)) == null) goto LAB_180a12e93;
                   uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0);
                   LTLocalization.SetText(uVar7,"取消拆除",0);
-                  iVar4 = *(int *)(pStatics_7338 + 32);
+                  iVar4 = AreaBuildController.DestroyBuildNeedForceLv;
                 }
               }
               else {
@@ -1174,7 +1180,7 @@ public class AreaBuildController
                    (lVar6 = Transform.Find(lVar6,"Text",0)) == null) goto LAB_180a12e93;
                 uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0);
                 LTLocalization.SetText(uVar7,"取消升级",0);
-                iVar4 = *(int *)(pStatics_7338 + 24);
+                iVar4 = AreaBuildController.UpgradeBuildNeedForceLv;
               }
             }
             else {
@@ -1183,12 +1189,12 @@ public class AreaBuildController
                  (lVar6 = Transform.Find(lVar6,"Text",0)) == null) goto LAB_180a12e93;
               uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0);
               LTLocalization.SetText(uVar7,"取消建造",0);
-              iVar4 = *(int *)(pStatics_7338 + 28);
+              iVar4 = AreaBuildController.NewBuildNeedForceLv;
             }
-            if (((*pStatics_df90 == 0) ||
-                (lVar6 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-               (lVar6 = WorldData.Player(lVar6,0)) == null) goto LAB_180a12e93;
-            if (iVar4 <= *(int *)(lVar6 + 184)) {
+            if (((GameController._instance == null) ||
+                (lVar6 = GameController._instance.worldData,
+                lVar6 == null)) || (lVar6 = WorldData.Player(lVar6,0)) == null) goto LAB_180a12e93;
+            if (iVar4 <= lVar6.forceMeetingStarted) {
               return;
             }
             if ((this.newObj == null) ||
@@ -1197,7 +1203,7 @@ public class AreaBuildController
             Selectable.set_interactable(lVar6,0,0);
             if (this.newObj == null) goto LAB_180a12e93;
             lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-            lVar9 = *(int64 *)(pStatics_ef00 + 0x3d0);
+            lVar9 = *(int64 *)(pPlotController + 0x3d0);
             if (lVar9 == null) goto LAB_180a12e93;
             uVar7 = FUN_180002f80(lVar9,iVar4,DAT_181d7c9c0);
             uVar7 = GlobalData.GenerateRareLvColorText(uVar7,iVar4,0);
@@ -1213,8 +1219,8 @@ public class AreaBuildController
         }
         else {
           lVar6 = GameObject.GetComponent(target,DAT_181d9e4d0);
-          if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180a12e81;
-          if (*(int *)(*(int64 *)(lVar6 + 24) + 48) != 1) goto LAB_180a119ff;
+          if ((lVar6 == null) || (lVar6.cityAreaID == null)) goto LAB_180a12e81;
+          if (*(int *)(lVar6.cityAreaID + 48) != 1) goto LAB_180a119ff;
           plVar8 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
           plVar12 = (int64 *)0;
           if ((plVar8 != (int64 *)0) && (*plVar8 == DAT_181d8a228)) {
@@ -1222,9 +1228,9 @@ public class AreaBuildController
           }
           NGUITools.PlaySound(plVar12,0);
           lVar6 = GameObject.GetComponent(target,DAT_181d9e4d0);
-          if (((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) ||
-             (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 56)) == null) goto LAB_180a12e81;
-          if (0.0 < (float)*(int *)(lVar6 + 24)) {
+          if (((lVar6 == null) || (lVar6.cityAreaID == null)) ||
+             (lVar6 = *(int64 *)(lVar6.cityAreaID + 56)) == null) goto LAB_180a12e81;
+          if (0.0 < (float)lVar6.cityAreaID) {
             AreaBuildController.ShowBuildChoiceGrid(this,1,0);
             uVar7 = this.buildChoiceGrid;
             uVar10 = this.buildChoiceButtonPrefab;
@@ -1240,8 +1246,8 @@ public class AreaBuildController
             goto LAB_180a12e81;
           }
           lVar6 = GameObject.GetComponent(target,DAT_181d9e4d0);
-          if (((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) ||
-             (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 56)) == null) goto LAB_180a12e81;
+          if (((lVar6 == null) || (lVar6.cityAreaID == null)) ||
+             (lVar6 = *(int64 *)(lVar6.cityAreaID + 56)) == null) goto LAB_180a12e81;
           if (*(int *)(lVar6 + 20) < 10) {
             uVar7 = this.buildChoiceGrid;
             uVar10 = this.buildChoiceButtonPrefab;
@@ -1253,13 +1259,13 @@ public class AreaBuildController
             uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0);
             LTLocalization.SetText(uVar7,"升级",0);
             lVar6 = GameObject.GetComponent(target,DAT_181d9e4d0);
-            if (((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) ||
-               (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 56)) == null)
+            if (((lVar6 == null) || (lVar6.cityAreaID == null)) ||
+               (lVar6 = *(int64 *)(lVar6.cityAreaID + 56)) == null)
             goto LAB_180a12e81;
             iVar4 = *(int *)(lVar6 + 20);
             lVar6 = FUN_18046bac0(0);
-            if (((lVar6 == null) || (*(int64 *)(lVar6 + 88) == 0)) ||
-               (lVar6 = AreaData.GetCenterBuilding(*(int64 *)(lVar6 + 88),0)) == null)
+            if (((lVar6 == null) || (lVar6.TempHeros == null)) ||
+               (lVar6 = AreaData.GetCenterBuilding(lVar6.TempHeros,0)) == null)
             goto LAB_180a12e81;
             if (*(int *)(lVar6 + 20) <= iVar4) {
               if ((this.newObj == null) ||
@@ -1272,8 +1278,8 @@ public class AreaBuildController
               Selectable.set_interactable(lVar6,0,0);
               if (this.newObj == null) goto LAB_180a12e8d;
               lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-              uVar7 = *(uint64 *)(pStatics_ef00 + 0x2c8);
-              lVar9 = *(int64 *)(pStatics_7630 + 56);
+              uVar7 = *(uint64 *)(pPlotController + 0x2c8);
+              lVar9 = PlotController.LaBaFestivelResultTalkText;
               if ((((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 88)) == null) ||
                   (lVar9 = AreaData.GetCenterBuilding(lVar9,0)) == null) ||
                  (lVar9 = AreaBuildingData.DataBase(lVar9,0)) == null) goto LAB_180a12e8d;
@@ -1286,11 +1292,11 @@ public class AreaBuildController
               uVar10 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
               uVar7 = String.Format("需要\n{0} {1}级</color>\n\n",uVar7,uVar10,0);
               if (lVar6 == null) goto LAB_180a12e8d;
-              *(uint64 *)(lVar6 + 24) = uVar7;
+              lVar6.cityAreaID = uVar7;
             }
             lVar6 = FUN_18046c0a0(0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180a12e81;
-            lVar6 = WorldData.GetHeroForce(*(int64 *)(lVar6 + 32),0,0);
+            if ((lVar6 == null) || (lVar6.villageAreaID == null)) goto LAB_180a12e81;
+            lVar6 = WorldData.GetHeroForce(lVar6.villageAreaID,0,0);
             lVar9 = GameObject.GetComponent(target,DAT_181d9e4d0);
             if ((lVar9 == null) ||
                (((*(int64 *)(lVar9 + 24) == 0 ||
@@ -1304,29 +1310,31 @@ public class AreaBuildController
               Selectable.set_interactable(lVar6,0,0);
             }
             lVar6 = FUN_18046c0a0(0);
-            if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
-               (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) == null) goto LAB_180a12e81;
-            iVar4 = *(int *)(lVar6 + 184);
-            if (iVar4 < *(int *)(pStatics_7338 + 40)) {
+            if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+               (lVar6 = WorldData.Player(lVar6.villageAreaID,0)) == null) goto LAB_180a12e81;
+            iVar4 = lVar6.forceMeetingStarted;
+            if (iVar4 < AreaBuildController.UpgradeRoadNeedForceLv) {
               if ((this.newObj == null) ||
                  (lVar6 = GameObject.GetComponent(this.newObj,DAT_181d9ee60),
                  lVar6 == null)) goto LAB_180a12e81;
               Selectable.set_interactable(lVar6,0,0);
               if (this.newObj == null) goto LAB_180a12e81;
               lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0);
-              lVar9 = *(int64 *)(pStatics_ef00 + 0x3d0);
+              lVar9 = *(int64 *)(pPlotController + 0x3d0);
               if (lVar9 == null) goto LAB_180a12e81;
-              uVar7 = FUN_180002f80(lVar9,*(uint32 *)(pStatics_7338 + 40),
+              uVar7 = FUN_180002f80(lVar9,*(uint32 *)
+                                           (pAreaBuildController + 40),
                                     DAT_181d7c9c0);
               uVar7 = GlobalData.GenerateRareLvColorText
-                                (uVar7,*(uint32 *)(pStatics_7338 + 40),0);
+                                (uVar7,*(uint32 *)
+                                        (pAreaBuildController + 40),0);
               uVar7 = String.Format("需要 {0}\n\n",uVar7,0);
               if (((this.newObj == null) ||
                   (lVar9 = GameObject.GetComponent(this.newObj,DAT_181da12b0),
                   lVar9 == null)) ||
                  (uVar7 = String.Concat(uVar7,*(uint64 *)(lVar9 + 24),0), lVar6 == null))
               goto LAB_180a12e81;
-              *(uint64 *)(lVar6 + 24) = uVar7;
+              lVar6.cityAreaID = uVar7;
             }
             if ((this.newObj == null) ||
                (lVar6 = GameObject.GetComponent(this.newObj,DAT_181da12b0)) == null
@@ -1335,8 +1343,8 @@ public class AreaBuildController
             uVar7 = *puVar13;
             lVar6 = GameObject.GetComponent(target,DAT_181d9e4d0);
             if ((lVar6 == null) ||
-               ((*(int64 *)(lVar6 + 24) == 0 ||
-                (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 56)) == null)))
+               ((lVar6.cityAreaID == null ||
+                (lVar6 = *(int64 *)(lVar6.cityAreaID + 56)) == null)))
             goto LAB_180a12e81;
             uVar10 = AreaRoadData.GetUpgradeCostText(lVar6,0);
             uVar7 = String.Concat(uVar7,uVar10,0);
@@ -1354,15 +1362,15 @@ public class AreaBuildController
         }
         return;
         LAB_180a11020:
-        if (((*pStatics_df90 == 0) ||
-            (lVar6 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar6 = *(int64 *)(lVar6 + 0x180)) == null) goto LAB_180a12e81;
-        if (*(int *)(lVar6 + 24) <= (int)plVar14) {
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null)
+           || (lVar6 = lVar6.speBuildingUnlocked) == null) goto LAB_180a12e81;
+        if (lVar6.cityAreaID <= (int)plVar14) {
           return;
         }
         lVar6 = FUN_18046bac0(0);
         if (lVar6 == null) goto LAB_180a12e81;
-        lVar6 = *(int64 *)(lVar6 + 88);
+        lVar6 = lVar6.TempHeros;
         lVar9 = FUN_18046c0a0(0);
         if ((((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
             (lVar9 = *(int64 *)(*(int64 *)(lVar9 + 32) + 0x180)) == null) ||
@@ -1370,8 +1378,8 @@ public class AreaBuildController
         lVar6 = AreaData.FindBuilding(lVar6,uVar3,0);
         if (lVar6 == null) {
           lVar6 = FUN_18046c0a0(0);
-          if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
-             (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 0x180)) == null) goto LAB_180a12e81;
+          if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+             (lVar6 = *(int64 *)(lVar6.villageAreaID + 0x180)) == null) goto LAB_180a12e81;
           uVar3 = FUN_1800d6750(lVar6,plVar14,DAT_181d68270);
           AreaBuildController.GenerateBuildNewButton(this,uVar3,0);
         }
@@ -1383,8 +1391,7 @@ public class AreaBuildController
     // RVA   : 0xA0FC80   Offset: 0xA0E480   Length: 0x6AF
     public void MoveBuildTarget(GameObject target)
     {
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -1420,7 +1427,7 @@ public class AreaBuildController
                   lVar7 = *(int64 *)(*(int64 *)(lVar7 + 32) + 24);
                   lVar8 = GameObject.GetComponent(target,DAT_181d9e2b0);
                   if (lVar8 == null) throw; // [null/range check failed]
-                  plVar9 = *(int64 **)(lVar8 + 24);
+                  plVar9 = lVar8.TestBuildPlayer;
                 }
                 else {
                   lVar7 = GameObject.GetComponent(target,DAT_181d9e4d0);
@@ -1428,12 +1435,12 @@ public class AreaBuildController
                   lVar7 = *(int64 *)(lVar7 + 24);
                   plVar9 = plVar10;
                 }
-                lVar8 = *pStatics_df90;
-                lVar1 = *(int64 *)(pStatics_7630 + 56);
+                lVar8 = GameController._instance;
+                lVar1 = PlotController.LaBaFestivelResultTalkText;
                 if ((lVar1 != null) && (lVar8 != null)) {
                   GameController.DestroyBuilding(lVar8,*(uint64 *)(lVar1 + 88),lVar4,0,0);
-                  lVar8 = *pStatics_df90;
-                  lVar1 = *(int64 *)(pStatics_7630 + 56);
+                  lVar8 = GameController._instance;
+                  lVar1 = PlotController.LaBaFestivelResultTalkText;
                   if ((lVar1 != null) && (lVar8 != null)) {
                     GameController.DestroyBuilding(lVar8,*(uint64 *)(lVar1 + 88),lVar7,0,0);
                     if (lVar7 != null) {
@@ -1442,7 +1449,7 @@ public class AreaBuildController
                       if (lVar5 != null) {
                         uVar3 = AreaBuildingData.GetMoveTime(lVar5,0);
                         if (lVar8 != null) {
-                          *(uint32 *)(lVar8 + 24) = uVar3;
+                          lVar8.TestBuildPlayer = uVar3;
                           if (*(int64 *)(lVar7 + 40) != 0) {
                             *(uint8 *)(*(int64 *)(lVar7 + 40) + 36) = 1;
                             if (plVar9 != (int64 *)0) {
@@ -1455,7 +1462,7 @@ public class AreaBuildController
                               if (*(int64 *)(lVar4 + 40) == 0) throw; // [null/range check failed]
                               *(uint8 *)(*(int64 *)(lVar4 + 40) + 36) = 1;
                             }
-                            lVar5 = *(int64 *)(pStatics_7630 + 56);
+                            lVar5 = PlotController.LaBaFestivelResultTalkText;
                             if (lVar5 != null) {
                               lVar8 = *(int64 *)(lVar5 + 88);
                               if ((lVar8 != null) && (*(int *)(lVar8 + 16) == *(int *)(lVar7 + 64))) {
@@ -1463,7 +1470,8 @@ public class AreaBuildController
                                 uVar3 = FUN_1817ff280(*(int64 *)(lVar8 + 192),lVar7,DAT_181d55360);
                                 AreaController.GenerateTileBuilding(lVar5,uVar3,0);
                               }
-                              lVar5 = *(int64 *)(pStatics_7630 + 56);
+                              lVar5 = *(int64 *)
+                                       (pPlotController + 56);
                               if (lVar5 != null) {
                                 lVar7 = *(int64 *)(lVar5 + 88);
                                 if (((lVar7 != null) && (lVar4 != null)) &&
@@ -1603,8 +1611,7 @@ public class AreaBuildController
     // RVA   : 0xA0DAC0   Offset: 0xA0C2C0   Length: 0xB2F
     public void BuildChoiceButtonClicked(GameObject buttonClicked)
     {
-        var pStatics_6278 = *(int64*)(DAT_181d96278 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d96278 + 184);
         float fVar1;
         int iVar2;
         bool cVar3;
@@ -1642,9 +1649,9 @@ public class AreaBuildController
             if ((((this.buildTargetObj == null) ||
                  (lVar9 = GameObject.GetComponent(this.buildTargetObj,DAT_181d9e2b0),
                  lVar9 == null)) ||
-                ((*(int64 *)(lVar9 + 32) == 0 ||
-                 ((lVar9 = *(int64 *)(*(int64 *)(lVar9 + 32) + 24), lVar9 == null ||
-                  (lVar9 = *(int64 *)(lVar9 + 40)) == null))))) ||
+                ((lVar9.villageAreaID == null ||
+                 ((lVar9 = *(int64 *)(lVar9.villageAreaID + 24), lVar9 == null ||
+                  (lVar9 = lVar9.forceAreaID) == null))))) ||
                (uVar4 = AreaBuildingData.GetDestroyTime(lVar9,0), lVar5 == null)) goto LAB_180a0e5ea;
             *(uint32 *)(lVar5 + 32) = uVar4;
             if ((((this.buildTargetObj == null) ||
@@ -1662,9 +1669,9 @@ public class AreaBuildController
               lVar5 = WorldData.GetHeroForce(*(int64 *)(lVar5 + 32),0,0);
               if (((this.buildTargetObj == null) ||
                   (((lVar9 = GameObject.GetComponent(this.buildTargetObj,DAT_181d9e2b0),
-                    lVar9 == null || (*(int64 *)(lVar9 + 32) == 0)) ||
-                   (lVar9 = *(int64 *)(*(int64 *)(lVar9 + 32) + 24)) == null))) ||
-                 ((*(int64 *)(lVar9 + 40) == 0 ||
+                    lVar9 == null || (lVar9.villageAreaID == null)) ||
+                   (lVar9 = *(int64 *)(lVar9.villageAreaID + 24)) == null))) ||
+                 ((lVar9.forceAreaID == null ||
                   (uVar7 = AreaBuildingData.GetObstacleRemoveCostResource(), lVar5 == null))))
               goto LAB_180a0e5ea;
               ForceData.CostResource(lVar5,uVar7,0,0);
@@ -1688,15 +1695,15 @@ public class AreaBuildController
             iVar2 = *(int *)(lVar5 + 20);
             lVar9 = AreaBuildingData.DataBase(lVar5,0);
             if (lVar9 == null) goto LAB_180a0e5ea;
-            fVar1 = *(float *)(lVar9 + 88);
+            fVar1 = lVar9.TempHeros;
             fVar11 = (float)AreaBuildingData.GetBuildSpeedRate(lVar5,0);
             uVar4 = Mathf.RoundToInt(((float)(iVar2 + 1) * fVar1) / fVar11,0);
             uVar4 = Mathf.Max(1,uVar4);
             *(uint32 *)(lVar5 + 28) = uVar4;
             *(uint8 *)(lVar5 + 36) = 0;
-            if ((*pStatics_df90 == 0) ||
-               (lVar9 = *(int64 *)(*pStatics_df90 + 32)) == null)
-            goto LAB_180a0e5ea;
+            if ((GameController._instance == null) ||
+               (lVar9 = GameController._instance.worldData,
+               lVar9 == null)) goto LAB_180a0e5ea;
             lVar9 = WorldData.GetHeroForce(lVar9,0,0);
             uVar7 = AreaBuildingData.GetUpgradeCostResource(lVar5);
             goto joined_r0x000180a0e405;
@@ -1711,12 +1718,12 @@ public class AreaBuildController
               DAT_181e781f3 = true;
               cVar3 = this.buildModeMovingBuilding;
             }
-            if (*pStatics_6278 != 0) {
+            if (*pStatics != 0) {
               uVar7 = 4;
               if (!cVar3) {
                 uVar7 = 2;
               }
-              CursorManager.ChangeCursorType(*pStatics_6278,uVar7,0);
+              CursorManager.ChangeCursorType(*pStatics,uVar7,0);
               if (this.buildChoiceGrid != null) {
                 GameObject.SetActive(this.buildChoiceGrid,0,0);
                 return;
@@ -1756,12 +1763,12 @@ public class AreaBuildController
             lVar5 = FUN_18046c0a0(0);
             lVar9 = FUN_18046bac0(0);
             if (lVar9 == null) goto LAB_180a0e5ea;
-            uVar7 = *(uint64 *)(lVar9 + 88);
+            uVar7 = lVar9.TempHeros;
             if ((((this.buildTargetObj == null) ||
                  (lVar9 = GameObject.GetComponent(this.buildTargetObj,DAT_181d9e2b0),
-                 lVar9 == null)) || (*(int64 *)(lVar9 + 32) == 0)) || (lVar5 == null)) goto LAB_180a0e5ea;
+                 lVar9 == null)) || (lVar9.villageAreaID == null)) || (lVar5 == null)) goto LAB_180a0e5ea;
             GameController.DestroyBuilding
-                      (lVar5,uVar7,*(uint64 *)(*(int64 *)(lVar9 + 32) + 24),0,0);
+                      (lVar5,uVar7,*(uint64 *)(lVar9.villageAreaID + 24),0,0);
             if ((this.buildTargetObj == null) ||
                (lVar5 = GameObject.GetComponent(this.buildTargetObj,DAT_181d9e2b0)) == null
                ) goto LAB_180a0e5ea;
@@ -1782,8 +1789,8 @@ public class AreaBuildController
             lVar5 = *(int64 *)(*(int64 *)(lVar5 + 24) + 56);
             if ((((this.buildTargetObj == null) ||
                  (lVar9 = GameObject.GetComponent(this.buildTargetObj,DAT_181d9e4d0),
-                 lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
-               ((lVar9 = *(int64 *)(*(int64 *)(lVar9 + 24) + 56), lVar9 == null ||
+                 lVar9 == null)) || (lVar9.cityAreaID == null)) ||
+               ((lVar9 = *(int64 *)(lVar9.cityAreaID + 56), lVar9 == null ||
                 (uVar4 = AreaRoadData.GetUpgradeTime(lVar9,0), lVar5 == null)))) goto LAB_180a0e5ea;
             *(uint32 *)(lVar5 + 24) = uVar4;
             lVar5 = FUN_18046c0a0(0);
@@ -1832,7 +1839,6 @@ public class AreaBuildController
     // RVA   : 0xA10330   Offset: 0xA0EB30   Length: 0x15C
     public void PlayerUpgradeBuilding(AreaBuildingData targetBuilding)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         float fVar1;
         int iVar2;
         uint uVar3;
@@ -1843,14 +1849,15 @@ public class AreaBuildController
           iVar2 = *(int *)(targetBuilding + 20);
           lVar4 = AreaBuildingData.DataBase(targetBuilding,0);
           if (lVar4 != null) {
-            fVar1 = *(float *)(lVar4 + 88);
+            fVar1 = lVar4.TempHeros;
             fVar6 = (float)AreaBuildingData.GetBuildSpeedRate(targetBuilding,0);
             uVar3 = Mathf.RoundToInt(((float)(iVar2 + 1) * fVar1) / fVar6,0);
             uVar3 = Mathf.Max(1,uVar3);
             *(uint32 *)(targetBuilding + 28) = uVar3;
             *(uint8 *)(targetBuilding + 36) = 0;
-            if ((*pStatics != 0) &&
-               (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar4 = GameController._instance.worldData,
+               lVar4 != null)) {
               lVar4 = WorldData.GetHeroForce(lVar4,0,0);
               uVar5 = AreaBuildingData.GetUpgradeCostResource(targetBuilding);
               if (lVar4 != null) {
@@ -1943,9 +1950,8 @@ public class AreaBuildController
     // RVA   : 0xA13C00   Offset: 0xA12400   Length: 0x20C
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d87338 + 184);
         long lVar1;
-        **(uint64 **)(DAT_181d87338 + 184) = "♦在己方区域移动/升级/建造建筑";
+        AreaBuildController.BuildModeButtonDescribe = "♦在己方区域移动/升级/建造建筑";
         il2cpp_internal();
         lVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(lVar1,DAT_181d7c250);
@@ -1956,15 +1962,13 @@ public class AreaBuildController
           FUN_181827900(lVar1,"残垣",DAT_181d7c3d0);
           FUN_181827900(lVar1,"废墟",DAT_181d7c3d0);
           FUN_181827900(lVar1,"池泽",DAT_181d7c3d0);
-          plVar2 = (int64 *)(pStatics + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
-          *(uint32 *)(pStatics + 24) = 3;
-          *(uint32 *)(pStatics + 28) = 4;
-          *(uint32 *)(pStatics + 32) = 4;
-          *(uint32 *)(pStatics + 36) = 5;
-          *(uint32 *)(pStatics + 40) = 5;
-          *(uint32 *)(pStatics + 44) = 5;
+          AreaBuildController.AreaObstacleName = lVar1;
+          AreaBuildController.UpgradeBuildNeedForceLv = 3;
+          AreaBuildController.NewBuildNeedForceLv = 4;
+          AreaBuildController.DestroyBuildNeedForceLv = 4;
+          AreaBuildController.MoveBuildNeedForceLv = 5;
+          AreaBuildController.UpgradeRoadNeedForceLv = 5;
+          AreaBuildController.MaxSpeBuildingNum = 5;
           return;
         }
     }

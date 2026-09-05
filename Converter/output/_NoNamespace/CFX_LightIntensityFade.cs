@@ -105,8 +105,6 @@ public class CFX_LightIntensityFade
     // RVA   : 0xA0D110   Offset: 0xA0B910   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180a0d110(int64 this)
-        {
         this.duration = 0x3f800000;
         FUN_18044ef50(this,0);
     }

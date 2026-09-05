@@ -42,7 +42,7 @@ public class ForceJobSettingIDDataBase
           if (cVar2) {
             uVar7 = "";
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4a8);
+          lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4a8);
           if ((this.effectSkill == null) ||
              (uVar3 = FUN_1800d6750(this.effectSkill,iVar6,DAT_181d6b9e8), lVar1 == null))
           break;

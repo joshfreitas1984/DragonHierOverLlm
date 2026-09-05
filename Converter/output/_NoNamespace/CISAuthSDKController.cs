@@ -50,7 +50,7 @@ public class CISAuthSDKController
     // RVA   : 0xBD76E0   Offset: 0xBD5EE0   Length: 0x457
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181d9fa30 + 184);
+        var pCISAuthSDKController = *(int64*)(CISAuthSDKController_StaticsPtr + 184);
         int iVar1;
         ulong uVar3;
         long lVar4;
@@ -66,15 +66,15 @@ public class CISAuthSDKController
         if (plVar2 == (int64 *)0) throw; // [null/range check failed]
         uVar3 = (**(code **)(*plVar2 + 0x1c8))(plVar2,*(uint64 *)(*plVar2 + 0x1d0));
         Debug.Log(uVar3,0);
-        lVar4 = *(int64 *)(pStatics + 8);
+        lVar4 = *(int64 *)(pCISAuthSDKController + 8);
         if (lVar4 == null) {
-          uVar3 = **(uint64 **)(DAT_181d9fa30 + 184);
+          uVar3 = CISAuthSDKController._instance;
           lVar4 = new OnTooltipCB(uVar3,DAT_181d70618,DAT_181d73008);
-          plVar2 = (int64 *)(pStatics + 8);
+          plVar2 = (int64 *)(pCISAuthSDKController + 8);
           *plVar2 = lVar4;
           il2cpp_internal(plVar2,lVar4);
         }
-        plVar2 = (int64 *)(*(int64 *)(DAT_181d8ff60 + 184) + 56);
+        plVar2 = (int64 *)(*(int64 *)(GameAccountController_StaticsPtr + 184) + 56);
         *plVar2 = lVar4;
         il2cpp_internal(plVar2,lVar4);
         iVar1 = Application.get_platform(0);

@@ -32,16 +32,14 @@ public class BookWriterUIController
     // RVA   : 0xCE4A80   Offset: 0xCE3280   Length: 0x58
     public static BookWriterUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d8d810 + 184) + 8);
+        return BookWriterUIController._instance;
     }
 
     // Token : 0x6000D2C
     // RVA   : 0xCDFB60   Offset: 0xCDE360   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d8d810 + 184) + 8);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        BookWriterUIController._instance = this;
     }
 
     // Token : 0x6000D2D
@@ -120,7 +118,7 @@ public class BookWriterUIController
         local_res18[0] = 0;
         local_res20[0] = 0;
         LAB_180ce1f60:
-        if (**(int **)(DAT_181d8d810 + 184) <= iVar14) {
+        if (BookWriterUIController.MaxBookWriterNum <= iVar14) {
           if ((((this.bookWriterUI != null) &&
                (lVar7 = GameObject.get_transform(this.bookWriterUI,0)) != null) &&
               (lVar7 = Transform.Find(lVar7,"BookWriterGrid",0)) != null) &&
@@ -550,7 +548,7 @@ public class BookWriterUIController
             goto LAB_180ce3fbf;
             local_c4[0] = BookWriterData.GetMinSkillLv(lVar7,0);
             uVar9 = il2cpp_value_box(DAT_181d5b2f8,local_c4);
-            lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x498);
+            lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x498);
             if (((this.targetBookWriterList == null) ||
                 (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
                || (uVar5 = BookWriterData.GetTargetSkillType(lVar10,0), lVar7 == null)) goto LAB_180ce3fbf;
@@ -755,7 +753,6 @@ public class BookWriterUIController
     // RVA   : 0xCDFBD0   Offset: 0xCDE3D0   Length: 0x2F1
     public void BookWriterActiveCoverClicked(GameObject buttonClicked)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         uint uVar1;
         bool cVar2;
         uint uVar3;
@@ -768,8 +765,9 @@ public class BookWriterUIController
           uVar3 = Int32.Parse(uVar5,0);
           cVar2 = BookWriterUIController.BookWriterUnlocked(this,uVar3,0);
           if (!cVar2) {
-            if (*pStatics != 0) {
-              GameController.ShowTextOnMouse(*pStatics,"未解锁",0);
+            if (GameController._instance != null) {
+              GameController.ShowTextOnMouse
+                        (GameController._instance,"未解锁",0);
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar7 = (int64 *)0;
               if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
@@ -888,7 +886,6 @@ public class BookWriterUIController
     // RVA   : 0xCE0C40   Offset: 0xCDF440   Length: 0x9CA
     public void ChooseHeroButtonClicked(GameObject buttonClick)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -898,39 +895,40 @@ public class BookWriterUIController
         int iVar7;
         lVar2 = il2cpp_internal(DAT_181d6e6b0);
         FUN_180f58a90(lVar2,DAT_181d63c78);
-        if ((*pStatics != 0) &&
-           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null)
+        {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             if (*(char *)(lVar3 + 0x370) == false) {
-              if ((*pStatics == 0) ||
-                 (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-              throw; // [null/range check failed]
+              if ((GameController._instance == null) ||
+                 (lVar3 = GameController._instance.worldData,
+                 lVar3 == null)) throw; // [null/range check failed]
               uVar4 = WorldData.Player(lVar3,0);
               if (lVar2 == null) throw; // [null/range check failed]
               FUN_181827900(lVar2,uVar4,DAT_181d63d78);
             }
             if (this.targetForce == null) {
-              if ((*pStatics == 0) ||
-                 (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-              throw; // [null/range check failed]
+              if ((GameController._instance == null) ||
+                 (lVar3 = GameController._instance.worldData,
+                 lVar3 == null)) throw; // [null/range check failed]
               lVar3 = WorldData.Player(lVar3,0);
               if (lVar3 == null) throw; // [null/range check failed]
               cVar1 = HeroData.HaveLover(lVar3,0);
               if (cVar1) {
                 lVar3 = FUN_18046c0a0(0);
                 if (lVar3 == null) throw; // [null/range check failed]
-                lVar3 = *(int64 *)(lVar3 + 32);
+                lVar3 = lVar3.villageAreaID;
                 lVar5 = FUN_18046c0a0(0);
                 if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                 lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
                 if ((lVar5 == null) || (lVar3 == null)) throw; // [null/range check failed]
                 lVar3 = WorldData.GetHero(lVar3,*(uint32 *)(lVar5 + 0x328),0);
                 if (lVar3 == null) throw; // [null/range check failed]
-                if (*(char *)(lVar3 + 96) == false) {
+                if (!lVar3.BigMapRandomEventDatas) {
                   lVar3 = FUN_18046c0a0(0);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  lVar3 = *(int64 *)(lVar3 + 32);
+                  lVar3 = lVar3.villageAreaID;
                   lVar5 = FUN_18046c0a0(0);
                   if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                   lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
@@ -940,7 +938,7 @@ public class BookWriterUIController
                   if (*(char *)(lVar3 + 209) == false) {
                     lVar3 = FUN_18046c0a0(0);
                     if (lVar3 == null) throw; // [null/range check failed]
-                    lVar3 = *(int64 *)(lVar3 + 32);
+                    lVar3 = lVar3.villageAreaID;
                     lVar5 = FUN_18046c0a0(0);
                     if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                     lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
@@ -950,7 +948,7 @@ public class BookWriterUIController
                     if (*(char *)(lVar3 + 0x370) == false) {
                       lVar3 = FUN_18046c0a0(0);
                       if (lVar3 == null) throw; // [null/range check failed]
-                      lVar3 = *(int64 *)(lVar3 + 32);
+                      lVar3 = lVar3.villageAreaID;
                       lVar5 = FUN_18046c0a0(0);
                       if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                       lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
@@ -964,25 +962,25 @@ public class BookWriterUIController
               }
             }
             else {
-              if ((*pStatics == 0) ||
-                 (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-              throw; // [null/range check failed]
+              if ((GameController._instance == null) ||
+                 (lVar3 = GameController._instance.worldData,
+                 lVar3 == null)) throw; // [null/range check failed]
               lVar3 = WorldData.Player(lVar3,0);
               if (lVar3 == null) throw; // [null/range check failed]
-              if (*(char *)(lVar3 + 180) != false) {
+              if (lVar3.hour) {
                 iVar7 = 0;
                 while( true ) {
-                  if ((*pStatics == 0) ||
-                     (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-                  break;
+                  if ((GameController._instance == null) ||
+                     (lVar3 = GameController._instance.worldData,
+                     lVar3 == null)) break;
                   lVar3 = WorldData.Player(lVar3,0);
                   if (lVar3 == null) break;
                   lVar3 = HeroData.GetForce(lVar3,0,0);
-                  if ((lVar3 == null) || (*(int64 *)(lVar3 + 112) == 0)) break;
-                  if (*(int *)(*(int64 *)(lVar3 + 112) + 24) <= iVar7) goto LAB_180ce112a;
+                  if ((lVar3 == null) || (lVar3.lastRandomWorldEventDay == null)) break;
+                  if (*(int *)(lVar3.lastRandomWorldEventDay + 24) <= iVar7) goto LAB_180ce112a;
                   lVar3 = FUN_18046c0a0(0);
-                  if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
-                  lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+                  if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
+                  lVar3 = WorldData.Player(lVar3.villageAreaID,0);
                   if (lVar3 == null) break;
                   lVar3 = HeroData.GetForce(lVar3,0,0);
                   if (lVar3 == null) break;
@@ -991,17 +989,17 @@ public class BookWriterUIController
                   cVar1 = FUN_1818279a0(lVar2);
                   if (!cVar1) {
                     lVar3 = FUN_18046c0a0(0);
-                    if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
-                    lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+                    if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
+                    lVar3 = WorldData.Player(lVar3.villageAreaID,0);
                     if (lVar3 == null) break;
                     lVar3 = HeroData.GetForce(lVar3,0);
                     if (lVar3 == null) break;
                     lVar3 = ForceData.GetOwnHero(lVar3);
                     if (lVar3 == null) break;
-                    if (*(char *)(lVar3 + 96) == false) {
+                    if (!lVar3.BigMapRandomEventDatas) {
                       lVar3 = FUN_18046c0a0(0);
-                      if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
-                      lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+                      if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
+                      lVar3 = WorldData.Player(lVar3.villageAreaID,0);
                       if (lVar3 == null) break;
                       lVar3 = HeroData.GetForce(lVar3,0);
                       if (lVar3 == null) break;
@@ -1009,8 +1007,8 @@ public class BookWriterUIController
                       if (lVar3 == null) break;
                       if (*(char *)(lVar3 + 209) == false) {
                         lVar3 = FUN_18046c0a0(0);
-                        if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
-                        lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+                        if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
+                        lVar3 = WorldData.Player(lVar3.villageAreaID,0);
                         if (lVar3 == null) break;
                         lVar3 = HeroData.GetForce(lVar3,0);
                         if (lVar3 == null) break;
@@ -1018,8 +1016,8 @@ public class BookWriterUIController
                         if (lVar3 == null) break;
                         if (*(char *)(lVar3 + 0x370) == false) {
                           lVar3 = FUN_18046c0a0(0);
-                          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
-                          lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+                          if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
+                          lVar3 = WorldData.Player(lVar3.villageAreaID,0);
                           if (lVar3 == null) break;
                           lVar3 = HeroData.GetForce(lVar3,0,0);
                           if (lVar3 == null) break;
@@ -1530,7 +1528,6 @@ public class BookWriterUIController
     // RVA   : 0xCE4040   Offset: 0xCE2840   Length: 0x9FF
     public void SureButtonClicked(GameObject buttonClick)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         uint uVar2;
         int iVar3;
@@ -1665,8 +1662,9 @@ public class BookWriterUIController
                             HeroData.LoseItem(lVar6,*(uint64 *)(lVar4 + 40),1,0);
                           }
                         }
-                        if ((*pStatics != 0) &&
-                           (lVar4 = *(int64 *)(*pStatics + 32),
+                        if ((GameController._instance != null) &&
+                           (lVar4 = *(int64 *)
+                                     (GameController._instance + 32),
                            lVar4 != null)) {
                           lVar6 = WorldData.Player(lVar4,0);
                           lVar4 = this.targetBookWriterList;
@@ -1899,7 +1897,7 @@ public class BookWriterUIController
     // RVA   : 0xCE4A40   Offset: 0xCE3240   Length: 0x39
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181d8d810 + 184) = 4;
+        BookWriterUIController.MaxBookWriterNum = 4;
     }
 
 }

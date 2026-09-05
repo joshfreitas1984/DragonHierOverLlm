@@ -62,8 +62,6 @@ public class UIDragScrollView
     // RVA   : 0x10E0E30   Offset: 0x10DF630   Length: 0xB
     private void Start()
     {
-        void FUN_1810e0e30(int64 this)
-        {
         this.mStarted = 1;
         UIDragScrollView.FindScrollView(this,0);
     }

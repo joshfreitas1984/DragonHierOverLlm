@@ -214,8 +214,6 @@ public class TweenWidth
     // RVA   : 0xA70640   Offset: 0xA6EE40   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180a70640(int64 this)
-        {
         this.from = 100;
         this.to = 100;
         UITweener.ctor(this,0);

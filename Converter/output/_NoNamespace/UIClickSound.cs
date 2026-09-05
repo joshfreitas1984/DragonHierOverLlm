@@ -33,8 +33,6 @@ public class UIClickSound
     // RVA   : 0x13D31F0   Offset: 0x13D19F0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_1813d31f0(int64 this)
-        {
         this.volume = 0x3f800000;
         this.pitch = 0x3f800000;
         FUN_18044ef50(this,0);

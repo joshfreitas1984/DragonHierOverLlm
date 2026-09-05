@@ -34,8 +34,7 @@ public class <BattleUnitAttackFinish>d__234
     // RVA   : 0xB1DD80   Offset: 0xB1C580   Length: 0x11E4
     private virtual bool MoveNext()
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar2;
         long lVar3;
         ulong uVar4;
@@ -89,15 +88,15 @@ public class <BattleUnitAttackFinish>d__234
                     uVar15 = (uint32)((uint64)uVar14 >> 32);
                     if (fVar11 <= fVar12) {
                       lVar7 = *plVar1;
-                      lVar8 = FUN_18046c100(0);
-                      if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 144)) == null)
+
+                      if ((lVar8 = FUN_18046c100(0)?.MailDatas) == null)
                       goto LAB_180b1eeb0;
-                      if (*(uint32 *)(lVar8 + 24) < 80) {
+                      if (lVar8.cityAreaID < 80) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
-                      lVar8 = *(int64 *)(*(int64 *)(lVar8 + 16) + 0x298);
+                      lVar8 = *(int64 *)(lVar8.chapter + 0x298);
                       if (lVar8 == null) goto LAB_180b1eeb0;
-                      uVar14 = *(uint64 *)(lVar8 + 16);
+                      uVar14 = lVar8.chapter;
                       puVar9 = (uint32 *)Color.get_green(&local_98,0);
                       if (lVar7 == null) goto LAB_180b1eeb0;
                       local_98 = *puVar9;
@@ -171,11 +170,11 @@ public class <BattleUnitAttackFinish>d__234
                           FUN_1800d6620();
                         }
                         if (*(char *)(lVar7 + 64) != false) {
-                          if (*(int64 *)(lVar3 + 0x110) == 0) {
+                          if (lVar3.monthCatchBadFamePlayerTime == null) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
                           }
-                          lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64);
+                          lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 64);
                           if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
@@ -188,11 +187,11 @@ public class <BattleUnitAttackFinish>d__234
                           fVar11 = (float)HeroSpeAddData.Get(lVar7,uVar4 & 0xffffffff);
                           if (0.0 < fVar11) {
                             fVar11 = (float)Random.get_value(0);
-                            if (*(int64 *)(lVar3 + 0x110) == 0) {
+                            if (lVar3.monthCatchBadFamePlayerTime == null) {
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
                             }
-                            lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64);
+                            lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 64);
                             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
@@ -235,11 +234,11 @@ public class <BattleUnitAttackFinish>d__234
                                   FUN_1800d6620();
                                 }
                                 if (*(int *)(lVar7 + 84) != 2) goto LAB_180b1e220;
-                                if (*(int64 *)(lVar3 + 0x110) == 0) {
+                                if (lVar3.monthCatchBadFamePlayerTime == null) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
                                 }
-                                lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64);
+                                lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 64);
                                 if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
@@ -256,11 +255,11 @@ public class <BattleUnitAttackFinish>d__234
                                 fVar11 = (float)HeroSpeAddData.Get(*(int64 *)(lVar7 + 56),
                                                                     uVar4 & 0xffffffff);
                                 if (fVar11 <= 0.0) {
-                                  if (*(int64 *)(lVar3 + 0x110) == 0) {
+                                  if (lVar3.monthCatchBadFamePlayerTime == null) {
                           // WARNING: Subroutine does not return
                                     FUN_1800d6620();
                                   }
-                                  lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64);
+                                  lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 64);
                                   if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                                     FUN_1800d6620();
@@ -297,17 +296,17 @@ public class <BattleUnitAttackFinish>d__234
                                 Debug.LogError("错误！自身buff无法根据内力差值调整时间",0);
                               }
                               else {
-                                lVar7 = *(int64 *)(lVar3 + 0x110);
+                                lVar7 = lVar3.monthCatchBadFamePlayerTime;
                                 lVar8 = FUN_18046c100(0);
                                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
                                 }
-                                if (*(int64 *)(lVar8 + 144) == 0) {
+                                if (lVar8.MailDatas == null) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
                                 }
-                                lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 144),uVar4 & 0xffffffff);
+                                lVar8 = FUN_180002f80(lVar8.MailDatas,uVar4 & 0xffffffff);
                                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
@@ -325,13 +324,13 @@ public class <BattleUnitAttackFinish>d__234
                       goto LAB_180b1e220;
                     }
                     ZhSegment.Initialize(&local_78,DAT_181d74bb8);
-                    if ((*(int64 *)(lVar3 + 0x110) == 0) ||
-                       (lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64)) == null)
+                    if ((lVar3.monthCatchBadFamePlayerTime == null) ||
+                       (lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 64)) == null)
                     goto LAB_180b1eeb0;
                     HeroData.ChangeSkillPower(lVar7,0);
                   }
                 }
-                if (*(char *)(lVar3 + 0x2a0) != false) {
+                if (lVar3.innDict) {
                   if (*plVar1 == 0) goto LAB_180b1eeb0;
                   cVar5 = BattleUnit.get_IsAlive(*plVar1,0);
                   if (cVar5) {
@@ -342,15 +341,15 @@ public class <BattleUnitAttackFinish>d__234
                     ;
                     if (cVar5) {
                       lVar7 = *plVar1;
-                      lVar8 = FUN_18046c100(0);
-                      if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 144)) == null)
+
+                      if ((lVar8 = FUN_18046c100(0)?.MailDatas) == null)
                       goto LAB_180b1eeb0;
-                      if (*(uint32 *)(lVar8 + 24) < 71) {
+                      if (lVar8.cityAreaID < 71) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
-                      lVar8 = *(int64 *)(*(int64 *)(lVar8 + 16) + 0x250);
+                      lVar8 = *(int64 *)(lVar8.chapter + 0x250);
                       if (lVar8 == null) goto LAB_180b1eeb0;
-                      uVar14 = *(uint64 *)(lVar8 + 16);
+                      uVar14 = lVar8.chapter;
                       puVar9 = (uint32 *)Color.get_green(&local_98,0);
                       if (lVar7 == null) goto LAB_180b1eeb0;
                       local_98 = *puVar9;
@@ -363,9 +362,10 @@ public class <BattleUnitAttackFinish>d__234
                   }
                 }
                 BattleController.CheckAllDead(lVar3,0);
-                if ((*pStatics_df90 != 0) &&
-                   (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-                  fVar11 = *(float *)(lVar3 + 0x1d8);
+                if ((GameController._instance != null) &&
+                   (lVar3 = GameController._instance.worldData,
+                   lVar3 != null)) {
+                  fVar11 = lVar3.battleTimeScale;
                   uVar14 = new WaitForSeconds(1.0 / fVar11,0);
                   this.<>2__current = uVar14;
                   this.<>1__state = 1;
@@ -380,78 +380,80 @@ public class <BattleUnitAttackFinish>d__234
           return false;
         }
         this.<>1__state = 0xffffffff;
-        if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x110) == 0)) goto LAB_180b1eeb0;
-        cVar5 = BattleUnit.get_IsAlive(*(int64 *)(lVar3 + 0x110),0);
+        if ((lVar3 == null) || (lVar3.monthCatchBadFamePlayerTime == null)) goto LAB_180b1eeb0;
+        cVar5 = BattleUnit.get_IsAlive(lVar3.monthCatchBadFamePlayerTime,0);
         if (cVar5) {
-          if ((((*(int64 *)(lVar3 + 0x110) == 0) ||
-               (lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64)) == null) ||
+          if ((((lVar3.monthCatchBadFamePlayerTime == null) ||
+               (lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 64)) == null) ||
               (lVar7 = HeroData.GetNowActiveSkill(lVar7,0)) == null) ||
              (lVar7 = KungfuSkillLvData.DataBase(lVar7,0)) == null) goto LAB_180b1eeb0;
           if (*(char *)(lVar7 + 188) != false) {
-            if (*(int64 *)(lVar3 + 0x110) == 0) goto LAB_180b1eeb0;
-            uVar14 = Component.get_transform(*(int64 *)(lVar3 + 0x110),0);
-            if (((*(int64 *)(lVar3 + 0x110) == 0) ||
-                (lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 96)) == null) ||
+            if (lVar3.monthCatchBadFamePlayerTime == null) goto LAB_180b1eeb0;
+            uVar14 = Component.get_transform(lVar3.monthCatchBadFamePlayerTime,0);
+            if (((lVar3.monthCatchBadFamePlayerTime == null) ||
+                (lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 96)) == null) ||
                ((lVar7 = GridUnitData.get_GridObj(lVar7,0), lVar7 == null ||
                 (lVar7 = GameObject.get_transform(lVar7,0)) == null))) goto LAB_180b1eeb0;
             puVar10 = (uint64 *)Transform.get_localPosition(&local_98,lVar7,0);
             uVar2 = *puVar10;
             fVar11 = *(float *)(puVar10 + 1);
-            local_a8 = *(uint64 *)(pStatics_b128 + 28);
-            local_a0 = *(float *)(pStatics_b128 + 36);
+            local_a8 = *(uint64 *)(pPlotController + 28);
+            local_a0 = *(float *)(pPlotController + 36);
             local_c8 = (float)uVar2;
             fStack_c4 = (float)((uint64)uVar2 >> 32);
             local_b8 = CONCAT44(fStack_c4 + (float)((uint64)local_a8 >> 32),
                                 local_c8 + (float)local_a8);
             fVar11 = fVar11 + local_a0;
-            if ((*pStatics_df90 == 0) ||
-               (*(int64 *)(*pStatics_df90 + 32) == 0)) goto LAB_180b1eeb0;
+            if ((GameController._instance == null) ||
+               (GameController._instance.worldData == null))
+            goto LAB_180b1eeb0;
             local_a8 = local_b8;
             local_a0 = fVar11;
             uVar14 = ShortcutExtensions.DOLocalMove(uVar14,&local_a8);
             TweenSettingsExtensions.SetEase(uVar14,1,DAT_181d97ca8);
-            lVar7 = *(int64 *)(lVar3 + 0x110);
+            lVar7 = lVar3.monthCatchBadFamePlayerTime;
             if ((lVar7 == null) || (*(int64 *)(lVar7 + 64) == 0)) goto LAB_180b1eeb0;
             if (*(char *)(*(int64 *)(lVar7 + 64) + 16) == false) {
               if ((*(int64 *)(lVar7 + 24) == 0) ||
                  (lVar7 = SkeletonAnimation.get_AnimationState(*(int64 *)(lVar7 + 24),0), lVar7 == null
                  )) goto LAB_180b1eeb0;
               lVar7 = AnimationState.SetAnimation(lVar7,1,"jump_small",0,0);
-              if (((*(int64 *)(lVar3 + 0x110) == 0) ||
-                  (((lVar8 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 24), lVar8 == null ||
-                    (lVar8 = *(int64 *)(lVar8 + 24)) == null) ||
+              if (((lVar3.monthCatchBadFamePlayerTime == null) ||
+                  (((lVar8 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 24), lVar8 == null ||
+                    (lVar8 = lVar8.cityAreaID) == null) ||
                    (lVar8 = SkeletonDataAsset.GetSkeletonData(lVar8,1,0)) == null))) ||
                  (lVar8 = SkeletonData.FindAnimation(lVar8,"jump_small",0)) == null)
               goto LAB_180b1eeb0;
-              fVar11 = *(float *)(lVar8 + 40);
-              fVar12 = *(float *)(*(int64 *)(DAT_181d8b6a8 + 184) + 24);
-              if (((*pStatics_df90 == 0) ||
-                  (lVar8 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-                 (lVar7 == null)) goto LAB_180b1eeb0;
-              *(float *)(lVar7 + 160) = fVar11 / (fVar12 / *(float *)(lVar8 + 0x1d8));
-              lVar7 = *(int64 *)(lVar3 + 0x110);
+              fVar11 = lVar8.forceAreaID;
+              fVar12 = BattleUnit.UnitMoveOneGridTime;
+              if (((GameController._instance == null) ||
+                  (lVar8 = GameController._instance.worldData,
+                  lVar8 == null)) || (lVar7 == null)) goto LAB_180b1eeb0;
+              *(float *)(lVar7 + 160) = fVar11 / (fVar12 / lVar8.battleTimeScale);
+              lVar7 = lVar3.monthCatchBadFamePlayerTime;
             }
             if (((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) ||
                (lVar7 = SkeletonAnimation.get_AnimationState(*(int64 *)(lVar7 + 24),0)) == null)
             goto LAB_180b1eeb0;
             AnimationState.AddEmptyAnimation(lVar7,1);
-            if (*(int64 *)(lVar3 + 0x110) == 0) goto LAB_180b1eeb0;
-            uVar14 = Component.get_transform(*(int64 *)(lVar3 + 0x110),0);
-            if ((*pStatics_df90 == 0) ||
-               (*(int64 *)(*pStatics_df90 + 32) == 0)) goto LAB_180b1eeb0;
+            if (lVar3.monthCatchBadFamePlayerTime == null) goto LAB_180b1eeb0;
+            uVar14 = Component.get_transform(lVar3.monthCatchBadFamePlayerTime,0);
+            if ((GameController._instance == null) ||
+               (GameController._instance.worldData == null))
+            goto LAB_180b1eeb0;
             ShortcutExtensions.DOScale(uVar14,0x3f800000);
           }
         }
-        if (*(char *)(lVar3 + 0x2a0) != false) {
-          if (*(int64 *)(lVar3 + 0x110) == 0) {
+        if (lVar3.innDict) {
+          if (lVar3.monthCatchBadFamePlayerTime == null) {
         LAB_180b1eeb0:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          cVar5 = BattleUnit.get_IsAlive(*(int64 *)(lVar3 + 0x110),0);
+          cVar5 = BattleUnit.get_IsAlive(lVar3.monthCatchBadFamePlayerTime,0);
           if (cVar5) {
-            if ((((*(int64 *)(lVar3 + 0x110) == 0) ||
-                 (lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64)) == null) ||
+            if ((((lVar3.monthCatchBadFamePlayerTime == null) ||
+                 (lVar7 = *(int64 *)(lVar3.monthCatchBadFamePlayerTime + 64)) == null) ||
                 (lVar7 = HeroData.GetNowActiveSkill(lVar7,0)) == null) ||
                (lVar7 = KungfuSkillLvData.DataBase(lVar7,0)) == null) goto LAB_180b1eeb0;
             cVar5 = BattleController.DamageRangeHaveTarget(lVar3,*(uint32 *)(lVar7 + 28),0);

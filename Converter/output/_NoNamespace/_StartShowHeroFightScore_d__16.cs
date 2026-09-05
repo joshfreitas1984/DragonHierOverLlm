@@ -56,7 +56,7 @@ public class <StartShowHeroFightScore>d__16
           }
           if (*(char *)(lVar1 + 66) == false) {
             *(uint8 *)(lVar1 + 66) = 1;
-            lVar2 = *(int64 *)(*(int64 *)(DAT_181d84f70 + 184) + 8);
+            lVar2 = GameController.difficultyExtraPoint;
             uVar3 = new OnTooltipCB(lVar1,DAT_181d50310,0);
             if (lVar2 == null) goto LAB_1808d1f56;
             TaskFactory.StartNew(lVar2,uVar3,2);

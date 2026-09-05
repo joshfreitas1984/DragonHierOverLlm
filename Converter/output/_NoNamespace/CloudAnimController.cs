@@ -29,7 +29,7 @@ public class CloudAnimController
     // RVA   : 0x9FCE90   Offset: 0x9FB690   Length: 0x57
     public static CloudAnimController get_Instance()
     {
-        return **(uint64 **)(DAT_181d92bf0 + 184);
+        return CloudAnimController._instance;
     }
 
     // Token : 0x60012E8
@@ -42,7 +42,7 @@ public class CloudAnimController
         long lVar5;
         long lVar6;
         int iVar7;
-        plVar1 = *(int64 **)(DAT_181d92bf0 + 184);
+        plVar1 = *(int64 **)(CloudAnimController_StaticsPtr + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         iVar7 = 0;
@@ -156,7 +156,7 @@ public class CloudAnimController
             lVar5 = GameObject.get_transform(this.newCloud,0);
             fVar11 = (float)FUN_1801e72c0();
             fVar12 = (float)FUN_1801e67c0();
-            lVar7 = *(int64 *)(*(int64 *)(DAT_181d92bf0 + 184) + 8);
+            lVar7 = CloudAnimController.allArea;
             if (lVar7 == null) throw; // [null/range check failed]
             uVar3 = FUN_180132c70(lVar7,local_res18,DAT_181d840f8);
             local_res20 = (float)uVar3;
@@ -257,9 +257,7 @@ public class CloudAnimController
           FUN_181814e80(lVar1,0xbf8000003f800000,DAT_181d83f78);
           FUN_181814e80(lVar1,0x3f800000bf800000,DAT_181d83f78);
           FUN_181814e80(lVar1,0xbf800000bf800000,DAT_181d83f78);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181d92bf0 + 184) + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          CloudAnimController.allArea = lVar1;
           return;
         }
     }

@@ -12,7 +12,8 @@ public class ContributionSkillUnlockButtonController
     {
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d6a268 + 184) + 16);
+        lVar1 = *(int64 *)
+                 (*(int64 *)(OtherForceContributionExchangeController_StaticsPtr + 184) + 16);
         lVar2 = Component.get_transform(this,0);
         if (lVar2 != null) {
           lVar2 = FUN_180da0f00(lVar2,0);

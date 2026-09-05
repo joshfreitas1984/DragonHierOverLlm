@@ -75,8 +75,6 @@ public class ForceDetailController
     // RVA   : 0xBB00C0   Offset: 0xBAE8C0   Length: 0x505
     public void InitForceDetailTab()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
@@ -97,9 +95,9 @@ public class ForceDetailController
         uint32 uStack_28;
         uint32 uStack_24;
         int64 local_20;
-        if (((*pStatics_df90 == 0) ||
-            (lVar6 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar6 = *(int64 *)(lVar6 + 72)) == null) {
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null)
+           || (lVar6 = lVar6.Forces) == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -147,7 +145,7 @@ public class ForceDetailController
             FUN_1800d6620();
           }
           uVar4 = Component.GetComponent(lVar5,DAT_181d6d8c0);
-          LTLocalization.SetText(uVar4,*(uint64 *)(lVar6 + 24),0);
+          LTLocalization.SetText(uVar4,lVar6.cityAreaID,0);
           lVar6 = GameObject.get_transform(lVar3,0);
           if (lVar6 == null) {
                           // WARNING: Subroutine does not return
@@ -168,8 +166,8 @@ public class ForceDetailController
             FUN_1800d6620();
           }
           Image.set_sprite(lVar6,uVar4);
-          if (*(int *)(pStatics_ef00 + 8) == 1) {
-            lVar6 = *(int64 *)(pStatics_ef00 + 32);
+          if (PlotController.LeftFaceHideOffset == 1) {
+            lVar6 = PlotController.SpringFestivelRewardLvTalkText;
             if (lVar6 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -224,7 +222,6 @@ public class ForceDetailController
     // RVA   : 0xBB08F0   Offset: 0xBAF0F0   Length: 0xAAE
     public void RefreshForceDetailTab()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -248,9 +245,9 @@ public class ForceDetailController
         uint32 uStack_34;
         int64 local_30;
         local_res18[0] = 0;
-        if (((*pStatics == 0) ||
-            (lVar8 = *(int64 *)(*pStatics + 32)) == null) ||
-           (lVar8 = *(int64 *)(lVar8 + 72)) == null) {
+        if (((GameController._instance == null) ||
+            (lVar8 = GameController._instance.worldData) == null)
+           || (lVar8 = lVar8.Forces) == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -297,7 +294,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (*(int *)(lVar4 + 132) == *(int *)(lVar8 + 16)) {
+          if (*(int *)(lVar4 + 132) == lVar8.chapter) {
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -416,7 +413,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(lVar4 + 132) == *(int *)(lVar8 + 16)) goto LAB_180bb1110;
+            if (*(int *)(lVar4 + 132) == lVar8.chapter) goto LAB_180bb1110;
             lVar4 = Transform.Find(lVar2,"Favor",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -536,7 +533,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(lVar4 + 132) != *(int *)(lVar8 + 16)) {
+            if (*(int *)(lVar4 + 132) != lVar8.chapter) {
               lVar4 = FUN_18046c0a0(0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -556,7 +553,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar8 = ForceData.GetForceRelationshipText(lVar4,*(uint32 *)(lVar8 + 16),1,0);
+              lVar8 = ForceData.GetForceRelationshipText(lVar4,lVar8.chapter,1,0);
               if (lVar8 != null) {
                 lVar4 = Transform.Find(lVar2,"Relation");
                 if (lVar4 == null) {
@@ -800,10 +797,9 @@ public class ForceDetailController
     // RVA   : 0xBB1600   Offset: 0xBAFE00   Length: 0x2039
     public void ShowForceDetail(int targetForceID)
     {
-        var plVar5 = *(int64*)(lVar5 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var plVar5 = lVar5.forceMeetingStarted;
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -843,15 +839,16 @@ public class ForceDetailController
         ForceDetailController.RefreshForceTab(this,0);
         if (this.forceDetail != null) {
           GameObject.SetActive(this.forceDetail,1);
-          if ((*pStatics_df90 != 0) &&
-             (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar5 = GameController._instance.worldData) != null
+             ) {
             lVar5 = WorldData.GetForce(lVar5,targetForceID);
             local_80 = lVar5;
             if ((this.forceDetail != null) &&
                (((lVar6 = GameObject.get_transform(this.forceDetail,0), lVar6 != null &&
                  (lVar6 = Transform.Find(lVar6,"ForceName")) != null) &&
                 (uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0), lVar5 != null)))) {
-              LTLocalization.SetText(uVar7,*(uint64 *)(lVar5 + 24));
+              LTLocalization.SetText(uVar7,lVar5.cityAreaID);
               uVar7 = this.baseDetailText;
               plVar8 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
               if (plVar8 != (int64 *)0) {
@@ -900,7 +897,7 @@ public class ForceDetailController
                 }
                 plVar8[6] = "\n风格 ";
                 il2cpp_internal(plVar8 + 6,lVar6);
-                lVar6 = *(int64 *)(lVar5 + 40);
+                lVar6 = lVar5.forceAreaID;
                 if ((lVar6 != null) &&
                    (lVar9 = il2cpp_internal(lVar6,*(uint64 *)(*plVar8 + 64))) == null) {
                   uVar7 = il2cpp_internal();
@@ -935,7 +932,7 @@ public class ForceDetailController
                 if (plVar8 != (int64 *)0) {
                   local_a0 = (**(code **)(*plVar8 + 0x5d8))(plVar8,*(uint64 *)(*plVar8 + 0x5e0));
                   iVar14 = 0;
-                  lVar6 = *(int64 *)(lVar5 + 240);
+                  lVar6 = lVar5.worldPlotEventStartData;
                   lVar9 = "";
                   while (lVar6 != null) {
                     if (*(int *)(lVar6 + 24) <= iVar14) {
@@ -948,18 +945,18 @@ public class ForceDetailController
                     if (iVar14 == 0) {
                       lVar13 = "";
                     }
-                    if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) &&
-                       (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                      il2cpp_runtime_class_init(DAT_181d4ef00);
-                      lVar6 = *(int64 *)(lVar5 + 240);
+                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                       (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                      il2cpp_runtime_class_init(PlotController_StaticsPtr);
+                      lVar6 = lVar5.worldPlotEventStartData;
                     }
-                    lVar1 = *(int64 *)(pStatics_ef00 + 0x498);
+                    lVar1 = *(int64 *)(pPlotController + 0x498);
                     if ((lVar6 == null) || (uVar4 = FUN_1800d6750(lVar6,iVar14,DAT_181d68270), lVar1 == null))
                     break;
                     uVar7 = FUN_180002f80(lVar1,uVar4,DAT_181d7c9c0);
                     lVar9 = String.Concat(lVar9,lVar13,uVar7,0);
                     iVar14 = iVar14 + 1;
-                    lVar6 = *(int64 *)(lVar5 + 240);
+                    lVar6 = lVar5.worldPlotEventStartData;
                   }
                 }
               }
@@ -968,8 +965,8 @@ public class ForceDetailController
         }
         throw; // [null/range check failed]
         LAB_180bb1cd0:
-        if (*(int64 *)(lVar5 + 248) == 0) throw; // [null/range check failed]
-        if (*(int *)(*(int64 *)(lVar5 + 248) + 24) <= iVar14) {
+        if (lVar5.worldPlotEventStartTime == null) throw; // [null/range check failed]
+        if (*(int *)(lVar5.worldPlotEventStartTime + 24) <= iVar14) {
           if (0 < *(int *)(lVar5 + 0x17c)) {
             plVar8 = this.baseDetailText;
             if (plVar8 == (int64 *)0) throw; // [null/range check failed]
@@ -987,7 +984,8 @@ public class ForceDetailController
             uVar2 = "\n特殊建筑 {0}({1}</color>)";
             uVar11 = "<color=grey>未解锁";
             if (cVar3) {
-              uVar11 = String.Concat(*(uint64 *)(pStatics_ef00 + 0x260),
+              uVar11 = String.Concat(*(uint64 *)
+                                       (pPlotController + 0x260),
                                       "已解锁",0);
             }
             uVar10 = String.Format(uVar2,uVar10,uVar11,0);
@@ -1027,8 +1025,8 @@ public class ForceDetailController
             }
             plVar12[5] = "\n\n区域 ";
             il2cpp_internal(plVar12 + 5,lVar6);
-            if (*(int64 *)(lVar5 + 96) != 0) {
-              local_a8[0] = *(uint32 *)(*(int64 *)(lVar5 + 96) + 24);
+            if (lVar5.BigMapRandomEventDatas != null) {
+              local_a8[0] = *(uint32 *)(lVar5.BigMapRandomEventDatas + 24);
               lVar6 = Int32.ToString(local_a8,0);
               if ((lVar6 != null) &&
                  (lVar9 = il2cpp_internal(lVar6,*(uint64 *)(*plVar12 + 64))) == null) {
@@ -1058,8 +1056,8 @@ public class ForceDetailController
               }
               plVar12[7] = "/";
               il2cpp_internal(plVar12 + 7,lVar6);
-              if (*(int64 *)(lVar5 + 0x148) != 0) {
-                local_res20[0] = ForceSpeAddData.Get(*(int64 *)(lVar5 + 0x148),0,0);
+              if (lVar5.monthBreakEquipTime != null) {
+                local_res20[0] = ForceSpeAddData.Get(lVar5.monthBreakEquipTime,0,0);
                 lVar6 = Single.ToString(local_res20,0);
                 if ((lVar6 != null) &&
                    (lVar9 = il2cpp_internal(lVar6,*(uint64 *)(*plVar12 + 64))) == null) {
@@ -1138,8 +1136,8 @@ public class ForceDetailController
                   }
                   plVar12[7] = "/";
                   il2cpp_internal(plVar12 + 7,lVar6);
-                  if (*(int64 *)(lVar5 + 0x148) != 0) {
-                    local_res20[0] = ForceSpeAddData.Get(*(int64 *)(lVar5 + 0x148),1);
+                  if (lVar5.monthBreakEquipTime != null) {
+                    local_res20[0] = ForceSpeAddData.Get(lVar5.monthBreakEquipTime,1);
                     lVar6 = Single.ToString(local_res20,0);
                     if ((lVar6 != null) &&
                        (lVar9 = il2cpp_internal(lVar6,*(uint64 *)(*plVar12 + 64))) == null)
@@ -1169,9 +1167,9 @@ public class ForceDetailController
         plVar8 = this.baseDetailText;
         if (plVar8 == (int64 *)0) throw; // [null/range check failed]
         uVar7 = (**(code **)(*plVar8 + 0x5d8))(plVar8,*(uint64 *)(*plVar8 + 0x5e0));
-        lVar6 = *(int64 *)(pStatics_ef00 + 0x4a8);
-        if ((*(int64 *)(lVar5 + 248) == 0) ||
-           (uVar4 = FUN_1800d6750(*(int64 *)(lVar5 + 248),iVar14,DAT_181d68270), lVar6 == null))
+        lVar6 = *(int64 *)(pPlotController + 0x4a8);
+        if ((lVar5.worldPlotEventStartTime == null) ||
+           (uVar4 = FUN_1800d6750(lVar5.worldPlotEventStartTime,iVar14,DAT_181d68270), lVar6 == null))
         throw; // [null/range check failed]
         uVar10 = FUN_180002f80(lVar6,uVar4,DAT_181d7c9c0);
         uVar7 = String.Concat(uVar7,"/",uVar10,0);
@@ -1179,12 +1177,12 @@ public class ForceDetailController
         iVar14 = iVar14 + 1;
         goto LAB_180bb1cd0;
         LAB_180bb22f0:
-        if (*(int64 *)(lVar5 + 136) == 0) throw; // [null/range check failed]
-        if (*(int *)(*(int64 *)(lVar5 + 136) + 24) <= iVar14) {
+        if (lVar5.WorldNewsDatas == null) throw; // [null/range check failed]
+        if (*(int *)(lVar5.WorldNewsDatas + 24) <= iVar14) {
           lVar6 = FUN_18046c0a0(0);
           if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) throw; // [null/range check failed]
           if (*(int *)(*(int64 *)(lVar6 + 32) + 156) == 1) {
-            lVar6 = *(int64 *)(pStatics_ef00 + 0x3a0);
+            lVar6 = *(int64 *)(pPlotController + 0x3a0);
             if (lVar6 == null) throw; // [null/range check failed]
             cVar3 = FUN_181815240(lVar6,targetForceID,DAT_181d67bf8);
             if (!cVar3) {
@@ -1195,7 +1193,8 @@ public class ForceDetailController
               throw; // [null/range check failed]
               uVar10 = *(uint64 *)(lVar6 + 0x180);
               uVar10 = String.Format("\n\n<b>门派特性</b>\n{1}{0}</color>",uVar10,
-                                      *(uint64 *)(pStatics_ef00 + 0x250),0);
+                                      *(uint64 *)
+                                       (pPlotController + 0x250),0);
               LTLocalization.AddText(uVar7,uVar10,0);
             }
           }
@@ -1236,7 +1235,7 @@ public class ForceDetailController
         }
         plVar12[5] = "\n";
         il2cpp_internal(plVar12 + 5,lVar6);
-        lVar6 = *(int64 *)(pStatics_ef00 + 0x430);
+        lVar6 = *(int64 *)(pPlotController + 0x430);
         if (lVar6 == null) throw; // [null/range check failed]
         lVar6 = FUN_180002f80(lVar6,iVar14,DAT_181d7c9c0);
         if ((lVar6 != null) &&
@@ -1266,8 +1265,8 @@ public class ForceDetailController
         }
         plVar12[7] = " ";
         il2cpp_internal(plVar12 + 7,lVar6);
-        if (*(int64 *)(lVar5 + 136) == 0) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6780(*(int64 *)(lVar5 + 136),iVar14,DAT_181d796d8);
+        if (lVar5.WorldNewsDatas == null) throw; // [null/range check failed]
+        local_res20[0] = FUN_1800d6780(lVar5.WorldNewsDatas,iVar14,DAT_181d796d8);
         lVar6 = Single.ToString(local_res20,"f0",0);
         if ((lVar6 != null) &&
            (lVar9 = il2cpp_internal(lVar6,*(uint64 *)(*plVar12 + 64))) == null) {
@@ -1296,8 +1295,8 @@ public class ForceDetailController
         }
         plVar12[9] = "/";
         il2cpp_internal(plVar12 + 9,lVar6);
-        if (*(int64 *)(lVar5 + 144) == 0) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6780(*(int64 *)(lVar5 + 144),iVar14,DAT_181d796d8);
+        if (lVar5.MailDatas == null) throw; // [null/range check failed]
+        local_res20[0] = FUN_1800d6780(lVar5.MailDatas,iVar14,DAT_181d796d8);
         lVar6 = Single.ToString(local_res20,"f0",0);
         if ((lVar6 != null) &&
            (lVar9 = il2cpp_internal(lVar6,*(uint64 *)(*plVar12 + 64))) == null) {
@@ -1326,8 +1325,8 @@ public class ForceDetailController
         }
         plVar12[11] = " (";
         il2cpp_internal(plVar12 + 11,lVar6);
-        if (*(int64 *)(lVar5 + 152) == 0) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6780(*(int64 *)(lVar5 + 152),iVar14,DAT_181d796d8);
+        if (lVar5.cheating == null) throw; // [null/range check failed]
+        local_res20[0] = FUN_1800d6780(lVar5.cheating,iVar14,DAT_181d796d8);
         lVar6 = Single.ToString(local_res20,"+0;-0;0",0);
         if ((lVar6 != null) &&
            (lVar9 = il2cpp_internal(lVar6,*(uint64 *)(*plVar12 + 64))) == null) {
@@ -1361,7 +1360,7 @@ public class ForceDetailController
         iVar14 = iVar14 + 1;
         goto LAB_180bb22f0;
         LAB_180bb2870:
-        lVar9 = *(int64 *)(lVar5 + 96);
+        lVar9 = lVar5.BigMapRandomEventDatas;
         if (lVar9 == null) throw; // [null/range check failed]
         if ((int)*(uint32 *)(lVar9 + 24) <= (int)uVar15) {
           iVar14 = 0;
@@ -1370,7 +1369,7 @@ public class ForceDetailController
         if (*(uint32 *)(lVar9 + 24) <= uVar15) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        if (*(int *)(lVar6 + *(int64 *)(lVar9 + 16)) != *(int *)(lVar5 + 56)) {
+        if (*(int *)(lVar6 + *(int64 *)(lVar9 + 16)) != lVar5.Inns) {
           plVar8 = this.areaText;
           if (plVar8 == (int64 *)0) throw; // [null/range check failed]
           uVar7 = (**(code **)(*plVar8 + 0x5d8))(plVar8,*(uint64 *)(*plVar8 + 0x5e0));
@@ -1382,8 +1381,8 @@ public class ForceDetailController
           lVar13 = FUN_18046c0a0(0);
           if (lVar13 == null) throw; // [null/range check failed]
           lVar13 = *(int64 *)(lVar13 + 32);
-          if (((*(int64 *)(lVar5 + 96) == 0) ||
-              (uVar4 = FUN_1800d6750(*(int64 *)(lVar5 + 96),uVar15), lVar13 == null)) ||
+          if (((lVar5.BigMapRandomEventDatas == null) ||
+              (uVar4 = FUN_1800d6750(lVar5.BigMapRandomEventDatas,uVar15), lVar13 == null)) ||
              (lVar13 = WorldData.GetArea(lVar13,uVar4)) == null) throw; // [null/range check failed]
           uVar7 = String.Concat(lVar9,*(uint64 *)(lVar13 + 24));
           LTLocalization.AddText(plVar8,uVar7);
@@ -1392,8 +1391,8 @@ public class ForceDetailController
         lVar6 = lVar6 + 4;
         goto LAB_180bb2870;
         LAB_180bb2981:
-        if (*(int64 *)(lVar5 + 104) == 0) throw; // [null/range check failed]
-        if (*(int *)(*(int64 *)(lVar5 + 104) + 24) <= iVar14) {
+        if (lVar5.AreaMapRandomEventDatas == null) throw; // [null/range check failed]
+        if (*(int *)(lVar5.AreaMapRandomEventDatas + 24) <= iVar14) {
           LTLocalization.SetText(this.favorText,"",0);
           lVar6 = FUN_18046c0a0(0);
           if (((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) &&
@@ -1417,8 +1416,8 @@ public class ForceDetailController
         lVar9 = FUN_18046c0a0(0);
         if (lVar9 == null) throw; // [null/range check failed]
         lVar9 = *(int64 *)(lVar9 + 32);
-        if (((*(int64 *)(lVar5 + 104) == 0) ||
-            (uVar4 = FUN_1800d6750(*(int64 *)(lVar5 + 104),iVar14), lVar9 == null)) ||
+        if (((lVar5.AreaMapRandomEventDatas == null) ||
+            (uVar4 = FUN_1800d6750(lVar5.AreaMapRandomEventDatas,iVar14), lVar9 == null)) ||
            (lVar9 = WorldData.GetResourcePoint(lVar9,uVar4)) == null) throw; // [null/range check failed]
         uVar7 = String.Concat(lVar6,*(uint64 *)(lVar9 + 32));
         LTLocalization.AddText(plVar8,uVar7);
@@ -1432,8 +1431,8 @@ public class ForceDetailController
           return;
         }
         uVar7 = this.forceSkillGrid;
-        if (*pStatics_e188 == 0) throw; // [null/range check failed]
-        uVar10 = *(uint64 *)(*pStatics_e188 + 160);
+        if (*pStatics == 0) throw; // [null/range check failed]
+        uVar10 = *(uint64 *)(*pStatics + 160);
         lVar6 = GlobalData.AddChild(uVar7,uVar10,0);
         if (lVar6 == null) throw; // [null/range check failed]
         lVar9 = GameObject.GetComponent(lVar6,DAT_181da0070);
@@ -1481,8 +1480,8 @@ public class ForceDetailController
               FUN_1800d65f0(uVar7,0);
             }
             FUN_180002fd0(plVar12,0,lVar9);
-            if (*(int *)(pStatics_ef00 + 8) == 1) {
-              lVar9 = *(int64 *)(pStatics_ef00 + 32);
+            if (PlotController.LeftFaceHideOffset == 1) {
+              lVar9 = PlotController.SpringFestivelRewardLvTalkText;
               if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -1607,17 +1606,17 @@ public class ForceDetailController
         }
         ZhSegment.Initialize(&local_98,DAT_181d660c8);
         uVar7 = this.detailText;
-        if (*(int64 *)(lVar5 + 0x148) != 0) {
-          uVar10 = ForceSpeAddData.GetDescribe(*(int64 *)(lVar5 + 0x148),1,0);
+        if (lVar5.monthBreakEquipTime != null) {
+          uVar10 = ForceSpeAddData.GetDescribe(lVar5.monthBreakEquipTime,1,0);
           LTLocalization.SetText(uVar7,uVar10,0);
           uVar7 = this.forceHeroGrid;
           GlobalData.DeleteAllChild(uVar7,0);
           GlobalData.DeleteAllChild(this.forceSkillGrid,0);
           lVar6 = local_78;
           iVar14 = 0;
-          while (*(int64 *)(lVar5 + 112) != 0) {
+          while (lVar5.lastRandomWorldEventDay != null) {
             uVar7 = *(uint64 *)(lVar6 + 64);
-            if (*(int *)(*(int64 *)(lVar5 + 112) + 24) <= iVar14) {
+            if (*(int *)(lVar5.lastRandomWorldEventDay + 24) <= iVar14) {
               GlobalData.SortChild(uVar7,0);
               if ((plVar5 != 0) &&
                  (lVar6 = *(int64 *)(plVar5 + 48)) != null) {
@@ -1632,8 +1631,8 @@ public class ForceDetailController
               }
               break;
             }
-            if (*pStatics_e188 == 0) break;
-            uVar10 = *(uint64 *)(*pStatics_e188 + 144);
+            if (*pStatics == 0) break;
+            uVar10 = *(uint64 *)(*pStatics + 144);
             lVar9 = GlobalData.AddChild(uVar7,uVar10,0);
             if (lVar9 == null) break;
             lVar13 = GameObject.GetComponent(lVar9,DAT_181d9fb20);

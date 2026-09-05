@@ -170,8 +170,6 @@ public class UIImageButton
     // RVA   : 0x10ED090   Offset: 0x10EB890   Length: 0x17
     private void OnPress(bool pressed)
     {
-        void FUN_1810ed090(int64 this,char pressed)
-        {
         if (!pressed) {
           UIImageButton.UpdateImage(this,0);
           return;
@@ -212,8 +210,6 @@ public class UIImageButton
     // RVA   : 0x10ED380   Offset: 0x10EBB80   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_1810ed380(int64 this)
-        {
         this.pixelSnap = 1;
         FUN_18044ef50(this,0);
     }

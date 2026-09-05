@@ -53,8 +53,6 @@ public class UIDraggableCamera
     // RVA   : 0x10E1DD0   Offset: 0x10E05D0   Length: 0x13
     public Vector2 get_currentMomentum()
     {
-        uint64 FUN_1810e1dd0(int64 this)
-        {
         return this.mMomentum;
     }
 
@@ -62,8 +60,6 @@ public class UIDraggableCamera
     // RVA   : 0x3F42C0   Offset: 0x3F2AC0   Length: 0x5
     public void set_currentMomentum(Vector2 value)
     {
-        void FUN_1803f42c0(int64 this,uint64 value)
-        {
         this.mMomentum = value;
     }
 
@@ -340,9 +336,9 @@ public class UIDraggableCamera
           this.mDragStarted = 1;
           return;
         }
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224);
+        lVar2 = UICamera.currentTouch;
         if (lVar2 != null) {
-          *(uint32 *)(lVar2 + 112) = 2;
+          lVar2.clickNotification = 2;
           uVar5 = this.mRoot;
           cVar3 = Object.op_Inequality(uVar5,0,0);
           local_98 = (float)delta;

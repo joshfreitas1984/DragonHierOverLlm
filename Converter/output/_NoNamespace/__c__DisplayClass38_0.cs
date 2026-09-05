@@ -24,9 +24,7 @@ public class <>c__DisplayClass38_0
     // RVA   : 0x424490   Offset: 0x422C90   Length: 0xB
     internal Color <DOBlendableColor>b__0()
     {
-        uint64 * FUN_180424490(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 24);
         *this = *(uint64 *)(param_2 + 16);
         this[1] = uVar1;

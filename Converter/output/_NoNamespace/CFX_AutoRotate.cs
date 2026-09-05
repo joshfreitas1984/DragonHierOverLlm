@@ -39,8 +39,6 @@ public class CFX_AutoRotate
     // RVA   : 0xBD38B0   Offset: 0xBD20B0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180bd38b0(int64 this)
-        {
         this.space = 1;
         FUN_18044ef50(this,0);
     }

@@ -26,34 +26,34 @@ public class InvDatabase
     // RVA   : 0xB71EC0   Offset: 0xB706C0   Length: 0x119
     public static InvDatabase[] get_list()
     {
-        var pStatics = *(int64*)(DAT_181d5c3f8 + 184);
         ulong uVar2;
-        if (*(char *)(pStatics + 8) != false) {
-          *(uint8 *)(pStatics + 8) = 0;
+        if (InvDatabase.mIsDirty) {
+          InvDatabase.mIsDirty = 0;
           uVar2 = NGUITools.FindActive(DAT_181d66380);
-          puVar1 = *(uint64 **)(DAT_181d5c3f8 + 184);
+          puVar1 = *(uint64 **)(InvDatabase_StaticsPtr + 184);
           *puVar1 = uVar2;
           il2cpp_internal(puVar1,uVar2);
         }
-        if (((*(byte *)(DAT_181d5c3f8 + 0x133) & 4) != 0) && (*(int *)(DAT_181d5c3f8 + 224) == 0)) {
+        if (((*(byte *)(InvDatabase_StaticsPtr + 0x133) & 4) != 0) &&
+           (*(int *)(InvDatabase_StaticsPtr + 224) == 0)) {
           il2cpp_runtime_class_init();
-          return **(uint64 **)(DAT_181d5c3f8 + 184);
+          return InvDatabase.mList;
         }
-        return **(uint64 **)(DAT_181d5c3f8 + 184);
+        return InvDatabase.mList;
     }
 
     // Token : 0x6000028
     // RVA   : 0xB71DA0   Offset: 0xB705A0   Length: 0x58
     private void OnEnable()
     {
-        *(uint8 *)(*(int64 *)(DAT_181d5c3f8 + 184) + 8) = 1;
+        InvDatabase.mIsDirty = 1;
     }
 
     // Token : 0x6000029
     // RVA   : 0xB71D40   Offset: 0xB70540   Length: 0x58
     private void OnDisable()
     {
-        *(uint8 *)(*(int64 *)(DAT_181d5c3f8 + 184) + 8) = 1;
+        InvDatabase.mIsDirty = 1;
     }
 
     // Token : 0x600002A
@@ -305,7 +305,7 @@ public class InvDatabase
     // RVA   : 0xB71E00   Offset: 0xB70600   Length: 0x37
     private static void /*cctor*/()
     {
-        *(uint8 *)(*(int64 *)(DAT_181d5c3f8 + 184) + 8) = 1;
+        InvDatabase.mIsDirty = 1;
     }
 
 }

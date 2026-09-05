@@ -41,22 +41,19 @@ public class PrisonController
     // RVA   : 0xBDD670   Offset: 0xBDBE70   Length: 0x58
     public static PrisonController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d6da60 + 184) + 32);
+        return PrisonController._instance;
     }
 
     // Token : 0x6001F61
     // RVA   : 0xBD9FE0   Offset: 0xBD87E0   Length: 0xE0
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d6da60 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = *(uint64 *)(pStatics + 32);
+        uVar1 = PrisonController._instance;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (cVar2) {
-          puVar3 = (uint64 *)(pStatics + 32);
-          *puVar3 = this;
-          il2cpp_internal(puVar3,this);
+          PrisonController._instance = this;
         }
     }
 
@@ -64,8 +61,6 @@ public class PrisonController
     // RVA   : 0xBDD5A0   Offset: 0xBDBDA0   Length: 0xE
     private void Update()
     {
-        void FUN_180bdd5a0(int64 this)
-        {
         if (this.needRefreshUI) {
           PrisonController.RefreshUI(this,0);
           return;
@@ -93,9 +88,8 @@ public class PrisonController
     // RVA   : 0xBDC3D0   Offset: 0xBDABD0   Length: 0x11CA
     public void StartPrison()
     {
-        var pStatics_a578 = *(int64*)(DAT_181d5a578 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d5a578 + 184);
         long lVar1;
         long lVar2;
         ulong uVar4;
@@ -117,7 +111,7 @@ public class PrisonController
         uVar13 = (uint32)((uint64)in_stack_ffffffffffffff98 >> 32);
         if (this.prisonPanel == null) throw; // [null/range check failed]
         GameObject.SetActive(this.prisonPanel,1,0);
-        if (*(char *)(pStatics_ef00 + 4) != false) {
+        if (*(char *)(pPlotController + 4) != false) {
           if (this.prisonPanel == null) throw; // [null/range check failed]
           lVar1 = GameObject.get_transform(this.prisonPanel,0);
           if (lVar1 == null) throw; // [null/range check failed]
@@ -157,81 +151,87 @@ public class PrisonController
           if (lVar1 == null) throw; // [null/range check failed]
           GameObject.SetActive(lVar1,0,0);
         }
-        if ((*pStatics_df90 != 0) &&
-           (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           lVar1 = WorldData.Player(lVar1,0);
           if (lVar1 != null) {
             HeroData.GoInPrison(lVar1,0);
-            if ((*pStatics_df90 != 0) &&
-               (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-              if (*(int64 *)(lVar1 + 0x1b0) == 0) {
-                if (*pStatics_df90 == 0) throw; // [null/range check failed]
-                lVar1 = *(int64 *)(*pStatics_df90 + 32);
+            if ((GameController._instance != null) &&
+               (lVar1 = GameController._instance.worldData,
+               lVar1 != null)) {
+              if (lVar1.prisonData == null) {
+                if (GameController._instance == null) throw; // [null/range check failed]
+                lVar1 = GameController._instance.worldData;
                 lVar2 = new ZhSegment(0);
-                *(uint64 *)(lVar2 + 16) = 0x42c80000;
+                lVar2.chapter = 0x42c80000;
                 uVar4 = new ItemListData(0);
-                *(uint64 *)(lVar2 + 24) = uVar4;
+                lVar2.cityAreaID = uVar4;
                 if (lVar1 == null) throw; // [null/range check failed]
                 plVar5 = (int64 *)(lVar1 + 0x1b0);
                 *plVar5 = lVar2;
                 il2cpp_internal(plVar5,lVar2);
               }
-              if (((*pStatics_df90 != 0) &&
-                  (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                 (lVar1 = *(int64 *)(lVar1 + 0x1b0)) != null) {
-                lVar1 = *(int64 *)(lVar1 + 24);
-                if ((*pStatics_df90 != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+              if (((GameController._instance != null) &&
+                  (lVar1 = GameController._instance.worldData,
+                  lVar1 != null)) && (lVar1 = lVar1.prisonData) != null) {
+                lVar1 = lVar1.cityAreaID;
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData,
+                   lVar2 != null)) {
                   lVar2 = WorldData.Player(lVar2,0);
                   if ((lVar2 != null) && (lVar1 != null)) {
-                    ItemListData.GetItem(lVar1,*(uint64 *)(lVar2 + 0x220),0);
-                    if ((*pStatics_df90 != 0) &&
-                       (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null)
-                    {
+                    ItemListData.GetItem(lVar1,lVar2.speBookStorageSpeAdd,0);
+                    if ((GameController._instance != null) &&
+                       (lVar1 = GameController._instance.worldData,
+                       lVar1 != null)) {
                       lVar1 = WorldData.Player(lVar1,0);
                       if (lVar1 != null) {
                         HeroData.LoseAllItem(lVar1,0);
-                        if (*pStatics_a578 != 0) {
+                        if (*pStatics != 0) {
                           puVar3 = &local_38;
                           local_38 = 0;
                           uStack_30 = 0;
                           uVar4 = "Woosh";
                           InfoController.AddInfoTab
-                                    (*pStatics_a578,"你的所有物品被收入监狱库房中","UIAtlas",
+                                    (*pStatics,"你的所有物品被收入监狱库房中","UIAtlas",
                                      "从事工作_被囚禁","Woosh",CONCAT44(uVar12,0x3f800000),
                                      CONCAT44(uVar13,0x40a00000),puVar3,0);
-                          if ((*pStatics_df90 != 0) &&
-                             (lVar1 = *(int64 *)(*pStatics_df90 + 32),
+                          if ((GameController._instance != null) &&
+                             (lVar1 = *(int64 *)
+                                       (GameController._instance + 32),
                              lVar1 != null)) {
                             lVar1 = WorldData.Player(lVar1,0);
                             if (lVar1 != null) {
                               uVar4 = CONCAT71((int7)((uint64)uVar4 >> 8),1);
                               HeroData.AddTag(lVar1,0x170,0xbf800000,0,uVar4,1,0);
-                              if ((*pStatics_df90 != 0) &&
-                                 (lVar1 = *(int64 *)(*pStatics_df90 + 32),
+                              if ((GameController._instance != null) &&
+                                 (lVar1 = *(int64 *)
+                                           (GameController._instance + 32),
                                  lVar1 != null)) {
                                 lVar1 = WorldData.Player(lVar1,0);
                                 if (lVar1 != null) {
                                   uVar4 = CONCAT71((int7)((uint64)uVar4 >> 8),1);
                                   HeroData.AddTag(lVar1,0x171,0xbf800000,0,uVar4,1,0);
                                   uVar12 = (uint32)((uint64)uVar4 >> 32);
-                                  if (((*pStatics_df90 != 0) &&
-                                      (lVar1 = *(int64 *)(*pStatics_df90 + 32)
-                                      , lVar1 != null)) && (lVar1 = *(int64 *)(lVar1 + 0x1b0)) != null
+                                  if (((GameController._instance != null) &&
+                                      (lVar1 = *(int64 *)
+                                                (GameController._instance + 32)
+                                      , lVar1 != null)) && (lVar1 = lVar1.prisonData) != null
                                      ) {
-                                    *(uint32 *)(lVar1 + 16) = 0x42c80000;
-                                    if (((*pStatics_df90 != 0) &&
+                                    lVar1.chapter = 0x42c80000;
+                                    if (((GameController._instance != null) &&
                                         (lVar1 = *(int64 *)
-                                                  (*pStatics_df90 + 32),
-                                        lVar1 != null)) && (lVar1 = *(int64 *)(lVar1 + 0x1b0)) != null
-                                       ) {
+                                                  (GameController._instance +
+                                                  32), lVar1 != null)) &&
+                                       (lVar1 = lVar1.prisonData) != null) {
                                       *(uint32 *)(lVar1 + 20) = 0;
-                                      if (((*pStatics_df90 != 0) &&
+                                      if (((GameController._instance != null) &&
                                           (lVar1 = *(int64 *)
-                                                    (*pStatics_df90 + 32),
-                                          lVar1 != null)) &&
-                                         (lVar1 = *(int64 *)(lVar1 + 0x1b0)) != null) {
-                                        *(uint32 *)(lVar1 + 32) = 0;
+                                                    (GameController._instance +
+                                                    32), lVar1 != null)) &&
+                                         (lVar1 = lVar1.prisonData) != null) {
+                                        lVar1.villageAreaID = 0;
                                         PrisonController.RefreshUI(this,0);
                                         plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Door/BigDoor3",0);
                                         plVar10 = (int64 *)0;
@@ -242,29 +242,32 @@ public class PrisonController
                                         lVar1 = new ZhSegment(0);
                                         uVar4 = il2cpp_internal(DAT_181d705b0);
                                         FUN_180f58a90(uVar4,DAT_181d6fb68);
-                                        *(uint64 *)(lVar1 + 32) = uVar4;
+                                        lVar1.villageAreaID = uVar4;
                                         uVar4 = il2cpp_internal(DAT_181d722b0);
                                         FUN_180f58a90(uVar4,DAT_181d799d8);
-                                        *(uint64 *)(lVar1 + 64) = uVar4;
-                                        lVar2 = *(int64 *)(lVar1 + 64);
+                                        lVar1.ResourcePoints = uVar4;
+                                        lVar2 = lVar1.ResourcePoints;
                                         uVar4 = "你就是#$PlayerName#？\n哼哼，你这家伙近来行凶作恶，犯下{0}恶名。\n为了搜捕你，可费了咱们不少功夫。";
-                                        if (*(char *)(pStatics_ef00 + 4) != false) {
+                                        if (*(char *)(pPlotController + 4)
+                                            != false) {
                                           uVar4 = "你就是#$PlayerName#？\n哼哼，你这家伙近来四处挑战他人，积累了{0}点威慑值。";
                                         }
-                                        if ((*pStatics_df90 != 0) &&
+                                        if ((GameController._instance != null) &&
                                            (lVar6 = *(int64 *)
-                                                     (*pStatics_df90 + 32),
-                                           lVar6 != null)) {
+                                                     (GameController._instance +
+                                                     32), lVar6 != null)) {
                                           lVar6 = WorldData.Player(lVar6,0);
                                           if (lVar6 != null) {
                                             uVar7 = Single.ToString(lVar6 + 0x1c8,"f0",0);
                                             uVar4 = String.Format(uVar4,uVar7,0);
-                                            lVar6 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8)
+                                            lVar6 = *(int64 *)
+                                                     (pPlotController + 8)
                                             ;
-                                            if ((*pStatics_df90 != 0) &&
-                                               (lVar8 = *(int64 *)
-                                                         (*pStatics_df90 + 32),
-                                               lVar8 != null)) {
+                                            if ((GameController._instance != null)
+                                               && (lVar8 = *(int64 *)
+                                                            (**(int64 **)
+                                                               (GameController_StaticsPtr + 184) + 32),
+                                                  lVar8 != null)) {
                                               lVar8 = WorldData.Player(lVar8,0);
                                               if ((lVar8 != null) && (lVar6 != null)) {
                                                 uVar13 = 0;
@@ -281,9 +284,15 @@ public class PrisonController
                                                            uVar14,0,0);
                                                 if (lVar2 != null) {
                                                   FUN_181827900(lVar2,uVar9,DAT_181d79a58);
-                                                  lVar2 = *(int64 *)(lVar1 + 64);
+                                                  lVar2 = lVar1.ResourcePoints;
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init(PlotController_StaticsPtr);
+                                                  }
                                                   uVar4 = "不过既然进了牢中带上手铐脚镣，任你功夫再高也得低头做人。\n若是敢动逃跑越狱的歪心思，可别怪本官不客气！";
-                                                  if (*(char *)(pStatics_ef00 + 4)
+                                                  if (*(char *)(*(int64 *)
+                                                                 (PlotController_StaticsPtr + 184) + 4)
                                                       != false) {
                                                     uVar4 = "不过既然进了思过室带上手铐脚镣，任你功夫再高也得低头做人。\n若是敢动逃跑的歪心思，可别怪我不客气！";
                                                   }
@@ -296,9 +305,17 @@ public class PrisonController
                                                             (uVar7,uVar4,0,0,0,uVar11,0,uVar14,0,0);
                                                   if (lVar2 != null) {
                                                     FUN_181827900(lVar2,uVar7,DAT_181d79a58);
-                                                    lVar2 = *(int64 *)(lVar1 + 64);
+                                                    lVar2 = lVar1.ResourcePoints;
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init(PlotController_StaticsPtr)
+                                                      ;
+                                                    }
                                                     uVar4 = "此外，你身上所有物品都会保管在库房中，待出狱之时自会如数奉还。\n望你在此好生反省，争取早日洗心革面，重新做人。";
-                                                    if (*(char *)(pStatics_ef00 + 4)
+                                                    if (*(char *)(*(int64 *)
+                                                                   (PlotController_StaticsPtr + 184) + 4)
                                                         != false) {
                                                       uVar4 = "此外，你身上所有物品都会保管在库房中，待离开之时自会如数奉还。\n望你在此好生反省，争取早日完成思过。";
                                                     }
@@ -306,9 +323,25 @@ public class PrisonController
                                                     uVar4 = String.Format(uVar4,uVar7,0);
                                                     lVar6 = il2cpp_internal(DAT_181d72a30);
                                                     FUN_180f58a90(lVar6,DAT_181d7c250);
-                                                    if ((*pStatics_df90 != 0) &&
+                                                    if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init(GameController_StaticsPtr)
+                                                      ;
+                                                    }
+                                                    if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init(GameController_StaticsPtr)
+                                                      ;
+                                                    }
+                                                    if ((GameController._instance
+                                                         != 0) &&
                                                        (lVar8 = *(int64 *)
-                                                                 (*pStatics_df90 +
+                                                                 (**(int64 **)
+                                                                    (GameController_StaticsPtr + 184) +
                                                                  32), lVar8 != null)) {
                                                       lVar8 = WorldData.Player(lVar8,0);
                                                       if (lVar8 != null) {
@@ -327,15 +360,34 @@ public class PrisonController
                                                                      uVar14 & 0xffffffff00000000,0,0);
                                                           if (lVar2 != null) {
                                                             FUN_181827900(lVar2,uVar7,DAT_181d79a58);
-                                                            if (**(int64 **)(DAT_181d6c960 + 184) != 0
-                                                               ) {
-                                                              PlotController.ChangePlot
-                                                                        (**(int64 **)
-                                                                           (DAT_181d6c960 + 184),lVar1,0)
-                                                              ;
-                                                              return;
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
                                                             }
-                                                          }
+                                                            if (!DAT_181e6a736) {
+                                                              il2cpp_internal(&
+                                                        PlotController_StaticsPtr);
+                                                        DAT_181e6a736 = true;
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (PlotController_StaticsPtr);
+                                                        }
+                                                        if (**(int64 **)
+                                                              (PlotController_StaticsPtr + 184) != 0) {
+                                                          PlotController.ChangePlot
+                                                                    (**(int64 **)
+                                                                       (PlotController_StaticsPtr + 184),
+                                                                     lVar1,0);
+                                                          return;
+                                                        }
+                                                        }
                                                         }
                                                       }
                                                     }
@@ -367,48 +419,51 @@ public class PrisonController
     // RVA   : 0xBDA700   Offset: 0xBD8F00   Length: 0x4CA
     public void EndPrison()
     {
-        var pStatics_a578 = *(int64*)(DAT_181d5a578 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d5a578 + 184);
         long lVar1;
         long lVar2;
         ulong local_28;
         ulong uStack_20;
         if (this.prisonPanel != null) {
           GameObject.SetActive(this.prisonPanel,0,0);
-          if ((*pStatics_df90 != 0) &&
-             (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null
+             ) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
-              lVar2 = *(int64 *)(lVar2 + 0x220);
-              if ((((*pStatics_df90 != 0) &&
-                   (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                  (lVar1 = *(int64 *)(lVar1 + 0x1b0)) != null) && (lVar2 != null)) {
-                ItemListData.GetItem(lVar2,*(uint64 *)(lVar1 + 24),0);
-                if (((*pStatics_df90 != 0) &&
-                    (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                   ((lVar2 = *(int64 *)(lVar2 + 0x1b0), lVar2 != null &&
-                    (lVar2 = *(int64 *)(lVar2 + 24)) != null))) {
+              lVar2 = lVar2.speBookStorageSpeAdd;
+              if ((((GameController._instance != null) &&
+                   (lVar1 = GameController._instance.worldData,
+                   lVar1 != null)) && (lVar1 = lVar1.prisonData) != null) && (lVar2 != null)) {
+                ItemListData.GetItem(lVar2,lVar1.cityAreaID,0);
+                if (((GameController._instance != null) &&
+                    (lVar2 = GameController._instance.worldData,
+                    lVar2 != null)) &&
+                   ((lVar2 = lVar2.prisonData, lVar2 != null &&
+                    (lVar2 = lVar2.cityAreaID) != null))) {
                   ItemListData.ClearAllItem(lVar2,0);
-                  if (*pStatics_a578 != 0) {
+                  if (*pStatics != 0) {
                     local_28 = 0;
                     uStack_20 = 0;
                     InfoController.AddInfoTab
-                              (*pStatics_a578,"你取回了监狱库房中的所有物品","UIAtlas",
+                              (*pStatics,"你取回了监狱库房中的所有物品","UIAtlas",
                                "从事工作_交易","Woosh",0x3f800000,0x40a00000,&local_28,0);
-                    if ((*pStatics_df90 != 0) &&
-                       (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null)
-                    {
+                    if ((GameController._instance != null) &&
+                       (lVar2 = GameController._instance.worldData,
+                       lVar2 != null)) {
                       lVar2 = WorldData.Player(lVar2,0);
                       if (lVar2 != null) {
                         HeroData.RemoveTag(lVar2,0x170,1,0);
-                        if ((*pStatics_df90 != 0) &&
-                           (lVar2 = *(int64 *)(*pStatics_df90 + 32),
+                        if ((GameController._instance != null) &&
+                           (lVar2 = *(int64 *)
+                                     (GameController._instance + 32),
                            lVar2 != null)) {
                           lVar2 = WorldData.Player(lVar2,0);
                           if (lVar2 != null) {
                             HeroData.RemoveTag(lVar2,0x171,1,0);
-                            if ((*pStatics_df90 != 0) &&
-                               (lVar2 = *(int64 *)(*pStatics_df90 + 32),
+                            if ((GameController._instance != null) &&
+                               (lVar2 = *(int64 *)
+                                         (GameController._instance + 32),
                                lVar2 != null)) {
                               lVar2 = WorldData.Player(lVar2,0);
                               if (lVar2 != null) {
@@ -438,8 +493,7 @@ public class PrisonController
     // RVA   : 0xBDA0C0   Offset: 0xBD88C0   Length: 0x319
     public void ChangeGuardAlert(float num, bool showInfo)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -450,25 +504,26 @@ public class PrisonController
         ulong local_28;
         ulong uStack_20;
         local_res10[0] = num;
-        if ((*pStatics_df90 != 0) &&
-           (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-          lVar1 = *(int64 *)(lVar1 + 0x1b0);
-          if (((*pStatics_df90 != 0) &&
-              (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar2 = *(int64 *)(lVar2 + 0x1b0)) != null) {
-            uVar6 = FUN_1810a8ba0(*(float *)(lVar2 + 16) + local_res10[0],0,0x42c80000,0);
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          lVar1 = lVar1.prisonData;
+          if (((GameController._instance != null) &&
+              (lVar2 = GameController._instance.worldData, lVar2 != null
+              )) && (lVar2 = lVar2.prisonData) != null) {
+            uVar6 = FUN_1810a8ba0(lVar2.chapter + local_res10[0],0,0x42c80000,0);
             if (lVar1 != null) {
-              *(uint32 *)(lVar1 + 16) = uVar6;
+              lVar1.chapter = uVar6;
               this.needRefreshUI = 1;
               if (showInfo) {
                 lVar1 = **(int64 **)(DAT_181d5a578 + 184);
                 uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
                 uVar4 = "{1}守卫警戒{0}</color>";
                 if (0.0 <= local_res10[0]) {
-                  uVar5 = *(uint64 *)(pStatics_ef00 + 0x2c8);
+                  uVar5 = *(uint64 *)(pPlotController + 0x2c8);
                 }
                 else {
-                  uVar5 = *(uint64 *)(pStatics_ef00 + 0x260);
+                  uVar5 = *(uint64 *)(pPlotController + 0x260);
                 }
                 uVar4 = String.Format(uVar4,uVar3,uVar5,0);
                 if (lVar1 == null) throw; // [null/range check failed]
@@ -488,8 +543,7 @@ public class PrisonController
     // RVA   : 0xBDA3E0   Offset: 0xBD8BE0   Length: 0x31D
     public void ChangeGuardFavor(float num, bool showInfo)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -500,12 +554,13 @@ public class PrisonController
         ulong local_28;
         ulong uStack_20;
         local_res10[0] = num;
-        if ((*pStatics_df90 != 0) &&
-           (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-          lVar1 = *(int64 *)(lVar1 + 0x1b0);
-          if (((*pStatics_df90 != 0) &&
-              (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar2 = *(int64 *)(lVar2 + 0x1b0)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          lVar1 = lVar1.prisonData;
+          if (((GameController._instance != null) &&
+              (lVar2 = GameController._instance.worldData, lVar2 != null
+              )) && (lVar2 = lVar2.prisonData) != null) {
             uVar6 = FUN_1810a8ba0(*(float *)(lVar2 + 20) + local_res10[0],0,0x42c80000,0);
             if (lVar1 != null) {
               *(uint32 *)(lVar1 + 20) = uVar6;
@@ -515,10 +570,10 @@ public class PrisonController
                 uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
                 uVar4 = "{1}守卫熟络{0}</color>";
                 if (local_res10[0] <= 0.0) {
-                  uVar5 = *(uint64 *)(pStatics_ef00 + 0x2c8);
+                  uVar5 = *(uint64 *)(pPlotController + 0x2c8);
                 }
                 else {
-                  uVar5 = *(uint64 *)(pStatics_ef00 + 0x260);
+                  uVar5 = *(uint64 *)(pPlotController + 0x260);
                 }
                 uVar4 = String.Format(uVar4,uVar3,uVar5,0);
                 if (lVar1 == null) throw; // [null/range check failed]
@@ -538,7 +593,6 @@ public class PrisonController
     // RVA   : 0xBDBC10   Offset: 0xBDA410   Length: 0x7B0
     public void RefreshUI()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         ulong uVar3;
@@ -558,10 +612,10 @@ public class PrisonController
                 lVar2 = Transform.Find(lVar2,"Text",0);
                 if (lVar2 != null) {
                   uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
-                  if (((*pStatics != 0) &&
-                      (lVar2 = *(int64 *)(*pStatics + 32)) != null)
-                     && (lVar2 = *(int64 *)(lVar2 + 0x1b0)) != null) {
-                    local_res18[0] = (int)*(float *)(lVar2 + 16);
+                  if (((GameController._instance != null) &&
+                      (lVar2 = GameController._instance.worldData,
+                      lVar2 != null)) && (lVar2 = lVar2.prisonData) != null) {
+                    local_res18[0] = (int)lVar2.chapter;
                     uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
                     uVar4 = String.Format("{0}%",uVar4,0);
                     LTLocalization.SetText(uVar3,uVar4,0);
@@ -575,13 +629,14 @@ public class PrisonController
                             lVar2 = Transform.Find(lVar2,"Slider",0);
                             if (lVar2 != null) {
                               plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d6d2c0);
-                              if (((*pStatics != 0) &&
-                                  (lVar2 = *(int64 *)(*pStatics + 32),
+                              if (((GameController._instance != null) &&
+                                  (lVar2 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar2 != null)) &&
-                                 ((lVar2 = *(int64 *)(lVar2 + 0x1b0), lVar2 != null &&
+                                 ((lVar2 = lVar2.prisonData, lVar2 != null &&
                                   (plVar5 != (int64 *)0)))) {
                                 (**(code **)(*plVar5 + 0x428))
-                                          (plVar5,*(float *)(lVar2 + 16) * 0.01,
+                                          (plVar5,lVar2.chapter * 0.01,
                                            *(uint64 *)(*plVar5 + 0x430));
                                 if (this.prisonPanel != null) {
                                   lVar2 = GameObject.get_transform(this.prisonPanel,0);
@@ -593,11 +648,11 @@ public class PrisonController
                                         lVar2 = Transform.Find(lVar2,"Text",0);
                                         if (lVar2 != null) {
                                           uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
-                                          if (((*pStatics != 0) &&
+                                          if (((GameController._instance != null) &&
                                               (lVar2 = *(int64 *)
-                                                        (*pStatics + 32),
-                                              lVar2 != null)) &&
-                                             (lVar2 = *(int64 *)(lVar2 + 0x1b0)) != null) {
+                                                        (GameController._instance
+                                                        + 32), lVar2 != null)) &&
+                                             (lVar2 = lVar2.prisonData) != null) {
                                             local_res20[0] = (int)*(float *)(lVar2 + 20);
                                             uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
                                             uVar4 = String.Format("{0}%",uVar4,0);
@@ -615,11 +670,20 @@ public class PrisonController
                                                       plVar5 = (int64 *)
                                                                Component.GetComponent
                                                                          (lVar2,DAT_181d6d2c0);
-                                                      if (((*pStatics != 0) &&
+                                                      if (((*(byte *)(GameController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(GameController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init
+                                                                  (GameController_StaticsPtr);
+                                                      }
+                                                      if (((**(int64 **)
+                                                              (GameController_StaticsPtr + 184) != 0) &&
                                                           (lVar2 = *(int64 *)
-                                                                    (*pStatics
+                                                                    (**(int64 **)
+                                                                       (GameController_StaticsPtr + 184)
                                                                     + 32), lVar2 != null)) &&
-                                                         ((lVar2 = *(int64 *)(lVar2 + 0x1b0),
+                                                         ((lVar2 = lVar2.prisonData,
                                                           lVar2 != null && (plVar5 != (int64 *)0)))) {
                                                         (**(code **)(*plVar5 + 0x428))
                                                                   (plVar5,*(float *)(lVar2 + 20) * 0.01,
@@ -728,15 +792,15 @@ public class PrisonController
     // RVA   : 0xBDABD0   Offset: 0xBD93D0   Length: 0x11B
     public int GetLeftPrisonDay()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         float fVar1;
         long lVar2;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
-            fVar1 = *(float *)(lVar2 + 0x1c8);
-            Mathf.CeilToInt(fVar1 / (float)**(int **)(DAT_181d6da60 + 184),0);
+            fVar1 = lVar2.thisYearExploreSpeEventNum;
+            Mathf.CeilToInt(fVar1 / (float)PrisonController.BadFameEveryDay,0);
             return;
           }
         }
@@ -746,9 +810,7 @@ public class PrisonController
     // RVA   : 0xBDADB0   Offset: 0xBD95B0   Length: 0xE5A
     public void PrisonButtonClicked(GameObject buttonClicked)
     {
-        var pStatics_da60 = *(int64*)(DAT_181d6da60 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -773,8 +835,8 @@ public class PrisonController
           cVar1 = FUN_1816fd990(lVar3,"1",0);
           if (cVar1) {
             lVar3 = FUN_18046c0a0(0);
-            if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-               (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) != null) {
+            if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+               (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) {
               local_res20[0] = HeroData.GetBadFameFineMoney(lVar3,0);
               lVar4 = FUN_18046c440(0);
               local_48 = local_res20[0];
@@ -797,17 +859,17 @@ public class PrisonController
           cVar1 = FUN_1816fd990(lVar3,"2",0);
           if (cVar1) {
             lVar3 = FUN_18046c0a0(0);
-            if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-               (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 0x1b0)) == null)
+            if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+               (lVar3 = *(int64 *)(lVar3.villageAreaID + 0x1b0)) == null)
             goto LAB_180bdbbe7;
-            if (*(float *)(lVar3 + 32) <= 0.0) {
+            if (lVar3.villageAreaID <= 0.0) {
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                 (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) != null) {
-                iVar2 = Mathf.RoundToInt((*(float *)(lVar3 + 0x1c8) * 0.1 + 1.0) * 100.0,0);
+              if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                 (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) {
+                iVar2 = Mathf.RoundToInt((lVar3.thisYearExploreSpeEventNum * 0.1 + 1.0) * 100.0,0);
                 lVar4 = FUN_18046c440(0);
                 uVar6 = "只要花上些小钱贿赂狱卒，便可与其搞好关系。\n待到熟络之后，也能请他们帮忙行些方便。";
-                if (*(char *)(pStatics_ef00 + 4) != false) {
+                if (*(char *)(pPlotController + 4) != false) {
                   uVar6 = "只要花上些小钱赔礼道歉，便可展现诚意。\n待到熟络之后，也能请守卫帮忙行些方便。";
                 }
                 lVar3 = il2cpp_internal(DAT_181d72a30);
@@ -819,13 +881,13 @@ public class PrisonController
                   FUN_181827900(lVar3,uVar5,DAT_181d7c3d0);
                   local_44 = iVar2 * 2;
                   uVar5 = il2cpp_value_box(DAT_181d5b2f8,&local_44);
-                  local_40 = *(uint32 *)(pStatics_da60 + 8);
+                  local_40 = PrisonController.BuyGuardCureMinFavor;
                   uVar7 = il2cpp_value_box(DAT_181d5b2f8,&local_40);
                   uVar5 = String.Format("治疗伤势;BuyPrisonGuard;1;0/{0};♦治疗全伤势10点;GuardFavor/{1}",uVar5,uVar7,0);
                   FUN_181827900(lVar3,uVar5,DAT_181d7c3d0);
                   local_3c = iVar2 * 5;
                   uVar5 = il2cpp_value_box(DAT_181d5b2f8,&local_3c);
-                  local_38[0] = *(uint32 *)(pStatics_da60 + 12);
+                  local_38[0] = PrisonController.BuyGuardMedMinFavor;
                   uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_38);
                   uVar5 = String.Format("获取药品;BuyPrisonGuard;2;0/{0};♦获取随机药品;GuardFavor/{1}",uVar5,uVar7,0);
                   FUN_181827900(lVar3,uVar5,DAT_181d7c3d0);
@@ -840,17 +902,17 @@ public class PrisonController
             }
             lVar4 = FUN_18046c440(0);
             uVar6 = "还需等待{0}日方能再次贿赂狱卒。";
-            if (*(char *)(pStatics_ef00 + 4) != false) {
+            if (*(char *)(pPlotController + 4) != false) {
               uVar6 = "还需等待{0}日方能再次赔礼道歉";
             }
-            if (((*pStatics_df90 == 0) ||
-                (lVar3 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-               (lVar3 = *(int64 *)(lVar3 + 0x1b0)) == null) {
+            if (((GameController._instance == null) ||
+                (lVar3 = GameController._instance.worldData,
+                lVar3 == null)) || (lVar3 = lVar3.prisonData) == null) {
         LAB_180bdbbff:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            local_38[0] = *(uint32 *)(lVar3 + 32);
+            local_38[0] = lVar3.villageAreaID;
             uVar5 = il2cpp_value_box(DAT_181d7d0b8,local_38);
             uVar6 = String.Format(uVar6,uVar5,0);
             uVar5 = new SinglePlotData(uVar6,0,1,0,3,"0",1,0,0);
@@ -865,10 +927,10 @@ public class PrisonController
           FUN_180f58a90(lVar3,DAT_181d7c250);
           uVar6 = "{0};PrepareBreakPrison;2;;;GuardFavor/{1}";
           uVar5 = "寻找物品";
-          if (*(char *)(pStatics_ef00 + 4) == false) {
+          if (*(char *)(pPlotController + 4) == false) {
             uVar5 = "偷取物品";
           }
-          local_38[0] = *(uint32 *)(pStatics_da60 + 16);
+          local_38[0] = PrisonController.StealPrisonMinFavor;
           uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_38);
           uVar6 = String.Format(uVar6,uVar5,uVar7,0);
           if (lVar3 == null) {
@@ -877,7 +939,7 @@ public class PrisonController
             FUN_1800d6620();
           }
           FUN_181827900(lVar3,uVar6,DAT_181d7c3d0);
-          local_res10[0] = *(uint32 *)(pStatics_da60 + 24);
+          local_res10[0] = PrisonController.EscapePrisonMinFavor;
           uVar6 = Int32.ToString(local_res10,0);
           uVar6 = String.Concat("暗中逃跑;PrepareBreakPrison;3;;;GuardFavor/",uVar6,0);
           FUN_181827900(lVar3,uVar6,DAT_181d7c3d0);
@@ -888,7 +950,7 @@ public class PrisonController
              (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_180bdbc05;
           cVar1 = HeroData.HaveTag(lVar4,0x171,0);
           if (cVar1) {
-            local_res10[0] = *(uint32 *)(pStatics_da60 + 20);
+            local_res10[0] = PrisonController.BreakChainMinFavor;
             uVar6 = Int32.ToString(local_res10,0);
             uVar6 = String.Concat("解开脚镣;PrepareBreakPrison;1;;;GuardFavor/",uVar6,0);
             FUN_18182ac70(lVar3,1,uVar6,DAT_181d7c6c8);
@@ -898,7 +960,7 @@ public class PrisonController
              (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_180bdbbe7;
           cVar1 = HeroData.HaveTag(lVar4,0x170,0);
           if (cVar1) {
-            local_res10[0] = *(uint32 *)(pStatics_da60 + 20);
+            local_res10[0] = PrisonController.BreakChainMinFavor;
             uVar6 = Int32.ToString(local_res10,0);
             uVar6 = String.Concat("解开手铐;PrepareBreakPrison;0;;;GuardFavor/",uVar6,0);
             FUN_18182ac70(lVar3,1,uVar6,DAT_181d7c6c8);
@@ -911,7 +973,7 @@ public class PrisonController
           iVar2 = PrisonController.GetLeftPrisonDay(this,0);
           if (0 < iVar2) {
             lVar4 = FUN_18046c440(0);
-            local_48 = **(int **)(DAT_181d6da60 + 184);
+            local_48 = PrisonController.BadFameEveryDay;
             uVar6 = il2cpp_value_box(DAT_181d5b2f8,&local_48);
             uVar6 = String.Format("每日可降低{0}点恶名，待恶名降低到0时便可出狱。\n同时每日也会累积少量伤势，不过若能与看守更为熟络，便也能少受些罪。",uVar6,0);
             lVar3 = il2cpp_internal(DAT_181d72a30);
@@ -956,14 +1018,13 @@ public class PrisonController
     // RVA   : 0xBDD5B0   Offset: 0xBDBDB0   Length: 0xB7
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d6da60 + 184);
-        **(uint32 **)(DAT_181d6da60 + 184) = 5;
-        *(uint32 *)(pStatics + 4) = 5;
-        *(uint32 *)(pStatics + 8) = 20;
-        *(uint32 *)(pStatics + 12) = 40;
-        *(uint32 *)(pStatics + 16) = 10;
-        *(uint32 *)(pStatics + 20) = 30;
-        *(uint32 *)(pStatics + 24) = 50;
+        PrisonController.BadFameEveryDay = 5;
+        PrisonController.BuyGuardCdTime = 5;
+        PrisonController.BuyGuardCureMinFavor = 20;
+        PrisonController.BuyGuardMedMinFavor = 40;
+        PrisonController.StealPrisonMinFavor = 10;
+        PrisonController.BreakChainMinFavor = 30;
+        PrisonController.EscapePrisonMinFavor = 50;
     }
 
 }

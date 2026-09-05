@@ -53,24 +53,24 @@ public class ShowRoomController
     // RVA   : 0x96CFB0   Offset: 0x96B7B0   Length: 0x58
     public static ShowRoomController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d7ce38 + 184) + 32);
+        return *(uint64 *)(*(int64 *)(ShowRoomSpaceController_StaticsPtr + 184) + 32);
     }
 
     // Token : 0x6002084
     // RVA   : 0x96BB90   Offset: 0x96A390   Length: 0x11E
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d7ce38 + 184);
+        var pShowRoomSpaceController = *(int64*)(ShowRoomSpaceController_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
-        uVar2 = *(uint64 *)(pStatics + 32);
+        uVar2 = *(uint64 *)(pShowRoomSpaceController + 32);
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
           uVar2 = Component.get_gameObject(this,0);
           Object.Destroy(uVar2,0);
           return;
         }
-        puVar3 = (uint64 *)(pStatics + 32);
+        puVar3 = (uint64 *)(pShowRoomSpaceController + 32);
         *puVar3 = this;
         il2cpp_internal(puVar3,this);
     }
@@ -93,7 +93,9 @@ public class ShowRoomController
               uVar2 = this.showRoomTotalChangeText;
               if (this.targetForce != null) {
                 fVar1 = this.targetForce.showRoomChangeFame;
-                local_res8[0] = Mathf.RoundToInt((float)**(int **)(DAT_181d7ce38 + 184) * fVar1,0);
+                local_res8[0] =
+                     Mathf.RoundToInt((float)**(int **)(ShowRoomSpaceController_StaticsPtr + 184) *
+                                       fVar1,0);
                 uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
                 if (this.targetForce != null) {
                   uVar5 = Single.ToString(this.targetForce + 0x158,"0.#",0);
@@ -110,8 +112,9 @@ public class ShowRoomController
               lVar6 = FUN_18046c0a0(0);
               if ((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) {
                 fVar1 = *(float *)(*(int64 *)(lVar6 + 32) + 0x168);
-                local_res8[0] = Mathf.RoundToInt((float)**(int **)(DAT_181d7ce38 + 184) * fVar1 * 5.0,0)
-                ;
+                local_res8[0] =
+                     Mathf.RoundToInt((float)**(int **)(ShowRoomSpaceController_StaticsPtr + 184) *
+                                       fVar1 * 5.0,0);
                 uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
                 lVar6 = FUN_18046c0a0(0);
                 if ((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) {
@@ -269,7 +272,7 @@ public class ShowRoomController
     // RVA   : 0x96C330   Offset: 0x96AB30   Length: 0x659
     public void RefreshShowRoomPanel()
     {
-        var pStatics = *(int64*)(DAT_181d7ce38 + 184);
+        var pShowRoomSpaceController = *(int64*)(ShowRoomSpaceController_StaticsPtr + 184);
         uint uVar1;
         bool cVar2;
         long lVar3;
@@ -283,7 +286,7 @@ public class ShowRoomController
             lVar3 = Transform.Find(lVar3,"Title",0);
             if (lVar3 != null) {
               uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-              lVar3 = *(int64 *)(pStatics + 16);
+              lVar3 = *(int64 *)(pShowRoomSpaceController + 16);
               if (lVar3 != null) {
                 uVar1 = this.showRoomType;
                 if (*(uint32 *)(lVar3 + 24) <= uVar1) {
@@ -298,7 +301,8 @@ public class ShowRoomController
                     lVar3 = Transform.Find(lVar3,"Question",0);
                     if (lVar3 != null) {
                       lVar5 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-                      lVar3 = *(int64 *)(pStatics + 24);
+                      lVar3 = *(int64 *)
+                               (pShowRoomSpaceController + 24);
                       if (lVar3 != null) {
                         uVar1 = this.showRoomType;
                         if (*(uint32 *)(lVar3 + 24) <= uVar1) {
@@ -441,7 +445,7 @@ public class ShowRoomController
         long lVar1;
         float fVar2;
         if (this.showRoomType == null) {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+          lVar1 = PlotController.LeftFaceHideOffset;
           if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 24)) != null) {
             return (float)itemID <= (float)*(int *)(lVar1 + 20) * 0.5;
           }
@@ -497,16 +501,16 @@ public class ShowRoomController
     // RVA   : 0x96CD90   Offset: 0x96B590   Length: 0x215
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d7ce38 + 184);
+        var pShowRoomSpaceController = *(int64*)(ShowRoomSpaceController_StaticsPtr + 184);
         long lVar1;
-        **(uint32 **)(DAT_181d7ce38 + 184) = 10;
+        **(uint32 **)(ShowRoomSpaceController_StaticsPtr + 184) = 10;
         lVar1 = il2cpp_internal(DAT_181d6f530);
         FUN_180f58a90(lVar1,DAT_181d69a70);
         if (lVar1 != null) {
           FUN_181814fa0(lVar1,0,DAT_181d69af0);
           FUN_181814fa0(lVar1,3,DAT_181d69af0);
           FUN_181814fa0(lVar1,4,DAT_181d69af0);
-          plVar2 = (int64 *)(pStatics + 8);
+          plVar2 = (int64 *)(pShowRoomSpaceController + 8);
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -514,7 +518,7 @@ public class ShowRoomController
           if (lVar1 != null) {
             FUN_181827900(lVar1,"门派展厅",DAT_181d7c3d0);
             FUN_181827900(lVar1,"个人展厅",DAT_181d7c3d0);
-            plVar2 = (int64 *)(pStatics + 16);
+            plVar2 = (int64 *)(pShowRoomSpaceController + 16);
             *plVar2 = lVar1;
             il2cpp_internal(plVar2,lVar1);
             lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -522,7 +526,7 @@ public class ShowRoomController
             if (lVar1 != null) {
               FUN_181827900(lVar1,"♦在门派展厅中摆放珍贵物品加以展示，可以每月获取门派银两和门派威望\n♦珍宝产出较高，装备/秘籍产出较少",DAT_181d7c3d0);
               FUN_181827900(lVar1,"♦在个人展厅中摆放珍贵物品加以展示，可以每月获取银两和声望\n♦珍宝产出较高，装备/秘籍产出较少",DAT_181d7c3d0);
-              plVar2 = (int64 *)(pStatics + 24);
+              plVar2 = (int64 *)(pShowRoomSpaceController + 24);
               *plVar2 = lVar1;
               il2cpp_internal(plVar2,lVar1);
               return;

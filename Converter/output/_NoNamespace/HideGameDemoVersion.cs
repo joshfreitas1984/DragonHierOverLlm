@@ -18,7 +18,7 @@ public class HideGameDemoVersion
     private void Awake()
     {
         long lVar1;
-        if (*(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 8) == this.targetDemoVersion) {
+        if (PlotController.LeftFaceHideOffset == this.targetDemoVersion) {
           lVar1 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             GameObject.SetActive(lVar1,this.activeMode,0);

@@ -74,8 +74,6 @@ public class UIWrapContent
     // RVA   : 0x372E70   Offset: 0x371670   Length: 0x11
     protected virtual void OnMove(UIPanel panel)
     {
-        void FUN_180372e70(int64 *this)
-        {
                           // WARNING: Could not recover jumptable at 0x000180372e7a. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x1c8))(this,*(uint64 *)(*this + 0x1d0));
@@ -565,8 +563,6 @@ public class UIWrapContent
     // RVA   : 0x9DAF50   Offset: 0x9D9750   Length: 0xC
     private void OnValidate()
     {
-        void FUN_1809daf50(int64 this)
-        {
         if (this.maxIndex < this.minIndex) {
           this.maxIndex = this.minIndex;
         }

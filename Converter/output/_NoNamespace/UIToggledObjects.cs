@@ -69,7 +69,7 @@ public class UIToggledObjects
         uint uVar5;
         long lVar6;
         long lVar7;
-        if (*(int64 *)(*(int64 *)(DAT_181d8b2d8 + 184) + 8) != 0) {
+        if (*(int64 *)(*(int64 *)(UIPlayAnimation_StaticsPtr + 184) + 8) != 0) {
           cVar2 = Behaviour.get_enabled(this,0);
           if (!cVar2) {
             return;

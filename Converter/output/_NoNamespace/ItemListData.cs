@@ -275,7 +275,6 @@ public class ItemListData
     // RVA   : 0xB7D9C0   Offset: 0xB7C1C0   Length: 0xAD
     public void GetItem(ItemListData target)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -286,28 +285,28 @@ public class ItemListData
         ulong local_18;
         ulong uStack_10;
         if (-1 < this.heroID) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,this.heroID,0);
           if (lVar3 != null) {
             if (target == null) throw; // [null/range check failed]
             iVar1 = *(int *)(target + 20);
             if ((iVar1 == 0) || (iVar1 == 6)) {
               lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                  (lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
-                                              0), lVar3 == null)) || (*(int64 *)(lVar3 + 64) == 0))
+              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                  (lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
+                                              0), lVar3 == null)) || (lVar3.ResourcePoints == null))
               throw; // [null/range check failed]
-              *(uint8 *)(*(int64 *)(lVar3 + 64) + 44) = 1;
+              *(uint8 *)(lVar3.ResourcePoints + 44) = 1;
             }
             else if (iVar1 - 1U < 2) {
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                 ((lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
-                                              0), lVar3 == null || (*(int64 *)(lVar3 + 64) == 0))))
+              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                 ((lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
+                                              0), lVar3 == null || (lVar3.ResourcePoints == null))))
               throw; // [null/range check failed]
-              *(uint8 *)(*(int64 *)(lVar3 + 64) + 46) = 1;
+              *(uint8 *)(lVar3.ResourcePoints + 46) = 1;
             }
           }
         }
@@ -451,7 +450,6 @@ public class ItemListData
     // RVA   : 0xB7DA70   Offset: 0xB7C270   Length: 0x42B
     public void GetItem(ItemData targetItem, bool showPopInfo)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -462,28 +460,28 @@ public class ItemListData
         ulong local_18;
         ulong uStack_10;
         if (-1 < this.heroID) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,this.heroID,0);
           if (lVar3 != null) {
             if (targetItem == null) throw; // [null/range check failed]
             iVar1 = *(int *)(targetItem + 20);
             if ((iVar1 == 0) || (iVar1 == 6)) {
               lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                  (lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
-                                              0), lVar3 == null)) || (*(int64 *)(lVar3 + 64) == 0))
+              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                  (lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
+                                              0), lVar3 == null)) || (lVar3.ResourcePoints == null))
               throw; // [null/range check failed]
-              *(uint8 *)(*(int64 *)(lVar3 + 64) + 44) = 1;
+              *(uint8 *)(lVar3.ResourcePoints + 44) = 1;
             }
             else if (iVar1 - 1U < 2) {
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                 ((lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
-                                              0), lVar3 == null || (*(int64 *)(lVar3 + 64) == 0))))
+              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                 ((lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
+                                              0), lVar3 == null || (lVar3.ResourcePoints == null))))
               throw; // [null/range check failed]
-              *(uint8 *)(*(int64 *)(lVar3 + 64) + 46) = 1;
+              *(uint8 *)(lVar3.ResourcePoints + 46) = 1;
             }
           }
         }
@@ -746,14 +744,14 @@ public class ItemListData
     // RVA   : 0xB7D6C0   Offset: 0xB7BEC0   Length: 0xD0
     public HeroData GetHero()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         if (this.heroID < 0) {
           return 0;
         }
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           uVar2 = WorldData.GetHero(lVar1,this.heroID,0);
           return uVar2;
         }
@@ -770,14 +768,14 @@ public class ItemListData
     // RVA   : 0xB7D5E0   Offset: 0xB7BDE0   Length: 0xD0
     public ForceData GetForce()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         if (this.forceID < 0) {
           return 0;
         }
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           uVar2 = WorldData.GetForce(lVar1,this.forceID,0);
           return uVar2;
         }

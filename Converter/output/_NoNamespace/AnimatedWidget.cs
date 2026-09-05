@@ -74,8 +74,6 @@ public class AnimatedWidget
     // RVA   : 0xA0D3D0   Offset: 0xA0BBD0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180a0d3d0(int64 this)
-        {
         this.width = 0x3f800000;
         this.height = 0x3f800000;
         FUN_18044ef50(this,0);

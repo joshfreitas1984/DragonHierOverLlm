@@ -48,8 +48,6 @@ public class UISlider
     // RVA   : 0x1689B50   Offset: 0x1688350   Length: 0x7
     public float get_sliderValue()
     {
-        void FUN_181689b50(uint64 this)
-        {
         UIProgressBar.get_value(this,0);
     }
 
@@ -57,8 +55,6 @@ public class UISlider
     // RVA   : 0x1689CE0   Offset: 0x16884E0   Length: 0x8
     public void set_sliderValue(float value)
     {
-        void FUN_181689ce0(uint64 this,uint64 value)
-        {
         UIProgressBar.set_value(this,value,0);
     }
 
@@ -66,8 +62,6 @@ public class UISlider
     // RVA   : 0x168EA60   Offset: 0x168D260   Length: 0x7
     public bool get_inverted()
     {
-        void FUN_18168ea60(uint64 this)
-        {
         UIProgressBar.get_isInverted(this,0);
     }
 
@@ -237,7 +231,9 @@ public class UISlider
         uint uVar3;
         iVar1 = UICamera.get_currentScheme(0);
         if (iVar1 != 2) {
-          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 192);
+          *(uint64 *)(this + 88) =
+               UICamera.currentCamera;
+          il2cpp_internal();
           uVar2 = UICamera.get_lastEventPosition(0);
           uVar3 = UIProgressBar.ScreenToValue(this,uVar2,0);
           UIProgressBar.set_value(this,uVar3,0);
@@ -256,7 +252,9 @@ public class UISlider
         uint uVar3;
         iVar1 = UICamera.get_currentScheme(0);
         if (iVar1 != 2) {
-          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 192);
+          *(uint64 *)(this + 88) =
+               UICamera.currentCamera;
+          il2cpp_internal();
           uVar2 = UICamera.get_lastEventPosition(0);
           uVar3 = UIProgressBar.ScreenToValue(this,uVar2,0);
           UIProgressBar.set_value(this,uVar3,0);
@@ -275,7 +273,9 @@ public class UISlider
         float fVar5;
         iVar2 = UICamera.get_currentScheme(0);
         if (iVar2 != 2) {
-          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 192);
+          *(uint64 *)(this + 88) =
+               UICamera.currentCamera;
+          il2cpp_internal();
           if (!isPressed) {
             if (*(int64 *)(this + 24) != 0) {
               OnGeometryUpdated.Invoke(*(int64 *)(this + 24),0);
@@ -309,7 +309,9 @@ public class UISlider
         float fVar4;
         iVar2 = UICamera.get_currentScheme(0);
         if (iVar2 != 2) {
-          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 192);
+          *(uint64 *)(this + 88) =
+               UICamera.currentCamera;
+          il2cpp_internal();
           fVar1 = *(float *)(this + 96);
           uVar3 = UICamera.get_lastEventPosition(0);
           fVar4 = (float)UIProgressBar.ScreenToValue(this,uVar3,0);
@@ -354,8 +356,6 @@ public class UISlider
     // RVA   : 0x168EA40   Offset: 0x168D240   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_18168ea40(int64 this)
-        {
         this.rawValue = 0x3f800000;
         this.direction = 2;
         UIProgressBar.ctor(this,0);

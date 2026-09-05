@@ -27,7 +27,7 @@ public class BreakThroughChoiceController
     public void OnClick()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8e338 + 184) + 8);
+        lVar1 = PlotController.LeftFaceHideOffset;
         if (lVar1 != null) {
           BreakThroughController.BreakThroughChoiceClicked(lVar1,this,0);
           return;

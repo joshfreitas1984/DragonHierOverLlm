@@ -51,7 +51,7 @@ public class ShieldActivate
     // RVA   : 0x96B790   Offset: 0x969F90   Length: 0x2DD
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d5f818 + 184);
+        var pShieldActivate = *(int64*)(ShieldActivate_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -69,11 +69,11 @@ public class ShieldActivate
           uVar2 = this.Hitpoints;
           uVar1 = new OnTooltipCB(this,DAT_181d7edc0,DAT_181d8c838);
           uVar2 = FUN_18095ff20(uVar2,uVar1,DAT_181d8b5b8);
-          lVar3 = *(int64 *)(pStatics + 8);
+          lVar3 = *(int64 *)(pShieldActivate + 8);
           if (lVar3 == null) {
-            uVar1 = **(uint64 **)(DAT_181d5f818 + 184);
+            uVar1 = **(uint64 **)(ShieldActivate_StaticsPtr + 184);
             lVar3 = new OnTooltipCB(uVar1,DAT_181d83b28,DAT_181d8c7b0);
-            plVar4 = (int64 *)(pStatics + 8);
+            plVar4 = (int64 *)(pShieldActivate + 8);
             *plVar4 = lVar3;
             il2cpp_internal(plVar4,lVar3);
           }

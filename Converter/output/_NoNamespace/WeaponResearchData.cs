@@ -46,8 +46,6 @@ public class WeaponResearchData
     // RVA   : 0x9DFD70   Offset: 0x9DE570   Length: 0x1B
     public float GetMaxExp()
     {
-        float FUN_1809dfd70(int64 this)
-        {
         return (float)((this.lv + 2) * (this.lv + 1)) * 0.5;
     }
 
@@ -55,8 +53,7 @@ public class WeaponResearchData
     // RVA   : 0x9DF990   Offset: 0x9DE190   Length: 0x3DA
     public void ChangeExp(float _exp)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         int iVar3;
@@ -74,10 +71,10 @@ public class WeaponResearchData
             this.lv = iVar3 + 1;
             this.exp = _exp - (float)((iVar3 + 2) * (iVar3 + 1)) * 0.5;
             lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            lVar2 = *(int64 *)(pStatics_ef00 + 0x498);
-            if ((((*pStatics_df90 == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-                (lVar4 = WorldData.Player(lVar4,0)) == null) ||
+            lVar2 = *(int64 *)(pPlotController + 0x498);
+            if ((((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData,
+                 lVar4 == null)) || (lVar4 = WorldData.Player(lVar4,0)) == null) ||
                (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 == null)) {
         LAB_1809dfd65:
                           // WARNING: Subroutine does not return
@@ -87,9 +84,10 @@ public class WeaponResearchData
             local_res10[0] = this.lv;
             uVar6 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
             uVar5 = String.Format("{0}兵器研究达到{1}级",uVar5,uVar6,0);
-            lVar2 = *(int64 *)(pStatics_ef00 + 0x498);
-            if (((*pStatics_df90 == 0) ||
-                (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
+            lVar2 = *(int64 *)(pPlotController + 0x498);
+            if (((GameController._instance == null) ||
+                (lVar4 = GameController._instance.worldData,
+                lVar4 == null)) ||
                ((lVar4 = WorldData.Player(lVar4,0), lVar4 == null ||
                 ((iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 == null ||
                  (uVar6 = FUN_180002f80(lVar2,iVar3 + 3,DAT_181d7c9c0), lVar1 == null))))))

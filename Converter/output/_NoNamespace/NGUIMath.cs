@@ -17,8 +17,6 @@ public class NGUIMath
     // RVA   : 0xB01E90   Offset: 0xB00690   Length: 0x11
     public static int ClampIndex(int val, int max)
     {
-        int FUN_180b01e90(int val,int max)
-        {
         if (val < 0) {
           return 0;
         }
@@ -132,8 +130,6 @@ public class NGUIMath
     // RVA   : 0xB023F0   Offset: 0xB00BF0   Length: 0x18
     public static char DecimalToHexChar(int num)
     {
-        int FUN_180b023f0(int num)
-        {
         if (15 < num) {
           return 70;
         }
@@ -1945,8 +1941,6 @@ public class NGUIMath
     // RVA   : 0xB034A0   Offset: 0xB01CA0   Length: 0x8
     public static void MoveWidget(UIRect w, float x, float y)
     {
-        void FUN_180b034a0(void)
-        {
         NGUIMath.MoveRect();
     }
 

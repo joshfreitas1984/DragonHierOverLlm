@@ -23,8 +23,6 @@ public class CFX_InspectorHelp
     // RVA   : 0xBD5650   Offset: 0xBD3E50   Length: 0x5
     private void Unlock()
     {
-        void FUN_180bd5650(int64 this)
-        {
         this.Locked = 0;
     }
 

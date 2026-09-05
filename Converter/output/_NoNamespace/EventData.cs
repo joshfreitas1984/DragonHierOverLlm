@@ -123,8 +123,6 @@ public class EventData
     // RVA   : 0x2A5CA0   Offset: 0x2A44A0   Length: 0xC
     public void SetPlotData(PlotData _plotData)
     {
-        void FUN_1802a5ca0(int64 this,uint64 _plotData)
-        {
         this.plotData = _plotData;
     }
 
@@ -152,8 +150,7 @@ public class EventData
     // RVA   : 0x935A10   Offset: 0x934210   Length: 0x55E
     public string GetDescribe(bool showDifficulty)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         int iVar2;
         long lVar3;
@@ -170,9 +167,9 @@ public class EventData
           if (this.areaID != null) {
             uVar6 = "";
             if (0 < this.areaID.Count) {
-              if (*pStatics_df90 == 0) throw; // [null/range check failed]
+              if (GameController._instance == null) throw; // [null/range check failed]
               lVar5 = this.areaID;
-              lVar1 = *(int64 *)(*pStatics_df90 + 32);
+              lVar1 = GameController._instance.worldData;
               if (lVar5 == null) throw; // [null/range check failed]
               if (lVar5.Count == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -186,7 +183,7 @@ public class EventData
                 lVar5 = FUN_18046c0a0(0);
                 if (lVar5 == null) throw; // [null/range check failed]
                 lVar1 = this.areaID;
-                lVar5 = *(int64 *)(lVar5 + 32);
+                lVar5 = lVar5.villageAreaID;
                 if (lVar1 == null) throw; // [null/range check failed]
                 if (lVar1.Count == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -203,16 +200,17 @@ public class EventData
               uVar4 = "#EnemyForceName#";
               uVar6 = "";
               if (-1 < this.speTargetID) {
-                if (((*pStatics_df90 == 0) ||
-                    (lVar5 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
+                if (((GameController._instance == null) ||
+                    (lVar5 = GameController._instance.worldData,
+                    lVar5 == null)) ||
                    (lVar5 = WorldData.GetForce(lVar5,this.speTargetID,0)) == null)
                 throw; // [null/range check failed]
                 uVar6 = lVar5.Count;
               }
               if (lVar3 != null) {
                 lVar3 = String.Replace(lVar3,uVar4,uVar6,0);
-                lVar5 = *(int64 *)(pStatics_ef00 + 0x400);
-                iVar2 = Mathf.RoundToInt(pStatics_ef00,0);
+                lVar5 = *(int64 *)(pPlotController + 0x400);
+                iVar2 = Mathf.RoundToInt(pPlotController,0);
                 uVar7 = (uint32)((float)iVar2 * 0.5);
                 if (lVar5 != null) {
                   if (lVar5.Count <= uVar7) {
@@ -223,8 +221,8 @@ public class EventData
                   uVar4 = GlobalData.GenerateRareLvColorText(uVar4,(int)((float)iVar2 * 0.5),0);
                   if (lVar3 != null) {
                     lVar5 = String.Replace(lVar3,"#DifficultyRateText#",uVar4,0);
-                    lVar3 = *(int64 *)(pStatics_ef00 + 0x500);
-                    iVar2 = Mathf.RoundToInt(DAT_181d4ef00,0);
+                    lVar3 = *(int64 *)(pPlotController + 0x500);
+                    iVar2 = Mathf.RoundToInt(PlotController_StaticsPtr,0);
                     uVar7 = (uint32)((float)iVar2 * 0.5);
                     if (lVar3 != null) {
                       if (*(uint32 *)(lVar3 + 24) <= uVar7) {
@@ -255,7 +253,6 @@ public class EventData
     // RVA   : 0x935FA0   Offset: 0x9347A0   Length: 0x50C
     public string GetPosText()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         uint uVar1;
         ulong uVar2;
         bool cVar3;
@@ -272,7 +269,7 @@ public class EventData
                 lVar6 = FUN_18046c0a0(0);
                 if (lVar6 != null) {
                   lVar5 = this.areaID;
-                  lVar6 = *(int64 *)(lVar6 + 32);
+                  lVar6 = lVar6.villageAreaID;
                   if (lVar5 != null) {
                     if (lVar5.Count == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -296,16 +293,16 @@ public class EventData
                   }
                   uVar7 = this.areaID;
                   lVar6 = FUN_18046c0a0(0);
-                  if ((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) {
-                    uVar2 = *(uint64 *)(*(int64 *)(lVar6 + 32) + 32);
+                  if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
+                    uVar2 = *(uint64 *)(lVar6.villageAreaID + 32);
                     cVar3 = GlobalData.ListEqual(uVar7,uVar2,0);
                     if (cVar3) {
                       return "所有村镇";
                     }
                     uVar7 = this.areaID;
                     lVar6 = FUN_18046c0a0(0);
-                    if ((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) {
-                      uVar2 = *(uint64 *)(*(int64 *)(lVar6 + 32) + 40);
+                    if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
+                      uVar2 = *(uint64 *)(lVar6.villageAreaID + 40);
                       cVar3 = GlobalData.ListEqual(uVar7,uVar2,0);
                       if (cVar3) {
                         return "所有门派";
@@ -320,7 +317,7 @@ public class EventData
                           }
                           lVar6 = FUN_18046c0a0(0);
                           if (lVar6 == null) break;
-                          lVar6 = *(int64 *)(lVar6 + 32);
+                          lVar6 = lVar6.villageAreaID;
                           if (((this.areaID == null) ||
                               (uVar4 = FUN_1800d6750(this.areaID,iVar8,DAT_181d68270),
                               lVar6 == null)) || (lVar6 = WorldData.GetArea(lVar6,uVar4,0)) == null)
@@ -343,11 +340,11 @@ public class EventData
               uVar7 = "{0}周边";
             }
             lVar6 = FUN_18046c0a0(0);
-            if (((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) &&
-               (lVar6 = WorldData.GetArea(*(int64 *)(lVar6 + 32),this.nearAreaID,0),
+            if (((lVar6 != null) && (lVar6.villageAreaID != null)) &&
+               (lVar6 = WorldData.GetArea(lVar6.villageAreaID,this.nearAreaID,0),
                lVar6 != null)) {
               uVar2 = lVar6.Count;
-              lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3c0);
+              lVar6 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3c0);
               if (lVar6 != null) {
                 uVar1 = this.nearAreaDirection;
                 if (lVar6.Count <= uVar1) {
@@ -363,10 +360,11 @@ public class EventData
           }
         }
         else {
-          if (((*pStatics != 0) &&
-              (lVar6 = *(int64 *)(*pStatics + 32)) != null) &&
-             (lVar6 = WorldData.GetResourcePoint(lVar6,this.resourcePointID,0)) != null) {
-            return *(uint64 *)(lVar6 + 32);
+          if (((GameController._instance != null) &&
+              (lVar6 = GameController._instance.worldData, lVar6 != null
+              )) && (lVar6 = WorldData.GetResourcePoint(lVar6,this.resourcePointID,0),
+                    lVar6 != null)) {
+            return lVar6.villageAreaID;
           }
         }
     }

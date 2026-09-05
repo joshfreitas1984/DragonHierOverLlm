@@ -10,7 +10,7 @@ public class OpenURLOnClick
     // RVA   : 0x46EB40   Offset: 0x46D340   Length: 0xFF
     private void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -23,8 +23,8 @@ public class OpenURLOnClick
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          local_18 = *(uint64 *)(pStatics + 100);
-          local_10 = *(uint32 *)(pStatics + 108);
+          local_18 = UICamera.lastWorldPosition;
+          local_10 = *(uint32 *)(pUICamera + 108);
           uVar3 = UILabel.GetUrlAtPosition(lVar2,&local_18,0);
           cVar1 = FUN_180d6ca90(uVar3,0);
           if (!cVar1) {

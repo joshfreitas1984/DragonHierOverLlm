@@ -38,12 +38,11 @@ public class InfoTextList
     // RVA   : 0xB6FBB0   Offset: 0xB6E3B0   Length: 0x16C
     protected BetterList<Paragraph> get_paragraphs()
     {
-        var pStatics = *(int64*)(DAT_181d5a6f8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         if (this.mParagraphs == null) {
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = InfoTextList.mHistory;
           uVar3 = Object.get_name(this,0);
           if (lVar1 == null) {
         LAB_180b6fd17:
@@ -53,7 +52,7 @@ public class InfoTextList
           cVar2 = FUN_1808addd0(lVar1,uVar3,this + 64,DAT_181da20f8);
           if (!cVar2) {
             this.mParagraphs = new BetterList_1(DAT_181d82218);
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = InfoTextList.mHistory;
             uVar3 = Object.get_name(this,0);
             if (lVar1 == null) goto LAB_180b6fd17;
             FUN_1808ab680(lVar1,uVar3,this.mParagraphs,DAT_181da2078);
@@ -116,7 +115,7 @@ public class InfoTextList
         lVar2 = InfoTextList.get_paragraphs(this,0);
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
-          if (iVar1 < **(int **)(DAT_181d5a6f8 + 184)) {
+          if (iVar1 < InfoTextList.paragraphHistory) {
             lVar2 = new c.DisplayClass9_0(0);
           }
           else {
@@ -134,7 +133,7 @@ public class InfoTextList
             *(int64 *)(lVar2 + 40) = text;
             *(uint32 *)(lVar2 + 32) = type;
             plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
-            lVar5 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x418);
+            lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
             if (lVar5 != null) {
               if (lVar5.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -246,7 +245,7 @@ public class InfoTextList
         lVar2 = InfoTextList.get_paragraphs(this,0);
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
-          if (iVar1 < **(int **)(DAT_181d5a6f8 + 184)) {
+          if (iVar1 < InfoTextList.paragraphHistory) {
             lVar2 = new c.DisplayClass9_0(0);
           }
           else {
@@ -264,7 +263,7 @@ public class InfoTextList
             *(int64 *)(lVar2 + 40) = param_3;
             *(uint32 *)(lVar2 + 32) = info;
             plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
-            lVar5 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x418);
+            lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
             if (lVar5 != null) {
               if (lVar5.size <= info) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -376,7 +375,7 @@ public class InfoTextList
         lVar2 = InfoTextList.get_paragraphs(this,0);
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
-          if (iVar1 < **(int **)(DAT_181d5a6f8 + 184)) {
+          if (iVar1 < InfoTextList.paragraphHistory) {
             lVar2 = new c.DisplayClass9_0(0);
           }
           else {
@@ -394,7 +393,7 @@ public class InfoTextList
             *(int64 *)(lVar2 + 40) = time;
             *(uint32 *)(lVar2 + 32) = type;
             plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
-            lVar5 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x418);
+            lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
             if (lVar5 != null) {
               if (lVar5.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -673,12 +672,10 @@ public class InfoTextList
     private static void /*cctor*/()
     {
         ulong uVar1;
-        **(uint32 **)(DAT_181d5a6f8 + 184) = 100;
+        InfoTextList.paragraphHistory = 100;
         uVar1 = il2cpp_internal(DAT_181d5db48);
         FUN_1808ae540(uVar1,DAT_181da1ff8);
-        puVar2 = (uint64 *)(*(int64 *)(DAT_181d5a6f8 + 184) + 8);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        InfoTextList.mHistory = uVar1;
     }
 
 }

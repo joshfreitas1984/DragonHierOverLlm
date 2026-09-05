@@ -17,7 +17,7 @@ public class HeroBaseFightDataController
     // RVA   : 0x8781B0   Offset: 0x8769B0   Length: 0x173C
     public void RefreshData()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         long lVar2;
         int iVar3;
@@ -119,7 +119,7 @@ public class HeroBaseFightDataController
           uVar7 = String.Concat("闪避 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
           lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+          lVar2 = GameController.difficultyExtraPoint;
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) goto LAB_1808798e0;
           iVar3 = PlayerPrefDictionary.GetInt(lVar2,"NoEvadeBalance",0);
           uVar6 = "/5体力";
@@ -401,7 +401,7 @@ public class HeroBaseFightDataController
                   iVar4 = HeroData.GetBaseMoveRange(this.targetHero,0);
                   iVar3 = 0;
                   while( true ) {
-                    lVar5 = *(int64 *)(pStatics + 0x550);
+                    lVar5 = *(int64 *)(pPlotController + 0x550);
                     if (lVar5 == null) break;
                     if (lVar5.summonLv + -1 <= iVar3) {
                       return;
@@ -414,7 +414,7 @@ public class HeroBaseFightDataController
                     if (iVar4 == iVar1) {
                       uVar7 = "\n<color=#00B400>{0}</color>";
                     }
-                    lVar2 = *(int64 *)(pStatics + 0x550);
+                    lVar2 = *(int64 *)(pPlotController + 0x550);
                     if (lVar2 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();

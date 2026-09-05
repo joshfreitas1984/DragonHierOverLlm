@@ -178,8 +178,6 @@ public class TweenFOV
     // RVA   : 0xA6FCC0   Offset: 0xA6E4C0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180a6fcc0(int64 this)
-        {
         this.from = 0x42340000;
         this.to = 0x42340000;
         UITweener.ctor(this,0);

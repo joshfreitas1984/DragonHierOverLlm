@@ -42,7 +42,6 @@ public class WorldPlotEventController
     // RVA   : 0xB2D190   Offset: 0xB2B990   Length: 0x70A
     public void StartNewWorldPlotEvent(WorldPlotEventStartData targetWorldPlotEventStartData)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar2;
         int iVar3;
         long lVar4;
@@ -52,13 +51,13 @@ public class WorldPlotEventController
         ulong uVar9;
         long lVar10;
         float fVar11;
-        if (((*pStatics != 0) &&
-            (lVar6 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar6 = *(int64 *)(lVar6 + 240)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar6 = GameController._instance.worldData) != null)
+           && (lVar6 = lVar6.worldPlotEventStartData) != null) {
           FUN_181827900(lVar6,targetWorldPlotEventStartData,DAT_181d85478);
-          if ((*pStatics != 0) &&
-             (GameController.ChangePlotTargetNumCount(*pStatics,targetWorldPlotEventStartData,1,0),
-             targetWorldPlotEventStartData != null)) {
+          if ((GameController._instance != null) &&
+             (GameController.ChangePlotTargetNumCount
+                        (GameController._instance,targetWorldPlotEventStartData,1,0), targetWorldPlotEventStartData != null)) {
             if ((*(int *)(targetWorldPlotEventStartData + 32) - 1U & 0xfffffff6) != 0) {
               return;
             }
@@ -67,16 +66,16 @@ public class WorldPlotEventController
             }
             lVar6 = new EventData(0);
             if (lVar6 != null) {
-              *(uint64 *)(lVar6 + 24) = *(uint64 *)(targetWorldPlotEventStartData + 16);
+              lVar6.cityAreaID = *(uint64 *)(targetWorldPlotEventStartData + 16);
               fVar11 = *(float *)(targetWorldPlotEventStartData + 24);
               if (fVar11 == -1.0) {
-                if (*pStatics == 0) throw; // [null/range check failed]
-                fVar11 = (float)GameController.GetTimeDifficulty(*pStatics,0)
-                ;
+                if (GameController._instance == null) throw; // [null/range check failed]
+                fVar11 = (float)GameController.GetTimeDifficulty
+                                          (GameController._instance,0);
               }
               *(float *)(lVar6 + 108) = fVar11;
               plVar1 = (int64 *)(targetWorldPlotEventStartData + 56);
-              *(uint32 *)(lVar6 + 104) = *(uint32 *)(targetWorldPlotEventStartData + 48);
+              lVar6.AreaMapRandomEventDatas = *(uint32 *)(targetWorldPlotEventStartData + 48);
               cVar2 = *(char *)(targetWorldPlotEventStartData + 64);
               *(uint8 *)(lVar6 + 100) = 1;
               *(bool *)(lVar6 + 102) = !cVar2;
@@ -84,11 +83,11 @@ public class WorldPlotEventController
               *plVar1 = lVar6;
               il2cpp_internal(plVar1,lVar6);
               lVar6 = *plVar1;
-              lVar7 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+              lVar7 = GameController.lockObj;
               if ((((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 0x178)) != null) &&
                   (lVar7 = FUN_1817cc780(lVar7,*(uint32 *)(targetWorldPlotEventStartData + 28),DAT_181d97800)) != null
                   ) && (plVar8 = (int64 *)PlotData.Clone(lVar7,0), lVar6 != null)) {
-                *(int64 **)(lVar6 + 120) = plVar8;
+                lVar6.WorldEventDatasSaveRecord = plVar8;
                 iVar3 = *(int *)(targetWorldPlotEventStartData + 32);
                 if (iVar3 == 1) {
                   lVar6 = *(int64 *)(targetWorldPlotEventStartData + 40);
@@ -103,28 +102,28 @@ public class WorldPlotEventController
                     if (lVar6 != null) {
                       lVar6 = String.Split(lVar6,lVar7,0);
                       lVar7 = *plVar1;
-                      lVar10 = *pStatics;
-                      if ((*pStatics != 0) &&
-                         (lVar4 = *(int64 *)(*pStatics + 32), lVar6 != null)
-                         ) {
-                        if (*(int *)(lVar6 + 24) == 0) {
+                      lVar10 = GameController._instance;
+                      if ((GameController._instance != null) &&
+                         (lVar4 = GameController._instance.worldData,
+                         lVar6 != null)) {
+                        if (lVar6.cityAreaID == null) {
                           uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                           FUN_1800d65f0(uVar9,0);
                         }
-                        uVar5 = Int32.Parse(*(uint64 *)(lVar6 + 32),0);
+                        uVar5 = Int32.Parse(lVar6.villageAreaID,0);
                         if (lVar4 != null) {
                           uVar9 = WorldData.GetArea(lVar4,uVar5,0);
-                          if ((int)*(uint32 *)(lVar6 + 24) < 2) {
+                          if ((int)lVar6.cityAreaID < 2) {
                             uVar5 = 0xffffffff;
                           }
                           else {
-                            if (*(uint32 *)(lVar6 + 24) < 2) {
+                            if (lVar6.cityAreaID < 2) {
                               uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                               FUN_1800d65f0(uVar9,0);
                             }
-                            uVar5 = Int32.Parse(*(uint64 *)(lVar6 + 40),0);
+                            uVar5 = Int32.Parse(lVar6.forceAreaID,0);
                           }
                           if (lVar10 != null) {
                             GameController.CreateBigMapRandomEvent(lVar10,lVar7,uVar9,uVar5,0x3e4ccccd,0)
@@ -157,7 +156,7 @@ public class WorldPlotEventController
                     lVar6 = *plVar1;
                     lVar10 = FUN_18046c0a0(0);
                     if (lVar10 != null) {
-                      lVar10 = *(int64 *)(lVar10 + 32);
+                      lVar10 = lVar10.worldData;
                       uVar5 = Int32.Parse(*(uint64 *)(targetWorldPlotEventStartData + 40),0);
                       if ((lVar10 != null) &&
                          (uVar9 = WorldData.GetResourcePoint(lVar10,uVar5,0), lVar7 != null)) {
@@ -177,16 +176,15 @@ public class WorldPlotEventController
     // RVA   : 0xB2C390   Offset: 0xB2AB90   Length: 0x31D
     public void RemoveWorldPlotEvent(string plotEventName)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
         long lVar4;
         ulong uVar5;
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar3 = *(int64 *)(lVar3 + 240)) != null) {
-          iVar1 = *(int *)(lVar3 + 24);
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null)
+           && (lVar3 = lVar3.worldPlotEventStartData) != null) {
+          iVar1 = lVar3.cityAreaID;
           while( true ) {
             while( true ) {
               do {
@@ -195,16 +193,16 @@ public class WorldPlotEventController
                   return;
                 }
                 lVar3 = FUN_18046c0a0(0);
-                if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                   ((lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 240), lVar3 == null ||
+                if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                   ((lVar3 = *(int64 *)(lVar3.villageAreaID + 240), lVar3 == null ||
                     (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d855f8)) == null))) throw; // [null/range check failed]
-                cVar2 = FUN_1816fd990(*(uint64 *)(lVar3 + 16),plotEventName,0);
+                cVar2 = FUN_1816fd990(lVar3.chapter,plotEventName,0);
               } while (!cVar2);
               lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                  (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 240)) == null) ||
+              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                  (lVar3 = *(int64 *)(lVar3.villageAreaID + 240)) == null) ||
                  (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d855f8)) == null) throw; // [null/range check failed]
-              if (*(int64 *)(lVar3 + 56) == 0) break;
+              if (lVar3.Inns == null) break;
               lVar3 = FUN_18046c0a0(0);
               lVar4 = FUN_18046c0a0(0);
               if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
@@ -220,8 +218,8 @@ public class WorldPlotEventController
                (uVar5 = FUN_180002f80(lVar4,iVar1,DAT_181d855f8), lVar3 == null)) break;
             GameController.ChangePlotTargetNumCount(lVar3,uVar5,0,0);
             lVar3 = FUN_18046c0a0(0);
-            if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-               (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 240)) == null) break;
+            if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+               (lVar3 = *(int64 *)(lVar3.villageAreaID + 240)) == null) break;
             FUN_18182b220(lVar3,iVar1,DAT_181d854f8);
           }
         }
@@ -404,8 +402,6 @@ public class WorldPlotEventController
     // RVA   : 0xB2C6B0   Offset: 0xB2AEB0   Length: 0xAD5
     public void StartNewWorldPlotEventFromDataBase(int i)
     {
-        var pStatics_0bb8 = *(int64*)(DAT_181d90bb8 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         byte uVar1;
         int iVar2;
         long lVar3;
@@ -428,12 +424,12 @@ public class WorldPlotEventController
           if (lVar10 != null) {
             *(uint64 *)(lVar7 + 16) = lVar10._items;
             *(uint32 *)(lVar7 + 24) = lVar10._version;
-            *(uint32 *)(lVar7 + 28) = *(uint32 *)(lVar10 + 32);
+            *(uint32 *)(lVar7 + 28) = lVar10.villageAreaID;
             *(uint32 *)(lVar7 + 32) = *(uint32 *)(lVar10 + 36);
-            *(uint64 *)(lVar7 + 40) = *(uint64 *)(lVar10 + 40);
+            *(uint64 *)(lVar7 + 40) = lVar10.forceAreaID;
             *(uint32 *)(lVar7 + 48) = *(uint32 *)(lVar10 + 68);
-            *(uint8 *)(lVar7 + 64) = *(uint8 *)(lVar10 + 128);
-            *(uint64 *)(lVar7 + 72) = *(uint64 *)(lVar10 + 120);
+            *(uint8 *)(lVar7 + 64) = lVar10.WorldEventDatas;
+            *(uint64 *)(lVar7 + 72) = lVar10.WorldEventDatasSaveRecord;
             *(uint8 *)(lVar7 + 80) = *(uint8 *)(lVar10 + 129);
             lVar10 = this.WorldPlotEventDataBase;
             if (lVar10 != null) {
@@ -441,7 +437,7 @@ public class WorldPlotEventController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
-              if ((lVar10 != null) && (lVar10 = *(int64 *)(lVar10 + 80)) != null) {
+              if ((lVar10 = lVar10?.Heros) != null) {
                 if (lVar10._items != null) {
                   lVar10 = this.WorldPlotEventDataBase;
                   if (lVar10 == null) throw; // [null/range check failed]
@@ -450,11 +446,11 @@ public class WorldPlotEventController
                   }
                   lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
                   if (lVar10 == null) throw; // [null/range check failed]
-                  lVar10 = *(int64 *)(lVar10 + 80);
-                  if (((*pStatics_df90 == 0) ||
-                      (lVar3 = *(int64 *)(*pStatics_df90 + 32)) == null)
-                     || (lVar10 == null)) throw; // [null/range check failed]
-                  uVar6 = TimeData.DeltaDay(lVar10,*(uint64 *)(lVar3 + 168),0);
+                  lVar10 = lVar10.Heros;
+                  if (((GameController._instance == null) ||
+                      (lVar3 = GameController._instance.worldData,
+                      lVar3 == null)) || (lVar10 == null)) throw; // [null/range check failed]
+                  uVar6 = TimeData.DeltaDay(lVar10,lVar3.worldTime,0);
                   uVar6 = Mathf.Max(1,uVar6);
                   if (0 < *(int *)(lVar7 + 48)) {
                     uVar6 = Mathf.Min(*(int *)(lVar7 + 48),uVar6,0);
@@ -462,29 +458,29 @@ public class WorldPlotEventController
                   *(uint32 *)(lVar7 + 48) = uVar6;
                 }
                 WorldPlotEventController.StartNewWorldPlotEvent(this,lVar7,0);
-                if (((*pStatics_df90 != 0) &&
-                    (lVar10 = *(int64 *)(*pStatics_df90 + 32)) != null)
-                   && (lVar10 = *(int64 *)(lVar10 + 248)) != null) {
+                if (((GameController._instance != null) &&
+                    (lVar10 = GameController._instance.worldData,
+                    lVar10 != null)) && (lVar10 = lVar10.worldPlotEventStartTime) != null) {
                   cVar5 = FUN_1808ab750(lVar10,i,DAT_181d99e30);
                   if (!cVar5) {
-                    if ((*pStatics_df90 == 0) ||
-                       (lVar10 = *(int64 *)(*pStatics_df90 + 32)) == null
-                       ) throw; // [null/range check failed]
-                    lVar10 = *(int64 *)(lVar10 + 248);
-                    if ((((*pStatics_df90 == 0) ||
-                         (lVar3 = *(int64 *)(*pStatics_df90 + 32)) == null
-                         ) || (lVar3 = *(int64 *)(lVar3 + 168)) == null) ||
+                    if ((GameController._instance == null) ||
+                       (lVar10 = GameController._instance.worldData,
+                       lVar10 == null)) throw; // [null/range check failed]
+                    lVar10 = lVar10.worldPlotEventStartTime;
+                    if ((((GameController._instance == null) ||
+                         (lVar3 = GameController._instance.worldData,
+                         lVar3 == null)) || (lVar3 = lVar3.worldTime) == null) ||
                        (plVar8 = (int64 *)TimeData.Clone(lVar3,0), lVar10 == null)) throw; // [null/range check failed]
                     FUN_1808ab680(lVar10,i,plVar8,DAT_181d99da8);
                   }
                   else {
-                    if ((*pStatics_df90 == 0) ||
-                       (lVar10 = *(int64 *)(*pStatics_df90 + 32)) == null
-                       ) throw; // [null/range check failed]
-                    lVar10 = *(int64 *)(lVar10 + 248);
-                    if ((((*pStatics_df90 == 0) ||
-                         (lVar3 = *(int64 *)(*pStatics_df90 + 32)) == null
-                         ) || (lVar3 = *(int64 *)(lVar3 + 168)) == null) ||
+                    if ((GameController._instance == null) ||
+                       (lVar10 = GameController._instance.worldData,
+                       lVar10 == null)) throw; // [null/range check failed]
+                    lVar10 = lVar10.worldPlotEventStartTime;
+                    if ((((GameController._instance == null) ||
+                         (lVar3 = GameController._instance.worldData,
+                         lVar3 == null)) || (lVar3 = lVar3.worldTime) == null) ||
                        (plVar8 = (int64 *)TimeData.Clone(lVar3,0), lVar10 == null)) throw; // [null/range check failed]
                     FUN_1808aec90(lVar10,i,plVar8,DAT_181d99f40);
                   }
@@ -495,7 +491,7 @@ public class WorldPlotEventController
                     }
                     lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
                     if (lVar10 != null) {
-                      iVar2 = *(int *)(lVar10 + 88);
+                      iVar2 = lVar10.TempHeros;
                       if (iVar2 == 1) {
                         lVar10 = this.WorldPlotEventDataBase;
                         lVar7 = **(int64 **)(DAT_181d5a578 + 184);
@@ -506,7 +502,7 @@ public class WorldPlotEventController
                         lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
                         if (lVar10 == null) throw; // [null/range check failed]
                         lVar3 = this.WorldPlotEventDataBase;
-                        uVar11 = *(uint64 *)(lVar10 + 96);
+                        uVar11 = lVar10.BigMapRandomEventDatas;
                         if (lVar3 == null) throw; // [null/range check failed]
                         if (lVar3.Count <= i) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -514,7 +510,7 @@ public class WorldPlotEventController
                         lVar10 = *(int64 *)(lVar3._items + 32 + lVar12 * 8);
                         if (lVar10 == null) throw; // [null/range check failed]
                         lVar3 = this.WorldPlotEventDataBase;
-                        uVar4 = *(uint64 *)(lVar10 + 104);
+                        uVar4 = lVar10.AreaMapRandomEventDatas;
                         if (lVar3 == null) throw; // [null/range check failed]
                         if (lVar3.Count <= i) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -535,10 +531,12 @@ public class WorldPlotEventController
                         }
                         lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
                         if ((lVar10 == null) || (lVar3 == null)) throw; // [null/range check failed]
-                        *(uint64 *)(lVar3 + 32) = *(uint64 *)(lVar10 + 104);
-                        if (*pStatics_0bb8 == 0) throw; // [null/range check failed]
+                        lVar3.villageAreaID = lVar10.AreaMapRandomEventDatas;
+                        if (WorldEventController._instance == null)
+                        throw; // [null/range check failed]
                         WorldEventController.AddNewWorldEvent
-                                  (*pStatics_0bb8,*(uint64 *)(lVar7 + 56),0);
+                                  (WorldEventController._instance,
+                                   *(uint64 *)(lVar7 + 56),0);
                       }
                       lVar10 = this.WorldPlotEventDataBase;
                       if (lVar10 != null) {
@@ -547,7 +545,7 @@ public class WorldPlotEventController
                         }
                         lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
                         if (lVar10 != null) {
-                          if (*(int64 *)(lVar10 + 112) == 0) {
+                          if (lVar10.lastRandomWorldEventDay == null) {
                             return;
                           }
                           lVar10 = this.WorldPlotEventDataBase;
@@ -558,7 +556,7 @@ public class WorldPlotEventController
                             lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
                             if (lVar10 != null) {
                               cVar5 = String.op_Inequality
-                                                (*(uint64 *)(lVar10 + 112),"",0);
+                                                (lVar10.lastRandomWorldEventDay,"",0);
                               if (!cVar5) {
                                 return;
                               }
@@ -568,7 +566,7 @@ public class WorldPlotEventController
                                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                 }
                                 lVar10 = *(int64 *)(lVar10._items + 32 + lVar12 * 8);
-                                if ((lVar10 != null) && (lVar10 = *(int64 *)(lVar10 + 112)) != null)
+                                if ((lVar10 = lVar10?.lastRandomWorldEventDay) != null)
                                 {
                                   cVar5 = String.Contains(lVar10,";",0);
                                   if (!cVar5) {
@@ -603,7 +601,7 @@ public class WorldPlotEventController
                           // WARNING: Subroutine does not return
                                             FUN_1800d65f0(uVar11,0);
                                           }
-                                          *(uint16 *)(lVar10 + 32) = 59;
+                                          lVar10.villageAreaID = 59;
                                           if (lVar12 != null) {
                                             lVar12 = String.Split(lVar12,lVar10,0);
                                             lVar10 = FUN_18046c440(0);

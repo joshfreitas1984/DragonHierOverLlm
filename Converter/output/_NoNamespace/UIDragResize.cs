@@ -254,8 +254,6 @@ public class UIDragResize
     // RVA   : 0x10DFFE0   Offset: 0x10DE7E0   Length: 0x5
     private void OnDragEnd()
     {
-        void FUN_1810dffe0(int64 this)
-        {
         this.mDragging = 0;
     }
 
@@ -263,8 +261,6 @@ public class UIDragResize
     // RVA   : 0x10E0640   Offset: 0x10DEE40   Length: 0x2A
     public void /*ctor*/()
     {
-        void FUN_1810e0640(int64 this)
-        {
         this.pivot = 8;
         this.minWidth = 100;
         this.minHeight = 100;

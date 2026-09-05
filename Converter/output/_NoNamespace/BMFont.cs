@@ -64,8 +64,6 @@ public class BMFont
     // RVA   : 0x319100   Offset: 0x317900   Length: 0x4
     public void set_baseOffset(int value)
     {
-        void FUN_180319100(int64 this,uint32 value)
-        {
         this.mBase = value;
     }
 
@@ -73,8 +71,6 @@ public class BMFont
     // RVA   : 0x256310   Offset: 0x254B10   Length: 0x4
     public int get_texWidth()
     {
-        uint32 FUN_180256310(int64 this)
-        {
         return this.mWidth;
     }
 
@@ -89,8 +85,6 @@ public class BMFont
     // RVA   : 0x2E7E80   Offset: 0x2E6680   Length: 0x4
     public int get_texHeight()
     {
-        uint32 FUN_1802e7e80(int64 this)
-        {
         return this.mHeight;
     }
 
@@ -98,8 +92,6 @@ public class BMFont
     // RVA   : 0x2E7EB0   Offset: 0x2E66B0   Length: 0x4
     public void set_texHeight(int value)
     {
-        void FUN_1802e7eb0(int64 this,uint32 value)
-        {
         this.mHeight = value;
     }
 
@@ -130,8 +122,6 @@ public class BMFont
     // RVA   : 0x22B3A0   Offset: 0x229BA0   Length: 0xC
     public void set_spriteName(string value)
     {
-        void FUN_18022b3a0(int64 this,uint64 value)
-        {
         this.mSpriteName = value;
     }
 

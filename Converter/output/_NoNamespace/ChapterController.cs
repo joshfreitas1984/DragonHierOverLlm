@@ -23,23 +23,20 @@ public class ChapterController
     // RVA   : 0x9F3080   Offset: 0x9F1880   Length: 0x58
     public static ChapterController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d91c88 + 184) + 8);
+        return ChapterController._instance;
     }
 
     // Token : 0x6000E42
     // RVA   : 0x9F1240   Offset: 0x9EFA40   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d91c88 + 184) + 8);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        ChapterController._instance = this;
     }
 
     // Token : 0x6000E43
     // RVA   : 0x9F12B0   Offset: 0x9EFAB0   Length: 0xD78
     public void ChangeChapter(int targetChapter)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
@@ -55,16 +52,19 @@ public class ChapterController
         uint64 local_48;
         uint64 uStack_40;
         uint8 local_38 [48];
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
-            *(uint8 *)(lVar3 + 0x10a) = 1;
-            if ((*pStatics != 0) &&
-               (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
-              *(uint8 *)(lVar3 + 0x10b) = 1;
-              if ((*pStatics != 0) &&
-                 (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
-                *(uint8 *)(lVar3 + 0x10c) = 1;
+        if (PlotController._instance == 2) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null
+             ) {
+            lVar3.openForceAttackResource = 1;
+            if ((GameController._instance != null) &&
+               (lVar3 = GameController._instance.worldData,
+               lVar3 != null)) {
+              lVar3.openForceAttackArea = 1;
+              if ((GameController._instance != null) &&
+                 (lVar3 = GameController._instance.worldData,
+                 lVar3 != null)) {
+                lVar3.openForceAttackBasement = 1;
                 return;
               }
             }
@@ -72,46 +72,46 @@ public class ChapterController
           throw; // [null/range check failed]
         }
         uVar1 = Mathf.Clamp(targetChapter,0,3);
-        if ((*pStatics == 0) ||
-           (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
-        *(uint32 *)(lVar3 + 16) = uVar1;
-        if ((*pStatics == 0) ||
-           (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+        lVar3.chapter = uVar1;
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
-        *(uint8 *)(lVar3 + 0x109) = 1;
+        lVar3.openForceBuilding = 1;
         if (uVar1 == 0) {
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 0;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10a) = 0;
         LAB_1809f16ee:
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10b) = 0;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10b) = 0;
         }
         else {
           if (uVar1 == 1) {
             lVar3 = FUN_18046c0a0(0);
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-            *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 1;
+            if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+            *(uint8 *)(lVar3.villageAreaID + 0x10a) = 1;
             goto LAB_1809f16ee;
           }
           if (uVar1 != 2) {
             if (uVar1 == 3) {
               lVar3 = FUN_18046c0a0(0);
-              if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-                *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 1;
+              if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+                *(uint8 *)(lVar3.villageAreaID + 0x10a) = 1;
                 lVar3 = FUN_18046c0a0(0);
-                if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-                  *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10b) = 1;
+                if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+                  *(uint8 *)(lVar3.villageAreaID + 0x10b) = 1;
                   lVar3 = FUN_18046c0a0(0);
                   if (lVar3 != null) {
-                    lVar3 = *(int64 *)(lVar3 + 32);
+                    lVar3 = lVar3.villageAreaID;
                     lVar4 = FUN_18046c0a0(0);
                     if ((((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
                         (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 232)) != null) &&
                        (iVar2 = PlotEventLogData.GetInt(lVar4,"FinalChapterPlotEnd",0), lVar3 != null)) {
-                      *(bool *)(lVar3 + 0x10c) = iVar2 == 1;
+                      lVar3.openForceAttackBasement = iVar2 == 1;
                       goto LAB_1809f1736;
                     }
                   }
@@ -122,15 +122,15 @@ public class ChapterController
             goto LAB_1809f1736;
           }
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 1;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10a) = 1;
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10b) = 1;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10b) = 1;
         }
         lVar3 = FUN_18046c0a0(0);
-        if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10c) = 0;
+        if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+          *(uint8 *)(lVar3.villageAreaID + 0x10c) = 0;
         LAB_1809f1736:
           if (this.chapterUIPanel != null) {
             GameObject.SetActive(this.chapterUIPanel,1,0);
@@ -227,14 +227,14 @@ public class ChapterController
                                                            (this.chapterUIPanel,0), lVar3 != null))
                                        && (lVar3 = Transform.Find(lVar3,"Title",0)) != null) {
                                       uVar7 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                                      lVar3 = **(int64 **)(DAT_181d91c88 + 184);
+                                      lVar3 = ChapterController.chapterTitles;
                                       if (lVar3 != null) {
-                                        if (*(uint32 *)(lVar3 + 24) <= uVar1) {
+                                        if (lVar3.cityAreaID <= uVar1) {
                                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         }
                                         LTLocalization.SetText
                                                   (uVar7,*(uint64 *)
-                                                          (*(int64 *)(lVar3 + 16) + 32 +
+                                                          (lVar3.chapter + 32 +
                                                           (int64)(int)uVar1 * 8),0);
                                         if (((this.chapterUIPanel != null) &&
                                             (lVar3 = GameObject.get_transform
@@ -349,7 +349,6 @@ public class ChapterController
     // RVA   : 0x9F2030   Offset: 0x9F0830   Length: 0x5D4
     public string GetChapterDescribe(string newLine)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         ulong uVar2;
         long lVar3;
         long lVar4;
@@ -359,13 +358,14 @@ public class ChapterController
         local_res20[0] = 0.0;
         plVar1 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
         uVar5 = "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵";
-        if ((*pStatics != 0) &&
-           (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar4 = GameController._instance.worldData) != null)
+        {
           lVar3 = "";
-          if (*(int *)(lVar4 + 156) == 0) {
-            if ((*pStatics == 0) ||
-               (lVar4 = *(int64 *)(*pStatics + 32)) == null)
-            throw; // [null/range check failed]
+          if (lVar4.gameMode == null) {
+            if ((GameController._instance == null) ||
+               (lVar4 = GameController._instance.worldData,
+               lVar4 == null)) throw; // [null/range check failed]
             fVar6 = (float)WorldData.GetChapterBadFameRate(lVar4,0);
             local_res20[0] = (fVar6 - 1.0) * 100.0;
             uVar2 = Single.ToString(local_res20,"+0;-0;0",0);
@@ -385,10 +385,11 @@ public class ChapterController
             }
             plVar1[4] = lVar3;
             il2cpp_internal(plVar1 + 4,lVar3);
-            if ((*pStatics != 0) &&
-               (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar4 = GameController._instance.worldData,
+               lVar4 != null)) {
               lVar3 = "不可";
-              if (*(char *)(lVar4 + 0x10a) != false) {
+              if (lVar4.openForceAttackResource) {
                 lVar3 = "可以";
               }
               if ((lVar3 != null) &&
@@ -404,10 +405,11 @@ public class ChapterController
               }
               plVar1[5] = lVar3;
               il2cpp_internal(plVar1 + 5,lVar3);
-              if ((*pStatics != 0) &&
-                 (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar4 = GameController._instance.worldData,
+                 lVar4 != null)) {
                 lVar3 = "不可";
-                if (*(char *)(lVar4 + 0x10b) != false) {
+                if (lVar4.openForceAttackArea) {
                   lVar3 = "可以";
                 }
                 if ((lVar3 != null) &&
@@ -423,10 +425,11 @@ public class ChapterController
                 }
                 plVar1[6] = lVar3;
                 il2cpp_internal(plVar1 + 6,lVar3);
-                if ((*pStatics != 0) &&
-                   (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar4 = GameController._instance.worldData,
+                   lVar4 != null)) {
                   lVar3 = "不可";
-                  if (*(char *)(lVar4 + 0x10c) != false) {
+                  if (lVar4.openForceAttackBasement) {
                     lVar3 = "可以";
                   }
                   if ((lVar3 != null) &&
@@ -486,7 +489,7 @@ public class ChapterController
         long lVar1;
         ulong uVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a9a8 + 184) + 8);
+        lVar1 = BGMController._instance;
         if (lVar1 != null) {
           BGMController.SetPlotBgm(lVar1,"MainTheme",0);
           if (this.chapterUIPanel != null) {
@@ -653,7 +656,7 @@ public class ChapterController
     public void HideChapterUI()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a9a8 + 184) + 8);
+        lVar1 = BGMController._instance;
         if (lVar1 != null) {
           BGMController.SetPlotBgm(lVar1,0xffffffff);
           if (this.chapterUIPanel != null) {
@@ -682,7 +685,7 @@ public class ChapterController
           FUN_181827900(lVar2,"峨眉夜雨打苍茫",DAT_181d7c3d0);
           FUN_181827900(lVar2,"江湖翻沸壮士死",DAT_181d7c3d0);
           FUN_181827900(lVar2,"山河泣血战未央",DAT_181d7c3d0);
-          plVar1 = *(int64 **)(DAT_181d91c88 + 184);
+          plVar1 = *(int64 **)(ChapterController_StaticsPtr + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;
@@ -693,8 +696,6 @@ public class ChapterController
     // RVA   : 0x9F2B40   Offset: 0x9F1340   Length: 0x5
     private void <ShowChaperUI>b__10_0()
     {
-        void FUN_1809f2b40(int64 this)
-        {
         this.showFinished = 1;
     }
 

@@ -43,8 +43,6 @@ public class CFX_LightFlicker
     // RVA   : 0xBD56C0   Offset: 0xBD3EC0   Length: 0x15
     private void OnEnable()
     {
-        void FUN_180bd56c0(int64 this)
-        {
         this.minIntensity = this.baseIntensity;
         this.maxIntensity = this.baseIntensity + this.addIntensity;
     }
@@ -74,8 +72,6 @@ public class CFX_LightFlicker
     // RVA   : 0xBD5790   Offset: 0xBD3F90   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180bd5790(int64 this)
-        {
         this.smoothFactor = 0x3f800000;
         this.addIntensity = 0x3f800000;
         FUN_18044ef50(this,0);

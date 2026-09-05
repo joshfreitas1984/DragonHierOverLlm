@@ -20,13 +20,12 @@ public class InfoData
     // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
     public void /*ctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ZhSegment.Initialize(this,0);
         this.infoType = param_2;
-        if (((*pStatics != 0) &&
-            (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar1 = *(int64 *)(lVar1 + 168)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar1 = GameController._instance.worldData) != null)
+           && (lVar1 = lVar1.worldTime) != null) {
           plVar2 = (int64 *)TimeData.Clone(lVar1,0);
           this.infotime = plVar2;
           this.infoText = param_3;
@@ -38,13 +37,12 @@ public class InfoData
     // RVA   : 0xB6E500   Offset: 0xB6CD00   Length: 0xCA
     public void /*ctor*/(InfoType type, TimeData time, string text)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ZhSegment.Initialize(this,0);
         this.infoType = type;
-        if (((*pStatics != 0) &&
-            (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar1 = *(int64 *)(lVar1 + 168)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar1 = GameController._instance.worldData) != null)
+           && (lVar1 = lVar1.worldTime) != null) {
           plVar2 = (int64 *)TimeData.Clone(lVar1,0);
           this.infotime = plVar2;
           this.infoText = time;
@@ -56,13 +54,12 @@ public class InfoData
     // RVA   : 0xB6E5D0   Offset: 0xB6CDD0   Length: 0x151
     public void /*ctor*/(InfoType type, string text)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ZhSegment.Initialize(this,0);
         this.infoType = type;
-        if (((*pStatics != 0) &&
-            (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar1 = *(int64 *)(lVar1 + 168)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar1 = GameController._instance.worldData) != null)
+           && (lVar1 = lVar1.worldTime) != null) {
           plVar2 = (int64 *)TimeData.Clone(lVar1,0);
           this.infotime = plVar2;
           this.infoText = text;

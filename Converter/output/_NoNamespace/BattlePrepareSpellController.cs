@@ -263,8 +263,6 @@ public class BattlePrepareSpellController
     // RVA   : 0x8E0A40   Offset: 0x8DF240   Length: 0xA
     public void ChangeSpellNum(int num)
     {
-        void FUN_1808e0a40(int64 this,int num)
-        {
         this.spellNum = this.spellNum + num;
         BattlePrepareSpellController.RefreshUI(this,0);
     }

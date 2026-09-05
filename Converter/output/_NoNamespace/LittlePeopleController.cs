@@ -39,6 +39,7 @@ public class LittlePeopleController
     // RVA   : 0xA84C50   Offset: 0xA83450   Length: 0x85A
     private void Update()
     {
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
@@ -189,7 +190,7 @@ public class LittlePeopleController
               if (fVar15 < *pfVar6) {
                 if (this.skeleton == null) throw; // [null/range check failed]
                 lVar3 = Component.get_transform(this.skeleton,0);
-                lVar4 = *(int64 *)(DAT_181d4ef00 + 184);
+                lVar4 = pPlotController;
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar11 = *(uint32 *)(lVar4 + 0x688);
                 uVar13 = *(uint32 *)(lVar4 + 0x68c);
@@ -226,7 +227,7 @@ public class LittlePeopleController
           puVar5 = (uint64 *)Transform.get_localPosition(&local_88,lVar4,0);
           uVar7 = *puVar5;
           uVar11 = *(uint32 *)(puVar5 + 1);
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+          lVar4 = PlotController.LaBaFestivelResultTalkText;
           lVar9 = Component.get_transform(this,0);
           if (lVar9 != null) {
             puVar5 = (uint64 *)Transform.get_localPosition(&local_88,lVar9,0);

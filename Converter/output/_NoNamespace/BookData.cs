@@ -22,7 +22,7 @@ public class BookData
     public KungfuSkillData DataBase()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           GameDataController.GetSkillDataBase(lVar1,this.skillID,0);
           return;
@@ -35,7 +35,7 @@ public class BookData
     {
         int iVar1;
         long lVar2;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 != null) {
           lVar2 = GameDataController.GetSkillDataBase(lVar2,this.skillID,0);
           if (lVar2 != null) {
@@ -51,7 +51,7 @@ public class BookData
     {
         int iVar1;
         long lVar2;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 != null) {
           lVar2 = GameDataController.GetSkillDataBase(lVar2,this.skillID,0);
           if (lVar2 != null) {

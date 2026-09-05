@@ -23,8 +23,7 @@ public class PlotInteractController
     // RVA   : 0xBD8BE0   Offset: 0xBD73E0   Length: 0x75E
     public void Update()
     {
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         long lVar2;
         bool cVar3;
@@ -65,7 +64,7 @@ public class PlotInteractController
             if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
             throw; // [null/range check failed]
             lVar5 = Component.GetComponent(lVar5,DAT_181d6c2c0);
-            lVar2 = pStatics_ef00;
+            lVar2 = pPlotController;
             if (lVar5 == null) throw; // [null/range check failed]
             local_28 = *(uint32 *)(lVar2 + 0x2b0);
             uStack_24 = *(uint32 *)(lVar2 + 0x2b4);
@@ -84,7 +83,7 @@ public class PlotInteractController
             if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
             throw; // [null/range check failed]
             lVar5 = Component.GetComponent(lVar5,DAT_181d6c2c0);
-            lVar2 = pStatics_ef00;
+            lVar2 = pPlotController;
             if (lVar5 == null) throw; // [null/range check failed]
             local_28 = *(uint32 *)(lVar2 + 0x328);
             uStack_24 = *(uint32 *)(lVar2 + 0x32c);
@@ -96,7 +95,7 @@ public class PlotInteractController
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
           throw; // [null/range check failed]
           lVar5 = Component.GetComponent(lVar5,DAT_181d6c2c0);
-          lVar2 = pStatics_ef00;
+          lVar2 = pPlotController;
           if (lVar5 == null) throw; // [null/range check failed]
           local_28 = *(uint32 *)(lVar2 + 0x308);
           uStack_24 = *(uint32 *)(lVar2 + 0x30c);
@@ -122,14 +121,14 @@ public class PlotInteractController
           throw; // [null/range check failed]
           lVar5 = Component.GetComponent(lVar5,DAT_181d6c2c0);
           if (!this.meetCost) {
-            lVar2 = pStatics_ef00;
+            lVar2 = pPlotController;
             uVar8 = *(uint32 *)(lVar2 + 0x308);
             uVar9 = *(uint32 *)(lVar2 + 0x30c);
             uVar10 = *(uint32 *)(lVar2 + 0x310);
             uVar11 = *(uint32 *)(lVar2 + 0x314);
           }
           else {
-            lVar2 = pStatics_ef00;
+            lVar2 = pPlotController;
             uVar8 = *(uint32 *)(lVar2 + 0x2b0);
             uVar9 = *(uint32 *)(lVar2 + 0x2b4);
             uVar10 = *(uint32 *)(lVar2 + 0x2b8);
@@ -153,8 +152,8 @@ public class PlotInteractController
           throw; // [null/range check failed]
           uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
           LTLocalization.SetText(uVar6,"",0);
-          if (*pStatics_c960 == 0) throw; // [null/range check failed]
-          if (*(char *)(*pStatics_c960 + 208) == false) {
+          if (PlotController._instance == null) throw; // [null/range check failed]
+          if (!PlotController._instance.plotTextShowing) {
             lVar5 = FUN_18046c440(0);
             if (lVar5 == null) throw; // [null/range check failed]
             if (((*(char *)(lVar5 + 209) == false) && (this.meetRequire)) &&
@@ -195,16 +194,15 @@ public class PlotInteractController
     // RVA   : 0xBD8810   Offset: 0xBD7010   Length: 0x3C5
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        if (*pStatics != 0) {
-          if (*(char *)(*pStatics + 208) != false) {
+        if (PlotController._instance != null) {
+          if (PlotController._instance.plotTextShowing) {
             return;
           }
-          if (*pStatics != 0) {
-            if (*(char *)(*pStatics + 209) != false) {
+          if (PlotController._instance != null) {
+            if (PlotController._instance.plotChoiceShowing) {
               return;
             }
             lVar1 = FUN_18046c440(0);

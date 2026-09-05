@@ -166,8 +166,6 @@ public class Orbiter
     // RVA   : 0x46F030   Offset: 0x46D830   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_18046f030(int64 this)
-        {
         this.TankCollisionOrbitRadius = 0x3fc00000;
         this.TankCollisionRotationSpeed = 0x3f800000;
         FUN_18044ef50(this,0);

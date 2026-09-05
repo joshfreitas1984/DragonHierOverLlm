@@ -350,34 +350,31 @@ public class BattleController
     // RVA   : 0x826C90   Offset: 0x825490   Length: 0x58
     public static BattleController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        return PlotController.StopWarCostFavor;
     }
 
     // Token : 0x6000ADC
     // RVA   : 0x7FB830   Offset: 0x7FA030   Length: 0x11E
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         bool cVar1;
         ulong uVar2;
-        uVar2 = *(uint64 *)(pStatics + 80);
+        uVar2 = PlotController.StopWarCostFavor;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
           uVar2 = Component.get_gameObject(this,0);
           Object.Destroy(uVar2,0);
           return;
         }
-        puVar3 = (uint64 *)(pStatics + 80);
-        *puVar3 = this;
-        il2cpp_internal(puVar3,this);
+        PlotController.StopWarCostFavor = this;
     }
 
     // Token : 0x6000ADD
     // RVA   : 0x823780   Offset: 0x821F80   Length: 0x4A5
     private void Start()
     {
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         long lVar2;
         uint uVar3;
         long lVar4;
@@ -386,14 +383,14 @@ public class BattleController
         int iVar7;
         int iVar8;
         ulong uVar9;
-        if ((*pStatics_e188 != 0) &&
-           (lVar4 = *(int64 *)(*pStatics_e188 + 56)) != null) {
+        if ((*pStatics != 0) &&
+           (lVar4 = *(int64 *)(*pStatics + 56)) != null) {
           lVar4 = GameObject.get_transform(lVar4,0);
           if (lVar4 != null) {
             uVar5 = Transform.Find(lVar4,"NowActiveHero",0);
             this.nowActiveHeroUI = uVar5;
-            if ((*pStatics_e188 != 0) &&
-               (lVar4 = *(int64 *)(*pStatics_e188 + 56)) != null) {
+            if ((*pStatics != 0) &&
+               (lVar4 = *(int64 *)(*pStatics + 56)) != null) {
               lVar4 = GameObject.get_transform(lVar4,0);
               if (lVar4 != null) {
                 lVar4 = Transform.Find(lVar4,"HeroTalkUIPanel",0);
@@ -405,7 +402,7 @@ public class BattleController
                   this.bodyPartSpeAddDescribe = lVar4;
                   iVar8 = 0;
                   while( true ) {
-                    lVar4 = *(int64 *)(pStatics_ef00 + 0x5e8);
+                    lVar4 = *(int64 *)(pPlotController + 0x5e8);
                     if (lVar4 == null) break;
                     if (*(int *)(lVar4 + 24) <= iVar8) {
                       return;
@@ -413,7 +410,7 @@ public class BattleController
                     iVar7 = 0;
                     uVar5 = "";
                     while( true ) {
-                      lVar4 = *(int64 *)(pStatics_ef00 + 0x5f8);
+                      lVar4 = *(int64 *)(pPlotController + 0x5f8);
                       if (lVar4 == null) throw; // [null/range check failed]
                       lVar4 = FUN_180002f80(lVar4,iVar8,DAT_181d51408);
                       if (lVar4 == null) throw; // [null/range check failed]
@@ -425,7 +422,7 @@ public class BattleController
                       lVar4 = FUN_18046c100(0);
                       if (lVar4 == null) throw; // [null/range check failed]
                       lVar4 = *(int64 *)(lVar4 + 144);
-                      lVar6 = *(int64 *)(pStatics_ef00 + 0x5f8);
+                      lVar6 = *(int64 *)(pPlotController + 0x5f8);
                       if (lVar6 == null) throw; // [null/range check failed]
                       lVar6 = FUN_180002f80(lVar6,iVar8,DAT_181d51408);
                       if (lVar6 == null) throw; // [null/range check failed]
@@ -440,7 +437,7 @@ public class BattleController
                     lVar6 = FUN_18046c100(0);
                     if (lVar6 == null) break;
                     lVar6 = *(int64 *)(lVar6 + 144);
-                    lVar2 = *(int64 *)(pStatics_ef00 + 0x5f0);
+                    lVar2 = *(int64 *)(pPlotController + 0x5f0);
                     if (lVar2 == null) break;
                     uVar3 = FUN_1800d6750(lVar2,iVar8,DAT_181d64a78);
                     if (lVar6 == null) break;
@@ -888,7 +885,7 @@ public class BattleController
     // RVA   : 0x825380   Offset: 0x823B80   Length: 0xC60
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         bool cVar2;
         ulong uVar3;
@@ -1125,10 +1122,10 @@ public class BattleController
           local_res18[0] = this.timeLimit & 0x7fffffff;
           uVar11 = Single.ToString(local_res18,0);
           if (this.timeLimit <= 0.0) {
-            uVar13 = *(uint64 *)(pStatics + 0x2c8);
+            uVar13 = *(uint64 *)(pPlotController + 0x2c8);
           }
           else {
-            uVar13 = *(uint64 *)(pStatics + 0x260);
+            uVar13 = *(uint64 *)(pPlotController + 0x260);
           }
           uVar3 = String.Format(uVar3,uVar10,uVar11,uVar13,0);
           LTLocalization.SetText(uVar9,uVar3,0);
@@ -1137,7 +1134,7 @@ public class BattleController
              (lVar4 = Transform.Find(lVar4,"Text",0)) != null) {
             plVar12 = (int64 *)Component.GetComponent(lVar4,DAT_181d6d8c0);
             fVar15 = this.battleTime;
-            lVar4 = **(int64 **)(DAT_181d8b128 + 184);
+            lVar4 = PlotController._instance;
             if (lVar4 != null) {
               uVar1 = this.battleType;
               if (lVar4.Count <= uVar1) {
@@ -1170,7 +1167,7 @@ public class BattleController
     // RVA   : 0x80BFD0   Offset: 0x80A7D0   Length: 0x830
     public Vector3 LimitMapPos(Vector3 originPos, float scale)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float * BattleController.LimitMapPos
                         (float *this,int64 originPos,uint64 *scale,float param_4)
         {
@@ -1248,12 +1245,12 @@ public class BattleController
                     *(uint64 *)this = *scale;
                     this[2] = fVar2;
                     fVar2 = *this;
-                    fVar1 = *(float *)(pStatics + 168);
+                    fVar1 = *(float *)(pPlotController + 168);
                     if ((*(int64 *)(originPos + 216) != 0) &&
                        (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0)) != null) {
                       pfVar5 = (float *)Transform.get_localScale(&local_a8,lVar3,0);
                       if (((param_4 * *pfVar5 - 1.0) * fVar1 * 0.5) / param_4 + fVar8 < fVar2) {
-                        fVar2 = *(float *)(pStatics + 168);
+                        fVar2 = *(float *)(pPlotController + 168);
                         if ((*(int64 *)(originPos + 216) == 0) ||
                            (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0), lVar3 == null
                            )) throw; // [null/range check failed]
@@ -1266,13 +1263,13 @@ public class BattleController
                         *this = ((fVar1 * param_4 - 1.0) * fVar2 * 0.5) / param_4 + fVar8;
                       }
                       fVar2 = *this;
-                      fVar1 = *(float *)(pStatics + 168);
+                      fVar1 = *(float *)(pPlotController + 168);
                       if ((*(int64 *)(originPos + 216) != 0) &&
                          (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0)) != null)
                       {
                         pfVar5 = (float *)Transform.get_localScale(&local_a8,lVar3,0);
                         if (fVar2 < fVar8 - ((param_4 * *pfVar5 - 1.0) * fVar1 * 0.5) / param_4) {
-                          fVar2 = *(float *)(pStatics + 168);
+                          fVar2 = *(float *)(pPlotController + 168);
                           if ((*(int64 *)(originPos + 216) == 0) ||
                              (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0),
                              lVar3 == null)) throw; // [null/range check failed]
@@ -1285,7 +1282,7 @@ public class BattleController
                           *this = fVar8 - ((fVar1 * param_4 - 1.0) * fVar2 * 0.5) / param_4;
                         }
                         uVar7 = *(uint64 *)this;
-                        fVar8 = *(float *)(pStatics + 172);
+                        fVar8 = *(float *)(pPlotController + 172);
                         if ((*(int64 *)(originPos + 216) != 0) &&
                            (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0), lVar3 != null
                            )) {
@@ -1296,7 +1293,7 @@ public class BattleController
                           if ((((float)((uint64)local_a8 >> 32) * fVar8 * param_4 - 10.8) * 0.5) /
                               param_4 + fVar9 < fStack_b4) {
                             fVar8 = *this;
-                            fVar2 = *(float *)(pStatics + 172);
+                            fVar2 = *(float *)(pPlotController + 172);
                             if ((*(int64 *)(originPos + 216) == 0) ||
                                (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0),
                                lVar3 == null)) throw; // [null/range check failed]
@@ -1309,7 +1306,7 @@ public class BattleController
                             this[2] = this[2];
                           }
                           uVar7 = *(uint64 *)this;
-                          fVar8 = *(float *)(pStatics + 172);
+                          fVar8 = *(float *)(pPlotController + 172);
                           if ((*(int64 *)(originPos + 216) != 0) &&
                              (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0),
                              lVar3 != null)) {
@@ -1322,7 +1319,7 @@ public class BattleController
                               return this;
                             }
                             fVar8 = *this;
-                            fVar2 = *(float *)(pStatics + 172);
+                            fVar2 = *(float *)(pPlotController + 172);
                             if ((*(int64 *)(originPos + 216) != 0) &&
                                (lVar3 = GameObject.get_transform(*(int64 *)(originPos + 216),0),
                                lVar3 != null)) {
@@ -1696,8 +1693,6 @@ public class BattleController
     // RVA   : 0x808DA0   Offset: 0x8075A0   Length: 0x20
     public float GetSupportEnterTime(SupportType supportType)
     {
-        uint64 FUN_180808da0(uint64 this,int supportType)
-        {
         if (supportType == 1) {
           return 0x40400000;
         }
@@ -1711,12 +1706,8 @@ public class BattleController
     // RVA   : 0x8152C0   Offset: 0x813AC0   Length: 0x21E
     public void PrepareBattleMap(BattleType targetType, HeroData hero0, HeroData hero1, string fightEndCall, bool includeTeamMate, bool _randomTrophy)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 hero0,uint64 hero1,
@@ -1752,10 +1743,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -1816,22 +1808,27 @@ public class BattleController
                           this.teamMemData = hero0;
                           this.teamSupportData = hero1;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (param_8 == 0) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -1920,7 +1917,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -1954,7 +1951,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -1967,7 +1964,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -2186,12 +2183,8 @@ public class BattleController
     // RVA   : 0x8154E0   Offset: 0x813CE0   Length: 0x21F
     public void PrepareBattleMap(BattleType targetType, HeroData hero0, HeroData hero1, string fightEndCall, bool includeTeamMate, bool _randomTrophy, BattleMapTypeData _battleMapTypeData)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 hero0,uint64 hero1,
@@ -2227,10 +2220,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -2291,22 +2285,27 @@ public class BattleController
                           this.teamMemData = hero0;
                           this.teamSupportData = hero1;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (_battleMapTypeData == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -2395,7 +2394,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -2429,7 +2428,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -2442,7 +2441,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -2661,12 +2660,8 @@ public class BattleController
     // RVA   : 0x814950   Offset: 0x813150   Length: 0x141
     public void PrepareBattleMap(BattleType targetType, HeroData hero0, SupportType hero0SupportType, HeroData hero1, SupportType hero1SupportType, string fightEndCall, bool includeTeamMate, bool _randomTrophy)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 hero0,uint64 hero0SupportType,
@@ -2702,10 +2697,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -2766,22 +2762,27 @@ public class BattleController
                           this.teamMemData = hero0;
                           this.teamSupportData = hero0SupportType;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (includeTeamMate == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -2870,7 +2871,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -2904,7 +2905,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -2917,7 +2918,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -3136,12 +3137,8 @@ public class BattleController
     // RVA   : 0x815190   Offset: 0x813990   Length: 0x12D
     public void PrepareBattleMap(BattleType targetType, HeroData hero0, SupportType hero0SupportType, HeroData hero1, SupportType hero1SupportType, string fightEndCall, bool includeTeamMate, bool _randomTrophy, BattleMapTypeData _battleMapTypeData)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 hero0,uint64 hero0SupportType,
@@ -3177,10 +3174,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -3241,22 +3239,27 @@ public class BattleController
                           this.teamMemData = hero0;
                           this.teamSupportData = hero0SupportType;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (includeTeamMate == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -3345,7 +3348,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -3379,7 +3382,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -3392,7 +3395,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -3611,12 +3614,8 @@ public class BattleController
     // RVA   : 0x814E50   Offset: 0x813650   Length: 0x175
     public void PrepareBattleMap(BattleType targetType, List<HeroData> heroList0, List<HeroData> heroList1, string fightEndCall, bool includeTeamMate, bool _randomTrophy)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 heroList0,uint64 heroList1,
@@ -3652,10 +3651,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -3716,22 +3716,27 @@ public class BattleController
                           this.teamMemData = heroList0;
                           this.teamSupportData = heroList1;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (param_8 == 0) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -3820,7 +3825,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -3854,7 +3859,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -3867,7 +3872,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -4086,12 +4091,8 @@ public class BattleController
     // RVA   : 0x814C70   Offset: 0x813470   Length: 0x17B
     public void PrepareBattleMap(BattleType targetType, List<HeroData> heroList0, List<HeroData> heroList1, string fightEndCall, bool includeTeamMate, bool _randomTrophy, BattleMapTypeData _battleMapTypeData)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 heroList0,uint64 heroList1,
@@ -4127,10 +4128,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -4191,22 +4193,27 @@ public class BattleController
                           this.teamMemData = heroList0;
                           this.teamSupportData = heroList1;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (_battleMapTypeData == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -4295,7 +4302,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -4329,7 +4336,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -4342,7 +4349,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -4561,12 +4568,8 @@ public class BattleController
     // RVA   : 0x814DF0   Offset: 0x8135F0   Length: 0x57
     public void PrepareBattleMap(BattleType targetType, List<HeroData> heroList0, SupportType hero0SupportType, List<HeroData> heroList1, SupportType hero1SupportType, string fightEndCall, bool includeTeamMate, bool _randomTrophy)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 heroList0,uint64 hero0SupportType,
@@ -4602,10 +4605,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -4666,22 +4670,27 @@ public class BattleController
                           this.teamMemData = heroList0;
                           this.teamSupportData = hero0SupportType;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (includeTeamMate == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -4770,7 +4779,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -4804,7 +4813,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -4817,7 +4826,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -5036,12 +5045,8 @@ public class BattleController
     // RVA   : 0x814FD0   Offset: 0x8137D0   Length: 0x1BD
     public void PrepareBattleMap(BattleType targetType, List<HeroData> heroList0, SupportType hero0SupportType, List<HeroData> heroList1, SupportType hero1SupportType, string fightEndCall, bool includeTeamMate, bool _randomTrophy, BattleMapTypeData _battleMapTypeData)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 heroList0,uint64 hero0SupportType,
@@ -5077,10 +5082,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -5141,22 +5147,27 @@ public class BattleController
                           this.teamMemData = heroList0;
                           this.teamSupportData = hero0SupportType;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (includeTeamMate == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -5245,7 +5256,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -5279,7 +5290,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -5292,7 +5303,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -5511,12 +5522,8 @@ public class BattleController
     // RVA   : 0x814AA0   Offset: 0x8132A0   Length: 0x1C4
     public void PrepareBattleMap(BattleType targetType, List<HeroData> heroList0, SupportType hero0SupportType, List<HeroData> heroList1, SupportType hero1SupportType, string fightEndCall, bool includeTeamMate, bool _randomTrophy, BattleMapTypeData _battleMapTypeData, int _maxHeroNum)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 heroList0,uint64 hero0SupportType,
@@ -5552,10 +5559,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -5616,22 +5624,27 @@ public class BattleController
                           this.teamMemData = heroList0;
                           this.teamSupportData = hero0SupportType;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (includeTeamMate == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -5720,7 +5733,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -5754,7 +5767,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -5767,7 +5780,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -5986,12 +5999,8 @@ public class BattleController
     // RVA   : 0x815700   Offset: 0x813F00   Length: 0x7BB
     public void PrepareBattleMap(BattleType targetType, List<HeroData> heroList0, List<HeroData> heroSupport0, List<HeroData> heroList1, List<HeroData> heroSupport1, float supportEnterTime, string fightEndCall, bool includeTeamMate, bool _randomTrophy, BattleMapTypeData _battleMapTypeData, int _maxHeroNum, float _timeLimit)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 heroList0,uint64 heroSupport0,
@@ -6027,10 +6036,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -6091,22 +6101,27 @@ public class BattleController
                           this.teamMemData = heroList0;
                           this.teamSupportData = heroSupport0;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (fightEndCall == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -6195,7 +6210,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -6229,7 +6244,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -6242,7 +6257,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -6508,12 +6523,8 @@ public class BattleController
     // RVA   : 0x815EC0   Offset: 0x8146C0   Length: 0x1578
     public void PrepareBattleMap(BattleType targetType, List<List<HeroData>> fightMemData, List<List<HeroData>> fightSupportData, float suppportEnterTime, string fightEndCall, bool _randomTrophy, BattleMapTypeData _battleMapTypeData, int _maxHeroNum, float _timeLimit)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         void BattleController.PrepareBattleMap
                      (int64 this,uint32 targetType,uint64 fightMemData,uint64 fightSupportData,
@@ -6549,10 +6560,11 @@ public class BattleController
         local_98[0] = 0;
         local_58 = 0;
         uStack_50 = 0;
-        if (*pStatics_c960 != 0) {
-          PlotController.FightStartSaveInteractHero(*pStatics_c960,0);
-          if (*pStatics_2bf0 != 0) {
-            CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+        if (PlotController._instance != null) {
+          PlotController.FightStartSaveInteractHero(PlotController._instance,0);
+          if (CloudAnimController._instance != null) {
+            CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0)
+            ;
             if (this.BattleObj != null) {
               GameObject.SetActive(this.BattleObj,1,0);
               if ((*pStatics_e188 != 0) &&
@@ -6613,22 +6625,27 @@ public class BattleController
                           this.teamMemData = fightMemData;
                           this.teamSupportData = fightSupportData;
                           BattleController.BattleTeamPrepare(this,0);
-                          this.battleMapData = new BattleMapData(0);
+                          uVar6 = il2cpp_internal(BattleMapData_StaticsPtr);
+                          BattleMapData.ctor(uVar6,0);
+                          this.battleMapData = uVar6;
                           if (_battleMapTypeData == null) {
-                            lVar5 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+                            lVar5 = PlotController.LeftFaceHideOffset;
                             if (lVar5 == null) throw; // [null/range check failed]
                             if (lVar5.battleMapTypeData == null) {
-                              lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                              lVar5 = BattleController.AttackAreaTypeStartMovePower
+                              ;
                               if (lVar5 == null) throw; // [null/range check failed]
                               cVar3 = ExploreController.IsExploring(lVar5,0);
                               if (cVar3) {
-                                lVar5 = *(int64 *)(pStatics_0c98 + 8);
+                                lVar5 = *(int64 *)
+                                         (pBattleController + 8);
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null)
                                 throw; // [null/range check failed]
                                 if (lVar5.mapID == 1) goto LAB_18081670b;
                               }
-                              if (((*pStatics_df90 == 0) ||
-                                  (lVar5 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar5 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null)
                               throw; // [null/range check failed]
                               if (*(int *)(lVar5 + 192) < 0) {
@@ -6717,7 +6734,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar5 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar15 = *(int64 *)(pStatics_b128 + 56);
+        lVar15 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar15 == null))
         throw; // [null/range check failed]
@@ -6751,7 +6768,7 @@ public class BattleController
             (lVar5 = GameObject.get_transform(this.BackGround,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"SpineObj",0)) == null) throw; // [null/range check failed]
         lVar15 = Component.GetComponent(lVar5,DAT_181d6cd40);
-        lVar5 = *(int64 *)(pStatics_b128 + 56);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((this.battleMapData == null) ||
             (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
         throw; // [null/range check failed]
@@ -6764,7 +6781,7 @@ public class BattleController
                               "Arena",0);
         uVar6 = "skin";
         if (!cVar3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 56);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((this.battleMapData == null) ||
               (lVar1 = this.battleMapData.battleMapTypeData) == null) || (lVar5 == null))
           throw; // [null/range check failed]
@@ -7176,8 +7193,8 @@ public class BattleController
     private void InitBattleGround()
     {
         var plVar3 = *(int64*)(lVar3 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         float fVar2;
         long lVar3;
         ulong uVar4;
@@ -7211,22 +7228,22 @@ public class BattleController
         uStack_d0 = 0;
         local_res8[0] = 0;
         local_res18[0] = 0;
-        local_a0 = (int64)*(int *)(pStatics_ef00 + 0x204);
-        local_a8 = (int64)*(int *)(pStatics_ef00 + 0x200);
+        local_a0 = (int64)*(int *)(pPlotController + 0x204);
+        local_a8 = (int64)*(int *)(pPlotController + 0x200);
         lVar3 = FUN_1800d6020(DAT_181d848c0,&local_a8);
         this.gridUnits = lVar3;
-        lVar3 = DAT_181d4ef00;
+        lVar3 = PlotController_StaticsPtr;
         while( true ) {
           iVar12 = 0;
           if (((*(byte *)(lVar3 + 0x133) & 4) != 0) && (*(int *)(lVar3 + 224) == 0)) {
             il2cpp_runtime_class_init();
-            lVar3 = DAT_181d4ef00;
+            lVar3 = PlotController_StaticsPtr;
           }
           if (*(int *)(plVar3 + 0x204) <= iVar11) break;
           while( true ) {
             if (((*(byte *)(lVar3 + 0x133) & 4) != 0) && (*(int *)(lVar3 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar3 = DAT_181d4ef00;
+              lVar3 = PlotController_StaticsPtr;
             }
             if (*(int *)(plVar3 + 0x200) <= iVar12) break;
             lVar3 = *plVar1;
@@ -7291,7 +7308,7 @@ public class BattleController
             if (lVar3 == null) goto LAB_18080b989;
             Object.set_name(lVar3);
             iVar12 = iVar12 + 1;
-            lVar3 = DAT_181d4ef00;
+            lVar3 = PlotController_StaticsPtr;
           }
           iVar11 = iVar11 + 1;
         }
@@ -7302,8 +7319,8 @@ public class BattleController
           uVar5 = String.Concat("Skill",uVar5);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar5,0)) == null) throw; // [null/range check failed]
           uVar5 = Component.get_gameObject(lVar3,0);
-          if (*pStatics_e188 == 0) throw; // [null/range check failed]
-          uVar4 = *(uint64 *)(*pStatics_e188 + 168);
+          if (*pStatics == 0) throw; // [null/range check failed]
+          uVar4 = *(uint64 *)(*pStatics + 168);
           lVar3 = GlobalData.AddChild(uVar5,uVar4);
           if (lVar3 == null) throw; // [null/range check failed]
           Object.set_name(lVar3,"SkillIcon");
@@ -7313,14 +7330,14 @@ public class BattleController
           local_res8[0] = local_res8[0] + 1;
         } while (local_res8[0] < 3);
         while( true ) {
-          if (*(int *)(pStatics_ef00 + 140) <= iVar12) {
+          if (*(int *)(pPlotController + 140) <= iVar12) {
             return;
           }
           if ((this.nowActiveHeroUI == null) ||
              (lVar3 = Transform.Find(this.nowActiveHeroUI,"SkillGrid",0)) == null) break;
           uVar5 = Component.get_gameObject(lVar3,0);
-          if (*pStatics_e188 == 0) break;
-          uVar4 = *(uint64 *)(*pStatics_e188 + 168);
+          if (*pStatics == 0) break;
+          uVar4 = *(uint64 *)(*pStatics + 168);
           lVar3 = GlobalData.AddChild(uVar5,uVar4);
           uVar5 = Int32.ToString(local_res18,0);
           uVar5 = String.Concat("Skill",uVar5);
@@ -7407,7 +7424,6 @@ public class BattleController
     // RVA   : 0x820590   Offset: 0x81ED90   Length: 0x126
     public void SetHavePlayer(int teamID)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar2;
         lVar2 = this.teams;
         this.havePlayer = 1;
@@ -7420,9 +7436,9 @@ public class BattleController
             *(uint8 *)(lVar2 + 20) = 1;
             if (!this.fightCounted) {
               this.fightCounted = 1;
-              if ((*pStatics == 0) ||
-                 (lVar2 = *(int64 *)(*pStatics + 32)) == null)
-              throw; // [null/range check failed]
+              if ((GameController._instance == null) ||
+                 (lVar2 = GameController._instance.worldData,
+                 lVar2 == null)) throw; // [null/range check failed]
               piVar1 = (int *)(lVar2 + 0x18c);
               *piVar1 = *piVar1 + 1;
             }
@@ -7435,7 +7451,6 @@ public class BattleController
     // RVA   : 0x7FDD60   Offset: 0x7FC560   Length: 0x1349
     public void BattleTeamPrepare()
     {
-        var pStatics = *(int64*)(DAT_181d9d940 + 184);
         uint uVar1;
         bool cVar2;
         int iVar3;
@@ -7648,13 +7663,11 @@ public class BattleController
               }
               uVar11 = uVar11 + 1;
             }
-            lVar5 = *(int64 *)(pStatics + 8);
+            lVar5 = BattleController.AttackAreaTypeStartMovePower;
             if (lVar5 == null) {
-              uVar4 = **(uint64 **)(DAT_181d9d940 + 184);
+              uVar4 = BattleController.BattleMaxTime;
               lVar5 = new OnTooltipCB(uVar4,DAT_181d6e318,DAT_181d85f18);
-              plVar9 = (int64 *)(pStatics + 8);
-              *plVar9 = lVar5;
-              il2cpp_internal(plVar9,lVar5);
+              BattleController.AttackAreaTypeStartMovePower = lVar5;
             }
             if (lVar12 == null) throw; // [null/range check failed]
             List_1.Sort(lVar12,lVar5,DAT_181d64278);
@@ -7846,7 +7859,6 @@ public class BattleController
     // RVA   : 0x807E10   Offset: 0x806610   Length: 0x1A1
     public string GetFightScoreRateText(float targetFightScoreRate)
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
@@ -7854,14 +7866,14 @@ public class BattleController
         float fVar5;
         iVar4 = 0;
         while( true ) {
-          lVar2 = *(int64 *)(pStatics + 96);
+          lVar2 = PlotController.YoungHeroFightMatchResultString;
           if (lVar2 == null) goto LAB_180807fac;
           if (*(int *)(lVar2 + 24) <= iVar4) break;
-          lVar2 = *(int64 *)(pStatics + 96);
+          lVar2 = PlotController.YoungHeroFightMatchResultString;
           if (lVar2 == null) goto LAB_180807fac;
           fVar5 = (float)FUN_1800d6780(lVar2,iVar4,DAT_181d796d8);
           if (targetFightScoreRate <= fVar5) {
-            lVar2 = *(int64 *)(pStatics + 88);
+            lVar2 = PlotController.FirstMeetTalkText;
             if (lVar2 != null) {
               uVar3 = FUN_180002f80(lVar2,iVar4,DAT_181d7c9c0);
               return uVar3;
@@ -7872,7 +7884,7 @@ public class BattleController
           }
           iVar4 = iVar4 + 1;
         }
-        lVar2 = *(int64 *)(pStatics + 88);
+        lVar2 = PlotController.FirstMeetTalkText;
         if (lVar2 != null) {
           uVar1 = *(uint32 *)(lVar2 + 24);
           if (uVar1 <= uVar1 - 1) {
@@ -8168,7 +8180,8 @@ public class BattleController
                                             if (lVar2 != null) {
                                               uVar5 = Component.GetComponent(lVar2,DAT_181d6d8c0);
                                               lVar2 = *(int64 *)
-                                                       (*(int64 *)(DAT_181d4ef00 + 184) + 0x448);
+                                                       (*(int64 *)(PlotController_StaticsPtr + 184) +
+                                                       0x448);
                                               if (lVar2 != null) {
                                                 uVar1 = this.battleType;
                                                 if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -8364,8 +8377,7 @@ public class BattleController
     // RVA   : 0x8220A0   Offset: 0x8208A0   Length: 0xDC1
     public void ShowPrepareUIPanelFinished()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         float fVar1;
         bool cVar2;
         long lVar3;
@@ -8509,9 +8521,9 @@ public class BattleController
           if (!this.battleIncludeTeamMate) {
             uVar4 = "出战_拒绝出战";
           }
-          if ((*pStatics_6270 == 0) ||
+          if ((*pStatics == 0) ||
              (uVar4 = TextureController.LoadAtlasSprite
-                                (*pStatics_6270,"UIAtlas",uVar4,0), lVar3 == null)
+                                (*pStatics,"UIAtlas",uVar4,0), lVar3 == null)
              ) throw; // [null/range check failed]
           Image.set_sprite(lVar3,uVar4,0);
         }
@@ -8559,7 +8571,7 @@ public class BattleController
           return;
         }
         if (!DAT_181e759ca) {
-          il2cpp_runtime_class_init(&DAT_181d4df90);
+          il2cpp_internal(&GameController_StaticsPtr);
           il2cpp_runtime_class_init(&DAT_181d7eeb8);
           il2cpp_runtime_class_init(&DAT_181d52088);
           il2cpp_runtime_class_init(&DAT_181d7ef38);
@@ -8628,9 +8640,9 @@ public class BattleController
             if ((lVar13 == null) || (*(int64 *)(lVar13 + 32) == 0)) break;
             lVar13 = WorldData.Player(*(int64 *)(lVar13 + 32),0);
             if (lVar3 == lVar13) {
-              if (((*pStatics_df90 != 0) &&
-                  (lVar12 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                 (lVar12 = WorldData.Player(lVar12,0)) != null) {
+              if (((GameController._instance != null) &&
+                  (lVar12 = GameController._instance.worldData,
+                  lVar12 != null)) && (lVar12 = WorldData.Player(lVar12,0)) != null) {
                 cVar2 = HeroData.HaveForceFunction(lVar12,5);
                 if (!cVar2) {
                   return;
@@ -9378,11 +9390,11 @@ public class BattleController
     // RVA   : 0x8081F0   Offset: 0x8069F0   Length: 0xC6
     public float GetHalfBattleTimeScale()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          return *(float *)(lVar1 + 0x1d8) * 0.5 + 0.5;
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          return lVar1.battleTimeScale * 0.5 + 0.5;
         }
     }
 
@@ -9390,11 +9402,11 @@ public class BattleController
     // RVA   : 0x809940   Offset: 0x808140   Length: 0xC6
     public float GetThirdBattleTimeScale()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          return *(float *)(lVar1 + 0x1d8) * 0.33 + 0.67;
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          return lVar1.battleTimeScale * 0.33 + 0.67;
         }
     }
 
@@ -9546,7 +9558,8 @@ public class BattleController
                                          ((*(int *)(targetTeam + 16) == 0 && (startTalkType != 2)))) {
                                         if (*plVar1 == 0) throw; // [null/range check failed]
                                         lVar7 = GameObject.GetComponent(*plVar1,DAT_181d9e778);
-                                        lVar6 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 8);
+                                        lVar6 = *(int64 *)
+                                                 (*(int64 *)(PlotController_StaticsPtr + 184) + 8);
                                         if (((this.battleMapData == null) ||
                                             (lVar3 = this.battleMapData.battleMapTypeData,
                                             lVar3 == null)) || (lVar6 == null)) throw; // [null/range check failed]
@@ -9554,7 +9567,8 @@ public class BattleController
                                                                       DAT_181d796d8);
                                         if (lVar7 == null) throw; // [null/range check failed]
                                         *(float *)(lVar7 + 180) =
-                                             fVar12 * *(float *)(*(int64 *)(DAT_181d4ef00 + 184) +
+                                             fVar12 * *(float *)(*(int64 *)
+                                                                  (PlotController_StaticsPtr + 184) +
                                                                 0x228);
                                       }
                                       lVar7 = **(int64 **)(DAT_181d85740 + 184);
@@ -10239,8 +10253,7 @@ public class BattleController
     // RVA   : 0x8175E0   Offset: 0x815DE0   Length: 0x3984
     public void RefreshActiveUnitUI()
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         bool cVar2;
         byte uVar3;
@@ -10376,7 +10389,8 @@ public class BattleController
                             GameObject.SetActive(lVar7,1,0);
                           }
                           while( true ) {
-                            lVar7 = *(int64 *)(pStatics_ef00 + 0x5e8);
+                            lVar7 = *(int64 *)(pPlotController + 0x5e8)
+                            ;
                             if (lVar7 == null) break;
                             if (lVar7.skeleton <= (int)uVar18) goto LAB_180818173;
                             if (this.nowActiveHeroUI == null) break;
@@ -10411,7 +10425,8 @@ public class BattleController
                             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar9,0)) == null)
                             break;
                             lVar8 = Component.GetComponent(lVar7,DAT_181d6ccc0);
-                            lVar7 = *(int64 *)(pStatics_ef00 + 0x5e8);
+                            lVar7 = *(int64 *)(pPlotController + 0x5e8)
+                            ;
                             if (lVar7 == null) break;
                             uVar9 = FUN_180002f80(lVar7,local_res8[0],DAT_181d7c9c0);
                             if ((((this.nowActiveUnit == null) ||
@@ -10598,7 +10613,8 @@ public class BattleController
               uVar18 = uVar16;
             } while (local_90 < 3);
             while( true ) {
-              if (*(int *)(pStatics_ef00 + 140) <= (int)uVar18) goto LAB_18081909b;
+              if (*(int *)(pPlotController + 140) <= (int)uVar18)
+              goto LAB_18081909b;
               if (this.nowActiveHeroUI == null) break;
               lVar7 = Transform.Find(this.nowActiveHeroUI,"SkillGrid",0);
               uVar9 = Int32.ToString(&local_8c,0);
@@ -10656,7 +10672,7 @@ public class BattleController
                 uVar18 = uVar16;
               } while (local_88 < 3);
               while( true ) {
-                if (*(int *)(pStatics_ef00 + 140) <= (int)uVar18)
+                if (*(int *)(pPlotController + 140) <= (int)uVar18)
                 goto LAB_18081909b;
                 if (this.nowActiveHeroUI == null) goto LAB_18081af58;
                 lVar7 = Transform.Find(this.nowActiveHeroUI,"SkillGrid",0);
@@ -10721,7 +10737,8 @@ public class BattleController
               uVar18 = uVar16;
             } while (local_res20[0] < 3);
             while( true ) {
-              if (*(int *)(pStatics_ef00 + 140) <= (int)uVar18) goto LAB_18081909b;
+              if (*(int *)(pPlotController + 140) <= (int)uVar18)
+              goto LAB_18081909b;
               if (this.nowActiveHeroUI == null) break;
               lVar7 = Transform.Find(this.nowActiveHeroUI,"SkillGrid",0);
               uVar9 = Int32.ToString(local_a8,0);
@@ -10764,11 +10781,11 @@ public class BattleController
            (cVar2 = BattleController.CanPlayerControl(this,this.nowActiveUnit,0),
            uVar18 = uVar16, cVar2)) {
           while( true ) {
-            lVar7 = *(int64 *)(pStatics_b128 + 64);
+            lVar7 = PlotController.FightResultPlotText;
             if (lVar7 == null) goto LAB_18081af5e;
             uVar19 = uVar16;
             if (lVar7.skeleton <= (int)uVar18) goto LAB_18081abe7;
-            lVar7 = *(int64 *)(pStatics_b128 + 64);
+            lVar7 = PlotController.FightResultPlotText;
             if (lVar7 == null) goto LAB_18081af5e;
             uVar6 = FUN_1800d6750(lVar7,local_res18[0],DAT_181d6a6e8);
             cVar2 = GlobalData.GetKeyDown(uVar6,0);
@@ -10831,10 +10848,10 @@ public class BattleController
              (lVar8 = this.nowActiveUnit.heroData) == null)
           goto LAB_18081af5e;
           if (*(float *)(lVar8 + 0x240) == 0.0) {
-            uVar13 = *(uint64 *)(pStatics_ef00 + 0x338);
+            uVar13 = *(uint64 *)(pPlotController + 0x338);
           }
           else {
-            uVar13 = *(uint64 *)(pStatics_ef00 + 0x2c8);
+            uVar13 = *(uint64 *)(pPlotController + 0x2c8);
           }
           if ((this.nowActiveUnit == null) ||
              (lVar8 = this.nowActiveUnit.heroData) == null)
@@ -11360,11 +11377,11 @@ public class BattleController
         }
         goto LAB_18081a8eb;
         LAB_18081abe7:
-        lVar7 = *(int64 *)(pStatics_b128 + 72);
+        lVar7 = PlotController.StopWarNeedFavor;
         if (lVar7 == null) goto LAB_18081af5e;
         iVar4 = (int)uVar19;
         if (lVar7.skeleton <= iVar4) goto LAB_18081ae70;
-        lVar7 = *(int64 *)(pStatics_b128 + 72);
+        lVar7 = PlotController.StopWarNeedFavor;
         if (lVar7 == null) goto LAB_18081af5e;
         uVar6 = FUN_1800d6750(lVar7,uVar19,DAT_181d6a6e8);
         cVar2 = GlobalData.GetKeyDown(uVar6,0);
@@ -11724,7 +11741,7 @@ public class BattleController
           local_res8[0] = local_res8[0] + 1;
         } while (local_res8[0] < 3);
         while( true ) {
-          if (*(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 140) <= iVar6) {
+          if (*(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 140) <= iVar6) {
             return;
           }
           if (this.nowActiveHeroUI == null) break;
@@ -11965,7 +11982,7 @@ public class BattleController
     // RVA   : 0x8117E0   Offset: 0x80FFE0   Length: 0xE74
     public void ManageHeroBuffRound(BattleUnit targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -12037,10 +12054,10 @@ public class BattleController
                   BattleUnit.AutoCureInjuryUseMana(targetHero);
                 }
                 while( true ) {
-                  lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5e8);
+                  lVar4 = *(int64 *)(pPlotController + 0x5e8);
                   if (lVar4 == null) throw; // [null/range check failed]
                   lVar1 = *(int64 *)(targetHero + 64);
-                  if (*(int *)(lVar4 + 24) <= iVar6) break;
+                  if (lVar4.plotHappen <= iVar6) break;
                   if ((lVar1 == null) || (*(int64 *)(lVar1 + 0x2b8) == 0)) throw; // [null/range check failed]
                   fVar8 = (float)HeroSpeAddData.Get(*(int64 *)(lVar1 + 0x2b8),iVar6 + 156,0);
                   if (fVar8 != 0.0) {
@@ -12078,11 +12095,11 @@ public class BattleController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (*(int64 *)(lVar4 + 144) == 0) {
+          if (lVar4.nowMission == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar2 & 0xffffffff,DAT_181d64878);
+          lVar4 = FUN_180002f80(lVar4.nowMission,uVar2 & 0xffffffff,DAT_181d64878);
           uVar10 = (uint32)(in_stack_fffffffffffffed8 >> 32);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -12095,12 +12112,12 @@ public class BattleController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar4 = *(int64 *)(lVar4 + 144);
+              lVar4 = lVar4.nowMission;
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              if (*(uint32 *)(lVar4 + 24) < 98) {
+              if (lVar4.plotHappen < 98) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 0x328);
@@ -12124,12 +12141,12 @@ public class BattleController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar4 = *(int64 *)(lVar4 + 144);
+              lVar4 = lVar4.nowMission;
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              if (*(uint32 *)(lVar4 + 24) < 99) {
+              if (lVar4.plotHappen < 99) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 0x330);
@@ -12155,11 +12172,11 @@ public class BattleController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int64 *)(lVar4 + 144) == 0) {
+            if (lVar4.nowMission == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar2 & 0xffffffff,DAT_181d64878);
+            lVar4 = FUN_180002f80(lVar4.nowMission,uVar2 & 0xffffffff,DAT_181d64878);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -12265,12 +12282,12 @@ public class BattleController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  lVar4 = *(int64 *)(lVar4 + 144);
+                  lVar4 = lVar4.nowMission;
                   if (lVar4 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(uint32 *)(lVar4 + 24) < 97) {
+                  if (lVar4.plotHappen < 97) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 800);
@@ -12327,15 +12344,16 @@ public class BattleController
           *(uint8 *)(*(int64 *)(targetHero + 64) + 0x2d9) = 1;
           BattleUnit.CheckInvincibleEffect(targetHero,0);
           fVar8 = this.battleTime;
-          lVar4 = *pStatics;
+          lVar4 = PlotController._instance;
           uVar9 = this.battleType;
           if (lVar4 != null) {
-            if (*(uint32 *)(lVar4 + 24) <= uVar9) {
+            if (lVar4.plotHappen <= uVar9) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar4[uVar9] <= fVar8) {
-              if (*pStatics == 0) throw; // [null/range check failed]
-              if (*(uint32 *)(*pStatics + 24) <= this.battleType) {
+              if (PlotController._instance == null) throw; // [null/range check failed]
+              if (PlotController._instance.plotHappen <=
+                  this.battleType) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               puVar5 = (uint32 *)Color.get_red(&local_b8,0);
@@ -12574,13 +12592,13 @@ public class BattleController
     // RVA   : 0x806AF0   Offset: 0x8052F0   Length: 0xDE
     public float GetBattleDeltaTime()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         float fVar2;
         fVar2 = (float)Time.get_deltaTime(0);
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          return (*(float *)(lVar1 + 0x1d8) * 0.33 + 0.67) * fVar2;
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          return (lVar1.battleTimeScale * 0.33 + 0.67) * fVar2;
         }
     }
 
@@ -12588,9 +12606,7 @@ public class BattleController
     // RVA   : 0x7FC3B0   Offset: 0x7FABB0   Length: 0x13
     public bool BattlePaused()
     {
-        uint8 FUN_1807fc3b0(int64 this)
-        {
-        uint8 uVar1;
+        byte uVar1;
         if (this.battlePaused) {
           return true;
         }
@@ -12602,20 +12618,20 @@ public class BattleController
     // RVA   : 0x80A3B0   Offset: 0x808BB0   Length: 0x25B
     public bool HaveBattlePauseUI()
     {
+        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
         var pStatics_0f00 = *(int64*)(DAT_181d50f00 + 184);
         var pStatics_34f0 = *(int64*)(DAT_181d834f0 + 184);
         var pStatics_b0a8 = *(int64*)(DAT_181d8b0a8 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_f230 = *(int64*)(DAT_181d7f230 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        if (*pStatics_c960 != 0) {
-          if (*(char *)(*pStatics_c960 + 24) != false) {
+        if (PlotController._instance != null) {
+          if (PlotController._instance.plotHappen) {
             return true;
           }
-          if ((*pStatics_f230 != 0) &&
-             (lVar2 = *(int64 *)(*pStatics_f230 + 40)) != null) {
+          if ((*p_ShowItemAnim_d__32 != 0) &&
+             (lVar2 = *(int64 *)(*p_ShowItemAnim_d__32 + 40),
+             lVar2 != null)) {
             cVar1 = GameObject.get_activeSelf(lVar2,0);
             if (cVar1) {
               return true;
@@ -12654,7 +12670,7 @@ public class BattleController
     // RVA   : 0x81C160   Offset: 0x81A960   Length: 0x4158
     public void RunBattle()
     {
-        var pStatics = *(int64*)(DAT_181d9d940 + 184);
+        var pBattleController = *(int64*)(BattleController_StaticsPtr + 184);
         uint uVar2;
         uint uVar3;
         bool cVar4;
@@ -12794,7 +12810,7 @@ public class BattleController
                           (lVar6 = FUN_180002f80(lVar6.battleUnit,iVar14,DAT_181d584a0),
                           lVar6 == null)))) goto LAB_1808202ac;
                       fVar24 = *(float *)(lVar6 + 180);
-                      if (*(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x228) <= fVar24) {
+                      if (*(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x228) <= fVar24) {
                         lVar6 = this.activeUnitList;
                         if ((((this.teams == null) ||
                              (lVar9 = FUN_180002f80(this.teams,iVar15,DAT_181d580a8),
@@ -12812,11 +12828,11 @@ public class BattleController
                 lVar6 = this.activeUnitList;
                 if (lVar6 != null) {
                   if (0 < lVar6.battleUnit) {
-                    lVar9 = *(int64 *)(pStatics + 24);
+                    lVar9 = *(int64 *)(pBattleController + 24);
                     if (lVar9 == null) {
-                      uVar8 = **(uint64 **)(DAT_181d9d940 + 184);
+                      uVar8 = BattleController.BattleMaxTime;
                       lVar9 = new OnTooltipCB(uVar8,DAT_181d6e398,DAT_181d85d18);
-                      plVar12 = (int64 *)(pStatics + 24);
+                      plVar12 = (int64 *)(pBattleController + 24);
                       *plVar12 = lVar9;
                       il2cpp_internal(plVar12,lVar9);
                     }
@@ -12925,7 +12941,7 @@ public class BattleController
                         if (lVar6 == null) goto LAB_1808202ac;
                         TutorialController.StartTutorial(lVar6,"侧击背击",0);
                       }
-                      if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+                      if (PlotController._instance != 2) {
                         if ((this.battleMapData == null) ||
                            (lVar6 = this.battleMapData.battleMapTypeData) == null)
                         goto LAB_1808202ac;
@@ -12974,7 +12990,7 @@ public class BattleController
                     lVar6.speGridObjData = uVar11;
                     this.nowActiveState = uVar16;
 
-                    if ((lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8)?.mapID) == null)
+                    if ((lVar6 = GameController.difficultyExtraPoint?.mapID) == null)
                     goto LAB_1808202ac;
                     iVar15 = PlayerPrefDictionary.GetInt(lVar6,"FightViewFollow",0);
                     if (iVar15 == 1) {
@@ -15528,8 +15544,6 @@ public class BattleController
     // RVA   : 0x8141C0   Offset: 0x8129C0   Length: 0x35
     public void MoveButtonClicked()
     {
-        void FUN_1808141c0(int64 this)
-        {
         if (this.nowActiveUnitMoved) {
           BattleController.RegretMove(this,0);
           return;
@@ -15567,7 +15581,7 @@ public class BattleController
         this.nowActiveUnitMoved = 0;
         if (this.nowActiveUnit != null) {
           BattleUnit.EnterGrid(this.nowActiveUnit,this.originUnitData,0,1,0);
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
             iVar2 = PlayerPrefDictionary.GetInt(lVar1,"FightViewFollow",0);
             if (iVar2 == 1) {
@@ -15592,7 +15606,6 @@ public class BattleController
     // RVA   : 0x80BBA0   Offset: 0x80A3A0   Length: 0x2AE
     public void ItemButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
         long lVar3;
@@ -15619,8 +15632,9 @@ public class BattleController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        if (*pStatics != 0) {
-          GameController.ShowTextOnMouse(*pStatics,"切磋无法使用",0);
+        if (GameController._instance != null) {
+          GameController.ShowTextOnMouse
+                    (GameController._instance,"切磋无法使用",0);
           plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
           plVar6 = (int64 *)0;
           if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181d8a228)) {
@@ -17102,8 +17116,7 @@ public class BattleController
     // RVA   : 0x801F20   Offset: 0x800720   Length: 0x85
     public void CreateSpeEffect(SkillSpeEffectTargetType targetType, GameObject target, string speName)
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void BattleController.CreateSpeEffect
                      (int64 this,int targetType,uint64 target,uint64 speName,float param_5,
                      uint64 *param_6)
@@ -17120,13 +17133,13 @@ public class BattleController
         uint32 local_30;
         plVar7 = (int64 *)0;
         plVar6 = plVar7;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
         LAB_180801b41:
           while( true ) {
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+            lVar4 = *(int64 *)(pPlotController + 0x658);
             if (lVar4 == null) throw; // [null/range check failed]
             if (lVar4.Count <= (int)plVar6) goto LAB_180801c6a;
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+            lVar4 = *(int64 *)(pPlotController + 0x658);
             if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,plVar6,DAT_181d51e08)) == null)
             throw; // [null/range check failed]
             if (lVar4.Count == null) {
@@ -17136,7 +17149,7 @@ public class BattleController
             if (cVar3) break;
             plVar6 = (int64 *)(uint64)((int)plVar6 + 1);
           }
-          lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+          lVar4 = *(int64 *)(pPlotController + 0x658);
           if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,plVar6,DAT_181d51e08)) == null)
           throw; // [null/range check failed]
           if (lVar4.Count < 2) {
@@ -17145,7 +17158,7 @@ public class BattleController
           speName = *(uint64 *)(lVar4._items + 40);
         }
         else {
-          if (*(char *)(pStatics_ef00 + 4) != false) goto LAB_180801b41;
+          if (*(char *)(pPlotController + 4) != false) goto LAB_180801b41;
         }
         LAB_180801c6a:
         if (targetType == null) {
@@ -17168,8 +17181,8 @@ public class BattleController
             lVar4 = this.battleTempObjs;
             uVar5 = String.Concat("SpeEffect/",speName,0);
             plVar6 = (int64 *)Resources.Load(uVar5,0);
-            uVar5 = *(uint64 *)(pStatics_b128 + 16);
-            uVar2 = *(uint32 *)(pStatics_b128 + 24);
+            uVar5 = *(uint64 *)(pPlotController + 16);
+            uVar2 = PlotController.CheckHideChoice;
             if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d4e110)) {
               plVar7 = plVar6;
             }
@@ -17203,8 +17216,8 @@ public class BattleController
               if ((lVar4 != null) && (lVar4 = GameObject.GetComponent(lVar4,DAT_181d9e558)) != null) {
                 fVar8 = (float)AudioSource.get_volume(lVar4,0);
                 AudioSource.set_volume
-                          (lVar4,param_5 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16) * fVar8,
-                           0);
+                          (lVar4,param_5 * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) +
+                                                     16) * fVar8,0);
                 return;
               }
             }
@@ -17216,8 +17229,7 @@ public class BattleController
     // RVA   : 0x801FB0   Offset: 0x8007B0   Length: 0x86
     public void CreateSpeEffect(SkillSpeEffectTargetType targetType, GameObject target, string speName, float speEffectVolumnRate)
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void BattleController.CreateSpeEffect
                      (int64 this,int targetType,uint64 target,uint64 speName,float speEffectVolumnRate,
                      uint64 *param_6)
@@ -17234,13 +17246,13 @@ public class BattleController
         uint32 local_30;
         plVar7 = (int64 *)0;
         plVar6 = plVar7;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
         LAB_180801b41:
           while( true ) {
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+            lVar4 = *(int64 *)(pPlotController + 0x658);
             if (lVar4 == null) throw; // [null/range check failed]
             if (lVar4.Count <= (int)plVar6) goto LAB_180801c6a;
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+            lVar4 = *(int64 *)(pPlotController + 0x658);
             if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,plVar6,DAT_181d51e08)) == null)
             throw; // [null/range check failed]
             if (lVar4.Count == null) {
@@ -17250,7 +17262,7 @@ public class BattleController
             if (cVar3) break;
             plVar6 = (int64 *)(uint64)((int)plVar6 + 1);
           }
-          lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+          lVar4 = *(int64 *)(pPlotController + 0x658);
           if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,plVar6,DAT_181d51e08)) == null)
           throw; // [null/range check failed]
           if (lVar4.Count < 2) {
@@ -17259,7 +17271,7 @@ public class BattleController
           speName = *(uint64 *)(lVar4._items + 40);
         }
         else {
-          if (*(char *)(pStatics_ef00 + 4) != false) goto LAB_180801b41;
+          if (*(char *)(pPlotController + 4) != false) goto LAB_180801b41;
         }
         LAB_180801c6a:
         if (targetType == null) {
@@ -17282,8 +17294,8 @@ public class BattleController
             lVar4 = this.battleTempObjs;
             uVar5 = String.Concat("SpeEffect/",speName,0);
             plVar6 = (int64 *)Resources.Load(uVar5,0);
-            uVar5 = *(uint64 *)(pStatics_b128 + 16);
-            uVar2 = *(uint32 *)(pStatics_b128 + 24);
+            uVar5 = *(uint64 *)(pPlotController + 16);
+            uVar2 = PlotController.CheckHideChoice;
             if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d4e110)) {
               plVar7 = plVar6;
             }
@@ -17317,8 +17329,8 @@ public class BattleController
               if ((lVar4 != null) && (lVar4 = GameObject.GetComponent(lVar4,DAT_181d9e558)) != null) {
                 fVar8 = (float)AudioSource.get_volume(lVar4,0);
                 AudioSource.set_volume
-                          (lVar4,speEffectVolumnRate * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16) * fVar8,
-                           0);
+                          (lVar4,speEffectVolumnRate * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) +
+                                                     16) * fVar8,0);
                 return;
               }
             }
@@ -17330,8 +17342,7 @@ public class BattleController
     // RVA   : 0x801A00   Offset: 0x800200   Length: 0x513
     public void CreateSpeEffect(SkillSpeEffectTargetType targetType, GameObject target, string speName, float speEffectVolumnRate, Vector3 scale)
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void BattleController.CreateSpeEffect
                      (int64 this,int targetType,uint64 target,uint64 speName,float speEffectVolumnRate,
                      uint64 *scale)
@@ -17348,13 +17359,13 @@ public class BattleController
         uint32 local_30;
         plVar7 = (int64 *)0;
         plVar6 = plVar7;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
         LAB_180801b41:
           while( true ) {
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+            lVar4 = *(int64 *)(pPlotController + 0x658);
             if (lVar4 == null) throw; // [null/range check failed]
             if (lVar4.Count <= (int)plVar6) goto LAB_180801c6a;
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+            lVar4 = *(int64 *)(pPlotController + 0x658);
             if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,plVar6,DAT_181d51e08)) == null)
             throw; // [null/range check failed]
             if (lVar4.Count == null) {
@@ -17364,7 +17375,7 @@ public class BattleController
             if (cVar3) break;
             plVar6 = (int64 *)(uint64)((int)plVar6 + 1);
           }
-          lVar4 = *(int64 *)(pStatics_ef00 + 0x658);
+          lVar4 = *(int64 *)(pPlotController + 0x658);
           if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,plVar6,DAT_181d51e08)) == null)
           throw; // [null/range check failed]
           if (lVar4.Count < 2) {
@@ -17373,7 +17384,7 @@ public class BattleController
           speName = *(uint64 *)(lVar4._items + 40);
         }
         else {
-          if (*(char *)(pStatics_ef00 + 4) != false) goto LAB_180801b41;
+          if (*(char *)(pPlotController + 4) != false) goto LAB_180801b41;
         }
         LAB_180801c6a:
         if (targetType == null) {
@@ -17396,8 +17407,8 @@ public class BattleController
             lVar4 = this.battleTempObjs;
             uVar5 = String.Concat("SpeEffect/",speName,0);
             plVar6 = (int64 *)Resources.Load(uVar5,0);
-            uVar5 = *(uint64 *)(pStatics_b128 + 16);
-            uVar2 = *(uint32 *)(pStatics_b128 + 24);
+            uVar5 = *(uint64 *)(pPlotController + 16);
+            uVar2 = PlotController.CheckHideChoice;
             if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d4e110)) {
               plVar7 = plVar6;
             }
@@ -17431,8 +17442,8 @@ public class BattleController
               if ((lVar4 != null) && (lVar4 = GameObject.GetComponent(lVar4,DAT_181d9e558)) != null) {
                 fVar8 = (float)AudioSource.get_volume(lVar4,0);
                 AudioSource.set_volume
-                          (lVar4,speEffectVolumnRate * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16) * fVar8,
-                           0);
+                          (lVar4,speEffectVolumnRate * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) +
+                                                     16) * fVar8,0);
                 return;
               }
             }
@@ -17729,8 +17740,8 @@ public class BattleController
     // RVA   : 0x80CC10   Offset: 0x80B410   Length: 0x4BC6
     public bool ManageDamage(BattleUnit source, BattleUnit target, bool noDead)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         BattleController.ManageDamage
                 (int64 this,int64 source,int64 target,uint8 noDead)
@@ -17854,7 +17865,7 @@ public class BattleController
         if (*(char *)(lVar14 + 16) == false) {
           if (*(int64 *)(lVar14 + 0x2b8) == 0) goto LAB_180811662;
           fVar23 = (float)HeroSpeAddData.Get(*(int64 *)(lVar14 + 0x2b8),64,0);
-          lVar14 = *(int64 *)(pStatics_ef00 + 0x488);
+          lVar14 = *(int64 *)(pPlotController + 0x488);
           if (lVar14 == null) goto LAB_180811662;
           if (*(uint32 *)(lVar14 + 24) <= uVar8) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -17866,7 +17877,7 @@ public class BattleController
         }
         if (*(int64 *)(target + 64) == 0) goto LAB_180811662;
         if (*(char *)(*(int64 *)(target + 64) + 16) == false) {
-          lVar14 = *(int64 *)(pStatics_e010 + 8);
+          lVar14 = GameController.difficultyExtraPoint;
           if ((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 16)) == null) goto LAB_180811662;
           iVar9 = PlayerPrefDictionary.GetInt(lVar14,"NoEvadeBalance",0);
           if (iVar9 == 0) {
@@ -17925,7 +17936,7 @@ public class BattleController
                         if ((*(int64 *)(target + 64) != 0) &&
                            (lVar14 = *(int64 *)(*(int64 *)(target + 64) + 0x230)) != null) {
                           PartPostureData.ChangePosture(lVar14,5);
-                          lVar14 = *(int64 *)(pStatics_e010 + 8);
+                          lVar14 = GameController.difficultyExtraPoint;
                           if ((lVar14 != null) && (lVar14 = *(int64 *)(lVar14 + 16)) != null) {
                             iVar9 = PlayerPrefDictionary.GetInt(lVar14,"NoEvadeBalance",0);
                             if (iVar9 == 0) {
@@ -17940,7 +17951,8 @@ public class BattleController
                               uVar12 = HeroData.Name(*(int64 *)(source + 64),1,0);
                               if (*(int64 *)(target + 64) != 0) {
                                 uVar13 = HeroData.Name(*(int64 *)(target + 64),1,0);
-                                lVar14 = *(int64 *)(pStatics_e010 + 8);
+                                lVar14 = *(int64 *)
+                                          (pGameController + 8);
                                 if ((lVar14 != null) && (lVar14 = *(int64 *)(lVar14 + 16)) != null)
                                 {
                                   iVar9 = PlayerPrefDictionary.GetInt(lVar14,"NoEvadeBalance",0);
@@ -18428,7 +18440,7 @@ public class BattleController
         if (0.0 < local_288) {
           if (local_228 != 0) {
             uVar10 = (uint32)(in_stack_fffffffffffffd48 >> 32);
-            lVar14 = *(int64 *)(pStatics_ef00 + 0x478);
+            lVar14 = *(int64 *)(pPlotController + 0x478);
             if (lVar14 == null) goto LAB_180811662;
             uVar12 = FUN_180002f80(lVar14,uVar8,DAT_181d7c9c0);
             plVar17 = (int64 *)String.Format("<i>{0}</i>",uVar12,0);
@@ -18444,7 +18456,7 @@ public class BattleController
                       (target,plVar17,local_268,18,in_stack_fffffffffffffd48,"UIAtlas",0,0,0);
           }
           if (0.0 < local_288) {
-            if (*(char *)(*(int64 *)(DAT_181d942b0 + 184) + 40) == false) {
+            if (!Console.invincible) {
               lVar14 = FUN_18046c0a0(0);
               if ((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) goto LAB_180811662;
               if (*(char *)(*(int64 *)(lVar14 + 32) + 164) == false) {
@@ -19287,18 +19299,20 @@ public class BattleController
                                                (int64)(int)uVar8 * 4)) {
                           if (*(int64 *)(target + 64) == 0) break;
                           uVar12 = HeroData.Name(*(int64 *)(target + 64),1,0);
-                          lVar14 = *(int64 *)(pStatics_ef00 + 0x5e8);
+                          lVar14 = *(int64 *)(pPlotController + 0x5e8);
                           if (lVar14 == null) break;
                           uVar13 = FUN_180002f80(lVar14,plVar15,DAT_181d7c9c0);
                           uVar12 = String.Format("{0}的{1}部出现了破绽。",uVar12,uVar13,0);
                           BattleController.AddInfoText(this,uVar12,1,0);
                           plVar17 = plVar11;
                           while( true ) {
-                            lVar14 = *(int64 *)(pStatics_ef00 + 0x5f8);
+                            lVar14 = *(int64 *)
+                                      (pPlotController + 0x5f8);
                             if ((lVar14 == null) || (lVar14 = FUN_180002f80(lVar14,plVar15)) == null)
                             goto LAB_180811662;
                             if (*(int *)(lVar14 + 24) <= (int)plVar17) break;
-                            lVar14 = *(int64 *)(pStatics_ef00 + 0x5f8);
+                            lVar14 = *(int64 *)
+                                      (pPlotController + 0x5f8);
                             if ((lVar14 == null) ||
                                (lVar14 = FUN_180002f80(lVar14,plVar15,DAT_181d51408)) == null)
                             goto LAB_180811662;
@@ -19306,14 +19320,16 @@ public class BattleController
                             lVar14 = FUN_18046c100(0);
                             if (lVar14 == null) goto LAB_180811662;
                             lVar14 = *(int64 *)(lVar14 + 144);
-                            lVar19 = *(int64 *)(pStatics_ef00 + 0x5f8);
+                            lVar19 = *(int64 *)
+                                      (pPlotController + 0x5f8);
                             if ((((lVar19 == null) ||
                                  (lVar19 = FUN_180002f80(lVar19,plVar15,DAT_181d51408)) == null) ||
                                 (uVar10 = FUN_1800d6750(lVar19,plVar17,DAT_181d64a78), lVar14 == null)) ||
                                (lVar14 = FUN_180002f80(lVar14,uVar10,DAT_181d64878)) == null)
                             goto LAB_180811662;
                             if (*(int *)(lVar14 + 60) == -1) {
-                              lVar14 = *(int64 *)(pStatics_ef00 + 0x5f8);
+                              lVar14 = *(int64 *)
+                                        (pPlotController + 0x5f8);
                               if ((lVar14 == null) ||
                                  (lVar14 = FUN_180002f80(lVar14,plVar15,DAT_181d51408)) == null)
                               goto LAB_180811662;
@@ -19323,7 +19339,8 @@ public class BattleController
                               lVar14 = FUN_18046c100(0);
                               if (lVar14 == null) goto LAB_180811662;
                               lVar14 = *(int64 *)(lVar14 + 144);
-                              lVar19 = *(int64 *)(pStatics_ef00 + 0x5f8);
+                              lVar19 = *(int64 *)
+                                        (pPlotController + 0x5f8);
                               if ((((lVar19 == null) ||
                                    (lVar19 = FUN_180002f80(lVar19,plVar15,DAT_181d51408)) == null) ||
                                   (uVar10 = FUN_1800d6750(lVar19,plVar17,DAT_181d64a78), lVar14 == null)) ||
@@ -19426,7 +19443,7 @@ public class BattleController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar14 = lVar19[uVar8];
-            lVar19 = *(int64 *)(*(int64 *)(DAT_181d8b6a8 + 184) + 88);
+            lVar19 = BattleUnit.FriendDeadTalk;
             if (lVar19 != null) {
               uVar8 = FUN_180d8cf10(0,*(uint32 *)(lVar19 + 24),0);
               if (*(uint32 *)(lVar19 + 24) <= uVar8) {
@@ -19456,7 +19473,7 @@ public class BattleController
         if ((int)*(uint32 *)(lVar19 + 24) <= (int)uVar8) {
           if (0.0 < local_280) {
             uVar12 = Single.ToString(&local_280,"+0;-0;0",0);
-            lVar14 = *(int64 *)(pStatics_ef00 + 0x3b8);
+            lVar14 = *(int64 *)(pPlotController + 0x3b8);
             if (lVar14 == null) goto LAB_180811662;
             if (*(uint32 *)(lVar14 + 24) < 3) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -19593,7 +19610,7 @@ public class BattleController
           plVar15 = local_270;
           if (local_280 <= 0.0) goto LAB_180810005;
           uVar12 = Single.ToString(&local_280,"+0;-0;0",0);
-          lVar14 = *(int64 *)(pStatics_ef00 + 0x3b8);
+          lVar14 = *(int64 *)(pPlotController + 0x3b8);
           if (lVar14 != null) {
             if (*(uint32 *)(lVar14 + 24) < 3) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -19901,7 +19918,7 @@ public class BattleController
           goto LAB_180813cdb;
         case 15:
           lVar9 = FUN_18046c0a0(0);
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 104);
+          lVar6 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 104);
           if (lVar6 == null) throw; // [null/range check failed]
           uVar4 = FUN_180d8cf10(0,*(uint32 *)(lVar6 + 24),0);
           if (*(uint32 *)(lVar6 + 24) <= uVar4) {
@@ -19992,7 +20009,6 @@ public class BattleController
     // RVA   : 0x801760   Offset: 0x7FFF60   Length: 0x293
     public float CountPlayerBattleScore(float enemyTotalScore, bool heroWin)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         uint64
         BattleController.CountPlayerBattleScore(int64 this,uint32 enemyTotalScore,char heroWin)
         {
@@ -20016,8 +20032,9 @@ public class BattleController
           if ((this.playerBattleUnit != null) &&
              (lVar4 = this.playerBattleUnit.battleInfo) != null) {
             fVar1 = *(float *)(lVar4 + 20);
-            if ((*pStatics != 0) &&
-               (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar4 = GameController._instance.worldData,
+               lVar4 != null)) {
               lVar4 = WorldData.Player(lVar4,0);
               if (lVar4 != null) {
                 uVar5 = Mathf.Min(enemyTotalScore,*(uint32 *)(lVar4 + 0x38c),0);
@@ -20025,8 +20042,9 @@ public class BattleController
                 if ((this.playerBattleUnit != null) &&
                    (lVar4 = this.playerBattleUnit.battleInfo) != null) {
                   fVar2 = *(float *)(lVar4 + 28);
-                  if ((*pStatics != 0) &&
-                     (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+                  if ((GameController._instance != null) &&
+                     (lVar4 = GameController._instance.worldData,
+                     lVar4 != null)) {
                     lVar4 = WorldData.Player(lVar4,0);
                     if (lVar4 != null) {
                       uVar7 = FUN_1810a8ba0((fVar1 / fVar6 - (fVar2 * 0.5) / *(float *)(lVar4 + 0x17c)) *
@@ -20062,8 +20080,8 @@ public class BattleController
           iVar2 = *(int *)(lVar3 + 16);
           fVar1 = *(float *)(lVar3 + 24);
           Mathf.Max(0,((float)iVar2 * 10.0 +
-                        (fVar1 * 5.0) / *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 240) + 20.0) *
-                       fVar4,0);
+                        (fVar1 * 5.0) / *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 240)
+                       + 20.0) * fVar4,0);
           return;
         }
     }
@@ -20073,8 +20091,6 @@ public class BattleController
     public void BattleRealEnd()
     {
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
         float fVar1;
         float fVar2;
@@ -20105,15 +20121,15 @@ public class BattleController
           if ((lVar8 != null) && (lVar8.allItem != null)) {
             uVar14 = 0;
             if ((0 < *(int *)(lVar8.allItem + 24)) || (0 < lVar8.money)) {
-              if ((*pStatics_df90 == 0) ||
-                 (lVar8 = *(int64 *)(*pStatics_df90 + 32)) == null)
-              throw; // [null/range check failed]
+              if ((GameController._instance == null) ||
+                 (lVar8 = GameController._instance.worldData,
+                 lVar8 == null)) throw; // [null/range check failed]
               lVar8 = WorldData.Player(lVar8,0);
               if ((this.trophyItemList == null) || (lVar8 == null)) throw; // [null/range check failed]
               HeroData.ChangeMoney(lVar8,this.trophyItemList.money,1,0);
-              if (((*pStatics_df90 == 0) ||
-                  (lVar8 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-                 (lVar8 = WorldData.Player(lVar8,0)) == null) throw; // [null/range check failed]
+              if (((GameController._instance == null) ||
+                  (lVar8 = GameController._instance.worldData,
+                  lVar8 == null)) || (lVar8 = WorldData.Player(lVar8,0)) == null) throw; // [null/range check failed]
               HeroData.GetItem(lVar8,this.trophyItemList,1,0,CONCAT44(uVar17,0xffffffff),0);
               if (this.trophyItemList == null) throw; // [null/range check failed]
               this.trophyItemList.money = 0;
@@ -20141,8 +20157,8 @@ public class BattleController
                          (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                          lVar8 == null)) || (lVar8.money == null)) ||
                        ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                        lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))) throw; // [null/range check failed]
-                    if (*(char *)(*(int64 *)(lVar8 + 64) + 16) == false) {
+                        lVar8 == null || (lVar8.ResourcePoints == null)))) throw; // [null/range check failed]
+                    if (*(char *)(lVar8.ResourcePoints + 16) == false) {
                       if (((this.teams == null) ||
                           (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                           lVar8 == null)) ||
@@ -20156,9 +20172,9 @@ public class BattleController
                              (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                              lVar8 == null)) || (lVar8.money == null)) ||
                            ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                            lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))) throw; // [null/range check failed]
+                            lVar8 == null || (lVar8.ResourcePoints == null)))) throw; // [null/range check failed]
                         this.winTeamLeftFightScore =
-                             fVar1 + *(float *)(*(int64 *)(lVar8 + 64) + 0x38c);
+                             fVar1 + *(float *)(lVar8.ResourcePoints + 0x38c);
                       }
                     }
                   }
@@ -20169,61 +20185,61 @@ public class BattleController
                        ((lVar8.money == null ||
                         (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
                         lVar8 == null)))) throw; // [null/range check failed]
-                    lVar8 = *(int64 *)(lVar8 + 64);
+                    lVar8 = lVar8.ResourcePoints;
                     if ((((this.teams == null) ||
                          (lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                         lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
-                       ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                         lVar9 == null)) || (lVar9.plotHappen == null)) ||
+                       ((lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                         lVar9 == null || (lVar8 == null)))) throw; // [null/range check failed]
-                    *(uint32 *)(lVar8 + 0x178) = *(uint32 *)(lVar9 + 192);
+                    lVar8.skinUnlockData = lVar9.plotRecordAdd;
                     if (((this.teams == null) ||
                         ((lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                          lVar8 == null || (lVar8.money == null)))) ||
                        (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
                        lVar8 == null)) throw; // [null/range check failed]
-                    lVar8 = *(int64 *)(lVar8 + 64);
+                    lVar8 = lVar8.ResourcePoints;
                     if ((((this.teams == null) ||
                          (lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                         lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
-                       ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                         lVar9 == null)) || (lVar9.plotHappen == null)) ||
+                       ((lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                         lVar9 == null || (lVar8 == null)))) throw; // [null/range check failed]
-                    *(uint32 *)(lVar8 + 400) = *(uint32 *)(lVar9 + 196);
+                    lVar8.totalWinFightCount = *(uint32 *)(lVar9 + 196);
                     if (((this.teams == null) ||
                         ((lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                          lVar8 == null || (lVar8.money == null)))) ||
                        (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
                        lVar8 == null)) throw; // [null/range check failed]
-                    lVar8 = *(int64 *)(lVar8 + 64);
+                    lVar8 = lVar8.ResourcePoints;
                     if ((((this.teams == null) ||
                          (lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                         lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
-                       ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                         lVar9 == null)) || (lVar9.plotHappen == null)) ||
+                       ((lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                         lVar9 == null || (lVar8 == null)))) throw; // [null/range check failed]
-                    *(uint32 *)(lVar8 + 0x1a0) = *(uint32 *)(lVar9 + 200);
+                    lVar8.studyFightWithGreatHeroMultiWinNum = lVar9.recordScrollView;
                     if (((this.teams == null) ||
                         ((lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                          lVar8 == null || (lVar8.money == null)))) ||
                        (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
                        lVar8 == null)) throw; // [null/range check failed]
-                    lVar8 = *(int64 *)(lVar8 + 64);
+                    lVar8 = lVar8.ResourcePoints;
                     if ((((this.teams == null) ||
                          (lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                         lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
-                       ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                         lVar9 == null)) || (lVar9.plotHappen == null)) ||
+                       ((lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                         lVar9 == null || (lVar8 == null)))) throw; // [null/range check failed]
-                    *(uint32 *)(lVar8 + 0x1a4) = *(uint32 *)(lVar9 + 204);
+                    lVar8.studyFightWithGreatHeroFinalWinNum = *(uint32 *)(lVar9 + 204);
                     if (((this.teams == null) ||
                         ((lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                          lVar8 == null || (lVar8.money == null)))) ||
                        (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
                        lVar8 == null)) throw; // [null/range check failed]
-                    lVar8 = *(int64 *)(lVar8 + 64);
+                    lVar8 = lVar8.ResourcePoints;
                     if ((((this.teams == null) ||
                          (lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                         lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
-                       ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                         lVar9 == null)) || (lVar9.plotHappen == null)) ||
+                       ((lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                         lVar9 == null || (lVar8 == null)))) throw; // [null/range check failed]
-                    *(uint32 *)(lVar8 + 0x1a8) = *(uint32 *)(lVar9 + 208);
+                    lVar8.totalHeroMeet = lVar9.plotTextShowing;
                     if (this.havePlayer) {
                       if ((this.teams == null) ||
                          (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
@@ -20234,11 +20250,11 @@ public class BattleController
                           lVar8 = WorldData.Player(lVar8.maxWeight,0);
                           if (((this.teams != null) &&
                               (((lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8)
-                                , lVar9 != null && (*(int64 *)(lVar9 + 24) != 0)) &&
-                               (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                                , lVar9 != null && (lVar9.plotHappen != null)) &&
+                               (lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                                lVar9 != null)))) &&
-                             ((*(int64 *)(lVar9 + 64) != 0 &&
-                              (uVar10 = Int32.ToString(*(int64 *)(lVar9 + 64) + 88,0), lVar8 != null)
+                             ((lVar9.plotAutoButton != null &&
+                              (uVar10 = Int32.ToString(lVar9.plotAutoButton + 88,0), lVar8 != null)
                               ))) {
                             uVar11 = 11;
                             goto LAB_1807fd2e2;
@@ -20255,69 +20271,69 @@ public class BattleController
                           lVar8 == null)) ||
                          ((lVar8.money == null ||
                           ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                           lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))))) throw; // [null/range check failed]
-                      fVar1 = *(float *)(*(int64 *)(lVar8 + 64) + 0x178);
+                           lVar8 == null || (lVar8.ResourcePoints == null)))))) throw; // [null/range check failed]
+                      fVar1 = *(float *)(lVar8.ResourcePoints + 0x178);
                       if ((this.teams == null) ||
                          (((lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                            lVar8 == null || (lVar8.money == null)) ||
                           (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
                           lVar8 == null)))) throw; // [null/range check failed]
-                      if (fVar1 < *(float *)(lVar8 + 192)) {
+                      if (fVar1 < lVar8.playerBetrayForceBadTime) {
                         if (((this.teams == null) ||
                             (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                             lVar8 == null)) ||
                            ((lVar8.money == null ||
                             ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                             lVar8 == null || (lVar8 = *(int64 *)(lVar8 + 64)) == null)))))
+                             lVar8 == null || (lVar8 = lVar8.ResourcePoints) == null)))))
                         throw; // [null/range check failed]
-                        fVar1 = *(float *)(lVar8 + 0x178);
+                        fVar1 = lVar8.skinUnlockData;
                         if ((this.teams == null) ||
                            (((lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                             lVar9 == null || (*(int64 *)(lVar9 + 24) == 0)) ||
-                            (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                             lVar9 == null || (lVar9.plotHappen == null)) ||
+                            (lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                             lVar9 == null)))) throw; // [null/range check failed]
-                        fVar2 = *(float *)(lVar9 + 192);
+                        fVar2 = lVar9.plotRecordAdd;
                         if (((this.teams == null) ||
                             (lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                             lVar9 == null)) ||
-                           ((*(int64 *)(lVar9 + 24) == 0 ||
-                            ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
-                             lVar9 == null || (*(int64 *)(lVar9 + 64) == 0)))))) throw; // [null/range check failed]
-                        *(float *)(lVar8 + 0x178) =
-                             (fVar2 - *(float *)(*(int64 *)(lVar9 + 64) + 0x178)) * 0.5 + fVar1;
+                           ((lVar9.plotHappen == null ||
+                            ((lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
+                             lVar9 == null || (lVar9.plotAutoButton == null)))))) throw; // [null/range check failed]
+                        lVar8.skinUnlockData =
+                             (fVar2 - *(float *)(lVar9.plotAutoButton + 0x178)) * 0.5 + fVar1;
                       }
                       if ((((this.teams == null) ||
                            (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                            lVar8 == null)) || (lVar8.money == null)) ||
                          ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                          lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))) throw; // [null/range check failed]
-                      fVar1 = *(float *)(*(int64 *)(lVar8 + 64) + 400);
+                          lVar8 == null || (lVar8.ResourcePoints == null)))) throw; // [null/range check failed]
+                      fVar1 = *(float *)(lVar8.ResourcePoints + 400);
                       if (((this.teams == null) ||
                           ((lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                            lVar8 == null || (lVar8.money == null)))) ||
                          (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
                          lVar8 == null)) throw; // [null/range check failed]
-                      if (fVar1 < *(float *)(lVar8 + 196)) {
+                      if (fVar1 < lVar8.playerGetTeacherTime) {
                         if ((((this.teams == null) ||
                              (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                              lVar8 == null)) || (lVar8.money == null)) ||
                            ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                            lVar8 == null || (lVar8 = *(int64 *)(lVar8 + 64)) == null)))
+                            lVar8 == null || (lVar8 = lVar8.ResourcePoints) == null)))
                         throw; // [null/range check failed]
-                        fVar1 = *(float *)(lVar8 + 400);
+                        fVar1 = lVar8.totalWinFightCount;
                         if (((this.teams == null) ||
                             ((lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                             lVar9 == null || (*(int64 *)(lVar9 + 24) == 0)))) ||
-                           (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                             lVar9 == null || (lVar9.plotHappen == null)))) ||
+                           (lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                            lVar9 == null)) throw; // [null/range check failed]
                         fVar2 = *(float *)(lVar9 + 196);
                         if ((((this.teams == null) ||
                              (lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                             lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
-                           ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
-                            lVar9 == null || (*(int64 *)(lVar9 + 64) == 0)))) throw; // [null/range check failed]
-                        *(float *)(lVar8 + 400) =
-                             (fVar2 - *(float *)(*(int64 *)(lVar9 + 64) + 400)) * 0.5 + fVar1;
+                             lVar9 == null)) || (lVar9.plotHappen == null)) ||
+                           ((lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
+                            lVar9 == null || (lVar9.plotAutoButton == null)))) throw; // [null/range check failed]
+                        lVar8.totalWinFightCount =
+                             (fVar2 - *(float *)(lVar9.plotAutoButton + 400)) * 0.5 + fVar1;
                       }
                     }
                     if (((this.teams == null) ||
@@ -20325,14 +20341,14 @@ public class BattleController
                         lVar8 == null)) ||
                        ((lVar8.money == null ||
                         ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                         lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))))) throw; // [null/range check failed]
-                    if (*(float *)(*(int64 *)(lVar8 + 64) + 0x178) <= 0.0) {
+                         lVar8 == null || (lVar8.ResourcePoints == null)))))) throw; // [null/range check failed]
+                    if (*(float *)(lVar8.ResourcePoints + 0x178) <= 0.0) {
                       if ((((this.teams == null) ||
                            (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                            lVar8 == null)) || (lVar8.money == null)) ||
                          ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                          lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))) throw; // [null/range check failed]
-                      *(uint32 *)(*(int64 *)(lVar8 + 64) + 0x178) = 0x3f800000;
+                          lVar8 == null || (lVar8.ResourcePoints == null)))) throw; // [null/range check failed]
+                      *(uint32 *)(lVar8.ResourcePoints + 0x178) = 0x3f800000;
                     }
                     if (this.havePlayer) {
                       if ((this.teams == null) ||
@@ -20344,11 +20360,11 @@ public class BattleController
                         lVar8 = WorldData.Player(lVar8.maxWeight,0);
                         if (((this.teams == null) ||
                             (((lVar9 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
-                              lVar9 == null || (*(int64 *)(lVar9 + 24) == 0)) ||
-                             (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 24),uVar12,DAT_181d584a0),
+                              lVar9 == null || (lVar9.plotHappen == null)) ||
+                             (lVar9 = FUN_180002f80(lVar9.plotHappen,uVar12,DAT_181d584a0),
                              lVar9 == null)))) ||
-                           ((*(int64 *)(lVar9 + 64) == 0 ||
-                            (uVar10 = Int32.ToString(*(int64 *)(lVar9 + 64) + 88,0), lVar8 == null)))
+                           ((lVar9.plotAutoButton == null ||
+                            (uVar10 = Int32.ToString(lVar9.plotAutoButton + 88,0), lVar8 == null)))
                            ) throw; // [null/range check failed]
                         uVar11 = 16;
         LAB_1807fd2e2:
@@ -20361,21 +20377,21 @@ public class BattleController
                       lVar8 == null)) ||
                      ((lVar8.money == null ||
                       ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                       lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))))) throw; // [null/range check failed]
-                  HeroData.FightReset(*(int64 *)(lVar8 + 64),0);
+                       lVar8 == null || (lVar8.ResourcePoints == null)))))) throw; // [null/range check failed]
+                  HeroData.FightReset(lVar8.ResourcePoints,0);
                   if (((this.teams == null) ||
                       (((lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                         lVar8 == null || (lVar8.money == null)) ||
                        (lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                       lVar8 == null)))) || (*(int64 *)(lVar8 + 64) == 0)) throw; // [null/range check failed]
-                  HeroData.FightSettingReset(*(int64 *)(lVar8 + 64),0);
+                       lVar8 == null)))) || (lVar8.ResourcePoints == null)) throw; // [null/range check failed]
+                  HeroData.FightSettingReset(lVar8.ResourcePoints,0);
                   if (((this.teams == null) ||
                       (lVar8 = FUN_180002f80(this.teams,uVar15,DAT_181d580a8),
                       lVar8 == null)) ||
                      ((lVar8.money == null ||
                       ((lVar8 = FUN_180002f80(lVar8.money,uVar12,DAT_181d584a0),
-                       lVar8 == null || (*(int64 *)(lVar8 + 64) == 0)))))) throw; // [null/range check failed]
-                  HeroData.ResetBuff(*(int64 *)(lVar8 + 64),0);
+                       lVar8 == null || (lVar8.ResourcePoints == null)))))) throw; // [null/range check failed]
+                  HeroData.ResetBuff(lVar8.ResourcePoints,0);
                   uVar12 = uVar12 + 1;
                 }
                 while( true ) {
@@ -20500,23 +20516,24 @@ public class BattleController
                 do {
                   if (lVar8.money <= (int)uVar14) {
                     FUN_180f56130(lVar8,DAT_181d61c78);
-                    if (*pStatics_c960 != 0) {
-                      PlotController.FightEndLoadInteractHero(*pStatics_c960,0);
+                    if (PlotController._instance != null) {
+                      PlotController.FightEndLoadInteractHero
+                                (PlotController._instance,0);
                       if ((this.fightEndCallFuc != null) &&
                          (cVar3 = String.op_Inequality(this.fightEndCallFuc,"",0),
                          cVar3)) {
                         lVar8 = this.fightEndCallFuc;
                         lVar9 = FUN_1800d60b0(DAT_181d7c118,1);
                         if (lVar9 == null) break;
-                        if (*(int *)(lVar9 + 24) == 0) {
+                        if (lVar9.plotHappen == null) {
                           uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                           FUN_1800d65f0(uVar10,0);
                         }
-                        *(uint16 *)(lVar9 + 32) = 126;
+                        lVar9.plotPanel = 126;
                         if (lVar8 == null) break;
                         lVar8 = String.Split(lVar8,lVar9,0);
-                        lVar9 = *pStatics_c960;
+                        lVar9 = PlotController._instance;
                         if (lVar8 == null) break;
                         if (lVar8.money == null) {
                           uVar10 = il2cpp_internal();
@@ -20713,8 +20730,6 @@ public class BattleController
     // RVA   : 0x801630   Offset: 0x7FFE30   Length: 0x2F
     public static float CountDamageRatio(float sourceNum, float targetNum, float addRatio)
     {
-        float FUN_180801630(float sourceNum,float targetNum,float addRatio)
-        {
         if (targetNum <= sourceNum) {
           return (sourceNum - targetNum) * 0.01 * addRatio;
         }
@@ -20725,7 +20740,7 @@ public class BattleController
     // RVA   : 0x800970   Offset: 0x7FF170   Length: 0xCB8
     public float CountBaseDamage(BattleUnit attackUnit, KungfuSkillLvData targetSkillLvData, BattleUnit targetUnit, bool fullCount)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float BattleController.CountBaseDamage
                       (uint64 this,int64 attackUnit,int64 targetSkillLvData,int64 targetUnit,char fullCount)
         {
@@ -20769,7 +20784,7 @@ public class BattleController
                 fVar16 = 0.01;
                 lVar8 = 32;
                 lVar7 = 32;
-                lVar6 = DAT_181d8b128;
+                lVar6 = PlotController_StaticsPtr;
                 do {
                   if ((*(int64 *)(lVar5 + 72) == 0) ||
                      (lVar1 = *(int64 *)(*(int64 *)(lVar5 + 72) + 16)) == null) break;
@@ -20780,7 +20795,7 @@ public class BattleController
                   }
                   if (*(uint32 *)(lVar1 + 24) <= uVar3) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
-                    lVar6 = DAT_181d8b128;
+                    lVar6 = PlotController_StaticsPtr;
                   }
                   if (*(float *)(*(int64 *)(lVar1 + 16) + lVar7) != 0.0) {
                     if ((*(int64 *)(attackUnit + 64) == 0) ||
@@ -20808,7 +20823,7 @@ public class BattleController
                       fVar15 = 0.01;
                     }
                     fVar11 = fVar11 + (fVar12 - fVar13) * fVar15 * fVar14;
-                    lVar6 = DAT_181d8b128;
+                    lVar6 = PlotController_StaticsPtr;
                   }
                   uVar3 = uVar3 + 1;
                   lVar7 = lVar7 + 4;
@@ -20826,7 +20841,7 @@ public class BattleController
               if (!cVar2) {
                 return fVar10 * fVar11;
               }
-              lVar5 = *(int64 *)(pStatics + 0x480);
+              lVar5 = *(int64 *)(pPlotController + 0x480);
               if (targetUnit != null) {
                 uVar3 = BattleUnit.GetAttackDirectionType(targetUnit,*(uint64 *)(attackUnit + 96),0);
                 if (lVar5 != null) {
@@ -20849,7 +20864,7 @@ public class BattleController
         if ((int)*(uint32 *)(lVar1 + 24) <= (int)uVar3) goto LAB_180800efb;
         if (*(uint32 *)(lVar1 + 24) <= uVar3) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
-          lVar6 = DAT_181d8b128;
+          lVar6 = PlotController_StaticsPtr;
         }
         if (*(float *)(*(int64 *)(lVar1 + 16) + lVar7) != 0.0) {
           if ((*(int64 *)(attackUnit + 64) == 0) ||
@@ -20878,7 +20893,7 @@ public class BattleController
             fVar15 = 0.01;
           }
           fVar11 = fVar11 + (fVar12 - fVar13) * fVar15 * fVar14;
-          lVar6 = DAT_181d8b128;
+          lVar6 = PlotController_StaticsPtr;
         }
         uVar3 = uVar3 + 1;
         lVar7 = lVar7 + 4;
@@ -20896,7 +20911,7 @@ public class BattleController
             }
             else {
               cVar2 = Object.op_Equality(targetUnit,0,0);
-              lVar6 = DAT_181d8b128;
+              lVar6 = PlotController_StaticsPtr;
               if (cVar2) goto LAB_1808010f9;
               if ((targetUnit == null) || (*(int64 *)(targetUnit + 64) == 0)) goto LAB_180801623;
               fVar13 = *(float *)(*(int64 *)(targetUnit + 64) + 0x178);
@@ -20907,7 +20922,7 @@ public class BattleController
             if (((*(byte *)(lVar6 + 0x133) & 4) != 0) && (*(int *)(lVar6 + 224) == 0)) {
               il2cpp_runtime_class_init();
               lVar7 = *(int64 *)(lVar5 + 72);
-              lVar6 = DAT_181d8b128;
+              lVar6 = PlotController_StaticsPtr;
             }
             if (fVar12 < fVar13) {
               fVar15 = 0.0025;
@@ -20927,7 +20942,7 @@ public class BattleController
             }
             else {
               cVar2 = Object.op_Equality(targetUnit,0,0);
-              lVar6 = DAT_181d8b128;
+              lVar6 = PlotController_StaticsPtr;
               if (cVar2) goto LAB_1808011e5;
               if ((targetUnit == null) || (*(int64 *)(targetUnit + 64) == 0)) goto LAB_180801623;
               fVar13 = *(float *)(*(int64 *)(targetUnit + 64) + 400);
@@ -20938,7 +20953,7 @@ public class BattleController
             if (((*(byte *)(lVar6 + 0x133) & 4) != 0) && (*(int *)(lVar6 + 224) == 0)) {
               il2cpp_runtime_class_init();
               lVar7 = *(int64 *)(lVar5 + 72);
-              lVar6 = DAT_181d8b128;
+              lVar6 = PlotController_StaticsPtr;
             }
             if (fVar12 < fVar13) {
               fVar15 = 0.0025;
@@ -20958,7 +20973,7 @@ public class BattleController
             }
             else {
               cVar2 = Object.op_Equality(targetUnit,0,0);
-              lVar6 = DAT_181d8b128;
+              lVar6 = PlotController_StaticsPtr;
               if (cVar2) goto LAB_1808012d1;
               if ((targetUnit == null) || (*(int64 *)(targetUnit + 64) == 0)) goto LAB_180801623;
               fVar13 = *(float *)(*(int64 *)(targetUnit + 64) + 0x184);
@@ -20967,7 +20982,7 @@ public class BattleController
             fVar14 = *(float *)(*(int64 *)(lVar5 + 72) + 44);
             if (((*(byte *)(lVar6 + 0x133) & 4) != 0) && (*(int *)(lVar6 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar6 = DAT_181d8b128;
+              lVar6 = PlotController_StaticsPtr;
             }
             if (fVar12 < fVar13) {
               fVar16 = 0.0025;
@@ -20998,7 +21013,7 @@ public class BattleController
             fVar11 = fVar11 * fVar12;
             cVar2 = Object.op_Inequality(targetUnit,0,0);
             if (cVar2) {
-              lVar5 = *(int64 *)(pStatics + 0x480);
+              lVar5 = *(int64 *)(pPlotController + 0x480);
               if ((targetUnit == null) ||
                  (uVar4 = BattleUnit.GetAttackDirectionType(targetUnit,*(uint64 *)(attackUnit + 96),0),
                  lVar5 == null)) goto LAB_180801623;
@@ -21042,7 +21057,7 @@ public class BattleController
         }
         if (*(uint32 *)(lVar1 + 24) <= uVar9) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
-          lVar6 = DAT_181d8b128;
+          lVar6 = PlotController_StaticsPtr;
         }
         if (*(float *)(lVar8 + *(int64 *)(lVar1 + 16)) != 0.0) {
           if ((*(int64 *)(attackUnit + 64) == 0) ||
@@ -21071,7 +21086,7 @@ public class BattleController
             fVar15 = 0.01;
           }
           fVar11 = fVar11 + (fVar12 - fVar13) * fVar15 * fVar14;
-          lVar6 = DAT_181d8b128;
+          lVar6 = PlotController_StaticsPtr;
         }
         uVar9 = uVar9 + 1;
         lVar8 = lVar8 + 4;
@@ -21202,20 +21217,19 @@ public class BattleController
     // RVA   : 0x7FF0B0   Offset: 0x7FD8B0   Length: 0x11B
     public void BattleTimeScaleButtonClicked(GameObject buttonClicked)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         ulong uVar3;
         if ((buttonClicked != null) && (lVar2 = GameObject.GetComponent(buttonClicked,DAT_181da2130)) != null) {
-          if (*(char *)(lVar2 + 0x118) == false) {
+          if (!lVar2.monthPartyTime) {
             return;
           }
-          if (*pStatics != 0) {
-            lVar2 = *(int64 *)(*pStatics + 32);
+          if (GameController._instance != null) {
+            lVar2 = GameController._instance.worldData;
             uVar3 = Object.get_name(buttonClicked,0);
             iVar1 = Int32.Parse(uVar3,0);
             if (lVar2 != null) {
-              *(float *)(lVar2 + 0x1d8) = (float)iVar1;
+              lVar2.battleTimeScale = (float)iVar1;
               return;
             }
           }
@@ -22024,7 +22038,7 @@ public class BattleController
     // RVA   : 0x825FF0   Offset: 0x8247F0   Length: 0x878
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         long lVar2;
         byte[] local_28 = new byte[32];
@@ -22034,7 +22048,7 @@ public class BattleController
           FUN_181805690(lVar2,0x41c80000,DAT_181d79458);
           FUN_181805690(lVar2,0x41f00000,DAT_181d79458);
           FUN_181805690(lVar2,0x420c0000,DAT_181d79458);
-          plVar4 = pStatics;
+          plVar4 = pPlotController;
           *plVar4 = lVar2;
           il2cpp_internal(plVar4,lVar2);
           lVar2 = il2cpp_internal(DAT_181d721b0);
@@ -22044,24 +22058,22 @@ public class BattleController
             FUN_181805690(lVar2,0x3e800000,DAT_181d79458);
             FUN_181805690(lVar2,0x3e99999a,DAT_181d79458);
             FUN_181805690(lVar2,0x3e4ccccd,DAT_181d79458);
-            plVar4 = (int64 *)(pStatics + 8);
-            *plVar4 = lVar2;
-            il2cpp_internal(plVar4,lVar2);
+            PlotController.LeftFaceHideOffset = lVar2;
             puVar3 = (uint64 *)Vector3.get_back(local_28,0);
             fVar1 = *(float *)(puVar3 + 1);
-            lVar2 = pStatics;
+            lVar2 = pPlotController;
             *(uint64 *)(lVar2 + 16) =
                  CONCAT44((float)((uint64)*puVar3 >> 32) * 4.001,(float)*puVar3 * 4.001);
             *(float *)(lVar2 + 24) = fVar1 * 4.001;
             puVar3 = (uint64 *)Vector3.get_back(local_28,0);
             fVar1 = *(float *)(puVar3 + 1);
-            lVar2 = pStatics;
+            lVar2 = pPlotController;
             *(uint64 *)(lVar2 + 28) =
                  CONCAT44((float)((uint64)*puVar3 >> 32) * 4.0,(float)*puVar3 * 4.0);
             *(float *)(lVar2 + 36) = fVar1 * 4.0;
             puVar3 = (uint64 *)Vector3.get_back(local_28,0);
             fVar1 = *(float *)(puVar3 + 1);
-            lVar2 = pStatics;
+            lVar2 = pPlotController;
             *(uint64 *)(lVar2 + 40) =
                  CONCAT44((float)((uint64)*puVar3 >> 32) * 2.0,(float)*puVar3 * 2.0);
             *(float *)(lVar2 + 48) = fVar1 * 2.0;
@@ -22073,9 +22085,7 @@ public class BattleController
               FUN_181827900(lVar2,"Indoor",DAT_181d7c3d0);
               FUN_181827900(lVar2,"Arena",DAT_181d7c3d0);
               FUN_181827900(lVar2,"City",DAT_181d7c3d0);
-              plVar4 = (int64 *)(pStatics + 56);
-              *plVar4 = lVar2;
-              il2cpp_internal(plVar4,lVar2);
+              PlotController.LaBaFestivelResultTalkText = lVar2;
               lVar2 = il2cpp_internal(DAT_181d6f830);
               FUN_180f58a90(lVar2,DAT_181d6a570);
               if (lVar2 != null) {
@@ -22090,9 +22100,7 @@ public class BattleController
                 FUN_181814fa0(lVar2,54,DAT_181d6a5e8);
                 FUN_181814fa0(lVar2,55,DAT_181d6a5e8);
                 FUN_181814fa0(lVar2,56,DAT_181d6a5e8);
-                plVar4 = (int64 *)(pStatics + 64);
-                *plVar4 = lVar2;
-                il2cpp_internal(plVar4,lVar2);
+                PlotController.FightResultPlotText = lVar2;
                 lVar2 = il2cpp_internal(DAT_181d6f830);
                 FUN_180f58a90(lVar2,DAT_181d6a570);
                 if (lVar2 != null) {
@@ -22102,9 +22110,7 @@ public class BattleController
                   FUN_181814fa0(lVar2,100,DAT_181d6a5e8);
                   FUN_181814fa0(lVar2,120,DAT_181d6a5e8);
                   FUN_181814fa0(lVar2,99,DAT_181d6a5e8);
-                  plVar4 = (int64 *)(pStatics + 72);
-                  *plVar4 = lVar2;
-                  il2cpp_internal(plVar4,lVar2);
+                  PlotController.StopWarNeedFavor = lVar2;
                   lVar2 = il2cpp_internal(DAT_181d72a30);
                   FUN_180f58a90(lVar2,DAT_181d7c250);
                   if (lVar2 != null) {
@@ -22115,9 +22121,7 @@ public class BattleController
                     FUN_181827900(lVar2,"略处上风",DAT_181d7c3d0);
                     FUN_181827900(lVar2,"游刃有余",DAT_181d7c3d0);
                     FUN_181827900(lVar2,"排山压卵",DAT_181d7c3d0);
-                    plVar4 = (int64 *)(pStatics + 88);
-                    *plVar4 = lVar2;
-                    il2cpp_internal(plVar4,lVar2);
+                    PlotController.FirstMeetTalkText = lVar2;
                     lVar2 = il2cpp_internal(DAT_181d721b0);
                     FUN_180f58a90(lVar2,DAT_181d79358);
                     if (lVar2 != null) {
@@ -22128,9 +22132,7 @@ public class BattleController
                       FUN_181805690(lVar2,0x3fb33333,DAT_181d79458);
                       FUN_181805690(lVar2,0x40000000,DAT_181d79458);
                       FUN_181805690(lVar2,0x7f800000,DAT_181d79458);
-                      plVar4 = (int64 *)(pStatics + 96);
-                      *plVar4 = lVar2;
-                      il2cpp_internal(plVar4,lVar2);
+                      PlotController.YoungHeroFightMatchResultString = lVar2;
                       lVar2 = il2cpp_internal(DAT_181d6f530);
                       FUN_180f58a90(lVar2,DAT_181d69a70);
                       if (lVar2 != null) {
@@ -22138,7 +22140,7 @@ public class BattleController
                         FUN_181814fa0(lVar2,1,DAT_181d69af0);
                         FUN_181814fa0(lVar2,5,DAT_181d69af0);
                         FUN_181814fa0(lVar2,4,DAT_181d69af0);
-                        plVar4 = (int64 *)(pStatics + 104);
+                        plVar4 = (int64 *)(pPlotController + 104);
                         *plVar4 = lVar2;
                         il2cpp_internal(plVar4,lVar2);
                         return;

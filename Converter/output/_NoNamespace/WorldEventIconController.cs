@@ -132,7 +132,7 @@ public class WorldEventIconController
               uVar6 = String.Format("{0}天",uVar6,0);
             }
             LTLocalization.SetText(uVar4,uVar6,0);
-            uVar4 = *(uint64 *)(*(int64 *)(DAT_181d66570 + 184) + 72);
+            uVar4 = MouseController.hoveredUI;
             uVar6 = Component.get_gameObject(this,0);
             cVar2 = Object.op_Equality(uVar4,uVar6,0);
             if (!cVar2) {
@@ -168,8 +168,7 @@ public class WorldEventIconController
     // RVA   : 0xB2A550   Offset: 0xB28D50   Length: 0x3EA
     public void OnClick()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         uint uVar1;
         long lVar2;
         bool cVar3;
@@ -180,13 +179,13 @@ public class WorldEventIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (*pStatics_df90 == 0) goto LAB_180b2a935;
-        cVar3 = GameController.HaveSpeUI(*pStatics_df90,1,0);
+        if (GameController._instance == null) goto LAB_180b2a935;
+        cVar3 = GameController.HaveSpeUI(GameController._instance,1,0);
         if (cVar3) {
           return;
         }
-        if ((*pStatics_e188 == 0) ||
-           (lVar4 = *(int64 *)(*pStatics_e188 + 32)) == null)
+        if ((*pStatics == 0) ||
+           (lVar4 = *(int64 *)(*pStatics + 32)) == null)
         goto LAB_180b2a935;
         cVar3 = GameObject.get_activeSelf(lVar4,0);
         if (!cVar3) {

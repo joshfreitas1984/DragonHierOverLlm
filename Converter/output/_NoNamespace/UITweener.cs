@@ -91,8 +91,6 @@ public class UITweener
     // RVA   : 0x9D58E0   Offset: 0x9D40E0   Length: 0x6
     public float get_tweenFactor()
     {
-        uint32 FUN_1809d58e0(int64 this)
-        {
         return this.mFactor;
     }
 
@@ -136,8 +134,6 @@ public class UITweener
     // RVA   : 0x9D55B0   Offset: 0x9D3DB0   Length: 0x7
     protected virtual void Start()
     {
-        void FUN_1809d55b0(uint64 this)
-        {
         UITweener.DoUpdate(this,0);
     }
 
@@ -145,8 +141,6 @@ public class UITweener
     // RVA   : 0x9D5610   Offset: 0x9D3E10   Length: 0xE
     protected void Update()
     {
-        void FUN_1809d5610(int64 this)
-        {
         if (!this.useFixedUpdate) {
           UITweener.DoUpdate(this,0);
           return;
@@ -157,8 +151,6 @@ public class UITweener
     // RVA   : 0x9D5170   Offset: 0x9D3970   Length: 0xE
     protected void FixedUpdate()
     {
-        void FUN_1809d5170(int64 this)
-        {
         if (this.useFixedUpdate) {
           UITweener.DoUpdate(this,0);
           return;
@@ -363,8 +355,6 @@ public class UITweener
     // RVA   : 0x9D5180   Offset: 0x9D3980   Length: 0x5
     private void OnDisable()
     {
-        void FUN_1809d5180(int64 this)
-        {
         this.mStarted = 0;
     }
 

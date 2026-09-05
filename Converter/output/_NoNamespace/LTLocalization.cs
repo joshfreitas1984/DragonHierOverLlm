@@ -54,7 +54,7 @@ public class LTLocalization
     {
         bool cVar1;
         long lVar2;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar2 = GameController.difficultyExtraPoint;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
           lVar2 = PlayerPrefDictionary.GetString(lVar2,"Language",0);
           if (lVar2 != null) {
@@ -86,7 +86,6 @@ public class LTLocalization
     // RVA   : 0xA83910   Offset: 0xA82110   Length: 0x6FB
     private void ReadData()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         int iVar1;
         long lVar2;
         bool cVar3;
@@ -96,7 +95,7 @@ public class LTLocalization
         long lVar8;
         int iVar9;
         int iVar10;
-        lVar6 = *(int64 *)(pStatics + 8);
+        lVar6 = GameController.difficultyExtraPoint;
         if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 16)) != null) {
           uVar4 = PlayerPrefDictionary.GetString(lVar6,"Language",0);
           cVar3 = FUN_1816fd990(uVar4,"CN",0);
@@ -141,11 +140,11 @@ public class LTLocalization
                   }
                 }
 
-                if ((lVar2 = *(int64 *)(pStatics + 8)?.buckets) != null) {
+                if ((lVar2 = GameController.difficultyExtraPoint?.buckets) != null) {
                   uVar4 = PlayerPrefDictionary.GetString(lVar2,"Language",0);
                   iVar9 = LTCSVLoader.GetFirstIndexAtRow(lVar6,uVar4,0,0);
                   if (iVar9 == -1) {
-                    lVar6 = *(int64 *)(pStatics + 8);
+                    lVar6 = GameController.difficultyExtraPoint;
                     if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 16)) != null) {
                       uVar4 = PlayerPrefDictionary.GetString(lVar6,"Language",0);
                       uVar4 = String.Concat("未读取到",uVar4,"任何数据，请检查配置表",0);
@@ -155,7 +154,7 @@ public class LTLocalization
                   }
                   else {
 
-                    if ((lVar2 = *(int64 *)(pStatics + 8)?.buckets) != null) {
+                    if ((lVar2 = GameController.difficultyExtraPoint?.buckets) != null) {
                       uVar4 = PlayerPrefDictionary.GetString(lVar2,"Language",0);
                       uVar4 = String.Concat("[Language]",uVar4,"翻译文件已读取",0);
                       Debug.Log(uVar4,0);
@@ -206,7 +205,7 @@ public class LTLocalization
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar2 = "CN";
@@ -224,8 +223,7 @@ public class LTLocalization
     // RVA   : 0xA834C0   Offset: 0xA81CC0   Length: 0x2B1
     public static void Init()
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_f6f8 = *(int64*)(DAT_181d5f6f8 + 184);
+        var pStatics = *(int64*)(DAT_181d5f6f8 + 184);
         bool cVar2;
         int iVar3;
         uint uVar4;
@@ -235,35 +233,35 @@ public class LTLocalization
         puVar1 = *(uint64 **)(DAT_181d5f6f8 + 184);
         *puVar1 = uVar5;
         il2cpp_internal(puVar1,uVar5);
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
-          lVar6 = *pStatics_f6f8;
+        if (PlotController._instance == 2) {
+          lVar6 = *pStatics;
           if (lVar6 == null) throw; // [null/range check failed]
           uVar4 = 40;
         LAB_180a8370b:
           LTLocalization.SetLanguage(lVar6,uVar4,0);
         }
         else {
-          lVar6 = *(int64 *)(pStatics_e010 + 8);
+          lVar6 = GameController.difficultyExtraPoint;
           if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 16)) == null) throw; // [null/range check failed]
           cVar2 = PlayerPrefDictionary.ContainsKey(lVar6,"Language",0);
           if (!cVar2) {
             iVar3 = Application.get_systemLanguage(0);
             if (iVar3 != 42) {
-              lVar6 = *pStatics_f6f8;
+              lVar6 = *pStatics;
               uVar4 = Application.get_systemLanguage(0);
               if (lVar6 == null) throw; // [null/range check failed]
               goto LAB_180a8370b;
             }
-            if (*pStatics_f6f8 == 0) throw; // [null/range check failed]
-            lVar6 = *(int64 *)(pStatics_e010 + 8);
+            if (*pStatics == 0) throw; // [null/range check failed]
+            lVar6 = GameController.difficultyExtraPoint;
             if (lVar6 == null) throw; // [null/range check failed]
             lVar6 = *(int64 *)(lVar6 + 16);
             if (lVar6 == null) throw; // [null/range check failed]
             PlayerPrefDictionary.SetKey(lVar6,"Language","CN",0);
           }
         }
-        if (*pStatics_f6f8 != 0) {
-          LTLocalization.ReadData(*pStatics_f6f8,0);
+        if (*pStatics != 0) {
+          LTLocalization.ReadData(*pStatics,0);
           ZhConverter.Initialize("Dictionary","JiebaResource",0,0);
           return;
         }
@@ -285,7 +283,7 @@ public class LTLocalization
           *puVar1 = uVar4;
           il2cpp_internal(puVar1,uVar4);
         }
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar2 = GameController.difficultyExtraPoint;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
           uVar4 = PlayerPrefDictionary.GetString(lVar2,"Language",0);
           uVar5 = "CN";
@@ -340,7 +338,7 @@ public class LTLocalization
     // RVA   : 0xA82B00   Offset: 0xA81300   Length: 0x2EA
     public static void CheckTextFont(Text targetText)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -353,7 +351,7 @@ public class LTLocalization
           if (cVar1) {
             return;
           }
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+          lVar3 = GameController.difficultyExtraPoint;
           if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
             uVar2 = PlayerPrefDictionary.GetString(lVar3,"Language",0);
             cVar1 = FUN_1816fd990(uVar2,"TC",0);
@@ -362,12 +360,12 @@ public class LTLocalization
             }
             iVar5 = 0;
             while( true ) {
-              lVar3 = *(int64 *)(pStatics + 224);
+              lVar3 = *(int64 *)(pPlotController + 224);
               if (lVar3 == null) throw; // [null/range check failed]
               if (*(int *)(lVar3 + 24) <= iVar5) {
                 return;
               }
-              lVar3 = *(int64 *)(pStatics + 224);
+              lVar3 = *(int64 *)(pPlotController + 224);
               if ((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,iVar5,DAT_181d51e08)) == null)
               throw; // [null/range check failed]
               if (*(int *)(lVar3 + 24) == 0) {
@@ -381,7 +379,7 @@ public class LTLocalization
               if (cVar1) break;
               iVar5 = iVar5 + 1;
             }
-            lVar3 = *(int64 *)(pStatics + 224);
+            lVar3 = *(int64 *)(pPlotController + 224);
             if ((lVar3 != null) && (lVar3 = FUN_180002f80(lVar3,iVar5,DAT_181d51e08)) != null) {
               if (*(uint32 *)(lVar3 + 24) < 2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -431,7 +429,6 @@ public class LTLocalization
     // RVA   : 0xA83050   Offset: 0xA81850   Length: 0x461
     public static string GetText(string key, bool justReplace, bool needCheckReplace)
     {
-        var pStatics = *(int64*)(DAT_181d85f70 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
@@ -448,12 +445,12 @@ public class LTLocalization
         cVar2 = GlobalData.IsCheckVersion(1,0);
         lVar3 = key;
         if (!cVar2) {
-          if (*(char *)(*(int64 *)(DAT_181d4ef00 + 184) + 4) == false) {
+          if (*(char *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4) == false) {
         LAB_180a8333f:
             if (justReplace) {
               return lVar3;
             }
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+            lVar1 = GameController.difficultyExtraPoint;
             if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
               uVar4 = PlayerPrefDictionary.GetString(lVar1,"Language",0);
               cVar2 = FUN_1816fd990(uVar4,"CN",0);
@@ -474,9 +471,10 @@ public class LTLocalization
         if (!needCheckReplace) {
         LAB_180a83280:
           do {
-            if (*pStatics == 0) throw; // [null/range check failed]
-            if (*(int *)(*pStatics + 24) <= (int)uVar5) goto LAB_180a8333f;
-            lVar1 = *pStatics;
+            if (TextReplaceData.ForceReplaceTexts == null) throw; // [null/range check failed]
+            if (*(int *)(TextReplaceData.ForceReplaceTexts + 24) <= (int)uVar5)
+            goto LAB_180a8333f;
+            lVar1 = TextReplaceData.ForceReplaceTexts;
             if (lVar1 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar1 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
@@ -502,10 +500,10 @@ public class LTLocalization
         }
         uVar6 = 0;
         while( true ) {
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = TextReplaceData.ReplaceTexts;
           if (lVar1 == null) break;
           if (*(int *)(lVar1 + 24) <= (int)uVar6) goto LAB_180a83280;
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = TextReplaceData.ReplaceTexts;
           if (lVar1 == null) break;
           if (*(uint32 *)(lVar1 + 24) <= uVar6) {
             uVar4 = il2cpp_internal();

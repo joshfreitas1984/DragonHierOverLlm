@@ -45,13 +45,12 @@ public class ShakeCam
     // RVA   : 0x96AFC0   Offset: 0x9697C0   Length: 0x3C0
     public void StartShake(ShakeStrengthType targetShakeStrength, bool shakeUI)
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         long lVar1;
         int iVar2;
         ulong uVar3;
         ulong uVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           iVar2 = PlayerPrefDictionary.GetInt(lVar1,"noShake",0);
           if ((iVar2 == 1) || (targetShakeStrength < this.shakeStrengthType)) {
@@ -61,8 +60,9 @@ public class ShakeCam
           lVar1 = this.cam;
           while (lVar1 != null) {
             if (*(int *)(lVar1 + 24) <= (int)uVar5) {
-              if ((*pStatics != 0) &&
-                 (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+              if ((PlotController._instance != null) &&
+                 (lVar1 = PlotController._instance.plotPanel,
+                 lVar1 != null)) {
                 uVar4 = GameObject.get_transform(lVar1,0);
                 ShortcutExtensions.DOComplete(uVar4,0,0);
                 this.shakeStrengthType = targetShakeStrength;
@@ -97,8 +97,9 @@ public class ShakeCam
                   if (!shakeUI) {
                     return;
                   }
-                  if ((*pStatics != 0) &&
-                     (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+                  if ((PlotController._instance != null) &&
+                     (lVar1 = PlotController._instance.plotPanel,
+                     lVar1 != null)) {
                     uVar4 = GameObject.get_transform(lVar1,0);
                     ShortcutExtensions.DOShakePosition
                               (uVar4,this.shakeTime,this.shakeDelta * 400.0,
@@ -126,8 +127,6 @@ public class ShakeCam
     // RVA   : 0x96B3A0   Offset: 0x969BA0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_18096b3a0(int64 this)
-        {
         this.shakeDelta = 0x3e19999a;
         this.shakeTime = 0x3dcccccd;
         FUN_18044ef50(this,0);
@@ -137,8 +136,6 @@ public class ShakeCam
     // RVA   : 0x96B390   Offset: 0x969B90   Length: 0x8
     private void <StartShake>b__9_0()
     {
-        void FUN_18096b390(int64 this)
-        {
         this.shakeStrengthType = 0;
     }
 

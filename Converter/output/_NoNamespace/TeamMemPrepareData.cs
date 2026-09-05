@@ -47,7 +47,6 @@ public class TeamMemPrepareData
     // RVA   : 0xABDBF0   Offset: 0xABC3F0   Length: 0x336
     public bool PrepareControlable()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         uint uVar1;
         int iVar2;
         bool cVar3;
@@ -58,24 +57,24 @@ public class TeamMemPrepareData
         if ((!lVar4.inTeam) || (lVar4.teamLeader != null)) {
           cVar3 = HeroData.IsPlayerSameForce(lVar4,0);
           if (cVar3) {
-            if (((*pStatics == 0) ||
-                (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
-               (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
+            if (((GameController._instance == null) ||
+                (lVar4 = GameController._instance.worldData,
+                lVar4 == null)) || (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
             if (lVar4.isLeader) goto LAB_180abdd0d;
           }
         LAB_180abdde1:
-          uVar5 = *(uint64 *)(DAT_181d8b128 + 184);
+          uVar5 = *(uint64 *)(PlotController_StaticsPtr + 184);
           if (uVar5.heroAISettingData == null) throw; // [null/range check failed]
           if (*(int *)(uVar5.heroAISettingData + 140) < 0) goto LAB_180abdf14;
           iVar2 = this.teamID;
-          uVar5 = *(uint64 *)(DAT_181d8b128 + 184);
+          uVar5 = *(uint64 *)(PlotController_StaticsPtr + 184);
           if (uVar5.heroAISettingData == null) throw; // [null/range check failed]
           if (iVar2 != *(int *)(uVar5.heroAISettingData + 140)) goto LAB_180abdf14;
         }
         else {
         LAB_180abdd0d:
 
-          if ((lVar4 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80)?.heroFamilyName) == null) throw; // [null/range check failed]
+          if ((lVar4 = PlotController.StopWarCostFavor?.heroFamilyName) == null) throw; // [null/range check failed]
           uVar1 = this.teamID;
           if (lVar4.summonLv <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);

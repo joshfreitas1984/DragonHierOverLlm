@@ -173,8 +173,6 @@ public class UILabel
     // RVA   : 0x10FC600   Offset: 0x10FAE00   Length: 0x8
     private bool get_shouldBeProcessed()
     {
-        uint8 FUN_1810fc600(int64 this)
-        {
         return this.mShouldBeProcessed;
     }
 
@@ -182,8 +180,6 @@ public class UILabel
     // RVA   : 0x10FD000   Offset: 0x10FB800   Length: 0x17
     private void set_shouldBeProcessed(bool value)
     {
-        void FUN_1810fd000(int64 this,char value)
-        {
         if (!value) {
           this.mShouldBeProcessed = 0;
           return;
@@ -250,8 +246,6 @@ public class UILabel
     // RVA   : 0x10FCE80   Offset: 0x10FB680   Length: 0x8
     public override void set_material(Material value)
     {
-        void FUN_1810fce80(uint64 this,uint64 value)
-        {
         UIWidget.set_material(this,value,0);
     }
 
@@ -291,8 +285,6 @@ public class UILabel
     // RVA   : 0x10FCE70   Offset: 0x10FB670   Length: 0x8
     public override void set_mainTexture(Texture value)
     {
-        void FUN_1810fce70(uint64 this,uint64 value)
-        {
         UIWidget.set_mainTexture(this,value,0);
     }
 
@@ -471,8 +463,6 @@ public class UILabel
     // RVA   : 0x10FC660   Offset: 0x10FAE60   Length: 0x8
     public string get_text()
     {
-        uint64 FUN_1810fc660(int64 this)
-        {
         return this.mText;
     }
 
@@ -534,8 +524,6 @@ public class UILabel
     // RVA   : 0x10FBDB0   Offset: 0x10FA5B0   Length: 0x7
     public int get_fontSize()
     {
-        uint32 FUN_1810fbdb0(int64 this)
-        {
         return this.mFontSize;
     }
 
@@ -558,8 +546,6 @@ public class UILabel
     // RVA   : 0x10FBDC0   Offset: 0x10FA5C0   Length: 0x7
     public FontStyle get_fontStyle()
     {
-        uint32 FUN_1810fbdc0(int64 this)
-        {
         return this.mFontStyle;
     }
 
@@ -580,8 +566,6 @@ public class UILabel
     // RVA   : 0x10FB9D0   Offset: 0x10FA1D0   Length: 0x7
     public Alignment get_alignment()
     {
-        uint32 FUN_1810fb9d0(int64 this)
-        {
         return this.mAlignment;
     }
 
@@ -602,8 +586,6 @@ public class UILabel
     // RVA   : 0x10FBA70   Offset: 0x10FA270   Length: 0x8
     public bool get_applyGradient()
     {
-        uint8 FUN_1810fba70(int64 this)
-        {
         return this.mApplyGradient;
     }
 
@@ -611,8 +593,6 @@ public class UILabel
     // RVA   : 0x10FC960   Offset: 0x10FB160   Length: 0x20
     public void set_applyGradient(bool value)
     {
-        void FUN_1810fc960(int64 *this,char value)
-        {
         if ((char)this[60] != value) {
           *(char *)(this + 60) = value;
                           // WARNING: Could not recover jumptable at 0x0001810fc978. Too many branches
@@ -626,9 +606,7 @@ public class UILabel
     // RVA   : 0x10FBE90   Offset: 0x10FA690   Length: 0xE
     public Color get_gradientTop()
     {
-        uint64 * FUN_1810fbe90(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1ec);
         *this = *(uint64 *)(param_2 + 0x1e4);
         this[1] = uVar1;
@@ -674,9 +652,7 @@ public class UILabel
     // RVA   : 0x10FBE80   Offset: 0x10FA680   Length: 0xE
     public Color get_gradientBottom()
     {
-        uint64 * FUN_1810fbe80(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1fc);
         *this = *(uint64 *)(param_2 + 500);
         this[1] = uVar1;
@@ -722,8 +698,6 @@ public class UILabel
     // RVA   : 0x10FC620   Offset: 0x10FAE20   Length: 0x7
     public int get_spacingX()
     {
-        uint32 FUN_1810fc620(int64 this)
-        {
         return this.mSpacingX;
     }
 
@@ -731,8 +705,6 @@ public class UILabel
     // RVA   : 0x10FD050   Offset: 0x10FB850   Length: 0x20
     public void set_spacingX(int value)
     {
-        void FUN_1810fd050(int64 *this,int value)
-        {
         if (*(int *)((int64)this + 0x204) != value) {
           *(int *)((int64)this + 0x204) = value;
                           // WARNING: Could not recover jumptable at 0x0001810fd068. Too many branches
@@ -746,8 +718,6 @@ public class UILabel
     // RVA   : 0x10FC630   Offset: 0x10FAE30   Length: 0x7
     public int get_spacingY()
     {
-        uint32 FUN_1810fc630(int64 this)
-        {
         return this.mSpacingY;
     }
 
@@ -755,8 +725,6 @@ public class UILabel
     // RVA   : 0x10FD070   Offset: 0x10FB870   Length: 0x20
     public void set_spacingY(int value)
     {
-        void FUN_1810fd070(int64 *this,int value)
-        {
         if ((int)this[65] != value) {
           *(int *)(this + 65) = value;
                           // WARNING: Could not recover jumptable at 0x0001810fd088. Too many branches
@@ -770,8 +738,6 @@ public class UILabel
     // RVA   : 0x10FC750   Offset: 0x10FAF50   Length: 0x8
     public bool get_useFloatSpacing()
     {
-        uint8 FUN_1810fc750(int64 this)
-        {
         return this.mUseFloatSpacing;
     }
 
@@ -779,8 +745,6 @@ public class UILabel
     // RVA   : 0x10FD2D0   Offset: 0x10FBAD0   Length: 0x1A
     public void set_useFloatSpacing(bool value)
     {
-        void FUN_1810fd2d0(int64 this,char value)
-        {
         if (this.mUseFloatSpacing != value) {
           this.mUseFloatSpacing = value;
           *(uint8 *)(this + 88) = 1;
@@ -792,8 +756,6 @@ public class UILabel
     // RVA   : 0x10FBD90   Offset: 0x10FA590   Length: 0x9
     public float get_floatSpacingX()
     {
-        uint32 FUN_1810fbd90(int64 this)
-        {
         return this.mFloatSpacingX;
     }
 
@@ -814,8 +776,6 @@ public class UILabel
     // RVA   : 0x10FBDA0   Offset: 0x10FA5A0   Length: 0x9
     public float get_floatSpacingY()
     {
-        uint32 FUN_1810fbda0(int64 this)
-        {
         return this.mFloatSpacingY;
     }
 
@@ -845,8 +805,6 @@ public class UILabel
     // RVA   : 0x10FBCC0   Offset: 0x10FA4C0   Length: 0x1E
     public float get_effectiveSpacingX()
     {
-        void FUN_1810fbcc0(int64 this)
-        {
         if (this.mUseFloatSpacing) {
           return;
         }
@@ -856,8 +814,6 @@ public class UILabel
     // RVA   : 0xA76B40   Offset: 0xA75340   Length: 0x8
     public bool get_overflowEllipsis()
     {
-        uint8 FUN_180a76b40(int64 this)
-        {
         return this.mOverflowEllipsis;
     }
 
@@ -865,8 +821,6 @@ public class UILabel
     // RVA   : 0x10FCF60   Offset: 0x10FB760   Length: 0x20
     public void set_overflowEllipsis(bool value)
     {
-        void FUN_1810fcf60(int64 *this,char value)
-        {
         if ((char)this[67] != value) {
           *(char *)(this + 67) = value;
                           // WARNING: Could not recover jumptable at 0x0001810fcf78. Too many branches
@@ -880,8 +834,6 @@ public class UILabel
     // RVA   : 0x10FC360   Offset: 0x10FAB60   Length: 0x7
     public int get_overflowWidth()
     {
-        uint32 FUN_1810fc360(int64 this)
-        {
         return this.mOverflowWidth;
     }
 
@@ -889,8 +841,6 @@ public class UILabel
     // RVA   : 0x10FCFD0   Offset: 0x10FB7D0   Length: 0x29
     public void set_overflowWidth(int value)
     {
-        void FUN_1810fcfd0(int64 *this,int value)
-        {
         int iVar1;
         iVar1 = 0;
         if (-1 < value) {
@@ -909,8 +859,6 @@ public class UILabel
     // RVA   : 0xF020F0   Offset: 0xF008F0   Length: 0x7
     public int get_overflowHeight()
     {
-        uint32 FUN_180f020f0(int64 this)
-        {
         return this.mOverflowHeight;
     }
 
@@ -918,8 +866,6 @@ public class UILabel
     // RVA   : 0x10FCF80   Offset: 0x10FB780   Length: 0x29
     public void set_overflowHeight(int value)
     {
-        void FUN_1810fcf80(int64 *this,int value)
-        {
         int iVar1;
         iVar1 = 0;
         if (-1 < value) {
@@ -952,8 +898,6 @@ public class UILabel
     // RVA   : 0x10FC640   Offset: 0x10FAE40   Length: 0x8
     public bool get_supportEncoding()
     {
-        uint8 FUN_1810fc640(int64 this)
-        {
         return this.mEncoding;
     }
 
@@ -961,8 +905,6 @@ public class UILabel
     // RVA   : 0x10FD090   Offset: 0x10FB890   Length: 0x1A
     public void set_supportEncoding(bool value)
     {
-        void FUN_1810fd090(int64 this,char value)
-        {
         if (this.mEncoding != value) {
           this.mEncoding = value;
           *(uint8 *)(this + 88) = 1;
@@ -974,8 +916,6 @@ public class UILabel
     // RVA   : 0x10FC650   Offset: 0x10FAE50   Length: 0x7
     public SymbolStyle get_symbolStyle()
     {
-        uint32 FUN_1810fc650(int64 this)
-        {
         return this.mSymbols;
     }
 
@@ -994,8 +934,6 @@ public class UILabel
     // RVA   : 0x10FC350   Offset: 0x10FAB50   Length: 0x7
     public Overflow get_overflowMethod()
     {
-        uint32 FUN_1810fc350(int64 this)
-        {
         return this.mOverflow;
     }
 
@@ -1014,8 +952,6 @@ public class UILabel
     // RVA   : 0x9D9CB0   Offset: 0x9D84B0   Length: 0x7
     public int get_lineWidth()
     {
-        uint32 FUN_1809d9cb0(int64 this)
-        {
         return *(uint32 *)(this + 164);
     }
 
@@ -1023,8 +959,6 @@ public class UILabel
     // RVA   : 0x10FCE60   Offset: 0x10FB660   Length: 0x8
     public void set_lineWidth(int value)
     {
-        void FUN_1810fce60(uint64 this,uint64 value)
-        {
         UIWidget.set_width(this,value,0);
     }
 
@@ -1032,8 +966,6 @@ public class UILabel
     // RVA   : 0x9D96C0   Offset: 0x9D7EC0   Length: 0x7
     public int get_lineHeight()
     {
-        uint32 FUN_1809d96c0(int64 this)
-        {
         return *(uint32 *)(this + 168);
     }
 
@@ -1041,8 +973,6 @@ public class UILabel
     // RVA   : 0x10FCE50   Offset: 0x10FB650   Length: 0x8
     public void set_lineHeight(int value)
     {
-        void FUN_1810fce50(uint64 this,uint64 value)
-        {
         UIWidget.set_height(this,value,0);
     }
 
@@ -1050,8 +980,6 @@ public class UILabel
     // RVA   : 0x10FC340   Offset: 0x10FAB40   Length: 0xB
     public bool get_multiLine()
     {
-        bool FUN_1810fc340(int64 this)
-        {
         return this.mMaxLineCount != 1;
     }
 
@@ -1059,8 +987,6 @@ public class UILabel
     // RVA   : 0x10FCF30   Offset: 0x10FB730   Length: 0x2C
     public void set_multiLine(bool value)
     {
-        void FUN_1810fcf30(int64 this,byte value)
-        {
         if ((uint32)(this.mMaxLineCount != 1) != (uint32)value) {
           *(uint8 *)(this + 88) = 1;
           this.mMaxLineCount = value ^ 1;
@@ -1108,8 +1034,6 @@ public class UILabel
     // RVA   : 0x10FC320   Offset: 0x10FAB20   Length: 0x7
     public int get_maxLineCount()
     {
-        uint32 FUN_1810fc320(int64 this)
-        {
         return this.mMaxLineCount;
     }
 
@@ -1136,8 +1060,6 @@ public class UILabel
     // RVA   : 0x10FBCB0   Offset: 0x10FA4B0   Length: 0x7
     public Effect get_effectStyle()
     {
-        uint32 FUN_1810fbcb0(int64 this)
-        {
         return this.mEffectStyle;
     }
 
@@ -1145,8 +1067,6 @@ public class UILabel
     // RVA   : 0x10FCBD0   Offset: 0x10FB3D0   Length: 0x1A
     public void set_effectStyle(Effect value)
     {
-        void FUN_1810fcbd0(int64 this,int value)
-        {
         if (this.mEffectStyle != value) {
           this.mEffectStyle = value;
           *(uint8 *)(this + 88) = 1;
@@ -1158,9 +1078,7 @@ public class UILabel
     // RVA   : 0x10FBC80   Offset: 0x10FA480   Length: 0xE
     public Color get_effectColor()
     {
-        uint64 * FUN_1810fbc80(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1c8);
         *this = *(uint64 *)(param_2 + 0x1c0);
         this[1] = uVar1;
@@ -1201,8 +1119,6 @@ public class UILabel
     // RVA   : 0x10FBC90   Offset: 0x10FA490   Length: 0x19
     public Vector2 get_effectDistance()
     {
-        uint64 FUN_1810fbc90(int64 this)
-        {
         return this.mEffectDistance;
     }
 
@@ -1210,8 +1126,6 @@ public class UILabel
     // RVA   : 0x10FCB70   Offset: 0x10FB370   Length: 0x51
     public void set_effectDistance(Vector2 value)
     {
-        void FUN_1810fcb70(int64 this,uint64 value)
-        {
         float fVar1;
         float fVar2;
         fVar1 = this.mEffectDistance - (float)value;
@@ -1247,8 +1161,6 @@ public class UILabel
     // RVA   : 0x10FC610   Offset: 0x10FAE10   Length: 0xB
     public bool get_shrinkToFit()
     {
-        bool FUN_1810fc610(int64 this)
-        {
         return this.mOverflow == null;
     }
 
@@ -1256,8 +1168,6 @@ public class UILabel
     // RVA   : 0x10FD020   Offset: 0x10FB820   Length: 0x23
     public void set_shrinkToFit(bool value)
     {
-        void FUN_1810fd020(int64 this,char value)
-        {
         if ((value) && (this.mOverflow != null)) {
           this.mOverflow = 0;
           *(uint8 *)(this + 88) = 1;
@@ -1325,8 +1235,6 @@ public class UILabel
     // RVA   : 0x10FC330   Offset: 0x10FAB30   Length: 0x7
     public Modifier get_modifier()
     {
-        uint32 FUN_1810fc330(int64 this)
-        {
         return this.mModifier;
     }
 
@@ -1346,11 +1254,10 @@ public class UILabel
     // RVA   : 0x10F91E0   Offset: 0x10F79E0   Length: 0xA3
     protected override void OnInit()
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         ulong uVar1;
         UIWidget.OnInit(this,0);
-        if (*pStatics != 0) {
-          FUN_18154cb60(*pStatics,this,DAT_181d81a98);
+        if (UILabel.mList != null) {
+          FUN_18154cb60(UILabel.mList,this,DAT_181d81a98);
           uVar1 = UILabel.get_trueTypeFont(this,0);
           UILabel.SetActiveFont(this,uVar1,0);
           return;
@@ -1361,10 +1268,9 @@ public class UILabel
     // RVA   : 0x10F8620   Offset: 0x10F6E20   Length: 0x98
     protected override void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         UILabel.SetActiveFont(this,0,0);
-        if (*pStatics != 0) {
-          FUN_18154eb70(*pStatics,this,DAT_181d81b18);
+        if (UILabel.mList != null) {
+          FUN_18154eb70(UILabel.mList,this,DAT_181d81b18);
           UIWidget.OnDisable(this,0);
           return;
         }
@@ -1374,7 +1280,6 @@ public class UILabel
     // RVA   : 0x10FA4B0   Offset: 0x10F8CB0   Length: 0x292
     protected void SetActiveFont(Font fnt)
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -1386,19 +1291,19 @@ public class UILabel
           uVar1 = this.mActiveTTF;
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
-            lVar2 = *(int64 *)(pStatics + 8);
+            lVar2 = UILabel.mFontUsage;
             if (lVar2 == null) goto LAB_1810fa73d;
             cVar3 = FUN_181783810(lVar2,uVar1,local_res8,DAT_181d8ffc0);
             if (cVar3) {
               local_res8[0] = local_res8[0] + -1;
               local_res8[0] = Mathf.Max(0,local_res8[0],0);
               if (local_res8[0] == 0) {
-                lVar2 = *(int64 *)(pStatics + 8);
+                lVar2 = UILabel.mFontUsage;
                 if (lVar2 == null) goto LAB_1810fa73d;
                 FUN_181779c50(lVar2,uVar1,DAT_181d8ff38);
               }
               else {
-                lVar2 = *(int64 *)(pStatics + 8);
+                lVar2 = UILabel.mFontUsage;
                 if (lVar2 == null) goto LAB_1810fa73d;
                 FUN_1808aec90(lVar2,uVar1,local_res8[0],DAT_181d90048);
               }
@@ -1407,7 +1312,7 @@ public class UILabel
           this.mActiveTTF = fnt;
           cVar3 = Object.op_Inequality(fnt,0,0);
           if (cVar3) {
-            lVar2 = *(int64 *)(pStatics + 8);
+            lVar2 = UILabel.mFontUsage;
             if (lVar2 == null) {
         LAB_1810fa73d:
                           // WARNING: Subroutine does not return
@@ -1458,7 +1363,6 @@ public class UILabel
     // RVA   : 0x10F8CC0   Offset: 0x10F74C0   Length: 0x51B
     private static void OnFontChanged(Font font)
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         int iVar1;
         bool cVar3;
         long lVar4;
@@ -1468,10 +1372,10 @@ public class UILabel
         uVar8 = 0;
         uVar7 = uVar8;
         while( true ) {
-          if (*pStatics == 0) throw; // [null/range check failed]
-          if (*(int *)(*pStatics + 24) <= (int)uVar7) break;
-          if ((*pStatics == 0) ||
-             (lVar4 = *(int64 *)(*pStatics + 16)) == null)
+          if (UILabel.mList == null) throw; // [null/range check failed]
+          if (*(int *)(UILabel.mList + 24) <= (int)uVar7) break;
+          if ((UILabel.mList == null) ||
+             (lVar4 = *(int64 *)(UILabel.mList + 16)) == null)
           throw; // [null/range check failed]
           if (*(uint32 *)(lVar4 + 24) <= uVar7) {
             uVar5 = il2cpp_internal();
@@ -1495,20 +1399,18 @@ public class UILabel
               if (cVar3) {
                 UIWidget.CreatePanel(plVar2,0);
               }
-              if (*(int64 *)(pStatics + 16) == 0) {
+              if (UILabel.mTempDrawcalls == null) {
                 uVar5 = new BetterList_1(DAT_181d81518);
-                puVar6 = (uint64 *)(pStatics + 16);
-                *puVar6 = uVar5;
-                il2cpp_internal(puVar6,uVar5);
+                UILabel.mTempDrawcalls = uVar5;
               }
               lVar4 = plVar2[43];
               cVar3 = Object.op_Inequality(lVar4,0,0);
               if (cVar3) {
-                lVar4 = *(int64 *)(pStatics + 16);
+                lVar4 = UILabel.mTempDrawcalls;
                 if (lVar4 == null) throw; // [null/range check failed]
                 cVar3 = FUN_18154d3d0(lVar4,plVar2[43]);
                 if (!cVar3) {
-                  lVar4 = *(int64 *)(pStatics + 16);
+                  lVar4 = UILabel.mTempDrawcalls;
                   if (lVar4 == null) throw; // [null/range check failed]
                   FUN_18154cb60(lVar4,plVar2[43]);
                 }
@@ -1517,10 +1419,10 @@ public class UILabel
           }
           uVar7 = uVar7 + 1;
         }
-        if (*(int64 *)(pStatics + 16) == 0) {
+        if (UILabel.mTempDrawcalls == null) {
           return;
         }
-        lVar4 = *(int64 *)(pStatics + 16);
+        lVar4 = UILabel.mTempDrawcalls;
         if (lVar4 != null) {
           iVar1 = *(int *)(lVar4 + 24);
           if (iVar1 < 1) goto LAB_1810f9161;
@@ -1544,11 +1446,11 @@ public class UILabel
           uVar8 = uVar8 + 1;
           if (iVar1 <= (int)uVar8) break;
         LAB_1810f90b0:
-          lVar4 = *(int64 *)(pStatics + 16);
+          lVar4 = UILabel.mTempDrawcalls;
           if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 16)) == null) throw; // [null/range check failed]
         }
         LAB_1810f9161:
-        lVar4 = *(int64 *)(pStatics + 16);
+        lVar4 = UILabel.mTempDrawcalls;
         if (lVar4 != null) {
           BetterList_1.Clear(lVar4,DAT_181d81618);
           return;
@@ -1668,11 +1570,10 @@ public class UILabel
     // RVA   : 0x10F86C0   Offset: 0x10F6EC0   Length: 0xEA
     protected override void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         ulong uVar1;
         UIRect.OnEnable(this,0);
-        if (*(char *)(pStatics + 24) == false) {
-          *(uint8 *)(pStatics + 24) = 1;
+        if (!UILabel.mTexRebuildAdded) {
+          UILabel.mTexRebuildAdded = 1;
           uVar1 = new OnTooltipCB(0,DAT_181d9cb80,DAT_181d72588);
           Font.add_textureRebuilt(uVar1,0);
           return;
@@ -1730,8 +1631,6 @@ public class UILabel
     // RVA   : 0x10F8480   Offset: 0x10F6C80   Length: 0x12
     public override void MarkAsChanged()
     {
-        void FUN_1810f8480(int64 this)
-        {
         *(uint8 *)(this + 88) = 1;
         this.mShouldBeProcessed = 1;
         UIWidget.MarkAsChanged(this,0);
@@ -1741,7 +1640,6 @@ public class UILabel
     // RVA   : 0x10F9880   Offset: 0x10F8080   Length: 0xC29
     public void ProcessText(bool legacyMode, bool full)
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
         float fVar1;
         bool cVar2;
         bool cVar3;
@@ -1775,7 +1673,7 @@ public class UILabel
             iVar12 = *(int *)((int64)this + 0x22c);
           }
         }
-        *(int *)(pStatics + 60) = iVar12;
+        NGUIText.rectWidth = iVar12;
         if (!legacyMode) {
           iVar12 = (int)this[21];
         }
@@ -1785,21 +1683,23 @@ public class UILabel
             iVar12 = (int)this[70];
           }
         }
-        *(int *)(pStatics + 64) = iVar12;
+        NGUIText.rectHeight = iVar12;
         if (fVar14 == 1.0) {
-          uVar4 = *(uint32 *)(pStatics + 60);
+          uVar4 = NGUIText.rectWidth;
         }
         else {
-          uVar4 = Mathf.RoundToInt((float)*(int *)(pStatics + 60) * fVar14);
+          uVar4 = Mathf.RoundToInt((float)NGUIText.rectWidth *
+                                    fVar14);
         }
-        *(uint32 *)(pStatics + 68) = uVar4;
+        NGUIText.regionWidth = uVar4;
         if (fVar13 == 1.0) {
-          uVar4 = *(uint32 *)(pStatics + 64);
+          uVar4 = NGUIText.rectHeight;
         }
         else {
-          uVar4 = Mathf.RoundToInt((float)*(int *)(pStatics + 64) * fVar13);
+          uVar4 = Mathf.RoundToInt((float)NGUIText.rectHeight *
+                                    fVar13);
         }
-        *(uint32 *)(pStatics + 72) = uVar4;
+        NGUIText.regionHeight = uVar4;
         if (!legacyMode) {
           uVar4 = UILabel.get_defaultFontSize(this);
         }
@@ -1812,8 +1712,8 @@ public class UILabel
         uVar4 = Mathf.Abs(uVar4);
         *(uint32 *)(this + 77) = uVar4;
         *(uint32 *)((int64)this + 0x264) = 0x3f800000;
-        if (0 < *(int *)(pStatics + 68)) {
-          if (-1 < *(int *)(pStatics + 72)) {
+        if (0 < NGUIText.regionWidth) {
+          if (-1 < NGUIText.regionHeight) {
             uVar10 = UILabel.get_trueTypeFont(this);
             cVar2 = Object.op_Inequality(uVar10,0,0);
             if ((!cVar2) || (cVar2 = UILabel.get_keepCrisp(this), !cVar2)) {
@@ -1840,31 +1740,31 @@ public class UILabel
             if (*(int *)((int64)this + 0x1dc) == 2) {
               iVar12 = *(int *)((int64)this + 0x21c);
               if (iVar12 < 1) {
-                *(uint32 *)(pStatics + 60) = 1000000;
-                *(uint32 *)(pStatics + 68) = 1000000;
+                NGUIText.rectWidth = 1000000;
+                NGUIText.regionWidth = 1000000;
               }
               else {
-                *(int *)(pStatics + 60) = iVar12;
-                *(uint32 *)(pStatics + 68) =
+                NGUIText.rectWidth = iVar12;
+                NGUIText.regionWidth =
                      *(uint32 *)((int64)this + 0x21c);
               }
               lVar9 = this[68];
               if ((int)lVar9 < 1) {
-                if (((*(byte *)(DAT_181d66a70 + 0x133) & 4) == 0) || (*(int *)(DAT_181d66a70 + 224) != 0)
-                   ) goto LAB_1810f9d41;
-                il2cpp_runtime_class_init(DAT_181d66a70);
-                *(uint32 *)(pStatics + 64) = 1000000;
-                *(uint32 *)(pStatics + 72) = 1000000;
+                if (((*(byte *)(NGUIText_StaticsPtr + 0x133) & 4) == 0) ||
+                   (*(int *)(NGUIText_StaticsPtr + 224) != 0)) goto LAB_1810f9d41;
+                il2cpp_runtime_class_init(NGUIText_StaticsPtr);
+                NGUIText.rectHeight = 1000000;
+                NGUIText.regionHeight = 1000000;
               }
               else {
-                *(int *)(pStatics + 64) = (int)lVar9;
-                *(int *)(pStatics + 72) = (int)this[68];
+                NGUIText.rectHeight = (int)lVar9;
+                NGUIText.regionHeight = (int)this[68];
               }
             }
             else if (*(int *)((int64)this + 0x1dc) == 3) {
         LAB_1810f9d41:
-              *(uint32 *)(pStatics + 64) = 1000000;
-              *(uint32 *)(pStatics + 72) = 1000000;
+              NGUIText.rectHeight = 1000000;
+              NGUIText.regionHeight = 1000000;
             }
             if ((int)this[77] < 1) {
               lVar9 = UIRect.get_cachedTransform();
@@ -1891,19 +1791,19 @@ public class UILabel
                     lVar9 = UILabel.get_bitmapFont(this,0);
                     if (lVar9 == null) {
                       uVar4 = *(uint32 *)((int64)this + 0x264);
-                      *(uint32 *)(pStatics + 28) = uVar4;
+                      NGUIText.fontScale = uVar4;
                     }
                     else {
                       lVar9 = this[53];
                       iVar5 = UILabel.get_defaultFontSize(this,0);
                       fVar1 = *(float *)((int64)this + 0x264);
-                      *(float *)(pStatics + 28) =
+                      NGUIText.fontScale =
                            ((float)(int)lVar9 / (float)iVar5) * fVar1;
                     }
                   }
                   else {
                     *(int *)(this + 77) = iVar12;
-                    *(int *)(pStatics + 24) = iVar12;
+                    NGUIText.fontSize = iVar12;
                   }
                   NGUIText.Update(0,0);
                   uVar10 = UILabel.get_printedText(this,0);
@@ -2007,10 +1907,10 @@ public class UILabel
             if (!full) {
               return;
             }
-            puVar11 = *(uint64 **)(DAT_181d66a70 + 184);
+            puVar11 = *(uint64 **)(NGUIText_StaticsPtr + 184);
             *puVar11 = 0;
             il2cpp_internal(puVar11,0);
-            this = (int64 *)(pStatics + 8);
+            this = &NGUIText.dynamicFont;
             lVar9 = 0;
             *this = 0;
             goto LAB_1810fa451;
@@ -2160,7 +2060,6 @@ public class UILabel
     // RVA   : 0x10F7670   Offset: 0x10F5E70   Length: 0x75
     public int GetCharacterIndex(Vector3 worldPos)
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         int iVar1;
         ulong uVar2;
         ulong uVar3;
@@ -2181,25 +2080,25 @@ public class UILabel
           if (!cVar5) {
             iVar6 = UILabel.get_defaultFontSize(this,0);
             UILabel.UpdateNGUIText(this,0);
-            uVar2 = *(uint64 *)(pStatics + 32);
-            uVar3 = *(uint64 *)(pStatics + 40);
+            uVar2 = UILabel.mTempVerts;
+            uVar3 = UILabel.mTempIndices;
             NGUIText.PrintApproximateCharacterPositions(lVar8,uVar2,uVar3,0);
-            lVar4 = *(int64 *)(pStatics + 32);
+            lVar4 = UILabel.mTempVerts;
             if (lVar4 == null) goto LAB_1810f7c3d;
             if (0 < *(int *)(lVar4 + 24)) {
               UILabel.ApplyOffset
-                        (this,*(uint64 *)(pStatics + 32),0,0);
+                        (this,UILabel.mTempVerts,0,0);
               uVar10 = 0;
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = UILabel.mTempIndices;
               if (lVar4 == null) goto LAB_1810f7c3d;
               iVar1 = *(int *)(lVar4 + 24);
               if (0 < iVar1) {
                 do {
-                  lVar4 = *(int64 *)(pStatics + 40);
+                  lVar4 = UILabel.mTempIndices;
                   if (lVar4 == null) goto LAB_1810f7c3d;
                   iVar7 = FUN_1800d6750(lVar4,uVar10,DAT_181d68270);
                   if (iVar7 == worldPos) {
-                    lVar4 = *(int64 *)(pStatics + 32);
+                    lVar4 = UILabel.mTempVerts;
                     if (lVar4 == null) goto LAB_1810f7c3d;
                     if (*(uint32 *)(lVar4 + 24) <= uVar10) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2232,15 +2131,15 @@ public class UILabel
                     else if (param_3 == 0x117) {
                       fVar12 = fVar12 + 1000.0;
                     }
-                    uVar2 = *(uint64 *)(pStatics + 32);
-                    uVar3 = *(uint64 *)(pStatics + 40);
+                    uVar2 = UILabel.mTempVerts;
+                    uVar3 = UILabel.mTempIndices;
                     local_48 = CONCAT44(fVar13,fVar12);
                     iVar6 = NGUIText.GetApproximateCharacterIndex(uVar2,uVar3,local_48,0);
                     if (iVar6 != worldPos) {
-                      lVar8 = *(int64 *)(pStatics + 32);
+                      lVar8 = UILabel.mTempVerts;
                       if (lVar8 != null) {
                         FUN_180f56130(lVar8,DAT_181d84378);
-                        lVar8 = *(int64 *)(pStatics + 40);
+                        lVar8 = UILabel.mTempIndices;
                         if (lVar8 != null) {
                           FUN_180f56130(lVar8,DAT_181d67b78);
                           return iVar6;
@@ -2253,19 +2152,17 @@ public class UILabel
                   uVar10 = uVar10 + 1;
                 } while ((int)uVar10 < iVar1);
               }
-              lVar4 = *(int64 *)(pStatics + 32);
+              lVar4 = UILabel.mTempVerts;
               if (lVar4 == null) goto LAB_1810f7c3d;
               FUN_180f56130(lVar4,DAT_181d84378);
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = UILabel.mTempIndices;
               if (lVar4 == null) goto LAB_1810f7c3d;
               FUN_180f56130(lVar4,DAT_181d67b78);
             }
-            puVar9 = *(uint64 **)(DAT_181d66a70 + 184);
+            puVar9 = *(uint64 **)(NGUIText_StaticsPtr + 184);
             *puVar9 = 0;
             il2cpp_internal(puVar9,0);
-            puVar9 = (uint64 *)(*(int64 *)(DAT_181d66a70 + 184) + 8);
-            *puVar9 = 0;
-            il2cpp_internal(puVar9,0);
+            NGUIText.dynamicFont = 0;
             if ((param_3 != 0x111) && (param_3 != 0x116)) {
               if ((param_3 != 0x112) && (param_3 != 0x117)) {
                 return worldPos;
@@ -2287,7 +2184,6 @@ public class UILabel
     // RVA   : 0x10F7660   Offset: 0x10F5E60   Length: 0xB
     public int GetCharacterIndex(Vector2 localPos)
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         int iVar1;
         ulong uVar2;
         ulong uVar3;
@@ -2308,25 +2204,25 @@ public class UILabel
           if (!cVar5) {
             iVar6 = UILabel.get_defaultFontSize(this,0);
             UILabel.UpdateNGUIText(this,0);
-            uVar2 = *(uint64 *)(pStatics + 32);
-            uVar3 = *(uint64 *)(pStatics + 40);
+            uVar2 = UILabel.mTempVerts;
+            uVar3 = UILabel.mTempIndices;
             NGUIText.PrintApproximateCharacterPositions(lVar8,uVar2,uVar3,0);
-            lVar4 = *(int64 *)(pStatics + 32);
+            lVar4 = UILabel.mTempVerts;
             if (lVar4 == null) goto LAB_1810f7c3d;
             if (0 < *(int *)(lVar4 + 24)) {
               UILabel.ApplyOffset
-                        (this,*(uint64 *)(pStatics + 32),0,0);
+                        (this,UILabel.mTempVerts,0,0);
               uVar10 = 0;
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = UILabel.mTempIndices;
               if (lVar4 == null) goto LAB_1810f7c3d;
               iVar1 = *(int *)(lVar4 + 24);
               if (0 < iVar1) {
                 do {
-                  lVar4 = *(int64 *)(pStatics + 40);
+                  lVar4 = UILabel.mTempIndices;
                   if (lVar4 == null) goto LAB_1810f7c3d;
                   iVar7 = FUN_1800d6750(lVar4,uVar10,DAT_181d68270);
                   if (iVar7 == localPos) {
-                    lVar4 = *(int64 *)(pStatics + 32);
+                    lVar4 = UILabel.mTempVerts;
                     if (lVar4 == null) goto LAB_1810f7c3d;
                     if (*(uint32 *)(lVar4 + 24) <= uVar10) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2359,15 +2255,15 @@ public class UILabel
                     else if (param_3 == 0x117) {
                       fVar12 = fVar12 + 1000.0;
                     }
-                    uVar2 = *(uint64 *)(pStatics + 32);
-                    uVar3 = *(uint64 *)(pStatics + 40);
+                    uVar2 = UILabel.mTempVerts;
+                    uVar3 = UILabel.mTempIndices;
                     local_48 = CONCAT44(fVar13,fVar12);
                     iVar6 = NGUIText.GetApproximateCharacterIndex(uVar2,uVar3,local_48,0);
                     if (iVar6 != localPos) {
-                      lVar8 = *(int64 *)(pStatics + 32);
+                      lVar8 = UILabel.mTempVerts;
                       if (lVar8 != null) {
                         FUN_180f56130(lVar8,DAT_181d84378);
-                        lVar8 = *(int64 *)(pStatics + 40);
+                        lVar8 = UILabel.mTempIndices;
                         if (lVar8 != null) {
                           FUN_180f56130(lVar8,DAT_181d67b78);
                           return iVar6;
@@ -2380,19 +2276,17 @@ public class UILabel
                   uVar10 = uVar10 + 1;
                 } while ((int)uVar10 < iVar1);
               }
-              lVar4 = *(int64 *)(pStatics + 32);
+              lVar4 = UILabel.mTempVerts;
               if (lVar4 == null) goto LAB_1810f7c3d;
               FUN_180f56130(lVar4,DAT_181d84378);
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = UILabel.mTempIndices;
               if (lVar4 == null) goto LAB_1810f7c3d;
               FUN_180f56130(lVar4,DAT_181d67b78);
             }
-            puVar9 = *(uint64 **)(DAT_181d66a70 + 184);
+            puVar9 = *(uint64 **)(NGUIText_StaticsPtr + 184);
             *puVar9 = 0;
             il2cpp_internal(puVar9,0);
-            puVar9 = (uint64 *)(*(int64 *)(DAT_181d66a70 + 184) + 8);
-            *puVar9 = 0;
-            il2cpp_internal(puVar9,0);
+            NGUIText.dynamicFont = 0;
             if ((param_3 != 0x111) && (param_3 != 0x116)) {
               if ((param_3 != 0x112) && (param_3 != 0x117)) {
                 return localPos;
@@ -2414,8 +2308,6 @@ public class UILabel
     // RVA   : 0x10F71C0   Offset: 0x10F59C0   Length: 0x84
     public int GetCharacterIndexAtPosition(Vector3 worldPos, bool precise)
     {
-        var pStatics_6a70 = *(int64*)(DAT_181d66a70 + 184);
-        var pStatics_ab58 = *(int64*)(DAT_181d8ab58 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -2429,50 +2321,46 @@ public class UILabel
           if (!cVar4) {
             UILabel.UpdateNGUIText(this,0);
             if (!precise) {
-              uVar1 = *(uint64 *)(pStatics_ab58 + 32);
-              uVar2 = *(uint64 *)(pStatics_ab58 + 40);
+              uVar1 = UILabel.mTempVerts;
+              uVar2 = UILabel.mTempIndices;
               NGUIText.PrintApproximateCharacterPositions(uVar6,uVar1,uVar2,0);
             }
             else {
-              uVar1 = *(uint64 *)(pStatics_ab58 + 32);
-              uVar2 = *(uint64 *)(pStatics_ab58 + 40);
+              uVar1 = UILabel.mTempVerts;
+              uVar2 = UILabel.mTempIndices;
               NGUIText.PrintExactCharacterPositions(uVar6,uVar1,uVar2,0);
             }
-            lVar3 = *(int64 *)(pStatics_ab58 + 32);
+            lVar3 = UILabel.mTempVerts;
             if (lVar3 != null) {
               if (*(int *)(lVar3 + 24) < 1) {
-                puVar7 = *(uint64 **)(DAT_181d66a70 + 184);
+                puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
                 *puVar7 = 0;
                 il2cpp_internal(puVar7,0);
-                puVar7 = (uint64 *)(pStatics_6a70 + 8);
-                *puVar7 = 0;
-                il2cpp_internal(puVar7,0);
+                NGUIText.dynamicFont = 0;
                 return false;
               }
               UILabel.ApplyOffset
-                        (this,*(uint64 *)(pStatics_ab58 + 32),0,0);
+                        (this,UILabel.mTempVerts,0,0);
               if (!precise) {
-                uVar6 = *(uint64 *)(pStatics_ab58 + 32);
-                uVar1 = *(uint64 *)(pStatics_ab58 + 40);
+                uVar6 = UILabel.mTempVerts;
+                uVar1 = UILabel.mTempIndices;
                 uVar5 = NGUIText.GetApproximateCharacterIndex(uVar6,uVar1,worldPos,0);
               }
               else {
-                uVar6 = *(uint64 *)(pStatics_ab58 + 32);
-                uVar1 = *(uint64 *)(pStatics_ab58 + 40);
+                uVar6 = UILabel.mTempVerts;
+                uVar1 = UILabel.mTempIndices;
                 uVar5 = NGUIText.GetExactCharacterIndex(uVar6,uVar1,worldPos,0);
               }
-              lVar3 = *(int64 *)(pStatics_ab58 + 32);
+              lVar3 = UILabel.mTempVerts;
               if (lVar3 != null) {
                 FUN_180f56130(lVar3,DAT_181d84378);
-                lVar3 = *(int64 *)(pStatics_ab58 + 40);
+                lVar3 = UILabel.mTempIndices;
                 if (lVar3 != null) {
                   FUN_180f56130(lVar3,DAT_181d67b78);
-                  puVar7 = *(uint64 **)(DAT_181d66a70 + 184);
+                  puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
                   *puVar7 = 0;
                   il2cpp_internal(puVar7,0);
-                  puVar7 = (uint64 *)(pStatics_6a70 + 8);
-                  *puVar7 = 0;
-                  il2cpp_internal(puVar7,0);
+                  NGUIText.dynamicFont = 0;
                   return uVar5;
                 }
               }
@@ -2488,8 +2376,6 @@ public class UILabel
     // RVA   : 0x10F7250   Offset: 0x10F5A50   Length: 0x40D
     public int GetCharacterIndexAtPosition(Vector2 localPos, bool precise)
     {
-        var pStatics_6a70 = *(int64*)(DAT_181d66a70 + 184);
-        var pStatics_ab58 = *(int64*)(DAT_181d8ab58 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -2503,50 +2389,46 @@ public class UILabel
           if (!cVar4) {
             UILabel.UpdateNGUIText(this,0);
             if (!precise) {
-              uVar1 = *(uint64 *)(pStatics_ab58 + 32);
-              uVar2 = *(uint64 *)(pStatics_ab58 + 40);
+              uVar1 = UILabel.mTempVerts;
+              uVar2 = UILabel.mTempIndices;
               NGUIText.PrintApproximateCharacterPositions(uVar6,uVar1,uVar2,0);
             }
             else {
-              uVar1 = *(uint64 *)(pStatics_ab58 + 32);
-              uVar2 = *(uint64 *)(pStatics_ab58 + 40);
+              uVar1 = UILabel.mTempVerts;
+              uVar2 = UILabel.mTempIndices;
               NGUIText.PrintExactCharacterPositions(uVar6,uVar1,uVar2,0);
             }
-            lVar3 = *(int64 *)(pStatics_ab58 + 32);
+            lVar3 = UILabel.mTempVerts;
             if (lVar3 != null) {
               if (*(int *)(lVar3 + 24) < 1) {
-                puVar7 = *(uint64 **)(DAT_181d66a70 + 184);
+                puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
                 *puVar7 = 0;
                 il2cpp_internal(puVar7,0);
-                puVar7 = (uint64 *)(pStatics_6a70 + 8);
-                *puVar7 = 0;
-                il2cpp_internal(puVar7,0);
+                NGUIText.dynamicFont = 0;
                 return false;
               }
               UILabel.ApplyOffset
-                        (this,*(uint64 *)(pStatics_ab58 + 32),0,0);
+                        (this,UILabel.mTempVerts,0,0);
               if (!precise) {
-                uVar6 = *(uint64 *)(pStatics_ab58 + 32);
-                uVar1 = *(uint64 *)(pStatics_ab58 + 40);
+                uVar6 = UILabel.mTempVerts;
+                uVar1 = UILabel.mTempIndices;
                 uVar5 = NGUIText.GetApproximateCharacterIndex(uVar6,uVar1,localPos,0);
               }
               else {
-                uVar6 = *(uint64 *)(pStatics_ab58 + 32);
-                uVar1 = *(uint64 *)(pStatics_ab58 + 40);
+                uVar6 = UILabel.mTempVerts;
+                uVar1 = UILabel.mTempIndices;
                 uVar5 = NGUIText.GetExactCharacterIndex(uVar6,uVar1,localPos,0);
               }
-              lVar3 = *(int64 *)(pStatics_ab58 + 32);
+              lVar3 = UILabel.mTempVerts;
               if (lVar3 != null) {
                 FUN_180f56130(lVar3,DAT_181d84378);
-                lVar3 = *(int64 *)(pStatics_ab58 + 40);
+                lVar3 = UILabel.mTempIndices;
                 if (lVar3 != null) {
                   FUN_180f56130(lVar3,DAT_181d67b78);
-                  puVar7 = *(uint64 **)(DAT_181d66a70 + 184);
+                  puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
                   *puVar7 = 0;
                   il2cpp_internal(puVar7,0);
-                  puVar7 = (uint64 *)(pStatics_6a70 + 8);
-                  *puVar7 = 0;
-                  il2cpp_internal(puVar7,0);
+                  NGUIText.dynamicFont = 0;
                   return uVar5;
                 }
               }
@@ -2682,7 +2564,6 @@ public class UILabel
     // RVA   : 0x10F76F0   Offset: 0x10F5EF0   Length: 0x552
     public int GetCharacterIndex(int currentIndex, KeyCode key)
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         int iVar1;
         ulong uVar2;
         ulong uVar3;
@@ -2703,25 +2584,25 @@ public class UILabel
           if (!cVar5) {
             iVar6 = UILabel.get_defaultFontSize(this,0);
             UILabel.UpdateNGUIText(this,0);
-            uVar2 = *(uint64 *)(pStatics + 32);
-            uVar3 = *(uint64 *)(pStatics + 40);
+            uVar2 = UILabel.mTempVerts;
+            uVar3 = UILabel.mTempIndices;
             NGUIText.PrintApproximateCharacterPositions(lVar8,uVar2,uVar3,0);
-            lVar4 = *(int64 *)(pStatics + 32);
+            lVar4 = UILabel.mTempVerts;
             if (lVar4 == null) goto LAB_1810f7c3d;
             if (0 < *(int *)(lVar4 + 24)) {
               UILabel.ApplyOffset
-                        (this,*(uint64 *)(pStatics + 32),0,0);
+                        (this,UILabel.mTempVerts,0,0);
               uVar10 = 0;
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = UILabel.mTempIndices;
               if (lVar4 == null) goto LAB_1810f7c3d;
               iVar1 = *(int *)(lVar4 + 24);
               if (0 < iVar1) {
                 do {
-                  lVar4 = *(int64 *)(pStatics + 40);
+                  lVar4 = UILabel.mTempIndices;
                   if (lVar4 == null) goto LAB_1810f7c3d;
                   iVar7 = FUN_1800d6750(lVar4,uVar10,DAT_181d68270);
                   if (iVar7 == currentIndex) {
-                    lVar4 = *(int64 *)(pStatics + 32);
+                    lVar4 = UILabel.mTempVerts;
                     if (lVar4 == null) goto LAB_1810f7c3d;
                     if (*(uint32 *)(lVar4 + 24) <= uVar10) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2754,15 +2635,15 @@ public class UILabel
                     else if (key == 0x117) {
                       fVar12 = fVar12 + 1000.0;
                     }
-                    uVar2 = *(uint64 *)(pStatics + 32);
-                    uVar3 = *(uint64 *)(pStatics + 40);
+                    uVar2 = UILabel.mTempVerts;
+                    uVar3 = UILabel.mTempIndices;
                     local_48 = CONCAT44(fVar13,fVar12);
                     iVar6 = NGUIText.GetApproximateCharacterIndex(uVar2,uVar3,local_48,0);
                     if (iVar6 != currentIndex) {
-                      lVar8 = *(int64 *)(pStatics + 32);
+                      lVar8 = UILabel.mTempVerts;
                       if (lVar8 != null) {
                         FUN_180f56130(lVar8,DAT_181d84378);
-                        lVar8 = *(int64 *)(pStatics + 40);
+                        lVar8 = UILabel.mTempIndices;
                         if (lVar8 != null) {
                           FUN_180f56130(lVar8,DAT_181d67b78);
                           return iVar6;
@@ -2775,19 +2656,17 @@ public class UILabel
                   uVar10 = uVar10 + 1;
                 } while ((int)uVar10 < iVar1);
               }
-              lVar4 = *(int64 *)(pStatics + 32);
+              lVar4 = UILabel.mTempVerts;
               if (lVar4 == null) goto LAB_1810f7c3d;
               FUN_180f56130(lVar4,DAT_181d84378);
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = UILabel.mTempIndices;
               if (lVar4 == null) goto LAB_1810f7c3d;
               FUN_180f56130(lVar4,DAT_181d67b78);
             }
-            puVar9 = *(uint64 **)(DAT_181d66a70 + 184);
+            puVar9 = *(uint64 **)(NGUIText_StaticsPtr + 184);
             *puVar9 = 0;
             il2cpp_internal(puVar9,0);
-            puVar9 = (uint64 *)(*(int64 *)(DAT_181d66a70 + 184) + 8);
-            *puVar9 = 0;
-            il2cpp_internal(puVar9,0);
+            NGUIText.dynamicFont = 0;
             if ((key != 0x111) && (key != 0x116)) {
               if ((key != 0x112) && (key != 0x117)) {
                 return currentIndex;
@@ -2896,12 +2775,10 @@ public class UILabel
             uStack_7c = uStack_60._4_4_;
             FUN_1818059b0(*(int64 *)(caret + 32),&local_88,DAT_181d5b680);
           }
-          puVar5 = *(uint64 **)(DAT_181d66a70 + 184);
+          puVar5 = *(uint64 **)(NGUIText_StaticsPtr + 184);
           *puVar5 = 0;
           il2cpp_internal(puVar5,0);
-          puVar5 = (uint64 *)(*(int64 *)(DAT_181d66a70 + 184) + 8);
-          *puVar5 = 0;
-          il2cpp_internal(puVar5,0);
+          NGUIText.dynamicFont = 0;
         }
     }
 
@@ -2933,7 +2810,7 @@ public class UILabel
     // RVA   : 0x10F87B0   Offset: 0x10F6FB0   Length: 0x50B
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
+        var pNGUIText = *(int64*)(NGUIText_StaticsPtr + 184);
         uint uVar1;
         uint uVar2;
         bool cVar3;
@@ -2987,7 +2864,7 @@ public class UILabel
           uVar5 = UILabel.get_processedText(this,0);
           uVar2 = *(uint32 *)(verts + 24);
           UILabel.UpdateNGUIText(this,0);
-          lVar6 = pStatics;
+          lVar6 = pNGUIText;
           uVar8 = 0;
           uVar16 = 0;
           *(uint32 *)(lVar6 + 44) = uVar11;
@@ -2995,12 +2872,10 @@ public class UILabel
           *(uint32 *)(lVar6 + 52) = uVar13;
           *(uint32 *)(lVar6 + 56) = uVar14;
           NGUIText.Print(uVar5,verts,uvs,cols,0);
-          puVar7 = *(uint64 **)(DAT_181d66a70 + 184);
+          puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
           *puVar7 = 0;
           il2cpp_internal(puVar7,0);
-          puVar7 = (uint64 *)(pStatics + 8);
-          *puVar7 = 0;
-          il2cpp_internal(puVar7,0);
+          NGUIText.dynamicFont = 0;
           UILabel.ApplyOffset(this,verts,uVar2,0);
           cVar3 = UILabel.get_packedFontShader(this,0);
           if (!cVar3) {
@@ -3039,7 +2914,7 @@ public class UILabel
                 }
               }
             }
-            if (*(int *)(pStatics + 132) == 3) {
+            if (NGUIText.symbolStyle == 3) {
               if (cols == null) goto LAB_1810f8cb6;
               lVar6 = (int64)*(int *)(cols + 24);
               if (0 < *(int *)(cols + 24)) {
@@ -3235,18 +3110,15 @@ public class UILabel
     // RVA   : 0x10F70E0   Offset: 0x10F58E0   Length: 0xD6
     public int CalculateOffsetToFit(string text)
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
         uint uVar1;
         UILabel.UpdateNGUIText(this,0);
-        *(uint8 *)(pStatics + 116) = 0;
-        *(uint32 *)(pStatics + 132) = 0;
+        NGUIText.encoding = 0;
+        NGUIText.symbolStyle = 0;
         uVar1 = NGUIText.CalculateOffsetToFit(text,0);
-        puVar2 = *(uint64 **)(DAT_181d66a70 + 184);
+        puVar2 = *(uint64 **)(NGUIText_StaticsPtr + 184);
         *puVar2 = 0;
         il2cpp_internal(puVar2,0);
-        puVar2 = (uint64 *)(pStatics + 8);
-        *puVar2 = 0;
-        il2cpp_internal(puVar2,0);
+        NGUIText.dynamicFont = 0;
         return uVar1;
     }
 
@@ -3299,22 +3171,21 @@ public class UILabel
     // RVA   : 0x10FA920   Offset: 0x10F9120   Length: 0x1B8
     public void SetCurrentSelection()
     {
-        var pStatics = *(int64*)(DAT_181d8add8 + 184);
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d8add8 + 184);
+        uVar3 = UIPopupList.current;
         cVar2 = Object.op_Inequality(uVar3,0,0);
         if (!cVar2) {
           return;
         }
-        if (*pStatics != 0) {
-          if (*(char *)(*pStatics + 185) == false) {
-            plVar1 = (int64 *)*pStatics;
+        if (UIPopupList.current != null) {
+          if (!UIPopupList.current.isLocalized) {
+            plVar1 = (int64 *)UIPopupList.current;
             if (plVar1 == (int64 *)0) throw; // [null/range check failed]
             uVar3 = (**(code **)(*plVar1 + 0x178))(plVar1,*(uint64 *)(*plVar1 + 0x180));
           }
           else {
-            plVar1 = (int64 *)*pStatics;
+            plVar1 = (int64 *)UIPopupList.current;
             if (plVar1 == (int64 *)0) throw; // [null/range check failed]
             uVar3 = (**(code **)(*plVar1 + 0x178))(plVar1,*(uint64 *)(*plVar1 + 0x180));
             uVar3 = Localization.Get(uVar3,1,0);
@@ -3330,22 +3201,19 @@ public class UILabel
     // RVA   : 0x10FB600   Offset: 0x10F9E00   Length: 0xE6
     public bool Wrap(string text, ref string final)
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
         uint8
         UILabel.Wrap(uint64 this,uint64 text,uint64 final,uint32 param_4)
         {
         uint8 uVar1;
         uint64 *puVar2;
         UILabel.UpdateNGUIText(this,0);
-        *(uint32 *)(pStatics + 64) = param_4;
-        *(uint32 *)(pStatics + 72) = param_4;
+        NGUIText.rectHeight = param_4;
+        NGUIText.regionHeight = param_4;
         uVar1 = NGUIText.WrapText(text,final,0,0);
-        puVar2 = *(uint64 **)(DAT_181d66a70 + 184);
+        puVar2 = *(uint64 **)(NGUIText_StaticsPtr + 184);
         *puVar2 = 0;
         il2cpp_internal(puVar2,0);
-        puVar2 = (uint64 *)(pStatics + 8);
-        *puVar2 = 0;
-        il2cpp_internal(puVar2,0);
+        NGUIText.dynamicFont = 0;
         return uVar1;
     }
 
@@ -3353,22 +3221,19 @@ public class UILabel
     // RVA   : 0x10FB510   Offset: 0x10F9D10   Length: 0xEB
     public bool Wrap(string text, ref string final, int height)
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
         uint8
         UILabel.Wrap(uint64 this,uint64 text,uint64 final,uint32 height)
         {
         uint8 uVar1;
         uint64 *puVar2;
         UILabel.UpdateNGUIText(this,0);
-        *(uint32 *)(pStatics + 64) = height;
-        *(uint32 *)(pStatics + 72) = height;
+        NGUIText.rectHeight = height;
+        NGUIText.regionHeight = height;
         uVar1 = NGUIText.WrapText(text,final,0,0);
-        puVar2 = *(uint64 **)(DAT_181d66a70 + 184);
+        puVar2 = *(uint64 **)(NGUIText_StaticsPtr + 184);
         *puVar2 = 0;
         il2cpp_internal(puVar2,0);
-        puVar2 = (uint64 *)(pStatics + 8);
-        *puVar2 = 0;
-        il2cpp_internal(puVar2,0);
+        NGUIText.dynamicFont = 0;
         return uVar1;
     }
 
@@ -3376,7 +3241,7 @@ public class UILabel
     // RVA   : 0x10FAAE0   Offset: 0x10F92E0   Length: 0x861
     public void UpdateNGUIText()
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
+        var pNGUIText = *(int64*)(NGUIText_StaticsPtr + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -3389,16 +3254,19 @@ public class UILabel
         uVar7 = UILabel.get_trueTypeFont(this,0);
         cVar3 = Object.op_Inequality(uVar7,0,0);
         uVar5 = this.mFinalFontSize;
-        *(uint32 *)(pStatics + 24) = uVar5;
-        *(uint32 *)(pStatics + 36) = this.mFontStyle;
-        *(uint32 *)(pStatics + 60) = *(uint32 *)(this + 164);
-        *(uint32 *)(pStatics + 64) = *(uint32 *)(this + 168);
+        NGUIText.fontSize = uVar5;
+        NGUIText.fontStyle =
+             this.mFontStyle;
+        NGUIText.rectWidth =
+             *(uint32 *)(this + 164);
+        NGUIText.rectHeight =
+             *(uint32 *)(this + 168);
         uVar5 = Mathf.RoundToInt((*(float *)(this + 0x104) - *(float *)(this + 252)) *
                                   (float)*(int *)(this + 164),0);
-        *(uint32 *)(pStatics + 68) = uVar5;
+        NGUIText.regionWidth = uVar5;
         uVar5 = Mathf.RoundToInt((*(float *)(this + 0x108) - *(float *)(this + 0x100)) *
                                   (float)*(int *)(this + 168),0);
-        *(uint32 *)(pStatics + 72) = uVar5;
+        NGUIText.regionHeight = uVar5;
         if (!this.mApplyGradient) {
           bVar11 = false;
         }
@@ -3406,26 +3274,30 @@ public class UILabel
           cVar4 = UILabel.get_packedFontShader(this,0);
           bVar11 = !cVar4;
         }
-        *(bool *)(pStatics + 80) = bVar11;
+        NGUIText.gradient = bVar11;
         uVar2 = *(uint64 *)(this + 0x1ec);
-        lVar8 = pStatics;
+        lVar8 = pNGUIText;
         *(uint64 *)(lVar8 + 100) = this.mGradientTop;
         *(uint64 *)(lVar8 + 108) = uVar2;
         uVar2 = *(uint64 *)(this + 0x1fc);
-        lVar8 = pStatics;
+        lVar8 = pNGUIText;
         *(uint64 *)(lVar8 + 84) = *(uint64 *)(this + 500);
         *(uint64 *)(lVar8 + 92) = uVar2;
-        *(uint8 *)(pStatics + 116) = this.mEncoding;
-        *(uint8 *)(pStatics + 128) = *(uint8 *)(this + 600);
-        *(uint32 *)(pStatics + 132) = this.mSymbols;
-        *(uint32 *)(pStatics + 76) = this.mMaxLineCount;
+        NGUIText.encoding =
+             this.mEncoding;
+        NGUIText.premultiply = *(uint8 *)(this + 600)
+        ;
+        NGUIText.symbolStyle =
+             this.mSymbols;
+        NGUIText.maxLines =
+             this.mMaxLineCount;
         if (!this.mUseFloatSpacing) {
           fVar12 = (float)this.mSpacingX;
         }
         else {
           fVar12 = this.mFloatSpacingX;
         }
-        *(float *)(pStatics + 120) = fVar12;
+        NGUIText.spacingX = fVar12;
         if (!this.mUseFloatSpacing) {
           fVar12 = (float)this.mSpacingY;
         }
@@ -3433,7 +3305,7 @@ public class UILabel
           fVar12 = this.mFloatSpacingY;
         }
         bVar11 = !DAT_181e7c338;
-        *(float *)(pStatics + 124) = fVar12;
+        NGUIText.spacingY = fVar12;
         if (bVar11) {
           il2cpp_runtime_class_init(&DAT_181d556d0);
           DAT_181e7c338 = true;
@@ -3442,7 +3314,7 @@ public class UILabel
         if (!cVar3) {
           if (lVar8 == null) {
             uVar5 = this.mScale;
-            *(uint32 *)(pStatics + 28) = uVar5;
+            NGUIText.fontScale = uVar5;
             goto LAB_1810fae25;
           }
           lVar8 = FUN_180002970(27,DAT_181d556d0,lVar8);
@@ -3450,31 +3322,28 @@ public class UILabel
           if (lVar8 == null) goto LAB_1810fb33c;
           iVar6 = FUN_180002970(22,DAT_181d556d0,lVar8);
           fVar12 = this.mScale;
-          *(float *)(pStatics + 28) = ((float)iVar1 / (float)iVar6) * fVar12;
+          NGUIText.fontScale =
+               ((float)iVar1 / (float)iVar6) * fVar12;
         LAB_1810fb008:
           cVar4 = Object.op_Inequality(uVar7,0,0);
           if (cVar4) goto LAB_1810fae25;
-          puVar9 = (uint64 *)(pStatics + 8);
-          *puVar9 = 0;
-          il2cpp_internal(puVar9,0);
-          plVar10 = pStatics;
+          NGUIText.dynamicFont = 0;
+          plVar10 = pNGUIText;
           *plVar10 = lVar8;
         }
         else {
           uVar5 = this.mScale;
-          *(uint32 *)(pStatics + 28) = uVar5;
+          NGUIText.fontScale = uVar5;
           if (lVar8 != null) goto LAB_1810fb008;
         LAB_1810fae25:
-          puVar9 = (uint64 *)(pStatics + 8);
-          *puVar9 = uVar7;
-          il2cpp_internal(puVar9,uVar7);
-          plVar10 = pStatics;
+          NGUIText.dynamicFont = uVar7;
+          plVar10 = pNGUIText;
           *plVar10 = 0;
           lVar8 = 0;
         }
         il2cpp_internal(plVar10,lVar8);
         if ((!cVar3) || (cVar3 = UILabel.get_keepCrisp(this,0), !cVar3)) {
-          *(uint32 *)(pStatics + 32) = 0x3f800000;
+          NGUIText.pixelDensity = 0x3f800000;
         }
         else {
           lVar8 = UIRect.get_root(this,0);
@@ -3492,37 +3361,38 @@ public class UILabel
               }
               uVar5 = UIRoot.get_pixelSizeAdjustment(lVar8,0);
             }
-            *(uint32 *)(pStatics + 32) = uVar5;
+            NGUIText.pixelDensity = uVar5;
           }
         }
         fVar12 = this.mDensity;
-        if (fVar12 != *(float *)(pStatics + 32)) {
+        if (fVar12 != NGUIText.pixelDensity) {
           UILabel.ProcessText(this,0,0,0);
           uVar5 = *(uint32 *)(this + 164);
-          *(uint32 *)(pStatics + 60) = uVar5;
-          *(uint32 *)(pStatics + 64) = *(uint32 *)(this + 168);
+          NGUIText.rectWidth = uVar5;
+          NGUIText.rectHeight =
+               *(uint32 *)(this + 168);
           uVar5 = Mathf.RoundToInt((*(float *)(this + 0x104) - *(float *)(this + 252)) *
                                     (float)*(int *)(this + 164),0);
-          *(uint32 *)(pStatics + 68) = uVar5;
+          NGUIText.regionWidth = uVar5;
           uVar5 = Mathf.RoundToInt((*(float *)(this + 0x108) - *(float *)(this + 0x100)) *
                                     (float)*(int *)(this + 168),0);
-          *(uint32 *)(pStatics + 72) = uVar5;
+          NGUIText.regionHeight = uVar5;
         }
         iVar1 = this.mAlignment;
         if (iVar1 == 0) {
           iVar1 = *(int *)(this + 160);
           if (((iVar1 == 3) || (iVar1 == 0)) || (iVar1 == 6)) {
-            *(uint32 *)(pStatics + 40) = 1;
+            NGUIText.alignment = 1;
           }
           else if (((iVar1 == 5) || (iVar1 == 2)) || (iVar1 == 8)) {
-            *(uint32 *)(pStatics + 40) = 3;
+            NGUIText.alignment = 3;
           }
           else {
-            *(uint32 *)(pStatics + 40) = 2;
+            NGUIText.alignment = 2;
           }
         }
         else {
-          *(int *)(pStatics + 40) = iVar1;
+          NGUIText.alignment = iVar1;
         }
         NGUIText.Update(0);
     }
@@ -3606,28 +3476,21 @@ public class UILabel
     // RVA   : 0x10FB6F0   Offset: 0x10F9EF0   Length: 0x181
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8ab58 + 184);
         ulong uVar1;
         uVar1 = new BetterList_1(DAT_181d81a18);
-        puVar2 = *(uint64 **)(DAT_181d8ab58 + 184);
+        puVar2 = *(uint64 **)(UILabel_StaticsPtr + 184);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
         uVar1 = il2cpp_internal(DAT_181d5b848);
         FUN_1808ae540(uVar1,DAT_181d8feb0);
-        puVar2 = (uint64 *)(pStatics + 8);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
-        *(uint8 *)(pStatics + 24) = 0;
+        UILabel.mFontUsage = uVar1;
+        UILabel.mTexRebuildAdded = 0;
         uVar1 = il2cpp_internal(DAT_181d73eb0);
         FUN_180f58a90(uVar1,DAT_181d841f8);
-        puVar2 = (uint64 *)(pStatics + 32);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        UILabel.mTempVerts = uVar1;
         uVar1 = il2cpp_internal(DAT_181d6f030);
         FUN_180f58a90(uVar1,DAT_181d678f8);
-        puVar2 = (uint64 *)(pStatics + 40);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        UILabel.mTempIndices = uVar1;
     }
 
 }

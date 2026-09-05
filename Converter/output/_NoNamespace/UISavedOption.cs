@@ -260,7 +260,7 @@ public class UISavedOption
           uVar3 = Object.get_name(this,0);
           uVar3 = String.Concat("NGUI State: ",uVar3,0);
         }
-        plVar1 = (int64 *)**(int64 **)(DAT_181d8add8 + 184);
+        plVar1 = (int64 *)UIPopupList.current;
         if (plVar1 != (int64 *)0) {
           uVar4 = (**(code **)(*plVar1 + 0x178))(plVar1,*(uint64 *)(*plVar1 + 0x180));
           PlayerPrefs.SetString(uVar3,uVar4,0);
@@ -283,7 +283,7 @@ public class UISavedOption
           uVar3 = Object.get_name(this,0);
           uVar3 = String.Concat("NGUI State: ",uVar3,0);
         }
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b2d8 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(UIPlayAnimation_StaticsPtr + 184) + 8);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 130) == false) {
             cVar2 = *(char *)(lVar1 + 72);

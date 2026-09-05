@@ -30,7 +30,7 @@ public class ResourceData
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x430);
+        lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x430);
         if (lVar2 != null) {
           uVar1 = this.resourceType;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {

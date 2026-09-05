@@ -220,9 +220,7 @@ public class UITexture
     // RVA   : 0x1697A20   Offset: 0x1696220   Length: 0xE
     public override Vector4 get_border()
     {
-        uint64 * FUN_181697a20(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x220);
         *this = *(uint64 *)(param_2 + 0x218);
         this[1] = uVar1;
@@ -233,8 +231,6 @@ public class UITexture
     // RVA   : 0x16980B0   Offset: 0x16968B0   Length: 0x86
     public override void set_border(Vector4 value)
     {
-        void FUN_1816980b0(int64 *this,float *value)
-        {
         float fVar1;
         float fVar2;
         float fVar3;
@@ -265,9 +261,7 @@ public class UITexture
     // RVA   : 0x16980A0   Offset: 0x16968A0   Length: 0xE
     public Rect get_uvRect()
     {
-        uint64 * FUN_1816980a0(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x200);
         *this = *(uint64 *)(param_2 + 0x1f8);
         this[1] = uVar1;
@@ -348,8 +342,6 @@ public class UITexture
     // RVA   : 0x3E7A40   Offset: 0x3E6240   Length: 0x8
     public bool get_fixedAspect()
     {
-        uint8 FUN_1803e7a40(int64 this)
-        {
         return this.mFixedAspect;
     }
 

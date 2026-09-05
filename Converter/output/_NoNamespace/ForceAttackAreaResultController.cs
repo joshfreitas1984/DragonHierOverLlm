@@ -160,7 +160,8 @@ public class ForceAttackAreaResultController
                                                     uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
                                                     if (this.targetArea != null) {
                                                       local_res8[0] =
-                                                           *(float *)(*(int64 *)(DAT_181d4ef00 + 184)
+                                                           *(float *)(*(int64 *)
+                                                                       (PlotController_StaticsPtr + 184)
                                                                      + 132) *
                                                            *(float *)(this.targetArea + 88
                                                                      );
@@ -180,8 +181,8 @@ public class ForceAttackAreaResultController
                                                             if (this.targetArea != null) {
                                                               local_res8[0] =
                                                                    *(float *)(*(int64 *)
-                                                                               (DAT_181d4ef00 + 184) +
-                                                                             132) *
+                                                                               (PlotController_StaticsPtr
+                                                                               + 184) + 132) *
                                                                    *(float *)(*(int64 *)
                                                                                (this + 40) + 84);
                                                               uVar4 = Single.ToString(local_res8,
@@ -363,7 +364,6 @@ public class ForceAttackAreaResultController
     // RVA   : 0xBA7FE0   Offset: 0xBA67E0   Length: 0x2FE
     public void UnshowForceAttackAreaResultUI()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         byte uVar1;
         long lVar2;
         long lVar3;
@@ -376,18 +376,19 @@ public class ForceAttackAreaResultController
         }
         if (this.forceAttackAreaResultUIPanel != null) {
           GameObject.SetActive(this.forceAttackAreaResultUIPanel,0,0);
-          if (*pStatics != 0) {
+          if (GameController._instance != null) {
             uVar1 = GameController.MangeForceTryConquerArea
-                              (*pStatics,this.attackForce,
-                               this.defenceForce,this.targetArea,0);
-            if (*pStatics != 0) {
+                              (GameController._instance,
+                               this.attackForce,this.defenceForce,
+                               this.targetArea,0);
+            if (GameController._instance != null) {
               GameController.ShowForceAttackAreaInfo
-                        (*pStatics,this.attackForce,
-                         this.defenceForce,this.targetArea,1,uVar1,0);
+                        (GameController._instance,this.attackForce
+                         ,this.defenceForce,this.targetArea,1,uVar1,0);
               lVar3 = this.attackForce;
-              if (((*pStatics != 0) &&
-                  (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-                 (lVar2 = WorldData.Player(lVar2,0)) != null) {
+              if (((GameController._instance != null) &&
+                  (lVar2 = GameController._instance.worldData,
+                  lVar2 != null)) && (lVar2 = WorldData.Player(lVar2,0)) != null) {
                 lVar2 = HeroData.GetForce(lVar2,0,0);
                 if (lVar3 == lVar2) {
                   lVar3 = FUN_18046c440(0);
@@ -405,8 +406,8 @@ public class ForceAttackAreaResultController
                 else {
                   lVar3 = this.defenceForce;
                   lVar2 = FUN_18046c0a0(0);
-                  if (((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
-                     (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) != null) {
+                  if (((lVar2 != null) && (lVar2.villageAreaID != null)) &&
+                     (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) {
                     lVar2 = HeroData.GetForce(lVar2,0,0);
                     if (lVar3 != lVar2) {
                       return;

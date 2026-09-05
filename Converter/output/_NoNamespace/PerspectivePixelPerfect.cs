@@ -46,8 +46,6 @@ public class PerspectivePixelPerfect
     // RVA   : 0x4788F0   Offset: 0x4770F0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1804788f0(int64 this)
-        {
         this.bias = 0x3a83126f;
         FUN_18044ef50(this,0);
     }

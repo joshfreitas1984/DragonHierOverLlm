@@ -76,8 +76,6 @@ public class MeditationData
     // RVA   : 0xA8F0C0   Offset: 0xA8D8C0   Length: 0x1B
     public float GetMaxExp()
     {
-        float FUN_180a8f0c0(int64 this)
-        {
         return (float)((this.lv + 2) * (this.lv + 1)) * 50.0;
     }
 
@@ -143,9 +141,7 @@ public class MeditationData
     // RVA   : 0xA8F030   Offset: 0xA8D830   Length: 0x29
     public float GetItemExpNum(ItemData targetItem)
     {
-        uint64 FUN_180a8f030(uint64 this,int64 targetItem)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         if (targetItem == null) {
           return 0;
         }
@@ -169,8 +165,7 @@ public class MeditationData
     // RVA   : 0xA8EAE0   Offset: 0xA8D2E0   Length: 0x544
     public void ChangeExp(float _exp, bool showInfo)
     {
-        var pStatics_a578 = *(int64*)(DAT_181d5a578 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d5a578 + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
@@ -192,10 +187,10 @@ public class MeditationData
             do {
               this.lv = iVar2 + 1;
               this.exp = fVar7 - (float)((iVar2 + 2) * (iVar2 + 1)) * 50.0;
-              lVar3 = *pStatics_a578;
-              if (((*pStatics_df90 == 0) ||
-                  (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-                 (lVar4 = WorldData.Player(lVar4,0)) == null) {
+              lVar3 = *pStatics;
+              if (((GameController._instance == null) ||
+                  (lVar4 = GameController._instance.worldData,
+                  lVar4 == null)) || (lVar4 = WorldData.Player(lVar4,0)) == null) {
         LAB_180a8f019:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -205,8 +200,8 @@ public class MeditationData
               uVar6 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
               uVar5 = String.Format("{0}修行达到{1}级",uVar5,uVar6,0);
               lVar4 = FUN_18046c0a0(0);
-              if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                 (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null)
+              if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                 (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null)
               goto LAB_180a8f019;
               uVar1 = *(uint32 *)(lVar4 + 132);
               uVar6 = GlobalData.GetForceIconName(uVar1,0);
@@ -221,16 +216,16 @@ public class MeditationData
           }
           return;
         }
-        lVar3 = *pStatics_a578;
-        if (((*pStatics_df90 != 0) &&
-            (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-           (lVar4 = WorldData.Player(lVar4,0)) != null) {
+        lVar3 = *pStatics;
+        if (((GameController._instance != null) &&
+            (lVar4 = GameController._instance.worldData) != null)
+           && (lVar4 = WorldData.Player(lVar4,0)) != null) {
           uVar5 = HeroData.GetMeditationTopic(lVar4,0);
           uVar6 = Single.ToString(local_res10,"+0;-0;0",0);
           uVar5 = String.Format("{0}修行经验{1}",uVar5,uVar6,0);
-          if (((*pStatics_df90 != 0) &&
-              (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar4 = WorldData.Player(lVar4,0)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar4 = GameController._instance.worldData, lVar4 != null
+              )) && (lVar4 = WorldData.Player(lVar4,0)) != null) {
             uVar1 = *(uint32 *)(lVar4 + 132);
             uVar6 = GlobalData.GetForceIconName(uVar1,0);
             if (lVar3 != null) {

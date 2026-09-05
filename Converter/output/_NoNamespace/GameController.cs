@@ -62,7 +62,7 @@ public class GameController
     // RVA   : 0x7E8540   Offset: 0x7E6D40   Length: 0x1F7
     public static GameController get_Instance()
     {
-        return **(uint64 **)(DAT_181d4df90 + 184);
+        return GameController._instance;
     }
 
     // Token : 0x6001503
@@ -71,14 +71,14 @@ public class GameController
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d4df90 + 184);
+        uVar3 = GameController._instance;
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181d4df90 + 184);
+        puVar1 = *(uint64 **)(GameController_StaticsPtr + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -87,13 +87,12 @@ public class GameController
     // RVA   : 0x7E33E0   Offset: 0x7E1BE0   Length: 0x409
     private void Start()
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
-        if (*pStatics_c960 == 0) throw; // [null/range check failed]
-        PlotController.QuickScreenBlack(*pStatics_c960,0);
+        if (PlotController._instance == null) throw; // [null/range check failed]
+        PlotController.QuickScreenBlack(PlotController._instance,0);
         uVar3 = **(uint64 **)(DAT_181d81570 + 184);
         cVar2 = Object.op_Inequality(uVar3,0,0);
         if (!cVar2) {
@@ -110,32 +109,32 @@ public class GameController
         else {
           lVar1 = this.worldData;
           this.TestBuildPlayer = 0;
-          if ((*pStatics_1570 == 0) || (lVar1 == null)) throw; // [null/range check failed]
-          lVar1.gameMode = *(uint32 *)(*pStatics_1570 + 44);
-          if (*pStatics_1570 == 0) throw; // [null/range check failed]
+          if ((*pStatics == 0) || (lVar1 == null)) throw; // [null/range check failed]
+          lVar1.gameMode = *(uint32 *)(*pStatics + 44);
+          if (*pStatics == 0) throw; // [null/range check failed]
           lVar1 = this.worldData;
-          if (*(int *)(*pStatics_1570 + 40) == -1) {
+          if (*(int *)(*pStatics + 40) == -1) {
             if (lVar1 == null) throw; // [null/range check failed]
             lVar1.gameDifficulty = 0;
             if (this.worldData == null) throw; // [null/range check failed]
             this.worldData.relaxMode = 1;
           }
           else {
-            if ((*pStatics_1570 == 0) || (lVar1 == null)) throw; // [null/range check failed]
-            lVar1.gameDifficulty = *(uint32 *)(*pStatics_1570 + 40);
+            if ((*pStatics == 0) || (lVar1 == null)) throw; // [null/range check failed]
+            lVar1.gameDifficulty = *(uint32 *)(*pStatics + 40);
             if (this.worldData == null) throw; // [null/range check failed]
             this.worldData.relaxMode = 0;
           }
           lVar1 = this.worldData;
-          if ((*pStatics_1570 == 0) || (lVar1 == null)) throw; // [null/range check failed]
-          lVar1.customDifficultyData = *(uint64 *)(*pStatics_1570 + 64);
+          if ((*pStatics == 0) || (lVar1 == null)) throw; // [null/range check failed]
+          lVar1.customDifficultyData = *(uint64 *)(*pStatics + 64);
           GameController.StartNewGame(this,0);
-          if (*pStatics_1570 == 0) throw; // [null/range check failed]
-          uVar3 = Component.get_gameObject(*pStatics_1570,0);
+          if (*pStatics == 0) throw; // [null/range check failed]
+          uVar3 = Component.get_gameObject(*pStatics,0);
         LAB_1807e372c:
           Object.Destroy(uVar3,0);
         }
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           GameDataController.CheckAllAch(lVar1,0);
           return;
@@ -156,8 +155,8 @@ public class GameController
         GameController.GenerateRelationShip(this,0);
         GameController.GenerateRandomEnemy(this,999,0);
         GameController.GenerateRandomEvent(this,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d84f70 + 184) + 8);
+        lVar1 = GameController.lockObj;
+        lVar2 = GameController.difficultyExtraPoint;
         uVar3 = new OnTooltipCB(this,DAT_181d9bbf0,0);
         if (lVar2 != null) {
           uVar3 = TaskFactory.StartNew(lVar2,uVar3,0);
@@ -174,19 +173,18 @@ public class GameController
     // RVA   : 0x7A3500   Offset: 0x7A1D00   Length: 0x1DA
     public void CreateStartExternalStorageEvent()
     {
-        var pStatics_44e0 = *(int64*)(DAT_181d744e0 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d744e0 + 184);
         long lVar1;
-        if (*(int64 *)(pStatics_e010 + 24) == 0) {
+        if (GameController.CheckShowSpeHeroSkinID == null) {
           return;
         }
-        lVar1 = *(int64 *)(pStatics_e010 + 24);
+        lVar1 = GameController.CheckShowSpeHeroSkinID;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 40)) != null) {
           if (*(int *)(lVar1 + 24) < 1) {
             return;
           }
-          if ((*pStatics_44e0 != 0) &&
-             (*(int64 *)(*pStatics_44e0 + 120) != 0)) {
+          if ((*pStatics != 0) &&
+             (*(int64 *)(*pStatics + 120) != 0)) {
             plVar2 = (int64 *)EventData.Clone();
             if (this.worldData != null) {
               if (plVar2 == (int64 *)0) {
@@ -212,7 +210,6 @@ public class GameController
     {
         var pStatics_0cc8 = *(int64*)(DAT_181d90cc8 + 184);
         var pStatics_a578 = *(int64*)(DAT_181d5a578 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
         int iVar2;
         long lVar3;
         ulong uVar4;
@@ -250,7 +247,7 @@ public class GameController
         FUN_181827900(lVar3,uVar4,DAT_181d64578);
         if (lVar6 == null) goto LAB_1807e31ba;
         lVar6.forceAreaID = lVar3;
-        lVar6 = *(int64 *)(*(int64 *)(DAT_181d4df90 + 184) + 8);
+        lVar6 = GameController.difficultyExtraPoint;
         if ((this.worldData == null) || (lVar6 == null)) goto LAB_1807e31ba;
         uVar8 = this.worldData.gameDifficulty;
         if (lVar6.cityAreaID <= uVar8) {
@@ -317,7 +314,7 @@ public class GameController
         uVar11 = GlobalData.RandomRange(0x41200000,0x41a00000,0,0);
         if (lVar6 == null) goto LAB_1807e31ba;
         lVar6.weatherLastTime = uVar11;
-        lVar6 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+        lVar6 = GameController.CheckShowSpeHero;
         if (lVar6 == null) goto LAB_1807e31ba;
         BigMapController.InitBigMap(lVar6,0);
         lVar6 = this.worldData;
@@ -369,7 +366,7 @@ public class GameController
           if (lVar6 == null) goto LAB_1807e31ba;
           WorldPlotEventController.StartNewWorldPlotEvent(lVar6,uVar4,0);
           if (!this.TestBuildPlayer) {
-            lVar6 = *pStatics_c960;
+            lVar6 = PlotController._instance;
             if (lVar6 == null) goto LAB_1807e31ba;
             uVar4 = 0x505;
             goto LAB_1807e2b7f;
@@ -378,7 +375,7 @@ public class GameController
         else {
           GameController.GameStartTeleportPlayer(this,0,0);
           if (!this.TestBuildPlayer) {
-            lVar6 = *pStatics_c960;
+            lVar6 = PlotController._instance;
             if (lVar6 == null) goto LAB_1807e31ba;
             uVar4 = 0x502;
         LAB_1807e2b7f:
@@ -388,51 +385,61 @@ public class GameController
             }
           }
         }
-        if (*(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 8) != 0) {
+        if (PlotController.LeftFaceHideOffset != null) {
           return;
         }
         if (this.worldData != null) {
           if (this.worldData.gameMode != null) {
             return;
           }
-          if (*pStatics_c960 != 0) {
-            PlotController.GetSpeReward(*pStatics_c960,"11",0);
-            if (*pStatics_c960 != 0) {
-              PlotController.SpePlotFuc(*pStatics_c960,"65",0);
+          if (PlotController._instance != null) {
+            PlotController.GetSpeReward
+                      (PlotController._instance,"11",0);
+            if (PlotController._instance != null) {
+              PlotController.SpePlotFuc
+                        (PlotController._instance,"65",0);
               if ((this.worldData != null) &&
                  (lVar6 = WorldData.GetHero(this.worldData,"武绝义",0)) != null)
               {
                 HeroData.JoinForce(lVar6,8,0xffffffff,0xffffffff,1,1,0);
-                if (*pStatics_c960 != 0) {
-                  PlotController.SpeHeroDeath(*pStatics_c960,"思中澜",0);
-                  if (*pStatics_c960 != 0) {
-                    PlotController.SpeHeroDeath(*pStatics_c960,"阎罗王",0);
-                    if (*pStatics_c960 != 0) {
-                      PlotController.SpePlotFuc(*pStatics_c960,"126",0);
-                      if (*pStatics_c960 != 0) {
+                if (PlotController._instance != null) {
+                  PlotController.SpeHeroDeath
+                            (PlotController._instance,"思中澜",0);
+                  if (PlotController._instance != null) {
+                    PlotController.SpeHeroDeath
+                              (PlotController._instance,"阎罗王",0);
+                    if (PlotController._instance != null) {
+                      PlotController.SpePlotFuc
+                                (PlotController._instance,"126",0);
+                      if (PlotController._instance != null) {
                         PlotController.UpgradeHeroSkill
-                                  (*pStatics_c960,"白云天-1050-1-6",0);
-                        if (*pStatics_c960 != 0) {
+                                  (PlotController._instance,"白云天-1050-1-6",0);
+                        if (PlotController._instance != null) {
                           PlotController.SpePlotFuc
-                                    (*pStatics_c960,"128",0);
-                          if (*pStatics_c960 != 0) {
+                                    (PlotController._instance,"128",0);
+                          if (PlotController._instance != null) {
                             PlotController.SpePlotFuc
-                                      (*pStatics_c960,"153",0);
-                            if (*pStatics_c960 != 0) {
+                                      (PlotController._instance,"153",0);
+                            if (PlotController._instance != null) {
                               PlotController.SpePlotFuc
-                                        (*pStatics_c960,"133",0);
-                              if (*pStatics_c960 != 0) {
+                                        (PlotController._instance,"133",0
+                                        );
+                              if (PlotController._instance != null) {
                                 PlotController.SpePlotFuc
-                                          (*pStatics_c960,"136",0);
-                                if (*pStatics_c960 != 0) {
+                                          (PlotController._instance,"136"
+                                           ,0);
+                                if (PlotController._instance != null) {
                                   PlotController.SpePlotFuc
-                                            (*pStatics_c960,"137",0);
-                                  if (*pStatics_c960 != 0) {
+                                            (PlotController._instance,
+                                             "137",0);
+                                  if (PlotController._instance != null) {
                                     PlotController.SpePlotFuc
-                                              (*pStatics_c960,"138",0);
-                                    if (*pStatics_c960 != 0) {
+                                              (PlotController._instance,
+                                               "138",0);
+                                    if (PlotController._instance != null) {
                                       PlotController.SpePlotFuc
-                                                (*pStatics_c960,"139",0);
+                                                (PlotController._instance,
+                                                 "139",0);
                                       return;
                                     }
                                   }
@@ -495,38 +502,38 @@ public class GameController
     // RVA   : 0x7E1C60   Offset: 0x7E0460   Length: 0x34F
     public void StartLoadGame()
     {
-        var pStatics_baa8 = *(int64*)(DAT_181d8baa8 + 184);
-        var pStatics_fc60 = *(int64*)(DAT_181d8fc60 + 184);
+        var pStatics = *(int64*)(DAT_181d8fc60 + 184);
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           GameDataController.GameDataIntoGame(lVar1,0);
           if (this.worldData != null) {
             WorldData.GenerateHeroDict(this.worldData,0);
             GameController.GameDataUpdateChecking(this,0);
-            lVar1 = *(int64 *)(pStatics_baa8 + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.InitBigMap(lVar1,0);
-              lVar1 = *(int64 *)(pStatics_baa8 + 16);
+              lVar1 = GameController.CheckShowSpeHero;
               if (lVar1 != null) {
                 BigMapController.RecreatAllBigMapRandomEvent(lVar1,0);
-                lVar1 = *(int64 *)(pStatics_baa8 + 16);
+                lVar1 = GameController.CheckShowSpeHero;
                 if (lVar1 != null) {
                   BigMapController.RecreateAllBigMapHeroIcon(lVar1,0);
                   if (this.worldData != null) {
                     lVar1 = WorldData.Player(this.worldData,0);
                     if (lVar1 != null) {
                       GameController.GameStartTeleportPlayer(this,*(uint32 *)(lVar1 + 192),0);
-                      if (*pStatics_fc60 != 0) {
+                      if (*pStatics != 0) {
                         WeatherController.GameStartRefreshNowWeather
-                                  (*pStatics_fc60,0);
+                                  (*pStatics,0);
                         if (this.worldData != null) {
                           lVar1 = WorldData.Player(this.worldData,0);
                           if (lVar1 != null) {
                             if (*(char *)(lVar1 + 209) == false) {
                               return;
                             }
-                            lVar1 = *(int64 *)(*(int64 *)(DAT_181d6da60 + 184) + 32);
+                            lVar1 = *(int64 *)
+                                     (*(int64 *)(PrisonController_StaticsPtr + 184) + 32);
                             if (lVar1 != null) {
                               PrisonController.LoadGameReshowPrison(lVar1,0);
                               return;
@@ -828,7 +835,7 @@ public class GameController
                       , lVar9 == null)))) break;
                   local_res18[0] = lVar9.forceAreaID;
                   if (-1 < local_res18[0]) {
-                    lVar9 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+                    lVar9 = GameController.difficultyExtraPoint;
                     if (lVar9 == null) break;
                     lVar9 = lVar9.chapter;
                     uVar8 = Int32.ToString(local_res18,0);
@@ -1086,14 +1093,13 @@ public class GameController
     // RVA   : 0x7A6720   Offset: 0x7A4F20   Length: 0x1F8
     public void GameStartTeleportPlayer(int targetAreaID)
     {
-        var pStatics = *(int64*)(DAT_181d8baa8 + 184);
         long lVar1;
         ulong uVar2;
         if (targetAreaID < 0) {
-          lVar1 = *(int64 *)(pStatics + 16);
+          lVar1 = GameController.CheckShowSpeHero;
           if (lVar1 != null) {
             BigMapController.PlayerStopMove(lVar1,0);
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.QuickFocusOnSelf(lVar1,0);
               return;
@@ -1101,7 +1107,7 @@ public class GameController
           }
         }
         else {
-          lVar1 = *(int64 *)(pStatics + 16);
+          lVar1 = GameController.CheckShowSpeHero;
           if (lVar1 != null) {
             BigMapController.MovePlayerIconToArea(lVar1,targetAreaID,0);
             if (this.worldData != null) {
@@ -1119,7 +1125,7 @@ public class GameController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+        lVar1 = GameController.CheckShowSpeHero;
         if (lVar1 != null) {
           BigMapController.MovePlayerIconToArea(lVar1,areaID,0);
           if (this.worldData != null) {
@@ -1308,7 +1314,7 @@ public class GameController
     // RVA   : 0x7C58A0   Offset: 0x7C40A0   Length: 0x12D7
     public void LoadAreaDataBase()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         bool cVar2;
         uint uVar3;
@@ -1352,7 +1358,7 @@ public class GameController
         uStack_100 = 0;
         local_f8 = 0;
         plVar13 = (int64 *)0;
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar5 = GameController.lockObj;
         if (((lVar5 != null) && (lVar5 = lVar5.playerServantForceTime) != null) &&
            (lVar5 = FUN_1808acf30(lVar5,DAT_181d92898)) != null) {
           ValueCollection.GetEnumerator(&local_120,lVar5,DAT_181d562e8);
@@ -1378,8 +1384,8 @@ public class GameController
             }
             plVar9[15] = lVar5;
             il2cpp_internal(plVar9 + 15,lVar5);
-            if (*(int *)(pStatics + 8) == 1) {
-              lVar5 = *(int64 *)(pStatics + 24);
+            if (PlotController.LeftFaceHideOffset == 1) {
+              lVar5 = PlotController.CheckHideChoice;
               if (lVar5 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -1563,7 +1569,8 @@ public class GameController
                           }
                           fVar15 = (float)BigMapPos.Distance(*(int64 *)(local_128 + 64),plVar9[6],0)
                           ;
-                          if (fVar15 <= *(float *)(pStatics + 0x114) * 275.0) {
+                          if (fVar15 <= *(float *)(pPlotController + 0x114
+                                                  ) * 275.0) {
                             if (plVar9[7] == 0) {
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
@@ -1729,7 +1736,8 @@ public class GameController
                     (lVar7 = FUN_180002f80(lVar7,plVar9,DAT_181d551e0)) == null) || (lVar5 == null))
                 throw; // [null/range check failed]
                 fVar15 = (float)BigMapPos.Distance(lVar5,*(uint64 *)(lVar7 + 64),0);
-                if (fVar15 <= *(float *)(pStatics + 0x114) * 275.0) {
+                if (fVar15 <= *(float *)(pPlotController + 0x114) * 275.0)
+                {
                   if (((this.worldData == null) ||
                       (lVar5 = this.worldData.Areas) == null) ||
                      (lVar5 = FUN_180002f80(lVar5,uVar12,DAT_181d551e0)) == null) throw; // [null/range check failed]
@@ -1761,7 +1769,7 @@ public class GameController
     // RVA   : 0x7AC1C0   Offset: 0x7AA9C0   Length: 0x1385
     public void GenerateForceDataBase()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         int iVar2;
         bool cVar3;
@@ -1802,7 +1810,7 @@ public class GameController
         local_128 = 0;
         uStack_120 = 0;
         local_118 = 0;
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar5 = GameController.lockObj;
         if (((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 208)) != null) &&
            (lVar5 = FUN_1808acf30(lVar5,DAT_181d94200)) != null) {
           ValueCollection.GetEnumerator(&local_140,lVar5,DAT_181d56968);
@@ -1850,7 +1858,7 @@ public class GameController
               if (*(int *)(lVar7 + 24) <= iVar12) break;
               iVar14 = *(int *)((int64)plVar6 + 52);
               GlobalData.RandomRange((float)iVar14 + 1.0,(float)iVar14 + 2.0,0,0);
-              lVar10 = *(int64 *)(pStatics + 0x440);
+              lVar10 = *(int64 *)(pPlotController + 0x440);
               if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -1860,8 +1868,8 @@ public class GameController
               FUN_181814d10(lVar7,iVar12);
               iVar12 = iVar12 + 1;
             }
-            if (*(int *)(pStatics + 8) == 1) {
-              lVar7 = *(int64 *)(pStatics + 32);
+            if (PlotController.LeftFaceHideOffset == 1) {
+              lVar7 = PlotController.SpringFestivelRewardLvTalkText;
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -2310,7 +2318,7 @@ public class GameController
         iVar8 = 0;
         iVar7 = iVar8;
         while( true ) {
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar6 = GameController.lockObj;
           if (((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 0x138)) == null) ||
              (lVar6 = FUN_1817cc780(lVar6,param_5,DAT_181d91358)) == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar6 + 24) <= uVar2) {
@@ -2403,7 +2411,7 @@ public class GameController
         iVar8 = 0;
         iVar7 = iVar8;
         while( true ) {
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar6 = GameController.lockObj;
           if (((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 0x138)) == null) ||
              (lVar6 = FUN_1817cc780(lVar6,restrictSkillID,DAT_181d91358)) == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar6 + 24) <= uVar2) {
@@ -2496,7 +2504,7 @@ public class GameController
         iVar8 = 0;
         iVar7 = iVar8;
         while( true ) {
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar6 = GameController.lockObj;
           if (((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 0x138)) == null) ||
              (lVar6 = FUN_1817cc780(lVar6,forceID,DAT_181d91358)) == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar6 + 24) <= uVar2) {
@@ -2569,7 +2577,7 @@ public class GameController
     // RVA   : 0x7A6920   Offset: 0x7A5120   Length: 0x2422
     public void GenerateArea()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -2618,7 +2626,8 @@ public class GameController
           cVar2 = FUN_180d197a0(&local_e0,DAT_181d639c8);
           lVar1 = local_d0;
           if (cVar2) {
-            if (*(int *)(pStatics + 8) == 1) goto code_r0x0001807a6c55;
+            if (PlotController.LeftFaceHideOffset == 1)
+            goto code_r0x0001807a6c55;
             goto LAB_1807a6ca8;
           }
           ZhSegment.Initialize(&local_e0,DAT_181d63948);
@@ -2672,7 +2681,7 @@ public class GameController
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         code_r0x0001807a6c55:
-        lVar12 = *(int64 *)(pStatics + 24);
+        lVar12 = PlotController.CheckHideChoice;
         if (lVar1 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -3383,8 +3392,8 @@ public class GameController
             FUN_1800d6620();
           }
           if (*(int *)(lVar12 + 24) <= iVar4) break;
-          if ((**(int **)(DAT_181d4ef00 + 184) != 2) || (iVar4 == 0)) {
-            lVar12 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          if ((PlotController._instance != 2) || (iVar4 == 0)) {
+            lVar12 = GameController.lockObj;
             if (lVar12 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -3564,7 +3573,7 @@ public class GameController
           FUN_18181e970(lVar12,iVar4,uVar3);
           iVar4 = iVar4 + 1;
         }
-        lVar12 = *(int64 *)(pStatics + 0x620);
+        lVar12 = *(int64 *)(pPlotController + 0x620);
         if (lVar12 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -3830,9 +3839,7 @@ public class GameController
     // RVA   : 0x7E39F0   Offset: 0x7E21F0   Length: 0x1FDD
     public void TestBuildPlayerData()
     {
-        var pStatics_4cc0 = *(int64*)(DAT_181d84cc0 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar2;
         bool cVar3;
         long lVar4;
@@ -3881,7 +3888,7 @@ public class GameController
         uVar10 = uVar11;
         while( true ) {
 
-          if ((lVar6 = *(int64 *)(pStatics_e010 + 32)?.totalHeroMeet) == null) throw; // [null/range check failed]
+          if ((lVar6 = GameController.lockObj?.totalHeroMeet) == null) throw; // [null/range check failed]
           uVar9 = uVar11;
           if (lVar6.cityAreaID <= (int)uVar10) break;
           do {
@@ -4084,7 +4091,7 @@ public class GameController
               uVar14 = 0xffffffff;
             }
             else {
-              uVar14 = *(uint32 *)(pStatics_ef00 + 236);
+              uVar14 = *(uint32 *)(pPlotController + 236);
             }
             *(uint32 *)(lVar6 + 132) = uVar14;
             lVar6.playerBetrayForceBadTime = 0xffffffff;
@@ -4179,7 +4186,7 @@ public class GameController
           uVar10 = uVar10 + 1;
           goto LAB_1807e4740;
         }
-        lVar4 = *(int64 *)(pStatics_e010 + 32);
+        lVar4 = GameController.lockObj;
         if (((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x128)) == null) ||
            (lVar4 = FUN_1808acf30(lVar4,DAT_181d96ce8)) == null) throw; // [null/range check failed]
         ValueCollection.GetEnumerator(&local_c8,lVar4,DAT_181d575e8);
@@ -4377,7 +4384,7 @@ public class GameController
             ItemListData.GetItem(lVar7,uVar5,0);
           }
           ZhSegment.Initialize(&local_e8,DAT_181d739b8);
-          lVar4 = *(int64 *)(pStatics_e010 + 32);
+          lVar4 = GameController.lockObj;
           if (((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x118)) != null) &&
              (lVar4 = FUN_1808acf30(lVar4,DAT_181d96ac8)) != null) {
             ValueCollection.GetEnumerator(&local_c8,lVar4,DAT_181d57568);
@@ -4414,7 +4421,7 @@ public class GameController
               if ((lVar7 != null) && (uVar5 = ItemData.SetBookData(lVar7,0x284,0,0), lVar4 != null)) {
                 ItemListData.GetItem(lVar4,uVar5,0,0);
                 while( true ) {
-                  lVar4 = *(int64 *)(pStatics_ef00 + 0x508);
+                  lVar4 = *(int64 *)(pPlotController + 0x508);
                   if (lVar4 == null) break;
                   uVar9 = uVar11;
                   if (*(int *)(lVar4 + 24) <= (int)uVar10) goto LAB_1807e5370;
@@ -4433,7 +4440,7 @@ public class GameController
         }
         throw; // [null/range check failed]
         LAB_1807e5370:
-        lVar4 = *(int64 *)(pStatics_ef00 + 0x530);
+        lVar4 = *(int64 *)(pPlotController + 0x530);
         if (lVar4 == null) throw; // [null/range check failed]
         uVar10 = uVar11;
         uVar13 = uVar11;
@@ -4490,16 +4497,16 @@ public class GameController
         lVar4 = lVar4 + 8;
         goto LAB_1807e5500;
         LAB_1807e5615:
-        lVar4 = *(int64 *)(pStatics_4cc0 + 40);
+        lVar4 = PlotController.LanternFestivelRewardLvTalkText;
         if (lVar4 == null) throw; // [null/range check failed]
         AIController.AICheckSkill(lVar4,lVar6,0);
         lVar6.playerBetrayForceBadTime = 0;
-        lVar4 = *(int64 *)(pStatics_4cc0 + 40);
+        lVar4 = PlotController.LanternFestivelRewardLvTalkText;
         if (lVar4 != null) {
           AIController.AICheckEquipment(lVar4,lVar6,0);
           lVar6.playerBetrayForceBadTime = 0xffffffff;
           while( true ) {
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x4a8);
+            lVar4 = *(int64 *)(pPlotController + 0x4a8);
             if (lVar4 == null) throw; // [null/range check failed]
             if (*(int *)(lVar4 + 24) <= (int)uVar11) break;
             if ((lVar6.monthLeaderInteractOtherForceTime == null) ||
@@ -4562,7 +4569,7 @@ public class GameController
         iVar3 = 0;
         while( true ) {
 
-          if ((lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32)?.totalHeroMeet) == null) break;
+          if ((lVar1 = GameController.lockObj?.totalHeroMeet) == null) break;
           iVar4 = 0;
           if (lVar1.cityAreaID <= iVar3) {
             return;
@@ -4605,8 +4612,6 @@ public class GameController
     // RVA   : 0x7BB5C0   Offset: 0x7B9DC0   Length: 0x15
     public float GetExtraBossLv(float resultValue, float targetValue)
     {
-        float FUN_1807bb5c0(uint64 this,float resultValue,float targetValue)
-        {
         float fVar1;
         fVar1 = 1.0 - resultValue / targetValue;
         return fVar1 + fVar1;
@@ -4620,7 +4625,7 @@ public class GameController
         long lVar2;
         ulong uVar4;
         float fVar5;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x110)) != null) {
           lVar2 = FUN_1817cc780(lVar2,minValue,DAT_181d96a40);
           if (lVar2 != null) {
@@ -4654,7 +4659,7 @@ public class GameController
         long lVar2;
         ulong uVar4;
         float fVar5;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x110)) != null) {
           lVar2 = FUN_1817cc780(lVar2,id,DAT_181d96a40);
           if (lVar2 != null) {
@@ -4692,7 +4697,7 @@ public class GameController
         int64 *plVar3;
         uint64 uVar4;
         float fVar5;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x118)) != null) {
           lVar2 = FUN_1817cc780(lVar2,minValue,DAT_181d96a40);
           if (lVar2 != null) {
@@ -4750,7 +4755,7 @@ public class GameController
         int64 local_38;
         lVar4 = il2cpp_internal(DAT_181d6f030);
         FUN_180f58a90(lVar4,DAT_181d678f8);
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar5 = GameController.lockObj;
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x118)) != null) {
           lVar5 = FUN_1808acf30(lVar5,DAT_181d96ac8);
           if (lVar5 != null) {
@@ -4804,7 +4809,7 @@ public class GameController
         int64 *plVar3;
         uint64 uVar4;
         float fVar5;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x118)) != null) {
           lVar2 = FUN_1817cc780(lVar2,id,DAT_181d96a40);
           if (lVar2 != null) {
@@ -4847,7 +4852,7 @@ public class GameController
         uint uVar4;
         long lVar5;
         ulong uVar7;
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar5 = GameController.lockObj;
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x120)) != null) {
           lVar5 = FUN_1817cc780(lVar5,minValue,DAT_181d96a40);
           if (lVar5 != null) {
@@ -4889,7 +4894,7 @@ public class GameController
         uint uVar4;
         long lVar5;
         ulong uVar7;
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar5 = GameController.lockObj;
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x120)) != null) {
           lVar5 = FUN_1817cc780(lVar5,minLv,DAT_181d96a40);
           if (lVar5 != null) {
@@ -4931,7 +4936,7 @@ public class GameController
         uint uVar4;
         long lVar5;
         ulong uVar7;
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar5 = GameController.lockObj;
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x120)) != null) {
           lVar5 = FUN_1817cc780(lVar5,id,DAT_181d96a40);
           if (lVar5 != null) {
@@ -4981,7 +4986,7 @@ public class GameController
         uVar3 = Mathf.Clamp(lv,0,5);
         if (lVar5 != null) {
           *(uint32 *)(lVar5 + 60) = uVar3;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4e8);
+          lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4e8);
           if (lVar2 != null) {
             uVar1 = *(uint32 *)(lVar5 + 60);
             if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -5012,14 +5017,13 @@ public class GameController
     // RVA   : 0x7BB230   Offset: 0x7B9A30   Length: 0x381
     public int GetEquipSpeAddValue(int itemLv, int rareLv)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         uint uVar2;
         uint uVar3;
         long lVar4;
         int iVar5;
         int iVar6;
-        lVar4 = *(int64 *)(pStatics + 32);
+        lVar4 = GameController.lockObj;
         if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 56)) != null) {
           if (*(uint32 *)(lVar4 + 24) <= itemLv) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5031,7 +5035,7 @@ public class GameController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar2 = *(uint32 *)(*(int64 *)(lVar4 + 16) + 32);
-            lVar4 = *(int64 *)(pStatics + 32);
+            lVar4 = GameController.lockObj;
             if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 56)) != null) {
               if (*(uint32 *)(lVar4 + 24) <= itemLv) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5043,7 +5047,7 @@ public class GameController
                 }
                 uVar3 = *(uint32 *)(*(int64 *)(lVar4 + 16) + 36);
                 iVar5 = GlobalData.RandomRange(uVar2,uVar3,0,0);
-                lVar4 = *(int64 *)(pStatics + 32);
+                lVar4 = GameController.lockObj;
                 if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 56)) != null) {
                   if (*(uint32 *)(lVar4 + 24) <= rareLv) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5055,7 +5059,7 @@ public class GameController
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     uVar2 = *(uint32 *)(*(int64 *)(lVar4 + 16) + 32);
-                    lVar4 = *(int64 *)(pStatics + 32);
+                    lVar4 = GameController.lockObj;
                     if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 56)) != null) {
                       if (*(uint32 *)(lVar4 + 24) <= rareLv) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5082,8 +5086,8 @@ public class GameController
     // RVA   : 0x7AAD50   Offset: 0x7A9550   Length: 0x448
     public ItemData GenerateDecoration(int itemLv, int littleType, float bossLv, HeroData targetHero)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 GameController.GenerateDecoration
                          (uint64 this,uint32 itemLv,uint32 littleType,uint32 bossLv)
         {
@@ -5098,7 +5102,7 @@ public class GameController
         uVar7 = (uint32)((uint64)in_stack_ffffffffffffffb8 >> 32);
         uVar3 = Mathf.Clamp(itemLv,0,5);
         if (littleType == 0xffffffff) {
-          lVar5 = *(int64 *)(pStatics_ef00 + 0x4d8);
+          lVar5 = *(int64 *)(pPlotController + 0x4d8);
           if (lVar5 == null) throw; // [null/range check failed]
           littleType = GlobalData.RandomRange(0,*(uint32 *)(lVar5 + 24),0,0);
         }
@@ -5110,13 +5114,13 @@ public class GameController
           *(uint32 *)(lVar5 + 64) = uVar4;
           if (*(int64 *)(lVar5 + 96) != 0) {
             *(uint32 *)(*(int64 *)(lVar5 + 96) + 20) = littleType;
-            lVar2 = *(int64 *)(pStatics_ef00 + 0x4e8);
+            lVar2 = *(int64 *)(pPlotController + 0x4e8);
             if (lVar2 != null) {
               if (*(uint32 *)(lVar2 + 24) <= uVar3) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               uVar6 = lVar2[uVar3];
-              lVar2 = *(int64 *)(pStatics_ef00 + 0x4d8);
+              lVar2 = *(int64 *)(pPlotController + 0x4d8);
               if (lVar2 != null) {
                 if (*(uint32 *)(lVar2 + 24) <= littleType) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5140,7 +5144,7 @@ public class GameController
                                            *(uint32 *)(lVar5 + 64),0);
                         if (*(int64 *)(lVar5 + 96) != 0) {
                           uVar6 = *(uint64 *)(*(int64 *)(lVar5 + 96) + 40);
-                          lVar2 = *(int64 *)(pStatics_e010 + 32);
+                          lVar2 = GameController.lockObj;
                           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                             uVar3 = *(uint32 *)(lVar5 + 64);
                             if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5150,7 +5154,8 @@ public class GameController
                                      (*(int64 *)(lVar2 + 16) + 32 + (int64)(int)uVar3 * 8);
                             if (lVar2 != null) {
                               uVar1 = *(uint32 *)(lVar2 + 40);
-                              lVar2 = *(int64 *)(pStatics_e010 + 32);
+                              lVar2 = *(int64 *)
+                                       (pGameController + 32);
                               if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                 uVar3 = *(uint32 *)(lVar5 + 64);
                                 if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5184,7 +5189,6 @@ public class GameController
     // RVA   : 0x7BDEB0   Offset: 0x7BC6B0   Length: 0x28E
     public int GetRandomEquipmentLittleType(int itemLv, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         float fVar1;
         long lVar2;
         uint uVar3;
@@ -5192,7 +5196,7 @@ public class GameController
         float fVar5;
         float fVar6;
         if (targetHero == null) {
-          lVar2 = *(int64 *)(pStatics + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 248)) != null) {
             uVar3 = Dictionary_2.get_Count(lVar2,DAT_181d969b8);
             GlobalData.RandomRange(0,uVar3,0,0);
@@ -5202,10 +5206,10 @@ public class GameController
         else {
           fVar5 = (float)GlobalData.RandomRange(0xbf800000,0x3f800000,0,0);
           if (*(int64 *)(targetHero + 0x2b8) != 0) {
-            fVar1 = *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5c8);
+            fVar1 = *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5c8);
             fVar6 = (float)HeroSpeAddData.Get(*(int64 *)(targetHero + 0x2b8),207,0);
             uVar3 = Mathf.RoundToInt((1.15 - ((float)(itemLv + 1) * fVar1) / fVar6) * 10.0 + fVar5,0);
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = GameController.lockObj;
             if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 248)) != null) {
               iVar4 = Dictionary_2.get_Count(lVar2,DAT_181d969b8);
               Mathf.Clamp(uVar3,0,iVar4 + -1,0);
@@ -5219,7 +5223,7 @@ public class GameController
     // RVA   : 0x7A8D50   Offset: 0x7A7550   Length: 0x878
     public ItemData GenerateArmor(int itemLv, int littleType, float bossLv, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
         int64 *
         GameController.GenerateArmor
                 (int64 this,uint32 itemLv,int littleType,uint64 bossLv,int64 targetHero)
@@ -5239,14 +5243,14 @@ public class GameController
         if (littleType == -1) {
           littleType = GameController.GetRandomEquipmentLittleType(this,uVar3,targetHero,0);
         }
-        lVar7 = *(int64 *)(pStatics + 32);
+        lVar7 = GameController.lockObj;
         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 248)) != null) {
           lVar7 = FUN_1817cc780(lVar7,littleType,DAT_181d96a40);
           if (lVar7 != null) {
             plVar8 = (int64 *)ItemData.Clone(lVar7,0);
             if (plVar8 != (int64 *)0) {
               *(uint32 *)((int64)plVar8 + 60) = uVar3;
-              lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4e8);
+              lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4e8);
               if (lVar7 != null) {
                 if (*(uint32 *)(lVar7 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5266,7 +5270,7 @@ public class GameController
                                     (this,*(uint32 *)((int64)plVar8 + 60),uVar4,0);
                   if (plVar8[12] != 0) {
                     uVar9 = *(uint64 *)(plVar8[12] + 40);
-                    lVar7 = *(int64 *)(pStatics + 32);
+                    lVar7 = GameController.lockObj;
                     if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                       uVar3 = *(uint32 *)(plVar8 + 8);
                       if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5276,7 +5280,7 @@ public class GameController
                       ;
                       if (lVar7 != null) {
                         uVar1 = *(uint32 *)(lVar7 + 40);
-                        lVar7 = *(int64 *)(pStatics + 32);
+                        lVar7 = GameController.lockObj;
                         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                           uVar3 = *(uint32 *)(plVar8 + 8);
                           if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5316,7 +5320,8 @@ public class GameController
                                     *(float *)(lVar7 + 16) = (float)iVar5;
                                     uVar3 = GameController.RandomRareLvByBossLv(this);
                                     lVar7 = (int64)(int)uVar3;
-                                    lVar2 = *(int64 *)(pStatics + 32);
+                                    lVar2 = *(int64 *)
+                                             (pGameController + 32);
                                     if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null)
                                     {
                                       if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5330,7 +5335,8 @@ public class GameController
                                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         }
                                         uVar4 = *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
-                                        lVar2 = *(int64 *)(pStatics + 32);
+                                        lVar2 = *(int64 *)
+                                                 (pGameController + 32);
                                         if ((lVar2 != null) &&
                                            (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                           if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5351,7 +5357,8 @@ public class GameController
                                                (lVar2 = *(int64 *)(plVar8[12] + 64)) != null) {
                                               uVar9 = *(uint64 *)(lVar2 + 24);
                                               lVar2 = *(int64 *)
-                                                       (pStatics + 32);
+                                                       (pGameController +
+                                                       32);
                                               if ((lVar2 != null) &&
                                                  (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                 if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5361,8 +5368,14 @@ public class GameController
                                                          (*(int64 *)(lVar2 + 16) + 32 + lVar7 * 8);
                                                 if (lVar2 != null) {
                                                   uVar1 = *(uint32 *)(lVar2 + 40);
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar2 = *(int64 *)
-                                                           (pStatics + 32);
+                                                           (*(int64 *)
+                                                             (GameController_StaticsPtr + 184) + 32);
                                                   if ((lVar2 != null) &&
                                                      (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                     if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5405,7 +5418,7 @@ public class GameController
     // RVA   : 0x7AD550   Offset: 0x7ABD50   Length: 0x878
     public ItemData GenerateHelmet(int itemLv, int littleType, float bossLv, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
         int64 *
         GameController.GenerateHelmet
                 (int64 this,uint32 itemLv,int littleType,uint64 bossLv,int64 targetHero)
@@ -5425,14 +5438,14 @@ public class GameController
         if (littleType == -1) {
           littleType = GameController.GetRandomEquipmentLittleType(this,uVar3,targetHero,0);
         }
-        lVar7 = *(int64 *)(pStatics + 32);
+        lVar7 = GameController.lockObj;
         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 0x100)) != null) {
           lVar7 = FUN_1817cc780(lVar7,littleType,DAT_181d96a40);
           if (lVar7 != null) {
             plVar8 = (int64 *)ItemData.Clone(lVar7,0);
             if (plVar8 != (int64 *)0) {
               *(uint32 *)((int64)plVar8 + 60) = uVar3;
-              lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4e8);
+              lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4e8);
               if (lVar7 != null) {
                 if (*(uint32 *)(lVar7 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5452,7 +5465,7 @@ public class GameController
                                     (this,*(uint32 *)((int64)plVar8 + 60),uVar4,0);
                   if (plVar8[12] != 0) {
                     uVar9 = *(uint64 *)(plVar8[12] + 40);
-                    lVar7 = *(int64 *)(pStatics + 32);
+                    lVar7 = GameController.lockObj;
                     if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                       uVar3 = *(uint32 *)(plVar8 + 8);
                       if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5462,7 +5475,7 @@ public class GameController
                       ;
                       if (lVar7 != null) {
                         uVar1 = *(uint32 *)(lVar7 + 40);
-                        lVar7 = *(int64 *)(pStatics + 32);
+                        lVar7 = GameController.lockObj;
                         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                           uVar3 = *(uint32 *)(plVar8 + 8);
                           if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5502,7 +5515,8 @@ public class GameController
                                     *(float *)(lVar7 + 16) = (float)iVar5;
                                     uVar3 = GameController.RandomRareLvByBossLv(this);
                                     lVar7 = (int64)(int)uVar3;
-                                    lVar2 = *(int64 *)(pStatics + 32);
+                                    lVar2 = *(int64 *)
+                                             (pGameController + 32);
                                     if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null)
                                     {
                                       if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5516,7 +5530,8 @@ public class GameController
                                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         }
                                         uVar4 = *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
-                                        lVar2 = *(int64 *)(pStatics + 32);
+                                        lVar2 = *(int64 *)
+                                                 (pGameController + 32);
                                         if ((lVar2 != null) &&
                                            (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                           if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5537,7 +5552,8 @@ public class GameController
                                                (lVar2 = *(int64 *)(plVar8[12] + 64)) != null) {
                                               uVar9 = *(uint64 *)(lVar2 + 24);
                                               lVar2 = *(int64 *)
-                                                       (pStatics + 32);
+                                                       (pGameController +
+                                                       32);
                                               if ((lVar2 != null) &&
                                                  (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                 if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5547,8 +5563,14 @@ public class GameController
                                                          (*(int64 *)(lVar2 + 16) + 32 + lVar7 * 8);
                                                 if (lVar2 != null) {
                                                   uVar1 = *(uint32 *)(lVar2 + 40);
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar2 = *(int64 *)
-                                                           (pStatics + 32);
+                                                           (*(int64 *)
+                                                             (GameController_StaticsPtr + 184) + 32);
                                                   if ((lVar2 != null) &&
                                                      (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                     if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5591,7 +5613,7 @@ public class GameController
     // RVA   : 0x7B79A0   Offset: 0x7B61A0   Length: 0x878
     public ItemData GenerateShoes(int itemLv, int littleType, float bossLv, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
         int64 *
         GameController.GenerateShoes
                 (int64 this,uint32 itemLv,int littleType,uint64 bossLv,int64 targetHero)
@@ -5611,14 +5633,14 @@ public class GameController
         if (littleType == -1) {
           littleType = GameController.GetRandomEquipmentLittleType(this,uVar3,targetHero,0);
         }
-        lVar7 = *(int64 *)(pStatics + 32);
+        lVar7 = GameController.lockObj;
         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 0x108)) != null) {
           lVar7 = FUN_1817cc780(lVar7,littleType,DAT_181d96a40);
           if (lVar7 != null) {
             plVar8 = (int64 *)ItemData.Clone(lVar7,0);
             if (plVar8 != (int64 *)0) {
               *(uint32 *)((int64)plVar8 + 60) = uVar3;
-              lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4e8);
+              lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4e8);
               if (lVar7 != null) {
                 if (*(uint32 *)(lVar7 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5638,7 +5660,7 @@ public class GameController
                                     (this,*(uint32 *)((int64)plVar8 + 60),uVar4,0);
                   if (plVar8[12] != 0) {
                     uVar9 = *(uint64 *)(plVar8[12] + 40);
-                    lVar7 = *(int64 *)(pStatics + 32);
+                    lVar7 = GameController.lockObj;
                     if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                       uVar3 = *(uint32 *)(plVar8 + 8);
                       if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5648,7 +5670,7 @@ public class GameController
                       ;
                       if (lVar7 != null) {
                         uVar1 = *(uint32 *)(lVar7 + 40);
-                        lVar7 = *(int64 *)(pStatics + 32);
+                        lVar7 = GameController.lockObj;
                         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                           uVar3 = *(uint32 *)(plVar8 + 8);
                           if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5688,7 +5710,8 @@ public class GameController
                                     *(float *)(lVar7 + 16) = (float)iVar5;
                                     uVar3 = GameController.RandomRareLvByBossLv(this);
                                     lVar7 = (int64)(int)uVar3;
-                                    lVar2 = *(int64 *)(pStatics + 32);
+                                    lVar2 = *(int64 *)
+                                             (pGameController + 32);
                                     if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null)
                                     {
                                       if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5702,7 +5725,8 @@ public class GameController
                                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         }
                                         uVar4 = *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
-                                        lVar2 = *(int64 *)(pStatics + 32);
+                                        lVar2 = *(int64 *)
+                                                 (pGameController + 32);
                                         if ((lVar2 != null) &&
                                            (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                           if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5723,7 +5747,8 @@ public class GameController
                                                (lVar2 = *(int64 *)(plVar8[12] + 64)) != null) {
                                               uVar9 = *(uint64 *)(lVar2 + 24);
                                               lVar2 = *(int64 *)
-                                                       (pStatics + 32);
+                                                       (pGameController +
+                                                       32);
                                               if ((lVar2 != null) &&
                                                  (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                 if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5733,8 +5758,14 @@ public class GameController
                                                          (*(int64 *)(lVar2 + 16) + 32 + lVar7 * 8);
                                                 if (lVar2 != null) {
                                                   uVar1 = *(uint32 *)(lVar2 + 40);
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar2 = *(int64 *)
-                                                           (pStatics + 32);
+                                                           (*(int64 *)
+                                                             (GameController_StaticsPtr + 184) + 32);
                                                   if ((lVar2 != null) &&
                                                      (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                     if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5777,8 +5808,8 @@ public class GameController
     // RVA   : 0x7BA190   Offset: 0x7B8990   Length: 0xB0
     public ItemData GenerateWeapon(int itemLv, int littleType, int attriType, float bossLv, HeroData targetHero)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 *
         GameController.GenerateWeapon
                 (int64 this,uint32 itemLv,uint32 littleType,uint64 attriType,
@@ -5796,14 +5827,14 @@ public class GameController
         double dVar10;
         float fVar11;
         uVar3 = Mathf.Clamp(itemLv,0,5);
-        lVar7 = *(int64 *)(pStatics_e010 + 32);
+        lVar7 = GameController.lockObj;
         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 240)) != null) {
           lVar7 = FUN_1817cc780(lVar7,littleType,DAT_181d96a40);
           if (lVar7 != null) {
             plVar8 = (int64 *)ItemData.Clone(lVar7,0);
             if (plVar8 != (int64 *)0) {
               *(uint32 *)((int64)plVar8 + 60) = uVar3;
-              lVar7 = *(int64 *)(pStatics_ef00 + 0x4e8);
+              lVar7 = *(int64 *)(pPlotController + 0x4e8);
               if (lVar7 != null) {
                 if (*(uint32 *)(lVar7 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5816,7 +5847,7 @@ public class GameController
                 lVar7 = plVar8[12];
                 if (lVar7 != null) {
                   uVar9 = *(uint64 *)(lVar7 + 32);
-                  lVar2 = *(int64 *)(pStatics_ef00 + 0x4c0);
+                  lVar2 = *(int64 *)(pPlotController + 0x4c0);
                   if (lVar2 != null) {
                     if (*(uint32 *)(lVar2 + 24) <= uVar3) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5832,7 +5863,7 @@ public class GameController
                                       (this,*(uint32 *)((int64)plVar8 + 60),uVar4,0);
                     if (plVar8[12] != 0) {
                       uVar9 = *(uint64 *)(plVar8[12] + 40);
-                      lVar7 = *(int64 *)(pStatics_e010 + 32);
+                      lVar7 = GameController.lockObj;
                       if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                         uVar3 = *(uint32 *)(plVar8 + 8);
                         if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5842,7 +5873,7 @@ public class GameController
                                  (*(int64 *)(lVar7 + 16) + 32 + (int64)(int)uVar3 * 8);
                         if (lVar7 != null) {
                           uVar1 = *(uint32 *)(lVar7 + 40);
-                          lVar7 = *(int64 *)(pStatics_e010 + 32);
+                          lVar7 = GameController.lockObj;
                           if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                             uVar3 = *(uint32 *)(plVar8 + 8);
                             if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -5883,7 +5914,8 @@ public class GameController
                                       *(float *)(lVar7 + 16) = (float)iVar5;
                                       uVar3 = GameController.RandomRareLvByBossLv(this);
                                       lVar7 = (int64)(int)uVar3;
-                                      lVar2 = *(int64 *)(pStatics_e010 + 32);
+                                      lVar2 = *(int64 *)
+                                               (pGameController + 32);
                                       if ((lVar2 != null) &&
                                          (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                         if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5898,7 +5930,8 @@ public class GameController
                                           }
                                           uVar4 = *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
                                           lVar2 = *(int64 *)
-                                                   (pStatics_e010 + 32);
+                                                   (pGameController + 32
+                                                   );
                                           if ((lVar2 != null) &&
                                              (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                             if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5920,7 +5953,8 @@ public class GameController
                                               {
                                                 uVar9 = *(uint64 *)(lVar2 + 24);
                                                 lVar2 = *(int64 *)
-                                                         (pStatics_e010 + 32);
+                                                         (pGameController
+                                                         + 32);
                                                 if ((lVar2 != null) &&
                                                    (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                   if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -5931,8 +5965,15 @@ public class GameController
                                                            );
                                                   if (lVar2 != null) {
                                                     uVar1 = *(uint32 *)(lVar2 + 40);
+                                                    if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar2 = *(int64 *)
-                                                             (pStatics_e010 + 32);
+                                                             (*(int64 *)
+                                                               (GameController_StaticsPtr + 184) + 32);
                                                     if ((lVar2 != null) &&
                                                        (lVar2 = *(int64 *)(lVar2 + 56)) != null)
                                                     {
@@ -5977,8 +6018,8 @@ public class GameController
     // RVA   : 0x7B98E0   Offset: 0x7B80E0   Length: 0x8AC
     public ItemData GenerateWeapon(int itemLv, int weaponID, float bossLv, HeroData targetHero)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 *
         GameController.GenerateWeapon
                 (int64 this,uint32 itemLv,uint32 weaponID,uint64 bossLv,
@@ -5996,14 +6037,14 @@ public class GameController
         double dVar10;
         float fVar11;
         uVar3 = Mathf.Clamp(itemLv,0,5);
-        lVar7 = *(int64 *)(pStatics_e010 + 32);
+        lVar7 = GameController.lockObj;
         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 240)) != null) {
           lVar7 = FUN_1817cc780(lVar7,weaponID,DAT_181d96a40);
           if (lVar7 != null) {
             plVar8 = (int64 *)ItemData.Clone(lVar7,0);
             if (plVar8 != (int64 *)0) {
               *(uint32 *)((int64)plVar8 + 60) = uVar3;
-              lVar7 = *(int64 *)(pStatics_ef00 + 0x4e8);
+              lVar7 = *(int64 *)(pPlotController + 0x4e8);
               if (lVar7 != null) {
                 if (*(uint32 *)(lVar7 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -6016,7 +6057,7 @@ public class GameController
                 lVar7 = plVar8[12];
                 if (lVar7 != null) {
                   uVar9 = *(uint64 *)(lVar7 + 32);
-                  lVar2 = *(int64 *)(pStatics_ef00 + 0x4c0);
+                  lVar2 = *(int64 *)(pPlotController + 0x4c0);
                   if (lVar2 != null) {
                     if (*(uint32 *)(lVar2 + 24) <= uVar3) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -6032,7 +6073,7 @@ public class GameController
                                       (this,*(uint32 *)((int64)plVar8 + 60),uVar4,0);
                     if (plVar8[12] != 0) {
                       uVar9 = *(uint64 *)(plVar8[12] + 40);
-                      lVar7 = *(int64 *)(pStatics_e010 + 32);
+                      lVar7 = GameController.lockObj;
                       if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                         uVar3 = *(uint32 *)(plVar8 + 8);
                         if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -6042,7 +6083,7 @@ public class GameController
                                  (*(int64 *)(lVar7 + 16) + 32 + (int64)(int)uVar3 * 8);
                         if (lVar7 != null) {
                           uVar1 = *(uint32 *)(lVar7 + 40);
-                          lVar7 = *(int64 *)(pStatics_e010 + 32);
+                          lVar7 = GameController.lockObj;
                           if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                             uVar3 = *(uint32 *)(plVar8 + 8);
                             if (*(uint32 *)(lVar7 + 24) <= uVar3) {
@@ -6083,7 +6124,8 @@ public class GameController
                                       *(float *)(lVar7 + 16) = (float)iVar5;
                                       uVar3 = GameController.RandomRareLvByBossLv(this);
                                       lVar7 = (int64)(int)uVar3;
-                                      lVar2 = *(int64 *)(pStatics_e010 + 32);
+                                      lVar2 = *(int64 *)
+                                               (pGameController + 32);
                                       if ((lVar2 != null) &&
                                          (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                         if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -6098,7 +6140,8 @@ public class GameController
                                           }
                                           uVar4 = *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
                                           lVar2 = *(int64 *)
-                                                   (pStatics_e010 + 32);
+                                                   (pGameController + 32
+                                                   );
                                           if ((lVar2 != null) &&
                                              (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                             if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -6120,7 +6163,8 @@ public class GameController
                                               {
                                                 uVar9 = *(uint64 *)(lVar2 + 24);
                                                 lVar2 = *(int64 *)
-                                                         (pStatics_e010 + 32);
+                                                         (pGameController
+                                                         + 32);
                                                 if ((lVar2 != null) &&
                                                    (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                                   if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -6131,8 +6175,15 @@ public class GameController
                                                            );
                                                   if (lVar2 != null) {
                                                     uVar1 = *(uint32 *)(lVar2 + 40);
+                                                    if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar2 = *(int64 *)
-                                                             (pStatics_e010 + 32);
+                                                             (*(int64 *)
+                                                               (GameController_StaticsPtr + 184) + 32);
                                                     if ((lVar2 != null) &&
                                                        (lVar2 = *(int64 *)(lVar2 + 56)) != null)
                                                     {
@@ -6177,7 +6228,7 @@ public class GameController
     // RVA   : 0x7AB1A0   Offset: 0x7A99A0   Length: 0x4EE
     public void GenerateEquipPoison(ItemData targetEquip, float bossLv, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
         void GameController.GenerateEquipPoison
                      (int64 this,int64 targetEquip,uint64 bossLv,int64 targetHero)
         {
@@ -6216,7 +6267,7 @@ public class GameController
                 *(float *)(lVar8 + 16) = (float)iVar4;
                 uVar6 = GameController.RandomRareLvByBossLv(this);
                 lVar8 = (int64)(int)uVar6;
-                lVar2 = *(int64 *)(pStatics + 32);
+                lVar2 = GameController.lockObj;
                 if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                   if (*(uint32 *)(lVar2 + 24) <= uVar6) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -6227,7 +6278,7 @@ public class GameController
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     uVar7 = *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
-                    lVar2 = *(int64 *)(pStatics + 32);
+                    lVar2 = GameController.lockObj;
                     if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                       if (*(uint32 *)(lVar2 + 24) <= uVar6) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -6242,7 +6293,7 @@ public class GameController
                         if ((*(int64 *)(targetEquip + 96) != 0) &&
                            (lVar2 = *(int64 *)(*(int64 *)(targetEquip + 96) + 64)) != null) {
                           uVar3 = *(uint64 *)(lVar2 + 24);
-                          lVar2 = *(int64 *)(pStatics + 32);
+                          lVar2 = GameController.lockObj;
                           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                             if (*(uint32 *)(lVar2 + 24) <= uVar6) {
                               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -6250,7 +6301,8 @@ public class GameController
                             lVar2 = *(int64 *)(*(int64 *)(lVar2 + 16) + 32 + lVar8 * 8);
                             if (lVar2 != null) {
                               uVar1 = *(uint32 *)(lVar2 + 40);
-                              lVar2 = *(int64 *)(pStatics + 32);
+                              lVar2 = *(int64 *)
+                                       (pGameController + 32);
                               if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                                 if (*(uint32 *)(lVar2 + 24) <= uVar6) {
                                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -6330,7 +6382,6 @@ public class GameController
     // RVA   : 0x7B1FD0   Offset: 0x7B07D0   Length: 0xB8
     public ItemData GenerateMaterial(int itemLv, float bossLv)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         int64 GameController.GenerateMaterial
                          (uint64 this,int itemLv,uint32 bossLv,uint32 param_4)
         {
@@ -6344,7 +6395,7 @@ public class GameController
         uint32 uVar8;
         uint32 uVar9;
         uVar3 = Mathf.Clamp(bossLv,0,5);
-        if ((**(int **)(DAT_181d4ef00 + 184) == 2) && (itemLv == 4)) {
+        if ((PlotController._instance == 2) && (itemLv == 4)) {
           itemLv = 2;
         }
         var lVar6 = new ItemData(5);
@@ -6372,7 +6423,7 @@ public class GameController
                             (this,*(uint32 *)(lVar6 + 60),*(uint32 *)(lVar6 + 64),0);
           if (*(int64 *)(lVar6 + 128) != 0) {
             uVar7 = *(uint64 *)(*(int64 *)(lVar6 + 128) + 16);
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = GameController.lockObj;
             if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
               uVar1 = *(uint32 *)(lVar6 + 64);
               if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -6381,7 +6432,7 @@ public class GameController
               lVar2 = lVar2[uVar1];
               if (lVar2 != null) {
                 uVar3 = *(uint32 *)(lVar2 + 40);
-                lVar2 = *(int64 *)(pStatics + 32);
+                lVar2 = GameController.lockObj;
                 if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                   uVar1 = *(uint32 *)(lVar6 + 64);
                   if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -6407,7 +6458,6 @@ public class GameController
     // RVA   : 0x7B2090   Offset: 0x7B0890   Length: 0x1A
     public ItemData GenerateMaterial(int materialType, int itemLv)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         int64 GameController.GenerateMaterial
                          (uint64 this,int materialType,uint32 itemLv,uint32 param_4)
         {
@@ -6421,7 +6471,7 @@ public class GameController
         uint32 uVar8;
         uint32 uVar9;
         uVar3 = Mathf.Clamp(itemLv,0,5);
-        if ((**(int **)(DAT_181d4ef00 + 184) == 2) && (materialType == 4)) {
+        if ((PlotController._instance == 2) && (materialType == 4)) {
           materialType = 2;
         }
         var lVar6 = new ItemData(5);
@@ -6449,7 +6499,7 @@ public class GameController
                             (this,*(uint32 *)(lVar6 + 60),*(uint32 *)(lVar6 + 64),0);
           if (*(int64 *)(lVar6 + 128) != 0) {
             uVar7 = *(uint64 *)(*(int64 *)(lVar6 + 128) + 16);
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = GameController.lockObj;
             if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
               uVar1 = *(uint32 *)(lVar6 + 64);
               if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -6458,7 +6508,7 @@ public class GameController
               lVar2 = lVar2[uVar1];
               if (lVar2 != null) {
                 uVar3 = *(uint32 *)(lVar2 + 40);
-                lVar2 = *(int64 *)(pStatics + 32);
+                lVar2 = GameController.lockObj;
                 if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                   uVar1 = *(uint32 *)(lVar6 + 64);
                   if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -6484,7 +6534,6 @@ public class GameController
     // RVA   : 0x7B1C90   Offset: 0x7B0490   Length: 0x335
     public ItemData GenerateMaterial(int materialType, int itemLv, float bossLv)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         int64 GameController.GenerateMaterial
                          (uint64 this,int materialType,uint32 itemLv,uint32 bossLv)
         {
@@ -6498,7 +6547,7 @@ public class GameController
         uint32 uVar8;
         uint32 uVar9;
         uVar3 = Mathf.Clamp(itemLv,0,5);
-        if ((**(int **)(DAT_181d4ef00 + 184) == 2) && (materialType == 4)) {
+        if ((PlotController._instance == 2) && (materialType == 4)) {
           materialType = 2;
         }
         var lVar6 = new ItemData(5);
@@ -6526,7 +6575,7 @@ public class GameController
                             (this,*(uint32 *)(lVar6 + 60),*(uint32 *)(lVar6 + 64),0);
           if (*(int64 *)(lVar6 + 128) != 0) {
             uVar7 = *(uint64 *)(*(int64 *)(lVar6 + 128) + 16);
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = GameController.lockObj;
             if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
               uVar1 = *(uint32 *)(lVar6 + 64);
               if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -6535,7 +6584,7 @@ public class GameController
               lVar2 = lVar2[uVar1];
               if (lVar2 != null) {
                 uVar3 = *(uint32 *)(lVar2 + 40);
-                lVar2 = *(int64 *)(pStatics + 32);
+                lVar2 = GameController.lockObj;
                 if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                   uVar1 = *(uint32 *)(lVar6 + 64);
                   if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -6585,13 +6634,13 @@ public class GameController
         uint32 uStack_4c;
         uint64 local_48;
         uVar9 = 3;
-        if (*(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 8) != 1) {
+        if (PlotController.LeftFaceHideOffset != 1) {
           uVar9 = 5;
         }
         uVar3 = Mathf.Clamp(skillLv,0,uVar9,0);
         lVar6 = il2cpp_internal(DAT_181d6f030);
         FUN_180f58a90(lVar6,DAT_181d678f8);
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar7 = GameController.lockObj;
         if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 0x138)) != null) {
           lVar7 = Dictionary_2.get_Keys(lVar7,DAT_181d913e0);
           if (lVar7 != null) {
@@ -6708,7 +6757,6 @@ public class GameController
     // RVA   : 0x7A9B60   Offset: 0x7A8360   Length: 0x577
     public ItemData GenerateBook(int skillLv, float bossLv, int forceID, Random randomTarget)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         void GameController.GenerateBook
                      (uint64 this,uint32 skillLv,uint64 bossLv,int forceID,
                      uint64 randomTarget)
@@ -6724,7 +6772,7 @@ public class GameController
         uint64 uVar9;
         double dVar10;
         uVar9 = 3;
-        if (*(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 8) != 1) {
+        if (PlotController.LeftFaceHideOffset != 1) {
           uVar9 = 5;
         }
         uVar2 = Mathf.Clamp(skillLv,0,uVar9,0);
@@ -6747,7 +6795,7 @@ public class GameController
             forceID = lVar6[uVar3];
           }
         }
-        lVar6 = *(int64 *)(pStatics + 32);
+        lVar6 = GameController.lockObj;
         if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 0x138)) != null) {
           lVar6 = FUN_1817cc780(lVar6,forceID,DAT_181d91358);
           if (lVar6 != null) {
@@ -6761,7 +6809,7 @@ public class GameController
               }
               iVar8 = 0;
               while( true ) {
-                lVar6 = *(int64 *)(pStatics + 32);
+                lVar6 = GameController.lockObj;
                 if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 0x138)) == null)
                 throw; // [null/range check failed]
                 lVar6 = FUN_1817cc780(lVar6,forceID,DAT_181d91358);
@@ -6806,8 +6854,7 @@ public class GameController
     // RVA   : 0x7AF590   Offset: 0x7ADD90   Length: 0x1AEC
     public void GenerateHero()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar2;
         uint uVar3;
         int iVar4;
@@ -6864,7 +6911,7 @@ public class GameController
                     if (lVar12 != null) {
                       FUN_181827900(lVar12,uVar9,DAT_181d63d78);
 
-                      if (((lVar12 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32)?.monthFreshBountyTime) != null) &&
+                      if (((lVar12 = GameController.lockObj?.monthFreshBountyTime) != null) &&
                          (lVar12 = FUN_1808acf30(lVar12,DAT_181d94a80)) != null) {
                         ValueCollection.GetEnumerator(&local_a8,lVar12,DAT_181d56ae8);
                         local_c0 = local_a8;
@@ -6982,7 +7029,8 @@ public class GameController
                        (lVar12 = FUN_180002f80(lVar12.Forces,iVar16,DAT_181d60978),
                        lVar12 == null)) throw; // [null/range check failed]
                     iVar4 = lVar12.chapter;
-                    if (iVar4 != *(int *)(pStatics_ef00 + 236)) goto LAB_1807afab2;
+                    if (iVar4 != *(int *)(pPlotController + 236))
+                    goto LAB_1807afab2;
                     lVar12 = FUN_180002f80(lVar10,iVar16,DAT_181d51688);
                     if (lVar12 == null) throw; // [null/range check failed]
                     FUN_181814fa0(lVar12,0,DAT_181d67a78);
@@ -7001,13 +7049,13 @@ public class GameController
         cVar2 = FUN_1811d7520(&local_c0,DAT_181d722b8);
         uVar19 = local_b0;
         if (cVar2) {
-          if (**(int **)(DAT_181d4ef00 + 184) != 2) goto LAB_1807b0124;
+          if (PlotController._instance != 2) goto LAB_1807b0124;
           if (uVar19 == 0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (*(int *)(uVar19 + 132) - 0x18U < 2) goto LAB_1807b0124;
-          lVar12 = *(int64 *)(pStatics_df90 + 16);
+          lVar12 = GameController.CheckShowSpeHero;
           if (lVar12 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -7016,8 +7064,8 @@ public class GameController
           if (cVar2) {
         LAB_1807b0124:
             uVar3 = (uint32)((uint64)in_stack_fffffffffffffee8 >> 32);
-            if (**(int **)(DAT_181d4ef00 + 184) == 2) {
-              lVar12 = *(int64 *)(pStatics_df90 + 24);
+            if (PlotController._instance == 2) {
+              lVar12 = GameController.CheckShowSpeHeroSkinID;
               if (uVar19 == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -7042,7 +7090,7 @@ public class GameController
                     FUN_1800d6620();
                   }
                   if (lVar12.cityAreaID <= iVar16) break;
-                  lVar13 = *(int64 *)(pStatics_df90 + 24);
+                  lVar13 = GameController.CheckShowSpeHeroSkinID;
                   if (lVar13 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -7053,7 +7101,7 @@ public class GameController
                 }
               }
             }
-            if (*(int *)(pStatics_ef00 + 8) == 1) {
+            if (PlotController.LeftFaceHideOffset == 1) {
               if (uVar19 == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -7122,21 +7170,21 @@ public class GameController
         if (lVar12 != null) {
           while (lVar12.Forces != null) {
             if (*(int *)(lVar12.Forces + 24) <= iVar17) {
-              if (*(int *)(pStatics_ef00 + 8) == 1) {
-                lVar12 = *(int64 *)(pStatics_ef00 + 24);
+              if (PlotController.LeftFaceHideOffset == 1) {
+                lVar12 = PlotController.CheckHideChoice;
                 if (lVar12 == null) break;
                 iVar16 = lVar12.cityAreaID * 3;
               }
               else {
-                iVar16 = *(int *)(pStatics_ef00 + 164);
+                iVar16 = *(int *)(pPlotController + 164);
               }
               iVar4 = 0;
               iVar17 = iVar4;
               if (0 < iVar16) goto LAB_1807b0880;
               goto LAB_1807b09ce;
             }
-            if (*(int *)(pStatics_ef00 + 8) == 1) {
-              lVar12 = *(int64 *)(pStatics_ef00 + 32);
+            if (PlotController.LeftFaceHideOffset == 1) {
+              lVar12 = PlotController.SpringFestivelRewardLvTalkText;
               if ((((this.worldData == null) ||
                    (lVar13 = this.worldData.Forces) == null) ||
                   (lVar13 = FUN_180002f80(lVar13,iVar17,DAT_181d60978)) == null) || (lVar12 == null))
@@ -7219,9 +7267,10 @@ public class GameController
           lVar12 = FUN_18046c100(0);
           if (lVar12 == null) throw; // [null/range check failed]
           uVar7 = GameDataController.GetRandomBigForceID(lVar12);
-          if (*(int *)(pStatics_ef00 + 8) == 1) {
+          if (PlotController.LeftFaceHideOffset == 1) {
             iVar5 = GlobalData.RandomRange
-                              (0,*(int *)(pStatics_ef00 + 104) + 1,0,0);
+                              (0,*(int *)(pPlotController + 104) + 1,0,0)
+            ;
           }
           else {
             iVar5 = GameController.RandomRareLvByBossLv(this);
@@ -7399,6 +7448,12 @@ public class GameController
                                                                    uVar19 & 0xffffffffffffff00,
                                                                    in_stack_fffffffffffffef0 &
                                                                    0xffffffffffffff00,0,0);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         lVar12 = FUN_18046ba60(0);
                                                         if ((this.worldData != null) &&
                                                            (uVar9 = WorldData.Player(*(int64 *)
@@ -7596,7 +7651,7 @@ public class GameController
             uVar8 = *(uint64 *)(source + 104);
           }
           *(uint64 *)(lVar5 + 40) = uVar8;
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar6 = GameController.lockObj;
           if (((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 0x180)) != null) &&
              (lVar6 = FUN_1817cc780(lVar6,summonID,DAT_181d99060)) != null) {
             *(int *)(lVar5 + 28) = (int)*(float *)(lVar6 + 40);
@@ -7650,12 +7705,12 @@ public class GameController
                       *(uint8 *)(lVar5 + 0x2d8) = 1;
                       return lVar5;
                     }
-                    if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) &&
-                       (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                      il2cpp_runtime_class_init(DAT_181d4ef00);
+                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                       (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                      il2cpp_runtime_class_init(PlotController_StaticsPtr);
                       lVar9 = *(int64 *)(lVar6 + 48);
                     }
-                    iVar1 = *(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x11c);
+                    iVar1 = *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x11c);
                     if (lVar9 == null) break;
                     iVar4 = FUN_1800d6750(lVar9,iVar11,DAT_181d68270);
                     var uVar8 = new KungfuSkillLvData(iVar4 + iVar1,0);
@@ -7693,7 +7748,7 @@ public class GameController
                             (lVar9 = this.worldData.speSummonResearchData) == null) ||
                            (lVar9 = lVar9.forceAreaID) == null) break;
                         lVar9 = FUN_180002f80(lVar9,uVar10,DAT_181d64678);
-                        lVar2 = *(int64 *)(*(int64 *)(DAT_181d7f330 + 184) + 16);
+                        lVar2 = GameController.CheckShowSpeHero;
                         if ((lVar2 == null) ||
                            (uVar3 = FUN_1800d6750(lVar2,uVar10,DAT_181d64a78), lVar9 == null)) break;
                         uVar7 = HeroSpeAddData.Set(lVar9,uVar3,0);
@@ -7717,8 +7772,7 @@ public class GameController
     // RVA   : 0x7AF4E0   Offset: 0x7ADCE0   Length: 0x53
     public HeroData GenerateHeroData(int heroID, int belongForceID, float heroForceLv, HeroData heroDataBase, bool isTempHero, bool isRandomEnemy)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 *
         GameController.GenerateHeroData
                 (int64 this,int64 heroID,uint32 belongForceID,int heroForceLv,float heroDataBase,
@@ -7768,7 +7822,7 @@ public class GameController
         }
         *(bool *)((int64)plVar7 + 95) = bVar17;
         if (isTempHero == null) {
-          lVar8 = *(int64 *)(pStatics_ef00 + 0x170);
+          lVar8 = *(int64 *)(pPlotController + 0x170);
           if (lVar8 == null) goto LAB_1807af4b6;
           cVar3 = FUN_181815240(lVar8,heroForceLv,DAT_181d67bf8);
           if (!cVar3) {
@@ -7792,13 +7846,13 @@ public class GameController
             bVar17 = false;
           }
           *(bool *)(plVar7 + 16) = bVar17;
-          lVar8 = *(int64 *)(pStatics_e010 + 32);
+          lVar8 = GameController.lockObj;
           if (lVar8 == null) goto LAB_1807af4b6;
           lVar8 = GameDataController.GenerateRandomHeroFamilyName(lVar8,0);
           plVar7[14] = lVar8;
           il2cpp_internal(plVar7 + 14,lVar8);
           if ((heroID == null) || (cVar3 = String.op_Inequality(heroID,"",0), !cVar3)) {
-            lVar8 = *(int64 *)(pStatics_e010 + 32);
+            lVar8 = GameController.lockObj;
             if (lVar8 == null) goto LAB_1807af4b6;
             heroID = GameDataController.GenerateRandomHeroName(lVar8,(char)plVar7[16],plVar7[14],0,0)
             ;
@@ -7835,7 +7889,7 @@ public class GameController
           Mathf.Max();
           uVar19 = FUN_1810a8ba0();
           *(uint32 *)((int64)plVar7 + 188) = uVar19;
-          lVar8 = *(int64 *)(pStatics_ef00 + 0x5a0);
+          lVar8 = *(int64 *)(pPlotController + 0x5a0);
           if (lVar8 == null) goto LAB_1807af4b6;
           uVar19 = GlobalData.RandomRange(0,lVar8.cityAreaID,0,0);
           *(uint32 *)(plVar7 + 59) = uVar19;
@@ -7959,7 +8013,7 @@ public class GameController
             iVar4 = iVar15;
             if (0 < iVar5) {
               do {
-                lVar8 = *(int64 *)(pStatics_ef00 + 0x4a8);
+                lVar8 = *(int64 *)(pPlotController + 0x4a8);
                 if (lVar8 == null) goto LAB_1807af4b6;
                 uVar19 = GlobalData.RandomRange(0,lVar8.cityAreaID,0,0);
                 if (*plVar2 == 0) goto LAB_1807af4b6;
@@ -7974,7 +8028,7 @@ public class GameController
           }
         }
         else {
-          lVar9 = *(int64 *)(pStatics_e010 + 32);
+          lVar9 = GameController.lockObj;
           if (((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 208)) == null) ||
              (lVar9 = FUN_1817cc780(lVar9,(int)plVar7[17],DAT_181d94178)) == null)
           goto LAB_1807af4b6;
@@ -7984,7 +8038,7 @@ public class GameController
           il2cpp_internal(plVar1,lVar8);
           plVar2 = plVar7 + 34;
           lVar8 = *plVar2;
-          lVar9 = *(int64 *)(pStatics_e010 + 32);
+          lVar9 = GameController.lockObj;
           if (((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 208)) == null) ||
              (lVar9 = FUN_1817cc780(lVar9,(int)plVar7[17],DAT_181d94178)) == null)
           goto LAB_1807af4b6;
@@ -8021,7 +8075,7 @@ public class GameController
                 if ((char)plVar7[12] == false) {
                   if (*(int *)((int64)plVar7 + 132) < 0) {
                     fVar18 = (float)Random.get_value(0);
-                    if (*(int *)(pStatics_ef00 + 8) == 1) {
+                    if (PlotController.LeftFaceHideOffset == 1) {
                       fVar20 = 0.65;
                     }
                     else {
@@ -8092,7 +8146,7 @@ public class GameController
           FUN_180f58a90(lVar9,DAT_181d678f8);
           lVar11 = il2cpp_internal(DAT_181d6f030);
           FUN_180f58a90(lVar11,DAT_181d678f8);
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
           iVar4 = iVar15;
           goto LAB_1807af04a;
         }
@@ -8115,7 +8169,7 @@ public class GameController
         LAB_1807af04a:
         if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
           il2cpp_runtime_class_init(lVar8);
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
         }
         lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4c8);
         if (lVar12 == null) goto LAB_1807af4b6;
@@ -8129,7 +8183,7 @@ public class GameController
         case 0:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4d0);
           break;
@@ -8138,21 +8192,21 @@ public class GameController
         case 2:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4e0);
           break;
         case 4:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x508);
           break;
         case 5:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x14c);
           if (lVar12 != null) {
@@ -8163,7 +8217,7 @@ public class GameController
         case 6:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x538);
         }
@@ -8186,7 +8240,7 @@ public class GameController
             }
             FUN_181814fa0(lVar8,iVar13,DAT_181d67a78);
             iVar14 = iVar14 + 1;
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           } while (iVar14 < iVar16);
         }
         iVar4 = iVar4 + 1;
@@ -8202,7 +8256,7 @@ public class GameController
           if (plVar7[60] == 0) goto LAB_1807af4b6;
           FUN_181814fa0(plVar7[60],uVar19);
           iVar4 = iVar4 + 1;
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
           if (iVar5 <= iVar4) break;
         LAB_1807af235:
           if (lVar9 == null) goto LAB_1807af4b6;
@@ -8222,7 +8276,7 @@ public class GameController
             if (plVar7[60] == 0) goto LAB_1807af4b6;
             FUN_181814fa0(plVar7[60],uVar19);
             iVar15 = iVar15 + 1;
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           } while (iVar15 < iVar4);
         }
         if (plVar7[60] != 0) {
@@ -8253,8 +8307,7 @@ public class GameController
     // RVA   : 0x7AF540   Offset: 0x7ADD40   Length: 0x45
     public HeroData GenerateHeroData(string heroName, int heroID, int belongForceID, float heroForceLv, bool isRandomEnemy)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 *
         GameController.GenerateHeroData
                 (int64 this,int64 heroName,uint32 heroID,int belongForceID,float heroForceLv,
@@ -8304,7 +8357,7 @@ public class GameController
         }
         *(bool *)((int64)plVar7 + 95) = bVar17;
         if (isRandomEnemy == null) {
-          lVar8 = *(int64 *)(pStatics_ef00 + 0x170);
+          lVar8 = *(int64 *)(pPlotController + 0x170);
           if (lVar8 == null) goto LAB_1807af4b6;
           cVar3 = FUN_181815240(lVar8,belongForceID,DAT_181d67bf8);
           if (!cVar3) {
@@ -8328,13 +8381,13 @@ public class GameController
             bVar17 = false;
           }
           *(bool *)(plVar7 + 16) = bVar17;
-          lVar8 = *(int64 *)(pStatics_e010 + 32);
+          lVar8 = GameController.lockObj;
           if (lVar8 == null) goto LAB_1807af4b6;
           lVar8 = GameDataController.GenerateRandomHeroFamilyName(lVar8,0);
           plVar7[14] = lVar8;
           il2cpp_internal(plVar7 + 14,lVar8);
           if ((heroName == null) || (cVar3 = String.op_Inequality(heroName,"",0), !cVar3)) {
-            lVar8 = *(int64 *)(pStatics_e010 + 32);
+            lVar8 = GameController.lockObj;
             if (lVar8 == null) goto LAB_1807af4b6;
             heroName = GameDataController.GenerateRandomHeroName(lVar8,(char)plVar7[16],plVar7[14],0,0)
             ;
@@ -8371,7 +8424,7 @@ public class GameController
           Mathf.Max();
           uVar19 = FUN_1810a8ba0();
           *(uint32 *)((int64)plVar7 + 188) = uVar19;
-          lVar8 = *(int64 *)(pStatics_ef00 + 0x5a0);
+          lVar8 = *(int64 *)(pPlotController + 0x5a0);
           if (lVar8 == null) goto LAB_1807af4b6;
           uVar19 = GlobalData.RandomRange(0,lVar8.cityAreaID,0,0);
           *(uint32 *)(plVar7 + 59) = uVar19;
@@ -8495,7 +8548,7 @@ public class GameController
             iVar4 = iVar15;
             if (0 < iVar5) {
               do {
-                lVar8 = *(int64 *)(pStatics_ef00 + 0x4a8);
+                lVar8 = *(int64 *)(pPlotController + 0x4a8);
                 if (lVar8 == null) goto LAB_1807af4b6;
                 uVar19 = GlobalData.RandomRange(0,lVar8.cityAreaID,0,0);
                 if (*plVar2 == 0) goto LAB_1807af4b6;
@@ -8510,7 +8563,7 @@ public class GameController
           }
         }
         else {
-          lVar9 = *(int64 *)(pStatics_e010 + 32);
+          lVar9 = GameController.lockObj;
           if (((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 208)) == null) ||
              (lVar9 = FUN_1817cc780(lVar9,(int)plVar7[17],DAT_181d94178)) == null)
           goto LAB_1807af4b6;
@@ -8520,7 +8573,7 @@ public class GameController
           il2cpp_internal(plVar1,lVar8);
           plVar2 = plVar7 + 34;
           lVar8 = *plVar2;
-          lVar9 = *(int64 *)(pStatics_e010 + 32);
+          lVar9 = GameController.lockObj;
           if (((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 208)) == null) ||
              (lVar9 = FUN_1817cc780(lVar9,(int)plVar7[17],DAT_181d94178)) == null)
           goto LAB_1807af4b6;
@@ -8557,7 +8610,7 @@ public class GameController
                 if ((char)plVar7[12] == false) {
                   if (*(int *)((int64)plVar7 + 132) < 0) {
                     fVar18 = (float)Random.get_value(0);
-                    if (*(int *)(pStatics_ef00 + 8) == 1) {
+                    if (PlotController.LeftFaceHideOffset == 1) {
                       fVar20 = 0.65;
                     }
                     else {
@@ -8628,7 +8681,7 @@ public class GameController
           FUN_180f58a90(lVar9,DAT_181d678f8);
           lVar11 = il2cpp_internal(DAT_181d6f030);
           FUN_180f58a90(lVar11,DAT_181d678f8);
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
           iVar4 = iVar15;
           goto LAB_1807af04a;
         }
@@ -8651,7 +8704,7 @@ public class GameController
         LAB_1807af04a:
         if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
           il2cpp_runtime_class_init(lVar8);
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
         }
         lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4c8);
         if (lVar12 == null) goto LAB_1807af4b6;
@@ -8665,7 +8718,7 @@ public class GameController
         case 0:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4d0);
           break;
@@ -8674,21 +8727,21 @@ public class GameController
         case 2:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4e0);
           break;
         case 4:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x508);
           break;
         case 5:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x14c);
           if (lVar12 != null) {
@@ -8699,7 +8752,7 @@ public class GameController
         case 6:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x538);
         }
@@ -8722,7 +8775,7 @@ public class GameController
             }
             FUN_181814fa0(lVar8,iVar13,DAT_181d67a78);
             iVar14 = iVar14 + 1;
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           } while (iVar14 < iVar16);
         }
         iVar4 = iVar4 + 1;
@@ -8738,7 +8791,7 @@ public class GameController
           if (plVar7[60] == 0) goto LAB_1807af4b6;
           FUN_181814fa0(plVar7[60],uVar19);
           iVar4 = iVar4 + 1;
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
           if (iVar5 <= iVar4) break;
         LAB_1807af235:
           if (lVar9 == null) goto LAB_1807af4b6;
@@ -8758,7 +8811,7 @@ public class GameController
             if (plVar7[60] == 0) goto LAB_1807af4b6;
             FUN_181814fa0(plVar7[60],uVar19);
             iVar15 = iVar15 + 1;
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           } while (iVar15 < iVar4);
         }
         if (plVar7[60] != 0) {
@@ -8789,8 +8842,7 @@ public class GameController
     // RVA   : 0x7ADDD0   Offset: 0x7AC5D0   Length: 0x16EC
     public HeroData GenerateHeroData(string heroName, int heroID, int belongForceID, float heroForceLv, HeroData heroDataBase, bool isTempHero, SexLimit sexLimit, bool isRandomEnemy, bool outSideForce)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 *
         GameController.GenerateHeroData
                 (int64 this,int64 heroName,uint32 heroID,int belongForceID,float heroForceLv,
@@ -8840,7 +8892,7 @@ public class GameController
         }
         *(bool *)((int64)plVar7 + 95) = bVar17;
         if (heroDataBase == null) {
-          lVar8 = *(int64 *)(pStatics_ef00 + 0x170);
+          lVar8 = *(int64 *)(pPlotController + 0x170);
           if (lVar8 == null) goto LAB_1807af4b6;
           cVar3 = FUN_181815240(lVar8,belongForceID,DAT_181d67bf8);
           if (!cVar3) {
@@ -8864,13 +8916,13 @@ public class GameController
             bVar17 = false;
           }
           *(bool *)(plVar7 + 16) = bVar17;
-          lVar8 = *(int64 *)(pStatics_e010 + 32);
+          lVar8 = GameController.lockObj;
           if (lVar8 == null) goto LAB_1807af4b6;
           lVar8 = GameDataController.GenerateRandomHeroFamilyName(lVar8,0);
           plVar7[14] = lVar8;
           il2cpp_internal(plVar7 + 14,lVar8);
           if ((heroName == null) || (cVar3 = String.op_Inequality(heroName,"",0), !cVar3)) {
-            lVar8 = *(int64 *)(pStatics_e010 + 32);
+            lVar8 = GameController.lockObj;
             if (lVar8 == null) goto LAB_1807af4b6;
             heroName = GameDataController.GenerateRandomHeroName(lVar8,(char)plVar7[16],plVar7[14],0,0)
             ;
@@ -8907,7 +8959,7 @@ public class GameController
           Mathf.Max();
           uVar19 = FUN_1810a8ba0();
           *(uint32 *)((int64)plVar7 + 188) = uVar19;
-          lVar8 = *(int64 *)(pStatics_ef00 + 0x5a0);
+          lVar8 = *(int64 *)(pPlotController + 0x5a0);
           if (lVar8 == null) goto LAB_1807af4b6;
           uVar19 = GlobalData.RandomRange(0,lVar8.cityAreaID,0,0);
           *(uint32 *)(plVar7 + 59) = uVar19;
@@ -9031,7 +9083,7 @@ public class GameController
             iVar4 = iVar15;
             if (0 < iVar5) {
               do {
-                lVar8 = *(int64 *)(pStatics_ef00 + 0x4a8);
+                lVar8 = *(int64 *)(pPlotController + 0x4a8);
                 if (lVar8 == null) goto LAB_1807af4b6;
                 uVar19 = GlobalData.RandomRange(0,lVar8.cityAreaID,0,0);
                 if (*plVar2 == 0) goto LAB_1807af4b6;
@@ -9046,7 +9098,7 @@ public class GameController
           }
         }
         else {
-          lVar9 = *(int64 *)(pStatics_e010 + 32);
+          lVar9 = GameController.lockObj;
           if (((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 208)) == null) ||
              (lVar9 = FUN_1817cc780(lVar9,(int)plVar7[17],DAT_181d94178)) == null)
           goto LAB_1807af4b6;
@@ -9056,7 +9108,7 @@ public class GameController
           il2cpp_internal(plVar1,lVar8);
           plVar2 = plVar7 + 34;
           lVar8 = *plVar2;
-          lVar9 = *(int64 *)(pStatics_e010 + 32);
+          lVar9 = GameController.lockObj;
           if (((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 208)) == null) ||
              (lVar9 = FUN_1817cc780(lVar9,(int)plVar7[17],DAT_181d94178)) == null)
           goto LAB_1807af4b6;
@@ -9093,7 +9145,7 @@ public class GameController
                 if ((char)plVar7[12] == false) {
                   if (*(int *)((int64)plVar7 + 132) < 0) {
                     fVar18 = (float)Random.get_value(0);
-                    if (*(int *)(pStatics_ef00 + 8) == 1) {
+                    if (PlotController.LeftFaceHideOffset == 1) {
                       fVar20 = 0.65;
                     }
                     else {
@@ -9164,7 +9216,7 @@ public class GameController
           FUN_180f58a90(lVar9,DAT_181d678f8);
           lVar11 = il2cpp_internal(DAT_181d6f030);
           FUN_180f58a90(lVar11,DAT_181d678f8);
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
           iVar4 = iVar15;
           goto LAB_1807af04a;
         }
@@ -9187,7 +9239,7 @@ public class GameController
         LAB_1807af04a:
         if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
           il2cpp_runtime_class_init(lVar8);
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
         }
         lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4c8);
         if (lVar12 == null) goto LAB_1807af4b6;
@@ -9201,7 +9253,7 @@ public class GameController
         case 0:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4d0);
           break;
@@ -9210,21 +9262,21 @@ public class GameController
         case 2:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x4e0);
           break;
         case 4:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x508);
           break;
         case 5:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x14c);
           if (lVar12 != null) {
@@ -9235,7 +9287,7 @@ public class GameController
         case 6:
           if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (lVar8.missionFinished == null)) {
             il2cpp_runtime_class_init(lVar8);
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           }
           lVar12 = *(int64 *)(lVar8.forceMeetingStarted + 0x538);
         }
@@ -9258,7 +9310,7 @@ public class GameController
             }
             FUN_181814fa0(lVar8,iVar13,DAT_181d67a78);
             iVar14 = iVar14 + 1;
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           } while (iVar14 < iVar16);
         }
         iVar4 = iVar4 + 1;
@@ -9274,7 +9326,7 @@ public class GameController
           if (plVar7[60] == 0) goto LAB_1807af4b6;
           FUN_181814fa0(plVar7[60],uVar19);
           iVar4 = iVar4 + 1;
-          lVar8 = DAT_181d4ef00;
+          lVar8 = PlotController_StaticsPtr;
           if (iVar5 <= iVar4) break;
         LAB_1807af235:
           if (lVar9 == null) goto LAB_1807af4b6;
@@ -9294,7 +9346,7 @@ public class GameController
             if (plVar7[60] == 0) goto LAB_1807af4b6;
             FUN_181814fa0(plVar7[60],uVar19);
             iVar15 = iVar15 + 1;
-            lVar8 = DAT_181d4ef00;
+            lVar8 = PlotController_StaticsPtr;
           } while (iVar15 < iVar4);
         }
         if (plVar7[60] != 0) {
@@ -9325,7 +9377,7 @@ public class GameController
     // RVA   : 0x7B6E80   Offset: 0x7B5680   Length: 0xB15
     public void GenerateRelationShip()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         int iVar2;
         bool cVar3;
@@ -9367,7 +9419,8 @@ public class GameController
               cVar3 = FUN_180d197a0(&local_90,DAT_181d66148);
               lVar6 = local_80;
               if (cVar3) {
-                if (*(int *)(pStatics + 8) == 1) goto code_r0x0001807b70a2;
+                if (PlotController.LeftFaceHideOffset == 1)
+                goto code_r0x0001807b70a2;
                 goto LAB_1807b70f4;
               }
               ZhSegment.Initialize(&local_90,DAT_181d660c8);
@@ -9469,7 +9522,8 @@ public class GameController
                                 FUN_1800d6620();
                               }
                               iVar2 = *(int *)(*(int64 *)(lVar7 + 0x348) + 24);
-                              if (iVar2 < *(int *)(pStatics + 144) + -1) {
+                              if (iVar2 < *(int *)(pPlotController + 144)
+                                          + -1) {
                                 lVar7 = AreaData.GetInsideHero(lVar6,iVar9,0);
                                 if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -9486,8 +9540,8 @@ public class GameController
                                   FUN_1800d6620();
                                 }
                                 iVar1 = *(int *)(*(int64 *)(lVar7 + 0x348) + 24);
-                                if (*(int *)(pStatics + 144) + -1 <= iVar1)
-                                break;
+                                if (*(int *)(pPlotController + 144) + -1
+                                    <= iVar1) break;
                               }
                             }
                           }
@@ -9505,7 +9559,7 @@ public class GameController
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         code_r0x0001807b70a2:
-        lVar7 = *(int64 *)(pStatics + 32);
+        lVar7 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar6 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -9634,7 +9688,7 @@ public class GameController
                         FUN_1800d6620();
                       }
                       iVar2 = *(int *)(*(int64 *)(lVar7 + 0x348) + 24);
-                      if (iVar2 < *(int *)(pStatics + 144) + -1) {
+                      if (iVar2 < *(int *)(pPlotController + 144) + -1) {
                         lVar7 = ForceData.GetOwnHero(lVar6,iVar9,0);
                         if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -9651,7 +9705,8 @@ public class GameController
                           FUN_1800d6620();
                         }
                         iVar1 = *(int *)(*(int64 *)(lVar7 + 0x348) + 24);
-                        if (*(int *)(pStatics + 144) + -1 <= iVar1) break;
+                        if (*(int *)(pPlotController + 144) + -1 <= iVar1
+                           ) break;
                       }
                     }
                   }
@@ -10381,7 +10436,7 @@ public class GameController
         int64 local_18;
         if (targetExcludeList != null) {
           FUN_181814fa0(targetExcludeList,targetID,DAT_181d67a78);
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar3 = GameController.lockObj;
           if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 0x198)) != null) {
             lVar3 = FUN_1808acf30(lVar3,DAT_181d94d28);
             if (lVar3 != null) {
@@ -10484,8 +10539,7 @@ public class GameController
     // RVA   : 0x7DDC50   Offset: 0x7DC450   Length: 0x11EB
     public void RandomGenerateNPCSkill(HeroData hero)
     {
-        var pStatics_27a8 = *(int64*)(DAT_181d527a8 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         uint uVar2;
         int iVar3;
@@ -10558,7 +10612,7 @@ public class GameController
                         lVar7 = *(int64 *)(hero + 0x260);
                         if (lVar7 == null) throw; // [null/range check failed]
                         uVar8 = FUN_180002f80(lVar7,*(int *)(lVar7 + 24) + -1,DAT_181d6ade8);
-                        lVar7 = *(int64 *)(pStatics_ef00 + 0x178);
+                        lVar7 = *(int64 *)(pPlotController + 0x178);
                         if (lVar7 == null) throw; // [null/range check failed]
                         cVar1 = FUN_1818279a0(lVar7,*(uint64 *)(hero + 104),DAT_181d7c4d0);
                         if (!cVar1) {
@@ -10648,7 +10702,7 @@ public class GameController
                           lVar16 = *(int64 *)(hero + 0x260);
                           if (lVar16 == null) throw; // [null/range check failed]
                           uVar8 = FUN_180002f80(lVar16,*(int *)(lVar16 + 24) + -1,DAT_181d6ade8);
-                          lVar16 = *(int64 *)(pStatics_ef00 + 0x178);
+                          lVar16 = *(int64 *)(pPlotController + 0x178);
                           if (lVar16 == null) throw; // [null/range check failed]
                           cVar1 = FUN_1818279a0(lVar16,*(uint64 *)(hero + 104),DAT_181d7c4d0);
                           if (!cVar1) {
@@ -10688,7 +10742,8 @@ public class GameController
                               lVar16 = *(int64 *)(hero + 0x260);
                               if (lVar16 == null) throw; // [null/range check failed]
                               uVar8 = FUN_180002f80(lVar16,*(int *)(lVar16 + 24) + -1,DAT_181d6ade8);
-                              lVar16 = *(int64 *)(pStatics_ef00 + 0x178);
+                              lVar16 = *(int64 *)
+                                        (pPlotController + 0x178);
                               if (lVar16 == null) throw; // [null/range check failed]
                               cVar1 = FUN_1818279a0(lVar16,*(uint64 *)(hero + 104),DAT_181d7c4d0);
                               if (!cVar1) {
@@ -10727,7 +10782,8 @@ public class GameController
                             lVar16 = *(int64 *)(hero + 0x260);
                             if (lVar16 == null) throw; // [null/range check failed]
                             uVar8 = FUN_180002f80(lVar16,*(int *)(lVar16 + 24) + -1,DAT_181d6ade8);
-                            lVar16 = *(int64 *)(pStatics_ef00 + 0x178);
+                            lVar16 = *(int64 *)
+                                      (pPlotController + 0x178);
                             if (lVar16 == null) throw; // [null/range check failed]
                             cVar1 = FUN_1818279a0(lVar16,*(uint64 *)(hero + 104),DAT_181d7c4d0);
                             if (!cVar1) {
@@ -10764,17 +10820,15 @@ public class GameController
                       }
         LAB_1807decbb:
                       lVar6 = *(int64 *)(hero + 0x260);
-                      lVar7 = *(int64 *)(pStatics_27a8 + 8);
+                      lVar7 = GameController.difficultyExtraPoint;
                       if (lVar7 == null) {
-                        uVar8 = **(uint64 **)(DAT_181d527a8 + 184);
+                        uVar8 = GameController._instance;
                         lVar7 = new OnTooltipCB(uVar8,DAT_181d7b588,DAT_181d86198);
-                        plVar12 = (int64 *)(pStatics_27a8 + 8);
-                        *plVar12 = lVar7;
-                        il2cpp_internal(plVar12,lVar7);
+                        GameController.difficultyExtraPoint = lVar7;
                       }
                       if (lVar6 != null) {
                         List_1.Sort(lVar6,lVar7,DAT_181d6ace8);
-                        lVar6 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 40);
+                        lVar6 = PlotController.LanternFestivelRewardLvTalkText;
                         if (lVar6 != null) {
                           AIController.AICheckSkill(lVar6,hero,0);
                           return;
@@ -10822,7 +10876,7 @@ public class GameController
     // RVA   : 0x7DD2C0   Offset: 0x7DBAC0   Length: 0x981
     public void RandomGenerateNPCItem(HeroData hero)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -10961,7 +11015,7 @@ public class GameController
                     lVar8 = *(int64 *)(hero + 0x220);
                     fVar14 = (float)GlobalData.RandomRange(0);
                     uVar7 = Mathf.RoundToInt(fVar13 + fVar14,0);
-                    lVar1 = *(int64 *)(pStatics + 0x4d8);
+                    lVar1 = *(int64 *)(pPlotController + 0x4d8);
                     if (lVar1 != null) {
                       uVar4 = GlobalData.RandomRange(0,*(uint32 *)(lVar1 + 24),0,0);
                       uVar9 = GameController.GenerateDecoration(this,uVar7,uVar4,fVar12,hero,0);
@@ -10970,7 +11024,7 @@ public class GameController
                         lVar8 = *(int64 *)(hero + 0x220);
                         fVar14 = (float)GlobalData.RandomRange(0);
                         uVar7 = Mathf.RoundToInt(fVar13 + fVar14,0);
-                        lVar1 = *(int64 *)(pStatics + 0x4d8);
+                        lVar1 = *(int64 *)(pPlotController + 0x4d8);
                         if (lVar1 != null) {
                           uVar4 = GlobalData.RandomRange(0,*(uint32 *)(lVar1 + 24),0,0);
                           uVar9 = GameController.GenerateDecoration(this,uVar7,uVar4,fVar12,hero,0)
@@ -11053,7 +11107,8 @@ public class GameController
                                           }
                                           iVar10 = iVar10 + 1;
                                         } while (iVar10 < 4);
-                                        lVar8 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 40);
+                                        lVar8 = *(int64 *)
+                                                 (pPlotController + 40);
                                         if (lVar8 != null) {
                                           AIController.AICheckEquipment(lVar8,hero,0);
                                           return;
@@ -11080,8 +11135,8 @@ public class GameController
     // RVA   : 0x7E67F0   Offset: 0x7E4FF0   Length: 0x14DC
     public void UpgradeSkill(HeroData targetHero, KungfuSkillLvData skillLvData, int lv, bool showInfo, bool useMaxNum, bool forceShowInfo)
     {
-        var pStatics_a578 = *(int64*)(DAT_181d5a578 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d5a578 + 184);
         void GameController.UpgradeSkill
                      (int64 this,int64 targetHero,int64 skillLvData,int lv,char showInfo,
                      uint64 useMaxNum,char forceShowInfo)
@@ -11129,7 +11184,7 @@ public class GameController
           iVar12 = 0;
           iVar11 = lv;
           do {
-            lVar5 = *(int64 *)(pStatics_ef00 + 0x638);
+            lVar5 = *(int64 *)(pPlotController + 0x638);
             lVar4 = KungfuSkillLvData.DataBase(skillLvData,0);
             if ((lVar4 == null) || (lVar5 == null)) throw; // [null/range check failed]
             lVar5 = FUN_180002f80(lVar5,*(uint32 *)(lVar4 + 52),DAT_181d51688);
@@ -11292,10 +11347,10 @@ public class GameController
           if (!DAT_181e6a747) {
             il2cpp_runtime_class_init(&DAT_181d5a578);
             DAT_181e6a747 = true;
-            lVar5 = *pStatics_a578;
+            lVar5 = *pStatics;
           }
           else {
-            lVar5 = *pStatics_a578;
+            lVar5 = *pStatics;
           }
           plVar7 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
           lVar4 = *(int64 *)(targetHero + 104);
@@ -11405,7 +11460,7 @@ public class GameController
             lVar5 = FUN_18046c300(0);
             local_f8[0] = (float)(iVar12 + 1) * 0.5;
             uVar6 = il2cpp_value_box(DAT_181d7d0b8,local_f8);
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x4f0);
+            lVar4 = *(int64 *)(pPlotController + 0x4f0);
             lVar8 = KungfuSkillLvData.DataBase(skillLvData,0);
             if ((lVar8 == null) || (lVar4 == null)) goto LAB_1807e7caf;
             uVar9 = FUN_180002f80(lVar4,*(uint32 *)(lVar8 + 52),DAT_181d7c9c0);
@@ -11436,7 +11491,7 @@ public class GameController
             lVar5 = FUN_18046c300(0);
             local_f8[0] = (float)(iVar12 + 1) * 0.5;
             uVar6 = il2cpp_value_box(DAT_181d7d0b8,local_f8);
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x4f0);
+            lVar4 = *(int64 *)(pPlotController + 0x4f0);
             lVar8 = KungfuSkillLvData.DataBase(skillLvData,0);
             if ((lVar8 == null) || (lVar4 == null)) goto LAB_1807e7cb5;
             uVar9 = FUN_180002f80(lVar4,*(uint32 *)(lVar8 + 52),DAT_181d7c9c0);
@@ -11466,7 +11521,7 @@ public class GameController
             lVar5 = FUN_18046c300(0);
             local_f8[0] = (float)(iVar12 + 1) * 0.5;
             uVar6 = il2cpp_value_box(DAT_181d7d0b8,local_f8);
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x4f0);
+            lVar4 = *(int64 *)(pPlotController + 0x4f0);
             lVar8 = KungfuSkillLvData.DataBase(skillLvData,0);
             if ((lVar8 == null) || (lVar4 == null)) goto LAB_1807e7cbb;
             uVar9 = FUN_180002f80(lVar4,*(uint32 *)(lVar8 + 52),DAT_181d7c9c0);
@@ -11503,7 +11558,7 @@ public class GameController
             lVar5 = FUN_18046c300(0);
             local_f8[0] = (float)(iVar12 + 1) * 0.005 * 100.0;
             uVar6 = il2cpp_value_box(DAT_181d7d0b8,local_f8);
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x4f0);
+            lVar4 = *(int64 *)(pPlotController + 0x4f0);
             lVar8 = KungfuSkillLvData.DataBase(skillLvData,0);
             if ((lVar8 == null) || (lVar4 == null)) goto LAB_1807e7cc1;
             uVar9 = FUN_180002f80(lVar4,*(uint32 *)(lVar8 + 52),DAT_181d7c9c0);
@@ -11541,7 +11596,7 @@ public class GameController
             lVar5 = FUN_18046c300(0);
             local_f8[0] = fVar13 + fVar13;
             uVar6 = il2cpp_value_box(DAT_181d7d0b8,local_f8);
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x4f0);
+            lVar4 = *(int64 *)(pPlotController + 0x4f0);
             lVar8 = KungfuSkillLvData.DataBase(skillLvData,0);
             if ((lVar8 == null) || (lVar4 == null)) goto LAB_1807e7cc7;
             uVar9 = FUN_180002f80(lVar4,*(uint32 *)(lVar8 + 52),DAT_181d7c9c0);
@@ -11621,18 +11676,17 @@ public class GameController
     // RVA   : 0x7E5D80   Offset: 0x7E4580   Length: 0x58B
     private void Update()
     {
-        var pStatics_34f0 = *(int64*)(DAT_181d834f0 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d834f0 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
         long lVar5;
         ulong uVar6;
-        if (((*(char *)(pStatics_ef00 + 16) == false) &&
+        if (((*(char *)(pPlotController + 16) == false) &&
             (this.needAutoSave)) &&
            (cVar1 = GameController.CanSaveLoad(this,1,0), cVar1)) {
-          lVar3 = *(int64 *)(pStatics_e010 + 32);
+          lVar3 = GameController.lockObj;
           if (lVar3 == null) throw; // [null/range check failed]
           cVar1 = GameDataController.CanSaveLoad(lVar3,0);
           if (cVar1) {
@@ -11683,12 +11737,12 @@ public class GameController
         LAB_1807e60da:
         cVar1 = GameController.HaveSpeUI(this,1,0);
         if (!cVar1) {
-          if ((*pStatics_34f0 == 0) ||
-             (lVar3 = *(int64 *)(*pStatics_34f0 + 24)) == null)
+          if ((*pStatics == 0) ||
+             (lVar3 = *(int64 *)(*pStatics + 24)) == null)
           throw; // [null/range check failed]
           cVar1 = GameObject.get_activeSelf(lVar3,0);
           if (!cVar1) {
-            iVar2 = *(int *)(pStatics_ef00 + 8);
+            iVar2 = PlotController.LeftFaceHideOffset;
             if (iVar2 == 1) {
               if ((this.worldData == null) ||
                  (lVar3 = this.worldData.worldTime) == null)
@@ -11713,7 +11767,7 @@ public class GameController
             }
           }
         }
-        lVar3 = *(int64 *)(pStatics_e010 + 8);
+        lVar3 = GameController.difficultyExtraPoint;
         if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
           iVar2 = PlayerPrefDictionary.GetInt(lVar3,"TestMode",0);
           if (iVar2 == 1) {
@@ -11887,7 +11941,7 @@ public class GameController
     {
         long lVar1;
         int iVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           iVar2 = PlayerPrefDictionary.GetInt(lVar1,"TestMode",0);
           if (iVar2 == 1) {
@@ -12121,7 +12175,7 @@ public class GameController
                       if (-1 < *(int *)(targetHero + 0x2f4)) {
                         GameController.HeroLeaveTeam(this,targetHero,0);
                       }
-                      lVar4 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 8);
+                      lVar4 = PlotController.LeftFaceHideOffset;
                       if ((*(int64 *)(targetHero + 64) == 0) || (lVar4 == null)) break;
                       cVar2 = FUN_181815240(lVar4,*(uint32 *)(*(int64 *)(targetHero + 64) + 16),
                                             DAT_181d53900);
@@ -12143,7 +12197,7 @@ public class GameController
                       *(uint8 *)(targetHero + 209) = 0;
                       HeroData.ResetAI(targetHero,0);
                       if (*(int *)(targetHero + 192) < 0) {
-                        lVar4 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+                        lVar4 = GameController.CheckShowSpeHero;
                         if (lVar4 == null) break;
                         BigMapController.RemoveBigMapNpc(lVar4,targetHero,0);
                       }
@@ -12224,8 +12278,6 @@ public class GameController
     // RVA   : 0x7C4AC0   Offset: 0x7C32C0   Length: 0xDDD
     private void LateUpdate()
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         float fVar1;
         bool cVar2;
         uint uVar3;
@@ -12427,7 +12479,7 @@ public class GameController
                     uVar12 = uVar12 - 1;
                   } while (-1 < (int)uVar12);
                 }
-                lVar4 = *(int64 *)(pStatics_b128 + 80);
+                lVar4 = PlotController.StopWarCostFavor;
                 if (lVar4 != null) {
                   if (*(int *)(lVar4 + 36) == 0) {
         LAB_1807c5583:
@@ -12441,7 +12493,7 @@ public class GameController
                       cVar2 = FUN_180d197a0(&local_98,DAT_181d639c8);
                       lVar4 = local_88;
                       if (cVar2) {
-                        if (*(int *)(pStatics_ef00 + 8) == 1)
+                        if (PlotController.LeftFaceHideOffset == 1)
                         goto code_r0x0001807c5620;
                         goto LAB_1807c5672;
                       }
@@ -12457,7 +12509,7 @@ public class GameController
                           ZhSegment.Initialize(&local_80,DAT_181d660c8);
                           return;
                         }
-                        if (*(int *)(pStatics_ef00 + 8) == 1)
+                        if (PlotController.LeftFaceHideOffset == 1)
                         goto code_r0x0001807c5783;
                         goto LAB_1807c57d5;
                       }
@@ -12467,7 +12519,7 @@ public class GameController
                     iVar13 = 0;
                     while( true ) {
 
-                      if ((lVar4 = *(int64 *)(pStatics_b128 + 80)?.lastRandomWorldEventDay) == null) break;
+                      if ((lVar4 = PlotController.StopWarCostFavor?.lastRandomWorldEventDay) == null) break;
                       if (lVar4.cityAreaID <= iVar13) goto LAB_1807c5583;
                       iVar11 = 0;
                       while( true ) {
@@ -12498,7 +12550,7 @@ public class GameController
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         code_r0x0001807c5620:
-        lVar6 = *(int64 *)(pStatics_ef00 + 24);
+        lVar6 = PlotController.CheckHideChoice;
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -12520,7 +12572,7 @@ public class GameController
         }
         goto LAB_1807c55d0;
         code_r0x0001807c5783:
-        lVar6 = *(int64 *)(pStatics_ef00 + 32);
+        lVar6 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -12744,7 +12796,7 @@ public class GameController
                   while( true ) {
                     iVar14 = local_res10[0];
                     uVar9 = DAT_181d94308;
-                    lVar8 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x600);
+                    lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x600);
                     if (lVar8 == null) goto LAB_18079df21;
                     if (lVar8.cityAreaID <= iVar14) break;
                     uVar9 = Type.GetTypeFromHandle(uVar9,0);
@@ -12860,7 +12912,8 @@ public class GameController
           }
           fVar18 = *(float *)(force + 0x158);
           fVar17 = *(float *)(*(int64 *)(lVar7 + 16) + 32);
-          FUN_181814d10(lVar7,0,(float)**(int **)(DAT_181d7ce38 + 184) * fVar18 + fVar17,DAT_181d79758);
+          FUN_181814d10(lVar7,0,(float)**(int **)(ShowRoomSpaceController_StaticsPtr + 184) * fVar18 +
+                                fVar17,DAT_181d79758);
           lVar7 = *(int64 *)(force + 152);
           if (lVar7 == null) goto LAB_18079df21;
           if (*(int *)(lVar7 + 24) == 0) {
@@ -13034,7 +13087,7 @@ public class GameController
     // RVA   : 0x79B820   Offset: 0x79A020   Length: 0x119D
     public void CountAreaData(AreaData area)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -13098,15 +13151,15 @@ public class GameController
                      (lVar2 = WorldData.GetHero(this.worldData,*(int *)(area + 0x118),0
                                                 ), lVar2 == null)) throw; // [null/range check failed]
                   uVar3 = HeroData.GetTotalAttir(lVar2,0);
-                  lVar10 = *(int64 *)(pStatics + 0x490);
+                  lVar10 = *(int64 *)(pPlotController + 0x490);
                   if (lVar10 == null) throw; // [null/range check failed]
                   fVar16 = (float)uVar3 / ((float)*(int *)(lVar10 + 24) * 10.0);
                   uVar11 = HeroData.GetTotalFightSkill(lVar2,0);
-                  lVar10 = *(int64 *)(pStatics + 0x498);
+                  lVar10 = *(int64 *)(pPlotController + 0x498);
                   if (lVar10 == null) throw; // [null/range check failed]
                   fVar17 = (float)uVar11 / ((float)*(int *)(lVar10 + 24) * 10.0);
                   fVar18 = (float)HeroData.GetTotalLivingSkill(lVar2,0);
-                  lVar2 = *(int64 *)(pStatics + 0x4a8);
+                  lVar2 = *(int64 *)(pPlotController + 0x4a8);
                   if (lVar2 == null) throw; // [null/range check failed]
                   lVar10 = *(int64 *)(area + 96);
                   fVar18 = fVar18 / ((float)*(int *)(lVar2 + 24) * 10.0);
@@ -13409,7 +13462,7 @@ public class GameController
             fVar16 = (float)AreaBuildingData.GetChangeMaxPeople(*(int64 *)(lVar10 + 40),0);
             *(float *)(area + 76) = fVar16 + fVar18;
             while( true ) {
-              lVar10 = *(int64 *)(pStatics + 0x600);
+              lVar10 = *(int64 *)(pPlotController + 0x600);
               if (lVar10 == null) throw; // [null/range check failed]
               if (*(int *)(lVar10 + 24) <= iVar9) break;
               lVar10 = *(int64 *)(area + 96);
@@ -13447,9 +13500,7 @@ public class GameController
     // RVA   : 0x79DF30   Offset: 0x79C730   Length: 0x49C2
     public void CountHeroData(HeroData hero)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
-        var pStatics_f330 = *(int64*)(DAT_181d7f330 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar2;
         int iVar3;
         uint uVar4;
@@ -13616,7 +13667,7 @@ public class GameController
           }
           if ((*(int *)(hero + 144) != -1) && (uVar15 = uVar17, *(int *)(hero + 148) != -1)) {
             while( true ) {
-              lVar9 = *(int64 *)(pStatics_e010 + 32);
+              lVar9 = GameController.lockObj;
               if (lVar9 == null) break;
               lVar9 = *(int64 *)(lVar9 + 96);
               uVar12 = *(uint32 *)(hero + 144);
@@ -14146,7 +14197,7 @@ public class GameController
         LAB_18079ffa0:
               do {
 
-                if ((lVar7 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80)?.lastRandomWorldEventDay) == null) throw; // [null/range check failed]
+                if ((lVar7 = PlotController.StopWarCostFavor?.lastRandomWorldEventDay) == null) throw; // [null/range check failed]
                 uVar6 = uVar17;
                 if (lVar7.cityAreaID <= (int)uVar12) goto LAB_1807a0d50;
                 while( true ) {
@@ -14394,7 +14445,7 @@ public class GameController
                   throw; // [null/range check failed]
                   if (lVar7.cityAreaID <= (int)uVar13) break;
                   lVar7 = *plVar1;
-                  lVar9 = *(int64 *)(pStatics_ef00 + 0x5f0);
+                  lVar9 = *(int64 *)(pPlotController + 0x5f0);
                   if (lVar9 == null) throw; // [null/range check failed]
                   uVar4 = FUN_1800d6750(lVar9,uVar13,DAT_181d64a78);
                   if (((*(int64 *)(hero + 0x230) == 0) ||
@@ -14465,7 +14516,9 @@ public class GameController
                           lVar7 = HeroData.GetNowActiveSkill(hero,0);
                           if (lVar7 != null) {
                             lVar7 = lVar7.Inns;
-                            lVar9 = *(int64 *)(*(int64 *)(DAT_181da2fa0 + 184) + 48);
+                            lVar9 = *(int64 *)
+                                     (*(int64 *)(ForceSpeResearchUIController_StaticsPtr + 184) + 48
+                                     );
                             uVar6 = ForceSpeResearchUIController.SpeResearchType(0);
                             if (lVar9 != null) {
                               if (*(uint32 *)(lVar9 + 24) <= uVar6) {
@@ -14826,7 +14879,7 @@ public class GameController
           Mathf.Max();
           HeroSpeAddData.Set(lVar7,207);
           lVar7 = *plVar1;
-          lVar9 = *(int64 *)(pStatics_ef00 + 0x5e0);
+          lVar9 = *(int64 *)(pPlotController + 0x5e0);
           uVar15 = HeroData.GetEquipmentWeightLv(hero,0);
           if (lVar9 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar9 + 24) <= uVar15) {
@@ -14943,7 +14996,7 @@ public class GameController
           }
           if (*(int *)(hero + 88) == 0) {
 
-            if ((lVar7 = *(int64 *)(pStatics_e010 + 8)?.chapter) == null) throw; // [null/range check failed]
+            if ((lVar7 = GameController.difficultyExtraPoint?.chapter) == null) throw; // [null/range check failed]
             iVar3 = PlayerPrefDictionary.GetInt(lVar7,"TestMode",0);
             if (iVar3 == 1) {
               lVar7 = *(int64 *)(hero + 0x220);
@@ -15106,7 +15159,7 @@ public class GameController
           }
           if (0 < lVar7.chapter[uVar15]) {
             lVar7 = *plVar1;
-            lVar9 = *(int64 *)(pStatics_f330 + 16);
+            lVar9 = GameController.CheckShowSpeHero;
             if (lVar9 == null) break;
             uVar4 = FUN_1800d6750(lVar9,uVar15,DAT_181d64a78);
             if ((((this.worldData == null) ||
@@ -15121,14 +15174,14 @@ public class GameController
           iVar3 = FUN_1800d6750(lVar7,uVar15);
           if (0 < iVar3) {
             lVar7 = *plVar1;
-            lVar9 = *(int64 *)(pStatics_f330 + 16);
+            lVar9 = GameController.CheckShowSpeHero;
             if (lVar9 == null) break;
             uVar4 = FUN_1800d6750(lVar9,uVar15,DAT_181d64a78);
             if (((this.worldData == null) ||
                 (lVar9 = this.worldData.speSummonResearchData) == null) ||
                (lVar9 = *(int64 *)(lVar9 + 40)) == null) break;
             lVar8 = FUN_180002f80(lVar9,uVar15,DAT_181d64678);
-            lVar9 = *(int64 *)(pStatics_f330 + 16);
+            lVar9 = GameController.CheckShowSpeHero;
             if (((lVar9 == null) || (uVar5 = FUN_1800d6750(lVar9,uVar15), lVar8 == null)) ||
                (HeroSpeAddData.Get(lVar8,uVar5), lVar7 == null)) break;
             HeroSpeAddData.Change(lVar7,uVar4);
@@ -15228,7 +15281,7 @@ public class GameController
     // RVA   : 0x7D0B70   Offset: 0x7CF370   Length: 0x1A1
     public void ManageHeroAutoRecover(HeroData hero, bool rest, bool needRefresh, float extraRate)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void GameController.ManageHeroAutoRecover
                      (uint64 this,int64 hero,char rest,uint8 needRefresh)
         {
@@ -15240,19 +15293,21 @@ public class GameController
           fVar1 = *(float *)(hero + 0x17c);
           if (!rest) {
             fVar2 = (float)HeroData.GetRecoverRate
-                                     (hero,*(uint32 *)(pStatics + 0x134)
-                                      ,0);
+                                     (hero,*(uint32 *)
+                                               (pPlotController + 0x134),0
+                                     );
             HeroData.ChangeHp(hero,fVar2 * fVar1,0,1,needRefresh,
                                in_stack_ffffffffffffffd0 & 0xffffffffffffff00,0);
-            uVar3 = *(uint32 *)(pStatics + 0x134);
+            uVar3 = *(uint32 *)(pPlotController + 0x134);
           }
           else {
             fVar2 = (float)HeroData.GetRecoverRate
-                                     (hero,*(uint32 *)(pStatics + 0x130)
-                                      ,0);
+                                     (hero,*(uint32 *)
+                                               (pPlotController + 0x130),0
+                                     );
             HeroData.ChangeHp(hero,fVar2 * fVar1,0,1,needRefresh,
                                in_stack_ffffffffffffffd0 & 0xffffffffffffff00,0);
-            uVar3 = *(uint32 *)(pStatics + 0x130);
+            uVar3 = *(uint32 *)(pPlotController + 0x130);
           }
           fVar1 = *(float *)(hero + 0x194);
           fVar2 = (float)HeroData.GetRecoverRate(hero,uVar3,0);
@@ -15494,12 +15549,12 @@ public class GameController
             uVar6 = *(uint64 *)(area + 24);
             if (lVar5 != null) {
               if (*(int *)(lVar5 + 16) < 0) {
-                if (((*(byte *)(DAT_181d87338 + 0x133) & 4) != 0) && (*(int *)(DAT_181d87338 + 224) == 0)
-                   ) {
-                  il2cpp_runtime_class_init(DAT_181d87338);
+                if (((*(byte *)(AreaBuildController_StaticsPtr + 0x133) & 4) != 0) &&
+                   (*(int *)(AreaBuildController_StaticsPtr + 224) == 0)) {
+                  il2cpp_runtime_class_init(AreaBuildController_StaticsPtr);
                   lVar5 = *(int64 *)(targetTile + 40);
                 }
-                lVar1 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 8);
+                lVar1 = AreaBuildController.AreaObstacleName;
                 if (lVar5 == null) throw; // [null/range check failed]
                 uVar4 = Mathf.CeilToInt((float)*(int *)(lVar5 + 20) * 0.5,0);
                 if (lVar1 == null) throw; // [null/range check failed]
@@ -15540,8 +15595,8 @@ public class GameController
         if (lVar3 != null) {
           *(uint64 *)(lVar3 + 16) = this;
           *(uint8 *)(lVar3 + 24) = considerAIHour;
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d84f70 + 184) + 8);
+          lVar1 = GameController.lockObj;
+          lVar2 = GameController.difficultyExtraPoint;
           uVar4 = new OnTooltipCB(lVar3,DAT_181d7b808,0);
           if (lVar2 != null) {
             uVar4 = TaskFactory.StartNew(lVar2,uVar4,0);
@@ -15681,7 +15736,7 @@ public class GameController
           fVar1 = lVar2.hour;
           fVar3 = fVar1 + deltaHour;
           lVar2.hour = fVar3;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+          lVar2 = GameController.CheckShowSpeHero;
           if (lVar2 != null) {
             BigMapController.ManageAllHeroMove(lVar2,deltaHour,0);
             if (*pStatics != 0) {
@@ -15707,9 +15762,7 @@ public class GameController
     // RVA   : 0x795A10   Offset: 0x794210   Length: 0x2E
     public void ChangeDay(int deltaDay)
     {
-        var pStatics_0bb8 = *(int64*)(DAT_181d90bb8 + 184);
-        var pStatics_0cc8 = *(int64*)(DAT_181d90cc8 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d90cc8 + 184);
         uint uVar2;
         bool cVar3;
         int iVar4;
@@ -16146,8 +16199,9 @@ public class GameController
                     GameController.GenerateRandomEnemy(this,4);
                   }
                   GameController.GenerateRandomEvent(this,0);
-                  if (*pStatics_0bb8 != 0) {
-                    WorldEventController.ManageWorldEvent(*pStatics_0bb8,0);
+                  if (WorldEventController._instance != null) {
+                    WorldEventController.ManageWorldEvent
+                              (WorldEventController._instance,0);
                     if ((this.worldData != null) &&
                        (lVar6 = this.worldData.WorldNewsDatas) != null) {
                       uVar13 = lVar6.cityAreaID - 1;
@@ -16182,7 +16236,7 @@ public class GameController
                           uVar13 = uVar13 - 1;
                         } while (-1 < (int)uVar13);
                       }
-                      uVar16 = *(uint64 *)(*(int64 *)(DAT_181d4df90 + 184) + 32);
+                      uVar16 = GameController.lockObj;
                       Monitor.Enter(uVar16,local_res18,0);
                       GameController.ManageForceStuff(this,0);
                       if (local_res18[0] != false) {
@@ -16193,17 +16247,17 @@ public class GameController
                       GameController.ManageForceSpeResearch(this,0);
                       GameController.ManageSpePoison(this,0);
                       GameController.ManageSpeSummonResearch(this,0);
-                      if (*pStatics_0cc8 != 0) {
+                      if (*pStatics != 0) {
                         WorldPlotEventController.CheckWorldPlotEventDataBase
-                                  (*pStatics_0cc8,0);
+                                  (*pStatics,0);
 
-                        if ((lVar6 = *(int64 *)(pStatics_e010 + 8)?.chapter) != null) {
+                        if ((lVar6 = GameController.difficultyExtraPoint?.chapter) != null) {
                           iVar5 = PlayerPrefDictionary.GetInt(lVar6,"AutoSave",0);
                           if (iVar5 < 1) {
                             return;
                           }
-                          lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x1a0);
-                          lVar7 = *(int64 *)(pStatics_e010 + 8);
+                          lVar6 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x1a0);
+                          lVar7 = GameController.difficultyExtraPoint;
                           if (((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 16)) != null) &&
                              (iVar5 = PlayerPrefDictionary.GetInt(lVar7,"AutoSave",0), lVar6 != null)) {
                             if (lVar6.cityAreaID <= iVar5 - 1U) {
@@ -16310,9 +16364,7 @@ public class GameController
     // RVA   : 0x794330   Offset: 0x792B30   Length: 0x16D7
     public void ChangeDay()
     {
-        var pStatics_0bb8 = *(int64*)(DAT_181d90bb8 + 184);
-        var pStatics_0cc8 = *(int64*)(DAT_181d90cc8 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d90cc8 + 184);
         uint uVar2;
         bool cVar3;
         int iVar4;
@@ -16749,8 +16801,9 @@ public class GameController
                     GameController.GenerateRandomEnemy(this,4);
                   }
                   GameController.GenerateRandomEvent(this,0);
-                  if (*pStatics_0bb8 != 0) {
-                    WorldEventController.ManageWorldEvent(*pStatics_0bb8,0);
+                  if (WorldEventController._instance != null) {
+                    WorldEventController.ManageWorldEvent
+                              (WorldEventController._instance,0);
                     if ((this.worldData != null) &&
                        (lVar6 = this.worldData.WorldNewsDatas) != null) {
                       uVar13 = lVar6.cityAreaID - 1;
@@ -16785,7 +16838,7 @@ public class GameController
                           uVar13 = uVar13 - 1;
                         } while (-1 < (int)uVar13);
                       }
-                      uVar16 = *(uint64 *)(*(int64 *)(DAT_181d4df90 + 184) + 32);
+                      uVar16 = GameController.lockObj;
                       Monitor.Enter(uVar16,local_res18,0);
                       GameController.ManageForceStuff(this,0);
                       if (local_res18[0] != false) {
@@ -16796,17 +16849,17 @@ public class GameController
                       GameController.ManageForceSpeResearch(this,0);
                       GameController.ManageSpePoison(this,0);
                       GameController.ManageSpeSummonResearch(this,0);
-                      if (*pStatics_0cc8 != 0) {
+                      if (*pStatics != 0) {
                         WorldPlotEventController.CheckWorldPlotEventDataBase
-                                  (*pStatics_0cc8,0);
+                                  (*pStatics,0);
 
-                        if ((lVar6 = *(int64 *)(pStatics_e010 + 8)?.chapter) != null) {
+                        if ((lVar6 = GameController.difficultyExtraPoint?.chapter) != null) {
                           iVar5 = PlayerPrefDictionary.GetInt(lVar6,"AutoSave",0);
                           if (iVar5 < 1) {
                             return;
                           }
-                          lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x1a0);
-                          lVar7 = *(int64 *)(pStatics_e010 + 8);
+                          lVar6 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x1a0);
+                          lVar7 = GameController.difficultyExtraPoint;
                           if (((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 16)) != null) &&
                              (iVar5 = PlayerPrefDictionary.GetInt(lVar7,"AutoSave",0), lVar6 != null)) {
                             if (lVar6.cityAreaID <= iVar5 - 1U) {
@@ -16858,7 +16911,7 @@ public class GameController
     // RVA   : 0x7D71A0   Offset: 0x7D59A0   Length: 0x31A
     public void ManageWeaponResearch()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         int iVar3;
@@ -16878,7 +16931,7 @@ public class GameController
               return;
             }
             lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            lVar2 = *(int64 *)(pStatics + 0x498);
+            lVar2 = *(int64 *)(pPlotController + 0x498);
             if (((this.worldData != null) &&
                 (lVar4 = WorldData.Player(this.worldData,0)) != null) &&
                (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 != null)) {
@@ -16889,7 +16942,7 @@ public class GameController
                                      *(uint64 *)
                                       (*(int64 *)(lVar2 + 16) + 32 +
                                       (int64)(int)(iVar3 + 3U) * 8),0);
-              lVar2 = *(int64 *)(pStatics + 0x498);
+              lVar2 = *(int64 *)(pPlotController + 0x498);
               if (((this.worldData != null) &&
                   (lVar4 = WorldData.Player(this.worldData,0)) != null) &&
                  (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 != null)) {
@@ -17184,7 +17237,7 @@ public class GameController
               return;
             }
             lVar6 = **(int64 **)(DAT_181d5a578 + 184);
-            lVar4 = **(int64 **)(DAT_181da2fa0 + 184);
+            lVar4 = ForceSpeResearchUIController.SpeResearchTopic;
             uVar2 = ForceSpeResearchUIController.SpeResearchType(0);
             if (lVar4 != null) {
               if (*(uint32 *)(lVar4 + 24) <= uVar2) {
@@ -17584,8 +17637,8 @@ public class GameController
     // RVA   : 0x796DF0   Offset: 0x7955F0   Length: 0x12A0
     public void ChangeMonth()
     {
-        var pStatics_a578 = *(int64*)(DAT_181d5a578 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d5a578 + 184);
         float fVar2;
         int iVar3;
         bool cVar4;
@@ -17624,7 +17677,7 @@ public class GameController
             if (*(int *)(lVar11 + 20) < 13) {
         LAB_1807971dd:
               if (!DAT_181e758f2) {
-                il2cpp_runtime_class_init(&DAT_181d4df90);
+                il2cpp_internal(&GameController_StaticsPtr);
                 DAT_181e758f2 = true;
                 lVar6 = this.worldData;
               }
@@ -17635,8 +17688,8 @@ public class GameController
                 GameController.GetGameMaxDifficulty(0);
                 uVar12 = FUN_1810a8ba0();
                 lVar6.TimeDifficulty = uVar12;
-                if (*(int *)(pStatics_ef00 + 8) != 1) {
-                  uVar9 = *(uint64 *)(*(int64 *)(DAT_181d4df90 + 184) + 32);
+                if (PlotController.LeftFaceHideOffset != 1) {
+                  uVar9 = GameController.lockObj;
                   local_90 = uVar9;
                   Monitor.Enter(uVar9,local_res18,0);
                   GameController.ManageHeroAutoQuitAndEnter(this,0);
@@ -17704,7 +17757,7 @@ public class GameController
                             if (cVar4) {
                               if (this.worldData == null) throw; // [null/range check failed]
                               this.worldData.forceMeetingStarted = 1;
-                              lVar6 = *pStatics_a578;
+                              lVar6 = *pStatics;
                               if ((((this.worldData == null) ||
                                    (lVar11 = WorldData.Player(this.worldData,0),
                                    lVar11 == null)) || (lVar11 = HeroData.GetForce(lVar11,0,0)) == null
@@ -17767,7 +17820,7 @@ public class GameController
                                 }
                               }
                             }
-                            if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+                            if (PlotController._instance != 2) {
                               dVar13 = (double)GlobalData.RandomRangeDouble(0,0);
                               if (dVar13 < 0.10000000149011612) {
                                 if (this.worldData == null) throw; // [null/range check failed]
@@ -17804,8 +17857,8 @@ public class GameController
                         uVar5 = GlobalData.GetGovernSalary(uVar5,0);
                         if (lVar6 == null) throw; // [null/range check failed]
                         HeroData.ChangeMoney(lVar6,uVar5,0,0);
-                        lVar6 = *pStatics_a578;
-                        lVar11 = *(int64 *)(pStatics_ef00 + 0x3e0);
+                        lVar6 = *pStatics;
+                        lVar11 = *(int64 *)(pPlotController + 0x3e0);
                         if ((this.worldData == null) ||
                            (lVar7 = WorldData.Player(this.worldData,0)) == null)
                         throw; // [null/range check failed]
@@ -17836,8 +17889,8 @@ public class GameController
                         fVar2 = lVar6.showRoomChangeFame;
                         if (0.0 < fVar2) {
                           local_res20[0] =
-                               Mathf.RoundToInt((float)**(int **)(DAT_181d7ce38 + 184) * fVar2 * 10.0,0)
-                          ;
+                               Mathf.RoundToInt((float)**(int **)(ShowRoomSpaceController_StaticsPtr +
+                                                                  184) * fVar2 * 10.0,0);
                           if ((this.worldData == null) ||
                              (lVar6 = WorldData.Player(this.worldData,0)) == null)
                           throw; // [null/range check failed]
@@ -17846,7 +17899,7 @@ public class GameController
                              ((lVar6 = WorldData.Player(this.worldData,0),
                               this.worldData == null || (lVar6 == null)))) throw; // [null/range check failed]
                           HeroData.ChangeFame(lVar6);
-                          lVar6 = *pStatics_a578;
+                          lVar6 = *pStatics;
                           uVar9 = Int32.ToString(local_res20,"+0;-0;0",0);
                           if (this.worldData == null) throw; // [null/range check failed]
                           uVar8 = Single.ToString(this.worldData + 0x168,"+0.#;-0.#;0",0);
@@ -17910,45 +17963,56 @@ public class GameController
                                                               *(uint32 *)
                                                                (this.worldData + 0x158) = 0
                                                               ;
-                                                              if (((*(byte *)(DAT_181d4e010 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4e010 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d4e010);
+                                                              if (((*(byte *)(GameController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(GameController_StaticsPtr +
+                                                                          224) == 0)) {
+                                                                il2cpp_runtime_class_init
+                                                                          (GameController_StaticsPtr);
                                                               }
-                                                              if (((*(byte *)(DAT_181d4e010 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4e010 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d4e010);
-                                                              }
-                                                              lVar6 = *(int64 *)
-                                                                       (*(int64 *)
-                                                                         (DAT_181d4e010 + 184) + 32);
-                                                              if (((*(byte *)(DAT_181d84f70 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d84f70 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d84f70);
-                                                              }
-                                                              if (((*(byte *)(DAT_181d84f70 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d84f70 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d84f70);
-                                                              }
-                                                              lVar11 = *(int64 *)
-                                                                        (*(int64 *)
-                                                                          (DAT_181d84f70 + 184) + 8);
-                                                              uVar9 = il2cpp_internal(DAT_181d856c0);
-                                                              OnTooltipCB.ctor(uVar9,this,
-                                                                                DAT_181d9bae0,0);
-                                                              if ((lVar11 != null) &&
-                                                                 (uVar9 = TaskFactory.StartNew
-                                                                                    (lVar11,uVar9,2),
-                                                                 lVar6 != null)) {
-                                                                GameDataController.AddTask(lVar6,uVar9,0)
-                                                                ;
-                                                                return;
-                                                              }
-                                                            }
-                                                          }
+                                                              if (!DAT_181e6a733) {
+                                                                il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a733 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        lVar6 = *(int64 *)
+                                                                 (*(int64 *)
+                                                                   (GameController_StaticsPtr + 184) +
+                                                                 32);
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        lVar11 = *(int64 *)
+                                                                  (*(int64 *)
+                                                                    (GameController_StaticsPtr + 184) + 8
+                                                                  );
+                                                        uVar9 = new OnTooltipCB(this,DAT_181d9bae0,0);
+                                                        if ((lVar11 != null) &&
+                                                           (uVar9 = TaskFactory.StartNew(lVar11,uVar9,2),
+                                                           lVar6 != null)) {
+                                                          GameDataController.AddTask(lVar6,uVar9,0);
+                                                          return;
+                                                        }
+                                                        }
+                                                        }
                                                         }
                                                       }
                                                     }
@@ -18053,7 +18117,8 @@ public class GameController
               if (iVar8 == *(int *)(lVar3 + 132)) {
                 lVar3 = *pStatics;
                 uVar4 = String.Format("因门派银钱告罄，全弟子{0}忠诚-20</color>！",
-                                       *(uint64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x2c0),0);
+                                       *(uint64 *)
+                                        (*(int64 *)(PlotController_StaticsPtr + 184) + 0x2c0),0);
                 puVar5 = (uint64 *)Color.get_red(&local_28,0);
                 if (lVar3 == null) break;
                 local_28 = *puVar5;
@@ -18091,8 +18156,7 @@ public class GameController
     // RVA   : 0x7D1720   Offset: 0x7CFF20   Length: 0x3BC1
     public void ManageMonthTask()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         byte[] auVar2 = new byte[12];
         bool cVar3;
         uint uVar4;
@@ -18155,7 +18219,7 @@ public class GameController
         uStack_138 = 0;
         local_130 = 0;
         local_1ac = 0;
-        local_118 = *(uint64 *)(pStatics_df90 + 32);
+        local_118 = GameController.lockObj;
         local_res18[0] = false;
         Monitor.Enter(local_118,local_res18,0);
         if (this.worldData == null) {
@@ -18203,7 +18267,8 @@ public class GameController
         cVar3 = FUN_180d197a0(&local_158,DAT_181d639c8);
         lVar12 = local_148;
         if (cVar3) {
-          if (*(int *)(pStatics_ef00 + 8) == 1) goto code_r0x0001807d1cf6;
+          if (PlotController.LeftFaceHideOffset == 1)
+          goto code_r0x0001807d1cf6;
           goto LAB_1807d1d48;
         }
         aiStack_1c0[local_1ac] = 0x2c3;
@@ -18215,7 +18280,7 @@ public class GameController
           iVar19 = iVar16;
           local_1ac = iVar16;
         }
-        lVar12 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar12 = PlotController.LaBaFestivelResultTalkText;
         if (lVar12 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -18238,7 +18303,8 @@ public class GameController
         cVar3 = FUN_180d197a0(&local_188,DAT_181d66148);
         lVar12 = local_178;
         if (cVar3) {
-          if (*(int *)(pStatics_ef00 + 8) == 1) goto code_r0x0001807d24b6;
+          if (PlotController.LeftFaceHideOffset == 1)
+          goto code_r0x0001807d24b6;
           goto LAB_1807d2508;
         }
         aiStack_1c0[iVar19] = 0x509;
@@ -18773,7 +18839,7 @@ public class GameController
             FUN_1800d6620();
           }
           if (*(char *)(lVar12 + 0x2f0) != false) goto LAB_1807d49f9;
-          if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+          if (PlotController._instance != 2) {
             dVar23 = (double)GlobalData.RandomRangeDouble(0,0);
             if (dVar23 <= 0.25) {
               if (this.worldData == null) {
@@ -19429,7 +19495,7 @@ public class GameController
           fVar22 = (float)HeroData.Favor(lVar12);
           if ((double)(((float)iVar17 * 0.004 + 0.02) * (fVar22 * 0.01 + 0.5) * fVar20 * fVar21) < dVar23)
           {
-            if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+            if (PlotController._instance != 2) {
               dVar23 = (double)GlobalData.RandomRangeDouble(0,0);
               if (this.worldData == null) {
                           // WARNING: Subroutine does not return
@@ -19517,7 +19583,7 @@ public class GameController
                   FUN_1800d6620();
                 }
                 uVar6 = HeroData.AtAreaName(lVar7,0);
-                lVar7 = *(int64 *)(pStatics_df90 + 40);
+                lVar7 = GameController.InvitePlayInfo;
                 if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -19559,7 +19625,7 @@ public class GameController
           }
           dVar23 = (double)GlobalData.RandomRangeDouble();
           if (0.6000000238418579 <= dVar23) {
-            if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+            if (PlotController._instance != 2) {
               if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -19623,7 +19689,7 @@ public class GameController
             }
             goto LAB_1807d49f9;
           }
-          if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+          if (PlotController._instance != 2) {
             dVar23 = (double)GlobalData.RandomRangeDouble(0,0);
             if (this.worldData == null) {
                           // WARNING: Subroutine does not return
@@ -19954,7 +20020,7 @@ public class GameController
           iVar16 = local_1ac;
         } while( true );
         code_r0x0001807d1cf6:
-        lVar7 = *(int64 *)(pStatics_ef00 + 24);
+        lVar7 = PlotController.CheckHideChoice;
         if (lVar12 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -19993,7 +20059,7 @@ public class GameController
               }
               if (lVar7.cityAreaID <= iVar17) break;
               uVar8 = *(uint64 *)(lVar12 + 24);
-              lVar7 = *(int64 *)(pStatics_ef00 + 0x508);
+              lVar7 = *(int64 *)(pPlotController + 0x508);
               if (*(int64 *)(lVar12 + 224) == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -20050,7 +20116,7 @@ public class GameController
               if (((double)fVar20 <= dVar23) || ((int)uVar18 < 0)) break;
               if (3 < (int)uVar18) {
                 while( true ) {
-                  lVar5 = *(int64 *)(pStatics_ef00 + 0x508);
+                  lVar5 = *(int64 *)(pPlotController + 0x508);
                   if (lVar5 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -20107,7 +20173,7 @@ public class GameController
               }
               plVar9[4] = lVar11;
               il2cpp_internal(plVar9 + 4,lVar11);
-              lVar11 = *(int64 *)(pStatics_ef00 + 0x508);
+              lVar11 = *(int64 *)(pPlotController + 0x508);
               if (lVar11 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -20169,7 +20235,7 @@ public class GameController
         }
         goto LAB_1807d1ca0;
         code_r0x0001807d24b6:
-        lVar7 = *(int64 *)(pStatics_ef00 + 32);
+        lVar7 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar12 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -20343,8 +20409,7 @@ public class GameController
     // RVA   : 0x7CE7D0   Offset: 0x7CCFD0   Length: 0x2258
     public void ManageHeroAutoQuitAndEnter()
     {
-        var pStatics_27a8 = *(int64*)(DAT_181d527a8 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         byte uVar2;
         uint uVar3;
@@ -20464,7 +20529,8 @@ public class GameController
         lVar16 = local_130;
         if (cVar1) {
           local_118 = local_130;
-          if (*(int *)(pStatics_ef00 + 8) == 1) goto code_r0x0001807ced5f;
+          if (PlotController.LeftFaceHideOffset == 1)
+          goto code_r0x0001807ced5f;
           goto LAB_1807cedb2;
         }
         lVar9 = 40;
@@ -20487,7 +20553,8 @@ public class GameController
                   uVar10 = GlobalData.RandomRange();
                   iVar6 = Mathf.RoundToInt(uVar10,0);
                   if (iVar6 < 1) goto LAB_1807d0597;
-                  if (iVar4 <= *(int *)(pStatics_ef00 + 164)) goto LAB_1807d0597;
+                  if (iVar4 <= *(int *)(pPlotController + 164))
+                  goto LAB_1807d0597;
                   lVar20 = il2cpp_internal(DAT_181d6f030);
                   FUN_180f58a90(lVar20,DAT_181d678f8);
                   uVar18 = 1;
@@ -20525,7 +20592,7 @@ public class GameController
         }
         throw; // [null/range check failed]
         code_r0x0001807ced5f:
-        lVar11 = *(int64 *)(pStatics_ef00 + 32);
+        lVar11 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar16 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -20584,13 +20651,11 @@ public class GameController
             }
             iVar19 = iVar19 + 1;
           }
-          lVar11 = *(int64 *)(pStatics_27a8 + 16);
+          lVar11 = GameController.CheckShowSpeHero;
           if (lVar11 == null) {
-            uVar10 = **(uint64 **)(DAT_181d527a8 + 184);
+            uVar10 = GameController._instance;
             lVar11 = new OnTooltipCB(uVar10,DAT_181d7b488);
-            plVar17 = (int64 *)(pStatics_27a8 + 16);
-            *plVar17 = lVar11;
-            il2cpp_internal(plVar17,lVar11);
+            GameController.CheckShowSpeHero = lVar11;
           }
           List_1.Sort(lVar9,lVar11,DAT_181d64278);
           if (*(int *)(lVar16 + 88) != 0) {
@@ -21122,7 +21187,7 @@ public class GameController
           uVar10 = String.Format("传闻{0}近来诸事不顺，心生退隐江湖之意。",uVar10,0);
           if (lVar16 == null) throw; // [null/range check failed]
           InfoController.AddInfo(lVar16,3,uVar10);
-          if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+          if (PlotController._instance != 2) {
             if (((this.worldData == null) ||
                 (lVar16 = this.worldData.Heros) == null) ||
                (lVar16 = FUN_180002f80(lVar16,lVar9.chapter,DAT_181d643f8)) == null)
@@ -21156,7 +21221,7 @@ public class GameController
         if (iVar4 <= iVar19) {
           return;
         }
-        iVar4 = *(int *)(pStatics_ef00 + 160);
+        iVar4 = *(int *)(pPlotController + 160);
         if ((this.worldData != null) &&
            (lVar9 = this.worldData.worldTime) != null) {
           auVar28._0_8_ = TimeData.GetExactYear(lVar9,0);
@@ -21209,7 +21274,7 @@ public class GameController
         long lVar2;
         int iVar3;
         float fVar4;
-        iVar1 = *(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 156);
+        iVar1 = *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 156);
         if ((this.worldData != null) &&
            (lVar2 = this.worldData.worldTime) != null) {
           fVar4 = (float)TimeData.GetExactYear(lVar2,0);
@@ -21227,7 +21292,7 @@ public class GameController
         long lVar2;
         int iVar3;
         float fVar4;
-        iVar1 = *(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 160);
+        iVar1 = *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 160);
         if ((this.worldData != null) &&
            (lVar2 = this.worldData.worldTime) != null) {
           fVar4 = (float)TimeData.GetExactYear(lVar2,0);
@@ -21387,7 +21452,7 @@ public class GameController
         long lVar1;
         if (target != null) {
           *(uint8 *)(target + 97) = 1;
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+          lVar1 = PlotController.LaBaFestivelResultTalkText;
           if (lVar1 != null) {
             *(uint8 *)(lVar1 + 225) = 1;
             if ((this.worldData != null) &&
@@ -21407,7 +21472,7 @@ public class GameController
         long lVar1;
         if (target != null) {
           *(uint8 *)(target + 97) = 1;
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+          lVar1 = PlotController.LaBaFestivelResultTalkText;
           if (lVar1 != null) {
             *(uint8 *)(lVar1 + 225) = 1;
             if ((this.worldData != null) &&
@@ -21579,7 +21644,7 @@ public class GameController
         ulong uVar4;
         ulong in_stack_ffffffffffffffc8;
         lVar1 = this.worldData;
-        lVar2 = **(int64 **)(DAT_181d6c960 + 184);
+        lVar2 = PlotController._instance;
         if ((target != null) && (lVar3 = *(int64 *)(target + 64)) != null) {
           if (*(int *)(lVar3 + 24) == 0) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -21601,8 +21666,7 @@ public class GameController
     // RVA   : 0x791820   Offset: 0x790020   Length: 0xCE6
     public void AutoManageFightMatch(EventData target, List<HeroData> fightHero, bool isForceMatch)
     {
-        var pStatics_1ba0 = *(int64*)(DAT_181da1ba0 + 184);
-        var pStatics_27a8 = *(int64*)(DAT_181d527a8 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void GameController.AutoManageFightMatch
                      (int64 this,int64 target,int64 fightHero,char isForceMatch)
         {
@@ -21630,17 +21694,15 @@ public class GameController
           uVar14 = 0;
           lVar5 = FightMatchController.GenerateFightMatchRewardItemList(cVar1);
           local_70 = lVar5;
-          lVar6 = *(int64 *)(pStatics_27a8 + 24);
+          lVar6 = GameController.CheckShowSpeHeroSkinID;
           if (lVar6 == null) {
-            uVar10 = **(uint64 **)(DAT_181d527a8 + 184);
+            uVar10 = GameController._instance;
             var lVar6 = new OnTooltipCB(uVar10,DAT_181d7b388,DAT_181d85f18,uVar14);
-            plVar9 = (int64 *)(pStatics_27a8 + 24);
-            *plVar9 = lVar6;
-            il2cpp_internal(plVar9,lVar6);
+            GameController.CheckShowSpeHeroSkinID = lVar6;
           }
           if (fightHero != null) {
             List_1.Sort(fightHero,lVar6,DAT_181d64278);
-            lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x400);
+            lVar6 = *(int64 *)(pPlotController + 0x400);
             uVar2 = Mathf.RoundToInt(*(float *)(target + 108) * 0.5,0);
             if (lVar6 != null) {
               if (*(uint32 *)(lVar6 + 24) <= uVar2) {
@@ -21654,12 +21716,12 @@ public class GameController
               do {
                 fVar13 = (float)Mathf.Max(0x3f800000);
                 if (!isForceMatch) {
-                  lVar6 = *(int64 *)(pStatics_1ba0 + 8);
+                  lVar6 = PlotController.LeftFaceHideOffset;
                   if (lVar6 == null) throw; // [null/range check failed]
                   iVar4 = FUN_1800d6750(lVar6,iVar11,DAT_181d68270);
                   iVar4 = iVar4 * (int)fVar13;
                   fVar13 = (float)Mathf.Max(0x3f800000);
-                  lVar6 = *(int64 *)(pStatics_1ba0 + 16);
+                  lVar6 = *(int64 *)(pPlotController + 16);
                   if (lVar6 == null) throw; // [null/range check failed]
                   local_78 = FUN_1800d6750(lVar6,iVar11,DAT_181d68270);
                   local_78 = local_78 * (int)fVar13;
@@ -21675,12 +21737,12 @@ public class GameController
                   HeroData.ChangeFame(lVar5);
                 }
                 else {
-                  lVar6 = *(int64 *)(pStatics_1ba0 + 32);
+                  lVar6 = PlotController.SpringFestivelRewardLvTalkText;
                   if (lVar6 == null) throw; // [null/range check failed]
                   iVar4 = FUN_1800d6750(lVar6,iVar11,DAT_181d68270);
                   iVar4 = iVar4 * (int)fVar13;
                   fVar13 = (float)Mathf.Max(0x3f800000);
-                  lVar6 = *(int64 *)(pStatics_1ba0 + 40);
+                  lVar6 = PlotController.LanternFestivelRewardLvTalkText;
                   if (lVar6 == null) throw; // [null/range check failed]
                   local_78 = FUN_1800d6750(lVar6,iVar11,DAT_181d68270);
                   local_78 = local_78 * (int)fVar13;
@@ -21937,8 +21999,7 @@ public class GameController
     // RVA   : 0x7C3F40   Offset: 0x7C2740   Length: 0xB0E
     public void HorseMatchOutTime(EventData target)
     {
-        var pStatics_1800 = *(int64*)(DAT_181d51800 + 184);
-        var pStatics_27a8 = *(int64*)(DAT_181d527a8 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         uint uVar2;
         int iVar3;
@@ -21956,7 +22017,7 @@ public class GameController
         int[] local_68 = new int[2];
         long local_60;
         lVar6 = this.worldData;
-        lVar7 = **(int64 **)(DAT_181d6c960 + 184);
+        lVar7 = PlotController._instance;
         if ((target != null) && (lVar8 = *(int64 *)(target + 64)) != null) {
           if (*(int *)(lVar8 + 24) == 0) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -21967,20 +22028,18 @@ public class GameController
             iVar12 = 0;
             lVar6 = PlotController.GetAroundAreaHero
                               (lVar7,uVar5,16,*(float *)(target + 108) * 0.5,0,0,0,2,0);
-            lVar7 = *(int64 *)(pStatics_27a8 + 32);
+            lVar7 = GameController.lockObj;
             if (lVar7 == null) {
-              uVar5 = **(uint64 **)(DAT_181d527a8 + 184);
+              uVar5 = GameController._instance;
               lVar7 = new OnTooltipCB(uVar5,DAT_181d7b408,DAT_181d85f18);
-              plVar11 = (int64 *)(pStatics_27a8 + 32);
-              *plVar11 = lVar7;
-              il2cpp_internal(plVar11,lVar7);
+              GameController.lockObj = lVar7;
             }
             if (lVar6 != null) {
               List_1.Sort(lVar6,lVar7,DAT_181d64278);
-              lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x400);
+              lVar7 = *(int64 *)(pPlotController + 0x400);
               uVar1 = Mathf.RoundToInt(*(float *)(target + 108) * 0.5,0);
               if (lVar7 != null) {
-                if (*(uint32 *)(lVar7 + 24) <= uVar1) {
+                if (lVar7.plotHappen <= uVar1) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 uVar5 = lVar7[uVar1];
@@ -21988,7 +22047,7 @@ public class GameController
                 lVar7 = GlobalData.GenerateRareLvColorText(uVar5,uVar2,0);
                 do {
                   fVar13 = (float)Mathf.Max(0x3f800000);
-                  lVar8 = *(int64 *)(pStatics_1800 + 16);
+                  lVar8 = *(int64 *)(pPlotController + 16);
                   if (lVar8 == null) {
         LAB_1807c4a49:
                           // WARNING: Subroutine does not return
@@ -21996,7 +22055,7 @@ public class GameController
                   }
                   iVar3 = FUN_1800d6750(lVar8,iVar12,DAT_181d68270);
                   fVar14 = (float)Mathf.Max(0x3f800000);
-                  lVar8 = *(int64 *)(pStatics_1800 + 24);
+                  lVar8 = PlotController.CheckHideChoice;
                   if (lVar8 == null) goto LAB_1807c4a49;
                   iVar4 = FUN_1800d6750(lVar8,iVar12,DAT_181d68270);
                   lVar8 = FUN_180002f80(lVar6,iVar12,DAT_181d643f8);
@@ -22228,8 +22287,7 @@ public class GameController
     // RVA   : 0x7908E0   Offset: 0x78F0E0   Length: 0xF31
     public void AuctionOutTime(EventData target)
     {
-        var pStatics_27a8 = *(int64*)(DAT_181d527a8 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         uint uVar2;
         int iVar3;
@@ -22253,7 +22311,7 @@ public class GameController
         uVar4 = (uint32)((uint64)in_stack_ffffffffffffff40 >> 32);
         local_98 = 0;
         uStack_90 = 0;
-        lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x500);
+        lVar6 = *(int64 *)(pPlotController + 0x500);
         if (target != null) {
           uVar1 = Mathf.RoundToInt(*(float *)(target + 108) * 0.5,0);
           if (lVar6 != null) {
@@ -22266,7 +22324,7 @@ public class GameController
             local_a0 = lVar6;
             lVar8 = *(int64 *)(target + 64);
             lVar9 = this.worldData;
-            lVar11 = *pStatics_c960;
+            lVar11 = PlotController._instance;
             if (lVar8 != null) {
               if (*(int *)(lVar8 + 24) == 0) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -22281,13 +22339,11 @@ public class GameController
                                     (lVar11,uVar7,30,(float)iVar3 * 0.5,in_stack_ffffffffffffff28,
                                      in_stack_ffffffffffffff30,0,CONCAT44(uVar4,2),0);
                   uVar4 = (uint32)(in_stack_ffffffffffffff28 >> 32);
-                  lVar9 = *(int64 *)(pStatics_27a8 + 40);
+                  lVar9 = GameController.InvitePlayInfo;
                   if (lVar9 == null) {
-                    uVar7 = **(uint64 **)(DAT_181d527a8 + 184);
+                    uVar7 = GameController._instance;
                     lVar9 = new OnTooltipCB(uVar7,DAT_181d7b308,DAT_181d85f18);
-                    plVar14 = (int64 *)(pStatics_27a8 + 40);
-                    *plVar14 = lVar9;
-                    il2cpp_internal(plVar14,lVar9);
+                    GameController.InvitePlayInfo = lVar9;
                   }
                   if (lVar8 != null) {
                     List_1.Sort(lVar8,lVar9,DAT_181d64278);
@@ -22296,10 +22352,10 @@ public class GameController
                       lVar9 = new ItemListData(0);
                       *plVar14 = lVar9;
                       il2cpp_internal(plVar14,lVar9);
-                      if (*pStatics_c960 == 0) throw; // [null/range check failed]
+                      if (PlotController._instance == null) throw; // [null/range check failed]
                       in_stack_ffffffffffffff30 = 0;
                       PlotController.GenerateAuctionItem
-                                (*pStatics_c960,*plVar14,
+                                (PlotController._instance,*plVar14,
                                  *(uint32 *)(target + 108),0,CONCAT44(uVar4,0xffffffff),0);
                     }
                     if (this.worldData != null) {
@@ -22605,7 +22661,7 @@ public class GameController
     // RVA   : 0x7D74C0   Offset: 0x7D5CC0   Length: 0xE6D
     public void ManageWorldEventOutTime(EventData target)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -22663,13 +22719,13 @@ public class GameController
               if (uVar3 == 0x97b4708b) {
                 cVar2 = FUN_1816fd990(lVar6,"神秘石碑",0);
                 if (cVar2) {
-                  lVar6 = *(int64 *)(pStatics + 0x498);
+                  lVar6 = *(int64 *)(pPlotController + 0x498);
                   if ((lVar6 == null) ||
                      (uVar13 = GlobalData.RandomRange(0,*(uint32 *)(lVar6 + 24),0,0), lVar8 == null))
                   throw; // [null/range check failed]
                   HeroData.ChangeMaxFightSkill(lVar8,uVar13,2,0,0);
                   uVar7 = HeroData.Name(lVar8,1,0);
-                  lVar6 = *(int64 *)(pStatics + 0x498);
+                  lVar6 = *(int64 *)(pPlotController + 0x498);
                   if (lVar6 == null) throw; // [null/range check failed]
                   uVar9 = FUN_180002f80(lVar6,uVar13,DAT_181d7c9c0);
                   uVar7 = String.Format("{0}吉人天相，寻得高人所刻石碑，潜心研读后提升了{1}潜力。",uVar7,uVar9,0);
@@ -22690,7 +22746,7 @@ public class GameController
                     lVar12 = 32;
                     while (lVar1 = *(int64 *)(lVar8 + 0x260)) != null {
                       if ((int)*(uint32 *)(lVar1 + 24) <= (int)uVar3) {
-                        lVar12 = *(int64 *)(pStatics + 0x498);
+                        lVar12 = *(int64 *)(pPlotController + 0x498);
                         if (lVar12 == null) break;
                         uVar13 = GlobalData.RandomRange(0,*(uint32 *)(lVar12 + 24),0,0);
                         if ((*(float *)(lVar8 + 188) <= (float)iVar11) ||
@@ -23763,7 +23819,6 @@ public class GameController
     // RVA   : 0x7B2BC0   Offset: 0x7B13C0   Length: 0x13AB
     public float GenerateMissionTriggerTarget(MissionData missionData, AreaData centerArea)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
         void GameController.GenerateMissionTriggerTarget
                      (int64 this,int64 missionData,int64 centerArea)
         {
@@ -23799,19 +23854,19 @@ public class GameController
         lVar7 = il2cpp_internal(DAT_181d6f030);
         local_a0 = lVar7;
         FUN_180f58a90(lVar7,DAT_181d678f8);
-        if (*(int *)(pStatics + 8) == 1) {
+        if (PlotController.LeftFaceHideOffset == 1) {
           iVar15 = 0;
           while( true ) {
-            lVar16 = *(int64 *)(pStatics + 24);
+            lVar16 = PlotController.CheckHideChoice;
             if (lVar16 == null) break;
             if (*(int *)(lVar16 + 24) <= iVar15) goto LAB_1807b312e;
             if (centerArea == null) break;
             iVar4 = *(int *)(centerArea + 16);
-            lVar16 = *(int64 *)(pStatics + 24);
+            lVar16 = PlotController.CheckHideChoice;
             if (lVar16 == null) break;
             iVar5 = FUN_1800d6750(lVar16,iVar15,DAT_181d68270);
             if (iVar4 != iVar5) {
-              lVar16 = *(int64 *)(pStatics + 24);
+              lVar16 = PlotController.CheckHideChoice;
               if ((lVar16 == null) || (uVar3 = FUN_1800d6750(lVar16,iVar15,DAT_181d68270), lVar7 == null))
               break;
               FUN_181814fa0(lVar7,uVar3,DAT_181d67a78);
@@ -24286,7 +24341,7 @@ public class GameController
     // RVA   : 0x7B61F0   Offset: 0x7B49F0   Length: 0xED
     public void GenerateRandomItem(ItemListData targetItemList, int itemNum, float shopLv, float bossLv, bool noRandom, Random randomTarget)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItem
                 (int64 this,int targetItemList,float itemNum,float shopLv,char bossLv,int noRandom,
@@ -24335,7 +24390,7 @@ public class GameController
           fVar6 = (float)GlobalData.RandomRange(uVar2);
           iVar5 = (int)(fVar6 * itemNum);
           if (noRandom == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x4d0);
+            lVar3 = *(int64 *)(pPlotController + 0x4d0);
             if (lVar3 == null) goto LAB_1807b6cb9;
             noRandom = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -24355,7 +24410,7 @@ public class GameController
             uVar4 = GameController.GenerateShoes(this,iVar5,0xffffffff,shopLv,randomTarget,0);
           }
           else if (noRandom == 4) {
-            lVar3 = *(int64 *)(pStatics + 0x4d8);
+            lVar3 = *(int64 *)(pPlotController + 0x4d8);
             if (lVar3 == null) goto LAB_1807b6cb9;
             uVar8 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
             uVar4 = GameController.GenerateDecoration(this,iVar5,uVar8,shopLv,randomTarget,0);
@@ -24412,7 +24467,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (noRandom == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x508);
+            lVar3 = *(int64 *)(pPlotController + 0x508);
             if (lVar3 == null) goto LAB_1807b6cb9;
             noRandom = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -24427,7 +24482,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (noRandom == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x530);
+            lVar3 = *(int64 *)(pPlotController + 0x530);
             if (lVar3 == null) goto LAB_1807b6cb9;
             noRandom = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -24466,7 +24521,7 @@ public class GameController
     // RVA   : 0x7B62E0   Offset: 0x7B4AE0   Length: 0x1BC
     public void GenerateRandomItem(ItemListData targetItemList, int itemNum, List<int> availableItemType, float shopLv, float bossLv, bool noRandom, int subType, Random randomTarget, bool noRepeat)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItem
                 (int64 this,int targetItemList,float itemNum,float availableItemType,char shopLv,int bossLv,
@@ -24515,7 +24570,7 @@ public class GameController
           fVar6 = (float)GlobalData.RandomRange(uVar2);
           iVar5 = (int)(fVar6 * itemNum);
           if (bossLv == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x4d0);
+            lVar3 = *(int64 *)(pPlotController + 0x4d0);
             if (lVar3 == null) goto LAB_1807b6cb9;
             bossLv = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),subType,0);
           }
@@ -24535,7 +24590,7 @@ public class GameController
             uVar4 = GameController.GenerateShoes(this,iVar5,0xffffffff,availableItemType,noRandom,0);
           }
           else if (bossLv == 4) {
-            lVar3 = *(int64 *)(pStatics + 0x4d8);
+            lVar3 = *(int64 *)(pPlotController + 0x4d8);
             if (lVar3 == null) goto LAB_1807b6cb9;
             uVar8 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),subType,0);
             uVar4 = GameController.GenerateDecoration(this,iVar5,uVar8,availableItemType,noRandom,0);
@@ -24592,7 +24647,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (bossLv == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x508);
+            lVar3 = *(int64 *)(pPlotController + 0x508);
             if (lVar3 == null) goto LAB_1807b6cb9;
             bossLv = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),subType,0);
           }
@@ -24607,7 +24662,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (bossLv == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x530);
+            lVar3 = *(int64 *)(pPlotController + 0x530);
             if (lVar3 == null) goto LAB_1807b6cb9;
             bossLv = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),subType,0);
           }
@@ -24646,7 +24701,7 @@ public class GameController
     // RVA   : 0x7B8220   Offset: 0x7B6A20   Length: 0x718
     public void GenerateShopItem(ItemListData targetItemList, int itemNum, List<int> availableItemType, float shopLv, float bossLv, AreaData targetArea, int _subType)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void GameController.GenerateShopItem
                      (uint64 this,int64 targetItemList,int itemNum,int64 availableItemType,float shopLv,
                      uint32 bossLv,int64 targetArea,int _subType)
@@ -24695,14 +24750,14 @@ public class GameController
                       lVar7 = AreaData.DataBase(targetArea,0);
                       if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x108) == 0)) throw; // [null/range check failed]
                       if (*(int *)(*(int64 *)(lVar7 + 0x108) + 24) <= iVar10) break;
-                      lVar7 = *(int64 *)(pStatics + 0x508);
+                      lVar7 = *(int64 *)(pPlotController + 0x508);
                       lVar8 = AreaData.DataBase(targetArea,0);
                       if (((lVar8 == null) || (*(int64 *)(lVar8 + 0x108) == 0)) ||
                          (FUN_180002f80(*(int64 *)(lVar8 + 0x108),iVar10,DAT_181d7c9c0), lVar7 == null))
                       throw; // [null/range check failed]
                       cVar1 = FUN_1818279a0(lVar7);
                       if (cVar1) {
-                        lVar7 = *(int64 *)(pStatics + 0x508);
+                        lVar7 = *(int64 *)(pPlotController + 0x508);
                         lVar8 = AreaData.DataBase(targetArea,0);
                         if (((lVar8 == null) || (*(int64 *)(lVar8 + 0x108) == 0)) ||
                            ((uVar9 = FUN_180002f80(*(int64 *)(lVar8 + 0x108),iVar10,DAT_181d7c9c0),
@@ -24719,14 +24774,14 @@ public class GameController
                       lVar7 = AreaData.DataBase(targetArea,0);
                       if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x108) == 0)) throw; // [null/range check failed]
                       if (*(int *)(*(int64 *)(lVar7 + 0x108) + 24) <= iVar10) break;
-                      lVar7 = *(int64 *)(pStatics + 0x530);
+                      lVar7 = *(int64 *)(pPlotController + 0x530);
                       lVar8 = AreaData.DataBase(targetArea,0);
                       if (((lVar8 == null) || (*(int64 *)(lVar8 + 0x108) == 0)) ||
                          (FUN_180002f80(*(int64 *)(lVar8 + 0x108),iVar10,DAT_181d7c9c0), lVar7 == null))
                       throw; // [null/range check failed]
                       cVar1 = FUN_1818279a0(lVar7);
                       if (cVar1) {
-                        lVar7 = *(int64 *)(pStatics + 0x530);
+                        lVar7 = *(int64 *)(pPlotController + 0x530);
                         lVar8 = AreaData.DataBase(targetArea,0);
                         if (((lVar8 == null) || (*(int64 *)(lVar8 + 0x108) == 0)) ||
                            ((uVar9 = FUN_180002f80(*(int64 *)(lVar8 + 0x108),iVar10,DAT_181d7c9c0),
@@ -24759,7 +24814,7 @@ public class GameController
           return;
         }
         while( true ) {
-          lVar6 = *(int64 *)(pStatics + 0x4c8);
+          lVar6 = *(int64 *)(pPlotController + 0x4c8);
           if (lVar6 == null) break;
           if (*(int *)(lVar6 + 24) <= iVar2) goto LAB_1807b8327;
           if (availableItemType == null) break;
@@ -24772,7 +24827,7 @@ public class GameController
     // RVA   : 0x7B6DF0   Offset: 0x7B55F0   Length: 0x86
     public ItemData GenerateRandomItem(float shopLv, float bossLv, bool noRandom, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItem
                 (int64 this,int shopLv,float bossLv,float noRandom,char targetHero,int param_6,
@@ -24821,7 +24876,7 @@ public class GameController
           fVar6 = (float)GlobalData.RandomRange(uVar2);
           iVar5 = (int)(fVar6 * bossLv);
           if (param_6 == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x4d0);
+            lVar3 = *(int64 *)(pPlotController + 0x4d0);
             if (lVar3 == null) goto LAB_1807b6cb9;
             param_6 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -24841,7 +24896,7 @@ public class GameController
             uVar4 = GameController.GenerateShoes(this,iVar5,0xffffffff,noRandom,param_7,0);
           }
           else if (param_6 == 4) {
-            lVar3 = *(int64 *)(pStatics + 0x4d8);
+            lVar3 = *(int64 *)(pPlotController + 0x4d8);
             if (lVar3 == null) goto LAB_1807b6cb9;
             uVar8 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
             uVar4 = GameController.GenerateDecoration(this,iVar5,uVar8,noRandom,param_7,0);
@@ -24898,7 +24953,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (param_6 == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x508);
+            lVar3 = *(int64 *)(pPlotController + 0x508);
             if (lVar3 == null) goto LAB_1807b6cb9;
             param_6 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -24913,7 +24968,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (param_6 == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x530);
+            lVar3 = *(int64 *)(pPlotController + 0x530);
             if (lVar3 == null) goto LAB_1807b6cb9;
             param_6 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -24952,7 +25007,7 @@ public class GameController
     // RVA   : 0x7B6CE0   Offset: 0x7B54E0   Length: 0x104
     public ItemData GenerateRandomItem(List<int> availableItemType, float shopLv, float bossLv, bool noRandom)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItem
                 (int64 this,int availableItemType,float shopLv,float bossLv,char noRandom,int param_6,
@@ -25001,7 +25056,7 @@ public class GameController
           fVar6 = (float)GlobalData.RandomRange(uVar2);
           iVar5 = (int)(fVar6 * shopLv);
           if (param_6 == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x4d0);
+            lVar3 = *(int64 *)(pPlotController + 0x4d0);
             if (lVar3 == null) goto LAB_1807b6cb9;
             param_6 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -25021,7 +25076,7 @@ public class GameController
             uVar4 = GameController.GenerateShoes(this,iVar5,0xffffffff,bossLv,param_7,0);
           }
           else if (param_6 == 4) {
-            lVar3 = *(int64 *)(pStatics + 0x4d8);
+            lVar3 = *(int64 *)(pPlotController + 0x4d8);
             if (lVar3 == null) goto LAB_1807b6cb9;
             uVar8 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
             uVar4 = GameController.GenerateDecoration(this,iVar5,uVar8,bossLv,param_7,0);
@@ -25078,7 +25133,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (param_6 == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x508);
+            lVar3 = *(int64 *)(pPlotController + 0x508);
             if (lVar3 == null) goto LAB_1807b6cb9;
             param_6 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -25093,7 +25148,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (param_6 == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x530);
+            lVar3 = *(int64 *)(pPlotController + 0x530);
             if (lVar3 == null) goto LAB_1807b6cb9;
             param_6 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),param_8,0);
           }
@@ -25132,7 +25187,7 @@ public class GameController
     // RVA   : 0x7B64A0   Offset: 0x7B4CA0   Length: 0x820
     public ItemData GenerateRandomItem(int itemType, float shopLv, float bossLv, bool noRandom, int subType, HeroData targetHero, Random randomTarget)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItem
                 (int64 this,int itemType,float shopLv,float bossLv,char noRandom,int subType,
@@ -25181,7 +25236,7 @@ public class GameController
           fVar6 = (float)GlobalData.RandomRange(uVar2);
           iVar5 = (int)(fVar6 * shopLv);
           if (subType == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x4d0);
+            lVar3 = *(int64 *)(pPlotController + 0x4d0);
             if (lVar3 == null) goto LAB_1807b6cb9;
             subType = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),randomTarget,0);
           }
@@ -25201,7 +25256,7 @@ public class GameController
             uVar4 = GameController.GenerateShoes(this,iVar5,0xffffffff,bossLv,targetHero,0);
           }
           else if (subType == 4) {
-            lVar3 = *(int64 *)(pStatics + 0x4d8);
+            lVar3 = *(int64 *)(pPlotController + 0x4d8);
             if (lVar3 == null) goto LAB_1807b6cb9;
             uVar8 = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),randomTarget,0);
             uVar4 = GameController.GenerateDecoration(this,iVar5,uVar8,bossLv,targetHero,0);
@@ -25258,7 +25313,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (subType == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x508);
+            lVar3 = *(int64 *)(pPlotController + 0x508);
             if (lVar3 == null) goto LAB_1807b6cb9;
             subType = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),randomTarget,0);
           }
@@ -25273,7 +25328,7 @@ public class GameController
           }
           fVar6 = (float)GlobalData.RandomRange(uVar8);
           if (subType == -1) {
-            lVar3 = *(int64 *)(pStatics + 0x530);
+            lVar3 = *(int64 *)(pPlotController + 0x530);
             if (lVar3 == null) goto LAB_1807b6cb9;
             subType = GlobalData.RandomRange(0,*(uint32 *)(lVar3 + 24),randomTarget,0);
           }
@@ -25312,7 +25367,7 @@ public class GameController
     // RVA   : 0x7B54F0   Offset: 0x7B3CF0   Length: 0x15D
     public void GenerateRandomItemValue(float itemValue, ItemListData targetItemList, int itemNum, List<int> availableItemType, float bossLv)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItemValue
                 (int64 this,float itemValue,uint32 targetItemList,float itemNum,int availableItemType,int bossLv,
@@ -25354,7 +25409,7 @@ public class GameController
           switch(targetItemList) {
           case 0:
             if (availableItemType == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x4d0);
+              lVar4 = *(int64 *)(pPlotController + 0x4d0);
               if (lVar4 == null) goto LAB_1807b61cd;
               availableItemType = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -25442,7 +25497,7 @@ public class GameController
                 }
               }
               iVar1 = Mathf.Min(5,(int)fVar5);
-              lVar4 = *(int64 *)(pStatics + 0x4d8);
+              lVar4 = *(int64 *)(pPlotController + 0x4d8);
               if (lVar4 == null) goto LAB_1807b61cd;
               uVar2 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
               uVar7 = GameController.GenerateDecoration
@@ -25476,7 +25531,7 @@ public class GameController
                        0x180000000,0);
             uVar7 = Mathf.Log();
             uVar2 = Mathf.RoundToInt(uVar7,0);
-            lVar4 = *(int64 *)(pStatics + 0x508);
+            lVar4 = *(int64 *)(pPlotController + 0x508);
             if (lVar4 == null) {
         LAB_1807b61cd:
                           // WARNING: Subroutine does not return
@@ -25487,7 +25542,7 @@ public class GameController
             break;
           case 5:
             if (availableItemType == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x530);
+              lVar4 = *(int64 *)(pPlotController + 0x530);
               if (lVar4 == null) goto LAB_1807b61cd;
               availableItemType = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -25520,7 +25575,7 @@ public class GameController
     // RVA   : 0x7B5470   Offset: 0x7B3C70   Length: 0x7D
     public ItemData GenerateRandomItemValue(float itemValue, float bossLv, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItemValue
                 (int64 this,float itemValue,uint32 bossLv,float targetHero,int param_5,int param_6,
@@ -25562,7 +25617,7 @@ public class GameController
           switch(bossLv) {
           case 0:
             if (param_5 == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x4d0);
+              lVar4 = *(int64 *)(pPlotController + 0x4d0);
               if (lVar4 == null) goto LAB_1807b61cd;
               param_5 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -25650,7 +25705,7 @@ public class GameController
                 }
               }
               iVar1 = Mathf.Min(5,(int)fVar5);
-              lVar4 = *(int64 *)(pStatics + 0x4d8);
+              lVar4 = *(int64 *)(pPlotController + 0x4d8);
               if (lVar4 == null) goto LAB_1807b61cd;
               uVar2 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
               uVar7 = GameController.GenerateDecoration
@@ -25684,7 +25739,7 @@ public class GameController
                        0x180000000,0);
             uVar7 = Mathf.Log();
             uVar2 = Mathf.RoundToInt(uVar7,0);
-            lVar4 = *(int64 *)(pStatics + 0x508);
+            lVar4 = *(int64 *)(pPlotController + 0x508);
             if (lVar4 == null) {
         LAB_1807b61cd:
                           // WARNING: Subroutine does not return
@@ -25695,7 +25750,7 @@ public class GameController
             break;
           case 5:
             if (param_5 == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x530);
+              lVar4 = *(int64 *)(pPlotController + 0x530);
               if (lVar4 == null) goto LAB_1807b61cd;
               param_5 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -25728,7 +25783,7 @@ public class GameController
     // RVA   : 0x7B5360   Offset: 0x7B3B60   Length: 0x104
     public ItemData GenerateRandomItemValue(float itemValue, List<int> availableItemType, float bossLv)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItemValue
                 (int64 this,float itemValue,uint32 availableItemType,float bossLv,int param_5,int param_6,
@@ -25770,7 +25825,7 @@ public class GameController
           switch(availableItemType) {
           case 0:
             if (param_5 == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x4d0);
+              lVar4 = *(int64 *)(pPlotController + 0x4d0);
               if (lVar4 == null) goto LAB_1807b61cd;
               param_5 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -25858,7 +25913,7 @@ public class GameController
                 }
               }
               iVar1 = Mathf.Min(5,(int)fVar5);
-              lVar4 = *(int64 *)(pStatics + 0x4d8);
+              lVar4 = *(int64 *)(pPlotController + 0x4d8);
               if (lVar4 == null) goto LAB_1807b61cd;
               uVar2 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
               uVar7 = GameController.GenerateDecoration
@@ -25892,7 +25947,7 @@ public class GameController
                        0x180000000,0);
             uVar7 = Mathf.Log();
             uVar2 = Mathf.RoundToInt(uVar7,0);
-            lVar4 = *(int64 *)(pStatics + 0x508);
+            lVar4 = *(int64 *)(pPlotController + 0x508);
             if (lVar4 == null) {
         LAB_1807b61cd:
                           // WARNING: Subroutine does not return
@@ -25903,7 +25958,7 @@ public class GameController
             break;
           case 5:
             if (param_5 == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x530);
+              lVar4 = *(int64 *)(pPlotController + 0x530);
               if (lVar4 == null) goto LAB_1807b61cd;
               param_5 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -25936,7 +25991,7 @@ public class GameController
     // RVA   : 0x7B5650   Offset: 0x7B3E50   Length: 0xB84
     public ItemData GenerateRandomItemValue(float itemValue, int targetItemType, float bossLv, int subType, int littleType, HeroData targetHero, int weaponType)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint64
         GameController.GenerateRandomItemValue
                 (int64 this,float itemValue,uint32 targetItemType,float bossLv,int subType,int littleType,
@@ -25978,7 +26033,7 @@ public class GameController
           switch(targetItemType) {
           case 0:
             if (subType == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x4d0);
+              lVar4 = *(int64 *)(pPlotController + 0x4d0);
               if (lVar4 == null) goto LAB_1807b61cd;
               subType = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -26066,7 +26121,7 @@ public class GameController
                 }
               }
               iVar1 = Mathf.Min(5,(int)fVar5);
-              lVar4 = *(int64 *)(pStatics + 0x4d8);
+              lVar4 = *(int64 *)(pPlotController + 0x4d8);
               if (lVar4 == null) goto LAB_1807b61cd;
               uVar2 = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
               uVar7 = GameController.GenerateDecoration
@@ -26100,7 +26155,7 @@ public class GameController
                        0x180000000,0);
             uVar7 = Mathf.Log();
             uVar2 = Mathf.RoundToInt(uVar7,0);
-            lVar4 = *(int64 *)(pStatics + 0x508);
+            lVar4 = *(int64 *)(pPlotController + 0x508);
             if (lVar4 == null) {
         LAB_1807b61cd:
                           // WARNING: Subroutine does not return
@@ -26111,7 +26166,7 @@ public class GameController
             break;
           case 5:
             if (subType == -1) {
-              lVar4 = *(int64 *)(pStatics + 0x530);
+              lVar4 = *(int64 *)(pPlotController + 0x530);
               if (lVar4 == null) goto LAB_1807b61cd;
               subType = GlobalData.RandomRange(0,*(uint32 *)(lVar4 + 24),0,0);
             }
@@ -26144,7 +26199,7 @@ public class GameController
     // RVA   : 0x7934A0   Offset: 0x791CA0   Length: 0x286
     public bool BuildingCanUpgrade(AreaBuildingData targetBuilding)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         int iVar2;
         bool cVar3;
@@ -26184,7 +26239,7 @@ public class GameController
               lVar6 = AreaData.GetCenterBuilding(lVar4,0);
               if ((targetBuilding == lVar6) && (*(uint32 *)(lVar4 + 72) < 2)) {
                 fVar1 = *(float *)(lVar4 + 80);
-                lVar6 = *(int64 *)(pStatics + 0x668);
+                lVar6 = *(int64 *)(pPlotController + 0x668);
                 lVar7 = AreaData.GetCenterBuilding(lVar4,0);
                 if ((lVar7 == null) || (lVar6 == null)) throw; // [null/range check failed]
                 FUN_1800d6780(lVar6,*(uint32 *)(lVar7 + 20),DAT_181d796d8);
@@ -26196,7 +26251,7 @@ public class GameController
               if ((targetBuilding == lVar6) && (*(int *)(lVar4 + 72) == 2)) {
                 if (lVar5 == null) throw; // [null/range check failed]
                 iVar2 = *(int *)(lVar5 + 132);
-                lVar6 = *(int64 *)(pStatics + 0x670);
+                lVar6 = *(int64 *)(pPlotController + 0x670);
                 lVar7 = AreaData.GetCenterBuilding(lVar4,0);
                 if ((lVar7 == null) || (lVar6 == null)) throw; // [null/range check failed]
                 FUN_1800d6780(lVar6,*(uint32 *)(lVar7 + 20),DAT_181d796d8);
@@ -26341,14 +26396,13 @@ public class GameController
     // RVA   : 0x7930D0   Offset: 0x7918D0   Length: 0x3C6
     public bool BuildingCanBuild(AreaTileData targetTile, int targetBuildingID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
         long lVar4;
         ulong uVar5;
         uint uVar6;
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 224)) == null) throw; // [null/range check failed]
         lVar1 = FUN_1817cc780(lVar1,targetBuildingID,DAT_181d925f0);
         if (lVar1 == null) throw; // [null/range check failed]
@@ -26356,7 +26410,7 @@ public class GameController
           if (targetTile == null) throw; // [null/range check failed]
         }
         else {
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = GameController.lockObj;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 224)) == null) throw; // [null/range check failed]
           lVar1 = FUN_1817cc780(lVar1,targetBuildingID,DAT_181d925f0);
           if (lVar1 == null) throw; // [null/range check failed]
@@ -26366,7 +26420,7 @@ public class GameController
             if (lVar1 == null) throw; // [null/range check failed]
             if (*(int *)(lVar1 + 72) != 2) goto LAB_18079337b;
           }
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = GameController.lockObj;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 224)) == null) throw; // [null/range check failed]
           uVar2 = FUN_1817cc780(lVar1,targetBuildingID,DAT_181d925f0);
           if (uVar2 == 0) throw; // [null/range check failed]
@@ -26383,7 +26437,7 @@ public class GameController
         lVar1 = AreaTileData.GetArea(targetTile,0);
         if (lVar1 != null) {
           lVar1 = AreaData.GetForce(lVar1,0);
-          lVar3 = *(int64 *)(pStatics + 32);
+          lVar3 = GameController.lockObj;
           if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 224)) != null) {
             lVar3 = FUN_1817cc780(lVar3,targetBuildingID,DAT_181d925f0);
             lVar4 = AreaTileData.GetArea(targetTile,0);
@@ -26429,7 +26483,7 @@ public class GameController
             lVar5 = AreaTileData.GetArea(targetTile,0);
             if (lVar5 != null) {
               lVar5 = AreaData.GetForce(lVar5,0);
-              lVar6 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+              lVar6 = GameController.lockObj;
               if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 224)) != null) {
                 lVar6 = FUN_1817cc780(lVar6,targetBuildingID,DAT_181d925f0);
                 lVar7 = AreaTileData.GetArea(targetTile,0);
@@ -26438,7 +26492,7 @@ public class GameController
                      (uVar3 = ForceData.GetBuildCostRate(lVar7,0), lVar6 != null)) &&
                     (uVar4 = AreaBuildingDataBase.GetBuildCostResource(lVar6,uVar3,0), lVar5 != null)))) {
                   ForceData.CostResource(lVar5,uVar4,0,0);
-                  lVar5 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+                  lVar5 = PlotController.LaBaFestivelResultTalkText;
                   if (lVar5 != null) {
                     AreaController.GenerateTileBuilding(lVar5,targetTile,0);
                     lVar5 = AreaTileData.GetArea(targetTile,0);
@@ -26571,7 +26625,7 @@ public class GameController
                   }
                   plVar6[5] = lVar3;
                   il2cpp_internal(plVar6 + 5,lVar3);
-                  lVar3 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 8);
+                  lVar3 = AreaBuildController.AreaObstacleName;
                   uVar2 = Mathf.CeilToInt((float)*(int *)(targetObstacle + 20) * 0.5,0);
                   if (lVar3 != null) {
                     if (*(uint32 *)(lVar3 + 24) <= uVar2) {
@@ -26637,7 +26691,7 @@ public class GameController
     // RVA   : 0x7C8570   Offset: 0x7C6D70   Length: 0x11AA
     public void ManageAreaStuff()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar2;
         bool cVar3;
         int iVar4;
@@ -26679,10 +26733,10 @@ public class GameController
           return;
         }
         iVar4 = iVar13;
-        if (*(int *)(pStatics + 8) == 1) goto code_r0x0001807c8870;
+        if (PlotController.LeftFaceHideOffset == 1) goto code_r0x0001807c8870;
         goto LAB_1807c88c5;
         code_r0x0001807c8870:
-        lVar6 = *(int64 *)(pStatics + 24);
+        lVar6 = PlotController.CheckHideChoice;
         if (lVar2 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -27062,7 +27116,7 @@ public class GameController
               cVar3 = GameController.IsPlayerForce(this,*(uint32 *)(lVar2 + 112),0);
               if (cVar3) {
                 uVar7 = *(uint64 *)(lVar2 + 24);
-                lVar6 = *(int64 *)(pStatics + 0x5c0);
+                lVar6 = *(int64 *)(pPlotController + 0x5c0);
                 if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -27296,7 +27350,7 @@ public class GameController
           }
           plVar4[4] = lVar6;
           il2cpp_internal(plVar4 + 4,lVar6);
-          lVar5 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x588);
+          lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x588);
           if (lVar5 == null) throw; // [null/range check failed]
           uVar2 = *(uint32 *)(targetBookWriter + 20);
           if (*(uint32 *)(lVar5 + 24) <= uVar2) {
@@ -27421,8 +27475,7 @@ public class GameController
     // RVA   : 0x7CAB10   Offset: 0x7C9310   Length: 0x3CBE
     public void ManageForceStuff()
     {
-        var plVar18 = *(int64*)(lVar18 + 184);
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var plVar17 = *(int64*)(lVar17 + 184);
         uint uVar1;
         bool cVar2;
         int iVar3;
@@ -27438,21 +27491,22 @@ public class GameController
         long lVar13;
         long lVar14;
         ulong uVar16;
-        ulong uVar17;
+        long lVar17;
         long lVar18;
         long lVar19;
-        long lVar20;
+        int iVar20;
         int iVar21;
-        int iVar22;
+        float fVar22;
         float fVar23;
-        float fVar24;
-        double dVar25;
+        double dVar24;
         uint64 extraout_XMM0_Qa;
         uint64 extraout_XMM0_Qa_00;
+        uint8 auVar25 [16];
         uint8 auVar26 [16];
-        uint8 auVar27 [16];
         uint64 in_stack_fffffffffffffde8;
+        uint64 in_stack_fffffffffffffdf0;
         uint32 uVar28;
+        uint64 uVar27;
         uint32 in_stack_fffffffffffffdf8;
         uint32 local_1c0;
         uint32 local_1bc;
@@ -27494,27 +27548,27 @@ public class GameController
         uStack_158 = 0;
         local_150 = 0;
         if ((this.worldData == null) ||
-           (lVar18 = this.worldData.Forces) == null) {
+           (lVar17 = this.worldData.Forces) == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_1817ff240(&local_100,lVar18,DAT_181d60878);
+        FUN_1817ff240(&local_100,lVar17,DAT_181d60878);
         local_118 = local_100;
         uStack_110 = uStack_f8;
         local_108 = local_f0;
         LAB_1807caf90:
         cVar2 = FUN_180d197a0(&local_118,DAT_181d66148);
-        lVar18 = local_108;
+        lVar17 = local_108;
         if (!cVar2) {
           ZhSegment.Initialize(&local_118,DAT_181d660c8);
           return;
         }
         local_1a8 = local_108;
-        if (*(int *)(pStatics + 8) == 1) goto code_r0x0001807cafee;
+        if (PlotController.LeftFaceHideOffset == 1) goto code_r0x0001807cafee;
         goto LAB_1807cb040;
         code_r0x0001807cafee:
-        lVar8 = *(int64 *)(pStatics + 32);
-        if (lVar18 == null) {
+        lVar8 = PlotController.SpringFestivelRewardLvTalkText;
+        if (lVar17 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -27522,14 +27576,14 @@ public class GameController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        cVar2 = FUN_181815240(lVar8,*(uint32 *)(lVar18 + 16),DAT_181d67bf8);
+        cVar2 = FUN_181815240(lVar8,*(uint32 *)(lVar17 + 16),DAT_181d67bf8);
         if (!cVar2) goto LAB_1807caf90;
         LAB_1807cb040:
-        if (lVar18 == null) {
+        if (lVar17 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        plVar15 = (int64 *)(lVar18 + 232);
+        plVar15 = (int64 *)(lVar17 + 232);
         if (*plVar15 == 0) {
           lVar8 = il2cpp_internal(DAT_181d5c6c8);
           FUN_1808ae540(lVar8,DAT_181d94fd0);
@@ -27575,11 +27629,11 @@ public class GameController
             FUN_1813fed40(lVar8);
           }
         }
-        lVar8 = ForceData.GetNowResearchTech(lVar18,0);
+        lVar8 = ForceData.GetNowResearchTech(lVar17,0);
         if (lVar8 == null) {
           iVar3 = 0;
         LAB_1807cb1c0:
-          lVar8 = *(int64 *)(lVar18 + 0x188);
+          lVar8 = *(int64 *)(lVar17 + 0x188);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -27589,12 +27643,12 @@ public class GameController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar4 = *(uint32 *)(lVar8.chapter + 32);
-          if (*(int64 *)(lVar18 + 0x188) == 0) {
+          if (*(int64 *)(lVar17 + 0x188) == 0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_18180c7d0(*(int64 *)(lVar18 + 0x188),0,DAT_181d67f70);
-          if (*(int64 *)(lVar18 + 0x138) == 0) {
+          FUN_18180c7d0(*(int64 *)(lVar17 + 0x188),0,DAT_181d67f70);
+          if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -27603,19 +27657,19 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (*(int *)(lVar8 + 20) < *(int *)(lVar18 + 52)) {
-            if (*(int64 *)(lVar18 + 0x138) == 0) {
+          if (*(int *)(lVar8 + 20) < *(int *)(lVar17 + 52)) {
+            if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar8 = FUN_180002f80(*(int64 *)(lVar18 + 0x138),uVar4);
-            ForceData.GetResearchCostRate(lVar18,0);
+            lVar8 = FUN_180002f80(*(int64 *)(lVar17 + 0x138),uVar4);
+            ForceData.GetResearchCostRate(lVar17,0);
             if (lVar8 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             ForceTechLvData.GetResearchCostResource(lVar8);
-            cVar2 = ForceData.HaveResource(lVar18);
+            cVar2 = ForceData.HaveResource(lVar17);
             if (cVar2) goto code_r0x0001807cb293;
           }
           if (this.worldData == null) {
@@ -27623,17 +27677,18 @@ public class GameController
             FUN_1800d6620();
           }
           lVar8 = WorldData.Player();
+          uVar28 = (uint32)((uint64)in_stack_fffffffffffffdf0 >> 32);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (*(int *)(lVar8 + 132) == *(int *)(lVar18 + 16)) {
+          if (*(int *)(lVar8 + 132) == *(int *)(lVar17 + 16)) {
             lVar8 = FUN_18046c300(0);
-            if (*(int64 *)(lVar18 + 0x138) == 0) {
+            if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar10 = FUN_180002f80(*(int64 *)(lVar18 + 0x138),uVar4,DAT_181d613f8);
+            lVar10 = FUN_180002f80(*(int64 *)(lVar17 + 0x138),uVar4,DAT_181d613f8);
             if (lVar10 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -27643,7 +27698,7 @@ public class GameController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            String.Format("因条件不足跳过研究[{0}]！",lVar10.cityAreaID,0);
+            uVar9 = String.Format("因条件不足跳过研究[{0}]！",lVar10.cityAreaID,0);
             plVar15 = (int64 *)Color.get_red(&local_100,0);
             if (lVar8 == null) {
                           // WARNING: Subroutine does not return
@@ -27652,26 +27707,29 @@ public class GameController
             local_198 = *plVar15;
             lStack_190 = plVar15[1];
             in_stack_fffffffffffffdf8 = 0x40a00000;
+            in_stack_fffffffffffffdf0 = CONCAT44(uVar28,0x3f800000);
             in_stack_fffffffffffffde8 = "Woosh";
-            InfoController.AddInfoTab();
+            InfoController.AddInfoTab
+                      (lVar8,uVar9,"UIAtlas","从事工作_探索","Woosh",in_stack_fffffffffffffdf0,
+                       0x40a00000,&local_198,0);
           }
           goto LAB_1807cb1c0;
         }
-        lVar8 = ForceData.GetNowResearchTech(lVar18,0);
+        lVar8 = ForceData.GetNowResearchTech(lVar17,0);
         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        fVar23 = lVar8.cityAreaID;
-        lVar10 = ForceData.GetNowResearchTech(lVar18,0);
-        ForceData.GetResearchSpeedRate(lVar18,0);
+        fVar22 = lVar8.cityAreaID;
+        lVar10 = ForceData.GetNowResearchTech(lVar17,0);
+        ForceData.GetResearchSpeedRate(lVar17,0);
         if (lVar10 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        fVar24 = (float)ForceTechLvData.GetEachDayResearchPercent(lVar10);
-        lVar8.cityAreaID = fVar24 + fVar23;
-        lVar8 = ForceData.GetNowResearchTech(lVar18,0);
+        fVar23 = (float)ForceTechLvData.GetEachDayResearchPercent(lVar10);
+        lVar8.cityAreaID = fVar23 + fVar22;
+        lVar8 = ForceData.GetNowResearchTech(lVar17,0);
         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -27686,12 +27744,12 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          ForceData.UpgradeNowResearch(lVar18,*(int *)(lVar8 + 132) == *(int *)(lVar18 + 16));
+          ForceData.UpgradeNowResearch(lVar17,*(int *)(lVar8 + 132) == *(int *)(lVar17 + 16));
         }
         LAB_1807cb710:
         iVar3 = 0;
         while( true ) {
-          lVar8 = *(int64 *)(lVar18 + 176);
+          lVar8 = *(int64 *)(lVar17 + 176);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -27701,7 +27759,7 @@ public class GameController
           GameController.ManageBookWriter(this);
           iVar3 = iVar3 + 1;
         }
-        if (*(int *)(lVar18 + 0x174) == 0) goto LAB_1807ce0b4;
+        if (*(int *)(lVar17 + 0x174) == 0) goto LAB_1807ce0b4;
         if (this.worldData == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -27711,8 +27769,8 @@ public class GameController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        if (lVar8.cityAreaID < *(int *)(lVar18 + 0x174)) goto LAB_1807ce0b4;
-        *(uint32 *)(lVar18 + 0x174) = 0;
+        if (lVar8.cityAreaID < *(int *)(lVar17 + 0x174)) goto LAB_1807ce0b4;
+        *(uint32 *)(lVar17 + 0x174) = 0;
         lVar8 = this.worldData;
         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
@@ -27724,7 +27782,7 @@ public class GameController
         }
         if (3 < *(int *)(lVar8.worldTime + 16)) {
           if (lVar8.gameMode == null) {
-            iVar3 = *(int *)(lVar18 + 16);
+            iVar3 = *(int *)(lVar17 + 16);
             lVar8 = WorldData.Player(lVar8,0);
             if (lVar8 == null) {
                           // WARNING: Subroutine does not return
@@ -27732,31 +27790,31 @@ public class GameController
             }
             if (iVar3 == *(int *)(lVar8 + 132)) goto LAB_1807cc128;
           }
-          if ((*(int *)(lVar18 + 88) != 0) && (lVar8 = ForceData.GetLeader(lVar18,0)) != null) {
-            lVar10 = plVar18;
+          if ((*(int *)(lVar17 + 88) != 0) && (lVar8 = ForceData.GetLeader(lVar17,0)) != null) {
+            lVar10 = plVar17;
             if (lVar10 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             if (*(float *)(lVar10 + 28) <= lVar10.villageAreaID &&
                 lVar10.villageAreaID != *(float *)(lVar10 + 28)) {
-              dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
+              dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
               if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-              fVar23 = (float)Mathf.Max();
-              if (dVar25 < (double)fVar23) {
+              fVar22 = (float)Mathf.Max();
+              if (dVar24 < (double)fVar22) {
                 lVar10 = this.worldData;
                 if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar23 = lVar10.TimeDifficulty;
-                iVar3 = *(int *)(lVar18 + 52);
-                fVar24 = (float)WorldData.GetAIForceDevelopSpeed(lVar10,0);
-                iVar3 = Mathf.RoundToInt(((float)iVar3 + fVar23 + fVar24 * 0.5) * 0.25,0);
+                fVar22 = lVar10.TimeDifficulty;
+                iVar3 = *(int *)(lVar17 + 52);
+                fVar23 = (float)WorldData.GetAIForceDevelopSpeed(lVar10,0);
+                iVar3 = Mathf.RoundToInt(((float)iVar3 + fVar22 + fVar23 * 0.5) * 0.25,0);
                 lVar10 = il2cpp_internal(DAT_181d6f430);
                 FUN_180f58a90(lVar10,DAT_181d691f0);
                 lVar11 = il2cpp_internal(DAT_181d6f430);
@@ -27813,29 +27871,29 @@ public class GameController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (lVar18 == null) {
+                    if (lVar17 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
                     lVar14 = ForceData.BookStorageFindSkill();
                     if (lVar14 == null) {
-                      lVar14 = plVar18;
+                      lVar14 = plVar17;
                       if (lVar14 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
                       if (*(float *)(lVar13 + 68) <=
                           *(float *)(lVar14 + 32) - *(float *)(lVar14 + 28)) {
-                        iVar21 = 0;
-                        iVar22 = 1;
+                        iVar20 = 0;
+                        iVar21 = 1;
                         while( true ) {
-                          lVar14 = *(int64 *)(lVar18 + 240);
+                          lVar14 = *(int64 *)(lVar17 + 240);
                           if (lVar14 == null) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
                           }
-                          if (*(int *)(lVar14 + 24) <= iVar21) goto LAB_1807cbac3;
-                          iVar6 = FUN_1800d6750(lVar14,iVar21,DAT_181d68270);
+                          if (*(int *)(lVar14 + 24) <= iVar20) goto LAB_1807cbac3;
+                          iVar6 = FUN_1800d6750(lVar14,iVar20,DAT_181d68270);
                           if (*(int64 *)(lVar13 + 112) == 0) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
@@ -27846,12 +27904,12 @@ public class GameController
                             FUN_1800d6620();
                           }
                           if (iVar6 == *(int *)(lVar14 + 48)) break;
-                          iVar21 = iVar21 + 1;
+                          iVar20 = iVar20 + 1;
                         }
-                        iVar22 = 3;
+                        iVar21 = 3;
         LAB_1807cbac3:
                         if (2 < *(int *)(lVar13 + 60)) {
-                          iVar22 = iVar22 + 1;
+                          iVar21 = iVar21 + 1;
                         }
                         if (*(int64 *)(lVar13 + 112) == 0) {
                           // WARNING: Subroutine does not return
@@ -27872,9 +27930,9 @@ public class GameController
                           FUN_1800d6620();
                         }
                         cVar2 = ForceData.BookStorageHaveSkillTypeLv();
-                        iVar21 = 0;
+                        iVar20 = 0;
                         if (!cVar2) {
-                          for (; iVar21 < iVar22; iVar21 = iVar21 + 1) {
+                          for (; iVar20 < iVar21; iVar20 = iVar20 + 1) {
                             if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
@@ -27883,7 +27941,7 @@ public class GameController
                           }
                         }
                         else {
-                          for (; iVar21 < iVar22; iVar21 = iVar21 + 1) {
+                          for (; iVar20 < iVar21; iVar20 = iVar20 + 1) {
                             if (lVar11 == null) {
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
@@ -27939,13 +27997,13 @@ public class GameController
                     lVar10 = FUN_180002f80(lVar10,uVar4,DAT_181d69770);
                   }
                   HeroData.LoseItem(lVar8,lVar10,0);
-                  if (lVar18 == null) {
+                  if (lVar17 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  ForceData.BookStorageAddBook(lVar18,lVar10,0);
+                  ForceData.BookStorageAddBook(lVar17,lVar10,0);
                   plVar15 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-                  lVar11 = *(int64 *)(lVar18 + 24);
+                  lVar11 = *(int64 *)(lVar17 + 24);
                   if (plVar15 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -28016,7 +28074,7 @@ public class GameController
                   uVar9 = String.Format("{0}掌门{1}将《{2}》{3}秘籍放入藏经阁，供全派弟子参阅。",plVar15,0);
                   HeroData.AddLog(lVar8,uVar9,0);
                   lVar8 = FUN_18046c300(0);
-                  iVar3 = *(int *)(lVar18 + 16);
+                  iVar3 = *(int *)(lVar17 + 16);
                   if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -28047,22 +28105,22 @@ public class GameController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (lVar18 == null) {
+                  if (lVar17 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
                   lVar11 = ForceData.BookStorageFindSkill
-                                     (lVar18,*(uint32 *)(lVar10.lastRandomWorldEventDay + 16),0);
+                                     (lVar17,*(uint32 *)(lVar10.lastRandomWorldEventDay + 16),0);
                   HeroData.LoseItem(lVar8,lVar10,0);
                   HeroData.GetItem(lVar8,lVar11,0);
-                  if (plVar18 == 0) {
+                  if (plVar17 == 0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  ItemListData.LoseItem(plVar18,lVar11,0);
-                  ForceData.BookStorageAddBook(lVar18,lVar10,0);
+                  ItemListData.LoseItem(plVar17,lVar11,0);
+                  ForceData.BookStorageAddBook(lVar17,lVar10,0);
                   plVar15 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
-                  lVar12 = *(int64 *)(lVar18 + 24);
+                  lVar12 = *(int64 *)(lVar17 + 24);
                   if (plVar15 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -28148,7 +28206,7 @@ public class GameController
                   uVar9 = String.Format("{0}掌门{1}用《{2}》{3}替换了藏经阁内的《{2}》{4}秘籍，供全派弟子参阅。",plVar15,0);
                   HeroData.AddLog(lVar8,uVar9,0);
                   lVar8 = FUN_18046c300(0);
-                  iVar3 = *(int *)(lVar18 + 16);
+                  iVar3 = *(int *)(lVar17 + 16);
                   if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -28174,11 +28232,11 @@ public class GameController
         }
         LAB_1807cc128:
         iVar3 = 0;
-        if (lVar18 == null) {
+        if (lVar17 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        iVar5 = *(int *)(lVar18 + 16);
+        iVar5 = *(int *)(lVar17 + 16);
         if (this.worldData == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -28189,15 +28247,15 @@ public class GameController
           FUN_1800d6620();
         }
         if (iVar5 != *(int *)(lVar8 + 132)) {
-          if (*(float *)(lVar18 + 168) <= 999999.0 && *(float *)(lVar18 + 168) != 999999.0) {
-            lVar8 = *(int64 *)(lVar18 + 160);
+          if (*(float *)(lVar17 + 168) <= 999999.0 && *(float *)(lVar17 + 168) != 999999.0) {
+            lVar8 = *(int64 *)(lVar17 + 160);
             if (lVar8 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             if (lVar8.villageAreaID * 0.8 <= *(float *)(lVar8 + 28)) {
-              lVar8 = ForceData.GetLeader(lVar18,0);
-              lVar10 = ForceData.GetLeader(lVar18,0);
+              lVar8 = ForceData.GetLeader(lVar17,0);
+              lVar10 = ForceData.GetLeader(lVar17,0);
               if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -28209,8 +28267,8 @@ public class GameController
                 FUN_1800d6620();
               }
               HeroData.AddLog(lVar8,uVar9,0);
-              lVar8 = ForceData.MainArea(lVar18,0);
-              lVar10 = ForceData.GetLeader(lVar18,0);
+              lVar8 = ForceData.MainArea(lVar17,0);
+              lVar10 = ForceData.GetLeader(lVar17,0);
               if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -28224,25 +28282,25 @@ public class GameController
               AreaData.AddLog(lVar8,uVar9,0);
             }
             while( true ) {
-              lVar8 = *(int64 *)(lVar18 + 160);
+              lVar8 = *(int64 *)(lVar17 + 160);
               if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               if (*(float *)(lVar8 + 28) < lVar8.villageAreaID * 0.8) break;
               lVar8 = lVar8.forceAreaID;
-              if ((float)iVar3 <= (float)*(int *)(lVar18 + 52) * 0.3) {
+              if ((float)iVar3 <= (float)*(int *)(lVar17 + 52) * 0.3) {
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
                 iVar5 = lVar8.cityAreaID;
                 while (iVar5 = iVar5 + -1, -1 < iVar5) {
-                  if (*(int64 *)(lVar18 + 160) == 0) {
+                  if (*(int64 *)(lVar17 + 160) == 0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  lVar8 = *(int64 *)(*(int64 *)(lVar18 + 160) + 40);
+                  lVar8 = *(int64 *)(*(int64 *)(lVar17 + 160) + 40);
                   if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -28252,16 +28310,16 @@ public class GameController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  lVar8 = ForceData.GetLeader(lVar18,0);
+                  lVar8 = ForceData.GetLeader(lVar17,0);
                   if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
                   HeroData.GetTradeValueRate(lVar8,0,0);
-                  uVar9 = 0;
+                  in_stack_fffffffffffffdf0 = 0;
                   in_stack_fffffffffffffde8 = CONCAT71((int7)(in_stack_fffffffffffffde8 >> 8),1);
-                  ForceData.ChangeResource(lVar18,0);
-                  lVar8 = *(int64 *)(lVar18 + 160);
+                  ForceData.ChangeResource(lVar17,0);
+                  lVar8 = *(int64 *)(lVar17 + 160);
                   if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -28270,8 +28328,9 @@ public class GameController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar16 = FUN_180002f80(lVar8.forceAreaID,iVar5,DAT_181d69770);
-                  ItemListData.LoseItem(lVar8,uVar16,0,0,in_stack_fffffffffffffde8,uVar9);
+                  uVar9 = FUN_180002f80(lVar8.forceAreaID,iVar5,DAT_181d69770);
+                  ItemListData.LoseItem
+                            (lVar8,uVar9,0,0,in_stack_fffffffffffffde8,in_stack_fffffffffffffdf0);
                 }
                 iVar3 = iVar3 + 1;
               }
@@ -28282,11 +28341,11 @@ public class GameController
                 }
                 uVar4 = lVar8.cityAreaID;
                 uVar4 = GlobalData.RandomRange(0,uVar4,0);
-                if (*(int64 *)(lVar18 + 160) == 0) {
+                if (*(int64 *)(lVar17 + 160) == 0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                lVar8 = *(int64 *)(*(int64 *)(lVar18 + 160) + 40);
+                lVar8 = *(int64 *)(*(int64 *)(lVar17 + 160) + 40);
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -28296,16 +28355,16 @@ public class GameController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                lVar8 = ForceData.GetLeader(lVar18,0);
+                lVar8 = ForceData.GetLeader(lVar17,0);
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
                 HeroData.GetTradeValueRate(lVar8,0,0);
-                uVar9 = 0;
+                in_stack_fffffffffffffdf0 = 0;
                 in_stack_fffffffffffffde8 = CONCAT71((int7)(in_stack_fffffffffffffde8 >> 8),1);
-                ForceData.ChangeResource(lVar18,0);
-                lVar8 = *(int64 *)(lVar18 + 160);
+                ForceData.ChangeResource(lVar17,0);
+                lVar8 = *(int64 *)(lVar17 + 160);
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -28314,8 +28373,9 @@ public class GameController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar16 = FUN_180002f80(lVar8.forceAreaID,uVar4);
-                ItemListData.LoseItem(lVar8,uVar16,0,0,in_stack_fffffffffffffde8,uVar9);
+                uVar9 = FUN_180002f80(lVar8.forceAreaID,uVar4);
+                ItemListData.LoseItem
+                          (lVar8,uVar9,0,0,in_stack_fffffffffffffde8,in_stack_fffffffffffffdf0);
               }
             }
           }
@@ -28340,14 +28400,14 @@ public class GameController
             cVar2 = FUN_180d197a0(&local_178,DAT_181d66148);
             lVar11 = local_168;
             if (!cVar2) goto LAB_1807cc93e;
-            if (local_168 != lVar18) {
+            if (local_168 != lVar17) {
               if (local_168 == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(local_168 + 16));
-              if (fVar23 < 80.0) {
-                lVar12 = *(int64 *)(lVar18 + 136);
+              fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(local_168 + 16));
+              if (fVar22 < 80.0) {
+                lVar12 = *(int64 *)(lVar17 + 136);
                 if (lVar12 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -28356,23 +28416,23 @@ public class GameController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 if (4000.0 <= *(float *)(*(int64 *)(lVar12 + 16) + 32)) {
-                  cVar2 = FUN_1816fd990(*(uint64 *)(lVar11 + 40),*(uint64 *)(lVar18 + 40));
+                  cVar2 = FUN_1816fd990(*(uint64 *)(lVar11 + 40),*(uint64 *)(lVar17 + 40));
                   if (!cVar2) {
                     cVar2 = FUN_1816fd990(*(uint64 *)(lVar11 + 40),"中庸");
                     if ((!cVar2) &&
-                       (cVar2 = FUN_1816fd990(*(uint64 *)(lVar18 + 40),"中庸"), !cVar2
+                       (cVar2 = FUN_1816fd990(*(uint64 *)(lVar17 + 40),"中庸"), !cVar2
                        )) {
-                      fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                      if (fVar23 < 10.0) {
+                      fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                      if (fVar22 < 10.0) {
                         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
                         }
                       }
                       else {
-                        dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
-                        fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                        if ((double)(1.0 - fVar23 * 0.04) <= dVar25) goto LAB_1807cc7ad;
+                        dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
+                        fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                        if ((double)(1.0 - fVar22 * 0.04) <= dVar24) goto LAB_1807cc7ad;
                         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
@@ -28380,17 +28440,17 @@ public class GameController
                       }
                     }
                     else {
-                      fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                      if (fVar23 < 25.0) {
+                      fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                      if (fVar22 < 25.0) {
                         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
                         }
                       }
                       else {
-                        dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
-                        fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                        if ((double)(1.0 - fVar23 * 0.03) <= dVar25) goto LAB_1807cc7ad;
+                        dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
+                        fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                        if ((double)(1.0 - fVar22 * 0.03) <= dVar24) goto LAB_1807cc7ad;
                         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
@@ -28399,17 +28459,17 @@ public class GameController
                     }
                   }
                   else {
-                    fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                    if (fVar23 < 40.0) {
+                    fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                    if (fVar22 < 40.0) {
                       if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
                     }
                     else {
-                      dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
-                      fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                      if ((double)(1.0 - fVar23 * 0.02) <= dVar25) goto LAB_1807cc7ad;
+                      dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
+                      fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                      if ((double)(1.0 - fVar22 * 0.02) <= dVar24) goto LAB_1807cc7ad;
                       if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
@@ -28425,23 +28485,23 @@ public class GameController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            cVar2 = String.op_Inequality(*(uint64 *)(lVar11 + 40),*(uint64 *)(lVar18 + 40));
+            cVar2 = String.op_Inequality(*(uint64 *)(lVar11 + 40),*(uint64 *)(lVar17 + 40));
             if (cVar2) {
               cVar2 = FUN_1816fd990(*(uint64 *)(lVar11 + 40),"中庸");
               if ((!cVar2) &&
-                 (cVar2 = FUN_1816fd990(*(uint64 *)(lVar18 + 40),"中庸"), !cVar2)) {
-                dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
-                fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                if ((double)((fVar23 - 50.0) * 0.004) <= dVar25) goto LAB_1807cc530;
+                 (cVar2 = FUN_1816fd990(*(uint64 *)(lVar17 + 40),"中庸"), !cVar2)) {
+                dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
+                fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                if ((double)((fVar22 - 50.0) * 0.004) <= dVar24) goto LAB_1807cc530;
                 if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
               }
               else {
-                dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
-                fVar23 = (float)ForceData.GetForceFavor(lVar18,*(uint32 *)(lVar11 + 16));
-                if ((double)((fVar23 - 75.0) * 0.004) <= dVar25) goto LAB_1807cc530;
+                dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
+                fVar22 = (float)ForceData.GetForceFavor(lVar17,*(uint32 *)(lVar11 + 16));
+                if ((double)((fVar22 - 75.0) * 0.004) <= dVar24) goto LAB_1807cc530;
                 if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -28452,53 +28512,53 @@ public class GameController
           } while( true );
         }
         LAB_1807ce0b4:
-        if (lVar18 == null) {
+        if (lVar17 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        iVar3 = *(int *)(lVar18 + 16);
+        iVar3 = *(int *)(lVar17 + 16);
         if (this.worldData == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar18 = WorldData.Player(this.worldData,0);
-        if (lVar18 == null) {
+        lVar17 = WorldData.Player(this.worldData,0);
+        if (lVar17 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        if (iVar3 == *(int *)(lVar18 + 132)) {
+        if (iVar3 == *(int *)(lVar17 + 132)) {
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar18 = this.worldData.worldTime;
-          if (lVar18 == null) {
+          lVar17 = this.worldData.worldTime;
+          if (lVar17 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (*(int *)(lVar18 + 24) == 6) {
+          if (*(int *)(lVar17 + 24) == 6) {
             GameController.ManagePlayerForceAutoBuild(this,0);
           }
         }
         goto LAB_1807caf90;
         code_r0x0001807cb293:
-        if (*(int64 *)(lVar18 + 0x138) == 0) {
+        if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar8 = FUN_180002f80(*(int64 *)(lVar18 + 0x138),uVar4,DAT_181d613f8);
-        ForceData.GetResearchCostRate(lVar18,0);
+        lVar8 = FUN_180002f80(*(int64 *)(lVar17 + 0x138),uVar4,DAT_181d613f8);
+        ForceData.GetResearchCostRate(lVar17,0);
         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         uVar9 = ForceTechLvData.GetResearchCostResource(lVar8);
-        ForceData.CostResource(lVar18,uVar9,0);
-        if (*(int64 *)(lVar18 + 0x138) == 0) {
+        ForceData.CostResource(lVar17,uVar9,0);
+        if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        uVar9 = FUN_180002f80(*(int64 *)(lVar18 + 0x138),uVar4,DAT_181d613f8);
+        uVar9 = FUN_180002f80(*(int64 *)(lVar17 + 0x138),uVar4,DAT_181d613f8);
         if (this.worldData == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -28508,11 +28568,11 @@ public class GameController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        ForceData.SetNowResearch(lVar18,uVar9);
+        ForceData.SetNowResearch(lVar17,uVar9);
         LAB_1807cb33f:
-        lVar8 = ForceData.GetNowResearchTech(lVar18,0);
+        lVar8 = ForceData.GetNowResearchTech(lVar17,0);
         if (lVar8 == null) {
-          if (*(int *)(lVar18 + 88) == 0) {
+          if (*(int *)(lVar17 + 88) == 0) {
             if (this.worldData == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -28522,29 +28582,29 @@ public class GameController
           lVar8 = il2cpp_internal(DAT_181d6f030);
           FUN_180f58a90(lVar8,DAT_181d678f8);
           while( true ) {
-            if (*(int64 *)(lVar18 + 0x138) == 0) {
+            if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(*(int64 *)(lVar18 + 0x138) + 24) <= iVar3) break;
+            if (*(int *)(*(int64 *)(lVar17 + 0x138) + 24) <= iVar3) break;
             lVar10 = FUN_180002f80();
             if (lVar10 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(lVar10 + 20) < *(int *)(lVar18 + 52)) {
-              if (*(int64 *)(lVar18 + 0x138) == 0) {
+            if (*(int *)(lVar10 + 20) < *(int *)(lVar17 + 52)) {
+              if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar10 = FUN_180002f80(*(int64 *)(lVar18 + 0x138),iVar3);
-              ForceData.GetResearchCostRate(lVar18,0);
+              lVar10 = FUN_180002f80(*(int64 *)(lVar17 + 0x138),iVar3);
+              ForceData.GetResearchCostRate(lVar17,0);
               if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               ForceTechLvData.GetResearchCostResource(lVar10);
-              cVar2 = ForceData.HaveResource(lVar18);
+              cVar2 = ForceData.HaveResource(lVar17);
               if (cVar2) {
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
@@ -28563,23 +28623,23 @@ public class GameController
           if (0 < iVar3) {
             uVar4 = GlobalData.RandomRange(0,iVar3,0);
             uVar4 = FUN_1800d6750(lVar8,uVar4,DAT_181d68270);
-            if (*(int64 *)(lVar18 + 0x138) == 0) {
+            if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar8 = FUN_180002f80(*(int64 *)(lVar18 + 0x138),uVar4,DAT_181d613f8);
-            ForceData.GetResearchCostRate(lVar18,0);
+            lVar8 = FUN_180002f80(*(int64 *)(lVar17 + 0x138),uVar4,DAT_181d613f8);
+            ForceData.GetResearchCostRate(lVar17,0);
             if (lVar8 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             uVar9 = ForceTechLvData.GetResearchCostResource(lVar8);
-            ForceData.CostResource(lVar18,uVar9,0);
-            if (*(int64 *)(lVar18 + 0x138) == 0) {
+            ForceData.CostResource(lVar17,uVar9,0);
+            if (*(int64 *)(lVar17 + 0x138) == 0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar9 = FUN_180002f80(*(int64 *)(lVar18 + 0x138),uVar4,DAT_181d613f8);
+            uVar9 = FUN_180002f80(*(int64 *)(lVar17 + 0x138),uVar4,DAT_181d613f8);
             if (this.worldData == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -28589,7 +28649,7 @@ public class GameController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            ForceData.SetNowResearch(lVar18,uVar9);
+            ForceData.SetNowResearch(lVar17,uVar9);
           }
         }
         goto LAB_1807cb710;
@@ -28603,11 +28663,11 @@ public class GameController
         if (0 < iVar3) {
           uVar4 = GlobalData.RandomRange(0,iVar3,0,0);
           uVar4 = FUN_1800d6750(lVar8,uVar4,DAT_181d68270);
-          if (lVar18 == null) {
+          if (lVar17 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          ForceData.ChangeResource(lVar18,0);
+          ForceData.ChangeResource(lVar17,0);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28617,13 +28677,14 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
+          in_stack_fffffffffffffdf0 = 0;
           ForceData.ChangeResource(lVar8,0);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar8 = WorldData.GetForce(this.worldData,uVar4,0);
-          uVar28 = *(uint32 *)(lVar18 + 16);
+          uVar28 = *(uint32 *)(lVar17 + 16);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28633,14 +28694,14 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          ForceData.GetForceFavorRate(lVar11,lVar18,0);
+          ForceData.GetForceFavorRate(lVar11,lVar17,0);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           ForceData.ChangeForceFavor(lVar8,uVar28);
           lVar8 = FUN_18046c300(0);
-          uVar9 = *(uint64 *)(lVar18 + 24);
+          uVar9 = *(uint64 *)(lVar17 + 24);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28650,7 +28711,7 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar16 = *(uint64 *)(lVar11 + 24);
+          uVar27 = *(uint64 *)(lVar11 + 24);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28660,10 +28721,10 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          local_1c0 = ForceData.GetForceFavor(lVar11,*(uint32 *)(lVar18 + 16),0);
-          uVar17 = il2cpp_value_box(DAT_181d7d0b8,&local_1c0);
+          local_1c0 = ForceData.GetForceFavor(lVar11,*(uint32 *)(lVar17 + 16),0);
+          uVar16 = il2cpp_value_box(DAT_181d7d0b8,&local_1c0);
           in_stack_fffffffffffffde8 = 0;
-          uVar9 = String.Format("{0}向{1}赠送银两以示亲善，双方关系提升到了{2}。",uVar9,uVar16,uVar17,0);
+          uVar9 = String.Format("{0}向{1}赠送银两以示亲善，双方关系提升到了{2}。",uVar9,uVar27,uVar16,0);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28688,7 +28749,7 @@ public class GameController
             FUN_1800d6620();
           }
           lVar8 = WorldData.GetForce(this.worldData,uVar4,0);
-          if (lVar18 == null) {
+          if (lVar17 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -28696,9 +28757,9 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          ForceData.ChangeForceFavor(lVar8,*(uint32 *)(lVar18 + 16));
+          ForceData.ChangeForceFavor(lVar8,*(uint32 *)(lVar17 + 16));
           lVar8 = FUN_18046c300(0);
-          uVar9 = *(uint64 *)(lVar18 + 24);
+          uVar9 = *(uint64 *)(lVar17 + 24);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28708,7 +28769,7 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar16 = lVar10.cityAreaID;
+          uVar27 = lVar10.cityAreaID;
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28718,10 +28779,10 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          local_1bc = ForceData.GetForceFavor(lVar10,*(uint32 *)(lVar18 + 16),0);
-          uVar17 = il2cpp_value_box(DAT_181d7d0b8,&local_1bc);
+          local_1bc = ForceData.GetForceFavor(lVar10,*(uint32 *)(lVar17 + 16),0);
+          uVar16 = il2cpp_value_box(DAT_181d7d0b8,&local_1bc);
           in_stack_fffffffffffffde8 = 0;
-          String.Format("{0}对{1}口诛笔伐大加谴责，双方关系降低到了{2}。",uVar9,uVar16,uVar17,0);
+          String.Format("{0}对{1}口诛笔伐大加谴责，双方关系降低到了{2}。",uVar9,uVar27,uVar16,0);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -28733,48 +28794,48 @@ public class GameController
           FUN_1800d6620();
         }
         if (this.worldData.openForceBuilding) {
-          if (lVar18 == null) {
+          if (lVar17 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          cVar2 = ForceData.PopulationNotFull(lVar18,0);
+          cVar2 = ForceData.PopulationNotFull(lVar17,0);
           if (cVar2) {
-            dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
-            ForceData.GetMaxHeroNum(lVar18,0);
-            fVar23 = (float)Mathf.Min();
+            dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
+            ForceData.GetMaxHeroNum(lVar17,0);
+            fVar22 = (float)Mathf.Min();
             if (this.worldData == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            fVar24 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-            if (dVar25 < (double)((fVar24 * 0.05 + 1.0) * fVar23)) {
+            fVar23 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
+            if (dVar24 < (double)((fVar23 * 0.05 + 1.0) * fVar22)) {
               iVar3 = 3;
-              dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
+              dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
               if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              fVar23 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-              if (dVar25 < (double)((fVar23 * 0.05 + 1.0) * 0.05)) {
+              fVar22 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
+              if (dVar24 < (double)((fVar22 * 0.05 + 1.0) * 0.05)) {
                 iVar3 = 4;
               }
               else {
-                dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
+                dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
                 if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar23 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-                if (dVar25 < (double)((1.0 - fVar23 * 0.04) * 0.95)) {
+                fVar22 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
+                if (dVar24 < (double)((1.0 - fVar22 * 0.04) * 0.95)) {
                   iVar3 = 2;
                 }
               }
               for (; -1 < iVar3; iVar3 = iVar3 + -1) {
-                if (*(int64 *)(lVar18 + 120) == 0) {
+                if (*(int64 *)(lVar17 + 120) == 0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                iVar5 = FUN_1800d6750(*(int64 *)(lVar18 + 120),iVar3,DAT_181d68270);
+                iVar5 = FUN_1800d6750(*(int64 *)(lVar17 + 120),iVar3,DAT_181d68270);
                 lVar8 = FUN_18046c100(0);
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
@@ -28791,7 +28852,7 @@ public class GameController
                   FUN_1800d6620();
                 }
                 uVar4 = Mathf.Min(*(int *)(lVar10.ResourcePoints + 24) + -1,
-                                   (int)((float)*(int *)(lVar18 + 52) * 0.5),0);
+                                   (int)((float)*(int *)(lVar17 + 52) * 0.5),0);
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -28805,29 +28866,31 @@ public class GameController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                iVar21 = FUN_1800d6750(lVar8.chapter,iVar3);
-                if ((float)iVar21 * 0.8 <= (float)iVar5) {
-                  if (*(int64 *)(lVar18 + 120) == 0) {
+                iVar20 = FUN_1800d6750(lVar8.chapter,iVar3);
+                if ((float)iVar20 * 0.8 <= (float)iVar5) {
+                  if (*(int64 *)(lVar17 + 120) == 0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  iVar5 = FUN_1800d6750(*(int64 *)(lVar18 + 120),iVar3 + 1,DAT_181d68270);
-                  if (*(int64 *)(lVar18 + 120) == 0) {
+                  iVar5 = FUN_1800d6750(*(int64 *)(lVar17 + 120),iVar3 + 1,DAT_181d68270);
+                  if (*(int64 *)(lVar17 + 120) == 0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  iVar21 = FUN_1800d6750(*(int64 *)(lVar18 + 120),iVar3);
-                  if ((float)iVar5 / (float)iVar21 < 1.33) {
-                    ForceData.GetBuildCostRate(lVar18,0);
+                  iVar20 = FUN_1800d6750(*(int64 *)(lVar17 + 120),iVar3);
+                  if ((float)iVar5 / (float)iVar20 < 1.33) {
+                    ForceData.GetBuildCostRate(lVar17,0);
                     HeroData.GetUpgradeForceLvNeedContribution(iVar3);
                     uVar9 = new PlotChoiceRequirement(5);
-                    cVar2 = ForceData.HaveResource(lVar18,uVar9);
+                    cVar2 = ForceData.HaveResource(lVar17,uVar9);
                     if (cVar2) {
                       in_stack_fffffffffffffdf8 = in_stack_fffffffffffffdf8 & 0xffffff00;
+                      in_stack_fffffffffffffdf0 =
+                           CONCAT71((int7)((uint64)in_stack_fffffffffffffdf0 >> 8),1);
                       in_stack_fffffffffffffde8 = in_stack_fffffffffffffde8 & 0xffffffffffffff00;
                       lVar8 = ForceData.FindAllHero
-                                        (lVar18,iVar3,iVar3,1,in_stack_fffffffffffffde8,1,
-                                         in_stack_fffffffffffffdf8,1,0);
+                                        (lVar17,iVar3,iVar3,1,in_stack_fffffffffffffde8,
+                                         in_stack_fffffffffffffdf0,in_stack_fffffffffffffdf8,1,0);
                       if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
@@ -28837,38 +28900,39 @@ public class GameController
                         uVar4 = GlobalData.RandomRange(0,iVar5,0);
                         lVar8 = FUN_180002f80(lVar8,uVar4);
                         if (lVar8 != null) {
-                          ForceData.GetBuildCostRate(lVar18,0);
+                          ForceData.GetBuildCostRate(lVar17,0);
                           uVar4 = HeroData.GetUpgradeForceLvNeedContribution(lVar8);
-                          uVar16 = 0;
+                          uVar27 = 0;
                           uVar9 = CONCAT71((int7)(in_stack_fffffffffffffde8 >> 8),1);
-                          ForceData.ChangeResource(lVar18,5);
-                          HeroData.ChangeHeroForceLv(lVar8,1,0,0,uVar9,uVar16);
+                          ForceData.ChangeResource(lVar17,5);
+                          HeroData.ChangeHeroForceLv(lVar8,1,0,0,uVar9,uVar27);
                           uVar28 = (uint32)((uint64)uVar9 >> 32);
                           HeroData.ChangeLoyal(lVar8);
-                          fVar23 = (float)FUN_1801f7f00();
-                          fVar24 = (float)GlobalData.RandomRange();
-                          *(float *)(lVar8 + 0x1c4) = (float)(int)(fVar23 * 100.0 * fVar24);
+                          fVar22 = (float)FUN_1801f7f00();
+                          fVar23 = (float)GlobalData.RandomRange();
+                          *(float *)(lVar8 + 0x1c4) = (float)(int)(fVar22 * 100.0 * fVar23);
                           uVar1 = lVar8.forceMeetingStarted;
                           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
                           }
-                          auVar26._0_8_ =
+                          auVar25._0_8_ =
                                WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-                          auVar26._8_8_ = extraout_XMM0_Qb;
-                          auVar27._4_12_ = auVar26._4_12_;
-                          auVar27._0_4_ = (float)auVar26._0_8_ * 0.3;
-                          uVar7 = Mathf.RoundToInt(auVar27._0_8_,0);
+                          auVar25._8_8_ = extraout_XMM0_Qb;
+                          auVar26._4_12_ = auVar25._4_12_;
+                          auVar26._0_4_ = (float)auVar25._0_8_ * 0.3;
+                          uVar7 = Mathf.RoundToInt(auVar26._0_8_,0);
+                          in_stack_fffffffffffffdf0 = 0;
                           in_stack_fffffffffffffde8 = CONCAT44(uVar28,uVar7);
                           GameController.ManageHeroStudyForceSkill
-                                    (this,lVar8,lVar18,uVar1,in_stack_fffffffffffffde8,0);
+                                    (this,lVar8,lVar17,uVar1,in_stack_fffffffffffffde8,0);
                           uVar9 = HeroData.Name(lVar8,1,0);
-                          uVar16 = HeroData.GetHeroForceLvDescribe(lVar8,1,0);
-                          uVar9 = String.Format("{0}因功勋卓著，被晋升为{1}。",uVar9,uVar16);
+                          uVar27 = HeroData.GetHeroForceLvDescribe(lVar8,1,0);
+                          uVar9 = String.Format("{0}因功勋卓著，被晋升为{1}。",uVar9,uVar27);
                           HeroData.AddLog(lVar8,uVar9,0);
                           lVar11 = FUN_18046c300(0);
                           plVar15 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-                          lVar10 = *(int64 *)(lVar18 + 24);
+                          lVar10 = *(int64 *)(lVar17 + 24);
                           if (plVar15 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
@@ -28928,11 +28992,11 @@ public class GameController
           lVar8 = local_1b0;
           while( true ) {
             iVar5 = 0;
-            if (lVar18 == null) {
+            if (lVar17 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar10 = *(int64 *)(lVar18 + 96);
+            lVar10 = *(int64 *)(lVar17 + 96);
             if (lVar10 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -28963,34 +29027,34 @@ public class GameController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                iVar21 = *(int *)(lVar11 + 20);
-                iVar22 = FUN_1800d6750(lVar12,iVar5);
-                if (iVar22 < iVar21) {
+                iVar20 = *(int *)(lVar11 + 20);
+                iVar21 = FUN_1800d6750(lVar12,iVar5);
+                if (iVar21 < iVar20) {
                   if (lVar10.plotHappened == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  iVar21 = FUN_1800d6750(lVar10.plotHappened,iVar5);
-                  if (iVar21 < 1) {
-                    dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
-                    iVar21 = *(int *)(lVar11 + 20);
+                  iVar20 = FUN_1800d6750(lVar10.plotHappened,iVar5);
+                  if (iVar20 < 1) {
+                    dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
+                    iVar20 = *(int *)(lVar11 + 20);
                     if (lVar10.infos == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    iVar22 = FUN_1800d6750(lVar10.infos,iVar5);
+                    iVar21 = FUN_1800d6750(lVar10.infos,iVar5);
                     if (this.worldData == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    fVar23 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-                    if (dVar25 < (double)((float)(iVar21 - iVar22) * 0.1 * (fVar23 * 0.1 + 1.0))) {
+                    fVar22 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
+                    if (dVar24 < (double)((float)(iVar20 - iVar21) * 0.1 * (fVar22 * 0.1 + 1.0))) {
                       uVar9 = AreaData.GetUpgradeDefenceLvCost(lVar10,iVar5);
-                      if (lVar18 == null) {
+                      if (lVar17 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      cVar2 = ForceData.HaveResource(lVar18,uVar9);
+                      cVar2 = ForceData.HaveResource(lVar17,uVar9);
                       if (cVar2) {
                         AreaData.StartUpgradeDefenceLv(lVar10,iVar5);
                       }
@@ -29010,14 +29074,14 @@ public class GameController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          fVar23 = (float)TimeData.GetExactYear(*(int64 *)(lVar11 + 168),0);
+          fVar22 = (float)TimeData.GetExactYear(*(int64 *)(lVar11 + 168),0);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          fVar24 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-          iVar3 = (int)((fVar24 * 0.04 + 0.2) * fVar23);
-          lVar8 = ForceData.MainArea(lVar18,0);
+          fVar23 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
+          iVar3 = (int)((fVar23 * 0.04 + 0.2) * fVar22);
+          lVar8 = ForceData.MainArea(lVar17,0);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -29028,14 +29092,14 @@ public class GameController
             FUN_1800d6620();
           }
           if (*(int *)(lVar8 + 20) < iVar3) {
-            dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
+            dVar24 = (double)GlobalData.RandomRangeDouble(0,0);
             if (this.worldData == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            fVar23 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
-            if (dVar25 < (double)((fVar23 * 0.05 + 1.0) * 0.15)) {
-              lVar8 = ForceData.MainArea(lVar18,0);
+            fVar22 = (float)WorldData.GetAIForceDevelopSpeed(this.worldData,0);
+            if (dVar24 < (double)((fVar22 * 0.05 + 1.0) * 0.15)) {
+              lVar8 = ForceData.MainArea(lVar17,0);
               if (lVar8 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -29043,12 +29107,12 @@ public class GameController
               uVar9 = AreaData.GetCenterBuilding(lVar8,0);
               cVar2 = GameController.BuildingCanUpgrade(this,uVar9);
               if (cVar2) {
-                lVar18 = ForceData.MainArea(lVar18,0);
-                if (lVar18 == null) {
+                lVar17 = ForceData.MainArea(lVar17,0);
+                if (lVar17 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar9 = AreaData.GetCenterBuilding(lVar18,0);
+                uVar9 = AreaData.GetCenterBuilding(lVar17,0);
                 GameController.BuildingUpgradeStart(this,uVar9);
                 goto LAB_1807caf90;
               }
@@ -29072,93 +29136,93 @@ public class GameController
           iVar5 = 0;
           local_128 = lVar13;
           while( true ) {
-            if (lVar18 == null) {
+            if (lVar17 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar14 = *(int64 *)(lVar18 + 96);
+            lVar14 = *(int64 *)(lVar17 + 96);
             if (lVar14 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar19 = *(int64 *)(local_1b0 + 32);
+            lVar18 = *(int64 *)(local_1b0 + 32);
             if (*(int *)(lVar14 + 24) <= iVar5) break;
             uVar4 = FUN_1800d6750(lVar14,iVar5);
-            if (lVar19 == null) {
+            if (lVar18 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar14 = WorldData.GetArea(lVar19,uVar4);
-            iVar21 = 0;
+            lVar14 = WorldData.GetArea(lVar18,uVar4);
+            iVar20 = 0;
             while( true ) {
               if (lVar14 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar19 = *(int64 *)(lVar14 + 192);
-              if (lVar19 == null) {
+              lVar18 = *(int64 *)(lVar14 + 192);
+              if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              if (*(int *)(lVar19 + 24) <= iVar21) break;
-              lVar19 = FUN_180002f80(lVar19,iVar21,DAT_181d554e0);
-              if (lVar19 == null) {
+              if (*(int *)(lVar18 + 24) <= iVar20) break;
+              lVar18 = FUN_180002f80(lVar18,iVar20,DAT_181d554e0);
+              if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              if (*(int *)(lVar19 + 48) == 2) {
+              if (*(int *)(lVar18 + 48) == 2) {
         LAB_1807cd7f0:
                 if (*(int64 *)(lVar14 + 192) == 0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21,DAT_181d554e0);
-                if (lVar19 == null) {
+                lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20,DAT_181d554e0);
+                if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(lVar19 + 40) != 0) {
+                if (*(int64 *)(lVar18 + 40) != 0) {
                   if (*(int64 *)(lVar14 + 192) == 0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21,DAT_181d554e0);
-                  if (lVar19 == null) {
+                  lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20,DAT_181d554e0);
+                  if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(lVar19 + 40) == 0) {
+                  if (*(int64 *)(lVar18 + 40) == 0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int *)(*(int64 *)(lVar19 + 40) + 16) == -1) {
+                  if (*(int *)(*(int64 *)(lVar18 + 40) + 16) == -1) {
                     if (*(int64 *)(lVar14 + 192) == 0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21,DAT_181d554e0);
-                    if (lVar19 == null) {
+                    lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20,DAT_181d554e0);
+                    if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    cVar2 = GameController.ObstacleCanDestroy(this,*(uint64 *)(lVar19 + 40),0);
+                    cVar2 = GameController.ObstacleCanDestroy(this,*(uint64 *)(lVar18 + 40),0);
                     if (!cVar2) goto LAB_1807cd97c;
                     if (*(int64 *)(lVar14 + 192) == 0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21,DAT_181d554e0);
-                    if (lVar19 == null) {
+                    lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20,DAT_181d554e0);
+                    if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    lVar20 = lVar13;
+                    lVar19 = lVar13;
                     if (lVar13 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
         LAB_1807cda8b:
-                    uVar9 = *(uint64 *)(lVar19 + 40);
+                    uVar9 = *(uint64 *)(lVar18 + 40);
                   }
                   else {
         LAB_1807cd97c:
@@ -29166,71 +29230,71 @@ public class GameController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21,DAT_181d554e0);
-                    if (lVar19 == null) {
+                    lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20,DAT_181d554e0);
+                    if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int *)(lVar19 + 48) == 2) {
+                    if (*(int *)(lVar18 + 48) == 2) {
                       if (*(int64 *)(lVar14 + 192) == 0) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21);
-                      if (lVar19 == null) {
+                      lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20);
+                      if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      if (*(int64 *)(lVar19 + 40) == 0) {
+                      if (*(int64 *)(lVar18 + 40) == 0) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      if (iVar3 <= *(int *)(*(int64 *)(lVar19 + 40) + 20)) goto LAB_1807cda9b;
+                      if (iVar3 <= *(int *)(*(int64 *)(lVar18 + 40) + 20)) goto LAB_1807cda9b;
                     }
                     if (*(int64 *)(lVar14 + 192) == 0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21);
-                    if (lVar19 == null) {
-                          // WARNING: Subroutine does not return
-                      FUN_1800d6620();
-                    }
-                    cVar2 = GameController.BuildingCanUpgrade(this,*(uint64 *)(lVar19 + 40));
-                    if (!cVar2) goto LAB_1807cda9b;
+                    lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20);
                     if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(lVar18 + 96) == 0) {
+                    cVar2 = GameController.BuildingCanUpgrade(this,*(uint64 *)(lVar18 + 40));
+                    if (!cVar2) goto LAB_1807cda9b;
+                    if (lVar17 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    iVar22 = FUN_1800d6750(*(int64 *)(lVar18 + 96),iVar5,DAT_181d68270);
-                    lVar19 = *(int64 *)(lVar14 + 192);
-                    if (iVar22 != *(int *)(lVar18 + 56)) {
-                      if (lVar19 == null) {
+                    if (*(int64 *)(lVar17 + 96) == 0) {
+                          // WARNING: Subroutine does not return
+                      FUN_1800d6620();
+                    }
+                    iVar21 = FUN_1800d6750(*(int64 *)(lVar17 + 96),iVar5,DAT_181d68270);
+                    lVar18 = *(int64 *)(lVar14 + 192);
+                    if (iVar21 != *(int *)(lVar17 + 56)) {
+                      if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      lVar19 = FUN_180002f80(lVar19,iVar21,DAT_181d554e0);
-                      if (lVar19 == null) {
+                      lVar18 = FUN_180002f80(lVar18,iVar20,DAT_181d554e0);
+                      if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      lVar20 = lVar10;
+                      lVar19 = lVar10;
                       if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
                       goto LAB_1807cda8b;
                     }
-                    if (lVar19 == null) {
+                    if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    lVar19 = FUN_180002f80(lVar19,iVar21,DAT_181d554e0);
-                    if (lVar19 == null) {
+                    lVar18 = FUN_180002f80(lVar18,iVar20,DAT_181d554e0);
+                    if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
@@ -29238,47 +29302,47 @@ public class GameController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    uVar9 = *(uint64 *)(lVar19 + 40);
-                    lVar20 = lVar8;
+                    uVar9 = *(uint64 *)(lVar18 + 40);
+                    lVar19 = lVar8;
                   }
-                  FUN_181827900(lVar20,uVar9);
+                  FUN_181827900(lVar19,uVar9);
                   goto LAB_1807cda9b;
                 }
-                if (lVar18 == null) {
+                if (lVar17 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(lVar18 + 96) == 0) {
+                if (*(int64 *)(lVar17 + 96) == 0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                iVar22 = FUN_1800d6750(*(int64 *)(lVar18 + 96),iVar5,DAT_181d68270);
-                lVar19 = *(int64 *)(lVar14 + 192);
-                if (iVar22 == *(int *)(lVar18 + 56)) {
-                  if (lVar19 == null) {
+                iVar21 = FUN_1800d6750(*(int64 *)(lVar17 + 96),iVar5,DAT_181d68270);
+                lVar18 = *(int64 *)(lVar14 + 192);
+                if (iVar21 == *(int *)(lVar17 + 56)) {
+                  if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar9 = FUN_180002f80(lVar19,iVar21,DAT_181d554e0);
+                  uVar9 = FUN_180002f80(lVar18,iVar20,DAT_181d554e0);
                   if (lVar11 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
                   FUN_181827900(lVar11,uVar9);
-                  iVar21 = iVar21 + 1;
+                  iVar20 = iVar20 + 1;
                 }
                 else {
-                  if (lVar19 == null) {
+                  if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar9 = FUN_180002f80(lVar19,iVar21,DAT_181d554e0);
+                  uVar9 = FUN_180002f80(lVar18,iVar20,DAT_181d554e0);
                   if (lVar12 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
                   FUN_181827900(lVar12,uVar9);
-                  iVar21 = iVar21 + 1;
+                  iVar20 = iVar20 + 1;
                 }
               }
               else {
@@ -29286,23 +29350,23 @@ public class GameController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                lVar19 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar21);
-                if (lVar19 == null) {
+                lVar18 = FUN_180002f80(*(int64 *)(lVar14 + 192),iVar20);
+                if (lVar18 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int *)(lVar19 + 48) == 0) goto LAB_1807cd7f0;
+                if (*(int *)(lVar18 + 48) == 0) goto LAB_1807cd7f0;
         LAB_1807cda9b:
-                iVar21 = iVar21 + 1;
+                iVar20 = iVar20 + 1;
               }
             }
             iVar5 = iVar5 + 1;
           }
-          if (lVar19 == null) {
+          if (lVar18 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          WorldData.GetAIForceDevelopSpeed(lVar19,0);
+          WorldData.GetAIForceDevelopSpeed(lVar18,0);
           if (this.worldData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -29332,8 +29396,8 @@ public class GameController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              iVar21 = *(int *)(lVar11 + 24);
-              if (iVar21 < 1) {
+              iVar20 = *(int *)(lVar11 + 24);
+              if (iVar20 < 1) {
                 if (lVar12 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -29343,9 +29407,9 @@ public class GameController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                iVar21 = *(int *)(lVar13 + 24);
-                if (0 < iVar21) {
-                  uVar4 = GlobalData.RandomRange(0,iVar21,0);
+                iVar20 = *(int *)(lVar13 + 24);
+                if (0 < iVar20) {
+                  uVar4 = GlobalData.RandomRange(0,iVar20,0);
                   uVar9 = FUN_180002f80(lVar13,uVar4,DAT_181d54d60);
                   GameController.ObstacleDestroyStart(this,uVar9,1);
                   FUN_18182b220(lVar13);
@@ -29355,7 +29419,7 @@ public class GameController
               }
               else {
         LAB_1807cdcc4:
-                if (iVar21 < 1) {
+                if (iVar20 < 1) {
                   if (lVar12 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -29365,7 +29429,7 @@ public class GameController
                   uVar9 = FUN_180002f80(lVar12,uVar4,DAT_181d554e0);
                 }
                 else {
-                  uVar4 = GlobalData.RandomRange(0,iVar21,0);
+                  uVar4 = GlobalData.RandomRange(0,iVar20,0);
                   uVar9 = FUN_180002f80(lVar11,uVar4,DAT_181d554e0);
                 }
                 local_120 = uVar9;
@@ -29411,10 +29475,10 @@ public class GameController
                   FUN_1800d6620();
                 }
                 if (0 < lVar8.cityAreaID) {
-                  uVar4 = GameController.GetBestBuildBuilding(this,lVar18,lVar8,0);
+                  uVar4 = GameController.GetBestBuildBuilding(this,lVar17,lVar8,0);
                   in_stack_fffffffffffffde8 = 0;
                   GameController.BuildingBuildStart(this,uVar9,uVar4,1,0);
-                  if (iVar21 < 1) {
+                  if (iVar20 < 1) {
                     if (lVar12 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
@@ -29434,10 +29498,10 @@ public class GameController
               goto LAB_1807cdb92;
             }
         LAB_1807cdbd5:
-            dVar25 = (double)GlobalData.RandomRangeDouble(0);
-            if (0.75 <= dVar25) goto LAB_1807cdc0e;
+            dVar24 = (double)GlobalData.RandomRangeDouble(0);
+            if (0.75 <= dVar24) goto LAB_1807cdc0e;
             if (lVar8.cityAreaID < 1) {
-              uVar9 = GameController.GetBestUpgradeBuilding(this,lVar18,lVar10);
+              uVar9 = GameController.GetBestUpgradeBuilding(this,lVar17,lVar10);
               GameController.BuildingUpgradeStart(this,uVar9,1);
               lVar8 = lVar10;
               if (lVar10 == null) {
@@ -29446,7 +29510,7 @@ public class GameController
               }
             }
             else {
-              uVar9 = GameController.GetBestUpgradeBuilding(this,lVar18,lVar8);
+              uVar9 = GameController.GetBestUpgradeBuilding(this,lVar17,lVar8);
               GameController.BuildingUpgradeStart(this,uVar9,1);
             }
             FUN_181801c10(lVar8);
@@ -29999,7 +30063,7 @@ public class GameController
     // RVA   : 0x7A4910   Offset: 0x7A3110   Length: 0x340
     public void ForceRobResource(ForceData sourceForce, ForceData targetForce, float rate, bool showInfo)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void GameController.ForceRobResource
                      (uint64 this,int64 sourceForce,int64 targetForce,float rate,char showInfo)
         {
@@ -30045,13 +30109,13 @@ public class GameController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar1 = *(int64 *)(pStatics + 0x440);
+            lVar1 = *(int64 *)(pPlotController + 0x440);
             if (lVar1 == null) break;
             fVar6 = (float)FUN_1800d6780(lVar1,iVar5,DAT_181d796d8);
             if (*(int64 *)(targetForce + 136) == 0) break;
             uVar7 = FUN_1800d6780(*(int64 *)(targetForce + 136),iVar5,DAT_181d796d8);
             fVar6 = (float)Mathf.Min((rate * 100.0) / fVar6,uVar7,0);
-            lVar1 = *(int64 *)(pStatics + 0x440);
+            lVar1 = *(int64 *)(pPlotController + 0x440);
             if (lVar1 == null) break;
             fVar8 = (float)FUN_1800d6780(lVar1,iVar5,DAT_181d796d8);
             fVar9 = fVar9 + fVar8 * fVar6;
@@ -31316,7 +31380,7 @@ public class GameController
         uint64 uVar6;
         if (targetResourcePoint != null) {
           lVar2 = ResourcePointData.GetForce(targetResourcePoint,0);
-          uVar1 = *(uint32 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x220);
+          uVar1 = *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x220);
           if (attackForce != null) {
             uVar3 = ForceData.GetOwnHeros(attackForce,0);
             uVar3 = GlobalData.GetMaxForceLvHero(uVar3,uVar1,0);
@@ -31353,7 +31417,7 @@ public class GameController
         fVar12 = 0.0;
         if (targetArea != null) {
           lVar4 = AreaData.GetForce(targetArea,0);
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+          lVar6 = PlotController.StopWarCostFavor;
           if (lVar6 != null) {
             lVar6 = *(int64 *)(lVar6 + 0x250);
             uVar7 = *(uint32 *)(targetArea + 72);
@@ -31421,7 +31485,6 @@ public class GameController
     // RVA   : 0x7B3F70   Offset: 0x7B2770   Length: 0x5B1
     public void GenerateRandomEnemy(int maxNum)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -31446,8 +31509,8 @@ public class GameController
         lVar3 = this.worldData;
         while (lVar3 != null) {
           iVar1 = WorldData.GetRandomEnemyCount(lVar3,0);
-          if (*(int *)(pStatics + 8) == 1) {
-            lVar3 = *(int64 *)(pStatics + 24);
+          if (PlotController.LeftFaceHideOffset == 1) {
+            lVar3 = PlotController.CheckHideChoice;
             if (lVar3 == null) break;
             fVar8 = (float)lVar3.cityAreaID * 1.75;
           }
@@ -31550,9 +31613,7 @@ public class GameController
     // RVA   : 0x7B4530   Offset: 0x7B2D30   Length: 0xE2D
     public void GenerateRandomEvent()
     {
-        var pStatics_44e0 = *(int64*)(DAT_181d744e0 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pStatics = *(int64*)(DAT_181d744e0 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -31575,7 +31636,7 @@ public class GameController
         local_b0 = 0;
         uStack_a8 = 0;
         local_a0 = 0;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
           return;
         }
         uVar4 = 0;
@@ -31585,8 +31646,8 @@ public class GameController
         lVar13 = 32;
         LAB_1807b46b4:
         do {
-          if ((*pStatics_44e0 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_44e0 + 80)) == null)
+          if ((*pStatics == 0) ||
+             (lVar7 = *(int64 *)(*pStatics + 80)) == null)
           goto LAB_1807b52e2;
           if (*(int *)(lVar7 + 24) <= (int)uVar12) {
             lVar13 = this.worldData;
@@ -31595,9 +31656,9 @@ public class GameController
             }
             goto LAB_1807b52e2;
           }
-          lVar7 = *pStatics_44e0;
-          if ((*pStatics_44e0 == 0) ||
-             (lVar8 = *(int64 *)(*pStatics_44e0 + 80)) == null)
+          lVar7 = *pStatics;
+          if ((*pStatics == 0) ||
+             (lVar8 = *(int64 *)(*pStatics + 80)) == null)
           goto LAB_1807b52e2;
           if (*(uint32 *)(lVar8 + 24) <= uVar12) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -31620,10 +31681,10 @@ public class GameController
                (lVar7 = this.worldData.worldTime) == null)
             goto LAB_1807b52e2;
             if ((*(int *)(lVar7 + 16) < 2) && (*(int *)(lVar7 + 20) < 3)) {
-              lVar7 = *(int64 *)(pStatics_df90 + 48);
-              lVar8 = *pStatics_44e0;
-              if ((((*pStatics_44e0 == 0) ||
-                   (lVar1 = *(int64 *)(*pStatics_44e0 + 80)) == null) ||
+              lVar7 = GameController.MiddleSelfForceEvent;
+              lVar8 = *pStatics;
+              if ((((*pStatics == 0) ||
+                   (lVar1 = *(int64 *)(*pStatics + 80)) == null) ||
                   (uVar3 = FUN_1800d6750(lVar1,uVar12,DAT_181d68270), lVar8 == null)) ||
                  ((lVar8 = RandomEventController.GetRandomEventDataBase(lVar8,uVar3,0), lVar8 == null ||
                   (lVar7 == null)))) goto LAB_1807b52e2;
@@ -31634,10 +31695,10 @@ public class GameController
                (lVar7 = this.worldData.worldTime) == null)
             goto LAB_1807b52e2;
             if ((*(int *)(lVar7 + 16) < 2) && (*(int *)(lVar7 + 20) < 5)) {
-              lVar7 = *(int64 *)(pStatics_df90 + 56);
-              lVar8 = *pStatics_44e0;
-              if ((((*pStatics_44e0 == 0) ||
-                   (lVar1 = *(int64 *)(*pStatics_44e0 + 80)) == null) ||
+              lVar7 = GameController.HardSelfForceEvent;
+              lVar8 = *pStatics;
+              if ((((*pStatics == 0) ||
+                   (lVar1 = *(int64 *)(*pStatics + 80)) == null) ||
                   (uVar3 = FUN_1800d6750(lVar1,uVar12,DAT_181d68270), lVar8 == null)) ||
                  ((lVar8 = RandomEventController.GetRandomEventDataBase(lVar8,uVar3,0), lVar8 == null ||
                   (lVar7 == null)))) goto LAB_1807b52e2;
@@ -31668,8 +31729,8 @@ public class GameController
           FUN_1800d6620();
         }
         iVar5 = *(int *)(lVar13.BigMapRandomEventDatas + 24);
-        if (*(int *)(pStatics_ef00 + 8) == 1) {
-          lVar13 = *(int64 *)(pStatics_ef00 + 24);
+        if (PlotController.LeftFaceHideOffset == 1) {
+          lVar13 = PlotController.CheckHideChoice;
           if (lVar13 == null) goto LAB_1807b52e2;
           fVar14 = (float)lVar13.cityAreaID;
           fVar14 = fVar14 + fVar14;
@@ -31691,10 +31752,10 @@ public class GameController
           }
           goto LAB_1807b52e2;
         }
-        if (*pStatics_44e0 == 0) goto LAB_1807b52e2;
-        lVar13 = *(int64 *)(*pStatics_44e0 + 72);
-        if ((*pStatics_44e0 == 0) ||
-           (lVar7 = *(int64 *)(*pStatics_44e0 + 72)) == null)
+        if (*pStatics == 0) goto LAB_1807b52e2;
+        lVar13 = *(int64 *)(*pStatics + 72);
+        if ((*pStatics == 0) ||
+           (lVar7 = *(int64 *)(*pStatics + 72)) == null)
         goto LAB_1807b52e2;
         uVar4 = *(uint32 *)(lVar7 + 24);
         uVar4 = GlobalData.RandomRange(0,uVar4,0);
@@ -31718,8 +31779,8 @@ public class GameController
                                   (this,this.worldData.worldTime,uVar3);
         *(float *)((int64)plVar9 + 108) = fVar15 * fVar14;
         lVar13 = this.worldData;
-        if (*(int *)(pStatics_ef00 + 8) == 1) {
-          lVar7 = *(int64 *)(pStatics_ef00 + 24);
+        if (PlotController.LeftFaceHideOffset == 1) {
+          lVar7 = PlotController.CheckHideChoice;
           if (lVar7 == null) goto LAB_1807b52e2;
           uVar3 = GlobalData.RandomRange(0,*(uint32 *)(lVar7 + 24),0);
           uVar3 = FUN_1800d6750(lVar7,uVar3,DAT_181d68270);
@@ -31743,10 +31804,10 @@ public class GameController
           ZhSegment.Initialize(&local_b0,DAT_181d63948);
           return;
         }
-        if (*(int *)(pStatics_ef00 + 8) == 1) goto code_r0x0001807b4ed0;
+        if (PlotController.LeftFaceHideOffset == 1) goto code_r0x0001807b4ed0;
         goto LAB_1807b4f22;
         code_r0x0001807b4ed0:
-        lVar7 = *(int64 *)(pStatics_ef00 + 24);
+        lVar7 = PlotController.CheckHideChoice;
         if (lVar13 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -31765,7 +31826,7 @@ public class GameController
           iVar5 = AreaData.GetAreaMapRandomEventCount(lVar13,0);
           if (iVar5 < 5) {
             fVar14 = (float)Random.get_value(0);
-            if (*(int *)(pStatics_ef00 + 8) == 1) {
+            if (PlotController.LeftFaceHideOffset == 1) {
               fVar15 = 0.14;
             }
             else {
@@ -31906,7 +31967,7 @@ public class GameController
           if ((this.worldData != null) &&
              (lVar1 = this.worldData.BigMapRandomEventDatas) != null) {
             FUN_181827900(lVar1,newRandomEvent,DAT_181d5e380);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.CreateBigMapRandomEvent(lVar1,newRandomEvent,targetResourcePoint,param_4,param_5,0);
               return;
@@ -31933,7 +31994,7 @@ public class GameController
           if ((this.worldData != null) &&
              (lVar1 = this.worldData.BigMapRandomEventDatas) != null) {
             FUN_181827900(lVar1,newRandomEvent,DAT_181d5e380);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.CreateBigMapRandomEvent(lVar1,newRandomEvent,targetAreaID,param_4,param_5,0);
               return;
@@ -31960,7 +32021,7 @@ public class GameController
           if ((this.worldData != null) &&
              (lVar1 = this.worldData.BigMapRandomEventDatas) != null) {
             FUN_181827900(lVar1,newRandomEvent,DAT_181d5e380);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.CreateBigMapRandomEvent(lVar1,newRandomEvent,targetArea,rangeRate,param_5,0);
               return;
@@ -31987,7 +32048,7 @@ public class GameController
           if ((this.worldData != null) &&
              (lVar1 = this.worldData.BigMapRandomEventDatas) != null) {
             FUN_181827900(lVar1,newRandomEvent,DAT_181d5e380);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.CreateBigMapRandomEvent(lVar1,newRandomEvent,targetArea,direction,rangeRate,0);
               return;
@@ -32000,7 +32061,6 @@ public class GameController
     // RVA   : 0x7A2CF0   Offset: 0x7A14F0   Length: 0xAF
     public void CreateAreaMapRandomEvent(EventData newRandomEvent, int targetAreaID)
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         long lVar1;
         long lVar2;
         bool cVar3;
@@ -32051,15 +32111,15 @@ public class GameController
             if ((this.worldData != null) &&
                (lVar8 = this.worldData.AreaMapRandomEventDatas) != null) {
               FUN_181827900(lVar8,newRandomEvent,DAT_181d5e380);
-              lVar8 = *(int64 *)(pStatics + 56);
+              lVar8 = PlotController.LaBaFestivelResultTalkText;
               if (lVar8 != null) {
                 if (*(int64 *)(lVar8 + 88) != 0) {
-                  lVar8 = *(int64 *)(pStatics + 56);
+                  lVar8 = PlotController.LaBaFestivelResultTalkText;
                   if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 88)) == null)
                   throw; // [null/range check failed]
                   cVar3 = FUN_181815240(targetAreaID,*(uint32 *)(lVar8 + 16),DAT_181d67bf8);
                   if (cVar3) {
-                    lVar8 = *(int64 *)(pStatics + 56);
+                    lVar8 = PlotController.LaBaFestivelResultTalkText;
                     if (lVar8 == null) throw; // [null/range check failed]
                     AreaController.FreshAreaRandomEvent(lVar8,0);
                   }
@@ -32075,7 +32135,6 @@ public class GameController
     // RVA   : 0x7A2900   Offset: 0x7A1100   Length: 0x3E4
     public void CreateAreaMapRandomEvent(EventData newRandomEvent, List<int> targetAreaID)
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         long lVar1;
         long lVar2;
         bool cVar3;
@@ -32126,15 +32185,15 @@ public class GameController
             if ((this.worldData != null) &&
                (lVar8 = this.worldData.AreaMapRandomEventDatas) != null) {
               FUN_181827900(lVar8,newRandomEvent,DAT_181d5e380);
-              lVar8 = *(int64 *)(pStatics + 56);
+              lVar8 = PlotController.LaBaFestivelResultTalkText;
               if (lVar8 != null) {
                 if (*(int64 *)(lVar8 + 88) != 0) {
-                  lVar8 = *(int64 *)(pStatics + 56);
+                  lVar8 = PlotController.LaBaFestivelResultTalkText;
                   if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 88)) == null)
                   throw; // [null/range check failed]
                   cVar3 = FUN_181815240(targetAreaID,*(uint32 *)(lVar8 + 16),DAT_181d67bf8);
                   if (cVar3) {
-                    lVar8 = *(int64 *)(pStatics + 56);
+                    lVar8 = PlotController.LaBaFestivelResultTalkText;
                     if (lVar8 == null) throw; // [null/range check failed]
                     AreaController.FreshAreaRandomEvent(lVar8,0);
                   }
@@ -32901,12 +32960,12 @@ public class GameController
                 if (((-1 < *(int *)(targetID + 132)) &&
                     (lVar9 = "掌门", *(char *)(targetID + 180) == false)) &&
                    (iVar3 = *(int *)(targetID + 184), lVar9 = 0, 3 < iVar3)) {
-                  if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) &&
-                     (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                    il2cpp_runtime_class_init(DAT_181d4ef00);
+                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                    il2cpp_runtime_class_init(PlotController_StaticsPtr);
                     iVar3 = *(int *)(targetID + 184);
                   }
-                  lVar8 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3d0);
+                  lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3d0);
                   if (lVar8 == null) throw; // [null/range check failed]
                   lVar9 = FUN_180002f80(lVar8,iVar3,DAT_181d7c9c0);
                 }
@@ -33211,12 +33270,12 @@ public class GameController
                 if (((-1 < *(int *)(targetHero + 132)) &&
                     (lVar9 = "掌门", *(char *)(targetHero + 180) == false)) &&
                    (iVar3 = *(int *)(targetHero + 184), lVar9 = 0, 3 < iVar3)) {
-                  if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) &&
-                     (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                    il2cpp_runtime_class_init(DAT_181d4ef00);
+                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                    il2cpp_runtime_class_init(PlotController_StaticsPtr);
                     iVar3 = *(int *)(targetHero + 184);
                   }
-                  lVar8 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3d0);
+                  lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3d0);
                   if (lVar8 == null) throw; // [null/range check failed]
                   lVar9 = FUN_180002f80(lVar8,iVar3,DAT_181d7c9c0);
                 }
@@ -33295,10 +33354,10 @@ public class GameController
         uVar1 = Int32.Parse(targetAreaID,0);
         if (*pStatics != 0) {
           QuickTravelUIController.HideQuickTravelUI(*pStatics,0);
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 8);
+          lVar3 = PlotController.LeftFaceHideOffset;
           if (lVar3 != null) {
             BuildingUIController.HideBuildingUI(lVar3,0);
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+            lVar3 = PlotController.LaBaFestivelResultTalkText;
             if (lVar3 != null) {
               AreaController.PlayerLeaveArea(lVar3,0);
               if (this.worldData != null) {
@@ -33313,7 +33372,7 @@ public class GameController
                         iVar2 = BigMapPos.QuickTravelTime(lVar4,*(uint64 *)(lVar5 + 200),0);
                         if (lVar3 != null) {
                           HeroData.ChangeMoney(lVar3,iVar2 * -10,1,0);
-                          lVar3 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
+                          lVar3 = PlotController.LeftFaceHideOffset;
                           if (this.worldData != null) {
                             lVar4 = WorldData.GetArea(this.worldData,uVar1,0);
                             if (lVar4 != null) {
@@ -33348,7 +33407,7 @@ public class GameController
     // RVA   : 0x798B30   Offset: 0x797330   Length: 0x2751
     public bool CheckGameResultTrigger()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         int iVar2;
         int iVar3;
@@ -33447,7 +33506,7 @@ public class GameController
           if ((this.worldData == null) ||
              (lVar4 = WorldData.Player(this.worldData,0)) == null) throw; // [null/range check failed]
           iVar3 = lVar4.prisonData;
-          lVar4 = *(int64 *)(pStatics + 0x3e0);
+          lVar4 = *(int64 *)(pPlotController + 0x3e0);
           if (lVar4 == null) throw; // [null/range check failed]
           if (lVar4.cityAreaID + -1 <= iVar3) {
             if (this.worldData == null) throw; // [null/range check failed]
@@ -33475,7 +33534,7 @@ public class GameController
           if ((this.worldData == null) ||
              (lVar4 = WorldData.Player(this.worldData,0)) == null) throw; // [null/range check failed]
           iVar3 = *(int *)(lVar4 + 0x1bc);
-          lVar4 = *(int64 *)(pStatics + 1000);
+          lVar4 = *(int64 *)(pPlotController + 1000);
           if (lVar4 == null) throw; // [null/range check failed]
           if (lVar4.cityAreaID + -1 <= iVar3) {
             if (this.worldData == null) throw; // [null/range check failed]
@@ -33655,7 +33714,7 @@ public class GameController
                                            in_stack_ffffffffffffff70 & 0xffffff00,
                                            in_stack_ffffffffffffff78,in_stack_ffffffffffffff80,0);
                         if (lVar8 != null) {
-                          while ((uVar6 = "临时:传令&随机;;-1;3;-1", *(int *)(lVar8 + 24) == 0 && (0 < iVar2))) {
+                          while ((uVar6 = "临时:传令&随机;;-1;3;-1", lVar8.plotHappen == null && (0 < iVar2))) {
                             iVar2 = iVar2 + -1;
                             if ((this.worldData == null) ||
                                ((lVar4 = WorldData.Player(this.worldData,0), lVar4 == null ||
@@ -33669,7 +33728,7 @@ public class GameController
                             if (lVar8 == null) throw; // [null/range check failed]
                           }
                           lVar4 = new PlotData(0);
-                          if (*(int *)(lVar8 + 24) < 1) {
+                          if (lVar8.plotHappen < 1) {
                             if (lVar4 == null) goto LAB_18079b26a;
                             lVar5 = lVar4.ResourcePoints;
                             uVar7 = FUN_180004500(DAT_181d63120);
@@ -33734,7 +33793,7 @@ public class GameController
                                                      uVar10 & 0xffffffffffffff00,0,0,0,0,0);
                                           if (lVar8 != null) {
                                             FUN_181827900(lVar8,uVar7,DAT_181d79a58);
-                                            lVar8 = **(int64 **)(DAT_181d6c960 + 184);
+                                            lVar8 = PlotController._instance;
                                             if (lVar8 != null) goto LAB_18079934a;
                                           }
                                         }
@@ -33752,7 +33811,7 @@ public class GameController
                             lVar5 = lVar4.ResourcePoints;
                             uVar6 = FUN_180004500(DAT_181d63120);
                             uVar6 = String.Format("掌、掌门，大、大事不好了！",uVar6,0);
-                            if (*(int *)(lVar8 + 24) == 0) {
+                            if (lVar8.plotHappen == null) {
                               ThrowHelper.ThrowArgumentOutOfRangeException(0);
                             }
                             lVar8 = *(int64 *)(*(int64 *)(lVar8 + 16) + 32);
@@ -34039,7 +34098,7 @@ public class GameController
                 (lVar2 = WorldData.Player(this.worldData,0)) != null) &&
                (*(int64 *)(lVar2 + 0x330) != 0)) {
               iVar1 = *(int *)(*(int64 *)(lVar2 + 0x330) + 24);
-              uVar3 = *(uint64 *)(DAT_181d4ef00 + 184);
+              uVar3 = *(uint64 *)(PlotController_StaticsPtr + 184);
               if (iVar1 < *(int *)(uVar3 + 148)) goto LAB_1807d94ed;
               lVar2 = this.worldData;
               uVar6 = 0;
@@ -34076,7 +34135,7 @@ public class GameController
     // RVA   : 0x7DA610   Offset: 0x7D8E10   Length: 0x1F2D
     public void PlayerEnterArea(AreaData areaData, bool checkPlot)
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar2;
         int iVar4;
         uint uVar5;
@@ -34100,7 +34159,7 @@ public class GameController
         int64 local_d0;
         local_e8 = 0;
         local_e0 = 0.0;
-        lVar8 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+        lVar8 = GameController.CheckShowSpeHero;
         if (lVar8 != null) {
           BigMapController.PlayerStopMove(lVar8,0);
           if ((this.worldData != null) &&
@@ -34116,7 +34175,7 @@ public class GameController
                   if (*(int64 *)(areaData + 120) == 0) throw; // [null/range check failed]
                   FUN_181814fa0(*(int64 *)(areaData + 120),0,DAT_181d67a78);
                 }
-                lVar8 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+                lVar8 = PlotController.LaBaFestivelResultTalkText;
                 if (lVar8 != null) {
                   AreaController.GenerateAreaMap(lVar8,areaData,0);
                   local_dc = GlobalData.RandomRange(0,4,0);
@@ -34500,7 +34559,7 @@ public class GameController
             if (fVar19 <= fVar18) {
               lVar8 = this.enterAreaHateAttackHero;
               GlobalData.SortHeroList(lVar8,1);
-              lVar8 = *pStatics;
+              lVar8 = PlotController._instance;
               lVar17 = il2cpp_internal(DAT_181d72a30);
               FUN_180f58a90(lVar17,DAT_181d7c250);
               if (lVar17 == null) throw; // [null/range check failed]
@@ -34526,7 +34585,7 @@ public class GameController
             if (fVar19 <= local_e4 / *(float *)(lVar8 + 0x38c)) {
               lVar8 = this.enterAreaBountyAttackHero;
               GlobalData.SortHeroList(lVar8,1);
-              lVar8 = *pStatics;
+              lVar8 = PlotController._instance;
               lVar17 = il2cpp_internal(DAT_181d72a30);
               FUN_180f58a90(lVar17,DAT_181d7c250);
               if (lVar17 == null) throw; // [null/range check failed]
@@ -34551,7 +34610,7 @@ public class GameController
                  (lVar8 = WorldData.Player(this.worldData,0)) == null)
               throw; // [null/range check failed]
               fVar19 = lVar8.thisYearExploreSpeEventNum;
-              if (*(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 300) <= fVar19) {
+              if (*(float *)(pPlotController + 300) <= fVar19) {
                 if (this.worldData == null) throw; // [null/range check failed]
                 if (this.worldData.monthCatchBadFamePlayerTime < 3) {
                   fVar19 = (float)Random.get_value(0);
@@ -34582,7 +34641,7 @@ public class GameController
             }
             if (this.worldData == null) throw; // [null/range check failed]
             this.worldData.monthChallengeTime = *piVar1 + 1;
-            lVar8 = *pStatics;
+            lVar8 = PlotController._instance;
             lVar17 = il2cpp_internal(DAT_181d72a30);
             FUN_180f58a90(lVar17,DAT_181d7c250);
             if (lVar17 == null) throw; // [null/range check failed]
@@ -34608,7 +34667,7 @@ public class GameController
             throw; // [null/range check failed]
             fVar18 = (float)FUN_1810a8ba0(local_e0 / *(float *)(lVar8 + 0x38c));
             if (fVar18 < fVar19) goto LAB_1807dc245;
-            lVar8 = *pStatics;
+            lVar8 = PlotController._instance;
             lVar17 = AreaData.GetForce(areaData,0);
             if (lVar17 == null) throw; // [null/range check failed]
             uVar9 = lVar17.Count;
@@ -34670,7 +34729,7 @@ public class GameController
           if (fVar18 < fVar19) goto LAB_1807dbaba;
           lVar8 = this.enterAreaHateSpeAttackHero;
           GlobalData.SortHeroList(lVar8,1);
-          lVar8 = *pStatics;
+          lVar8 = PlotController._instance;
           lVar17 = il2cpp_internal(DAT_181d72a30);
           FUN_180f58a90(lVar17,DAT_181d7c250);
           if (lVar17 == null) throw; // [null/range check failed]
@@ -34721,7 +34780,7 @@ public class GameController
         if ((this.worldData != null) &&
            (lVar1 = WorldData.Player(this.worldData,0)) != null) {
           fVar2 = *(float *)(lVar1 + 0x1c8);
-          if (fVar2 < *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 300)) {
+          if (fVar2 < *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 300)) {
             return false;
           }
           if (this.worldData != null) {
@@ -34741,7 +34800,6 @@ public class GameController
     // RVA   : 0x793CE0   Offset: 0x7924E0   Length: 0x4B2
     public void CatchBadFamePlayerEventHappen()
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -34759,9 +34817,10 @@ public class GameController
             if (lVar4 != null) {
               cVar1 = HeroData.HaveForceFunction(lVar4,1,0);
               if (cVar1) {
-                lVar4 = *pStatics;
-                if (*pStatics == 0) throw; // [null/range check failed]
-                iVar2 = PlotController.GetCatchBadFameEnemyLv(*pStatics,0);
+                lVar4 = PlotController._instance;
+                if (PlotController._instance == null) throw; // [null/range check failed]
+                iVar2 = PlotController.GetCatchBadFameEnemyLv
+                                  (PlotController._instance,0);
                 if (lVar4 == null) throw; // [null/range check failed]
                 local_res18[0] =
                      PlotController.GetSkillNumNeed(lVar4,(float)iVar2 + (float)iVar2,0x3f800000,0);
@@ -34774,10 +34833,10 @@ public class GameController
                 if (lVar4 != null) {
                   cVar1 = HeroData.HaveForceFunction(lVar4,8);
                   if (cVar1) {
-                    lVar4 = *pStatics;
-                    if (*pStatics == 0) throw; // [null/range check failed]
+                    lVar4 = PlotController._instance;
+                    if (PlotController._instance == null) throw; // [null/range check failed]
                     iVar2 = PlotController.GetCatchBadFameEnemyLv
-                                      (*pStatics,0);
+                                      (PlotController._instance,0);
                     if (lVar4 == null) throw; // [null/range check failed]
                     local_res18[0] =
                          PlotController.GetSkillNumNeed(lVar4,(float)iVar2 + (float)iVar2,0x3f800000,0);
@@ -34785,7 +34844,7 @@ public class GameController
                     uVar5 = String.Concat("绝技硬闯;CatchBadFamePlayerUniqueEscape;;;;Unique/",uVar5,0);
                     FUN_181827900(lVar3,uVar5,DAT_181d7c3d0);
                   }
-                  lVar4 = *pStatics;
+                  lVar4 = PlotController._instance;
                   uVar5 = new SinglePlotData("由于悬赏在身，你本想避人耳目混入此地。\n不成想刚进门，便被一群埋伏多时的官差团团围住，\n看来一场恶战在所难免！",lVar3,1,0,3,"0",3,0,0);
                   if (lVar4 != null) {
                     PlotController.AddPlot(lVar4,uVar5,0);
@@ -34802,7 +34861,6 @@ public class GameController
     // RVA   : 0x7DC6C0   Offset: 0x7DAEC0   Length: 0x189
     public void PlayerLeaveArea()
     {
-        var pStatics = *(int64*)(DAT_181d527a8 + 184);
         ulong uVar1;
         long lVar2;
         long lVar3;
@@ -34812,13 +34870,11 @@ public class GameController
             lVar2 = HeroData.GetArea(lVar2,0);
             if (lVar2 != null) {
               lVar2 = *(int64 *)(lVar2 + 120);
-              lVar3 = *(int64 *)(pStatics + 48);
+              lVar3 = GameController.MiddleSelfForceEvent;
               if (lVar3 == null) {
-                uVar1 = **(uint64 **)(DAT_181d527a8 + 184);
+                uVar1 = GameController._instance;
                 lVar3 = new OnTooltipCB(uVar1,DAT_181d7b508,DAT_181d95e70);
-                plVar4 = (int64 *)(pStatics + 48);
-                *plVar4 = lVar3;
-                il2cpp_internal(plVar4,lVar3);
+                GameController.MiddleSelfForceEvent = lVar3;
               }
               if (lVar2 != null) {
                 FUN_181818fa0(lVar2,lVar3,DAT_181d67ef0);
@@ -34839,7 +34895,6 @@ public class GameController
     // RVA   : 0x7C2FF0   Offset: 0x7C17F0   Length: 0x4C
     public void HeroEnterArea(HeroData heroData, int areaID)
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         bool cVar1;
         long lVar2;
         if (heroData != null) {
@@ -34865,10 +34920,10 @@ public class GameController
                   FUN_181814fa0(*(int64 *)(areaID + 120),*(uint32 *)(heroData + 88),
                                 DAT_181d67a78);
                 }
-                lVar2 = *(int64 *)(pStatics + 56);
+                lVar2 = PlotController.LaBaFestivelResultTalkText;
                 if (lVar2 != null) {
                   if (*(int64 *)(lVar2 + 88) != 0) {
-                    lVar2 = *(int64 *)(pStatics + 56);
+                    lVar2 = PlotController.LaBaFestivelResultTalkText;
                     if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 88)) == null)
                     throw; // [null/range check failed]
                     if (*(int *)(lVar2 + 16) == *(int *)(heroData + 192)) {
@@ -34890,7 +34945,6 @@ public class GameController
     // RVA   : 0x7C3040   Offset: 0x7C1840   Length: 0x277
     public void HeroEnterArea(HeroData heroData, AreaData areaData)
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         bool cVar1;
         long lVar2;
         if (heroData != null) {
@@ -34916,10 +34970,10 @@ public class GameController
                   FUN_181814fa0(*(int64 *)(areaData + 120),*(uint32 *)(heroData + 88),
                                 DAT_181d67a78);
                 }
-                lVar2 = *(int64 *)(pStatics + 56);
+                lVar2 = PlotController.LaBaFestivelResultTalkText;
                 if (lVar2 != null) {
                   if (*(int64 *)(lVar2 + 88) != 0) {
-                    lVar2 = *(int64 *)(pStatics + 56);
+                    lVar2 = PlotController.LaBaFestivelResultTalkText;
                     if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 88)) == null)
                     throw; // [null/range check failed]
                     if (*(int *)(lVar2 + 16) == *(int *)(heroData + 192)) {
@@ -34967,7 +35021,7 @@ public class GameController
                   uVar3 = new OnTooltipCB(lVar1,DAT_181d7b788,DAT_181d95e70);
                   if (lVar2 != null) {
                     FUN_181818fa0(lVar2,uVar3,DAT_181d67ef0);
-                    lVar2 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+                    lVar2 = PlotController.LaBaFestivelResultTalkText;
                     if (lVar2 != null) {
                       if (*(int64 *)(lVar2 + 88) != 0) {
                         lVar2 = FUN_18046bac0(0);
@@ -34997,7 +35051,6 @@ public class GameController
     // RVA   : 0x7C32C0   Offset: 0x7C1AC0   Length: 0x48D
     public void HeroJoinTeam(HeroData teamLeader, HeroData teamMate, int autoLeaveDay)
     {
-        var pStatics = *(int64*)(DAT_181d8baa8 + 184);
         bool cVar1;
         uint uVar2;
         long lVar3;
@@ -35006,7 +35059,7 @@ public class GameController
         int iVar6;
         ulong local_18;
         ulong uStack_10;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 8);
+        lVar3 = PlotController.LeftFaceHideOffset;
         if (((teamMate != null) && (*(int64 *)(teamMate + 64) != 0)) && (lVar3 != null)) {
           cVar1 = FUN_181815240(lVar3,*(uint32 *)(*(int64 *)(teamMate + 64) + 16),DAT_181d53900)
           ;
@@ -35048,10 +35101,10 @@ public class GameController
               *(uint32 *)(teamMate + 0x2f4) = *(uint32 *)(teamLeader + 88);
               *(int *)(teamMate + 0x300) = iVar6;
               if (*(int *)(teamMate + 192) < 0) {
-                lVar3 = *(int64 *)(pStatics + 16);
+                lVar3 = GameController.CheckShowSpeHero;
                 if (lVar3 == null) throw; // [null/range check failed]
                 BigMapController.RemoveBigMapNpc(lVar3,teamMate,0);
-                lVar3 = *(int64 *)(pStatics + 16);
+                lVar3 = GameController.CheckShowSpeHero;
                 if (lVar3 == null) throw; // [null/range check failed]
                 BigMapController.RefreshBigMapNPC(lVar3,teamLeader,0);
               }
@@ -36590,7 +36643,6 @@ public class GameController
     // RVA   : 0x7C0850   Offset: 0x7BF050   Length: 0x9BC
     public ResourcePointData GetRandomResourcePoint(RandomAreaType type, int targetForceID, bool useBackUp, List<int> restrictAreaID)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
         uint64
         GameController.GetRandomResourcePoint
                 (int64 this,int type,uint32 targetForceID,char useBackUp,int64 restrictAreaID)
@@ -36769,11 +36821,11 @@ public class GameController
           }
         }
         if (lVar3 == null) goto LAB_1807c1207;
-        if (*(int *)(pStatics + 8) == 1) {
+        if (PlotController.LeftFaceHideOffset == 1) {
           iVar15 = *(int *)(lVar3 + 24);
           while (iVar15 = iVar15 + -1, -1 < iVar15) {
             lVar6 = this.worldData;
-            lVar7 = *(int64 *)(pStatics + 24);
+            lVar7 = PlotController.CheckHideChoice;
             uVar2 = FUN_1800d6750(lVar3,iVar15,DAT_181d68270);
             if (((lVar6 == null) || (lVar6 = WorldData.GetResourcePoint(lVar6,uVar2,0)) == null) ||
                (lVar7 == null)) goto LAB_1807c1207;
@@ -36786,7 +36838,7 @@ public class GameController
           iVar15 = *(int *)(lVar4 + 24);
           while (iVar15 = iVar15 + -1, -1 < iVar15) {
             lVar6 = this.worldData;
-            lVar7 = *(int64 *)(pStatics + 24);
+            lVar7 = PlotController.CheckHideChoice;
             uVar2 = FUN_1800d6750(lVar4,iVar15,DAT_181d68270);
             if (((lVar6 == null) || (lVar6 = WorldData.GetResourcePoint(lVar6,uVar2,0)) == null) ||
                (lVar7 == null)) goto LAB_1807c1207;
@@ -36844,7 +36896,6 @@ public class GameController
     // RVA   : 0x7BCC60   Offset: 0x7BB460   Length: 0x63
     public AreaData GetRandomArea(RandomAreaType type, List<int> restrictAreaID)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
         uint64
         GameController.GetRandomArea
                 (int64 this,int type,uint32 restrictAreaID,char param_4,int64 param_5)
@@ -37261,10 +37312,10 @@ public class GameController
             }
           }
           if (lVar3 == null) break;
-          if (*(int *)(pStatics + 8) == 1) {
+          if (PlotController.LeftFaceHideOffset == 1) {
             iVar12 = *(int *)(lVar3 + 24);
             while (iVar12 = iVar12 + -1, -1 < iVar12) {
-              lVar13 = *(int64 *)(pStatics + 24);
+              lVar13 = PlotController.CheckHideChoice;
               uVar2 = FUN_1800d6750(lVar3,iVar12,DAT_181d68270);
               if (lVar13 == null) throw; // [null/range check failed]
               cVar1 = FUN_181815240(lVar13,uVar2,DAT_181d67bf8);
@@ -37275,7 +37326,7 @@ public class GameController
             if (lVar4 == null) break;
             iVar12 = *(int *)(lVar4 + 24);
             while (iVar12 = iVar12 + -1, -1 < iVar12) {
-              lVar13 = *(int64 *)(pStatics + 24);
+              lVar13 = PlotController.CheckHideChoice;
               uVar2 = FUN_1800d6750(lVar4,iVar12,DAT_181d68270);
               if (lVar13 == null) throw; // [null/range check failed]
               cVar1 = FUN_181815240(lVar13,uVar2,DAT_181d67bf8);
@@ -37328,7 +37379,6 @@ public class GameController
     // RVA   : 0x7BCCD0   Offset: 0x7BB4D0   Length: 0x112C
     public AreaData GetRandomArea(RandomAreaType type, int targetForceID, bool useBackUp, List<int> restrictAreaID)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
         uint64
         GameController.GetRandomArea
                 (int64 this,int type,uint32 targetForceID,char useBackUp,int64 restrictAreaID)
@@ -37745,10 +37795,10 @@ public class GameController
             }
           }
           if (lVar3 == null) break;
-          if (*(int *)(pStatics + 8) == 1) {
+          if (PlotController.LeftFaceHideOffset == 1) {
             iVar12 = *(int *)(lVar3 + 24);
             while (iVar12 = iVar12 + -1, -1 < iVar12) {
-              lVar13 = *(int64 *)(pStatics + 24);
+              lVar13 = PlotController.CheckHideChoice;
               uVar2 = FUN_1800d6750(lVar3,iVar12,DAT_181d68270);
               if (lVar13 == null) throw; // [null/range check failed]
               cVar1 = FUN_181815240(lVar13,uVar2,DAT_181d67bf8);
@@ -37759,7 +37809,7 @@ public class GameController
             if (lVar4 == null) break;
             iVar12 = *(int *)(lVar4 + 24);
             while (iVar12 = iVar12 + -1, -1 < iVar12) {
-              lVar13 = *(int64 *)(pStatics + 24);
+              lVar13 = PlotController.CheckHideChoice;
               uVar2 = FUN_1800d6750(lVar4,iVar12,DAT_181d68270);
               if (lVar13 == null) throw; // [null/range check failed]
               cVar1 = FUN_181815240(lVar13,uVar2,DAT_181d67bf8);
@@ -37812,7 +37862,7 @@ public class GameController
     // RVA   : 0x7C05F0   Offset: 0x7BEDF0   Length: 0x109
     public HeroData GetRandomHero(PlotRandomHeroData randomHeroData, List<int> excludeHeroID)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 GameController.GetRandomHero
                          (int64 this,int64 randomHeroData,int64 excludeHeroID,char param_4,int64 param_5
                          )
@@ -38216,8 +38266,9 @@ public class GameController
                                 (lVar9 = this.worldData.Heros) == null)
                                || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                             if (iVar15 != *(int *)(lVar9 + 132)) {
-                              if (*(int *)(pStatics + 8) == 1) {
-                                lVar9 = *(int64 *)(pStatics + 32);
+                              if (PlotController.LeftFaceHideOffset == 1) {
+                                lVar9 = *(int64 *)
+                                         (pPlotController + 32);
                                 if ((((this.worldData == null) ||
                                      (lVar10 = this.worldData.Heros,
                                      lVar10 == null)) ||
@@ -38452,8 +38503,9 @@ public class GameController
                               (lVar9 = this.worldData.Heros) == null)
                              || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                           if (iVar15 != *(int *)(lVar9 + 132)) {
-                            if (*(int *)(pStatics + 8) == 1) {
-                              lVar9 = *(int64 *)(pStatics + 32);
+                            if (PlotController.LeftFaceHideOffset == 1) {
+                              lVar9 = *(int64 *)
+                                       (pPlotController + 32);
                               if ((((this.worldData == null) ||
                                    (lVar10 = this.worldData.Heros,
                                    lVar10 == null)) ||
@@ -38604,7 +38656,7 @@ public class GameController
     // RVA   : 0x7C0700   Offset: 0x7BEF00   Length: 0x5C
     public List<HeroData> GetRandomHero(List<PlotRandomHeroData> randomHeroData, bool differentForce)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 GameController.GetRandomHero
                          (int64 this,int64 randomHeroData,int64 differentForce,char param_4,int64 param_5
                          )
@@ -39008,8 +39060,9 @@ public class GameController
                                 (lVar9 = this.worldData.Heros) == null)
                                || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                             if (iVar15 != *(int *)(lVar9 + 132)) {
-                              if (*(int *)(pStatics + 8) == 1) {
-                                lVar9 = *(int64 *)(pStatics + 32);
+                              if (PlotController.LeftFaceHideOffset == 1) {
+                                lVar9 = *(int64 *)
+                                         (pPlotController + 32);
                                 if ((((this.worldData == null) ||
                                      (lVar10 = this.worldData.Heros,
                                      lVar10 == null)) ||
@@ -39244,8 +39297,9 @@ public class GameController
                               (lVar9 = this.worldData.Heros) == null)
                              || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                           if (iVar15 != *(int *)(lVar9 + 132)) {
-                            if (*(int *)(pStatics + 8) == 1) {
-                              lVar9 = *(int64 *)(pStatics + 32);
+                            if (PlotController.LeftFaceHideOffset == 1) {
+                              lVar9 = *(int64 *)
+                                       (pPlotController + 32);
                               if ((((this.worldData == null) ||
                                    (lVar10 = this.worldData.Heros,
                                    lVar10 == null)) ||
@@ -39396,7 +39450,7 @@ public class GameController
     // RVA   : 0x7C0760   Offset: 0x7BEF60   Length: 0xE6
     public HeroData GetRandomHero(HeroData sourceHero, PlotRandomHeroData randomHeroData)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 GameController.GetRandomHero
                          (int64 this,int64 sourceHero,int64 randomHeroData,char param_4,int64 param_5
                          )
@@ -39800,8 +39854,9 @@ public class GameController
                                 (lVar9 = this.worldData.Heros) == null)
                                || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                             if (iVar15 != *(int *)(lVar9 + 132)) {
-                              if (*(int *)(pStatics + 8) == 1) {
-                                lVar9 = *(int64 *)(pStatics + 32);
+                              if (PlotController.LeftFaceHideOffset == 1) {
+                                lVar9 = *(int64 *)
+                                         (pPlotController + 32);
                                 if ((((this.worldData == null) ||
                                      (lVar10 = this.worldData.Heros,
                                      lVar10 == null)) ||
@@ -40036,8 +40091,9 @@ public class GameController
                               (lVar9 = this.worldData.Heros) == null)
                              || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                           if (iVar15 != *(int *)(lVar9 + 132)) {
-                            if (*(int *)(pStatics + 8) == 1) {
-                              lVar9 = *(int64 *)(pStatics + 32);
+                            if (PlotController.LeftFaceHideOffset == 1) {
+                              lVar9 = *(int64 *)
+                                       (pPlotController + 32);
                               if ((((this.worldData == null) ||
                                    (lVar10 = this.worldData.Heros,
                                    lVar10 == null)) ||
@@ -40188,7 +40244,7 @@ public class GameController
     // RVA   : 0x7BE140   Offset: 0x7BC940   Length: 0x24A8
     public List<HeroData> GetRandomHero(HeroData sourceHero, List<PlotRandomHeroData> randomHeroData, bool differentForce, List<int> excludeHeroID)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 GameController.GetRandomHero
                          (int64 this,int64 sourceHero,int64 randomHeroData,char differentForce,int64 excludeHeroID
                          )
@@ -40592,8 +40648,9 @@ public class GameController
                                 (lVar9 = this.worldData.Heros) == null)
                                || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                             if (iVar15 != *(int *)(lVar9 + 132)) {
-                              if (*(int *)(pStatics + 8) == 1) {
-                                lVar9 = *(int64 *)(pStatics + 32);
+                              if (PlotController.LeftFaceHideOffset == 1) {
+                                lVar9 = *(int64 *)
+                                         (pPlotController + 32);
                                 if ((((this.worldData == null) ||
                                      (lVar10 = this.worldData.Heros,
                                      lVar10 == null)) ||
@@ -40828,8 +40885,9 @@ public class GameController
                               (lVar9 = this.worldData.Heros) == null)
                              || (lVar9 = FUN_180002f80(lVar9,iVar13)) == null) goto LAB_1807c05e3;
                           if (iVar15 != *(int *)(lVar9 + 132)) {
-                            if (*(int *)(pStatics + 8) == 1) {
-                              lVar9 = *(int64 *)(pStatics + 32);
+                            if (PlotController.LeftFaceHideOffset == 1) {
+                              lVar9 = *(int64 *)
+                                       (pPlotController + 32);
                               if ((((this.worldData == null) ||
                                    (lVar10 = this.worldData.Heros,
                                    lVar10 == null)) ||
@@ -40980,12 +41038,12 @@ public class GameController
     // RVA   : 0x7BBD70   Offset: 0x7BA570   Length: 0x95
     public static float GetGameMaxDifficulty()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
-        if (*(int *)(pStatics + 8) != 1) {
+        if (PlotController.LeftFaceHideOffset != 1) {
           return 10.0;
         }
-        fVar1 = (float)*(int *)(pStatics + 104);
+        fVar1 = (float)*(int *)(pPlotController + 104);
         return fVar1 + fVar1;
     }
 
@@ -41178,7 +41236,7 @@ public class GameController
     // RVA   : 0x7BAF30   Offset: 0x7B9730   Length: 0x2F4
     public static string GetConditionDescribe(List<string> condition)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         uint uVar2;
         ulong uVar3;
@@ -41194,7 +41252,7 @@ public class GameController
             if (0 < iVar7) {
               uVar3 = String.Concat(uVar3,"+",0);
             }
-            lVar5 = *(int64 *)(pStatics + 0x3d0);
+            lVar5 = *(int64 *)(pPlotController + 0x3d0);
             uVar4 = FUN_180002f80(condition,iVar7,DAT_181d7c9c0);
             if (lVar5 == null) {
         LAB_1807bb21f:
@@ -41228,7 +41286,7 @@ public class GameController
             }
             else {
               uVar4 = FUN_180002f80(condition,iVar7);
-              lVar5 = *(int64 *)(pStatics + 0x3d0);
+              lVar5 = *(int64 *)(pPlotController + 0x3d0);
               uVar6 = FUN_180002f80(condition,iVar7,DAT_181d7c9c0);
               if (lVar5 == null) goto LAB_1807bb21f;
               uVar2 = FUN_1817ff280(lVar5,uVar6);
@@ -41247,7 +41305,7 @@ public class GameController
     // RVA   : 0x7D9170   Offset: 0x7D7970   Length: 0x153
     public static bool MeetCondition(List<string> condition, bool justNeedOneCondition, AreaBuildingData targetBuilding)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         uint uVar2;
         int iVar3;
@@ -41263,7 +41321,7 @@ public class GameController
         if (cVar1) {
           return true;
         }
-        lVar6 = *(int64 *)(pStatics + 0x3d0);
+        lVar6 = *(int64 *)(pPlotController + 0x3d0);
         if (lVar6 != null) {
           cVar1 = FUN_1818279a0(lVar6,condition,DAT_181d7c4d0);
           if (!cVar1) {
@@ -41512,7 +41570,7 @@ public class GameController
             }
           }
           else {
-            lVar6 = *(int64 *)(pStatics + 0x3d0);
+            lVar6 = *(int64 *)(pPlotController + 0x3d0);
             if (lVar6 != null) {
               iVar3 = FUN_1817ff280(lVar6,condition,DAT_181d7c648);
               if (iVar3 == 6) {
@@ -41528,7 +41586,7 @@ public class GameController
                 if (((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) &&
                    (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) != null) {
                   iVar3 = *(int *)(lVar6 + 184);
-                  lVar6 = *(int64 *)(pStatics + 0x3d0);
+                  lVar6 = *(int64 *)(pPlotController + 0x3d0);
                   if (lVar6 != null) {
                     iVar5 = FUN_1817ff280(lVar6,condition,DAT_181d7c648);
                     if (iVar5 <= iVar3) {
@@ -41547,7 +41605,7 @@ public class GameController
     // RVA   : 0x7D8690   Offset: 0x7D6E90   Length: 0xAD1
     public static bool MeetCondition(string condition, AreaBuildingData targetBuilding)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         uint uVar2;
         int iVar3;
@@ -41563,7 +41621,7 @@ public class GameController
         if (cVar1) {
           return true;
         }
-        lVar6 = *(int64 *)(pStatics + 0x3d0);
+        lVar6 = *(int64 *)(pPlotController + 0x3d0);
         if (lVar6 != null) {
           cVar1 = FUN_1818279a0(lVar6,condition,DAT_181d7c4d0);
           if (!cVar1) {
@@ -41812,7 +41870,7 @@ public class GameController
             }
           }
           else {
-            lVar6 = *(int64 *)(pStatics + 0x3d0);
+            lVar6 = *(int64 *)(pPlotController + 0x3d0);
             if (lVar6 != null) {
               iVar3 = FUN_1817ff280(lVar6,condition,DAT_181d7c648);
               if (iVar3 == 6) {
@@ -41828,7 +41886,7 @@ public class GameController
                 if (((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) &&
                    (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) != null) {
                   iVar3 = *(int *)(lVar6 + 184);
-                  lVar6 = *(int64 *)(pStatics + 0x3d0);
+                  lVar6 = *(int64 *)(pPlotController + 0x3d0);
                   if (lVar6 != null) {
                     iVar5 = FUN_1817ff280(lVar6,condition,DAT_181d7c648);
                     if (iVar5 <= iVar3) {
@@ -41847,30 +41905,30 @@ public class GameController
     // RVA   : 0x7C2520   Offset: 0x7C0D20   Length: 0xAC5
     public bool HaveSpeUI(bool includeHeroDetail)
     {
+        var p_FinishParty_d__58 = *(int64*)(_FinishParty_d__58_StaticsPtr + 184);
+        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         var pStatics_1200 = *(int64*)(DAT_181d51200 + 184);
         var pStatics_29a0 = *(int64*)(DAT_181da29a0 + 184);
-        var pStatics_2f70 = *(int64*)(DAT_181d82f70 + 184);
         var pStatics_4a60 = *(int64*)(DAT_181d74a60 + 184);
         var pStatics_9c78 = *(int64*)(DAT_181d59c78 + 184);
-        var pStatics_b060 = *(int64*)(DAT_181d6b060 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
         var pStatics_e090 = *(int64*)(DAT_181d4e090 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
-        var pStatics_f230 = *(int64*)(DAT_181d7f230 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        if (*pStatics_c960 != 0) {
-          if (*(char *)(*pStatics_c960 + 24) != false) {
+        if (PlotController._instance != null) {
+          if (PlotController._instance.plotHappen) {
             return true;
           }
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
+          lVar2 = PlotController.LeftFaceHideOffset;
           if (lVar2 != null) {
-            if (*(char *)(lVar2 + 72) != false) {
+            if (lVar2.foodIcon) {
               return true;
             }
-            if ((*pStatics_f230 != 0) &&
-               (lVar2 = *(int64 *)(*pStatics_f230 + 40)) != null) {
+            if ((*p_ShowItemAnim_d__32 != 0) &&
+               (lVar2 = *(int64 *)(*p_ShowItemAnim_d__32 + 40),
+               lVar2 != null)) {
               cVar1 = GameObject.get_activeSelf(lVar2,0);
               if (cVar1) {
                 return true;
@@ -41883,34 +41941,35 @@ public class GameController
                 }
                 if (includeHeroDetail) {
                   lVar2 = FUN_18077c1c0(0);
-                  if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
-                  cVar1 = GameObject.get_activeSelf(*(int64 *)(lVar2 + 32),0);
+                  if ((lVar2 == null) || (lVar2.round == null)) throw; // [null/range check failed]
+                  cVar1 = GameObject.get_activeSelf(lVar2.round,0);
                   if (cVar1) {
                     return true;
                   }
                 }
-                lVar2 = *(int64 *)(*(int64 *)(DAT_181d9d3c0 + 184) + 32);
-                if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 144)) != null) {
+
+                if ((lVar2 = DrinkUIController._instance?.drinkUIPanel) != null) {
                   cVar1 = GameObject.get_activeSelf(lVar2,0);
                   if (cVar1) {
                     return true;
                   }
-                  lVar2 = *(int64 *)(*(int64 *)(DAT_181d9aa90 + 184) + 32);
-                  if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 32)) != null) {
+
+                  if ((lVar2 = PlotController.SpringFestivelRewardLvTalkText?.round) != null) {
                     cVar1 = GameObject.get_activeSelf(lVar2,0);
                     if (cVar1) {
                       return true;
                     }
-                    if ((*pStatics_b060 != 0) &&
-                       (lVar2 = *(int64 *)(*pStatics_b060 + 32)) != null)
-                    {
+                    if ((*p_FinishParty_d__58 != 0) &&
+                       (lVar2 = *(int64 *)
+                                 (*p_FinishParty_d__58 + 32),
+                       lVar2 != null)) {
                       cVar1 = GameObject.get_activeSelf(lVar2,0);
                       if (cVar1) {
                         return true;
                       }
                       lVar2 = FUN_18046c3a0(0);
-                      if ((lVar2 != null) && (*(int64 *)(lVar2 + 40) != 0)) {
-                        cVar1 = GameObject.get_activeSelf(*(int64 *)(lVar2 + 40),0);
+                      if ((lVar2 != null) && (lVar2.wineIcon != null)) {
+                        cVar1 = GameObject.get_activeSelf(lVar2.wineIcon,0);
                         if (cVar1) {
                           return true;
                         }
@@ -41921,8 +41980,9 @@ public class GameController
                           if (cVar1) {
                             return true;
                           }
-                          if (*pStatics_2f70 != 0) {
-                            if (*(char *)(*pStatics_2f70 + 24) != false) {
+                          if (StudySkillController._instance != null) {
+                            if (StudySkillController._instance.inStudy
+                                != false) {
                               return true;
                             }
                             if ((*pStatics_4a60 != 0) &&
@@ -41932,27 +41992,29 @@ public class GameController
                               if (cVar1) {
                                 return true;
                               }
-                              lVar2 = *(int64 *)(*(int64 *)(DAT_181da1ba0 + 184) + 56);
-                              if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 32)) != null) {
+                              lVar2 = *(int64 *)
+                                       (pPlotController + 56);
+                              if ((lVar2 = lVar2?.round) != null) {
                                 cVar1 = GameObject.get_activeSelf(lVar2,0);
                                 if (cVar1) {
                                   return true;
                                 }
-                                lVar2 = *(int64 *)(*(int64 *)(DAT_181d8a1a8 + 184) + 24);
-                                if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 24)) != null) {
+                                lVar2 = *(int64 *)
+                                         (*(int64 *)(AuctionController_StaticsPtr + 184) + 24);
+                                if ((lVar2 = lVar2?.drinkType) != null) {
                                   cVar1 = GameObject.get_activeSelf(lVar2,0);
                                   if (cVar1) {
                                     return true;
                                   }
                                   lVar2 = FUN_18046bd60(0);
-                                  if ((lVar2 != null) && (*(int64 *)(lVar2 + 24) != 0)) {
-                                    cVar1 = GameObject.get_activeSelf(*(int64 *)(lVar2 + 24),0);
+                                  if ((lVar2 != null) && (lVar2.drinkType != null)) {
+                                    cVar1 = GameObject.get_activeSelf(lVar2.drinkType,0);
                                     if (cVar1) {
                                       return true;
                                     }
                                     lVar2 = FUN_18046c500(0);
-                                    if ((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) {
-                                      cVar1 = GameObject.get_activeSelf(*(int64 *)(lVar2 + 32),0);
+                                    if ((lVar2 != null) && (lVar2.round != null)) {
+                                      cVar1 = GameObject.get_activeSelf(lVar2.round,0);
                                       if (cVar1) {
                                         return true;
                                       }
@@ -41982,13 +42044,24 @@ public class GameController
                                             }
                                             lVar2 = FUN_18046c760(0);
                                             if (lVar2 != null) {
-                                              if (*(char *)(lVar2 + 56) != false) {
+                                              if (lVar2.wineData) {
                                                 return true;
                                               }
+                                              if (((*(byte *)(ChapterController_StaticsPtr + 0x133) & 4)
+                                                   != 0) &&
+                                                 (*(int *)(ChapterController_StaticsPtr + 224) == 0)) {
+                                                il2cpp_runtime_class_init(ChapterController_StaticsPtr);
+                                              }
+                                              if (((*(byte *)(ChapterController_StaticsPtr + 0x133) & 4)
+                                                   != 0) &&
+                                                 (*(int *)(ChapterController_StaticsPtr + 224) == 0)) {
+                                                il2cpp_runtime_class_init(ChapterController_StaticsPtr);
+                                              }
                                               lVar2 = *(int64 *)
-                                                       (*(int64 *)(DAT_181d91c88 + 184) + 8);
+                                                       (*(int64 *)(ChapterController_StaticsPtr + 184)
+                                                       + 8);
                                               if ((lVar2 != null) &&
-                                                 (lVar2 = *(int64 *)(lVar2 + 24)) != null) {
+                                                 (lVar2 = lVar2.drinkType) != null) {
                                                 cVar1 = GameObject.get_activeSelf(lVar2,0);
                                                 if (cVar1) {
                                                   return true;
@@ -41999,25 +42072,46 @@ public class GameController
                                                     return true;
                                                   }
                                                   lVar2 = FUN_18046c1a0(0);
-                                                  if ((lVar2 != null) && (*(int64 *)(lVar2 + 80) != 0))
+                                                  if ((lVar2 != null) && (lVar2.foodCancel != null))
                                                   {
                                                     cVar1 = GameObject.get_activeSelf
-                                                                      (*(int64 *)(lVar2 + 80),0);
+                                                                      (lVar2.foodCancel,0);
                                                     if (cVar1) {
                                                       return true;
                                                     }
+                                                    if (((*(byte *)(PrisonController_StaticsPtr + 0x133) &
+                                                         4) != 0) &&
+                                                       (*(int *)(PrisonController_StaticsPtr + 224) == 0)
+                                                       ) {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar2 = FUN_18046c4a0(0);
-                                                    if ((lVar2 != null) && (*(int64 *)(lVar2 + 24) != 0)
+                                                    if ((lVar2 != null) && (lVar2.drinkType != null)
                                                        ) {
                                                       cVar1 = GameObject.get_activeSelf
-                                                                        (*(int64 *)(lVar2 + 24),0);
+                                                                        (lVar2.drinkType,0);
                                                       if (cVar1) {
                                                         return true;
                                                       }
+                                                      if (((*(byte *)(PlotController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(PlotController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init
+                                                                  (PlotController_StaticsPtr);
+                                                      }
+                                                      if (((*(byte *)(PlotController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(PlotController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init
+                                                                  (PlotController_StaticsPtr);
+                                                      }
                                                       lVar2 = *(int64 *)
-                                                               (*(int64 *)(DAT_181d4e208 + 184) + 8);
+                                                               (*(int64 *)
+                                                                 (PlotController_StaticsPtr + 184) + 8);
                                                       if ((lVar2 != null) &&
-                                                         (lVar2 = *(int64 *)(lVar2 + 32)) != null
+                                                         (lVar2 = lVar2.round) != null
                                                          ) {
                                                         uVar3 = GameObject.get_activeSelf(lVar2,0);
                                                         return uVar3;
@@ -42161,7 +42255,6 @@ public class GameController
     // RVA   : 0x7E7EB0   Offset: 0x7E66B0   Length: 0x68E
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         lVar1 = il2cpp_internal(DAT_181d6f030);
@@ -42174,9 +42267,7 @@ public class GameController
           FUN_181814fa0(lVar1,4,DAT_181d67a78);
           FUN_181814fa0(lVar1,2,DAT_181d67a78);
           FUN_181814fa0(lVar1,0,DAT_181d67a78);
-          plVar3 = (int64 *)(pStatics + 8);
-          *plVar3 = lVar1;
-          il2cpp_internal(plVar3,lVar1);
+          GameController.difficultyExtraPoint = lVar1;
           lVar1 = il2cpp_internal(DAT_181d72a30);
           FUN_180f58a90(lVar1,DAT_181d7c250);
           if (lVar1 != null) {
@@ -42185,9 +42276,7 @@ public class GameController
             FUN_181827900(lVar1,"慕容星辰",DAT_181d7c3d0);
             FUN_181827900(lVar1,"黄豺",DAT_181d7c3d0);
             FUN_181827900(lVar1,"韩狼",DAT_181d7c3d0);
-            plVar3 = (int64 *)(pStatics + 16);
-            *plVar3 = lVar1;
-            il2cpp_internal(plVar3,lVar1);
+            GameController.CheckShowSpeHero = lVar1;
             lVar1 = il2cpp_internal(DAT_181d5e248);
             FUN_1808ae540(lVar1,DAT_181d4d968);
             if (lVar1 != null) {
@@ -42199,13 +42288,9 @@ public class GameController
               FUN_1808ab680(lVar1,"慕容星辰",0,DAT_181d4dae8);
               FUN_1808ab680(lVar1,"黄豺",3,DAT_181d4dae8);
               FUN_1808ab680(lVar1,"韩狼",5,DAT_181d4dae8);
-              plVar3 = (int64 *)(pStatics + 24);
-              *plVar3 = lVar1;
-              il2cpp_internal(plVar3,lVar1);
+              GameController.CheckShowSpeHeroSkinID = lVar1;
               uVar2 = new ZhSegment(0);
-              puVar4 = (uint64 *)(pStatics + 32);
-              *puVar4 = uVar2;
-              il2cpp_internal(puVar4,uVar2);
+              GameController.lockObj = uVar2;
               lVar1 = il2cpp_internal(DAT_181d72a30);
               FUN_180f58a90(lVar1,DAT_181d7c250);
               if (lVar1 != null) {
@@ -42214,9 +42299,7 @@ public class GameController
                 FUN_181827900(lVar1,"欲寻人辩论演练",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"欲寻人赌上两把，试试手气",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"欲寻人协助鉴宝",DAT_181d7c3d0);
-                plVar3 = (int64 *)(pStatics + 40);
-                *plVar3 = lVar1;
-                il2cpp_internal(plVar3,lVar1);
+                GameController.InvitePlayInfo = lVar1;
                 lVar1 = il2cpp_internal(DAT_181d72a30);
                 FUN_180f58a90(lVar1,DAT_181d7c250);
                 if (lVar1 != null) {
@@ -42225,9 +42308,7 @@ public class GameController
                   FUN_181827900(lVar1,"同门求助",DAT_181d7c3d0);
                   FUN_181827900(lVar1,"下山游历",DAT_181d7c3d0);
                   FUN_181827900(lVar1,"别派盗匪",DAT_181d7c3d0);
-                  plVar3 = (int64 *)(pStatics + 48);
-                  *plVar3 = lVar1;
-                  il2cpp_internal(plVar3,lVar1);
+                  GameController.MiddleSelfForceEvent = lVar1;
                   lVar1 = il2cpp_internal(DAT_181d72a30);
                   FUN_180f58a90(lVar1,DAT_181d7c250);
                   if (lVar1 != null) {
@@ -42235,9 +42316,7 @@ public class GameController
                     FUN_181827900(lVar1,"别派比试",DAT_181d7c3d0);
                     FUN_181827900(lVar1,"别派挑衅",DAT_181d7c3d0);
                     FUN_181827900(lVar1,"同门论战",DAT_181d7c3d0);
-                    plVar3 = (int64 *)(pStatics + 56);
-                    *plVar3 = lVar1;
-                    il2cpp_internal(plVar3,lVar1);
+                    GameController.HardSelfForceEvent = lVar1;
                     return;
                   }
                 }

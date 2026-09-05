@@ -167,9 +167,11 @@ public class HorseData
     // RVA   : 0xB402C0   Offset: 0xB3EAC0   Length: 0x7A
     public void StartSprint()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
-        this.sprintTimeLeft = *(uint32 *)(pStatics + 0x218);
-        this.sprintTimeCd = *(uint32 *)(pStatics + 0x21c);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        this.sprintTimeLeft =
+             *(uint32 *)(pPlotController + 0x218);
+        this.sprintTimeCd =
+             *(uint32 *)(pPlotController + 0x21c);
     }
 
     // Token : 0x60012B5
@@ -328,28 +330,27 @@ public class HorseData
     // RVA   : 0xB3FDF0   Offset: 0xB3E5F0   Length: 0x1C9
     public int GetHorseStateSpeAdd(float originState)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         if (!this.equiped) {
           return 0;
         }
-        if (((*pStatics != 0) &&
-            (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar2 = WorldData.Player(lVar2,0)) != null) {
-          if (*(int64 *)(lVar2 + 0x208) == 0) {
+        if (((GameController._instance != null) &&
+            (lVar2 = GameController._instance.worldData) != null)
+           && (lVar2 = WorldData.Player(lVar2,0)) != null) {
+          if (lVar2.getSpePoisonData == null) {
             return 0;
           }
           lVar2 = FUN_18046c0a0(0);
-          if (((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
-             ((lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0), lVar2 != null &&
-              (*(int64 *)(lVar2 + 0x208) != 0)))) {
-            if (*(int64 *)(*(int64 *)(lVar2 + 0x208) + 136) != this) {
+          if (((lVar2 != null) && (lVar2.villageAreaID != null)) &&
+             ((lVar2 = WorldData.Player(lVar2.villageAreaID,0), lVar2 != null &&
+              (lVar2.getSpePoisonData != null)))) {
+            if (*(int64 *)(lVar2.getSpePoisonData + 136) != this) {
               return 0;
             }
             lVar2 = FUN_18046c0a0(0);
-            if (((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
-               (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) != null) {
+            if (((lVar2 != null) && (lVar2.villageAreaID != null)) &&
+               (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) {
               cVar1 = HeroData.HaveForceFunction(lVar2,4);
               if (!cVar1) {
                 return 0;

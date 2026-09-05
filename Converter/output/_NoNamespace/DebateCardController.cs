@@ -17,7 +17,6 @@ public class DebateCardController
     // RVA   : 0xA5C860   Offset: 0xA5B060   Length: 0x71C
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181d9aa08 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -135,7 +134,7 @@ public class DebateCardController
                     if (((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Back",0)) != null) &&
                        (lVar3 = Component.get_gameObject(lVar3,0)) != null) {
                       lVar3 = GameObject.AddComponent(lVar3,DAT_181d9cf90);
-                      lVar4 = *(int64 *)(pStatics + 8);
+                      lVar4 = DebateCardData.SpeCardDescribe;
                       if ((this.cardData != null) && (lVar4 != null)) {
                         uVar2 = this.cardData.rareLv;
                         if (*(uint32 *)(lVar4 + 24) <= uVar2) {
@@ -156,7 +155,7 @@ public class DebateCardController
                             if ((lVar3 != null) &&
                                (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
                               uVar6 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                              lVar3 = *pStatics;
+                              lVar3 = DebateCardData.SpeCardName;
                               if ((this.cardData != null) && (lVar3 != null)) {
                                 uVar2 = this.cardData.rareLv;
                                 if (lVar3.targetAttriID <= uVar2) {
@@ -190,7 +189,7 @@ public class DebateCardController
         if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Back",0)) == null) ||
            (lVar2 = Component.GetComponent(lVar2,DAT_181d6af40)) == null) throw; // [null/range check failed]
         Selectable.set_interactable(lVar2,0,0);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d9aa90 + 184) + 32);
+        lVar2 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar2 == null) throw; // [null/range check failed]
         if (*(char *)(lVar2 + 136) != false) {
           return;
@@ -257,7 +256,7 @@ public class DebateCardController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d9aa90 + 184) + 32);
+        lVar1 = PlotController.SpringFestivelRewardLvTalkText;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           DebateUIController.UseDebateCard(lVar1,uVar2,0);

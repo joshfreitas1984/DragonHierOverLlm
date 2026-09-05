@@ -12,7 +12,7 @@ public class BuildChoiceButtonController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+        lVar1 = AreaBuildController._instance;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           AreaBuildController.BuildChoiceButtonClicked(lVar1,uVar2,0);

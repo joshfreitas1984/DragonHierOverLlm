@@ -100,8 +100,6 @@ public class NGUILookAtTarget
     // RVA   : 0xB005F0   Offset: 0xAFEDF0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180b005f0(int64 this)
-        {
         this.speed = 0x41000000;
         FUN_18044ef50(this,0);
     }

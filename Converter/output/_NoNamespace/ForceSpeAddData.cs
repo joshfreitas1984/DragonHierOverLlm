@@ -520,7 +520,7 @@ public class ForceSpeAddData
     // RVA   : 0x782CD0   Offset: 0x7814D0   Length: 0xA
     public string GetDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
@@ -590,10 +590,10 @@ public class ForceSpeAddData
             if (this.forceSpeAddData == null) goto LAB_180782c39;
             fVar9 = (float)FUN_1817cc640(this.forceSpeAddData,iVar8,DAT_181d98a88);
             if (fVar9 <= 0.0) {
-              lVar7 = *(int64 *)(pStatics + 0x2c8);
+              lVar7 = *(int64 *)(pPlotController + 0x2c8);
             }
             else {
-              lVar7 = *(int64 *)(pStatics + 0x260);
+              lVar7 = *(int64 *)(pPlotController + 0x260);
             }
             if ((lVar7 != null) &&
                (lVar4 = il2cpp_internal(lVar7,*(uint64 *)(*plVar5 + 64))) == null) {
@@ -668,7 +668,7 @@ public class ForceSpeAddData
     // RVA   : 0x7826D0   Offset: 0x780ED0   Length: 0x5FE
     public string GetDescribe(bool noLocal)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
@@ -738,10 +738,10 @@ public class ForceSpeAddData
             if (this.forceSpeAddData == null) goto LAB_180782c39;
             fVar9 = (float)FUN_1817cc640(this.forceSpeAddData,iVar8,DAT_181d98a88);
             if (fVar9 <= 0.0) {
-              lVar7 = *(int64 *)(pStatics + 0x2c8);
+              lVar7 = *(int64 *)(pPlotController + 0x2c8);
             }
             else {
-              lVar7 = *(int64 *)(pStatics + 0x260);
+              lVar7 = *(int64 *)(pPlotController + 0x260);
             }
             if ((lVar7 != null) &&
                (lVar4 = il2cpp_internal(lVar7,*(uint64 *)(*plVar5 + 64))) == null) {

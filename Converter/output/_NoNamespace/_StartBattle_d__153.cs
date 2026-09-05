@@ -34,10 +34,10 @@ public class <StartBattle>d__153
     // RVA   : 0xB27250   Offset: 0xB25A50   Length: 0xDDA
     private virtual bool MoveNext()
     {
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         var pStatics_1d20 = *(int64*)(DAT_181da1d20 + 184);
         var pStatics_5740 = *(int64*)(DAT_181d85740 + 184);
         var pStatics_8ad8 = *(int64*)(DAT_181d88ad8 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         int iVar1;
         uint uVar2;
         bool cVar3;
@@ -71,7 +71,7 @@ public class <StartBattle>d__153
           lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
           uVar5 = BattleController.GetWinConditionText(lVar9,0);
           if (lVar4 == null) throw; // [null/range check failed]
-          *(uint64 *)(lVar4 + 24) = uVar5;
+          lVar4.plotHappen = uVar5;
           if (*pStatics_8ad8 == 0) throw; // [null/range check failed]
           TutorialController.StartTutorial(*pStatics_8ad8,"战斗基础",0);
           if (*(char *)(lVar9 + 0x1ac) == false) {
@@ -119,8 +119,8 @@ public class <StartBattle>d__153
         if ((((((lVar4 == null) || (lVar4 = Component.GetComponent(lVar4,DAT_181d6c4c0)) == null) ||
               (lVar4 = PostProcessVolume.get_profile(lVar4,0)) == null) ||
              (((lVar4 = PostProcessProfile.GetSetting(lVar4,DAT_181d6f570), lVar4 == null ||
-               (*(int64 *)(lVar4 + 32) == 0)) ||
-              ((*(uint8 *)(*(int64 *)(lVar4 + 32) + 24) = 1, lVar9 == null ||
+               (lVar4.plotPanel == null)) ||
+              ((*(uint8 *)(lVar4.plotPanel + 24) = 1, lVar9 == null ||
                ((*(int64 *)(lVar9 + 0x140) == 0 ||
                 (lVar4 = GameObject.get_transform(*(int64 *)(lVar9 + 0x140),0)) == null))))))) ||
             (lVar4 = Transform.Find(lVar4,"Text",0)) == null) ||
@@ -129,15 +129,15 @@ public class <StartBattle>d__153
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        *(uint64 *)(lVar4 + 24) = "";
+        lVar4.plotHappen = "";
         if (((*pStatics_5740 == 0) ||
             (lVar4 = Component.get_transform(*pStatics_5740,0)) == null) ||
            (lVar4 = Transform.Find(lVar4,"BattleType",0)) == null) goto LAB_180b2801f;
         uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-        lVar4 = *(int64 *)(pStatics_ef00 + 0x448);
+        lVar4 = *(int64 *)(pPlotController + 0x448);
         if (lVar4 == null) goto LAB_180b2801f;
         uVar2 = *(uint32 *)(lVar9 + 32);
-        if (*(uint32 *)(lVar4 + 24) <= uVar2) {
+        if (lVar4.plotHappen <= uVar2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         LTLocalization.SetText
@@ -147,17 +147,17 @@ public class <StartBattle>d__153
             (lVar4 = Component.get_transform(*pStatics_5740,0)) == null) ||
            (lVar4 = Transform.Find(lVar4,"BattleType",0)) == null) goto LAB_180b2801f;
         lVar7 = Component.GetComponent(lVar4,DAT_181d6ccc0);
-        lVar4 = *(int64 *)(pStatics_ef00 + 0x450);
+        lVar4 = *(int64 *)(pPlotController + 0x450);
         if (lVar4 == null) goto LAB_180b2801f;
         uVar2 = *(uint32 *)(lVar9 + 32);
-        if (*(uint32 *)(lVar4 + 24) <= uVar2) {
+        if (lVar4.plotHappen <= uVar2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         uVar5 = lVar4[uVar2];
-        lVar4 = **(int64 **)(DAT_181d8b128 + 184);
+        lVar4 = PlotController._instance;
         if (lVar4 == null) goto LAB_180b2801f;
         uVar2 = *(uint32 *)(lVar9 + 32);
-        if (*(uint32 *)(lVar4 + 24) <= uVar2) {
+        if (lVar4.plotHappen <= uVar2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         local_res8[0] = lVar4[uVar2];
@@ -171,11 +171,11 @@ public class <StartBattle>d__153
         lVar7 = Component.get_gameObject(lVar4,0);
         lVar4 = *(int64 *)(lVar9 + 112);
         if (lVar4 == null) goto LAB_180b2801f;
-        if (*(int *)(lVar4 + 24) == 0) {
+        if (lVar4.plotHappen == null) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-        if (((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 48)) == null) ||
+        if (((lVar4 = lVar4?.plotItemGrid) == null) ||
            (cVar3 = HeroSpeAddData.isEmpty(lVar4,0), lVar7 == null)) goto LAB_180b2801f;
         GameObject.SetActive(lVar7,!cVar3,0);
         if (((*pStatics_5740 == 0) ||
@@ -184,11 +184,11 @@ public class <StartBattle>d__153
         lVar7 = Component.GetComponent(lVar4,DAT_181d6ccc0);
         lVar4 = *(int64 *)(lVar9 + 112);
         if (lVar4 == null) goto LAB_180b2801f;
-        if (*(int *)(lVar4 + 24) == 0) {
+        if (lVar4.plotHappen == null) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 48)) == null) goto LAB_180b2801f;
+        if ((lVar4 = lVar4?.plotItemGrid) == null) goto LAB_180b2801f;
         uVar5 = HeroSpeAddData.GetDescribe(lVar4,1,1,1,0,0);
         uVar5 = String.Concat("绿方队伍加成:\n",uVar5,0);
         if (lVar7 == null) goto LAB_180b2801f;
@@ -199,11 +199,11 @@ public class <StartBattle>d__153
         lVar7 = Component.get_gameObject(lVar4,0);
         lVar4 = *(int64 *)(lVar9 + 112);
         if (lVar4 == null) goto LAB_180b2801f;
-        if (*(uint32 *)(lVar4 + 24) < 2) {
+        if (lVar4.plotHappen < 2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 40);
-        if (((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 48)) == null) ||
+        if (((lVar4 = lVar4?.plotItemGrid) == null) ||
            (cVar3 = HeroSpeAddData.isEmpty(lVar4,0), lVar7 == null)) goto LAB_180b2801f;
         GameObject.SetActive(lVar7,!cVar3,0);
         if (((*pStatics_5740 == 0) ||
@@ -212,21 +212,21 @@ public class <StartBattle>d__153
         lVar7 = Component.GetComponent(lVar4,DAT_181d6ccc0);
         lVar4 = *(int64 *)(lVar9 + 112);
         if (lVar4 == null) goto LAB_180b2801f;
-        if (*(uint32 *)(lVar4 + 24) < 2) {
+        if (lVar4.plotHappen < 2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 40);
-        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 48)) == null) goto LAB_180b2801f;
+        if ((lVar4 = lVar4?.plotItemGrid) == null) goto LAB_180b2801f;
         uVar5 = HeroSpeAddData.GetDescribe(lVar4,1,1,1,0,0);
         uVar5 = String.Concat("红方队伍加成:\n",uVar5,0);
         if (lVar7 == null) goto LAB_180b2801f;
         *(uint64 *)(lVar7 + 24) = uVar5;
         lVar4 = FUN_18046c0a0(0);
-        if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) goto LAB_180b2801f;
-        if (*(int *)(*(int64 *)(lVar4 + 32) + 156) == 0) {
+        if ((lVar4 == null) || (lVar4.plotPanel == null)) goto LAB_180b2801f;
+        if (*(int *)(lVar4.plotPanel + 156) == 0) {
           lVar4 = FUN_18046c0a0(0);
-          if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
-          if (-1 < *(int *)(*(int64 *)(lVar4 + 32) + 16)) goto LAB_180b27e00;
+          if ((lVar4 == null) || (lVar4.plotPanel == null)) throw; // [null/range check failed]
+          if (-1 < *(int *)(lVar4.plotPanel + 16)) goto LAB_180b27e00;
           if ((((*(int64 *)(lVar9 + 0x198) == 0) ||
                (lVar4 = GameObject.get_transform(*(int64 *)(lVar9 + 0x198),0)) == null) ||
               (lVar4 = Transform.Find(lVar4,"10",0)) == null) ||
@@ -239,7 +239,7 @@ public class <StartBattle>d__153
           GameObject.SetActive(lVar4,0,0);
           lVar4 = FUN_18046c0a0(0);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = *(int64 *)(lVar4 + 32);
+          lVar4 = lVar4.plotPanel;
           lVar7 = FUN_18046c0a0(0);
           if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
           uVar11 = 0x40a00000;
@@ -259,7 +259,7 @@ public class <StartBattle>d__153
           GameObject.SetActive(lVar4,1,0);
           lVar4 = FUN_18046c0a0(0);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = *(int64 *)(lVar4 + 32);
+          lVar4 = lVar4.plotPanel;
           lVar7 = FUN_18046c0a0(0);
           if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
           uVar11 = 0x41a00000;
@@ -267,7 +267,7 @@ public class <StartBattle>d__153
         }
         uVar10 = FUN_1810a8ba0(uVar10,0x3f800000,uVar11,0);
         if (lVar4 != null) {
-          *(uint32 *)(lVar4 + 0x1d8) = uVar10;
+          lVar4.nowSettingFocus = uVar10;
           if ((*pStatics_5740 != 0) &&
              (lVar4 = Component.get_gameObject(*pStatics_5740,0)) != null) {
             GameObject.SetActive(lVar4,1,0);

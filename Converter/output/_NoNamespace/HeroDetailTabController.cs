@@ -84,7 +84,7 @@ public class HeroDetailTabController
             lVar2 = Component.get_transform(this,0);
             if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Label",0)) != null) {
               plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d6d8c0);
-              lVar2 = *(int64 *)(DAT_181d4ef00 + 184);
+              lVar2 = *(int64 *)(PlotController_StaticsPtr + 184);
               if (plVar1 != (int64 *)0) {
                 local_18 = *(uint32 *)(lVar2 + 0x370);
                 uStack_14 = *(uint32 *)(lVar2 + 0x374);

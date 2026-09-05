@@ -53,10 +53,9 @@ public class ItemIconController
     // RVA   : 0xB78B20   Offset: 0xB77320   Length: 0x2578
     private void Update()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_cff8 = *(int64*)(DAT_181d5cff8 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pItemIconController = *(int64*)(ItemIconController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         ulong uVar1;
         uint uVar2;
         bool cVar3;
@@ -108,7 +107,7 @@ public class ItemIconController
             if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"ItemLv",0)) == null)
             throw; // [null/range check failed]
             plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-            if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+            if (PlotController._instance == 2) {
               if (this.itemData == null) throw; // [null/range check failed]
               if (this.itemData.itemLv != 5) goto LAB_180b78f2f;
               local_68 = 0;
@@ -181,7 +180,7 @@ public class ItemIconController
           if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"RareLv",0)) == null)
           throw; // [null/range check failed]
           lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-          lVar11 = *pStatics_6270;
+          lVar11 = *pStatics;
           if (this.itemData == null) throw; // [null/range check failed]
           uVar10 = Int32.ToString(this.itemData + 64,0);
           uVar10 = String.Concat("RareLv",uVar10,0);
@@ -213,7 +212,7 @@ public class ItemIconController
           if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Icon",0)) == null)
           throw; // [null/range check failed]
           lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-          lVar11 = *pStatics_6270;
+          lVar11 = *pStatics;
           if (((this.itemData == null) ||
               (uVar10 = ItemData.GetItemIconName(this.itemData,0), lVar11 == null)) ||
              (uVar10 = TextureController.LoadAtlasSprite(lVar11,"IconAtlas",uVar10,0), lVar6 == null))
@@ -238,9 +237,9 @@ public class ItemIconController
               if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"FromStorage",0)) == null)
               throw; // [null/range check failed]
               lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              if ((*pStatics_6270 == 0) ||
+              if ((*pStatics == 0) ||
                  (uVar10 = TextureController.LoadAtlasSprite
-                                     (*pStatics_6270,"UIAtlas","buildingicon_1",0)
+                                     (*pStatics,"UIAtlas","buildingicon_1",0)
                  , lVar6 == null)) throw; // [null/range check failed]
               Image.set_sprite(lVar6,uVar10,0);
             }
@@ -304,7 +303,7 @@ public class ItemIconController
             if ((lVar11 == null) || (lVar11 = Transform.Find(lVar11,"BookType",0)) == null)
             goto LAB_180b7b08d;
             lVar11 = Component.GetComponent(lVar11,DAT_181d6bc40);
-            lVar12 = *pStatics_6270;
+            lVar12 = *pStatics;
             if (((this.itemData == null) ||
                 (lVar13 = this.itemData.bookData) == null) ||
                (lVar13 = BookData.DataBase(lVar13,0)) == null) goto LAB_180b7b08d;
@@ -339,7 +338,7 @@ public class ItemIconController
             Transform.set_localPosition(lVar11,&local_88,0);
           }
         }
-        uVar10 = *(uint64 *)(*(int64 *)(DAT_181d66570 + 184) + 72);
+        uVar10 = MouseController.hoveredUI;
         uVar7 = Component.get_gameObject(this,0);
         cVar3 = Object.op_Equality(uVar10,uVar7,0);
         if (cVar3) {
@@ -441,12 +440,12 @@ public class ItemIconController
               plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
               fVar17 = (float)ItemIconController.GetItemTreasureSpeRate(this,0);
               if (fVar17 <= 1.0) {
-                uVar10 = *(uint64 *)(pStatics_ef00 + 0x290);
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x298);
+                uVar10 = *(uint64 *)(pPlotController + 0x290);
+                uVar7 = *(uint64 *)(pPlotController + 0x298);
               }
               else {
-                uVar10 = *(uint64 *)(pStatics_ef00 + 0x2f8);
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x300);
+                uVar10 = *(uint64 *)(pPlotController + 0x2f8);
+                uVar7 = *(uint64 *)(pPlotController + 0x300);
               }
               if (plVar8 == (int64 *)0) throw; // [null/range check failed]
               lVar6 = *plVar8;
@@ -489,8 +488,8 @@ public class ItemIconController
               throw; // [null/range check failed]
               plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
               if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-              uVar10 = **(uint64 **)(DAT_181d5cff8 + 184);
-              uVar7 = (*(uint64 **)(DAT_181d5cff8 + 184))[1];
+              uVar10 = ItemIconController.PriceColor;
+              uVar7 = (*(uint64 **)(ItemIconController_StaticsPtr + 184))[1];
             }
             else {
               lVar6 = FUN_18046c700(0);
@@ -505,12 +504,12 @@ public class ItemIconController
               fVar17 = *(float *)(lVar6 + 180);
         LAB_180b79fb8:
               if (fVar17 <= 1.0) {
-                uVar10 = *(uint64 *)(pStatics_ef00 + 0x290);
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x298);
+                uVar10 = *(uint64 *)(pPlotController + 0x290);
+                uVar7 = *(uint64 *)(pPlotController + 0x298);
               }
               else {
-                uVar10 = *(uint64 *)(pStatics_ef00 + 0x2f8);
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x300);
+                uVar10 = *(uint64 *)(pPlotController + 0x2f8);
+                uVar7 = *(uint64 *)(pPlotController + 0x300);
               }
               if (plVar8 == (int64 *)0) throw; // [null/range check failed]
             }
@@ -561,8 +560,8 @@ public class ItemIconController
                 throw; // [null/range check failed]
                 plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
                 if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-                local_68 = *(uint64 *)(pStatics_cff8 + 16);
-                uStack_60 = *(uint64 *)(pStatics_cff8 + 24);
+                local_68 = ItemIconController.ContributionColor;
+                uStack_60 = *(uint64 *)(pItemIconController + 24);
                 (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
                 lVar6 = Component.get_transform(this,0);
                 if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
@@ -570,11 +569,12 @@ public class ItemIconController
                 uVar10 = Component.GetComponent(lVar6,DAT_181d6d8c0);
                 lVar6 = this.itemData;
                 if (lVar6 == null) throw; // [null/range check failed]
-                if (((*pStatics_df90 == 0) ||
-                    (lVar11 = *(int64 *)(*pStatics_df90 + 32)) == null)
-                   || (lVar11 = WorldData.GetHero(lVar11,0,0)) == null) throw; // [null/range check failed]
+                if (((GameController._instance == null) ||
+                    (lVar11 = GameController._instance.worldData,
+                    lVar11 == null)) || (lVar11 = WorldData.GetHero(lVar11,0,0)) == null)
+                throw; // [null/range check failed]
                 local_res8[0] = 0;
-                if (*(char *)(lVar11 + 180) == false) {
+                if (!lVar11.hour) {
                   local_res8[0] = Mathf.RoundToInt((float)lVar6.value * 0.1,0);
                 }
                 goto LAB_180b7a6ac;
@@ -619,8 +619,10 @@ public class ItemIconController
                   if ((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"Price",0)) != null) {
                     plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
                     if (plVar8 != (int64 *)0) {
-                      local_68 = *(uint64 *)(pStatics_cff8 + 48);
-                      uStack_60 = *(uint64 *)(pStatics_cff8 + 56);
+                      local_68 = *(uint64 *)
+                                  (pItemIconController + 48);
+                      uStack_60 = *(uint64 *)
+                                   (pItemIconController + 56);
                       (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
                       lVar6 = Component.get_transform(this,0);
                       if ((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"Price",0)) != null) {
@@ -699,8 +701,8 @@ public class ItemIconController
                 Image.set_sprite(lVar11,uVar10,0);
               }
               lVar11 = FUN_18046c0a0(0);
-              if ((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) {
-                lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0);
+              if ((lVar11 != null) && (lVar11.villageAreaID != null)) {
+                lVar11 = WorldData.Player(lVar11.villageAreaID,0);
                 if ((this.itemData != null) &&
                    ((lVar12 = this.itemData.bookData, lVar12 != null &&
                     (lVar11 != null)))) {
@@ -715,8 +717,8 @@ public class ItemIconController
                       lVar11 = Transform.Find(lVar6,"PriceIcon",0);
                       if ((((lVar11 != null) &&
                            (lVar11 = Component.GetComponent(lVar11,DAT_181d6bc40)) != null) &&
-                          (*(int64 *)(lVar11 + 216) != 0)) &&
-                         (lVar11 = Object.get_name(*(int64 *)(lVar11 + 216),0)) != null) {
+                          (lVar11.plotHappened != null)) &&
+                         (lVar11 = Object.get_name(lVar11.plotHappened,0)) != null) {
                         cVar3 = String.Contains(lVar11,"出战_出战",0);
                         if (cVar3) {
                           return;
@@ -753,18 +755,20 @@ public class ItemIconController
                   }
                   plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
                   lVar11 = FUN_18046c0a0(0);
-                  if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                     (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
-                    fVar17 = *(float *)(lVar11 + 0x1c0);
+                  if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                     (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
+                    fVar17 = lVar11.playerBookWriter;
                     if (this.itemData != null) {
                       iVar5 = ItemData.GetReadBookContributionCost(this.itemData,0,0);
                       if ((float)iVar5 <= fVar17) {
-                        uVar10 = *(uint64 *)(pStatics_cff8 + 32);
-                        uVar7 = *(uint64 *)(pStatics_cff8 + 40);
+                        uVar10 = *(uint64 *)
+                                  (pItemIconController + 32);
+                        uVar7 = *(uint64 *)
+                                 (pItemIconController + 40);
                       }
                       else {
-                        uVar10 = *(uint64 *)(pStatics_ef00 + 0x2d8);
-                        uVar7 = *(uint64 *)(pStatics_ef00 + 0x2e0);
+                        uVar10 = *(uint64 *)(pPlotController + 0x2d8);
+                        uVar7 = *(uint64 *)(pPlotController + 0x2e0);
                       }
                       if (plVar8 != (int64 *)0) {
                         local_68 = uVar10;
@@ -799,12 +803,12 @@ public class ItemIconController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d88158 + 184) + 8);
+        lVar1 = PlotController.LeftFaceHideOffset;
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 32) == false) {
             return 0x3f800000;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+          lVar1 = PlotController.LaBaFestivelResultTalkText;
           if (lVar1 != null) {
             uVar2 = AreaController.GetAreaSpePriceRate(lVar1,0);
             return uVar2;
@@ -816,15 +820,14 @@ public class ItemIconController
     // RVA   : 0xB77E00   Offset: 0xB76600   Length: 0x31C
     public float GetItemTreasureSpeRate()
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         long lVar1;
         int iVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d88158 + 184) + 8);
+        lVar1 = PlotController.LeftFaceHideOffset;
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 32) == false) {
             return 0x3f800000;
           }
-          lVar1 = *(int64 *)(pStatics + 56);
+          lVar1 = PlotController.LaBaFestivelResultTalkText;
           if (lVar1 != null) {
             if (*(int64 *)(lVar1 + 88) == 0) {
               return 0x3f800000;
@@ -835,7 +838,7 @@ public class ItemIconController
               }
               iVar2 = 0;
               while( true ) {
-                lVar1 = *(int64 *)(pStatics + 56);
+                lVar1 = PlotController.LaBaFestivelResultTalkText;
                 if (((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 88)) == null) ||
                    (lVar1 = *(int64 *)(lVar1 + 224)) == null) throw; // [null/range check failed]
                 if (*(int *)(lVar1 + 24) <= iVar2) {
@@ -867,16 +870,15 @@ public class ItemIconController
     // RVA   : 0xB776B0   Offset: 0xB75EB0   Length: 0x208
     public float GetHeroFavorValueRate(bool buy)
     {
-        var pStatics = *(int64*)(DAT_181d88158 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = PlotController.LeftFaceHideOffset;
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 24) != 0) {
             return 0x3f800000;
           }
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = PlotController.LeftFaceHideOffset;
           if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 72)) != null) &&
              (lVar1 = *(int64 *)(lVar1 + 48)) != null) {
             if (*(int *)(lVar1 + 16) < 0) {
@@ -902,8 +904,6 @@ public class ItemIconController
     // RVA   : 0xB77A10   Offset: 0xB76210   Length: 0x3EB
     public int GetItemPrice(bool buy)
     {
-        var pStatics_8158 = *(int64*)(DAT_181d88158 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
@@ -913,32 +913,33 @@ public class ItemIconController
         float fVar7;
         if (this.itemData != null) {
           iVar1 = this.itemData.value;
-          if ((*pStatics_df90 != 0) &&
-             (lVar2 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null
+             ) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               fVar3 = (float)HeroData.GetTradeValueRate(lVar2,buy,0);
               fVar4 = (float)ItemIconController.GetHeroFavorValueRate(this,buy,0);
-              lVar2 = *(int64 *)(pStatics_8158 + 8);
+              lVar2 = PlotController.LeftFaceHideOffset;
               if (lVar2 != null) {
-                if (*(char *)(lVar2 + 32) == false) {
+                if (!lVar2.villageAreaID) {
                   fVar7 = 1.0;
                 }
                 else {
-                  lVar2 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+                  lVar2 = PlotController.LaBaFestivelResultTalkText;
                   if (lVar2 == null) throw; // [null/range check failed]
                   fVar7 = (float)AreaController.GetAreaSpePriceRate(lVar2,0);
                 }
                 fVar5 = (float)ItemIconController.GetItemTreasureSpeRate(this,0);
                 if (!buy) {
-                  lVar2 = *(int64 *)(pStatics_8158 + 8);
+                  lVar2 = PlotController.LeftFaceHideOffset;
                   if (lVar2 == null) throw; // [null/range check failed]
-                  fVar6 = *(float *)(lVar2 + 176);
+                  fVar6 = lVar2.TimeDifficulty;
                 }
                 else {
-                  lVar2 = *(int64 *)(pStatics_8158 + 8);
+                  lVar2 = PlotController.LeftFaceHideOffset;
                   if (lVar2 == null) throw; // [null/range check failed]
-                  fVar6 = *(float *)(lVar2 + 180);
+                  fVar6 = lVar2.hour;
                 }
                 return (int)(fVar5 * (float)iVar1 * fVar3 * fVar4 * fVar7 * fVar6);
               }
@@ -1364,8 +1365,6 @@ public class ItemIconController
     {
         var pStatics_0f00 = *(int64*)(DAT_181d50f00 + 184);
         var pStatics_6278 = *(int64*)(DAT_181d96278 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ece0 = *(int64*)(DAT_181d6ece0 + 184);
         int iVar1;
         bool cVar2;
         ulong uVar3;
@@ -1393,7 +1392,7 @@ public class ItemIconController
                 lVar6 = FUN_180b30e20(0);
                 lVar5 = FUN_18077c1c0(0);
                 if (lVar5 != null) {
-                  uVar4 = *(uint64 *)(lVar5 + 96);
+                  uVar4 = lVar5.BigMapRandomEventDatas;
                   uVar3 = Component.get_gameObject(this,0);
                   if (lVar6 != null) {
                     ItemUseMenuController.Show(lVar6,uVar4,uVar3,0);
@@ -1433,9 +1432,9 @@ public class ItemIconController
             break;
           case 5:
             lVar6 = **(int64 **)(DAT_181d74a60 + 184);
-            if (((*pStatics_df90 != 0) &&
-                (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-               (uVar4 = WorldData.Player(lVar5,0), lVar6 != null)) {
+            if (((GameController._instance != null) &&
+                (lVar5 = GameController._instance.worldData,
+                lVar5 != null)) && (uVar4 = WorldData.Player(lVar5,0), lVar6 != null)) {
               ReadBookController.StartReadBook
                         (lVar6,uVar4,this.itemData,1,
                          in_stack_ffffffffffffffc8 & 0xffffffffffffff00,0);
@@ -1572,7 +1571,7 @@ public class ItemIconController
               }
               lVar5 = FUN_18077c1c0(0);
               if (lVar5 == null) goto LAB_180b78ad8;
-              lVar5 = *(int64 *)(lVar5 + 96);
+              lVar5 = lVar5.BigMapRandomEventDatas;
               if (lVar6.subType == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -1610,8 +1609,8 @@ public class ItemIconController
               }
             }
         LAB_180b785c1:
-            if (*pStatics_ece0 == 0) goto LAB_180b78ad8;
-            *(uint8 *)(*pStatics_ece0 + 192) = 1;
+            if (QuickDetail._instance == null) goto LAB_180b78ad8;
+            QuickDetail._instance.detailDirty = 1;
           }
         }
         lVar6 = FUN_18077c1c0(0);
@@ -1633,7 +1632,7 @@ public class ItemIconController
     // RVA   : 0xB7B0A0   Offset: 0xB798A0   Length: 0x13C
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d5cff8 + 184);
+        var pItemIconController = *(int64*)(ItemIconController_StaticsPtr + 184);
         long lVar2;
         ulong local_48;
         ulong uStack_40;
@@ -1646,7 +1645,7 @@ public class ItemIconController
         local_48 = 0;
         uStack_40 = 0;
         Color.ctor(&local_48,0x3ebebebf,0x3ecacacb,0x3edadadb,0);
-        puVar1 = *(uint32 **)(DAT_181d5cff8 + 184);
+        puVar1 = *(uint32 **)(ItemIconController_StaticsPtr + 184);
         *puVar1 = (uint32)local_48;
         puVar1[1] = local_48._4_4_;
         puVar1[2] = (uint32)uStack_40;
@@ -1654,7 +1653,7 @@ public class ItemIconController
         local_38 = 0;
         uStack_30 = 0;
         Color.ctor(&local_38,0x3dc8c8c9,0x3ef6f6f7,0x3e9a9a9b,0);
-        lVar2 = pStatics;
+        lVar2 = pItemIconController;
         *(uint32 *)(lVar2 + 16) = (uint32)local_38;
         *(uint32 *)(lVar2 + 20) = local_38._4_4_;
         *(uint32 *)(lVar2 + 24) = (uint32)uStack_30;
@@ -1662,7 +1661,7 @@ public class ItemIconController
         local_28 = 0;
         uStack_20 = 0;
         Color.ctor(&local_28,0x3edcdcdd,0x3f47c7c8,0x3f1f9fa0,0);
-        lVar2 = pStatics;
+        lVar2 = pItemIconController;
         *(uint32 *)(lVar2 + 32) = (uint32)local_28;
         *(uint32 *)(lVar2 + 36) = local_28._4_4_;
         *(uint32 *)(lVar2 + 40) = (uint32)uStack_20;
@@ -1670,7 +1669,7 @@ public class ItemIconController
         local_18 = 0;
         uStack_10 = 0;
         Color.ctor(&local_18,0x3f2eaeaf,0x3eeaeaeb,0,0);
-        lVar2 = pStatics;
+        lVar2 = pItemIconController;
         *(uint64 *)(lVar2 + 48) = local_18;
         *(uint64 *)(lVar2 + 56) = uStack_10;
     }

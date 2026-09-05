@@ -121,7 +121,7 @@ public class AreaUnitController
     // RVA   : 0x7F0780   Offset: 0x7EEF80   Length: 0x25D
     public void RefreshUnitColor()
     {
-        var pStatics = *(int64*)(DAT_181d879b0 + 184);
+        var pAreaUnitController = *(int64*)(AreaUnitController_StaticsPtr + 184);
         long lVar2;
         uint uVar3;
         uint uVar4;
@@ -137,34 +137,34 @@ public class AreaUnitController
         *(uint32 *)(this + 68) = uVar3;
         *(uint32 *)(this + 72) = uVar4;
         *(uint32 *)(this + 76) = uVar5;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+        lVar2 = AreaBuildController._instance;
         if (lVar2 != null) {
           if (lVar2.tileType) {
             lVar2 = this.areaTileData;
             if (lVar2 == null) throw; // [null/range check failed]
             if (lVar2.tileType == 1) {
-              lVar2 = pStatics;
+              lVar2 = pAreaUnitController;
               uVar3 = lVar2.tileType;
               uVar4 = *(uint32 *)(lVar2 + 52);
               uVar5 = lVar2.areaRoadData;
               uVar6 = *(uint32 *)(lVar2 + 60);
             }
             else if (lVar2.building == null) {
-              puVar1 = *(uint32 **)(DAT_181d879b0 + 184);
+              puVar1 = *(uint32 **)(AreaUnitController_StaticsPtr + 184);
               uVar3 = *puVar1;
               uVar4 = puVar1[1];
               uVar5 = puVar1[2];
               uVar6 = puVar1[3];
             }
             else if (*(int *)(lVar2.building + 16) < 0) {
-              lVar2 = pStatics;
+              lVar2 = pAreaUnitController;
               uVar3 = lVar2.spriteRotateType;
               uVar4 = lVar2.spriteFlipX;
               uVar5 = lVar2.building;
               uVar6 = *(uint32 *)(lVar2 + 44);
             }
             else {
-              lVar2 = pStatics;
+              lVar2 = pAreaUnitController;
               uVar3 = lVar2.name;
               uVar4 = *(uint32 *)(lVar2 + 20);
               uVar5 = lVar2.spriteName;
@@ -199,17 +199,16 @@ public class AreaUnitController
     // RVA   : 0x7F01D0   Offset: 0x7EE9D0   Length: 0x2A9
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d87338 + 184);
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(pStatics + 16);
+        lVar1 = AreaBuildController._instance;
         if (lVar1 != null) {
-          if (*(char *)(lVar1 + 48) == false) {
+          if (!lVar1.buildMode) {
             return;
           }
-          lVar1 = *(int64 *)(pStatics + 16);
+          lVar1 = AreaBuildController._instance;
           if (lVar1 != null) {
-            if (*(char *)(lVar1 + 49) == false) {
+            if (!lVar1.buildModeMovingBuilding) {
               lVar1 = FUN_1807e85e0(0);
               uVar2 = Component.get_gameObject(this,0);
               if (lVar1 != null) {
@@ -295,7 +294,7 @@ public class AreaUnitController
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.OnDrag(lVar1,delta,0);
           return;
@@ -307,7 +306,7 @@ public class AreaUnitController
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.OnScroll(lVar1,delta,0);
           return;
@@ -325,7 +324,7 @@ public class AreaUnitController
     // RVA   : 0x7F0B70   Offset: 0x7EF370   Length: 0x13F
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d879b0 + 184);
+        var pAreaUnitController = *(int64*)(AreaUnitController_StaticsPtr + 184);
         long lVar2;
         ulong local_68;
         ulong uStack_60;
@@ -338,7 +337,7 @@ public class AreaUnitController
         local_68 = 0;
         uStack_60 = 0;
         Color.ctor(&local_68,0x3f733333,0x3f800000,0x3f733333,0);
-        puVar1 = *(uint32 **)(DAT_181d879b0 + 184);
+        puVar1 = *(uint32 **)(AreaUnitController_StaticsPtr + 184);
         *puVar1 = (uint32)local_68;
         puVar1[1] = local_68._4_4_;
         puVar1[2] = (uint32)uStack_60;
@@ -346,7 +345,7 @@ public class AreaUnitController
         local_58 = 0;
         uStack_50 = 0;
         Color.ctor(&local_58,0x3f800000,0x3f666666,0x3f4ccccd,0);
-        lVar2 = pStatics;
+        lVar2 = pAreaUnitController;
         *(uint32 *)(lVar2 + 16) = (uint32)local_58;
         *(uint32 *)(lVar2 + 20) = local_58._4_4_;
         *(uint32 *)(lVar2 + 24) = (uint32)uStack_50;
@@ -354,7 +353,7 @@ public class AreaUnitController
         local_48 = 0;
         uStack_40 = 0;
         Color.ctor(&local_48,0x3f800000,0x3f666666,0x3f666666,0);
-        lVar2 = pStatics;
+        lVar2 = pAreaUnitController;
         *(uint32 *)(lVar2 + 32) = (uint32)local_48;
         *(uint32 *)(lVar2 + 36) = local_48._4_4_;
         *(uint32 *)(lVar2 + 40) = (uint32)uStack_40;
@@ -362,7 +361,7 @@ public class AreaUnitController
         local_38 = 0;
         uStack_30 = 0;
         Color.ctor(&local_38,0x3f666666,0x3f666666,0x3f800000,0);
-        lVar2 = pStatics;
+        lVar2 = pAreaUnitController;
         *(uint64 *)(lVar2 + 48) = local_38;
         *(uint64 *)(lVar2 + 56) = uStack_30;
     }

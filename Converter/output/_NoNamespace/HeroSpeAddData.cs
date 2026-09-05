@@ -766,7 +766,7 @@ public class HeroSpeAddData
     // RVA   : 0xB3B070   Offset: 0xB39870   Length: 0x36
     public string GetDescribe(bool useColor, bool newLine, int digits, bool merge)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 HeroSpeAddData.GetDescribe
                          (int64 this,int useColor,int newLine,char digits,char merge,
                          uint32 param_6,char param_7)
@@ -819,10 +819,10 @@ public class HeroSpeAddData
             lVar9 = "";
             if (digits) {
               if (fVar13 <= 0.0) {
-                lVar9 = *(int64 *)(pStatics + 0x2c8);
+                lVar9 = *(int64 *)(pPlotController + 0x2c8);
               }
               else {
-                lVar9 = *(int64 *)(pStatics + 0x260);
+                lVar9 = *(int64 *)(pPlotController + 0x260);
               }
             }
             local_res8 = Math.Round(SUB84((double)fVar13,0),param_6,0);
@@ -845,10 +845,10 @@ public class HeroSpeAddData
             lVar9 = "";
             if (digits) {
               if (fVar12 <= 0.0) {
-                lVar9 = *(int64 *)(pStatics + 0x2c8);
+                lVar9 = *(int64 *)(pPlotController + 0x2c8);
               }
               else {
-                lVar9 = *(int64 *)(pStatics + 0x260);
+                lVar9 = *(int64 *)(pPlotController + 0x260);
               }
             }
             local_res8 = Math.Round(SUB84((double)fVar12,0),param_6,0);
@@ -873,10 +873,10 @@ public class HeroSpeAddData
             lVar9 = "";
             if (digits) {
               if (fVar11 <= 0.0) {
-                lVar9 = *(int64 *)(pStatics + 0x2c8);
+                lVar9 = *(int64 *)(pPlotController + 0x2c8);
               }
               else {
-                lVar9 = *(int64 *)(pStatics + 0x260);
+                lVar9 = *(int64 *)(pPlotController + 0x260);
               }
             }
             local_res8 = Math.Round(SUB84((double)fVar11,0),param_6,0);
@@ -937,10 +937,10 @@ public class HeroSpeAddData
             }
             fVar10 = (float)FUN_1817cc640(this.heroSpeAddData,uVar2 & 0xffffffff,DAT_181d98a88);
             if (fVar10 <= 0.0) {
-              lVar9 = *(int64 *)(pStatics + 0x2c8);
+              lVar9 = *(int64 *)(pPlotController + 0x2c8);
             }
             else {
-              lVar9 = *(int64 *)(pStatics + 0x260);
+              lVar9 = *(int64 *)(pPlotController + 0x260);
             }
           }
           if (plVar7 == (int64 *)0) {
@@ -1042,7 +1042,7 @@ public class HeroSpeAddData
     // RVA   : 0xB3A520   Offset: 0xB38D20   Length: 0xB4B
     public string GetDescribe(int startID, int endID, bool useColor, bool newLine, int digits, bool merge)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 HeroSpeAddData.GetDescribe
                          (int64 this,int startID,int endID,char useColor,char newLine,
                          uint32 digits,char merge)
@@ -1095,10 +1095,10 @@ public class HeroSpeAddData
             lVar9 = "";
             if (useColor) {
               if (fVar13 <= 0.0) {
-                lVar9 = *(int64 *)(pStatics + 0x2c8);
+                lVar9 = *(int64 *)(pPlotController + 0x2c8);
               }
               else {
-                lVar9 = *(int64 *)(pStatics + 0x260);
+                lVar9 = *(int64 *)(pPlotController + 0x260);
               }
             }
             local_res8 = Math.Round(SUB84((double)fVar13,0),digits,0);
@@ -1121,10 +1121,10 @@ public class HeroSpeAddData
             lVar9 = "";
             if (useColor) {
               if (fVar12 <= 0.0) {
-                lVar9 = *(int64 *)(pStatics + 0x2c8);
+                lVar9 = *(int64 *)(pPlotController + 0x2c8);
               }
               else {
-                lVar9 = *(int64 *)(pStatics + 0x260);
+                lVar9 = *(int64 *)(pPlotController + 0x260);
               }
             }
             local_res8 = Math.Round(SUB84((double)fVar12,0),digits,0);
@@ -1149,10 +1149,10 @@ public class HeroSpeAddData
             lVar9 = "";
             if (useColor) {
               if (fVar11 <= 0.0) {
-                lVar9 = *(int64 *)(pStatics + 0x2c8);
+                lVar9 = *(int64 *)(pPlotController + 0x2c8);
               }
               else {
-                lVar9 = *(int64 *)(pStatics + 0x260);
+                lVar9 = *(int64 *)(pPlotController + 0x260);
               }
             }
             local_res8 = Math.Round(SUB84((double)fVar11,0),digits,0);
@@ -1213,10 +1213,10 @@ public class HeroSpeAddData
             }
             fVar10 = (float)FUN_1817cc640(this.heroSpeAddData,uVar2 & 0xffffffff,DAT_181d98a88);
             if (fVar10 <= 0.0) {
-              lVar9 = *(int64 *)(pStatics + 0x2c8);
+              lVar9 = *(int64 *)(pPlotController + 0x2c8);
             }
             else {
-              lVar9 = *(int64 *)(pStatics + 0x260);
+              lVar9 = *(int64 *)(pPlotController + 0x260);
             }
           }
           if (plVar7 == (int64 *)0) {

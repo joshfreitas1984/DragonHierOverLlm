@@ -40,8 +40,8 @@ public class <BattleUnitAttackHit>d__233
     // RVA   : 0xB20900   Offset: 0xB1F100   Length: 0x1959
     private virtual bool MoveNext()
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c9b8 = *(int64*)(DAT_181d7c9b8 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d7c9b8 + 184);
         long lVar1;
         bool cVar3;
         int iVar4;
@@ -87,12 +87,12 @@ public class <BattleUnitAttackHit>d__233
         this.<>1__state = 0xffffffff;
         bVar2 = false;
         local_res8 = false;
-        lVar10 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar10 = GameController.difficultyExtraPoint;
         if ((lVar10 == null) || (lVar10 = *(int64 *)(lVar10 + 16)) == null) throw; // [null/range check failed]
         iVar4 = PlayerPrefDictionary.GetInt(lVar10,"FightScreenShake",0);
         if (iVar4 == 1) {
-          if (*pStatics_c9b8 == 0) throw; // [null/range check failed]
-          ShakeCam.StartShake(*pStatics_c9b8,2,0);
+          if (*pStatics == 0) throw; // [null/range check failed]
+          ShakeCam.StartShake(*pStatics,2,0);
         }
         if (((lVar1 == null) || (this.targetGridUnit == null)) || (*(int64 *)(lVar1 + 0x2a8) == 0))
         throw; // [null/range check failed]
@@ -209,8 +209,10 @@ public class <BattleUnitAttackHit>d__233
                                           local_98._0_4_ = (float)uVar9;
                                           local_98._4_4_ = (float)((uint64)uVar9 >> 32);
                                           local_68 = *(uint64 *)
-                                                      (pStatics_b128 + 16);
-                                          fStack_60 = *(float *)(pStatics_b128 +
+                                                      (pPlotController +
+                                                      16);
+                                          fStack_60 = *(float *)(*(int64 *)
+                                                                  (PlotController_StaticsPtr + 184) +
                                                                 24);
                                           local_80 = fVar19 + fStack_60;
                                           local_88 = CONCAT44(local_98._4_4_ +
@@ -358,7 +360,7 @@ public class <BattleUnitAttackHit>d__233
                   *(uint8 *)(lVar10 + 224) = 1;
                   if (*(int64 *)(lVar1 + 0x110) == 0) throw; // [null/range check failed]
                   lVar10 = Component.GetComponent(*(int64 *)(lVar1 + 0x110),DAT_181d6acc0);
-                  lVar11 = *(int64 *)(*(int64 *)(DAT_181d8b6a8 + 184) + 40);
+                  lVar11 = BattleUnit.HeroKillTalk;
                   if (lVar11 == null) throw; // [null/range check failed]
                   uVar8 = FUN_180d8cf10(0,*(uint32 *)(lVar11 + 24),0);
                   uVar9 = FUN_180002f80(lVar11,uVar8,DAT_181d7c9c0);
@@ -566,8 +568,8 @@ public class <BattleUnitAttackHit>d__233
           puVar13 = (uint64 *)Transform.get_localPosition(&local_68,lVar10,0);
           local_88 = *puVar13;
           local_80 = *(float *)(puVar13 + 1);
-          local_78 = *(uint64 *)(pStatics_b128 + 16);
-          local_70 = *(float *)(pStatics_b128 + 24);
+          local_78 = *(uint64 *)(pPlotController + 16);
+          local_70 = PlotController.CheckHideChoice;
           fVar19 = local_80 + local_70;
           local_98 = CONCAT44(local_88._4_4_ + (float)((uint64)local_78 >> 32),
                               (float)local_88 + (float)local_78);

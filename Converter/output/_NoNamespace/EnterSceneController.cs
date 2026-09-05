@@ -50,7 +50,7 @@ public class EnterSceneController
         if ((!this.videoPlayFinished) || (!this.noiseLogFinished)) {
           return;
         }
-        if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+        if (PlotController._instance == 1) {
           lVar1 = RailManager.get_Instance(0);
           if (lVar1 == null) throw; // [null/range check failed]
           if (*(char *)(lVar1 + 25) != false) {
@@ -88,8 +88,6 @@ public class EnterSceneController
     // RVA   : 0x9347B0   Offset: 0x932FB0   Length: 0x5
     private void <VideoPlayFinished>b__7_0()
     {
-        void FUN_1809347b0(int64 this)
-        {
         this.noiseLogFinished = 1;
     }
 

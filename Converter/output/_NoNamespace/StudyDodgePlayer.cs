@@ -73,7 +73,7 @@ public class StudyDodgePlayer
         int iVar5;
         float fVar6;
         float fVar7;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d82e70 + 184) + 8);
+        lVar3 = *(int64 *)(*(int64 *)(StudyDodgePlayer_StaticsPtr + 184) + 8);
         if (lVar3 == null) goto LAB_180b88d76;
         if (*(char *)(lVar3 + 25) != false) {
           return;
@@ -184,8 +184,6 @@ public class StudyDodgePlayer
     // RVA   : 0xB87DC0   Offset: 0xB865C0   Length: 0x764
     public void PlayerEnterGrid(int column, int row)
     {
-        var pStatics_2f70 = *(int64*)(DAT_181d82f70 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         uint uVar1;
         bool cVar2;
         long lVar3;
@@ -205,7 +203,7 @@ public class StudyDodgePlayer
           if (this.playerGrid == null) throw; // [null/range check failed]
           lVar3 = GameObject.GetComponent(this.playerGrid,DAT_181da1bb0);
           if (lVar3 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar3 + 24) < (int)column) {
+          if (lVar3.cityAreaID < (int)column) {
             if (this.playerSkeleton == null) throw; // [null/range check failed]
             lVar3 = Component.get_transform(this.playerSkeleton,0);
             puVar5 = (uint32 *)Quaternion.get_identity(&local_38,0);
@@ -219,10 +217,10 @@ public class StudyDodgePlayer
             if (this.playerGrid == null) throw; // [null/range check failed]
             lVar3 = GameObject.GetComponent(this.playerGrid,DAT_181da1bb0);
             if (lVar3 == null) throw; // [null/range check failed]
-            if (*(int *)(lVar3 + 24) <= (int)column) goto LAB_180b87fc9;
+            if (lVar3.cityAreaID <= (int)column) goto LAB_180b87fc9;
             if (this.playerSkeleton == null) throw; // [null/range check failed]
             lVar3 = Component.get_transform(this.playerSkeleton,0);
-            lVar8 = *(int64 *)(DAT_181d4ef00 + 184);
+            lVar8 = *(int64 *)(PlotController_StaticsPtr + 184);
             if (lVar3 == null) throw; // [null/range check failed]
             local_38 = *(uint32 *)(lVar8 + 0x688);
             uStack_34 = *(uint32 *)(lVar8 + 0x68c);
@@ -232,14 +230,14 @@ public class StudyDodgePlayer
           Transform.set_localRotation(lVar3,&local_38,0);
         }
         LAB_180b87fc9:
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d82e70 + 184) + 8);
-        if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 144)) != null) {
-          if (**(uint32 **)(lVar3 + 16) <= column) {
+
+        if ((lVar3 = *(int64 *)(*(int64 *)(StudyDodgePlayer_StaticsPtr + 184) + 8)?.MailDatas) != null) {
+          if (*lVar3.chapter <= column) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar4,0);
           }
-          lVar8 = *(int64 *)(*(uint32 **)(lVar3 + 16) + 4);
+          lVar8 = *(int64 *)(lVar3.chapter + 4);
           if ((uint32)lVar8 <= row) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -248,28 +246,29 @@ public class StudyDodgePlayer
           this.moveTarget =
                *(uint64 *)(lVar3 + 32 + ((int)column * lVar8 + (int64)(int)row) * 8);
           il2cpp_internal(this + 72);
-          if (*pStatics_2f70 != 0) {
-            if (*(int64 *)(*pStatics_2f70 + 40) == 0) {
+          if (StudySkillController._instance != null) {
+            if (StudySkillController._instance.targetBuilding == null) {
               fVar11 = 0.0;
             }
             else {
-              if ((*pStatics_2f70 == 0) ||
-                 (lVar3 = *(int64 *)(*pStatics_2f70 + 40)) == null)
-              throw; // [null/range check failed]
+              if ((StudySkillController._instance == null) ||
+                 (lVar3 = StudySkillController._instance.targetBuilding,
+                 lVar3 == null)) throw; // [null/range check failed]
               fVar11 = (float)*(int *)(lVar3 + 20) * 0.1;
             }
-            if ((*pStatics_df90 != 0) &&
-               (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar3 = GameController._instance.worldData,
+               lVar3 != null)) {
               lVar3 = WorldData.Player(lVar3,0);
-              if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 0x150)) != null) {
-                if (*(uint32 *)(lVar3 + 24) < 2) {
+              if ((lVar3 = lVar3?.monthFreshBountyTime) != null) {
+                if (lVar3.cityAreaID < 2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                fVar11 = 0.75 / (*(float *)(*(int64 *)(lVar3 + 16) + 36) * 0.02 + fVar11 + 1.0);
+                fVar11 = 0.75 / (*(float *)(lVar3.chapter + 36) * 0.02 + fVar11 + 1.0);
                 lVar3 = new WarpText_d__8(0,0);
                 if (lVar3 != null) {
-                  *(int64 *)(lVar3 + 40) = this;
-                  *(float *)(lVar3 + 32) = fVar11 * 0.5;
+                  lVar3.forceAreaID = this;
+                  lVar3.villageAreaID = fVar11 * 0.5;
                   FUN_180d837c0(this,lVar3,0);
                   uVar4 = Component.get_transform(this,0);
                   if (this.moveTarget != null) {
@@ -299,7 +298,7 @@ public class StudyDodgePlayer
                                 if (lVar8 != null) {
                                   lVar8 = SkeletonData.FindAnimation(lVar8,"jump_small",0);
                                   if ((lVar8 != null) && (lVar3 != null)) {
-                                    *(float *)(lVar3 + 160) = *(float *)(lVar8 + 40) / fVar11;
+                                    lVar3.gameDifficulty = *(float *)(lVar8 + 40) / fVar11;
                                     this.moving = 1;
                                     plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/Bag",0);
                                     plVar10 = (int64 *)0;
@@ -357,10 +356,9 @@ public class StudyDodgePlayer
     // RVA   : 0xB86A30   Offset: 0xB85230   Length: 0xB47
     public void OnHit(GameObject hitObj)
     {
-        var pStatics_2e70 = *(int64*)(DAT_181d82e70 + 184);
         var pStatics_6c68 = *(int64*)(DAT_181d86c68 + 184);
         var pStatics_c9b8 = *(int64*)(DAT_181d7c9b8 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStudyDodgePlayer = *(int64*)(StudyDodgePlayer_StaticsPtr + 184);
         ulong uVar2;
         uint uVar3;
         bool cVar4;
@@ -417,7 +415,8 @@ public class StudyDodgePlayer
                ) throw; // [null/range check failed]
             fVar12 = (float)AudioSource.get_volume(lVar7,0);
             AudioSource.set_volume
-                      (lVar7,fVar12 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                      (lVar7,fVar12 * GameController.CheckShowSpeHero,0
+                      );
           }
           cVar4 = GlobalData.IsCheckVersion(1,0);
           if (!cVar4) {
@@ -431,19 +430,20 @@ public class StudyDodgePlayer
             }
             GlobalData.AddChild(uVar5,plVar10,&local_78,0);
           }
-          if ((*pStatics_df90 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_df90 + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar7 = WorldData.Player(lVar7,0);
-          if ((((*pStatics_df90 == 0) ||
-               (lVar9 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-              (lVar9 = WorldData.Player(lVar9,0)) == null) || (lVar7 == null)) throw; // [null/range check failed]
+          if ((((GameController._instance == null) ||
+               (lVar9 = GameController._instance.worldData,
+               lVar9 == null)) || (lVar9 = WorldData.Player(lVar9,0)) == null) || (lVar7 == null))
+          throw; // [null/range check failed]
           HeroData.ChangeHp(lVar7,*(float *)(lVar9 + 0x17c) * -0.1,1,0,1,0,0);
-          lVar7 = *(int64 *)(pStatics_2e70 + 8);
+          lVar7 = *(int64 *)(pStudyDodgePlayer + 8);
           if (lVar7 == null) throw; // [null/range check failed]
           piVar1 = (int *)(lVar7 + 84);
           *piVar1 = *piVar1 + 1;
-          lVar7 = *(int64 *)(pStatics_2e70 + 8);
+          lVar7 = *(int64 *)(pStudyDodgePlayer + 8);
           if (lVar7 == null) throw; // [null/range check failed]
           StudyDodgeSkillController.ResetCombo(lVar7,0);
         }
@@ -451,23 +451,24 @@ public class StudyDodgePlayer
           TimeScaleController.SetSlowTime(*pStatics_6c68,0x3f000000,0x3e4ccccd,0);
           if (*pStatics_c9b8 != 0) {
             ShakeCam.StartShake(*pStatics_c9b8,2,0);
-            if (((*pStatics_df90 != 0) &&
-                (lVar7 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-               (lVar7 = WorldData.Player(lVar7,0)) != null) {
+            if (((GameController._instance != null) &&
+                (lVar7 = GameController._instance.worldData,
+                lVar7 != null)) && (lVar7 = WorldData.Player(lVar7,0)) != null) {
               lVar9 = this.playerSkeleton;
-              if (*(float *)(lVar7 + 0x178) <= 0.0) {
+              if (lVar7.skinUnlockData <= 0.0) {
                 if ((lVar9 != null) && (lVar7 = SkeletonAnimation.get_AnimationState(lVar9,0)) != null)
                 {
                   AnimationState.SetAnimation(lVar7,1,"die",0,0);
-                  if ((*pStatics_df90 != 0) &&
-                     (lVar7 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+                  if ((GameController._instance != null) &&
+                     (lVar7 = GameController._instance.worldData,
+                     lVar7 != null)) {
                     lVar7 = WorldData.Player(lVar7,0);
-                    if ((((*pStatics_df90 != 0) &&
-                         (lVar9 = *(int64 *)(*pStatics_df90 + 32)) != null
-                         ) && (lVar9 = WorldData.Player(lVar9,0)) != null) &&
+                    if ((((GameController._instance != null) &&
+                         (lVar9 = GameController._instance.worldData,
+                         lVar9 != null)) && (lVar9 = WorldData.Player(lVar9,0)) != null) &&
                        (uVar5 = HeroData.GetHeroDieSound(lVar9,0), lVar7 != null)) {
                       HeroData.PlayHeroSound(lVar7,uVar5,0x3f000000,0xbf800000,0);
-                      lVar7 = *(int64 *)(pStatics_2e70 + 8);
+                      lVar7 = *(int64 *)(pStudyDodgePlayer + 8);
                       if (lVar7 != null) {
                         uVar5 = StudyDodgeSkillController.FinishStudyDodgeSkill(lVar7,0,0);
                         FUN_180d837c0(this,uVar5,0);
@@ -484,12 +485,13 @@ public class StudyDodgePlayer
                    (lVar7 = SkeletonAnimation.get_AnimationState(this.playerSkeleton,0),
                    lVar7 != null)) {
                   AnimationState.AddEmptyAnimation(lVar7,1,0x3dcccccd,0,0);
-                  if ((*pStatics_df90 != 0) &&
-                     (lVar7 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+                  if ((GameController._instance != null) &&
+                     (lVar7 = GameController._instance.worldData,
+                     lVar7 != null)) {
                     lVar7 = WorldData.Player(lVar7,0);
-                    if ((((*pStatics_df90 != 0) &&
-                         (lVar9 = *(int64 *)(*pStatics_df90 + 32)) != null
-                         ) && (lVar9 = WorldData.Player(lVar9,0)) != null) &&
+                    if ((((GameController._instance != null) &&
+                         (lVar9 = GameController._instance.worldData,
+                         lVar9 != null)) && (lVar9 = WorldData.Player(lVar9,0)) != null) &&
                        (uVar5 = HeroData.GetHeroHurtSound(lVar9,0), lVar7 != null)) {
                       HeroData.PlayHeroSound(lVar7,uVar5,0x3f000000,0xbf800000,0);
                       return;
@@ -549,7 +551,8 @@ public class StudyDodgePlayer
                    (lVar4 = GameObject.GetComponent(this.shieldSpe,DAT_181d9e558)) != null) {
                   fVar8 = (float)AudioSource.get_volume(lVar4,0);
                   AudioSource.set_volume
-                            (lVar4,fVar8 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                            (lVar4,fVar8 * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) +
+                                                     16),0);
                   return;
                 }
               }
@@ -707,7 +710,8 @@ public class StudyDodgePlayer
                      lVar5 == null)) throw; // [null/range check failed]
                   fVar15 = (float)AudioSource.get_volume(lVar5,0);
                   AudioSource.set_volume
-                            (lVar5,fVar15 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                            (lVar5,fVar15 * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) +
+                                                      16),0);
                 }
               }
               else {

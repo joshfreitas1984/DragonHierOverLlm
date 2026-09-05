@@ -68,14 +68,14 @@ public class StudySkillController
     // RVA   : 0xB960A0   Offset: 0xB948A0   Length: 0x57
     public static StudySkillController get_Instance()
     {
-        return **(uint64 **)(DAT_181d82f70 + 184);
+        return StudySkillController._instance;
     }
 
     // Token : 0x600221D
     // RVA   : 0xB93E50   Offset: 0xB92650   Length: 0x61
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d82f70 + 184);
+        puVar1 = *(uint64 **)(StudySkillController_StaticsPtr + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -90,7 +90,7 @@ public class StudySkillController
         long lVar4;
         int iVar5;
         long lVar6;
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d82f70 + 184) + 8);
+        lVar4 = StudySkillController.OverMaxLvMinusExpRate;
         if (targetSkill != null) {
           lVar6 = KungfuSkillLvData.DataBase(targetSkill,0);
           if ((lVar6 != null) && (lVar4 != null)) {
@@ -111,14 +111,14 @@ public class StudySkillController
     // RVA   : 0xB94590   Offset: 0xB92D90   Length: 0xAD
     public static int GetMaxSkillSelfStudyLv(KungfuSkillLvData targetSkill)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         if (targetSkill != null) {
           iVar1 = KungfuSkillLvData.Type(targetSkill,0);
           if (iVar1 < 3) {
-            return *(uint32 *)(pStatics + 0x164);
+            return *(uint32 *)(pPlotController + 0x164);
           }
-          return *(uint32 *)(pStatics + 0x168);
+          return *(uint32 *)(pPlotController + 0x168);
         }
     }
 
@@ -126,7 +126,6 @@ public class StudySkillController
     // RVA   : 0xB95370   Offset: 0xB93B70   Length: 0x8AE
     public void StartStudySkill(StudySkillType studySkillType, KungfuSkillLvData target, string _finishCallFuc, AreaBuildingData _targetBuilding, bool _useMoney)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         void StudySkillController.StartStudySkill
                      (int64 this,int studySkillType,uint64 target,uint64 _finishCallFuc,
                      uint64 _targetBuilding,uint8 _useMoney)
@@ -149,8 +148,9 @@ public class StudySkillController
         uint64 local_50;
         local_res8[0] = 0.0;
         this.targetSkill = target;
-        if ((*pStatics != 0) &&
-           (lVar5 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar5 = GameController._instance.worldData) != null)
+        {
           lVar5 = WorldData.Player(lVar5,0);
           if ((this.targetSkill != null) && (lVar5 != null)) {
             uVar6 = HeroData.GetSkillMaxPracticeExp
@@ -212,7 +212,7 @@ public class StudySkillController
                     local_58[0] = iVar3;
                     uVar6 = il2cpp_value_box(DAT_181d5b2f8,local_58);
                     lVar8 = this.targetSkill;
-                    lVar9 = *(int64 *)(*(int64 *)(DAT_181d82f70 + 184) + 8);
+                    lVar9 = StudySkillController.OverMaxLvMinusExpRate;
                     if (((lVar8 == null) || (lVar10 = KungfuSkillLvData.DataBase(lVar8,0)) == null) ||
                        (lVar9 == null)) {
                           // WARNING: Subroutine does not return
@@ -230,8 +230,8 @@ public class StudySkillController
                     local_res8[0] = local_res8[0] * 100.0;
                     uVar11 = Single.ToString(local_res8,"f0",0);
                     lVar8 = String.Format("\n<i>{2}(因超过{0}级，练习只获取{1}%经验！)</color></i>",uVar6,uVar11,
-                                           *(uint64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x2d0),0)
-                    ;
+                                           *(uint64 *)
+                                            (*(int64 *)(PlotController_StaticsPtr + 184) + 0x2d0),0);
                     uVar6 = local_50;
                   }
                 }
@@ -341,19 +341,18 @@ public class StudySkillController
     // RVA   : 0xB95C20   Offset: 0xB94420   Length: 0x35E
     public void SureStartStudySkill()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         int iVar2;
         uint uVar3;
         long lVar4;
         ulong uVar5;
         if (this.useMoney) {
-          if ((*pStatics == 0) ||
-             (lVar4 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar4 = WorldData.Player(lVar4,0);
-          if ((lVar4 == null) || (*(int64 *)(lVar4 + 0x220) == 0)) throw; // [null/range check failed]
-          iVar2 = *(int *)(*(int64 *)(lVar4 + 0x220) + 24);
+          if ((lVar4 == null) || (lVar4.speBookStorageSpeAdd == null)) throw; // [null/range check failed]
+          iVar2 = *(int *)(lVar4.speBookStorageSpeAdd + 24);
           if (this.targetSkill == null) throw; // [null/range check failed]
           iVar1 = KungfuSkillLvData.StudyMoneyCost(this.targetSkill,0);
           if (iVar2 < iVar1) {
@@ -371,14 +370,14 @@ public class StudySkillController
             throw; // [null/range check failed]
           }
           lVar4 = FUN_18046c0a0(0);
-          if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
-          lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
+          if ((lVar4 == null) || (lVar4.villageAreaID == null)) throw; // [null/range check failed]
+          lVar4 = WorldData.Player(lVar4.villageAreaID,0);
           if (this.targetSkill == null) throw; // [null/range check failed]
           iVar2 = KungfuSkillLvData.StudyMoneyCost(this.targetSkill,0);
           if (lVar4 == null) throw; // [null/range check failed]
           HeroData.ChangeMoney(lVar4,-iVar2,1,0);
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
+        lVar4 = PlotController.LeftFaceHideOffset;
         if (this.targetSkill != null) {
           uVar5 = KungfuSkillLvData.Name(this.targetSkill,1,0);
           uVar5 = String.Format("练习{0}",uVar5,0);
@@ -396,7 +395,7 @@ public class StudySkillController
     // RVA   : 0xB94DD0   Offset: 0xB935D0   Length: 0x59B
     public void RealStartStudySkill()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -408,7 +407,7 @@ public class StudySkillController
         float[] local_res18 = new float[2];
         float[] local_res20 = new float[2];
         uint[] local_28 = new uint[4];
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
+        lVar1 = PlotController.LeftFaceHideOffset;
         if (lVar1 == null) {
         LAB_180b952c0:
                           // WARNING: Subroutine does not return
@@ -455,7 +454,7 @@ public class StudySkillController
             }
             plVar4[5] = lVar5;
             il2cpp_internal(plVar4 + 5,lVar5);
-            local_res18[0] = *(float *)(pStatics + 0x160) * 100.0;
+            local_res18[0] = *(float *)(pPlotController + 0x160) * 100.0;
             lVar5 = il2cpp_value_box(DAT_181d7d0b8,local_res18);
             if ((lVar5 != null) &&
                (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
@@ -472,7 +471,7 @@ public class StudySkillController
             il2cpp_internal(plVar4 + 6,lVar5);
             if (this.targetPracticeExpData != null) {
               local_res20[0] =
-                   *(float *)(pStatics + 0x160) *
+                   *(float *)(pPlotController + 0x160) *
                    this.targetPracticeExpData.maxPracticeExp;
               lVar5 = Single.ToString(local_res20,"f0",0);
               if ((lVar5 != null) &&
@@ -557,7 +556,6 @@ public class StudySkillController
     // RVA   : 0xB93AC0   Offset: 0xB922C0   Length: 0x381
     public void AutoStudySkill()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         float fVar1;
         ulong uVar2;
         bool cVar3;
@@ -568,19 +566,19 @@ public class StudySkillController
         if (this.targetSkill != null) {
           lVar4 = KungfuSkillLvData.DataBase(this.targetSkill,0);
           if (lVar4 != null) {
-            if (*(int *)(lVar4 + 48) == 0) {
-              if ((*pStatics == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics + 32)) == null)
-              throw; // [null/range check failed]
+            if (lVar4.Areas == null) {
+              if ((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData,
+                 lVar4 == null)) throw; // [null/range check failed]
               lVar4 = WorldData.Player(lVar4,0);
               StudySkillController.GetAutoPracticeCost(this,0);
               if (lVar4 == null) throw; // [null/range check failed]
               HeroData.ChangeMana(lVar4);
             }
             else {
-              if ((*pStatics == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics + 32)) == null)
-              throw; // [null/range check failed]
+              if ((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData,
+                 lVar4 == null)) throw; // [null/range check failed]
               lVar4 = WorldData.Player(lVar4,0);
               StudySkillController.GetAutoPracticeCost(this,0);
               if (lVar4 == null) throw; // [null/range check failed]
@@ -593,7 +591,8 @@ public class StudySkillController
                 uVar2 = this.finishCallFuc;
                 if (this.targetPracticeExpData != null) {
                   fVar1 = this.targetPracticeExpData.maxPracticeExp;
-                  local_res8[0] = fVar1 * *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x160);
+                  local_res8[0] =
+                       fVar1 * *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x160);
                   uVar5 = Single.ToString(local_res8,0);
                   if (lVar4 != null) {
                     Component.SendMessage(lVar4,uVar2,uVar5,0);
@@ -619,7 +618,6 @@ public class StudySkillController
     // RVA   : 0xB94790   Offset: 0xB92F90   Length: 0x630
     public void PlayerStudySkill()
     {
-        var pStatics_2bf0 = *(int64*)(DAT_181d92bf0 + 184);
         var pStatics_2d70 = *(int64*)(DAT_181d82d70 + 184);
         var pStatics_2ef0 = *(int64*)(DAT_181d82ef0 + 184);
         var pStatics_3070 = *(int64*)(DAT_181d83070 + 184);
@@ -664,8 +662,9 @@ public class StudySkillController
             if (this.studySkillUIPanel != null) {
               GameObject.SetActive(this.studySkillUIPanel,1,0);
               this.inStudy = 1;
-              if (*pStatics_2bf0 != 0) {
-                CloudAnimController.PlayerCloudAnim(*pStatics_2bf0,0);
+              if (CloudAnimController._instance != null) {
+                CloudAnimController.PlayerCloudAnim
+                          (CloudAnimController._instance,0);
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/紧张",0);
                 if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
                   plVar7 = plVar4;
@@ -705,7 +704,7 @@ public class StudySkillController
                       uVar5 = Component.get_gameObject(this,0);
                       if (lVar3 == null) throw; // [null/range check failed]
                       WeatherController.SetWeatherSpeActive(lVar3,0,uVar5,0);
-                      lVar3 = *(int64 *)(*(int64 *)(DAT_181d82e70 + 184) + 8);
+                      lVar3 = *(int64 *)(*(int64 *)(StudyDodgePlayer_StaticsPtr + 184) + 8);
                       if (lVar3 == null) throw; // [null/range check failed]
                       StudyDodgeSkillController.StartStudyDodgeSkill
                                 (lVar3,this.targetSkill,0);
@@ -753,7 +752,6 @@ public class StudySkillController
     // RVA   : 0xB93EC0   Offset: 0xB926C0   Length: 0x610
     public void FinishStudySkill(float expNum)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -783,15 +781,17 @@ public class StudySkillController
               if (this.hpBarRoot == null) break;
               GameObject.SetActive(this.hpBarRoot,0,0);
               this.inStudy = 0;
-              if ((*pStatics == 0) ||
-                 (lVar3 = *(int64 *)(*pStatics + 32)) == null) break;
+              if ((GameController._instance == null) ||
+                 (lVar3 = GameController._instance.worldData,
+                 lVar3 == null)) break;
               lVar3 = WorldData.Player(lVar3,0);
-              if ((*pStatics == 0) ||
-                 (lVar6 = *(int64 *)(*pStatics + 32)) == null) break;
+              if ((GameController._instance == null) ||
+                 (lVar6 = GameController._instance.worldData,
+                 lVar6 == null)) break;
               lVar6 = WorldData.Player(lVar6,0);
               if ((lVar6 == null) ||
-                 (uVar7 = Mathf.Max(0x3f800000,*(uint32 *)(lVar6 + 0x178),0), lVar3 == null)) break;
-              *(uint32 *)(lVar3 + 0x178) = uVar7;
+                 (uVar7 = Mathf.Max(0x3f800000,lVar6.skinUnlockData,0), lVar3 == null)) break;
+              lVar3.InteractInn = uVar7;
               lVar3 = this.targetPracticeExpData;
               if (lVar3 == null) {
                 if (this.targetSkill == null) break;
@@ -799,9 +799,9 @@ public class StudySkillController
                 this.targetPracticeExpData = new SkillMaxPracticeExpData(uVar7,0);
                 if (this.targetPracticeExpData == null) break;
                 this.targetPracticeExpData.maxPracticeExp = local_res10[0];
-                if (((*pStatics == 0) ||
-                    (lVar3 = *(int64 *)(*pStatics + 32)) == null) ||
-                   (lVar3 = WorldData.Player(lVar3,0)) == null) break;
+                if (((GameController._instance == null) ||
+                    (lVar3 = GameController._instance.worldData,
+                    lVar3 == null)) || (lVar3 = WorldData.Player(lVar3,0)) == null) break;
                 HeroData.AddSkillMaxPracticeExp(lVar3,this.targetPracticeExpData,0);
         LAB_180b9430e:
                 lVar3 = **(int64 **)(DAT_181d5a578 + 184);
@@ -825,7 +825,7 @@ public class StudySkillController
                  (cVar1 = String.op_Inequality(this.finishCallFuc,"",0),
                  cVar1)) {
                 uVar2 = this.finishCallFuc;
-                lVar3 = **(int64 **)(DAT_181d6c960 + 184);
+                lVar3 = PlotController._instance;
                 uVar4 = Single.ToString(local_res10,0);
                 if (lVar3 == null) break;
                 Component.SendMessage(lVar3,uVar2,uVar4,0);
@@ -882,9 +882,7 @@ public class StudySkillController
           FUN_181805690(lVar1,0x3e99999a,DAT_181d79458);
           FUN_181805690(lVar1,0x3ecccccd,DAT_181d79458);
           FUN_181805690(lVar1,0x3f000000,DAT_181d79458);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181d82f70 + 184) + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          StudySkillController.OverMaxLvMinusExpRate = lVar1;
           return;
         }
     }

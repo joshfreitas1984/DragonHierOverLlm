@@ -36,21 +36,22 @@ public class ForceGroupFightMatchChooseController
     // RVA   : 0xBB4370   Offset: 0xBB2B70   Length: 0x409
     public void ShowForceGroupFightMatchChoosePanel()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
         if (this.forceGroupFightMatchChooseUIPanel != null) {
           GameObject.SetActive(this.forceGroupFightMatchChooseUIPanel,1,0);
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null
+             ) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               if (*(char *)(lVar2 + 180) == false) {
-                lVar2 = **(int64 **)(DAT_181d6c960 + 184);
-                if ((*pStatics != 0) &&
-                   (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+                lVar2 = PlotController._instance;
+                if ((GameController._instance != null) &&
+                   (lVar3 = GameController._instance.worldData,
+                   lVar3 != null)) {
                   lVar3 = WorldData.Player(lVar3,0);
                   if (lVar3 != null) {
                     uVar4 = HeroData.GetForceLeader(lVar3,0);
@@ -74,13 +75,14 @@ public class ForceGroupFightMatchChooseController
               else {
                 lVar2 = il2cpp_internal(DAT_181d6f030);
                 FUN_180f58a90(lVar2,DAT_181d678f8);
-                if ((*pStatics != 0) &&
-                   (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar3 = GameController._instance.worldData,
+                   lVar3 != null)) {
                   lVar3 = WorldData.Player(lVar3,0);
                   if (lVar3 != null) {
                     lVar3 = HeroData.GetForceLeader(lVar3,0);
                     if ((lVar3 != null) && (lVar2 != null)) {
-                      FUN_181814fa0(lVar2,*(uint32 *)(lVar3 + 88),DAT_181d67a78);
+                      FUN_181814fa0(lVar2,lVar3.TempHeros,DAT_181d67a78);
                       FUN_181814fa0(lVar2,0xffffffff,DAT_181d67a78);
                       FUN_181814fa0(lVar2,0xffffffff,DAT_181d67a78);
                       FUN_181814fa0(lVar2,0xffffffff,DAT_181d67a78);
@@ -226,7 +228,6 @@ public class ForceGroupFightMatchChooseController
     // RVA   : 0xBB38C0   Offset: 0xBB20C0   Length: 0x47D
     public void HeroBackClicked(GameObject buttonClicked)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -238,14 +239,14 @@ public class ForceGroupFightMatchChooseController
         FUN_180f58a90(lVar2,DAT_181d63c78);
         iVar7 = 0;
         while( true ) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = HeroData.GetForce(lVar3,0,0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 112) == 0)) throw; // [null/range check failed]
-          if (*(int *)(*(int64 *)(lVar3 + 112) + 24) <= iVar7) break;
+          if ((lVar3 == null) || (lVar3.lastRandomWorldEventDay == null)) throw; // [null/range check failed]
+          if (*(int *)(lVar3.lastRandomWorldEventDay + 24) <= iVar7) break;
           lVar3 = this.forceGroupMatchHeroListChoosen;
           lVar4 = FUN_18046c0a0(0);
           if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
@@ -258,17 +259,17 @@ public class ForceGroupFightMatchChooseController
           cVar1 = FUN_181815240(lVar3);
           if (!cVar1) {
             lVar3 = FUN_18046c0a0(0);
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-            lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+            if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+            lVar3 = WorldData.Player(lVar3.villageAreaID,0);
             if (lVar3 == null) throw; // [null/range check failed]
             lVar3 = HeroData.GetForce(lVar3,0,0);
             if (lVar3 == null) throw; // [null/range check failed]
             lVar3 = ForceData.GetOwnHero(lVar3);
             if (lVar3 == null) throw; // [null/range check failed]
-            if (*(char *)(lVar3 + 96) == false) {
+            if (!lVar3.BigMapRandomEventDatas) {
               lVar3 = FUN_18046c0a0(0);
-              if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-              lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+              if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+              lVar3 = WorldData.Player(lVar3.villageAreaID,0);
               if (lVar3 == null) throw; // [null/range check failed]
               lVar3 = HeroData.GetForce(lVar3,0,0);
               if (lVar3 == null) throw; // [null/range check failed]
@@ -276,8 +277,8 @@ public class ForceGroupFightMatchChooseController
               if (lVar3 == null) throw; // [null/range check failed]
               if (*(char *)(lVar3 + 209) == false) {
                 lVar3 = FUN_18046c0a0(0);
-                if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-                lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
+                if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+                lVar3 = WorldData.Player(lVar3.villageAreaID,0);
                 if (lVar3 == null) throw; // [null/range check failed]
                 lVar3 = HeroData.GetForce(lVar3,0,0);
                 if (lVar3 == null) throw; // [null/range check failed]
@@ -360,7 +361,6 @@ public class ForceGroupFightMatchChooseController
     // RVA   : 0xBB4780   Offset: 0xBB2F80   Length: 0x1E8
     public void SureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         long lVar1;
         long lVar2;
         uint uVar3;
@@ -372,9 +372,9 @@ public class ForceGroupFightMatchChooseController
             if (lVar1.Count <= (int)uVar3) {
               if (this.forceGroupFightMatchChooseUIPanel != null) {
                 GameObject.SetActive(this.forceGroupFightMatchChooseUIPanel,0,0);
-                if (*pStatics != 0) {
+                if (PlotController._instance != null) {
                   PlotController.RealStartForceGroupFightMatchPlot
-                            (*pStatics,"true",0);
+                            (PlotController._instance,"true",0);
                   return;
                 }
               }
@@ -403,12 +403,11 @@ public class ForceGroupFightMatchChooseController
     // RVA   : 0xBB4970   Offset: 0xBB3170   Length: 0xDC
     public void SureStartForceGroupFight()
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         if (this.forceGroupFightMatchChooseUIPanel != null) {
           GameObject.SetActive(this.forceGroupFightMatchChooseUIPanel,0,0);
-          if (*pStatics != 0) {
+          if (PlotController._instance != null) {
             PlotController.RealStartForceGroupFightMatchPlot
-                      (*pStatics,"true",0);
+                      (PlotController._instance,"true",0);
             return;
           }
         }

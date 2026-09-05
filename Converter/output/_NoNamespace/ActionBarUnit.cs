@@ -14,7 +14,7 @@ public class ActionBarUnit
     // RVA   : 0xA0A960   Offset: 0xA09160   Length: 0x51E
     public void RefreshActionBarUnit(bool useAnim)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -34,8 +34,8 @@ public class ActionBarUnit
           lVar4 = Component.get_transform(this,0);
           if (this.targetBattleUnit == null) throw; // [null/range check failed]
           fVar8 = this.targetBattleUnit.battleMove;
-          fVar8 = (float)FUN_1810a8ba0(fVar8 / *(float *)(pStatics + 0x228),0,
-                                       0x3f800000,0);
+          fVar8 = (float)FUN_1810a8ba0(fVar8 / *(float *)(pPlotController
+                                                         + 0x228),0,0x3f800000,0);
           if (lVar4 == null) throw; // [null/range check failed]
           uStack_24 = 0;
           local_28 = fVar8 * 1296.0;
@@ -48,7 +48,8 @@ public class ActionBarUnit
           uVar3 = Component.get_transform(this,0);
           if (this.targetBattleUnit == null) throw; // [null/range check failed]
           fVar8 = this.targetBattleUnit.battleMove;
-          local_28 = (float)FUN_1810a8ba0(fVar8 / *(float *)(pStatics + 0x228),
+          local_28 = (float)FUN_1810a8ba0(fVar8 / *(float *)(*(int64 *)
+                                                              (PlotController_StaticsPtr + 184) + 0x228),
                                           0,0x3f800000,0);
           local_28 = local_28 * 1296.0;
           uStack_24 = 0;
@@ -58,7 +59,7 @@ public class ActionBarUnit
         lVar4 = Component.get_transform(this,0);
         if (lVar4 != null) {
           plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d6bc40);
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+          lVar4 = PlotController.StopWarCostFavor;
           if (lVar4 != null) {
             uVar3 = *(uint64 *)(lVar4 + 0x110);
             uVar7 = this.targetBattleUnit;
@@ -71,7 +72,7 @@ public class ActionBarUnit
               fVar11 = pfVar6[3];
             }
             else {
-              lVar4 = pStatics;
+              lVar4 = pPlotController;
               fVar8 = *(float *)(lVar4 + 0x340);
               fVar9 = *(float *)(lVar4 + 0x344);
               fVar10 = *(float *)(lVar4 + 0x348);
@@ -82,7 +83,7 @@ public class ActionBarUnit
               local_28 = fVar8;
               fStack_1c = fVar11;
               (**(code **)(*plVar5 + 0x2a8))(plVar5,&local_28,*(uint64 *)(*plVar5 + 0x2b0));
-              uVar3 = *(uint64 *)(*(int64 *)(DAT_181d66570 + 184) + 72);
+              uVar3 = MouseController.hoveredUI;
               uVar7 = Component.get_gameObject(this,0);
               cVar2 = Object.op_Equality(uVar3,uVar7,0);
               if (!cVar2) {
@@ -113,17 +114,16 @@ public class ActionBarUnit
     // RVA   : 0xA0A700   Offset: 0xA08F00   Length: 0x251
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        lVar2 = *(int64 *)(pStatics + 80);
+        lVar2 = PlotController.StopWarCostFavor;
         if (lVar2 != null) {
           cVar1 = BattleController.HaveFocusTarget(lVar2,0);
           if (cVar1) {
             return;
           }
-          lVar2 = *(int64 *)(pStatics + 80);
+          lVar2 = PlotController.StopWarCostFavor;
           if (lVar2 != null) {
             uVar3 = *(uint64 *)(lVar2 + 0x110);
             cVar1 = Object.op_Inequality(uVar3,0,0);

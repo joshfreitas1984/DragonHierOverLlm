@@ -14,7 +14,7 @@ public class SaveSlotController
         uint uVar2;
         long lVar3;
         ulong uVar4;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d79ad0 + 184) + 8);
+        lVar1 = SaveLoadMenuController._instance;
         lVar3 = Component.get_gameObject(this,0);
         if (lVar3 != null) {
           uVar4 = Object.get_name(lVar3,0);

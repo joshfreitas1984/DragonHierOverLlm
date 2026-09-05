@@ -11,7 +11,7 @@ public class BattleBackground
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar1 = PlotController.StopWarCostFavor;
         if (lVar1 != null) {
           BattleController.OnDrag(lVar1,delta,0);
           return;
@@ -27,7 +27,7 @@ public class BattleBackground
         ulong uVar3;
         long lVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar1 = PlotController.StopWarCostFavor;
         if (lVar1 == null) {
         LAB_1807facaa:
                           // WARNING: Subroutine does not return

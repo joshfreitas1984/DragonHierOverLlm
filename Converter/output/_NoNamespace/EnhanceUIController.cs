@@ -63,7 +63,7 @@ public class EnhanceUIController
     // RVA   : 0x9339E0   Offset: 0x9321E0   Length: 0xC5C
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         byte uVar2;
         int iVar3;
@@ -93,10 +93,10 @@ public class EnhanceUIController
             iVar4 = EnhanceUIController.EnhanceNeedBuildingLv(this,0);
             uVar11 = "提升强化等级至+{6}\n{0}需要建筑等级 {1}级</color>\n{2}需要{5}技能 {3}</color>\n{4}";
             if (iVar3 < iVar4) {
-              lVar5 = *(int64 *)(pStatics + 0x2c8);
+              lVar5 = *(int64 *)(pPlotController + 0x2c8);
             }
             else {
-              lVar5 = *(int64 *)(pStatics + 0x260);
+              lVar5 = *(int64 *)(pPlotController + 0x260);
             }
             if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
@@ -133,10 +133,10 @@ public class EnhanceUIController
             fVar13 = (float)EnhanceUIController.GetPlayerTargetSkill(this,0);
             iVar3 = EnhanceUIController.EnhanceNeedSkillLv(this,0);
             if (fVar13 < (float)iVar3) {
-              lVar5 = *(int64 *)(pStatics + 0x2c8);
+              lVar5 = *(int64 *)(pPlotController + 0x2c8);
             }
             else {
-              lVar5 = *(int64 *)(pStatics + 0x260);
+              lVar5 = *(int64 *)(pPlotController + 0x260);
             }
             if ((lVar5 != null) &&
                (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
@@ -171,7 +171,7 @@ public class EnhanceUIController
               lVar5 = GlobalData.GetResourceDescribe(uVar10,0);
             }
             else {
-              lVar5 = *(int64 *)(pStatics + 0x430);
+              lVar5 = *(int64 *)(pPlotController + 0x430);
               if (lVar5 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -201,7 +201,7 @@ public class EnhanceUIController
             il2cpp_internal(plVar7 + 8,lVar5);
             uVar12 = 0;
             iVar3 = this.enhanceType;
-            lVar5 = *(int64 *)(pStatics + 0x4a8);
+            lVar5 = *(int64 *)(pPlotController + 0x4a8);
             if (iVar3 == 0) {
               uVar12 = 6;
             }
@@ -307,8 +307,8 @@ public class EnhanceUIController
           if (((lVar5 == null) || (lVar5 = GameObject.get_transform(lVar5,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"EnhanceCost",0)) == null) throw; // [null/range check failed]
           uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
-          lVar5 = *(int64 *)(pStatics + 0x578);
-          uVar11 = *(uint64 *)(pStatics + 0x2c8);
+          lVar5 = *(int64 *)(pPlotController + 0x578);
+          uVar11 = *(uint64 *)(pPlotController + 0x2c8);
           if (lVar5 == null) throw; // [null/range check failed]
           uVar12 = this.enhanceType;
           if (*(uint32 *)(lVar5 + 24) <= uVar12) {
@@ -399,7 +399,7 @@ public class EnhanceUIController
               (lVar4 = GameObject.get_transform(this.enhanceUIPanel,0)) != null) &&
              (lVar4 = Transform.Find(lVar4,"Title",0)) != null) {
             uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-            lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x578);
+            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x578);
             if (lVar4 != null) {
               uVar1 = this.enhanceType;
               if (*(uint32 *)(lVar4 + 24) <= uVar1) {
@@ -897,7 +897,7 @@ public class EnhanceUIController
     // RVA   : 0x931680   Offset: 0x92FE80   Length: 0x3DB
     public void EnhanceButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -906,18 +906,18 @@ public class EnhanceUIController
         ulong uVar6;
         float fVar9;
         if (!this.useMoney) {
-          if (((*pStatics == 0) ||
-              (lVar5 = *(int64 *)(*pStatics + 32)) == null) ||
-             (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData, lVar5 == null
+              )) || (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
           lVar5 = HeroData.GetForce(lVar5,0,0);
           uVar6 = EnhanceUIController.GetEnhanceResourceCost(this,0);
           if (lVar5 == null) throw; // [null/range check failed]
           ForceData.CostResource(lVar5,uVar6,1,0);
         }
         else {
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           fVar9 = (float)EnhanceUIController.GetEnhanceResourceCostNum(this,0);
           if (lVar5 == null) throw; // [null/range check failed]
@@ -934,8 +934,8 @@ public class EnhanceUIController
           }
           NGUITools.PlaySound(plVar8,0);
         }
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x578);
+        lVar5 = PlotController.LeftFaceHideOffset;
+        lVar3 = *(int64 *)(pPlotController + 0x578);
         if (lVar3 != null) {
           uVar2 = this.enhanceType;
           if (*(uint32 *)(lVar3 + 24) <= uVar2) {
@@ -955,7 +955,6 @@ public class EnhanceUIController
     // RVA   : 0x9321C0   Offset: 0x9309C0   Length: 0x175
     public int EnhanceNeedBuildingLv()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -969,12 +968,12 @@ public class EnhanceUIController
           FUN_1800d6620();
         }
         lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070);
-        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) goto LAB_180932330;
-        iVar1 = *(int *)(*(int64 *)(lVar5 + 32) + 60);
+        if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_180932330;
+        iVar1 = *(int *)(lVar5.villageAreaID + 60);
         if (this.enhanceType == 1) {
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
-          goto LAB_180932330;
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null
+             ) goto LAB_180932330;
           lVar5 = WorldData.Player(lVar5,0);
           if (lVar5 == null) goto LAB_180932330;
           cVar2 = HeroData.HaveForceFunction(lVar5,2);
@@ -993,7 +992,6 @@ public class EnhanceUIController
     // RVA   : 0x932340   Offset: 0x930B40   Length: 0x17C
     public int EnhanceNeedSkillLv()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -1007,12 +1005,12 @@ public class EnhanceUIController
           FUN_1800d6620();
         }
         lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070);
-        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) goto LAB_1809324b7;
-        iVar1 = *(int *)(*(int64 *)(lVar5 + 32) + 60);
+        if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_1809324b7;
+        iVar1 = *(int *)(lVar5.villageAreaID + 60);
         if (this.enhanceType == 1) {
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
-          goto LAB_1809324b7;
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null
+             ) goto LAB_1809324b7;
           lVar5 = WorldData.Player(lVar5,0);
           if (lVar5 == null) goto LAB_1809324b7;
           cVar2 = HeroData.HaveForceFunction(lVar5,2);
@@ -1105,17 +1103,17 @@ public class EnhanceUIController
     // RVA   : 0x933330   Offset: 0x931B30   Length: 0x128
     public float GetPlayerTargetSkill()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         uint uVar3;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             iVar1 = this.enhanceType;
             uVar3 = 0;
-            lVar2 = *(int64 *)(lVar2 + 0x168);
+            lVar2 = lVar2.showRoomChangeFame;
             if (iVar1 == 0) {
               uVar3 = 6;
             }
@@ -1126,10 +1124,10 @@ public class EnhanceUIController
               uVar3 = 8;
             }
             if (lVar2 != null) {
-              if (*(uint32 *)(lVar2 + 24) <= uVar3) {
+              if (lVar2.cityAreaID <= uVar3) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              return *(uint32 *)(*(int64 *)(lVar2 + 16) + 32 + (uint64)uVar3 * 4);
+              return *(uint32 *)(lVar2.chapter + 32 + (uint64)uVar3 * 4);
             }
           }
         }
@@ -1166,15 +1164,15 @@ public class EnhanceUIController
     // RVA   : 0x933490   Offset: 0x931C90   Length: 0x1D2
     public bool HaveResource()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         byte uVar2;
         long lVar3;
         ulong uVar4;
         float extraout_XMM0_Da;
         if (!this.useMoney) {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null
+             ) {
             lVar3 = WorldData.Player(lVar3,0);
             if (lVar3 != null) {
               lVar3 = HeroData.GetForce(lVar3,0,0);
@@ -1187,11 +1185,12 @@ public class EnhanceUIController
           }
         }
         else {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null
+             ) {
             lVar3 = WorldData.Player(lVar3,0);
-            if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
-              iVar1 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
+            if ((lVar3 != null) && (lVar3.speBookStorageSpeAdd != null)) {
+              iVar1 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
               EnhanceUIController.GetEnhanceResourceCostNum(this,0);
               return extraout_XMM0_Da <= (float)iVar1;
             }

@@ -148,8 +148,6 @@ public class UIViewport
     // RVA   : 0x9D5CE0   Offset: 0x9D44E0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1809d5ce0(int64 this)
-        {
         this.fullSize = 0x3f800000;
         FUN_18044ef50(this,0);
     }

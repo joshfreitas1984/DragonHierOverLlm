@@ -65,9 +65,7 @@ public class UIDragObject
     // RVA   : 0x13DA450   Offset: 0x13D8C50   Length: 0x13
     public Vector3 get_dragMovement()
     {
-        uint64 * FUN_1813da450(uint64 *this,int64 param_2)
-        {
-        uint32 uVar1;
+        uint uVar1;
         uVar1 = *(uint32 *)(param_2 + 80);
         *this = *(uint64 *)(param_2 + 72);
         *(uint32 *)(this + 1) = uVar1;
@@ -78,9 +76,7 @@ public class UIDragObject
     // RVA   : 0x13DA470   Offset: 0x13D8C70   Length: 0x10
     public void set_dragMovement(Vector3 value)
     {
-        void FUN_1813da470(int64 this,uint64 *value)
-        {
-        uint32 uVar1;
+        uint uVar1;
         uVar1 = *(uint32 *)(value + 1);
         this.scale = *value;
         *(uint32 *)(this + 80) = uVar1;
@@ -141,8 +137,6 @@ public class UIDragObject
     // RVA   : 0x13D92A0   Offset: 0x13D7AA0   Length: 0x8
     private void OnDisable()
     {
-        void FUN_1813d92a0(int64 this)
-        {
         this.mStarted = 0;
     }
 
@@ -306,7 +300,7 @@ public class UIDragObject
     // RVA   : 0x13D9B90   Offset: 0x13D8390   Length: 0x44F
     private void OnPress(bool pressed)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -321,8 +315,8 @@ public class UIDragObject
         ulong uStack_30;
         ulong local_28;
         ulong uStack_20;
-        if (*(int *)(pStatics + 212) != -2) {
-          if ((*(int *)(pStatics + 212) != -3) &&
+        if (UICamera.currentTouchID != -2) {
+          if ((UICamera.currentTouchID != -3) &&
              (((fVar7 = (float)Time.get_timeScale(0), 0.01 <= fVar7 || (fVar7 == 0.0)) &&
               (cVar3 = Behaviour.get_enabled(this,0), cVar3)))) {
             uVar4 = Component.get_gameObject(this,0);
@@ -334,7 +328,7 @@ public class UIDragObject
                 if (!pressed) {
                   if (this.mPressed) {
                     iVar1 = this.mTouchID;
-                    if (((iVar1 == *(int *)(pStatics + 212)) &&
+                    if (((iVar1 == UICamera.currentTouchID) &&
                         (this.mPressed = 0, this.restrictWithinPanel)) &&
                        (this.dragEffect == 2)) {
                       if (this.panelRegion == null) goto LAB_1813d9fda;
@@ -349,7 +343,7 @@ public class UIDragObject
                 }
                 else if (!this.mPressed) {
                   this.mTouchID =
-                       *(uint32 *)(pStatics + 212);
+                       UICamera.currentTouchID;
                   this.mStarted = 0x100;
                   UIDragObject.CancelMovement(this,0);
                   if (this.restrictWithinPanel) {
@@ -363,7 +357,7 @@ public class UIDragObject
                     }
                   }
                   UIDragObject.CancelSpring(this,0);
-                  lVar5 = *(int64 *)(pStatics + 192);
+                  lVar5 = UICamera.currentCamera;
                   if (lVar5 != null) {
                     lVar5 = Component.get_transform(lVar5,0);
                     uVar4 = this.panelRegion;
@@ -384,8 +378,8 @@ public class UIDragObject
                       puVar6 = (uint64 *)Quaternion.op_Multiply(&local_48,&local_28,&local_58,0);
                       local_48 = *puVar6;
                       local_40 = *(uint32 *)(puVar6 + 1);
-                      local_50 = *(uint32 *)(pStatics + 108);
-                      local_58 = *(uint64 *)(pStatics + 100);
+                      local_50 = *(uint32 *)(pUICamera + 108);
+                      local_58 = UICamera.lastWorldPosition;
                       local_38 = 0;
                       uStack_30 = 0;
                       Plane.ctor(&local_38,&local_48,&local_58,0);
@@ -408,7 +402,6 @@ public class UIDragObject
     // RVA   : 0x13D92B0   Offset: 0x13D7AB0   Length: 0x6E0
     private void OnDrag(Vector2 delta)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -441,7 +434,7 @@ public class UIDragObject
         uint64 local_88;
         if (this.mPressed) {
           iVar1 = this.mTouchID;
-          if ((iVar1 == *(int *)(pStatics + 212)) &&
+          if ((iVar1 == UICamera.currentTouchID) &&
              (cVar4 = Behaviour.get_enabled(this,0), cVar4)) {
             uVar5 = Component.get_gameObject(this,0);
             cVar4 = NGUITools.GetActive(uVar5,0);
@@ -449,15 +442,15 @@ public class UIDragObject
               uVar5 = this.target;
               cVar4 = Object.op_Inequality(uVar5,0,0);
               if (cVar4) {
-                lVar2 = *(int64 *)(pStatics + 224);
+                lVar2 = UICamera.currentTouch;
                 fVar8 = local_e0;
                 if (lVar2 != null) {
-                  *(uint32 *)(lVar2 + 112) = 2;
-                  lVar2 = *(int64 *)(pStatics + 224);
-                  lVar3 = *(int64 *)(pStatics + 192);
+                  lVar2.clickNotification = 2;
+                  lVar2 = UICamera.currentTouch;
+                  lVar3 = UICamera.currentCamera;
                   if ((lVar2 != null) && (lVar3 != null)) {
                     local_e0 = 0.0;
-                    local_e8 = *(uint64 *)(lVar2 + 20);
+                    local_e8 = lVar2.pos;
                     puVar6 = (uint32 *)Camera.ScreenPointToRay(&local_b8,lVar3,&local_e8,0);
                     local_b8 = *puVar6;
                     uStack_b4 = puVar6[1];

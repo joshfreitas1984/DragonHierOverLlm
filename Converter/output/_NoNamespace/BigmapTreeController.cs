@@ -204,8 +204,6 @@ public class BigmapTreeController
     // RVA   : 0xCDCEC0   Offset: 0xCDB6C0   Length: 0x5
     private void <Update>b__4_0()
     {
-        void FUN_180cdcec0(int64 this)
-        {
         this.tweening = 0;
     }
 
@@ -213,8 +211,6 @@ public class BigmapTreeController
     // RVA   : 0xCDCEC0   Offset: 0xCDB6C0   Length: 0x5
     private void <Update>b__4_1()
     {
-        void FUN_180cdcec0(int64 this)
-        {
         this.tweening = 0;
     }
 

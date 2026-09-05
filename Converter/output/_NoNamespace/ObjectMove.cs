@@ -216,8 +216,6 @@ public class ObjectMove
     // RVA   : 0x46DEC0   Offset: 0x46C6C0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_18046dec0(int64 this)
-        {
         this.MoveSpeed = 0x41200000;
         FUN_18044ef50(this,0);
     }

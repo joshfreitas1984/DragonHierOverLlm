@@ -85,7 +85,9 @@ public class <GetEnumerator>d__2
     // RVA   : 0xCCE920   Offset: 0xCCD120   Length: 0xB
     private virtual T System.Collections.Generic.IEnumerator<T>.get_Current()
     {
-        uint64 * FUN_180cce920(uint64 *this,int64 param_2)
+        uint64 *
+        GetEnumerator_d__2__System_Collections_Generic_IEnumerator_T.get_Current
+                (uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 28);

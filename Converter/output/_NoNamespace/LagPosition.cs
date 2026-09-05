@@ -29,8 +29,6 @@ public class LagPosition
     // RVA   : 0xA844A0   Offset: 0xA82CA0   Length: 0x10
     public void OnRepositionEnd()
     {
-        void FUN_180a844a0(uint64 this)
-        {
         LagPosition.Interpolate(this,0x447a0000,0);
     }
 

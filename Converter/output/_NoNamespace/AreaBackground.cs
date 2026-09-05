@@ -10,7 +10,6 @@ public class AreaBackground
     // RVA   : 0xA0D580   Offset: 0xA0BD80   Length: 0x2CA
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -28,8 +27,8 @@ public class AreaBackground
         }
         cVar1 = GameObject.get_activeInHierarchy(lVar2,0);
         if (cVar1) {
-          if (*pStatics == 0) goto LAB_180a0d845;
-          cVar1 = GameController.HaveSpeUI(*pStatics,1,0);
+          if (GameController._instance == null) goto LAB_180a0d845;
+          cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (!cVar1) {
             lVar2 = FUN_18046bac0(0);
             if (lVar2 == null) goto LAB_180a0d845;
@@ -94,7 +93,7 @@ public class AreaBackground
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.OnDrag(lVar1,delta,0);
           return;
@@ -106,7 +105,7 @@ public class AreaBackground
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.OnScroll(lVar1,delta,0);
           return;

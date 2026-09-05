@@ -36,8 +36,6 @@ public class UICenterOnChild
     // RVA   : 0x13D2CC0   Offset: 0x13D14C0   Length: 0x7
     private void Start()
     {
-        void FUN_1813d2cc0(uint64 this)
-        {
         UICenterOnChild.Recenter(this,0);
     }
 
@@ -92,8 +90,6 @@ public class UICenterOnChild
     // RVA   : 0x13D1DD0   Offset: 0x13D05D0   Length: 0x12
     private void OnValidate()
     {
-        void FUN_1813d1dd0(int64 this)
-        {
         this.nextPageThreshold = this.nextPageThreshold & 0x7fffffff;
     }
 
@@ -101,7 +97,6 @@ public class UICenterOnChild
     // RVA   : 0x13D1DF0   Offset: 0x13D05F0   Length: 0xECF
     public void Recenter()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -405,7 +400,7 @@ public class UICenterOnChild
           }
         }
         if (this.nextPageThreshold <= 0.0) goto LAB_1813d2c68;
-        if (*(int64 *)(pStatics + 224) == 0) goto LAB_1813d2c68;
+        if (UICamera.currentTouch == null) goto LAB_1813d2c68;
         uVar6 = this.mCenteredObject;
         cVar2 = Object.op_Inequality(uVar6,0,0);
         if (!cVar2) goto LAB_1813d2c68;
@@ -423,7 +418,7 @@ public class UICenterOnChild
         }
         cVar2 = Object.op_Equality(uVar6,uVar7,0);
         if (!cVar2) goto LAB_1813d2c68;
-        lVar10 = *(int64 *)(pStatics + 224);
+        lVar10 = UICamera.currentTouch;
         uVar21 = local_128;
         if (lVar10 == null) goto LAB_1813d2c9e;
         local_118 = lVar10.momentumAmount;
@@ -612,8 +607,6 @@ public class UICenterOnChild
     // RVA   : 0x13D2CD0   Offset: 0x13D14D0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1813d2cd0(int64 this)
-        {
         this.springStrength = 0x41000000;
         FUN_18044ef50(this,0);
     }

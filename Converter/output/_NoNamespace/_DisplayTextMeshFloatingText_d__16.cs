@@ -118,7 +118,8 @@ public class <DisplayTextMeshFloatingText>d__16
         }
         fVar15 = this.<current_Count>5__4;
         if (fVar15 <= 0.0) {
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d85df0 + 184) + 8);
+          lVar3 = *(int64 *)
+                   (*(int64 *)(_DisplayTextMeshProFloatingText_d__15_StaticsPtr + 184) + 8);
           uVar8 = FUN_180d8cf10(0,20);
           if (lVar3 != null) {
             if (uVar8 < *(uint32 *)(lVar3 + 24)) {
@@ -227,7 +228,9 @@ public class <DisplayTextMeshFloatingText>d__16
                     uStack_70 = CONCAT44(uStack_70._4_4_,local_80);
                     Transform.set_forward(*(int64 *)(lVar3 + 56),&local_78,0);
         LAB_180b0ff4c:
-                    this.<>2__current = **(uint64 **)(DAT_181d85df0 + 184);
+                    this.<>2__current =
+                         **(uint64 **)(_DisplayTextMeshProFloatingText_d__15_StaticsPtr + 184);
+                    il2cpp_internal();
                     this.<>1__state = 1;
                     return true;
                   }

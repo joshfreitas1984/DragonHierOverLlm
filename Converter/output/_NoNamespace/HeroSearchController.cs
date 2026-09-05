@@ -75,7 +75,7 @@ public class HeroSearchController
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+        if (PlotController._instance == 1) {
           cVar1 = RailManager.get_Initialized(0);
           if (!cVar1) {
             Debug.LogError("Rail sdk is not initialized!",0);
@@ -209,7 +209,7 @@ public class HeroSearchController
     // RVA   : 0xB37B10   Offset: 0xB36310   Length: 0x51C
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -246,7 +246,7 @@ public class HeroSearchController
                       uVar4 = new ByteReader(uVar3,0);
                       if (lVar2 != null) {
                         FUN_181827900(lVar2,uVar4,DAT_181d878e8);
-                        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                        lVar2 = GameController.lockObj;
                         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 208)) != null) {
                           lVar2 = FUN_1808acf30(lVar2,DAT_181d94200);
                           if (lVar2 != null) {
@@ -264,8 +264,9 @@ public class HeroSearchController
                                 ZhSegment.Initialize(&local_40,DAT_181d71c38);
                                 return;
                               }
-                              if (*(int *)(pStatics + 8) == 1) {
-                                lVar5 = *(int64 *)(pStatics + 32);
+                              if (PlotController.LeftFaceHideOffset == 1) {
+                                lVar5 = *(int64 *)
+                                         (pPlotController + 32);
                                 if (lVar2 == null) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
@@ -378,11 +379,12 @@ public class HeroSearchController
         ulong uVar5;
         ushort uVar6;
         ushort uVar7;
-        if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+        if (PlotController._instance == 1) {
           lVar1 = new c.DisplayClass9_0(0);
           if ((this.heroSearchNameInputField != null) && (lVar1 != null)) {
             *(uint64 *)(lVar1 + 16) = *(uint64 *)(this.heroSearchNameInputField + 0x170);
-            *(uint8 *)(lVar1 + 24) = *(uint8 *)(*(int64 *)(DAT_181d4ef00 + 184) + 128);
+            *(uint8 *)(lVar1 + 24) =
+                 *(uint8 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 128);
             plVar2 = (int64 *)rail_api.RailFactory(0);
             if (plVar2 != (int64 *)0) {
               lVar4 = *plVar2;
@@ -464,8 +466,6 @@ public class HeroSearchController
     // RVA   : 0xB376F0   Offset: 0xB35EF0   Length: 0x7
     public void FinishEditSearchHeroName()
     {
-        void FUN_180b376f0(uint64 this)
-        {
         HeroSearchController.RegenerateHeroIcon(this,0);
     }
 
@@ -628,7 +628,6 @@ public class HeroSearchController
     // RVA   : 0xB38D10   Offset: 0xB37510   Length: 0x4C2
     public void RegenerateHeroIcon()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -646,39 +645,39 @@ public class HeroSearchController
             bVar5 = this.forceIDFliter == -2;
           }
           do {
-            if (((*pStatics == 0) ||
-                (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-               (lVar2 = *(int64 *)(lVar2 + 80)) == null) break;
-            if (*(int *)(lVar2 + 24) <= iVar4) {
+            if (((GameController._instance == null) ||
+                (lVar2 = GameController._instance.worldData,
+                lVar2 == null)) || (lVar2 = lVar2.Heros) == null) break;
+            if (lVar2.cityAreaID <= iVar4) {
               HeroSearchController.RefreshFliter(this,0);
               return;
             }
             lVar2 = FUN_18046c0a0(0);
-            if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-               (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 80)) == null) break;
+            if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+               (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
             lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d643f8);
             if (lVar2 != null) {
               lVar2 = FUN_18046c0a0(0);
-              if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                 (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 80)) == null) break;
+              if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                 (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
               lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d643f8);
               if (lVar2 == null) break;
-              if ((*(char *)(lVar2 + 96) == false) && (!bVar5)) {
+              if ((!lVar2.BigMapRandomEventDatas) && (!bVar5)) {
                 lVar2 = FUN_18046c0a0(0);
-                if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                   (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 80)) == null) break;
+                if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                   (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
                 lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d643f8);
                 if (((lVar2 == null) || (this.heroSearchNameInputField == null)) ||
-                   (*(int64 *)(lVar2 + 104) == 0)) break;
-                cVar1 = String.Contains(*(int64 *)(lVar2 + 104),
+                   (lVar2.AreaMapRandomEventDatas == null)) break;
+                cVar1 = String.Contains(lVar2.AreaMapRandomEventDatas,
                                          *(uint64 *)(this.heroSearchNameInputField + 0x170),0);
                 if (!cVar1) {
                   lVar2 = FUN_18046c0a0(0);
-                  if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                     (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 80)) == null) break;
+                  if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                     (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
                   lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d643f8);
                   if (lVar2 == null) break;
-                  lVar2 = LTLocalization.GetText(*(uint64 *)(lVar2 + 104),0,1,0);
+                  lVar2 = LTLocalization.GetText(lVar2.AreaMapRandomEventDatas,0,1,0);
                   if ((this.heroSearchNameInputField == null) || (lVar2 == null)) break;
                   cVar1 = String.Contains(lVar2,*(uint64 *)(this.heroSearchNameInputField + 0x170),0)
                   ;
@@ -686,23 +685,23 @@ public class HeroSearchController
                 }
                 if (this.interestingStarFliter) {
                   lVar2 = FUN_18046c0a0(0);
-                  if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                     (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 80)) == null) break;
+                  if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                     (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
                   lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d643f8);
                   if (lVar2 == null) break;
-                  if (*(char *)(lVar2 + 48) == false) goto LAB_180b391ad;
+                  if (!lVar2.Areas) goto LAB_180b391ad;
                 }
                 if (this.forceIDFliter != -2) {
                   lVar2 = FUN_18046c0a0(0);
-                  if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                     (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 80)) == null) break;
+                  if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                     (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
                   lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d643f8);
                   if (lVar2 == null) break;
                   if (*(int *)(lVar2 + 132) != this.forceIDFliter) goto LAB_180b391ad;
                 }
                 lVar2 = FUN_18046c0a0(0);
-                if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                   (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 80)) == null) break;
+                if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                   (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
                 uVar3 = FUN_180002f80(lVar2,iVar4,DAT_181d643f8);
                 HeroSearchController.AddHeroIcon(this,uVar3,0);
               }

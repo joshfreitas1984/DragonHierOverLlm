@@ -51,7 +51,7 @@ public class BookStoreController
           iVar3 = 0;
           while( true ) {
             local_res8[0] = iVar3;
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x4f0);
+            lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4f0);
             if (lVar1 == null) break;
             if (*(int *)(lVar1 + 24) <= iVar3) {
               return;
@@ -81,7 +81,7 @@ public class BookStoreController
     // RVA   : 0xCDDB90   Offset: 0xCDC390   Length: 0x13EB
     public void ShowBookStoreUI(BookStoreUIType targetType, ForceData targetForce)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         var ptargetForce = *(int64*)(targetForce + 184);
         uint uVar2;
         ulong uVar3;
@@ -238,7 +238,7 @@ public class BookStoreController
         throw; // [null/range check failed]
         LAB_180cde3b0:
         lVar7 = "";
-        lVar15 = *(int64 *)(pStatics + 0x4f0);
+        lVar15 = *(int64 *)(pPlotController + 0x4f0);
         if (lVar15 == null) throw; // [null/range check failed]
         if (iVar12 < *(int *)(lVar15 + 24)) {
           if ((this.bookStoreUI == null) ||
@@ -334,7 +334,7 @@ public class BookStoreController
           }
           plVar6[7] = " ";
           il2cpp_internal(plVar6 + 7,lVar15);
-          lVar15 = *(int64 *)(pStatics + 0x628);
+          lVar15 = *(int64 *)(pPlotController + 0x628);
           if (*(int64 *)(targetForce + 200) == 0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -389,7 +389,7 @@ public class BookStoreController
         local_a8 = 0;
         while( true ) {
           iVar12 = local_a8;
-          lVar15 = *(int64 *)(pStatics + 0x4f0);
+          lVar15 = *(int64 *)(pPlotController + 0x4f0);
           if (lVar15 == null) break;
           if (*(int *)(lVar15 + 24) <= iVar12) {
             return;
@@ -420,7 +420,7 @@ public class BookStoreController
              ((lVar15 = Transform.Find(lVar15,uVar8,0), lVar15 == null ||
               (lVar15 = Transform.Find(lVar15,"Label",0)) == null))) break;
           uVar8 = Component.GetComponent(lVar15,DAT_181d6d8c0);
-          lVar15 = *(int64 *)(pStatics + 0x4f0);
+          lVar15 = *(int64 *)(pPlotController + 0x4f0);
           if (lVar15 == null) break;
           uVar9 = FUN_180002f80(lVar15,local_a8);
           uVar9 = String.Format("{0}武功",uVar9);
@@ -440,7 +440,7 @@ public class BookStoreController
              (lVar15 = WorldData.Player(*(int64 *)(lVar15 + 32),0)) == null) break;
           lVar7 = "";
           if (*(int *)(lVar15 + 184) < iVar12) {
-            lVar15 = *(int64 *)(pStatics + 0x3d0);
+            lVar15 = *(int64 *)(pPlotController + 0x3d0);
             if (lVar15 == null) break;
             uVar9 = FUN_180002f80(lVar15,local_a8);
             lVar7 = String.Format("({0}以上方可参阅)",uVar9);

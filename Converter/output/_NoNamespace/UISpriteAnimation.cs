@@ -47,8 +47,6 @@ public class UISpriteAnimation
     // RVA   : 0x2E7E80   Offset: 0x2E6680   Length: 0x4
     public int get_framesPerSecond()
     {
-        uint32 FUN_1802e7e80(int64 this)
-        {
         return this.mFPS;
     }
 
@@ -56,8 +54,6 @@ public class UISpriteAnimation
     // RVA   : 0x2E7EB0   Offset: 0x2E66B0   Length: 0x4
     public void set_framesPerSecond(int value)
     {
-        void FUN_1802e7eb0(int64 this,uint32 value)
-        {
         this.mFPS = value;
     }
 
@@ -84,8 +80,6 @@ public class UISpriteAnimation
     // RVA   : 0x23F610   Offset: 0x23DE10   Length: 0x5
     public bool get_loop()
     {
-        uint8 FUN_18023f610(int64 this)
-        {
         return this.mLoop;
     }
 
@@ -93,8 +87,6 @@ public class UISpriteAnimation
     // RVA   : 0x2E91B0   Offset: 0x2E79B0   Length: 0x4
     public void set_loop(bool value)
     {
-        void FUN_1802e91b0(int64 this,uint8 value)
-        {
         this.mLoop = value;
     }
 
@@ -102,8 +94,6 @@ public class UISpriteAnimation
     // RVA   : 0xD52100   Offset: 0xD50900   Length: 0x5
     public bool get_isPlaying()
     {
-        uint8 FUN_180d52100(int64 this)
-        {
         return this.mActive;
     }
 
@@ -111,8 +101,6 @@ public class UISpriteAnimation
     // RVA   : 0x168F140   Offset: 0x168D940   Length: 0x7
     protected virtual void Start()
     {
-        void FUN_18168f140(uint64 this)
-        {
         UISpriteAnimation.RebuildSpriteList(this,0);
     }
 
@@ -255,8 +243,6 @@ public class UISpriteAnimation
     // RVA   : 0x168EDD0   Offset: 0x168D5D0   Length: 0x5
     public void Play()
     {
-        void FUN_18168edd0(int64 this)
-        {
         this.mActive = 1;
     }
 
@@ -264,8 +250,6 @@ public class UISpriteAnimation
     // RVA   : 0x168EDC0   Offset: 0x168D5C0   Length: 0x5
     public void Pause()
     {
-        void FUN_18168edc0(int64 this)
-        {
         this.mActive = 0;
     }
 

@@ -50,16 +50,14 @@ public class ForceSpeResearchUIController
     // RVA   : 0x786970   Offset: 0x785170   Length: 0x58
     public static ForceSpeResearchUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181da2fa0 + 184) + 56);
+        return ForceSpeResearchUIController._instance;
     }
 
     // Token : 0x6001499
     // RVA   : 0x783C20   Offset: 0x782420   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181da2fa0 + 184) + 56);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        ForceSpeResearchUIController._instance = this;
     }
 
     // Token : 0x600149A
@@ -94,7 +92,7 @@ public class ForceSpeResearchUIController
     // RVA   : 0x785AC0   Offset: 0x7842C0   Length: 0x577
     public void ShowForceSpeResearchUI()
     {
-        var pStatics = *(int64*)(DAT_181da2fa0 + 184);
+        var pForceSpeResearchUIController = *(int64*)(ForceSpeResearchUIController_StaticsPtr + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -112,7 +110,7 @@ public class ForceSpeResearchUIController
               lVar3 = Transform.Find(lVar3,"Title",0);
               if (lVar3 != null) {
                 uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                lVar3 = *pStatics;
+                lVar3 = ForceSpeResearchUIController.SpeResearchTopic;
                 uVar1 = ForceSpeResearchUIController.SpeResearchType(0);
                 if (lVar3 != null) {
                   if (*(uint32 *)(lVar3 + 24) <= uVar1) {
@@ -127,7 +125,8 @@ public class ForceSpeResearchUIController
                       lVar3 = Transform.Find(lVar3,"Question",0);
                       if (lVar3 != null) {
                         lVar5 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-                        lVar3 = *(int64 *)(pStatics + 24);
+                        lVar3 = *(int64 *)
+                                 (pForceSpeResearchUIController + 24);
                         uVar1 = ForceSpeResearchUIController.SpeResearchType(0);
                         if (lVar3 != null) {
                           if (*(uint32 *)(lVar3 + 24) <= uVar1) {
@@ -150,8 +149,11 @@ public class ForceSpeResearchUIController
                               lVar3 = Transform.Find(lVar3,"Label",0);
                               if (lVar3 == null) throw; // [null/range check failed]
                               uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                              lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x530);
-                              lVar5 = *(int64 *)(pStatics + 8);
+                              lVar3 = *(int64 *)
+                                       (*(int64 *)(PlotController_StaticsPtr + 184) + 0x530);
+                              lVar5 = *(int64 *)
+                                       (pForceSpeResearchUIController + 8)
+                              ;
                               uVar2 = ForceSpeResearchUIController.SpeResearchType(0);
                               if (lVar5 == null) throw; // [null/range check failed]
                               lVar5 = FUN_180002f80(lVar5,uVar2,DAT_181d51688);
@@ -174,7 +176,9 @@ public class ForceSpeResearchUIController
                               lVar3 = Transform.Find(lVar3,"Background",0);
                               if (lVar3 == null) break;
                               lVar3 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-                              lVar5 = *(int64 *)(pStatics + 32);
+                              lVar5 = *(int64 *)
+                                       (pForceSpeResearchUIController +
+                                       32);
                               uVar2 = ForceSpeResearchUIController.SpeResearchType(0);
                               if (lVar5 == null) break;
                               lVar5 = FUN_180002f80(lVar5,uVar2,DAT_181d51e08);
@@ -210,11 +214,11 @@ public class ForceSpeResearchUIController
     // RVA   : 0x786040   Offset: 0x784840   Length: 0xD2
     public static int SpeResearchType()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             cVar1 = HeroData.HaveForceFunction(lVar2,17);
@@ -229,7 +233,7 @@ public class ForceSpeResearchUIController
     {
         long lVar1;
         uint uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da2fa0 + 184) + 48);
+        lVar1 = ForceSpeResearchUIController.SpeResearchTargetSkillType;
         uVar2 = ForceSpeResearchUIController.SpeResearchType(0);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= uVar2) {
@@ -243,8 +247,6 @@ public class ForceSpeResearchUIController
     // RVA   : 0x7845D0   Offset: 0x782DD0   Length: 0x1150
     public void RefreshUI()
     {
-        var pStatics_2fa0 = *(int64*)(DAT_181da2fa0 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         uint uVar2;
         long lVar3;
@@ -267,9 +269,9 @@ public class ForceSpeResearchUIController
             (lVar3 = Transform.Find(lVar3,"ExpBarBack",0)) != null) &&
            (lVar3 = Transform.Find(lVar3,"ExpText",0)) != null) {
           uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-          if (((*pStatics_df90 != 0) &&
-              (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar3 = *(int64 *)(lVar3 + 0x1f8)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar3 = GameController._instance.worldData, lVar3 != null
+              )) && (lVar3 = lVar3.forceSpeResearchData) != null) {
             local_res8[0] = lVar3._items * 100.0;
             uVar5 = Single.ToString(local_res8,"f0",0);
             uVar5 = String.Concat(uVar5,"%",0);
@@ -279,15 +281,15 @@ public class ForceSpeResearchUIController
                ((lVar3 = Transform.Find(lVar3,"ExpBarBack",0), lVar3 != null &&
                 (lVar3 = Transform.Find(lVar3,"ExpBar",0)) != null))) {
               lVar3 = Component.GetComponent(lVar3,DAT_181d6bc40);
-              if ((((*pStatics_df90 != 0) &&
-                   (lVar6 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                  (lVar6 = *(int64 *)(lVar6 + 0x1f8)) != null) && (lVar3 != null)) {
+              if ((((GameController._instance != null) &&
+                   (lVar6 = GameController._instance.worldData,
+                   lVar6 != null)) && (lVar6 = lVar6.forceSpeResearchData) != null) && (lVar3 != null)) {
                 Image.set_fillAmount(lVar3,lVar6._items,0);
-                if (((*pStatics_df90 != 0) &&
-                    (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                   (lVar3 = *(int64 *)(lVar3 + 0x1f8)) != null) {
+                if (((GameController._instance != null) &&
+                    (lVar3 = GameController._instance.worldData,
+                    lVar3 != null)) && (lVar3 = lVar3.forceSpeResearchData) != null) {
                   lVar6 = this.forceSpeResearchUI;
-                  if (0 < *(int *)(lVar3 + 48)) {
+                  if (0 < lVar3.Areas) {
                     if ((((lVar6 != null) && (lVar3 = GameObject.get_transform(lVar6,0)) != null) &&
                         (lVar3 = Transform.Find(lVar3,"SubTypeChooseGrid",0)) != null) &&
                        (lVar3 = Component.get_gameObject(lVar3,0)) != null) {
@@ -303,8 +305,9 @@ public class ForceSpeResearchUIController
                         {
                           uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
                           plVar7 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-                          if ((((*pStatics_df90 != 0) &&
-                               (lVar3 = *(int64 *)(*pStatics_df90 + 32),
+                          if ((((GameController._instance != null) &&
+                               (lVar3 = *(int64 *)
+                                         (GameController._instance + 32),
                                lVar3 != null)) && (lVar3 = WorldData.Player(lVar3,0)) != null) &&
                              ((lVar3 = HeroData.GetForce(lVar3,0,0), lVar3 != null &&
                               (lVar3 = lVar3.Count, plVar7 != (int64 *)0)))) {
@@ -322,10 +325,11 @@ public class ForceSpeResearchUIController
                             }
                             plVar7[4] = lVar3;
                             il2cpp_internal(plVar7 + 4,lVar3);
-                            if (((*pStatics_df90 != 0) &&
-                                (lVar3 = *(int64 *)(*pStatics_df90 + 32),
-                                lVar3 != null)) && (lVar3 = *(int64 *)(lVar3 + 0x1f8)) != null) {
-                              local_res8[0] = *(float *)(lVar3 + 32) * 100.0;
+                            if (((GameController._instance != null) &&
+                                (lVar3 = *(int64 *)
+                                          (GameController._instance + 32),
+                                lVar3 != null)) && (lVar3 = lVar3.forceSpeResearchData) != null) {
+                              local_res8[0] = lVar3.villageAreaID * 100.0;
                               lVar3 = Single.ToString(local_res8,"f0",0);
                               if ((lVar3 != null) &&
                                  (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar7 + 64)),
@@ -341,7 +345,9 @@ public class ForceSpeResearchUIController
                               }
                               plVar7[5] = lVar3;
                               il2cpp_internal(plVar7 + 5,lVar3);
-                              lVar3 = *(int64 *)(pStatics_2fa0 + 40);
+                              lVar3 = *(int64 *)
+                                       (*(int64 *)(ForceSpeResearchUIController_StaticsPtr + 184) +
+                                       40);
                               uVar2 = ForceSpeResearchUIController.SpeResearchType(0);
                               if (lVar3 != null) {
                                 if (lVar3.Count <= uVar2) {
@@ -363,10 +369,11 @@ public class ForceSpeResearchUIController
                                 }
                                 plVar7[6] = lVar3;
                                 il2cpp_internal(plVar7 + 6,lVar3);
-                                if ((((*pStatics_df90 != 0) &&
-                                     (lVar3 = *(int64 *)(*pStatics_df90 + 32),
-                                     lVar3 != null)) && (lVar3 = *(int64 *)(lVar3 + 0x1f8)) != null)
-                                   && (lVar3 = *(int64 *)(lVar3 + 40)) != null) {
+                                if ((((GameController._instance != null) &&
+                                     (lVar3 = *(int64 *)
+                                               (GameController._instance + 32),
+                                     lVar3 != null)) && (lVar3 = lVar3.forceSpeResearchData) != null)
+                                   && (lVar3 = lVar3.forceAreaID) != null) {
                                   lVar3 = HeroSpeAddData.GetDescribe(lVar3,1,1,1,0,0);
                                   if ((lVar3 != null) &&
                                      (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar7 + 64)),
@@ -398,12 +405,12 @@ public class ForceSpeResearchUIController
                                         ) && (lVar3 = Transform.Find(lVar3,"Label",0)) != null)
                                     {
                                       uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                                      if (((*pStatics_df90 != 0) &&
+                                      if (((GameController._instance != null) &&
                                           (lVar3 = *(int64 *)
-                                                    (*pStatics_df90 + 32),
-                                          lVar3 != null)) &&
-                                         (lVar3 = *(int64 *)(lVar3 + 0x1f8)) != null) {
-                                        local_48[0] = *(uint32 *)(lVar3 + 48);
+                                                    (GameController._instance +
+                                                    32), lVar3 != null)) &&
+                                         (lVar3 = lVar3.forceSpeResearchData) != null) {
+                                        local_48[0] = lVar3.Areas;
                                         uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_48);
                                         uVar5 = String.Format("持续{0}日",uVar5,0);
                                         LTLocalization.SetText(uVar4,uVar5,0);
@@ -426,9 +433,9 @@ public class ForceSpeResearchUIController
                                             uVar2 = local_res18[0];
                                             if (cVar1) {
                                               lVar3 = FUN_18046c0a0(0);
-                                              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
+                                              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                                                   (lVar3 = *(int64 *)
-                                                            (*(int64 *)(lVar3 + 32) + 0x1f8),
+                                                            (lVar3.villageAreaID + 0x1f8),
                                                   lVar3 == null)) ||
                                                  (lVar3 = lVar3.Count) == null) break;
                                               uVar4 = FUN_180002f80(lVar3,local_res18[0],DAT_181d69770);
@@ -499,7 +506,14 @@ public class ForceSpeResearchUIController
                                       (lVar3 = Transform.Find(lVar3,"StartResearchButton",0)) != null) &&
                                      (lVar3 = Transform.Find(lVar3,"Label",0)) != null) {
                                     uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                                    lVar3 = *(int64 *)(pStatics_2fa0 + 16);
+                                    if (((*(byte *)(ForceSpeResearchUIController_StaticsPtr + 0x133) & 4)
+                                         != 0) &&
+                                       (*(int *)(ForceSpeResearchUIController_StaticsPtr + 224) == 0)) {
+                                      il2cpp_runtime_class_init();
+                                    }
+                                    lVar3 = *(int64 *)
+                                             (*(int64 *)
+                                               (ForceSpeResearchUIController_StaticsPtr + 184) + 16);
                                     uVar8 = ForceSpeResearchUIController.SpeResearchType(0);
                                     if (lVar3 != null) {
                                       if (lVar3.Count <= uVar8) {
@@ -626,7 +640,6 @@ public class ForceSpeResearchUIController
     // RVA   : 0x785820   Offset: 0x784020   Length: 0x1A7
     public float ResearchScore(bool useResearchRate)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
@@ -649,9 +662,9 @@ public class ForceSpeResearchUIController
             iVar1 = this.researchType;
             fVar5 = 1.0;
             if (useResearchRate) {
-              if (((*pStatics == 0) ||
-                  (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-                 (lVar2 = *(int64 *)(lVar2 + 0x1f8)) == null) throw; // [null/range check failed]
+              if (((GameController._instance == null) ||
+                  (lVar2 = GameController._instance.worldData,
+                  lVar2 == null)) || (lVar2 = lVar2.forceSpeResearchData) == null) throw; // [null/range check failed]
               fVar5 = (float)Mathf.Max(lVar2._items,0x3c23d70a,0);
             }
             return (fVar3 + 100.0 + fVar4) * ((float)iVar1 * 0.1 + 1.0) * fVar5;
@@ -814,7 +827,7 @@ public class ForceSpeResearchUIController
             local_34 = 0xffffffff;
             uVar6 = il2cpp_value_box(DAT_181d5b2f8,&local_34);
             FUN_181827900(lVar5,uVar6,DAT_181d6e0e8);
-            lVar2 = *(int64 *)(*(int64 *)(DAT_181da2fa0 + 184) + 8);
+            lVar2 = ForceSpeResearchUIController.SpeResearchMaterialType;
             uVar4 = ForceSpeResearchUIController.SpeResearchType(0);
             if (lVar2 != null) {
               if (*(uint32 *)(lVar2 + 24) <= uVar4) {
@@ -934,8 +947,8 @@ public class ForceSpeResearchUIController
         uint uVar3;
         int iVar4;
         ulong uVar6;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181da2fa0 + 184) + 16);
+        lVar1 = PlotController.LeftFaceHideOffset;
+        lVar2 = ForceSpeResearchUIController.SpeResearchSureButtonText;
         uVar3 = ForceSpeResearchUIController.SpeResearchType(0);
         if (lVar2 != null) {
           if (*(uint32 *)(lVar2 + 24) <= uVar3) {
@@ -973,7 +986,7 @@ public class ForceSpeResearchUIController
     // RVA   : 0x786370   Offset: 0x784B70   Length: 0x5F7
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181da2fa0 + 184);
+        var pForceSpeResearchUIController = *(int64*)(ForceSpeResearchUIController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -981,7 +994,7 @@ public class ForceSpeResearchUIController
         if (lVar1 != null) {
           FUN_181827900(lVar1,"火药",DAT_181d7c3d0);
           FUN_181827900(lVar1,"玄冰",DAT_181d7c3d0);
-          plVar3 = pStatics;
+          plVar3 = pForceSpeResearchUIController;
           *plVar3 = lVar1;
           il2cpp_internal(plVar3,lVar1);
           lVar1 = il2cpp_internal(DAT_181d6b5b0);
@@ -999,15 +1012,14 @@ public class ForceSpeResearchUIController
                 FUN_181814fa0(lVar2,1,DAT_181d67a78);
                 FUN_181814fa0(lVar2,3,DAT_181d67a78);
                 FUN_181827900(lVar1,lVar2,DAT_181d51508);
-                plVar3 = (int64 *)(pStatics + 8);
-                *plVar3 = lVar1;
-                il2cpp_internal(plVar3,lVar1);
+                ForceSpeResearchUIController.SpeResearchMaterialType = lVar1;
                 lVar1 = il2cpp_internal(DAT_181d72a30);
                 FUN_180f58a90(lVar1,DAT_181d7c250);
                 if (lVar1 != null) {
                   FUN_181827900(lVar1,"配置火药",DAT_181d7c3d0);
                   FUN_181827900(lVar1,"凝结玄冰",DAT_181d7c3d0);
-                  plVar3 = (int64 *)(pStatics + 16);
+                  plVar3 = (int64 *)
+                           (pForceSpeResearchUIController + 16);
                   *plVar3 = lVar1;
                   il2cpp_internal(plVar3,lVar1);
                   lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -1015,7 +1027,8 @@ public class ForceSpeResearchUIController
                   if (lVar1 != null) {
                     FUN_181827900(lVar1,"♦配置火药需要消耗木材，药引和生命。所用材料品级越高，最终效果越强。\n♦火药会提升霹雳堂武学威力和所有灼烧武学效果，持续30日。\n♦每次配置都会提升熟练度，熟练度会很大程度上影响最终效果。",DAT_181d7c3d0);
                     FUN_181827900(lVar1,"♦凝结玄冰需要消耗矿料，食材和内力。所用材料品级越高，最终效果越强。\n♦玄冰会提升天山派武学威力和所有冰寒武学效果，持续30日。\n♦每次凝结都会提升熟练度，熟练度会很大程度上影响最终效果。",DAT_181d7c3d0);
-                    plVar3 = (int64 *)(pStatics + 24);
+                    plVar3 = (int64 *)
+                             (pForceSpeResearchUIController + 24);
                     *plVar3 = lVar1;
                     il2cpp_internal(plVar3,lVar1);
                     lVar1 = il2cpp_internal(DAT_181d6b7b0);
@@ -1035,7 +1048,8 @@ public class ForceSpeResearchUIController
                           FUN_181827900(lVar2,"耗时2天\n内力-50%\n效率+10%",DAT_181d7c3d0);
                           FUN_181827900(lVar2,"耗时3天\n内力-75%\n效率+20%",DAT_181d7c3d0);
                           FUN_181827900(lVar1,lVar2,DAT_181d51d08);
-                          plVar3 = (int64 *)(pStatics + 32);
+                          plVar3 = (int64 *)
+                                   (pForceSpeResearchUIController + 32);
                           *plVar3 = lVar1;
                           il2cpp_internal(plVar3,lVar1);
                           lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -1043,7 +1057,9 @@ public class ForceSpeResearchUIController
                           if (lVar1 != null) {
                             FUN_181827900(lVar1,"灼烧",DAT_181d7c3d0);
                             FUN_181827900(lVar1,"冰寒",DAT_181d7c3d0);
-                            plVar3 = (int64 *)(pStatics + 40);
+                            plVar3 = (int64 *)
+                                     (pForceSpeResearchUIController + 40
+                                     );
                             *plVar3 = lVar1;
                             il2cpp_internal(plVar3,lVar1);
                             lVar1 = il2cpp_internal(DAT_181d6e7b0);
@@ -1051,7 +1067,9 @@ public class ForceSpeResearchUIController
                             if (lVar1 != null) {
                               FUN_181814fa0(lVar1,87,DAT_181d64978);
                               FUN_181814fa0(lVar1,94,DAT_181d64978);
-                              plVar3 = (int64 *)(pStatics + 48);
+                              plVar3 = (int64 *)
+                                       (pForceSpeResearchUIController +
+                                       48);
                               *plVar3 = lVar1;
                               il2cpp_internal(plVar3,lVar1);
                               return;

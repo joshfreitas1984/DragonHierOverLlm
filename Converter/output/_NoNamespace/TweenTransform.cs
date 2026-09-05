@@ -267,8 +267,6 @@ public class TweenTransform
     // RVA   : 0xA72230   Offset: 0xA70A30   Length: 0x7
     public void /*ctor*/()
     {
-        void FUN_180a72230(uint64 this)
-        {
         UITweener.ctor(this,0);
     }
 

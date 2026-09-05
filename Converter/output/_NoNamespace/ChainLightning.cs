@@ -187,8 +187,6 @@ public class ChainLightning
     // RVA   : 0x9F0660   Offset: 0x9EEE60   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_1809f0660(int64 this)
-        {
         this.detail = 0x3f800000;
         this.displacement = 0x41700000;
         FUN_18044ef50(this,0);

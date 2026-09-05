@@ -50,11 +50,9 @@ public class HorseIconController
     // RVA   : 0xB40B00   Offset: 0xB3F300   Length: 0x29BE
     private void Update()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_baa8 = *(int64*)(DAT_181d8baa8 + 184);
-        var pStatics_bc28 = *(int64*)(DAT_181d8bc28 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pBigMapSpeEffectController = *(int64*)(BigMapSpeEffectController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         uint uVar2;
         bool cVar3;
         long lVar4;
@@ -119,9 +117,9 @@ public class HorseIconController
            ((lVar4 = FUN_180da0f00(lVar4,0), lVar4 == null ||
             (lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0)) == null))) goto LAB_180b434b9;
         lVar4.subType = "基础 100%";
-        if (((*pStatics_df90 == 0) ||
-            (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
+        if (((GameController._instance == null) ||
+            (lVar4 = GameController._instance.worldData) == null)
+           || (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
         fVar11 = (float)HeroData.GetHorseTravelSpeed(lVar4,0);
         if (fVar11 != 0.0) {
           if (((this.bigmapSpeedText == null) ||
@@ -139,10 +137,10 @@ public class HorseIconController
           *puVar10 = uVar5;
           il2cpp_internal(puVar10,uVar5);
         }
-        if ((((*pStatics_df90 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-            (lVar4 = WorldData.Player(lVar4,0)) == null) || (*(int64 *)(lVar4 + 0x2b8) == 0))
-        goto LAB_180b434b9;
+        if ((((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null
+             ) || (lVar4 = WorldData.Player(lVar4,0)) == null) || (*(int64 *)(lVar4 + 0x2b8) == 0)
+           ) goto LAB_180b434b9;
         fVar11 = (float)HeroSpeAddData.Get(*(int64 *)(lVar4 + 0x2b8),174,0);
         if (fVar11 != 0.0) {
           if (((this.bigmapSpeedText == null) ||
@@ -170,7 +168,7 @@ public class HorseIconController
                (lVar9 = GameObject.get_transform(this.bigmapSpeedText,0)) == null) ||
               (lVar9 = FUN_180da0f00(lVar9,0)) == null) ||
              (lVar9 = Component.GetComponent(lVar9,DAT_181d6ccc0)) == null) goto LAB_180b434b9;
-          cVar3 = FUN_1816fd990(*(uint64 *)(lVar9 + 24),"",0);
+          cVar3 = FUN_1816fd990(lVar9.cityAreaID,"",0);
           lVar9 = "\n";
           if (cVar3) {
             lVar9 = "";
@@ -203,8 +201,8 @@ public class HorseIconController
           plVar7[6] = "加成 ";
           il2cpp_internal(plVar7 + 6,lVar9);
           lVar9 = FUN_18046c0a0(0);
-          if ((((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
-              (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) ||
+          if ((((lVar9 == null) || (lVar9.villageAreaID == null)) ||
+              (lVar9 = WorldData.Player(lVar9.villageAreaID,0)) == null) ||
              (*(int64 *)(lVar9 + 0x2b8) == 0)) goto LAB_180b434b9;
           local_res8[0] = (float)HeroSpeAddData.Get(*(int64 *)(lVar9 + 0x2b8),174,0);
           local_res8[0] = local_res8[0] * 100.0;
@@ -239,9 +237,9 @@ public class HorseIconController
           uVar5 = String.Concat(plVar7,0);
           lVar4.subType = uVar5;
         }
-        if (((*pStatics_df90 == 0) ||
-            (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
+        if (((GameController._instance == null) ||
+            (lVar4 = GameController._instance.worldData) == null)
+           || (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
         fVar11 = (float)HeroData.GetWeighChangeTravelSpeed(lVar4,0);
         if (fVar11 != 1.0) {
           if (((this.bigmapSpeedText == null) ||
@@ -269,7 +267,7 @@ public class HorseIconController
                (lVar9 = GameObject.get_transform(this.bigmapSpeedText,0)) == null) ||
               (lVar9 = FUN_180da0f00(lVar9,0)) == null) ||
              (lVar9 = Component.GetComponent(lVar9,DAT_181d6ccc0)) == null) goto LAB_180b434b9;
-          cVar3 = FUN_1816fd990(*(uint64 *)(lVar9 + 24),"",0);
+          cVar3 = FUN_1816fd990(lVar9.cityAreaID,"",0);
           lVar9 = "\n";
           if (cVar3) {
             lVar9 = "";
@@ -302,8 +300,8 @@ public class HorseIconController
           plVar7[6] = "负重 x";
           il2cpp_internal(plVar7 + 6,lVar9);
           lVar9 = FUN_18046c0a0(0);
-          if (((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
-             (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) goto LAB_180b434b9;
+          if (((lVar9 == null) || (lVar9.villageAreaID == null)) ||
+             (lVar9 = WorldData.Player(lVar9.villageAreaID,0)) == null) goto LAB_180b434b9;
           local_res8[0] = (float)HeroData.GetWeighChangeTravelSpeed(lVar9,0);
           local_res8[0] = local_res8[0] * 100.0;
           lVar9 = Single.ToString(local_res8,"f0",0);
@@ -337,9 +335,9 @@ public class HorseIconController
           uVar5 = String.Concat(plVar7,0);
           lVar4.subType = uVar5;
         }
-        if (((*pStatics_df90 == 0) ||
-            (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
+        if (((GameController._instance == null) ||
+            (lVar4 = GameController._instance.worldData) == null)
+           || (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
         fVar11 = (float)HeroData.GetWeatherChangeTravelSpeed(lVar4,0);
         if (fVar11 != 1.0) {
           if (((this.bigmapSpeedText == null) ||
@@ -367,7 +365,7 @@ public class HorseIconController
                (lVar9 = GameObject.get_transform(this.bigmapSpeedText,0)) == null) ||
               (lVar9 = FUN_180da0f00(lVar9,0)) == null) ||
              (lVar9 = Component.GetComponent(lVar9,DAT_181d6ccc0)) == null) goto LAB_180b434b9;
-          cVar3 = FUN_1816fd990(*(uint64 *)(lVar9 + 24),"",0);
+          cVar3 = FUN_1816fd990(lVar9.cityAreaID,"",0);
           lVar9 = "\n";
           if (cVar3) {
             lVar9 = "";
@@ -400,8 +398,8 @@ public class HorseIconController
           plVar7[6] = "天气 x";
           il2cpp_internal(plVar7 + 6,lVar9);
           lVar9 = FUN_18046c0a0(0);
-          if (((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
-             (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) goto LAB_180b434b9;
+          if (((lVar9 == null) || (lVar9.villageAreaID == null)) ||
+             (lVar9 = WorldData.Player(lVar9.villageAreaID,0)) == null) goto LAB_180b434b9;
           local_res8[0] = (float)HeroData.GetWeatherChangeTravelSpeed(lVar9,0);
           local_res8[0] = local_res8[0] * 100.0;
           lVar9 = Single.ToString(local_res8,"f0",0);
@@ -435,9 +433,9 @@ public class HorseIconController
           uVar5 = String.Concat(plVar7,0);
           lVar4.subType = uVar5;
         }
-        if (((*pStatics_df90 == 0) ||
-            (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
+        if (((GameController._instance == null) ||
+            (lVar4 = GameController._instance.worldData) == null)
+           || (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
         fVar11 = (float)HeroData.GetTerrainChangeTravelSpeed(lVar4,0);
         if (fVar11 != 1.0) {
           if (((this.bigmapSpeedText == null) ||
@@ -465,7 +463,7 @@ public class HorseIconController
                (lVar9 = GameObject.get_transform(this.bigmapSpeedText,0)) == null) ||
               (lVar9 = FUN_180da0f00(lVar9,0)) == null) ||
              (lVar9 = Component.GetComponent(lVar9,DAT_181d6ccc0)) == null) goto LAB_180b434b9;
-          cVar3 = FUN_1816fd990(*(uint64 *)(lVar9 + 24),"",0);
+          cVar3 = FUN_1816fd990(lVar9.cityAreaID,"",0);
           lVar9 = "\n";
           if (cVar3) {
             lVar9 = "";
@@ -498,8 +496,8 @@ public class HorseIconController
           plVar7[6] = "地形 x";
           il2cpp_internal(plVar7 + 6,lVar9);
           lVar9 = FUN_18046c0a0(0);
-          if (((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
-             (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) goto LAB_180b434b9;
+          if (((lVar9 == null) || (lVar9.villageAreaID == null)) ||
+             (lVar9 = WorldData.Player(lVar9.villageAreaID,0)) == null) goto LAB_180b434b9;
           local_res8[0] = (float)HeroData.GetTerrainChangeTravelSpeed(lVar9,0);
           local_res8[0] = local_res8[0] * 100.0;
           lVar9 = Single.ToString(local_res8,"f0",0);
@@ -534,21 +532,21 @@ public class HorseIconController
           lVar4.subType = uVar5;
         }
         lVar4 = this.targetHorseData;
-        if (((*pStatics_df90 == 0) ||
-            (lVar9 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar9 = WorldData.Player(lVar9,0)) == null) goto LAB_180b434b9;
-        if (lVar4 != *(int64 *)(lVar9 + 0x208)) {
+        if (((GameController._instance == null) ||
+            (lVar9 = GameController._instance.worldData) == null)
+           || (lVar9 = WorldData.Player(lVar9,0)) == null) goto LAB_180b434b9;
+        if (lVar4 != lVar9.getSpePoisonData) {
           lVar4 = FUN_18046c0a0(0);
           if (((lVar4 == null) || (lVar4.name == null)) ||
              (lVar4 = WorldData.Player(lVar4.name,0)) == null) goto LAB_180b434b9;
-          this.targetHorseData = *(uint64 *)(lVar4 + 0x208);
+          this.targetHorseData = lVar4.getSpePoisonData;
           lVar4 = this.horseIcon;
           if (this.targetHorseData == null) {
             if (lVar4 == null) goto LAB_180b434b9;
             lVar4 = GameObject.GetComponent(lVar4,DAT_181d9fe50);
-            if ((*pStatics_6270 == 0) ||
+            if ((*pStatics == 0) ||
                (uVar5 = TextureController.LoadAtlasSprite
-                                  (*pStatics_6270,"UIAtlas","马未装备",0),
+                                  (*pStatics,"UIAtlas","马未装备",0),
                lVar4 == null)) goto LAB_180b434b9;
             Image.set_sprite(lVar4,uVar5,0);
             if (this.horsePowerBar == null) goto LAB_180b434b9;
@@ -571,7 +569,7 @@ public class HorseIconController
           else {
             if (lVar4 == null) goto LAB_180b434b9;
             lVar4 = GameObject.GetComponent(lVar4,DAT_181d9fe50);
-            lVar9 = *pStatics_6270;
+            lVar9 = *pStatics;
             if (((this.targetHorseData == null) ||
                 (uVar5 = String.Concat(this.targetHorseData.name,
                                         "大",0), lVar9 == null)) ||
@@ -605,7 +603,7 @@ public class HorseIconController
           if ((this.targetHorseData == null) ||
              (lVar9 = this.targetHorseData.horseData) == null)
           goto LAB_180b434b9;
-          fVar11 = *(float *)(lVar9 + 56);
+          fVar11 = lVar9.Inns;
           fVar12 = (float)HorseData.MaxPower(lVar9,0);
           if (lVar4 == null) goto LAB_180b434b9;
           Image.set_fillAmount(lVar4,fVar11 / fVar12,0);
@@ -644,9 +642,9 @@ public class HorseIconController
             if ((this.targetHorseData == null) ||
                (lVar9 = this.targetHorseData.horseData) == null)
             goto LAB_180b434ad;
-            fVar11 = *(float *)(lVar9 + 64);
+            fVar11 = lVar9.ResourcePoints;
             if (lVar4 == null) goto LAB_180b434ad;
-            fVar11 = fVar11 / *(float *)(pStatics_ef00 + 0x218);
+            fVar11 = fVar11 / *(float *)(pPlotController + 0x218);
           }
           else if (0.0 < lVar4.weight) {
             if (((lVar9 == null) || (lVar4 = GameObject.get_transform(lVar9,0)) == null) ||
@@ -671,7 +669,7 @@ public class HorseIconController
             if (((this.targetHorseData == null) ||
                 (lVar9 = this.targetHorseData.horseData) == null) || (lVar4 == null)
                ) goto LAB_180b434a7;
-            fVar11 = *(float *)(pStatics_ef00 + 0x21c);
+            fVar11 = *(float *)(pPlotController + 0x21c);
             fVar11 = (fVar11 - *(float *)(lVar9 + 68)) / fVar11;
           }
           else {
@@ -698,9 +696,9 @@ public class HorseIconController
           }
           Image.set_fillAmount(lVar4,fVar11,0);
         }
-        if (((*pStatics_df90 == 0) ||
-            (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
+        if (((GameController._instance == null) ||
+            (lVar4 = GameController._instance.worldData) == null)
+           || (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180b434b9;
         if (*(char *)(lVar4 + 0x388) == false) {
           lVar4 = FUN_18046c0a0(0);
           if (((lVar4 == null) || (lVar4.name == null)) ||
@@ -723,8 +721,8 @@ public class HorseIconController
             goto LAB_180b434b9;
             lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
             lVar9 = FUN_18046c0a0(0);
-            if (((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
-               (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) goto LAB_180b434b9;
+            if (((lVar9 == null) || (lVar9.villageAreaID == null)) ||
+               (lVar9 = WorldData.Player(lVar9.villageAreaID,0)) == null) goto LAB_180b434b9;
             local_res8[0] = (float)HeroData.GetTerrainChangeTravelSpeed(lVar9,0);
             local_res8[0] = local_res8[0] * 100.0;
             uVar6 = Single.ToString(local_res8,"f0",0);
@@ -753,8 +751,8 @@ public class HorseIconController
             throw; // [null/range check failed]
             lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
             lVar9 = FUN_18046c0a0(0);
-            if (((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
-               (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) throw; // [null/range check failed]
+            if (((lVar9 == null) || (lVar9.villageAreaID == null)) ||
+               (lVar9 = WorldData.Player(lVar9.villageAreaID,0)) == null) throw; // [null/range check failed]
             local_res8[0] = (float)HeroData.GetTerrainChangeTravelSpeed(lVar9,0);
             local_res8[0] = local_res8[0] * 100.0;
             uVar5 = Single.ToString(local_res8,"f0",0);
@@ -788,8 +786,8 @@ public class HorseIconController
           goto LAB_180b434b9;
           lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
           lVar9 = FUN_18046c0a0(0);
-          if (((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
-             (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) goto LAB_180b434b9;
+          if (((lVar9 == null) || (lVar9.villageAreaID == null)) ||
+             (lVar9 = WorldData.Player(lVar9.villageAreaID,0)) == null) goto LAB_180b434b9;
           local_res8[0] = (float)HeroData.GetTerrainChangeTravelSpeed(lVar9,0);
           local_res8[0] = local_res8[0] * 100.0;
           uVar6 = Single.ToString(local_res8,"f0",0);
@@ -804,14 +802,16 @@ public class HorseIconController
         LAB_180b42cc2:
           lVar4.subType = uVar5;
         }
-        if ((((*pStatics_df90 != 0) &&
-             (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-            (lVar4 = WorldData.Player(lVar4,0)) != null) && (*(int64 *)(lVar4 + 0x220) != 0)) {
-          fVar11 = *(float *)(*(int64 *)(lVar4 + 0x220) + 28);
-          if (((*pStatics_df90 != 0) &&
-              (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             ((lVar4 = WorldData.Player(lVar4,0), lVar4 != null && (*(int64 *)(lVar4 + 0x220) != 0)))) {
-            pfVar1 = (float *)(*(int64 *)(lVar4 + 0x220) + 32);
+        if ((((GameController._instance != null) &&
+             (lVar4 = GameController._instance.worldData) != null
+             ) && (lVar4 = WorldData.Player(lVar4,0)) != null) && (lVar4.speBookStorageSpeAdd != null)
+           ) {
+          fVar11 = *(float *)(lVar4.speBookStorageSpeAdd + 28);
+          if (((GameController._instance != null) &&
+              (lVar4 = GameController._instance.worldData, lVar4 != null
+              )) && ((lVar4 = WorldData.Player(lVar4,0), lVar4 != null &&
+                     (lVar4.speBookStorageSpeAdd != null)))) {
+            pfVar1 = (float *)(lVar4.speBookStorageSpeAdd + 32);
             lVar4 = this.overWeightText;
             if (*pfVar1 <= fVar11 && fVar11 != *pfVar1) {
               if (lVar4 == null) throw; // [null/range check failed]
@@ -837,7 +837,7 @@ public class HorseIconController
                  (lVar4 = GameObject.GetComponent(lVar4.setName,DAT_181d9e910)) != null
                  ) {
                 lVar9 = this.bigmapSpeEffText;
-                if (*(int *)(lVar4 + 248) == -1) {
+                if (lVar4.worldPlotEventStartTime == -1) {
                   if (lVar9 != null) {
                     lVar4 = GameObject.get_transform(lVar9,0);
                     puVar10 = (uint64 *)Vector3.get_zero(&local_68,0);
@@ -860,12 +860,12 @@ public class HorseIconController
                         (lVar4 = GameObject.get_transform(this.bigmapSpeEffText,0)) != null)
                        && (lVar4 = Transform.Find(lVar4,"Text",0)) != null) {
                       uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-                      lVar4 = *pStatics_bc28;
-                      lVar9 = *(int64 *)(pStatics_baa8 + 16);
-                      if ((((lVar9 != null) && (lVar9 = *(int64 *)(lVar9 + 88)) != null) &&
+                      lVar4 = BigMapSpeEffectController.bigMapSpeEffectTypeName;
+
+                      if ((((lVar9 = GameController.CheckShowSpeHero?.TempHeros) != null) &&
                           (lVar9 = GameObject.GetComponent(lVar9,DAT_181d9e910)) != null) &&
                          (lVar4 != null)) {
-                        uVar2 = *(uint32 *)(lVar9 + 248);
+                        uVar2 = lVar9.worldPlotEventStartTime;
                         if (lVar4.subType <= uVar2) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
@@ -875,8 +875,9 @@ public class HorseIconController
                                    0);
                         if (this.bigmapSpeEffText != null) {
                           lVar9 = GameObject.GetComponent(this.bigmapSpeEffText,DAT_181da12b0);
-                          lVar4 = *(int64 *)(pStatics_bc28 + 8);
-                          lVar8 = *(int64 *)(pStatics_baa8 + 16);
+                          lVar4 = *(int64 *)
+                                   (pBigMapSpeEffectController + 8);
+                          lVar8 = GameController.CheckShowSpeHero;
                           if (((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 88)) != null) &&
                              ((lVar8 = GameObject.GetComponent(lVar8,DAT_181d9e910), lVar8 != null &&
                               (lVar4 != null)))) {
@@ -885,7 +886,7 @@ public class HorseIconController
                               ThrowHelper.ThrowArgumentOutOfRangeException(0);
                             }
                             if (lVar9 != null) {
-                              *(uint64 *)(lVar9 + 24) =
+                              lVar9.cityAreaID =
                                    *(uint64 *)
                                     (lVar4.itemID + 32 + (int64)(int)uVar2 * 8);
                               il2cpp_internal();
@@ -907,12 +908,12 @@ public class HorseIconController
     // RVA   : 0xB40520   Offset: 0xB3ED20   Length: 0x2F2
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         if (this.targetHorseData == null) {
-          if (*pStatics != 0) {
-            GameController.ShowTextOnMouse(*pStatics,"未装备马匹",0);
+          if (GameController._instance != null) {
+            GameController.ShowTextOnMouse
+                      (GameController._instance,"未装备马匹",0);
             plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar4 = (int64 *)0;
             if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
@@ -924,7 +925,7 @@ public class HorseIconController
         }
         else {
           ItemData.PlayItemSound(this.targetHorseData,0);
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d51800 + 184) + 32);
+          lVar2 = PlotController.SpringFestivelRewardLvTalkText;
           if (lVar2 != null) {
             iVar1 = *(int *)(lVar2 + 24);
             if (iVar1 == 0) {
@@ -972,8 +973,8 @@ public class HorseIconController
         uint uStack_20;
         uint32 uStack_1c;
         if ((itemData != null) && (lVar3 = *(int64 *)(itemData + 136)) != null) {
-          if (0.0 < *(float *)(lVar3 + 64)) {
-            lVar3 = **(int64 **)(DAT_181d4df90 + 184);
+          if (0.0 < lVar3.enterAreaEnemyForceAttackHero) {
+            lVar3 = GameController._instance;
             uVar1 = "冲刺中";
           }
           else {

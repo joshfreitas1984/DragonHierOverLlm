@@ -472,8 +472,6 @@ public class UIFont
     // RVA   : 0x10E9670   Offset: 0x10E7E70   Length: 0x7
     public bool get_premultipliedAlpha()
     {
-        void FUN_1810e9670(uint64 this)
-        {
         UIFont.get_premultipliedAlphaShader(this,0);
     }
 

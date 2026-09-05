@@ -32,7 +32,6 @@ public class MailData
     // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
     public void /*ctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
                          uint8 param_5,uint8 param_6)
         {
         int64 lVar1;
@@ -40,9 +39,9 @@ public class MailData
         this.mailTitle = param_2;
         this.mailText = param_3;
         if (param_4 == (int64 *)0) {
-          if (((*pStatics == 0) ||
-              (lVar1 = *(int64 *)(*pStatics + 32)) == null) ||
-             (lVar1 = *(int64 *)(lVar1 + 168)) == null) {
+          if (((GameController._instance == null) ||
+              (lVar1 = GameController._instance.worldData, lVar1 == null
+              )) || (lVar1 = lVar1.worldTime) == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -57,7 +56,6 @@ public class MailData
     // RVA   : 0xA8B400   Offset: 0xA89C00   Length: 0x18B
     public void /*ctor*/(string _mailTitle, string _mailText, TimeData _mailTime, bool _important, bool _notImportant)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
                          uint8 _important,uint8 _notImportant)
         {
         int64 lVar1;
@@ -65,9 +63,9 @@ public class MailData
         this.mailTitle = _mailTitle;
         this.mailText = _mailText;
         if (_mailTime == (int64 *)0) {
-          if (((*pStatics == 0) ||
-              (lVar1 = *(int64 *)(*pStatics + 32)) == null) ||
-             (lVar1 = *(int64 *)(lVar1 + 168)) == null) {
+          if (((GameController._instance == null) ||
+              (lVar1 = GameController._instance.worldData, lVar1 == null
+              )) || (lVar1 = lVar1.worldTime) == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }

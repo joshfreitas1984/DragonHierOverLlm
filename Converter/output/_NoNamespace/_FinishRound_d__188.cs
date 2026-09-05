@@ -85,7 +85,8 @@ public class <FinishRound>d__188
               if ((lVar6 == null) || (*(int64 *)(lVar6 + 88) == 0)) throw; // [null/range check failed]
               uVar9 = *(uint32 *)(*(int64 *)(lVar6 + 88) + 16);
               BattleUnit.ChangeBattleMove
-                        (lVar6,*(uint32 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x228) ^ 0x80000000,1,0,0);
+                        (lVar6,*(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x228) ^
+                               0x80000000,1,0,0);
               if ((*plVar1 == 0) || (lVar6 = *(int64 *)(*plVar1 + 64)) == null)
               throw; // [null/range check failed]
               uVar10 = Mathf.Max(0,*(float *)(lVar6 + 0x240) - 0.05,0);

@@ -40,7 +40,6 @@ public class <MoveFromTarget>d__85
     // RVA   : 0x8CDCB0   Offset: 0x8CC4B0   Length: 0x60A
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         float fVar1;
         long lVar2;
         bool cVar4;
@@ -59,7 +58,7 @@ public class <MoveFromTarget>d__85
           this.<>1__state = 0xffffffff;
           if (this.num != null) {
             if (lVar2 != null) {
-              lVar11 = *(int64 *)(lVar2 + 96);
+              lVar11 = lVar2.BigMapRandomEventDatas;
               while( true ) {
                 if ((lVar11 == null) || (lVar7 = this.targetGrid) == null)
                 goto LAB_1808ce2b5;
@@ -141,10 +140,11 @@ public class <MoveFromTarget>d__85
                 if (iVar12 == 0) break;
               }
               BattleUnit.EnterGrid(lVar2,lVar11,1,0,0);
-              fVar14 = *(float *)(*(int64 *)(DAT_181d8b6a8 + 184) + 24);
-              if ((*pStatics != 0) &&
-                 (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-                fVar1 = *(float *)(lVar2 + 0x1d8);
+              fVar14 = BattleUnit.UnitMoveOneGridTime;
+              if ((GameController._instance != null) &&
+                 (lVar2 = GameController._instance.worldData,
+                 lVar2 != null)) {
+                fVar1 = lVar2.battleTimeScale;
                 uVar10 = new WaitForSeconds(fVar14 / fVar1 + fVar14,0);
                 this.<>2__current = uVar10;
                 this.<>1__state = 1;

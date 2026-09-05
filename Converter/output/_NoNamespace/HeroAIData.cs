@@ -58,11 +58,12 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = param_2;
-        if (((*(byte *)(DAT_181d84cc0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84cc0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181d84cc0);
+        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+          il2cpp_runtime_class_init(PlotController_StaticsPtr);
           param_2 = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
         if (lVar4 == null) goto LAB_1808776f0;
         cVar1 = FUN_181815240(lVar4,param_2,DAT_181d53900);
         if (cVar1) {
@@ -110,11 +111,12 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181d84cc0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84cc0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181d84cc0);
+        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+          il2cpp_runtime_class_init(PlotController_StaticsPtr);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
         if (lVar4 == null) goto LAB_1808776f0;
         cVar1 = FUN_181815240(lVar4,_aiStuffType,DAT_181d53900);
         if (cVar1) {
@@ -162,11 +164,12 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181d84cc0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84cc0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181d84cc0);
+        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+          il2cpp_runtime_class_init(PlotController_StaticsPtr);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
         if (lVar4 == null) goto LAB_1808776f0;
         cVar1 = FUN_181815240(lVar4,_aiStuffType,DAT_181d53900);
         if (cVar1) {
@@ -214,11 +217,12 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181d84cc0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84cc0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181d84cc0);
+        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+          il2cpp_runtime_class_init(PlotController_StaticsPtr);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
         if (lVar4 == null) goto LAB_1808776f0;
         cVar1 = FUN_181815240(lVar4,_aiStuffType,DAT_181d53900);
         if (cVar1) {
@@ -266,7 +270,7 @@ public class HeroAIData
     // RVA   : 0x876CD0   Offset: 0x8754D0   Length: 0x398
     public string GetDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
@@ -275,9 +279,9 @@ public class HeroAIData
         long lVar6;
         uVar5 = this.aiStuffType;
         lVar6 = (int64)(int)uVar5;
-        lVar2 = **(int64 **)(DAT_181d84cc0 + 184);
+        lVar2 = PlotController._instance;
         if (lVar2 == null) goto LAB_180877061;
-        if (*(uint32 *)(lVar2 + 24) <= uVar5) {
+        if (lVar2.plotHappen <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
           uVar5 = this.aiStuffType;
         }
@@ -291,10 +295,10 @@ public class HeroAIData
             return "休息";
           }
           lVar2 = FUN_18046c0a0(0);
-          if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-             (lVar2 = WorldData.GetArea(*(int64 *)(lVar2 + 32),this.bigMapTargetID,0),
+          if (((lVar2 == null) || (lVar2.plotPanel == null)) ||
+             (lVar2 = WorldData.GetArea(lVar2.plotPanel,this.bigMapTargetID,0),
              lVar2 == null)) goto LAB_180877061;
-          uVar3 = *(uint64 *)(lVar2 + 24);
+          uVar3 = lVar2.plotHappen;
           break;
         case 2:
         case 3:
@@ -304,10 +308,10 @@ public class HeroAIData
         case 10:
           goto switchD_180876ddc_caseD_2;
         case 6:
-          lVar2 = *(int64 *)(pStatics + 0x4a8);
+          lVar2 = *(int64 *)(pPlotController + 0x4a8);
           goto LAB_180876e91;
         case 7:
-          lVar2 = *(int64 *)(pStatics + 0x430);
+          lVar2 = *(int64 *)(pPlotController + 0x430);
         LAB_180876e91:
           uVar1 = Int32.Parse(this.aiStuffTarget,0);
           if (lVar2 == null) goto LAB_180877061;
@@ -318,7 +322,7 @@ public class HeroAIData
         case 13:
           lVar2 = FUN_18046c0a0(0);
           if (lVar2 != null) {
-            lVar2 = *(int64 *)(lVar2 + 32);
+            lVar2 = lVar2.plotPanel;
             uVar1 = Int32.Parse(this.aiStuffTarget,0);
             if (lVar2 != null) {
               lVar2 = WorldData.GetHero(lVar2,uVar1,0);
@@ -329,10 +333,10 @@ public class HeroAIData
               }
               lVar2 = FUN_18046c0a0(0);
               if (lVar2 != null) {
-                lVar2 = *(int64 *)(lVar2 + 32);
+                lVar2 = lVar2.plotPanel;
                 uVar1 = Int32.Parse(this.aiStuffTarget,0);
                 if ((lVar2 != null) && (lVar2 = WorldData.GetHero(lVar2,uVar1,0)) != null) {
-                  uVar4 = String.Concat(uVar3,*(uint64 *)(lVar2 + 104),uVar4,0);
+                  uVar4 = String.Concat(uVar3,lVar2.sourceInteractHero,uVar4,0);
                   return uVar4;
                 }
               }

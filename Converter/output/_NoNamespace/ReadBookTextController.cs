@@ -86,8 +86,8 @@ public class ReadBookTextController
     // RVA   : 0xC5FCA0   Offset: 0xC5E4A0   Length: 0x667
     private void Update()
     {
-        var pStatics_4a60 = *(int64*)(DAT_181d74a60 + 184);
-        var pStatics_4ae0 = *(int64*)(DAT_181d74ae0 + 184);
+        var pReadBookTextController = *(int64*)(ReadBookTextController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d74a60 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -106,7 +106,7 @@ public class ReadBookTextController
           this.inited = 1;
           ReadBookTextController.Init(this,0);
         }
-        uVar7 = *(uint64 *)(*(int64 *)(DAT_181d66570 + 184) + 72);
+        uVar7 = MouseController.hoveredUI;
         uVar4 = Component.get_gameObject(this,0);
         cVar2 = Object.op_Equality(uVar7,uVar4,0);
         if (cVar2) {
@@ -176,8 +176,8 @@ public class ReadBookTextController
           }
         }
         plVar8 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-        if ((*pStatics_4a60 == 0) ||
-           (lVar5 = *(int64 *)(*pStatics_4a60 + 88)) == null)
+        if ((*pStatics == 0) ||
+           (lVar5 = *(int64 *)(*pStatics + 88)) == null)
         throw; // [null/range check failed]
         if ((lVar5.fullName < 1) &&
            ((this.seen && (!this.finished)))) {
@@ -198,7 +198,7 @@ public class ReadBookTextController
             if ((lVar5 == null) || (this.textData == null)) throw; // [null/range check failed]
             if (this.textData.costPatient <= *(int *)(lVar5 + 124))
             goto LAB_180c60286;
-            lVar5 = pStatics_4ae0;
+            lVar5 = pReadBookTextController;
             local_38 = lVar5.exp;
             uStack_34 = lVar5.expRate;
             uStack_30 = lVar5.patient;
@@ -207,7 +207,7 @@ public class ReadBookTextController
         }
         else {
         LAB_180c60297:
-          lVar5 = pStatics_4ae0;
+          lVar5 = pReadBookTextController;
           local_38 = lVar5.describe;
           uStack_34 = *(uint32 *)(lVar5 + 36);
           uStack_30 = lVar5.simpleText;
@@ -252,9 +252,10 @@ public class ReadBookTextController
     // RVA   : 0xC5DD80   Offset: 0xC5C580   Length: 0x1A44
     public void ReadText()
     {
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         var pStatics_4a60 = *(int64*)(DAT_181d74a60 + 184);
         var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         bool cVar2;
         uint uVar3;
         long lVar5;
@@ -281,7 +282,7 @@ public class ReadBookTextController
         if (this.textData == null) throw; // [null/range check failed]
         cVar2 = FUN_1816fd990(this.textData.showName,"缺",0);
         if (cVar2) {
-          lVar5 = **(int64 **)(DAT_181d4df90 + 184);
+          lVar5 = GameController._instance;
           lVar8 = Component.get_transform(this,0);
           if (lVar8 != null) {
             puVar6 = (uint64 *)Transform.get_position(&local_58,lVar8,0);
@@ -395,14 +396,14 @@ public class ReadBookTextController
              (lVar8 = Transform.Find(lVar8,"Text",0)) == null) throw; // [null/range check failed]
           plVar4 = (int64 *)Component.GetComponent(lVar8,DAT_181d6d8c0);
           if (local_res8[0] < 0.0) {
-            lVar8 = pStatics_ef00;
+            lVar8 = pPlotController;
             uVar17 = *(uint32 *)(lVar8 + 0x2e8);
             uVar19 = *(uint32 *)(lVar8 + 0x2ec);
             uVar20 = *(uint32 *)(lVar8 + 0x2f0);
             uVar21 = *(uint32 *)(lVar8 + 0x2f4);
           }
           else {
-            lVar8 = pStatics_ef00;
+            lVar8 = pPlotController;
             uVar17 = *(uint32 *)(lVar8 + 0x280);
             uVar19 = *(uint32 *)(lVar8 + 0x284);
             uVar20 = *(uint32 *)(lVar8 + 0x288);
@@ -482,14 +483,14 @@ public class ReadBookTextController
           plVar4 = (int64 *)Component.GetComponent(lVar8,DAT_181d6d8c0);
           if (this.textData == null) throw; // [null/range check failed]
           if (this.textData.patient < 0) {
-            lVar8 = pStatics_ef00;
+            lVar8 = pPlotController;
             uVar17 = *(uint32 *)(lVar8 + 0x2e8);
             uVar19 = *(uint32 *)(lVar8 + 0x2ec);
             uVar20 = *(uint32 *)(lVar8 + 0x2f0);
             uVar21 = *(uint32 *)(lVar8 + 0x2f4);
           }
           else {
-            lVar8 = pStatics_ef00;
+            lVar8 = pPlotController;
             uVar17 = *(uint32 *)(lVar8 + 0x280);
             uVar19 = *(uint32 *)(lVar8 + 0x284);
             uVar20 = *(uint32 *)(lVar8 + 0x288);
@@ -531,8 +532,8 @@ public class ReadBookTextController
                 do {
                   iVar14 = this.row + iVar12;
                   if ((-1 < iVar14) && (iVar14 < *(int *)(lVar5 + 116))) {
-                    if ((*(int64 *)(lVar5 + 72) == 0) ||
-                       ((lVar8 = FUN_180127f50(*(int64 *)(lVar5 + 72),
+                    if ((lVar5.enterAreaChallengeHero == null) ||
+                       ((lVar8 = FUN_180127f50(lVar5.enterAreaChallengeHero,
                                                (int64)(this.column + iVar16),
                                                (int64)iVar14), lVar8 == null ||
                         (lVar8 = GameObject.GetComponent(lVar8,DAT_181da0a88)) == null)))
@@ -587,8 +588,8 @@ public class ReadBookTextController
                               if (lVar5 == null) throw; // [null/range check failed]
                               if (iVar14 < *(int *)(lVar5 + 116)) {
                                 lVar5 = FUN_18046c580(0);
-                                if ((((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
-                                    (lVar5 = FUN_180127f50(*(int64 *)(lVar5 + 72),
+                                if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
+                                    (lVar5 = FUN_180127f50(lVar5.enterAreaChallengeHero,
                                                            (int64)(this.column + iVar16),
                                                            (int64)(this.row + iVar12)),
                                     lVar5 == null)) ||
@@ -636,7 +637,8 @@ public class ReadBookTextController
                      lVar5 != null)) {
                     fVar18 = (float)AudioSource.get_volume(lVar5,0);
                     AudioSource.set_volume
-                              (lVar5,fVar18 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                              (lVar5,fVar18 * *(float *)(pGameController +
+                                                        16),0);
                     iVar16 = -1;
                     do {
                       iVar12 = this.column + iVar16;
@@ -694,8 +696,8 @@ public class ReadBookTextController
                               if (lVar5 == null) throw; // [null/range check failed]
                               if (iVar14 < *(int *)(lVar5 + 116)) {
                                 lVar5 = FUN_18046c580(0);
-                                if ((((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
-                                    (lVar5 = FUN_180127f50(*(int64 *)(lVar5 + 72),
+                                if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
+                                    (lVar5 = FUN_180127f50(lVar5.enterAreaChallengeHero,
                                                            (int64)(this.column + iVar16),
                                                            (int64)(this.row + iVar12)),
                                     lVar5 == null)) ||
@@ -789,8 +791,8 @@ public class ReadBookTextController
                                 if (lVar5 == null) throw; // [null/range check failed]
                                 if (iVar14 < *(int *)(lVar5 + 116)) {
                                   lVar5 = FUN_18046c580(0);
-                                  if ((((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
-                                      (lVar5 = FUN_180127f50(*(int64 *)(lVar5 + 72),
+                                  if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
+                                      (lVar5 = FUN_180127f50(lVar5.enterAreaChallengeHero,
                                                              (int64)(this.column + iVar16)
                                                              ,(int64)
                                                               (this.row + iVar12)),
@@ -963,7 +965,8 @@ public class ReadBookTextController
             if (lVar4 != null) {
               fVar9 = (float)AudioSource.get_volume(lVar4,0);
               AudioSource.set_volume
-                        (lVar4,fVar9 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                        (lVar4,fVar9 * GameController.CheckShowSpeHero,
+                         0);
               while( true ) {
                 if (*pStatics_4a60 == 0) throw; // [null/range check failed]
                 uVar7 = (uint32)plVar8;
@@ -1039,7 +1042,8 @@ public class ReadBookTextController
             if (lVar4 != null) {
               fVar9 = (float)AudioSource.get_volume(lVar4,0);
               AudioSource.set_volume
-                        (lVar4,fVar9 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                        (lVar4,fVar9 * GameController.CheckShowSpeHero,
+                         0);
               while( true ) {
                 if (*pStatics_4a60 == 0) throw; // [null/range check failed]
                 uVar7 = (uint32)plVar8;
@@ -1084,7 +1088,7 @@ public class ReadBookTextController
     // RVA   : 0xC5CCD0   Offset: 0xC5B4D0   Length: 0x73C
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181d74ae0 + 184);
+        var pReadBookTextController = *(int64*)(ReadBookTextController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         uint uVar5;
@@ -1164,14 +1168,14 @@ public class ReadBookTextController
                     plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d6d8c0);
                     if (this.textData == null) throw; // [null/range check failed]
                     if (this.textData.patient < 0) {
-                      lVar1 = pStatics;
+                      lVar1 = pReadBookTextController;
                       uVar5 = *(uint32 *)(lVar1 + 16);
                       uVar6 = *(uint32 *)(lVar1 + 20);
                       uVar7 = *(uint32 *)(lVar1 + 24);
                       uVar8 = *(uint32 *)(lVar1 + 28);
                     }
                     else {
-                      puVar4 = *(uint32 **)(DAT_181d74ae0 + 184);
+                      puVar4 = *(uint32 **)(ReadBookTextController_StaticsPtr + 184);
                       uVar5 = *puVar4;
                       uVar6 = puVar4[1];
                       uVar7 = puVar4[2];
@@ -1217,14 +1221,14 @@ public class ReadBookTextController
                     plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d6d8c0);
                     if (this.textData == null) throw; // [null/range check failed]
                     if (this.textData.exp < 0.0) {
-                      lVar1 = pStatics;
+                      lVar1 = pReadBookTextController;
                       uVar5 = *(uint32 *)(lVar1 + 16);
                       uVar6 = *(uint32 *)(lVar1 + 20);
                       uVar7 = *(uint32 *)(lVar1 + 24);
                       uVar8 = *(uint32 *)(lVar1 + 28);
                     }
                     else {
-                      puVar4 = *(uint32 **)(DAT_181d74ae0 + 184);
+                      puVar4 = *(uint32 **)(ReadBookTextController_StaticsPtr + 184);
                       uVar5 = *puVar4;
                       uVar6 = puVar4[1];
                       uVar7 = puVar4[2];
@@ -1368,19 +1372,19 @@ public class ReadBookTextController
     // RVA   : 0xC5CB10   Offset: 0xC5B310   Length: 0x1B2
     public Color GetColor()
     {
-        var pStatics_4a60 = *(int64*)(DAT_181d74a60 + 184);
-        var pStatics_4ae0 = *(int64*)(DAT_181d74ae0 + 184);
+        var pReadBookTextController = *(int64*)(ReadBookTextController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d74a60 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
         byte[] local_18 = new byte[16];
-        if ((*pStatics_4a60 != 0) &&
-           (lVar3 = *(int64 *)(*pStatics_4a60 + 88)) != null) {
+        if ((*pStatics != 0) &&
+           (lVar3 = *(int64 *)(*pStatics + 88)) != null) {
           if ((0 < *(int *)(lVar3 + 24)) ||
              ((*(char *)(param_2 + 40) == false || (*(char *)(param_2 + 41) != false)))) {
         LAB_180c5cc79:
-            uVar1 = *(uint64 *)(pStatics_4ae0 + 40);
-            *this = *(uint64 *)(pStatics_4ae0 + 32);
+            uVar1 = *(uint64 *)(pReadBookTextController + 40);
+            *this = ReadBookTextController.textGrayColor;
             this[1] = uVar1;
             return this;
           }
@@ -1392,8 +1396,9 @@ public class ReadBookTextController
                 lVar3 = FUN_18046c580(0);
                 if ((lVar3 == null) || (*(int64 *)(param_2 + 32) == 0)) throw; // [null/range check failed]
                 if (*(int *)(lVar3 + 124) < *(int *)(*(int64 *)(param_2 + 32) + 60)) {
-                  uVar1 = *(uint64 *)(pStatics_4ae0 + 56);
-                  *this = *(uint64 *)(pStatics_4ae0 + 48);
+                  uVar1 = *(uint64 *)(pReadBookTextController + 56);
+                  *this = *(uint64 *)
+                              (pReadBookTextController + 48);
                   this[1] = uVar1;
                   return this;
                 }
@@ -1479,7 +1484,7 @@ public class ReadBookTextController
     // RVA   : 0xC60310   Offset: 0xC5EB10   Length: 0x137
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d74ae0 + 184);
+        var pReadBookTextController = *(int64*)(ReadBookTextController_StaticsPtr + 184);
         long lVar2;
         uint uVar3;
         ulong local_48;
@@ -1494,7 +1499,7 @@ public class ReadBookTextController
         uStack_40 = 0;
         Color.ctor(&local_48,0x3e4ccccd,0x3f119192,0x3ea8a8a9,0);
         uVar3 = 0;
-        puVar1 = *(uint32 **)(DAT_181d74ae0 + 184);
+        puVar1 = *(uint32 **)(ReadBookTextController_StaticsPtr + 184);
         *puVar1 = (uint32)local_48;
         puVar1[1] = local_48._4_4_;
         puVar1[2] = (uint32)uStack_40;
@@ -1502,7 +1507,7 @@ public class ReadBookTextController
         local_38 = 0;
         uStack_30 = 0;
         Color.ctor(&local_38,0x3ed8d8d9,0,0,0);
-        lVar2 = pStatics;
+        lVar2 = pReadBookTextController;
         *(uint32 *)(lVar2 + 16) = (uint32)local_38;
         *(uint32 *)(lVar2 + 20) = local_38._4_4_;
         *(uint32 *)(lVar2 + 24) = (uint32)uStack_30;
@@ -1510,13 +1515,13 @@ public class ReadBookTextController
         local_28 = 0;
         uStack_20 = 0;
         FUN_1809981e0(&local_28,0x3f000000,0x3f000000,0x3f000000,CONCAT44(uVar3,0x3f000000),0);
-        lVar2 = pStatics;
+        lVar2 = pReadBookTextController;
         *(uint64 *)(lVar2 + 32) = local_28;
         *(uint64 *)(lVar2 + 40) = uStack_20;
         local_18 = 0;
         uStack_10 = 0;
         FUN_1809981e0(&local_18,0x3f333333,0x3f333333,0x3f333333,0x3f800000,0);
-        lVar2 = pStatics;
+        lVar2 = pReadBookTextController;
         *(uint64 *)(lVar2 + 48) = local_18;
         *(uint64 *)(lVar2 + 56) = uStack_10;
     }

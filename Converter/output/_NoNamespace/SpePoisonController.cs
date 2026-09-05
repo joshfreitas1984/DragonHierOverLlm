@@ -61,8 +61,7 @@ public class SpePoisonController
     // RVA   : 0x97E8C0   Offset: 0x97D0C0   Length: 0x17AE
     private void RefreshUI()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         byte uVar1;
         bool cVar2;
         uint uVar3;
@@ -91,16 +90,16 @@ public class SpePoisonController
         local_res18[0] = 0;
         this.needRefresh = 0;
         if (this.spePoisonType == null) {
-          if ((*pStatics_df90 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null)
-          throw; // [null/range check failed]
-          uVar6 = *(uint64 *)(lVar4 + 0x208);
+          if ((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
+          uVar6 = lVar4.getSpePoisonData;
         }
         else {
-          if ((*pStatics_df90 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null)
-          throw; // [null/range check failed]
-          uVar6 = *(uint64 *)(lVar4 + 0x210);
+          if ((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
+          uVar6 = lVar4.combineSpePoisonData;
         }
         this.targetSpePoisonData = uVar6;
         if (((this.spePoisonUI != null) &&
@@ -260,7 +259,7 @@ public class SpePoisonController
                               FUN_1800d6620();
                             }
                             lVar4 = Component.GetComponent(lVar4,DAT_181d6bc40);
-                            lVar7 = *pStatics_6270;
+                            lVar7 = *pStatics;
                             fVar11 = (float)SpePoisonController.GetTotalScore(this,0);
                             uVar12 = Mathf.Max(0x3f800000,fVar11 * 0.05,0);
                             fVar11 = (float)Mathf.Log(uVar12,0x40000000,0);
@@ -423,7 +422,7 @@ public class SpePoisonController
                           if (((lVar7 != null) && (lVar4 = GameObject.get_transform(lVar7,0)) != null)
                              && (lVar4 = Transform.Find(lVar4,"ResultIcon",0)) != null) {
                             lVar4 = Component.GetComponent(lVar4,DAT_181d6bc40);
-                            lVar7 = *pStatics_6270;
+                            lVar7 = *pStatics;
                             if (this.targetSpePoisonData != null) {
                               fVar11 = (float)SpePoisonData.GetScoreLv
                                                         (this.targetSpePoisonData,
@@ -1017,7 +1016,6 @@ public class SpePoisonController
     // RVA   : 0x980300   Offset: 0x97EB00   Length: 0x3EA
     public void StartButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         ulong uVar1;
         bool cVar2;
         uint uVar3;
@@ -1076,8 +1074,9 @@ public class SpePoisonController
             }
           }
           else {
-            if ((*pStatics != 0) &&
-               (lVar5 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar5 = GameController._instance.worldData,
+               lVar5 != null)) {
               lVar5 = WorldData.Player(lVar5,0);
               if ((this.targetSpePoisonData != null) && (lVar5 != null)) {
                 HeroData.GetItem(lVar5,this.targetSpePoisonData.result,0,1,

@@ -20,8 +20,6 @@ public class ForceJobSettingDataBase
     // RVA   : 0x77E850   Offset: 0x77D050   Length: 0xF
     public void /*ctor*/()
     {
-        void FUN_18077e850(int64 this)
-        {
         this.minForceLv = 0xffffffffffffffff;
         ZhSegment.Initialize(this,0);
     }

@@ -18,7 +18,7 @@ public class ResearchTechListIconController
         long lVar2;
         long lVar3;
         uVar1 = this.techListID;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d77350 + 184) + 8);
+        lVar2 = *(int64 *)(*(int64 *)(ResearchTechController_StaticsPtr + 184) + 8);
         if (lVar2 != null) {
           if ((*(int64 *)(lVar2 + 48) != 0) &&
              (lVar3 = *(int64 *)(*(int64 *)(lVar2 + 48) + 0x188)) != null) {

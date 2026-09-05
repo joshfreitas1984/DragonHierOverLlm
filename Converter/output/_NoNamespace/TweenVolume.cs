@@ -49,8 +49,6 @@ public class TweenVolume
     // RVA   : 0xA73D60   Offset: 0xA72560   Length: 0x7
     public float get_volume()
     {
-        void FUN_180a73d60(uint64 this)
-        {
         TweenVolume.get_value(this,0);
     }
 
@@ -58,8 +56,6 @@ public class TweenVolume
     // RVA   : 0xA73E10   Offset: 0xA72610   Length: 0x8
     public void set_volume(float value)
     {
-        void FUN_180a73e10(uint64 this,uint64 value)
-        {
         TweenVolume.set_value(this,value,0);
     }
 
@@ -159,8 +155,6 @@ public class TweenVolume
     // RVA   : 0xA70070   Offset: 0xA6E870   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180a70070(int64 this)
-        {
         this.from = 0x3f800000;
         this.to = 0x3f800000;
         UITweener.ctor(this,0);

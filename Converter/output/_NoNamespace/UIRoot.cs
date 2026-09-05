@@ -44,9 +44,7 @@ public class UIRoot
     // RVA   : 0x1585E80   Offset: 0x1584680   Length: 0x27
     public Constraint get_constraint()
     {
-        uint64 FUN_181585e80(int64 this)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         if (!this.fitWidth) {
           uVar1 = 3;
           if (!this.fitHeight) {
@@ -65,9 +63,7 @@ public class UIRoot
     // RVA   : 0x1585E70   Offset: 0x1584670   Length: 0xB
     public Scaling get_activeScaling()
     {
-        uint32 FUN_181585e70(int64 this)
-        {
-        uint32 uVar1;
+        uint uVar1;
         uVar1 = 0;
         if (this.scalingStyle != 2) {
           uVar1 = this.scalingStyle;
@@ -262,8 +258,6 @@ public class UIRoot
     // RVA   : 0x1585C10   Offset: 0x1584410   Length: 0xA
     private void Update()
     {
-        void FUN_181585c10(uint64 this)
-        {
         UIRoot.UpdateScale(this,1,0);
     }
 
@@ -379,8 +373,6 @@ public class UIRoot
     // RVA   : 0x1585CA0   Offset: 0x15844A0   Length: 0x27
     public void /*ctor*/()
     {
-        void FUN_181585ca0(int64 this)
-        {
         this.manualWidth = 0x500;
         this.manualHeight = 0x2d0;
         this.minimumHeight = 0x140;

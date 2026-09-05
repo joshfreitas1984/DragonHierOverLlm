@@ -85,7 +85,8 @@ public class BuildQuickButtonController
               uVar3 = BuildQuickButtonController.BuildingObj(this,0);
               if (lVar2 != null) {
                 AreaController.FocusOnTarget
-                          (lVar2,uVar3,*(uint32 *)(*(int64 *)(DAT_181d87630 + 184) + 20),0);
+                          (lVar2,uVar3,
+                           *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 20),0);
                 lVar2 = BuildQuickButtonController.BuildingObj(this,0);
                 if ((lVar2 != null) && (lVar2 = GameObject.GetComponent(lVar2,DAT_181d9e2b0)) != null) {
                   lVar2.enemyMonth = 1;
@@ -110,9 +111,9 @@ public class BuildQuickButtonController
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 16);
+        lVar3 = AreaBuildController._instance;
         if (lVar3 != null) {
-          if (*(char *)(lVar3 + 48) != false) {
+          if (lVar3.buildMode) {
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar6 = (int64 *)0;
             if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
@@ -152,8 +153,6 @@ public class BuildQuickButtonController
     // RVA   : 0xBB53D0   Offset: 0xBB3BD0   Length: 0xC
     public void OnPointerEnter()
     {
-        void FUN_180bb53d0(int64 this)
-        {
         if (this.targetBuildingData != null) {
           this.onHover = 1;
         }
@@ -181,7 +180,7 @@ public class BuildQuickButtonController
     public GameObject BuildingObj()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d87630 + 184) + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           AreaController.GetBuildingObj(lVar1,this.targetBuildingData,0);
           return;
@@ -192,6 +191,7 @@ public class BuildQuickButtonController
     // RVA   : 0xBB5450   Offset: 0xBB3C50   Length: 0x60E
     public void RefreshBuildingChoiceInfo()
     {
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar2;
         bool cVar3;
         byte uVar4;
@@ -222,7 +222,7 @@ public class BuildQuickButtonController
                 cVar3 = AreaBuildingData.BuildingAvailable(this.targetBuildingData,0);
                 if (!cVar3) {
                   lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
-                  uVar6 = *(uint64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x2c8);
+                  uVar6 = *(uint64 *)(pPlotController + 0x2c8);
                   if (this.targetBuildingData == null) {
         LAB_180bb5a59:
                           // WARNING: Subroutine does not return
@@ -249,9 +249,10 @@ public class BuildQuickButtonController
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     lVar5 = *(int64 *)(lVar11 + lVar5.buildingID);
-                    if (**(int **)(DAT_181d4ef00 + 184) == 2) {
-                      if ((lVar5 == null) || (*(int64 *)(*(int64 *)(DAT_181d8ee60 + 184) + 16) == 0)
-                         ) throw; // [null/range check failed]
+                    if (PlotController._instance == 2) {
+                      if ((lVar5 == null) ||
+                         (*(int64 *)(pPlotController + 16) == 0))
+                      throw; // [null/range check failed]
                       cVar3 = FUN_1818279a0();
                       if (!(!cVar3))
                       {
@@ -278,8 +279,8 @@ public class BuildQuickButtonController
                         uVar4 = lVar5.destroyTimeLeft;
                         uVar9 = lVar5.missionDatas;
                         local_res18[0] = CONCAT31(local_res18[0]._1_3_,uVar4);
-                        if (((*(byte *)(DAT_181d4df90 + 0x133) & 4) != 0) &&
-                           (*(int *)(DAT_181d4df90 + 224) == 0)) {
+                        if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4) != 0) &&
+                           (*(int *)(GameController_StaticsPtr + 224) == 0)) {
                           il2cpp_runtime_class_init();
                           uVar4 = (uint8)local_res18[0];
                         }
@@ -333,8 +334,6 @@ public class BuildQuickButtonController
     // RVA   : 0x7ECFE0   Offset: 0x7EB7E0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1807ecfe0(int64 this)
-        {
         this.refreshTime = 0x3e4ccccd;
         FUN_18044ef50(this,0);
     }

@@ -14,8 +14,7 @@ public class BattleAISettingController
     // RVA   : 0x7F92F0   Offset: 0x7F7AF0   Length: 0xA20
     public void Init()
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         uint uVar1;
         ulong uVar2;
         long lVar3;
@@ -37,8 +36,8 @@ public class BattleAISettingController
         if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"HeroIcon",0)) == null)
         throw; // [null/range check failed]
         uVar7 = Component.get_gameObject(lVar6,0);
-        if (*pStatics_e188 == 0) throw; // [null/range check failed]
-        uVar2 = *(uint64 *)(*pStatics_e188 + 144);
+        if (*pStatics == 0) throw; // [null/range check failed]
+        uVar2 = *(uint64 *)(*pStatics + 144);
         lVar6 = GlobalData.AddChild(uVar7,uVar2,0);
         if (lVar6 == null) throw; // [null/range check failed]
         lVar8 = GameObject.GetComponent(lVar6,DAT_181d9fb20);
@@ -52,7 +51,7 @@ public class BattleAISettingController
         throw; // [null/range check failed]
         lVar6 = Component.get_gameObject(lVar6,0);
         lVar8 = this.targetBattleUnit;
-        uVar10 = *(uint64 *)(pStatics_b128 + 80);
+        uVar10 = PlotController.StopWarCostFavor;
         if (((uVar10 == 0) || (lVar8 == null)) || (lVar3 = lVar8.heroData) == null)
         throw; // [null/range check failed]
         if ((*(int *)(lVar3 + 88) == 0) || (*(char *)(lVar3 + 0x246) != false)) {
@@ -84,7 +83,7 @@ public class BattleAISettingController
         if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) throw; // [null/range check failed]
         lVar6 = Component.get_gameObject(lVar6,0);
         lVar8 = this.targetBattleUnit;
-        uVar10 = *(uint64 *)(pStatics_b128 + 80);
+        uVar10 = PlotController.StopWarCostFavor;
         if (((uVar10 == 0) || (lVar8 == null)) || (lVar3 = lVar8.heroData) == null)
         throw; // [null/range check failed]
         if ((*(int *)(lVar3 + 88) == 0) || (*(char *)(lVar3 + 0x246) != false)) {
@@ -152,7 +151,7 @@ public class BattleAISettingController
           Selectable.set_interactable(lVar6,0,0);
         }
         else {
-          lVar6 = *(int64 *)(pStatics_b128 + 80);
+          lVar6 = PlotController.StopWarCostFavor;
           if (lVar6 == null) throw; // [null/range check failed]
           cVar4 = BattleController.HavePlayerUnit(lVar6,0);
           if (!cVar4) goto LAB_1807f98c0;
@@ -278,7 +277,7 @@ public class BattleAISettingController
             if (lVar4 != null) {
               FUN_18181e970(lVar4,0,uVar3,DAT_181d68370);
               uVar5 = this.targetBattleUnit;
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+              lVar4 = PlotController.StopWarCostFavor;
               if (lVar4 != null) {
                 uVar1 = *(uint64 *)(lVar4 + 0x110);
                 cVar2 = Object.op_Equality(uVar5,uVar1,0);
@@ -315,7 +314,7 @@ public class BattleAISettingController
             if (lVar4 != null) {
               FUN_18181e970(lVar4,1,uVar3,DAT_181d68370);
               uVar5 = this.targetBattleUnit;
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+              lVar4 = PlotController.StopWarCostFavor;
               if (lVar4 != null) {
                 uVar1 = *(uint64 *)(lVar4 + 0x110);
                 cVar2 = Object.op_Equality(uVar5,uVar1,0);
@@ -335,7 +334,6 @@ public class BattleAISettingController
     // RVA   : 0x7F90B0   Offset: 0x7F78B0   Length: 0x236
     public void AutoSettingButtonClicked(GameObject buttonClicked)
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -351,12 +349,12 @@ public class BattleAISettingController
           if ((lVar6 != null) && (lVar1 != null)) {
             FUN_18181e970(lVar1,uVar4,*(char *)(lVar6 + 0x118) != false,DAT_181d68370);
             uVar5 = this.targetBattleUnit;
-            lVar1 = *(int64 *)(pStatics + 80);
+            lVar1 = PlotController.StopWarCostFavor;
             if (lVar1 != null) {
               uVar2 = *(uint64 *)(lVar1 + 0x110);
               cVar3 = Object.op_Equality(uVar5,uVar2,0);
               if (cVar3) {
-                lVar1 = *(int64 *)(pStatics + 80);
+                lVar1 = PlotController.StopWarCostFavor;
                 if (lVar1 == null) throw; // [null/range check failed]
                 *(uint8 *)(lVar1 + 0x290) = 1;
               }

@@ -45,7 +45,7 @@ public class PartPostureData
             if (param_2 != 0) {
               lVar6 = String.Split(param_2,lVar5,0);
               uVar9 = 0;
-              lVar5 = DAT_181d4ef00;
+              lVar5 = PlotController_StaticsPtr;
               if (lVar6 != null) {
                 do {
                   if (*(int *)(lVar6 + 24) <= (int)uVar9) {
@@ -55,7 +55,7 @@ public class PartPostureData
                   while( true ) {
                     if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
                       il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d4ef00;
+                      lVar5 = PlotController_StaticsPtr;
                     }
                     lVar2 = *(int64 *)(plVar5 + 0x5e8);
                     if (lVar2 == null) throw; // [null/range check failed]
@@ -68,7 +68,7 @@ public class PartPostureData
                     lVar2 = lVar6[uVar9];
                     if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
                       il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d4ef00;
+                      lVar5 = PlotController_StaticsPtr;
                     }
                     lVar5 = *(int64 *)(plVar5 + 0x5e8);
                     if ((lVar5 == null) || (uVar7 = FUN_180002f80(lVar5,iVar8,DAT_181d7c9c0), lVar2 == null))
@@ -82,7 +82,7 @@ public class PartPostureData
                         FUN_1800d65f0(uVar7,0);
                       }
                       lVar2 = lVar6[uVar9];
-                      lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5e8);
+                      lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5e8);
                       if ((lVar3 == null) || (uVar7 = FUN_180002f80(lVar3,iVar8,DAT_181d7c9c0), lVar2 == null))
                       throw; // [null/range check failed]
                       uVar7 = String.Replace(lVar2,uVar7,"",0);
@@ -91,7 +91,7 @@ public class PartPostureData
                       FUN_181814d10(lVar5,iVar8);
                     }
                     iVar8 = iVar8 + 1;
-                    lVar5 = DAT_181d4ef00;
+                    lVar5 = PlotController_StaticsPtr;
                   }
                   uVar9 = uVar9 + 1;
                 } while( true );
@@ -136,7 +136,7 @@ public class PartPostureData
             if (resource != null) {
               lVar6 = String.Split(resource,lVar5,0);
               uVar9 = 0;
-              lVar5 = DAT_181d4ef00;
+              lVar5 = PlotController_StaticsPtr;
               if (lVar6 != null) {
                 do {
                   if (*(int *)(lVar6 + 24) <= (int)uVar9) {
@@ -146,7 +146,7 @@ public class PartPostureData
                   while( true ) {
                     if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
                       il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d4ef00;
+                      lVar5 = PlotController_StaticsPtr;
                     }
                     lVar2 = *(int64 *)(plVar5 + 0x5e8);
                     if (lVar2 == null) throw; // [null/range check failed]
@@ -159,7 +159,7 @@ public class PartPostureData
                     lVar2 = lVar6[uVar9];
                     if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
                       il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d4ef00;
+                      lVar5 = PlotController_StaticsPtr;
                     }
                     lVar5 = *(int64 *)(plVar5 + 0x5e8);
                     if ((lVar5 == null) || (uVar7 = FUN_180002f80(lVar5,iVar8,DAT_181d7c9c0), lVar2 == null))
@@ -173,7 +173,7 @@ public class PartPostureData
                         FUN_1800d65f0(uVar7,0);
                       }
                       lVar2 = lVar6[uVar9];
-                      lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5e8);
+                      lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5e8);
                       if ((lVar3 == null) || (uVar7 = FUN_180002f80(lVar3,iVar8,DAT_181d7c9c0), lVar2 == null))
                       throw; // [null/range check failed]
                       uVar7 = String.Replace(lVar2,uVar7,"",0);
@@ -182,7 +182,7 @@ public class PartPostureData
                       FUN_181814d10(lVar5,iVar8);
                     }
                     iVar8 = iVar8 + 1;
-                    lVar5 = DAT_181d4ef00;
+                    lVar5 = PlotController_StaticsPtr;
                   }
                   uVar9 = uVar9 + 1;
                 } while( true );
@@ -408,7 +408,7 @@ public class PartPostureData
           if ((!cVar2) && (uVar6 = "|", iVar7 == 3)) {
             uVar6 = "\n";
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5e8);
+          lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5e8);
           if (lVar1 == null) break;
           uVar3 = FUN_180002f80(lVar1,iVar7,DAT_181d7c9c0);
           if (this.partPosture == null) break;
@@ -454,7 +454,7 @@ public class PartPostureData
               if (cVar1) {
                 uVar8 = "";
               }
-              lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5e8);
+              lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5e8);
               if (lVar2 == null) break;
               uVar3 = FUN_180002f80(lVar2,uVar6,DAT_181d7c9c0);
               if (this.partPosture == null) break;

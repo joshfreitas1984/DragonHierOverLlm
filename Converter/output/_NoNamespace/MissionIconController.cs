@@ -38,7 +38,7 @@ public class MissionIconController
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"HighLight",0)) == null)
           throw; // [null/range check failed]
           plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x460);
+          lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x460);
           if ((this.missionData == null) || (lVar3 == null)) throw; // [null/range check failed]
           uVar1 = this.missionData.missionSourceType;
           if (lVar3.name <= uVar1) {
@@ -128,8 +128,7 @@ public class MissionIconController
     // RVA   : 0xAEF7A0   Offset: 0xAEDFA0   Length: 0x3A7
     public void OnClick()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
@@ -141,13 +140,13 @@ public class MissionIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (*pStatics_df90 != 0) {
-          cVar1 = GameController.HaveSpeUI(*pStatics_df90,1,0);
+        if (GameController._instance != null) {
+          cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (cVar1) {
             return;
           }
-          if ((*pStatics_e188 != 0) &&
-             (lVar4 = *(int64 *)(*pStatics_e188 + 32)) != null) {
+          if ((*pStatics != 0) &&
+             (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
             cVar1 = GameObject.get_activeSelf(lVar4,0);
             if (!cVar1) {
               return;

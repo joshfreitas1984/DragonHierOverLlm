@@ -116,7 +116,7 @@ public class <StartAuctionDeal>d__46
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar7 = lVar6[uVar4];
-            lVar6 = *(int64 *)(*(int64 *)(DAT_181d8a1a8 + 184) + 16);
+            lVar6 = AuctionController.dealHeroTalk;
             if (lVar6 == null) goto LAB_180b26e57;
             uVar4 = FUN_180d8cf10(0,*(uint32 *)(lVar6 + 24),0);
             if (*(uint32 *)(lVar6 + 24) <= uVar4) {

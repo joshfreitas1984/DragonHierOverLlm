@@ -88,18 +88,18 @@ public class AttriNumData
         int iVar5;
         uint uVar6;
         uVar6 = 0;
-        lVar4 = DAT_181d4ef00;
+        lVar4 = PlotController_StaticsPtr;
         do {
           if (((*(byte *)(lVar4 + 0x133) & 4) != 0) && (*(int *)(lVar4 + 224) == 0)) {
             il2cpp_runtime_class_init();
-            lVar4 = DAT_181d4ef00;
+            lVar4 = PlotController_StaticsPtr;
           }
           lVar1 = *(int64 *)(plVar4 + 0x558);
           if (lVar1 == null) goto LAB_1807f10c4;
           if (*(int *)(lVar1 + 24) <= (int)uVar6) {
             if (((*(byte *)(lVar4 + 0x133) & 4) != 0) && (*(int *)(lVar4 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar4 = DAT_181d4ef00;
+              lVar4 = PlotController_StaticsPtr;
             }
             lVar4 = *(int64 *)(plVar4 + 0x558);
             if (lVar4 == null) goto LAB_1807f10c4;
@@ -107,7 +107,7 @@ public class AttriNumData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar3 = lVar4[uVar6];
-            lVar4 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+            lVar4 = GameController.lockObj;
             if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 56)) == null) goto LAB_1807f10c4;
             iVar5 = *(int *)(lVar4 + 24);
             goto LAB_1807f0fc2;
@@ -117,7 +117,7 @@ public class AttriNumData
         LAB_1807f0f3e:
               if (((*(byte *)(lVar4 + 0x133) & 4) != 0) && (*(int *)(lVar4 + 224) == 0)) {
                 il2cpp_runtime_class_init();
-                lVar4 = DAT_181d4ef00;
+                lVar4 = PlotController_StaticsPtr;
               }
               lVar4 = *(int64 *)(plVar4 + 0x558);
               if (lVar4 != null) {
@@ -137,7 +137,7 @@ public class AttriNumData
             }
             if (((*(byte *)(lVar4 + 0x133) & 4) != 0) && (*(int *)(lVar4 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar4 = DAT_181d4ef00;
+              lVar4 = PlotController_StaticsPtr;
             }
             lVar1 = *(int64 *)(plVar4 + 0x558);
             if (lVar1 == null) goto LAB_1807f10c4;
@@ -151,7 +151,7 @@ public class AttriNumData
     // RVA   : 0x7F10D0   Offset: 0x7EF8D0   Length: 0x703
     public string GetDamageRatioDescribe(float speRate)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
@@ -194,7 +194,7 @@ public class AttriNumData
                                >> 31)) * 3)) {
                 uVar8 = "\n";
               }
-              lVar5 = *(int64 *)(pStatics + 0x490);
+              lVar5 = *(int64 *)(pPlotController + 0x490);
               if (lVar5 == null) break;
               uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181d7c9c0);
               if (this.attri == null) break;
@@ -224,7 +224,7 @@ public class AttriNumData
                              31)) * 3)) {
               uVar8 = "\n";
             }
-            lVar5 = *(int64 *)(pStatics + 0x498);
+            lVar5 = *(int64 *)(pPlotController + 0x498);
             if (lVar5 == null) break;
             uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181d7c9c0);
             if (this.fightSkill == null) break;
@@ -326,7 +326,7 @@ public class AttriNumData
                              31)) * 3)) {
               uVar8 = "\n";
             }
-            lVar5 = *(int64 *)(pStatics + 0x4a8);
+            lVar5 = *(int64 *)(pPlotController + 0x4a8);
             if (lVar5 == null) break;
             uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181d7c9c0);
             if (this.livingSkill == null) break;
@@ -342,7 +342,7 @@ public class AttriNumData
     // RVA   : 0x7F1F10   Offset: 0x7F0710   Length: 0x90E
     public string GetSkillNeedsDescribe(HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
@@ -380,13 +380,14 @@ public class AttriNumData
               fVar12 = (float)FUN_1800d6780(this.attri,uVar9,DAT_181d796d8);
               uVar2 = "{1}{0}";
               if (fVar11 < fVar12) {
-                uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2c8),
+                uVar2 = String.Concat(*(uint64 *)
+                                        (pPlotController + 0x2c8),
                                        "{1}{0}</color>",0);
               }
               if (this.attri == null) goto LAB_1807f2819;
               local_res8[0] = FUN_1800d6780(this.attri,uVar9,DAT_181d796d8);
               uVar3 = Single.ToString(local_res8,0);
-              lVar6 = *(int64 *)(pStatics + 0x490);
+              lVar6 = *(int64 *)(pPlotController + 0x490);
               if (lVar6 == null) goto LAB_1807f2819;
               uVar4 = FUN_180002f80(lVar6,uVar9,DAT_181d7c9c0);
               uVar2 = String.Format(uVar2,uVar3,uVar4);
@@ -432,13 +433,14 @@ public class AttriNumData
           fVar12 = (float)FUN_1800d6780(this.fightSkill,uVar9,DAT_181d796d8);
           uVar2 = "{1}{0}";
           if (fVar11 < fVar12) {
-            uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2c8),
+            uVar2 = String.Concat(*(uint64 *)
+                                    (pPlotController + 0x2c8),
                                    "{1}{0}</color>",0);
           }
           if (this.fightSkill == null) goto LAB_1807f2819;
           local_res8[0] = FUN_1800d6780(this.fightSkill,uVar9,DAT_181d796d8);
           uVar3 = Single.ToString(local_res8,0);
-          lVar6 = *(int64 *)(pStatics + 0x498);
+          lVar6 = *(int64 *)(pPlotController + 0x498);
           if (lVar6 == null) goto LAB_1807f2819;
           uVar4 = FUN_180002f80(lVar6,uVar9,DAT_181d7c9c0);
           uVar2 = String.Format(uVar2,uVar3,uVar4);
@@ -461,7 +463,8 @@ public class AttriNumData
             uVar2 = "生命{0}";
             if (*(float *)(targetHero + 0x17c) <= this.Hp &&
                 this.Hp != *(float *)(targetHero + 0x17c)) {
-              uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2c8),
+              uVar2 = String.Concat(*(uint64 *)
+                                      (pPlotController + 0x2c8),
                                      "生命{0}</color>",0);
             }
             uVar3 = Single.ToString(this + 40,0);
@@ -478,7 +481,8 @@ public class AttriNumData
             uVar2 = "体力{0}";
             if (*(float *)(targetHero + 0x188) <= this.Power &&
                 this.Power != *(float *)(targetHero + 0x188)) {
-              uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2c8),
+              uVar2 = String.Concat(*(uint64 *)
+                                      (pPlotController + 0x2c8),
                                      "体力{0}</color>",0);
             }
             uVar3 = Single.ToString(this + 44,0);
@@ -495,7 +499,8 @@ public class AttriNumData
             uVar2 = "内力{0}";
             if (*(float *)(targetHero + 0x194) <= this.Mana &&
                 this.Mana != *(float *)(targetHero + 0x194)) {
-              uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2c8),
+              uVar2 = String.Concat(*(uint64 *)
+                                      (pPlotController + 0x2c8),
                                      "内力{0}</color>",0);
             }
             uVar3 = Single.ToString(this + 48,0);
@@ -520,13 +525,14 @@ public class AttriNumData
           fVar12 = (float)FUN_1800d6780(this.livingSkill,uVar7,DAT_181d796d8);
           uVar2 = "{1}{0}";
           if (fVar11 < fVar12) {
-            uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2c8),
+            uVar2 = String.Concat(*(uint64 *)
+                                    (pPlotController + 0x2c8),
                                    "{1}{0}</color>",0);
           }
           if (this.livingSkill == null) goto LAB_1807f2819;
           local_res8[0] = FUN_1800d6780(this.livingSkill,uVar7,DAT_181d796d8);
           uVar3 = Single.ToString(local_res8,0);
-          lVar6 = *(int64 *)(pStatics + 0x4a8);
+          lVar6 = *(int64 *)(pPlotController + 0x4a8);
           if (lVar6 == null) goto LAB_1807f2819;
           uVar4 = FUN_180002f80(lVar6,uVar7,DAT_181d7c9c0);
           uVar2 = String.Format(uVar2,uVar3,uVar4);
@@ -543,7 +549,6 @@ public class AttriNumData
     // RVA   : 0x7F17E0   Offset: 0x7EFFE0   Length: 0x728
     public float GetSkillNeedExpRate(HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         uint uVar2;
         uint uVar3;
@@ -638,7 +643,7 @@ public class AttriNumData
           if (fVar6 != 0.0) {
             if (targetHero == null) goto LAB_1807f1f03;
             fVar7 = *(float *)(targetHero + 0x17c);
-            lVar1 = *(int64 *)(pStatics + 32);
+            lVar1 = GameController.lockObj;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) goto LAB_1807f1f03;
             if (lVar1.Count < 58) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -658,7 +663,7 @@ public class AttriNumData
           if (fVar6 != 0.0) {
             if (targetHero == null) goto LAB_1807f1f03;
             fVar7 = *(float *)(targetHero + 0x188);
-            lVar1 = *(int64 *)(pStatics + 32);
+            lVar1 = GameController.lockObj;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) goto LAB_1807f1f03;
             if (lVar1.Count < 59) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -678,7 +683,7 @@ public class AttriNumData
           if (fVar6 != 0.0) {
             if (targetHero == null) goto LAB_1807f1f03;
             fVar7 = *(float *)(targetHero + 0x194);
-            lVar1 = *(int64 *)(pStatics + 32);
+            lVar1 = GameController.lockObj;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) goto LAB_1807f1f03;
             if (lVar1.Count < 60) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);

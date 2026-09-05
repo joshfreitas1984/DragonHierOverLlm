@@ -128,8 +128,7 @@ public class MailIconController
     // RVA   : 0xA8B590   Offset: 0xA89D90   Length: 0x214
     public void OnClick()
     {
-        var pStatics_5970 = *(int64*)(DAT_181d65970 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d65970 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar4;
@@ -139,8 +138,8 @@ public class MailIconController
           if (lVar1 != null) {
             lVar1.noticed = !lVar1.noticed;
             MailIconController.RefreshNoticeText(this,0);
-            if (*pStatics_5970 != 0) {
-              MissionUIController.RefreshMailNewIcon(*pStatics_5970,0);
+            if (*pStatics != 0) {
+              MissionUIController.RefreshMailNewIcon(*pStatics,0);
               uVar4 = "Sound/SoundEffect/Paper";
         LAB_180a8b756:
               plVar3 = (int64 *)Resources.Load(uVar4,0);
@@ -154,12 +153,12 @@ public class MailIconController
           }
         }
         else {
-          if (((*pStatics_df90 != 0) &&
-              (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar1 = *(int64 *)(lVar1 + 144)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar1 = GameController._instance.worldData, lVar1 != null
+              )) && (lVar1 = lVar1.MailDatas) != null) {
             FUN_181801c10(lVar1,this.mailData,DAT_181d6bee8);
-            if (*pStatics_5970 != 0) {
-              MissionUIController.RefreshMailTable(*pStatics_5970,0);
+            if (*pStatics != 0) {
+              MissionUIController.RefreshMailTable(*pStatics,0);
               uVar4 = "Sound/SoundEffect/PaperQuick";
               goto LAB_180a8b756;
             }

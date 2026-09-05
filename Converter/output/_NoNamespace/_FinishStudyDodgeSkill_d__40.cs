@@ -259,7 +259,7 @@ public class <FinishStudyDodgeSkill>d__40
                 while (lVar5 = *(int64 *)(lVar3 + 152)) != null {
                   if ((int)*(uint32 *)(lVar5 + 24) <= (int)uVar9) {
                     FUN_180f56130(lVar5,DAT_181d61c78);
-                    if (**(int64 **)(DAT_181d82f70 + 184) != 0) {
+                    if (StudySkillController._instance != null) {
                       StudySkillController.FinishStudySkill();
                       return false;
                     }

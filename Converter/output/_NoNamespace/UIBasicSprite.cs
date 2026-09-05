@@ -62,8 +62,6 @@ public class UIBasicSprite
     // RVA   : 0xA80D30   Offset: 0xA7F530   Length: 0x7
     public virtual Type get_type()
     {
-        uint32 FUN_180a80d30(int64 this)
-        {
         return this.mType;
     }
 
@@ -71,8 +69,6 @@ public class UIBasicSprite
     // RVA   : 0xA80DE0   Offset: 0xA7F5E0   Length: 0x20
     public virtual void set_type(Type value)
     {
-        void FUN_180a80de0(int64 *this,int value)
-        {
         if ((int)this[49] != value) {
           *(int *)(this + 49) = value;
                           // WARNING: Could not recover jumptable at 0x000180a80df8. Too many branches
@@ -86,8 +82,6 @@ public class UIBasicSprite
     // RVA   : 0xA80A30   Offset: 0xA7F230   Length: 0x7
     public Flip get_flip()
     {
-        uint32 FUN_180a80a30(int64 this)
-        {
         return this.mFlip;
     }
 
@@ -95,8 +89,6 @@ public class UIBasicSprite
     // RVA   : 0xA80DA0   Offset: 0xA7F5A0   Length: 0x20
     public void set_flip(Flip value)
     {
-        void FUN_180a80da0(int64 *this,int value)
-        {
         if ((int)this[51] != value) {
           *(int *)(this + 51) = value;
                           // WARNING: Could not recover jumptable at 0x000180a80db8. Too many branches
@@ -110,8 +102,6 @@ public class UIBasicSprite
     // RVA   : 0xA80A20   Offset: 0xA7F220   Length: 0x7
     public FillDirection get_fillDirection()
     {
-        uint32 FUN_180a80a20(int64 this)
-        {
         return this.mFillDirection;
     }
 
@@ -129,8 +119,6 @@ public class UIBasicSprite
     // RVA   : 0xA80A10   Offset: 0xA7F210   Length: 0x9
     public float get_fillAmount()
     {
-        uint32 FUN_180a80a10(int64 this)
-        {
         return *(uint32 *)(this + 400);
     }
 
@@ -230,8 +218,6 @@ public class UIBasicSprite
     // RVA   : 0xA80AB0   Offset: 0xA7F2B0   Length: 0x8
     public bool get_invert()
     {
-        uint8 FUN_180a80ab0(int64 this)
-        {
         return this.mInvert;
     }
 
@@ -269,8 +255,6 @@ public class UIBasicSprite
     // RVA   : 0xA80D20   Offset: 0xA7F520   Length: 0x9
     public virtual float get_pixelSize()
     {
-        uint64 FUN_180a80d20(void)
-        {
         return 0x3f800000;
     }
 
@@ -628,7 +612,7 @@ public class UIBasicSprite
     // RVA   : 0xA7F090   Offset: 0xA7D890   Length: 0xFAA
     protected void SlicedFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Vector4 u, ref Color gc)
     {
-        var pStatics = *(int64*)(DAT_181d8a358 + 184);
+        var pUIBasicSprite = *(int64*)(UIBasicSprite_StaticsPtr + 184);
         void UIBasicSprite.SlicedFill
                      (int64 *this,int64 verts,int64 uvs,int64 cols,
                      uint32 *v,uint64 u,uint32 *gc)
@@ -690,7 +674,7 @@ public class UIBasicSprite
           UIBasicSprite.SimpleFill(this,verts,uvs,cols,v,u,gc,0);
           return;
         }
-        lVar3 = *pStatics;
+        lVar3 = UIBasicSprite.mTempPos;
         if (lVar3 != null) {
           if (*(int *)(lVar3 + 24) == 0) {
             uVar9 = il2cpp_internal();
@@ -698,7 +682,7 @@ public class UIBasicSprite
             FUN_1800d65f0(uVar9,0);
           }
           *(uint32 *)(lVar3 + 32) = *v;
-          lVar3 = *pStatics;
+          lVar3 = UIBasicSprite.mTempPos;
           if (lVar3 != null) {
             if (*(int *)(lVar3 + 24) == 0) {
               uVar9 = il2cpp_internal();
@@ -706,7 +690,7 @@ public class UIBasicSprite
               FUN_1800d65f0(uVar9,0);
             }
             *(uint32 *)(lVar3 + 36) = v[1];
-            lVar3 = *pStatics;
+            lVar3 = UIBasicSprite.mTempPos;
             if (lVar3 != null) {
               if (*(uint32 *)(lVar3 + 24) < 4) {
                 uVar9 = il2cpp_internal();
@@ -714,7 +698,7 @@ public class UIBasicSprite
                 FUN_1800d65f0(uVar9,0);
               }
               *(uint32 *)(lVar3 + 56) = v[2];
-              lVar3 = *pStatics;
+              lVar3 = UIBasicSprite.mTempPos;
               if (lVar3 != null) {
                 if (*(uint32 *)(lVar3 + 24) < 4) {
                   uVar9 = il2cpp_internal();
@@ -723,7 +707,7 @@ public class UIBasicSprite
                 }
                 *(uint32 *)(lVar3 + 60) = v[3];
                 if (((int)this[51] - 1U & 0xfffffffd) == 0) {
-                  lVar3 = *pStatics;
+                  lVar3 = UIBasicSprite.mTempPos;
                   if (lVar3 == null) throw; // [null/range check failed]
                   if (*(uint32 *)(lVar3 + 24) == 0) {
                     uVar9 = il2cpp_internal();
@@ -736,7 +720,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(float *)(lVar3 + 40) = fVar6 + *(float *)(lVar3 + 32);
-                  lVar3 = *pStatics;
+                  lVar3 = UIBasicSprite.mTempPos;
                   if (lVar3 == null) throw; // [null/range check failed]
                   if (*(uint32 *)(lVar3 + 24) < 4) {
                     uVar9 = il2cpp_internal();
@@ -744,7 +728,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(float *)(lVar3 + 48) = *(float *)(lVar3 + 56) - fVar4;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = FUN_180d904a0(this + 58,0);
                   if (*(uint32 *)(lVar3 + 24) < 4) {
@@ -753,7 +737,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(uint32 *)(lVar3 + 56) = uVar20;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = FUN_180d904a0(this + 56,0);
                   if (*(uint32 *)(lVar3 + 24) < 3) {
@@ -762,7 +746,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(uint32 *)(lVar3 + 48) = uVar20;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = Rect.get_xMax(this + 56,0);
                   if (*(uint32 *)(lVar3 + 24) < 2) {
@@ -771,7 +755,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(uint32 *)(lVar3 + 40) = uVar20;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = Rect.get_xMax(this + 58,0);
                   if (*(int *)(lVar3 + 24) == 0) {
@@ -782,7 +766,7 @@ public class UIBasicSprite
                   *(uint32 *)(lVar3 + 32) = uVar20;
                 }
                 else {
-                  lVar3 = *pStatics;
+                  lVar3 = UIBasicSprite.mTempPos;
                   if (lVar3 == null) throw; // [null/range check failed]
                   if (*(uint32 *)(lVar3 + 24) == 0) {
                     uVar9 = il2cpp_internal();
@@ -795,7 +779,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(float *)(lVar3 + 40) = fVar4 + *(float *)(lVar3 + 32);
-                  lVar3 = *pStatics;
+                  lVar3 = UIBasicSprite.mTempPos;
                   if (lVar3 == null) throw; // [null/range check failed]
                   if (*(uint32 *)(lVar3 + 24) < 4) {
                     uVar9 = il2cpp_internal();
@@ -803,7 +787,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(float *)(lVar3 + 48) = *(float *)(lVar3 + 56) - fVar6;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = FUN_180d904a0(this + 58,0);
                   if (*(int *)(lVar3 + 24) == 0) {
@@ -812,7 +796,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(uint32 *)(lVar3 + 32) = uVar20;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = FUN_180d904a0(this + 56,0);
                   if (*(uint32 *)(lVar3 + 24) < 2) {
@@ -821,7 +805,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(uint32 *)(lVar3 + 40) = uVar20;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = Rect.get_xMax(this + 56,0);
                   if (*(uint32 *)(lVar3 + 24) < 3) {
@@ -830,7 +814,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar9,0);
                   }
                   *(uint32 *)(lVar3 + 48) = uVar20;
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar20 = Rect.get_xMax(this + 58,0);
                   if (*(uint32 *)(lVar3 + 24) < 4) {
@@ -843,7 +827,7 @@ public class UIBasicSprite
                 plVar14 = this + 56;
                 plVar12 = this + 58;
                 if ((int)this[51] - 2U < 2) {
-                  lVar3 = *pStatics;
+                  lVar3 = UIBasicSprite.mTempPos;
                   if (lVar3 != null) {
                     if (*(uint32 *)(lVar3 + 24) == 0) {
                       uVar9 = il2cpp_internal();
@@ -856,7 +840,7 @@ public class UIBasicSprite
                       FUN_1800d65f0(uVar9,0);
                     }
                     *(float *)(lVar3 + 44) = fVar7 + *(float *)(lVar3 + 36);
-                    lVar3 = *pStatics;
+                    lVar3 = UIBasicSprite.mTempPos;
                     if (lVar3 != null) {
                       if (*(uint32 *)(lVar3 + 24) < 4) {
                         uVar9 = il2cpp_internal();
@@ -864,7 +848,7 @@ public class UIBasicSprite
                         FUN_1800d65f0(uVar9,0);
                       }
                       *(float *)(lVar3 + 52) = *(float *)(lVar3 + 60) - fVar5;
-                      lVar3 = *(int64 *)(pStatics + 8);
+                      lVar3 = UIBasicSprite.mTempUVs;
                       if (lVar3 != null) {
                         uVar20 = FUN_18044df60(plVar12,0);
                         if (*(uint32 *)(lVar3 + 24) < 4) {
@@ -873,7 +857,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar9,0);
                         }
                         *(uint32 *)(lVar3 + 60) = uVar20;
-                        lVar3 = *(int64 *)(pStatics + 8);
+                        lVar3 = UIBasicSprite.mTempUVs;
                         if (lVar3 != null) {
                           uVar20 = FUN_18044df60(plVar14,0);
                           if (*(uint32 *)(lVar3 + 24) < 3) {
@@ -882,7 +866,7 @@ public class UIBasicSprite
                             FUN_1800d65f0(uVar9,0);
                           }
                           *(uint32 *)(lVar3 + 52) = uVar20;
-                          lVar3 = *(int64 *)(pStatics + 8);
+                          lVar3 = UIBasicSprite.mTempUVs;
                           if (lVar3 != null) {
                             uVar20 = Rect.get_yMax(plVar14,0);
                             if (*(uint32 *)(lVar3 + 24) < 2) {
@@ -891,7 +875,7 @@ public class UIBasicSprite
                               FUN_1800d65f0(uVar9,0);
                             }
                             *(uint32 *)(lVar3 + 44) = uVar20;
-                            lVar3 = *(int64 *)(pStatics + 8);
+                            lVar3 = UIBasicSprite.mTempUVs;
                             if (lVar3 != null) {
                               uVar20 = Rect.get_yMax(plVar12,0);
                               if (*(int *)(lVar3 + 24) == 0) {
@@ -909,7 +893,7 @@ public class UIBasicSprite
                   }
                 }
                 else {
-                  lVar3 = *pStatics;
+                  lVar3 = UIBasicSprite.mTempPos;
                   if (lVar3 != null) {
                     if (*(uint32 *)(lVar3 + 24) == 0) {
                       uVar9 = il2cpp_internal();
@@ -922,7 +906,7 @@ public class UIBasicSprite
                       FUN_1800d65f0(uVar9,0);
                     }
                     *(float *)(lVar3 + 44) = fVar5 + *(float *)(lVar3 + 36);
-                    lVar3 = *pStatics;
+                    lVar3 = UIBasicSprite.mTempPos;
                     if (lVar3 != null) {
                       if (*(uint32 *)(lVar3 + 24) < 4) {
                         uVar9 = il2cpp_internal();
@@ -930,7 +914,7 @@ public class UIBasicSprite
                         FUN_1800d65f0(uVar9,0);
                       }
                       *(float *)(lVar3 + 52) = *(float *)(lVar3 + 60) - fVar7;
-                      lVar3 = *(int64 *)(pStatics + 8);
+                      lVar3 = UIBasicSprite.mTempUVs;
                       if (lVar3 != null) {
                         uVar20 = FUN_18044df60(plVar12,0);
                         if (*(int *)(lVar3 + 24) == 0) {
@@ -939,7 +923,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar9,0);
                         }
                         *(uint32 *)(lVar3 + 36) = uVar20;
-                        lVar3 = *(int64 *)(pStatics + 8);
+                        lVar3 = UIBasicSprite.mTempUVs;
                         if (lVar3 != null) {
                           uVar20 = FUN_18044df60(plVar14,0);
                           if (*(uint32 *)(lVar3 + 24) < 2) {
@@ -948,7 +932,7 @@ public class UIBasicSprite
                             FUN_1800d65f0(uVar9,0);
                           }
                           *(uint32 *)(lVar3 + 44) = uVar20;
-                          lVar3 = *(int64 *)(pStatics + 8);
+                          lVar3 = UIBasicSprite.mTempUVs;
                           if (lVar3 != null) {
                             uVar20 = Rect.get_yMax(plVar14,0);
                             if (*(uint32 *)(lVar3 + 24) < 3) {
@@ -957,7 +941,7 @@ public class UIBasicSprite
                               FUN_1800d65f0(uVar9,0);
                             }
                             *(uint32 *)(lVar3 + 52) = uVar20;
-                            lVar3 = *(int64 *)(pStatics + 8);
+                            lVar3 = UIBasicSprite.mTempUVs;
                             if (lVar3 != null) {
                               uVar20 = Rect.get_yMax(plVar12,0);
                               if (*(uint32 *)(lVar3 + 24) < 4) {
@@ -973,7 +957,7 @@ public class UIBasicSprite
                                 uVar13 = 0;
                                 do {
                                   if ((((int)this[60] != 0) || (uVar11 != 1)) || (uVar13 != 1)) {
-                                    lVar3 = *pStatics;
+                                    lVar3 = UIBasicSprite.mTempPos;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     lVar18 = (int64)(int)uVar11;
                                     if (*(uint32 *)(lVar3 + 24) <= uVar11) {
@@ -992,7 +976,7 @@ public class UIBasicSprite
                                     local_c8 = *(uint32 *)(lVar3 + 32 + lVar18 * 8);
                                     local_c4 = *(uint32 *)(lVar3 + 36 + lVar16 * 8);
                                     FUN_181805a40(verts,&local_c8,DAT_181d84278);
-                                    lVar3 = *pStatics;
+                                    lVar3 = UIBasicSprite.mTempPos;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar11) {
                                       uVar9 = il2cpp_internal();
@@ -1010,7 +994,7 @@ public class UIBasicSprite
                                     local_b4 = *(uint32 *)(lVar3 + 36 + lVar1 * 8);
                                     local_b0 = 0;
                                     FUN_181805a40(verts,&local_b8,DAT_181d84278);
-                                    lVar3 = *pStatics;
+                                    lVar3 = UIBasicSprite.mTempPos;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     lVar2 = lVar18 + 1;
                                     uVar10 = (uint32)lVar2;
@@ -1028,7 +1012,7 @@ public class UIBasicSprite
                                     local_a4 = *(uint32 *)(lVar3 + 36 + lVar1 * 8);
                                     local_a0 = 0;
                                     FUN_181805a40(verts,&local_a8,DAT_181d84278);
-                                    lVar3 = *pStatics;
+                                    lVar3 = UIBasicSprite.mTempPos;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar10) {
                                       uVar9 = il2cpp_internal();
@@ -1044,7 +1028,8 @@ public class UIBasicSprite
                                                         *(uint32 *)(lVar3 + 32 + lVar2 * 8));
                                     uStack_90 = uStack_90 & 0xffffffff00000000;
                                     FUN_181805a40(verts,&local_98,DAT_181d84278);
-                                    lVar3 = *(int64 *)(pStatics + 8);
+                                    lVar3 = *(int64 *)
+                                             (pUIBasicSprite + 8);
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar11) {
                                       uVar9 = il2cpp_internal();
@@ -1062,7 +1047,8 @@ public class UIBasicSprite
                                                                    *(uint32 *)
                                                                     (lVar3 + 32 + lVar18 * 8)),
                                                   DAT_181d83f78);
-                                    lVar3 = *(int64 *)(pStatics + 8);
+                                    lVar3 = *(int64 *)
+                                             (pUIBasicSprite + 8);
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar11) {
                                       uVar9 = il2cpp_internal();
@@ -1079,7 +1065,8 @@ public class UIBasicSprite
                                                                    *(uint32 *)
                                                                     (lVar3 + 32 + lVar18 * 8)),
                                                   DAT_181d83f78);
-                                    lVar3 = *(int64 *)(pStatics + 8);
+                                    lVar3 = *(int64 *)
+                                             (pUIBasicSprite + 8);
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar10) {
                                       uVar9 = il2cpp_internal();
@@ -1096,7 +1083,8 @@ public class UIBasicSprite
                                                                    *(uint32 *)
                                                                     (lVar3 + 32 + lVar2 * 8)),
                                                   DAT_181d83f78);
-                                    lVar3 = *(int64 *)(pStatics + 8);
+                                    lVar3 = *(int64 *)
+                                             (pUIBasicSprite + 8);
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar10) {
                                       uVar9 = il2cpp_internal();
@@ -1470,7 +1458,7 @@ public class UIBasicSprite
     // RVA   : 0xA7CA90   Offset: 0xA7B290   Length: 0x16DE
     protected void FilledFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Vector4 u, ref Color c)
     {
-        var pStatics = *(int64*)(DAT_181d8a358 + 184);
+        var pUIBasicSprite = *(int64*)(UIBasicSprite_StaticsPtr + 184);
         void UIBasicSprite.FilledFill
                      (int64 this,int64 verts,int64 uvs,int64 cols,float *v,
                      float *u,uint64 *c)
@@ -1526,7 +1514,7 @@ public class UIBasicSprite
           }
         }
         fVar10 = v[1];
-        lVar2 = *pStatics;
+        lVar2 = UIBasicSprite.mTempPos;
         if (lVar2 != null) {
           if (*(int *)(lVar2 + 24) == 0) {
             uVar5 = il2cpp_internal();
@@ -1536,7 +1524,7 @@ public class UIBasicSprite
           *(float *)(lVar2 + 32) = *v;
           *(float *)(lVar2 + 36) = fVar10;
           fVar10 = v[3];
-          lVar2 = *pStatics;
+          lVar2 = UIBasicSprite.mTempPos;
           if (lVar2 != null) {
             if (*(uint32 *)(lVar2 + 24) < 2) {
               uVar5 = il2cpp_internal();
@@ -1546,7 +1534,7 @@ public class UIBasicSprite
             *(float *)(lVar2 + 40) = *v;
             *(float *)(lVar2 + 44) = fVar10;
             fVar10 = v[3];
-            lVar2 = *pStatics;
+            lVar2 = UIBasicSprite.mTempPos;
             if (lVar2 != null) {
               if (*(uint32 *)(lVar2 + 24) < 3) {
                 uVar5 = il2cpp_internal();
@@ -1556,7 +1544,7 @@ public class UIBasicSprite
               *(float *)(lVar2 + 48) = v[2];
               *(float *)(lVar2 + 52) = fVar10;
               fVar10 = v[1];
-              lVar2 = *pStatics;
+              lVar2 = UIBasicSprite.mTempPos;
               if (lVar2 != null) {
                 if (*(uint32 *)(lVar2 + 24) < 4) {
                   uVar5 = il2cpp_internal();
@@ -1566,7 +1554,7 @@ public class UIBasicSprite
                 *(float *)(lVar2 + 56) = v[2];
                 *(float *)(lVar2 + 60) = fVar10;
                 fVar10 = u[1];
-                lVar2 = *(int64 *)(pStatics + 8);
+                lVar2 = UIBasicSprite.mTempUVs;
                 if (lVar2 != null) {
                   if (*(int *)(lVar2 + 24) == 0) {
                     uVar5 = il2cpp_internal();
@@ -1576,7 +1564,7 @@ public class UIBasicSprite
                   *(float *)(lVar2 + 32) = *u;
                   *(float *)(lVar2 + 36) = fVar10;
                   fVar10 = u[3];
-                  lVar2 = *(int64 *)(pStatics + 8);
+                  lVar2 = UIBasicSprite.mTempUVs;
                   if (lVar2 != null) {
                     if (*(uint32 *)(lVar2 + 24) < 2) {
                       uVar5 = il2cpp_internal();
@@ -1586,7 +1574,7 @@ public class UIBasicSprite
                     *(float *)(lVar2 + 40) = *u;
                     *(float *)(lVar2 + 44) = fVar10;
                     fVar10 = u[3];
-                    lVar2 = *(int64 *)(pStatics + 8);
+                    lVar2 = UIBasicSprite.mTempUVs;
                     if (lVar2 != null) {
                       if (*(uint32 *)(lVar2 + 24) < 3) {
                         uVar5 = il2cpp_internal();
@@ -1596,7 +1584,7 @@ public class UIBasicSprite
                       *(float *)(lVar2 + 48) = u[2];
                       *(float *)(lVar2 + 52) = fVar10;
                       fVar10 = u[1];
-                      lVar2 = *(int64 *)(pStatics + 8);
+                      lVar2 = UIBasicSprite.mTempUVs;
                       if (lVar2 != null) {
                         if (*(uint32 *)(lVar2 + 24) < 4) {
                           uVar5 = il2cpp_internal();
@@ -1609,21 +1597,21 @@ public class UIBasicSprite
                         if (fVar10 < 1.0) {
                           iVar9 = this.mFillDirection;
                           if (iVar9 == 2) {
-                            if (((*(byte *)(DAT_181d8a358 + 0x133) & 4) != 0) &&
-                               (*(int *)(DAT_181d8a358 + 224) == 0)) {
-                              il2cpp_runtime_class_init(DAT_181d8a358);
+                            if (((*(byte *)(UIBasicSprite_StaticsPtr + 0x133) & 4) != 0) &&
+                               (*(int *)(UIBasicSprite_StaticsPtr + 224) == 0)) {
+                              il2cpp_runtime_class_init(UIBasicSprite_StaticsPtr);
                               fVar10 = *(float *)(this + 400);
                             }
                             uVar6 = 0;
                             cVar4 = UIBasicSprite.RadialCut
-                                              (**(uint64 **)(DAT_181d8a358 + 184),
-                                               (*(uint64 **)(DAT_181d8a358 + 184))[1],fVar10,
-                                               this.mInvert,0,0);
+                                              (UIBasicSprite.mTempPos,
+                                               (*(uint64 **)(UIBasicSprite_StaticsPtr + 184))[1],
+                                               fVar10,this.mInvert,0,0);
                             if (!cVar4) {
                               return;
                             }
                             while( true ) {
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
                               lVar8 = (int64)(int)uVar6;
                               if (*(uint32 *)(lVar2 + 24) <= uVar6) {
@@ -1636,7 +1624,7 @@ public class UIBasicSprite
                                                   *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                               local_c0 = 0;
                               FUN_181805a40(verts,&local_c8,DAT_181d84278);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) <= uVar6) {
                                 uVar5 = il2cpp_internal();
@@ -1668,7 +1656,7 @@ public class UIBasicSprite
                                 uVar13 = 0x3f000000;
                                 uVar14 = 0x3f800000;
                               }
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
                               uVar15 = Mathf.Lerp();
                               if (*(int *)(lVar2 + 24) == 0) {
@@ -1677,7 +1665,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 32) = uVar15;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -1690,17 +1678,17 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 40) = *(uint32 *)(lVar2 + 32);
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
-                              uVar15 = Mathf.Lerp(pStatics,v[2],uVar14,
-                                                   0);
+                              uVar15 = Mathf.Lerp(pUIBasicSprite,
+                                                   v[2],uVar14,0);
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 48) = uVar15;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
@@ -1713,26 +1701,27 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 56) = *(uint32 *)(lVar2 + 48);
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
-                              uVar15 = Mathf.Lerp(pStatics,v[3],0,0);
+                              uVar15 = Mathf.Lerp(pUIBasicSprite,
+                                                   v[3],0,0);
                               if (*(int *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 36) = uVar15;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
-                              uVar15 = Mathf.Lerp(pStatics,v[3],
-                                                   0x3f800000,0);
+                              uVar15 = Mathf.Lerp(pUIBasicSprite,
+                                                   v[3],0x3f800000,0);
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 44) = uVar15;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
@@ -1745,7 +1734,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 52) = *(uint32 *)(lVar2 + 44);
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -1758,17 +1747,17 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 60) = *(uint32 *)(lVar2 + 36);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
-                              uVar13 = Mathf.Lerp(pStatics,u[2],uVar13,0
-                                                  );
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[2],uVar13,0);
                               if (*(int *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 32) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -1781,17 +1770,17 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 40) = *(uint32 *)(lVar2 + 32);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
-                              uVar13 = Mathf.Lerp(pStatics,u[2],uVar14,0
-                                                  );
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[2],uVar14,0);
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 48) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
@@ -1804,26 +1793,27 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 56) = *(uint32 *)(lVar2 + 48);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
-                              uVar13 = Mathf.Lerp(pStatics,u[3],0,0);
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[3],0,0);
                               if (*(int *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 36) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
-                              uVar13 = Mathf.Lerp(pStatics,u[3],
-                                                   0x3f800000,0);
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[3],0x3f800000,0);
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 44) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
@@ -1836,7 +1826,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 52) = *(uint32 *)(lVar2 + 44);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -1849,8 +1839,8 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 60) = *(uint32 *)(lVar2 + 36);
-                              uVar5 = **(uint64 **)(DAT_181d8a358 + 184);
-                              uVar3 = (*(uint64 **)(DAT_181d8a358 + 184))[1];
+                              uVar5 = UIBasicSprite.mTempPos;
+                              uVar3 = (*(uint64 **)(UIBasicSprite_StaticsPtr + 184))[1];
                               uVar14 = Mathf.Clamp01();
                               cVar4 = this.mInvert;
                               uVar13 = NGUIMath.RepeatIndex(uVar6 + 3,4);
@@ -1858,7 +1848,7 @@ public class UIBasicSprite
                               uVar7 = 0;
                               if (cVar4) {
                                 do {
-                                  lVar2 = *pStatics;
+                                  lVar2 = UIBasicSprite.mTempPos;
                                   if (lVar2 == null) throw; // [null/range check failed]
                                   lVar8 = (int64)(int)uVar7;
                                   if (*(uint32 *)(lVar2 + 24) <= uVar7) {
@@ -1871,7 +1861,8 @@ public class UIBasicSprite
                                                       *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                                   local_c0 = 0;
                                   FUN_181805a40(verts,&local_c8,DAT_181d84278);
-                                  lVar2 = *(int64 *)(pStatics + 8);
+                                  lVar2 = *(int64 *)
+                                           (pUIBasicSprite + 8);
                                   if (lVar2 == null) throw; // [null/range check failed]
                                   if (*(uint32 *)(lVar2 + 24) <= uVar7) {
                                     uVar5 = il2cpp_internal();
@@ -1916,7 +1907,7 @@ public class UIBasicSprite
                                 uVar15 = 0x3f000000;
                                 uVar16 = 0x3f800000;
                               }
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
                               uVar11 = Mathf.Lerp();
                               if (*(int *)(lVar2 + 24) == 0) {
@@ -1925,7 +1916,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 32) = uVar11;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -1938,17 +1929,17 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 40) = *(uint32 *)(lVar2 + 32);
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
-                              uVar11 = Mathf.Lerp(pStatics,v[2],uVar14,
-                                                   0);
+                              uVar11 = Mathf.Lerp(pUIBasicSprite,
+                                                   v[2],uVar14,0);
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 48) = uVar11;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
@@ -1961,27 +1952,27 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 56) = *(uint32 *)(lVar2 + 48);
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
-                              uVar11 = Mathf.Lerp(pStatics,v[3],uVar15,
-                                                   0);
+                              uVar11 = Mathf.Lerp(pUIBasicSprite,
+                                                   v[3],uVar15,0);
                               if (*(int *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 36) = uVar11;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
-                              uVar11 = Mathf.Lerp(pStatics,v[3],uVar16,
-                                                   0);
+                              uVar11 = Mathf.Lerp(pUIBasicSprite,
+                                                   v[3],uVar16,0);
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 44) = uVar11;
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
@@ -1994,7 +1985,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 52) = *(uint32 *)(lVar2 + 44);
-                              lVar2 = *pStatics;
+                              lVar2 = UIBasicSprite.mTempPos;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -2007,17 +1998,17 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 60) = *(uint32 *)(lVar2 + 36);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
-                              uVar13 = Mathf.Lerp(pStatics,u[2],uVar13,0
-                                                  );
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[2],uVar13,0);
                               if (*(int *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 32) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -2030,17 +2021,17 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 40) = *(uint32 *)(lVar2 + 32);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
-                              uVar13 = Mathf.Lerp(pStatics,u[2],uVar14,0
-                                                  );
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[2],uVar14,0);
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 48) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) < 3) {
                                 uVar5 = il2cpp_internal();
@@ -2053,27 +2044,27 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 56) = *(uint32 *)(lVar2 + 48);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
-                              uVar13 = Mathf.Lerp(pStatics,u[3],uVar15,0
-                                                  );
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[3],uVar15,0);
                               if (*(int *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 36) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
-                              uVar13 = Mathf.Lerp(pStatics,u[3],uVar16,0
-                                                  );
+                              uVar13 = Mathf.Lerp(pUIBasicSprite,
+                                                   u[3],uVar16,0);
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 44) = uVar13;
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) < 2) {
                                 uVar5 = il2cpp_internal();
@@ -2086,7 +2077,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 52) = *(uint32 *)(lVar2 + 44);
-                              lVar2 = *(int64 *)(pStatics + 8);
+                              lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) throw; // [null/range check failed]
                               if (*(uint32 *)(lVar2 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -2106,8 +2097,8 @@ public class UIBasicSprite
                               else {
                                 NGUIMath.RepeatIndex(iVar9,4);
                               }
-                              uVar5 = **(uint64 **)(DAT_181d8a358 + 184);
-                              uVar3 = (*(uint64 **)(DAT_181d8a358 + 184))[1];
+                              uVar5 = UIBasicSprite.mTempPos;
+                              uVar3 = (*(uint64 **)(UIBasicSprite_StaticsPtr + 184))[1];
                               uVar14 = Mathf.Clamp01();
                               uVar1 = this.mInvert;
                               uVar13 = NGUIMath.RepeatIndex(iVar9,4);
@@ -2115,7 +2106,7 @@ public class UIBasicSprite
                               uVar6 = 0;
                               if (cVar4) {
                                 do {
-                                  lVar2 = *pStatics;
+                                  lVar2 = UIBasicSprite.mTempPos;
                                   if (lVar2 == null) throw; // [null/range check failed]
                                   lVar8 = (int64)(int)uVar6;
                                   if (*(uint32 *)(lVar2 + 24) <= uVar6) {
@@ -2128,7 +2119,8 @@ public class UIBasicSprite
                                                       *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                                   local_c0 = 0;
                                   FUN_181805a40(verts,&local_c8,DAT_181d84278);
-                                  lVar2 = *(int64 *)(pStatics + 8);
+                                  lVar2 = *(int64 *)
+                                           (pUIBasicSprite + 8);
                                   if (lVar2 == null) throw; // [null/range check failed]
                                   if (*(uint32 *)(lVar2 + 24) <= uVar6) {
                                     uVar5 = il2cpp_internal();
@@ -2156,7 +2148,7 @@ public class UIBasicSprite
                         }
                         uVar6 = 0;
                         while( true ) {
-                          lVar2 = *pStatics;
+                          lVar2 = UIBasicSprite.mTempPos;
                           if (lVar2 == null) break;
                           lVar8 = (int64)(int)uVar6;
                           if (*(uint32 *)(lVar2 + 24) <= uVar6) {
@@ -2169,7 +2161,7 @@ public class UIBasicSprite
                                               *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                           local_c0 = 0;
                           FUN_181805a40(verts,&local_c8,DAT_181d84278);
-                          lVar2 = *(int64 *)(pStatics + 8);
+                          lVar2 = UIBasicSprite.mTempUVs;
                           if (lVar2 == null) break;
                           if (*(uint32 *)(lVar2 + 24) <= uVar6) {
                             uVar5 = il2cpp_internal();
@@ -2203,7 +2195,7 @@ public class UIBasicSprite
     protected void AdvancedFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Vector4 u, ref Color c)
     {
         var plVar12 = *(int64*)(lVar12 + 184);
-        var pStatics = *(int64*)(DAT_181d8a358 + 184);
+        var pUIBasicSprite = *(int64*)(UIBasicSprite_StaticsPtr + 184);
         void UIBasicSprite.AdvancedFill
                      (int64 *this,uint64 verts,uint64 uvs,uint64 cols,
                      uint32 *v,uint64 u,uint64 *c)
@@ -2285,7 +2277,7 @@ public class UIBasicSprite
               if (local_f8 < 1.0) {
                 local_f8 = 1.0;
               }
-              lVar12 = *pStatics;
+              lVar12 = UIBasicSprite.mTempPos;
               if (lVar12 != null) {
                 if (*(int *)(lVar12 + 24) == 0) {
                   uVar34 = il2cpp_internal();
@@ -2293,7 +2285,7 @@ public class UIBasicSprite
                   FUN_1800d65f0(uVar34,0);
                 }
                 *(uint32 *)(lVar12 + 32) = *v;
-                lVar12 = *pStatics;
+                lVar12 = UIBasicSprite.mTempPos;
                 if (lVar12 != null) {
                   if (*(int *)(lVar12 + 24) == 0) {
                     uVar34 = il2cpp_internal();
@@ -2301,7 +2293,7 @@ public class UIBasicSprite
                     FUN_1800d65f0(uVar34,0);
                   }
                   *(uint32 *)(lVar12 + 36) = v[1];
-                  lVar12 = *pStatics;
+                  lVar12 = UIBasicSprite.mTempPos;
                   if (lVar12 != null) {
                     if (*(uint32 *)(lVar12 + 24) < 4) {
                       uVar34 = il2cpp_internal();
@@ -2309,7 +2301,7 @@ public class UIBasicSprite
                       FUN_1800d65f0(uVar34,0);
                     }
                     *(uint32 *)(lVar12 + 56) = v[2];
-                    lVar12 = *pStatics;
+                    lVar12 = UIBasicSprite.mTempPos;
                     if (lVar12 != null) {
                       if (*(uint32 *)(lVar12 + 24) < 4) {
                         uVar34 = il2cpp_internal();
@@ -2318,7 +2310,7 @@ public class UIBasicSprite
                       }
                       *(uint32 *)(lVar12 + 60) = v[3];
                       if (((int)this[51] - 1U & 0xfffffffd) == 0) {
-                        lVar12 = *pStatics;
+                        lVar12 = UIBasicSprite.mTempPos;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         if (*(uint32 *)(lVar12 + 24) == 0) {
                           uVar34 = il2cpp_internal();
@@ -2331,7 +2323,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(float *)(lVar12 + 40) = fVar29 + *(float *)(lVar12 + 32);
-                        lVar12 = *pStatics;
+                        lVar12 = UIBasicSprite.mTempPos;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         if (*(uint32 *)(lVar12 + 24) < 4) {
                           uVar34 = il2cpp_internal();
@@ -2339,7 +2331,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(float *)(lVar12 + 48) = *(float *)(lVar12 + 56) - fVar2;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = FUN_180d904a0(this + 58,0);
                         if (*(uint32 *)(lVar12 + 24) < 4) {
@@ -2348,7 +2340,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(uint32 *)(lVar12 + 56) = uVar22;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = FUN_180d904a0(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 3) {
@@ -2357,7 +2349,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(uint32 *)(lVar12 + 48) = uVar22;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = Rect.get_xMax(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 2) {
@@ -2366,7 +2358,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(uint32 *)(lVar12 + 40) = uVar22;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = Rect.get_xMax(this + 58,0);
                         if (*(int *)(lVar12 + 24) == 0) {
@@ -2377,7 +2369,7 @@ public class UIBasicSprite
                         *(uint32 *)(lVar12 + 32) = uVar22;
                       }
                       else {
-                        lVar12 = *pStatics;
+                        lVar12 = UIBasicSprite.mTempPos;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         if (*(uint32 *)(lVar12 + 24) == 0) {
                           uVar34 = il2cpp_internal();
@@ -2390,7 +2382,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(float *)(lVar12 + 40) = fVar2 + *(float *)(lVar12 + 32);
-                        lVar12 = *pStatics;
+                        lVar12 = UIBasicSprite.mTempPos;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         if (*(uint32 *)(lVar12 + 24) < 4) {
                           uVar34 = il2cpp_internal();
@@ -2398,7 +2390,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(float *)(lVar12 + 48) = *(float *)(lVar12 + 56) - fVar29;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = FUN_180d904a0(this + 58,0);
                         if (*(int *)(lVar12 + 24) == 0) {
@@ -2407,7 +2399,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(uint32 *)(lVar12 + 32) = uVar22;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = FUN_180d904a0(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 2) {
@@ -2416,7 +2408,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(uint32 *)(lVar12 + 40) = uVar22;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = Rect.get_xMax(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 3) {
@@ -2425,7 +2417,7 @@ public class UIBasicSprite
                           FUN_1800d65f0(uVar34,0);
                         }
                         *(uint32 *)(lVar12 + 48) = uVar22;
-                        lVar12 = *(int64 *)(pStatics + 8);
+                        lVar12 = UIBasicSprite.mTempUVs;
                         if (lVar12 == null) goto LAB_180a7c5d5;
                         uVar22 = Rect.get_xMax(this + 58,0);
                         if (*(uint32 *)(lVar12 + 24) < 4) {
@@ -2437,7 +2429,7 @@ public class UIBasicSprite
                       }
                       plVar11 = this + 58;
                       if ((int)this[51] - 2U < 2) {
-                        lVar12 = *pStatics;
+                        lVar12 = UIBasicSprite.mTempPos;
                         if (lVar12 != null) {
                           if (*(uint32 *)(lVar12 + 24) == 0) {
                             uVar34 = il2cpp_internal();
@@ -2450,7 +2442,7 @@ public class UIBasicSprite
                             FUN_1800d65f0(uVar34,0);
                           }
                           *(float *)(lVar12 + 44) = *(float *)(lVar12 + 36) + fVar31;
-                          lVar12 = *pStatics;
+                          lVar12 = UIBasicSprite.mTempPos;
                           if (lVar12 != null) {
                             if (*(uint32 *)(lVar12 + 24) < 4) {
                               uVar34 = il2cpp_internal();
@@ -2458,7 +2450,7 @@ public class UIBasicSprite
                               FUN_1800d65f0(uVar34,0);
                             }
                             *(float *)(lVar12 + 52) = *(float *)(lVar12 + 60) - fVar3;
-                            lVar12 = *(int64 *)(pStatics + 8);
+                            lVar12 = UIBasicSprite.mTempUVs;
                             if (lVar12 != null) {
                               uVar22 = FUN_18044df60(plVar11,0);
                               if (*(uint32 *)(lVar12 + 24) < 4) {
@@ -2467,7 +2459,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar34,0);
                               }
                               *(uint32 *)(lVar12 + 60) = uVar22;
-                              lVar12 = *(int64 *)(pStatics + 8);
+                              lVar12 = UIBasicSprite.mTempUVs;
                               if (lVar12 != null) {
                                 uVar22 = FUN_18044df60(plVar1,0);
                                 if (*(uint32 *)(lVar12 + 24) < 3) {
@@ -2476,7 +2468,8 @@ public class UIBasicSprite
                                   FUN_1800d65f0(uVar34,0);
                                 }
                                 *(uint32 *)(lVar12 + 52) = uVar22;
-                                lVar12 = *(int64 *)(pStatics + 8);
+                                lVar12 = UIBasicSprite.mTempUVs
+                                ;
                                 if (lVar12 != null) {
                                   uVar22 = Rect.get_yMax(plVar1,0);
                                   if (*(uint32 *)(lVar12 + 24) < 2) {
@@ -2485,7 +2478,8 @@ public class UIBasicSprite
                                     FUN_1800d65f0(uVar34,0);
                                   }
                                   *(uint32 *)(lVar12 + 44) = uVar22;
-                                  lVar12 = *(int64 *)(pStatics + 8);
+                                  lVar12 = *(int64 *)
+                                            (pUIBasicSprite + 8);
                                   if (lVar12 != null) {
                                     uVar22 = Rect.get_yMax(plVar11,0);
                                     if (*(int *)(lVar12 + 24) == 0) {
@@ -2503,7 +2497,7 @@ public class UIBasicSprite
                         }
                       }
                       else {
-                        lVar12 = *pStatics;
+                        lVar12 = UIBasicSprite.mTempPos;
                         if (lVar12 != null) {
                           if (*(uint32 *)(lVar12 + 24) == 0) {
                             uVar34 = il2cpp_internal();
@@ -2516,7 +2510,7 @@ public class UIBasicSprite
                             FUN_1800d65f0(uVar34,0);
                           }
                           *(float *)(lVar12 + 44) = *(float *)(lVar12 + 36) + fVar3;
-                          lVar12 = *pStatics;
+                          lVar12 = UIBasicSprite.mTempPos;
                           if (lVar12 != null) {
                             if (*(uint32 *)(lVar12 + 24) < 4) {
                               uVar34 = il2cpp_internal();
@@ -2524,7 +2518,7 @@ public class UIBasicSprite
                               FUN_1800d65f0(uVar34,0);
                             }
                             *(float *)(lVar12 + 52) = *(float *)(lVar12 + 60) - fVar31;
-                            lVar12 = *(int64 *)(pStatics + 8);
+                            lVar12 = UIBasicSprite.mTempUVs;
                             if (lVar12 != null) {
                               uVar22 = FUN_18044df60(plVar11,0);
                               if (*(int *)(lVar12 + 24) == 0) {
@@ -2533,7 +2527,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar34,0);
                               }
                               *(uint32 *)(lVar12 + 36) = uVar22;
-                              lVar12 = *(int64 *)(pStatics + 8);
+                              lVar12 = UIBasicSprite.mTempUVs;
                               if (lVar12 != null) {
                                 uVar22 = FUN_18044df60(plVar1,0);
                                 if (*(uint32 *)(lVar12 + 24) < 2) {
@@ -2542,7 +2536,8 @@ public class UIBasicSprite
                                   FUN_1800d65f0(uVar34,0);
                                 }
                                 *(uint32 *)(lVar12 + 44) = uVar22;
-                                lVar12 = *(int64 *)(pStatics + 8);
+                                lVar12 = UIBasicSprite.mTempUVs
+                                ;
                                 if (lVar12 != null) {
                                   uVar22 = Rect.get_yMax(plVar1,0);
                                   if (*(uint32 *)(lVar12 + 24) < 3) {
@@ -2551,7 +2546,8 @@ public class UIBasicSprite
                                     FUN_1800d65f0(uVar34,0);
                                   }
                                   *(uint32 *)(lVar12 + 52) = uVar22;
-                                  lVar12 = *(int64 *)(pStatics + 8);
+                                  lVar12 = *(int64 *)
+                                            (pUIBasicSprite + 8);
                                   if (lVar12 != null) {
                                     uVar22 = Rect.get_yMax(plVar11,0);
                                     if (*(uint32 *)(lVar12 + 24) < 4) {
@@ -2562,7 +2558,7 @@ public class UIBasicSprite
                                     *(uint32 *)(lVar12 + 60) = uVar22;
         LAB_180a7b3b4:
                                     uVar15 = 0;
-                                    lVar12 = DAT_181d8a358;
+                                    lVar12 = UIBasicSprite_StaticsPtr;
                                     do {
                                       uVar14 = 0;
                                       do {
@@ -2589,7 +2585,7 @@ public class UIBasicSprite
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                             }
                                             lVar16 = *plVar12;
                                             if (lVar16 != null) {
@@ -2653,7 +2649,7 @@ public class UIBasicSprite
                                                   if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                      (*(int *)(lVar12 + 224) == 0)) {
                                                     il2cpp_runtime_class_init();
-                                                    lVar12 = DAT_181d8a358;
+                                                    lVar12 = UIBasicSprite_StaticsPtr;
                                                   }
                                                   lVar13 = *(int64 *)(plVar12 + 8)
                                                   ;
@@ -2669,7 +2665,7 @@ public class UIBasicSprite
                                                   if (fVar2 < fVar29) {
                                                     uVar23 = Mathf.Lerp(uVar24,lVar13,
                                                                          (fVar2 - fVar3) / local_res8,0);
-                                                    lVar12 = DAT_181d8a358;
+                                                    lVar12 = UIBasicSprite_StaticsPtr;
                                                     fVar31 = fVar2;
                                                   }
                                                   uVar6 = *c;
@@ -2689,7 +2685,7 @@ public class UIBasicSprite
                                                                       in_stack_fffffffffffffed0,uVar23,
                                                                       uVar27,uVar36,&local_d8,0);
                                                   fVar3 = fVar29;
-                                                  lVar12 = DAT_181d8a358;
+                                                  lVar12 = UIBasicSprite_StaticsPtr;
                                                 }
                                                 goto LAB_180a7bfac;
                                               }
@@ -2702,7 +2698,7 @@ public class UIBasicSprite
                                           if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                              (*(int *)(lVar12 + 224) == 0)) {
                                             il2cpp_runtime_class_init();
-                                            lVar12 = DAT_181d8a358;
+                                            lVar12 = UIBasicSprite_StaticsPtr;
                                           }
                                           lVar13 = *plVar12;
                                           if (lVar13 == null) goto LAB_180a7c5d5;
@@ -2773,7 +2769,7 @@ public class UIBasicSprite
                                                               ,in_stack_fffffffffffffec8,
                                                               in_stack_fffffffffffffed0,uVar25,uVar36,
                                                               uVar37,&local_d8,0);
-                                          lVar12 = DAT_181d8a358;
+                                          lVar12 = UIBasicSprite_StaticsPtr;
                                         }
                                         else if (uVar15 == 1) {
                                           if (uVar14 != 1) goto LAB_180a7b401;
@@ -2782,7 +2778,7 @@ public class UIBasicSprite
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                             }
                                             lVar13 = *plVar12;
                                             if (lVar13 != null) {
@@ -2850,7 +2846,7 @@ public class UIBasicSprite
                                           if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                              (*(int *)(lVar12 + 224) == 0)) {
                                             il2cpp_runtime_class_init();
-                                            lVar12 = DAT_181d8a358;
+                                            lVar12 = UIBasicSprite_StaticsPtr;
                                           }
                                           lVar16 = *plVar12;
                                           if (lVar16 == null) goto LAB_180a7c5d5;
@@ -2897,7 +2893,7 @@ public class UIBasicSprite
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                             }
                                             lVar16 = *(int64 *)(plVar12 + 8);
                                             if (lVar16 == null) goto LAB_180a7c5d5;
@@ -2913,7 +2909,7 @@ public class UIBasicSprite
                                             if (fVar29 < fVar31) {
                                               uVar24 = Mathf.Lerp(uVar35,lVar16,
                                                                    (fVar29 - fVar20) / local_f8,0);
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                               fVar33 = fVar29;
                                             }
                                             while (fVar21 < fVar3) {
@@ -2927,7 +2923,7 @@ public class UIBasicSprite
                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                  (*(int *)(lVar12 + 224) == 0)) {
                                                 il2cpp_runtime_class_init();
-                                                lVar12 = DAT_181d8a358;
+                                                lVar12 = UIBasicSprite_StaticsPtr;
                                               }
                                               lVar13 = *(int64 *)(plVar12 + 8);
                                               if (lVar13 == null) goto LAB_180a7c5d5;
@@ -2941,7 +2937,7 @@ public class UIBasicSprite
                                               if (fVar3 < fVar30) {
                                                 uVar25 = Mathf.Lerp(uVar22,lVar13,
                                                                      (fVar3 - fVar21) / local_res8,0);
-                                                lVar12 = DAT_181d8a358;
+                                                lVar12 = UIBasicSprite_StaticsPtr;
                                                 fVar32 = fVar3;
                                               }
                                               uVar6 = *c;
@@ -2961,7 +2957,7 @@ public class UIBasicSprite
                                                                   in_stack_fffffffffffffed0,uVar25,uVar35,
                                                                   uVar24,&local_d8,0);
                                               fVar21 = fVar30;
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                             }
                                           }
                                         }
@@ -2989,7 +2985,7 @@ public class UIBasicSprite
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                             }
                                             lVar13 = *plVar12;
                                             if (lVar13 != null) {
@@ -3068,7 +3064,7 @@ public class UIBasicSprite
                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                  (*(int *)(lVar12 + 224) == 0)) {
                                                 il2cpp_runtime_class_init();
-                                                lVar12 = DAT_181d8a358;
+                                                lVar12 = UIBasicSprite_StaticsPtr;
                                               }
                                               lVar13 = *plVar12;
                                               if (lVar13 != null) {
@@ -3138,7 +3134,7 @@ public class UIBasicSprite
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                             }
                                             lVar16 = *plVar12;
                                             if (lVar16 == null) goto LAB_180a7c5d5;
@@ -3200,7 +3196,7 @@ public class UIBasicSprite
                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                  (*(int *)(lVar12 + 224) == 0)) {
                                                 il2cpp_runtime_class_init();
-                                                lVar12 = DAT_181d8a358;
+                                                lVar12 = UIBasicSprite_StaticsPtr;
                                               }
                                               lVar13 = *(int64 *)(plVar12 + 8);
                                               if (lVar13 == null) goto LAB_180a7c5d5;
@@ -3215,7 +3211,7 @@ public class UIBasicSprite
                                               if (fVar2 < fVar31) {
                                                 uVar23 = Mathf.Lerp(uVar36,lVar13,
                                                                      (fVar2 - fVar3) / local_f8,0);
-                                                lVar12 = DAT_181d8a358;
+                                                lVar12 = UIBasicSprite_StaticsPtr;
                                                 fVar29 = fVar2;
                                               }
                                               uVar6 = *c;
@@ -3235,7 +3231,7 @@ public class UIBasicSprite
                                                                   in_stack_fffffffffffffed0,uVar27,uVar36,
                                                                   uVar23,&local_d8,0);
                                               fVar3 = fVar31;
-                                              lVar12 = DAT_181d8a358;
+                                              lVar12 = UIBasicSprite_StaticsPtr;
                                             }
                                           }
                                           else if (uVar15 == 2) {
@@ -3933,13 +3929,11 @@ public class UIBasicSprite
     {
         ulong uVar1;
         uVar1 = FUN_1800d60b0(DAT_181d81bc0,4);
-        puVar2 = *(uint64 **)(DAT_181d8a358 + 184);
+        puVar2 = *(uint64 **)(UIBasicSprite_StaticsPtr + 184);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
         uVar1 = FUN_1800d60b0(DAT_181d81bc0,4);
-        puVar2 = (uint64 *)(*(int64 *)(DAT_181d8a358 + 184) + 8);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        UIBasicSprite.mTempUVs = uVar1;
     }
 
 }

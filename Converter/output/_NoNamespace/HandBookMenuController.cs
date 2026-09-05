@@ -209,7 +209,7 @@ public class HandBookMenuController
     // RVA   : 0x8752B0   Offset: 0x873AB0   Length: 0x729
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         bool cVar2;
         ulong uVar3;
@@ -261,7 +261,7 @@ public class HandBookMenuController
                             uStack_4c = puVar6[3];
                             (**(code **)(*plVar5 + 0x2a8))
                                       (plVar5,&local_58,*(uint64 *)(*plVar5 + 0x2b0));
-                            lVar4 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                            lVar4 = GameController.lockObj;
                             if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 208)) != null) {
                               lVar4 = FUN_1808acf30(lVar4,DAT_181d94200);
                               if (lVar4 != null) {
@@ -353,8 +353,10 @@ public class HandBookMenuController
                                         FUN_1800d6620();
                                       }
                                       Image.set_sprite(lVar4,uVar3);
-                                    } while (*(int *)(pStatics + 8) != 1);
-                                    lVar4 = *(int64 *)(pStatics + 32);
+                                    } while (PlotController.LeftFaceHideOffset
+                                             != 1);
+                                    lVar4 = *(int64 *)
+                                             (pPlotController + 32);
                                     if (lVar4 == null) {
                           // WARNING: Subroutine does not return
                                       FUN_1800d6620();
@@ -517,7 +519,6 @@ public class HandBookMenuController
     // RVA   : 0x8759E0   Offset: 0x8741E0   Length: 0x7DE
     public void ShowForceSkill(int forceID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         uint uVar1;
         bool cVar2;
         int iVar3;
@@ -548,7 +549,7 @@ public class HandBookMenuController
         local_res20[0] = 0;
         uVar6 = this.skillHandBookSkillIconList;
         GlobalData.DeleteAllChild(uVar6,0);
-        lVar4 = *(int64 *)(pStatics + 32);
+        lVar4 = GameController.lockObj;
         if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x128)) != null) {
           lVar4 = FUN_1808acf30(lVar4,DAT_181d96ce8);
           if (lVar4 != null) {
@@ -576,7 +577,7 @@ public class HandBookMenuController
                 } while (*(int *)(local_48 + 24) != forceID);
                 uVar1 = *(uint32 *)(local_48 + 20);
                 lVar5 = new KungfuSkillLvData(uVar1,0);
-                lVar7 = *(int64 *)(pStatics + 8);
+                lVar7 = GameController.difficultyExtraPoint;
                 if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -699,7 +700,7 @@ public class HandBookMenuController
               }
               lVar10 = Component.GetComponent(lVar7,DAT_181d6bc40);
               lVar11 = FUN_18046c6c0(0);
-              lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x498);
+              lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x498);
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();

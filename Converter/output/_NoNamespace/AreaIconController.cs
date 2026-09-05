@@ -47,8 +47,7 @@ public class AreaIconController
     // RVA   : 0x7ECFF0   Offset: 0x7EB7F0   Length: 0x79D
     public void Init()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_baa8 = *(int64*)(DAT_181d8baa8 + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -67,9 +66,9 @@ public class AreaIconController
           lVar5 = Transform.Find(lVar5,"Sprite",0);
           if (lVar5 != null) {
             lVar5 = Component.GetComponent(lVar5,DAT_181d6d540);
-            if ((this.areaData != null) && (*pStatics_6270 != 0)) {
+            if ((this.areaData != null) && (*pStatics != 0)) {
               uVar6 = TextureController.LoadAtlasSprite
-                                (*pStatics_6270,"AreaIconAtlas",
+                                (*pStatics,"AreaIconAtlas",
                                  this.areaData.spriteName,0);
               if (lVar5 != null) {
                 SpriteRenderer.set_sprite(lVar5,uVar6,0);
@@ -113,13 +112,13 @@ public class AreaIconController
                     local_50 = fVar9;
                     BoxCollider.set_size(lVar7,&local_58,0);
 
-                    if ((lVar5 = *(int64 *)(pStatics_baa8 + 16)?.areaBranchDefenceLv) != null) {
+                    if ((lVar5 = GameController.CheckShowSpeHero?.areaBranchDefenceLv) != null) {
                       lVar5 = GameObject.get_transform(lVar5,0);
                       if (lVar5 != null) {
                         lVar5 = Transform.Find(lVar5,"AreaUIPanel",0);
                         if (lVar5 != null) {
                           uVar6 = Component.get_gameObject(lVar5,0);
-                          lVar5 = *(int64 *)(pStatics_baa8 + 16);
+                          lVar5 = GameController.CheckShowSpeHero;
                           if (lVar5 != null) {
                             uVar4 = lVar5.areaBranchDefenceUpgradeLeftTime;
                             uVar6 = GlobalData.AddChild(uVar6,uVar4,0);
@@ -184,8 +183,16 @@ public class AreaIconController
 
                                                         LayoutRebuilder.ForceRebuildLayoutImmediate
                                                                   (uVar6,0);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (PlotController_StaticsPtr);
+                                                        }
                                                         lVar5 = *(int64 *)
-                                                                 (*(int64 *)(DAT_181d4ef00 + 184) +
+                                                                 (*(int64 *)
+                                                                   (PlotController_StaticsPtr + 184) +
                                                                  0x428);
                                                         if ((this.areaData != null) &&
                                                            (lVar5 != null)) {
@@ -263,7 +270,7 @@ public class AreaIconController
         ulong local_48;
         float local_40;
         byte[] local_28 = new byte[32];
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x428);
+        lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x428);
         fVar1 = local_40;
         if ((this.areaData != null) && (lVar3 != null)) {
           uVar2 = this.areaData.areaType;
@@ -295,8 +302,7 @@ public class AreaIconController
     // RVA   : 0x7EDB80   Offset: 0x7EC380   Length: 0xA7D
     private void Update()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_baa8 = *(int64*)(DAT_181d8baa8 + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         uint uVar1;
         bool cVar2;
         byte uVar3;
@@ -337,7 +343,7 @@ public class AreaIconController
           local_20 = *(float *)(puVar6 + 1);
           fVar12 = *(float *)(this + 108);
           uVar9 = *(uint64 *)(this + 100);
-          lVar7 = *(int64 *)(pStatics_baa8 + 16);
+          lVar7 = GameController.CheckShowSpeHero;
           if (lVar7 == null) throw; // [null/range check failed]
           fVar11 = (float)BigMapController.BigMapNowScale(lVar7,0);
           local_38 = (float)uVar9;
@@ -353,7 +359,7 @@ public class AreaIconController
           puVar6 = (uint64 *)Vector3.get_one(&local_28,0);
           local_18 = *puVar6;
           fStack_10 = *(float *)(puVar6 + 1);
-          lVar7 = *(int64 *)(pStatics_baa8 + 16);
+          lVar7 = GameController.CheckShowSpeHero;
           if (lVar7 == null) throw; // [null/range check failed]
           fVar12 = (float)BigMapController.BigMapNowScale(lVar7,0);
           fVar12 = fVar12 + 0.5;
@@ -421,7 +427,7 @@ public class AreaIconController
               if (this.areaForceIcon == null) throw; // [null/range check failed]
               lVar5 = GameObject.GetComponent(this.areaForceIcon,DAT_181d9fe50);
               uVar1 = this.showBelongForceID;
-              lVar7 = *pStatics_6270;
+              lVar7 = *pStatics;
               uVar9 = GlobalData.GetForceIconName(uVar1,0);
               if ((lVar7 == null) ||
                  (uVar9 = TextureController.LoadAtlasSprite(lVar7,"UIAtlas",uVar9,0), lVar5 == null))
@@ -437,9 +443,9 @@ public class AreaIconController
               puVar6 = (uint64 *)FUN_180d904c0(&local_18,0);
             }
             else {
-              if ((*pStatics_6270 == 0) ||
+              if ((*pStatics == 0) ||
                  (uVar9 = TextureController.LoadAtlasSprite
-                                    (*pStatics_6270,"UIAtlas","任务目标",0),
+                                    (*pStatics,"UIAtlas","任务目标",0),
                  plVar8 == (int64 *)0)) throw; // [null/range check failed]
               Image.set_sprite(plVar8,uVar9,0);
               plVar8 = this.missionTarget;
@@ -447,9 +453,9 @@ public class AreaIconController
             }
           }
           else {
-            if ((*pStatics_6270 == 0) ||
+            if ((*pStatics == 0) ||
                (uVar9 = TextureController.LoadAtlasSprite
-                                  (*pStatics_6270,"UIAtlas","问号",0),
+                                  (*pStatics,"UIAtlas","问号",0),
                plVar8 == (int64 *)0)) throw; // [null/range check failed]
             Image.set_sprite(plVar8,uVar9,0);
             plVar8 = this.missionTarget;
@@ -461,7 +467,7 @@ public class AreaIconController
           uStack_c = *(uint32 *)((int64)puVar6 + 12);
           (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_18,*(uint64 *)(*plVar8 + 0x2b0));
         }
-        lVar5 = *(int64 *)(pStatics_baa8 + 16);
+        lVar5 = GameController.CheckShowSpeHero;
         if (lVar5 != null) {
           uVar9 = lVar5.support;
           cVar2 = Object.op_Inequality(uVar9,0,0);
@@ -474,7 +480,7 @@ public class AreaIconController
             return;
           }
 
-          if (((lVar5 = *(int64 *)(pStatics_baa8 + 16)?.support) != null) &&
+          if (((lVar5 = GameController.CheckShowSpeHero?.support) != null) &&
              (lVar5 = GameObject.GetComponent(lVar5,DAT_181d9e910)) != null) {
             uVar9 = lVar5.mapWidth;
             uVar10 = this.areaSafeRange;
@@ -500,7 +506,7 @@ public class AreaIconController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+        lVar1 = GameController.CheckShowSpeHero;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           BigMapController.SetPlayerMoveTargetArea(lVar1,uVar2,0);

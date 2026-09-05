@@ -21426,7 +21426,7 @@
   - split: 10
     subIndex: 1
     text: "（话音未落便因体力不支歪倒在枕头上）咳咳咳咳"
-    translated: "(talk not yet finished, she leans to the side on her pillow due to exhaustion) cough cough cough cough"
+    translated: "(unfinished, she coughed violently and leaned sideways onto the pillow due to her lack of stamina) Cough cough cough cough"
   templates:
   - split: 10
     template: "{0}……\\n{1}……"
@@ -26002,7 +26002,7 @@
   - split: 10
     subIndex: 1
     text: "呼，连战数场，实在体力不支了。"
-    translated: "Ugh, after several battles, I'm really running low on energy."
+    translated: "Huh, after several battles, I'm really running low on stamina."
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -50040,7 +50040,7 @@
   - split: 10
     subIndex: 1
     text: "（冲向铁栏猛撞数十下，但很快便体力不支倒在地上）"
-    translated: "(Rushing towards the iron fence and banging into it dozens of times, but soon he lost his strength and fell to the ground)"
+    translated: "(Rushing towards the iron fence and ramming into it dozens of times, but quickly ran out of stamina and fell to the ground)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -64256,7 +64256,7 @@
   splits:
   - split: 10
     text: "（陆奇虽然一开始占据上风，但在你们三人游斗之下，渐渐体力不支。"
-    translated: "(Though Lu Qi initially held the upper hand, he gradually grew weary under your three‑way skirmish."
+    translated: "(Lu Qi, although initially gaining the upper hand, gradually lost stamina under your trio's continuous attacks."
   - split: 10
     subIndex: 1
     text: "终于被林云裳瞅准时机，快速出手，在他背后狠狠刺了几剑）"
@@ -96755,7 +96755,7 @@
   - split: 10
     subIndex: 1
     text: "（本就已病重，加上刚才连番大战，终于体力耗尽昏倒过去）"
-    translated: "(Originally severely ill, and having exhausted all his strength from the battles just now, he finally fainted due to fatigue.)"
+    translated: "(Already severely ill, and after the continuous battles just now, he finally ran out of stamina and fainted.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -110710,7 +110710,7 @@
   - split: 10
     subIndex: 1
     text: "已是体力耗尽，伤亡惨重，实在难以为继。"
-    translated: "We are exhausted and suffered heavy casualties; it's really hard to continue."
+    translated: "Already exhausted in stamina and with heavy casualties, it is truly hard to continue."
   templates:
   - split: 10
     template: "{0}\\n{1}"

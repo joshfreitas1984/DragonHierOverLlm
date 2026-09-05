@@ -41,77 +41,70 @@ public class Localization
     // RVA   : 0xA8AD80   Offset: 0xA89580   Length: 0xFD
     public static Dictionary<string, string[]> get_dictionary()
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         ulong uVar1;
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
           uVar1 = PlayerPrefs.GetString("Language","English",0);
           Localization.LoadDictionary(uVar1,0,0);
         }
-        if (((*(byte *)(DAT_181d61a70 + 0x133) & 4) != 0) && (*(int *)(DAT_181d61a70 + 224) == 0)) {
+        if (((*(byte *)(Localization_StaticsPtr + 0x133) & 4) != 0) &&
+           (*(int *)(Localization_StaticsPtr + 224) == 0)) {
           il2cpp_runtime_class_init();
-          return *(uint64 *)(pStatics + 40);
+          return Localization.mDictionary;
         }
-        return *(uint64 *)(pStatics + 40);
+        return Localization.mDictionary;
     }
 
     // Token : 0x6000322
     // RVA   : 0xA8B0B0   Offset: 0xA898B0   Length: 0x7F
     public static void set_dictionary(Dictionary<string, string[]> value)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
-        *(bool *)(pStatics + 16) = value != null;
-        plVar1 = (int64 *)(pStatics + 40);
-        *plVar1 = value;
-        il2cpp_internal(plVar1,value);
+        Localization.localizationHasBeenSet = value != null;
+        Localization.mDictionary = value;
     }
 
     // Token : 0x6000323
     // RVA   : 0xA8AE80   Offset: 0xA89680   Length: 0xFD
     public static string[] get_knownLanguages()
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         ulong uVar1;
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
           uVar1 = PlayerPrefs.GetString("Language","English",0);
           Localization.LoadDictionary(uVar1,0,0);
         }
-        if (((*(byte *)(DAT_181d61a70 + 0x133) & 4) != 0) && (*(int *)(DAT_181d61a70 + 224) == 0)) {
+        if (((*(byte *)(Localization_StaticsPtr + 0x133) & 4) != 0) &&
+           (*(int *)(Localization_StaticsPtr + 224) == 0)) {
           il2cpp_runtime_class_init();
-          return *(uint64 *)(pStatics + 24);
+          return Localization.mLanguages;
         }
-        return *(uint64 *)(pStatics + 24);
+        return Localization.mLanguages;
     }
 
     // Token : 0x6000324
     // RVA   : 0xA8AF80   Offset: 0xA89780   Length: 0x125
     public static string get_language()
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         ulong uVar2;
-        cVar1 = FUN_180d6ca90(*(uint64 *)(pStatics + 64),0);
+        cVar1 = FUN_180d6ca90(Localization.mLanguage,0);
         if (cVar1) {
           uVar2 = PlayerPrefs.GetString("Language","English",0);
-          puVar3 = (uint64 *)(pStatics + 64);
-          *puVar3 = uVar2;
-          il2cpp_internal(puVar3,uVar2);
-          Localization.LoadAndSelect(*(uint64 *)(pStatics + 64),0);
+          Localization.mLanguage = uVar2;
+          Localization.LoadAndSelect
+                    (Localization.mLanguage,0);
         }
-        return *(uint64 *)(pStatics + 64);
+        return Localization.mLanguage;
     }
 
     // Token : 0x6000325
     // RVA   : 0xA8B130   Offset: 0xA89930   Length: 0xBA
     public static void set_language(string value)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         cVar1 = String.op_Inequality
-                          (*(uint64 *)(pStatics + 64),value,0);
+                          (Localization.mLanguage,value,0
+                          );
         if (cVar1) {
-          puVar2 = (uint64 *)(pStatics + 64);
-          *puVar2 = value;
-          il2cpp_internal(puVar2,value);
+          Localization.mLanguage = value;
           Localization.LoadAndSelect(value,0);
           return;
         }
@@ -121,15 +114,14 @@ public class Localization
     // RVA   : 0xA89A80   Offset: 0xA88280   Length: 0x136
     public static bool Reload()
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
-        *(uint8 *)(pStatics + 16) = 0;
+        Localization.localizationHasBeenSet = 0;
         cVar2 = Localization.LoadDictionary
-                          (*(uint64 *)(pStatics + 64),1,0);
+                          (Localization.mLanguage,1,0);
         if (cVar2) {
-          if (*(int64 *)(pStatics + 8) != 0) {
-            lVar1 = *(int64 *)(pStatics + 8);
+          if (Localization.onLocalize != null) {
+            lVar1 = Localization.onLocalize;
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -146,14 +138,13 @@ public class Localization
     // RVA   : 0xA89570   Offset: 0xA87D70   Length: 0x3E3
     private static bool LoadDictionary(string value, bool merge)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
         lVar2 = 0;
-        if (*(char *)(pStatics + 16) == false) {
-          if (*pStatics == 0) {
+        if (!Localization.localizationHasBeenSet) {
+          if (Localization.loadFunction == null) {
             lVar3 = Resources.Load("Localization",DAT_181d77460);
             cVar1 = Object.op_Inequality(lVar3,0,0);
             if (cVar1) {
@@ -162,20 +153,20 @@ public class Localization
             }
           }
           else {
-            if (*pStatics == 0) goto LAB_180a8994e;
-            lVar2 = LoadFunction.Invoke(*pStatics,"Localization",0);
+            if (Localization.loadFunction == null) goto LAB_180a8994e;
+            lVar2 = LoadFunction.Invoke(Localization.loadFunction,"Localization",0);
           }
-          *(uint8 *)(pStatics + 16) = 1;
+          Localization.localizationHasBeenSet = 1;
         }
         cVar1 = Localization.LoadCSV(lVar2,0,merge,0);
         if (!cVar1) {
           cVar1 = FUN_180d6ca90(value,0);
           if (cVar1) {
-            value = *(uint64 *)(pStatics + 64);
+            value = Localization.mLanguage;
           }
           cVar1 = FUN_180d6ca90(value,0);
           if (!cVar1) {
-            if (*pStatics == 0) {
+            if (Localization.loadFunction == null) {
               lVar3 = Resources.Load(value,DAT_181d77460);
               cVar1 = Object.op_Inequality(lVar3,0,0);
               if (cVar1) {
@@ -184,8 +175,8 @@ public class Localization
               }
             }
             else {
-              if (*pStatics == 0) goto LAB_180a8994e;
-              lVar2 = LoadFunction.Invoke(*pStatics,value,0);
+              if (Localization.loadFunction == null) goto LAB_180a8994e;
+              lVar2 = LoadFunction.Invoke(Localization.loadFunction,value,0);
             }
             if (lVar2 != null) {
               lVar3 = new ByteReader(lVar2,0);
@@ -212,13 +203,12 @@ public class Localization
     // RVA   : 0xA885E0   Offset: 0xA86DE0   Length: 0x209
     private static bool LoadAndSelect(string value)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
         cVar2 = FUN_180d6ca90(value,0);
         if (!cVar2) {
-          lVar1 = *(int64 *)(pStatics + 40);
+          lVar1 = Localization.mDictionary;
           if (lVar1 == null) throw; // [null/range check failed]
           iVar3 = Dictionary_2.get_Count(lVar1,DAT_181da2c78);
           if (iVar3 == 0) {
@@ -232,16 +222,16 @@ public class Localization
             return true;
           }
         }
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = Localization.mOldDictionary;
         if (lVar1 != null) {
           iVar3 = Dictionary_2.get_Count(lVar1,DAT_181d4fa58);
           if (0 < iVar3) {
             return true;
           }
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = Localization.mOldDictionary;
           if (lVar1 != null) {
             Dictionary_2.Clear(lVar1,DAT_181d4f7d8);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = Localization.mDictionary;
             if (lVar1 != null) {
               Dictionary_2.Clear(lVar1,DAT_181da2a78);
               cVar2 = FUN_180d6ca90(value,0);
@@ -276,7 +266,6 @@ public class Localization
     // RVA   : 0xA8AB60   Offset: 0xA89360   Length: 0xAC
     public static void Set(string languageName, byte[] bytes)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         long lVar2;
         long lVar4;
@@ -324,10 +313,8 @@ public class Localization
           }
           plVar3[4] = languageName;
           il2cpp_internal(plVar3 + 4,languageName);
-          puVar8 = (uint64 *)(pStatics + 24);
-          *puVar8 = plVar3;
-          il2cpp_internal(puVar8,plVar3);
-          lVar2 = *(int64 *)(pStatics + 24);
+          Localization.mLanguages = plVar3;
+          lVar2 = Localization.mLanguages;
         }
         local_a8 = lVar2;
         if (lVar2 != null) {
@@ -341,12 +328,12 @@ public class Localization
               }
               cVar1 = FUN_1816fd990(lVar2[uVar9],languageName,0);
               if (cVar1) {
-                lVar4 = *(int64 *)(pStatics + 40);
+                lVar4 = Localization.mDictionary;
                 if (lVar4 == null) throw; // [null/range check failed]
                 cVar1 = FUN_1808addd0(lVar4,bytes,&local_c8,DAT_181da2bf8);
                 if (!cVar1) {
                   local_c8 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                  lVar2 = *(int64 *)(pStatics + 40);
+                  lVar2 = Localization.mDictionary;
                   if ((lVar2 == null) ||
                      (FUN_1808aec90(lVar2,bytes,local_c8,DAT_181da2cf8), plVar3 = local_c8,
                      local_c8 == (int64 *)0)) throw; // [null/range check failed]
@@ -383,14 +370,14 @@ public class Localization
               uVar9 = uVar9 + 1;
             } while ((int)uVar9 < iVar10);
           }
-          plVar3 = (int64 *)(pStatics + 24);
+          plVar3 = &Localization.mLanguages;
           lVar4 = *plVar3;
           if (lVar4 != null) {
             uVar9 = *(uint32 *)(lVar4 + 24);
             iVar10 = uVar9 + 1;
             local_b0 = uVar9;
             Array.Resize(plVar3,iVar10,DAT_181d54838);
-            plVar3 = *(int64 **)(pStatics + 24);
+            plVar3 = Localization.mLanguages;
             if (plVar3 != (int64 *)0) {
               if ((languageName != null) &&
                  (lVar4 = il2cpp_internal(languageName,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -407,7 +394,7 @@ public class Localization
               il2cpp_internal(plVar3 + (int64)iVar10 + 3,languageName);
               lVar5 = il2cpp_internal(DAT_181d5de48);
               FUN_1808ae540(lVar5,DAT_181da2978);
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = Localization.mDictionary;
               local_90 = lVar5;
               if (lVar4 != null) {
                 FUN_1808abcf0(&local_58,lVar4,DAT_181da2b78);
@@ -453,15 +440,13 @@ public class Localization
                   FUN_1808ab680(lVar5,local_a0,local_b8,DAT_181da29f8);
                 }
                 ZhSegment.Initialize(&local_88,DAT_181d7a4a8);
-                plVar3 = (int64 *)(pStatics + 40);
-                *plVar3 = lVar5;
-                il2cpp_internal(plVar3,lVar5);
-                lVar4 = *(int64 *)(pStatics + 40);
+                Localization.mDictionary = lVar5;
+                lVar4 = Localization.mDictionary;
                 if (lVar4 != null) {
                   cVar1 = FUN_1808addd0(lVar4,bytes,&local_c0,DAT_181da2bf8);
                   if (!cVar1) {
                     local_c0 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                    lVar2 = *(int64 *)(pStatics + 40);
+                    lVar2 = Localization.mDictionary;
                     if ((lVar2 == null) ||
                        (FUN_1808aec90(lVar2,bytes,local_c0,DAT_181da2cf8), plVar3 = local_c0,
                        local_c0 == (int64 *)0)) throw; // [null/range check failed]
@@ -511,19 +496,18 @@ public class Localization
     // RVA   : 0xA89BC0   Offset: 0xA883C0   Length: 0xF5
     public static void ReplaceKey(string key, string val)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
         cVar2 = FUN_180d6ca90(val,0);
         if (!cVar2) {
-          lVar1 = *(int64 *)(pStatics + 48);
+          lVar1 = Localization.mReplacement;
           if (lVar1 != null) {
             FUN_1808aec90(lVar1,key,val,DAT_181d4fbd8);
             return;
           }
         }
         else {
-          lVar1 = *(int64 *)(pStatics + 48);
+          lVar1 = Localization.mReplacement;
           if (lVar1 != null) {
             FUN_18177a010(lVar1,key,DAT_181d4f958);
             return;
@@ -536,7 +520,7 @@ public class Localization
     public static void ClearReplacements()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d61a70 + 184) + 48);
+        lVar1 = Localization.mReplacement;
         if (lVar1 != null) {
           Dictionary_2.Clear(lVar1,DAT_181d4f7d8);
           return;
@@ -547,7 +531,6 @@ public class Localization
     // RVA   : 0xA894E0   Offset: 0xA87CE0   Length: 0x87
     public static bool LoadCSV(TextAsset asset, bool merge)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -591,20 +574,18 @@ public class Localization
           return false;
         }
         FUN_18154e570(lVar4,0,DAT_181d81298);
-        cVar2 = FUN_180d6ca90(*(uint64 *)(pStatics + 64),0);
+        cVar2 = FUN_180d6ca90(Localization.mLanguage,0);
         if (cVar2) {
-          *(uint8 *)(pStatics + 16) = 0;
+          Localization.localizationHasBeenSet = 0;
         }
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
         LAB_180a88e66:
-          lVar6 = *(int64 *)(pStatics + 40);
+          lVar6 = Localization.mDictionary;
           if (lVar6 == null) goto LAB_180a89464;
           Dictionary_2.Clear(lVar6,DAT_181da2a78);
           uVar9 = FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar4 + 24));
-          puVar10 = (uint64 *)(pStatics + 24);
-          *puVar10 = uVar9;
-          il2cpp_internal(puVar10,uVar9);
-          if (*(char *)(pStatics + 16) == false) {
+          Localization.mLanguages = uVar9;
+          if (!Localization.localizationHasBeenSet) {
             lVar6 = *(int64 *)(lVar4 + 16);
             if (lVar6 == null) goto LAB_180a89464;
             if (*(int *)(lVar6 + 24) == 0) {
@@ -613,14 +594,12 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             uVar9 = PlayerPrefs.GetString("Language",*(uint64 *)(lVar6 + 32),0);
-            puVar10 = (uint64 *)(pStatics + 64);
-            *puVar10 = uVar9;
-            il2cpp_internal(puVar10,uVar9);
-            *(uint8 *)(pStatics + 16) = 1;
+            Localization.mLanguage = uVar9;
+            Localization.localizationHasBeenSet = 1;
           }
           for (uVar11 = 0; plVar5 = (int64 *)0, (int)uVar11 < *(int *)(lVar4 + 24);
               uVar11 = uVar11 + 1) {
-            plVar5 = *(int64 **)(pStatics + 24);
+            plVar5 = Localization.mLanguages;
             lVar6 = *(int64 *)(lVar4 + 16);
             if (lVar6 == null) goto LAB_180a89464;
             lVar7 = (int64)(int)uVar11;
@@ -638,7 +617,7 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             FUN_180002fd0(plVar5,lVar7,lVar6);
-            lVar6 = *(int64 *)(pStatics + 24);
+            lVar6 = Localization.mLanguages;
             if (lVar6 == null) goto LAB_180a89464;
             if (*(uint32 *)(lVar6 + 24) <= uVar11) {
               uVar9 = il2cpp_internal();
@@ -646,18 +625,21 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             cVar2 = FUN_1816fd990(*(uint64 *)(lVar6 + 32 + lVar7 * 8),
-                                  *(uint64 *)(pStatics + 64),0);
+                                  Localization.mLanguage,0)
+            ;
             if (cVar2) {
-              *(uint32 *)(pStatics + 56) = uVar11;
+              Localization.mLanguageIndex = uVar11;
             }
           }
         }
         else {
           if (!param_3) {
-            if (*(char *)(pStatics + 72) == false) goto LAB_180a88e66;
+            if (!Localization.mMerging)
+            goto LAB_180a88e66;
           }
-          if (*(int64 *)(pStatics + 24) == 0) goto LAB_180a88e66;
-          lVar6 = *(int64 *)(pStatics + 24);
+          if (Localization.mLanguages == null)
+          goto LAB_180a88e66;
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) goto LAB_180a89464;
           if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180a88e66;
           plVar5 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar4 + 24));
@@ -699,12 +681,12 @@ public class Localization
             uVar9 = *(uint64 *)(lVar6 + lVar3);
             cVar2 = Localization.HasLanguage(uVar9);
             if (!cVar2) {
-              plVar5 = (int64 *)(pStatics + 24);
+              plVar5 = &Localization.mLanguages;
               lVar3 = *plVar5;
               if (lVar3 == null) goto LAB_180a89464;
               iVar1 = *(int *)(lVar3 + 24);
               Array.Resize(plVar5,iVar1 + 1,DAT_181d54838);
-              plVar5 = *(int64 **)(pStatics + 24);
+              plVar5 = Localization.mLanguages;
               lVar3 = *(int64 *)(lVar4 + 16);
               if (lVar3 == null) goto LAB_180a89464;
               if (*(uint32 *)(lVar3 + 24) <= uVar11) {
@@ -723,7 +705,7 @@ public class Localization
               FUN_180002fd0(plVar5,(int64)iVar1,lVar3);
               lVar6 = il2cpp_internal(DAT_181d5de48);
               FUN_1808ae540(lVar6,DAT_181da2978);
-              lVar3 = *(int64 *)(pStatics + 40);
+              lVar3 = Localization.mDictionary;
               local_98 = lVar6;
               if (lVar3 == null) goto LAB_180a89464;
               FUN_1808abcf0(&local_50,lVar3,DAT_181da2b78);
@@ -766,7 +748,7 @@ public class Localization
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(lVar3,0);
               }
-              *(int64 *)(pStatics + 40) = lVar6;
+              Localization.mDictionary = lVar6;
             }
           }
         }
@@ -774,10 +756,10 @@ public class Localization
         FUN_1808ae540(lVar4,DAT_181d4d968);
         uVar11 = 0;
         while( true ) {
-          lVar6 = *(int64 *)(pStatics + 24);
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) break;
           if (*(int *)(lVar6 + 24) <= (int)uVar11) goto LAB_180a89143;
-          lVar6 = *(int64 *)(pStatics + 24);
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) break;
           if (*(uint32 *)(lVar6 + 24) <= uVar11) {
             uVar9 = il2cpp_internal();
@@ -807,24 +789,22 @@ public class Localization
         }
         goto LAB_180a89143;
         LAB_180a891b2:
-        if (*(char *)(pStatics + 72) == false) {
-          if (*(int64 *)(pStatics + 8) != 0) {
-            *(uint8 *)(pStatics + 72) = 1;
-            plVar5 = (int64 *)(pStatics + 8);
+        if (!Localization.mMerging) {
+          if (Localization.onLocalize != null) {
+            Localization.mMerging = 1;
+            plVar5 = &Localization.onLocalize;
             lVar3 = *plVar5;
             *plVar5 = 0;
             il2cpp_internal(plVar5,0);
             if (lVar3 == null) goto LAB_180a89464;
             OnGeometryUpdated.Invoke(lVar3,0);
-            plVar5 = (int64 *)(pStatics + 8);
-            *plVar5 = lVar3;
-            il2cpp_internal(plVar5,lVar3);
-            *(uint8 *)(pStatics + 72) = 0;
+            Localization.onLocalize = lVar3;
+            Localization.mMerging = 0;
           }
         }
         if (param_3) {
-          if (*(int64 *)(pStatics + 8) != 0) {
-            lVar3 = *(int64 *)(pStatics + 8);
+          if (Localization.onLocalize != null) {
+            lVar3 = Localization.onLocalize;
             if (lVar3 == null) goto LAB_180a89464;
             OnGeometryUpdated.Invoke(lVar3,0);
           }
@@ -837,7 +817,6 @@ public class Localization
     // RVA   : 0xA89470   Offset: 0xA87C70   Length: 0x65
     public static bool LoadCSV(byte[] bytes, bool merge)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -881,20 +860,18 @@ public class Localization
           return false;
         }
         FUN_18154e570(lVar4,0,DAT_181d81298);
-        cVar2 = FUN_180d6ca90(*(uint64 *)(pStatics + 64),0);
+        cVar2 = FUN_180d6ca90(Localization.mLanguage,0);
         if (cVar2) {
-          *(uint8 *)(pStatics + 16) = 0;
+          Localization.localizationHasBeenSet = 0;
         }
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
         LAB_180a88e66:
-          lVar6 = *(int64 *)(pStatics + 40);
+          lVar6 = Localization.mDictionary;
           if (lVar6 == null) goto LAB_180a89464;
           Dictionary_2.Clear(lVar6,DAT_181da2a78);
           uVar9 = FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar4 + 24));
-          puVar10 = (uint64 *)(pStatics + 24);
-          *puVar10 = uVar9;
-          il2cpp_internal(puVar10,uVar9);
-          if (*(char *)(pStatics + 16) == false) {
+          Localization.mLanguages = uVar9;
+          if (!Localization.localizationHasBeenSet) {
             lVar6 = *(int64 *)(lVar4 + 16);
             if (lVar6 == null) goto LAB_180a89464;
             if (*(int *)(lVar6 + 24) == 0) {
@@ -903,14 +880,12 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             uVar9 = PlayerPrefs.GetString("Language",*(uint64 *)(lVar6 + 32),0);
-            puVar10 = (uint64 *)(pStatics + 64);
-            *puVar10 = uVar9;
-            il2cpp_internal(puVar10,uVar9);
-            *(uint8 *)(pStatics + 16) = 1;
+            Localization.mLanguage = uVar9;
+            Localization.localizationHasBeenSet = 1;
           }
           for (uVar11 = 0; plVar5 = (int64 *)0, (int)uVar11 < *(int *)(lVar4 + 24);
               uVar11 = uVar11 + 1) {
-            plVar5 = *(int64 **)(pStatics + 24);
+            plVar5 = Localization.mLanguages;
             lVar6 = *(int64 *)(lVar4 + 16);
             if (lVar6 == null) goto LAB_180a89464;
             lVar7 = (int64)(int)uVar11;
@@ -928,7 +903,7 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             FUN_180002fd0(plVar5,lVar7,lVar6);
-            lVar6 = *(int64 *)(pStatics + 24);
+            lVar6 = Localization.mLanguages;
             if (lVar6 == null) goto LAB_180a89464;
             if (*(uint32 *)(lVar6 + 24) <= uVar11) {
               uVar9 = il2cpp_internal();
@@ -936,18 +911,21 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             cVar2 = FUN_1816fd990(*(uint64 *)(lVar6 + 32 + lVar7 * 8),
-                                  *(uint64 *)(pStatics + 64),0);
+                                  Localization.mLanguage,0)
+            ;
             if (cVar2) {
-              *(uint32 *)(pStatics + 56) = uVar11;
+              Localization.mLanguageIndex = uVar11;
             }
           }
         }
         else {
           if (!param_3) {
-            if (*(char *)(pStatics + 72) == false) goto LAB_180a88e66;
+            if (!Localization.mMerging)
+            goto LAB_180a88e66;
           }
-          if (*(int64 *)(pStatics + 24) == 0) goto LAB_180a88e66;
-          lVar6 = *(int64 *)(pStatics + 24);
+          if (Localization.mLanguages == null)
+          goto LAB_180a88e66;
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) goto LAB_180a89464;
           if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180a88e66;
           plVar5 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar4 + 24));
@@ -989,12 +967,12 @@ public class Localization
             uVar9 = *(uint64 *)(lVar6 + lVar3);
             cVar2 = Localization.HasLanguage(uVar9);
             if (!cVar2) {
-              plVar5 = (int64 *)(pStatics + 24);
+              plVar5 = &Localization.mLanguages;
               lVar3 = *plVar5;
               if (lVar3 == null) goto LAB_180a89464;
               iVar1 = *(int *)(lVar3 + 24);
               Array.Resize(plVar5,iVar1 + 1,DAT_181d54838);
-              plVar5 = *(int64 **)(pStatics + 24);
+              plVar5 = Localization.mLanguages;
               lVar3 = *(int64 *)(lVar4 + 16);
               if (lVar3 == null) goto LAB_180a89464;
               if (*(uint32 *)(lVar3 + 24) <= uVar11) {
@@ -1013,7 +991,7 @@ public class Localization
               FUN_180002fd0(plVar5,(int64)iVar1,lVar3);
               lVar6 = il2cpp_internal(DAT_181d5de48);
               FUN_1808ae540(lVar6,DAT_181da2978);
-              lVar3 = *(int64 *)(pStatics + 40);
+              lVar3 = Localization.mDictionary;
               local_98 = lVar6;
               if (lVar3 == null) goto LAB_180a89464;
               FUN_1808abcf0(&local_50,lVar3,DAT_181da2b78);
@@ -1056,7 +1034,7 @@ public class Localization
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(lVar3,0);
               }
-              *(int64 *)(pStatics + 40) = lVar6;
+              Localization.mDictionary = lVar6;
             }
           }
         }
@@ -1064,10 +1042,10 @@ public class Localization
         FUN_1808ae540(lVar4,DAT_181d4d968);
         uVar11 = 0;
         while( true ) {
-          lVar6 = *(int64 *)(pStatics + 24);
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) break;
           if (*(int *)(lVar6 + 24) <= (int)uVar11) goto LAB_180a89143;
-          lVar6 = *(int64 *)(pStatics + 24);
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) break;
           if (*(uint32 *)(lVar6 + 24) <= uVar11) {
             uVar9 = il2cpp_internal();
@@ -1097,24 +1075,22 @@ public class Localization
         }
         goto LAB_180a89143;
         LAB_180a891b2:
-        if (*(char *)(pStatics + 72) == false) {
-          if (*(int64 *)(pStatics + 8) != 0) {
-            *(uint8 *)(pStatics + 72) = 1;
-            plVar5 = (int64 *)(pStatics + 8);
+        if (!Localization.mMerging) {
+          if (Localization.onLocalize != null) {
+            Localization.mMerging = 1;
+            plVar5 = &Localization.onLocalize;
             lVar3 = *plVar5;
             *plVar5 = 0;
             il2cpp_internal(plVar5,0);
             if (lVar3 == null) goto LAB_180a89464;
             OnGeometryUpdated.Invoke(lVar3,0);
-            plVar5 = (int64 *)(pStatics + 8);
-            *plVar5 = lVar3;
-            il2cpp_internal(plVar5,lVar3);
-            *(uint8 *)(pStatics + 72) = 0;
+            Localization.onLocalize = lVar3;
+            Localization.mMerging = 0;
           }
         }
         if (param_3) {
-          if (*(int64 *)(pStatics + 8) != 0) {
-            lVar3 = *(int64 *)(pStatics + 8);
+          if (Localization.onLocalize != null) {
+            lVar3 = Localization.onLocalize;
             if (lVar3 == null) goto LAB_180a89464;
             OnGeometryUpdated.Invoke(lVar3,0);
           }
@@ -1127,14 +1103,13 @@ public class Localization
     // RVA   : 0xA87DF0   Offset: 0xA865F0   Length: 0x102
     private static bool HasLanguage(string languageName)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         int iVar1;
         long lVar2;
         bool cVar3;
         ulong uVar4;
         uint uVar5;
         uVar5 = 0;
-        lVar2 = *(int64 *)(pStatics + 24);
+        lVar2 = Localization.mLanguages;
         if (lVar2 == null) {
         LAB_180a87edd:
                           // WARNING: Subroutine does not return
@@ -1143,7 +1118,7 @@ public class Localization
         iVar1 = *(int *)(lVar2 + 24);
         if (0 < iVar1) {
           do {
-            lVar2 = *(int64 *)(pStatics + 24);
+            lVar2 = Localization.mLanguages;
             if (lVar2 == null) goto LAB_180a87edd;
             if (*(uint32 *)(lVar2 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
@@ -1164,7 +1139,6 @@ public class Localization
     // RVA   : 0xA887F0   Offset: 0xA86FF0   Length: 0xC79
     private static bool LoadCSV(byte[] bytes, TextAsset asset, bool merge)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -1208,20 +1182,18 @@ public class Localization
           return false;
         }
         FUN_18154e570(lVar4,0,DAT_181d81298);
-        cVar2 = FUN_180d6ca90(*(uint64 *)(pStatics + 64),0);
+        cVar2 = FUN_180d6ca90(Localization.mLanguage,0);
         if (cVar2) {
-          *(uint8 *)(pStatics + 16) = 0;
+          Localization.localizationHasBeenSet = 0;
         }
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
         LAB_180a88e66:
-          lVar6 = *(int64 *)(pStatics + 40);
+          lVar6 = Localization.mDictionary;
           if (lVar6 == null) goto LAB_180a89464;
           Dictionary_2.Clear(lVar6,DAT_181da2a78);
           uVar9 = FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar4 + 24));
-          puVar10 = (uint64 *)(pStatics + 24);
-          *puVar10 = uVar9;
-          il2cpp_internal(puVar10,uVar9);
-          if (*(char *)(pStatics + 16) == false) {
+          Localization.mLanguages = uVar9;
+          if (!Localization.localizationHasBeenSet) {
             lVar6 = *(int64 *)(lVar4 + 16);
             if (lVar6 == null) goto LAB_180a89464;
             if (*(int *)(lVar6 + 24) == 0) {
@@ -1230,14 +1202,12 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             uVar9 = PlayerPrefs.GetString("Language",*(uint64 *)(lVar6 + 32),0);
-            puVar10 = (uint64 *)(pStatics + 64);
-            *puVar10 = uVar9;
-            il2cpp_internal(puVar10,uVar9);
-            *(uint8 *)(pStatics + 16) = 1;
+            Localization.mLanguage = uVar9;
+            Localization.localizationHasBeenSet = 1;
           }
           for (uVar11 = 0; plVar5 = (int64 *)0, (int)uVar11 < *(int *)(lVar4 + 24);
               uVar11 = uVar11 + 1) {
-            plVar5 = *(int64 **)(pStatics + 24);
+            plVar5 = Localization.mLanguages;
             lVar6 = *(int64 *)(lVar4 + 16);
             if (lVar6 == null) goto LAB_180a89464;
             lVar7 = (int64)(int)uVar11;
@@ -1255,7 +1225,7 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             FUN_180002fd0(plVar5,lVar7,lVar6);
-            lVar6 = *(int64 *)(pStatics + 24);
+            lVar6 = Localization.mLanguages;
             if (lVar6 == null) goto LAB_180a89464;
             if (*(uint32 *)(lVar6 + 24) <= uVar11) {
               uVar9 = il2cpp_internal();
@@ -1263,18 +1233,21 @@ public class Localization
               FUN_1800d65f0(uVar9,0);
             }
             cVar2 = FUN_1816fd990(*(uint64 *)(lVar6 + 32 + lVar7 * 8),
-                                  *(uint64 *)(pStatics + 64),0);
+                                  Localization.mLanguage,0)
+            ;
             if (cVar2) {
-              *(uint32 *)(pStatics + 56) = uVar11;
+              Localization.mLanguageIndex = uVar11;
             }
           }
         }
         else {
           if (!merge) {
-            if (*(char *)(pStatics + 72) == false) goto LAB_180a88e66;
+            if (!Localization.mMerging)
+            goto LAB_180a88e66;
           }
-          if (*(int64 *)(pStatics + 24) == 0) goto LAB_180a88e66;
-          lVar6 = *(int64 *)(pStatics + 24);
+          if (Localization.mLanguages == null)
+          goto LAB_180a88e66;
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) goto LAB_180a89464;
           if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180a88e66;
           plVar5 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar4 + 24));
@@ -1316,12 +1289,12 @@ public class Localization
             uVar9 = *(uint64 *)(lVar6 + lVar3);
             cVar2 = Localization.HasLanguage(uVar9);
             if (!cVar2) {
-              plVar5 = (int64 *)(pStatics + 24);
+              plVar5 = &Localization.mLanguages;
               lVar3 = *plVar5;
               if (lVar3 == null) goto LAB_180a89464;
               iVar1 = *(int *)(lVar3 + 24);
               Array.Resize(plVar5,iVar1 + 1,DAT_181d54838);
-              plVar5 = *(int64 **)(pStatics + 24);
+              plVar5 = Localization.mLanguages;
               lVar3 = *(int64 *)(lVar4 + 16);
               if (lVar3 == null) goto LAB_180a89464;
               if (*(uint32 *)(lVar3 + 24) <= uVar11) {
@@ -1340,7 +1313,7 @@ public class Localization
               FUN_180002fd0(plVar5,(int64)iVar1,lVar3);
               lVar6 = il2cpp_internal(DAT_181d5de48);
               FUN_1808ae540(lVar6,DAT_181da2978);
-              lVar3 = *(int64 *)(pStatics + 40);
+              lVar3 = Localization.mDictionary;
               local_98 = lVar6;
               if (lVar3 == null) goto LAB_180a89464;
               FUN_1808abcf0(&local_50,lVar3,DAT_181da2b78);
@@ -1383,7 +1356,7 @@ public class Localization
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(lVar3,0);
               }
-              *(int64 *)(pStatics + 40) = lVar6;
+              Localization.mDictionary = lVar6;
             }
           }
         }
@@ -1391,10 +1364,10 @@ public class Localization
         FUN_1808ae540(lVar4,DAT_181d4d968);
         uVar11 = 0;
         while( true ) {
-          lVar6 = *(int64 *)(pStatics + 24);
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) break;
           if (*(int *)(lVar6 + 24) <= (int)uVar11) goto LAB_180a89143;
-          lVar6 = *(int64 *)(pStatics + 24);
+          lVar6 = Localization.mLanguages;
           if (lVar6 == null) break;
           if (*(uint32 *)(lVar6 + 24) <= uVar11) {
             uVar9 = il2cpp_internal();
@@ -1424,24 +1397,22 @@ public class Localization
         }
         goto LAB_180a89143;
         LAB_180a891b2:
-        if (*(char *)(pStatics + 72) == false) {
-          if (*(int64 *)(pStatics + 8) != 0) {
-            *(uint8 *)(pStatics + 72) = 1;
-            plVar5 = (int64 *)(pStatics + 8);
+        if (!Localization.mMerging) {
+          if (Localization.onLocalize != null) {
+            Localization.mMerging = 1;
+            plVar5 = &Localization.onLocalize;
             lVar3 = *plVar5;
             *plVar5 = 0;
             il2cpp_internal(plVar5,0);
             if (lVar3 == null) goto LAB_180a89464;
             OnGeometryUpdated.Invoke(lVar3,0);
-            plVar5 = (int64 *)(pStatics + 8);
-            *plVar5 = lVar3;
-            il2cpp_internal(plVar5,lVar3);
-            *(uint8 *)(pStatics + 72) = 0;
+            Localization.onLocalize = lVar3;
+            Localization.mMerging = 0;
           }
         }
         if (merge) {
-          if (*(int64 *)(pStatics + 8) != 0) {
-            lVar3 = *(int64 *)(pStatics + 8);
+          if (Localization.onLocalize != null) {
+            lVar3 = Localization.onLocalize;
             if (lVar3 == null) goto LAB_180a89464;
             OnGeometryUpdated.Invoke(lVar3,0);
           }
@@ -1454,7 +1425,6 @@ public class Localization
     // RVA   : 0xA86690   Offset: 0xA84E90   Length: 0x2EB
     private static void AddCSV(BetterList<string> newValues, string[] newLanguages, Dictionary<string, int> languageIndices)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1472,11 +1442,11 @@ public class Localization
             cVar2 = FUN_180d6ca90(uVar4,0);
             if (!cVar2) {
               uVar3 = Localization.ExtractStrings(newValues,newLanguages,languageIndices,0);
-              lVar1 = *(int64 *)(pStatics + 40);
+              lVar1 = Localization.mDictionary;
               if (lVar1 == null) throw; // [null/range check failed]
               cVar2 = FUN_1808ab750(lVar1,uVar4,DAT_181da2af8);
               if (!cVar2) {
-                lVar1 = *(int64 *)(pStatics + 40);
+                lVar1 = Localization.mDictionary;
                 if (lVar1 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -1484,7 +1454,7 @@ public class Localization
                 FUN_1808ab680(lVar1,uVar4,uVar3,DAT_181da29f8);
               }
               else {
-                lVar1 = *(int64 *)(pStatics + 40);
+                lVar1 = Localization.mDictionary;
                 if (lVar1 == null) throw; // [null/range check failed]
                 FUN_1808aec90(lVar1,uVar4,uVar3,DAT_181da2cf8);
                 if (newLanguages == null) {
@@ -1502,7 +1472,6 @@ public class Localization
     // RVA   : 0xA86C20   Offset: 0xA85420   Length: 0x37A
     private static string[] ExtractStrings(BetterList<string> added, string[] newLanguages, Dictionary<string, int> languageIndices)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -1513,7 +1482,7 @@ public class Localization
         uVar8 = 0;
         local_res10 = (int64 *)0;
         if (newLanguages == null) {
-          lVar1 = *(int64 *)(pStatics + 24);
+          lVar1 = Localization.mLanguages;
           if (lVar1 != null) {
             plVar5 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar1 + 24));
             uVar8 = 1;
@@ -1557,11 +1526,11 @@ public class Localization
             FUN_1800d65f0(uVar6,0);
           }
           uVar6 = *(uint64 *)(lVar1 + 32);
-          lVar1 = *(int64 *)(pStatics + 40);
+          lVar1 = Localization.mDictionary;
           if (lVar1 != null) {
             cVar2 = FUN_1808addd0(lVar1,uVar6,&local_res10,DAT_181da2bf8);
             if (!cVar2) {
-              lVar1 = *(int64 *)(pStatics + 24);
+              lVar1 = Localization.mLanguages;
               if (lVar1 == null) throw; // [null/range check failed]
               local_res10 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar1 + 24));
             }
@@ -1613,14 +1582,13 @@ public class Localization
     // RVA   : 0xA89CC0   Offset: 0xA884C0   Length: 0x2C0
     private static bool SelectLanguage(string language)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
         ulong uVar4;
         uint uVar6;
-        *(uint32 *)(pStatics + 56) = 0xffffffff;
-        lVar1 = *(int64 *)(pStatics + 40);
+        Localization.mLanguageIndex = 0xffffffff;
+        lVar1 = Localization.mDictionary;
         if (lVar1 == null) {
         LAB_180a89f6b:
                           // WARNING: Subroutine does not return
@@ -1629,12 +1597,12 @@ public class Localization
         iVar3 = Dictionary_2.get_Count(lVar1,DAT_181da2c78);
         if (iVar3 != 0) {
           uVar6 = 0;
-          lVar1 = *(int64 *)(pStatics + 24);
+          lVar1 = Localization.mLanguages;
           if (lVar1 == null) goto LAB_180a89f6b;
           iVar3 = *(int *)(lVar1 + 24);
           if (0 < iVar3) {
             do {
-              lVar1 = *(int64 *)(pStatics + 24);
+              lVar1 = Localization.mLanguages;
               if (lVar1 == null) goto LAB_180a89f6b;
               if (*(uint32 *)(lVar1 + 24) <= uVar6) {
                 uVar4 = il2cpp_internal();
@@ -1643,17 +1611,16 @@ public class Localization
               }
               cVar2 = FUN_1816fd990(lVar1[uVar6],language,0);
               if (cVar2) {
-                lVar1 = *(int64 *)(pStatics + 32);
+                lVar1 = Localization.mOldDictionary;
                 if (lVar1 == null) goto LAB_180a89f6b;
                 Dictionary_2.Clear(lVar1,DAT_181d4f7d8);
-                *(uint32 *)(pStatics + 56) = uVar6;
-                puVar5 = (uint64 *)(pStatics + 64);
-                *puVar5 = language;
-                il2cpp_internal(puVar5,language);
+                Localization.mLanguageIndex = uVar6;
+                Localization.mLanguage = language;
                 PlayerPrefs.SetString
-                          ("Language",*(uint64 *)(pStatics + 64),0);
-                if (*(int64 *)(pStatics + 8) != 0) {
-                  lVar1 = *(int64 *)(pStatics + 8);
+                          ("Language",
+                           Localization.mLanguage,0);
+                if (Localization.onLocalize != null) {
+                  lVar1 = Localization.onLocalize;
                   if (lVar1 == null) goto LAB_180a89f6b;
                   OnGeometryUpdated.Invoke(lVar1,0);
                 }
@@ -1671,7 +1638,6 @@ public class Localization
     // RVA   : 0xA89F90   Offset: 0xA88790   Length: 0x214
     public static void Set(string languageName, Dictionary<string, string> dictionary)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         long lVar2;
         long lVar4;
@@ -1719,10 +1685,8 @@ public class Localization
           }
           plVar3[4] = languageName;
           il2cpp_internal(plVar3 + 4,languageName);
-          puVar8 = (uint64 *)(pStatics + 24);
-          *puVar8 = plVar3;
-          il2cpp_internal(puVar8,plVar3);
-          lVar2 = *(int64 *)(pStatics + 24);
+          Localization.mLanguages = plVar3;
+          lVar2 = Localization.mLanguages;
         }
         local_a8 = lVar2;
         if (lVar2 != null) {
@@ -1736,12 +1700,12 @@ public class Localization
               }
               cVar1 = FUN_1816fd990(lVar2[uVar9],languageName,0);
               if (cVar1) {
-                lVar4 = *(int64 *)(pStatics + 40);
+                lVar4 = Localization.mDictionary;
                 if (lVar4 == null) throw; // [null/range check failed]
                 cVar1 = FUN_1808addd0(lVar4,dictionary,&local_c8,DAT_181da2bf8);
                 if (!cVar1) {
                   local_c8 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                  lVar2 = *(int64 *)(pStatics + 40);
+                  lVar2 = Localization.mDictionary;
                   if ((lVar2 == null) ||
                      (FUN_1808aec90(lVar2,dictionary,local_c8,DAT_181da2cf8), plVar3 = local_c8,
                      local_c8 == (int64 *)0)) throw; // [null/range check failed]
@@ -1778,14 +1742,14 @@ public class Localization
               uVar9 = uVar9 + 1;
             } while ((int)uVar9 < iVar10);
           }
-          plVar3 = (int64 *)(pStatics + 24);
+          plVar3 = &Localization.mLanguages;
           lVar4 = *plVar3;
           if (lVar4 != null) {
             uVar9 = *(uint32 *)(lVar4 + 24);
             iVar10 = uVar9 + 1;
             local_b0 = uVar9;
             Array.Resize(plVar3,iVar10,DAT_181d54838);
-            plVar3 = *(int64 **)(pStatics + 24);
+            plVar3 = Localization.mLanguages;
             if (plVar3 != (int64 *)0) {
               if ((languageName != null) &&
                  (lVar4 = il2cpp_internal(languageName,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -1802,7 +1766,7 @@ public class Localization
               il2cpp_internal(plVar3 + (int64)iVar10 + 3,languageName);
               lVar5 = il2cpp_internal(DAT_181d5de48);
               FUN_1808ae540(lVar5,DAT_181da2978);
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = Localization.mDictionary;
               local_90 = lVar5;
               if (lVar4 != null) {
                 FUN_1808abcf0(&local_58,lVar4,DAT_181da2b78);
@@ -1848,15 +1812,13 @@ public class Localization
                   FUN_1808ab680(lVar5,local_a0,local_b8,DAT_181da29f8);
                 }
                 ZhSegment.Initialize(&local_88,DAT_181d7a4a8);
-                plVar3 = (int64 *)(pStatics + 40);
-                *plVar3 = lVar5;
-                il2cpp_internal(plVar3,lVar5);
-                lVar4 = *(int64 *)(pStatics + 40);
+                Localization.mDictionary = lVar5;
+                lVar4 = Localization.mDictionary;
                 if (lVar4 != null) {
                   cVar1 = FUN_1808addd0(lVar4,dictionary,&local_c0,DAT_181da2bf8);
                   if (!cVar1) {
                     local_c0 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                    lVar2 = *(int64 *)(pStatics + 40);
+                    lVar2 = Localization.mDictionary;
                     if ((lVar2 == null) ||
                        (FUN_1808aec90(lVar2,dictionary,local_c0,DAT_181da2cf8), plVar3 = local_c0,
                        local_c0 == (int64 *)0)) throw; // [null/range check failed]
@@ -1906,7 +1868,6 @@ public class Localization
     // RVA   : 0xA8A1B0   Offset: 0xA889B0   Length: 0x145
     public static void Set(string key, string value)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         long lVar2;
         long lVar4;
@@ -1954,10 +1915,8 @@ public class Localization
           }
           plVar3[4] = key;
           il2cpp_internal(plVar3 + 4,key);
-          puVar8 = (uint64 *)(pStatics + 24);
-          *puVar8 = plVar3;
-          il2cpp_internal(puVar8,plVar3);
-          lVar2 = *(int64 *)(pStatics + 24);
+          Localization.mLanguages = plVar3;
+          lVar2 = Localization.mLanguages;
         }
         local_a8 = lVar2;
         if (lVar2 != null) {
@@ -1971,12 +1930,12 @@ public class Localization
               }
               cVar1 = FUN_1816fd990(lVar2[uVar9],key,0);
               if (cVar1) {
-                lVar4 = *(int64 *)(pStatics + 40);
+                lVar4 = Localization.mDictionary;
                 if (lVar4 == null) throw; // [null/range check failed]
                 cVar1 = FUN_1808addd0(lVar4,value,&local_c8,DAT_181da2bf8);
                 if (!cVar1) {
                   local_c8 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                  lVar2 = *(int64 *)(pStatics + 40);
+                  lVar2 = Localization.mDictionary;
                   if ((lVar2 == null) ||
                      (FUN_1808aec90(lVar2,value,local_c8,DAT_181da2cf8), plVar3 = local_c8,
                      local_c8 == (int64 *)0)) throw; // [null/range check failed]
@@ -2013,14 +1972,14 @@ public class Localization
               uVar9 = uVar9 + 1;
             } while ((int)uVar9 < iVar10);
           }
-          plVar3 = (int64 *)(pStatics + 24);
+          plVar3 = &Localization.mLanguages;
           lVar4 = *plVar3;
           if (lVar4 != null) {
             uVar9 = *(uint32 *)(lVar4 + 24);
             iVar10 = uVar9 + 1;
             local_b0 = uVar9;
             Array.Resize(plVar3,iVar10,DAT_181d54838);
-            plVar3 = *(int64 **)(pStatics + 24);
+            plVar3 = Localization.mLanguages;
             if (plVar3 != (int64 *)0) {
               if ((key != null) &&
                  (lVar4 = il2cpp_internal(key,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -2037,7 +1996,7 @@ public class Localization
               il2cpp_internal(plVar3 + (int64)iVar10 + 3,key);
               lVar5 = il2cpp_internal(DAT_181d5de48);
               FUN_1808ae540(lVar5,DAT_181da2978);
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = Localization.mDictionary;
               local_90 = lVar5;
               if (lVar4 != null) {
                 FUN_1808abcf0(&local_58,lVar4,DAT_181da2b78);
@@ -2083,15 +2042,13 @@ public class Localization
                   FUN_1808ab680(lVar5,local_a0,local_b8,DAT_181da29f8);
                 }
                 ZhSegment.Initialize(&local_88,DAT_181d7a4a8);
-                plVar3 = (int64 *)(pStatics + 40);
-                *plVar3 = lVar5;
-                il2cpp_internal(plVar3,lVar5);
-                lVar4 = *(int64 *)(pStatics + 40);
+                Localization.mDictionary = lVar5;
+                lVar4 = Localization.mDictionary;
                 if (lVar4 != null) {
                   cVar1 = FUN_1808addd0(lVar4,value,&local_c0,DAT_181da2bf8);
                   if (!cVar1) {
                     local_c0 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                    lVar2 = *(int64 *)(pStatics + 40);
+                    lVar2 = Localization.mDictionary;
                     if ((lVar2 == null) ||
                        (FUN_1808aec90(lVar2,value,local_c0,DAT_181da2cf8), plVar3 = local_c0,
                        local_c0 == (int64 *)0)) throw; // [null/range check failed]
@@ -2141,7 +2098,6 @@ public class Localization
     // RVA   : 0xA87F00   Offset: 0xA86700   Length: 0x6DD
     public static bool Has(string key)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -2151,21 +2107,21 @@ public class Localization
         if (cVar2) {
           return false;
         }
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
           uVar4 = PlayerPrefs.GetString("Language","English",0);
           Localization.LoadDictionary(uVar4,0,0);
         }
-        if (*(int64 *)(pStatics + 24) == 0) {
+        if (Localization.mLanguages == null) {
           return false;
         }
         uVar4 = Localization.get_language(0);
-        if (*(int *)(pStatics + 56) == -1) {
+        if (Localization.mLanguageIndex == -1) {
           uVar5 = 0;
           while( true ) {
-            lVar1 = *(int64 *)(pStatics + 24);
+            lVar1 = Localization.mLanguages;
             if (lVar1 == null) goto LAB_180a885d8;
             if (*(int *)(lVar1 + 24) <= (int)uVar5) goto LAB_180a88154;
-            lVar1 = *(int64 *)(pStatics + 24);
+            lVar1 = Localization.mLanguages;
             if (lVar1 == null) goto LAB_180a885d8;
             if (*(uint32 *)(lVar1 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
@@ -2176,38 +2132,40 @@ public class Localization
             if (cVar2) break;
             uVar5 = uVar5 + 1;
           }
-          *(uint32 *)(pStatics + 56) = uVar5;
+          Localization.mLanguageIndex = uVar5;
         }
         LAB_180a88154:
-        if (*(int *)(pStatics + 56) == -1) {
-          *(uint32 *)(pStatics + 56) = 0;
-          lVar1 = *(int64 *)(pStatics + 24);
+        if (Localization.mLanguageIndex == -1) {
+          Localization.mLanguageIndex = 0;
+          lVar1 = Localization.mLanguages;
           if (lVar1 == null) goto LAB_180a885d8;
           if (*(int *)(lVar1 + 24) == 0) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar4,0);
           }
-          *(uint64 *)(pStatics + 64) = *(uint64 *)(lVar1 + 32);
+          Localization.mLanguage =
+               *(uint64 *)(lVar1 + 32);
+          il2cpp_internal();
         }
         iVar3 = UICamera.get_currentScheme(0);
         if (iVar3 == 1) {
           uVar4 = String.Concat(key," Mobile",0);
-          lVar1 = *(int64 *)(pStatics + 48);
+          lVar1 = Localization.mReplacement;
           if (lVar1 == null) goto LAB_180a885d8;
           cVar2 = FUN_1808ab750(lVar1,uVar4,DAT_181d4f858);
           if (cVar2) {
             return true;
           }
-          if (*(int *)(pStatics + 56) != -1) {
-            lVar1 = *(int64 *)(pStatics + 40);
+          if (Localization.mLanguageIndex != -1) {
+            lVar1 = Localization.mDictionary;
             if (lVar1 == null) goto LAB_180a885d8;
             cVar2 = FUN_1808ab750(lVar1,uVar4,DAT_181da2af8);
             if (cVar2) {
               return true;
             }
           }
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = Localization.mOldDictionary;
           if (lVar1 == null) goto LAB_180a885d8;
           cVar2 = FUN_1808ab750(lVar1,uVar4,DAT_181d4f858);
         joined_r0x000180a8847b:
@@ -2217,26 +2175,26 @@ public class Localization
         }
         else if (iVar3 == 2) {
           uVar4 = String.Concat(key," Controller",0);
-          lVar1 = *(int64 *)(pStatics + 48);
+          lVar1 = Localization.mReplacement;
           if (lVar1 == null) goto LAB_180a885d8;
           cVar2 = FUN_1808ab750(lVar1,uVar4,DAT_181d4f858);
           if (cVar2) {
             return true;
           }
-          if (*(int *)(pStatics + 56) != -1) {
-            lVar1 = *(int64 *)(pStatics + 40);
+          if (Localization.mLanguageIndex != -1) {
+            lVar1 = Localization.mDictionary;
             if (lVar1 == null) goto LAB_180a885d8;
             cVar2 = FUN_1808ab750(lVar1,uVar4,DAT_181da2af8);
             if (cVar2) {
               return true;
             }
           }
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = Localization.mOldDictionary;
           if (lVar1 == null) goto LAB_180a885d8;
           cVar2 = FUN_1808ab750(lVar1,uVar4,DAT_181d4f858);
           goto joined_r0x000180a8847b;
         }
-        lVar1 = *(int64 *)(pStatics + 48);
+        lVar1 = Localization.mReplacement;
         if (lVar1 == null) {
         LAB_180a885d8:
                           // WARNING: Subroutine does not return
@@ -2244,15 +2202,15 @@ public class Localization
         }
         cVar2 = FUN_1808ab750(lVar1,key,DAT_181d4f858);
         if (!cVar2) {
-          if (*(int *)(pStatics + 56) != -1) {
-            lVar1 = *(int64 *)(pStatics + 40);
+          if (Localization.mLanguageIndex != -1) {
+            lVar1 = Localization.mDictionary;
             if (lVar1 == null) goto LAB_180a885d8;
             cVar2 = FUN_1808ab750(lVar1,key,DAT_181da2af8);
             if (cVar2) {
               return true;
             }
           }
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = Localization.mOldDictionary;
           if (lVar1 == null) goto LAB_180a885d8;
           cVar2 = FUN_1808ab750(lVar1,key,DAT_181d4f858);
           if (!cVar2) {
@@ -2266,7 +2224,6 @@ public class Localization
     // RVA   : 0xA873D0   Offset: 0xA85BD0   Length: 0xA18
     public static string Get(string key, bool warnIfMissing)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
@@ -2280,22 +2237,22 @@ public class Localization
         if (cVar1) {
           return false;
         }
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
           uVar3 = PlayerPrefs.GetString("Language","English",0);
           Localization.LoadDictionary(uVar3,0,0);
         }
-        if (*(int64 *)(pStatics + 24) == 0) {
+        if (Localization.mLanguages == null) {
           Debug.LogError("No localization data present",0);
           return false;
         }
         uVar3 = Localization.get_language(0);
-        if (*(int *)(pStatics + 56) == -1) {
+        if (Localization.mLanguageIndex == -1) {
           uVar4 = 0;
           while( true ) {
-            lVar5 = *(int64 *)(pStatics + 24);
+            lVar5 = Localization.mLanguages;
             if (lVar5 == null) goto LAB_180a87de3;
             if (*(int *)(lVar5 + 24) <= (int)uVar4) goto LAB_180a8765b;
-            lVar5 = *(int64 *)(pStatics + 24);
+            lVar5 = Localization.mLanguages;
             if (lVar5 == null) goto LAB_180a87de3;
             if (*(uint32 *)(lVar5 + 24) <= uVar4) {
               uVar3 = il2cpp_internal();
@@ -2306,41 +2263,44 @@ public class Localization
             if (cVar1) break;
             uVar4 = uVar4 + 1;
           }
-          *(uint32 *)(pStatics + 56) = uVar4;
+          Localization.mLanguageIndex = uVar4;
         }
         LAB_180a8765b:
-        if (*(int *)(pStatics + 56) == -1) {
-          *(uint32 *)(pStatics + 56) = 0;
-          lVar5 = *(int64 *)(pStatics + 24);
+        if (Localization.mLanguageIndex == -1) {
+          Localization.mLanguageIndex = 0;
+          lVar5 = Localization.mLanguages;
           if (lVar5 == null) goto LAB_180a87de3;
           if (*(int *)(lVar5 + 24) == 0) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar3,0);
           }
-          *(uint64 *)(pStatics + 64) = *(uint64 *)(lVar5 + 32);
+          Localization.mLanguage =
+               *(uint64 *)(lVar5 + 32);
+          il2cpp_internal();
           uVar3 = String.Concat("Language not found: ",uVar3,0);
           Debug.LogWarning(uVar3,0);
         }
         iVar2 = UICamera.get_currentScheme(0);
         if (iVar2 == 1) {
           uVar3 = String.Concat(key," Mobile",0);
-          lVar5 = *(int64 *)(pStatics + 48);
+          lVar5 = Localization.mReplacement;
           if (lVar5 == null) goto LAB_180a87de3;
           cVar1 = FUN_1808addd0(lVar5,uVar3,&local_res20,DAT_181d4f9d8);
           if (cVar1) {
             return local_res20;
           }
-          if (*(int *)(pStatics + 56) != -1) {
-            lVar5 = *(int64 *)(pStatics + 40);
+          if (Localization.mLanguageIndex != -1) {
+            lVar5 = Localization.mDictionary;
             if (lVar5 == null) goto LAB_180a87de3;
             cVar1 = FUN_1808addd0(lVar5,uVar3,&local_res8,DAT_181da2bf8);
             if (cVar1) {
               lVar5 = local_res8;
               if (local_res8 == 0) goto LAB_180a87de3;
-              if (*(int *)(pStatics + 56) < *(int *)(local_res8 + 24)) {
+              if (Localization.mLanguageIndex <
+                  *(int *)(local_res8 + 24)) {
                 if (lVar5 != null) {
-                  uVar4 = *(uint32 *)(pStatics + 56);
+                  uVar4 = Localization.mLanguageIndex;
                   if (*(uint32 *)(lVar5 + 24) <= uVar4) {
                     uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2353,7 +2313,7 @@ public class Localization
               }
             }
           }
-          lVar5 = *(int64 *)(pStatics + 32);
+          lVar5 = Localization.mOldDictionary;
           if (lVar5 == null) goto LAB_180a87de3;
           cVar1 = FUN_1808addd0(lVar5,uVar3,&local_res20,DAT_181d4f9d8);
         joined_r0x000180a87b14:
@@ -2363,22 +2323,23 @@ public class Localization
         }
         else if (iVar2 == 2) {
           uVar3 = String.Concat(key," Controller",0);
-          lVar5 = *(int64 *)(pStatics + 48);
+          lVar5 = Localization.mReplacement;
           if (lVar5 == null) goto LAB_180a87de3;
           cVar1 = FUN_1808addd0(lVar5,uVar3,&local_res20,DAT_181d4f9d8);
           if (cVar1) {
             return local_res20;
           }
-          if (*(int *)(pStatics + 56) != -1) {
-            lVar5 = *(int64 *)(pStatics + 40);
+          if (Localization.mLanguageIndex != -1) {
+            lVar5 = Localization.mDictionary;
             if (lVar5 == null) goto LAB_180a87de3;
             cVar1 = FUN_1808addd0(lVar5,uVar3,&local_res8,DAT_181da2bf8);
             if (cVar1) {
               lVar5 = local_res8;
               if (local_res8 == 0) goto LAB_180a87de3;
-              if (*(int *)(pStatics + 56) < *(int *)(local_res8 + 24)) {
+              if (Localization.mLanguageIndex <
+                  *(int *)(local_res8 + 24)) {
                 if (lVar5 != null) {
-                  uVar4 = *(uint32 *)(pStatics + 56);
+                  uVar4 = Localization.mLanguageIndex;
                   if (*(uint32 *)(lVar5 + 24) <= uVar4) {
                     uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2390,23 +2351,24 @@ public class Localization
               }
             }
           }
-          lVar5 = *(int64 *)(pStatics + 32);
+          lVar5 = Localization.mOldDictionary;
           if (lVar5 == null) goto LAB_180a87de3;
           cVar1 = FUN_1808addd0(lVar5,uVar3,&local_res20,DAT_181d4f9d8);
           goto joined_r0x000180a87b14;
         }
-        lVar5 = *(int64 *)(pStatics + 48);
+        lVar5 = Localization.mReplacement;
         if (lVar5 == null) goto LAB_180a87de3;
         cVar1 = FUN_1808addd0(lVar5,key,&local_res20,DAT_181d4f9d8);
         if (!cVar1) {
-          if (*(int *)(pStatics + 56) != -1) {
-            lVar5 = *(int64 *)(pStatics + 40);
+          if (Localization.mLanguageIndex != -1) {
+            lVar5 = Localization.mDictionary;
             if (lVar5 == null) goto LAB_180a87de3;
             cVar1 = FUN_1808addd0(lVar5,key,&local_res8,DAT_181da2bf8);
             if (cVar1) {
               lVar5 = local_res8;
               if (local_res8 != 0) {
-                if (*(int *)(local_res8 + 24) <= *(int *)(pStatics + 56)) {
+                if (*(int *)(local_res8 + 24) <=
+                    Localization.mLanguageIndex) {
                   if (*(int *)(local_res8 + 24) == 0) {
                     uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2415,7 +2377,7 @@ public class Localization
                   return *(uint64 *)(local_res8 + 32);
                 }
                 if (lVar5 != null) {
-                  uVar4 = *(uint32 *)(pStatics + 56);
+                  uVar4 = Localization.mLanguageIndex;
                   if (*(uint32 *)(lVar5 + 24) <= uVar4) {
                     uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2438,7 +2400,7 @@ public class Localization
               goto LAB_180a87de3;
             }
           }
-          lVar5 = *(int64 *)(pStatics + 32);
+          lVar5 = Localization.mOldDictionary;
           if (lVar5 == null) {
         LAB_180a87de3:
                           // WARNING: Subroutine does not return
@@ -2510,28 +2472,26 @@ public class Localization
     // RVA   : 0xA86A00   Offset: 0xA85200   Length: 0x21D
     public static bool Exists(string key)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
-        if (*(char *)(pStatics + 16) == false) {
+        if (!Localization.localizationHasBeenSet) {
           uVar3 = PlayerPrefs.GetString("Language","English",0);
           cVar2 = String.op_Inequality
-                            (*(uint64 *)(pStatics + 64),uVar3,0);
+                            (Localization.mLanguage,uVar3,0
+                            );
           if (cVar2) {
-            puVar4 = (uint64 *)(pStatics + 64);
-            *puVar4 = uVar3;
-            il2cpp_internal(puVar4,uVar3);
+            Localization.mLanguage = uVar3;
             Localization.LoadAndSelect(uVar3,0);
           }
         }
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = Localization.mDictionary;
         if (lVar1 != null) {
           cVar2 = FUN_1808ab750(lVar1,key,DAT_181da2af8);
           if (cVar2) {
             return true;
           }
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = Localization.mOldDictionary;
           if (lVar1 != null) {
             uVar3 = FUN_1808ab750(lVar1,key,DAT_181d4f858);
             return uVar3;
@@ -2543,7 +2503,6 @@ public class Localization
     // RVA   : 0xA8A300   Offset: 0xA88B00   Length: 0x854
     public static void Set(string language, string key, string text)
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         bool cVar1;
         long lVar2;
         long lVar4;
@@ -2591,10 +2550,8 @@ public class Localization
           }
           plVar3[4] = language;
           il2cpp_internal(plVar3 + 4,language);
-          puVar8 = (uint64 *)(pStatics + 24);
-          *puVar8 = plVar3;
-          il2cpp_internal(puVar8,plVar3);
-          lVar2 = *(int64 *)(pStatics + 24);
+          Localization.mLanguages = plVar3;
+          lVar2 = Localization.mLanguages;
         }
         local_a8 = lVar2;
         if (lVar2 != null) {
@@ -2608,12 +2565,12 @@ public class Localization
               }
               cVar1 = FUN_1816fd990(lVar2[uVar9],language,0);
               if (cVar1) {
-                lVar4 = *(int64 *)(pStatics + 40);
+                lVar4 = Localization.mDictionary;
                 if (lVar4 == null) throw; // [null/range check failed]
                 cVar1 = FUN_1808addd0(lVar4,key,&local_c8,DAT_181da2bf8);
                 if (!cVar1) {
                   local_c8 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                  lVar2 = *(int64 *)(pStatics + 40);
+                  lVar2 = Localization.mDictionary;
                   if ((lVar2 == null) ||
                      (FUN_1808aec90(lVar2,key,local_c8,DAT_181da2cf8), plVar3 = local_c8,
                      local_c8 == (int64 *)0)) throw; // [null/range check failed]
@@ -2650,14 +2607,14 @@ public class Localization
               uVar9 = uVar9 + 1;
             } while ((int)uVar9 < iVar10);
           }
-          plVar3 = (int64 *)(pStatics + 24);
+          plVar3 = &Localization.mLanguages;
           lVar4 = *plVar3;
           if (lVar4 != null) {
             uVar9 = *(uint32 *)(lVar4 + 24);
             iVar10 = uVar9 + 1;
             local_b0 = uVar9;
             Array.Resize(plVar3,iVar10,DAT_181d54838);
-            plVar3 = *(int64 **)(pStatics + 24);
+            plVar3 = Localization.mLanguages;
             if (plVar3 != (int64 *)0) {
               if ((language != null) &&
                  (lVar4 = il2cpp_internal(language,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -2674,7 +2631,7 @@ public class Localization
               il2cpp_internal(plVar3 + (int64)iVar10 + 3,language);
               lVar5 = il2cpp_internal(DAT_181d5de48);
               FUN_1808ae540(lVar5,DAT_181da2978);
-              lVar4 = *(int64 *)(pStatics + 40);
+              lVar4 = Localization.mDictionary;
               local_90 = lVar5;
               if (lVar4 != null) {
                 FUN_1808abcf0(&local_58,lVar4,DAT_181da2b78);
@@ -2720,15 +2677,13 @@ public class Localization
                   FUN_1808ab680(lVar5,local_a0,local_b8,DAT_181da29f8);
                 }
                 ZhSegment.Initialize(&local_88,DAT_181d7a4a8);
-                plVar3 = (int64 *)(pStatics + 40);
-                *plVar3 = lVar5;
-                il2cpp_internal(plVar3,lVar5);
-                lVar4 = *(int64 *)(pStatics + 40);
+                Localization.mDictionary = lVar5;
+                lVar4 = Localization.mDictionary;
                 if (lVar4 != null) {
                   cVar1 = FUN_1808addd0(lVar4,key,&local_c0,DAT_181da2bf8);
                   if (!cVar1) {
                     local_c0 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,*(uint32 *)(lVar2 + 24));
-                    lVar2 = *(int64 *)(pStatics + 40);
+                    lVar2 = Localization.mDictionary;
                     if ((lVar2 == null) ||
                        (FUN_1808aec90(lVar2,key,local_c0,DAT_181da2cf8), plVar3 = local_c0,
                        local_c0 == (int64 *)0)) throw; // [null/range check failed]
@@ -2778,29 +2733,20 @@ public class Localization
     // RVA   : 0xA8AC10   Offset: 0xA89410   Length: 0x162
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d61a70 + 184);
         ulong uVar1;
-        *(uint8 *)(pStatics + 16) = 0;
-        puVar2 = (uint64 *)(pStatics + 24);
-        *puVar2 = 0;
-        il2cpp_internal(puVar2,0);
+        Localization.localizationHasBeenSet = 0;
+        Localization.mLanguages = 0;
         uVar1 = il2cpp_internal(DAT_181d5e848);
         FUN_1808ae540(uVar1,DAT_181d4f5d8);
-        puVar2 = (uint64 *)(pStatics + 32);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        Localization.mOldDictionary = uVar1;
         uVar1 = il2cpp_internal(DAT_181d5de48);
         FUN_1808ae540(uVar1,DAT_181da2978);
-        puVar2 = (uint64 *)(pStatics + 40);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        Localization.mDictionary = uVar1;
         uVar1 = il2cpp_internal(DAT_181d5e848);
         FUN_1808ae540(uVar1,DAT_181d4f5d8);
-        puVar2 = (uint64 *)(pStatics + 48);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
-        *(uint32 *)(pStatics + 56) = 0xffffffff;
-        *(uint8 *)(pStatics + 72) = 0;
+        Localization.mReplacement = uVar1;
+        Localization.mLanguageIndex = 0xffffffff;
+        Localization.mMerging = 0;
     }
 
 }

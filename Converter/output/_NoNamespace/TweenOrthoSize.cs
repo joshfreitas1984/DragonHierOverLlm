@@ -150,8 +150,6 @@ public class TweenOrthoSize
     // RVA   : 0xA70070   Offset: 0xA6E870   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180a70070(int64 this)
-        {
         this.from = 0x3f800000;
         this.to = 0x3f800000;
         UITweener.ctor(this,0);

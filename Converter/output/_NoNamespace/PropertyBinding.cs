@@ -40,8 +40,6 @@ public class PropertyBinding
     // RVA   : 0xBDD9F0   Offset: 0xBDC1F0   Length: 0xE
     private void Update()
     {
-        void FUN_180bdd9f0(int64 this)
-        {
         if (this.update == 1) {
           PropertyBinding.UpdateTarget(this,0);
           return;
@@ -52,8 +50,6 @@ public class PropertyBinding
     // RVA   : 0xBDD750   Offset: 0xBDBF50   Length: 0xE
     private void LateUpdate()
     {
-        void FUN_180bdd750(int64 this)
-        {
         if (this.update == 2) {
           PropertyBinding.UpdateTarget(this,0);
           return;
@@ -64,8 +60,6 @@ public class PropertyBinding
     // RVA   : 0xBDD740   Offset: 0xBDBF40   Length: 0xE
     private void FixedUpdate()
     {
-        void FUN_180bdd740(int64 this)
-        {
         if (this.update == 3) {
           PropertyBinding.UpdateTarget(this,0);
           return;
@@ -160,8 +154,6 @@ public class PropertyBinding
     // RVA   : 0xBDDA00   Offset: 0xBDC200   Length: 0x12
     public void /*ctor*/()
     {
-        void FUN_180bdda00(int64 this)
-        {
         this.update = 1;
         this.editMode = 1;
         FUN_18044ef50(this,0);

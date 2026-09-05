@@ -290,8 +290,7 @@ public class StudyInternalPointController
     // RVA   : 0xB8CD80   Offset: 0xB8B580   Length: 0xAC9
     public void Init()
     {
-        var pStatics_2ef0 = *(int64*)(DAT_181d82ef0 + 184);
-        var pStatics_2f70 = *(int64*)(DAT_181d82f70 + 184);
+        var pStatics = *(int64*)(DAT_181d82ef0 + 184);
         int iVar1;
         ulong uVar2;
         long lVar3;
@@ -324,24 +323,24 @@ public class StudyInternalPointController
             this.crashed = 0;
             fVar11 = (float)Random.Range();
             iVar1 = this.hardLv;
-            if (*pStatics_2f70 != 0) {
-              if (*(int64 *)(*pStatics_2f70 + 40) == 0) {
+            if (StudySkillController._instance != null) {
+              if (StudySkillController._instance.targetBuilding == null) {
                 fVar12 = 0.0;
               }
               else {
-                if ((*pStatics_2f70 == 0) ||
-                   (lVar5 = *(int64 *)(*pStatics_2f70 + 40)) == null)
-                throw; // [null/range check failed]
-                fVar12 = (float)*(int *)(lVar5 + 20) * 0.01;
+                if ((StudySkillController._instance == null) ||
+                   (lVar5 = StudySkillController._instance.targetBuilding,
+                   lVar5 == null)) throw; // [null/range check failed]
+                fVar12 = (float)lVar5.lv * 0.01;
               }
               this.successRate = (fVar11 - (float)iVar1 * 0.1) + fVar12;
               uVar7 = this.pointUI;
               cVar4 = Object.op_Equality(uVar7,0,0);
               if (cVar4) {
-                if (*pStatics_2ef0 == 0) throw; // [null/range check failed]
-                uVar7 = *(uint64 *)(*pStatics_2ef0 + 88);
-                if (*pStatics_2ef0 == 0) throw; // [null/range check failed]
-                uVar2 = *(uint64 *)(*pStatics_2ef0 + 48);
+                if (*pStatics == 0) throw; // [null/range check failed]
+                uVar7 = *(uint64 *)(*pStatics + 88);
+                if (*pStatics == 0) throw; // [null/range check failed]
+                uVar2 = *(uint64 *)(*pStatics + 48);
                 uVar7 = GlobalData.AddChild(uVar7,uVar2,0);
                 this.pointUI = uVar7;
               }
@@ -370,8 +369,8 @@ public class StudyInternalPointController
                       cVar4 = Object.op_Equality(uVar7,0,0);
                       if (cVar4) {
                         uVar7 = Component.get_gameObject(this,0);
-                        if (*pStatics_2ef0 == 0) throw; // [null/range check failed]
-                        uVar2 = *(uint64 *)(*pStatics_2ef0 + 56);
+                        if (*pStatics == 0) throw; // [null/range check failed]
+                        uVar2 = *(uint64 *)(*pStatics + 56);
                         uVar7 = GlobalData.AddChild(uVar7,uVar2,0);
                         this.highLight = uVar7;
                       }
@@ -379,8 +378,8 @@ public class StudyInternalPointController
                       cVar4 = Object.op_Equality(uVar7,0,0);
                       if (cVar4) {
                         uVar7 = Component.get_gameObject(this,0);
-                        if (*pStatics_2ef0 == 0) throw; // [null/range check failed]
-                        uVar2 = *(uint64 *)(*pStatics_2ef0 + 64);
+                        if (*pStatics == 0) throw; // [null/range check failed]
+                        uVar2 = *(uint64 *)(*pStatics + 64);
                         lVar5 = GlobalData.AddChild(uVar7,uVar2,0);
                         if (lVar5 == null) throw; // [null/range check failed]
                         uVar7 = GameObject.GetComponent(lVar5,DAT_181da0208);
@@ -394,12 +393,12 @@ public class StudyInternalPointController
                             if (lVar5.Count <= (int)uVar10) goto LAB_180b8d58e;
                             lVar5 = this.lineRendererBack;
                             uVar7 = Component.get_gameObject(this,0);
-                            if (*pStatics_2ef0 == 0) {
+                            if (*pStatics == 0) {
         LAB_180b8d844:
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
                             }
-                            uVar2 = *(uint64 *)(*pStatics_2ef0 + 64);
+                            uVar2 = *(uint64 *)(*pStatics + 64);
                             lVar8 = GlobalData.AddChild(uVar7,uVar2,0);
                             if ((lVar8 == null) ||
                                (uVar7 = GameObject.GetComponent(lVar8,DAT_181da0208), lVar5 == null))
@@ -487,9 +486,9 @@ public class StudyInternalPointController
                               uVar2 = *(uint64 *)(lVar8 + lVar3._items);
                               lVar5 = new WarpText_d__8(0);
                               if (lVar5 == null) break;
-                              *(int64 *)(lVar5 + 40) = this;
-                              *(uint64 *)(lVar5 + 32) = uVar7;
-                              *(uint64 *)(lVar5 + 48) = uVar2;
+                              lVar5.shopItemList = this;
+                              lVar5.destroyTimeLeft = uVar7;
+                              lVar5.missionDatas = uVar2;
                               FUN_180d837c0(this);
                               lVar5 = this.lineRendererBack;
                               uVar9 = uVar9 + 1;
@@ -587,7 +586,7 @@ public class StudyInternalPointController
         if (this.pointUI != null) {
           GameObject.SetActive(this.pointUI,1,0);
           lVar3 = Component.GetComponent(this,DAT_181d6d540);
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
             uVar1 = this.hardLv;
             if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -611,7 +610,7 @@ public class StudyInternalPointController
     // RVA   : 0xB8C890   Offset: 0xB8B090   Length: 0xF8
     public string GetSpePointDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         ulong uVar3;
@@ -623,20 +622,20 @@ public class StudyInternalPointController
         switch(this.spePointType) {
         case 1:
           if (!this.goodSpePoint) {
-            uVar4 = *(uint64 *)(pStatics + 0x2c8);
+            uVar4 = *(uint64 *)(pPlotController + 0x2c8);
             uVar3 = "内力";
           }
           else {
-            uVar4 = *(uint64 *)(pStatics + 0x260);
+            uVar4 = *(uint64 *)(pPlotController + 0x260);
             uVar3 = "内力";
           }
           goto LAB_180b8ca03;
         case 2:
           if (!this.goodSpePoint) {
-            uVar4 = *(uint64 *)(pStatics + 0x2c8);
+            uVar4 = *(uint64 *)(pPlotController + 0x2c8);
           }
           else {
-            uVar4 = *(uint64 *)(pStatics + 0x260);
+            uVar4 = *(uint64 *)(pPlotController + 0x260);
           }
           local_res8[0] = this.hardLv * 20 + 50;
           uVar3 = "周边经验";
@@ -646,11 +645,11 @@ public class StudyInternalPointController
           goto LAB_180b8ca20;
         case 3:
           if (!this.goodSpePoint) {
-            uVar4 = *(uint64 *)(pStatics + 0x2c8);
+            uVar4 = *(uint64 *)(pPlotController + 0x2c8);
             uVar3 = "周边成功率";
           }
           else {
-            uVar4 = *(uint64 *)(pStatics + 0x260);
+            uVar4 = *(uint64 *)(pPlotController + 0x260);
             uVar3 = "周边成功率";
           }
         LAB_180b8ca03:
@@ -664,10 +663,10 @@ public class StudyInternalPointController
           break;
         case 4:
           if (!this.goodSpePoint) {
-            uVar4 = *(uint64 *)(pStatics + 0x2c8);
+            uVar4 = *(uint64 *)(pPlotController + 0x2c8);
           }
           else {
-            uVar4 = *(uint64 *)(pStatics + 0x260);
+            uVar4 = *(uint64 *)(pPlotController + 0x260);
           }
           uVar3 = "随机{0}周边{1}条通路";
           uVar1 = "连接";
@@ -682,7 +681,7 @@ public class StudyInternalPointController
           break;
         case 5:
           this.goodSpePoint = 1;
-          uVar4 = String.Concat(*(uint64 *)(pStatics + 0x260),
+          uVar4 = String.Concat(*(uint64 *)(pPlotController + 0x260),
                                  "随机揭示{0}个点</color>",0);
           local_res18[0] = this.hardLv * 2 + 5;
           uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
@@ -690,7 +689,7 @@ public class StudyInternalPointController
           break;
         case 6:
           this.goodSpePoint = 1;
-          uVar4 = *(uint64 *)(pStatics + 0x260);
+          uVar4 = *(uint64 *)(pPlotController + 0x260);
           local_res18[0] = Mathf.FloorToInt((float)this.hardLv * 0.5,0);
           local_res18[0] = local_res18[0] + 1;
           uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
@@ -786,7 +785,7 @@ public class StudyInternalPointController
     // RVA   : 0xB8FAF0   Offset: 0xB8E2F0   Length: 0x351
     public void TryCrash()
     {
-        var pStatics = *(int64*)(DAT_181d7f230 + 184);
+        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
         ulong uVar1;
         long lVar2;
         float fVar4;
@@ -804,16 +803,19 @@ public class StudyInternalPointController
           uVar1 = ShortcutExtensions.DOScale(uVar1,&local_38,0x3db851ec,0);
           uVar1 = TweenSettingsExtensions.SetLoops(uVar1,2,1,DAT_181d98060);
           TweenSettingsExtensions.SetEase(uVar1,9,DAT_181d97ca8);
-          if (*pStatics != 0) {
+          if (*p_ShowItemAnim_d__32 != 0) {
             uVar1 = StudyInternalPointController.ShowPointParticle
-                              (this,*(uint64 *)(*pStatics + 136),0,0);
+                              (this,*(uint64 *)
+                                        (*p_ShowItemAnim_d__32 + 136),0,
+                               0);
             FUN_180d837c0(this,uVar1,0);
-            if (*pStatics != 0) {
+            if (*p_ShowItemAnim_d__32 != 0) {
               uVar1 = StudyInternalPointController.ShowPointParticle
-                                (this,*(uint64 *)(*pStatics + 152),0,0
-                                );
+                                (this,*(uint64 *)
+                                          (*p_ShowItemAnim_d__32 + 152),
+                                 0,0);
               FUN_180d837c0(this,uVar1,0);
-              lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+              lVar2 = GameController.lockObj;
               if (lVar2 != null) {
                 uVar1 = *(uint64 *)(lVar2 + 0x1f0);
                 NGUITools.PlaySound(uVar1,0x3ecccccd,0);
@@ -836,9 +838,8 @@ public class StudyInternalPointController
     // RVA   : 0xB8C290   Offset: 0xB8AA90   Length: 0x5FB
     public void FinishCrash()
     {
-        var pStatics_2ef0 = *(int64*)(DAT_181d82ef0 + 184);
-        var pStatics_2f70 = *(int64*)(DAT_181d82f70 + 184);
-        var pStatics_f230 = *(int64*)(DAT_181d7f230 + 184);
+        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d82ef0 + 184);
         ulong uVar2;
         uint uVar3;
         uint uVar4;
@@ -851,13 +852,17 @@ public class StudyInternalPointController
         uint uStack_34;
         uint uStack_30;
         uint32 uStack_2c;
-        if (*pStatics_f230 != 0) {
+        if (*p_ShowItemAnim_d__32 != 0) {
           uVar5 = StudyInternalPointController.ShowPointParticle
-                            (this,*(uint64 *)(*pStatics_f230 + 128),0,0);
+                            (this,*(uint64 *)
+                                      (*p_ShowItemAnim_d__32 + 128),0,0)
+          ;
           FUN_180d837c0(this,uVar5,0);
-          if (*pStatics_f230 != 0) {
+          if (*p_ShowItemAnim_d__32 != 0) {
             uVar5 = StudyInternalPointController.ShowPointParticle
-                              (this,*(uint64 *)(*pStatics_f230 + 144),0,0);
+                              (this,*(uint64 *)
+                                        (*p_ShowItemAnim_d__32 + 144),0,
+                               0);
             FUN_180d837c0(this,uVar5,0);
             plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/LegendDrop",0);
             plVar10 = (int64 *)0;
@@ -865,13 +870,13 @@ public class StudyInternalPointController
               plVar10 = plVar6;
             }
             NGUITools.PlaySound(plVar10,0x3f000000,0);
-            if (*pStatics_2ef0 != 0) {
-              piVar1 = (int *)(*pStatics_2ef0 + 32);
+            if (*pStatics != 0) {
+              piVar1 = (int *)(*pStatics + 32);
               *piVar1 = *piVar1 + 1;
-              lVar9 = *pStatics_2ef0;
+              lVar9 = *pStatics;
               if (lVar9 != null) {
                 *(float *)(lVar9 + 28) = this.exp + *(float *)(lVar9 + 28);
-                lVar9 = **(int64 **)(DAT_181d4df90 + 184);
+                lVar9 = GameController._instance;
                 uVar5 = Single.ToString(this + 48,0);
                 uVar5 = String.Concat("冲破经验+",uVar5,0);
                 lVar7 = Component.get_transform(this,0);
@@ -879,7 +884,7 @@ public class StudyInternalPointController
                   puVar8 = (uint64 *)Transform.get_position(&local_48,lVar7,0);
                   uVar2 = *puVar8;
                   uVar3 = *(uint32 *)(puVar8 + 1);
-                  lVar7 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                  lVar7 = GameController.lockObj;
                   if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 56)) != null) {
                     uVar4 = this.hardLv;
                     if (*(uint32 *)(lVar7 + 24) <= uVar4) {
@@ -901,8 +906,9 @@ public class StudyInternalPointController
                           Behaviour.set_enabled(lVar9,0,0);
                           if (this.newObj != null) {
                             uVar5 = GameObject.get_transform(this.newObj,0);
-                            if ((*pStatics_2f70 != 0) &&
-                               (lVar9 = *(int64 *)(*pStatics_2f70 + 80),
+                            if ((StudySkillController._instance != null) &&
+                               (lVar9 = *(int64 *)
+                                         (StudySkillController._instance + 80),
                                lVar9 != null)) {
                               lVar9 = Component.get_transform(lVar9,0);
                               if (lVar9 != null) {
@@ -933,8 +939,8 @@ public class StudyInternalPointController
     {
         var plVar8 = *(int64*)(lVar8 + 184);
         var plVar9 = *(int64*)(lVar9 + 184);
-        var pStatics_2ef0 = *(int64*)(DAT_181d82ef0 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d82ef0 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -970,17 +976,17 @@ public class StudyInternalPointController
         local_88 = *puVar4;
         uStack_80 = puVar4[1];
         SpriteRenderer.set_color(lVar3,&local_88,0);
-        if (*pStatics_2ef0 == 0) goto LAB_180b8f955;
-        *(uint8 *)(*pStatics_2ef0 + 128) = 0;
+        if (*pStatics == 0) goto LAB_180b8f955;
+        *(uint8 *)(*pStatics + 128) = 0;
         this.crashed = 1;
         this.finishRate = 0x3f800000;
-        if (*pStatics_2ef0 == 0) goto LAB_180b8f955;
-        if (*(int *)(*pStatics_2ef0 + 32) < 2) {
+        if (*pStatics == 0) goto LAB_180b8f955;
+        if (*(int *)(*pStatics + 32) < 2) {
         LAB_180b8e899:
-          if (*pStatics_2ef0 == 0) goto LAB_180b8f955;
-          if (*(int *)(*pStatics_2ef0 + 192) < 1) {
-            if (*pStatics_2ef0 == 0) goto LAB_180b8f955;
-            *(uint8 *)(*pStatics_2ef0 + 129) = 1;
+          if (*pStatics == 0) goto LAB_180b8f955;
+          if (*(int *)(*pStatics + 192) < 1) {
+            if (*pStatics == 0) goto LAB_180b8f955;
+            *(uint8 *)(*pStatics + 129) = 1;
           }
           else {
             StudyInternalPointController.RandomCrashNextPoint(this,0);
@@ -988,12 +994,12 @@ public class StudyInternalPointController
         }
         else {
           lVar3 = this.nextPoint;
-          if ((*pStatics_2ef0 == 0) || (lVar3 == null)) goto LAB_180b8f955;
-          cVar1 = FUN_1818279a0(lVar3,*(uint64 *)(*pStatics_2ef0 + 120),
+          if ((*pStatics == 0) || (lVar3 == null)) goto LAB_180b8f955;
+          cVar1 = FUN_1818279a0(lVar3,*(uint64 *)(*pStatics + 120),
                                 DAT_181d61cf8);
           if (!cVar1) goto LAB_180b8e899;
-          if (*pStatics_2ef0 == 0) goto LAB_180b8f955;
-          this.chooseNextPoint = *(uint64 *)(*pStatics_2ef0 + 120);
+          if (*pStatics == 0) goto LAB_180b8f955;
+          this.chooseNextPoint = *(uint64 *)(*pStatics + 120);
           uVar5 = StudyInternalPointController.ShowHighLightLine(this,0);
           FUN_180d837c0(this,uVar5,0);
         }
@@ -1050,12 +1056,12 @@ public class StudyInternalPointController
               uVar6 = *puVar4;
               uVar16 = *(uint32 *)(puVar4 + 1);
               if (!this.goodSpePoint) {
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x2e8);
-                uVar15 = *(uint64 *)(pStatics_ef00 + 0x2f0);
+                uVar7 = *(uint64 *)(pPlotController + 0x2e8);
+                uVar15 = *(uint64 *)(pPlotController + 0x2f0);
               }
               else {
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x280);
-                uVar15 = *(uint64 *)(pStatics_ef00 + 0x288);
+                uVar7 = *(uint64 *)(pPlotController + 0x280);
+                uVar15 = *(uint64 *)(pPlotController + 0x288);
               }
               if (lVar3 == null) break;
               uStack_90 = CONCAT44(uStack_90._4_4_,uVar16);
@@ -1109,12 +1115,12 @@ public class StudyInternalPointController
               uVar6 = *puVar4;
               uVar16 = *(uint32 *)(puVar4 + 1);
               if (!this.goodSpePoint) {
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x2e8);
-                uVar15 = *(uint64 *)(pStatics_ef00 + 0x2f0);
+                uVar7 = *(uint64 *)(pPlotController + 0x2e8);
+                uVar15 = *(uint64 *)(pPlotController + 0x2f0);
               }
               else {
-                uVar7 = *(uint64 *)(pStatics_ef00 + 0x280);
-                uVar15 = *(uint64 *)(pStatics_ef00 + 0x288);
+                uVar7 = *(uint64 *)(pPlotController + 0x280);
+                uVar15 = *(uint64 *)(pPlotController + 0x288);
               }
               if (lVar3 == null) break;
               uStack_90 = CONCAT44(uStack_90._4_4_,uVar16);
@@ -1251,8 +1257,8 @@ public class StudyInternalPointController
               FUN_181827900(lVar8,uVar5,DAT_181d61bf8);
               lVar8 = this.lineRendererBack;
               uVar5 = Component.get_gameObject(this,0);
-              if (*pStatics_2ef0 == 0) goto LAB_180b8f94f;
-              uVar6 = *(uint64 *)(*pStatics_2ef0 + 64);
+              if (*pStatics == 0) goto LAB_180b8f94f;
+              uVar6 = *(uint64 *)(*pStatics + 64);
               lVar9 = GlobalData.AddChild(uVar5,uVar6,0);
               if ((lVar9 == null) || (uVar5 = GameObject.GetComponent(lVar9,DAT_181da0208), lVar8 == null))
               goto LAB_180b8f94f;
@@ -1294,14 +1300,14 @@ public class StudyInternalPointController
           break;
         case 5:
           while( true ) {
-            if ((*pStatics_2ef0 == 0) ||
-               (lVar8 = *(int64 *)(*pStatics_2ef0 + 184)) == null) break;
+            if ((*pStatics == 0) ||
+               (lVar8 = *(int64 *)(*pStatics + 184)) == null) break;
             if (lVar8.Count <= (int)uVar11) {
               iVar13 = this.hardLv * 2 + 5;
               goto joined_r0x000180b8f6b5;
             }
-            if ((*pStatics_2ef0 == 0) ||
-               (lVar8 = *(int64 *)(*pStatics_2ef0 + 184)) == null) break;
+            if ((*pStatics == 0) ||
+               (lVar8 = *(int64 *)(*pStatics + 184)) == null) break;
             if (lVar8.Count <= uVar11) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -1384,8 +1390,8 @@ public class StudyInternalPointController
         uVar5 = *puVar4;
         uVar16 = *(uint32 *)(puVar4 + 1);
         if (lVar14 == null) goto LAB_180b8f955;
-        local_78 = *(uint64 *)(pStatics_ef00 + 0x280);
-        uStack_70 = *(uint64 *)(pStatics_ef00 + 0x288);
+        local_78 = *(uint64 *)(pPlotController + 0x280);
+        uStack_70 = *(uint64 *)(pPlotController + 0x288);
         uStack_90 = CONCAT44(uStack_90._4_4_,uVar16);
         local_98 = uVar5;
         GameController.ShowTextAtPos(lVar14,"明",&local_98,16,&local_78,0);

@@ -48,7 +48,7 @@ public class WegameStatsAndAchievements
         bool cVar2;
         ulong uVar3;
         long lVar4;
-        if (**(int **)(DAT_181d4ef00 + 184) != 1) {
+        if (PlotController._instance != 1) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
@@ -99,8 +99,6 @@ public class WegameStatsAndAchievements
     // RVA   : 0x9E4B90   Offset: 0x9E3390   Length: 0x439
     private void CheckDLCState()
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         long lVar1;
         int iVar2;
         long lVar3;
@@ -111,7 +109,7 @@ public class WegameStatsAndAchievements
         local_res18[0] = 0;
         do {
           iVar2 = local_res18[0];
-          lVar3 = *(int64 *)(pStatics_ef00 + 80);
+          lVar3 = PlotController.StopWarCostFavor;
           if (lVar3 == null) goto LAB_1809e4fc4;
           if (*(int *)(lVar3 + 24) <= iVar2) {
             return;
@@ -122,7 +120,7 @@ public class WegameStatsAndAchievements
             uVar5 = Int32.ToString(local_res18,0);
             uVar5 = String.Concat("DLC",uVar5," 0",0);
             Debug.Log(uVar5,0);
-            lVar3 = *(int64 *)(pStatics_e010 + 8);
+            lVar3 = GameController.difficultyExtraPoint;
             if (lVar3 == null) goto LAB_1809e4fc4;
             lVar3 = *(int64 *)(lVar3 + 16);
             uVar5 = Int32.ToString(local_res18,0);
@@ -140,7 +138,7 @@ public class WegameStatsAndAchievements
             lVar3 = FUN_180002970(19,DAT_181d56638,lVar3);
             lVar4 = il2cpp_internal(DAT_181d70c30);
             FUN_180f58a90(lVar4,DAT_181d71f68);
-            lVar1 = *(int64 *)(pStatics_ef00 + 80);
+            lVar1 = PlotController.StopWarCostFavor;
             if (lVar1 == null) goto LAB_1809e4fc4;
             uVar5 = FUN_180002f80(lVar1,local_res18[0],DAT_181d83e78);
             uVar6 = new RailDlcID(uVar5,0);
@@ -152,7 +150,7 @@ public class WegameStatsAndAchievements
             uVar5 = Int32.ToString(local_res18,0);
             uVar5 = String.Concat("DLC",uVar5," 1",0);
             Debug.Log(uVar5,0);
-            lVar3 = *(int64 *)(pStatics_e010 + 8);
+            lVar3 = GameController.difficultyExtraPoint;
             if (lVar3 == null) goto LAB_1809e4fc4;
             lVar3 = *(int64 *)(lVar3 + 16);
             uVar5 = Int32.ToString(local_res18,0);
@@ -219,7 +217,6 @@ public class WegameStatsAndAchievements
     // RVA   : 0x9E5D20   Offset: 0x9E4520   Length: 0x765
     public void OnRailEvent(RAILEventID id, EventBase data)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -261,7 +258,7 @@ public class WegameStatsAndAchievements
                   local_48 = 0;
                   while( true ) {
                     iVar3 = local_48;
-                    lVar1 = *(int64 *)(pStatics + 32);
+                    lVar1 = GameController.lockObj;
                     if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 0x1c0)) == null) break;
                     if (*(int *)(lVar1 + 24) <= iVar3) {
                       return;
@@ -300,7 +297,7 @@ public class WegameStatsAndAchievements
                     uVar6 = (**(code **)(*plVar11 + 0x168))(plVar11,*(uint64 *)(*plVar11 + 0x170));
                     cVar2 = FUN_1816fd990(uVar6,"1",0);
                     if (cVar2) {
-                      lVar1 = *(int64 *)(pStatics + 8);
+                      lVar1 = GameController.difficultyExtraPoint;
                       if (lVar1 == null) break;
                       lVar1 = *(int64 *)(lVar1 + 16);
                       uVar6 = Int32.ToString(&local_48,0);
@@ -314,7 +311,7 @@ public class WegameStatsAndAchievements
                     if (plVar5 == (int64 *)0) break;
                     uVar6 = (**(code **)(*plVar5 + 0x168))(plVar5,*(uint64 *)(*plVar5 + 0x170));
                     iVar3 = Int32.Parse(uVar6,0);
-                    lVar1 = *(int64 *)(pStatics + 8);
+                    lVar1 = GameController.difficultyExtraPoint;
                     if (lVar1 == null) break;
                     lVar1 = *(int64 *)(lVar1 + 16);
                     uVar6 = Int32.ToString(&local_48,0);
@@ -322,7 +319,7 @@ public class WegameStatsAndAchievements
                     if (lVar1 == null) break;
                     iVar4 = PlayerPrefDictionary.GetInt(lVar1);
                     if (iVar4 < iVar3) {
-                      lVar1 = *(int64 *)(pStatics + 8);
+                      lVar1 = GameController.difficultyExtraPoint;
                       if (lVar1 == null) break;
                       lVar1 = *(int64 *)(lVar1 + 16);
                       uVar6 = Int32.ToString(&local_48,0);
@@ -597,7 +594,7 @@ public class WegameStatsAndAchievements
         uint[] local_res20 = new uint[2];
         uint[] local_18 = new uint[4];
         local_res10[0] = achID;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar2 = Int32.ToString(local_res10,0);
@@ -685,7 +682,7 @@ public class WegameStatsAndAchievements
         }
         uVar3 = Int32.ToString(local_res10,0);
         uVar3 = String.Concat("Ach",uVar3,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar4 = Int32.ToString(local_res10,0);

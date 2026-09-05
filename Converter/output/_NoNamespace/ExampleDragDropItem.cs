@@ -14,7 +14,7 @@ public class ExampleDragDropItem
     // RVA   : 0x938AF0   Offset: 0x9372F0   Length: 0x337
     protected override void OnDragDropRelease(GameObject surface)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -53,13 +53,13 @@ public class ExampleDragDropItem
                 Transform.set_localScale(lVar5,&local_48,0);
                 lVar4 = GameObject.get_transform(lVar4,0);
                 if (lVar4 != null) {
-                  local_48 = *(uint64 *)(pStatics + 100);
+                  local_48 = UICamera.lastWorldPosition;
                   uStack_40 = CONCAT44(uStack_40._4_4_,
-                                       *(uint32 *)(pStatics + 108));
+                                       *(uint32 *)(pUICamera + 108));
                   Transform.set_position(lVar4,&local_48,0);
                   if (*(char *)(lVar2 + 24) != false) {
                     puVar7 = (uint64 *)
-                             FUN_18045e080(&local_38,pStatics + 136,0);
+                             FUN_18045e080(&local_38,pUICamera + 136,0);
                     local_48 = *puVar7;
                     uStack_40 = CONCAT44(uStack_40._4_4_,*(uint32 *)(puVar7 + 1));
                     puVar7 = (uint64 *)Quaternion.LookRotation(&local_38,&local_48,0);

@@ -26,8 +26,6 @@ public class UIButtonMessage
     // RVA   : 0x13BF1D0   Offset: 0x13BD9D0   Length: 0x5
     private void Start()
     {
-        void FUN_1813bf1d0(int64 this)
-        {
         this.mStarted = 1;
     }
 

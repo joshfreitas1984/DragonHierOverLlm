@@ -321,12 +321,12 @@ public class UIItemSlot
         long lVar1;
         ulong uVar3;
         if ((**(int64 **)(DAT_181d8a9d8 + 184) == 0) && (this[9] != 0)) {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224);
+          lVar1 = UICamera.currentTouch;
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          *(uint32 *)(lVar1 + 112) = 2;
+          lVar1.clickNotification = 2;
           uVar3 = (**(code **)(*this + 0x188))(this,0,*(uint64 *)(*this + 400));
           puVar2 = *(uint64 **)(DAT_181d8a9d8 + 184);
           *puVar2 = uVar3;

@@ -125,8 +125,6 @@ public class UIScrollView
     // RVA   : 0x27B020   Offset: 0x279820   Length: 0x8
     public UIPanel get_panel()
     {
-        uint64 FUN_18027b020(int64 this)
-        {
         return this.mPanel;
     }
 
@@ -354,9 +352,7 @@ public class UIScrollView
     // RVA   : 0x168D300   Offset: 0x168BB00   Length: 0x19
     public Vector3 get_currentMomentum()
     {
-        uint64 * FUN_18168d300(uint64 *this,int64 param_2)
-        {
-        uint32 uVar1;
+        uint uVar1;
         uVar1 = *(uint32 *)(param_2 + 200);
         *this = *(uint64 *)(param_2 + 192);
         *(uint32 *)(this + 1) = uVar1;
@@ -367,9 +363,7 @@ public class UIScrollView
     // RVA   : 0x168D760   Offset: 0x168BF60   Length: 0x1D
     public void set_currentMomentum(Vector3 value)
     {
-        void FUN_18168d760(int64 this,uint64 *value)
-        {
-        uint32 uVar1;
+        uint uVar1;
         uVar1 = *(uint32 *)(value + 1);
         this.mMomentum = *value;
         *(uint32 *)(this + 200) = uVar1;
@@ -1339,7 +1333,7 @@ public class UIScrollView
     // RVA   : 0x168B8F0   Offset: 0x168A0F0   Length: 0x53C
     public void Press(bool pressed)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         uint uVar1;
         long lVar2;
         bool cVar3;
@@ -1383,7 +1377,7 @@ public class UIScrollView
         }
         if (pressed == null) {
           iVar4 = *(int *)((int64)this + 236);
-          if (iVar4 == *(int *)(pStatics + 212)) {
+          if (iVar4 == UICamera.currentTouchID) {
             *(uint32 *)((int64)this + 236) = 0xfffffff6;
           }
         }
@@ -1400,7 +1394,7 @@ public class UIScrollView
           *(int *)(this + 25) = (int)plVar6[1];
           *(uint32 *)((int64)this + 204) = 0;
           UIScrollView.DisableSpring(this,0);
-          lVar2 = pStatics;
+          lVar2 = pUICamera;
           this[22] = *(int64 *)(lVar2 + 100);
           *(uint32 *)(this + 23) = *(uint32 *)(lVar2 + 108);
           if (this[18] != 0) {
@@ -1530,7 +1524,6 @@ public class UIScrollView
     // RVA   : 0x168A220   Offset: 0x1688A20   Length: 0x9AD
     public void Drag()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -1595,36 +1588,36 @@ public class UIScrollView
         }
         if (*(int *)((int64)this + 236) == -10) {
           *(uint32 *)((int64)this + 236) =
-               *(uint32 *)(pStatics + 212);
+               UICamera.currentTouchID;
         }
-        lVar11 = *(int64 *)(pStatics + 224);
+        lVar11 = UICamera.currentTouch;
         if (lVar11 == null) goto LAB_18168abc8;
-        *(uint32 *)(lVar11 + 112) = 2;
+        lVar11.clickNotification = 2;
         if (*(char *)((int64)this + 35) == false) {
         LAB_18168a4bf:
-          lVar3 = *(int64 *)(pStatics + 224);
-          lVar11 = *(int64 *)(pStatics + 192);
+          lVar3 = UICamera.currentTouch;
+          lVar11 = UICamera.currentCamera;
           if (lVar3 == null) goto LAB_18168abc8;
-          fVar13 = *(float *)(lVar3 + 20);
+          fVar13 = lVar3.pos;
           fVar16 = *(float *)(lVar3 + 24);
         }
         else {
           if ((char)this[31] == false) {
             *(uint8 *)(this + 31) = 1;
-            lVar11 = *(int64 *)(pStatics + 224);
+            lVar11 = UICamera.currentTouch;
             if (lVar11 == null) goto LAB_18168abc8;
             uVar1 = *(uint32 *)(lVar11 + 48);
-            *(uint32 *)(this + 30) = *(uint32 *)(lVar11 + 44);
+            *(uint32 *)(this + 30) = lVar11.totalDelta;
             *(uint32 *)((int64)this + 244) = uVar1;
             if (this[11] != 0) {
               OnGeometryUpdated.Invoke(this[11],0);
             }
           }
           if (*(char *)((int64)this + 35) == false) goto LAB_18168a4bf;
-          lVar3 = *(int64 *)(pStatics + 224);
-          lVar11 = *(int64 *)(pStatics + 192);
+          lVar3 = UICamera.currentTouch;
+          lVar11 = UICamera.currentCamera;
           if (lVar3 == null) goto LAB_18168abc8;
-          fVar13 = *(float *)(lVar3 + 20) - *(float *)(this + 30);
+          fVar13 = lVar3.pos - *(float *)(this + 30);
           fVar16 = *(float *)(lVar3 + 24) - *(float *)((int64)this + 244);
         }
         if (lVar11 == null) goto LAB_18168abc8;

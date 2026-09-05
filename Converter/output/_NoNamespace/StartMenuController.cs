@@ -116,7 +116,7 @@ public class StartMenuController
     // RVA   : 0xC7C7B0   Offset: 0xC7AFB0   Length: 0x57
     public static StartMenuController get_Instance()
     {
-        return **(uint64 **)(DAT_181d815f0 + 184);
+        return StartMenuController._instance;
     }
 
     // Token : 0x6002143
@@ -125,10 +125,10 @@ public class StartMenuController
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181d815f0 + 184);
+        uVar1 = StartMenuController._instance;
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
-          puVar2 = *(uint64 **)(DAT_181d815f0 + 184);
+          puVar2 = *(uint64 **)(StartMenuController_StaticsPtr + 184);
           *puVar2 = this;
           il2cpp_internal(puVar2,this);
         }
@@ -138,9 +138,8 @@ public class StartMenuController
     // RVA   : 0xC7A920   Offset: 0xC79120   Length: 0x17D5
     private void Start()
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -164,7 +163,7 @@ public class StartMenuController
         local_44 = 0;
         local_40 = 0;
         local_3c = 0;
-        if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+        if (PlotController._instance == 1) {
           cVar1 = RailManager.get_Initialized(0);
           if (!cVar1) {
             Debug.LogError("Rail sdk is not initialized!",0);
@@ -227,8 +226,8 @@ public class StartMenuController
         }
         throw; // [null/range check failed]
         LAB_180c7af80:
-        if (((*pStatics_1570 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_1570 + 24)) == null) ||
+        if (((*pStatics == 0) ||
+            (lVar3 = *(int64 *)(*pStatics + 24)) == null) ||
            (lVar3 = *(int64 *)(lVar3 + 0x128)) == null) throw; // [null/range check failed]
         uVar6 = uVar12;
         if (lVar3.Count <= (int)uVar11) goto LAB_180c7b150;
@@ -241,7 +240,7 @@ public class StartMenuController
            ((lVar3 = Transform.Find(lVar3,uVar5,0), lVar3 == null ||
             (lVar3 = Transform.Find(lVar3,"Icon",0)) == null))) throw; // [null/range check failed]
         lVar3 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-        lVar4 = *(int64 *)(pStatics_ef00 + 0x490);
+        lVar4 = *(int64 *)(pPlotController + 0x490);
         if (lVar4 == null) throw; // [null/range check failed]
         uVar5 = FUN_180002f80(lVar4,local_res20[0],DAT_181d7c9c0);
         lVar4 = FUN_18046c100(0);
@@ -254,8 +253,8 @@ public class StartMenuController
         uVar11 = (uint64)local_res20[0];
         goto LAB_180c7af80;
         LAB_180c7b150:
-        if (((*pStatics_1570 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_1570 + 24)) == null) ||
+        if (((*pStatics == 0) ||
+            (lVar3 = *(int64 *)(*pStatics + 24)) == null) ||
            (lVar3 = *(int64 *)(lVar3 + 0x140)) == null) throw; // [null/range check failed]
         uVar11 = uVar12;
         if (lVar3.Count <= (int)uVar6) goto LAB_180c7b320;
@@ -268,7 +267,7 @@ public class StartMenuController
            ((lVar3 = Transform.Find(lVar3,uVar5,0), lVar3 == null ||
             (lVar3 = Transform.Find(lVar3,"Icon",0)) == null))) throw; // [null/range check failed]
         lVar3 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-        lVar4 = *(int64 *)(pStatics_ef00 + 0x498);
+        lVar4 = *(int64 *)(pPlotController + 0x498);
         if (lVar4 == null) throw; // [null/range check failed]
         uVar5 = FUN_180002f80(lVar4,local_48,DAT_181d7c9c0);
         lVar4 = FUN_18046c100(0);
@@ -281,27 +280,28 @@ public class StartMenuController
         uVar6 = (uint64)local_48;
         goto LAB_180c7b150;
         LAB_180c7b320:
-        if (((*pStatics_1570 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_1570 + 24)) == null) ||
+        if (((*pStatics == 0) ||
+            (lVar3 = *(int64 *)(*pStatics + 24)) == null) ||
            (lVar3 = *(int64 *)(lVar3 + 0x158)) == null) throw; // [null/range check failed]
         if (lVar3.Count <= (int)uVar11) {
           StartMenuController.SetAttriPreset(this,0,0);
           StartMenuController.RandomPlayerBaseAttri(this,0);
           StartMenuController.RandomPlayerBaseFightSkill(this,0);
           StartMenuController.RandomPlayerBaseLivingSkill(this,0);
-          if ((*pStatics_1570 != 0) &&
-             (lVar3 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+          if ((*pStatics != 0) &&
+             (lVar3 = *(int64 *)(*pStatics + 24)) != null) {
             *(uint32 *)(lVar3 + 0x1d0) = 0x42480000;
-            if ((*pStatics_1570 != 0) &&
-               (lVar3 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+            if ((*pStatics != 0) &&
+               (lVar3 = *(int64 *)(*pStatics + 24)) != null) {
               *(uint32 *)(lVar3 + 0x1d4) = 0x42480000;
               this.needRefreshPlayerAttri = 1;
               StartMenuController.RefreshEvilChaosSlider(this,0);
               lVar3 = this.natureDropDown;
               if (lVar3 != null) {
-                Dropdown.AddOptions(lVar3,*(uint64 *)(pStatics_ef00 + 0x5a0),0)
-                ;
-                if (*(int *)(pStatics_ef00 + 8) != 1) {
+                Dropdown.AddOptions
+                          (lVar3,*(uint64 *)(pPlotController + 0x5a0),
+                           0);
+                if (PlotController.LeftFaceHideOffset != 1) {
                   lVar3 = il2cpp_internal(DAT_181d72a30);
                   FUN_180f58a90(lVar3,DAT_181d7c250);
                   uVar6 = uVar12;
@@ -341,7 +341,7 @@ public class StartMenuController
            ((lVar3 = Transform.Find(lVar3,uVar5,0), lVar3 == null ||
             (lVar3 = Transform.Find(lVar3,"Icon",0)) == null))) throw; // [null/range check failed]
         lVar3 = Component.GetComponent(lVar3,DAT_181d6ccc0);
-        lVar4 = *(int64 *)(pStatics_ef00 + 0x4a8);
+        lVar4 = *(int64 *)(pPlotController + 0x4a8);
         if (lVar4 == null) throw; // [null/range check failed]
         uVar5 = FUN_180002f80(lVar4,local_44,DAT_181d7c9c0);
         lVar4 = FUN_18046c100(0);
@@ -354,7 +354,7 @@ public class StartMenuController
         uVar11 = (uint64)local_44;
         goto LAB_180c7b320;
         LAB_180c7b650:
-        lVar4 = *(int64 *)(pStatics_e010 + 32);
+        lVar4 = GameController.lockObj;
         if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x1a8)) == null) throw; // [null/range check failed]
         if (*(int *)(lVar4 + 24) <= (int)uVar6) {
           if (this.clothDropDown != null) {
@@ -374,13 +374,13 @@ public class StartMenuController
         throw; // [null/range check failed]
         uVar8 = "";
         if (-1 < *(int *)(lVar4 + 40)) {
-          lVar4 = *(int64 *)(pStatics_ef00 + 64);
-          lVar7 = *(int64 *)(pStatics_e010 + 32);
+          lVar4 = PlotController.FightResultPlotText;
+          lVar7 = GameController.lockObj;
           if ((((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1a8)) == null) ||
               (lVar7 = FUN_180002f80(lVar7,uVar6,DAT_181d7b5d8)) == null) || (lVar4 == null))
           throw; // [null/range check failed]
           uVar8 = FUN_180002f80(lVar4,*(uint32 *)(lVar7 + 40),DAT_181d7c9c0);
-          lVar4 = *(int64 *)(pStatics_e010 + 8);
+          lVar4 = GameController.difficultyExtraPoint;
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4 = *(int64 *)(lVar4 + 16);
           lVar7 = FUN_18046c100(0);
@@ -431,10 +431,10 @@ public class StartMenuController
           if (*(int64 *)(this + 200) == 0) throw; // [null/range check failed]
         }
         LAB_180c7bc0b:
-        lVar3 = *(int64 *)(pStatics_e010 + 32);
+        lVar3 = GameController.lockObj;
         if (lVar3 != null) {
           GameDataController.CheckAllAch(lVar3,0);
-          lVar3 = *(int64 *)(pStatics_e010 + 32);
+          lVar3 = GameController.lockObj;
           if (lVar3 != null) {
             GameDataController.SavePlayerprefData(lVar3,0);
             StartMenuController.RefreshDifficultyTotalLv(this,0);
@@ -458,7 +458,7 @@ public class StartMenuController
             }
             cVar1 = GlobalData.IsCheckVersion(1,0);
             if (!cVar1) {
-              if (*(char *)(pStatics_ef00 + 4) == false) {
+              if (*(char *)(pPlotController + 4) == false) {
                 return;
               }
             }
@@ -505,8 +505,6 @@ public class StartMenuController
     // RVA   : 0xC7C5D0   Offset: 0xC7ADD0   Length: 0x11
     private void Update()
     {
-        void FUN_180c7c5d0(int64 this)
-        {
         if (this.needRefreshPlayerAttri) {
           StartMenuController.RefreshPlayerAttri(this,0);
           return;
@@ -517,7 +515,7 @@ public class StartMenuController
     // RVA   : 0xC799E0   Offset: 0xC781E0   Length: 0x4F7
     public void ShowStartMenu()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         ulong uVar6;
@@ -576,7 +574,7 @@ public class StartMenuController
                         iVar7 = -1;
                         while( true ) {
                           local_res8[0] = iVar7;
-                          lVar2 = *(int64 *)(pStatics + 192);
+                          lVar2 = *(int64 *)(pPlotController + 192);
                           if (lVar2 == null) break;
                           if (*(int *)(lVar2 + 24) <= iVar7) {
                             return;
@@ -591,7 +589,7 @@ public class StartMenuController
                           if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar6,0)) == null) ||
                              (lVar2 = Transform.Find(lVar2,"Background",0)) == null) break;
                           lVar2 = Component.GetComponent(lVar2,DAT_181d6ccc0);
-                          lVar1 = *(int64 *)(pStatics + 200);
+                          lVar1 = *(int64 *)(pPlotController + 200);
                           if ((lVar1 == null) || (uVar6 = FUN_180002f80(lVar1,local_res8[0] + 1), lVar2 == null)
                              ) break;
                           *(uint64 *)(lVar2 + 24) = uVar6;
@@ -695,9 +693,7 @@ public class StartMenuController
     // RVA   : 0xC78A40   Offset: 0xC77240   Length: 0x504
     public void ResetPlayerTag()
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_15f0 = *(int64*)(DAT_181d815f0 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -712,18 +708,18 @@ public class StartMenuController
         ulong local_58;
         ulong uStack_50;
         long local_48;
-        if (*pStatics_1570 != 0) {
-          lVar5 = *(int64 *)(*pStatics_1570 + 24);
+        if (*pStatics != 0) {
+          lVar5 = *(int64 *)(*pStatics + 24);
 
-          if ((lVar8 = *(int64 *)(pStatics_e010 + 8)?._items) != null) {
+          if ((lVar8 = GameController.difficultyExtraPoint?._items) != null) {
             iVar3 = PlayerPrefDictionary.GetInt(lVar8,"AchTagPoint",0);
             if (lVar5 != null) {
               *(float *)(lVar5 + 0x364) = (float)(iVar3 + 20);
-              if (((*pStatics_1570 != 0) &&
-                  (lVar5 = *(int64 *)(*pStatics_1570 + 24)) != null) &&
+              if (((*pStatics != 0) &&
+                  (lVar5 = *(int64 *)(*pStatics + 24)) != null) &&
                  (lVar5 = *(int64 *)(lVar5 + 0x368)) != null) {
                 FUN_180f56130(lVar5,DAT_181d64df8);
-                lVar5 = *(int64 *)(pStatics_e010 + 32);
+                lVar5 = GameController.lockObj;
                 if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x198)) != null) {
                   lVar5 = FUN_1808acf30(lVar5,DAT_181d94d28);
                   if (lVar5 != null) {
@@ -740,7 +736,7 @@ public class StartMenuController
                           StartMenuController.RefreshTagMenu(this,0);
                           return;
                         }
-                        lVar8 = *(int64 *)(pStatics_15f0 + 8);
+                        lVar8 = StartMenuController.canStartChooseTagCategory;
                         if (lVar5 == null) {
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
@@ -752,7 +748,7 @@ public class StartMenuController
                         cVar2 = FUN_1818279a0(lVar8,*(uint64 *)(lVar5 + 80),DAT_181d7c4d0);
                       } while (!cVar2);
                       lVar8 = this.allTagGrid;
-                      lVar1 = *(int64 *)(pStatics_15f0 + 8);
+                      lVar1 = StartMenuController.canStartChooseTagCategory;
                       if (lVar1 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
@@ -885,7 +881,7 @@ public class StartMenuController
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         LAB_180c774a0:
-        lVar8 = *(int64 *)(*(int64 *)(DAT_181d815f0 + 184) + 8);
+        lVar8 = StartMenuController.canStartChooseTagCategory;
         if (lVar8 == null) goto LAB_180c77ba2;
         if (*(int *)(lVar8 + 24) <= iVar15) {
           iVar15 = 1;
@@ -994,7 +990,7 @@ public class StartMenuController
         iVar15 = iVar15 + 1;
         goto LAB_180c774a0;
         LAB_180c77870:
-        lVar13 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar13 = GameController.difficultyExtraPoint;
         if (lVar13 == null) goto LAB_180c77ba2;
         lVar13 = *(int64 *)(lVar13 + 16);
         local_res18[0] = iVar15 + 27;
@@ -1066,26 +1062,25 @@ public class StartMenuController
     // RVA   : 0xC7A0C0   Offset: 0xC788C0   Length: 0x4CB
     public void StartChooseTagClicked(int tagID)
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         float fVar1;
         long lVar2;
         long lVar4;
         float fVar6;
-        if (((*pStatics_1570 != 0) &&
-            (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) &&
+        if (((*pStatics != 0) &&
+            (lVar2 = *(int64 *)(*pStatics + 24)) != null) &&
            (lVar2 = *(int64 *)(lVar2 + 0x368)) != null) {
           if (4 < *(int *)(lVar2 + 24)) {
-            lVar2 = *(int64 *)(pStatics_e010 + 32);
+            lVar2 = GameController.lockObj;
             if ((((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 0x198)) == null) ||
                 (lVar2 = FUN_1817cc780(lVar2,tagID,DAT_181d94ca0)) == null) ||
                (*(int64 *)(lVar2 + 72) == 0)) throw; // [null/range check failed]
             if (*(int *)(*(int64 *)(lVar2 + 72) + 24) < 1) goto LAB_180c7a374;
           }
-          if ((*pStatics_1570 != 0) &&
-             (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+          if ((*pStatics != 0) &&
+             (lVar2 = *(int64 *)(*pStatics + 24)) != null) {
             fVar1 = *(float *)(lVar2 + 0x364);
-            lVar2 = *(int64 *)(pStatics_e010 + 32);
+            lVar2 = GameController.lockObj;
             if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x198)) != null) &&
                (lVar2 = FUN_1817cc780(lVar2,tagID,DAT_181d94ca0)) != null) {
               fVar6 = (float)HeroTagDataBase.GetCostValue(lVar2,1,0);
@@ -1105,13 +1100,13 @@ public class StartMenuController
                 plVar5 = plVar3;
               }
               NGUITools.PlaySound(plVar5,0x3f000000,0);
-              if ((*pStatics_1570 != 0) &&
-                 (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+              if ((*pStatics != 0) &&
+                 (lVar2 = *(int64 *)(*pStatics + 24)) != null) {
                 HeroData.UnderstandTag(lVar2,tagID,0,0);
-                if ((*pStatics_1570 != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+                if ((*pStatics != 0) &&
+                   (lVar2 = *(int64 *)(*pStatics + 24)) != null) {
                   fVar1 = *(float *)(lVar2 + 0x364);
-                  lVar4 = *(int64 *)(pStatics_e010 + 32);
+                  lVar4 = GameController.lockObj;
                   if (((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x198)) != null) &&
                      (lVar4 = FUN_1817cc780(lVar4,tagID,DAT_181d94ca0)) != null) {
                     fVar6 = (float)HeroTagDataBase.GetCostValue(lVar4,1,0);
@@ -1130,16 +1125,15 @@ public class StartMenuController
     // RVA   : 0xC7A590   Offset: 0xC78D90   Length: 0x38E
     public void StartUnchooseTagClicked(int tagID)
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         float fVar1;
         long lVar2;
         long lVar4;
         float fVar6;
-        if ((*pStatics_1570 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+        if ((*pStatics != 0) &&
+           (lVar2 = *(int64 *)(*pStatics + 24)) != null) {
           fVar1 = *(float *)(lVar2 + 0x364);
-          lVar2 = *(int64 *)(pStatics_e010 + 32);
+          lVar2 = GameController.lockObj;
           if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x198)) != null) &&
              (lVar2 = FUN_1817cc780(lVar2,tagID,DAT_181d94ca0)) != null) {
             fVar6 = (float)HeroTagDataBase.GetCostValue(lVar2,1,0);
@@ -1158,13 +1152,13 @@ public class StartMenuController
               plVar5 = plVar3;
             }
             NGUITools.PlaySound(plVar5,0x3f000000,0);
-            if ((*pStatics_1570 != 0) &&
-               (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+            if ((*pStatics != 0) &&
+               (lVar2 = *(int64 *)(*pStatics + 24)) != null) {
               HeroData.DisUnderstandTag(lVar2,tagID,0);
-              if ((*pStatics_1570 != 0) &&
-                 (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) {
+              if ((*pStatics != 0) &&
+                 (lVar2 = *(int64 *)(*pStatics + 24)) != null) {
                 fVar1 = *(float *)(lVar2 + 0x364);
-                lVar4 = *(int64 *)(pStatics_e010 + 32);
+                lVar4 = GameController.lockObj;
                 if (((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x198)) != null) &&
                    (lVar4 = FUN_1817cc780(lVar4,tagID,DAT_181d94ca0)) != null) {
                   fVar6 = (float)HeroTagDataBase.GetCostValue(lVar4,1,0);
@@ -1300,7 +1294,7 @@ public class StartMenuController
                 (lVar3 = *(int64 *)(lVar3 + 224)) == null) ||
                (lVar3 = *(int64 *)(lVar3 + 16)) == null) throw; // [null/range check failed]
             if (*(int *)(lVar3 + 24) <= iVar5) break;
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x1d8);
+            lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x1d8);
             if (lVar3 == null) throw; // [null/range check failed]
             uVar2 = FUN_180002f80(lVar3,local_res18[0]);
             cVar1 = String.op_Inequality(uVar2,"发后");
@@ -1345,8 +1339,8 @@ public class StartMenuController
     // RVA   : 0xC77BB0   Offset: 0xC763B0   Length: 0xA0E
     public void ResetFaceSetting()
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -1356,12 +1350,12 @@ public class StartMenuController
         iVar6 = 0;
         while( true ) {
           local_res18[0] = iVar6;
-          if ((((*pStatics_1570 == 0) ||
-               (lVar3 = *(int64 *)(*pStatics_1570 + 24)) == null) ||
+          if ((((*pStatics == 0) ||
+               (lVar3 = *(int64 *)(*pStatics + 24)) == null) ||
               (lVar3 = *(int64 *)(lVar3 + 224)) == null) ||
              (lVar3 = *(int64 *)(lVar3 + 16)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar3 + 24) <= iVar6) break;
-          lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+          lVar3 = *(int64 *)(pPlotController + 0x1d8);
           if (lVar3 == null) throw; // [null/range check failed]
           uVar2 = FUN_180002f80(lVar3,local_res18[0]);
           cVar1 = String.op_Inequality(uVar2,"发后");
@@ -1370,7 +1364,7 @@ public class StartMenuController
             if ((lVar3 == null) || (*(int64 *)(lVar3 + 24) == 0)) throw; // [null/range check failed]
             if (*(char *)(*(int64 *)(lVar3 + 24) + 128) == false) {
         LAB_180c77f63:
-              lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+              lVar3 = *(int64 *)(pPlotController + 0x1d8);
               if (lVar3 == null) throw; // [null/range check failed]
               uVar2 = FUN_180002f80(lVar3,local_res18[0],DAT_181d7c9c0);
               cVar1 = FUN_1816fd990(uVar2,"胡",0);
@@ -1428,17 +1422,17 @@ public class StartMenuController
                  (FUN_1800d6750(*(int64 *)(lVar4 + 16),local_res18[0],DAT_181d68270), lVar3 == null))
               throw; // [null/range check failed]
               Slider.set_maxValue(lVar3);
-              lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+              lVar3 = *(int64 *)(pPlotController + 0x1d8);
               if (lVar3 == null) throw; // [null/range check failed]
               uVar2 = FUN_180002f80(lVar3,local_res18[0],DAT_181d7c9c0);
               cVar1 = FUN_1816fd990(uVar2,"胡",0);
               if (!cVar1) {
-                lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+                lVar3 = *(int64 *)(pPlotController + 0x1d8);
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar2 = FUN_180002f80(lVar3,local_res18[0],DAT_181d7c9c0);
                 cVar1 = FUN_1816fd990(uVar2,"发",0);
                 if (!cVar1) {
-                  lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+                  lVar3 = *(int64 *)(pPlotController + 0x1d8);
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar2 = FUN_180002f80(lVar3,local_res18[0],DAT_181d7c9c0);
                   cVar1 = FUN_1816fd990(uVar2,"杂",0);
@@ -1453,7 +1447,7 @@ public class StartMenuController
               Slider.set_minValue(lVar3);
             }
             else {
-              lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+              lVar3 = *(int64 *)(pPlotController + 0x1d8);
               if (lVar3 == null) throw; // [null/range check failed]
               uVar2 = FUN_180002f80(lVar3,local_res18[0],DAT_181d7c9c0);
               cVar1 = FUN_1816fd990(uVar2,"胡",0);
@@ -1490,12 +1484,12 @@ public class StartMenuController
             uVar2 = Int32.ToString(local_res18,0);
             if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar2,0)) == null) throw; // [null/range check failed]
             plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d6d2c0);
-            lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+            lVar3 = *(int64 *)(pPlotController + 0x1d8);
             if (lVar3 == null) throw; // [null/range check failed]
             uVar2 = FUN_180002f80(lVar3,local_res18[0],DAT_181d7c9c0);
             cVar1 = FUN_1816fd990(uVar2,"胡",0);
             if (!cVar1) {
-              lVar3 = *(int64 *)(pStatics_ef00 + 0x1d8);
+              lVar3 = *(int64 *)(pPlotController + 0x1d8);
               if (lVar3 == null) throw; // [null/range check failed]
               uVar2 = FUN_180002f80(lVar3,local_res18[0],DAT_181d7c9c0);
               FUN_1816fd990(uVar2,"杂",0);
@@ -1767,7 +1761,7 @@ public class StartMenuController
           if (lVar5 == null) throw; // [null/range check failed]
           HeroData.SetSkeletonGraphicSkinColor(lVar5,uVar4,0);
         }
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar5 = GameController.lockObj;
         if (lVar5 != null) {
           uVar4 = *(uint64 *)(lVar5 + 0x1f0);
           NGUITools.PlaySound(uVar4,0x3e4ccccd,0);
@@ -1964,14 +1958,13 @@ public class StartMenuController
     // RVA   : 0xC753A0   Offset: 0xC73BA0   Length: 0x20A
     public void RandomNameButtonClicked()
     {
-        var pStatics_1570 = *(int64*)(DAT_181d81570 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d81570 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         long lVar5;
-        lVar1 = *(int64 *)(pStatics_e010 + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           uVar3 = GameDataController.GenerateRandomHeroFamilyName(lVar1,0);
           lVar1 = this.heroFamilyName;
@@ -1979,9 +1972,9 @@ public class StartMenuController
           if (lVar1 != null) {
             InputField.set_text(lVar1,uVar4,0);
             lVar1 = this.heroGivenName;
-            lVar5 = *(int64 *)(pStatics_e010 + 32);
-            if (((*pStatics_1570 != 0) &&
-                (lVar2 = *(int64 *)(*pStatics_1570 + 24)) != null) &&
+            lVar5 = GameController.lockObj;
+            if (((*pStatics != 0) &&
+                (lVar2 = *(int64 *)(*pStatics + 24)) != null) &&
                (lVar5 != null)) {
               lVar5 = GameDataController.GenerateRandomHeroName
                                 (lVar5,*(uint8 *)(lVar2 + 128),uVar3,1,0);
@@ -2011,11 +2004,12 @@ public class StartMenuController
         if ((this.heroFamilyName != null) && (this.heroGivenName != null)) {
           uVar2 = String.Concat(*(uint64 *)(this.heroFamilyName + 0x170),
                                  *(uint64 *)(this.heroGivenName + 0x170),0);
-          if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+          if (PlotController._instance == 1) {
             lVar3 = new c.DisplayClass9_0(0);
             if (lVar3 != null) {
               *(uint64 *)(lVar3 + 16) = uVar2;
-              *(uint8 *)(lVar3 + 24) = *(uint8 *)(*(int64 *)(DAT_181d4ef00 + 184) + 128);
+              *(uint8 *)(lVar3 + 24) =
+                   *(uint8 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 128);
               plVar4 = (int64 *)rail_api.RailFactory(0);
               if (plVar4 != (int64 *)0) {
                 lVar1 = *plVar4;
@@ -2184,8 +2178,6 @@ public class StartMenuController
     // RVA   : 0xC73CA0   Offset: 0xC724A0   Length: 0x21
     public int GetPointPlusCost(int nowPoint)
     {
-        int FUN_180c73ca0(uint64 this,int nowPoint)
-        {
         if (89 < nowPoint) {
           return 999999;
         }
@@ -2709,10 +2701,10 @@ public class StartMenuController
               lVar1 = Transform.Find(parent,"Bar",0);
               if (lVar1 != null) {
                 lVar1 = Component.GetComponent(lVar1,DAT_181d6c740);
-                if ((((float)*(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 248) < local_res20[0]) &&
-                    ((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0)) &&
-                   (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                  il2cpp_runtime_class_init(DAT_181d4ef00);
+                if ((((float)*(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 248) <
+                      local_res20[0]) && ((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0)) &&
+                   (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                  il2cpp_runtime_class_init(PlotController_StaticsPtr);
                 }
                 fVar6 = (float)FUN_1810a8ba0();
                 lVar2 = Transform.Find(parent,"Bar",0);
@@ -3142,7 +3134,7 @@ public class StartMenuController
           *(float *)(lVar1 + 0x1d0) = fVar5 * 100.0;
         }
         StartMenuController.RefreshEvilChaosSlider(this,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           uVar3 = *(uint64 *)(lVar1 + 0x1f0);
           NGUITools.PlaySound(uVar3,0x3e4ccccd,0);
@@ -3317,7 +3309,7 @@ public class StartMenuController
               lVar5 = GameObject.get_transform(target,0);
               if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null) {
                 lVar5 = Component.GetComponent(lVar5,DAT_181d6ccc0);
-                lVar1 = *(int64 *)(*(int64 *)(DAT_181d96518 + 184) + 24);
+                lVar1 = CustomDifficultyData.teammateLimitDescribe;
                 if (*pStatics != 0) {
                   lVar2 = *(int64 *)(*pStatics + 64);
                   uVar7 = Object.get_name(target,0);
@@ -3372,7 +3364,7 @@ public class StartMenuController
         ulong uVar4;
         if (*pStatics != 0) {
           lVar2 = *(int64 *)(*pStatics + 24);
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar3 = GameController.lockObj;
           if (((lVar3 != null) && (this.clothDropDown != null)) &&
              (lVar3 = *(int64 *)(lVar3 + 0x1a8)) != null) {
             uVar1 = *(uint32 *)(this.clothDropDown + 0x120);
@@ -3835,7 +3827,7 @@ public class StartMenuController
               NGUITools.PlaySound(plVar7,0);
               if (*pStatics_1570 == 0) throw; // [null/range check failed]
               if (*(int *)(*pStatics_1570 + 44) == 1) {
-                lVar3 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+                lVar3 = GameController.difficultyExtraPoint;
                 if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null) throw; // [null/range check failed]
                 iVar2 = PlayerPrefDictionary.GetInt(lVar3,"NewGameTime",0);
                 if (iVar2 < 1) {
@@ -3873,8 +3865,6 @@ public class StartMenuController
     // RVA   : 0xC7C780   Offset: 0xC7AF80   Length: 0x2F
     public void /*ctor*/()
     {
-        void FUN_180c7c780(int64 this)
-        {
         this.leftAttriPoint = 60;
         this.leftFightSkillPoint = 90;
         this.leftLivingSkillPoint = 90;
@@ -3897,9 +3887,7 @@ public class StartMenuController
           FUN_181827900(lVar1,"志向",DAT_181d7c3d0);
           FUN_181827900(lVar1,"喜好",DAT_181d7c3d0);
           FUN_181827900(lVar1,"战法",DAT_181d7c3d0);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181d815f0 + 184) + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          StartMenuController.canStartChooseTagCategory = lVar1;
           return;
         }
     }

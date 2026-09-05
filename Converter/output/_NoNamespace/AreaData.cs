@@ -253,7 +253,7 @@ public class AreaData
     public AreaData DataBase()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 200)) != null) {
           FUN_1817cc780(lVar1,this.areaID,DAT_181d92810);
           return;
@@ -315,7 +315,6 @@ public class AreaData
     // RVA   : 0x7EBAE0   Offset: 0x7EA2E0   Length: 0x63A
     public void StartUpgradeDefenceLv(int defenceType)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
@@ -352,9 +351,9 @@ public class AreaData
           }
           uVar6 = new PlotChoiceRequirement(uVar1,(float)(iVar2 + 1) * 200.0 * fVar10,0);
           iVar2 = this.belongForceID;
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           if ((lVar5 == null) || (lVar4 == null)) throw; // [null/range check failed]
           ForceData.CostResource(lVar4,uVar6,iVar2 == *(int *)(lVar5 + 132),0);
@@ -403,7 +402,7 @@ public class AreaData
         }
         plVar7[5] = lVar4;
         il2cpp_internal(plVar7 + 5,lVar4);
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x5c0);
+        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5c0);
         if (lVar4 == null) throw; // [null/range check failed]
         if (lVar4.Count <= defenceType) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -454,9 +453,9 @@ public class AreaData
           uVar8 = 0;
         }
         else {
-          if ((*pStatics == 0) ||
-             (lVar4 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar4 = WorldData.Player(lVar4,0);
           if (lVar4 == null) throw; // [null/range check failed]
           if (iVar2 != *(int *)(lVar4 + 132)) goto LAB_1807ec05c;
@@ -611,15 +610,15 @@ public class AreaData
     // RVA   : 0x7E9060   Offset: 0x7E7860   Length: 0xD8
     public bool BelongPlayer()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         iVar1 = this.belongForceID;
         if (iVar1 < 0) {
           return false;
         }
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null)
+        {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             return iVar1 == *(int *)(lVar2 + 132);
@@ -631,45 +630,44 @@ public class AreaData
     // RVA   : 0x7E8D60   Offset: 0x7E7560   Length: 0x2FC
     public bool BelongPlayerOrAlley()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
         ulong uVar4;
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar3 = WorldData.Player(lVar3,0)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null)
+           && (lVar3 = WorldData.Player(lVar3,0)) != null) {
           if (*(int *)(lVar3 + 132) < 0) {
             return false;
           }
           iVar1 = this.belongForceID;
-          if (((*pStatics != 0) &&
-              (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
-             (lVar3 = WorldData.Player(lVar3,0)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar3 = GameController._instance.worldData, lVar3 != null
+              )) && (lVar3 = WorldData.Player(lVar3,0)) != null) {
             if (iVar1 == *(int *)(lVar3 + 132)) {
               return true;
             }
             iVar1 = this.belongForceID;
             lVar3 = FUN_18046c0a0(0);
-            if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-               ((lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0), lVar3 != null &&
+            if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+               ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 != null &&
                 (lVar3 = HeroData.GetForce(lVar3,0,0)) != null))) {
               if (iVar1 == *(int *)(lVar3 + 60)) {
                 return true;
               }
               lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                  (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) != null) &&
-                 ((lVar3 = HeroData.GetForce(lVar3,0,0), lVar3 != null && (*(int64 *)(lVar3 + 64) != 0)
+              if ((((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                  (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) &&
+                 ((lVar3 = HeroData.GetForce(lVar3,0,0), lVar3 != null && (lVar3.ResourcePoints != null)
                   ))) {
-                cVar2 = FUN_181815240(*(int64 *)(lVar3 + 64),this.belongForceID,
+                cVar2 = FUN_181815240(lVar3.ResourcePoints,this.belongForceID,
                                       DAT_181d67bf8);
                 if (cVar2) {
                   return true;
                 }
                 lVar3 = FUN_18046c0a0(0);
-                if ((((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                    (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) != null) &&
+                if ((((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                    (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) &&
                    (lVar3 = HeroData.GetForce(lVar3,0,0)) != null) {
                   uVar4 = ForceData.IsAllyForce(lVar3,this.belongForceID,0);
                   return uVar4;
@@ -691,7 +689,6 @@ public class AreaData
     // RVA   : 0x7EA040   Offset: 0x7E8840   Length: 0x17C
     public int GetAreaMapRandomEventCount()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         int iVar3;
@@ -699,18 +696,18 @@ public class AreaData
         iVar4 = 0;
         iVar3 = 0;
         while( true ) {
-          if (((*pStatics == 0) ||
-              (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-             (lVar2 = *(int64 *)(lVar2 + 104)) == null) break;
-          if (*(int *)(lVar2 + 24) <= iVar3) {
+          if (((GameController._instance == null) ||
+              (lVar2 = GameController._instance.worldData, lVar2 == null
+              )) || (lVar2 = lVar2.AreaMapRandomEventDatas) == null) break;
+          if (lVar2.cityAreaID <= iVar3) {
             return iVar4;
           }
           lVar2 = FUN_18046c0a0(0);
-          if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-             (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 104)) == null) break;
+          if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+             (lVar2 = *(int64 *)(lVar2.villageAreaID + 104)) == null) break;
           lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181d5e680);
-          if ((lVar2 == null) || (*(int64 *)(lVar2 + 64) == 0)) break;
-          cVar1 = FUN_181815240(*(int64 *)(lVar2 + 64),this.areaID,DAT_181d67bf8)
+          if ((lVar2 == null) || (lVar2.ResourcePoints == null)) break;
+          cVar1 = FUN_181815240(lVar2.ResourcePoints,this.areaID,DAT_181d67bf8)
           ;
           if (cVar1) {
             iVar4 = iVar4 + 1;
@@ -824,7 +821,6 @@ public class AreaData
     // RVA   : 0x7EAF50   Offset: 0x7E9750   Length: 0x1BA
     public List<HeroData> GetInsideHeros()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -841,9 +837,9 @@ public class AreaData
             if (lVar4.Count <= (int)uVar5) {
               return lVar2;
             }
-            if (*pStatics == 0) break;
+            if (GameController._instance == null) break;
             lVar4 = this.insideHeros;
-            lVar1 = *(int64 *)(*pStatics + 32);
+            lVar1 = GameController._instance.worldData;
             if (lVar4 == null) break;
             if (lVar4.Count <= uVar5) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -864,12 +860,11 @@ public class AreaData
     // RVA   : 0x7EAE50   Offset: 0x7E9650   Length: 0xFD
     public HeroData GetInsideHero(int id)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
-        if (*pStatics != 0) {
+        if (GameController._instance != null) {
           lVar1 = this.insideHeros;
-          lVar2 = *(int64 *)(*pStatics + 32);
+          lVar2 = GameController._instance.worldData;
           if (lVar1 != null) {
             if (lVar1.Count <= id) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -888,14 +883,14 @@ public class AreaData
     // RVA   : 0x7EB9B0   Offset: 0x7EA1B0   Length: 0x12E
     public void SetBranchLeader(HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         if (-1 < this.branchLeaderID) {
-          if ((*pStatics != 0) &&
-             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar1 = GameController._instance.worldData) != null
+             ) {
             lVar1 = WorldData.GetHero(lVar1,this.branchLeaderID,0);
             if (lVar1 != null) {
-              *(uint32 *)(lVar1 + 156) = 0xffffffff;
+              lVar1.gameMode = 0xffffffff;
               goto LAB_1807eba8a;
             }
           }
@@ -984,7 +979,6 @@ public class AreaData
     // RVA   : 0x7E8740   Offset: 0x7E6F40   Length: 0x4A5
     public void AddLog(string newLog)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         long lVar4;
@@ -995,10 +989,10 @@ public class AreaData
         uint[] local_28 = new uint[4];
         lVar2 = this.recordLog;
         plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-        if (((*pStatics != 0) &&
-            (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar4 = *(int64 *)(lVar4 + 168)) != null) {
-          local_res8[0] = *(uint32 *)(lVar4 + 16);
+        if (((GameController._instance != null) &&
+            (lVar4 = GameController._instance.worldData) != null)
+           && (lVar4 = lVar4.worldTime) != null) {
+          local_res8[0] = lVar4.chapter;
           lVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
           if (plVar3 != (int64 *)0) {
             if ((lVar4 != null) &&
@@ -1014,9 +1008,9 @@ public class AreaData
             }
             plVar3[4] = lVar4;
             il2cpp_internal(plVar3 + 4,lVar4);
-            if (((*pStatics != 0) &&
-                (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
-               (lVar4 = *(int64 *)(lVar4 + 168)) != null) {
+            if (((GameController._instance != null) &&
+                (lVar4 = GameController._instance.worldData,
+                lVar4 != null)) && (lVar4 = lVar4.worldTime) != null) {
               local_res20[0] = *(uint32 *)(lVar4 + 20);
               lVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
               if ((lVar4 != null) &&
@@ -1032,10 +1026,10 @@ public class AreaData
               }
               plVar3[5] = lVar4;
               il2cpp_internal(plVar3 + 5,lVar4);
-              if (((*pStatics != 0) &&
-                  (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
-                 (lVar4 = *(int64 *)(lVar4 + 168)) != null) {
-                local_28[0] = *(uint32 *)(lVar4 + 24);
+              if (((GameController._instance != null) &&
+                  (lVar4 = GameController._instance.worldData,
+                  lVar4 != null)) && (lVar4 = lVar4.worldTime) != null) {
+                local_28[0] = lVar4.cityAreaID;
                 lVar4 = il2cpp_value_box(DAT_181d5b2f8,local_28);
                 if ((lVar4 != null) &&
                    (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -1069,7 +1063,7 @@ public class AreaData
                   lVar2 = this.recordLog;
                   while (lVar2 != null) {
                     iVar1 = lVar2.Count;
-                    if (iVar1 <= *(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 232)) {
+                    if (iVar1 <= *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 232)) {
                       this.areaInfoDirty = 1;
                       return;
                     }
@@ -1372,14 +1366,14 @@ public class AreaData
     // RVA   : 0x7EAD70   Offset: 0x7E9570   Length: 0xD0
     public ForceData GetForce()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         if (this.belongForceID < 0) {
           return 0;
         }
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           uVar2 = WorldData.GetForce(lVar1,this.belongForceID,0);
           return uVar2;
         }
@@ -1778,8 +1772,6 @@ public class AreaData
     // RVA   : 0x7EA7B0   Offset: 0x7E8FB0   Length: 0xC
     public int GetColumn(int tileID)
     {
-        uint64 FUN_1807ea7b0(int64 this,int tileID)
-        {
         return (int64)tileID % (int64)this.mapWidth & 0xffffffff;
     }
 
@@ -1787,8 +1779,6 @@ public class AreaData
     // RVA   : 0x7EB290   Offset: 0x7E9A90   Length: 0xA
     public int GetRow(int tileID)
     {
-        uint64 FUN_1807eb290(int64 this,int tileID)
-        {
         return (int64)tileID / (int64)this.mapWidth & 0xffffffff;
     }
 

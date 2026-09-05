@@ -535,8 +535,6 @@ public class SkillRangeUIController
     // RVA   : 0x974F30   Offset: 0x973730   Length: 0x2F
     public int GetDirectionDamageType(DamageRangeType damageRangeType)
     {
-        uint32 FUN_180974f30(uint64 this,int damageRangeType)
-        {
         if (damageRangeType != 4) {
           if (damageRangeType == 5) {
             return 4;

@@ -69,7 +69,7 @@ public class HeroTagDataBase
         uint uVar3;
         uVar1 = this.name;
         uVar3 = Mathf.Abs(this.value,0);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
           uVar3 = Mathf.Clamp(uVar3,0,*(int *)(lVar2 + 24) + -1,0);
           GlobalData.GenerateRareLvColorText(uVar1,uVar3,0);

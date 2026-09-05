@@ -59,8 +59,6 @@ public class UIPlayAnimation
     // RVA   : 0x1578E90   Offset: 0x1577690   Length: 0x12
     private bool get_dualState()
     {
-        uint32 FUN_181578e90(int64 this)
-        {
         int iVar1;
         iVar1 = this.trigger;
         if (iVar1 == 2) {
@@ -156,7 +154,6 @@ public class UIPlayAnimation
     // RVA   : 0x1578080   Offset: 0x1576880   Length: 0x2F3
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         bool cVar2;
         byte uVar3;
@@ -190,21 +187,21 @@ public class UIPlayAnimation
           }
         }
         LAB_18157816a:
-        if (*(int64 *)(pStatics + 224) != 0) {
+        if (UICamera.currentTouch != null) {
           iVar4 = this.trigger;
           if ((iVar4 == 2) || (iVar4 == 5)) {
-            lVar7 = *(int64 *)(pStatics + 224);
+            lVar7 = UICamera.currentTouch;
             if (lVar7 == null) goto LAB_18157836e;
-            uVar5 = *(uint64 *)(lVar7 + 80);
+            uVar5 = lVar7.pressed;
             uVar6 = Component.get_gameObject(this,0);
             uVar3 = Object.op_Equality(uVar5,uVar6,0);
             this.mActivated = uVar3;
             iVar4 = this.trigger;
           }
           if ((iVar4 - 1U & 0xfffffffd) == 0) {
-            lVar7 = *(int64 *)(pStatics + 224);
+            lVar7 = UICamera.currentTouch;
             if (lVar7 == null) goto LAB_18157836e;
-            uVar5 = *(uint64 *)(lVar7 + 72);
+            uVar5 = lVar7.current;
             uVar6 = Component.get_gameObject(this,0);
             uVar3 = Object.op_Equality(uVar5,uVar6,0);
             this.mActivated = uVar3;
@@ -218,7 +215,7 @@ public class UIPlayAnimation
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar5 = *(uint64 *)(lVar7 + 80);
+          uVar5 = lVar7.pressed;
           uVar6 = new OnTooltipCB(this,DAT_181d9cda0,0);
           EventDelegate.Add(uVar5,uVar6,0);
         }
@@ -284,13 +281,12 @@ public class UIPlayAnimation
     // RVA   : 0x15785C0   Offset: 0x1576DC0   Length: 0xE3
     private void OnPress(bool isPressed)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         bool cVar2;
         cVar2 = Behaviour.get_enabled(this,0);
         if (cVar2) {
-          if (*(int *)(pStatics + 212) != -2) {
-            if (*(int *)(pStatics + 212) != -3) {
+          if (UICamera.currentTouchID != -2) {
+            if (UICamera.currentTouchID != -3) {
               iVar1 = this.trigger;
               if (iVar1 == 2) {
                 bVar3 = true;
@@ -320,10 +316,9 @@ public class UIPlayAnimation
     // RVA   : 0x1577AE0   Offset: 0x15762E0   Length: 0xB2
     private void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
-        if (*(int *)(pStatics + 212) != -2) {
-          if (*(int *)(pStatics + 212) != -3) {
+        if (UICamera.currentTouchID != -2) {
+          if (UICamera.currentTouchID != -3) {
             cVar1 = Behaviour.get_enabled(this,0);
             if ((cVar1) && (this.trigger == null)) {
               UIPlayAnimation.Play(this,1,0,0);
@@ -336,10 +331,9 @@ public class UIPlayAnimation
     // RVA   : 0x1577CB0   Offset: 0x15764B0   Length: 0xB2
     private void OnDoubleClick()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
-        if (*(int *)(pStatics + 212) != -2) {
-          if (*(int *)(pStatics + 212) != -3) {
+        if (UICamera.currentTouchID != -2) {
+          if (UICamera.currentTouchID != -3) {
             cVar1 = Behaviour.get_enabled(this,0);
             if ((cVar1) && (this.trigger == 10)) {
               UIPlayAnimation.Play(this,1,0,0);
@@ -387,7 +381,7 @@ public class UIPlayAnimation
     // RVA   : 0x1578720   Offset: 0x1576F20   Length: 0x1DE
     private void OnToggle()
     {
-        var pStatics = *(int64*)(DAT_181d8b2d8 + 184);
+        var pUIPlayAnimation = *(int64*)(UIPlayAnimation_StaticsPtr + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -396,14 +390,14 @@ public class UIPlayAnimation
         if (!cVar3) {
           return;
         }
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = *(uint64 *)(pUIPlayAnimation + 8);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
           return;
         }
         if (this.trigger != 7) {
           if (this.trigger == 8) {
-            lVar2 = *(int64 *)(pStatics + 8);
+            lVar2 = *(int64 *)(pUIPlayAnimation + 8);
             if (lVar2 == null) throw; // [null/range check failed]
             cVar3 = UIToggle.get_isChecked(lVar2,0);
             if (cVar3) goto LAB_18157887c;
@@ -411,7 +405,7 @@ public class UIPlayAnimation
           if (this.trigger != 9) {
             return;
           }
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = *(int64 *)(pUIPlayAnimation + 8);
           if (lVar2 == null) throw; // [null/range check failed]
           cVar3 = UIToggle.get_isChecked(lVar2,0);
           if (cVar3) {
@@ -419,7 +413,7 @@ public class UIPlayAnimation
           }
         }
         LAB_18157887c:
-        lVar2 = *(int64 *)(pStatics + 8);
+        lVar2 = *(int64 *)(pUIPlayAnimation + 8);
         if (lVar2 != null) {
           uVar4 = UIToggle.get_isChecked(lVar2,0);
           if (this.trigger != 2) {
@@ -441,12 +435,12 @@ public class UIPlayAnimation
         ulong uVar4;
         cVar3 = Behaviour.get_enabled(this,0);
         if ((cVar3) && ((this.trigger == 2 || (this.trigger == 1)))) {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224);
+          lVar1 = UICamera.currentTouch;
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar2 = *(uint64 *)(lVar1 + 88);
+          uVar2 = lVar1.dragged;
           uVar4 = Component.get_gameObject(this,0);
           cVar3 = Object.op_Equality(uVar2,uVar4,0);
           if ((cVar3) || ((this.dragHighlight && (this.trigger == 2))))
@@ -486,12 +480,12 @@ public class UIPlayAnimation
         ulong uVar4;
         cVar3 = Behaviour.get_enabled(this,0);
         if ((cVar3) && (this.trigger == 2)) {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224);
+          lVar1 = UICamera.currentTouch;
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar2 = *(uint64 *)(lVar1 + 88);
+          uVar2 = lVar1.dragged;
           uVar4 = Component.get_gameObject(this,0);
           cVar3 = Object.op_Inequality(uVar2,uVar4,0);
           if (cVar3) {
@@ -647,8 +641,6 @@ public class UIPlayAnimation
     // RVA   : 0x1578900   Offset: 0x1577100   Length: 0xF
     public void PlayForward()
     {
-        void FUN_181578900(uint64 this)
-        {
         UIPlayAnimation.Play(this,1,1,0);
     }
 
@@ -656,8 +648,6 @@ public class UIPlayAnimation
     // RVA   : 0x1578910   Offset: 0x1577110   Length: 0xD
     public void PlayReverse()
     {
-        void FUN_181578910(uint64 this)
-        {
         UIPlayAnimation.Play(this,0,1,0);
     }
 

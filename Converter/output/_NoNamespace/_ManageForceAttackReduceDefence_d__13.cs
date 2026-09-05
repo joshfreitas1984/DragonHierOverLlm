@@ -43,7 +43,7 @@ public class <ManageForceAttackReduceDefence>d__13
     // RVA   : 0x8CD5A0   Offset: 0x8CBDA0   Length: 0x6C9
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         uint uVar2;
         long lVar3;
@@ -66,7 +66,7 @@ public class <ManageForceAttackReduceDefence>d__13
           if (lVar3 == null) goto LAB_1808cdc64;
           this.<originDeltaFightScore>5__2 = *(uint32 *)(lVar3 + 48);
           fVar12 = *(float *)(lVar3 + 48);
-          fVar13 = *(float *)(pStatics + 136);
+          fVar13 = *(float *)(pPlotController + 136);
           this.<i>5__4 = 0;
           this.<deltaOneTime>5__3 = fVar12 * 0.1 * fVar13;
         LAB_1808cdb77:
@@ -89,14 +89,14 @@ public class <ManageForceAttackReduceDefence>d__13
             fVar12 = -1.0;
             if ((lVar3 == null) || (lVar5 = *(int64 *)(lVar3 + 40)) == null) goto LAB_1808cdc64;
             if (0.0 < *(float *)(lVar5 + 88)) {
-              if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) && (*(int *)(DAT_181d4ef00 + 224) == 0))
-              {
-                il2cpp_runtime_class_init(DAT_181d4ef00);
+              if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                 (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                il2cpp_runtime_class_init(PlotController_StaticsPtr);
                 lVar5 = *(int64 *)(lVar3 + 40);
               }
               if (lVar5 == null) goto LAB_1808cdc64;
-              fVar12 = (*(float *)(pStatics + 132) * *(float *)(lVar5 + 88))
-                       / 100.0;
+              fVar12 = (*(float *)(pPlotController + 132) *
+                       *(float *)(lVar5 + 88)) / 100.0;
               local_res8[0] = -fVar12 * this.<deltaOneTime>5__3;
               if (*(int64 *)(lVar3 + 40) == 0) goto LAB_1808cdc64;
               AreaData.ChangeSupport(*(int64 *)(lVar3 + 40),local_res8[0],0);
@@ -124,14 +124,14 @@ public class <ManageForceAttackReduceDefence>d__13
             }
             if (lVar5 == null) goto LAB_1808cdc64;
             if (0.0 < *(float *)(lVar5 + 84)) {
-              if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) && (*(int *)(DAT_181d4ef00 + 224) == 0))
-              {
-                il2cpp_runtime_class_init(DAT_181d4ef00);
+              if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                 (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                il2cpp_runtime_class_init(PlotController_StaticsPtr);
                 lVar5 = *(int64 *)(lVar3 + 40);
               }
               if (lVar5 == null) goto LAB_1808cdc64;
-              fVar13 = (*(float *)(pStatics + 132) * *(float *)(lVar5 + 84))
-                       / 100.0;
+              fVar13 = (*(float *)(pPlotController + 132) *
+                       *(float *)(lVar5 + 84)) / 100.0;
               local_res8[0] = -fVar13 * this.<deltaOneTime>5__3;
               if (*(int64 *)(lVar3 + 40) == 0) goto LAB_1808cdc64;
               AreaData.ChangeSafe(*(int64 *)(lVar3 + 40),local_res8[0],0);

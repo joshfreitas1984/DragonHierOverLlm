@@ -149,15 +149,15 @@ public class AreaBuildingDataBase
         ulong uVar1;
         uVar1 = this.buildingSpeAddData;
         ForceSpeAddData.op_Multiply
-                  (uVar1,(float)targetLv * *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x128) + 1.0,0)
-        ;
+                  (uVar1,(float)targetLv *
+                         *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x128) + 1.0,0);
     }
 
     // Token : 0x6000F1D
     // RVA   : 0xA14880   Offset: 0xA13080   Length: 0xD98
     public string GetBuildingText(int targetLv, bool detail, bool showBuildCost, float produceRate, bool showBuildingName, AreaData targetArea)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 AreaBuildingDataBase.GetBuildingText
                          (int64 this,int targetLv,char detail,char showBuildCost,uint32 produceRate,
                          uint32 showBuildingName,int64 targetArea)
@@ -270,7 +270,7 @@ public class AreaBuildingDataBase
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (0.0 < *(float *)(*(int64 *)(lVar5 + 16) + lVar10)) {
-              lVar1 = *(int64 *)(pStatics + 0x430);
+              lVar1 = *(int64 *)(pPlotController + 0x430);
               if (lVar1 == null) break;
               uVar6 = FUN_180002f80(lVar1,uVar11,DAT_181d7c9c0);
               uVar13 = FUN_1800d6780(lVar5,uVar11,DAT_181d796d8);
@@ -280,7 +280,7 @@ public class AreaBuildingDataBase
             else {
               fVar12 = (float)FUN_1800d6780(lVar5,uVar11);
               if (fVar12 < 0.0) {
-                lVar1 = *(int64 *)(pStatics + 0x430);
+                lVar1 = *(int64 *)(pPlotController + 0x430);
                 if (lVar1 == null) break;
                 uVar6 = FUN_180002f80(lVar1,uVar11,DAT_181d7c9c0);
                 uVar13 = FUN_1800d6780(lVar5,uVar11,DAT_181d796d8);
@@ -303,7 +303,7 @@ public class AreaBuildingDataBase
         lVar5 = local_70;
         LAB_180a14d70:
         do {
-          lVar10 = *(int64 *)(pStatics + 0x600);
+          lVar10 = *(int64 *)(pPlotController + 0x600);
           if (lVar10 == null) goto LAB_180a154cd;
           if (*(int *)(lVar10 + 24) <= iVar9) {
             cVar2 = String.op_Inequality(lVar7,"",0);
@@ -328,10 +328,10 @@ public class AreaBuildingDataBase
               plVar3[4] = lVar7;
               il2cpp_internal(plVar3 + 4,lVar7);
               if (this.changeMaxPeople <= 0.0) {
-                lVar7 = *(int64 *)(pStatics + 0x2c8);
+                lVar7 = *(int64 *)(pPlotController + 0x2c8);
               }
               else {
-                lVar7 = *(int64 *)(pStatics + 0x260);
+                lVar7 = *(int64 *)(pPlotController + 0x260);
               }
               if ((lVar7 != null) &&
                  (lVar10 = il2cpp_internal(lVar7,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -449,14 +449,14 @@ public class AreaBuildingDataBase
           }
           fVar12 = (float)AreaBuildingDataBase.GetChangeAreaState(this,iVar9,targetLv,produceRate,0);
           if (0.0 < fVar12) {
-            lVar10 = *(int64 *)(pStatics + 0x600);
+            lVar10 = *(int64 *)(pPlotController + 0x600);
             if (lVar10 == null) goto LAB_180a154cd;
             uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181d7c9c0);
             uVar6 = GlobalData.GenerateChangeColorText(uVar6,fVar12,0);
             lVar7 = String.Concat(lVar7,"\n",uVar6);
           }
           else if (fVar12 < 0.0) {
-            lVar10 = *(int64 *)(pStatics + 0x600);
+            lVar10 = *(int64 *)(pPlotController + 0x600);
             if (lVar10 == null) goto LAB_180a154cd;
             uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181d7c9c0);
             uVar6 = GlobalData.GenerateChangeColorText(uVar6,fVar12,0);
@@ -464,7 +464,7 @@ public class AreaBuildingDataBase
           }
           fVar12 = (float)AreaBuildingDataBase.GetChangeAllAreaState(this,iVar9,targetLv,produceRate,0);
           if (0.0 < fVar12) {
-            lVar10 = *(int64 *)(pStatics + 0x600);
+            lVar10 = *(int64 *)(pPlotController + 0x600);
             if (lVar10 == null) goto LAB_180a154cd;
             uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181d7c9c0);
             uVar6 = String.Concat("全域",uVar6,0);
@@ -472,7 +472,7 @@ public class AreaBuildingDataBase
             lVar7 = String.Concat(lVar7,"\n");
           }
           else if (fVar12 < 0.0) {
-            lVar10 = *(int64 *)(pStatics + 0x600);
+            lVar10 = *(int64 *)(pPlotController + 0x600);
             if (lVar10 == null) goto LAB_180a154cd;
             uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181d7c9c0);
             uVar6 = String.Concat("全域",uVar6,0);
@@ -688,8 +688,6 @@ public class AreaBuildingDataBase
     // RVA   : 0xA157E0   Offset: 0xA13FE0   Length: 0x10
     public float GetChangeMaxPeople(int lv)
     {
-        float FUN_180a157e0(int64 this,int lv)
-        {
         return (float)(lv + 1) * this.changeMaxPeople;
     }
 
@@ -708,8 +706,8 @@ public class AreaBuildingDataBase
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           fVar1 = lVar2._items[areaStateType];
-          return ((float)lv * *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x128) + 1.0) * fVar1
-                 * produceRate;
+          return ((float)lv * *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x128) +
+                 1.0) * fVar1 * produceRate;
         }
     }
 
@@ -728,8 +726,8 @@ public class AreaBuildingDataBase
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           fVar1 = lVar2._items[areaStateType];
-          return ((float)lv * *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x128) + 1.0) * fVar1
-                 * produceRate;
+          return ((float)lv * *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x128) +
+                 1.0) * fVar1 * produceRate;
         }
     }
 
@@ -740,8 +738,9 @@ public class AreaBuildingDataBase
         ulong uVar1;
         uVar1 = this.changeResource;
         GlobalData.ListMulti
-                  (uVar1,((float)lv * *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x128) + 1.0)
-                         * produceRate,0);
+                  (uVar1,((float)lv *
+                          *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x128) + 1.0) *
+                         produceRate,0);
     }
 
     // Token : 0x6000F26

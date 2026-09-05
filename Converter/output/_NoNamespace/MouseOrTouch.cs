@@ -81,7 +81,7 @@ public class MouseOrTouch
         uVar2 = Object.op_Inequality(uVar3,0,0);
         if ((char)uVar2) {
           uVar3 = this.current;
-          uVar1 = *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 248);
+          uVar1 = UICamera.fallThrough;
           uVar2 = Object.op_Inequality(uVar3,uVar1,0);
           if ((char)uVar2) {
             uVar3 = this.current;

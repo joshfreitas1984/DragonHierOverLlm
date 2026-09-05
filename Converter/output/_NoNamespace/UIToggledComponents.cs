@@ -62,7 +62,7 @@ public class UIToggledComponents
     // RVA   : 0x1699990   Offset: 0x1698190   Length: 0x207
     public void Toggle()
     {
-        var pStatics = *(int64*)(DAT_181d8b2d8 + 184);
+        var pUIPlayAnimation = *(int64*)(UIPlayAnimation_StaticsPtr + 184);
         byte uVar1;
         long lVar2;
         bool cVar3;
@@ -92,7 +92,7 @@ public class UIToggledComponents
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = *(int64 *)(lVar7 + lVar4._items);
-            lVar2 = *(int64 *)(pStatics + 8);
+            lVar2 = *(int64 *)(pUIPlayAnimation + 8);
             if (lVar2 == null) break;
             if (*(char *)(lVar2 + 130) == false) {
               uVar1 = *(uint8 *)(lVar2 + 72);
@@ -113,7 +113,7 @@ public class UIToggledComponents
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = *(int64 *)(lVar8 + lVar4._items);
-          lVar7 = *(int64 *)(pStatics + 8);
+          lVar7 = *(int64 *)(pUIPlayAnimation + 8);
           if (lVar7 == null) break;
           if (*(char *)(lVar7 + 130) == false) {
             cVar3 = *(char *)(lVar7 + 72);

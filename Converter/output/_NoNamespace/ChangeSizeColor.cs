@@ -186,8 +186,6 @@ public class ChangeSizeColor
     // RVA   : 0x9F0E50   Offset: 0x9EF650   Length: 0x4
     public void CheckIsColorChange(bool value)
     {
-        void FUN_1809f0e50(int64 this,uint8 value)
-        {
         this.isChangeColor = value;
     }
 
@@ -195,8 +193,6 @@ public class ChangeSizeColor
     // RVA   : 0x9F0E40   Offset: 0x9EF640   Length: 0xD
     public void CheckColorState()
     {
-        void FUN_1809f0e40(int64 this)
-        {
         this.isChangeColor = !this.isChangeColor;
     }
 
@@ -226,8 +222,6 @@ public class ChangeSizeColor
     // RVA   : 0x9F1230   Offset: 0x9EFA30   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1809f1230(int64 this)
-        {
         this.intensity = 0x40000000;
         FUN_18044ef50(this,0);
     }

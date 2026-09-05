@@ -143,10 +143,10 @@ public class AreaRoadData
     // RVA   : 0x7EF320   Offset: 0x7EDB20   Length: 0xBE
     public AreaData GetArea()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           WorldData.GetArea(lVar1,this.areaID,0);
           return;
         }
@@ -194,7 +194,8 @@ public class AreaRoadData
         local_res18[0] = (float)this.roadLv * 0.05 * 100.0;
         uVar5 = il2cpp_value_box(DAT_181d7d0b8,local_res18);
         uVar6 = String.Format(uVar2,uVar6,uVar5,
-                               *(uint64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x260),0);
+                               *(uint64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x260),0)
+        ;
         uVar2 = "";
         if (0 < this.upgradeTimeLeft) {
           uVar2 = Int32.ToString(this + 24,0);

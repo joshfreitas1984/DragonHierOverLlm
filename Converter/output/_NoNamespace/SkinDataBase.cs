@@ -41,12 +41,12 @@ public class SkinDataBase
     // RVA   : 0x976290   Offset: 0x974A90   Length: 0x2E7
     public string GetSkinFullName(int _skinLv, bool changeLine, bool changeColor)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
         if (this.skinID < 0) {
-          lVar1 = *(int64 *)(pStatics + 0x400);
+          lVar1 = *(int64 *)(pPlotController + 0x400);
           if (lVar1 != null) {
             if (*(uint32 *)(lVar1 + 24) <= _skinLv) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -62,7 +62,7 @@ public class SkinDataBase
           }
         }
         else {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar1 = GameController.lockObj;
           if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 208)) != null) {
             lVar1 = FUN_1817cc780(lVar1,this.skinID,DAT_181d94178);
             if (lVar1 != null) {
@@ -72,7 +72,7 @@ public class SkinDataBase
                 uVar3 = "\n";
               }
               if ((int)_skinLv < 5) {
-                lVar1 = *(int64 *)(pStatics + 0x3d0);
+                lVar1 = *(int64 *)(pPlotController + 0x3d0);
                 if (lVar1 == null) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar1 + 24) <= _skinLv) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -83,7 +83,7 @@ public class SkinDataBase
                                        0);
               }
               else {
-                lVar1 = *(int64 *)(pStatics + 0x3d0);
+                lVar1 = *(int64 *)(pPlotController + 0x3d0);
                 if (lVar1 == null) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar1 + 24) < 7) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);

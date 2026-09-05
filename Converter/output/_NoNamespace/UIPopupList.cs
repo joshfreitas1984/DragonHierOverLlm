@@ -284,8 +284,6 @@ public class UIPopupList
     // RVA   : 0x12036A0   Offset: 0x1201EA0   Length: 0x8
     public LegacyEvent get_onSelectionChange()
     {
-        uint64 FUN_1812036a0(int64 this)
-        {
         return this.mLegacyEvent;
     }
 
@@ -293,8 +291,6 @@ public class UIPopupList
     // RVA   : 0x15803A0   Offset: 0x157EBA0   Length: 0xF
     public void set_onSelectionChange(LegacyEvent value)
     {
-        void FUN_1815803a0(int64 this,uint64 value)
-        {
         this.mLegacyEvent = value;
     }
 
@@ -302,22 +298,21 @@ public class UIPopupList
     // RVA   : 0x157FE50   Offset: 0x157E650   Length: 0x150
     public static bool get_isOpen()
     {
-        var pStatics = *(int64*)(DAT_181d8add8 + 184);
         float fVar1;
         ulong uVar2;
         bool cVar3;
         float extraout_XMM0_Da;
-        uVar2 = **(uint64 **)(DAT_181d8add8 + 184);
+        uVar2 = UIPopupList.current;
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (!cVar3) {
           return false;
         }
-        uVar2 = *(uint64 *)(pStatics + 8);
+        uVar2 = UIPopupList.mChild;
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (cVar3) {
           return true;
         }
-        fVar1 = *(float *)(pStatics + 16);
+        fVar1 = UIPopupList.mFadeOutComplete;
         Time.get_unscaledTime(0);
         return extraout_XMM0_Da < fVar1;
     }
@@ -725,7 +720,7 @@ public class UIPopupList
     // RVA   : 0x157F0D0   Offset: 0x157D8D0   Length: 0x273
     protected void TriggerCallbacks()
     {
-        var pStatics = *(int64*)(DAT_181d8add8 + 184);
+        var pUIPopupList = *(int64*)(UIPopupList_StaticsPtr + 184);
         long lVar2;
         ulong uVar3;
         long lVar4;
@@ -733,7 +728,7 @@ public class UIPopupList
         uint uVar6;
         if (!this.mExecuting) {
           this.mExecuting = 1;
-          plVar1 = pStatics;
+          plVar1 = pUIPopupList;
           lVar2 = *plVar1;
           *plVar1 = this;
           il2cpp_internal(plVar1,this);
@@ -779,7 +774,7 @@ public class UIPopupList
               }
             }
           }
-          plVar1 = pStatics;
+          plVar1 = pUIPopupList;
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           this.mExecuting = 0;
@@ -917,8 +912,6 @@ public class UIPopupList
     // RVA   : 0x157C370   Offset: 0x157AB70   Length: 0x11
     protected virtual void OnLocalize()
     {
-        void FUN_18157c370(int64 this)
-        {
         if (this.isLocalized) {
           UIPopupList.TriggerCallbacks(this,0);
           return;
@@ -1062,8 +1055,6 @@ public class UIPopupList
     // RVA   : 0x157C1E0   Offset: 0x157A9E0   Length: 0x1D
     protected virtual void OnItemPress(GameObject go, bool isPressed)
     {
-        void FUN_18157c1e0(int64 *this,uint64 go,char isPressed)
-        {
         if ((isPressed) && (*(int *)((int64)this + 92) == 0)) {
                           // WARNING: Could not recover jumptable at 0x00018157c1f5. Too many branches
                           // WARNING: Treating indirect jump as call
@@ -1128,8 +1119,6 @@ public class UIPopupList
     // RVA   : 0x157C940   Offset: 0x157B140   Length: 0x11
     private void Select(UILabel lbl, bool instant)
     {
-        void FUN_18157c940(int64 *this)
-        {
                           // WARNING: Could not recover jumptable at 0x00018157c94a. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x238))();
@@ -1145,7 +1134,7 @@ public class UIPopupList
         long lVar4;
         cVar1 = Behaviour.get_enabled(this,0);
         if (cVar1) {
-          uVar3 = **(uint64 **)(DAT_181d8add8 + 184);
+          uVar3 = UIPopupList.current;
           cVar1 = Object.op_Equality(uVar3,this,0);
           if (cVar1) {
             if (this[32] == 0) {
@@ -1186,25 +1175,24 @@ public class UIPopupList
     // RVA   : 0x157C200   Offset: 0x157AA00   Length: 0x163
     protected virtual void OnKey(KeyCode key)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
         cVar3 = Behaviour.get_enabled(this,0);
         if (cVar3) {
-          uVar1 = **(uint64 **)(DAT_181d8add8 + 184);
+          uVar1 = UIPopupList.current;
           cVar3 = Object.op_Equality(uVar1,this,0);
           if (cVar3) {
-            lVar2 = *(int64 *)(pStatics + 184);
+            lVar2 = UICamera.current;
             if (lVar2 == null) {
         LAB_18157c35e:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (key != *(int *)(lVar2 + 132)) {
-              lVar2 = *(int64 *)(pStatics + 184);
+            if (key != lVar2.cancelKey0) {
+              lVar2 = UICamera.current;
               if (lVar2 == null) goto LAB_18157c35e;
-              if (key != *(int *)(lVar2 + 136)) {
+              if (key != lVar2.cancelKey1) {
                 return;
               }
             }
@@ -1217,8 +1205,6 @@ public class UIPopupList
     // RVA   : 0xFC5B60   Offset: 0xFC4360   Length: 0x11
     protected virtual void OnDisable()
     {
-        void FUN_180fc5b60(int64 *this)
-        {
                           // WARNING: Could not recover jumptable at 0x000180fc5b6a. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x2d8))(this,*(uint64 *)(*this + 0x2e0));
@@ -1228,7 +1214,6 @@ public class UIPopupList
     // RVA   : 0x157C510   Offset: 0x157AD10   Length: 0x264
     protected virtual void OnSelect(bool isSelected)
     {
-        var pStatics = *(int64*)(DAT_181d8add8 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
@@ -1238,17 +1223,17 @@ public class UIPopupList
           lVar3 = UICamera.get_selectedObject(0);
           cVar2 = Object.op_Equality(lVar3,0,0);
           if (!cVar2) {
-            uVar4 = *(uint64 *)(pStatics + 8);
+            uVar4 = UIPopupList.mChild;
             cVar2 = Object.op_Equality(lVar3,uVar4,0);
             if (cVar2) {
               return;
             }
-            uVar4 = *(uint64 *)(pStatics + 8);
+            uVar4 = UIPopupList.mChild;
             cVar2 = Object.op_Inequality(uVar4,0,0);
             if (cVar2) {
               cVar2 = Object.op_Inequality(lVar3,0,0);
               if (cVar2) {
-                lVar1 = *(int64 *)(pStatics + 8);
+                lVar1 = UIPopupList.mChild;
                 if ((lVar1 == null) || (uVar4 = GameObject.get_transform(lVar1,0), lVar3 == null)) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -1271,13 +1256,13 @@ public class UIPopupList
     {
         ulong uVar1;
         bool cVar4;
-        uVar1 = **(uint64 **)(DAT_181d8add8 + 184);
+        uVar1 = UIPopupList.current;
         cVar4 = Object.op_Inequality(uVar1,0,0);
         if (cVar4) {
-          plVar2 = (int64 *)**(int64 **)(DAT_181d8add8 + 184);
+          plVar2 = (int64 *)UIPopupList.current;
           if (plVar2 != (int64 *)0) {
             (**(code **)(*plVar2 + 0x2d8))(plVar2,*(uint64 *)(*plVar2 + 0x2e0));
-            puVar3 = *(uint64 **)(DAT_181d8add8 + 184);
+            puVar3 = *(uint64 **)(UIPopupList_StaticsPtr + 184);
             *puVar3 = 0;
             il2cpp_internal(puVar3,0);
             return;
@@ -1291,7 +1276,6 @@ public class UIPopupList
     // RVA   : 0x157B190   Offset: 0x1579990   Length: 0x4A6
     public virtual void CloseSelf()
     {
-        var pStatics = *(int64*)(DAT_181d8add8 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -1305,10 +1289,10 @@ public class UIPopupList
         uint uStack_34;
         uint uStack_30;
         uint32 uStack_2c;
-        uVar4 = *(uint64 *)(pStatics + 8);
+        uVar4 = UIPopupList.mChild;
         cVar2 = Object.op_Inequality(uVar4,0,0);
         if (cVar2) {
-          uVar4 = **(uint64 **)(DAT_181d8add8 + 184);
+          uVar4 = UIPopupList.current;
           cVar2 = Object.op_Equality(uVar4,this,0);
           if (cVar2) {
             MonoBehaviour.StopCoroutine(this,"CloseIfUnselected",0);
@@ -1317,13 +1301,13 @@ public class UIPopupList
             if (this.mLabelList == null) goto LAB_18157b611;
             FUN_180f56130(this.mLabelList,DAT_181d82378);
             if (!this.isAnimated) {
-              uVar4 = *(uint64 *)(pStatics + 8);
+              uVar4 = UIPopupList.mChild;
               Object.Destroy(uVar4,0);
               fVar9 = (float)Time.get_unscaledTime(0);
               fVar9 = fVar9 + 0.1;
             }
             else {
-              lVar3 = *(int64 *)(pStatics + 8);
+              lVar3 = UIPopupList.mChild;
               if (lVar3 == null) {
         LAB_18157b611:
                           // WARNING: Subroutine does not return
@@ -1353,7 +1337,7 @@ public class UIPopupList
                   *(uint32 *)(lVar5 + 24) = 2;
                 } while ((int)uVar7 < iVar1);
               }
-              lVar3 = *(int64 *)(pStatics + 8);
+              lVar3 = UIPopupList.mChild;
               if (lVar3 == null) goto LAB_18157b611;
               lVar3 = FUN_180956bf0(lVar3,DAT_181da2db0);
               if (lVar3 == null) goto LAB_18157b611;
@@ -1371,19 +1355,17 @@ public class UIPopupList
                   uVar8 = uVar8 + 1;
                 } while ((int)uVar8 < iVar1);
               }
-              uVar4 = *(uint64 *)(pStatics + 8);
+              uVar4 = UIPopupList.mChild;
               Object.Destroy(uVar4,0x3e19999a,0);
               fVar10 = (float)Time.get_unscaledTime(0);
               fVar9 = (float)Mathf.Max(0x3dcccccd,0x3e19999a,0);
               fVar9 = fVar9 + fVar10;
             }
-            *(float *)(pStatics + 16) = fVar9;
+            UIPopupList.mFadeOutComplete = fVar9;
             this.mBackground = 0;
             this.mHighlight = 0;
-            puVar6 = (uint64 *)(pStatics + 8);
-            *puVar6 = 0;
-            il2cpp_internal(puVar6,0);
-            puVar6 = *(uint64 **)(DAT_181d8add8 + 184);
+            UIPopupList.mChild = 0;
+            puVar6 = *(uint64 **)(UIPopupList_StaticsPtr + 184);
             *puVar6 = 0;
             il2cpp_internal(puVar6,0);
           }
@@ -1555,7 +1537,7 @@ public class UIPopupList
         lVar1 = this[35];
         iVar3 = Time.get_frameCount(0);
         if ((int)lVar1 != iVar3) {
-          uVar4 = *(uint64 *)(*(int64 *)(DAT_181d8add8 + 184) + 8);
+          uVar4 = UIPopupList.mChild;
           cVar2 = Object.op_Equality(uVar4,0,0);
           if (!cVar2) {
             lVar1 = this[31];
@@ -1574,7 +1556,7 @@ public class UIPopupList
           }
           else if (1 < (int)this[25] - 2U) {
             if ((int)this[25] == 1) {
-              if (*(int *)(*(int64 *)(DAT_181d8a458 + 184) + 212) != -2) {
+              if (UICamera.currentTouchID != -2) {
                 return;
               }
             }
@@ -1587,8 +1569,6 @@ public class UIPopupList
     // RVA   : 0x157BC80   Offset: 0x157A480   Length: 0x1B
     protected virtual void OnDoubleClick()
     {
-        void FUN_18157bc80(int64 *this)
-        {
         if ((int)this[25] == 2) {
                           // WARNING: Could not recover jumptable at 0x00018157bc93. Too many branches
                           // WARNING: Treating indirect jump as call
@@ -1613,9 +1593,7 @@ public class UIPopupList
     // RVA   : 0x157C9F0   Offset: 0x157B1F0   Length: 0x2563
     public virtual void Show()
     {
-        var pStatics_ac58 = *(int64*)(DAT_181d8ac58 + 184);
-        var pStatics_add8 = *(int64*)(DAT_181d8add8 + 184);
-        var pStatics_af58 = *(int64*)(DAT_181d8af58 + 184);
+        var pStatics = *(int64*)(DAT_181d8af58 + 184);
         ulong uVar1;
         byte[] auVar2 = new byte[12];
         ulong uVar3;
@@ -1708,7 +1686,7 @@ public class UIPopupList
         uVar7 = Component.get_gameObject(this,0);
         cVar4 = NGUITools.GetActive(uVar7,0);
         if (!cVar4) goto LAB_18157eead;
-        uVar7 = *(uint64 *)(pStatics_add8 + 8);
+        uVar7 = UIPopupList.mChild;
         cVar4 = Object.op_Equality(uVar7,0,0);
         if (!cVar4) goto LAB_18157eead;
         lVar8 = this[5];
@@ -1787,10 +1765,8 @@ public class UIPopupList
           }
         }
         uVar7 = new GameObject("Drop-down List",0);
-        puVar18 = (uint64 *)(pStatics_add8 + 8);
-        *puVar18 = uVar7;
-        il2cpp_internal(puVar18,uVar7);
-        lVar8 = *(int64 *)(pStatics_add8 + 8);
+        UIPopupList.mChild = uVar7;
+        lVar8 = UIPopupList.mChild;
         lVar10 = Component.get_gameObject(this,0);
         if ((lVar10 == null) || (uVar5 = GameObject.get_layer(lVar10,0), lVar8 == null)) throw; // [null/range check failed]
         GameObject.set_layer(lVar8,uVar5,0);
@@ -1801,24 +1777,24 @@ public class UIPopupList
             uVar7 = Component.GetComponent(this,DAT_181d6b3c0);
             cVar4 = Object.op_Inequality(uVar7,0,0);
             if (cVar4) {
-              lVar8 = *(int64 *)(pStatics_add8 + 8);
+              lVar8 = UIPopupList.mChild;
               if ((lVar8 == null) || (lVar8 = GameObject.AddComponent(lVar8,DAT_181d9cdf8)) == null)
               throw; // [null/range check failed]
               Rigidbody2D.set_isKinematic(lVar8,1,0);
             }
           }
           else {
-            lVar8 = *(int64 *)(pStatics_add8 + 8);
+            lVar8 = UIPopupList.mChild;
             if ((lVar8 == null) || (lVar8 = GameObject.AddComponent(lVar8,DAT_181d9cd70)) == null)
             throw; // [null/range check failed]
             Rigidbody.set_isKinematic(lVar8,1,0);
           }
-          lVar8 = *(int64 *)(pStatics_add8 + 8);
+          lVar8 = UIPopupList.mChild;
           if ((lVar8 == null) || (lVar8 = GameObject.AddComponent(lVar8,DAT_181d9de70)) == null)
           throw; // [null/range check failed]
           if (*(int *)(lVar8 + 0x150) != 1000000) {
             *(uint32 *)(lVar8 + 0x150) = 1000000;
-            lVar10 = *pStatics_ac58;
+            lVar10 = UIPanel.list;
             uVar7 = new OnTooltipCB(0,DAT_181d9cc90,DAT_181d86518);
             if (lVar10 == null) throw; // [null/range check failed]
             List_1.Sort(lVar10,uVar7,DAT_181d82878);
@@ -1827,17 +1803,17 @@ public class UIPopupList
           iVar6 = *(int *)(*plVar16 + 0x154);
           if (*(int *)(lVar8 + 0x154) != iVar6) {
             *(int *)(lVar8 + 0x154) = iVar6;
-            if (*pStatics_ac58 == 0) throw; // [null/range check failed]
-            uVar5 = FUN_1817ff280(*pStatics_ac58,lVar8,DAT_181d82778);
+            if (UIPanel.list == null) throw; // [null/range check failed]
+            uVar5 = FUN_1817ff280(UIPanel.list,lVar8,DAT_181d82778);
             UIPanel.UpdateDrawCalls(lVar8,uVar5,0);
           }
         }
-        puVar18 = *(uint64 **)(DAT_181d8add8 + 184);
+        puVar18 = *(uint64 **)(UIPopupList_StaticsPtr + 184);
         *puVar18 = this;
         il2cpp_internal(puVar18,this);
         if (*plVar16 == 0) throw; // [null/range check failed]
         lVar10 = UIRect.get_cachedTransform(*plVar16,0);
-        lVar8 = *(int64 *)(pStatics_add8 + 8);
+        lVar8 = UIPopupList.mChild;
         local_120 = lVar10;
         if ((lVar8 == null) || (lVar8 = GameObject.get_transform(lVar8,0), local_1f8 = lVar8) == null)
         throw; // [null/range check failed]
@@ -1848,9 +1824,9 @@ public class UIPopupList
           lVar11 = Component.GetComponentInParent(*plVar16,DAT_181d6f540);
           cVar4 = Object.op_Equality(lVar11,0,0);
           if (cVar4) {
-            if (*pStatics_af58 == 0) throw; // [null/range check failed]
-            if (*(int *)(*pStatics_af58 + 24) != 0) {
-              lVar11 = *pStatics_af58;
+            if (*pStatics == 0) throw; // [null/range check failed]
+            if (*(int *)(*pStatics + 24) != 0) {
+              lVar11 = *pStatics;
               if (lVar11 == null) throw; // [null/range check failed]
               if (*(int *)(lVar11 + 24) == 0) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1959,12 +1935,12 @@ public class UIPopupList
           }
           lVar8 = this[3];
           lVar10 = this[7];
-          uVar7 = *(uint64 *)(pStatics_add8 + 8);
+          uVar7 = UIPopupList.mChild;
           uVar14 = il2cpp_internal(lVar8,DAT_181d55650);
           lVar8 = NGUITools.AddSprite(uVar7,uVar14,lVar10,iVar6,0);
         }
         else {
-          uVar7 = *(uint64 *)(pStatics_add8 + 8);
+          uVar7 = UIPopupList.mChild;
           lVar8 = NGUITools.AddWidget(uVar7,iVar6,DAT_181d65f80);
           if (lVar8 == null) throw; // [null/range check failed]
           UI2DSprite.set_sprite2D(lVar8,this[9],0);
@@ -2025,12 +2001,12 @@ public class UIPopupList
                     }
                     lVar8 = this[3];
                     lVar10 = this[8];
-                    uVar7 = *(uint64 *)(pStatics_add8 + 8);
+                    uVar7 = UIPopupList.mChild;
                     uVar14 = il2cpp_internal(lVar8,DAT_181d55650);
                     lVar8 = NGUITools.AddSprite(uVar7,uVar14,lVar10,iVar6 + 1,0);
                   }
                   else {
-                    uVar7 = *(uint64 *)(pStatics_add8 + 8);
+                    uVar7 = UIPopupList.mChild;
                     lVar8 = NGUITools.AddWidget(uVar7,iVar6 + 1,DAT_181d65f80);
                     if (lVar8 == null) throw; // [null/range check failed]
                     UI2DSprite.set_sprite2D(lVar8,this[10],0);
@@ -2097,7 +2073,8 @@ public class UIPopupList
                                 uVar7 = *(uint64 *)
                                          (*(int64 *)(lVar10 + 16) + 32 + (int64)(int)uVar19 * 8)
                                 ;
-                                uVar14 = *(uint64 *)(pStatics_add8 + 8);
+                                uVar14 = UIPopupList.mChild
+                                ;
                                 if (this[29] == 0) throw; // [null/range check failed]
                                 iVar6 = *(int *)(this[29] + 172);
                                 lVar10 = NGUITools.AddWidget(uVar14,iVar6 + 2,DAT_181d66000);

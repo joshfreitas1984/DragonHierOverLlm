@@ -71,7 +71,7 @@ public class ResourcePointData
     public ResourcePointTypeData DataBase()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 0x188)) != null) {
           FUN_1817cc780(lVar1,this.resourcePointTypeID,DAT_181d98100);
           return;
@@ -218,14 +218,14 @@ public class ResourcePointData
     // RVA   : 0xC65B90   Offset: 0xC64390   Length: 0xCC
     public ForceData GetForce()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         if (this.belongForceID < 0) {
           return 0;
         }
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           uVar2 = WorldData.GetForce(lVar1,this.belongForceID,0);
           return uVar2;
         }
@@ -235,14 +235,14 @@ public class ResourcePointData
     // RVA   : 0xC65960   Offset: 0xC64160   Length: 0xCC
     public AreaData GetArea()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         if (this.connectAreaID < 0) {
           return 0;
         }
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           uVar2 = WorldData.GetArea(lVar1,this.connectAreaID,0);
           return uVar2;
         }

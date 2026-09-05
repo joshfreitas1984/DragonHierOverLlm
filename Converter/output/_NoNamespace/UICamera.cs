@@ -337,7 +337,7 @@ public class UICamera
     public static bool get_disableController()
     {
         bool cVar1;
-        if (*(char *)(*(int64 *)(DAT_181d8a458 + 184) + 91) == false) {
+        if (!UICamera.mDisableController) {
           return false;
         }
         cVar1 = UIPopupList.get_isOpen(0);
@@ -348,14 +348,14 @@ public class UICamera
     // RVA   : 0x13D01B0   Offset: 0x13CE9B0   Length: 0x5D
     public static void set_disableController(bool value)
     {
-        *(uint8 *)(*(int64 *)(DAT_181d8a458 + 184) + 91) = value;
+        UICamera.mDisableController = value;
     }
 
     // Token : 0x60006DB
     // RVA   : 0x13CF1E0   Offset: 0x13CD9E0   Length: 0x66
     public static Vector2 get_lastTouchPosition()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 92);
+        return UICamera.mLastPos;
     }
 
     // Token : 0x60006DC
@@ -365,7 +365,7 @@ public class UICamera
         long lVar1;
         uint local_res18;
         uint32 uStackX_1c;
-        lVar1 = *(int64 *)(DAT_181d8a458 + 184);
+        lVar1 = *(int64 *)(UICamera_StaticsPtr + 184);
         local_res18 = (uint32)value;
         uStackX_1c = (uint32)((uint64)value >> 32);
         *(uint32 *)(lVar1 + 92) = local_res18;
@@ -416,7 +416,7 @@ public class UICamera
             FUN_1800d6620();
           }
         }
-        return *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 92);
+        return UICamera.mLastPos;
     }
 
     // Token : 0x60006DE
@@ -426,7 +426,7 @@ public class UICamera
         long lVar1;
         uint local_res18;
         uint32 uStackX_1c;
-        lVar1 = *(int64 *)(DAT_181d8a458 + 184);
+        lVar1 = *(int64 *)(UICamera_StaticsPtr + 184);
         local_res18 = (uint32)value;
         uStackX_1c = (uint32)((uint64)value >> 32);
         *(uint32 *)(lVar1 + 92) = local_res18;
@@ -437,18 +437,17 @@ public class UICamera
     // RVA   : 0x13CE2E0   Offset: 0x13CCAE0   Length: 0xE6
     public static UICamera get_first()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         ulong uVar2;
-        if (*pStatics == 0) {
+        if (UICamera.list == null) {
           return 0;
         }
-        if (*pStatics != 0) {
-          if (*(int *)(*pStatics + 24) == 0) {
+        if (UICamera.list != null) {
+          if (UICamera.list.eventType == null) {
             return 0;
           }
-          if ((*pStatics != 0) &&
-             (lVar1 = *(int64 *)(*pStatics + 16)) != null) {
+          if ((UICamera.list != null) &&
+             (lVar1 = *(int64 *)(UICamera.list + 16)) != null) {
             if (*(int *)(lVar1 + 24) == 0) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -463,41 +462,40 @@ public class UICamera
     // RVA   : 0x13CDB90   Offset: 0x13CC390   Length: 0x251
     public static ControlScheme get_currentScheme()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
-        if (*(int *)(pStatics + 216) == 0) {
+        if (UICamera.mCurrentKey == null) {
           return 1;
         }
-        if (0x149 < *(int *)(pStatics + 216)) {
+        if (0x149 < UICamera.mCurrentKey) {
           return 2;
         }
-        uVar1 = *(uint64 *)(pStatics + 184);
+        uVar1 = UICamera.current;
         cVar3 = Object.op_Inequality(uVar1,0,0);
         if (!cVar3) {
           return 0;
         }
-        if (*(int *)(pStatics + 208) == 2) {
-          lVar2 = *(int64 *)(pStatics + 184);
+        if (UICamera.mLastScheme == 2) {
+          lVar2 = UICamera.current;
           if (lVar2 == null) throw; // [null/range check failed]
-          if (*(int *)(pStatics + 216) == *(int *)(lVar2 + 124)) {
+          if (UICamera.mCurrentKey == lVar2.submitKey0) {
             return 2;
           }
-          lVar2 = *(int64 *)(pStatics + 184);
+          lVar2 = UICamera.current;
           if (lVar2 == null) throw; // [null/range check failed]
-          if (*(int *)(pStatics + 216) == *(int *)(lVar2 + 128)) {
+          if (UICamera.mCurrentKey == lVar2.submitKey1) {
             return 2;
           }
         }
-        lVar2 = *(int64 *)(pStatics + 184);
+        lVar2 = UICamera.current;
         if (lVar2 != null) {
-          if (*(char *)(lVar2 + 41) != false) {
+          if (lVar2.useMouse) {
             return 0;
           }
-          lVar2 = *(int64 *)(pStatics + 184);
+          lVar2 = UICamera.current;
           if (lVar2 != null) {
-            if (*(char *)(lVar2 + 42) != false) {
+            if (lVar2.useTouch) {
               return 1;
             }
             return 2;
@@ -509,9 +507,8 @@ public class UICamera
     // RVA   : 0x13D0090   Offset: 0x13CE890   Length: 0x11F
     public static void set_currentScheme(ControlScheme value)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
-        if (*(int *)(pStatics + 208) != value) {
+        if (UICamera.mLastScheme != value) {
           if (value == null) {
             uVar1 = 0x143;
           }
@@ -525,7 +522,7 @@ public class UICamera
             uVar1 = 48;
           }
           UICamera.set_currentKey(uVar1,0);
-          *(int *)(pStatics + 208) = value;
+          UICamera.mLastScheme = value;
         }
     }
 
@@ -533,55 +530,54 @@ public class UICamera
     // RVA   : 0x13CD980   Offset: 0x13CC180   Length: 0x5A
     public static KeyCode get_currentKey()
     {
-        return *(uint32 *)(*(int64 *)(DAT_181d8a458 + 184) + 216);
+        return UICamera.mCurrentKey;
     }
 
     // Token : 0x60006E3
     // RVA   : 0x13CFD80   Offset: 0x13CE580   Length: 0x309
     public static void set_currentKey(KeyCode value)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         long lVar2;
         bool cVar3;
         uint uVar4;
         ulong uVar5;
-        if (*(int *)(pStatics + 216) != value) {
-          iVar1 = *(int *)(pStatics + 208);
-          *(int *)(pStatics + 216) = value;
+        if (UICamera.mCurrentKey != value) {
+          iVar1 = UICamera.mLastScheme;
+          UICamera.mCurrentKey = value;
           uVar4 = UICamera.get_currentScheme(0);
-          *(uint32 *)(pStatics + 208) = uVar4;
-          if (iVar1 == *(int *)(pStatics + 208)) {
+          UICamera.mLastScheme = uVar4;
+          if (iVar1 == UICamera.mLastScheme) {
             return;
           }
           UICamera.ShowTooltip(0,0);
-          if (*(int *)(pStatics + 208) == 0) {
+          if (UICamera.mLastScheme == null) {
             Cursor.set_lockState(0,0);
             Cursor.set_visible(1,0);
           }
           else {
-            uVar5 = *(uint64 *)(pStatics + 184);
+            uVar5 = UICamera.current;
             cVar3 = Object.op_Inequality(uVar5,0,0);
             if (cVar3) {
-              lVar2 = *(int64 *)(pStatics + 184);
+              lVar2 = UICamera.current;
               if (lVar2 == null) goto LAB_1813d0074;
-              if (*(char *)(lVar2 + 140) != false) {
+              if (lVar2.autoHideCursor) {
                 Cursor.set_visible(0,0);
                 Cursor.set_lockState(1);
-                lVar2 = *(int64 *)(pStatics + 0x188);
+                lVar2 = UICamera.mMouse;
                 if (lVar2 == null) goto LAB_1813d0074;
-                if (*(int *)(lVar2 + 24) == 0) {
+                if (lVar2.eventType == null) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                   FUN_1800d65f0(uVar5,0);
                 }
-                if (*(int64 *)(lVar2 + 32) == 0) goto LAB_1813d0074;
-                *(uint32 *)(*(int64 *)(lVar2 + 32) + 120) = 2;
+                if (lVar2.eventReceiverMask == null) goto LAB_1813d0074;
+                *(uint32 *)(lVar2.eventReceiverMask + 120) = 2;
               }
             }
           }
-          if (*(int64 *)(pStatics + 200) != 0) {
-            lVar2 = *(int64 *)(pStatics + 200);
+          if (UICamera.onSchemeChange != null) {
+            lVar2 = UICamera.onSchemeChange;
             if (lVar2 == null) {
         LAB_1813d0074:
                           // WARNING: Subroutine does not return
@@ -596,7 +592,6 @@ public class UICamera
     // RVA   : 0x13CD9E0   Offset: 0x13CC1E0   Length: 0x1A7
     public static Ray get_currentRay()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar2;
         long lVar3;
@@ -607,16 +602,16 @@ public class UICamera
         uint local_40;
         ulong local_28;
         uint local_20;
-        uVar1 = *(uint64 *)(pStatics + 192);
+        uVar1 = UICamera.currentCamera;
         cVar5 = Object.op_Inequality(uVar1,0,0);
         if (cVar5) {
-          if (*(int64 *)(pStatics + 224) != 0) {
-            lVar2 = *(int64 *)(pStatics + 224);
-            lVar3 = *(int64 *)(pStatics + 192);
+          if (UICamera.currentTouch != null) {
+            lVar2 = UICamera.currentTouch;
+            lVar3 = UICamera.currentCamera;
             if (lVar2 != null) {
-              local_48 = *(uint32 *)(lVar2 + 20);
+              local_48 = lVar2.pos;
               uStack_44 = *(uint32 *)(lVar2 + 24);
-              local_28 = *(uint64 *)(lVar2 + 20);
+              local_28 = lVar2.pos;
               local_40 = 0;
               if (lVar3 != null) {
                 local_20 = 0;
@@ -643,15 +638,14 @@ public class UICamera
     // RVA   : 0x13CE720   Offset: 0x13CCF20   Length: 0x120
     public static bool get_inputHasFocus()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
-        if (*(char *)(pStatics + 232) != false) {
-          uVar1 = *(uint64 *)(pStatics + 0x1e8);
+        if (UICamera.mInputFocus) {
+          uVar1 = UICamera.mSelected;
           cVar3 = Object.op_Implicit(uVar1,0);
           if (cVar3) {
-            lVar2 = *(int64 *)(pStatics + 0x1e8);
+            lVar2 = UICamera.mSelected;
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -669,16 +663,14 @@ public class UICamera
     // RVA   : 0x13CE3D0   Offset: 0x13CCBD0   Length: 0x5B
     public static GameObject get_genericEventHandler()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 240);
+        return UICamera.mGenericHandler;
     }
 
     // Token : 0x60006E7
     // RVA   : 0x13D0210   Offset: 0x13CEA10   Length: 0x6B
     public static void set_genericEventHandler(GameObject value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 240);
-        *puVar1 = value;
-        il2cpp_internal(puVar1,value);
+        UICamera.mGenericHandler = value;
     }
 
     // Token : 0x60006E8
@@ -687,7 +679,7 @@ public class UICamera
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 0x188);
+        lVar1 = UICamera.mMouse;
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 24) != 0) {
             return *(uint64 *)(lVar1 + 32);
@@ -704,7 +696,7 @@ public class UICamera
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 0x188);
+        lVar1 = UICamera.mMouse;
         if (lVar1 != null) {
           if (1 < *(uint32 *)(lVar1 + 24)) {
             return *(uint64 *)(lVar1 + 40);
@@ -721,7 +713,7 @@ public class UICamera
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 0x188);
+        lVar1 = UICamera.mMouse;
         if (lVar1 != null) {
           if (2 < *(uint32 *)(lVar1 + 24)) {
             return *(uint64 *)(lVar1 + 48);
@@ -760,7 +752,7 @@ public class UICamera
     // RVA   : 0x13CF5F0   Offset: 0x13CDDF0   Length: 0x5B
     public static GameObject get_tooltipObject()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 0x1b0);
+        return UICamera.mTooltip;
     }
 
     // Token : 0x60006EE
@@ -778,7 +770,7 @@ public class UICamera
         ulong uVar2;
         uVar1 = Object.op_Equality(go,0,0);
         if ((char)!uVar1) {
-          uVar2 = *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 248);
+          uVar2 = UICamera.fallThrough;
           uVar1 = Object.op_Equality(go,uVar2,0);
           if ((char)!uVar1) {
             uVar2 = NGUITools.FindInParents(go,DAT_181d66b00);
@@ -793,7 +785,6 @@ public class UICamera
     // RVA   : 0x13CEB70   Offset: 0x13CD370   Length: 0x478
     public static bool get_isOverUI()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         bool cVar2;
         byte uVar3;
@@ -802,29 +793,29 @@ public class UICamera
         ulong uVar6;
         uint uVar7;
         iVar4 = Time.get_frameCount(0);
-        if (*(int *)(pStatics + 0x1d0) == iVar4) {
+        if (UICamera.mLastOverCheck == iVar4) {
         LAB_1813cee73:
-          return *(uint8 *)(pStatics + 0x1d4);
+          return UICamera.mLastOverResult;
         }
-        *(int *)(pStatics + 0x1d0) = iVar4;
-        if (*(int64 *)(pStatics + 224) == 0) {
+        UICamera.mLastOverCheck = iVar4;
+        if (UICamera.currentTouch == null) {
           iVar4 = 0;
-          lVar5 = *(int64 *)(pStatics + 0x198);
+          lVar5 = UICamera.activeTouches;
           if (lVar5 != null) {
             iVar1 = *(int *)(lVar5 + 24);
             if (0 < iVar1) {
               do {
-                lVar5 = *(int64 *)(pStatics + 0x198);
+                lVar5 = UICamera.activeTouches;
                 if ((lVar5 == null) || (lVar5 = FUN_180002f80(lVar5,iVar4,DAT_181d8c560)) == null)
                 goto LAB_1813cefd3;
-                cVar2 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80),0);
+                cVar2 = UICamera.IsPartOfUI(lVar5.pressed,0);
                 if (cVar2) goto LAB_1813ced88;
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar1);
             }
             uVar7 = 0;
             do {
-              lVar5 = *(int64 *)(pStatics + 0x188);
+              lVar5 = UICamera.mMouse;
               if (lVar5 == null) goto LAB_1813cefd3;
               if (*(uint32 *)(lVar5 + 24) <= uVar7) {
                 uVar6 = il2cpp_internal();
@@ -833,48 +824,48 @@ public class UICamera
               }
               lVar5 = lVar5[uVar7];
               if (lVar5 == null) goto LAB_1813cefd3;
-              uVar6 = *(uint64 *)(lVar5 + 80);
+              uVar6 = lVar5.pressed;
               cVar2 = Object.op_Inequality(uVar6,0,0);
               if (!cVar2) {
                 if (uVar7 == 0) {
-                  uVar6 = *(uint64 *)(lVar5 + 72);
+                  uVar6 = lVar5.current;
                 }
                 else {
                   uVar6 = 0;
                 }
               }
               else {
-                uVar6 = *(uint64 *)(lVar5 + 80);
+                uVar6 = lVar5.pressed;
               }
               cVar2 = UICamera.IsPartOfUI(uVar6);
               if (cVar2) goto LAB_1813ced88;
               uVar7 = uVar7 + 1;
             } while ((int)uVar7 < 3);
-            lVar5 = *(int64 *)(pStatics + 400);
+            lVar5 = UICamera.controller;
             if (lVar5 != null) {
-              uVar3 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80),0);
-              *(uint8 *)(pStatics + 0x1d4) = uVar3;
+              uVar3 = UICamera.IsPartOfUI(lVar5.pressed,0);
+              UICamera.mLastOverResult = uVar3;
               goto LAB_1813cee73;
             }
           }
         }
         else {
-          lVar5 = *(int64 *)(pStatics + 224);
+          lVar5 = UICamera.currentTouch;
           if (lVar5 != null) {
-            uVar6 = *(uint64 *)(lVar5 + 80);
+            uVar6 = lVar5.pressed;
             cVar2 = Object.op_Inequality(uVar6,0,0);
             if (!cVar2) {
-              lVar5 = *(int64 *)(pStatics + 224);
+              lVar5 = UICamera.currentTouch;
               if (lVar5 == null) goto LAB_1813cefd3;
-              uVar6 = *(uint64 *)(lVar5 + 72);
+              uVar6 = lVar5.current;
             }
             else {
-              lVar5 = *(int64 *)(pStatics + 224);
+              lVar5 = UICamera.currentTouch;
               if (lVar5 == null) goto LAB_1813cefd3;
-              uVar6 = *(uint64 *)(lVar5 + 80);
+              uVar6 = lVar5.pressed;
             }
             uVar3 = UICamera.IsPartOfUI(uVar6,0);
-            *(uint8 *)(pStatics + 0x1d4) = uVar3;
+            UICamera.mLastOverResult = uVar3;
             goto LAB_1813cefae;
           }
         }
@@ -882,16 +873,15 @@ public class UICamera
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         LAB_1813ced88:
-        *(uint8 *)(pStatics + 0x1d4) = 1;
+        UICamera.mLastOverResult = 1;
         LAB_1813cefae:
-        return *(uint8 *)(pStatics + 0x1d4);
+        return UICamera.mLastOverResult;
     }
 
     // Token : 0x60006F1
     // RVA   : 0x13CF6A0   Offset: 0x13CDEA0   Length: 0x433
     public static bool get_uiHasFocus()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         bool cVar2;
         byte uVar3;
@@ -900,30 +890,30 @@ public class UICamera
         ulong uVar6;
         uint uVar7;
         iVar4 = Time.get_frameCount(0);
-        if (*(int *)(pStatics + 0x1c8) == iVar4) {
+        if (UICamera.mLastFocusCheck == iVar4) {
         LAB_1813cfa08:
-          return *(uint8 *)(pStatics + 0x1cc);
+          return UICamera.mLastFocusResult;
         }
-        *(int *)(pStatics + 0x1c8) = iVar4;
+        UICamera.mLastFocusCheck = iVar4;
         cVar2 = UICamera.get_inputHasFocus(0);
         if (cVar2) goto LAB_1813cf880;
-        if (*(int64 *)(pStatics + 224) == 0) {
+        if (UICamera.currentTouch == null) {
           iVar4 = 0;
-          lVar5 = *(int64 *)(pStatics + 0x198);
+          lVar5 = UICamera.activeTouches;
           if (lVar5 != null) {
             iVar1 = *(int *)(lVar5 + 24);
             if (0 < iVar1) {
               do {
-                lVar5 = *(int64 *)(pStatics + 0x198);
+                lVar5 = UICamera.activeTouches;
                 if (lVar5 == null) throw; // [null/range check failed]
                 lVar5 = FUN_180002f80(lVar5,iVar4,DAT_181d8c560);
                 if (lVar5 == null) throw; // [null/range check failed]
-                cVar2 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80),0);
+                cVar2 = UICamera.IsPartOfUI(lVar5.pressed,0);
                 if (cVar2) goto LAB_1813cf880;
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar1);
             }
-            lVar5 = *(int64 *)(pStatics + 0x188);
+            lVar5 = UICamera.mMouse;
             if (lVar5 != null) {
               if (*(int *)(lVar5 + 24) == 0) {
                 uVar6 = il2cpp_internal();
@@ -932,14 +922,14 @@ public class UICamera
               }
               lVar5 = *(int64 *)(lVar5 + 32);
               if (lVar5 != null) {
-                cVar2 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80),0);
+                cVar2 = UICamera.IsPartOfUI(lVar5.pressed,0);
                 if (!cVar2) {
-                  uVar6 = *(uint64 *)(lVar5 + 72);
+                  uVar6 = lVar5.current;
                   cVar2 = UICamera.IsPartOfUI(uVar6,0);
                   if (!cVar2) {
                     uVar7 = 1;
                     do {
-                      lVar5 = *(int64 *)(pStatics + 0x188);
+                      lVar5 = UICamera.mMouse;
                       if (lVar5 == null) throw; // [null/range check failed]
                       if (*(uint32 *)(lVar5 + 24) <= uVar7) {
                         uVar6 = il2cpp_internal();
@@ -948,32 +938,32 @@ public class UICamera
                       }
                       lVar5 = lVar5[uVar7];
                       if (lVar5 == null) throw; // [null/range check failed]
-                      cVar2 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80));
+                      cVar2 = UICamera.IsPartOfUI(lVar5.pressed);
                       if (cVar2) goto LAB_1813cf880;
                       uVar7 = uVar7 + 1;
                     } while ((int)uVar7 < 3);
-                    lVar5 = *(int64 *)(pStatics + 400);
+                    lVar5 = UICamera.controller;
                     if (lVar5 != null) {
-                      uVar3 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80),0);
-                      *(uint8 *)(pStatics + 0x1cc) = uVar3;
+                      uVar3 = UICamera.IsPartOfUI(lVar5.pressed,0);
+                      UICamera.mLastFocusResult = uVar3;
                       goto LAB_1813cfa08;
                     }
                     throw; // [null/range check failed]
                   }
                 }
         LAB_1813cf880:
-                *(uint8 *)(pStatics + 0x1cc) = 1;
-                return *(uint8 *)(pStatics + 0x1cc);
+                UICamera.mLastFocusResult = 1;
+                return UICamera.mLastFocusResult;
               }
             }
           }
         }
         else {
-          lVar5 = *(int64 *)(pStatics + 224);
+          lVar5 = UICamera.currentTouch;
           if (lVar5 != null) {
             uVar3 = MouseOrTouch.get_isOverUI(lVar5,0);
-            *(uint8 *)(pStatics + 0x1cc) = uVar3;
-            return *(uint8 *)(pStatics + 0x1cc);
+            UICamera.mLastFocusResult = uVar3;
+            return UICamera.mLastFocusResult;
           }
         }
     }
@@ -982,7 +972,6 @@ public class UICamera
     // RVA   : 0x13CE850   Offset: 0x13CD050   Length: 0x31C
     public static bool get_interactingWithUI()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         bool cVar2;
         byte uVar3;
@@ -991,39 +980,39 @@ public class UICamera
         ulong uVar6;
         uint uVar7;
         iVar4 = Time.get_frameCount(0);
-        if (*(int *)(pStatics + 0x1c0) == iVar4) {
+        if (UICamera.mLastInteractionCheck == iVar4) {
         LAB_1813ceaf8:
-          return *(uint8 *)(pStatics + 0x1c4);
+          return UICamera.mLastInteractionResult;
         }
-        *(int *)(pStatics + 0x1c0) = iVar4;
+        UICamera.mLastInteractionCheck = iVar4;
         cVar2 = UICamera.get_inputHasFocus(0);
         if (cVar2) {
         LAB_1813ceb37:
-          if ((*(byte *)(DAT_181d8a458 + 0x133) & 4) != 0) {
-            iVar4 = *(int *)(DAT_181d8a458 + 224);
+          if ((*(byte *)(UICamera_StaticsPtr + 0x133) & 4) != 0) {
+            iVar4 = *(int *)(UICamera_StaticsPtr + 224);
         LAB_1813cea4f:
             if (iVar4 == 0) {
-              il2cpp_runtime_class_init(DAT_181d8a458);
+              il2cpp_runtime_class_init(UICamera_StaticsPtr);
             }
           }
         LAB_1813cea60:
-          *(uint8 *)(pStatics + 0x1c4) = 1;
-          return *(uint8 *)(pStatics + 0x1c4);
+          UICamera.mLastInteractionResult = 1;
+          return UICamera.mLastInteractionResult;
         }
         iVar4 = 0;
-        lVar5 = *(int64 *)(pStatics + 0x198);
+        lVar5 = UICamera.activeTouches;
         if (lVar5 != null) {
           iVar1 = *(int *)(lVar5 + 24);
           uVar7 = 0;
           if (0 < iVar1) {
             do {
-              lVar5 = *(int64 *)(pStatics + 0x198);
+              lVar5 = UICamera.activeTouches;
               if ((lVar5 == null) || (lVar5 = FUN_180002f80(lVar5,iVar4,DAT_181d8c560)) == null)
               throw; // [null/range check failed]
-              cVar2 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80),0);
+              cVar2 = UICamera.IsPartOfUI(lVar5.pressed,0);
               if (cVar2) {
-                if ((*(byte *)(DAT_181d8a458 + 0x133) & 4) == 0) goto LAB_1813cea60;
-                iVar4 = *(int *)(DAT_181d8a458 + 224);
+                if ((*(byte *)(UICamera_StaticsPtr + 0x133) & 4) == 0) goto LAB_1813cea60;
+                iVar4 = *(int *)(UICamera_StaticsPtr + 224);
                 goto LAB_1813cea4f;
               }
               iVar4 = iVar4 + 1;
@@ -1031,7 +1020,7 @@ public class UICamera
             } while (iVar4 < iVar1);
           }
           do {
-            lVar5 = *(int64 *)(pStatics + 0x188);
+            lVar5 = UICamera.mMouse;
             if (lVar5 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar5 + 24) <= uVar7) {
               uVar6 = il2cpp_internal();
@@ -1040,14 +1029,14 @@ public class UICamera
             }
             lVar5 = lVar5[uVar7];
             if (lVar5 == null) throw; // [null/range check failed]
-            cVar2 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80));
+            cVar2 = UICamera.IsPartOfUI(lVar5.pressed);
             if (cVar2) goto LAB_1813ceb37;
             uVar7 = uVar7 + 1;
           } while ((int)uVar7 < 3);
-          lVar5 = *(int64 *)(pStatics + 400);
+          lVar5 = UICamera.controller;
           if (lVar5 != null) {
-            uVar3 = UICamera.IsPartOfUI(*(uint64 *)(lVar5 + 80),0);
-            *(uint8 *)(pStatics + 0x1c4) = uVar3;
+            uVar3 = UICamera.IsPartOfUI(lVar5.pressed,0);
+            UICamera.mLastInteractionResult = uVar3;
             goto LAB_1813ceaf8;
           }
         }
@@ -1057,40 +1046,37 @@ public class UICamera
     // RVA   : 0x13CE4D0   Offset: 0x13CCCD0   Length: 0x242
     public static GameObject get_hoveredObject()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
         int iVar4;
-        if (*(int64 *)(pStatics + 224) != 0) {
+        if (UICamera.currentTouch != null) {
           iVar4 = UICamera.get_currentScheme(0);
           if (iVar4 == 0) {
-            lVar1 = *(int64 *)(pStatics + 224);
+            lVar1 = UICamera.currentTouch;
             if (lVar1 == null) goto LAB_1813ce70d;
-            if (*(char *)(lVar1 + 118) == false) goto LAB_1813ce5d7;
+            if (!lVar1.dragStarted) goto LAB_1813ce5d7;
           }
-          lVar1 = *(int64 *)(pStatics + 224);
+          lVar1 = UICamera.currentTouch;
           if (lVar1 != null) {
-            return *(uint64 *)(lVar1 + 72);
+            return lVar1.current;
           }
         LAB_1813ce70d:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         LAB_1813ce5d7:
-        uVar2 = *(uint64 *)(pStatics + 0x1e0);
+        uVar2 = UICamera.mHover;
         cVar3 = Object.op_Implicit(uVar2,0);
         if (cVar3) {
-          lVar1 = *(int64 *)(pStatics + 0x1e0);
+          lVar1 = UICamera.mHover;
           if (lVar1 == null) goto LAB_1813ce70d;
           cVar3 = GameObject.get_activeInHierarchy(lVar1,0);
           if (cVar3) {
-            return *(uint64 *)(pStatics + 0x1e0);
+            return UICamera.mHover;
           }
         }
-        puVar5 = (uint64 *)(pStatics + 0x1e0);
-        *puVar5 = 0;
-        il2cpp_internal(puVar5,0);
+        UICamera.mHover = 0;
         return 0;
     }
 
@@ -1098,7 +1084,7 @@ public class UICamera
     // RVA   : 0x13D0280   Offset: 0x13CEA80   Length: 0x9ED
     public static void set_hoveredObject(GameObject value)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         long lVar1;
         bool cVar3;
         int iVar4;
@@ -1107,90 +1093,87 @@ public class UICamera
         ulong uVar7;
         long lVar8;
         byte[] local_res8 = new byte[8];
-        uVar7 = *(uint64 *)(pStatics + 0x1e0);
+        uVar7 = UICamera.mHover;
         cVar3 = Object.op_Equality(uVar7,value,0);
         if (!cVar3) {
           bVar2 = false;
-          lVar1 = *(int64 *)(pStatics + 184);
-          if (*(int64 *)(pStatics + 224) == 0) {
+          lVar1 = UICamera.current;
+          if (UICamera.currentTouch == null) {
             bVar2 = true;
-            *(uint32 *)(pStatics + 212) = 0xffffff9c;
-            *(uint64 *)(pStatics + 224) =
-                 *(uint64 *)(pStatics + 400);
+            UICamera.currentTouchID = 0xffffff9c;
+            UICamera.currentTouch =
+                 UICamera.controller;
             il2cpp_internal();
           }
           UICamera.ShowTooltip(0,0);
-          uVar7 = *(uint64 *)(pStatics + 0x1e8);
+          uVar7 = UICamera.mSelected;
           cVar3 = Object.op_Implicit(uVar7,0);
           if (cVar3) {
             iVar4 = UICamera.get_currentScheme(0);
             if (iVar4 == 2) {
-              uVar7 = *(uint64 *)(pStatics + 0x1e8);
+              uVar7 = UICamera.mSelected;
               local_res8[0] = 0;
               uVar6 = il2cpp_value_box(DAT_181d8d920,local_res8);
               UICamera.Notify(uVar7,"OnSelect",uVar6,0);
-              if (*(int64 *)(pStatics + 0x120) != 0) {
-                lVar8 = *(int64 *)(pStatics + 0x120);
+              if (UICamera.onSelect != null) {
+                lVar8 = UICamera.onSelect;
                 if (lVar8 == null) goto LAB_1813d0c58;
-                OnTooltipCB.Invoke(lVar8,*(uint64 *)(pStatics + 0x1e8),0,0
-                                   );
+                OnTooltipCB.Invoke(lVar8,*(uint64 *)
+                                           (pUICamera + 0x1e8),0,0);
               }
-              puVar9 = (uint64 *)(pStatics + 0x1e8);
-              *puVar9 = 0;
-              il2cpp_internal(puVar9,0);
+              UICamera.mSelected = 0;
             }
           }
-          uVar7 = *(uint64 *)(pStatics + 0x1e0);
+          uVar7 = UICamera.mHover;
           cVar3 = Object.op_Implicit(uVar7,0);
           if (cVar3) {
-            uVar7 = *(uint64 *)(pStatics + 0x1e0);
+            uVar7 = UICamera.mHover;
             local_res8[0] = 0;
             uVar6 = il2cpp_value_box(DAT_181d8d920,local_res8);
             UICamera.Notify(uVar7,"OnHover",uVar6,0);
-            if (*(int64 *)(pStatics + 0x110) != 0) {
-              lVar8 = *(int64 *)(pStatics + 0x110);
+            if (UICamera.onHover != null) {
+              lVar8 = UICamera.onHover;
               if (lVar8 == null) goto LAB_1813d0c58;
-              OnTooltipCB.Invoke(lVar8,*(uint64 *)(pStatics + 0x1e0),0,0);
+              OnTooltipCB.Invoke(lVar8,UICamera.mHover
+                                  ,0,0);
             }
           }
-          puVar9 = (uint64 *)(pStatics + 0x1e0);
-          *puVar9 = value;
-          il2cpp_internal(puVar9,value);
-          lVar8 = *(int64 *)(pStatics + 224);
+          UICamera.mHover = value;
+          lVar8 = UICamera.currentTouch;
           if (lVar8 == null) {
         LAB_1813d0c58:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          *(uint32 *)(lVar8 + 112) = 0;
-          uVar7 = *(uint64 *)(pStatics + 0x1e0);
+          lVar8.clickNotification = 0;
+          uVar7 = UICamera.mHover;
           cVar3 = Object.op_Implicit(uVar7,0);
           if (cVar3) {
-            lVar8 = *(int64 *)(pStatics + 400);
-            uVar7 = *(uint64 *)(pStatics + 0x1e0);
+            lVar8 = UICamera.controller;
+            uVar7 = UICamera.mHover;
             if (lVar8 == null) goto LAB_1813d0c58;
-            uVar6 = *(uint64 *)(lVar8 + 72);
+            uVar6 = lVar8.current;
             cVar3 = Object.op_Inequality(uVar7,uVar6,0);
             if (cVar3) {
-              lVar8 = *(int64 *)(pStatics + 0x1e0);
+              lVar8 = UICamera.mHover;
               if (lVar8 == null) goto LAB_1813d0c58;
               uVar7 = GameObject.GetComponent(lVar8,DAT_181da2730);
               cVar3 = Object.op_Inequality(uVar7,0,0);
               if (cVar3) {
-                lVar8 = *(int64 *)(pStatics + 400);
+                lVar8 = UICamera.controller;
                 if (lVar8 == null) goto LAB_1813d0c58;
-                *(uint64 *)(lVar8 + 72) =
-                     *(uint64 *)(pStatics + 0x1e0);
+                lVar8.current =
+                     UICamera.mHover;
                 il2cpp_internal();
               }
             }
             if (bVar2) {
-              uVar7 = *(uint64 *)(pStatics + 0x1e0);
+              uVar7 = UICamera.mHover;
               cVar3 = Object.op_Inequality(uVar7,0,0);
               if (!cVar3) {
-                if ((*pStatics == 0) ||
-                   (lVar8 = *(int64 *)(*pStatics + 16)) == null)
-                goto LAB_1813d0c58;
+                if ((UICamera.list == null) ||
+                   (lVar8 = *(int64 *)(UICamera.list + 16)) == null
+                   ) goto LAB_1813d0c58;
                 if (*(int *)(lVar8 + 24) == 0) {
                   uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -1199,37 +1182,32 @@ public class UICamera
                 lVar8 = *(int64 *)(lVar8 + 32);
               }
               else {
-                lVar8 = *(int64 *)(pStatics + 0x1e0);
+                lVar8 = UICamera.mHover;
                 if (lVar8 == null) goto LAB_1813d0c58;
                 uVar5 = GameObject.get_layer(lVar8,0);
                 lVar8 = UICamera.FindCameraForLayer(uVar5,0);
               }
               cVar3 = Object.op_Inequality(lVar8,0,0);
               if (cVar3) {
-                plVar10 = (int64 *)(pStatics + 184);
-                *plVar10 = lVar8;
-                il2cpp_internal(plVar10,lVar8);
+                UICamera.current = lVar8;
                 if (lVar8 == null) goto LAB_1813d0c58;
                 uVar7 = UICamera.get_cachedCamera(lVar8,0);
-                puVar9 = (uint64 *)(pStatics + 192);
-                *puVar9 = uVar7;
-                il2cpp_internal(puVar9,uVar7);
+                UICamera.currentCamera = uVar7;
               }
             }
-            if (*(int64 *)(pStatics + 0x110) != 0) {
-              lVar8 = *(int64 *)(pStatics + 0x110);
+            if (UICamera.onHover != null) {
+              lVar8 = UICamera.onHover;
               if (lVar8 == null) goto LAB_1813d0c58;
-              OnTooltipCB.Invoke(lVar8,*(uint64 *)(pStatics + 0x1e0),1,0);
+              OnTooltipCB.Invoke(lVar8,UICamera.mHover
+                                  ,1,0);
             }
-            uVar7 = *(uint64 *)(pStatics + 0x1e0);
+            uVar7 = UICamera.mHover;
             local_res8[0] = 1;
             uVar6 = il2cpp_value_box(DAT_181d8d920,local_res8);
             UICamera.Notify(uVar7,"OnHover",uVar6,0);
           }
           if (bVar2) {
-            plVar10 = (int64 *)(pStatics + 184);
-            *plVar10 = lVar1;
-            il2cpp_internal(plVar10,lVar1);
+            UICamera.current = lVar1;
             cVar3 = Object.op_Inequality(lVar1,0,0);
             if (!cVar3) {
               uVar7 = 0;
@@ -1238,13 +1216,9 @@ public class UICamera
               if (lVar1 == null) goto LAB_1813d0c58;
               uVar7 = UICamera.get_cachedCamera(lVar1,0);
             }
-            puVar9 = (uint64 *)(pStatics + 192);
-            *puVar9 = uVar7;
-            il2cpp_internal(puVar9,uVar7);
-            puVar9 = (uint64 *)(pStatics + 224);
-            *puVar9 = 0;
-            il2cpp_internal(puVar9,0);
-            *(uint32 *)(pStatics + 212) = 0xffffff9c;
+            UICamera.currentCamera = uVar7;
+            UICamera.currentTouch = 0;
+            UICamera.currentTouchID = 0xffffff9c;
           }
         }
     }
@@ -1253,53 +1227,52 @@ public class UICamera
     // RVA   : 0x13CD390   Offset: 0x13CBB90   Length: 0x5E9
     public static GameObject get_controllerNavigationObject()
     {
-        var pStatics_a458 = *(int64*)(DAT_181d8a458 + 184);
-        var pStatics_aad8 = *(int64*)(DAT_181d8aad8 + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
         long lVar4;
         uint uVar6;
-        lVar4 = *(int64 *)(pStatics_a458 + 400);
+        lVar4 = UICamera.controller;
         if (lVar4 != null) {
-          uVar3 = *(uint64 *)(lVar4 + 72);
+          uVar3 = lVar4.current;
           cVar1 = Object.op_Implicit(uVar3,0);
           if (cVar1) {
-            lVar4 = *(int64 *)(pStatics_a458 + 400);
-            if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 72)) == null) throw; // [null/range check failed]
+
+            if ((lVar4 = UICamera.controller?.current) == null) throw; // [null/range check failed]
             cVar1 = GameObject.get_activeInHierarchy(lVar4,0);
             if (cVar1) {
-              lVar4 = *(int64 *)(pStatics_a458 + 400);
+              lVar4 = UICamera.controller;
               if (lVar4 != null) {
-                return *(uint64 *)(lVar4 + 72);
+                return lVar4.current;
               }
               throw; // [null/range check failed]
             }
           }
           iVar2 = UICamera.get_currentScheme(0);
           if (iVar2 == 2) {
-            uVar3 = *(uint64 *)(pStatics_a458 + 184);
+            uVar3 = UICamera.current;
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
-              lVar4 = *(int64 *)(pStatics_a458 + 184);
+              lVar4 = UICamera.current;
               if (lVar4 == null) throw; // [null/range check failed]
               if (*(char *)(lVar4 + 45) != false) {
-                if (*(char *)(pStatics_a458 + 90) == false) {
-                  if (*pStatics_aad8 == 0) throw; // [null/range check failed]
-                  if (0 < *(int *)(*pStatics_aad8 + 24)) {
+                if (!UICamera.ignoreControllerInput) {
+                  if (UIKeyNavigation.list == null) throw; // [null/range check failed]
+                  if (0 < UIKeyNavigation.list.constraint) {
                     uVar6 = 0;
                     do {
-                      if (*pStatics_aad8 == 0) throw; // [null/range check failed]
-                      if (*(int *)(*pStatics_aad8 + 24) <= (int)uVar6) {
-                        uVar3 = *(uint64 *)(pStatics_a458 + 0x1e0);
+                      if (UIKeyNavigation.list == null) throw; // [null/range check failed]
+                      if (UIKeyNavigation.list.constraint <=
+                          (int)uVar6) {
+                        uVar3 = UICamera.mHover;
                         cVar1 = Object.op_Equality(uVar3,0,0);
                         if (!cVar1) break;
                         uVar6 = 0;
                         goto LAB_1813cd820;
                       }
-                      if ((*pStatics_aad8 == 0) ||
-                         (lVar4 = *(int64 *)(*pStatics_aad8 + 16)) == null
-                         ) throw; // [null/range check failed]
+                      if ((UIKeyNavigation.list == null) ||
+                         (lVar4 = *(int64 *)(UIKeyNavigation.list + 16)
+                         , lVar4 == null)) throw; // [null/range check failed]
                       if (*(uint32 *)(lVar4 + 24) <= uVar6) {
                         uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -1309,7 +1282,7 @@ public class UICamera
                       cVar1 = Object.op_Implicit(lVar4,0);
                       if (cVar1) {
                         if (lVar4 == null) throw; // [null/range check failed]
-                        if ((*(int *)(lVar4 + 24) != 3) && (*(char *)(lVar4 + 80) != false))
+                        if ((*(int *)(lVar4 + 24) != 3) && (lVar4.pressed))
                         goto LAB_1813cd72b;
                       }
                       uVar6 = uVar6 + 1;
@@ -1320,7 +1293,7 @@ public class UICamera
             }
           }
         LAB_1813cd8fd:
-          lVar4 = *(int64 *)(pStatics_a458 + 400);
+          lVar4 = UICamera.controller;
           if (lVar4 != null) {
             puVar5 = (uint64 *)(lVar4 + 72);
             *puVar5 = 0;
@@ -1330,10 +1303,11 @@ public class UICamera
         }
         throw; // [null/range check failed]
         LAB_1813cd820:
-        if (*pStatics_aad8 == 0) throw; // [null/range check failed]
-        if (*(int *)(*pStatics_aad8 + 24) <= (int)uVar6) goto LAB_1813cd8fd;
-        if ((*pStatics_aad8 == 0) ||
-           (lVar4 = *(int64 *)(*pStatics_aad8 + 16)) == null)
+        if (UIKeyNavigation.list == null) throw; // [null/range check failed]
+        if (UIKeyNavigation.list.constraint <= (int)uVar6)
+        goto LAB_1813cd8fd;
+        if ((UIKeyNavigation.list == null) ||
+           (lVar4 = *(int64 *)(UIKeyNavigation.list + 16)) == null)
         throw; // [null/range check failed]
         if (*(uint32 *)(lVar4 + 24) <= uVar6) {
           uVar3 = il2cpp_internal();
@@ -1351,10 +1325,12 @@ public class UICamera
         LAB_1813cd72b:
         uVar3 = Component.get_gameObject(lVar4,0);
         UICamera.set_hoveredObject(uVar3,0);
-        lVar4 = *(int64 *)(pStatics_a458 + 400);
+        lVar4 = UICamera.controller;
         if (lVar4 != null) {
-          *(uint64 *)(lVar4 + 72) = *(uint64 *)(pStatics_a458 + 0x1e0);
-          return *(uint64 *)(pStatics_a458 + 0x1e0);
+          lVar4.current =
+               UICamera.mHover;
+          il2cpp_internal();
+          return UICamera.mHover;
         }
     }
 
@@ -1362,39 +1338,38 @@ public class UICamera
     // RVA   : 0x13CFAE0   Offset: 0x13CE2E0   Length: 0x299
     public static void set_controllerNavigationObject(GameObject value)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
         bool cVar4;
         ulong uVar5;
         byte[] local_res18 = new byte[16];
-        lVar1 = *(int64 *)(pStatics + 400);
+        lVar1 = UICamera.controller;
         if (lVar1 != null) {
-          uVar2 = *(uint64 *)(lVar1 + 72);
+          uVar2 = lVar1.current;
           cVar4 = Object.op_Inequality(uVar2,value,0);
           if (cVar4) {
-            lVar1 = *(int64 *)(pStatics + 400);
+            lVar1 = UICamera.controller;
             if (lVar1 == null) throw; // [null/range check failed]
-            uVar2 = *(uint64 *)(lVar1 + 72);
+            uVar2 = lVar1.current;
             cVar4 = Object.op_Implicit(uVar2,0);
             if (cVar4) {
-              lVar1 = *(int64 *)(pStatics + 400);
+              lVar1 = UICamera.controller;
               if (lVar1 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              uVar2 = *(uint64 *)(lVar1 + 72);
+              uVar2 = lVar1.current;
               local_res18[0] = 0;
               uVar5 = il2cpp_value_box(DAT_181d8d920,local_res18);
               UICamera.Notify(uVar2,"OnHover",uVar5,0);
-              if (*(int64 *)(pStatics + 0x110) != 0) {
-                lVar1 = *(int64 *)(pStatics + 400);
-                lVar3 = *(int64 *)(pStatics + 0x110);
+              if (UICamera.onHover != null) {
+                lVar1 = UICamera.controller;
+                lVar3 = UICamera.onHover;
                 if ((lVar1 == null) || (lVar3 == null)) throw; // [null/range check failed]
-                OnTooltipCB.Invoke(lVar3,*(uint64 *)(lVar1 + 72),0,0);
+                OnTooltipCB.Invoke(lVar3,lVar1.current,0,0);
               }
-              lVar1 = *(int64 *)(pStatics + 400);
+              lVar1 = UICamera.controller;
               if (lVar1 == null) throw; // [null/range check failed]
               puVar6 = (uint64 *)(lVar1 + 72);
               *puVar6 = 0;
@@ -1410,26 +1385,23 @@ public class UICamera
     // RVA   : 0x13CF480   Offset: 0x13CDC80   Length: 0x16B
     public static GameObject get_selectedObject()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
-        uVar1 = *(uint64 *)(pStatics + 0x1e8);
+        uVar1 = UICamera.mSelected;
         cVar3 = Object.op_Implicit(uVar1,0);
         if (cVar3) {
-          lVar2 = *(int64 *)(pStatics + 0x1e8);
+          lVar2 = UICamera.mSelected;
           if (lVar2 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           cVar3 = GameObject.get_activeInHierarchy(lVar2,0);
           if (cVar3) {
-            return *(uint64 *)(pStatics + 0x1e8);
+            return UICamera.mSelected;
           }
         }
-        puVar4 = (uint64 *)(pStatics + 0x1e8);
-        *puVar4 = 0;
-        il2cpp_internal(puVar4,0);
+        UICamera.mSelected = 0;
         return 0;
     }
 
@@ -1437,7 +1409,6 @@ public class UICamera
     // RVA   : 0x13D0D50   Offset: 0x13CF550   Length: 0x997
     public static void set_selectedObject(GameObject value)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         bool cVar2;
         byte uVar4;
@@ -1446,64 +1417,63 @@ public class UICamera
         ulong uVar7;
         long lVar8;
         byte[] local_res8 = new byte[8];
-        uVar7 = *(uint64 *)(pStatics + 0x1e8);
+        uVar7 = UICamera.mSelected;
         cVar2 = Object.op_Equality(uVar7,value,0);
         if (!cVar2) {
           UICamera.ShowTooltip(0,0);
           bVar11 = 0;
-          lVar1 = *(int64 *)(pStatics + 184);
-          if (*(int64 *)(pStatics + 224) == 0) {
+          lVar1 = UICamera.current;
+          if (UICamera.currentTouch == null) {
             bVar11 = 1;
-            *(uint32 *)(pStatics + 212) = 0xffffff9c;
-            *(uint64 *)(pStatics + 224) =
-                 *(uint64 *)(pStatics + 400);
+            UICamera.currentTouchID = 0xffffff9c;
+            UICamera.currentTouch =
+                 UICamera.controller;
             il2cpp_internal();
           }
-          *(uint8 *)(pStatics + 232) = 0;
-          uVar7 = *(uint64 *)(pStatics + 0x1e8);
+          UICamera.mInputFocus = 0;
+          uVar7 = UICamera.mSelected;
           cVar2 = Object.op_Implicit(uVar7,0);
           if (cVar2) {
-            uVar7 = *(uint64 *)(pStatics + 0x1e8);
+            uVar7 = UICamera.mSelected;
             local_res8[0] = 0;
             uVar6 = il2cpp_value_box(DAT_181d8d920,local_res8);
             UICamera.Notify(uVar7,"OnSelect",uVar6,0);
-            if (*(int64 *)(pStatics + 0x120) != 0) {
-              lVar8 = *(int64 *)(pStatics + 0x120);
+            if (UICamera.onSelect != null) {
+              lVar8 = UICamera.onSelect;
               if (lVar8 == null) goto LAB_1813d16d2;
-              OnTooltipCB.Invoke(lVar8,*(uint64 *)(pStatics + 0x1e8),0,0);
+              OnTooltipCB.Invoke(lVar8,UICamera.mSelected
+                                  ,0,0);
             }
           }
-          plVar9 = (int64 *)(pStatics + 0x1e8);
-          *plVar9 = value;
-          il2cpp_internal(plVar9,value);
-          lVar8 = *(int64 *)(pStatics + 224);
+          UICamera.mSelected = value;
+          lVar8 = UICamera.currentTouch;
           if (lVar8 == null) {
         LAB_1813d16d2:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          *(uint32 *)(lVar8 + 112) = 0;
+          lVar8.clickNotification = 0;
           cVar2 = Object.op_Inequality(value,0,0);
           if (cVar2) {
             if (value == null) goto LAB_1813d16d2;
             uVar7 = GameObject.GetComponent(value,DAT_181da2730);
             cVar2 = Object.op_Inequality(uVar7,0,0);
             if (cVar2) {
-              lVar8 = *(int64 *)(pStatics + 400);
+              lVar8 = UICamera.controller;
               if (lVar8 == null) goto LAB_1813d16d2;
               plVar9 = (int64 *)(lVar8 + 72);
               *plVar9 = value;
               il2cpp_internal(plVar9,value);
             }
           }
-          uVar7 = *(uint64 *)(pStatics + 0x1e8);
+          uVar7 = UICamera.mSelected;
           bVar3 = Object.op_Implicit(uVar7,0);
           if ((bVar11 & bVar3) != 0) {
-            uVar7 = *(uint64 *)(pStatics + 0x1e8);
+            uVar7 = UICamera.mSelected;
             cVar2 = Object.op_Inequality(uVar7,0,0);
             if (!cVar2) {
-              if ((*pStatics == 0) ||
-                 (lVar8 = *(int64 *)(*pStatics + 16)) == null)
+              if ((UICamera.list == null) ||
+                 (lVar8 = *(int64 *)(UICamera.list + 16)) == null)
               goto LAB_1813d16d2;
               if (*(int *)(lVar8 + 24) == 0) {
                 uVar7 = il2cpp_internal();
@@ -1513,53 +1483,48 @@ public class UICamera
               lVar8 = *(int64 *)(lVar8 + 32);
             }
             else {
-              lVar8 = *(int64 *)(pStatics + 0x1e8);
+              lVar8 = UICamera.mSelected;
               if (lVar8 == null) goto LAB_1813d16d2;
               uVar5 = GameObject.get_layer(lVar8,0);
               lVar8 = UICamera.FindCameraForLayer(uVar5,0);
             }
             cVar2 = Object.op_Inequality(lVar8,0,0);
             if (cVar2) {
-              plVar9 = (int64 *)(pStatics + 184);
-              *plVar9 = lVar8;
-              il2cpp_internal(plVar9,lVar8);
+              UICamera.current = lVar8;
               if (lVar8 == null) goto LAB_1813d16d2;
               uVar7 = UICamera.get_cachedCamera(lVar8,0);
-              puVar10 = (uint64 *)(pStatics + 192);
-              *puVar10 = uVar7;
-              il2cpp_internal(puVar10,uVar7);
+              UICamera.currentCamera = uVar7;
             }
           }
-          uVar7 = *(uint64 *)(pStatics + 0x1e8);
+          uVar7 = UICamera.mSelected;
           cVar2 = Object.op_Implicit(uVar7,0);
           if (cVar2) {
-            lVar8 = *(int64 *)(pStatics + 0x1e8);
+            lVar8 = UICamera.mSelected;
             if (lVar8 == null) goto LAB_1813d16d2;
             cVar2 = GameObject.get_activeInHierarchy(lVar8,0);
             if (!cVar2) {
               uVar4 = 0;
             }
             else {
-              lVar8 = *(int64 *)(pStatics + 0x1e8);
+              lVar8 = UICamera.mSelected;
               if (lVar8 == null) goto LAB_1813d16d2;
               uVar7 = GameObject.GetComponent(lVar8,DAT_181da26b0);
               uVar4 = Object.op_Inequality(uVar7,0,0);
             }
-            *(uint8 *)(pStatics + 232) = uVar4;
-            if (*(int64 *)(pStatics + 0x120) != 0) {
-              lVar8 = *(int64 *)(pStatics + 0x120);
+            UICamera.mInputFocus = uVar4;
+            if (UICamera.onSelect != null) {
+              lVar8 = UICamera.onSelect;
               if (lVar8 == null) goto LAB_1813d16d2;
-              OnTooltipCB.Invoke(lVar8,*(uint64 *)(pStatics + 0x1e8),1,0);
+              OnTooltipCB.Invoke(lVar8,UICamera.mSelected
+                                  ,1,0);
             }
-            uVar7 = *(uint64 *)(pStatics + 0x1e8);
+            uVar7 = UICamera.mSelected;
             local_res8[0] = 1;
             uVar6 = il2cpp_value_box(DAT_181d8d920,local_res8);
             UICamera.Notify(uVar7,"OnSelect",uVar6,0);
           }
           if (bVar11 != 0) {
-            plVar9 = (int64 *)(pStatics + 184);
-            *plVar9 = lVar1;
-            il2cpp_internal(plVar9,lVar1);
+            UICamera.current = lVar1;
             cVar2 = Object.op_Inequality(lVar1,0,0);
             if (!cVar2) {
               uVar7 = 0;
@@ -1568,18 +1533,14 @@ public class UICamera
               if (lVar1 == null) goto LAB_1813d16d2;
               uVar7 = UICamera.get_cachedCamera(lVar1,0);
             }
-            puVar10 = (uint64 *)(pStatics + 192);
-            *puVar10 = uVar7;
-            il2cpp_internal(puVar10,uVar7);
-            puVar10 = (uint64 *)(pStatics + 224);
-            *puVar10 = 0;
-            il2cpp_internal(puVar10,0);
-            *(uint32 *)(pStatics + 212) = 0xffffff9c;
+            UICamera.currentCamera = uVar7;
+            UICamera.currentTouch = 0;
+            UICamera.currentTouchID = 0xffffff9c;
           }
         }
         else {
           UICamera.set_hoveredObject(value,0);
-          lVar1 = *(int64 *)(pStatics + 400);
+          lVar1 = UICamera.controller;
           if (lVar1 == null) goto LAB_1813d16d2;
           plVar9 = (int64 *)(lVar1 + 72);
           *plVar9 = value;
@@ -1591,7 +1552,6 @@ public class UICamera
     // RVA   : 0x13C3020   Offset: 0x13C1820   Length: 0x268
     public static bool IsPressed(GameObject go)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         bool cVar2;
         byte uVar3;
@@ -1602,7 +1562,7 @@ public class UICamera
         iVar7 = 0;
         uVar6 = 0;
         do {
-          lVar4 = *(int64 *)(pStatics + 0x188);
+          lVar4 = UICamera.mMouse;
           if (lVar4 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar4 + 24) <= uVar6) {
             uVar5 = il2cpp_internal();
@@ -1611,29 +1571,29 @@ public class UICamera
           }
           lVar4 = lVar4[uVar6];
           if (lVar4 == null) throw; // [null/range check failed]
-          uVar5 = *(uint64 *)(lVar4 + 80);
+          uVar5 = lVar4.pressed;
           cVar2 = Object.op_Equality(uVar5,go,0);
           if (cVar2) goto LAB_1813c326f;
           uVar6 = uVar6 + 1;
         } while ((int)uVar6 < 3);
-        lVar4 = *(int64 *)(pStatics + 0x198);
+        lVar4 = UICamera.activeTouches;
         if (lVar4 != null) {
           iVar1 = *(int *)(lVar4 + 24);
           if (0 < iVar1) {
             do {
-              lVar4 = *(int64 *)(pStatics + 0x198);
+              lVar4 = UICamera.activeTouches;
               if (lVar4 == null) throw; // [null/range check failed]
               lVar4 = FUN_180002f80(lVar4,iVar7,DAT_181d8c560);
               if (lVar4 == null) throw; // [null/range check failed]
-              uVar5 = *(uint64 *)(lVar4 + 80);
+              uVar5 = lVar4.pressed;
               cVar2 = Object.op_Equality(uVar5,go,0);
               if (cVar2) goto LAB_1813c326f;
               iVar7 = iVar7 + 1;
             } while (iVar7 < iVar1);
           }
-          lVar4 = *(int64 *)(pStatics + 400);
+          lVar4 = UICamera.controller;
           if (lVar4 != null) {
-            uVar5 = *(uint64 *)(lVar4 + 80);
+            uVar5 = lVar4.pressed;
             cVar2 = Object.op_Equality(uVar5,go,0);
             uVar3 = 0;
             if (cVar2) {
@@ -1656,7 +1616,6 @@ public class UICamera
     // RVA   : 0x13C2080   Offset: 0x13C0880   Length: 0x2A7
     public static int CountInputSources()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -1666,16 +1625,16 @@ public class UICamera
         int iVar7;
         iVar7 = 0;
         iVar6 = 0;
-        lVar3 = *(int64 *)(pStatics + 0x198);
+        lVar3 = UICamera.activeTouches;
         if (lVar3 != null) {
           iVar1 = *(int *)(lVar3 + 24);
           uVar5 = 0;
           if (0 < iVar1) {
             do {
-              lVar3 = *(int64 *)(pStatics + 0x198);
+              lVar3 = UICamera.activeTouches;
               if ((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8c560)) == null)
               throw; // [null/range check failed]
-              uVar4 = *(uint64 *)(lVar3 + 80);
+              uVar4 = lVar3.pressed;
               cVar2 = Object.op_Inequality(uVar4,0,0);
               if (cVar2) {
                 iVar7 = iVar7 + 1;
@@ -1685,10 +1644,10 @@ public class UICamera
             } while (iVar6 < iVar1);
           }
           while( true ) {
-            lVar3 = *(int64 *)(pStatics + 0x188);
+            lVar3 = UICamera.mMouse;
             if (lVar3 == null) throw; // [null/range check failed]
             if (*(int *)(lVar3 + 24) <= (int)uVar5) break;
-            lVar3 = *(int64 *)(pStatics + 0x188);
+            lVar3 = UICamera.mMouse;
             if (lVar3 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar3 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
@@ -1697,16 +1656,16 @@ public class UICamera
             }
             lVar3 = lVar3[uVar5];
             if (lVar3 == null) throw; // [null/range check failed]
-            uVar4 = *(uint64 *)(lVar3 + 80);
+            uVar4 = lVar3.pressed;
             cVar2 = Object.op_Inequality(uVar4,0,0);
             if (cVar2) {
               iVar7 = iVar7 + 1;
             }
             uVar5 = uVar5 + 1;
           }
-          lVar3 = *(int64 *)(pStatics + 400);
+          lVar3 = UICamera.controller;
           if (lVar3 != null) {
-            uVar4 = *(uint64 *)(lVar3 + 80);
+            uVar4 = lVar3.pressed;
             cVar2 = Object.op_Inequality(uVar4,0,0);
             if (cVar2) {
               iVar7 = iVar7 + 1;
@@ -1720,7 +1679,6 @@ public class UICamera
     // RVA   : 0x13CDE90   Offset: 0x13CC690   Length: 0x2A7
     public static int get_dragCount()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -1730,16 +1688,16 @@ public class UICamera
         int iVar7;
         iVar7 = 0;
         iVar6 = 0;
-        lVar3 = *(int64 *)(pStatics + 0x198);
+        lVar3 = UICamera.activeTouches;
         if (lVar3 != null) {
           iVar1 = *(int *)(lVar3 + 24);
           uVar5 = 0;
           if (0 < iVar1) {
             do {
-              lVar3 = *(int64 *)(pStatics + 0x198);
+              lVar3 = UICamera.activeTouches;
               if ((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8c560)) == null)
               throw; // [null/range check failed]
-              uVar4 = *(uint64 *)(lVar3 + 88);
+              uVar4 = lVar3.dragged;
               cVar2 = Object.op_Inequality(uVar4,0,0);
               if (cVar2) {
                 iVar7 = iVar7 + 1;
@@ -1749,10 +1707,10 @@ public class UICamera
             } while (iVar6 < iVar1);
           }
           while( true ) {
-            lVar3 = *(int64 *)(pStatics + 0x188);
+            lVar3 = UICamera.mMouse;
             if (lVar3 == null) throw; // [null/range check failed]
             if (*(int *)(lVar3 + 24) <= (int)uVar5) break;
-            lVar3 = *(int64 *)(pStatics + 0x188);
+            lVar3 = UICamera.mMouse;
             if (lVar3 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar3 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
@@ -1761,16 +1719,16 @@ public class UICamera
             }
             lVar3 = lVar3[uVar5];
             if (lVar3 == null) throw; // [null/range check failed]
-            uVar4 = *(uint64 *)(lVar3 + 88);
+            uVar4 = lVar3.dragged;
             cVar2 = Object.op_Inequality(uVar4,0,0);
             if (cVar2) {
               iVar7 = iVar7 + 1;
             }
             uVar5 = uVar5 + 1;
           }
-          lVar3 = *(int64 *)(pStatics + 400);
+          lVar3 = UICamera.controller;
           if (lVar3 != null) {
-            uVar4 = *(uint64 *)(lVar3 + 88);
+            uVar4 = lVar3.dragged;
             cVar2 = Object.op_Inequality(uVar4,0,0);
             if (cVar2) {
               iVar7 = iVar7 + 1;
@@ -1804,19 +1762,19 @@ public class UICamera
     // RVA   : 0x13CE140   Offset: 0x13CC940   Length: 0x19C
     public static UICamera get_eventHandler()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         uint uVar4;
         uVar4 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= (int)uVar4) {
+          if (UICamera.list == null) break;
+          if (UICamera.list.eventType <= (int)uVar4) {
             return 0;
           }
-          if ((*pStatics == 0) ||
-             (lVar1 = *(int64 *)(*pStatics + 16)) == null) break;
+          if ((UICamera.list == null) ||
+             (lVar1 = *(int64 *)(UICamera.list + 16)) == null)
+          break;
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -1932,8 +1890,7 @@ public class UICamera
     // RVA   : 0x13C9AC0   Offset: 0x13C82C0   Length: 0x214
     public static void Raycast(MouseOrTouch touch)
     {
-        var pStatics_7e10 = *(int64*)(DAT_181d67e10 + 184);
-        var pStatics_a458 = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -2025,12 +1982,12 @@ public class UICamera
         local_res18[0] = 0.0;
         LAB_1813c9e50:
         do {
-          if (*pStatics_a458 == 0) goto LAB_1813cbc27;
-          if (*(int *)(*pStatics_a458 + 24) <= (int)uVar15) {
+          if (UICamera.list == null) goto LAB_1813cbc27;
+          if (UICamera.list.eventType <= (int)uVar15) {
             return 0;
           }
-          if ((*pStatics_a458 == 0) ||
-             (lVar9 = *(int64 *)(*pStatics_a458 + 16)) == null)
+          if ((UICamera.list == null) ||
+             (lVar9 = *(int64 *)(UICamera.list + 16)) == null)
           goto LAB_1813cbc27;
           if (*(uint32 *)(lVar9 + 24) <= uVar15) {
             uVar8 = il2cpp_internal();
@@ -2045,14 +2002,12 @@ public class UICamera
             cVar3 = NGUITools.GetActive(uVar8,0);
             if (!cVar3) goto LAB_1813cb769;
             uVar8 = UICamera.get_cachedCamera(lVar9,0);
-            puVar13 = (uint64 *)(pStatics_a458 + 192);
-            *puVar13 = uVar8;
-            il2cpp_internal(puVar13,uVar8);
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            UICamera.currentCamera = uVar8;
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             iVar4 = Camera.get_targetDisplay(lVar10,0);
             if (iVar4 != 0) goto LAB_1813cb769;
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             local_328 = *touch;
             local_320 = *(uint32 *)(touch + 1);
@@ -2065,7 +2020,7 @@ public class UICamera
             cVar3 = Single.IsNaN(local_318._4_4_,0);
             if ((((cVar3) || (fVar16 < 0.0)) || (1.0 < fVar16)) ||
                ((fVar17 < 0.0 || (1.0 < fVar17)))) goto LAB_1813cb769;
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             local_308 = *touch;
             local_300 = *(uint32 *)(touch + 1);
@@ -2073,17 +2028,17 @@ public class UICamera
             local_368 = *puVar13;
             uStack_360 = puVar13[1];
             local_358 = puVar13[2];
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             uVar5 = Camera.get_cullingMask(lVar10,0);
             uVar6 = LayerMask.op_Implicit(*(uint32 *)(lVar9 + 32),0);
             fVar16 = *(float *)(lVar9 + 72);
             uVar6 = uVar6 & uVar5;
             if (fVar16 <= 0.0) {
-              lVar10 = *(int64 *)(pStatics_a458 + 192);
+              lVar10 = UICamera.currentCamera;
               if (lVar10 == null) goto LAB_1813cbc27;
               fVar16 = (float)Camera.get_farClipPlane(lVar10,0);
-              lVar10 = *(int64 *)(pStatics_a458 + 192);
+              lVar10 = UICamera.currentCamera;
               if (lVar10 == null) goto LAB_1813cbc27;
               fVar17 = (float)Camera.get_nearClipPlane(lVar10,0);
               fVar16 = fVar16 - fVar17;
@@ -2094,31 +2049,29 @@ public class UICamera
             iVar4 = *(int *)(lVar9 + 24);
             local_res18[0] = fVar16;
             if (iVar4 == 0) {
-              lVar10 = pStatics_a458;
+              lVar10 = pUICamera;
               *(uint64 *)(lVar10 + 112) = uVar8;
               *(uint64 *)(lVar10 + 120) = uVar11;
               *(uint64 *)(lVar10 + 128) = uVar2;
               local_228 = local_368;
               uStack_220 = uStack_360;
               local_218 = local_358;
-              cVar3 = Physics.Raycast(&local_228,pStatics_a458 + 136,
+              cVar3 = Physics.Raycast(&local_228,pUICamera + 136,
                                        local_res18[0],uVar6,1,0);
               if (!cVar3) goto LAB_1813cb769;
               puVar13 = (uint64 *)
-                        FUN_18045e0a0(local_298,pStatics_a458 + 136,0);
-              lVar10 = pStatics_a458;
+                        FUN_18045e0a0(local_298,pUICamera + 136,0);
+              lVar10 = pUICamera;
               *(uint64 *)(lVar10 + 100) = *puVar13;
               *(uint32 *)(lVar10 + 108) = *(uint32 *)(puVar13 + 1);
-              lVar10 = RaycastHit.get_collider(pStatics_a458 + 136,0);
+              lVar10 = RaycastHit.get_collider(pUICamera + 136,0);
               if (lVar10 != null) {
                 uVar8 = Component.get_gameObject(lVar10,0);
-                puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
-                *puVar13 = uVar8;
-                il2cpp_internal(puVar13,uVar8);
+                UICamera.mRayHitObject = uVar8;
                 if (*(char *)(lVar9 + 28) != false) {
                   return 1;
                 }
-                lVar9 = *(int64 *)(pStatics_a458 + 0x1d8);
+                lVar9 = UICamera.mRayHitObject;
                 if ((lVar9 != null) && (lVar9 = FUN_180fa1260(lVar9,0)) != null) {
                   lVar9 = FUN_180956bf0(lVar9,DAT_181da2bb0);
         LAB_1813cbb95:
@@ -2128,9 +2081,7 @@ public class UICamera
                   }
                   if (lVar9 != null) {
                     uVar8 = Component.get_gameObject(lVar9,0);
-                    puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
-                    *puVar13 = uVar8;
-                    il2cpp_internal(puVar13,uVar8);
+                    UICamera.mRayHitObject = uVar8;
                     return 1;
                   }
                 }
@@ -2140,11 +2091,9 @@ public class UICamera
               FUN_1800d6620();
             }
             if (iVar4 == 1) {
-              if (*(int64 *)(pStatics_a458 + 0x240) == 0) {
+              if (UICamera.mRayHits == null) {
                 uVar8 = FUN_1800d60b0(DAT_181d7f880,50);
-                puVar13 = (uint64 *)(pStatics_a458 + 0x240);
-                *puVar13 = uVar8;
-                il2cpp_internal(puVar13,uVar8);
+                UICamera.mRayHits = uVar8;
               }
               uVar2 = local_358;
               uVar11 = uStack_360;
@@ -2153,12 +2102,13 @@ public class UICamera
               uStack_240 = uVar11;
               local_238 = uVar2;
               iVar4 = Physics.RaycastNonAlloc
-                                (&local_248,*(uint64 *)(pStatics_a458 + 0x240),
+                                (&local_248,
+                                 UICamera.mRayHits,
                                  local_res18[0],uVar6,2,0);
               if (1 < iVar4) {
                 uVar5 = 0;
         LAB_1813cb076:
-                lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                lVar9 = UICamera.mRayHits;
                 if (lVar9 == null) goto LAB_1813cbc27;
                 if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                   uVar8 = il2cpp_internal();
@@ -2195,7 +2145,7 @@ public class UICamera
                      (char)*(uint64 *)(lVar12 + 56) == false)) goto LAB_1813cb4db;
                   lVar12 = plVar14[28];
                   if (lVar12 != null) {
-                    lVar1 = *(int64 *)(pStatics_a458 + 0x240);
+                    lVar1 = UICamera.mRayHits;
                     if (lVar1 == null) goto LAB_1813cbc27;
                     if (*(uint32 *)(lVar1 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
@@ -2211,9 +2161,9 @@ public class UICamera
                 }
         LAB_1813cb2b0:
                 uVar7 = NGUITools.CalculateRaycastDepth(lVar9,0);
-                *(uint32 *)(pStatics_a458 + 0x1f0) = uVar7;
-                if (*(int *)(pStatics_a458 + 0x1f0) != 0x7fffffff) {
-                  lVar9 = pStatics_a458;
+                UICamera.mHit = uVar7;
+                if (UICamera.mHit != 0x7fffffff) {
+                  lVar9 = pUICamera;
                   lVar12 = *(int64 *)(lVar9 + 0x240);
                   if (lVar12 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar12 + 24) <= uVar5) {
@@ -2231,7 +2181,7 @@ public class UICamera
                   *(uint64 *)(lVar9 + 0x20c) = uVar8;
                   *(uint64 *)(lVar9 + 0x214) = *(uint64 *)(lVar10 + 64 + lVar12);
                   *(uint32 *)(lVar9 + 0x21c) = *(uint32 *)(lVar10 + 72 + lVar12);
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                  lVar9 = UICamera.mRayHits;
                   if (lVar9 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                     uVar8 = il2cpp_internal();
@@ -2239,10 +2189,10 @@ public class UICamera
                     FUN_1800d65f0(uVar8,0);
                   }
                   puVar13 = (uint64 *)FUN_18045e0a0(local_298,lVar9 + 32 + lVar10,0);
-                  lVar9 = pStatics_a458;
+                  lVar9 = pUICamera;
                   *(uint64 *)(lVar9 + 0x220) = *puVar13;
                   *(uint32 *)(lVar9 + 0x228) = *(uint32 *)(puVar13 + 1);
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                  lVar9 = UICamera.mRayHits;
                   if (lVar9 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                     uVar8 = il2cpp_internal();
@@ -2252,10 +2202,10 @@ public class UICamera
                   lVar9 = RaycastHit.get_collider(lVar9 + 32 + lVar10,0);
                   if (lVar9 == null) goto LAB_1813cbc27;
                   uVar8 = Component.get_gameObject(lVar9,0);
-                  puVar13 = (uint64 *)(pStatics_a458 + 0x230);
+                  puVar13 = (uint64 *)(pUICamera + 0x230);
                   *puVar13 = uVar8;
                   il2cpp_internal(puVar13,uVar8);
-                  lVar9 = pStatics_a458;
+                  lVar9 = pUICamera;
                   if (*(int64 *)(lVar9 + 0x238) == 0) goto LAB_1813cbc27;
                   local_158 = *(uint64 *)(lVar9 + 0x1f0);
                   uStack_150 = *(uint64 *)(lVar9 + 0x1f8);
@@ -2274,7 +2224,7 @@ public class UICamera
                 goto LAB_1813cb076;
               }
               if (iVar4 == 1) {
-                lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                lVar9 = UICamera.mRayHits;
                 if (lVar9 != null) {
                   if (*(int *)(lVar9 + 24) == 0) {
                     uVar8 = il2cpp_internal();
@@ -2300,7 +2250,7 @@ public class UICamera
                       if (!cVar3) goto LAB_1813cb769;
                       lVar9 = *(int64 *)(lVar10 + 224);
                       if (lVar9 != null) {
-                        lVar10 = *(int64 *)(pStatics_a458 + 0x240);
+                        lVar10 = UICamera.mRayHits;
                         if (lVar10 == null) goto LAB_1813cbc27;
                         if (*(int *)(lVar10 + 24) == 0) {
                           uVar8 = il2cpp_internal();
@@ -2314,7 +2264,7 @@ public class UICamera
                         if (!cVar3) goto LAB_1813cb769;
                       }
                     }
-                    lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                    lVar9 = UICamera.mRayHits;
                     if (lVar9 != null) {
                       if (*(int *)(lVar9 + 24) == 0) {
                         uVar8 = il2cpp_internal();
@@ -2324,7 +2274,7 @@ public class UICamera
                       puVar13 = (uint64 *)FUN_18045e0a0(local_1c8,lVar9 + 32,0);
                       uVar8 = *puVar13;
                       uVar7 = *(uint32 *)(puVar13 + 1);
-                      lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                      lVar9 = UICamera.mRayHits;
                       if (lVar9 != null) {
                         if (*(int *)(lVar9 + 24) == 0) {
                           uVar8 = il2cpp_internal();
@@ -2338,7 +2288,7 @@ public class UICamera
                           local_2b0 = uVar7;
                           cVar3 = UICamera.IsVisible(&local_2b8,uVar11,0);
                           if (!cVar3) goto LAB_1813cb769;
-                          lVar9 = pStatics_a458;
+                          lVar9 = pUICamera;
                           lVar10 = *(int64 *)(lVar9 + 0x240);
                           if (lVar10 != null) {
                             if (*(int *)(lVar10 + 24) == 0) {
@@ -2354,13 +2304,13 @@ public class UICamera
                             *(uint64 *)(lVar9 + 160) = uVar8;
                             *(uint64 *)(lVar9 + 168) = *(uint64 *)(lVar10 + 64);
                             *(uint32 *)(lVar9 + 176) = *(uint32 *)(lVar10 + 72);
-                            lVar9 = pStatics_a458;
+                            lVar9 = pUICamera;
                             *(uint32 *)(lVar9 + 112) = (uint32)local_368;
                             *(uint32 *)(lVar9 + 116) = local_368._4_4_;
                             *(uint32 *)(lVar9 + 120) = (uint32)uStack_360;
                             *(uint32 *)(lVar9 + 124) = uStack_360._4_4_;
                             *(uint64 *)(lVar9 + 128) = local_358;
-                            lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                            lVar9 = UICamera.mRayHits;
                             if (lVar9 != null) {
                               if (*(int *)(lVar9 + 24) == 0) {
                                 uVar8 = il2cpp_internal();
@@ -2368,14 +2318,15 @@ public class UICamera
                                 FUN_1800d65f0(uVar8,0);
                               }
                               puVar13 = (uint64 *)FUN_18045e0a0(local_298,lVar9 + 32,0);
-                              lVar9 = pStatics_a458;
+                              lVar9 = pUICamera;
                               *(uint64 *)(lVar9 + 100) = *puVar13;
                               *(uint32 *)(lVar9 + 108) = *(uint32 *)(puVar13 + 1);
                               lVar9 = RaycastHit.get_collider
-                                                (pStatics_a458 + 136,0);
+                                                (pUICamera + 136,0);
                               if (lVar9 != null) {
                                 uVar8 = Component.get_gameObject(lVar9,0);
-                                puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
+                                puVar13 = (uint64 *)
+                                          (pUICamera + 0x1d8);
                                 *puVar13 = uVar8;
                                 il2cpp_internal(puVar13,uVar8);
                                 return 1;
@@ -2396,7 +2347,8 @@ public class UICamera
               uStack_260 = (uint32)uStack_360;
               uStack_25c = uStack_360._4_4_;
               local_258 = local_358;
-              cVar3 = Plane.Raycast(pStatics_a458 + 0x250,&local_268,local_res18);
+              cVar3 = Plane.Raycast(pUICamera + 0x250,&local_268,
+                                     local_res18);
               if (cVar3) {
                 puVar13 = (uint64 *)Ray.GetPoint(local_1e8,&local_368,local_res18[0]);
                 uVar7 = *(uint32 *)(puVar13 + 1);
@@ -2408,18 +2360,16 @@ public class UICamera
                 lVar10 = Physics2D.OverlapPoint(CONCAT44(uStack_34c,local_350),uVar6,0);
                 cVar3 = Object.op_Implicit(lVar10,0);
                 if (!cVar3) goto LAB_1813cb769;
-                lVar12 = pStatics_a458;
+                lVar12 = pUICamera;
                 *(uint64 *)(lVar12 + 100) = uVar8;
                 *(uint32 *)(lVar12 + 108) = uVar7;
                 if (lVar10 != null) {
                   uVar8 = Component.get_gameObject(lVar10,0);
-                  puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
-                  *puVar13 = uVar8;
-                  il2cpp_internal(puVar13,uVar8);
+                  UICamera.mRayHitObject = uVar8;
                   if (*(char *)(lVar9 + 28) != false) {
                     return 1;
                   }
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x1d8);
+                  lVar9 = UICamera.mRayHitObject;
                   if (lVar9 != null) {
                     uVar8 = GameObject.get_transform(lVar9,0);
                     lVar9 = UICamera.FindRootRigidbody2D(uVar8,0);
@@ -2436,21 +2386,20 @@ public class UICamera
               uStack_280 = (uint32)uStack_360;
               uStack_27c = uStack_360._4_4_;
               local_278 = local_358;
-              cVar3 = Plane.Raycast(pStatics_a458 + 0x250,&local_288,local_res18);
+              cVar3 = Plane.Raycast(pUICamera + 0x250,&local_288,
+                                     local_res18);
               if (!cVar3) goto LAB_1813cb769;
               puVar13 = (uint64 *)Ray.GetPoint(local_1f8,&local_368,local_res18[0]);
               uVar8 = *puVar13;
               uVar7 = *(uint32 *)(puVar13 + 1);
-              lVar9 = pStatics_a458;
+              lVar9 = pUICamera;
               *(uint64 *)(lVar9 + 100) = uVar8;
               *(uint32 *)(lVar9 + 108) = uVar7;
-              if (*(int64 *)(pStatics_a458 + 0x248) == 0) {
+              if (UICamera.mOverlap == null) {
                 uVar8 = FUN_1800d60b0(DAT_181d7c198,50);
-                puVar13 = (uint64 *)(pStatics_a458 + 0x248);
-                *puVar13 = uVar8;
-                il2cpp_internal(puVar13,uVar8);
+                UICamera.mOverlap = uVar8;
               }
-              lVar9 = pStatics_a458;
+              lVar9 = pUICamera;
               local_348 = *(uint64 *)(lVar9 + 100);
               local_res20 = (uint32)local_348;
               uStackX_24 = (uint32)((uint64)local_348 >> 32);
@@ -2460,7 +2409,7 @@ public class UICamera
               if (1 < iVar4) {
                 uVar5 = 0;
                 do {
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x248);
+                  lVar9 = UICamera.mOverlap;
                   if (lVar9 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                     uVar8 = il2cpp_internal();
@@ -2482,15 +2431,15 @@ public class UICamera
                     }
         LAB_1813ca789:
                     uVar7 = NGUITools.CalculateRaycastDepth(lVar9,0);
-                    *(uint32 *)(pStatics_a458 + 0x1f0) = uVar7;
-                    if (*(int *)(pStatics_a458 + 0x1f0) != 0x7fffffff) {
-                      plVar14 = (int64 *)(pStatics_a458 + 0x230);
+                    UICamera.mHit = uVar7;
+                    if (UICamera.mHit != 0x7fffffff) {
+                      plVar14 = (int64 *)(pUICamera + 0x230);
                       *plVar14 = lVar9;
                       il2cpp_internal(plVar14,lVar9);
-                      lVar9 = pStatics_a458;
+                      lVar9 = pUICamera;
                       *(uint64 *)(lVar9 + 0x220) = *(uint64 *)(lVar9 + 100);
                       *(uint32 *)(lVar9 + 0x228) = *(uint32 *)(lVar9 + 108);
-                      lVar9 = pStatics_a458;
+                      lVar9 = pUICamera;
                       if (*(int64 *)(lVar9 + 0x238) == 0) goto LAB_1813cbc27;
                       local_1a8 = *(uint64 *)(lVar9 + 0x1f0);
                       uStack_1a0 = *(uint64 *)(lVar9 + 0x1f8);
@@ -2510,8 +2459,8 @@ public class UICamera
                     if (cVar3) {
                       lVar10 = *(int64 *)(lVar10 + 224);
                       if (lVar10 != null) {
-                        local_2d0 = *(uint32 *)(pStatics_a458 + 108);
-                        local_2d8 = *(uint64 *)(pStatics_a458 + 100);
+                        local_2d0 = *(uint32 *)(pUICamera + 108);
+                        local_2d8 = UICamera.lastWorldPosition;
                         cVar3 = HitCheck.Invoke(lVar10);
                         if (!cVar3) goto LAB_1813ca8dc;
                       }
@@ -2521,23 +2470,21 @@ public class UICamera
         LAB_1813ca8dc:
                   uVar5 = uVar5 + 1;
                 } while ((int)uVar5 < iVar4);
-                lVar9 = *(int64 *)(pStatics_a458 + 0x238);
-                lVar10 = *(int64 *)(pStatics_7e10 + 16);
+                lVar9 = UICamera.mHits;
+                lVar10 = UICamera.GetKeyUp;
                 if (lVar10 == null) {
-                  uVar8 = **(uint64 **)(DAT_181d67e10 + 184);
+                  uVar8 = UICamera.list;
                   lVar10 = new OnTooltipCB(uVar8,DAT_181d8e650);
-                  plVar14 = (int64 *)(pStatics_7e10 + 16);
-                  *plVar14 = lVar10;
-                  il2cpp_internal(plVar14,lVar10);
+                  UICamera.GetKeyUp = lVar10;
                 }
                 if (lVar9 != null) {
                   FUN_18154f830(lVar9,lVar10,DAT_181d82798);
                   uVar5 = 0;
                   while( true ) {
-                    lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                    lVar9 = UICamera.mHits;
                     if (lVar9 == null) goto LAB_1813cbc27;
                     if (*(int *)(lVar9 + 24) <= (int)uVar5) break;
-                    lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                    lVar9 = UICamera.mHits;
                     if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 16)) == null)
                     goto LAB_1813cbc27;
                     if (*(uint32 *)(lVar9 + 24) <= uVar5) {
@@ -2547,18 +2494,18 @@ public class UICamera
                     }
                     cVar3 = UICamera.IsVisible(lVar9 + (int64)(int)uVar5 * 72 + 32,0);
                     if (cVar3) {
-                      lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                      lVar9 = UICamera.mHits;
                       if ((lVar9 != null) && (lVar9 = *(int64 *)(lVar9 + 16)) != null) {
                         if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                           uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                           FUN_1800d65f0(uVar8,0);
                         }
-                        *(uint64 *)(pStatics_a458 + 0x1d8) =
+                        UICamera.mRayHitObject =
                              *(uint64 *)(lVar9 + 96 + (int64)(int)uVar5 * 72);
                         il2cpp_internal();
         LAB_1813cba50:
-                        lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                        lVar9 = UICamera.mHits;
                         if (lVar9 != null) {
                           BetterList_1.Clear(lVar9,DAT_181d82718);
                           return 1;
@@ -2573,7 +2520,7 @@ public class UICamera
                 goto LAB_1813cbc27;
               }
               if (iVar4 == 1) {
-                lVar9 = *(int64 *)(pStatics_a458 + 0x248);
+                lVar9 = UICamera.mOverlap;
                 if (lVar9 != null) {
                   if (*(int *)(lVar9 + 24) == 0) {
                     uVar8 = il2cpp_internal();
@@ -2599,19 +2546,17 @@ public class UICamera
                       if (!cVar3) goto LAB_1813cb769;
                       lVar10 = *(int64 *)(lVar10 + 224);
                       if (lVar10 != null) {
-                        local_2f0 = *(uint32 *)(pStatics_a458 + 108);
-                        local_2f8 = *(uint64 *)(pStatics_a458 + 100);
+                        local_2f0 = *(uint32 *)(pUICamera + 108);
+                        local_2f8 = UICamera.lastWorldPosition;
                         cVar3 = HitCheck.Invoke(lVar10,&local_2f8,0);
                         if (!cVar3) goto LAB_1813cb769;
                       }
                     }
-                    local_2e8 = *(uint64 *)(pStatics_a458 + 100);
-                    local_2e0 = *(uint32 *)(pStatics_a458 + 108);
+                    local_2e8 = UICamera.lastWorldPosition;
+                    local_2e0 = *(uint32 *)(pUICamera + 108);
                     cVar3 = UICamera.IsVisible(&local_2e8,lVar9,0);
                     if (cVar3) {
-                      plVar14 = (int64 *)(pStatics_a458 + 0x1d8);
-                      *plVar14 = lVar9;
-                      il2cpp_internal(plVar14,lVar9);
+                      UICamera.mRayHitObject = lVar9;
                       return 1;
                     }
                     goto LAB_1813cb769;
@@ -2624,23 +2569,21 @@ public class UICamera
         LAB_1813cb769:
           uVar15 = uVar15 + 1;
         } while( true );
-        lVar9 = *(int64 *)(pStatics_a458 + 0x238);
-        lVar10 = *(int64 *)(pStatics_7e10 + 8);
+        lVar9 = UICamera.mHits;
+        lVar10 = UICamera.GetKeyDown;
         if (lVar10 == null) {
-          uVar8 = **(uint64 **)(DAT_181d67e10 + 184);
+          uVar8 = UICamera.list;
           lVar10 = new OnTooltipCB(uVar8,DAT_181d8e5c8);
-          plVar14 = (int64 *)(pStatics_7e10 + 8);
-          *plVar14 = lVar10;
-          il2cpp_internal(plVar14,lVar10);
+          UICamera.GetKeyDown = lVar10;
         }
         if (lVar9 == null) goto LAB_1813cbc27;
         FUN_18154f830(lVar9,lVar10,DAT_181d82798);
         uVar5 = 0;
         while( true ) {
-          lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+          lVar9 = UICamera.mHits;
           if (lVar9 == null) goto LAB_1813cbc27;
           if (*(int *)(lVar9 + 24) <= (int)uVar5) break;
-          lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+          lVar9 = UICamera.mHits;
           if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 16)) == null) goto LAB_1813cbc27;
           lVar10 = (int64)(int)uVar5;
           if (*(uint32 *)(lVar9 + 24) <= uVar5) {
@@ -2650,7 +2593,7 @@ public class UICamera
           }
           cVar3 = UICamera.IsVisible(lVar9 + lVar10 * 72 + 32,0);
           if (cVar3) {
-            lVar9 = pStatics_a458;
+            lVar9 = pUICamera;
             if ((*(int64 *)(lVar9 + 0x238) == 0) ||
                (lVar12 = *(int64 *)(*(int64 *)(lVar9 + 0x238) + 16)) == null)
             goto LAB_1813cbc27;
@@ -2669,23 +2612,23 @@ public class UICamera
             *(uint64 *)(lVar9 + 160) = uVar8;
             *(uint64 *)(lVar9 + 168) = *(uint64 *)(lVar12 + 68 + lVar10 * 72);
             *(uint32 *)(lVar9 + 176) = *(uint32 *)(lVar12 + 76 + lVar10 * 72);
-            lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+            lVar9 = UICamera.mHits;
             if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 16)) == null) goto LAB_1813cbc27;
             if (*(uint32 *)(lVar9 + 24) <= uVar5) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar8,0);
             }
-            *(uint64 *)(pStatics_a458 + 0x1d8) =
+            UICamera.mRayHitObject =
                  *(uint64 *)(lVar9 + 96 + lVar10 * 72);
             il2cpp_internal();
-            lVar9 = pStatics_a458;
+            lVar9 = pUICamera;
             *(uint32 *)(lVar9 + 112) = (uint32)local_368;
             *(uint32 *)(lVar9 + 116) = local_368._4_4_;
             *(uint32 *)(lVar9 + 120) = (uint32)uStack_360;
             *(uint32 *)(lVar9 + 124) = uStack_360._4_4_;
             *(uint64 *)(lVar9 + 128) = local_358;
-            lVar9 = pStatics_a458;
+            lVar9 = pUICamera;
             if ((*(int64 *)(lVar9 + 0x238) == 0) ||
                (lVar12 = *(int64 *)(*(int64 *)(lVar9 + 0x238) + 16)) == null)
             goto LAB_1813cbc27;
@@ -2701,7 +2644,7 @@ public class UICamera
           uVar5 = uVar5 + 1;
         }
         LAB_1813cb681:
-        lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+        lVar9 = UICamera.mHits;
         if (lVar9 == null) goto LAB_1813cbc27;
         BetterList_1.Clear(lVar9,DAT_181d82718);
         uVar15 = uVar15 + 1;
@@ -2712,8 +2655,7 @@ public class UICamera
     // RVA   : 0x13C9CE0   Offset: 0x13C84E0   Length: 0x208C
     public static bool Raycast(Vector3 inPos)
     {
-        var pStatics_7e10 = *(int64*)(DAT_181d67e10 + 184);
-        var pStatics_a458 = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -2805,12 +2747,12 @@ public class UICamera
         local_res18[0] = 0.0;
         LAB_1813c9e50:
         do {
-          if (*pStatics_a458 == 0) goto LAB_1813cbc27;
-          if (*(int *)(*pStatics_a458 + 24) <= (int)uVar15) {
+          if (UICamera.list == null) goto LAB_1813cbc27;
+          if (UICamera.list.eventType <= (int)uVar15) {
             return false;
           }
-          if ((*pStatics_a458 == 0) ||
-             (lVar9 = *(int64 *)(*pStatics_a458 + 16)) == null)
+          if ((UICamera.list == null) ||
+             (lVar9 = *(int64 *)(UICamera.list + 16)) == null)
           goto LAB_1813cbc27;
           if (*(uint32 *)(lVar9 + 24) <= uVar15) {
             uVar8 = il2cpp_internal();
@@ -2825,14 +2767,12 @@ public class UICamera
             cVar3 = NGUITools.GetActive(uVar8,0);
             if (!cVar3) goto LAB_1813cb769;
             uVar8 = UICamera.get_cachedCamera(lVar9,0);
-            puVar13 = (uint64 *)(pStatics_a458 + 192);
-            *puVar13 = uVar8;
-            il2cpp_internal(puVar13,uVar8);
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            UICamera.currentCamera = uVar8;
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             iVar4 = Camera.get_targetDisplay(lVar10,0);
             if (iVar4 != 0) goto LAB_1813cb769;
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             local_328 = *inPos;
             local_320 = *(uint32 *)(inPos + 1);
@@ -2845,7 +2785,7 @@ public class UICamera
             cVar3 = Single.IsNaN(local_318._4_4_,0);
             if ((((cVar3) || (fVar16 < 0.0)) || (1.0 < fVar16)) ||
                ((fVar17 < 0.0 || (1.0 < fVar17)))) goto LAB_1813cb769;
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             local_308 = *inPos;
             local_300 = *(uint32 *)(inPos + 1);
@@ -2853,17 +2793,17 @@ public class UICamera
             local_368 = *puVar13;
             uStack_360 = puVar13[1];
             local_358 = puVar13[2];
-            lVar10 = *(int64 *)(pStatics_a458 + 192);
+            lVar10 = UICamera.currentCamera;
             if (lVar10 == null) goto LAB_1813cbc27;
             uVar5 = Camera.get_cullingMask(lVar10,0);
             uVar6 = LayerMask.op_Implicit(*(uint32 *)(lVar9 + 32),0);
             fVar16 = *(float *)(lVar9 + 72);
             uVar6 = uVar6 & uVar5;
             if (fVar16 <= 0.0) {
-              lVar10 = *(int64 *)(pStatics_a458 + 192);
+              lVar10 = UICamera.currentCamera;
               if (lVar10 == null) goto LAB_1813cbc27;
               fVar16 = (float)Camera.get_farClipPlane(lVar10,0);
-              lVar10 = *(int64 *)(pStatics_a458 + 192);
+              lVar10 = UICamera.currentCamera;
               if (lVar10 == null) goto LAB_1813cbc27;
               fVar17 = (float)Camera.get_nearClipPlane(lVar10,0);
               fVar16 = fVar16 - fVar17;
@@ -2874,31 +2814,29 @@ public class UICamera
             iVar4 = *(int *)(lVar9 + 24);
             local_res18[0] = fVar16;
             if (iVar4 == 0) {
-              lVar10 = pStatics_a458;
+              lVar10 = pUICamera;
               *(uint64 *)(lVar10 + 112) = uVar8;
               *(uint64 *)(lVar10 + 120) = uVar11;
               *(uint64 *)(lVar10 + 128) = uVar2;
               local_228 = local_368;
               uStack_220 = uStack_360;
               local_218 = local_358;
-              cVar3 = Physics.Raycast(&local_228,pStatics_a458 + 136,
+              cVar3 = Physics.Raycast(&local_228,pUICamera + 136,
                                        local_res18[0],uVar6,1,0);
               if (!cVar3) goto LAB_1813cb769;
               puVar13 = (uint64 *)
-                        FUN_18045e0a0(local_298,pStatics_a458 + 136,0);
-              lVar10 = pStatics_a458;
+                        FUN_18045e0a0(local_298,pUICamera + 136,0);
+              lVar10 = pUICamera;
               *(uint64 *)(lVar10 + 100) = *puVar13;
               *(uint32 *)(lVar10 + 108) = *(uint32 *)(puVar13 + 1);
-              lVar10 = RaycastHit.get_collider(pStatics_a458 + 136,0);
+              lVar10 = RaycastHit.get_collider(pUICamera + 136,0);
               if (lVar10 != null) {
                 uVar8 = Component.get_gameObject(lVar10,0);
-                puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
-                *puVar13 = uVar8;
-                il2cpp_internal(puVar13,uVar8);
+                UICamera.mRayHitObject = uVar8;
                 if (*(char *)(lVar9 + 28) != false) {
                   return true;
                 }
-                lVar9 = *(int64 *)(pStatics_a458 + 0x1d8);
+                lVar9 = UICamera.mRayHitObject;
                 if ((lVar9 != null) && (lVar9 = FUN_180fa1260(lVar9,0)) != null) {
                   lVar9 = FUN_180956bf0(lVar9,DAT_181da2bb0);
         LAB_1813cbb95:
@@ -2908,9 +2846,7 @@ public class UICamera
                   }
                   if (lVar9 != null) {
                     uVar8 = Component.get_gameObject(lVar9,0);
-                    puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
-                    *puVar13 = uVar8;
-                    il2cpp_internal(puVar13,uVar8);
+                    UICamera.mRayHitObject = uVar8;
                     return true;
                   }
                 }
@@ -2920,11 +2856,9 @@ public class UICamera
               FUN_1800d6620();
             }
             if (iVar4 == 1) {
-              if (*(int64 *)(pStatics_a458 + 0x240) == 0) {
+              if (UICamera.mRayHits == null) {
                 uVar8 = FUN_1800d60b0(DAT_181d7f880,50);
-                puVar13 = (uint64 *)(pStatics_a458 + 0x240);
-                *puVar13 = uVar8;
-                il2cpp_internal(puVar13,uVar8);
+                UICamera.mRayHits = uVar8;
               }
               uVar2 = local_358;
               uVar11 = uStack_360;
@@ -2933,12 +2867,13 @@ public class UICamera
               uStack_240 = uVar11;
               local_238 = uVar2;
               iVar4 = Physics.RaycastNonAlloc
-                                (&local_248,*(uint64 *)(pStatics_a458 + 0x240),
+                                (&local_248,
+                                 UICamera.mRayHits,
                                  local_res18[0],uVar6,2,0);
               if (1 < iVar4) {
                 uVar5 = 0;
         LAB_1813cb076:
-                lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                lVar9 = UICamera.mRayHits;
                 if (lVar9 == null) goto LAB_1813cbc27;
                 if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                   uVar8 = il2cpp_internal();
@@ -2975,7 +2910,7 @@ public class UICamera
                      (char)*(uint64 *)(lVar12 + 56) == false)) goto LAB_1813cb4db;
                   lVar12 = plVar14[28];
                   if (lVar12 != null) {
-                    lVar1 = *(int64 *)(pStatics_a458 + 0x240);
+                    lVar1 = UICamera.mRayHits;
                     if (lVar1 == null) goto LAB_1813cbc27;
                     if (*(uint32 *)(lVar1 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
@@ -2991,9 +2926,9 @@ public class UICamera
                 }
         LAB_1813cb2b0:
                 uVar7 = NGUITools.CalculateRaycastDepth(lVar9,0);
-                *(uint32 *)(pStatics_a458 + 0x1f0) = uVar7;
-                if (*(int *)(pStatics_a458 + 0x1f0) != 0x7fffffff) {
-                  lVar9 = pStatics_a458;
+                UICamera.mHit = uVar7;
+                if (UICamera.mHit != 0x7fffffff) {
+                  lVar9 = pUICamera;
                   lVar12 = *(int64 *)(lVar9 + 0x240);
                   if (lVar12 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar12 + 24) <= uVar5) {
@@ -3011,7 +2946,7 @@ public class UICamera
                   *(uint64 *)(lVar9 + 0x20c) = uVar8;
                   *(uint64 *)(lVar9 + 0x214) = *(uint64 *)(lVar10 + 64 + lVar12);
                   *(uint32 *)(lVar9 + 0x21c) = *(uint32 *)(lVar10 + 72 + lVar12);
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                  lVar9 = UICamera.mRayHits;
                   if (lVar9 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                     uVar8 = il2cpp_internal();
@@ -3019,10 +2954,10 @@ public class UICamera
                     FUN_1800d65f0(uVar8,0);
                   }
                   puVar13 = (uint64 *)FUN_18045e0a0(local_298,lVar9 + 32 + lVar10,0);
-                  lVar9 = pStatics_a458;
+                  lVar9 = pUICamera;
                   *(uint64 *)(lVar9 + 0x220) = *puVar13;
                   *(uint32 *)(lVar9 + 0x228) = *(uint32 *)(puVar13 + 1);
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                  lVar9 = UICamera.mRayHits;
                   if (lVar9 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                     uVar8 = il2cpp_internal();
@@ -3032,10 +2967,10 @@ public class UICamera
                   lVar9 = RaycastHit.get_collider(lVar9 + 32 + lVar10,0);
                   if (lVar9 == null) goto LAB_1813cbc27;
                   uVar8 = Component.get_gameObject(lVar9,0);
-                  puVar13 = (uint64 *)(pStatics_a458 + 0x230);
+                  puVar13 = (uint64 *)(pUICamera + 0x230);
                   *puVar13 = uVar8;
                   il2cpp_internal(puVar13,uVar8);
-                  lVar9 = pStatics_a458;
+                  lVar9 = pUICamera;
                   if (*(int64 *)(lVar9 + 0x238) == 0) goto LAB_1813cbc27;
                   local_158 = *(uint64 *)(lVar9 + 0x1f0);
                   uStack_150 = *(uint64 *)(lVar9 + 0x1f8);
@@ -3054,7 +2989,7 @@ public class UICamera
                 goto LAB_1813cb076;
               }
               if (iVar4 == 1) {
-                lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                lVar9 = UICamera.mRayHits;
                 if (lVar9 != null) {
                   if (*(int *)(lVar9 + 24) == 0) {
                     uVar8 = il2cpp_internal();
@@ -3080,7 +3015,7 @@ public class UICamera
                       if (!cVar3) goto LAB_1813cb769;
                       lVar9 = *(int64 *)(lVar10 + 224);
                       if (lVar9 != null) {
-                        lVar10 = *(int64 *)(pStatics_a458 + 0x240);
+                        lVar10 = UICamera.mRayHits;
                         if (lVar10 == null) goto LAB_1813cbc27;
                         if (*(int *)(lVar10 + 24) == 0) {
                           uVar8 = il2cpp_internal();
@@ -3094,7 +3029,7 @@ public class UICamera
                         if (!cVar3) goto LAB_1813cb769;
                       }
                     }
-                    lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                    lVar9 = UICamera.mRayHits;
                     if (lVar9 != null) {
                       if (*(int *)(lVar9 + 24) == 0) {
                         uVar8 = il2cpp_internal();
@@ -3104,7 +3039,7 @@ public class UICamera
                       puVar13 = (uint64 *)FUN_18045e0a0(local_1c8,lVar9 + 32,0);
                       uVar8 = *puVar13;
                       uVar7 = *(uint32 *)(puVar13 + 1);
-                      lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                      lVar9 = UICamera.mRayHits;
                       if (lVar9 != null) {
                         if (*(int *)(lVar9 + 24) == 0) {
                           uVar8 = il2cpp_internal();
@@ -3118,7 +3053,7 @@ public class UICamera
                           local_2b0 = uVar7;
                           cVar3 = UICamera.IsVisible(&local_2b8,uVar11,0);
                           if (!cVar3) goto LAB_1813cb769;
-                          lVar9 = pStatics_a458;
+                          lVar9 = pUICamera;
                           lVar10 = *(int64 *)(lVar9 + 0x240);
                           if (lVar10 != null) {
                             if (*(int *)(lVar10 + 24) == 0) {
@@ -3134,13 +3069,13 @@ public class UICamera
                             *(uint64 *)(lVar9 + 160) = uVar8;
                             *(uint64 *)(lVar9 + 168) = *(uint64 *)(lVar10 + 64);
                             *(uint32 *)(lVar9 + 176) = *(uint32 *)(lVar10 + 72);
-                            lVar9 = pStatics_a458;
+                            lVar9 = pUICamera;
                             *(uint32 *)(lVar9 + 112) = (uint32)local_368;
                             *(uint32 *)(lVar9 + 116) = local_368._4_4_;
                             *(uint32 *)(lVar9 + 120) = (uint32)uStack_360;
                             *(uint32 *)(lVar9 + 124) = uStack_360._4_4_;
                             *(uint64 *)(lVar9 + 128) = local_358;
-                            lVar9 = *(int64 *)(pStatics_a458 + 0x240);
+                            lVar9 = UICamera.mRayHits;
                             if (lVar9 != null) {
                               if (*(int *)(lVar9 + 24) == 0) {
                                 uVar8 = il2cpp_internal();
@@ -3148,14 +3083,15 @@ public class UICamera
                                 FUN_1800d65f0(uVar8,0);
                               }
                               puVar13 = (uint64 *)FUN_18045e0a0(local_298,lVar9 + 32,0);
-                              lVar9 = pStatics_a458;
+                              lVar9 = pUICamera;
                               *(uint64 *)(lVar9 + 100) = *puVar13;
                               *(uint32 *)(lVar9 + 108) = *(uint32 *)(puVar13 + 1);
                               lVar9 = RaycastHit.get_collider
-                                                (pStatics_a458 + 136,0);
+                                                (pUICamera + 136,0);
                               if (lVar9 != null) {
                                 uVar8 = Component.get_gameObject(lVar9,0);
-                                puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
+                                puVar13 = (uint64 *)
+                                          (pUICamera + 0x1d8);
                                 *puVar13 = uVar8;
                                 il2cpp_internal(puVar13,uVar8);
                                 return true;
@@ -3176,7 +3112,8 @@ public class UICamera
               uStack_260 = (uint32)uStack_360;
               uStack_25c = uStack_360._4_4_;
               local_258 = local_358;
-              cVar3 = Plane.Raycast(pStatics_a458 + 0x250,&local_268,local_res18);
+              cVar3 = Plane.Raycast(pUICamera + 0x250,&local_268,
+                                     local_res18);
               if (cVar3) {
                 puVar13 = (uint64 *)Ray.GetPoint(local_1e8,&local_368,local_res18[0]);
                 uVar7 = *(uint32 *)(puVar13 + 1);
@@ -3188,18 +3125,16 @@ public class UICamera
                 lVar10 = Physics2D.OverlapPoint(CONCAT44(uStack_34c,local_350),uVar6,0);
                 cVar3 = Object.op_Implicit(lVar10,0);
                 if (!cVar3) goto LAB_1813cb769;
-                lVar12 = pStatics_a458;
+                lVar12 = pUICamera;
                 *(uint64 *)(lVar12 + 100) = uVar8;
                 *(uint32 *)(lVar12 + 108) = uVar7;
                 if (lVar10 != null) {
                   uVar8 = Component.get_gameObject(lVar10,0);
-                  puVar13 = (uint64 *)(pStatics_a458 + 0x1d8);
-                  *puVar13 = uVar8;
-                  il2cpp_internal(puVar13,uVar8);
+                  UICamera.mRayHitObject = uVar8;
                   if (*(char *)(lVar9 + 28) != false) {
                     return true;
                   }
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x1d8);
+                  lVar9 = UICamera.mRayHitObject;
                   if (lVar9 != null) {
                     uVar8 = GameObject.get_transform(lVar9,0);
                     lVar9 = UICamera.FindRootRigidbody2D(uVar8,0);
@@ -3216,21 +3151,20 @@ public class UICamera
               uStack_280 = (uint32)uStack_360;
               uStack_27c = uStack_360._4_4_;
               local_278 = local_358;
-              cVar3 = Plane.Raycast(pStatics_a458 + 0x250,&local_288,local_res18);
+              cVar3 = Plane.Raycast(pUICamera + 0x250,&local_288,
+                                     local_res18);
               if (!cVar3) goto LAB_1813cb769;
               puVar13 = (uint64 *)Ray.GetPoint(local_1f8,&local_368,local_res18[0]);
               uVar8 = *puVar13;
               uVar7 = *(uint32 *)(puVar13 + 1);
-              lVar9 = pStatics_a458;
+              lVar9 = pUICamera;
               *(uint64 *)(lVar9 + 100) = uVar8;
               *(uint32 *)(lVar9 + 108) = uVar7;
-              if (*(int64 *)(pStatics_a458 + 0x248) == 0) {
+              if (UICamera.mOverlap == null) {
                 uVar8 = FUN_1800d60b0(DAT_181d7c198,50);
-                puVar13 = (uint64 *)(pStatics_a458 + 0x248);
-                *puVar13 = uVar8;
-                il2cpp_internal(puVar13,uVar8);
+                UICamera.mOverlap = uVar8;
               }
-              lVar9 = pStatics_a458;
+              lVar9 = pUICamera;
               local_348 = *(uint64 *)(lVar9 + 100);
               local_res20 = (uint32)local_348;
               uStackX_24 = (uint32)((uint64)local_348 >> 32);
@@ -3240,7 +3174,7 @@ public class UICamera
               if (1 < iVar4) {
                 uVar5 = 0;
                 do {
-                  lVar9 = *(int64 *)(pStatics_a458 + 0x248);
+                  lVar9 = UICamera.mOverlap;
                   if (lVar9 == null) goto LAB_1813cbc27;
                   if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                     uVar8 = il2cpp_internal();
@@ -3262,15 +3196,15 @@ public class UICamera
                     }
         LAB_1813ca789:
                     uVar7 = NGUITools.CalculateRaycastDepth(lVar9,0);
-                    *(uint32 *)(pStatics_a458 + 0x1f0) = uVar7;
-                    if (*(int *)(pStatics_a458 + 0x1f0) != 0x7fffffff) {
-                      plVar14 = (int64 *)(pStatics_a458 + 0x230);
+                    UICamera.mHit = uVar7;
+                    if (UICamera.mHit != 0x7fffffff) {
+                      plVar14 = (int64 *)(pUICamera + 0x230);
                       *plVar14 = lVar9;
                       il2cpp_internal(plVar14,lVar9);
-                      lVar9 = pStatics_a458;
+                      lVar9 = pUICamera;
                       *(uint64 *)(lVar9 + 0x220) = *(uint64 *)(lVar9 + 100);
                       *(uint32 *)(lVar9 + 0x228) = *(uint32 *)(lVar9 + 108);
-                      lVar9 = pStatics_a458;
+                      lVar9 = pUICamera;
                       if (*(int64 *)(lVar9 + 0x238) == 0) goto LAB_1813cbc27;
                       local_1a8 = *(uint64 *)(lVar9 + 0x1f0);
                       uStack_1a0 = *(uint64 *)(lVar9 + 0x1f8);
@@ -3290,8 +3224,8 @@ public class UICamera
                     if (cVar3) {
                       lVar10 = *(int64 *)(lVar10 + 224);
                       if (lVar10 != null) {
-                        local_2d0 = *(uint32 *)(pStatics_a458 + 108);
-                        local_2d8 = *(uint64 *)(pStatics_a458 + 100);
+                        local_2d0 = *(uint32 *)(pUICamera + 108);
+                        local_2d8 = UICamera.lastWorldPosition;
                         cVar3 = HitCheck.Invoke(lVar10);
                         if (!cVar3) goto LAB_1813ca8dc;
                       }
@@ -3301,23 +3235,21 @@ public class UICamera
         LAB_1813ca8dc:
                   uVar5 = uVar5 + 1;
                 } while ((int)uVar5 < iVar4);
-                lVar9 = *(int64 *)(pStatics_a458 + 0x238);
-                lVar10 = *(int64 *)(pStatics_7e10 + 16);
+                lVar9 = UICamera.mHits;
+                lVar10 = UICamera.GetKeyUp;
                 if (lVar10 == null) {
-                  uVar8 = **(uint64 **)(DAT_181d67e10 + 184);
+                  uVar8 = UICamera.list;
                   lVar10 = new OnTooltipCB(uVar8,DAT_181d8e650);
-                  plVar14 = (int64 *)(pStatics_7e10 + 16);
-                  *plVar14 = lVar10;
-                  il2cpp_internal(plVar14,lVar10);
+                  UICamera.GetKeyUp = lVar10;
                 }
                 if (lVar9 != null) {
                   FUN_18154f830(lVar9,lVar10,DAT_181d82798);
                   uVar5 = 0;
                   while( true ) {
-                    lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                    lVar9 = UICamera.mHits;
                     if (lVar9 == null) goto LAB_1813cbc27;
                     if (*(int *)(lVar9 + 24) <= (int)uVar5) break;
-                    lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                    lVar9 = UICamera.mHits;
                     if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 16)) == null)
                     goto LAB_1813cbc27;
                     if (*(uint32 *)(lVar9 + 24) <= uVar5) {
@@ -3327,18 +3259,18 @@ public class UICamera
                     }
                     cVar3 = UICamera.IsVisible(lVar9 + (int64)(int)uVar5 * 72 + 32,0);
                     if (cVar3) {
-                      lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                      lVar9 = UICamera.mHits;
                       if ((lVar9 != null) && (lVar9 = *(int64 *)(lVar9 + 16)) != null) {
                         if (*(uint32 *)(lVar9 + 24) <= uVar5) {
                           uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                           FUN_1800d65f0(uVar8,0);
                         }
-                        *(uint64 *)(pStatics_a458 + 0x1d8) =
+                        UICamera.mRayHitObject =
                              *(uint64 *)(lVar9 + 96 + (int64)(int)uVar5 * 72);
                         il2cpp_internal();
         LAB_1813cba50:
-                        lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+                        lVar9 = UICamera.mHits;
                         if (lVar9 != null) {
                           BetterList_1.Clear(lVar9,DAT_181d82718);
                           return true;
@@ -3353,7 +3285,7 @@ public class UICamera
                 goto LAB_1813cbc27;
               }
               if (iVar4 == 1) {
-                lVar9 = *(int64 *)(pStatics_a458 + 0x248);
+                lVar9 = UICamera.mOverlap;
                 if (lVar9 != null) {
                   if (*(int *)(lVar9 + 24) == 0) {
                     uVar8 = il2cpp_internal();
@@ -3379,19 +3311,17 @@ public class UICamera
                       if (!cVar3) goto LAB_1813cb769;
                       lVar10 = *(int64 *)(lVar10 + 224);
                       if (lVar10 != null) {
-                        local_2f0 = *(uint32 *)(pStatics_a458 + 108);
-                        local_2f8 = *(uint64 *)(pStatics_a458 + 100);
+                        local_2f0 = *(uint32 *)(pUICamera + 108);
+                        local_2f8 = UICamera.lastWorldPosition;
                         cVar3 = HitCheck.Invoke(lVar10,&local_2f8,0);
                         if (!cVar3) goto LAB_1813cb769;
                       }
                     }
-                    local_2e8 = *(uint64 *)(pStatics_a458 + 100);
-                    local_2e0 = *(uint32 *)(pStatics_a458 + 108);
+                    local_2e8 = UICamera.lastWorldPosition;
+                    local_2e0 = *(uint32 *)(pUICamera + 108);
                     cVar3 = UICamera.IsVisible(&local_2e8,lVar9,0);
                     if (cVar3) {
-                      plVar14 = (int64 *)(pStatics_a458 + 0x1d8);
-                      *plVar14 = lVar9;
-                      il2cpp_internal(plVar14,lVar9);
+                      UICamera.mRayHitObject = lVar9;
                       return true;
                     }
                     goto LAB_1813cb769;
@@ -3404,23 +3334,21 @@ public class UICamera
         LAB_1813cb769:
           uVar15 = uVar15 + 1;
         } while( true );
-        lVar9 = *(int64 *)(pStatics_a458 + 0x238);
-        lVar10 = *(int64 *)(pStatics_7e10 + 8);
+        lVar9 = UICamera.mHits;
+        lVar10 = UICamera.GetKeyDown;
         if (lVar10 == null) {
-          uVar8 = **(uint64 **)(DAT_181d67e10 + 184);
+          uVar8 = UICamera.list;
           lVar10 = new OnTooltipCB(uVar8,DAT_181d8e5c8);
-          plVar14 = (int64 *)(pStatics_7e10 + 8);
-          *plVar14 = lVar10;
-          il2cpp_internal(plVar14,lVar10);
+          UICamera.GetKeyDown = lVar10;
         }
         if (lVar9 == null) goto LAB_1813cbc27;
         FUN_18154f830(lVar9,lVar10,DAT_181d82798);
         uVar5 = 0;
         while( true ) {
-          lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+          lVar9 = UICamera.mHits;
           if (lVar9 == null) goto LAB_1813cbc27;
           if (*(int *)(lVar9 + 24) <= (int)uVar5) break;
-          lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+          lVar9 = UICamera.mHits;
           if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 16)) == null) goto LAB_1813cbc27;
           lVar10 = (int64)(int)uVar5;
           if (*(uint32 *)(lVar9 + 24) <= uVar5) {
@@ -3430,7 +3358,7 @@ public class UICamera
           }
           cVar3 = UICamera.IsVisible(lVar9 + lVar10 * 72 + 32,0);
           if (cVar3) {
-            lVar9 = pStatics_a458;
+            lVar9 = pUICamera;
             if ((*(int64 *)(lVar9 + 0x238) == 0) ||
                (lVar12 = *(int64 *)(*(int64 *)(lVar9 + 0x238) + 16)) == null)
             goto LAB_1813cbc27;
@@ -3449,23 +3377,23 @@ public class UICamera
             *(uint64 *)(lVar9 + 160) = uVar8;
             *(uint64 *)(lVar9 + 168) = *(uint64 *)(lVar12 + 68 + lVar10 * 72);
             *(uint32 *)(lVar9 + 176) = *(uint32 *)(lVar12 + 76 + lVar10 * 72);
-            lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+            lVar9 = UICamera.mHits;
             if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 16)) == null) goto LAB_1813cbc27;
             if (*(uint32 *)(lVar9 + 24) <= uVar5) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar8,0);
             }
-            *(uint64 *)(pStatics_a458 + 0x1d8) =
+            UICamera.mRayHitObject =
                  *(uint64 *)(lVar9 + 96 + lVar10 * 72);
             il2cpp_internal();
-            lVar9 = pStatics_a458;
+            lVar9 = pUICamera;
             *(uint32 *)(lVar9 + 112) = (uint32)local_368;
             *(uint32 *)(lVar9 + 116) = local_368._4_4_;
             *(uint32 *)(lVar9 + 120) = (uint32)uStack_360;
             *(uint32 *)(lVar9 + 124) = uStack_360._4_4_;
             *(uint64 *)(lVar9 + 128) = local_358;
-            lVar9 = pStatics_a458;
+            lVar9 = pUICamera;
             if ((*(int64 *)(lVar9 + 0x238) == 0) ||
                (lVar12 = *(int64 *)(*(int64 *)(lVar9 + 0x238) + 16)) == null)
             goto LAB_1813cbc27;
@@ -3481,7 +3409,7 @@ public class UICamera
           uVar5 = uVar5 + 1;
         }
         LAB_1813cb681:
-        lVar9 = *(int64 *)(pStatics_a458 + 0x238);
+        lVar9 = UICamera.mHits;
         if (lVar9 == null) goto LAB_1813cbc27;
         BetterList_1.Clear(lVar9,DAT_181d82718);
         uVar15 = uVar15 + 1;
@@ -3551,7 +3479,6 @@ public class UICamera
     // RVA   : 0x13C2330   Offset: 0x13C0B30   Length: 0x16C
     public static UICamera FindCameraForLayer(int layer)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -3560,12 +3487,13 @@ public class UICamera
         uint uVar6;
         uVar6 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= (int)uVar6) {
+          if (UICamera.list == null) break;
+          if (UICamera.list.eventType <= (int)uVar6) {
             return 0;
           }
-          if ((*pStatics == 0) ||
-             (lVar1 = *(int64 *)(*pStatics + 16)) == null) break;
+          if ((UICamera.list == null) ||
+             (lVar1 = *(int64 *)(UICamera.list + 16)) == null)
+          break;
           if (*(uint32 *)(lVar1 + 24) <= uVar6) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3590,17 +3518,16 @@ public class UICamera
     // RVA   : 0x13C2740   Offset: 0x13C0F40   Length: 0x142
     private static int GetDirection(KeyCode up, KeyCode down)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar2;
         bool cVar3;
         float fVar4;
         float fVar5;
         fVar4 = (float)RealTime.get_time(0);
-        pfVar1 = (float *)(pStatics + 0x260);
+        pfVar1 = &UICamera.mNextEvent;
         if (*pfVar1 <= fVar4 && fVar4 != *pfVar1) {
           cVar3 = FUN_180d6ca90(up,0);
           if (!cVar3) {
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = UICamera.GetAxis;
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -3608,12 +3535,12 @@ public class UICamera
             fVar5 = (float)GetAxisFunc.Invoke(lVar2,up,0);
             if (0.75 < fVar5) {
               UICamera.set_currentKey(0x14a,0);
-              *(float *)(pStatics + 0x260) = fVar4 + 0.25;
+              UICamera.mNextEvent = fVar4 + 0.25;
               return 1;
             }
             if (fVar5 < -0.75) {
               UICamera.set_currentKey(0x14a,0);
-              *(float *)(pStatics + 0x260) = fVar4 + 0.25;
+              UICamera.mNextEvent = fVar4 + 0.25;
               return 0xffffffff;
             }
           }
@@ -3625,17 +3552,16 @@ public class UICamera
     // RVA   : 0x13C2890   Offset: 0x13C1090   Length: 0x237
     private static int GetDirection(KeyCode up0, KeyCode up1, KeyCode down0, KeyCode down1)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar2;
         bool cVar3;
         float fVar4;
         float fVar5;
         fVar4 = (float)RealTime.get_time(0);
-        pfVar1 = (float *)(pStatics + 0x260);
+        pfVar1 = &UICamera.mNextEvent;
         if (*pfVar1 <= fVar4 && fVar4 != *pfVar1) {
           cVar3 = FUN_180d6ca90(up0,0);
           if (!cVar3) {
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = UICamera.GetAxis;
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -3643,12 +3569,12 @@ public class UICamera
             fVar5 = (float)GetAxisFunc.Invoke(lVar2,up0,0);
             if (0.75 < fVar5) {
               UICamera.set_currentKey(0x14a,0);
-              *(float *)(pStatics + 0x260) = fVar4 + 0.25;
+              UICamera.mNextEvent = fVar4 + 0.25;
               return 1;
             }
             if (fVar5 < -0.75) {
               UICamera.set_currentKey(0x14a,0);
-              *(float *)(pStatics + 0x260) = fVar4 + 0.25;
+              UICamera.mNextEvent = fVar4 + 0.25;
               return 0xffffffff;
             }
           }
@@ -3660,17 +3586,16 @@ public class UICamera
     // RVA   : 0x13C2AD0   Offset: 0x13C12D0   Length: 0x1A5
     private static int GetDirection(string axis)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar2;
         bool cVar3;
         float fVar4;
         float fVar5;
         fVar4 = (float)RealTime.get_time(0);
-        pfVar1 = (float *)(pStatics + 0x260);
+        pfVar1 = &UICamera.mNextEvent;
         if (*pfVar1 <= fVar4 && fVar4 != *pfVar1) {
           cVar3 = FUN_180d6ca90(axis,0);
           if (!cVar3) {
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = UICamera.GetAxis;
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -3678,12 +3603,12 @@ public class UICamera
             fVar5 = (float)GetAxisFunc.Invoke(lVar2,axis,0);
             if (0.75 < fVar5) {
               UICamera.set_currentKey(0x14a,0);
-              *(float *)(pStatics + 0x260) = fVar4 + 0.25;
+              UICamera.mNextEvent = fVar4 + 0.25;
               return 1;
             }
             if (fVar5 < -0.75) {
               UICamera.set_currentKey(0x14a,0);
-              *(float *)(pStatics + 0x260) = fVar4 + 0.25;
+              UICamera.mNextEvent = fVar4 + 0.25;
               return 0xffffffff;
             }
           }
@@ -3695,25 +3620,23 @@ public class UICamera
     // RVA   : 0x13C3660   Offset: 0x13C1E60   Length: 0x3AD
     public static void Notify(GameObject go, string funcName, object obj)
     {
-        var pStatics_a458 = *(int64*)(DAT_181d8a458 + 184);
-        var pStatics_add8 = *(int64*)(DAT_181d8add8 + 184);
         ulong uVar2;
         long lVar3;
         bool cVar4;
         int iVar5;
-        if (*(int *)(pStatics_a458 + 0x264) < 11) {
+        if (UICamera.mNotifying < 11) {
           iVar5 = UICamera.get_currentScheme(0);
           if (iVar5 == 2) {
             cVar4 = UIPopupList.get_isOpen(0);
             if (cVar4) {
-              if (*pStatics_add8 == 0) goto LAB_1813c3a08;
-              uVar2 = *(uint64 *)(*pStatics_add8 + 0x160);
+              if (UIPopupList.current == null) goto LAB_1813c3a08;
+              uVar2 = UIPopupList.current.source;
               cVar4 = Object.op_Equality(uVar2,go,0);
               if (cVar4) {
                 cVar4 = UIPopupList.get_isOpen(0);
                 if (cVar4) {
-                  if (*pStatics_add8 == 0) goto LAB_1813c3a08;
-                  go = Component.get_gameObject(*pStatics_add8,0);
+                  if (UIPopupList.current == null) goto LAB_1813c3a08;
+                  go = Component.get_gameObject(UIPopupList.current,0);
                 }
               }
             }
@@ -3727,22 +3650,20 @@ public class UICamera
             }
             cVar4 = GameObject.get_activeInHierarchy(go,0);
             if (cVar4) {
-              piVar1 = (int *)(pStatics_a458 + 0x264);
-              *piVar1 = *piVar1 + 1;
+              UICamera.mNotifying = *piVar1 + 1;
               GameObject.SendMessage(go,funcName,obj,1,0);
-              uVar2 = *(uint64 *)(pStatics_a458 + 240);
+              uVar2 = UICamera.mGenericHandler;
               cVar4 = Object.op_Inequality(uVar2,0,0);
               if (cVar4) {
-                uVar2 = *(uint64 *)(pStatics_a458 + 240);
+                uVar2 = UICamera.mGenericHandler;
                 cVar4 = Object.op_Inequality(uVar2,go,0);
                 if (cVar4) {
-                  lVar3 = *(int64 *)(pStatics_a458 + 240);
+                  lVar3 = UICamera.mGenericHandler;
                   if (lVar3 == null) goto LAB_1813c3a08;
                   GameObject.SendMessage(lVar3,funcName,obj,1,0);
                 }
               }
-              piVar1 = (int *)(pStatics_a458 + 0x264);
-              *piVar1 = *piVar1 + -1;
+              UICamera.mNotifying = *piVar1 + -1;
             }
           }
         }
@@ -3752,7 +3673,7 @@ public class UICamera
     // RVA   : 0x13C1990   Offset: 0x13C0190   Length: 0x5B6
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -3764,17 +3685,17 @@ public class UICamera
         uint uStack_24;
         byte[] local_18 = new byte[16];
         uVar3 = Screen.get_width(0);
-        *(uint32 *)(pStatics + 0x1a8) = uVar3;
+        UICamera.mWidth = uVar3;
         uVar3 = Screen.get_height(0);
-        *(uint32 *)(pStatics + 0x1ac) = uVar3;
+        UICamera.mHeight = uVar3;
         iVar4 = Application.get_platform(0);
         if ((iVar4 == 25) || (iVar4 = Application.get_platform(0), iVar4 == 27)) {
-          if (*(int *)(pStatics + 208) != 2) {
+          if (UICamera.mLastScheme != 2) {
             UICamera.set_currentKey(0x14a,0);
-            *(uint32 *)(pStatics + 208) = 2;
+            UICamera.mLastScheme = 2;
           }
         }
-        lVar6 = *(int64 *)(pStatics + 0x188);
+        lVar6 = UICamera.mMouse;
         if (lVar6 != null) {
           if (*(int *)(lVar6 + 24) == 0) {
             uVar7 = il2cpp_internal();
@@ -3790,7 +3711,7 @@ public class UICamera
             *(uint32 *)(lVar6 + 24) = uStack_24;
             uVar8 = 1;
             do {
-              lVar6 = *(int64 *)(pStatics + 0x188);
+              lVar6 = UICamera.mMouse;
               if (lVar6 == null) throw; // [null/range check failed]
               if (*(uint32 *)(lVar6 + 24) <= uVar8) {
                 uVar7 = il2cpp_internal();
@@ -3809,7 +3730,7 @@ public class UICamera
               if (lVar6 == null) throw; // [null/range check failed]
               *(uint32 *)(lVar6 + 20) = *(uint32 *)(lVar1 + 20);
               *(uint32 *)(lVar6 + 24) = uVar3;
-              lVar6 = *(int64 *)(pStatics + 0x188);
+              lVar6 = UICamera.mMouse;
               if (lVar6 == null) throw; // [null/range check failed]
               if (*(uint32 *)(lVar6 + 24) <= uVar8) {
                 uVar7 = il2cpp_internal();
@@ -3830,7 +3751,7 @@ public class UICamera
               *(uint32 *)(lVar6 + 28) = *(uint32 *)(lVar1 + 20);
               *(uint32 *)(lVar6 + 32) = uVar3;
             } while ((int)uVar8 < 3);
-            lVar6 = pStatics;
+            lVar6 = pUICamera;
             lVar1 = *(int64 *)(lVar6 + 0x188);
             if (lVar1 != null) {
               if (*(int *)(lVar1 + 24) == 0) {
@@ -3884,7 +3805,7 @@ public class UICamera
                         else {
                           this.useController = 0;
                           uVar8 = uVar8 + 1;
-                          *(uint8 *)(pStatics + 90) = 1;
+                          UICamera.ignoreControllerInput = 1;
                         }
                       }
                       else {
@@ -3910,12 +3831,11 @@ public class UICamera
     // RVA   : 0x13C3AA0   Offset: 0x13C22A0   Length: 0x10A
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         ulong uVar2;
-        if (*pStatics != 0) {
-          FUN_18154cb60(*pStatics,this,DAT_181d81398);
-          lVar1 = *pStatics;
+        if (UICamera.list != null) {
+          FUN_18154cb60(UICamera.list,this,DAT_181d81398);
+          lVar1 = UICamera.list;
           uVar2 = new OnTooltipCB(0,DAT_181d9c7c8,DAT_181d85798);
           if (lVar1 != null) {
             FUN_18154f550(lVar1,uVar2,DAT_181d81498);
@@ -3928,9 +3848,8 @@ public class UICamera
     // RVA   : 0x13C3A10   Offset: 0x13C2210   Length: 0x81
     private void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
-        if (*pStatics != 0) {
-          FUN_18154eb70(*pStatics,this,DAT_181d81418);
+        if (UICamera.list != null) {
+          FUN_18154eb70(UICamera.list,this,DAT_181d81418);
           return;
         }
     }
@@ -3939,14 +3858,13 @@ public class UICamera
     // RVA   : 0x13CC1E0   Offset: 0x13CA9E0   Length: 0x543
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
         long lVar4;
         long lVar6;
         float fVar7;
-        lVar4 = *pStatics;
+        lVar4 = UICamera.list;
         uVar3 = new OnTooltipCB(0,DAT_181d9c7c8,DAT_181d85798);
         if (lVar4 != null) {
           FUN_18154f550(lVar4,uVar3,DAT_181d81498);
@@ -3964,7 +3882,7 @@ public class UICamera
           if (!cVar1) {
             return;
           }
-          uVar3 = *(uint64 *)(pStatics + 248);
+          uVar3 = UICamera.fallThrough;
           cVar1 = Object.op_Equality(uVar3,0,0);
           if (cVar1) {
             uVar3 = Component.get_gameObject(this,0);
@@ -3973,17 +3891,15 @@ public class UICamera
             lVar6 = this;
             if ((cVar1) && (lVar6 = lVar4, lVar4 == null)) throw; // [null/range check failed]
             uVar3 = Component.get_gameObject(lVar6,0);
-            puVar5 = (uint64 *)(pStatics + 248);
-            *puVar5 = uVar3;
-            il2cpp_internal(puVar5,uVar3);
+            UICamera.fallThrough = uVar3;
           }
           lVar4 = UICamera.get_cachedCamera(this,0);
           if (lVar4 == null) throw; // [null/range check failed]
           Camera.set_eventMask(lVar4,0,0);
-          if (*(char *)(pStatics + 90) != false) {
+          if (UICamera.ignoreControllerInput) {
             return;
           }
-          if (*(char *)(pStatics + 0x268) == false) {
+          if (!UICamera.disableControllerCheck) {
             return;
           }
           if (!this.useController) {
@@ -3993,24 +3909,24 @@ public class UICamera
           if (!cVar1) {
             return;
           }
-          *(uint8 *)(pStatics + 0x268) = 0;
+          UICamera.disableControllerCheck = 0;
           cVar1 = FUN_180d6ca90(this.horizontalAxisName,0);
           if (!cVar1) {
-            lVar4 = *(int64 *)(pStatics + 32);
+            lVar4 = UICamera.GetAxis;
             if (lVar4 == null) throw; // [null/range check failed]
             fVar7 = (float)GetAxisFunc.Invoke(lVar4,this.horizontalAxisName,0);
             if (0.1 < ABS(fVar7)) goto LAB_1813cc6d1;
           }
           cVar1 = FUN_180d6ca90(this.verticalAxisName,0);
           if (!cVar1) {
-            lVar4 = *(int64 *)(pStatics + 32);
+            lVar4 = UICamera.GetAxis;
             if (lVar4 == null) throw; // [null/range check failed]
             fVar7 = (float)GetAxisFunc.Invoke(lVar4,this.verticalAxisName,0);
             if (0.1 < ABS(fVar7)) goto LAB_1813cc6d1;
           }
           cVar1 = FUN_180d6ca90(this.horizontalPanAxisName,0);
           if (!cVar1) {
-            lVar4 = *(int64 *)(pStatics + 32);
+            lVar4 = UICamera.GetAxis;
             if (lVar4 == null) throw; // [null/range check failed]
             fVar7 = (float)GetAxisFunc.Invoke(lVar4,this.horizontalPanAxisName,0);
             if (0.1 < ABS(fVar7)) goto LAB_1813cc6d1;
@@ -4019,14 +3935,14 @@ public class UICamera
           if (cVar1) {
             return;
           }
-          lVar4 = *(int64 *)(pStatics + 32);
+          lVar4 = UICamera.GetAxis;
           if (lVar4 != null) {
             fVar7 = (float)GetAxisFunc.Invoke(lVar4,this.verticalPanAxisName,0);
             if (ABS(fVar7) <= 0.1) {
               return;
             }
         LAB_1813cc6d1:
-            *(uint8 *)(pStatics + 90) = 1;
+            UICamera.ignoreControllerInput = 1;
             return;
           }
         }
@@ -4036,14 +3952,14 @@ public class UICamera
     // RVA   : 0x13CC180   Offset: 0x13CA980   Length: 0x58
     private void StartIgnoring()
     {
-        *(uint8 *)(*(int64 *)(DAT_181d8a458 + 184) + 89) = 1;
+        UICamera.ignoreAllEvents = 1;
     }
 
     // Token : 0x6000711
     // RVA   : 0x13CC730   Offset: 0x13CAF30   Length: 0x58
     private void StopIgnoring()
     {
-        *(uint8 *)(*(int64 *)(DAT_181d8a458 + 184) + 89) = 0;
+        UICamera.ignoreAllEvents = 0;
     }
 
     // Token : 0x6000712
@@ -4051,7 +3967,7 @@ public class UICamera
     private void Update()
     {
         bool cVar1;
-        if (*(char *)(*(int64 *)(DAT_181d8a458 + 184) + 89) == false) {
+        if (!UICamera.ignoreAllEvents) {
           cVar1 = UICamera.get_handlesEvents(this,0);
           if ((cVar1) && (this.processEventsIn == null)) {
             UICamera.ProcessEvents(this,0);
@@ -4064,7 +3980,6 @@ public class UICamera
     // RVA   : 0x13C34B0   Offset: 0x13C1CB0   Length: 0x1A9
     private void LateUpdate()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -4076,16 +3991,16 @@ public class UICamera
           }
           iVar3 = Screen.get_width(0);
           iVar4 = Screen.get_height(0);
-          if (iVar3 == *(int *)(pStatics + 0x1a8)) {
-            if (iVar4 == *(int *)(pStatics + 0x1ac)) {
+          if (iVar3 == UICamera.mWidth) {
+            if (iVar4 == UICamera.mHeight) {
               return;
             }
           }
-          *(int *)(pStatics + 0x1a8) = iVar3;
-          *(int *)(pStatics + 0x1ac) = iVar4;
+          UICamera.mWidth = iVar3;
+          UICamera.mHeight = iVar4;
           UIRoot.Broadcast("UpdateAnchors",0);
-          if (*(int64 *)(pStatics + 72) != 0) {
-            lVar1 = *(int64 *)(pStatics + 72);
+          if (UICamera.onScreenResize != null) {
+            lVar1 = UICamera.onScreenResize;
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -4099,7 +4014,6 @@ public class UICamera
     // RVA   : 0x13C3BB0   Offset: 0x13C23B0   Length: 0x7EE
     private void ProcessEvents()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         byte uVar1;
         long lVar2;
         bool cVar3;
@@ -4109,9 +4023,7 @@ public class UICamera
         float fVar9;
         float fVar10;
         float[] local_res8 = new float[2];
-        plVar7 = (int64 *)(pStatics + 184);
-        *plVar7 = this;
-        il2cpp_internal(plVar7,this);
+        UICamera.current = this;
         uVar1 = this.debug;
         NGUIDebug.set_debugRaycast(uVar1,0);
         if (!this.useTouch) {
@@ -4122,36 +4034,37 @@ public class UICamera
         else {
           UICamera.ProcessTouches(this,0);
         }
-        if (*(int64 *)(pStatics + 80) != 0) {
-          lVar2 = *(int64 *)(pStatics + 80);
+        if (UICamera.onCustomInput != null) {
+          lVar2 = UICamera.onCustomInput;
           if (lVar2 == null) goto LAB_1813c4379;
           OnGeometryUpdated.Invoke(lVar2,0);
         }
         if ((this.useKeyboard) || (this.useController)) {
           cVar3 = UICamera.get_disableController(0);
           if (!cVar3) {
-            if (*(char *)(pStatics + 90) == false) {
+            if (!UICamera.ignoreControllerInput) {
               UICamera.ProcessOthers(this,0);
             }
           }
         }
         if (this.useMouse) {
-          uVar6 = *(uint64 *)(pStatics + 0x1e0);
+          uVar6 = UICamera.mHover;
           cVar3 = Object.op_Inequality(uVar6,0,0);
           if (!cVar3) goto LAB_1813c4220;
           cVar3 = FUN_180d6ca90(this.scrollAxisName,0);
           if (!cVar3) {
-            lVar2 = *(int64 *)(pStatics + 32);
+            lVar2 = UICamera.GetAxis;
             if (lVar2 == null) goto LAB_1813c4379;
             fVar9 = (float)GetAxisFunc.Invoke(lVar2,this.scrollAxisName,0);
             if (fVar9 != 0.0) {
-              if (*(int64 *)(pStatics + 0x128) != 0) {
-                lVar2 = *(int64 *)(pStatics + 0x128);
+              if (UICamera.onScroll != null) {
+                lVar2 = UICamera.onScroll;
                 if (lVar2 == null) goto LAB_1813c4379;
                 FloatDelegate.Invoke
-                          (lVar2,*(uint64 *)(pStatics + 0x1e0),fVar9,0);
+                          (lVar2,UICamera.mHover,fVar9,
+                           0);
               }
-              uVar6 = *(uint64 *)(pStatics + 0x1e0);
+              uVar6 = UICamera.mHover;
               local_res8[0] = fVar9;
               uVar5 = il2cpp_value_box(DAT_181d7d0b8,local_res8);
               UICamera.Notify(uVar6,"OnScroll",uVar5,0);
@@ -4159,11 +4072,11 @@ public class UICamera
           }
           iVar4 = UICamera.get_currentScheme(0);
           if (iVar4 == 0) {
-            if (*(char *)(pStatics + 88) != false) {
-              if (*(float *)(pStatics + 0x1b8) != 0.0) {
+            if (UICamera.showTooltips) {
+              if (UICamera.mTooltipTime != null.0) {
                 cVar3 = UIPopupList.get_isOpen(0);
                 if (!cVar3) {
-                  lVar2 = *(int64 *)(pStatics + 0x188);
+                  lVar2 = UICamera.mMouse;
                   if (lVar2 != null) {
                     if (*(int *)(lVar2 + 24) == 0) {
                       uVar6 = il2cpp_internal();
@@ -4174,32 +4087,32 @@ public class UICamera
                       uVar6 = *(uint64 *)(*(int64 *)(lVar2 + 32) + 88);
                       cVar3 = Object.op_Equality(uVar6,0,0);
                       if (!cVar3) goto LAB_1813c4220;
-                      fVar9 = *(float *)(pStatics + 0x1b8);
+                      fVar9 = UICamera.mTooltipTime;
                       fVar10 = (float)Time.get_unscaledTime(0);
                       if (fVar10 <= fVar9) {
-                        lVar2 = *(int64 *)(pStatics + 24);
+                        lVar2 = UICamera.GetKey;
                         if (lVar2 == null) goto LAB_1813c4379;
                         cVar3 = GetKeyStateFunc.Invoke(lVar2,0x130,0);
                         if (!cVar3) {
-                          lVar2 = *(int64 *)(pStatics + 24);
+                          lVar2 = UICamera.GetKey;
                           if (lVar2 == null) goto LAB_1813c4379;
                           cVar3 = GetKeyStateFunc.Invoke(lVar2,0x12f,0);
                           if (!cVar3) goto LAB_1813c4220;
                         }
                       }
-                      lVar2 = *(int64 *)(pStatics + 0x188);
+                      lVar2 = UICamera.mMouse;
                       if (lVar2 != null) {
                         if (*(int *)(lVar2 + 24) == 0) {
                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                           FUN_1800d65f0(uVar6,0);
                         }
-                        *(uint64 *)(pStatics + 224) =
+                        UICamera.currentTouch =
                              *(uint64 *)(lVar2 + 32);
                         il2cpp_internal();
-                        *(uint32 *)(pStatics + 212) = 0xffffffff;
+                        UICamera.currentTouchID = 0xffffffff;
                         UICamera.ShowTooltip
-                                  (*(uint64 *)(pStatics + 0x1e0),0);
+                                  (UICamera.mHover,0);
                         goto LAB_1813c4220;
                       }
                     }
@@ -4213,26 +4126,24 @@ public class UICamera
           }
         }
         LAB_1813c4220:
-        uVar6 = *(uint64 *)(pStatics + 0x1b0);
+        uVar6 = UICamera.mTooltip;
         cVar3 = Object.op_Inequality(uVar6,0,0);
         if (cVar3) {
-          uVar6 = *(uint64 *)(pStatics + 0x1b0);
+          uVar6 = UICamera.mTooltip;
           cVar3 = NGUITools.GetActive(uVar6,0);
           if (!cVar3) {
             UICamera.ShowTooltip(0,0);
           }
         }
-        puVar8 = (uint64 *)(pStatics + 184);
-        *puVar8 = 0;
-        il2cpp_internal(puVar8,0);
-        *(uint32 *)(pStatics + 212) = 0xffffff9c;
+        UICamera.current = 0;
+        UICamera.currentTouchID = 0xffffff9c;
     }
 
     // Token : 0x6000715
     // RVA   : 0x13C4840   Offset: 0x13C3040   Length: 0xFD7
     public void ProcessMouse()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         long lVar2;
         long lVar3;
         ulong uVar4;
@@ -4271,54 +4182,54 @@ public class UICamera
         } while (iVar16 < 3);
         iVar16 = UICamera.get_currentScheme(0);
         if (iVar16 == 1) {
-          lVar2 = *(int64 *)(pStatics + 0x198);
+          lVar2 = UICamera.activeTouches;
           if (lVar2 == null) throw; // [null/range check failed]
           if (0 < *(int *)(lVar2 + 24)) {
             return;
           }
         }
-        lVar2 = *(int64 *)(pStatics + 0x188);
+        lVar2 = UICamera.mMouse;
         if (lVar2 == null) throw; // [null/range check failed]
         if (*(int *)(lVar2 + 24) == 0) {
           uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar15,0);
         }
-        *(uint64 *)(pStatics + 224) = *(uint64 *)(lVar2 + 32);
+        UICamera.currentTouch = *(uint64 *)(lVar2 + 32);
         puVar14 = (uint64 *)Input.get_mousePosition(local_78,0);
-        lVar2 = *(int64 *)(pStatics + 224);
+        lVar2 = UICamera.currentTouch;
         if (lVar2 == null) throw; // [null/range check failed]
         local_98 = (float)*puVar14;
         fStack_84 = (float)((uint64)*puVar14 >> 32);
-        if (*(int *)(lVar2 + 120) == 0) {
-          lVar2 = *(int64 *)(pStatics + 224);
+        if (lVar2.ignoreDelta == null) {
+          lVar2 = UICamera.currentTouch;
           if (lVar2 == null) throw; // [null/range check failed]
-          *(float *)(lVar2 + 36) = local_98 - *(float *)(lVar2 + 20);
+          lVar2.delta = local_98 - lVar2.pos;
           *(float *)(lVar2 + 40) = fStack_84 - *(float *)(lVar2 + 24);
         }
         else {
-          lVar2 = *(int64 *)(pStatics + 224);
+          lVar2 = UICamera.currentTouch;
           if (lVar2 == null) throw; // [null/range check failed]
           piVar1 = (int *)(lVar2 + 120);
           *piVar1 = *piVar1 + -1;
-          lVar2 = *(int64 *)(pStatics + 224);
+          lVar2 = UICamera.currentTouch;
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar2 + 36) = 0;
-          lVar2 = *(int64 *)(pStatics + 224);
+          lVar2.delta = 0;
+          lVar2 = UICamera.currentTouch;
           if (lVar2 == null) throw; // [null/range check failed]
           *(uint32 *)(lVar2 + 40) = 0;
         }
-        lVar2 = *(int64 *)(pStatics + 224);
+        lVar2 = UICamera.currentTouch;
         if (lVar2 == null) throw; // [null/range check failed]
         fVar20 = (float)Vector2.get_sqrMagnitude(lVar2 + 36,0);
-        lVar2 = *(int64 *)(pStatics + 224);
+        lVar2 = UICamera.currentTouch;
         if (lVar2 == null) throw; // [null/range check failed]
-        *(float *)(lVar2 + 20) = local_98;
+        lVar2.pos = local_98;
         bVar7 = false;
         *(float *)(lVar2 + 24) = fStack_84;
-        lVar2 = pStatics;
+        lVar2 = pUICamera;
         *(float *)(lVar2 + 92) = local_98;
-        *(float *)(lVar2 + 96) = fStack_84;
+        lVar2.lastClickGO = fStack_84;
         iVar16 = UICamera.get_currentScheme(0);
         if (iVar16 == 0) {
           if (0.001 >= fVar20)
@@ -4336,34 +4247,34 @@ public class UICamera
         uVar18 = 1;
         uVar17 = 1;
         do {
-          lVar2 = *(int64 *)(pStatics + 0x188);
+          lVar2 = UICamera.mMouse;
           if (lVar2 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar2 + 24) <= uVar17) {
             uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar15,0);
           }
-          lVar3 = *(int64 *)(pStatics + 224);
+          lVar3 = UICamera.currentTouch;
           if (lVar3 == null) throw; // [null/range check failed]
           uVar22 = *(uint32 *)(lVar3 + 24);
           lVar2 = lVar2[uVar17];
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar2 + 20) = *(uint32 *)(lVar3 + 20);
+          lVar2.pos = lVar3.pos;
           *(uint32 *)(lVar2 + 24) = uVar22;
-          lVar2 = *(int64 *)(pStatics + 0x188);
+          lVar2 = UICamera.mMouse;
           if (lVar2 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar2 + 24) <= uVar17) {
             uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar15,0);
           }
-          lVar3 = *(int64 *)(pStatics + 224);
+          lVar3 = UICamera.currentTouch;
           if (lVar3 == null) throw; // [null/range check failed]
           uVar22 = *(uint32 *)(lVar3 + 40);
           lVar2 = lVar2[uVar17];
           if (lVar2 == null) throw; // [null/range check failed]
           uVar17 = uVar17 + 1;
-          *(uint32 *)(lVar2 + 36) = *(uint32 *)(lVar3 + 36);
+          lVar2.delta = lVar3.delta;
           *(uint32 *)(lVar2 + 40) = uVar22;
         } while ((int)uVar17 < 3);
         if ((bVar7 || bVar5) ||
@@ -4371,27 +4282,27 @@ public class UICamera
         {
           fVar20 = (float)RealTime.get_time(0);
           this.mNextRaycast = fVar20 + 0.02;
-          UICamera.Raycast(*(uint64 *)(pStatics + 224),0);
+          UICamera.Raycast(UICamera.currentTouch,0);
           if (bVar5) {
             bVar7 = true;
             do {
-              lVar2 = *(int64 *)(pStatics + 0x188);
+              lVar2 = UICamera.mMouse;
               if (lVar2 == null) throw; // [null/range check failed]
               if (*(uint32 *)(lVar2 + 24) <= uVar18) {
                 uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar15,0);
               }
-              lVar3 = *(int64 *)(pStatics + 224);
+              lVar3 = UICamera.currentTouch;
               if (lVar3 == null) throw; // [null/range check failed]
               lVar2 = lVar2[uVar18];
               if (lVar2 == null) throw; // [null/range check failed]
-              *(uint64 *)(lVar2 + 72) = *(uint64 *)(lVar3 + 72);
+              lVar2.current = lVar3.current;
               uVar18 = uVar18 + 1;
             } while ((int)uVar18 < 3);
           }
           else {
-            lVar2 = *(int64 *)(pStatics + 0x188);
+            lVar2 = UICamera.mMouse;
             if (lVar2 == null) throw; // [null/range check failed]
             if (*(int *)(lVar2 + 24) == 0) {
               uVar15 = il2cpp_internal();
@@ -4399,57 +4310,57 @@ public class UICamera
               FUN_1800d65f0(uVar15,0);
             }
             if (*(int64 *)(lVar2 + 32) == 0) throw; // [null/range check failed]
-            lVar3 = *(int64 *)(pStatics + 224);
+            lVar3 = UICamera.currentTouch;
             uVar15 = *(uint64 *)(*(int64 *)(lVar2 + 32) + 72);
             if (lVar3 == null) throw; // [null/range check failed]
-            uVar4 = *(uint64 *)(lVar3 + 72);
+            uVar4 = lVar3.current;
             cVar9 = Object.op_Inequality(uVar15,uVar4,0);
             if (cVar9) {
               UICamera.set_currentKey(0x143,0);
               bVar7 = true;
               uVar17 = 1;
               do {
-                lVar2 = *(int64 *)(pStatics + 0x188);
+                lVar2 = UICamera.mMouse;
                 if (lVar2 == null) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar2 + 24) <= uVar17) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                   FUN_1800d65f0(uVar15,0);
                 }
-                lVar3 = *(int64 *)(pStatics + 224);
+                lVar3 = UICamera.currentTouch;
                 if (lVar3 == null) throw; // [null/range check failed]
                 lVar2 = lVar2[uVar17];
                 if (lVar2 == null) throw; // [null/range check failed]
-                *(uint64 *)(lVar2 + 72) = *(uint64 *)(lVar3 + 72);
+                lVar2.current = lVar3.current;
                 uVar17 = uVar17 + 1;
               } while ((int)uVar17 < 3);
             }
           }
         }
-        lVar2 = *(int64 *)(pStatics + 224);
+        lVar2 = UICamera.currentTouch;
         if (lVar2 != null) {
-          uVar15 = *(uint64 *)(lVar2 + 64);
-          uVar4 = *(uint64 *)(lVar2 + 72);
+          uVar15 = lVar2.last;
+          uVar4 = lVar2.current;
           bVar10 = Object.op_Inequality(uVar15,uVar4,0);
-          lVar2 = *(int64 *)(pStatics + 224);
+          lVar2 = UICamera.currentTouch;
           if (lVar2 != null) {
-            cVar9 = Object.op_Inequality(*(uint64 *)(lVar2 + 80),0,0);
+            cVar9 = Object.op_Inequality(lVar2.pressed,0,0);
             bVar8 = false;
             if (!cVar9) {
               bVar8 = bVar7;
             }
             if (bVar8) {
-              lVar2 = *(int64 *)(pStatics + 224);
+              lVar2 = UICamera.currentTouch;
               if (lVar2 == null) throw; // [null/range check failed]
-              UICamera.set_hoveredObject(*(uint64 *)(lVar2 + 72),0);
+              UICamera.set_hoveredObject(lVar2.current,0);
             }
-            *(uint32 *)(pStatics + 212) = 0xffffffff;
+            UICamera.currentTouchID = 0xffffffff;
             if (bVar10 != 0) {
               UICamera.set_currentKey(0x143,0);
             }
             if ((bool)(bVar7 & !bVar5)) {
-              if (*(float *)(pStatics + 0x1b8) == 0.0) {
-                uVar15 = *(uint64 *)(pStatics + 0x1b0);
+              if (UICamera.mTooltipTime == null.0) {
+                uVar15 = UICamera.mTooltip;
                 cVar11 = Object.op_Inequality(uVar15,0,0);
                 if (cVar11) {
                   bVar12 = bVar10;
@@ -4464,18 +4375,16 @@ public class UICamera
               else {
                 fVar21 = (float)Time.get_unscaledTime(0);
                 fVar20 = this.tooltipDelay;
-                *(float *)(pStatics + 0x1b8) = fVar20 + fVar21;
+                UICamera.mTooltipTime = fVar20 + fVar21;
               }
             }
             if (bVar7) {
-              if (*(int64 *)(pStatics + 0x180) != 0) {
-                lVar2 = *(int64 *)(pStatics + 224);
-                lVar3 = *(int64 *)(pStatics + 0x180);
+              if (UICamera.onMouseMove != null) {
+                lVar2 = UICamera.currentTouch;
+                lVar3 = UICamera.onMouseMove;
                 if ((lVar2 == null) || (lVar3 == null)) throw; // [null/range check failed]
-                MoveDelegate.Invoke(lVar3,*(uint64 *)(lVar2 + 36),0);
-                puVar14 = (uint64 *)(pStatics + 224);
-                *puVar14 = 0;
-                il2cpp_internal(puVar14,0);
+                MoveDelegate.Invoke(lVar3,lVar2.delta,0);
+                UICamera.currentTouch = 0;
               }
             }
             if ((bVar10 != 0) && ((bVar6 || ((cVar9 && (!bVar5)))))) {
@@ -4488,67 +4397,67 @@ public class UICamera
               if (cVar11 || cVar9) {
                 UICamera.set_currentKey(uVar17 + 0x143,0);
               }
-              lVar2 = *(int64 *)(pStatics + 0x188);
+              lVar2 = UICamera.mMouse;
               if (lVar2 == null) throw; // [null/range check failed]
               if (*(uint32 *)(lVar2 + 24) <= uVar17) {
                 uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar15,0);
               }
-              *(uint64 *)(pStatics + 224) =
+              UICamera.currentTouch =
                    lVar2[uVar17];
               il2cpp_internal();
-              *(uint32 *)(pStatics + 212) = ~uVar17;
+              UICamera.currentTouchID = ~uVar17;
               UICamera.set_currentKey(uVar17 + 0x143,0);
               if (!cVar9) {
-                lVar2 = *(int64 *)(pStatics + 224);
+                lVar2 = UICamera.currentTouch;
                 if (lVar2 == null) throw; // [null/range check failed]
-                uVar15 = *(uint64 *)(lVar2 + 80);
+                uVar15 = lVar2.pressed;
                 cVar13 = Object.op_Inequality(uVar15,0,0);
                 if (cVar13) {
-                  lVar2 = *(int64 *)(pStatics + 224);
+                  lVar2 = UICamera.currentTouch;
                   if (lVar2 == null) throw; // [null/range check failed]
-                  *(uint64 *)(pStatics + 192) =
-                       *(uint64 *)(lVar2 + 56);
+                  UICamera.currentCamera =
+                       lVar2.pressedCam;
                   il2cpp_internal();
                 }
               }
               else {
-                lVar2 = *(int64 *)(pStatics + 224);
+                lVar2 = UICamera.currentTouch;
                 if (lVar2 == null) throw; // [null/range check failed]
-                *(uint64 *)(lVar2 + 56) =
-                     *(uint64 *)(pStatics + 192);
+                lVar2.pressedCam =
+                     UICamera.currentCamera;
                 il2cpp_internal();
-                lVar2 = *(int64 *)(pStatics + 224);
+                lVar2 = UICamera.currentTouch;
                 uVar22 = RealTime.get_time(0);
                 if (lVar2 == null) throw; // [null/range check failed]
-                *(uint32 *)(lVar2 + 104) = uVar22;
+                lVar2.pressTime = uVar22;
               }
               UICamera.ProcessTouch(this,cVar9,cVar11,0);
               uVar17 = uVar17 + 1;
             } while ((int)uVar17 < 3);
             if ((!bVar5 & bVar10) != 0) {
-              lVar2 = *(int64 *)(pStatics + 0x188);
+              lVar2 = UICamera.mMouse;
               if (lVar2 == null) throw; // [null/range check failed]
               if (*(int *)(lVar2 + 24) == 0) {
                 uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar15,0);
               }
-              *(uint64 *)(pStatics + 224) = *(uint64 *)(lVar2 + 32);
+              UICamera.currentTouch =
+                   *(uint64 *)(lVar2 + 32);
+              il2cpp_internal();
               fVar20 = (float)Time.get_unscaledTime(0);
-              *(float *)(pStatics + 0x1b8) =
+              UICamera.mTooltipTime =
                    fVar20 + this.tooltipDelay;
-              *(uint32 *)(pStatics + 212) = 0xffffffff;
+              UICamera.currentTouchID = 0xffffffff;
               UICamera.set_currentKey(0x143,0);
-              lVar2 = *(int64 *)(pStatics + 224);
+              lVar2 = UICamera.currentTouch;
               if (lVar2 == null) throw; // [null/range check failed]
-              UICamera.set_hoveredObject(*(uint64 *)(lVar2 + 72),0);
+              UICamera.set_hoveredObject(lVar2.current,0);
             }
-            puVar14 = (uint64 *)(pStatics + 224);
-            *puVar14 = 0;
-            il2cpp_internal(puVar14,0);
-            lVar2 = *(int64 *)(pStatics + 0x188);
+            UICamera.currentTouch = 0;
+            lVar2 = UICamera.mMouse;
             if (lVar2 != null) {
               if (*(int *)(lVar2 + 24) == 0) {
                 uVar15 = il2cpp_internal();
@@ -4557,9 +4466,9 @@ public class UICamera
               }
               lVar2 = *(int64 *)(lVar2 + 32);
               if (lVar2 != null) {
-                *(uint64 *)(lVar2 + 64) = *(uint64 *)(lVar2 + 72);
+                lVar2.last = lVar2.current;
                 while( true ) {
-                  lVar2 = *(int64 *)(pStatics + 0x188);
+                  lVar2 = UICamera.mMouse;
                   if (lVar2 == null) break;
                   if (*(uint32 *)(lVar2 + 24) <= uVar19) {
                     uVar15 = il2cpp_internal();
@@ -4574,7 +4483,7 @@ public class UICamera
                   if (*(int64 *)(lVar2 + 32) == 0) break;
                   lVar3 = lVar2[uVar19];
                   if (lVar3 == null) break;
-                  *(uint64 *)(lVar3 + 64) = *(uint64 *)(*(int64 *)(lVar2 + 32) + 64);
+                  lVar3.last = *(uint64 *)(*(int64 *)(lVar2 + 32) + 64);
                   uVar19 = uVar19 + 1;
                   if (2 < (int)uVar19) {
                     return;
@@ -4590,7 +4499,6 @@ public class UICamera
     // RVA   : 0x13C9360   Offset: 0x13C7B60   Length: 0x75E
     public void ProcessTouches()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         int iVar2;
         int iVar3;
@@ -4621,11 +4529,11 @@ public class UICamera
         uStack_c0 = 0;
         local_b8 = 0;
         uStack_b0 = 0;
-        if (*(int64 *)(pStatics + 0x270) == 0) {
+        if (UICamera.GetInputTouchCount == null) {
           iVar2 = Input.get_touchCount(0);
         }
         else {
-          lVar5 = *(int64 *)(pStatics + 0x270);
+          lVar5 = UICamera.GetInputTouchCount;
           if (lVar5 == null) {
         LAB_1813c9ab9:
                           // WARNING: Subroutine does not return
@@ -4636,20 +4544,20 @@ public class UICamera
         iVar9 = 0;
         if (iVar2 < 1) {
           if (iVar2 == 0) {
-            if (*(char *)(pStatics + 0x269) == false) {
+            if (!UICamera.mUsingTouchEvents) {
               if (!this.useMouse) {
                 return;
               }
               UICamera.ProcessMouse(this,0);
               return;
             }
-            *(uint8 *)(pStatics + 0x269) = 0;
+            UICamera.mUsingTouchEvents = 0;
             return;
           }
         }
         else {
           do {
-            if (*(int64 *)(pStatics + 0x278) == 0) {
+            if (UICamera.GetInputTouch == null) {
               puVar7 = (uint64 *)Input.GetTouch(local_98,iVar9,0);
               local_e8 = *puVar7;
               uStack_e0 = puVar7[1];
@@ -4668,27 +4576,26 @@ public class UICamera
               local_res18 = (float)uVar6;
             }
             else {
-              lVar5 = *(int64 *)(pStatics + 0x278);
+              lVar5 = UICamera.GetInputTouch;
               if ((lVar5 == null) || (lVar5 = GetTouchCallback.Invoke(lVar5,iVar9,0)) == null)
               goto LAB_1813c9ab9;
-              iVar3 = *(int *)(lVar5 + 20);
-              uVar12 = *(uint32 *)(lVar5 + 16);
+              iVar3 = lVar5.pos;
+              uVar12 = lVar5.key;
               local_res18 = *(float *)(lVar5 + 24);
-              fVar13 = *(float *)(lVar5 + 28);
+              fVar13 = lVar5.lastPos;
               iVar4 = *(int *)(lVar5 + 32);
             }
             uVar8 = 1;
             if (this.allowMultiTouch) {
               uVar8 = uVar12;
             }
-            *(uint32 *)(pStatics + 212) = uVar8;
-            lVar5 = *(int64 *)(pStatics + 56);
+            UICamera.currentTouchID = uVar8;
+            lVar5 = UICamera.GetTouch;
             if (lVar5 == null) goto LAB_1813c9ab9;
             uVar6 = GetTouchDelegate.Invoke
-                              (lVar5,*(uint32 *)(pStatics + 212),1,0);
-            puVar7 = (uint64 *)(pStatics + 224);
-            *puVar7 = uVar6;
-            il2cpp_internal(puVar7,uVar6);
+                              (lVar5,UICamera.currentTouchID,1,0
+                              );
+            UICamera.currentTouch = uVar6;
             if (iVar3 == 0) {
               cVar1 = true;
               bVar11 = true;
@@ -4696,41 +4603,41 @@ public class UICamera
               bVar10 = iVar3 == 3;
             }
             else {
-              lVar5 = *(int64 *)(pStatics + 224);
+              lVar5 = UICamera.currentTouch;
               if (lVar5 == null) goto LAB_1813c9ab9;
-              cVar1 = *(char *)(lVar5 + 116);
+              cVar1 = lVar5.touchBegan;
               bVar11 = cVar1;
               if (iVar3 != 4) goto LAB_1813c964e;
               bVar10 = true;
             }
-            lVar5 = *(int64 *)(pStatics + 224);
+            lVar5 = UICamera.currentTouch;
             if (lVar5 == null) goto LAB_1813c9ab9;
-            *(float *)(lVar5 + 36) = local_res18 - *(float *)(lVar5 + 20);
+            lVar5.delta = local_res18 - lVar5.pos;
             *(float *)(lVar5 + 40) = fVar13 - *(float *)(lVar5 + 24);
-            lVar5 = *(int64 *)(pStatics + 224);
+            lVar5 = UICamera.currentTouch;
             if (lVar5 == null) goto LAB_1813c9ab9;
-            *(float *)(lVar5 + 20) = local_res18;
+            lVar5.pos = local_res18;
             *(float *)(lVar5 + 24) = fVar13;
             UICamera.set_currentKey(0,0);
-            UICamera.Raycast(*(uint64 *)(pStatics + 224),0);
+            UICamera.Raycast(UICamera.currentTouch,0);
             if (!cVar1) {
-              lVar5 = *(int64 *)(pStatics + 224);
+              lVar5 = UICamera.currentTouch;
               if (lVar5 == null) goto LAB_1813c9ab9;
-              uVar6 = *(uint64 *)(lVar5 + 80);
+              uVar6 = lVar5.pressed;
               cVar1 = Object.op_Inequality(uVar6,0,0);
               if (cVar1) {
-                lVar5 = *(int64 *)(pStatics + 224);
+                lVar5 = UICamera.currentTouch;
                 if (lVar5 != null) {
-                  uVar6 = *(uint64 *)(lVar5 + 56);
-                  puVar7 = (uint64 *)(pStatics + 192);
+                  uVar6 = lVar5.pressedCam;
+                  puVar7 = &UICamera.currentCamera;
                   goto LAB_1813c9850;
                 }
                 goto LAB_1813c9ab9;
               }
             }
             else {
-              lVar5 = *(int64 *)(pStatics + 224);
-              uVar6 = *(uint64 *)(pStatics + 192);
+              lVar5 = UICamera.currentTouch;
+              uVar6 = UICamera.currentCamera;
               if (lVar5 == null) goto LAB_1813c9ab9;
               puVar7 = (uint64 *)(lVar5 + 56);
         LAB_1813c9850:
@@ -4738,39 +4645,36 @@ public class UICamera
               il2cpp_internal();
             }
             if (1 < iVar4) {
-              lVar5 = *(int64 *)(pStatics + 224);
+              lVar5 = UICamera.currentTouch;
               uVar12 = RealTime.get_time(0);
               if (lVar5 == null) goto LAB_1813c9ab9;
-              *(uint32 *)(lVar5 + 108) = uVar12;
+              lVar5.clickTime = uVar12;
             }
             UICamera.ProcessTouch(this,bVar11);
             if (bVar10) {
-              lVar5 = *(int64 *)(pStatics + 64);
+              lVar5 = UICamera.RemoveTouch;
               if (lVar5 == null) goto LAB_1813c9ab9;
               RemoveTouchDelegate.Invoke
-                        (lVar5,*(uint32 *)(pStatics + 212));
+                        (lVar5,UICamera.currentTouchID);
             }
-            lVar5 = *(int64 *)(pStatics + 224);
+            lVar5 = UICamera.currentTouch;
             if (lVar5 == null) goto LAB_1813c9ab9;
-            *(uint8 *)(lVar5 + 116) = 0;
-            lVar5 = *(int64 *)(pStatics + 224);
+            lVar5.touchBegan = 0;
+            lVar5 = UICamera.currentTouch;
             if (lVar5 == null) goto LAB_1813c9ab9;
             puVar7 = (uint64 *)(lVar5 + 64);
             *puVar7 = 0;
             il2cpp_internal(puVar7,0);
-            puVar7 = (uint64 *)(pStatics + 224);
-            *puVar7 = 0;
-            il2cpp_internal(puVar7,0);
+            UICamera.currentTouch = 0;
           } while ((this.allowMultiTouch) && (iVar9 = iVar9 + 1, iVar9 < iVar2));
         }
-        *(uint8 *)(pStatics + 0x269) = 1;
+        UICamera.mUsingTouchEvents = 1;
     }
 
     // Token : 0x6000717
     // RVA   : 0x13C43A0   Offset: 0x13C2BA0   Length: 0x496
     private void ProcessFakeTouches()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         bool cVar2;
         bool cVar3;
@@ -4786,56 +4690,57 @@ public class UICamera
         if ((!cVar4 && !cVar3) && !cVar2) {
           return;
         }
-        *(uint32 *)(pStatics + 212) = 1;
-        lVar1 = *(int64 *)(pStatics + 0x188);
+        UICamera.currentTouchID = 1;
+        lVar1 = UICamera.mMouse;
         if (lVar1 == null) throw; // [null/range check failed]
         if (*(int *)(lVar1 + 24) == 0) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar6,0);
         }
-        *(uint64 *)(pStatics + 224) = *(uint64 *)(lVar1 + 32);
-        lVar1 = *(int64 *)(pStatics + 224);
+        UICamera.currentTouch = *(uint64 *)(lVar1 + 32);
+        lVar1 = UICamera.currentTouch;
         if (lVar1 == null) throw; // [null/range check failed]
-        *(char *)(lVar1 + 116) = cVar2;
+        lVar1.touchBegan = cVar2;
         if (cVar2) {
-          lVar1 = *(int64 *)(pStatics + 224);
+          lVar1 = UICamera.currentTouch;
           uVar7 = RealTime.get_time(0);
           if (lVar1 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar1 + 104) = uVar7;
-          lVar1 = *(int64 *)(pStatics + 0x198);
+          lVar1.pressTime = uVar7;
+          lVar1 = UICamera.activeTouches;
           if (lVar1 == null) throw; // [null/range check failed]
-          FUN_181827900(lVar1,*(uint64 *)(pStatics + 224),DAT_181d8c360);
+          FUN_181827900(lVar1,UICamera.currentTouch,
+                        DAT_181d8c360);
         }
         puVar5 = (uint64 *)Input.get_mousePosition(local_18,0);
         uVar6 = *puVar5;
-        lVar1 = *(int64 *)(pStatics + 224);
+        lVar1 = UICamera.currentTouch;
         if (lVar1 == null) throw; // [null/range check failed]
         local_38 = (float)uVar6;
         fStack_24 = (float)((uint64)uVar6 >> 32);
-        *(float *)(lVar1 + 36) = local_38 - *(float *)(lVar1 + 20);
+        lVar1.delta = local_38 - lVar1.pos;
         *(float *)(lVar1 + 40) = fStack_24 - *(float *)(lVar1 + 24);
-        lVar1 = *(int64 *)(pStatics + 224);
+        lVar1 = UICamera.currentTouch;
         if (lVar1 == null) throw; // [null/range check failed]
-        *(float *)(lVar1 + 20) = local_38;
+        lVar1.pos = local_38;
         *(float *)(lVar1 + 24) = fStack_24;
-        UICamera.Raycast(*(uint64 *)(pStatics + 224),0);
+        UICamera.Raycast(UICamera.currentTouch,0);
         if (!cVar2) {
-          lVar1 = *(int64 *)(pStatics + 224);
+          lVar1 = UICamera.currentTouch;
           if (lVar1 == null) throw; // [null/range check failed]
-          uVar6 = *(uint64 *)(lVar1 + 80);
+          uVar6 = lVar1.pressed;
           cVar4 = Object.op_Inequality(uVar6,0,0);
           if (cVar4) {
-            lVar1 = *(int64 *)(pStatics + 224);
+            lVar1 = UICamera.currentTouch;
             if (lVar1 == null) throw; // [null/range check failed]
-            uVar6 = *(uint64 *)(lVar1 + 56);
-            puVar5 = (uint64 *)(pStatics + 192);
+            uVar6 = lVar1.pressedCam;
+            puVar5 = &UICamera.currentCamera;
             goto LAB_1813c470a;
           }
         }
         else {
-          lVar1 = *(int64 *)(pStatics + 224);
-          uVar6 = *(uint64 *)(pStatics + 192);
+          lVar1 = UICamera.currentTouch;
+          uVar6 = UICamera.currentCamera;
           if (lVar1 == null) throw; // [null/range check failed]
           puVar5 = (uint64 *)(lVar1 + 56);
         LAB_1813c470a:
@@ -4845,18 +4750,17 @@ public class UICamera
         UICamera.set_currentKey(0,0);
         UICamera.ProcessTouch(this,cVar2,cVar3,0);
         if (cVar3) {
-          lVar1 = *(int64 *)(pStatics + 0x198);
+          lVar1 = UICamera.activeTouches;
           if (lVar1 == null) throw; // [null/range check failed]
-          FUN_181801c10(lVar1,*(uint64 *)(pStatics + 224),DAT_181d8c3e0);
+          FUN_181801c10(lVar1,UICamera.currentTouch,
+                        DAT_181d8c3e0);
         }
-        lVar1 = *(int64 *)(pStatics + 224);
+        lVar1 = UICamera.currentTouch;
         if (lVar1 != null) {
           puVar5 = (uint64 *)(lVar1 + 64);
           *puVar5 = 0;
           il2cpp_internal(puVar5,0);
-          puVar5 = (uint64 *)(pStatics + 224);
-          *puVar5 = 0;
-          il2cpp_internal(puVar5,0);
+          UICamera.currentTouch = 0;
           return;
         }
     }
@@ -4866,7 +4770,6 @@ public class UICamera
     public void ProcessOthers()
     {
         var plVar9 = *(int64*)(lVar9 + 184);
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         int iVar1;
         long lVar2;
         bool cVar3;
@@ -4884,9 +4787,9 @@ public class UICamera
         float fVar16;
         float fVar17;
         ulong local_res8;
-        *(uint32 *)(pStatics + 212) = 0xffffff9c;
-        *(uint64 *)(pStatics + 224) =
-             *(uint64 *)(pStatics + 400);
+        UICamera.currentTouchID = 0xffffff9c;
+        UICamera.currentTouch =
+             UICamera.controller;
         il2cpp_internal();
         iVar5 = this.submitKey0;
         cVar13 = false;
@@ -4895,11 +4798,12 @@ public class UICamera
         LAB_1813c5979:
           iVar5 = this.submitKey1;
           if (iVar5 != 0) {
-            if (((*(byte *)(DAT_181d8a458 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8a458 + 224) == 0)) {
-              il2cpp_runtime_class_init(DAT_181d8a458);
+            if (((*(byte *)(UICamera_StaticsPtr + 0x133) & 4) != 0) &&
+               (*(int *)(UICamera_StaticsPtr + 224) == 0)) {
+              il2cpp_runtime_class_init(UICamera_StaticsPtr);
               iVar5 = this.submitKey1;
             }
-            lVar9 = *(int64 *)(pStatics + 8);
+            lVar9 = UICamera.GetKeyDown;
             if (lVar9 == null) goto LAB_1813c6926;
             cVar3 = GetKeyStateFunc.Invoke(lVar9,iVar5,0);
             if (!cVar3) goto LAB_1813c59d9;
@@ -4908,18 +4812,19 @@ public class UICamera
           }
         LAB_1813c59d9:
           if ((this.submitKey0 == 13) || (this.submitKey1 == 13)) {
-            lVar9 = *(int64 *)(pStatics + 8);
+            lVar9 = UICamera.GetKeyDown;
             if (lVar9 == null) goto LAB_1813c6926;
             cVar3 = GetKeyStateFunc.Invoke(lVar9,0x10f,0);
             if (cVar3) goto LAB_1813c5a35;
           }
         }
         else {
-          if (((*(byte *)(DAT_181d8a458 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8a458 + 224) == 0)) {
-            il2cpp_runtime_class_init(DAT_181d8a458);
+          if (((*(byte *)(UICamera_StaticsPtr + 0x133) & 4) != 0) &&
+             (*(int *)(UICamera_StaticsPtr + 224) == 0)) {
+            il2cpp_runtime_class_init(UICamera_StaticsPtr);
             iVar5 = this.submitKey0;
           }
-          lVar9 = *(int64 *)(pStatics + 8);
+          lVar9 = UICamera.GetKeyDown;
           if (lVar9 == null) goto LAB_1813c6926;
           cVar3 = GetKeyStateFunc.Invoke(lVar9,iVar5,0);
           if (!cVar3) goto LAB_1813c5979;
@@ -4934,11 +4839,12 @@ public class UICamera
         LAB_1813c5ab8:
           iVar5 = this.submitKey1;
           if (iVar5 != 0) {
-            if (((*(byte *)(DAT_181d8a458 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8a458 + 224) == 0)) {
-              il2cpp_runtime_class_init(DAT_181d8a458);
+            if (((*(byte *)(UICamera_StaticsPtr + 0x133) & 4) != 0) &&
+               (*(int *)(UICamera_StaticsPtr + 224) == 0)) {
+              il2cpp_runtime_class_init(UICamera_StaticsPtr);
               iVar5 = this.submitKey1;
             }
-            lVar9 = *(int64 *)(pStatics + 16);
+            lVar9 = UICamera.GetKeyUp;
             if (lVar9 == null) goto LAB_1813c6926;
             cVar3 = GetKeyStateFunc.Invoke(lVar9,iVar5,0);
             if (!cVar3) goto LAB_1813c5b18;
@@ -4947,18 +4853,19 @@ public class UICamera
           }
         LAB_1813c5b18:
           if ((this.submitKey0 == 13) || (this.submitKey1 == 13)) {
-            lVar9 = *(int64 *)(pStatics + 16);
+            lVar9 = UICamera.GetKeyUp;
             if (lVar9 == null) goto LAB_1813c6926;
             cVar3 = GetKeyStateFunc.Invoke(lVar9,0x10f,0);
             if (cVar3) goto LAB_1813c5b74;
           }
         }
         else {
-          if (((*(byte *)(DAT_181d8a458 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8a458 + 224) == 0)) {
-            il2cpp_runtime_class_init(DAT_181d8a458);
+          if (((*(byte *)(UICamera_StaticsPtr + 0x133) & 4) != 0) &&
+             (*(int *)(UICamera_StaticsPtr + 224) == 0)) {
+            il2cpp_runtime_class_init(UICamera_StaticsPtr);
             iVar5 = this.submitKey0;
           }
-          lVar9 = *(int64 *)(pStatics + 16);
+          lVar9 = UICamera.GetKeyUp;
           if (lVar9 == null) goto LAB_1813c6926;
           cVar3 = GetKeyStateFunc.Invoke(lVar9,iVar5,0);
           if (!cVar3) goto LAB_1813c5ab8;
@@ -4969,47 +4876,47 @@ public class UICamera
           cVar4 = true;
         }
         if (cVar13) {
-          lVar9 = *(int64 *)(pStatics + 224);
+          lVar9 = UICamera.currentTouch;
           uVar14 = RealTime.get_time(0);
           if (lVar9 == null) goto LAB_1813c6926;
-          *(uint32 *)(lVar9 + 104) = uVar14;
+          lVar9.pressTime = uVar14;
         }
         if (cVar4 || cVar13) {
           iVar5 = UICamera.get_currentScheme(0);
           if (iVar5 == 2) {
-            lVar9 = *(int64 *)(pStatics + 224);
+            lVar9 = UICamera.currentTouch;
             uVar7 = UICamera.get_controllerNavigationObject(0);
             if (lVar9 == null) goto LAB_1813c6926;
             puVar10 = (uint64 *)(lVar9 + 72);
             *puVar10 = uVar7;
             il2cpp_internal(puVar10,uVar7);
             UICamera.ProcessTouch(this,cVar13,cVar4,0);
-            lVar9 = *(int64 *)(pStatics + 224);
+            lVar9 = UICamera.currentTouch;
             if (lVar9 == null) goto LAB_1813c6926;
-            *(uint64 *)(lVar9 + 64) = *(uint64 *)(lVar9 + 72);
+            lVar9.last = lVar9.current;
           }
         }
         iVar6 = 0;
         iVar5 = 0;
         if (this.useController) {
           iVar5 = 0;
-          if (*(char *)(pStatics + 90) == false) {
+          if (!UICamera.ignoreControllerInput) {
             cVar4 = UICamera.get_disableController(0);
             if (!cVar4) {
               iVar5 = UICamera.get_currentScheme(0);
               if (iVar5 == 2) {
-                lVar9 = *(int64 *)(pStatics + 224);
+                lVar9 = UICamera.currentTouch;
                 if (lVar9 == null) goto LAB_1813c6926;
-                uVar7 = *(uint64 *)(lVar9 + 72);
+                uVar7 = lVar9.current;
                 cVar4 = Object.op_Equality(uVar7,0,0);
                 if (!cVar4) {
-                  lVar9 = *(int64 *)(pStatics + 224);
-                  if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 72)) == null)
+
+                  if ((lVar9 = UICamera.currentTouch?.current) == null)
                   goto LAB_1813c6926;
                   cVar4 = GameObject.get_activeInHierarchy(lVar9,0);
                   if (cVar4) goto LAB_1813c5e77;
                 }
-                lVar9 = *(int64 *)(pStatics + 224);
+                lVar9 = UICamera.currentTouch;
                 uVar7 = UICamera.get_controllerNavigationObject(0);
                 if (lVar9 == null) goto LAB_1813c6926;
                 puVar10 = (uint64 *)(lVar9 + 72);
@@ -5026,30 +4933,30 @@ public class UICamera
               if (iVar6 != 0) {
                 UICamera.ShowTooltip(0,0);
                 UICamera.set_currentScheme(2);
-                lVar9 = *(int64 *)(pStatics + 224);
+                lVar9 = UICamera.currentTouch;
                 uVar7 = UICamera.get_controllerNavigationObject(0);
                 if (lVar9 == null) goto LAB_1813c6926;
                 puVar10 = (uint64 *)(lVar9 + 72);
                 *puVar10 = uVar7;
                 il2cpp_internal(puVar10,uVar7);
-                lVar9 = *(int64 *)(pStatics + 224);
+                lVar9 = UICamera.currentTouch;
                 if (lVar9 == null) goto LAB_1813c6926;
-                uVar7 = *(uint64 *)(lVar9 + 72);
+                uVar7 = lVar9.current;
                 cVar4 = Object.op_Inequality(uVar7,0,0);
                 if (cVar4) {
                   iVar5 = (iVar6 < 1) + 0x111;
-                  if (*(int64 *)(pStatics + 0x168) != 0) {
-                    lVar9 = *(int64 *)(pStatics + 224);
-                    lVar11 = *(int64 *)(pStatics + 0x168);
+                  if (UICamera.onNavigate != null) {
+                    lVar9 = UICamera.currentTouch;
+                    lVar11 = UICamera.onNavigate;
                     if ((lVar9 == null) || (lVar11 == null)) goto LAB_1813c6926;
-                    KeyCodeDelegate.Invoke(lVar11,*(uint64 *)(lVar9 + 72),iVar5,0);
+                    KeyCodeDelegate.Invoke(lVar11,lVar9.current,iVar5,0);
                   }
-                  lVar9 = *(int64 *)(pStatics + 224);
+                  lVar9 = UICamera.currentTouch;
                   if (lVar9 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar7 = *(uint64 *)(lVar9 + 72);
+                  uVar7 = lVar9.current;
                   local_res8 = CONCAT44(local_res8._4_4_,iVar5);
                   uVar8 = il2cpp_value_box(DAT_181d5f0f8,&local_res8);
                   UICamera.Notify(uVar7,"OnNavigate",uVar8,0);
@@ -5063,30 +4970,30 @@ public class UICamera
               if (iVar6 != 0) {
                 UICamera.ShowTooltip(0,0);
                 UICamera.set_currentScheme(2);
-                lVar9 = *(int64 *)(pStatics + 224);
+                lVar9 = UICamera.currentTouch;
                 uVar7 = UICamera.get_controllerNavigationObject(0);
                 if (lVar9 == null) goto LAB_1813c6926;
                 puVar10 = (uint64 *)(lVar9 + 72);
                 *puVar10 = uVar7;
                 il2cpp_internal(puVar10,uVar7);
-                lVar9 = *(int64 *)(pStatics + 224);
+                lVar9 = UICamera.currentTouch;
                 if (lVar9 == null) goto LAB_1813c6926;
-                uVar7 = *(uint64 *)(lVar9 + 72);
+                uVar7 = lVar9.current;
                 cVar4 = Object.op_Inequality(uVar7,0,0);
                 if (cVar4) {
                   iVar5 = (iVar6 < 1) + 0x113;
-                  if (*(int64 *)(pStatics + 0x168) != 0) {
-                    lVar9 = *(int64 *)(pStatics + 224);
-                    lVar11 = *(int64 *)(pStatics + 0x168);
+                  if (UICamera.onNavigate != null) {
+                    lVar9 = UICamera.currentTouch;
+                    lVar11 = UICamera.onNavigate;
                     if ((lVar9 == null) || (lVar11 == null)) goto LAB_1813c6926;
-                    KeyCodeDelegate.Invoke(lVar11,*(uint64 *)(lVar9 + 72),iVar5,0);
+                    KeyCodeDelegate.Invoke(lVar11,lVar9.current,iVar5,0);
                   }
-                  lVar9 = *(int64 *)(pStatics + 224);
+                  lVar9 = UICamera.currentTouch;
                   if (lVar9 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar7 = *(uint64 *)(lVar9 + 72);
+                  uVar7 = lVar9.current;
                   local_res8 = CONCAT44(local_res8._4_4_,iVar5);
                   uVar8 = il2cpp_value_box(DAT_181d5f0f8,&local_res8);
                   UICamera.Notify(uVar7,"OnNavigate",uVar8,0);
@@ -5095,7 +5002,7 @@ public class UICamera
             }
             cVar4 = FUN_180d6ca90(this.horizontalPanAxisName,0);
             if (!cVar4) {
-              lVar9 = *(int64 *)(pStatics + 32);
+              lVar9 = UICamera.GetAxis;
               if (lVar9 == null) goto LAB_1813c6926;
               fVar15 = (float)GetAxisFunc.Invoke(lVar9,this.horizontalPanAxisName,0);
             }
@@ -5104,7 +5011,7 @@ public class UICamera
             }
             cVar4 = FUN_180d6ca90(this.verticalPanAxisName,0);
             if (!cVar4) {
-              lVar9 = *(int64 *)(pStatics + 32);
+              lVar9 = UICamera.GetAxis;
               if (lVar9 == null) goto LAB_1813c6926;
               fVar16 = (float)GetAxisFunc.Invoke(lVar9,this.verticalPanAxisName,0);
             }
@@ -5113,36 +5020,36 @@ public class UICamera
             }
             if ((fVar15 != 0.0) || (fVar16 != 0.0)) {
               UICamera.ShowTooltip(0,0);
-              if (*(int *)(pStatics + 208) != 2) {
+              if (UICamera.mLastScheme != 2) {
                 UICamera.set_currentKey(0x14a,0);
-                *(uint32 *)(pStatics + 208) = 2;
+                UICamera.mLastScheme = 2;
               }
-              lVar9 = *(int64 *)(pStatics + 224);
+              lVar9 = UICamera.currentTouch;
               uVar7 = UICamera.get_controllerNavigationObject(0);
               if (lVar9 == null) goto LAB_1813c6926;
               puVar10 = (uint64 *)(lVar9 + 72);
               *puVar10 = uVar7;
               il2cpp_internal(puVar10,uVar7);
-              lVar9 = *(int64 *)(pStatics + 224);
+              lVar9 = UICamera.currentTouch;
               if (lVar9 == null) goto LAB_1813c6926;
-              uVar7 = *(uint64 *)(lVar9 + 72);
+              uVar7 = lVar9.current;
               cVar4 = Object.op_Inequality(uVar7,0,0);
               if (cVar4) {
                 fVar17 = (float)Time.get_unscaledDeltaTime(0);
                 local_res8 = CONCAT44(fVar17 * fVar16,fVar17 * fVar15);
                 uVar7 = local_res8;
-                if (*(int64 *)(pStatics + 0x170) != 0) {
-                  lVar9 = *(int64 *)(pStatics + 224);
-                  lVar11 = *(int64 *)(pStatics + 0x170);
+                if (UICamera.onPan != null) {
+                  lVar9 = UICamera.currentTouch;
+                  lVar11 = UICamera.onPan;
                   if ((lVar9 == null) || (lVar11 == null)) goto LAB_1813c6926;
-                  VectorDelegate.Invoke(lVar11,*(uint64 *)(lVar9 + 72),uVar7,0);
+                  VectorDelegate.Invoke(lVar11,lVar9.current,uVar7,0);
                 }
-                lVar9 = *(int64 *)(pStatics + 224);
+                lVar9 = UICamera.currentTouch;
                 if (lVar9 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar8 = *(uint64 *)(lVar9 + 72);
+                uVar8 = lVar9.current;
                 local_res8 = uVar7;
                 uVar7 = il2cpp_value_box(DAT_181d8e698,&local_res8);
                 UICamera.Notify(uVar8,"OnPan",uVar7,0);
@@ -5150,32 +5057,32 @@ public class UICamera
             }
           }
         }
-        if (*(int64 *)(pStatics + 40) == 0) {
+        if (UICamera.GetAnyKeyDown == null) {
           cVar4 = Input.get_anyKeyDown(0);
         }
         else {
-          lVar9 = *(int64 *)(pStatics + 40);
+          lVar9 = UICamera.GetAnyKeyDown;
           if (lVar9 == null) goto LAB_1813c6926;
           cVar4 = GetAnyKeyFunc.Invoke(lVar9,0);
         }
-        lVar9 = DAT_181d8a458;
+        lVar9 = UICamera_StaticsPtr;
         if (cVar4) {
           uVar12 = 0;
-          lVar9 = *(int64 *)(*(int64 *)(DAT_181d66af0 + 184) + 56);
+          lVar9 = NGUITools.keys;
           if (lVar9 == null) {
         LAB_1813c6926:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           iVar6 = *(int *)(lVar9 + 24);
-          lVar9 = DAT_181d8a458;
-          lVar11 = DAT_181d66af0;
+          lVar9 = UICamera_StaticsPtr;
+          lVar11 = NGUITools_StaticsPtr;
           if (0 < iVar6) {
             do {
               if (((*(byte *)(lVar11 + 0x133) & 4) != 0) && (*(int *)(lVar11 + 224) == 0)) {
                 il2cpp_runtime_class_init(lVar11);
-                lVar9 = DAT_181d8a458;
-                lVar11 = DAT_181d66af0;
+                lVar9 = UICamera_StaticsPtr;
+                lVar11 = NGUITools_StaticsPtr;
               }
               lVar2 = *(int64 *)(*(int64 *)(lVar11 + 184) + 56);
               if (lVar2 == null) goto LAB_1813c6926;
@@ -5188,43 +5095,44 @@ public class UICamera
               if (iVar5 != iVar1) {
                 if (((*(byte *)(lVar9 + 0x133) & 4) != 0) && (*(int *)(lVar9 + 224) == 0)) {
                   il2cpp_runtime_class_init();
-                  lVar9 = DAT_181d8a458;
+                  lVar9 = UICamera_StaticsPtr;
                 }
                 lVar9 = *(int64 *)(plVar9 + 8);
                 if (lVar9 == null) goto LAB_1813c6926;
                 cVar4 = GetKeyStateFunc.Invoke(lVar9,iVar1,0);
-                lVar9 = DAT_181d8a458;
-                lVar11 = DAT_181d66af0;
+                lVar9 = UICamera_StaticsPtr;
+                lVar11 = NGUITools_StaticsPtr;
                 if ((cVar4) && ((this.useKeyboard || (0x142 < iVar1)))) {
                   if (!this.useController) {
         LAB_1813c6787:
-                    lVar9 = DAT_181d8a458;
-                    lVar11 = DAT_181d66af0;
+                    lVar9 = UICamera_StaticsPtr;
+                    lVar11 = NGUITools_StaticsPtr;
                     if (0x149 < iVar1) goto LAB_1813c68ac;
                   }
                   else {
-                    if (*(char *)(pStatics + 90) != false) goto LAB_1813c6787;
+                    if (UICamera.ignoreControllerInput)
+                    goto LAB_1813c6787;
                   }
                   if ((this.useMouse) ||
-                     (lVar9 = DAT_181d8a458, lVar11 = DAT_181d66af0, 6 < iVar1 - 0x143U)) {
+                     (lVar9 = UICamera_StaticsPtr, lVar11 = NGUITools_StaticsPtr, 6 < iVar1 - 0x143U)) {
                     UICamera.set_currentKey(iVar1,0);
-                    if (*(int64 *)(pStatics + 0x160) != 0) {
-                      lVar9 = *(int64 *)(pStatics + 224);
-                      lVar11 = *(int64 *)(pStatics + 0x160);
+                    if (UICamera.onKey != null) {
+                      lVar9 = UICamera.currentTouch;
+                      lVar11 = UICamera.onKey;
                       if ((lVar9 == null) || (lVar11 == null)) goto LAB_1813c6926;
-                      KeyCodeDelegate.Invoke(lVar11,*(uint64 *)(lVar9 + 72),iVar1,0);
+                      KeyCodeDelegate.Invoke(lVar11,lVar9.current,iVar1,0);
                     }
-                    lVar9 = *(int64 *)(pStatics + 224);
+                    lVar9 = UICamera.currentTouch;
                     if (lVar9 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    uVar7 = *(uint64 *)(lVar9 + 72);
+                    uVar7 = lVar9.current;
                     local_res8 = CONCAT44(local_res8._4_4_,iVar1);
                     uVar8 = il2cpp_value_box(DAT_181d5f0f8,&local_res8);
                     UICamera.Notify(uVar7,"OnKey",uVar8);
-                    lVar9 = DAT_181d8a458;
-                    lVar11 = DAT_181d66af0;
+                    lVar9 = UICamera_StaticsPtr;
+                    lVar11 = NGUITools_StaticsPtr;
                   }
                 }
               }
@@ -5235,7 +5143,7 @@ public class UICamera
         }
         if (((*(byte *)(lVar9 + 0x133) & 4) != 0) && (*(int *)(lVar9 + 224) == 0)) {
           il2cpp_runtime_class_init();
-          lVar9 = DAT_181d8a458;
+          lVar9 = UICamera_StaticsPtr;
         }
         puVar10 = (uint64 *)(plVar9 + 224);
         *puVar10 = 0;
@@ -5246,7 +5154,7 @@ public class UICamera
     // RVA   : 0x13C6960   Offset: 0x13C5160   Length: 0x1794
     private void ProcessPress(bool pressed, float click, float drag)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         long lVar1;
         bool cVar3;
         byte uVar4;
@@ -5260,35 +5168,35 @@ public class UICamera
         byte[] local_res10 = new byte[8];
         ulong local_48;
         if (pressed) {
-          uVar8 = *(uint64 *)(pStatics + 0x1b0);
+          uVar8 = UICamera.mTooltip;
           cVar3 = Object.op_Inequality(uVar8,0,0);
           if (cVar3) {
             UICamera.ShowTooltip(0,0);
           }
           fVar11 = (float)Time.get_unscaledTime(0);
           fVar10 = this.tooltipDelay;
-          *(float *)(pStatics + 0x1b8) = fVar10 + fVar11;
-          lVar7 = *(int64 *)(pStatics + 224);
+          UICamera.mTooltipTime = fVar10 + fVar11;
+          lVar7 = UICamera.currentTouch;
           if (lVar7 != null) {
-            *(uint8 *)(lVar7 + 117) = 1;
-            if (*(int64 *)(pStatics + 0x118) != 0) {
-              lVar7 = *(int64 *)(pStatics + 224);
+            lVar7.pressStarted = 1;
+            if (UICamera.onPress != null) {
+              lVar7 = UICamera.currentTouch;
               if (lVar7 == null) throw; // [null/range check failed]
-              uVar8 = *(uint64 *)(lVar7 + 80);
+              uVar8 = lVar7.pressed;
               cVar3 = Object.op_Implicit(uVar8,0);
               if (cVar3) {
-                lVar7 = *(int64 *)(pStatics + 224);
-                lVar1 = *(int64 *)(pStatics + 0x118);
+                lVar7 = UICamera.currentTouch;
+                lVar1 = UICamera.onPress;
                 if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-                OnTooltipCB.Invoke(lVar1,*(uint64 *)(lVar7 + 80),0,0);
+                OnTooltipCB.Invoke(lVar1,lVar7.pressed,0,0);
               }
             }
-            lVar7 = *(int64 *)(pStatics + 224);
+            lVar7 = UICamera.currentTouch;
             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar8 = *(uint64 *)(lVar7 + 80);
+            uVar8 = lVar7.pressed;
             local_res10[0] = 0;
             uVar6 = il2cpp_value_box(DAT_181d8d920,local_res10);
             UICamera.Notify(uVar8,"OnPress",uVar6,0);
@@ -5297,127 +5205,131 @@ public class UICamera
               uVar8 = UICamera.get_hoveredObject(0);
               cVar3 = Object.op_Equality(uVar8,0,0);
               if (cVar3) {
-                lVar7 = *(int64 *)(pStatics + 224);
+                lVar7 = UICamera.currentTouch;
                 if (lVar7 == null) throw; // [null/range check failed]
-                uVar8 = *(uint64 *)(lVar7 + 72);
+                uVar8 = lVar7.current;
                 cVar3 = Object.op_Inequality(uVar8,0,0);
                 if (cVar3) {
-                  lVar7 = *(int64 *)(pStatics + 224);
+                  lVar7 = UICamera.currentTouch;
                   if (lVar7 == null) throw; // [null/range check failed]
-                  UICamera.set_hoveredObject(*(uint64 *)(lVar7 + 72),0);
+                  UICamera.set_hoveredObject(lVar7.current,0);
                 }
               }
             }
-            lVar7 = *(int64 *)(pStatics + 224);
+            lVar7 = UICamera.currentTouch;
             if (lVar7 != null) {
-              *(uint64 *)(lVar7 + 80) = *(uint64 *)(lVar7 + 72);
-              lVar7 = *(int64 *)(pStatics + 224);
+              lVar7.pressed = lVar7.current;
+              lVar7 = UICamera.currentTouch;
               if (lVar7 != null) {
-                *(uint64 *)(lVar7 + 88) = *(uint64 *)(lVar7 + 72);
-                lVar7 = *(int64 *)(pStatics + 224);
+                lVar7.dragged = lVar7.current;
+                lVar7 = UICamera.currentTouch;
                 if (lVar7 != null) {
-                  *(uint32 *)(lVar7 + 112) = 2;
-                  lVar7 = *(int64 *)(pStatics + 224);
+                  lVar7.clickNotification = 2;
+                  lVar7 = UICamera.currentTouch;
                   uVar8 = Vector2.get_zero(0);
                   local_48 = uVar8;
                   if (lVar7 != null) {
                     local_48._0_4_ = (uint32)uVar8;
                     local_48._4_4_ = (uint32)((uint64)uVar8 >> 32);
-                    *(uint32 *)(lVar7 + 44) = (uint32)local_48;
+                    lVar7.totalDelta = (uint32)local_48;
                     *(uint32 *)(lVar7 + 48) = local_48._4_4_;
-                    lVar7 = *(int64 *)(pStatics + 224);
+                    lVar7 = UICamera.currentTouch;
                     if (lVar7 != null) {
-                      *(uint8 *)(lVar7 + 118) = 0;
-                      if (*(int64 *)(pStatics + 0x118) != 0) {
-                        lVar7 = *(int64 *)(pStatics + 224);
+                      lVar7.dragStarted = 0;
+                      if (UICamera.onPress != null) {
+                        lVar7 = UICamera.currentTouch;
                         if (lVar7 == null) throw; // [null/range check failed]
-                        uVar8 = *(uint64 *)(lVar7 + 80);
+                        uVar8 = lVar7.pressed;
                         cVar3 = Object.op_Implicit(uVar8,0);
                         if (cVar3) {
-                          lVar7 = *(int64 *)(pStatics + 224);
-                          lVar1 = *(int64 *)(pStatics + 0x118);
+                          lVar7 = UICamera.currentTouch;
+                          lVar1 = UICamera.onPress;
                           if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-                          OnTooltipCB.Invoke(lVar1,*(uint64 *)(lVar7 + 80),1,0);
+                          OnTooltipCB.Invoke(lVar1,lVar7.pressed,1,0);
                         }
                       }
-                      lVar7 = *(int64 *)(pStatics + 224);
+                      lVar7 = UICamera.currentTouch;
                       if (lVar7 != null) {
-                        uVar8 = *(uint64 *)(lVar7 + 80);
+                        uVar8 = lVar7.pressed;
                         local_res10[0] = 1;
                         uVar6 = il2cpp_value_box(DAT_181d8d920,local_res10);
                         UICamera.Notify(uVar8,"OnPress",uVar6,0);
-                        lVar7 = *(int64 *)(pStatics + 224);
-                        uVar8 = *(uint64 *)(pStatics + 0x1e8);
+                        lVar7 = UICamera.currentTouch;
+                        uVar8 = UICamera.mSelected;
                         if (lVar7 != null) {
-                          uVar6 = *(uint64 *)(lVar7 + 80);
+                          uVar6 = lVar7.pressed;
                           cVar3 = Object.op_Inequality(uVar8,uVar6,0);
                           if (!cVar3) {
                             return;
                           }
-                          *(uint8 *)(pStatics + 232) = 0;
-                          uVar8 = *(uint64 *)(pStatics + 0x1e8);
+                          UICamera.mInputFocus = 0;
+                          uVar8 = UICamera.mSelected;
                           cVar3 = Object.op_Implicit(uVar8,0);
                           if (cVar3) {
-                            uVar8 = *(uint64 *)(pStatics + 0x1e8);
+                            uVar8 = UICamera.mSelected;
                             local_res10[0] = 0;
                             uVar6 = il2cpp_value_box(DAT_181d8d920,local_res10);
                             UICamera.Notify(uVar8,"OnSelect",uVar6,0);
-                            if (*(int64 *)(pStatics + 0x120) != 0) {
-                              lVar7 = *(int64 *)(pStatics + 0x120);
+                            if (UICamera.onSelect != null) {
+                              lVar7 = UICamera.onSelect;
                               if (lVar7 == null) throw; // [null/range check failed]
                               OnTooltipCB.Invoke(lVar7,*(uint64 *)
-                                                         (pStatics + 0x1e8),0,0
-                                                 );
+                                                         (pUICamera +
+                                                         0x1e8),0,0);
                             }
                           }
-                          lVar7 = *(int64 *)(pStatics + 224);
+                          lVar7 = UICamera.currentTouch;
                           if (lVar7 != null) {
-                            *(uint64 *)(pStatics + 0x1e8) =
-                                 *(uint64 *)(lVar7 + 80);
+                            UICamera.mSelected =
+                                 lVar7.pressed;
                             il2cpp_internal();
-                            lVar7 = *(int64 *)(pStatics + 224);
+                            lVar7 = UICamera.currentTouch;
                             if (lVar7 != null) {
-                              uVar8 = *(uint64 *)(lVar7 + 80);
+                              uVar8 = lVar7.pressed;
                               cVar3 = Object.op_Inequality(uVar8,0,0);
                               if (cVar3) {
-                                lVar7 = *(int64 *)(pStatics + 224);
-                                if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 80)) == null)
+
+                                if ((lVar7 = UICamera.currentTouch?.pressed) == null)
                                 throw; // [null/range check failed]
                                 uVar8 = GameObject.GetComponent(lVar7,DAT_181da2730);
                                 cVar3 = Object.op_Inequality(uVar8,0,0);
                                 if (cVar3) {
-                                  lVar7 = *(int64 *)(pStatics + 224);
-                                  lVar1 = *(int64 *)(pStatics + 400);
+                                  lVar7 = UICamera.currentTouch;
+                                  lVar1 = UICamera.controller;
                                   if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-                                  *(uint64 *)(lVar1 + 72) = *(uint64 *)(lVar7 + 80);
+                                  lVar1.current = lVar7.pressed;
                                 }
                               }
-                              uVar8 = *(uint64 *)(pStatics + 0x1e8);
+                              uVar8 = UICamera.mSelected;
                               cVar3 = Object.op_Implicit(uVar8,0);
                               if (!cVar3) {
                                 return;
                               }
-                              lVar7 = *(int64 *)(pStatics + 0x1e8);
+                              lVar7 = UICamera.mSelected;
                               if (lVar7 != null) {
                                 cVar3 = GameObject.get_activeInHierarchy(lVar7,0);
                                 if (!cVar3) {
                                   uVar4 = 0;
                                 }
                                 else {
-                                  lVar7 = *(int64 *)(pStatics + 0x1e8);
+                                  lVar7 = UICamera.mSelected
+                                  ;
                                   if (lVar7 == null) throw; // [null/range check failed]
                                   uVar8 = GameObject.GetComponent(lVar7,DAT_181da26b0);
                                   uVar4 = Object.op_Inequality(uVar8,0,0);
                                 }
-                                *(uint8 *)(pStatics + 232) = uVar4;
-                                if (*(int64 *)(pStatics + 0x120) != 0) {
-                                  lVar7 = *(int64 *)(pStatics + 0x120);
+                                UICamera.mInputFocus = uVar4;
+                                if (UICamera.onSelect != null)
+                                {
+                                  lVar7 = UICamera.onSelect
+                                  ;
                                   if (lVar7 == null) throw; // [null/range check failed]
                                   OnTooltipCB.Invoke(lVar7,*(uint64 *)
-                                                             (pStatics + 0x1e8)
-                                                      ,1,0);
+                                                             (pUICamera +
+                                                             0x1e8),1,0);
                                 }
-                                uVar8 = *(uint64 *)(pStatics + 0x1e8);
+                                uVar8 = UICamera.mSelected
+                                ;
                                 local_res10[0] = 1;
                                 uVar6 = il2cpp_value_box(DAT_181d8d920,local_res10);
                                 UICamera.Notify(uVar8,"OnSelect",uVar6,0);
@@ -5438,181 +5350,181 @@ public class UICamera
           }
           throw; // [null/range check failed]
         }
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) throw; // [null/range check failed]
-        uVar8 = *(uint64 *)(lVar7 + 80);
+        uVar8 = lVar7.pressed;
         cVar3 = Object.op_Inequality(uVar8,0,0);
         if (!cVar3) {
           return;
         }
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) throw; // [null/range check failed]
         fVar10 = (float)Vector2.get_sqrMagnitude(lVar7 + 36,0);
         if (fVar10 == 0.0) {
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          uVar8 = *(uint64 *)(lVar7 + 72);
-          uVar6 = *(uint64 *)(lVar7 + 64);
+          uVar8 = lVar7.current;
+          uVar6 = lVar7.last;
           cVar3 = Object.op_Inequality(uVar8,uVar6,0);
           if (!cVar3) {
             return;
           }
         }
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) throw; // [null/range check failed]
-        *(float *)(lVar7 + 44) = *(float *)(lVar7 + 36) + *(float *)(lVar7 + 44);
+        lVar7.totalDelta = lVar7.delta + lVar7.totalDelta;
         *(float *)(lVar7 + 48) = *(float *)(lVar7 + 40) + *(float *)(lVar7 + 48);
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) throw; // [null/range check failed]
         fVar10 = (float)Vector2.get_sqrMagnitude(lVar7 + 44,0);
         bVar2 = false;
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) throw; // [null/range check failed]
-        if (*(char *)(lVar7 + 118) == false) {
-          lVar7 = *(int64 *)(pStatics + 224);
+        if (!lVar7.dragStarted) {
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          uVar8 = *(uint64 *)(lVar7 + 64);
-          uVar6 = *(uint64 *)(lVar7 + 72);
+          uVar8 = lVar7.last;
+          uVar6 = lVar7.current;
           cVar3 = Object.op_Inequality(uVar8,uVar6,0);
           if (!cVar3) goto LAB_1813c6ef5;
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          *(uint8 *)(lVar7 + 118) = 1;
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7.dragStarted = 1;
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar7 + 36) = *(uint32 *)(lVar7 + 44);
+          lVar7.delta = lVar7.totalDelta;
           *(uint32 *)(lVar7 + 40) = *(uint32 *)(lVar7 + 48);
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar7 + 112) = 0;
-          *(uint8 *)(pStatics + 0x1bc) = 1;
-          if (*(int64 *)(pStatics + 0x138) != 0) {
-            lVar7 = *(int64 *)(pStatics + 224);
-            lVar1 = *(int64 *)(pStatics + 0x138);
+          lVar7.clickNotification = 0;
+          UICamera.isDragging = 1;
+          if (UICamera.onDragStart != null) {
+            lVar7 = UICamera.currentTouch;
+            lVar1 = UICamera.onDragStart;
             if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-            VoidDelegate.Invoke(lVar1,*(uint64 *)(lVar7 + 88),0);
+            VoidDelegate.Invoke(lVar1,lVar7.dragged,0);
           }
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          UICamera.Notify(*(uint64 *)(lVar7 + 88),"OnDragStart",0,0);
-          if (*(int64 *)(pStatics + 0x140) != 0) {
-            lVar7 = *(int64 *)(pStatics + 224);
-            lVar1 = *(int64 *)(pStatics + 0x140);
+          UICamera.Notify(lVar7.dragged,"OnDragStart",0,0);
+          if (UICamera.onDragOver != null) {
+            lVar7 = UICamera.currentTouch;
+            lVar1 = UICamera.onDragOver;
             if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-            ObjectDelegate.Invoke(lVar1,*(uint64 *)(lVar7 + 64),*(uint64 *)(lVar7 + 88),0);
+            ObjectDelegate.Invoke(lVar1,lVar7.last,lVar7.dragged,0);
           }
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          UICamera.Notify(*(uint64 *)(lVar7 + 64),"OnDragOver",*(uint64 *)(lVar7 + 88),0);
-          *(uint8 *)(pStatics + 0x1bc) = 0;
+          UICamera.Notify(lVar7.last,"OnDragOver",lVar7.dragged,0);
+          UICamera.isDragging = 0;
         }
         else {
         LAB_1813c6ef5:
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          if ((*(char *)(lVar7 + 118) == false) && (drag < fVar10)) {
+          if ((!lVar7.dragStarted) && (drag < fVar10)) {
             bVar2 = true;
-            lVar7 = *(int64 *)(pStatics + 224);
+            lVar7 = UICamera.currentTouch;
             if (lVar7 == null) throw; // [null/range check failed]
-            *(uint8 *)(lVar7 + 118) = 1;
-            lVar7 = *(int64 *)(pStatics + 224);
+            lVar7.dragStarted = 1;
+            lVar7 = UICamera.currentTouch;
             if (lVar7 == null) throw; // [null/range check failed]
-            *(uint32 *)(lVar7 + 36) = *(uint32 *)(lVar7 + 44);
+            lVar7.delta = lVar7.totalDelta;
             *(uint32 *)(lVar7 + 40) = *(uint32 *)(lVar7 + 48);
           }
         }
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) throw; // [null/range check failed]
-        if (*(char *)(lVar7 + 118) == false) {
+        if (!lVar7.dragStarted) {
           return;
         }
-        uVar8 = *(uint64 *)(pStatics + 0x1b0);
+        uVar8 = UICamera.mTooltip;
         cVar3 = Object.op_Inequality(uVar8,0,0);
         if (cVar3) {
           UICamera.ShowTooltip(0,0);
         }
-        *(uint8 *)(pStatics + 0x1bc) = 1;
-        lVar7 = *(int64 *)(pStatics + 224);
+        UICamera.isDragging = 1;
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) throw; // [null/range check failed]
-        iVar5 = *(int *)(lVar7 + 112);
+        iVar5 = lVar7.clickNotification;
         if (bVar2) {
-          if (*(int64 *)(pStatics + 0x138) != 0) {
-            lVar7 = *(int64 *)(pStatics + 224);
-            lVar1 = *(int64 *)(pStatics + 0x138);
+          if (UICamera.onDragStart != null) {
+            lVar7 = UICamera.currentTouch;
+            lVar1 = UICamera.onDragStart;
             if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-            VoidDelegate.Invoke(lVar1,*(uint64 *)(lVar7 + 88),0);
+            VoidDelegate.Invoke(lVar1,lVar7.dragged,0);
           }
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
           uVar8 = 0;
-          uVar6 = *(uint64 *)(lVar7 + 88);
+          uVar6 = lVar7.dragged;
           uVar9 = "OnDragStart";
         LAB_1813c72e1:
           UICamera.Notify(uVar6,uVar9,uVar8,0);
-          if (*(int64 *)(pStatics + 0x140) != 0) {
-            lVar7 = *(int64 *)(pStatics + 224);
-            lVar1 = *(int64 *)(pStatics + 0x140);
+          if (UICamera.onDragOver != null) {
+            lVar7 = UICamera.currentTouch;
+            lVar1 = UICamera.onDragOver;
             if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-            ObjectDelegate.Invoke(lVar1,*(uint64 *)(lVar7 + 64),*(uint64 *)(lVar7 + 88),0);
+            ObjectDelegate.Invoke(lVar1,lVar7.last,lVar7.dragged,0);
           }
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          UICamera.Notify(*(uint64 *)(lVar7 + 72),"OnDragOver",*(uint64 *)(lVar7 + 88),0);
+          UICamera.Notify(lVar7.current,"OnDragOver",lVar7.dragged,0);
         }
         else {
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          uVar8 = *(uint64 *)(lVar7 + 64);
-          uVar6 = *(uint64 *)(lVar7 + 72);
+          uVar8 = lVar7.last;
+          uVar6 = lVar7.current;
           cVar3 = Object.op_Inequality(uVar8,uVar6,0);
           if (cVar3) {
-            if (*(int64 *)(pStatics + 0x148) != 0) {
-              lVar7 = *(int64 *)(pStatics + 224);
-              lVar1 = *(int64 *)(pStatics + 0x148);
+            if (UICamera.onDragOut != null) {
+              lVar7 = UICamera.currentTouch;
+              lVar1 = UICamera.onDragOut;
               if ((lVar7 == null) || (lVar1 == null)) throw; // [null/range check failed]
-              ObjectDelegate.Invoke(lVar1,*(uint64 *)(lVar7 + 64),*(uint64 *)(lVar7 + 88),0);
+              ObjectDelegate.Invoke(lVar1,lVar7.last,lVar7.dragged,0);
             }
-            lVar7 = *(int64 *)(pStatics + 224);
+            lVar7 = UICamera.currentTouch;
             if (lVar7 == null) throw; // [null/range check failed]
-            uVar8 = *(uint64 *)(lVar7 + 88);
-            uVar6 = *(uint64 *)(lVar7 + 64);
+            uVar8 = lVar7.dragged;
+            uVar6 = lVar7.last;
             uVar9 = "OnDragOut";
             goto LAB_1813c72e1;
           }
         }
-        if (*(int64 *)(pStatics + 0x130) != 0) {
-          lVar7 = *(int64 *)(pStatics + 224);
-          lVar1 = *(int64 *)(pStatics + 0x130);
-          if ((lVar7 == null) || (local_48 = *(uint64 *)(lVar7 + 36), lVar1 == null)) throw; // [null/range check failed]
-          VectorDelegate.Invoke(lVar1,*(uint64 *)(lVar7 + 88),local_48,0);
+        if (UICamera.onDrag != null) {
+          lVar7 = UICamera.currentTouch;
+          lVar1 = UICamera.onDrag;
+          if ((lVar7 == null) || (local_48 = lVar7.delta, lVar1 == null)) throw; // [null/range check failed]
+          VectorDelegate.Invoke(lVar1,lVar7.dragged,local_48,0);
         }
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) {
         LAB_1813c80e3:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        uVar8 = *(uint64 *)(lVar7 + 88);
-        local_48 = *(uint64 *)(lVar7 + 36);
+        uVar8 = lVar7.dragged;
+        local_48 = lVar7.delta;
         uVar6 = il2cpp_value_box(DAT_181d8e698,&local_48);
         UICamera.Notify(uVar8,"OnDrag",uVar6,0);
-        lVar7 = *(int64 *)(pStatics + 224);
+        lVar7 = UICamera.currentTouch;
         if (lVar7 == null) goto LAB_1813c80e3;
-        *(uint64 *)(lVar7 + 64) = *(uint64 *)(lVar7 + 72);
-        *(uint8 *)(pStatics + 0x1bc) = 0;
+        lVar7.last = lVar7.current;
+        UICamera.isDragging = 0;
         if (iVar5 == 0) {
-          lVar7 = pStatics;
+          lVar7 = pUICamera;
         }
         else {
-          lVar7 = *(int64 *)(pStatics + 224);
+          lVar7 = UICamera.currentTouch;
           if (lVar7 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar7 + 112) != 2) {
+          if (lVar7.clickNotification != 2) {
             return;
           }
           if (fVar10 <= click) {
             return;
           }
-          lVar7 = pStatics;
+          lVar7 = pUICamera;
         }
         if (*(int64 *)(lVar7 + 224) != 0) {
           *(uint32 *)(*(int64 *)(lVar7 + 224) + 112) = 0;
@@ -5624,7 +5536,6 @@ public class UICamera
     // RVA   : 0x13C8100   Offset: 0x13C6900   Length: 0xE00
     private void ProcessRelease(bool isMouse, float drag)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -5633,58 +5544,58 @@ public class UICamera
         long lVar6;
         float fVar8;
         byte[] local_28 = new byte[32];
-        if (*(int64 *)(pStatics + 224) == 0) {
+        if (UICamera.currentTouch == null) {
           return;
         }
-        lVar6 = *(int64 *)(pStatics + 224);
+        lVar6 = UICamera.currentTouch;
         if (lVar6 == null) throw; // [null/range check failed]
-        *(uint8 *)(lVar6 + 117) = 0;
-        lVar6 = *(int64 *)(pStatics + 224);
+        lVar6.pressStarted = 0;
+        lVar6 = UICamera.currentTouch;
         if (lVar6 == null) throw; // [null/range check failed]
-        uVar1 = *(uint64 *)(lVar6 + 80);
+        uVar1 = lVar6.pressed;
         cVar2 = Object.op_Inequality(uVar1,0,0);
         if (cVar2) {
-          lVar6 = *(int64 *)(pStatics + 224);
+          lVar6 = UICamera.currentTouch;
           if (lVar6 == null) throw; // [null/range check failed]
-          if (*(char *)(lVar6 + 118) != false) {
-            if (*(int64 *)(pStatics + 0x148) != 0) {
-              lVar6 = *(int64 *)(pStatics + 224);
-              lVar5 = *(int64 *)(pStatics + 0x148);
+          if (lVar6.dragStarted) {
+            if (UICamera.onDragOut != null) {
+              lVar6 = UICamera.currentTouch;
+              lVar5 = UICamera.onDragOut;
               if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
-              ObjectDelegate.Invoke(lVar5,*(uint64 *)(lVar6 + 64),*(uint64 *)(lVar6 + 88),0);
+              ObjectDelegate.Invoke(lVar5,lVar6.last,lVar6.dragged,0);
             }
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 == null) throw; // [null/range check failed]
-            UICamera.Notify(*(uint64 *)(lVar6 + 64),"OnDragOut",*(uint64 *)(lVar6 + 88),0);
-            if (*(int64 *)(pStatics + 0x150) != 0) {
-              lVar6 = *(int64 *)(pStatics + 224);
-              lVar5 = *(int64 *)(pStatics + 0x150);
+            UICamera.Notify(lVar6.last,"OnDragOut",lVar6.dragged,0);
+            if (UICamera.onDragEnd != null) {
+              lVar6 = UICamera.currentTouch;
+              lVar5 = UICamera.onDragEnd;
               if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
-              VoidDelegate.Invoke(lVar5,*(uint64 *)(lVar6 + 88),0);
+              VoidDelegate.Invoke(lVar5,lVar6.dragged,0);
             }
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 == null) throw; // [null/range check failed]
-            UICamera.Notify(*(uint64 *)(lVar6 + 88),"OnDragEnd",0,0);
+            UICamera.Notify(lVar6.dragged,"OnDragEnd",0,0);
           }
-          if (*(int64 *)(pStatics + 0x118) != 0) {
-            lVar6 = *(int64 *)(pStatics + 224);
-            lVar5 = *(int64 *)(pStatics + 0x118);
+          if (UICamera.onPress != null) {
+            lVar6 = UICamera.currentTouch;
+            lVar5 = UICamera.onPress;
             if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
-            OnTooltipCB.Invoke(lVar5,*(uint64 *)(lVar6 + 80),0,0);
+            OnTooltipCB.Invoke(lVar5,lVar6.pressed,0,0);
           }
-          lVar6 = *(int64 *)(pStatics + 224);
+          lVar6 = UICamera.currentTouch;
           if (lVar6 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar1 = *(uint64 *)(lVar6 + 80);
+          uVar1 = lVar6.pressed;
           local_28[0] = 0;
           uVar4 = il2cpp_value_box(DAT_181d8d920,local_28);
           UICamera.Notify(uVar1,"OnPress",uVar4,0);
           if (isMouse) {
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 == null) throw; // [null/range check failed]
-            lVar6 = *(int64 *)(lVar6 + 80);
+            lVar6 = lVar6.pressed;
             cVar2 = Object.op_Equality(lVar6,0,0);
             if (!cVar2) {
               if (lVar6 == null) throw; // [null/range check failed]
@@ -5702,29 +5613,29 @@ public class UICamera
                 cVar2 = Collider.get_enabled(lVar5,0);
               }
               if (cVar2) {
-                lVar6 = *(int64 *)(pStatics + 224);
-                uVar1 = *(uint64 *)(pStatics + 0x1e0);
+                lVar6 = UICamera.currentTouch;
+                uVar1 = UICamera.mHover;
                 if (lVar6 == null) throw; // [null/range check failed]
-                uVar4 = *(uint64 *)(lVar6 + 72);
+                uVar4 = lVar6.current;
                 cVar2 = Object.op_Equality(uVar1,uVar4,0);
                 if (!cVar2) {
-                  lVar6 = *(int64 *)(pStatics + 224);
+                  lVar6 = UICamera.currentTouch;
                   if (lVar6 == null) throw; // [null/range check failed]
-                  UICamera.set_hoveredObject(*(uint64 *)(lVar6 + 72),0);
+                  UICamera.set_hoveredObject(lVar6.current,0);
                 }
                 else {
-                  if (*(int64 *)(pStatics + 0x110) != 0) {
-                    lVar6 = *(int64 *)(pStatics + 224);
-                    lVar5 = *(int64 *)(pStatics + 0x110);
+                  if (UICamera.onHover != null) {
+                    lVar6 = UICamera.currentTouch;
+                    lVar5 = UICamera.onHover;
                     if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
-                    OnTooltipCB.Invoke(lVar5,*(uint64 *)(lVar6 + 72),1,0);
+                    OnTooltipCB.Invoke(lVar5,lVar6.current,1,0);
                   }
-                  lVar6 = *(int64 *)(pStatics + 224);
+                  lVar6 = UICamera.currentTouch;
                   if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar1 = *(uint64 *)(lVar6 + 72);
+                  uVar1 = lVar6.current;
                   local_28[0] = 1;
                   uVar4 = il2cpp_value_box(DAT_181d8d920,local_28);
                   UICamera.Notify(uVar1,"OnHover",uVar4,0);
@@ -5733,100 +5644,100 @@ public class UICamera
             }
           }
         LAB_1813c876d:
-          lVar6 = *(int64 *)(pStatics + 224);
+          lVar6 = UICamera.currentTouch;
           if (lVar6 == null) throw; // [null/range check failed]
-          uVar1 = *(uint64 *)(lVar6 + 88);
-          uVar4 = *(uint64 *)(lVar6 + 72);
+          uVar1 = lVar6.dragged;
+          uVar4 = lVar6.current;
           cVar2 = Object.op_Equality(uVar1,uVar4,0);
           if (!cVar2) {
             iVar3 = UICamera.get_currentScheme(0);
             if (iVar3 != 2) {
-              lVar6 = *(int64 *)(pStatics + 224);
+              lVar6 = UICamera.currentTouch;
               if (lVar6 == null) throw; // [null/range check failed]
-              if (*(int *)(lVar6 + 112) != 0) {
-                lVar6 = *(int64 *)(pStatics + 224);
+              if (lVar6.clickNotification != null) {
+                lVar6 = UICamera.currentTouch;
                 if (lVar6 == null) throw; // [null/range check failed]
                 fVar8 = (float)Vector2.get_sqrMagnitude(lVar6 + 44,0);
                 if (fVar8 < drag) goto LAB_1813c8b62;
               }
             }
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 == null) throw; // [null/range check failed]
-            if (*(char *)(lVar6 + 118) != false) {
-              if (*(int64 *)(pStatics + 0x158) != 0) {
-                lVar6 = *(int64 *)(pStatics + 224);
-                lVar5 = *(int64 *)(pStatics + 0x158);
+            if (lVar6.dragStarted) {
+              if (UICamera.onDrop != null) {
+                lVar6 = UICamera.currentTouch;
+                lVar5 = UICamera.onDrop;
                 if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
                 ObjectDelegate.Invoke
-                          (lVar5,*(uint64 *)(lVar6 + 72),*(uint64 *)(lVar6 + 88),0);
+                          (lVar5,lVar6.current,lVar6.dragged,0);
               }
-              lVar6 = *(int64 *)(pStatics + 224);
+              lVar6 = UICamera.currentTouch;
               if (lVar6 == null) throw; // [null/range check failed]
-              UICamera.Notify(*(uint64 *)(lVar6 + 72),"OnDrop",*(uint64 *)(lVar6 + 88),0
+              UICamera.Notify(lVar6.current,"OnDrop",lVar6.dragged,0
                               );
             }
           }
           else {
         LAB_1813c8b62:
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 == null) throw; // [null/range check failed]
-            if (*(int *)(lVar6 + 112) != 0) {
-              lVar6 = *(int64 *)(pStatics + 224);
+            if (lVar6.clickNotification != null) {
+              lVar6 = UICamera.currentTouch;
               if (lVar6 == null) throw; // [null/range check failed]
-              uVar1 = *(uint64 *)(lVar6 + 80);
-              uVar4 = *(uint64 *)(lVar6 + 72);
+              uVar1 = lVar6.pressed;
+              uVar4 = lVar6.current;
               cVar2 = Object.op_Equality(uVar1,uVar4,0);
               if (cVar2) {
                 UICamera.ShowTooltip(0,0);
                 fVar8 = (float)RealTime.get_time(0);
-                if (*(int64 *)(pStatics + 0x100) != 0) {
-                  lVar6 = *(int64 *)(pStatics + 224);
-                  lVar5 = *(int64 *)(pStatics + 0x100);
+                if (UICamera.onClick != null) {
+                  lVar6 = UICamera.currentTouch;
+                  lVar5 = UICamera.onClick;
                   if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
-                  VoidDelegate.Invoke(lVar5,*(uint64 *)(lVar6 + 80),0);
+                  VoidDelegate.Invoke(lVar5,lVar6.pressed,0);
                 }
-                lVar6 = *(int64 *)(pStatics + 224);
+                lVar6 = UICamera.currentTouch;
                 if (lVar6 == null) throw; // [null/range check failed]
-                UICamera.Notify(*(uint64 *)(lVar6 + 80),"OnClick",0,0);
-                lVar6 = *(int64 *)(pStatics + 224);
+                UICamera.Notify(lVar6.pressed,"OnClick",0,0);
+                lVar6 = UICamera.currentTouch;
                 if (lVar6 == null) throw; // [null/range check failed]
-                if (fVar8 < *(float *)(lVar6 + 108) + 0.35) {
-                  lVar6 = *(int64 *)(pStatics + 224);
+                if (fVar8 < lVar6.clickTime + 0.35) {
+                  lVar6 = UICamera.currentTouch;
                   if (lVar6 == null) throw; // [null/range check failed]
-                  uVar1 = *(uint64 *)(lVar6 + 96);
-                  uVar4 = *(uint64 *)(lVar6 + 80);
+                  uVar1 = lVar6.lastClickGO;
+                  uVar4 = lVar6.pressed;
                   cVar2 = Object.op_Equality(uVar1,uVar4,0);
                   if (cVar2) {
-                    if (*(int64 *)(pStatics + 0x108) != 0) {
-                      lVar6 = *(int64 *)(pStatics + 224);
-                      lVar5 = *(int64 *)(pStatics + 0x108);
+                    if (UICamera.onDoubleClick != null) {
+                      lVar6 = UICamera.currentTouch;
+                      lVar5 = UICamera.onDoubleClick;
                       if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
-                      VoidDelegate.Invoke(lVar5,*(uint64 *)(lVar6 + 80),0);
+                      VoidDelegate.Invoke(lVar5,lVar6.pressed,0);
                     }
-                    lVar6 = *(int64 *)(pStatics + 224);
+                    lVar6 = UICamera.currentTouch;
                     if (lVar6 == null) throw; // [null/range check failed]
-                    UICamera.Notify(*(uint64 *)(lVar6 + 80),"OnDoubleClick",0,0);
+                    UICamera.Notify(lVar6.pressed,"OnDoubleClick",0,0);
                   }
                 }
-                lVar6 = *(int64 *)(pStatics + 224);
+                lVar6 = UICamera.currentTouch;
                 if (lVar6 == null) throw; // [null/range check failed]
-                *(uint64 *)(lVar6 + 96) = *(uint64 *)(lVar6 + 80);
-                lVar6 = *(int64 *)(pStatics + 224);
+                lVar6.lastClickGO = lVar6.pressed;
+                lVar6 = UICamera.currentTouch;
                 if (lVar6 == null) throw; // [null/range check failed]
-                *(float *)(lVar6 + 108) = fVar8;
+                lVar6.clickTime = fVar8;
               }
             }
           }
         }
-        lVar6 = *(int64 *)(pStatics + 224);
+        lVar6 = UICamera.currentTouch;
         if (lVar6 != null) {
-          *(uint8 *)(lVar6 + 118) = 0;
-          lVar6 = *(int64 *)(pStatics + 224);
+          lVar6.dragStarted = 0;
+          lVar6 = UICamera.currentTouch;
           if (lVar6 != null) {
             puVar7 = (uint64 *)(lVar6 + 80);
             *puVar7 = 0;
             il2cpp_internal(puVar7,0);
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 != null) {
               puVar7 = (uint64 *)(lVar6 + 88);
               *puVar7 = 0;
@@ -5873,7 +5784,6 @@ public class UICamera
     // RVA   : 0x13C8F10   Offset: 0x13C7710   Length: 0x440
     public void ProcessTouch(bool pressed, bool released)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -5882,7 +5792,7 @@ public class UICamera
         float fVar7;
         float fVar8;
         if (released) {
-          *(uint32 *)(pStatics + 0x1b8) = 0;
+          UICamera.mTooltipTime = 0;
         }
         iVar5 = UICamera.get_currentScheme(0);
         bVar6 = iVar5 == 0;
@@ -5895,9 +5805,9 @@ public class UICamera
           fVar8 = this.touchClickThreshold;
         }
         fVar7 = fVar7 * fVar7;
-        lVar1 = *(int64 *)(pStatics + 224);
+        lVar1 = UICamera.currentTouch;
         if (lVar1 == null) goto LAB_1813c934b;
-        uVar2 = *(uint64 *)(lVar1 + 80);
+        uVar2 = lVar1.pressed;
         cVar4 = Object.op_Inequality(uVar2,0,0);
         if (!cVar4) {
           if (((bVar6 || pressed) || released) &&
@@ -5911,7 +5821,7 @@ public class UICamera
           }
           UICamera.ProcessPress(this,pressed,fVar8 * fVar8,fVar7,0);
           if (this.tooltipDelay != null.0) {
-            lVar1 = *(int64 *)(pStatics + 224);
+            lVar1 = UICamera.currentTouch;
             if (lVar1 == null) {
         LAB_1813c934b:
                           // WARNING: Subroutine does not return
@@ -5919,30 +5829,30 @@ public class UICamera
             }
             fVar7 = (float)MouseOrTouch.get_deltaTime(lVar1,0);
             if (this.tooltipDelay <= fVar7 && fVar7 != this.tooltipDelay) {
-              lVar1 = *(int64 *)(pStatics + 224);
+              lVar1 = UICamera.currentTouch;
               if (lVar1 == null) goto LAB_1813c934b;
-              uVar2 = *(uint64 *)(lVar1 + 80);
-              uVar3 = *(uint64 *)(lVar1 + 72);
+              uVar2 = lVar1.pressed;
+              uVar3 = lVar1.current;
               cVar4 = Object.op_Equality(uVar2,uVar3,0);
               if (cVar4) {
-                if (*(float *)(pStatics + 0x1b8) != 0.0) {
-                  lVar1 = *(int64 *)(pStatics + 224);
+                if (UICamera.mTooltipTime != null.0) {
+                  lVar1 = UICamera.currentTouch;
                   if (lVar1 != null) {
-                    if (*(char *)(lVar1 + 118) != false) {
+                    if (lVar1.dragStarted) {
                       return;
                     }
-                    *(uint32 *)(pStatics + 0x1b8) = 0;
-                    lVar1 = *(int64 *)(pStatics + 224);
+                    UICamera.mTooltipTime = 0;
+                    lVar1 = UICamera.currentTouch;
                     if (lVar1 != null) {
-                      *(uint32 *)(lVar1 + 112) = 0;
+                      lVar1.clickNotification = 0;
                       if (this.longPressTooltip) {
-                        lVar1 = *(int64 *)(pStatics + 224);
+                        lVar1 = UICamera.currentTouch;
                         if (lVar1 == null) goto LAB_1813c934b;
-                        UICamera.ShowTooltip(*(uint64 *)(lVar1 + 80),0);
+                        UICamera.ShowTooltip(lVar1.pressed,0);
                       }
-                      lVar1 = *(int64 *)(pStatics + 224);
+                      lVar1 = UICamera.currentTouch;
                       if (lVar1 != null) {
-                        UICamera.Notify(*(uint64 *)(lVar1 + 72),"OnLongPress",0,0);
+                        UICamera.Notify(lVar1.current,"OnLongPress",0,0);
                         return;
                       }
                     }
@@ -5959,54 +5869,53 @@ public class UICamera
     // RVA   : 0x13C1F50   Offset: 0x13C0750   Length: 0x5E
     public static void CancelNextTooltip()
     {
-        *(uint32 *)(*(int64 *)(DAT_181d8a458 + 184) + 0x1b8) = 0;
+        UICamera.mTooltipTime = 0;
     }
 
     // Token : 0x600071E
     // RVA   : 0x13CBDF0   Offset: 0x13CA5F0   Length: 0x38C
     public static bool ShowTooltip(GameObject go)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
         ulong uVar4;
         byte[] local_res8 = new byte[8];
-        uVar1 = *(uint64 *)(pStatics + 0x1b0);
+        uVar1 = UICamera.mTooltip;
         cVar3 = Object.op_Inequality(uVar1,go,0);
         if (!cVar3) {
           return false;
         }
-        uVar1 = *(uint64 *)(pStatics + 0x1b0);
+        uVar1 = UICamera.mTooltip;
         cVar3 = Object.op_Inequality(uVar1,0,0);
         if (cVar3) {
-          if (*(int64 *)(pStatics + 0x178) != 0) {
-            lVar2 = *(int64 *)(pStatics + 0x178);
+          if (UICamera.onTooltip != null) {
+            lVar2 = UICamera.onTooltip;
             if (lVar2 == null) goto LAB_1813cc177;
-            OnTooltipCB.Invoke(lVar2,*(uint64 *)(pStatics + 0x1b0),0,0);
+            OnTooltipCB.Invoke(lVar2,UICamera.mTooltip,0
+                                ,0);
           }
-          uVar1 = *(uint64 *)(pStatics + 0x1b0);
+          uVar1 = UICamera.mTooltip;
           local_res8[0] = 0;
           uVar4 = il2cpp_value_box(DAT_181d8d920,local_res8);
           UICamera.Notify(uVar1,"OnTooltip",uVar4,0);
         }
-        puVar5 = (uint64 *)(pStatics + 0x1b0);
-        *puVar5 = go;
-        il2cpp_internal(puVar5,go);
-        *(uint32 *)(pStatics + 0x1b8) = 0;
-        uVar1 = *(uint64 *)(pStatics + 0x1b0);
+        UICamera.mTooltip = go;
+        UICamera.mTooltipTime = 0;
+        uVar1 = UICamera.mTooltip;
         cVar3 = Object.op_Inequality(uVar1,0,0);
         if (cVar3) {
-          if (*(int64 *)(pStatics + 0x178) != 0) {
-            lVar2 = *(int64 *)(pStatics + 0x178);
+          if (UICamera.onTooltip != null) {
+            lVar2 = UICamera.onTooltip;
             if (lVar2 == null) {
         LAB_1813cc177:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            OnTooltipCB.Invoke(lVar2,*(uint64 *)(pStatics + 0x1b0),1,0);
+            OnTooltipCB.Invoke(lVar2,UICamera.mTooltip,1
+                                ,0);
           }
-          uVar1 = *(uint64 *)(pStatics + 0x1b0);
+          uVar1 = UICamera.mTooltip;
           local_res8[0] = 1;
           uVar4 = il2cpp_value_box(DAT_181d8d920,local_res8);
           UICamera.Notify(uVar1,"OnTooltip",uVar4,0);
@@ -6028,7 +5937,7 @@ public class UICamera
         float fVar1;
         UICamera.ShowTooltip(0,0);
         fVar1 = (float)Time.get_unscaledTime(0);
-        *(float *)(*(int64 *)(DAT_181d8a458 + 184) + 0x1b8) = fVar1 + delay;
+        UICamera.mTooltipTime = fVar1 + delay;
     }
 
     // Token : 0x6000721
@@ -6063,7 +5972,7 @@ public class UICamera
     // RVA   : 0x13CC820   Offset: 0x13CB020   Length: 0x9B2
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
+        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar4;
@@ -6075,75 +5984,55 @@ public class UICamera
         ulong local_18;
         ulong uStack_10;
         uVar1 = new BetterList_1(DAT_181d81318);
-        puVar6 = *(uint64 **)(DAT_181d8a458 + 184);
+        puVar6 = *(uint64 **)(UICamera_StaticsPtr + 184);
         *puVar6 = uVar1;
         il2cpp_internal(puVar6,uVar1);
-        uVar1 = **(uint64 **)(DAT_181d67e10 + 184);
+        uVar1 = UICamera.list;
         uVar2 = new OnTooltipCB(uVar1,DAT_181d8e210,0);
-        puVar6 = (uint64 *)(pStatics + 8);
-        *puVar6 = uVar2;
-        il2cpp_internal(puVar6,uVar2);
-        uVar1 = **(uint64 **)(DAT_181d67e10 + 184);
+        UICamera.GetKeyDown = uVar2;
+        uVar1 = UICamera.list;
         uVar2 = new OnTooltipCB(uVar1,DAT_181d8e298,0);
-        puVar6 = (uint64 *)(pStatics + 16);
-        *puVar6 = uVar2;
-        il2cpp_internal(puVar6,uVar2);
-        uVar1 = **(uint64 **)(DAT_181d67e10 + 184);
+        UICamera.GetKeyUp = uVar2;
+        uVar1 = UICamera.list;
         uVar2 = new OnTooltipCB(uVar1,DAT_181d8e320,0);
-        puVar6 = (uint64 *)(pStatics + 24);
-        *puVar6 = uVar2;
-        il2cpp_internal(puVar6,uVar2);
-        uVar1 = **(uint64 **)(DAT_181d67e10 + 184);
+        UICamera.GetKey = uVar2;
+        uVar1 = UICamera.list;
         uVar2 = new OnTooltipCB(uVar1,DAT_181d8e3a8,0);
-        puVar6 = (uint64 *)(pStatics + 32);
-        *puVar6 = uVar2;
-        il2cpp_internal(puVar6,uVar2);
-        uVar1 = **(uint64 **)(DAT_181d67e10 + 184);
+        UICamera.GetAxis = uVar2;
+        uVar1 = UICamera.list;
         uVar2 = new OnTooltipCB(uVar1,DAT_181d8e430,0);
-        puVar6 = (uint64 *)(pStatics + 48);
-        *puVar6 = uVar2;
-        il2cpp_internal(puVar6,uVar2);
-        uVar1 = **(uint64 **)(DAT_181d67e10 + 184);
+        UICamera.GetMouse = uVar2;
+        uVar1 = UICamera.list;
         uVar2 = new OnTooltipCB(uVar1,DAT_181d8e4b8,0);
-        puVar6 = (uint64 *)(pStatics + 56);
-        *puVar6 = uVar2;
-        il2cpp_internal(puVar6,uVar2);
-        uVar1 = **(uint64 **)(DAT_181d67e10 + 184);
+        UICamera.GetTouch = uVar2;
+        uVar1 = UICamera.list;
         uVar2 = new OnTooltipCB(uVar1,DAT_181d8e540,0);
-        puVar6 = (uint64 *)(pStatics + 64);
-        *puVar6 = uVar2;
-        il2cpp_internal(puVar6,uVar2);
-        *(uint8 *)(pStatics + 88) = 1;
-        *(uint8 *)(pStatics + 89) = 0;
-        *(uint8 *)(pStatics + 90) = 0;
-        *(uint8 *)(pStatics + 91) = 0;
+        UICamera.RemoveTouch = uVar2;
+        UICamera.showTooltips = 1;
+        UICamera.ignoreAllEvents = 0;
+        UICamera.ignoreControllerInput = 0;
+        UICamera.mDisableController = 0;
         uVar1 = Vector2.get_zero(0);
         local_res10 = (uint32)uVar1;
         uStackX_14 = (uint32)((uint64)uVar1 >> 32);
-        lVar4 = pStatics;
+        lVar4 = pUICamera;
         *(uint32 *)(lVar4 + 92) = local_res10;
         *(uint32 *)(lVar4 + 96) = uStackX_14;
         puVar6 = (uint64 *)Vector3.get_zero(&local_28,0);
-        lVar4 = pStatics;
+        lVar4 = pUICamera;
         *(uint64 *)(lVar4 + 100) = *puVar6;
         *(uint32 *)(lVar4 + 108) = *(uint32 *)(puVar6 + 1);
-        lVar4 = pStatics;
+        lVar4 = pUICamera;
         *(uint64 *)(lVar4 + 112) = 0;
         *(uint64 *)(lVar4 + 120) = 0;
         *(uint64 *)(lVar4 + 128) = 0;
-        puVar6 = (uint64 *)(pStatics + 184);
-        *puVar6 = 0;
-        il2cpp_internal(puVar6,0);
-        puVar6 = (uint64 *)(pStatics + 192);
-        *puVar6 = 0;
-        il2cpp_internal(puVar6,0);
-        *(uint32 *)(pStatics + 208) = 0;
-        *(uint32 *)(pStatics + 212) = 0xffffff9c;
-        *(uint32 *)(pStatics + 216) = 48;
-        puVar6 = (uint64 *)(pStatics + 224);
-        *puVar6 = 0;
-        il2cpp_internal(puVar6,0);
-        *(uint8 *)(pStatics + 232) = 0;
+        UICamera.current = 0;
+        UICamera.currentCamera = 0;
+        UICamera.mLastScheme = 0;
+        UICamera.currentTouchID = 0xffffff9c;
+        UICamera.mCurrentKey = 48;
+        UICamera.currentTouch = 0;
+        UICamera.mInputFocus = 0;
         plVar3 = (int64 *)FUN_1800d60b0(DAT_181d837c0,3);
         lVar4 = new MouseOrTouch(0);
         if (plVar3 == (int64 *)0) {
@@ -6193,37 +6082,27 @@ public class UICamera
         if (2 < *(uint32 *)(plVar3 + 3)) {
           plVar3[6] = lVar4;
           il2cpp_internal(plVar3 + 6,lVar4);
-          puVar6 = (uint64 *)(pStatics + 0x188);
-          *puVar6 = plVar3;
-          il2cpp_internal(puVar6,plVar3);
+          UICamera.mMouse = plVar3;
           uVar1 = new MouseOrTouch(0);
-          puVar6 = (uint64 *)(pStatics + 400);
-          *puVar6 = uVar1;
-          il2cpp_internal(puVar6,uVar1);
+          UICamera.controller = uVar1;
           uVar1 = il2cpp_internal(DAT_181d75ab0);
           FUN_180f58a90(uVar1,DAT_181d8c2e0);
-          puVar6 = (uint64 *)(pStatics + 0x198);
-          *puVar6 = uVar1;
-          il2cpp_internal(puVar6,uVar1);
+          UICamera.activeTouches = uVar1;
           uVar1 = il2cpp_internal(DAT_181d6f030);
           FUN_180f58a90(uVar1,DAT_181d678f8);
-          puVar6 = (uint64 *)(pStatics + 0x1a0);
-          *puVar6 = uVar1;
-          il2cpp_internal(puVar6,uVar1);
-          *(uint32 *)(pStatics + 0x1a8) = 0;
-          *(uint32 *)(pStatics + 0x1ac) = 0;
-          puVar6 = (uint64 *)(pStatics + 0x1b0);
-          *puVar6 = 0;
-          il2cpp_internal(puVar6,0);
-          *(uint32 *)(pStatics + 0x1b8) = 0;
-          *(uint8 *)(pStatics + 0x1bc) = 0;
-          *(uint32 *)(pStatics + 0x1c0) = 0xffffffff;
-          *(uint8 *)(pStatics + 0x1c4) = 0;
-          *(uint32 *)(pStatics + 0x1c8) = 0xffffffff;
-          *(uint8 *)(pStatics + 0x1cc) = 0;
-          *(uint32 *)(pStatics + 0x1d0) = 0xffffffff;
-          *(uint8 *)(pStatics + 0x1d4) = 0;
-          lVar4 = pStatics;
+          UICamera.mTouchIDs = uVar1;
+          UICamera.mWidth = 0;
+          UICamera.mHeight = 0;
+          UICamera.mTooltip = 0;
+          UICamera.mTooltipTime = 0;
+          UICamera.isDragging = 0;
+          UICamera.mLastInteractionCheck = 0xffffffff;
+          UICamera.mLastInteractionResult = 0;
+          UICamera.mLastFocusCheck = 0xffffffff;
+          UICamera.mLastFocusResult = 0;
+          UICamera.mLastOverCheck = 0xffffffff;
+          UICamera.mLastOverResult = 0;
+          lVar4 = pUICamera;
           *(uint64 *)(lVar4 + 0x1f0) = 0;
           *(uint64 *)(lVar4 + 0x1f8) = 0;
           *(uint64 *)(lVar4 + 0x200) = 0;
@@ -6234,22 +6113,20 @@ public class UICamera
           *(uint64 *)(lVar4 + 0x228) = 0;
           *(uint64 *)(lVar4 + 0x230) = 0;
           uVar1 = new BetterList_1(DAT_181d82618);
-          puVar6 = (uint64 *)(pStatics + 0x238);
-          *puVar6 = uVar1;
-          il2cpp_internal(puVar6,uVar1);
+          UICamera.mHits = uVar1;
           puVar6 = (uint64 *)Vector3.get_back(&local_28,0);
           local_20 = *(uint32 *)(puVar6 + 1);
           local_28 = *puVar6;
           local_18 = 0;
           uStack_10 = 0;
           Plane.ctor(&local_18,&local_28,0,0);
-          lVar4 = pStatics;
+          lVar4 = pUICamera;
           *(uint64 *)(lVar4 + 0x250) = local_18;
           *(uint64 *)(lVar4 + 600) = uStack_10;
-          *(uint32 *)(pStatics + 0x260) = 0;
-          *(uint32 *)(pStatics + 0x264) = 0;
-          *(uint8 *)(pStatics + 0x268) = 1;
-          *(uint8 *)(pStatics + 0x269) = 1;
+          UICamera.mNextEvent = 0;
+          UICamera.mNotifying = 0;
+          UICamera.disableControllerCheck = 1;
+          UICamera.mUsingTouchEvents = 1;
           return;
         }
         uVar1 = il2cpp_internal();

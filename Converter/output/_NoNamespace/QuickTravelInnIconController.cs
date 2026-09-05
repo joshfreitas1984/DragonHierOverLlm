@@ -40,8 +40,7 @@ public class QuickTravelInnIconController
     // RVA   : 0xC4F630   Offset: 0xC4DE30   Length: 0x5A2
     public void Update()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_6570 = *(int64*)(DAT_181d66570 + 184);
+        var pStatics = *(int64*)(DAT_181d86270 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -51,18 +50,21 @@ public class QuickTravelInnIconController
         uint uStack_10;
         uint32 uStack_c;
         this.hightLight = 0;
-        uVar2 = *(uint64 *)(pStatics_6570 + 72);
+        uVar2 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
-          if (*(int64 *)(pStatics_6570 + 72) == 0) goto LAB_180c4fbcd;
+          if (MouseController.hoveredUI == null)
+          goto LAB_180c4fbcd;
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (*(int64 *)(pStatics_6570 + 72) == 0) goto LAB_180c4fbcd;
+            if (MouseController.hoveredUI == null)
+            goto LAB_180c4fbcd;
             lVar3 = GameObject.GetComponent();
             if (lVar3 == null) goto LAB_180c4fbcd;
             if (lVar3.innName != null) {
-              if (*(int64 *)(pStatics_6570 + 72) == 0) goto LAB_180c4fbcd;
+              if (MouseController.hoveredUI == null)
+              goto LAB_180c4fbcd;
               lVar3 = GameObject.GetComponent();
               if (((lVar3 == null) || (lVar3.innName == null)) ||
                  (lVar3 = *(int64 *)(lVar3.innName + 120)) == null)
@@ -73,7 +75,7 @@ public class QuickTravelInnIconController
               lVar3 = *(int64 *)(lVar3.id + 32);
               if (lVar3 == null) goto LAB_180c4fbcd;
               if (lVar3.shopItemList == 6) {
-                lVar3 = *(int64 *)(pStatics_6570 + 72);
+                lVar3 = MouseController.hoveredUI;
                 if (lVar3 == null) goto LAB_180c4fbcd;
                 lVar3 = GameObject.GetComponent(lVar3,DAT_181da0538);
                 if (((lVar3 == null) || (lVar3.innName == null)) ||
@@ -144,18 +146,18 @@ public class QuickTravelInnIconController
             lVar3 = *plVar6;
             goto LAB_180c4fba7;
           }
-          if (*pStatics_6270 == 0) goto LAB_180c4fbcd;
+          if (*pStatics == 0) goto LAB_180c4fbcd;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics_6270,"UIAtlas","任务目标",0);
+                            (*pStatics,"UIAtlas","任务目标",0);
           if (plVar6 == (int64 *)0) goto LAB_180c4fbcd;
           Image.set_sprite(plVar6,uVar2,0);
           plVar6 = this.missionTarget;
           puVar5 = (uint32 *)FUN_181098a50(&local_18,0);
         }
         else {
-          if (*pStatics_6270 == 0) goto LAB_180c4fbcd;
+          if (*pStatics == 0) goto LAB_180c4fbcd;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics_6270,"UIAtlas","问号",0);
+                            (*pStatics,"UIAtlas","问号",0);
           if (plVar6 == (int64 *)0) goto LAB_180c4fbcd;
           Image.set_sprite(plVar6,uVar2,0);
           plVar6 = this.missionTarget;
@@ -179,8 +181,7 @@ public class QuickTravelInnIconController
     // RVA   : 0xC4F150   Offset: 0xC4D950   Length: 0x453
     public void RefreshState()
     {
-        var pStatics_ede0 = *(int64*)(DAT_181d6ede0 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pStatics = *(int64*)(DAT_181d6ede0 + 184);
         bool cVar1;
         long lVar3;
         uint uVar6;
@@ -189,8 +190,8 @@ public class QuickTravelInnIconController
         uint uStack_30;
         uint32 uStack_2c;
         uint8 local_28 [32];
-        if (*(int *)(pStatics_ef00 + 8) == 1) {
-          lVar3 = *(int64 *)(pStatics_ef00 + 40);
+        if (PlotController.LeftFaceHideOffset == 1) {
+          lVar3 = PlotController.LanternFestivelRewardLvTalkText;
           if ((this.innData == null) || (lVar3 == null)) throw; // [null/range check failed]
           cVar1 = FUN_181815240(lVar3,this.innData.id,DAT_181d67bf8)
           ;
@@ -203,10 +204,10 @@ public class QuickTravelInnIconController
             else {
           }
           plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          if ((*pStatics_ede0 == 0) || (plVar2 == (int64 *)0))
+          if ((*pStatics == 0) || (plVar2 == (int64 *)0))
           throw; // [null/range check failed]
           (**(code **)(*plVar2 + 0x2c8))
-                    (plVar2,*(uint8 *)(*pStatics_ede0 + 129),
+                    (plVar2,*(uint8 *)(*pStatics + 129),
                      *(uint64 *)(*plVar2 + 0x2d0));
         }
         plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
@@ -242,8 +243,8 @@ public class QuickTravelInnIconController
           uVar6 = 0x3e19999a;
         }
         else {
-          if (*pStatics_ede0 == 0) throw; // [null/range check failed]
-          if (*(char *)(*pStatics_ede0 + 129) == false) goto LAB_180c4f498;
+          if (*pStatics == 0) throw; // [null/range check failed]
+          if (*(char *)(*pStatics + 129) == false) goto LAB_180c4f498;
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"AreaNameBack",0);

@@ -679,8 +679,6 @@ public class TweenLetters
     // RVA   : 0xA71700   Offset: 0xA6FF00   Length: 0xC
     private float ScaleRange(float value, float baseMax, float limitMax)
     {
-        float FUN_180a71700(uint64 this,float value,float baseMax,float limitMax)
-        {
         return (value * limitMax) / baseMax;
     }
 
@@ -729,8 +727,6 @@ public class TweenLetters
     // RVA   : 0xA71AA0   Offset: 0xA702A0   Length: 0x11
     public void /*ctor*/()
     {
-        void FUN_180a71aa0(int64 this)
-        {
         this.mVertexCount = 0xffffffff;
         UITweener.ctor(this,0);
     }

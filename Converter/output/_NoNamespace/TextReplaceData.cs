@@ -30,7 +30,6 @@ public class TextReplaceData
     // RVA   : 0xAC1950   Offset: 0xAC0150   Length: 0x3A70
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d85f70 + 184);
         long lVar3;
         ulong uVar4;
         plVar1 = (int64 *)FUN_1800d60b0(DAT_181d7b320,2);
@@ -123,7 +122,7 @@ public class TextReplaceData
               }
               plVar1[5] = (int64)plVar2;
               il2cpp_internal(plVar1 + 5,plVar2);
-              puVar5 = *(uint64 **)(DAT_181d85f70 + 184);
+              puVar5 = *(uint64 **)(TextReplaceData_StaticsPtr + 184);
               *puVar5 = plVar1;
               il2cpp_internal(puVar5,plVar1);
               plVar1 = (int64 *)FUN_1800d60b0(DAT_181d7b320,39);
@@ -2108,8 +2107,9 @@ public class TextReplaceData
                                                         plVar1[42] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 42,plVar2);
                                                         puVar5 = (uint64 *)
-                                                                 (pStatics + 8)
-                                                        ;
+                                                                 (*(int64 *)
+                                                                   (TextReplaceData_StaticsPtr + 184) + 8
+                                                                 );
                                                         *puVar5 = plVar1;
                                                         il2cpp_internal(puVar5,plVar1);
                                                         plVar1 = (int64 *)
@@ -2169,7 +2169,8 @@ public class TextReplaceData
                                                         plVar1[4] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 4,plVar2);
                                                         puVar5 = (uint64 *)
-                                                                 (pStatics +
+                                                                 (*(int64 *)
+                                                                   (TextReplaceData_StaticsPtr + 184) +
                                                                  16);
                                                         *puVar5 = plVar1;
                                                         il2cpp_internal(puVar5,plVar1);
@@ -2280,7 +2281,8 @@ public class TextReplaceData
                                                           plVar1[5] = (int64)plVar2;
                                                           il2cpp_internal(plVar1 + 5,plVar2);
                                                           puVar5 = (uint64 *)
-                                                                   (pStatics +
+                                                                   (*(int64 *)
+                                                                     (TextReplaceData_StaticsPtr + 184) +
                                                                    24);
                                                           *puVar5 = plVar1;
                                                           il2cpp_internal(puVar5,plVar1);

@@ -117,13 +117,12 @@ public class AreaBuildingData
     // RVA   : 0xA16590   Offset: 0xA14D90   Length: 0x16E
     public void ChangeEnemyMonth(int num)
     {
-        var pStatics = *(int64*)(DAT_181d87630 + 184);
         long lVar1;
         this.enemyMonth = this.enemyMonth + num;
-        lVar1 = *(int64 *)(pStatics + 56);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
         if (lVar1 != null) {
           if (*(int64 *)(lVar1 + 88) != 0) {
-            lVar1 = *(int64 *)(pStatics + 56);
+            lVar1 = PlotController.LaBaFestivelResultTalkText;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 88)) == null) throw; // [null/range check failed]
             if (*(int *)(lVar1 + 16) == this.areaID) {
               lVar1 = FUN_18046bac0(0);
@@ -171,8 +170,6 @@ public class AreaBuildingData
     // RVA   : 0xA179F0   Offset: 0xA161F0   Length: 0x6
     public float GetResourceProduceRate()
     {
-        uint32 FUN_180a179f0(int64 this)
-        {
         return this.resourceStoreRate;
     }
 
@@ -180,8 +177,6 @@ public class AreaBuildingData
     // RVA   : 0xA177A0   Offset: 0xA15FA0   Length: 0x19
     public float GetMaxResourceRate()
     {
-        float FUN_180a177a0(int64 this)
-        {
         return (float)this.lv * 0.2 + 1.0;
     }
 
@@ -210,8 +205,6 @@ public class AreaBuildingData
     // RVA   : 0xA18BA0   Offset: 0xA173A0   Length: 0x1E
     public void ResetResourceStoreRate()
     {
-        void FUN_180a18ba0(int64 this)
-        {
         this.resourceStoreRate = (float)this.lv * 0.2 + 1.0;
     }
 
@@ -245,7 +238,7 @@ public class AreaBuildingData
         if (this.buildingID < 0) {
           return 0;
         }
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 224)) != null) {
           uVar2 = FUN_1817cc780(lVar1,this.buildingID,DAT_181d925f0);
           return uVar2;
@@ -537,34 +530,33 @@ public class AreaBuildingData
     // RVA   : 0xA16E10   Offset: 0xA15610   Length: 0x1D8
     public float GetBuildSpeedRate()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
         float fVar4;
         lVar2 = AreaBuildingData.GetArea(this,0);
-        if ((lVar2 != null) && (*(int64 *)(lVar2 + 176) != 0)) {
-          fVar3 = (float)ForceSpeAddData.Get(*(int64 *)(lVar2 + 176),13);
+        if ((lVar2 != null) && (lVar2.TimeDifficulty != null)) {
+          fVar3 = (float)ForceSpeAddData.Get(lVar2.TimeDifficulty,13);
           lVar2 = AreaBuildingData.GetArea(this,0);
           if (lVar2 != null) {
-            if (*(int *)(lVar2 + 112) < 0) {
+            if (lVar2.lastRandomWorldEventDay < 0) {
               return fVar3 + 1.0;
             }
             lVar2 = AreaBuildingData.GetArea(this,0);
             if (((lVar2 != null) && (lVar2 = AreaData.GetForce(lVar2,0)) != null) &&
-               (*(int64 *)(lVar2 + 0x148) != 0)) {
-              fVar4 = (float)ForceSpeAddData.Get(*(int64 *)(lVar2 + 0x148),12);
+               (lVar2.monthBreakEquipTime != null)) {
+              fVar4 = (float)ForceSpeAddData.Get(lVar2.monthBreakEquipTime,12);
               fVar4 = fVar3 + 1.0 + fVar4;
-              if (((*pStatics != 0) &&
-                  (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-                 (lVar2 = WorldData.Player(lVar2,0)) != null) {
+              if (((GameController._instance != null) &&
+                  (lVar2 = GameController._instance.worldData,
+                  lVar2 != null)) && (lVar2 = WorldData.Player(lVar2,0)) != null) {
                 iVar1 = *(int *)(lVar2 + 132);
                 lVar2 = AreaBuildingData.GetArea(this,0);
                 if (lVar2 != null) {
-                  if (iVar1 != *(int *)(lVar2 + 112)) {
+                  if (iVar1 != lVar2.lastRandomWorldEventDay) {
                     lVar2 = FUN_18046c0a0(0);
-                    if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
-                    fVar3 = (float)WorldData.GetAIForceDevelopSpeed(*(int64 *)(lVar2 + 32),0);
+                    if ((lVar2 == null) || (lVar2.villageAreaID == null)) throw; // [null/range check failed]
+                    fVar3 = (float)WorldData.GetAIForceDevelopSpeed(lVar2.villageAreaID,0);
                     fVar4 = fVar4 + fVar3 * 0.05;
                   }
                   return fVar4;
@@ -579,10 +571,10 @@ public class AreaBuildingData
     // RVA   : 0xA16B80   Offset: 0xA15380   Length: 0xBE
     public AreaData GetArea()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           WorldData.GetArea(lVar1,this.areaID,0);
           return;
         }
@@ -592,9 +584,7 @@ public class AreaBuildingData
     // RVA   : 0xA15D50   Offset: 0xA14550   Length: 0x837
     public bool CanUpgrade()
     {
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         uint uVar2;
         int iVar3;
@@ -602,81 +592,82 @@ public class AreaBuildingData
         long lVar5;
         ulong uVar6;
         ulong uVar7;
-        lVar4 = *(int64 *)(pStatics_7630 + 56);
-        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 88)) == null) throw; // [null/range check failed]
+
+        if ((lVar4 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
         lVar4 = AreaData.GetCenterBuilding(lVar4,0);
         if (this == lVar4) {
-          lVar4 = *(int64 *)(pStatics_7630 + 56);
-          if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 88)) == null) throw; // [null/range check failed]
-          if (*(int *)(lVar4 + 72) != 0) {
+
+          if ((lVar4 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
+          if (lVar4.Forces != null) {
             lVar4 = FUN_18046bac0(0);
-            if ((lVar4 == null) || (*(int64 *)(lVar4 + 88) == 0)) throw; // [null/range check failed]
-            if (*(int *)(*(int64 *)(lVar4 + 88) + 72) != 1) goto LAB_180a16088;
+            if ((lVar4 == null) || (lVar4.TempHeros == null)) throw; // [null/range check failed]
+            if (*(int *)(lVar4.TempHeros + 72) != 1) goto LAB_180a16088;
           }
-          lVar4 = *(int64 *)(pStatics_7630 + 56);
-          if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 88)) == null) throw; // [null/range check failed]
-          fVar1 = *(float *)(lVar4 + 80);
-          lVar4 = *(int64 *)(pStatics_ef00 + 0x668);
-          lVar5 = *(int64 *)(pStatics_7630 + 56);
+
+          if ((lVar4 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
+          fVar1 = lVar4.Heros;
+          lVar4 = *(int64 *)(pPlotController + 0x668);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if ((((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) ||
               (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) || (lVar4 == null))
           throw; // [null/range check failed]
           uVar2 = *(uint32 *)(lVar5 + 20);
-          if (*(uint32 *)(lVar4 + 24) <= uVar2) {
+          if (lVar4.cityAreaID <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          uVar6 = *(uint64 *)(lVar4 + 16);
+          uVar6 = lVar4.chapter;
           if (fVar1 < uVar6[uVar2]) goto LAB_180a1657e;
         }
         LAB_180a16088:
-        lVar4 = *(int64 *)(pStatics_7630 + 56);
-        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 88)) == null) throw; // [null/range check failed]
+
+        if ((lVar4 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
         lVar4 = AreaData.GetCenterBuilding(lVar4,0);
         if (this == lVar4) {
-          lVar4 = *(int64 *)(pStatics_7630 + 56);
-          if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 88)) == null) throw; // [null/range check failed]
-          if (*(int *)(lVar4 + 72) == 2) {
+
+          if ((lVar4 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
+          if (lVar4.Forces == 2) {
             lVar4 = FUN_18046bac0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 88) == 0)) ||
-               (lVar4 = AreaData.GetForce(*(int64 *)(lVar4 + 88),0)) == null)
+            if (((lVar4 == null) || (lVar4.TempHeros == null)) ||
+               (lVar4 = AreaData.GetForce(lVar4.TempHeros,0)) == null)
             throw; // [null/range check failed]
             iVar3 = *(int *)(lVar4 + 132);
-            lVar4 = *(int64 *)(pStatics_ef00 + 0x670);
-            lVar5 = *(int64 *)(pStatics_7630 + 56);
+            lVar4 = *(int64 *)(pPlotController + 0x670);
+            lVar5 = PlotController.LaBaFestivelResultTalkText;
             if ((((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) ||
                 (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) || (lVar4 == null))
             throw; // [null/range check failed]
             uVar2 = *(uint32 *)(lVar5 + 20);
-            if (*(uint32 *)(lVar4 + 24) <= uVar2) {
+            if (lVar4.cityAreaID <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            uVar6 = *(uint64 *)(lVar4 + 16);
+            uVar6 = lVar4.chapter;
             if ((float)iVar3 < uVar6[uVar2]) goto LAB_180a1657e;
           }
         }
-        lVar4 = *(int64 *)(pStatics_7630 + 56);
-        if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 88)) != null) {
+
+        if ((lVar4 = PlotController.LaBaFestivelResultTalkText?.TempHeros) != null) {
           lVar4 = AreaData.GetCenterBuilding(lVar4,0);
           if (this != lVar4) {
             iVar3 = this.lv;
-            lVar4 = *(int64 *)(pStatics_7630 + 56);
-            if (((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 88)) == null) ||
+
+            if (((lVar4 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) ||
                (uVar6 = AreaData.GetCenterBuilding(lVar4,0)) == null) throw; // [null/range check failed]
             if (*(int *)(uVar6 + 20) <= iVar3) goto LAB_180a1657e;
           }
-          if ((*pStatics_df90 != 0) &&
-             (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar4 = GameController._instance.worldData) != null
+             ) {
             lVar4 = WorldData.GetHeroForce(lVar4,0,0);
             uVar7 = AreaBuildingData.GetUpgradeCostResource(this);
             if (lVar4 != null) {
               uVar6 = ForceData.HaveResource(lVar4,uVar7,0);
               if ((char)uVar6) {
                 lVar4 = FUN_18046c0a0(0);
-                if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                   (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null)
+                if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                   (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null)
                 throw; // [null/range check failed]
-                iVar3 = *(int *)(lVar4 + 184);
-                uVar6 = *(uint64 *)(DAT_181d87338 + 184);
+                iVar3 = lVar4.forceMeetingStarted;
+                uVar6 = *(uint64 *)(AreaBuildController_StaticsPtr + 184);
                 if (*(int *)(uVar6 + 24) <= iVar3) {
                   return CONCAT71((int7)(uVar6 >> 8),1);
                 }
@@ -692,10 +683,8 @@ public class AreaBuildingData
     // RVA   : 0xA17CE0   Offset: 0xA164E0   Length: 0xD8B
     public string GetUpgradeDescribe()
     {
-        var pStatics_7338 = *(int64*)(DAT_181d87338 + 184);
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pAreaBuildController = *(int64*)(AreaBuildController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         uint uVar2;
         int iVar3;
@@ -712,44 +701,44 @@ public class AreaBuildingData
         int local_38;
         uint[] local_34 = new uint[7];
         uVar9 = "";
-        lVar5 = *(int64 *)(pStatics_7630 + 56);
-        if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) throw; // [null/range check failed]
+
+        if ((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
         lVar5 = AreaData.GetCenterBuilding(lVar5,0);
         if (this == lVar5) {
-          lVar5 = *(int64 *)(pStatics_7630 + 56);
-          if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) throw; // [null/range check failed]
-          if (*(int *)(lVar5 + 72) != 0) {
+
+          if ((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
+          if (lVar5.Forces != null) {
             lVar5 = FUN_18046bac0(0);
-            if ((lVar5 == null) || (*(int64 *)(lVar5 + 88) == 0)) throw; // [null/range check failed]
-            if (*(int *)(*(int64 *)(lVar5 + 88) + 72) != 1) goto LAB_180a181a8;
+            if ((lVar5 == null) || (lVar5.TempHeros == null)) throw; // [null/range check failed]
+            if (*(int *)(lVar5.TempHeros + 72) != 1) goto LAB_180a181a8;
           }
-          lVar5 = *(int64 *)(pStatics_7630 + 56);
-          if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) throw; // [null/range check failed]
-          fVar1 = *(float *)(lVar5 + 80);
-          lVar5 = *(int64 *)(pStatics_ef00 + 0x668);
-          lVar6 = *(int64 *)(pStatics_7630 + 56);
+
+          if ((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
+          fVar1 = lVar5.Heros;
+          lVar5 = *(int64 *)(pPlotController + 0x668);
+          lVar6 = PlotController.LaBaFestivelResultTalkText;
           if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
               (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null))
           throw; // [null/range check failed]
           uVar2 = *(uint32 *)(lVar6 + 20);
-          if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+          if (lVar5.cityAreaID <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (lVar5[uVar2] <= fVar1)
+          if (lVar5.chapter[uVar2] <= fVar1)
           goto LAB_180a181a8;
-          uVar8 = *(uint64 *)(pStatics_ef00 + 0x2c8);
-          lVar5 = *(int64 *)(pStatics_ef00 + 0x668);
-          lVar6 = *(int64 *)(pStatics_7630 + 56);
+          uVar8 = *(uint64 *)(pPlotController + 0x2c8);
+          lVar5 = *(int64 *)(pPlotController + 0x668);
+          lVar6 = PlotController.LaBaFestivelResultTalkText;
           if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
               (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null)) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar2 = *(uint32 *)(lVar6 + 20);
-          if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+          if (lVar5.cityAreaID <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          local_res18[0] = lVar5[uVar2];
+          local_res18[0] = lVar5.chapter[uVar2];
           uVar7 = il2cpp_value_box(DAT_181d7d0b8,local_res18);
           uVar10 = "需要\n{0}人口 {1}</color>\n\n";
         LAB_180a1877d:
@@ -758,67 +747,67 @@ public class AreaBuildingData
         }
         else {
         LAB_180a181a8:
-          lVar5 = *(int64 *)(pStatics_7630 + 56);
-          if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) throw; // [null/range check failed]
+
+          if ((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
           lVar5 = AreaData.GetCenterBuilding(lVar5,0);
           if (this == lVar5) {
-            lVar5 = *(int64 *)(pStatics_7630 + 56);
-            if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) throw; // [null/range check failed]
-            if (*(int *)(lVar5 + 72) == 2) {
+
+            if ((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
+            if (lVar5.Forces == 2) {
               lVar5 = FUN_18046bac0(0);
-              if (((lVar5 == null) || (*(int64 *)(lVar5 + 88) == 0)) ||
-                 (lVar5 = AreaData.GetForce(*(int64 *)(lVar5 + 88),0)) == null)
+              if (((lVar5 == null) || (lVar5.TempHeros == null)) ||
+                 (lVar5 = AreaData.GetForce(lVar5.TempHeros,0)) == null)
               throw; // [null/range check failed]
               iVar3 = *(int *)(lVar5 + 132);
-              lVar5 = *(int64 *)(pStatics_ef00 + 0x670);
-              lVar6 = *(int64 *)(pStatics_7630 + 56);
+              lVar5 = *(int64 *)(pPlotController + 0x670);
+              lVar6 = PlotController.LaBaFestivelResultTalkText;
               if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
                   (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null))
               throw; // [null/range check failed]
               uVar2 = *(uint32 *)(lVar6 + 20);
-              if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+              if (lVar5.cityAreaID <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              if ((float)iVar3 < lVar5[uVar2]
+              if ((float)iVar3 < lVar5.chapter[uVar2]
                  ) {
-                uVar8 = *(uint64 *)(pStatics_ef00 + 0x2c8);
-                lVar5 = *(int64 *)(pStatics_ef00 + 0x670);
-                lVar6 = *(int64 *)(pStatics_7630 + 56);
+                uVar8 = *(uint64 *)(pPlotController + 0x2c8);
+                lVar5 = *(int64 *)(pPlotController + 0x670);
+                lVar6 = PlotController.LaBaFestivelResultTalkText;
                 if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
                     (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null)) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
                 uVar2 = *(uint32 *)(lVar6 + 20);
-                if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+                if (lVar5.cityAreaID <= uVar2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 local_res20[0] =
-                     lVar5[uVar2];
+                     lVar5.chapter[uVar2];
                 uVar7 = il2cpp_value_box(DAT_181d7d0b8,local_res20);
                 uVar10 = "需要\n{0}弟子 {1}</color>\n\n";
                 goto LAB_180a1877d;
               }
             }
           }
-          lVar5 = *(int64 *)(pStatics_7630 + 56);
-          if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) throw; // [null/range check failed]
+
+          if ((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) throw; // [null/range check failed]
           lVar5 = AreaData.GetCenterBuilding(lVar5,0);
           if (this != lVar5) {
             iVar3 = this.lv;
-            lVar5 = *(int64 *)(pStatics_7630 + 56);
-            if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) ||
+
+            if (((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) ||
                (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) throw; // [null/range check failed]
             if (*(int *)(lVar5 + 20) <= iVar3) {
-              uVar8 = *(uint64 *)(pStatics_ef00 + 0x2c8);
-              lVar5 = *(int64 *)(pStatics_7630 + 56);
-              if ((((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) ||
+              uVar8 = *(uint64 *)(pPlotController + 0x2c8);
+
+              if ((((lVar5 = PlotController.LaBaFestivelResultTalkText?.TempHeros) == null) ||
                   (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) ||
                  (lVar5 = AreaBuildingData.DataBase(lVar5,0)) == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              uVar8 = String.Concat(uVar8,*(uint64 *)(lVar5 + 24),0);
+              uVar8 = String.Concat(uVar8,lVar5.cityAreaID,0);
               local_38 = this.lv + 1;
               uVar7 = il2cpp_value_box(DAT_181d5b2f8,&local_38);
               uVar10 = "需要\n{0} {1}级</color>\n\n";
@@ -826,21 +815,22 @@ public class AreaBuildingData
             }
           }
         }
-        if (((*pStatics_df90 != 0) &&
-            (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-           (lVar5 = WorldData.Player(lVar5,0)) != null) {
-          iVar3 = *(int *)(lVar5 + 184);
-          if (iVar3 < *(int *)(pStatics_7338 + 24)) {
-            lVar5 = *(int64 *)(pStatics_ef00 + 0x3d0);
-            uVar2 = *(uint32 *)(pStatics_7338 + 24);
+        if (((GameController._instance != null) &&
+            (lVar5 = GameController._instance.worldData) != null)
+           && (lVar5 = WorldData.Player(lVar5,0)) != null) {
+          iVar3 = lVar5.forceMeetingStarted;
+          if (iVar3 < AreaBuildController.UpgradeBuildNeedForceLv) {
+            lVar5 = *(int64 *)(pPlotController + 0x3d0);
+            uVar2 = AreaBuildController.UpgradeBuildNeedForceLv;
             if (lVar5 == null) throw; // [null/range check failed]
-            if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+            if (lVar5.cityAreaID <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar8 = GlobalData.GenerateRareLvColorText
                               (*(uint64 *)
-                                (*(int64 *)(lVar5 + 16) + 32 + (int64)(int)uVar2 * 8),
-                               *(uint32 *)(pStatics_7338 + 24),0);
+                                (lVar5.chapter + 32 + (int64)(int)uVar2 * 8),
+                               *(uint32 *)
+                                (pAreaBuildController + 24),0);
             uVar8 = String.Format("需要 {0}\n\n",uVar8,0);
             uVar9 = String.Concat(uVar8,uVar9,0);
           }
@@ -850,7 +840,7 @@ public class AreaBuildingData
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          fVar1 = *(float *)(lVar5 + 88);
+          fVar1 = lVar5.TempHeros;
           fVar11 = (float)AreaBuildingData.GetBuildSpeedRate(this,0);
           uVar4 = Mathf.RoundToInt(((float)(iVar3 + 1) * fVar1) / fVar11,0);
           local_34[0] = Mathf.Max(1,uVar4);
@@ -958,7 +948,7 @@ public class AreaBuildingData
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181d87338 + 184) + 8);
+        lVar4 = AreaBuildController.AreaObstacleName;
         uVar3 = Mathf.CeilToInt((float)this.lv * 0.5,0);
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return

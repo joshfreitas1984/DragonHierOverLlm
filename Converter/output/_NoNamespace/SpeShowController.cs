@@ -80,7 +80,7 @@ public class SpeShowController
     // RVA   : 0xC6ACC0   Offset: 0xC694C0   Length: 0x57
     public static SpeShowController get_Instance()
     {
-        return **(uint64 **)(DAT_181d7f230 + 184);
+        return **(uint64 **)(_ShowItemAnim_d__32_StaticsPtr + 184);
     }
 
     // Token : 0x60020FE
@@ -89,14 +89,14 @@ public class SpeShowController
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d7f230 + 184);
+        uVar3 = **(uint64 **)(_ShowItemAnim_d__32_StaticsPtr + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181d7f230 + 184);
+        puVar1 = *(uint64 **)(_ShowItemAnim_d__32_StaticsPtr + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -587,7 +587,6 @@ public class SpeShowController
     // RVA   : 0xC6A380   Offset: 0xC68B80   Length: 0x30D
     public void ShowSkillLevelUpParticle(GameObject targetObj, KungfuSkillLvData targetSkill)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         void SpeShowController.ShowSkillLevelUpParticle
                      (int64 this,uint64 targetObj,int64 targetSkill)
         {
@@ -601,7 +600,7 @@ public class SpeShowController
         uint32 uStack_1c;
         uVar3 = this.showItemSpark;
         uVar3 = GlobalData.AddChild(targetObj,uVar3,0);
-        lVar2 = *(int64 *)(pStatics + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56), targetSkill != null)) {
           lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
           if ((lVar4 != null) && (lVar2 != null)) {
@@ -617,7 +616,7 @@ public class SpeShowController
               uStack_1c = *(uint32 *)(lVar2 + 36);
               GlobalData.SetParticleColor(uVar3,&local_28,0);
               uVar3 = GlobalData.AddChild(targetObj,this.showItemImpact,0);
-              lVar2 = *(int64 *)(pStatics + 32);
+              lVar2 = GameController.lockObj;
               if (lVar2 != null) {
                 lVar2 = *(int64 *)(lVar2 + 56);
                 lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
@@ -634,7 +633,7 @@ public class SpeShowController
                     uStack_1c = *(uint32 *)(lVar2 + 36);
                     GlobalData.SetParticleColor(uVar3,&local_28,0);
                     uVar3 = GlobalData.AddChild(targetObj,this.showItemFlash,0);
-                    lVar2 = *(int64 *)(pStatics + 32);
+                    lVar2 = GameController.lockObj;
                     if (lVar2 != null) {
                       lVar2 = *(int64 *)(lVar2 + 56);
                       lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
@@ -702,8 +701,9 @@ public class SpeShowController
         if (this.treasureChest != null) {
           GameObject.SetActive(this.treasureChest,0,0);
           SpeShowController.ShowSpeShowUIPanel(this,0);
-          fVar8 = (float)Mathf.Min((*(float **)(DAT_181d7deb0 + 184))[1],
-                                    local_res18[0] / **(float **)(DAT_181d7deb0 + 184),0);
+          fVar8 = (float)Mathf.Min((*(float **)(SkillExpShowPrefab_StaticsPtr + 184))[1],
+                                    local_res18[0] / SkillExpShowPrefab.minSpeed,0)
+          ;
           uVar3 = this.skillList;
           this.leftShowTime = fVar8 + 0.5;
           if (*pStatics != 0) {
@@ -868,8 +868,9 @@ public class SpeShowController
         if (this.treasureChest != null) {
           GameObject.SetActive(this.treasureChest,0,0);
           SpeShowController.ShowSpeShowUIPanel(this,0);
-          fVar8 = (float)Mathf.Min((*(float **)(DAT_181d7deb0 + 184))[1],
-                                    local_res18[0] / **(float **)(DAT_181d7deb0 + 184),0);
+          fVar8 = (float)Mathf.Min((*(float **)(SkillExpShowPrefab_StaticsPtr + 184))[1],
+                                    local_res18[0] / SkillExpShowPrefab.minSpeed,0)
+          ;
           uVar3 = this.skillList;
           this.leftShowTime = fVar8 + 0.5;
           if (*pStatics != 0) {
@@ -1020,7 +1021,7 @@ public class SpeShowController
     // RVA   : 0xC6AC80   Offset: 0xC69480   Length: 0x3A
     private static void /*cctor*/()
     {
-        *(uint32 *)(*(int64 *)(DAT_181d7f230 + 184) + 8) = 0x3f19999a;
+        *(uint32 *)(*(int64 *)(_ShowItemAnim_d__32_StaticsPtr + 184) + 8) = 0x3f19999a;
     }
 
     // Token : 0x600210F

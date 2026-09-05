@@ -94,8 +94,6 @@ public class GridUnitController
     // RVA   : 0x362680   Offset: 0x360E80   Length: 0x4
     public GridRenderType get_GridRenderType()
     {
-        uint32 FUN_180362680(int64 this)
-        {
         return this.gridRenderType;
     }
 
@@ -103,7 +101,7 @@ public class GridUnitController
     // RVA   : 0x8723C0   Offset: 0x870BC0   Length: 0x76E
     public void Refresh()
     {
-        var pStatics = *(int64*)(DAT_181d4f980 + 184);
+        var pGridUnitController = *(int64*)(GridUnitController_StaticsPtr + 184);
         int iVar1;
         ulong uVar2;
         bool cVar4;
@@ -123,7 +121,7 @@ public class GridUnitController
         iVar5 = this.gridRenderType;
         if (iVar5 == 4) {
           lVar8 = this.coverRenderer;
-          lVar7 = pStatics;
+          lVar7 = pGridUnitController;
           if (lVar8 == null) throw; // [null/range check failed]
           uVar11 = *(uint32 *)(lVar7 + 32);
           uVar12 = *(uint32 *)(lVar7 + 36);
@@ -195,14 +193,14 @@ public class GridUnitController
             } while (iVar5 < 4);
             lVar8 = this.coverRenderer;
             if (bVar3) {
-              puVar10 = *(uint32 **)(DAT_181d4f980 + 184);
+              puVar10 = *(uint32 **)(GridUnitController_StaticsPtr + 184);
               uVar11 = *puVar10;
               uVar12 = puVar10[1];
               uVar13 = puVar10[2];
               uVar14 = puVar10[3];
             }
             else {
-              lVar7 = pStatics;
+              lVar7 = pGridUnitController;
               uVar11 = *(uint32 *)(lVar7 + 16);
               uVar12 = *(uint32 *)(lVar7 + 20);
               uVar13 = *(uint32 *)(lVar7 + 24);
@@ -215,14 +213,14 @@ public class GridUnitController
             if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x110) == 0)) throw; // [null/range check failed]
             iVar5 = BattleUnit.GetSkillTargetType(*(int64 *)(lVar7 + 0x110),0);
             if (iVar5 == 0) {
-              lVar7 = pStatics;
+              lVar7 = pGridUnitController;
               uVar11 = *(uint32 *)(lVar7 + 64);
               uVar12 = *(uint32 *)(lVar7 + 68);
               uVar13 = *(uint32 *)(lVar7 + 72);
               uVar14 = *(uint32 *)(lVar7 + 76);
             }
             else {
-              lVar7 = pStatics;
+              lVar7 = pGridUnitController;
               uVar11 = *(uint32 *)(lVar7 + 96);
               uVar12 = *(uint32 *)(lVar7 + 100);
               uVar13 = *(uint32 *)(lVar7 + 104);
@@ -236,14 +234,14 @@ public class GridUnitController
             if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x110) == 0)) throw; // [null/range check failed]
             iVar5 = BattleUnit.GetSkillTargetType(*(int64 *)(lVar7 + 0x110),0);
             if (iVar5 == 0) {
-              lVar7 = pStatics;
+              lVar7 = pGridUnitController;
               uVar11 = *(uint32 *)(lVar7 + 80);
               uVar12 = *(uint32 *)(lVar7 + 84);
               uVar13 = *(uint32 *)(lVar7 + 88);
               uVar14 = *(uint32 *)(lVar7 + 92);
             }
             else {
-              lVar7 = pStatics;
+              lVar7 = pGridUnitController;
               uVar11 = *(uint32 *)(lVar7 + 112);
               uVar12 = *(uint32 *)(lVar7 + 116);
               uVar13 = *(uint32 *)(lVar7 + 120);
@@ -260,7 +258,7 @@ public class GridUnitController
         lVar8 = this.backRenderer;
         if (this.gridData == null) throw; // [null/range check failed]
         if (this.gridData.gridType == 2) {
-          lVar7 = pStatics;
+          lVar7 = pGridUnitController;
           uVar11 = *(uint32 *)(lVar7 + 48);
           uVar12 = *(uint32 *)(lVar7 + 52);
           uVar13 = *(uint32 *)(lVar7 + 56);
@@ -270,7 +268,7 @@ public class GridUnitController
           uVar2 = this.showAttackDirectionRange;
           cVar4 = Object.op_Equality(uVar2,0,0);
           if (!cVar4) {
-            lVar7 = *(int64 *)(pStatics + 176);
+            lVar7 = GridUnitController.AttackDirectionColor;
             if ((((this.showAttackDirectionRange == null) ||
                  (lVar9 = GameObject.GetComponent(this.showAttackDirectionRange,DAT_181d9f7f0),
                  lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
@@ -404,7 +402,8 @@ public class GridUnitController
                   if (this.speGridObj == null) throw; // [null/range check failed]
                   uVar2 = GameObject.get_transform(this.speGridObj,0);
                   uVar2 = ShortcutExtensions.DOLocalMoveZ
-                                    (uVar2,*(uint32 *)(*(int64 *)(DAT_181d8b128 + 184) + 24),
+                                    (uVar2,*(uint32 *)
+                                            (*(int64 *)(PlotController_StaticsPtr + 184) + 24),
                                      0x3e4ccccd,0,0);
                   uVar2 = TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181d98060);
                   uVar2 = TweenSettingsExtensions.SetEase(uVar2,27,DAT_181d97ca8);
@@ -422,7 +421,7 @@ public class GridUnitController
     // RVA   : 0x871DA0   Offset: 0x8705A0   Length: 0x612
     public void RefreshSpeObj()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar2;
         bool cVar3;
         ulong uVar4;
@@ -468,7 +467,7 @@ public class GridUnitController
         local_50 = local_40 / 1.5;
         local_38 = local_48;
         local_30 = local_40;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
           if ((this.gridData == null) ||
              (lVar7 = this.gridData.speGridObjData) == null)
           throw; // [null/range check failed]
@@ -518,8 +517,8 @@ public class GridUnitController
                  (lVar8 = this.gridData.speGridObjData) != null) {
                 if (*(char *)(lVar8 + 60) == false) {
                   if (*(char *)(lVar8 + 61) == false) {
-                    local_38 = *(uint64 *)(pStatics + 28);
-                    fVar11 = *(float *)(pStatics + 36) + 0.0001;
+                    local_38 = *(uint64 *)(pPlotController + 28);
+                    fVar11 = *(float *)(pPlotController + 36) + 0.0001;
                     uVar12 = CONCAT44((float)(local_38 >> 32) + 0.0,(float)local_38 + 0.0);
                     local_30 = fVar11;
                   }
@@ -530,8 +529,8 @@ public class GridUnitController
                   }
                 }
                 else {
-                  uVar12 = *(uint64 *)(pStatics + 16);
-                  fVar11 = *(float *)(pStatics + 24);
+                  uVar12 = *(uint64 *)(pPlotController + 16);
+                  fVar11 = PlotController.CheckHideChoice;
                 }
                 if (lVar7 != null) {
                   local_38 = uVar12;
@@ -596,7 +595,7 @@ public class GridUnitController
     // RVA   : 0x870EF0   Offset: 0x86F6F0   Length: 0x7D8
     public void InitObstacle()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         long lVar2;
         ulong uVar3;
@@ -689,8 +688,8 @@ public class GridUnitController
                   fVar13 = 0.0;
                   local_88 = 0x3f0000003f000000;
                 }
-                local_68 = *(uint64 *)(pStatics + 28);
-                local_60 = *(float *)(pStatics + 36);
+                local_68 = *(uint64 *)(pPlotController + 28);
+                local_60 = *(float *)(pPlotController + 36);
                 local_70 = fVar13 + local_60;
                 local_78 = CONCAT44(local_88._4_4_ + (float)((uint64)local_68 >> 32),
                                     (float)local_88 + (float)local_68);
@@ -742,8 +741,8 @@ public class GridUnitController
                 this.obstacleObj = uVar5;
                 if (this.obstacleObj == null) goto LAB_1808716c3;
                 lVar9 = GameObject.get_transform(this.obstacleObj,0);
-                fVar13 = *(float *)(pStatics + 36);
-                uVar5 = *(uint64 *)(pStatics + 28);
+                fVar13 = *(float *)(pPlotController + 36);
+                uVar5 = *(uint64 *)(pPlotController + 28);
                 puVar8 = (uint64 *)Vector3.get_forward(&local_78,0);
                 local_68 = *puVar8;
                 local_60 = *(float *)(puVar8 + 1);
@@ -885,7 +884,7 @@ public class GridUnitController
                 puVar6 = (uint64 *)Transform.get_localPosition(local_f0,lVar9,0);
                 uVar4 = *puVar6;
                 uVar1 = *(uint32 *)(puVar6 + 1);
-                fVar12 = *(float *)(*(int64 *)(DAT_181d8b128 + 184) + 48);
+                fVar12 = PlotController.LaBaFestivelScoreLvTalkText;
                 lVar7 = GameObject.get_transform(lVar7,0);
                 if (lVar7 == null) throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_localPosition(local_e0,lVar7,0);
@@ -981,8 +980,6 @@ public class GridUnitController
     // RVA   : 0x871870   Offset: 0x870070   Length: 0x7
     public void OnEnter()
     {
-        void FUN_180871870(uint64 this)
-        {
         GridUnitController.PlaySpeObjHitAnim(this,0);
     }
 
@@ -990,8 +987,6 @@ public class GridUnitController
     // RVA   : 0x871870   Offset: 0x870070   Length: 0x7
     public void OnLeave()
     {
-        void FUN_180871870(uint64 this)
-        {
         GridUnitController.PlaySpeObjHitAnim(this,0);
     }
 
@@ -1105,7 +1100,7 @@ public class GridUnitController
     // RVA   : 0x86FD00   Offset: 0x86E500   Length: 0x11E0
     public void HitObstacle(float damage)
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         uint uVar2;
         bool cVar3;
@@ -1139,8 +1134,8 @@ public class GridUnitController
             if (lVar4.mapID == 1) {
               uVar5 = Component.get_gameObject(this,0);
               plVar6 = (int64 *)Resources.Load("SpeEffect/DirtSplash",0);
-              uVar9 = *(uint64 *)(pStatics + 16);
-              uVar2 = *(uint32 *)(pStatics + 24);
+              uVar9 = *(uint64 *)(pPlotController + 16);
+              uVar2 = PlotController.CheckHideChoice;
               plVar12 = plVar13;
               if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d4e110)) {
                 plVar12 = plVar6;
@@ -1315,8 +1310,8 @@ public class GridUnitController
                   if (lVar4.mapID == 1) {
                     uVar5 = Component.get_gameObject(this,0);
                     plVar6 = (int64 *)Resources.Load("SpeEffect/DirtSplash",0);
-                    uVar9 = *(uint64 *)(pStatics + 16);
-                    uVar2 = *(uint32 *)(pStatics + 24);
+                    uVar9 = *(uint64 *)(pPlotController + 16);
+                    uVar2 = PlotController.CheckHideChoice;
                     puVar10 = (uint64 *)Vector3.get_one(local_68,0);
                     local_88 = *puVar10;
                     local_80 = *(float *)(puVar10 + 1);
@@ -1470,8 +1465,9 @@ public class GridUnitController
                       if (this.obstacleObj == null) throw; // [null/range check failed]
                       uVar5 = GameObject.get_transform(this.obstacleObj,0);
                       uVar5 = ShortcutExtensions.DOLocalMoveZ
-                                        (uVar5,*(uint32 *)(pStatics + 48)
-                                         ,fVar16 * 0.2,0,0);
+                                        (uVar5,*(uint32 *)
+                                                (pPlotController + 48),
+                                         fVar16 * 0.2,0,0);
                       uVar5 = TweenSettingsExtensions.SetEase(uVar5,17,DAT_181d97ca8);
                       TweenSettingsExtensions.SetDelay(uVar5,fVar16 * 0.8,DAT_181d97978);
                     }
@@ -1492,11 +1488,11 @@ public class GridUnitController
                         if (lVar4 == null) break;
                         lVar4.gridType = 1;
                         lVar4.passes = 15;
-                        lVar14 = *(int64 *)(pStatics + 80);
+                        lVar14 = PlotController.StopWarCostFavor;
                         if (((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 24)) == null) ||
                            (lVar14 = *(int64 *)(lVar14 + 72)) == null) break;
                         FUN_181801c10(lVar14,lVar4,DAT_181d638f8);
-                        lVar14 = *(int64 *)(pStatics + 80);
+                        lVar14 = PlotController.StopWarCostFavor;
                         if (((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 24)) == null) ||
                            (lVar14 = *(int64 *)(lVar14 + 64)) == null) break;
                         FUN_181827900(lVar14,lVar4,DAT_181d63778);
@@ -1589,16 +1585,15 @@ public class GridUnitController
     // RVA   : 0x873480   Offset: 0x871C80   Length: 0x1B5
     public void SetObstacleDestroyed(GridUnitData targetGrid)
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         long lVar1;
         if (targetGrid != null) {
           *(uint32 *)(targetGrid + 20) = 1;
           *(uint32 *)(targetGrid + 32) = 15;
-          lVar1 = *(int64 *)(pStatics + 80);
+          lVar1 = PlotController.StopWarCostFavor;
           if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 24)) != null) &&
              (lVar1 = *(int64 *)(lVar1 + 72)) != null) {
             FUN_181801c10(lVar1,targetGrid,DAT_181d638f8);
-            lVar1 = *(int64 *)(pStatics + 80);
+            lVar1 = PlotController.StopWarCostFavor;
             if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 24)) != null) &&
                (lVar1 = *(int64 *)(lVar1 + 64)) != null) {
               FUN_181827900(lVar1,targetGrid,DAT_181d63778);
@@ -1619,7 +1614,6 @@ public class GridUnitController
     // RVA   : 0x873D10   Offset: 0x872510   Length: 0xAA9
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         uint uVar1;
         int iVar2;
         bool cVar3;
@@ -1675,11 +1669,11 @@ public class GridUnitController
             goto LAB_180873ffa;
           }
         }
-        lVar7 = *(int64 *)(pStatics + 80);
+        lVar7 = PlotController.StopWarCostFavor;
         if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1e0)) == null) throw; // [null/range check failed]
         cVar3 = FUN_1818279a0(lVar7,this.gridData,DAT_181d63878);
         if (!cVar3) {
-          lVar7 = *(int64 *)(pStatics + 80);
+          lVar7 = PlotController.StopWarCostFavor;
           if (lVar7 == null) throw; // [null/range check failed]
           if (*(int *)(lVar7 + 0x124) == 10) {
             lVar7 = FUN_18046bb80(0);
@@ -1734,7 +1728,7 @@ public class GridUnitController
           if (this.highLightRenderType != 4) {
             this.highLightRenderType = 4;
             lVar7 = this.highlightRenderer;
-            lVar10 = *(int64 *)(DAT_181d4f980 + 184);
+            lVar10 = *(int64 *)(GridUnitController_StaticsPtr + 184);
             if (lVar7 == null) throw; // [null/range check failed]
             local_48 = *(uint32 *)(lVar10 + 32);
             uStack_44 = *(uint32 *)(lVar10 + 36);
@@ -1855,7 +1849,7 @@ public class GridUnitController
     // RVA   : 0x8730D0   Offset: 0x8718D0   Length: 0x3A3
     public void SetHighLightType(HighLightRenderType targetType)
     {
-        var pStatics = *(int64*)(DAT_181d4f980 + 184);
+        var pGridUnitController = *(int64*)(GridUnitController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         uint uVar4;
@@ -1901,7 +1895,7 @@ public class GridUnitController
         }
         if (targetType == 1) {
           lVar2 = this.highlightRenderer;
-          lVar1 = pStatics;
+          lVar1 = pGridUnitController;
           if (lVar2 == null) throw; // [null/range check failed]
           uVar4 = *(uint32 *)(lVar1 + 128);
           uVar5 = *(uint32 *)(lVar1 + 132);
@@ -1931,7 +1925,7 @@ public class GridUnitController
           if (targetType == 2) {
             if (this.highlightRenderer == null) throw; // [null/range check failed]
             lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d6d540);
-            lVar1 = pStatics;
+            lVar1 = pGridUnitController;
             if (lVar2 == null) throw; // [null/range check failed]
             uVar4 = *(uint32 *)(lVar1 + 144);
             uVar5 = *(uint32 *)(lVar1 + 148);
@@ -1944,7 +1938,7 @@ public class GridUnitController
                 return;
               }
               lVar2 = this.highlightRenderer;
-              lVar1 = pStatics;
+              lVar1 = pGridUnitController;
               if (lVar2 == null) throw; // [null/range check failed]
               uVar4 = *(uint32 *)(lVar1 + 32);
               uVar5 = *(uint32 *)(lVar1 + 36);
@@ -1954,7 +1948,7 @@ public class GridUnitController
             }
             if (this.highlightRenderer == null) throw; // [null/range check failed]
             lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d6d540);
-            lVar1 = pStatics;
+            lVar1 = pGridUnitController;
             if (lVar2 == null) throw; // [null/range check failed]
             uVar4 = *(uint32 *)(lVar1 + 160);
             uVar5 = *(uint32 *)(lVar1 + 164);
@@ -1988,7 +1982,7 @@ public class GridUnitController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar1 = PlotController.StopWarCostFavor;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           BattleController.BattleGridClicked(lVar1,uVar2,0);
@@ -2007,7 +2001,7 @@ public class GridUnitController
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar1 = PlotController.StopWarCostFavor;
         if (lVar1 != null) {
           BattleController.OnDrag(lVar1,delta,0);
           return;
@@ -2019,7 +2013,7 @@ public class GridUnitController
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar1 = PlotController.StopWarCostFavor;
         if (lVar1 != null) {
           BattleController.OnScroll(lVar1,delta,0);
           return;
@@ -2037,7 +2031,7 @@ public class GridUnitController
     // RVA   : 0x8747C0   Offset: 0x872FC0   Length: 0x48C
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d4f980 + 184);
+        var pGridUnitController = *(int64*)(GridUnitController_StaticsPtr + 184);
         long lVar1;
         uint local_138;
         uint uStack_134;
@@ -2072,7 +2066,7 @@ public class GridUnitController
         local_128 = 0;
         uStack_120 = 0;
         FUN_1809981e0(&local_128,0,0x3eb4b4b5,0x3eb4b4b5,0x3e99999a,0);
-        puVar2 = *(uint32 **)(DAT_181d4f980 + 184);
+        puVar2 = *(uint32 **)(GridUnitController_StaticsPtr + 184);
         *puVar2 = (uint32)local_128;
         puVar2[1] = local_128._4_4_;
         puVar2[2] = (uint32)uStack_120;
@@ -2080,7 +2074,7 @@ public class GridUnitController
         local_118 = 0;
         uStack_110 = 0;
         FUN_1809981e0(&local_118,0,0x3f5ededf,0x3f800000,0x3e99999a,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 16) = (uint32)local_118;
         *(uint32 *)(lVar1 + 20) = local_118._4_4_;
         *(uint32 *)(lVar1 + 24) = (uint32)uStack_110;
@@ -2088,13 +2082,13 @@ public class GridUnitController
         local_108 = 0;
         uStack_100 = 0;
         FUN_1809981e0(&local_108,0,0x3f5ededf,0x3f800000,0x3f19999a,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint64 *)(lVar1 + 32) = local_108;
         *(uint64 *)(lVar1 + 40) = uStack_100;
         local_f8 = 0;
         uStack_f0 = 0;
         FUN_1809981e0(&local_f8,0x3e4ccccd,0x3e4ccccd,0x3e4ccccd,0x3f000000,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 48) = (uint32)local_f8;
         *(uint32 *)(lVar1 + 52) = local_f8._4_4_;
         *(uint32 *)(lVar1 + 56) = (uint32)uStack_f0;
@@ -2102,7 +2096,7 @@ public class GridUnitController
         local_e8 = 0;
         uStack_e0 = 0;
         FUN_1809981e0(&local_e8,0x3f2aaaab,0,0,0x3ecccccd,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 64) = (uint32)local_e8;
         *(uint32 *)(lVar1 + 68) = local_e8._4_4_;
         *(uint32 *)(lVar1 + 72) = (uint32)uStack_e0;
@@ -2110,7 +2104,7 @@ public class GridUnitController
         local_d8 = 0;
         uStack_d0 = 0;
         FUN_1809981e0(&local_d8,0x3f2aaaab,0,0,0x3f19999a,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 80) = (uint32)local_d8;
         *(uint32 *)(lVar1 + 84) = local_d8._4_4_;
         *(uint32 *)(lVar1 + 88) = (uint32)uStack_d0;
@@ -2118,7 +2112,7 @@ public class GridUnitController
         local_c8 = 0;
         uStack_c0 = 0;
         FUN_1809981e0(&local_c8,0,0x3f2aaaab,0,0x3ecccccd,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 96) = (uint32)local_c8;
         *(uint32 *)(lVar1 + 100) = local_c8._4_4_;
         *(uint32 *)(lVar1 + 104) = (uint32)uStack_c0;
@@ -2126,7 +2120,7 @@ public class GridUnitController
         local_b8 = 0;
         uStack_b0 = 0;
         FUN_1809981e0(&local_b8,0,0x3f2aaaab,0,0x3f19999a,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 112) = (uint32)local_b8;
         *(uint32 *)(lVar1 + 116) = local_b8._4_4_;
         *(uint32 *)(lVar1 + 120) = (uint32)uStack_b0;
@@ -2134,7 +2128,7 @@ public class GridUnitController
         local_a8 = 0;
         uStack_a0 = 0;
         FUN_1809981e0(&local_a8,0x3f64e4e5,0x3f800000,0x3f7afafb,0x3f800000,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 128) = (uint32)local_a8;
         *(uint32 *)(lVar1 + 132) = local_a8._4_4_;
         *(uint32 *)(lVar1 + 136) = (uint32)uStack_a0;
@@ -2142,7 +2136,7 @@ public class GridUnitController
         local_98 = 0;
         uStack_90 = 0;
         FUN_1809981e0(&local_98,0x3f800000,0,0,0x3f800000,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 144) = (uint32)local_98;
         *(uint32 *)(lVar1 + 148) = local_98._4_4_;
         *(uint32 *)(lVar1 + 152) = (uint32)uStack_90;
@@ -2150,7 +2144,7 @@ public class GridUnitController
         local_88 = 0;
         uStack_80 = 0;
         FUN_1809981e0(&local_88,0,0x3f800000,0x3ed8d8d9,0x3f800000,0);
-        lVar1 = pStatics;
+        lVar1 = pGridUnitController;
         *(uint32 *)(lVar1 + 160) = (uint32)local_88;
         *(uint32 *)(lVar1 + 164) = local_88._4_4_;
         *(uint32 *)(lVar1 + 168) = (uint32)uStack_80;
@@ -2180,9 +2174,7 @@ public class GridUnitController
           uStack_130 = (uint32)uStack_60;
           uStack_12c = uStack_60._4_4_;
           FUN_1818059b0(lVar1,&local_138,DAT_181d5b680);
-          plVar3 = (int64 *)(pStatics + 176);
-          *plVar3 = lVar1;
-          il2cpp_internal(plVar3,lVar1);
+          GridUnitController.AttackDirectionColor = lVar1;
           return;
         }
     }

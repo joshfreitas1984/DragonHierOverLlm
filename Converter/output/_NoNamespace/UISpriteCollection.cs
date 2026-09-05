@@ -69,8 +69,6 @@ public class UISpriteCollection
     // RVA   : 0x10FCE70   Offset: 0x10FB670   Length: 0x8
     public override void set_mainTexture(Texture value)
     {
-        void FUN_1810fce70(uint64 this,uint64 value)
-        {
         UIWidget.set_mainTexture(this,value,0);
     }
 
@@ -98,8 +96,6 @@ public class UISpriteCollection
     // RVA   : 0x10FCE80   Offset: 0x10FB680   Length: 0x8
     public override void set_material(Material value)
     {
-        void FUN_1810fce80(uint64 this,uint64 value)
-        {
         UIWidget.set_material(this,value,0);
     }
 
@@ -1786,7 +1782,6 @@ public class UISpriteCollection
     // RVA   : 0x1690E00   Offset: 0x168F600   Length: 0x2B1
     protected void OnHover(bool isOver)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -1794,7 +1789,7 @@ public class UISpriteCollection
         long lVar6;
         if (this.onHover != null) {
           if (!isOver) {
-            uVar1 = *(uint64 *)(pStatics + 0x180);
+            uVar1 = UICamera.onMouseMove;
             uVar4 = new OnTooltipCB(this,DAT_181d9d510,0);
             plVar5 = (int64 *)Delegate.Remove(uVar1,uVar4,0);
             plVar7 = (int64 *)0;
@@ -1807,10 +1802,10 @@ public class UISpriteCollection
                 FUN_1800d6070(plVar5,DAT_181d68290);
               }
             }
-            *(int64 **)(pStatics + 0x180) = plVar7;
+            UICamera.onMouseMove = plVar7;
             return;
           }
-          uVar1 = *(uint64 *)(pStatics + 0x180);
+          uVar1 = UICamera.onMouseMove;
           uVar4 = new OnTooltipCB(this,DAT_181d9d510,0);
           plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4,0);
           plVar7 = (int64 *)0;
@@ -1823,7 +1818,7 @@ public class UISpriteCollection
               FUN_1800d6070(plVar5,DAT_181d68290);
             }
           }
-          *(int64 **)(pStatics + 0x180) = plVar7;
+          UICamera.onMouseMove = plVar7;
           Vector2.get_zero(0);
           cVar3 = Object.op_Implicit(this,0);
           if (!cVar3) {
@@ -1890,8 +1885,6 @@ public class UISpriteCollection
     // RVA   : 0x16904B0   Offset: 0x168ECB0   Length: 0x2E
     protected void OnDrag(Vector2 delta)
     {
-        void FUN_1816904b0(int64 this,uint64 delta)
-        {
         if ((this.onDrag != null) && (this.mLastPress != null)) {
           OnDragCB.Invoke(this.onDrag,this.mLastPress,delta,0);
           return;

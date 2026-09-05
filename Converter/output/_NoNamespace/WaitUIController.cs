@@ -121,7 +121,7 @@ public class WaitUIController
         long lVar1;
         ulong uVar2;
         WaitUIController.RefreshWaitUI(this,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           uVar2 = *(uint64 *)(lVar1 + 0x1f0);
           NGUITools.PlaySound(uVar2,0x3e4ccccd,0);
@@ -179,11 +179,11 @@ public class WaitUIController
                   uVar6 = new OnTooltipCB(this,DAT_181d4e6c0,0);
                   TweenSettingsExtensions.OnComplete(uVar5,uVar6,DAT_181d96ee8);
                   plVar1 = this.waitTimeSlider;
-                  lVar4 = *(int64 *)(*(int64 *)(DAT_181d90b30 + 184) + 8);
+                  lVar4 = PlotController.LeftFaceHideOffset;
                   if (plVar1 != (int64 *)0) {
                     fVar8 = (float)(**(code **)(*plVar1 + 0x418))(plVar1,*(uint64 *)(*plVar1 + 0x420))
                     ;
-                    lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+                    lVar2 = GameController.difficultyExtraPoint;
                     if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                       iVar3 = PlayerPrefDictionary.GetInt(lVar2,"TestMode",0);
                       uVar5 = "等待";

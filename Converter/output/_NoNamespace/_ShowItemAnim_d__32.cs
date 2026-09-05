@@ -40,8 +40,7 @@ public class <ShowItemAnim>d__32
     // RVA   : 0xB13BB0   Offset: 0xB123B0   Length: 0x8A7
     private virtual bool MoveNext()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_f230 = *(int64*)(DAT_181d7f230 + 184);
+        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
         float fVar1;
         float fVar2;
         long lVar3;
@@ -66,7 +65,7 @@ public class <ShowItemAnim>d__32
             fVar11 = this.delayTime;
             this.<CountDelayTime>5__2 = uVar10;
             fVar1 = this.<CountDelayTime>5__2;
-            fVar2 = *(float *)(pStatics_f230 + 8);
+            fVar2 = *(float *)(p_ShowItemAnim_d__32 + 8);
             if ((*(int64 *)(lVar3 + 64) != 0) &&
                (lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0)) != null) {
               iVar4 = Transform.get_childCount(lVar6,0);
@@ -87,9 +86,9 @@ public class <ShowItemAnim>d__32
             iVar4 = 0;
             if (*(char *)(lVar3 + 24) != false) {
               lVar6 = **(int64 **)(DAT_181d5a578 + 184);
-              if (((*pStatics_df90 == 0) ||
-                  (lVar8 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-                 (lVar8 = WorldData.Player(lVar8,0)) == null) throw; // [null/range check failed]
+              if (((GameController._instance == null) ||
+                  (lVar8 = GameController._instance.worldData,
+                  lVar8 == null)) || (lVar8 = WorldData.Player(lVar8,0)) == null) throw; // [null/range check failed]
               uVar7 = HeroData.HeroName(lVar8,0,0);
               if ((*(int64 *)(lVar3 + 56) == 0) ||
                  (lVar8 = *(int64 *)(*(int64 *)(lVar3 + 56) + 48)) == null)
@@ -98,11 +97,11 @@ public class <ShowItemAnim>d__32
               uVar7 = String.Format("{0}获得了 {1}",uVar7,uVar9,0);
               if ((*(int64 *)(lVar3 + 56) == 0) ||
                  ((lVar8 = *(int64 *)(*(int64 *)(lVar3 + 56) + 48), lVar8 == null ||
-                  (lVar8 = *(int64 *)(lVar8 + 40)) == null))) throw; // [null/range check failed]
-              if (*(int *)(lVar8 + 24) == 0) {
+                  (lVar8 = lVar8.forceAreaID) == null))) throw; // [null/range check failed]
+              if (lVar8.cityAreaID == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              lVar8 = *(int64 *)(*(int64 *)(lVar8 + 16) + 32);
+              lVar8 = *(int64 *)(lVar8.chapter + 32);
               if ((lVar8 == null) || (uVar9 = ItemData.GetItemIconName(lVar8,0), lVar6 == null))
               throw; // [null/range check failed]
               local_78 = 0;
@@ -130,8 +129,9 @@ public class <ShowItemAnim>d__32
                  (lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0)) == null) break;
               uVar9 = Transform.GetChild(lVar6,iVar4,0);
               uVar9 = ShortcutExtensions.DOScale
-                                (uVar9,pStatics_f230,
-                                 *(float *)(pStatics_f230 + 8) * 0.2,0);
+                                (uVar9,p_ShowItemAnim_d__32,
+                                 *(float *)(p_ShowItemAnim_d__32 + 8) *
+                                 0.2,0);
               uVar9 = TweenSettingsExtensions.SetEase(uVar9,4,DAT_181d97ca8);
               TweenSettingsExtensions.Append(uVar7,uVar9,0);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
@@ -164,7 +164,7 @@ public class <ShowItemAnim>d__32
               uVar7 = SpeShowController.ShowItemParticle
                                 (lVar3,uVar7,uVar9,
                                  this.<CountDelayTime>5__2 * fVar11 +
-                                 *(float *)(pStatics_f230 + 8),0);
+                                 *(float *)(p_ShowItemAnim_d__32 + 8),0);
               FUN_180d837c0(lVar3,uVar7);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
                  ((((lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0), lVar6 == null ||

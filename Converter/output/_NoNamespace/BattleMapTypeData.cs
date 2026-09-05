@@ -46,12 +46,11 @@ public class BattleMapTypeData
     // RVA   : 0x8DF080   Offset: 0x8DD880   Length: 0xEF
     public float GetTimeMapScaleRate()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         float fVar2;
-        if (((*pStatics != 0) &&
-            (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar1 = *(int64 *)(lVar1 + 168)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar1 = GameController._instance.worldData) != null)
+           && (lVar1 = lVar1.worldTime) != null) {
           fVar2 = (float)TimeData.GetExactYear(lVar1,0);
           fVar2 = (float)Mathf.Max(0,11.0 - fVar2,0);
           return 1.0 - fVar2 * 0.025;

@@ -71,8 +71,6 @@ public class BMSymbol
     // RVA   : 0x20F040   Offset: 0x20D840   Length: 0x4
     public int get_width()
     {
-        uint32 FUN_18020f040(int64 this)
-        {
         return this.mWidth;
     }
 
@@ -80,8 +78,6 @@ public class BMSymbol
     // RVA   : 0x362670   Offset: 0x360E70   Length: 0x4
     public int get_height()
     {
-        uint32 FUN_180362670(int64 this)
-        {
         return this.mHeight;
     }
 
@@ -89,8 +85,6 @@ public class BMSymbol
     // RVA   : 0x362680   Offset: 0x360E80   Length: 0x4
     public int get_advance()
     {
-        uint32 FUN_180362680(int64 this)
-        {
         return this.mAdvance;
     }
 
@@ -98,9 +92,7 @@ public class BMSymbol
     // RVA   : 0x7F8E20   Offset: 0x7F7620   Length: 0xB
     public Rect get_uvRect()
     {
-        uint64 * FUN_1807f8e20(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 76);
         *this = *(uint64 *)(param_2 + 68);
         this[1] = uVar1;

@@ -47,14 +47,13 @@ public class UIAnchor
     // RVA   : 0xA772D0   Offset: 0xA75AD0   Length: 0x13C
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         ulong uVar2;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
         uVar1 = Component.GetComponent(this,DAT_181d6a940);
         this.mAnim = uVar1;
-        uVar1 = *(uint64 *)(pStatics + 72);
+        uVar1 = UICamera.onScreenResize;
         uVar2 = new OnTooltipCB(this,DAT_181d9c740,0);
         plVar3 = (int64 *)Delegate.Combine(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
@@ -67,17 +66,16 @@ public class UIAnchor
             FUN_1800d6070(plVar3,DAT_181d68390);
           }
         }
-        *(int64 **)(pStatics + 72) = plVar4;
+        UICamera.onScreenResize = plVar4;
     }
 
     // Token : 0x60006BB
     // RVA   : 0xA771D0   Offset: 0xA759D0   Length: 0xF9
     private void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         ulong uVar2;
-        uVar1 = *(uint64 *)(pStatics + 72);
+        uVar1 = UICamera.onScreenResize;
         uVar2 = new OnTooltipCB(this,DAT_181d9c740,0);
         plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
@@ -90,15 +88,13 @@ public class UIAnchor
             FUN_1800d6070(plVar3,DAT_181d68390);
           }
         }
-        *(int64 **)(pStatics + 72) = plVar4;
+        UICamera.onScreenResize = plVar4;
     }
 
     // Token : 0x60006BC
     // RVA   : 0xA77410   Offset: 0xA75C10   Length: 0x14
     private void ScreenSizeChanged()
     {
-        void FUN_180a77410(int64 this)
-        {
         if ((this.mStarted) && (this.runOnlyOnce)) {
           UIAnchor.Update(this,0);
           return;

@@ -93,7 +93,8 @@ public class BattleAiMenuController
                                 if (lVar4 != null) {
                                   uVar7 = Transform.Find(lVar4,"BattleAIMenuRoot",0);
                                   ShortcutExtensions.DOScaleX(uVar7,0x3f800000,0x3e4ccccd,0);
-                                  lVar4 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+                                  lVar4 = *(int64 *)
+                                           (*(int64 *)(PlotController_StaticsPtr + 184) + 80);
                                   if (lVar4 != null) {
                                     lVar10 = *(int64 *)(lVar4 + 112);
                                     uVar3 = BattleController.GetPlayerControlTeamID(lVar4,0);

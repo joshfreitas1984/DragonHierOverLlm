@@ -472,8 +472,6 @@ public class NGUIFont
     // RVA   : 0xAFEE80   Offset: 0xAFD680   Length: 0x7
     public bool get_premultipliedAlpha()
     {
-        void FUN_180afee80(uint64 this)
-        {
         NGUIFont.get_premultipliedAlphaShader(this,0);
     }
 

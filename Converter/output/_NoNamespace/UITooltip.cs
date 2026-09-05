@@ -143,7 +143,7 @@ public class UITooltip
         float local_70;
         byte[] local_58 = new byte[80];
         lVar1 = this[8];
-        uVar2 = *(uint64 *)(*(int64 *)(DAT_181d8a458 + 184) + 0x1b0);
+        uVar2 = UICamera.mTooltip;
         cVar4 = Object.op_Inequality(lVar1,uVar2,0);
         if (!cVar4) {
           fVar8 = *(float *)(this + 10);

@@ -60,7 +60,7 @@ public class <>c__DisplayClass300_0
                 StringBuilder.Append(lVar6);
               }
               else {
-                lVar7 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 208);
+                lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 208);
                 uVar4 = FUN_1800d6750(lVar10,iVar11);
                 if ((lVar7 == null) || (uVar1 = String.get_Chars(lVar7,uVar4), lVar6 == null))
                 throw; // [null/range check failed]

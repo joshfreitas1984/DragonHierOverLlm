@@ -143,29 +143,27 @@ public class UIDrawCall
     // RVA   : 0x10E5E20   Offset: 0x10E4620   Length: 0x57
     public static BetterList<UIDrawCall> get_list()
     {
-        return **(uint64 **)(DAT_181d8a758 + 184);
+        return UIDrawCall.mActiveList;
     }
 
     // Token : 0x600046E
     // RVA   : 0x10E5C10   Offset: 0x10E4410   Length: 0x57
     public static BetterList<UIDrawCall> get_activeList()
     {
-        return **(uint64 **)(DAT_181d8a758 + 184);
+        return UIDrawCall.mActiveList;
     }
 
     // Token : 0x600046F
     // RVA   : 0x10E5DB0   Offset: 0x10E45B0   Length: 0x58
     public static BetterList<UIDrawCall> get_inactiveList()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d8a758 + 184) + 8);
+        return UIDrawCall.mInactiveList;
     }
 
     // Token : 0x6000470
     // RVA   : 0x10E5E80   Offset: 0x10E4680   Length: 0x7
     public int get_renderQueue()
     {
-        uint32 FUN_1810e5e80(int64 this)
-        {
         return this.mRenderQueue;
     }
 
@@ -193,8 +191,6 @@ public class UIDrawCall
     // RVA   : 0x10E5F60   Offset: 0x10E4760   Length: 0x7
     public int get_sortingOrder()
     {
-        uint32 FUN_1810e5f60(int64 this)
-        {
         return this.mSortingOrder;
     }
 
@@ -329,8 +325,6 @@ public class UIDrawCall
     // RVA   : 0x27B040   Offset: 0x279840   Length: 0x8
     public Texture get_mainTexture()
     {
-        uint64 FUN_18027b040(int64 this)
-        {
         return this.mTexture;
     }
 
@@ -362,8 +356,6 @@ public class UIDrawCall
     // RVA   : 0x21B010   Offset: 0x219810   Length: 0x8
     public Shader get_shader()
     {
-        uint64 FUN_18021b010(int64 this)
-        {
         return this.mShader;
     }
 
@@ -385,8 +377,6 @@ public class UIDrawCall
     // RVA   : 0x27B030   Offset: 0x279830   Length: 0x7
     public ShadowMode get_shadowMode()
     {
-        uint32 FUN_18027b030(int64 this)
-        {
         return *(uint32 *)(this + 200);
     }
 
@@ -452,8 +442,6 @@ public class UIDrawCall
     // RVA   : 0x10E5E10   Offset: 0x10E4610   Length: 0xB
     public bool get_isClipped()
     {
-        bool FUN_1810e5e10(int64 this)
-        {
         return this.mClipCount != null;
     }
 
@@ -706,7 +694,6 @@ public class UIDrawCall
     // RVA   : 0x10E4B70   Offset: 0x10E3370   Length: 0xC5A
     public void UpdateGeometry(int widgetCount, bool needsBounds)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         int iVar4;
         bool cVar5;
         uint uVar6;
@@ -738,11 +725,11 @@ public class UIDrawCall
             uVar6 = (uVar6 - 1 | 0xfffffffc) + 1;
           }
           if (uVar6 != 0) goto LAB_1810e562b;
-          if (*(int *)(pStatics + 16) == -1) {
+          if (UIDrawCall.mColorSpace == -1) {
             uVar7 = QualitySettings.get_activeColorSpace(0);
-            *(uint32 *)(pStatics + 16) = uVar7;
+            UIDrawCall.mColorSpace = uVar7;
           }
-          if ((*(int *)(pStatics + 16) == 1) &&
+          if ((UIDrawCall.mColorSpace == 1) &&
              (uVar6 = 0, 0 < (int)local_res10[0])) {
             lVar11 = 32;
             do {
@@ -812,7 +799,7 @@ public class UIDrawCall
               }
               if (lVar11 == null) throw; // [null/range check failed]
               Object.set_name(lVar11,uVar9,0);
-              if (*(int *)(pStatics + 48) == 0) {
+              if (UIDrawCall.dx9BugWorkaround == null) {
                 if (*plVar2 == 0) throw; // [null/range check failed]
                 Mesh.MarkDynamic(*plVar2,0);
               }
@@ -1014,7 +1001,6 @@ public class UIDrawCall
     // RVA   : 0x10E3570   Offset: 0x10E1D70   Length: 0x317
     private int[] GenerateCachedIndexBuffer(int vertexCount, int indexCount)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -1024,12 +1010,12 @@ public class UIDrawCall
         uint uVar7;
         uVar6 = 0;
         iVar5 = 0;
-        lVar2 = *(int64 *)(pStatics + 24);
+        lVar2 = UIDrawCall.mCache;
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
           if (0 < iVar1) {
             do {
-              lVar2 = *(int64 *)(pStatics + 24);
+              lVar2 = UIDrawCall.mCache;
               if (lVar2 == null) throw; // [null/range check failed]
               lVar2 = FUN_180002f80(lVar2,iVar5,DAT_181d52888);
               if ((lVar2 != null) && (*(int *)(lVar2 + 24) == indexCount)) {
@@ -1088,14 +1074,14 @@ public class UIDrawCall
               iVar5 = iVar5 + 4;
             } while (iVar1 < vertexCount);
           }
-          lVar3 = *(int64 *)(pStatics + 24);
+          lVar3 = UIDrawCall.mCache;
           if (lVar3 != null) {
             if (10 < *(int *)(lVar3 + 24)) {
-              lVar3 = *(int64 *)(pStatics + 24);
+              lVar3 = UIDrawCall.mCache;
               if (lVar3 == null) throw; // [null/range check failed]
               FUN_18182b220(lVar3,0,DAT_181d52708);
             }
-            lVar3 = *(int64 *)(pStatics + 24);
+            lVar3 = UIDrawCall.mCache;
             if (lVar3 != null) {
               FUN_181827900(lVar3,lVar2,DAT_181d52608);
               return lVar2;
@@ -1279,7 +1265,7 @@ public class UIDrawCall
             fStack_120 = *(float *)(lVar7 + 0x108);
             fStack_11c = *(float *)(lVar7 + 0x10c);
             lVar7 = this.mDynamicMat;
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d8a758 + 184) + 32);
+            lVar3 = UIDrawCall.ClipRange;
             if (lVar3 != null) {
               if (*(int *)(lVar3 + 24) == 0) {
                 uVar6 = il2cpp_internal();
@@ -1316,7 +1302,6 @@ public class UIDrawCall
     // RVA   : 0x10E4890   Offset: 0x10E3090   Length: 0x2DC
     private void SetClipping(int index, Vector4 cr, Vector2 soft, float angle)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         void UIDrawCall.SetClipping
                      (int64 this,uint32 index,float *cr,uint64 soft,float angle)
         {
@@ -1345,7 +1330,7 @@ public class UIDrawCall
         if (0.0 < local_98._4_4_) {
           fVar8 = cr[3] / local_98._4_4_;
         }
-        lVar2 = *(int64 *)(pStatics + 32);
+        lVar2 = UIDrawCall.ClipRange;
         if (lVar2 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -1354,7 +1339,7 @@ public class UIDrawCall
           return;
         }
         lVar2 = this.mDynamicMat;
-        lVar3 = *(int64 *)(pStatics + 32);
+        lVar3 = UIDrawCall.ClipRange;
         if (lVar3 != null) {
           if (*(uint32 *)(lVar3 + 24) <= index) {
             uVar4 = il2cpp_internal();
@@ -1373,7 +1358,7 @@ public class UIDrawCall
             uStack_6c = uStack_90._4_4_;
             Material.SetVector(lVar2,uVar1,&local_78,0);
             lVar2 = this.mDynamicMat;
-            lVar3 = *(int64 *)(pStatics + 40);
+            lVar3 = UIDrawCall.ClipArgs;
             if (lVar3 != null) {
               if (*(uint32 *)(lVar3 + 24) <= index) {
                 uVar4 = il2cpp_internal();
@@ -1403,13 +1388,12 @@ public class UIDrawCall
     // RVA   : 0x10E1DF0   Offset: 0x10E05F0   Length: 0x3E4
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
         long lVar4;
         ulong uVar5;
-        if (*(int *)(pStatics + 48) == -1) {
+        if (UIDrawCall.dx9BugWorkaround == -1) {
           iVar2 = Application.get_platform(0);
           if (iVar2 == 2) {
             iVar2 = FUN_180d9ba50(0);
@@ -1424,9 +1408,9 @@ public class UIDrawCall
         LAB_1810e1f0c:
             uVar3 = 0;
           }
-          *(uint32 *)(pStatics + 48) = uVar3;
+          UIDrawCall.dx9BugWorkaround = uVar3;
         }
-        if (*(int64 *)(pStatics + 32) == 0) {
+        if (UIDrawCall.ClipRange == null) {
           lVar4 = FUN_1800d60b0(DAT_181d7e600,4);
           uVar3 = Shader.PropertyToID("_ClipRange0",0);
           if (lVar4 == null) throw; // [null/range check failed]
@@ -1457,11 +1441,9 @@ public class UIDrawCall
             FUN_1800d65f0(uVar5,0);
           }
           *(uint32 *)(lVar4 + 44) = uVar3;
-          plVar6 = (int64 *)(pStatics + 32);
-          *plVar6 = lVar4;
-          il2cpp_internal(plVar6,lVar4);
+          UIDrawCall.ClipRange = lVar4;
         }
-        if (*(int64 *)(pStatics + 40) != 0) {
+        if (UIDrawCall.ClipArgs != null) {
           return;
         }
         lVar4 = FUN_1800d60b0(DAT_181d7e600,4);
@@ -1490,9 +1472,7 @@ public class UIDrawCall
           uVar3 = Shader.PropertyToID("_ClipArgs3",0);
           if (3 < *(uint32 *)(lVar4 + 24)) {
             *(uint32 *)(lVar4 + 44) = uVar3;
-            plVar6 = (int64 *)(pStatics + 40);
-            *plVar6 = lVar4;
-            il2cpp_internal(plVar6,lVar4);
+            UIDrawCall.ClipArgs = lVar4;
             return;
           }
           uVar5 = il2cpp_internal();
@@ -1505,8 +1485,6 @@ public class UIDrawCall
     // RVA   : 0x10E3D80   Offset: 0x10E2580   Length: 0x8
     private void OnEnable()
     {
-        void FUN_1810e3d80(int64 this)
-        {
         this.mRebuildMat = 1;
     }
 
@@ -1554,21 +1532,21 @@ public class UIDrawCall
     // RVA   : 0x10E2C90   Offset: 0x10E1490   Length: 0x8D
     public static UIDrawCall Create(UIPanel panel, Material mat, Texture tex, Shader shader)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         while( true ) {
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 == null) goto LAB_1810e2fb0;
           if (*(int *)(lVar2 + 24) < 1) break;
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 == null) goto LAB_1810e2fb0;
           lVar2 = FUN_18154e410(lVar2,DAT_181d81798);
           cVar1 = Object.op_Inequality(lVar2,0);
           if (cVar1) {
-            if ((*pStatics != 0) &&
-               (FUN_18154cb60(*pStatics,lVar2,DAT_181d81598), lVar2 != null)) {
+            if ((UIDrawCall.mActiveList != null) &&
+               (FUN_18154cb60(UIDrawCall.mActiveList,lVar2,DAT_181d81598),
+               lVar2 != null)) {
               if (panel != null) {
                 Object.set_name(lVar2,panel,0);
               }
@@ -1585,8 +1563,8 @@ public class UIDrawCall
         Object.DontDestroyOnLoad(lVar2,0);
         if (lVar2 != null) {
           lVar2 = GameObject.AddComponent(lVar2,DAT_181d9dc50);
-          if (*pStatics != 0) {
-            FUN_18154cb60(*pStatics,lVar2,DAT_181d81598);
+          if (UIDrawCall.mActiveList != null) {
+            FUN_18154cb60(UIDrawCall.mActiveList,lVar2,DAT_181d81598);
             return lVar2;
           }
         }
@@ -1597,21 +1575,21 @@ public class UIDrawCall
     // RVA   : 0x10E2FC0   Offset: 0x10E17C0   Length: 0x340
     private static UIDrawCall Create(string name, UIPanel pan, Material mat, Texture tex, Shader shader)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         while( true ) {
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 == null) goto LAB_1810e2fb0;
           if (*(int *)(lVar2 + 24) < 1) break;
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 == null) goto LAB_1810e2fb0;
           lVar2 = FUN_18154e410(lVar2,DAT_181d81798);
           cVar1 = Object.op_Inequality(lVar2,0);
           if (cVar1) {
-            if ((*pStatics != 0) &&
-               (FUN_18154cb60(*pStatics,lVar2,DAT_181d81598), lVar2 != null)) {
+            if ((UIDrawCall.mActiveList != null) &&
+               (FUN_18154cb60(UIDrawCall.mActiveList,lVar2,DAT_181d81598),
+               lVar2 != null)) {
               if (name != null) {
                 Object.set_name(lVar2,name,0);
               }
@@ -1628,8 +1606,8 @@ public class UIDrawCall
         Object.DontDestroyOnLoad(lVar2,0);
         if (lVar2 != null) {
           lVar2 = GameObject.AddComponent(lVar2,DAT_181d9dc50);
-          if (*pStatics != 0) {
-            FUN_18154cb60(*pStatics,lVar2,DAT_181d81598);
+          if (UIDrawCall.mActiveList != null) {
+            FUN_18154cb60(UIDrawCall.mActiveList,lVar2,DAT_181d81598);
             return lVar2;
           }
         }
@@ -1640,21 +1618,21 @@ public class UIDrawCall
     // RVA   : 0x10E2D20   Offset: 0x10E1520   Length: 0x295
     private static UIDrawCall Create(string name)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         while( true ) {
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 == null) goto LAB_1810e2fb0;
           if (*(int *)(lVar2 + 24) < 1) break;
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 == null) goto LAB_1810e2fb0;
           lVar2 = FUN_18154e410(lVar2,DAT_181d81798);
           cVar1 = Object.op_Inequality(lVar2,0);
           if (cVar1) {
-            if ((*pStatics != 0) &&
-               (FUN_18154cb60(*pStatics,lVar2,DAT_181d81598), lVar2 != null)) {
+            if ((UIDrawCall.mActiveList != null) &&
+               (FUN_18154cb60(UIDrawCall.mActiveList,lVar2,DAT_181d81598),
+               lVar2 != null)) {
               if (name != null) {
                 Object.set_name(lVar2,name,0);
               }
@@ -1671,8 +1649,8 @@ public class UIDrawCall
         Object.DontDestroyOnLoad(lVar2,0);
         if (lVar2 != null) {
           lVar2 = GameObject.AddComponent(lVar2,DAT_181d9dc50);
-          if (*pStatics != 0) {
-            FUN_18154cb60(*pStatics,lVar2,DAT_181d81598);
+          if (UIDrawCall.mActiveList != null) {
+            FUN_18154cb60(UIDrawCall.mActiveList,lVar2,DAT_181d81598);
             return lVar2;
           }
         }
@@ -1683,7 +1661,6 @@ public class UIDrawCall
     // RVA   : 0x10E21E0   Offset: 0x10E09E0   Length: 0x201
     public static void ClearAll()
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         long lVar1;
         bool cVar2;
         bool cVar3;
@@ -1691,12 +1668,12 @@ public class UIDrawCall
         uint uVar5;
         ulong uVar6;
         cVar2 = Application.get_isPlaying(0);
-        if (*pStatics != 0) {
-          uVar5 = *(uint32 *)(*pStatics + 24);
+        if (UIDrawCall.mActiveList != null) {
+          uVar5 = UIDrawCall.mActiveList.widgetCount;
           while (0 < (int)uVar5) {
             uVar6 = (uint64)uVar5;
-            if (*pStatics == 0) throw; // [null/range check failed]
-            lVar1 = *(int64 *)(*pStatics + 16);
+            if (UIDrawCall.mActiveList == null) throw; // [null/range check failed]
+            lVar1 = *(int64 *)(UIDrawCall.mActiveList + 16);
             uVar5 = uVar5 - 1;
             if (lVar1 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar1 + 24) <= uVar5) {
@@ -1717,8 +1694,8 @@ public class UIDrawCall
               }
             }
           }
-          if (*pStatics != 0) {
-            BetterList_1.Clear(*pStatics,DAT_181d81618);
+          if (UIDrawCall.mActiveList != null) {
+            BetterList_1.Clear(UIDrawCall.mActiveList,DAT_181d81618);
             return;
           }
         }
@@ -1736,18 +1713,17 @@ public class UIDrawCall
     // RVA   : 0x10E46C0   Offset: 0x10E2EC0   Length: 0x1CC
     public static void ReleaseInactive()
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         uint uVar4;
         ulong uVar5;
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = UIDrawCall.mInactiveList;
         if (lVar1 != null) {
           uVar4 = *(uint32 *)(lVar1 + 24);
           while (0 < (int)uVar4) {
             uVar5 = (uint64)uVar4;
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = UIDrawCall.mInactiveList;
             if (lVar1 == null) throw; // [null/range check failed]
             lVar1 = *(int64 *)(lVar1 + 16);
             uVar4 = uVar4 - 1;
@@ -1765,7 +1741,7 @@ public class UIDrawCall
               NGUITools.DestroyImmediate(uVar3);
             }
           }
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = UIDrawCall.mInactiveList;
           if (lVar1 != null) {
             BetterList_1.Clear(lVar1,DAT_181d81618);
             return;
@@ -1777,7 +1753,6 @@ public class UIDrawCall
     // RVA   : 0x10E23F0   Offset: 0x10E0BF0   Length: 0x142
     public static int Count(UIPanel panel)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1786,12 +1761,13 @@ public class UIDrawCall
         iVar5 = 0;
         uVar4 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= (int)uVar4) {
+          if (UIDrawCall.mActiveList == null) break;
+          if (UIDrawCall.mActiveList.widgetCount <= (int)uVar4) {
             return iVar5;
           }
-          if ((*pStatics == 0) ||
-             (lVar1 = *(int64 *)(*pStatics + 16)) == null) break;
+          if ((UIDrawCall.mActiveList == null) ||
+             (lVar1 = *(int64 *)(UIDrawCall.mActiveList + 16)) == null)
+          break;
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -1812,7 +1788,6 @@ public class UIDrawCall
     // RVA   : 0x10E3310   Offset: 0x10E1B10   Length: 0x25F
     public static void Destroy(UIDrawCall dc)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1829,22 +1804,22 @@ public class UIDrawCall
           *(uint64 *)(dc + 224) = 0;
           cVar2 = Application.get_isPlaying(0);
           if (!cVar2) {
-            if (*pStatics != 0) {
-              FUN_18154eb70(*pStatics,dc,DAT_181d81818);
+            if (UIDrawCall.mActiveList != null) {
+              FUN_18154eb70(UIDrawCall.mActiveList,dc,DAT_181d81818);
               uVar3 = Component.get_gameObject(dc,0);
               NGUITools.DestroyImmediate(uVar3,0);
               return;
             }
           }
           else {
-            if (*pStatics != 0) {
-              cVar2 = FUN_18154eb70(*pStatics,dc,DAT_181d81818);
+            if (UIDrawCall.mActiveList != null) {
+              cVar2 = FUN_18154eb70(UIDrawCall.mActiveList,dc,DAT_181d81818);
               if (!cVar2) {
                 return;
               }
               uVar3 = Component.get_gameObject(dc,0);
               NGUITools.SetActive(uVar3,0,0);
-              lVar1 = *(int64 *)(pStatics + 8);
+              lVar1 = UIDrawCall.mInactiveList;
               if (lVar1 != null) {
                 FUN_18154cb60(lVar1,dc,DAT_181d81598);
                 *(uint8 *)(dc + 218) = 1;
@@ -1859,13 +1834,13 @@ public class UIDrawCall
     // RVA   : 0x10E3890   Offset: 0x10E2090   Length: 0x30F
     public static void MoveToScene(Scene scene)
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
-        if (*pStatics != 0) {
-          lVar2 = OrderedEnumerable_1.GetEnumerator(*pStatics,DAT_181d81718);
+        if (UIDrawCall.mActiveList != null) {
+          lVar2 = OrderedEnumerable_1.GetEnumerator
+                            (UIDrawCall.mActiveList,DAT_181d81718);
           while( true ) {
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
@@ -1882,7 +1857,7 @@ public class UIDrawCall
             SceneManager.MoveGameObjectToScene(uVar4,scene,0);
           }
           FUN_180002970(0,DAT_181d53c70,lVar2);
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 != null) {
             lVar2 = OrderedEnumerable_1.GetEnumerator(lVar2,DAT_181d81718);
             while( true ) {
@@ -1941,28 +1916,19 @@ public class UIDrawCall
     // RVA   : 0x10E58D0   Offset: 0x10E40D0   Length: 0x16E
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8a758 + 184);
         ulong uVar1;
         uVar1 = new BetterList_1(DAT_181d81518);
-        puVar2 = *(uint64 **)(DAT_181d8a758 + 184);
+        puVar2 = *(uint64 **)(UIDrawCall_StaticsPtr + 184);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
         uVar1 = new BetterList_1(DAT_181d81518);
-        puVar2 = (uint64 *)(pStatics + 8);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
-        *(uint32 *)(pStatics + 16) = 0xffffffff;
+        UIDrawCall.mInactiveList = uVar1;
+        UIDrawCall.mColorSpace = 0xffffffff;
         uVar1 = new List_1(10,DAT_181d52588);
-        puVar2 = (uint64 *)(pStatics + 24);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
-        puVar2 = (uint64 *)(pStatics + 32);
-        *puVar2 = 0;
-        il2cpp_internal(puVar2,0);
-        puVar2 = (uint64 *)(pStatics + 40);
-        *puVar2 = 0;
-        il2cpp_internal(puVar2,0);
-        *(uint32 *)(pStatics + 48) = 0xffffffff;
+        UIDrawCall.mCache = uVar1;
+        UIDrawCall.ClipRange = 0;
+        UIDrawCall.ClipArgs = 0;
+        UIDrawCall.dx9BugWorkaround = 0xffffffff;
     }
 
 }

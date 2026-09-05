@@ -36,7 +36,7 @@ public class <>c__DisplayClass98_0
         ulong local_res20;
         local_res18[0] = false;
         uVar8 = 0;
-        uVar1 = *(uint64 *)(*(int64 *)(DAT_181d4df90 + 184) + 32);
+        uVar1 = GameController.lockObj;
         local_res20 = uVar1;
         Monitor.Enter(uVar1,local_res18,0);
         if (this.<>4__this == 0) {

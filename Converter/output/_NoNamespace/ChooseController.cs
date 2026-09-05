@@ -158,8 +158,7 @@ public class ChooseController
     // RVA   : 0x9F5C00   Offset: 0x9F4400   Length: 0x15A
     public void ShowChoosePanel(ChooseType _chooseType, List<HeroData> param, GameObject _sendResultFucTarget, string _sendResultFuc, string _sendResultParam, ChooseFilterType _filterType, string _cancelFuc)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void ChooseController.ShowChoosePanel
                      (int64 this,uint32 _chooseType,int64 param,uint64 _sendResultFucTarget,
                      uint64 _sendResultFuc,uint64 _sendResultParam,int _filterType,int64 _cancelFuc,uint64 param_9
@@ -377,8 +376,14 @@ public class ChooseController
                                                 while( true ) {
                                                   iVar4 = (int)plVar6;
                                                   local_134 = iVar4;
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = *(int64 *)
-                                                           (pStatics_ef00 + 0x4f0);
+                                                           (*(int64 *)
+                                                             (PlotController_StaticsPtr + 184) + 0x4f0);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   plVar6 = plVar16;
                                                   if (lVar7.summonLv <= iVar4) goto LAB_1809f9f43;
@@ -551,11 +556,22 @@ public class ChooseController
                                                 local_128[0] = *puVar11;
                                                 switch(local_128[0]) {
                                                 case 0xffffff97:
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init(GameController_StaticsPtr);
+                                                  }
                                                   local_120 = *(uint64 **)
-                                                               (*(int64 *)(DAT_181d4e010 + 184) + 24
+                                                               (*(int64 *)
+                                                                 (GameController_StaticsPtr + 184) + 24
                                                                );
                                                   break;
                                                 case 0xffffff98:
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c0a0(0);
                                                   if ((lVar7 == null) || (lVar7.summonControlable == null))
                                                   throw; // [null/range check failed]
@@ -563,6 +579,11 @@ public class ChooseController
                                                                (lVar7.summonControlable + 0x218);
                                                   break;
                                                 case 0xffffff99:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c440(0);
                                                   if (((lVar7 == null) || (lVar7.expLivingSkill == null)
                                                       ) || ((lVar7 = AreaBuildingData.GetArea
@@ -574,6 +595,11 @@ public class ChooseController
                                                   local_120 = lVar7.thisMonthContribution;
                                                   break;
                                                 case 0xffffff9a:
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c0a0(0);
                                                   if (((lVar7 == null) || (lVar7.summonControlable == null))
                                                      || (lVar7 = *(int64 *)
@@ -582,9 +608,20 @@ public class ChooseController
                                                   local_120 = lVar7.summonLv;
                                                   break;
                                                 case 0xffffff9b:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046bca0(0);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   if (lVar7.summonLv == null) {
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar7 = FUN_18046c440(0);
                                                     if ((lVar7 == null) ||
                                                        (lVar7.expLivingSkill == null))
@@ -593,6 +630,12 @@ public class ChooseController
                                                                  (lVar7.expLivingSkill + 40);
                                                   }
                                                   else {
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar7 = FUN_18046bca0(0);
                                                     if ((lVar7 == null) || (lVar7.summonLv == null)
                                                        ) throw; // [null/range check failed]
@@ -601,6 +644,11 @@ public class ChooseController
                                                   }
                                                   break;
                                                 case 0xffffff9c:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c440(0);
                                                   if ((lVar7 == null) || (lVar7.forceJobCD == null))
                                                   throw; // [null/range check failed]
@@ -608,6 +656,11 @@ public class ChooseController
                                                                (lVar7.forceJobCD + 128);
                                                   break;
                                                 case 0xffffff9d:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c440(0);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   local_120 = lVar7.changeSkinCd;
@@ -626,8 +679,15 @@ public class ChooseController
                                                     while( true ) {
                                                       iVar4 = (int)plVar6;
                                                       local_138 = iVar4;
+                                                      if (((*(byte *)(PlotController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(PlotController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init();
+                                                      }
                                                       lVar7 = *(int64 *)
-                                                               (pStatics_ef00 +
+                                                               (*(int64 *)
+                                                                 (PlotController_StaticsPtr + 184) +
                                                                0x4e8);
                                                       if (lVar7 == null) throw; // [null/range check failed]
                                                       plVar6 = plVar16;
@@ -886,7 +946,7 @@ public class ChooseController
         LAB_1809f9f43:
         iVar4 = (int)plVar6;
         local_12c = iVar4;
-        lVar7 = *(int64 *)(pStatics_ef00 + 0x498);
+        lVar7 = *(int64 *)(pPlotController + 0x498);
         if (lVar7 == null) throw; // [null/range check failed]
         if (lVar7.summonLv <= iVar4) {
           lVar7 = this.targetHero;
@@ -1753,9 +1813,9 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_1809f94e0;
         LAB_1809f95e0:
-        if ((((*pStatics_df90 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-            (lVar7 = WorldData.Player(lVar7,0)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null
+             ) || (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
         if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_1809f985f;
@@ -2053,9 +2113,9 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_1809f8800;
         LAB_1809f8990:
-        if ((((*pStatics_df90 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-            (lVar7 = WorldData.Player(lVar7,0)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null
+             ) || (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
         if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_1809f985f;
@@ -2104,7 +2164,7 @@ public class ChooseController
         LAB_1809f7169:
         iVar4 = (int)plVar6;
         local_130 = iVar4;
-        lVar7 = *(int64 *)(pStatics_ef00 + 0x4c8);
+        lVar7 = *(int64 *)(pPlotController + 0x4c8);
         if (lVar7 == null) throw; // [null/range check failed]
         if (iVar4 < lVar7.summonLv) {
           if (local_res8 == 0) {
@@ -2151,8 +2211,7 @@ public class ChooseController
     // RVA   : 0x9F5D60   Offset: 0x9F4560   Length: 0x92C
     public void ShowChoosePanel(ChooseType _chooseType, List<object> param, GameObject _sendResultFucTarget, string _sendResultFuc, string _sendResultParam, ChooseFilterType _filterType, HeroData targetFavorHero, string _cancelFuc)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void ChooseController.ShowChoosePanel
                      (int64 this,uint32 _chooseType,int64 param,uint64 _sendResultFucTarget,
                      uint64 _sendResultFuc,uint64 _sendResultParam,int _filterType,int64 targetFavorHero,uint64 _cancelFuc
@@ -2370,8 +2429,14 @@ public class ChooseController
                                                 while( true ) {
                                                   iVar4 = (int)plVar6;
                                                   local_134 = iVar4;
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = *(int64 *)
-                                                           (pStatics_ef00 + 0x4f0);
+                                                           (*(int64 *)
+                                                             (PlotController_StaticsPtr + 184) + 0x4f0);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   plVar6 = plVar16;
                                                   if (lVar7.summonLv <= iVar4) goto LAB_1809f9f43;
@@ -2544,11 +2609,22 @@ public class ChooseController
                                                 local_128[0] = *puVar11;
                                                 switch(local_128[0]) {
                                                 case 0xffffff97:
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init(GameController_StaticsPtr);
+                                                  }
                                                   local_120 = *(uint64 **)
-                                                               (*(int64 *)(DAT_181d4e010 + 184) + 24
+                                                               (*(int64 *)
+                                                                 (GameController_StaticsPtr + 184) + 24
                                                                );
                                                   break;
                                                 case 0xffffff98:
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c0a0(0);
                                                   if ((lVar7 == null) || (lVar7.summonControlable == null))
                                                   throw; // [null/range check failed]
@@ -2556,6 +2632,11 @@ public class ChooseController
                                                                (lVar7.summonControlable + 0x218);
                                                   break;
                                                 case 0xffffff99:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c440(0);
                                                   if (((lVar7 == null) || (lVar7.expLivingSkill == null)
                                                       ) || ((lVar7 = AreaBuildingData.GetArea
@@ -2567,6 +2648,11 @@ public class ChooseController
                                                   local_120 = lVar7.thisMonthContribution;
                                                   break;
                                                 case 0xffffff9a:
+                                                  if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c0a0(0);
                                                   if (((lVar7 == null) || (lVar7.summonControlable == null))
                                                      || (lVar7 = *(int64 *)
@@ -2575,9 +2661,20 @@ public class ChooseController
                                                   local_120 = lVar7.summonLv;
                                                   break;
                                                 case 0xffffff9b:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046bca0(0);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   if (lVar7.summonLv == null) {
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar7 = FUN_18046c440(0);
                                                     if ((lVar7 == null) ||
                                                        (lVar7.expLivingSkill == null))
@@ -2586,6 +2683,12 @@ public class ChooseController
                                                                  (lVar7.expLivingSkill + 40);
                                                   }
                                                   else {
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar7 = FUN_18046bca0(0);
                                                     if ((lVar7 == null) || (lVar7.summonLv == null)
                                                        ) throw; // [null/range check failed]
@@ -2594,6 +2697,11 @@ public class ChooseController
                                                   }
                                                   break;
                                                 case 0xffffff9c:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c440(0);
                                                   if ((lVar7 == null) || (lVar7.forceJobCD == null))
                                                   throw; // [null/range check failed]
@@ -2601,6 +2709,11 @@ public class ChooseController
                                                                (lVar7.forceJobCD + 128);
                                                   break;
                                                 case 0xffffff9d:
+                                                  if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4)
+                                                       != 0) &&
+                                                     (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                                    il2cpp_runtime_class_init();
+                                                  }
                                                   lVar7 = FUN_18046c440(0);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   local_120 = lVar7.changeSkinCd;
@@ -2619,8 +2732,15 @@ public class ChooseController
                                                     while( true ) {
                                                       iVar4 = (int)plVar6;
                                                       local_138 = iVar4;
+                                                      if (((*(byte *)(PlotController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(PlotController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init();
+                                                      }
                                                       lVar7 = *(int64 *)
-                                                               (pStatics_ef00 +
+                                                               (*(int64 *)
+                                                                 (PlotController_StaticsPtr + 184) +
                                                                0x4e8);
                                                       if (lVar7 == null) throw; // [null/range check failed]
                                                       plVar6 = plVar16;
@@ -2879,7 +2999,7 @@ public class ChooseController
         LAB_1809f9f43:
         iVar4 = (int)plVar6;
         local_12c = iVar4;
-        lVar7 = *(int64 *)(pStatics_ef00 + 0x498);
+        lVar7 = *(int64 *)(pPlotController + 0x498);
         if (lVar7 == null) throw; // [null/range check failed]
         if (lVar7.summonLv <= iVar4) {
           lVar7 = this.targetHero;
@@ -3746,9 +3866,9 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_1809f94e0;
         LAB_1809f95e0:
-        if ((((*pStatics_df90 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-            (lVar7 = WorldData.Player(lVar7,0)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null
+             ) || (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
         if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_1809f985f;
@@ -4046,9 +4166,9 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_1809f8800;
         LAB_1809f8990:
-        if ((((*pStatics_df90 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-            (lVar7 = WorldData.Player(lVar7,0)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null
+             ) || (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
         if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_1809f985f;
@@ -4097,7 +4217,7 @@ public class ChooseController
         LAB_1809f7169:
         iVar4 = (int)plVar6;
         local_130 = iVar4;
-        lVar7 = *(int64 *)(pStatics_ef00 + 0x4c8);
+        lVar7 = *(int64 *)(pPlotController + 0x4c8);
         if (lVar7 == null) throw; // [null/range check failed]
         if (iVar4 < lVar7.summonLv) {
           if (local_res8 == 0) {

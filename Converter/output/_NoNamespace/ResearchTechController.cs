@@ -23,7 +23,7 @@ public class ResearchTechController
         uint uStack_10;
         uint32 uStack_c;
         lVar2 = this.targetLvData;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d77350 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(ResearchTechController_StaticsPtr + 184) + 8);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 48)) != null) {
           lVar1 = ForceData.GetNowResearchTech(lVar1,0);
           if ((lVar2 == lVar1) && (this.targetLvData != null)) {
@@ -212,13 +212,13 @@ public class ResearchTechController
         long lVar3;
         ulong uVar4;
         long lVar6;
-        lVar6 = *(int64 *)(*(int64 *)(DAT_181d77350 + 184) + 8);
+        lVar6 = *(int64 *)(*(int64 *)(ResearchTechController_StaticsPtr + 184) + 8);
         if (lVar6 != null) {
-          iVar1 = *(int *)(lVar6 + 24);
+          iVar1 = lVar6.TestBuildPlayer;
           if (iVar1 == 0) {
-            lVar6 = **(int64 **)(DAT_181d4df90 + 184);
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3d0);
-            uVar2 = **(uint32 **)(DAT_181d77350 + 184);
+            lVar6 = GameController._instance;
+            lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3d0);
+            uVar2 = **(uint32 **)(ResearchTechController_StaticsPtr + 184);
             if (lVar3 != null) {
               if (*(uint32 *)(lVar3 + 24) <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);

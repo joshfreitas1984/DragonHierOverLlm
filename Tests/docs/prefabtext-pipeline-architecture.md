@@ -35,8 +35,9 @@ similar flat-list dumper can reuse this as-is):
   ```
   A line falls back to `Result = Text` (untranslated) if it has no usable translation yet
   (`Translated` empty, `FlaggedForRetranslation`, or `!SafeToTranslate`) — so the output always has
-  one entry per dumped string, never a missing key. Runtime lookup (a future `DragonHeirPlugin`
-  patch) is expected to key off exact `raw` string match.
+  one entry per dumped string, never a missing key. `DragonHeirPlugin/PrefabTextPatches.cs`
+  loads these files and applies exact `raw` string matches at resource, asset-bundle, scene-load,
+  and TMP/UI text-setter hooks.
 - **Bug fixed (2026-08-27): a failed split was invisible in `PackageFinalTranslationAsync`'s
   printed `Passed`/`Failed` totals for `PrefabText`/`DynamicStringsIL2CPP` files.** The
   reconstruction fallback-to-raw logic itself was always correct (a flagged/unsafe/untranslated

@@ -85,8 +85,6 @@ public class WindowDragTilt
     // RVA   : 0x9E7470   Offset: 0x9E5C70   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1809e7470(int64 this)
-        {
         this.degrees = 0x41f00000;
         FUN_18044ef50(this,0);
     }

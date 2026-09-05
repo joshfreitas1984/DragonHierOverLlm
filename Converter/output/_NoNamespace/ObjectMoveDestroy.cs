@@ -401,8 +401,6 @@ public class ObjectMoveDestroy
     // RVA   : 0x46D990   Offset: 0x46C190   Length: 0x19
     public void /*ctor*/()
     {
-        void FUN_18046d990(int64 this)
-        {
         this.maxTime = 0x3f800000;
         this.MoveSpeed = 0x41200000;
         this.isHitMake = 1;

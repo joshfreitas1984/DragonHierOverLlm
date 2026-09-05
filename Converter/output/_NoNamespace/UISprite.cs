@@ -54,8 +54,6 @@ public class UISprite
     // RVA   : 0x10FCE70   Offset: 0x10FB670   Length: 0x8
     public override void set_mainTexture(Texture value)
     {
-        void FUN_1810fce70(uint64 this,uint64 value)
-        {
         UIWidget.set_mainTexture(this,value,0);
     }
 
@@ -83,8 +81,6 @@ public class UISprite
     // RVA   : 0x10FCE80   Offset: 0x10FB680   Length: 0x8
     public override void set_material(Material value)
     {
-        void FUN_1810fce80(uint64 this,uint64 value)
-        {
         UIWidget.set_material(this,value,0);
     }
 
@@ -152,8 +148,6 @@ public class UISprite
     // RVA   : 0x1693010   Offset: 0x1691810   Length: 0x8
     public bool get_fixedAspect()
     {
-        uint8 FUN_181693010(int64 this)
-        {
         return this.mFixedAspect;
     }
 
@@ -201,8 +195,6 @@ public class UISprite
     // RVA   : 0x111E430   Offset: 0x111CC30   Length: 0x8
     public string get_spriteName()
     {
-        uint64 FUN_18111e430(int64 this)
-        {
         return this.mSpriteName;
     }
 
@@ -248,8 +240,6 @@ public class UISprite
     // RVA   : 0x1693000   Offset: 0x1691800   Length: 0xB
     public bool get_fillCenter()
     {
-        bool FUN_181693000(int64 this)
-        {
         return *(int *)(this + 0x1e0) != 0;
     }
 
@@ -257,8 +247,6 @@ public class UISprite
     // RVA   : 0x1693890   Offset: 0x1692090   Length: 0x2D
     public void set_fillCenter(bool value)
     {
-        void FUN_181693890(int64 *this,byte value)
-        {
         if ((uint32)value != (uint32)((int)this[60] != 0)) {
           *(uint32 *)(this + 60) = (uint32)value;
                           // WARNING: Could not recover jumptable at 0x0001816938b5. Too many branches
@@ -272,8 +260,6 @@ public class UISprite
     // RVA   : 0x16929E0   Offset: 0x16911E0   Length: 0x8
     public bool get_applyGradient()
     {
-        uint8 FUN_1816929e0(int64 this)
-        {
         return *(uint8 *)(this + 0x19c);
     }
 
@@ -281,8 +267,6 @@ public class UISprite
     // RVA   : 0x1693650   Offset: 0x1691E50   Length: 0x20
     public void set_applyGradient(bool value)
     {
-        void FUN_181693650(int64 *this,char value)
-        {
         if (*(char *)((int64)this + 0x19c) != value) {
           *(char *)((int64)this + 0x19c) = value;
                           // WARNING: Could not recover jumptable at 0x000181693668. Too many branches
@@ -296,9 +280,7 @@ public class UISprite
     // RVA   : 0x1693030   Offset: 0x1691830   Length: 0xE
     public Color get_gradientTop()
     {
-        uint64 * FUN_181693030(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1a8);
         *this = *(uint64 *)(param_2 + 0x1a0);
         this[1] = uVar1;
@@ -344,9 +326,7 @@ public class UISprite
     // RVA   : 0x1693020   Offset: 0x1691820   Length: 0xE
     public Color get_gradientBottom()
     {
-        uint64 * FUN_181693020(uint64 *this,int64 param_2)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1b8);
         *this = *(uint64 *)(param_2 + 0x1b0);
         this[1] = uVar1;
@@ -775,8 +755,6 @@ public class UISprite
     // RVA   : 0x16926C0   Offset: 0x1690EC0   Length: 0x21
     protected override void OnInit()
     {
-        void FUN_1816926c0(int64 this)
-        {
         if (!this.mFillCenter) {
           this.mFillCenter = 1;
           *(uint32 *)(this + 0x1e0) = 0;

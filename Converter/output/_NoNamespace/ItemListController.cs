@@ -2065,15 +2065,14 @@ public class ItemListController
     // RVA   : 0xB7B550   Offset: 0xB79D50   Length: 0x15E
     public void ChangeSortType()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         if (this.sortTypeDropDown != null) {
           this.itemSortType = *(uint32 *)(this.sortTypeDropDown + 0x120);
           if (this.recordSortType) {
-            if ((*pStatics == 0) ||
-               (lVar1 = *(int64 *)(*pStatics + 32)) == null)
-            throw; // [null/range check failed]
-            *(uint32 *)(lVar1 + 0x250) = this.itemSortType;
+            if ((GameController._instance == null) ||
+               (lVar1 = GameController._instance.worldData,
+               lVar1 == null)) throw; // [null/range check failed]
+            lVar1.itemSortType = this.itemSortType;
           }
           ItemListController.ResetSortType(this,0);
           plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
@@ -2090,7 +2089,6 @@ public class ItemListController
     // RVA   : 0xB7B310   Offset: 0xB79B10   Length: 0x23E
     public void ChangeReverseType(GameObject buttonClicked)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         int iVar4;
@@ -2099,10 +2097,10 @@ public class ItemListController
         uint local_10;
         this.reverseOrder = !this.reverseOrder;
         if (this.recordSortType) {
-          if ((*pStatics == 0) ||
-             (lVar1 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
-          *(uint8 *)(lVar1 + 0x254) = this.reverseOrder;
+          if ((GameController._instance == null) ||
+             (lVar1 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
+          lVar1.itemReverseOrder = this.reverseOrder;
         }
         if (buttonClicked != null) {
           lVar1 = GameObject.get_transform(buttonClicked,0);
@@ -2122,7 +2120,7 @@ public class ItemListController
               uVar2 = "降序";
             }
             if (lVar1 != null) {
-              *(uint64 *)(lVar1 + 24) = uVar2;
+              lVar1.cityAreaID = uVar2;
               ItemListController.ResetSortType(this,0);
               plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
               plVar5 = (int64 *)0;

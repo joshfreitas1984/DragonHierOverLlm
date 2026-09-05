@@ -48,8 +48,6 @@ public class SpringPanel
     // RVA   : 0xC6EBA0   Offset: 0xC6D3A0   Length: 0x11
     private void Update()
     {
-        void FUN_180c6eba0(int64 *this)
-        {
                           // WARNING: Could not recover jumptable at 0x000180c6ebaa. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));

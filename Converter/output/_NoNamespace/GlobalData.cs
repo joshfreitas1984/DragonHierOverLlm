@@ -714,7 +714,7 @@ public class GlobalData
     public static char GetChineseNumText(int id)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 216);
+        lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 216);
         if (lVar1 != null) {
           String.get_Chars(lVar1,(int64)id % (int64)*(int *)(lVar1 + 16) & 0xffffffff,0);
           return;
@@ -726,7 +726,7 @@ public class GlobalData
     public static string GetInjuryIconName(int id)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3b0);
+        lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b0);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= id) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -739,11 +739,11 @@ public class GlobalData
     // RVA   : 0xA35A40   Offset: 0xA34240   Length: 0x110
     public static int GetAttriLv(float targetNum)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         long lVar2;
         int iVar3;
-        lVar2 = *(int64 *)(pStatics + 0x560);
+        lVar2 = *(int64 *)(pPlotController + 0x560);
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
           while( true ) {
@@ -751,7 +751,7 @@ public class GlobalData
             if (iVar1 < 0) {
               return 0;
             }
-            lVar2 = *(int64 *)(pStatics + 0x560);
+            lVar2 = *(int64 *)(pPlotController + 0x560);
             if (lVar2 == null) break;
             iVar3 = FUN_1800d6750(lVar2,iVar1,DAT_181d68270);
             if ((float)iVar3 <= targetNum) {
@@ -768,7 +768,7 @@ public class GlobalData
         long lVar1;
         uint uVar2;
         if (favor != -999999.0) {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x660);
+          lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x660);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -786,7 +786,7 @@ public class GlobalData
     // RVA   : 0xA37220   Offset: 0xA35A20   Length: 0x214
     public static string GetNumText(int num)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         int iVar3;
@@ -795,7 +795,7 @@ public class GlobalData
         local_res8[0] = 0;
         iVar3 = Mathf.Min(99,num,0);
         if (iVar3 < 11) {
-          lVar1 = *(int64 *)(pStatics + 208);
+          lVar1 = *(int64 *)(pPlotController + 208);
           if (lVar1 != null) {
             local_res8[0] = String.get_Chars(lVar1,iVar3,0);
             Char.ToString(local_res8,0);
@@ -805,7 +805,7 @@ public class GlobalData
         else {
           plVar4 = "";
           if ((int)((float)iVar3 / 10.0) != 1) {
-            lVar1 = *(int64 *)(pStatics + 208);
+            lVar1 = *(int64 *)(pPlotController + 208);
             if (lVar1 == null) throw; // [null/range check failed]
             local_res8[0] = String.get_Chars(lVar1,(int)((float)iVar3 / 10.0),0);
             plVar4 = (int64 *)Char.ToString(local_res8,0);
@@ -813,7 +813,7 @@ public class GlobalData
           uVar2 = "十";
           plVar5 = "";
           if (iVar3 % 10 != 0) {
-            lVar1 = *(int64 *)(pStatics + 208);
+            lVar1 = *(int64 *)(pPlotController + 208);
             if (lVar1 == null) throw; // [null/range check failed]
             local_res8[0] = String.get_Chars(lVar1,iVar3 % 10,0);
             plVar5 = (int64 *)Char.ToString(local_res8,0);
@@ -853,7 +853,7 @@ public class GlobalData
     {
         long lVar1;
         uint uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x598);
+        lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x598);
         uVar2 = Mathf.Clamp((int)(evil * 0.05),0,4);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= uVar2) {
@@ -869,7 +869,7 @@ public class GlobalData
     {
         long lVar1;
         uint uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x590);
+        lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x590);
         uVar2 = Mathf.Clamp((int)(chaos * 0.05),0,4);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= uVar2) {
@@ -1131,9 +1131,6 @@ public class GlobalData
     // RVA   : 0xA3A540   Offset: 0xA38D40   Length: 0x1E30
     public static string ReplaceSpeString(string targetText, int sourceHeroID)
     {
-        var pStatics_7630 = *(int64*)(DAT_181d87630 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1145,40 +1142,44 @@ public class GlobalData
         ulong uVar9;
         uint[] local_res8 = new uint[2];
         uint[] local_res10 = new uint[2];
-        if ((*pStatics_df90 != 0) &&
-           (uVar3 = GameController.GetHeroName(*pStatics_df90,sourceHeroID,0,0),
+        if ((GameController._instance != null) &&
+           (uVar3 = GameController.GetHeroName
+                              (GameController._instance,sourceHeroID,0,0),
            targetText != null)) {
           lVar4 = String.Replace(targetText,"#PlayerName#",uVar3,0);
-          if (((*pStatics_df90 != 0) &&
-              (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar5 = WorldData.Player(lVar5,0)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar5 = GameController._instance.worldData, lVar5 != null
+              )) && (lVar5 = WorldData.Player(lVar5,0)) != null) {
             lVar5 = HeroData.GetForce(lVar5,0,0);
             uVar3 = "#PlayerForceName#";
             uVar6 = "";
             if (lVar5 != null) {
-              if ((((*pStatics_df90 == 0) ||
-                   (lVar5 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-                  (lVar5 = WorldData.Player(lVar5,0)) == null) ||
+              if ((((GameController._instance == null) ||
+                   (lVar5 = GameController._instance.worldData,
+                   lVar5 == null)) || (lVar5 = WorldData.Player(lVar5,0)) == null) ||
                  (lVar5 = HeroData.GetForce(lVar5,0,0)) == null) throw; // [null/range check failed]
-              uVar6 = *(uint64 *)(lVar5 + 24);
+              uVar6 = lVar5.TestBuildPlayer;
             }
             if (lVar4 != null) {
               lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
-              if ((*pStatics_df90 != 0) &&
-                 (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar5 = GameController._instance.worldData,
+                 lVar5 != null)) {
                 lVar5 = WorldData.Player(lVar5,0);
                 if ((lVar5 != null) && (uVar3 = HeroData.GetHeroForceLvDescribe(lVar5,1,0), lVar4 != null)) {
                   lVar4 = String.Replace(lVar4,"#PlayerForceDescribe#",uVar3,0);
-                  if ((((*pStatics_df90 != 0) &&
-                       (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null)
-                      && (lVar5 = WorldData.Player(lVar5,0)) != null) && (lVar4 != null)) {
+                  if ((((GameController._instance != null) &&
+                       (lVar5 = GameController._instance.worldData,
+                       lVar5 != null)) && (lVar5 = WorldData.Player(lVar5,0)) != null) && (lVar4 != null))
+                  {
                     lVar4 = String.Replace(lVar4,"#$PlayerName#",*(uint64 *)(lVar5 + 104),0);
                     uVar3 = "#SourceForceName#";
-                    if (*pStatics_c960 != 0) {
+                    if (PlotController._instance != null) {
                       uVar6 = "";
-                      if (*(int64 *)(*pStatics_c960 + 104) != 0) {
-                        if ((*pStatics_c960 == 0) ||
-                           (lVar5 = *(int64 *)(*pStatics_c960 + 104),
+                      if (PlotController._instance.sourceInteractHero != null) {
+                        if ((PlotController._instance == null) ||
+                           (lVar5 = *(int64 *)
+                                     (PlotController._instance + 104),
                            lVar5 == null)) throw; // [null/range check failed]
                         lVar5 = HeroData.GetForce(lVar5,0,0);
                         uVar6 = "";
@@ -1187,17 +1188,19 @@ public class GlobalData
                           if (((lVar5 == null) || (*(int64 *)(lVar5 + 104) == 0)) ||
                              (lVar5 = HeroData.GetForce(*(int64 *)(lVar5 + 104),0,0)) == null)
                           throw; // [null/range check failed]
-                          uVar6 = *(uint64 *)(lVar5 + 24);
+                          uVar6 = lVar5.TestBuildPlayer;
                         }
                       }
                       if (lVar4 != null) {
                         lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                         uVar3 = "#TargetForceName#";
-                        if (*pStatics_c960 != 0) {
+                        if (PlotController._instance != null) {
                           uVar6 = "";
-                          if (*(int64 *)(*pStatics_c960 + 112) != 0) {
-                            if ((*pStatics_c960 == 0) ||
-                               (lVar5 = *(int64 *)(*pStatics_c960 + 112),
+                          if (PlotController._instance.targetInteractHero != null
+                             ) {
+                            if ((PlotController._instance == null) ||
+                               (lVar5 = *(int64 *)
+                                         (PlotController._instance + 112),
                                lVar5 == null)) throw; // [null/range check failed]
                             lVar5 = HeroData.GetForce(lVar5,0,0);
                             uVar6 = "";
@@ -1206,59 +1209,66 @@ public class GlobalData
                               if (((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
                                  (lVar5 = HeroData.GetForce(*(int64 *)(lVar5 + 112),0,0)) == null
                                  ) throw; // [null/range check failed]
-                              uVar6 = *(uint64 *)(lVar5 + 24);
+                              uVar6 = lVar5.TestBuildPlayer;
                             }
                           }
                           if (lVar4 != null) {
                             lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                             uVar3 = "#SourceForceDescribe#";
-                            if (*pStatics_c960 != 0) {
+                            if (PlotController._instance != null) {
                               uVar6 = "";
-                              if (*(int64 *)(*pStatics_c960 + 104) != 0) {
-                                if ((*pStatics_c960 == 0) ||
-                                   (lVar5 = *(int64 *)(*pStatics_c960 + 104),
+                              if (PlotController._instance.sourceInteractHero
+                                  != 0) {
+                                if ((PlotController._instance == null) ||
+                                   (lVar5 = *(int64 *)
+                                             (PlotController._instance + 104),
                                    lVar5 == null)) throw; // [null/range check failed]
                                 uVar6 = HeroData.GetHeroForceLvDescribe(lVar5,1,0);
                               }
                               if (lVar4 != null) {
                                 lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                 uVar3 = "#TargetForceDescribe#";
-                                if (*pStatics_c960 != 0) {
+                                if (PlotController._instance != null) {
                                   uVar6 = "";
-                                  if (*(int64 *)(*pStatics_c960 + 112) != 0) {
-                                    if ((*pStatics_c960 == 0) ||
+                                  if (*(int64 *)
+                                       (PlotController._instance + 112) != 0) {
+                                    if ((PlotController._instance == null) ||
                                        (lVar5 = *(int64 *)
-                                                 (*pStatics_c960 + 112),
-                                       lVar5 == null)) throw; // [null/range check failed]
+                                                 (PlotController._instance + 112
+                                                 ), lVar5 == null)) throw; // [null/range check failed]
                                     uVar6 = HeroData.GetHeroForceLvDescribe(lVar5,1,0);
                                   }
                                   if (lVar4 != null) {
                                     lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                     uVar3 = "#SourceInteractName#";
-                                    if (*pStatics_c960 != 0) {
+                                    if (PlotController._instance != null) {
                                       uVar6 = "";
-                                      if (*(int64 *)(*pStatics_c960 + 104) != 0
+                                      if (*(int64 *)
+                                           (PlotController._instance + 104) != 0
                                          ) {
-                                        lVar5 = *pStatics_df90;
-                                        if (((*pStatics_c960 == 0) ||
+                                        lVar5 = GameController._instance;
+                                        if (((PlotController._instance == null) ||
                                             (lVar1 = *(int64 *)
-                                                      (*pStatics_c960 + 104),
-                                            lVar1 == null)) || (lVar5 == null)) throw; // [null/range check failed]
+                                                      (PlotController._instance +
+                                                      104), lVar1 == null)) || (lVar5 == null))
+                                        throw; // [null/range check failed]
                                         uVar6 = GameController.GetHeroName
                                                           (lVar5,sourceHeroID,*(uint32 *)(lVar1 + 88),0);
                                       }
                                       if (lVar4 != null) {
                                         lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                         uVar3 = "#TargetInteractName#";
-                                        if (*pStatics_c960 != 0) {
+                                        if (PlotController._instance != null) {
                                           uVar6 = "";
-                                          if (*(int64 *)(*pStatics_c960 + 112)
+                                          if (*(int64 *)
+                                               (PlotController._instance + 112)
                                               != 0) {
-                                            lVar5 = *pStatics_df90;
-                                            if (((*pStatics_c960 == 0) ||
-                                                (lVar1 = *(int64 *)
-                                                          (*pStatics_c960 + 112),
-                                                lVar1 == null)) || (lVar5 == null)) throw; // [null/range check failed]
+                                            lVar5 = GameController._instance;
+                                            if (((PlotController._instance == null)
+                                                || (lVar1 = *(int64 *)
+                                                             (**(int64 **)
+                                                                (PlotController_StaticsPtr + 184) + 112)
+                                                   , lVar1 == null)) || (lVar5 == null)) throw; // [null/range check failed]
                                             uVar6 = GameController.GetHeroName
                                                               (lVar5,sourceHeroID,*(uint32 *)(lVar1 + 88)
                                                                ,0);
@@ -1266,40 +1276,84 @@ public class GlobalData
                                           if (lVar4 != null) {
                                             lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                             uVar3 = "#$SourceInteractName#";
-                                            if (*pStatics_c960 != 0) {
+                                            if (PlotController._instance != null) {
                                               uVar6 = "";
                                               if (*(int64 *)
-                                                   (*pStatics_c960 + 104) != 0) {
-                                                if ((*pStatics_c960 == 0) ||
-                                                   (lVar5 = *(int64 *)
-                                                             (*pStatics_c960 + 104
-                                                             ), lVar5 == null)) throw; // [null/range check failed]
+                                                   (PlotController._instance +
+                                                   104) != 0) {
+                                                if ((PlotController._instance ==
+                                                     0) || (lVar5 = *(int64 *)
+                                                                     (**(int64 **)
+                                                                        (PlotController_StaticsPtr + 184)
+                                                                     + 104), lVar5 == null))
+                                                throw; // [null/range check failed]
                                                 uVar6 = HeroData.HeroName(lVar5,0,0);
                                               }
                                               if (lVar4 != null) {
                                                 lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                                 uVar3 = "#$TargetInteractName#";
-                                                if (*pStatics_c960 != 0) {
+                                                if (PlotController._instance != null
+                                                   ) {
                                                   uVar6 = "";
                                                   if (*(int64 *)
-                                                       (*pStatics_c960 + 112) != 0
-                                                     ) {
-                                                    if ((*pStatics_c960 == 0) ||
+                                                       (PlotController._instance
+                                                       + 112) != 0) {
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
+                                                    if ((PlotController._instance
+                                                         == 0) ||
                                                        (lVar5 = *(int64 *)
-                                                                 (*pStatics_c960 +
+                                                                 (**(int64 **)
+                                                                    (PlotController_StaticsPtr + 184) +
                                                                  112), lVar5 == null)) throw; // [null/range check failed]
                                                     uVar6 = HeroData.HeroName(lVar5,0,0);
                                                   }
                                                   if (lVar4 != null) {
                                                     lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
+                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     uVar3 = "#AreaForceName#";
                                                     lVar5 = *(int64 *)
-                                                             (pStatics_7630 + 56);
+                                                             (*(int64 *)
+                                                               (PlotController_StaticsPtr + 184) + 56);
                                                     if (lVar5 != null) {
                                                       uVar6 = "";
                                                       if (*(int64 *)(lVar5 + 88) != 0) {
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         lVar5 = *(int64 *)
-                                                                 (pStatics_7630 +
+                                                                 (*(int64 *)
+                                                                   (PlotController_StaticsPtr + 184) +
                                                                  56);
                                                         if ((lVar5 == null) ||
                                                            (lVar5 = *(int64 *)(lVar5 + 88),
@@ -1307,6 +1361,12 @@ public class GlobalData
                                                         lVar5 = AreaData.GetForce(lVar5,0);
                                                         uVar6 = "";
                                                         if (lVar5 != null) {
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar5 = FUN_18046bac0(0);
                                                           if (((lVar5 == null) ||
                                                               (*(int64 *)(lVar5 + 88) == 0)) ||
@@ -1314,325 +1374,484 @@ public class GlobalData
                                                                                           (lVar5 + 88),0
                                                                                         ), lVar5 == null))
                                                           throw; // [null/range check failed]
-                                                          uVar6 = *(uint64 *)(lVar5 + 24);
+                                                          uVar6 = lVar5.TestBuildPlayer;
                                                         }
                                                       }
                                                       if (lVar4 != null) {
                                                         lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         uVar3 = "#AreaName#";
                                                         lVar5 = *(int64 *)
-                                                                 (pStatics_7630 +
+                                                                 (*(int64 *)
+                                                                   (PlotController_StaticsPtr + 184) +
                                                                  56);
                                                         if (lVar5 != null) {
                                                           uVar6 = "";
                                                           if (*(int64 *)(lVar5 + 88) != 0) {
-                                                            lVar5 = *(int64 *)
-                                                                     (pStatics_7630
-                                                                     + 56);
-                                                            if ((lVar5 == null) ||
-                                                               (lVar5 = *(int64 *)(lVar5 + 88),
-                                                               lVar5 == null)) throw; // [null/range check failed]
-                                                            uVar6 = *(uint64 *)(lVar5 + 24);
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
+                                                            if (!DAT_181e6a737) {
+                                                              il2cpp_internal(&
+                                                        PlotController_StaticsPtr);
+                                                        DAT_181e6a737 = true;
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        lVar5 = *(int64 *)
+                                                                 (*(int64 *)
+                                                                   (PlotController_StaticsPtr + 184) +
+                                                                 56);
+                                                        if ((lVar5 == null) ||
+                                                           (lVar5 = *(int64 *)(lVar5 + 88),
+                                                           lVar5 == null)) throw; // [null/range check failed]
+                                                        uVar6 = lVar5.TestBuildPlayer;
+                                                        }
+                                                        if (lVar4 != null) {
+                                                          lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
                                                           }
-                                                          if (lVar4 != null) {
-                                                            lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
-                                                            uVar3 = "#PlotInteractItemName#";
-                                                            if (*pStatics_c960 != 0
-                                                               ) {
-                                                              uVar6 = "";
-                                                              if (*(int64 *)
-                                                                   (*pStatics_c960
-                                                                   + 224) != 0) {
-                                                                if (((*(byte *)(DAT_181d6c960 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d6c960 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init();
-                                                                }
-                                                                if (((*(byte *)(DAT_181d6c960 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d6c960 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init();
-                                                                }
-                                                                if ((*pStatics_c960
-                                                                     == 0) ||
-                                                                   (lVar5 = *(int64 *)
-                                                                             (**(int64 **)
-                                                                                (DAT_181d6c960 + 184) +
-                                                                             224), lVar5 == null))
-                                                                throw; // [null/range check failed]
-                                                                uVar6 = ItemData.Name(lVar5,1,0);
+                                                          if (!DAT_181e6a736) {
+                                                            il2cpp_internal(&PlotController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a736 = true;
+                                                          }
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          uVar3 = "#PlotInteractItemName#";
+                                                          if (**(int64 **)
+                                                                (PlotController_StaticsPtr + 184) != 0) {
+                                                            uVar6 = "";
+                                                            if (*(int64 *)
+                                                                 (**(int64 **)
+                                                                    (PlotController_StaticsPtr + 184) +
+                                                                 224) != 0) {
+                                                              if (((*(byte *)(PlotController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(PlotController_StaticsPtr +
+                                                                          224) == 0)) {
+                                                                il2cpp_runtime_class_init();
                                                               }
-                                                              if (lVar4 != null) {
-                                                                lVar4 = String.Replace(lVar4,uVar3,uVar6,
-                                                                                        0);
-                                                                if (((*(byte *)(DAT_181d6c960 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d6c960 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init();
-                                                                }
-                                                                if (((*(byte *)(DAT_181d6c960 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d6c960 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init();
-                                                                }
-                                                                uVar3 = "#PlotInteractSkillName#";
-                                                                if (*pStatics_c960
-                                                                    != 0) {
-                                                                  uVar6 = "";
-                                                                  if (*(int64 *)
-                                                                       (**(int64 **)
-                                                                          (DAT_181d6c960 + 184) + 240)
-                                                                      != 0) {
-                                                                    if (((*(byte *)(DAT_181d6c960 + 0x133)
-                                                                         & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d6c960 + 224) ==
-                                                                        0)) {
-                                                                      il2cpp_runtime_class_init();
-                                                                    }
-                                                                    if (((*(byte *)(DAT_181d6c960 + 0x133)
-                                                                         & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d6c960 + 224) ==
-                                                                        0)) {
-                                                                      il2cpp_runtime_class_init();
-                                                                    }
-                                                                    if ((**(int64 **)
-                                                                           (DAT_181d6c960 + 184) == 0) ||
-                                                                       (lVar5 = *(int64 *)
-                                                                                 (**(int64 **)
-                                                                                    (DAT_181d6c960 + 184)
-                                                                                 + 240), lVar5 == null))
-                                                                    throw; // [null/range check failed]
-                                                                    uVar6 = KungfuSkillLvData.Name
-                                                                                      (lVar5,1,0);
-                                                                  }
-                                                                  if (lVar4 != null) {
-                                                                    lVar4 = String.Replace(lVar4,uVar3,
-                                                                                            uVar6,0);
-                                                                    uVar3 = "#SourceHeroPosText#";
-                                                                    uVar6 = "";
-                                                                    if (sourceHeroID != -1) {
-                                                                      if (((*(byte *)(DAT_181d4df90 +
-                                                                                     0x133) & 4) != 0) &&
-                                                                         (*(int *)(DAT_181d4df90 + 224)
-                                                                          == 0)) {
-                                                                        il2cpp_runtime_class_init
-                                                                                  (DAT_181d4df90);
-                                                                      }
-                                                                      if (!DAT_181e6a735) {
-                                                                        il2cpp_internal(&DAT_181d4df90
-                                                                                           );
-                                                                        DAT_181e6a735 = true;
-                                                                      }
-                                                                      if (((*(byte *)(DAT_181d4df90 +
-                                                                                     0x133) & 4) != 0) &&
-                                                                         (*(int *)(DAT_181d4df90 + 224)
-                                                                          == 0)) {
-                                                                        il2cpp_runtime_class_init
-                                                                                  (DAT_181d4df90);
-                                                                      }
-                                                                      if (((**(int64 **)
-                                                                              (DAT_181d4df90 + 184) == 0)
-                                                                          || (lVar5 = *(int64 *)
-                                                                                       (**(int64 **)
-                                                                                          (DAT_181d4df90 +
-                                                                                          184) + 32),
-                                                                             lVar5 == null)) ||
-                                                                         (lVar5 = WorldData.GetHero(lVar5
-                                                        ,sourceHeroID,0), lVar5 == null)) throw; // [null/range check failed]
+                                                              if (!DAT_181e6a736) {
+                                                                il2cpp_internal(&
+                                                        PlotController_StaticsPtr);
+                                                        DAT_181e6a736 = true;
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        if ((**(int64 **)
+                                                               (PlotController_StaticsPtr + 184) == 0) ||
+                                                           (lVar5 = *(int64 *)
+                                                                     (**(int64 **)
+                                                                        (PlotController_StaticsPtr + 184)
+                                                                     + 224), lVar5 == null))
+                                                        throw; // [null/range check failed]
+                                                        uVar6 = ItemData.Name(lVar5,1,0);
+                                                        }
+                                                        if (lVar4 != null) {
+                                                          lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          if (!DAT_181e6a736) {
+                                                            il2cpp_internal(&PlotController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a736 = true;
+                                                          }
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          uVar3 = "#PlotInteractSkillName#";
+                                                          if (**(int64 **)
+                                                                (PlotController_StaticsPtr + 184) != 0) {
+                                                            uVar6 = "";
+                                                            if (*(int64 *)
+                                                                 (**(int64 **)
+                                                                    (PlotController_StaticsPtr + 184) +
+                                                                 240) != 0) {
+                                                              if (((*(byte *)(PlotController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(PlotController_StaticsPtr +
+                                                                          224) == 0)) {
+                                                                il2cpp_runtime_class_init();
+                                                              }
+                                                              if (!DAT_181e6a736) {
+                                                                il2cpp_internal(&
+                                                        PlotController_StaticsPtr);
+                                                        DAT_181e6a736 = true;
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        if ((**(int64 **)
+                                                               (PlotController_StaticsPtr + 184) == 0) ||
+                                                           (lVar5 = *(int64 *)
+                                                                     (**(int64 **)
+                                                                        (PlotController_StaticsPtr + 184)
+                                                                     + 240), lVar5 == null))
+                                                        throw; // [null/range check failed]
+                                                        uVar6 = KungfuSkillLvData.Name(lVar5,1,0);
+                                                        }
+                                                        if (lVar4 != null) {
+                                                          lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
+                                                          uVar3 = "#SourceHeroPosText#";
+                                                          uVar6 = "";
+                                                          if (sourceHeroID != -1) {
+                                                            if (((*(byte *)(GameController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(GameController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (GameController_StaticsPtr);
+                                                            }
+                                                            if (!DAT_181e6a735) {
+                                                              il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) == 0)
+                                                            || (lVar5 = *(int64 *)
+                                                                         (**(int64 **)
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar5 == null)) ||
+                                                           (lVar5 = WorldData.GetHero(lVar5,sourceHeroID,0),
+                                                           lVar5 == null)) throw; // [null/range check failed]
                                                         uVar6 = HeroData.AtAreaName(lVar5,0);
                                                         }
                                                         if (lVar4 != null) {
                                                           lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
-                                                          if (((*pStatics_df90 != 0
-                                                               ) && (lVar5 = *(int64 *)
-                                                                              (**(int64 **)
-                                                                                 (DAT_181d4df90 + 184) +
-                                                                              32), lVar5 != null)) &&
-                                                             (lVar5 = WorldData.Player(lVar5,0),
-                                                             uVar6 = "{0}{1}</color>", uVar3 = "#BadFameTips#",
-                                                             lVar5 != null)) {
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (GameController_StaticsPtr);
+                                                          }
+                                                          if (!DAT_181e6a735) {
+                                                            il2cpp_internal(&GameController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a735 = true;
+                                                          }
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (GameController_StaticsPtr);
+                                                          }
+                                                          if (((**(int64 **)
+                                                                  (GameController_StaticsPtr + 184) != 0)
+                                                              && (lVar5 = *(int64 *)
+                                                                           (**(int64 **)
+                                                                              (GameController_StaticsPtr +
+                                                                              184) + 32), lVar5 != null))
+                                                             && (lVar5 = WorldData.Player(lVar5,0),
+                                                                uVar6 = "{0}{1}</color>",
+                                                                uVar3 = "#BadFameTips#", lVar5 != null)) {
                                                             if (*(int *)(lVar5 + 192) < 0) {
-                                                              if (((*(byte *)(DAT_181d4df90 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4df90 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d4df90);
+                                                              if (((*(byte *)(GameController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(GameController_StaticsPtr +
+                                                                          224) == 0)) {
+                                                                il2cpp_runtime_class_init
+                                                                          (GameController_StaticsPtr);
                                                               }
-                                                              if (((*(byte *)(DAT_181d4df90 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4df90 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d4df90);
-                                                              }
-                                                              if (((*pStatics_df90
-                                                                    == 0) ||
-                                                                  (lVar5 = *(int64 *)
-                                                                            (**(int64 **)
-                                                                               (DAT_181d4df90 + 184) +
-                                                                            32), lVar5 == null)) ||
-                                                                 (lVar5 = WorldData.Player(lVar5,0),
-                                                                 lVar5 == null)) throw; // [null/range check failed]
-                                                              if (*(char *)(lVar5 + 208) == false) {
-                                                                if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4ef00 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init(DAT_181d4ef00)
-                                                                  ;
-                                                                }
-                                                                uVar8 = *(uint64 *)
-                                                                         (*(int64 *)
-                                                                           (DAT_181d4ef00 + 184) + 0x338)
-                                                                ;
-                                                              }
-                                                              else {
-                                                                if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4ef00 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init(DAT_181d4ef00)
-                                                                  ;
-                                                                }
-                                                                uVar8 = *(uint64 *)
-                                                                         (*(int64 *)
-                                                                           (DAT_181d4ef00 + 184) + 0x250)
-                                                                ;
-                                                              }
+                                                              if (!DAT_181e6a735) {
+                                                                il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) == 0)
+                                                            || (lVar5 = *(int64 *)
+                                                                         (**(int64 **)
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar5 == null)) ||
+                                                           (lVar5 = WorldData.Player(lVar5,0), lVar5 == null
+                                                           )) throw; // [null/range check failed]
+                                                        if (*(char *)(lVar5 + 208) == false) {
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (PlotController_StaticsPtr);
+                                                          }
+                                                          uVar8 = *(uint64 *)
+                                                                   (*(int64 *)
+                                                                     (PlotController_StaticsPtr + 184) +
+                                                                   0x338);
+                                                        }
+                                                        else {
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (PlotController_StaticsPtr);
+                                                          }
+                                                          uVar8 = *(uint64 *)
+                                                                   (*(int64 *)
+                                                                     (PlotController_StaticsPtr + 184) +
+                                                                   0x250);
+                                                        }
+                                                        }
+                                                        else {
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (PlotController_StaticsPtr);
+                                                          }
+                                                          uVar8 = *(uint64 *)
+                                                                   (*(int64 *)
+                                                                     (PlotController_StaticsPtr + 184) +
+                                                                   0x2c8);
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) != 0)
+                                                            && (lVar5 = *(int64 *)
+                                                                         (**(int64 **)
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar5 != null)) &&
+                                                           (lVar5 = WorldData.Player(lVar5,0), lVar5 != null
+                                                           )) {
+                                                          uVar9 = "(当前处在城镇内，行凶恶名x200%)";
+                                                          if (*(int *)(lVar5 + 192) < 0) {
+                                                            if (((*(byte *)(GameController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(GameController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (GameController_StaticsPtr);
                                                             }
-                                                            else {
-                                                              if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d4ef00);
-                                                              }
-                                                              uVar8 = *(uint64 *)
-                                                                       (*(int64 *)
-                                                                         (DAT_181d4ef00 + 184) + 0x2c8);
+                                                            if (!DAT_181e6a735) {
+                                                              il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) == 0)
+                                                            || (lVar5 = *(int64 *)
+                                                                         (**(int64 **)
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar5 == null)) ||
+                                                           (lVar5 = WorldData.Player(lVar5,0), lVar5 == null
+                                                           )) throw; // [null/range check failed]
+                                                        uVar9 = "(当前处在野外，行凶恶名x100%)";
+                                                        if (*(char *)(lVar5 + 208) != false) {
+                                                          uVar9 = "(当前处在城镇周边，行凶恶名x150%)";
+                                                        }
+                                                        }
+                                                        uVar6 = String.Format(uVar6,uVar8,uVar9,0);
+                                                        if ((lVar4 != null) &&
+                                                           (lVar4 = String.Replace(lVar4,uVar3,uVar6,0),
+                                                           lVar4 != null)) {
+                                                          lVar4 = String.Replace(lVar4,"\\n",
+                                                                                  "\n",0);
+                                                          uVar7 = 0;
+                                                          while( true ) {
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
                                                             }
-                                                            if (((*pStatics_df90 !=
-                                                                  0) && (lVar5 = *(int64 *)
-                                                                                  (**(int64 **)
-                                                                                     (DAT_181d4df90 + 184
-                                                                                     ) + 32), lVar5 != null
-                                                                        )) &&
-                                                               (lVar5 = WorldData.Player(lVar5,0),
-                                                               lVar5 != null)) {
-                                                              uVar9 = "(当前处在城镇内，行凶恶名x200%)";
-                                                              if (*(int *)(lVar5 + 192) < 0) {
-                                                                if (((*(byte *)(DAT_181d4df90 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4df90 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init(DAT_181d4df90)
-                                                                  ;
-                                                                }
-                                                                if (((*(byte *)(DAT_181d4df90 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4df90 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init(DAT_181d4df90)
-                                                                  ;
-                                                                }
-                                                                if (((**(int64 **)
-                                                                        (DAT_181d4df90 + 184) == 0) ||
-                                                                    (lVar5 = *(int64 *)
-                                                                              (**(int64 **)
-                                                                                 (DAT_181d4df90 + 184) +
-                                                                              32), lVar5 == null)) ||
-                                                                   (lVar5 = WorldData.Player(lVar5,0),
-                                                                   lVar5 == null)) throw; // [null/range check failed]
-                                                                uVar9 = "(当前处在野外，行凶恶名x100%)";
-                                                                if (*(char *)(lVar5 + 208) != false) {
-                                                                  uVar9 = "(当前处在城镇周边，行凶恶名x150%)";
-                                                                }
-                                                              }
-                                                              uVar6 = String.Format(uVar6,uVar8,uVar9,0);
-                                                              if ((lVar4 != null) &&
-                                                                 (lVar4 = String.Replace(lVar4,uVar3,
-                                                                                          uVar6,0),
-                                                                 lVar4 != null)) {
-                                                                lVar4 = String.Replace(lVar4,
-                                                        "\\n","\n",0);
-                                                        uVar7 = 0;
-                                                        while( true ) {
-                                                          if ((*pStatics_c960 == 0)
-                                                             || (lVar5 = *(int64 *)
-                                                                          (**(int64 **)
-                                                                             (DAT_181d6c960 + 184) + 120
-                                                                          ), lVar5 == null))
-                                                          throw; // [null/range check failed]
-                                                          if (*(int *)(lVar5 + 24) <= (int)uVar7) break;
-                                                          local_res10[0] = uVar7;
-                                                          uVar3 = il2cpp_value_box(DAT_181d5b2f8,
-                                                                                   local_res10);
-                                                          uVar3 = String.Format("#PlotTargetInteractDescribe{0}#",uVar3,0);
-                                                          lVar5 = FUN_18046c440(0);
-                                                          if ((lVar5 == null) ||
-                                                             (*(int64 *)(lVar5 + 120) == 0)) {
+                                                            if (!DAT_181e6a736) {
+                                                              il2cpp_internal(&
+                                                        PlotController_StaticsPtr);
+                                                        DAT_181e6a736 = true;
+                                                        }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (PlotController_StaticsPtr);
+                                                        }
+                                                        if ((**(int64 **)
+                                                               (PlotController_StaticsPtr + 184) == 0) ||
+                                                           (lVar5 = *(int64 *)
+                                                                     (**(int64 **)
+                                                                        (PlotController_StaticsPtr + 184)
+                                                                     + 120), lVar5 == null))
+                                                        throw; // [null/range check failed]
+                                                        if (lVar5.TestBuildPlayer <= (int)uVar7) break;
+                                                        local_res10[0] = uVar7;
+                                                        uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res10
+                                                                                );
+                                                        uVar3 = String.Format("#PlotTargetInteractDescribe{0}#",uVar3,0);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        lVar5 = FUN_18046c440(0);
+                                                        if ((lVar5 == null) ||
+                                                           (*(int64 *)(lVar5 + 120) == 0)) {
                           // WARNING: Subroutine does not return
-                                                            FUN_1800d6620();
+                                                          FUN_1800d6620();
+                                                        }
+                                                        lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 120),
+                                                                              uVar7,DAT_181d643f8);
+                                                        uVar6 = "";
+                                                        if (lVar5 != null) {
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
                                                           }
-                                                          lVar5 = FUN_180002f80(*(int64 *)
-                                                                                 (lVar5 + 120),uVar7,
-                                                                                DAT_181d643f8);
-                                                          uVar6 = "";
-                                                          if (lVar5 != null) {
-                                                            lVar5 = FUN_18046c440(0);
-                                                            if ((lVar5 == null) ||
-                                                               (*(int64 *)(lVar5 + 120) == 0))
-                                                            throw; // [null/range check failed]
-                                                            lVar5 = FUN_180002f80(*(int64 *)
-                                                                                   (lVar5 + 120),uVar7,
-                                                                                  DAT_181d643f8);
-                                                            if (lVar5 == null) throw; // [null/range check failed]
-                                                            uVar6 = HeroData.GetHeroForceLvDescribe
-                                                                              (lVar5,1,0);
-                                                          }
-                                                          if (lVar4 == null) {
-        LAB_180a3c365:
-                          // WARNING: Subroutine does not return
-                                                            FUN_1800d6620();
-                                                          }
-                                                          lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
-                                                          local_res8[0] = uVar7;
-                                                          uVar3 = il2cpp_value_box(DAT_181d5b2f8,
-                                                                                   local_res8);
-                                                          uVar3 = String.Format("#PlotTargetInteractName{0}#",uVar3,0);
                                                           lVar5 = FUN_18046c440(0);
                                                           if ((lVar5 == null) ||
                                                              (*(int64 *)(lVar5 + 120) == 0))
-                                                          goto LAB_180a3c365;
+                                                          throw; // [null/range check failed]
                                                           lVar5 = FUN_180002f80(*(int64 *)
                                                                                  (lVar5 + 120),uVar7,
                                                                                 DAT_181d643f8);
-                                                          uVar6 = "";
-                                                          if (lVar5 != null) {
-                                                            lVar5 = FUN_18046c440(0);
-                                                            if (((lVar5 == null) ||
-                                                                (*(int64 *)(lVar5 + 120) == 0)) ||
-                                                               (lVar5 = FUN_180002f80(*(int64 *)
-                                                                                       (lVar5 + 120),
-                                                                                      uVar7,DAT_181d643f8)
-                                                               , lVar5 == null)) throw; // [null/range check failed]
-                                                            uVar6 = HeroData.HeroName(lVar5,0,0);
+                                                          if (lVar5 == null) throw; // [null/range check failed]
+                                                          uVar6 = HeroData.GetHeroForceLvDescribe
+                                                                            (lVar5,1,0);
+                                                        }
+                                                        if (lVar4 == null) {
+        LAB_180a3c365:
+                          // WARNING: Subroutine does not return
+                                                          FUN_1800d6620();
+                                                        }
+                                                        lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
+                                                        local_res8[0] = uVar7;
+                                                        uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res8)
+                                                        ;
+                                                        uVar3 = String.Format("#PlotTargetInteractName{0}#",uVar3,0);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        lVar5 = FUN_18046c440(0);
+                                                        if ((lVar5 == null) ||
+                                                           (*(int64 *)(lVar5 + 120) == 0))
+                                                        goto LAB_180a3c365;
+                                                        lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 120),
+                                                                              uVar7,DAT_181d643f8);
+                                                        uVar6 = "";
+                                                        if (lVar5 != null) {
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
                                                           }
-                                                          if (lVar4 == null) throw; // [null/range check failed]
-                                                          lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
-                                                          uVar7 = uVar7 + 1;
+                                                          lVar5 = FUN_18046c440(0);
+                                                          if (((lVar5 == null) ||
+                                                              (*(int64 *)(lVar5 + 120) == 0)) ||
+                                                             (lVar5 = FUN_180002f80(*(int64 *)
+                                                                                     (lVar5 + 120),uVar7,
+                                                                                    DAT_181d643f8),
+                                                             lVar5 == null)) throw; // [null/range check failed]
+                                                          uVar6 = HeroData.HeroName(lVar5,0,0);
+                                                        }
+                                                        if (lVar4 == null) throw; // [null/range check failed]
+                                                        lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
+                                                        uVar7 = uVar7 + 1;
                                                         }
                                                         if (lVar4 != null) {
                                                           cVar2 = String.Contains(lVar4,"#BountyHeroItemDescribe#",0);
                                                           if (cVar2) {
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
                                                             lVar5 = FUN_18046c440(0);
                                                             uVar3 = "#BountyHeroItemDescribe#";
                                                             if (lVar5 == null) throw; // [null/range check failed]
                                                             uVar6 = "";
                                                             if (*(int64 *)(lVar5 + 144) != 0) {
-                                                              if (((*(byte *)(DAT_181d6c960 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d6c960 + 224) == 0)) {
+                                                              if (((*(byte *)(PlotController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(PlotController_StaticsPtr +
+                                                                          224) == 0)) {
                                                                 il2cpp_runtime_class_init();
                                                               }
                                                               lVar5 = FUN_18046c440(0);
@@ -1687,15 +1906,15 @@ public class GlobalData
     // RVA   : 0xA34580   Offset: 0xA32D80   Length: 0x182
     public static string GenerateChangeColorText(string name, float num)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         uVar1 = "{0}{1}</color>";
         if (!num) {
-          uVar2 = *(uint64 *)(pStatics + 0x2c8);
+          uVar2 = *(uint64 *)(pPlotController + 0x2c8);
         }
         else {
-          uVar2 = *(uint64 *)(pStatics + 0x260);
+          uVar2 = *(uint64 *)(pPlotController + 0x260);
         }
         String.Format(uVar1,uVar2,name,0);
     }
@@ -1704,15 +1923,15 @@ public class GlobalData
     // RVA   : 0xA34710   Offset: 0xA32F10   Length: 0x14C
     public static string GenerateChangeColorText(string name, float num, bool reverse)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         uVar1 = "{0}{1}</color>";
         if (!num) {
-          uVar2 = *(uint64 *)(pStatics + 0x2c8);
+          uVar2 = *(uint64 *)(pPlotController + 0x2c8);
         }
         else {
-          uVar2 = *(uint64 *)(pStatics + 0x260);
+          uVar2 = *(uint64 *)(pPlotController + 0x260);
         }
         String.Format(uVar1,uVar2,name,0);
     }
@@ -1721,15 +1940,15 @@ public class GlobalData
     // RVA   : 0xA344B0   Offset: 0xA32CB0   Length: 0xCC
     public static string GenerateChangeColorText(string name, bool positive)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         ulong uVar2;
         uVar1 = "{0}{1}</color>";
         if (!positive) {
-          uVar2 = *(uint64 *)(pStatics + 0x2c8);
+          uVar2 = *(uint64 *)(pPlotController + 0x2c8);
         }
         else {
-          uVar2 = *(uint64 *)(pStatics + 0x260);
+          uVar2 = *(uint64 *)(pPlotController + 0x260);
         }
         String.Format(uVar1,uVar2,name,0);
     }
@@ -1738,7 +1957,6 @@ public class GlobalData
     // RVA   : 0xA34DA0   Offset: 0xA335A0   Length: 0x1A4
     public static string GenerateRareLvColorText(string text, int rareLv)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         long lVar2;
         uint uVar3;
@@ -1747,10 +1965,10 @@ public class GlobalData
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 56);
-          lVar2 = *(int64 *)(pStatics + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
             uVar3 = Mathf.Clamp(rareLv,0,*(int *)(lVar2 + 24) + -1,0);
             if (lVar1 != null) {
@@ -2483,7 +2701,7 @@ public class GlobalData
           colorLv[1] = uVar2;
           return colorLv;
         }
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 56)) != null) {
           if (*(uint32 *)(lVar1 + 24) <= param_2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2575,7 +2793,7 @@ public class GlobalData
     // RVA   : 0xA38270   Offset: 0xA36A70   Length: 0x129
     public static float GetResourceTotalValue(List<ResourceData> resources)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         int iVar2;
         float fVar3;
@@ -2584,12 +2802,12 @@ public class GlobalData
         fVar5 = 0.0;
         iVar2 = 0;
         while( true ) {
-          lVar1 = *(int64 *)(pStatics + 0x440);
+          lVar1 = *(int64 *)(pPlotController + 0x440);
           if (lVar1 == null) break;
           if (*(int *)(lVar1 + 24) <= iVar2) {
             return fVar5;
           }
-          lVar1 = *(int64 *)(pStatics + 0x440);
+          lVar1 = *(int64 *)(pPlotController + 0x440);
           if (lVar1 == null) break;
           fVar3 = (float)FUN_1800d6780(lVar1,iVar2,DAT_181d796d8);
           if (resources == null) break;
@@ -2603,7 +2821,7 @@ public class GlobalData
     // RVA   : 0xA38150   Offset: 0xA36950   Length: 0x115
     public static float GetResourceTotalValue(List<float> resources)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         int iVar2;
         float fVar3;
@@ -2612,12 +2830,12 @@ public class GlobalData
         fVar5 = 0.0;
         iVar2 = 0;
         while( true ) {
-          lVar1 = *(int64 *)(pStatics + 0x440);
+          lVar1 = *(int64 *)(pPlotController + 0x440);
           if (lVar1 == null) break;
           if (*(int *)(lVar1 + 24) <= iVar2) {
             return fVar5;
           }
-          lVar1 = *(int64 *)(pStatics + 0x440);
+          lVar1 = *(int64 *)(pPlotController + 0x440);
           if (lVar1 == null) break;
           fVar3 = (float)FUN_1800d6780(lVar1,iVar2,DAT_181d796d8);
           if (resources == null) break;
@@ -2831,17 +3049,16 @@ public class GlobalData
     // RVA   : 0xA35F60   Offset: 0xA34760   Length: 0x1A5
     public static Color GetDifficultyColor(float difficulty)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         int iVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 56);
           iVar4 = Mathf.RoundToInt();
-          lVar2 = *(int64 *)(pStatics + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
             uVar5 = Mathf.Clamp((int)((float)iVar4 * 0.5),0,*(int *)(lVar2 + 24) + -1,0);
             if (lVar1 != null) {
@@ -2864,7 +3081,6 @@ public class GlobalData
     // RVA   : 0xA36110   Offset: 0xA34910   Length: 0x28E
     public static string GetDifficultyStarString(float difficulty)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         long lVar2;
         int iVar3;
@@ -2893,10 +3109,10 @@ public class GlobalData
         if (fVar8 == 1.0) {
           uVar5 = String.Concat(uVar5,"☆",0);
         }
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 56);
-          lVar2 = *(int64 *)(pStatics + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
             uVar4 = Mathf.Clamp((int)fVar9,0,*(int *)(lVar2 + 24) + -1,0);
             if (lVar1 != null) {
@@ -3008,7 +3224,7 @@ public class GlobalData
     // RVA   : 0xA39720   Offset: 0xA37F20   Length: 0x90
     public static int ManageHeroAutoFight(FightMatchCouple fightMatchCouple, BattleType battleType, float attackTeamScoreRate, float injuryRate)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool GlobalData.ManageHeroAutoFight
                      (int64 fightMatchCouple,int battleType,uint8 attackTeamScoreRate,float injuryRate,uint32 param_5)
         {
@@ -3056,7 +3272,7 @@ public class GlobalData
               else {
                 fVar11 = 2.0;
               }
-              lVar1 = *(int64 *)(pStatics + 0x698);
+              lVar1 = *(int64 *)(pPlotController + 0x698);
               if ((lVar1 == null) || (fVar12 = (float)FUN_1800d6780(lVar1,battleType,DAT_181d796d8), lVar4 == null)
                  ) break;
               HeroData.AutoGetFightExp(lVar4,fVar12 * fVar11,0);
@@ -3103,7 +3319,7 @@ public class GlobalData
         else {
           fVar11 = 2.0;
         }
-        lVar4 = *(int64 *)(pStatics + 0x698);
+        lVar4 = *(int64 *)(pPlotController + 0x698);
         if ((lVar4 == null) || (fVar12 = (float)FUN_1800d6780(lVar4,battleType,DAT_181d796d8), lVar8 == null))
         goto LAB_180a39d6f;
         HeroData.AutoGetFightExp(lVar8,fVar12 * fVar11,0);
@@ -3134,7 +3350,7 @@ public class GlobalData
     // RVA   : 0xA397B0   Offset: 0xA37FB0   Length: 0x5C4
     public static int ManageHeroAutoFight(FightMatchCouple fightMatchCouple, BattleType battleType, bool includeTeamMate, float attackTeamScoreRate, float injuryRate)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool GlobalData.ManageHeroAutoFight
                      (int64 fightMatchCouple,int battleType,uint8 includeTeamMate,float attackTeamScoreRate,uint32 injuryRate)
         {
@@ -3182,7 +3398,7 @@ public class GlobalData
               else {
                 fVar11 = 2.0;
               }
-              lVar1 = *(int64 *)(pStatics + 0x698);
+              lVar1 = *(int64 *)(pPlotController + 0x698);
               if ((lVar1 == null) || (fVar12 = (float)FUN_1800d6780(lVar1,battleType,DAT_181d796d8), lVar4 == null)
                  ) break;
               HeroData.AutoGetFightExp(lVar4,fVar12 * fVar11,0);
@@ -3229,7 +3445,7 @@ public class GlobalData
         else {
           fVar11 = 2.0;
         }
-        lVar4 = *(int64 *)(pStatics + 0x698);
+        lVar4 = *(int64 *)(pPlotController + 0x698);
         if ((lVar4 == null) || (fVar12 = (float)FUN_1800d6780(lVar4,battleType,DAT_181d796d8), lVar8 == null))
         goto LAB_180a39d6f;
         HeroData.AutoGetFightExp(lVar8,fVar12 * fVar11,0);
@@ -3444,7 +3660,6 @@ public class GlobalData
     // RVA   : 0xA3CD70   Offset: 0xA3B570   Length: 0x5A8
     public static List<HeroData> SortHeroList(List<HeroData> source, HeroListSortType sortType)
     {
-        var pStatics = *(int64*)(DAT_181d52c28 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -3468,58 +3683,58 @@ public class GlobalData
           }
           throw; // [null/range check failed]
         case 1:
-          lVar3 = *(int64 *)(pStatics + 8);
+          lVar3 = GlobalData.DemoVersion;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d52c28 + 184);
+            uVar4 = GlobalData.GameVersion;
             lVar3 = new OnTooltipCB(uVar4,DAT_181d7bc08,DAT_181d85f18);
-            plVar5 = (int64 *)(pStatics + 8);
+            plVar5 = &GlobalData.DemoVersion;
         LAB_180a3cfbf:
             *plVar5 = lVar3;
             il2cpp_internal(plVar5,lVar3);
           }
           break;
         case 2:
-          lVar3 = *(int64 *)(pStatics + 16);
+          lVar3 = GlobalData.DisableAutoSave;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d52c28 + 184);
+            uVar4 = GlobalData.GameVersion;
             lVar3 = new OnTooltipCB(uVar4,DAT_181d7bc88,DAT_181d85f18);
-            plVar5 = (int64 *)(pStatics + 16);
+            plVar5 = &GlobalData.DisableAutoSave;
             goto LAB_180a3cfbf;
           }
           break;
         case 3:
-          lVar3 = *(int64 *)(pStatics + 24);
+          lVar3 = GlobalData.PlayTestAvailableAreaID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d52c28 + 184);
+            uVar4 = GlobalData.GameVersion;
             lVar3 = new OnTooltipCB(uVar4,DAT_181d7bd08,DAT_181d85f18);
-            plVar5 = (int64 *)(pStatics + 24);
+            plVar5 = &GlobalData.PlayTestAvailableAreaID;
             goto LAB_180a3cfbf;
           }
           break;
         case 4:
-          lVar3 = *(int64 *)(pStatics + 32);
+          lVar3 = GlobalData.PlayTestAvailableForceID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d52c28 + 184);
+            uVar4 = GlobalData.GameVersion;
             lVar3 = new OnTooltipCB(uVar4,DAT_181d7bd88,DAT_181d85f18);
-            plVar5 = (int64 *)(pStatics + 32);
+            plVar5 = &GlobalData.PlayTestAvailableForceID;
             goto LAB_180a3cfbf;
           }
           break;
         case 5:
-          lVar3 = *(int64 *)(pStatics + 40);
+          lVar3 = GlobalData.PlayTestAvailableInnID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d52c28 + 184);
+            uVar4 = GlobalData.GameVersion;
             lVar3 = new OnTooltipCB(uVar4,DAT_181d7be08,DAT_181d85f18);
-            plVar5 = (int64 *)(pStatics + 40);
+            plVar5 = &GlobalData.PlayTestAvailableInnID;
             goto LAB_180a3cfbf;
           }
           break;
         case 6:
-          lVar3 = *(int64 *)(pStatics + 48);
+          lVar3 = GlobalData.SteamAppID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d52c28 + 184);
+            uVar4 = GlobalData.GameVersion;
             lVar3 = new OnTooltipCB(uVar4,DAT_181d7be88,DAT_181d85f18);
-            plVar5 = (int64 *)(pStatics + 48);
+            plVar5 = &GlobalData.SteamAppID;
             goto LAB_180a3cfbf;
           }
           break;
@@ -3538,16 +3753,15 @@ public class GlobalData
     // RVA   : 0xA3C5A0   Offset: 0xA3ADA0   Length: 0x13A
     public static void SetResolution(int width, int height, bool fullScreen)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         Screen.SetResolution(width,height,fullScreen,0);
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           PlayerPrefDictionary.SetKey(lVar1,"ScreenWidth",width,0);
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
             PlayerPrefDictionary.SetKey(lVar1,"ScreenHeight",height,0);
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = GameController.difficultyExtraPoint;
             if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
               PlayerPrefDictionary.SetKey(lVar1,"FullScreen",fullScreen,0);
               return;
@@ -3562,7 +3776,7 @@ public class GlobalData
     {
         long lVar1;
         Screen.set_fullScreen(fullScreen,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           PlayerPrefDictionary.SetKey(lVar1,"FullScreen",fullScreen,0);
           return;
@@ -3573,8 +3787,7 @@ public class GlobalData
     // RVA   : 0xA32930   Offset: 0xA31130   Length: 0xF56
     public static void AutoSetWindowResolution()
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
@@ -3590,35 +3803,35 @@ public class GlobalData
         uint uVar13;
         uint uVar14;
         uint[] local_res10 = new uint[2];
-        lVar7 = *(int64 *)(pStatics_e010 + 8);
+        lVar7 = GameController.difficultyExtraPoint;
         if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a33641;
         cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"ScreenWidth",0);
         if (cVar1) {
-          lVar7 = *(int64 *)(pStatics_e010 + 8);
+          lVar7 = GameController.difficultyExtraPoint;
           if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a33641;
           iVar2 = PlayerPrefDictionary.GetInt(lVar7,"ScreenWidth",0);
           if (iVar2 != 0) {
-            lVar7 = *(int64 *)(pStatics_e010 + 8);
+            lVar7 = GameController.difficultyExtraPoint;
             if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a33641;
             cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"ScreenHeight",0);
             if (cVar1) {
-              lVar7 = *(int64 *)(pStatics_e010 + 8);
+              lVar7 = GameController.difficultyExtraPoint;
               if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a33641;
               iVar2 = PlayerPrefDictionary.GetInt(lVar7,"ScreenHeight",0);
               if (iVar2 != 0) {
-                lVar7 = *(int64 *)(pStatics_e010 + 8);
+                lVar7 = GameController.difficultyExtraPoint;
                 if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a33641;
                 cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"FullScreen",0);
                 if (cVar1) {
-                  lVar7 = *(int64 *)(pStatics_e010 + 8);
+                  lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
                   goto LAB_180a33641;
                   uVar3 = PlayerPrefDictionary.GetInt(lVar7,"ScreenWidth",0);
-                  lVar7 = *(int64 *)(pStatics_e010 + 8);
+                  lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
                   goto LAB_180a33641;
                   uVar4 = PlayerPrefDictionary.GetInt(lVar7,"ScreenHeight",0);
-                  lVar7 = *(int64 *)(pStatics_e010 + 8);
+                  lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
                   goto LAB_180a33641;
                   iVar2 = PlayerPrefDictionary.GetInt(lVar7,"FullScreen",0);
@@ -3630,7 +3843,7 @@ public class GlobalData
           }
         }
         lVar7 = Screen.get_resolutions(0);
-        lVar11 = *(int64 *)(pStatics_ef00 + 176);
+        lVar11 = *(int64 *)(pPlotController + 176);
         if (lVar7 == null) {
         LAB_180a33641:
                           // WARNING: Subroutine does not return
@@ -3671,7 +3884,7 @@ public class GlobalData
           }
           iVar5 = FUN_180d8d700(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
           if (iVar2 / iVar5 != 1) {
-            lVar11 = *(int64 *)(pStatics_ef00 + 176);
+            lVar11 = *(int64 *)(pPlotController + 176);
             if (lVar11 == null) goto LAB_180a33641;
             if (*(int *)(lVar11 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3720,10 +3933,10 @@ public class GlobalData
               if (iVar5 <= iVar2) {
                 iVar2 = 1;
                 do {
-                  lVar11 = *(int64 *)(pStatics_ef00 + 176);
+                  lVar11 = *(int64 *)(pPlotController + 176);
                   if (lVar11 == null) goto LAB_180a33641;
                   if (*(int *)(lVar11 + 24) <= iVar2) goto LAB_180a334d0;
-                  lVar11 = *(int64 *)(pStatics_ef00 + 176);
+                  lVar11 = *(int64 *)(pPlotController + 176);
                   if (lVar11 == null) goto LAB_180a33641;
                   lVar11 = FUN_180002f80(lVar11,iVar2 + -1,DAT_181d7c9c0);
                   lVar10 = FUN_1800d60b0(DAT_181d7c118,1);
@@ -3736,7 +3949,7 @@ public class GlobalData
                   *(uint16 *)(lVar10 + 32) = 120;
                   if (lVar11 == null) goto LAB_180a33641;
                   lVar10 = String.Split(lVar11,lVar10,0);
-                  lVar11 = *(int64 *)(pStatics_ef00 + 176);
+                  lVar11 = *(int64 *)(pPlotController + 176);
                   if (lVar11 == null) goto LAB_180a33641;
                   lVar11 = FUN_180002f80(lVar11,iVar2);
                   lVar12 = FUN_1800d60b0(DAT_181d7c118,1);
@@ -3816,10 +4029,10 @@ public class GlobalData
               if (iVar5 <= iVar2) {
                 iVar2 = 1;
                 do {
-                  lVar11 = *(int64 *)(pStatics_ef00 + 176);
+                  lVar11 = *(int64 *)(pPlotController + 176);
                   if (lVar11 == null) goto LAB_180a33641;
                   if (*(int *)(lVar11 + 24) <= iVar2) goto LAB_180a334d0;
-                  lVar11 = *(int64 *)(pStatics_ef00 + 176);
+                  lVar11 = *(int64 *)(pPlotController + 176);
                   if (lVar11 == null) goto LAB_180a33641;
                   lVar11 = FUN_180002f80(lVar11,iVar2 + -1,DAT_181d7c9c0);
                   lVar10 = FUN_1800d60b0(DAT_181d7c118,1);
@@ -3832,7 +4045,7 @@ public class GlobalData
                   *(uint16 *)(lVar10 + 32) = 120;
                   if (lVar11 == null) goto LAB_180a33641;
                   lVar10 = String.Split(lVar11,lVar10,0);
-                  lVar11 = *(int64 *)(pStatics_ef00 + 176);
+                  lVar11 = *(int64 *)(pPlotController + 176);
                   if (lVar11 == null) goto LAB_180a33641;
                   lVar11 = FUN_180002f80(lVar11,iVar2,DAT_181d7c9c0);
                   lVar12 = FUN_1800d60b0(DAT_181d7c118,1);
@@ -3897,7 +4110,7 @@ public class GlobalData
             }
             GlobalData.SetResolution(uVar3,uVar4,0,0);
         LAB_180a334d0:
-            lVar7 = *(int64 *)(pStatics_ef00 + 176);
+            lVar7 = *(int64 *)(pPlotController + 176);
             if (lVar7 == null) goto LAB_180a33641;
             uVar14 = *(uint32 *)(lVar7 + 24);
             if (uVar14 <= uVar14 - 1) {
@@ -3981,7 +4194,6 @@ public class GlobalData
     // RVA   : 0xA33B80   Offset: 0xA32380   Length: 0x343
     public static string ConvertNumToChinese(int input)
     {
-        var pStatics = *(int64*)(DAT_181d52c28 + 184);
         int iVar1;
         uint uVar2;
         uint uVar3;
@@ -4017,13 +4229,11 @@ public class GlobalData
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar9,uVar8);
             }
-            lVar7 = *(int64 *)(pStatics + 56);
+            lVar7 = GlobalData.WegameAppID;
             if (lVar7 == null) {
-              uVar8 = **(uint64 **)(DAT_181d52c28 + 184);
+              uVar8 = GlobalData.GameVersion;
               lVar7 = new OnTooltipCB(uVar8,DAT_181d7bb88,DAT_181d8acb0);
-              plVar10 = (int64 *)(pStatics + 56);
-              *plVar10 = lVar7;
-              il2cpp_internal(plVar10,lVar7);
+              GlobalData.WegameAppID = lVar7;
               lVar6 = new OnTooltipCB(lVar5,DAT_181d7c000,DAT_181d89d30);
               if (lVar7 == null) throw; // [null/range check failed]
             }
@@ -4058,7 +4268,7 @@ public class GlobalData
     // RVA   : 0xA39FE0   Offset: 0xA387E0   Length: 0x2C5
     public static AudioSource PlayHeroSound(AudioClip clip, float volume, float pitch)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -4066,31 +4276,31 @@ public class GlobalData
         if (cVar1) {
           return 0;
         }
-        uVar3 = *(uint64 *)(pStatics + 0x6a8);
+        uVar3 = *(uint64 *)(pPlotController + 0x6a8);
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (cVar1) {
           lVar2 = new GameObject(0);
           if (lVar2 == null) throw; // [null/range check failed]
           uVar3 = GameObject.AddComponent(lVar2,DAT_181d9bf18);
-          puVar4 = (uint64 *)(pStatics + 0x6a8);
+          puVar4 = (uint64 *)(pPlotController + 0x6a8);
           *puVar4 = uVar3;
           il2cpp_internal(puVar4,uVar3);
-          lVar2 = *(int64 *)(pStatics + 0x6a8);
+          lVar2 = *(int64 *)(pPlotController + 0x6a8);
           if (lVar2 == null) throw; // [null/range check failed]
           Object.set_name(lVar2,"HeroSoundPlayer",0);
         }
-        lVar2 = *(int64 *)(pStatics + 0x6a8);
+        lVar2 = *(int64 *)(pPlotController + 0x6a8);
         if (lVar2 != null) {
           AudioSource.set_priority(lVar2,50);
-          lVar2 = *(int64 *)(pStatics + 0x6a8);
+          lVar2 = *(int64 *)(pPlotController + 0x6a8);
           if (lVar2 != null) {
             FUN_180467590(lVar2,pitch,0);
-            lVar2 = *(int64 *)(pStatics + 0x6a8);
+            lVar2 = *(int64 *)(pPlotController + 0x6a8);
             if (lVar2 != null) {
               AudioSource.PlayOneShot
-                        (lVar2,clip,volume * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0)
-              ;
-              return *(uint64 *)(pStatics + 0x6a8);
+                        (lVar2,clip,
+                         volume * GameController.CheckShowSpeHero,0);
+              return *(uint64 *)(pPlotController + 0x6a8);
             }
           }
         }
@@ -4127,7 +4337,7 @@ public class GlobalData
     // RVA   : 0xA37440   Offset: 0xA35C40   Length: 0x46E
     public static string GetRequireTypeText(ChoiceRequirementType targetType)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         ulong uVar2;
         ulong uVar4;
@@ -4138,7 +4348,7 @@ public class GlobalData
         if (local_res8[0] != 0) {
           if (local_res8[0] - 1U < 6) {
             uVar2 = DAT_181d8fc00;
-            lVar7 = *(int64 *)(pStatics + 0x490);
+            lVar7 = *(int64 *)(pPlotController + 0x490);
             uVar2 = Type.GetTypeFromHandle(uVar2,0);
             plVar3 = (int64 *)il2cpp_value_box(DAT_181d922e8,local_res8);
             if (plVar3 == (int64 *)0) {
@@ -4158,7 +4368,7 @@ public class GlobalData
           }
           else if (local_res8[0] - 7U < 9) {
             uVar2 = DAT_181d940e8;
-            lVar7 = *(int64 *)(pStatics + 0x498);
+            lVar7 = *(int64 *)(pPlotController + 0x498);
             uVar2 = Type.GetTypeFromHandle(uVar2,0);
             plVar3 = (int64 *)il2cpp_value_box(DAT_181d922e8,local_res8);
             if (plVar3 == (int64 *)0) goto LAB_180a378a9;
@@ -4180,7 +4390,7 @@ public class GlobalData
               return "守卫熟络";
             }
             uVar2 = DAT_181d988e8;
-            lVar7 = *(int64 *)(pStatics + 0x4a8);
+            lVar7 = *(int64 *)(pPlotController + 0x4a8);
             uVar2 = Type.GetTypeFromHandle(uVar2,0);
             plVar3 = (int64 *)il2cpp_value_box(DAT_181d922e8,local_res8);
             if (plVar3 == (int64 *)0) goto LAB_180a378a9;
@@ -4215,10 +4425,10 @@ public class GlobalData
     // RVA   : 0xA36AC0   Offset: 0xA352C0   Length: 0x5E
     public static string GetItemTypeString(int type, int littleType)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         long lVar2;
-        lVar2 = *(int64 *)(pStatics + 0x4c8);
+        lVar2 = *(int64 *)(pPlotController + 0x4c8);
         if (lVar2 != null) {
           if (*(uint32 *)(lVar2 + 24) <= type) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4226,21 +4436,21 @@ public class GlobalData
           uVar1 = lVar2[type];
           switch(type) {
           case 0:
-            lVar2 = *(int64 *)(pStatics + 0x4d0);
+            lVar2 = *(int64 *)(pPlotController + 0x4d0);
             break;
           default:
             goto switchD_180a36bd4_caseD_1;
           case 2:
-            lVar2 = *(int64 *)(pStatics + 0x4e0);
+            lVar2 = *(int64 *)(pPlotController + 0x4e0);
             break;
           case 4:
-            lVar2 = *(int64 *)(pStatics + 0x508);
+            lVar2 = *(int64 *)(pPlotController + 0x508);
             break;
           case 5:
-            lVar2 = *(int64 *)(pStatics + 0x530);
+            lVar2 = *(int64 *)(pPlotController + 0x530);
             break;
           case 6:
-            lVar2 = *(int64 *)(pStatics + 0x538);
+            lVar2 = *(int64 *)(pPlotController + 0x538);
           }
           if (lVar2 != null) {
             uVar1 = FUN_180002f80(lVar2,littleType,DAT_181d7c9c0);
@@ -4254,10 +4464,10 @@ public class GlobalData
     // RVA   : 0xA36B20   Offset: 0xA35320   Length: 0x1E8
     public static string GetItemTypeString(ItemType type, int littleType)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         long lVar2;
-        lVar2 = *(int64 *)(pStatics + 0x4c8);
+        lVar2 = *(int64 *)(pPlotController + 0x4c8);
         if (lVar2 != null) {
           if (*(uint32 *)(lVar2 + 24) <= type) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4265,21 +4475,21 @@ public class GlobalData
           uVar1 = lVar2[type];
           switch(type) {
           case 0:
-            lVar2 = *(int64 *)(pStatics + 0x4d0);
+            lVar2 = *(int64 *)(pPlotController + 0x4d0);
             break;
           default:
             goto switchD_180a36bd4_caseD_1;
           case 2:
-            lVar2 = *(int64 *)(pStatics + 0x4e0);
+            lVar2 = *(int64 *)(pPlotController + 0x4e0);
             break;
           case 4:
-            lVar2 = *(int64 *)(pStatics + 0x508);
+            lVar2 = *(int64 *)(pPlotController + 0x508);
             break;
           case 5:
-            lVar2 = *(int64 *)(pStatics + 0x530);
+            lVar2 = *(int64 *)(pPlotController + 0x530);
             break;
           case 6:
-            lVar2 = *(int64 *)(pStatics + 0x538);
+            lVar2 = *(int64 *)(pPlotController + 0x538);
           }
           if (lVar2 != null) {
             uVar1 = FUN_180002f80(lVar2,littleType,DAT_181d7c9c0);
@@ -4408,13 +4618,13 @@ public class GlobalData
     // RVA   : 0xA35B60   Offset: 0xA34360   Length: 0x1ED
     public static string GetBaseAttriName(BaseAttriType targetAttri)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
-        lVar2 = *(int64 *)(pStatics + 0x490);
+        lVar2 = *(int64 *)(pPlotController + 0x490);
         if (lVar2 != null) {
           if ((int)targetAttri < *(int *)(lVar2 + 24)) {
-            lVar2 = *(int64 *)(pStatics + 0x490);
+            lVar2 = *(int64 *)(pPlotController + 0x490);
             if (lVar2 != null) {
               if (*(uint32 *)(lVar2 + 24) <= targetAttri) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4423,17 +4633,18 @@ public class GlobalData
             }
           }
           else {
-            lVar2 = *(int64 *)(pStatics + 0x490);
+            lVar2 = *(int64 *)(pPlotController + 0x490);
             if ((lVar2 != null) &&
-               (lVar1 = *(int64 *)(pStatics + 0x498)) != null) {
+               (lVar1 = *(int64 *)(pPlotController + 0x498), lVar1 != null
+               )) {
               if ((int)targetAttri < *(int *)(lVar1 + 24) + *(int *)(lVar2 + 24)) {
-                lVar1 = *(int64 *)(pStatics + 0x490);
-                lVar2 = *(int64 *)(pStatics + 0x498);
+                lVar1 = *(int64 *)(pPlotController + 0x490);
+                lVar2 = *(int64 *)(pPlotController + 0x498);
                 if ((lVar1 == null) || (lVar2 == null)) throw; // [null/range check failed]
                 targetAttri = targetAttri - *(int *)(lVar1 + 24);
               }
               else {
-                lVar1 = pStatics;
+                lVar1 = pPlotController;
                 lVar2 = *(int64 *)(lVar1 + 0x4a8);
                 if (((*(int64 *)(lVar1 + 0x490) == 0) || (*(int64 *)(lVar1 + 0x498) == 0)) ||
                    (lVar2 == null)) throw; // [null/range check failed]
@@ -4517,19 +4728,19 @@ public class GlobalData
         uint uStack_40;
         uint32 uStack_3c;
         uint8 local_38 [48];
-        lVar4 = DAT_181d4ef00;
+        lVar4 = PlotController_StaticsPtr;
         *val = 0;
         val[1] = 0;
         if (((*(byte *)(lVar4 + 0x133) & 4) != 0) && (*(int *)(lVar4 + 224) == 0)) {
           il2cpp_runtime_class_init(lVar4);
-          lVar4 = DAT_181d4ef00;
+          lVar4 = PlotController_StaticsPtr;
         }
         lVar4 = *(int64 *)(*(int64 *)(lVar4 + 184) + 0x6b0);
         if (lVar4 != null) {
           iVar2 = *(int *)(lVar4 + 24);
           uVar3 = Mathf.FloorToInt(lVar4,0);
-          lVar7 = DAT_181d4ef00;
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x6b0);
+          lVar7 = PlotController_StaticsPtr;
+          lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x6b0);
           if (lVar4 != null) {
             if (*(int *)(lVar4 + 24) == 0) {
               uVar6 = il2cpp_internal();
@@ -4542,7 +4753,7 @@ public class GlobalData
             if (-1 < (int)uVar3) {
               if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
                 il2cpp_runtime_class_init(lVar7);
-                lVar7 = DAT_181d4ef00;
+                lVar7 = PlotController_StaticsPtr;
               }
               lVar4 = *(int64 *)(plVar7 + 0x6b0);
               if (lVar4 == null) throw; // [null/range check failed]
@@ -4550,7 +4761,7 @@ public class GlobalData
               if ((int)uVar8 < *(int *)(lVar4 + 24)) {
                 if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
                   il2cpp_runtime_class_init(lVar7);
-                  lVar7 = DAT_181d4ef00;
+                  lVar7 = PlotController_StaticsPtr;
                 }
                 lVar4 = *(int64 *)(plVar7 + 0x6b0);
                 if (lVar4 == null) throw; // [null/range check failed]
@@ -4581,14 +4792,14 @@ public class GlobalData
               else {
                 if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
                   il2cpp_runtime_class_init(lVar7);
-                  lVar7 = DAT_181d4ef00;
+                  lVar7 = PlotController_StaticsPtr;
                 }
                 lVar4 = *(int64 *)(plVar7 + 0x6b0);
                 if (lVar4 == null) throw; // [null/range check failed]
                 if ((int)uVar3 < *(int *)(lVar4 + 24)) {
                   if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
                     il2cpp_runtime_class_init(lVar7);
-                    lVar7 = DAT_181d4ef00;
+                    lVar7 = PlotController_StaticsPtr;
                   }
                   lVar4 = *(int64 *)(plVar7 + 0x6b0);
                   if (lVar4 == null) throw; // [null/range check failed]
@@ -4604,7 +4815,7 @@ public class GlobalData
                 else {
                   if (((*(byte *)(lVar7 + 0x133) & 4) != 0) && (*(int *)(lVar7 + 224) == 0)) {
                     il2cpp_runtime_class_init(lVar7);
-                    lVar7 = DAT_181d4ef00;
+                    lVar7 = PlotController_StaticsPtr;
                   }
                   lVar4 = *(int64 *)(plVar7 + 0x6b0);
                   if (lVar4 == null) throw; // [null/range check failed]
@@ -4633,7 +4844,7 @@ public class GlobalData
     public static Random GetThreadRandom()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x6c0);
+        lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x6c0);
         if (lVar1 != null) {
           ThreadLocal_1.get_Value(lVar1,DAT_181d50130);
           return;
@@ -5074,15 +5285,15 @@ public class GlobalData
     // RVA   : 0xA38600   Offset: 0xA36E00   Length: 0x9B
     public static bool IsCheckVersion(bool includeSimpleCheckVersion)
     {
-        uVar1 = (uint7)((uint64)*(int **)(DAT_181d4ef00 + 184) >> 8);
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        uVar1 = (uint7)((uint64)*(int **)(PlotController_StaticsPtr + 184) >> 8);
+        if (PlotController._instance == 2) {
           return CONCAT71(uVar1,1);
         }
         if (!includeSimpleCheckVersion) {
           return (uint64)uVar1 << 8;
         }
-        return CONCAT71((int7)((uint64)*(int **)(DAT_181d4ef00 + 184) >> 8),
-                        **(int **)(DAT_181d4ef00 + 184) == 4);
+        return CONCAT71((int7)((uint64)*(int **)(PlotController_StaticsPtr + 184) >> 8),
+                        PlotController._instance == 4);
     }
 
     // Token : 0x6001706
@@ -5133,8 +5344,6 @@ public class GlobalData
     // RVA   : 0xA3D700   Offset: 0xA3BF00   Length: 0x2A
     internal static float <Parabola>g__Func|336_0(float x, ref <>c__DisplayClass336_0 )
     {
-        uint64 FUN_180a3d700(float x,float *param_2)
-        {
         return CONCAT44(0x80000000,(-*param_2 * x * x + *param_2 * x) * 4.0);
     }
 
@@ -5142,8 +5351,6 @@ public class GlobalData
     // RVA   : 0xA3D700   Offset: 0xA3BF00   Length: 0x2A
     internal static float <Parabola>g__Func|337_0(float x, ref <>c__DisplayClass337_0 )
     {
-        uint64 FUN_180a3d700(float x,float *param_2)
-        {
         return CONCAT44(0x80000000,(-*param_2 * x * x + *param_2 * x) * 4.0);
     }
 

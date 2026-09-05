@@ -80,8 +80,6 @@ public class UILocalize
     // RVA   : 0x156FA50   Offset: 0x156E250   Length: 0xE
     private void OnEnable()
     {
-        void FUN_18156fa50(int64 this)
-        {
         if (this.mStarted) {
           UILocalize.OnLocalize(this,0);
           return;
@@ -92,8 +90,6 @@ public class UILocalize
     // RVA   : 0x156FB80   Offset: 0x156E380   Length: 0xB
     private void Start()
     {
-        void FUN_18156fb80(int64 this)
-        {
         this.mStarted = 1;
         UILocalize.OnLocalize(this,0);
     }

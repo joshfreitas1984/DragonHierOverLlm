@@ -35,8 +35,6 @@ public class UI2DSpriteAnimation
     // RVA   : 0xA75790   Offset: 0xA73F90   Length: 0x7
     public bool get_isPlaying()
     {
-        void FUN_180a75790(uint64 this)
-        {
         Behaviour.get_enabled(this,0);
     }
 
@@ -44,8 +42,6 @@ public class UI2DSpriteAnimation
     // RVA   : 0x2E7E80   Offset: 0x2E6680   Length: 0x4
     public int get_framesPerSecond()
     {
-        uint32 FUN_1802e7e80(int64 this)
-        {
         return this.framerate;
     }
 
@@ -53,8 +49,6 @@ public class UI2DSpriteAnimation
     // RVA   : 0x2E7EB0   Offset: 0x2E66B0   Length: 0x4
     public void set_framesPerSecond(int value)
     {
-        void FUN_1802e7eb0(int64 this,uint32 value)
-        {
         this.framerate = value;
     }
 
@@ -102,8 +96,6 @@ public class UI2DSpriteAnimation
     // RVA   : 0xA75320   Offset: 0xA73B20   Length: 0xA
     public void Pause()
     {
-        void FUN_180a75320(uint64 this)
-        {
         Behaviour.set_enabled(this,0,0);
     }
 
@@ -295,8 +287,6 @@ public class UI2DSpriteAnimation
     // RVA   : 0xA75770   Offset: 0xA73F70   Length: 0x14
     public void /*ctor*/()
     {
-        void FUN_180a75770(int64 this)
-        {
         this.framerate = 20;
         this.ignoreTimeScale = 0x101;
         FUN_18044ef50(this,0);

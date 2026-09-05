@@ -45,7 +45,7 @@ public class AISettingTabController
             lVar4 = Component.get_transform(this,0);
             if ((lVar4 != null) && (lVar4 = Transform.Find(lVar4,"Text",0)) != null) {
               plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d6d8c0);
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+              lVar4 = GameController.lockObj;
               if (lVar4 != null) {
                 lVar4 = *(int64 *)(lVar4 + 56);
                 if ((((this.sourceHero != null) &&
@@ -65,7 +65,7 @@ public class AISettingTabController
                     uStack_10 = *(uint32 *)(lVar4 + 32);
                     uStack_c = *(uint32 *)(lVar4 + 36);
                     (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_18,*(uint64 *)(*plVar7 + 0x2b0));
-                    lVar4 = *(int64 *)(*(int64 *)(DAT_181d84cc0 + 184) + 32);
+                    lVar4 = PlotController.SpringFestivelRewardLvTalkText;
                     if (lVar4 != null) {
                       cVar3 = FUN_181815240(lVar4,this.AISettingID,DAT_181d53780);
                       lVar4 = this.focusButton;
@@ -202,8 +202,7 @@ public class AISettingTabController
     // RVA   : 0xA07FB0   Offset: 0xA067B0   Length: 0x514
     public void FocusButtonClicked()
     {
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_ede0 = *(int64*)(DAT_181d6ede0 + 184);
+        var pStatics = *(int64*)(DAT_181d6ede0 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -214,8 +213,8 @@ public class AISettingTabController
         uint local_28;
         uint local_24;
         uint[] local_20 = new uint[2];
-        if (*pStatics_c960 != 0) {
-          plVar6 = (int64 *)(*pStatics_c960 + 0x1d8);
+        if (PlotController._instance != null) {
+          plVar6 = (int64 *)(PlotController._instance + 0x1d8);
           *plVar6 = this;
           il2cpp_internal(plVar6,this);
           if ((((this.sourceHero != null) &&
@@ -274,12 +273,12 @@ public class AISettingTabController
                 PlotController.AICollectResourceFocusChoose(lVar2,0);
               }
               else if (iVar1 == 4) {
-                if (*pStatics_ede0 == 0) throw; // [null/range check failed]
-                QuickTravelUIController.ShowQuickTravelUI(*pStatics_ede0,4);
+                if (*pStatics == 0) throw; // [null/range check failed]
+                QuickTravelUIController.ShowQuickTravelUI(*pStatics,4);
               }
               else if (iVar1 == 5) {
-                if (*pStatics_ede0 == 0) throw; // [null/range check failed]
-                QuickTravelUIController.ShowQuickTravelUI(*pStatics_ede0,5);
+                if (*pStatics == 0) throw; // [null/range check failed]
+                QuickTravelUIController.ShowQuickTravelUI(*pStatics,5);
               }
         LAB_180a08457:
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);

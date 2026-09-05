@@ -44,8 +44,6 @@ public class TweenAlpha
     // RVA   : 0xA6ED40   Offset: 0xA6D540   Length: 0x7
     public float get_alpha()
     {
-        void FUN_180a6ed40(uint64 this)
-        {
         TweenAlpha.get_value(this,0);
     }
 
@@ -53,8 +51,6 @@ public class TweenAlpha
     // RVA   : 0xA6EF20   Offset: 0xA6D720   Length: 0x8
     public void set_alpha(float value)
     {
-        void FUN_180a6ef20(uint64 this,uint64 value)
-        {
         TweenAlpha.set_value(this,value,0);
     }
 
@@ -320,8 +316,6 @@ public class TweenAlpha
     // RVA   : 0xA6ED20   Offset: 0xA6D520   Length: 0x1F
     public void /*ctor*/()
     {
-        void FUN_180a6ed20(int64 this)
-        {
         this.from = 0x3f800000;
         this.to = 0x3f800000;
         this.mBaseIntensity = 0x3f800000;

@@ -71,7 +71,7 @@ public class SteamStatsAndAchievements
         ulong uVar4;
         long lVar5;
         ulong[] local_res18 = new ulong[2];
-        if (**(int **)(DAT_181d4ef00 + 184) == 0) {
+        if (PlotController._instance == null) {
           uVar4 = **(uint64 **)(DAT_181d81df0 + 184);
           cVar2 = Object.op_Inequality(uVar4,0,0);
           if (!cVar2) {
@@ -128,7 +128,6 @@ public class SteamStatsAndAchievements
     // RVA   : 0xC7E780   Offset: 0xC7CF80   Length: 0x3F2
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         byte uVar2;
         ulong uVar3;
@@ -167,14 +166,14 @@ public class SteamStatsAndAchievements
             iVar6 = 0;
             while( true ) {
               local_res18[0] = iVar6;
-              lVar4 = *(int64 *)(pStatics + 32);
+              lVar4 = GameController.lockObj;
               if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x1c0)) == null) break;
               if (*(int *)(lVar4 + 24) <= iVar6) {
                 cVar1 = SteamUserStats.StoreStats(0);
                 this.m_bStoreStats = !cVar1;
                 return;
               }
-              lVar4 = *(int64 *)(pStatics + 8);
+              lVar4 = GameController.difficultyExtraPoint;
               if (lVar4 == null) break;
               lVar4 = *(int64 *)(lVar4 + 16);
               uVar3 = Int32.ToString(local_res18,0);
@@ -192,7 +191,7 @@ public class SteamStatsAndAchievements
                 if (*(int *)(lVar4 + 32) == 0) {
                   uVar3 = Int32.ToString(local_res18);
                   uVar3 = String.Concat("AchData",uVar3,0);
-                  lVar4 = *(int64 *)(pStatics + 8);
+                  lVar4 = GameController.difficultyExtraPoint;
                   if (lVar4 != null) {
                     lVar4 = *(int64 *)(lVar4 + 16);
                     uVar5 = Int32.ToString(local_res18,0);
@@ -207,7 +206,7 @@ public class SteamStatsAndAchievements
                 }
                 uVar3 = Int32.ToString(local_res18);
                 uVar3 = String.Concat("AchData",uVar3,0);
-                lVar4 = *(int64 *)(pStatics + 8);
+                lVar4 = GameController.difficultyExtraPoint;
                 if (lVar4 == null) break;
                 lVar4 = *(int64 *)(lVar4 + 16);
                 uVar5 = Int32.ToString(local_res18,0);
@@ -228,8 +227,6 @@ public class SteamStatsAndAchievements
     // RVA   : 0xC7D290   Offset: 0xC7BA90   Length: 0x2E7
     private void CheckDLCState()
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         bool cVar1;
         uint uVar2;
         ulong uVar3;
@@ -240,12 +237,12 @@ public class SteamStatsAndAchievements
         iVar4 = 0;
         while( true ) {
           local_res18[0] = iVar4;
-          lVar5 = *(int64 *)(pStatics_ef00 + 72);
+          lVar5 = PlotController.StopWarNeedFavor;
           if (lVar5 == null) break;
           if (*(int *)(lVar5 + 24) <= iVar4) {
             return;
           }
-          lVar5 = *(int64 *)(pStatics_ef00 + 72);
+          lVar5 = PlotController.StopWarNeedFavor;
           if (lVar5 == null) break;
           uVar2 = FUN_180002f80(lVar5,local_res18[0],DAT_181d83e78);
           uVar2 = FUN_180826e00(uVar2,0);
@@ -254,7 +251,7 @@ public class SteamStatsAndAchievements
             uVar3 = Int32.ToString(local_res18,0);
             uVar3 = String.Concat("DLC",uVar3," 0",0);
             Debug.Log(uVar3,0);
-            lVar5 = *(int64 *)(pStatics_e010 + 8);
+            lVar5 = GameController.difficultyExtraPoint;
             if (lVar5 == null) break;
             lVar5 = *(int64 *)(lVar5 + 16);
             uVar3 = Int32.ToString(local_res18,0);
@@ -266,7 +263,7 @@ public class SteamStatsAndAchievements
             uVar3 = Int32.ToString(local_res18,0);
             uVar3 = String.Concat("DLC",uVar3," 1",0);
             Debug.Log(uVar3,0);
-            lVar5 = *(int64 *)(pStatics_e010 + 8);
+            lVar5 = GameController.difficultyExtraPoint;
             if (lVar5 == null) break;
             lVar5 = *(int64 *)(lVar5 + 16);
             uVar3 = Int32.ToString(local_res18,0);
@@ -287,7 +284,7 @@ public class SteamStatsAndAchievements
         ulong uVar2;
         uint[] local_res10 = new uint[6];
         local_res10[0] = achID;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar2 = Int32.ToString(local_res10,0);
@@ -307,7 +304,6 @@ public class SteamStatsAndAchievements
     // RVA   : 0xC7D9A0   Offset: 0xC7C1A0   Length: 0x74D
     private void OnUserStatsReceived(UserStatsReceived_t pCallback)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         float fVar1;
         bool cVar2;
         int iVar3;
@@ -348,7 +344,7 @@ public class SteamStatsAndAchievements
         local_54 = 0;
         while( true ) {
           iVar3 = local_54;
-          lVar7 = *(int64 *)(pStatics + 32);
+          lVar7 = GameController.lockObj;
           if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1c0)) == null) goto LAB_180c7e0e8;
           if (*(int *)(lVar7 + 24) <= iVar3) break;
           uVar5 = Int32.ToString(&local_54,0);
@@ -363,7 +359,7 @@ public class SteamStatsAndAchievements
         }
         LAB_180c7dd64:
         do {
-          lVar7 = *(int64 *)(pStatics + 32);
+          lVar7 = GameController.lockObj;
           if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1c0)) == null) goto LAB_180c7e0e8;
           if (*(int *)(lVar7 + 24) <= iVar8) {
             lVar7 = FUN_18046c100(0);
@@ -383,7 +379,7 @@ public class SteamStatsAndAchievements
             uVar5 = String.Concat("AchData",uVar5,0);
             SteamUserStats.GetStat(uVar5,local_4c,0);
             fVar1 = local_4c[0];
-            lVar7 = *(int64 *)(pStatics + 8);
+            lVar7 = GameController.difficultyExtraPoint;
             if (lVar7 == null) goto LAB_180c7e0e8;
             lVar7 = *(int64 *)(lVar7 + 16);
             uVar5 = Int32.ToString(&local_58,0);
@@ -391,7 +387,7 @@ public class SteamStatsAndAchievements
             if (lVar7 == null) goto LAB_180c7e0e8;
             fVar9 = (float)PlayerPrefDictionary.GetFloat(lVar7,uVar5,0);
             if (fVar9 < fVar1) {
-              lVar7 = *(int64 *)(pStatics + 8);
+              lVar7 = GameController.difficultyExtraPoint;
               if (lVar7 == null) goto LAB_180c7e0e8;
               lVar7 = *(int64 *)(lVar7 + 16);
               uVar5 = Int32.ToString(&local_58,0);
@@ -405,7 +401,7 @@ public class SteamStatsAndAchievements
             uVar5 = String.Concat("AchData",uVar5,0);
             SteamUserStats.GetStat(uVar5,&local_50,0);
             iVar8 = local_50;
-            lVar7 = *(int64 *)(pStatics + 8);
+            lVar7 = GameController.difficultyExtraPoint;
             if (lVar7 == null) goto LAB_180c7e0e8;
             lVar7 = *(int64 *)(lVar7 + 16);
             uVar5 = Int32.ToString(&local_58,0);
@@ -413,7 +409,7 @@ public class SteamStatsAndAchievements
             if (lVar7 == null) goto LAB_180c7e0e8;
             iVar3 = PlayerPrefDictionary.GetInt(lVar7,uVar5,0);
             if (iVar3 < iVar8) {
-              lVar7 = *(int64 *)(pStatics + 8);
+              lVar7 = GameController.difficultyExtraPoint;
               if (lVar7 == null) goto LAB_180c7e0e8;
               lVar7 = *(int64 *)(lVar7 + 16);
               uVar5 = Int32.ToString(&local_58,0);

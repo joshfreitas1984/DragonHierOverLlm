@@ -101,24 +101,21 @@ public class DebateUIController
     // RVA   : 0xA65260   Offset: 0xA63A60   Length: 0xD6
     public static DebateUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d9aa90 + 184) + 32);
+        return PlotController.SpringFestivelRewardLvTalkText;
     }
 
     // Token : 0x600134A
     // RVA   : 0xA5D6A0   Offset: 0xA5BEA0   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d9aa90 + 184) + 32);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        PlotController.SpringFestivelRewardLvTalkText = this;
     }
 
     // Token : 0x600134B
     // RVA   : 0xA63900   Offset: 0xA62100   Length: 0xA78
     public void ShowDebateUI(HeroData _enemyData, string _fightEndCallFuc)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         float fVar1;
         bool cVar2;
         uint uVar3;
@@ -140,22 +137,22 @@ public class DebateUIController
               (lVar5 = Transform.Find(lVar5,"Player",0)) != null) &&
              (lVar5 = Transform.Find(lVar5,"Icon",0)) != null) {
             uVar6 = Component.get_gameObject(lVar5,0);
-            if (*pStatics_e188 != 0) {
-              uVar8 = *(uint64 *)(*pStatics_e188 + 144);
+            if (*pStatics != 0) {
+              uVar8 = *(uint64 *)(*pStatics + 144);
               lVar5 = GlobalData.AddChild(uVar6,uVar8,0);
               this.temp = lVar5;
               if (*plVar9 != 0) {
                 lVar5 = GameObject.GetComponent(*plVar9,DAT_181d9fb20);
-                if (((*pStatics_df90 != 0) &&
-                    (lVar7 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                   (uVar6 = WorldData.Player(lVar7,0), lVar5 != null)) {
-                  *(uint64 *)(lVar5 + 32) = uVar6;
+                if (((GameController._instance != null) &&
+                    (lVar7 = GameController._instance.worldData,
+                    lVar7 != null)) && (uVar6 = WorldData.Player(lVar7,0), lVar5 != null)) {
+                  lVar5.villageAreaID = uVar6;
                   if ((*plVar9 != 0) &&
                      (lVar5 = GameObject.GetComponent(*plVar9,DAT_181d9fb20)) != null) {
-                    *(uint32 *)(lVar5 + 24) = 0;
+                    lVar5.cityAreaID = 0;
                     if ((*plVar9 != 0) &&
                        (lVar5 = GameObject.GetComponent(*plVar9,DAT_181d9fb20)) != null) {
-                      *(uint8 *)(lVar5 + 88) = 1;
+                      lVar5.TempHeros = 1;
                       this.playerIcon = *plVar9;
                       this.enemyData = _enemyData;
                       if ((((this.debateUIPanel != null) &&
@@ -163,43 +160,44 @@ public class DebateUIController
                            )) && (lVar5 = Transform.Find(lVar5,"Enemy",0)) != null) &&
                          (lVar5 = Transform.Find(lVar5,"Icon",0)) != null) {
                         uVar6 = Component.get_gameObject(lVar5,0);
-                        if (*pStatics_e188 != 0) {
+                        if (*pStatics != 0) {
                           lVar5 = GlobalData.AddChild
                                             (uVar6,*(uint64 *)
-                                                    (*pStatics_e188 + 144),0);
+                                                    (*pStatics + 144),0);
                           *plVar9 = lVar5;
                           il2cpp_internal(plVar9,lVar5);
                           if (*plVar9 != 0) {
                             lVar5 = GameObject.GetComponent(*plVar9,DAT_181d9fb20);
                             if (lVar5 != null) {
-                              *(uint64 *)(lVar5 + 32) = this.enemyData;
+                              lVar5.villageAreaID = this.enemyData;
                               if ((*plVar9 != 0) &&
                                  (lVar5 = GameObject.GetComponent(*plVar9,DAT_181d9fb20)) != null) {
-                                *(uint32 *)(lVar5 + 24) = 0;
+                                lVar5.cityAreaID = 0;
                                 if ((*plVar9 != 0) &&
                                    (lVar5 = GameObject.GetComponent(*plVar9,DAT_181d9fb20)) != null)
                                 {
-                                  *(uint8 *)(lVar5 + 88) = 1;
+                                  lVar5.TempHeros = 1;
                                   this.enemyIcon = *plVar9;
-                                  if ((((*pStatics_df90 != 0) &&
+                                  if ((((GameController._instance != null) &&
                                        (lVar5 = *(int64 *)
-                                                 (*pStatics_df90 + 32),
-                                       lVar5 != null)) && (lVar5 = WorldData.Player(lVar5,0)) != null)
-                                     && (lVar5 = *(int64 *)(lVar5 + 0x168)) != null) {
-                                    if (*(uint32 *)(lVar5 + 24) < 4) {
+                                                 (GameController._instance + 32
+                                                 ), lVar5 != null)) &&
+                                      (lVar5 = WorldData.Player(lVar5,0)) != null) &&
+                                     (lVar5 = lVar5.showRoomChangeFame) != null) {
+                                    if (lVar5.cityAreaID < 4) {
                                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                     }
-                                    fVar13 = (float)(int)*(float *)(*(int64 *)(lVar5 + 16) + 44) +
+                                    fVar13 = (float)(int)*(float *)(lVar5.chapter + 44) +
                                              50.0;
                                     this.playerPatient = fVar13;
                                     if ((this.enemyData != null) &&
                                        (lVar5 = this.enemyData.totalLivingSkill,
                                        lVar5 != null)) {
-                                      if (*(uint32 *)(lVar5 + 24) < 4) {
+                                      if (lVar5.cityAreaID < 4) {
                                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         fVar13 = this.playerPatient;
                                       }
-                                      fVar1 = *(float *)(*(int64 *)(lVar5 + 16) + 44);
+                                      fVar1 = *(float *)(lVar5.chapter + 44);
                                       this.playerMaxPatient = fVar13;
                                       fVar13 = (float)(int)fVar1 + 50.0;
                                       this.enemyPatient = fVar13;
@@ -247,20 +245,20 @@ public class DebateUIController
           DebateUIController.GenerateNextTopic(this,0);
           DebateUIController.FullFillCard(this,1,0);
           DebateUIController.FullFillCard(this,0,0);
-          if ((((*pStatics_df90 != 0) &&
-               (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-              (lVar5 = WorldData.Player(lVar5,0)) != null) &&
-             (lVar5 = *(int64 *)(lVar5 + 0x168)) != null) {
-            if (*(uint32 *)(lVar5 + 24) < 4) {
+          if ((((GameController._instance != null) &&
+               (lVar5 = GameController._instance.worldData,
+               lVar5 != null)) && (lVar5 = WorldData.Player(lVar5,0)) != null) &&
+             (lVar5 = lVar5.showRoomChangeFame) != null) {
+            if (lVar5.cityAreaID < 4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            fVar13 = *(float *)(*(int64 *)(lVar5 + 16) + 44);
+            fVar13 = *(float *)(lVar5.chapter + 44);
             if ((this.enemyData != null) &&
                (lVar5 = this.enemyData.totalLivingSkill) != null) {
-              if (*(uint32 *)(lVar5 + 24) < 4) {
+              if (lVar5.cityAreaID < 4) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              fVar1 = *(float *)(*(int64 *)(lVar5 + 16) + 44);
+              fVar1 = *(float *)(lVar5.chapter + 44);
               this.debateState = 1;
               this.playerActiveRound = fVar1 <= fVar13;
               DebateUIController.RefreshAllButtonState(this,0);
@@ -277,13 +275,13 @@ public class DebateUIController
           goto LAB_180a64373;
         }
         if (lVar5 == null) goto LAB_180a64373;
-        uVar3 = FUN_180d8cf10(0,*(uint32 *)(lVar5 + 24),0);
-        if (*(uint32 *)(lVar5 + 24) <= uVar3) {
+        uVar3 = FUN_180d8cf10(0,lVar5.cityAreaID,0);
+        if (lVar5.cityAreaID <= uVar3) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         if (lVar10 == null) goto LAB_180a64373;
         FUN_181814fa0(lVar10,*(uint32 *)
-                              (*(int64 *)(lVar5 + 16) + 32 + (int64)(int)uVar3 * 4),
+                              (lVar5.chapter + 32 + (int64)(int)uVar3 * 4),
                       DAT_181d56ec0);
         lVar7 = this.debateTopics;
         if (lVar7 == null) goto LAB_180a64373;
@@ -325,7 +323,6 @@ public class DebateUIController
     // RVA   : 0xA5EBC0   Offset: 0xA5D3C0   Length: 0xBD9
     public GameObject GetAIUseCard()
     {
-        var pStatics = *(int64*)(DAT_181d4dc38 + 184);
         int iVar1;
         int iVar2;
         uint uVar3;
@@ -439,13 +436,11 @@ public class DebateUIController
         }
         else if (lVar5 != null) {
           if (0 < *(int *)(lVar5 + 24)) {
-            lVar7 = *(int64 *)(pStatics + 8);
+            lVar7 = DebateUIController.WinPassiveTalkText;
             if (lVar7 == null) {
-              uVar9 = **(uint64 **)(DAT_181d4dc38 + 184);
+              uVar9 = DebateUIController.ActiveTalkText;
               lVar7 = new OnTooltipCB(uVar9,DAT_181d76f08,DAT_181d85e18);
-              plVar10 = (int64 *)(pStatics + 8);
-              *plVar10 = lVar7;
-              il2cpp_internal(plVar10,lVar7);
+              DebateUIController.WinPassiveTalkText = lVar7;
             }
             List_1.Sort(lVar5,lVar7,DAT_181d61f78);
           }
@@ -722,9 +717,8 @@ public class DebateUIController
     // RVA   : 0xA60100   Offset: 0xA5E900   Length: 0x2A20
     public void NextDebateRound()
     {
-        var pStatics_8ad8 = *(int64*)(DAT_181d88ad8 + 184);
-        var pStatics_aa08 = *(int64*)(DAT_181d9aa08 + 184);
-        var pStatics_aa90 = *(int64*)(DAT_181d9aa90 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d88ad8 + 184);
         float fVar4;
         bool cVar5;
         uint uVar6;
@@ -759,8 +753,8 @@ public class DebateUIController
         uint8 local_b8 [16];
         uint8 local_a8 [16];
         uint8 local_98 [96];
-        if (*pStatics_8ad8 == 0) goto LAB_180a62b12;
-        TutorialController.StartTutorial(*pStatics_8ad8,"论战系统",0);
+        if (*pStatics == 0) goto LAB_180a62b12;
+        TutorialController.StartTutorial(*pStatics,"论战系统",0);
         this.debateState = this.debateState + 1;
         this.cardUsed = 0;
         switch(this.debateState) {
@@ -815,8 +809,8 @@ public class DebateUIController
             goto LAB_180a61165;
           }
         LAB_180a60651:
-          if (*pStatics_aa08 == 0) goto LAB_180a62b12;
-          local_f8 = *(int *)(*pStatics_aa08 + 24) + -1;
+          if (DebateCardData.SpeCardName == null) goto LAB_180a62b12;
+          local_f8 = DebateCardData.SpeCardName.targetAttriID + -1;
           if (local_f8 < 0) {
         LAB_180a61165:
             if (*(char *)(lVar19 + 17) != false) goto LAB_180a6116f;
@@ -831,10 +825,10 @@ public class DebateUIController
             }
             if (iVar7 < iVar22) {
               if (!this.playerActiveRound) {
-                lVar8 = *(int64 *)(pStatics_aa90 + 8);
+                lVar8 = PlotController.LeftFaceHideOffset;
               }
               else {
-                lVar8 = *(int64 *)(pStatics_aa90 + 16);
+                lVar8 = *(int64 *)(pPlotController + 16);
               }
               DebateUIController.ChangePatient
                         (this,0,((float)(iVar22 - iVar7) * 0.025 + 1.0) * -10.0,0);
@@ -882,10 +876,10 @@ public class DebateUIController
             else {
               if (iVar22 < iVar7) {
                 if (!this.playerActiveRound) {
-                  lVar8 = *(int64 *)(pStatics_aa90 + 16);
+                  lVar8 = *(int64 *)(pPlotController + 16);
                 }
                 else {
-                  lVar8 = *(int64 *)(pStatics_aa90 + 8);
+                  lVar8 = PlotController.LeftFaceHideOffset;
                 }
                 DebateUIController.ChangePatient
                           (this,1,((float)(iVar7 - iVar22) * 0.025 + 1.0) * -10.0,0);
@@ -925,7 +919,7 @@ public class DebateUIController
                 puVar12 = (uint32 *)Color.get_green(&local_118,0);
                 goto LAB_180a61eb4;
               }
-              lVar8 = *(int64 *)(pStatics_aa90 + 24);
+              lVar8 = PlotController.CheckHideChoice;
               uVar16 = DebateUIController.GetOutCardObj(this,1,0);
               DebateUIController.SetCardDark(this,uVar16,0);
               uVar16 = DebateUIController.GetOutCardObj(this,0,0);
@@ -1300,7 +1294,7 @@ public class DebateUIController
           fVar4 = local_120;
           if (lVar20 == null) goto LAB_180a62b18;
           if (*(char *)(lVar20 + 17) == false) {
-            if ((**(int **)(DAT_181d4ef00 + 184) != 2) && (*(int *)(lVar20 + 24) != -1)) {
+            if ((PlotController._instance != 2) && (*(int *)(lVar20 + 24) != -1)) {
               lVar19 = FUN_18046c220(0);
               if (!this.playerActiveRound) {
                 uVar16 = this.playerIcon;
@@ -1351,7 +1345,7 @@ public class DebateUIController
             else {
               uVar16 = this.enemyIcon;
             }
-            lVar8 = *(int64 *)(pStatics_aa08 + 16);
+            lVar8 = DebateCardData.SpeCardTalk;
             fVar4 = local_120;
             if ((lVar8 == null) ||
                (uVar18 = FUN_180002f80(lVar8,*(uint32 *)(lVar20 + 20),DAT_181d7c9c0),
@@ -1532,7 +1526,7 @@ public class DebateUIController
                   }
                 }
                 else {
-                  lVar20 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                  lVar20 = GameController.lockObj;
                   fVar4 = local_120;
                   if (lVar20 != null) {
                     GameDataController.ChangeAchStats(lVar20,2);
@@ -1856,8 +1850,6 @@ public class DebateUIController
     // RVA   : 0xA5DDD0   Offset: 0xA5C5D0   Length: 0x18
     public void DebateUIBackClicked()
     {
-        void FUN_180a5ddd0(int64 this)
-        {
         if (this.waitClick) {
           this.waitClick = 0;
           DebateUIController.NextDebateRound(this,0);
@@ -1869,8 +1861,6 @@ public class DebateUIController
     // RVA   : 0xA5FA90   Offset: 0xA5E290   Length: 0xA
     public void GiveUpButtonClicked()
     {
-        void FUN_180a5fa90(uint64 this)
-        {
         DebateUIController.UseDebateCard(this,0,0);
     }
 
@@ -1916,8 +1906,6 @@ public class DebateUIController
     // RVA   : 0xA62B40   Offset: 0xA61340   Length: 0x17
     public bool NotAngry(bool isPlayer)
     {
-        bool FUN_180a62b40(int64 this,char isPlayer)
-        {
         if (isPlayer) {
           return this.playerAngryRound < 1;
         }
@@ -2008,7 +1996,7 @@ public class DebateUIController
           TweenSettingsExtensions.OnComplete(uVar7,uVar9,DAT_181d96ee8);
           if (this.debateState != 2) goto LAB_180a64bf3;
           if (*(char *)(lVar11 + 17) == false) {
-            if (**(int **)(DAT_181d4ef00 + 184) == 2) goto LAB_180a64bf3;
+            if (PlotController._instance == 2) goto LAB_180a64bf3;
             lVar6 = *pStatics;
             if (*(char *)(lVar11 + 16) == false) {
               uVar7 = this.enemyIcon;
@@ -2016,9 +2004,9 @@ public class DebateUIController
             else {
               uVar7 = this.playerIcon;
             }
-            lVar12 = **(int64 **)(DAT_181d9aa90 + 184);
+            lVar12 = PlotController._instance;
             if (lVar12 == null) goto LAB_180a64c31;
-            uVar5 = FUN_180d8cf10(0,*(uint32 *)(lVar12 + 24),0);
+            uVar5 = FUN_180d8cf10(0,lVar12.plotHappen,0);
             uVar9 = FUN_180002f80(lVar12,uVar5,DAT_181d7c9c0);
             uVar5 = *(uint32 *)(lVar11 + 24);
             uVar10 = GlobalData.GetBaseAttriName(uVar5,0);
@@ -2026,15 +2014,15 @@ public class DebateUIController
               lVar11 = FUN_18046c0a0(0);
               uVar13 = this.enemyData;
               lVar12 = FUN_18046c0a0(0);
-              if (((lVar12 == null) || (*(int64 *)(lVar12 + 32) == 0)) ||
-                 (uVar14 = WorldData.Player(*(int64 *)(lVar12 + 32),0), lVar11 == null))
+              if (((lVar12 == null) || (lVar12.plotPanel == null)) ||
+                 (uVar14 = WorldData.Player(lVar12.plotPanel,0), lVar11 == null))
               goto LAB_180a64c31;
             }
             else {
               lVar11 = FUN_18046c0a0(0);
               lVar12 = FUN_18046c0a0(0);
-              if (((lVar12 == null) || (*(int64 *)(lVar12 + 32) == 0)) ||
-                 (uVar13 = WorldData.Player(*(int64 *)(lVar12 + 32),0), lVar11 == null))
+              if (((lVar12 == null) || (lVar12.plotPanel == null)) ||
+                 (uVar13 = WorldData.Player(lVar12.plotPanel,0), lVar11 == null))
               goto LAB_180a64c31;
               uVar14 = this.enemyData;
             }
@@ -2049,10 +2037,10 @@ public class DebateUIController
           else {
             uVar7 = this.playerIcon;
           }
-          lVar12 = *(int64 *)(*(int64 *)(DAT_181d9aa08 + 184) + 16);
+          lVar12 = DebateCardData.SpeCardTalk;
           if (lVar12 == null) goto LAB_180a64c31;
           uVar2 = *(uint32 *)(lVar11 + 20);
-          if (*(uint32 *)(lVar12 + 24) <= uVar2) {
+          if (lVar12.plotHappen <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (lVar6 == null) goto LAB_180a64c31;
@@ -2094,7 +2082,8 @@ public class DebateUIController
           else {
             bVar15 = this.debateState == 2;
           }
-          lVar11 = new ZhSegment(0);
+          lVar11 = il2cpp_internal(DebateCardData_StaticsPtr);
+          ZhSegment.Initialize(lVar11,0);
           *(bool *)(lVar11 + 16) = bVar15;
           *(uint8 *)(lVar11 + 17) = 0;
           *(uint32 *)(lVar11 + 20) = 0;
@@ -2188,8 +2177,6 @@ public class DebateUIController
     // RVA   : 0xA600E0   Offset: 0xA5E8E0   Length: 0x16
     public bool IsPlayerRound()
     {
-        bool FUN_180a600e0(int64 this)
-        {
         if (this.playerActiveRound) {
           return this.debateState == 2;
         }
@@ -2241,7 +2228,7 @@ public class DebateUIController
         else {
           this.playerPatient = num + this.playerPatient;
         }
-        lVar3 = **(int64 **)(DAT_181d4df90 + 184);
+        lVar3 = GameController._instance;
         uVar4 = GlobalData.GenerateChangeColorText("",num,0);
         lVar5 = DebateUIController.GetObjRoot(this,isPlayer,0);
         if (lVar5 != null) {
@@ -2420,8 +2407,6 @@ public class DebateUIController
     // RVA   : 0xA5DF80   Offset: 0xA5C780   Length: 0x93D
     public void FullFillCard(bool isPlayer)
     {
-        var pStatics_aa08 = *(int64*)(DAT_181d9aa08 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         bool cVar2;
         int iVar3;
         uint uVar4;
@@ -2453,9 +2438,9 @@ public class DebateUIController
             lVar6 = this.enemyData;
           }
           else {
-            if ((*pStatics_df90 == 0) ||
-               (lVar6 = *(int64 *)(*pStatics_df90 + 32)) == null)
-            throw; // [null/range check failed]
+            if ((GameController._instance == null) ||
+               (lVar6 = GameController._instance.worldData,
+               lVar6 == null)) throw; // [null/range check failed]
             lVar6 = WorldData.Player(lVar6,0);
           }
           local_res20 = 0;
@@ -2483,9 +2468,9 @@ public class DebateUIController
               if (fVar13 < *(float *)(lVar8._items + 40) * 0.001 + 0.05) {
                 if (*plVar1 == 0) break;
                 lVar8 = GameObject.GetComponent(*plVar1,DAT_181d9f438);
-                if (*pStatics_aa08 == 0) break;
+                if (DebateCardData.SpeCardName == null) break;
                 lVar9 = lVar6.totalLivingSkill;
-                uVar4 = *(uint32 *)(*pStatics_aa08 + 24);
+                uVar4 = DebateCardData.SpeCardName.targetAttriID;
                 if (lVar9 == null) break;
                 if (*(uint32 *)(lVar9 + 24) < 4) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2493,7 +2478,8 @@ public class DebateUIController
                 uVar4 = Mathf.Min(uVar4,1 - (int)(*(float *)(*(int64 *)(lVar9 + 16) + 44) * -0.05)
                                    ,0);
                 uVar4 = FUN_180d8cf10(0,uVar4,0);
-                lVar9 = new ZhSegment(0);
+                lVar9 = il2cpp_internal(DebateCardData_StaticsPtr);
+                ZhSegment.Initialize(lVar9,0);
                 *(char *)(lVar9 + 16) = isPlayer;
                 *(uint8 *)(lVar9 + 17) = 1;
                 *(uint32 *)(lVar9 + 20) = uVar4;
@@ -2516,7 +2502,8 @@ public class DebateUIController
                 local_100 = Mathf.Max(1,uVar4);
                 if (*plVar1 == 0) break;
                 lVar8 = GameObject.GetComponent(*plVar1,DAT_181d9f438);
-                lVar9 = new ZhSegment(0);
+                lVar9 = il2cpp_internal(DebateCardData_StaticsPtr);
+                ZhSegment.Initialize(lVar9,0);
                 *(char *)(lVar9 + 16) = isPlayer;
                 *(uint32 *)(lVar9 + 24) = local_104;
                 *(uint32 *)(lVar9 + 28) = local_100;
@@ -2760,8 +2747,6 @@ public class DebateUIController
     // RVA   : 0xA65250   Offset: 0xA63A50   Length: 0xF
     public void /*ctor*/()
     {
-        void FUN_180a65250(int64 this)
-        {
         this.lastTopic = 0xffffffffffffffff;
         FUN_18044ef50(this,0);
     }
@@ -2770,7 +2755,7 @@ public class DebateUIController
     // RVA   : 0xA64C40   Offset: 0xA63440   Length: 0x602
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d9aa90 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         lVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(lVar1,DAT_181d7c250);
@@ -2786,7 +2771,7 @@ public class DebateUIController
           FUN_181827900(lVar1,"“{0}”者奥妙非常，\n非常人能够掌握",DAT_181d7c3d0);
           FUN_181827900(lVar1,"不知{1}之“{0}”，\n与我相比孰强孰弱？",DAT_181d7c3d0);
           FUN_181827900(lVar1,"便用这“{0}”，\n令你心服口服",DAT_181d7c3d0);
-          plVar2 = pStatics;
+          plVar2 = pPlotController;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -2802,9 +2787,7 @@ public class DebateUIController
             FUN_181827900(lVar1,"{1}此言前后多有矛盾，\n还请三思",DAT_181d7c3d0);
             FUN_181827900(lVar1,"{1}语无伦次，文不对题，\n需先理清思路，方可发言",DAT_181d7c3d0);
             FUN_181827900(lVar1,"{1}“{0}”修为尚浅\n切勿自以为是",DAT_181d7c3d0);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            PlotController.LeftFaceHideOffset = lVar1;
             lVar1 = il2cpp_internal(DAT_181d72a30);
             FUN_180f58a90(lVar1,DAT_181d7c250);
             if (lVar1 != null) {
@@ -2819,7 +2802,7 @@ public class DebateUIController
               FUN_181827900(lVar1,"山外有山，人外有人，\n今日方知此言真意",DAT_181d7c3d0);
               FUN_181827900(lVar1,"{1}辩才无双，佩服佩服！",DAT_181d7c3d0);
               FUN_181827900(lVar1,"我之“{0}”竟远不及{1}，\n惭愧惭愧",DAT_181d7c3d0);
-              plVar2 = (int64 *)(pStatics + 16);
+              plVar2 = (int64 *)(pPlotController + 16);
               *plVar2 = lVar1;
               il2cpp_internal(plVar2,lVar1);
               lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -2828,9 +2811,7 @@ public class DebateUIController
                 FUN_181827900(lVar1,"{1}的“{0}”，\n竟与我不相上下",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"真是棋逢对手",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"此局只能说难分高下",DAT_181d7c3d0);
-                plVar2 = (int64 *)(pStatics + 24);
-                *plVar2 = lVar1;
-                il2cpp_internal(plVar2,lVar1);
+                PlotController.CheckHideChoice = lVar1;
                 return;
               }
             }
@@ -2842,8 +2823,6 @@ public class DebateUIController
     // RVA   : 0xA64400   Offset: 0xA62C00   Length: 0x8
     private void <NextDebateRound>b__40_0()
     {
-        void FUN_180a64400(int64 this)
-        {
         this.waitClick = 1;
     }
 

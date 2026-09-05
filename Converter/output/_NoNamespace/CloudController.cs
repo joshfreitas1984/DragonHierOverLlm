@@ -118,7 +118,7 @@ public class CloudController
             bVar10 = !DAT_181e78390;
             this.refreshTime = 0x3dcccccd;
             if (bVar10) {
-              il2cpp_runtime_class_init(&DAT_181d4ef00);
+              il2cpp_internal(&PlotController_StaticsPtr);
               DAT_181e78390 = true;
             }
             if ((*pStatics_fc60 != 0) &&
@@ -320,8 +320,6 @@ public class CloudController
     // RVA   : 0x9FCEF0   Offset: 0x9FB6F0   Length: 0x28
     public float GetChangeColor(float nowColor, float targetColor, float delta)
     {
-        void FUN_1809fcef0(uint64 this,float nowColor,float targetColor,float delta)
-        {
         if (nowColor == targetColor) {
           return;
         }

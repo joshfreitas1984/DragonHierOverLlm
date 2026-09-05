@@ -53,10 +53,10 @@ public class AreaTileData
     // RVA   : 0x7EFCE0   Offset: 0x7EE4E0   Length: 0xBE
     public AreaData GetArea()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           WorldData.GetArea(lVar1,this.areaID,0);
           return;
         }

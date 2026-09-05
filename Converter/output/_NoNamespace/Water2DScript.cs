@@ -59,8 +59,6 @@ public class Water2DScript
     // RVA   : 0x9DF430   Offset: 0x9DDC30   Length: 0xF
     public void /*ctor*/()
     {
-        void FUN_1809df430(int64 this)
-        {
         this.speed = 0x3c23d70a;
         FUN_18044ef50(this,0);
     }

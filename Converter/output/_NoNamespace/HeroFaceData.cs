@@ -42,7 +42,7 @@ public class HeroFaceData
         lVar2 = this.faceID;
         while (lVar2 != null) {
           iVar1 = lVar2.Count;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x1e0);
+          lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x1e0);
           if (lVar2 == null) break;
           if (lVar2.Count <= iVar1) {
             return;

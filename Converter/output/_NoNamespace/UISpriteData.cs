@@ -70,8 +70,9 @@ public class UISpriteData
     // RVA   : 0x1691E70   Offset: 0x1690670   Length: 0x13
     public void SetRect(int x, int y, int width, int height)
     {
-        void FUN_181691e70(int64 this,uint32 x,uint32 y,uint32 width,
-                        uint32 height)
+        void UISpriteData.SetRect
+                     (int64 this,uint32 x,uint32 y,uint32 width,
+                     uint32 height)
         {
         this.height = height;
         this.x = x;
@@ -83,8 +84,9 @@ public class UISpriteData
     // RVA   : 0x1691E50   Offset: 0x1690650   Length: 0x13
     public void SetPadding(int left, int bottom, int right, int top)
     {
-        void FUN_181691e50(int64 this,uint32 left,uint32 bottom,uint32 right,
-                        uint32 top)
+        void UISpriteData.SetPadding
+                     (int64 this,uint32 left,uint32 bottom,uint32 right,
+                     uint32 top)
         {
         this.paddingTop = top;
         this.paddingLeft = left;
@@ -96,8 +98,9 @@ public class UISpriteData
     // RVA   : 0x1691E30   Offset: 0x1690630   Length: 0x13
     public void SetBorder(int left, int bottom, int right, int top)
     {
-        void FUN_181691e30(int64 this,uint32 left,uint32 bottom,uint32 right,
-                        uint32 top)
+        void UISpriteData.SetBorder
+                     (int64 this,uint32 left,uint32 bottom,uint32 right,
+                     uint32 top)
         {
         this.borderTop = top;
         this.borderLeft = left;

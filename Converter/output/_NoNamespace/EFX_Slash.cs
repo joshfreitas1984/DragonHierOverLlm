@@ -29,8 +29,6 @@ public class EFX_Slash
     // RVA   : 0x930FF0   Offset: 0x92F7F0   Length: 0x7
     private void Start()
     {
-        void FUN_180930ff0(uint64 this)
-        {
         EFX_Slash.ResetToBeginning(this,0);
     }
 

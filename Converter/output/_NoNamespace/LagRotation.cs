@@ -26,8 +26,6 @@ public class LagRotation
     // RVA   : 0xA84790   Offset: 0xA82F90   Length: 0x10
     public void OnRepositionEnd()
     {
-        void FUN_180a84790(uint64 this)
-        {
         LagRotation.Interpolate(this,0x447a0000,0);
     }
 
@@ -148,8 +146,6 @@ public class LagRotation
     // RVA   : 0xA84850   Offset: 0xA83050   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180a84850(int64 this)
-        {
         this.speed = 0x41200000;
         FUN_18044ef50(this,0);
     }

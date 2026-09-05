@@ -20,8 +20,6 @@ public class ToggleTargetScale
     // RVA   : 0xAC63E0   Offset: 0xAC4BE0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180ac63e0(int64 this)
-        {
         this.onScale = 0x3f800000;
         this.offscale = 0x3f800000;
         ZhSegment.Initialize(this,0);

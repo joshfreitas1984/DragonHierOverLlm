@@ -7206,7 +7206,7 @@
     translated: "Inner Power"
   - subIndex: 3
     text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
   - subIndex: 4
     text: "全架势"
     translated: "Full‑tilt"
@@ -12015,17 +12015,17 @@
 - raw: "体力"
   splits:
   - text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
 - raw: "体力{0}"
   splits:
   - text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
   templates:
   - template: "{0}⟦0⟧"
 - raw: "体力{0}</color>"
   splits:
   - text: "体力"
-    translated: "Strength"
+    translated: "Stamina"
   templates:
   - template: "{0}⟦0⟧</color>"
 - raw: "体力上限"
@@ -15367,7 +15367,7 @@
 - raw: "只要耐下性子慢慢搜寻，虽说消耗些体力，但总能采到足够的药材的。"
   splits:
   - text: "只要耐下性子慢慢搜寻，虽说消耗些体力，但总能采到足够的药材的。"
-    translated: "While they patiently search, even though it may consume some energy, they will eventually find enough herbs."
+    translated: "Just take your time and slowly search. Although it may consume some stamina, you will eventually find enough herbs."
 - raw: "只要花上{0}银两，便能为#TargetInteractName#上下打点一番，\n治愈少许在牢狱中累积的伤势。"
   splits:
   - text: "只要花上"
@@ -19835,7 +19835,7 @@
     translated: "Inner Power"
   - subIndex: 2
     text: "体力恢复效率"
-    translated: "Recovery efficiency"
+    translated: "Stamina recovery efficiency"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "增加给对方施加负面状态的概率"

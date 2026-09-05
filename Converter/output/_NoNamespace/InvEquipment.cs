@@ -157,8 +157,6 @@ public class InvEquipment
     // RVA   : 0xB725E0   Offset: 0xB70DE0   Length: 0x4D
     public InvGameItem Unequip(InvGameItem item)
     {
-        void FUN_180b72630(uint64 this,uint64 item)
-        {
         InvEquipment.Replace(this,item,0,0);
     }
 
@@ -166,8 +164,6 @@ public class InvEquipment
     // RVA   : 0xB72630   Offset: 0xB70E30   Length: 0xB
     public InvGameItem Unequip(Slot slot)
     {
-        void FUN_180b72630(uint64 this,uint64 slot)
-        {
         InvEquipment.Replace(this,slot,0,0);
     }
 

@@ -17,8 +17,7 @@ public class MonthMissionButtonController
     // RVA   : 0xAF4220   Offset: 0xAF2A20   Length: 0xCBA
     private void Update()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         int iVar2;
         bool cVar3;
@@ -45,10 +44,10 @@ public class MonthMissionButtonController
         }
         this.inited = 1;
         fVar17 = local_60;
-        if ((*pStatics_df90 == 0) ||
-           (lVar5 = *(int64 *)(*pStatics_df90 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar5 = GameController._instance.worldData) == null)
         goto LAB_180af4ecf;
-        if (*(int *)(lVar5 + 156) == 0) {
+        if (lVar5.gameMode == null) {
           lVar5 = FUN_18046c0a0(0);
           fVar17 = local_60;
           if ((lVar5 == null) || (lVar5.speMissionID == null)) goto LAB_180af4ecf;
@@ -58,35 +57,35 @@ public class MonthMissionButtonController
           if ((this.targetMission == null) ||
              (lVar6 = this.targetMission.missionTargetDatas) == null)
           goto LAB_180af4ecf;
-          if (*(int *)(lVar6 + 24) == 0) {
+          if (lVar6.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+          lVar6 = *(int64 *)(lVar6.chapter + 32);
           fVar17 = local_60;
-          if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 56)) == null) goto LAB_180af4ecf;
-          if (*(int *)(lVar6 + 24) == 0) {
+          if ((lVar6 = lVar6?.Inns) == null) goto LAB_180af4ecf;
+          if (lVar6.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+          lVar6 = *(int64 *)(lVar6.chapter + 32);
           fVar17 = local_60;
           if (lVar6 == null) goto LAB_180af4ecf;
-          if (*(int *)(lVar6 + 16) == 2) {
+          if (lVar6.chapter == 2) {
             if ((this.targetMission == null) ||
                (lVar6 = this.targetMission.missionTargetDatas) == null)
             goto LAB_180af4ecf;
-            if (*(int *)(lVar6 + 24) == 0) {
+            if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+            lVar6 = *(int64 *)(lVar6.chapter + 32);
             fVar17 = local_60;
-            if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 56)) == null) goto LAB_180af4ecf;
-            if (*(int *)(lVar6 + 24) == 0) {
+            if ((lVar6 = lVar6?.Inns) == null) goto LAB_180af4ecf;
+            if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+            lVar6 = *(int64 *)(lVar6.chapter + 32);
             fVar17 = local_60;
             if (lVar6 == null) goto LAB_180af4ecf;
-            bVar15 = *(int *)(lVar6 + 32) == 0;
+            bVar15 = lVar6.villageAreaID == null;
           }
           else {
             bVar15 = false;
@@ -97,7 +96,7 @@ public class MonthMissionButtonController
           lVar5 = Component.GetComponent(this,DAT_181d6af40);
           fVar17 = local_60;
           if (lVar5 == null) goto LAB_180af4ecf;
-          if (*(char *)(lVar5 + 208) == false) {
+          if (!lVar5.infos) {
             lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
             uVar8 = "完成一次门派任务才能选择";
             fVar17 = local_60;
@@ -110,31 +109,32 @@ public class MonthMissionButtonController
         LAB_180af45a4:
           lVar5 = Component.GetComponent(this,DAT_181d6af40);
           fVar17 = local_60;
-          if ((((*pStatics_df90 == 0) ||
-               (lVar6 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-              (lVar6 = WorldData.Player(lVar6,0), fVar17 = local_60) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar6 = GameController._instance.worldData,
+               lVar6 == null)) || (lVar6 = WorldData.Player(lVar6,0), fVar17 = local_60) == null) ||
              ((this.targetMission == null || (lVar5 == null)))) goto LAB_180af4ecf;
           iVar2 = this.targetMission.minForceLv;
           Selectable.set_interactable
-                    (lVar5,CONCAT31((int3)((uint32)iVar2 >> 8),iVar2 <= *(int *)(lVar6 + 184)),0);
+                    (lVar5,CONCAT31((int3)((uint32)iVar2 >> 8),iVar2 <= lVar6.forceMeetingStarted),0);
           lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
           fVar17 = local_60;
-          if ((((*pStatics_df90 == 0) ||
-               (lVar6 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-              (lVar6 = WorldData.Player(lVar6,0), fVar17 = local_60) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar6 = GameController._instance.worldData,
+               lVar6 == null)) || (lVar6 = WorldData.Player(lVar6,0), fVar17 = local_60) == null) ||
              (lVar13 = this.targetMission) == null) goto LAB_180af4ecf;
           uVar8 = "";
-          if (*(int *)(lVar6 + 184) < lVar13.minForceLv) {
-            if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) && (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-              il2cpp_runtime_class_init(DAT_181d4ef00);
+          if (lVar6.forceMeetingStarted < lVar13.minForceLv) {
+            if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+               (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+              il2cpp_runtime_class_init(PlotController_StaticsPtr);
               lVar13 = this.targetMission;
             }
-            lVar6 = *(int64 *)(pStatics_ef00 + 0x3d0);
+            lVar6 = *(int64 *)(pPlotController + 0x3d0);
             fVar17 = local_60;
             if (lVar13 == null) goto LAB_180af4ecf;
             uVar1 = lVar13.minForceLv;
             if (lVar6 == null) goto LAB_180af4ecf;
-            if (*(uint32 *)(lVar6 + 24) <= uVar1) {
+            if (lVar6.cityAreaID <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
               lVar13 = this.targetMission;
             }
@@ -142,7 +142,7 @@ public class MonthMissionButtonController
             if (lVar13 == null) goto LAB_180af4ecf;
             uVar8 = GlobalData.GenerateRareLvColorText
                               (*(uint64 *)
-                                (*(int64 *)(lVar6 + 16) + 32 + (int64)(int)uVar1 * 8),
+                                (lVar6.chapter + 32 + (int64)(int)uVar1 * 8),
                                lVar13.minForceLv,0);
             uVar8 = String.Concat("需要 ",uVar8,0);
           }
@@ -173,19 +173,19 @@ public class MonthMissionButtonController
             if ((this.targetMission == null) ||
                (lVar6 = this.targetMission.missionTargetDatas) == null)
             goto LAB_180af4ecf;
-            if (*(int *)(lVar6 + 24) == 0) {
+            if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+            lVar6 = *(int64 *)(lVar6.chapter + 32);
             fVar17 = local_60;
-            if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 56)) == null) goto LAB_180af4ecf;
-            if (*(int *)(lVar6 + 24) == 0) {
+            if ((lVar6 = lVar6?.Inns) == null) goto LAB_180af4ecf;
+            if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+            lVar6 = *(int64 *)(lVar6.chapter + 32);
             fVar17 = local_60;
             if (((lVar6 == null) ||
-                (uVar4 = Int32.Parse(*(uint64 *)(lVar6 + 24),0), fVar17 = local_60, lVar5 == null)) ||
+                (uVar4 = Int32.Parse(lVar6.cityAreaID,0), fVar17 = local_60, lVar5 == null)) ||
                (lVar5 = WorldData.GetHero(lVar5,uVar4,0), fVar17 = local_60) == null)
             goto LAB_180af4ecf;
             fVar16 = (float)HeroData.Favor(lVar5,0,0);
@@ -205,10 +205,10 @@ public class MonthMissionButtonController
             uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
             uVar12 = "对方好感 60{1}(当前{0})</color>";
             if (fVar16 < 60.0) {
-              uVar14 = *(uint64 *)(pStatics_ef00 + 0x2c8);
+              uVar14 = *(uint64 *)(pPlotController + 0x2c8);
             }
             else {
-              uVar14 = *(uint64 *)(pStatics_ef00 + 0x260);
+              uVar14 = *(uint64 *)(pPlotController + 0x260);
             }
             uVar12 = String.Format(uVar12,uVar7,uVar14,0);
             uVar8 = String.Concat(uVar8,uVar11,uVar12,0);
@@ -335,7 +335,7 @@ public class MonthMissionButtonController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d637f0 + 184) + 16);
+        lVar1 = MeetingController._instance;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           MeetingController.MonthMissionButtonClicked(lVar1,uVar2,0);

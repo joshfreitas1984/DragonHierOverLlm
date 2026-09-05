@@ -71,7 +71,7 @@ public class ForceTechLvData
           lVar6 = ForceTechLvData.Database(this,0);
           if (lVar6 != null) {
             fVar1 = *(float *)(lVar6 + 56);
-            lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x440);
+            lVar6 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x440);
             lVar7 = ForceTechLvData.Database(this,0);
             if ((lVar7 != null) && (lVar6 != null)) {
               uVar5 = *(uint32 *)(lVar7 + 60);
@@ -134,14 +134,13 @@ public class ForceTechLvData
     // RVA   : 0x7872E0   Offset: 0x785AE0   Length: 0xB
     public string GetSpeDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
         long lVar4;
         ulong uVar5;
         float[] local_res20 = new float[2];
-        lVar2 = *(int64 *)(pStatics + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 != null) {
           lVar2 = *(int64 *)(lVar2 + 152);
           lVar4 = ForceTechLvData.Database(this,0);
@@ -153,7 +152,7 @@ public class ForceTechLvData
             lVar2 = lVar2[uVar1];
             if (lVar2 != null) {
               uVar3 = *(uint64 *)(lVar2 + 16);
-              lVar2 = *(int64 *)(pStatics + 32);
+              lVar2 = GameController.lockObj;
               if (lVar2 != null) {
                 lVar2 = *(int64 *)(lVar2 + 152);
                 lVar4 = ForceTechLvData.Database(this,0);
@@ -188,14 +187,13 @@ public class ForceTechLvData
     // RVA   : 0x787090   Offset: 0x785890   Length: 0x24E
     public string GetSpeDescribe(int _lv)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
         long lVar4;
         ulong uVar5;
         float[] local_res20 = new float[2];
-        lVar2 = *(int64 *)(pStatics + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 != null) {
           lVar2 = *(int64 *)(lVar2 + 152);
           lVar4 = ForceTechLvData.Database(this,0);
@@ -207,7 +205,7 @@ public class ForceTechLvData
             lVar2 = lVar2[uVar1];
             if (lVar2 != null) {
               uVar3 = *(uint64 *)(lVar2 + 16);
-              lVar2 = *(int64 *)(pStatics + 32);
+              lVar2 = GameController.lockObj;
               if (lVar2 != null) {
                 lVar2 = *(int64 *)(lVar2 + 152);
                 lVar4 = ForceTechLvData.Database(this,0);
@@ -243,7 +241,7 @@ public class ForceTechLvData
     public ForceTechDataBase Database()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 160)) != null) {
           FUN_1817cc780(lVar1,this.techID,DAT_181d94420);
           return;

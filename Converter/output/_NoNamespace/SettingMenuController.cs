@@ -65,22 +65,19 @@ public class SettingMenuController
     // RVA   : 0x96AD40   Offset: 0x969540   Length: 0x58
     public static SettingMenuController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d7c740 + 184) + 8);
+        return SettingMenuController._instance;
     }
 
     // Token : 0x6002063
     // RVA   : 0x968CB0   Offset: 0x9674B0   Length: 0xE0
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d7c740 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = SettingMenuController._instance;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (cVar2) {
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = this;
-          il2cpp_internal(puVar3,this);
+          SettingMenuController._instance = this;
         }
     }
 
@@ -88,8 +85,8 @@ public class SettingMenuController
     // RVA   : 0x969180   Offset: 0x967980   Length: 0x8F2
     public void RefreshSettingState()
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar2;
         long lVar3;
         bool cVar4;
@@ -104,33 +101,34 @@ public class SettingMenuController
           lVar8 = this.solutionDropDown;
           this.inited = 1;
           if (lVar8 == null) throw; // [null/range check failed]
-          Dropdown.AddOptions(lVar8,*(uint64 *)(pStatics_ef00 + 176),0);
+          Dropdown.AddOptions
+                    (lVar8,*(uint64 *)(pPlotController + 176),0);
         }
         plVar1 = this.volumeSlider;
-        lVar8 = *(int64 *)(pStatics_e010 + 8);
+        lVar8 = GameController.difficultyExtraPoint;
         if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
           uVar9 = PlayerPrefDictionary.GetFloat(lVar8,"Volume",0);
           if (plVar1 != (int64 *)0) {
             (**(code **)(*plVar1 + 0x428))(plVar1,uVar9,*(uint64 *)(*plVar1 + 0x430));
             plVar1 = this.bgmVolumeSlider;
-            lVar8 = *(int64 *)(pStatics_e010 + 8);
+            lVar8 = GameController.difficultyExtraPoint;
             if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
               uVar9 = PlayerPrefDictionary.GetFloat(lVar8,"BgmVolume",0);
               if (plVar1 != (int64 *)0) {
                 (**(code **)(*plVar1 + 0x428))(plVar1,uVar9,*(uint64 *)(*plVar1 + 0x430));
                 plVar1 = this.soundEffectVolumeSlider;
-                lVar8 = *(int64 *)(pStatics_e010 + 8);
+                lVar8 = GameController.difficultyExtraPoint;
                 if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
                   uVar9 = PlayerPrefDictionary.GetFloat(lVar8,"SoundEffectVolume",0);
                   if (plVar1 != (int64 *)0) {
                     (**(code **)(*plVar1 + 0x428))(plVar1,uVar9,*(uint64 *)(*plVar1 + 0x430));
                     lVar8 = this.solutionDropDown;
-                    lVar2 = *(int64 *)(pStatics_ef00 + 176);
-                    lVar3 = *(int64 *)(pStatics_e010 + 8);
+                    lVar2 = *(int64 *)(pPlotController + 176);
+                    lVar3 = GameController.difficultyExtraPoint;
                     if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
                       local_res8[0] = PlayerPrefDictionary.GetInt(lVar3,"ScreenWidth",0);
                       uVar6 = Int32.ToString(local_res8,0);
-                      lVar3 = *(int64 *)(pStatics_e010 + 8);
+                      lVar3 = GameController.difficultyExtraPoint;
                       if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
                         local_res8[0] = PlayerPrefDictionary.GetInt(lVar3,"ScreenHeight",0);
                         uVar7 = Int32.ToString(local_res8,0);
@@ -156,7 +154,7 @@ public class SettingMenuController
                                 if (lVar8 == null) throw; // [null/range check failed]
                                 GameObject.SetActive(lVar8,1,0);
                                 lVar8 = this.languageDropDown;
-                                lVar2 = **(int64 **)(DAT_181d7c740 + 184);
+                                lVar2 = SettingMenuController.TargetLanguage;
                                 uVar9 = LTLocalization.GetNowSystemLanguage(0);
                                 if (lVar2 == null) throw; // [null/range check failed]
                                 uVar9 = FUN_1817ff280(lVar2,uVar9,DAT_181d7d1b8);
@@ -164,26 +162,28 @@ public class SettingMenuController
                                 Dropdown.set_value(lVar8,uVar9,0);
                               }
                               lVar8 = this.fullScreen;
-                              lVar2 = *(int64 *)(pStatics_e010 + 8);
+                              lVar2 = GameController.difficultyExtraPoint;
                               if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                 iVar5 = PlayerPrefDictionary.GetInt(lVar2,"FullScreen",0);
                                 if (lVar8 != null) {
                                   Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                   lVar8 = this.skipTutorial;
-                                  lVar2 = *(int64 *)(pStatics_e010 + 8);
+                                  lVar2 = *(int64 *)
+                                           (pGameController + 8);
                                   if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                     iVar5 = PlayerPrefDictionary.GetInt(lVar2,"SkipTutorial",0);
                                     if (lVar8 != null) {
                                       Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                       lVar8 = this.autoSave;
-                                      lVar2 = *(int64 *)(pStatics_e010 + 8);
+                                      lVar2 = *(int64 *)
+                                               (pGameController + 8);
                                       if ((lVar2 != null) &&
                                          (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                         uVar9 = PlayerPrefDictionary.GetInt(lVar2,"AutoSave",0);
                                         if (lVar8 != null) {
                                           Dropdown.set_value(lVar8,uVar9,0);
-                                          if (*(char *)(pStatics_ef00 + 16) !=
-                                              false) {
+                                          if (*(char *)(pPlotController +
+                                                       16) != false) {
                                             if (this.settingMenu == null) throw; // [null/range check failed]
                                             lVar8 = GameObject.get_transform
                                                               (this.settingMenu,0);
@@ -197,7 +197,8 @@ public class SettingMenuController
                                             GameObject.SetActive(lVar8,0,0);
                                           }
                                           lVar8 = this.fastTalk;
-                                          lVar2 = *(int64 *)(pStatics_e010 + 8);
+                                          lVar2 = *(int64 *)
+                                                   (pGameController + 8);
                                           if ((lVar2 != null) &&
                                              (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                             iVar5 = PlayerPrefDictionary.GetInt(lVar2,"FastTalk",0);
@@ -205,7 +206,8 @@ public class SettingMenuController
                                               Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                               lVar8 = this.fightViewFollow;
                                               lVar2 = *(int64 *)
-                                                       (pStatics_e010 + 8);
+                                                       (pGameController +
+                                                       8);
                                               if ((lVar2 != null) &&
                                                  (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                                 iVar5 = PlayerPrefDictionary.GetInt
@@ -214,7 +216,8 @@ public class SettingMenuController
                                                   Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                                   lVar8 = this.fightScreenShake;
                                                   lVar2 = *(int64 *)
-                                                           (pStatics_e010 + 8);
+                                                           (*(int64 *)
+                                                             (GameController_StaticsPtr + 184) + 8);
                                                   if ((lVar2 != null) &&
                                                      (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                                     iVar5 = PlayerPrefDictionary.GetInt
@@ -223,7 +226,8 @@ public class SettingMenuController
                                                       Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                                       lVar8 = this.skipSpeGetItem;
                                                       lVar2 = *(int64 *)
-                                                               (pStatics_e010 + 8);
+                                                               (*(int64 *)
+                                                                 (GameController_StaticsPtr + 184) + 8);
                                                       if ((lVar2 != null) &&
                                                          (lVar2 = *(int64 *)(lVar2 + 16)) != null
                                                          ) {
@@ -233,7 +237,8 @@ public class SettingMenuController
                                                           Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                                           lVar8 = this.rightPopInfo;
                                                           lVar2 = *(int64 *)
-                                                                   (pStatics_e010 +
+                                                                   (*(int64 *)
+                                                                     (GameController_StaticsPtr + 184) +
                                                                    8);
                                                           if ((lVar2 != null) &&
                                                              (lVar2 = *(int64 *)(lVar2 + 16),
@@ -245,7 +250,8 @@ public class SettingMenuController
                                                               lVar8 = this.evadeBalance;
                                                               lVar2 = *(int64 *)
                                                                        (*(int64 *)
-                                                                         (DAT_181d4e010 + 184) + 8);
+                                                                         (GameController_StaticsPtr + 184
+                                                                         ) + 8);
                                                               if ((lVar2 != null) &&
                                                                  (lVar2 = *(int64 *)(lVar2 + 16),
                                                                  lVar2 != null)) {
@@ -394,7 +400,7 @@ public class SettingMenuController
                   uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181d98af0);
                   uVar3 = new OnTooltipCB(this,DAT_181d7eb40,0);
                   TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181d96ee8);
-                  lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+                  lVar1 = GameController.lockObj;
                   if (lVar1 != null) {
                     GameDataController.SavePlayerprefData(lVar1,0);
                     plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
@@ -416,11 +422,10 @@ public class SettingMenuController
     // RVA   : 0x96AB00   Offset: 0x969300   Length: 0x17C
     public void VolumeSliderChanged()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         ulong uVar3;
         uint uVar4;
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           plVar2 = this.volumeSlider;
@@ -432,7 +437,7 @@ public class SettingMenuController
               if (plVar2 != (int64 *)0) {
                 uVar4 = (**(code **)(*plVar2 + 0x418))(plVar2,*(uint64 *)(*plVar2 + 0x420));
                 AudioListener.set_volume(uVar4,0);
-                lVar1 = *(int64 *)(pStatics + 32);
+                lVar1 = GameController.lockObj;
                 if (lVar1 != null) {
                   uVar3 = *(uint64 *)(lVar1 + 0x1f0);
                   NGUITools.PlaySound(uVar3,0x3e4ccccd,0);
@@ -448,13 +453,11 @@ public class SettingMenuController
     // RVA   : 0x968D90   Offset: 0x967590   Length: 0x2C9
     public void BgmVolumeSliderChanged()
     {
-        var pStatics_a9a8 = *(int64*)(DAT_181d8a9a8 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         ulong uVar3;
         bool cVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(pStatics_e010 + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           plVar2 = this.bgmVolumeSlider;
@@ -462,14 +465,14 @@ public class SettingMenuController
             uVar5 = (**(code **)(*plVar2 + 0x418))(plVar2,*(uint64 *)(*plVar2 + 0x420));
             if (lVar1 != null) {
               PlayerPrefDictionary.SetKey(lVar1,"BgmVolume",uVar5,0);
-              uVar3 = *(uint64 *)(pStatics_a9a8 + 8);
+              uVar3 = BGMController._instance;
               cVar4 = Object.op_Inequality(uVar3,0,0);
               if (cVar4) {
-                lVar1 = *(int64 *)(pStatics_a9a8 + 8);
+                lVar1 = BGMController._instance;
                 if (lVar1 == null) throw; // [null/range check failed]
                 BGMController.RefreshNowBgmVolumn(lVar1,0);
               }
-              lVar1 = *(int64 *)(pStatics_e010 + 32);
+              lVar1 = GameController.lockObj;
               if (lVar1 != null) {
                 uVar3 = *(uint64 *)(lVar1 + 0x1f0);
                 NGUITools.PlaySound(uVar3,0x3e4ccccd,0);
@@ -484,15 +487,14 @@ public class SettingMenuController
     // RVA   : 0x96A6A0   Offset: 0x968EA0   Length: 0x195
     public void SoundEffectVolumeSliderChanged()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar2;
         ulong uVar3;
         uint uVar4;
         plVar1 = this.soundEffectVolumeSlider;
         if (plVar1 != (int64 *)0) {
           uVar4 = (**(code **)(*plVar1 + 0x418))(plVar1,*(uint64 *)(*plVar1 + 0x420));
-          *(uint32 *)(pStatics + 16) = uVar4;
-          lVar2 = *(int64 *)(pStatics + 8);
+          GameController.CheckShowSpeHero = uVar4;
+          lVar2 = GameController.difficultyExtraPoint;
           if (lVar2 != null) {
             plVar1 = this.soundEffectVolumeSlider;
             lVar2 = *(int64 *)(lVar2 + 16);
@@ -500,7 +502,7 @@ public class SettingMenuController
               uVar4 = (**(code **)(*plVar1 + 0x418))(plVar1,*(uint64 *)(*plVar1 + 0x420));
               if (lVar2 != null) {
                 PlayerPrefDictionary.SetKey(lVar2,"SoundEffectVolume",uVar4,0);
-                lVar2 = *(int64 *)(pStatics + 32);
+                lVar2 = GameController.lockObj;
                 if (lVar2 != null) {
                   uVar3 = *(uint64 *)(lVar2 + 0x1f0);
                   NGUITools.PlaySound(uVar3,0x3e4ccccd,0);
@@ -525,7 +527,7 @@ public class SettingMenuController
         ulong uVar7;
         if (this.solutionDropDown != null) {
           uVar1 = *(uint32 *)(this.solutionDropDown + 0x120);
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 176);
+          lVar6 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 176);
           if (lVar6 != null) {
             if (*(uint32 *)(lVar6 + 24) <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -574,7 +576,7 @@ public class SettingMenuController
         long lVar4;
         long lVar5;
         ulong uVar6;
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 176);
+        lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 176);
         if (lVar5 != null) {
           if (*(uint32 *)(lVar5 + 24) <= resulotionID) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -618,7 +620,7 @@ public class SettingMenuController
     {
         uint uVar1;
         long lVar2;
-        lVar2 = **(int64 **)(DAT_181d7c740 + 184);
+        lVar2 = SettingMenuController.TargetLanguage;
         if ((this.languageDropDown != null) && (lVar2 != null)) {
           uVar1 = *(uint32 *)(this.languageDropDown + 0x120);
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -646,13 +648,12 @@ public class SettingMenuController
     // RVA   : 0x96A0A0   Offset: 0x9688A0   Length: 0x1A6
     public void SetSkipTutorial()
     {
-        var pStatics_8ad8 = *(int64*)(DAT_181d88ad8 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
+        var pStatics = *(int64*)(DAT_181d88ad8 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
         int iVar4;
-        lVar1 = *(int64 *)(pStatics_e010 + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.skipTutorial != null) && (lVar1 != null)) {
@@ -661,12 +662,12 @@ public class SettingMenuController
             uVar2 = **(uint64 **)(DAT_181d88ad8 + 184);
             cVar3 = Object.op_Inequality(uVar2,0,0);
             if (cVar3) {
-              lVar1 = *(int64 *)(pStatics_e010 + 8);
+              lVar1 = GameController.difficultyExtraPoint;
               if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) throw; // [null/range check failed]
               iVar4 = PlayerPrefDictionary.GetInt(lVar1,"SkipTutorial",0);
               if (iVar4 == 1) {
-                if (*pStatics_8ad8 == 0) throw; // [null/range check failed]
-                *(uint8 *)(*pStatics_8ad8 + 89) = 0;
+                if (*pStatics == 0) throw; // [null/range check failed]
+                *(uint8 *)(*pStatics + 89) = 0;
               }
             }
             return;
@@ -679,7 +680,7 @@ public class SettingMenuController
     public void SetAutoSave()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (((lVar1 != null) && (this.autoSave != null)) &&
            (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           PlayerPrefDictionary.SetKey
@@ -693,7 +694,7 @@ public class SettingMenuController
     public void SetFastTalk()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.fastTalk != null) && (lVar1 != null)) {
@@ -709,7 +710,7 @@ public class SettingMenuController
     public void SetFightViewFollow()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.fightViewFollow != null) && (lVar1 != null)) {
@@ -725,7 +726,7 @@ public class SettingMenuController
     public void SetFightScreenShake()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.fightScreenShake != null) && (lVar1 != null)) {
@@ -741,7 +742,7 @@ public class SettingMenuController
     public void SetSkipSpeGetItem()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.skipSpeGetItem != null) && (lVar1 != null)) {
@@ -757,7 +758,7 @@ public class SettingMenuController
     public void SetRightPopInfo()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.rightPopInfo != null) && (lVar1 != null)) {
@@ -773,7 +774,7 @@ public class SettingMenuController
     public void SetNoEvadeBalance()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.evadeBalance != null) && (lVar1 != null)) {
@@ -801,7 +802,7 @@ public class SettingMenuController
         if (lVar2 != null) {
           FUN_181814fa0(lVar2,40,DAT_181d7d140);
           FUN_181814fa0(lVar2,41,DAT_181d7d140);
-          plVar1 = *(int64 **)(DAT_181d7c740 + 184);
+          plVar1 = *(int64 **)(SettingMenuController_StaticsPtr + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;

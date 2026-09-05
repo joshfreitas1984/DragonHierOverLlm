@@ -138,7 +138,7 @@ public class QuickTravelUIController
                   uStack_30 = puVar3[2];
                   uStack_2c = puVar3[3];
                   fVar4 = (float)FUN_18044e2b0(&local_38,0);
-                  fVar1 = *(float *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x110);
+                  fVar1 = *(float *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x110);
                   this.BaseMapScale = fVar4 / (fVar1 + fVar1);
                   if (this.quickTravelUI != null) {
                     lVar2 = GameObject.get_transform(this.quickTravelUI,0);
@@ -476,8 +476,6 @@ public class QuickTravelUIController
     // RVA   : 0xC50BA0   Offset: 0xC4F3A0   Length: 0x1078
     private void InitQuickTravelMap()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         float fVar1;
         ulong uVar2;
         ulong uVar3;
@@ -530,9 +528,9 @@ public class QuickTravelUIController
         uStack_f8 = 0;
         local_f0 = 0;
         this.inited = 1;
-        if (((*pStatics_df90 != 0) &&
-            (lVar13 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-           (lVar13 = *(int64 *)(lVar13 + 48)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar13 = GameController._instance.worldData, lVar13 != null
+            )) && (lVar13 = lVar13.Areas) != null) {
           FUN_1817ff240(&local_148,lVar13,DAT_181d550e0);
           local_b8 = local_148;
           uStack_b4 = uStack_144;
@@ -560,7 +558,7 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar8 = FUN_180002f80(this.areaSprite,*(uint32 *)(lVar13 + 72),
+            uVar8 = FUN_180002f80(this.areaSprite,lVar13.Forces,
                                   DAT_181d7c050);
             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -597,7 +595,7 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar8 = FUN_180002f80(this.areaSpriteOutLine,*(uint32 *)(lVar13 + 72),
+            uVar8 = FUN_180002f80(this.areaSpriteOutLine,lVar13.Forces,
                                   DAT_181d7c050);
             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -641,12 +639,12 @@ public class QuickTravelUIController
             RectTransform.set_sizeDelta(lVar7,CONCAT44(fStackX_1c * 0.5,local_res18 * 0.5),0);
             lVar7 = GameObject.get_transform(lVar6,0);
             fVar1 = this.BaseMapScale;
-            if (*(int64 *)(lVar13 + 64) == 0) {
+            if (lVar13.ResourcePoints == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             puVar10 = (uint64 *)
-                      BigMapPos.ToVector3(local_88,*(int64 *)(lVar13 + 64),0x3f800000,0);
+                      BigMapPos.ToVector3(local_88,lVar13.ResourcePoints,0x3f800000,0);
             local_d8 = *(float *)(puVar10 + 1);
             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -655,13 +653,13 @@ public class QuickTravelUIController
             local_c8 = CONCAT44((float)((uint64)*puVar10 >> 32) * fVar1,(float)*puVar10 * fVar1);
             local_c0 = local_d8 * fVar1;
             Transform.set_localPosition(lVar7,&local_c8,0);
-            if (*(int *)(pStatics_ef00 + 8) == 1) {
-              lVar7 = *(int64 *)(pStatics_ef00 + 24);
+            if (PlotController.LeftFaceHideOffset == 1) {
+              lVar7 = PlotController.CheckHideChoice;
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar4 = FUN_181815240(lVar7,*(uint32 *)(lVar13 + 16),DAT_181d67bf8);
+              cVar4 = FUN_181815240(lVar7,lVar13.chapter,DAT_181d67bf8);
               if (!cVar4) {
                 plVar9 = (int64 *)GameObject.GetComponent(lVar6,DAT_181d9fe50);
                 if (plVar9 == (int64 *)0) {
@@ -681,7 +679,7 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar15 = FUN_1800d6780(this.areaNameOffset,*(uint32 *)(lVar13 + 72),
+            uVar15 = FUN_1800d6780(this.areaNameOffset,lVar13.Forces,
                                    DAT_181d796d8);
             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -707,7 +705,7 @@ public class QuickTravelUIController
               FUN_1800d6620();
             }
             uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
-            LTLocalization.SetText(uVar8,*(uint64 *)(lVar13 + 24),0);
+            LTLocalization.SetText(uVar8,lVar13.cityAreaID,0);
             lVar7 = GameObject.GetComponent(lVar6,DAT_181da0868);
             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -721,26 +719,26 @@ public class QuickTravelUIController
             FUN_181827900(this.areaObjs,lVar6);
             iVar14 = 0;
             while( true ) {
-              lVar6 = *(int64 *)(lVar13 + 152);
+              lVar6 = lVar13.cheating;
               if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               if (*(int *)(lVar6 + 24) <= iVar14) break;
               iVar5 = FUN_1800d6750(lVar6,iVar14);
-              if (*(int *)(lVar13 + 16) < iVar5) {
-                lVar6 = *(int64 *)(lVar13 + 64);
+              if (lVar13.chapter < iVar5) {
+                lVar6 = lVar13.ResourcePoints;
                 lVar7 = FUN_18046c0a0(0);
                 if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
                 lVar7 = *(int64 *)(lVar7 + 32);
-                if (*(int64 *)(lVar13 + 152) == 0) {
+                if (lVar13.cheating == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar15 = FUN_1800d6750(*(int64 *)(lVar13 + 152),iVar14);
+                uVar15 = FUN_1800d6750(lVar13.cheating,iVar14);
                 if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -804,8 +802,8 @@ public class QuickTravelUIController
           }
           ZhSegment.Initialize(&local_b8,DAT_181d63948);
           lVar13 = FUN_18046c0a0(0);
-          if (((lVar13 != null) && (*(int64 *)(lVar13 + 32) != 0)) &&
-             (lVar13 = *(int64 *)(*(int64 *)(lVar13 + 32) + 64)) != null) {
+          if (((lVar13 != null) && (lVar13.villageAreaID != null)) &&
+             (lVar13 = *(int64 *)(lVar13.villageAreaID + 64)) != null) {
             FUN_1817ff240(&local_148,lVar13,DAT_181d780d8);
             local_118 = CONCAT44(uStack_144,local_148);
             uStack_110 = CONCAT44(uStack_13c,uStack_140);
@@ -827,12 +825,12 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              if (*(int64 *)(lVar13 + 48) == 0) {
+              if (lVar13.Areas == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               puVar10 = (uint64 *)
-                        BigMapPos.ToVector3(&local_148,*(int64 *)(lVar13 + 48),0x3f800000,0);
+                        BigMapPos.ToVector3(&local_148,lVar13.Areas,0x3f800000,0);
               local_150 = *(float *)(puVar10 + 1);
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -857,7 +855,7 @@ public class QuickTravelUIController
                 FUN_1800d6620();
               }
               uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
-              LTLocalization.SetText(uVar8,*(uint64 *)(lVar13 + 24),0);
+              LTLocalization.SetText(uVar8,lVar13.cityAreaID,0);
               lVar7 = GameObject.GetComponent(lVar6,DAT_181da0978);
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -872,8 +870,8 @@ public class QuickTravelUIController
             }
             ZhSegment.Initialize(&local_118,DAT_181d6a638);
             lVar13 = FUN_18046c0a0(0);
-            if (((lVar13 != null) && (*(int64 *)(lVar13 + 32) != 0)) &&
-               (lVar13 = *(int64 *)(*(int64 *)(lVar13 + 32) + 56)) != null) {
+            if (((lVar13 != null) && (lVar13.villageAreaID != null)) &&
+               (lVar13 = *(int64 *)(lVar13.villageAreaID + 56)) != null) {
               FUN_1817ff240(&local_148,lVar13,DAT_181d673f8);
               local_f0 = local_138;
               while( true ) {
@@ -896,12 +894,12 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(lVar13 + 48) == 0) {
+                if (lVar13.Areas == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
                 puVar10 = (uint64 *)
-                          BigMapPos.ToVector3(&local_148,*(int64 *)(lVar13 + 48),0x3f800000,0);
+                          BigMapPos.ToVector3(&local_148,lVar13.Areas,0x3f800000,0);
                 local_150 = *(float *)(puVar10 + 1);
                 if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -924,7 +922,7 @@ public class QuickTravelUIController
                 lVar7 = Transform.Find(lVar7,"AreaName",0);
                 if (lVar7 == null) break;
                 uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
-                LTLocalization.SetText(uVar8,*(uint64 *)(lVar13 + 24),0);
+                LTLocalization.SetText(uVar8,lVar13.cityAreaID,0);
                 lVar7 = GameObject.GetComponent(lVar6,DAT_181da08f0);
                 if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -948,8 +946,6 @@ public class QuickTravelUIController
     // RVA   : 0xC55E10   Offset: 0xC54610   Length: 0xE
     private void Update()
     {
-        void FUN_180c55e10(int64 this)
-        {
         if (!this.inited) {
           QuickTravelUIController.InitQuickTravelMap(this,0);
           return;
@@ -1134,8 +1130,6 @@ public class QuickTravelUIController
     // RVA   : 0xC506E0   Offset: 0xC4EEE0   Length: 0x11
     public void BackgroundClicked()
     {
-        void FUN_180c506e0(int64 this)
-        {
         if (!this.autoClose) {
           QuickTravelUIController.HideQuickTravelUI(this,0);
           return;
@@ -1202,8 +1196,7 @@ public class QuickTravelUIController
     // RVA   : 0xC55970   Offset: 0xC54170   Length: 0x22
     public void ShowQuickTravelUI(QuickTravelUIType targetTravelUIType)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void QuickTravelUIController.ShowQuickTravelUI
                      (int64 this,uint32 targetTravelUIType,int64 param_3,uint8 param_4)
         {
@@ -1326,11 +1319,11 @@ public class QuickTravelUIController
         if (this.playerIcon == null) goto LAB_180c55938;
         lVar5 = GameObject.get_transform(this.playerIcon,0);
         fVar15 = this.BaseMapScale;
-        if ((((*pStatics_df90 == 0) ||
-             (lVar9 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-            (lVar9 = WorldData.Player(lVar9,0)) == null) || (*(int64 *)(lVar9 + 200) == 0))
+        if ((((GameController._instance == null) ||
+             (lVar9 = GameController._instance.worldData) == null
+             ) || (lVar9 = WorldData.Player(lVar9,0)) == null) || (lVar9.playerServantForceTime == 0))
         goto LAB_180c55938;
-        plVar4 = (int64 *)BigMapPos.ToVector3(&local_288,*(int64 *)(lVar9 + 200),0x3f800000,0);
+        plVar4 = (int64 *)BigMapPos.ToVector3(&local_288,lVar9.playerServantForceTime,0x3f800000,0);
         local_240 = *plVar4;
         local_238 = *(float *)(plVar4 + 1);
         local_278 = CONCAT44((float)((uint64)local_240 >> 32) * fVar15,(float)local_240 * fVar15);
@@ -1349,9 +1342,9 @@ public class QuickTravelUIController
         FUN_180f58a90(lVar9,DAT_181d678f8);
         local_278 = lVar9;
         if (this.quickTravelUIType == 3) {
-          if (((*pStatics_df90 == 0) ||
-              (lVar11 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-             (lVar11 = *(int64 *)(lVar11 + 48)) == null) goto LAB_180c55938;
+          if (((GameController._instance == null) ||
+              (lVar11 = GameController._instance.worldData,
+              lVar11 == null)) || (lVar11 = lVar11.Areas) == null) goto LAB_180c55938;
           FUN_1817ff240(&local_230,lVar11,DAT_181d550e0);
           local_258 = CONCAT44(uStack_22c,local_230);
           uStack_250 = CONCAT44(uStack_224,uStack_228);
@@ -1367,13 +1360,13 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              FUN_181814fa0(lVar9,*(uint32 *)(lVar11 + 16),DAT_181d67a78);
+              FUN_181814fa0(lVar9,lVar11.chapter,DAT_181d67a78);
             }
           }
           ZhSegment.Initialize(&local_258,DAT_181d63948);
-          if (((*pStatics_df90 == 0) ||
-              (lVar11 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-             (lVar11 = *(int64 *)(lVar11 + 48)) == null) goto LAB_180c55938;
+          if (((GameController._instance == null) ||
+              (lVar11 = GameController._instance.worldData,
+              lVar11 == null)) || (lVar11 = lVar11.Areas) == null) goto LAB_180c55938;
           FUN_1817ff240(&local_230,lVar11,DAT_181d550e0);
           local_258 = CONCAT44(uStack_22c,local_230);
           uStack_250 = CONCAT44(uStack_224,uStack_228);
@@ -1405,11 +1398,11 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            cVar1 = ForceData.CanAttack(lVar10,*(uint32 *)(lVar11 + 112));
+            cVar1 = ForceData.CanAttack(lVar10,lVar11.lastRandomWorldEventDay);
             plVar4 = plVar14;
             if (cVar1) {
               while( true ) {
-                lVar10 = *(int64 *)(lVar11 + 152);
+                lVar10 = lVar11.cheating;
                 if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -1428,7 +1421,7 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              FUN_181814fa0(lVar5,*(uint32 *)(lVar11 + 16));
+              FUN_181814fa0(lVar5,lVar11.chapter);
             }
             goto LAB_180c52f70;
           }
@@ -1452,8 +1445,8 @@ public class QuickTravelUIController
         cVar1 = Object.op_Inequality(uVar8,0);
         if (cVar1) {
           lVar11 = FUN_18046c0a0(0);
-          if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-             (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+          if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+             (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
           goto LAB_180c55938;
           if (*(int *)(lVar11 + 132) < 0) {
         LAB_180c54773:
@@ -1476,33 +1469,33 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 112) < 0) goto LAB_180c54773;
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+            if (*(int *)(lVar11.cityAreaID + 112) < 0) goto LAB_180c54773;
             if (((this.areaIcons == null) ||
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-            iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+            iVar3 = *(int *)(lVar11.cityAreaID + 112);
             lVar11 = FUN_18046c0a0(0);
-            if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-               (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+            if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+               (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
             goto LAB_180c55938;
             if (iVar3 != *(int *)(lVar11 + 132)) {
               if ((((this.areaIcons != null) &&
                    (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                   ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                    ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                    (*(int64 *)(lVar11 + 24) != 0)))))) &&
-                 (lVar11 = AreaData.GetForce(*(int64 *)(lVar11 + 24),0)) != null) {
+                    (lVar11.cityAreaID != null)))))) &&
+                 (lVar11 = AreaData.GetForce(lVar11.cityAreaID,0)) != null) {
                 iVar3 = *(int *)(lVar11 + 60);
                 lVar11 = FUN_18046c0a0(0);
-                if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                   (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                   (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                   if (iVar3 == *(int *)(lVar11 + 132)) goto LAB_180c546d2;
                   lVar11 = FUN_18046c0a0(0);
-                  if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                     (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                  if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                     (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                     lVar11 = HeroData.GetForce(lVar11,0,0);
                     if (((((this.areaIcons != null) &&
                           (lVar10 = GameObject.get_transform(this.areaIcons,0),
@@ -1525,8 +1518,8 @@ public class QuickTravelUIController
                       }
                       else {
                         lVar11 = FUN_18046c0a0(0);
-                        if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                           (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                        if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                           (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                           lVar11 = HeroData.GetForce(lVar11,0,0);
                           if ((((this.areaIcons != null) &&
                                (lVar10 = GameObject.get_transform(this.areaIcons,0),
@@ -1544,7 +1537,7 @@ public class QuickTravelUIController
                                   (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) &&
                                  (lVar11 = Transform.Find(lVar11,"OutLine",0)) != null) {
                                 plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-                                lVar11 = pStatics_ef00;
+                                lVar11 = pPlotController;
                                 if (plVar4 != (int64 *)0) {
                                   uVar2 = *(uint32 *)(lVar11 + 0x2e8);
                                   uVar16 = *(uint32 *)(lVar11 + 0x2ec);
@@ -1577,11 +1570,11 @@ public class QuickTravelUIController
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                (lVar11 = Transform.Find(lVar11,"OutLine",0)) == null) goto LAB_180c55938;
             plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-            lVar11 = pStatics_ef00;
+            lVar11 = pPlotController;
             if (plVar4 == (int64 *)0) goto LAB_180c55938;
-            uVar2 = *(uint32 *)(lVar11 + 0x280);
+            uVar2 = lVar11.tempHerosDictLock;
             uVar16 = *(uint32 *)(lVar11 + 0x284);
-            uVar17 = *(uint32 *)(lVar11 + 0x288);
+            uVar17 = lVar11.ForcesDict;
             uVar18 = *(uint32 *)(lVar11 + 0x28c);
         LAB_180c5463c:
             local_288 = CONCAT44(uVar16,uVar2);
@@ -1594,14 +1587,14 @@ public class QuickTravelUIController
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                (lVar11 = Component.GetComponent(lVar11,DAT_181d6c540)) == null) goto LAB_180c55938;
-            *(uint32 *)(lVar11 + 32) = 0;
+            lVar11.villageAreaID = 0;
             if (((this.areaIcons == null) ||
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
             lVar10 = this.areaIcons;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 112) == -1) {
+            if (*(int *)(lVar11.cityAreaID + 112) == -1) {
               if (((lVar10 == null) || (lVar11 = GameObject.get_transform(lVar10,0)) == null) ||
                  (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) goto LAB_180c55938;
               plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -1617,8 +1610,8 @@ public class QuickTravelUIController
                   (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                  ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                   ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                   (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-              puVar7 = (uint64 *)AreaData.GetForceColor(local_148,*(int64 *)(lVar11 + 24),0);
+                   (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+              puVar7 = (uint64 *)AreaData.GetForceColor(local_148,lVar11.cityAreaID,0);
             }
             break;
           case 1:
@@ -1626,20 +1619,20 @@ public class QuickTravelUIController
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55938;
+                (lVar11.cityAreaID == null)))) goto LAB_180c55938;
             lVar10 = this.areaIcons;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 72) == 0) {
+            if (*(int *)(lVar11.cityAreaID + 72) == 0) {
               if (((lVar10 == null) || (lVar11 = GameObject.get_transform(lVar10,0)) == null) ||
                  ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                   ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                   (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-              iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 16);
+                   (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+              iVar3 = *(int *)(lVar11.cityAreaID + 16);
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                 (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+              if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                 (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
               goto LAB_180c55938;
               lVar10 = this.areaIcons;
-              if (iVar3 != *(int *)(lVar11 + 192)) {
+              if (iVar3 != lVar11.playerBetrayForceBadTime) {
                 if (((lVar10 != null) && (lVar11 = GameObject.get_transform(lVar10,0)) != null) &&
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
                   plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -1652,7 +1645,7 @@ public class QuickTravelUIController
                         (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null
                         ) && ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                               (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                      *(uint32 *)(lVar11 + 32) = 1;
+                      lVar11.villageAreaID = 1;
                       goto switchD_180c53add_default;
                     }
                   }
@@ -1689,14 +1682,14 @@ public class QuickTravelUIController
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 (lVar11 = Component.GetComponent(lVar11,DAT_181d6c540)) == null)))
             goto LAB_180c55938;
-            *(uint32 *)(lVar11 + 32) = 2;
+            lVar11.villageAreaID = 2;
             if ((((this.areaIcons == null) ||
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55938;
+                (lVar11.cityAreaID == null)))) goto LAB_180c55938;
             lVar10 = this.areaIcons;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 112) == -1) {
+            if (*(int *)(lVar11.cityAreaID + 112) == -1) {
               if (((lVar10 != null) && (lVar11 = GameObject.get_transform(lVar10,0)) != null) &&
                  (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
                 plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -1712,8 +1705,8 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-            puVar7 = (uint64 *)AreaData.GetForceColor(local_f8,*(int64 *)(lVar11 + 24),0);
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+            puVar7 = (uint64 *)AreaData.GetForceColor(local_f8,lVar11.cityAreaID,0);
             break;
           case 3:
             QuickTravelUIController.SetRoadsActive(this,0x180000001,0);
@@ -1721,13 +1714,13 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                 (*(int64 *)(lVar11 + 24) != 0)))))) {
-              iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+                 (lVar11.cityAreaID != null)))))) {
+              iVar3 = *(int *)(lVar11.cityAreaID + 112);
               lVar11 = FUN_18046c0a0(0);
-              if ((((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                  (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null) ||
+              if ((((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                  (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null) ||
                  (lVar11 = HeroData.GetForce(lVar11,0,0)) == null) goto LAB_180c55938;
-              if (iVar3 == *(int *)(lVar11 + 16)) {
+              if (iVar3 == lVar11.chapter) {
                 if (((this.areaIcons != null) &&
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
@@ -1739,22 +1732,22 @@ public class QuickTravelUIController
               }
               lVar11 = FUN_18046c3a0(0);
               if (lVar11 == null) goto LAB_180c55938;
-              if (*(int *)(lVar11 + 32) == 0) {
+              if (lVar11.villageAreaID == null) {
         LAB_180c55196:
                 if (((this.areaIcons == null) ||
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                    ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                     (((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                      (*(int64 *)(lVar11 + 24) == 0)) || (lVar5 == null)))))) goto LAB_180c55938;
-                cVar1 = FUN_181815240(lVar5,*(uint32 *)(*(int64 *)(lVar11 + 24) + 16),
+                      (lVar11.cityAreaID == null)) || (lVar5 == null)))))) goto LAB_180c55938;
+                cVar1 = FUN_181815240(lVar5,*(uint32 *)(lVar11.cityAreaID + 16),
                                       DAT_181d67bf8);
                 lVar11 = this.areaIcons;
                 if (!cVar1) {
                   if (((lVar11 != null) && (lVar11 = GameObject.get_transform(lVar11,0)) != null) &&
                      (((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                        ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                        (*(int64 *)(lVar11 + 24) != 0)))) && (lVar9 != null)))) {
-                    cVar1 = FUN_181815240(lVar9,*(uint32 *)(*(int64 *)(lVar11 + 24) + 16),
+                        (lVar11.cityAreaID != null)))) && (lVar9 != null)))) {
+                    cVar1 = FUN_181815240(lVar9,*(uint32 *)(lVar11.cityAreaID + 16),
                                           DAT_181d67bf8);
                     lVar11 = this.areaIcons;
                     if (!cVar1) {
@@ -1784,11 +1777,11 @@ public class QuickTravelUIController
                      (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null)
                     || (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                    ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                    (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55938;
-                iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 16);
+                    (lVar11.cityAreaID == null)))) goto LAB_180c55938;
+                iVar3 = *(int *)(lVar11.cityAreaID + 16);
                 lVar11 = FUN_18046c3a0(0);
                 if (lVar11 == null) goto LAB_180c55938;
-                if (iVar3 != *(int *)(lVar11 + 192)) goto LAB_180c55196;
+                if (iVar3 != lVar11.playerBetrayForceBadTime) goto LAB_180c55196;
                 if (((this.areaIcons == null) ||
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) goto LAB_180c55938;
@@ -1803,7 +1796,7 @@ public class QuickTravelUIController
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                    ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                     (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                  *(uint32 *)(lVar11 + 32) = 3;
+                  lVar11.villageAreaID = 3;
                   goto switchD_180c53add_default;
                 }
               }
@@ -1814,19 +1807,19 @@ public class QuickTravelUIController
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) &&
                ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                (*(int64 *)(lVar11 + 24) != 0)))) {
-              iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+                (lVar11.cityAreaID != null)))) {
+              iVar3 = *(int *)(lVar11.cityAreaID + 112);
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                 ((lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0), lVar11 != null &&
+              if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                 ((lVar11 = WorldData.Player(lVar11.villageAreaID,0), lVar11 != null &&
                   (lVar11 = HeroData.GetForce(lVar11,0,0)) != null))) {
-                if (iVar3 == *(int *)(lVar11 + 16)) {
+                if (iVar3 == lVar11.chapter) {
                   if ((((this.areaIcons == null) ||
                        (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null)
                       || (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                      ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                      (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55932;
-                  if (*(int *)(*(int64 *)(lVar11 + 24) + 72) != 2) {
+                      (lVar11.cityAreaID == null)))) goto LAB_180c55932;
+                  if (*(int *)(lVar11.cityAreaID + 72) != 2) {
                     if (((this.areaIcons != null) &&
                         (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null
                         ) && (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
@@ -1840,7 +1833,7 @@ public class QuickTravelUIController
                              (lVar11 = GameObject.get_transform(this.areaIcons,0),
                              lVar11 != null)) && (lVar11 = Transform.GetChild(lVar11,plVar14)) != null)
                            && (lVar11 = Component.GetComponent(lVar11)) != null) {
-                          *(uint32 *)(lVar11 + 32) = 4;
+                          lVar11.villageAreaID = 4;
                           goto switchD_180c53add_default;
                         }
                       }
@@ -1863,23 +1856,23 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) {
+                 (lVar11.cityAreaID == null)))))) {
         LAB_180c55932:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+            iVar3 = *(int *)(lVar11.cityAreaID + 112);
             lVar11 = FUN_18046c0a0(0);
-            if ((((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null) ||
+            if ((((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null) ||
                (lVar11 = HeroData.GetForce(lVar11,0,0)) == null) goto LAB_180c55932;
-            if (iVar3 != *(int *)(lVar11 + 16)) {
+            if (iVar3 != lVar11.chapter) {
               if (((this.areaIcons == null) ||
                   (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                  ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                   ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                   (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
-              if (*(int *)(*(int64 *)(lVar11 + 24) + 72) != 2) {
+                   (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
+              if (*(int *)(lVar11.cityAreaID + 72) != 2) {
                 if (((this.areaIcons != null) &&
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
@@ -1893,7 +1886,7 @@ public class QuickTravelUIController
                         (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null
                         ) && ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                               (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                      *(uint32 *)(lVar11 + 32) = 5;
+                      lVar11.villageAreaID = 5;
                       goto switchD_180c53add_default;
                     }
                   }
@@ -1957,7 +1950,7 @@ public class QuickTravelUIController
                       (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null)
                      && ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                          (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                    *(uint32 *)(lVar11 + 32) = 2;
+                    lVar11.villageAreaID = 2;
                     goto switchD_180c53add_default;
                   }
                 }
@@ -1983,8 +1976,8 @@ public class QuickTravelUIController
           goto switchD_180c53add_default;
         }
         lVar11 = FUN_18046c0a0(0);
-        if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-           (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null) goto LAB_180c55932;
+        if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+           (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null) goto LAB_180c55932;
         if (*(int *)(lVar11 + 132) < 0) {
         LAB_180c53a26:
           if ((((this.areaIcons == null) ||
@@ -2006,33 +1999,33 @@ public class QuickTravelUIController
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-               (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
-          if (*(int *)(*(int64 *)(lVar11 + 24) + 56) < 0) goto LAB_180c53a26;
+               (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
+          if (*(int *)(lVar11.cityAreaID + 56) < 0) goto LAB_180c53a26;
           if (((this.areaIcons == null) ||
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-               (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
-          iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 56);
+               (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
+          iVar3 = *(int *)(lVar11.cityAreaID + 56);
           lVar11 = FUN_18046c0a0(0);
-          if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-             (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+          if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+             (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
           goto LAB_180c55932;
           if (iVar3 != *(int *)(lVar11 + 132)) {
             if ((((this.areaIcons != null) &&
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                 ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                  ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 != null &&
-                  (*(int64 *)(lVar11 + 24) != 0)))))) &&
-               (lVar11 = ResourcePointData.GetForce(*(int64 *)(lVar11 + 24),0)) != null) {
+                  (lVar11.cityAreaID != null)))))) &&
+               (lVar11 = ResourcePointData.GetForce(lVar11.cityAreaID,0)) != null) {
               iVar3 = *(int *)(lVar11 + 60);
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                 (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+              if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                 (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                 if (iVar3 == *(int *)(lVar11 + 132)) goto LAB_180c53985;
                 lVar11 = FUN_18046c0a0(0);
-                if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                   (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                   (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                   lVar11 = HeroData.GetForce(lVar11,0,0);
                   if (((((this.areaIcons != null) &&
                         (lVar10 = GameObject.get_transform(this.areaIcons,0)) != null
@@ -2055,8 +2048,8 @@ public class QuickTravelUIController
                     }
                     else {
                       lVar11 = FUN_18046c0a0(0);
-                      if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                         (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                      if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                         (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                         lVar11 = HeroData.GetForce(lVar11,0,0);
                         if ((((this.areaIcons != null) &&
                              (lVar10 = GameObject.get_transform(this.areaIcons,0),
@@ -2074,7 +2067,7 @@ public class QuickTravelUIController
                                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) &&
                                (lVar11 = Transform.Find(lVar11,"OutLine",0)) != null) {
                               plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-                              lVar11 = pStatics_ef00;
+                              lVar11 = pPlotController;
                               if (plVar4 != (int64 *)0) {
                                 uVar2 = *(uint32 *)(lVar11 + 0x2e8);
                                 uVar16 = *(uint32 *)(lVar11 + 0x2ec);
@@ -2107,11 +2100,11 @@ public class QuickTravelUIController
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              (lVar11 = Transform.Find(lVar11,"OutLine",0)) == null) goto LAB_180c55932;
           plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-          lVar11 = pStatics_ef00;
+          lVar11 = pPlotController;
           if (plVar4 == (int64 *)0) goto LAB_180c55932;
-          uVar2 = *(uint32 *)(lVar11 + 0x280);
+          uVar2 = lVar11.tempHerosDictLock;
           uVar16 = *(uint32 *)(lVar11 + 0x284);
-          uVar17 = *(uint32 *)(lVar11 + 0x288);
+          uVar17 = lVar11.ForcesDict;
           uVar18 = *(uint32 *)(lVar11 + 0x28c);
         LAB_180c538f2:
           local_288 = CONCAT44(uVar16,uVar2);
@@ -2124,14 +2117,14 @@ public class QuickTravelUIController
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               (lVar11 = Component.GetComponent(lVar11,DAT_181d6c640)) == null))) goto LAB_180c55932;
-          *(uint32 *)(lVar11 + 32) = 0;
+          lVar11.villageAreaID = 0;
           if ((((this.areaIcons == null) ||
                (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-              (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55932;
+              (lVar11.cityAreaID == null)))) goto LAB_180c55932;
           lVar10 = this.areaIcons;
-          if (*(int *)(*(int64 *)(lVar11 + 24) + 56) == -1) {
+          if (*(int *)(lVar11.cityAreaID + 56) == -1) {
             if (((lVar10 != null) && (lVar11 = GameObject.get_transform(lVar10,0)) != null) &&
                (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
               plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -2147,9 +2140,9 @@ public class QuickTravelUIController
                (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-              (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55932;
+              (lVar11.cityAreaID == null)))) goto LAB_180c55932;
           puVar7 = (uint64 *)
-                   ResourcePointData.GetForceColor(local_1e8,*(int64 *)(lVar11 + 24),0);
+                   ResourcePointData.GetForceColor(local_1e8,lVar11.cityAreaID,0);
           goto joined_r0x000180c53c40;
         case 1:
           if (((this.areaIcons != null) &&
@@ -2174,14 +2167,14 @@ public class QuickTravelUIController
                (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              (lVar11 = Component.GetComponent(lVar11,DAT_181d6c640)) == null) goto LAB_180c55932;
-          *(uint32 *)(lVar11 + 32) = 2;
+          lVar11.villageAreaID = 2;
           if (((this.areaIcons == null) ||
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-               (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
+               (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
           lVar10 = this.areaIcons;
-          if (*(int *)(*(int64 *)(lVar11 + 24) + 56) == -1) {
+          if (*(int *)(lVar11.cityAreaID + 56) == -1) {
             if (((lVar10 == null) || (lVar11 = GameObject.get_transform(lVar10,0)) == null) ||
                (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) goto LAB_180c55932;
             plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -2195,9 +2188,9 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
             puVar7 = (uint64 *)
-                     ResourcePointData.GetForceColor(local_1b8,*(int64 *)(lVar11 + 24),0);
+                     ResourcePointData.GetForceColor(local_1b8,lVar11.cityAreaID,0);
           }
         joined_r0x000180c53c40:
           if (plVar4 != (int64 *)0) goto LAB_180c549e5;
@@ -2253,7 +2246,7 @@ public class QuickTravelUIController
         joined_r0x000180c5409b:
         if ((lVar11 != null) && (lVar11 = Component.GetComponent(lVar11)) != null) {
         LAB_180c5588e:
-          *(uint32 *)(lVar11 + 32) = 0;
+          lVar11.villageAreaID = 0;
           goto switchD_180c53add_default;
         }
         goto LAB_180c55932;
@@ -2263,8 +2256,7 @@ public class QuickTravelUIController
     // RVA   : 0xC52750   Offset: 0xC50F50   Length: 0x31F0
     public void ShowQuickTravelUI(QuickTravelUIType targetTravelUIType, float scale, bool _autoClose)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         void QuickTravelUIController.ShowQuickTravelUI
                      (int64 this,uint32 targetTravelUIType,int64 scale,uint8 _autoClose)
         {
@@ -2387,11 +2379,11 @@ public class QuickTravelUIController
         if (this.playerIcon == null) goto LAB_180c55938;
         lVar5 = GameObject.get_transform(this.playerIcon,0);
         fVar15 = this.BaseMapScale;
-        if ((((*pStatics_df90 == 0) ||
-             (lVar9 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-            (lVar9 = WorldData.Player(lVar9,0)) == null) || (*(int64 *)(lVar9 + 200) == 0))
+        if ((((GameController._instance == null) ||
+             (lVar9 = GameController._instance.worldData) == null
+             ) || (lVar9 = WorldData.Player(lVar9,0)) == null) || (lVar9.playerServantForceTime == 0))
         goto LAB_180c55938;
-        plVar4 = (int64 *)BigMapPos.ToVector3(&local_288,*(int64 *)(lVar9 + 200),0x3f800000,0);
+        plVar4 = (int64 *)BigMapPos.ToVector3(&local_288,lVar9.playerServantForceTime,0x3f800000,0);
         local_240 = *plVar4;
         local_238 = *(float *)(plVar4 + 1);
         local_278 = CONCAT44((float)((uint64)local_240 >> 32) * fVar15,(float)local_240 * fVar15);
@@ -2410,9 +2402,9 @@ public class QuickTravelUIController
         FUN_180f58a90(lVar9,DAT_181d678f8);
         local_278 = lVar9;
         if (this.quickTravelUIType == 3) {
-          if (((*pStatics_df90 == 0) ||
-              (lVar11 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-             (lVar11 = *(int64 *)(lVar11 + 48)) == null) goto LAB_180c55938;
+          if (((GameController._instance == null) ||
+              (lVar11 = GameController._instance.worldData,
+              lVar11 == null)) || (lVar11 = lVar11.Areas) == null) goto LAB_180c55938;
           FUN_1817ff240(&local_230,lVar11,DAT_181d550e0);
           local_258 = CONCAT44(uStack_22c,local_230);
           uStack_250 = CONCAT44(uStack_224,uStack_228);
@@ -2428,13 +2420,13 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              FUN_181814fa0(lVar9,*(uint32 *)(lVar11 + 16),DAT_181d67a78);
+              FUN_181814fa0(lVar9,lVar11.chapter,DAT_181d67a78);
             }
           }
           ZhSegment.Initialize(&local_258,DAT_181d63948);
-          if (((*pStatics_df90 == 0) ||
-              (lVar11 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-             (lVar11 = *(int64 *)(lVar11 + 48)) == null) goto LAB_180c55938;
+          if (((GameController._instance == null) ||
+              (lVar11 = GameController._instance.worldData,
+              lVar11 == null)) || (lVar11 = lVar11.Areas) == null) goto LAB_180c55938;
           FUN_1817ff240(&local_230,lVar11,DAT_181d550e0);
           local_258 = CONCAT44(uStack_22c,local_230);
           uStack_250 = CONCAT44(uStack_224,uStack_228);
@@ -2466,11 +2458,11 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            cVar1 = ForceData.CanAttack(lVar10,*(uint32 *)(lVar11 + 112));
+            cVar1 = ForceData.CanAttack(lVar10,lVar11.lastRandomWorldEventDay);
             plVar4 = plVar14;
             if (cVar1) {
               while( true ) {
-                lVar10 = *(int64 *)(lVar11 + 152);
+                lVar10 = lVar11.cheating;
                 if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -2489,7 +2481,7 @@ public class QuickTravelUIController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              FUN_181814fa0(lVar5,*(uint32 *)(lVar11 + 16));
+              FUN_181814fa0(lVar5,lVar11.chapter);
             }
             goto LAB_180c52f70;
           }
@@ -2513,8 +2505,8 @@ public class QuickTravelUIController
         cVar1 = Object.op_Inequality(uVar8,0);
         if (cVar1) {
           lVar11 = FUN_18046c0a0(0);
-          if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-             (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+          if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+             (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
           goto LAB_180c55938;
           if (*(int *)(lVar11 + 132) < 0) {
         LAB_180c54773:
@@ -2537,33 +2529,33 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 112) < 0) goto LAB_180c54773;
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+            if (*(int *)(lVar11.cityAreaID + 112) < 0) goto LAB_180c54773;
             if (((this.areaIcons == null) ||
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-            iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+            iVar3 = *(int *)(lVar11.cityAreaID + 112);
             lVar11 = FUN_18046c0a0(0);
-            if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-               (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+            if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+               (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
             goto LAB_180c55938;
             if (iVar3 != *(int *)(lVar11 + 132)) {
               if ((((this.areaIcons != null) &&
                    (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                   ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                    ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                    (*(int64 *)(lVar11 + 24) != 0)))))) &&
-                 (lVar11 = AreaData.GetForce(*(int64 *)(lVar11 + 24),0)) != null) {
+                    (lVar11.cityAreaID != null)))))) &&
+                 (lVar11 = AreaData.GetForce(lVar11.cityAreaID,0)) != null) {
                 iVar3 = *(int *)(lVar11 + 60);
                 lVar11 = FUN_18046c0a0(0);
-                if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                   (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                   (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                   if (iVar3 == *(int *)(lVar11 + 132)) goto LAB_180c546d2;
                   lVar11 = FUN_18046c0a0(0);
-                  if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                     (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                  if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                     (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                     lVar11 = HeroData.GetForce(lVar11,0,0);
                     if (((((this.areaIcons != null) &&
                           (lVar10 = GameObject.get_transform(this.areaIcons,0),
@@ -2586,8 +2578,8 @@ public class QuickTravelUIController
                       }
                       else {
                         lVar11 = FUN_18046c0a0(0);
-                        if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                           (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                        if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                           (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                           lVar11 = HeroData.GetForce(lVar11,0,0);
                           if ((((this.areaIcons != null) &&
                                (lVar10 = GameObject.get_transform(this.areaIcons,0),
@@ -2605,7 +2597,7 @@ public class QuickTravelUIController
                                   (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) &&
                                  (lVar11 = Transform.Find(lVar11,"OutLine",0)) != null) {
                                 plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-                                lVar11 = pStatics_ef00;
+                                lVar11 = pPlotController;
                                 if (plVar4 != (int64 *)0) {
                                   uVar2 = *(uint32 *)(lVar11 + 0x2e8);
                                   uVar16 = *(uint32 *)(lVar11 + 0x2ec);
@@ -2638,11 +2630,11 @@ public class QuickTravelUIController
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                (lVar11 = Transform.Find(lVar11,"OutLine",0)) == null) goto LAB_180c55938;
             plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-            lVar11 = pStatics_ef00;
+            lVar11 = pPlotController;
             if (plVar4 == (int64 *)0) goto LAB_180c55938;
-            uVar2 = *(uint32 *)(lVar11 + 0x280);
+            uVar2 = lVar11.tempHerosDictLock;
             uVar16 = *(uint32 *)(lVar11 + 0x284);
-            uVar17 = *(uint32 *)(lVar11 + 0x288);
+            uVar17 = lVar11.ForcesDict;
             uVar18 = *(uint32 *)(lVar11 + 0x28c);
         LAB_180c5463c:
             local_288 = CONCAT44(uVar16,uVar2);
@@ -2655,14 +2647,14 @@ public class QuickTravelUIController
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                (lVar11 = Component.GetComponent(lVar11,DAT_181d6c540)) == null) goto LAB_180c55938;
-            *(uint32 *)(lVar11 + 32) = 0;
+            lVar11.villageAreaID = 0;
             if (((this.areaIcons == null) ||
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
             lVar10 = this.areaIcons;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 112) == -1) {
+            if (*(int *)(lVar11.cityAreaID + 112) == -1) {
               if (((lVar10 == null) || (lVar11 = GameObject.get_transform(lVar10,0)) == null) ||
                  (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) goto LAB_180c55938;
               plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -2678,8 +2670,8 @@ public class QuickTravelUIController
                   (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                  ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                   ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                   (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-              puVar7 = (uint64 *)AreaData.GetForceColor(local_148,*(int64 *)(lVar11 + 24),0);
+                   (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+              puVar7 = (uint64 *)AreaData.GetForceColor(local_148,lVar11.cityAreaID,0);
             }
             break;
           case 1:
@@ -2687,20 +2679,20 @@ public class QuickTravelUIController
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55938;
+                (lVar11.cityAreaID == null)))) goto LAB_180c55938;
             lVar10 = this.areaIcons;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 72) == 0) {
+            if (*(int *)(lVar11.cityAreaID + 72) == 0) {
               if (((lVar10 == null) || (lVar11 = GameObject.get_transform(lVar10,0)) == null) ||
                  ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                   ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                   (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-              iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 16);
+                   (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+              iVar3 = *(int *)(lVar11.cityAreaID + 16);
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                 (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+              if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                 (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
               goto LAB_180c55938;
               lVar10 = this.areaIcons;
-              if (iVar3 != *(int *)(lVar11 + 192)) {
+              if (iVar3 != lVar11.playerBetrayForceBadTime) {
                 if (((lVar10 != null) && (lVar11 = GameObject.get_transform(lVar10,0)) != null) &&
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
                   plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -2713,7 +2705,7 @@ public class QuickTravelUIController
                         (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null
                         ) && ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                               (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                      *(uint32 *)(lVar11 + 32) = 1;
+                      lVar11.villageAreaID = 1;
                       goto switchD_180c53add_default;
                     }
                   }
@@ -2750,14 +2742,14 @@ public class QuickTravelUIController
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 (lVar11 = Component.GetComponent(lVar11,DAT_181d6c540)) == null)))
             goto LAB_180c55938;
-            *(uint32 *)(lVar11 + 32) = 2;
+            lVar11.villageAreaID = 2;
             if ((((this.areaIcons == null) ||
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55938;
+                (lVar11.cityAreaID == null)))) goto LAB_180c55938;
             lVar10 = this.areaIcons;
-            if (*(int *)(*(int64 *)(lVar11 + 24) + 112) == -1) {
+            if (*(int *)(lVar11.cityAreaID + 112) == -1) {
               if (((lVar10 != null) && (lVar11 = GameObject.get_transform(lVar10,0)) != null) &&
                  (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
                 plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -2773,8 +2765,8 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55938;
-            puVar7 = (uint64 *)AreaData.GetForceColor(local_f8,*(int64 *)(lVar11 + 24),0);
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55938;
+            puVar7 = (uint64 *)AreaData.GetForceColor(local_f8,lVar11.cityAreaID,0);
             break;
           case 3:
             QuickTravelUIController.SetRoadsActive(this,0x180000001,0);
@@ -2782,13 +2774,13 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                 (*(int64 *)(lVar11 + 24) != 0)))))) {
-              iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+                 (lVar11.cityAreaID != null)))))) {
+              iVar3 = *(int *)(lVar11.cityAreaID + 112);
               lVar11 = FUN_18046c0a0(0);
-              if ((((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                  (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null) ||
+              if ((((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                  (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null) ||
                  (lVar11 = HeroData.GetForce(lVar11,0,0)) == null) goto LAB_180c55938;
-              if (iVar3 == *(int *)(lVar11 + 16)) {
+              if (iVar3 == lVar11.chapter) {
                 if (((this.areaIcons != null) &&
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
@@ -2800,22 +2792,22 @@ public class QuickTravelUIController
               }
               lVar11 = FUN_18046c3a0(0);
               if (lVar11 == null) goto LAB_180c55938;
-              if (*(int *)(lVar11 + 32) == 0) {
+              if (lVar11.villageAreaID == null) {
         LAB_180c55196:
                 if (((this.areaIcons == null) ||
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                    ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                     (((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                      (*(int64 *)(lVar11 + 24) == 0)) || (lVar5 == null)))))) goto LAB_180c55938;
-                cVar1 = FUN_181815240(lVar5,*(uint32 *)(*(int64 *)(lVar11 + 24) + 16),
+                      (lVar11.cityAreaID == null)) || (lVar5 == null)))))) goto LAB_180c55938;
+                cVar1 = FUN_181815240(lVar5,*(uint32 *)(lVar11.cityAreaID + 16),
                                       DAT_181d67bf8);
                 lVar11 = this.areaIcons;
                 if (!cVar1) {
                   if (((lVar11 != null) && (lVar11 = GameObject.get_transform(lVar11,0)) != null) &&
                      (((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                        ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                        (*(int64 *)(lVar11 + 24) != 0)))) && (lVar9 != null)))) {
-                    cVar1 = FUN_181815240(lVar9,*(uint32 *)(*(int64 *)(lVar11 + 24) + 16),
+                        (lVar11.cityAreaID != null)))) && (lVar9 != null)))) {
+                    cVar1 = FUN_181815240(lVar9,*(uint32 *)(lVar11.cityAreaID + 16),
                                           DAT_181d67bf8);
                     lVar11 = this.areaIcons;
                     if (!cVar1) {
@@ -2845,11 +2837,11 @@ public class QuickTravelUIController
                      (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null)
                     || (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                    ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                    (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55938;
-                iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 16);
+                    (lVar11.cityAreaID == null)))) goto LAB_180c55938;
+                iVar3 = *(int *)(lVar11.cityAreaID + 16);
                 lVar11 = FUN_18046c3a0(0);
                 if (lVar11 == null) goto LAB_180c55938;
-                if (iVar3 != *(int *)(lVar11 + 192)) goto LAB_180c55196;
+                if (iVar3 != lVar11.playerBetrayForceBadTime) goto LAB_180c55196;
                 if (((this.areaIcons == null) ||
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) goto LAB_180c55938;
@@ -2864,7 +2856,7 @@ public class QuickTravelUIController
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                    ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                     (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                  *(uint32 *)(lVar11 + 32) = 3;
+                  lVar11.villageAreaID = 3;
                   goto switchD_180c53add_default;
                 }
               }
@@ -2875,19 +2867,19 @@ public class QuickTravelUIController
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) &&
                ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 != null &&
-                (*(int64 *)(lVar11 + 24) != 0)))) {
-              iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+                (lVar11.cityAreaID != null)))) {
+              iVar3 = *(int *)(lVar11.cityAreaID + 112);
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                 ((lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0), lVar11 != null &&
+              if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                 ((lVar11 = WorldData.Player(lVar11.villageAreaID,0), lVar11 != null &&
                   (lVar11 = HeroData.GetForce(lVar11,0,0)) != null))) {
-                if (iVar3 == *(int *)(lVar11 + 16)) {
+                if (iVar3 == lVar11.chapter) {
                   if ((((this.areaIcons == null) ||
                        (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null)
                       || (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
                      ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                      (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55932;
-                  if (*(int *)(*(int64 *)(lVar11 + 24) + 72) != 2) {
+                      (lVar11.cityAreaID == null)))) goto LAB_180c55932;
+                  if (*(int *)(lVar11.cityAreaID + 72) != 2) {
                     if (((this.areaIcons != null) &&
                         (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null
                         ) && (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
@@ -2901,7 +2893,7 @@ public class QuickTravelUIController
                              (lVar11 = GameObject.get_transform(this.areaIcons,0),
                              lVar11 != null)) && (lVar11 = Transform.GetChild(lVar11,plVar14)) != null)
                            && (lVar11 = Component.GetComponent(lVar11)) != null) {
-                          *(uint32 *)(lVar11 + 32) = 4;
+                          lVar11.villageAreaID = 4;
                           goto switchD_180c53add_default;
                         }
                       }
@@ -2924,23 +2916,23 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) {
+                 (lVar11.cityAreaID == null)))))) {
         LAB_180c55932:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 112);
+            iVar3 = *(int *)(lVar11.cityAreaID + 112);
             lVar11 = FUN_18046c0a0(0);
-            if ((((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null) ||
+            if ((((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null) ||
                (lVar11 = HeroData.GetForce(lVar11,0,0)) == null) goto LAB_180c55932;
-            if (iVar3 != *(int *)(lVar11 + 16)) {
+            if (iVar3 != lVar11.chapter) {
               if (((this.areaIcons == null) ||
                   (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                  ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                   ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c540), lVar11 == null ||
-                   (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
-              if (*(int *)(*(int64 *)(lVar11 + 24) + 72) != 2) {
+                   (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
+              if (*(int *)(lVar11.cityAreaID + 72) != 2) {
                 if (((this.areaIcons != null) &&
                     (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                    (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
@@ -2954,7 +2946,7 @@ public class QuickTravelUIController
                         (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null
                         ) && ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                               (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                      *(uint32 *)(lVar11 + 32) = 5;
+                      lVar11.villageAreaID = 5;
                       goto switchD_180c53add_default;
                     }
                   }
@@ -3018,7 +3010,7 @@ public class QuickTravelUIController
                       (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null)
                      && ((lVar11 = Transform.GetChild(lVar11,plVar14), lVar11 != null &&
                          (lVar11 = Component.GetComponent(lVar11)) != null))) {
-                    *(uint32 *)(lVar11 + 32) = 2;
+                    lVar11.villageAreaID = 2;
                     goto switchD_180c53add_default;
                   }
                 }
@@ -3044,8 +3036,8 @@ public class QuickTravelUIController
           goto switchD_180c53add_default;
         }
         lVar11 = FUN_18046c0a0(0);
-        if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-           (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null) goto LAB_180c55932;
+        if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+           (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null) goto LAB_180c55932;
         if (*(int *)(lVar11 + 132) < 0) {
         LAB_180c53a26:
           if ((((this.areaIcons == null) ||
@@ -3067,33 +3059,33 @@ public class QuickTravelUIController
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-               (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
-          if (*(int *)(*(int64 *)(lVar11 + 24) + 56) < 0) goto LAB_180c53a26;
+               (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
+          if (*(int *)(lVar11.cityAreaID + 56) < 0) goto LAB_180c53a26;
           if (((this.areaIcons == null) ||
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-               (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
-          iVar3 = *(int *)(*(int64 *)(lVar11 + 24) + 56);
+               (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
+          iVar3 = *(int *)(lVar11.cityAreaID + 56);
           lVar11 = FUN_18046c0a0(0);
-          if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-             (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+          if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+             (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
           goto LAB_180c55932;
           if (iVar3 != *(int *)(lVar11 + 132)) {
             if ((((this.areaIcons != null) &&
                  (lVar11 = GameObject.get_transform(this.areaIcons,0)) != null) &&
                 ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 != null &&
                  ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 != null &&
-                  (*(int64 *)(lVar11 + 24) != 0)))))) &&
-               (lVar11 = ResourcePointData.GetForce(*(int64 *)(lVar11 + 24),0)) != null) {
+                  (lVar11.cityAreaID != null)))))) &&
+               (lVar11 = ResourcePointData.GetForce(lVar11.cityAreaID,0)) != null) {
               iVar3 = *(int *)(lVar11 + 60);
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                 (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+              if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                 (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                 if (iVar3 == *(int *)(lVar11 + 132)) goto LAB_180c53985;
                 lVar11 = FUN_18046c0a0(0);
-                if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                   (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                   (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                   lVar11 = HeroData.GetForce(lVar11,0,0);
                   if (((((this.areaIcons != null) &&
                         (lVar10 = GameObject.get_transform(this.areaIcons,0)) != null
@@ -3116,8 +3108,8 @@ public class QuickTravelUIController
                     }
                     else {
                       lVar11 = FUN_18046c0a0(0);
-                      if (((lVar11 != null) && (*(int64 *)(lVar11 + 32) != 0)) &&
-                         (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) != null) {
+                      if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
+                         (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
                         lVar11 = HeroData.GetForce(lVar11,0,0);
                         if ((((this.areaIcons != null) &&
                              (lVar10 = GameObject.get_transform(this.areaIcons,0),
@@ -3135,7 +3127,7 @@ public class QuickTravelUIController
                                 (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) &&
                                (lVar11 = Transform.Find(lVar11,"OutLine",0)) != null) {
                               plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-                              lVar11 = pStatics_ef00;
+                              lVar11 = pPlotController;
                               if (plVar4 != (int64 *)0) {
                                 uVar2 = *(uint32 *)(lVar11 + 0x2e8);
                                 uVar16 = *(uint32 *)(lVar11 + 0x2ec);
@@ -3168,11 +3160,11 @@ public class QuickTravelUIController
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              (lVar11 = Transform.Find(lVar11,"OutLine",0)) == null) goto LAB_180c55932;
           plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
-          lVar11 = pStatics_ef00;
+          lVar11 = pPlotController;
           if (plVar4 == (int64 *)0) goto LAB_180c55932;
-          uVar2 = *(uint32 *)(lVar11 + 0x280);
+          uVar2 = lVar11.tempHerosDictLock;
           uVar16 = *(uint32 *)(lVar11 + 0x284);
-          uVar17 = *(uint32 *)(lVar11 + 0x288);
+          uVar17 = lVar11.ForcesDict;
           uVar18 = *(uint32 *)(lVar11 + 0x28c);
         LAB_180c538f2:
           local_288 = CONCAT44(uVar16,uVar2);
@@ -3185,14 +3177,14 @@ public class QuickTravelUIController
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               (lVar11 = Component.GetComponent(lVar11,DAT_181d6c640)) == null))) goto LAB_180c55932;
-          *(uint32 *)(lVar11 + 32) = 0;
+          lVar11.villageAreaID = 0;
           if ((((this.areaIcons == null) ||
                (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-              (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55932;
+              (lVar11.cityAreaID == null)))) goto LAB_180c55932;
           lVar10 = this.areaIcons;
-          if (*(int *)(*(int64 *)(lVar11 + 24) + 56) == -1) {
+          if (*(int *)(lVar11.cityAreaID + 56) == -1) {
             if (((lVar10 != null) && (lVar11 = GameObject.get_transform(lVar10,0)) != null) &&
                (lVar11 = Transform.GetChild(lVar11,plVar14,0)) != null) {
               plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -3208,9 +3200,9 @@ public class QuickTravelUIController
                (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-              (*(int64 *)(lVar11 + 24) == 0)))) goto LAB_180c55932;
+              (lVar11.cityAreaID == null)))) goto LAB_180c55932;
           puVar7 = (uint64 *)
-                   ResourcePointData.GetForceColor(local_1e8,*(int64 *)(lVar11 + 24),0);
+                   ResourcePointData.GetForceColor(local_1e8,lVar11.cityAreaID,0);
           goto joined_r0x000180c53c40;
         case 1:
           if (((this.areaIcons != null) &&
@@ -3235,14 +3227,14 @@ public class QuickTravelUIController
                (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
               (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) ||
              (lVar11 = Component.GetComponent(lVar11,DAT_181d6c640)) == null) goto LAB_180c55932;
-          *(uint32 *)(lVar11 + 32) = 2;
+          lVar11.villageAreaID = 2;
           if (((this.areaIcons == null) ||
               (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
              ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
               ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-               (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
+               (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
           lVar10 = this.areaIcons;
-          if (*(int *)(*(int64 *)(lVar11 + 24) + 56) == -1) {
+          if (*(int *)(lVar11.cityAreaID + 56) == -1) {
             if (((lVar10 == null) || (lVar11 = GameObject.get_transform(lVar10,0)) == null) ||
                (lVar11 = Transform.GetChild(lVar11,plVar14,0)) == null) goto LAB_180c55932;
             plVar4 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40);
@@ -3256,9 +3248,9 @@ public class QuickTravelUIController
                 (lVar11 = GameObject.get_transform(this.areaIcons,0)) == null) ||
                ((lVar11 = Transform.GetChild(lVar11,plVar14,0), lVar11 == null ||
                 ((lVar11 = Component.GetComponent(lVar11,DAT_181d6c640), lVar11 == null ||
-                 (*(int64 *)(lVar11 + 24) == 0)))))) goto LAB_180c55932;
+                 (lVar11.cityAreaID == null)))))) goto LAB_180c55932;
             puVar7 = (uint64 *)
-                     ResourcePointData.GetForceColor(local_1b8,*(int64 *)(lVar11 + 24),0);
+                     ResourcePointData.GetForceColor(local_1b8,lVar11.cityAreaID,0);
           }
         joined_r0x000180c53c40:
           if (plVar4 != (int64 *)0) goto LAB_180c549e5;
@@ -3314,7 +3306,7 @@ public class QuickTravelUIController
         joined_r0x000180c5409b:
         if ((lVar11 != null) && (lVar11 = Component.GetComponent(lVar11)) != null) {
         LAB_180c5588e:
-          *(uint32 *)(lVar11 + 32) = 0;
+          lVar11.villageAreaID = 0;
           goto switchD_180c53add_default;
         }
         goto LAB_180c55932;

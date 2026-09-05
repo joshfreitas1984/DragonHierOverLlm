@@ -190,8 +190,7 @@ public class CustomDifficultyData
     // RVA   : 0xA50710   Offset: 0xA4EF10   Length: 0xE50
     public string GetDescribe(int customDifficultyType)
     {
-        var pStatics_6518 = *(int64*)(DAT_181d96518 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         long lVar3;
         long lVar4;
@@ -202,7 +201,7 @@ public class CustomDifficultyData
         if (7 < (int)customDifficultyType) {
           if (customDifficultyType == 8) {
             plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
-            lVar3 = *pStatics_6518;
+            lVar3 = CustomDifficultyData.customDifficultyName;
             if (lVar3 == null) goto LAB_180a512db;
             if (*(uint32 *)(lVar3 + 24) < 9) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -241,10 +240,10 @@ public class CustomDifficultyData
             if (iVar1 != 0) {
               iVar1 = CustomDifficultyData.GetDifficultyLv(this,8);
               if (iVar1 < 1) {
-                lVar3 = *(int64 *)(pStatics_ef00 + 0x2d0);
+                lVar3 = *(int64 *)(pPlotController + 0x2d0);
               }
               else {
-                lVar3 = *(int64 *)(pStatics_ef00 + 0x268);
+                lVar3 = *(int64 *)(pPlotController + 0x268);
               }
             }
             if ((lVar3 != null) &&
@@ -302,9 +301,9 @@ public class CustomDifficultyData
                 return "";
               }
               plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
-              if ((*pStatics_6518 != 0) &&
-                 (lVar3 = FUN_180002f80(*pStatics_6518,10,DAT_181d7c9c0),
-                 plVar2 != (int64 *)0)) {
+              if ((CustomDifficultyData.customDifficultyName != null) &&
+                 (lVar3 = FUN_180002f80(CustomDifficultyData.customDifficultyName,10,
+                                        DAT_181d7c9c0), plVar2 != (int64 *)0)) {
                 if ((lVar3 != null) &&
                    (lVar4 = il2cpp_internal(lVar3,*(uint64 *)(*plVar2 + 64))) == null) {
                   uVar5 = il2cpp_internal();
@@ -338,10 +337,10 @@ public class CustomDifficultyData
                 if (iVar1 != 0) {
                   iVar1 = CustomDifficultyData.GetDifficultyLv(this,10);
                   if (iVar1 < 1) {
-                    lVar3 = *(int64 *)(pStatics_ef00 + 0x268);
+                    lVar3 = *(int64 *)(pPlotController + 0x268);
                   }
                   else {
-                    lVar3 = *(int64 *)(pStatics_ef00 + 0x2d0);
+                    lVar3 = *(int64 *)(pPlotController + 0x2d0);
                   }
                 }
                 if ((lVar3 != null) &&
@@ -384,7 +383,7 @@ public class CustomDifficultyData
               goto LAB_180a512db;
             }
             plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
-            lVar3 = *pStatics_6518;
+            lVar3 = CustomDifficultyData.customDifficultyName;
             if (lVar3 == null) goto LAB_180a512db;
             if (*(uint32 *)(lVar3 + 24) < 10) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -423,10 +422,10 @@ public class CustomDifficultyData
             if (iVar1 != 0) {
               iVar1 = CustomDifficultyData.GetDifficultyLv(this,9);
               if (iVar1 < 1) {
-                lVar3 = *(int64 *)(pStatics_ef00 + 0x2d0);
+                lVar3 = *(int64 *)(pPlotController + 0x2d0);
               }
               else {
-                lVar3 = *(int64 *)(pStatics_ef00 + 0x268);
+                lVar3 = *(int64 *)(pPlotController + 0x268);
               }
             }
             if ((lVar3 != null) &&
@@ -442,7 +441,7 @@ public class CustomDifficultyData
             }
             plVar2[6] = lVar3;
             il2cpp_internal(plVar2 + 6,lVar3);
-            lVar3 = *(int64 *)(pStatics_6518 + 16);
+            lVar3 = CustomDifficultyData.teammateLimitName;
             iVar1 = CustomDifficultyData.GetDifficultyLv(this,9);
             if (lVar3 == null) goto LAB_180a512db;
             if (*(uint32 *)(lVar3 + 24) <= iVar1 + 3U) {
@@ -483,7 +482,7 @@ public class CustomDifficultyData
           goto LAB_180a512c1;
         }
         plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,6);
-        lVar3 = *pStatics_6518;
+        lVar3 = CustomDifficultyData.customDifficultyName;
         if (lVar3 == null) {
         LAB_180a512db:
                           // WARNING: Subroutine does not return
@@ -524,7 +523,7 @@ public class CustomDifficultyData
         iVar1 = CustomDifficultyData.GetDifficultyLv(this,customDifficultyType);
         lVar3 = "";
         if (iVar1 != 0) {
-          lVar3 = *(int64 *)(pStatics_6518 + 8);
+          lVar3 = CustomDifficultyData.customDifficultyLvRate;
           if (lVar3 == null) goto LAB_180a512db;
           if (*(uint32 *)(lVar3 + 24) <= customDifficultyType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -538,16 +537,17 @@ public class CustomDifficultyData
               iVar1 = CustomDifficultyData.GetDifficultyLv(this,customDifficultyType);
               if (iVar1 < 1) {
             }
-              lVar3 = *(int64 *)(pStatics_ef00 + 0x2d0);
+              lVar3 = *(int64 *)(pPlotController + 0x2d0);
               goto LAB_180a51196;
             }
-            if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) && (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-              il2cpp_runtime_class_init(DAT_181d4ef00);
-              lVar3 = *(int64 *)(pStatics_ef00 + 0x268);
+            if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+               (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+              il2cpp_runtime_class_init(PlotController_StaticsPtr);
+              lVar3 = *(int64 *)(pPlotController + 0x268);
               goto LAB_180a51196;
             }
           }
-          lVar3 = *(int64 *)(pStatics_ef00 + 0x268);
+          lVar3 = *(int64 *)(pPlotController + 0x268);
         }
         LAB_180a51196:
         if ((lVar3 != null) &&
@@ -638,7 +638,7 @@ public class CustomDifficultyData
             return iVar5;
           }
           iVar1 = CustomDifficultyData.GetDifficultyLv(this,iVar6,0);
-          if (*(int64 *)(*(int64 *)(DAT_181d96518 + 184) + 8) == 0) break;
+          if (CustomDifficultyData.customDifficultyLvRate == null) break;
           iVar2 = FUN_1800d6750();
           iVar5 = iVar5 + iVar2 * iVar1;
           iVar6 = iVar6 + 1;
@@ -649,20 +649,20 @@ public class CustomDifficultyData
     // RVA   : 0xA51820   Offset: 0xA50020   Length: 0x2E3
     public string GetTotalDifficultyLvDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         int[] local_res18 = new int[4];
         local_res18[0] = CustomDifficultyData.GetTotalDifficultyLv(this,0);
         if (local_res18[0] < -19) {
           uVar1 = Int32.ToString(local_res18,"+0;-0;0",0);
-          String.Format("{1}极难{0}</color>",uVar1,*(uint64 *)(pStatics + 0x2c8),
-                         0);
+          String.Format("{1}极难{0}</color>",uVar1,
+                         *(uint64 *)(pPlotController + 0x2c8),0);
           return;
         }
         if (local_res18[0] < -9) {
           uVar1 = Int32.ToString(local_res18,"+0;-0;0",0);
-          String.Format("{1}困难{0}</color>",uVar1,*(uint64 *)(pStatics + 0x2d0),
-                         0);
+          String.Format("{1}困难{0}</color>",uVar1,
+                         *(uint64 *)(pPlotController + 0x2d0),0);
           return;
         }
         if (-3 < local_res18[0]) {
@@ -675,22 +675,22 @@ public class CustomDifficultyData
             if (19 < local_res18[0]) {
               uVar1 = Int32.ToString(local_res18,"+0;-0;0");
               String.Format("{1}极易{0}</color>",uVar1,
-                             *(uint64 *)(pStatics + 0x260),0);
+                             *(uint64 *)(pPlotController + 0x260),0);
               return;
             }
             uVar1 = Int32.ToString(local_res18,"+0;-0;0");
             String.Format("{1}容易{0}</color>",uVar1,
-                           *(uint64 *)(pStatics + 0x268),0);
+                           *(uint64 *)(pPlotController + 0x268),0);
             return;
           }
           uVar1 = Int32.ToString(local_res18,"+0;-0;0");
-          String.Format("{1}较易{0}</color>",uVar1,*(uint64 *)(pStatics + 0x268),
-                         0);
+          String.Format("{1}较易{0}</color>",uVar1,
+                         *(uint64 *)(pPlotController + 0x268),0);
           return;
         }
         uVar1 = Int32.ToString(local_res18,"+0;-0;0",0);
-        String.Format("{1}较难{0}</color>",uVar1,*(uint64 *)(pStatics + 0x2d0),0)
-        ;
+        String.Format("{1}较难{0}</color>",uVar1,
+                       *(uint64 *)(pPlotController + 0x2d0),0);
     }
 
     // Token : 0x6000EBD
@@ -757,7 +757,7 @@ public class CustomDifficultyData
     // RVA   : 0xA51D30   Offset: 0xA50530   Length: 0x52A
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d96518 + 184);
+        var pCustomDifficultyData = *(int64*)(CustomDifficultyData_StaticsPtr + 184);
         long lVar1;
         lVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(lVar1,DAT_181d7c250);
@@ -773,7 +773,7 @@ public class CustomDifficultyData
           FUN_181827900(lVar1,"武学上限",DAT_181d7c3d0);
           FUN_181827900(lVar1,"组队限制",DAT_181d7c3d0);
           FUN_181827900(lVar1,"AI门派发展速度",DAT_181d7c3d0);
-          plVar2 = pStatics;
+          plVar2 = pCustomDifficultyData;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           lVar1 = il2cpp_internal(DAT_181d6f030);
@@ -790,9 +790,7 @@ public class CustomDifficultyData
             FUN_181814fa0(lVar1,2,DAT_181d67a78);
             FUN_181814fa0(lVar1,2,DAT_181d67a78);
             FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            CustomDifficultyData.customDifficultyLvRate = lVar1;
             lVar1 = il2cpp_internal(DAT_181d72a30);
             FUN_180f58a90(lVar1,DAT_181d7c250);
             if (lVar1 != null) {
@@ -801,9 +799,7 @@ public class CustomDifficultyData
               FUN_181827900(lVar1,"限制",DAT_181d7c3d0);
               FUN_181827900(lVar1,"适中",DAT_181d7c3d0);
               FUN_181827900(lVar1,"自由",DAT_181d7c3d0);
-              plVar2 = (int64 *)(pStatics + 16);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              CustomDifficultyData.teammateLimitName = lVar1;
               lVar1 = il2cpp_internal(DAT_181d72a30);
               FUN_180f58a90(lVar1,DAT_181d7c250);
               if (lVar1 != null) {
@@ -812,9 +808,7 @@ public class CustomDifficultyData
                 FUN_181827900(lVar1,"入队好感消耗10\n对方最高比玩家高1级",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"入队好感消耗5\n对方最高比玩家高2级",DAT_181d7c3d0);
                 FUN_181827900(lVar1,"入队无好感消耗\n无等级限制",DAT_181d7c3d0);
-                plVar2 = (int64 *)(pStatics + 24);
-                *plVar2 = lVar1;
-                il2cpp_internal(plVar2,lVar1);
+                CustomDifficultyData.teammateLimitDescribe = lVar1;
                 return;
               }
             }

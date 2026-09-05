@@ -27,7 +27,7 @@ public class BigMapSpeEffectController
     // RVA   : 0xCD6A00   Offset: 0xCD5200   Length: 0x1E4
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8bc28 + 184);
+        var pBigMapSpeEffectController = *(int64*)(BigMapSpeEffectController_StaticsPtr + 184);
         long lVar1;
         lVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(lVar1,DAT_181d7c250);
@@ -36,7 +36,7 @@ public class BigMapSpeEffectController
           FUN_181827900(lVar1,"寒",DAT_181d7c3d0);
           FUN_181827900(lVar1,"瘴",DAT_181d7c3d0);
           FUN_181827900(lVar1,"毒",DAT_181d7c3d0);
-          plVar2 = pStatics;
+          plVar2 = pBigMapSpeEffectController;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           lVar1 = il2cpp_internal(DAT_181d72a30);
@@ -46,9 +46,7 @@ public class BigMapSpeEffectController
             FUN_181827900(lVar1,"极寒区域\n缓慢减少内力",DAT_181d7c3d0);
             FUN_181827900(lVar1,"瘴气区域\n缓慢减少生命内力",DAT_181d7c3d0);
             FUN_181827900(lVar1,"毒雾区域\n缓慢积累中毒",DAT_181d7c3d0);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            BigMapSpeEffectController.bigMapSpeEffectTypeDescribe = lVar1;
             return;
           }
         }

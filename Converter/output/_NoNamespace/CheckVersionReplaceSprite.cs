@@ -15,7 +15,7 @@ public class CheckVersionReplaceSprite
     private void Start()
     {
         long lVar1;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
           lVar1 = Component.GetComponent(this,DAT_181d6bc40);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return

@@ -339,12 +339,12 @@ public class UIButton
         cVar3 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
         if (cVar3) {
           if ((char)this[17] == false) {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224);
+            lVar1 = UICamera.currentTouch;
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar2 = *(uint64 *)(lVar1 + 80);
+            uVar2 = lVar1.pressed;
             uVar4 = Component.get_gameObject(this,0);
             cVar3 = Object.op_Equality(uVar2,uVar4,0);
             if (!cVar3) {
@@ -376,12 +376,12 @@ public class UIButton
         cVar3 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
         if (cVar3) {
           if ((char)this[17] == false) {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8a458 + 184) + 224);
+            lVar1 = UICamera.currentTouch;
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar2 = *(uint64 *)(lVar1 + 80);
+            uVar2 = lVar1.pressed;
             uVar4 = Component.get_gameObject(this,0);
             cVar3 = Object.op_Equality(uVar2,uVar4,0);
             if (!cVar3) {
@@ -406,7 +406,6 @@ public class UIButton
     // RVA   : 0x13C0510   Offset: 0x13BED10   Length: 0x182
     protected virtual void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         ulong uVar1;
         long lVar3;
         bool cVar4;
@@ -415,8 +414,8 @@ public class UIButton
         if (cVar4) {
           cVar4 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
           if (cVar4) {
-            if (*(int *)(pStatics + 212) != -2) {
-              if (*(int *)(pStatics + 212) != -3) {
+            if (UICamera.currentTouchID != -2) {
+              if (UICamera.currentTouchID != -3) {
                 puVar2 = *(uint64 **)(DAT_181d8a3d8 + 184);
                 *puVar2 = this;
                 il2cpp_internal(puVar2,this);

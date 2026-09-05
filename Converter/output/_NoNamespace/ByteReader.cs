@@ -71,8 +71,6 @@ public class ByteReader
     // RVA   : 0xBD3730   Offset: 0xBD1F30   Length: 0x14
     public bool get_canRead()
     {
-        uint32 FUN_180bd3730(int64 this)
-        {
         int iVar1;
         if (this.mBuffer == null) {
           return false;

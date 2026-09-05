@@ -67,8 +67,6 @@ public class SkillBulletData
     // RVA   : 0x971440   Offset: 0x96FC40   Length: 0x23
     public void /*ctor*/()
     {
-        void FUN_180971440(int64 this)
-        {
         this.bulletSpeed = 0x41700000;
         this.bulletRotationType = 1;
         this.bulletRotateSpeed = 0x3f000000;

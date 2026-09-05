@@ -88,7 +88,8 @@ public class StudyDodgeArrowController
           lVar1 = Component.GetComponent(this,DAT_181d6ab40);
           if (lVar1 == null) goto LAB_180b869b1;
           fVar6 = (float)AudioSource.get_volume(lVar1,0);
-          AudioSource.set_volume(lVar1,fVar6 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+          AudioSource.set_volume
+                    (lVar1,fVar6 * GameController.CheckShowSpeHero,0);
           lVar1 = Component.GetComponent(this,DAT_181d6ab40);
           if (lVar1 == null) goto LAB_180b869b1;
           AudioSource.Play(lVar1,0);
@@ -121,7 +122,7 @@ public class StudyDodgeArrowController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d82e70 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(StudyDodgePlayer_StaticsPtr + 184) + 8);
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 112);
           uVar2 = Component.get_gameObject(this,0);
@@ -136,8 +137,6 @@ public class StudyDodgeArrowController
     // RVA   : 0xB869C0   Offset: 0xB851C0   Length: 0x1C
     public void /*ctor*/()
     {
-        void FUN_180b869c0(int64 this)
-        {
         this.generateTime = 0x3f800000;
         this.lifeTime = 0x40a00000;
         this.speed = 0x40a00000;

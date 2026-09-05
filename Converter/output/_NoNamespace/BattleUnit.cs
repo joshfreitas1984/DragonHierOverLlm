@@ -170,8 +170,6 @@ public class BattleUnit
     // RVA   : 0x8EA070   Offset: 0x8E8870   Length: 0x7
     private void Start()
     {
-        void FUN_1808ea070(uint64 this)
-        {
         BattleUnit.Init(this,0);
     }
 
@@ -231,7 +229,7 @@ public class BattleUnit
         }
         this.autoFight = 1;
         this.playerControl = 0;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar3 = PlotController.StopWarCostFavor;
         if (lVar3 != null) {
           uVar1 = *(uint64 *)(lVar3 + 0x110);
           cVar2 = Object.op_Equality(uVar1,this,0);
@@ -295,7 +293,7 @@ public class BattleUnit
         }
         this.autoFight = 1;
         this.playerControl = 0;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+        lVar3 = PlotController.StopWarCostFavor;
         if (lVar3 != null) {
           uVar1 = *(uint64 *)(lVar3 + 0x110);
           cVar2 = Object.op_Equality(uVar1,this,0);
@@ -578,7 +576,8 @@ public class BattleUnit
                       }
                       if (lVar1 != null) {
                         AudioSource.set_volume
-                                  (lVar1,fVar9 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0)
+                                  (lVar1,fVar9 * *(float *)(*(int64 *)
+                                                             (GameController_StaticsPtr + 184) + 16),0)
                         ;
                         lVar1 = this.heroAudioSources;
                         if (lVar1 != null) {
@@ -621,7 +620,7 @@ public class BattleUnit
             }
           }
           else {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+            lVar1 = PlotController.StopWarCostFavor;
             if (lVar1 != null) {
               uVar5 = BattleController.BattleUnitAttackHappen(lVar1,0);
               FUN_180d837c0(this,uVar5,0);
@@ -644,7 +643,7 @@ public class BattleUnit
           uVar4 = 0x497423f0;
         }
         else {
-          uVar4 = *(uint32 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x228);
+          uVar4 = *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x228);
         }
         uVar4 = FUN_1810a8ba0(fVar1 + num,0,uVar4,0);
         this.battleMove = uVar4;
@@ -703,7 +702,6 @@ public class BattleUnit
     // RVA   : 0x8EA1C0   Offset: 0x8E89C0   Length: 0x189
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         float fVar1;
         long lVar2;
         long lVar3;
@@ -713,12 +711,12 @@ public class BattleUnit
         BattleUnit.RefreshFollowUI(this,0);
         if (this.skeleton != null) {
           fVar1 = *(float *)(this.skeleton + 300);
-          lVar2 = *(int64 *)(pStatics + 80);
+          lVar2 = PlotController.StopWarCostFavor;
           if (lVar2 != null) {
             fVar4 = (float)BattleController.GetHalfBattleTimeScale(lVar2,0);
             if (fVar1 != fVar4) {
               lVar2 = this.skeleton;
-              lVar3 = *(int64 *)(pStatics + 80);
+              lVar3 = PlotController.StopWarCostFavor;
               if ((lVar3 == null) || (uVar5 = BattleController.GetHalfBattleTimeScale(lVar3,0), lVar2 == null))
               throw; // [null/range check failed]
               *(uint32 *)(lVar2 + 300) = uVar5;
@@ -795,7 +793,8 @@ public class BattleUnit
               fVar1 = *(float *)(lVar3.isSummon + 32 + lVar5 * 4);
               if (lVar2 != null) {
                 AudioSource.set_volume
-                          (lVar2,fVar1 * *(float *)(*(int64 *)(DAT_181d4e010 + 184) + 16),0);
+                          (lVar2,fVar1 * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) + 16
+                                                   ),0);
                 lVar2 = this.heroAudioSources;
                 if (lVar2 != null) {
                   if (lVar2.Count <= targetTrack) {
@@ -817,8 +816,7 @@ public class BattleUnit
     // RVA   : 0x8E7FA0   Offset: 0x8E67A0   Length: 0x171A
     public void RefreshFollowUI()
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d4e188 + 184);
         float fVar2;
         uint uVar3;
         bool cVar4;
@@ -848,13 +846,13 @@ public class BattleUnit
         cVar4 = Object.op_Equality(lVar5,0,0);
         if (cVar4) {
           uVar11 = local_b8;
-          if ((((*pStatics_e188 == 0) ||
-               (lVar5 = *(int64 *)(*pStatics_e188 + 56)) == null) ||
+          if ((((*pStatics == 0) ||
+               (lVar5 = *(int64 *)(*pStatics + 56)) == null) ||
               (lVar5 = GameObject.get_transform(lVar5,0), uVar11 = local_b8) == null) ||
              (lVar5 = Transform.Find(lVar5,"HeroFollowUI",0), uVar11 = local_b8) == null)
           goto LAB_1808e96b5;
           uVar6 = Component.get_gameObject(lVar5,0);
-          lVar5 = *(int64 *)(pStatics_b128 + 80);
+          lVar5 = PlotController.StopWarCostFavor;
           uVar11 = local_b8;
           if (lVar5 == null) goto LAB_1808e96b5;
           uVar11 = lVar5.maxLivingSkill;
@@ -955,7 +953,7 @@ public class BattleUnit
           puVar8 = (uint64 *)Transform.get_localPosition(&local_b8,lVar5,0);
           local_a8 = *puVar8;
           local_a0 = *(float *)(puVar8 + 1);
-          lVar9 = *(int64 *)(*(int64 *)(DAT_181d8b6a8 + 184) + 32);
+          lVar9 = BattleUnit.SummonFollowUIOffset;
           uVar11 = local_b8;
           if ((this.heroData == null) || (lVar9 == null)) goto LAB_1808e96b5;
           uVar3 = this.heroData.summonID;
@@ -964,7 +962,7 @@ public class BattleUnit
           }
           local_b8 = lVar9.isSummon[uVar3];
           local_b0 = *(float *)(lVar9.isSummon + 40 + (int64)(int)uVar3 * 12);
-          lVar9 = *(int64 *)(pStatics_b128 + 80);
+          lVar9 = PlotController.StopWarCostFavor;
           uVar11 = local_b8;
           if (((lVar9 = lVar9?.atAreaID) == null) ||
              (lVar9 = GameObject.get_transform(lVar9,0), uVar11 = local_b8) == null)
@@ -980,7 +978,7 @@ public class BattleUnit
         uVar11 = local_b8;
         if (*plVar1 == 0) goto LAB_1808e96b5;
         lVar5 = GameObject.get_transform(*plVar1,0);
-        lVar9 = *(int64 *)(pStatics_b128 + 80);
+        lVar9 = PlotController.StopWarCostFavor;
         uVar11 = local_b8;
         if ((((lVar9 = lVar9?.atAreaID) == null) ||
             (lVar9 = GameObject.get_transform(lVar9,0), uVar11 = local_b8) == null) ||
@@ -1033,11 +1031,11 @@ public class BattleUnit
           if ((this.heroData == null) || (lVar5 == null)) goto LAB_1808e96b5;
           GameObject.SetActive(lVar5,this.heroData.isSummon,0);
         }
-        lVar5 = *(int64 *)(pStatics_b128 + 80);
+        lVar5 = PlotController.StopWarCostFavor;
         uVar11 = local_b8;
         if (lVar5 == null) goto LAB_1808e96b5;
         if (*(int *)(lVar5 + 36) == 3) {
-          lVar5 = *(int64 *)(pStatics_b128 + 80);
+          lVar5 = PlotController.StopWarCostFavor;
           uVar11 = local_b8;
           if (lVar5 == null) goto LAB_1808e96b5;
           if (lVar5.favor == 10) {
@@ -1396,7 +1394,7 @@ public class BattleUnit
         if (this.skeleton != null) {
           lVar2 = Component.get_transform(this.skeleton,0);
           if (!right) {
-            lVar1 = *(int64 *)(DAT_181d4ef00 + 184);
+            lVar1 = *(int64 *)(PlotController_StaticsPtr + 184);
             local_18 = *(uint32 *)(lVar1 + 0x688);
             uStack_14 = *(uint32 *)(lVar1 + 0x68c);
             uStack_10 = *(uint32 *)(lVar1 + 0x690);
@@ -1420,8 +1418,6 @@ public class BattleUnit
     // RVA   : 0x8E5830   Offset: 0x8E4030   Length: 0x822
     public void EnterBattleField(GridUnitData bornGrid)
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
         uint uVar1;
         ulong uVar2;
         int iVar3;
@@ -1447,7 +1443,7 @@ public class BattleUnit
         BattleUnit.Init(this,0);
         if (bornGrid != null) {
           iVar3 = *(int *)(bornGrid + 40);
-          lVar4 = *(int64 *)(pStatics_b128 + 80);
+          lVar4 = PlotController.StopWarCostFavor;
           if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 24)) != null) {
             BattleUnit.ChangeFaceDirection
                       (this,(float)iVar3 < (float)*(int *)(lVar4 + 32) * 0.5,1,0);
@@ -1491,7 +1487,7 @@ public class BattleUnit
                     BattleUnit.EnterGrid(this,bornGrid,0,0,0);
                     if (this.heroData == null) throw; // [null/range check failed]
                     iVar3 = this.heroData.heroForceLv;
-                    lVar4 = *(int64 *)(pStatics_e010 + 32);
+                    lVar4 = GameController.lockObj;
                     if (((lVar4 == null) || (this.heroData == null)) ||
                        (lVar4 = *(int64 *)(lVar4 + 56)) == null) throw; // [null/range check failed]
                     uVar1 = this.heroData.heroForceLv;
@@ -1574,11 +1570,11 @@ public class BattleUnit
                       local_d8 = *puVar7;
                       uStack_d0 = puVar7[1];
                       SpriteRenderer.set_color(lVar4,&local_d8,0);
-                      lVar4 = *(int64 *)(pStatics_e010 + 8);
+                      lVar4 = GameController.difficultyExtraPoint;
                       if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 16)) != null) {
                         iVar3 = PlayerPrefDictionary.GetInt(lVar4,"FightViewFollow",0);
                         if (iVar3 == 1) {
-                          lVar4 = *(int64 *)(pStatics_b128 + 80);
+                          lVar4 = PlotController.StopWarCostFavor;
                           uVar5 = GridUnitData.get_GridObj(bornGrid,0);
                           if (lVar4 == null) throw; // [null/range check failed]
                           BattleController.FocusOnTarget(lVar4,uVar5,0);
@@ -1646,7 +1642,7 @@ public class BattleUnit
     // RVA   : 0x8E9AA0   Offset: 0x8E82A0   Length: 0x1F0
     public void ShowFocusAnim()
     {
-        var pStatics = *(int64*)(DAT_181d8b6a8 + 184);
+        var pBattleUnit = *(int64*)(BattleUnit_StaticsPtr + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -1660,8 +1656,8 @@ public class BattleUnit
           lVar1 = Component.get_transform(this,0);
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"HighLight",0);
-            local_28 = *(uint64 *)(pStatics + 12);
-            local_20 = *(float *)(pStatics + 20);
+            local_28 = BattleUnit.highLightScale;
+            local_20 = *(float *)(pBattleUnit + 20);
             fVar4 = local_20 * 2.0;
             uVar2 = CONCAT44((float)((uint64)local_28 >> 32) * 2.0,(float)local_28 * 2.0);
             if (lVar1 != null) {
@@ -1671,8 +1667,8 @@ public class BattleUnit
               lVar1 = Component.get_transform(this,0);
               if (lVar1 != null) {
                 uVar3 = Transform.Find(lVar1,"HighLight",0);
-                local_20 = *(float *)(pStatics + 20);
-                local_28 = *(uint64 *)(pStatics + 12);
+                local_20 = *(float *)(pBattleUnit + 20);
+                local_28 = BattleUnit.highLightScale;
                 uVar2 = ShortcutExtensions.DOScale(uVar3,&local_28,0x3f000000,0,uVar2,fVar4);
                 TweenSettingsExtensions.SetEase(uVar2,27,DAT_181d97ca8);
                 return;
@@ -1949,7 +1945,7 @@ public class BattleUnit
                               (this,uVar4,&local_48,18,CONCAT44(uVar7,24),"UIAtlas",0,0,0);
                     uVar2 = String.Concat(uVar2,"，",uVar4,0);
                   }
-                  lVar5 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+                  lVar5 = PlotController.StopWarCostFavor;
                   uVar2 = String.Concat(uVar2,"。",0);
                   if (lVar5 != null) {
                     BattleController.AddInfoText(lVar5,uVar2,1,0);
@@ -2051,7 +2047,8 @@ public class BattleUnit
             uStack_30 = (uint32)uStack_48;
             uStack_2c = uStack_48._4_4_;
             BattleUnit.ShowTextOnHead
-                      (this,uVar3,&local_38,*(int *)(*(int64 *)(DAT_181d8b6a8 + 184) + 28) + -4,
+                      (this,uVar3,&local_38,
+                       BattleUnit.damageBaseFontSize + -4,
                        CONCAT44(uVar5,24),"UIAtlas",0,0,0);
           }
           if (this.heroData == null) {
@@ -2118,8 +2115,9 @@ public class BattleUnit
             uStack_20 = uVar7;
             uStack_1c = uVar8;
             BattleUnit.ShowTextOnHead
-                      (this,uVar3,&local_28,*(int *)(*(int64 *)(DAT_181d8b6a8 + 184) + 28) + -2,
-                       24,"UIAtlas",0,0,0);
+                      (this,uVar3,&local_28,
+                       BattleUnit.damageBaseFontSize + -2,24,
+                       "UIAtlas",0,0,0);
           }
           if (this.heroData == null) {
         LAB_1808e3f90:
@@ -2136,7 +2134,6 @@ public class BattleUnit
     // RVA   : 0x8E3520   Offset: 0x8E1D20   Length: 0x639
     public void ChangeHp(float num, bool isCrit, bool useRecoverRate, bool noDead)
     {
-        var pStatics = *(int64*)(DAT_181d8b6a8 + 184);
         void BattleUnit.ChangeHp
                      (int64 this,float num,char isCrit,char useRecoverRate,uint8 noDead)
         {
@@ -2191,7 +2188,8 @@ public class BattleUnit
           uStack_60 = uVar13;
           uStack_5c = uVar14;
           BattleUnit.ShowTextOnHead
-                    (this,uVar4,&local_68,*(uint32 *)(pStatics + 28),
+                    (this,uVar4,&local_68,
+                     BattleUnit.damageBaseFontSize,
                      CONCAT44(uVar2,24),"UIAtlas",0,0,0);
         }
         else {
@@ -2213,7 +2211,8 @@ public class BattleUnit
             uVar13 = puVar5[2];
             uVar14 = puVar5[3];
             uVar4 = "-0";
-            if (((*(byte *)(DAT_181d8b6a8 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8b6a8 + 224) == 0)) {
+            if (((*(byte *)(BattleUnit_StaticsPtr + 0x133) & 4) != 0) &&
+               (*(int *)(BattleUnit_StaticsPtr + 224) == 0)) {
               il2cpp_runtime_class_init();
               uVar4 = "-0";
             }
@@ -2226,7 +2225,7 @@ public class BattleUnit
             uStack_64 = puVar5[1];
             uStack_60 = puVar5[2];
             uStack_5c = puVar5[3];
-            iVar9 = *(int *)(pStatics + 28);
+            iVar9 = BattleUnit.damageBaseFontSize;
           }
           else {
             puVar5 = (uint32 *)Color.get_red();
@@ -2234,16 +2233,17 @@ public class BattleUnit
             uStack_64 = puVar5[1];
             uStack_60 = puVar5[2];
             uStack_5c = puVar5[3];
-            iVar9 = *(int *)(pStatics + 28) + 3;
+            iVar9 = BattleUnit.damageBaseFontSize + 3;
           }
           BattleUnit.ShowTextOnHead
                     (this,uVar4,&local_68,iVar9,CONCAT44(uVar2,24),"UIAtlas",0,0,0);
           uVar4 = this.hipPos;
           if (this.heroData == null) throw; // [null/range check failed]
           if (!this.heroData.isSummon) {
-            if (**(int **)(DAT_181d4ef00 + 184) == 2) goto LAB_1808e3818;
+            if (PlotController._instance == 2) goto LAB_1808e3818;
             uVar7 = "SpeEffect/BloodSplash";
-            if (*(char *)(*(int64 *)(DAT_181d4ef00 + 184) + 4) != false) goto LAB_1808e3818;
+            if (*(char *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4) != false)
+            goto LAB_1808e3818;
           }
           else {
         LAB_1808e3818:
@@ -2281,7 +2281,7 @@ public class BattleUnit
               if ((((0.0 < lVar3.hp) && (0.2 <= fVar10 / lVar3.maxhp)) &&
                   (lVar3.hp / lVar3.maxhp < 0.2)) &&
                  (fVar10 = (float)Random.get_value(0), fVar10 <= 1.0)) {
-                lVar3 = *(int64 *)(pStatics + 56);
+                lVar3 = BattleUnit.HeroLowHpTalk;
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar2 = FUN_180d8cf10(0,lVar3.summonLv,0);
                 uVar4 = FUN_180002f80(lVar3,uVar2,DAT_181d7c9c0);
@@ -2371,7 +2371,6 @@ public class BattleUnit
     // RVA   : 0x8E43A0   Offset: 0x8E2BA0   Length: 0x2A7
     public void ChangeTrueHp(float num)
     {
-        var pStatics = *(int64*)(DAT_181d8b6a8 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -2404,7 +2403,7 @@ public class BattleUnit
                 if ((((0.0 < lVar1.hp) && (0.2 <= fVar6 / lVar1.maxhp)) &&
                     (lVar1.hp / lVar1.maxhp < 0.2)) &&
                    (fVar6 = (float)Random.get_value(0), fVar6 <= 1.0)) {
-                  lVar1 = *(int64 *)(pStatics + 56);
+                  lVar1 = BattleUnit.HeroLowHpTalk;
                   if (lVar1 == null) throw; // [null/range check failed]
                   uVar3 = FUN_180d8cf10(0,lVar1.summonLv,0);
                   uVar4 = FUN_180002f80(lVar1,uVar3,DAT_181d7c9c0);
@@ -2417,8 +2416,8 @@ public class BattleUnit
               uStack_30 = puVar5[1];
               BattleUnit.ShowTextOnHead
                         (this,uVar4,&local_38,
-                         *(uint32 *)(pStatics + 28),24,"UIAtlas",0,
-                         0,0);
+                         BattleUnit.damageBaseFontSize,24,
+                         "UIAtlas",0,0,0);
               return;
             }
           }
@@ -2454,8 +2453,7 @@ public class BattleUnit
     // RVA   : 0x8E65E0   Offset: 0x8E4DE0   Length: 0x584
     public void FightCureSelfInjury(float num)
     {
-        var pStatics_b6a8 = *(int64*)(DAT_181d8b6a8 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         float fVar2;
         ulong uVar3;
@@ -2484,8 +2482,8 @@ public class BattleUnit
           if ((fVar2 < lVar6.internalInjury) || (fVar2 < fVar1)) {
             if ((fVar1 < lVar6.internalInjury) || (fVar1 < fVar2)) {
               if (!DAT_181e77d0b) {
-                il2cpp_runtime_class_init(&DAT_181d8b6a8);
-                il2cpp_runtime_class_init(&DAT_181d4ef00);
+                il2cpp_internal(&BattleUnit_StaticsPtr);
+                il2cpp_internal(&PlotController_StaticsPtr);
                 il2cpp_runtime_class_init(&DAT_181d5b800);
                 il2cpp_internal(&"+0;-0;0");
                 il2cpp_internal(&"UIAtlas");
@@ -2508,7 +2506,7 @@ public class BattleUnit
                 uVar11 = puVar4[3];
               }
               else {
-                lVar6 = *(int64 *)(pStatics_ef00 + 0x3b8);
+                lVar6 = *(int64 *)(pPlotController + 0x3b8);
                 if (lVar6 == null) {
         LAB_1808e6b5f:
                           // WARNING: Subroutine does not return
@@ -2523,13 +2521,13 @@ public class BattleUnit
                 uVar10 = lVar6.dailyAIManaged;
                 uVar11 = *(uint32 *)(lVar6 + 60);
               }
-              iVar7 = *(int *)(pStatics_b6a8 + 28);
+              iVar7 = BattleUnit.damageBaseFontSize;
               uVar5 = 1;
             }
             else {
               if (!DAT_181e77d0a) {
-                il2cpp_runtime_class_init(&DAT_181d8b6a8);
-                il2cpp_runtime_class_init(&DAT_181d4ef00);
+                il2cpp_internal(&BattleUnit_StaticsPtr);
+                il2cpp_internal(&PlotController_StaticsPtr);
                 il2cpp_runtime_class_init(&DAT_181d5b800);
                 il2cpp_internal(&"+0;-0;0");
                 il2cpp_internal(&"UIAtlas");
@@ -2552,7 +2550,7 @@ public class BattleUnit
                 uVar11 = puVar4[3];
               }
               else {
-                lVar6 = *(int64 *)(pStatics_ef00 + 0x3b8);
+                lVar6 = *(int64 *)(pPlotController + 0x3b8);
                 if (lVar6 == null) {
         LAB_1808e6b59:
                           // WARNING: Subroutine does not return
@@ -2567,14 +2565,14 @@ public class BattleUnit
                 uVar10 = lVar6.summonSourceHero;
                 uVar11 = *(uint32 *)(lVar6 + 44);
               }
-              iVar7 = *(int *)(pStatics_b6a8 + 28);
+              iVar7 = BattleUnit.damageBaseFontSize;
               uVar5 = 0;
             }
           }
           else {
             if (!DAT_181e77d0c) {
-              il2cpp_runtime_class_init(&DAT_181d8b6a8);
-              il2cpp_runtime_class_init(&DAT_181d4ef00);
+              il2cpp_internal(&BattleUnit_StaticsPtr);
+              il2cpp_internal(&PlotController_StaticsPtr);
               il2cpp_runtime_class_init(&DAT_181d5b800);
               il2cpp_internal(&"+0;-0;0");
               il2cpp_internal(&"UIAtlas");
@@ -2597,7 +2595,7 @@ public class BattleUnit
               uVar11 = puVar4[3];
             }
             else {
-              lVar6 = *(int64 *)(pStatics_ef00 + 0x3b8);
+              lVar6 = *(int64 *)(pPlotController + 0x3b8);
               if (lVar6 == null) {
         LAB_1808e6b53:
                           // WARNING: Subroutine does not return
@@ -2612,7 +2610,7 @@ public class BattleUnit
               uVar10 = lVar6.heroAIDataArriveTargetRecord;
               uVar11 = *(uint32 *)(lVar6 + 76);
             }
-            iVar7 = *(int *)(pStatics_b6a8 + 28);
+            iVar7 = BattleUnit.damageBaseFontSize;
             uVar5 = 2;
           }
           uVar5 = GlobalData.GetInjuryIconName(uVar5,0);
@@ -2659,7 +2657,7 @@ public class BattleUnit
                 uVar9 = puVar4[3];
               }
               else {
-                lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3b8);
+                lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b8);
                 if (lVar2 == null) throw; // [null/range check failed]
                 if (lVar2.summonLv == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2670,7 +2668,7 @@ public class BattleUnit
                 uVar8 = lVar2.summonSourceHero;
                 uVar9 = *(uint32 *)(lVar2 + 44);
               }
-              iVar1 = *(int *)(*(int64 *)(DAT_181d8b6a8 + 184) + 28);
+              iVar1 = BattleUnit.damageBaseFontSize;
               uVar5 = GlobalData.GetInjuryIconName(0,0);
               local_28 = uVar6;
               uStack_24 = uVar7;
@@ -2718,7 +2716,7 @@ public class BattleUnit
                 uVar9 = puVar4[3];
               }
               else {
-                lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3b8);
+                lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b8);
                 if (lVar2 == null) throw; // [null/range check failed]
                 if (lVar2.summonLv < 2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2729,7 +2727,7 @@ public class BattleUnit
                 uVar8 = lVar2.dailyAIManaged;
                 uVar9 = *(uint32 *)(lVar2 + 60);
               }
-              iVar1 = *(int *)(*(int64 *)(DAT_181d8b6a8 + 184) + 28);
+              iVar1 = BattleUnit.damageBaseFontSize;
               uVar5 = GlobalData.GetInjuryIconName(1);
               local_28 = uVar6;
               uStack_24 = uVar7;
@@ -2777,7 +2775,7 @@ public class BattleUnit
                 uVar9 = puVar4[3];
               }
               else {
-                lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x3b8);
+                lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b8);
                 if (lVar2 == null) throw; // [null/range check failed]
                 if (lVar2.summonLv < 3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2788,7 +2786,7 @@ public class BattleUnit
                 uVar8 = lVar2.heroAIDataArriveTargetRecord;
                 uVar9 = *(uint32 *)(lVar2 + 76);
               }
-              iVar1 = *(int *)(*(int64 *)(DAT_181d8b6a8 + 184) + 28);
+              iVar1 = BattleUnit.damageBaseFontSize;
               uVar5 = GlobalData.GetInjuryIconName(2);
               local_28 = uVar6;
               uStack_24 = uVar7;
@@ -2805,7 +2803,7 @@ public class BattleUnit
     // RVA   : 0x8E4650   Offset: 0x8E2E50   Length: 0xE1F
     public void CheckDead()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         bool cVar2;
         long lVar3;
@@ -2902,19 +2900,21 @@ public class BattleUnit
                                         iVar8 = iVar8 + 1;
                                         if (lVar3 == null) throw; // [null/range check failed]
                                       }
-                                      if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) &&
-                                         (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-                                        il2cpp_runtime_class_init(DAT_181d4ef00);
+                                      if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                                         (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+                                        il2cpp_runtime_class_init(PlotController_StaticsPtr);
                                         lVar3 = this.heroData;
                                       }
-                                      fVar12 = *(float *)(pStatics + 0x228);
+                                      fVar12 = *(float *)(pPlotController
+                                                         + 0x228);
                                       if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x2b8) != 0)) {
                                         fVar13 = (float)HeroSpeAddData.Get(*(int64 *)(lVar3 + 0x2b8),
                                                                             129,0);
                                         fVar1 = this.battleMove;
                                         uVar14 = FUN_1810a8ba0(fVar1 + fVar13 * fVar12,0,
                                                                *(uint32 *)
-                                                                (pStatics +
+                                                                (*(int64 *)
+                                                                  (PlotController_StaticsPtr + 184) +
                                                                 0x228),0);
                                         this.battleMove = uVar14;
                                         uVar15 = this.actionBarUnit;
@@ -2944,7 +2944,8 @@ public class BattleUnit
                                             HeroData.RemoveAllDebuff(this.heroData,0);
                                             this.reborn = 1;
                                             lVar3 = *(int64 *)
-                                                     (*(int64 *)(DAT_181d8b128 + 184) + 80);
+                                                     (pPlotController +
+                                                     80);
                                             plVar5 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
                                             if ((this.heroData != null) &&
                                                (lVar6 = HeroData.Name(this.heroData,1,0),
@@ -3068,7 +3069,7 @@ public class BattleUnit
                  lVar3 == null)) break;
               AnimationState.SetAnimation(lVar3,1,"die",0,0);
               BattleUnit.LeaveBattleField(this,0);
-              lVar3 = *(int64 *)(*(int64 *)(DAT_181d8b6a8 + 184) + 48);
+              lVar3 = BattleUnit.HeroDeadTalk;
               if (lVar3 == null) break;
               uVar9 = FUN_180d8cf10(0,lVar3.battleUnits,0);
               if (lVar3.battleUnits <= uVar9) {
@@ -3192,15 +3193,15 @@ public class BattleUnit
         uint64 local_28;
         float fStack_20;
         uint32 uStack_1c;
-        lVar1 = **(int64 **)(DAT_181d4df90 + 184);
+        lVar1 = GameController._instance;
         if (this.hipPos != null) {
           lVar2 = GameObject.get_transform(this.hipPos,0);
           if (lVar2 != null) {
             puVar3 = (uint64 *)Transform.get_position(&local_28,lVar2,0);
             local_58 = *puVar3;
             local_50 = *(float *)(puVar3 + 1);
-            local_30 = *(float *)(*(uint64 **)(DAT_181d8b6a8 + 184) + 1);
-            local_38 = **(uint64 **)(DAT_181d8b6a8 + 184);
+            local_30 = *(float *)(*(uint64 **)(BattleUnit_StaticsPtr + 184) + 1);
+            local_38 = BattleUnit.headPos;
             fVar4 = (float)this.OnceShowText * 0.0;
             local_40 = local_50 + local_30 + fVar4;
             local_48 = CONCAT44(local_58._4_4_ + (float)((uint64)local_38 >> 32) +
@@ -3278,8 +3279,8 @@ public class BattleUnit
     // RVA   : 0x8E2320   Offset: 0x8E0B20   Length: 0x8A6
     public void AddBuff(int id, float time)
     {
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         float fVar2;
         ulong uVar3;
@@ -3305,7 +3306,7 @@ public class BattleUnit
           HeroData.AddBuff(this.heroData,id,local_res18[0],0);
         }
         else {
-          lVar1 = *(int64 *)(pStatics_e010 + 32);
+          lVar1 = GameController.lockObj;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar1 + 24) <= id) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3314,7 +3315,7 @@ public class BattleUnit
           if (lVar1 == null) throw; // [null/range check failed]
           if (*(char *)(lVar1 + 90) != false) goto LAB_1808e24ec;
         }
-        lVar1 = *(int64 *)(pStatics_e010 + 32);
+        lVar1 = GameController.lockObj;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 144)) != null) {
           if (*(uint32 *)(lVar1 + 24) <= id) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3325,7 +3326,7 @@ public class BattleUnit
             if (this.heroData != null) {
               uVar3 = HeroData.GetBuffLevelString(this.heroData,id,0);
               uVar4 = String.Concat(uVar4,uVar3,0);
-              lVar1 = *(int64 *)(pStatics_e010 + 32);
+              lVar1 = GameController.lockObj;
               if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 144)) != null) {
                 if (*(uint32 *)(lVar1 + 24) <= id) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3343,7 +3344,7 @@ public class BattleUnit
                   uStack_40 = puVar5[2];
                   uStack_3c = puVar5[3];
                   BattleUnit.ShowTextOnHead(this,uVar4,&local_48,18,24,"UIAtlas",0,0,0);
-                  lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+                  lVar1 = PlotController.StopWarCostFavor;
                   plVar6 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
                   if (this.heroData != null) {
                     lVar7 = HeroData.Name(this.heroData,1,0);
@@ -3363,7 +3364,7 @@ public class BattleUnit
                       }
                       plVar6[4] = lVar7;
                       il2cpp_internal(plVar6 + 4,lVar7);
-                      lVar7 = *(int64 *)(pStatics_e010 + 32);
+                      lVar7 = GameController.lockObj;
                       if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 144)) != null) {
                         if (*(uint32 *)(lVar7 + 24) <= id) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3372,12 +3373,14 @@ public class BattleUnit
                         lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 32 + lVar9 * 8);
                         if (lVar7 != null) {
                           if (*(char *)(lVar7 + 64) == false) {
-                            uVar3 = *(uint64 *)(pStatics_ef00 + 0x2c8);
+                            uVar3 = *(uint64 *)
+                                     (pPlotController + 0x2c8);
                           }
                           else {
-                            uVar3 = *(uint64 *)(pStatics_ef00 + 0x260);
+                            uVar3 = *(uint64 *)
+                                     (pPlotController + 0x260);
                           }
-                          lVar7 = *(int64 *)(pStatics_e010 + 32);
+                          lVar7 = GameController.lockObj;
                           if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 144)) != null) {
                             if (*(uint32 *)(lVar7 + 24) <= id) {
                               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3416,7 +3419,8 @@ public class BattleUnit
                               }
                               plVar6[6] = lVar7;
                               il2cpp_internal(plVar6 + 6,lVar7);
-                              lVar7 = *(int64 *)(pStatics_e010 + 32);
+                              lVar7 = *(int64 *)
+                                       (pGameController + 32);
                               if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 144)) != null) {
                                 if (*(uint32 *)(lVar7 + 24) <= id) {
                                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3466,8 +3470,7 @@ public class BattleUnit
     // RVA   : 0x8E6060   Offset: 0x8E4860   Length: 0x571
     public void EnterGrid(GridUnitData grid, bool noTurnRotation, bool teleport)
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar2;
         float fVar3;
         long lVar4;
@@ -3526,19 +3529,20 @@ public class BattleUnit
             fVar9 = *(float *)(puVar6 + 1);
             local_68._0_4_ = (float)uVar7;
             local_68._4_4_ = (float)((uint64)uVar7 >> 32);
-            local_48 = *(uint64 *)(pStatics_b128 + 28);
-            local_40 = *(float *)(pStatics_b128 + 36);
+            local_48 = *(uint64 *)(pPlotController + 28);
+            local_40 = *(float *)(pPlotController + 36);
             fVar9 = fVar9 + local_40;
             local_58 = CONCAT44(local_68._4_4_ + (float)((uint64)local_48 >> 32),
                                 (float)local_68 + (float)local_48);
-            fVar2 = *(float *)(*(int64 *)(DAT_181d8b6a8 + 184) + 24);
+            fVar2 = BattleUnit.UnitMoveOneGridTime;
             fVar3 = local_40;
-            if ((*pStatics_df90 != 0) &&
-               (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar5 = GameController._instance.worldData,
+               lVar5 != null)) {
               local_48 = local_58;
               local_40 = fVar9;
               uVar7 = ShortcutExtensions.DOLocalMove
-                                (lVar4,&local_48,fVar2 / *(float *)(lVar5 + 0x1d8),0,0);
+                                (lVar4,&local_48,fVar2 / lVar5.battleTimeScale,0,0);
               TweenSettingsExtensions.SetEase(uVar7,1,DAT_181d97ca8);
         LAB_1808e642b:
               GridUnitData.OnEnter(grid,this,0);
@@ -3553,21 +3557,21 @@ public class BattleUnit
                   lVar5 = FUN_18046bb80(0);
                   fVar3 = local_40;
                   if ((((lVar5 == null) || (lVar4 = this.mapGrid) == null) ||
-                      (*(int64 *)(lVar5 + 24) == 0)) ||
+                      (lVar5.cityAreaID == null)) ||
                      (lVar5 = BattleMapData.GetGridData
-                                        (*(int64 *)(lVar5 + 24),*(int *)(lVar4 + 36) + iVar8,
+                                        (lVar5.cityAreaID,*(int *)(lVar4 + 36) + iVar8,
                                          *(uint32 *)(lVar4 + 40),0), fVar3 = local_40, lVar5 == null))
                   goto LAB_1808e65cc;
                   if (*(int *)(lVar5 + 20) == 2) {
                     lVar5 = FUN_18046bb80(0);
                     fVar3 = local_40;
                     if (((lVar5 == null) || (lVar4 = this.mapGrid) == null) ||
-                       ((*(int64 *)(lVar5 + 24) == 0 ||
+                       ((lVar5.cityAreaID == null ||
                         ((lVar5 = BattleMapData.GetGridData
-                                            (*(int64 *)(lVar5 + 24),*(int *)(lVar4 + 36) + iVar8,
+                                            (lVar5.cityAreaID,*(int *)(lVar4 + 36) + iVar8,
                                              *(uint32 *)(lVar4 + 40),0), fVar3 = local_40,
-                         lVar5 == null || (*(int64 *)(lVar5 + 48) == 0)))))) goto LAB_1808e65cc;
-                    *(uint8 *)(*(int64 *)(lVar5 + 48) + 64) = 1;
+                         lVar5 == null || (lVar5.Areas == null)))))) goto LAB_1808e65cc;
+                    *(uint8 *)(lVar5.Areas + 64) = 1;
                   }
                   iVar8 = iVar8 + -1;
                 } while (-4 < iVar8);
@@ -3584,8 +3588,8 @@ public class BattleUnit
           fVar9 = *(float *)(puVar6 + 1);
           local_58._0_4_ = (float)uVar7;
           local_58._4_4_ = (float)((uint64)uVar7 >> 32);
-          local_48 = *(uint64 *)(pStatics_b128 + 28);
-          fVar3 = *(float *)(pStatics_b128 + 36);
+          local_48 = *(uint64 *)(pPlotController + 28);
+          fVar3 = *(float *)(pPlotController + 36);
           local_40 = fVar9 + fVar3;
           local_68 = CONCAT44(local_58._4_4_ + (float)((uint64)local_48 >> 32),
                               (float)local_58 + (float)local_48);
@@ -3659,8 +3663,6 @@ public class BattleUnit
     // RVA   : 0x272A00   Offset: 0x271200   Length: 0xC
     public void JoinBattleTeam(BattleTeam team)
     {
-        void FUN_180272a00(int64 this,uint64 team)
-        {
         this.battleTeam = team;
     }
 
@@ -3668,8 +3670,6 @@ public class BattleUnit
     // RVA   : 0x8E7DC0   Offset: 0x8E65C0   Length: 0x12
     public void QuitBattleTeam()
     {
-        void FUN_1808e7dc0(int64 this)
-        {
         this.battleTeam = 0;
     }
 
@@ -3677,7 +3677,6 @@ public class BattleUnit
     // RVA   : 0x8E6D00   Offset: 0x8E5500   Length: 0x36B
     public string GetStartFightTalk(bool isSupport)
     {
-        var pStatics = *(int64*)(DAT_181d8b6a8 + 184);
         long lVar1;
         uint uVar2;
         long lVar3;
@@ -3688,16 +3687,16 @@ public class BattleUnit
         ulong uVar8;
         uVar5 = "";
         if (!isSupport) {
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d8b128 + 184) + 80);
+          lVar3 = PlotController.StopWarCostFavor;
           if (lVar3 != null) {
             if (lVar3.needProtectUnits == null) {
-              lVar3 = *(int64 *)(pStatics + 64);
+              lVar3 = BattleUnit.StudyFightStartTalk;
             }
             else {
-              if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+              if (PlotController._instance == 2) {
                 return uVar5;
               }
-              lVar3 = *(int64 *)(pStatics + 72);
+              lVar3 = BattleUnit.DeathFightStartTalk;
             }
             if (lVar3 != null) {
               uVar2 = FUN_180d8cf10(0,lVar3.battleUnits,0);
@@ -3786,19 +3785,19 @@ public class BattleUnit
     // RVA   : 0x8EA950   Offset: 0x8E9150   Length: 0xECE
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8b6a8 + 184);
+        var pBattleUnit = *(int64*)(BattleUnit_StaticsPtr + 184);
         long lVar2;
         ulong local_38;
         uint local_30;
-        puVar1 = *(uint64 **)(DAT_181d8b6a8 + 184);
+        puVar1 = *(uint64 **)(BattleUnit_StaticsPtr + 184);
         *puVar1 = 0x3d99999a00000000;
         *(uint32 *)(puVar1 + 1) = 0;
         local_30 = 0x3f800000;
-        lVar2 = pStatics;
+        lVar2 = pBattleUnit;
         *(uint64 *)(lVar2 + 12) = 0x3e4ccccd3ecccccd;
         *(uint32 *)(lVar2 + 20) = 0x3f800000;
-        *(uint32 *)(pStatics + 24) = 0x3e4ccccd;
-        *(uint32 *)(pStatics + 28) = 25;
+        BattleUnit.UnitMoveOneGridTime = 0x3e4ccccd;
+        BattleUnit.damageBaseFontSize = 25;
         lVar2 = il2cpp_internal(DAT_181d73eb0);
         FUN_180f58a90(lVar2,DAT_181d841f8);
         if (lVar2 != null) {
@@ -3832,9 +3831,7 @@ public class BattleUnit
           local_38 = 0x4120000000000000;
           local_30 = 0;
           FUN_181805a40(lVar2,&local_38,DAT_181d84278);
-          plVar3 = (int64 *)(pStatics + 32);
-          *plVar3 = lVar2;
-          il2cpp_internal(plVar3,lVar2);
+          BattleUnit.SummonFollowUIOffset = lVar2;
           lVar2 = il2cpp_internal(DAT_181d72a30);
           FUN_180f58a90(lVar2,DAT_181d7c250);
           if (lVar2 != null) {
@@ -3848,9 +3845,7 @@ public class BattleUnit
             FUN_181827900(lVar2,"得手了",DAT_181d7c3d0);
             FUN_181827900(lVar2,"拿下一城",DAT_181d7c3d0);
             FUN_181827900(lVar2,"中！",DAT_181d7c3d0);
-            plVar3 = (int64 *)(pStatics + 40);
-            *plVar3 = lVar2;
-            il2cpp_internal(plVar3,lVar2);
+            BattleUnit.HeroKillTalk = lVar2;
             lVar2 = il2cpp_internal(DAT_181d72a30);
             FUN_180f58a90(lVar2,DAT_181d7c250);
             if (lVar2 != null) {
@@ -3871,9 +3866,7 @@ public class BattleUnit
               FUN_181827900(lVar2,"竟败于你手",DAT_181d7c3d0);
               FUN_181827900(lVar2,"我本有机会...",DAT_181d7c3d0);
               FUN_181827900(lVar2,"无力再战了",DAT_181d7c3d0);
-              plVar3 = (int64 *)(pStatics + 48);
-              *plVar3 = lVar2;
-              il2cpp_internal(plVar3,lVar2);
+              BattleUnit.HeroDeadTalk = lVar2;
               lVar2 = il2cpp_internal(DAT_181d72a30);
               FUN_180f58a90(lVar2,DAT_181d7c250);
               if (lVar2 != null) {
@@ -3893,9 +3886,7 @@ public class BattleUnit
                 FUN_181827900(lVar2,"该如何力挽狂澜",DAT_181d7c3d0);
                 FUN_181827900(lVar2,"渐处下风，得想想办法",DAT_181d7c3d0);
                 FUN_181827900(lVar2,"我竟会如此狼狈",DAT_181d7c3d0);
-                plVar3 = (int64 *)(pStatics + 56);
-                *plVar3 = lVar2;
-                il2cpp_internal(plVar3,lVar2);
+                BattleUnit.HeroLowHpTalk = lVar2;
                 lVar2 = il2cpp_internal(DAT_181d72a30);
                 FUN_180f58a90(lVar2,DAT_181d7c250);
                 if (lVar2 != null) {
@@ -3906,9 +3897,7 @@ public class BattleUnit
                   FUN_181827900(lVar2,"请指教",DAT_181d7c3d0);
                   FUN_181827900(lVar2,"刀剑无眼，请多加小心",DAT_181d7c3d0);
                   FUN_181827900(lVar2,"我已有三成把握",DAT_181d7c3d0);
-                  plVar3 = (int64 *)(pStatics + 64);
-                  *plVar3 = lVar2;
-                  il2cpp_internal(plVar3,lVar2);
+                  BattleUnit.StudyFightStartTalk = lVar2;
                   lVar2 = il2cpp_internal(DAT_181d72a30);
                   FUN_180f58a90(lVar2,DAT_181d7c250);
                   if (lVar2 != null) {
@@ -3925,9 +3914,7 @@ public class BattleUnit
                     FUN_181827900(lVar2,"求死之人，神仙也难救",DAT_181d7c3d0);
                     FUN_181827900(lVar2,"波澜已至，谁又能独善其身",DAT_181d7c3d0);
                     FUN_181827900(lVar2,"自不量力",DAT_181d7c3d0);
-                    plVar3 = (int64 *)(pStatics + 72);
-                    *plVar3 = lVar2;
-                    il2cpp_internal(plVar3,lVar2);
+                    BattleUnit.DeathFightStartTalk = lVar2;
                     lVar2 = il2cpp_internal(DAT_181d72a30);
                     FUN_180f58a90(lVar2,DAT_181d7c250);
                     if (lVar2 != null) {
@@ -3936,9 +3923,7 @@ public class BattleUnit
                       FUN_181827900(lVar2,"尝尝这招#SkillName#",DAT_181d7c3d0);
                       FUN_181827900(lVar2,"这#SkillName#你能否抵挡？",DAT_181d7c3d0);
                       FUN_181827900(lVar2,"这#SkillName#乃我成名绝学",DAT_181d7c3d0);
-                      plVar3 = (int64 *)(pStatics + 80);
-                      *plVar3 = lVar2;
-                      il2cpp_internal(plVar3,lVar2);
+                      BattleUnit.UseSkillTalk = lVar2;
                       lVar2 = il2cpp_internal(DAT_181d72a30);
                       FUN_180f58a90(lVar2,DAT_181d7c250);
                       if (lVar2 != null) {
@@ -3949,9 +3934,7 @@ public class BattleUnit
                         FUN_181827900(lVar2,"{0}你快退开，此处交给我便是！",DAT_181d7c3d0);
                         FUN_181827900(lVar2,"竟然连{0}也...",DAT_181d7c3d0);
                         FUN_181827900(lVar2,"{0}！你没事吧！",DAT_181d7c3d0);
-                        plVar3 = (int64 *)(pStatics + 88);
-                        *plVar3 = lVar2;
-                        il2cpp_internal(plVar3,lVar2);
+                        BattleUnit.FriendDeadTalk = lVar2;
                         return;
                       }
                     }

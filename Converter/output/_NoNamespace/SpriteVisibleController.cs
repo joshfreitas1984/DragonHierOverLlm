@@ -14,8 +14,6 @@ public class SpriteVisibleController
     // RVA   : 0xC6F620   Offset: 0xC6DE20   Length: 0x5
     private void OnBecameVisible()
     {
-        void FUN_180c6f620(int64 this)
-        {
         this.visible = 1;
     }
 
@@ -23,8 +21,6 @@ public class SpriteVisibleController
     // RVA   : 0xBD5650   Offset: 0xBD3E50   Length: 0x5
     private void OnBecameInvisible()
     {
-        void FUN_180bd5650(int64 this)
-        {
         this.visible = 0;
     }
 

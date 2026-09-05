@@ -47,16 +47,15 @@ public class ObstacleData
     // RVA   : 0x46E750   Offset: 0x46CF50   Length: 0x173
     public ObstacleDataBase GetObstacleDataBase()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
         uint uVar1;
         long lVar2;
         if (!this.explodeObstacle) {
-          lVar2 = *(int64 *)(pStatics + 80);
+          lVar2 = PlotController.StopWarCostFavor;
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = *(int64 *)(lVar2 + 600);
         }
         else {
-          lVar2 = *(int64 *)(pStatics + 80);
+          lVar2 = PlotController.StopWarCostFavor;
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = *(int64 *)(lVar2 + 0x260);
         }

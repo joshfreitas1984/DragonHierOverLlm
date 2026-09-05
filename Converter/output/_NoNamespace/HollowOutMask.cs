@@ -229,7 +229,7 @@ public class HollowOutMask
         }
         if (vh != null) {
           VertexHelper.Clear(vh,0);
-          lVar17 = *(int64 *)(DAT_181d8b458 + 184);
+          lVar17 = *(int64 *)(HollowOutMask_StaticsPtr + 184);
           local_128 = *(uint64 *)(lVar17 + 20);
           uStack_120 = *(uint64 *)(lVar17 + 28);
           uVar2 = *(uint32 *)(lVar17 + 124);
@@ -459,8 +459,6 @@ public class HollowOutMask
     // RVA   : 0xB3F420   Offset: 0xB3DC20   Length: 0xE
     private void Update()
     {
-        void FUN_180b3f420(int64 this)
-        {
         this._canRefresh = 1;
         HollowOutMask.RefreshView(this,0);
     }

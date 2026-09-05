@@ -11,7 +11,7 @@ public class ExploreBackground
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da0c98 + 184) + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
         if (lVar1 != null) {
           ExploreController.OnDrag(lVar1,delta,0);
           return;
@@ -27,7 +27,7 @@ public class ExploreBackground
         ulong uVar3;
         long lVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da0c98 + 184) + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
         if (lVar1 == null) {
         LAB_1809390f4:
                           // WARNING: Subroutine does not return

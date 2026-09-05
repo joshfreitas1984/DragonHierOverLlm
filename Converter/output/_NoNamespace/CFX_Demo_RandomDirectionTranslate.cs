@@ -54,40 +54,53 @@ public class CFX_Demo_RandomDirectionTranslate
     // RVA   : 0xBD46D0   Offset: 0xBD2ED0   Length: 0x16E
     private void Update()
     {
-        ulong uVar1;
-        long lVar2;
+        void CFX_Demo_RandomDirectionTranslate.Update
+                     (int64 this,uint64 param_2,uint64 param_3,uint64 param_4)
+        {
+        uint64 uVar1;
+        int64 lVar2;
+        uint64 *puVar3;
         float fVar4;
         float fVar5;
-        ulong local_68;
-        ulong local_58;
+        float fVar6;
+        uint64 uVar7;
+        float fVar8;
+        uint64 uVar9;
+        uint64 local_58;
         float local_50;
-        ulong local_48;
+        uint64 local_48;
         float local_40;
         lVar2 = Component.get_transform(this,0);
         local_50 = *(float *)(this + 64);
         uVar1 = this.dir;
-        fVar5 = this.speed;
+        fVar6 = this.speed;
         local_58 = uVar1;
         local_40 = local_50;
         fVar4 = (float)Time.get_deltaTime(0);
-        local_68 = CONCAT44((float)((uint64)uVar1 >> 32) * fVar5 * fVar4,(float)uVar1 * fVar5 * fVar4
-                           );
+        fVar8 = (float)((uint64)uVar1 >> 32) * fVar6 * fVar4;
+        fVar5 = local_50 * fVar6 * fVar4;
+        uVar7 = (uint64)(uint32)fVar5;
+        uVar9 = CONCAT44(fVar8,(float)uVar1 * fVar6 * fVar4);
         local_48 = uVar1;
         if (lVar2 != null) {
-          local_58 = local_68;
-          local_50 = local_50 * fVar5 * fVar4;
+          local_58 = uVar9;
+          local_50 = fVar5;
           Transform.Translate(lVar2,&local_58,0);
           if (this.gravity) {
             lVar2 = Component.get_transform(this,0);
             puVar3 = (uint64 *)Physics.get_gravity(&local_48,0);
             local_50 = *(float *)(puVar3 + 1);
             uVar1 = *puVar3;
-            fVar5 = (float)Time.get_deltaTime(0);
-            local_68 = CONCAT44((float)((uint64)uVar1 >> 32) * fVar5,(float)uVar1 * fVar5);
+            uVar7 = Time.get_deltaTime(0);
+            fVar6 = (float)uVar7;
+            fVar4 = (float)((uint64)uVar1 >> 32) * fVar6;
+            fVar8 = local_50 * fVar6;
+            uVar9 = CONCAT44(fVar4,(float)uVar1 * fVar6);
+            fVar5 = fVar8;
             local_58 = uVar1;
             if (lVar2 == null) throw; // [null/range check failed]
-            local_58 = local_68;
-            local_50 = local_50 * fVar5;
+            local_58 = uVar9;
+            local_50 = fVar8;
             Transform.Translate(lVar2,&local_58,0);
           }
           return;

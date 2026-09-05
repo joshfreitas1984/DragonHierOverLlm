@@ -26,21 +26,21 @@ public class AreaTreasurePriceData
     // RVA   : 0x7EFF60   Offset: 0x7EE760   Length: 0x14B
     public string GetDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         if (!this.expensive) {
-          uVar3 = *(uint64 *)(pStatics + 0x260);
+          uVar3 = *(uint64 *)(pPlotController + 0x260);
           uVar4 = "{0}▼</color>";
         }
         else {
-          uVar3 = *(uint64 *)(pStatics + 0x2c8);
+          uVar3 = *(uint64 *)(pPlotController + 0x2c8);
           uVar4 = "{0}▲</color>";
         }
         uVar3 = String.Concat(uVar3,uVar4,0);
-        lVar2 = *(int64 *)(pStatics + 0x508);
+        lVar2 = *(int64 *)(pPlotController + 0x508);
         if (lVar2 != null) {
           uVar1 = this.treasureType;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -63,7 +63,7 @@ public class AreaTreasurePriceData
         if (this.expensive) {
           uVar3 = "{0}类珍宝\n买卖价格翻倍";
         }
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x508);
+        lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x508);
         if (lVar2 != null) {
           uVar1 = this.treasureType;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {

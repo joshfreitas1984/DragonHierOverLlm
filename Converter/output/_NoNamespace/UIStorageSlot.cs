@@ -57,8 +57,6 @@ public class UIStorageSlot
     // RVA   : 0x1693B90   Offset: 0x1692390   Length: 0x7
     public void /*ctor*/()
     {
-        void FUN_181693b90(uint64 this)
-        {
         UIItemSlot.ctor(this,0);
     }
 

@@ -140,8 +140,6 @@ public class Parameter
     // RVA   : 0x22B3A0   Offset: 0x229BA0   Length: 0xC
     public void set_value(object value)
     {
-        void FUN_18022b3a0(int64 this,uint64 value)
-        {
         this.mValue = value;
     }
 

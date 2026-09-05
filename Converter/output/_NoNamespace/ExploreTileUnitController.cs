@@ -47,8 +47,7 @@ public class ExploreTileUnitController
     // RVA   : 0xBA06B0   Offset: 0xB9EEB0   Length: 0x9BC
     public void set_Seen(bool value)
     {
-        var pStatics_0c98 = *(int64*)(DAT_181da0c98 + 184);
-        var pStatics_0f20 = *(int64*)(DAT_181da0f20 + 184);
+        var pExploreTileUnitController = *(int64*)(ExploreTileUnitController_StaticsPtr + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -78,35 +77,35 @@ public class ExploreTileUnitController
           fVar4 = local_60;
           if (lVar6 == null) goto LAB_180ba1061;
           lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
-          lVar2 = *(int64 *)(pStatics_0c98 + 8);
+          lVar2 = BattleController.AttackAreaTypeStartMovePower;
           fVar4 = local_60;
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 120)) == null) goto LAB_180ba1061;
           if (*(int *)(lVar2 + 16) == 1) {
         LAB_180ba08a3:
-            lVar2 = pStatics_0f20;
+            lVar2 = pExploreTileUnitController;
             uVar12 = *(uint32 *)(lVar2 + 20);
             uVar9 = *(uint32 *)(lVar2 + 24);
             uVar10 = *(uint32 *)(lVar2 + 28);
             uVar11 = *(uint32 *)(lVar2 + 32);
           }
           else {
-            lVar2 = *(int64 *)(pStatics_0f20 + 40);
-            lVar3 = *(int64 *)(pStatics_0c98 + 8);
+            lVar2 = ExploreTileUnitController.UseBlackCoverColorBackgroundType;
+            lVar3 = BattleController.AttackAreaTypeStartMovePower;
             fVar4 = local_60;
             if ((lVar3 == null) || (lVar2 == null)) goto LAB_180ba1061;
             cVar5 = FUN_1818279a0(lVar2,*(uint64 *)(lVar3 + 88),DAT_181d7c4d0);
             if (!cVar5) {
-              lVar2 = pStatics_0f20;
+              lVar2 = pExploreTileUnitController;
               uVar12 = *(uint32 *)(lVar2 + 4);
               uVar9 = *(uint32 *)(lVar2 + 8);
               uVar10 = *(uint32 *)(lVar2 + 12);
               uVar11 = *(uint32 *)(lVar2 + 16);
             }
             else {
-              if (((*(byte *)(DAT_181da0f20 + 0x133) & 4) == 0) || (*(int *)(DAT_181da0f20 + 224) != 0))
-              goto LAB_180ba08a3;
-              il2cpp_runtime_class_init(DAT_181da0f20);
-              lVar2 = pStatics_0f20;
+              if (((*(byte *)(ExploreTileUnitController_StaticsPtr + 0x133) & 4) == 0) ||
+                 (*(int *)(ExploreTileUnitController_StaticsPtr + 224) != 0)) goto LAB_180ba08a3;
+              il2cpp_runtime_class_init(ExploreTileUnitController_StaticsPtr);
+              lVar2 = pExploreTileUnitController;
               uVar12 = *(uint32 *)(lVar2 + 20);
               uVar9 = *(uint32 *)(lVar2 + 24);
               uVar10 = *(uint32 *)(lVar2 + 28);
@@ -231,7 +230,7 @@ public class ExploreTileUnitController
               if (lVar6 == null) goto LAB_180ba1067;
               uVar8 = Component.GetComponent(lVar6,DAT_181d6d540);
               if (this.needFade) {
-                uVar12 = **(uint32 **)(DAT_181da0f20 + 184);
+                uVar12 = ExploreTileUnitController.fadeAlpha;
               }
               uVar8 = DOTweenModuleSprite.DOFade(uVar8,uVar12,0x3f000000,0);
               TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181d98958);
@@ -245,7 +244,7 @@ public class ExploreTileUnitController
               if (lVar6 == null) goto LAB_180ba1061;
               uVar8 = Component.GetComponent(lVar6,DAT_181d6cd40);
               if (this.needFade) {
-                uVar12 = **(uint32 **)(DAT_181da0f20 + 184);
+                uVar12 = ExploreTileUnitController.fadeAlpha;
               }
               GlobalData.DoTweenSkeletonAlpha(uVar8,0,uVar12,0x3f000000,0);
             }
@@ -255,7 +254,7 @@ public class ExploreTileUnitController
         if (this.exploreTileData != null) {
           this.exploreTileData.seen = value;
           this.needRefreshColor = 1;
-          lVar6 = *(int64 *)(pStatics_0c98 + 8);
+          lVar6 = BattleController.AttackAreaTypeStartMovePower;
           fVar4 = local_60;
           if (lVar6 != null) {
             *(uint8 *)(lVar6 + 0x108) = 1;
@@ -287,8 +286,6 @@ public class ExploreTileUnitController
     // RVA   : 0x23F610   Offset: 0x23DE10   Length: 0x5
     public bool get_Been()
     {
-        uint8 FUN_18023f610(int64 this)
-        {
         return this.been;
     }
 
@@ -324,8 +321,6 @@ public class ExploreTileUnitController
     // RVA   : 0xBA0620   Offset: 0xB9EE20   Length: 0x5
     public bool get_FinalTile()
     {
-        uint8 FUN_180ba0620(int64 this)
-        {
         return this.finalTile;
     }
 
@@ -333,7 +328,6 @@ public class ExploreTileUnitController
     // RVA   : 0xB9ED80   Offset: 0xB9D580   Length: 0x876
     public void CheckNeedFade(bool anim)
     {
-        var pStatics = *(int64*)(DAT_181da0c98 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -348,10 +342,10 @@ public class ExploreTileUnitController
         cVar5 = false;
         if (this.exploreTileData == null) throw; // [null/range check failed]
         iVar1 = this.exploreTileData.row;
-        lVar7 = *(int64 *)(pStatics + 8);
+        lVar7 = BattleController.AttackAreaTypeStartMovePower;
         if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
         if (iVar1 < *(int *)(lVar7 + 28) + -1) {
-          lVar7 = *(int64 *)(pStatics + 8);
+          lVar7 = BattleController.AttackAreaTypeStartMovePower;
           if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
           lVar7 = *(int64 *)(lVar7 + 40);
           lVar2 = this.exploreTileData;
@@ -458,7 +452,7 @@ public class ExploreTileUnitController
                     uVar10 = 0x3f800000;
                   }
                   else {
-                    uVar10 = **(uint32 **)(DAT_181da0f20 + 184);
+                    uVar10 = ExploreTileUnitController.fadeAlpha;
                   }
                   uVar8 = DOTweenModuleSprite.DOFade(uVar8,uVar10,0x3f000000,0);
                   TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181d98958);
@@ -508,7 +502,8 @@ public class ExploreTileUnitController
                                     uVar11 = 0x3f800000;
                                   }
                                   else {
-                                    uVar11 = **(uint32 **)(DAT_181da0f20 + 184);
+                                    uVar11 = **(uint32 **)
+                                               (ExploreTileUnitController_StaticsPtr + 184);
                                   }
                                   GlobalData.DoTweenSkeletonAlpha(uVar8,uVar10,uVar11,0x3f000000,0);
                                   goto LAB_180b9f578;
@@ -531,7 +526,7 @@ public class ExploreTileUnitController
     // RVA   : 0xB9F8F0   Offset: 0xB9E0F0   Length: 0x8EF
     public void RefreshColor()
     {
-        var pStatics = *(int64*)(DAT_181d8b128 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         float fVar1;
         uint uVar2;
         ulong uVar3;
@@ -697,7 +692,7 @@ public class ExploreTileUnitController
                   puVar7 = (uint64 *)Transform.get_localPosition(&local_38,lVar9,0);
                   uVar3 = *puVar7;
                   fVar5 = *(float *)(puVar7 + 1);
-                  fVar1 = *(float *)(pStatics + 36);
+                  fVar1 = *(float *)(pPlotController + 36);
                   local_58 = uVar3;
                   local_50 = fVar5;
                   puVar7 = (uint64 *)GlobalData.SetZ(&local_38,&local_58,fVar1 + 0.001,0);
@@ -755,7 +750,7 @@ public class ExploreTileUnitController
           puVar7 = (uint64 *)Transform.get_localPosition(&local_38,lVar9,0);
           uVar3 = *puVar7;
           fVar5 = *(float *)(puVar7 + 1);
-          uVar2 = *(uint32 *)(pStatics + 36);
+          uVar2 = *(uint32 *)(pPlotController + 36);
           local_58 = uVar3;
           local_50 = fVar5;
           puVar7 = (uint64 *)GlobalData.SetZ(&local_38,&local_58,uVar2,0);
@@ -781,7 +776,6 @@ public class ExploreTileUnitController
     // RVA   : 0xBA01E0   Offset: 0xB9E9E0   Length: 0x237
     public void SetObstacleColor()
     {
-        var pStatics = *(int64*)(DAT_181da0c98 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
@@ -794,18 +788,18 @@ public class ExploreTileUnitController
         lVar3 = Transform.Find(lVar3,"ExploreEvent",0);
         if (lVar3 == null) throw; // [null/range check failed]
         lVar3 = Component.GetComponent(lVar3,DAT_181d6d540);
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
         if (lVar1 == null) throw; // [null/range check failed]
         cVar2 = ExploreController.PlayerCanPassObstacle(lVar1,this.exploreTileData,0,0);
         if (!cVar2) {
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = BattleController.AttackAreaTypeStartMovePower;
           if (lVar1 == null) throw; // [null/range check failed]
           cVar2 = ExploreController.PlayerCanPassObstacle(lVar1,this.exploreTileData,1,0);
           if (!cVar2) {
             puVar4 = (uint32 *)Color.get_red(&local_18,0);
             goto LAB_180ba03e9;
           }
-          lVar1 = *(int64 *)(DAT_181d4ef00 + 184);
+          lVar1 = *(int64 *)(PlotController_StaticsPtr + 184);
           local_18 = *(uint32 *)(lVar1 + 0x318);
           uStack_14 = *(uint32 *)(lVar1 + 0x31c);
           uStack_10 = *(uint32 *)(lVar1 + 800);
@@ -855,7 +849,7 @@ public class ExploreTileUnitController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da0c98 + 184) + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           ExploreController.ExploreTileClicked(lVar1,uVar2,0);
@@ -894,7 +888,7 @@ public class ExploreTileUnitController
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da0c98 + 184) + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
         if (lVar1 != null) {
           ExploreController.OnDrag(lVar1,delta,0);
           return;
@@ -906,7 +900,7 @@ public class ExploreTileUnitController
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da0c98 + 184) + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
         if (lVar1 != null) {
           ExploreController.OnScroll(lVar1,delta,0);
           return;
@@ -924,17 +918,17 @@ public class ExploreTileUnitController
     // RVA   : 0xBA0490   Offset: 0xB9EC90   Length: 0x181
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181da0f20 + 184);
+        var pExploreTileUnitController = *(int64*)(ExploreTileUnitController_StaticsPtr + 184);
         long lVar1;
         ulong local_38;
         ulong uStack_30;
         ulong local_28;
         ulong uStack_20;
-        **(uint32 **)(DAT_181da0f20 + 184) = 0x3f19999a;
+        ExploreTileUnitController.fadeAlpha = 0x3f19999a;
         local_38 = 0;
         uStack_30 = 0;
         FUN_1809981e0(&local_38,0x3f800000,0x3f800000,0x3f800000,0x3f4ccccd,0);
-        lVar1 = pStatics;
+        lVar1 = pExploreTileUnitController;
         *(uint32 *)(lVar1 + 4) = (uint32)local_38;
         *(uint32 *)(lVar1 + 8) = local_38._4_4_;
         *(uint32 *)(lVar1 + 12) = (uint32)uStack_30;
@@ -942,7 +936,7 @@ public class ExploreTileUnitController
         local_28 = 0;
         uStack_20 = 0;
         FUN_1809981e0(&local_28,0x3e99999a,0x3e99999a,0x3e99999a,0x3f4ccccd,0);
-        lVar1 = pStatics;
+        lVar1 = pExploreTileUnitController;
         *(uint32 *)(lVar1 + 20) = (uint32)local_28;
         *(uint32 *)(lVar1 + 24) = local_28._4_4_;
         *(uint32 *)(lVar1 + 28) = (uint32)uStack_20;
@@ -952,9 +946,7 @@ public class ExploreTileUnitController
         if (lVar1 != null) {
           FUN_181827900(lVar1,"2",DAT_181d7c3d0);
           FUN_181827900(lVar1,"6",DAT_181d7c3d0);
-          plVar2 = (int64 *)(pStatics + 40);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          ExploreTileUnitController.UseBlackCoverColorBackgroundType = lVar1;
           return;
         }
     }

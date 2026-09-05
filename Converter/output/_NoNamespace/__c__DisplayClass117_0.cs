@@ -21,8 +21,6 @@ public class <>c__DisplayClass117_0
     // RVA   : 0x8D52D0   Offset: 0x8D3AD0   Length: 0x7
     internal bool <ManageHeroAutoQuitAndEnter>b__1(int n)
     {
-        bool FUN_1808d52d0(int64 this,int n)
-        {
         return n == this.randomID;
     }
 

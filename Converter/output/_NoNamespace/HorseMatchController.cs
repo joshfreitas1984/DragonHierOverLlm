@@ -95,16 +95,14 @@ public class HorseMatchController
     // RVA   : 0xB45900   Offset: 0xB44100   Length: 0x58
     public static HorseMatchController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d51800 + 184) + 32);
+        return PlotController.SpringFestivelRewardLvTalkText;
     }
 
     // Token : 0x60017E2
     // RVA   : 0xB434C0   Offset: 0xB41CC0   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d51800 + 184) + 32);
-        *puVar1 = this;
-        il2cpp_internal(puVar1,this);
+        PlotController.SpringFestivelRewardLvTalkText = this;
     }
 
     // Token : 0x60017E3
@@ -225,7 +223,7 @@ public class HorseMatchController
         uint uStack_20;
         uint32 uStack_1c;
         if ((targetHero != null) && (lVar3 = GameObject.GetComponent(targetHero,DAT_181d9fdc8)) != null) {
-          *(uint8 *)(lVar3 + 40) = 1;
+          lVar3.needAutoSave = 1;
           lVar3 = GameObject.GetComponent(targetHero,DAT_181d9fdc8);
           if ((lVar3 != null) && (lVar3.Count != null)) {
             HeroData.RefreshHorseState(lVar3.Count,0,0);
@@ -233,7 +231,7 @@ public class HorseMatchController
             lVar4 = GameObject.GetComponent(targetHero,DAT_181d9fdc8);
             if ((lVar4 != null) && (lVar3 != null)) {
               FUN_181827900(lVar3,*(uint64 *)(lVar4 + 24),DAT_181d63d78);
-              lVar3 = **(int64 **)(DAT_181d4df90 + 184);
+              lVar3 = GameController._instance;
               if (this.HeroFinalList != null) {
                 local_res10[0] = this.HeroFinalList.Count;
                 uVar5 = Int32.ToString(local_res10,0);
@@ -484,8 +482,6 @@ public class HorseMatchController
     // RVA   : 0xB453D0   Offset: 0xB43BD0   Length: 0xE
     public void StartButtonClicked()
     {
-        void FUN_180b453d0(int64 this)
-        {
         if (this.horseMatchState == 1) {
           HorseMatchController.ChangeNextState(this,0);
           return;
@@ -496,8 +492,7 @@ public class HorseMatchController
     // RVA   : 0xB448C0   Offset: 0xB430C0   Length: 0xB0A
     public void RestartHorseMatch(List<HeroData> _heroList, string _endMatchCallPlot, float _difficulty)
     {
-        var pStatics_8ad8 = *(int64*)(DAT_181d88ad8 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
+        var pStatics = *(int64*)(DAT_181d88ad8 + 184);
         void HorseMatchController.RestartHorseMatch
                      (int64 this,uint64 _heroList,uint64 _endMatchCallPlot,uint32 _difficulty)
         {
@@ -612,8 +607,8 @@ public class HorseMatchController
             if (lVar4 == null) goto LAB_180b453c5;
             GameObject.SetActive(lVar4,1,0);
             fVar1 = local_100;
-            if (*pStatics_8ad8 == 0) goto LAB_180b453c5;
-            TutorialController.StartTutorial(*pStatics_8ad8,"赛马大会",0);
+            if (*pStatics == 0) goto LAB_180b453c5;
+            TutorialController.StartTutorial(*pStatics,"赛马大会",0);
           }
           fVar1 = local_100;
           if (((this.horseMatchUIPanel == null) ||
@@ -638,17 +633,18 @@ public class HorseMatchController
           uVar6 = "";
           if (cVar2) {
             fVar1 = local_100;
-            if (((*pStatics_df90 == 0) ||
-                (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-               (lVar4 = WorldData.Player(lVar4,0), fVar1 = local_100) == null) goto LAB_180b453c5;
+            if (((GameController._instance == null) ||
+                (lVar4 = GameController._instance.worldData,
+                lVar4 == null)) || (lVar4 = WorldData.Player(lVar4,0), fVar1 = local_100) == null)
+            goto LAB_180b453c5;
             uVar6 = "";
-            if (*(int64 *)(lVar4 + 0x208) != 0) {
+            if (lVar4.getSpePoisonData != null) {
               fVar1 = local_100;
-              if ((((*pStatics_df90 == 0) ||
-                   (lVar4 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-                  (lVar4 = WorldData.Player(lVar4,0), fVar1 = local_100) == null) ||
-                 (*(int64 *)(lVar4 + 0x208) == 0)) goto LAB_180b453c5;
-              uVar6 = *(uint64 *)(*(int64 *)(lVar4 + 0x208) + 32);
+              if ((((GameController._instance == null) ||
+                   (lVar4 = GameController._instance.worldData,
+                   lVar4 == null)) || (lVar4 = WorldData.Player(lVar4,0), fVar1 = local_100) == null) ||
+                 (lVar4.getSpePoisonData == null)) goto LAB_180b453c5;
+              uVar6 = *(uint64 *)(lVar4.getSpePoisonData + 32);
             }
           }
           LTLocalization.SetText(uVar9,uVar6,0);
@@ -680,7 +676,7 @@ public class HorseMatchController
         lVar4 = GameObject.get_transform(*plVar5,0);
         fVar1 = local_100;
         if (lVar4 == null) goto LAB_180b453c5;
-        local_e8 = -**(float **)(DAT_181d51800 + 184) - 0.8;
+        local_e8 = -PlotController._instance - 0.8;
         local_e4 = fVar14;
         local_e0 = fVar14 * 0.1;
         Transform.set_localPosition(lVar4,&local_e8,0);
@@ -696,7 +692,7 @@ public class HorseMatchController
         if ((*plVar5 == 0) ||
            (lVar4 = GameObject.GetComponent(*plVar5,DAT_181d9fdc8), fVar1 = local_100) == null)
         goto LAB_180b453c5;
-        lVar4 = *(int64 *)(lVar4 + 48);
+        lVar4 = lVar4.Areas;
         if ((this.heroList == null) ||
            (lVar13 = FUN_180002f80(this.heroList,plVar12,DAT_181d643f8), fVar1 = local_100
            , lVar13 == null)) goto LAB_180b453c5;
@@ -729,13 +725,13 @@ public class HorseMatchController
         uVar6 = HeroData.GenerateHeroSkeleton(lVar8,lVar13,&local_108,0);
         fVar1 = local_100;
         if (lVar4 == null) goto LAB_180b453c5;
-        *(uint64 *)(lVar4 + 32) = uVar6;
+        lVar4.villageAreaID = uVar6;
         fVar1 = local_100;
         if (((this.heroObjList == null) ||
             (FUN_181827900(this.heroObjList,*plVar5,DAT_181d61bf8), fVar1 = local_100,
             this.heroList == null)) ||
            (lVar4 = FUN_180002f80(), fVar1 = local_100) == null) goto LAB_180b453c5;
-        if (*(int *)(lVar4 + 88) == 0) {
+        if (lVar4.TempHeros == null) {
           this.playerObj = *plVar5;
         }
         lVar4 = this.heroList;
@@ -783,7 +779,7 @@ public class HorseMatchController
               FUN_1800d6620();
             }
             uVar4 = (int64)iVar9 % (int64)*(int *)(lVar7 + 24);
-            fVar2 = **(float **)(DAT_181d51800 + 184);
+            fVar2 = PlotController._instance;
             fVar12 = (float)Random.Range();
             fVar13 = (float)Random.Range();
             plVar1 = &this.newObj;
@@ -861,7 +857,6 @@ public class HorseMatchController
     // RVA   : 0xB43BB0   Offset: 0xB423B0   Length: 0x333
     public void FinishHorseMatch()
     {
-        var pStatics = *(int64*)(DAT_181d6c960 + 184);
         long lVar2;
         ulong uVar3;
         uint uVar5;
@@ -918,9 +913,9 @@ public class HorseMatchController
             GameObject.SetActive(this.horseMatchRoot,0,0);
             if (this.horseMatchUIPanel != null) {
               GameObject.SetActive(this.horseMatchUIPanel,0,0);
-              if ((*pStatics != 0) &&
-                 (lVar2 = Component.get_gameObject(*pStatics,0)) != null)
-              {
+              if ((PlotController._instance != null) &&
+                 (lVar2 = Component.get_gameObject(PlotController._instance,0),
+                 lVar2 != null)) {
                 GameObject.SendMessage(lVar2,this.endMatchCallPlot,0);
                 return;
               }
@@ -940,25 +935,23 @@ public class HorseMatchController
     // RVA   : 0xB456D0   Offset: 0xB43ED0   Length: 0x22E
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d51800 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
-        **(uint32 **)(DAT_181d51800 + 184) = 0x41000000;
+        PlotController._instance = 0x41000000;
         lVar1 = il2cpp_internal(DAT_181d72a30);
         FUN_180f58a90(lVar1,DAT_181d7c250);
         if (lVar1 != null) {
           FUN_181827900(lVar1,"阁下骏马奔逸绝尘，一骑当先，千里马常有而伯乐不常有，本次大赛冠军可谓实至名归。",DAT_181d7c3d0);
           FUN_181827900(lVar1,"阁下骏马风驰电掣，奋勇争先，只比冠军稍落后一筹，实在可惜。",DAT_181d7c3d0);
           FUN_181827900(lVar1,"阁下骏马龙腾虎跃，一往无前，还需再接再厉，未来可期。",DAT_181d7c3d0);
-          plVar2 = (int64 *)(pStatics + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          PlotController.LeftFaceHideOffset = lVar1;
           lVar1 = il2cpp_internal(DAT_181d6f030);
           FUN_180f58a90(lVar1,DAT_181d678f8);
           if (lVar1 != null) {
             FUN_181814fa0(lVar1,400,DAT_181d67a78);
             FUN_181814fa0(lVar1,200,DAT_181d67a78);
             FUN_181814fa0(lVar1,100,DAT_181d67a78);
-            plVar2 = (int64 *)(pStatics + 16);
+            plVar2 = (int64 *)(pPlotController + 16);
             *plVar2 = lVar1;
             il2cpp_internal(plVar2,lVar1);
             lVar1 = il2cpp_internal(DAT_181d6f030);
@@ -967,9 +960,7 @@ public class HorseMatchController
               FUN_181814fa0(lVar1,10,DAT_181d67a78);
               FUN_181814fa0(lVar1,4,DAT_181d67a78);
               FUN_181814fa0(lVar1,2,DAT_181d67a78);
-              plVar2 = (int64 *)(pStatics + 24);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              PlotController.CheckHideChoice = lVar1;
               return;
             }
           }

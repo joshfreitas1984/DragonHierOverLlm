@@ -101,8 +101,6 @@ public class UITextList
     // RVA   : 0xFB1F90   Offset: 0xFB0790   Length: 0x6
     public float get_scrollValue()
     {
-        uint32 FUN_180fb1f90(int64 this)
-        {
         return this.mScroll;
     }
 
@@ -389,7 +387,6 @@ public class UITextList
     // RVA   : 0x1696400   Offset: 0x1694C00   Length: 0x40D
     protected void Rebuild()
     {
-        var pStatics = *(int64*)(DAT_181d66a70 + 184);
         long lVar1;
         bool cVar3;
         int iVar4;
@@ -409,8 +406,8 @@ public class UITextList
           this.mLastWidth = *(uint32 *)(lVar5 + 164);
           this.mLastHeight = *(uint32 *)(lVar5 + 168);
           UILabel.UpdateNGUIText(lVar5,0);
-          *(uint32 *)(pStatics + 64) = 1000000;
-          *(uint32 *)(pStatics + 72) = 1000000;
+          NGUIText.rectHeight = 1000000;
+          NGUIText.regionHeight = 1000000;
           this.mTotalLines = 0;
           lVar5 = UITextList.get_paragraphs(this,0);
           plVar9 = plVar10;

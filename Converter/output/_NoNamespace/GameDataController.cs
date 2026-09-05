@@ -221,7 +221,7 @@ public class GameDataController
     // RVA   : 0xCBBD30   Offset: 0xCBA530   Length: 0x58
     public static GameDataController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        return GameController.lockObj;
     }
 
     // Token : 0x6001603
@@ -336,7 +336,6 @@ public class GameDataController
     // RVA   : 0xCA7880   Offset: 0xCA6080   Length: 0xC81
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
@@ -347,16 +346,14 @@ public class GameDataController
         uint uVar10;
         int[] local_res18 = new int[2];
         local_res18[0] = 0;
-        uVar3 = *(uint64 *)(pStatics + 32);
+        uVar3 = GameController.lockObj;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (!cVar1) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        plVar8 = (int64 *)(pStatics + 32);
-        *plVar8 = this;
-        il2cpp_internal(plVar8,this);
+        GameController.lockObj = this;
         uVar3 = Component.get_gameObject(this,0);
         Object.DontDestroyOnLoad(uVar3,0);
         uVar3 = new CultureInfo("en-US",0);
@@ -390,67 +387,67 @@ public class GameDataController
         GameDataController.LoadPlayerprefData(this,0);
         GameDataController.LoadExternalStorageData(this,0);
 
-        if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+        if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
           cVar1 = PlayerPrefDictionary.ContainsKey(lVar6,"Volume",0);
           if (!cVar1) {
 
-            if ((lVar6 = *(int64 *)(pStatics + 8)?.key) == null) throw; // [null/range check failed]
+            if ((lVar6 = GameController.difficultyExtraPoint?.key) == null) throw; // [null/range check failed]
             PlayerPrefDictionary.SetKey(lVar6,"Volume",0x3f800000,0);
           }
 
-          if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+          if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
             cVar1 = PlayerPrefDictionary.ContainsKey(lVar6,"BgmVolume",0);
             if (!cVar1) {
 
-              if ((lVar6 = *(int64 *)(pStatics + 8)?.key) == null) throw; // [null/range check failed]
+              if ((lVar6 = GameController.difficultyExtraPoint?.key) == null) throw; // [null/range check failed]
               PlayerPrefDictionary.SetKey(lVar6,"BgmVolume",0x3f333333,0);
             }
 
-            if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+            if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
               cVar1 = PlayerPrefDictionary.ContainsKey(lVar6,"SoundEffectVolume",0);
               if (!cVar1) {
 
-                if ((lVar6 = *(int64 *)(pStatics + 8)?.key) == null) throw; // [null/range check failed]
+                if ((lVar6 = GameController.difficultyExtraPoint?.key) == null) throw; // [null/range check failed]
                 PlayerPrefDictionary.SetKey(lVar6,"SoundEffectVolume",0x3f800000,0);
               }
 
-              if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+              if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
                 uVar10 = PlayerPrefDictionary.GetFloat(lVar6,"Volume",0);
                 AudioListener.set_volume(uVar10,0);
 
-                if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+                if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
                   uVar10 = PlayerPrefDictionary.GetFloat(lVar6,"SoundEffectVolume",0);
-                  *(uint32 *)(pStatics + 16) = uVar10;
+                  GameController.CheckShowSpeHero = uVar10;
 
-                  if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+                  if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
                     cVar1 = PlayerPrefDictionary.ContainsKey(lVar6,"AutoSave",0);
                     if (!cVar1) {
 
-                      if ((lVar6 = *(int64 *)(pStatics + 8)?.key) == null)
+                      if ((lVar6 = GameController.difficultyExtraPoint?.key) == null)
                       throw; // [null/range check failed]
                       PlayerPrefDictionary.SetKey(lVar6,"AutoSave",1);
                     }
 
-                    if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+                    if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
                       cVar1 = PlayerPrefDictionary.ContainsKey(lVar6,"FightViewFollow",0);
                       if (!cVar1) {
 
-                        if ((lVar6 = *(int64 *)(pStatics + 8)?.key) == null)
+                        if ((lVar6 = GameController.difficultyExtraPoint?.key) == null)
                         throw; // [null/range check failed]
                         PlayerPrefDictionary.SetKey(lVar6,"FightViewFollow",1);
                       }
 
-                      if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+                      if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
                         cVar1 = PlayerPrefDictionary.ContainsKey(lVar6,"FightScreenShake",0);
                         if (!cVar1) {
 
-                          if ((lVar6 = *(int64 *)(pStatics + 8)?.key) == null)
+                          if ((lVar6 = GameController.difficultyExtraPoint?.key) == null)
                           throw; // [null/range check failed]
                           PlayerPrefDictionary.SetKey(lVar6,"FightScreenShake",1);
                         }
-                        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+                        if (PlotController._instance == 2) {
 
-                          if ((lVar6 = *(int64 *)(pStatics + 8)?.key) == null)
+                          if ((lVar6 = GameController.difficultyExtraPoint?.key) == null)
                           throw; // [null/range check failed]
                           iVar2 = PlayerPrefDictionary.GetInt(lVar6,"GameStartTime",0);
                           if (iVar2 < 1) {
@@ -484,7 +481,7 @@ public class GameDataController
                         } while (!cVar1);
                         uVar3 = WWW.get_bytes(lVar6,0);
                         File.WriteAllBytes(uVar4,uVar3,0);
-                        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+                        if (PlotController._instance == 2) {
                           lVar6 = CISFilterWordsSDK.get_Instance(0);
                           uVar3 = new OnTooltipCB(this,DAT_181d9bc78,DAT_181d72d88);
                           uVar4 = PlayerPrefs.GetString("CensorWordsEtag",0);
@@ -501,7 +498,7 @@ public class GameDataController
                           this.CISFilterWordsSDKInited = 1;
                         }
 
-                        if ((lVar6 = *(int64 *)(pStatics + 8)?.key) != null) {
+                        if ((lVar6 = GameController.difficultyExtraPoint?.key) != null) {
                           iVar2 = PlayerPrefDictionary.GetInt(lVar6,"GameStartTime",0);
                           PlayerPrefDictionary.SetKey(lVar6,"GameStartTime",iVar2 + 1,0);
                           return;
@@ -632,7 +629,7 @@ public class GameDataController
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+        if (PlotController._instance == 2) {
           lVar1 = CISFilterWordsSDK.get_Instance(0);
           uVar3 = new OnTooltipCB(this,DAT_181d9bc78,DAT_181d72d88);
           uVar4 = PlayerPrefs.GetString("CensorWordsEtag",0);
@@ -703,7 +700,6 @@ public class GameDataController
     // RVA   : 0xCA96A0   Offset: 0xCA7EA0   Length: 0x26E
     public void CopyTestSave(string sourcePath, string destPath)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
@@ -715,15 +711,15 @@ public class GameDataController
         }
         iVar5 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= iVar5) {
+          if (GameController._instance == null) break;
+          if (GameController._instance.TestBuildPlayer <= iVar5) {
             return;
           }
-          if (*pStatics == 0) break;
-          uVar2 = FUN_180002f80(*pStatics,iVar5,DAT_181d7c9c0);
+          if (GameController._instance == null) break;
+          uVar2 = FUN_180002f80(GameController._instance,iVar5,DAT_181d7c9c0);
           uVar2 = String.Concat(sourcePath,"/",uVar2,0);
-          if (*pStatics == 0) break;
-          uVar3 = FUN_180002f80(*pStatics,iVar5,DAT_181d7c9c0);
+          if (GameController._instance == null) break;
+          uVar3 = FUN_180002f80(GameController._instance,iVar5,DAT_181d7c9c0);
           uVar3 = String.Concat(destPath,"/",uVar3,0);
           lVar4 = new WWW(uVar2,0);
           do {
@@ -862,7 +858,7 @@ public class GameDataController
           Directory.CreateDirectory(this.saveDataPath,0);
         }
         uVar2 = String.Concat(this.saveDataPath,"/PlayerprefData.dat",0);
-        uVar1 = *(uint64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        uVar1 = GameController.difficultyExtraPoint;
         uVar1 = JsonConvert.SerializeObject(uVar1,0);
         File.WriteAllText(uVar2,uVar1,0);
     }
@@ -871,7 +867,6 @@ public class GameDataController
     // RVA   : 0xCB76B0   Offset: 0xCB5EB0   Length: 0x3A0
     public void LoadPlayerprefData()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -895,14 +890,10 @@ public class GameDataController
           }
           JsonSerializerSettings.set_ObjectCreationHandling(lVar3,2);
           uVar2 = JsonConvert.DeserializeObject(uVar2,lVar3,DAT_181d57648);
-          puVar4 = (uint64 *)(pStatics + 8);
-          *puVar4 = uVar2;
-          il2cpp_internal(puVar4,uVar2);
-          if (*(int64 *)(pStatics + 8) == 0) {
+          GameController.difficultyExtraPoint = uVar2;
+          if (GameController.difficultyExtraPoint == null) {
             uVar2 = new RePlayerPrefData(0);
-            puVar4 = (uint64 *)(pStatics + 8);
-            *puVar4 = uVar2;
-            il2cpp_internal(puVar4,uVar2);
+            GameController.difficultyExtraPoint = uVar2;
           }
         }
     }
@@ -911,7 +902,6 @@ public class GameDataController
     // RVA   : 0xCAAF10   Offset: 0xCA9710   Length: 0x18F
     public int GetAchFinishedCount()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         int iVar2;
         bool cVar3;
@@ -922,12 +912,12 @@ public class GameDataController
         local_res18[0] = 0;
         while( true ) {
           iVar2 = local_res18[0];
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = GameController.lockObj;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 0x1c0)) == null) break;
           if (*(int *)(lVar1 + 24) <= iVar2) {
             return iVar5;
           }
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if (lVar1 == null) break;
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar4 = Int32.ToString(local_res18,0);
@@ -946,7 +936,6 @@ public class GameDataController
     // RVA   : 0xCAB260   Offset: 0xCA9A60   Length: 0x196
     public int GetExternalStorageMaxValue()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         int iVar2;
         bool cVar3;
@@ -957,12 +946,12 @@ public class GameDataController
         local_res18[0] = 0;
         while( true ) {
           iVar2 = local_res18[0];
-          lVar1 = *(int64 *)(pStatics + 32);
+          lVar1 = GameController.lockObj;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 0x1c0)) == null) break;
           if (*(int *)(lVar1 + 24) <= iVar2) {
             return (iVar5 + 8) * 500;
           }
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if (lVar1 == null) break;
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar4 = Int32.ToString(local_res18,0);
@@ -1001,7 +990,7 @@ public class GameDataController
           Directory.CreateDirectory(this.saveDataPath,0);
         }
         uVar2 = String.Concat(this.saveDataPath,"/ExternalStorateData.dat",0);
-        uVar1 = *(uint64 *)(*(int64 *)(DAT_181d4e010 + 184) + 24);
+        uVar1 = GameController.CheckShowSpeHeroSkinID;
         uVar1 = JsonConvert.SerializeObject(uVar1,0);
         File.WriteAllText(uVar2,uVar1,0);
     }
@@ -1033,9 +1022,7 @@ public class GameDataController
           }
           JsonSerializerSettings.set_ObjectCreationHandling(lVar3,2);
           uVar1 = JsonConvert.DeserializeObject(uVar1,lVar3,DAT_181d575c8);
-          puVar4 = (uint64 *)(*(int64 *)(DAT_181d4e010 + 184) + 24);
-          *puVar4 = uVar1;
-          il2cpp_internal(puVar4,uVar1);
+          GameController.CheckShowSpeHeroSkinID = uVar1;
         }
     }
 
@@ -1044,7 +1031,7 @@ public class GameDataController
     public void ItemIntoExternalStorage(ItemData targetItem)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 24);
+        lVar1 = GameController.CheckShowSpeHeroSkinID;
         if (lVar1 != null) {
           ItemListData.GetItem(lVar1,targetItem,0,0);
           GameDataController.SaveExternalStorageData(this,0);
@@ -1057,7 +1044,7 @@ public class GameDataController
     public void ItemOutExternalStorage(ItemData targetItem)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 24);
+        lVar1 = GameController.CheckShowSpeHeroSkinID;
         if (lVar1 != null) {
           ItemListData.LoseItem(lVar1,targetItem,0,0);
           GameDataController.SaveExternalStorageData(this,0);
@@ -1070,7 +1057,7 @@ public class GameDataController
     public void ClearExternalStorage()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 24);
+        lVar1 = GameController.CheckShowSpeHeroSkinID;
         if (lVar1 != null) {
           ItemListData.ClearAllItem(lVar1,0);
           GameDataController.SaveExternalStorageData(this,0);
@@ -1082,25 +1069,27 @@ public class GameDataController
     // RVA   : 0xCA9F50   Offset: 0xCA8750   Length: 0x236
     public void GameIntoGameData()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         long lVar2;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           WorldData.SetPlayerMissionEventData(lVar1,0);
           lVar1 = this.gameSaveData;
-          if ((*pStatics != 0) && (lVar1 != null)) {
-            lVar1.WorldData = *(uint64 *)(*pStatics + 32);
+          if ((GameController._instance != null) && (lVar1 != null)) {
+            lVar1.WorldData =
+                 GameController._instance.worldData;
+            il2cpp_internal();
             lVar1 = this.gameSaveData;
-            if (((*pStatics != 0) &&
-                (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-               (lVar1 != null)) {
-              lVar1.HeroList = *(uint64 *)(lVar2 + 80);
+            if (((GameController._instance != null) &&
+                (lVar2 = GameController._instance.worldData,
+                lVar2 != null)) && (lVar1 != null)) {
+              lVar1.HeroList = lVar2.Heros;
               lVar1 = this.gameSaveData;
-              if (((*pStatics != 0) &&
-                  (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-                 (lVar1 != null)) {
-                lVar1.TempHeroList = *(uint64 *)(lVar2 + 88);
+              if (((GameController._instance != null) &&
+                  (lVar2 = GameController._instance.worldData,
+                  lVar2 != null)) && (lVar1 != null)) {
+                lVar1.TempHeroList = lVar2.TempHeros;
                 return;
               }
             }
@@ -1112,22 +1101,25 @@ public class GameDataController
     // RVA   : 0xCA9D20   Offset: 0xCA8520   Length: 0x22C
     public void GameDataIntoGame()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((this.gameSaveData != null) && (*pStatics != 0)) {
-          *(uint64 *)(*pStatics + 32) =
+        if ((this.gameSaveData != null) &&
+           (GameController._instance != null)) {
+          GameController._instance.worldData =
                this.gameSaveData.WorldData;
           il2cpp_internal();
-          if ((*pStatics != 0) && (this.gameSaveData != null)) {
-            lVar1 = *(int64 *)(*pStatics + 32);
+          if ((GameController._instance != null) &&
+             (this.gameSaveData != null)) {
+            lVar1 = GameController._instance.worldData;
             if (lVar1 != null) {
-              *(uint64 *)(lVar1 + 80) = this.gameSaveData.HeroList;
-              if ((*pStatics != 0) && (this.gameSaveData != null)) {
-                lVar1 = *(int64 *)(*pStatics + 32);
+              lVar1.Heros = this.gameSaveData.HeroList;
+              if ((GameController._instance != null) &&
+                 (this.gameSaveData != null)) {
+                lVar1 = GameController._instance.worldData;
                 if (lVar1 != null) {
-                  *(uint64 *)(lVar1 + 88) = this.gameSaveData.TempHeroList;
-                  if ((*pStatics != 0) &&
-                     (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+                  lVar1.TempHeros = this.gameSaveData.TempHeroList;
+                  if ((GameController._instance != null) &&
+                     (lVar1 = GameController._instance.worldData,
+                     lVar1 != null)) {
                     WorldData.RecoverPlayerMissionEventData(lVar1,0);
                     return;
                   }
@@ -1171,9 +1163,9 @@ public class GameDataController
         if (!cVar2) {
           Directory.CreateDirectory(uVar4,0);
         }
-        lVar1 = **(int64 **)(DAT_181d4e010 + 184);
+        lVar1 = GameController._instance;
         if (lVar1 != null) {
-          if (*(uint32 *)(lVar1 + 24) <= saveType) {
+          if (lVar1.TestBuildPlayer <= saveType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           String.Concat(uVar4,"/",
@@ -1216,9 +1208,9 @@ public class GameDataController
         if (!cVar2) {
           Directory.CreateDirectory(uVar4,0);
         }
-        lVar1 = **(int64 **)(DAT_181d4e010 + 184);
+        lVar1 = GameController._instance;
         if (lVar1 != null) {
-          if (*(uint32 *)(lVar1 + 24) <= saveType) {
+          if (lVar1.TestBuildPlayer <= saveType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           String.Concat(uVar4,"/",
@@ -1240,20 +1232,21 @@ public class GameDataController
         int iVar5;
         int iVar6;
         iVar6 = 0;
-        lVar4 = DAT_181d4e010;
+        lVar4 = GameController_StaticsPtr;
         do {
-          if (((*(byte *)(DAT_181d79ad0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d79ad0 + 224) == 0)) {
-            il2cpp_runtime_class_init(DAT_181d79ad0);
-            lVar4 = DAT_181d4e010;
+          if (((*(byte *)(SaveLoadMenuController_StaticsPtr + 0x133) & 4) != 0) &&
+             (*(int *)(SaveLoadMenuController_StaticsPtr + 224) == 0)) {
+            il2cpp_runtime_class_init(SaveLoadMenuController_StaticsPtr);
+            lVar4 = GameController_StaticsPtr;
           }
-          if (**(int **)(DAT_181d79ad0 + 184) <= iVar6) {
+          if (SaveLoadMenuController.saveSlotNum <= iVar6) {
             return;
           }
           iVar5 = 0;
           while( true ) {
             if (((*(byte *)(lVar4 + 0x133) & 4) != 0) && (*(int *)(lVar4 + 224) == 0)) {
               il2cpp_runtime_class_init();
-              lVar4 = DAT_181d4e010;
+              lVar4 = GameController_StaticsPtr;
             }
             if (*plVar4 == 0) {
                           // WARNING: Subroutine does not return
@@ -1272,7 +1265,7 @@ public class GameDataController
               }
             }
             iVar5 = iVar5 + 1;
-            lVar4 = DAT_181d4e010;
+            lVar4 = GameController_StaticsPtr;
           }
           iVar6 = iVar6 + 1;
         } while( true );
@@ -1291,7 +1284,6 @@ public class GameDataController
     // RVA   : 0xCA9910   Offset: 0xCA8110   Length: 0x1C9
     public void DeleteSave(int saveID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1302,11 +1294,11 @@ public class GameDataController
         uVar5 = 0;
         lVar6 = 32;
         while( true ) {
-          if (*pStatics == 0) {
+          if (GameController._instance == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (*(int *)(*pStatics + 24) <= (int)uVar5) {
+          if (GameController._instance.TestBuildPlayer <= (int)uVar5) {
             return;
           }
           local_res20[0] = saveID;
@@ -1321,9 +1313,9 @@ public class GameDataController
           if (!cVar2) {
             Directory.CreateDirectory(uVar4,0);
           }
-          lVar1 = *pStatics;
+          lVar1 = GameController._instance;
           if (lVar1 == null) break;
-          if (*(uint32 *)(lVar1 + 24) <= uVar5) {
+          if (lVar1.TestBuildPlayer <= uVar5) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar4 = String.Concat(uVar4,"/",*(uint64 *)(lVar6 + *(int64 *)(lVar1 + 16)),
@@ -1338,8 +1330,7 @@ public class GameDataController
     // RVA   : 0xCAA790   Offset: 0xCA8F90   Length: 0x77C
     public SaveInfo GenerateSaveInfo()
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         ulong uVar2;
         long lVar4;
@@ -1348,13 +1339,14 @@ public class GameDataController
         ulong uVar7;
         ulong uVar8;
         ulong local_res18;
-        uVar2 = String.Concat(*(uint64 *)(pStatics_ef00 + 112)," ",
-                               *(uint64 *)(pStatics_ef00 + 120),0);
+        uVar2 = String.Concat(*(uint64 *)(pPlotController + 112),
+                               " ",
+                               *(uint64 *)(pPlotController + 120),0);
         plVar3 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,9);
-        if ((((*pStatics_df90 != 0) &&
-             (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-            (lVar4 = WorldData.Player(lVar4,0)) != null) &&
-           (lVar4 = *(int64 *)(lVar4 + 104), plVar3 != (int64 *)0)) {
+        if ((((GameController._instance != null) &&
+             (lVar4 = GameController._instance.worldData) != null
+             ) && (lVar4 = WorldData.Player(lVar4,0)) != null) &&
+           (lVar4 = lVar4.AreaMapRandomEventDatas, plVar3 != (int64 *)0)) {
           if ((lVar4 != null) &&
              (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
             uVar2 = il2cpp_internal();
@@ -1382,9 +1374,9 @@ public class GameDataController
           }
           plVar3[5] = "\n";
           il2cpp_internal(plVar3 + 5,lVar4);
-          if (((*pStatics_df90 != 0) &&
-              (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar4 = *(int64 *)(lVar4 + 168)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar4 = GameController._instance.worldData, lVar4 != null
+              )) && (lVar4 = lVar4.worldTime) != null) {
             lVar4 = TimeData.GetDescribe(lVar4,0);
             if ((lVar4 != null) &&
                (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -1413,15 +1405,15 @@ public class GameDataController
             }
             plVar3[7] = "\n";
             il2cpp_internal(plVar3 + 7,lVar4);
-            lVar4 = *(int64 *)(pStatics_ef00 + 184);
-            if (((*pStatics_df90 != 0) &&
-                (lVar5 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-               (lVar4 != null)) {
-              uVar1 = *(uint32 *)(lVar5 + 156);
-              if (*(uint32 *)(lVar4 + 24) <= uVar1) {
+            lVar4 = *(int64 *)(pPlotController + 184);
+            if (((GameController._instance != null) &&
+                (lVar5 = GameController._instance.worldData,
+                lVar5 != null)) && (lVar4 != null)) {
+              uVar1 = lVar5.gameMode;
+              if (lVar4.cityAreaID <= uVar1) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              lVar4 = lVar4[uVar1];
+              lVar4 = lVar4.chapter[uVar1];
               if (lVar4 != null) {
                 lVar4 = String.Substring(lVar4,0,2);
                 if ((lVar4 != null) &&
@@ -1452,8 +1444,9 @@ public class GameDataController
                 }
                 plVar3[9] = "\n";
                 il2cpp_internal(plVar3 + 9,lVar4);
-                if ((*pStatics_df90 != 0) &&
-                   (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar4 = GameController._instance.worldData,
+                   lVar4 != null)) {
                   lVar4 = WorldData.Player(lVar4,0);
                   if (lVar4 != null) {
                     lVar4 = HeroData.GetHeroForceLvDescribe(lVar4,1,0);
@@ -1485,9 +1478,9 @@ public class GameDataController
                     }
                     plVar3[11] = "\n";
                     il2cpp_internal(plVar3 + 11,lVar4);
-                    if ((*pStatics_df90 != 0) &&
-                       (lVar4 = *(int64 *)(*pStatics_df90 + 32)) != null)
-                    {
+                    if ((GameController._instance != null) &&
+                       (lVar4 = GameController._instance.worldData,
+                       lVar4 != null)) {
                       lVar4 = WorldData.GetDifficlutyName(lVar4,0);
                       if ((lVar4 != null) &&
                          (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null)
@@ -1537,15 +1530,14 @@ public class GameDataController
     // RVA   : 0xCB9630   Offset: 0xCB7E30   Length: 0x13C
     public void MoveSaveToBackUp(int saveID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
         int iVar4;
         iVar4 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= iVar4) {
+          if (GameController._instance == null) break;
+          if (GameController._instance.TestBuildPlayer <= iVar4) {
             return;
           }
           uVar2 = GameDataController.GetSaveDataPath(this,saveID,iVar4,0);
@@ -1569,15 +1561,14 @@ public class GameDataController
     // RVA   : 0xCB94F0   Offset: 0xCB7CF0   Length: 0x13C
     public void MoveBackUpToSafe(int saveID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
         int iVar4;
         iVar4 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= iVar4) {
+          if (GameController._instance == null) break;
+          if (GameController._instance.TestBuildPlayer <= iVar4) {
             return;
           }
           uVar2 = GameDataController.GetBackupDataPath(this,saveID,iVar4,0);
@@ -1601,7 +1592,6 @@ public class GameDataController
     // RVA   : 0xCB9A90   Offset: 0xCB8290   Length: 0x6F7
     public void Save(int saveID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1654,11 +1644,11 @@ public class GameDataController
           GameDataController.SavePlayerprefData(this,0);
           plVar9 = plVar10;
           while( true ) {
-            if (*pStatics == 0) {
+            if (GameController._instance == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(*pStatics + 24) <= (int)plVar9) break;
+            if (GameController._instance.TestBuildPlayer <= (int)plVar9) break;
             uVar3 = GameDataController.GetSaveDataPath(this,saveID,plVar9,0);
             cVar2 = File.Exists(uVar3,0);
             if (cVar2) {
@@ -1787,7 +1777,7 @@ public class GameDataController
     private void LoadAllGameData()
     {
         var plVar12 = *(int64*)(lVar12 + 184);
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar3;
         byte uVar4;
         int iVar5;
@@ -2104,7 +2094,8 @@ public class GameDataController
                             uVar8 = LTCSVLoader.GetValueAt(lVar10,7,iVar21);
                             uVar24 = Single.Parse(uVar8,0);
                             *(uint32 *)(lVar11 + 56) = uVar24;
-                            lVar12 = *(int64 *)(pStatics + 0x430);
+                            lVar12 = *(int64 *)
+                                      (pPlotController + 0x430);
                             uVar8 = LTCSVLoader.GetValueAt(lVar10,8,iVar21);
                             if (lVar12 == null) goto LAB_180cb67b2;
                             uVar24 = FUN_1817ff280(lVar12,uVar8,DAT_181d7c648);
@@ -2314,7 +2305,8 @@ public class GameDataController
                                         goto LAB_180cb67b2;
                                         lVar13 = String.Split(lVar13,lVar15,0);
                                         lVar15 = *(int64 *)
-                                                  (pStatics + 0x430);
+                                                  (pPlotController + 0x430
+                                                  );
                                         if ((lVar13 == null) ||
                                            (uVar8 = FUN_1800021a0(lVar13,0), lVar15 == null))
                                         goto LAB_180cb67b2;
@@ -2323,7 +2315,8 @@ public class GameDataController
                                         uVar8 = FUN_1800021a0(lVar13,1);
                                         iVar6 = Int32.Parse(uVar8,0);
                                         lVar13 = *(int64 *)
-                                                  (pStatics + 0x440);
+                                                  (pPlotController + 0x440
+                                                  );
                                         if ((lVar13 == null) ||
                                            (fVar26 = (float)FUN_1800d6780(lVar13,uVar24,DAT_181d796d8),
                                            lVar15 == null)) goto LAB_180cb67b2;
@@ -2649,7 +2642,9 @@ public class GameDataController
                                                     iVar21 = 1;
                                                     if (1 < iVar5) {
                                                       do {
-                                                        lVar11 = new ForceData(0);
+                                                        lVar11 = il2cpp_internal(ForceData_StaticsPtr)
+                                                        ;
+                                                        ForceData.ctor(lVar11,0);
                                                         uVar8 = LTCSVLoader.GetValueAt(lVar10,0,iVar21,0)
                                                         ;
                                                         uVar24 = Int32.Parse(uVar8,0);
@@ -2746,8 +2741,16 @@ public class GameDataController
                                                           if (lVar12 == null) goto LAB_180cb67b2;
                                                           if (*(int *)(lVar12 + 24) <= iVar23) break;
                                                           lVar13 = *(int64 *)(lVar11 + 240);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (PlotController_StaticsPtr);
+                                                          }
                                                           lVar15 = *(int64 *)
-                                                                    (pStatics +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x498);
                                                           uVar8 = FUN_1800021a0(lVar12,(int64)iVar23);
                                                           if ((lVar15 == null) ||
@@ -2773,8 +2776,16 @@ public class GameDataController
                                                             if (lVar12 == null) goto LAB_180cb67b2;
                                                             if (*(int *)(lVar12 + 24) <= iVar23) break;
                                                             lVar13 = *(int64 *)(lVar11 + 248);
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
+                                                            }
                                                             lVar15 = *(int64 *)
-                                                                      (pStatics
+                                                                      (*(int64 *)
+                                                                        (PlotController_StaticsPtr + 184)
                                                                       + 0x4a8);
                                                             uVar8 = FUN_1800021a0(lVar12,(int64)iVar23)
                                                             ;
@@ -2799,8 +2810,16 @@ public class GameDataController
                                                           goto LAB_180cb67b2;
                                                           lVar13 = String.Split(lVar12,lVar13,0);
                                                           lVar12 = *(int64 *)(lVar11 + 0x100);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (PlotController_StaticsPtr);
+                                                          }
                                                           lVar15 = *(int64 *)
-                                                                    (pStatics +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x4c8);
                                                           if (((lVar13 == null) ||
                                                               (uVar8 = FUN_1800021a0(lVar13,0),
@@ -2819,10 +2838,24 @@ public class GameDataController
                                                         cVar3 = FUN_1816fd990(uVar8,"1",0);
                                                         *(char *)(lVar11 + 36) = cVar3;
                                                         if (cVar3) {
-                                                          if (*(int *)(pStatics
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          if (*(int *)(*(int64 *)
+                                                                        (PlotController_StaticsPtr + 184)
                                                                       + 8) != 0) {
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
                                                             lVar12 = *(int64 *)
-                                                                      (pStatics
+                                                                      (*(int64 *)
+                                                                        (PlotController_StaticsPtr + 184)
                                                                       + 32);
                                                             if (lVar12 == null) goto LAB_180cb67b2;
                                                             cVar3 = FUN_181815240(lVar12,*(uint32 *)
@@ -3070,7 +3103,7 @@ public class GameDataController
                                                           goto LAB_180cb67b2;
                                                           lVar13 = String.Split(lVar12,lVar13);
                                                           iVar23 = 0;
-                                                          lVar12 = DAT_181d4ef00;
+                                                          lVar12 = PlotController_StaticsPtr;
                                                           while( true ) {
                                                             if (lVar13 == null) goto LAB_180cb67b2;
                                                             if (*(int *)(lVar13 + 24) <= iVar23) break;
@@ -3079,7 +3112,7 @@ public class GameDataController
                                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0)
                                                                  && (*(int *)(lVar12 + 224) == 0)) {
                                                                 il2cpp_runtime_class_init();
-                                                                lVar12 = DAT_181d4ef00;
+                                                                lVar12 = PlotController_StaticsPtr;
                                                               }
                                                               lVar15 = *(int64 *)
                                                                         (plVar12 +
@@ -3088,14 +3121,16 @@ public class GameDataController
                                                               if (*(int *)(lVar15 + 24) <= iVar6) break;
                                                               lVar15 = (int64)iVar23;
                                                               lVar12 = FUN_1800021a0(lVar13,lVar15);
-                                                              if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4ef00 + 224) == 0)) {
+                                                              if (((*(byte *)(PlotController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(PlotController_StaticsPtr +
+                                                                          224) == 0)) {
                                                                 il2cpp_runtime_class_init();
                                                               }
                                                               lVar16 = *(int64 *)
                                                                         (*(int64 *)
-                                                                          (DAT_181d4ef00 + 184) + 0x430);
+                                                                          (PlotController_StaticsPtr +
+                                                                          184) + 0x430);
                                                               if ((lVar16 == null) ||
                                                                  (uVar8 = FUN_180002f80(lVar16,iVar6,
                                                                                         DAT_181d7c9c0),
@@ -3104,78 +3139,89 @@ public class GameDataController
                                                               if (!cVar3) {
                                                                 iVar22 = 0;
                                                                 while( true ) {
-                                                                  if (((*(byte *)(DAT_181d4ef00 + 0x133) &
-                                                                       4) != 0) &&
-                                                                     (*(int *)(DAT_181d4ef00 + 224) == 0)
-                                                                     ) {
-                                                                    il2cpp_runtime_class_init();
-                                                                  }
-                                                                  lVar12 = *(int64 *)
-                                                                            (*(int64 *)
-                                                                              (DAT_181d4ef00 + 184) +
-                                                                            0x600);
-                                                                  if (lVar12 == null) goto LAB_180cb67b2;
-                                                                  if (*(int *)(lVar12 + 24) <= iVar22)
-                                                                  break;
-                                                                  lVar12 = FUN_1800021a0(lVar13,lVar15);
-                                                                  if (((*(byte *)(DAT_181d4ef00 + 0x133) &
-                                                                       4) != 0) &&
-                                                                     (*(int *)(DAT_181d4ef00 + 224) == 0)
-                                                                     ) {
-                                                                    il2cpp_runtime_class_init();
-                                                                  }
-                                                                  lVar16 = *(int64 *)
-                                                                            (*(int64 *)
-                                                                              (DAT_181d4ef00 + 184) +
-                                                                            0x600);
-                                                                  if (lVar16 == null) goto LAB_180cb67b2;
-                                                                  uVar8 = FUN_180002f80(lVar16,iVar22,
-                                                                                        DAT_181d7c9c0);
-                                                                  uVar8 = String.Concat("全域",
-                                                                                         uVar8,0);
-                                                                  if (lVar12 == null) goto LAB_180cb67b2;
-                                                                  cVar3 = String.Contains(lVar12,uVar8,0)
-                                                                  ;
-                                                                  if (!cVar3) {
-                                                                    lVar12 = FUN_1800021a0(lVar13,lVar15);
-                                                                    if (((*(byte *)(DAT_181d4ef00 + 0x133)
-                                                                         & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d4ef00 + 224) ==
-                                                                        0)) {
-                                                                      il2cpp_runtime_class_init();
-                                                                    }
-                                                                    lVar16 = *(int64 *)
-                                                                              (*(int64 *)
-                                                                                (DAT_181d4ef00 + 184) +
-                                                                              0x600);
-                                                                    if ((lVar16 == null) ||
-                                                                       (uVar8 = FUN_180002f80(lVar16,
-                                                        iVar22,DAT_181d7c9c0), lVar12 == null))
-                                                        goto LAB_180cb67b2;
-                                                        cVar3 = String.Contains(lVar12,uVar8,0);
-                                                        if (cVar3) {
-                                                          lVar12 = *(int64 *)(lVar11 + 96);
-                                                          lVar16 = FUN_1800021a0(lVar13,lVar15);
-                                                          lVar19 = *(int64 *)
-                                                                    (pStatics +
-                                                                    0x600);
-                                                          if ((lVar19 != null) &&
-                                                             (uVar8 = FUN_180002f80(lVar19,iVar22,
-                                                                                    DAT_181d7c9c0),
-                                                             lVar16 != null)) {
-                                                            uVar8 = String.Replace(lVar16,uVar8,
-                                                                                    "",0);
-                                                            Single.Parse(uVar8,0);
-                                                            if (lVar12 != null) goto LAB_180cb1226;
-                                                          }
-                                                          goto LAB_180cb67b2;
+                                                                  if (((*(byte *)(
+                                                        PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                                                        (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                        {
+                                                          il2cpp_runtime_class_init();
                                                         }
+                                                        lVar12 = *(int64 *)
+                                                                  (*(int64 *)
+                                                                    (PlotController_StaticsPtr + 184) +
+                                                                  0x600);
+                                                        if (lVar12 == null) goto LAB_180cb67b2;
+                                                        if (*(int *)(lVar12 + 24) <= iVar22) break;
+                                                        lVar12 = FUN_1800021a0(lVar13,lVar15);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        lVar16 = *(int64 *)
+                                                                  (*(int64 *)
+                                                                    (PlotController_StaticsPtr + 184) +
+                                                                  0x600);
+                                                        if (lVar16 == null) goto LAB_180cb67b2;
+                                                        uVar8 = FUN_180002f80(lVar16,iVar22,DAT_181d7c9c0)
+                                                        ;
+                                                        uVar8 = String.Concat("全域",uVar8,0);
+                                                        if (lVar12 == null) goto LAB_180cb67b2;
+                                                        cVar3 = String.Contains(lVar12,uVar8,0);
+                                                        if (!cVar3) {
+                                                          lVar12 = FUN_1800021a0(lVar13,lVar15);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          lVar16 = *(int64 *)
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
+                                                                    0x600);
+                                                          if ((lVar16 == null) ||
+                                                             (uVar8 = FUN_180002f80(lVar16,iVar22,
+                                                                                    DAT_181d7c9c0),
+                                                             lVar12 == null)) goto LAB_180cb67b2;
+                                                          cVar3 = String.Contains(lVar12,uVar8,0);
+                                                          if (cVar3) {
+                                                            lVar12 = *(int64 *)(lVar11 + 96);
+                                                            lVar16 = FUN_1800021a0(lVar13,lVar15);
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
+                                                            lVar19 = *(int64 *)
+                                                                      (*(int64 *)
+                                                                        (PlotController_StaticsPtr + 184)
+                                                                      + 0x600);
+                                                            if ((lVar19 != null) &&
+                                                               (uVar8 = FUN_180002f80(lVar19,iVar22,
+                                                                                      DAT_181d7c9c0),
+                                                               lVar16 != null)) {
+                                                              uVar8 = String.Replace(lVar16,uVar8,
+                                                                                      "",0);
+                                                              Single.Parse(uVar8,0);
+                                                              if (lVar12 != null) goto LAB_180cb1226;
+                                                            }
+                                                            goto LAB_180cb67b2;
+                                                          }
                                                         }
                                                         else {
                                                           lVar12 = *(int64 *)(lVar11 + 104);
                                                           lVar16 = FUN_1800021a0(lVar13,lVar15);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar19 = *(int64 *)
-                                                                    (pStatics +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x600);
                                                           if (lVar19 == null) goto LAB_180cb67b2;
                                                           uVar8 = FUN_180002f80(lVar19,iVar22,
@@ -3195,8 +3241,15 @@ public class GameDataController
                                                         else {
                                                           lVar12 = *(int64 *)(lVar11 + 72);
                                                           lVar15 = FUN_1800021a0(lVar13,lVar15);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar16 = *(int64 *)
-                                                                    (pStatics +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x430);
                                                           if ((lVar16 == null) ||
                                                              (uVar8 = FUN_180002f80(lVar16,iVar6,
@@ -3209,7 +3262,7 @@ public class GameDataController
                                                           FUN_181814d10(lVar12,iVar6);
                                                         }
                                                         iVar6 = iVar6 + 1;
-                                                        lVar12 = DAT_181d4ef00;
+                                                        lVar12 = PlotController_StaticsPtr;
                                                         }
                                                         iVar23 = iVar23 + 1;
                                                         }
@@ -3226,7 +3279,7 @@ public class GameDataController
                                                           goto LAB_180cb67b2;
                                                           lVar13 = String.Split(lVar12,lVar13);
                                                           iVar23 = 0;
-                                                          lVar12 = DAT_181d4ef00;
+                                                          lVar12 = PlotController_StaticsPtr;
                                                           while( true ) {
                                                             if (lVar13 == null) goto LAB_180cb67b2;
                                                             if (*(int *)(lVar13 + 24) <= iVar23) break;
@@ -3235,7 +3288,7 @@ public class GameDataController
                                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0)
                                                                  && (*(int *)(lVar12 + 224) == 0)) {
                                                                 il2cpp_runtime_class_init();
-                                                                lVar12 = DAT_181d4ef00;
+                                                                lVar12 = PlotController_StaticsPtr;
                                                               }
                                                               lVar15 = *(int64 *)
                                                                         (plVar12 +
@@ -3244,14 +3297,16 @@ public class GameDataController
                                                               if (*(int *)(lVar15 + 24) <= iVar6) break;
                                                               lVar15 = (int64)iVar23;
                                                               lVar12 = FUN_1800021a0(lVar13,lVar15);
-                                                              if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4ef00 + 224) == 0)) {
+                                                              if (((*(byte *)(PlotController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(PlotController_StaticsPtr +
+                                                                          224) == 0)) {
                                                                 il2cpp_runtime_class_init();
                                                               }
                                                               lVar16 = *(int64 *)
                                                                         (*(int64 *)
-                                                                          (DAT_181d4ef00 + 184) + 0x430);
+                                                                          (PlotController_StaticsPtr +
+                                                                          184) + 0x430);
                                                               if ((lVar16 == null) ||
                                                                  (uVar8 = FUN_180002f80(lVar16,iVar6,
                                                                                         DAT_181d7c9c0),
@@ -3260,78 +3315,89 @@ public class GameDataController
                                                               if (!cVar3) {
                                                                 iVar22 = 0;
                                                                 while( true ) {
-                                                                  if (((*(byte *)(DAT_181d4ef00 + 0x133) &
-                                                                       4) != 0) &&
-                                                                     (*(int *)(DAT_181d4ef00 + 224) == 0)
-                                                                     ) {
-                                                                    il2cpp_runtime_class_init();
-                                                                  }
-                                                                  lVar12 = *(int64 *)
-                                                                            (*(int64 *)
-                                                                              (DAT_181d4ef00 + 184) +
-                                                                            0x600);
-                                                                  if (lVar12 == null) goto LAB_180cb67b2;
-                                                                  if (*(int *)(lVar12 + 24) <= iVar22)
-                                                                  break;
-                                                                  lVar12 = FUN_1800021a0(lVar13,lVar15);
-                                                                  if (((*(byte *)(DAT_181d4ef00 + 0x133) &
-                                                                       4) != 0) &&
-                                                                     (*(int *)(DAT_181d4ef00 + 224) == 0)
-                                                                     ) {
-                                                                    il2cpp_runtime_class_init();
-                                                                  }
-                                                                  lVar16 = *(int64 *)
-                                                                            (*(int64 *)
-                                                                              (DAT_181d4ef00 + 184) +
-                                                                            0x600);
-                                                                  if (lVar16 == null) goto LAB_180cb67b2;
-                                                                  uVar8 = FUN_180002f80(lVar16,iVar22,
-                                                                                        DAT_181d7c9c0);
-                                                                  uVar8 = String.Concat("全域",
-                                                                                         uVar8,0);
-                                                                  if (lVar12 == null) goto LAB_180cb67b2;
-                                                                  cVar3 = String.Contains(lVar12,uVar8,0)
-                                                                  ;
-                                                                  if (!cVar3) {
-                                                                    lVar12 = FUN_1800021a0(lVar13,lVar15);
-                                                                    if (((*(byte *)(DAT_181d4ef00 + 0x133)
-                                                                         & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d4ef00 + 224) ==
-                                                                        0)) {
-                                                                      il2cpp_runtime_class_init();
-                                                                    }
-                                                                    lVar16 = *(int64 *)
-                                                                              (*(int64 *)
-                                                                                (DAT_181d4ef00 + 184) +
-                                                                              0x600);
-                                                                    if ((lVar16 == null) ||
-                                                                       (uVar8 = FUN_180002f80(lVar16,
-                                                        iVar22,DAT_181d7c9c0), lVar12 == null))
-                                                        goto LAB_180cb67b2;
-                                                        cVar3 = String.Contains(lVar12,uVar8,0);
-                                                        if (cVar3) {
-                                                          lVar12 = *(int64 *)(lVar11 + 96);
-                                                          lVar16 = FUN_1800021a0(lVar13,lVar15);
-                                                          lVar19 = *(int64 *)
-                                                                    (pStatics +
-                                                                    0x600);
-                                                          if ((lVar19 != null) &&
-                                                             (uVar8 = FUN_180002f80(lVar19,iVar22,
-                                                                                    DAT_181d7c9c0),
-                                                             lVar16 != null)) {
-                                                            uVar8 = String.Replace(lVar16,uVar8,
-                                                                                    "",0);
-                                                            Single.Parse(uVar8,0);
-                                                            if (lVar12 != null) goto LAB_180cb1706;
-                                                          }
-                                                          goto LAB_180cb67b2;
+                                                                  if (((*(byte *)(
+                                                        PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                                                        (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                        {
+                                                          il2cpp_runtime_class_init();
                                                         }
+                                                        lVar12 = *(int64 *)
+                                                                  (*(int64 *)
+                                                                    (PlotController_StaticsPtr + 184) +
+                                                                  0x600);
+                                                        if (lVar12 == null) goto LAB_180cb67b2;
+                                                        if (*(int *)(lVar12 + 24) <= iVar22) break;
+                                                        lVar12 = FUN_1800021a0(lVar13,lVar15);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        lVar16 = *(int64 *)
+                                                                  (*(int64 *)
+                                                                    (PlotController_StaticsPtr + 184) +
+                                                                  0x600);
+                                                        if (lVar16 == null) goto LAB_180cb67b2;
+                                                        uVar8 = FUN_180002f80(lVar16,iVar22,DAT_181d7c9c0)
+                                                        ;
+                                                        uVar8 = String.Concat("全域",uVar8,0);
+                                                        if (lVar12 == null) goto LAB_180cb67b2;
+                                                        cVar3 = String.Contains(lVar12,uVar8,0);
+                                                        if (!cVar3) {
+                                                          lVar12 = FUN_1800021a0(lVar13,lVar15);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
+                                                          lVar16 = *(int64 *)
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
+                                                                    0x600);
+                                                          if ((lVar16 == null) ||
+                                                             (uVar8 = FUN_180002f80(lVar16,iVar22,
+                                                                                    DAT_181d7c9c0),
+                                                             lVar12 == null)) goto LAB_180cb67b2;
+                                                          cVar3 = String.Contains(lVar12,uVar8,0);
+                                                          if (cVar3) {
+                                                            lVar12 = *(int64 *)(lVar11 + 96);
+                                                            lVar16 = FUN_1800021a0(lVar13,lVar15);
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
+                                                            lVar19 = *(int64 *)
+                                                                      (*(int64 *)
+                                                                        (PlotController_StaticsPtr + 184)
+                                                                      + 0x600);
+                                                            if ((lVar19 != null) &&
+                                                               (uVar8 = FUN_180002f80(lVar19,iVar22,
+                                                                                      DAT_181d7c9c0),
+                                                               lVar16 != null)) {
+                                                              uVar8 = String.Replace(lVar16,uVar8,
+                                                                                      "",0);
+                                                              Single.Parse(uVar8,0);
+                                                              if (lVar12 != null) goto LAB_180cb1706;
+                                                            }
+                                                            goto LAB_180cb67b2;
+                                                          }
                                                         }
                                                         else {
                                                           lVar12 = *(int64 *)(lVar11 + 104);
                                                           lVar16 = FUN_1800021a0(lVar13,lVar15);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar19 = *(int64 *)
-                                                                    (pStatics +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x600);
                                                           if (lVar19 == null) goto LAB_180cb67b2;
                                                           uVar8 = FUN_180002f80(lVar19,iVar22,
@@ -3351,8 +3417,15 @@ public class GameDataController
                                                         else {
                                                           lVar12 = *(int64 *)(lVar11 + 72);
                                                           lVar15 = FUN_1800021a0(lVar13,lVar15);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar16 = *(int64 *)
-                                                                    (pStatics +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x430);
                                                           if ((lVar16 == null) ||
                                                              (uVar8 = FUN_180002f80(lVar16,iVar6,
@@ -3365,7 +3438,7 @@ public class GameDataController
                                                           FUN_181814d10(lVar12,iVar6);
                                                         }
                                                         iVar6 = iVar6 + 1;
-                                                        lVar12 = DAT_181d4ef00;
+                                                        lVar12 = PlotController_StaticsPtr;
                                                         }
                                                         iVar23 = iVar23 + 1;
                                                         }
@@ -3399,10 +3472,10 @@ public class GameDataController
                                                                             + 24) <= iVar6) break;
                                                                 uVar8 = FUN_1800021a0(lVar12,(int64)
                                                                                              iVar23);
-                                                                if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4ef00 + 224) == 0))
-                                                                {
+                                                                if (((*(byte *)(PlotController_StaticsPtr
+                                                                               + 0x133) & 4) != 0) &&
+                                                                   (*(int *)(PlotController_StaticsPtr +
+                                                                            224) == 0)) {
                                                                   il2cpp_runtime_class_init();
                                                                 }
                                                                 uVar8 = GlobalData.GetChinese(uVar8,0);
@@ -3489,7 +3562,7 @@ public class GameDataController
                                                           goto LAB_180cb67b2;
                                                           lVar13 = String.Split(lVar12,lVar13,0);
                                                           iVar23 = 0;
-                                                          lVar12 = DAT_181d4ef00;
+                                                          lVar12 = PlotController_StaticsPtr;
                                                           while( true ) {
                                                             if (lVar13 == null) goto LAB_180cb67b2;
                                                             if (*(int *)(lVar13 + 24) <= iVar23) break;
@@ -3498,7 +3571,7 @@ public class GameDataController
                                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0)
                                                                  && (*(int *)(lVar12 + 224) == 0)) {
                                                                 il2cpp_runtime_class_init();
-                                                                lVar12 = DAT_181d4ef00;
+                                                                lVar12 = PlotController_StaticsPtr;
                                                               }
                                                               lVar15 = *(int64 *)
                                                                         (plVar12 +
@@ -3507,14 +3580,16 @@ public class GameDataController
                                                               if (*(int *)(lVar15 + 24) <= iVar6) break;
                                                               lVar12 = FUN_1800021a0(lVar13,(int64)
                                                                                             iVar23);
-                                                              if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4ef00 + 224) == 0)) {
+                                                              if (((*(byte *)(PlotController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(PlotController_StaticsPtr +
+                                                                          224) == 0)) {
                                                                 il2cpp_runtime_class_init();
                                                               }
                                                               lVar15 = *(int64 *)
                                                                         (*(int64 *)
-                                                                          (DAT_181d4ef00 + 184) + 0x430);
+                                                                          (PlotController_StaticsPtr +
+                                                                          184) + 0x430);
                                                               if ((lVar15 == null) ||
                                                                  (uVar8 = FUN_180002f80(lVar15,iVar6,
                                                                                         DAT_181d7c9c0),
@@ -3524,16 +3599,16 @@ public class GameDataController
                                                                 lVar12 = *(int64 *)(lVar11 + 80);
                                                                 lVar15 = FUN_1800021a0(lVar13,(int64)
                                                                                               iVar23);
-                                                                if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4ef00 + 224) == 0))
-                                                                {
+                                                                if (((*(byte *)(PlotController_StaticsPtr
+                                                                               + 0x133) & 4) != 0) &&
+                                                                   (*(int *)(PlotController_StaticsPtr +
+                                                                            224) == 0)) {
                                                                   il2cpp_runtime_class_init();
                                                                 }
                                                                 lVar16 = *(int64 *)
                                                                           (*(int64 *)
-                                                                            (DAT_181d4ef00 + 184) + 0x430
-                                                                          );
+                                                                            (PlotController_StaticsPtr +
+                                                                            184) + 0x430);
                                                                 if ((lVar16 == null) ||
                                                                    (uVar8 = FUN_180002f80(lVar16,iVar6,
                                                                                           DAT_181d7c9c0),
@@ -3545,7 +3620,7 @@ public class GameDataController
                                                                 FUN_181814d10(lVar12,iVar6);
                                                               }
                                                               iVar6 = iVar6 + 1;
-                                                              lVar12 = DAT_181d4ef00;
+                                                              lVar12 = PlotController_StaticsPtr;
                                                             }
                                                             iVar23 = iVar23 + 1;
                                                           }
@@ -4395,25 +4470,33 @@ public class GameDataController
                                                             FUN_1808ab680(this.kungfuSkillDataBase,
                                                                           *(uint32 *)(lVar11 + 20),
                                                                           lVar11);
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
+                                                            }
                                                             if ((*(int *)(*(int64 *)
-                                                                           (DAT_181d4ef00 + 184) + 8) ==
-                                                                 1) && (cVar3 = FUN_1816fd990(*(uint64
-                                                                                                *)(lVar11 
-                                                        + 32),"???",0), cVar3)) {
-                                                          *(uint8 *)(lVar11 + 200) = 1;
-                                                        }
-                                                        if (*(char *)(lVar11 + 200) == false) {
-                                                          if (((this.kungfuSkillDataList == null) ||
-                                                              (lVar12 = FUN_1817cc780(*(int64 *)
-                                                                                       (this + 0x138),
-                                                                                      *(uint32 *)
-                                                                                       (lVar11 + 24),
-                                                                                      DAT_181d91358),
-                                                              lVar12 == null)) ||
-                                                             (lVar12 = FUN_180002f80(lVar12,*(uint32 *
-                                                                                             )(lVar11 + 
-                                                        52),DAT_181d51a88), lVar12 == null))
-                                                        goto LAB_180cb67b2;
+                                                                           (PlotController_StaticsPtr +
+                                                                           184) + 8) == 1) &&
+                                                               (cVar3 = FUN_1816fd990(*(uint64 *)
+                                                                                       (lVar11 + 32),
+                                                                                      "???",0),
+                                                               cVar3)) {
+                                                              *(uint8 *)(lVar11 + 200) = 1;
+                                                            }
+                                                            if (*(char *)(lVar11 + 200) == false) {
+                                                              if (((this.kungfuSkillDataList == null)
+                                                                  || (lVar12 = FUN_1817cc780(*(int64 *)
+                                                                                              (this +
+                                                                                              0x138),*(
+                                                        uint32 *)(lVar11 + 24),DAT_181d91358),
+                                                        lVar12 == null)) ||
+                                                        (lVar12 = FUN_180002f80(lVar12,*(uint32 *)
+                                                                                        (lVar11 + 52),
+                                                                                DAT_181d51a88),
+                                                        lVar12 == null)) goto LAB_180cb67b2;
                                                         FUN_181827900(lVar12,lVar11,DAT_181d6a7e8);
                                                         }
                                                         iVar21 = iVar21 + 1;
@@ -4585,17 +4668,17 @@ public class GameDataController
                                                                   uVar24 = *(uint32 *)(lVar11 + 132);
                                                                 }
                                                                 *(uint32 *)(lVar11 + 136) = uVar24;
-                                                                if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4ef00 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init(DAT_181d4ef00)
-                                                                  ;
+                                                                if (((*(byte *)(PlotController_StaticsPtr
+                                                                               + 0x133) & 4) != 0) &&
+                                                                   (*(int *)(PlotController_StaticsPtr +
+                                                                            224) == 0)) {
+                                                                  il2cpp_runtime_class_init
+                                                                            (PlotController_StaticsPtr);
                                                                 }
                                                                 lVar12 = *(int64 *)
                                                                           (*(int64 *)
-                                                                            (DAT_181d4ef00 + 184) + 0x3d0
-                                                                          );
+                                                                            (PlotController_StaticsPtr +
+                                                                            184) + 0x3d0);
                                                                 uVar8 = LTCSVLoader.GetValueAt
                                                                                   (lVar10,5,iVar21);
                                                                 if (lVar12 == null) goto LAB_180cb67b2;
@@ -4619,17 +4702,17 @@ public class GameDataController
                                                                   fVar26 = (float)*(int *)(lVar11 + 184);
                                                                 }
                                                                 *(float *)(lVar11 + 188) = fVar26;
-                                                                if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4ef00 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init(DAT_181d4ef00)
-                                                                  ;
+                                                                if (((*(byte *)(PlotController_StaticsPtr
+                                                                               + 0x133) & 4) != 0) &&
+                                                                   (*(int *)(PlotController_StaticsPtr +
+                                                                            224) == 0)) {
+                                                                  il2cpp_runtime_class_init
+                                                                            (PlotController_StaticsPtr);
                                                                 }
                                                                 lVar12 = *(int64 *)
                                                                           (*(int64 *)
-                                                                            (DAT_181d4ef00 + 184) + 0x5a0
-                                                                          );
+                                                                            (PlotController_StaticsPtr +
+                                                                            184) + 0x5a0);
                                                                 uVar8 = LTCSVLoader.GetValueAt
                                                                                   (lVar10,7,iVar21);
                                                                 if (lVar12 == null) goto LAB_180cb67b2;
@@ -4638,8 +4721,8 @@ public class GameDataController
                                                                 *(uint32 *)(lVar11 + 0x1d8) = uVar24;
                                                                 lVar12 = *(int64 *)
                                                                           (*(int64 *)
-                                                                            (DAT_181d4ef00 + 184) + 0x5a8
-                                                                          );
+                                                                            (PlotController_StaticsPtr +
+                                                                            184) + 0x5a8);
                                                                 uVar8 = LTCSVLoader.GetValueAt
                                                                                   (lVar10,8,iVar21);
                                                                 if (lVar12 == null) goto LAB_180cb67b2;
@@ -4659,8 +4742,8 @@ public class GameDataController
                                                                 lVar13 = String.Split(lVar12,lVar13,0);
                                                                 lVar12 = *(int64 *)
                                                                           (*(int64 *)
-                                                                            (DAT_181d4ef00 + 184) + 0x590
-                                                                          );
+                                                                            (PlotController_StaticsPtr +
+                                                                            184) + 0x590);
                                                                 if ((lVar13 == null) ||
                                                                    (uVar8 = FUN_1800021a0(lVar13,0),
                                                                    lVar12 == null)) goto LAB_180cb67b2;
@@ -4670,8 +4753,8 @@ public class GameDataController
                                                                      (float)iVar23 * 25.0;
                                                                 lVar12 = *(int64 *)
                                                                           (*(int64 *)
-                                                                            (DAT_181d4ef00 + 184) + 0x598
-                                                                          );
+                                                                            (PlotController_StaticsPtr +
+                                                                            184) + 0x598);
                                                                 uVar8 = FUN_1800021a0(lVar13,1);
                                                                 if (lVar12 == null) goto LAB_180cb67b2;
                                                                 iVar23 = FUN_1817ff280(lVar12,uVar8,
@@ -4697,19 +4780,18 @@ public class GameDataController
                                                                     break;
                                                                     lVar13 = *(int64 *)(lVar11 + 0x108)
                                                                     ;
-                                                                    if (((*(byte *)(DAT_181d4ef00 + 0x133)
-                                                                         & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d4ef00 + 224) ==
-                                                                        0)) {
-                                                                      il2cpp_runtime_class_init
-                                                                                (DAT_181d4ef00);
-                                                                    }
-                                                                    lVar15 = *(int64 *)
-                                                                              (*(int64 *)
-                                                                                (DAT_181d4ef00 + 184) +
-                                                                              0x498);
-                                                                    uVar8 = FUN_1800021a0(lVar12,(int64
-                                                        )iVar23);
+                                                                    if (((*(byte *)(
+                                                        PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+                                                        (*(int *)(PlotController_StaticsPtr + 224) == 0))
+                                                        {
+                                                          il2cpp_runtime_class_init
+                                                                    (PlotController_StaticsPtr);
+                                                        }
+                                                        lVar15 = *(int64 *)
+                                                                  (*(int64 *)
+                                                                    (PlotController_StaticsPtr + 184) +
+                                                                  0x498);
+                                                        uVar8 = FUN_1800021a0(lVar12,(int64)iVar23);
                                                         if ((lVar15 == null) ||
                                                            (uVar24 = FUN_1817ff280(lVar15,uVar8,
                                                                                    DAT_181d7c648),
@@ -4735,8 +4817,16 @@ public class GameDataController
                                                             if (lVar12 == null) goto LAB_180cb67b2;
                                                             if (*(int *)(lVar12 + 24) <= iVar23) break;
                                                             lVar13 = *(int64 *)(lVar11 + 0x110);
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
+                                                            }
                                                             lVar15 = *(int64 *)
-                                                                      (pStatics
+                                                                      (*(int64 *)
+                                                                        (PlotController_StaticsPtr + 184)
                                                                       + 0x4a8);
                                                             uVar8 = FUN_1800021a0(lVar12,(int64)iVar23)
                                                             ;
@@ -5337,8 +5427,16 @@ public class GameDataController
                                                             iVar23 = FUN_1800d6750(lVar10,iVar5,
                                                                                    DAT_181d68270);
                                                             if (iVar23 <= iVar21) break;
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
+                                                            }
                                                             lVar10 = *(int64 *)
-                                                                      (pStatics
+                                                                      (*(int64 *)
+                                                                        (PlotController_StaticsPtr + 184)
                                                                       + 0x648);
                                                             if ((lVar10 == null) ||
                                                                (lVar10 = FUN_180002f80(lVar10,iVar5,
@@ -5372,8 +5470,16 @@ public class GameDataController
                                                                                  DAT_181d68270);
                                                           uVar8 = DAT_181d9e518;
                                                           if (iVar23 <= iVar21) break;
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (PlotController_StaticsPtr);
+                                                          }
                                                           lVar10 = *(int64 *)
-                                                                    (pStatics +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x650);
                                                           if ((lVar10 == null) ||
                                                              (lVar10 = FUN_180002f80(lVar10,iVar5,
@@ -5451,6 +5557,12 @@ public class GameDataController
                                                           *(uint8 *)(lVar11 + 32) = 1;
                                                         }
                                                         uVar8 = LTCSVLoader.GetValueAt(lVar10,2,iVar21);
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         uVar8 = GlobalData.LoadVector2(uVar8,0);
                                                         local_res18 = (int)uVar8;
                                                         lVar11.Count = local_res18;
@@ -5464,8 +5576,16 @@ public class GameDataController
                                                         iVar21 = iVar21 + 1;
                                                         } while (iVar21 < iVar5);
                                                         }
+                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (PlotController_StaticsPtr);
+                                                        }
                                                         uVar8 = DAT_181d9e518;
-                                                        if (**(int **)(DAT_181d4ef00 + 184) == 2) {
+                                                        if (PlotController._instance
+                                                            == 2) {
                                                           uVar8 = Type.GetTypeFromHandle(uVar8,0);
                                                           uVar8 = Resources.Load("GameData/CheckReplaceSkillIconList",uVar8,0);
                                                           lVar10 = FUN_1800020c0(uVar8,DAT_181d858f0);
@@ -5766,8 +5886,6 @@ public class GameDataController
     // RVA   : 0xCA8570   Offset: 0xCA6D70   Length: 0x486
     public void ChangeAchStats(int achID, float changeNum)
     {
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
-        var pStatics_e010 = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -5777,22 +5895,23 @@ public class GameDataController
         float fVar7;
         uint[] local_res10 = new uint[2];
         local_res10[0] = achID;
-        if ((*pStatics_df90 != 0) &&
-           (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) {
-          if (*(char *)(lVar1 + 164) != false) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
+          if (lVar1.relaxMode) {
             return;
           }
-          if (*(int *)(*(int64 *)(DAT_181d4ef00 + 184) + 12) != 0) {
-            if ((*pStatics_df90 == 0) ||
-               (lVar1 = *(int64 *)(*pStatics_df90 + 32)) == null)
-            throw; // [null/range check failed]
-            if (*(char *)(lVar1 + 153) != false) {
+          if (*(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 12) != 0) {
+            if ((GameController._instance == null) ||
+               (lVar1 = GameController._instance.worldData,
+               lVar1 == null)) throw; // [null/range check failed]
+            if (lVar1.cheated) {
               return;
             }
           }
-          if (((*pStatics_df90 != 0) &&
-              (lVar1 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-             (lVar1 = *(int64 *)(lVar1 + 0x260)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar1 = GameController._instance.worldData, lVar1 != null
+              )) && (lVar1 = lVar1.customDifficultyData) != null) {
             cVar2 = CustomDifficultyData.CanUnlockAchievement(lVar1,0);
             if (!cVar2) {
               return;
@@ -5808,13 +5927,13 @@ public class GameDataController
               }
               lVar1 = *(int64 *)(lVar1._items + 32 + lVar6 * 8);
               if (lVar1 != null) {
-                if (*(int *)(lVar1 + 32) == 0) {
-                  lVar1 = *(int64 *)(pStatics_e010 + 8);
+                if (lVar1.villageAreaID == null) {
+                  lVar1 = GameController.difficultyExtraPoint;
                   if (lVar1 != null) {
                     lVar1 = lVar1._items;
                     uVar4 = Int32.ToString(local_res10,0);
                     uVar4 = String.Concat("AchData",uVar4,0);
-                    lVar6 = *(int64 *)(pStatics_e010 + 8);
+                    lVar6 = GameController.difficultyExtraPoint;
                     if (lVar6 != null) {
                       lVar6 = *(int64 *)(lVar6 + 16);
                       uVar5 = Int32.ToString(local_res10,0);
@@ -5828,12 +5947,12 @@ public class GameDataController
                   }
                 }
                 else {
-                  lVar1 = *(int64 *)(pStatics_e010 + 8);
+                  lVar1 = GameController.difficultyExtraPoint;
                   if (lVar1 != null) {
                     lVar1 = lVar1._items;
                     uVar4 = Int32.ToString(local_res10,0);
                     uVar4 = String.Concat("AchData",uVar4,0);
-                    lVar6 = *(int64 *)(pStatics_e010 + 8);
+                    lVar6 = GameController.difficultyExtraPoint;
                     if (lVar6 != null) {
                       lVar6 = *(int64 *)(lVar6 + 16);
                       uVar5 = Int32.ToString(local_res10,0);
@@ -5858,7 +5977,6 @@ public class GameDataController
     // RVA   : 0xCA8A00   Offset: 0xCA7200   Length: 0x43C
     public void CheckAch(int achID)
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
@@ -5867,7 +5985,7 @@ public class GameDataController
         float fVar6;
         uint[] local_res10 = new uint[2];
         local_res10[0] = achID;
-        if (**(int **)(DAT_181d4ef00 + 184) == 0) {
+        if (PlotController._instance == null) {
           uVar3 = SteamStatsAndAchievements.get_Instance(0);
           cVar1 = Object.op_Equality(uVar3,0,0);
           if (cVar1) {
@@ -5880,7 +5998,7 @@ public class GameDataController
             return;
           }
         }
-        if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+        if (PlotController._instance == 1) {
           cVar1 = RailManager.get_Initialized(0);
           if (!cVar1) {
             return;
@@ -5891,7 +6009,7 @@ public class GameDataController
             return;
           }
         }
-        if (**(int **)(DAT_181d4ef00 + 184) == 1) {
+        if (PlotController._instance == 1) {
           lVar4 = WegameStatsAndAchievements.get_Instance(0);
           if (lVar4 == null) throw; // [null/range check failed]
           WegameStatsAndAchievements.AsyncTriggerAchievementProgress(lVar4,local_res10[0],0);
@@ -5906,7 +6024,7 @@ public class GameDataController
           lVar4 = *(int64 *)(lVar4._items + 32 + lVar5 * 8);
           if (lVar4 != null) {
             if (*(int *)(lVar4 + 32) == 2) {
-              lVar4 = *(int64 *)(pStatics + 8);
+              lVar4 = GameController.difficultyExtraPoint;
               if (lVar4 != null) {
                 lVar4 = lVar4._items;
                 uVar3 = Int32.ToString(local_res10,0);
@@ -5932,7 +6050,7 @@ public class GameDataController
                 lVar4 = *(int64 *)(lVar4._items + 32 + lVar5 * 8);
                 if (lVar4 != null) {
                   if (*(int *)(lVar4 + 32) == 0) {
-                    lVar4 = *(int64 *)(pStatics + 8);
+                    lVar4 = GameController.difficultyExtraPoint;
                     if (lVar4 == null) throw; // [null/range check failed]
                     lVar4 = lVar4._items;
                     uVar3 = Int32.ToString(local_res10,0);
@@ -5950,7 +6068,7 @@ public class GameDataController
                     lVar4 = *(int64 *)(lVar4._items + 32 + lVar5 * 8);
                     if (lVar4 == null) throw; // [null/range check failed]
                     if (*(int *)(lVar4 + 32) == 1) {
-                      lVar4 = *(int64 *)(pStatics + 8);
+                      lVar4 = GameController.difficultyExtraPoint;
                       if (lVar4 == null) throw; // [null/range check failed]
                       lVar4 = lVar4._items;
                       uVar3 = Int32.ToString(local_res10,0);
@@ -5989,7 +6107,7 @@ public class GameDataController
         long lVar2;
         uint[] local_res10 = new uint[6];
         local_res10[0] = achID;
-        if (**(int **)(DAT_181d4ef00 + 184) == 0) {
+        if (PlotController._instance == null) {
           lVar2 = SteamStatsAndAchievements.get_Instance(0);
           if (lVar2 != null) {
             SteamStatsAndAchievements.UnlockAchievement(lVar2,local_res10[0],0);
@@ -5997,7 +6115,7 @@ public class GameDataController
           }
         }
         else {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+          lVar2 = GameController.difficultyExtraPoint;
           if (lVar2 != null) {
             lVar2 = *(int64 *)(lVar2 + 16);
             uVar1 = Int32.ToString(local_res10,0);
@@ -6014,7 +6132,6 @@ public class GameDataController
     // RVA   : 0xCA8E40   Offset: 0xCA7640   Length: 0x3AD
     public void CheckAllAch()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -6026,7 +6143,7 @@ public class GameDataController
           if (lVar1.Count <= local_res8[0]) {
             return;
           }
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if (lVar1 == null) break;
           lVar1 = lVar1._items;
           uVar4 = Int32.ToString(local_res8,0);
@@ -6037,7 +6154,7 @@ public class GameDataController
           if (cVar2) {
             GameDataController.CheckAch(this,local_res8[0]);
           }
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if (lVar1 == null) break;
           lVar1 = lVar1._items;
           uVar4 = Int32.ToString(local_res8,0);
@@ -6046,7 +6163,7 @@ public class GameDataController
           uVar4 = PlayerPrefDictionary.GetString(lVar1,uVar4);
           cVar2 = FUN_1816fd990(uVar4);
           if (cVar2) {
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = GameController.difficultyExtraPoint;
             if (lVar1 == null) break;
             lVar1 = lVar1._items;
             uVar4 = Int32.ToString(local_res8,0);
@@ -6054,7 +6171,7 @@ public class GameDataController
             if (lVar1 == null) break;
             cVar2 = PlayerPrefDictionary.ContainsKey(lVar1,uVar4);
             if (cVar2) {
-              lVar1 = *(int64 *)(pStatics + 8);
+              lVar1 = GameController.difficultyExtraPoint;
               if (lVar1 == null) break;
               lVar1 = lVar1._items;
               uVar4 = Int32.ToString(local_res8,0);
@@ -6065,10 +6182,10 @@ public class GameDataController
               if (!cVar2) goto LAB_180ca91c2;
             }
 
-            if ((lVar1 = *(int64 *)(pStatics + 8)?._items) == null) break;
+            if ((lVar1 = GameController.difficultyExtraPoint?._items) == null) break;
             iVar3 = PlayerPrefDictionary.GetInt(lVar1,"AchTagPoint",0);
             PlayerPrefDictionary.SetKey(lVar1,"AchTagPoint",iVar3 + 2,0);
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = GameController.difficultyExtraPoint;
             if (lVar1 == null) break;
             lVar1 = lVar1._items;
             uVar4 = Int32.ToString(local_res8,0);
@@ -6086,7 +6203,6 @@ public class GameDataController
     // RVA   : 0xCBB3A0   Offset: 0xCB9BA0   Length: 0x699
     public void WriteGameDataCsv()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -6116,21 +6232,21 @@ public class GameDataController
           plVar5 = (int64 *)il2cpp_internal(DAT_181d82370);
           StreamWriter.ctor(plVar5,plVar4,uVar2,0);
           while( true ) {
-            if (*pStatics == 0) {
+            if (GameController._instance == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = *(int64 *)(*pStatics + 32);
+            lVar3 = GameController._instance.worldData;
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = *(int64 *)(lVar3 + 56);
+            lVar3 = lVar3.Inns;
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(lVar3 + 24) <= iVar10) {
+            if (lVar3.cityAreaID <= iVar10) {
               if (plVar5 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -6152,11 +6268,11 @@ public class GameDataController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int64 *)(lVar3 + 32) == 0) {
+            if (lVar3.villageAreaID == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 56);
+            lVar3 = *(int64 *)(lVar3.villageAreaID + 56);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -6166,17 +6282,17 @@ public class GameDataController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar2 = *(uint64 *)(lVar3 + 24);
+            uVar2 = lVar3.cityAreaID;
             lVar3 = FUN_18046bbe0(0);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int64 *)(lVar3 + 64) == 0) {
+            if (lVar3.ResourcePoints == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0);
+            lVar3 = GameObject.get_transform(lVar3.ResourcePoints,0);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -6217,11 +6333,11 @@ public class GameDataController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int64 *)(lVar3 + 64) == 0) {
+            if (lVar3.ResourcePoints == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0);
+            lVar3 = GameObject.get_transform(lVar3.ResourcePoints,0);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -6277,7 +6393,6 @@ public class GameDataController
     // RVA   : 0xCAC0E0   Offset: 0xCAA8E0   Length: 0x320
     public int GetTagID(string tagName)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         int iVar3;
@@ -6321,7 +6436,7 @@ public class GameDataController
               }
               cVar1 = FUN_1816fd990(*(uint64 *)(local_40 + 24),tagName,0);
             } while (!cVar1);
-            iVar4 = *(int *)(lVar2 + 16);
+            iVar4 = lVar2.chapter;
             aiStack_64[1] = 150;
             iVar5 = aiStack_64[3] + 1;
             aiStack_64[3] = iVar5;
@@ -6332,18 +6447,18 @@ public class GameDataController
               return iVar4;
             }
             while( true ) {
-              if (((*pStatics == 0) ||
-                  (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-                 (lVar2 = *(int64 *)(lVar2 + 0x1e0)) == null) break;
-              if (*(int *)(lVar2 + 24) <= iVar3) {
+              if (((GameController._instance == null) ||
+                  (lVar2 = GameController._instance.worldData,
+                  lVar2 == null)) || (lVar2 = lVar2.tempTagDataBase) == null) break;
+              if (lVar2.cityAreaID <= iVar3) {
                 return -1;
               }
               lVar2 = FUN_18046c0a0(0);
-              if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                 (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 0x1e0)) == null) break;
+              if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                 (lVar2 = *(int64 *)(lVar2.villageAreaID + 0x1e0)) == null) break;
               lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181d65178);
               if (lVar2 == null) break;
-              cVar1 = FUN_1816fd990(*(uint64 *)(lVar2 + 24),tagName,0);
+              cVar1 = FUN_1816fd990(lVar2.cityAreaID,tagName,0);
               if (cVar1) {
                 return iVar3 + 10000;
               }
@@ -6357,7 +6472,7 @@ public class GameDataController
     // RVA   : 0xCB7A60   Offset: 0xCB6260   Length: 0x186C
     public KungfuSkillData LoadSkillData(LTCSVLoader loader, int i, bool _summonSkill)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int64 GameDataController.LoadSkillData
                          (int64 this,int64 loader,uint32 i,uint8 _summonSkill)
         {
@@ -6387,7 +6502,7 @@ public class GameDataController
         uVar9 = LTCSVLoader.GetValueAt(loader,0,i,0);
         uVar4 = Int32.Parse(uVar9,0);
         *(uint32 *)(lVar8 + 20) = uVar4;
-        lVar18 = *(int64 *)(pStatics + 0x498);
+        lVar18 = *(int64 *)(pPlotController + 0x498);
         uVar9 = LTCSVLoader.GetValueAt(loader,1,i);
         if (lVar18 == null) goto LAB_180cb9162;
         uVar4 = FUN_1817ff280(lVar18,uVar9,DAT_181d7c648);
@@ -6460,7 +6575,7 @@ public class GameDataController
             if (*(int64 *)(lVar8 + 80) == 0) goto LAB_180cb9162;
             lVar18 = *(int64 *)(*(int64 *)(lVar8 + 80) + 24);
             uVar4 = *(uint32 *)(lVar8 + 48);
-            lVar11 = *(int64 *)(pStatics + 0x138);
+            lVar11 = *(int64 *)(pPlotController + 0x138);
             if (lVar11 == null) goto LAB_180cb9162;
             if (*(uint32 *)(lVar11 + 24) <= *(uint32 *)(lVar8 + 52)) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -7023,7 +7138,7 @@ public class GameDataController
     // RVA   : 0xCBA470   Offset: 0xCB8C70   Length: 0x4F3
     public AttriNumData StringToAttriRatio(string resource)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         uint uVar2;
         long lVar3;
@@ -7066,28 +7181,28 @@ public class GameDataController
                 uVar6 = Regex.Replace(lVar4[uVar9],
                                        "[\\u4e00-\\u9fa5]","",0);
                 uVar10 = Single.Parse(uVar6,0);
-                lVar8 = *(int64 *)(pStatics + 0x490);
+                lVar8 = *(int64 *)(pPlotController + 0x490);
                 if (lVar8 == null) break;
                 cVar1 = FUN_1818279a0(lVar8,uVar5,DAT_181d7c4d0);
                 if (!cVar1) {
-                  lVar8 = *(int64 *)(pStatics + 0x498);
+                  lVar8 = *(int64 *)(pPlotController + 0x498);
                   if (lVar8 == null) break;
                   cVar1 = FUN_1818279a0(lVar8,uVar5,DAT_181d7c4d0);
                   if (cVar1) {
                     if (lVar3 != null) {
                       lVar8 = *(int64 *)(lVar3 + 24);
-                      lVar7 = *(int64 *)(pStatics + 0x498);
+                      lVar7 = *(int64 *)(pPlotController + 0x498);
                       goto LAB_180cba8d6;
                     }
                     break;
                   }
-                  lVar8 = *(int64 *)(pStatics + 0x4a8);
+                  lVar8 = *(int64 *)(pPlotController + 0x4a8);
                   if (lVar8 == null) break;
                   cVar1 = FUN_1818279a0(lVar8,uVar5,DAT_181d7c4d0);
                   if (cVar1) {
                     if (lVar3 != null) {
                       lVar8 = *(int64 *)(lVar3 + 32);
-                      lVar7 = *(int64 *)(pStatics + 0x4a8);
+                      lVar7 = *(int64 *)(pPlotController + 0x4a8);
                       goto LAB_180cba8d6;
                     }
                     break;
@@ -7125,7 +7240,7 @@ public class GameDataController
                 else {
                   if (lVar3 == null) break;
                   lVar8 = *(int64 *)(lVar3 + 16);
-                  lVar7 = *(int64 *)(pStatics + 0x490);
+                  lVar7 = *(int64 *)(pPlotController + 0x490);
         LAB_180cba8d6:
                   if ((lVar7 == null) || (uVar2 = FUN_1817ff280(lVar7,uVar5,DAT_181d7c648), lVar8 == null))
                   break;
@@ -7598,7 +7713,7 @@ public class GameDataController
         do {
           uVar2 = GameDataController.GenerateRandomHeroGivenName(this,isFemale,useCensorWords,0);
           uVar2 = String.Concat(familyName,uVar2,0);
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x188);
+          lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x188);
           if (lVar3 == null) goto LAB_180caa785;
           cVar1 = FUN_1818279a0(lVar3,uVar2,DAT_181d7c4d0);
         } while (cVar1);
@@ -7645,9 +7760,9 @@ public class GameDataController
     // RVA   : 0xCABC80   Offset: 0xCAA480   Length: 0xE6
     public KungfuSkillData GetSkillDataBase(int skillID)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
-        if (skillID < *(int *)(pStatics + 0x11c)) {
+        if (skillID < *(int *)(pPlotController + 0x11c)) {
           if (this.kungfuSkillDataBase != null) {
             FUN_1817cc780(this.kungfuSkillDataBase,skillID,DAT_181d96c60);
             return;
@@ -7656,8 +7771,8 @@ public class GameDataController
         else {
           lVar1 = this.summonSkillDataBase;
           if (lVar1 != null) {
-            FUN_1817cc780(lVar1,skillID - *(int *)(pStatics + 0x11c),
-                          DAT_181d96c60);
+            FUN_1817cc780(lVar1,skillID - *(int *)(pPlotController + 0x11c
+                                                  ),DAT_181d96c60);
             return;
           }
         }
@@ -7958,7 +8073,7 @@ public class GameDataController
               }
             }
             else {
-              lVar3 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x498);
+              lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x498);
               if (lVar3 != null) {
                 iVar1 = *(int *)(lVar3 + 24);
                 if (*(int64 *)(targetItem + 112) != 0) {
@@ -7981,7 +8096,6 @@ public class GameDataController
     // RVA   : 0xCABFA0   Offset: 0xCAA7A0   Length: 0x132
     public HeroTagDataBase GetTagDataBase(int tagID)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
         ulong uVar2;
         if (tagID < 10000) {
@@ -7991,13 +8105,13 @@ public class GameDataController
           }
         }
         else {
-          if (((*pStatics != 0) &&
-              (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
-             (lVar1 = *(int64 *)(lVar1 + 0x1e0)) != null) {
-            if (*(uint32 *)(lVar1 + 24) <= tagID - 10000U) {
+          if (((GameController._instance != null) &&
+              (lVar1 = GameController._instance.worldData, lVar1 != null
+              )) && (lVar1 = lVar1.tempTagDataBase) != null) {
+            if (lVar1.cityAreaID <= tagID - 10000U) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            return *(uint64 *)(*(int64 *)(lVar1 + 16) + -0x13860 + (int64)tagID * 8);
+            return *(uint64 *)(lVar1.chapter + -0x13860 + (int64)tagID * 8);
           }
         }
     }
@@ -8013,12 +8127,12 @@ public class GameDataController
         iVar3 = 0;
         while( true ) {
           local_res18[0] = iVar3;
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 64);
+          lVar1 = PlotController.FightResultPlotText;
           if (lVar1 == null) break;
           if (*(int *)(lVar1 + 24) <= iVar3) {
             return;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if (lVar1 == null) break;
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar2 = Int32.ToString(local_res18,0);
@@ -8053,7 +8167,7 @@ public class GameDataController
     // RVA   : 0xCBBA40   Offset: 0xCBA240   Length: 0x19C
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d4e010 + 184);
+        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
         long lVar2;
         ulong uVar3;
         lVar2 = il2cpp_internal(DAT_181d72a30);
@@ -8063,17 +8177,13 @@ public class GameDataController
           FUN_181827900(lVar2,"Hero",DAT_181d7c3d0);
           FUN_181827900(lVar2,"TempHero",DAT_181d7c3d0);
           FUN_181827900(lVar2,"Info",DAT_181d7c3d0);
-          plVar1 = pStatics;
+          plVar1 = pGameController;
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           uVar3 = new RePlayerPrefData(0);
-          puVar4 = (uint64 *)(pStatics + 8);
-          *puVar4 = uVar3;
-          il2cpp_internal(puVar4,uVar3);
+          GameController.difficultyExtraPoint = uVar3;
           uVar3 = new ItemListData(0);
-          puVar4 = (uint64 *)(pStatics + 24);
-          *puVar4 = uVar3;
-          il2cpp_internal(puVar4,uVar3);
+          GameController.CheckShowSpeHeroSkinID = uVar3;
           return;
         }
     }

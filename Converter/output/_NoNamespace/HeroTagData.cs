@@ -48,7 +48,7 @@ public class HeroTagData
     // RVA   : 0xB3D160   Offset: 0xB3B960   Length: 0x705
     public string GetDescribe(bool showEffectTarget, TagIconType tagIconType)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
@@ -148,11 +148,13 @@ public class HeroTagData
                        lVar4 == null)) break;
                     cVar1 = ManageTagController.CheckMeetOneCondition(lVar4,uVar3,uVar5);
                     if (!cVar1) {
-                      uVar3 = String.Concat(*(uint64 *)(pStatics + 0x2d0),
+                      uVar3 = String.Concat(*(uint64 *)
+                                              (pPlotController + 0x2d0),
                                              "{0}</color>",0);
                     }
                     else {
-                      uVar3 = String.Concat(*(uint64 *)(pStatics + 0x268),
+                      uVar3 = String.Concat(*(uint64 *)
+                                              (pPlotController + 0x268),
                                              "{0}</color>",0);
                     }
                   }
@@ -220,7 +222,7 @@ public class HeroTagData
     public HeroTagDataBase DataBase()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           GameDataController.GetTagDataBase(lVar1,this.tagID,0);
           return;

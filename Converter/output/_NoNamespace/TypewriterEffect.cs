@@ -56,8 +56,6 @@ public class TypewriterEffect
     // RVA   : 0xA74F00   Offset: 0xA73700   Length: 0x5
     public bool get_isActive()
     {
-        uint8 FUN_180a74f00(int64 this)
-        {
         return this.mActive;
     }
 
@@ -115,8 +113,6 @@ public class TypewriterEffect
     // RVA   : 0xA74480   Offset: 0xA72C80   Length: 0x7
     private void OnEnable()
     {
-        void FUN_180a74480(int64 this)
-        {
         this.mReset = 0x101;
     }
 
@@ -124,8 +120,6 @@ public class TypewriterEffect
     // RVA   : 0xA74470   Offset: 0xA72C70   Length: 0x7
     private void OnDisable()
     {
-        void FUN_180a74470(uint64 this)
-        {
         TypewriterEffect.Finish(this,0);
     }
 

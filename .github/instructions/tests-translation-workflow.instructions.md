@@ -148,7 +148,8 @@ already-deduplicated Chinese string, handled by the generic, game-agnostic
 Export/package wiring is via `GameFileHandling.ExportPrefabTextAssetToCustomFormat` /
 `PackageFinalTranslationAsync` (which special-cases `TextFileType.PrefabText` out of the CSV
 reconstruction loop). Output is `Files/Mod/dumpedPrefabText.txt.yaml`, a flat `raw`/`result` list,
-looked up at runtime by exact whole-string match (**not yet implemented** in `DragonHeirPlugin/`).
+looked up at runtime by exact whole-string match in `DragonHeirPlugin/PrefabTextPatches.cs`
+(resource/asset-bundle/scene-load hooks plus TMP/UI text-setter patches).
 Full wiring details, the packaging-fallback shape, and the 2026-08-27 Passed/Failed-count bug fix:
 [`Tests/docs/prefabtext-pipeline-architecture.md`](../../Tests/docs/prefabtext-pipeline-architecture.md).
 
@@ -159,18 +160,11 @@ Hardcoded, runtime-assembled string literal fragments compiled directly into IL2
 `FanslationStudio.LlmKit.Workflow.DynamicStringWorkflow` (`TextFileType.DynamicStringsIL2CPP` —
 NOT the older unrelated `TextFileType.DynamicStrings`), applied at runtime as an exact
 **substring** replace via `DragonHeirPlugin/DynamicStringPatches.cs` Harmony-postfixing
-`String.Concat`/`String.Format`. Three candidate-discovery sources feed
-`Files/Raw/Dumped/DynamicStrings/dynamicStrings*.txt`: (1) an auto-regenerating IL2CPP-string-map
-source (`GameFileHandling.ExtractDynamicStringCandidatesFromIl2CppStringMap`) that reruns
-`Converter --dynamic-string-candidates` fresh each time and appends new entries straight into the
-master `dynamicStrings.txt` — there is no manual review/curation step, despite older doc wording;
-`dynamicStrings.txt` IS this candidates output, deduped and accumulated over time, (2)
-config-driven CSV-column sources (`GameFileHandling.DynamicStringColumnSources`), (3) config-driven
-allowlisted asset-dumper field names (`DynamicStringOtherTextFields`). Sources (2) and (3) both
-feed the separate `dynamicStringsFromColumns.txt` file. All three are run inline by
-`FileInputWorkflowTests`'s merged `"1c. ExportDynamicStringsIntoTranslated"` fact. Dialogue-option
-buttons additionally need a bare-label dictionary entry (see doc). Full wiring details for all
-three sources, the `dynamicStringsFromColumns.txt` dedup behavior, and the dialogue-button fix:
+`String.Concat`/`String.Format`. Six candidate-discovery facts (`Tests/FileInputWorkflowTests.cs`
+facts 3, 4a–4f) feed `Files/Raw/Dumped/DynamicStrings/dynamicStrings*.txt`, followed by fact 5's
+cross-file dedup pass and fact 6's export. Dialogue-option buttons additionally need a bare-label
+dictionary entry (see doc). Full wiring details for every source, the dedup priority order, and
+the dialogue-button fix:
 [`Tests/docs/dynamicstrings-pipeline-architecture.md`](../../Tests/docs/dynamicstrings-pipeline-architecture.md).
 
 **Known-bad reconstructed template Results are forced via `GameFileHandling.DynamicStringResultOverrides`**,

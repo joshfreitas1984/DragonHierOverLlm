@@ -59,8 +59,6 @@ public class CFX_Demo_RotateCamera
     // RVA   : 0xBD4AA0   Offset: 0xBD32A0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180bd4aa0(int64 this)
-        {
         this.speed = 0x41f00000;
         FUN_18044ef50(this,0);
     }

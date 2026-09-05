@@ -265,7 +265,7 @@ public class BigMapRandomEventController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8baa8 + 184) + 16);
+        lVar1 = GameController.CheckShowSpeHero;
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           BigMapController.SetPlayerMoveTargetArea(lVar1,uVar2,0);

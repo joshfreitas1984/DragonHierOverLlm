@@ -23,8 +23,6 @@ public class ForceInteractionTimeData
     // RVA   : 0x77E7F0   Offset: 0x77CFF0   Length: 0x1D
     public void ResetTime()
     {
-        void FUN_18077e7f0(int64 this)
-        {
         this.addFavorTime = 1;
         this.reduceFavorTime = 1;
         this.stealResourceTime = 1;

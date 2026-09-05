@@ -95,7 +95,6 @@ public class UIPlayTween
     // RVA   : 0x1579AB0   Offset: 0x15782B0   Length: 0x2A7
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         byte uVar1;
         bool cVar2;
         int iVar3;
@@ -107,21 +106,21 @@ public class UIPlayTween
           uVar1 = UICamera.IsHighlighted(uVar4,0);
           UIPlayTween.OnHover(this,uVar1,0);
         }
-        if (*(int64 *)(pStatics + 224) != 0) {
+        if (UICamera.currentTouch != null) {
           iVar3 = this.trigger;
           if ((iVar3 == 2) || (iVar3 == 5)) {
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 == null) goto LAB_181579d52;
-            uVar4 = *(uint64 *)(lVar6 + 80);
+            uVar4 = lVar6.pressed;
             uVar5 = Component.get_gameObject(this,0);
             uVar1 = Object.op_Equality(uVar4,uVar5,0);
             this.mActivated = uVar1;
             iVar3 = this.trigger;
           }
           if ((iVar3 - 1U & 0xfffffffd) == 0) {
-            lVar6 = *(int64 *)(pStatics + 224);
+            lVar6 = UICamera.currentTouch;
             if (lVar6 == null) goto LAB_181579d52;
-            uVar4 = *(uint64 *)(lVar6 + 72);
+            uVar4 = lVar6.current;
             uVar5 = Component.get_gameObject(this,0);
             uVar1 = Object.op_Equality(uVar4,uVar5,0);
             this.mActivated = uVar1;
@@ -135,7 +134,7 @@ public class UIPlayTween
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar4 = *(uint64 *)(lVar6 + 80);
+          uVar4 = lVar6.pressed;
           uVar5 = new OnTooltipCB(this,DAT_181d9cf38,0);
           EventDelegate.Add(uVar4,uVar5,0);
         }
@@ -181,7 +180,6 @@ public class UIPlayTween
     // RVA   : 0x1579EE0   Offset: 0x15786E0   Length: 0x249
     private void OnHover(bool isOver)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -225,7 +223,7 @@ public class UIPlayTween
           if (lVar3 == null) goto LAB_18157a118;
           cVar1 = Transform.IsChildOf(lVar3,uVar2,0);
           if (!cVar1) goto LAB_18157a0f1;
-          uVar2 = *(uint64 *)(pStatics + 0x110);
+          uVar2 = UICamera.onHover;
           uVar4 = new OnTooltipCB(this,DAT_181d9ce28,0);
           plVar5 = (int64 *)Delegate.Combine(uVar2,uVar4,0);
           if (plVar5 != (int64 *)0) {
@@ -237,7 +235,7 @@ public class UIPlayTween
               FUN_1800d6070(plVar5,DAT_181d67e90);
             }
           }
-          *(int64 **)(pStatics + 0x110) = plVar7;
+          UICamera.onHover = plVar7;
           isOver = true;
           if (this.mActivated) {
             return;
@@ -254,7 +252,6 @@ public class UIPlayTween
     // RVA   : 0x1579610   Offset: 0x1577E10   Length: 0x231
     private void CustomHoverListener(GameObject go, bool isOver)
     {
-        var pStatics = *(int64*)(DAT_181d8a458 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -285,7 +282,7 @@ public class UIPlayTween
             }
           }
           UIPlayTween.OnHover(this,0,0);
-          uVar2 = *(uint64 *)(pStatics + 0x110);
+          uVar2 = UICamera.onHover;
           uVar4 = new OnTooltipCB(this,DAT_181d9ce28,0);
           plVar5 = (int64 *)Delegate.Remove(uVar2,uVar4,0);
           plVar6 = (int64 *)0;
@@ -298,7 +295,7 @@ public class UIPlayTween
               FUN_1800d6070(plVar5,DAT_181d67e90);
             }
           }
-          *(int64 **)(pStatics + 0x110) = plVar6;
+          UICamera.onHover = plVar6;
         }
     }
 
@@ -413,7 +410,7 @@ public class UIPlayTween
     // RVA   : 0x157A210   Offset: 0x1578A10   Length: 0x1B5
     private void OnToggle()
     {
-        var pStatics = *(int64*)(DAT_181d8b2d8 + 184);
+        var pUIPlayAnimation = *(int64*)(UIPlayAnimation_StaticsPtr + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -422,14 +419,14 @@ public class UIPlayTween
         if (!cVar3) {
           return;
         }
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = *(uint64 *)(pUIPlayAnimation + 8);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
           return;
         }
         if (this.trigger != 7) {
           if (this.trigger == 8) {
-            lVar2 = *(int64 *)(pStatics + 8);
+            lVar2 = *(int64 *)(pUIPlayAnimation + 8);
             if (lVar2 == null) throw; // [null/range check failed]
             cVar3 = UIToggle.get_isChecked(lVar2,0);
             if (cVar3) goto LAB_18157a368;
@@ -437,7 +434,7 @@ public class UIPlayTween
           if (this.trigger != 9) {
             return;
           }
-          lVar2 = *(int64 *)(pStatics + 8);
+          lVar2 = *(int64 *)(pUIPlayAnimation + 8);
           if (lVar2 == null) throw; // [null/range check failed]
           cVar3 = UIToggle.get_isChecked(lVar2,0);
           if (cVar3) {
@@ -445,7 +442,7 @@ public class UIPlayTween
           }
         }
         LAB_18157a368:
-        lVar2 = *(int64 *)(pStatics + 8);
+        lVar2 = *(int64 *)(pUIPlayAnimation + 8);
         if (lVar2 != null) {
           uVar4 = UIToggle.get_isChecked(lVar2,0);
           UIPlayTween.Play(this,uVar4,0);

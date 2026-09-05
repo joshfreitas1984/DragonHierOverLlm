@@ -155,8 +155,6 @@ public class HeroLittleTalkUIController
     // RVA   : 0xB37210   Offset: 0xB35A10   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180b37210(int64 this)
-        {
         this.lifeTime = 0xbf800000;
         FUN_18044ef50(this,0);
     }

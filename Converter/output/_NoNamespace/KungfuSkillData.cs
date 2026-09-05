@@ -113,7 +113,7 @@ public class KungfuSkillData
     // RVA   : 0xB7F4B0   Offset: 0xB7DCB0   Length: 0x359
     public string GetAttackRangeDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         int iVar1;
         ulong uVar2;
         long lVar3;
@@ -139,14 +139,14 @@ public class KungfuSkillData
           }
           if ((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,iVar9,DAT_181d7afd8)) == null) break;
           if (lVar3._items == 4) {
-            lVar3 = *(int64 *)(pStatics + 0x468);
+            lVar3 = *(int64 *)(pPlotController + 0x468);
             if (((this.attackRangeData == null) ||
                 (lVar4 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181d7afd8)) == null) ||
                (lVar3 == null)) break;
             uVar5 = FUN_180002f80(lVar3,lVar4._items,DAT_181d7c9c0);
           }
           else {
-            lVar3 = *(int64 *)(pStatics + 0x468);
+            lVar3 = *(int64 *)(pPlotController + 0x468);
             if (((this.attackRangeData == null) ||
                 (lVar4 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181d7afd8)) == null) ||
                (lVar3 == null)) break;
@@ -190,7 +190,7 @@ public class KungfuSkillData
     // RVA   : 0xB7F830   Offset: 0xB7E030   Length: 0x228
     public string GetDamageRangeDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
@@ -205,11 +205,12 @@ public class KungfuSkillData
         lVar7 = this.damageRangeData;
         if (lVar7 == null) goto LAB_180b7fa4d;
         if (lVar7.rangeType == 7) {
-          if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) && (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-            il2cpp_runtime_class_init(DAT_181d4ef00);
+          if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+             (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+            il2cpp_runtime_class_init(PlotController_StaticsPtr);
             lVar7 = this.damageRangeData;
           }
-          lVar3 = *(int64 *)(pStatics + 0x470);
+          lVar3 = *(int64 *)(pPlotController + 0x470);
           if ((lVar7 == null) || (lVar3 == null)) goto LAB_180b7fa4d;
           uVar1 = lVar7.rangeType;
           if (*(uint32 *)(lVar3 + 24) <= uVar1) {
@@ -220,11 +221,12 @@ public class KungfuSkillData
         else {
           uVar8 = "";
           if (lVar7.maxRange != null) {
-            if (((*(byte *)(DAT_181d4ef00 + 0x133) & 4) != 0) && (*(int *)(DAT_181d4ef00 + 224) == 0)) {
-              il2cpp_runtime_class_init(DAT_181d4ef00);
+            if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
+               (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+              il2cpp_runtime_class_init(PlotController_StaticsPtr);
               lVar7 = this.damageRangeData;
             }
-            lVar3 = *(int64 *)(pStatics + 0x470);
+            lVar3 = *(int64 *)(pPlotController + 0x470);
             if ((lVar7 == null) || (lVar3 == null)) {
         LAB_180b7fa4d:
                           // WARNING: Subroutine does not return
@@ -304,27 +306,27 @@ public class KungfuSkillData
     // RVA   : 0xB7FD50   Offset: 0xB7E550   Length: 0x1F7
     public string TypeDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         uVar4 = "江湖";
         if (this.belongForceID != -1) {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar2 = GameController.lockObj;
           if (((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 208)) == null) ||
              (lVar2 = FUN_1817cc780(lVar2,this.belongForceID,DAT_181d94178)) == null)
           throw; // [null/range check failed]
           uVar4 = *(uint64 *)(lVar2 + 24);
         }
-        lVar2 = *(int64 *)(pStatics + 0x4f0);
+        lVar2 = *(int64 *)(pPlotController + 0x4f0);
         if (lVar2 != null) {
           uVar1 = this.rareLv;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar3 = lVar2[uVar1];
-          lVar2 = *(int64 *)(pStatics + 0x498);
+          lVar2 = *(int64 *)(pPlotController + 0x498);
           if (lVar2 != null) {
             uVar1 = this.type;
             if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -344,8 +346,6 @@ public class KungfuSkillData
     // RVA   : 0xB7FB10   Offset: 0xB7E310   Length: 0x10
     public float GetRealUpgradeRatio(int targetLv)
     {
-        float FUN_180b7fb10(uint64 this,int targetLv)
-        {
         return (float)targetLv * 0.1;
     }
 
@@ -353,8 +353,6 @@ public class KungfuSkillData
     // RVA   : 0xB7F810   Offset: 0xB7E010   Length: 0x1D
     public float GetBaseDamage(int targetLv)
     {
-        float FUN_180b7f810(int64 this,int targetLv)
-        {
         return ((float)targetLv * 0.1 + 1.0) * this.baseDamage;
     }
 
@@ -362,8 +360,6 @@ public class KungfuSkillData
     // RVA   : 0xB7FA90   Offset: 0xB7E290   Length: 0x1D
     public float GetManaCost(int targetLv)
     {
-        float FUN_180b7fa90(int64 this,int targetLv)
-        {
         return ((float)targetLv * 0.1 + 1.0) * this.manaCost;
     }
 
@@ -405,8 +401,6 @@ public class KungfuSkillData
     // RVA   : 0x21B010   Offset: 0x219810   Length: 0x8
     public PartPostureData GetAtkPartPosture(int targetLv)
     {
-        uint64 FUN_18021b010(int64 this)
-        {
         return this.atkPartPosture;
     }
 

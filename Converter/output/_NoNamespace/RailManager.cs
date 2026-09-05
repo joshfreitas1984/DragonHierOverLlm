@@ -26,10 +26,10 @@ public class RailManager
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d72560 + 184);
+        uVar3 = RailManager.instance_;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (!cVar1) {
-          return **(uint64 **)(DAT_181d72560 + 184);
+          return RailManager.instance_;
         }
         lVar2 = new GameObject("RailManager",0);
         if (lVar2 != null) {
@@ -45,10 +45,10 @@ public class RailManager
         ulong uVar1;
         bool cVar2;
         long lVar3;
-        uVar1 = **(uint64 **)(DAT_181d72560 + 184);
+        uVar1 = RailManager.instance_;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (!cVar2) {
-          lVar3 = **(int64 **)(DAT_181d72560 + 184);
+          lVar3 = RailManager.instance_;
         }
         else {
           lVar3 = new GameObject("RailManager",0);
@@ -56,7 +56,7 @@ public class RailManager
           lVar3 = GameObject.AddComponent(lVar3,DAT_181d9cb50);
         }
         if (lVar3 != null) {
-          return *(uint8 *)(lVar3 + 24);
+          return lVar3.initialized_;
         }
     }
 
@@ -64,25 +64,25 @@ public class RailManager
     // RVA   : 0xC55F30   Offset: 0xC54730   Length: 0x4E4
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d72560 + 184);
+        var pRailManager = *(int64*)(RailManager_StaticsPtr + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
         long lVar5;
-        uVar2 = **(uint64 **)(DAT_181d72560 + 184);
+        uVar2 = RailManager.instance_;
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (!cVar1) {
-          if (**(int **)(DAT_181d4ef00 + 184) == 1) {
-            plVar4 = pStatics;
+          if (PlotController._instance == 1) {
+            plVar4 = pRailManager;
             *plVar4 = this;
             il2cpp_internal(plVar4,this);
-            if (*(char *)(pStatics + 8) != false) {
+            if (RailManager.ever_initialize_) {
               Debug.LogError("Tried to Initialize the RailSDK twice in one session!",0);
               return;
             }
             uVar2 = Component.get_gameObject(this,0);
             Object.DontDestroyOnLoad(uVar2,0);
-            uVar2 = *(uint64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 56);
+            uVar2 = PlotController.LaBaFestivelResultTalkText;
             uVar3 = new RailGameID(uVar2,0);
             plVar4 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,1);
             if (plVar4 == (int64 *)0) {
@@ -117,7 +117,7 @@ public class RailManager
                   uVar2 = new OnTooltipCB(this,DAT_181d72070,0);
                   if (lVar5 != null) {
                     RailCallBackHelper.RegisterCallback(lVar5,0x714a,uVar2,0);
-                    *(uint8 *)(pStatics + 8) = 1;
+                    RailManager.ever_initialize_ = 1;
                     Debug.Log("RailInitialize success!",0);
                     return;
                   }
@@ -444,10 +444,10 @@ public class RailManager
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181d72560 + 184);
+        uVar1 = RailManager.instance_;
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
-          puVar2 = *(uint64 **)(DAT_181d72560 + 184);
+          puVar2 = *(uint64 **)(RailManager_StaticsPtr + 184);
           *puVar2 = this;
           il2cpp_internal(puVar2,this);
         }
@@ -460,10 +460,10 @@ public class RailManager
         ulong uVar1;
         bool cVar3;
         long lVar4;
-        uVar1 = **(uint64 **)(DAT_181d72560 + 184);
+        uVar1 = RailManager.instance_;
         cVar3 = Object.op_Inequality(uVar1,this,0);
         if (!cVar3) {
-          puVar2 = *(uint64 **)(DAT_181d72560 + 184);
+          puVar2 = *(uint64 **)(RailManager_StaticsPtr + 184);
           *puVar2 = 0;
           il2cpp_internal(puVar2,0);
           if (this.initialized_) {

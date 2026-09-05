@@ -134,8 +134,6 @@ public class UIProgressBar
     // RVA   : 0x362670   Offset: 0x360E70   Length: 0x4
     public FillDirection get_fillDirection()
     {
-        uint32 FUN_180362670(int64 this)
-        {
         return this.mFill;
     }
 
@@ -143,8 +141,6 @@ public class UIProgressBar
     // RVA   : 0x1582450   Offset: 0x1580C50   Length: 0x20
     public void set_fillDirection(FillDirection value)
     {
-        void FUN_181582450(int64 *this,int value)
-        {
         if ((*(int *)((int64)this + 60) != value) &&
            (*(int *)((int64)this + 60) = value, (char)this[8] != false)) {
                           // WARNING: Could not recover jumptable at 0x000181582468. Too many branches
@@ -443,8 +439,6 @@ public class UIProgressBar
     // RVA   : 0x1581AE0   Offset: 0x15802E0   Length: 0x18
     protected void Update()
     {
-        void FUN_181581ae0(int64 *this)
-        {
         if ((char)this[10] != false) {
                           // WARNING: Could not recover jumptable at 0x000181581af0. Too many branches
                           // WARNING: Treating indirect jump as call

@@ -137,13 +137,12 @@ public class HudController
     // RVA   : 0xB477A0   Offset: 0xB45FA0   Length: 0x210C
     private void Update()
     {
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         var pStatics_0f00 = *(int64*)(DAT_181d50f00 + 184);
         var pStatics_29a0 = *(int64*)(DAT_181da29a0 + 184);
         var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
         var pStatics_d1f8 = *(int64*)(DAT_181d5d1f8 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         var pStatics_ede0 = *(int64*)(DAT_181d6ede0 + 184);
-        var pStatics_ef00 = *(int64*)(DAT_181d4ef00 + 184);
         var pStatics_fc60 = *(int64*)(DAT_181d8fc60 + 184);
         bool cVar1;
         int iVar2;
@@ -182,17 +181,17 @@ public class HudController
           this.inited = 1;
           if (this.heroFace == null) throw; // [null/range check failed]
           lVar3 = GameObject.GetComponent(this.heroFace,DAT_181da11b0);
-          if (((*pStatics_df90 == 0) ||
-              (lVar14 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-             (uVar4 = WorldData.Player(lVar14,0), lVar3 == null)) throw; // [null/range check failed]
+          if (((GameController._instance == null) ||
+              (lVar14 = GameController._instance.worldData,
+              lVar14 == null)) || (uVar4 = WorldData.Player(lVar14,0), lVar3 == null)) throw; // [null/range check failed]
           lVar3.Count = uVar4;
           HudController.RefreshHeroSkeleton(this,0);
         }
         lVar3 = this.timeCircle;
-        if (((*pStatics_df90 == 0) ||
-            (lVar14 = *(int64 *)(*pStatics_df90 + 32)) == null) ||
-           (lVar3 == null)) throw; // [null/range check failed]
-        Image.set_fillAmount(lVar3,*(float *)(lVar14 + 180) / 24.0,0);
+        if (((GameController._instance == null) ||
+            (lVar14 = GameController._instance.worldData, lVar14 == null
+            )) || (lVar3 == null)) throw; // [null/range check failed]
+        Image.set_fillAmount(lVar3,lVar14.hour / 24.0,0);
         cVar1 = GlobalData.GetKeyDown(113);
         if (!cVar1) {
           cVar1 = GlobalData.GetKeyDown(105);
@@ -306,8 +305,8 @@ public class HudController
           throw; // [null/range check failed]
           cVar1 = GameObject.get_activeSelf(lVar3,0);
           if (cVar1) {
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d88158 + 184) + 8);
-            if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 40)) == null) throw; // [null/range check failed]
+
+            if ((lVar3 = PlotController.LeftFaceHideOffset?.forceAreaID) == null) throw; // [null/range check failed]
             cVar1 = GameObject.get_activeSelf(lVar3,0);
             if (!cVar1) {
               if ((*pStatics_d1f8 == 0) ||
@@ -336,17 +335,17 @@ public class HudController
             }
             uVar4 = this.timeLabel;
             this.refreshTime = 0x3e99999a;
-            if (((*pStatics_df90 != 0) &&
-                (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-               (lVar3 = *(int64 *)(lVar3 + 168)) != null) {
+            if (((GameController._instance != null) &&
+                (lVar3 = GameController._instance.worldData,
+                lVar3 != null)) && (lVar3 = lVar3.worldTime) != null) {
               uVar7 = Int32.ToString(lVar3 + 16,0);
-              if (((*pStatics_df90 != 0) &&
-                  (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                 (lVar3 = *(int64 *)(lVar3 + 168)) != null) {
+              if (((GameController._instance != null) &&
+                  (lVar3 = GameController._instance.worldData,
+                  lVar3 != null)) && (lVar3 = lVar3.worldTime) != null) {
                 uVar9 = Int32.ToString(lVar3 + 20,0);
-                if (((*pStatics_df90 != 0) &&
-                    (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) &&
-                   (lVar3 = *(int64 *)(lVar3 + 168)) != null) {
+                if (((GameController._instance != null) &&
+                    (lVar3 = GameController._instance.worldData,
+                    lVar3 != null)) && (lVar3 = lVar3.worldTime) != null) {
                   uVar10 = Int32.ToString(lVar3 + 24,0);
                   uVar7 = String.Format("{0}年{1}月{2}日",uVar7,uVar9,uVar10,0);
                   LTLocalization.SetText(uVar4,uVar7,0);
@@ -354,10 +353,10 @@ public class HudController
                   lVar14 = *pStatics_6270;
                   if (*pStatics_fc60 != 0) {
                     lVar5 = *(int64 *)(*pStatics_fc60 + 32);
-                    if (((*pStatics_df90 != 0) &&
-                        (lVar6 = *(int64 *)(*pStatics_df90 + 32)) != null)
-                       && (lVar5 != null)) {
-                      uVar13 = *(uint32 *)(lVar6 + 0x16c);
+                    if (((GameController._instance != null) &&
+                        (lVar6 = GameController._instance.worldData,
+                        lVar6 != null)) && (lVar5 != null)) {
+                      uVar13 = lVar6.nowWeather;
                       if (*(uint32 *)(lVar5 + 24) <= uVar13) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
@@ -371,10 +370,11 @@ public class HudController
                         Image.set_sprite(lVar3,uVar4,0);
                         lVar3 = this.seasonIcon;
                         lVar14 = *pStatics_6270;
-                        lVar5 = *(int64 *)(pStatics_ef00 + 0x3c8);
-                        if ((((*pStatics_df90 != 0) &&
-                             (lVar6 = *(int64 *)(*pStatics_df90 + 32),
-                             lVar6 != null)) && (lVar6 = *(int64 *)(lVar6 + 168)) != null) &&
+                        lVar5 = *(int64 *)(pPlotController + 0x3c8);
+                        if ((((GameController._instance != null) &&
+                             (lVar6 = *(int64 *)
+                                       (GameController._instance + 32),
+                             lVar6 != null)) && (lVar6 = lVar6.worldTime) != null) &&
                            (iVar2 = Mathf.CeilToInt((float)*(int *)(lVar6 + 20) / 3.0,0), lVar5 != null))
                         {
                           if (*(uint32 *)(lVar5 + 24) <= iVar2 - 1U) {
@@ -389,44 +389,49 @@ public class HudController
                              lVar3 != null)) {
                             Image.set_sprite(lVar3,uVar4,0);
                             uVar4 = this.nameLabel;
-                            if (((*pStatics_df90 != 0) &&
-                                (lVar3 = *(int64 *)(*pStatics_df90 + 32),
+                            if (((GameController._instance != null) &&
+                                (lVar3 = *(int64 *)
+                                          (GameController._instance + 32),
                                 lVar3 != null)) && (lVar3 = WorldData.Player(lVar3,0)) != null) {
-                              LTLocalization.SetText(uVar4,*(uint64 *)(lVar3 + 104),0);
+                              LTLocalization.SetText(uVar4,lVar3.AreaMapRandomEventDatas,0);
                               uVar4 = this.fightScoreLabel;
-                              if (((*pStatics_df90 != 0) &&
-                                  (lVar3 = *(int64 *)(*pStatics_df90 + 32),
+                              if (((GameController._instance != null) &&
+                                  (lVar3 = *(int64 *)
+                                            (GameController._instance + 32),
                                   lVar3 != null)) && (lVar3 = WorldData.Player(lVar3,0)) != null) {
                                 uVar7 = Single.ToString(lVar3 + 0x38c,"f0",0);
                                 LTLocalization.SetText(uVar4,uVar7,0);
                                 uVar4 = this.fameLabel;
-                                if (((*pStatics_df90 != 0) &&
-                                    (lVar3 = *(int64 *)(*pStatics_df90 + 32),
+                                if (((GameController._instance != null) &&
+                                    (lVar3 = *(int64 *)
+                                              (GameController._instance + 32),
                                     lVar3 != null)) && (lVar3 = WorldData.Player(lVar3,0)) != null) {
                                   uVar7 = Single.ToString(lVar3 + 0x1c4,"f0",0);
                                   LTLocalization.SetText(uVar4,uVar7,0);
                                   uVar4 = this.badfameLabel;
-                                  if (((*pStatics_df90 != 0) &&
-                                      (lVar3 = *(int64 *)(*pStatics_df90 + 32)
+                                  if (((GameController._instance != null) &&
+                                      (lVar3 = *(int64 *)
+                                                (GameController._instance + 32)
                                       , lVar3 != null)) && (lVar3 = WorldData.Player(lVar3,0)) != null)
                                   {
                                     uVar7 = Single.ToString(lVar3 + 0x1c8,"f0",0);
                                     LTLocalization.SetText(uVar4,uVar7,0);
                                     plVar11 = this.badfameLabel;
-                                    if (((*pStatics_df90 != 0) &&
+                                    if (((GameController._instance != null) &&
                                         (lVar3 = *(int64 *)
-                                                  (*pStatics_df90 + 32),
-                                        lVar3 != null)) && (lVar3 = WorldData.Player(lVar3,0)) != null)
-                                    {
-                                      if (*(float *)(lVar3 + 0x1c8) <
-                                          *(float *)(pStatics_ef00 + 300)) {
-                                        if (((*pStatics_df90 == 0) ||
+                                                  (GameController._instance +
+                                                  32), lVar3 != null)) &&
+                                       (lVar3 = WorldData.Player(lVar3,0)) != null) {
+                                      if (lVar3.thisYearExploreSpeEventNum <
+                                          *(float *)(pPlotController + 300
+                                                    )) {
+                                        if (((GameController._instance == null) ||
                                             (lVar3 = *(int64 *)
-                                                      (*pStatics_df90 + 32),
-                                            lVar3 == null)) ||
+                                                      (GameController._instance +
+                                                      32), lVar3 == null)) ||
                                            (lVar3 = WorldData.Player(lVar3,0)) == null)
                                         throw; // [null/range check failed]
-                                        if (*(float *)(lVar3 + 0x1c8) <= 0.0) {
+                                        if (lVar3.thisYearExploreSpeEventNum <= 0.0) {
                                           puVar8 = (uint64 *)FUN_181098a50(&local_78,0);
                                         }
                                         else {
@@ -446,17 +451,17 @@ public class HudController
                                                     GameObject.GetComponent
                                                               (this.badfameIcon,DAT_181d9fe50
                                                               );
-                                          if (((*pStatics_df90 != 0) &&
+                                          if (((GameController._instance != null) &&
                                               (lVar3 = *(int64 *)
-                                                        (*pStatics_df90 + 32),
-                                              lVar3 != null)) &&
+                                                        (GameController._instance
+                                                        + 32), lVar3 != null)) &&
                                              (lVar3 = WorldData.Player(lVar3,0)) != null) {
-                                            if (*(int *)(lVar3 + 192) < 0) {
+                                            if (lVar3.playerBetrayForceBadTime < 0) {
                                               lVar3 = FUN_18046c0a0(0);
-                                              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                                                 (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)
+                                              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                                                 (lVar3 = WorldData.Player(lVar3.villageAreaID,0)
                                                  , lVar3 == null)) throw; // [null/range check failed]
-                                              if (*(char *)(lVar3 + 208) == false) {
+                                              if (!lVar3.infos) {
                                                 puVar8 = (uint64 *)FUN_181098a50(&local_78,0);
                                               }
                                               else {
@@ -476,60 +481,106 @@ public class HudController
                                                 lVar3 = GameObject.GetComponent
                                                                   (this.badfameIcon,
                                                                    DAT_181da12b0);
-                                                if (((*pStatics_df90 != 0) &&
-                                                    (lVar14 = *(int64 *)
-                                                               (*pStatics_df90 +
-                                                               32), lVar14 != null)) &&
+                                                if (((GameController._instance !=
+                                                      0) && (lVar14 = *(int64 *)
+                                                                       (**(int64 **)
+                                                                          (GameController_StaticsPtr +
+                                                                          184) + 32), lVar14 != null)) &&
                                                    (lVar14 = WorldData.Player(lVar14,0)) != null) {
                                                   uVar4 = "恶名\n城镇内x200%";
-                                                  if (*(int *)(lVar14 + 192) < 0) {
+                                                  if (lVar14.playerBetrayForceBadTime < 0) {
+                                                    if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init();
+                                                    }
                                                     lVar14 = FUN_18046c0a0(0);
                                                     if (((lVar14 == null) ||
-                                                        (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                        (lVar14.villageAreaID == null)) ||
                                                        (lVar14 = WorldData.Player(*(int64 *)
                                                                                     (lVar14 + 32),0),
                                                        lVar14 == null)) throw; // [null/range check failed]
                                                     uVar4 = "恶名\n野外x100%";
-                                                    if (*(char *)(lVar14 + 208) != false) {
+                                                    if (lVar14.infos) {
                                                       uVar4 = "恶名\n安全区内x150%";
                                                     }
                                                   }
                                                   if (lVar3 != null) {
                                                     lVar3.Count = uVar4;
                                                     uVar4 = this.moneyLabel;
-                                                    if ((((*pStatics_df90 != 0) &&
+                                                    if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init(GameController_StaticsPtr)
+                                                      ;
+                                                    }
+                                                    if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4
+                                                         ) != 0) &&
+                                                       (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                    {
+                                                      il2cpp_runtime_class_init(GameController_StaticsPtr)
+                                                      ;
+                                                    }
+                                                    if ((((**(int64 **)
+                                                             (GameController_StaticsPtr + 184) != 0) &&
                                                          (lVar3 = *(int64 *)
-                                                                   (*pStatics_df90
-                                                                   + 32), lVar3 != null)) &&
+                                                                   (**(int64 **)
+                                                                      (GameController_StaticsPtr + 184) +
+                                                                   32), lVar3 != null)) &&
                                                         (lVar3 = WorldData.Player(lVar3,0)) != null)
-                                                       && (*(int64 *)(lVar3 + 0x220) != 0)) {
-                                                      uVar7 = Int32.ToString(*(int64 *)(lVar3 + 0x220)
+                                                       && (lVar3.speBookStorageSpeAdd != null)) {
+                                                      uVar7 = Int32.ToString(lVar3.speBookStorageSpeAdd
                                                                               + 24,0);
                                                       LTLocalization.SetText(uVar4,uVar7,0);
                                                       uVar4 = this.moneyLayout;
                                                       LayoutRebuilder.ForceRebuildLayoutImmediate
                                                                 (uVar4,0);
                                                       uVar4 = this.forceLabel;
-                                                      if (((*pStatics_df90 != 0) &&
+                                                      if (((*(byte *)(GameController_StaticsPtr + 0x133) &
+                                                           4) != 0) &&
+                                                         (*(int *)(GameController_StaticsPtr + 224) == 0)
+                                                         ) {
+                                                        il2cpp_runtime_class_init
+                                                                  (GameController_StaticsPtr);
+                                                      }
+                                                      if (((**(int64 **)
+                                                              (GameController_StaticsPtr + 184) != 0) &&
                                                           (lVar3 = *(int64 *)
-                                                                    (*pStatics_df90
+                                                                    (**(int64 **)
+                                                                       (GameController_StaticsPtr + 184)
                                                                     + 32), lVar3 != null)) &&
                                                          (lVar3 = WorldData.Player(lVar3,0)) != null)
                                                       {
                                                         uVar7 = HeroData.GetHeroForceLvDescribe
                                                                           (lVar3,1,0);
                                                         LTLocalization.SetText(uVar4,uVar7,0);
-                                                        if (((*pStatics_df90 != 0)
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) != 0)
                                                             && (lVar3 = *(int64 *)
                                                                          (**(int64 **)
-                                                                            (DAT_181d4df90 + 184) + 32)
-                                                               , lVar3 != null)) &&
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar3 != null)) &&
                                                            (lVar3 = WorldData.Player(lVar3,0), lVar3 != null
                                                            )) {
                                                           if (*(int *)(lVar3 + 132) < 0) {
+                                                            if (((*(byte *)(GameController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(GameController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
                                                             lVar3 = FUN_18046c0a0(0);
                                                             if (((lVar3 == null) ||
-                                                                (*(int64 *)(lVar3 + 32) == 0)) ||
+                                                                (lVar3.villageAreaID == null)) ||
                                                                (lVar3 = WorldData.Player(*(int64 *)
                                                                                            (lVar3 + 32),
                                                                                           0), lVar3 == null))
@@ -543,14 +594,15 @@ public class HudController
                                                               }
                                                               lVar3 = Component.GetComponent
                                                                                 (lVar14,DAT_181d6ccc0);
-                                                              if (((*(byte *)(DAT_181d4df90 + 0x133) & 4)
-                                                                   != 0) &&
-                                                                 (*(int *)(DAT_181d4df90 + 224) == 0)) {
+                                                              if (((*(byte *)(GameController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(GameController_StaticsPtr +
+                                                                          224) == 0)) {
                                                                 il2cpp_runtime_class_init();
                                                               }
                                                               lVar14 = FUN_18046c0a0(0);
                                                               if (((lVar14 == null) ||
-                                                                  (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                                  (lVar14.villageAreaID == null)) ||
                                                                  (lVar14 = WorldData.Player(*(int64 *)
                                                                                               (lVar14 + 
                                                         32),0), lVar14 == null)) goto LAB_180b4ad95;
@@ -562,17 +614,23 @@ public class HudController
                                                         uVar4 = String.Format("官府/所有门派功绩+{0}%",uVar4,0);
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if (((lVar14 == null) ||
-                                                            (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                            (lVar14.villageAreaID == null)) ||
                                                            (lVar14 = WorldData.Player(*(int64 *)
                                                                                         (lVar14 + 32),0)
                                                            , lVar14 == null)) goto LAB_180b4ad95;
                                                         uVar7 = "\n<i><color=#696969>江湖地位由声望直接决定\n达到下一级别需声望{0}</color></i>";
-                                                        if (4 < *(int *)(lVar14 + 184)) {
+                                                        if (4 < lVar14.forceMeetingStarted) {
                                                           uVar7 = "";
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
                                                         }
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if (((lVar14 == null) ||
-                                                            (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                            (lVar14.villageAreaID == null)) ||
                                                            (lVar14 = WorldData.Player(*(int64 *)
                                                                                         (lVar14 + 32),0)
                                                            , lVar14 == null)) {
@@ -598,9 +656,15 @@ public class HudController
                                                                             (lVar14,DAT_181d6ccc0);
                                                           plVar11 = (int64 *)
                                                                     FUN_1800d60b0(DAT_181d7f180,4);
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar14 = FUN_18046c0a0(0);
                                                           if ((lVar14 == null) ||
-                                                             (*(int64 *)(lVar14 + 32) == 0))
+                                                             (lVar14.villageAreaID == null))
                                                           goto LAB_180b4ae21;
                                                           lVar14 = WorldData.Player(*(int64 *)
                                                                                       (lVar14 + 32),0);
@@ -636,7 +700,7 @@ public class HudController
                                                         il2cpp_internal(plVar11 + 4,lVar14);
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if (lVar14 == null) goto LAB_180b4ae21;
-                                                        lVar14 = *(int64 *)(lVar14 + 32);
+                                                        lVar14 = lVar14.villageAreaID;
                                                         lVar5 = FUN_18046c0a0(0);
                                                         if (((lVar5 == null) ||
                                                             (*(int64 *)(lVar5 + 32) == 0)) ||
@@ -647,7 +711,7 @@ public class HudController
                                                              (lVar14 = WorldData.GetForce(lVar14,*(
                                                         uint32 *)(lVar5 + 0x380),0), lVar14 == null))))))
                                                         goto LAB_180b4ae21;
-                                                        lVar14 = *(int64 *)(lVar14 + 24);
+                                                        lVar14 = lVar14.cityAreaID;
                                                         if ((lVar14 != null) &&
                                                            (lVar5 = il2cpp_internal(lVar14,*(
                                                         uint64 *)(*plVar11 + 64)), lVar5 == null)) {
@@ -664,11 +728,11 @@ public class HudController
                                                         il2cpp_internal(plVar11 + 5,lVar14);
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if (((lVar14 == null) ||
-                                                            (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                            (lVar14.villageAreaID == null)) ||
                                                            (lVar14 = WorldData.Player(*(int64 *)
                                                                                         (lVar14 + 32),0)
                                                            , lVar14 == null)) goto LAB_180b4ae21;
-                                                        local_b8 = (float)(int)*(float *)(lVar14 + 160);
+                                                        local_b8 = (float)(int)lVar14.gameDifficulty;
                                                         lVar14 = il2cpp_value_box(DAT_181d5b2f8,&local_b8)
                                                         ;
                                                         if ((lVar14 != null) &&
@@ -687,7 +751,7 @@ public class HudController
                                                         il2cpp_internal(plVar11 + 6,lVar14);
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if ((lVar14 == null) ||
-                                                           (*(int64 *)(lVar14 + 32) == 0))
+                                                           (lVar14.villageAreaID == null))
                                                         goto LAB_180b4ae21;
                                                         local_b0 = 1 - *(int *)(*(int64 *)
                                                                                  (lVar14 + 32) + 0x150);
@@ -710,17 +774,23 @@ public class HudController
                                                         uVar4 = String.Format("{1}功绩+{0}%\n获得{0}%门派加成效果\n当月功绩可获月俸<b>{2}</b>\n每月刷新门派委托{3}/1次",plVar11,0);
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if (((lVar14 == null) ||
-                                                            (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                            (lVar14.villageAreaID == null)) ||
                                                            (lVar14 = WorldData.Player(*(int64 *)
                                                                                         (lVar14 + 32),0)
                                                            , lVar14 == null)) goto LAB_180b4ae21;
                                                         uVar7 = "\n<i><color=#696969>门客地位由声望直接决定\n达到下一级别需声望{0}</color></i>";
-                                                        if (4 < *(int *)(lVar14 + 184)) {
+                                                        if (4 < lVar14.forceMeetingStarted) {
                                                           uVar7 = "";
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
                                                         }
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if (((lVar14 == null) ||
-                                                            (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                            (lVar14.villageAreaID == null)) ||
                                                            (lVar14 = WorldData.Player(*(int64 *)
                                                                                         (lVar14 + 32),0)
                                                            , lVar14 == null)) {
@@ -742,17 +812,50 @@ public class HudController
                                                           lVar3 = Component.GetComponent
                                                                             (this.forceLabel
                                                                              ,DAT_181d6ccc0);
+                                                          if (((*(byte *)(PlotController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(PlotController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar14 = *(int64 *)
-                                                                    (pStatics_ef00 +
+                                                                    (*(int64 *)
+                                                                      (PlotController_StaticsPtr + 184) +
                                                                     0x4b8);
-                                                          if (((*pStatics_df90 == 0
-                                                               ) || (lVar5 = *(int64 *)
-                                                                              (**(int64 **)
-                                                                                 (DAT_181d4df90 + 184) +
-                                                                              32), lVar5 == null)) ||
-                                                             (lVar5 = WorldData.Player(lVar5,0),
-                                                             lVar5 == null)) throw; // [null/range check failed]
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (GameController_StaticsPtr);
+                                                          }
+                                                          if (!DAT_181e6a735) {
+                                                            il2cpp_internal(&GameController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a735 = true;
+                                                          }
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (GameController_StaticsPtr);
+                                                          }
+                                                          if (((**(int64 **)
+                                                                  (GameController_StaticsPtr + 184) == 0)
+                                                              || (lVar5 = *(int64 *)
+                                                                           (**(int64 **)
+                                                                              (GameController_StaticsPtr +
+                                                                              184) + 32), lVar5 == null))
+                                                             || (lVar5 = WorldData.Player(lVar5,0),
+                                                                lVar5 == null)) throw; // [null/range check failed]
                                                           if (*(char *)(lVar5 + 180) == false) {
+                                                            if (((*(byte *)(GameController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(GameController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init();
+                                                            }
                                                             lVar5 = FUN_18046c0a0(0);
                                                             if (((lVar5 == null) ||
                                                                 (*(int64 *)(lVar5 + 32) == 0)) ||
@@ -766,143 +869,186 @@ public class HudController
                                                             uVar13 = 6;
                                                           }
                                                           if (lVar14 == null) throw; // [null/range check failed]
-                                                          if (*(uint32 *)(lVar14 + 24) <= uVar13) {
+                                                          if (lVar14.cityAreaID <= uVar13) {
                                                             ThrowHelper.ThrowArgumentOutOfRangeException
                                                                       (0);
                                                           }
                                                           uVar4 = *(uint64 *)
-                                                                   (*(int64 *)(lVar14 + 16) + 32 +
+                                                                   (lVar14.chapter + 32 +
                                                                    (int64)(int)uVar13 * 8);
                                                           if (lVar3 == null) throw; // [null/range check failed]
                                                           lVar3.Count = uVar4;
                                                         }
                                                         il2cpp_internal(puVar8,uVar4);
                                                         HudController.RefreshNowResearch(this,0);
-                                                        if ((*pStatics_df90 != 0)
-                                                           && (lVar3 = *(int64 *)
-                                                                        (**(int64 **)
-                                                                           (DAT_181d4df90 + 184) + 32),
-                                                              lVar3 != null)) {
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if ((**(int64 **)
+                                                               (GameController_StaticsPtr + 184) != 0) &&
+                                                           (lVar3 = *(int64 *)
+                                                                     (**(int64 **)
+                                                                        (GameController_StaticsPtr + 184)
+                                                                     + 32), lVar3 != null)) {
                                                           lVar3 = WorldData.Player(lVar3,0);
                                                           uVar4 = Component.get_gameObject(this,0);
                                                           if (lVar3 != null) {
                                                             HeroData.SetHpBar(lVar3,uVar4,0);
-                                                            if ((*pStatics_df90 !=
-                                                                 0) && (lVar3 = *(int64 *)
-                                                                                 (**(int64 **)
-                                                                                    (DAT_181d4df90 + 184)
-                                                                                 + 32), lVar3 != null)) {
-                                                              lVar3 = WorldData.Player(lVar3,0);
-                                                              uVar4 = Component.get_gameObject(this,0)
+                                                            if (!DAT_181e6a735) {
+                                                              il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if ((**(int64 **)
+                                                               (GameController_StaticsPtr + 184) != 0) &&
+                                                           (lVar3 = *(int64 *)
+                                                                     (**(int64 **)
+                                                                        (GameController_StaticsPtr + 184)
+                                                                     + 32), lVar3 != null)) {
+                                                          lVar3 = WorldData.Player(lVar3,0);
+                                                          uVar4 = Component.get_gameObject(this,0);
+                                                          if (lVar3 != null) {
+                                                            HeroData.SetMpBar(lVar3,uVar4,0);
+                                                            uVar4 = this.externalInjury;
+                                                            if (!DAT_181e6a735) {
+                                                              il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) != 0)
+                                                            && (lVar3 = *(int64 *)
+                                                                         (**(int64 **)
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar3 != null)) &&
+                                                           (lVar3 = WorldData.Player(lVar3,0), lVar3 != null
+                                                           )) {
+                                                          HudController.FreshHudInjury
+                                                                    (this,uVar4,
+                                                                     lVar3.studyFightWithGreatHeroMultiWinNum,0);
+                                                          uVar4 = this.internalInjury;
+                                                          if (!DAT_181e6a735) {
+                                                            il2cpp_internal(&GameController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a735 = true;
+                                                          }
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (GameController_StaticsPtr);
+                                                          }
+                                                          if (((**(int64 **)
+                                                                  (GameController_StaticsPtr + 184) != 0)
+                                                              && (lVar3 = *(int64 *)
+                                                                           (**(int64 **)
+                                                                              (GameController_StaticsPtr +
+                                                                              184) + 32), lVar3 != null))
+                                                             && (lVar3 = WorldData.Player(lVar3,0),
+                                                                lVar3 != null)) {
+                                                            HudController.FreshHudInjury
+                                                                      (this,uVar4,
+                                                                       lVar3.studyFightWithGreatHeroFinalWinNum,0);
+                                                            uVar4 = *(uint64 *)(this + 200);
+                                                            if (!DAT_181e6a735) {
+                                                              il2cpp_internal(&
+                                                        GameController_StaticsPtr);
+                                                        DAT_181e6a735 = true;
+                                                        }
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if (((**(int64 **)
+                                                                (GameController_StaticsPtr + 184) != 0)
+                                                            && (lVar3 = *(int64 *)
+                                                                         (**(int64 **)
+                                                                            (GameController_StaticsPtr +
+                                                                            184) + 32), lVar3 != null)) &&
+                                                           (lVar3 = WorldData.Player(lVar3,0), lVar3 != null
+                                                           )) {
+                                                          HudController.FreshHudInjury
+                                                                    (this,uVar4,
+                                                                     lVar3.totalHeroMeet,0);
+                                                          if (!DAT_181e6a735) {
+                                                            il2cpp_internal(&GameController_StaticsPtr
+                                                                               );
+                                                            DAT_181e6a735 = true;
+                                                          }
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init
+                                                                      (GameController_StaticsPtr);
+                                                          }
+                                                          if (((**(int64 **)
+                                                                  (GameController_StaticsPtr + 184) != 0)
+                                                              && (lVar3 = *(int64 *)
+                                                                           (**(int64 **)
+                                                                              (GameController_StaticsPtr +
+                                                                              184) + 32), lVar3 != null))
+                                                             && (lVar3 = WorldData.Player(lVar3,0),
+                                                                lVar3 != null)) {
+                                                            lVar14 = this.forceUI;
+                                                            if (*(int *)(lVar3 + 132) < 0) {
+                                                              if (lVar14 == null) throw; // [null/range check failed]
+                                                              cVar1 = GameObject.get_activeSelf(lVar14,0)
                                                               ;
-                                                              if (lVar3 != null) {
-                                                                HeroData.SetMpBar(lVar3,uVar4,0);
-                                                                uVar4 = this.externalInjury;
-                                                                if (((*(byte *)(DAT_181d4df90 + 0x133) & 4
-                                                                     ) != 0) &&
-                                                                   (*(int *)(DAT_181d4df90 + 224) == 0))
-                                                                {
-                                                                  il2cpp_runtime_class_init(DAT_181d4df90)
-                                                                  ;
-                                                                }
-                                                                if (((**(int64 **)
-                                                                        (DAT_181d4df90 + 184) != 0) &&
-                                                                    (lVar3 = *(int64 *)
-                                                                              (**(int64 **)
-                                                                                 (DAT_181d4df90 + 184) +
-                                                                              32), lVar3 != null)) &&
-                                                                   (lVar3 = WorldData.Player(lVar3,0),
-                                                                   lVar3 != null)) {
-                                                                  HudController.FreshHudInjury
-                                                                            (this,uVar4,
-                                                                             *(uint32 *)
-                                                                              (lVar3 + 0x1a0),0);
-                                                                  uVar4 = this.internalInjury;
-                                                                  if (((*(byte *)(DAT_181d4df90 + 0x133) &
-                                                                       4) != 0) &&
-                                                                     (*(int *)(DAT_181d4df90 + 224) == 0)
-                                                                     ) {
-                                                                    il2cpp_runtime_class_init
-                                                                              (DAT_181d4df90);
-                                                                  }
-                                                                  if (((**(int64 **)
-                                                                          (DAT_181d4df90 + 184) != 0) &&
-                                                                      (lVar3 = *(int64 *)
-                                                                                (**(int64 **)
-                                                                                   (DAT_181d4df90 + 184)
-                                                                                + 32), lVar3 != null)) &&
-                                                                     (lVar3 = WorldData.Player(lVar3,0),
-                                                                     lVar3 != null)) {
-                                                                    HudController.FreshHudInjury
-                                                                              (this,uVar4,
-                                                                               *(uint32 *)
-                                                                                (lVar3 + 0x1a4),0);
-                                                                    uVar4 = *(uint64 *)(this + 200)
-                                                                    ;
-                                                                    if (((*(byte *)(DAT_181d4df90 + 0x133)
-                                                                         & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d4df90 + 224) ==
-                                                                        0)) {
-                                                                      il2cpp_runtime_class_init
-                                                                                (DAT_181d4df90);
-                                                                    }
-                                                                    if (((**(int64 **)
-                                                                            (DAT_181d4df90 + 184) != 0)
-                                                                        && (lVar3 = *(int64 *)
-                                                                                     (**(int64 **)
-                                                                                        (DAT_181d4df90 +
-                                                                                        184) + 32),
-                                                                           lVar3 != null)) &&
-                                                                       (lVar3 = WorldData.Player(lVar3,0)
-                                                                       , lVar3 != null)) {
-                                                                      HudController.FreshHudInjury
-                                                                                (this,uVar4,
-                                                                                 *(uint32 *)
-                                                                                  (lVar3 + 0x1a8),0);
-                                                                      if (!DAT_181e6a735) {
-                                                                        il2cpp_internal(&DAT_181d4df90
-                                                                                           );
-                                                                        DAT_181e6a735 = true;
-                                                                      }
-                                                                      if (((*(byte *)(DAT_181d4df90 +
-                                                                                     0x133) & 4) != 0) &&
-                                                                         (*(int *)(DAT_181d4df90 + 224)
-                                                                          == 0)) {
-                                                                        il2cpp_runtime_class_init
-                                                                                  (DAT_181d4df90);
-                                                                      }
-                                                                      if (((**(int64 **)
-                                                                              (DAT_181d4df90 + 184) != 0)
-                                                                          && (lVar3 = *(int64 *)
-                                                                                       (**(int64 **)
-                                                                                          (DAT_181d4df90 +
-                                                                                          184) + 32),
-                                                                             lVar3 != null)) &&
-                                                                         (lVar3 = WorldData.Player(lVar3,
-                                                        0), lVar3 != null)) {
-                                                          lVar14 = this.forceUI;
-                                                          if (*(int *)(lVar3 + 132) < 0) {
-                                                            if (lVar14 == null) throw; // [null/range check failed]
-                                                            cVar1 = GameObject.get_activeSelf(lVar14,0);
-                                                            if (cVar1) {
-                                                              if (this.forceUI == null)
-                                                              throw; // [null/range check failed]
-                                                              GameObject.SetActive
-                                                                        (this.forceUI,0,0
-                                                                        );
-                                                            }
+                                                              if (cVar1) {
+                                                                if (this.forceUI == null)
+                                                                throw; // [null/range check failed]
+                                                                GameObject.SetActive
+                                                                          (this.forceUI,0
+                                                                           ,0);
+                                                              }
         LAB_180b4aba5:
-                                                            lVar3 = FUN_18046c100(0);
-                                                            if (lVar3 != null) {
-                                                              cVar1 = GameDataController.CanSaveLoad
-                                                                                (lVar3,0);
-                                                              lVar3 = this.settingButton;
-                                                              if (!cVar1) {
-                                                                if ((((lVar3 != null) &&
-                                                                     (lVar3 = GameObject.get_transform
-                                                                                        (lVar3,0),
-                                                                     lVar3 != null)) &&
-                                                                    (lVar3 = Transform.Find(lVar3,
+                                                              if (((*(byte *)(GameController_StaticsPtr +
+                                                                             0x133) & 4) != 0) &&
+                                                                 (*(int *)(GameController_StaticsPtr +
+                                                                          224) == 0)) {
+                                                                il2cpp_runtime_class_init();
+                                                              }
+                                                              lVar3 = FUN_18046c100(0);
+                                                              if (lVar3 != null) {
+                                                                cVar1 = GameDataController.CanSaveLoad
+                                                                                  (lVar3,0);
+                                                                lVar3 = this.settingButton;
+                                                                if (!cVar1) {
+                                                                  if ((((lVar3 != null) &&
+                                                                       (lVar3 = GameObject.get_transform
+                                                                                          (lVar3,0),
+                                                                       lVar3 != null)) &&
+                                                                      (lVar3 = Transform.Find(lVar3,
                                                         "Saving",0), lVar3 != null)) &&
                                                         (lVar3 = Component.get_gameObject(lVar3,0),
                                                         lVar3 != null)) {
@@ -965,18 +1111,24 @@ public class HudController
                                                                       (this.forceUI,1,0);
                                                           }
                                                           uVar4 = this.contributionLabel;
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar3 = FUN_18046c0a0(0);
                                                           if (((lVar3 != null) &&
-                                                              (*(int64 *)(lVar3 + 32) != 0)) &&
+                                                              (lVar3.villageAreaID != null)) &&
                                                              (lVar3 = WorldData.Player(*(int64 *)
                                                                                          (lVar3 + 32),0)
                                                              , lVar3 != null)) {
-                                                            local_res8[0] = (int)*(float *)(lVar3 + 0x1c0)
+                                                            local_res8[0] = (int)lVar3.playerBookWriter
                                                             ;
                                                             uVar7 = Int32.ToString(local_res8,0);
                                                             lVar3 = FUN_18046c0a0(0);
                                                             if (((lVar3 != null) &&
-                                                                (*(int64 *)(lVar3 + 32) != 0)) &&
+                                                                (lVar3.villageAreaID != null)) &&
                                                                (lVar3 = WorldData.Player(*(int64 *)
                                                                                            (lVar3 + 32),
                                                                                           0), lVar3 != null))
@@ -991,12 +1143,12 @@ public class HudController
                                                         LTLocalization.SetText(uVar4,uVar7,0);
                                                         lVar3 = FUN_18046c0a0(0);
                                                         if (((lVar3 != null) &&
-                                                            (*(int64 *)(lVar3 + 32) != 0)) &&
+                                                            (lVar3.villageAreaID != null)) &&
                                                            (lVar3 = WorldData.Player(*(int64 *)
                                                                                        (lVar3 + 32),0),
                                                            lVar3 != null)) {
                                                           lVar14 = this.forceUI;
-                                                          if (*(char *)(lVar3 + 180) == false) {
+                                                          if (!lVar3.hour) {
                                                             if ((lVar14 == null) ||
                                                                (lVar3 = GameObject.get_transform
                                                                                   (lVar14,0), lVar3 == null))
@@ -1020,16 +1172,22 @@ public class HudController
                                                         lVar3 == null)) throw; // [null/range check failed]
                                                         lVar3 = Component.GetComponent
                                                                           (lVar3,DAT_181d6bc40);
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if (((lVar14 == null) ||
-                                                            (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                            (lVar14.villageAreaID == null)) ||
                                                            (lVar14 = WorldData.Player(*(int64 *)
                                                                                         (lVar14 + 32),0)
                                                            , lVar14 == null)) throw; // [null/range check failed]
-                                                        fVar16 = *(float *)(lVar14 + 0x1c0);
+                                                        fVar16 = lVar14.playerBookWriter;
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if ((((lVar14 == null) ||
-                                                             (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                             (lVar14.villageAreaID == null)) ||
                                                             (lVar14 = WorldData.Player(*(int64 *)
                                                                                          (lVar14 + 32),0
                                                                                        ), lVar14 == null)) ||
@@ -1047,15 +1205,15 @@ public class HudController
                                                         lVar3 = Transform.Find(lVar3,"ContributionFull",0);
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if ((lVar14 == null) ||
-                                                           ((*(int64 *)(lVar14 + 32) == 0 ||
+                                                           ((lVar14.villageAreaID == null ||
                                                             (lVar14 = WorldData.Player(*(int64 *)
                                                                                          (lVar14 + 32),0
                                                                                        ), lVar14 == null))))
                                                         throw; // [null/range check failed]
-                                                        fVar16 = *(float *)(lVar14 + 0x1c0);
+                                                        fVar16 = lVar14.playerBookWriter;
                                                         lVar14 = FUN_18046c0a0(0);
                                                         if ((lVar14 == null) ||
-                                                           ((*(int64 *)(lVar14 + 32) == 0 ||
+                                                           ((lVar14.villageAreaID == null ||
                                                             (lVar14 = WorldData.Player(*(int64 *)
                                                                                          (lVar14 + 32),0
                                                                                        ), lVar14 == null))))
@@ -1101,16 +1259,22 @@ public class HudController
                                                         local_90 = uVar12;
                                                         Transform.set_localScale(lVar3,&local_98,0);
                                                         uVar4 = this.heroNumLabel;
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         lVar3 = FUN_18046c0a0(0);
                                                         if (((lVar3 != null) &&
-                                                            (*(int64 *)(lVar3 + 32) != 0)) &&
+                                                            (lVar3.villageAreaID != null)) &&
                                                            (lVar3 = WorldData.GetHeroForce
-                                                                              (*(int64 *)(lVar3 + 32)
+                                                                              (lVar3.villageAreaID
                                                                                ,0,0), lVar3 != null)) {
                                                           uVar7 = Int32.ToString(lVar3 + 132,0);
                                                           lVar3 = FUN_18046c0a0(0);
                                                           if (((lVar3 != null) &&
-                                                              (*(int64 *)(lVar3 + 32) != 0)) &&
+                                                              (lVar3.villageAreaID != null)) &&
                                                              (lVar3 = WorldData.GetHeroForce
                                                                                 (*(int64 *)
                                                                                   (lVar3 + 32),0,0),
@@ -1125,19 +1289,19 @@ public class HudController
                                                             uVar4 = this.areaNumLabel;
                                                             lVar3 = FUN_18046c0a0(0);
                                                             if (((lVar3 != null) &&
-                                                                (*(int64 *)(lVar3 + 32) != 0)) &&
+                                                                (lVar3.villageAreaID != null)) &&
                                                                ((lVar3 = WorldData.GetHeroForce
                                                                                    (*(int64 *)
                                                                                      (lVar3 + 32),0,0),
                                                                 lVar3 != null &&
-                                                                (*(int64 *)(lVar3 + 96) != 0)))) {
+                                                                (lVar3.BigMapRandomEventDatas != null)))) {
                                                               local_res8[0] =
-                                                                   *(int *)(*(int64 *)(lVar3 + 96) +
+                                                                   *(int *)(lVar3.BigMapRandomEventDatas +
                                                                            24);
                                                               uVar7 = Int32.ToString(local_res8,0);
                                                               lVar3 = FUN_18046c0a0(0);
                                                               if (((lVar3 != null) &&
-                                                                  (*(int64 *)(lVar3 + 32) != 0)) &&
+                                                                  (lVar3.villageAreaID != null)) &&
                                                                  (lVar3 = WorldData.GetHeroForce
                                                                                     (*(int64 *)
                                                                                       (lVar3 + 32),0,0),
@@ -1152,86 +1316,92 @@ public class HudController
                                                                 local_res18[0] = 0;
                                                                 do {
                                                                   iVar2 = local_res18[0];
-                                                                  if (((*(byte *)(DAT_181d4df90 + 0x133) &
-                                                                       4) != 0) &&
-                                                                     (*(int *)(DAT_181d4df90 + 224) == 0)
-                                                                     ) {
-                                                                    il2cpp_runtime_class_init
-                                                                              (DAT_181d4df90);
-                                                                  }
-                                                                  if (((*(byte *)(DAT_181d4df90 + 0x133) &
-                                                                       4) != 0) &&
-                                                                     (*(int *)(DAT_181d4df90 + 224) == 0)
-                                                                     ) {
-                                                                    il2cpp_runtime_class_init
-                                                                              (DAT_181d4df90);
-                                                                  }
-                                                                  if ((((**(int64 **)
-                                                                           (DAT_181d4df90 + 184) == 0) ||
-                                                                       (lVar3 = *(int64 *)
-                                                                                 (**(int64 **)
-                                                                                    (DAT_181d4df90 + 184)
-                                                                                 + 32), lVar3 == null)) ||
-                                                                      (lVar3 = WorldData.GetHeroForce
-                                                                                         (lVar3,0,0),
-                                                                      lVar3 == null)) ||
-                                                                     (*(int64 *)(lVar3 + 136) == 0))
-                                                                  break;
-                                                                  if (*(int *)(*(int64 *)(lVar3 + 136)
-                                                                              + 24) <= iVar2) {
-                                                                    if (((*(byte *)(DAT_181d4df90 + 0x133)
-                                                                         & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d4df90 + 224) ==
-                                                                        0)) {
-                                                                      il2cpp_runtime_class_init();
-                                                                    }
-                                                                    lVar3 = FUN_18046c0a0(0);
-                                                                    if (((lVar3 == null) ||
-                                                                        (*(int64 *)(lVar3 + 32) == 0)
-                                                                        ) || (lVar3 = WorldData.Player(*(
-                                                        int64 *)(lVar3 + 32),0), lVar3 == null)) break;
-                                                        cVar1 = HeroData.HaveForceFunction(lVar3,6);
-                                                        lVar3 = this.forceUI;
-                                                        if (!cVar1) {
-                                                          if ((lVar3 == null) ||
-                                                             (lVar3 = GameObject.get_transform(lVar3,0),
-                                                             lVar3 == null)) break;
-                                                          lVar3 = Transform.Find(lVar3,"SpeResourceNum",0);
-                                                          puVar8 = (uint64 *)
-                                                                   Vector3.get_zero(local_88,0);
-                                                          if (lVar3 == null) break;
-                                                          local_90 = *(uint32 *)(puVar8 + 1);
-                                                          local_98 = *puVar8;
-                                                          Transform.set_localScale(lVar3,&local_98,0);
+                                                                  if (((*(byte *)(
+                                                        GameController_StaticsPtr + 0x133) & 4) != 0) &&
+                                                        (*(int *)(GameController_StaticsPtr + 224) == 0))
+                                                        {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
                                                         }
-                                                        else {
-                                                          if ((lVar3 == null) ||
-                                                             (lVar3 = GameObject.get_transform(lVar3,0),
-                                                             lVar3 == null)) break;
-                                                          lVar3 = Transform.Find(lVar3,"SpeResourceNum",0);
-                                                          puVar8 = (uint64 *)
-                                                                   Vector3.get_one(local_88,0);
-                                                          if (lVar3 == null) break;
-                                                          local_90 = *(uint32 *)(puVar8 + 1);
-                                                          local_98 = *puVar8;
-                                                          Transform.set_localScale(lVar3,&local_98,0);
-                                                          if (((this.forceUI == null) ||
-                                                              (lVar3 = GameObject.get_transform
-                                                                                 (*(int64 *)
-                                                                                   (this + 160),0),
-                                                              lVar3 == null)) ||
-                                                             (lVar3 = Transform.Find(lVar3,"SpeResourceNum",
-                                                                                      0), lVar3 == null))
-                                                          break;
-                                                          uVar4 = Component.GetComponent
-                                                                            (lVar3,DAT_181d6d8c0);
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init
+                                                                    (GameController_StaticsPtr);
+                                                        }
+                                                        if ((((**(int64 **)
+                                                                 (GameController_StaticsPtr + 184) == 0)
+                                                             || (lVar3 = *(int64 *)
+                                                                          (**(int64 **)
+                                                                             (GameController_StaticsPtr +
+                                                                             184) + 32), lVar3 == null))
+                                                            || (lVar3 = WorldData.GetHeroForce(lVar3,0,0)
+                                                               , lVar3 == null)) ||
+                                                           (lVar3.WorldNewsDatas == null)) break;
+                                                        if (*(int *)(lVar3.WorldNewsDatas + 24)
+                                                            <= iVar2) {
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar3 = FUN_18046c0a0(0);
-                                                          if ((lVar3 == null) ||
-                                                             (*(int64 *)(lVar3 + 32) == 0)) break;
-                                                          uVar7 = Int32.ToString(*(int64 *)
-                                                                                   (lVar3 + 32) + 0x230,
-                                                                                  0);
-                                                          LTLocalization.SetText(uVar4,uVar7,0);
+                                                          if (((lVar3 == null) ||
+                                                              (lVar3.villageAreaID == null)) ||
+                                                             (lVar3 = WorldData.Player(*(int64 *)
+                                                                                         (lVar3 + 32),0)
+                                                             , lVar3 == null)) break;
+                                                          cVar1 = HeroData.HaveForceFunction(lVar3,6);
+                                                          lVar3 = this.forceUI;
+                                                          if (!cVar1) {
+                                                            if ((lVar3 == null) ||
+                                                               (lVar3 = GameObject.get_transform(lVar3,0)
+                                                               , lVar3 == null)) break;
+                                                            lVar3 = Transform.Find(lVar3,"SpeResourceNum",0)
+                                                            ;
+                                                            puVar8 = (uint64 *)
+                                                                     Vector3.get_zero(local_88,0);
+                                                            if (lVar3 == null) break;
+                                                            local_90 = *(uint32 *)(puVar8 + 1);
+                                                            local_98 = *puVar8;
+                                                            Transform.set_localScale(lVar3,&local_98,0);
+                                                          }
+                                                          else {
+                                                            if ((lVar3 == null) ||
+                                                               (lVar3 = GameObject.get_transform(lVar3,0)
+                                                               , lVar3 == null)) break;
+                                                            lVar3 = Transform.Find(lVar3,"SpeResourceNum",0)
+                                                            ;
+                                                            puVar8 = (uint64 *)
+                                                                     Vector3.get_one(local_88,0);
+                                                            if (lVar3 == null) break;
+                                                            local_90 = *(uint32 *)(puVar8 + 1);
+                                                            local_98 = *puVar8;
+                                                            Transform.set_localScale(lVar3,&local_98,0);
+                                                            if (((this.forceUI == null) ||
+                                                                (lVar3 = GameObject.get_transform
+                                                                                   (*(int64 *)
+                                                                                     (this + 160),0),
+                                                                lVar3 == null)) ||
+                                                               (lVar3 = Transform.Find(lVar3,
+                                                        "SpeResourceNum",0), lVar3 == null)) break;
+                                                        uVar4 = Component.GetComponent
+                                                                          (lVar3,DAT_181d6d8c0);
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
+                                                        lVar3 = FUN_18046c0a0(0);
+                                                        if ((lVar3 == null) ||
+                                                           (lVar3.villageAreaID == null)) break;
+                                                        uVar7 = Int32.ToString(*(int64 *)
+                                                                                 (lVar3 + 32) + 0x230,0)
+                                                        ;
+                                                        LTLocalization.SetText(uVar4,uVar7,0);
                                                         }
                                                         goto LAB_180b4aba5;
                                                         }
@@ -1245,14 +1415,20 @@ public class HudController
                                                            lVar3 == null)) break;
                                                         uVar4 = Component.GetComponent
                                                                           (lVar3,DAT_181d6d8c0);
+                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
+                                                             & 4) != 0) &&
+                                                           (*(int *)(GameController_StaticsPtr + 224) ==
+                                                            0)) {
+                                                          il2cpp_runtime_class_init();
+                                                        }
                                                         lVar3 = FUN_18046c0a0(0);
                                                         if ((((lVar3 == null) ||
-                                                             (*(int64 *)(lVar3 + 32) == 0)) ||
+                                                             (lVar3.villageAreaID == null)) ||
                                                             (lVar3 = WorldData.GetHeroForce
                                                                                (*(int64 *)
                                                                                  (lVar3 + 32),0,0),
                                                             lVar3 == null)) ||
-                                                           (*(int64 *)(lVar3 + 136) == 0)) break;
+                                                           (lVar3.WorldNewsDatas == null)) break;
                                                         fVar16 = (float)FUN_1800d6780(*(int64 *)
                                                                                        (lVar3 + 136),
                                                                                       local_res18[0],
@@ -1261,12 +1437,12 @@ public class HudController
                                                         uVar7 = Int32.ToString(local_res8,0);
                                                         lVar3 = FUN_18046c0a0(0);
                                                         if (((lVar3 == null) ||
-                                                            (*(int64 *)(lVar3 + 32) == 0)) ||
+                                                            (lVar3.villageAreaID == null)) ||
                                                            ((lVar3 = WorldData.GetHeroForce
                                                                                (*(int64 *)
                                                                                  (lVar3 + 32),0,0),
                                                             lVar3 == null ||
-                                                            (*(int64 *)(lVar3 + 144) == 0)))) break;
+                                                            (lVar3.MailDatas == null)))) break;
                                                         fVar16 = (float)FUN_1800d6780(*(int64 *)
                                                                                        (lVar3 + 144),
                                                                                       local_res18[0],
@@ -1278,12 +1454,12 @@ public class HudController
                                                         LTLocalization.SetText(uVar4,uVar7,0);
                                                         lVar3 = FUN_18046c0a0(0);
                                                         if (((lVar3 == null) ||
-                                                            (*(int64 *)(lVar3 + 32) == 0)) ||
+                                                            (lVar3.villageAreaID == null)) ||
                                                            ((lVar3 = WorldData.GetHeroForce
                                                                                (*(int64 *)
                                                                                  (lVar3 + 32),0,0),
                                                             lVar3 == null ||
-                                                            (*(int64 *)(lVar3 + 152) == 0)))) break;
+                                                            (lVar3.cheating == null)))) break;
                                                         fVar16 = (float)FUN_1800d6780(*(int64 *)
                                                                                        (lVar3 + 152),
                                                                                       local_res18[0]);
@@ -1313,14 +1489,20 @@ public class HudController
                                                           break;
                                                           uVar4 = Component.GetComponent
                                                                             (lVar3,DAT_181d6d8c0);
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar3 = FUN_18046c0a0(0);
                                                           if (((lVar3 == null) ||
-                                                              (*(int64 *)(lVar3 + 32) == 0)) ||
+                                                              (lVar3.villageAreaID == null)) ||
                                                              ((lVar3 = WorldData.GetHeroForce
                                                                                  (*(int64 *)
                                                                                    (lVar3 + 32),0,0),
                                                               lVar3 == null ||
-                                                              (*(int64 *)(lVar3 + 152) == 0)))) break;
+                                                              (lVar3.cheating == null)))) break;
                                                           local_res20[0] =
                                                                (float)FUN_1800d6780(*(int64 *)
                                                                                      (lVar3 + 152),
@@ -1345,30 +1527,48 @@ public class HudController
                                                                               (lVar3,DAT_181d6d8c0);
                                                           lVar3 = FUN_18046c0a0(0);
                                                           if (((lVar3 == null) ||
-                                                              (*(int64 *)(lVar3 + 32) == 0)) ||
+                                                              (lVar3.villageAreaID == null)) ||
                                                              ((lVar3 = WorldData.GetHeroForce
                                                                                  (*(int64 *)
                                                                                    (lVar3 + 32),0,0),
                                                               lVar3 == null ||
-                                                              (*(int64 *)(lVar3 + 152) == 0)))) break;
+                                                              (lVar3.cheating == null)))) break;
                                                           fVar16 = (float)FUN_1800d6780(*(int64 *)
                                                                                          (lVar3 + 152),
                                                                                         local_res18[0],
                                                                                         DAT_181d796d8);
                                                           if (fVar16 <= 0.0) {
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
+                                                            }
                                                             uVar4 = *(uint64 *)
-                                                                     (pStatics_ef00
+                                                                     (*(int64 *)
+                                                                       (PlotController_StaticsPtr + 184)
                                                                      + 0x2e8);
                                                             uVar7 = *(uint64 *)
-                                                                     (pStatics_ef00
+                                                                     (*(int64 *)
+                                                                       (PlotController_StaticsPtr + 184)
                                                                      + 0x2f0);
                                                           }
                                                           else {
+                                                            if (((*(byte *)(PlotController_StaticsPtr +
+                                                                           0x133) & 4) != 0) &&
+                                                               (*(int *)(PlotController_StaticsPtr + 224)
+                                                                == 0)) {
+                                                              il2cpp_runtime_class_init
+                                                                        (PlotController_StaticsPtr);
+                                                            }
                                                             uVar4 = *(uint64 *)
-                                                                     (pStatics_ef00
+                                                                     (*(int64 *)
+                                                                       (PlotController_StaticsPtr + 184)
                                                                      + 0x280);
                                                             uVar7 = *(uint64 *)
-                                                                     (pStatics_ef00
+                                                                     (*(int64 *)
+                                                                       (PlotController_StaticsPtr + 184)
                                                                      + 0x288);
                                                           }
                                                           if (plVar11 == (int64 *)0) break;
@@ -1394,9 +1594,15 @@ public class HudController
                                                           goto LAB_180b4ae27;
                                                           lVar3 = Component.GetComponent
                                                                             (lVar3,DAT_181d6ccc0);
+                                                          if (((*(byte *)(GameController_StaticsPtr +
+                                                                         0x133) & 4) != 0) &&
+                                                             (*(int *)(GameController_StaticsPtr + 224)
+                                                              == 0)) {
+                                                            il2cpp_runtime_class_init();
+                                                          }
                                                           lVar14 = FUN_18046c0a0(0);
                                                           if (((lVar14 == null) ||
-                                                              (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                              (lVar14.villageAreaID == null)) ||
                                                              (lVar14 = WorldData.GetHeroForce
                                                                                  (*(int64 *)
                                                                                    (lVar14 + 32),0,0),
@@ -1407,7 +1613,7 @@ public class HudController
                                                                                   );
                                                           lVar14 = FUN_18046c0a0(0);
                                                           if (((lVar14 == null) ||
-                                                              (*(int64 *)(lVar14 + 32) == 0)) ||
+                                                              (lVar14.villageAreaID == null)) ||
                                                              (lVar14 = WorldData.GetHeroForce
                                                                                  (*(int64 *)
                                                                                    (lVar14 + 32),0,0),
@@ -1494,12 +1700,12 @@ public class HudController
                    (lVar5 = FUN_180002f80(this.hudResourceShowDatas,uVar13,DAT_181d65478)) == null
                    ) break;
                 if (*(float *)(lVar5 + 20) <= 0.0) {
-                  uVar9 = *(uint64 *)(pStatics_ef00 + 0x2e8);
-                  uVar10 = *(uint64 *)(pStatics_ef00 + 0x2f0);
+                  uVar9 = *(uint64 *)(pPlotController + 0x2e8);
+                  uVar10 = *(uint64 *)(pPlotController + 0x2f0);
                 }
                 else {
-                  uVar9 = *(uint64 *)(pStatics_ef00 + 0x280);
-                  uVar10 = *(uint64 *)(pStatics_ef00 + 0x288);
+                  uVar9 = *(uint64 *)(pPlotController + 0x280);
+                  uVar10 = *(uint64 *)(pPlotController + 0x288);
                 }
                 if (lVar3 == null) break;
                 local_a8 = 0;
@@ -1524,7 +1730,6 @@ public class HudController
     // RVA   : 0xB46E60   Offset: 0xB45660   Length: 0x93C
     public void RefreshNowResearch()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -1535,14 +1740,14 @@ public class HudController
         ushort[] local_res18 = new ushort[4];
         uint[] local_res20 = new uint[2];
         uint[] local_18 = new uint[4];
-        if (((*pStatics == 0) ||
-            (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-           (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
+        if (((GameController._instance == null) ||
+            (lVar2 = GameController._instance.worldData) == null)
+           || (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
         lVar2 = HeroData.GetForce(lVar2,0,0);
         if (lVar2 != null) {
-          if ((((*pStatics == 0) ||
-               (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
-              (lVar2 = WorldData.Player(lVar2,0)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar2 = GameController._instance.worldData,
+               lVar2 == null)) || (lVar2 = WorldData.Player(lVar2,0)) == null) ||
              (lVar2 = HeroData.GetForce(lVar2,0,0)) == null) throw; // [null/range check failed]
           lVar2 = ForceData.GetNowResearchTech(lVar2,0);
           if (lVar2 != null) {
@@ -1567,13 +1772,13 @@ public class HudController
                      (lVar2 = Transform.Find(lVar2,"Text",0)) != null) {
                     uVar4 = Component.GetComponent(lVar2,DAT_181d6d8c0);
                     lVar2 = FUN_18046c0a0(0);
-                    if ((((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
-                        (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) != null) &&
+                    if ((((lVar2 != null) && (lVar2.villageAreaID != null)) &&
+                        (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) &&
                        (((lVar2 = HeroData.GetForce(lVar2,0,0), lVar2 != null &&
                          (lVar2 = ForceData.GetNowResearchTech(lVar2,0)) != null) &&
                         ((lVar2 = ForceTechLvData.Database(lVar2,0), lVar2 != null &&
-                         (*(int64 *)(lVar2 + 24) != 0)))))) {
-                      local_res18[0] = String.get_Chars(*(int64 *)(lVar2 + 24),0,0);
+                         (lVar2.cityAreaID != null)))))) {
+                      local_res18[0] = String.get_Chars(lVar2.cityAreaID,0,0);
                       uVar5 = Char.ToString(local_res18,0);
                       LTLocalization.SetText(uVar4,uVar5,0);
                       if (this.nowResearch != null) {
@@ -1694,7 +1899,7 @@ public class HudController
                                         il2cpp_internal(plVar6 + 7,lVar3);
                                         uVar4 = String.Format("正在研究 {0}\n下一等级 {2}\n剩余时间 {1}日({3}%)",plVar6,0);
                                         if (lVar2 != null) {
-                                          *(uint64 *)(lVar2 + 24) = uVar4;
+                                          lVar2.cityAreaID = uVar4;
                                           return;
                                         }
                                       }

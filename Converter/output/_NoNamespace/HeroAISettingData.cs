@@ -80,7 +80,7 @@ public class HeroAISettingData
     // RVA   : 0x877700   Offset: 0x875F00   Length: 0x2E3
     public string GetFocusText(int AISettingID)
     {
-        var pStatics = *(int64*)(DAT_181d4ef00 + 184);
+        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -103,7 +103,7 @@ public class HeroAISettingData
             }
           }
           else if (AISettingID == 2) {
-            lVar1 = *(int64 *)(pStatics + 0x4a8);
+            lVar1 = *(int64 *)(pPlotController + 0x4a8);
             if (((this.heroAISettingDatas != null) &&
                 (lVar2 = FUN_1817cc3c0(this.heroAISettingDatas,2,DAT_181d8d540)) != null) &&
                (lVar1 != null)) {
@@ -116,7 +116,7 @@ public class HeroAISettingData
             }
           }
           else if (AISettingID == 3) {
-            lVar1 = *(int64 *)(pStatics + 0x430);
+            lVar1 = *(int64 *)(pPlotController + 0x430);
             if (((this.heroAISettingDatas != null) &&
                 (lVar2 = FUN_1817cc3c0(this.heroAISettingDatas,3,DAT_181d8d540)) != null) &&
                (lVar1 != null)) {

@@ -40,7 +40,7 @@ public class <InitToggleButton>d__14
     // RVA   : 0x8CC830   Offset: 0x8CB030   Length: 0xC0D
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d5d920 + 184);
+        var p_InitToggleButton_d__14 = *(int64*)(_InitToggleButton_d__14_StaticsPtr + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -241,10 +241,10 @@ public class <InitToggleButton>d__14
                 uVar7 = Transform.GetChild(lVar3,iVar14,0);
                 uVar7 = ShortcutExtensions.DOScale(uVar7);
                 uVar7 = TweenSettingsExtensions.SetDelay(uVar7);
-                if (*(int64 *)(pStatics + 8) == 0) {
-                  uVar9 = **(uint64 **)(DAT_181d5d920 + 184);
+                if (*(int64 *)(p_InitToggleButton_d__14 + 8) == 0) {
+                  uVar9 = **(uint64 **)(_InitToggleButton_d__14_StaticsPtr + 184);
                   uVar8 = new OnTooltipCB(uVar9,DAT_181d827a8);
-                  puVar13 = (uint64 *)(pStatics + 8);
+                  puVar13 = (uint64 *)(p_InitToggleButton_d__14 + 8);
                   *puVar13 = uVar8;
                   il2cpp_internal(puVar13,uVar8);
                 }

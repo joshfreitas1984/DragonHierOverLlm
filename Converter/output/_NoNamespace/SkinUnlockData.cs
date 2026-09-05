@@ -42,7 +42,7 @@ public class SkinUnlockData
                      (int64 this,uint32 _skinLv,uint8 changeLine,uint8 changeColor)
         {
         int64 lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           lVar1 = GameDataController.FindSkinDataBase(lVar1,this.skinID,0);
           if (lVar1 != null) {

@@ -164,8 +164,6 @@ public class ReadBookTextTypeData
     // RVA   : 0xC60930   Offset: 0xC5F130   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180c60930(int64 this)
-        {
         this.expRate = 0x3f800000;
         ZhSegment.Initialize(this,0);
     }

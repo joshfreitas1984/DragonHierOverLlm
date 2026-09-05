@@ -91,7 +91,7 @@ public class KungfuSkillLvData
         uint uVar1;
         long lVar2;
         long lVar3;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x638);
+        lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x638);
         lVar3 = KungfuSkillLvData.DataBase(this,0);
         if ((lVar3 != null) && (lVar2 != null)) {
           uVar1 = *(uint32 *)(lVar3 + 52);
@@ -145,7 +145,7 @@ public class KungfuSkillLvData
     {
         int iVar1;
         long lVar2;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 != null) {
           lVar2 = GameDataController.GetSkillDataBase(lVar2,this.skillID,0);
           if (lVar2 != null) {
@@ -161,7 +161,7 @@ public class KungfuSkillLvData
     {
         int iVar1;
         long lVar2;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar2 = GameController.lockObj;
         if (lVar2 != null) {
           lVar2 = GameDataController.GetSkillDataBase(lVar2,this.skillID,0);
           if (lVar2 != null) {
@@ -178,7 +178,7 @@ public class KungfuSkillLvData
         uint uVar1;
         long lVar2;
         long lVar3;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x630);
+        lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x630);
         lVar3 = KungfuSkillLvData.DataBase(this,0);
         if ((lVar3 != null) && (lVar2 != null)) {
           uVar1 = *(uint32 *)(lVar3 + 52);
@@ -343,7 +343,7 @@ public class KungfuSkillLvData
     public KungfuSkillData DataBase()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           GameDataController.GetSkillDataBase(lVar1,this.skillID,0);
           return;
@@ -854,8 +854,7 @@ public class KungfuSkillLvData
     // RVA   : 0xB81210   Offset: 0xB7FA10   Length: 0xA3A
     public List<int> GetBreakThroughAvailableChoice()
     {
-        var pStatics_6660 = *(int64*)(DAT_181d56660 + 184);
-        var pStatics_e338 = *(int64*)(DAT_181d8e338 + 184);
+        var pKungfuSkillLvData = *(int64*)(KungfuSkillLvData_StaticsPtr + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
@@ -885,13 +884,13 @@ public class KungfuSkillLvData
         uStack_a0 = 0;
         local_98 = 0;
         uVar12 = 0;
-        if (*pStatics_e338 == 0) goto LAB_180b81c02;
-        cVar4 = FUN_1808ab750(*pStatics_e338,this.skillID,
-                              DAT_181d91b50);
+        if (PlotController._instance == null) goto LAB_180b81c02;
+        cVar4 = FUN_1808ab750(PlotController._instance,
+                              this.skillID,DAT_181d91b50);
         if (cVar4) {
-          if ((*pStatics_e338 != 0) &&
-             (lVar5 = FUN_1817cc780(*pStatics_e338,this.skillID,
-                                    DAT_181d91bd8), lVar5 != null)) {
+          if ((PlotController._instance != null) &&
+             (lVar5 = FUN_1817cc780(PlotController._instance,
+                                    this.skillID,DAT_181d91bd8), lVar5 != null)) {
             uVar10 = FUN_180f582c0(lVar5,DAT_181d680f0);
             lVar5 = il2cpp_internal(DAT_181d6f030);
             FUN_18182e120(lVar5,uVar10,DAT_181d67978);
@@ -904,9 +903,9 @@ public class KungfuSkillLvData
         lVar6 = il2cpp_internal(DAT_181d6f030);
         FUN_180f58a90(lVar6,DAT_181d678f8);
         if (lVar5 == null) goto LAB_180b81c02;
-        if (*(int *)(lVar5 + 48) < 3) {
+        if (lVar5.plotItemGrid < 3) {
           if (lVar6 == null) goto LAB_180b81c02;
-          FUN_181814fa0(lVar6,*(int *)(lVar5 + 48) + 6,DAT_181d67a78);
+          FUN_181814fa0(lVar6,lVar5.plotItemGrid + 6,DAT_181d67a78);
           lVar7 = il2cpp_internal(DAT_181d6f030);
           FUN_180f58a90(lVar7,DAT_181d678f8);
           if (lVar7 == null) goto LAB_180b81c02;
@@ -946,10 +945,10 @@ public class KungfuSkillLvData
         uVar10 = Enumerable.Concat(lVar6,lVar7,DAT_181d89db8);
         lVar6 = FUN_180961530(uVar10,DAT_181d8c638);
         local_68 = lVar6;
-        if (*(int64 *)(lVar5 + 72) == 0) {
+        if (lVar5.plotSkipButton == null) {
         LAB_180b81743:
-          if ((*(int *)(lVar5 + 48) < 3) && (*(int64 *)(lVar5 + 88) != 0)) {
-            lVar7 = *(int64 *)(*(int64 *)(lVar5 + 88) + 16);
+          if ((lVar5.plotItemGrid < 3) && (lVar5.plotTalkVoice != null)) {
+            lVar7 = *(int64 *)(lVar5.plotTalkVoice + 16);
             if ((lVar7 == null) || (lVar7 = Dictionary_2.get_Keys(lVar7,DAT_181d98b10)) == null)
             goto LAB_180b81c02;
             FUN_180ed4d30(&local_88,lVar7,DAT_181d9c570);
@@ -957,11 +956,11 @@ public class KungfuSkillLvData
             uStack_a0 = CONCAT44(uStack_7c,uStack_80);
             local_98 = local_78;
             while (cVar4 = FUN_1811d8280(&local_a8,DAT_181d74c38), uVar3 = local_98, cVar4) {
-              if (*(int64 *)(lVar5 + 88) == 0) {
+              if (lVar5.plotTalkVoice == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              fVar14 = (float)HeroSpeAddData.Get(*(int64 *)(lVar5 + 88),local_98 & 0xffffffff,0);
+              fVar14 = (float)HeroSpeAddData.Get(lVar5.plotTalkVoice,local_98 & 0xffffffff,0);
               if (fVar14 != 0.0) {
                 if (lVar6 == null) {
                           // WARNING: Subroutine does not return
@@ -972,8 +971,8 @@ public class KungfuSkillLvData
             }
             ZhSegment.Initialize(&local_a8,DAT_181d74bb8);
           }
-          if (*(int64 *)(lVar5 + 96) != 0) {
-            lVar7 = *(int64 *)(*(int64 *)(lVar5 + 96) + 16);
+          if (lVar5.PlotPrefabs != null) {
+            lVar7 = *(int64 *)(lVar5.PlotPrefabs + 16);
             if ((lVar7 == null) || (lVar7 = Dictionary_2.get_Keys(lVar7,DAT_181d98b10)) == null)
             goto LAB_180b81c02;
             FUN_180ed4d30(&local_88,lVar7,DAT_181d9c570);
@@ -981,11 +980,11 @@ public class KungfuSkillLvData
             uStack_a0 = CONCAT44(uStack_7c,uStack_80);
             local_98 = local_78;
             while (cVar4 = FUN_1811d8280(&local_a8,DAT_181d74c38), uVar3 = local_98, cVar4) {
-              if (*(int64 *)(lVar5 + 96) == 0) {
+              if (lVar5.PlotPrefabs == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              fVar14 = (float)HeroSpeAddData.Get(*(int64 *)(lVar5 + 96),local_98 & 0xffffffff,0);
+              fVar14 = (float)HeroSpeAddData.Get(lVar5.PlotPrefabs,local_98 & 0xffffffff,0);
               if (fVar14 != 0.0) {
                 if (lVar6 == null) {
                           // WARNING: Subroutine does not return
@@ -996,8 +995,8 @@ public class KungfuSkillLvData
             }
             ZhSegment.Initialize(&local_a8,DAT_181d74bb8);
           }
-          if (*(int64 *)(lVar5 + 104) != 0) {
-            lVar7 = *(int64 *)(*(int64 *)(lVar5 + 104) + 16);
+          if (lVar5.sourceInteractHero != null) {
+            lVar7 = *(int64 *)(lVar5.sourceInteractHero + 16);
             if ((lVar7 == null) || (lVar7 = Dictionary_2.get_Keys(lVar7,DAT_181d98b10)) == null)
             goto LAB_180b81c02;
             FUN_180ed4d30(&local_88,lVar7,DAT_181d9c570);
@@ -1005,11 +1004,11 @@ public class KungfuSkillLvData
             uStack_a0 = CONCAT44(uStack_7c,uStack_80);
             local_98 = local_78;
             while (cVar4 = FUN_1811d8280(&local_a8,DAT_181d74c38), uVar3 = local_98, cVar4) {
-              if (*(int64 *)(lVar5 + 104) == 0) {
+              if (lVar5.sourceInteractHero == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              fVar14 = (float)HeroSpeAddData.Get(*(int64 *)(lVar5 + 104),local_98 & 0xffffffff,0);
+              fVar14 = (float)HeroSpeAddData.Get(lVar5.sourceInteractHero,local_98 & 0xffffffff,0);
               if (fVar14 != 0.0) {
                 if (lVar6 == null) {
                           // WARNING: Subroutine does not return
@@ -1020,23 +1019,24 @@ public class KungfuSkillLvData
             }
             ZhSegment.Initialize(&local_a8,DAT_181d74bb8);
           }
-          lVar5 = *(int64 *)(pStatics_6660 + 8);
+          lVar5 = *(int64 *)(pKungfuSkillLvData + 8);
           if (lVar5 == null) {
-            uVar10 = **(uint64 **)(DAT_181d56660 + 184);
+            uVar10 = **(uint64 **)(KungfuSkillLvData_StaticsPtr + 184);
             lVar5 = new OnTooltipCB(uVar10,DAT_181d7db68,DAT_181d95e70);
-            plVar9 = (int64 *)(pStatics_6660 + 8);
+            plVar9 = (int64 *)(pKungfuSkillLvData + 8);
             *plVar9 = lVar5;
             il2cpp_internal(plVar9,lVar5);
           }
           if (lVar6 != null) {
             FUN_181818fa0(lVar6,lVar5,DAT_181d67ef0);
-            if (((*(byte *)(DAT_181d8e338 + 0x133) & 4) == 0) || (*(int *)(DAT_181d8e338 + 224) != 0)) {
-              lVar5 = *pStatics_e338;
+            if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) == 0) ||
+               (*(int *)(PlotController_StaticsPtr + 224) != 0)) {
+              lVar5 = PlotController._instance;
               lVar7 = lVar6;
             }
             else {
-              il2cpp_runtime_class_init(DAT_181d8e338);
-              lVar5 = *pStatics_e338;
+              il2cpp_runtime_class_init(PlotController_StaticsPtr);
+              lVar5 = PlotController._instance;
               this = local_70;
               lVar7 = local_68;
             }
@@ -1054,8 +1054,8 @@ public class KungfuSkillLvData
           lVar7 = 32;
           lVar13 = 32;
           uVar11 = uVar12;
-          while ((*(int64 *)(lVar5 + 72) != 0 &&
-                 (lVar2 = *(int64 *)(*(int64 *)(lVar5 + 72) + 16)) != null)) {
+          while ((lVar5.plotSkipButton != null &&
+                 (lVar2 = *(int64 *)(lVar5.plotSkipButton + 16)) != null)) {
             if ((int)*(uint32 *)(lVar2 + 24) <= (int)uVar11) {
               lVar13 = 32;
               uVar11 = uVar12;
@@ -1076,8 +1076,8 @@ public class KungfuSkillLvData
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         LAB_180b81670:
-        if ((*(int64 *)(lVar5 + 72) == 0) ||
-           (lVar2 = *(int64 *)(*(int64 *)(lVar5 + 72) + 24)) == null) goto LAB_180b81c02;
+        if ((lVar5.plotSkipButton == null) ||
+           (lVar2 = *(int64 *)(lVar5.plotSkipButton + 24)) == null) goto LAB_180b81c02;
         if ((int)*(uint32 *)(lVar2 + 24) <= (int)uVar11) goto LAB_180b816e0;
         if (*(uint32 *)(lVar2 + 24) <= uVar11) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1090,8 +1090,8 @@ public class KungfuSkillLvData
         lVar13 = lVar13 + 4;
         goto LAB_180b81670;
         LAB_180b816e0:
-        if ((*(int64 *)(lVar5 + 72) == 0) ||
-           (lVar13 = *(int64 *)(*(int64 *)(lVar5 + 72) + 32)) == null) goto LAB_180b81c02;
+        if ((lVar5.plotSkipButton == null) ||
+           (lVar13 = *(int64 *)(lVar5.plotSkipButton + 32)) == null) goto LAB_180b81c02;
         if ((int)*(uint32 *)(lVar13 + 24) <= (int)uVar12) goto LAB_180b81743;
         if (*(uint32 *)(lVar13 + 24) <= uVar12) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1125,7 +1125,7 @@ public class KungfuSkillLvData
           uVar3 = lVar4[uVar3];
           lVar4 = new HeroSpeAddData(0);
           fVar6 = (float)Mathf.Max(0x3f000000);
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 144)) != null) {
             if (*(uint32 *)(lVar2 + 24) <= uVar3) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1145,8 +1145,6 @@ public class KungfuSkillLvData
     // RVA   : 0xB80780   Offset: 0xB7EF80   Length: 0xD
     public static float CountDamageRatio(float sourceNum, float addRatio)
     {
-        float FUN_180b80780(float sourceNum,float addRatio)
-        {
         return sourceNum * 0.01 * addRatio;
     }
 
@@ -1154,36 +1152,33 @@ public class KungfuSkillLvData
     // RVA   : 0xB80A40   Offset: 0xB7F240   Length: 0x7C3
     public HeroData GetBelongHero()
     {
-        var pStatics_b128 = *(int64*)(DAT_181d8b128 + 184);
-        var pStatics_c960 = *(int64*)(DAT_181d6c960 + 184);
-        var pStatics_df90 = *(int64*)(DAT_181d4df90 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         int iVar4;
         int iVar5;
         if (this.belongHeroID < 0) {
-          lVar3 = *(int64 *)(pStatics_b128 + 80);
+          lVar3 = PlotController.StopWarCostFavor;
           if (lVar3 != null) {
             iVar4 = 0;
             if (*(int *)(lVar3 + 36) == 0) {
         LAB_180b81060:
               do {
-                if ((*pStatics_c960 == 0) ||
-                   (lVar3 = *(int64 *)(*pStatics_c960 + 0x100)) == null)
-                goto LAB_180b811fe;
-                if (*(int *)(lVar3 + 24) <= iVar4) {
+                if ((PlotController._instance == null) ||
+                   (lVar3 = PlotController._instance.tempPlotHero,
+                   lVar3 == null)) goto LAB_180b811fe;
+                if (lVar3.cityAreaID <= iVar4) {
                   return 0;
                 }
                 lVar3 = FUN_18046c440(0);
-                if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x100) == 0)) goto LAB_180b811fe;
-                lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x100),iVar4,DAT_181d643f8);
+                if ((lVar3 == null) || (lVar3.tutorialFinished == null)) goto LAB_180b811fe;
+                lVar3 = FUN_180002f80(lVar3.tutorialFinished,iVar4,DAT_181d643f8);
                 if (lVar3 != null) {
                   lVar3 = FUN_18046c440(0);
-                  if ((((lVar3 == null) || (*(int64 *)(lVar3 + 0x100) == 0)) ||
-                      (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x100),iVar4,DAT_181d643f8), lVar3 == null
-                      )) || (*(int64 *)(lVar3 + 0x260) == 0)) goto LAB_180b811fe;
-                  cVar1 = FUN_1818279a0(*(int64 *)(lVar3 + 0x260),this,DAT_181d6aa68);
+                  if ((((lVar3 == null) || (lVar3.tutorialFinished == null)) ||
+                      (lVar3 = FUN_180002f80(lVar3.tutorialFinished,iVar4,DAT_181d643f8), lVar3 == null
+                      )) || (lVar3.customDifficultyData == null)) goto LAB_180b811fe;
+                  cVar1 = FUN_1818279a0(lVar3.customDifficultyData,this,DAT_181d6aa68);
                   if (cVar1) goto LAB_180b811b3;
                 }
                 iVar4 = iVar4 + 1;
@@ -1191,29 +1186,29 @@ public class KungfuSkillLvData
             }
             iVar5 = 0;
             while( true ) {
-              lVar3 = *(int64 *)(pStatics_b128 + 80);
-              if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 64)) == null) break;
-              if (*(int *)(lVar3 + 24) <= iVar5) {
+
+              if ((lVar3 = PlotController.StopWarCostFavor?.ResourcePoints) == null) break;
+              if (lVar3.cityAreaID <= iVar5) {
                 iVar5 = 0;
                 goto LAB_180b80e30;
               }
               iVar4 = 0;
               while( true ) {
                 lVar3 = FUN_18046bb80(0);
-                if (((lVar3 == null) || (*(int64 *)(lVar3 + 64) == 0)) ||
-                   (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 64),iVar5,DAT_181d51208)) == null)
+                if (((lVar3 == null) || (lVar3.ResourcePoints == null)) ||
+                   (lVar3 = FUN_180002f80(lVar3.ResourcePoints,iVar5,DAT_181d51208)) == null)
                 goto LAB_180b811fe;
-                if (*(int *)(lVar3 + 24) <= iVar4) break;
+                if (lVar3.cityAreaID <= iVar4) break;
                 lVar3 = FUN_18046bb80(0);
-                if (((lVar3 == null) || (*(int64 *)(lVar3 + 64) == 0)) ||
-                   ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 64),iVar5,DAT_181d51208), lVar3 == null ||
+                if (((lVar3 == null) || (lVar3.ResourcePoints == null)) ||
+                   ((lVar3 = FUN_180002f80(lVar3.ResourcePoints,iVar5,DAT_181d51208), lVar3 == null ||
                     ((lVar3 = FUN_180002f80(lVar3,iVar4,DAT_181d643f8), lVar3 == null ||
-                     (*(int64 *)(lVar3 + 0x260) == 0)))))) goto LAB_180b811fe;
-                cVar1 = FUN_1818279a0(*(int64 *)(lVar3 + 0x260),this,DAT_181d6aa68);
+                     (lVar3.customDifficultyData == null)))))) goto LAB_180b811fe;
+                cVar1 = FUN_1818279a0(lVar3.customDifficultyData,this,DAT_181d6aa68);
                 if (cVar1) {
                   lVar3 = FUN_18046bb80(0);
-                  if (((lVar3 == null) || (*(int64 *)(lVar3 + 64) == 0)) ||
-                     (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 64),iVar5,DAT_181d51208)) == null)
+                  if (((lVar3 == null) || (lVar3.ResourcePoints == null)) ||
+                     (lVar3 = FUN_180002f80(lVar3.ResourcePoints,iVar5,DAT_181d51208)) == null)
                   goto LAB_180b811fe;
                   goto LAB_180b80e0c;
                 }
@@ -1224,8 +1219,9 @@ public class KungfuSkillLvData
           }
         }
         else {
-          if ((*pStatics_df90 != 0) &&
-             (lVar3 = *(int64 *)(*pStatics_df90 + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null
+             ) {
             uVar2 = WorldData.GetHero(lVar3,this.belongHeroID,0);
             return uVar2;
           }
@@ -1234,33 +1230,33 @@ public class KungfuSkillLvData
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         LAB_180b80e30:
-        lVar3 = *(int64 *)(pStatics_b128 + 80);
-        if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 112)) == null) goto LAB_180b811fe;
+
+        if ((lVar3 = PlotController.StopWarCostFavor?.lastRandomWorldEventDay) == null) goto LAB_180b811fe;
         iVar4 = 0;
-        if (*(int *)(lVar3 + 24) <= iVar5) goto LAB_180b81060;
+        if (lVar3.cityAreaID <= iVar5) goto LAB_180b81060;
         iVar4 = 0;
         while( true ) {
           lVar3 = FUN_18046bb80(0);
-          if ((((lVar3 == null) || (*(int64 *)(lVar3 + 112) == 0)) ||
-              (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 112),iVar5,DAT_181d580a8)) == null) ||
-             (*(int64 *)(lVar3 + 24) == 0)) goto LAB_180b811fe;
-          if (*(int *)(*(int64 *)(lVar3 + 24) + 24) <= iVar4) break;
+          if ((((lVar3 == null) || (lVar3.lastRandomWorldEventDay == null)) ||
+              (lVar3 = FUN_180002f80(lVar3.lastRandomWorldEventDay,iVar5,DAT_181d580a8)) == null) ||
+             (lVar3.cityAreaID == null)) goto LAB_180b811fe;
+          if (*(int *)(lVar3.cityAreaID + 24) <= iVar4) break;
           lVar3 = FUN_18046bb80(0);
-          if ((((lVar3 == null) || (*(int64 *)(lVar3 + 112) == 0)) ||
-              ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 112),iVar5,DAT_181d580a8), lVar3 == null ||
-               (((*(int64 *)(lVar3 + 24) == 0 ||
-                 (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 24),iVar4,DAT_181d584a0)) == null) ||
-                (*(int64 *)(lVar3 + 64) == 0)))))) ||
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 64) + 0x260)) == null) goto LAB_180b811fe;
+          if ((((lVar3 == null) || (lVar3.lastRandomWorldEventDay == null)) ||
+              ((lVar3 = FUN_180002f80(lVar3.lastRandomWorldEventDay,iVar5,DAT_181d580a8), lVar3 == null ||
+               (((lVar3.cityAreaID == null ||
+                 (lVar3 = FUN_180002f80(lVar3.cityAreaID,iVar4,DAT_181d584a0)) == null) ||
+                (lVar3.ResourcePoints == null)))))) ||
+             (lVar3 = *(int64 *)(lVar3.ResourcePoints + 0x260)) == null) goto LAB_180b811fe;
           cVar1 = FUN_1818279a0(lVar3,this,DAT_181d6aa68);
           if (cVar1) {
             lVar3 = FUN_18046bb80(0);
-            if (((lVar3 != null) && (*(int64 *)(lVar3 + 112) != 0)) &&
-               ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 112),iVar5,DAT_181d580a8), lVar3 != null &&
-                ((*(int64 *)(lVar3 + 24) != 0 &&
-                 (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 24),iVar4,DAT_181d584a0)) != null)))))
+            if (((lVar3 != null) && (lVar3.lastRandomWorldEventDay != null)) &&
+               ((lVar3 = FUN_180002f80(lVar3.lastRandomWorldEventDay,iVar5,DAT_181d580a8), lVar3 != null &&
+                ((lVar3.cityAreaID != null &&
+                 (lVar3 = FUN_180002f80(lVar3.cityAreaID,iVar4,DAT_181d584a0)) != null)))))
             {
-              return *(uint64 *)(lVar3 + 64);
+              return lVar3.ResourcePoints;
             }
             goto LAB_180b811fe;
           }
@@ -1269,8 +1265,8 @@ public class KungfuSkillLvData
         iVar5 = iVar5 + 1;
         goto LAB_180b80e30;
         LAB_180b811b3:
-        lVar3 = FUN_18046c440(0);
-        if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 0x100)) != null) {
+
+        if ((lVar3 = FUN_18046c440(0)?.tutorialFinished) != null) {
         LAB_180b80e0c:
           uVar2 = FUN_180002f80(lVar3,iVar4,DAT_181d643f8);
           return uVar2;
@@ -1440,7 +1436,6 @@ public class KungfuSkillLvData
     // RVA   : 0xB821F0   Offset: 0xB809F0   Length: 0x1426
     public string GetSkillDescribe(bool fullDetail, bool showDamage, bool bookDescribe)
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int64 KungfuSkillLvData.GetSkillDescribe
                          (int64 this,char fullDetail,char showDamage,char bookDescribe)
         {
@@ -1470,9 +1465,9 @@ public class KungfuSkillLvData
         local_78 = 0.0;
         lVar3 = KungfuSkillLvData.GetBelongHero(this,0);
         if (lVar3 == null) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
-          throw; // [null/range check failed]
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null
+             ) throw; // [null/range check failed]
           lVar3 = WorldData.Player(lVar3,0);
         }
         lVar5 = "";
@@ -1811,7 +1806,7 @@ public class KungfuSkillLvData
           }
           else {
             if (iVar1 == 1) {
-              lVar5 = *(int64 *)(*(int64 *)(DAT_181d4ef00 + 184) + 0x468);
+              lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x468);
               lVar4 = KungfuSkillLvData.DataBase(this,0);
               uVar10 = "{0}{1}格内跳跃\n恢复{2}%已损失体力";
               if (lVar4 == null) throw; // [null/range check failed]
@@ -1947,16 +1942,16 @@ public class KungfuSkillLvData
                   }
                 }
                 cVar2 = false;
-                if (**(int **)(DAT_181d4ef00 + 184) != 2) {
+                if (PlotController._instance != 2) {
                   cVar2 = cVar13;
                 }
                 if (cVar2) {
                   lVar3 = KungfuSkillLvData.DataBase(this,0);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  lVar5 = String.Concat(lVar5,"\n\n<color=grey><i>",*(uint64 *)(lVar3 + 40),"</i></color>",0
+                  lVar5 = String.Concat(lVar5,"\n\n<color=grey><i>",lVar3.forceAreaID,"</i></color>",0
                                         );
                 }
-                if ((**(int **)(DAT_181d4ef00 + 184) != 2) && (!cVar13)) {
+                if ((PlotController._instance != 2) && (!cVar13)) {
                   lVar5 = String.Concat(lVar5,"\n<i><color=grey>左Shift查看详情</color></i>",0);
                 }
                 return lVar5;

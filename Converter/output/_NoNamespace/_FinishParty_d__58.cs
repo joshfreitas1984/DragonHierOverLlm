@@ -34,8 +34,8 @@ public class <FinishParty>d__58
     // RVA   : 0x8CA080   Offset: 0x8C8880   Length: 0xEBE
     private virtual bool MoveNext()
     {
+        var p_FinishParty_d__58 = *(int64*)(_FinishParty_d__58_StaticsPtr + 184);
         var plVar11 = *(int64*)(lVar11 + 184);
-        var pStatics = *(int64*)(DAT_181d6b060 + 184);
         uint uVar1;
         uint uVar2;
         int iVar3;
@@ -130,7 +130,7 @@ public class <FinishParty>d__58
             }
             lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 24 + (int64)(int)uVar1 * 8);
             uVar2 = Mathf.RoundToInt();
-            lVar9 = *(int64 *)(pStatics + 24);
+            lVar9 = *(int64 *)(p_FinishParty_d__58 + 24);
             if ((lVar9 == null) || (iVar3 = Mathf.Clamp(uVar2,0,*(int *)(lVar9 + 24) + -1,0), lVar4 == null))
             throw; // [null/range check failed]
             HeroData.AddTag(lVar4,iVar3 + 0x14e,0x41200000,0,1,1,0);
@@ -146,9 +146,9 @@ public class <FinishParty>d__58
                 }
               }
               lVar4 = FUN_18046c440(0);
-              lVar9 = *(int64 *)(pStatics + 24);
-              uVar2 = Mathf.RoundToInt(pStatics,0);
-              lVar10 = *(int64 *)(pStatics + 24);
+              lVar9 = *(int64 *)(p_FinishParty_d__58 + 24);
+              uVar2 = Mathf.RoundToInt(p_FinishParty_d__58,0);
+              lVar10 = *(int64 *)(p_FinishParty_d__58 + 24);
               if ((lVar10 == null) ||
                  (uVar2 = Mathf.Clamp(uVar2,0,*(int *)(lVar10 + 24) + -1,0), lVar9 == null))
               throw; // [null/range check failed]

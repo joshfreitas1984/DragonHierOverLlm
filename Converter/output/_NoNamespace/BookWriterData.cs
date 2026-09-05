@@ -55,10 +55,10 @@ public class BookWriterData
     // RVA   : 0xCDF020   Offset: 0xCDD820   Length: 0xBE
     public HeroData GetBookWriterHero()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null)
+        {
           WorldData.GetHero(lVar1,this.bookWriterHeroID,0);
           return;
         }
@@ -109,8 +109,6 @@ public class BookWriterData
     // RVA   : 0xCDEFC0   Offset: 0xCDD7C0   Length: 0x26
     public bool BookSelectFinished()
     {
-        bool FUN_180cdefc0(int64 this)
-        {
         int iVar1;
         iVar1 = this.bookWriterType;
         if ((iVar1 != 0) && (iVar1 != 1)) {
@@ -126,11 +124,9 @@ public class BookWriterData
     // RVA   : 0xCDEFF0   Offset: 0xCDD7F0   Length: 0x2F
     public bool CanStartWork()
     {
-        uint8 FUN_180cdeff0(int64 this)
-        {
         int iVar1;
-        int64 lVar2;
-        uint8 uVar3;
+        long lVar2;
+        byte uVar3;
         iVar1 = this.bookWriterType;
         if ((iVar1 == 0) || (iVar1 == 1)) {
           lVar2 = this.targetBookData;
@@ -152,15 +148,15 @@ public class BookWriterData
     // RVA   : 0xCDF9F0   Offset: 0xCDE1F0   Length: 0xE8
     public bool HaveMoney()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
-        if ((*pStatics != 0) &&
-           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null)
+        {
           lVar3 = WorldData.Player(lVar3,0);
-          if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
-            iVar1 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
+          if ((lVar3 != null) && (lVar3.speBookStorageSpeAdd != null)) {
+            iVar1 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
             iVar2 = BookWriterData.GetMoneyCost(this,0);
             return iVar2 <= iVar1;
           }
@@ -405,7 +401,6 @@ public class BookWriterData
     // RVA   : 0xCDF210   Offset: 0xCDDA10   Length: 0x181
     public int GetMinSkillLv()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -429,8 +424,9 @@ public class BookWriterData
           if (lVar3 == null) throw; // [null/range check failed]
           iVar4 = (*(int *)(lVar3 + 52) + 1) * 15;
         }
-        if ((*pStatics != 0) &&
-           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null)
+        {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             cVar2 = HeroData.HaveForceFunction(lVar3,9);

@@ -52,7 +52,8 @@ public class StartGameSettingController
         lVar3 = new HeroData(0);
         if (lVar3 != null) {
           *(uint32 *)(lVar3 + 212) = 18;
-          *(uint32 *)(lVar3 + 132) = *(uint32 *)(*(int64 *)(DAT_181d4ef00 + 184) + 236);
+          *(uint32 *)(lVar3 + 132) =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 236);
           *(uint32 *)(lVar3 + 0x178) = 0x461c3c00;
           *(uint32 *)(lVar3 + 0x184) = 0x461c3c00;
           *(uint32 *)(lVar3 + 400) = 0x461c3c00;
@@ -70,7 +71,7 @@ public class StartGameSettingController
         long lVar2;
         uint uVar3;
         lVar1 = this.startBgm;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d4e010 + 184) + 8);
+        lVar2 = GameController.difficultyExtraPoint;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
           uVar3 = PlayerPrefDictionary.GetFloat(lVar2,"BgmVolume",0);
           if (lVar1 != null) {
@@ -88,7 +89,8 @@ public class StartGameSettingController
         lVar1 = new HeroData(0);
         if (lVar1 != null) {
           *(uint32 *)(lVar1 + 212) = 18;
-          *(uint32 *)(lVar1 + 132) = *(uint32 *)(*(int64 *)(DAT_181d4ef00 + 184) + 236);
+          *(uint32 *)(lVar1 + 132) =
+               *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 236);
           *(uint32 *)(lVar1 + 0x178) = 0x461c3c00;
           *(uint32 *)(lVar1 + 0x184) = 0x461c3c00;
           *(uint32 *)(lVar1 + 400) = 0x461c3c00;
@@ -102,7 +104,6 @@ public class StartGameSettingController
     // RVA   : 0xC6FE30   Offset: 0xC6E630   Length: 0x12B0
     public void BirthSettingPlayerData()
     {
-        var pStatics = *(int64*)(DAT_181d4df90 + 184);
         int iVar1;
         uint uVar2;
         uint uVar3;
@@ -576,7 +577,7 @@ public class StartGameSettingController
         case 0:
           lVar4 = this.Player;
           lVar9 = this.BirthSetting;
-          lVar6 = *pStatics;
+          lVar6 = GameController._instance;
           if (lVar9 == null) goto LAB_180c710d9;
           if (lVar9.Count < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -590,7 +591,7 @@ public class StartGameSettingController
           goto LAB_180c70dce;
         case 1:
           lVar4 = this.Player;
-          lVar9 = *pStatics;
+          lVar9 = GameController._instance;
           uVar3 = FUN_180d8cf10(0,6);
           if (lVar9 == null) goto LAB_180c710d9;
           in_stack_ffffffffffffffb0 = 0;
@@ -602,7 +603,7 @@ public class StartGameSettingController
         case 2:
           lVar4 = this.Player;
           lVar9 = this.BirthSetting;
-          lVar6 = *pStatics;
+          lVar6 = GameController._instance;
           if (lVar9 == null) goto LAB_180c710d9;
           if (lVar9.Count < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -618,9 +619,10 @@ public class StartGameSettingController
           break;
         case 3:
           lVar4 = this.Player;
-          if (*pStatics == 0) goto LAB_180c710d9;
+          if (GameController._instance == null) goto LAB_180c710d9;
           in_stack_ffffffffffffffa8 = 0;
-          uVar5 = GameController.GenerateHorseData(*pStatics,1,1,0,0);
+          uVar5 = GameController.GenerateHorseData
+                            (GameController._instance,1,1,0,0);
           if (lVar4 == null) goto LAB_180c710d9;
           HeroData.GetItem(lVar4,uVar5,0,0);
           break;

@@ -591,8 +591,6 @@ public class UIGrid
     // RVA   : 0x10ECF00   Offset: 0x10EB700   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_1810ecf00(int64 this)
-        {
         this.cellWidth = 0x43480000;
         this.cellHeight = 0x43480000;
         TrailRenderer_Base.ctor(this,0);
