@@ -42,7 +42,7 @@ internal static class AttriLvDiagnosticPatches
             }
 
             var sb = new StringBuilder();
-            sb.AppendLine("AttriLvDiagnostic: scanning PlotController.Instance for small list-like properties:");
+            sb.AppendLine("AttriLvDiagnostic: scanning PlotController.Instance for ALL list-like properties (no count filter):");
             foreach (var prop in pc.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
             {
                 if (prop.GetIndexParameters().Length > 0) continue;
@@ -59,15 +59,31 @@ internal static class AttriLvDiagnosticPatches
                 int count;
                 try { count = (int)countProp.GetValue(value); }
                 catch { continue; }
-                if (count < 2 || count > 12) continue;
+
+                // Always log Count so we can spot large data tables (e.g. only indices 0-5 ever
+                // displayed) that a narrow count filter would have hidden entirely.
+                if (count > 30)
+                {
+                    sb.AppendLine($"  {prop.PropertyType.Name} {prop.Name} (Count={count}) = <too large to dump, showing first 8>");
+                    count = 8;
+                }
 
                 var items = new List<string>();
                 for (int i = 0; i < count; i++)
                 {
-                    try { items.Add(itemProp.GetValue(value, new object[] { i })?.ToString() ?? "null"); }
-                    catch (Exception ex) { items.Add($"<error: {ex.Message}>"); }
+                    object item;
+                    try { item = itemProp.GetValue(value, new object[] { i }); }
+                    catch (Exception ex) { items.Add($"<error: {ex.Message}>"); continue; }
+
+                    string text = item?.ToString();
+                    // A bare type-name ToString() (no override) means this is a custom
+                    // class/struct, not a primitive/string - reflect one level into its own
+                    // public properties so nested label/threshold fields aren't hidden.
+                    if (item != null && text == item.GetType().ToString())
+                        text = $"{{{DiagnosticPatches.DumpMembersOneLine(item)}}}";
+                    items.Add(text ?? "null");
                 }
-                sb.AppendLine($"  {prop.PropertyType.Name} {prop.Name} (Count={count}) = [{string.Join(", ", items)}]");
+                sb.AppendLine($"  {prop.PropertyType.Name} {prop.Name} (Count={countProp.GetValue(value)}) = [{string.Join(", ", items)}]");
             }
             MainPlugin.Logger?.LogInfo(sb.ToString());
         }

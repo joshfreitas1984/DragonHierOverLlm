@@ -238,7 +238,8 @@ internal static class DynamicStringPatches
                 // is frequently a legitimately-CJK force name, so the strict non-CJK class would
                 // never match here at all. See CONFIRMED BUG #6 above for the quantifier choice.
                 var runQuantifier = (lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1) ? "*" : "*?";
-                var runCaptureClass = MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true
+                var runIsUnanchoredTrailing = lastGroupIsUnanchored && runEnd == placeholderMatches.Count - 1;
+                var runCaptureClass = (runIsUnanchoredTrailing && MainPlugin.SentenceBoundaryAwareTemplateCaptureEnabled?.Value == true)
                     ? SentenceBoundaryAwarePermissiveClass
                     : PermissivePlaceholderCaptureClass;
                 patternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");

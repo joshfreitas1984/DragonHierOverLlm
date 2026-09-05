@@ -52,115 +52,49 @@ signatures once both namespaces are in scope.
   `Resources.Load`).
 - **Non-generic `(IntPtr)` / `(string)` constructors** on IL2CPP wrapper types (e.g.
   `new TextAsset(ptr)`, `new TextAsset(text)`) are the safe way to convert/construct objects
-  instead of generic `Cast<T>()`/`TryCast<T>()`.
-  - **Caveat confirmed for this build (`be.785`):** `TextAsset` has **no public `(string)`
-    constructor** — only a non-public `()` ctor and a public `(IntPtr)` pointer-wrap ctor.
-  - **Confirmed-unsafe refinement:** invoking that non-public empty ctor via reflection
-    (`GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic, null, Type.EmptyTypes, null)`)
-    and then calling `TextAsset.Internal_CreateInstance(self, text)` on the *freshly constructed*
-    instance throws a `NullReferenceException` inside `Internal_CreateInstance` — the reflection-invoked
-    empty ctor does not allocate a real native IL2CPP object, so the wrapper's native pointer is
-    effectively invalid and the icall null-derefs. This only surfaces the first time a code path that
-    builds a brand-new `TextAsset` actually runs (e.g. `ResourceIoPatches.Load_Postfix` only hits it
-    when a matching override CSV file exists on disk), so it can look like an intermittent/asset-specific
-    bug rather than a systemic one.
-  - **Safe fix:** don't construct a new `TextAsset` at all — call
-    `static void TextAsset.Internal_CreateInstance(TextAsset self, string text)` directly on the
-    **already-loaded** `TextAsset` wrapper (e.g. the one obtained via `new TextAsset(__result.Pointer)`
-    from an existing `UnityEngine.Object`), since it already has a valid native pointer. This mutates
-    its text in place and mirrors Unity's own `TextAsset(string)` source constructor without ever
-    needing to allocate a new native object. See `ResourceIoPatches.Load_Postfix` for the reference
-    implementation. Don't assume other IL2CPP wrapper types have a `(string)` ctor either — verify
-    per-type via reflection first, and be wary of the same "reflection ctor doesn't allocate a native
-    object" trap for any wrapper type that lacks a public constructor.
+  instead of generic `Cast<T>()`/`TryCast<T>()`. **Caveat confirmed for build `be.785`:**
+  `TextAsset` has no public `(string)` constructor — mutate an already-loaded wrapper via
+  `TextAsset.Internal_CreateInstance(self, text)` instead of constructing a new one; see
+  [`DragonHeirPlugin/docs/resourceiopatches-agent-reference.md`](../../DragonHeirPlugin/docs/resourceiopatches-agent-reference.md)
+  for why and the reference implementation. Verify per-type via reflection before assuming any
+  other wrapper type has a usable `(string)` ctor.
 - Guard on plain property reads (e.g. `Il2CppSystem.Type.FullName`) before doing anything — these
   are safe, non-invoking reads.
 
-## Gotcha: `object`/`Exception` parameters on interop methods are `Il2CppSystem.Object`/`Exception`
+## Gotcha: interop `object`/`Exception` parameters are `Il2CppSystem.Object`/`Il2CppSystem.Exception`
 
-Methods like `UnityEngine.Debug.Log(object message)` look like they take `System.Object` from
-IntelliSense/decompiled signatures, but in this interop build they actually take
-`Il2CppSystem.Object` (and `Debug.LogException` takes `Il2CppSystem.Exception`, not
-`System.Exception`). A `[HarmonyPatch(typeof(Debug), nameof(Debug.Log), new[] { typeof(object) })]`
-attribute using `System.Object`/`System.Exception` therefore silently fails to match any real
-overload — Harmony throws `HarmonyException: Undefined target method` /
-`AccessTools.DeclaredMethod: Could not find method ... and parameters (object)` at `Load()` time
-(plugin fails to load entirely), not a subtler runtime bug. Fix: use `typeof(Il2CppSystem.Object)`
-/ `typeof(Il2CppSystem.Exception)` in the `HarmonyPatch` attribute and as the patch method's
-parameter type instead — the interop wrapper types convert to `object` fine as a plain upcast when
-passed into ordinary C# helper methods (e.g. logging/formatting) afterward. See
-`UnityLogCapture.cs` for the corrected patch signatures.
+Methods like `UnityEngine.Debug.Log(object message)` take `Il2CppSystem.Object` in this interop
+build, not `System.Object` (and `LogException` takes `Il2CppSystem.Exception`). A
+`[HarmonyPatch]` attribute typed against `System.Object`/`System.Exception` silently fails to
+match — `Harmony.CreateAndPatchAll()` throws `Undefined target method` and the whole plugin fails
+to load. Always verify a method's real parameter *namespaces* against the actual
+`BepInEx\interop\*.dll` before writing the attribute — short type names are misleading, since both
+`Il2CppSystem.Object` and `System.Object` print as just "Object".
 
-This was found by dumping raw IL metadata with fully-qualified type names (short names alone are
-misleading — `Il2CppSystem.Object` and `System.Object` both print as just "Object" unless you also
-resolve the type's namespace). When verifying interop method signatures via
-`System.Reflection.Metadata`/`PEReader`, always resolve and print the parameter types' namespaces,
-not just their short names.
+`Il2CppSystem.Object.ToString()`/`Il2CppSystem.Exception.ToString()` also don't return the boxed
+value — they print the wrapper's own type name. Read `.Message`/`.StackTrace`/`.InnerException`
+directly for exceptions; for a boxed `Il2CppSystem.Object`, inspect its real IL2CPP class via the
+non-generic static helpers `IL2CPP.il2cpp_object_get_class`/`il2cpp_class_get_name_`/
+`Il2CppStringToManaged` (safe — the "generic interop call" danger is specifically about generic
+methods like `Cast<T>`, not non-generic static helpers).
 
-## Gotcha: `Il2CppSystem.Object.ToString()` does not return the boxed value's real content
+See [`DragonHeirPlugin/docs/unitylogcapture-reference.md`](../../DragonHeirPlugin/docs/unitylogcapture-reference.md)
+for the concrete implementation (`UnityLogCapture.cs`) and
+[`DragonHeirPlugin/docs/unitylogcapture-no-logmessagereceived.md`](../../DragonHeirPlugin/docs/unitylogcapture-no-logmessagereceived.md)
+for how both gotchas were found.
 
-Even after fixing the patch signatures above, calling `.ToString()` directly on an
-`Il2CppSystem.Object` parameter (e.g. a `Debug.Log` message) prints the literal string
-`"Il2CppSystem.Object"` — the C# wrapper class's own default `Object.ToString()` (its full type
-name) — instead of the actual boxed value (e.g. the real string that was logged). Same for
-`Il2CppSystem.Exception.ToString()`, which returns `"Il2CppSystem.Exception"` instead of a
-message+stacktrace dump; use `.Message`/`.StackTrace`/`.InnerException` directly instead (plain
-safe property reads) — see `FormatException` in `UnityLogCapture.cs`.
+## Gotcha: Harmony prefix/postfix parameter names must match the real IL2CPP parameter name
 
-For the general `Il2CppSystem.Object` case (most log messages are actually boxed strings), the fix
-is to inspect the object's *real* IL2CPP class and, if it is `System.String`, read the text via the
-native string accessor — all through plain, non-generic static methods on
-`Il2CppInterop.Runtime.IL2CPP` (from `BepInEx\core\Il2CppInterop.Runtime.dll`), not the
-confirmed-unsafe generic `Cast<T>()`/`TryCast<T>()`:
-
-```csharp
-var ptr = il2cppObj.Pointer; // Il2CppObjectBase.Pointer — safe property read
-var klass = IL2CPP.il2cpp_object_get_class(ptr);
-var ns = IL2CPP.il2cpp_class_get_namespace_(klass);   // "System"
-var name = IL2CPP.il2cpp_class_get_name_(klass);      // "String"
-if (ns == "System" && name == "String")
-    text = IL2CPP.Il2CppStringToManaged(ptr);
-```
-
-`il2cpp_object_get_class`/`il2cpp_class_get_namespace_`/`il2cpp_class_get_name_`/
-`Il2CppStringToManaged` are all plain static P/Invoke-wrapper methods with concrete (non-generic)
-parameter/return types — safe per the interop rules above, since the "generic Il2Cpp interop call"
-danger is specifically about generic methods like `Cast<T>`/`TryCast<T>`, not about calling
-non-generic static helpers that happen to live in the interop runtime library. See
-`UnityLogCapture.FormatMessage` for the full implementation and fallback behavior for non-string
-boxed values (falls back to plain `ToString()`, which is fine for types that do override it).
-
-Found via the same raw-metadata-dump technique as above, applied this time to
-`BepInEx\core\Il2CppInterop.Runtime.dll` (not the game's own `BepInEx\interop\*.dll`) to enumerate
-the `Il2CppInterop.Runtime.IL2CPP` static helper class's full method list and find the non-generic
-string/class-name accessors.
-
-## Gotcha: Harmony prefix parameter name must match the real IL2CPP parameter name (not just type)
-
-Harmony matches prefix/postfix parameters to the original method's parameters **by name**, not
-just by position/type. Two `GlobalData` patches broke this way and both only surfaced at
-`Harmony.CreateAndPatchAll()` / plugin-load time (not compile time, and not even at `HarmonyPatch`
-attribute resolution — `nameof(GlobalData.X)` finds the method fine), deep in IL emission:
-`HarmonyException: IL Compile Error` → `System.Exception: Parameter "<wrong-name>" not found in
-method ...`, crashing the whole plugin load (every patch in the same `PatchAll` call fails to
-apply as a result):
-- `ConvertNumToChinese_Prefix` was declared `(uint num, ref string __result)` but the real
-  interop signature is `static string ConvertNumToChinese(int input)` — wrong type (`uint` vs
-  `int`) *and* wrong name (`num` vs `input`).
-- `GetChineseNumText_Prefix` was declared `(int num, ref char __result)` but the real signature is
-  `static char GetChineseNumText(int id)` — right type, wrong name (`num` vs `id`).
-- `GetNumText_Prefix`'s `(int num, ...)` happens to already match the real parameter name (`num`),
-  which is why it never broke.
-
-Fix in both cases: rename the prefix parameter to match the real name exactly and match its real
-type. Note that `HarmonyManipulator.WritePrefixes` appears to stop applying further patches in the
-same class after the first one throws during IL compilation — the `ConvertNumToChinese` error had
-to be fixed and redeployed before the *next* bad patch (`GetChineseNumText`) even surfaced in the
-log, so don't assume a single fix-and-retry cycle catches every bad patch in the file; re-check
-all `[HarmonyPatch(typeof(GlobalData), ...)]` (and other interop-type) prefixes' parameter names
-against the real DLL after any such failure, rather than fixing one at a time reactively. When
-adding a new Harmony patch, verify the original method's exact parameter names via the interop DLL
-(see "Debugging tips" below) rather than guessing from decompiled/legacy variable names.
+Harmony matches patch parameters to the original method's parameters **by name**, not just
+type/position. A mismatch fails silently at `Harmony.CreateAndPatchAll()`/plugin-load time (not
+compile time — `nameof(...)` attribute resolution finds the method fine either way) with
+`HarmonyException: IL Compile Error` / `Parameter "X" not found`, and can stop every remaining
+patch in the same class from applying (confirmed: two `GlobalData` prefixes with wrong
+name-and/or-type parameters — `ConvertNumToChinese`, `GetChineseNumText` — the first error had to
+be fixed and redeployed before the second even surfaced in the log). Always verify the original
+method's exact parameter names and types via the interop DLL (see "Debugging tips" below) before
+writing a patch, and after any such failure re-check every prefix in the file rather than fixing
+one at a time reactively.
 
 ## Debugging tips
 
@@ -234,178 +168,76 @@ external dependency to `GamePlugin.csproj`:
 See `DragonHeirPlugin/docs/costura-embedded-dependencies.md` for the full investigation (the
 `System.Text.Encoding.CodePages` case) including why Costura alone wasn't sufficient without step 1.
 
-## `DynamicStringPatches` composite `String.Format` templates (2026-08-27) — current state
+## `DynamicStringPatches` — composite `String.Format` templates (current state)
 
 `DynamicStringPatches` compiles each `isTemplate: true` dictionary entry into a `CompiledTemplate`
-(a regex over `Raw`'s literal segments with `{n}` placeholders → named capture groups, replayed
-against `Result`). `ApplyTemplates` runs this match+reconstruct pass in both `GenericPostfix` and
-the sink-level `ApplyToComponentText`, **before** the bare-fragment `ApplyDictionary` pass, so a
-matched composite's own literal separators translate first. `FormatPrefix` (literal
-pre-substitution match on a real `String.Format` call's template argument) is a second,
-complementary mechanism for genuine `String.Format` call sites — the two don't conflict since
-`FormatPrefix` only sees pre-substitution `"{n}"` text.
+regex over `Raw`'s literal segments, replayed against `Result`. `ApplyTemplates` runs before the
+bare-fragment `ApplyDictionary` pass in both `GenericPostfix` and the sink-level
+`ApplyToComponentText`. `FormatPrefix` is a separate, complementary pass over a real
+`String.Format` call's pre-substitution template argument.
 
 **Two hazards to remember when touching this code:**
-- Never log (or call anything that might call `String.Format`/`Concat`) from inside a Harmony
-  patch on `String.Format`/`Concat` itself without a re-entrancy guard (`[ThreadStatic]
-  _inFormatConcatPatch` in `GenericPostfix`/`FormatPrefix`) — BepInEx's own logger calls
-  `String.Format` internally, so any log call from inside these patches (including from a `catch`
-  block) recurses forever.
-- `Regex.Escape` is not symmetric for `{`/`}` (`Regex.Escape("{0}")` → `"\{0}"`, not `"\{0\}"`) —
-  don't round-trip a whole raw string through `Regex.Escape` and then try to reverse-engineer
-  placeholder positions afterward; walk `Raw` directly, escaping only the literal segments between
-  `{n}` tokens (see `BuildCompiledTemplate`).
+- Never log (or call anything that might call `String.Format`/`Concat`) from inside a patch on
+  `String.Format`/`Concat` itself without the `[ThreadStatic]` re-entrancy guard
+  (`_inFormatConcatPatch`) — BepInEx's own logger calls `String.Format` internally, causing
+  infinite recursion.
+- `Regex.Escape` is not symmetric for `{`/`}` — never round-trip a whole raw string through
+  `Regex.Escape` and reverse-engineer placeholder positions; walk `Raw` directly, escaping only
+  the literal segments between `{n}` tokens (`BuildCompiledTemplate`).
 
-Full investigation narrative (three chained misdiagnoses before finding the real
-`Regex.Escape` bug — worth reading if a similar template silently fires again) is in
-[`DragonHeirPlugin/docs/dynamicstringpatches-template-regex-bug.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-template-regex-bug.md).
+Full current-state design (template compiler rules, CJK-permissive fallback, short-entry
+word-boundary spacing, re-entrancy, loading conventions, change checklist) is in
+[`DragonHeirPlugin/docs/dynamicstringpatches-agent-reference.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-agent-reference.md).
+Confirmed-bug narratives (`Regex.Escape` root cause, CJK-placeholder fallback, adjacent-placeholder-merge
+bugs #5–#9, and the still-unfixed `"在下#$PlayerName#"` prefix false-positive) are indexed from
+[`DragonHeirPlugin/KNOWN_ISSUES.md`](../../DragonHeirPlugin/KNOWN_ISSUES.md) — read the specific
+doc before modifying a confirmed bug fix.
 
-**Update (2026-08-29) — CJK-inclusive placeholder fallback**: `CompiledTemplate` now also has a
-`PermissivePattern`, tried only when the strict `Pattern` (whose placeholder capture excludes CJK,
-per bug #3/#4) fails to match. This handles templates whose `{n}` placeholder is legitimately
-substituted with real CJK data (e.g. a sect/title name), which the strict pattern can never match
-— without the fallback, the template's own translated literal connector text was skipped entirely.
-**Residual risk**: the permissive fallback's safety against reproducing bug #3 (over-matching into
-unrelated CJK) currently depends entirely on `CompiledTemplate.BlockingRawEntries` already covering
-the relevant literal segment (i.e. a longer bare dictionary entry exists) — it is NOT inherently
-safe just because the fallback is "only reached when the strict pattern fails," since a
-CJK-placeholder template's strict pattern *always* fails by construction. If a new bug-#3-style
-over-match is reported for a CJK-placeholder template, check `BlockingRawEntries` coverage first.
-Full detail (including the verification harness methodology):
-[`DragonHeirPlugin/docs/dynamicstringpatches-cjk-placeholder-fallback.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-cjk-placeholder-fallback.md).
+## Dynamic-string dictionary: `DynamicStringColumnSources`/`DynamicStringLabelColumnSources`
 
-**Update (2026-08-30) — short (<=2-char) bare-dictionary entries only apply when standalone**:
-`ApplyDictionary`'s bare (non-template) fragment pass has many very short entries (single CJK
-characters, e.g. `"胜"`→`"Victory"`, plus 2-character ones like `"敌方"`→`"Enemy"`). A plain
-substring replace let these match in the middle of a longer untranslated compound with no
-dedicated entry (e.g. `获胜`/`击败敌方全体` → `获 Victory`/`击败 Enemy Everyone`), producing
-incoherent output. Fix (`ReplaceWithWordBoundarySpacing`/`IsCjkChar`/
-`ShortEntryBoundaryCheckMaxLength`): an entry with `Raw.Length <= 2` is only applied when its
-CJK-starting edge does NOT sit directly against another CJK character in the input; otherwise that
-occurrence is left untouched so the compound stays fully untranslated (better than half-translated
-garbage) pending a proper whole-phrase dictionary entry. **Deliberately NOT generalized to longer
-(3+-character) entries** — tried and rejected: it caused a genuinely specific, complete
-whole-phrase entry to fail to apply merely because an unrelated single stray character next to it
-(with no dictionary coverage) was CJK, losing a perfectly good translation instead of just leaving
-one adjacent character untranslated. Verified via a throwaway `TempVerify/` harness (deleted after
-use) against the motivating string plus a longer-entry-not-regressed case before landing.
+Config-driven extraction (not manual dictionary curation) avoids `ApplyDictionary`'s bare-fragment
+substring replace corrupting whole-phrase compounds with no dedicated entry (e.g. save-slot
+force/sect names). `Tests/GameFileHandling.cs`'s `DynamicStringColumnSources`/
+`DynamicStringLabelColumnSources` feed `dynamicStringsFromColumns.txt`, loaded via the same
+`dynamicStrings*.txt.yaml` glob — adding a new dynamicStrings-family file never requires a plugin
+change. Full narrative:
+[`DragonHeirPlugin/docs/dynamicstrings-column-source-extraction.md`](../../DragonHeirPlugin/docs/dynamicstrings-column-source-extraction.md);
+follow-on multi-line/token-placeholder bugs:
+[`DragonHeirPlugin/docs/prefabtext-multiline-and-token-placeholder-bugs.md`](../../DragonHeirPlugin/docs/prefabtext-multiline-and-token-placeholder-bugs.md).
 
-**Update (2026-08-30) — CONFIRMED BUG #9, tag-hidden CJK neighbor defeats the short-entry boundary
-check**: the check above originally compared the RAW previous/next character (`input[idx - 1]`/
-`input[matchEnd]`) to decide if a short entry was standalone. But rich-text tags (`<color=...>`,
-`</color>`) can sit directly between a short entry and its true visible CJK neighbor (e.g.
-`"一场<color=#8C8C8C>武者</color>比武大赛"` — the character right before `武者` is `>`, not the
-real neighbor `场`), which hid the neighbor from the check entirely and let `"武者"`→`"Warrior"`
-incorrectly split out of the untranslated compound `一场武者比武大赛`. Fix: the boundary check now
-uses a tag-aware lookback/lookahead (`EffectiveTrailingCharBefore`/`EffectiveLeadingCharAt` — the
-same tag-skipping approach already used elsewhere in this method for word-boundary spacing)
-instead of the raw adjacent character. Verified via a throwaway harness against the exact reported
-string (now stays fully untranslated) plus a standalone control case (`"A武者B"`, still translates
-correctly).
-
-**Update (2026-08-30) — PrefabText-merged templates: "在下#$PlayerName#" prefix false-positive
-remains flagged/unfixed (a full-match-anchor fix was tried and REVERTED)**: templates merged in
-from PrefabTextPatches' own dictionary files (see `LoadDictionary`'s merge loop) can have very weak
-anchors (e.g. `"在下#$PlayerName#"` — a 2-char literal with no trailing anchor at all) since
-PrefabTextPatches only ever did exact whole-string matching. Compiled into the ordinary template
-dictionary, `ApplyTemplates` matches/replaces anywhere in the input by default, so such an entry
-could false-positive-match as a mere *prefix* inside unrelated dialogue starting with the same
-short literal. A fix anchoring every PrefabText-merged template's compiled pattern to the entire
-input (`\A...\z`) was tried and **reverted** — it broke far more legitimate templates than it
-protected, since these merged templates are routinely embedded inside a larger runtime string with
-extra trailing content (e.g. `"#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往
-欲一展身手"` followed by a `"\n<color=...>★★★★</color>"` rating suffix Raw never accounts for) —
-requiring true end-of-input made the whole template fail to match whenever ANY trailing content
-followed it, which is the common case, not the exception. **Do not re-attempt a blanket full-match
-anchor for this class of template.** Any real fix needs to be scoped much more narrowly (e.g. only
-reject compiling a template whose leading literal is both very short AND whose last placeholder has
-zero trailing literal to bound it — the actual dangerous combination). Full detail:
-[`DragonHeirPlugin/docs/dynamicstringpatches-adjacent-placeholder-merge.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-adjacent-placeholder-merge.md).
-
-## Dynamic-string dictionary: `DynamicStringColumnSources`/`DynamicStringLabelColumnSources` (2026-08-27)
-
-`DynamicStringPatches.ApplyDictionary`'s plain substring-replace can corrupt whole-phrase
-compounds that have no dedicated dictionary entry (e.g. a force/sect name read raw from save data,
-bypassing the translated CSV lookups). Fixed by config-driven extraction instead of manual
-dictionary curation: `Tests/GameFileHandling.cs`'s `DynamicStringColumnSources` (whole-value
-columns, e.g. `ForceData.csv` col 1, `SpeHeroData.csv` col 5) and `DynamicStringLabelColumnSources`
-(compound `Label<sign><number>` stat cells — strips the trailing number, keeps only the label
-vocabulary) both feed `dynamicStringsFromColumns.txt`, packaged separately and loaded by
-`DynamicStringPatches.LoadDictionary` via a `dynamicStrings*.txt.yaml` glob
-(`DictionaryFilePattern`) — adding a new dynamicStrings-family file never requires another plugin
-change. Full narrative: `DragonHeirPlugin/docs/dynamicstrings-column-source-extraction.md`.
-
-Two follow-on bugs found 2026-08-28 in the same area — full narratives in
-`DragonHeirPlugin/docs/prefabtext-multiline-and-token-placeholder-bugs.md`:
-- `PrefabTextPatches`' exact-match dictionary never matched multi-line entries because dump-time
-  newline-escaping wasn't reversed at lookup time — fixed via `NormalizeForLookup`/
-  `DenormalizeFromLookup`.
-- `DynamicStringWorkflow.IsFormatTemplate` didn't recognize the game's own `#Token#`/`#$Token#`
-  markers as placeholders, so `#Token#`-only strings never got `isTemplate: true` and fell through
-  to bare-fragment corruption — fixed by extending `FormatPlaceholderRegex`.
-
-- `StartMenuController.ResetFaceSetting`/`ResetPlayerTag` crashes were downstream symptoms of
-  `GameDataController.LoadAllGameData` aborting partway through its single sequential,
-  non-isolated database-build pass — root cause was `HeroTagData.csv`/`ResourcePointTypeData.csv`
-  effect-string columns breaking `GameDataController.StringToSpeAddData`. Fixed pipeline-side via
-  `SkipColumns` in `Tests/GameFileHandling.cs` (see
-  `Tests/docs/skipcolumns-stringtospeadddata-family.md`); the plugin-side
-  `DiagnosticPatches.cs`/`CrashMitigationPatches.cs` mitigation patches have since been removed.
-  Full case study: `DragonHeirPlugin/docs/resetfacesetting-crash-investigation.md`.
-- Same `StringToSpeAddData` bug class recurred via `GameDataController.LoadSkillData` on
-  `KungFuData.csv`/`SummonKungFuData.csv` column 13, then again (different method,
-  `StringToAttriRatio`, no try/catch) on the same files' columns 9/10 — both fixed via
-  `SkipColumns`. Full case study: `DragonHeirPlugin/docs/dynamicstringpatches-template-regex-bug.md`
-  and `Tests/docs/kungfudata-stringtoattriratio-fatal.md`.
-- **General lesson**: when `BepInEx/LogOutput.log` just stops mid-sequence with no exception
-  logged, that means an uncaught exception occurred synchronously inside
-  `GameDataController.LoadAllGameData` (or its Harmony-patched call chain) — check Unity's own
-  `Player.log` (`%USERPROFILE%\AppData\LocalLow\TppStudio\LongYinLiZhiZhuan\Player.log`) for the
-  actual stack trace, since BepInEx's own logging never gets a chance to react to a crash that
-  fatal. When investigating a new "database ends up empty"/crash-on-load case, read
-  `DragonHeirPlugin/KNOWN_ISSUES.md` and `Tests/KNOWN_ISSUES.md` (both short indexes pointing at
-  the relevant topic docs) first for the established methodology and known hazard patterns
-  (`Label<sign><number>` cross-reference cells, etc.) before re-deriving them from scratch.
-- Same bug class found in `ForceData.csv` columns 9/10/11 (`ArgumentOutOfRangeException` in
-  `HandBookMenuController.ShowForceSkill`) — fixed via `SkipColumns = [9, 10, 11]`. Full case
-  study, plus a known unfixed follow-on risk for `ForceSpeAddDataBase.csv`'s own label column: see
-  `DragonHeirPlugin/docs/forcedata-showforceskill-crash.md`.
+**General debugging lesson**: if `BepInEx/LogOutput.log` stops mid-sequence with no exception
+logged, an uncaught exception occurred synchronously inside `GameDataController.LoadAllGameData`
+(or its patched call chain) — check Unity's own `Player.log`
+(`%USERPROFILE%\AppData\LocalLow\TppStudio\LongYinLiZhiZhuan\Player.log`) for the real stack
+trace, since BepInEx's own logging never gets a chance to react to a crash that fatal. See
+[`DragonHeirPlugin/KNOWN_ISSUES.md`](../../DragonHeirPlugin/KNOWN_ISSUES.md) and
+[`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md) for the established crash/data-loss
+investigation methodology and known hazard patterns (`Label<sign><number>` cross-reference cells,
+etc.) before re-deriving them from scratch.
 
 ## `PrefabTextPatches` — runtime replacement of hardcoded prefab UI text (TMP_Text/UI.Text only)
 
-Harmony-postfixes `Resources.Load(string, Il2CppSystem.Type)`, `AssetBundle.LoadAsset(string)`,
-and `SceneManager.Internal_SceneLoaded` (needed for scene-embedded UI like the title screen, which
-never passes through either load call); for each, walks the resulting `GameObject`'s transform
-tree looking for `TMP_Text`/`UI.Text` components requested via the non-generic
-`GetComponents(Il2CppType.From(typeof(TMP_Text)))` (never `is`/`as`/`TryCast<T>()` — those use the
-same unsafe generic machinery), reconstructed via the confirmed-safe `(IntPtr)` pointer-wrap
-constructor. `AssetBundle.LoadAsset` has no requested-`Type` parameter to check against (unlike
-`Resources.Load`), so `IsGameObject` queries the real IL2CPP class directly via
-`IL2CPP.il2cpp_object_get_class`/`il2cpp_class_get_namespace_`/`il2cpp_class_get_name_` instead of
-casting.
+Harmony-postfixes `Resources.Load`, `AssetBundle.LoadAsset`, and
+`SceneManager.Internal_SceneLoaded` (needed for scene-embedded UI, e.g. the title screen, which
+never passes through either load call), walking the resulting `GameObject` tree for
+`TMP_Text`/`UI.Text` components via non-generic `GetComponents(Il2CppType.From(...))` +
+`(IntPtr)` wrapper construction — never `is`/`as`/`TryCast<T>()`.
 
-Does an **exact whole-string** match against a `Replacements` dictionary loaded from every file
-matching the glob `dumpedPrefabText*.txt.yaml` (`DictionaryFilePattern`, searched recursively
-under `BepInEx\plugins\resources\`) — currently `dumpedPrefabText.txt.yaml` (the two "primary"
-`TMP_Text`/`UI.Text`-field dump) and `dumpedPrefabTextFromOtherFields.txt.yaml` (an allowlisted
-second set of fields — `plotText`/`describe`/`eventName`/etc. — which do NOT have a CSV source
-and are NOT already covered elsewhere despite an earlier, incorrect note claiming otherwise).
-Runtime text is normalized (real newline ↔ literal `\n`) before/after the dictionary lookup, since
-the dump escapes newlines but live component text doesn't. **Deserializer gotcha**: the YAML keys
-are lowercase `raw`/`result`, so the plugin's `DeserializerBuilder` must configure
-`.WithNamingConvention(CamelCaseNamingConvention.Instance)` + `.IgnoreUnmatchedProperties()` — a
-plain `new DeserializerBuilder().Build()` throws `YamlException: Property 'raw' not found`.
+Does an **exact whole-string** match against a `Replacements` dictionary loaded from every
+`dumpedPrefabText*.txt.yaml` file (searched recursively). Runtime text is newline-normalized
+before/after lookup (dump escapes `\n`, live text doesn't). **Deserializer gotcha**: YAML keys are
+lowercase `raw`/`result` — `DeserializerBuilder` must use `CamelCaseNamingConvention` +
+`IgnoreUnmatchedProperties()`.
 
-**Harmony `[HarmonyTargetMethod]` + class-level `[HarmonyPatch]` gotcha**: when a nested patch
-class uses `[HarmonyTargetMethod]` to manually resolve an ambiguous overload, the class-level
-`[HarmonyPatch(...)]` attribute must specify **only the declaring type** — adding a method
-name/args overload to that same attribute throws `ArgumentException: You cannot combine
-TargetMethod, TargetMethods or [HarmonyPatchAll] with individual annotations` at
-`Harmony.CreateAndPatchAll` time (plugin fails to load entirely).
+**Harmony `[HarmonyTargetMethod]` gotcha**: a nested patch class using `[HarmonyTargetMethod]`
+must have a class-level `[HarmonyPatch(...)]` specifying **only the declaring type** — adding a
+method name/args overload throws `ArgumentException` at `Harmony.CreateAndPatchAll` time (plugin
+fails to load entirely).
 
-Full investigation narrative (the wrong-scope correction, the lifecycle-callback design decision,
-the `is`/`as` interop-safety finding, and the scene-loading coverage gap) is in
-`DragonHeirPlugin/docs/prefabtextpatches-full-investigation.md`.
+Full current-state design and change checklist:
+[`DragonHeirPlugin/docs/prefabtextpatches-agent-reference.md`](../../DragonHeirPlugin/docs/prefabtextpatches-agent-reference.md).
+Investigation narrative:
+[`DragonHeirPlugin/docs/prefabtextpatches-full-investigation.md`](../../DragonHeirPlugin/docs/prefabtextpatches-full-investigation.md).
 
 ## `HeroNamePatches` — relationship-title translation for `GameController.GetHeroName`
 
@@ -420,31 +252,21 @@ translated (`RelationSuffixes`, longest-match-first) with the remaining prefix l
 the same way.
 
 **`TranslateNamePart` is `HeroNamePatches`' own private, exact-match dictionary — NOT
-`DynamicStringPatches.TranslateFragment`/its global substring-replace dictionary.** A bare
-one/two-character surname is too easy to accidentally match as a substring inside unrelated
-Chinese text elsewhere in the game, so name parts are packaged to their own
-`heroNameParts.txt.yaml` (deliberately NOT named `dynamicStrings*`, so `DynamicStringPatches`'
-`DictionaryFilePattern` glob never picks it up) and loaded separately via
-`HeroNamePatches.LoadNamePartDictionary()` (called once from `MainPlugin.Load()`, before
-`Harmony.CreateAndPatchAll(typeof(HeroNamePatches))`). Pipeline-side:
-`Tests/GameFileHandling.cs`'s `ExtractHeroNamePartCandidates`/`DynamicStringNamePartColumnSources`
-extract `SpeHeroData.csv` column 1's "Family.Given" compound into
-`Raw/Dumped/DynamicStrings/heroNameParts.txt` as two standalone raw fragments (not just the whole
-dotted string, since `HeroData` strips the "." separator at load time), which flows through the
-same generic `DynamicStringsIL2CPP`/`DynamicStringWorkflow` export/translate/package pipeline as
-`dynamicStrings.txt` (the `TextFileType` enum value is just plumbing for reusing that pipeline —
-it does **not** mean the packaged file is merged into the plugin's dynamic-string dictionary).
-See `HeroNamePatches.cs`'s own class doc comment for the full per-case rationale.
+`DynamicStringPatches.TranslateFragment`.** A bare one/two-character surname is too easy to
+accidentally match as a substring elsewhere, so name parts are packaged to their own
+`heroNameParts.txt.yaml` (deliberately NOT matching `DynamicStringPatches`' `dynamicStrings*`
+glob) and loaded separately via `HeroNamePatches.LoadNamePartDictionary()` before
+`Harmony.CreateAndPatchAll(typeof(HeroNamePatches))`. Pipeline-side: `Tests/GameFileHandling.cs`'s
+`ExtractHeroNamePartCandidates`/`DynamicStringNamePartColumnSources` extract `SpeHeroData.csv`
+column 1's "Family.Given" compound into two standalone raw fragments, flowing through the same
+`DynamicStringsIL2CPP` pipeline as `dynamicStrings.txt` (reusing the pipeline plumbing only — the
+packaged file is never merged into `DynamicStringPatches`' dictionary).
 
-**Gotcha (2026-08-30, confirmed): `LoadNamePartDictionary` must search recursively.** The
-packaged `heroNameParts.txt.yaml` deploys to `BepInEx\plugins\resources\GameData\`, one level
-deeper than `resources\` itself (same layout as `dynamicStrings*.txt.yaml`). A flat
-`Path.Combine(resourcesDir, fileName)` + `File.Exists` check silently never finds it — no
-exception, just an empty `_namePartDictionary`, so every `GetHeroName` postfix call falls back to
-leaving the surname/given-name part as untranslated Chinese (e.g. "姜 Senior Sister") while the
-relation-word suffix still translates correctly, making it look like only "half" the patch is
-working. Fixed by searching with `Directory.GetFiles(resourcesDir, fileName,
-SearchOption.AllDirectories)`, mirroring `DynamicStringPatches.FindResourceFiles`. If a future
-lookup dictionary is added anywhere in this plugin, default to a recursive search under
-`resources\` rather than a flat path check.
+**Gotcha (confirmed): `LoadNamePartDictionary` must search recursively.** `heroNameParts.txt.yaml`
+deploys one level deeper than `resources\` itself. A flat `Path.Combine` + `File.Exists` check
+silently finds nothing (no exception, empty dictionary) — every `GetHeroName` postfix then leaves
+the surname/given-name part untranslated while the relation-word suffix still translates, looking
+like only "half" the patch works. Use `Directory.GetFiles(resourcesDir, fileName,
+SearchOption.AllDirectories)` (mirroring `DynamicStringPatches.FindResourceFiles`) — default any
+future lookup dictionary to a recursive search under `resources\`, not a flat path check.
 
