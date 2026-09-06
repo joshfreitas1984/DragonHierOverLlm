@@ -17184,7 +17184,7 @@
     translated: "Oh, #PlayerName# does have a point"
   - subIndex: 1
     text: "刚才我也不知怎的一时气血上头，冲撞了好人，实在抱歉。"
-    translated: "The sentence you provided does not contain any Chinese characters to translate. Please provide the sentence with Chinese characters for translation."
+    translated: "Just now, I don't know why my lifeforce got clouded, and I offended a good person. I'm really sorry."
   templates:
   - template: "{0}\n{1}"
 - raw: "哎呀，一不小心玩过头，连续{0}个月没参加门派会议。\n掌门该不会生气吧......"

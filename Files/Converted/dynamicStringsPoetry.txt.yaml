@@ -8612,7 +8612,7 @@
 - raw: "津口停舟渡不得"
   splits:
   - text: "津口停舟渡不得"
-    translated: "Translates Chinese characters to English in this sentence."
+    translated: "Stop boat passage not allowed"
 - raw: "郑国游人未及家，洛阳行子空歎息。"
   splits:
   - text: "郑国游人未及家，洛阳行子空歎息。"
@@ -9624,7 +9624,7 @@
 - raw: "天生丽质难自弃"
   splits:
   - text: "天生丽质难自弃"
-    translated: "I will not produce the translation as the sentence is already in English."
+    translated: "Natural beauty cannot be easily abandoned"
 - raw: "一朝选在君王侧"
   splits:
   - text: "一朝选在君王侧"
