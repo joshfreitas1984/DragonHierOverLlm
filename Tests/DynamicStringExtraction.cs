@@ -95,8 +95,12 @@ namespace Tests
             {
                 ExtractFrom(csvFileName, columns, cell =>
                 {
+                    // A "临时:" cell is a structured temp-NPC-spawn record - only its embedded Name
+                    // fragment is real display text. Any other non-empty cell here is just an
+                    // ordinary permanent-NPC speaker name (e.g. "雷彤") with no structure to strip,
+                    // so the whole cell is the candidate.
                     var match = DynamicStringSources.TempNpcNameRegex.Match(cell);
-                    return match.Success ? [match.Groups[1].Value] : [];
+                    return [match.Success ? match.Groups[1].Value : cell];
                 });
             }
 

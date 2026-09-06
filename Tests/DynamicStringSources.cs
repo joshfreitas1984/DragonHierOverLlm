@@ -115,6 +115,14 @@ namespace Tests
         // bare Name fragment is what's actually displayed as the NPC's nameplate - and is never
         // seen by any other extraction source. Extracted here via TempNpcNameRegex so it reaches
         // DynamicStringPatches' substring dictionary. See docs/gamefilehandling-reference.md.
+        //
+        // A cell without the "临时:" prefix is an ordinary PERMANENT NPC's plain speaker name (e.g.
+        // "雷彤") - confirmed 2026-09-06 investigating an untranslated "雷彤" nameplate: she's a
+        // plot-only character with no row in SpeHeroData.csv or any other GameData CSV, so nothing
+        // else ever surfaces her name as a translation candidate despite being displayed raw via
+        // the same nameplate component-text setter as the 临时: case. The extractor (see
+        // DynamicStringExtraction.cs) now emits the whole cell verbatim whenever TempNpcNameRegex
+        // doesn't match, so both shapes reach the dictionary from this one source.
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringTempNpcNameColumnSources =
         [
             ("PlotData.csv", [1, 2]),
