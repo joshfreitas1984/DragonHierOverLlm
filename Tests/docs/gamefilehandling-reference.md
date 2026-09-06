@@ -18,6 +18,41 @@ CSV parsing and reconstruction must always use `CompoundFieldSplitter.ParseCsvRo
 
 `PlotData.csv` column 9 is intentionally translated. Its `|` and `;` delimiters are structural, so `RepairGameSpecificColumn` strips those characters from translated choice text and `ValidateGameSpecificColumn` checks delimiter counts as a backstop. See [plotdata-column9-crash-and-repair-pattern.md](plotdata-column9-crash-and-repair-pattern.md).
 
+### `TextFilesToSplit` per-file skip-column detail
+
+Moved here from source comments during the 2026-09 comment refactor (source of truth is still the `SkipColumns` list itself; this is rationale, not configuration):
+
+- **`BuildingData.csv`** cols 8/9/10/12 (每月产出/每月维护/加成/升级消耗) are `Label<sign><number>` cells matched via `String.Contains`/`String.Replace` against a fixed resource-name list (col 10 also against `forceSpeAddDataBase`'s label list) in `GameDataController`'s BuildingData load loop. Col 11 (增加效率) stores its label half as `AreaBuildingRateChange.targetBuildingName`, a building-name lookup key.
+- **`ForceData.csv`** col 2 (行事风格) is exact-matched against the hardcoded literal "中庸" in `ForceData.cs` (`String.Equals(this.forceStyle,"中庸",0)`) to drive sect behavior.
+- **`HeroTagData.csv`** col 1 (名称) is itself the exact-match lookup key `SpeHeroData.csv`'s raw 标签/Tags column is compared against via `GameDataController.GetTagID`.
+- **`KungFuData.csv`** (shared with `SummonKungFuData.csv`): cols 17/18 (攻击架势/防御架势) parsed by `PartPostureData`'s ctor via `String.Contains` against a fixed body-part vocabulary; col 23 (特效) stores `SkillSpeEffectData.speName`, exact-matched and concatenated into a `Resources.Load("SpeEffect/"+speName)` path; col 24 (使用武器) concatenated into `Resources.Load("武器/"+weaponName)` (`HeroData.SetHeroWeapon`/`SetSkillWeapon`); col 21 (动作) is the Spine `animationName` passed to `SkeletonData.FindAnimation`; col 25 (伤害顺序) is `Enum.Parse`'d into `skillDamageOrder`. Col 3 (名字) is additionally cross-referenced by `GetSkillID` against `SpeHeroData.csv` col 13's raw skill names — this cross-reference does **not** apply to `SummonKungFuData.csv`, whose col 3 stays safe to translate because `GetSkillID` only scans `kungfuSkillDataBase`.
+- **`SpeAddDataBase.csv`** col 11 (特效价值类别/fightValueType) is exact-matched against "我方"/"敌方"/"伤害" in `HeroSpeAddDataBase.GetDescribe`/`GetTriggerDescribe`/`GetTargetDescribe`. Cols 3/4/10 are concatenated for display only (no lookup found).
+- **`TechDataBase.csv`** col 4 (加成对象) is exact-matched via `String.Equals` against `ForceSpeAddDataBase.name`; col 8 (消耗资源) goes through the same `FUN_1817ff280` name-lookup dictionary used for force/weapon name resolution elsewhere.
+- **`SpeHeroData.csv`** (disabled entirely): confirmed cause of the `GameController.GenerateHeroData` `ArgumentOutOfRangeException` crash at new-game hero generation is col 2 (性别/Gender), exact-matched against 男/女.
+- **`PlotData.csv`** cols 1/2 (角色左/角色右, speaker name) are NOT just a cosmetic display label: confirmed 2026-08-28 both columns can also encode a structured `临时:Name&Gender;Age;RelationLevel[;...]` temporary-NPC-spawn record (e.g. `临时:莺莺&女;24;0;4`) parsed by `PlotController.GetHeroData`/`GetTempPlotHeroData` at runtime (strips the `临时:` prefix, splits on `&` then `;` — see `Converter/output/_NoNamespace/PlotController.cs` ~line 1514/1561); translating name/gender fragments inside that record risks breaking the parse, and the column can't be split further than whole-column. Col 3 (高亮方) is exact-matched against "左"/"右"/"无"/"皆". Col 4 (背景图片) is a background sprite reference. Col 5 (背景音乐) is concatenated/passed to `BGMController.SetPlotBgm`. Col 6 (播放音效) is concatenated into `"Sound/SoundEffect/"+value` (or `"Sound/"+value` for "Environment" cases) and passed to `Resources.Load`. Col 8 (调用函数) is split on `;`/`-` and dispatched via `Component.SendMessage(this, functionName, ...)`. The unrelated hardcoded-name lookup hazard is `HardcodedHeroNamePatches.cs` in `DragonHeirPlugin` (raw Chinese literals baked into `GameController.cs`'s own compiled code, matched against `WorldData.HerosDict`, keyed by `SpeHeroData.csv`'s translated name column).
+
+### `DynamicStringColumnSources` defense-in-depth entries
+
+Added 2026-08-29. `ResourcePointData.csv`/`ResourcePointTypeData.csv`/`AreaData.csv` column 1 (Name) is already fully translated via the normal per-row CSV pipeline (none of them `SkipColumns` it), so this isn't filling a coverage gap — it's a safety net for runtime-composed strings that concatenate these names together outside any single CSV row (e.g. an owner-prefixed resource-point display list like "杭州甘泉" — `AreaData.areaName` + `ResourcePointData.resourcePointName` joined with `\n`), which never flow through the CSV pipeline at all, only through `DynamicStringPatches`' substring dictionary.
+
+`SpeHeroData.csv` columns 5 (等级/position title, e.g. 掌门/副掌门) and 15 (绰号/nickname, e.g. "无为真人") were added the same day for the same reason: since the file is fully disabled in `TextFilesToSplit`, its display text never reaches the CSV pipeline at all. Nicknames were previously getting corrupted by `DynamicStringPatches`' bare single-character dictionary entries (e.g. "无"->"None", "为"->"For" matching inside "无为真人", producing "None For 真人") because no whole-phrase entry existed to win the longest-match-first ordering; extracting the whole nickname fixes every hero uniformly.
+
+### Temp-NPC name extraction (`DynamicStringTempNpcNameColumnSources`)
+
+Confirmed 2026-09-03 while investigating an untranslated "老农" NPC nameplate: `PlotData.csv` columns 1/2's temp-NPC-spawn record (see above) contains a bare Name fragment that, unlike a plain speaker name already covered via `SpeHeroData`'s own name columns, is genuinely new text that exists nowhere else and is never picked up by any other extraction source. `TempNpcNameRegex` extracts it as its own standalone candidate so it reaches `DynamicStringPatches`' ordinary substring dictionary, the same mechanism as existing bare `临时:X` entries.
+
+### Structured-record fragment extraction (`ExtractStructuredRecordFragmentCandidates`)
+
+Confirmed 2026-08-30 via a clinic/hospital interaction-menu screenshot case ("技能 影响:医术"): some structured `Name;TriggerId;Condition...;Description`-shaped records are hardcoded string literals baked directly into game code (not CSV-driven), so the IL2CPP scan has no notion of the field shape and dumps the whole `;`-joined literal as one candidate (e.g. `包扎;HospitalCureExternalInjury;;;技能影响:医术`). Only the individual CJK fields are ever displayed, so the whole-string entry never matches at runtime, and `DynamicStringPatches`' dictionary then falls back to shorter standalone fragments, corrupting text like "技能影响:医术" into "Skills 影响:Medicine".
+
+### Non-Chinese dynamic-string entry filter history
+
+`RemoveNonChineseDynamicStringEntries` was originally a digit-only check (preventing symptoms like `DynamicStringPatches.cs`'s `ApplyDictionary` turning "50%" into "5 0 %" or "100/100" into "1 0 0 / 1 0 0"), extended 2026-08-29 after finding the same class of bug from non-digit junk — e.g. IL2CPP string-map extraction occasionally capturing a Unicode-range glyph-atlas coverage dump (`-.09AZ__az··ÀÖØöøıĴľŁ...一龥`) or a plain ASCII/Latin identifier with no Chinese at all.
+
+### `DynamicStringResultOverrides` background
+
+The `"{0}年{1}月{2}日"` case is a save-slot date built via `DateTime.ToString()` (see `DynamicStringPatches.cs`'s `_compiledTemplates` comments).
+
 ## Prefab text and dynamic-string sources
 
 `dumpedPrefabText.txt` and `dumpedPrefabTextFromOtherFields.txt` are flat, exact-match `PrefabText` inputs. The first comes from primary `m_Text`/`text` fields; the second comes from the explicitly sampled allowlist in `DynamicStringOtherTextFields`. They are packaged by `PrefabTextWorkflow` and consumed by the plugin's setter-level exact lookup. The asset-dumper and field-selection rationale is in [assetdumper-libcpp2il-and-noise-filtering.md](assetdumper-libcpp2il-and-noise-filtering.md) and [prefabtext-pipeline-architecture.md](prefabtext-pipeline-architecture.md).

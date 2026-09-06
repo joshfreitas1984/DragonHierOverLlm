@@ -4,26 +4,10 @@ namespace Il2CppExplorer.Services;
 
 /// <summary>
 /// Extracts IL2CPP string literal → GameAssembly.dll DAT_ address mappings.
-///
-/// In Unity IL2CPP builds, the native binary's .data section contains
-/// pre-initialised 8-byte slots. The lower 32 bits of each slot encode a
-/// metadata usage: bits[31..29] = usageType, bits[28..0] = an encoded index.
-/// usageType 5 (kIl2CppMetadataUsageStringLiteral) means the encoded index
-/// resolves to an index into the global-metadata.dat stringLiterals table.
-///
-/// IMPORTANT (metadata v27+, which removed the separate metadataUsagePairs
-/// indirection table): the raw 29-bit value is NOT the string-literal index
-/// directly - it must be right-shifted by 1 first (confirmed against
-/// LibCpp2IL's MetadataUsage.DecodeMetadataUsage: "if (metadataVersion >= 27)
-/// index >>= 1;"). Without this shift, srcIdx values come out roughly double
-/// their real value and get silently rejected by the strCount bounds check,
-/// even though the usageType matched correctly - this was a real bug found
-/// investigating CustomDifficultyData's untranslated slider labels (see
-/// converter.instructions.md).
-///
-/// Ghidra shows these slots as DAT_181dXXXXXX globals. This extractor scans
-/// every 8-byte slot in .data, resolves the ones that are string literals,
-/// and writes DAT_address → string value to _string_map.csv.
+/// Scans every 8-byte slot in the binary's .data section, resolves the ones
+/// that are string literals, and writes DAT_address → string value to
+/// _string_map.csv.
+/// Metadata v27+ index-shift invariant: docs/stringmapextractor-metadata-v27-shift-bug.md
 /// </summary>
 public static class StringMapExtractor
 {
@@ -105,11 +89,8 @@ public static class StringMapExtractor
         Console.WriteLine($"  [StringMap] ImageBase: 0x{imageBase:X}  .data VA: 0x{dataVA:X}  size: 0x{dataSection.FileSize:X}");
 
         // ── 4. Scan .data section for string literal cache slots ──────────
-        // Each slot is 8 bytes. The lower 32 bits encode:
-        //   bits[31..29] = usageType (5 = StringLiteral)
-        //   bits[28..0]  = encoded index; on metadata v27+ this must be >>1
-        //                  to get the real index into stringLiterals[]
-        //                  (see LibCpp2IL MetadataUsage.DecodeMetadataUsage)
+        // Each slot is 8 bytes: bits[31..29]=usageType (5=StringLiteral), bits[28..0]=encoded
+        // index. Metadata v27+ index-shift invariant: docs/stringmapextractor-metadata-v27-shift-bug.md
         Console.Write("  [StringMap] Scanning .data for string literal slots...");
         var map = new Dictionary<string, string>();
         int fo = dataSection.FileOffset;
@@ -196,29 +177,14 @@ public static class StringMapExtractor
     }
 
     // ── Dynamic-string candidate extraction (static, no game run needed) ────
-    //
-    // _string_map.csv already contains EVERY string literal compiled into the game's
-    // code (the same source the decompiler substitutes DAT_ addresses from), so it is a
-    // complete, offline inventory of candidate hardcoded UI/dialogue fragments for case-4
-    // dynamic-string translation (see the "dynamic-string-translation-plan" repo memory in
-    // DragonHierOverLlm) - filtering it for CJK-containing values finds every candidate
-    // fragment without ever needing to launch the game to trigger a particular code path.
+    // _string_map.csv is a complete offline inventory of every string literal compiled into the
+    // game, so filtering it for CJK-containing values finds every dynamic-string candidate
+    // without needing to launch the game. Heuristics rationale: docs/stringmapextractor-dynamic-candidate-heuristics.md
     private static readonly System.Text.RegularExpressions.Regex CjkRegex =
         new(@"[\u4e00-\u9fff]", System.Text.RegularExpressions.RegexOptions.Compiled);
 
-    // Confirmed (2026-08-27, via _string_map.csv cross-reference on DAT_181d62558/DAT_181d95d80/
-    // DAT_181d95e88) false-positive class: .NET/ICU internal Unicode-category/culture boundary
-    // data tables that happen to get compiled as string literals into the game assembly (likely
-    // via some BCL API touching CharUnicodeInfo/RegexCharClass/globalization tables) and happen to
-    // contain a CJK codepoint or two among thousands of others, so they pass CjkRegex despite
-    // being pure noise - never real user-facing dialogue/UI text. These are NOT corrupted/garbled
-    // extraction (verified byte-for-byte identical against _string_map.csv - the extraction itself
-    // is correct), just genuine but useless BCL data. Real Chinese game text never legitimately
-    // mixes in Hebrew/Arabic/Thai/Lao/Tibetan/Ethiopic/Khmer/Mongolian/Hangul-Jamo/Coptic/
-    // halfwidth-fullwidth-form/control-picture codepoints alongside CJK ideographs, so a candidate
-    // touching several of these unrelated scripts at once is a reliable signal for this exact
-    // noise class rather than a hand-authored heuristic that could misfire on legitimate long
-    // templated dialogue (which stays within CJK + ASCII + basic punctuation).
+    // BCL/ICU internal Unicode table noise filter - rationale and false-positive evidence:
+    // docs/stringmapextractor-dynamic-candidate-heuristics.md
     private static readonly System.Text.RegularExpressions.Regex[] ExoticScriptRegexes =
     [
         new(@"[\u0590-\u05FF]", System.Text.RegularExpressions.RegexOptions.Compiled), // Hebrew
@@ -236,16 +202,8 @@ public static class StringMapExtractor
         new(@"[\uFF00-\uFFEF\u2400-\u243F]", System.Text.RegularExpressions.RegexOptions.Compiled), // Halfwidth/Fullwidth + Control Pictures
     ];
 
-    // A genuine BCL noise string touches several of these unrelated scripts at once (the confirmed
-    // instances touch 8+); real Chinese dialogue never touches more than one (if any). Requiring 3
-    // distinct hits keeps a wide margin against false-positives on legitimate text.
-    //
-    // Separately, Unicode reserves certain codepoints as permanent "noncharacters" (U+FFFE,
-    // U+FFFF, and U+FDD0-U+FDEF) that are guaranteed to NEVER appear in any real, valid text -
-    // they exist purely as internal sentinels/boundary markers. A string literal containing one is
-    // an unambiguous signal that it's raw BCL/ICU table data, not user-facing text (confirmed via
-    // the short `␀ﾻ꿿￿蟿￾߿`-style candidates that don't touch enough distinct scripts to trip the
-    // >=3 threshold above but do contain U+FFFE/U+FFFF noncharacters).
+    // Noncharacter codepoints (U+FFFE/U+FFFF/U+FDD0-FDEF) never appear in valid text - same noise
+    // filter as ExoticScriptRegexes; see docs/stringmapextractor-dynamic-candidate-heuristics.md
     private static readonly System.Text.RegularExpressions.Regex NoncharacterRegex =
         new(@"[\uFFFE\uFFFF\uFDD0-\uFDEF]", System.Text.RegularExpressions.RegexOptions.Compiled);
 
@@ -255,27 +213,10 @@ public static class StringMapExtractor
 
     /// <summary>
     /// Filters an already-extracted _string_map.csv for CJK-containing values and writes each as
-    /// its own candidate line. A value with an embedded real newline (`\r\n`/`\n`/`\r`) is kept as
-    /// a SINGLE candidate rather than being split into separate lines - the newline is instead
-    /// escaped to a literal two-character `\n` sequence so the "one candidate per line" plain-text
-    /// file format can still represent it without corruption. This matters because
-    /// <c>FanslationStudio.LlmKit.Utility.CompoundFieldSplitter</c> (used by the Export step, see
-    /// <c>DynamicStringWorkflow.ExportDynamicStringsToCustomFormat</c>) already treats a real `\n`
-    /// as a natural fragment boundary on its own - each line still gets translated as its own
-    /// unit via `Decompose`'s per-fragment splits/template, so splitting here first would only
-    /// throw away the surrounding structure for no translation-quality benefit. Keeping the whole
-    /// multi-line literal as ONE candidate/dictionary entry also means the runtime substring-match
-    /// (see DragonHeirPlugin/DynamicStringPatches.cs) matches against the entire multi-line
-    /// literal exactly as it's compiled into the game - a longer, far more specific match with
-    /// much lower false-positive/collision risk than N independent single-line fragments would
-    /// have. Placeholders (e.g. `#$PlayerName#`), punctuation (e.g. `，`), and all other
-    /// surrounding text are preserved intact within a candidate. Excludes any candidate already
-    /// present in <paramref name="excludeFile"/> (one raw fragment per line, in the same escaped
-    /// form - typically the pipeline's dynamicStrings.txt input, itself populated by reviewing and
-    /// merging entries from this same method's own output rather than hand-authored), as well as
-    /// any value identified as BCL/ICU internal noise (see <see cref="IsExoticScriptNoise"/>), and
-    /// writes the remaining distinct candidates to <paramref name="outputPath"/>, one per line,
-    /// sorted for reproducible diffs. Returns the number of candidates written.
+    /// its own candidate line (multi-line values kept as one escaped-`\n` candidate; excludes
+    /// entries already in <paramref name="excludeFile"/> and BCL/ICU noise, see
+    /// <see cref="IsExoticScriptNoise"/>). Rationale: docs/stringmapextractor-dynamic-candidate-heuristics.md
+    /// Returns the number of candidates written.
     /// </summary>
     public static int ExtractDynamicStringCandidates(string stringMapCsvPath, string outputPath, string? excludeFile)
         => ExtractDynamicStringCandidates(stringMapCsvPath, outputPath, excludeFile, null);
@@ -375,35 +316,10 @@ public static class StringMapExtractor
 
     /// <summary>
     /// Scans every decompiled .c file under <paramref name="decompiledDir"/> for non-user-facing
-    /// diagnostic sink calls - Debug.Log-family calls (<see cref="LogCallRegex"/>) and exception
-    /// constructor message arguments (<see cref="ExceptionCtorRegex"/>) - and returns the set of
-    /// string VALUES (resolved via <paramref name="stringMap"/>, the already-loaded
-    /// _string_map.csv) passed to them, either directly as a "DAT_xxx" literal argument, or via a
-    /// MULTI-HOP backward trace through local variables/parameters within the same function body
-    /// (e.g. "uVar4 = uVar9; ... uVar9 = String__Format(DAT_xxx,...); ... Debug__Log(uVar4,0);").
-    /// Exception messages are included on the same reasoning as Debug.Log calls: a thrown
-    /// exception's message string is developer/diagnostic text (surfaced in a crash log/stack
-    /// trace, e.g. LTCSVLoader's out-of-range messages or ConvertNumToChinese's overflow message),
-    /// never end-user-facing UI/dialogue text, so it's exactly the same class of false-positive
-    /// candidate as a Debug.Log argument. Each hop only follows the LAST assignment to a given
-    /// variable name that appears strictly BEFORE the point being traced from (preserving genuine
-    /// backward-data-flow order rather than matching any assignment anywhere in the file), a
-    /// visited-variable set prevents revisiting the same variable twice in one trace (guards
-    /// against assignment cycles, e.g. "a = b; b = a;"), and a hop-count cap bounds the total work
-    /// per sink call. This is still a best-effort heuristic (no real control-flow/data-flow
-    /// analysis - a variable fed through a helper method call, a conditional with multiple
-    /// candidate assignments, or a loop-carried value won't be traced correctly), intended to
-    /// filter obvious developer/diagnostic-only strings out of the dynamic-string translation
-    /// candidate list rather than to be a complete/precise classifier. A string value found here
-    /// is excluded from candidates game-wide (by value, not by DAT_ address/call-site), so a
-    /// literal that happens to ALSO be used as genuine user-facing text elsewhere (same string
-    /// value, different DAT_ slot or reused slot) will be excluded too - review the resulting
-    /// candidate list if you suspect this for a particular case. Adding more sink patterns/hops
-    /// only ever adds MORE strings to the exclude set, never fewer - so widening the scan is safe
-    /// in the sense that it can't cause a genuine user-facing string to start being included when
-    /// it shouldn't be; the only risk is the reverse (a genuinely user-facing string incorrectly
-    /// excluded because it happens to share a variable-assignment chain with a sink call), which is
-    /// why results are still worth spot-checking.
+    /// diagnostic sink calls (Debug.Log-family, exception constructor messages) and returns the
+    /// string VALUES passed to them, resolved directly or via a bounded multi-hop backward trace
+    /// through local variable assignments. Best-effort heuristic, not real data-flow analysis.
+    /// Full rationale and limitations: docs/stringmapextractor-dynamic-candidate-heuristics.md
     /// </summary>
     public static HashSet<string> FindLogOnlyStringValues(string decompiledDir, Dictionary<string, string> stringMap)
     {
