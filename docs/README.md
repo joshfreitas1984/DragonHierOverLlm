@@ -2,8 +2,7 @@
 
 This is the canonical navigation entry point for the repository. It exists so that a human or an
 AI agent (Copilot, Claude Code, or otherwise) can find the right source of truth without relying on
-vendor-specific memory. See [`documentation-refresh-plan.md`](documentation-refresh-plan.md) for
-the plan driving this restructuring effort (this file is the Phase 2 output).
+vendor-specific memory.
 
 ## Repository overview
 
@@ -79,4 +78,3 @@ all three in sync if a repository-wide rule changes.
 | Reproduce/isolate a logic bug outside the running game | [`Verify/`](../Verify/) (see the workflow rule in [`.github/copilot-instructions.md`](../.github/copilot-instructions.md)) |
 | Understand the `Files/` raw/converted/mod data layout | [`Tests/docs/gamefilehandling-reference.md`](../Tests/docs/gamefilehandling-reference.md) |
 | Install/play the released patch | [`readme.md`](../readme.md) |
-| Understand this documentation restructuring effort | [`documentation-refresh-plan.md`](documentation-refresh-plan.md) |
