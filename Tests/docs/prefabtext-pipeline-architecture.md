@@ -50,6 +50,8 @@ similar flat-list dumper can reuse this as-is):
   Failed)` tuple (their private `ReconstructLine` returns `(string? Result, bool Failed)`), and
   `GameFileHandling.PackageFinalTranslationAsync` adds these into its existing totals. If either
   method's signature changes again, re-check this aggregation still compiles/wires up correctly.
-- **Still not implemented:** the runtime BepInEx plugin patch in `DragonHeirPlugin/` that actually
-  reads `dumpedPrefabText.txt.yaml` and substitutes translated text back into `UI.Text`/`TMP_Text`
-  components at runtime.
+- **Implemented:** `DragonHeirPlugin/PrefabTextPatches.cs` loads `dumpedPrefabText*.txt.yaml` and
+  applies exact whole-string matches at resource load, asset-bundle load, scene load, and the
+  `UI.Text`/`TMP_Text` setters. See
+  [`dynamicstringpatches-agent-reference.md`](../../DragonHeirPlugin/docs/prefabtextpatches-agent-reference.md)
+  for the runtime hook details.

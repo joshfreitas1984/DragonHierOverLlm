@@ -62,6 +62,10 @@ The root [`.github/copilot-instructions.md`](../.github/copilot-instructions.md)
 entry point that links to all of the above and states the repository-wide workflow rules
 (documentation write-back policy, verification harness policy, comment size rule).
 
+[`AGENTS.md`](../AGENTS.md) restates the same repository-wide rules in a vendor-neutral form for
+non-Copilot agents (e.g. Claude Code); [`CLAUDE.md`](../CLAUDE.md) is a thin pointer to it. Keep
+all three in sync if a repository-wide rule changes.
+
 ## Where should I look?
 
 | Task | Start here |

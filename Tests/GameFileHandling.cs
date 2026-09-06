@@ -364,6 +364,9 @@ namespace Tests
         // Confirmed-safe MonoBehaviour fields for the exact-match PrefabText source.
         // The allowlist was sampled against real dumps; noisy/internal fields are intentionally absent.
         // Field selection and exact-match setter rationale: docs/gamefilehandling-reference.md.
+        // plotText/tutorialText/describe/etc. are routed here (substring-replace) as a quick fix
+        // rather than through PrefabTextPatches' whole-string match - deferred alternative design:
+        // docs/prefabtext-generic-field-walk-plan.md.
         public static readonly string[] DynamicStringOtherTextFields =
         [
             "name", "eventName", "tutorialName", "showName", "bulletName", "fullName",

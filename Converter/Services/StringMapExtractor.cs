@@ -345,57 +345,57 @@ public static class StringMapExtractor
             }
 
             foreach (var sinkRegex in sinkRegexes)
-            foreach (System.Text.RegularExpressions.Match sinkMatch in sinkRegex.Matches(content))
-            {
-                var arg = sinkMatch.Groups[1].Value;
-
-                if (arg.StartsWith("DAT_", StringComparison.Ordinal))
+                foreach (System.Text.RegularExpressions.Match sinkMatch in sinkRegex.Matches(content))
                 {
-                    if (stringMap.TryGetValue(arg, out var direct))
-                        values.Add(direct);
-                    continue;
+                    var arg = sinkMatch.Groups[1].Value;
+
+                    if (arg.StartsWith("DAT_", StringComparison.Ordinal))
+                    {
+                        if (stringMap.TryGetValue(arg, out var direct))
+                            values.Add(direct);
+                        continue;
+                    }
+
+                    var visited = new HashSet<string>(StringComparer.Ordinal) { arg };
+                    var frontier = new Queue<(string Variable, int BeforePos)>();
+                    frontier.Enqueue((arg, sinkMatch.Index));
+                    int hops = 0;
+
+                    while (frontier.Count > 0 && hops < maxHops)
+                    {
+                        hops++;
+                        var (variable, beforePos) = frontier.Dequeue();
+
+                        if (!assignmentsByVar.TryGetValue(variable, out var candidates)) continue;
+
+                        // Last assignment strictly before beforePos.
+                        System.Text.RegularExpressions.Match? best = null;
+                        foreach (var assign in candidates)
+                        {
+                            if (assign.Index >= beforePos) continue;
+                            if (best == null || assign.Index > best.Index) best = assign;
+                        }
+                        if (best == null) continue;
+
+                        var expr = best.Groups[2].Value;
+                        var exprPos = best.Index;
+
+                        foreach (System.Text.RegularExpressions.Match datMatch in DatTokenRegex.Matches(expr))
+                        {
+                            if (stringMap.TryGetValue(datMatch.Value, out var traced))
+                                values.Add(traced);
+                        }
+
+                        foreach (System.Text.RegularExpressions.Match idMatch in IdentifierRegex.Matches(expr))
+                        {
+                            var id = idMatch.Value;
+                            if (id.StartsWith("DAT_", StringComparison.Ordinal)) continue;
+                            if (NonVariableIdentifiers.Contains(id)) continue;
+                            if (!visited.Add(id)) continue; // already traced this variable in this chain
+                            frontier.Enqueue((id, exprPos));
+                        }
+                    }
                 }
-
-                var visited = new HashSet<string>(StringComparer.Ordinal) { arg };
-                var frontier = new Queue<(string Variable, int BeforePos)>();
-                frontier.Enqueue((arg, sinkMatch.Index));
-                int hops = 0;
-
-                while (frontier.Count > 0 && hops < maxHops)
-                {
-                    hops++;
-                    var (variable, beforePos) = frontier.Dequeue();
-
-                    if (!assignmentsByVar.TryGetValue(variable, out var candidates)) continue;
-
-                    // Last assignment strictly before beforePos.
-                    System.Text.RegularExpressions.Match? best = null;
-                    foreach (var assign in candidates)
-                    {
-                        if (assign.Index >= beforePos) continue;
-                        if (best == null || assign.Index > best.Index) best = assign;
-                    }
-                    if (best == null) continue;
-
-                    var expr = best.Groups[2].Value;
-                    var exprPos = best.Index;
-
-                    foreach (System.Text.RegularExpressions.Match datMatch in DatTokenRegex.Matches(expr))
-                    {
-                        if (stringMap.TryGetValue(datMatch.Value, out var traced))
-                            values.Add(traced);
-                    }
-
-                    foreach (System.Text.RegularExpressions.Match idMatch in IdentifierRegex.Matches(expr))
-                    {
-                        var id = idMatch.Value;
-                        if (id.StartsWith("DAT_", StringComparison.Ordinal)) continue;
-                        if (NonVariableIdentifiers.Contains(id)) continue;
-                        if (!visited.Add(id)) continue; // already traced this variable in this chain
-                        frontier.Enqueue((id, exprPos));
-                    }
-                }
-            }
         }
 
         return values;
