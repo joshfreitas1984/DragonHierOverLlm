@@ -24,7 +24,7 @@ namespace EnglishPatch;
 ///
 /// Fix: reverse-translate the `spriteName` argument via this class's OWN small, private,
 /// exact-match dictionary (loaded from `innIconNames.txt.yaml`, produced by
-/// Tests/GameFileHandling.cs's `AtlasSpriteNameColumnSources` as a byproduct of packaging
+/// Tests/DynamicStringSources.cs's `AtlasSpriteNameColumnSources` as a byproduct of packaging
 /// InnData.csv - no extra LLM translation, guaranteed consistent with the name already shown
 /// elsewhere) - NOT `DynamicStringPatches.ReverseTranslate`, whose dictionary only has isolated
 /// word fragments here (segmented via `ZhSegment`) rather than a whole-name entry, and whose much

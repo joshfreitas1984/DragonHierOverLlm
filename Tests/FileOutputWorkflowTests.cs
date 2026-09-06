@@ -9,8 +9,8 @@ public class FileOutputWorkflowTests
     [Fact(DisplayName = "6. Package to Game Files")]
     public static async Task PackageFinalTranslation()
     {
-        await GameFileHandling.PackageFinalTranslationAsync(GameFileHandling.WorkingDirectory, 
-            GameFileHandling.TextFilesToSplit);
+        await TranslationPackaging.PackageFinalTranslationAsync(GameFileHandling.WorkingDirectory, 
+            TextFileConfiguration.TextFilesToSplit);
 
         GameFileHandlingBase.CopyDirectory($"{GameFileHandling.WorkingDirectory}/Mod", 
             $"{GameFileHandling.GameFolder}/BepInEx/plugins/resources/GameData", true);

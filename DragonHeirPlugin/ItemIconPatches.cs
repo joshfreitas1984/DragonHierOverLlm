@@ -15,7 +15,7 @@ namespace EnglishPatch;
 /// through to `return this.name;`, using the item's raw Chinese display name itself as the
 /// "IconAtlas" lookup key. That's fine as long as `this.name` is still the original raw Chinese -
 /// but MedData.csv/FoodData.csv/HorseData.csv's name column (column 1) is ALSO captured via
-/// Tests/GameFileHandling.cs's `DynamicStringColumnSources` so the player sees a translated name
+/// Tests/DynamicStringSources.cs's `DynamicStringColumnSources` so the player sees a translated name
 /// in the UI, producing a `raw: "补血丹" -> result: "Coptis Root Pill"`-style entry in
 /// Files/Mod/dynamicStringsFromColumns.txt.yaml. DynamicStringPatches.cs's global
 /// String.Concat/Format postfix applies that dictionary to ANY patched call's result, including

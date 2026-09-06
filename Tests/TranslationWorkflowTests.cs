@@ -12,26 +12,26 @@ public class TranslationWorkflowTests
     [Fact(DisplayName = "0. Reset All Flags")]
     public async Task ResetAllFlags()
     {
-        await TranslationWorkflow.ResetAllFlags(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
+        await TranslationWorkflow.ResetAllFlags(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "1. TranslateLinesBruteForce")]
     public async Task TranslateLinesBruteForce()
     {
-        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
+        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
     [Fact(DisplayName = "2. ApplyRulesToCurrentTranslation")]
     public async Task ApplyRulesToCurrentTranslation()
     {
-        await TranslationWorkflow.ApplyAllRulesToCurrentTranslation(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
+        await TranslationWorkflow.ApplyAllRulesToCurrentTranslation(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "3. Translate Lines Only")]
     public async Task TranslateLines()
     {
-        await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, GameFileHandling.TextFilesToSplit);
+        await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
@@ -58,7 +58,7 @@ public class TranslationWorkflowTests
         };
 
         await TranslationWorkflow.SetSplitAsInvalid(GameFileHandling.WorkingDirectory,
-            GameFileHandling.TextFilesToSplit, badStrings);
+            TextFileConfiguration.TextFilesToSplit, badStrings);
     }
 
     [Fact(DisplayName = "5. Flag some regexes")]
@@ -70,7 +70,7 @@ public class TranslationWorkflowTests
         };
 
         await TranslationWorkflow.SetSplitAsInvalid(GameFileHandling.WorkingDirectory,
-            GameFileHandling.TextFilesToSplit, badStrings);
+            TextFileConfiguration.TextFilesToSplit, badStrings);
     }
 
     [Fact(DisplayName = "5. Flag single Chinese character strings")]
@@ -83,7 +83,7 @@ public class TranslationWorkflowTests
         };
 
         await TranslationWorkflow.SetSplitAsInvalidByRegex(GameFileHandling.WorkingDirectory,
-            GameFileHandling.TextFilesToSplit, badPatterns);
+            TextFileConfiguration.TextFilesToSplit, badPatterns);
     }
 
     [Fact(DisplayName = "6. Clean up some regexes")]
@@ -109,7 +109,7 @@ public class TranslationWorkflowTests
         };
 
         await TranslationWorkflow.CleanUpSomeRegexes(GameFileHandling.WorkingDirectory,
-            GameFileHandling.TextFilesToSplit, regex);
+            TextFileConfiguration.TextFilesToSplit, regex);
     }
 
     [Fact(DisplayName = "4. Find All Failing Translations")]
@@ -117,7 +117,7 @@ public class TranslationWorkflowTests
     {
         var workingDirectory = GameFileHandling.WorkingDirectory;
         (List<FailedTranslation> failures, List<string> forTheGlossary) =
-            await GetFailedTranslations(workingDirectory, GameFileHandling.TextFilesToSplit);
+            await GetFailedTranslations(workingDirectory, TextFileConfiguration.TextFilesToSplit);
 
         var serializer = YamlHelper.CreateSerializer();
         var yaml = serializer.Serialize(failures);
@@ -134,7 +134,7 @@ public class TranslationWorkflowTests
         var output = new List<string>();
 
         await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
-            GameFileHandling.TextFilesToSplit,
+            TextFileConfiguration.TextFilesToSplit,
             async (outputFile, textFileToTranslate, fileLines) =>
             {
                 if (textFileToTranslate.Path != "heroNameParts.txt")

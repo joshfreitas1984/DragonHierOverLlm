@@ -143,7 +143,7 @@ public class AssetDumperWorkflowTests
 
         // dumpedPrefabText.txt is the actual translation input consumed by
         // FanslationStudio.LlmKit.Workflow.PrefabTextWorkflow (via
-        // GameFileHandling.ExportPrefabTextAssetToCustomFormat) - it must be JUST the plain string
+        // TranslationExport.ExportPrefabTextAssetToCustomFormat) - it must be JUST the plain string
         // per line, since each line becomes a whole TranslationLine/TranslationSplit with nothing
         // else to strip out first.
         //

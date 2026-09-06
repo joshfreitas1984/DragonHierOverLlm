@@ -14,12 +14,12 @@ namespace Tests;
 /// "经冬犹绿林"/"从今又几年" case this was built for). Title and author are included alongside
 /// paragraph lines since they're shown in-game too.
 ///
-/// Writes into its OWN dedicated dynamicStringsPoetry.txt (see GameFileHandling.TextFilesToSplit)
+/// Writes into its OWN dedicated dynamicStringsPoetry.txt (see TextFileConfiguration.TextFilesToSplit)
 /// so this source's provenance stays unambiguous - reuses the same DynamicStringsIL2CPP raw/result
 /// export-translate-package plumbing as dynamicStrings.txt/dynamicStringsFromColumns.txt, nothing
 /// poetry-specific needed there. Idempotent: re-running never duplicates an already-extracted
 /// value in this file. Cross-file duplicates (a value that also exists in another dynamic-string
-/// file) are resolved separately by GameFileHandling.DedupeDynamicStringFiles.
+/// file) are resolved separately by DynamicStringExtraction.DedupeDynamicStringFiles.
 /// </summary>
 public static class PoetryDataWorkflow
 {
@@ -40,7 +40,7 @@ public static class PoetryDataWorkflow
         if (!File.Exists(poetryDataPath)) return;
 
         var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsPoetry.txt";
-        var seen = GameFileHandling.GetExistingDynamicStringValues(outputPath);
+        var seen = DynamicStringExtraction.GetExistingDynamicStringValues(outputPath);
 
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         var poems = JsonSerializer.Deserialize<List<PoemEntry>>(File.ReadAllText(poetryDataPath), options) ?? [];

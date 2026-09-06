@@ -23,7 +23,7 @@ public class FileValidationTests
     private static readonly Regex UnresolvedPlaceholderPattern = new(@"\{\d+\}", RegexOptions.Compiled);
 
     private static IEnumerable<TextFileToSplit> PackagedTextFiles =>
-        GameFileHandling.TextFilesToSplit.Where(t => t.PackageOutput);
+        TextFileConfiguration.TextFilesToSplit.Where(t => t.PackageOutput);
 
     [Fact(DisplayName = "Packaged Mod CSVs have a consistent column count per row")]
     public void PackagedModFilesHaveConsistentColumnCounts()
@@ -164,7 +164,7 @@ public class FileValidationTests
         var convertedDir = $"{GameFileHandling.WorkingDirectory}/Converted";
         var report = new List<string>();
 
-        foreach (var textFile in GameFileHandling.TextFilesToSplit)
+        foreach (var textFile in TextFileConfiguration.TextFilesToSplit)
         {
             var path = $"{convertedDir}/{textFile.Path}.yaml";
             if (!File.Exists(path))

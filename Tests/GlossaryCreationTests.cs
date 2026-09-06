@@ -40,7 +40,7 @@ public class GlossaryCreationTests
         // effects" header) is looked up by GameDataController.StringToSpeAddData via an exact
         // String.Equals against the label half of a "Label+Number" fragment embedded in
         // HeroTagData.csv's "效果" column and ResourcePointTypeData.csv's "守城效果" column (both
-        // currently SkipColumns'd in GameFileHandling.cs - see dragonheirplugin.instructions.md's
+        // currently SkipColumns'd in TextFileConfiguration.cs - see dragonheirplugin.instructions.md's
         // "CONFIRMED root cause" section for the game-data-load abort/crash this caused when the
         // two sides were translated inconsistently). This glossary pins every label to a single,
         // consistent English translation across all four files, restricted via "only" so it
@@ -62,7 +62,7 @@ public class GlossaryCreationTests
         var items = new List<string>();
 
         await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
-            GameFileHandling.TextFilesToSplit,
+            TextFileConfiguration.TextFilesToSplit,
             async (outputFile, textFileToTranslate, fileLines) =>
             {
                 if (textFileToTranslate.Path != "SpeAddDataBase.csv" && textFileToTranslate.Path != "ForceSpeAddDataBase.csv")
@@ -102,7 +102,7 @@ public class GlossaryCreationTests
         var items = new List<string>();
 
         await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
-            GameFileHandling.TextFilesToSplit,
+            TextFileConfiguration.TextFilesToSplit,
             async (outputFile, textFileToTranslate, fileLines) =>
             {
                 if (textFileToTranslate.Path != path)
@@ -151,7 +151,7 @@ public class GlossaryCreationTests
         var items = new List<string>();
 
         await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
-            GameFileHandling.TextFilesToSplit,
+            TextFileConfiguration.TextFilesToSplit,
             async (outputFile, textFileToTranslate, fileLines) =>
             {
                 if (textFileToTranslate.Path != "NameData.csv")

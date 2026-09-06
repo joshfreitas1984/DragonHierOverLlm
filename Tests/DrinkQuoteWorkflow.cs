@@ -27,7 +27,7 @@ namespace Tests;
 /// stable across decompiles, unlike the local variable names around them.
 ///
 /// Writes into its OWN dedicated dynamicStringsDrinkQuotes.txt (see
-/// GameFileHandling.TextFilesToSplit) - same DynamicStringsIL2CPP export/translate/package
+/// TextFileConfiguration.TextFilesToSplit) - same DynamicStringsIL2CPP export/translate/package
 /// plumbing as dynamicStrings.txt/dynamicStringsPoetry.txt. Idempotent.
 /// </summary>
 public static class DrinkQuoteWorkflow
@@ -66,7 +66,7 @@ public static class DrinkQuoteWorkflow
         if (poemLines.Count == 0) return;
 
         var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsDrinkQuotes.txt";
-        var seen = GameFileHandling.GetExistingDynamicStringValues(outputPath);
+        var seen = DynamicStringExtraction.GetExistingDynamicStringValues(outputPath);
 
         var found = new List<string>();
 

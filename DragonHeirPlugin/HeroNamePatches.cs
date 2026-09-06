@@ -30,8 +30,9 @@ namespace EnglishPatch;
 /// substring-replace dictionary, since a bare one/two-character surname is far too easy to
 /// accidentally match as a substring inside unrelated Chinese text elsewhere in the game (that
 /// dictionary is loaded from any "dynamicStrings*.txt.yaml" file; heroNameParts.txt.yaml is
-/// deliberately named so it never matches that glob). Depends on Tests/GameFileHandling.cs's
-/// ExtractHeroNamePartCandidates/DynamicStringNamePartColumnSources extracting SpeHeroData's
+/// deliberately named so it never matches that glob). Depends on
+/// Tests/DynamicStringExtraction.cs's ExtractHeroNamePartCandidates and
+/// Tests/DynamicStringSources.cs's DynamicStringNamePartColumnSources extracting SpeHeroData's
 /// "Family.Given" Name column as two standalone raw fragments (not just the whole dotted string)
 /// into that dedicated file, since HeroData strips the "." separator at load time and stores the
 /// two halves separately.
@@ -183,7 +184,7 @@ internal static class HeroNamePatches
             // fallback - no fixed suffix to strip here, so just run the whole result through the
             // same fragment dictionary. Requires the SpeHeroData Name column's family/given halves
             // to be extracted as their own standalone raw candidates (see
-            // Tests/GameFileHandling.cs's DynamicStringNamePartColumnSources) rather than only the
+            // Tests/DynamicStringSources.cs's DynamicStringNamePartColumnSources) rather than only the
             // whole "Family.Given" compound, since HeroData strips the "." separator at load time.
             result = TranslateNamePart(result);
         }
