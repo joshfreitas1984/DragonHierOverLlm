@@ -10,7 +10,8 @@ namespace Tests
     {
         // Directory holding every dynamic-string dump/candidate file (dynamicStrings.txt,
         // dynamicStringsFromColumns.txt, dynamicStringsFromStructuredFragments.txt,
-        // dynamicStringsFromOtherFieldLabels.txt, dynamicStringsPoetry.txt, heroNameParts.txt).
+        // dynamicStringsFromOtherFieldLabels.txt, dynamicStringsPoetry.txt, heroNameParts.txt,
+        // forceNameParts.txt).
         internal static string DynamicStringsDumpDirectory(string workingDirectory) =>
             $"{workingDirectory}/Raw/Dumped/DynamicStrings";
 
@@ -214,6 +215,53 @@ namespace Tests
 
                             found.Add(value);
                         }
+                    }
+                }
+            }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
+
+        /// <summary>
+        /// Extracts ForceData's first-2-character name prefix (see
+        /// DynamicStringSources.DynamicStringForceNamePrefixColumnSources) into its OWN dedicated
+        /// dump file (Raw/Dumped/DynamicStrings/forceNameParts.txt) - deliberately separate from
+        /// dynamicStrings.txt/dynamicStringsFromColumns.txt so this short name fragment never ends
+        /// up merged into DynamicStringPatches' global substring-replace dictionary (see the
+        /// "forceNameParts.txt" TextFileToSplit entry's comment). Idempotent: re-running never
+        /// duplicates an already-extracted value.
+        /// </summary>
+        public static void ExtractForceNamePrefixCandidates(string workingDirectory)
+        {
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/forceNameParts.txt";
+
+            var seen = GetExistingDynamicStringValues(outputPath);
+
+            var found = new List<string>();
+
+            foreach (var (csvFileName, columns) in DynamicStringSources.DynamicStringForceNamePrefixColumnSources)
+            {
+                var csvPath = $"{workingDirectory}/Raw/Dumped/GameData/{csvFileName}";
+                if (!File.Exists(csvPath)) continue;
+
+                // Skip the header row.
+                foreach (var line in File.ReadAllLines(csvPath).Skip(1))
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+
+                    var fields = GameFileHandling.ParseCsvRow(line);
+                    foreach (var column in columns)
+                    {
+                        if (column >= fields.Length) continue;
+
+                        var cell = fields[column];
+                        if (string.IsNullOrWhiteSpace(cell)) continue;
+
+                        var prefix = cell.Length <= 2 ? cell : cell.Substring(0, 2);
+                        if (!seen.Add(prefix)) continue;
+
+                        found.Add(prefix);
                     }
                 }
             }

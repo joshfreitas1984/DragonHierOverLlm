@@ -36,17 +36,38 @@ namespace EnglishPatch;
 /// "Family.Given" Name column as two standalone raw fragments (not just the whole dotted string)
 /// into that dedicated file, since HeroData strips the "." separator at load time and stores the
 /// two halves separately.
+///
+/// Also covers HeroData.GetHeroForceLvDescribe(bool)'s force-name truncation (see
+/// GetHeroForceLvDescribePostfix below) - same class of native-computed, dictionary-bypassing
+/// fragment (a first-2-character prefix of the raw force name, e.g. "仙霞" from "仙霞派"), looked
+/// up in its own private _forceNamePartDictionary (loaded from
+/// BepInEx\plugins\resources\forceNameParts.txt.yaml by LoadForceNamePartDictionary) for the same
+/// false-positive-risk reason as _namePartDictionary above.
 /// </summary>
 internal static class HeroNamePatches
 {
     private const string NamePartDictionaryFileName = "heroNameParts.txt.yaml";
     private static Dictionary<string, string> _namePartDictionary = new();
 
+    private const string ForceNamePartDictionaryFileName = "forceNameParts.txt.yaml";
+    private static Dictionary<string, string> _forceNamePartDictionary = new();
+
     /// <summary>Loads heroNameParts.txt.yaml (if present) into this class's own private, exact-
     /// match dictionary. Safe to call even if the file is missing (lookups then just fall back to
     /// leaving the original Chinese text untranslated). Call once from MainPlugin.Load(), before
     /// GetHeroName is ever invoked.</summary>
-    public static void LoadNamePartDictionary()
+    public static void LoadNamePartDictionary() =>
+        _namePartDictionary = LoadDictionaryFile(NamePartDictionaryFileName);
+
+    /// <summary>Loads forceNameParts.txt.yaml (if present) into this class's own private, exact-
+    /// match force-name-prefix dictionary - same rationale and loading mechanics as
+    /// LoadNamePartDictionary above, just for HeroData.GetHeroForceLvDescribe's truncated force-
+    /// name prefix instead of GameController.GetHeroName's family/given name. Call once from
+    /// MainPlugin.Load(), before GetHeroForceLvDescribe is ever invoked.</summary>
+    public static void LoadForceNamePartDictionary() =>
+        _forceNamePartDictionary = LoadDictionaryFile(ForceNamePartDictionaryFileName);
+
+    private static Dictionary<string, string> LoadDictionaryFile(string fileName)
     {
         try
         {
@@ -54,19 +75,19 @@ internal static class HeroNamePatches
             var resourcesDir = Path.Combine(pluginDir, "resources");
 
             // Search recursively (mirrors DynamicStringPatches.FindResourceFiles) - the packaged
-            // file actually lands under resources\GameData\heroNameParts.txt.yaml, not directly
-            // under resources\, so a flat Path.Combine+File.Exists check here would silently never
-            // find it (CONFIRMED bug: this is why name parts fell back to untranslated Chinese
-            // even though HeroNamePatches' Postfix and RelationSuffixes translation were both
-            // running correctly - _namePartDictionary just stayed empty).
+            // file actually lands under resources\GameData\<fileName>, not directly under
+            // resources\, so a flat Path.Combine+File.Exists check here would silently never find
+            // it (CONFIRMED bug: this is why name parts fell back to untranslated Chinese even
+            // though HeroNamePatches' Postfix and RelationSuffixes translation were both running
+            // correctly - _namePartDictionary just stayed empty).
             var path = Directory.Exists(resourcesDir)
-                ? Directory.GetFiles(resourcesDir, NamePartDictionaryFileName, SearchOption.AllDirectories).FirstOrDefault()
+                ? Directory.GetFiles(resourcesDir, fileName, SearchOption.AllDirectories).FirstOrDefault()
                 : null;
 
             if (path == null)
             {
-                MainPlugin.Logger?.LogWarning($"[HeroNamePatches] '{NamePartDictionaryFileName}' not found under '{resourcesDir}' - hero name parts will be left untranslated.");
-                return;
+                MainPlugin.Logger?.LogWarning($"[HeroNamePatches] '{fileName}' not found under '{resourcesDir}' - name parts will be left untranslated.");
+                return new Dictionary<string, string>();
             }
 
             var deserializer = new DeserializerBuilder()
@@ -75,16 +96,18 @@ internal static class HeroNamePatches
                 .Build();
 
             var entries = deserializer.Deserialize<List<DynamicStringPatches.DictionaryEntry>>(File.ReadAllText(path)) ?? new();
-            _namePartDictionary = entries
+            var dictionary = entries
                 .Where(e => !string.IsNullOrEmpty(e.Raw))
                 .GroupBy(e => e.Raw)
                 .ToDictionary(g => g.Key, g => g.First().Result ?? g.Key);
 
-            MainPlugin.Logger?.LogInfo($"[HeroNamePatches] Loaded {_namePartDictionary.Count} name part(s) from '{NamePartDictionaryFileName}'.");
+            MainPlugin.Logger?.LogInfo($"[HeroNamePatches] Loaded {dictionary.Count} name part(s) from '{fileName}'.");
+            return dictionary;
         }
         catch (Exception ex)
         {
-            MainPlugin.Logger?.LogError($"[HeroNamePatches] Failed to load '{NamePartDictionaryFileName}': {ex}");
+            MainPlugin.Logger?.LogError($"[HeroNamePatches] Failed to load '{fileName}': {ex}");
+            return new Dictionary<string, string>();
         }
     }
 
@@ -211,5 +234,34 @@ internal static class HeroNamePatches
         // dictionary (see LoadNamePartDictionary), not DynamicStringPatches' global substring
         // dictionary.
         return $"{english} {TranslateNamePart(prefix)}";
+    }
+
+    // HeroData.GetHeroForceLvDescribe(fullName: false) builds the compact battle-UI force tag
+    // (e.g. Canvas/BattleUIPanel/NowActiveHero/NameBack/Force) by taking the first 2 characters
+    // of the raw force name (String.Substring(name, 0, 2), e.g. "仙霞派" -> "仙霞") and
+    // concatenating the colored rank text onto it - same combinatorial-native-computation shape as
+    // GetHeroName above, just truncation instead of relation-word branching. The fullName: true
+    // path concatenates the WHOLE untruncated force name instead, which DynamicStringColumnSources'
+    // ordinary ForceData.csv column-1 extraction already covers via the generic substring
+    // dictionary - so this postfix only needs to handle the fullName: false case, gated directly
+    // on the method's own bool parameter (no ambiguity about which case produced __result, unlike
+    // GetHeroName's postfix which has to infer shape from the string itself).
+    [HarmonyPatch(typeof(HeroData), nameof(HeroData.GetHeroForceLvDescribe), new[] { typeof(bool) })]
+    [HarmonyPostfix]
+    public static void GetHeroForceLvDescribePostfix(bool fullName, ref string __result)
+    {
+        try
+        {
+            if (fullName || string.IsNullOrEmpty(__result) || __result.Length < 2) return;
+
+            var prefix = __result.Substring(0, 2);
+            if (!_forceNamePartDictionary.TryGetValue(prefix, out var translated)) return;
+
+            __result = translated + __result.Substring(2);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"Error in GetHeroForceLvDescribe translation postfix: {ex}");
+        }
     }
 }

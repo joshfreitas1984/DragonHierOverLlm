@@ -1,0 +1,120 @@
+- raw: "长乐"
+  splits:
+  - text: "长乐"
+    translated: "Changle"
+- raw: "唐门"
+  splits:
+  - text: "唐门"
+    translated: "Tang Clan"
+- raw: "药王"
+  splits:
+  - text: "药王"
+    translated: "King of Medicine"
+- raw: "丐帮"
+  splits:
+  - text: "丐帮"
+    translated: "Beggar Sect"
+- raw: "飞龙"
+  splits:
+  - text: "飞龙"
+    translated: "Dragon Flyer"
+- raw: "茅山"
+  splits:
+  - text: "茅山"
+    translated: "Mount Mao"
+- raw: "铸剑"
+  splits:
+  - text: "铸剑"
+    translated: "Forging a Sword"
+- raw: "五毒"
+  splits:
+  - text: "五毒"
+    translated: "Five toxins"
+- raw: "阎罗"
+  splits:
+  - text: "阎罗"
+    translated: "Judge Gong"
+- raw: "大隐"
+  splits:
+  - text: "大隐"
+    translated: "Great Concealment"
+- raw: "少林"
+  splits:
+  - text: "少林"
+    translated: "Shaolin"
+- raw: "武当"
+  splits:
+  - text: "武当"
+    translated: "Wudang"
+- raw: "霸刀"
+  splits:
+  - text: "霸刀"
+    translated: "Dominion Blade"
+- raw: "蓬莱"
+  splits:
+  - text: "蓬莱"
+    translated: "Penglaizhao"
+- raw: "峨眉"
+  splits:
+  - text: "峨眉"
+    translated: "Emei"
+- raw: "崆峒"
+  splits:
+  - text: "崆峒"
+    translated: "Kongtong"
+- raw: "神机"
+  splits:
+  - text: "神机"
+    translated: "Divine Mechanism"
+- raw: "霹雳"
+  splits:
+  - text: "霹雳"
+    translated: "Thunderbolt"
+- raw: "金刚"
+  splits:
+  - text: "金刚"
+    translated: "Jingang"
+- raw: "天山"
+  splits:
+  - text: "天山"
+    translated: "Tianshan"
+- raw: "聚义"
+  splits:
+  - text: "聚义"
+    translated: "Gather to swear loyalty"
+- raw: "黄河"
+  splits:
+  - text: "黄河"
+    translated: "Yellow River"
+- raw: "八卦"
+  splits:
+  - text: "八卦"
+    translated: "Bagua"
+- raw: "海沙"
+  splits:
+  - text: "海沙"
+    translated: "Desert sand"
+- raw: "铁掌"
+  splits:
+  - text: "铁掌"
+    translated: "Iron Palm"
+- raw: "仙霞"
+  splits:
+  - text: "仙霞"
+    translated: "Xianxia"
+- raw: "巨鲸"
+  splits:
+  - text: "巨鲸"
+    translated: "Great whale"
+- raw: "金龙"
+  splits:
+  - text: "金龙"
+    translated: "Golden Dragon"
+- raw: "青城"
+  splits:
+  - text: "青城"
+    translated: "Qingcheng"
+- raw: "伏牛"
+  splits:
+  - text: "伏牛"
+    translated: "Wutou Mountain"

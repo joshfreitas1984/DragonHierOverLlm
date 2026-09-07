@@ -8238,7 +8238,7 @@
 - raw: "合盘掌"
   splits:
   - text: "合盘掌"
-    translated: "Palming Technique"
+    translated: "Combined Palm Technique"
 - raw: "拳掌1;体质1;经脉1"
   splits:
   - text: "拳掌1"
@@ -11045,7 +11045,7 @@
 - raw: "潮起月盈功"
   splits:
   - text: "潮起月盈功"
-    translated: "Tide Rise Moon Full Success"
+    translated: "Tide Rising Full Moon Art"
 - raw: "内功潜力1;内功1;经脉1"
   splits:
   - text: "内功潜力1"
@@ -11750,7 +11750,7 @@
 - raw: "劈金碎玉掌"
   splits:
   - text: "劈金碎玉掌"
-    translated: "Golden Splitting Palm"
+    translated: "Split Gold Shatter Jade Palm"
 - raw: "力道潜力1;拳掌1;体质1"
   splits:
   - text: "力道潜力1"
@@ -24146,7 +24146,7 @@
 - raw: "承影剑法"
   splits:
   - text: "承影剑法"
-    translated: "Shadow Blade Swordsmanship"
+    translated: "Chengying Swordsmanship"
 - raw: "剑法潜力1;体质1"
   splits:
   - text: "剑法潜力1"
@@ -52268,3 +52268,490 @@
   splits:
   - text: "雷彤"
     translated: "Le Tong"
+- raw: "工事"
+  splits:
+  - text: "工事"
+    translated: "Construction"
+- raw: "护甲+5"
+  splits:
+  - text: "护甲"
+    translated: "Armor"
+  templates:
+  - template: "{0}+5"
+- raw: "草丛"
+  splits:
+  - text: "草丛"
+    translated: "Bushes"
+- raw: "闪避+5%"
+  splits:
+  - text: "闪避"
+    translated: "Dodge"
+  templates:
+  - template: "{0}+5%"
+- raw: "水塘"
+  splits:
+  - text: "水塘"
+    translated: "Pond"
+- raw: "速度-20%\n闪避-5%"
+  splits:
+  - text: "速度"
+    translated: "Speed"
+  - subIndex: 1
+    text: "闪避"
+    translated: "Dodge"
+  templates:
+  - template: "{0}-20%\n{1}-5%"
+- raw: "泥潭"
+  splits:
+  - text: "泥潭"
+    translated: "Quagmire"
+- raw: "速度-40%\n闪避-10%"
+  splits:
+  - text: "速度"
+    translated: "Speed"
+  - subIndex: 1
+    text: "闪避"
+    translated: "Dodge"
+  templates:
+  - template: "{0}-40%\n{1}-10%"
+- raw: "药草"
+  splits:
+  - text: "药草"
+    translated: "Herb"
+- raw: "生命+10%\n内力+10%"
+  splits:
+  - text: "生命"
+    translated: "Health"
+  - subIndex: 1
+    text: "内力"
+    translated: "Inner Power"
+  templates:
+  - template: "{0}+10%\n{1}+10%"
+- raw: "异果"
+  splits:
+  - text: "异果"
+    translated: "Strawberry"
+- raw: "体力+30%\n内力+10%"
+  splits:
+  - text: "体力"
+    translated: "Stamina"
+  - subIndex: 1
+    text: "内力"
+    translated: "Inner Power"
+  templates:
+  - template: "{0}+30%\n{1}+10%"
+- raw: "奇花"
+  splits:
+  - text: "奇花"
+    translated: "Strange Blossom"
+- raw: "内力+20%\n混乱2回合"
+  splits:
+  - text: "内力"
+    translated: "Inner Power"
+  - subIndex: 1
+    text: "混乱2回合"
+    translated: "2 round of chaos"
+  templates:
+  - template: "{0}+20%\n{1}"
+- raw: "怪藤"
+  splits:
+  - text: "怪藤"
+    translated: "Strange Vine"
+- raw: "内力+10%\n疯魔2回合"
+  splits:
+  - text: "内力"
+    translated: "Inner Power"
+  - subIndex: 1
+    text: "疯魔2回合"
+    translated: "Mad Possession Turn 2"
+  templates:
+  - template: "{0}+10%\n{1}"
+- raw: "毒虫"
+  splits:
+  - text: "毒虫"
+    translated: "Poison insect"
+- raw: "当前内力-20%\n中毒+20"
+  splits:
+  - text: "当前内力"
+    translated: "Current Inner Power"
+  - subIndex: 1
+    text: "中毒"
+    translated: "Poisoned"
+  templates:
+  - template: "{0}-20%\n{1}+20"
+- raw: "持续中毒"
+  splits:
+  - text: "持续中毒"
+    translated: "Continuous poisoning"
+- raw: "飞箭"
+  splits:
+  - text: "飞箭"
+    translated: "Arrow"
+- raw: "当前生命-10%\n外伤+20"
+  splits:
+  - text: "当前生命"
+    translated: "Current Health"
+  - subIndex: 1
+    text: "外伤"
+    translated: "External Injury"
+  templates:
+  - template: "{0}-10%\n{1}+20"
+- raw: "钉刺"
+  splits:
+  - text: "钉刺"
+    translated: "Spikes"
+- raw: "持续外伤"
+  splits:
+  - text: "持续外伤"
+    translated: "Continuous external injuries"
+- raw: "陷坑"
+  splits:
+  - text: "陷坑"
+    translated: "Pitfall"
+- raw: "当前体力-30%\n内伤+20"
+  splits:
+  - text: "当前体力"
+    translated: "Current Stamina"
+  - subIndex: 1
+    text: "内伤"
+    translated: "Internal Injury"
+  templates:
+  - template: "{0}-30%\n{1}+20"
+- raw: "热碳"
+  splits:
+  - text: "热碳"
+    translated: "Hot charcoal"
+- raw: "持续内伤"
+  splits:
+  - text: "持续内伤"
+    translated: "Continuous Internal Injury"
+- raw: "随机获得物品"
+  splits:
+  - text: "随机获得物品"
+    translated: "Randomly obtain items"
+- raw: "清心符"
+  splits:
+  - text: "清心符"
+    translated: "Purification Charm"
+- raw: "智力2"
+  splits:
+  - text: "智力2"
+    translated: "2 intelligence"
+- raw: "安神符"
+  splits:
+  - text: "安神符"
+    translated: "Soothing Charm"
+- raw: "意志2"
+  splits:
+  - text: "意志2"
+    translated: "2 will"
+- raw: "跌打梅山符"
+  splits:
+  - text: "跌打梅山符"
+    translated: "Meridional MerMAID Sticker"
+- raw: "闪避-0.04"
+  splits:
+  - text: "闪避"
+    translated: "Dodge"
+  templates:
+  - template: "{0}-0.04"
+- raw: "咽喉骨鲠符"
+  splits:
+  - text: "咽喉骨鲠符"
+    translated: "Throat‑Phlegm Sealing Symbol"
+- raw: "伤害-0.04"
+  splits:
+  - text: "伤害"
+    translated: "Damage"
+  templates:
+  - template: "{0}-0.04"
+- raw: "勾魂符"
+  splits:
+  - text: "勾魂符"
+    translated: "Soul‑snaring charm"
+- raw: "反击-0.06"
+  splits:
+  - text: "反击"
+    translated: "Counterattack"
+  templates:
+  - template: "{0}-0.06"
+- raw: "天罡符"
+  splits:
+  - text: "天罡符"
+    translated: "Heavenly Warrant Symbol"
+- raw: "卸力0.06"
+  splits:
+  - text: "卸力0.06"
+    translated: "Absorb0.06"
+- raw: "寒天符"
+  splits:
+  - text: "寒天符"
+    translated: "Cold Frost Token"
+- raw: "速度-0.08"
+  splits:
+  - text: "速度"
+    translated: "Speed"
+  templates:
+  - template: "{0}-0.08"
+- raw: "护甲4"
+  splits:
+  - text: "护甲4"
+    translated: "Armor 4"
+- raw: "神兵天将符"
+  splits:
+  - text: "神兵天将符"
+    translated: "Divine Soldier Heavenly General Talisman"
+- raw: "暴击0.1"
+  splits:
+  - text: "暴击0.1"
+    translated: "Critical hit 0.1"
+- raw: "伤害抗性-0.1"
+  splits:
+  - text: "伤害抗性"
+    translated: "Damage resistance"
+  templates:
+  - template: "{0}-0.1"
+- raw: "晴"
+  splits:
+  - text: "晴"
+    translated: "Sunny"
+- raw: "雨"
+  splits:
+  - text: "雨"
+    translated: "Rain"
+- raw: "暴雨"
+  splits:
+  - text: "暴雨"
+    translated: "Heavy rain"
+- raw: "雪"
+  splits:
+  - text: "雪"
+    translated: "Snow"
+- raw: "暴雪"
+  splits:
+  - text: "暴雪"
+    translated: "Blizzard"
+- raw: "门派大比"
+  splits:
+  - text: "门派大比"
+    translated: "Sect Tournament"
+- raw: "比武大赛"
+  splits:
+  - text: "比武大赛"
+    translated: "Combat Tournament"
+- raw: "辩才大赛"
+  splits:
+  - text: "辩才大赛"
+    translated: "Talentspeak Contest"
+- raw: "春节"
+  splits:
+  - text: "春节"
+    translated: "Chinese New Year"
+- raw: "元宵"
+  splits:
+  - text: "元宵"
+    translated: "M Lantern Festival"
+- raw: "清明"
+  splits:
+  - text: "清明"
+    translated: "Qingming"
+- raw: "端午"
+  splits:
+  - text: "端午"
+    translated: "Dragon Boat Festival"
+- raw: "七夕"
+  splits:
+  - text: "七夕"
+    translated: "Qixi Festival"
+- raw: "中秋"
+  splits:
+  - text: "中秋"
+    translated: "Mid‑Autumn Festival"
+- raw: "重阳"
+  splits:
+  - text: "重阳"
+    translated: "Double Ninth Festival"
+- raw: "腊八"
+  splits:
+  - text: "腊八"
+    translated: "Bazhou"
+- raw: "中元鬼市"
+  splits:
+  - text: "中元鬼市"
+    translated: "Mid‑Summer Ghost Market"
+- raw: "文"
+  splits:
+  - text: "文"
+    translated: "Words"
+- raw: "文本"
+  splits:
+  - text: "文本"
+    translated: "Text"
+- raw: "获得经验"
+  splits:
+  - text: "获得经验"
+    translated: "Gain experience"
+- raw: "精要"
+  splits:
+  - text: "精要"
+    translated: "Essence"
+- raw: "获得大量经验"
+  splits:
+  - text: "获得大量经验"
+    translated: "Gain a lot of experience"
+- raw: "漏"
+  splits:
+  - text: "漏"
+    translated: "Leak"
+- raw: "纰漏"
+  splits:
+  - text: "纰漏"
+    translated: "Flaw"
+- raw: "失去经验"
+  splits:
+  - text: "失去经验"
+    translated: "Lose experience points"
+- raw: "错"
+  splits:
+  - text: "错"
+    translated: "Wrong"
+- raw: "错误"
+  splits:
+  - text: "错误"
+    translated: "Error"
+- raw: "失去大量经验"
+  splits:
+  - text: "失去大量经验"
+    translated: "Lose a lot of experience points"
+- raw: "醒"
+  splits:
+  - text: "醒"
+    translated: "Awake"
+- raw: "清醒"
+  splits:
+  - text: "清醒"
+    translated: "Awake"
+- raw: "恢复耐心"
+  splits:
+  - text: "恢复耐心"
+    translated: "Recover your patience"
+- raw: "困"
+  splits:
+  - text: "困"
+    translated: "Trapped"
+- raw: "困倦"
+  splits:
+  - text: "困倦"
+    translated: "Drowsy"
+- raw: "失去耐心"
+  splits:
+  - text: "失去耐心"
+    translated: "Lose patience"
+- raw: "融"
+  splits:
+  - text: "融"
+    translated: "Merge"
+- raw: "融汇"
+  splits:
+  - text: "融汇"
+    translated: "Integrating"
+- raw: "已读越多经验越高"
+  splits:
+  - text: "已读越多经验越高"
+    translated: "The more you read, the higher your experience will be."
+- raw: "预"
+  splits:
+  - text: "预"
+    translated: "Prepare"
+- raw: "预习"
+  splits:
+  - text: "预习"
+    translated: "Preview"
+- raw: "已读越少经验越高"
+  splits:
+  - text: "已读越少经验越高"
+    translated: "The less you have read, the higher the experience."
+- raw: "一列"
+  splits:
+  - text: "一列"
+    translated: "A train"
+- raw: "阅读整列"
+  splits:
+  - text: "阅读整列"
+    translated: "Read the entire column"
+- raw: "破解"
+  splits:
+  - text: "破解"
+    translated: "Hack"
+- raw: "阅读周围1格"
+  splits:
+  - text: "阅读周围1格"
+    translated: "Read the surrounding 1 cells"
+- raw: "一行"
+  splits:
+  - text: "一行"
+    translated: "A row"
+- raw: "阅读整行"
+  splits:
+  - text: "阅读整行"
+    translated: "Read the entire line"
+- raw: "明朗"
+  splits:
+  - text: "明朗"
+    translated: "Bright"
+- raw: "显示周围3格"
+  splits:
+  - text: "显示周围3格"
+    translated: "Display surrounding 3 cells"
+- raw: "缺损"
+  splits:
+  - text: "缺损"
+    translated: "Deficiency"
+- raw: "提纲"
+  splits:
+  - text: "提纲"
+    translated: "Outline"
+- raw: "全场经验+10%"
+  splits:
+  - text: "全场经验"
+    translated: "Xp throughout the map"
+  templates:
+  - template: "{0}+10%"
+- raw: "迷惑"
+  splits:
+  - text: "迷惑"
+    translated: "Confusion"
+- raw: "全场经验-10%"
+  splits:
+  - text: "全场经验"
+    translated: "Xp throughout the map"
+  templates:
+  - template: "{0}-10%"
+- raw: "注释"
+  splits:
+  - text: "注释"
+    translated: "Notes"
+- raw: "周围经验+100%"
+  splits:
+  - text: "周围经验"
+    translated: "Surrounding experience"
+  templates:
+  - template: "{0}+100%"
+- raw: "难点"
+  splits:
+  - text: "难点"
+    translated: "Challenge"
+- raw: "周围经验-50%"
+  splits:
+  - text: "周围经验"
+    translated: "Surrounding experience"
+  templates:
+  - template: "{0}-50%"
+- raw: "贯通"
+  splits:
+  - text: "贯通"
+    translated: "Penetrate"
+- raw: "阅读整行整列"
+  splits:
+  - text: "阅读整行整列"
+    translated: "Read the entire row and column"

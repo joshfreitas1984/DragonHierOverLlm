@@ -20,6 +20,20 @@ namespace Tests
         private static readonly Dictionary<string, string> DynamicStringResultOverrides = new()
         {
             ["{0}年{1}月{2}日"] = "{0} Year {1} Month {2} Day",
+
+            // Both entries below were reported garbled in-game (e.g. "Will do this previously
+            // Jianghu Ranger XuanyuanChengXiu在Cancong Village And 仙霞 Sect Master He Chitchat
+            // One 阵...and hear the tale of their encounter...") - the ORIGINAL LLM translations
+            // were produced from fragments split right at the "{n}" placeholder boundary with no
+            // surrounding-sentence context, so each half was translated blind and came out
+            // ungrammatical. Overridden here to read as a single coherent sentence instead. NOTE:
+            // the reported instance additionally has a "{2}他" (title+pronoun) variant of the
+            // second raw string that this exact-Raw-match override does NOT fix - that variant
+            // was never captured as its own dumped Raw entry, so it still falls through to
+            // per-word dictionary substitution at runtime regardless of this fix.
+            ["#TargetInteractName#将此前{0}之遭遇向你娓娓道来......"] =
+                "#TargetInteractName# recounts to you in detail their previous encounter with {0}......",
+            ["{0}在{1}与{2}闲聊一阵。"] = "{0} chatted with {2} for a while at {1}.",
         };
 
         // Same placeholder-adjacency problem as DynamicStringResultOverrides, but for a fragment

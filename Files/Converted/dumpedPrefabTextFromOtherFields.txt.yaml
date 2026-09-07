@@ -215,7 +215,7 @@
 - raw: "#PlayerName#，你陆仁谦师伯遭铁掌帮袭击，危在旦夕。你<b>速回门派</b>与师兄弟汇合，尽快前去搭救！"
   splits:
   - text: "#PlayerName#，你陆仁谦师伯遭铁掌帮袭击，危在旦夕。你"
-    translated: "#PlayerName#, Master Senior Renqian was attacked by the Iron Palm Gang and is in dire peril. You"
+    translated: "#PlayerName#, Master Martial Uncle Lu Renqian is in grave danger from the Iron Palm Gang. You"
   - subIndex: 1
     text: "速回门派"
     translated: "Speed back to the sect"
@@ -3268,7 +3268,7 @@
     translated: "This month, the Transmission Conference will be held."
   - subIndex: 2
     text: "，将本门绝学无影乱剑传授给各位弟子。"
-    translated: ", Teach all of you disciples the ultimate technique, Shadowless Random Sword."
+    translated: ", Teach all of you disciples the secret art of Shadowless Chaotic Swords."
   - subIndex: 3
     text: "还望#PlayerName#速回门派参加，切莫错过。"
     translated: "I hope #PlayerName# returns to the Sect soon to participate, don't miss it."
@@ -6961,7 +6961,7 @@
     translated: "I heard"
   - subIndex: 1
     text: "这个月师伯会回仙霞派探望师傅"
-    translated: "This month, Senior Master will return to the Xianxia Sect to visit Master."
+    translated: "This month, the Martial Uncle will return to the Xianxia Sect to visit Master."
   - subIndex: 2
     text: "，#PlayerName#别忘了回来见见他老人家。"
     translated: ", #PlayerName#, don't forget to come back and meet him in person."
@@ -8627,7 +8627,7 @@
 - raw: "将潮起月盈功，劈金碎玉掌和无影乱剑均修炼至六重以上，然后去藏经阁进行参悟。"
   splits:
   - text: "将潮起月盈功，劈金碎玉掌和无影乱剑均修炼至六重以上，然后去藏经阁进行参悟。"
-    translated: "Cultivate the Tide Rises and Moon is Full Technique, the Split Gold Crumble Jade Palm, and the Invisible Chaos Sword to the sixth stage or above, then go to the Scripture Pavilion to gain insight."
+    translated: "Practice the Tide Rising Full Moon Art, Split Gold Shatter Jade Palm, and Shadowless Chaotic Swords to the sixth level or above, then go to the Scripture Pavilion to gain insight."
 - raw: "将解药带回#TargetPlace#，替吴忧解毒。"
   splits:
   - text: "将解药带回#TargetPlace#，替吴忧解毒。"
@@ -8921,7 +8921,7 @@
 - raw: "师伯祝寿"
   splits:
   - text: "师伯祝寿"
-    translated: "Senior Master's Longevity Celebration"
+    translated: "Martial Uncle Congratulations on Your Birthday"
 - raw: "师傅，我们回来了。"
   splits:
   - text: "师傅，我们回来了。"
@@ -9957,7 +9957,7 @@
 - raw: "接应师伯"
   splits:
   - text: "接应师伯"
-    translated: "Support Master Senior"
+    translated: "Respond to Martial Uncle"
 - raw: "接应师叔"
   splits:
   - text: "接应师叔"

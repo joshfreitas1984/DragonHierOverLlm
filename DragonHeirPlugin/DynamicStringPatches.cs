@@ -61,6 +61,14 @@ internal static class DynamicStringPatches
         // NEWLY GROWN suffix could possibly still need checking, instead of re-scanning the whole
         // (potentially huge, ever-growing) accumulated buffer for CJK on every single append.
         public bool TrustedAppendOnlySource;
+
+        // Guards the typewriter-reveal fast path's residual-CJK log below - that fast path returns
+        // on every tween step once a snapshot is seeded, so without this flag a seeded snapshot
+        // that still contains untranslated CJK (e.g. RunGenericPipeline only partially translated
+        // it) would either spam one log line per tween step or, before this flag existed, never
+        // get logged at all (LogResidualCjkDebug lived only in the full-pipeline branch below,
+        // which the fast path skips entirely). Reset whenever a new snapshot is seeded.
+        public bool LoggedResidualCjkForSnapshot;
     }
 
     private static readonly ConditionalWeakTable<object, ComponentTextCache> _componentTextCache = new();
@@ -74,7 +82,9 @@ internal static class DynamicStringPatches
     internal static void SeedComponentTranslatedSnapshot(object instance, string translatedFullText)
     {
         if (instance == null) return;
-        _componentTextCache.GetOrCreateValue(instance).TranslatedSnapshot = translatedFullText;
+        var cache = _componentTextCache.GetOrCreateValue(instance);
+        cache.TranslatedSnapshot = translatedFullText;
+        cache.LoggedResidualCjkForSnapshot = false;
     }
 
     // Lets a source-level patch (e.g. InfoListPatches) declare that a component only ever grows
@@ -302,10 +312,49 @@ internal static class DynamicStringPatches
         var trailingLiteral = raw.Substring(lastIndex);
         if (trailingLiteral.Length > 0)
         {
-            var escapedTrailingLiteral = Regex.Escape(trailingLiteral);
-            patternBuilder.Append(escapedTrailingLiteral);
-            permissivePatternBuilder.Append(escapedTrailingLiteral);
-            literalSegments.Add(trailingLiteral);
+            // A dumped Raw string is often captured as a standalone sentence (with its own
+            // sentence-final mark), but the SAME generated text can also get reused verbatim as a
+            // sub-clause embedded inside a larger sentence elsewhere (e.g. AIController's
+            // "{0}在{1}与{2}闲聊一阵。" hero-encounter log line getting recapped later via
+            // "...将此前{0}之遭遇向你娓娓道来......" - the trailing "。" isn't there anymore once
+            // it's embedded mid-clause). Treat a trailing CJK sentence-final mark as optional
+            // (both in the LiteralSegments containment pre-filter below and in the compiled
+            // regex/replacement) so this template still matches with or without it, instead of
+            // silently failing the pre-filter and falling through to per-word dictionary
+            // substitution. Deliberately narrow: only the FINAL trailing mark, only this fixed set
+            // of single-character full-width terminators - not "……" (an ellipsis signals trailing
+            // off, not a dropped sentence-final mark) and not ASCII "." (which can be genuine
+            // structural text elsewhere, e.g. a "Family.Given" name template).
+            var lastChar = trailingLiteral[^1];
+            if (lastChar is '。' or '！' or '？')
+            {
+                var trimmedTrailingLiteral = trailingLiteral[..^1];
+                var optionalMarkPattern = $"(?:{Regex.Escape(lastChar.ToString())})?";
+
+                if (trimmedTrailingLiteral.Length > 0)
+                {
+                    var escapedTrimmed = Regex.Escape(trimmedTrailingLiteral);
+                    patternBuilder.Append(escapedTrimmed).Append(optionalMarkPattern);
+                    permissivePatternBuilder.Append(escapedTrimmed).Append(optionalMarkPattern);
+                    // Only the required (non-optional) part needs to be present for the
+                    // LiteralSegments.All(Contains) pre-filter to still be a valid early-out.
+                    literalSegments.Add(trimmedTrailingLiteral);
+                }
+                else
+                {
+                    // The whole trailing literal was just the sentence-final mark itself (e.g.
+                    // raw ends "...{0}。") - nothing left to require via the pre-filter at all.
+                    patternBuilder.Append(optionalMarkPattern);
+                    permissivePatternBuilder.Append(optionalMarkPattern);
+                }
+            }
+            else
+            {
+                var escapedTrailingLiteral = Regex.Escape(trailingLiteral);
+                patternBuilder.Append(escapedTrailingLiteral);
+                permissivePatternBuilder.Append(escapedTrailingLiteral);
+                literalSegments.Add(trailingLiteral);
+            }
         }
 
         var replacementTokenIndex = 0;
@@ -597,22 +646,61 @@ internal static class DynamicStringPatches
     }
 
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
-    internal static void LogResidualCjkDebug(string stage, string before, string after)
+    // `instance` (optional) is the component whose text this is - when supplied, its GameObject
+    // hierarchy path is logged too, so a residual-CJK hit (e.g. an untranslated floor-item name
+    // with no dictionary coverage) can be traced back to the actual prefab/scene object instead
+    // of guessing from the dumped CSV data alone. Callers with no component in scope (GenericPostfix/
+    // FormatPrefix, which patch String.Format/Concat rather than a component setter) omit it.
+    internal static void LogResidualCjkDebug(string stage, string before, string after, object instance = null)
     {
         if (MainPlugin.ResidualCjkDebugEnabled?.Value != true) return;
         if (!ContainsCjk(after)) return;
 
         try
         {
-            var path = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
-            File.AppendAllText(path,
+            var logPath = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
+            var componentPath = instance != null ? GetComponentPath(instance) : "(no component)";
+            File.AppendAllText(logPath,
                 $"[{DateTime.Now:HH:mm:ss.fff}] {stage}{Environment.NewLine}" +
+                $"  path:   {componentPath}{Environment.NewLine}" +
                 $"  before: {before}{Environment.NewLine}" +
                 $"  after:  {after}{Environment.NewLine}");
         }
         catch
         {
             // Best-effort diagnostic only - never let a logging failure affect translation.
+        }
+    }
+
+    // Manual type check (per the confirmed-safe pattern in dragonheirplugin.instructions.md) over
+    // the concrete component types ApplyToComponentText's sink patches actually cover - never a
+    // generic Cast<T>()/TryCast<T>() over `instance`. Walks the transform.parent chain via plain,
+    // non-generic property reads only.
+    private static string GetComponentPath(object instance)
+    {
+        try
+        {
+            UnityEngine.GameObject go = instance switch
+            {
+                TMP_Text tmp => tmp.gameObject,
+                Text txt => txt.gameObject,
+                UILabel lbl => lbl.gameObject,
+                _ => null
+            };
+            if (go == null) return $"(unrecognized component type: {instance?.GetType().Name})";
+
+            var sb = new System.Text.StringBuilder(go.name);
+            var parent = go.transform.parent;
+            while (parent != null)
+            {
+                sb.Insert(0, parent.name + "/");
+                parent = parent.parent;
+            }
+            return sb.ToString();
+        }
+        catch (Exception ex)
+        {
+            return $"(path lookup failed: {ex.Message})";
         }
     }
 
@@ -835,7 +923,19 @@ internal static class DynamicStringPatches
             // (and the ContainsCjk scan below, which would otherwise still fire on residual
             // fullwidth punctuation in an already-translated string) for those partial values.
             if (cache.TranslatedSnapshot != null && cache.TranslatedSnapshot.StartsWith(current, StringComparison.Ordinal))
+            {
+                // A seeded snapshot (e.g. from PlotTextPatches' pre-translate) can itself still
+                // contain residual CJK if the pipeline only partially translated it - this fast
+                // path would otherwise hide that from residualCjkDebug.log entirely, since it
+                // returns before ever reaching the full-pipeline branch's LogResidualCjkDebug call
+                // below. Log it once per seeded snapshot instead of every tween step.
+                if (!cache.LoggedResidualCjkForSnapshot && ContainsCjk(cache.TranslatedSnapshot))
+                {
+                    LogResidualCjkDebug("ApplyToComponentText (typewriter snapshot)", current, cache.TranslatedSnapshot, instance);
+                    cache.LoggedResidualCjkForSnapshot = true;
+                }
                 return;
+            }
 
             // Trusted append-only fast path: a source-level patch already translates every
             // fragment before it reaches this component (see MarkTrustedAppendOnlySource), so
@@ -898,7 +998,7 @@ internal static class DynamicStringPatches
                 replaced = RunGenericPipeline(current);
             }
 
-            LogResidualCjkDebug("ApplyToComponentText", current, replaced);
+            LogResidualCjkDebug("ApplyToComponentText", current, replaced, instance);
             cache.RawSnapshot = current;
             cache.TranslatedSnapshot = replaced;
             if (replaced == current) return;

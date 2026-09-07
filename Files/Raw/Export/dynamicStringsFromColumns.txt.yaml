@@ -39256,3 +39256,376 @@
 - raw: "雷彤"
   splits:
   - text: "雷彤"
+- raw: "工事"
+  splits:
+  - text: "工事"
+- raw: "护甲+5"
+  splits:
+  - text: "护甲"
+  templates:
+  - template: "{0}+5"
+- raw: "草丛"
+  splits:
+  - text: "草丛"
+- raw: "闪避+5%"
+  splits:
+  - text: "闪避"
+  templates:
+  - template: "{0}+5%"
+- raw: "水塘"
+  splits:
+  - text: "水塘"
+- raw: "速度-20%\n闪避-5%"
+  splits:
+  - text: "速度"
+  - subIndex: 1
+    text: "闪避"
+  templates:
+  - template: "{0}-20%\n{1}-5%"
+- raw: "泥潭"
+  splits:
+  - text: "泥潭"
+- raw: "速度-40%\n闪避-10%"
+  splits:
+  - text: "速度"
+  - subIndex: 1
+    text: "闪避"
+  templates:
+  - template: "{0}-40%\n{1}-10%"
+- raw: "药草"
+  splits:
+  - text: "药草"
+- raw: "生命+10%\n内力+10%"
+  splits:
+  - text: "生命"
+  - subIndex: 1
+    text: "内力"
+  templates:
+  - template: "{0}+10%\n{1}+10%"
+- raw: "异果"
+  splits:
+  - text: "异果"
+- raw: "体力+30%\n内力+10%"
+  splits:
+  - text: "体力"
+  - subIndex: 1
+    text: "内力"
+  templates:
+  - template: "{0}+30%\n{1}+10%"
+- raw: "奇花"
+  splits:
+  - text: "奇花"
+- raw: "内力+20%\n混乱2回合"
+  splits:
+  - text: "内力"
+  - subIndex: 1
+    text: "混乱2回合"
+  templates:
+  - template: "{0}+20%\n{1}"
+- raw: "怪藤"
+  splits:
+  - text: "怪藤"
+- raw: "内力+10%\n疯魔2回合"
+  splits:
+  - text: "内力"
+  - subIndex: 1
+    text: "疯魔2回合"
+  templates:
+  - template: "{0}+10%\n{1}"
+- raw: "毒虫"
+  splits:
+  - text: "毒虫"
+- raw: "当前内力-20%\n中毒+20"
+  splits:
+  - text: "当前内力"
+  - subIndex: 1
+    text: "中毒"
+  templates:
+  - template: "{0}-20%\n{1}+20"
+- raw: "持续中毒"
+  splits:
+  - text: "持续中毒"
+- raw: "飞箭"
+  splits:
+  - text: "飞箭"
+- raw: "当前生命-10%\n外伤+20"
+  splits:
+  - text: "当前生命"
+  - subIndex: 1
+    text: "外伤"
+  templates:
+  - template: "{0}-10%\n{1}+20"
+- raw: "钉刺"
+  splits:
+  - text: "钉刺"
+- raw: "持续外伤"
+  splits:
+  - text: "持续外伤"
+- raw: "陷坑"
+  splits:
+  - text: "陷坑"
+- raw: "当前体力-30%\n内伤+20"
+  splits:
+  - text: "当前体力"
+  - subIndex: 1
+    text: "内伤"
+  templates:
+  - template: "{0}-30%\n{1}+20"
+- raw: "热碳"
+  splits:
+  - text: "热碳"
+- raw: "持续内伤"
+  splits:
+  - text: "持续内伤"
+- raw: "随机获得物品"
+  splits:
+  - text: "随机获得物品"
+- raw: "清心符"
+  splits:
+  - text: "清心符"
+- raw: "智力2"
+  splits:
+  - text: "智力2"
+- raw: "安神符"
+  splits:
+  - text: "安神符"
+- raw: "意志2"
+  splits:
+  - text: "意志2"
+- raw: "跌打梅山符"
+  splits:
+  - text: "跌打梅山符"
+- raw: "闪避-0.04"
+  splits:
+  - text: "闪避"
+  templates:
+  - template: "{0}-0.04"
+- raw: "咽喉骨鲠符"
+  splits:
+  - text: "咽喉骨鲠符"
+- raw: "伤害-0.04"
+  splits:
+  - text: "伤害"
+  templates:
+  - template: "{0}-0.04"
+- raw: "勾魂符"
+  splits:
+  - text: "勾魂符"
+- raw: "反击-0.06"
+  splits:
+  - text: "反击"
+  templates:
+  - template: "{0}-0.06"
+- raw: "天罡符"
+  splits:
+  - text: "天罡符"
+- raw: "卸力0.06"
+  splits:
+  - text: "卸力0.06"
+- raw: "寒天符"
+  splits:
+  - text: "寒天符"
+- raw: "速度-0.08"
+  splits:
+  - text: "速度"
+  templates:
+  - template: "{0}-0.08"
+- raw: "护甲4"
+  splits:
+  - text: "护甲4"
+- raw: "神兵天将符"
+  splits:
+  - text: "神兵天将符"
+- raw: "暴击0.1"
+  splits:
+  - text: "暴击0.1"
+- raw: "伤害抗性-0.1"
+  splits:
+  - text: "伤害抗性"
+  templates:
+  - template: "{0}-0.1"
+- raw: "晴"
+  splits:
+  - text: "晴"
+- raw: "雨"
+  splits:
+  - text: "雨"
+- raw: "暴雨"
+  splits:
+  - text: "暴雨"
+- raw: "雪"
+  splits:
+  - text: "雪"
+- raw: "暴雪"
+  splits:
+  - text: "暴雪"
+- raw: "门派大比"
+  splits:
+  - text: "门派大比"
+- raw: "比武大赛"
+  splits:
+  - text: "比武大赛"
+- raw: "辩才大赛"
+  splits:
+  - text: "辩才大赛"
+- raw: "春节"
+  splits:
+  - text: "春节"
+- raw: "元宵"
+  splits:
+  - text: "元宵"
+- raw: "清明"
+  splits:
+  - text: "清明"
+- raw: "端午"
+  splits:
+  - text: "端午"
+- raw: "七夕"
+  splits:
+  - text: "七夕"
+- raw: "中秋"
+  splits:
+  - text: "中秋"
+- raw: "重阳"
+  splits:
+  - text: "重阳"
+- raw: "腊八"
+  splits:
+  - text: "腊八"
+- raw: "中元鬼市"
+  splits:
+  - text: "中元鬼市"
+- raw: "文"
+  splits:
+  - text: "文"
+- raw: "文本"
+  splits:
+  - text: "文本"
+- raw: "获得经验"
+  splits:
+  - text: "获得经验"
+- raw: "精要"
+  splits:
+  - text: "精要"
+- raw: "获得大量经验"
+  splits:
+  - text: "获得大量经验"
+- raw: "漏"
+  splits:
+  - text: "漏"
+- raw: "纰漏"
+  splits:
+  - text: "纰漏"
+- raw: "失去经验"
+  splits:
+  - text: "失去经验"
+- raw: "错"
+  splits:
+  - text: "错"
+- raw: "错误"
+  splits:
+  - text: "错误"
+- raw: "失去大量经验"
+  splits:
+  - text: "失去大量经验"
+- raw: "醒"
+  splits:
+  - text: "醒"
+- raw: "清醒"
+  splits:
+  - text: "清醒"
+- raw: "恢复耐心"
+  splits:
+  - text: "恢复耐心"
+- raw: "困"
+  splits:
+  - text: "困"
+- raw: "困倦"
+  splits:
+  - text: "困倦"
+- raw: "失去耐心"
+  splits:
+  - text: "失去耐心"
+- raw: "融"
+  splits:
+  - text: "融"
+- raw: "融汇"
+  splits:
+  - text: "融汇"
+- raw: "已读越多经验越高"
+  splits:
+  - text: "已读越多经验越高"
+- raw: "预"
+  splits:
+  - text: "预"
+- raw: "预习"
+  splits:
+  - text: "预习"
+- raw: "已读越少经验越高"
+  splits:
+  - text: "已读越少经验越高"
+- raw: "一列"
+  splits:
+  - text: "一列"
+- raw: "阅读整列"
+  splits:
+  - text: "阅读整列"
+- raw: "破解"
+  splits:
+  - text: "破解"
+- raw: "阅读周围1格"
+  splits:
+  - text: "阅读周围1格"
+- raw: "一行"
+  splits:
+  - text: "一行"
+- raw: "阅读整行"
+  splits:
+  - text: "阅读整行"
+- raw: "明朗"
+  splits:
+  - text: "明朗"
+- raw: "显示周围3格"
+  splits:
+  - text: "显示周围3格"
+- raw: "缺损"
+  splits:
+  - text: "缺损"
+- raw: "提纲"
+  splits:
+  - text: "提纲"
+- raw: "全场经验+10%"
+  splits:
+  - text: "全场经验"
+  templates:
+  - template: "{0}+10%"
+- raw: "迷惑"
+  splits:
+  - text: "迷惑"
+- raw: "全场经验-10%"
+  splits:
+  - text: "全场经验"
+  templates:
+  - template: "{0}-10%"
+- raw: "注释"
+  splits:
+  - text: "注释"
+- raw: "周围经验+100%"
+  splits:
+  - text: "周围经验"
+  templates:
+  - template: "{0}+100%"
+- raw: "难点"
+  splits:
+  - text: "难点"
+- raw: "周围经验-50%"
+  splits:
+  - text: "周围经验"
+  templates:
+  - template: "{0}-50%"
+- raw: "贯通"
+  splits:
+  - text: "贯通"
+- raw: "阅读整行整列"
+  splits:
+  - text: "阅读整行整列"

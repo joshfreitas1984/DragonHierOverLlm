@@ -17,7 +17,10 @@ namespace Tests
         // Game-specific placeholder handling: see docs/gamefilehandling-reference.md.
         internal static readonly CompoundFieldSplitterOptions SplitterOptions = new()
         {
-            PlaceholderPatterns = [new Regex(@"#\$?\w+#", RegexOptions.Compiled)]
+            PlaceholderPatterns = [
+                new Regex(@"#\$?\w+#", RegexOptions.Compiled),
+                //new Regex(@"\{\d+\}", RegexOptions.Compiled), <- Dont split {0} placeholders - to test later with bigger model
+            ]
         };
 
         // Register game-specific translation repair and validation hooks.

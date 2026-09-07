@@ -42,6 +42,11 @@
   result: "Senior Brother Yang"
 - raw: 顾师兄
   result: "Senior Brother Gu"
+- raw: 师伯
+  result: Martial Uncle
+  allowalt:
+    - Uncle
+    - Senior Uncle
 - raw: 陆师伯
   result: Martial Uncle Lu
   allowalt:

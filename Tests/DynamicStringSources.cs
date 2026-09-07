@@ -49,6 +49,18 @@ namespace Tests
             // ExploreDataDumpPatches.cs (despite the file name, it now covers both screens).
             ("ObstacleDataBase.csv", [0]),
             ("ExplodeObstacleDataBase.csv", [0]),
+
+            // BattleController.speGridObjDataBase (name+multi-line describe per SpeGridObjType,
+            // e.g. "异果"/StrangeFruit -> "体力+30%\n内力+10%") - same embedded-list problem as the
+            // two obstacle lists above, dumped by the same ExploreDataDumpPatches.cs.
+            ("SpeGridObjDataBase.csv", [0, 1]),
+
+            // Four more controllers with the same embedded-list-never-assigned-in-code shape,
+            // dumped by ExploreDataDumpPatches.cs alongside the ones above.
+            ("BattlePrepareSpellDataBase.csv", [0, 1]),
+            ("WeatherDataBase.csv", [0]),
+            ("WorldEventDataBase.csv", [0]),
+            ("ReadBookTextTypeDataBase.csv", [0, 1, 2]),
         ];
 
         /// <summary>
@@ -107,6 +119,36 @@ namespace Tests
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringNamePartColumnSources =
         [
             ("SpeHeroData.csv", [1]),
+        ];
+
+        // ForceData.csv column 1 (名字/force-sect name, e.g. "仙霞派") truncated to its first 2
+        // characters (e.g. "仙霞") - HeroData.GetHeroForceLvDescribe(fullName: false) builds the
+        // compact battle-UI force tag via String.Substring(forceName, 0, 2), bypassing the
+        // already-translated whole-name dictionary entry that DynamicStringColumnSources extracts
+        // for the untruncated name. Confirmed 2026-09-07 investigating an untranslated "仙霞" tag
+        // on the Canvas/BattleUIPanel NowActiveHero/NameBack/Force UI element (the trailing colored
+        // rank text translated fine via the ordinary dictionary; only the truncated force-name
+        // prefix didn't).
+        //
+        // NOTE: for the 10 minor/background forces (ForceData.csv ids 20-29, e.g. 仙霞派/巨鲸帮/
+        // 金龙帮/青城派), the row's own bold trait-description column (门派特性, e.g. "<b>仙霞</b>：
+        // 所有经验获取+5%。") happens to wrap this exact same 2-char prefix, so
+        // Files/Converted/ForceData.csv.yaml already has a correct translation for those 10
+        // specific prefixes as a byproduct - reusable without a fresh translation pass. This does
+        // NOT hold for the 20 major forces (ids 0-19): their bold trait-description text is an
+        // unrelated skill/trait name (e.g. 唐门's is "<b>暗器</b>"/Hidden Weapon, nothing to do with
+        // the force name), so their truncated-name prefixes (e.g. 药王谷→药王, 少林寺→少林, 武当派→
+        // 武当) still need a genuine translation from the normal export/translate pipeline - do NOT
+        // copy a positionally-corresponding split-15 value for those. Written to its own dedicated
+        // forceNameParts.txt (see
+        // DynamicStringExtraction.ExtractForceNamePrefixCandidates), consumed only by
+        // HeroNamePatches' private exact-match dictionary - NOT DynamicStringPatches' global
+        // substring-replace dictionary - for the same false-positive-risk reason documented on
+        // DynamicStringNamePartColumnSources above (a bare 2-character fragment is too easy to
+        // accidentally match as a substring of unrelated CJK text elsewhere in the game).
+        public static readonly (string CsvFileName, int[] Columns)[] DynamicStringForceNamePrefixColumnSources =
+        [
+            ("ForceData.csv", [1]),
         ];
 
         // PlotData.csv columns 1/2 (speaker name) are SkipColumns'd entirely because the whole

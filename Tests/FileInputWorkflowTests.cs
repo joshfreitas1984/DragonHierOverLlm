@@ -64,6 +64,15 @@ public class FileInputWorkflowTests
 
 
 
+    [Fact(DisplayName = "4b2. ExtractForceNamePrefixCandidates")]
+    public void ExtractForceNamePrefixCandidates()
+    {
+        // ForceData first-2-character name prefixes, written to their OWN dedicated
+        // forceNameParts.txt (never merged into DynamicStringPatches' global substring-replace
+        // dictionary) - see DynamicStringExtraction.ExtractForceNamePrefixCandidates' doc comment.
+        DynamicStringExtraction.ExtractForceNamePrefixCandidates(GameFileHandling.WorkingDirectory);
+    }
+
     [Fact(DisplayName = "4c ExtractStructuredRecordFragmentCandidates")]
     public void ExtractStructuredRecordFragmentCandidates()
     {
@@ -121,7 +130,8 @@ public class FileInputWorkflowTests
         // Pure "serialize whatever's on disk now" step - exports every configured
         // DynamicStringsIL2CPP file (dynamicStrings.txt, dynamicStringsFromColumns.txt,
         // dynamicStringsFromStructuredFragments.txt, dynamicStringsFromOtherFieldLabels.txt,
-        // dynamicStringsPoetry.txt, heroNameParts.txt) into Files/Converted/*.yaml. Must run after
+        // dynamicStringsPoetry.txt, heroNameParts.txt, forceNameParts.txt) into
+        // Files/Converted/*.yaml. Must run after
         // 1c-1i have populated/deduped Raw/Dumped/DynamicStrings/*.txt.
         TranslationExport.ExportDynamicStringTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);
     }

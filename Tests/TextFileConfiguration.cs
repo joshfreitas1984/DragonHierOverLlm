@@ -123,6 +123,13 @@ namespace Tests
             // specifically), but the packaged heroNameParts.txt.yaml is loaded and applied ONLY by
             // HeroNamePatches' own private, exact-match dictionary - see HeroNamePatches.cs.
             new() {Path = "heroNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+
+            // ForceData's first-2-character name prefix (e.g. "仙霞" from "仙霞派") - same dedicated-
+            // file treatment as heroNameParts.txt above and for the same reason (a bare 2-character
+            // fragment is too easy to accidentally match as a substring elsewhere). Loaded and
+            // applied ONLY by HeroNamePatches' own private, exact-match force-name-prefix
+            // dictionary - see HeroNamePatches.cs.
+            new() {Path = "forceNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
         ];
     }
 }

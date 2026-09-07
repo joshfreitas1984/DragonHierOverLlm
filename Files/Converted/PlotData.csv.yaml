@@ -1512,7 +1512,7 @@
   splits:
   - split: 10
     text: "不错，本门以剑法闻名巴蜀，掌门更凭“无影乱剑”威震一方。"
-    translated: "Not bad. Our sect is renowned for its sword techniques in Bashu, and the Sect Leader is even feared for his Faint Shadow Chaotic Sword."
+    translated: "Not bad. Our sect is known for its sword techniques in Bashu, and the Sect Leader is even renowned for Shadowless Chaotic Swords that intimidate all around."
   - split: 10
     subIndex: 1
     text: "#PlayerName#若是整天使一手太祖长拳，让外人见了怕是要笑掉大牙。"
@@ -4869,7 +4869,7 @@
   - split: 10
     subIndex: 1
     text: "挥舞之时剑锋急颤，恍若无物，唯有剑光四射，故号承影剑，"
-    translated: "When swung, the sword trembles so swiftly it seems weightless, with only swordlight flashing forth, hence its name, Shadow Caster."
+    translated: "When swung, the blade quivers so rapidly it seems almost invisible, leaving only sword light flashing in all directions, hence it is named Chengying Sword."
   - split: 10
     subIndex: 2
     text: "传说乃是商周时期流传下来的神兵利器。"
@@ -4885,7 +4885,7 @@
   - split: 10
     subIndex: 1
     text: "其内功心法号曰潮起月盈功，"
-    translated: "His neigong heart method is called the Tide Rising Moon Full Technique."
+    translated: "Its neigong heart method is called the Tide Rising Full Moon Art."
   - split: 10
     subIndex: 2
     text: "外门武功则是一套剑法"
@@ -4893,7 +4893,7 @@
   - split: 10
     subIndex: 3
     text: "无影乱剑，"
-    translated: "Flickering Blade Assault,"
+    translated: "Shadowless Chaotic Swords"
   - split: 10
     subIndex: 4
     text: "和一套掌法"
@@ -4901,7 +4901,7 @@
   - split: 10
     subIndex: 5
     text: "劈金碎玉掌。"
-    translated: "Palm of Splitting Jade and Gold"
+    translated: "Split Gold Shatter Jade Palm"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}：{3}\\n{4}：{5}"
@@ -4909,11 +4909,11 @@
   splits:
   - split: 10
     text: "这无影乱剑和劈金碎玉掌对所使之人的内功修为要求颇高，"
-    translated: "This formless chaotic sword technique and splitting gold shattering jade palm require a high level of neigong cultivation from their users."
+    translated: "This Shadowless Chaotic Swords and Split Gold Shatter Jade Palm require a high level of internal skill from their users."
   - split: 10
     subIndex: 1
     text: "而潮起月盈功恰好是修习内功的高妙功法，"
-    translated: "And the Tide Rises with a Full Moon Technique is indeed an exquisite method for cultivating neigong."
+    translated: "And Tide Rising Full Moon Art is a highly sophisticated method for cultivating internal skill."
   - split: 10
     subIndex: 2
     text: "在加之承影宝剑之锋利，称得上是蛟龙得云，猛虎添翼。"
@@ -5103,7 +5103,7 @@
   - split: 10
     subIndex: 2
     text: "而韩当一支则主修拳掌，因而分得了潮起月盈功和劈金碎玉掌。"
-    translated: "While Han Dang focused on punches and palms, he thus obtained the Tide‑Rising Moon‑Full Skill and the Split‑Gold Shatter‑Emerald Palm."
+    translated: "While Han Dang focused on fists and palms, he thus obtained both the Tide Rising Full Moon Art and the Split Gold Shatter Jade Palm."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -5143,7 +5143,7 @@
   - split: 10
     subIndex: 1
     text: "余寻随身所携之承影剑，更是在打斗中落入江中，从此袅无音讯。"
-    translated: "Yu Xun searched for the Cheng Ying Sword he carried, but it had fallen into the river during the fight and was never heard from again."
+    translated: "Yuye retrieved the Chengying Sword, which fell into the river during the fight and has disappeared without a trace."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -5192,11 +5192,11 @@
   splits:
   - split: 10
     text: "难怪铁掌帮有潮起月盈功和劈金碎玉掌，本派却只有无影乱剑，"
-    translated: "No wonder the Iron Palm Gang has techniques like Tide Rises with the Full Moon and Split Gold Crumble Jade Palms, while our school only has Shadowless Chaos Sword."
+    translated: "No wonder the Iron Palm Gang has the Tide Rising Full Moon Art and Split Gold Shatter Jade Palm, while our sect only has the Shadowless Chaotic Swords."
   - split: 10
     subIndex: 1
     text: "原来是这承影剑下落不明。只剩祖师所留一宝，如此一来难免略处下风。"
-    translated: "It seems the Shadowblade's whereabouts are unknown. With only the treasure left by the ancestor master, we are bound to be at a slight disadvantage."
+    translated: "Originally, the Chengying Sword has gone missing. Now, only the treasure left by the ancestor remains. In this case, it's inevitable that we might be at a slight disadvantage."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -6628,7 +6628,7 @@
   splits:
   - split: 10
     text: "师伯受伤，不能再等了，"
-    translated: "Senior preceptor is injured; we can't wait any longer."
+    translated: "Martial Uncle is injured and we can't wait any longer."
   - split: 10
     subIndex: 1
     text: "师兄咱们还是一起上！"
@@ -6669,7 +6669,7 @@
   - split: 10
     subIndex: 1
     text: "师伯您老人家没事吧？"
-    translated: "Senior Master, are you alright?"
+    translated: "Martial Uncle, are you alright?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -6693,7 +6693,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#照顾师伯，我再去追她一追！"
-    translated: "#PlayerName#, take care of Master Brother first; I'll chase her down next!"
+    translated: "#PlayerName#, take care of the Martial Uncle; I'll chase her down one more time!"
   templates:
   - split: 10
     template: "……{0}\\n{1}"
@@ -6729,7 +6729,7 @@
   - split: 10
     subIndex: 1
     text: "#PlayerName#照顾师伯，我再去追她一追！"
-    translated: "#PlayerName#, take care of Master Brother first; I'll chase her down next!"
+    translated: "#PlayerName#, take care of the Martial Uncle; I'll chase her down one more time!"
   templates:
   - split: 10
     template: "……{0}\\n{1}"
@@ -6749,7 +6749,7 @@
   splits:
   - split: 10
     text: "师伯你没事吧。"
-    translated: "Senior apprentice master, are you alright?"
+    translated: "Martial Uncle, are you alright?"
 - raw: ",,,右,,,,,,,笑话！贼人武功如此低微，怎可能伤的了我？"
   splits:
   - split: 10
@@ -6759,7 +6759,7 @@
   splits:
   - split: 10
     text: "师伯威武！"
-    translated: "Senior Master is awesome!"
+    translated: "Martial Uncle is mighty!"
   - split: 10
     subIndex: 1
     text: "不知这铁掌帮长老平白无故，跑到我仙霞派后山来干什么，"
@@ -6767,7 +6767,7 @@
   - split: 10
     subIndex: 2
     text: "师伯又是怎么和他斗上的？"
-    translated: "How did Senior Apprentice Brother start arguing with him again?"
+    translated: "How did the Martial Uncle end up fighting with him?"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -6864,7 +6864,7 @@
   - split: 10
     subIndex: 1
     text: "哈哈，师伯猜的没错，"
-    translated: "Haha, Senior Master was right"
+    translated: "Haha, Martial Uncle guessed correctly"
   - split: 10
     subIndex: 2
     text: "另一个杨思迟杨师兄，他智慧超群，远胜于我。"
@@ -6888,7 +6888,7 @@
   splits:
   - split: 10
     text: "初次见面，师伯也没准备礼物，"
-    translated: "First meeting, Senior Elder didn't prepare a gift either."
+    translated: "First meeting, Uncle Senior did not prepare a gift."
   - split: 10
     subIndex: 1
     text: "看你修为尚浅，便送你本基础剑法好了。"
@@ -6900,7 +6900,7 @@
   splits:
   - split: 10
     text: "多谢师伯！"
-    translated: "Thank Senior Master!"
+    translated: "Thanks, Martial Uncle!"
 - raw: ",,,右,,,,,,,好了，此间事了，我也该下山去了。"
   splits:
   - split: 10
@@ -6910,7 +6910,7 @@
   splits:
   - split: 10
     text: "师伯难得回来一次，怎么不去门派内坐坐，"
-    translated: "Senior apprentice master rarely comes back. Why not sit in the sect and rest?"
+    translated: "Martial Uncle doesn't return often, why not come sit in the sect and rest?"
   - split: 10
     subIndex: 1
     text: "和师傅他老人家叙叙旧？"
@@ -6943,7 +6943,7 @@
   - split: 10
     subIndex: 1
     text: "好吧，师伯慢走。"
-    translated: "All right, Senior Master, take your time"
+    translated: "Sure, Martial Uncle, take your time"
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -7965,7 +7965,7 @@
   splits:
   - split: 10
     text: "无影乱剑！"
-    translated: "Shadowless Chaos Sword!"
+    translated: "Shadowless Chaotic Swords!"
 - raw: ",,,右,,,,,ChangePlotDataBase;69,,啊啊……当家救我……\\n（只见此人数处要害中剑，只挣扎了几下便倒地身亡。）"
   splits:
   - split: 10
@@ -9573,7 +9573,7 @@
   - split: 10
     subIndex: 2
     text: "我现在一心只想练好武艺，早日学成师傅的无影乱剑！"
-    translated: "Now all I can think about is mastering martial arts and learning Master's Shadowless Random Swords technique as soon as possible!"
+    translated: "I can only think of mastering my martial arts and learning the Shadowless Chaotic Swords from my Master as soon as possible!"
   templates:
   - split: 10
     template: "{0}……{1}……\\n{2}"
@@ -15150,7 +15150,7 @@
   splits:
   - split: 10
     text: "上次后山，你我偶遇师伯大战铁掌帮韩嵩那次，"
-    translated: "Last time in the backyard hill, we coincidentally encountered Senior Preceptor's battle against Iron Palm Gang's Han Song."
+    translated: "Last time in the backyard hill, you and I coincidentally encountered Uncle in a battle against the Iron Palm Gang's Han Song."
   - split: 10
     subIndex: 1
     text: "我虽没追上韩嵩，不成想捡了本秘籍回来，"
@@ -17078,7 +17078,7 @@
   splits:
   - split: 10
     text: "仙霞派！飞星快剑！"
-    translated: "Xianxia Sect! Flying Star Swift Sword!"
+    translated: "Xianxia Sect! Swift Star Sword!"
 - raw: ",,韩狼,右,,,,,,,豹二哥！！！我和你们拼了！！！"
   splits:
   - split: 10
@@ -18611,7 +18611,7 @@
   splits:
   - split: 10
     text: "好快的无影乱剑！"
-    translated: "So quick with the weapon of the shapeless daggers!"
+    translated: "Good speed with your Shadowless Chaotic Swords!"
 - raw: ",,魏胥华,右,,,,,,,（从阴影中跃回原位）三个小贼而已。"
   splits:
   - split: 10
@@ -19662,7 +19662,7 @@
   - split: 10
     subIndex: 1
     text: "你就把它当做敌人的暗器，只需使出本门的飞星快剑，三下五除二"
-    translated: "Just think of it as an enemy's hidden weapon. Simply use our sect's flying star quick sword; it can handle it in no time."
+    translated: "Just think of it as the enemy's hidden weapon. Simply use our sect's Swift Star Sword; it should be handled in no time."
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -20004,7 +20004,7 @@
   - split: 10
     subIndex: 2
     text: "正好也给师弟师妹们，演示本门武学飞星快剑的精要所在。"
-    translated: "Just as a demonstration for the junior disciples and junior sisters, showcasing the essence of our sect's martial arts, Flying Star Swift Sword."
+    translated: "Exactly, also demonstrate the essence of our sect's martial arts, Swift Star Sword, for the junior disciples and junior sisters."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -20038,7 +20038,7 @@
   - split: 10
     subIndex: 1
     text: "刚才我那招飞星快剑，使得确实不好"
-    translated: "My flying star swift sword technique was indeed executed poorly just now."
+    translated: "My Swift Star Sword just wasn't executed well earlier."
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -20046,11 +20046,11 @@
   splits:
   - split: 10
     text: "嗯，两位的这招飞星快剑，乃是本门中阶的剑法武学，"
-    translated: "Hmm, your Flying Stars Quick Sword technique is an intermediate‑level sword art from our school."
+    translated: "Hmm, your Swift Star Sword technique is an intermediate‑level sword art from our school."
   - split: 10
     subIndex: 1
     text: "只有熟练掌握，方能修习本门的秘传剑法，无影乱剑。"
-    translated: "Only by mastering it thoroughly can one learn the school's secret sword technique, Shadowless Chaotic Sword."
+    translated: "Only by mastering it thoroughly can one learn the sect's secret sword technique, Shadowless Chaotic Swords."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -20067,7 +20067,7 @@
   - split: 10
     subIndex: 1
     text: "只是之前那招飞星快剑使得歪了，应当如此才对"
-    translated: "It's just that the previous Flying Stars Quick Sword technique was off. It should have been like this instead."
+    translated: "Just earlier, the Swift Star Sword technique was executed incorrectly. It should have been done this way."
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -20075,7 +20075,7 @@
   splits:
   - split: 10
     text: "嗯，两位的这招飞星快剑，乃是本门中阶的剑法武学，"
-    translated: "Hmm, your Flying Stars Quick Sword technique is an intermediate‑level sword art from our school."
+    translated: "Hmm, your Swift Star Sword technique is an intermediate‑level sword art from our school."
   - split: 10
     subIndex: 1
     text: "只有熟练掌握，方能修习本门秘传"
@@ -20083,7 +20083,7 @@
   - split: 10
     subIndex: 2
     text: "无影乱剑。"
-    translated: "Flickering Blades Assault"
+    translated: "Shadowless Chaotic Swords"
   templates:
   - split: 10
     template: "{0}\\n{1}：{2}"
@@ -20103,7 +20103,7 @@
   splits:
   - split: 10
     text: "（魏胥华讲解了一番飞星快剑的招式要点，"
-    translated: "(Wei Xuhua explained the key points of the Flying Star Quick Sword technique,"
+    translated: "(Wei Xuhua explained the key points of the Swift Star Sword techniques,"
   - split: 10
     subIndex: 1
     text: "顾游年和余采薇闻之不禁连连点头。）"
@@ -29357,7 +29357,7 @@
   - split: 10
     subIndex: 1
     text: "你在乐山镇闯出来的祸，徐不平师伯都已经告诉我了。"
-    translated: "Master Senior Xu Boping has already told me about the trouble you caused in Leshan Town."
+    translated: "You have caused quite a commotion in Leshan Town, and Uncle Dibing has already informed me about it."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -33067,12 +33067,12 @@
   splits:
   - split: 10
     text: "#PlayerName#快过来，你听说了吗，师伯回来了！"
-    translated: "#PlayerName#, come quickly! Master Senior has returned!"
+    translated: "#PlayerName#, come quickly! Did you hear that Uncle has returned!"
 - raw: ",,,左,,,,,,,师伯？他老人家不是游山玩水，不问世事了么，\\n怎么突然想到回门派来了？"
   splits:
   - split: 10
     text: "师伯？他老人家不是游山玩水，不问世事了么，"
-    translated: "Senior Preceptor? Didn't he retire to travel and not concern himself with worldly affairs?"
+    translated: "Martial Uncle? Didn't he retire to travel and not involve himself in worldly affairs?"
   - split: 10
     subIndex: 1
     text: "怎么突然想到回门派来了？"
@@ -33159,7 +33159,7 @@
   splits:
   - split: 10
     text: "还有本门失传的武学和承影剑之事"
-    translated: "There's also our sect's lost martial arts and the matter of the Cheng Ying Sword."
+    translated: "There is also our sect's lost martial arts and the matter of the Chengying Sword."
   templates:
   - split: 10
     template: "{0}……"
@@ -33172,7 +33172,7 @@
   splits:
   - split: 10
     text: "师傅曾经叮嘱，定要让祖师流传的武学和承影剑重见天日，"
-    translated: "Master once warned that it was essential to bring the ancestors' martial arts and the Cheng Ying Sword back into the light."
+    translated: "Master once instructed that we must ensure the ancestral martial arts and Chengying Sword see the light of day again."
   - split: 10
     subIndex: 1
     text: "师弟你怎能忘了？"
@@ -33188,7 +33188,7 @@
   - split: 10
     subIndex: 1
     text: "我哪有功夫，去寻这虚无缥缈的失传秘籍和承影剑"
-    translated: "I don't have the time to look for that elusive lost technique and the Shadow Blade."
+    translated: "I don't have the time to look for those elusive lost scriptures and Chengying Sword."
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -33224,7 +33224,7 @@
   splits:
   - split: 10
     text: "我知道师兄你，其实一直对师傅当年的决定心有不满，"
-    translated: "I know you as Senior Brother, and I must admit that I've always harbored some dissatisfaction with Master's decision back then."
+    translated: "I know you as Senior Brother, and you must admit that you've always harbored some dissatisfaction with Master's decision back then."
   - split: 10
     subIndex: 1
     text: "所以才离开仙霞派，四处云游"
@@ -33257,11 +33257,11 @@
   splits:
   - split: 10
     text: "呵呵，既然是你大弟子，那不妨来和师伯我过两招。"
-    translated: "Haha, since you're my senior disciple, why don't we spar for a bit."
+    translated: "Haha, since you're my senior disciple, why don't you spar with me, Uncle?"
   - split: 10
     subIndex: 1
     text: "我看看本门的绝学无影乱剑，你练的如何了。"
-    translated: "I'll take a look at our school's ultimate technique, the Shadowless Random Sword. How have you been practicing it?"
+    translated: "I'll take a look at our sect's supreme technique, Shadowless Chaotic Swords. How have you been practicing?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -33278,7 +33278,7 @@
   - split: 10
     subIndex: 1
     text: "可惜你这手无影乱剑轻灵有余，但缺了几分老道狠辣。"
-    translated: "Unfortunately, your Shadow Strike lacks the seasoned cruelty and viciousness it needs."
+    translated: "Unfortunately, your Shadowless Chaotic Swords lack the old‑school ruthlessness despite their light agility."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -33294,7 +33294,7 @@
   - split: 10
     subIndex: 2
     text: "这可是你师伯我混迹江湖多年得来的经验。"
-    translated: "This is the experience I've gained from years of wandering in the Jianghu."
+    translated: "This is the experience I gained from years of roaming the Jianghu, my dear Martial Uncle."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -33302,7 +33302,7 @@
   splits:
   - split: 10
     text: "明白了，多谢师伯指点！"
-    translated: "Understood, thank you, Senior Master!"
+    translated: "Got it, thank you, Martial Uncle!"
 - raw: ",,,右,,,,,,,嗯，孺子可教。\\n我这姜师弟虽说武功高强，但输在心慈手软，江湖经验又浅薄。\\n你们在为人处世上，还得多跟师伯我学学！"
   splits:
   - split: 10
@@ -33315,7 +33315,7 @@
   - split: 10
     subIndex: 2
     text: "你们在为人处世上，还得多跟师伯我学学！"
-    translated: "You still need to learn more about dealing with people from senior master me!"
+    translated: "You still need to learn more about dealing with people from me, Senior Uncle!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -33328,12 +33328,12 @@
   splits:
   - split: 10
     text: "哈哈，轮江湖经验，师伯老人家当然是咱们仙霞派第一。"
-    translated: "Haha, when it comes to Jianghu experience, Senior Master is undoubtedly the top of the Xianxia Sect."
+    translated: "Haha, when it comes to Jianghu experience, of course, Senior Uncle is number one for the Xianxia Sect."
 - raw: ",余采薇,,左,,,,,,,师伯这手无影乱剑，功力也颇深厚，\\n使出来杀伐果断，与师傅的迅捷翔动截然不同。"
   splits:
   - split: 10
     text: "师伯这手无影乱剑，功力也颇深厚，"
-    translated: "Master Senior's formless chaotic sword technique is quite powerful in terms of cultivation."
+    translated: "Martial Uncle's Shadowless Chaotic Swords technique is quite powerful."
   - split: 10
     subIndex: 1
     text: "使出来杀伐果断，与师傅的迅捷翔动截然不同。"
@@ -33349,7 +33349,7 @@
   - split: 10
     subIndex: 1
     text: "应该还在修习本门的飞星快剑吧，待我试上一试！"
-    translated: "Should they still be practicing the Flying Stars Quick Sword technique? I'll give it a try!"
+    translated: "Should he still be practicing the Swift Star Sword technique of our sect? I'll give it a try!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -33357,16 +33357,16 @@
   splits:
   - split: 10
     text: "师伯请指教！"
-    translated: "Senior master, please instruct!"
+    translated: "Martial Uncle, please instruct!"
 - raw: "256,顾游年,陆仁谦,右,,,,,GetSpeReward;24,,不错不错，你俩的飞星快剑已经颇为纯熟，\\n想来不用多时，便可修习本门的无影乱剑了。"
   splits:
   - split: 10
     text: "不错不错，你俩的飞星快剑已经颇为纯熟，"
-    translated: "Not bad at all. Your dual flying stars fast sword techniques are quite proficient now."
+    translated: "Not bad, not bad. Your Swift Star Swords are quite proficient already."
   - split: 10
     subIndex: 1
     text: "想来不用多时，便可修习本门的无影乱剑了。"
-    translated: "I suppose it won't be long before I can practice the Shadow Flickering Slash from this school."
+    translated: "It won't be long before I can begin practicing the Shadowless Chaotic Swords of this school."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -33374,12 +33374,12 @@
   splits:
   - split: 10
     text: "多谢师伯指点！"
-    translated: "Thank Senior Master for your guidance!"
+    translated: "Thanks, Martial Uncle, for your guidance!"
 - raw: ",余采薇,,左,,,,,,,不过我看，师伯的招式里也有几处漏洞……"
   splits:
   - split: 10
     text: "不过我看，师伯的招式里也有几处漏洞"
-    translated: "But I see that even Master Senior's techniques have a few vulnerabilities."
+    translated: "But I see that even Master Uncle's techniques have a few vulnerabilities."
   templates:
   - split: 10
     template: "{0}……"
@@ -33396,7 +33396,7 @@
   - split: 10
     subIndex: 1
     text: "小妮子年纪尚浅，看不清师伯我的妙招也属正常。"
-    translated: "The lass is young and inexperienced, so it's normal that she can't see through my clever move."
+    translated: "The little girl is young and it's normal that she can't see through my Martial Uncle."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -33404,7 +33404,7 @@
   splits:
   - split: 10
     text: "余下几位弟子，师伯我便一并试试，"
-    translated: "The senior advisor can also test the remaining disciples at the same time."
+    translated: "The remaining disciples, I'll let Uncle try them all."
   - split: 10
     subIndex: 1
     text: "你们只管全力攻来，莫要手下留情！"
@@ -33416,7 +33416,7 @@
   splits:
   - split: 10
     text: "那就得罪了，师伯！"
-    translated: "I'll offend you then, Senior Master!"
+    translated: "Martial Uncle, I offend you!"
   - split: 10
     subIndex: 1
     text: "啊啊啊啊啊啊啊！"
@@ -33452,7 +33452,7 @@
   splits:
   - split: 10
     text: "师伯过奖了！承蒙您老手下留情，只出了五成功力。"
-    translated: "Senior Master, you flatter me! I am grateful for your leniency and only used five‑tenths of your power."
+    translated: "Martial Uncle, you flatter me! Thanks to your generosity in holding back, you only used five‑tenths of your power."
 - raw: "258,玩家,陆仁谦,左,,,,,ChangeFightSkill;玩家-0-2,,哎哟，师伯饶命，师伯饶命。"
   splits:
   - split: 10
@@ -33485,7 +33485,7 @@
   splits:
   - split: 10
     text: "师伯说的好生深奥，弟子还要再消化消化。"
-    translated: "Sishu speaks truly profoundly, I must digest it further."
+    translated: "Martial Uncle speaks very profoundly. I still need to digest it further."
 - raw: ",,姜映泉,右,,,,,,,好了好了，不必操之过急。\\n师兄此次回来，自会住上几日再走……"
   splits:
   - split: 10
@@ -33507,7 +33507,7 @@
   splits:
   - split: 10
     text: "师伯难得回来一趟，不等师傅寿辰过完再走？"
-    translated: "Senior master rarely returns; why not stay until after your master's birthday celebration?"
+    translated: "Martial Uncle rarely returns, so why not stay until Master's birthday celebration is over?"
 - raw: ",,,右,,,,,,,我平生最怕那种一群陌生人故作熟稔，互相敬酒的场面！\\n吵吵嚷嚷，令人作呕。\\n所以此趟特意回来，算提前祝寿了。"
   splits:
   - split: 10
@@ -33556,7 +33556,7 @@
   - split: 10
     subIndex: 1
     text: "乃是本江湖拳法，名曰《合盘掌》。"
-    translated: "This is our Jianghu palm technique, named 'He Pan Palm'."
+    translated: "This is our Jianghu fist technique, known as the Combined Palm Technique."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -36097,7 +36097,7 @@
   - split: 10
     subIndex: 1
     text: "嘻嘻，这下我可以修习本门秘传无影乱剑了吧！"
-    translated: "Haha, now I can practice the Secret Invisible Chaos Sword technique of this sect!"
+    translated: "Haha, now I can practice our sect's secret Shadowless Chaotic Swords!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -46373,7 +46373,7 @@
   splits:
   - split: 10
     text: "师、师伯？您老人家也来擒拿此贼了？"
-    translated: "Master, Senior Master? You've come to apprehend this rogue as well?"
+    translated: "Master, Martial Uncle? You've come to capture this thief as well?"
   - split: 10
     subIndex: 1
     text: "这家伙功夫好生诡异，实在难缠。"
@@ -46431,7 +46431,7 @@
   splits:
   - split: 10
     text: "师伯霸气，师伯威武！"
-    translated: "Senior Master is awesome! Senior Master is mighty!"
+    translated: "Martial Uncle is domineering! Martial Uncle is mighty!"
   - split: 10
     subIndex: 1
     text: "这等歪魔邪道的功夫，怎能与我丐帮正宗相提并论！"
@@ -46459,7 +46459,7 @@
   splits:
   - split: 10
     text: "师伯饶命"
-    translated: "Senior master spare me"
+    translated: "Martial Uncle spare me"
   - split: 10
     subIndex: 1
     text: "千万别再向我爹爹告状了！"
@@ -46499,7 +46499,7 @@
   splits:
   - split: 10
     text: "是是是，师伯教训的是。"
-    translated: "Yes yes yes, Senior Apprentice Brother's rebuke is correct."
+    translated: "Yes yes yes, Martial Uncle's advice is correct."
 - raw: ",,,右,,,,,,,好了好了，你们可曾听说，这成都一带有种美酒叫“郫筒酒”。\\n乃是在竹节中酿成，醇厚浓烈，香气扑鼻。\\n不说了不说了，我寻美酒去也，这残局你们自行收拾便是！"
   splits:
   - split: 10
@@ -46524,7 +46524,7 @@
   - split: 10
     subIndex: 1
     text: "师伯慢走"
-    translated: "Senior master, take your time"
+    translated: "Martial Uncle, take it easy"
   - split: 10
     subIndex: 2
     text: "（抹了把汗）"
@@ -56664,7 +56664,7 @@
   - split: 10
     subIndex: 1
     text: "因此为师临时决定将本门绝学“无影乱剑”，"
-    translated: "Therefore, Master made an impromptu decision to teach us the sect's ultimate technique, Flickerfoot Chaos Sword."
+    translated: "Therefore, the master temporarily decided to teach the sect's supreme technique, Shadowless Chaotic Swords."
   - split: 10
     subIndex: 2
     text: "借本次传功大会传授给各位弟子。"
@@ -56676,7 +56676,7 @@
   splits:
   - split: 10
     text: "无、无影乱剑！师傅！弟子连飞星快剑都还未掌握，"
-    translated: "No, Shadowless Random Swords! Master! Disciple Feiying has not even mastered the Fast Sword Technique yet."
+    translated: "None, Shadowless Chaotic Swords! Master! I haven't even mastered the Swift Star Sword yet,"
   - split: 10
     subIndex: 1
     text: "只怕学不来如此高深的功夫啊。"
@@ -56704,7 +56704,7 @@
   - split: 10
     subIndex: 1
     text: "你们入门时间段，修为尚浅，学习这无影乱剑不必急于求成，"
-    translated: "You are at an early stage of cultivation with shallow accomplishments. There is no need to rush in learning the Shadowless Random Sword Technique."
+    translated: "You are at the early stage of cultivation, with your prowess yet undeveloped. There is no need to rush in learning the Shadowless Chaotic Swords."
   - split: 10
     subIndex: 2
     text: "但当涉猎，提升些剑法修为便可。"
@@ -56725,7 +56725,7 @@
   - split: 10
     subIndex: 1
     text: "无影乱剑，这下发达了！"
-    translated: "Shadowless Random Sword Strokes‑now I'm set for success!"
+    translated: "Shadowless Chaotic Swords, now I'm set for success!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -56737,7 +56737,7 @@
   - split: 10
     subIndex: 1
     text: "但要学习无影乱剑还差了些火候。"
-    translated: "But to learn the Shadowless Fluttering Sword Technique, I still need some refinement."
+    translated: "But to learn the Shadowless Chaotic Swords, it's still missing some refinement."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -56757,7 +56757,7 @@
   splits:
   - split: 10
     text: "师傅放心，什么无影乱剑，还不是手到擒来。"
-    translated: "Master rest assured; no matter how elusive and chaotic the sword moves, it's still within my grasp."
+    translated: "Master, have no worry. No matter what those Shadowless Chaotic Swords are, they're still within my grasp."
 - raw: ",姜婉,,左,,,,,,,沈退，师傅都说了不可急功近利！\\n你还是乖乖一步一步来，莫要让师傅操心。"
   splits:
   - split: 10
@@ -56782,7 +56782,7 @@
   - split: 10
     subIndex: 2
     text: "在这无影乱剑上还需多花些心思，好好精进。"
-    translated: "More focus is needed on refining your sword skills in this shadowy melee."
+    translated: "On this Shadowless Chaotic Swords, you need to put in more effort and refine it further."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -56807,7 +56807,7 @@
   splits:
   - split: 10
     text: "你们大师兄魏胥华的无影乱剑功力，仅在为师之下。"
-    translated: "Your Big Senior Brother Wei Xuhua's Shadowless Random Sword technique is second only to mine."
+    translated: "The martial arts of your Big Senior Brother Wei Xuhua in Shadowless Chaotic Swords are second only to mine."
   - split: 10
     subIndex: 1
     text: "你们练功遇到什么不懂的，都可以去问他去。"
@@ -56819,7 +56819,7 @@
   splits:
   - split: 10
     text: "胥华，你的无影乱剑，尚有进步之空间。"
-    translated: "Xuhua, your elusive flurry of blades still has room for improvement."
+    translated: "Xuhua, your Shadowless Chaotic Swords still have room for improvement."
   - split: 10
     subIndex: 1
     text: "这些日子为师也会对你悉心指导，以求突破。"
@@ -56840,7 +56840,7 @@
   - split: 10
     subIndex: 1
     text: "定能将本门绝学“无影乱剑”发扬光大！"
-    translated: "We shall surely promote our martial art, the Shadowless Chaos Sword, to great heights!"
+    translated: "We shall surely promote our sect's absolute expertise, Shadowless Chaotic Swords, to new heights!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -56848,7 +56848,7 @@
   splits:
   - split: 10
     text: "（此后，师傅便将这无影乱剑的心法口诀以及招式，细细道来"
-    translated: "(Master then went on to meticulously explain the Heart Method of Shadowless Chaotic Sword and its techniques."
+    translated: "(Afterwards, Master explained in detail the Heart Method and techniques of Shadowless Chaotic Swords."
   - split: 10
     subIndex: 1
     text: "不知不觉，天色就昏暗了下来）"
@@ -56872,7 +56872,7 @@
   splits:
   - split: 10
     text: "这无影乱剑，果然精妙绝伦，"
-    translated: "This form of shadowless frenzied swordplay truly is ingenious and unparalleled."
+    translated: "This Shadowless Chaotic Swords indeed showcase incredible subtlety and brilliance."
   - split: 10
     subIndex: 1
     text: "以内力高速颤动剑刃，便可使之难以被人察觉。"
@@ -56908,7 +56908,7 @@
   splits:
   - split: 10
     text: "本门内功“软玄功”，要支撑这“无影乱剑”的内力需求，"
-    translated: "The Inner Power required to support the Shadowless Chaos Sword technique in our school's Neigong, Soft Mystic Skill,"
+    translated: "The internal skill of our school, Mystic Skill, must support the inner power demands of Shadowless Chaotic Swords."
   - split: 10
     subIndex: 1
     text: "只怕还有些捉襟见肘。"
@@ -56944,7 +56944,7 @@
   splits:
   - split: 10
     text: "好了，这无影乱剑的心法招式，你们都已掌握。"
-    translated: "Good. You have all mastered these formless chaotic saber Heart Methods."
+    translated: "Good, you have all mastered the Shadowless Chaotic Swords heart method techniques."
   - split: 10
     subIndex: 1
     text: "铁掌帮和黑风寨随时可能大举进攻，望你们好生修习，"
@@ -59649,7 +59649,7 @@
   splits:
   - split: 10
     text: "久闻你的无影乱剑又有精进，"
-    translated: "I've heard your Formless Chaos Sword technique has improved again."
+    translated: "I've heard your Shadowless Chaotic Swords have improved even further."
   - split: 10
     subIndex: 1
     text: "咱们也有多年没有交过手了，今天干脆讨教讨教！"
@@ -59690,7 +59690,7 @@
   - split: 10
     subIndex: 2
     text: "姜掌门，无影乱剑果然名不虚传，佩服佩服。"
-    translated: "Sect Leader Jiang, your Shadow Disarray Swords truly live up to their reputation. Well done, well done."
+    translated: "Sect Leader Jiang, Shadowless Chaotic Swords lives up to its reputation. Well done, well done."
   templates:
   - split: 10
     template: "{0}……{1}……\\n{2}"
@@ -59702,7 +59702,7 @@
   - split: 10
     subIndex: 1
     text: "夏掌门，劈金碎玉掌也确实有两下子。"
-    translated: "Master Xia, the Golden Splitting Jade Palmtrick is indeed formidable."
+    translated: "Master Xia, the Split Gold Shatter Jade Palm does have some skill."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -59722,7 +59722,7 @@
   splits:
   - split: 10
     text: "不过我铁掌帮内功绝学，潮起月盈功，"
-    translated: "But my Iron Palm Gang neigong supreme art, Moonrise Full Moon Skill,"
+    translated: "However, my Iron Palm Gang's internal skill expertise, Tide Rising Full Moon Art,"
   - split: 10
     subIndex: 1
     text: "比起你仙霞派的软玄功，还是要胜上几筹。"
@@ -60575,7 +60575,7 @@
   - split: 10
     subIndex: 1
     text: "就算是学全了铁掌帮的潮起月盈功，劈金碎玉掌，以及本门的无影乱剑，"
-    translated: "Even if one mastered the Iron Palm Gang's Tides Rising Moon Filled Technique, Split Gold Crush Jade Palm, and our school's Shadowless Random Sword Method,"
+    translated: "Even if one masters the Iron Palm Gang's Tide Rising Full Moon Art, Split Gold Shatter Jade Palm, and our Shadowless Chaotic Swords,"
   - split: 10
     subIndex: 2
     text: "不过也就是江湖中的二流高手。"
@@ -60684,11 +60684,11 @@
   splits:
   - split: 10
     text: "毕竟这潮起月盈功和劈金碎玉掌，乃是铁掌帮的镇派之宝，"
-    translated: "After all, the Tidesurge and Moonfill Technique and the Split Gold Crush Jade Palm are the Iron Palm Gang's treasured forbidden techniques."
+    translated: "After all, the Tide Rising Full Moon Art and the Split Gold Shatter Jade Palm are the Iron Palm Gang's town‑seizing treasures."
   - split: 10
     subIndex: 1
     text: "就算我们手上有无影乱剑，也没办法弄到另外这两门武功，"
-    translated: "Even if we had the Wuying Random Sword Technique, we wouldn't be able to obtain the other two martial arts styles."
+    translated: "Even if we had Shadowless Chaotic Swords, we wouldn't be able to obtain the other two martial arts skills."
   - split: 10
     subIndex: 2
     text: "这参悟之事自也是无从说起。"
@@ -61161,7 +61161,7 @@
   splits:
   - split: 10
     text: "那便是你们仙霞派的，无影乱剑秘籍！"
-    translated: "That is the Xianxia Sect's Mysterious Shadow Random Sword Technique!"
+    translated: "That is the Shadowless Chaotic Swords secret manual of your Xianxia Sect!"
 - raw: ",,,左,,,,,,,哈哈哈，我说呢，总算是图穷匕见了。\\n原来是为了本门的无影乱剑而来！"
   splits:
   - split: 10
@@ -61170,7 +61170,7 @@
   - split: 10
     subIndex: 1
     text: "原来是为了本门的无影乱剑而来！"
-    translated: "It was for the Shadowless Chaotic Sword technique of our sect!"
+    translated: "Originally, it was for the Shadowless Chaotic Swords of our sect!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61178,11 +61178,11 @@
   splits:
   - split: 10
     text: "不错，小哥你若能将这无影乱剑的秘籍盗来，"
-    translated: "Not bad, if you could steal the secret scroll of the Shadowless Drunken Sword style,"
+    translated: "Not bad, if you can steal the secret text for the Shadowless Chaotic Swords,"
   - split: 10
     subIndex: 1
     text: "我愿以铁掌帮绝学，劈金碎玉掌来交换！"
-    translated: "I am willing to share my Iron Palm Gang's ultimate technique, Split Gold Jade Palm!"
+    translated: "I am willing to exchange with your Iron Palm Gang's ultimate technique, Split Gold Shatter Jade Palm!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61202,7 +61202,7 @@
   splits:
   - split: 10
     text: "我看以你的胆量，可不敢擅自做主，拿劈金碎玉掌秘籍来跟我交换。"
-    translated: "I doubt your courage is enough to make such a bold decision and swap the secret techniques of Split Gold and Shatter Jade Palm with me."
+    translated: "I bet with your courage, you dare not make such a decision on your own and exchange the Split Gold Shatter Jade Palm technique with me."
   - split: 10
     subIndex: 1
     text: "这"
@@ -61226,11 +61226,11 @@
   splits:
   - split: 10
     text: "这劈金碎玉掌，我确实想学，此话不假。"
-    translated: "I do indeed want to learn this Split Gold and Shatter Jade Palm."
+    translated: "I indeed want to learn the Split Gold Shatter Jade Palm. That's true."
   - split: 10
     subIndex: 1
     text: "只是夏帮主掌法如此高强，怎会想到要换我们仙霞派的无影乱剑？"
-    translated: "Only Gang Leader Xia is so proficient in his techniques. How could he think of using the Formless Chaotic Sword from our Xianxia Sect?"
+    translated: "Only Gang Leader Xia's fist techniques are so powerful, how could he think of using our Xianxia Sect's Shadowless Chaotic Swords?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61246,7 +61246,7 @@
   - split: 10
     subIndex: 2
     text: "况且这无影乱剑，也是出自祖师妙远真人之手，"
-    translated: "Moreover, the Formless Scattered Sword technique also originates from Master Miao Yuan, the Senior Immortal."
+    translated: "Moreover, these Shadowless Chaotic Swords also came from the hands of Senior Immortal Miao Yuan."
   - split: 10
     subIndex: 3
     text: "想必他老人家寻此武功，自有其深意。"
@@ -61302,7 +61302,7 @@
   - split: 10
     subIndex: 2
     text: "到时候，一本无影乱剑，换一本劈金碎玉掌！"
-    translated: "While then, swap their Invisible Shadow Random Sword Technique for the Split Gold Jade Cracking Palm Technique!"
+    translated: "Then, swap a Shadowless Chaotic Swords technique for a Split Gold Shatter Jade Palm technique!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -61326,7 +61326,7 @@
   - split: 10
     subIndex: 1
     text: "只是这无影乱剑秘籍，位于本门藏经阁深处。"
-    translated: "Just this Shadowless Random Sword Technique is located deep within the Scripture Pavilion of our sect."
+    translated: "Just this Shadowless Chaotic Swords technique is located deep within the Scripture Pavilion of our sect."
   - split: 10
     subIndex: 2
     text: "我还得寻个好时机，才能下手。"
@@ -61354,7 +61354,7 @@
   - split: 10
     subIndex: 1
     text: "你若能拿来无影乱剑秘籍，乃是有大功之人，咱铁掌帮绝不会亏待于你！"
-    translated: "If you can bring us the Secret Manual of Faint Attack Random Swords, you will have rendered great service. Our Iron Palm Gang will never fail to reward you!"
+    translated: "If you can bring us the Shadowless Chaotic Swords manual, you will be a man of great merit, and the Iron Palm Gang will certainly not treat you badly!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61427,7 +61427,7 @@
   splits:
   - split: 10
     text: "这夏天雄，竟也想要本门的无影乱剑么"
-    translated: "This Summer Hero actually wants to learn our shadowy Random Swords technique?"
+    translated: "This Summer Hero also wants our sect's Shadowless Chaotic Swords?"
   templates:
   - split: 10
     template: "{0}……"
@@ -61435,7 +61435,7 @@
   splits:
   - split: 10
     text: "他铁掌帮明明以拳掌为尊，就算弄到了无影乱剑也排不上大用场，"
-    translated: "He clearly values the Iron Palm Gang by fists and palms, so even if he got hold of the Shadowless Chaos Swords, they wouldn't be of much use."
+    translated: "He clearly respects the Iron Palm Gang with fists and palms; even if he obtained Shadowless Chaotic Swords, they wouldn't be of much use."
   - split: 10
     subIndex: 1
     text: "何必如此劳心费力"
@@ -61575,7 +61575,7 @@
   - split: 10
     subIndex: 3
     text: "无影乱剑！）"
-    translated: "Flickering Blades!)"
+    translated: "Shadowless Chaotic Swords!)"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}：{3}"
@@ -61650,7 +61650,7 @@
   - split: 10
     subIndex: 3
     text: "这便是我铁掌帮的绝学，劈金碎玉掌！"
-    translated: "This is the Iron Palm Gang's ultimate technique, Split Gold and Smash Jade Palm!"
+    translated: "This is the Iron Palm Gang's ultimate technique, Split Gold Shatter Jade Palm!"
   templates:
   - split: 10
     template: "{0}……{1}\\n{2}\\n{3}"
@@ -61662,7 +61662,7 @@
   - split: 10
     subIndex: 1
     text: "你们仙霞派的无影乱剑，小哥不会忘了吧"
-    translated: "You didn't forget the Shadowless Broken Sword technique of the Xianxia Sect, right?"
+    translated: "You didn't forget the Shadowless Chaotic Swords of the Xianxia Sect, right?"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -61710,7 +61710,7 @@
   - split: 10
     subIndex: 1
     text: "这秘籍正是劈金碎玉掌，如假包换。"
-    translated: "This secret technique is indeed the Split Gold Smash Jade Palm, down to the last detail."
+    translated: "This secret technique is indeed the Split Gold Shatter Jade Palm, just as described."
   - split: 10
     subIndex: 2
     text: "若是有诈，小女子愿被乱剑穿心死！"
@@ -61722,11 +61722,11 @@
   splits:
   - split: 10
     text: "要不小哥，你先把无影乱剑扔给小女子检查一二。"
-    translated: "Maybe, Little Brother, you could throw the Shadowless Fleeting Sword to me so I can examine it."
+    translated: "Maybe, Little Brother, you could throw the Shadowless Chaotic Swords to me for a quick inspection."
   - split: 10
     subIndex: 1
     text: "若没问题，小女子定将这劈金碎玉掌双手奉上！"
-    translated: "If there are no issues, this lady will present the Split Gold Smash Jade Palm with both hands!"
+    translated: "If there are no issues, this lady will present the Split Gold Shatter Jade Palm with both hands!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61758,7 +61758,7 @@
   splits:
   - split: 10
     text: "快点！把无影乱剑秘籍交出来！"
-    translated: "Hurry up! Hand over the Secret Manual of Phantom Random Swords!"
+    translated: "Hurry up! Hand over the Shadowless Chaotic Swords technique!"
 - raw: ",,,左,,,,,,,总算露出真面目了，吕子芳。\\n你这成天装腔作势的，看得我都累，早这么聊不就完了。"
   splits:
   - split: 10
@@ -61896,7 +61896,7 @@
   - split: 10
     subIndex: 1
     text: "看来你，不过是想把我引出来，抢夺这无影乱剑秘籍的吧！"
-    translated: "It seems you just want to lure me out to steal the Secret Scroll of Shadowless Chaos Swords!"
+    translated: "It seems you just wanted to lure me out to steal the secret manuscript of the Shadowless Chaotic Swords!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -61904,7 +61904,7 @@
   splits:
   - split: 10
     text: "现在知道也晚了，无影乱剑已经在我手上！"
-    translated: "It's too late now; Shadowless Chaos Sword is already in my hand!"
+    translated: "It's too late now; Shadowless Chaotic Swords are already in my hand!"
   - split: 10
     subIndex: 1
     text: "臭小子，给我乖乖受死！"
@@ -62189,7 +62189,7 @@
   - split: 10
     subIndex: 1
     text: "嘿嘿，这无影乱剑和劈金碎玉掌"
-    translated: "Hehe, these Invisible Blade Technique and Split Gold Shatter Jade Palm."
+    translated: "Hehe, these Shadowless Chaotic Swords and Split Gold Shatter Jade Palm."
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -62254,7 +62254,7 @@
   - split: 10
     subIndex: 1
     text: "哈哈哈哈哈，无影乱剑，劈金碎玉掌？这下发达啦！"
-    translated: "Haha, Phantom's Disembodied Sword Technique, Split Gold and Shatter Jade Palm? Things are looking up now!"
+    translated: "Haha, Shadowless Chaotic Swords, Split Gold Shatter Jade Palm? Now I'm set for success!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -62274,7 +62274,7 @@
   splits:
   - split: 10
     text: "这沈师兄的无影乱剑，怎么看着有些粗浅"
-    translated: "How does Senior Brother Shen's formless chaotic sword technique look so shallow?"
+    translated: "How does Senior Brother Shen's Shadowless Chaotic Swords seem a bit simplistic?"
   - split: 10
     subIndex: 1
     text: "这这这，这不就是被涂改了的御剑要术么？"
@@ -62286,7 +62286,7 @@
   splits:
   - split: 10
     text: "那这吕子芳带来的劈金碎玉掌呢"
-    translated: "What about Lu Zifang's Split Gold Crush Jade Palm then?"
+    translated: "What about the Split Gold Shatter Jade Palm brought by Lu Zifang?"
   - split: 10
     subIndex: 1
     text: "好家伙，这招式，不就是"
@@ -64699,7 +64699,7 @@
   splits:
   - split: 10
     text: "呵！无影乱剑？姜映泉？！"
-    translated: "Ha! Shadowless Random Sword Techniques? Jiang Yingquan?!"
+    translated: "Ha! Shadowless Chaotic Swords? Yingquan Jiang?!"
   - split: 10
     subIndex: 1
     text: "（当下扭头，抽身向巴陵村奔去）"
@@ -64794,12 +64794,12 @@
   splits:
   - split: 10
     text: "师伯，师伯，这到底是怎么回事呢？你还是跟我们说说吧！"
-    translated: "Senior Apprentice Brother, Senior Apprentice Brother, what exactly is going on here? You should tell us!"
+    translated: "Martial Uncle, Martial Uncle, just what is going on here? You might as well tell us!"
 - raw: ",,,右,,,,,,,（忧郁地看向远方）哎，师伯我啊，\\n这么些年来远离仙霞派，四处游历江湖，皆是有苦衷的。"
   splits:
   - split: 10
     text: "（忧郁地看向远方）哎，师伯我啊，"
-    translated: "(Sighing and looking off into the distance) Well, Senior Master, it's me..."
+    translated: "(Sighing and looking off into the distance) Ah, Martial Uncle, I..."
   - split: 10
     subIndex: 1
     text: "这么些年来远离仙霞派，四处游历江湖，皆是有苦衷的。"
@@ -64927,7 +64927,7 @@
   splits:
   - split: 10
     text: "师伯你只身潜入巴陵村，实在有些凶险"
-    translated: "Senior Master, your solo infiltration of Baling Village is rather dangerous."
+    translated: "Martial Uncle, you ventured alone into Baling Village‑rather perilous."
   templates:
   - split: 10
     template: "{0}……"
@@ -64951,7 +64951,7 @@
   splits:
   - split: 10
     text: "让师伯见笑了，此次虽说诛杀了小贼陆奇，"
-    translated: "Let Senior Instructor laugh at me, though this time we did manage to eliminate the minor bandit Lu Qi."
+    translated: "Let Martial Uncle not laugh at me. Though this time I did manage to kill the small thief Lu Qi,"
   - split: 10
     subIndex: 1
     text: "但若不是您老出手相救，只怕咱们也难逃一劫。"
@@ -67469,7 +67469,7 @@
   splits:
   - split: 10
     text: "这狗日的夏天雄，把潮起月盈功秘籍藏哪儿了"
-    translated: "This damn summer moon, where did you hide the tide rise and waxing moon secret technique?"
+    translated: "This damn Summer Hero, hid the Tide Rising Full Moon Art secrets somewhere."
   - split: 10
     subIndex: 1
     text: "也不知道那群碍事杂鱼什么时候回来，得赶紧的了。"
@@ -67497,7 +67497,7 @@
   - split: 10
     subIndex: 1
     text: "潮起月盈功！哈哈！"
-    translated: "Tide Rise, Moon Full, Success! Ha ha!"
+    translated: "Tide Rising Full Moon Art! Ha ha!"
   - split: 10
     subIndex: 2
     text: "真是踏破铁鞋无觅处，得来全不费工夫。"
@@ -67613,7 +67613,7 @@
   - split: 10
     subIndex: 1
     text: "算了算了，当务之急是把潮起月盈功偷出去，这地窖日后再来探查。）"
-    translated: "Forget it for now. The priority is to steal the High Tide Full Moon Technique, and we'll come back to check this cellar later.)"
+    translated: "Alright, alright. The top priority now is to steal the Tide Rising Full Moon Art. I'll come back to check this cellar later.)"
   templates:
   - split: 10
     template: "{0}……\\n{1}"
@@ -67799,7 +67799,7 @@
   splits:
   - split: 10
     text: "劈金碎玉掌！！！"
-    translated: "Golden Splitting Palm!!"
+    translated: "Split Gold Shatter Jade Palm!!!"
 - raw: ",,,无,,,SpeEffect/风呼啸,,,,（叶一鸣以迅雷之势欺身向前，向杂役后背快速击出一掌，\\n那杂役虽早有准备，向一旁躲避，但还是被掌风所伤。）"
   splits:
   - split: 10
@@ -67832,7 +67832,7 @@
   - split: 10
     subIndex: 1
     text: "无影乱剑！"
-    translated: "Shadowless Chaos Sword!"
+    translated: "Shadowless Chaotic Swords!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -68099,7 +68099,7 @@
   splits:
   - split: 10
     text: "我堂堂师伯，岂需要你们这群臭小子保护？"
-    translated: "As my respected senior master, do I need to be protected by a bunch of stinking boys?"
+    translated: "How can a proud Martial Uncle like me need protection from a bunch of stinky boys?"
   - split: 10
     subIndex: 1
     text: "滚滚滚，一边去，看师伯我大展神威！"
@@ -68228,7 +68228,7 @@
   - split: 10
     subIndex: 1
     text: "哈哈，你们帮主枕头底下的潮起月盈功在我手上，想抢回来就追上你爷爷我！"
-    translated: "Haha, your gang leader's Tide‑Rising and Moon‑Full Skill is in my hands. If you want it back, catch up to me, your grandfather!"
+    translated: "Haha, your Gang Leader's Tide Rising Full Moon Art is in my hands. If you want to get it back, catch up to me, your grandfather!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -68245,7 +68245,7 @@
   - split: 10
     subIndex: 1
     text: "完了，本门秘传的潮起月盈功被偷了！"
-    translated: "Finished... The Tide Rises, Moon Waxes Secret Technique of our sect has been stolen!"
+    translated: "Finished. The Tide Rising Full Moon Art, a secret transmission of our sect, has been stolen!"
   - split: 10
     subIndex: 2
     text: "追追追，给我追！千万莫放陆仁谦跑了！"
@@ -68277,7 +68277,7 @@
   splits:
   - split: 10
     text: "况且若弄丢潮起月盈功，帮主怪罪下来，咱们都吃不了兜着走！"
-    translated: "Moreover, if we lose the Tide‑Rise and Moon‑Full Achievement, the Gang Leader will blame us, and we'll be in deep trouble!"
+    translated: "Moreover, if we lose the Tide Rising Full Moon Art, the Gang Leader will blame us, and we'll be in deep trouble!"
   - split: 10
     subIndex: 1
     text: "（说罢赶忙催动轻功，向陆仁谦逃遁方向追去）"
@@ -68377,7 +68377,7 @@
   - split: 10
     subIndex: 1
     text: "你中了我们铁掌帮的劈金碎玉掌，已是内伤深重，别想再跑了！"
-    translated: "You've been struck by our Iron Palm Gang's Golden Splitting Jade Palm technique, suffering from severe internal injuries. Don't think you can run away now!"
+    translated: "You've been struck by our Iron Palm Gang's Split Gold Shatter Jade Palm, suffering from severe internal injuries. Don't think you can run now!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -68389,7 +68389,7 @@
   - split: 10
     subIndex: 1
     text: "本门绝学潮起月盈功都差点给偷了去，真是丢尽老脸啊。"
-    translated: "This treasured skill, the Tide Rises and Moon Fills Technique, was almost stolen from us. Truly a disgrace."
+    translated: "Our family's secret technique, Tide Rising Full Moon Art, was nearly stolen. Truly a shame."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -68401,7 +68401,7 @@
   - split: 10
     subIndex: 1
     text: "陆仁谦，快把潮起月盈功交出来，我让你死个痛快！"
-    translated: "Lu Renqian, hand over the High Tide Full Moon Technique. Let you die a quick death!"
+    translated: "Landeyan, hand over the Tide Rising Full Moon Art, and I'll let you die painlessly!"
   - split: 10
     subIndex: 2
     text: "若敢负隅顽抗，别怪我将你千刀万剐！"
@@ -68520,7 +68520,7 @@
   splits:
   - split: 10
     text: "（一挥手中的潮起月盈功秘籍）不必了，本门秘籍已经夺回来了。"
-    translated: "(Swing the tide‑rising full‑moon technique in hand) No need, our sect's secret techniques have already been reclaimed."
+    translated: "(Swiping the Tide Rising Full Moon Art secret manual in hand) No need, the secret manuals of our sect have already been retrieved."
   - split: 10
     subIndex: 1
     text: "况且他的心脉和五脏六腑已被我震碎，撑不过几个时辰了。"
@@ -68546,7 +68546,7 @@
   - split: 10
     subIndex: 1
     text: "无影乱剑！"
-    translated: "Shadowless Chaos Sword!"
+    translated: "Shadowless Chaotic Swords!"
   templates:
   - split: 10
     template: "{0}……{1}"
@@ -68558,7 +68558,7 @@
   - split: 10
     subIndex: 1
     text: "好在夺回了失窃秘籍，还抢到了仙霞派的“无影乱剑”，"
-    translated: "Fortunately, we recovered the stolen tome and even managed to snatch the Xianxia Sect's Shadowless Chaos Sword Technique."
+    translated: "Fortunately, we retrieved the stolen techniques and even managed to steal the Xianxia Sect's Shadowless Chaotic Swords technique."
   - split: 10
     subIndex: 2
     text: "也算因祸得福，天助我铁掌帮啊！"
@@ -68614,7 +68614,7 @@
   - split: 10
     subIndex: 1
     text: "不过今天击败陆仁谦，夺得无影乱剑秘籍，也算将功补过。"
-    translated: "But today's victory over Lu Renyan and acquiring the Secret Scroll of Shadowless Frenzied Swords does count as making amends."
+    translated: "But today defeating Lu Renqian and acquiring the Shadowless Chaotic Swords secret scroll counts as making up for my mistakes."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -68873,7 +68873,7 @@
   - split: 10
     subIndex: 1
     text: "潮、潮起月盈功？怎么"
-    translated: "Tide, tide rise with a full moon's success? How come?"
+    translated: "Tide Rising Full Moon Art? How"
   templates:
   - split: 10
     template: "{0}\\n{1}……"
@@ -69457,7 +69457,7 @@
   - split: 10
     subIndex: 1
     text: "如今为本门寻回了祖师失传的潮起月盈功，方才回到仙霞派来。"
-    translated: "Now that the Xianxia Sect has regained the ancestral master's lost Tidesurge Moonfulfillment Cultivation Technique, he has just returned to the Xianxia Sect."
+    translated: "Now that we have recovered the ancestral Tide Rising Full Moon Art, I have just returned to the Xianxia Sect."
   - split: 10
     subIndex: 2
     text: "也算是没有违背当年的誓言！"
@@ -69469,7 +69469,7 @@
   splits:
   - split: 10
     text: "嗯，所以咱们一定要刻苦修炼这潮起月盈功，方能不枉师伯这番良苦用心。"
-    translated: "So we must diligently practice the Tides Rise, Moon Waxes Skill to ensure our uncle's efforts are not in vain."
+    translated: "So we must diligently cultivate the Tide Rising Full Moon Art to not let Martial Uncle's painstaking efforts be in vain."
   - split: 10
     subIndex: 1
     text: "只要大家团结一心，振兴仙霞派，想必师伯在九泉之下也能含笑。"
@@ -69497,7 +69497,7 @@
   - split: 10
     subIndex: 1
     text: "师伯，总之我杨思迟，一定不会辜负您的恩情！"
-    translated: "Senior Master, in any case, I, Yang Sichi, will definitely not fail your kindness!"
+    translated: "Martial Uncle, in any case, I, Yang Sichi, will certainly not betray your kindness!"
   - split: 10
     subIndex: 2
     text: "（说罢跪下，咚咚咚咚磕了十几个响头，磕得额头又青又紫）"
@@ -69513,7 +69513,7 @@
   - split: 10
     subIndex: 1
     text: "你把头给磕坏了，师伯在下面也要为你担心的"
-    translated: "You've hurt your head, and Senior Master will be worried about you down below too."
+    translated: "You've hurt your head, and Uncle will be worried about you from below too."
   - split: 10
     subIndex: 2
     text: "师伯！呜呜呜呜呜呜呜"
@@ -75837,7 +75837,7 @@
   - split: 10
     subIndex: 1
     text: "没想到那家伙竟突然使出无影乱剑，想要偷袭于我！"
-    translated: "I didn't expect that guy to suddenly use Formless Chaotic Swords to try and ambush me!"
+    translated: "I didn't expect that guy to suddenly use Shadowless Chaotic Swords to try and ambush me!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -76311,7 +76311,7 @@
   - split: 10
     subIndex: 1
     text: "尝尝这招铁掌帮绝学，劈金碎玉掌！！！！！"
-    translated: "Try this Iron Palm Gang's ultimate technique, Split Gold and Shatter Jade Palm!!!!!"
+    translated: "Try out this Iron Palm Gang's ultimate technique, Split Gold Shatter Jade Palm!!!!!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -76319,7 +76319,7 @@
   splits:
   - split: 10
     text: "（贼人不敢再怠慢，运起全身功力，使出劈金碎玉掌向那杂役攻去。"
-    translated: "(The bandits no longer hesitated, channeling all their inner strength and unleashed the Split Gold Crush Jade Palm towards the servant."
+    translated: "(The bandits did not dare to be careless anymore, mobilizing all their internal power to use the Split Gold Shatter Jade Palm and attack the attendant."
   - split: 10
     subIndex: 1
     text: "一时间呈排山倒海之势，将快剑的星光吹落一地，再难抵挡！）"
@@ -76331,7 +76331,7 @@
   splits:
   - split: 10
     text: "不好！心法之妙，在于无形。无影乱剑，内劲为魂。"
-    translated: "Bad luck! The true power of the Heart Method lies in its intangibility. Fingerless Slash relies on inner strength as its essence."
+    translated: "Bad! The subtlety of the Heart Method lies in its intangibility. Shadowless Chaotic Swords relies on inner strength as its essence."
   - split: 10
     subIndex: 1
     text: "灌注剑刃，急颤分影，残影如织，虚实难分！"
@@ -76375,7 +76375,7 @@
   - split: 10
     subIndex: 1
     text: "无影乱剑！"
-    translated: "Shadowless Chaos Sword!"
+    translated: "Shadowless Chaotic Swords!"
   - split: 10
     subIndex: 2
     text: "师傅"
@@ -76892,7 +76892,7 @@
   - split: 10
     subIndex: 2
     text: "以及陆仁谦师伯潜入巴陵村偷取潮起月盈功，最终身死等等事情经过，"
-    translated: "As well as Senior Master Lu Renqian's infiltration of Baling Village to steal the Qiaoqi Yueying Technique, and his eventual death, and so on."
+    translated: "And also how Martial Uncle Lu Renqian secretly infiltrated Baling Village to steal the Tide Rising Full Moon Art, and eventually died in the process."
   - split: 10
     subIndex: 3
     text: "向他一一道来"
@@ -79027,7 +79027,7 @@
   splits:
   - split: 10
     text: "其实还有一个在外游历的师伯，武功应大师兄之上，只比师傅略逊一筹。"
-    translated: "Actually, there is also a Senior Master who travels outside. His martial arts are superior to Big Senior Brother's, falling only slightly behind the Master."
+    translated: "Actually, there is also a Martial Uncle who travels outside. His martial arts are superior to Big Senior Brother's, falling just a bit short of the Master's."
   - split: 10
     subIndex: 1
     text: "只可惜他常年漂泊无踪，神龙见首不见尾。"
@@ -80968,7 +80968,7 @@
   splits:
   - split: 10
     text: "师伯？你怎么在此处？"
-    translated: "Senior master, why are you here?"
+    translated: "Martial Uncle? What are you doing here?"
 - raw: ",陆仁谦,,左,,,,,,,我也是收到你们师傅的飞鸽传书，前来追查黑风余孽的。"
   splits:
   - split: 10
@@ -81006,7 +81006,7 @@
   - split: 10
     subIndex: 1
     text: "#$PlayerName#，顾游年，站在旁边看师伯我擒贼，不许插手！"
-    translated: "#$PlayerName#, Gu Younian, stand by and watch as Senior Preceptor captures the thief; do not interfere!"
+    translated: "#$PlayerName#, Gu Younian, stands by and watches as Uncle handles the thief; do not interfere!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81032,7 +81032,7 @@
   splits:
   - split: 10
     text: "师伯威武！师伯霸气！"
-    translated: "Senior Master is awesome! Senior Master is dominant!"
+    translated: "Martial Uncle is awesome! Martial Uncle is fierce!"
 - raw: ",玩家,,左,,,,,ChangeHeroFavor;陆仁谦-5,,额……师伯威武，师伯霸气……"
   splits:
   - split: 10
@@ -81041,7 +81041,7 @@
   - split: 10
     subIndex: 1
     text: "师伯威武，师伯霸气"
-    translated: "Senior Master is awesome, Senior Master is authoritative."
+    translated: "Martial Uncle is mighty, Martial Uncle is dominant."
   templates:
   - split: 10
     template: "{0}……{1}……"
@@ -81107,7 +81107,7 @@
   splits:
   - split: 10
     text: "师伯别打了，我看此人说的不像是假的。"
-    translated: "Senior disciple, stop hitting him; I think what this person said is not fake."
+    translated: "Martial Uncle, stop. I think what this person said isn't fake."
   - split: 10
     subIndex: 1
     text: "大当家若是去了巴陵村北边，那便是铁掌帮的方向"
@@ -81191,7 +81191,7 @@
   splits:
   - split: 10
     text: "诶诶诶，师伯慢走"
-    translated: "Ah ah ah, senior master, take it easy."
+    translated: "Ee ee ee, Martial Uncle, take it easy."
   templates:
   - split: 10
     template: "{0}……"
@@ -81204,7 +81204,7 @@
   splits:
   - split: 10
     text: "哎，只是不知道这师伯他老人家，为什么说跟师傅八字不合，"
-    translated: "Ah, I just wonder why Senior Master says he and Master have incompatible fortunes."
+    translated: "Ah, I just wonder why this Martial Uncle says he and Master have incompatible zodiac signs."
   - split: 10
     subIndex: 1
     text: "宁可一直在外面流浪，也不愿回仙霞派。"
@@ -81590,7 +81590,7 @@
   - split: 10
     subIndex: 1
     text: "师伯我把他们尽数拿下，耽搁了时间。"
-    translated: "Senior Apprentice Brother, I took care of them all, which delayed things."
+    translated: "Martial Uncle, I took them all down, but it cost time."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81602,7 +81602,7 @@
   - split: 10
     subIndex: 1
     text: "还好此趟有师伯相助。"
-    translated: "Fortunately, Senior Elder assisted this time"
+    translated: "Fortunately, this time Uncle assisted"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81646,7 +81646,7 @@
   splits:
   - split: 10
     text: "师伯，这"
-    translated: "Senior master, this"
+    translated: "Martial Uncle, this"
   templates:
   - split: 10
     template: "{0}……"
@@ -81671,7 +81671,7 @@
   splits:
   - split: 10
     text: "是是是，师伯教训的是，"
-    translated: "Yes yes yes, Senior Master's teachings are correct."
+    translated: "Yes yes yes, Martial Uncle's instruction is right."
   - split: 10
     subIndex: 1
     text: "弟子以后再也不用这种下三滥的手段了。（才怪）"
@@ -81687,7 +81687,7 @@
   - split: 10
     subIndex: 1
     text: "师伯我这就把这两名贼人押解去官府归案。"
-    translated: "Senior Master, I'll escort these two bandits to the authorities right away."
+    translated: "Martial Uncle, I'll take these two bandits to the officials right away."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81707,7 +81707,7 @@
   splits:
   - split: 10
     text: "是，师伯慢走"
-    translated: "Yes, Senior Apprentice Master, take your time"
+    translated: "Yes, Martial Uncle, take your time"
   templates:
   - split: 10
     template: "{0}……"
@@ -81720,7 +81720,7 @@
   splits:
   - split: 10
     text: "师傅跟师伯一样，是个老古板，"
-    translated: "The master is just like the senior master ‑ a old‑fashioned traditionalist."
+    translated: "Master is just like a martial uncle; he's a bit of a traditionalist."
   - split: 10
     subIndex: 1
     text: "要是知道了小爷所作所为，定要狠狠责罚不可。"
@@ -81788,7 +81788,7 @@
   - split: 10
     subIndex: 1
     text: "小爷我近来听到些风言风语，师伯他呀，早就和师傅貌合神离了！"
-    translated: "Little Master has been hearing some rumors lately. Senior Master has long been at odds with Master in name only!"
+    translated: "I've been hearing some rumors lately. Uncle has long been at odds with Master in name only!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81806,7 +81806,7 @@
   splits:
   - split: 10
     text: "额，不是因为师伯性子自由散漫，喜欢独来独往么？"
-    translated: "Isn't it because Senior Master is free‑spirited and likes to move about alone?"
+    translated: "Isn't it because Martial Uncle is free‑spirited and likes to move about on his own?"
 - raw: ",,,右,,,,,,,非也非也，都是说词罢了。\\n师伯他呀，其实当年乃是我们仙霞派掌门的继承人。"
   splits:
   - split: 10
@@ -81823,7 +81823,7 @@
   splits:
   - split: 10
     text: "师伯是掌门继承人？那师傅又是怎么坐上掌门之位的？"
-    translated: "Senior master is the Sect Leader's heir? Then how did Master manage to become the Sect Leader?"
+    translated: "The martial uncle is the Sect Leader's successor? Then how did the master manage to take the position of Sect Leader?"
 - raw: ",,,右,,,,,,,具体缘由我倒是不知，只听说师公似乎突然改变主意，\\n决定把掌门之位传给陆师伯的师弟，也就是咱们师傅的。"
   splits:
   - split: 10
@@ -81864,7 +81864,7 @@
   splits:
   - split: 10
     text: "啊？这这这，我看师伯和师傅关系还不错，"
-    translated: "Ah? Yeah, I think Senior Apprentice and Master have a pretty good relationship."
+    translated: "Ah? Hmm, I think Martial Uncle and Master have a pretty good relationship."
   - split: 10
     subIndex: 1
     text: "也都不像是那种贪图掌门之位的人啊！"
@@ -81880,7 +81880,7 @@
   - split: 10
     subIndex: 1
     text: "师伯他在江湖中闯荡已久，心思绝不简单。"
-    translated: "Senior Master has roamed the Jianghu for a long time, his mind is far from simple."
+    translated: "Martial Uncle has been wandering in the Jianghu for a long time, and his thoughts are by no means simple."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -81951,11 +81951,11 @@
   splits:
   - split: 10
     text: "师伯放心，我现在的武功也不弱了。"
-    translated: "Senior master rest assured, my martial arts are quite strong now."
+    translated: "Martial Uncle, rest assured. My martial arts are quite strong now."
   - split: 10
     subIndex: 1
     text: "说起来，师伯怎突然想到，要乔装成杂役混入这巴陵村的？"
-    translated: "Speaking of it, why did Senior Preceptor suddenly think to disguise himself as a menial and infiltrate Baling Village?"
+    translated: "Speaking of it, why did Martial Uncle suddenly come up with the idea to disguise himself as a menial and infiltrate Baling Village?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -82027,7 +82027,7 @@
   splits:
   - split: 10
     text: "师伯您老为了仙霞派如此孤身犯险，千万要小心。"
-    translated: "Senior Master, you risking so much for the Xianxia Sect‑please be careful."
+    translated: "Martial Uncle, you're risking so much for the Xianxia Sect. Be very careful."
 - raw: ",,,右,,,,,,,无妨无妨，你师伯我武功高超，经验老道，岂能在此着了道？\\n……不过眼下你来的正是时候，可以帮师伯一个小忙。"
   splits:
   - split: 10
@@ -82069,7 +82069,7 @@
   - split: 10
     subIndex: 1
     text: "师伯我就可以趁机潜入，把乔装所需物件偷出来。"
-    translated: "Senior master, I could take the opportunity to sneak in and steal the items needed for disguise."
+    translated: "Martial Uncle, I can take this opportunity to sneak in and steal the items needed for disguise."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -82094,7 +82094,7 @@
   splits:
   - split: 10
     text: "师伯放心，栽在我手里的铁掌弟子，没有上百也有几十。"
-    translated: "Senior master rest assured, the iron palm disciples in my charge number at least several dozen."
+    translated: "Martial Uncle rest assured, the iron palm disciples I've cultivated number in the dozens, if not over a hundred."
   - split: 10
     subIndex: 1
     text: "你就看我的吧！"
@@ -82370,7 +82370,7 @@
   splits:
   - split: 10
     text: "你师伯我英气逼人，这身杂役服自然配不上。"
-    translated: "My senior apprentice exudes yiqi, so this zaye fu naturally doesn't fit."
+    translated: "My Martial Uncle exudes such gallantry that this uniform of menial tasks naturally doesn't match."
   - split: 10
     subIndex: 1
     text: "不过只要能唬住铁掌帮众，也就足够了。"
@@ -82386,7 +82386,7 @@
   - split: 10
     subIndex: 1
     text: "师伯我把这几人埋了，就去巴陵村中潜伏下来。"
-    translated: "Senior disciple, I've buried these people and will go into hiding in Baling Village."
+    translated: "Martial Uncle, I've buried these people and will go to Baling Village to lie in wait."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -82452,7 +82452,7 @@
   splits:
   - split: 10
     text: "当年师伯我，确实是仙霞派掌门的继任人选。"
-    translated: "Back then, Senior Disciple I was indeed the successor chosen for the Xianxia Sect Master."
+    translated: "Back then, my senior uncle was indeed the successor to the Xianxia Sect Leader."
   - split: 10
     subIndex: 1
     text: "师公不知为何突然改变主意，决定将掌门之位传给姜师弟，"
@@ -83284,7 +83284,7 @@
   splits:
   - split: 10
     text: "这招无影乱剑，你有破解之法吗？"
-    translated: "Do you have any counter for this Shadow Rush technique?"
+    translated: "Do you have a way to counter this Shadowless Chaotic Swords move?"
 - raw: ",,,右,,,,,ChangeMaxAttri;余采薇-1-2,,哎哟！臭婆娘有两下子！\\n还愣着干什么，快去叫救兵啊！"
   splits:
   - split: 10
@@ -83498,7 +83498,7 @@
   splits:
   - split: 10
     text: "反观仙霞派，你师伯陆仁谦与大师兄魏胥华均已相继殒命，"
-    translated: "By contrast, at the Xianxia Sect, both your senior Brother Lu Renqian and Big Senior Brother Wei Xuhua have already successively met their end."
+    translated: "In the Xianxia Sect, both your Martial Uncle Lu Renqian and Big Senior Brother Wei Xuhua have already successively met their demise."
   - split: 10
     subIndex: 1
     text: "同门顾游年也早就经脉尽断，不堪一战。"
@@ -83662,7 +83662,7 @@
   - split: 10
     subIndex: 1
     text: "他的手边赫然摆着三本秘籍，分别是铁掌帮绝学潮起月盈功，劈金碎玉掌，"
-    translated: "His side prominently displayed three secret manuals: Iron Palm Gang's ultimate art Qiu Qi Yue Ying Skill, and Split Gold Crumble Jade Palm."
+    translated: "His side prominently displayed three secret manuals: Iron Palm Gang's Tide Rising Full Moon Art, Split Gold Shatter Jade Palm,"
   - split: 10
     subIndex: 2
     text: "以及从陆仁谦手中夺来的仙霞派秘籍"
@@ -84019,11 +84019,11 @@
   splits:
   - split: 10
     text: "可弟子看他那套劈金碎玉掌，倒是漏洞百出，不值一提。"
-    translated: "But the Split Gold Crush Jade Palm he showed seemed full of flaws and was not worth mentioning."
+    translated: "But the Split Gold Shatter Jade Palm he showed seemed full of flaws and was not worth mentioning."
   - split: 10
     subIndex: 1
     text: "不过此人的潮起月盈功内力确实深厚，弥补了其招式之不足。"
-    translated: "However, this person's Tide‑Rising and Moon‑Full Technique inner power is indeed profound, making up for the inadequacies in their techniques."
+    translated: "However, this person's Tide Rising Full Moon Art inner power is indeed profound, compensating for the inadequacies in their techniques."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -84398,7 +84398,7 @@
   - split: 10
     subIndex: 1
     text: "就算你变成冤魂恶鬼，老娘这劈金碎玉掌也能把你送回地府！"
-    translated: "Even if you turn into a vengeful ghost, my Split Gold Smash Jade palm technique can still send you back to the netherworld!"
+    translated: "Even if you turn into a vengeful ghost, this Split Gold Shatter Jade Palm will send you back to the netherworld!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -85293,7 +85293,7 @@
   splits:
   - split: 10
     text: "姜掌门，我这劈金碎玉掌，力道可有进步？"
-    translated: "Sect Leader Jiang, has my Split Gold Crumble Jade Palm made any progress in terms of strength?"
+    translated: "Sect Leader Jiang, has my Split Gold Shatter Jade Palm improved in strength?"
 - raw: ",,,左,,,,,,,唔...夏帮主功力确有进步，不过我仙霞派也没有故步自封。\\n只是夏帮主之内力，并不像是潮起月盈功所至......"
   splits:
   - split: 10
@@ -85302,7 +85302,7 @@
   - split: 10
     subIndex: 1
     text: "只是夏帮主之内力，并不像是潮起月盈功所至......"
-    translated: "Just the Inner Power of Gang Leader Xia... It doesn't seem to be from the Tide Rises, Moon is Full technique..."
+    translated: "Just the Inner Power of Gang Leader Xia... It doesn't seem to be from the Tide Rising Full Moon Art..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -85452,7 +85452,7 @@
   - split: 10
     subIndex: 1
     text: "唔......那狗贼夏天雄的内力好生奇怪，完全不像是潮起月盈功......"
-    translated: "Ugh... That dog Summer Hong's inner power is strangely unusual; it doesn't seem like the Tide‑Rising Moon‑Filling Technique at all..."
+    translated: "Hmm... The Inner Power of that dog is strangely different; it doesn't seem like the Tide Rising Full Moon Art at all..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -85494,12 +85494,12 @@
   splits:
   - split: 10
     text: "师傅，采薇从铁掌帮藏经阁内夺来了劈金碎玉掌，及一些其它武功秘籍。"
-    translated: "Master, Caiwei obtained the Split Gold Crush Jade Palm technique from the Scripture Pavilion of the Iron Palm Gang, along with some other secret martial arts manuals."
+    translated: "Master, Caiwei obtained the Split Gold Shatter Jade Palm and some other martial arts manuals from the Iron Palm Gang's Scripture Pavilion."
 - raw: ",,,右,,,,,GetSpeReward;59,,好！这劈金碎玉掌原本也是祖师绝学，加上潮起月盈功和无影乱剑，\\n这样本门也算集齐祖师传下来的三门武功了。"
   splits:
   - split: 10
     text: "好！这劈金碎玉掌原本也是祖师绝学，加上潮起月盈功和无影乱剑，"
-    translated: "Good! This Split Gold Crumble Jade Palm was originally one of the patriarch's supreme arts. Combined with Tide Rises Moon Full Technique and Shadowless Random Swords,"
+    translated: "Good! This Split Gold Shatter Jade Palm was originally one of the Zushi's ultimate techniques, combined with the Tide Rising Full Moon Art and Shadowless Chaotic Swords."
   - split: 10
     subIndex: 1
     text: "这样本门也算集齐祖师传下来的三门武功了。"
@@ -85695,7 +85695,7 @@
   splits:
   - split: 10
     text: "只是当时本门只有祖师的无影乱剑，而缺了潮起月盈功和劈金碎玉掌，"
-    translated: "Back then, our sect only had the Shadowless Random Strikes from the Ancestor Patriarch, but lacked the Tides Rising and Moon Full Technique and the Split Gold Crush Jade Palm."
+    translated: "Back then, our sect only had Patriarch's Shadowless Chaotic Swords, but we lacked the Tide Rising Full Moon Art and Split Gold Shatter Jade Palm."
   - split: 10
     subIndex: 1
     text: "因此就算有此猜测，也无法验证。"
@@ -85715,11 +85715,11 @@
   - split: 10
     subIndex: 2
     text: "陆师伯牺牲性命，从巴陵村偷来了潮起月盈功，"
-    translated: "Martial Uncle Lu sacrificed his life to steal the Tidesurge Moonful Technique from Baling Village."
+    translated: "Martial Uncle Lu sacrificed his life to steal the Tide Rising Full Moon Art from Baling Village."
   - split: 10
     subIndex: 3
     text: "然后咱们又在奇袭铁掌帮时，夺回了劈金碎玉掌！"
-    translated: "And then we reclaimed the Smashing Gold and Cracking Jade Palm from our ambush on the Iron Palm Gang!"
+    translated: "And then, during our surprise attack on the Iron Palm Gang, we reclaimed the Split Gold Shatter Jade Palm!"
   templates:
   - split: 10
     template: "{0}~{1}\\n{2}\\n{3}"
@@ -85788,7 +85788,7 @@
   - split: 10
     subIndex: 1
     text: "本门的无影乱剑秘籍中，每一页页码旁也写着个小数字。"
-    translated: "In our style's Secret Mists of Flickering Blades manual, a small number is also written next to each page number."
+    translated: "In our sect's Shadowless Chaotic Swords secret text, a small number is also written next to each page number."
   - split: 10
     subIndex: 2
     text: "我一直以为是谁乱涂乱画上去的呢！"
@@ -86003,7 +86003,7 @@
   - split: 10
     subIndex: 1
     text: "（需潮起月盈功，劈金碎玉掌和无影乱剑均达到六重功力以上，方可进行参悟）"
-    translated: "(Afford only when both the Tide‑Rising Moon‑Full Technique and the Golden‑Splitting Jade‑Breaking Palm have reached the Sixth Layer of power, as well as the Profound Shadow Chaotic Sword Skills)"
+    translated: "(Only when the Tide Rising Full Moon Art, Split Gold Shatter Jade Palm, and Shadowless Chaotic Swords all reach the sixth level of cultivation can one begin to comprehend them)"
   templates:
   - split: 9
     template: "{0};TryThinkAboutMissingSkill|{1};HideInteractUI"
@@ -86134,7 +86134,7 @@
   - split: 10
     subIndex: 1
     text: "那夏天雄从陆师兄身上抢走了本门的无影乱剑，所以也集齐了三本秘籍。"
-    translated: "So summer strong took the Invisible Frenzy Sword Technique from Land Senior Brother, thus gathering all three secret manuals."
+    translated: "So Summer Xu stole the Shadowless Chaotic Swords from Senior Brother Lu, thus gathering all three secret manuals."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -89476,11 +89476,11 @@
   splits:
   - split: 10
     text: "呵呵，韩当学了祖师的潮起月盈功和劈金碎玉掌，"
-    translated: "Haha, Han Dang learned the High Master's Tide Rises and Moon Waxes Technique and the Split Gold and Shatter Jade Palm."
+    translated: "Haha, Han Dang learned the Tide Rising Full Moon Art and Split Gold Shatter Jade Palm from his ancestral master."
   - split: 10
     subIndex: 1
     text: "梅子期则得了祖师的无影乱剑和承影剑。"
-    translated: "Maziqi received the Shadowless Fleeting Swords and the Chengyin Sword from the Patriarch."
+    translated: "Mei Ziqi received the Master's Shadowless Chaotic Swords and Chengying Sword."
   - split: 10
     subIndex: 2
     text: "只是这二人仍不满足，一直觊觎祖师的成名绝学，梵文贝叶经！"
@@ -89737,7 +89737,7 @@
   splits:
   - split: 10
     text: "唔......这招无影乱剑，回敬给你！"
-    translated: "Ugh... I'll return your invisible random swords with a similar move! They will face the same trick!"
+    translated: "Ugh... I'll return your Shadowless Chaotic Swords!"
 - raw: ",,,右,,,,,ChangeInjury;姜映泉-1-40,,哼！那我也如数奉还！"
   splits:
   - split: 10
@@ -107902,7 +107902,7 @@
   splits:
   - split: 10
     text: "峨眉这门掌法我也久有耳闻，传说我派的劈金碎玉掌便是脱胎于此。"
-    translated: "I've long heard of the palm technique at Emei. Legend has it that our sect's Split Gold Crush Jade Palm originated from this."
+    translated: "I've long heard of the palm technique practiced at Mount Emei. Legend says our Split Gold Shatter Jade Palm originated from it."
   - split: 10
     subIndex: 1
     text: "不知#TargetInteractName#你可学过这门掌法？"
@@ -111917,7 +111917,7 @@
   splits:
   - split: 10
     text: "久闻#$PlayerName#掌门深得仙霞派真传，一手无影乱剑颇为精妙。"
-    translated: "I've long heard that #$PlayerName# Sect Leader has truly mastered the Xianxia Sect's techniques, with his shadowy flurry of sword strikes being particularly ingenious."
+    translated: "I've heard that Master #$PlayerName# has truly mastered the Xianxia Sect's techniques, with his Shadowless Chaotic Swords being particularly ingenious."
   - split: 10
     subIndex: 1
     text: "此轮便由你出战，不知是否可行？"
@@ -125425,7 +125425,7 @@
   - split: 10
     subIndex: 1
     text: "那这招无影乱剑又如何？"
-    translated: "And what about this move, the Shadowy Chaotic Sword?"
+    translated: "And what about that Shadowless Chaotic Swords technique?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -143786,7 +143786,7 @@
   splits:
   - split: 10
     text: "欧庄主，此物看似是块废铁，但实则乃是上古神兵“承影剑”的剑胚。"
-    translated: "Manor Master Ou, this piece of iron may seem useless, but it is actually the sword core of the ancient divine weapon Cheng Ying Sword."
+    translated: "Manor Master, this may appear to be a piece of scrap iron, but it is actually the core of the ancient divine weapon, Chengying Sword."
   - split: 10
     subIndex: 1
     text: "以此为原料加以修复重铸，很可能可以让此神兵重见天日啊！"
@@ -143798,7 +143798,7 @@
   splits:
   - split: 10
     text: "什么承影剑？我看不过是无稽之谈罢了。"
-    translated: "What is this Shadow Cutting Sword? I see it's just unfounded talk."
+    translated: "What Chengying Sword? I see it's just unfounded talk."
   - split: 10
     subIndex: 1
     text: "祖庄主你耗费这么多材料只为修复一块废铁，"
@@ -157245,7 +157245,7 @@
   splits:
   - split: 10
     text: "还是先师姜映泉仗义出手，以一手精妙的无影乱剑功夫力克群贼。"
-    translated: "Still, it was Master Jiang Yingquan who came to the rescue with a righteous hand. Using his exquisite Shadowless Chaotic Sword technique, he defeated the bandits."
+    translated: "Still, it was Master Jiang Yingquan who, out of righteousness, stepped in and, with a skillful display of Shadowless Chaotic Swords, triumphed over the bandits."
   - split: 10
     subIndex: 1
     text: "我们二人并肩协力，方才将这些山寨尽数剿灭。"
@@ -158842,7 +158842,7 @@
   splits:
   - split: 10
     text: "宋师伯常说，姜掌门是江湖中最后一位仁侠。"
-    translated: "Senior Master Song often said that Sect Leader Jiang is the last Virtuous Hero in the Jianghu."
+    translated: "Martial Uncle Song often said that Sect Leader Jiang is the last Benevolent in the Jianghu."
   - split: 10
     subIndex: 1
     text: "今日见到各位，方知此言非虚！"
@@ -164167,7 +164167,7 @@
   - split: 10
     subIndex: 1
     text: "武当弟子拔剑！今日咱们便要替宋师伯报仇雪恨。"
-    translated: "Wudang disciple draw your sword! Today we must avenge Senior Master Song."
+    translated: "Wudang disciples draw your swords! Today we must avenge and bring glory to Martial Uncle."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -164179,7 +164179,7 @@
   - split: 10
     subIndex: 1
     text: "既然你如此思念宋师伯，那我就送你下去陪他好了，看刀！"
-    translated: "Since you miss Senior Master Song so much, I'll send you down to be with him. Watch out for this dao!"
+    translated: "Since you miss Martial Uncle Song so much, I'll send you down to be with him. Look out for this knife!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -164673,11 +164673,11 @@
   splits:
   - split: 10
     text: "这桩悬案宋师伯调查多年，一直没有下文。"
-    translated: "While correcting, Senior Master Song has been investigating this unsolved case for many years without making any progress."
+    translated: "This open case was investigated by Martial Uncle Song for many years but never came to a conclusion."
   - split: 10
     subIndex: 1
     text: "您老人家一口咬定这门功夫已经失传，我和宋师伯也都信以为真......"
-    translated: "You firmly declared that this martial arts technique had been lost long ago, and both Master Senior Brother Song and I believed you without doubt..."
+    translated: "You seniors declared that this martial art had been lost, and Master Uncle Song and I believed you without a doubt......"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -164742,7 +164742,7 @@
   splits:
   - split: 10
     text: "我不知道......师傅......你还有多少事情瞒着我和宋师伯呢？"
-    translated: "I don't know... Master... how many secrets are you still keeping from me and Senior Master Song?"
+    translated: "I don't know... Master... how many secrets are you still keeping from me and Martial Uncle Song?"
 - raw: ",,,右,,,,,,,......文馨，师傅或许有些事情瞒着你，但也都是为了你好。"
   splits:
   - split: 10
@@ -165666,7 +165666,7 @@
   - split: 10
     subIndex: 2
     text: "岂不是辜负您与宋师伯这么多年来的谆谆教诲？"
-    translated: "Isn't that a betrayal of Master Senior Song and all your teachings over these years?"
+    translated: "Isn't that a betrayal of your teachings and Uncle Song's patient guidance over these many years?"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -166983,7 +166983,7 @@
   splits:
   - split: 10
     text: "更何况阎殿主此前，还亲手杀害了她宋师伯！"
-    translated: "Moreover, Elder Surnam was personally killed by Sect Master Yan before!"
+    translated: "Moreover, Lord Yan previously personally murdered her Martial Uncle Song!"
   - split: 10
     subIndex: 1
     text: "以文馨的脾气若知道了此事，非得拔剑自刎，以死谢罪不可。"
@@ -180607,7 +180607,7 @@
   splits:
   - split: 10
     text: "如是师伯，听说藏经阁内有骚乱打斗之声，"
-    translated: "If Master Senior Brother, I heard there was chaos and fighting in the Scripture Pavilion."
+    translated: "If it's Martial Uncle, I've heard there's chaos and fighting in the Scripture Pavilion."
   - split: 10
     subIndex: 1
     text: "我怀疑有奸贼趁着寺内火起，想要前来盗宝，"
@@ -180659,7 +180659,7 @@
   splits:
   - split: 10
     text: "师、师伯教训的是，"
-    translated: "Master, Senior Master disciplines us,"
+    translated: "Mast., Martial Uncle taught that,"
   - split: 10
     subIndex: 1
     text: "这藏经阁有师伯把守，自是万无一失。"
@@ -187385,7 +187385,7 @@
   splits:
   - split: 10
     text: "是、是，师伯。"
-    translated: "Yes, yes, Senior Master"
+    translated: "Yes, yes, Martial Uncle"
   - split: 10
     subIndex: 1
     text: "您老人家禅机妙语，我还需多多领悟。"
@@ -203385,7 +203385,7 @@
   - split: 10
     subIndex: 1
     text: "既然是出自本门如是师伯口中，那自然是不会有错。"
-    translated: "Since this comes from what Senior Master Suchness said within our sect, it naturally cannot be wrong."
+    translated: "Since it comes from the mouth of a Martial Uncle from our sect, it naturally cannot be wrong."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -261261,7 +261261,7 @@
   splits:
   - split: 10
     text: "呼哈！看我这招，劈金碎玉掌！！！"
-    translated: "Huff! Watch my technique, Split Gold and Shatter Jade Palm!!!"
+    translated: "Huhah! Watch my move, Split Gold Shatter Jade Palm!!!"
 - raw: ",,,无,,,SpeEffect/打击1,,,,但见杨思迟出手迅猛，一掌击中面前的练功木人。\\n一声巨响伴随木屑四散飞溅，木人身上已赫然被打出几道裂痕。"
   splits:
   - split: 10
@@ -261355,7 +261355,7 @@
   splits:
   - split: 10
     text: "姜师姐？杨师兄在传授我本门绝学劈金碎玉掌呢。"
-    translated: "Senior Sister Jiang? Senior Brother Yang is teaching me our sect's utmost secret technique, the Split Gold Crush Jade Palm."
+    translated: "Senior Sister Jiang? Senior Brother Yang is teaching me our sect's ultimate art, the Split Gold Shatter Jade Palm."
 - raw: ",,,左,,,,,,,思迟你自己火候未至，\\n可别把我们白师妹给教歪了啊。"
   splits:
   - split: 10
@@ -287987,7 +287987,7 @@
   splits:
   - split: 10
     text: "咳咳，师伯教训的是。"
-    translated: "Cough cough, Senior Preceptor's words are correct"
+    translated: "Cough cough, Martial Uncle is correct"
   - split: 10
     subIndex: 1
     text: "今天难得，您老人家怎么从藏经阁出来了？"
@@ -288015,7 +288015,7 @@
   splits:
   - split: 10
     text: "师伯，这仙霞派连克蜀中各大门派，联合峨眉武当。"
-    translated: "Senior Master, the Xianxia Sect has consecutively defeated the major sects in Shucheng and joined forces with Mount Meihua and Wudang."
+    translated: "Martial Uncle, the Xianxia Sect has consecutively defeated the major sects in Shucheng and joined forces with Mount Mei and Wudang."
   - split: 10
     subIndex: 1
     text: "现在还一举拿下了京城和飞龙门"
@@ -288044,7 +288044,7 @@
   splits:
   - split: 10
     text: "师伯，眼下确实别无更好之方法。"
-    translated: "Senior Master, there indeed seems to be no better method at the moment."
+    translated: "Martial Uncle, there indeed seems to be no better method for now."
   - split: 10
     subIndex: 1
     text: "弟子今日联合各大派，也只是为了制衡仙霞派之野心。"
@@ -288141,7 +288141,7 @@
   splits:
   - split: 10
     text: "师伯，若放任仙霞派继续统合武林，"
-    translated: "Senior Master, if we allow the Xianxia Sect to continue consolidating the Wulin,"
+    translated: "Martial Uncle, if we allow the Xianxia Sect to continue consolidating the Wulin,"
   - split: 10
     subIndex: 1
     text: "各派传承恐将断绝，我少林也将沦为其附庸。"
@@ -288220,7 +288220,7 @@
   splits:
   - split: 10
     text: "师伯，您、您老人家的意思是......"
-    translated: "Senior Master, your senior's meaning is..."
+    translated: "Martial Uncle, you mean......"
 - raw: ",,,左,,,,,,,呵呵呵呵，师侄，你才是少林方丈。\\n师伯我，不过是藏经阁内一扫地老头罢了。"
   splits:
   - split: 10
@@ -288229,7 +288229,7 @@
   - split: 10
     subIndex: 1
     text: "师伯我，不过是藏经阁内一扫地老头罢了。"
-    translated: "Sifu, I'm just an old man who sweeps in the Scripture Pavilion."
+    translated: "Martial Uncle, I'm just an old man who sweeps in the Scripture Pavilion."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -288253,12 +288253,12 @@
   splits:
   - split: 10
     text: "师、师伯慢走......"
-    translated: "Teacher, Senior Teacher, take your time..."
+    translated: "Master, Martial Uncle, go slowly..."
 - raw: ",空见大师,,左,,,,,,,师伯还是这么禅机妙语，\\n让人摸不着头脑......"
   splits:
   - split: 10
     text: "师伯还是这么禅机妙语，"
-    translated: "Senior master still speaks in such profound and witty Zen sayings."
+    translated: "Martial Uncle still speaks with such profound and witty wisdom."
   - split: 10
     subIndex: 1
     text: "让人摸不着头脑......"

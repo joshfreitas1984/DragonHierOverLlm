@@ -59,8 +59,18 @@ internal static class PlotTextPatches
                 // above, since the tween now reveals already-translated text throughout.
                 if (!string.IsNullOrEmpty(endValue) && DynamicStringPatches.ContainsCjk(endValue))
                 {
-                    var translated = DynamicStringPatches.RunGenericPipeline(endValue);
-                    if (translated != endValue)
+                    var original = endValue;
+                    var translated = DynamicStringPatches.RunGenericPipeline(original);
+
+                    // Log here regardless of whether anything changed - this is the ONLY call site
+                    // that ever sees the raw endValue for a PlotText reveal. ApplyToComponentText's
+                    // own LogResidualCjkDebug call never runs for this component once the snapshot
+                    // below is seeded, because its typewriter-reveal fast path returns before
+                    // reaching that call (see the fast path's own residual-CJK log for the
+                    // still-CJK-after-seeding case this doesn't catch: unseeded/unchanged text).
+                    DynamicStringPatches.LogResidualCjkDebug("PlotTextPatches.DOText_Prefix", original, translated);
+
+                    if (translated != original)
                     {
                         endValue = translated;
                         DynamicStringPatches.SeedComponentTranslatedSnapshot(target, translated);
