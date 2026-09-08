@@ -278,45 +278,93 @@ New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
   repo's existing rule for the numbered workflow.
 - Because `modelName` is independent of the translation models, you can point QC at a different
   local Ollama model than whatever's doing primary translation (or a hosted API model) and compare,
-  without touching translation config. A small optional follow-up (not blocking the main feature):
-  a comparison-mode test that runs QC with two configured model names over the same already-QC'd
-  sample and diffs correction rate / proposed text, to help pick a model before committing to one
-  for a full run — worth doing once real QC output volume exists to compare, not upfront.
+  without touching translation config. See "Sample run before committing to a full-corpus pass"
+  below — this comparison happens **before** the first full run, not just as a later follow-up.
 
-### Suggested QC model + a setup step you can do in parallel with implementation
+### Candidate QC models + a setup step you can do in parallel with implementation
 
-Recommendation: **`qwen2.5:14b-instruct`** via Ollama (`ollama pull qwen2.5:14b-instruct`) as the
-initial QC model — a meaningful step up in Chinese-language nuance from the `qwen2.5:7b` doing
-primary translation (same family, so its instruction-following quirks/tendencies are already
-partly understood from this project's existing prompt-tuning notes), and comfortably fits the
-RTX 5070's 16GB VRAM at a Q4_K_M-class quantization. As an optional later A/B candidate for a
-genuinely different "second opinion" model (different family, reduces correlated blind spots):
-**`glm4:9b`** (Zhipu's GLM-4, historically strong specifically at Chinese) — more setup work since
-there's no existing tuned prompt convention for it in this codebase, so treat it as a Phase 5
-comparison-mode candidate, not the initial default. (Model landscape moves fast; worth a quick check
-in Ollama's library for anything newer/better-fitting before committing, since this recommendation
-reflects what was well-established as of this plan's writing.)
+Two candidates worth having ready rather than committing to one upfront, since model choice is
+still open:
 
-This needs no code — just a `ModelConfig` entry (`ModelPreset: None`, since the QC prompt is new and
-doesn't need the `Qwen25` preset's translation-specific base prompts) and a prompts folder, so it's
-independent, low-risk setup work you can do while Phase 1-4 are implemented:
+- **`qwen2.5:14b-instruct`** via Ollama (`ollama pull qwen2.5:14b-instruct`) — a meaningful step up
+  in Chinese-language nuance from the `qwen2.5:7b` doing primary translation (same family, so its
+  instruction-following quirks/tendencies are already partly understood from this project's
+  existing prompt-tuning notes), and comfortably fits the RTX 5070's 16GB VRAM at a
+  Q4_K_M-class quantization.
+- **`glm4:9b`** (Zhipu's GLM-4, `ollama pull glm4:9b`) — a genuinely different model family
+  (reduces correlated blind spots with the Qwen family doing translation), historically strong
+  specifically at Chinese, and being smaller (9B vs 14B) should also run noticeably faster per call
+  on the same hardware — see the throughput discussion below. More setup work since there's no
+  existing tuned prompt convention for it in this codebase.
 
-1. `ollama pull qwen2.5:14b-instruct` and confirm it responds via `http://localhost:11434/api/chat`
-   (same endpoint the existing translation models already use).
-2. Add a `models:` entry to `Files/Config.yaml`:
+(Model landscape moves fast; worth a quick check in Ollama's library for anything newer/
+better-fitting before committing, since this recommendation reflects what was well-established as
+of this plan's writing.)
+
+Both need no code — just a `ModelConfig` entry each (`ModelPreset: None`, since the QC prompt is
+new and doesn't need the `Qwen25` preset's translation-specific base prompts) and a prompts folder,
+so this is independent, low-risk setup work you can do while Phase 1-4 are implemented:
+
+1. `ollama pull qwen2.5:14b-instruct` and `ollama pull glm4:9b`; confirm both respond via
+   `http://localhost:11434/api/chat` (same endpoint the existing translation models already use).
+2. Add two `models:` entries to `Files/Config.yaml`:
    ```yaml
    - name: QwenQc-14B
      modelPreset: None
      modelPresetType: Standard
      customPromptsPath: QcPrompts
+   - name: Glm4Qc-9B
+     modelPreset: None
+     modelPresetType: Standard
+     customPromptsPath: QcPrompts
    ```
+   Both point at the same `QcPrompts` folder — the QC prompt itself is model-agnostic; only the
+   underlying model differs.
 3. Create the `Files/QcPrompts/` folder (workspace prompt-override convention, same as
    `{ModelName}Prompts/*.txt` elsewhere) and draft `BaseQualityReviewPrompt.txt` /
    `BaseSystemPrompt.txt`-equivalent content for the QC task — exact wording is Phase 4
    implementation work (see "Open items" below), but having the folder + a first draft ready means
    Phase 4 can wire the workflow straight to a real prompt instead of a placeholder.
-4. Point the new `qualityReview.modelName` config value (once Phase 5 config plumbing exists) at
-   `QwenQc-14B`.
+4. Leave `qualityReview.modelName` unset for now — the sample run below is what actually decides
+   which of the two it gets pointed at.
+
+### Sample run before committing to a full-corpus pass
+
+`Files/Converted` currently holds roughly 72,500 translatable splits across 40 files (some smaller
+fraction of that is unique text after dedup, mirroring the translation cache's own duplicate-heavy
+pattern) — a full QC pass over that is a genuinely long job (likely many hours, possibly overnight,
+regardless of which model is used — see the throughput reasoning below), and Ollama serves one
+request at a time per model, so `maxConcurrency` doesn't parallelize past what a single GPU already
+does. Don't commit an entire model to that full run blind.
+
+Instead, once the QC workflow exists (end of Phase 4), run it once against each candidate model
+over a **small, fixed sample** — e.g. 200-500 lines pulled from a couple of already-translated
+files with a mix of plain and templated/compound columns, so the sample actually exercises both
+code paths from Phase 1's "plain vs. templated" distinction. For each model, record:
+
+- Real wall-clock time per call and total sample time (this directly answers "how slow is this,
+  really," grounded in your actual RTX 5070 rather than an estimate).
+- The `QcQualityScore` distribution (helps calibrate a starting `minAcceptableScore` — see Phase 3).
+- How many corrections were proposed, and a manual skim of whether they're actually good fixes or
+  the model second-guessing fine translations.
+- How many corrections got rejected by the validation gate (`FailedValidation`) — a high rejection
+  rate is itself a signal the model/prompt needs tuning before a full run.
+
+Only after comparing both on the same sample, pick one, point `qualityReview.modelName` at it, and
+proceed to a full run. This reuses the exact same "comparison-mode" mechanism already described
+above for revisiting model choice later — it's just brought forward to happen before the first full
+run instead of only being a nice-to-have follow-up.
+
+### Why a full run is slow either way (context for the sample-run numbers)
+
+Decode speed for this kind of local single-stream inference is memory-bandwidth-bound, roughly
+inversely proportional to model size — `qwen2.5:14b-instruct` reads ~1.5x the weight data per token
+that `glm4:9b` does, so `glm4:9b` should generate meaningfully faster per call (rough estimate,
+1.4-1.6x, not measured on this hardware). Either way, total time for a full pass is essentially
+(unique lines to review) × (avg seconds per call) — tens of thousands of calls at even ~1-2 seconds
+each adds up to hours. This is why the sample run above exists: it turns "how slow is this" from a
+guess into a measured number on your actual hardware before you commit to a multi-hour run, and
+`QcReviewedText` (Phase 1) means that cost is paid once per model, not on every subsequent run.
 
 ## Sequencing
 
