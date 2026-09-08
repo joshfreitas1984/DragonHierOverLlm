@@ -2297,7 +2297,7 @@
   - split: 10
     subIndex: 3
     text: "以后复兴本门的重任，就包在我#$PlayerName#身上！"
-    translated: "The heavy responsibility of reviving our sect falls on {#$PlayerName#}'s shoulder!"
+    translated: "The heavy responsibility of reviving our sect falls on #$PlayerName#'s shoulder!"
   templates:
   - split: 10
     template: "{0}~{1}~{2}\\n{3}"
@@ -56700,7 +56700,7 @@
   splits:
   - split: 10
     text: "思迟，云裳，还有#PlayerName#，"
-    translated: "Sichi, Yunshang, and {#PlayerName#},"
+    translated: "Sichi, Yunshang, and #PlayerName#,"
   - split: 10
     subIndex: 1
     text: "你们入门时间段，修为尚浅，学习这无影乱剑不必急于求成，"
@@ -77496,7 +77496,7 @@
   splits:
   - split: 10
     text: "哈哈，我#$PlayerName#办事，师姐还有啥不放心的。"
-    translated: "Haha, '#$PlayerName#' handling affairs, Senior Sister. Is there anything else you're concerned about?"
+    translated: "Haha, #$PlayerName# handling affairs, Senior Sister. Is there anything else you're concerned about?"
   - split: 10
     subIndex: 1
     text: "看看这是什么？"
@@ -77512,7 +77512,7 @@
   - split: 10
     subIndex: 1
     text: "太好了！谢谢#PlayerName#！"
-    translated: "Great! Thanks, {#PlayerName#}!"
+    translated: "Great! Thanks, #PlayerName#!"
   - split: 10
     subIndex: 2
     text: "（笑颜绽开如同春花般灿烂，竟是一把将你抱在怀中）"
@@ -90414,7 +90414,7 @@
   splits:
   - split: 10
     text: "至于#$PlayerName#，为师弟子中，你天资最高。"
-    translated: "'#$PlayerName#' has been added to the list of disciples, and they possess the highest talent among them."
+    translated: "#$PlayerName# has been added to the list of disciples, and they possess the highest talent among them."
   - split: 10
     subIndex: 1
     text: "以后仙霞派的重担，就落在你肩上了......"
@@ -90896,7 +90896,7 @@
   splits:
   - split: 10
     text: "至于我仙霞派，按照师傅的遗训，便由#$PlayerName#继任掌门之位！"
-    translated: "According to Master's instructions, '#$PlayerName#' has been appointed as the Sect Leader of the Xianxia Sect!"
+    translated: "According to Master's instructions, #$PlayerName# has been appointed as the Sect Leader of the Xianxia Sect!"
 - raw: ",,,左,,,,,,,慢着慢着，我#$PlayerName#何德何能，能够担当此重任？\\n我觉得......大师兄就比我更合适！"
   splits:
   - split: 10
@@ -112867,7 +112867,7 @@
   splits:
   - split: 10
     text: "那你师傅司马掌门，以及同门师兄师姐，还有#$PlayerName#我，都难免肝肠寸断。"
-    translated: "Then your master, Master Sima, and fellow senior brothers and sisters, as well as me, {#$PlayerName#}, are all bound to be heartbroken."
+    translated: "Then your master, Master Sima, and fellow senior brothers and sisters, as well as me, #$PlayerName#, are all bound to be heartbroken."
   - split: 10
     subIndex: 1
     text: "悲伤难过之情，不会逊色于此人的父母妻儿的......"
@@ -121385,7 +121385,7 @@
   - split: 10
     subIndex: 1
     text: "我还有何颜面再见雷大小姐，郭勇锐和#$PlayerName#......"
-    translated: "How can I face Miss Lei, Guo Yongrui, and {#$PlayerName#} again..."
+    translated: "How can I face Miss Lei, Guo Yongrui, and #$PlayerName# again..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -133932,7 +133932,7 @@
   splits:
   - split: 10
     text: "那你师傅司马掌门，以及同门师兄师姐，还有#$PlayerName#我，都难免肝肠寸断。"
-    translated: "Then your master, Master Sima, and fellow senior brothers and sisters, as well as me, {#$PlayerName#}, are all bound to be heartbroken."
+    translated: "Then your master, Master Sima, and fellow senior brothers and sisters, as well as me, #$PlayerName#, are all bound to be heartbroken."
   - split: 10
     subIndex: 1
     text: "悲伤难过之情，不会逊色于此人的父母妻儿的......"
@@ -216442,7 +216442,7 @@
   - split: 10
     subIndex: 1
     text: "从来只有我#$PlayerName#收别人的保护费，你们算什么东西！"
-    translated: "'#$PlayerName#' has always been the one extorting protection money from others. What are you even worth, '#$PlayerName#'!"
+    translated: "#$PlayerName# has always been the one extorting protection money from others. What are you even worth!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -243176,7 +243176,7 @@
   splits:
   - split: 10
     text: "咳咳咳咳！原来是#$PlayerName#啊！"
-    translated: "Cough cough cough cough! So it's {#$PlayerName#}!"
+    translated: "Cough cough cough cough! So it's #$PlayerName#!"
   - split: 10
     subIndex: 1
     text: "近来道上生意可好？"
@@ -268752,7 +268752,7 @@
   splits:
   - split: 10
     text: "怎么自从遇上王添翼和#$PlayerName#后，"
-    translated: "How has everything changed since meeting Wang Tiansheng and {#$PlayerName#}?"
+    translated: "How has everything changed since meeting Wang Tiansheng and #$PlayerName#?"
   - split: 10
     subIndex: 1
     text: "便屡屡不能完成任务呢？"
@@ -289696,7 +289696,7 @@
   splits:
   - split: 10
     text: "呵呵，没看出来#PlayerName#，"
-    translated: "Haha, I didn't see it in you, {#PlayerName#}."
+    translated: "Haha, I didn't see it in you, #PlayerName#."
   - split: 10
     subIndex: 1
     text: "倒是颇有经商之天赋。"
@@ -291640,7 +291640,7 @@
   splits:
   - split: 10
     text: "原来你就是那位传说中的#$PlayerName#？！"
-    translated: "Original you are the legendary {#$PlayerName#}?!"
+    translated: "Original you are the legendary #$PlayerName#?!"
 - raw: ",,,左,,,,,,,咳咳，正是在下。"
   splits:
   - split: 10

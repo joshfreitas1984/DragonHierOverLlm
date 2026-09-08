@@ -1716,7 +1716,7 @@
     translated: "#PlayerName# truly wakes the sleeper with a single word."
   - subIndex: 1
     text: "哎，只可惜#PlayerName#眼下无门无派，"
-    translated: "Ah, too bad {#PlayerName#} is currently without a daoist sect or school."
+    translated: "Ah, too bad #PlayerName# is currently without a daoist sect or school."
   - subIndex: 2
     text: "否则正好为我引荐一位良主。"
     translated: "Otherwise, it could introduce them to a good master."
@@ -3017,7 +3017,7 @@
     translated: "Otherwise, why would #PlayerName# leave the three of you behind?"
   - subIndex: 2
     text: "与我#$SourceInteractName#私定终生？"
-    translated: "Propose to me, {#$SourceInteractName#}?"
+    translated: "Propose to me, #$SourceInteractName#?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "#TargetInteractName#本英武正直之士，不想蒙冤入狱，\n竟落得这般囚首垢面之状，实在令我痛心。"
@@ -17770,7 +17770,7 @@
 - raw: "哦？看在你我的交情上，若#PlayerName#出的起{0}两银子作为酬劳，\n那接下来十五日，我便贴身护卫，保你周全！"
   splits:
   - text: "哦？看在你我的交情上，若#PlayerName#出的起"
-    translated: "Oh? Considering our friendship, if {#PlayerName#} can afford it,"
+    translated: "Oh? Considering our friendship, if #PlayerName# can afford it,"
   - subIndex: 1
     text: "两银子作为酬劳，"
     translated: "Silver coins as payment"
@@ -18035,7 +18035,7 @@
     translated: "Hmph! There are indeed guards."
   - subIndex: 1
     text: "幸好提前找了帮手，#PlayerName#我们一起上！"
-    translated: "Luckily, I found some help in advance. Let's go, {#PlayerName#}!"
+    translated: "Luckily, I found some help in advance. Let's go, #PlayerName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "哼！这次算我栽了。\n等到出狱之后，#PlayerName#你我再做分晓！"
@@ -20059,7 +20059,7 @@
 - raw: "多谢#PlayerName#，真是救了兄弟一命。\n我这就给师傅他老人家送去！"
   splits:
   - text: "多谢#PlayerName#，真是救了兄弟一命。"
-    translated: "Thanks, {#PlayerName#}, you really saved my life, Brother."
+    translated: "Thanks, #PlayerName#, you really saved my life, Brother."
   - subIndex: 1
     text: "我这就给师傅他老人家送去！"
     translated: "I'll take this to Master right away!"
@@ -20095,7 +20095,7 @@
 - raw: "多谢#SourceInteractName#！\n弟子定当赴汤蹈火，报效掌门知遇之恩！"
   splits:
   - text: "多谢#SourceInteractName#！"
-    translated: "Thanks, {#SourceInteractName#}!"
+    translated: "Thanks, #SourceInteractName#!"
   - subIndex: 1
     text: "弟子定当赴汤蹈火，报效掌门知遇之恩！"
     translated: "Disciple will surely risk boiling water and blazing fire to repay the Master's kindness!"
@@ -20112,7 +20112,7 @@
 - raw: "多谢#TargetInteractName#！"
   splits:
   - text: "多谢#TargetInteractName#！"
-    translated: "Thanks, {#TargetInteractName#}!"
+    translated: "Thanks, #TargetInteractName#!"
 - raw: "多谢;StopNpcReduceAreaStateFinalReuslt;true"
   splits:
   - text: "多谢"
@@ -25962,7 +25962,7 @@
 - raw: "我也有此意，奈何#PlayerName#所属{0}之弟子人员已满，只能暂且作罢。"
   splits:
   - text: "我也有此意，奈何#PlayerName#所属"
-    translated: "I share your intention, but what about {#PlayerName#}'s affiliation?"
+    translated: "I share your intention, but what about #PlayerName#'s affiliation?"
   - subIndex: 1
     text: "之弟子人员已满，只能暂且作罢。"
     translated: "The discipleship openings are now full, so we must put it on hold for now."
@@ -26320,7 +26320,7 @@
 - raw: "我本月刚医治过#PlayerName#你，还需再好生静养一番才是。"
   splits:
   - text: "我本月刚医治过#PlayerName#你，还需再好生静养一番才是。"
-    translated: "I treated you last month, {#PlayerName#}, so you still need more rest and care."
+    translated: "I treated you last month, #PlayerName#, so you still need more rest and care."
 - raw: "我本有机会..."
   splits:
   - text: "我本有机会..."
@@ -31074,7 +31074,7 @@
     translated: "Haha, since this person is already dead,"
   - subIndex: 1
     text: "其所携秘籍装备，自当尽数归我#$PlayerName#所有！"
-    translated: "The secret manuals and equipment he carries should all be handed over to {#$PlayerName#}!"
+    translated: "The secret manuals and equipment he carries should all be handed over to #$PlayerName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "桀桀桀桀，竟敢打我这千里名驹的主意，真是活得不耐烦了！\n小子，乖乖受死！"
@@ -37245,7 +37245,7 @@
 - raw: "而最后，这段历史的主角#$PlayerName#......"
   splits:
   - text: "而最后，这段历史的主角#$PlayerName#......"
-    translated: "And in the end, the protagonist of this history, {#$PlayerName#}......"
+    translated: "And in the end, the protagonist of this history, #$PlayerName#......"
 - raw: "耐力"
   splits:
   - text: "耐力"
@@ -41539,7 +41539,7 @@
     translated: "This prosperity continued even after #$PlayerName# passed away."
   - subIndex: 1
     text: "而此后历朝历代，百姓万民，也无不称颂怀念#$PlayerName#所开创的这一黄金时代。"
-    translated: "And ever since then, through all subsequent dynasties, the common people have continued to praise and remember the golden age founded by {#$PlayerName#}."
+    translated: "And ever since then, through all subsequent dynasties, the common people have continued to praise and remember the golden age founded by #$PlayerName#."
   templates:
   - template: "{0}⟦0⟧\n{1}"
 - raw: "这一路走来真是颇为热闹。\n百姓携老扶幼，遍插茱萸，向着城外山上登高而去。"
@@ -43948,7 +43948,7 @@
 - raw: "阁下可是#PlayerForceDescribe##$PlayerName#？久仰大名！\n在下#TargetForceDescribe##$TargetInteractName#。"
   splits:
   - text: "阁下可是#PlayerForceDescribe##$PlayerName#？久仰大名！"
-    translated: "Are you {#PlayerForceDescribe#} {#$PlayerName#}? I've heard much about you!"
+    translated: "Are you #PlayerForceDescribe# #$PlayerName#? I've heard much about you!"
   - subIndex: 1
     text: "在下#TargetForceDescribe##$TargetInteractName#。"
     translated: "I am #TargetForceDescribe#. It's nice to meet you, #$TargetInteractName#."

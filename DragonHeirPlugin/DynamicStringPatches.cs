@@ -898,6 +898,59 @@ internal static class DynamicStringPatches
             targetBuilding = RunGenericPipeline(targetBuilding);
     }
 
+    // MartialClubDataBase.FindMartialClub(areaName) linear-searches
+    // GameDataController.Instance.martialclubDataBase (loaded once from MartialClubData.csv at
+    // startup) comparing each entry's areaName field against the passed-in areaName. Confirmed via
+    // live repro (dumping the list's actual contents) that GameDataController's own CSV-loading
+    // code routes each row's area name through a patched String.Concat/Format call while
+    // constructing each entry, so every areaName in that list ends up English in memory (e.g.
+    // "Chengdu") - never the raw Chinese CSV text. Some callers of FindMartialClub still pass the
+    // raw Chinese area name (e.g. "成都", read from a still-untranslated source field), which never
+    // matches the English list, so FindMartialClub returns null and
+    // PlotController.StudyMartialClubSkillStart has no null-guard on that result - crashing with a
+    // NullReferenceException deeper in its body instead of finding the club. Same bug class as
+    // TutorialFindBuildingButton/Choice above and the BuildActionRoutingKeys/HeroSearchController
+    // cases further up this file - a translated value being compared against a differently-cased
+    // (translated vs. raw) source - just resolved here by forward-translating the query to match
+    // the already-English list, not by reverse-translating it.
+    [HarmonyPatch(typeof(MartialClubDataBase), nameof(MartialClubDataBase.FindMartialClub))]
+    [HarmonyPrefix]
+    private static void FindMartialClub_Prefix(ref string areaName)
+    {
+        // CONFIRMED via live repro: GameDataController's own MartialClubData.csv-loading code
+        // routes each row's area name through a patched String.Concat/Format call while
+        // constructing each MartialClubDataBase entry, so EVERY entry in
+        // GameDataController.Instance.martialclubDataBase.areaName is already English in memory
+        // (dumped live: "Chengdu", "Hangzhou", "Fuzhou", ... - never the raw Chinese CSV text).
+        // So the fix is a forward translation of the query, not a reverse one - mirrors
+        // TutorialFindBuildingButton_Prefix above (translate the query to match already-translated
+        // data), the opposite of what this method used to do. RunGenericPipeline is a no-op for
+        // text with no CJK content, so an already-English areaName passes through unchanged.
+        if (!string.IsNullOrEmpty(areaName))
+            areaName = RunGenericPipeline(areaName);
+
+        // TEMP DIAGNOSTIC - remove once verified fixed live.
+        var wasInFormatConcatPatch = _inFormatConcatPatch;
+        _inFormatConcatPatch = true;
+        try
+        {
+            MainPlugin.Logger?.LogInfo($"[TEMP] FindMartialClub_Prefix: forward-translated areaName='{areaName}'");
+        }
+        finally
+        {
+            _inFormatConcatPatch = wasInFormatConcatPatch;
+        }
+    }
+
+    [HarmonyPatch(typeof(MartialClubDataBase), nameof(MartialClubDataBase.FindMartialClub))]
+    [HarmonyPostfix]
+    private static void FindMartialClub_Postfix(string areaName, MartialClubDataBase __result)
+    {
+        // TEMP DIAGNOSTIC - remove once verified fixed live.
+        MainPlugin.Logger?.LogInfo(
+            $"[TEMP] FindMartialClub_Postfix: areaName (post-prefix)='{areaName}', result={(__result == null ? "null" : "found")}");
+    }
+
     private static void ApplyToComponentText(object instance, Func<string> getText, Action<string> setText)
     {
         if (_inTextSetterPostfix) return;

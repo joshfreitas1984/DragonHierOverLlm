@@ -6609,7 +6609,7 @@
     translated: "Just because you have acquired the #PlotInteractSkillName# skill, do not use it to commit crimes or cause trouble."
   - subIndex: 1
     text: "免得侮了我#$TargetInteractName#的威名。"
-    translated: "To avoid tarnishing the reputation of {#$TargetInteractName#}"
+    translated: "To avoid tarnishing the reputation of #$TargetInteractName#"
   templates:
   - template: "{0}\\n{1}"
 - raw: "只是这群贼人皆是穷凶极恶之徒，\\n若无万全准备与强力帮手，还是不要贸然行动为妙。"
