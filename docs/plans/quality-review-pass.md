@@ -21,6 +21,9 @@ Add a second, independent pass over already-translated text that:
    run workflow step, so model choice can be A/B tested.
 6. Never regresses glossary terms or drops tokens — every proposed correction is re-validated
    before being accepted, exactly like a normal translation attempt is today.
+7. Surfaces a confidence/quality score per line so a human can triage by "show me the worst N%"
+   instead of reading every line, and can tune (including disabling) how aggressively low scores
+   hold a line back from packaging as real QC output accumulates.
 
 ## Is this a re-architecture?
 
@@ -80,6 +83,12 @@ public string QcReviewedText { get; set; } = string.Empty;
 public bool FlaggedForQcReview { get; set; } = false;
 public string QcRejectedCorrection { get; set; } = string.Empty;
 public string QcFailureReason { get; set; } = string.Empty;
+
+// 0-100 self-rated confidence, from the QC model itself, that the CURRENT Translated/QcTranslated
+// value is an accurate, well-constructed translation - set on every reviewed split, whether or not
+// a correction was proposed. Nullable: null means "not yet reviewed" (distinct from a real 0),
+// same reasoning as QcStatus.NotReviewed.
+public int? QcQualityScore { get; set; }
 ```
 
 `FlaggedForQcReview` follows the exact same convention as `FlaggedForRetranslation`/
@@ -177,6 +186,35 @@ Everywhere packaging currently reads `split.Translated` for the final written va
 A row/entry already marked failed (kept as `Raw`) by existing rules is unaffected — QC only ever
 runs on splits that already have a real `Translated` value.
 
+### Score-gated packaging (point: "committed but not packaged")
+
+`Config.yaml`'s `qualityReview:` section (Phase 5) gets `minAcceptableScore` (int, e.g. default 70).
+The existing "is this row ready to package" check in `PackageFinalTranslationAsync` — today a row is
+kept as `Raw`/unpackaged if any split in it `!SafeToTranslate`, `FlaggedForRetranslation`, or has an
+empty `Translated` with non-empty source text — gets one more condition: **also treat a column as
+not-ready-to-package if its (column-level, per the `SubIndex == 0` anchor rule above)
+`QcQualityScore` is non-null and below `minAcceptableScore`.**
+
+Important nuance: this only fires when `QcQualityScore` is **non-null** (i.e. the line was actually
+reviewed). A split that was never QC-reviewed (`QcQualityScore == null` — QC disabled, or just
+hasn't been run yet) is **not** held back by this check — it packages exactly as it does today.
+This keeps the whole feature strictly opt-in: a project/run that never enables `qualityReview` sees
+zero behavior change in packaging.
+
+This is deliberately a **packaging-time** filter, not something QC itself acts on — the underlying
+`Translated`/`QcTranslated`/`QcQualityScore` values always get written to `Files/Converted` in full
+regardless of score, so no translation work is ever lost or hidden. `minAcceptableScore` is safe to
+raise or lower at any time and re-run packaging only (no LLM calls, no re-review) to immediately see
+more or fewer lines held back — this is the intended way to "tweak the score to a level I feel
+comfortable" as real output from a run gives a sense of what a given score number actually looks
+like in practice. Applies uniformly to the CSV path (`PackageFinalTranslationAsync`) and the flat
+`PrefabTextWorkflow`/`DynamicStringWorkflow` packaging (same "fall back to untranslated source
+text" bucket a not-yet-translated split already falls into today).
+
+`FlaggedForQcReview` (Phase 4) is also set when `QcQualityScore < minAcceptableScore`, in addition
+to the "correction rejected by the gate" case — so the same flag/report tells you both "this didn't
+make it into the packaged output" and "here's why," in one place.
+
 ## Phase 4 — QC workflow, prompting, and validation gate
 
 New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
@@ -186,12 +224,23 @@ New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
   call an LLM per unreviewed column (bounded by its own concurrency setting — see Phase 5).
 - Builds a QC prompt per column: raw cell, current translation, relevant glossary lines (reuse
   `GlossaryLine.AppendPromptsFor` — the QC model needs to know canonical name/term mappings to
-  judge "did this mistranslate a name" at all) and asks the model to judge fluency/correctness and
-  either confirm as-is or return a corrected sentence. Uses a dedicated prompt file
+  judge "did this mistranslate a name" at all) and asks the model, in **one call**, to (a) rate its
+  confidence 0-100 that the current translation is accurate and well-constructed, and (b) either
+  confirm as-is or return a corrected sentence. One call producing both the score and the verdict —
+  no extra round trip just to get a number. Uses a dedicated prompt file
   (`BaseQualityReviewPrompt.txt`-style, following the existing `BaseFiles/Qwen25/Prompts/`
   preset+override pattern) rather than reusing the translation system prompt, since the task
   ("judge and optionally correct this existing English translation against this Chinese source") is
-  a different job than "translate this Chinese text."
+  a different job than "translate this Chinese text." Output must be structured enough to parse
+  deterministically (e.g. a fixed `SCORE:`/`CORRECTED:` line format, or JSON if the chosen model
+  handles structured output reliably) — treat a response that fails to parse as `QcQualityScore =
+  null` (not reviewed) rather than guessing, so a parsing hiccup never silently records a wrong
+  score.
+- **Score calibration caveat:** a self-rated score from a small/local model is a useful *relative*
+  sort key ("show me the worst 5% of reviewed lines"), not a calibrated absolute quality metric —
+  don't treat "72" as meaning something precise, just "worse than 85, better than 60" in this run's
+  own distribution. This is exactly why `minAcceptableScore` (below) is left as a tunable config
+  value you dial in by eye against real output, not a hardcoded constant.
 - **Validation gate (point 5):** any proposed correction is run back through the *exact same*
   `LineValidation.CheckTransalationSuccessful` used for a normal translation attempt (placeholder
   preservation, tag balance, banned-phrase list, etc.) — a correction that fails is discarded
@@ -222,7 +271,8 @@ New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
 - `Config.yaml` gets a `qualityReview:` section: `enabled`, `modelName` (must match a `models:`
   entry, validated at load time the same way `EscalationModelName` already is), `maxConcurrency`
   (falls back to the translation `maxConcurrency`/`batchSize` the same way `EscalationRetryCount`
-  falls back today).
+  falls back today), `minAcceptableScore` (see Phase 3's score-gated packaging — default suggestion
+  70, tune freely, 0 disables score-based gating/flagging entirely).
 - A new numbered fact in `DragonHierOverLlm/Tests` (e.g. `"X. RunQualityReviewPass"`), run manually
   like every other pipeline step — never automatic, never part of a batch/regression run, per this
   repo's existing rule for the numbered workflow.
@@ -232,6 +282,41 @@ New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
   a comparison-mode test that runs QC with two configured model names over the same already-QC'd
   sample and diffs correction rate / proposed text, to help pick a model before committing to one
   for a full run — worth doing once real QC output volume exists to compare, not upfront.
+
+### Suggested QC model + a setup step you can do in parallel with implementation
+
+Recommendation: **`qwen2.5:14b-instruct`** via Ollama (`ollama pull qwen2.5:14b-instruct`) as the
+initial QC model — a meaningful step up in Chinese-language nuance from the `qwen2.5:7b` doing
+primary translation (same family, so its instruction-following quirks/tendencies are already
+partly understood from this project's existing prompt-tuning notes), and comfortably fits the
+RTX 5070's 16GB VRAM at a Q4_K_M-class quantization. As an optional later A/B candidate for a
+genuinely different "second opinion" model (different family, reduces correlated blind spots):
+**`glm4:9b`** (Zhipu's GLM-4, historically strong specifically at Chinese) — more setup work since
+there's no existing tuned prompt convention for it in this codebase, so treat it as a Phase 5
+comparison-mode candidate, not the initial default. (Model landscape moves fast; worth a quick check
+in Ollama's library for anything newer/better-fitting before committing, since this recommendation
+reflects what was well-established as of this plan's writing.)
+
+This needs no code — just a `ModelConfig` entry (`ModelPreset: None`, since the QC prompt is new and
+doesn't need the `Qwen25` preset's translation-specific base prompts) and a prompts folder, so it's
+independent, low-risk setup work you can do while Phase 1-4 are implemented:
+
+1. `ollama pull qwen2.5:14b-instruct` and confirm it responds via `http://localhost:11434/api/chat`
+   (same endpoint the existing translation models already use).
+2. Add a `models:` entry to `Files/Config.yaml`:
+   ```yaml
+   - name: QwenQc-14B
+     modelPreset: None
+     modelPresetType: Standard
+     customPromptsPath: QcPrompts
+   ```
+3. Create the `Files/QcPrompts/` folder (workspace prompt-override convention, same as
+   `{ModelName}Prompts/*.txt` elsewhere) and draft `BaseQualityReviewPrompt.txt` /
+   `BaseSystemPrompt.txt`-equivalent content for the QC task — exact wording is Phase 4
+   implementation work (see "Open items" below), but having the folder + a first draft ready means
+   Phase 4 can wire the workflow straight to a real prompt instead of a placeholder.
+4. Point the new `qualityReview.modelName` config value (once Phase 5 config plumbing exists) at
+   `QwenQc-14B`.
 
 ## Sequencing
 
@@ -245,8 +330,9 @@ New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
 
 ## Open items deferred, not blocking
 
-- Exact prompt wording for `BaseQualityReviewPrompt.txt` — write during Phase 4 implementation,
-  not part of this design.
+- Exact prompt wording for `BaseQualityReviewPrompt.txt` (including the `SCORE:`/`CORRECTED:`
+  output-format instructions) — write during Phase 4 implementation, informed by whatever draft
+  comes out of the Phase 5 model-setup step; not part of this design.
 - Whether QC should also run over `Files/Mod`-bound `PrefabText`/`DynamicStringsIL2CPP` files in
   the same pass or as a separate opt-in per `TextFileToSplit` entry — default to "same pass,
   respecting `PackageOutput`/`SkipColumns` exactly like translation already does," revisit only if
