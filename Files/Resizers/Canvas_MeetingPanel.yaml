@@ -1,0 +1,5 @@
+- path: Canvas/MeetingPanel/LastMonthContributionPrefab(Clone)/Text
+  sampleText: ' Achievements0'
+  idealFontSize: 10.0
+  allowWordWrap: true
+  allowAutoSizing: false

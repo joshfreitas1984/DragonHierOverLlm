@@ -35,6 +35,43 @@ public class TranslationWorkflowTests
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
+    // Run this BEFORE "3b" the first time you try a candidate qualityReview model - reviews only a
+    // small random sample (see QualityReviewWorkflow.RunAsync's sampleSize) instead of every
+    // eligible column, so you can judge a model's real speed/score-distribution/correction-quality
+    // on your hardware before committing an entire run to it. See docs/plans/quality-review-pass.md's
+    // "Sample run before committing to a full-corpus pass". A no-op if qualityReview.enabled is
+    // false.
+    [Fact(DisplayName = "3a. RunQualityReviewPassSample")]
+    public async Task RunQualityReviewPassSample()
+    {
+        await QualityReviewWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, sampleSize: 300);
+    }
+
+    // Independent of the main translate/apply-rules/translate-lines steps above - reviews
+    // already-translated text against a separately configured model (Config.yaml's
+    // qualityReview: section), proposes corrections, and validates them before writing anything.
+    // See docs/plans/quality-review-pass.md. A no-op (logs and returns) if qualityReview.enabled
+    // is false, so it's safe to run even before the feature is configured for a real run.
+    [Fact(DisplayName = "3b. RunQualityReviewPass")]
+    public async Task RunQualityReviewPass()
+    {
+        await QualityReviewWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
+    // Reporting-only, mirrors "4. Find All Failing Translations" but scoped to quality-review
+    // flags (a rejected correction, or a low QcQualityScore) instead of translation failures - see
+    // QualityReviewWorkflow.GetFlaggedQcReviews.
+    [Fact(DisplayName = "3c. Find Flagged Quality Review Items")]
+    public async Task FindFlaggedQcReviews()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var flagged = await QualityReviewWorkflow.GetFlaggedQcReviews(workingDirectory, TextFileConfiguration.TextFilesToSplit);
+
+        var serializer = YamlHelper.CreateSerializer();
+        var yaml = serializer.Serialize(flagged);
+        File.WriteAllText($"{workingDirectory}/TestResults/FlaggedQcReviews.yaml", yaml);
+    }
+
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
     public async Task SetBracketSplitBugLinesAsInvalid()
     {

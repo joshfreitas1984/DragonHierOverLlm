@@ -172,13 +172,14 @@ game-specific hook in this codebase.
 ## Phase 3 — Packaging changes
 
 Everywhere packaging currently reads `split.Translated` for the final written value, prefer
-`split.QcTranslated` when non-empty:
+`split.QcTranslated` when non-empty **and still fresh** (see "Staleness" below — a stale
+`QcTranslated` must never override a legitimately newer `Translated`):
 
 - `GameFileHandlingBase`/this repo's `PackageFinalTranslationAsync` (CSV path): for a plain column,
-  use `split.QcTranslated` if set else `split.Translated`. For a templated column, if the
-  `SubIndex == 0` fragment has non-empty `QcTranslated`, use it directly as the literal cell value
-  (bypass `Reconstruct()` for that column entirely); otherwise reconstruct as today from each
-  fragment's `Translated`.
+  use `split.QcTranslated` if set (and fresh) else `split.Translated`. For a templated column, if
+  the `SubIndex == 0` fragment has non-empty (and fresh) `QcTranslated`, use it directly as the
+  literal cell value (bypass `Reconstruct()` for that column entirely); otherwise reconstruct as
+  today from each fragment's `Translated`.
 - `PrefabTextWorkflow.PackagePrefabTextAsync` / `DynamicStringWorkflow`'s packaging (flat
   raw/result lists): same `QcTranslated`-over-`Translated` fallback, since these are single-split,
   no-template files.
@@ -215,6 +216,42 @@ text" bucket a not-yet-translated split already falls into today).
 to the "correction rejected by the gate" case — so the same flag/report tells you both "this didn't
 make it into the packaged output" and "here's why," in one place.
 
+### Staleness — nothing else resets Qc\* fields when Translated/Raw changes
+
+`ResetQcState()` (Phase 1) is only ever called from inside the QC engine itself
+(`QualityReviewWorkflow.ReviewColumnAsync`), right before it records a fresh outcome. Nothing else
+in the pipeline touches it — in particular:
+
+- **A retranslation after `FlaggedForRetranslation`** (e.g. a glossary change flags a column via
+  `ApplyAllRulesToCurrentTranslation`, and it's retranslated) changes `Translated` but
+  `ResetFlags()` deliberately leaves `Qc*` fields alone (see Phase 1) — they keep describing the
+  *old* translation.
+- **A re-export/merge** (`GameFileHandlingBase.MergeFilesIntoTranslatedAsync`) builds entirely new
+  `TranslationLine`/`TranslationSplit` objects from the fresh export and only ever copies
+  `.Translated` across from the old matched split — nothing else, by default.
+
+Without a fix, this is a real correctness risk, not just an efficiency one: packaging blindly
+preferring `QcTranslated` whenever it's non-empty (as first implemented) would keep shipping a
+stale QC correction based on a translation that no longer exists, until someone happens to re-run
+the QC pass and notice the mismatch. Fixed two ways:
+
+1. **`Utility.QualityReviewHelpers.IsQcReviewFresh(anchor, template, fragments)`** — a shared check
+   (used by the QC engine, both `FanslationStudio.LlmKit` packaging paths, and this repo's own CSV
+   packaging) that recomputes the column's current effective translated text and compares it
+   against the stored `QcReviewedText`. Every packaging path now ignores `QcTranslated`/
+   `QcQualityScore` entirely (falls through to plain `Translated`, exactly as if the column had
+   never been reviewed) unless this returns true. This is the correctness fix — a stale
+   correction/score can never again override a legitimately newer translation just because QC
+   hasn't been re-run yet.
+2. **`GameFileHandlingBase.CopyQcState`** — `MergeFilesIntoTranslatedAsync` now also carries a
+   matched split's `Qc*` fields forward alongside `.Translated` (both match paths already require
+   `Text` equality before considering a match, so this is only ever applied when the underlying raw
+   fragment genuinely hasn't changed). This is a pure efficiency fix — without it, every
+   re-export/merge would force a full, expensive re-review of the entire corpus even for lines
+   where nothing actually changed, defeating the point of `QcReviewedText`'s skip-if-unchanged
+   check. Correctness doesn't depend on this one (fix #1 already guarantees stale data is never
+   trusted) — it just avoids wasted LLM calls on the next QC run.
+
 ## Phase 4 — QC workflow, prompting, and validation gate
 
 New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
@@ -227,11 +264,23 @@ New `FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs`:
   judge "did this mistranslate a name" at all) and asks the model, in **one call**, to (a) rate its
   confidence 0-100 that the current translation is accurate and well-constructed, and (b) either
   confirm as-is or return a corrected sentence. One call producing both the score and the verdict —
-  no extra round trip just to get a number. Uses a dedicated prompt file
-  (`BaseQualityReviewPrompt.txt`-style, following the existing `BaseFiles/Qwen25/Prompts/`
-  preset+override pattern) rather than reusing the translation system prompt, since the task
-  ("judge and optionally correct this existing English translation against this Chinese source") is
-  a different job than "translate this Chinese text." Output must be structured enough to parse
+  no extra round trip just to get a number. Uses a dedicated `BaseQualityReviewPrompt` prompt
+  rather than reusing the translation system prompt, since the task ("judge and optionally correct
+  this existing English translation against this Chinese source") is a different job than
+  "translate this Chinese text." **This prompt is per-model-family, like `BaseSystemPrompt`** —
+  different model families can need differently-worded prompting to reliably produce the exact
+  `SCORE:`/`CORRECTED:` format without leaking instructions back into their own output (the same
+  reason `BaseSystemPrompt.txt`/`BaseCorrectionSuffixPrompt.txt` are already duplicated per preset
+  today, and exactly the failure mode the correction-suffix-leak postmortem documents for
+  `qwen2.5:7b`). So it's NOT a single shared/generic file: `FanslationStudio.LlmKit` ships it as
+  part of each model preset's own prompt set, alongside `BaseSystemPrompt` etc. -
+  `BaseFiles/Qwen25/Prompts/BaseQualityReviewPrompt.txt` and a new `BaseFiles/Glm4/Prompts/BaseQualityReviewPrompt.txt`
+  (a minimal new `Glm4` preset, mirroring `Qwen25`'s shape, added specifically because `glm4:9b` is
+  a QC candidate) - never a prompt folder sitting outside the preset system. A downstream repo can
+  still override either per-model with its own `BaseQualityReviewPrompt.txt` under that model's
+  `CustomPromptsPath` folder (same workspace-prompt-overrides-preset convention every other prompt
+  already follows) if a specific game needs different wording still. Output must be structured
+  enough to parse
   deterministically (e.g. a fixed `SCORE:`/`CORRECTED:` line format, or JSON if the chosen model
   handles structured output reliably) — treat a response that fails to parse as `QcQualityScore =
   null` (not reviewed) rather than guessing, so a parsing hiccup never silently records a wrong
@@ -301,31 +350,28 @@ still open:
 better-fitting before committing, since this recommendation reflects what was well-established as
 of this plan's writing.)
 
-Both need no code — just a `ModelConfig` entry each (`ModelPreset: None`, since the QC prompt is
-new and doesn't need the `Qwen25` preset's translation-specific base prompts) and a prompts folder,
-so this is independent, low-risk setup work you can do while Phase 1-4 are implemented:
+Both need no downstream-repo prompt-writing — each uses its own model-family preset in
+`FanslationStudio.LlmKit` purely to get a working, pre-tuned `BaseQualityReviewPrompt` (see Phase
+4's note on why this is per-family, not a shared/generic file). `qwen2.5:14b-instruct` uses the
+existing `Qwen25` preset (overriding its `model:` away from the `qwen2.5:7b` translation default);
+`glm4:9b` needed a genuinely new `Glm4` preset added to `FanslationStudio.LlmKit` (Config.yaml +
+its own `BaseQualityReviewPrompt.txt`, mirroring `Qwen25`'s shape) since GLM wasn't a supported
+preset at all before this feature. This is independent, low-risk setup work you can do while
+Phase 1-4 are implemented:
 
 1. `ollama pull qwen2.5:14b-instruct` and `ollama pull glm4:9b`; confirm both respond via
    `http://localhost:11434/api/chat` (same endpoint the existing translation models already use).
 2. Add two `models:` entries to `Files/Config.yaml`:
    ```yaml
    - name: QwenQc-14B
-     modelPreset: None
+     modelPreset: Qwen25
      modelPresetType: Standard
-     customPromptsPath: QcPrompts
+     model: qwen2.5:14b-instruct # overrides the preset's own qwen2.5:7b default
    - name: Glm4Qc-9B
-     modelPreset: None
-     modelPresetType: Standard
-     customPromptsPath: QcPrompts
+     modelPreset: Glm4
+     modelPresetType: Standard # preset already defaults to glm4:9b, no override needed
    ```
-   Both point at the same `QcPrompts` folder — the QC prompt itself is model-agnostic; only the
-   underlying model differs.
-3. Create the `Files/QcPrompts/` folder (workspace prompt-override convention, same as
-   `{ModelName}Prompts/*.txt` elsewhere) and draft `BaseQualityReviewPrompt.txt` /
-   `BaseSystemPrompt.txt`-equivalent content for the QC task — exact wording is Phase 4
-   implementation work (see "Open items" below), but having the folder + a first draft ready means
-   Phase 4 can wire the workflow straight to a real prompt instead of a placeholder.
-4. Leave `qualityReview.modelName` unset for now — the sample run below is what actually decides
+3. Leave `qualityReview.modelName` unset for now — the sample run below is what actually decides
    which of the two it gets pointed at.
 
 ### Sample run before committing to a full-corpus pass
@@ -378,9 +424,12 @@ guess into a measured number on your actual hardware before you commit to a mult
 
 ## Open items deferred, not blocking
 
-- Exact prompt wording for `BaseQualityReviewPrompt.txt` (including the `SCORE:`/`CORRECTED:`
-  output-format instructions) — write during Phase 4 implementation, informed by whatever draft
-  comes out of the Phase 5 model-setup step; not part of this design.
+- ~~Exact prompt wording for `BaseQualityReviewPrompt.txt`~~ — done: per-model-family defaults now
+  live at `FanslationStudio.LlmKit/BaseFiles/Qwen25/Prompts/BaseQualityReviewPrompt.txt` and
+  `BaseFiles/Glm4/Prompts/BaseQualityReviewPrompt.txt` (see Phase 4), covering the
+  `SCORE:`/`CORRECTED:` output format. Still open: whether the wording needs tuning once real
+  output from the sample run (Phase 5) shows how a given model actually
+  responds to it.
 - Whether QC should also run over `Files/Mod`-bound `PrefabText`/`DynamicStringsIL2CPP` files in
   the same pass or as a separate opt-in per `TextFileToSplit` entry — default to "same pass,
   respecting `PackageOutput`/`SkipColumns` exactly like translation already does," revisit only if

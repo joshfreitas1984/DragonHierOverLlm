@@ -7,8 +7,26 @@
   - name: Qwen25-StructuredText
     modelPreset:  Qwen25
     modelPresetType: StructuredText
-    customPromptsPath: 
-    apiKeyPath: 
+    customPromptsPath:
+    apiKeyPath:
+  # Quality-review-pass candidate models (see docs/plans/quality-review-pass.md). Each uses its own
+  # model-family preset (Qwen25/Glm4) purely for its BaseQualityReviewPrompt - different model
+  # families can need differently-tuned QC prompt wording (same reason BaseSystemPrompt.txt is
+  # already family-specific for translation), so this is NOT a shared/generic prompt - see
+  # BaseFiles/Qwen25/Prompts/BaseQualityReviewPrompt.txt vs BaseFiles/Glm4/Prompts/BaseQualityReviewPrompt.txt
+  # in FanslationStudio.LlmKit. `model:` overrides the preset's own default model string (Qwen25's
+  # preset defaults to qwen2.5:7b - the translation model - so it must be overridden here to the
+  # larger QC-only model). Neither model is used unless qualityReview.enabled is true and
+  # qualityReview.modelName points at one of them - pull both (`ollama pull qwen2.5:14b-instruct` /
+  # `ollama pull glm4:9b`) and run the sample-comparison step from the plan before committing to
+  # one for a full run.
+  - name: QwenQc-14B
+    modelPreset: Qwen25
+    modelPresetType: Standard
+    model: qwen2.5:14b-instruct
+  - name: Glm4Qc-9B
+    modelPreset: Glm4
+    modelPresetType: Standard
 glossaryPreset:
   usePresetChineseGlossary: true
   chineseGlossaryTypesToSupress:
@@ -28,6 +46,15 @@ batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true
 translateFlagged: true
+# Post-translation quality review pass (see docs/plans/quality-review-pass.md). Disabled by
+# default - a documented no-op until you're ready to run it (QualityReviewWorkflow.RunAsync just
+# logs and returns when enabled: false). Run the "3b. RunQualityReviewPass" test fact manually,
+# never as part of a batch - same rule as every other numbered workflow step in this repo.
+qualityReview:
+  enabled: true
+  modelName: QwenQc-14B # swap to Glm4Qc-9B to compare, per the plan's sample-run step
+  minAcceptableScore: 70 # tune freely and re-run packaging only - no LLM calls needed to see the effect
+  # maxConcurrency: 4 # falls back to maxConcurrency above, then batchSize, then 20
 #extraStringTokenReplacers:
 #  - '#PlayerName#'
 splitCharactersList:

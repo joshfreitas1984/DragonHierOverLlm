@@ -1,0 +1,10 @@
+- path: Canvas/ManageTagPanel/SelfTagList/Viewport/Content/*/Text
+  sampleText: Fists and palms
+  idealFontSize: 12.0
+  allowWordWrap: true
+  allowAutoSizing: false
+- path: Canvas/ManageTagPanel/TagList*/Viewport/Content/HeroTagIconPrefab(Clone)/Text
+  sampleText: Strong
+  idealFontSize: 12.0
+  allowWordWrap: true
+  allowAutoSizing: false

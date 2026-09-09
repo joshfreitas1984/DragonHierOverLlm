@@ -128,6 +128,13 @@ namespace Tests
             string inputPath = $"{workingDirectory}/Converted";
             string outputPath = $"{workingDirectory}/Mod";
 
+            // Quality-review-pass score gate (see docs/plans/quality-review-pass.md) - a column
+            // whose QcQualityScore is non-null and below this falls into the same "not ready to
+            // package" bucket as an unsafe/flagged/missing-translation column, further down.
+            // Never touches Files/Converted - only what reaches Files/Mod.
+            var minAcceptableScore = FanslationStudio.LlmKit.Configuration.ConfigurationExtensions
+                .GetConfiguration(workingDirectory).QualityReview.MinAcceptableScore;
+
             if (Directory.Exists(outputPath))
                 Directory.Delete(outputPath, true);
 
@@ -204,6 +211,30 @@ namespace Tests
                             .OrderBy(s => s.SubIndex)
                             .ToList();
 
+                        // Whole-cell QC state lives only on the column's SubIndex == 0 fragment -
+                        // see TranslationSplit.QcTranslated's doc comment. Only trust it if still
+                        // fresh relative to the fragments' CURRENT Translated values (see
+                        // QualityReviewHelpers.IsQcReviewFresh) - a retranslation since the last
+                        // review (e.g. a glossary change flagging this column via
+                        // ApplyAllRulesToCurrentTranslation) must never be silently overridden by
+                        // a stale score/correction just because nobody has re-run the quality
+                        // review pass yet. A fresh, non-empty QcTranslated bypasses Reconstruct
+                        // entirely and is used as the literal cell value.
+                        var anchor = fragments.FirstOrDefault(f => f.SubIndex == 0) ?? fragments.FirstOrDefault();
+                        var qcFresh = anchor != null && QualityReviewHelpers.IsQcReviewFresh(anchor, template, fragments);
+
+                        if (qcFresh && anchor!.QcQualityScore is int templateScore && templateScore < minAcceptableScore)
+                        {
+                            failed = true;
+                            break;
+                        }
+
+                        if (qcFresh && !string.IsNullOrEmpty(anchor!.QcTranslated))
+                        {
+                            splits[template.Split] = anchor.QcTranslated;
+                            continue;
+                        }
+
                         var translatedFragments = new List<string>();
 
                         foreach (var fragment in fragments)
@@ -258,8 +289,18 @@ namespace Tests
                                 break;
                             }
 
-                            if (!string.IsNullOrEmpty(split.Translated))
-                                splits[split.Split] = split.Translated;
+                            var plainQcFresh = QualityReviewHelpers.IsQcReviewFresh(split, null, [split]);
+
+                            if (plainQcFresh && split.QcQualityScore is int plainScore && plainScore < minAcceptableScore)
+                            {
+                                failed = true;
+                                break;
+                            }
+
+                            var effectiveTranslated = plainQcFresh && !string.IsNullOrEmpty(split.QcTranslated) ? split.QcTranslated : split.Translated;
+
+                            if (!string.IsNullOrEmpty(effectiveTranslated))
+                                splits[split.Split] = effectiveTranslated;
                             //If it was already blank its all good
                             else if (!string.IsNullOrEmpty(split.Text))
                             {
@@ -267,15 +308,16 @@ namespace Tests
                                 break;
                             }
 
-                            // Also copy this row's already-translated (Text, Translated) pair for
-                            // any AtlasSpriteNameColumnSources column - see that array's comment.
+                            // Also copy this row's already-translated (Text, effective Translated)
+                            // pair for any AtlasSpriteNameColumnSources column - see that array's
+                            // comment.
                             foreach (var source in atlasSpriteNameSources.Where(s => s.Column == split.Split))
                             {
-                                if (string.IsNullOrEmpty(split.Text) || string.IsNullOrEmpty(split.Translated))
+                                if (string.IsNullOrEmpty(split.Text) || string.IsNullOrEmpty(effectiveTranslated))
                                     continue;
                                 if (!atlasSpriteNamePairs.TryGetValue(source.OutputFileName, out var pairs))
                                     atlasSpriteNamePairs[source.OutputFileName] = pairs = new();
-                                pairs.Add((split.Text, split.Translated));
+                                pairs.Add((split.Text, effectiveTranslated));
                             }
                         }
                     }
