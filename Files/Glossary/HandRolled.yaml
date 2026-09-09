@@ -102,3 +102,9 @@
   result: "Yunshang"
 - raw: 体力
   result: "Stamina"
+
+
+# - raw: 体质
+#   result: "Constitution"
+# - raw: "长兵"
+#   result: "Long weapon"
