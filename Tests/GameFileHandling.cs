@@ -74,6 +74,14 @@ namespace Tests
                     llmResult = llmResult.Remove(corruptedMatch.Index, corruptedMatch.Length).Insert(corruptedMatch.Index, match.Value);
             }
 
+            // corruptedTokenRegex above only re-inserts the '#...#' wrapper around the bare name -
+            // it doesn't consume any brace the LLM wrapped around that bare name (e.g. GLM4 turning
+            // "#TargetInteractName#" into "{TargetInteractName}", where the '#'s were dropped AND
+            // braces were added). That leaves a hybrid "{#TargetInteractName#}" behind, exactly the
+            // shape the very first replace above targets - re-running it here cleans up any such
+            // case the restore loop just (re)introduced.
+            llmResult = BraceWrappedPlaceholderTokenRegex.Replace(llmResult, "$1");
+
             return llmResult;
         }
 
