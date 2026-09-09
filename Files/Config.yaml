@@ -52,7 +52,7 @@ translateFlagged: true
 # never as part of a batch - same rule as every other numbered workflow step in this repo.
 qualityReview:
   enabled: true
-  modelName: QwenQc-14B # swap to Glm4Qc-9B to compare, per the plan's sample-run step
+  modelName: Glm4Qc-9B # swapped from QwenQc-14B to compare, per the plan's sample-run step
   minAcceptableScore: 70 # tune freely and re-run packaging only - no LLM calls needed to see the effect
   # maxConcurrency: 4 # falls back to maxConcurrency above, then batchSize, then 20
 #extraStringTokenReplacers:
