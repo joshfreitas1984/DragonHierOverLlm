@@ -79,7 +79,7 @@ namespace Tests
 
                 // Write the found lines
                 var yaml = serializer.Serialize(foundLines);
-                File.WriteAllText($"{exportPath}/{file.Name}.yaml", yaml);
+                FileHelper.WriteAllTextWithRetry($"{exportPath}/{file.Name}.yaml", yaml);
 
                 // Add missing converted file if it doesnt exist yet
                 if (!File.Exists($"{convertedPath}/{file.Name}.yaml"))

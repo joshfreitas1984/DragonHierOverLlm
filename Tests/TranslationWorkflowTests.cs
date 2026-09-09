@@ -69,7 +69,7 @@ public class TranslationWorkflowTests
 
         var serializer = YamlHelper.CreateSerializer();
         var yaml = serializer.Serialize(flagged);
-        File.WriteAllText($"{workingDirectory}/TestResults/FlaggedQcReviews.yaml", yaml);
+        FileHelper.WriteAllTextWithRetry($"{workingDirectory}/TestResults/FlaggedQcReviews.yaml", yaml);
     }
 
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
@@ -158,8 +158,8 @@ public class TranslationWorkflowTests
 
         var serializer = YamlHelper.CreateSerializer();
         var yaml = serializer.Serialize(failures);
-        File.WriteAllText($"{workingDirectory}/TestResults/FailedTranslations.yaml", yaml);
-        File.WriteAllLines($"{workingDirectory}/TestResults/ForManualTrans.yaml", forTheGlossary);
+        FileHelper.WriteAllTextWithRetry($"{workingDirectory}/TestResults/FailedTranslations.yaml", yaml);
+        FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/ForManualTrans.yaml", forTheGlossary);
     }
 
     [Fact(DisplayName = "7. Reset hero names")]
@@ -192,7 +192,7 @@ public class TranslationWorkflowTests
                 var serializer = YamlHelper.CreateSerializer();
                 var content = serializer.Serialize(fileLines);
 
-                File.WriteAllText($"{workingDirectory}/Converted/heroNameParts.txt.yaml", content);
+                FileHelper.WriteAllTextWithRetry($"{workingDirectory}/Converted/heroNameParts.txt.yaml", content);
 
                 await Task.CompletedTask;
             });

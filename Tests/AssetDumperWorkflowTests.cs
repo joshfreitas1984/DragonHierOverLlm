@@ -164,9 +164,9 @@ public class AssetDumperWorkflowTests
             .Select(kv => new DumpedTextEntry(kv.Key, kv.Value.LeafField, kv.Value.Path))
             .ToList();
 
-        File.WriteAllLines(outputPath, primaryStrings);
+        FileHelper.WriteAllLinesWithRetry(outputPath, primaryStrings);
         var serializer = YamlHelper.CreateSerializer();
-        File.WriteAllText(otherOutputPath, serializer.Serialize(allEntries));
+        FileHelper.WriteAllTextWithRetry(otherOutputPath, serializer.Serialize(allEntries));
 
         // These counts matter more than the string count itself: if monoBehavioursSkipped or
         // otherAssetsSkipped is high, an empty/small result means "couldn't inspect these assets",

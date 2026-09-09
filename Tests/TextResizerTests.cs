@@ -42,7 +42,7 @@ public class TextResizerTests
             }
 
             // All entries have been moved out of the source file.
-            File.WriteAllText(sourcePath, serializer.Serialize(new List<Dictionary<string, object>>()));
+            FileHelper.WriteAllTextWithRetry(sourcePath, serializer.Serialize(new List<Dictionary<string, object>>()));
         }
 
         foreach (var (key, entries) in groups)
@@ -57,7 +57,7 @@ public class TextResizerTests
                 .OrderBy(entry => entry.TryGetValue("path", out var pathValue) ? pathValue as string : null, StringComparer.Ordinal)
                 .ToList();
 
-            File.WriteAllText(outputPath, serializer.Serialize(merged));
+            FileHelper.WriteAllTextWithRetry(outputPath, serializer.Serialize(merged));
         }
     }
     [Fact] // Can only be run when VS is running in admin

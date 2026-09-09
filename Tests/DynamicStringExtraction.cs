@@ -476,7 +476,7 @@ namespace Tests
                 var deduped = lines.Where(l => string.IsNullOrEmpty(l) || seen.Add(l)).ToList();
 
                 if (deduped.Count != lines.Length)
-                    File.WriteAllLines(file, deduped);
+                    FileHelper.WriteAllLinesWithRetry(file, deduped);
             }
         }
     }

@@ -90,7 +90,7 @@ public class GlossaryCreationTests
                 await Task.CompletedTask;
             });
 
-        File.WriteAllLines($"{workingDirectory}/TestResults/GlossaryExport/ExportSpeAddLabels.yaml", glossary);
+        FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/ExportSpeAddLabels.yaml", glossary);
     }
 
     private static async Task GenerateGlossaryFromIndex(string path, int index, string name)
@@ -124,7 +124,7 @@ public class GlossaryCreationTests
                 await Task.CompletedTask;
             });
 
-        File.WriteAllLines($"{workingDirectory}/TestResults/GlossaryExport/Export{name}.yaml", glossary);
+        FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/Export{name}.yaml", glossary);
     }
 
     [Fact]
@@ -138,7 +138,7 @@ public class GlossaryCreationTests
         var yml = YamlHelper.CreateSerializer();
         var serialised = yml.Serialize(results);
 
-        File.WriteAllText($"{workingDirectory}/TestResults/GlossaryAnalysis.yaml", serialised);
+        FileHelper.WriteAllTextWithRetry($"{workingDirectory}/TestResults/GlossaryAnalysis.yaml", serialised);
     }
 
     [Fact]
@@ -182,6 +182,6 @@ public class GlossaryCreationTests
 
                 await Task.CompletedTask;
             });
-        File.WriteAllLines($"{workingDirectory}/TestResults/GlossaryExport/ExportNameData.yaml", glossary);
+        FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/ExportNameData.yaml", glossary);
     }    
 }

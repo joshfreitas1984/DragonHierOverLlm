@@ -230,7 +230,7 @@ public class FileValidationTests
 
         var reportPath = $"{GameFileHandling.WorkingDirectory}/TestResults/Likely_id_or_lookup_columns.txt";
         Directory.CreateDirectory(Path.GetDirectoryName(reportPath)!);
-        await File.WriteAllLinesAsync(reportPath, report);
+        await FileHelper.WriteAllLinesWithRetryAsync(reportPath, report);
 
         Console.WriteLine($"Found {report.Count} suspicious cell(s)/column(s) - full report written to {reportPath}");
         foreach (var entry in report.Take(50))

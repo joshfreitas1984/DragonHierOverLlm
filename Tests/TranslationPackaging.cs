@@ -96,7 +96,7 @@ namespace Tests
                 return;
 
             var serializer = YamlHelper.CreateSerializer();
-            File.WriteAllText(modPath, serializer.Serialize(results));
+            FileHelper.WriteAllTextWithRetry(modPath, serializer.Serialize(results));
         }
 
         // Drops junk dynamic-string dictionary entries whose Raw contains no Chinese characters at
@@ -120,7 +120,7 @@ namespace Tests
                 return;
 
             var serializer = YamlHelper.CreateSerializer();
-            File.WriteAllText(modPath, serializer.Serialize(filtered));
+            FileHelper.WriteAllTextWithRetry(modPath, serializer.Serialize(filtered));
         }
 
         public static async Task PackageFinalTranslationAsync(string workingDirectory, TextFileToSplit[] textFiles)
@@ -358,7 +358,7 @@ namespace Tests
                 }
 
 
-                File.WriteAllLines($"{outputPath}/{textFileToTranslate.Path}", outputLines);
+                FileHelper.WriteAllLinesWithRetry($"{outputPath}/{textFileToTranslate.Path}", outputLines);
 
                 passedCount += outputLines.Count;
                 failedCount += failedLines.Count;
@@ -379,7 +379,7 @@ namespace Tests
                 var yamlLines = deduped.Select(p =>
                     $"- raw: \"{EscapeYamlDoubleQuoted(p.Raw)}\"\n  result: \"{EscapeYamlDoubleQuoted(p.Result)}\"");
 
-                File.WriteAllText($"{outputPath}/{outputFileName}.yaml", string.Join("\n", yamlLines) + "\n");
+                FileHelper.WriteAllTextWithRetry($"{outputPath}/{outputFileName}.yaml", string.Join("\n", yamlLines) + "\n");
             }
 
             Console.WriteLine($"Passed: {passedCount}");
