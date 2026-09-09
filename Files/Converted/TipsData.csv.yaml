@@ -106,12 +106,6 @@
   splits:
   - text: "探索起始时，偶尔会察觉到高人气息。"
     translated: "At the beginning of exploration, one would occasionally sense the presence of someone skilled or accomplished."
-    qcReviewedText: "At the beginning of exploration, one would occasionally sense the presence of someone skilled or accomplished.\\nIf you search carefully now, you are sure to find some unexpected treasures."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "At the beginning of exploration, one would occasionally sense the presence of someone skilled or accomplished. If you search carefully now, you are sure to find some unexpected treasures."
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
-    qcQualityScore: 85
   - subIndex: 1
     text: "此时若仔细搜寻，定会有意外收获。"
     translated: "If you search carefully now, you are sure to find some unexpected treasures."

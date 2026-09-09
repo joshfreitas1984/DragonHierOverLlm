@@ -22,10 +22,30 @@ public class TranslationWorkflowTests
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
+    // The full "I changed the glossary / got file updates / exported more dynamic strings / added a
+    // bad word / needed a new game repair" workflow in one call: brute-forces Translated back to
+    // clean (TranslationWorkflow.TranslateLinesBruteForce), then does the same for QcTranslated
+    // (QualityReviewWorkflow.RunBruteForce - a no-op if qualityReview.enabled is false), then
+    // packages. Use this instead of running "1" and "3b" separately when you want QC kept in sync
+    // too.
+    [Fact(DisplayName = "1a. TranslateAndQualityReviewBruteForce")]
+    public async Task TranslateAndQualityReviewBruteForce()
+    {
+        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await QualityReviewWorkflow.RunBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await FileOutputWorkflowTests.PackageFinalTranslation();
+    }
+
     [Fact(DisplayName = "2. ApplyRulesToCurrentTranslation")]
     public async Task ApplyRulesToCurrentTranslation()
     {
         await TranslationWorkflow.ApplyAllRulesToCurrentTranslation(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
+    [Fact(DisplayName = "2. ApplyRulesToQCReview")]
+    public async Task ApplyRulesToQCReview()
+    {
+        await QualityReviewWorkflow.ApplyRulesToCurrentQcTranslated(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "3. Translate Lines Only")]
@@ -70,6 +90,16 @@ public class TranslationWorkflowTests
         var serializer = YamlHelper.CreateSerializer();
         var yaml = serializer.Serialize(flagged);
         FileHelper.WriteAllTextWithRetry($"{workingDirectory}/TestResults/FlaggedQcReviews.yaml", yaml);
+    }
+
+    // Run this after fixing whatever was causing a persistent QC rule violation (e.g. removed a
+    // false-positive bad word, loosened a glossary rule) so columns QualityReviewWorkflow.RunBruteForce
+    // already gave up on (see TranslationSplit.QcRuleCheckFailureCount) get retried instead of
+    // staying parked forever. A no-op for everything else.
+    [Fact(DisplayName = "3d. Reset Qc Retry Limits")]
+    public async Task ResetQcRetryLimits()
+    {
+        await QualityReviewWorkflow.ResetQcRetryLimits(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]

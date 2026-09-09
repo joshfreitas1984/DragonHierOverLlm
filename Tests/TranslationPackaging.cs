@@ -223,15 +223,19 @@ namespace Tests
                         var anchor = fragments.FirstOrDefault(f => f.SubIndex == 0) ?? fragments.FirstOrDefault();
                         var qcFresh = anchor != null && QualityReviewHelpers.IsQcReviewFresh(anchor, template, fragments);
 
-                        if (qcFresh && anchor!.QcQualityScore is int templateScore && templateScore < minAcceptableScore)
-                        {
-                            failed = true;
-                            break;
-                        }
+                        // A low QcQualityScore means "don't trust this correction" - not "this line
+                        // has no valid translation at all". The pre-QC Translated text (used by the
+                        // fragment-reconstruction fallback below, same path taken when there's no
+                        // QcTranslated at all) is already an accepted translation from the main
+                        // pipeline and shouldn't be discarded in favor of shipping raw source just
+                        // because the QC model wasn't confident in its own proposed correction.
+                        var useQcTranslated = qcFresh
+                            && !string.IsNullOrEmpty(anchor!.QcTranslated)
+                            && !(anchor.QcQualityScore is int templateScore && templateScore < minAcceptableScore);
 
-                        if (qcFresh && !string.IsNullOrEmpty(anchor!.QcTranslated))
+                        if (useQcTranslated)
                         {
-                            splits[template.Split] = anchor.QcTranslated;
+                            splits[template.Split] = anchor!.QcTranslated;
                             continue;
                         }
 
@@ -291,13 +295,14 @@ namespace Tests
 
                             var plainQcFresh = QualityReviewHelpers.IsQcReviewFresh(split, null, [split]);
 
-                            if (plainQcFresh && split.QcQualityScore is int plainScore && plainScore < minAcceptableScore)
-                            {
-                                failed = true;
-                                break;
-                            }
+                            // Same reasoning as the templated-column path above: a low score distrusts
+                            // the CORRECTION, not the original Translated - fall back to it instead of
+                            // failing the whole line.
+                            var usePlainQcTranslated = plainQcFresh
+                                && !string.IsNullOrEmpty(split.QcTranslated)
+                                && !(split.QcQualityScore is int plainScore && plainScore < minAcceptableScore);
 
-                            var effectiveTranslated = plainQcFresh && !string.IsNullOrEmpty(split.QcTranslated) ? split.QcTranslated : split.Translated;
+                            var effectiveTranslated = usePlainQcTranslated ? split.QcTranslated : split.Translated;
 
                             if (!string.IsNullOrEmpty(effectiveTranslated))
                                 splits[split.Split] = effectiveTranslated;
