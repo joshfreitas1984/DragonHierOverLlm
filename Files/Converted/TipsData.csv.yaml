@@ -44,10 +44,9 @@
   - text: "门派的弟子人口达到上限后，"
     translated: "When the disciples' population of the Sect reaches its limit,"
     qcReviewedText: "When the disciples' population of the Sect reaches its limit,\\nSo you can no longer recruit new disciples."
-    qcTranslated: "When the number of disciples in the Sect reaches its limit, you can no longer recruit new disciples."
+    qcTranslated: "When the disciples' population of the Sect reaches its limit, you can no longer recruit new disciples."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcQualityScore: 70
   - subIndex: 1
     text: "就无法招募新的弟子。"
     translated: "So you can no longer recruit new disciples."
@@ -79,7 +78,7 @@
   - text: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
     translated: "Becoming the Sect Leader allows you to obtain imperial granted titles in the capital palace."
     qcReviewedText: "Becoming the Sect Leader allows you to obtain imperial granted titles in the capital palace."
-    qcTranslated: "Becoming the Sect Leader allows you to obtain imperial-granted titles in the capital palace."
+    qcTranslated: "Becoming the Sect Leader allows you to obtain imperial‑granted titles in the capital palace."
     qcStatus: Corrected
     qcQualityScore: 80
 - raw: "在官府获取官职后，便可以替朝廷效力。"
@@ -106,6 +105,10 @@
   splits:
   - text: "探索起始时，偶尔会察觉到高人气息。"
     translated: "At the beginning of exploration, one would occasionally sense the presence of someone skilled or accomplished."
+    qcReviewedText: "At the beginning of exploration, one would occasionally sense the presence of someone skilled or accomplished.\\nIf you search carefully now, you are sure to find some unexpected treasures."
+    qcTranslated: "At the beginning of exploration, one occasionally senses the presence of a high‑level person.\\nIf you search carefully now, you are sure to find some unexpected treasures."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - subIndex: 1
     text: "此时若仔细搜寻，定会有意外收获。"
     translated: "If you search carefully now, you are sure to find some unexpected treasures."
@@ -124,10 +127,9 @@
   - text: "放在藏经阁内的秘籍会根据品质，"
     translated: "Placed in the Scripture Pavilion, the manuals will be ranked according to their quality,"
     qcReviewedText: "Placed in the Scripture Pavilion, the manuals will be ranked according to their quality,\\nIncrease the speed at which all sects practice this martial art."
-    qcTranslated: "Placed in the Scripture Pavilion, the manuals will improve the speed at which all sects practice this martial art according to their quality."
+    qcTranslated: "Placed in the Scripture Pavilion, the manuals will improve the speed at which all sects practice this martial art based on their quality."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcQualityScore: 70
   - subIndex: 1
     text: "提升全门派修习该武学的速度。"
     translated: "Increase the speed at which all sects practice this martial art."
@@ -150,15 +152,14 @@
 - raw: "恶名过高时进入城镇，\\n很可能会被官府或城内侠士抓捕。"
   splits:
   - text: "恶名过高时进入城镇，"
-    translated: "Enter the town when your reputation is too low."
-    qcReviewedText: "Enter the town when your reputation is too low.\\nYou are very likely to be caught by the authorities or the martial artists within the city."
-    qcTranslated: "Enter the town when your notoriety is too high.\\nYou are very likely to be caught by the authorities or the martial artists within the city."
+    translated: "When infamy is too high, enter the town."
+    qcReviewedText: "When infamy is too high, enter the town.\\nVery likely to be apprehended by the officials or the city's heroes."
+    qcTranslated: "When infamy is too high and you enter the town, you are very likely to be apprehended by the officials or the city's heroes."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcQualityScore: 80
   - subIndex: 1
     text: "很可能会被官府或城内侠士抓捕。"
-    translated: "You are very likely to be caught by the authorities or the martial artists within the city."
+    translated: "Very likely to be apprehended by the officials or the city's heroes."
   templates:
   - template: "{0}\\n{1}"
 - raw: "行囊超重会减慢你的大地图旅行速度。"
@@ -181,7 +182,7 @@
   - text: "在编纂秘籍时，"
     translated: "While compiling the tome,"
     qcReviewedText: "While compiling the tome,\\nYou can combine two low‑quality scrolls to create one high‑quality scroll."
-    qcTranslated: "While compiling the tome, you can combine two low-quality tomes to create one high-quality tome."
+    qcTranslated: "While compiling the tome, you can combine two low‑quality tomes to create one high‑quality tome."
     qcStatus: Corrected
     qcQualityScore: 85
   - subIndex: 1
@@ -207,38 +208,37 @@
 - raw: "较高的恶名会降低好感获取，\\n其他侠士在野外遭遇时也会避而远之。"
   splits:
   - text: "较高的恶名会降低好感获取，"
-    translated: "Higher notoriety reduces reputation gain"
-    qcReviewedText: "Higher notoriety reduces reputation gain \\nWhile correcting, they encounter other xia Shi in the wild and also avoid them."
-    qcTranslated: "Higher notoriety reduces reputation gain, and other xia Shi will avoid you when encountering each other in the wild."
+    translated: "Higher infamy will reduce the gain in favor."
+    qcReviewedText: "Higher infamy will reduce the gain in favor.\\nOther Heroes will also avoid each other when encountered in the wild."
+    qcTranslated: "Higher infamy will reduce the gain in favor, and other heroes will also avoid you when encountered in the wild."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcQualityScore: 80
   - subIndex: 1
     text: "其他侠士在野外遭遇时也会避而远之。"
-    translated: "While correcting, they encounter other xia Shi in the wild and also avoid them."
+    translated: "Other Heroes will also avoid each other when encountered in the wild."
   templates:
   - template: "{0}\\n{1}"
 - raw: "袭击同门或亲朋好友，\\n会导致恶名成倍增加。"
   splits:
   - text: "袭击同门或亲朋好友，"
     translated: "Attack fellow disciples or kin and friends,"
-    qcReviewedText: "Attack fellow disciples or kin and friends,\\nWill result in reputation points multiplying"
-    qcTranslated: "Attack fellow disciples or kin and friends,\\nwill result in infamy increasing exponentially."
+    qcReviewedText: "Attack fellow disciples or kin and friends,\\nWill cause infamy to increase exponentially"
+    qcTranslated: "Attack fellow disciples or kin and friends,\\nwill cause infamy to increase exponentially."
     qcStatus: Corrected
-    qcQualityScore: 75
+    qcQualityScore: 85
   - subIndex: 1
     text: "会导致恶名成倍增加。"
-    translated: "Will result in reputation points multiplying"
+    translated: "Will cause infamy to increase exponentially"
   templates:
   - template: "{0}\\n{1}"
 - raw: "恶名每个月会自动衰减10%，\\n投案自首时也会减少10%。"
   splits:
   - text: "恶名每个月会自动衰减10%，"
-    translated: "Reputation will automatically decrease by 10% each month."
-    qcReviewedText: "Reputation will automatically decrease by 10% each month.\\nConfessing and turning yourself in will also reduce it by 10%."
-    qcTranslated: "Reputation will automatically decrease by 10% each month. Confessing and turning yourself in will also reduce it by 10%."
+    translated: "Infamy will automatically decay by 10% each month."
+    qcReviewedText: "Infamy will automatically decay by 10% each month.\\nConfessing and turning yourself in will also reduce it by 10%."
+    qcTranslated: "Infamy will automatically decay by 10% each month. Confessing and turning yourself in will also reduce it by 10%."
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 90
   - subIndex: 1
     text: "投案自首时也会减少10%。"
     translated: "Confessing and turning yourself in will also reduce it by 10%."
@@ -248,13 +248,13 @@
   splits:
   - text: "在城镇或安全区内行凶作恶，"
     translated: "Committing crimes in towns or safe zones,"
-    qcReviewedText: "Committing crimes in towns or safe zones,\\nWill result in reputation points multiplying"
-    qcTranslated: "Committing crimes in towns or safe zones will result in reputation points increasing exponentially."
+    qcReviewedText: "Committing crimes in towns or safe zones,\\nWill cause infamy to increase exponentially"
+    qcTranslated: "Committing crimes in towns or safe zones will cause infamy to increase exponentially."
     qcStatus: Corrected
     qcQualityScore: 70
   - subIndex: 1
     text: "会导致恶名成倍增加。"
-    translated: "Will result in reputation points multiplying"
+    translated: "Will cause infamy to increase exponentially"
   templates:
   - template: "{0}\\n{1}"
 - raw: "探索耐力耗尽后，\\n每走一步都会消耗越来越多生命/内力。"
@@ -304,7 +304,7 @@
   - text: "在西域灵州的莫高窟中，"
     translated: "In the Mogao Caves of Lingzhou in the Western Regions,"
     qcReviewedText: "In the Mogao Caves of Lingzhou in the Western Regions,\\nYou can enter seclusion to forget your existing first‑tier martial arts or talents."
-    qcTranslated: "In the Mogao Caves of Lingzhou in the Western Regions, you can enter seclusion to forget your existing zero-tier martial arts or talents."
+    qcTranslated: "In the Mogao Caves of Lingzhou in the Western Regions, you can enter seclusion to forget your existing zero‑tier martial arts or talents."
     qcStatus: Corrected
     qcQualityScore: 70
   - subIndex: 1
@@ -369,10 +369,9 @@
   - text: "行走江湖不能一味单打独斗，"
     translated: "Travelling through the Jianghu requires more than just solo combat."
     qcReviewedText: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other heros often for the best results."
-    qcTranslated: "Travelling through the Jianghu cannot rely solely on solo combat.\\nIt is best to team up with other knights-errant often."
+    qcTranslated: "Travelling through the Jianghu requires more than just solo combat. Team up with other Heroes often for the best results."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcQualityScore: 80
   - subIndex: 1
     text: "多与其他侠士组队同行，方为万全之法。"
     translated: "Team up with other heros often for the best results."
@@ -383,10 +382,9 @@
   - text: "行走江湖不能一味单打独斗，"
     translated: "Travelling through the Jianghu requires more than just solo combat."
     qcReviewedText: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other heros often for the best results."
-    qcTranslated: "Travelling through the Jianghu cannot rely solely on solo combat.\\nIt is best to team up with other knights-errant often."
+    qcTranslated: "Travelling through the Jianghu requires more than just solo combat. Team up with other Heroes often for the best results."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcQualityScore: 80
   - subIndex: 1
     text: "多与其他侠士组队同行，方为万全之法。"
     translated: "Team up with other heros often for the best results."
@@ -397,10 +395,9 @@
   - text: "行走江湖不能一味单打独斗，"
     translated: "Travelling through the Jianghu requires more than just solo combat."
     qcReviewedText: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other heros often for the best results."
-    qcTranslated: "Travelling through the Jianghu cannot rely solely on solo combat.\\nIt is best to team up with other knights-errant often."
+    qcTranslated: "Travelling through the Jianghu requires more than just solo combat. Team up with other Heroes often for the best results."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcQualityScore: 80
   - subIndex: 1
     text: "多与其他侠士组队同行，方为万全之法。"
     translated: "Team up with other heros often for the best results."

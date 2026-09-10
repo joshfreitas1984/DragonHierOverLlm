@@ -103,7 +103,10 @@
 - raw: 体力
   result: "Stamina"
 
-
+- raw: 侠士
+  result: "Hero"
+- raw: 恶名
+  result: "Infamy"
 # - raw: 体质
 #   result: "Constitution"
 # - raw: "长兵"
