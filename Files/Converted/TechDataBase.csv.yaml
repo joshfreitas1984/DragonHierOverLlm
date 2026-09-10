@@ -472,10 +472,10 @@
   splits:
   - split: 1
     text: "赈济民心"
-    translated: "Console with the people's heart"
+    translated: "Alleviate the people's heart"
   - split: 2
     text: "赈济民心"
-    translated: "Console with the people's heart"
+    translated: "Alleviate the people's heart"
 - raw: "57,稳固防御,稳固防御,0,全域防御,1,TRUE,4,银钱"
   splits:
   - split: 1

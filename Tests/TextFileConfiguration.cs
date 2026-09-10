@@ -29,7 +29,7 @@ namespace Tests
             // (GameDataController.GetTagID); display text is captured separately via
             // DynamicStringSources.DynamicStringColumnSources below. See
             // docs/skipcolumns-stringtospeadddata-family.md.
-            new() {Path = "HeroTagData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], EnableQualityReview = false  },
+            new() {Path = "HeroTagData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], EnableQualityReview = false },
             new() {Path = "HorseData.csv", PackageOutput = true, SkipColumns = [1] },
             new() {Path = "InnData.csv", PackageOutput = true },
             // Structured lookup-key columns; see docs/gamefilehandling-reference.md and
@@ -46,32 +46,32 @@ namespace Tests
             // Column 21 (动作/Action) is animationName, passed to SkeletonData.FindAnimation/
             // AnimationState.SetAnimation - an exact-match Spine animation clip name. Column 25
             // (伤害顺序/Order of damage dealt) is Enum.Parse'd into skillDamageOrder.
-            //new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
-            ////new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
-            //new() {Path = "MartialClubData.csv", PackageOutput = true },
-            //new() {Path = "MedData.csv", PackageOutput = true, SkipColumns = [1, 15] },
-            //// Internal routing key; see docs/gamefilehandling-reference.md.
-            //new() {Path = "NameData.csv", PackageOutput = true, SkipColumns = [0] },
-            //new() {Path = "ResourcePointData.csv", PackageOutput = true },
-            //// Structured lookup-key columns; see docs/gamefilehandling-reference.md.
-            //new() {Path = "ResourcePointTypeData.csv", PackageOutput = true, SkipColumns = [2, 3, 4] },
-            //new() {Path = "SkinDataBase.csv", PackageOutput = true, SkipColumns = [2] },
-            //// Columns 1/11 are exact-match lookup keys (HeroSpeAddDataBase.GetDescribe family);
-            //// see docs/gamefilehandling-reference.md.
-            //new() {Path = "SpeAddDataBase.csv", PackageOutput = true, SkipColumns = [1, 11] },
-            //// File disabled: all columns except Name are game-parsed lookup/enum values; column 2
-            //// (Gender) translation crashes GameController.GenerateHeroData. See
-            //// docs/spehero-relationship-and-skillfocus-crashes.md.
-            ////new() {Path = "SpeHeroData.csv", PackageOutput = true, SkipColumns = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
-            ////new() {Path = "SpeHeroFaceData.csv", PackageOutput = true },
-            //new() {Path = "SummonData.csv", PackageOutput = true,  SkipColumns = [7]},
-            //// Shares KungFuData.csv's lookup-key columns (same loader), but column 3 (Name) IS
-            //// safe here - GetSkillID only scans kungfuSkillDataBase, not this file. See
-            //// docs/gamefilehandling-reference.md.
-            //new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
-            //// Columns 4/8 are exact-match cross-file lookup keys (ForceSpeAddDataBase.name /
-            //// force-weapon name dictionary); see docs/gamefilehandling-reference.md.
-            //new() {Path = "TechDataBase.csv", PackageOutput = true, SkipColumns = [4, 8] },
+            new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
+            //new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
+            new() {Path = "MartialClubData.csv", PackageOutput = true, EnableQualityReview = false },
+            new() {Path = "MedData.csv", PackageOutput = true, SkipColumns = [1, 15], EnableQualityReview = false },
+            // Internal routing key; see docs/gamefilehandling-reference.md.
+            new() {Path = "NameData.csv", PackageOutput = true, SkipColumns = [0], EnableQualityReview = false },
+            new() {Path = "ResourcePointData.csv", PackageOutput = true, EnableQualityReview = false },
+            // Structured lookup-key columns; see docs/gamefilehandling-reference.md.
+            new() {Path = "ResourcePointTypeData.csv", PackageOutput = true, SkipColumns = [2, 3, 4], EnableQualityReview = false },
+            new() {Path = "SkinDataBase.csv", PackageOutput = true, SkipColumns = [2], EnableQualityReview = false},
+            // Columns 1/11 are exact-match lookup keys (HeroSpeAddDataBase.GetDescribe family);
+            // see docs/gamefilehandling-reference.md.
+            new() {Path = "SpeAddDataBase.csv", PackageOutput = true, SkipColumns = [1, 11] },
+            // File disabled: all columns except Name are game-parsed lookup/enum values; column 2
+            // (Gender) translation crashes GameController.GenerateHeroData. See
+            // docs/spehero-relationship-and-skillfocus-crashes.md.
+            //new() {Path = "SpeHeroData.csv", PackageOutput = true, SkipColumns = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
+            //new() {Path = "SpeHeroFaceData.csv", PackageOutput = true },
+            new() {Path = "SummonData.csv", PackageOutput = true,  SkipColumns = [7], EnableQualityReview = false},
+            // Shares KungFuData.csv's lookup-key columns (same loader), but column 3 (Name) IS
+            // safe here - GetSkillID only scans kungfuSkillDataBase, not this file. See
+            // docs/gamefilehandling-reference.md.
+            new() {Path = "SummonKungFuData.csv", PackageOutput = true, SkipColumns = [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28], EnableQualityReview = false}, 
+            // Columns 4/8 are exact-match cross-file lookup keys (ForceSpeAddDataBase.name /
+            // force-weapon name dictionary); see docs/gamefilehandling-reference.md.
+            new() {Path = "TechDataBase.csv", PackageOutput = true, SkipColumns = [4, 8], EnableQualityReview = false },
             new() {Path = "TipsData.csv", PackageOutput = true },
             //new() {Path = "WeaponData.csv", PackageOutput = true, SkipColumns = [1] },
 
@@ -105,36 +105,36 @@ namespace Tests
             //// See DynamicStringExtraction.ExtractOtherFieldLabelCandidates.
             //new() {Path = "dynamicStringsFromOtherFieldLabels.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
-            //// Poetry minigame ("对诗" fill-in-the-blank) candidates extracted directly from the
-            //// JSON TextAsset/PoetryData.txt - see PoetryDataWorkflow.ExtractPoetryCandidates.
-            //// QC disabled: free-verse text, where a "more natural"-sounding QC rewrite is less
-            //// faithful to the source than the original translation.
-            //new() {Path = "dynamicStringsPoetry.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            // Poetry minigame ("对诗" fill-in-the-blank) candidates extracted directly from the
+            // JSON TextAsset/PoetryData.txt - see PoetryDataWorkflow.ExtractPoetryCandidates.
+            // QC disabled: free-verse text, where a "more natural"-sounding QC rewrite is less
+            // faithful to the source than the original translation.
+            new() {Path = "dynamicStringsPoetry.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
 
-            //// Banquet/drinking minigame poem-quote comma-split halves - see
-            //// DrinkQuoteWorkflow.ExtractDrinkQuoteCandidates.
-            //// QC disabled: same free-verse/quote rationale as dynamicStringsPoetry.txt above.
-            //new() {Path = "dynamicStringsDrinkQuotes.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            // Banquet/drinking minigame poem-quote comma-split halves - see
+            // DrinkQuoteWorkflow.ExtractDrinkQuoteCandidates.
+            // QC disabled: same free-verse/quote rationale as dynamicStringsPoetry.txt above.
+            new() {Path = "dynamicStringsDrinkQuotes.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
 
-            //// SpeHeroData family/given-name halves - a DEDICATED file, deliberately NOT named
-            //// "dynamicStrings*" so it never matches DynamicStringPatches' DictionaryFilePattern
-            //// glob and never gets merged into that plugin's global substring-replace dictionary
-            //// (a bare one/two-character surname is far too easy to accidentally match as a
-            //// substring of unrelated Chinese text elsewhere in the game). Reuses the same
-            //// DynamicStringsIL2CPP export/translate/package plumbing (see DynamicStringWorkflow -
-            //// it is generic over TextFileToSplit.Path, nothing here is hardcoded to "dynamicStrings"
-            //// specifically), but the packaged heroNameParts.txt.yaml is loaded and applied ONLY by
-            //// HeroNamePatches' own private, exact-match dictionary - see HeroNamePatches.cs.
-            //// QC disabled: these are bare name fragments (pinyin), not prose - the QC model's
-            //// glossary/naturalness-oriented review doesn't apply here.
-            //new() {Path = "heroNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            // SpeHeroData family/given-name halves - a DEDICATED file, deliberately NOT named
+            // "dynamicStrings*" so it never matches DynamicStringPatches' DictionaryFilePattern
+            // glob and never gets merged into that plugin's global substring-replace dictionary
+            // (a bare one/two-character surname is far too easy to accidentally match as a
+            // substring of unrelated Chinese text elsewhere in the game). Reuses the same
+            // DynamicStringsIL2CPP export/translate/package plumbing (see DynamicStringWorkflow -
+            // it is generic over TextFileToSplit.Path, nothing here is hardcoded to "dynamicStrings"
+            // specifically), but the packaged heroNameParts.txt.yaml is loaded and applied ONLY by
+            // HeroNamePatches' own private, exact-match dictionary - see HeroNamePatches.cs.
+            // QC disabled: these are bare name fragments (pinyin), not prose - the QC model's
+            // glossary/naturalness-oriented review doesn't apply here.
+            new() {Path = "heroNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
 
-            //// ForceData's first-2-character name prefix (e.g. "仙霞" from "仙霞派") - same dedicated-
-            //// file treatment as heroNameParts.txt above and for the same reason (a bare 2-character
-            //// fragment is too easy to accidentally match as a substring elsewhere). Loaded and
-            //// applied ONLY by HeroNamePatches' own private, exact-match force-name-prefix
-            //// dictionary - see HeroNamePatches.cs.
-            //new() {Path = "forceNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            // ForceData's first-2-character name prefix (e.g. "仙霞" from "仙霞派") - same dedicated-
+            // file treatment as heroNameParts.txt above and for the same reason (a bare 2-character
+            // fragment is too easy to accidentally match as a substring elsewhere). Loaded and
+            // applied ONLY by HeroNamePatches' own private, exact-match force-name-prefix
+            // dictionary - see HeroNamePatches.cs.
+            new() {Path = "forceNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
         ];
     }
 }

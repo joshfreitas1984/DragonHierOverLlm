@@ -1,4 +1,5 @@
 using FanslationStudio.LlmKit;
+using FanslationStudio.LlmKit.Configuration;
 using FanslationStudio.LlmKit.Support;
 using FanslationStudio.LlmKit.Utility;
 using System.Text.RegularExpressions;
@@ -11,11 +12,6 @@ namespace Tests
     // TranslationExport, and TranslationPackaging.
     public static class GameFileHandling
     {
-        // static readonly, not const: a const is inlined at compile time into every call site, so
-        // referencing it never touches this type at runtime and never triggers the static
-        // constructor below that registers the LineValidation hooks - a test fact whose only
-        // reference to GameFileHandling was this field (e.g. ApplyRulesToCurrentTranslation) would
-        // run with CustomPostRepair/CustomColumnRepair/CustomColumnValidator still null.
         public static readonly string WorkingDirectory = "../../../../Files";
         public static readonly string GameFolder = "G:\\SteamLibrary\\steamapps\\common\\LongYinLiZhiZhuan";
 
@@ -28,13 +24,17 @@ namespace Tests
             ]
         };
 
-        // Register game-specific translation repair and validation hooks.
-        static GameFileHandling()
+        // Game-specific translation repair/validation hooks, passed explicitly into every workflow
+        // entry point that needs them (see call sites in TranslationWorkflowTests.cs etc.) instead
+        // of being registered as a side effect of this type's static constructor running - the
+        // previous approach silently left hooks unregistered whenever a test's only reference to
+        // GameFileHandling was a field access rather than a method call.
+        public static readonly GameHooks Hooks = new()
         {
-            LineValidation.CustomPostRepair = RepairKnownLlmQuirks;
-            LineValidation.CustomColumnRepair = RepairGameSpecificColumn;
-            LineValidation.CustomColumnValidator = ValidateGameSpecificColumn;
-        }
+            CustomPostRepair = RepairKnownLlmQuirks,
+            CustomColumnRepair = RepairGameSpecificColumn,
+            CustomColumnValidator = ValidateGameSpecificColumn,
+        };
 
         // Repairs possessive/contraction suffixes placed inside placeholder wrappers.
         private static readonly Regex PlaceholderTrailingSuffixRegex =

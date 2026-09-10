@@ -24,10 +24,6 @@
   adjustWidth: 100.0
 - path: Canvas/BattleUIPanel/PrepareUIPanel/Team0/TotalFightScore/Rate
   sampleText: Gain a slight advantage here
-  idealFontSize: 13.0
-  allowWordWrap: true
-- path: Canvas/BattleUIPanel/PrepareUIPanel/Team0/TotalFightScore/Rate
-  sampleText: Gain a slight advantage here
   idealFontSize: 12.0
   allowWordWrap: true
   adjustWidth: 20.0

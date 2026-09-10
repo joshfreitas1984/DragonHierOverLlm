@@ -18,7 +18,7 @@ public class TranslationWorkflowTests
     [Fact(DisplayName = "1. TranslateLinesBruteForce")]
     public async Task TranslateLinesBruteForce()
     {
-        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
@@ -31,27 +31,27 @@ public class TranslationWorkflowTests
     [Fact(DisplayName = "1a. TranslateAndQualityReviewBruteForce")]
     public async Task TranslateAndQualityReviewBruteForce()
     {
-        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
-        await QualityReviewWorkflow.RunBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
+        await QualityReviewWorkflow.RunBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, hooks: GameFileHandling.Hooks);
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
     [Fact(DisplayName = "2. ApplyRulesToCurrentTranslation")]
     public async Task ApplyRulesToCurrentTranslation()
     {
-        await TranslationWorkflow.ApplyAllRulesToCurrentTranslation(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await TranslationWorkflow.ApplyAllRulesToCurrentTranslation(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
     }
 
     [Fact(DisplayName = "2. ApplyRulesToQCReview")]
     public async Task ApplyRulesToQCReview()
     {
-        await QualityReviewWorkflow.ApplyRulesToCurrentQcTranslated(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await QualityReviewWorkflow.ApplyRulesToCurrentQcTranslated(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
     }
 
     [Fact(DisplayName = "3. Translate Lines Only")]
     public async Task TranslateLines()
     {
-        await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await TranslationWorkflow.TranslateLines(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
@@ -64,7 +64,7 @@ public class TranslationWorkflowTests
     [Fact(DisplayName = "3a. RunQualityReviewPassSample")]
     public async Task RunQualityReviewPassSample()
     {
-        await QualityReviewWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, sampleSize: 300);
+        await QualityReviewWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, sampleSize: 300, hooks: GameFileHandling.Hooks);
     }
 
     // Independent of the main translate/apply-rules/translate-lines steps above - reviews
@@ -75,7 +75,7 @@ public class TranslationWorkflowTests
     [Fact(DisplayName = "3b. RunQualityReviewPass")]
     public async Task RunQualityReviewPass()
     {
-        await QualityReviewWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+        await QualityReviewWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, hooks: GameFileHandling.Hooks);
     }
 
     // Reporting-only, mirrors "4. Find All Failing Translations" but scoped to quality-review

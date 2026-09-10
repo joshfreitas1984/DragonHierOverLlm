@@ -125,29 +125,18 @@ namespace Tests
 
         public static async Task PackageFinalTranslationAsync(string workingDirectory, TextFileToSplit[] textFiles)
         {
-            string inputPath = $"{workingDirectory}/Converted";
             string outputPath = $"{workingDirectory}/Mod";
-
-            // Quality-review-pass score gate (see docs/plans/quality-review-pass.md) - a column
-            // whose QcQualityScore is non-null and below this falls into the same "not ready to
-            // package" bucket as an unsafe/flagged/missing-translation column, further down.
-            // Never touches Files/Converted - only what reaches Files/Mod.
-            var minAcceptableScore = FanslationStudio.LlmKit.Configuration.ConfigurationExtensions
-                .GetConfiguration(workingDirectory).QualityReview.MinAcceptableScore;
 
             if (Directory.Exists(outputPath))
                 Directory.Delete(outputPath, true);
 
             Directory.CreateDirectory(outputPath);
 
-            var finalDb = new List<string>();
             var passedCount = 0;
             var failedCount = 0;
 
-            // Flat-text workflows are packaged separately from regular CSV files.
-            var csvTextFiles = textFiles
-                .Where(t => t.TextFileType != TextFileType.PrefabText && t.TextFileType != TextFileType.DynamicStringsIL2CPP)
-                .ToArray();
+            // Flat-text workflows are packaged separately from CSV files.
+            var csvTextFiles = textFiles.Where(t => t.TextFileType == TextFileType.RawCsv);
             var prefabTextFiles = textFiles.Where(t => t.TextFileType == TextFileType.PrefabText);
             var dynamicStringFiles = textFiles.Where(t => t.TextFileType == TextFileType.DynamicStringsIL2CPP);
 
@@ -175,201 +164,57 @@ namespace Tests
                 RemoveNonChineseDynamicStringEntries(workingDirectory, dynamicStringFile);
             }
 
-            // Collected alongside the normal CSV packaging below - see
-            // DynamicStringSources.AtlasSpriteNameColumnSources.
+            // Collected via CsvGameDataWorkflow.PackageAsync's onColumnPackaged callback below -
+            // see DynamicStringSources.AtlasSpriteNameColumnSources.
             var atlasSpriteNamePairs = new Dictionary<string, List<(string Raw, string Result)>>();
 
-            await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
-                csvTextFiles,
-                async (outputFile, textFileToTranslate, fileLines) =>
+            foreach (var textFile in csvTextFiles)
             {
-                var failedLines = new List<string>();
-                var outputLines = new List<string>();
                 var atlasSpriteNameSources = DynamicStringSources.AtlasSpriteNameColumnSources
-                    .Where(s => s.CsvFileName == textFileToTranslate.Path)
+                    .Where(s => s.CsvFileName == textFile.Path)
                     .ToArray();
 
-                foreach (var line in fileLines)
-                {
-                    // Regular DB handling
-                    var splits = GameFileHandling.ParseCsvRow(line.Raw);
-                    var failed = false;
-                    var templatedColumns = line.Templates.Select(t => t.Split)
-                        .Where(s => !textFileToTranslate.SkipColumns.Contains(s)).ToHashSet();
-
-                    foreach (var template in line.Templates)
+                var (passed, failed) = await CsvGameDataWorkflow.PackageAsync(
+                    workingDirectory,
+                    textFile,
+                    onColumnPackaged: (column, rawText, packagedText) =>
                     {
-                        if (template.Split < 0 || template.Split >= splits.Length)
-                            continue;
-
-                        // Preserve skipped columns, including stale converted templates.
-                        if (textFileToTranslate.SkipColumns.Contains(template.Split))
-                            continue;
-
-                        var fragments = line.Splits
-                            .Where(s => s.Split == template.Split)
-                            .OrderBy(s => s.SubIndex)
-                            .ToList();
-
-                        // Whole-cell QC state lives only on the column's SubIndex == 0 fragment -
-                        // see TranslationSplit.QcTranslated's doc comment. Only trust it if still
-                        // fresh relative to the fragments' CURRENT Translated values (see
-                        // QualityReviewHelpers.IsQcReviewFresh) - a retranslation since the last
-                        // review (e.g. a glossary change flagging this column via
-                        // ApplyAllRulesToCurrentTranslation) must never be silently overridden by
-                        // a stale score/correction just because nobody has re-run the quality
-                        // review pass yet. A fresh, non-empty QcTranslated bypasses Reconstruct
-                        // entirely and is used as the literal cell value.
-                        var anchor = fragments.FirstOrDefault(f => f.SubIndex == 0) ?? fragments.FirstOrDefault();
-                        var qcFresh = anchor != null && QualityReviewHelpers.IsQcReviewFresh(anchor, template, fragments);
-
-                        // A low QcQualityScore means "don't trust this correction" - not "this line
-                        // has no valid translation at all". The pre-QC Translated text (used by the
-                        // fragment-reconstruction fallback below, same path taken when there's no
-                        // QcTranslated at all) is already an accepted translation from the main
-                        // pipeline and shouldn't be discarded in favor of shipping raw source just
-                        // because the QC model wasn't confident in its own proposed correction.
-                        var useQcTranslated = qcFresh
-                            && !string.IsNullOrEmpty(anchor!.QcTranslated)
-                            && !(anchor.QcQualityScore is int templateScore && templateScore < minAcceptableScore);
-
-                        if (useQcTranslated)
+                        // Copy this row's already-translated (Text, Translated) pair for any
+                        // AtlasSpriteNameColumnSources column - see that array's comment.
+                        foreach (var source in atlasSpriteNameSources.Where(s => s.Column == column))
                         {
-                            splits[template.Split] = anchor!.QcTranslated;
-                            continue;
+                            if (string.IsNullOrEmpty(rawText) || string.IsNullOrEmpty(packagedText))
+                                continue;
+                            if (!atlasSpriteNamePairs.TryGetValue(source.OutputFileName, out var pairs))
+                                atlasSpriteNamePairs[source.OutputFileName] = pairs = new();
+                            pairs.Add((rawText, packagedText));
                         }
-
-                        var translatedFragments = new List<string>();
-
-                        foreach (var fragment in fragments)
-                        {
-                            if (!textFileToTranslate.PackageOutput
-                                || fragment.FlaggedForRetranslation
-                                || !fragment.SafeToTranslate) //Count Failure
-                            {
-                                failed = true;
-                                break;
-                            }
-
-                            //Check line to be extra safe
-                            //if (Regex.IsMatch(fragment.Translated, @"(?<!\\)\n"))
-                            //    failed = true;
-                            //else
-                            if (!string.IsNullOrEmpty(fragment.Translated))
-                                translatedFragments.Add(fragment.Translated);
-                            //If it was already blank its all good
-                            else if (!string.IsNullOrEmpty(fragment.Text))
-                            {
-                                failed = true;
-                                break;
-                            }
-                            else
-                                translatedFragments.Add(fragment.Text);
-                        }
-
-                        if (failed)
-                            break;
-
-                        splits[template.Split] = CompoundFieldSplitter.Reconstruct(template.Template, translatedFragments);
-                    }
-
-                    // Plain columns (whole cell is a single translatable fragment, no template needed)
-                    if (!failed)
+                    },
+                    rowPostProcess: splits =>
                     {
-                        foreach (var split in line.Splits.Where(s => !templatedColumns.Contains(s.Split)))
+                        // A translated cell ending in a bare comma (e.g. an LLM ending a sentence
+                        // with "," instead of a period) is always safe per RFC 4180 quoting, but
+                        // the game's own hand-rolled CSV parser (LTCSVLoader) miscounts quote
+                        // balance when a quoted field's content ends in ",\"" - it treats the
+                        // record as still open and silently merges the NEXT row into it,
+                        // permanently dropping that next row from whatever dictionary/list it
+                        // should have populated (see KungFuData.csv id=733's description
+                        // swallowing id=734's row entirely). Skipped columns keep the raw row's
+                        // byte-for-byte value and must not be touched.
+                        for (var i = 0; i < splits.Length; i++)
                         {
-                            if (split.Split < 0 || split.Split >= splits.Length)
+                            if (textFile.SkipColumns.Contains(i))
                                 continue;
 
-                            // Preserve skipped columns; a stale compound split must not overwrite the cell.
-                            if (textFileToTranslate.SkipColumns.Contains(split.Split))
-                                continue;
-
-                            if (!textFileToTranslate.PackageOutput
-                                || split.FlaggedForRetranslation
-                                || !split.SafeToTranslate) //Count Failure
-                            {
-                                failed = true;
-                                break;
-                            }
-
-                            var plainQcFresh = QualityReviewHelpers.IsQcReviewFresh(split, null, [split]);
-
-                            // Same reasoning as the templated-column path above: a low score distrusts
-                            // the CORRECTION, not the original Translated - fall back to it instead of
-                            // failing the whole line.
-                            var usePlainQcTranslated = plainQcFresh
-                                && !string.IsNullOrEmpty(split.QcTranslated)
-                                && !(split.QcQualityScore is int plainScore && plainScore < minAcceptableScore);
-
-                            var effectiveTranslated = usePlainQcTranslated ? split.QcTranslated : split.Translated;
-
-                            if (!string.IsNullOrEmpty(effectiveTranslated))
-                                splits[split.Split] = effectiveTranslated;
-                            //If it was already blank its all good
-                            else if (!string.IsNullOrEmpty(split.Text))
-                            {
-                                failed = true;
-                                break;
-                            }
-
-                            // Also copy this row's already-translated (Text, effective Translated)
-                            // pair for any AtlasSpriteNameColumnSources column - see that array's
-                            // comment.
-                            foreach (var source in atlasSpriteNameSources.Where(s => s.Column == split.Split))
-                            {
-                                if (string.IsNullOrEmpty(split.Text) || string.IsNullOrEmpty(effectiveTranslated))
-                                    continue;
-                                if (!atlasSpriteNamePairs.TryGetValue(source.OutputFileName, out var pairs))
-                                    atlasSpriteNamePairs[source.OutputFileName] = pairs = new();
-                                pairs.Add((split.Text, effectiveTranslated));
-                            }
+                            splits[i] = GameFileHandling.StripTrailingCommaBeforeQuote(splits[i]);
                         }
-                    }
 
-                    // Don't remove /n it makes lines even longer and less likely to wrap.
-                    // if (textFileToTranslate.Path == "PlotData.csv" && splits.Length > 10)
-                    //     splits[10] = splits[10].Replace("\\r\\n", " ").Replace("\\n", " ").Replace("\\r", " ");
+                        return splits;
+                    });
 
-                    // A translated cell ending in a bare comma (e.g. an LLM ending a sentence with
-                    // "," instead of a period) is always safe per RFC 4180 quoting, but the game's
-                    // own hand-rolled CSV parser (LTCSVLoader) miscounts quote balance when a
-                    // quoted field's content ends in ",\"" - it treats the record as still open and
-                    // silently merges the NEXT row into it, permanently dropping that next row from
-                    // whatever dictionary/list it should have populated (see KungFuData.csv id=733's
-                    // description swallowing id=734's row entirely). Skipped columns keep the raw
-                    // row's byte-for-byte value and must not be touched.
-                    for (var i = 0; i < splits.Length; i++)
-                    {
-                        if (textFileToTranslate.SkipColumns.Contains(i))
-                            continue;
-
-                        splits[i] = GameFileHandling.StripTrailingCommaBeforeQuote(splits[i]);
-                    }
-
-                    line.Translated = GameFileHandling.RebuildCsvRow(splits);
-
-                    if (!failed)
-                    {
-                        //Reverse the Hyphen to a normal hyphen so it can be read in the game
-                        line.Translated = line.Translated.Replace("\u2011", "-");
-                        outputLines.Add(line.Translated);
-                    }
-                    else
-                    {
-                        outputLines.Add(line.Raw);
-                        failedLines.Add(line.Raw);
-                    }
-                }
-
-
-                FileHelper.WriteAllLinesWithRetry($"{outputPath}/{textFileToTranslate.Path}", outputLines);
-
-                passedCount += outputLines.Count;
-                failedCount += failedLines.Count;
-
-                await Task.CompletedTask;
-            });
+                passedCount += passed;
+                failedCount += failed;
+            }
 
             // Write out the small, dedicated atlas-sprite-name lookup file(s) collected above -
             // see DynamicStringSources.AtlasSpriteNameColumnSources. Flat raw/result YAML, same
