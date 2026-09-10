@@ -103,6 +103,15 @@
 - raw: 体力
   result: "Stamina"
 
+- raw: 夏天雄
+  result: "Xia Tianxiong"
+- raw: 金龙生
+  result: "Jin Longsheng"
+- raw: 思中澜
+  result: "Si Zhonglan"
+- raw: "计心狂"
+  result: "Ji Xinkuang"
+
 - raw: 侠士
   result: "Hero"
 - raw: 恶名

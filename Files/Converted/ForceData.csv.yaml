@@ -3,33 +3,64 @@
   - split: 3
     text: "等级"
     translated: "Level"
+    qcReviewedText: "Level"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 4
     text: "门派地点"
     translated: "Sect location"
+    qcReviewedText: "Sect location ID"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "颜色"
     translated: "Color"
+    qcReviewedText: "Color"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 6
     text: "特殊武功"
     translated: "Special martial arts skill"
+    qcReviewedText: "Special martial arts skill"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 7
     text: "特殊好感设定"
     translated: "Special Favorability Settings"
+    qcReviewedText: "Special Favorability Settings"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 8
     text: "男性比例"
     translated: "Gender ratio"
+    qcReviewedText: "Gender ratio"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 12
     text: "大帮派"
     translated: "Big Gang"
+    qcReviewedText: "Big Gang"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 13
     text: "自动补充弟子"
     translated: "Automatically recruit disciples"
+    qcReviewedText: "Automatically recruit disciples"
+    qcTranslated: "Automatically replenish disciples"
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 14
     text: "默认皮肤"
     translated: "Default skin"
+    qcReviewedText: "Default skin"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 15
     text: "门派特性"
     translated: "Sect traits"
+    qcReviewedText: "Sect traits"
+    qcStatus: Passed
+    qcQualityScore: 100
   templates:
   - split: 4
     template: "{0}ID"
@@ -38,6 +69,10 @@
   - split: 15
     text: "痛饮"
     translated: "Drunken revelry"
+    qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
+    qcTranslated: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but it consumes ‑20% of the internal resource and increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 15
     subIndex: 1
     text: "消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
@@ -66,6 +101,10 @@
   - split: 15
     text: "暗器"
     translated: "Hidden Weapon"
+    qcReviewedText: "<b>Hidden Weapon</b>：Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
+    qcTranslated: "<b>Hidden Weapon</b>: Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>: In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is 60%. If you are caught by the officials, you can use qinggong to evade."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "暗室研究射术兵器，提升射术威力。"
@@ -77,7 +116,7 @@
   - split: 15
     subIndex: 3
     text: "在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
-    translated: "You can claim hitman contracts in the dark room. You have a ‑60% reputation for being ruthless and assaultive, but you can use lightness to evade the officials when caught."
+    translated: "In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -86,6 +125,10 @@
   - split: 15
     text: "行医"
     translated: "Practice medicine"
+    qcReviewedText: "<b>Practice medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>：Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are met.-50%。\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
+    qcTranslated: "<b>Practice Medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle Medicine</b>：Potion‑making efficiency is +20%, and can choose multiple infusions. All requirements for refining potent elixirs are reduced by ‑50%.\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
+    qcStatus: Corrected
+    qcQualityScore: 75
   - split: 15
     subIndex: 1
     text: "治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
@@ -114,6 +157,10 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
+    qcReviewedText: "<b>Iron Palm</b>：The conference focuses on palm and fist weapons, enhancing their power.\\n<b>Begging</b>：Consume prestige to beg for silver from others. Requesting items from others consumes goodwill.-40%。"
+    qcTranslated: "<b>Iron Palm</b>: Researches fist and palm weapons at the conference, increasing their power.\\n<b>Begging</b>: Consume prestige to beg for silver from others. Requesting items from others consumes goodwill by ‑40%."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "大会台研究拳掌兵器，提升拳掌威力。"
@@ -134,6 +181,10 @@
   - split: 15
     text: "枪术"
     translated: "Gun combat"
+    qcReviewedText: "<b>Gun combat</b>：Study lances at the racetrack to enhance their power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcTranslated: "<b>Guns</b>：Study long weapons at the racetrack to enhance their power.\\n<b>Horseback Riding</b>：Horse taming speed +20%, sprint taming cost 20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
@@ -154,6 +205,10 @@
   - split: 15
     text: "符法"
     translated: "Spellcasting"
+    qcReviewedText: "<b>Spellcasting</b>：Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle./Weaken the opposing character \\n<b>Heavenly Thunder</b>：Gain one Thunderbolt Martial Art per level, with additional enhancement 0.5 based on the Art's grade./1/1.5/2/2.5/3 points of Willpower \\n<b>Dan Yin</b>：In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    qcTranslated: "<b>Spellcasting</b>: Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle or weaken the opposing character.\\n<b>Heavenly Thunder</b>: For each fully mastered level of Thunderbolt Martial Arts, gain additional 0.5 points of Willpower based on the Art's grade: 1/1.5/2/2.5/3 points.\\n<b>Dan Yin</b>: In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 15
     subIndex: 1
     text: "修习符咒武学解锁对应符法，用符法在战前强化己方角色"
@@ -190,6 +245,10 @@
   - split: 15
     text: "天工"
     translated: "Heavenly Artisan"
+    qcReviewedText: "<b>Heavenly Artisan</b>：Collect meteorite fragments during exploration and enhance your equipment in the Sword Pool for additional strengthening.\\n<b>Craftsman</b>：Forging efficiency +20% and you can select multiple materials. In the Sword Pool, you can dismantle equipment to obtain corresponding materials."
+    qcTranslated: "<b>Heavenly Artisan</b>: Collect meteorite fragments during exploration and enhance your equipment in the Sword Pool for additional strengthening.\\n<b>Craftsman</b>: Increase forging efficiency by +20%, and select multiple materials. In the Sword Pool, you can dismantle equipment to obtain corresponding materials."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "在探索中搜集陨铁碎片，在剑池对装备进行额外强化操作。"
@@ -210,6 +269,13 @@
   - split: 15
     text: "炼蛊"
     translated: "Incubate poison insects"
+    qcReviewedText: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
+    qcTranslated: "<b>Incubate Poison</b>：Consume medicinal herbs or ingredients in the Sea of Venom to obtain poisons, then fuse low‑level poisons to create powerful high‑level poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases by ‑25%."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
   - split: 15
     subIndex: 1
     text: "在万毒池消耗药引"
@@ -234,6 +300,10 @@
   - split: 15
     text: "试炼"
     translated: "Trial"
+    qcReviewedText: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：The Infamy ‑40% for stealing from others and stores; when caught by the authorities, you can use your special skill to break through."
+    qcTranslated: "<b>Trial</b>: Tackle the increasingly difficult Ghost Gate Trial and obtain gradually enhanced talent effects.\\n<b>Domineering</b>: The Infamy ‑40% for stealing from others and stores; when caught by the authorities, you can use your special skill to break through."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 15
     subIndex: 1
     text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
@@ -245,7 +315,7 @@
   - split: 15
     subIndex: 3
     text: "抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
-    translated: "Reputation for stealing from others and shops at ‑40%; can use a special technique to break free when arrested by the constabulary."
+    translated: "The Infamy ‑40% for stealing from others and stores; when caught by the authorities, you can use your special skill to break through."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -254,6 +324,10 @@
   - split: 15
     text: "博引"
     translated: "Wide‑ranging"
+    qcReviewedText: "<b>Wide‑ranging</b>：Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial evidence</b>：Battle Handcard Limit +3, Victory in Battle Grants Enhanced Effects and Extra Favor. Skill Requirement for Manuscript Compilation-10%。"
+    qcTranslated: "<b>Wide‑ranging</b>：Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial evidence</b>：Battle Handcard Limit +3, Victory in Battle Grants Enhanced Effects and Extra Favor. Skill Requirement for Manuscript Compilation is ‑10%."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
@@ -274,6 +348,10 @@
   - split: 15
     text: "禅宗"
     translated: "Zen Buddhism"
+    qcReviewedText: "<b>Zen Buddhism</b>：Gain the benefits of Shaolin Temple martial arts through Zen practice.\\n<b>Universal Salvation</b>：Instruct wild villains or other heroes, shifting others' stances toward the doctrines of mercy, and boosting your reputation and goodwill."
+    qcTranslated: "<b>Zen Buddhism</b>: Gain the benefits of Shaolin Temple martial arts through Zen practice.\\n<b>Universal Salvation</b>: Instruct wild villains or other heroes, shifting others' stances toward mercy and increasing your reputation and goodwill."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "通过禅宗修行获取少林寺武学加成。"
@@ -285,7 +363,7 @@
   - split: 15
     subIndex: 3
     text: "教化野外恶徒或其他侠士，将他人立场向戒律仁慈改变，并提升好感和声望。"
-    translated: "Tame wild bandits or other martial artists, change others' stances towards virtue and compassion, and increase goodwill and reputation."
+    translated: "Instruct wild villains or other heroes, shifting others' stances toward the doctrines of mercy, and boosting your reputation and goodwill."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -294,6 +372,10 @@
   - split: 15
     text: "道法"
     translated: "Way of Dao"
+    qcReviewedText: "<b>Way of Dao</b>：Gain the Wudang sect martial arts bonuses through Daoist cultivation.\\n<b>Do Nothing</b>：Teach and civilize wild villains or other Heroes, changing others' stance to a neutral one and increasing their goodwill and reputation."
+    qcTranslated: "<b>Way of Dao</b>：Gain the Wudang Sect martial arts bonuses through Daoist cultivation.\\n<b>Wu Wei</b>：Teach and civilize wild villains or other Heroes, changing others' stance to a neutral one and increasing their goodwill and reputation."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "通过道法修行获取武当派武学加成。"
@@ -305,7 +387,7 @@
   - split: 15
     subIndex: 3
     text: "教化野外恶徒或其他侠士，将他人立场向平常中立改变，并提升好感和声望。"
-    translated: "Tame wild villains or other martial artists, shifting others' stances from neutral to mildly favorable and boosting their affinity and reputation."
+    translated: "Teach and civilize wild villains or other Heroes, changing others' stance to a neutral one and increasing their goodwill and reputation."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -314,6 +396,10 @@
   - split: 15
     text: "试刀"
     translated: "Test blade"
+    qcReviewedText: "<b>Test blade</b>：Study the Blade Art and weaponry on the Trial Blade Platform to enhance the power of your Blade Technique.\\n<b>Gourmand</b>：Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
+    qcTranslated: "<b>Test Blade</b>：Study the Blade Technique and weaponry on the Trial Blade Platform to enhance the power of your Blade Technique.\\n<b>Gourmand</b>：Increases cooking efficiency by +20%, and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "试刀台研究刀法兵器，提升刀法威力。"
@@ -334,6 +420,10 @@
   - split: 15
     text: "万剑"
     translated: "Ten Thousand Swords"
+    qcReviewedText: "<b>Ten Thousand Swords</b>：Study sword arts and weaponry at Penglai Pavilion to enhance swordsmanship power.\\n<b>Return to the Ancestral Home</b>：Gain one Sword Art upon reaching max level, with additional boosts based on the art's rank: 0.5/1/1.5/2/2.5/3 points of Sword Technique"
+    qcTranslated: "<b>Ten Thousand Swords</b>：Study sword arts and weaponry at Penglai Pavilion to enhance swordsmanship power.\\n<b>Return to the Ancestral Home</b>：Upon reaching max level in each Sword Art, gain additional Sword Technique points based on the art's rank: 0.5/1/1.5/2/2.5/3"
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 15
     subIndex: 1
     text: "蓬莱阁研究剑法兵器，提升剑法威力。"
@@ -358,6 +448,10 @@
   - split: 15
     text: "自然"
     translated: "Natural"
+    qcReviewedText: "<b>Natural</b>：Gain the benefits of Emei martial arts through natural cultivation.\\n<b>Lingwu</b>：Breakthrough efficiency +20%, breakthrough option +1 and additional breakthrough level boost by 1 ranks."
+    qcTranslated: "<b>Natural</b>: Gain the benefits of Emei martial arts through natural cultivation.\\n<b>Lingwu</b>: Breakthrough efficiency +20%, additional breakthrough option +1, and extra breakthrough level boost by 1 ranks."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "通过自然修行获取峨嵋派武学加成。"
@@ -378,6 +472,10 @@
   - split: 15
     text: "奇技"
     translated: "Strange Art"
+    qcReviewedText: "<b>Strange Art</b>：Research the 72 Caves to enhance the power of the qimen weapons.\\n<b>Constant problems</b>：Gain one Odd Door Martial Art upon leveling up, with additional enhancement based on the art's grade by 0.5./1/1.5/2/2.5/3 Points of Mystical Gates"
+    qcTranslated: "<b>Strange Art</b>: Research the 72 Caves to enhance the power of qimen weapons.\\n<b>Constant Troubles</b>: Upon reaching max level in a qimen martial art, gain additional enhancement based on the art's grade by 72/0.5/1/1.5/2/2.5 Points of Mystical Gates."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 15
     subIndex: 1
     text: "七十二洞研究奇门兵器，提升奇门威力。"
@@ -402,6 +500,10 @@
   - split: 15
     text: "机关"
     translated: "Mechanism"
+    qcReviewedText: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous studies</b>：All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures./Materials and treasure appraisal additional knowledge bonus"
+    qcTranslated: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous Studies</b>：All skills and experience ++20%, collecting resources more easily yields high‑grade treasures/materials, and treasure appraisal gains additional knowledge bonus."
+    qcStatus: Corrected
+    qcQualityScore: 75
   - split: 15
     subIndex: 1
     text: "使用装备改装升级机关兽，获取对应的机关兽加成。"
@@ -426,6 +528,10 @@
   - split: 15
     text: "火药"
     translated: "Gunpowder"
+    qcReviewedText: "<b>Gunpowder</b>：Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder.\\n<b>Scorching</b>：Gain one Burning Martial Art per level, with an additional 0.5% boost based on the art's grade./1%/1.5%/2%/2.5%/3% negative modifier \\n<b>Stewed Again</b>：You can reheat meals in the Furnace Room to get the corresponding ingredients."
+    qcTranslated: "<b>Gunpowder</b>：Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder.\\n<b>Scorching</b>：For each full level of Scorching martial arts, gain an additional 0.5%/1%/1.5%/2%/2.5%/3% negative modifier based on the art's grade.\\n<b>Stewed Again</b>：You can reheat meals in the Furnace Room to obtain the corresponding ingredients."
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 15
     subIndex: 1
     text: "通过配置火药提升霹雳堂武学和灼烧武学效果。"
@@ -458,6 +564,10 @@
   - split: 15
     text: "密宗"
     translated: "Esoteric Buddhism"
+    qcReviewedText: "<b>Esoteric Buddhism</b>：Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown ceremony</b>：Reform wild villains or other heroes, altering others' stance toward chaos and ferocity, and increase good will and reputation."
+    qcTranslated: "<b>Esoteric Buddhism</b>: Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown Ceremony</b>: Reform wild villains or other heroes, changing others' stance toward chaos and ferocity, and increasing goodwill and reputation."
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 15
     subIndex: 1
     text: "通过密宗修行获取金刚宗武学加成。"
@@ -469,7 +579,7 @@
   - split: 15
     subIndex: 3
     text: "教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
-    translated: "While civilizing wild villains, shift others' stances towards civilization and righteousness, and increase their favor and reputation."
+    translated: "Reform wild villains or other heroes, altering others' stance toward chaos and ferocity, and increase good will and reputation."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -478,6 +588,10 @@
   - split: 15
     text: "玄冰"
     translated: "Xuanbing"
+    qcReviewedText: "<b>Xuanbing</b>：Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>：Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality./4/6/8/10/12 points of Inner Power cap"
+    qcTranslated: "<b>Xuanbing</b>: Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>: Upon fully leveling each icy martial art, gain an additional 2/4/6/8/10/12 points of Inner Power cap based on the martial art's quality."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "通过凝结玄冰提升天山派武学和冰寒武学效果。"
@@ -502,6 +616,10 @@
   - split: 15
     text: "聚义"
     translated: "Gather to swear loyalty"
+    qcReviewedText: "<b>Gather to swear loyalty</b>：Neigong experience +20%, medical skill experience+20%。"
+    qcTranslated: "<b>Assembly</b>: Neigong experience +20%, medical skill experience +20%"
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "内功经验+20%，医术经验"
@@ -514,6 +632,10 @@
   - split: 15
     text: "黄河"
     translated: "Yellow River"
+    qcReviewedText: "<b>Yellow River</b>：Blade Art experience +20%, poison technique experience+20%。"
+    qcTranslated: "<b>Yellow River</b>: Blade Art experience +20%, poison technique experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 15
     subIndex: 1
     text: "刀法经验+20%，毒术经验"
@@ -526,6 +648,10 @@
   - split: 15
     text: "八卦"
     translated: "Bagua"
+    qcReviewedText: "<b>Bagua</b>：Combat experience +20%, Scholarly experience+20%。"
+    qcTranslated: "<b>Bagua</b>：Qimen experience +20%, Scholarly experience +20%"
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 15
     subIndex: 1
     text: "奇门经验+20%，学识经验"
@@ -538,6 +664,13 @@
   - split: 15
     text: "海沙"
     translated: "Desert sand"
+    qcReviewedText: "<b>Desert sand</b>：Special Skill Experience +20%, Cooking Experience+20%。"
+    qcTranslated: "<b>Sea sand</b>: Special Skill Experience +20%, Cooking Experience +20%"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "<b>Desert sand</b>：Special Skill Experience +20%, Cooking Experience+20%。"
   - split: 15
     subIndex: 1
     text: "绝技经验+20%，烹饪经验"
@@ -550,6 +683,10 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
+    qcReviewedText: "<b>Iron Palm</b>：Fist and Palm Experience +20%, Smithing Experience+20%。"
+    qcTranslated: "<b>Iron Palm</b>: Fist and Palm Experience +20%, Smithing Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 15
     subIndex: 1
     text: "拳掌经验+20%，锻造经验"
@@ -562,6 +699,10 @@
   - split: 15
     text: "仙霞"
     translated: "Xianxia"
+    qcReviewedText: "<b>Xianxia</b>：All experience points gained+5%。"
+    qcTranslated: "<b>Xianxia</b>: All experience gained ++5%"
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 15
     subIndex: 1
     text: "所有经验获取"
@@ -574,6 +715,10 @@
   - split: 15
     text: "巨鲸"
     translated: "Great whale"
+    qcReviewedText: "<b>Great whale</b>：Qinggong experience +20%, Resource Gathering experience+20%。"
+    qcTranslated: "<b>Great Whale</b>: Qinggong experience +20%, Gather Resources experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 15
     subIndex: 1
     text: "轻功经验+20%，采伐经验"
@@ -586,6 +731,10 @@
   - split: 15
     text: "金龙"
     translated: "Golden Dragon"
+    qcReviewedText: "<b>Golden Dragon</b>：Archery experience +20%, eloquence experience+20%。"
+    qcTranslated: "<b>Golden Dragon</b>: Archery experience +20%, eloquence experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 15
     subIndex: 1
     text: "射术经验+20%，口才经验"
@@ -598,6 +747,10 @@
   - split: 15
     text: "青城"
     translated: "Qingcheng"
+    qcReviewedText: "<b>Qingcheng</b>：Sword Art experience +20%, alchemy experience+20%。"
+    qcTranslated: "<b>Qingcheng</b>: Sword Technique experience +20%, alchemy experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 80
   - split: 15
     subIndex: 1
     text: "剑法经验+20%，炼药经验"
@@ -610,6 +763,13 @@
   - split: 15
     text: "伏牛"
     translated: "Wutou Mountain"
+    qcReviewedText: "<b>Wutou Mountain</b>：Long Sword Experience +20%, Woodcutter Experience+20%。"
+    qcTranslated: "<b>Funiu</b>：Long Weapon Experience +20%, Wood Experience +20%"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "<b>Wutou Mountain</b>：Long Sword Experience +20%, Woodcutter Experience+20%。"
   - split: 15
     subIndex: 1
     text: "长兵经验+20%，木植经验"

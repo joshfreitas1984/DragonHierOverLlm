@@ -7,45 +7,45 @@ namespace Tests
     public static class TextFileConfiguration
     {
         public static readonly TextFileToSplit[] TextFilesToSplit = [
-            //new() {Path = "AchievementData.csv", PackageOutput = true },
-            //// Skip-column rationale: docs/gamefilehandling-reference.md. Column 2 (类别/Category)
-            //// is exact-matched against the hardcoded literals "城市"/"村镇"/"门派" in
-            //// GameDataController's AreaData load loop - translating it breaks that check.
-            //new() {Path = "AreaData.csv", PackageOutput = true, SkipColumns = [2, 3] },
-            //new() {Path = "ArmorData.csv", PackageOutput = true },
-            ////new() {Path = "BookTypeIconData.csv", PackageOutput = true },
-            //// Columns 8-12 are Label<sign><number>/lookup-key cells matched by GameDataController's
-            //// BuildingData load loop; see docs/gamefilehandling-reference.md.
-            //new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
-            //new() {Path = "FoodData.csv", PackageOutput = true, SkipColumns = [1, 15]  },
-            //// Column 2 is an exact-match lookup key (ForceData.forceStyle); see
-            //// docs/gamefilehandling-reference.md.
-            //new() {Path = "ForceData.csv", PackageOutput = true, SkipColumns = [1, 2, 9, 10, 11] },
-            //// Lookup-key column; see docs/gamefilehandling-reference.md.
-            //new() {Path = "ForceSpeAddDataBase.csv", PackageOutput = true, SkipColumns = [1] },
-            //new() {Path = "HeroNatureTalkText.csv", PackageOutput = true },
-            //new() {Path = "HeroSpeTalkText.csv", PackageOutput = true },
-            //// All columns skipped: column 1 (Name) is itself an exact-match lookup key
-            //// (GameDataController.GetTagID); display text is captured separately via
-            //// DynamicStringSources.DynamicStringColumnSources below. See
-            //// docs/skipcolumns-stringtospeadddata-family.md.
-            //new() {Path = "HeroTagData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
-            //new() {Path = "HorseData.csv", PackageOutput = true, SkipColumns = [1] },
-            //new() {Path = "InnData.csv", PackageOutput = true },
-            //// Structured lookup-key columns; see docs/gamefilehandling-reference.md and
-            //// docs/spehero-relationship-and-skillfocus-crashes.md (column 3/Name is exact-matched
-            //// by GameDataController.GetSkillID against SpeHeroData.csv column 13's raw skill names).
-            //// Columns 17/18 (攻击架势/防御架势, Attack/Defense stance) are parsed by
-            //// PartPostureData's ctor via String.Contains against a fixed body-part vocabulary.
-            //// Column 23 (特效/Special effects) stores each fragment's label half as
-            //// SkillSpeEffectData.speName, exact-matched via String.Equals and used to build a
-            //// Resources.Load("SpeEffect/"+speName) asset path (BattleController.CreateSpeEffect).
-            //// Column 24 (使用武器/Use weapons) is exact-matched via the same FUN_1817ff280
-            //// dictionary lookup used elsewhere and concatenated into a
-            //// Resources.Load("武器/"+weaponName) asset path (HeroData.SetHeroWeapon/SetSkillWeapon).
-            //// Column 21 (动作/Action) is animationName, passed to SkeletonData.FindAnimation/
-            //// AnimationState.SetAnimation - an exact-match Spine animation clip name. Column 25
-            //// (伤害顺序/Order of damage dealt) is Enum.Parse'd into skillDamageOrder.
+            new() {Path = "AchievementData.csv", PackageOutput = true },
+            // Skip-column rationale: docs/gamefilehandling-reference.md. Column 2 (类别/Category)
+            // is exact-matched against the hardcoded literals "城市"/"村镇"/"门派" in
+            // GameDataController's AreaData load loop - translating it breaks that check.
+            new() {Path = "AreaData.csv", PackageOutput = true, SkipColumns = [2, 3], EnableQualityReview = false  },
+            new() {Path = "ArmorData.csv", PackageOutput = true, EnableQualityReview = false  },
+            //new() {Path = "BookTypeIconData.csv", PackageOutput = true },
+            // Columns 8-12 are Label<sign><number>/lookup-key cells matched by GameDataController's
+            // BuildingData load loop; see docs/gamefilehandling-reference.md.
+            new() {Path = "BuildingData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
+            new() {Path = "FoodData.csv", PackageOutput = true, SkipColumns = [1, 15], EnableQualityReview = false },
+            // Column 2 is an exact-match lookup key (ForceData.forceStyle); see
+            // docs/gamefilehandling-reference.md.
+            new() {Path = "ForceData.csv", PackageOutput = true, SkipColumns = [1, 2, 9, 10, 11] },
+            // Lookup-key column; see docs/gamefilehandling-reference.md.
+            new() {Path = "ForceSpeAddDataBase.csv", PackageOutput = true, SkipColumns = [1] },
+            new() {Path = "HeroNatureTalkText.csv", PackageOutput = true },
+            new() {Path = "HeroSpeTalkText.csv", PackageOutput = true },
+            // All columns skipped: column 1 (Name) is itself an exact-match lookup key
+            // (GameDataController.GetTagID); display text is captured separately via
+            // DynamicStringSources.DynamicStringColumnSources below. See
+            // docs/skipcolumns-stringtospeadddata-family.md.
+            new() {Path = "HeroTagData.csv", PackageOutput = true, SkipColumns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], EnableQualityReview = false  },
+            new() {Path = "HorseData.csv", PackageOutput = true, SkipColumns = [1] },
+            new() {Path = "InnData.csv", PackageOutput = true },
+            // Structured lookup-key columns; see docs/gamefilehandling-reference.md and
+            // docs/spehero-relationship-and-skillfocus-crashes.md (column 3/Name is exact-matched
+            // by GameDataController.GetSkillID against SpeHeroData.csv column 13's raw skill names).
+            // Columns 17/18 (攻击架势/防御架势, Attack/Defense stance) are parsed by
+            // PartPostureData's ctor via String.Contains against a fixed body-part vocabulary.
+            // Column 23 (特效/Special effects) stores each fragment's label half as
+            // SkillSpeEffectData.speName, exact-matched via String.Equals and used to build a
+            // Resources.Load("SpeEffect/"+speName) asset path (BattleController.CreateSpeEffect).
+            // Column 24 (使用武器/Use weapons) is exact-matched via the same FUN_1817ff280
+            // dictionary lookup used elsewhere and concatenated into a
+            // Resources.Load("武器/"+weaponName) asset path (HeroData.SetHeroWeapon/SetSkillWeapon).
+            // Column 21 (动作/Action) is animationName, passed to SkeletonData.FindAnimation/
+            // AnimationState.SetAnimation - an exact-match Spine animation clip name. Column 25
+            // (伤害顺序/Order of damage dealt) is Enum.Parse'd into skillDamageOrder.
             //new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
             ////new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
             //new() {Path = "MartialClubData.csv", PackageOutput = true },
