@@ -26,8 +26,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Negativesuffix"
   - split: 5
     text: "百分比显示"
     translated: "Percentage display"
@@ -60,8 +58,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Self‑repeating effect"
   - split: 10
     text: "描述"
     translated: "Description"
@@ -172,8 +168,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Buddha nature"
   - split: 4
     text: "愚钝"
     translated: "Stupid"
@@ -348,8 +342,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Family‑secret"
   - split: 4
     text: "庸凡"
     translated: "Ordinary Mortal"
@@ -378,8 +370,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Fistfight"
   - split: 10
     text: "提升拳掌伤害"
     translated: "Increase fist and palm attack damage"
@@ -431,8 +421,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Sharp Blade"
   - split: 4
     text: "钝刀"
     translated: "Clumsy Blade"
@@ -469,11 +457,9 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Broken Spear"
   - split: 10
     text: "提升长兵伤害"
-    translated: "Increase spear damage"
+    translated: "Increase long weapon damage"
     qcReviewedText: "Increase spear damage \\nReduce damage from polearm attacks"
     qcTranslated: "Increase spear damage and reduce damage from polearm attacks."
     qcStatus: Corrected
@@ -481,7 +467,7 @@
   - split: 10
     subIndex: 1
     text: "降低受到的长兵伤害"
-    translated: "Reduce damage from polearm attacks"
+    translated: "Reduce damage from long weapons"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -500,8 +486,6 @@
     qcStatus: Passed
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Oddball"
   - split: 10
     text: "提升奇门伤害"
     translated: "Boost Oddly Gate Damage"
@@ -666,8 +650,6 @@
     flaggedForQcReview: true
     qcRejectedCorrection: "Blade Technique Power (Blade Art Power)"
     qcFailureReason: " Explaination was provided when none should be given."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Blade Technique Power"
 - raw: "21,长兵威力,0.01,无,无,1,1,0,0,0,长兵威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -684,7 +666,7 @@
     qcQualityScore: 100
   - split: 10
     text: "长兵威力"
-    translated: "Long‑range weapon power"
+    translated: "Long weapon power"
     qcReviewedText: "Long‑range weapon power"
     qcStatus: Passed
     qcQualityScore: 100
@@ -710,8 +692,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Power of the I Ching"
 - raw: "23,射术威力,0.01,无,无,1,1,0,0,0,射术威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -782,8 +762,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Affect poisoning/Efficiency of detoxification"
   - split: 10
     subIndex: 1
     text: "解毒的效率"
@@ -909,8 +887,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Affecting equipment crafting/Strengthen, consolidate/Efficiency in maintaining order in affected areas"
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -944,8 +920,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Affecting Dan Pill Production/Strengthen, consolidate/Efficiency in damaging the population"
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -979,8 +953,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Affect food preparation/Strengthen, consolidate/Efficiency in undermining the morale of the affected area"
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -1239,8 +1211,6 @@
     flaggedForQcReview: true
     qcRejectedCorrection: "Blade Technique Potential刀法潜力"
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Blade Technique Potential"
 - raw: "45,长兵潜力,1,无,无,0,1,0,0,0,长兵潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1257,14 +1227,12 @@
     qcQualityScore: 100
   - split: 10
     text: "长兵潜力"
-    translated: "Potential of Long Soldiers"
+    translated: "Long weapon potential"
     qcReviewedText: "Potential of Long Soldiers"
     qcTranslated: "Potential of Long Weapons"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Potential of Long Soldiers"
 - raw: "46,奇门潜力,1,无,无,0,1,0,0,0,奇门潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1408,8 +1376,6 @@
     flaggedForQcReview: true
     qcRejectedCorrection: "Resource Gathering Potential\\nCorrected to use the provided glossary term: \"Resource Gathering\" instead of \"Resource Gathering Potential\" which is more accurate to the source term \"采伐\"."
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Resource Gathering Potential"
 - raw: "53,木植潜力,1,无,无,0,1,0,0,0,木植潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1512,8 +1478,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Health points"
 - raw: "58,体力上限,5,焕发,疲敝,0,0,0,0,0,体力上限,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -1696,8 +1660,6 @@
     flaggedForQcReview: true
     qcRejectedCorrection: "优柔 (Translated as \"hesitant\" or \"vacillating\" would be more accurate than \"cautious\")"
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Cautious"
   - split: 10
     text: "伤害加倍"
     translated: "Doubled damage"
@@ -1763,8 +1725,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Feather"
   - split: 10
     text: "行动条减半"
     translated: "Action point halved"
@@ -1788,8 +1748,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Bumps and obstacles"
   - split: 10
     text: "再次攻击"
     translated: "Attack again"
@@ -1974,8 +1932,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Swift horse"
   - split: 4
     text: "无"
     translated: "None"
@@ -2013,8 +1969,6 @@
     text: "根据生命差造成外伤"
     translated: "Based on the health difference, cause external injuries"
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Based on the health difference, cause external injuries"
 - raw: "81,内伤,0.01,无,无,1,1,1,0,0,根据内力差造成内伤,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -2058,8 +2012,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Due to the difference in poison technique, you have been poisoned."
 - raw: "83,吸血,0.01,无,无,1,1,1,0,0,吸取生命,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -2355,8 +2307,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Damage from immunity lasts until next hit"
 - raw: "96,眩晕,0.01,万钧,无,1,0,1,1,0,跳过回合,敌方,0,1,1,1,0"
   splits:
   - split: 3
@@ -2670,8 +2620,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Blinding"
   - split: 4
     text: "无"
     translated: "None"
@@ -2839,8 +2787,6 @@
   - split: 3
     text: "背水"
     translated: "On the banks of the river"
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "On the banks of the river"
   - split: 4
     text: "无"
     translated: "None"
@@ -2977,8 +2923,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Refresh their minds"
   - split: 4
     text: "无"
     translated: "None"
@@ -3145,8 +3089,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Cut pulse"
   - split: 4
     text: "无"
     translated: "None"
@@ -3246,8 +3188,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
 - raw: "133,击退,1,无,无,0,1,1,0,0,将目标击退,敌方,1,1,1,1,0"
   splits:
   - split: 3
@@ -3487,8 +3427,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Counterattack"
   - split: 4
     text: "无"
     translated: "None"
@@ -3738,8 +3676,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Restore Health"
   - split: 4
     text: "无"
     translated: "None"
@@ -3886,8 +3822,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Footrest"
   - split: 4
     text: "无"
     translated: "None"
@@ -4071,8 +4005,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Ignoring the guard's defensive stance"
 - raw: "170,拆招,0.01,无,无,1,1,1,0,0,无视攻招的架势削减,伤害,0,2,1,1,0"
   splits:
   - split: 3
@@ -4095,8 +4027,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Ignoring the attack stance to reduce its power"
 - raw: "171,斗转,0.01,无,无,1,1,1,0,0,转移攻击至周边三格,伤害,0,2,1,1,0"
   splits:
   - split: 3
@@ -4397,7 +4327,7 @@
     qcQualityScore: 100
   - split: 10
     text: "长兵经验"
-    translated: "Long‑sword experience"
+    translated: "Long weapon experience"
     qcReviewedText: "Long‑sword experience"
     qcTranslated: "Polearm experience"
     qcStatus: Corrected
@@ -4546,8 +4476,6 @@
     flaggedForQcReview: true
     qcRejectedCorrection: "Resource Gathering Experience (should be corrected to \"Logging Experience\" or \"Harvesting Experience\" to better reflect \"采伐\" meaning \"to cut down trees\" or \"to harvest\", but considering the glossary provided, it should be \"Resource Gathering Experience\" as instructed.)"
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Resource Gathering Experience"
 - raw: "193,木植经验,0.04,无,无,1,1,1,0,0,木植经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4727,7 +4655,7 @@
     qcQualityScore: 100
   - split: 10
     text: "长兵攻击距离"
-    translated: "Long‑range attack distance"
+    translated: "Long weapon attack range"
     qcReviewedText: "Long‑range attack distance"
     qcTranslated: "Long weapon attack range"
     qcStatus: Corrected

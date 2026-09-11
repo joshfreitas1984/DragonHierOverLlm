@@ -188,7 +188,7 @@
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
-    translated: "Study lances at the racetrack to enhance their power."
+    translated: "Study the long weapon at the racetrack to enhance its power."
   - split: 15
     subIndex: 2
     text: "马术"
@@ -274,8 +274,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
   - split: 15
     subIndex: 1
     text: "在万毒池消耗药引"
@@ -669,8 +667,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Desert sand</b>：Special Skill Experience +20%, Cooking Experience+20%。"
   - split: 15
     subIndex: 1
     text: "绝技经验+20%，烹饪经验"
@@ -768,12 +764,10 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Wutou Mountain</b>：Long Sword Experience +20%, Woodcutter Experience+20%。"
   - split: 15
     subIndex: 1
     text: "长兵经验+20%，木植经验"
-    translated: "Long Sword Experience +20%, Woodcutter Experience"
+    translated: "Long weapon experience +20%, wooden staff experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"

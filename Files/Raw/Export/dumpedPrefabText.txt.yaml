@@ -480,23 +480,23 @@
   - subIndex: 1
     text: "门派产生影响"
   - subIndex: 2
-    text: "加快建筑建造"
+    text: "—加快建筑建造"
   - subIndex: 3
     text: "每月建造数量"
   - subIndex: 4
     text: "，建造消耗-5%，建造速度"
   - subIndex: 5
-    text: "加快科研"
+    text: "—加快科研"
   - subIndex: 6
     text: "科研消耗-5%，科研速度"
   - subIndex: 7
-    text: "加快弟子晋升"
+    text: "—加快弟子晋升"
   - subIndex: 8
     text: "晋升频率+5%，晋升消耗-5%，晋升武学等级"
   - subIndex: 9
     text: "，招募消耗-5%，月俸消耗"
   templates:
-  - template: "♦{0}AI{1}：\\n—{2}：{3}+{4}+5%\\n—{5}：{6}+5%\\n—{7}：{8}+{9}-2.5%"
+  - template: "♦{0}AI{1}：\\n{2}：{3}+{4}+5%\\n{5}：{6}+5%\\n{7}：{8}+{9}-2.5%"
 - raw: "♦消毒可以去除物品所带毒性。"
   splits:
   - text: "消毒可以去除物品所带毒性。"
@@ -3881,9 +3881,7 @@
   - template: "{0}\\n({1})"
 - raw: "而今日之事，就要从这仙霞派内说起……"
   splits:
-  - text: "而今日之事，就要从这仙霞派内说起"
-  templates:
-  - template: "{0}……"
+  - text: "而今日之事，就要从这仙霞派内说起……"
 - raw: "耐力 999/999"
   splits:
   - text: "耐力"

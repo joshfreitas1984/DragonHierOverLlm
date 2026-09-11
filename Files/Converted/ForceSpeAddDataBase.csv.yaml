@@ -218,14 +218,12 @@
   splits:
   - split: 2
     text: "长兵经验"
-    translated: "Long‑sword experience"
+    translated: "Long weapon experience"
     qcReviewedText: "Long‑sword experience"
     qcTranslated: "Polearm experience"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Long‑sword experience"
 - raw: "24,奇门经验,奇门经验,TRUE,0.02"
   splits:
   - split: 2
@@ -285,8 +283,6 @@
     flaggedForQcReview: true
     qcRejectedCorrection: "Lumbering Experience"
     qcFailureReason: "Glossary term '采伐' (expected 'Resource Gathering') is missing."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Resource Gathering Experience"
 - raw: "31,木植经验,木植经验,TRUE,0.02"
   splits:
   - split: 2
@@ -297,8 +293,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Tree planting experience"
 - raw: "32,锻造经验,锻造经验,TRUE,0.02"
   splits:
   - split: 2
@@ -360,8 +354,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "All willpower"
 - raw: "39,全员体质,全员体质,FALSE,1"
   splits:
   - split: 2
@@ -438,14 +430,12 @@
   splits:
   - split: 2
     text: "全员长兵"
-    translated: "Full‑troop soldier"
+    translated: "All long weapons"
     qcReviewedText: "Full‑troop soldier"
     qcTranslated: "Full‑troop long weapons"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Full‑troop soldier"
 - raw: "48,全员奇门,全员奇门,FALSE,1"
   splits:
   - split: 2
@@ -465,8 +455,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "All‑arrow shooting skill"
 - raw: "50,全员医术,全员医术,FALSE,1"
   splits:
   - split: 2
@@ -477,8 +465,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "All‑Clad Medical Skill"
 - raw: "51,全员毒术,全员毒术,FALSE,1"
   splits:
   - split: 2
@@ -514,8 +500,6 @@
     flaggedForQcReview: true
     qcRejectedCorrection: "All Logging"
     qcFailureReason: "Glossary term '采伐' (expected 'Resource Gathering') is missing."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "All Resource Gathering"
 - raw: "55,全员木植,全员木植,FALSE,1"
   splits:
   - split: 2
@@ -526,8 +510,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "All Zhu Ye"
 - raw: "56,全员锻造,全员锻造,FALSE,1"
   splits:
   - split: 2
@@ -538,8 +520,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "All‑Item Forge"
 - raw: "57,全员炼药,全员炼药,FALSE,1"
   splits:
   - split: 2

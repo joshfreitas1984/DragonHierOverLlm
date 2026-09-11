@@ -58,17 +58,6 @@
 - raw: 沈退
   result: "Shen Tui"
 
-- raw: 入门弟
-  result: "Initiate Disciple"
-- raw: 外门弟子
-  result: "Outer Disciple"
-- raw: 内门弟子
-  result: "Inner Disciple"
-- raw: 亲传弟子
-  result: "Direct Disciple"
-- raw: 正式弟子
-  result: "Formal Disciple"
-
 
 - raw: 采薇
   result: "Caiwei"
@@ -113,12 +102,19 @@
   result: "Si Zhonglan"
 - raw: "计心狂"
   result: "Ji Xinkuang"
-
-- raw: 侠士
-  result: "Hero"
+- raw: "阎罗王"
+  result: "King Yama"
+- raw: "欧长兵"
+  result: "Ou Changbing"
 - raw: 恶名
   result: "Infamy"
+  allowalt:
+    - "infamous"
 # - raw: 体质
 #   result: "Constitution"
-# - raw: "长兵"
-#   result: "Long weapon"
+- raw: "长兵"
+  result: "Long weapon"
+  allowalt: 
+  - "Changbing"
+  exclude: 
+    - heroNameParts.txt

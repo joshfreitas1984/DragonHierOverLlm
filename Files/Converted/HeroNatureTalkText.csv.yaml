@@ -29,8 +29,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Honesty"
   - split: 5
     text: "简单"
     translated: "Simple"
@@ -76,12 +74,8 @@
     qcStatus: Passed
     qcQualityScore: 100
   - split: 1
-    text: "嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展"
-    translated: "Hmm? Oh! It's #PlayerName#! I was just coming up with a brilliant strategy; all I need to do is act in this way."
-    qcReviewedText: "Hmm? Oh! It's #PlayerName#! I was just coming up with a brilliant strategy; all I need to do is act in this way.……"
-    qcTranslated: "Hmm? Oh! It's #PlayerName#! I was just coming up with a brilliant strategy; all I need to do is act this way."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    text: "嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展……"
+    translated: "Hmm? Oh! It's #PlayerName#! I was just thinking of a clever trick, something like this..."
   - split: 2
     text: "#PlayerName#，我近日修行始终不得要领，已为此苦思多日了。"
     translated: "#PlayerName#, I have been struggling to grasp the right approach in my recent cultivation for many days now."
@@ -130,8 +124,8 @@
     qcQualityScore: 80
   - split: 8
     subIndex: 1
-    text: "哈哈，开个玩笑而已。"
-    translated: "Ha ha, just joking"
+    text: "……哈哈，开个玩笑而已。"
+    translated: "...Haha, just a joke"
   - split: 9
     text: "#PlayerName#，你若能指出我招式中的纰漏，日后自有重谢。"
     translated: "#PlayerName#, if you can point out the flaws in my techniques, there will surely be a great reward for you in the future."
@@ -147,10 +141,8 @@
     qcStatus: Corrected
     qcQualityScore: 90
   templates:
-  - split: 1
-    template: "{0}……"
   - split: 8
-    template: "{0}\\n……{1}"
+    template: "{0}\\n{1}"
 - raw: "武学见解,依我所见，武学的精要之处在于战无不胜，攻无不克,依我所见，武学的精要之处在于勤学苦练，登峰造极,依我所见，武学的精要之处在于步步为营，攻守兼备,依我所见，武学的精要之处在于修身养性，仁者无敌,依我所见，武学的精要之处在于删繁就简，返璞归真,依我所见，武学的精要之处在于活学活用，灵巧多变,依我所见，武学的精要之处在于行云流水，挥洒自如,依我所见，武学的精要之处在于避实就虚，随心所欲,依我所见，武学的精要之处在于算无遗策，克敌机先,依我所见，武学的精要之处在于破除陈规，剑走偏锋"
   splits:
   - text: "武学见解"
@@ -518,8 +510,6 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
   - split: 10
     text: "十步杀一人，千里不留行。事了拂衣去，深藏身与名。"
     translated: "Ten steps to kill one man, a thousand miles go unimpeded. After matters are resolved, I depart quietly, hiding my presence and name."

@@ -168,10 +168,10 @@
   splits:
   - split: 1
     text: "长兵纲要"
-    translated: "Long Sword Overview"
+    translated: "Long weapon overview"
   - split: 2
     text: "长兵纲要"
-    translated: "Long Sword Overview"
+    translated: "Long weapon overview"
 - raw: "19,奇门纲要,奇门纲要,1,奇门经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1

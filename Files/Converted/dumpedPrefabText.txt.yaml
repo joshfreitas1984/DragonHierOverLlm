@@ -437,10 +437,10 @@
     translated: "Long weapon"
   - subIndex: 1
     text: "提升长兵伤害"
-    translated: "Increase spear damage"
+    translated: "Increase long weapon damage"
   - subIndex: 2
     text: "降低受到的长兵伤害"
-    translated: "Reduce damage from polearm attacks"
+    translated: "Reduce damage from long weapons"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}"
 - raw: "<color=grey>快捷键ESC</color>"
@@ -649,8 +649,8 @@
     text: "门派产生影响"
     translated: "Sect influence is generated"
   - subIndex: 2
-    text: "加快建筑建造"
-    translated: "Speed up construction"
+    text: "—加快建筑建造"
+    translated: "‑Speed up construction"
   - subIndex: 3
     text: "每月建造数量"
     translated: "Monthly production limit"
@@ -658,14 +658,14 @@
     text: "，建造消耗-5%，建造速度"
     translated: ", Construction consumes ‑5% resources, construction speed"
   - subIndex: 5
-    text: "加快科研"
-    translated: "Speed up research and development"
+    text: "—加快科研"
+    translated: "‑Speed up research and development"
   - subIndex: 6
     text: "科研消耗-5%，科研速度"
     translated: "Research consumption ‑5%, research speed"
   - subIndex: 7
-    text: "加快弟子晋升"
-    translated: "Speed up the disciples' advancement"
+    text: "—加快弟子晋升"
+    translated: "‑Speed up disciples' advancement"
   - subIndex: 8
     text: "晋升频率+5%，晋升消耗-5%，晋升武学等级"
     translated: "Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level"
@@ -673,7 +673,7 @@
     text: "，招募消耗-5%，月俸消耗"
     translated: ", Recruitment costs ‑5% consumed, monthly salary costs consumed"
   templates:
-  - template: "♦{0}AI{1}：\\n—{2}：{3}+{4}+5%\\n—{5}：{6}+5%\\n—{7}：{8}+{9}-2.5%"
+  - template: "♦{0}AI{1}：\\n{2}：{3}+{4}+5%\\n{5}：{6}+5%\\n{7}：{8}+{9}-2.5%"
 - raw: "♦消毒可以去除物品所带毒性。"
   splits:
   - text: "消毒可以去除物品所带毒性。"
@@ -3045,7 +3045,7 @@
 - raw: "强行叛离会增加恶名\\n一段时间内无法加入新门派"
   splits:
   - text: "强行叛离会增加恶名"
-    translated: "Forcing a separation will increase notoriety"
+    translated: "Forcing rebellion will increase infamy"
   - subIndex: 1
     text: "一段时间内无法加入新门派"
     translated: "Cannot join a new sect for a while."
@@ -3191,7 +3191,7 @@
 - raw: "恶名-0%\\n\\n可攻击资源\\n\\n不可攻击城镇\\n\\n不可攻击总舵"
   splits:
   - text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
   - subIndex: 1
     text: "可攻击资源"
     translated: "Attackable resources"
@@ -3206,7 +3206,7 @@
 - raw: "恶名\\n♦对好感/交易等造成负面影响，超过50会被通缉。\\n♦城镇内行凶恶名+100%，城镇周边绿色安全区+50%。\\n♦袭击同门或亲朋好友，会导致恶名成倍增加。\\n♦每月缓慢衰减，可通过岗哨巡查或行侠仗义降低，也可在官府缴纳罚金清空。"
   splits:
   - text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
   - subIndex: 1
     text: "对好感"
     translated: "For affection points"
@@ -3215,10 +3215,10 @@
     translated: "Trading activities causing negative impacts will result in a wanted notice if they exceed 50."
   - subIndex: 3
     text: "城镇内行凶恶名+100%，城镇周边绿色安全区"
-    translated: "Town center notorious for violence +100% , town periphery green safe zone"
+    translated: "Town center infamy +100%, town perimeter green safe zone"
   - subIndex: 4
     text: "袭击同门或亲朋好友，会导致恶名成倍增加。"
-    translated: "Attacking fellow disciples or loved ones will cause your notoriety to increase exponentially."
+    translated: "Attacking fellow disciples or family and friends will cause your infamy to increase exponentially."
   - subIndex: 5
     text: "每月缓慢衰减，可通过岗哨巡查或行侠仗义降低，也可在官府缴纳罚金清空。"
     translated: "Decreases slowly over time and can be reduced through patrolling sentry posts or performing acts of chivalry. It can also be cleared by paying a fine to the official government."
@@ -4928,7 +4928,7 @@
     translated: "The great trend of the world"
   - subIndex: 3
     text: "全局恶名修正"
-    translated: "Global notoriety correction"
+    translated: "Global Infamy Modifier"
   - subIndex: 4
     text: "门派间"
     translated: "Sects between"
@@ -5161,10 +5161,8 @@
   - template: "{0}\\n({1})"
 - raw: "而今日之事，就要从这仙霞派内说起……"
   splits:
-  - text: "而今日之事，就要从这仙霞派内说起"
-    translated: "And today's matter must be recounted from within the Xianxia Sect."
-  templates:
-  - template: "{0}……"
+  - text: "而今日之事，就要从这仙霞派内说起……"
+    translated: "And today's matter shall begin with the Xianxia Sect..."
 - raw: "耐力 999/999"
   splits:
   - text: "耐力"
@@ -5826,7 +5824,7 @@
 - raw: "金龙生处已解锁藏宝阁功能"
   splits:
   - text: "金龙生处已解锁藏宝阁功能"
-    translated: "The treasure hall function has been unlocked in the place where Golden Dragon was born."
+    translated: "The function of the Treasure Pavilion has been unlocked by Jin Longsheng."
 - raw: "鉴\\n宝"
   splits:
   - text: "鉴"

@@ -1412,7 +1412,7 @@
 - raw: "长兵经验"
   splits:
   - text: "长兵经验"
-    translated: "Long‑sword experience"
+    translated: "Long weapon experience"
 - raw: "奇门经验"
   splits:
   - text: "奇门经验"
@@ -1508,7 +1508,7 @@
 - raw: "全员长兵"
   splits:
   - text: "全员长兵"
-    translated: "Full‑troop soldier"
+    translated: "All long weapons"
 - raw: "全员奇门"
   splits:
   - text: "全员奇门"
@@ -3689,7 +3689,7 @@
     translated: "2 stamina"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -3698,7 +3698,7 @@
 - raw: "长兵5"
   splits:
   - text: "长兵5"
-    translated: "Long Sword 5"
+    translated: "Long weapon 5"
 - raw: "外伤0.06"
   splits:
   - text: "外伤0.06"
@@ -3718,11 +3718,11 @@
 - raw: "长兵2"
   splits:
   - text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
 - raw: "长兵10"
   splits:
   - text: "长兵10"
-    translated: "Long Soldier 10"
+    translated: "Long weapon 10"
 - raw: "胸16"
   splits:
   - text: "胸16"
@@ -5901,7 +5901,7 @@
     translated: "Acupoint 1"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -5910,7 +5910,7 @@
 - raw: "长兵15;经脉15"
   splits:
   - text: "长兵15"
-    translated: "Long Sword 15"
+    translated: "Long weapon 15"
   - subIndex: 1
     text: "经脉15"
     translated: "Meridian 15"
@@ -5932,7 +5932,7 @@
 - raw: "长兵20"
   splits:
   - text: "长兵20"
-    translated: "Long Swords20"
+    translated: "Long weapon 20"
 - raw: "活血0.02"
   splits:
   - text: "活血0.02"
@@ -5956,7 +5956,7 @@
     translated: "Agile 1"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -5965,7 +5965,7 @@
 - raw: "长兵15;灵巧15"
   splits:
   - text: "长兵15"
-    translated: "Long Sword 15"
+    translated: "Long weapon 15"
   - subIndex: 1
     text: "灵巧15"
     translated: "Agile 15"
@@ -6000,7 +6000,7 @@
 - raw: "长兵10;意志15"
   splits:
   - text: "长兵10"
-    translated: "Long Soldier 10"
+    translated: "Long weapon 10"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -6016,7 +6016,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1}"
 - raw: "伤害0.02"
@@ -6042,7 +6042,7 @@
 - raw: "长兵15"
   splits:
   - text: "长兵15"
-    translated: "Long Sword 15"
+    translated: "Long weapon 15"
 - raw: "八母枪术"
   splits:
   - text: "八母枪术"
@@ -6065,13 +6065,13 @@
     translated: "Intellect 1"
   - subIndex: 2
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1};{2}"
 - raw: "长兵15;智力10"
   splits:
   - text: "长兵15"
-    translated: "Long Sword 15"
+    translated: "Long weapon 15"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -6091,7 +6091,7 @@
     translated: "1 stamina"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -6100,7 +6100,7 @@
 - raw: "长兵15;体质10"
   splits:
   - text: "长兵15"
-    translated: "Long Sword 15"
+    translated: "Long weapon 15"
   - subIndex: 1
     text: "体质10"
     translated: "10 stamina"
@@ -6134,7 +6134,7 @@
 - raw: "长兵20;力道20"
   splits:
   - text: "长兵20"
-    translated: "Long Swords20"
+    translated: "Long weapon 20"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -9452,7 +9452,7 @@
 - raw: "长兵2;力道1"
   splits:
   - text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -9473,7 +9473,7 @@
 - raw: "长兵30;力道20;体质10"
   splits:
   - text: "长兵30"
-    translated: "Long Sword 30"
+    translated: "Long weapon 30"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -9526,7 +9526,7 @@
     translated: "Meridian 2"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -9535,7 +9535,7 @@
 - raw: "长兵35;经脉20;灵巧15"
   splits:
   - text: "长兵35"
-    translated: "Long Sword 35"
+    translated: "Long weapon 35"
   - subIndex: 1
     text: "经脉20"
     translated: "Meridian 20"
@@ -9555,7 +9555,7 @@
 - raw: "长兵2;体质1"
   splits:
   - text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 1
     text: "体质1"
     translated: "1 stamina"
@@ -9576,7 +9576,7 @@
 - raw: "长兵30;体质20"
   splits:
   - text: "长兵30"
-    translated: "Long Sword 30"
+    translated: "Long weapon 30"
   - subIndex: 1
     text: "体质20"
     translated: "20 stamina"
@@ -9626,7 +9626,7 @@
     translated: "Agile 2"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -9635,7 +9635,7 @@
 - raw: "长兵25;灵巧20;智力10"
   splits:
   - text: "长兵25"
-    translated: "Long Sword 25"
+    translated: "Long weapon 25"
   - subIndex: 1
     text: "灵巧20"
     translated: "Nimble 20"
@@ -9678,7 +9678,7 @@
 - raw: "长兵2;经脉1"
   splits:
   - text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 1
     text: "经脉1"
     translated: "Acupoint 1"
@@ -9690,7 +9690,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -9699,7 +9699,7 @@
 - raw: "长兵30;意志20"
   splits:
   - text: "长兵30"
-    translated: "Long Sword 30"
+    translated: "Long weapon 30"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -9751,7 +9751,7 @@
 - raw: "长兵30;灵巧20"
   splits:
   - text: "长兵30"
-    translated: "Long Sword 30"
+    translated: "Long weapon 30"
   - subIndex: 1
     text: "灵巧20"
     translated: "Nimble 20"
@@ -9794,7 +9794,7 @@
 - raw: "长兵20;力道30"
   splits:
   - text: "长兵20"
-    translated: "Long Swords20"
+    translated: "Long weapon 20"
   - subIndex: 1
     text: "力道30"
     translated: "Strength 30"
@@ -9847,13 +9847,13 @@
     translated: "2 stamina"
   - subIndex: 2
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1};{2}"
 - raw: "长兵30;体质20;智力20"
   splits:
   - text: "长兵30"
-    translated: "Long Sword 30"
+    translated: "Long weapon 30"
   - subIndex: 1
     text: "体质20"
     translated: "20 stamina"
@@ -9873,7 +9873,7 @@
 - raw: "长兵2;意志1"
   splits:
   - text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -9894,7 +9894,7 @@
 - raw: "长兵25;意志20"
   splits:
   - text: "长兵25"
-    translated: "Long Sword 25"
+    translated: "Long weapon 25"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -9940,7 +9940,7 @@
     translated: "3 intelligence"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -9949,7 +9949,7 @@
 - raw: "长兵35;智力25"
   splits:
   - text: "长兵35"
-    translated: "Long Sword 35"
+    translated: "Long weapon 35"
   - subIndex: 1
     text: "智力25"
     translated: "Intelligence25"
@@ -12508,7 +12508,7 @@
 - raw: "长兵45;智力25"
   splits:
   - text: "长兵45"
-    translated: "Long Sword 45"
+    translated: "Long weapon 45"
   - subIndex: 1
     text: "智力25"
     translated: "Intelligence25"
@@ -12572,7 +12572,7 @@
 - raw: "长兵45;经脉30;意志25"
   splits:
   - text: "长兵45"
-    translated: "Long Sword 45"
+    translated: "Long weapon 45"
   - subIndex: 1
     text: "经脉30"
     translated: "Acupuncture Point 30"
@@ -12633,13 +12633,13 @@
     translated: "2 stamina"
   - subIndex: 2
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1};{2}"
 - raw: "长兵55;力道35;体质20"
   splits:
   - text: "长兵55"
-    translated: "Long Sword 55"
+    translated: "Long weapon 55"
   - subIndex: 1
     text: "力道35"
     translated: "Strength 35"
@@ -14525,7 +14525,7 @@
     translated: "Potential in constitution 1"
   - subIndex: 2
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1};{2}"
 - raw: "力道1;长兵5;内力0.1"
@@ -14534,7 +14534,7 @@
     translated: "Strength 1"
   - subIndex: 1
     text: "长兵5"
-    translated: "Long Sword 5"
+    translated: "Long weapon 5"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -14586,7 +14586,7 @@
 - raw: "长兵潜力2;长兵1;意志1"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "长兵1"
     translated: "Long weapon 1"
@@ -14601,7 +14601,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -14610,7 +14610,7 @@
 - raw: "长兵55;意志45"
   splits:
   - text: "长兵55"
-    translated: "Long Sword 55"
+    translated: "Long weapon 55"
   - subIndex: 1
     text: "意志45"
     translated: "45 will"
@@ -15394,7 +15394,7 @@
 - raw: "长兵潜力2;体质潜力1;体质2"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "体质潜力1"
     translated: "Potential in constitution 1"
@@ -15421,7 +15421,7 @@
 - raw: "长兵75;体质60"
   splits:
   - text: "长兵75"
-    translated: "Long Sword 75"
+    translated: "Long weapon 75"
   - subIndex: 1
     text: "体质60"
     translated: "60 stamina"
@@ -19883,7 +19883,7 @@
 - raw: "长兵10;力道15"
   splits:
   - text: "长兵10"
-    translated: "Long Soldier 10"
+    translated: "Long weapon 10"
   - subIndex: 1
     text: "力道15"
     translated: "Strength 15"
@@ -19906,7 +19906,7 @@
     translated: "Agile 2"
   - subIndex: 2
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1};{2}"
 - raw: "不屈0.04"
@@ -20099,7 +20099,7 @@
 - raw: "长兵30;经脉20"
   splits:
   - text: "长兵30"
-    translated: "Long Sword 30"
+    translated: "Long weapon 30"
   - subIndex: 1
     text: "经脉20"
     translated: "Meridian 20"
@@ -20130,7 +20130,7 @@
 - raw: "长兵25;体质25"
   splits:
   - text: "长兵25"
-    translated: "Long Sword 25"
+    translated: "Long weapon 25"
   - subIndex: 1
     text: "体质25"
     translated: "25 stamina"
@@ -20386,7 +20386,7 @@
     translated: "Meridian 3"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -20441,7 +20441,7 @@
 - raw: "长兵45;力道25"
   splits:
   - text: "长兵45"
-    translated: "Long Sword 45"
+    translated: "Long weapon 45"
   - subIndex: 1
     text: "力道25"
     translated: "Strength 25"
@@ -20692,7 +20692,7 @@
 - raw: "长兵潜力2;长兵1;经脉1"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "长兵1"
     translated: "Long weapon 1"
@@ -20771,7 +20771,7 @@
 - raw: "长兵45;力道60"
   splits:
   - text: "长兵45"
-    translated: "Long Sword 45"
+    translated: "Long weapon 45"
   - subIndex: 1
     text: "力道60"
     translated: "Strength 60"
@@ -20908,7 +20908,7 @@
     translated: "Meridian 3"
   - subIndex: 1
     text: "长兵5"
-    translated: "Long Sword 5"
+    translated: "Long weapon 5"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -21062,7 +21062,7 @@
     translated: "1 stamina"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1}"
 - raw: "胸6"
@@ -21110,7 +21110,7 @@
     translated: "0.003 healing"
   - subIndex: 6
     text: "长兵威力0.03"
-    translated: "Longsword power 0.03"
+    translated: "Long weapon power 0.03"
   templates:
   - template: "{0};{1};{2};{3};{4};{5};{6}"
 - raw: "衔枚疾走"
@@ -21126,7 +21126,7 @@
     translated: "Speed 0.03"
   - subIndex: 2
     text: "长兵威力0.03"
-    translated: "Longsword power 0.03"
+    translated: "Long weapon power 0.03"
   templates:
   - template: "{0};{1};{2}"
 - raw: "轻功10;意志5"
@@ -21188,7 +21188,7 @@
 - raw: "长兵15;意志10"
   splits:
   - text: "长兵15"
-    translated: "Long Sword 15"
+    translated: "Long weapon 15"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -21208,13 +21208,13 @@
     translated: "2 stamina"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1}"
 - raw: "长兵20;体质10"
   splits:
   - text: "长兵20"
-    translated: "Long Swords20"
+    translated: "Long weapon 20"
   - subIndex: 1
     text: "体质10"
     translated: "10 stamina"
@@ -21234,7 +21234,7 @@
     translated: "Strength 3"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1}"
 - raw: "流血0.06"
@@ -21361,7 +21361,7 @@
     translated: "2 stamina"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -21450,7 +21450,7 @@
 - raw: "长兵20;力道25"
   splits:
   - text: "长兵20"
-    translated: "Long Swords20"
+    translated: "Long weapon 20"
   - subIndex: 1
     text: "力道25"
     translated: "Strength 25"
@@ -21539,7 +21539,7 @@
     translated: "Penetrate0.05"
   - subIndex: 2
     text: "长兵威力0.05"
-    translated: "The power of long‑range weapons 0.05"
+    translated: "Long weapon power 0.05"
   templates:
   - template: "{0};{1};{2}"
 - raw: "轻功40;力道25"
@@ -21656,7 +21656,7 @@
 - raw: "长兵35;意志30"
   splits:
   - text: "长兵35"
-    translated: "Long Sword 35"
+    translated: "Long weapon 35"
   - subIndex: 1
     text: "意志30"
     translated: "Willpower 30"
@@ -21711,7 +21711,7 @@
 - raw: "长兵45;力道40"
   splits:
   - text: "长兵45"
-    translated: "Long Sword 45"
+    translated: "Long weapon 45"
   - subIndex: 1
     text: "力道40"
     translated: "Strength 40"
@@ -21812,7 +21812,7 @@
     translated: "Invincibility 0.05"
   - subIndex: 3
     text: "长兵威力0.05"
-    translated: "The power of long‑range weapons 0.05"
+    translated: "Long weapon power 0.05"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "轻功50;体质45;力道35"
@@ -21947,7 +21947,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "长兵5"
-    translated: "Long Sword 5"
+    translated: "Long weapon 5"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -21996,7 +21996,7 @@
 - raw: "长兵潜力2;长兵1;力道1"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "长兵1"
     translated: "Long weapon 1"
@@ -22017,7 +22017,7 @@
 - raw: "长兵55;力道40"
   splits:
   - text: "长兵55"
-    translated: "Long Sword 55"
+    translated: "Long weapon 55"
   - subIndex: 1
     text: "力道40"
     translated: "Strength 40"
@@ -22149,13 +22149,13 @@
 - raw: "长兵潜力2;意志潜力1;长兵2"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "意志潜力1"
     translated: "Potential willpower 1"
   - subIndex: 2
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1};{2}"
 - raw: "力道1;意志2;体质3;长兵2"
@@ -22170,13 +22170,13 @@
     translated: "3 stamina"
   - subIndex: 3
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "长兵75;力道60;意志45"
   splits:
   - text: "长兵75"
-    translated: "Long Sword 75"
+    translated: "Long weapon 75"
   - subIndex: 1
     text: "力道60"
     translated: "Strength 60"
@@ -29455,7 +29455,7 @@
     translated: "1 stamina"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -29471,7 +29471,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   templates:
   - template: "{0};{1}"
 - raw: "急速0.04"
@@ -29677,7 +29677,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -29899,7 +29899,7 @@
     translated: "3 stamina"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -29916,7 +29916,7 @@
 - raw: "长兵25;意志15"
   splits:
   - text: "长兵25"
-    translated: "Long Sword 25"
+    translated: "Long weapon 25"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -30237,7 +30237,7 @@
     translated: "4 physique"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -30289,7 +30289,7 @@
 - raw: "长兵45;意志35"
   splits:
   - text: "长兵45"
-    translated: "Long Sword 45"
+    translated: "Long weapon 45"
   - subIndex: 1
     text: "意志35"
     translated: "35 will not be altered"
@@ -30669,7 +30669,7 @@
 - raw: "长兵潜力2;长兵1;智力1"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "长兵1"
     translated: "Long weapon 1"
@@ -30751,7 +30751,7 @@
     translated: "4 physique"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -31014,7 +31014,7 @@
 - raw: "长兵潜力2;体质潜力1;经脉潜力1"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "体质潜力1"
     translated: "Potential in constitution 1"
@@ -31041,7 +31041,7 @@
 - raw: "长兵75;体质60;力道45"
   splits:
   - text: "长兵75"
-    translated: "Long Sword 75"
+    translated: "Long weapon 75"
   - subIndex: 1
     text: "体质60"
     translated: "60 stamina"
@@ -32510,7 +32510,7 @@
 - raw: "长兵5;意志5"
   splits:
   - text: "长兵5"
-    translated: "Long Sword 5"
+    translated: "Long weapon 5"
   - subIndex: 1
     text: "意志5"
     translated: "5 will"
@@ -32835,7 +32835,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -32844,7 +32844,7 @@
 - raw: "长兵25;意志25"
   splits:
   - text: "长兵25"
-    translated: "Long Sword 25"
+    translated: "Long weapon 25"
   - subIndex: 1
     text: "意志25"
     translated: "25 will"
@@ -35620,7 +35620,7 @@
 - raw: "长兵10;体质15"
   splits:
   - text: "长兵10"
-    translated: "Long Soldier 10"
+    translated: "Long weapon 10"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -35794,7 +35794,7 @@
 - raw: "长兵25;体质30"
   splits:
   - text: "长兵25"
-    translated: "Long Sword 25"
+    translated: "Long weapon 25"
   - subIndex: 1
     text: "体质30"
     translated: "30 stamina"
@@ -36253,7 +36253,7 @@
 - raw: "长兵潜力2;长兵1;体质1"
   splits:
   - text: "长兵潜力2"
-    translated: "Potential of Long Soldiers 2"
+    translated: "Long weapon potential 2"
   - subIndex: 1
     text: "长兵1"
     translated: "Long weapon 1"
@@ -37507,7 +37507,7 @@
 - raw: "长兵15;意志15"
   splits:
   - text: "长兵15"
-    translated: "Long Sword 15"
+    translated: "Long weapon 15"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -37679,7 +37679,7 @@
 - raw: "长兵30;意志25"
   splits:
   - text: "长兵30"
-    translated: "Long Sword 30"
+    translated: "Long weapon 30"
   - subIndex: 1
     text: "意志25"
     translated: "25 will"
@@ -37943,7 +37943,7 @@
     translated: "4 will"
   - subIndex: 1
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -37952,7 +37952,7 @@
 - raw: "长兵45;意志30"
   splits:
   - text: "长兵45"
-    translated: "Long Sword 45"
+    translated: "Long weapon 45"
   - subIndex: 1
     text: "意志30"
     translated: "Willpower 30"
@@ -38169,7 +38169,7 @@
 - raw: "长兵55;意志50;锻造35"
   splits:
   - text: "长兵55"
-    translated: "Long Sword 55"
+    translated: "Long weapon 55"
   - subIndex: 1
     text: "意志50"
     translated: "50 willpower"
@@ -42990,7 +42990,7 @@
     translated: "4 will"
   - subIndex: 2
     text: "长兵2"
-    translated: "Long Sword 2"
+    translated: "Long weapon 2"
   - subIndex: 3
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -43637,7 +43637,7 @@
 - raw: "长兵威力"
   splits:
   - text: "长兵威力"
-    translated: "Long‑range weapon power"
+    translated: "Long weapon power"
 - raw: "奇门威力"
   splits:
   - text: "奇门威力"
@@ -43697,7 +43697,7 @@
 - raw: "长兵潜力"
   splits:
   - text: "长兵潜力"
-    translated: "Potential of Long Soldiers"
+    translated: "Long weapon potential"
 - raw: "奇门潜力"
   splits:
   - text: "奇门潜力"
@@ -44077,7 +44077,7 @@
 - raw: "长兵距离"
   splits:
   - text: "长兵距离"
-    translated: "Long‑range weaponry"
+    translated: "Long weapon distance"
 - raw: "奇门距离"
   splits:
   - text: "奇门距离"
@@ -44113,7 +44113,7 @@
 - raw: "恶名减少"
   splits:
   - text: "恶名减少"
-    translated: "Reputation decrease"
+    translated: "Infamy reduced"
 - raw: "姜.映泉"
   splits:
   - text: "姜.映泉"
@@ -51136,7 +51136,7 @@
 - raw: "为周边受伤侠士疗伤治病"
   splits:
   - text: "为周边受伤侠士疗伤治病"
-    translated: "Treat wounded warriors nearby"
+    translated: "Tend to the injuries of nearby Heroes"
 - raw: "休养恢复状态"
   splits:
   - text: "休养恢复状态"
@@ -51382,7 +51382,7 @@
 - raw: "管理自身恶名"
   splits:
   - text: "管理自身恶名"
-    translated: "Manage one's own reputation for ill"
+    translated: "Manage one's own infamy"
 - raw: "资源贸易"
   splits:
   - text: "资源贸易"
@@ -51478,7 +51478,7 @@
 - raw: "提升当地治安并减少恶名"
   splits:
   - text: "提升当地治安并减少恶名"
-    translated: "Improve local law and order and reduce notoriety"
+    translated: "Improve local law and order and reduce infamy"
 - raw: "整备"
   splits:
   - text: "整备"
@@ -51590,11 +51590,11 @@
 - raw: "与周边侠士宴饮增进关系"
   splits:
   - text: "与周边侠士宴饮增进关系"
-    translated: "Socialize and improve relations with nearby warriors by feasting together."
+    translated: "Drink and socialize with nearby Heroes to improve relationships"
 - raw: "与侠士掷骰赌博一试手气"
   splits:
   - text: "与侠士掷骰赌博一试手气"
-    translated: "Challenge the xia Shi to a game of dice to test their luck"
+    translated: "Try your luck with the Hero in a game of dice."
 - raw: "雇佣保镖随行护卫"
   splits:
   - text: "雇佣保镖随行护卫"
@@ -51670,7 +51670,7 @@
 - raw: "提升长兵潜力"
   splits:
   - text: "提升长兵潜力"
-    translated: "Boost long‑soldier potential"
+    translated: "Boost the potential of long weapons"
 - raw: "枪术"
   splits:
   - text: "枪术"

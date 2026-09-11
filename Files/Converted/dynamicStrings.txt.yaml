@@ -83,7 +83,7 @@
 - raw: "#$PlayerName#？\n你恶名昭著，我与你无话可说，快走吧！"
   splits:
   - text: "你恶名昭著，我与你无话可说，快走吧！"
-    translated: "You are notorious; I have nothing to say to you, get lost!"
+    translated: "You are infamously notorious; I have nothing to say to you, so go on!"
   templates:
   - template: "#$PlayerName#？\n{0}"
 - raw: "#$PlayerName#？你是看我身陷囹圄，特地来嘲笑的吗？\n我与你无话可说，快滚吧！"
@@ -522,7 +522,7 @@
     translated: "The Day You May Step Down"
   - subIndex: 2
     text: "门客叛离门派会固定增加50点恶名，且90天内不能拜师或加入其他门派"
-    translated: "Retainers who betray their sect will permanently gain 50 reputation points, and they cannot apprentice or join another sect for 90 days."
+    translated: "Leaving a sect will fixedly increase 50 points of infamy, and one cannot apprentice or join another sect for 90 days."
   templates:
   - template: "{0}⟦0⟧{1}\n({2})"
 - raw: "#PlayerName#你似乎有话想说？"
@@ -2100,7 +2100,7 @@
     translated: "#PlayerName# must defeat me in our sparing match to prove that he is worthy of being the Sect Leader."
   - subIndex: 1
     text: "奈何掌门我近来旧伤未愈，状态不佳，#PlayerName#还是等我养好伤再来吧。"
-    translated: "How can I, with my recent injuries not yet healed, be in poor condition, #PlayerName#? You'd better wait until I recover before coming back."
+    translated: "How can I, the Sect Leader, face you with my old wounds not fully healed and in poor condition. #PlayerName#, you should wait until I have healed before coming back."
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#需得击败我们二人，方能算作此次挑战成功！"
@@ -2184,7 +2184,7 @@
 - raw: "#PlayerName#，来的正巧，本掌门正准备上台比试。\n你不妨也一道向各大门派高手讨教讨教，定会对日后修炼大有裨益。"
   splits:
   - text: "#PlayerName#，来的正巧，本掌门正准备上台比试。"
-    translated: "#PlayerName#, you come at the right time; I was just about to step onto the stage to compete."
+    translated: "#PlayerName#, you come just in time. The Sect Leader was just about to step onto the stage for the trial."
   - subIndex: 1
     text: "你不妨也一道向各大门派高手讨教讨教，定会对日后修炼大有裨益。"
     translated: "You might also benefit greatly from consulting the experts of the various sects."
@@ -2853,7 +2853,7 @@
     translated: "Current Arena Battle Success Rate"
   - subIndex: 3
     text: "，预计增加恶名"
-    translated: ", Expected increase in notoriety"
+    translated: ", Expected increase in infamy"
   - subIndex: 4
     text: "点。"
     translated: "Dot"
@@ -2874,7 +2874,7 @@
     translated: "Current strategy success rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ", Expected increase in notoriety"
+    translated: ", Expected increase in infamy"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -2895,7 +2895,7 @@
     translated: "Current grapple success rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ", Expected increase in notoriety"
+    translated: ", Expected increase in infamy"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -3396,19 +3396,19 @@
 - raw: "(当前处在城镇内，行凶恶名x200%)"
   splits:
   - text: "当前处在城镇内，行凶恶名"
-    translated: "Currently in the town, committing acts that will earn a wicked reputation"
+    translated: "Current infamy persists within the town, where the murder occurred."
   templates:
   - template: "({0}x200%)"
 - raw: "(当前处在城镇周边，行凶恶名x150%)"
   splits:
   - text: "当前处在城镇周边，行凶恶名"
-    translated: "Currently in the outskirts of the town, with a reputation for violence."
+    translated: "Current location is near the town, where infamy prevails."
   templates:
   - template: "({0}x150%)"
 - raw: "(当前处在野外，行凶恶名x100%)"
   splits:
   - text: "当前处在野外，行凶恶名"
-    translated: "Currently in the wild, their reputation for violent deeds has spread far and wide."
+    translated: "Current location is outdoors, and committing a crime will earn you infamy."
   templates:
   - template: "({0}x100%)"
 - raw: "(快捷键E)"
@@ -6114,7 +6114,7 @@
     translated: "Silver has decreased"
   - subIndex: 3
     text: "点恶名。"
-    translated: "Click the Reputation for Evil"
+    translated: "Gain Infamy"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦3⟧{2}⟦2⟧{3}"
 - raw: "{0}在{1}与{2}交流心得，切磋武艺，最终{3}。"
@@ -7779,7 +7779,7 @@
     translated: "Reputation bonus"
   - subIndex: 1
     text: "恶名减少"
-    translated: "Reputation decrease"
+    translated: "Infamy reduced"
   templates:
   - template: "⟦1⟧\n{0}⟦2⟧%\n{1}⟦3⟧%\n⟦0⟧"
 - raw: "{1}\n好感加成{2}%\n恶名减少{3}%\n{0}"
@@ -7788,7 +7788,7 @@
     translated: "Goodwill Boost"
   - subIndex: 1
     text: "恶名减少"
-    translated: "Reputation decrease"
+    translated: "Infamy reduced"
   templates:
   - template: "⟦1⟧\n{0}⟦2⟧%\n{1}⟦3⟧%\n⟦0⟧"
 - raw: "{1}“{0}”之高，\n令我眼界大开"
@@ -10445,7 +10445,7 @@
     translated: "Current stealth success rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ", Expected increase in notoriety"
+    translated: ", Expected increase in infamy"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -10812,7 +10812,7 @@
     translated: "Friendship affinity gain +10%, affinity consumption"
   - subIndex: 2
     text: "对好友作恶，恶名"
-    translated: "Marring a friend, gaining notoriety"
+    translated: "To do evil to a friend, infamy"
   templates:
   - template: "{0};AskHeroMakeFriend;;;♦{1}-10%\n♦{2}x200%;FavorDegree/50"
 - raw: "交换"
@@ -10864,7 +10864,7 @@
     translated: "Intimate Relationship Goodwill Gain +20%, Goodwill Consumption"
   - subIndex: 2
     text: "对亲友作恶，恶名"
-    translated: "Doing evil to relatives and friends, acquiring a wicked reputation"
+    translated: "To wrong friends and family, infamy"
   templates:
   - template: "{0};AskHeroMakeFriend;;;♦{1}-20%\n♦{2}x400%"
 - raw: "亲属"
@@ -11294,7 +11294,7 @@
     translated: "Work profession"
   - subIndex: 1
     text: "降低恶名"
-    translated: "Reduce notoriety"
+    translated: "Reduce infamy"
   templates:
   - template: "{0}_{1}"
 - raw: "从二品"
@@ -11444,7 +11444,7 @@
 - raw: "以少侠目前的职位，需要消耗{0}点官府功绩，\n便可传令一名官差贴身护卫三十日。"
   splits:
   - text: "以少侠目前的职位，需要消耗"
-    translated: "With your current title, you need to consume"
+    translated: "With your current position as a Young Hero, you need to consume"
   - subIndex: 1
     text: "点官府功绩，"
     translated: "Click on official achievements"
@@ -11456,7 +11456,7 @@
 - raw: "以少侠目前的职位，需要消耗{1}点官府功绩，\n方可从大内库房中随机调取一件{0}作为奖赏。"
   splits:
   - text: "以少侠目前的职位，需要消耗"
-    translated: "With your current title, you need to consume"
+    translated: "With your current position as a Young Hero, you need to consume"
   - subIndex: 1
     text: "点官府功绩，"
     translated: "Click on official achievements"
@@ -11833,7 +11833,7 @@
     translated: "Spending generously, he came in first"
   - subIndex: 4
     text: "等侠士也各有斩获。"
-    translated: "While warriors also gain various advantages"
+    translated: "When the Hero also reaps their rewards"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}⟦3⟧，⟦4⟧{4}"
 - raw: "传闻{0}举办了一场{1}赛马大会，{2}一骑当先，勇夺冠军，而{3}，{4}则分列第二第三。"
@@ -12159,7 +12159,7 @@
     translated: "Hmph, you've been committing wicked deeds recently, haven't you?"
   - subIndex: 2
     text: "恶名。"
-    translated: "Reputation"
+    translated: "Infamy"
   - subIndex: 3
     text: "为了搜捕你，可费了咱们不少功夫。"
     translated: "It took us quite a bit of effort to track you down."
@@ -12168,7 +12168,7 @@
 - raw: "你我两派交情深厚，本掌门亦早有结盟之意。既然#PlayerName#也赞同此事，\n那咱们两派从今日起便结为同盟，从此同气连枝，并肩对敌！"
   splits:
   - text: "你我两派交情深厚，本掌门亦早有结盟之意。既然#PlayerName#也赞同此事，"
-    translated: "Our two sects have a deep friendship, and I have long had the intention to form an alliance. Since #PlayerName# also agrees with this,"
+    translated: "Our two sects have a deep relationship, and I, the Sect Leader, have long had the intent to form an alliance. Since #PlayerName# also agrees with this,"
   - subIndex: 1
     text: "那咱们两派从今日起便结为同盟，从此同气连枝，并肩对敌！"
     translated: "Let our two factions form an alliance from today onwards. Henceforth, we shall stand together like sisters, facing our enemies side by side!"
@@ -12291,7 +12291,7 @@
     translated: ", Leaving the Sect will fixedly increase"
   - subIndex: 3
     text: "点恶名，且"
-    translated: "Gain notoriety, and"
+    translated: "Point Infamy, and"
   - subIndex: 4
     text: "天内不能拜师或加入其他门派"
     translated: "You cannot apprentice or join another sect within a month."
@@ -12929,7 +12929,7 @@
 - raw: "全局恶名修正{0}%{1}"
   splits:
   - text: "全局恶名修正"
-    translated: "Global notoriety correction"
+    translated: "Global InfamyCorrection"
   templates:
   - template: "{0}⟦0⟧%⟦1⟧"
 - raw: "全部"
@@ -13583,7 +13583,7 @@
     translated: "Inflicted serious injuries on the opponent"
   - subIndex: 2
     text: "增加10恶名"
-    translated: "Increase10Notoriety"
+    translated: "Increase 10 Infamy"
   templates:
   - template: "{0};DeathFightHurtHero;;;♦{1}\n♦{2}"
 - raw: "出手偷窃;StealNPCItemSure"
@@ -13688,7 +13688,7 @@
     translated: "Decrease 100 points of goodwill"
   - subIndex: 3
     text: "固定增加20恶名"
-    translated: "Fixed increase 20 Notorious Rating"
+    translated: "Fixed increase Infamy by 20"
   templates:
   - template: "{0};LoverAskHeroBreakup;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "分文不取;ChooseDoctorResult;0-"
@@ -13871,7 +13871,7 @@
     translated: "Don't look at us as unremarkable; we have a wealth of talent and hidden dragons."
   - subIndex: 1
     text: "少侠行走江湖若遇到什么不便之处，掌柜的可以为您介绍一名江湖人士作为保镖。"
-    translated: "While navigating the Jianghu, they can seek assistance from the shopkeeper to be introduced to a figure from the Jianghu for protection."
+    translated: "If you encounter any inconvenience in the Jianghu, the shopkeeper can introduce you to a Hero as a bodyguard."
   - subIndex: 2
     text: "不仅价钱实惠，而且定能竭智尽忠，替您分忧解难！"
     translated: "Not only is it affordable, but it will also dedicate itself wholeheartedly to alleviating your troubles!"
@@ -14325,7 +14325,7 @@
     translated: "Retrieve an item from the bandit's body"
   - subIndex: 2
     text: "增加少许恶名"
-    translated: "Increase a little notoriety"
+    translated: "Increase some Infamy"
   templates:
   - template: "{0};RobRandomEnmey;;;♦{1}\n♦{2}"
 - raw: "包在我身上;AcceptLittleMission;0"
@@ -15337,7 +15337,7 @@
     translated: "As long as you continuously complete commissions from the government to capture bandits in the wilderness and accumulate merit,"
   - subIndex: 1
     text: "相信以少侠的武功，不多时便可升官进职。"
-    translated: "I believe that with your martial arts skills, you won't be long in advancing in your official position."
+    translated: "I believe that with your martial arts skills, young hero, you will soon be promoted and rise through the ranks."
   templates:
   - template: "{0}\n{1}"
 - raw: "只要掌握朝廷的军权，便可以自此号令天下，莫敢不从。\n<color=red>选择入朝掌兵将会触发结局并解锁对应成就\n此后仍可继续游戏并触发其他结局</color>"
@@ -15811,10 +15811,10 @@
   - text: "后人将此段历史整理成册，抄写影印，使之流传千古直至现在。"
     translated: "Later generations compiled this historical segment into a book, copying and printing it to ensure its lasting legacy until today."
   - subIndex: 1
-    text: "这一故事，便被称作"
-    translated: "This tale is known as"
+    text: "这一故事，便被称作————————"
+    translated: "This story is known as ‑‑‑‑"
   templates:
-  - template: "{0}\n{1}————————"
+  - template: "{0}\n{1}"
 - raw: "后会有期;FinishEventMission"
   splits:
   - text: "后会有期"
@@ -15949,7 +15949,7 @@
     translated: "Current Raid Success Rate"
   - subIndex: 4
     text: "，预计增加恶名"
-    translated: ", Expected increase in notoriety"
+    translated: ", Expected increase in infamy"
   - subIndex: 5
     text: "点。"
     translated: "Dot"
@@ -17354,7 +17354,7 @@
 - raw: "哎，事到如今唯有投案自首了，虽说投案自首可减低10%的恶名，\n但之后恐怕还要在牢狱中度过{0}日，方能洗清身上的罪责。"
   splits:
   - text: "哎，事到如今唯有投案自首了，虽说投案自首可减低10%的恶名，"
-    translated: "Well, at this point, the only option is to turn myself in, though confessing will only reduce my notoriety by 10% as per the rules."
+    translated: "Well, now we can only turn ourselves in, though turning ourselves in can reduce our infamy by 10%."
   - subIndex: 1
     text: "但之后恐怕还要在牢狱中度过"
     translated: "But likely he will have to spend more time in prison."
@@ -19934,7 +19934,7 @@
 - raw: "夏天雄"
   splits:
   - text: "夏天雄"
-    translated: "Summer Valor"
+    translated: "Xia Tianxiong"
 - raw: "外交亲善"
   splits:
   - text: "外交亲善"
@@ -20185,7 +20185,7 @@
     translated: "Thank you, Young Hero, for rescuing me with righteousness! Too bad I have no money to repay you."
   - subIndex: 1
     text: "若不嫌弃，小人就把这件家传#PlotInteractItemName#，折价出售给少侠好了！"
-    translated: "If you don't mind, I'll sell this family heirloom #PlotInteractItemName# to you at a discounted price!"
+    translated: "If you don't mind, I'll sell this family heirloom #PlotInteractItemName# to you at a discounted price, Young Hero!"
   templates:
   - template: "{0}\n{1}"
 - raw: "多谢师傅！;RealCancelTeacher"
@@ -20420,7 +20420,7 @@
     translated: ", Goodwill Boost"
   - subIndex: 3
     text: "，恶名减少"
-    translated: ", Reputation decrease"
+    translated: ", Infamy reduced"
   - subIndex: 4
     text: "官府功绩为"
     translated: "Government service merits are"
@@ -21768,7 +21768,7 @@
     translated: "Very well. Though I am used to a peaceful life and do not enjoy noise."
   - subIndex: 1
     text: "少侠若无他事，就请原路返回吧。"
-    translated: "If you have no other business, please return the way you came."
+    translated: "Young Hero, if you have no other matters, please return the way you came."
   templates:
   - template: "{0}\n{1}"
 - raw: "如此成绩只能说聊胜于无，\n#SourceInteractName#你可得好好反省，万万不可再整日偷鸡摸狗，游手好闲了！"
@@ -21858,7 +21858,7 @@
     translated: ", True treasure, love it too much to put down!"
   - subIndex: 2
     text: "#PlayerName#此次劳苦功高，本掌门自会记在心里。"
-    translated: "#PlayerName#, this time you have made significant contributions, and I will certainly remember it in my heart."
+    translated: "#PlayerName#, this time you've made significant contributions. I, as the Sect Leader, will certainly remember it."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "妙哉妙哉，本门得此《{0}》，真可谓如鱼得水，如虎添翼！\n#PlayerName#此次劳苦功高，本掌门自会记在心里。"
@@ -21870,7 +21870,7 @@
     translated: ", It's truly like a fish in water, a tiger getting wings!"
   - subIndex: 2
     text: "#PlayerName#此次劳苦功高，本掌门自会记在心里。"
-    translated: "#PlayerName#, this time you have made significant contributions, and I will certainly remember it in my heart."
+    translated: "#PlayerName#, this time you've made significant contributions. I, as the Sect Leader, will certainly remember it."
   templates:
   - template: "{0}《⟦0⟧》{1}\n{2}"
 - raw: "妹"
@@ -21964,7 +21964,7 @@
     translated: "Jiang Wan"
   - subIndex: 1
     text: "小师妹突发高烧，卧病在床！#PlayerName#"
-    translated: "Junior Sister has suddenly developed a high fever and is bedridden! #PlayerName#"
+    translated: "The little junior sister suddenly developed a high fever and is bedridden! #PlayerName#"
   - subIndex: 2
     text: "速回门派"
     translated: "Speed back to the sect"
@@ -23270,7 +23270,7 @@
 - raw: "少侠目前在江湖中恶名为{0}，是否要洗心革面，重归正道呢？"
   splits:
   - text: "少侠目前在江湖中恶名为"
-    translated: "Young Hero is currently known in the Jianghu as"
+    translated: "Young Hero currently has an infamy in the Jianghu."
   - subIndex: 1
     text: "，是否要洗心革面，重归正道呢？"
     translated: ", Do you want to reform and return to the right path?"
@@ -23297,7 +23297,7 @@
     translated: "Taels, Reputation Bonus"
   - subIndex: 3
     text: "，恶名减少"
-    translated: ", Reputation decrease"
+    translated: ", Infamy reduced"
   - subIndex: 4
     text: "官府功绩为"
     translated: "Government service merits are"
@@ -23331,7 +23331,7 @@
 - raw: "少侠若以门派名义进贡，可以快速提升门派威望。\n若以江湖人士名义进贡，则可快速提升个人声望。\n若是以官员名义进贡，则可快速提升官府功绩。"
   splits:
   - text: "少侠若以门派名义进贡，可以快速提升门派威望。"
-    translated: "If you offer tribute in the name of your sect, it can quickly boost your sect's reputation."
+    translated: "Young Hero, if you make a contribution to the sect on behalf of the sect, it can quickly boost the sect's reputation."
   - subIndex: 1
     text: "若以江湖人士名义进贡，则可快速提升个人声望。"
     translated: "If you present the tribute in the name of a Jianghu practitioner, it can rapidly increase your personal reputation."
@@ -23343,10 +23343,10 @@
 - raw: "少侠若在此处捐赠银两，修缮祠堂或是分发给穷苦百姓，便能削减在江湖中留下的恶名。\n以少侠当前的名望，在此处布施三日，需消耗{0}两银钱。"
   splits:
   - text: "少侠若在此处捐赠银两，修缮祠堂或是分发给穷苦百姓，便能削减在江湖中留下的恶名。"
-    translated: "If a hero donates silver here to repair the ancestral hall or distribute to the poor, it can diminish the bad reputation left in the Jianghu."
+    translated: "If a young hero donates silver here to repair the ancestral hall or distribute it to the poor, it can reduce the infamy you leave in the Jianghu."
   - subIndex: 1
     text: "以少侠当前的名望，在此处布施三日，需消耗"
-    translated: "With your current reputation, granting alms here for three days will require the consumption of"
+    translated: "With your current reputation, young hero, providing charity here for three days will require"
   - subIndex: 2
     text: "两银钱。"
     translated: "Silver coins"
@@ -25164,7 +25164,7 @@
 - raw: "思中澜"
   splits:
   - text: "思中澜"
-    translated: "Think Zhong Lan"
+    translated: "Si Zhonglan"
 - raw: "思过"
   splits:
   - text: "思过"
@@ -25287,11 +25287,11 @@
 - raw: "恶名"
   splits:
   - text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
 - raw: "恶名\n城镇内x200%"
   splits:
   - text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
   - subIndex: 1
     text: "城镇内"
     translated: "Within the town"
@@ -25300,7 +25300,7 @@
 - raw: "恶名\n安全区内x150%"
   splits:
   - text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
   - subIndex: 1
     text: "安全区内"
     translated: "In the safe zone"
@@ -25309,7 +25309,7 @@
 - raw: "恶名\n野外x100%"
   splits:
   - text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
   - subIndex: 1
     text: "野外"
     translated: "Outdoor"
@@ -25318,7 +25318,7 @@
 - raw: "恶名获取"
   splits:
   - text: "恶名获取"
-    translated: "Reputation Gain"
+    translated: "Infamy Earned"
 - raw: "恶斗"
   splits:
   - text: "恶斗"
@@ -25983,7 +25983,7 @@
     translated: "I was thinking the same thing!"
   - subIndex: 1
     text: "能与#PlayerName#这样的侠士结为生死之交，实乃人生一大快事！"
-    translated: "To form a life‑and‑death friendship with a warrior like #PlayerName# is truly a great joy in life!"
+    translated: "To be able to form a life‑and‑death friendship with a Hero like #PlayerName# is indeed a great joy in life!"
   templates:
   - template: "{0}\n{1}"
 - raw: "我亦早有此意！\n大丈夫当纵横天下，岂可在牢狱中虚度年月。\n就等#PlayerName#你一声令下，我们便一起动手！"
@@ -26293,7 +26293,7 @@
     translated: "Current theft success rate"
   - subIndex: 3
     text: "，预计增加恶名"
-    translated: ", Expected increase in notoriety"
+    translated: ", Expected increase in infamy"
   - subIndex: 4
     text: "点。"
     translated: "Dot"
@@ -26518,7 +26518,7 @@
 - raw: "我目前在江湖中并无恶名，何必庸人自扰。"
   splits:
   - text: "我目前在江湖中并无恶名，何必庸人自扰。"
-    translated: "I have no bad reputation in the Jianghu, why bother myself with such trivial matters."
+    translated: "I currently have no infamy in the Jianghu, why bother myself over it."
 - raw: "我目前尚未担任官职，恐怕没有渠道以行进贡之事。"
   splits:
   - text: "我目前尚未担任官职，恐怕没有渠道以行进贡之事。"
@@ -27481,7 +27481,7 @@
     translated: "Steal an item from the opponent"
   - subIndex: 2
     text: "根据物品价值增加恶名"
-    translated: "Based on the item's value, notoriety increases"
+    translated: "According to the item's value, Infamy increases"
   templates:
   - template: "{0};DeathFightRobHero;;;♦{1}\n♦{2}"
 - raw: "抢夺银两"
@@ -27497,7 +27497,7 @@
     translated: "Take about half of the opponent's silver coins"
   - subIndex: 2
     text: "根据抢夺数额增加恶名"
-    translated: "Based on the amount stolen, reputation points are increased."
+    translated: "Based on the amount taken, Infamy increases"
   templates:
   - template: "{0};DeathFightRobHeroMoney;;;♦{1}\n♦{2}"
 - raw: "抢夺银两;RobBuildingShopMoney"
@@ -28765,7 +28765,7 @@
     translated: "Decrease 100 points of goodwill"
   - subIndex: 3
     text: "固定增加20恶名"
-    translated: "Fixed increase 20 Notorious Rating"
+    translated: "Fixed increase Infamy by 20"
   templates:
   - template: "{0};AskHeroCancelBrother;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "断交;AskHeroCancelFriend;;;♦与对方断绝好友关系\n♦降低50点好感\n♦固定增加10恶名"
@@ -28780,7 +28780,7 @@
     translated: "Decrease 50 points of favor"
   - subIndex: 3
     text: "固定增加10恶名"
-    translated: "Fixed increase 10 notoriety"
+    translated: "Fixed increase 10 Infamy"
   templates:
   - template: "{0};AskHeroCancelFriend;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "断绝了亲属关系"
@@ -30203,7 +30203,7 @@
 - raw: "本场考核就由掌门我亲自主持好了。\n#PlayerName#需得与我一较高下，方能证明自己之武功修为堪当本门{0}之重任。"
   splits:
   - text: "本场考核就由掌门我亲自主持好了。"
-    translated: "Let me personally host this evaluation session"
+    translated: "Let me, the Sect Leader, personally conduct this assessment."
   - subIndex: 1
     text: "#PlayerName#需得与我一较高下，方能证明自己之武功修为堪当本门"
     translated: "#PlayerName# must compete with me to prove that your martial arts proficiency is worthy of our sect."
@@ -31295,7 +31295,7 @@
 - raw: "欧长兵"
   splits:
   - text: "欧长兵"
-    translated: "Long Bing"
+    translated: "Ou Changbing"
 - raw: "欲寻人切磋武艺"
   splits:
   - text: "欲寻人切磋武艺"
@@ -31423,7 +31423,7 @@
     translated: "This... This is true?! Apprentice did not commit any major mistake, #PlayerName# really wants to expel me from the sect?"
   - subIndex: 1
     text: "强行逐出会降低对方100好感，固定增加25恶名"
-    translated: "Forcing someone out will decrease their good will towards you by 100, and fixedly increase your notoriety by 25."
+    translated: "Forcing expulsion will lower the other party's goodwill and permanently increase infamy by 100 and 25, respectively."
   templates:
   - template: "{0}\n({1})"
 - raw: "此...此话当真？！欺师灭祖乃是江湖大忌，#PlayerName#当真要背叛为师？\n(强行叛离会降低对方100好感，固定增加50恶名，且60天内不能拜师或加入其他门派)"
@@ -31432,7 +31432,7 @@
     translated: "This... are you serious?! Defying a master and erasing one's lineage is a great taboo in the Jianghu. Are you really planning to betray me, #PlayerName#?"
   - subIndex: 1
     text: "强行叛离会降低对方100好感，固定增加50恶名，且60天内不能拜师或加入其他门派"
-    translated: "While forcing a defection will decrease the other party's 100 hanɡan by a fixed amount, increase their 50 eminɡ by a fixed amount, and prevent them from taking on a disciple or joining another sect for 60 days."
+    translated: "Forcing a secession will decrease the other party's 100goodwill, fixed increase 50infamy, and you cannot apprentice or join another sect for 60 days."
   templates:
   - template: "{0}\n({1})"
 - raw: "此{0}{1}，论{2}，而{3}，且{4}，\n总体而言是一件{5}无疑。\n{6}"
@@ -32175,7 +32175,7 @@
     translated: "Daily can reduce"
   - subIndex: 1
     text: "点恶名，待恶名降低到0时便可出狱。"
-    translated: "Gain Notoriety Points and wait until they reach 0 to be released from prison."
+    translated: "Click to lower infamy; you can be released from prison when it reaches 0."
   - subIndex: 2
     text: "同时每日也会累积少量伤势，不过若能与看守更为熟络，便也能少受些罪。"
     translated: "At the same time, minor injuries would accumulate daily. However, if you could become more familiar with your guards, you would suffer less."
@@ -32840,7 +32840,7 @@
 - raw: "没想到徒儿武功竟在本掌门之上，当真是青出于蓝而胜于蓝！\n江山代有才人出，我们这些老一辈也是时候退位让贤了。"
   splits:
   - text: "没想到徒儿武功竟在本掌门之上，当真是青出于蓝而胜于蓝！"
-    translated: "I never expected my disciple's martial arts to be superior to mine. Truly, the blue outshines the indigo!"
+    translated: "My disciple's martial arts have actually surpassed those of this sect leader. Truly, the student has surpassed the master!"
   - subIndex: 1
     text: "江山代有才人出，我们这些老一辈也是时候退位让贤了。"
     translated: "There will always be new talents emerging in the land. It's time for us seniors to step aside and make way for the next generation."
@@ -36324,7 +36324,7 @@
     translated: "Increase"
   - subIndex: 2
     text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
   templates:
   - template: "{0};MercyRandomEnemy;⟦0⟧;;♦{1}⟦1⟧{2}"
 - raw: "算计"
@@ -36976,7 +36976,7 @@
     translated: "Decrease 150 points of favor"
   - subIndex: 3
     text: "固定增加40恶名"
-    translated: "Fixed increase 40 notoriety"
+    translated: "Fixed increase Infamy by 40"
   templates:
   - template: "{0};LoverAskHeroBreakup;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "绢袍"
@@ -37232,7 +37232,7 @@
 - raw: "老朽观少侠器宇不凡，正是我苦等多时的有缘者。\n今天这批珍宝，便交由少侠任意处置了。"
   splits:
   - text: "老朽观少侠器宇不凡，正是我苦等多时的有缘者。"
-    translated: "Old Sage views thy bearing and finds thee most extraordinary, indeed the destined one I have awaited for so long."
+    translated: "Old Sage views you, Young Hero, and finds your bearing exceptional. You are the destined one I have been waiting for."
   - subIndex: 1
     text: "今天这批珍宝，便交由少侠任意处置了。"
     translated: "Today, these treasures are left for the Young Hero to dispose of at his discretion."
@@ -37760,28 +37760,28 @@
   - text: "舵主属性总和"
     translated: "Captain's total attributes"
   - subIndex: 1
-    text: "每月人口"
-    translated: "Monthly population"
+    text: "—每月人口"
+    translated: "‑monthly population"
   - subIndex: 2
-    text: "每月民心"
-    translated: "Monthly public opinion"
+    text: "—每月民心"
+    translated: "‑Monthly Public Sentiment"
   - subIndex: 3
     text: "舵主武学总和"
     translated: "Master of Martial Arts"
   - subIndex: 4
-    text: "每月治安"
-    translated: "Monthly public safety"
+    text: "—每月治安"
+    translated: "‑Monthly Public Safety‑"
   - subIndex: 5
-    text: "每月防御"
-    translated: "Monthly defense"
+    text: "—每月防御"
+    translated: "‑monthly defense"
   - subIndex: 6
     text: "舵主技艺总和"
     translated: "Captain's Skill Overview"
   - subIndex: 7
-    text: "全城生产效率"
-    translated: "City‑wide productivity"
+    text: "—全城生产效率"
+    translated: "‑Citywide Production Efficiency"
   templates:
-  - template: "{0}⟦4⟧\n—{1}⟦0⟧\n—{2}⟦1⟧\n{3}⟦5⟧\n—{4}⟦2⟧\n—{5}⟦2⟧\n{6}⟦6⟧\n—{7}⟦3⟧%"
+  - template: "{0}⟦4⟧\n{1}⟦0⟧\n{2}⟦1⟧\n{3}⟦5⟧\n{4}⟦2⟧\n{5}⟦2⟧\n{6}⟦6⟧\n{7}⟦3⟧%"
 - raw: "良"
   splits:
   - text: "良"
@@ -38125,7 +38125,7 @@
 - raw: "若要将少侠当前的恶名与悬赏一笔勾销，非得缴纳{0}两罚金不可。"
   splits:
   - text: "若要将少侠当前的恶名与悬赏一笔勾销，非得缴纳"
-    translated: "To settle the current bounty on the Young Hero's head and wipe the record clean, a substantial payment is required."
+    translated: "To settle the current infamy and bounty on the Young Hero's head, one must pay off"
   - subIndex: 1
     text: "两罚金不可。"
     translated: "No double fines"
@@ -38678,7 +38678,7 @@
     translated: "Travelling through the Jianghu, one is bound to suffer from bruises and injuries."
   - subIndex: 1
     text: "我在这附近游方行医多年，若少侠需要寻诊问药，只管开口便是！"
-    translated: "I have wandered and practiced medicine in these parts for many years. If you need to seek medical advice or medicine, just speak up!"
+    translated: "I have wandered and practiced medicine in these parts for many years. If you, young hero, need medical advice or medicine, just speak up!"
   templates:
   - template: "{0}\n{1}"
 - raw: "衙役"
@@ -39181,7 +39181,7 @@
 - raw: "计心狂"
   splits:
   - text: "计心狂"
-    translated: "Crazy Heart Desire"
+    translated: "Ji Xinkuang"
 - raw: "计略探索"
   splits:
   - text: "计略探索"
@@ -39449,7 +39449,7 @@
 - raw: "诶，本届比武大会竟是一名参与侠士都没有么...\n罢了罢了，那就下届再会吧。"
   splits:
   - text: "诶，本届比武大会竟是一名参与侠士都没有么..."
-    translated: "Hey, there don't seem to be any xia Shi participating in this martial arts competition..."
+    translated: "Hey, there isn't a single Hero participant in this Martial Arts Congress, is there..."
   - subIndex: 1
     text: "罢了罢了，那就下届再会吧。"
     translated: "All right, all right, then let's meet in the next iteration."
@@ -39458,7 +39458,7 @@
 - raw: "诶，本届赛马大会竟是一名参与侠士都没有么...\n罢了罢了，那就下届再会吧。"
   splits:
   - text: "诶，本届赛马大会竟是一名参与侠士都没有么..."
-    translated: "Hey, it seems there are no participating warriors at this iteration of the horse racing festival..."
+    translated: "Hey, there's not a single Hero participant in this horse racing gala..."
   - subIndex: 1
     text: "罢了罢了，那就下届再会吧。"
     translated: "All right, all right, then let's meet in the next iteration."
@@ -39467,7 +39467,7 @@
 - raw: "诶，本届辩才大会竟是一名参与侠士都没有么...\n罢了罢了，那就下届再会吧。"
   splits:
   - text: "诶，本届辩才大会竟是一名参与侠士都没有么..."
-    translated: "Hey, there isn't even a wuxia participant in this debate conference..."
+    translated: "Hey, there isn't even a Hero participant in this Debate Virtuoso Conference..."
   - subIndex: 1
     text: "罢了罢了，那就下届再会吧。"
     translated: "All right, all right, then let's meet in the next iteration."
@@ -40244,7 +40244,7 @@
     translated: "Clinch a grudge with the other sect and one's kin and friends"
   - subIndex: 3
     text: "根据对方身份等级增加大量恶名，每月最多1次"
-    translated: "Increase notoriety significantly based on the other party's rank, with a maximum of 1 times per month."
+    translated: "Gain a significant amount of Infamy based on the other party's rank each month, with a maximum of 1 times."
   templates:
   - template: "{0};DeathFightKillHero;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "趁#TargetInteractName#专心修炼此{0}之时偷师，成功概率自是大增。\n(偷师成功率 {1}%)"
@@ -40766,7 +40766,7 @@
     translated: "Number of people met"
   - subIndex: 10
     text: "总计恶名"
-    translated: "Total Notoriety"
+    translated: "Total Infamy"
   templates:
   - template: "{0}: ⟦0⟧\n{1}: ⟦11⟧\n{2}: ⟦1⟧\n{3}: ⟦8⟧\n{4}: ⟦9⟧\n{5}: ⟦2⟧ ({6}⟦3⟧ {7}⟦4⟧%)\n{8}: ⟦5⟧\n{9}: ⟦6⟧\n{10}: ⟦7⟧ (⟦10⟧)"
 - raw: "迁移"
@@ -41061,7 +41061,7 @@
     translated: "Martial arts"
   - subIndex: 2
     text: "少侠若想修习此功法，需在馆内学习"
-    translated: "If you wish to cultivate this martial art, you must study within the hall."
+    translated: "If you, Young Hero, wish to cultivate this cultivation method, you must learn it within the hall."
   - subIndex: 3
     text: "日，并支付"
     translated: "Day, and pay"
@@ -41676,7 +41676,7 @@
     translated: "But to say he is worthy of this..."
   - subIndex: 2
     text: "重任，还需证明你的武功修为更在本掌门之上方可。"
-    translated: "A great responsibility still requires proving that your martial arts cultivation is even surpasses mine."
+    translated: "A heavy responsibility still requires you to prove that your martial arts cultivation is even higher than that of this Sect Leader."
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "这些徒儿均已掌握;ForceFightChooseStartSkill;3"
@@ -42271,7 +42271,7 @@
     translated: "The cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent."
   - subIndex: 2
     text: "以少侠当前之天赋，在此处闭关十五日需消耗"
-    translated: "With your current talent, seclusion for fifteen days here will require"
+    translated: "With your current talent, young hero, closing yourself off for fifteen days here will require you to consume"
   - subIndex: 3
     text: "两银钱，预计可获得"
     translated: "Silver coins are expected to yield"
@@ -43363,11 +43363,11 @@
 - raw: "金龙生"
   splits:
   - text: "金龙生"
-    translated: "Living Golden Dragon"
+    translated: "Jin Longsheng"
 - raw: "金龙生显露出了全部实力！"
   splits:
   - text: "金龙生显露出了全部实力！"
-    translated: "Golden Dragon Qin showed off all his power!"
+    translated: "Jin Longsheng revealed all his power!"
 - raw: "鉴于我现在的{4}地位，\n{0}愿意将最高等级为{3}的库存物品售卖给我。"
   splits:
   - text: "鉴于我现在的"
@@ -44182,7 +44182,7 @@
 - raw: "阎罗王"
   splits:
   - text: "阎罗王"
-    translated: "King YanΝuo"
+    translated: "King Yama"
 - raw: "阎罗王斗志昂扬了！"
   splits:
   - text: "阎罗王斗志昂扬了！"
@@ -44335,7 +44335,7 @@
 - raw: "降低恶名"
   splits:
   - text: "降低恶名"
-    translated: "Reduce notoriety"
+    translated: "Reduce infamy"
 - raw: "降低自身被施加负面状态的概率"
   splits:
   - text: "降低自身被施加负面状态的概率"
@@ -44994,10 +44994,8 @@
     translated: "Additional Health Points"
 - raw: "额，我来选啊，那就……"
   splits:
-  - text: "额，我来选啊，那就"
-    translated: "Oh, I get to choose, then let's"
-  templates:
-  - template: "{0}……"
+  - text: "额，我来选啊，那就……"
+    translated: "Okay, I'll choose. So..."
 - raw: "风市"
   splits:
   - text: "风市"

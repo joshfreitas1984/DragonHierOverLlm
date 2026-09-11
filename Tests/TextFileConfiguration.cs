@@ -75,35 +75,35 @@ namespace Tests
             new() {Path = "TipsData.csv", PackageOutput = true },
             //new() {Path = "WeaponData.csv", PackageOutput = true, SkipColumns = [1] },
 
-            //// Main dialogue table. Columns 1-8 are non-narrative asset/routing keys (speaker
-            //// name/temp-NPC spawn record, highlight side, background image/music/sfx, reflection-
-            //// based call-function dispatch) - see docs/gamefilehandling-reference.md. Column 9
-            //// (choices) stays translated via the CustomColumnRepair/CustomColumnValidator
-            //// delimiter-preservation pattern above, not SkipColumns.
-            //new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [1, 2, 3, 4, 5, 6, 7, 8] },
+            // Main dialogue table. Columns 1-8 are non-narrative asset/routing keys (speaker
+            // name/temp-NPC spawn record, highlight side, background image/music/sfx, reflection-
+            // based call-function dispatch) - see docs/gamefilehandling-reference.md. Column 9
+            // (choices) stays translated via the CustomColumnRepair/CustomColumnValidator
+            // delimiter-preservation pattern above, not SkipColumns.
+            new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [1, 2, 3, 4, 5, 6, 7, 8] },
 
-            //// Flat prefab-text input; see docs/gamefilehandling-reference.md.
-            //new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
+            // Flat prefab-text input; see docs/gamefilehandling-reference.md.
+            new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
 
-            //// Additional flat PrefabText source; see docs/gamefilehandling-reference.md.
-            //new() {Path = "dumpedPrefabTextFromOtherFields.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
+            // Additional flat PrefabText source; see docs/gamefilehandling-reference.md.
+            new() {Path = "dumpedPrefabTextFromOtherFields.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText },
 
-            //// Flat IL2CPP dynamic-string input; see docs/gamefilehandling-reference.md.
-            //new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+            // Flat IL2CPP dynamic-string input; see docs/gamefilehandling-reference.md.
+            new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
-            //// Additional dynamic-string source; see docs/gamefilehandling-reference.md.
-            //new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+            // Additional dynamic-string source; see docs/gamefilehandling-reference.md.
+            new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
-            //// ';'-joined structured-record fragments parsed out of dynamicStrings.txt - split into
-            //// its own file (was previously mixed into dynamicStringsFromColumns.txt) so each
-            //// dynamic-string file's provenance is unambiguous. See
-            //// DynamicStringExtraction.ExtractStructuredRecordFragmentCandidates.
-            //new() {Path = "dynamicStringsFromStructuredFragments.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+            // ';'-joined structured-record fragments parsed out of dynamicStrings.txt - split into
+            // its own file (was previously mixed into dynamicStringsFromColumns.txt) so each
+            // dynamic-string file's provenance is unambiguous. See
+            // DynamicStringExtraction.ExtractStructuredRecordFragmentCandidates.
+            new() {Path = "dynamicStringsFromStructuredFragments.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
-            //// Stat-label fragments parsed out of dumpedOtherText.txt (e.g. "spellEffectString")
-            //// - split into its own file (was previously mixed into dynamicStringsFromColumns.txt).
-            //// See DynamicStringExtraction.ExtractOtherFieldLabelCandidates.
-            //new() {Path = "dynamicStringsFromOtherFieldLabels.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
+            // Stat-label fragments parsed out of dumpedOtherText.txt (e.g. "spellEffectString")
+            // - split into its own file (was previously mixed into dynamicStringsFromColumns.txt).
+            // See DynamicStringExtraction.ExtractOtherFieldLabelCandidates.
+            new() {Path = "dynamicStringsFromOtherFieldLabels.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP },
 
             // Poetry minigame ("对诗" fill-in-the-blank) candidates extracted directly from the
             // JSON TextAsset/PoetryData.txt - see PoetryDataWorkflow.ExtractPoetryCandidates.

@@ -392,7 +392,7 @@
     translated: "Friendship affinity gain +10%, affinity consumption"
   - subIndex: 1
     text: "对好友作恶，恶名"
-    translated: "Marring a friend, gaining notoriety"
+    translated: "To do evil to a friend, infamy"
   templates:
   - template: "♦{0}-10%\n♦{1}x200%"
 - raw: "♦亲密关系好感获取+20%，好感消耗-20%\n♦对亲友作恶，恶名x400%"
@@ -401,7 +401,7 @@
     translated: "Intimate Relationship Goodwill Gain +20%, Goodwill Consumption"
   - subIndex: 1
     text: "对亲友作恶，恶名"
-    translated: "Doing evil to relatives and friends, acquiring a wicked reputation"
+    translated: "To wrong friends and family, infamy"
   templates:
   - template: "♦{0}-20%\n♦{1}x400%"
 - raw: "以武论道"
@@ -650,7 +650,7 @@
     translated: "Inflicted serious injuries on the opponent"
   - subIndex: 1
     text: "增加10恶名"
-    translated: "Increase10Notoriety"
+    translated: "Increase 10 Infamy"
   templates:
   - template: "♦{0}\n♦{1}"
 - raw: "出手吧"
@@ -686,7 +686,7 @@
     translated: "Decrease 100 points of goodwill"
   - subIndex: 2
     text: "固定增加20恶名"
-    translated: "Fixed increase 20 Notorious Rating"
+    translated: "Fixed increase Infamy by 20"
   templates:
   - template: "♦{0}\n♦{1}\n♦{2}"
 - raw: "分文不取"
@@ -744,7 +744,7 @@
     translated: "Retrieve an item from the bandit's body"
   - subIndex: 1
     text: "增加少许恶名"
-    translated: "Increase a little notoriety"
+    translated: "Increase some Infamy"
   templates:
   - template: "♦{0}\n♦{1}"
 - raw: "包在我身上"
@@ -1320,7 +1320,7 @@
     translated: "Steal an item from the opponent"
   - subIndex: 1
     text: "根据物品价值增加恶名"
-    translated: "Based on the item's value, notoriety increases"
+    translated: "According to the item's value, Infamy increases"
   templates:
   - template: "♦{0}\n♦{1}"
 - raw: "♦抢夺对方约一半的银两\n♦根据抢夺数额增加恶名"
@@ -1329,7 +1329,7 @@
     translated: "Take about half of the opponent's silver coins"
   - subIndex: 1
     text: "根据抢夺数额增加恶名"
-    translated: "Based on the amount stolen, reputation points are increased."
+    translated: "Based on the amount taken, Infamy increases"
   templates:
   - template: "♦{0}\n♦{1}"
 - raw: "招揽"
@@ -1532,7 +1532,7 @@
     translated: "Decrease 100 points of goodwill"
   - subIndex: 2
     text: "固定增加20恶名"
-    translated: "Fixed increase 20 Notorious Rating"
+    translated: "Fixed increase Infamy by 20"
   templates:
   - template: "♦{0}\n♦{1}\n♦{2}"
 - raw: "断交"
@@ -1548,7 +1548,7 @@
     translated: "Decrease 50 points of favor"
   - subIndex: 2
     text: "固定增加10恶名"
-    translated: "Fixed increase 10 notoriety"
+    translated: "Fixed increase 10 Infamy"
   templates:
   - template: "♦{0}\n♦{1}\n♦{2}"
 - raw: "施以惩戒"
@@ -1889,7 +1889,7 @@
     translated: "Increase"
   - subIndex: 1
     text: "恶名"
-    translated: "Reputation"
+    translated: "Infamy"
   templates:
   - template: "♦{0}⟦1⟧{1}"
 - raw: "粗略挖掘"
@@ -1979,7 +1979,7 @@
     translated: "Decrease 150 points of favor"
   - subIndex: 2
     text: "固定增加40恶名"
-    translated: "Fixed increase 40 notoriety"
+    translated: "Fixed increase Infamy by 40"
   templates:
   - template: "♦{0}\n♦{1}\n♦{2}"
 - raw: "继续追踪"
@@ -2256,7 +2256,7 @@
     translated: "Clinch a grudge with the other sect and one's kin and friends"
   - subIndex: 2
     text: "根据对方身份等级增加大量恶名，每月最多1次"
-    translated: "Increase notoriety significantly based on the other party's rank, with a maximum of 1 times per month."
+    translated: "Gain a significant amount of Infamy based on the other party's rank each month, with a maximum of 1 times."
   templates:
   - template: "♦{0}\n♦{1}\n♦{2}"
 - raw: "超高价出售({0}两)"
