@@ -1752,10 +1752,6 @@
   - split: 4
     text: "号称鞭鞭夺命的阴毒鞭法，招招攻向敌人的软肋和要害处，其凶残狠辣常常令正派人士所不齿"
     translated: "Proudly called a fatal whip technique that strikes the enemy's vulnerable points and vital areas, its ruthless brutality often earns the disapproval of righteous individuals."
-    qcReviewedText: "Proudly called a fatal whip technique that strikes the enemy's vulnerable points and vital areas, its ruthless brutality often earns the disapproval of righteous individuals."
-    qcTranslated: "Proudly called a fatal whip technique that strikes the enemy's vulnerable points and vital areas, its ruthless brutality often earns the disapproval of righteous individuals. NONE"
-    qcStatus: Corrected
-    qcQualityScore: 85
 - raw: "191,奇门,2,乱披风锤法,以连续挥击而闻名，短时间内数十次挥出势大力沉之铁锤，即便身强体壮者有时也难以驾驭,15,0.9,奇门1;力道1;体质1,,力道2;体质3;奇门1,奇门15;力道20;体质30,\"0,1,2\",\"0,0,1\",连绵0.08,17,-1,0,头12;胸11,头4;胸4,,,skill2_2,,地震波-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5326,10 +5322,6 @@
   - split: 4
     text: "套路狂放，以力道取胜的拳法，由膂力过人者使出，劲风飒飒，声响刺耳，不明就里者只以为是冤鬼夜哭"
     translated: "Style Unleashed: A combat technique that relies on strength. It is performed by those with extraordinary physical power, creating gusts of wind and sharp sounds that can mislead the uninitiated into thinking it's the wailing of wronged ghosts at night."
-    qcReviewedText: "Style Unleashed: A combat technique that relies on strength. It is performed by those with extraordinary physical power, creating gusts of wind and sharp sounds that can mislead the uninitiated into thinking it's the wailing of wronged ghosts at night."
-    qcTranslated: "Style Unleashed: A combat technique that relies on strength. It is performed by those with extraordinary physical power, creating gusts of wind and sharp sounds that can mislead the uninitiated into thinking it's the wailing of wronged ghosts at night. NONE"
-    qcStatus: Corrected
-    qcQualityScore: 85
 - raw: "589,拳掌,2,朱砂掌,修习者需用手掌快速拍打灼热铁砂，直至难以忍受，功成后则掌心血红，掌力附带灼热真气，所中之处立时皮焦肉烂,14,1.1,拳掌1;经脉2,,经脉2;拳掌3;内力0.2,拳掌35;经脉20,\"1,1,1\",\"0,0,1\",内伤0.06;不愈0.04,15,8,0,心6;腹14,心3;腹8,,,skill0_1,,喷火-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6185,10 +6177,6 @@
   - split: 4
     text: "传佛祖初诞时曾作狮子吼，云天上地下唯吾独尊，修习者亦发此吼声，响彻云霄，纯澈嘹亮，声闻数里，堪令群魔肝胆俱裂"
     translated: "When the Buddha was first born, he roared like a lion, proclaiming that in heaven and on earth, none but I am supreme. Practitioners also utter this roar, resonating through the clouds with pure and piercing clarity, audible for miles and capable of cracking the hearts of demons."
-    qcReviewedText: "When the Buddha was first born, he roared like a lion, proclaiming that in heaven and on earth, none but I am supreme. Practitioners also utter this roar, resonating through the clouds with pure and piercing clarity, audible for miles and capable of cracking the hearts of demons."
-    qcTranslated: "When the Buddha was first born, he roared like a lion, proclaiming that in heaven and on earth, none but I am supreme. Practitioners also utter this roar, which echoes through the clouds with pure and piercing clarity, audible for miles and capable of cracking the hearts of demons."
-    qcStatus: Corrected
-    qcQualityScore: 95
 - raw: "683,拳掌,4,大力金刚掌,内外兼修，威力无穷之少林无上正宗掌法，出掌时金光四溢，声威震天，所到之处无论砖石金铁，皆会被碾作齑粉,23,1,力道潜力2;拳掌1;力道1,,力道5;拳掌2;内力0.2,拳掌55;力道45,\"4,0,0\",\"5,1,2\",眩晕0.06;断骨0.06,28,10,0,胸20;腹4,胸2;腹8,,,skill0_1,,佛散-Target-Grid-Start;地面打击2-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7907,10 +7895,10 @@
   - split: 4
     text: "专门锻炼手指臂膀的灵巧功夫，乃神机门正式弟子必修科目，若修习不精，打造机关时难免错漏百出"
     translated: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms."
-    qcRejectedCorrection: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms.\\nNONE"
+    qcRejectedCorrection: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms.\\nNone needed, but consider merging into a single sentence for fluency: \"Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect, will inevitably lead to mistakes when creating mechanisms if not practiced thoroughly.\""
     qcFailureReason: " Alternatives were provided when none should be given."
-    qcQualityScore: 95
-    qcRuleCheckFailureCount: 2
+    qcQualityScore: 85
+    qcRuleCheckFailureCount: 3
     qcRuleCheckFailureBaseline: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms."
 - raw: "873,奇门,2,玉石麒麟,以玉石装饰的铜制麒麟，奔跑纵跃颇为华丽好看，绕敌人移动时口中会不时喷出箭矢暗器，令人防不胜防,,1.1,奇门2;意志1,,,奇门30;智力30,\"0,1,1\",\"0,0,0\",,16,16,4,,,3,1,craft,,组装-Target-Grid-Start;烟雾-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
@@ -8726,8 +8714,12 @@
   - split: 4
     text: "天山派独门心法，需在寒冷之处以经脉吸纳寒气，借以苦修阴性内功，意志不坚者多难以维持，真可谓不经一番寒彻骨"
     translated: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment."
-    qcQualityScore: 65
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment.,How do we get the fragrance of plum blossoms to greet us?"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment. How do we get the fragrance of plum blossoms to greet us?\\nTruly, without enduring the piercing cold, how can one enjoy the fragrance of plum blossoms?"
+    qcFailureReason: " Alternatives were provided when none should be given."
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment.,How do we get the fragrance of plum blossoms to greet us?"
   - split: 4
     subIndex: 1
@@ -9054,10 +9046,12 @@
   - split: 4
     text: "在高空钢索之上行走的卖艺把式"
     translated: "A performer walking on a tightrope high above"
-    qcRejectedCorrection: "A performer walking on a tightrope high above.\\nWalking the tightrope high above."
+    qcReviewedText: "A performer walking on a tightrope high above"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "A performer walking on a tightrope high above.\\nA circus performer walking on a high tightrope."
     qcFailureReason: " Alternatives were provided when none should be given."
-    qcQualityScore: 85
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "A performer walking on a tightrope high above"
 - raw: "999,轻功,0,钻火圈,飞身跳跃穿过燃烧火圈的卖艺把式,,1.1,体质1,轻功4;体质4;连击0.04,,轻功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:

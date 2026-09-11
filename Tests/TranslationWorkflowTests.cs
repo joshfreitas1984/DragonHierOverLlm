@@ -102,6 +102,20 @@ public class TranslationWorkflowTests
         await QualityReviewWorkflow.ResetQcRetryLimits(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
+    // Sweeps every already-QC'd column for a stored QcTranslated/QcRejectedCorrection that leaked QC
+    // protocol text (a stray "NONE", "SCORE:", "CORRECTED:", etc. - see
+    // QualityReviewWorkflow.ContainsLeakedProtocolText) rather than a clean correction. This catches
+    // corruption that got past an earlier, narrower version of the leak guard - e.g. the
+    // "Sword Technique Power NONE" case, where the guard only rejected a response that was *exactly*
+    // "NONE", not one with "NONE" stuck onto real text. Any match is reset back to QcStatus.NotReviewed
+    // (full TranslationSplit.ResetQcState) so the next "3a"/"3b" run gives it a genuinely fresh review.
+    // Safe to run any time - a no-op once the corpus is clean.
+    [Fact(DisplayName = "3e. Reset Leaked Quality Review Corrections")]
+    public async Task ResetLeakedQcCorrections()
+    {
+        await QualityReviewWorkflow.ResetLeakedQcCorrections(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
     public async Task SetBracketSplitBugLinesAsInvalid()
     {

@@ -56,10 +56,6 @@
   - split: 2
     text: "四肢瘦弱，躯干短小的畜类，速度缓慢但刻苦耐劳"
     translated: "Thin‑limbed and short‑bodied livestock, slow but hardworking and enduring"
-    qcReviewedText: "Thin‑limbed and short‑bodied livestock, slow but hardworking and enduring"
-    qcTranslated: "Thin‑limbed and short‑bodied livestock, slow but hardworking and enduring NONE"
-    qcStatus: Corrected
-    qcQualityScore: 90
 - raw: "2,跛脚马,腿脚受过伤或是天生残疾的马匹，胜在价格便宜,0,10,20,10,10,200"
   splits:
   - split: 2

@@ -644,11 +644,6 @@
   - split: 10
     text: "剑法威力"
     translated: "Sword Technique Power"
-    qcRejectedCorrection: "Sword Technique Power (Sword Art Power)"
-    qcFailureReason: " Explaination was provided when none should be given."
-    qcQualityScore: 85
-    qcRuleCheckFailureCount: 3
-    qcRuleCheckFailureBaseline: "Sword Technique Power"
 - raw: "20,刀法威力,0.01,无,无,1,1,0,0,0,刀法威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -1408,10 +1403,12 @@
   - split: 10
     text: "采伐潜力"
     translated: "Resource Gathering Potential"
-    qcRejectedCorrection: "Resource Harvest Potential"
-    qcFailureReason: "Glossary term '采伐' (expected 'Resource Gathering') is missing."
-    qcQualityScore: 80
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Resource Gathering Potential"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "Resource Gathering Potential\\nCorrected to use the provided glossary term: \"Resource Gathering\" instead of \"Resource Gathering Potential\" which is more accurate to the source term \"采伐\"."
+    qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Resource Gathering Potential"
 - raw: "53,木植潜力,1,无,无,0,1,0,0,0,木植潜力,伤害,0,0,0,0,0"
   splits:
@@ -2842,10 +2839,6 @@
   - split: 3
     text: "背水"
     translated: "On the banks of the river"
-    qcReviewedText: "On the banks of the river"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "None of the water supply is left behind"
     qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "On the banks of the river"
   - split: 4
@@ -4388,10 +4381,6 @@
   - split: 10
     text: "刀法经验"
     translated: "Blade Technique Experience"
-    qcReviewedText: "Blade Technique Experience"
-    qcTranslated: "Blade Technique Experience NONE"
-    qcStatus: Corrected
-    qcQualityScore: 80
 - raw: "185,长兵经验,0.04,无,无,1,1,1,0,0,长兵经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4870,6 +4859,10 @@
     qcQualityScore: 100
   - split: 4
     text: "简装"
+    translated: "Stripped down"
+    qcReviewedText: "Stripped down"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 10
     text: "提升装备负重"
     translated: "Increase equipment burden capacity"

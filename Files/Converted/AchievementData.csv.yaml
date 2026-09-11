@@ -533,10 +533,6 @@
   - split: 2
     text: "一场战斗中亲手击败10名以上敌人"
     translated: "Defeat more than 10 enemies in a single battle with your own hands"
-    qcReviewedText: "Defeat more than 10 enemies in a single battle with your own hands"
-    qcTranslated: "Defeat more than 10 enemies in a single battle with your own handsNONE"
-    qcStatus: Corrected
-    qcQualityScore: 95
   - split: 5
     text: "无"
     translated: "None"
