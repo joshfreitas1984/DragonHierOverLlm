@@ -34521,9 +34521,7 @@
   - split: 10
     subIndex: 1
     text: "还望你们勤学苦练，精益求精，莫要辜负师傅我的厚望……"
-    translated: "I hope you continue to work hard and strive for excellence, so as not to let my high expectations down......"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Master,师傅,"
+    translated: "I hope you will work hard and strive for perfection, don't let your master's high expectations down......"
   - split: 10
     subIndex: 2
     text: "以及你们顾师兄拼死之苦心。"
@@ -42410,9 +42408,7 @@
   - split: 10
     subIndex: 1
     text: "小生乃是唐门掌门唐逸影之子，江湖人称“追风猎影俏侠少”唐离是也，这厢有礼了嘿嘿。"
-    translated: "I am the son of Tang Yinying, the Sect Leader of Tang Clan. Known in the Jianghu as the Cunning Swordsman, Swift Shadow, my name is Tang Li. Pleased to meet you. Hehe."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Tang Clan Sect Leader,唐门掌门,"
+    translated: "I am the son of Tang Clan Sect Master Tang Yiying, known in the Jianghu as the Clever Shadow Ranger, Quickwind Hunter Tang Li. A bow and a smile. Hehe."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -44282,9 +44278,7 @@
   - split: 10
     subIndex: 1
     text: "这唐门掌门的位置，早晚是老子的。"
-    translated: "This position of Sect Leader of Tang Clan is ultimately mine."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Tang Clan Sect Leader,唐门掌门,"
+    translated: "This position as the Tang Clan Sect Leader will eventually be mine."
   - split: 10
     subIndex: 2
     text: "别逼我到时后把你们送进暗室，作试毒材料！"
@@ -44665,9 +44659,7 @@
   splits:
   - split: 10
     text: "那人可是唐门掌门唐逸影的爱子，唐离啊！"
-    translated: "That person is Tang Yiying's beloved son, Tang Li!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Tang Clan,唐門,Tang Clan Sect Leader,唐门掌门,Sect Leader,掌門,"
+    translated: "That person is the beloved son of Tang Clan Sect Leader Tang Yiqing‑Tang Li!"
   - split: 10
     subIndex: 1
     text: "不说了不说了，二位赶紧走吧！"
@@ -68594,9 +68586,7 @@
   - split: 10
     subIndex: 1
     text: "让她留下来吧……我林云裳虽武功低微，也会拼命保护她的！"
-    translated: "Let her stay... Though my martial arts are weak, I will fight to protect her!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lin Yunshang,林云裳,Yunshang,云裳,"
+    translated: "Let her stay... Though my martial arts are meager, I, Lin Yunshang, will fight with my life to protect her!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -78393,9 +78383,7 @@
   - split: 10
     subIndex: 1
     text: "游年此计是否有些……太过凶险了？"
-    translated: "Is this plan perhaps a bit... too dangerous?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Younian,游年,"
+    translated: "Is this plan a bit too risky, Younian?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -113354,9 +113342,7 @@
   splits:
   - split: 10
     text: "哈哈，阮芷少侠这就多虑了。"
-    translated: "Haha, Ruan Zhi, you're overthinking this"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Young Hero,少俠,"
+    translated: "Ha ha, Young Hero Ruan Zhi, you're being too cautious."
   - split: 10
     subIndex: 1
     text: "这当涂虽是个小镇，但也是我长乐帮的势力范围。"
@@ -135004,9 +134990,7 @@
   - split: 10
     subIndex: 1
     text: "思中澜若是我方在背后指使，那老夫就天打雷劈，不得好死！"
-    translated: "If I ordered my side to act behind your back, may I be struck down by heaven and die a miserable death!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Si Zhonglan,思中澜,"
+    translated: "If Si Zhonglan was being manipulated by our side, then by heaven's thunderbolt! I would die a miserable death!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -150032,9 +150016,7 @@
   - split: 10
     subIndex: 2
     text: "帮主你厨艺再高，也只有被剁成肉馅的份。"
-    translated: "No matter how skilled you are in cooking, you'll only end up being chopped into mince."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Gang Leader,幫主,"
+    translated: "No matter how skilled you are in the kitchen, Leader, you'll still end up as ground meat."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -227684,7 +227666,7 @@
   - split: 10
     subIndex: 1
     text: "那便是寻找多年前害死柴世宗，破坏泰山封禅的罪魁祸首。"
-    translated: "That is the culprit we seek‑the one who, many years ago, killed Chai Shizong and sabotaged the Mount Tai Fengshan ceremony."
+    translated: "Then we must find the mastermind who, years ago, murdered Chai Shizong and sabotaged the Mount Tai Fengshan Ceremony."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -237727,9 +237709,7 @@
   splits:
   - split: 10
     text: "少侠武功虽在我六人之下，"
-    translated: "Your martial arts may be below mine and the others',"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Young Hero,少俠,"
+    translated: "Although the young hero's martial arts are below ours,"
   - split: 10
     subIndex: 1
     text: "能够成为“天下第七”，却也是颇为不易了。"

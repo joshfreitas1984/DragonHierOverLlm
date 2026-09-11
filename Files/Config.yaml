@@ -4,11 +4,13 @@
     modelPresetType: Standard
     customPromptsPath: 
     apiKeyPath: 
+    model: qwen2.5:14b-instruct
   - name: Qwen25-StructuredText
     modelPreset:  Qwen25
     modelPresetType: StructuredText
     customPromptsPath:
     apiKeyPath:
+    model: qwen2.5:14b-instruct
   # Quality-review-pass candidate models (see docs/plans/quality-review-pass.md). Each uses its own
   # model-family preset (Qwen25/Glm4) purely for its BaseQualityReviewPrompt - different model
   # families can need differently-tuned QC prompt wording (same reason BaseSystemPrompt.txt is
