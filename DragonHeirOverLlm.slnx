@@ -1,7 +1,6 @@
 <Solution>
   <Folder Name="/Solution Items/" />
   <Project Path="../FanslationStudio.LlmKit/FanslationStudio.LlmKit/FanslationStudio.LlmKit.csproj" />
-  <Project Path="../FanslationStudio.LlmKit/Tests/FanslationStudio.LlmKit.Tests.csproj" />
   <Project Path="DragonHeirPlugin/GamePlugin.csproj" />
   <Project Path="Files/Files.csproj" />
   <Project Path="Tests/Tests.csproj" />

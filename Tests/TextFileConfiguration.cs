@@ -135,6 +135,14 @@ namespace Tests
             // applied ONLY by HeroNamePatches' own private, exact-match force-name-prefix
             // dictionary - see HeroNamePatches.cs.
             new() {Path = "forceNameParts.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+
+            // SpeHeroData's family/given-name compound with the "." removed (e.g. "姜映泉") - a
+            // whole-name counterpart to heroNameParts.txt above, used by DragonHeirPlugin's
+            // PlotInteractControllerPatches.GetHero_Prefix to reverse-translate an already-
+            // translated hero display name back to the raw name WorldData.GetHero looks records
+            // up by. Same dedicated-file/QC-disabled treatment as heroNameParts.txt/
+            // forceNameParts.txt above and for the same reason.
+            new() {Path = "heroFullNames.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
         ];
     }
 }

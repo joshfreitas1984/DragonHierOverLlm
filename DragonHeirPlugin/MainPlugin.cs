@@ -175,6 +175,7 @@ public class MainPlugin : BasePlugin
 
         HeroNamePatches.LoadNamePartDictionary();
         HeroNamePatches.LoadForceNamePartDictionary();
+        HeroNamePatches.LoadFullNameDictionary();
         Harmony.CreateAndPatchAll(typeof(HeroNamePatches));
 
         // Wrapped separately - its DOTweenModuleUI.DOText patch's parameter name ("duration") is
@@ -218,7 +219,6 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(ItemIconPatches));
 
         Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
-        //Harmony.CreateAndPatchAll(typeof(HardcodedHeroNamePatches));
 
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
     }

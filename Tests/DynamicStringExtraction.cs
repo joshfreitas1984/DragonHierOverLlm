@@ -224,6 +224,56 @@ namespace Tests
         }
 
         /// <summary>
+        /// Extracts SpeHeroData's "."-joined family/given-name compound with the "." simply
+        /// removed (e.g. "姜.映泉" -> "姜映泉") - matching HeroData.heroName's own dot-stripped
+        /// storage - into its OWN dedicated dump file (Raw/Dumped/DynamicStrings/heroFullNames.txt).
+        /// Reuses DynamicStringNamePartColumnSources (same source cells as
+        /// ExtractHeroNamePartCandidates above) since the whole-name and split-halves candidates
+        /// come from the same column; kept in a separate file/dictionary so a lookup by full name
+        /// (see HeroNamePatches' reverse full-name dictionary) never gets confused with the
+        /// individual family/given-name fragments. Idempotent: re-running never duplicates an
+        /// already-extracted value.
+        /// </summary>
+        public static void ExtractHeroFullNameCandidates(string workingDirectory)
+        {
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/heroFullNames.txt";
+
+            var seen = GetExistingDynamicStringValues(outputPath);
+
+            var found = new List<string>();
+
+            foreach (var (csvFileName, columns) in DynamicStringSources.DynamicStringNamePartColumnSources)
+            {
+                var csvPath = $"{workingDirectory}/Raw/Dumped/GameData/{csvFileName}";
+                if (!File.Exists(csvPath)) continue;
+
+                // Skip the header row.
+                foreach (var line in File.ReadAllLines(csvPath).Skip(1))
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+
+                    var fields = GameFileHandling.ParseCsvRow(line);
+                    foreach (var column in columns)
+                    {
+                        if (column >= fields.Length) continue;
+
+                        var cell = fields[column];
+                        if (string.IsNullOrWhiteSpace(cell)) continue;
+
+                        var fullName = cell.Replace(".", string.Empty);
+                        if (string.IsNullOrWhiteSpace(fullName)) continue;
+                        if (!seen.Add(fullName)) continue;
+
+                        found.Add(fullName);
+                    }
+                }
+            }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
+
+        /// <summary>
         /// Extracts ForceData's first-2-character name prefix (see
         /// DynamicStringSources.DynamicStringForceNamePrefixColumnSources) into its OWN dedicated
         /// dump file (Raw/Dumped/DynamicStrings/forceNameParts.txt) - deliberately separate from

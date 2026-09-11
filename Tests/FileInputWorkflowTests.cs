@@ -73,6 +73,17 @@ public class FileInputWorkflowTests
         DynamicStringExtraction.ExtractForceNamePrefixCandidates(GameFileHandling.WorkingDirectory);
     }
 
+    [Fact(DisplayName = "4b3. ExtractHeroFullNameCandidates")]
+    public void ExtractHeroFullNameCandidates()
+    {
+        // SpeHeroData family/given-name compound with the "." removed (e.g. "姜.映泉" ->
+        // "姜映泉"), written to its OWN dedicated heroFullNames.txt - used by
+        // PlotInteractControllerPatches.GetHero_Prefix to reverse-translate a hero's already-
+        // translated display name back to the raw name WorldData.GetHero looks records up by. See
+        // DynamicStringExtraction.ExtractHeroFullNameCandidates' doc comment.
+        DynamicStringExtraction.ExtractHeroFullNameCandidates(GameFileHandling.WorkingDirectory);
+    }
+
     [Fact(DisplayName = "4c ExtractStructuredRecordFragmentCandidates")]
     public void ExtractStructuredRecordFragmentCandidates()
     {

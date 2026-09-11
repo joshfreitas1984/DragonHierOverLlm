@@ -52,6 +52,9 @@ internal static class HeroNamePatches
     private const string ForceNamePartDictionaryFileName = "forceNameParts.txt.yaml";
     private static Dictionary<string, string> _forceNamePartDictionary = new();
 
+    private const string FullNameDictionaryFileName = "heroFullNames.txt.yaml";
+    private static Dictionary<string, string> _reverseFullNameDictionary = new();
+
     /// <summary>Loads heroNameParts.txt.yaml (if present) into this class's own private, exact-
     /// match dictionary. Safe to call even if the file is missing (lookups then just fall back to
     /// leaving the original Chinese text untranslated). Call once from MainPlugin.Load(), before
@@ -66,6 +69,25 @@ internal static class HeroNamePatches
     /// MainPlugin.Load(), before GetHeroForceLvDescribe is ever invoked.</summary>
     public static void LoadForceNamePartDictionary() =>
         _forceNamePartDictionary = LoadDictionaryFile(ForceNamePartDictionaryFileName);
+
+    /// <summary>Loads heroFullNames.txt.yaml (if present) into a Result -> Raw reverse lookup -
+    /// SpeHeroData's family/given-name compound with the "." removed (e.g. "姜映泉"), matching
+    /// HeroData.heroName's own dot-stripped storage. Used by
+    /// PlotInteractControllerPatches.GetHero_Prefix to recover the raw Chinese name
+    /// WorldData.GetHero looks records up by from an already-translated display name. Call once
+    /// from MainPlugin.Load().</summary>
+    public static void LoadFullNameDictionary()
+    {
+        var forward = LoadDictionaryFile(FullNameDictionaryFileName);
+        _reverseFullNameDictionary = forward
+            .GroupBy(kv => kv.Value)
+            .ToDictionary(g => g.Key, g => g.First().Key);
+    }
+
+    /// <summary>Result -> Raw lookup only (exact match) - returns the input unchanged if it isn't
+    /// a known translated full name.</summary>
+    public static string ReverseTranslateFullName(string translated) =>
+        _reverseFullNameDictionary.TryGetValue(translated, out var raw) ? raw : translated;
 
     private static Dictionary<string, string> LoadDictionaryFile(string fileName)
     {
