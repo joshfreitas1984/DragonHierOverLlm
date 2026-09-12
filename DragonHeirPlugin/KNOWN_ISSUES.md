@@ -82,4 +82,10 @@
   CONFIRMED BUG where `BattleInfoPatches` translated each battle-log line but never called
   `MarkTrustedAppendOnlySource` on the underlying `Text` component, silently defeating the
   sink-patch fast path (fixed).
+- [`docs/robheroitemchoose-getherofix.md`](docs/robheroitemchoose-getherofix.md) — the
+  `RobHeroItemChoose`/`RobHeroItemChoosen` dead-button fix: `WorldData.GetHero` patched directly
+  with an as-is/reverse-translate/dot-stripped fallback chain (the real bug was a leftover
+  `"Family.Given"` `.` separator, not a translation issue), a re-entrancy guard for the retry call,
+  a "translated-looking debug log text" misdiagnosis worth remembering, and why the earlier
+  blanket `OnClick_Prefix` callParam reverse-translate was removed instead of kept/flagged.
 

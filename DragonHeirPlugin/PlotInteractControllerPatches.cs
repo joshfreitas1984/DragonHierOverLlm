@@ -3,36 +3,11 @@ using HarmonyLib;
 
 namespace EnglishPatch;
 
-// callParam reverse-translate: PlotData.csv column 9's "{0};RobHeroItemChoose;{1}" template (see
-// docs/gamefilehandling-reference.md) translates {1} (a hero name, e.g. "高首" -> "High Lord")
-// like any other display fragment, but RobHeroItemChoose(string) looks the target hero up by its
-// original Chinese name, so the translated param never matches and the button silently does
-// nothing (same root cause as ItemIconPatches' icon-name lookup).
-// Fixed with an unconditional prefix that reverse-translates choiceData.callParam in place (via
-// DynamicStringPatches.ReverseTranslate - a no-op for any callFuc whose param was never in the
-// translation dictionary) before EITHER the native body or the no-cost Postfix below reads it.internal static class PlotInteractControllerPatches
 internal static class PlotInteractControllerPatches
 {
-    [HarmonyPatch(typeof(PlotInteractController), nameof(PlotInteractController.OnClick))]
-    [HarmonyPrefix]
-    private static void OnClick_Prefix(PlotInteractController __instance)
-    {
-        try
-        {
-            var choiceData = __instance?.choiceData;
-            if (choiceData == null || string.IsNullOrEmpty(choiceData.callParam)) return;
-
-            choiceData.callParam = DynamicStringPatches.ReverseTranslate(choiceData.callParam);
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger.LogError($"[PlotInteractControllerPatches] OnClick_Prefix failed: {ex}");
-        }
-    }
-
-    // See the callParam translation note at the top of this file. Centralized here (rather than on
-    // RobHeroItemChoose/RobHeroItemChoosen themselves) so every call site that looks a hero up by
-    // its translated display name gets fixed at once, not just these two.
+    // Centralized here (rather than on RobHeroItemChoose/RobHeroItemChoosen themselves) so every
+    // call site that looks a hero up by its translated display name gets fixed at once, not just
+    // these two.
     //
     // Needs the ORIGINAL name tried first (a hero name can legitimately already be untranslated
     // ASCII in the game files) with the reverse-translated raw name only as a fallback on a genuine
