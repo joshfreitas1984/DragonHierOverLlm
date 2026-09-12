@@ -53,6 +53,7 @@ internal static class HeroNamePatches
     private static Dictionary<string, string> _forceNamePartDictionary = new();
 
     private const string FullNameDictionaryFileName = "heroFullNames.txt.yaml";
+    private static Dictionary<string, string> _fullNameDictionary = new();
     private static Dictionary<string, string> _reverseFullNameDictionary = new();
 
     /// <summary>Loads heroNameParts.txt.yaml (if present) into this class's own private, exact-
@@ -78,8 +79,8 @@ internal static class HeroNamePatches
     /// from MainPlugin.Load().</summary>
     public static void LoadFullNameDictionary()
     {
-        var forward = LoadDictionaryFile(FullNameDictionaryFileName);
-        _reverseFullNameDictionary = forward
+        _fullNameDictionary = LoadDictionaryFile(FullNameDictionaryFileName);
+        _reverseFullNameDictionary = _fullNameDictionary
             .GroupBy(kv => kv.Value)
             .ToDictionary(g => g.Key, g => g.First().Key);
     }
@@ -203,6 +204,16 @@ internal static class HeroNamePatches
             if (StandaloneTitles.TryGetValue(result, out var standalone))
             {
                 result = standalone;
+                return;
+            }
+
+            // GetHeroName returns the full, untranslated "family+given" name verbatim in two
+            // native branches (invalid/dead hero; the mutual-hater case) - neither is coverable by
+            // TranslateNamePart's single-fragment dictionary below, so try an exact whole-name
+            // match against heroFullNames.txt first.
+            if (_fullNameDictionary.TryGetValue(result, out var fullName))
+            {
+                result = fullName;
                 return;
             }
 

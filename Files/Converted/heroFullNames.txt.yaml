@@ -1,0 +1,680 @@
+- raw: "姜映泉"
+  splits:
+  - text: "姜映泉"
+    translated: "Jiang Yingquan"
+- raw: "陆仁谦"
+  splits:
+  - text: "陆仁谦"
+    translated: "Lu Renqian"
+- raw: "魏胥华"
+  splits:
+  - text: "魏胥华"
+    translated: "Wei Xuhua"
+- raw: "余采薇"
+  splits:
+  - text: "余采薇"
+    translated: "Yu Caiwei"
+- raw: "顾游年"
+  splits:
+  - text: "顾游年"
+    translated: "Gu Younian"
+- raw: "沈退"
+  splits:
+  - text: "沈退"
+    translated: "Shen Tui"
+- raw: "姜婉"
+  splits:
+  - text: "姜婉"
+    translated: "Jiang Wan"
+- raw: "杨思迟"
+  splits:
+  - text: "杨思迟"
+    translated: "Yang Sichi"
+- raw: "林云裳"
+  splits:
+  - text: "林云裳"
+    translated: "Lin Yunshang"
+- raw: "乐无疾"
+  splits:
+  - text: "乐无疾"
+    translated: "Yue Wuji"
+- raw: "云彩衣"
+  splits:
+  - text: "云彩衣"
+    translated: "Yun Caiyi"
+- raw: "卢玉麟"
+  splits:
+  - text: "卢玉麟"
+    translated: "Lu Yulin"
+- raw: "唐逸影"
+  splits:
+  - text: "唐逸影"
+    translated: "Tang Yiying"
+- raw: "唐离"
+  splits:
+  - text: "唐离"
+    translated: "Tang Li"
+- raw: "唐嫣然"
+  splits:
+  - text: "唐嫣然"
+    translated: "Tang Yanran"
+- raw: "皇甫青衫"
+  splits:
+  - text: "皇甫青衫"
+    translated: "Huangfu Qingshan"
+- raw: "皇甫斌"
+  splits:
+  - text: "皇甫斌"
+    translated: "Huangfu Bin"
+- raw: "朱断岳"
+  splits:
+  - text: "朱断岳"
+    translated: "Zhu Duanyue"
+- raw: "徐不平"
+  splits:
+  - text: "徐不平"
+    translated: "Xu Boping"
+- raw: "赵破虏"
+  splits:
+  - text: "赵破虏"
+    translated: "Zhao Polu"
+- raw: "诸葛伶"
+  splits:
+  - text: "诸葛伶"
+    translated: "Zhuge Ling"
+- raw: "南宫瑶"
+  splits:
+  - text: "南宫瑶"
+    translated: "Nangong Yao"
+- raw: "葛知远"
+  splits:
+  - text: "葛知远"
+    translated: "Ge Zhiyuan"
+- raw: "欧长兵"
+  splits:
+  - text: "欧长兵"
+    translated: "Ou Changbing"
+- raw: "祖心炎"
+  splits:
+  - text: "祖心炎"
+    translated: "Zu Xinyan"
+- raw: "龙凤娥"
+  splits:
+  - text: "龙凤娥"
+    translated: "Long Feng'e"
+- raw: "龙凝霜"
+  splits:
+  - text: "龙凝霜"
+    translated: "Long Ningshuang"
+- raw: "石崇虎"
+  splits:
+  - text: "石崇虎"
+    translated: "Shi Chonghu"
+- raw: "阎罗王"
+  splits:
+  - text: "阎罗王"
+    translated: "King Yama"
+- raw: "崔命官"
+  splits:
+  - text: "崔命官"
+    translated: "Cui Minguan"
+- raw: "孟婆娑"
+  splits:
+  - text: "孟婆娑"
+    translated: "Meng Posa"
+- raw: "常无黑"
+  splits:
+  - text: "常无黑"
+    translated: "Chang Wuhei"
+- raw: "常无白"
+  splits:
+  - text: "常无白"
+    translated: "Cang Wubai"
+- raw: "牛头"
+  splits:
+  - text: "牛头"
+    translated: "Bull Head"
+- raw: "马面"
+  splits:
+  - text: "马面"
+    translated: "Horse Face"
+- raw: "道无名"
+  splits:
+  - text: "道无名"
+    translated: "Dao Wuming"
+- raw: "思中澜"
+  splits:
+  - text: "思中澜"
+    translated: "Si Zhonglan"
+- raw: "姬清梵"
+  splits:
+  - text: "姬清梵"
+    translated: "Ji Qingfan"
+- raw: "空闻大师"
+  splits:
+  - text: "空闻大师"
+    translated: "Master Kongwen"
+- raw: "空见大师"
+  splits:
+  - text: "空见大师"
+    translated: "Master Kongjian"
+- raw: "如是大师"
+  splits:
+  - text: "如是大师"
+    translated: "Master Lisi"
+- raw: "张青蓬"
+  splits:
+  - text: "张青蓬"
+    translated: "Zhang Qingpeng"
+- raw: "张文馨"
+  splits:
+  - text: "张文馨"
+    translated: "Zhang Wenxin"
+- raw: "宋廉庭"
+  splits:
+  - text: "宋廉庭"
+    translated: "Song Lian Ting"
+- raw: "项元霸"
+  splits:
+  - text: "项元霸"
+    translated: "Yang Yuanba"
+- raw: "宇文极"
+  splits:
+  - text: "宇文极"
+    translated: "Yuwen Ji"
+- raw: "吕寻峰"
+  splits:
+  - text: "吕寻峰"
+    translated: "Lu Xinfeng"
+- raw: "庄晓梦"
+  splits:
+  - text: "庄晓梦"
+    translated: "Zhuang Xiaomeng"
+- raw: "司马德源"
+  splits:
+  - text: "司马德源"
+    translated: "Sima Deyuan"
+- raw: "李潇湘"
+  splits:
+  - text: "李潇湘"
+    translated: "Li Xiaoxiang"
+- raw: "白云天"
+  splits:
+  - text: "白云天"
+    translated: "Bai Yuntian"
+- raw: "曲自封"
+  splits:
+  - text: "曲自封"
+    translated: "Qu Zifeng"
+- raw: "闻惊鸿"
+  splits:
+  - text: "闻惊鸿"
+    translated: "Wen Jinghong"
+- raw: "墨璇玑"
+  splits:
+  - text: "墨璇玑"
+    translated: "Mo Xuanji"
+- raw: "墨从义"
+  splits:
+  - text: "墨从义"
+    translated: "Mo Congyi"
+- raw: "雷震天"
+  splits:
+  - text: "雷震天"
+    translated: "Lei Zhentian"
+- raw: "雷冠群"
+  splits:
+  - text: "雷冠群"
+    translated: "Lei Guanqun"
+- raw: "雷彤"
+  splits:
+  - text: "雷彤"
+    translated: "Lei Tong"
+- raw: "转轮法王"
+  splits:
+  - text: "转轮法王"
+    translated: "Wheelturning Dharma King"
+- raw: "金刚法王"
+  splits:
+  - text: "金刚法王"
+    translated: "Diamond Dharma King"
+- raw: "真言法王"
+  splits:
+  - text: "真言法王"
+    translated: "True Dharma King"
+- raw: "凌北渊"
+  splits:
+  - text: "凌北渊"
+    translated: "Ling Beiyuan"
+- raw: "云九霄"
+  splits:
+  - text: "云九霄"
+    translated: "Yun Jiuxiao"
+- raw: "江映寒"
+  splits:
+  - text: "江映寒"
+    translated: "Jiang Yinghan"
+- raw: "夏天雄"
+  splits:
+  - text: "夏天雄"
+    translated: "Xia Tianxiong"
+- raw: "叶一鸣"
+  splits:
+  - text: "叶一鸣"
+    translated: "Ye Yiming"
+- raw: "韩嵩"
+  splits:
+  - text: "韩嵩"
+    translated: "Han Song"
+- raw: "陆奇"
+  splits:
+  - text: "陆奇"
+    translated: "Lu Qi"
+- raw: "吕子芳"
+  splits:
+  - text: "吕子芳"
+    translated: "Lu Zifang"
+- raw: "公孙防"
+  splits:
+  - text: "公孙防"
+    translated: "Gongsun Fang"
+- raw: "狄坤"
+  splits:
+  - text: "狄坤"
+    translated: "Di Kun"
+- raw: "万仞山"
+  splits:
+  - text: "万仞山"
+    translated: "Wan Renshan"
+- raw: "卓远望"
+  splits:
+  - text: "卓远望"
+    translated: "Zhao Yuwang"
+- raw: "陆离"
+  splits:
+  - text: "陆离"
+    translated: "Luli"
+- raw: "卫海川"
+  splits:
+  - text: "卫海川"
+    translated: "Wei Haichuan"
+- raw: "沈蛟"
+  splits:
+  - text: "沈蛟"
+    translated: "Shen Jiao"
+- raw: "上官雯"
+  splits:
+  - text: "上官雯"
+    translated: "Shangguan Wen"
+- raw: "周莫知"
+  splits:
+  - text: "周莫知"
+    translated: "Zhou Mozhi"
+- raw: "陌田桑"
+  splits:
+  - text: "陌田桑"
+    translated: "Mo Tiansang"
+- raw: "武绝义"
+  splits:
+  - text: "武绝义"
+    translated: "Wu Jueyi"
+- raw: "黄泉"
+  splits:
+  - text: "黄泉"
+    translated: "Yellow Springs"
+- raw: "玉观音"
+  splits:
+  - text: "玉观音"
+    translated: "Buddha of Jade"
+- raw: "雨人屠"
+  splits:
+  - text: "雨人屠"
+    translated: "Rainfall Executioner"
+- raw: "上官凤"
+  splits:
+  - text: "上官凤"
+    translated: "Shangguan Feng"
+- raw: "计心狂"
+  splits:
+  - text: "计心狂"
+    translated: "Ji Xinkuang"
+- raw: "慕容星辰"
+  splits:
+  - text: "慕容星辰"
+    translated: "Murong Xingchen"
+- raw: "幽冥"
+  splits:
+  - text: "幽冥"
+    translated: "Netherworld"
+- raw: "魅影"
+  splits:
+  - text: "魅影"
+    translated: "Phantom"
+- raw: "血刃"
+  splits:
+  - text: "血刃"
+    translated: "Blood Blade"
+- raw: "残阳"
+  splits:
+  - text: "残阳"
+    translated: "Setting Sun"
+- raw: "厉苍穹"
+  splits:
+  - text: "厉苍穹"
+    translated: "Liyi Tianqiu"
+- raw: "迟百城"
+  splits:
+  - text: "迟百城"
+    translated: "Late Baicheng"
+- raw: "费彬"
+  splits:
+  - text: "费彬"
+    translated: "Fe Bin"
+- raw: "岳无畏"
+  splits:
+  - text: "岳无畏"
+    translated: "Yue Wowe"
+- raw: "高首"
+  splits:
+  - text: "高首"
+    translated: "High Lord"
+- raw: "王彪"
+  splits:
+  - text: "王彪"
+    translated: "Wang Biao"
+- raw: "马悍"
+  splits:
+  - text: "马悍"
+    translated: "Strongblade"
+- raw: "凤南飞"
+  splits:
+  - text: "凤南飞"
+    translated: "Feng Nanfei"
+- raw: "裘龙"
+  splits:
+  - text: "裘龙"
+    translated: "Qiu Long"
+- raw: "张成化"
+  splits:
+  - text: "张成化"
+    translated: "Zhang Chenghua"
+- raw: "曾镇海"
+  splits:
+  - text: "曾镇海"
+    translated: "Zeng Zhenhai"
+- raw: "宋明公"
+  splits:
+  - text: "宋明公"
+    translated: "Song Minggong"
+- raw: "戴壮"
+  splits:
+  - text: "戴壮"
+    translated: "Dai Zhuang"
+- raw: "马应龙"
+  splits:
+  - text: "马应龙"
+    translated: "Ma Yinglong"
+- raw: "马超群"
+  splits:
+  - text: "马超群"
+    translated: "Ma Chaoqun"
+- raw: "马丹心"
+  splits:
+  - text: "马丹心"
+    translated: "Ma Danxin"
+- raw: "马宝郭"
+  splits:
+  - text: "马宝郭"
+    translated: "Ma Baoguo"
+- raw: "郝大力"
+  splits:
+  - text: "郝大力"
+    translated: "Hao Dali"
+- raw: "汪财"
+  splits:
+  - text: "汪财"
+    translated: "Wang Cai"
+- raw: "吴谋"
+  splits:
+  - text: "吴谋"
+    translated: "Wu Mou"
+- raw: "熊百胜"
+  splits:
+  - text: "熊百胜"
+    translated: "Xiong Baisheng"
+- raw: "朱全"
+  splits:
+  - text: "朱全"
+    translated: "Chu Quan"
+- raw: "严达开"
+  splits:
+  - text: "严达开"
+    translated: "Yan Dakai"
+- raw: "冯虎"
+  splits:
+  - text: "冯虎"
+    translated: "Feng Hu"
+- raw: "刘豹"
+  splits:
+  - text: "刘豹"
+    translated: "Liu Bao"
+- raw: "黄豺"
+  splits:
+  - text: "黄豺"
+    translated: "Huang Chai"
+- raw: "韩狼"
+  splits:
+  - text: "韩狼"
+    translated: "Han Lang"
+- raw: "吴忧"
+  splits:
+  - text: "吴忧"
+    translated: "Wu You"
+- raw: "孟经世"
+  splits:
+  - text: "孟经世"
+    translated: "Ben Jingshi"
+- raw: "郭淮"
+  splits:
+  - text: "郭淮"
+    translated: "Guo Huai"
+- raw: "吕天行"
+  splits:
+  - text: "吕天行"
+    translated: "Lu Tianxiang"
+- raw: "何足道"
+  splits:
+  - text: "何足道"
+    translated: "He Zudao"
+- raw: "楚风疾"
+  splits:
+  - text: "楚风疾"
+    translated: "Chu Fengji"
+- raw: "林弄影"
+  splits:
+  - text: "林弄影"
+    translated: "Lin Nongying"
+- raw: "齐焱"
+  splits:
+  - text: "齐焱"
+    translated: "Qi Yan"
+- raw: "张峻"
+  splits:
+  - text: "张峻"
+    translated: "Zhang Jun"
+- raw: "项问天"
+  splits:
+  - text: "项问天"
+    translated: "Xiang Wentian"
+- raw: "郭勇锐"
+  splits:
+  - text: "郭勇锐"
+    translated: "Guo Yongrui"
+- raw: "阮芷"
+  splits:
+  - text: "阮芷"
+    translated: "Ruan Zhi"
+- raw: "彗定"
+  splits:
+  - text: "彗定"
+    translated: "Hui Ding"
+- raw: "清风"
+  splits:
+  - text: "清风"
+    translated: "Qing Feng"
+- raw: "李云鹤"
+  splits:
+  - text: "李云鹤"
+    translated: "Li Yunhe"
+- raw: "吕舞阳"
+  splits:
+  - text: "吕舞阳"
+    translated: "Lu Wuyang"
+- raw: "曲佩环"
+  splits:
+  - text: "曲佩环"
+    translated: "Qu Peihuan"
+- raw: "水清秋"
+  splits:
+  - text: "水清秋"
+    translated: "Shui Qingqiu"
+- raw: "柳如月"
+  splits:
+  - text: "柳如月"
+    translated: "Liu Ruyue"
+- raw: "殷雨霏"
+  splits:
+  - text: "殷雨霏"
+    translated: "Yin Yufei"
+- raw: "北冥雪"
+  splits:
+  - text: "北冥雪"
+    translated: "Beiming Xue"
+- raw: "金龙生"
+  splits:
+  - text: "金龙生"
+    translated: "Jin Longsheng"
+- raw: "天残"
+  splits:
+  - text: "天残"
+    translated: "Tian Can"
+- raw: "地缺"
+  splits:
+  - text: "地缺"
+    translated: "Di Que"
+- raw: "南丑"
+  splits:
+  - text: "南丑"
+    translated: "Nan Chou"
+- raw: "北怪"
+  splits:
+  - text: "北怪"
+    translated: "Bei Guai"
+- raw: "逍遥生"
+  splits:
+  - text: "逍遥生"
+    translated: "Free‑Spirited Fellow"
+- raw: "独孤剑"
+  splits:
+  - text: "独孤剑"
+    translated: "Solitary Saber"
+- raw: "炼气士"
+  splits:
+  - text: "炼气士"
+    translated: "Qi Refining Master"
+- raw: "都点检"
+  splits:
+  - text: "都点检"
+    translated: "City Inspector"
+- raw: "独臂刀"
+  splits:
+  - text: "独臂刀"
+    translated: "One‑Arm Saber"
+- raw: "斗酒僧"
+  splits:
+  - text: "斗酒僧"
+    translated: "Monk who drinks wine"
+- raw: "王添翼"
+  splits:
+  - text: "王添翼"
+    translated: "Wang Tianyi"
+- raw: "雷殷殷"
+  splits:
+  - text: "雷殷殷"
+    translated: "Lei Yinyin"
+- raw: "赵胤宗"
+  splits:
+  - text: "赵胤宗"
+    translated: "Zhao Yizong"
+- raw: "中年天残"
+  splits:
+  - text: "中年天残"
+    translated: "Middle‑aged Tian Can"
+- raw: "中年地缺"
+  splits:
+  - text: "中年地缺"
+    translated: "Middle‑aged Di Que"
+- raw: "中年南丑"
+  splits:
+  - text: "中年南丑"
+    translated: "Middle‑aged Nan Chou"
+- raw: "中年北怪"
+  splits:
+  - text: "中年北怪"
+    translated: "Middle‑aged Bei Guai"
+- raw: "赵义仁"
+  splits:
+  - text: "赵义仁"
+    translated: "Zhao Yiren"
+- raw: "石守信"
+  splits:
+  - text: "石守信"
+    translated: "Shi Shouxin"
+- raw: "中年赵胤宗"
+  splits:
+  - text: "中年赵胤宗"
+    translated: "Middle‑aged Zhao Yizong"
+- raw: "傅砚之"
+  splits:
+  - text: "傅砚之"
+    translated: "Fu Yanzhi"
+- raw: "张弥勒"
+  splits:
+  - text: "张弥勒"
+    translated: "Zhang Mile"
+- raw: "陆沉舟"
+  splits:
+  - text: "陆沉舟"
+    translated: "Lu Chenzhou"
+- raw: "王霸"
+  splits:
+  - text: "王霸"
+    translated: "Wang Ba"
+- raw: "龙灭"
+  splits:
+  - text: "龙灭"
+    translated: "Long Mie"
+- raw: "罗八怪"
+  splits:
+  - text: "罗八怪"
+    translated: "Luo Bagui"
+- raw: "菲燕子"
+  splits:
+  - text: "菲燕子"
+    translated: "Fei Yanzi"
+- raw: "叶寒"
+  splits:
+  - text: "叶寒"
+    translated: "Ye Han"
+- raw: "李天临"
+  splits:
+  - text: "李天临"
+    translated: "Li Tianlin"
+- raw: "熊刚"
+  splits:
+  - text: "熊刚"
+    translated: "Xiong Gang"
+- raw: "王伦"
+  splits:
+  - text: "王伦"
+    translated: "Wang Lun"

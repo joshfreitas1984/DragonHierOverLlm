@@ -20,11 +20,6 @@ internal static class PlotInteractControllerPatches
         try
         {
             var choiceData = __instance?.choiceData;
-
-            MainPlugin.Logger?.LogInfo(
-                $"[PlotInteractControllerPatches] DIAG OnClick ENTERED callFuc={choiceData?.callFuc ?? "<null>"} " +
-                $"callParam={choiceData?.callParam ?? "<null>"} costResource={(choiceData?.costResource != null ? "non-null" : "null")}");
-
             if (choiceData == null || string.IsNullOrEmpty(choiceData.callParam)) return;
 
             choiceData.callParam = DynamicStringPatches.ReverseTranslate(choiceData.callParam);
@@ -35,42 +30,44 @@ internal static class PlotInteractControllerPatches
         }
     }
 
-    [HarmonyPatch(typeof(PlotInteractController), nameof(PlotInteractController.OnClick))]
-    [HarmonyPostfix]
-    private static void OnClick_Postfix(PlotInteractController __instance)
-    {
-        MainPlugin.Logger?.LogInfo($"[PlotInteractControllerPatches] DIAG OnClick_Postfix ENTERED fixNoCostEnabled={MainPlugin.FixNoCostChoiceClickEnabled?.Value}");
-    }
-
     // See the callParam translation note at the top of this file. Centralized here (rather than on
     // RobHeroItemChoose/RobHeroItemChoosen themselves) so every call site that looks a hero up by
     // its translated display name gets fixed at once, not just these two.
+    //
+    // Needs the ORIGINAL name tried first (a hero name can legitimately already be untranslated
+    // ASCII in the game files) with the reverse-translated raw name only as a fallback on a genuine
+    // miss - so this must call __instance.GetHero(...) again itself. That re-enters this same
+    // Harmony-patched method, so _inGetHeroPrefix guards against infinite recursion: the nested
+    // call sees the guard set and just lets the original method run untouched.
+    [ThreadStatic]
+    private static bool _inGetHeroPrefix;
+
     [HarmonyPatch(typeof(WorldData), nameof(WorldData.GetHero), new[] { typeof(string) })]
     [HarmonyPrefix]
     private static bool GetHero_Prefix(WorldData __instance, string heroName, ref HeroData __result)
     {
-        // TEMP DIAGNOSTIC (remove once confirmed fixed): unconditional entry log, outside the try,
-        // so we know for certain whether this Prefix is even being invoked at all.
-        MainPlugin.Logger?.LogInfo($"[PlotInteractControllerPatches] DIAG GetHero_Prefix ENTERED heroName={heroName ?? "<null>"}");
+        if (_inGetHeroPrefix) return true;
 
         try
         {
-            // Try normal lookup first
-            __result = __instance.GetHero(heroName);
+            _inGetHeroPrefix = true;
 
-            if (__result != null)
-                return false;
+            __result = __instance.GetHero(heroName);
+            if (__result != null) return false;
 
             // Reverse-translate via HeroNamePatches' dedicated heroFullNames.txt.yaml dictionary
             // (Result -> Raw) - a no-op (returns heroName unchanged) if it was never a known
             // translated full name.
             var rawName = HeroNamePatches.ReverseTranslateFullName(heroName);
 
-            MainPlugin.Logger?.LogInfo(
-                $"[PlotInteractControllerPatches] DIAG GetHero_Prefix comparison heroName='{heroName}' rawName='{rawName}'");
-
             if (rawName != heroName)
                 __result = __instance.GetHero(rawName);
+
+            // heroName can also arrive as the raw "Family.Given" CSV value (with the "." still in
+            // it, e.g. "姜.映泉") - HeroData.heroName has the "." stripped at load time (see
+            // HeroNamePatches.cs), so the native lookup never matches until it's stripped here too.
+            if (__result == null && heroName.Contains('.'))
+                __result = __instance.GetHero(heroName.Replace(".", string.Empty));
 
             return false;
         }
@@ -79,34 +76,9 @@ internal static class PlotInteractControllerPatches
             MainPlugin.Logger.LogError($"[PlotInteractControllerPatches] GetHero_Prefix failed: {ex}");
             return true;
         }
-    }
-
-    // TEMP DIAGNOSTIC (remove once the whole click->crash chain is confirmed fixed): reports
-    // whether GetHero actually resolved a HeroData, regardless of whether Prefix rewrote the name
-    // or let the native path run unchanged - the crash's own stack trace points at RobHeroItemChoose
-    // itself, not GetHero, so this settles whether the lookup now succeeds and the real remaining
-    // problem is downstream (e.g. the cityAreaID check - a data/state issue, not translation).
-    [HarmonyPatch(typeof(WorldData), nameof(WorldData.GetHero), new[] { typeof(string) })]
-    [HarmonyPostfix]
-    private static void GetHero_Postfix_Diag(string heroName, HeroData __result)
-    {
-        MainPlugin.Logger?.LogInfo($"[PlotInteractControllerPatches] DIAG GetHero_Postfix heroName={heroName ?? "<null>"} resolved={(__result != null ? "HIT" : "MISS")}");
-    }
-
-    // TEMP DIAGNOSTIC (remove once the whole click->crash chain is confirmed fixed): pure tracing,
-    // no mutation - confirms whether native OnClick's SendMessage actually reaches these methods at
-    // all, and with what param, independent of the GetHero fix above.
-    [HarmonyPatch(typeof(PlotController), nameof(PlotController.RobHeroItemChoose))]
-    [HarmonyPrefix]
-    private static void RobHeroItemChoose_Diag(string param)
-    {
-        MainPlugin.Logger?.LogInfo($"[PlotInteractControllerPatches] DIAG RobHeroItemChoose ENTERED param={param ?? "<null>"}");
-    }
-
-    [HarmonyPatch(typeof(PlotController), nameof(PlotController.RobHeroItemChoosen))]
-    [HarmonyPrefix]
-    private static void RobHeroItemChoosen_Diag(string param)
-    {
-        MainPlugin.Logger?.LogInfo($"[PlotInteractControllerPatches] DIAG RobHeroItemChoosen ENTERED param={param ?? "<null>"}");
+        finally
+        {
+            _inGetHeroPrefix = false;
+        }
     }
 }
