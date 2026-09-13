@@ -56,9 +56,11 @@
   - split: 4
     text: "源于古代递送紧急军情“羽檄”之兵士的步法"
     translated: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
-    qcTranslated: "Footwork derived from ancient emergency military dispatch couriers"
-    flaggedForQcReview: true
+    qcRejectedCorrection: "Footwork derived from ancient soldiers who delivered urgent military dispatches known as \"feather檄\" (Note: The glossary should include the correct term for \"羽檄\", as \"feather檄\" is not accurate.)"
+    qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
     qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
 - raw: "4,轻功,0,轻身术,每日背负沙袋行走并渐增负重，乃是最基础的轻功练习之法,,0.9,轻功1,轻功4;灵巧4;意志4,,轻功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -197,9 +199,9 @@
   - split: 4
     text: "猎户常用的铁叉招式"
     translated: "Scorpio's common iron fork technique"
-    qcTranslated: "Hunter's common iron fork technique"
-    flaggedForQcReview: true
     qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Scorpio's common iron fork technique"
 - raw: "20,长兵,0,禁军枪术,军中流传的基础枪法,12,1,体质1,,长兵2,长兵10,\"4,0,0\",\"4,2,3\",,4,-1,0,胸16,胸4,,,skill3_0,,穿刺_灰黄-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -558,9 +560,11 @@
   - split: 4
     text: "长白山人观察野狐缠斗猎犬而悟出的拳法，招式多为虚招，意在智取而非力胜"
     translated: "White Crane observes foxes fighting dogs; the martial arts developed from this focus on cunning rather than brute force."
-    qcTranslated: "The boxing style observed by people from Changbai Mountain while watching wild foxes fight hunting dogs, with many of the moves being feints, aiming to outsmart rather than overpower."
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcRejectedCorrection: "The拳法 developed by people observing wild foxes fighting hunting dogs on Mount Changbai is full of feints, aiming to outwit rather than overpower.\\n"
+    qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "White Crane observes foxes fighting dogs; the martial arts developed from this focus on cunning rather than brute force."
 - raw: "61,拳掌,1,螳螂拳,此拳法手型独特，如螳螂前爪般勾起，招式灵活迅速，讲求以螳螂捕蝉之势制敌,12,1.2,拳掌1;灵巧1,,灵巧1;拳掌2;内力0.1,拳掌20;灵巧15,\"1,1,2\",\"0,0,0\",虚弱0.06,10,-1,0,头20,头8,,,skill0_0,,乱斩-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -882,9 +886,11 @@
   - split: 4
     text: "牛头乃阴间衙役，手持钢叉，力能排山。此招假其名号，由身强体壮者使出，确实威猛异常"
     translated: "The Obeah Man is a dweller of the underworld, wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display."
-    qcTranslated: "The Obeah Man is an underworld officer, holding a steel spear and possessing the strength to move mountains. This move borrows his name and is performed by someone who is physically strong, indeed it is exceptionally fierce."
-    flaggedForQcReview: true
+    qcRejectedCorrection: "The Obeah Man is a yamai衙役 (yamai should be corrected to衙役 according to the source text), wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display. The term \"Obeah Man\" is incorrect and should be replaced with the correct term for the character in context. Additionally, \"yamai\" should be \"衙役\" as per the source text."
+    qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
     qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "The Obeah Man is a dweller of the underworld, wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display."
 - raw: "97,奇门,1,八卦鞭法,八卦门成名鞭法，鞭势暗含八卦之理，在江湖中也多有流传,12,1,奇门1;意志1,,意志1;奇门2;内力0.1,奇门10,\"3,1,1\",\"7,0,0\",命中0.06,9,-1,0,手16,手12,,,skill4_4,,八卦升-Target-Grid-Happen;旋风-Target-Grid-Start,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1563,10 +1569,10 @@
   - split: 4
     text: "从长兵偃月刀中演化而来的刀术，其招式气势雄伟，威武庄严，往往令敌人不战自危"
     translated: "The sword techniques derived from the Long weapon Yangyuedao exhibit a majestic and imposing momentum, often making enemies feel vulnerable even before the battle begins."
-    qcReviewedText: "Derived from the Guan Yu Long Moon Blade, this sword technique exhibits mighty and imposing momentum, often instilling a sense of peril in enemies before they engage."
-    qcTranslated: "Derived from the long weapon Guan Yu Long Moon Blade, this saber technique features majestic and solemn movements, often instilling fear in enemies before a battle begins."
+    qcReviewedText: "The sword techniques derived from the Long weapon Yangyuedao exhibit a majestic and imposing momentum, often making enemies feel vulnerable even before the battle begins."
+    qcTranslated: "The sword techniques derived from the Changbing Yangyuedao exhibit a majestic and imposing momentum, often making enemies feel vulnerable even before the battle begins."
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 90
 - raw: "173,刀法,2,百兽刀法,效仿百兽形意之刀法，其招式威猛霸道，颇具熊虎之姿，对修习者的体魄大有裨益,14,0.9,刀法1;体质1;绝技1,,体质3;刀法3;内力0.1,刀法30;体质15,\"4,0,0\",\"5,1,3\",活血0.1,12,-1,0,手13;胸8,手4;胸6,,,skill2_1,,猛虎-Target-Grid-Happen;乱斩-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1617,9 +1623,11 @@
   - split: 4
     text: "此杖法以招式严谨，防守致密见长，修习者需以水桶取水泼之而不能进，方见其功力"
     translated: "This staff technique excels in rigorous forms and dense defense. Practitioners must receive water like buckets and pour it out without advancing, truly showcasing their power."
-    qcTranslated: "This staff technique excels in rigorous forms and dense defense. Practitioners must take water in buckets and pour it out without advancing, truly showcasing their power."
-    flaggedForQcReview: true
+    qcRejectedCorrection: "This staff technique excels in rigorous forms and dense defense. Practitioners must use water buckets to泼之而不能进, showcasing their skill and mastery. Note: The phrase \"泼之而不能进\" should be accurately translated or explained in the context of the technique."
+    qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
     qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "This staff technique excels in rigorous forms and dense defense. Practitioners must receive water like buckets and pour it out without advancing, truly showcasing their power."
 - raw: "179,长兵,2,六合大枪,以六种基本招式为根基的简练枪法，枪路刚猛直接，只需身强力壮者便能发挥威力,16,1,长兵2;体质1,,体质3;长兵1;内力0.1,长兵30;体质20,\"4,0,0\",\"4,1,3\",伤害0.08,16,-1,0,心12;胸8,心7;胸3,,,skill3_1,,地面打击-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -1724,6 +1732,10 @@
   - split: 4
     text: "号称鞭鞭夺命的阴毒鞭法，招招攻向敌人的软肋和要害处，其凶残狠辣常常令正派人士所不齿"
     translated: "Proudly called a fatal whip technique that strikes the enemy's vulnerable points and vital areas, its ruthless brutality often earns the disapproval of righteous individuals."
+    qcReviewedText: "Proudly called a fatal whip technique that strikes the enemy's vulnerable points and vital areas, its ruthless brutality often earns the disapproval of righteous individuals."
+    qcTranslated: "Proudly called a fatal whip technique that strikes the enemy's vulnerable points and vital points, its ruthless brutality often earns the disapproval of righteous individuals."
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "191,奇门,2,乱披风锤法,以连续挥击而闻名，短时间内数十次挥出势大力沉之铁锤，即便身强体壮者有时也难以驾驭,15,0.9,奇门1;力道1;体质1,,力道2;体质3;奇门1,奇门15;力道20;体质30,\"0,1,2\",\"0,0,1\",连绵0.08,17,-1,0,头12;胸11,头4;胸4,,,skill2_2,,地震波-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2383,6 +2395,10 @@
   - split: 4
     text: "大巧不工，大道无名，此剑法仅有图谱却无固定招式，讲求随机应变，自然妙悟，对使用者剑法造诣要求极高"
     translated: "Great skill appears effortless, and the Great Way is nameless. This sword art exists only as a manual of diagrams, with no fixed techniques. It emphasizes adapting to circumstances and achieving natural insight, demanding an exceptionally high level of swordsmanship from its practitioner."
+    qcReviewedText: "Great skill appears effortless, and the Great Way is nameless. This sword art exists only as a manual of diagrams, with no fixed techniques. It emphasizes adapting to circumstances and achieving natural insight, demanding an exceptionally high level of swordsmanship from its practitioner."
+    qcTranslated: "Great skill appears effortless, and the Great Way is nameless. This sword art exists only as a manual of diagrams, with no fixed techniques. It emphasizes adapting to circumstances and achieving natural insight, demanding an exceptionally high level of swordsmanship from its practitioner. Dao Wuming"
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "265,剑法,4,天意剑诀,此剑法应和天意，实则暗含经脉运转之法。施展时催动全身内息随剑招奔流而出，便能克敌机先，伤敌无形,21,0.9,剑法潜力2;剑法1;经脉1,,经脉3;剑法3;内力0.3,剑法55;经脉40,\"4,0,0\",\"4,1,5\",内劲0.06;截脉0.06,26,-1,0,头14;胸10,头7;胸6,,,skill1_0,,喷墨-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -4162,9 +4178,9 @@
   - split: 4
     text: "清风徐来，水波不兴，此剑法不急不躁，舒缓平稳，旨在锻炼经脉而非逞强伤人"
     translated: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
-    qcTranslated: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen. Clear wind comes gently, the water's waves do not stir, this sword technique does not rush or fret, it is soothing and steady, aiming to train the meridians rather than injuring others."
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
 - raw: "464,内功,1,静守谷神法,茅山派动静结合，凝练心神的基础内功，修习者需盘膝端坐，咬牙合口，掌按耳门，腹内鼓气以修炼内息,,1.1,内功1;经脉1,生命上限20;内力上限60;内功6;经脉6;恢复0.03;康复0.06;负面抗性0.03,,内功20;经脉10,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5119,9 +5135,10 @@
   - split: 4
     text: "一边移动，一边以腿脚扬起沙尘迷惑敌人的步法"
     translated: "One‑step to move while kicking up dust to confuse the enemy"
+    qcReviewedText: "One‑step to move while kicking up dust to confuse the enemy"
     qcTranslated: "One‑step to move while kicking up dust to confuse the enemy with it."
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcStatus: Corrected
+    qcQualityScore: 70
 - raw: "571,绝技,0,鬼夜哭,过程极为艰苦的锻炼力道之法，修习之时罕有不疼痛哭嚎者，因而得名,,1.1,力道1,绝技4;力道4;壮骨0.04,,绝技5;力道5,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5280,6 +5297,10 @@
   - split: 4
     text: "套路狂放，以力道取胜的拳法，由膂力过人者使出，劲风飒飒，声响刺耳，不明就里者只以为是冤鬼夜哭"
     translated: "Style Unleashed: A combat technique that relies on strength. It is performed by those with extraordinary physical power, creating gusts of wind and sharp sounds that can mislead the uninitiated into thinking it's the wailing of wronged ghosts at night."
+    qcReviewedText: "Style Unleashed: A combat technique that relies on strength. It is performed by those with extraordinary physical power, creating gusts of wind and sharp sounds that can mislead the uninitiated into thinking it's the wailing of wronged ghosts at night."
+    qcTranslated: "Style Unleashed: A combat technique that relies on strength. It is performed by those with extraordinary physical power, creating gusts of wind and sharp sounds that can mislead the uninitiated into thinking it's the wailing of wronged spirits at night."
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "589,拳掌,2,朱砂掌,修习者需用手掌快速拍打灼热铁砂，直至难以忍受，功成后则掌心血红，掌力附带灼热真气，所中之处立时皮焦肉烂,14,1.1,拳掌1;经脉2,,经脉2;拳掌3;内力0.2,拳掌35;经脉20,\"1,1,1\",\"0,0,1\",内伤0.06;不愈0.04,15,8,0,心6;腹14,心3;腹8,,,skill0_1,,喷火-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5402,8 +5423,10 @@
   - split: 4
     text: "阎罗王自蒙古摔跤术中悟出，以怪力攻敌下盘使其失去重心的拳法，高手相争之时若一方跌倒在地，无异于落入任人鱼肉之境地"
     translated: "King Yama learned this fist technique from Mongolian wrestling, using his extraordinary strength to attack an opponent's lower body, causing them to lose their balance. In a battle between skilled fighters, if one falls to the ground, it is akin to being at the mercy of their opponent."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "King Yama learned this fist technique from Mongolian wrestling, using his extraordinary strength to attack an opponent's lower body, causing them to lose their balance. In a battle between skilled fighters, if one falls to the ground, it is akin to being at the mercy of their opponent."
+    qcReviewedText: "King Yama learned this fist technique from Mongolian wrestling, using his extraordinary strength to attack an opponent's lower body, causing them to lose their balance. In a battle between skilled fighters, if one falls to the ground, it is akin to being at the mercy of their opponent."
+    qcTranslated: "King Yama learned this fist technique from Mongolian wrestling, using his extraordinary strength to attack an opponent's lower body, causing them to lose their balance. In a battle between skilled fighters, if one falls to the ground, it is akin to being at the mercy of their opponent."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "603,拳掌,4,九死离魂掌,外劲威猛霸道，内劲怒涛汹涌的掌法，高手见之犹需避其锋芒，而贸然硬接此掌者，难免魂飞魄散，九死一生,19,1.1,拳掌潜力2;拳掌1;经脉1,,经脉4;拳掌3;内力0.1,拳掌65;经脉45,\"0,1,2\",\"0,0,1\",死战0.06;不愈0.12,23,8,0,手8;胸19,手8;胸4,,,skill0_1,,蓝火爆发-Target-Grid-Happen,拳,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -6133,6 +6156,10 @@
   - split: 4
     text: "传佛祖初诞时曾作狮子吼，云天上地下唯吾独尊，修习者亦发此吼声，响彻云霄，纯澈嘹亮，声闻数里，堪令群魔肝胆俱裂"
     translated: "When the Buddha was first born, he roared like a lion, proclaiming that in heaven and on earth, none but I am supreme. Practitioners also utter this roar, resonating through the clouds with pure and piercing clarity, audible for miles and capable of cracking the hearts of demons."
+    qcReviewedText: "When the Buddha was first born, he roared like a lion, proclaiming that in heaven and on earth, none but I am supreme. Practitioners also utter this roar, resonating through the clouds with pure and piercing clarity, audible for miles and capable of cracking the hearts of demons."
+    qcTranslated: "When the Buddha was first born, he roared like a lion, proclaiming that in heaven and on earth, none but I am supreme. Practitioners also utter this roar, resounding through the clouds with pure and piercing clarity, audible for miles and capable of cracking the hearts of demons."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "683,拳掌,4,大力金刚掌,内外兼修，威力无穷之少林无上正宗掌法，出掌时金光四溢，声威震天，所到之处无论砖石金铁，皆会被碾作齑粉,23,1,力道潜力2;拳掌1;力道1,,力道5;拳掌2;内力0.2,拳掌55;力道45,\"4,0,0\",\"5,1,2\",眩晕0.06;断骨0.06,28,10,0,胸20;腹4,胸2;腹8,,,skill0_1,,佛散-Target-Grid-Start;地面打击2-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7849,8 +7876,9 @@
   - split: 4
     text: "专门锻炼手指臂膀的灵巧功夫，乃神机门正式弟子必修科目，若修习不精，打造机关时难免错漏百出"
     translated: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms."
-    qcRejectedCorrection: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms.\\nNone needed, but consider merging into a single sentence for fluency: \"Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect, will inevitably lead to mistakes when creating mechanisms if not practiced thoroughly.\""
-    qcFailureReason: " Alternatives were provided when none should be given."
+    qcReviewedText: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms."
+    qcTranslated: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanical devices."
+    qcStatus: Corrected
     qcQualityScore: 85
 - raw: "873,奇门,2,玉石麒麟,以玉石装饰的铜制麒麟，奔跑纵跃颇为华丽好看，绕敌人移动时口中会不时喷出箭矢暗器，令人防不胜防,,1.1,奇门2;意志1,,,奇门30;智力30,\"0,1,1\",\"0,0,0\",,16,16,4,,,3,1,craft,,组装-Target-Grid-Start;烟雾-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
@@ -8365,11 +8393,19 @@
   - split: 4
     text: "威力强悍的转轮功法，其凶狠招式可助人快速脱离苦海，往生极乐——无论对方是否愿意"
     translated: "Powerful revolver cultivation techniques can help one quickly escape suffering and ascend to bliss‑whether the opponent is willing or not."
+    qcReviewedText: "Powerful revolver cultivation techniques can help one quickly escape suffering and ascend to bliss‑whether the opponent is willing or not."
+    qcTranslated: "Powerful spinning wheel cultivation techniques can help one quickly escape suffering and ascend to bliss, regardless of whether the opponent is willing or not."
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "931,刀法,1,往生刀法,威力强悍的刀法，其凶狠招式可助人快速脱离苦海，往生极乐——无论对方是否愿意,12,1,刀法1;力道1,,力道3;刀法2,刀法15;力道15,\"4,0,0\",\"5,1,2\",暴击0.06,9,18,0,头18,头10,,,skill2_1,,血轮-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "威力强悍的刀法，其凶狠招式可助人快速脱离苦海，往生极乐——无论对方是否愿意"
     translated: "Powerful blade techniques can help one quickly escape suffering and transcend to utmost bliss, whether the opponent is willing or not."
+    qcReviewedText: "Powerful blade techniques can help one quickly escape suffering and transcend to utmost bliss, whether the opponent is willing or not."
+    qcTranslated: "Powerful blade techniques can help one quickly escape suffering and transcend to utmost bliss, regardless of whether the opponent is willing or not."
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "932,内功,2,不动明王功,八大明王首座，具扫除障碍毫不动摇之意，修习者运功时遍体金刚，不动如山，邪魔外道不能撼其分毫,,1,内功2;体质1,生命上限90;内力上限30;内功6;力道6;体质6;反弹0.02;坚毅0.04,,内功30;体质20;力道10,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4

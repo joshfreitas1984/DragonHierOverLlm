@@ -442,9 +442,9 @@
   - split: 19
     text: "历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
     translated: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
-    qcTranslated: "Throughout the ages, countless caves have been carved into these stone walls, numbering in the thousands, with numerous meditation rooms and Buddha statues, and magnificent murals covering the walls. Additionally, there are scripture caves filled with countless volumes of scriptures and classics, attracting many high monks and virtuous scholars to come and practice here."
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
 - raw: "50,黄鹤楼,50,6,1,0,4,招贤--SpeHireFollower,威望+10;全域治安+1,木料-150,实战经验0.1;弟子功绩0.2,,粮食1000;木料2000,20,8,,2,footstep,0;0,上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
   splits:
   - split: 19

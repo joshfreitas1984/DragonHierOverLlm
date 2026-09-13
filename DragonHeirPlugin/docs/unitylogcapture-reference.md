@@ -10,7 +10,7 @@ Use the exact interop parameter types in patch attributes: `Il2CppSystem.Object`
 
 ## Message formatting
 
-`Write` appends timestamped entries to `unity-log.txt`. Only `Debug.LogException` output is mirrored to the BepInEx console; ordinary log, warning, error, and assertion traffic remains file-only to avoid console noise. Keep the entire path best-effort and wrapped in exception handling.
+`Write` appends timestamped entries to `unity-log.txt` through a `StreamWriter` opened once and kept for the plugin's lifetime (`GetWriter`), not reopened per call - this hook fires for every `Debug.Log*` call in the whole game, so per-call `File.AppendAllText` (open/write/close each time) was a measurable hot-path cost. `AutoFlush` stays on so a hard crash doesn't lose the log tail; `DeleteLogFile` disposes the writer before deleting so a stale handle doesn't linger. Only `Debug.LogException` output is mirrored to the BepInEx console; ordinary log, warning, error, and assertion traffic remains file-only to avoid console noise. Keep the entire path best-effort and wrapped in exception handling.
 
 `FormatMessage` must not rely on `Il2CppSystem.Object.ToString()`, which returns the wrapper type name rather than boxed string content. Inspect the native class from the object pointer and use `IL2CPP.Il2CppStringToManaged` for `System.String`; use the ordinary fallback only for other boxed values. `FormatException` reads `Message`, `StackTrace`, and `InnerException` directly instead of calling the wrapper `ToString()`.
 

@@ -143,10 +143,10 @@ investigation.
 contents verbatim** — no row-level merging. `Tests/GameFileHandling.cs`'s
 `PackageFinalTranslationAsync` already writes a complete drop-in file to `Files/Mod/*.csv` (every
 row present, untranslated/failed rows kept as original raw text), so the override file is always
-the full intended replacement, never a partial patch. `CsvMerger.MergeByFirstColumn` (unused,
-still in `CsvMerger.cs`) was tried and abandoned — see
-`DragonHeirPlugin/docs/resourceio-csv-merge-abandoned.md` for why a row-level merge by column-0 ID
-doesn't hold up for every file.
+the full intended replacement, never a partial patch. A row-level merge by column-0 ID
+(`CsvMerger.MergeByFirstColumn`) was tried and abandoned, then deleted entirely as dead code — see
+`DragonHeirPlugin/docs/resourceio-csv-merge-abandoned.md` for why it doesn't hold up for every
+file.
 
 ## `UnityLogCapture` — capturing Unity engine log output without BepInEx's log hook
 

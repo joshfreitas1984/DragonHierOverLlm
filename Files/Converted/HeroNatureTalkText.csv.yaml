@@ -24,9 +24,9 @@
   - split: 4
     text: "忠厚"
     translated: "Honesty"
-    qcTranslated: "Integrity"
-    flaggedForQcReview: true
     qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Honesty"
   - split: 5
     text: "简单"
     translated: "Simple"
@@ -74,6 +74,10 @@
   - split: 1
     text: "嗯？哦！是#PlayerName#啊！我适才正构思一妙招，只需如此施展……"
     translated: "Hmm? Oh! It's #PlayerName#! I was just thinking of a clever trick, something like this..."
+    qcReviewedText: "Hmm? Oh! It's #PlayerName#! I was just thinking of a clever trick, something like this..."
+    qcTranslated: "Hmm? Oh! It's you, #PlayerName#! I was just thinking of a clever trick, something like this..."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 2
     text: "#PlayerName#，我近日修行始终不得要领，已为此苦思多日了。"
     translated: "#PlayerName#, I have been struggling to grasp the right approach in my recent cultivation for many days now."
@@ -116,10 +120,10 @@
   - split: 8
     text: "#PlayerName#，看剑！"
     translated: "#PlayerName#, look saber!"
-    qcReviewedText: "#PlayerName#, look saber!\\n……Ha ha, just joking"
-    qcTranslated: "#PlayerName#, look out!\\n......Ha ha, just joking."
+    qcReviewedText: "#PlayerName#, look saber!\\n...Haha, just a joke"
+    qcTranslated: "#PlayerName#, look out!\\n...Haha, just a joke."
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 70
   - split: 8
     subIndex: 1
     text: "……哈哈，开个玩笑而已。"
@@ -503,9 +507,9 @@
   - split: 9
     text: "飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。"
     translated: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
-    qcTranslated: "Whirling sword strokes startle, one might doubt if they are mere rumors. Now where lies true poverty? It is not about merely making things fair for people."
-    flaggedForQcReview: true
     qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
   - split: 10
     text: "十步杀一人，千里不留行。事了拂衣去，深藏身与名。"
     translated: "Ten steps to kill one man, a thousand miles go unimpeded. After matters are resolved, I depart quietly, hiding my presence and name."

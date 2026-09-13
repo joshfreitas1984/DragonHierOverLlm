@@ -108,7 +108,7 @@ internal static class PrefabTextPatches
                 return;
 
             var go = new GameObject(__result.Pointer);
-            ProcessGameObjectRecursive(go);
+            MeasureAndProcess(go, "ResourcesLoad");
         }
         catch (Exception ex)
         {
@@ -129,7 +129,7 @@ internal static class PrefabTextPatches
             foreach (var go in scene.GetRootGameObjects())
             {
                 if (go != null)
-                    ProcessGameObjectRecursive(go);
+                    MeasureAndProcess(go, "SceneLoaded");
             }
         }
         catch (Exception ex)
@@ -161,7 +161,7 @@ internal static class PrefabTextPatches
                     return;
 
                 var go = new GameObject(__result.Pointer);
-                ProcessGameObjectRecursive(go);
+                MeasureAndProcess(go, "AssetBundleLoadAsset");
             }
             catch (Exception ex)
             {
@@ -231,7 +231,7 @@ internal static class PrefabTextPatches
                 if (__result == null || Replacements.Count == 0)
                     return;
 
-                ProcessGameObjectRecursive(__result);
+                MeasureAndProcess(__result, "GlobalData.AddChild");
             }
             catch (Exception ex)
             {
@@ -248,7 +248,7 @@ internal static class PrefabTextPatches
                 return;
 
             var go = new GameObject(__result.Pointer);
-            ProcessGameObjectRecursive(go);
+            MeasureAndProcess(go, "Instantiate");
         }
         catch (Exception ex)
         {
@@ -270,7 +270,6 @@ internal static class PrefabTextPatches
         try
         {
             var caption = __instance?.captionText;
-            DiagLog("Dropdown.RefreshShownValue", $"name='{__instance?.name}' captionText='{caption?.text}'");
             if (Replacements.Count == 0) return;
             if (caption != null)
                 ReplaceIfKnown(caption.text, v => caption.text = v);
@@ -288,7 +287,6 @@ internal static class PrefabTextPatches
         try
         {
             var caption = __instance?.captionText;
-            DiagLog("TMP_Dropdown.RefreshShownValue", $"name='{__instance?.name}' captionText='{caption?.text}'");
             if (Replacements.Count == 0) return;
             if (caption != null)
                 ReplaceIfKnown(caption.text, v => caption.text = v);
@@ -298,22 +296,6 @@ internal static class PrefabTextPatches
             MainPlugin.Logger?.LogError($"PrefabTextPatches.TmpDropdownRefreshShownValue_Postfix failed: {ex}");
         }
     }
-
-    // TEMPORARY diagnostic for the still-unresolved UpgradePriorityText investigation - remove
-    // once resolved. Writes directly to a file (never MainPlugin.Logger, to avoid any reentrancy
-    // risk) so a single playtest shows exactly which hooks fire, in what order, with what text.
-    private static void DiagLog(string stage, string detail)
-    {
-        try
-        {
-            var path = Path.Combine(PluginDir, "prefabTextDiag.log");
-            File.AppendAllText(path, $"[{DateTime.Now:HH:mm:ss.fff}] [{stage}] {detail}{Environment.NewLine}");
-        }
-        catch { /* best-effort */ }
-    }
-
-    private static bool IsDiagTarget(string text, string goName) =>
-        (text != null && text.Contains("优先")) || (goName != null && goName.Contains("UpgradePriority"));
 
     // AssetBundle.LoadAsset(string) has no requested-Type parameter to check like Resources.Load
     // does, so the object's real IL2CPP class is queried directly instead of casting - same
@@ -326,76 +308,45 @@ internal static class PrefabTextPatches
         return ns == "UnityEngine" && name == "GameObject";
     }
 
-    // Detailed rationale and invariants: docs/prefabtextpatches-agent-reference.md
-    [ThreadStatic]
-    private static bool _inTextSetterPostfix;
-
-    [HarmonyPatch(typeof(TMP_Text), nameof(TMP_Text.text), MethodType.Setter)]
-    [HarmonyPostfix]
-    [HarmonyPriority(Priority.First)]
-    private static void TmpTextSetText_Postfix(TMP_Text __instance)
+    // TMP_Text.text/UnityEngine.UI.Text.text/UILabel.text are no longer patched independently
+    // here - DynamicStringPatches.HandleTextSetter merges this whole-string exact-match pass with
+    // its own substring dictionary pipeline into a single Harmony postfix per setter, calling
+    // TryApplyExactMatch (below) first to preserve the same "exact match wins" priority order this
+    // class used to get via [HarmonyPriority(Priority.First)]. See docs/prefabtextpatches-agent-reference.md
+    // and docs/dynamicstringpatches-agent-reference.md.
+    //
+    // Pure lookup, no I/O/setText side effect - the caller (DynamicStringPatches.HandleTextSetter)
+    // owns the single setText() call for whichever pipeline(s) actually changed the text, so a
+    // component's text setter is invoked at most once per real edit instead of once per pipeline.
+    internal static string TryApplyExactMatch(string current)
     {
-        ApplyExactMatchToComponentText(() => __instance.text, v => __instance.text = v);
-    }
-
-    [HarmonyPatch(typeof(Text), nameof(Text.text), MethodType.Setter)]
-    [HarmonyPostfix]
-    [HarmonyPriority(Priority.First)]
-    private static void UiTextSetText_Postfix(Text __instance)
-    {
-        ApplyExactMatchToComponentText(() => __instance.text, v => __instance.text = v);
-    }
-
-    [HarmonyPatch(typeof(UILabel), nameof(UILabel.text), MethodType.Setter)]
-    [HarmonyPostfix]
-    [HarmonyPriority(Priority.First)]
-    private static void UiLabelSetText_Postfix(UILabel __instance)
-    {
-        ApplyExactMatchToComponentText(() => __instance.text, v => __instance.text = v);
-    }
-
-    // Detailed rationale and invariants: docs/prefabtextpatches-agent-reference.md
-    private static void ApplyExactMatchToComponentText(Func<string> getText, Action<string> setText)
-    {
-        if (_inTextSetterPostfix)
-            return;
-
-        if (Replacements.Count == 0)
-        {
-            var probe = getText();
-            if (IsDiagTarget(probe, null))
-                DiagLog("SetterPostfix", $"SKIPPED - Replacements dictionary is EMPTY. current='{probe}'");
-            return;
-        }
+        if (Replacements.Count == 0 || string.IsNullOrEmpty(current))
+            return current;
 
         try
         {
-            var current = getText();
-            if (string.IsNullOrEmpty(current))
-                return;
-
-            if (IsDiagTarget(current, null))
-                DiagLog("SetterPostfix", $"current='{current}'");
-
             var lookupKey = NormalizeForLookup(current);
             if (!Replacements.TryGetValue(lookupKey, out var replacement) || replacement == lookupKey)
-            {
-                if (IsDiagTarget(current, null))
-                    DiagLog("SetterPostfix", $"NO DICTIONARY MATCH for '{current}' (normalized='{lookupKey}')");
-                return;
-            }
+                return current;
 
-            _inTextSetterPostfix = true;
-            try { setText(DenormalizeFromLookup(replacement)); }
-            finally { _inTextSetterPostfix = false; }
-
-            if (IsDiagTarget(current, null))
-                DiagLog("SetterPostfix", $"REPLACED '{current}' -> '{replacement}'");
+            return DenormalizeFromLookup(replacement);
         }
         catch (Exception ex)
         {
-            MainPlugin.Logger?.LogError($"PrefabTextPatches: text setter postfix failed: {ex}");
+            MainPlugin.Logger?.LogError($"PrefabTextPatches: TryApplyExactMatch failed: {ex}");
+            return current;
         }
+    }
+
+    // Measures only the top-level call at each entry point (Resources.Load/AssetBundle.LoadAsset/
+    // Instantiate/SceneLoaded/GlobalData.AddChild), not every recursive step - ProcessGameObjectRecursive
+    // calls itself for every child, so timing each recursive call individually would sum to far
+    // more than the actual wall-clock cost of one instantiation. `source` and `go.name` are only
+    // read if this call ends up being logged (new slowest, or over the slow-call threshold).
+    private static void MeasureAndProcess(GameObject go, string source)
+    {
+        using var _ = PerfInstrumentation.Measure("PrefabTextPatches.ProcessGameObjectRecursive", () => $"{source}:{go?.name}");
+        ProcessGameObjectRecursive(go);
     }
 
     private static void ProcessGameObjectRecursive(GameObject go)
@@ -477,22 +428,11 @@ internal static class PrefabTextPatches
 
     private static void ReplaceIfKnown(string currentText, Action<string> setText)
     {
-        if (string.IsNullOrEmpty(currentText))
+        if (string.IsNullOrEmpty(currentText) || !DynamicStringPatches.ContainsCjk(currentText))
             return;
 
-        if (IsDiagTarget(currentText, null))
-            DiagLog("ProcessGameObjectRecursive", $"found current='{currentText}'");
-
         if (Replacements.TryGetValue(NormalizeForLookup(currentText), out var replacement))
-        {
             setText(DenormalizeFromLookup(replacement));
-            if (IsDiagTarget(currentText, null))
-                DiagLog("ProcessGameObjectRecursive", $"REPLACED '{currentText}' -> '{replacement}'");
-        }
-        else if (IsDiagTarget(currentText, null))
-        {
-            DiagLog("ProcessGameObjectRecursive", $"NO DICTIONARY MATCH for '{currentText}'");
-        }
     }
 
     // Detailed rationale and invariants: docs/prefabtextpatches-agent-reference.md

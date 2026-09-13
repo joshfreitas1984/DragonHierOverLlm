@@ -25,7 +25,7 @@ internal static class PlotTextSizePatches
     [HarmonyPostfix]
     private static void ClampPreferredWidth_Postfix(Text __instance, ref float __result)
     {
-        if (MainPlugin.ClampPlotTextWidthEnabled?.Value != true) return;
+        if (!MainPlugin.ClampPlotTextWidthEnabledCached) return;
         if (__instance == null || __instance.name != "PlotText") return;
         var plotTextBackTransform = __instance.transform.parent;
         if (plotTextBackTransform == null || plotTextBackTransform.name != "PlotTextBack") return;
@@ -131,17 +131,35 @@ internal static class PlotTextSizePatches
     // AccessViolationException in this game's IL2CPP build. Time.deltaTime is read every frame by
     // ordinary game code, so patching its getter (a concrete, non-generic method) gives a safe
     // tick without any generic interop call.
+    //
+    // TRIED AND REVERTED: subscribing to Canvas.willRenderCanvases (a genuine once-per-frame C#
+    // event) instead, via Il2CppInterop.Runtime.DelegateSupport.ConvertDelegate, to avoid the
+    // Time.deltaTime getter being hit many times per frame by ordinary game systems. That crashed
+    // the whole process with a native AccessViolationException inside
+    // Il2CppInterop's GenericMethod_GetMethod_Hook during ConvertDelegate itself, at plugin load -
+    // a hard native crash, not a catchable managed exception, so the try/catch fallback this class
+    // briefly had around it never got a chance to run. Do not retry DelegateSupport.ConvertDelegate
+    // for this without confirming it works in this specific game build first.
     private static int _lastTickedFrame = -1;
 
     [HarmonyPatch(typeof(Time), nameof(Time.deltaTime), MethodType.Getter)]
     [HarmonyPostfix]
     private static void OnDeltaTimeRead_Postfix()
     {
-        if (MainPlugin.ForceTestPlotTextHotkey == null) return;
-
         var frame = Time.frameCount;
         if (frame == _lastTickedFrame) return;
         _lastTickedFrame = frame;
+
+        // Piggybacks on this same safe once-per-frame tick - see PerfInstrumentation for why.
+        PerfInstrumentation.PeriodicTick();
+
+        if (MainPlugin.ForceTestPlotTextHotkey != null)
+            RunHotkeyCheck();
+    }
+
+    private static void RunHotkeyCheck()
+    {
+        if (MainPlugin.ForceTestPlotTextHotkey == null) return;
 
         try
         {
@@ -168,7 +186,7 @@ internal static class PlotTextSizePatches
         }
         catch (Exception ex)
         {
-            MainPlugin.Logger?.LogError($"PlotTextSizePatches: OnDeltaTimeRead_Postfix failed: {ex}");
+            MainPlugin.Logger?.LogError($"PlotTextSizePatches: RunHotkeyCheck failed: {ex}");
         }
     }
 }

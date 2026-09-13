@@ -31,7 +31,7 @@ internal static class PlotTextPatches
     [HarmonyPrefix]
     private static void DOText_Prefix(Text target, ref string endValue, ref float duration)
     {
-        if (MainPlugin.SpeedUpPlotTextTypewriterEnabled?.Value == true)
+        if (MainPlugin.SpeedUpPlotTextTypewriterEnabledCached)
         {
             try
             {
@@ -47,7 +47,7 @@ internal static class PlotTextPatches
             }
         }
 
-        if (MainPlugin.PreTranslatePlotTextEnabled?.Value == true)
+        if (MainPlugin.PreTranslatePlotTextEnabledCached)
         {
             try
             {

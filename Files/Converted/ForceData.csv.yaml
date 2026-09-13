@@ -181,10 +181,9 @@
   - split: 15
     text: "枪术"
     translated: "Gun combat"
-    qcReviewedText: "<b>Gun combat</b>：Study lances at the racetrack to enhance their power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
-    qcTranslated: "<b>Guns</b>：Study long weapons at the racetrack to enhance their power.\\n<b>Horseback Riding</b>：Horse taming speed +20%, sprint taming cost 20%. Every 1% taming increases the horse's stats by 0.2% fully."
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "<b>Gun combat</b>：Study the long weapon at the racetrack to enhance its power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
@@ -269,9 +268,11 @@
   - split: 15
     text: "炼蛊"
     translated: "Incubate poison insects"
-    qcTranslated: "<b>Incubate Poison</b>：Consume medicinal herbs or ingredients in the Sea of Venom to obtain poisons, then fuse low‑level poisons to create powerful high‑level poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases by ‑25%."
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcRejectedCorrection: "<b>Incubate Poison</b>: Consume medicinal herbs or ingredients in the Sea of Venom to obtain poisons. Fuse low-level poisons to create powerful high-level poisons.<b>Poison Technique</b>: Multiple poisons can be chosen, and the rate of poison application decreases by -25%."
+    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
   - split: 15
     subIndex: 1
     text: "在万毒池消耗药引"
@@ -660,9 +661,9 @@
   - split: 15
     text: "海沙"
     translated: "Desert sand"
-    qcTranslated: "<b>Sea sand</b>: Special Skill Experience +20%, Cooking Experience +20%"
-    flaggedForQcReview: true
     qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "<b>Desert sand</b>：Special Skill Experience +20%, Cooking Experience+20%。"
   - split: 15
     subIndex: 1
     text: "绝技经验+20%，烹饪经验"
@@ -755,9 +756,9 @@
   - split: 15
     text: "伏牛"
     translated: "Wutou Mountain"
-    qcTranslated: "<b>Funiu</b>：Long Weapon Experience +20%, Wood Experience +20%"
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "<b>Wutou Mountain</b>：Long weapon experience +20%, wooden staff experience+20%。"
   - split: 15
     subIndex: 1
     text: "长兵经验+20%，木植经验"

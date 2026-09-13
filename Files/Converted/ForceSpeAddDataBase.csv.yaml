@@ -219,7 +219,10 @@
   - split: 2
     text: "长兵经验"
     translated: "Long weapon experience"
-    qcRuleCheckFailureCount: 1
+    qcRejectedCorrection: "Long weapon experience (Changbing)"
+    qcFailureReason: " Explaination was provided when none should be given."
+    qcQualityScore: 80
+    qcRuleCheckFailureCount: 2
     qcRuleCheckFailureBaseline: "Long weapon experience"
 - raw: "24,奇门经验,奇门经验,TRUE,0.02"
   splits:
@@ -285,9 +288,10 @@
   - split: 2
     text: "木植经验"
     translated: "Tree planting experience"
+    qcReviewedText: "Tree planting experience"
     qcTranslated: "Wood experience"
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcStatus: Corrected
+    qcQualityScore: 80
 - raw: "32,锻造经验,锻造经验,TRUE,0.02"
   splits:
   - split: 2
@@ -344,9 +348,9 @@
   - split: 2
     text: "全员意志"
     translated: "All willpower"
-    qcTranslated: "Will of all members"
-    flaggedForQcReview: true
     qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "All willpower"
 - raw: "39,全员体质,全员体质,FALSE,1"
   splits:
   - split: 2
@@ -424,9 +428,9 @@
   - split: 2
     text: "全员长兵"
     translated: "All long weapons"
-    qcTranslated: "Full‑troop long weapons"
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "All long weapons"
 - raw: "48,全员奇门,全员奇门,FALSE,1"
   splits:
   - split: 2
@@ -441,17 +445,17 @@
   - split: 2
     text: "全员射术"
     translated: "All‑arrow shooting skill"
-    qcTranslated: "All archery skill"
-    flaggedForQcReview: true
     qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "All‑arrow shooting skill"
 - raw: "50,全员医术,全员医术,FALSE,1"
   splits:
   - split: 2
     text: "全员医术"
     translated: "All‑Clad Medical Skill"
-    qcTranslated: "All‑Rank Medical Skill"
-    flaggedForQcReview: true
     qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "All‑Clad Medical Skill"
 - raw: "51,全员毒术,全员毒术,FALSE,1"
   splits:
   - split: 2
@@ -492,17 +496,17 @@
   - split: 2
     text: "全员木植"
     translated: "All Zhu Ye"
-    qcTranslated: "All Wooden Units"
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 20
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "All Zhu Ye"
 - raw: "56,全员锻造,全员锻造,FALSE,1"
   splits:
   - split: 2
     text: "全员锻造"
     translated: "All‑Item Forge"
-    qcTranslated: "All‑Member Smithing"
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "All‑Item Forge"
 - raw: "57,全员炼药,全员炼药,FALSE,1"
   splits:
   - split: 2

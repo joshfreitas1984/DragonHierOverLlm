@@ -653,7 +653,7 @@ internal static class DynamicStringPatches
     // FormatPrefix, which patch String.Format/Concat rather than a component setter) omit it.
     internal static void LogResidualCjkDebug(string stage, string before, string after, object instance = null)
     {
-        if (MainPlugin.ResidualCjkDebugEnabled?.Value != true) return;
+        if (!MainPlugin.ResidualCjkDebugEnabledCached) return;
         if (!ContainsCjk(after)) return;
 
         try
@@ -713,6 +713,9 @@ internal static class DynamicStringPatches
     // string. Internal (not private) so InfoListPatches.cs can reuse it.
     internal static string RunGenericPipeline(string input)
     {
+        using var _ = PerfInstrumentation.Measure("DynamicStringPatches.RunGenericPipeline",
+            () => input.Length > 60 ? input.Substring(0, 60) + "…" : input);
+
         return _genericPipelineMemoCache.GetOrCompute(input, s =>
         {
             var r = s;
@@ -776,29 +779,81 @@ internal static class DynamicStringPatches
         }
     }
 
-    // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
+    // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md and
+    // docs/prefabtextpatches-agent-reference.md. These three setter postfixes used to be patched
+    // separately by both this class AND PrefabTextPatches (each with its own ContainsCjk scan and
+    // its own Harmony dispatch) - merged into HandleTextSetter below so every text assignment
+    // anywhere in the UI only reads the current text, and scans it for CJK, once.
     [HarmonyPatch(typeof(TMP_Text), nameof(TMP_Text.text), MethodType.Setter)]
     [HarmonyPostfix]
     private static void TmpTextSetText_Postfix(TMP_Text __instance)
     {
-        ApplyToComponentText(__instance, () => __instance.text, v => __instance.text = v);
+        HandleTextSetter(__instance, () => __instance.text, v => __instance.text = v);
     }
 
     [HarmonyPatch(typeof(Text), nameof(Text.text), MethodType.Setter)]
     [HarmonyPostfix]
     private static void UiTextSetText_Postfix(Text __instance)
     {
-        ApplyToComponentText(__instance, () => __instance.text, v => __instance.text = v);
+        HandleTextSetter(__instance, () => __instance.text, v => __instance.text = v);
     }
 
     // NGUI's own label type - has its own get_text()/set_text(string), entirely separate from
     // UnityEngine.UI.Text/TMP_Text, so it was invisible to this sink patch until confirmed missing
-    // (see PrefabTextPatches.cs's UiLabelSetText_Postfix for the same gap on the exact-match side).
+    // (see PrefabTextPatches.cs's TryApplyExactMatch for the same gap on the exact-match side).
     [HarmonyPatch(typeof(UILabel), nameof(UILabel.text), MethodType.Setter)]
     [HarmonyPostfix]
     private static void UiLabelSetText_Postfix(UILabel __instance)
     {
-        ApplyToComponentText(__instance, () => __instance.text, v => __instance.text = v);
+        HandleTextSetter(__instance, () => __instance.text, v => __instance.text = v);
+    }
+
+    // Single entry point for all three text-setter sinks: reads the current text once, scans it
+    // for CJK once, then runs PrefabTextPatches' whole-string exact-match pass (preserving its old
+    // [HarmonyPriority(Priority.First)] "exact match wins" ordering) before falling through to this
+    // class's substring dictionary/template pipeline via ApplyToComponentText. Guarded by
+    // _inTextSetterPostfix so the setText() call below (which re-invokes the real setter, and so
+    // this same postfix) doesn't recurse.
+    private static void HandleTextSetter(object instance, Func<string> getText, Action<string> setText)
+    {
+        using var _ = PerfInstrumentation.Measure("DynamicStringPatches.HandleTextSetter", () => GetComponentPath(instance));
+
+        if (_inTextSetterPostfix) return;
+
+        string current;
+        try
+        {
+            current = getText();
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[DynamicStringPatches] HandleTextSetter failed reading current text: {ex}");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(current) || !ContainsCjk(current)) return;
+
+        _inTextSetterPostfix = true;
+        try
+        {
+            var afterExactMatch = PrefabTextPatches.TryApplyExactMatch(current);
+            if (afterExactMatch != current)
+            {
+                setText(afterExactMatch);
+                current = afterExactMatch;
+            }
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[DynamicStringPatches] HandleTextSetter exact-match pass failed: {ex}");
+        }
+        finally
+        {
+            _inTextSetterPostfix = false;
+        }
+
+        var capturedCurrent = current;
+        ApplyToComponentText(instance, () => capturedCurrent, setText);
     }
 
     // AreaBuildController.BuildChoiceButtonClicked re-derives which build action was clicked by
@@ -928,27 +983,6 @@ internal static class DynamicStringPatches
         // text with no CJK content, so an already-English areaName passes through unchanged.
         if (!string.IsNullOrEmpty(areaName))
             areaName = RunGenericPipeline(areaName);
-
-        // TEMP DIAGNOSTIC - remove once verified fixed live.
-        var wasInFormatConcatPatch = _inFormatConcatPatch;
-        _inFormatConcatPatch = true;
-        try
-        {
-            MainPlugin.Logger?.LogInfo($"[TEMP] FindMartialClub_Prefix: forward-translated areaName='{areaName}'");
-        }
-        finally
-        {
-            _inFormatConcatPatch = wasInFormatConcatPatch;
-        }
-    }
-
-    [HarmonyPatch(typeof(MartialClubDataBase), nameof(MartialClubDataBase.FindMartialClub))]
-    [HarmonyPostfix]
-    private static void FindMartialClub_Postfix(string areaName, MartialClubDataBase __result)
-    {
-        // TEMP DIAGNOSTIC - remove once verified fixed live.
-        MainPlugin.Logger?.LogInfo(
-            $"[TEMP] FindMartialClub_Postfix: areaName (post-prefix)='{areaName}', result={(__result == null ? "null" : "found")}");
     }
 
     private static void ApplyToComponentText(object instance, Func<string> getText, Action<string> setText)
@@ -962,7 +996,7 @@ internal static class DynamicStringPatches
         try
         {
             var cache = _componentTextCache.GetOrCreateValue(instance);
-            if (MainPlugin.SkipKnownNonCjkComponentsEnabled?.Value == true && cache.ConfirmedNonCjk)
+            if (MainPlugin.SkipKnownNonCjkComponentsEnabledCached && cache.ConfirmedNonCjk)
                 return;
 
             var current = getText();
@@ -1016,7 +1050,7 @@ internal static class DynamicStringPatches
             if (!ContainsCjk(current))
 
             {
-                if (MainPlugin.SkipKnownNonCjkComponentsEnabled?.Value == true)
+                if (MainPlugin.SkipKnownNonCjkComponentsEnabledCached)
                     cache.ConfirmedNonCjk = true;
                 return;
             }
@@ -1030,7 +1064,7 @@ internal static class DynamicStringPatches
             // AppendOnlySuffixTranslationEnabled gates the whole fast path off by default so this
             // can be compared against always running the full pipeline until the typewriter
             // reveal itself is addressed (see item 3 of the perf plan).
-            if (MainPlugin.AppendOnlySuffixTranslationEnabled?.Value == true
+            if (MainPlugin.AppendOnlySuffixTranslationEnabledCached
                 && cache.RawSnapshot != null
                 && current.Length > cache.RawSnapshot.Length
                 && current.StartsWith(cache.RawSnapshot, StringComparison.Ordinal)
@@ -1107,7 +1141,7 @@ internal static class DynamicStringPatches
     private static string ApplyTemplates(string input, List<CompiledTemplate> templates)
     {
         var result = ApplyTemplatesSinglePass(input, templates);
-        if (MainPlugin.MultiPassTemplateApplicationEnabled?.Value == true)
+        if (MainPlugin.MultiPassTemplateApplicationEnabledCached)
         {
             for (var pass = 1; pass < MaxTemplatePasses; pass++)
             {

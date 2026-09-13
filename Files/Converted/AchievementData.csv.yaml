@@ -68,9 +68,9 @@
   - split: 1
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
-    qcTranslated: "Can drink a thousand cups without getting drunk"
-    flaggedForQcReview: true
     qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Drinks not intoxicating"
   - split: 2
     text: "累计对饮获胜100场"
     translated: "Cumulative drinking win count: 100 rounds"
@@ -321,9 +321,9 @@
   - split: 2
     text: "累计煅烧"
     translated: "Accumulated Firing"
-    qcTranslated: "Accumulated 100 times of firing/processing/refining"
-    flaggedForQcReview: true
     qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Accumulated Firing/Prepare/100 times refined"
   - split: 2
     subIndex: 1
     text: "炮制"
@@ -523,6 +523,9 @@
   - split: 2
     text: "一场战斗中亲手击败10名以上敌人"
     translated: "Defeat more than 10 enemies in a single battle with your own hands"
+    qcReviewedText: "Defeat more than 10 enemies in a single battle with your own hands"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "无"
     translated: "None"
@@ -541,9 +544,9 @@
   - split: 2
     text: "与一名角色好感达到100"
     translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcTranslated: "Reaching 100 good feeling with a character will form a strong bond with them."
-    flaggedForQcReview: true
     qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
   - split: 5
     text: "无"
     translated: "None"
@@ -555,9 +558,9 @@
   - split: 1
     text: "义结金兰"
     translated: "Bonds of sisterhood"
-    qcTranslated: "Bonds of brotherhood in arms"
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Bonds of sisterhood"
   - split: 2
     text: "与一名角色结义"
     translated: "Buddy up with a character"
@@ -785,9 +788,10 @@
   - split: 2
     text: "达成名门大派结局"
     translated: "Achieve the Outcome of a Renowned Clansman House"
-    qcTranslated: "Achieve the Outcome of a Famous Sect"
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcReviewedText: "Achieve the Outcome of a Renowned Clansman House"
+    qcTranslated: "Achieve the Outcome of a Renowned Sect"
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 5
     text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派"
     translated: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect after winning the Sect Leader Conference championship."
@@ -869,9 +873,10 @@
   - split: 1
     text: "鸾凤和鸣"
     translated: "Dragon and phoenix resonate"
-    qcTranslated: "Phoenix and crane resonate"
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcReviewedText: "Dragon and phoenix resonate"
+    qcTranslated: "Mandarin and phoenix resonate"
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 2
     text: "达成鸾凤和鸣结局"
     translated: "Achieve the Dragon and Phoenix Harmony Ending"
@@ -882,9 +887,9 @@
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
-    qcTranslated: "While having both a marital relationship and 4 couples, and the favorability towards each is 100, you can enter the sect/home."
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -903,9 +908,9 @@
   - split: 2
     text: "达成终生监禁结局"
     translated: "Achieve lifetime imprisonment ending"
-    qcTranslated: "Achieve the ending of life imprisonment"
-    flaggedForQcReview: true
-    qcQualityScore: 50
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Achieve lifetime imprisonment ending"
   - split: 5
     text: "被捕入狱时恶名达到999"
     translated: "When arrested and sent to prison, his infamy reached 999."
@@ -918,15 +923,15 @@
   - split: 1
     text: "九死一生"
     translated: "Life and death"
-    qcTranslated: "Nine lives in the balance"
-    flaggedForQcReview: true
     qcQualityScore: 20
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Life and death"
   - split: 2
     text: "九死一生难度下达成任意结局"
     translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
-    qcTranslated: "Achieve Any Ending on Nine Lives One in a Thousand Difficulty"
-    flaggedForQcReview: true
     qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Survive Any Ending on Nine Lives Betrayal Difficulty"
   - split: 5
     text: "无"
     translated: "None"

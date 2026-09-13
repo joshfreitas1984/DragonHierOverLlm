@@ -1,8 +1,9 @@
 # `ResourceIoPatches` CSV override — why row-level merge was abandoned
 
-`Load_Postfix` used to go through `CsvMerger.MergeByFirstColumn` (still present in `CsvMerger.cs`
-but no longer called), which matched base/override rows by each row's first CSV column, on the
-assumption that column 0 is a stable per-row ID. **That assumption is false for at least
+`Load_Postfix` used to go through `CsvMerger.MergeByFirstColumn`, which matched base/override rows
+by each row's first CSV column, on the assumption that column 0 is a stable per-row ID.
+`CsvMerger.cs` has since been deleted entirely (it had zero remaining callers once `Load_Postfix`
+stopped using it). **That assumption is false for at least
 `NameData.csv`**: column 0 there is a repeated category label (`姓`/"Surname"), not a unique ID,
 and the override file's own column 0 gets translated too (`姓` → `"Surname"`). Every base row's
 lookup by `"姓"` then missed every override row keyed by `"Surname"`, so **every row silently fell

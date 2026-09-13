@@ -11,7 +11,7 @@
 - [`docs/resourceio-csv-merge-abandoned.md`](docs/resourceio-csv-merge-abandoned.md) — why
   `ResourceIoPatches` uses the packaged drop-in `Files/Mod/*.csv` wholesale instead of a
   row-level `CsvMerger.MergeByFirstColumn` merge (column-0-as-stable-ID assumption is false for
-  `NameData.csv`).
+  `NameData.csv`); `CsvMerger.cs` has since been deleted entirely as dead code.
 - [`docs/unitylogcapture-no-logmessagereceived.md`](docs/unitylogcapture-no-logmessagereceived.md)
   — why `UnityLogCapture` Harmony-patches `UnityEngine.Debug`'s log methods directly instead of
   subscribing to `Application.logMessageReceived` (doesn't exist in this game's interop build).
@@ -97,4 +97,16 @@
 - [`docs/plottextsizepatches-agent-reference.md`](docs/plottextsizepatches-agent-reference.md) —
   concise root-cause, fix-rationale, formula, interop, and change-checklist reference for agents
   editing `PlotTextSizePatches.cs`.
+- [`docs/upgradepriority-and-herosearch-diagnostics-removed.md`](docs/upgradepriority-and-herosearch-diagnostics-removed.md)
+  — closes out two previously-undocumented temporary diagnostics confirmed resolved in play:
+  `PrefabTextPatches`' UpgradePriorityText/"优先" tracing (`IsDiagTarget`/`DiagLog`) and the whole
+  `HeroSearchPatches.cs` file (`AddHeroIcon`/`RegenerateHeroIcon` tracing) — both removed, also
+  fixing an unnecessary per-call double-translation-pipeline cost in the latter.
+- [`docs/performance-optimization-pass-2026-09-13.md`](docs/performance-optimization-pass-2026-09-13.md)
+  — buffered `UnityLogCapture` log writes, merged the duplicate `DynamicStringPatches`/
+  `PrefabTextPatches` text-setter patches into one pass, cached several hot-path
+  `ConfigEntry<bool>.Value` reads, and a CONFIRMED-BAD attempt (reverted) to replace the global
+  `Time.deltaTime` getter patch with a `Canvas.willRenderCanvases` subscription -
+  `DelegateSupport.ConvertDelegate` crashes the process with a native `AccessViolationException` at
+  plugin load in this game build.
 

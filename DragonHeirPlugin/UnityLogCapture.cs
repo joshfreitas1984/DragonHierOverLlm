@@ -19,16 +19,59 @@ internal static class UnityLogCapture
     private static readonly string LogFile = Path.Combine(PluginDir, "unity-log.txt");
     private static readonly object WriteLock = new();
 
+    // Kept open for the plugin's lifetime instead of opening/closing the file on every single
+    // Debug.Log* call (this hook fires for ALL Unity engine logging, which can be many times per
+    // frame). AutoFlush is off - a flushed disk write on every single log line is unnecessary I/O
+    // cost for ordinary chatter, so writes are instead flushed periodically (see FlushIntervalTicks)
+    // and immediately/unconditionally for "Exception" level, which is the case crash-safety
+    // actually cares about. Also flushed explicitly on DeleteLogFile/shutdown.
+    private static StreamWriter _writer;
+
+    // ~1 second between periodic flushes of ordinary (non-exception) log lines.
+    private static readonly long FlushIntervalTicks = TimeSpan.FromSeconds(1).Ticks;
+    private static long _lastFlushTicks;
+
+    private static StreamWriter GetWriter()
+    {
+        if (_writer != null)
+            return _writer;
+
+        _writer = new StreamWriter(new FileStream(LogFile, FileMode.Append, FileAccess.Write, FileShare.Read), new UTF8Encoding(false))
+        {
+            AutoFlush = false
+        };
+        return _writer;
+    }
+
     public static void DeleteLogFile()
     {
         try
         {
+            _writer?.Dispose();
+            _writer = null;
             if (File.Exists(LogFile))
                 File.Delete(LogFile);
         }
         catch (Exception ex)
         {
             MainPlugin.Logger?.LogError($"UnityLogCapture.DeleteLogFile failed: {ex}");
+        }
+    }
+
+    // Called from MainPlugin.OnDestroy so the tail of the log isn't stuck unflushed in the buffer
+    // on a clean shutdown - a hard crash still relies on the periodic/exception flushes below.
+    public static void FlushLogFile()
+    {
+        try
+        {
+            lock (WriteLock)
+            {
+                _writer?.Flush();
+            }
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"UnityLogCapture.FlushLogFile failed: {ex}");
         }
     }
 
@@ -39,14 +82,23 @@ internal static class UnityLogCapture
             var text = message is Il2CppSystem.Exception il2cppEx
                 ? FormatException(il2cppEx)
                 : FormatMessage(message);
+            var isException = string.Equals(level, "Exception", StringComparison.OrdinalIgnoreCase);
             lock (WriteLock)
             {
                 var line = $"[{DateTime.Now:HH:mm:ss.fff}] [{level}] {text}";
-                File.AppendAllText(LogFile, line + Environment.NewLine, new UTF8Encoding(false));
+                var writer = GetWriter();
+                writer.WriteLine(line);
+
+                var now = DateTime.UtcNow.Ticks;
+                if (isException || now - _lastFlushTicks >= FlushIntervalTicks)
+                {
+                    writer.Flush();
+                    _lastFlushTicks = now;
+                }
             }
 
             // Keep ordinary Unity chatter in the file; mirror exception signals to the console.
-            if (string.Equals(level, "Exception", StringComparison.OrdinalIgnoreCase))
+            if (isException)
             {
                 MainPlugin.Logger?.LogError($"[UnityLog:{level}] {text}");
             }

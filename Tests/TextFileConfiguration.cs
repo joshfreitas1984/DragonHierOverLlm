@@ -80,7 +80,7 @@ namespace Tests
             // based call-function dispatch) - see docs/gamefilehandling-reference.md. Column 9
             // (choices) stays translated via the CustomColumnRepair/CustomColumnValidator
             // delimiter-preservation pattern above, not SkipColumns.
-            new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [1, 2, 3, 4, 5, 6, 7, 8] },
+            new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [1, 2, 3, 4, 5, 6, 7, 8],  },
 
             // Flat prefab-text input; see docs/gamefilehandling-reference.md.
             new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText, EnableQualityReview = false },

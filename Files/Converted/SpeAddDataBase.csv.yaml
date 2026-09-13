@@ -21,8 +21,12 @@
   - split: 4
     text: "负面词缀"
     translated: "Negativesuffix"
+    qcReviewedText: "Negativesuffix"
+    qcTranslated: "Negative suffix"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 20
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Negativesuffix"
   - split: 5
     text: "百分比显示"
@@ -51,8 +55,12 @@
   - split: 9
     text: "自身持续特效"
     translated: "Self‑repeating effect"
-    qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Self‑repeating effect"
+    qcTranslated: "Self‑perpetuating effect"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Self‑repeating effect"
   - split: 10
     text: "描述"
@@ -159,8 +167,12 @@
   - split: 3
     text: "慧根"
     translated: "Buddha nature"
+    qcReviewedText: "Buddha nature"
+    qcTranslated: "Wisdom root"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Buddha nature"
   - split: 4
     text: "愚钝"
@@ -331,8 +343,12 @@
   - split: 3
     text: "独门"
     translated: "Family‑secret"
-    qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Family‑secret"
+    qcTranslated: "Unique Technique"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Family‑secret"
   - split: 4
     text: "庸凡"
@@ -357,8 +373,12 @@
   - split: 4
     text: "残拳"
     translated: "Fistfight"
-    qcQualityScore: 30
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Fistfight"
+    qcTranslated: "Mangled Fist"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Fistfight"
   - split: 10
     text: "提升拳掌伤害"
@@ -406,8 +426,12 @@
   - split: 3
     text: "宝刀"
     translated: "Sharp Blade"
+    qcReviewedText: "Sharp Blade"
+    qcTranslated: "Treasure Sword"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Sharp Blade"
   - split: 4
     text: "钝刀"
@@ -469,8 +493,11 @@
   - split: 4
     text: "无奇"
     translated: "Oddball"
+    qcReviewedText: "Oddball"
+    qcStatus: Passed
+    flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Oddball"
   - split: 10
     text: "提升奇门伤害"
@@ -614,10 +641,10 @@
   - split: 10
     text: "剑法威力"
     translated: "Sword Technique Power"
-    qcRejectedCorrection: "Sword Technique Power (Sword Art)"
+    qcRejectedCorrection: "Sword Technique Power (Swordsmanship Power)"
     qcFailureReason: " Explaination was provided when none should be given."
     qcQualityScore: 85
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 3
     qcRuleCheckFailureBaseline: "Sword Technique Power"
 - raw: "20,刀法威力,0.01,无,无,1,1,0,0,0,刀法威力,伤害,0,0,1,0,0"
   splits:
@@ -679,8 +706,12 @@
   - split: 10
     text: "奇门威力"
     translated: "Power of the I Ching"
-    qcQualityScore: 30
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Power of the I Ching"
+    qcTranslated: "Power of Qi Men Dun Jia"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Power of the I Ching"
 - raw: "23,射术威力,0.01,无,无,1,1,0,0,0,射术威力,伤害,0,0,1,0,0"
   splits:
@@ -747,8 +778,12 @@
   - split: 10
     text: "影响用毒"
     translated: "Affect poisoning"
-    qcQualityScore: 20
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Affect poisoning/Efficiency of detoxification"
+    qcTranslated: "Affect the efficiency of poisoning and detoxification"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Affect poisoning/Efficiency of detoxification"
   - split: 10
     subIndex: 1
@@ -870,8 +905,12 @@
   - split: 10
     text: "影响装备制作"
     translated: "Affecting equipment crafting"
-    qcQualityScore: 30
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Affecting equipment crafting/Strengthen, consolidate/Efficiency in maintaining order in affected areas"
+    qcTranslated: "Affecting equipment production and enhancement, efficiency in consolidating or disrupting regional security."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Affecting equipment crafting/Strengthen, consolidate/Efficiency in maintaining order in affected areas"
   - split: 10
     subIndex: 1
@@ -901,8 +940,12 @@
   - split: 10
     text: "影响丹药制作"
     translated: "Affecting Dan Pill Production"
-    qcQualityScore: 60
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Affecting Dan Pill Production/Strengthen, consolidate/Efficiency in damaging the population"
+    qcTranslated: "Affecting elixir production/strengthening, improving/reducing the efficiency of the population in the affected area"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Affecting Dan Pill Production/Strengthen, consolidate/Efficiency in damaging the population"
   - split: 10
     subIndex: 1
@@ -932,8 +975,12 @@
   - split: 10
     text: "影响饮食制作"
     translated: "Affect food preparation"
-    qcQualityScore: 60
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Affect food preparation/Strengthen, consolidate/Efficiency in undermining the morale of the affected area"
+    qcTranslated: "Affect food preparation and enhancement, and the efficiency of consolidating or undermining the morale of the affected area."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Affect food preparation/Strengthen, consolidate/Efficiency in undermining the morale of the affected area"
   - split: 10
     subIndex: 1
@@ -1454,8 +1501,12 @@
   - split: 10
     text: "生命上限"
     translated: "Health points"
-    qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Health points"
+    qcTranslated: "Maximum Health"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Health points"
 - raw: "58,体力上限,5,焕发,疲敝,0,0,0,0,0,体力上限,伤害,0,0,1,0,0"
   splits:
@@ -1720,8 +1771,12 @@
   - split: 4
     text: "磕绊"
     translated: "Bumps and obstacles"
-    qcQualityScore: 30
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Bumps and obstacles"
+    qcTranslated: "Hitches"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Bumps and obstacles"
   - split: 10
     text: "再次攻击"
@@ -1902,8 +1957,12 @@
   - split: 3
     text: "白驹"
     translated: "Swift horse"
+    qcReviewedText: "Swift horse"
+    qcTranslated: "White steed"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Swift horse"
   - split: 4
     text: "无"
@@ -1941,7 +2000,11 @@
   - split: 10
     text: "根据生命差造成外伤"
     translated: "Based on the health difference, cause external injuries"
-    qcQualityScore: 60
+    qcRejectedCorrection: "Based on the health difference, cause external injuries.\\nExternal Injuries should be capitalized as per the glossary term."
+    qcFailureReason: " Alternatives were provided when none should be given."
+    qcQualityScore: 80
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Based on the health difference, cause external injuries"
 - raw: "81,内伤,0.01,无,无,1,1,1,0,0,根据内力差造成内伤,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -1980,8 +2043,12 @@
   - split: 10
     text: "根据毒术差造成中毒"
     translated: "Due to the difference in poison technique, you have been poisoned."
-    qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Due to the difference in poison technique, you have been poisoned."
+    qcTranslated: "Due to the difference in poison technique, you are poisoned."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Due to the difference in poison technique, you have been poisoned."
 - raw: "83,吸血,0.01,无,无,1,1,1,0,0,吸取生命,伤害,0,1,1,1,0"
   splits:
@@ -2273,8 +2340,12 @@
   - split: 10
     text: "免疫伤害至下次受击"
     translated: "Damage from immunity lasts until next hit"
-    qcQualityScore: 60
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Damage from immunity lasts until next hit"
+    qcTranslated: "Immune to damage until the next hit"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Damage from immunity lasts until next hit"
 - raw: "96,眩晕,0.01,万钧,无,1,0,1,1,0,跳过回合,敌方,0,1,1,1,0"
   splits:
@@ -2755,6 +2826,11 @@
   - split: 3
     text: "背水"
     translated: "On the banks of the river"
+    qcRejectedCorrection: "None of the water carrier's back \\nTo be desperate and have no choice but to fight (literally \"to fight with one's back against the water\")"
+    qcFailureReason: " Explaination was provided when none should be given. Alternatives were provided when none should be given."
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "On the banks of the river"
   - split: 4
     text: "无"
     translated: "None"
@@ -3051,8 +3127,12 @@
   - split: 3
     text: "截脉"
     translated: "Cut pulse"
-    qcQualityScore: 30
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Cut pulse"
+    qcTranslated: "Diagnose pulse"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Cut pulse"
   - split: 4
     text: "无"
@@ -3148,8 +3228,12 @@
   - split: 10
     text: "受伤时削除内力"
     translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcQualityScore: 0
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "INNER POWER IS REMOVED WHEN INJURED."
+    qcFailureReason: "QC correction changed normal casing to all-caps (was 'Explanation was provided when none should be given. Alternatives were provided when none should be given.')."
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
 - raw: "133,击退,1,无,无,0,1,1,0,0,将目标击退,敌方,1,1,1,1,0"
   splits:
@@ -3385,8 +3469,11 @@
   - split: 3
     text: "断招"
     translated: "Counterattack"
-    qcQualityScore: 60
-    qcRuleCheckFailureCount: 3
+    qcReviewedText: "Counterattack"
+    qcStatus: Passed
+    flaggedForQcReview: true
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Counterattack"
   - split: 4
     text: "无"
@@ -3632,8 +3719,12 @@
   - split: 3
     text: "回体"
     translated: "Restore Health"
+    qcReviewedText: "Restore Health"
+    qcTranslated: "Restore Body"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Restore Health"
   - split: 4
     text: "无"
@@ -3776,8 +3867,12 @@
   - split: 3
     text: "护足"
     translated: "Footrest"
+    qcReviewedText: "Footrest"
+    qcTranslated: "Foot protector"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Footrest"
   - split: 4
     text: "无"
@@ -3957,8 +4052,12 @@
   - split: 10
     text: "无视守招的架势防御"
     translated: "Ignoring the guard's defensive stance"
-    qcQualityScore: 50
-    qcRuleCheckFailureCount: 2
+    qcReviewedText: "Ignoring the guard's defensive stance"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "Ignoring the defensive stance of the guard's technique/stance"
+    qcFailureReason: " Alternatives were provided when none should be given."
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Ignoring the guard's defensive stance"
 - raw: "170,拆招,0.01,无,无,1,1,1,0,0,无视攻招的架势削减,伤害,0,2,1,1,0"
   splits:
@@ -3978,7 +4077,7 @@
     text: "无视攻招的架势削减"
     translated: "Ignoring the attack stance to reduce its power"
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 3
     qcRuleCheckFailureBaseline: "Ignoring the attack stance to reduce its power"
 - raw: "171,斗转,0.01,无,无,1,1,1,0,0,转移攻击至周边三格,伤害,0,2,1,1,0"
   splits:

@@ -18,13 +18,30 @@ namespace EnglishPatch;
 public class MainPlugin : BasePlugin
 {
     public const string ChineseCharPattern = @".*\p{IsCJKUnifiedIdeographs}.*";
-    internal static new ManualLogSource Logger;
+    internal static ManualLogSource Logger;
 
     // Off by default - flip via BepInEx's generated config file (BepInEx\config\<GUID>.cfg,
     // section "Debug") to have DynamicStringPatches append before/after text for every call that
     // still contains residual CJK characters after both the template and bare-fragment passes to
     // residualCjkDebug.log next to the plugin DLL. See DynamicStringPatches.LogResidualCjkDebug.
     internal static ConfigEntry<bool> ResidualCjkDebugEnabled;
+
+    // Cached copy of ResidualCjkDebugEnabled.Value - see BindCachedBool. LogResidualCjkDebug runs
+    // on every translated hit across the whole plugin, so this avoids a ConfigEntry property get
+    // on that hot path; kept in sync via ConfigEntry.SettingChanged.
+    internal static bool ResidualCjkDebugEnabledCached;
+
+    // Temporary diagnostic for investigating reports that HeroDetailPanel (and similar text/prefab-
+    // heavy panels) are slow to open - on by default while that investigation is active. Times
+    // DynamicStringPatches' per-text-setter pipeline and PrefabTextPatches' per-instantiation
+    // GameObject tree walk, dumping aggregated counts/durations to perfStats.log next to the
+    // plugin DLL every ~2s (plus logging any individually slow call immediately). See
+    // PerfInstrumentation. Safe to turn off once the investigation concludes - the Stopwatch calls
+    // it adds are cheap, but there's no reason to keep writing the log once nobody is reading it.
+    internal static ConfigEntry<bool> PerfInstrumentationEnabled;
+
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool PerfInstrumentationEnabledCached;
 
     // Off by default until validated live - DynamicStringPatches.ApplyToComponentText's
     // append-only fast path (translate only the newly appended suffix of a growing Text/TMP_Text,
@@ -34,6 +51,9 @@ public class MainPlugin : BasePlugin
     // switched off to compare against always running the full pipeline. See DynamicStringPatches.
     internal static ConfigEntry<bool> AppendOnlySuffixTranslationEnabled;
 
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool AppendOnlySuffixTranslationEnabledCached;
+
     // Off by default - once enabled, a Text/TMP_Text instance observed with no CJK content is
     // never checked again, so if that same instance is later reused for CJK content (e.g. a
     // recycled label/tooltip), that later content will silently never get translated. Only
@@ -41,12 +61,18 @@ public class MainPlugin : BasePlugin
     // DynamicStringPatches.ApplyToComponentText.
     internal static ConfigEntry<bool> SkipKnownNonCjkComponentsEnabled;
 
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool SkipKnownNonCjkComponentsEnabledCached;
+
     // Off by default until the DOTweenModuleUI.DOText patch's parameter-name binding is verified
     // live (Harmony matches interop parameters by name, not just type/position - see
     // dragonheirplugin.instructions.md). When true, PlotTextPatches shrinks the dialogue
     // typewriter's tween duration instead of letting it reveal character-by-character. See
     // PlotTextPatches.
     internal static ConfigEntry<bool> SpeedUpPlotTextTypewriterEnabled;
+
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool SpeedUpPlotTextTypewriterEnabledCached;
 
     // Off by default until verified live - same parameter-name-binding caveat as
     // SpeedUpPlotTextTypewriterEnabled above, plus this adds two more by-name-bound parameters
@@ -57,6 +83,9 @@ public class MainPlugin : BasePlugin
     // per-tween-step retranslation cost and mid-reveal partial-CJK/partial-English garbling). See
     // PlotTextPatches.
     internal static ConfigEntry<bool> PreTranslatePlotTextEnabled;
+
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool PreTranslatePlotTextEnabledCached;
 
     // On by default - toggle off if a future game patch fixes this at the source. See
     // PlotInteractControllerPatches for the full rationale: PlotInteractController.OnClick only
@@ -77,6 +106,9 @@ public class MainPlugin : BasePlugin
     // class of gap. See DynamicStringPatches.ApplyTemplates.
     internal static ConfigEntry<bool> MultiPassTemplateApplicationEnabled;
 
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool MultiPassTemplateApplicationEnabledCached;
+
     // Off by default until verified live - baked into each compiled template at PatchAll time
     // (requires a restart to take effect, unlike most other toggles here), so a merged
     // adjacent-placeholder run's capture excludes sentence-terminal punctuation (。！？…/ASCII
@@ -94,6 +126,10 @@ public class MainPlugin : BasePlugin
     // since the base game's own VerticalLayoutGroup on PlotTextBack lets the child size itself to
     // its unconstrained single-line preferred width with no cap.
     internal static ConfigEntry<bool> ClampPlotTextWidthEnabled;
+
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above. Read from
+    // Text.preferredWidth's getter, which the game's layout system can call often.
+    internal static bool ClampPlotTextWidthEnabledCached;
 
     // Fallback only (see PlotTextWidthMargin below for the value that actually matters day to
     // day) - used only if PlotTextSizePatches can't compute the real safe width dynamically at
@@ -126,48 +162,64 @@ public class MainPlugin : BasePlugin
 
         DynamicStringPatches.ClearResidualCjkDebugLog();
         UnityLogCapture.DeleteLogFile();
+        PerfInstrumentation.ClearLog();
 
-        ResidualCjkDebugEnabled = Config.Bind(
+        PerfInstrumentationEnabled = BindCachedBool(
+            "Debug",
+            "PerfInstrumentation",
+            true,
+            "Temporary diagnostic for investigating slow-to-open panels (e.g. HeroDetailPanel). When true, times DynamicStringPatches' per-text-setter pipeline and PrefabTextPatches' per-instantiation GameObject tree walk, dumping aggregated counts/durations to perfStats.log every ~2s plus logging any individually slow call immediately. Turn off once the investigation concludes.",
+            v => PerfInstrumentationEnabledCached = v);
+
+        ResidualCjkDebugEnabled = BindCachedBool(
             "Debug",
             "ResidualCjkDebugLogging",
             false,
-            "When true, DynamicStringPatches logs before/after text to residualCjkDebug.log for every call that still contains untranslated CJK characters after both the template and bare-fragment passes. Leave off unless actively debugging a translation gap - this is a per-call diagnostic and will grow the log file quickly.");
+            "When true, DynamicStringPatches logs before/after text to residualCjkDebug.log for every call that still contains untranslated CJK characters after both the template and bare-fragment passes. Leave off unless actively debugging a translation gap - this is a per-call diagnostic and will grow the log file quickly.",
+            v => ResidualCjkDebugEnabledCached = v);
 
-        MultiPassTemplateApplicationEnabled = Config.Bind(
+        MultiPassTemplateApplicationEnabled = BindCachedBool(
             "Performance",
             "MultiPassTemplateApplication",
             true,
-            "When true, DynamicStringPatches.ApplyTemplates repeats its pass over all compiled templates (bounded, stops once a pass makes no change) instead of trying each template exactly once, to catch order-dependent nested-template gaps (e.g. a recollection dialogue embedding an already-formatted world-event sentence). Off by default - unverified/speculative fix, enable only while investigating a known nested-template translation gap.");
+            "When true, DynamicStringPatches.ApplyTemplates repeats its pass over all compiled templates (bounded, stops once a pass makes no change) instead of trying each template exactly once, to catch order-dependent nested-template gaps (e.g. a recollection dialogue embedding an already-formatted world-event sentence). Off by default - unverified/speculative fix, enable only while investigating a known nested-template translation gap.",
+            v => MultiPassTemplateApplicationEnabledCached = v);
 
+        // Not cached - baked into each compiled template at PatchAll time (load-time only, never
+        // read on the per-call hot path), unlike the other "Performance" toggles here.
         SentenceBoundaryAwareTemplateCaptureEnabled = Config.Bind(
             "Performance",
             "SentenceBoundaryAwareTemplateCapture",
             true,
             "When true, a merged adjacent-placeholder template run can no longer capture across sentence-terminal punctuation (。！？…/ASCII '.'/newline), preventing an unanchored template match from locking onto an earlier unrelated sentence that happens to share the template's leading literal character. Off by default until verified live - requires a game restart to take effect since templates are compiled once at startup. See DynamicStringPatches.BuildCompiledTemplate.");
 
-        AppendOnlySuffixTranslationEnabled = Config.Bind(
+        AppendOnlySuffixTranslationEnabled = BindCachedBool(
             "Performance",
             "AppendOnlySuffixTranslation",
             true,
-            "When true, a growing Text/TMP_Text component (e.g. the HudPanel InfoList log) only has its newly appended suffix translated instead of the whole accumulated text every time. Off by default - disable if translations near an appended line look wrong (e.g. while a typewriter-style reveal is still in use) and compare against the full-pipeline behavior.");
+            "When true, a growing Text/TMP_Text component (e.g. the HudPanel InfoList log) only has its newly appended suffix translated instead of the whole accumulated text every time. Off by default - disable if translations near an appended line look wrong (e.g. while a typewriter-style reveal is still in use) and compare against the full-pipeline behavior.",
+            v => AppendOnlySuffixTranslationEnabledCached = v);
 
-        SkipKnownNonCjkComponentsEnabled = Config.Bind(
+        SkipKnownNonCjkComponentsEnabled = BindCachedBool(
             "Performance",
             "SkipKnownNonCjkComponents",
             false,
-            "When true, once a Text/TMP_Text component has been observed with no CJK content, DynamicStringPatches stops checking it again for the rest of the session. Off by default - risky for any component that can be reused/recycled for different content later, since a subsequent switch to CJK content on that same instance would never be detected or translated.");
+            "When true, once a Text/TMP_Text component has been observed with no CJK content, DynamicStringPatches stops checking it again for the rest of the session. Off by default - risky for any component that can be reused/recycled for different content later, since a subsequent switch to CJK content on that same instance would never be detected or translated.",
+            v => SkipKnownNonCjkComponentsEnabledCached = v);
 
-        SpeedUpPlotTextTypewriterEnabled = Config.Bind(
+        SpeedUpPlotTextTypewriterEnabled = BindCachedBool(
             "Performance",
             "SpeedUpPlotTextTypewriter",
             true,
-            "When true, the PlotPanel dialogue's character-by-character typewriter reveal is sped up to near-instant instead of tweening the text in over its normal duration. Off by default until verified live - fixes both the per-tween-step retranslation cost and the garbled mid-reveal partial-CJK/partial-English text this typewriter effect causes.");
+            "When true, the PlotPanel dialogue's character-by-character typewriter reveal is sped up to near-instant instead of tweening the text in over its normal duration. Off by default until verified live - fixes both the per-tween-step retranslation cost and the garbled mid-reveal partial-CJK/partial-English text this typewriter effect causes.",
+            v => SpeedUpPlotTextTypewriterEnabledCached = v);
 
-        PreTranslatePlotTextEnabled = Config.Bind(
+        PreTranslatePlotTextEnabled = BindCachedBool(
             "Performance",
             "PreTranslatePlotText",
             true,
-            "When true, PlotPanel dialogue text is translated up front before the typewriter tween starts, so the reveal shows already-translated text instead of raw Chinese being retranslated on every tween step. Off by default until verified live - see PlotTextPatches.");
+            "When true, PlotPanel dialogue text is translated up front before the typewriter tween starts, so the reveal shows already-translated text instead of raw Chinese being retranslated on every tween step. Off by default until verified live - see PlotTextPatches.",
+            v => PreTranslatePlotTextEnabledCached = v);
 
         FixNoCostChoiceClickEnabled = Config.Bind(
             "Game Bugfixes",
@@ -175,16 +227,17 @@ public class MainPlugin : BasePlugin
             true,
             "When true, PlotInteractController's dialogue choice buttons that have no cost resource (e.g. the 夺取物件/RobHeroItemChoose choices, and the resource-point-attack 开战/坐镇指挥 choices) actually fire their callFuc instead of silently doing nothing, working around a gap in the base game where the dispatch is only reached when choiceData.costResource is non-null. Turn off if a future game patch fixes this at the source. See PlotInteractControllerPatches.");
 
-        ClampPlotTextWidthEnabled = Config.Bind(
+        ClampPlotTextWidthEnabled = BindCachedBool(
             "Game Bugfixes",
             "ClampPlotTextWidth",
             true,
-            "When true, PlotText's reported preferred width is clamped every time the game's own layout system computes it, instead of letting it size to fit the whole dialogue on one line. Works around PlotTextBack's VerticalLayoutGroup not controlling child width, which otherwise lets long (especially translated) dialogue push PlotText past the edges of the screen. See docs/plottextsizepatches-agent-reference.md.");
+            "When true, PlotText's reported preferred width is clamped every time the game's own layout system computes it, instead of letting it size to fit the whole dialogue on one line. Works around PlotTextBack's VerticalLayoutGroup not controlling child width, which otherwise lets long (especially translated) dialogue push PlotText past the edges of the screen. See docs/plottextsizepatches-agent-reference.md.",
+            v => ClampPlotTextWidthEnabledCached = v);
 
         PlotTextMaxWidth = Config.Bind(
             "Game Bugfixes",
             "PlotTextMaxWidth",
-            300f,
+            800f,
             "Fallback only - used if the dynamic calculation can't run (e.g. no Canvas ancestor found). Maximum width (in local RectTransform units, not pixels) for a left/right speaker line (PlotTextBack pivoted at (0, 0.5)).");
 
         PlotTextMaxWidthCentered = Config.Bind(
@@ -196,7 +249,7 @@ public class MainPlugin : BasePlugin
         PlotTextWidthMargin = Config.Bind(
             "Game Bugfixes",
             "PlotTextWidthMargin",
-            150f,
+            200f,
             "Safety buffer (in local RectTransform units, not pixels) kept clear between PlotText's dynamically computed max width and the actual screen edge. This is the value to tune day to day - live-reloaded, no restart needed. Increase if text still looks close to clipping; decrease to reclaim more usable width. See docs/plottextsizepatches-agent-reference.md.");
 
         ForceTestPlotTextHotkey = Config.Bind(
@@ -256,17 +309,6 @@ public class MainPlugin : BasePlugin
 
         Harmony.CreateAndPatchAll(typeof(PlotInteractControllerPatches));
 
-        // Wrapped separately - unverified against this build's real interop metadata, must not
-        // take down every other patch registered below it (see PlotTextPatches above).
-        try
-        {
-            Harmony.CreateAndPatchAll(typeof(HeroSearchPatches));
-        }
-        catch (Exception ex)
-        {
-            Logger.LogError($"Failed to patch HeroSearchPatches: {ex}");
-        }
-
         DynamicStringPatches.PatchAll();
 
         // Must patch AFTER DynamicStringPatches.PatchAll() - relies on its dictionary/templates
@@ -282,14 +324,15 @@ public class MainPlugin : BasePlugin
         // reverse dictionary that PatchAll() populates.
         Harmony.CreateAndPatchAll(typeof(ItemIconPatches));
 
-        Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
-
         // Wrapped separately - binds directly against PlotController's real interop methods
         // (ShowSinglePlot/PlotTextShowFinished) plus Text.preferredWidth's getter and
         // Time.deltaTime's getter (read every frame by ordinary game code, used as this game's
         // only known-safe way to get a periodic tick from a BasePlugin - see
         // docs/plottextsizepatches-agent-reference.md for why AddComponent<T>/ClassInjector are
-        // not used here). A binding failure on any of these must not take down every patch above.
+        // not used here, and PlotTextSizePatches.cs's comment above OnDeltaTimeRead_Postfix for why
+        // a Canvas.willRenderCanvases event subscription was tried and reverted - it crashed the
+        // process with a native AccessViolationException at plugin load). A binding failure on any
+        // of these must not take down every patch above.
         try
         {
             Harmony.CreateAndPatchAll(typeof(PlotTextSizePatches));
@@ -304,7 +347,20 @@ public class MainPlugin : BasePlugin
 
     public void OnDestroy()
     {
+        UnityLogCapture.FlushLogFile();
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is destroyed!");
+    }
+
+    // Binds a bool ConfigEntry and keeps a plain static bool field in sync with it via
+    // SettingChanged, so hot-path callers (patched String.Concat/Format, text setters, template
+    // application) can read the cached field instead of ConfigEntry<bool>.Value on every call,
+    // while still picking up live config-file edits/reloads.
+    private ConfigEntry<bool> BindCachedBool(string section, string key, bool defaultValue, string description, Action<bool> setCached)
+    {
+        var entry = Config.Bind(section, key, defaultValue, description);
+        setCached(entry.Value);
+        entry.SettingChanged += (_, _) => setCached(entry.Value);
+        return entry;
     }
 
     private void SetPrivateField(object obj, string fieldName, object value)
