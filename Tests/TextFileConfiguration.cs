@@ -88,8 +88,13 @@ namespace Tests
             // Additional flat PrefabText source; see docs/gamefilehandling-reference.md.
             new() {Path = "dumpedPrefabTextFromOtherFields.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText, EnableQualityReview = false },
 
-            // Flat IL2CPP dynamic-string input; see docs/gamefilehandling-reference.md.
-            new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            // Flat IL2CPP dynamic-string input; see docs/gamefilehandling-reference.md. QC
+            // enabled: ordinary template dialogue lines here benefit from review like any other
+            // translated prose; the function-routed choice entries (raw "{label};FunctionName",
+            // e.g. "出手抢夺;RobNPCItemSure") are protected from QC via
+            // GameFileHandling.ExcludeFunctionRoutedDynamicStringFromQc (CustomQcExclusionRule),
+            // not by disabling the whole file.
+            new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = true },
 
             // Additional dynamic-string source; see docs/gamefilehandling-reference.md.
             new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },

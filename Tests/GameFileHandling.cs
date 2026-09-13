@@ -34,6 +34,7 @@ namespace Tests
             CustomPostRepair = RepairKnownLlmQuirks,
             CustomColumnRepair = RepairGameSpecificColumn,
             CustomColumnValidator = ValidateGameSpecificColumn,
+            CustomQcExclusionRule = ExcludeFunctionRoutedDynamicStringFromQc,
         };
 
         // Repairs possessive/contraction suffixes placed inside placeholder wrappers.
@@ -166,6 +167,27 @@ namespace Tests
             }
 
             return null;
+        }
+
+        // Excludes this game's function-routed dynamic-string choice/dialogue entries from the QC
+        // pass - see docs/gamefilehandling-reference.md. Raw/effective-translated shape is always
+        // "{choiceText};FunctionName" (confirmed via decompile, e.g. PlotController.cs's hardcoded
+        // "出手抢夺;RobNPCItemSure"), the same ';'-suffixed convention DynamicStringPatches.cs's own
+        // LoadDictionary already uses to derive a bare-label dictionary entry. A QC model has no
+        // way to know 'FunctionName' is an opaque runtime identifier rather than text to
+        // rewrite/"fix", and unlike PlotData.csv column 9 there is no CustomColumnValidator
+        // registered here to catch a corrupted ';' count in a proposed correction - excluding these
+        // columns from ever becoming a QC work item is cheaper and safer than reviewing them.
+        // Scoped to the DynamicStringsIL2CPP file family (not a single path) since the ';'-suffix
+        // convention is a property of that pipeline's raw dumps, not any one specific file - a
+        // literal ASCII ';' essentially never appears in ordinary dumped Chinese text otherwise.
+        private static bool ExcludeFunctionRoutedDynamicStringFromQc(TextFileToSplit textFile, int? column, string raw)
+        {
+            if (textFile.TextFileType != TextFileType.DynamicStringsIL2CPP || string.IsNullOrEmpty(raw))
+                return false;
+
+            var semiIndex = raw.IndexOf(';');
+            return semiIndex > 0;
         }
 
         public static string[] ParseCsvRow(string line) => CompoundFieldSplitter.ParseCsvRow(line);

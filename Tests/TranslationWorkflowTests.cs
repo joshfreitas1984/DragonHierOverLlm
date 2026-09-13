@@ -1,4 +1,5 @@
 ﻿using FanslationStudio.LlmKit.Configuration;
+using FanslationStudio.LlmKit.Support;
 using FanslationStudio.LlmKit.Utility;
 using FanslationStudio.LlmKit.Workflow;
 using ToolGood.Words;
@@ -114,6 +115,127 @@ public class TranslationWorkflowTests
     public async Task ResetLeakedQcCorrections()
     {
         await QualityReviewWorkflow.ResetLeakedQcCorrections(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
+    // Dedicated single-row QC sample: forces a fresh QualityReviewWorkflow review of exactly ONE
+    // known PlotData.csv row (the master's "别慌..." collapse line, split 10 - see
+    // Files/Converted/PlotData.csv.yaml) instead of a random sampleSize=N slice
+    // (RunQualityReviewPassSample) or a full corpus pass (RunQualityReviewPass). Useful for
+    // iterating on the BaseQualityReviewPrompt/model/glossary and immediately seeing how just this
+    // row's QC verdict changes, without waiting on (or perturbing the Qc state of) every other
+    // already-reviewed row. Scoping textFiles to only PlotData.csv keeps RunAsync's freshness check
+    // from doing any real work outside this one row - every other row/column in the file is still
+    // "fresh" (its QcReviewedText already matches its current Translated) and gets skipped with no
+    // LLM call, exactly like a normal RunAsync pass would treat it.
+    //
+    // To point this at a different row, change TargetRawFragment below to the exact `text` of the
+    // split-10 (or whichever column) anchor fragment you want to compare, as it appears in
+    // Files/Converted/PlotData.csv.yaml.
+    [Fact(DisplayName = "3f. RunQualityReviewSampleForOneLine")]
+    public async Task RunQualityReviewSampleForOneLine()
+    {
+        const string TargetFile = "PlotData.csv";
+        const string TargetRawFragment = "莫慌，让为师看看……";
+
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var textFiles = TextFileConfiguration.TextFilesToSplit
+            .Where(t => t.Path == TargetFile)
+            .ToArray();
+
+        Assert.True(textFiles.Length > 0, $"No configured TextFileToSplit entry for '{TargetFile}'.");
+
+        TranslationLine? targetLine = null;
+        TranslationSplit? targetAnchor = null;
+        string? beforeReviewedText = null;
+        string? beforeQcTranslated = null;
+        QcStatus? beforeStatus = null;
+        int? beforeScore = null;
+
+        // Pass 1: locate the row, snapshot its current Qc state, then force a fresh review by
+        // resetting just this one column's Qc fields (ResetQcState) - everything else in the file
+        // is left untouched.
+        await FileIteration.IterateTranslatedFilesAsync(workingDirectory, textFiles, async (outputFile, textFile, fileLines) =>
+        {
+            foreach (var line in fileLines)
+            {
+                var anchor = line.Splits.FirstOrDefault(s => s.Text == TargetRawFragment && s.SubIndex == 0);
+                if (anchor == null)
+                    continue;
+
+                targetLine = line;
+                targetAnchor = anchor;
+                beforeReviewedText = anchor.QcReviewedText;
+                beforeQcTranslated = anchor.QcTranslated;
+                beforeStatus = anchor.QcStatus;
+                beforeScore = anchor.QcQualityScore;
+
+                anchor.ResetQcState();
+                break;
+            }
+
+            if (targetAnchor != null)
+            {
+                var serializer = YamlHelper.CreateSerializer();
+                await FileHelper.WriteAllTextWithRetryAsync(outputFile, serializer.Serialize(fileLines));
+            }
+        });
+
+        Assert.True(targetAnchor != null, $"Could not find a split-10 anchor in '{TargetFile}' with text '{TargetRawFragment}'.");
+
+        // Pass 2: the actual QC pass, scoped to just this one file (and, thanks to the reset above,
+        // effectively just this one row - every other row is still fresh and gets skipped for free).
+        await QualityReviewWorkflow.RunAsync(workingDirectory, textFiles, hooks: GameFileHandling.Hooks);
+
+        // Pass 3: re-read and report the before/after comparison, reusing the same shape
+        // QualityReviewWorkflow.FlaggedQcReview already uses so this slots into the existing
+        // FlaggedQcReviews.yaml reporting conventions.
+        string? afterReviewedText = null;
+        string? afterQcTranslated = null;
+        QcStatus? afterStatus = null;
+        int? afterScore = null;
+        string? afterRejectedCorrection = null;
+        string? afterFailureReason = null;
+        string rawText = TargetRawFragment;
+
+        await FileIteration.IterateTranslatedFilesAsync(workingDirectory, textFiles, async (_, textFile, fileLines) =>
+        {
+            foreach (var line in fileLines)
+            {
+                var anchor = line.Splits.FirstOrDefault(s => s.Text == TargetRawFragment && s.SubIndex == 0);
+                if (anchor == null)
+                    continue;
+
+                var template = line.Templates.FirstOrDefault(t => t.Split == anchor.Split);
+                var fragments = line.Splits.Where(s => s.Split == anchor.Split).OrderBy(s => s.SubIndex).ToList();
+                rawText = template != null
+                    ? CompoundFieldSplitter.Reconstruct(template.Template, fragments.Select(f => f.Text).ToList())
+                    : anchor.Text;
+
+                afterReviewedText = anchor.QcReviewedText;
+                afterQcTranslated = anchor.QcTranslated;
+                afterStatus = anchor.QcStatus;
+                afterScore = anchor.QcQualityScore;
+                afterRejectedCorrection = string.IsNullOrEmpty(anchor.QcRejectedCorrection) ? null : anchor.QcRejectedCorrection;
+                afterFailureReason = string.IsNullOrEmpty(anchor.QcFailureReason) ? null : anchor.QcFailureReason;
+                break;
+            }
+
+            await Task.CompletedTask;
+        });
+
+        var comparison = new
+        {
+            filePath = TargetFile,
+            text = rawText,
+            before = new { qcReviewedText = beforeReviewedText, qcTranslated = beforeQcTranslated, qcStatus = beforeStatus, qcQualityScore = beforeScore },
+            after = new { qcReviewedText = afterReviewedText, qcTranslated = afterQcTranslated, qcStatus = afterStatus, qcQualityScore = afterScore, rejectedCorrection = afterRejectedCorrection, reason = afterFailureReason },
+        };
+
+        var reportSerializer = YamlHelper.CreateSerializer();
+        var yaml = reportSerializer.Serialize(comparison);
+        FileHelper.WriteAllTextWithRetry($"{workingDirectory}/TestResults/QcReviewSample_SingleLine.yaml", yaml);
+
+        Console.WriteLine(yaml);
     }
 
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
