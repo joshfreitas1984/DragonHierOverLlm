@@ -334,7 +334,7 @@
     text: "博引"
     translated: "Wide‑ranging"
     qcReviewedText: "<b>Wide‑ranging</b>：Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial evidence</b>：Discuss the hand card limit +3, discuss obtaining bonus effects and additional affinity upon victory. The skill requirements for compiling the Secret Manual.-10%。"
-    qcTranslated: "<b>Extensive Quotation</b>: Collect secret manuals from other Sects and place them in the Star Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial Evidence</b>: The hand card limit for debates is +3. Winning debates grants enhanced effects and additional affinity. The skill requirement for compiling the Secret Manual is -10%."
+    qcTranslated: "<b>Extensive Quotation</b>: Collect secret manuals from other Sects and place them in the Star Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial Evidence</b>: The hand card limit for debates is +3. Winning debates grants enhanced effects and additional affinity. The skill requirement for compiling the Secret Manual is ‑10%."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 25

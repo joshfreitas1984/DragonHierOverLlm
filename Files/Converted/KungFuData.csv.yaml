@@ -5600,10 +5600,10 @@
   - split: 4
     text: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
     translated: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
-    qcRejectedCorrection: "These eight moves trace the character \"永\" (eternity) in mid-air, employing the eight stroke techniques found within it—ce, le, nu, tiao, ce, lü, zhuo, and zhe—as the introductory practice for calligraphic martial arts."
+    qcRejectedCorrection: "These eight moves trace the character \"永\" in mid-air, adopting the eight stroke techniques found within it—ce, le, nu, tuo, ce, lüe, zhuo, and zhe—as the foundational practice for calligraphic martial arts."
     qcFailureReason: " If your prior translation includes Chinese, output English only. Scan the last translation for Chinese text, cross-check with the original Chinese from the first user prompt, and translate all remaining Chinese into fluent, natural English."
-    qcQualityScore: 65
-    qcRuleCheckFailureCount: 2
+    qcQualityScore: 50
+    qcRuleCheckFailureCount: 3
     qcRuleCheckFailureBaseline: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
 - raw: "617,奇门,1,丹青破穴,以人体为画布，以穴位为着墨之处的奇门绘画武功，能快速点指敌人多处穴位,10,1.1,奇门1;意志1,,意志1;奇门3;内力0.2,奇门25;意志15,\"0,1,1\",\"0,0,0\",心胸点穴0.04;头颈点穴0.04,10,9,0,腹17,腹11,,,skill4_7,,墨染-Target-Grid-Happen,笔,Same,FALSE,0,0"
   splits:
@@ -5713,11 +5713,9 @@
   splits:
   - split: 4
     text: "南朝刘勰阐述文章笔法义理之巨著，其中包罗万象，开源发流，通晓此书后，各式秘籍中艰深之处自然迎刃而解"
-    translated: "Rao Xie of the Southern Dynasties expounded on the vast treatise of literary techniques and principles. This work encompasses a wide range of subjects, opening up new avenues of understanding. Mastering this book will naturally make the intricate aspects of various secret texts easy to comprehend."
-    qcReviewedText: "Rao Xie of the Southern Dynasties expounded on the vast treatise of literary techniques and principles. This work encompasses a wide range of subjects, opening up new avenues of understanding. Mastering this book will naturally make the intricate aspects of various secret texts easy to comprehend."
-    qcTranslated: "Liu Xie of the Southern Dynasties wrote this monumental treatise expounding on the techniques and principles of writing. It encompasses all things, opening sources and developing streams. Once you have mastered this book, the intricate and profound aspects of various secret texts will naturally be resolved with ease."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    translated: "The monumental work by Liu Xie of the Southern Liang dynasty that expounds on the techniques and principles of writing is comprehensive, encompassing all aspects and setting the foundation for various developments. After mastering this book, the intricate parts of various Secret Manuals will naturally become clear."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "The monumental work by Liu Xie of the Southern Liang dynasty that expounds on the techniques and principles of writing is comprehensive, encompassing all aspects and setting the foundation for various developments. After mastering this book, the intricate parts of various Secret Manuals will naturally become clear."
 - raw: "630,射术,3,高山流水,春秋时伯牙所作，曲调高妙，余音绕梁，气劲飞射如流水自高山上倾泻而落，每奏一曲便断一弦，以示知音难觅,17,1.2,智力潜力1;射术1;智力1,,智力3;射术4;内力0.2,射术45;智力40,\"1,1,2\",\"7,0,0\",醒脑0.06;定神0.06,20,9,0,头14;心12,头4;心2,,,skill4_8,13-----1.1,水旋风-Target-Grid-Happen,琴,Distance,FALSE,0,0"
   splits:
   - split: 4

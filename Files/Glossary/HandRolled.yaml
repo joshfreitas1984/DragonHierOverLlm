@@ -127,5 +127,4 @@
 - raw: 秘籍
   result: Secret Manual
   allowalt:
-    - "Manual"
-    - "Book" 
+    - "Manual"   

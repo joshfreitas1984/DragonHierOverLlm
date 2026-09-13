@@ -187,7 +187,7 @@
   - text: "在编纂秘籍时，"
     translated: "When compiling the Secret Manual,"
     qcReviewedText: "When compiling the Secret Manual,\\nYou can combine two low‑quality Secret Manuals to create a high‑quality one."
-    qcTranslated: "When compiling Secret Manuals,\\nyou can combine two low-quality ones to create a high-quality one."
+    qcTranslated: "When compiling Secret Manuals,\\nyou can combine two low‑quality ones to create a high‑quality one."
     qcStatus: Corrected
     qcQualityScore: 88
   - subIndex: 1

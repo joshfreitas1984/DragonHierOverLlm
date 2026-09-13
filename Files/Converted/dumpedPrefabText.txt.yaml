@@ -1130,19 +1130,19 @@
     translated: "Sword"
   - subIndex: 2
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 3
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 4
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 5
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 6
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0} {1}/{2}/{3}/{4}/{5}/{6}"
 - raw: "专门用于关押在江湖中行凶作恶之人的监牢。铜墙铁壁，守卫森严，狱卒也多为武艺高强之人。"
@@ -2300,7 +2300,7 @@
     translated: "Same tier"
   - subIndex: 1
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}\\n{1}"
 - raw: "名..."
@@ -2357,19 +2357,19 @@
     translated: "Sword"
   - subIndex: 2
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 3
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 4
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 5
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   - subIndex: 6
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0} {1}/{2}/{3}/{4}/{5}/{6}"
 - raw: "嘴巴"
@@ -4843,7 +4843,7 @@
 - raw: "秘籍"
   splits:
   - text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
 - raw: "移动模式"
   splits:
   - text: "移动模式"

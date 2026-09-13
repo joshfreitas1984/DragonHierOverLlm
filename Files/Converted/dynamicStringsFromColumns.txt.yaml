@@ -1011,7 +1011,7 @@
 - raw: "秘籍:1"
   splits:
   - text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}:1"
 - raw: "内功;绝技;剑法;拳掌"
@@ -1041,7 +1041,7 @@
 - raw: "秘籍:0.75"
   splits:
   - text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}:0.75"
 - raw: "刀法;长兵;绝技"
@@ -1077,7 +1077,7 @@
 - raw: "秘籍:0.5"
   splits:
   - text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}:0.5"
 - raw: "内功;轻功;拳掌"
@@ -1245,7 +1245,7 @@
 - raw: "秘籍:0.25"
   splits:
   - text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}:0.25"
 - raw: "绝技;刀法"

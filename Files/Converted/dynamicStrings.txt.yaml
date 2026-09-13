@@ -10193,7 +10193,7 @@
 - raw: "什么破门派，这书架上竟一本秘籍都没有，真是晦气！"
   splits:
   - text: "什么破门派，这书架上竟一本秘籍都没有，真是晦气！"
-    translated: "What a waste, there's not a single secret technique on this bookshelf. Truly unlucky!"
+    translated: "What a shame, there's not a single Secret Manual on these shelves! What bad luck!"
 - raw: "什么！#TargetInteractName#竟然在我#SourceForceName#治下城镇行这{0}之事！\n若是传出去，不怕堕了你#TargetForceName#的名声吗？"
   splits:
   - text: "什么！#TargetInteractName#竟然在我#SourceForceName#治下城镇行这"
@@ -17081,7 +17081,7 @@
     translated: "Hmph, with my Qinggong, I can easily avoid the guards and slip into less heavily guarded areas."
   - subIndex: 1
     text: "只是如此一来，恐怕也寻不到品质较高的秘籍了。"
-    translated: "Only in this way, however, might one find books of inferior quality."
+    translated: "This way, we probably won't be able to find higher quality Secret Manuals either."
   templates:
   - template: "{0}\n{1}"
 - raw: "哼哼，你#TargetForceName#与我#SourceForceName#素来不和，\n此次前来有何贵干啊？"
@@ -27527,7 +27527,7 @@
     translated: "This"
   - subIndex: 2
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}"
 - raw: "搜集珍宝"
@@ -32199,7 +32199,7 @@
 - raw: "没时间精挑细选了，便从这书架上几本秘籍中选择一本，\n然后赶在增援到来前尽快逃离吧！"
   splits:
   - text: "没时间精挑细选了，便从这书架上几本秘籍中选择一本，"
-    translated: "No time for careful selection, so I'll choose one from these several secret techniques on the bookshelf."
+    translated: "There wasn't time to pick and choose, so I selected one from the few Secret Manuals on the bookshelf."
   - subIndex: 1
     text: "然后赶在增援到来前尽快逃离吧！"
     translated: "Escape as soon as possible before the reinforcements arrive!"
@@ -35097,7 +35097,7 @@
 - raw: "秘籍"
   splits:
   - text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
 - raw: "称得上是德高望重，人人敬仰之名门大派"
   splits:
   - text: "称得上是德高望重，人人敬仰之名门大派"
@@ -36270,7 +36270,7 @@
     translated: "This"
   - subIndex: 2
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}"
 - raw: "编纂秘籍"
@@ -43348,7 +43348,7 @@
     translated: "Read"
   - subIndex: 1
     text: "秘籍"
-    translated: "Treasure booklet"
+    translated: "Secret Manual"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "阅读《{0}》"
