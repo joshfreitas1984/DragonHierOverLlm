@@ -5600,10 +5600,12 @@
   - split: 4
     text: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
     translated: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
-    qcRejectedCorrection: "These eight moves trace the character \"永\" in mid-air, adopting the eight stroke techniques found within it—ce, le, nu, tuo, ce, lüe, zhuo, and zhe—as the foundational practice for calligraphic martial arts."
+    qcReviewedText: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "These eight moves trace the character “永” in mid-air, adopting the eight stroke-writing methods found within it—side, press, forceful lift, leap, spur, sweep, peck, and tear—as the introductory practice for calligraphic martial arts."
     qcFailureReason: " If your prior translation includes Chinese, output English only. Scan the last translation for Chinese text, cross-check with the original Chinese from the first user prompt, and translate all remaining Chinese into fluent, natural English."
-    qcQualityScore: 50
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
 - raw: "617,奇门,1,丹青破穴,以人体为画布，以穴位为着墨之处的奇门绘画武功，能快速点指敌人多处穴位,10,1.1,奇门1;意志1,,意志1;奇门3;内力0.2,奇门25;意志15,\"0,1,1\",\"0,0,0\",心胸点穴0.04;头颈点穴0.04,10,9,0,腹17,腹11,,,skill4_7,,墨染-Target-Grid-Happen,笔,Same,FALSE,0,0"
   splits:

@@ -37,7 +37,7 @@ glossaryPreset:
   chineseGlossaryTypesToSupress:
     - Phonetics
 useContinuousWorkerPool: true
-maxConcurrency: 4 # Ollama is capped anyway
+maxConcurrency: 2 # Ollama is capped anyway - tests show lower is faster on bigger models
 retryCount: 3 # Dropped from 3 - no stronger model to escalate to, so extra retries mostly just burn time on the same qwen2.5:7b model
 # Escalation: once a split exhausts `retryCount` against its normal model and is still invalid, it
 # gets escalationRetryCount extra attempts against the model named here (must match a `name` under
@@ -59,7 +59,7 @@ qualityReview:
   enabled: true
   modelName: Qwen38Qc #QwenQc-14B #Glm4Qc-9B 
   minAcceptableScore: 70 # tune freely and re-run packaging only - no LLM calls needed to see the effect
-  # maxConcurrency: 4 # falls back to maxConcurrency above, then batchSize, then 20
+  maxConcurrency: 2 # falls back to maxConcurrency above, then batchSize, then 20. Lower is faster on big models
 #extraStringTokenReplacers:
 #  - '#PlayerName#'
 splitCharactersList:
