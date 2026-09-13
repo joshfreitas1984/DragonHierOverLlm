@@ -44,6 +44,8 @@
   result: "Senior Brother Yang"
 - raw: 顾师兄
   result: "Senior Brother Gu"
+- raw: 林师妹
+  result: "Junior Sister Lin"
 - raw: 师伯
   result: Martial Uncle
   allowalt:
@@ -118,3 +120,12 @@
   - "Changbing"
   exclude: 
     - heroNameParts.txt
+
+- raw: 黑风寨
+  result: Black Wind Stronghold 
+
+- raw: 秘籍
+  result: Secret Manual
+  allowalt:
+    - "Manual"
+    - "Book" 

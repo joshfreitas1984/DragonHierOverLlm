@@ -414,6 +414,40 @@ namespace Tests
         }
 
         /// <summary>
+        /// Pulls the curated "log narrative" AddLog-template family (see
+        /// DynamicStringSources.LogNarrativeTemplates' doc comment for how this list was derived and
+        /// how to re-derive it after a game update) out of the master <c>dynamicStrings.txt</c> dump
+        /// into its own dedicated <c>dynamicStringsLogNarratives.txt</c> file - same "carve into a
+        /// separate file" treatment as ExtractHeroNamePartCandidates/ExtractForceNamePrefixCandidates
+        /// above, done here instead of a tag/category field because the underlying dump format
+        /// (<c>dynamicStrings.txt</c>) is a flat, unstructured line list with no per-entry metadata.
+        /// Must run AFTER ExtractDynamicStringCandidatesFromIl2CppStringMap (which populates the
+        /// master dump this reads from) and BEFORE DedupeDynamicStringFiles - this method only ADDS
+        /// matching lines to the new file, it does not remove them from the master dump itself;
+        /// removal happens as a side effect of the dedup pass, which is why
+        /// "dynamicStringsLogNarratives.txt" must be listed ahead of "dynamicStrings.txt" in
+        /// DynamicStringDedupePriorityOrder below (otherwise the dedup pass would keep the master-dump
+        /// copy and strip the new file back to empty, silently undoing this split on every re-run).
+        /// Idempotent: re-running never duplicates an already-extracted value in its own file.
+        /// </summary>
+        public static void ExtractLogNarrativeCandidates(string workingDirectory)
+        {
+            var masterDumpPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStrings.txt";
+            var outputPath = $"{workingDirectory}/Raw/Dumped/DynamicStrings/dynamicStringsLogNarratives.txt";
+            if (!File.Exists(masterDumpPath)) return;
+
+            var templates = new HashSet<string>(DynamicStringSources.LogNarrativeTemplates);
+            var seen = GetExistingDynamicStringValues(outputPath);
+
+            var found = File.ReadAllLines(masterDumpPath)
+                .Where(l => !string.IsNullOrEmpty(l) && templates.Contains(l) && seen.Add(l))
+                .ToList();
+
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.AppendAllLines(outputPath, found);
+        }
+
+        /// <summary>
         /// Refreshes IL2CPP string-map candidates and appends new entries idempotently directly
         /// into the master <c>dynamicStrings.txt</c> dump, regenerating it from the Converter's
         /// <c>_dynamicStrings_candidates.txt</c> output - this is not a hand-curated file. Also
@@ -490,6 +524,11 @@ namespace Tests
         // lowest priority (kept last).
         private static readonly string[] DynamicStringDedupePriorityOrder =
         [
+            // Must come BEFORE "dynamicStrings.txt" - ExtractLogNarrativeCandidates only copies
+            // matching lines out of the master dump into this file, it never removes them from
+            // "dynamicStrings.txt" itself; this priority ordering is what makes THIS pass the one
+            // that actually strips the duplicate back out of the master dump, completing the split.
+            "dynamicStringsLogNarratives.txt",
             "dynamicStrings.txt",
             "dynamicStringsFromColumns.txt",
             "dynamicStringsFromStructuredFragments.txt",

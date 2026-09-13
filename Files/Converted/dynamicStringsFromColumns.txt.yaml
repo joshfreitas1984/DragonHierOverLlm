@@ -47847,7 +47847,7 @@
 - raw: "黑风寨大当家"
   splits:
   - text: "黑风寨大当家"
-    translated: "Great Leader of Black Wind Ridge"
+    translated: "Black Wind Stronghold's top boss"
 - raw: "朱.全"
   splits:
   - text: "朱.全"
@@ -47864,7 +47864,7 @@
 - raw: "黑风寨二当家"
   splits:
   - text: "黑风寨二当家"
-    translated: "Second Boss"
+    translated: "Black Wind Stronghold's Second Boss"
 - raw: "严.达开"
   splits:
   - text: "严.达开"
@@ -47881,7 +47881,7 @@
 - raw: "黑风寨三当家"
   splits:
   - text: "黑风寨三当家"
-    translated: "Third Master of Black Wind Manor"
+    translated: "Black Wind Stronghold's third leader"
 - raw: "冯.虎"
   splits:
   - text: "冯.虎"
@@ -50999,20 +50999,20 @@
 - raw: "阅读藏经阁秘籍获取理论经验"
   splits:
   - text: "阅读藏经阁秘籍获取理论经验"
-    translated: "Read the scriptures in the Scripture Pavilion to gain theoretical experience."
+    translated: "Reading the Secret Manual in the Scripture Pavilion to gain theoretical experience."
 - raw: "阅读行囊/仓库秘籍获取理论经验"
   splits:
   - text: "阅读行囊"
     translated: "Read the inventory"
   - subIndex: 1
     text: "仓库秘籍获取理论经验"
-    translated: "Warehouse secret skill acquisition theoretical experience"
+    translated: "Obtaining the Secret Manual from the warehouse yields theoretical experience."
   templates:
   - template: "{0}/{1}"
 - raw: "对秘籍进行整合/抄录/默写"
   splits:
   - text: "对秘籍进行整合"
-    translated: "Integrate the secretskicheng"
+    translated: "Integrate the Secret Manual"
   - subIndex: 1
     text: "抄录"
     translated: "Copy"
@@ -51798,10 +51798,10 @@
 - raw: "♦阅读秘籍\n♦编纂秘籍"
   splits:
   - text: "阅读秘籍"
-    translated: "Read the cheat sheet"
+    translated: "Read the Secret Manual"
   - subIndex: 1
     text: "编纂秘籍"
-    translated: "Compile the secret scrolls"
+    translated: "Compile the Secret Manual"
   templates:
   - template: "♦{0}\n♦{1}"
 - raw: "练功房"

@@ -98,6 +98,14 @@ dictionary entry (see doc). Full wiring details for every source, the dedup prio
 the dialogue-button fix:
 [`Tests/docs/dynamicstrings-pipeline-architecture.md`](../../Tests/docs/dynamicstrings-pipeline-architecture.md).
 
+**The "log narrative" `HeroData.AddLog`/`AreaData.AddLog` template family** (HeroDetailPanel's Log
+tab, AreaLog, PlotPanel's RecordScrollView) is carved out of `dynamicStrings.txt` into its own
+`dynamicStringsLogNarratives.txt` via fact `"4g. ExtractLogNarrativeCandidates"`, against a curated
+allowlist in `DynamicStringSources.LogNarrativeTemplates` (re-derivable after a game update via
+`Converter/Scripts/ExtractAddLogTemplates.ps1` - see that field's doc comment). See
+[dynamicstrings-pipeline-architecture.md](../../Tests/docs/dynamicstrings-pipeline-architecture.md#log-narrative-isolation-dynamicstringslognarrativestxt)
+for why a dedicated file (not a tag field) was used and why its dedup-priority ordering matters.
+
 **Known-bad reconstructed template Results are forced via `GameFileHandling.DynamicStringResultOverrides`**,
 applied by `ApplyDynamicStringResultOverrides` right after `PackageFinalTranslationAsync` packages
 each `DynamicStringsIL2CPP` file — never fix these by hand-editing `Files/Converted`/`Files/Mod`

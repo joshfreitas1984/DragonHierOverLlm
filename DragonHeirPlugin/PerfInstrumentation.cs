@@ -7,13 +7,17 @@ using System.Text;
 
 namespace EnglishPatch;
 
-// Temporary diagnostic tool for investigating reports that HeroDetailPanel is slow to open.
-// Times the two patch pipelines suspected of being the bottleneck - DynamicStringPatches' per-
-// text-setter translation pipeline and PrefabTextPatches' per-instantiation GameObject tree walk
-// - and periodically dumps aggregated counts/durations to perfStats.log next to the plugin DLL,
-// plus logs any single call slow enough to be individually noticeable. Not scoped to any specific
+// General-purpose perf diagnostic, gated OFF by default (MainPlugin.PerfInstrumentationEnabled,
+// "Debug" config section) - built to investigate the HeroDetailPanel slow-open report (see
+// DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md for that investigation and its
+// outcome), kept in the codebase for the next performance report rather than a one-off throwaway.
+// Times the two patch pipelines that turned out to matter - DynamicStringPatches' per-text-setter
+// translation pipeline and PrefabTextPatches' per-instantiation GameObject tree walk - and
+// periodically dumps aggregated counts/durations to perfStats.log next to the plugin DLL, plus
+// logs any single call slow enough to be individually noticeable. Not scoped to any specific
 // panel - reads as a burst in the timeline (count/total spike over a ~2s window) when a
-// text/prefab-heavy panel like HeroDetailPanel opens, against a near-zero idle baseline.
+// text/prefab-heavy panel opens, against a near-zero idle baseline. To reuse: flip
+// PerfInstrumentationEnabled on in the BepInEx config, reproduce, then read perfStats.log.
 //
 // Ticked from PlotTextSizePatches.OnDeltaTimeRead_Postfix's existing per-frame hook rather than
 // adding a new one - BasePlugin has no real Update() and AddComponent<T>/ClassInjector crash under
@@ -43,7 +47,16 @@ internal static class PerfInstrumentation
         public string MaxSample;
     }
 
-    private static readonly Dictionary<string, Bucket> _buckets = new();
+    // NOT readonly - PeriodicTick swaps this reference out for a fresh dictionary under lock
+    // rather than enumerating-then-Clear()-ing the live one in place. See PeriodicTick's comment.
+    private static Dictionary<string, Bucket> _buckets = new();
+
+    // Detects PeriodicTick being re-entered on the SAME thread (see that method's comment) - a
+    // real, confirmed-live "Collection was modified" crash was reported from this exact call path
+    // (Time.deltaTime's getter -> PeriodicTick), and the swap-based drain below eliminates the
+    // crash regardless of mechanism, but this flag additionally lets us CONFIRM whether same-
+    // thread reentrancy is actually occurring (a warning in the log) rather than guessing.
+    [ThreadStatic] private static bool _tickReentered;
 
     // Wrap a measured block with `using (PerfInstrumentation.Measure("Bucket", () => label))`.
     // `sampleDescription` is only invoked when the call becomes the new slowest seen for its
@@ -73,9 +86,17 @@ internal static class PerfInstrumentation
 
         var ms = elapsedStopwatchTicks * 1000.0 / Stopwatch.Frequency;
 
+        // `sampleDescription` is a caller-supplied delegate that can do arbitrary work (e.g.
+        // HandleTextSetter's sample walks a live Unity transform hierarchy via GetComponentPath) -
+        // never invoke it while holding WriteLock. Running arbitrary code under a shared lock is
+        // exactly the kind of thing that can trigger unexpected reentrancy into this same class
+        // (see PeriodicTick's _tickReentered guard/comment for the crash this can cause), so the
+        // lock below only ever touches the dictionary/Bucket bookkeeping, never a delegate.
+        var isNewMax = false;
+        Bucket b;
         lock (WriteLock)
         {
-            if (!_buckets.TryGetValue(bucket, out var b))
+            if (!_buckets.TryGetValue(bucket, out b))
             {
                 b = new Bucket();
                 _buckets[bucket] = b;
@@ -86,9 +107,16 @@ internal static class PerfInstrumentation
             if (elapsedStopwatchTicks > b.MaxStopwatchTicks)
             {
                 b.MaxStopwatchTicks = elapsedStopwatchTicks;
-                b.MaxSample = sampleDescription?.Invoke();
+                isNewMax = true;
             }
         }
+
+        // Invoked outside the lock (see above). Benign, rare race if two threads both set a new
+        // max for the same bucket concurrently (whichever MaxSample write lands last wins) - an
+        // acceptable trade-off for a best-effort diagnostic string, versus the alternative of
+        // running arbitrary caller code under a shared lock.
+        if (isNewMax)
+            b.MaxSample = sampleDescription?.Invoke();
 
         if (ms >= SlowCallMillisecondsThreshold)
             AppendLine($"[SLOW] {bucket}: {ms:F2}ms - {sampleDescription?.Invoke() ?? "(no sample)"}", flushNow: true);
@@ -97,6 +125,21 @@ internal static class PerfInstrumentation
     // Called once per frame (already de-duplicated by the caller) from PlotTextSizePatches'
     // Time.deltaTime tick. Dumps and resets whichever buckets saw activity since the last dump, so
     // perfStats.log reads as a timeline of bursts rather than one giant running total.
+    //
+    // 2026-09 crash report: "System.InvalidOperationException: Collection was modified" from this
+    // method's foreach, reported live even after confirming Record/PeriodicTick both only ever
+    // touched _buckets under WriteLock. The likely mechanism: Time.deltaTime's getter (which every
+    // read of it anywhere in the game re-enters THIS method through, via PlotTextSizePatches'
+    // postfix) got invoked again on the SAME thread while already inside this method's own
+    // enumeration - Monitor's reentrant locking would let a nested call straight back into the
+    // `lock (WriteLock)` below (same thread re-acquiring its own lock never blocks), so a nested
+    // call could run its own foreach+Clear() concurrently with the outer one's still-active
+    // enumerator. This is not confirmed with certainty (the exact trigger for a nested
+    // Time.deltaTime read was not pinned down), so rather than guess further: the swap-based drain
+    // below (detach `_buckets` into a private, orphaned `snapshot` reference before enumerating,
+    // so nothing else can ever reach the object being iterated) eliminates the crash regardless of
+    // mechanism, and _tickReentered logs a warning if same-thread reentrancy is in fact occurring -
+    // giving real confirmation from the next report instead of another guess.
     public static void PeriodicTick()
     {
         if (!MainPlugin.PerfInstrumentationEnabledCached) return;
@@ -105,12 +148,27 @@ internal static class PerfInstrumentation
         if (now - _lastDumpTicks < DumpIntervalTicks) return;
         _lastDumpTicks = now;
 
-        List<string> lines;
-        lock (WriteLock)
+        if (_tickReentered)
         {
-            if (_buckets.Count == 0) return;
-            lines = new List<string>();
-            foreach (var kvp in _buckets)
+            MainPlugin.Logger?.LogWarning(
+                "[PerfInstrumentation] PeriodicTick re-entered on the same thread - skipping nested call. " +
+                "This confirms the same-thread-reentrancy theory behind the 'Collection was modified' crash report.");
+            return;
+        }
+
+        _tickReentered = true;
+        try
+        {
+            Dictionary<string, Bucket> snapshot;
+            lock (WriteLock)
+            {
+                if (_buckets.Count == 0) return;
+                snapshot = _buckets;
+                _buckets = new Dictionary<string, Bucket>();
+            }
+
+            var lines = new List<string>();
+            foreach (var kvp in snapshot)
             {
                 var b = kvp.Value;
                 if (b.Count == 0) continue;
@@ -120,13 +178,16 @@ internal static class PerfInstrumentation
                     $"{kvp.Key}: count={b.Count} total={totalMs:F2}ms avg={(totalMs / b.Count):F3}ms max={maxMs:F2}ms" +
                     (b.MaxSample != null ? $" (slowest: {b.MaxSample})" : ""));
             }
-            _buckets.Clear();
-        }
 
-        if (lines.Count == 0) return;
-        AppendLine($"--- {DateTime.Now:HH:mm:ss.fff} ---", flushNow: true);
-        foreach (var line in lines) AppendLine(line, flushNow: false);
-        FlushWriter();
+            if (lines.Count == 0) return;
+            AppendLine($"--- {DateTime.Now:HH:mm:ss.fff} ---", flushNow: true);
+            foreach (var line in lines) AppendLine(line, flushNow: false);
+            FlushWriter();
+        }
+        finally
+        {
+            _tickReentered = false;
+        }
     }
 
     private static StreamWriter GetWriter()

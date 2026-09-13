@@ -44,6 +44,40 @@ The extraction facts are intentionally separate so each source can be rerun with
 the other sources. Their output files are listed in `GameFileHandling.TextFilesToSplit` and are
 packaged independently, then loaded together by the plugin's `dynamicStrings*.txt.yaml` glob.
 
+## Log-narrative isolation (`dynamicStringsLogNarratives.txt`)
+
+**4g. `ExtractLogNarrativeCandidates`** carves the `HeroData.AddLog`/`AreaData.AddLog` "log
+narrative" template family (HeroDetailPanel's Log tab, AreaLog, PlotPanel's RecordScrollView) out
+of the master `dynamicStrings.txt` dump into its own dedicated `dynamicStringsLogNarratives.txt`
+file, against `DynamicStringSources.LogNarrativeTemplates` - a curated exact-match allowlist, not
+a generic column/field source, since these are literals baked directly into IL2CPP method bodies
+(confirmed 2026-09-13 via decompiled `Converter/output/_NoNamespace/AIController.cs`,
+`GameController.cs`, `HeroData.cs`, `AreaData.cs`, `PlotController.cs`).
+
+A dedicated file (not a tag/category field) was used because `dynamicStrings.txt` is a flat,
+unstructured line list with no per-entry metadata - matching the existing precedent set by
+`heroNameParts.txt`/`forceNameParts.txt` above. `ExtractLogNarrativeCandidates` only *copies*
+matching lines into the new file; it never removes them from the master dump itself. Removal is a
+side effect of fact 5's cross-file dedup pass, which is why `dynamicStringsLogNarratives.txt` was
+added to `DynamicStringDedupePriorityOrder` **ahead of** `dynamicStrings.txt` - reversing that
+order would make the dedup pass keep the master-dump copy and silently strip the new file back to
+empty on every re-run.
+
+The curated allowlist is hand-maintained but not meant to be hand-re-derived: if a game content
+update regenerates `Converter/output/_NoNamespace/*.cs`, re-run
+`Converter/Scripts/ExtractAddLogTemplates.ps1` against the fresh decompile to regenerate a
+candidate list for review (it independently reproduces this list almost entirely; see its header
+comment for the one known gap - a single call site that inlines several sibling-branch literals
+directly into `String.Format` rather than through one variable, needing manual expansion each
+time). Six other `AddLog` call sites build their line via `String.Concat`-glued generic fragments
+(e.g. `"的"`, `"了"`) rather than one self-contained template and are deliberately excluded - see
+`DynamicStringSources.LogNarrativeTemplates`'s doc comment for the full list and rationale.
+
+Naturalness fixes for this family's translated `Result` values go through the same
+`GameFileHandling.DynamicStringResultOverrides` mechanism as every other `DynamicStringsIL2CPP`
+file (below) - isolating the templates just makes them trivial to enumerate, it doesn't add a
+second override mechanism.
+
 `ExtractDynamicStringCandidatesFromOtherText` is not a DynamicStrings source. Fact **2.
 `ExportPrefabTextIntoTranslated`** reads the asset dumper's allowlisted non-primary fields and
 writes `dumpedPrefabTextFromOtherFields.txt`, which is a `TextFileType.PrefabText` input for

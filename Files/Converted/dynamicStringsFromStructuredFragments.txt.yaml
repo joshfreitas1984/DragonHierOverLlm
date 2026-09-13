@@ -469,7 +469,7 @@
 - raw: "传授此秘籍"
   splits:
   - text: "传授此秘籍"
-    translated: "Teach this secret technique"
+    translated: "Teach this Secret Manual"
 - raw: "传授武学"
   splits:
   - text: "传授武学"
@@ -493,7 +493,7 @@
     translated: "Warehouse"
   - subIndex: 2
     text: "藏经阁内秘籍记载的武学"
-    translated: "Scripture Pavilion records of martial arts techniques"
+    translated: "The martial arts recorded in the Scripture Pavilion's Secret Manual"
   templates:
   - template: "♦{0}/{1}/{2}"
 - raw: "低价出售({0}两)"
@@ -934,7 +934,7 @@
     translated: "Engage numerous defenders"
   - subIndex: 1
     text: "获取高品质秘籍"
-    translated: "Obtain high‑quality elixirs"
+    translated: "Acquire high‑quality manuals"
   templates:
   - template: "{0}\n{1}"
 - raw: "大胆表白"
@@ -2347,7 +2347,7 @@
 - raw: "选择秘籍"
   splits:
   - text: "选择秘籍"
-    translated: "Choose a potion"
+    translated: "Choose the Secret Manual"
 - raw: "选贤举能"
   splits:
   - text: "选贤举能"
@@ -2362,7 +2362,7 @@
     translated: "Challenge the Guardians"
   - subIndex: 1
     text: "获取中品质秘籍"
-    translated: "Acquire Medium‑Quality Secret Techniques"
+    translated: "Get a medium‑quality Secret Manual"
   templates:
   - template: "{0}\n{1}"
 - raw: "遗忘“{0}”"
@@ -2381,7 +2381,7 @@
     translated: "Avoid battle"
   - subIndex: 1
     text: "获取低品质秘籍"
-    translated: "Acquire low‑quality spells"
+    translated: "Acquire a low‑quality Secret Manual"
   templates:
   - template: "{0}\n{1}"
 - raw: "那便来吧"

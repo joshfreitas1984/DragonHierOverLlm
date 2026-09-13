@@ -227,7 +227,7 @@
 - raw: "#PlayerName#，大师兄此前追踪黑风寨贼人许久未归，今日竟突然回到<b>仙霞派</b>啦！还望你赶快回来，一起看看是何情况。"
   splits:
   - text: "#PlayerName#，大师兄此前追踪黑风寨贼人许久未归，今日竟突然回到"
-    translated: "#PlayerName#, Big Senior Brother had been tracking the bandits from Black Wind Village for some time and had not returned, but he unexpectedly returned today."
+    translated: "#PlayerName#, Big Senior Brother returned suddenly today after tracking the bandits from the Black Wind Stronghold for a long time."
   - subIndex: 1
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -1282,7 +1282,7 @@
 - raw: "几位师兄已探得情报，铁掌帮近几日就将和黑风寨一道大举进攻。#PlayerName#<b>速回门派</b>，协助师兄部署防御。"
   splits:
   - text: "几位师兄已探得情报，铁掌帮近几日就将和黑风寨一道大举进攻。#PlayerName#"
-    translated: "Several senior brothers have obtained intelligence that the Iron Palm Gang will launch a major attack in conjunction with Black Wind Camp in the near days. #PlayerName#"
+    translated: "Several senior brothers have gathered intelligence. The Iron Palm Gang will join forces with the Black Wind Stronghold to launch a major attack in the coming days, #PlayerName#."
   - subIndex: 1
     text: "速回门派"
     translated: "Speed back to the sect"
@@ -2816,7 +2816,7 @@
 - raw: "一群黑风寨流寇抢劫了成都农户的粮食，眼下藏身在#TargetPlace#附近。"
   splits:
   - text: "一群黑风寨流寇抢劫了成都农户的粮食，眼下藏身在#TargetPlace#附近。"
-    translated: "A gang of bandits from Black Wind Tavern has robbed farmers in Chengdu of their grain and is currently hiding near #TargetPlace#."
+    translated: "A group of bandits from the Black Wind Stronghold have robbed farmers' grain near Chengdu and are now hiding near #TargetPlace#."
 - raw: "一行"
   splits:
   - text: "一行"
@@ -3056,7 +3056,7 @@
 - raw: "与扮作商队的师兄弟一起前往#TargetPlace#，引诱黑风寨贼人出手抢劫。"
   splits:
   - text: "与扮作商队的师兄弟一起前往#TargetPlace#，引诱黑风寨贼人出手抢劫。"
-    translated: "Go with the fellow Senior Brother disguised as a merchant caravan to #TargetPlace# to lure the bandits from Black Wind Camp into an ambush."
+    translated: "Travel to #TargetPlace# with my fellow disciples disguised as a merchant caravan, to lure the bandits from the Black Wind Stronghold into attacking us."
 - raw: "与林云裳一同前往#TargetPlace#。"
   splits:
   - text: "与林云裳一同前往#TargetPlace#。"
@@ -5214,7 +5214,7 @@
 - raw: "余师姐一路跟踪黑风寨贼人，发现顾师兄被关押在#TargetPlace#。与师兄弟分头前往准备劫狱。"
   splits:
   - text: "余师姐一路跟踪黑风寨贼人，发现顾师兄被关押在#TargetPlace#。与师兄弟分头前往准备劫狱。"
-    translated: "Senior Sister Yu tracked the bandits from Black Gale Village all the way, discovering that Senior Brother Gu is imprisoned at #TargetPlace#. She and the fellow brothers plan to split up and prepare for a prison break."
+    translated: "Senior Sister Yu followed the bandits from the Black Wind Stronghold and discovered that Senior Brother Gu is being held at #TargetPlace#. She then split up with her fellow disciples to prepare for a rescue operation."
 - raw: "余师姐在#TargetPlace#发现了可疑踪迹，与她一同前去埋伏调查。"
   splits:
   - text: "余师姐在#TargetPlace#发现了可疑踪迹，与她一同前去埋伏调查。"
@@ -5250,7 +5250,7 @@
     translated: "As an Initiate Disciple, you can only learn the most basic martial arts for now."
   - subIndex: 1
     text: "初次修习某一秘籍，是需要消耗一定门派功绩的。"
-    translated: "Initial study of a particular danji requires a certain amount of Sect merits."
+    translated: "The initial practice of a certain Secret Manual requires the consumption of a certain amount of sect merit."
   - subIndex: 2
     text: "如果已学会该功法，则可以免费阅读。"
     translated: "If you have mastered this cultivation technique, you can read it for free."
@@ -6038,7 +6038,7 @@
 - raw: "前往#TargetPlace#与师兄弟汇合，准备进攻黑风寨。"
   splits:
   - text: "前往#TargetPlace#与师兄弟汇合，准备进攻黑风寨。"
-    translated: "Head to #TargetPlace# to meet up with the senior brothers and prepare to attack Black Wind Camp."
+    translated: "Go to #TargetPlace# to meet up with my fellow disciples and prepare to attack the Black Wind Stronghold."
 - raw: "前往#TargetPlace#与顾师兄汇合。"
   splits:
   - text: "前往#TargetPlace#与顾师兄汇合。"
@@ -6050,7 +6050,7 @@
 - raw: "前往#TargetPlace#为林师妹求药。"
   splits:
   - text: "前往#TargetPlace#为林师妹求药。"
-    translated: "Go to #TargetPlace# to fetch medicine for Lin Junior Sister."
+    translated: "Go to #TargetPlace# to get medicine for Junior Sister Lin."
 - raw: "前往#TargetPlace#为顾游年求医。"
   splits:
   - text: "前往#TargetPlace#为顾游年求医。"
@@ -6158,7 +6158,7 @@
 - raw: "前往#TargetPlace#探查黑风寨与铁掌帮之动向。"
   splits:
   - text: "前往#TargetPlace#探查黑风寨与铁掌帮之动向。"
-    translated: "Head to #TargetPlace# to investigate the movements of Black Wind Encampment and Iron Palm Gang."
+    translated: "Go to #TargetPlace# to investigate the movements of the Black Wind Stronghold and the Iron Palm Gang."
 - raw: "前往#TargetPlace#接应陆师伯。"
   splits:
   - text: "前往#TargetPlace#接应陆师伯。"
@@ -6307,7 +6307,7 @@
 - raw: "升为入门弟子后，你可在藏经阁内阅读更高深的秘籍。\\n请先进入藏经阁。"
   splits:
   - text: "升为入门弟子后，你可在藏经阁内阅读更高深的秘籍。"
-    translated: "Promoted to the status of Initiate Disciple, you may now read more advanced scriptures in the Scripture Pavilion."
+    translated: "After being promoted to Initiate Disciple, you can read more advanced Secret Manuals inside the Scripture Pavilion."
   - subIndex: 1
     text: "请先进入藏经阁。"
     translated: "Please enter the Scripture Pavilion first"
@@ -6316,7 +6316,7 @@
 - raw: "升为正式弟子后，你可在藏经阁内进行秘籍编纂。\\n请先进入藏经阁。"
   splits:
   - text: "升为正式弟子后，你可在藏经阁内进行秘籍编纂。"
-    translated: "Promoted to a formal disciple, you may compile treatises in the Scripture Pavilion."
+    translated: "After being promoted to Formal Disciple, you can compile Manuals in the Scripture Pavilion."
   - subIndex: 1
     text: "请先进入藏经阁。"
     translated: "Please enter the Scripture Pavilion first"
@@ -6523,13 +6523,13 @@
 - raw: "另外，你还需要管理藏经阁，并为弟子配置合适的秘籍。\\n弟子会自动阅读这些秘籍，并持续修炼武功。\\n藏经阁内的秘籍品质越高，弟子的修炼速度也越快。"
   splits:
   - text: "另外，你还需要管理藏经阁，并为弟子配置合适的秘籍。"
-    translated: "Additionally, you also need to manage the Scripture Pavilion and assign appropriate scriptures to your disciples."
+    translated: "In addition, you need to manage the Scripture Pavilion and provide appropriate manuals for your disciples."
   - subIndex: 1
     text: "弟子会自动阅读这些秘籍，并持续修炼武功。"
     translated: "Disciples will automatically read these manuals and continuously practice martial arts."
   - subIndex: 2
     text: "藏经阁内的秘籍品质越高，弟子的修炼速度也越快。"
-    translated: "The higher the quality of the scriptures in the Scripture Pavilion, the faster the apprentice's cultivation speed."
+    translated: "The higher the quality of the Secret Manuals in the Scripture Pavilion, the faster the disciples' cultivation speed will be. Cultivation speed"
   templates:
   - template: "{0}\\n{1}\\n{2}"
 - raw: "另外，如果能吃到星星，\\n也可以使连击数加3"
@@ -6672,7 +6672,7 @@
 - raw: "只需要点击“阅读秘籍”。"
   splits:
   - text: "只需要点击“阅读秘籍”。"
-    translated: "Just click on Read Lore"
+    translated: "Just click Read Secret Manual"
 - raw: "可以先点击进入对方门派正厅。"
   splits:
   - text: "可以先点击进入对方门派正厅。"
@@ -7791,7 +7791,7 @@
 - raw: "在基础秘籍中，选择一门感兴趣的武功，然后进行阅读吧！\\n（内功乃武学之根基，建议优先学习吐纳法！）"
   splits:
   - text: "在基础秘籍中，选择一门感兴趣的武功，然后进行阅读吧！"
-    translated: "In the basic tome, choose a martial art of interest and read about it!"
+    translated: "In the Basic Manual, choose a martial art that interests you and then read it!"
   - subIndex: 1
     text: "（内功乃武学之根基，建议优先学习吐纳法！）"
     translated: "(Internal Skill is the foundation of martial arts; it is advised to prioritize learning breathing exercises!)"
@@ -7878,7 +7878,7 @@
 - raw: "在秘籍编纂界面，你可以整合，抄录或是默写秘籍。\\n这三项工作都需要你的学识和对应武学达标，否则便会产生高额消耗。"
   splits:
   - text: "在秘籍编纂界面，你可以整合，抄录或是默写秘籍。"
-    translated: "In the Codex Compilation Interface, you can integrate, transcribe, or memorize codices."
+    translated: "In the Manual Compilation interface, you can integrate, copy, or memorize manuals."
   - subIndex: 1
     text: "这三项工作都需要你的学识和对应武学达标，否则便会产生高额消耗。"
     translated: "These three tasks require both your knowledge and the corresponding martial arts skills to be up to par, or else they will consume a significant amount of resources."
@@ -7972,13 +7972,13 @@
 - raw: "在门派中，你不仅可以免费阅读秘籍，习武练功。\\n若能持续积累门派贡献，提升门派地位，\\n还可以阅读藏经阁中的高深秘籍，习得该门派的绝世武功。"
   splits:
   - text: "在门派中，你不仅可以免费阅读秘籍，习武练功。"
-    translated: "In the Sect, they can not only read mi jie for free but also practice martial arts."
+    translated: "In the sect, you can not only read the Secret Manual for free but also practice martial arts and cultivate skills."
   - subIndex: 1
     text: "若能持续积累门派贡献，提升门派地位，"
     translated: "If we can continuously accumulate the sect's contributions and elevate its status,"
   - subIndex: 2
     text: "还可以阅读藏经阁中的高深秘籍，习得该门派的绝世武功。"
-    translated: "You can also read the high‑level secret classics in the Scripture Pavilion to learn the sect's world‑renowned martial arts techniques."
+    translated: "You can also read the advanced secret manuals in the Scripture Pavilion and learn the sect's peerless martial arts."
   templates:
   - template: "{0}\\n{1}\\n{2}"
 - raw: "在闭关室突破瓶颈，将太祖长拳修炼至十重功力"
@@ -8222,7 +8222,7 @@
 - raw: "失传秘籍"
   splits:
   - text: "失传秘籍"
-    translated: "Lost technique"
+    translated: "Lost Secret Manual"
 - raw: "失去大量经验"
   splits:
   - text: "失去大量经验"
@@ -9418,7 +9418,7 @@
 - raw: "成功击败了黑风寨劫匪，回#TargetPlace#向师傅复命。"
   splits:
   - text: "成功击败了黑风寨劫匪，回#TargetPlace#向师傅复命。"
-    translated: "Successfully defeated the bandits at Black Wind Ravine and returned to #TargetPlace# to report to Master."
+    translated: "Successfully defeated the Black Wind Stronghold bandits, return to #TargetPlace# and report to Master."
 - raw: "成都争锋"
   splits:
   - text: "成都争锋"
@@ -9926,7 +9926,7 @@
 - raw: "探明了黑风寨之虚实，回#TargetPlace#向师傅复命。"
   splits:
   - text: "探明了黑风寨之虚实，回#TargetPlace#向师傅复命。"
-    translated: "Determine the situation of Black Wind Camp, then return to #TargetPlace# to report to Master."
+    translated: "Having ascertained the true state of Black Wind Stronghold, return to #TargetPlace# and report back to Master."
 - raw: "探查一番"
   splits:
   - text: "探查一番"
@@ -9938,7 +9938,7 @@
 - raw: "探查黑风寨"
   splits:
   - text: "探查黑风寨"
-    translated: "Explore Black Wind Village"
+    translated: "Investigate the Black Wind Stronghold"
 - raw: "接下来点击闭关室内的修炼按钮，\\n即可开始内功/轻功/绝技修炼。"
   splits:
   - text: "接下来点击闭关室内的修炼按钮，"
@@ -11158,7 +11158,7 @@
 - raw: "江湖风传还有一批黑风寨残党藏身于<b>江陵南方</b>，听说已有仙霞派义士前去捉拿。"
   splits:
   - text: "江湖风传还有一批黑风寨残党藏身于"
-    translated: "Jianghu rumor has it that a group of remnants from Blackwind Camp are hiding there."
+    translated: "It is also rumored in the Jianghu that a group of Black Wind Stronghold remnants are hiding in"
   - subIndex: 1
     text: "江陵南方"
     translated: "Jiangling Southern Region"
@@ -11271,7 +11271,7 @@
     translated: "Unexpectedly, there turns out to be an ancient site in this wilderness, seeming to be a place of cultivation for some unnamed senior."
   - subIndex: 1
     text: "若能深入其中探索，或许会找到遗留的心法秘籍以为己用。"
-    translated: "If you can delve into it and explore, perhaps you might find the preserved Heart Method scriptures to use for yourself."
+    translated: "If one delves in and explores, perhaps one might find left‑behind Heart Methods or Secret Manuals to use for oneself."
   templates:
   - template: "{0}\\n{1}"
 - raw: "没缺胳膊断腿的回来就好，这次探查可有什么发现？"
@@ -12050,7 +12050,7 @@
     translated: "When breaking through, you can choose to select the martial arts manual of your desired skill, or consume medicinal pills or food to assist in the breakthrough."
   - subIndex: 1
     text: "其中秘籍包括你身上的和藏经阁内的，都可以进行选择。"
-    translated: "Among the Secret Techniques including those on your person and in the Scripture Pavilion, you can make your selection."
+    translated: "The manuals, both the ones you have and those in the Scripture Pavilion, can be selected."
   templates:
   - template: "{0}\\n{1}"
 - raw: "突破瓶颈"
@@ -12296,7 +12296,7 @@
 - raw: "编纂秘籍"
   splits:
   - text: "编纂秘籍"
-    translated: "Compile the secret scrolls"
+    translated: "Compile the Secret Manual"
 - raw: "缺"
   splits:
   - text: "缺"
@@ -12469,7 +12469,7 @@
 - raw: "自黑风寨被剿灭以来，巴陵村已风平浪静，但传闻一伙黑风寨残党逃窜到了<b>乐山镇北方</b>。"
   splits:
   - text: "自黑风寨被剿灭以来，巴陵村已风平浪静，但传闻一伙黑风寨残党逃窜到了"
-    translated: "Since the suppression of Black Wind Fort, Baling Village has been calm, but rumors suggest that a group of Black Wind Fort survivors fled there."
+    translated: "Since the Black Wind Stronghold was eradicated, Baling Village has been peaceful, but rumors suggest that a group of Black Wind remnants have fled to the area."
   - subIndex: 1
     text: "乐山镇北方"
     translated: "Northern Leshan Town"
@@ -12627,13 +12627,13 @@
     translated: "In the Scripture Pavilion, one can not only read the stored books,"
   - subIndex: 1
     text: "也可以阅读随身携带的秘籍。"
-    translated: "You can also read the secret techniques you carry with you."
+    translated: "You can also read the Secret Manual you carry with you."
   templates:
   - template: "{0}\\n{1}"
 - raw: "藏经阁是阅读秘籍之场所。\\n所有秘籍，都要在此处才能进行参阅。"
   splits:
   - text: "藏经阁是阅读秘籍之场所。"
-    translated: "The Scripture Pavilion is a place to read secret scrolls."
+    translated: "The Scripture Pavilion is the place for reading the Secret Manual."
   - subIndex: 1
     text: "所有秘籍，都要在此处才能进行参阅。"
     translated: "All manuals must be accessed here"
@@ -13494,7 +13494,7 @@
 - raw: "近来诸多成都农户遭黑风寨流寇劫掠。#PlayerName#若能<b>赶回门派</b>，可与师兄一道前去擒贼。"
   splits:
   - text: "近来诸多成都农户遭黑风寨流寇劫掠。#PlayerName#若能"
-    translated: "Recently, many farmers in Chengdu have been plundered by bandits from Black Wind Village. #PlayerName#, if you can"
+    translated: "Recently, many farmers in Chengdu have been plundered by bandits from the Black Wind Stronghold. If you can, #PlayerName#..."
   - subIndex: 1
     text: "赶回门派"
     translated: "Rush back to the sect"
@@ -14473,11 +14473,11 @@
 - raw: "阅读秘籍"
   splits:
   - text: "阅读秘籍"
-    translated: "Read the cheat sheet"
+    translated: "Read the Secret Manual"
 - raw: "阅读秘籍时，你需要在纸张上通过点击，\\n阅读尽可能多的文字。"
   splits:
   - text: "阅读秘籍时，你需要在纸张上通过点击，"
-    translated: "When reading the guide, you need to click on the paper to navigate."
+    translated: "When reading the Secret Manual, you need to click on the paper."
   - subIndex: 1
     text: "阅读尽可能多的文字。"
     translated: "Read as much text as possible"
@@ -14486,7 +14486,7 @@
 - raw: "阅读秘籍需要消耗时间，秘籍越高级消耗时间越多。\\n点击确认即可正式开始阅读。"
   splits:
   - text: "阅读秘籍需要消耗时间，秘籍越高级消耗时间越多。"
-    translated: "Reading a tome requires time, with more advanced tomes consuming more time."
+    translated: "Reading the Secret Manual requires time; the higher the level of the manual, the more time it consumes."
   - subIndex: 1
     text: "点击确认即可正式开始阅读。"
     translated: "Click to confirm and start reading officially"
@@ -14608,7 +14608,7 @@
 - raw: "随后选择“编纂秘籍”。"
   splits:
   - text: "随后选择“编纂秘籍”。"
-    translated: "Then select Compile Codex"
+    translated: "Then select Compile the Secret Manual"
 - raw: "随后选择“阅读藏书”。"
   splits:
   - text: "随后选择“阅读藏书”。"
@@ -14699,7 +14699,7 @@
 - raw: "顾游年师兄被黑风寨绑走，回#TargetPlace#商议救援之计。"
   splits:
   - text: "顾游年师兄被黑风寨绑走，回#TargetPlace#商议救援之计。"
-    translated: "Gu Younian's senior brother was kidnapped by Black Wind Camp and is returning to #TargetPlace# to discuss rescue plans."
+    translated: "Senior Brother Gu Younian was kidnapped by the Black Wind Stronghold. Let's return to #TargetPlace# to discuss a rescue plan."
 - raw: "预"
   splits:
   - text: "预"

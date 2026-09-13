@@ -3175,7 +3175,7 @@
   splits:
   - text: "队伍人数"
   templates:
-  - template: "<b><size=17>{0} ⟦0⟧</size></b>"
+  - template: "<b><size=12>{0} ⟦0⟧</size></b>"
 - raw: "<b>{0}</b>[{1}级]\n{2}"
   splits:
   - text: "级"
@@ -3535,7 +3535,7 @@
   splits:
   - text: "级"
   templates:
-  - template: "<color=grey><size=17>⟦0⟧ ⟦1⟧{0}</size></color>"
+  - template: "<color=grey><size=12>⟦0⟧ ⟦1⟧{0}</size></color>"
 - raw: "<color=grey>未解锁"
   splits:
   - text: "未解锁"
@@ -3733,19 +3733,19 @@
   splits:
   - text: "经验"
   templates:
-  - template: "<size=14>({0}⟦0⟧%)</size>"
+  - template: "<size=10>({0}⟦0⟧%)</size>"
 - raw: "<size=17>{0}\n<b>敌人x{1}</b></size>"
   splits:
   - text: "敌人"
   templates:
-  - template: "<size=17>⟦0⟧\n<b>{0}x⟦1⟧</b></size>"
+  - template: "<size=12>⟦0⟧\n<b>{0}x⟦1⟧</b></size>"
 - raw: "<size=17>道路 {0}级</size>"
   splits:
   - text: "道路"
   - subIndex: 1
     text: "级"
   templates:
-  - template: "<size=17>{0} ⟦0⟧{1}</size>"
+  - template: "<size=12>{0} ⟦0⟧{1}</size>"
 - raw: ">={0} 基础移距{1}"
   splits:
   - text: "基础移距"
@@ -4150,11 +4150,6 @@
     text: "重"
   templates:
   - template: "⟦0⟧({0} {1}⟦1⟧{2})</color>"
-- raw: "{0}<b>{1}</b>{2}，买卖价格{3}。"
-  splits:
-  - text: "，买卖价格"
-  templates:
-  - template: "⟦0⟧<b>⟦1⟧</b>⟦2⟧{0}⟦3⟧。"
 - raw: "{0}<b>作恶导致禁用{1}个月</b></color>"
   splits:
   - text: "作恶导致禁用"
@@ -4231,20 +4226,6 @@
   - text: "不可招募"
   - subIndex: 1
     text: "性"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}与{1}冰释前嫌，化解了二人间的仇恨。"
-  splits:
-  - text: "与"
-  - subIndex: 1
-    text: "冰释前嫌，化解了二人间的仇恨。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}与{1}情谊渐浅，断绝了好友关系。"
-  splits:
-  - text: "与"
-  - subIndex: 1
-    text: "情谊渐浅，断绝了好友关系。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}与{1}撕毁了同盟协定"
@@ -4324,15 +4305,6 @@
     text: "两"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}从{3}仓库购买了{1}，花费银两{2}"
-  splits:
-  - text: "从"
-  - subIndex: 1
-    text: "仓库购买了"
-  - subIndex: 2
-    text: "，花费银两"
-  templates:
-  - template: "⟦0⟧{0}⟦3⟧{1}⟦1⟧{2}⟦2⟧"
 - raw: "{0}仓库添加了 {1}"
   splits:
   - text: "仓库添加了"
@@ -4358,13 +4330,6 @@
   - text: "使用了"
   templates:
   - template: "⟦0⟧{0} ⟦1⟧"
-- raw: "{0}使用门派银钱{1}两，购买{2}。"
-  splits:
-  - text: "使用门派银钱"
-  - subIndex: 1
-    text: "两，购买"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}修行经验{1}"
   splits:
   - text: "修行经验"
@@ -4429,15 +4394,6 @@
     text: "级"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}出售门派{1}，换取门派银钱{2}两。"
-  splits:
-  - text: "出售门派"
-  - subIndex: 1
-    text: "，换取门派银钱"
-  - subIndex: 2
-    text: "两。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}分舵的{1}升为{2}级"
   splits:
   - text: "分舵的"
@@ -4447,17 +4403,6 @@
     text: "级"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}制造了{1}并放入行囊(消耗{2}银钱{3})"
-  splits:
-  - text: "制造了"
-  - subIndex: 1
-    text: "并放入行囊"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "银钱"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
 - raw: "{0}制造了{1}并放入门派仓库"
   splits:
   - text: "制造了"
@@ -4465,40 +4410,11 @@
     text: "并放入门派仓库"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}制造了{1}并放入门派仓库(消耗{2}木料矿石{3})"
-  splits:
-  - text: "制造了"
-  - subIndex: 1
-    text: "并放入门派仓库"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "木料矿石"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}制造了{1}，由于门派仓库已满只得放入行囊(消耗{2}木料矿石{3})"
-  splits:
-  - text: "制造了"
-  - subIndex: 1
-    text: "，由于门派仓库已满只得放入行囊"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "木料矿石"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
 - raw: "{0}加入了你的队伍"
   splits:
   - text: "加入了你的队伍"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}加入了由{1}领导的队伍。"
-  splits:
-  - text: "加入了由"
-  - subIndex: 1
-    text: "领导的队伍。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}加入战场"
   splits:
   - text: "加入战场"
@@ -4514,44 +4430,6 @@
   - text: "可建立亲密关系"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}吉人天相，{2}，学会了武功{1}。"
-  splits:
-  - text: "吉人天相，"
-  - subIndex: 1
-    text: "，学会了武功"
-  templates:
-  - template: "⟦0⟧{0}⟦2⟧{1}⟦1⟧。"
-- raw: "{0}吉人天相，寻得前朝皇家宝库，获得了{1}等诸多珍宝。"
-  splits:
-  - text: "吉人天相，寻得前朝皇家宝库，获得了"
-  - subIndex: 1
-    text: "等诸多珍宝。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}吉人天相，寻得高人所刻石碑，潜心研读后提升了{1}潜力。"
-  splits:
-  - text: "吉人天相，寻得高人所刻石碑，潜心研读后提升了"
-  - subIndex: 1
-    text: "潜力。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}吉星高照，寻得失落宝藏，搜刮后获得了{1}两银钱。"
-  splits:
-  - text: "吉星高照，寻得失落宝藏，搜刮后获得了"
-  - subIndex: 1
-    text: "两银钱。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}吉星高照，得到一枚灵果，服食后内力上限增加{1}。"
-  splits:
-  - text: "吉星高照，得到一枚灵果，服食后内力上限增加"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}吉星高照，得到一株异草，服食后生命上限增加{1}。"
-  splits:
-  - text: "吉星高照，得到一株异草，服食后生命上限增加"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}同盟</color>"
   splits:
   - text: "同盟"
@@ -4564,15 +4442,6 @@
     text: "赠送银两以示亲善，双方关系提升到了"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}向{3}仓库捐赠了{1}，获取功绩{2}"
-  splits:
-  - text: "向"
-  - subIndex: 1
-    text: "仓库捐赠了"
-  - subIndex: 2
-    text: "，获取功绩"
-  templates:
-  - template: "⟦0⟧{0}⟦3⟧{1}⟦1⟧{2}⟦2⟧"
 - raw: "{0}向来秉持{1}之道，{4}。\n我身为{2}，自是应当{3}。"
   splits:
   - text: "向来秉持"
@@ -4726,58 +4595,6 @@
   - text: "回合"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}因功勋卓著，被晋升为{1}。"
-  splits:
-  - text: "因功勋卓著，被晋升为"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}在{1}上下打点，花费{3}银两降低了{2}点恶名。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "上下打点，花费"
-  - subIndex: 2
-    text: "银两降低了"
-  - subIndex: 3
-    text: "点恶名。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦3⟧{2}⟦2⟧{3}"
-- raw: "{0}在{1}与{2}交流心得，切磋武艺，最终{3}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "与"
-  - subIndex: 2
-    text: "交流心得，切磋武艺，最终"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧。"
-- raw: "{0}在{1}与{2}心生嫌隙，结下了深仇大恨。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "与"
-  - subIndex: 2
-    text: "心生嫌隙，结下了深仇大恨。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}与{2}相谈盛欢，一见如故，结为知己好友。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "与"
-  - subIndex: 2
-    text: "相谈盛欢，一见如故，结为知己好友。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}与{2}闲聊一阵。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "与"
-  - subIndex: 2
-    text: "闲聊一阵。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}在{1}中休整疗养，{3}生命内力恢复{2}%"
   splits:
   - text: "在"
@@ -4887,36 +4704,6 @@
     text: "中遭毒虫叮咬，痛痒难耐"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}在{1}习得了新武功{2}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "习得了新武功"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}在{1}买卖交易，出售了闲置物品{2}{3}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "买卖交易，出售了闲置物品"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧⟦3⟧。"
-- raw: "{0}在{1}修习了{2}技艺。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "修习了"
-  - subIndex: 2
-    text: "技艺。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}修习了武功{2}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "修习了武功"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}在{1}加强管理，使该地{2}提升{3}点。"
   splits:
   - text: "在"
@@ -4928,180 +4715,6 @@
     text: "点。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}参加{2}拍卖大会，花费{3}两购得一件{4}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "参加"
-  - subIndex: 2
-    text: "拍卖大会，花费"
-  - subIndex: 3
-    text: "两购得一件"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}⟦4⟧。"
-- raw: "{0}在{1}参加{5}赛马大会，勇夺第{2}名，银两+{3}，声望+{4}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "参加"
-  - subIndex: 2
-    text: "赛马大会，勇夺第"
-  - subIndex: 3
-    text: "名，银两"
-  - subIndex: 4
-    text: "，声望"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧{2}⟦2⟧{3}+⟦3⟧{4}+⟦4⟧。"
-- raw: "{0}在{1}参加{6}，勇夺第{2}名，银两+{3}，{4}，并获得了奖品{5}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "参加"
-  - subIndex: 2
-    text: "，勇夺第"
-  - subIndex: 3
-    text: "名，银两"
-  - subIndex: 4
-    text: "，并获得了奖品"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦6⟧{2}⟦2⟧{3}+⟦3⟧，⟦4⟧{4}⟦5⟧。"
-- raw: "{0}在{1}四下探索之时，意外发现了{2}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "四下探索之时，意外发现了"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}在{1}完成了重要委托，名望{2}，银两{3}，并获得了{4}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "完成了重要委托，名望"
-  - subIndex: 2
-    text: "，银两"
-  - subIndex: 3
-    text: "，并获得了"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}⟦4⟧。"
-- raw: "{0}在{1}开展治理，使该地{2}提升了{3}点。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "开展治理，使该地"
-  - subIndex: 2
-    text: "提升了"
-  - subIndex: 3
-    text: "点。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}打工赚钱，获取了{2}两银钱。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "打工赚钱，获取了"
-  - subIndex: 2
-    text: "两银钱。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}暗中破坏，使该地{2}降低{3}点。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "暗中破坏，使该地"
-  - subIndex: 2
-    text: "降低"
-  - subIndex: 3
-    text: "点。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}暗中破坏，使该地{2}降低了{3}点。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "暗中破坏，使该地"
-  - subIndex: 2
-    text: "降低了"
-  - subIndex: 3
-    text: "点。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}欲{5}{2}的{3}，{4}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "欲"
-  - subIndex: 2
-    text: "的"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧⟦2⟧{2}⟦3⟧，⟦4⟧。"
-- raw: "{0}在{1}欲下毒暗害{2}，{3}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "欲下毒暗害"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧，⟦3⟧。"
-- raw: "{0}在{1}欲偷师{2}的{3}，{4}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "欲偷师"
-  - subIndex: 2
-    text: "的"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧，⟦4⟧。"
-- raw: "{0}在{1}结束关押，恢复了自由之身。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "结束关押，恢复了自由之身。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}在{1}袭击了{2}，血战一场最终{3}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "袭击了"
-  - subIndex: 2
-    text: "，血战一场最终"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧。"
-- raw: "{0}在{1}辛勤劳作，为门派收获了{2}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "辛勤劳作，为门派收获了"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}在{1}遭逢{5}奇遇，名望{2}，银两{3}，并获得了{4}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "遭逢"
-  - subIndex: 2
-    text: "奇遇，名望"
-  - subIndex: 3
-    text: "，银两"
-  - subIndex: 4
-    text: "，并获得了"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧{2}⟦2⟧{3}⟦3⟧{4}⟦4⟧。"
-- raw: "{0}在{1}闲逛之时，意外获取了{2}两银钱。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "闲逛之时，意外获取了"
-  - subIndex: 2
-    text: "两银钱。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}闲逛之时，意外获取了一件{2}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "闲逛之时，意外获取了一件"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}在农户中充分休息"
   splits:
   - text: "在农户中充分休息"
@@ -5235,20 +4848,6 @@
     text: "点"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦3⟧{2}⟦2⟧{3}⟦4⟧。"
-- raw: "{0}对自身的{1}上进行了下毒。"
-  splits:
-  - text: "对自身的"
-  - subIndex: 1
-    text: "上进行了下毒。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}对自身装备的{1}进行了粹毒。"
-  splits:
-  - text: "对自身装备的"
-  - subIndex: 1
-    text: "进行了粹毒。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}将{1}成品{2}放入{3}"
   splits:
   - text: "将"
@@ -5383,26 +4982,6 @@
     text: "级！"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}掌门{1}将《{2}》{3}秘籍放入藏经阁，供全派弟子参阅。"
-  splits:
-  - text: "掌门"
-  - subIndex: 1
-    text: "将"
-  - subIndex: 2
-    text: "秘籍放入藏经阁，供全派弟子参阅。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}"
-- raw: "{0}掌门{1}用《{2}》{3}替换了藏经阁内的《{2}》{4}秘籍，供全派弟子参阅。"
-  splits:
-  - text: "掌门"
-  - subIndex: 1
-    text: "用"
-  - subIndex: 2
-    text: "替换了藏经阁内的"
-  - subIndex: 3
-    text: "秘籍，供全派弟子参阅。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}《⟦2⟧》⟦4⟧{3}"
 - raw: "{0}接任了{1}掌门之位。"
   splits:
   - text: "接任了"
@@ -5417,13 +4996,6 @@
     text: "银两"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}收到门派{1}银钱嘉奖，忠诚+3"
-  splits:
-  - text: "收到门派"
-  - subIndex: 1
-    text: "银钱嘉奖，忠诚"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}+3"
 - raw: "{0}攻击了{1}门派总舵，最终{2}。"
   splits:
   - text: "攻击了"
@@ -5431,15 +5003,6 @@
     text: "门派总舵，最终"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}攻击了{2}掌控下的{1}，最终{3}。"
-  splits:
-  - text: "攻击了"
-  - subIndex: 1
-    text: "掌控下的"
-  - subIndex: 2
-    text: "，最终"
-  templates:
-  - template: "⟦0⟧{0}⟦2⟧{1}⟦1⟧{2}⟦3⟧。"
 - raw: "{0}效果已结束！"
   splits:
   - text: "效果已结束！"
@@ -5591,21 +5154,6 @@
     text: "行动力。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}/⟦2⟧{2}/⟦3⟧{3}/⟦4⟧{4}/⟦4⟧%{5}"
-- raw: "{0}气运过人，寻得一件神兵利器，鉴别后竟是传说中的{1}。"
-  splits:
-  - text: "气运过人，寻得一件神兵利器，鉴别后竟是传说中的"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}气运过人，寻得一匹千里名驹，鉴别后竟是传说中的{1}。"
-  splits:
-  - text: "气运过人，寻得一匹千里名驹，鉴别后竟是传说中的"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}气运过人，寻得一本失传秘籍，鉴别后竟是传说中的{1}。"
-  splits:
-  - text: "气运过人，寻得一本失传秘籍，鉴别后竟是传说中的"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}消耗{1}门派威望，将{2}的地位提升到了{3}。"
   splits:
   - text: "消耗"
@@ -5635,72 +5183,6 @@
   - text: "点门派威望，以及该弟子"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}炼制了{1}并放入行囊(消耗{2}银钱{3})"
-  splits:
-  - text: "炼制了"
-  - subIndex: 1
-    text: "并放入行囊"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "银钱"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}炼制了{1}并放入门派仓库(消耗{2}药材{3})"
-  splits:
-  - text: "炼制了"
-  - subIndex: 1
-    text: "并放入门派仓库"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "药材"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}炼制了{1}，由于门派仓库已满只得放入行囊(消耗{2}药材{3})"
-  splits:
-  - text: "炼制了"
-  - subIndex: 1
-    text: "，由于门派仓库已满只得放入行囊"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "药材"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}烹饪了{1}并放入行囊(消耗{2}银钱{3})"
-  splits:
-  - text: "烹饪了"
-  - subIndex: 1
-    text: "并放入行囊"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "银钱"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}烹饪了{1}并放入门派仓库(消耗{2}粮食{3})"
-  splits:
-  - text: "烹饪了"
-  - subIndex: 1
-    text: "并放入门派仓库"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "粮食"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}烹饪了{1}，由于门派仓库已满只得放入行囊(消耗{2}粮食{3})"
-  splits:
-  - text: "烹饪了"
-  - subIndex: 1
-    text: "，由于门派仓库已满只得放入行囊"
-  - subIndex: 2
-    text: "消耗"
-  - subIndex: 3
-    text: "粮食"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
 - raw: "{0}状态已完全恢复"
   splits:
   - text: "状态已完全恢复"
@@ -5722,15 +5204,6 @@
     text: "级"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}(⟦3⟧)"
-- raw: "{0}的{1}结束{2}了。"
-  splits:
-  - text: "的"
-  - subIndex: 1
-    text: "结束"
-  - subIndex: 2
-    text: "了。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}的{1}部出现了破绽。"
   splits:
   - text: "的"
@@ -5774,13 +5247,6 @@
   - text: "离开了你的队伍"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}离开了由{1}领导的队伍。"
-  splits:
-  - text: "离开了由"
-  - subIndex: 1
-    text: "领导的队伍。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}突破至第{1}重！"
   splits:
   - text: "突破至第"
@@ -5885,15 +5351,6 @@
     text: "侵占多时，当地百姓苦其苛政久矣。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}被{1}抓捕入狱，关押在{2}之中。"
-  splits:
-  - text: "被"
-  - subIndex: 1
-    text: "抓捕入狱，关押在"
-  - subIndex: 2
-    text: "之中。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}解除了{1}门客关系"
   splits:
   - text: "解除了"
@@ -5921,38 +5378,6 @@
   - text: "资源储量增加了"
   templates:
   - template: "⟦0⟧{0}⟦1⟧"
-- raw: "{0}近日大兴土木，开始修缮升级{1}{2}({3}级)"
-  splits:
-  - text: "近日大兴土木，开始修缮升级"
-  - subIndex: 1
-    text: "级"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧⟦2⟧(⟦3⟧{1})"
-- raw: "{0}近日大兴土木，开始在{1}新建{2}"
-  splits:
-  - text: "近日大兴土木，开始在"
-  - subIndex: 1
-    text: "新建"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧"
-- raw: "{0}近日大兴土木，开始拆除{1}{2}({3}级)"
-  splits:
-  - text: "近日大兴土木，开始拆除"
-  - subIndex: 1
-    text: "级"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧⟦2⟧(⟦3⟧{1})"
-- raw: "{0}近日开始加强{1}分舵之{2}防御等级({3}级)"
-  splits:
-  - text: "近日开始加强"
-  - subIndex: 1
-    text: "分舵之"
-  - subIndex: 2
-    text: "防御等级"
-  - subIndex: 3
-    text: "级"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}(⟦3⟧{3})"
 - raw: "{0}进行休息。"
   splits:
   - text: "进行休息。"
@@ -6003,11 +5428,6 @@
   - text: "难度"
   templates:
   - template: "⟦0⟧{0};SurePerformForMoney;⟦1⟧_⟦2⟧"
-- raw: "{0}领悟了天赋：{1}"
-  splits:
-  - text: "领悟了天赋"
-  templates:
-  - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}领悟天赋：{1}"
   splits:
   - text: "领悟天赋"

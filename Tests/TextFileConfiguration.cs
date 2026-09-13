@@ -105,6 +105,17 @@ namespace Tests
             // DynamicStringExtraction.ExtractStructuredRecordFragmentCandidates.
             new() {Path = "dynamicStringsFromStructuredFragments.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
 
+            // The "log narrative" AddLog-template family (HeroDetailPanel's Log tab, AreaLog,
+            // PlotPanel's RecordScrollView) - carved out of dynamicStrings.txt into its own file so
+            // every template needing a DynamicStringResultOverrides naturalness fix is trivial to
+            // find, and so DragonHeirPlugin can eventually route known-log-panel text through a
+            // smaller compiled-template list. See DynamicStringSources.LogNarrativeTemplates and
+            // DynamicStringExtraction.ExtractLogNarrativeCandidates for how this list is curated/
+            // re-derived and how the split is made to stick through re-extraction. QC review enabled
+            // (matches dynamicStrings.txt, the file these entries were split out of) - these are
+            // ordinary prose narrative lines, not lookup-key/fragment data.
+            new() {Path = "dynamicStringsLogNarratives.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = true },
+
             // Stat-label fragments parsed out of dumpedOtherText.txt (e.g. "spellEffectString")
             // - split into its own file (was previously mixed into dynamicStringsFromColumns.txt).
             // See DynamicStringExtraction.ExtractOtherFieldLabelCandidates.

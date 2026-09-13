@@ -109,4 +109,38 @@
   `Time.deltaTime` getter patch with a `Canvas.willRenderCanvases` subscription -
   `DelegateSupport.ConvertDelegate` crashes the process with a native `AccessViolationException` at
   plugin load in this game build.
+- [`docs/herodetailpanel-slow-load-investigation.md`](docs/herodetailpanel-slow-load-investigation.md)
+  — **RESOLVED**, confirmed fixed in play. HeroDetailPanel/AreaLog/PlotPanel-RecordScrollView
+  slow-open investigation: a single catastrophic-regex-backtracking template hit (up to 2.68-3.15s)
+  against AI-generated log narrative text redisplayed across panels from a shared persisted
+  `recordLog` field; a CONFIRMED-BAD, reverted first attempt that translated at the source
+  (`HeroData.AddLog`/`AreaData.AddLog`) and would have baked English into save files permanently; a
+  first (bounding, not eliminating) fix (compiled-template `MatchTimeout`, raised exact-string
+  memoization cache, read-only background cache pre-warm on new log entries); the actual root
+  cause found afterward - `HeroData.GetRecordLog`/`AreaData.GetRecordLog` building the displayed
+  blob via a loop of `String.Concat` calls, each iteration re-running the FULL template corpus
+  against the ever-growing blob - fixed by `RecordLogDisplayPatches.cs` replacing those methods
+  entirely; and two further bugs found while confirming that fix in play: a new Harmony patch class
+  written but never registered (`Harmony.CreateAndPatchAll` never called on it - silently dead
+  code), and a `PerfInstrumentation.PeriodicTick` "Collection was modified" crash (likely same-
+  thread `Time.deltaTime` reentrancy) fixed with a swap-based drain plus a reentrancy-detection log.
+  Also covers the temporary `PerfInstrumentation.cs` diagnostic (off by default) used throughout.
+- [`docs/recordlog-translation-naturalness.md`](docs/recordlog-translation-naturalness.md) —
+  **DONE**, confirmed working in play. Naturalized the awkward/mechanically-fragment-translated
+  `HeroData.AddLog`/`AreaData.AddLog` narrative lines via `Tests/TranslationPackaging.
+  DynamicStringResultOverrides`, and isolated all 69 confirmed log-narrative templates into their
+  own `dynamicStringsLogNarratives.txt` pipeline file/category (`Tests/DynamicStringSources.
+  LogNarrativeTemplates`, re-derivable via `Converter/Scripts/ExtractAddLogTemplates.ps1`) - which
+  in turn enabled the runtime perf stretch goal documented above.
+- [`docs/globaldata-tier-scale-overrides.md`](docs/globaldata-tier-scale-overrides.md) —
+  **DONE**, confirmed working in play. `BattleEndUI/Rate` and `Attris/*/Lv`'s grade-scale text
+  (originally single characters like 冠/绝) was auto-mistranslated ("You"/"Zhen"/"Repeat") via
+  `LTLocalization.GetText` at `GlobalData` static-list construction time - unreachable by
+  `DynamicStringPatches`'/`PrefabTextPatches`' normal dictionaries. Two failed diagnosis attempts
+  (trusting decompiled pseudocode field-offset names; reflecting for `FieldInfo`s instead of
+  `PropertyInfo`s - this interop build exposes every field as a property) before a value-search
+  diagnostic found the real owners (`GlobalData.BattleScoreText`/`AttriRatioString`/
+  `TreasureValueLvName`/`EquipmentWeightLvName`); `GlobalDataListOverrides.cs` now overwrites them
+  directly via reflection. Flags GlobalData likely has more of the same undiscovered class of bug
+  (a long tail of similarly-named `...LvName`/`...LvText` static lists never checked).
 

@@ -167,8 +167,8 @@ public class MainPlugin : BasePlugin
         PerfInstrumentationEnabled = BindCachedBool(
             "Debug",
             "PerfInstrumentation",
-            true,
-            "Temporary diagnostic for investigating slow-to-open panels (e.g. HeroDetailPanel). When true, times DynamicStringPatches' per-text-setter pipeline and PrefabTextPatches' per-instantiation GameObject tree walk, dumping aggregated counts/durations to perfStats.log every ~2s plus logging any individually slow call immediately. Turn off once the investigation concludes.",
+            false,
+            "Diagnostic for investigating slow-to-open panels (e.g. HeroDetailPanel). When true, times DynamicStringPatches' per-text-setter pipeline and PrefabTextPatches' per-instantiation GameObject tree walk, dumping aggregated counts/durations to perfStats.log every ~2s plus logging any individually slow call immediately. Off by default - only enable while actively investigating a new performance report; see DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md for how this was used to find the HeroDetailPanel root cause.",
             v => PerfInstrumentationEnabledCached = v);
 
         ResidualCjkDebugEnabled = BindCachedBool(
@@ -290,6 +290,20 @@ public class MainPlugin : BasePlugin
             Logger.LogError($"Failed to patch ExploreDataDumpPatches: {ex}");
         }
 
+        // Background pre-warm for the HeroDetailPanel/AreaLog perf fix - see RecordLogPrewarmPatches.
+        // Read-only (never mutates AddLog's argument or anything HeroData/AreaData stores).
+        // Wrapped like the other unverified-binding patches above/below - HeroData.AddLog/
+        // AreaData.AddLog's real interop signature is confirmed from decompiled source, not yet
+        // verified live against this build's actual interop metadata.
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(RecordLogPrewarmPatches));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch RecordLogPrewarmPatches: {ex}");
+        }
+
         HeroNamePatches.LoadNamePartDictionary();
         HeroNamePatches.LoadForceNamePartDictionary();
         HeroNamePatches.LoadFullNameDictionary();
@@ -309,7 +323,40 @@ public class MainPlugin : BasePlugin
 
         Harmony.CreateAndPatchAll(typeof(PlotInteractControllerPatches));
 
+        // Directly overwrites a handful of GlobalData static List<string> tier scales in place
+        // (BattleScoreText/AttriRatioString/TreasureValueLvName/EquipmentWeightLvName) rather than
+        // going through DynamicStringPatches' text-setter dictionary - see
+        // GlobalDataListOverrides' own header comment for why. Wrapped separately since
+        // PlotController.Awake/HeroDetailController.ShowHeroDetail's exact signatures aren't yet
+        // verified live against this build's real interop metadata.
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(GlobalDataListOverrides));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch GlobalDataListOverrides: {ex}");
+        }
+
         DynamicStringPatches.PatchAll();
+
+        // Must patch AFTER DynamicStringPatches.PatchAll() - RecordLogDisplayPatches calls
+        // DynamicStringPatches.RunGenericPipeline/HasTranslationData, which need the
+        // dictionary/templates already loaded. Wrapped like the other unverified-binding patches
+        // above - HeroData.GetRecordLog/AreaData.GetRecordLog's real interop signature is
+        // confirmed from decompiled source, not yet verified live against this build's actual
+        // interop metadata, so a binding failure here must not take down every patch below it.
+        // Logs an explicit count so a missing/zero patch count is immediately visible in the log
+        // instead of silently no-op'ing - see RecordLogDisplayPatches.LogPatchStatus.
+        try
+        {
+            var recordLogHarmony = Harmony.CreateAndPatchAll(typeof(RecordLogDisplayPatches));
+            RecordLogDisplayPatches.LogPatchStatus(recordLogHarmony);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch RecordLogDisplayPatches: {ex}");
+        }
 
         // Must patch AFTER DynamicStringPatches.PatchAll() - relies on its dictionary/templates
         // and shared re-entrancy guard already being loaded.

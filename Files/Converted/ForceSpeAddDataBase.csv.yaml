@@ -39,7 +39,7 @@
     qcReviewedText: "Disciple Cap Limit"
     qcTranslated: "Disciple Cap"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 70
 - raw: "2,仓储容量,仓储容量,FALSE,1"
   splits:
   - split: 2
@@ -158,27 +158,26 @@
     text: "技艺经验"
     translated: "Skill and experience"
     qcReviewedText: "Skill and experience"
-    qcTranslated: "Skill experience"
+    qcTranslated: "Skill Experience"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 50
 - raw: "17,内功经验,内功经验,TRUE,0.02"
   splits:
   - split: 2
     text: "内功经验"
     translated: "Neigong experience"
     qcReviewedText: "Neigong experience"
-    qcTranslated: "Internal Skill experience"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "18,轻功经验,轻功经验,TRUE,0.02"
   splits:
   - split: 2
     text: "轻功经验"
     translated: "Qinggong Experience"
     qcReviewedText: "Qinggong Experience"
-    qcTranslated: "Lightness Skill Experience"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "19,绝技经验,绝技经验,TRUE,0.02"
   splits:
   - split: 2
@@ -193,44 +192,42 @@
     text: "拳掌经验"
     translated: "Punching and palm striking experience"
     qcReviewedText: "Punching and palm striking experience"
-    qcTranslated: "Fist and palm combat experience"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 95
 - raw: "21,剑法经验,剑法经验,TRUE,0.02"
   splits:
   - split: 2
     text: "剑法经验"
     translated: "Swordsmanship Experience"
     qcReviewedText: "Swordsmanship Experience"
-    qcTranslated: "Sword Technique Experience"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "22,刀法经验,刀法经验,TRUE,0.02"
   splits:
   - split: 2
     text: "刀法经验"
     translated: "Blade Technique Experience"
     qcReviewedText: "Blade Technique Experience"
-    qcTranslated: "Blade Technique Experience"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "23,长兵经验,长兵经验,TRUE,0.02"
   splits:
   - split: 2
     text: "长兵经验"
     translated: "Long weapon experience"
-    qcRejectedCorrection: "Long weapon experience (Changbing)"
-    qcFailureReason: " Explaination was provided when none should be given."
-    qcQualityScore: 80
+    qcReviewedText: "Long weapon experience"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "24,奇门经验,奇门经验,TRUE,0.02"
   splits:
   - split: 2
     text: "奇门经验"
     translated: "Dungeon XP"
     qcReviewedText: "Dungeon XP"
-    qcTranslated: "Qimen Experience"
+    qcTranslated: "Qimen XP"
     qcStatus: Corrected
-    qcQualityScore: 70
+    flaggedForQcReview: true
+    qcQualityScore: 30
 - raw: "25,射术经验,射术经验,TRUE,0.02"
   splits:
   - split: 2
@@ -253,8 +250,9 @@
     text: "毒术经验"
     translated: "Poison technique experience"
     qcReviewedText: "Poison technique experience"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Poison Arts XP"
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "28,学识经验,学识经验,TRUE,0.02"
   splits:
   - split: 2
@@ -269,22 +267,28 @@
     text: "口才经验"
     translated: "Communication skills experience"
     qcReviewedText: "Communication skills experience"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Eloquence EXP"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 65
 - raw: "30,采伐经验,采伐经验,TRUE,0.02"
   splits:
   - split: 2
     text: "采伐经验"
     translated: "Resource Gathering Experience"
+    qcReviewedText: "Resource Gathering Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "31,木植经验,木植经验,TRUE,0.02"
   splits:
   - split: 2
     text: "木植经验"
     translated: "Tree planting experience"
     qcReviewedText: "Tree planting experience"
-    qcTranslated: "Wood experience"
+    qcTranslated: "Woodcraft experience"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 10
 - raw: "32,锻造经验,锻造经验,TRUE,0.02"
   splits:
   - split: 2
@@ -315,87 +319,92 @@
     text: "全员力道"
     translated: "Full Strength"
     qcReviewedText: "Full Strength"
-    qcTranslated: "Full Strength, Power"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "36,全员灵巧,全员灵巧,FALSE,1"
   splits:
   - split: 2
     text: "全员灵巧"
     translated: "All agile"
     qcReviewedText: "All agile"
-    qcTranslated: "All members are agile"
+    qcTranslated: "All Agile"
     qcStatus: Corrected
-    qcQualityScore: 70
+    flaggedForQcReview: true
+    qcQualityScore: 60
 - raw: "37,全员智力,全员智力,FALSE,1"
   splits:
   - split: 2
     text: "全员智力"
     translated: "All participants' intellect"
     qcReviewedText: "All participants' intellect"
-    qcTranslated: "All members' intelligence"
+    qcTranslated: "All participants' intellect"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
 - raw: "38,全员意志,全员意志,FALSE,1"
   splits:
   - split: 2
     text: "全员意志"
     translated: "All willpower"
-    qcQualityScore: 50
+    qcReviewedText: "All willpower"
+    qcTranslated: "All‑Unit Will"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
 - raw: "39,全员体质,全员体质,FALSE,1"
   splits:
   - split: 2
     text: "全员体质"
     translated: "All members' physical condition"
     qcReviewedText: "All members' physical condition"
-    qcTranslated: "All members' constitution"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "40,全员经脉,全员经脉,FALSE,1"
   splits:
   - split: 2
     text: "全员经脉"
     translated: "All Meridians Activated"
     qcReviewedText: "All Meridians Activated"
-    qcTranslated: "All Personnel Meridians Activated"
+    qcTranslated: "All Meridians"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 95
 - raw: "41,全员内功,全员内功,FALSE,1"
   splits:
   - split: 2
     text: "全员内功"
     translated: "All members neigong"
     qcReviewedText: "All members neigong"
-    qcTranslated: "All members' Neigong"
+    qcTranslated: "All Members' Neigong"
     qcStatus: Corrected
-    qcQualityScore: 70
+    qcQualityScore: 90
 - raw: "42,全员轻功,全员轻功,FALSE,1"
   splits:
   - split: 2
     text: "全员轻功"
     translated: "Everyone uses Qinggong"
     qcReviewedText: "Everyone uses Qinggong"
-    qcTranslated: "Everyone practices Qinggong"
+    qcTranslated: "All members use Qinggong"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 70
 - raw: "43,全员绝技,全员绝技,FALSE,1"
   splits:
   - split: 2
     text: "全员绝技"
     translated: "All super skills"
     qcReviewedText: "All super skills"
-    qcTranslated: "All ultimate techniques"
+    qcTranslated: "Ultimate Skills"
     qcStatus: Corrected
-    qcQualityScore: 70
+    flaggedForQcReview: true
+    qcQualityScore: 60
 - raw: "44,全员拳掌,全员拳掌,FALSE,1"
   splits:
   - split: 2
     text: "全员拳掌"
     translated: "All hands and fists engaged"
     qcReviewedText: "All hands and fists engaged"
-    qcTranslated: "All personnel using fists and palms"
+    qcTranslated: "All Hands and Fists"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 60
 - raw: "45,全员剑法,全员剑法,FALSE,1"
   splits:
   - split: 2
@@ -404,68 +413,58 @@
     qcReviewedText: "All Sword Techniques"
     qcTranslated: "All Swordsmanship"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 0
 - raw: "46,全员刀法,全员刀法,FALSE,1"
   splits:
   - split: 2
     text: "全员刀法"
     translated: "All Blade Techniques"
     qcReviewedText: "All Blade Techniques"
-    qcTranslated: "All Blade Art"
+    qcTranslated: "All Blade Techniques"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 50
 - raw: "47,全员长兵,全员长兵,FALSE,1"
   splits:
   - split: 2
     text: "全员长兵"
     translated: "All long weapons"
-    qcQualityScore: 60
+    qcReviewedText: "All long weapons"
+    qcTranslated: "All Changbing"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
 - raw: "48,全员奇门,全员奇门,FALSE,1"
   splits:
   - split: 2
     text: "全员奇门"
     translated: "All‑In Mystic Array"
-    qcReviewedText: "All‑In Mystic Array"
-    qcTranslated: "All‑In Mystic Arts"
-    qcStatus: Corrected
-    qcQualityScore: 80
 - raw: "49,全员射术,全员射术,FALSE,1"
   splits:
   - split: 2
     text: "全员射术"
     translated: "All‑arrow shooting skill"
-    qcQualityScore: 30
 - raw: "50,全员医术,全员医术,FALSE,1"
   splits:
   - split: 2
     text: "全员医术"
     translated: "All‑Clad Medical Skill"
-    qcQualityScore: 30
 - raw: "51,全员毒术,全员毒术,FALSE,1"
   splits:
   - split: 2
     text: "全员毒术"
     translated: "All Poison Techniques"
-    qcReviewedText: "All Poison Techniques"
-    qcStatus: Passed
-    qcQualityScore: 100
 - raw: "52,全员学识,全员学识,FALSE,1"
   splits:
   - split: 2
     text: "全员学识"
     translated: "All‑encompassing knowledge"
-    qcReviewedText: "All‑encompassing knowledge"
-    qcStatus: Passed
-    qcQualityScore: 100
 - raw: "53,全员口才,全员口才,FALSE,1"
   splits:
   - split: 2
     text: "全员口才"
     translated: "All‑Hands Public Speaking"
-    qcReviewedText: "All‑Hands Public Speaking"
-    qcTranslated: "Communication Skills for All"
-    qcStatus: Corrected
-    qcQualityScore: 70
 - raw: "54,全员采伐,全员采伐,FALSE,1"
   splits:
   - split: 2
@@ -476,75 +475,48 @@
   - split: 2
     text: "全员木植"
     translated: "All Zhu Ye"
-    qcQualityScore: 20
 - raw: "56,全员锻造,全员锻造,FALSE,1"
   splits:
   - split: 2
     text: "全员锻造"
     translated: "All‑Item Forge"
-    qcQualityScore: 50
 - raw: "57,全员炼药,全员炼药,FALSE,1"
   splits:
   - split: 2
     text: "全员炼药"
     translated: "All‑Personnel Alchemy Session"
-    qcReviewedText: "All‑Personnel Alchemy Session"
-    qcTranslated: "All‑Member Alchemy Session"
-    qcStatus: Corrected
-    qcQualityScore: 80
 - raw: "58,全员烹饪,全员烹饪,FALSE,1"
   splits:
   - split: 2
     text: "全员烹饪"
     translated: "Everyone cooks"
-    qcReviewedText: "Everyone cooks"
-    qcStatus: Passed
-    qcQualityScore: 100
 - raw: "59,藏经容量,藏经容量,FALSE,5"
   splits:
   - split: 2
     text: "藏经容量"
     translated: "Taoist Canon Capacity"
-    qcReviewedText: "Taoist Canon Capacity"
-    qcStatus: Passed
-    qcQualityScore: 95
 - raw: "60,全域治安,全域治安,FALSE,1"
   splits:
   - split: 2
     text: "全域治安"
     translated: "Global law and order"
-    qcReviewedText: "Global law and order"
-    qcStatus: Passed
-    qcQualityScore: 100
 - raw: "61,全域民心,全域民心,FALSE,1"
   splits:
   - split: 2
     text: "全域民心"
     translated: "Global public sentiment"
-    qcReviewedText: "Global public sentiment"
-    qcStatus: Passed
-    qcQualityScore: 100
 - raw: "62,全域防御,全域防御,FALSE,1"
   splits:
   - split: 2
     text: "全域防御"
     translated: "Global Defense"
-    qcReviewedText: "Global Defense"
-    qcStatus: Passed
-    qcQualityScore: 100
 - raw: "63,全域人口,全域人口,FALSE,5"
   splits:
   - split: 2
     text: "全域人口"
     translated: "Global population"
-    qcReviewedText: "Global population"
-    qcStatus: Passed
-    qcQualityScore: 100
 - raw: "64,城防耐久,城防耐久,TRUE,0.02"
   splits:
   - split: 2
     text: "城防耐久"
     translated: "City defense durability"
-    qcReviewedText: "City defense durability"
-    qcStatus: Passed
-    qcQualityScore: 100

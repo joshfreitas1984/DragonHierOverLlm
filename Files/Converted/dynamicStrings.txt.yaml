@@ -2620,7 +2620,7 @@
     translated: ", It is the top achievement of this sect."
   - subIndex: 2
     text: "这本#PlotInteractItemName#秘籍是为师去年偶然所得，你拿去好好参悟吧。"
-    translated: "This scroll, #PlotInteractItemName#, was a chance discovery of my teacher last year. Take it and contemplate it carefully."
+    translated: "This '#PlotInteractItemName#' Secret Manual was a lucky find of mine last year. Take it and study it well."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "#SourceInteractName#，你去年共得功绩{0}，乃是本门功劳第一。\n这本#PlotInteractItemName#秘籍是掌门我去年偶然所得，你拿去好好参悟吧。"
@@ -4136,7 +4136,7 @@
   - text: "队伍人数"
     translated: "Team size"
   templates:
-  - template: "<b><size=17>{0} ⟦0⟧</size></b>"
+  - template: "<b><size=12>{0} ⟦0⟧</size></b>"
 - raw: "<b>{0}</b>[{1}级]\n{2}"
   splits:
   - text: "级"
@@ -4200,7 +4200,7 @@
     translated: "Scripture Pavilion"
   - subIndex: 4
     text: "编纂秘籍"
-    translated: "Compile the secret scrolls"
+    translated: "Compile the Secret Manual"
   - subIndex: 5
     text: "整合"
     translated: "Integrate"
@@ -4413,7 +4413,7 @@
     translated: "Raise the sect's status through the disciple's position."
   - subIndex: 4
     text: "提升门派地位可在藏经阁阅读更高级秘籍，并解锁更多门派功能。"
-    translated: "Boosting your Sect's status allows you to read more advanced texts in the Scripture Pavilion and unlocks additional Sect features."
+    translated: "Raising your sect's status allows you to read more advanced secret manuals in the Scripture Pavilion and unlock additional sect features."
   templates:
   - template: "<b>{0}</b>\n{1}\n<i><color=#696969>♦{2}-{3}\n♦{4}</color></i>"
 - raw: "<b>每个月都需参加门派会议</b>\n获得60%门派加成效果\n<i><color=#696969>新增门派功能：\n♦(正厅)门派委托：领取门派委托\n♦(祠堂)鉴定：主动鉴定珍宝\n♦(仓库)门派金库：捐献银两\n♦制作功能：精烩/炼药/用毒</color></i>"
@@ -4619,7 +4619,7 @@
   - text: "级"
     translated: "Level"
   templates:
-  - template: "<color=grey><size=17>⟦0⟧ ⟦1⟧{0}</size></color>"
+  - template: "<color=grey><size=12>⟦0⟧ ⟦1⟧{0}</size></color>"
 - raw: "<color=grey>未解锁"
   splits:
   - text: "未解锁"
@@ -4865,13 +4865,13 @@
   - text: "经验"
     translated: "Experience"
   templates:
-  - template: "<size=14>({0}⟦0⟧%)</size>"
+  - template: "<size=10>({0}⟦0⟧%)</size>"
 - raw: "<size=17>{0}\n<b>敌人x{1}</b></size>"
   splits:
   - text: "敌人"
     translated: "Enemies"
   templates:
-  - template: "<size=17>⟦0⟧\n<b>{0}x⟦1⟧</b></size>"
+  - template: "<size=12>⟦0⟧\n<b>{0}x⟦1⟧</b></size>"
 - raw: "<size=17>道路 {0}级</size>"
   splits:
   - text: "道路"
@@ -4880,7 +4880,7 @@
     text: "级"
     translated: "Level"
   templates:
-  - template: "<size=17>{0} ⟦0⟧{1}</size>"
+  - template: "<size=12>{0} ⟦0⟧{1}</size>"
 - raw: ">={0} 基础移距{1}"
   splits:
   - text: "基础移距"
@@ -5370,12 +5370,6 @@
     translated: "Repeat"
   templates:
   - template: "⟦0⟧({0} {1}⟦1⟧{2})</color>"
-- raw: "{0}<b>{1}</b>{2}，买卖价格{3}。"
-  splits:
-  - text: "，买卖价格"
-    translated: ", Buy‑sell price"
-  templates:
-  - template: "⟦0⟧<b>⟦1⟧</b>⟦2⟧{0}⟦3⟧。"
 - raw: "{0}<b>作恶导致禁用{1}个月</b></color>"
   splits:
   - text: "作恶导致禁用"
@@ -5470,24 +5464,6 @@
   - subIndex: 1
     text: "性"
     translated: "Sexual"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}与{1}冰释前嫌，化解了二人间的仇恨。"
-  splits:
-  - text: "与"
-    translated: "And"
-  - subIndex: 1
-    text: "冰释前嫌，化解了二人间的仇恨。"
-    translated: "Ice melted away past grievances, mending the hatred between the two."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}与{1}情谊渐浅，断绝了好友关系。"
-  splits:
-  - text: "与"
-    translated: "And"
-  - subIndex: 1
-    text: "情谊渐浅，断绝了好友关系。"
-    translated: "Friendship waned, cutting off the bond with a friend."
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}与{1}撕毁了同盟协定"
@@ -5589,18 +5565,6 @@
     translated: "Taels"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}从{3}仓库购买了{1}，花费银两{2}"
-  splits:
-  - text: "从"
-    translated: "From"
-  - subIndex: 1
-    text: "仓库购买了"
-    translated: "Warehouse purchased"
-  - subIndex: 2
-    text: "，花费银两"
-    translated: ", Spend silver coins"
-  templates:
-  - template: "⟦0⟧{0}⟦3⟧{1}⟦1⟧{2}⟦2⟧"
 - raw: "{0}仓库添加了 {1}"
   splits:
   - text: "仓库添加了"
@@ -5631,15 +5595,6 @@
     translated: "Used"
   templates:
   - template: "⟦0⟧{0} ⟦1⟧"
-- raw: "{0}使用门派银钱{1}两，购买{2}。"
-  splits:
-  - text: "使用门派银钱"
-    translated: "Use Sect silver coins"
-  - subIndex: 1
-    text: "两，购买"
-    translated: "Taels, to purchase"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}修行经验{1}"
   splits:
   - text: "修行经验"
@@ -5718,18 +5673,6 @@
     translated: "Level"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}出售门派{1}，换取门派银钱{2}两。"
-  splits:
-  - text: "出售门派"
-    translated: "Sect"
-  - subIndex: 1
-    text: "，换取门派银钱"
-    translated: ", Exchange for Sect Silver"
-  - subIndex: 2
-    text: "两。"
-    translated: "Taels"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}分舵的{1}升为{2}级"
   splits:
   - text: "分舵的"
@@ -5742,21 +5685,6 @@
     translated: "Level"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}制造了{1}并放入行囊(消耗{2}银钱{3})"
-  splits:
-  - text: "制造了"
-    translated: "Created"
-  - subIndex: 1
-    text: "并放入行囊"
-    translated: "And put it in the backpack"
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "银钱"
-    translated: "Money"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
 - raw: "{0}制造了{1}并放入门派仓库"
   splits:
   - text: "制造了"
@@ -5766,51 +5694,12 @@
     translated: "And place it in the Sect's treasury"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}制造了{1}并放入门派仓库(消耗{2}木料矿石{3})"
-  splits:
-  - text: "制造了"
-    translated: "Created"
-  - subIndex: 1
-    text: "并放入门派仓库"
-    translated: "And place it in the Sect's treasury"
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "木料矿石"
-    translated: "Timber ore"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}制造了{1}，由于门派仓库已满只得放入行囊(消耗{2}木料矿石{3})"
-  splits:
-  - text: "制造了"
-    translated: "Created"
-  - subIndex: 1
-    text: "，由于门派仓库已满只得放入行囊"
-    translated: ", Since the sect's warehouse is full, it can only be placed in the backpack."
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "木料矿石"
-    translated: "Timber ore"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
 - raw: "{0}加入了你的队伍"
   splits:
   - text: "加入了你的队伍"
     translated: "Joined your team"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}加入了由{1}领导的队伍。"
-  splits:
-  - text: "加入了由"
-    translated: "Joined the crew of"
-  - subIndex: 1
-    text: "领导的队伍。"
-    translated: "Leader's team"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}加入战场"
   splits:
   - text: "加入战场"
@@ -5829,54 +5718,6 @@
     translated: "Can form close relationships"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}吉人天相，{2}，学会了武功{1}。"
-  splits:
-  - text: "吉人天相，"
-    translated: "Good fortune smiles on the virtuous"
-  - subIndex: 1
-    text: "，学会了武功"
-    translated: ", Learned martial arts"
-  templates:
-  - template: "⟦0⟧{0}⟦2⟧{1}⟦1⟧。"
-- raw: "{0}吉人天相，寻得前朝皇家宝库，获得了{1}等诸多珍宝。"
-  splits:
-  - text: "吉人天相，寻得前朝皇家宝库，获得了"
-    translated: "Good fortune brings its own rewards; finding the former imperial treasure vault of the royal dynasty brought him"
-  - subIndex: 1
-    text: "等诸多珍宝。"
-    translated: "Various treasures"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}吉人天相，寻得高人所刻石碑，潜心研读后提升了{1}潜力。"
-  splits:
-  - text: "吉人天相，寻得高人所刻石碑，潜心研读后提升了"
-    translated: "Good fortune brings one under heaven's protection. Discovering a stone stele carved by a master, studying it intently led to an enhancement."
-  - subIndex: 1
-    text: "潜力。"
-    translated: "Potential"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}吉星高照，寻得失落宝藏，搜刮后获得了{1}两银钱。"
-  splits:
-  - text: "吉星高照，寻得失落宝藏，搜刮后获得了"
-    translated: "High stars shine upon you, uncovering lost treasure, and you gained from looting it."
-  - subIndex: 1
-    text: "两银钱。"
-    translated: "Silver coins"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}吉星高照，得到一枚灵果，服食后内力上限增加{1}。"
-  splits:
-  - text: "吉星高照，得到一枚灵果，服食后内力上限增加"
-    translated: "High stars shine upon you, gaining a Spirit Fruit. Consuming it will increase your inner power cap."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}吉星高照，得到一株异草，服食后生命上限增加{1}。"
-  splits:
-  - text: "吉星高照，得到一株异草，服食后生命上限增加"
-    translated: "Star‑favorable, obtaining a strange herb, consuming it increases your maximum health."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}同盟</color>"
   splits:
   - text: "同盟"
@@ -5892,18 +5733,6 @@
     translated: "To show goodwill, the relationship was elevated to"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}向{3}仓库捐赠了{1}，获取功绩{2}"
-  splits:
-  - text: "向"
-    translated: "Towards"
-  - subIndex: 1
-    text: "仓库捐赠了"
-    translated: "Warehouse donated"
-  - subIndex: 2
-    text: "，获取功绩"
-    translated: ", Earn merits"
-  templates:
-  - template: "⟦0⟧{0}⟦3⟧{1}⟦1⟧{2}⟦2⟧"
 - raw: "{0}向来秉持{1}之道，{4}。\n我身为{2}，自是应当{3}。"
   splits:
   - text: "向来秉持"
@@ -6096,75 +5925,6 @@
     translated: "Turn"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}因功勋卓著，被晋升为{1}。"
-  splits:
-  - text: "因功勋卓著，被晋升为"
-    translated: "For his distinguished achievements, he was promoted to"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}在{1}上下打点，花费{3}银两降低了{2}点恶名。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "上下打点，花费"
-    translated: "Tap up and down, spend"
-  - subIndex: 2
-    text: "银两降低了"
-    translated: "Silver has decreased"
-  - subIndex: 3
-    text: "点恶名。"
-    translated: "Gain Infamy"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦3⟧{2}⟦2⟧{3}"
-- raw: "{0}在{1}与{2}交流心得，切磋武艺，最终{3}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "与"
-    translated: "And"
-  - subIndex: 2
-    text: "交流心得，切磋武艺，最终"
-    translated: "Exchange experiences, refine martial arts, ultimately"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧。"
-- raw: "{0}在{1}与{2}心生嫌隙，结下了深仇大恨。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "与"
-    translated: "And"
-  - subIndex: 2
-    text: "心生嫌隙，结下了深仇大恨。"
-    translated: "A grudge deepened between them, fostering great hatred."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}与{2}相谈盛欢，一见如故，结为知己好友。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "与"
-    translated: "And"
-  - subIndex: 2
-    text: "相谈盛欢，一见如故，结为知己好友。"
-    translated: "Pleased to meet you, we hit it off immediately and become close friends."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}与{2}闲聊一阵。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "与"
-    translated: "And"
-  - subIndex: 2
-    text: "闲聊一阵。"
-    translated: "Chat for a while"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}在{1}中休整疗养，{3}生命内力恢复{2}%"
   splits:
   - text: "在"
@@ -6306,45 +6066,6 @@
     translated: "Suffered from bites by venomous insects, the pain and itch were unbearable."
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}在{1}习得了新武功{2}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "习得了新武功"
-    translated: "Mastered a new martial arts technique"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}在{1}买卖交易，出售了闲置物品{2}{3}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "买卖交易，出售了闲置物品"
-    translated: "Trading items, sold idle goods"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧⟦3⟧。"
-- raw: "{0}在{1}修习了{2}技艺。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "修习了"
-    translated: "Practiced"
-  - subIndex: 2
-    text: "技艺。"
-    translated: "Skill"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}修习了武功{2}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "修习了武功"
-    translated: "Practiced martial arts"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}在{1}加强管理，使该地{2}提升{3}点。"
   splits:
   - text: "在"
@@ -6360,240 +6081,6 @@
     translated: "Dot"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}参加{2}拍卖大会，花费{3}两购得一件{4}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "参加"
-    translated: "Participate"
-  - subIndex: 2
-    text: "拍卖大会，花费"
-    translated: "Auction Conference, expenditure"
-  - subIndex: 3
-    text: "两购得一件"
-    translated: "Taels purchased a single item"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}⟦4⟧。"
-- raw: "{0}在{1}参加{5}赛马大会，勇夺第{2}名，银两+{3}，声望+{4}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "参加"
-    translated: "Participate"
-  - subIndex: 2
-    text: "赛马大会，勇夺第"
-    translated: "Racing Festival, bravely win the first"
-  - subIndex: 3
-    text: "名，银两"
-    translated: "Name, silver taels"
-  - subIndex: 4
-    text: "，声望"
-    translated: ", Reputation"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧{2}⟦2⟧{3}+⟦3⟧{4}+⟦4⟧。"
-- raw: "{0}在{1}参加{6}，勇夺第{2}名，银两+{3}，{4}，并获得了奖品{5}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "参加"
-    translated: "Participate"
-  - subIndex: 2
-    text: "，勇夺第"
-    translated: ", Win the first"
-  - subIndex: 3
-    text: "名，银两"
-    translated: "Name, silver taels"
-  - subIndex: 4
-    text: "，并获得了奖品"
-    translated: ", And won the prize"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦6⟧{2}⟦2⟧{3}+⟦3⟧，⟦4⟧{4}⟦5⟧。"
-- raw: "{0}在{1}四下探索之时，意外发现了{2}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "四下探索之时，意外发现了"
-    translated: "Exploring around, I accidentally discovered"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}在{1}完成了重要委托，名望{2}，银两{3}，并获得了{4}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "完成了重要委托，名望"
-    translated: "Completed an important commission, renown"
-  - subIndex: 2
-    text: "，银两"
-    translated: ", Silver taels"
-  - subIndex: 3
-    text: "，并获得了"
-    translated: ", And obtained"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}⟦4⟧。"
-- raw: "{0}在{1}开展治理，使该地{2}提升了{3}点。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "开展治理，使该地"
-    translated: "Carry out governance to improve the region"
-  - subIndex: 2
-    text: "提升了"
-    translated: "Boosted"
-  - subIndex: 3
-    text: "点。"
-    translated: "Dot"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}打工赚钱，获取了{2}两银钱。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "打工赚钱，获取了"
-    translated: "Work to earn, acquiring"
-  - subIndex: 2
-    text: "两银钱。"
-    translated: "Silver coins"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}暗中破坏，使该地{2}降低{3}点。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "暗中破坏，使该地"
-    translated: "Secretly sabotage to ruin that place"
-  - subIndex: 2
-    text: "降低"
-    translated: "Reduce"
-  - subIndex: 3
-    text: "点。"
-    translated: "Dot"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}暗中破坏，使该地{2}降低了{3}点。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "暗中破坏，使该地"
-    translated: "Secretly sabotage to ruin that place"
-  - subIndex: 2
-    text: "降低了"
-    translated: "Decreased"
-  - subIndex: 3
-    text: "点。"
-    translated: "Dot"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
-- raw: "{0}在{1}欲{5}{2}的{3}，{4}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "欲"
-    translated: "Desire"
-  - subIndex: 2
-    text: "的"
-    translated: "Of"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧⟦2⟧{2}⟦3⟧，⟦4⟧。"
-- raw: "{0}在{1}欲下毒暗害{2}，{3}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "欲下毒暗害"
-    translated: "To poison and assassinate secretly"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧，⟦3⟧。"
-- raw: "{0}在{1}欲偷师{2}的{3}，{4}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "欲偷师"
-    translated: "To steal a technique"
-  - subIndex: 2
-    text: "的"
-    translated: "Of"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧，⟦4⟧。"
-- raw: "{0}在{1}结束关押，恢复了自由之身。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "结束关押，恢复了自由之身。"
-    translated: "End the imprisonment and restored to freedom"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}在{1}袭击了{2}，血战一场最终{3}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "袭击了"
-    translated: "Attacked"
-  - subIndex: 2
-    text: "，血战一场最终"
-    translated: ", After a fierce battle"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧。"
-- raw: "{0}在{1}辛勤劳作，为门派收获了{2}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "辛勤劳作，为门派收获了"
-    translated: "Hard work has brought harvest to the Sect."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}在{1}遭逢{5}奇遇，名望{2}，银两{3}，并获得了{4}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "遭逢"
-    translated: "Encountered"
-  - subIndex: 2
-    text: "奇遇，名望"
-    translated: "Encounter, Reputation"
-  - subIndex: 3
-    text: "，银两"
-    translated: ", Silver taels"
-  - subIndex: 4
-    text: "，并获得了"
-    translated: ", And obtained"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧{2}⟦2⟧{3}⟦3⟧{4}⟦4⟧。"
-- raw: "{0}在{1}闲逛之时，意外获取了{2}两银钱。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "闲逛之时，意外获取了"
-    translated: "While wandering, they stumbled upon an unexpected gift."
-  - subIndex: 2
-    text: "两银钱。"
-    translated: "Silver coins"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}闲逛之时，意外获取了一件{2}。"
-  splits:
-  - text: "在"
-    translated: "In"
-  - subIndex: 1
-    text: "闲逛之时，意外获取了一件"
-    translated: "While wandering, they accidentally acquired an item"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}在农户中充分休息"
   splits:
   - text: "在农户中充分休息"
@@ -6762,24 +6249,6 @@
     translated: "Click"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦3⟧{2}⟦2⟧{3}⟦4⟧。"
-- raw: "{0}对自身的{1}上进行了下毒。"
-  splits:
-  - text: "对自身的"
-    translated: "About oneself"
-  - subIndex: 1
-    text: "上进行了下毒。"
-    translated: "Poison was administered from above"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}对自身装备的{1}进行了粹毒。"
-  splits:
-  - text: "对自身装备的"
-    translated: "For one's own equipment"
-  - subIndex: 1
-    text: "进行了粹毒。"
-    translated: "Poisoned it"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}将{1}成品{2}放入{3}"
   splits:
   - text: "将"
@@ -6948,33 +6417,6 @@
     translated: "Level!"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}掌门{1}将《{2}》{3}秘籍放入藏经阁，供全派弟子参阅。"
-  splits:
-  - text: "掌门"
-    translated: "Sect Master"
-  - subIndex: 1
-    text: "将"
-    translated: "Shift"
-  - subIndex: 2
-    text: "秘籍放入藏经阁，供全派弟子参阅。"
-    translated: "Scrolls placed in the Scripture Pavilion for all sect disciples to peruse."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}"
-- raw: "{0}掌门{1}用《{2}》{3}替换了藏经阁内的《{2}》{4}秘籍，供全派弟子参阅。"
-  splits:
-  - text: "掌门"
-    translated: "Sect Master"
-  - subIndex: 1
-    text: "用"
-    translated: "Use"
-  - subIndex: 2
-    text: "替换了藏经阁内的"
-    translated: "Replaced the Scripture Pavilion with"
-  - subIndex: 3
-    text: "秘籍，供全派弟子参阅。"
-    translated: "Manual, provided for the entire sect's disciples to refer to."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}《⟦2⟧》⟦3⟧{2}《⟦2⟧》⟦4⟧{3}"
 - raw: "{0}接任了{1}掌门之位。"
   splits:
   - text: "接任了"
@@ -6993,15 +6435,6 @@
     translated: "Silver taels"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}收到门派{1}银钱嘉奖，忠诚+3"
-  splits:
-  - text: "收到门派"
-    translated: "Received the Sect notification"
-  - subIndex: 1
-    text: "银钱嘉奖，忠诚"
-    translated: "Silver rewards, loyalty"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}+3"
 - raw: "{0}攻击了{1}门派总舵，最终{2}。"
   splits:
   - text: "攻击了"
@@ -7011,18 +6444,6 @@
     translated: "Headquarters of the Sect, ultimately"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
-- raw: "{0}攻击了{2}掌控下的{1}，最终{3}。"
-  splits:
-  - text: "攻击了"
-    translated: "Attacked"
-  - subIndex: 1
-    text: "掌控下的"
-    translated: "Under control"
-  - subIndex: 2
-    text: "，最终"
-    translated: ", Finally"
-  templates:
-  - template: "⟦0⟧{0}⟦2⟧{1}⟦1⟧{2}⟦3⟧。"
 - raw: "{0}效果已结束！"
   splits:
   - text: "效果已结束！"
@@ -7215,24 +6636,6 @@
     translated: "Action points"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}/⟦2⟧{2}/⟦3⟧{3}/⟦4⟧{4}/⟦4⟧%{5}"
-- raw: "{0}气运过人，寻得一件神兵利器，鉴别后竟是传说中的{1}。"
-  splits:
-  - text: "气运过人，寻得一件神兵利器，鉴别后竟是传说中的"
-    translated: "Excelling in fortune, he discovered a divine weapon, and upon inspection, it turned out to be a legendary one."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}气运过人，寻得一匹千里名驹，鉴别后竟是传说中的{1}。"
-  splits:
-  - text: "气运过人，寻得一匹千里名驹，鉴别后竟是传说中的"
-    translated: "Above average fortune, they managed to find a famous qianli mingju, and after authentication, it turned out to be a chuanshuo zhong de steed."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
-- raw: "{0}气运过人，寻得一本失传秘籍，鉴别后竟是传说中的{1}。"
-  splits:
-  - text: "气运过人，寻得一本失传秘籍，鉴别后竟是传说中的"
-    translated: "Above average in fortune, he found a lost secret manuscript, and upon inspection, it turned out to be a legendary one."
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}消耗{1}门派威望，将{2}的地位提升到了{3}。"
   splits:
   - text: "消耗"
@@ -7269,96 +6672,6 @@
     translated: "Click on the Sect Prestige and this disciple."
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}炼制了{1}并放入行囊(消耗{2}银钱{3})"
-  splits:
-  - text: "炼制了"
-    translated: "Refined"
-  - subIndex: 1
-    text: "并放入行囊"
-    translated: "And put it in the backpack"
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "银钱"
-    translated: "Money"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}炼制了{1}并放入门派仓库(消耗{2}药材{3})"
-  splits:
-  - text: "炼制了"
-    translated: "Refined"
-  - subIndex: 1
-    text: "并放入门派仓库"
-    translated: "And place it in the Sect's treasury"
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "药材"
-    translated: "Herbs"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}炼制了{1}，由于门派仓库已满只得放入行囊(消耗{2}药材{3})"
-  splits:
-  - text: "炼制了"
-    translated: "Refined"
-  - subIndex: 1
-    text: "，由于门派仓库已满只得放入行囊"
-    translated: ", Since the sect's warehouse is full, it can only be placed in the backpack."
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "药材"
-    translated: "Herbs"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}烹饪了{1}并放入行囊(消耗{2}银钱{3})"
-  splits:
-  - text: "烹饪了"
-    translated: "Cooked"
-  - subIndex: 1
-    text: "并放入行囊"
-    translated: "And put it in the backpack"
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "银钱"
-    translated: "Money"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}烹饪了{1}并放入门派仓库(消耗{2}粮食{3})"
-  splits:
-  - text: "烹饪了"
-    translated: "Cooked"
-  - subIndex: 1
-    text: "并放入门派仓库"
-    translated: "And place it in the Sect's treasury"
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "粮食"
-    translated: "Food grain"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
-- raw: "{0}烹饪了{1}，由于门派仓库已满只得放入行囊(消耗{2}粮食{3})"
-  splits:
-  - text: "烹饪了"
-    translated: "Cooked"
-  - subIndex: 1
-    text: "，由于门派仓库已满只得放入行囊"
-    translated: ", Since the sect's warehouse is full, it can only be placed in the backpack."
-  - subIndex: 2
-    text: "消耗"
-    translated: "Consume"
-  - subIndex: 3
-    text: "粮食"
-    translated: "Food grain"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}({2}⟦2⟧{3}⟦3⟧)"
 - raw: "{0}状态已完全恢复"
   splits:
   - text: "状态已完全恢复"
@@ -7386,18 +6699,6 @@
     translated: "Level"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}(⟦3⟧)"
-- raw: "{0}的{1}结束{2}了。"
-  splits:
-  - text: "的"
-    translated: "Of"
-  - subIndex: 1
-    text: "结束"
-    translated: "End"
-  - subIndex: 2
-    text: "了。"
-    translated: "Ok"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}的{1}部出现了破绽。"
   splits:
   - text: "的"
@@ -7452,15 +6753,6 @@
     translated: "Left your team"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}离开了由{1}领导的队伍。"
-  splits:
-  - text: "离开了由"
-    translated: "Left the area surrounded by"
-  - subIndex: 1
-    text: "领导的队伍。"
-    translated: "Leader's team"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}突破至第{1}重！"
   splits:
   - text: "突破至第"
@@ -7590,18 +6882,6 @@
     translated: "Having occupied the land for a long time, the local civilians have suffered under its harsh governance for many years."
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}被{1}抓捕入狱，关押在{2}之中。"
-  splits:
-  - text: "被"
-    translated: "Be"
-  - subIndex: 1
-    text: "抓捕入狱，关押在"
-    translated: "Arrested and jailed, detained in"
-  - subIndex: 2
-    text: "之中。"
-    translated: "Among"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}解除了{1}门客关系"
   splits:
   - text: "解除了"
@@ -7635,48 +6915,6 @@
     translated: "Resource reserves increased"
   templates:
   - template: "⟦0⟧{0}⟦1⟧"
-- raw: "{0}近日大兴土木，开始修缮升级{1}{2}({3}级)"
-  splits:
-  - text: "近日大兴土木，开始修缮升级"
-    translated: "Recently, they are carrying out major renovations and upgrades."
-  - subIndex: 1
-    text: "级"
-    translated: "Level"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧⟦2⟧(⟦3⟧{1})"
-- raw: "{0}近日大兴土木，开始在{1}新建{2}"
-  splits:
-  - text: "近日大兴土木，开始在"
-    translated: "Recently, there is a lot of construction underway, starting to"
-  - subIndex: 1
-    text: "新建"
-    translated: "Create New"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧"
-- raw: "{0}近日大兴土木，开始拆除{1}{2}({3}级)"
-  splits:
-  - text: "近日大兴土木，开始拆除"
-    translated: "Recently, they are carrying out major demolition"
-  - subIndex: 1
-    text: "级"
-    translated: "Level"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧⟦2⟧(⟦3⟧{1})"
-- raw: "{0}近日开始加强{1}分舵之{2}防御等级({3}级)"
-  splits:
-  - text: "近日开始加强"
-    translated: "Recently started to strengthen"
-  - subIndex: 1
-    text: "分舵之"
-    translated: "Branch Denomination"
-  - subIndex: 2
-    text: "防御等级"
-    translated: "Defense Level"
-  - subIndex: 3
-    text: "级"
-    translated: "Level"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}(⟦3⟧{3})"
 - raw: "{0}进行休息。"
   splits:
   - text: "进行休息。"
@@ -7737,12 +6975,6 @@
     translated: "Difficulty"
   templates:
   - template: "⟦0⟧{0};SurePerformForMoney;⟦1⟧_⟦2⟧"
-- raw: "{0}领悟了天赋：{1}"
-  splits:
-  - text: "领悟了天赋"
-    translated: "Gained an innate ability"
-  templates:
-  - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}领悟天赋：{1}"
   splits:
   - text: "领悟天赋"
@@ -8250,7 +7482,7 @@
     translated: "Treasure yields are high, equipment"
   - subIndex: 2
     text: "秘籍产出较少"
-    translated: "Secret recipe produces sparingly"
+    translated: "The Secret Manual is produced less often"
   templates:
   - template: "♦{0}\n♦{1}/{2}"
 - raw: "♦在己方区域移动/升级/建造建筑"
@@ -8274,7 +7506,7 @@
     translated: "Treasure yields are high, equipment"
   - subIndex: 2
     text: "秘籍产出较少"
-    translated: "Secret recipe produces sparingly"
+    translated: "The Secret Manual is produced less often"
   templates:
   - template: "♦{0}\n♦{1}/{2}"
 - raw: "♦对方级别不超过{0}"
@@ -8760,7 +7992,7 @@
 - raw: "上交秘籍;GiveForceSkillBook"
   splits:
   - text: "上交秘籍"
-    translated: "Submit the secret technique"
+    translated: "Turn in the Secret Manual"
   templates:
   - template: "{0};GiveForceSkillBook"
 - raw: "上品"
@@ -11750,7 +10982,7 @@
 - raw: "传授此秘籍;ForceTeachNewSkillToNPCSure;"
   splits:
   - text: "传授此秘籍"
-    translated: "Teach this secret technique"
+    translated: "Teach this Secret Manual"
   templates:
   - template: "{0};ForceTeachNewSkillToNPCSure;"
 - raw: "传授武功"
@@ -11784,7 +11016,7 @@
     translated: "Warehouse"
   - subIndex: 3
     text: "藏经阁内秘籍记载的武学"
-    translated: "Scripture Pavilion records of martial arts techniques"
+    translated: "The martial arts recorded in the Scripture Pavilion's Secret Manual"
   templates:
   - template: "{0};ForceTeachNewBookToNPC;;;♦{1}/{2}/{3}"
 - raw: "传说青城叛徒王添翼逃出中原后，代替岳无畏成了黑道第四鬼，被唤作“笑面鬼”。\n曾经的英雄侠少，如今竟助纣为虐，堕入邪道，实在令人不齿！"
@@ -12328,7 +11560,7 @@
     translated: "You won this challenge,"
   - subIndex: 1
     text: "可以从藏经阁内选择一本秘籍作为奖励。"
-    translated: "You can choose a secret technique from the Scripture Pavilion as a reward."
+    translated: "You can choose a Secret Manual from the Scripture Pavilion as a reward."
   templates:
   - template: "{0}\n{1}"
 - raw: "你赢得了江湖挑战，可从商人身上任选一物作为奖品。"
@@ -12929,7 +12161,7 @@
 - raw: "全局恶名修正{0}%{1}"
   splits:
   - text: "全局恶名修正"
-    translated: "Global InfamyCorrection"
+    translated: "Global Infamy Modifier"
   templates:
   - template: "{0}⟦0⟧%⟦1⟧"
 - raw: "全部"
@@ -16904,7 +16136,7 @@
 - raw: "哈哈，如此甚好，我这就去将此秘籍参悟修习一番，先行告辞了！"
   splits:
   - text: "哈哈，如此甚好，我这就去将此秘籍参悟修习一番，先行告辞了！"
-    translated: "Ha ha, that's excellent. I'll go meditate and practice this secret technique right away. I'll be going now!"
+    translated: "Haha, that's perfect! I'll go and study this Secret Manual right away. I must take my leave now!"
 - raw: "哈哈，少侠不辞辛苦，寻来到这荒郊陋室，想必是有事相求。\n既然你我有缘，只管开口，若能办得到，我一定竭力相助。"
   splits:
   - text: "哈哈，少侠不辞辛苦，寻来到这荒郊陋室，想必是有事相求。"
@@ -20620,7 +19852,7 @@
     translated: "Engage numerous defenders"
   - subIndex: 2
     text: "获取高品质秘籍"
-    translated: "Obtain high‑quality elixirs"
+    translated: "Acquire high‑quality manuals"
   templates:
   - template: "{0};ChooseStealSkill;2;;{1}\n{2}"
 - raw: "大当家"
@@ -21025,7 +20257,7 @@
 - raw: "失传秘籍"
   splits:
   - text: "失传秘籍"
-    translated: "Lost technique"
+    translated: "Lost Secret Manual"
 - raw: "失落宝藏"
   splits:
   - text: "失落宝藏"
@@ -22957,7 +22189,7 @@
     translated: "Such a tiny martial arts school dares to establish itself here and teach martial arts. It's truly laughable."
   - subIndex: 1
     text: "贵馆的秘籍我就笑纳了！"
-    translated: "I've gladly accepted your library's secret techniques!"
+    translated: "I gladly accept the Secret Manual from your library!"
   templates:
   - template: "{0}\n{1}"
 - raw: "小心为上;FinishExploreMap;true"
@@ -23065,7 +22297,7 @@
     translated: "Thief, I"
   - subIndex: 1
     text: "的秘籍也是你能偷的？还不快快束手就擒！"
-    translated: "Is this your secret technique too? Come on, surrender quickly!"
+    translated: "Is the Secret Manual also something you could steal? Don't you dare resist, come here!"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "小赌怡情，大赌伤身"
@@ -25205,7 +24437,7 @@
     translated: "We've finally won this challenge"
   - subIndex: 1
     text: "可以从书架上几本秘籍中选择一本作为奖品。"
-    translated: "You can choose a prize from several secret techniques on the shelf."
+    translated: "You can choose one of the Secret Manuals from the bookshelf as a prize."
   templates:
   - template: "{0}\n{1}"
 - raw: "总算赢得了此次挑战，\n可以从货架上中选择一样作为奖品。"
@@ -25689,7 +24921,7 @@
     translated: "Just making you run around for nothing, I feel a bit guilty too."
   - subIndex: 2
     text: "前几日恰好得了本秘籍，还请收下，作为我#TargetForceName#的谢礼好了。"
-    translated: "The other day, I precisely obtained this secret technique. May I offer it to you as a token of gratitude for #TargetForceName#?"
+    translated: "A few days ago, I happened to obtain a Secret Manual. Please accept it as a thank‑you gift for my #TargetForceName#."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "慷慨赠送;GiveNpcAskItem"
@@ -26308,7 +25540,7 @@
 - raw: "我本想以秘籍相赠，奈何你向那贼人泄露了我藏身之处，\n我武绝义从来不传功于无信无义之徒！\n这儿有些我旧时使用的装备，你挑选一件拿去用吧！"
   splits:
   - text: "我本想以秘籍相赠，奈何你向那贼人泄露了我藏身之处，"
-    translated: "I had intended to gift you the secret techniques, but you betrayed me by revealing my hiding place to those thieves."
+    translated: "I intended to give you the Secret Manual, but you revealed my hiding place to that thief."
   - subIndex: 1
     text: "我武绝义从来不传功于无信无义之徒！"
     translated: "I, Wu Jueyi, never bestow my power upon those without honor!"
@@ -28305,7 +27537,7 @@
 - raw: "搜集秘籍"
   splits:
   - text: "搜集秘籍"
-    translated: "Gather secret techniques"
+    translated: "Collecting the Secret Manual"
 - raw: "携手归隐;PlotStartGameResult;9"
   splits:
   - text: "携手归隐"
@@ -31089,7 +30321,7 @@
 - raw: "桀桀桀桀，竟敢打我这失传秘籍的主意，真是活得不耐烦了！\n小子，今天就拿你的命为我这神功开光，乖乖受死！"
   splits:
   - text: "桀桀桀桀，竟敢打我这失传秘籍的主意，真是活得不耐烦了！"
-    translated: "Haha, daring to eye up my lost technique scroll‑it seems you've grown rather thin‑skinned!"
+    translated: "Heh heh heh, you dare to lay your hands on this lost Secret Manual? You must really be tired of living!"
   - subIndex: 1
     text: "小子，今天就拿你的命为我这神功开光，乖乖受死！"
     translated: "Boy, today I'll consecrate my divine skill with your life. Submit and die quietly!"
@@ -31645,7 +30877,7 @@
     translated: "A place to train martial arts and prepare for Jianghu challenges, it takes ten days to get ready."
   - subIndex: 2
     text: "如果挑战成功，就可以赢取藏经阁内一本秘籍。"
-    translated: "If the challenge is successful, a secret technique from within the Scripture Pavilion can be won."
+    translated: "If the challenge is successful, you can win a Secret Manual from the Scripture Pavilion."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "此地乃是{0}藏经习武之所，若想打探出一条潜入道路，非得花费十日时间不可。\n只是此处亦是门派守卫最为森严之处，若无万全准备，切不可贸然行动。"
@@ -34901,7 +34133,7 @@
     translated: "It seems everyone is here..."
   - subIndex: 1
     text: "感谢各位同道看在我#$SourceInteractName#三分薄面上赏光莅临，"
-    translated: "Thank you for coming to show me a little bit of respect, #$SourceInteractName#.$ ontvangen."
+    translated: "Thank you all for gracing me with your presence out of courtesy for our shared connections, #$SourceInteractName#."
   - subIndex: 2
     text: "有失远迎，还请见谅！"
     translated: "Far welcome not extended, please forgive!"
@@ -36647,7 +35879,7 @@
     translated: "This Scripture Pavilion is divided into"
   - subIndex: 2
     text: "层区域，层数越高秘籍越稀有，但挑战也越困难。"
-    translated: "Higher floors yield rarer scrolls, but the challenge increases as well."
+    translated: "The higher the floor level, the rarer the Secret Manual, but the challenge also becomes more difficult."
   - subIndex: 3
     text: "应当以哪一层区域作为挑战目标呢？"
     translated: "Which layer area should we challenge?"
@@ -37044,11 +36276,11 @@
 - raw: "编纂秘籍"
   splits:
   - text: "编纂秘籍"
-    translated: "Compile the secret scrolls"
+    translated: "Compile the Secret Manual"
 - raw: "编纂秘籍;ShowBookWriterSelf"
   splits:
   - text: "编纂秘籍"
-    translated: "Compile the secret scrolls"
+    translated: "Compile the Secret Manual"
   templates:
   - template: "{0};ShowBookWriterSelf"
 - raw: "缴纳罚金;ClearBadFame;;0/"
@@ -37861,7 +37093,7 @@
     translated: "This Scripture Pavilion is divided into"
   - subIndex: 2
     text: "层区域，层数越高秘籍越稀有，但守备也越森严。"
-    translated: "Upper floors have rarer scrolls, but the defenses are also more stringent."
+    translated: "The higher the floor, the rarer the Secret Manual, but the defenses are also more rigorous."
   - subIndex: 3
     text: "应当以哪一层区域作为潜入目标呢？"
     translated: "Which layer should we target for infiltration?"
@@ -37928,7 +37160,7 @@
     translated: "Above mentioned fine wine, I still beg of you, Brother, to lend it to me in my time of need."
   - subIndex: 2
     text: "在下愿拿前几日得来的秘籍作为交换。"
-    translated: "I am willing to offer the secret techniques I obtained a few days ago in exchange."
+    translated: "I am willing to offer the Secret Manual I obtained a few days ago as an exchange."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "若不通晓“{0}”，\n功夫再高又有何用？"
@@ -40316,7 +39548,7 @@
 - raw: "足履"
   splits:
   - text: "足履"
-    translated: "Walked"
+    translated: "Footwear"
 - raw: "跑得真快...;GiveUpEventMission"
   splits:
   - text: "跑得真快..."
@@ -41125,7 +40357,7 @@
     translated: "Languishing in my hands,"
   - subIndex: 2
     text: "若#PlayerName#感兴趣，不妨拿出价值相仿的秘籍交换，"
-    translated: "If #PlayerName# is interested, you might consider exchanging similar‑level scrolls."
+    translated: "If #PlayerName# is interested, feel free to offer a similar value Secret Manual for exchange."
   - subIndex: 3
     text: "如此也算互利互惠，岂不美哉！"
     translated: "This is also mutually beneficial, how wonderful!"
@@ -41774,7 +41006,7 @@
 - raw: "这位少侠想租下本武馆的书房，用于研读秘籍吗？\n保管安静舒适，价钱实惠~"
   splits:
   - text: "这位少侠想租下本武馆的书房，用于研读秘籍吗？"
-    translated: "This young hero wants to rent the martial arts hall's study room to study the secret scrolls, right?"
+    translated: "Do you, Young Hero, wish to rent the study of this martial arts academy to read the Secret Manual?"
   - subIndex: 1
     text: "保管安静舒适，价钱实惠"
     translated: "Keep it quiet and comfortable, with affordable prices."
@@ -42105,11 +41337,11 @@
 - raw: "这破武馆中似乎已无秘籍藏品了，又有何踢馆的必要呢？"
   splits:
   - text: "这破武馆中似乎已无秘籍藏品了，又有何踢馆的必要呢？"
-    translated: "Why kick a martial arts dojo that seems to have no hidden treasures left?"
+    translated: "It seems there are no more secret manuals in this rundown martial arts school. What's the point of challenging it, then?"
 - raw: "这秘籍中有些晦涩难懂之处，我来给#PlayerName#讲解讲解好了。\n(对方{0}点{1}技能，经验额外增加{2}%)"
   splits:
   - text: "这秘籍中有些晦涩难懂之处，我来给#PlayerName#讲解讲解好了。"
-    translated: "There are some obscure parts in this secret technique. Let me explain them to you, #PlayerName#."
+    translated: "There are some difficult parts in this Secret Manual; I'll explain them to you, #PlayerName#."
   - subIndex: 1
     text: "对方"
     translated: "Other person"
@@ -42220,7 +41452,7 @@
     translated: "These yeda martial arts are indeed powerful, but I am one step ahead!"
   - subIndex: 1
     text: "只是不知这所谓失传秘籍，是否真值得如此一番艰难险阻......"
-    translated: "I just wonder if this so‑called lost scroll is really worth all this hardship and peril..."
+    translated: "I just wonder if this so‑called lost secret manual is really worth all the trouble and hardship......"
   templates:
   - template: "{0}\n{1}"
 - raw: "这群邪道武功着实高强，还好我更胜一筹！\n只是不知这所谓皇家宝库，是否真值得如此一番艰难险阻......"
@@ -42579,19 +41811,19 @@
 - raw: "选择秘籍;ChooseExchangeBook"
   splits:
   - text: "选择秘籍"
-    translated: "Choose a potion"
+    translated: "Choose the Secret Manual"
   templates:
   - template: "{0};ChooseExchangeBook"
 - raw: "选择秘籍;ChooseReadBook;true"
   splits:
   - text: "选择秘籍"
-    translated: "Choose a potion"
+    translated: "Choose the Secret Manual"
   templates:
   - template: "{0};ChooseReadBook;true"
 - raw: "选择秘籍;StealSkillSuccessChoose"
   splits:
   - text: "选择秘籍"
-    translated: "Choose a potion"
+    translated: "Choose the Secret Manual"
   templates:
   - template: "{0};StealSkillSuccessChoose"
 - raw: "选择装备;ChooseBreakEquipment"
@@ -42659,7 +41891,7 @@
     translated: "Challenge the Guardians"
   - subIndex: 2
     text: "获取中品质秘籍"
-    translated: "Acquire Medium‑Quality Secret Techniques"
+    translated: "Get a medium‑quality Secret Manual"
   templates:
   - template: "{0};ChooseStealSkill;1;;{1}\n{2}"
 - raw: "造成{0} {1}"
@@ -42743,7 +41975,7 @@
     translated: "Avoid battle"
   - subIndex: 2
     text: "获取低品质秘籍"
-    translated: "Acquire low‑quality spells"
+    translated: "Acquire a low‑quality Secret Manual"
   templates:
   - template: "{0};ChooseStealSkill;0;;{1}\n{2};Dodge/"
 - raw: "邀请入队"
@@ -44059,7 +43291,7 @@
     translated: "You wish to challenge me?"
   - subIndex: 1
     text: "，以赢取藏经阁内秘籍吗？"
-    translated: ", To win the secret scrolls from the Scripture Pavilion?"
+    translated: ", To win the Secret Manual inside the Scripture Pavilion?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "阁下武功超绝，技压群雄，实在是让人敬佩不已！"
@@ -44128,11 +43360,11 @@
 - raw: "阅读秘籍"
   splits:
   - text: "阅读秘籍"
-    translated: "Read the cheat sheet"
+    translated: "Read the Secret Manual"
 - raw: "阅读秘籍;ChooseReadBook;false"
   splits:
   - text: "阅读秘籍"
-    translated: "Read the cheat sheet"
+    translated: "Read the Secret Manual"
   templates:
   - template: "{0};ChooseReadBook;false"
 - raw: "阅读藏书"
@@ -44212,7 +43444,7 @@
 - raw: "队友无法阅读秘籍！"
   splits:
   - text: "队友无法阅读秘籍！"
-    translated: "Team members cannot read the scroll!"
+    translated: "Teammate cannot read the Secret Manual!"
 - raw: "阮芷"
   splits:
   - text: "阮芷"

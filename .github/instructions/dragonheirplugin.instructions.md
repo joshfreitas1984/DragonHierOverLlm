@@ -187,7 +187,7 @@ bare-fragment `ApplyDictionary` pass in both `GenericPostfix` and the sink-level
 `ApplyToComponentText`. `FormatPrefix` is a separate, complementary pass over a real
 `String.Format` call's pre-substitution template argument.
 
-**Two hazards to remember when touching this code:**
+**Hazards to remember when touching this code:**
 - Never log (or call anything that might call `String.Format`/`Concat`) from inside a patch on
   `String.Format`/`Concat` itself without the `[ThreadStatic]` re-entrancy guard
   (`_inFormatConcatPatch`) — BepInEx's own logger calls `String.Format` internally, causing
@@ -195,6 +195,19 @@ bare-fragment `ApplyDictionary` pass in both `GenericPostfix` and the sink-level
 - `Regex.Escape` is not symmetric for `{`/`}` — never round-trip a whole raw string through
   `Regex.Escape` and reverse-engineer placeholder positions; walk `Raw` directly, escaping only
   the literal segments between `{n}` tokens (`BuildCompiledTemplate`).
+- **Never translate at the source for a field that gets serialized into the save file.** Confirmed
+  (and reverted) mistake: a Harmony prefix on `HeroData.AddLog`/`AreaData.AddLog` that translated
+  the narrative string before it was stored would have baked English into `recordLog` (a persisted
+  `List<string>`) permanently. `InfoListPatches`/`BattleInfoPatches`' "translate once at the
+  source" pattern is only safe for genuinely transient, never-serialized buffers (the HUD
+  scrolling log, the battle combat log) — check whether the target field is actually part of save
+  state before reusing that pattern anywhere else. See
+  [`DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md`](../../DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md).
+- Every compiled template's `Pattern`/`PermissivePattern` carries a `MatchTimeout`
+  (`TemplateRegexTimeout`, 25ms) — a template whose raw shape no longer matches already-partially-
+  substituted text (e.g. a persisted log entry redisplayed on a fresh component) can otherwise
+  catastrophically backtrack for seconds. A timeout is treated as "no match" (skip, log a warning,
+  continue) in `ApplyTemplatesSinglePass`, never left unguarded.
 
 Full current-state design (template compiler rules, CJK-permissive fallback, short-entry
 word-boundary spacing, re-entrancy, loading conventions, change checklist) is in
@@ -203,6 +216,32 @@ Confirmed-bug narratives (`Regex.Escape` root cause, CJK-placeholder fallback, a
 bugs #5–#9, and the still-unfixed `"在下#$PlayerName#"` prefix false-positive) are indexed from
 [`DragonHeirPlugin/KNOWN_ISSUES.md`](../../DragonHeirPlugin/KNOWN_ISSUES.md) — read the specific
 doc before modifying a confirmed bug fix.
+
+## Every new Harmony patch class MUST be explicitly registered — verify it, don't assume it
+
+`[HarmonyPatch]` attributes on a class do nothing by themselves. Every patch class in this plugin
+only takes effect because `MainPlugin.cs`'s startup sequence explicitly calls
+`Harmony.CreateAndPatchAll(typeof(YourClass))` (or `YourClass.PatchAll()` calling the equivalent)
+on it. **Confirmed live mistake (2026-09-13)**: `RecordLogDisplayPatches.cs` was written, compiled
+cleanly, and was deployed to the live game folder - but no `Harmony.CreateAndPatchAll` call for it
+was ever added to `MainPlugin.cs`. It produced zero errors/warnings; the only symptom was "the fix
+doesn't seem to do anything" (the original unpatched game method kept running). See
+[`DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md`](../../DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md)'s
+"was written but never wired up" section for the full narrative.
+
+When adding a new Harmony patch class:
+1. Add its registration call in `MainPlugin.cs` (wrap in `try/catch` matching the existing pattern
+   for any patch whose interop method signature isn't yet verified live).
+2. Log something that PROVES the patch is bound (e.g. `harmony.GetPatchedMethods()` checked against
+   your expected target methods) AND something that proves it actually EXECUTES at runtime (a
+   first-call log line) - do not treat "it builds and deploys with no errors" as evidence a patch
+   is live. See `RecordLogDisplayPatches.LogPatchStatus` for the pattern.
+3. Never invoke an arbitrary caller-supplied delegate (a perf-sample callback, a log formatter,
+   etc.) while holding a shared `lock` — running unknown code under a lock is exactly the kind of
+   thing that can cause unexpected reentrancy into the same lock elsewhere. See
+   `PerfInstrumentation.Record`/`PeriodicTick`'s 2026-09-13 fix in the same doc above for a
+   confirmed-live case (a `Time.deltaTime`-getter reentrancy causing a `Dictionary` "Collection was
+   modified" crash).
 
 ## Dynamic-string dictionary: `DynamicStringColumnSources`/`DynamicStringLabelColumnSources`
 
@@ -306,4 +345,35 @@ Full rationale, formulas, and change checklist:
 [`DragonHeirPlugin/docs/plottextsizepatches-agent-reference.md`](../../DragonHeirPlugin/docs/plottextsizepatches-agent-reference.md).
 Investigation narrative (the wrong-node and wrong-formula misdiagnoses along the way):
 [`DragonHeirPlugin/docs/plottext-width-overflow-investigation.md`](../../DragonHeirPlugin/docs/plottext-width-overflow-investigation.md).
+
+## `GlobalDataListOverrides` — direct static-list overrides for auto-translated tier scales
+
+Some `GlobalData` static `List<string>` constants (grade/tier scales like `BattleScoreText`,
+`AttriRatioString`, `TreasureValueLvName`, `EquipmentWeightLvName`) get each entry translated at
+construction time via `LTLocalization.GetText`, using whatever generic-dictionary match fires
+first — unreachable by `DynamicStringPatches`'/`PrefabTextPatches`' normal dictionaries, and prone
+to wrong/nonsensical results ("You", "Zhen", "Repeat") since a short tier glyph (冠/绝/下/中/精 etc.)
+collides with unrelated whole-word dictionary entries. `GlobalDataListOverrides.cs` fixes this by
+overwriting the affected lists' entries directly via reflection (`PropertyInfo`'s `Item` indexer
+setter) once their static cctor has run, gated by an expected-`Count` check per list so a future
+game update resizing one is skipped (logged) rather than silently mislabeled.
+
+**Gotcha (confirmed): this interop build exposes every field as a C# property, never a real
+`FieldInfo`** — `typeof(SomeType).GetFields(...)` silently returns zero results for state that
+`GetProperties(...)` finds immediately. Also, the IL2CPP decompile's pseudocode field/offset names
+are not reliable for finding the right owning type/field — confirmed by loading the real
+`BepInEx\interop\Assembly-CSharp.dll` directly and finding `PlotController.get_Instance()`
+decompiles to `return PlotController.LeftFaceHideOffset;`, an obviously wrong cross-type field
+name. When a field can't be found by name/offset, search by its live *value* instead (dump every
+candidate type's static `List<string>` properties and check which one's contents match a known
+confirmed string) - see the doc below for the full method, including an offline-assembly-reflection
+technique to verify real member shapes (property vs. field) without touching the live game process.
+
+**Known follow-up**: `GlobalData` almost certainly has more of this same bug class - a long tail
+of similarly-named `...LvName`/`...LvText` static lists (`HeroForceLvName`, `HeroGovernLvName`,
+`FavorLvText`, `SkillLvName`, etc.) has never been checked for mistranslated short entries. Not
+confirmed broken, just unexamined - worth a look next time one of those screens is touched.
+
+Full investigation narrative and the complete current override list:
+[`DragonHeirPlugin/docs/globaldata-tier-scale-overrides.md`](../../DragonHeirPlugin/docs/globaldata-tier-scale-overrides.md).
 

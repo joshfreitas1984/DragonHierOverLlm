@@ -69,6 +69,13 @@ internal static class DynamicStringPatches
         // get logged at all (LogResidualCjkDebug lived only in the full-pipeline branch below,
         // which the fast path skips entirely). Reset whenever a new snapshot is seeded.
         public bool LoggedResidualCjkForSnapshot;
+
+        // Computed once via IsKnownLogPanelPath(GetComponentPath(...)) on this component's first
+        // pass through ApplyToComponentText, then reused for its lifetime - a component doesn't
+        // get reparented between HeroDetailPanel/Log, AreaLog and PlotPanel/RecordScrollView, so
+        // there's no need to re-walk the transform hierarchy on every single .text set. Null means
+        // "not yet computed", not "false".
+        public bool? IsKnownLogPanel;
     }
 
     private static readonly ConditionalWeakTable<object, ComponentTextCache> _componentTextCache = new();
@@ -96,48 +103,101 @@ internal static class DynamicStringPatches
     }
 
     // Bounded memoization of the (deterministic, dictionary-fixed-for-process-lifetime) translate
-    // pipeline, keyed by exact input string. Long inputs are never cached - the InfoList's own
-    // accumulated log text is huge and unique on every call, so caching it would only waste
-    // memory without ever producing a hit.
+    // pipeline, keyed by exact input string. Inputs longer than maxInputLength are never cached -
+    // a genuinely ever-growing, always-unique buffer (e.g. a live typewriter reveal mid-tween)
+    // would never produce a cache hit, so caching it would only waste memory.
+    //
+    // Lock-protected (not just single-main-thread-safe) so RecordLogPrewarmPatches can populate
+    // this cache from a background Task the moment a new HeroData/AreaData log entry is created -
+    // by the time that entry is actually displayed (HeroDetailPanel/AreaLog/PlotPanel), the
+    // translation is already cached instead of running cold on the UI thread. `compute` itself
+    // deliberately runs OUTSIDE the lock (only the dictionary/queue reads/writes are locked) so a
+    // slow/backtracking regex attempt on one thread never blocks an unrelated lookup on another -
+    // two threads racing on the exact same uncached input can both compute it once each
+    // (redundant, but harmless: same deterministic result, last write wins).
     private sealed class MemoCache
     {
-        private const int MaxEntries = 2000;
-        private const int MaxInputLength = 500;
+        private readonly int _maxEntries;
+        private readonly int _maxInputLength;
         private readonly Dictionary<string, string> _map = new();
         private readonly Queue<string> _order = new();
+        private readonly object _lock = new();
+
+        public MemoCache(int maxEntries, int maxInputLength)
+        {
+            _maxEntries = maxEntries;
+            _maxInputLength = maxInputLength;
+        }
 
         public string GetOrCompute(string input, Func<string, string> compute)
         {
-            var cacheable = input.Length <= MaxInputLength;
-            if (cacheable && _map.TryGetValue(input, out var cached))
-                return cached;
+            var cacheable = input.Length <= _maxInputLength;
+            if (cacheable)
+            {
+                lock (_lock)
+                {
+                    if (_map.TryGetValue(input, out var cached))
+                        return cached;
+                }
+            }
 
             var result = compute(input);
 
-            if (cacheable && !_map.ContainsKey(input))
+            if (cacheable)
             {
-                if (_map.Count >= MaxEntries && _order.Count > 0)
-                    _map.Remove(_order.Dequeue());
-                _map[input] = result;
-                _order.Enqueue(input);
+                lock (_lock)
+                {
+                    if (!_map.ContainsKey(input))
+                    {
+                        if (_map.Count >= _maxEntries && _order.Count > 0)
+                            _map.Remove(_order.Dequeue());
+                        _map[input] = result;
+                        _order.Enqueue(input);
+                    }
+                }
             }
             return result;
         }
     }
 
     // Shared by GenericPostfix and ApplyToComponentText's full-pipeline branch - both run the
-    // exact same templates+dictionary pipeline, so a hit in one benefits the other too.
-    private static readonly MemoCache _genericPipelineMemoCache = new();
+    // exact same templates+dictionary pipeline, so a hit in one benefits the other too. Confirmed
+    // via perfStats.log that finished log-history entries (AreaLog / PlotPanel's RecordScrollView /
+    // HeroDetailPanel's own Log tab) are the SAME finite, already-translated text redisplayed
+    // verbatim across several different Text components - each redisplay used to re-run the full
+    // template/dictionary pipeline from scratch (a single hit measured at 2.68s, almost entirely
+    // regex work against long, already-partially-substituted text - see the "why cached" note
+    // below) because these entries routinely exceed the old 500-char cap. Raised well past any
+    // real log-entry length so this specific case actually gets cached; still bounded so an
+    // unrelated pathological huge string can't grow this cache unbounded.
+    private static readonly MemoCache _genericPipelineMemoCache = new(maxEntries: 5000, maxInputLength: 20000);
 
     // FormatPrefix runs a different pipeline (template-dictionary substitution only), so it needs
-    // its own cache rather than sharing _genericPipelineMemoCache.
-    private static readonly MemoCache _formatPipelineMemoCache = new();
+    // its own cache rather than sharing _genericPipelineMemoCache. Left at the original bounds -
+    // no evidence yet that String.Format's inputs share the same long-finished-text reuse pattern.
+    private static readonly MemoCache _formatPipelineMemoCache = new(maxEntries: 2000, maxInputLength: 500);
 
     // Compiled once per loaded _templateDictionary entry - see CompiledTemplate for what each
     // field means. Applied by ApplyTemplates against Concat/Format results and sink-level
     // component text, in addition to (not instead of) FormatPrefix's literal pre-substitution
     // match, since either mechanism alone misses cases the other catches.
     private static List<CompiledTemplate> _compiledTemplates = new();
+
+    // Subset of _compiledTemplates (the SAME CompiledTemplate instances - never recompiled
+    // separately) whose source DictionaryEntry.IsLogNarrative is true - see LogNarrativeFileName
+    // and IsKnownLogPanelPath. Lets RunGenericPipeline try a much smaller candidate list first for
+    // the three known log panels (docs/recordlog-translation-naturalness.md's stretch goal)
+    // instead of the full corpus - those panels only ever display HeroData.AddLog/AreaData.AddLog
+    // output, a small (~69-template) confirmed subset of _compiledTemplates.
+    private static List<CompiledTemplate> _logNarrativeCompiledTemplates = new();
+
+    // Packaged file name for the isolated "log narrative" AddLog-template family - see
+    // Tests/DynamicStringSources.LogNarrativeTemplates and the "Log-narrative isolation" section of
+    // Tests/docs/dynamicstrings-pipeline-architecture.md for the Tests/-side half of this split.
+    // Matched by exact file name (not content-sniffed) since LoadDictionary already loads every
+    // dynamicStrings*.txt.yaml file without otherwise distinguishing which file each entry came
+    // from.
+    private const string LogNarrativeFileName = "dynamicStringsLogNarratives.txt.yaml";
 
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private static readonly Regex PlaceholderOrTokenRegex = new(@"\{(\d+)\}|#\$?[A-Za-z0-9_]+#", RegexOptions.Compiled);
@@ -155,6 +215,15 @@ internal static class DynamicStringPatches
     // boundary (see docs/dynamicstringpatches-blocked-template-false-anchor.md).
     private const string SentenceBoundaryAwarePermissiveClass = @"[^。！？…\.\n]";
 
+    // Bounds a single compiled template's Pattern/PermissivePattern IsMatch/Replace attempt -
+    // see the CompiledTemplate construction site below for why this exists (confirmed 200ms-2.8s
+    // catastrophic-backtracking spikes via perfStats.log). Deliberately small: there can be
+    // several templates in one ApplyTemplatesSinglePass call (each getting its own budget), and a
+    // template that legitimately needs this long to match live text has never been observed -
+    // every confirmed slow case was a template failing to match at all after exhausting
+    // backtracking, not a real match that took a while to find.
+    private static readonly TimeSpan TemplateRegexTimeout = TimeSpan.FromMilliseconds(25);
+
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private sealed class CompiledTemplate
     {
@@ -171,6 +240,11 @@ internal static class DynamicStringPatches
 
         // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
         public List<string> BlockingRawEntries = new();
+
+        // Truncated copy of the source entry's Raw text - identifies which compiled template a
+        // PerfInstrumentation slow-call sample came from (Pattern/PermissivePattern's own
+        // ToString() is the compiled regex source, not the original Raw, and is far less readable).
+        public string RawPreview = string.Empty;
     }
 
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
@@ -374,12 +448,24 @@ internal static class DynamicStringPatches
 
         return new CompiledTemplate
         {
-            Pattern = new Regex(patternBuilder.ToString(), RegexOptions.Compiled),
+            // MatchTimeout (see TemplateRegexTimeout) bounds a single catastrophic-backtracking
+            // match/replace attempt to a small, fixed cost instead of letting it block for
+            // seconds - confirmed live via perfStats.log: HeroData.recordLog/AreaData.recordLog
+            // (persisted save fields - deliberately never translated at their source, only ever at
+            // display time, so a save never gets English baked into it) can hand this pipeline
+            // text a template's raw shape no longer matches at all once partially substituted, and
+            // the unanchored permissive capture then forces worst-case backtracking trying every
+            // possible split before giving up. This timeout is the actual fix for that cost, since
+            // deliberately not translating at the source (see the memoization comment above
+            // _genericPipelineMemoCache) means the same raw text keeps reaching this pipeline on
+            // every redisplay across every future session too, not just once.
+            Pattern = new Regex(patternBuilder.ToString(), RegexOptions.Compiled, TemplateRegexTimeout),
             // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
-            PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled | RegexOptions.Singleline),
+            PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled | RegexOptions.Singleline, TemplateRegexTimeout),
             ReplacementPattern = replacementPattern,
             LiteralSegments = literalSegments,
             TriggerChars = new HashSet<char>(literalSegments.Where(s => s.Length > 0).Select(s => s[0])),
+            RawPreview = raw.Length > 80 ? raw.Substring(0, 80) + "…" : raw,
         };
     }
 
@@ -405,6 +491,10 @@ internal static class DynamicStringPatches
         // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
         public char? ReplacementLeadChar { get; set; }
         public char? ReplacementTrailChar { get; set; }
+
+        // Set (not deserialized - never present in the YAML itself) when this entry was loaded
+        // from LogNarrativeFileName. See _logNarrativeCompiledTemplates.
+        public bool IsLogNarrative { get; set; }
     }
 
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
@@ -429,17 +519,27 @@ internal static class DynamicStringPatches
                     _reverseDictionary[entry.Result] = entry.Raw;
             }
 
-            _compiledTemplates = _templateDictionary
+            // Compiled once per entry here, then split by IsLogNarrative below - never recompiled
+            // separately for _logNarrativeCompiledTemplates, so that subset is always the exact
+            // same Regex/CompiledTemplate instances as in _compiledTemplates (no double regex
+            // compilation cost at load time, and no risk of the two lists drifting apart).
+            var compiledPairs = _templateDictionary
                 .Select(entry =>
                 {
-                    try { return BuildCompiledTemplate(entry); }
+                    try { return (Entry: entry, Compiled: BuildCompiledTemplate(entry)); }
                     catch (Exception ex)
                     {
                         MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to compile template '{entry.Raw}': {ex}");
-                        return null;
+                        return (Entry: entry, Compiled: (CompiledTemplate)null);
                     }
                 })
-                .Where(t => t != null)
+                .Where(p => p.Compiled != null)
+                .ToList();
+
+            _compiledTemplates = compiledPairs.Select(p => p.Compiled).ToList();
+            _logNarrativeCompiledTemplates = compiledPairs
+                .Where(p => p.Entry.IsLogNarrative)
+                .Select(p => p.Compiled)
                 .ToList();
 
             // See CompiledTemplate.BlockingRawEntries for why this exists: computed once here
@@ -455,7 +555,7 @@ internal static class DynamicStringPatches
                     .ToList();
             }
 
-            MainPlugin.Logger.LogInfo($"[DynamicStringPatches] Loaded {_dictionary.Count} translated fragment(s) and {_templateDictionary.Count} template(s) ({_compiledTemplates.Count} compiled) from '{DictionaryFilePattern}'.");
+            MainPlugin.Logger.LogInfo($"[DynamicStringPatches] Loaded {_dictionary.Count} translated fragment(s) and {_templateDictionary.Count} template(s) ({_compiledTemplates.Count} compiled, {_logNarrativeCompiledTemplates.Count} log-narrative) from '{DictionaryFilePattern}'.");
 
             var harmony = new Harmony("EnglishPatch.DynamicStringPatches");
             var postfix = new HarmonyMethod(typeof(DynamicStringPatches), nameof(GenericPostfix));
@@ -518,7 +618,12 @@ internal static class DynamicStringPatches
                 {
                     var yaml = File.ReadAllText(path);
                     var fileEntries = deserializer.Deserialize<List<DictionaryEntry>>(yaml);
-                    if (fileEntries != null) entries.AddRange(fileEntries);
+                    if (fileEntries == null) continue;
+
+                    if (string.Equals(Path.GetFileName(path), LogNarrativeFileName, StringComparison.OrdinalIgnoreCase))
+                        foreach (var entry in fileEntries) entry.IsLogNarrative = true;
+
+                    entries.AddRange(fileEntries);
                 }
                 catch (Exception ex)
                 {
@@ -708,10 +813,42 @@ internal static class DynamicStringPatches
     // _dictionary fields (whose element types are private nested classes).
     internal static bool HasTranslationData => _compiledTemplates.Count > 0 || _dictionary.Count > 0;
 
+    // The three known log panels the log-narrative routing stretch goal applies to (see
+    // docs/recordlog-translation-naturalness.md), matched by substring against the same
+    // GetComponentPath hierarchy string HandleTextSetter already receives. Confirmed (via
+    // decompiled source - HeroData.cs/AreaData.cs's recordLog field) to only ever display AddLog
+    // output, so RunGenericPipeline trusts _logNarrativeCompiledTemplates alone here rather than
+    // also falling back to the full corpus - see that method's comment for why a fallback actively
+    // backfired for the one case (a stale save entry's own template timing out) this exists to fix.
+    private static bool IsKnownLogPanelPath(string path)
+    {
+        if (string.IsNullOrEmpty(path)) return false;
+        return path.Contains("HeroDetailPanel/Log")
+            || path.Contains("AreaLog")
+            || (path.Contains("PlotPanel") && path.Contains("RecordScrollView"));
+    }
+
     // Shared by GenericPostfix, ApplyToComponentText and InfoListPatches' InfoTextList.Add
     // source-level prefixes - the one place templates+dictionary actually get applied to a raw
     // string. Internal (not private) so InfoListPatches.cs can reuse it.
-    internal static string RunGenericPipeline(string input)
+    // `preferLogNarrativeTemplates`: use ONLY the small isolated log-narrative list (see
+    // _logNarrativeCompiledTemplates) instead of the full corpus - set by callers that know the
+    // text can only ever be HeroData.AddLog/AreaData.AddLog output (RecordLogPrewarmPatches, and
+    // ApplyToComponentText for a component under one of the three known log panels).
+    //
+    // Deliberately NO fallback to the full _compiledTemplates list when residual CJK remains -
+    // an earlier version of this method fell back whenever ContainsCjk(r) was still true after the
+    // narrow pass, which backfired: the exact stale-save-redisplay entries this routing exists to
+    // help (see docs/recordlog-translation-naturalness.md) are the ones whose OWN template
+    // times out and therefore STILL leaves CJK behind, which then triggered a full-corpus retry on
+    // top of the narrow pass's own cost - doubling the worst case instead of shrinking it, for
+    // precisely the case that mattered most. The three known log panels are confirmed (via
+    // decompiled source - HeroData.cs/AreaData.cs's recordLog field) to only ever display AddLog
+    // output, and the isolated template list's coverage was verified complete against every AddLog
+    // call site (see recordlog-translation-naturalness.md), so trusting the narrow list alone
+    // here is safe; ApplyDictionary below (non-template fragment substitution) still always runs
+    // regardless, covering any plain-text UI chrome sharing the same component subtree.
+    internal static string RunGenericPipeline(string input, bool preferLogNarrativeTemplates = false)
     {
         using var _ = PerfInstrumentation.Measure("DynamicStringPatches.RunGenericPipeline",
             () => input.Length > 60 ? input.Substring(0, 60) + "…" : input);
@@ -719,8 +856,11 @@ internal static class DynamicStringPatches
         return _genericPipelineMemoCache.GetOrCompute(input, s =>
         {
             var r = s;
-            if (_compiledTemplates.Count > 0)
+            if (preferLogNarrativeTemplates && _logNarrativeCompiledTemplates.Count > 0)
+                r = ApplyTemplates(r, _logNarrativeCompiledTemplates);
+            else if (_compiledTemplates.Count > 0)
                 r = ApplyTemplates(r, _compiledTemplates);
+
             if (_dictionary.Count > 0)
                 r = ApplyDictionary(r, _dictionaryByFirstChar);
             return r;
@@ -999,6 +1139,8 @@ internal static class DynamicStringPatches
             if (MainPlugin.SkipKnownNonCjkComponentsEnabledCached && cache.ConfirmedNonCjk)
                 return;
 
+            cache.IsKnownLogPanel ??= _logNarrativeCompiledTemplates.Count > 0 && IsKnownLogPanelPath(GetComponentPath(instance));
+
             var current = getText();
             if (string.IsNullOrEmpty(current)) return;
             if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
@@ -1077,12 +1219,12 @@ internal static class DynamicStringPatches
                 // left to do for that specific log - it stays here as a fallback for any other
                 // append-only growing component this heuristic also happens to catch.
                 var suffix = current.Substring(cache.RawSnapshot.Length);
-                suffix = RunGenericPipeline(suffix);
+                suffix = RunGenericPipeline(suffix, cache.IsKnownLogPanel == true);
                 replaced = cache.TranslatedSnapshot + suffix;
             }
             else
             {
-                replaced = RunGenericPipeline(current);
+                replaced = RunGenericPipeline(current, cache.IsKnownLogPanel == true);
             }
 
             LogResidualCjkDebug("ApplyToComponentText", current, replaced, instance);
@@ -1170,16 +1312,45 @@ internal static class DynamicStringPatches
                     continue;
             }
 
+            // Measures every template that gets past the trigger-char/literal pre-filter above -
+            // i.e. every actual regex IsMatch/Replace attempt, which is where a pathologically
+            // backtracking pattern would show up (see the 2.68s HeroDetailPanel/Log spike found
+            // via perfStats.log). Sample only formats template.RawPreview/a truncated `result` when
+            // this attempt turns out to be the new slowest, or crosses the slow-call threshold, so
+            // the common (fast, no-match-or-quick-match) case pays only the Stopwatch timestamp.
+            using var _perfTemplateScope = PerfInstrumentation.Measure(
+                "DynamicStringPatches.ApplyTemplatesSinglePass.Template",
+                () => $"template='{template.RawPreview}' input='{(result.Length > 80 ? result.Substring(0, 80) + "…" : result)}'");
+
             // PLAN B: try the strict (non-CJK-capture) pattern first - unchanged bug #3/#4
             // behavior. Only fall back to the permissive (CJK-inclusive) pattern when the strict
             // one fails to match at all, so templates that already match correctly today never
             // reach the more permissive path (see PermissivePlaceholderCaptureClass's comment).
+            //
+            // Each IsMatch/Replace call below is bounded by TemplateRegexTimeout - a
+            // RegexMatchTimeoutException here means this template's pattern is catastrophically
+            // backtracking against `result` (confirmed live: e.g. HeroData.recordLog/
+            // AreaData.recordLog entries - text already partially substituted by an earlier pass -
+            // no longer match this template's raw shape at all, but the unanchored permissive
+            // capture still tries every possible split before giving up - 200ms-2.8s per hit via
+            // perfStats.log). Treat it exactly like "no match" and move on to the next template -
+            // losing this one substitution is far better than blocking the whole pipeline (and the
+            // UI thread) for seconds.
             var pattern = template.Pattern;
-            if (!pattern.IsMatch(result))
+            try
             {
-                pattern = template.PermissivePattern;
                 if (!pattern.IsMatch(result))
-                    continue;
+                {
+                    pattern = template.PermissivePattern;
+                    if (!pattern.IsMatch(result))
+                        continue;
+                }
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                MainPlugin.Logger?.LogWarning(
+                    $"[DynamicStringPatches] Template match timed out (>{TemplateRegexTimeout.TotalMilliseconds}ms), skipping: '{template.RawPreview}'");
+                continue;
             }
 
             // See CompiledTemplate.BlockingRawEntries (CONFIRMED BUG #4) - captures the text at
@@ -1187,10 +1358,21 @@ internal static class DynamicStringPatches
             // a stable snapshot (Regex.Replace's MatchEvaluator runs against this same original
             // string for every match before any replacement is written back).
             var beforeThisTemplate = result;
-            result = pattern.Replace(result, m =>
-                template.BlockingRawEntries.Count > 0 && OverlapsBlockingEntry(beforeThisTemplate, m, template.BlockingRawEntries)
-                    ? m.Value
-                    : m.Result(template.ReplacementPattern));
+            try
+            {
+                result = pattern.Replace(result, m =>
+                    template.BlockingRawEntries.Count > 0 && OverlapsBlockingEntry(beforeThisTemplate, m, template.BlockingRawEntries)
+                        ? m.Value
+                        : m.Result(template.ReplacementPattern));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                // `result` is unchanged (the assignment above never completed) - same handling as
+                // the IsMatch timeout above.
+                MainPlugin.Logger?.LogWarning(
+                    $"[DynamicStringPatches] Template replace timed out (>{TemplateRegexTimeout.TotalMilliseconds}ms), skipping: '{template.RawPreview}'");
+                continue;
+            }
             presentChars = null; // result changed - rebuild lazily for the next template
         }
         return result;

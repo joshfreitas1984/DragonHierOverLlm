@@ -125,6 +125,19 @@ public class FileInputWorkflowTests
         DrinkQuoteWorkflow.ExtractDrinkQuoteCandidates(GameFileHandling.WorkingDirectory);
     }
 
+    [Fact(DisplayName = "4g. ExtractLogNarrativeCandidates")]
+    public void ExtractLogNarrativeCandidates()
+    {
+        // Carves the curated HeroData.AddLog/AreaData.AddLog "log narrative" template family (see
+        // DynamicStringSources.LogNarrativeTemplates) out of the master dynamicStrings.txt dump into
+        // its own dedicated dynamicStringsLogNarratives.txt - see
+        // DynamicStringExtraction.ExtractLogNarrativeCandidates' doc comment. Must run after "3."
+        // (which populates the master dump this reads from) and before "5." (whose dedup pass is
+        // what actually removes the now-duplicated lines from dynamicStrings.txt - see
+        // DynamicStringDedupePriorityOrder).
+        DynamicStringExtraction.ExtractLogNarrativeCandidates(GameFileHandling.WorkingDirectory);
+    }
+
     [Fact(DisplayName = "5. DedupeDynamicStringFiles")]
     public void DedupeDynamicStringFiles()
     {
@@ -141,7 +154,8 @@ public class FileInputWorkflowTests
         // Pure "serialize whatever's on disk now" step - exports every configured
         // DynamicStringsIL2CPP file (dynamicStrings.txt, dynamicStringsFromColumns.txt,
         // dynamicStringsFromStructuredFragments.txt, dynamicStringsFromOtherFieldLabels.txt,
-        // dynamicStringsPoetry.txt, heroNameParts.txt, forceNameParts.txt) into
+        // dynamicStringsPoetry.txt, dynamicStringsDrinkQuotes.txt, dynamicStringsLogNarratives.txt,
+        // heroNameParts.txt, forceNameParts.txt, heroFullNames.txt) into
         // Files/Converted/*.yaml. Must run after
         // 1c-1i have populated/deduped Raw/Dumped/DynamicStrings/*.txt.
         TranslationExport.ExportDynamicStringTextAssetToCustomFormat(GameFileHandling.WorkingDirectory);

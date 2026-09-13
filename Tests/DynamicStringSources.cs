@@ -80,6 +80,126 @@ namespace Tests
             ("InnData.csv", 1, "innIconNames.txt"),
         ];
 
+        /// <summary>
+        /// Curated allowlist of the "log narrative" String.Format templates feeding
+        /// HeroData.AddLog/AreaData.AddLog (HeroDetailPanel's Log tab, AreaLog, PlotPanel's
+        /// RecordScrollView) - confirmed via decompiled source across
+        /// Converter/output/_NoNamespace/AIController.cs, GameController.cs, HeroData.cs,
+        /// AreaData.cs and PlotController.cs (2026-09-13 trace). Consumed by
+        /// DynamicStringExtraction.ExtractLogNarrativeCandidates, which pulls any matching line out
+        /// of the master dynamicStrings.txt dump into its own dedicated dynamicStringsLogNarratives.txt
+        /// file - see that method's doc comment and docs/dynamicstrings-pipeline-architecture.md for
+        /// why a dedicated file (not a tag/category field) is used, matching the existing
+        /// heroNameParts.txt/forceNameParts.txt precedent. Isolating these makes every template that
+        /// needs a DynamicStringResultOverrides naturalness fix (see TranslationPackaging.cs) trivial
+        /// to find, and lets DragonHeirPlugin route known-log-panel text through a smaller
+        /// compiled-template list (see DragonHeirPlugin/docs/recordlog-translation-naturalness.md).
+        ///
+        /// This list is HAND-CURATED (these are baked-in game-code literals, not derivable from any
+        /// CSV/column/asset source the way the other extractors' inputs are), but it does not need to
+        /// be re-curated by hand forever: if the game gets a content update and
+        /// Converter/output/_NoNamespace/*.cs is regenerated, re-run
+        /// Converter/Scripts/ExtractAddLogTemplates.ps1 against the fresh decompile to regenerate a
+        /// candidate list for review (it reproduces this list almost entirely on its own; see the
+        /// script's header for its one known gap - a single call site in GameController.cs that
+        /// inlines several sibling-branch literals directly into String.Format rather than assigning
+        /// through one variable, which still needs manual expansion each time).
+        ///
+        /// Six other AddLog call sites (GameController.cs:15358/15507/15572/27289,
+        /// HeroData.cs:7488/7797) are deliberately EXCLUDED - they build their log line via
+        /// String.Concat gluing short, highly generic literal fragments (e.g. "的", "了", "拜入了")
+        /// around dynamic values rather than a single self-contained String.Format template. Those
+        /// fragments are shared all over the rest of the corpus, so pulling them into a
+        /// log-narrative-only file would risk breaking unrelated non-log text that reuses the same
+        /// fragment. If one of those renders awkwardly, fix it via DynamicStringResultOverrides
+        /// individually instead (its Raw fragment, not a whole template, would need to be matched).
+        /// </summary>
+        public static readonly string[] LogNarrativeTemplates =
+        [
+            // AIController.cs
+            "{0}在{1}结束关押，恢复了自由之身。",
+            "{0}在{1}闲逛之时，意外获取了{2}两银钱。",
+            "{0}在{1}闲逛之时，意外获取了一件{2}。",
+            "{0}在{1}修习了武功{2}。",
+            "{0}在{1}修习了{2}技艺。",
+            "{0}在{1}辛勤劳作，为门派收获了{2}。",
+            "{0}在{1}打工赚钱，获取了{2}两银钱。",
+            "{0}在{1}四下探索之时，意外发现了{2}。",
+            "{0}在{1}与{2}相谈盛欢，一见如故，结为知己好友。",
+            "{0}在{1}欲下毒暗害{2}，{3}。",
+            "{0}在{1}欲{5}{2}的{3}，{4}。",
+            "{0}在{1}欲偷师{2}的{3}，{4}。",
+            "{0}在{1}与{2}心生嫌隙，结下了深仇大恨。",
+            "{0}在{1}与{2}闲聊一阵。",
+            "{0}在{1}与{2}交流心得，切磋武艺，最终{3}。",
+            "{0}在{1}袭击了{2}，血战一场最终{3}。",
+            "{0}在{1}完成了重要委托，名望{2}，银两{3}，并获得了{4}。",
+            "{0}在{1}遭逢{5}奇遇，名望{2}，银两{3}，并获得了{4}。",
+            "{0}在{1}上下打点，花费{3}银两降低了{2}点恶名。",
+            "{0}在{1}习得了新武功{2}。",
+            "{0}在{1}暗中破坏，使该地{2}降低{3}点。",
+            "{0}烹饪了{1}并放入行囊(消耗{2}银钱{3})",
+            "{0}烹饪了{1}并放入门派仓库(消耗{2}粮食{3})",
+            "{0}烹饪了{1}，由于门派仓库已满只得放入行囊(消耗{2}粮食{3})",
+            "{0}炼制了{1}并放入行囊(消耗{2}银钱{3})",
+            "{0}炼制了{1}并放入门派仓库(消耗{2}药材{3})",
+            "{0}炼制了{1}，由于门派仓库已满只得放入行囊(消耗{2}药材{3})",
+            "{0}制造了{1}并放入行囊(消耗{2}银钱{3})",
+            "{0}制造了{1}并放入门派仓库(消耗{2}木料矿石{3})",
+            "{0}制造了{1}，由于门派仓库已满只得放入行囊(消耗{2}木料矿石{3})",
+            "{0}在{1}买卖交易，出售了闲置物品{2}{3}。",
+            "{0}使用门派银钱{1}两，购买{2}。",
+            "{0}出售门派{1}，换取门派银钱{2}两。",
+            "{0}与{1}情谊渐浅，断绝了好友关系。",
+            "{0}与{1}冰释前嫌，化解了二人间的仇恨。",
+            "{0}被{1}抓捕入狱，关押在{2}之中。",
+            "{0}向{3}仓库捐赠了{1}，获取功绩{2}",
+            "{0}从{3}仓库购买了{1}，花费银两{2}",
+
+            // GameController.cs
+            "{0}的{1}结束{2}了。",
+            "{0}<b>{1}</b>{2}，买卖价格{3}。",
+            "{0}收到门派{1}银钱嘉奖，忠诚+3",
+            "{0}在{1}参加{6}，勇夺第{2}名，银两+{3}，{4}，并获得了奖品{5}。",
+            "{0}在{1}参加{5}赛马大会，勇夺第{2}名，银两+{3}，声望+{4}。",
+            "{0}在{1}参加{2}拍卖大会，花费{3}两购得一件{4}。",
+            // Random-treasure-event family - all 9 flow to the same call site
+            // (GameController.cs:22925); the automated re-extraction script only picks up one of
+            // these per run (see script header) - the rest must be re-added by hand after a
+            // decompile refresh.
+            "{0}吉人天相，寻得高人所刻石碑，潜心研读后提升了{1}潜力。",
+            "{0}吉人天相，{2}，学会了武功{1}。",
+            "{0}吉人天相，寻得前朝皇家宝库，获得了{1}等诸多珍宝。",
+            "{0}气运过人，寻得一本失传秘籍，鉴别后竟是传说中的{1}。",
+            "{0}吉星高照，得到一株异草，服食后生命上限增加{1}。",
+            "{0}吉星高照，寻得失落宝藏，搜刮后获得了{1}两银钱。",
+            "{0}吉星高照，得到一枚灵果，服食后内力上限增加{1}。",
+            "{0}气运过人，寻得一件神兵利器，鉴别后竟是传说中的{1}。",
+            "{0}气运过人，寻得一匹千里名驹，鉴别后竟是传说中的{1}。",
+            "{0}近日大兴土木，开始修缮升级{1}{2}({3}级)",
+            "{0}近日大兴土木，开始在{1}新建{2}",
+            "{0}近日大兴土木，开始拆除{1}{2}({3}级)",
+            "{0}掌门{1}将《{2}》{3}秘籍放入藏经阁，供全派弟子参阅。",
+            "{0}掌门{1}用《{2}》{3}替换了藏经阁内的《{2}》{4}秘籍，供全派弟子参阅。",
+            "{0}因功勋卓著，被晋升为{1}。",
+            "{0}攻击了{2}掌控下的{1}，最终{3}。",
+            "{0}加入了由{1}领导的队伍。",
+            "{0}离开了由{1}领导的队伍。",
+
+            // HeroData.cs
+            "{0}对自身装备的{1}进行了粹毒。",
+            "{0}对自身的{1}上进行了下毒。",
+            "{0}领悟了天赋：{1}",
+            "{0}{1}{2}，{3}",
+
+            // AreaData.cs
+            "{0}近日开始加强{1}分舵之{2}防御等级({3}级)",
+
+            // PlotController.cs
+            "{0}在{1}暗中破坏，使该地{2}降低了{3}点。",
+            "{0}在{1}开展治理，使该地{2}提升了{3}点。",
+        ];
+
         /// <summary>CSV columns containing structured labels used by dynamic-string extraction.</summary>
         public static readonly (string CsvFileName, int[] Columns)[] DynamicStringLabelColumnSources =
         [

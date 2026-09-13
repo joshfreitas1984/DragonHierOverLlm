@@ -578,7 +578,7 @@
     translated: "Collect secret manuals from other Sects and store them in the Celestial Pavilion to gain corresponding skill enhancements based on your martial arts level."
   - subIndex: 1
     text: "每门武学只能放入一本对应秘籍，秘籍稀有度越高加成越高。"
-    translated: "Each martial art can only be inserted into a corresponding treatise. The rarer the treatise, the higher the bonus."
+    translated: "Each martial arts skill can only contain one corresponding Secret Manual, and the higher the rarity of the Secret Manual, the greater the bonus."
   templates:
   - template: "♦{0}\\n♦{1}"
 - raw: "♦是否允许弟子学习新武功\\n<b>允许</b>：允许学习任何新武功\\n<b>仅藏经阁</b>：只允许学习藏经阁内新武功\\n<b>禁止</b>：禁止学习新武功"
@@ -635,7 +635,7 @@
     translated: "Food and drink"
   - subIndex: 3
     text: "秘籍辅助以获得更强效果"
-    translated: "Secret guide to enhance effects"
+    translated: "A Secret Manual aids in achieving stronger effects."
   - subIndex: 4
     text: "提升建筑等级和对应武学技能可增加突破效率"
     translated: "Boosting building levels and corresponding martial skills can increase breakthrough efficiency."
@@ -695,7 +695,7 @@
     translated: "Consume patience by reading the text to gain theoretical experience."
   - subIndex: 1
     text: "秘籍品质越高，随机文字内容越好。"
-    translated: "The higher the quality of the cheat sheet, the better the random text content."
+    translated: "The higher the quality of the Secret Manual, the better the random text content."
   - subIndex: 2
     text: "提升建筑等级和对应技能可增加初始耐心。"
     translated: "Raising the level of buildings and their corresponding skills can increase initial patience."
@@ -878,10 +878,10 @@
 - raw: "♦藏经阁秘籍可提升门派所有弟子修炼该武学的速度。\\n♦秘籍越稀有加成越高。\\n(此加成对玩家无效)"
   splits:
   - text: "藏经阁秘籍可提升门派所有弟子修炼该武学的速度。"
-    translated: "The Scripture Pavilion's secret texts can increase the speed at which all disciples in the sect practice this martial art."
+    translated: "The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art. The Scripture Pavilion's Secret Manual can increase the cultivation speed of all sect disciples for that martial art."
   - subIndex: 1
     text: "秘籍越稀有加成越高。"
-    translated: "The more rare the secret technique, the higher the bonus."
+    translated: "The rarer the Secret Manual, the higher the bonus."
   - subIndex: 2
     text: "此加成对玩家无效"
     translated: "This buff is ineffective on players"
@@ -2005,7 +2005,7 @@
 - raw: "初始获得随机秘籍"
   splits:
   - text: "初始获得随机秘籍"
-    translated: "Gain random scrolls at start"
+    translated: "Initial random Secret Manual obtained"
 - raw: "初始获得随机马匹"
   splits:
   - text: "初始获得随机马匹"
@@ -2821,7 +2821,7 @@
 - raw: "将两本相同低品质秘籍，整合成一本高品质的秘籍"
   splits:
   - text: "将两本相同低品质秘籍，整合成一本高品质的秘籍"
-    translated: "Merge two identical low‑quality scrolls into one high‑quality scroll"
+    translated: "Combine two low‑quality Secret Manuals into one high‑quality Secret Manual."
 - raw: "将制作产物放入门派仓库，可获取门派贡献并完成门派任务\\n(消耗材料方能放入自己行囊)"
   splits:
   - text: "将制作产物放入门派仓库，可获取门派贡献并完成门派任务"
@@ -3450,7 +3450,7 @@
 - raw: "抄录现有秘籍，获得残本秘籍"
   splits:
   - text: "抄录现有秘籍，获得残本秘籍"
-    translated: "Copy the existing grimoire to obtain a partial copy"
+    translated: "Copy the existing Secret Manual to obtain a damaged version of the Secret Manual."
 - raw: "折扣100%"
   splits:
   - text: "折扣100%"
@@ -5660,7 +5660,7 @@
 - raw: "足履\\n（消耗）"
   splits:
   - text: "足履"
-    translated: "Walked"
+    translated: "Footwear"
   - subIndex: 1
     text: "（消耗）"
     translated: "(consumption)"

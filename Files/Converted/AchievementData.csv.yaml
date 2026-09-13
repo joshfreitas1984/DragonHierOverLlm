@@ -12,7 +12,7 @@
     translated: "Cumulatively, you have personally defeated 500 enemies in battle."
     qcReviewedText: "Cumulatively, you have personally defeated 500 enemies in battle."
     qcStatus: Passed
-    qcQualityScore: 100
+    qcQualityScore: 98
   - split: 5
     text: "无"
     translated: "None"
@@ -25,16 +25,15 @@
     text: "百战百胜"
     translated: "Invincible in every battle"
     qcReviewedText: "Invincible in every battle"
-    qcTranslated: "Invincible in a hundred battles"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "累计战斗获胜200场"
     translated: "Count victories in battles: 200"
     qcReviewedText: "Count victories in battles: 200"
-    qcTranslated: "Total battle victories: 200"
+    qcTranslated: "Cumulative battle victories: 200"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 90
   - split: 5
     text: "无"
     translated: "None"
@@ -47,16 +46,18 @@
     text: "舌灿莲花"
     translated: "Talk eloquently"
     qcReviewedText: "Talk eloquently"
-    qcTranslated: "Talk fluently as a lotus"
+    qcTranslated: "Tongue of Lotus"
     qcStatus: Corrected
-    qcQualityScore: 70
+    flaggedForQcReview: true
+    qcQualityScore: 30
   - split: 2
     text: "累计论战获胜100场"
     translated: "Accumulated debating wins: 100 matches"
     qcReviewedText: "Accumulated debating wins: 100 matches"
-    qcTranslated: "Accumulated debating victories: 100 matches"
+    qcTranslated: "Total debate wins: 100"
     qcStatus: Corrected
-    qcQualityScore: 85
+    flaggedForQcReview: true
+    qcQualityScore: 55
   - split: 5
     text: "无"
     translated: "None"
@@ -68,13 +69,18 @@
   - split: 1
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
-    qcQualityScore: 30
+    qcReviewedText: "Drinks not intoxicating"
+    qcTranslated: "Unbeatable"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - split: 2
     text: "累计对饮获胜100场"
     translated: "Cumulative drinking win count: 100 rounds"
     qcReviewedText: "Cumulative drinking win count: 100 rounds"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Cumulative wins in drinking matches: 100"
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 5
     text: "无"
     translated: "None"
@@ -87,15 +93,15 @@
     text: "吉星高照"
     translated: "Favorable stars shine high"
     qcReviewedText: "Favorable stars shine high"
-    qcTranslated: "Lucky stars shine bright"
+    qcTranslated: "Auspicious Stars Shine Bright"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 70
   - split: 2
     text: "累计赌博获胜100场"
     translated: "Cumulative gambling wins: 100 games"
     qcReviewedText: "Cumulative gambling wins: 100 games"
     qcStatus: Passed
-    qcQualityScore: 100
+    qcQualityScore: 95
   - split: 5
     text: "无"
     translated: "None"
@@ -108,14 +114,13 @@
     text: "家财万贯"
     translated: "Rich beyond measure"
     qcReviewedText: "Rich beyond measure"
-    qcTranslated: "Rich beyond measure"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "累计获得100000银钱"
     translated: "Cumulative earnings of 100000 silver coins"
     qcReviewedText: "Cumulative earnings of 100000 silver coins"
-    qcTranslated: "Cumulative acquisition of 100000 silver coins"
+    qcTranslated: "Cumulative 100000 silver coins earned"
     qcStatus: Corrected
     qcQualityScore: 95
   - split: 5
@@ -130,16 +135,14 @@
     text: "声名显赫"
     translated: "Famous far and wide"
     qcReviewedText: "Famous far and wide"
-    qcTranslated: "Renowned"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "累计获得10000声望"
     translated: "Accumulate 10000 reputation points"
     qcReviewedText: "Accumulate 10000 reputation points"
-    qcTranslated: "Accumulate a total of 10000 reputation"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "无"
     translated: "None"
@@ -152,16 +155,14 @@
     text: "劳苦功高"
     translated: "Hard‑earned success"
     qcReviewedText: "Hard‑earned success"
-    qcTranslated: "Meritorious service due to hard work"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "累计获得10000门派功绩"
     translated: "Earned 10000 Sect Merit Points"
     qcReviewedText: "Earned 10000 Sect Merit Points"
-    qcTranslated: "Earned a total of 10000 Sect Merit Points"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "无"
     translated: "None"
@@ -173,6 +174,9 @@
   - split: 1
     text: "恶贯满盈"
     translated: "Wicked deeds abound"
+    qcReviewedText: "Wicked deeds abound"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "累计获得1000点恶名"
     translated: "Earned 1000 points of Infamy"
@@ -191,16 +195,16 @@
     text: "高朋满座"
     translated: "Guests fill the room"
     qcReviewedText: "Guests fill the room"
-    qcTranslated: "High‑ranking guests are seated in abundance"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 95
   - split: 2
     text: "累计结识100名角色"
     translated: "Accumulated 100 characters met"
     qcReviewedText: "Accumulated 100 characters met"
-    qcTranslated: "Accumulated acquaintance with 100 characters"
+    qcTranslated: "Met 100 characters"
     qcStatus: Corrected
-    qcQualityScore: 85
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 5
     text: "无"
     translated: "None"
@@ -213,9 +217,8 @@
     text: "不辱使命"
     translated: "Fulfilled my mission"
     qcReviewedText: "Fulfilled my mission"
-    qcTranslated: "Fulfilled my duty"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "累计完成100个委托任务"
     translated: "Cumulative completion of 100 commission tasks"
@@ -234,14 +237,16 @@
     text: "家业丰厚"
     translated: "Ample family fortune"
     qcReviewedText: "Ample family fortune"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Ample family fortune"
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 2
     text: "累计购买10次私宅"
     translated: "Cumulative purchases of 10 private residences"
     qcReviewedText: "Cumulative purchases of 10 private residences"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Cumulative purchases of 10 private residences"
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 5
     text: "无"
     translated: "None"
@@ -254,16 +259,15 @@
     text: "天赋异禀"
     translated: "Gifted"
     qcReviewedText: "Gifted"
-    qcTranslated: "Gifted Talent"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "累计领悟30次天赋"
     translated: "Accumulated 30 times mastering talents"
     qcReviewedText: "Accumulated 30 times mastering talents"
-    qcTranslated: "Accumulated 30 times understanding talents"
+    qcTranslated: "Accumulated 30 talent insights"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 70
   - split: 5
     text: "无"
     translated: "None"
@@ -276,16 +280,16 @@
     text: "天工巧匠"
     translated: "Master Craftsman"
     qcReviewedText: "Master Craftsman"
-    qcTranslated: "Master Artisan"
+    qcTranslated: "Master Craftsman"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 95
   - split: 2
     text: "累计铸造"
     translated: "Cumulative Casting"
     qcReviewedText: "Cumulative Casting/Alchemy/Cook 200 times"
     qcTranslated: "Cumulative Casting/Alchemy/Cooking 200 times"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 95
   - split: 2
     subIndex: 1
     text: "炼药"
@@ -314,7 +318,11 @@
   - split: 2
     text: "累计煅烧"
     translated: "Accumulated Firing"
-    qcQualityScore: 30
+    qcReviewedText: "Accumulated Firing/Prepare/100 times refined"
+    qcTranslated: "Cumulative Firing/Processing/Refining: 100"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
   - split: 2
     subIndex: 1
     text: "炮制"
@@ -338,15 +346,16 @@
     text: "如有神助"
     translated: "With divine assistance"
     qcReviewedText: "With divine assistance"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Divinely aided"
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 2
     text: "任意一项角色属性基础值达到120点"
     translated: "Any character attribute base value reaches 120 points"
     qcReviewedText: "Any character attribute base value reaches 120 points"
-    qcTranslated: "Any base value of a character attribute reaches 120 points"
+    qcTranslated: "The base value of any character attribute reaches 120 points"
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 95
   - split: 5
     text: "无"
     translated: "None"
@@ -359,16 +368,15 @@
     text: "武艺超群"
     translated: "Skilled in combat"
     qcReviewedText: "Skilled in combat"
-    qcTranslated: "Combat prodigy"
+    qcTranslated: "Superior Martial Arts"
     qcStatus: Corrected
-    qcQualityScore: 70
+    qcQualityScore: 90
   - split: 2
     text: "任意一门武学技能基础值达到120点"
     translated: "Any martial arts skill with a base value of 120 points or higher"
     qcReviewedText: "Any martial arts skill with a base value of 120 points or higher"
-    qcTranslated: "Any martial arts skill with a base value of 120 points or more"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "无"
     translated: "None"
@@ -381,15 +389,16 @@
     text: "技艺无双"
     translated: "Unmatched Skill"
     qcReviewedText: "Unmatched Skill"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Unrivaled Skill"
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 2
     text: "任意一项生活技艺基础值达到100点"
     translated: "Any skill base value for daily living skills reaches 100 points"
     qcReviewedText: "Any skill base value for daily living skills reaches 100 points"
-    qcTranslated: "Any basic value of daily living skills reaches 100 points"
+    qcTranslated: "Any daily living skill base value reaches 100"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 90
   - split: 5
     text: "无"
     translated: "None"
@@ -402,15 +411,15 @@
     text: "绝世神功"
     translated: "Eternal Divine Skill"
     qcReviewedText: "Eternal Divine Skill"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Peerless Divine Skill"
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 2
     text: "习得任意一门绝世武功"
     translated: "Learn any supreme martial arts technique"
     qcReviewedText: "Learn any supreme martial arts technique"
-    qcTranslated: "Learn any legendary martial arts technique"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "无"
     translated: "None"
@@ -443,16 +452,17 @@
     text: "盖世英雄"
     translated: "World‑Famous Hero"
     qcReviewedText: "World‑Famous Hero"
-    qcTranslated: "Legendary Hero"
+    qcTranslated: "Peerless Hero"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 2
     text: "成为英雄谱战力第一名"
     translated: "Become the top warrior in the heroes' battle rankings"
     qcReviewedText: "Become the top warrior in the heroes' battle rankings"
-    qcTranslated: "Become the top fighter in the heroes' battle rankings"
+    qcTranslated: "Become the #1 warrior in the Hero Chronicle battle rankings"
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 95
   - split: 5
     text: "无"
     translated: "None"
@@ -465,15 +475,15 @@
     text: "大权在握"
     translated: "In full control"
     qcReviewedText: "In full control"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Holding all the power"
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 2
     text: "成为门派掌门"
     translated: "Become the Sect Leader"
     qcReviewedText: "Become the Sect Leader"
-    qcTranslated: "Become the Sect Master"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "无"
     translated: "None"
@@ -486,16 +496,15 @@
     text: "一击制胜"
     translated: "One hit to win"
     qcReviewedText: "One hit to win"
-    qcTranslated: "One‑hit win"
+    qcTranslated: "One Hit Kill"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 85
   - split: 2
     text: "单次造成200点以上伤害"
     translated: "Cause more than 200 points of damage in one attack"
     qcReviewedText: "Cause more than 200 points of damage in one attack"
-    qcTranslated: "Cause 200 points of damage or more in one hit"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "无"
     translated: "None"
@@ -508,15 +517,16 @@
     text: "横扫千军"
     translated: "Sweep across a thousand armies"
     qcReviewedText: "Sweep across a thousand armies"
-    qcTranslated: "Sweep a thousand troops aside"
+    qcTranslated: "Sweeping a Thousand Armies"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 90
   - split: 2
     text: "一场战斗中亲手击败10名以上敌人"
     translated: "Defeat more than 10 enemies in a single battle with your own hands"
     qcReviewedText: "Defeat more than 10 enemies in a single battle with your own hands"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Defeat more than 10 enemies in a single battle"
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 5
     text: "无"
     translated: "None"
@@ -529,13 +539,18 @@
     text: "情深义重"
     translated: "Deeply affectionate and loyal"
     qcReviewedText: "Deeply affectionate and loyal"
-    qcTranslated: "Deeply affectionate and righteous"
+    qcTranslated: "Deep affection, strong loyalty"
     qcStatus: Corrected
-    qcQualityScore: 90
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 2
     text: "与一名角色好感达到100"
     translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcQualityScore: 60
+    qcReviewedText: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
+    qcTranslated: "Reach a favorability of 100 with a character"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
   - split: 5
     text: "无"
     translated: "None"
@@ -547,14 +562,19 @@
   - split: 1
     text: "义结金兰"
     translated: "Bonds of sisterhood"
-    qcQualityScore: 30
+    qcReviewedText: "Bonds of sisterhood"
+    qcTranslated: "Blood Oath"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
   - split: 2
     text: "与一名角色结义"
     translated: "Buddy up with a character"
     qcReviewedText: "Buddy up with a character"
-    qcTranslated: "Form a brotherhood with a character"
+    qcTranslated: "Become sworn siblings with a character"
     qcStatus: Corrected
-    qcQualityScore: 70
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 5
     text: "无"
     translated: "None"
@@ -566,13 +586,17 @@
   - split: 1
     text: "相濡以沫"
     translated: "To share one's fate"
+    qcReviewedText: "To share one's fate"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "与一名角色结缘"
     translated: "Befriend a character"
     qcReviewedText: "Befriend a character"
-    qcTranslated: "Establish a Bond with a Character"
+    qcTranslated: "Form a bond with a character"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 65
   - split: 5
     text: "无"
     translated: "None"
@@ -585,9 +609,8 @@
     text: "海誓山盟"
     translated: "Eternal vows in the mountains and by the sea"
     qcReviewedText: "Eternal vows in the mountains and by the sea"
-    qcTranslated: "Eternal vows by sea and mountain"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "与一名角色结为夫妻"
     translated: "Marry a character"
@@ -606,22 +629,25 @@
     text: "天下第一"
     translated: "Number One Under Heaven"
     qcReviewedText: "Number One Under Heaven"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "World's Number One"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
   - split: 2
     text: "达成天下第一结局"
     translated: "Achieve the Top Outcome in the World"
     qcReviewedText: "Achieve the Top Outcome in the World"
-    qcTranslated: "Achieve the Best Ending in the World"
+    qcTranslated: "Achieve the World's Best Ending"
     qcStatus: Corrected
     qcQualityScore: 70
   - split: 5
     text: "第三次泰岳大典胜出后选择归隐"
     translated: "After winning the Third Taiyue Grand Ceremony, choose to seclude oneself."
     qcReviewedText: "After winning the Third Taiyue Grand Ceremony, choose to seclude oneself."
-    qcTranslated: "After winning the third Taiyue Grand Ceremony, choose to go into seclusion."
+    qcTranslated: "Chose to retire from the world after winning the Third Taiyue Grand Ceremony"
     qcStatus: Corrected
-    qcQualityScore: 85
+    flaggedForQcReview: true
+    qcQualityScore: 60
 - raw: "29,归隐田园,达成归隐田园结局,bool,1,第三次泰岳大典失败后选择归隐"
   splits:
   - split: 1
@@ -634,13 +660,14 @@
     text: "达成归隐田园结局"
     translated: "Achieve the Retirement in the Countryside Ending"
     qcReviewedText: "Achieve the Retirement in the Countryside Ending"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Achieve the Rural Retirement Ending"
+    qcStatus: Corrected
+    qcQualityScore: 75
   - split: 5
     text: "第三次泰岳大典失败后选择归隐"
     translated: "After the failure of the Third Taiye Great Ceremony, choosing to seclude oneself."
     qcReviewedText: "After the failure of the Third Taiye Great Ceremony, choosing to seclude oneself."
-    qcTranslated: "After the failure of the Third Taiye Great Ceremony, one chooses to go into seclusion."
+    qcTranslated: "Chose seclusion after the failure of the Third Taiye Ceremony"
     qcStatus: Corrected
     qcQualityScore: 80
 - raw: "30,豪商巨贾,达成豪商巨贾结局,bool,1,达到50万银钱后进入门派/自宅"
@@ -649,23 +676,25 @@
     text: "豪商巨贾"
     translated: "Rich merchants and industrialists"
     qcReviewedText: "Rich merchants and industrialists"
-    qcTranslated: "Rich merchants and tycoons"
+    qcTranslated: "Wealthy merchants and prominent businesspeople"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 65
   - split: 2
     text: "达成豪商巨贾结局"
     translated: "Achieve the Outrageous Merchant Outcome"
     qcReviewedText: "Achieve the Outrageous Merchant Outcome"
-    qcTranslated: "Achieve the Tycoon Merchant Ending"
+    qcTranslated: "Achieve the Magnate Ending"
     qcStatus: Corrected
-    qcQualityScore: 70
+    flaggedForQcReview: true
+    qcQualityScore: 50
   - split: 5
     text: "达到50万银钱后进入门派"
     translated: "Reach 50 thousand silver coins to enter the Sect."
     qcReviewedText: "Reach 50 thousand silver coins to enter the Sect./Home"
-    qcTranslated: "Reach 50 thousand silver coins to enter the Sect or Home."
+    qcTranslated: "Enter the Sect or your home once you reach 50 thousand silver coins"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 90
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -680,20 +709,20 @@
     translated: "Success and fame achieved"
     qcReviewedText: "Success and fame achieved"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
   - split: 2
     text: "达成功成名就结局"
     translated: "Achieve Fame and Success Ending"
     qcReviewedText: "Achieve Fame and Success Ending"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Achieve the Fame and Success Ending"
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 5
     text: "达到9999声望后进入门派"
     translated: "Reach 9999 Reputation to Enter the Sect"
     qcReviewedText: "Reach 9999 Reputation to Enter the Sect/Home"
-    qcTranslated: "Reach 9999 Reputation to Enter the Sect/Residence"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -719,9 +748,9 @@
     text: "官职达到最高后进入门派"
     translated: "After reaching the highest official position, enter the sect."
     qcReviewedText: "After reaching the highest official position, enter the sect./Home"
-    qcTranslated: "After reaching the highest official position, enter the sect/home."
+    qcTranslated: "After reaching the highest official position, enter the Sect/Home"
     qcStatus: Corrected
-    qcQualityScore: 70
+    qcQualityScore: 90
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -735,22 +764,22 @@
     text: "权势滔天"
     translated: "Overwhelming Power"
     qcReviewedText: "Overwhelming Power"
-    qcTranslated: "Overwhelming Authority"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 95
   - split: 2
     text: "达成权势滔天结局"
     translated: "Achieve the Overwhelming Power Ending"
     qcReviewedText: "Achieve the Overwhelming Power Ending"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Achieve the All‑Powerful Ending"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 5
     text: "勋阶达到最高后进入门派"
     translated: "After reaching the highest rank, enter the Sect."
     qcReviewedText: "After reaching the highest rank, enter the Sect./Home"
-    qcTranslated: "After reaching the highest rank, enter the Sect or Home."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -764,23 +793,25 @@
     text: "名门大派"
     translated: "Elite Family Sect"
     qcReviewedText: "Elite Family Sect"
-    qcTranslated: "Elite Clan Sect"
+    qcTranslated: "Prestigious Sect"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 2
     text: "达成名门大派结局"
     translated: "Achieve the Outcome of a Renowned Clansman House"
     qcReviewedText: "Achieve the Outcome of a Renowned Clansman House"
-    qcTranslated: "Achieve the Outcome of a Renowned Sect"
+    qcTranslated: "Achieve the Grand Sect Ending"
     qcStatus: Corrected
     qcQualityScore: 70
   - split: 5
     text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派"
     translated: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect after winning the Sect Leader Conference championship."
     qcReviewedText: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect after winning the Sect Leader Conference championship./Home"
-    qcTranslated: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect/home after winning the Sect Leader Conference championship."
+    qcTranslated: "Become the Sect Leader. Requires Main Hall level 10 or above and population of 200 or more. Enter the Sect/Home after winning the Sect Leader Conference championship."
     qcStatus: Corrected
-    qcQualityScore: 85
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -794,23 +825,23 @@
     text: "武林盟主"
     translated: "Alliance Leader"
     qcReviewedText: "Alliance Leader"
-    qcTranslated: "Wulin Alliance Leader"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "达成武林盟主结局"
     translated: "Achieve the Alliance Leader Ending"
     qcReviewedText: "Achieve the Alliance Leader Ending"
     qcTranslated: "Achieve the Wulin Alliance Leader Ending"
     qcStatus: Corrected
-    qcQualityScore: 80
+    qcQualityScore: 90
   - split: 5
     text: "占领、附庸、同盟区域50%后进入门派"
     translated: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect"
     qcReviewedText: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect/Home \\nOr complete chapter 4 of the plot mode"
-    qcTranslated: "Conquer, vassalize, and form alliances with 50% of the regions to enter the Sect/Home \\nOr complete chapter 4 of the plot mode"
+    qcTranslated: "Conquer, Vassalize, or Ally with 50% of regions to enter the Sect/Home\\nOr complete Chapter 4 of the Story Mode"
     qcStatus: Corrected
-    qcQualityScore: 80
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -828,8 +859,9 @@
     text: "终归一统"
     translated: "Ultimately unified"
     qcReviewedText: "Ultimately unified"
-    qcStatus: Passed
-    qcQualityScore: 100
+    qcTranslated: "Ultimately Unified"
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 2
     text: "达成终归一统结局"
     translated: "Achieve the Ultimate Unification Ending"
@@ -840,9 +872,10 @@
     text: "占领、附庸、同盟区域100%后进入门派"
     translated: "Occupy, vassalize, ally regions 100% after entering the Sect"
     qcReviewedText: "Occupy, vassalize, ally regions 100% after entering the Sect/Home"
-    qcTranslated: "Enter the Sect/Home after occupying, vassalizing, and allying regions 100%."
+    qcTranslated: "Occupy, vassalize, or ally regions 100% to enter the Sect/Home"
     qcStatus: Corrected
-    qcQualityScore: 70
+    flaggedForQcReview: true
+    qcQualityScore: 55
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -856,20 +889,23 @@
     text: "鸾凤和鸣"
     translated: "Dragon and phoenix resonate"
     qcReviewedText: "Dragon and phoenix resonate"
-    qcTranslated: "Mandarin and phoenix resonate"
+    qcTranslated: "Luan and Feng harmonize"
     qcStatus: Corrected
-    qcQualityScore: 70
+    qcQualityScore: 85
   - split: 2
     text: "达成鸾凤和鸣结局"
     translated: "Achieve the Dragon and Phoenix Harmony Ending"
     qcReviewedText: "Achieve the Dragon and Phoenix Harmony Ending"
-    qcTranslated: "Achieve the Phoenix Harmony Ending"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
-    qcQualityScore: 60
+    qcRejectedCorrection: "While holding both a spousal relationship and 4 couple(s) with affection at 100, enter the Sect/Home"
+    qcFailureReason: " Explaination was provided when none should be given."
+    qcQualityScore: 10
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -882,33 +918,20 @@
   - split: 1
     text: "终生监禁"
     translated: "Life imprisonment"
-    qcReviewedText: "Life imprisonment"
-    qcStatus: Passed
-    qcQualityScore: 100
   - split: 2
     text: "达成终生监禁结局"
     translated: "Achieve lifetime imprisonment ending"
-    qcQualityScore: 60
   - split: 5
     text: "被捕入狱时恶名达到999"
     translated: "When arrested and sent to prison, his infamy reached 999."
-    qcReviewedText: "When arrested and sent to prison, his infamy reached 999."
-    qcTranslated: "When arrested and sent to prison, his Infamy reached 999."
-    qcStatus: Corrected
-    qcQualityScore: 95
 - raw: "39,九死一生,九死一生难度下达成任意结局,bool,1,无"
   splits:
   - split: 1
     text: "九死一生"
     translated: "Life and death"
-    qcQualityScore: 20
   - split: 2
     text: "九死一生难度下达成任意结局"
     translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
-    qcQualityScore: 50
   - split: 5
     text: "无"
     translated: "None"
-    qcReviewedText: "None"
-    qcStatus: Passed
-    qcQualityScore: 100
