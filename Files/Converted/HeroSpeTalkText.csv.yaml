@@ -9,9 +9,7 @@
   - split: 2
     text: "阎罗王"
     translated: "King Yama"
-    qcReviewedText: "King YanΝuo"
     qcTranslated: "King Yama"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
   - split: 3
@@ -938,9 +936,7 @@
   - split: 10
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
-    qcReviewedText: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
     qcTranslated: "A soldier employs deception.\\nTherefore, when capable, appear incapable; when using something, appear not to use it; when drawing near, appear distant; when far away, appear near.\\nAttack where they are unprepared, strike when they least expect it. This is the essence of military strategy and cannot be divulged beforehand."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
   - split: 10
@@ -1160,9 +1156,7 @@
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。"
     translated: "There are too many xingyinggouguo beggars in this world."
-    qcReviewedText: "There are too many xingyinggouguo beggars in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
     qcTranslated: "There are too many small‑minded and unscrupulous people in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
   - split: 2
@@ -1347,9 +1341,7 @@
   - split: 5
     text: "#PlayerName#若敢阻碍我铁掌帮行事，"
     translated: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,..."
-    qcReviewedText: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,...\\nYou can't blame an old man for that."
     qcTranslated: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,...\\nYou can't blame me for not showing you any mercy."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
   - split: 5
@@ -1477,9 +1469,7 @@
   - split: 3
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
-    qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
     qcTranslated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nIn private, they aren't above murder and arson‑far worse than this girl. ...\\n#PlayerName#, you couldn't be one of them, right?"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
   - split: 3

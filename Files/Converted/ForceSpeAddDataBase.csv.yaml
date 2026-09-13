@@ -219,11 +219,8 @@
   - split: 2
     text: "长兵经验"
     translated: "Long weapon experience"
-    qcReviewedText: "Long‑sword experience"
-    qcTranslated: "Polearm experience"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Long weapon experience"
 - raw: "24,奇门经验,奇门经验,TRUE,0.02"
   splits:
   - split: 2
@@ -288,9 +285,7 @@
   - split: 2
     text: "木植经验"
     translated: "Tree planting experience"
-    qcReviewedText: "Tree planting experience"
     qcTranslated: "Wood experience"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
 - raw: "32,锻造经验,锻造经验,TRUE,0.02"
@@ -349,9 +344,7 @@
   - split: 2
     text: "全员意志"
     translated: "All willpower"
-    qcReviewedText: "All willpower"
     qcTranslated: "Will of all members"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
 - raw: "39,全员体质,全员体质,FALSE,1"
@@ -431,9 +424,7 @@
   - split: 2
     text: "全员长兵"
     translated: "All long weapons"
-    qcReviewedText: "Full‑troop soldier"
     qcTranslated: "Full‑troop long weapons"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
 - raw: "48,全员奇门,全员奇门,FALSE,1"
@@ -450,9 +441,7 @@
   - split: 2
     text: "全员射术"
     translated: "All‑arrow shooting skill"
-    qcReviewedText: "All‑arrow shooting skill"
     qcTranslated: "All archery skill"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
 - raw: "50,全员医术,全员医术,FALSE,1"
@@ -460,9 +449,7 @@
   - split: 2
     text: "全员医术"
     translated: "All‑Clad Medical Skill"
-    qcReviewedText: "All‑Clad Medical Skill"
     qcTranslated: "All‑Rank Medical Skill"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
 - raw: "51,全员毒术,全员毒术,FALSE,1"
@@ -505,9 +492,7 @@
   - split: 2
     text: "全员木植"
     translated: "All Zhu Ye"
-    qcReviewedText: "All Zhu Ye"
     qcTranslated: "All Wooden Units"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
 - raw: "56,全员锻造,全员锻造,FALSE,1"
@@ -515,9 +500,7 @@
   - split: 2
     text: "全员锻造"
     translated: "All‑Item Forge"
-    qcReviewedText: "All‑Item Forge"
     qcTranslated: "All‑Member Smithing"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
 - raw: "57,全员炼药,全员炼药,FALSE,1"

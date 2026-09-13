@@ -88,4 +88,13 @@
   `"Family.Given"` `.` separator, not a translation issue), a re-entrancy guard for the retry call,
   a "translated-looking debug log text" misdiagnosis worth remembering, and why the earlier
   blanket `OnClick_Prefix` callParam reverse-translate was removed instead of kept/flagged.
+- [`docs/plottext-width-overflow-investigation.md`](docs/plottext-width-overflow-investigation.md)
+  — full narrative behind the `PlotTextBack/PlotText` "grows past screen size" fix: a wrong-node
+  misdiagnosis (a separate static backdrop panel, not `PlotTextBack`, was the visible border), why
+  clamping `RectTransform.sizeDelta` directly caused position drift (fixed by clamping
+  `Text.preferredWidth` instead), and two wrong safe-width-formula guesses before confirming in-game
+  which direction the bubble actually grows.
+- [`docs/plottextsizepatches-agent-reference.md`](docs/plottextsizepatches-agent-reference.md) —
+  concise root-cause, fix-rationale, formula, interop, and change-checklist reference for agents
+  editing `PlotTextSizePatches.cs`.
 

@@ -23,9 +23,7 @@
   - split: 1
     text: "有间客栈"
     translated: "A Moment's Inn"
-    qcReviewedText: "A Moment's Inn"
     qcTranslated: "An Inn of Moments"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
   - split: 2

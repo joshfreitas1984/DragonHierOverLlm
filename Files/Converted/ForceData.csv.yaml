@@ -269,9 +269,7 @@
   - split: 15
     text: "炼蛊"
     translated: "Incubate poison insects"
-    qcReviewedText: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
     qcTranslated: "<b>Incubate Poison</b>：Consume medicinal herbs or ingredients in the Sea of Venom to obtain poisons, then fuse low‑level poisons to create powerful high‑level poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases by ‑25%."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
   - split: 15
@@ -662,9 +660,7 @@
   - split: 15
     text: "海沙"
     translated: "Desert sand"
-    qcReviewedText: "<b>Desert sand</b>：Special Skill Experience +20%, Cooking Experience+20%。"
     qcTranslated: "<b>Sea sand</b>: Special Skill Experience +20%, Cooking Experience +20%"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
   - split: 15
@@ -759,9 +755,7 @@
   - split: 15
     text: "伏牛"
     translated: "Wutou Mountain"
-    qcReviewedText: "<b>Wutou Mountain</b>：Long Sword Experience +20%, Woodcutter Experience+20%。"
     qcTranslated: "<b>Funiu</b>：Long Weapon Experience +20%, Wood Experience +20%"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
   - split: 15

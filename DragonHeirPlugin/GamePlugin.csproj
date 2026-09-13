@@ -72,6 +72,16 @@
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
+    <!-- TextAnchor (Text.alignment's type) lives here - referenced by PlotTextSizePatches'
+         clamp-event log line. -->
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <!-- Canvas lives here - PlotTextSizePatches walks up to the root Canvas to read its
+         reference-resolution width when computing PlotText's safe max width. -->
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
     <Reference Include="Il2CppSystem">
       <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\Il2CppSystem.dll</HintPath>
     </Reference>

@@ -68,9 +68,7 @@
   - split: 1
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
-    qcReviewedText: "Drinks not intoxicating"
     qcTranslated: "Can drink a thousand cups without getting drunk"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
   - split: 2
@@ -323,9 +321,7 @@
   - split: 2
     text: "累计煅烧"
     translated: "Accumulated Firing"
-    qcReviewedText: "Accumulated Firing/Prepare/100 times refined"
     qcTranslated: "Accumulated 100 times of firing/processing/refining"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
   - split: 2
@@ -545,9 +541,7 @@
   - split: 2
     text: "与一名角色好感达到100"
     translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcReviewedText: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
     qcTranslated: "Reaching 100 good feeling with a character will form a strong bond with them."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
   - split: 5
@@ -561,9 +555,7 @@
   - split: 1
     text: "义结金兰"
     translated: "Bonds of sisterhood"
-    qcReviewedText: "Bonds of sisterhood"
     qcTranslated: "Bonds of brotherhood in arms"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
   - split: 2
@@ -793,9 +785,7 @@
   - split: 2
     text: "达成名门大派结局"
     translated: "Achieve the Outcome of a Renowned Clansman House"
-    qcReviewedText: "Achieve the Outcome of a Renowned Clansman House"
     qcTranslated: "Achieve the Outcome of a Famous Sect"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
   - split: 5
@@ -879,9 +869,7 @@
   - split: 1
     text: "鸾凤和鸣"
     translated: "Dragon and phoenix resonate"
-    qcReviewedText: "Dragon and phoenix resonate"
     qcTranslated: "Phoenix and crane resonate"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
   - split: 2
@@ -894,9 +882,7 @@
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
-    qcReviewedText: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
     qcTranslated: "While having both a marital relationship and 4 couples, and the favorability towards each is 100, you can enter the sect/home."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
   - split: 5
@@ -917,9 +903,7 @@
   - split: 2
     text: "达成终生监禁结局"
     translated: "Achieve lifetime imprisonment ending"
-    qcReviewedText: "Achieve lifetime imprisonment ending"
     qcTranslated: "Achieve the ending of life imprisonment"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
   - split: 5
@@ -934,17 +918,13 @@
   - split: 1
     text: "九死一生"
     translated: "Life and death"
-    qcReviewedText: "Life and death"
     qcTranslated: "Nine lives in the balance"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
   - split: 2
     text: "九死一生难度下达成任意结局"
     translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
-    qcReviewedText: "Survive Any Ending on Nine Lives Betrayal Difficulty"
     qcTranslated: "Achieve Any Ending on Nine Lives One in a Thousand Difficulty"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
   - split: 5

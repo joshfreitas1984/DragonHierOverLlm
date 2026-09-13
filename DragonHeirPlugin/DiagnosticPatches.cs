@@ -124,7 +124,7 @@ internal static class DiagnosticPatches
     }
 
     /// <summary>
-    /// Describes a field value concisely: for anything with a public Count property (List, 
+    /// Describes a field value concisely: for anything with a public Count property (List,
     /// Dictionary, Il2Cpp collections, etc.) logs the runtime type + Count; otherwise falls back
     /// to ToString(). Never throws - callers already wrap per-field access in try/catch too.
     /// </summary>

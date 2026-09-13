@@ -2,7 +2,9 @@
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
+using BepInEx.Unity.IL2CPP.Configuration;
 using HarmonyLib;
+using UnityEngine;
 using System;
 using System.Reflection;
 using System.Text;
@@ -86,6 +88,38 @@ public class MainPlugin : BasePlugin
     // DynamicStringPatches.SentenceBoundaryAwarePermissiveClass.
     internal static ConfigEntry<bool> SentenceBoundaryAwareTemplateCaptureEnabled;
 
+    // On by default - real fix for the "PlotTextBack/PlotText grows past screen size" bug. See
+    // docs/plottextsizepatches-agent-reference.md for the investigation/rationale. PlotText's
+    // reported preferred width is clamped every time the game's own layout system computes it,
+    // since the base game's own VerticalLayoutGroup on PlotTextBack lets the child size itself to
+    // its unconstrained single-line preferred width with no cap.
+    internal static ConfigEntry<bool> ClampPlotTextWidthEnabled;
+
+    // Fallback only (see PlotTextWidthMargin below for the value that actually matters day to
+    // day) - used only if PlotTextSizePatches can't compute the real safe width dynamically at
+    // runtime (e.g. no Canvas ancestor found). Local RectTransform units, not pixels. Applies to
+    // left/right speaker lines only - see PlotTextMaxWidthCentered for the neutral/narrator case.
+    internal static ConfigEntry<float> PlotTextMaxWidth;
+
+    // See PlotTextMaxWidth above - this is the separate cap used when PlotTextBack is pivoted at
+    // (0.5, 0.5) (a neutral/narrator line growing symmetrically from screen-center) rather than
+    // (0, 0.5) (a real speaker's line growing one-directionally from an off-center anchor).
+    // Only used as a fallback now that PlotTextSizePatches computes the real safe width from the
+    // canvas's own size and PlotTextBack's anchor offset - see PlotTextMaxWidth's own comment.
+    internal static ConfigEntry<float> PlotTextMaxWidthCentered;
+
+    // Safety buffer (in local RectTransform units) kept clear between PlotText's computed max
+    // width and the actual screen edge, when ClampPlotTextWidth derives the cap dynamically from
+    // the canvas size and PlotTextBack's anchor position instead of a flat guessed constant.
+    internal static ConfigEntry<float> PlotTextWidthMargin;
+
+    // Off by default (Empty shortcut = never triggers) - forces a long, no-CJK test string into
+    // the live PlotText component so wrapping/clamping can be visually verified without hunting
+    // for a sufficiently long dialogue in-game. Requires a plot dialogue to have been opened at
+    // least once already this session (caches the PlotController instance). See
+    // PlotTextSizePatches.
+    internal static ConfigEntry<KeyboardShortcut> ForceTestPlotTextHotkey;
+
     public override void Load()
     {
         Logger = base.Log;
@@ -140,6 +174,36 @@ public class MainPlugin : BasePlugin
             "FixNoCostChoiceClick",
             true,
             "When true, PlotInteractController's dialogue choice buttons that have no cost resource (e.g. the 夺取物件/RobHeroItemChoose choices, and the resource-point-attack 开战/坐镇指挥 choices) actually fire their callFuc instead of silently doing nothing, working around a gap in the base game where the dispatch is only reached when choiceData.costResource is non-null. Turn off if a future game patch fixes this at the source. See PlotInteractControllerPatches.");
+
+        ClampPlotTextWidthEnabled = Config.Bind(
+            "Game Bugfixes",
+            "ClampPlotTextWidth",
+            true,
+            "When true, PlotText's reported preferred width is clamped every time the game's own layout system computes it, instead of letting it size to fit the whole dialogue on one line. Works around PlotTextBack's VerticalLayoutGroup not controlling child width, which otherwise lets long (especially translated) dialogue push PlotText past the edges of the screen. See docs/plottextsizepatches-agent-reference.md.");
+
+        PlotTextMaxWidth = Config.Bind(
+            "Game Bugfixes",
+            "PlotTextMaxWidth",
+            300f,
+            "Fallback only - used if the dynamic calculation can't run (e.g. no Canvas ancestor found). Maximum width (in local RectTransform units, not pixels) for a left/right speaker line (PlotTextBack pivoted at (0, 0.5)).");
+
+        PlotTextMaxWidthCentered = Config.Bind(
+            "Game Bugfixes",
+            "PlotTextMaxWidthCentered",
+            900f,
+            "Fallback only - used if the dynamic calculation can't run (e.g. no Canvas ancestor found). Maximum width (in local RectTransform units, not pixels) for a neutral/narrator line (PlotTextBack pivoted at (0.5, 0.5)).");
+
+        PlotTextWidthMargin = Config.Bind(
+            "Game Bugfixes",
+            "PlotTextWidthMargin",
+            150f,
+            "Safety buffer (in local RectTransform units, not pixels) kept clear between PlotText's dynamically computed max width and the actual screen edge. This is the value to tune day to day - live-reloaded, no restart needed. Increase if text still looks close to clipping; decrease to reclaim more usable width. See docs/plottextsizepatches-agent-reference.md.");
+
+        ForceTestPlotTextHotkey = Config.Bind(
+            "Debug",
+            "ForceTestPlotTextHotkey",
+            KeyboardShortcut.Empty,
+            "When set (e.g. F8), forces a long test string into the currently cached PlotText component so PlotTextMaxWidth/word-wrap behavior can be verified visually without finding a sufficiently long real dialogue. Requires a plot dialogue to have already been opened once this session. See docs/plottextsizepatches-agent-reference.md.");
 
         // Register codepage 936 (GBK) support - .NET Core only ships Unicode encodings by
         // default. Some game TextAssets (e.g. SpeHeroFaceData) are GBK-encoded rather than
@@ -219,6 +283,21 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(ItemIconPatches));
 
         Harmony.CreateAndPatchAll(typeof(DiagnosticPatches));
+
+        // Wrapped separately - binds directly against PlotController's real interop methods
+        // (ShowSinglePlot/PlotTextShowFinished) plus Text.preferredWidth's getter and
+        // Time.deltaTime's getter (read every frame by ordinary game code, used as this game's
+        // only known-safe way to get a periodic tick from a BasePlugin - see
+        // docs/plottextsizepatches-agent-reference.md for why AddComponent<T>/ClassInjector are
+        // not used here). A binding failure on any of these must not take down every patch above.
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(PlotTextSizePatches));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch PlotTextSizePatches: {ex}");
+        }
 
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
     }

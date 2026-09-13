@@ -56,9 +56,7 @@
   - split: 4
     text: "源于古代递送紧急军情“羽檄”之兵士的步法"
     translated: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
-    qcReviewedText: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
     qcTranslated: "Footwork derived from ancient emergency military dispatch couriers"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
 - raw: "4,轻功,0,轻身术,每日背负沙袋行走并渐增负重，乃是最基础的轻功练习之法,,0.9,轻功1,轻功4;灵巧4;意志4,,轻功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
@@ -199,9 +197,7 @@
   - split: 4
     text: "猎户常用的铁叉招式"
     translated: "Scorpio's common iron fork technique"
-    qcReviewedText: "Scorpio's common iron fork technique"
     qcTranslated: "Hunter's common iron fork technique"
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
 - raw: "20,长兵,0,禁军枪术,军中流传的基础枪法,12,1,体质1,,长兵2,长兵10,\"4,0,0\",\"4,2,3\",,4,-1,0,胸16,胸4,,,skill3_0,,穿刺_灰黄-Target-Grid-Happen,长兵,Same,FALSE,0,0"
@@ -562,9 +558,7 @@
   - split: 4
     text: "长白山人观察野狐缠斗猎犬而悟出的拳法，招式多为虚招，意在智取而非力胜"
     translated: "White Crane observes foxes fighting dogs; the martial arts developed from this focus on cunning rather than brute force."
-    qcReviewedText: "White Crane observes foxes fighting dogs; the martial arts developed from this focus on cunning rather than brute force."
     qcTranslated: "The boxing style observed by people from Changbai Mountain while watching wild foxes fight hunting dogs, with many of the moves being feints, aiming to outsmart rather than overpower."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
 - raw: "61,拳掌,1,螳螂拳,此拳法手型独特，如螳螂前爪般勾起，招式灵活迅速，讲求以螳螂捕蝉之势制敌,12,1.2,拳掌1;灵巧1,,灵巧1;拳掌2;内力0.1,拳掌20;灵巧15,\"1,1,2\",\"0,0,0\",虚弱0.06,10,-1,0,头20,头8,,,skill0_0,,乱斩-Target-Grid-Happen,拳,Same,FALSE,0,0"
@@ -888,9 +882,7 @@
   - split: 4
     text: "牛头乃阴间衙役，手持钢叉，力能排山。此招假其名号，由身强体壮者使出，确实威猛异常"
     translated: "The Obeah Man is a dweller of the underworld, wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display."
-    qcReviewedText: "The Obeah Man is a dweller of the underworld, wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display."
     qcTranslated: "The Obeah Man is an underworld officer, holding a steel spear and possessing the strength to move mountains. This move borrows his name and is performed by someone who is physically strong, indeed it is exceptionally fierce."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
 - raw: "97,奇门,1,八卦鞭法,八卦门成名鞭法，鞭势暗含八卦之理，在江湖中也多有流传,12,1,奇门1;意志1,,意志1;奇门2;内力0.1,奇门10,\"3,1,1\",\"7,0,0\",命中0.06,9,-1,0,手16,手12,,,skill4_4,,八卦升-Target-Grid-Happen;旋风-Target-Grid-Start,鞭,Same,FALSE,0,0"
@@ -1625,9 +1617,7 @@
   - split: 4
     text: "此杖法以招式严谨，防守致密见长，修习者需以水桶取水泼之而不能进，方见其功力"
     translated: "This staff technique excels in rigorous forms and dense defense. Practitioners must receive water like buckets and pour it out without advancing, truly showcasing their power."
-    qcReviewedText: "This staff technique excels in rigorous forms and dense defense. Practitioners must receive water like buckets and pour it out without advancing, truly showcasing their power."
     qcTranslated: "This staff technique excels in rigorous forms and dense defense. Practitioners must take water in buckets and pour it out without advancing, truly showcasing their power."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
 - raw: "179,长兵,2,六合大枪,以六种基本招式为根基的简练枪法，枪路刚猛直接，只需身强力壮者便能发挥威力,16,1,长兵2;体质1,,体质3;长兵1;内力0.1,长兵30;体质20,\"4,0,0\",\"4,1,3\",伤害0.08,16,-1,0,心12;胸8,心7;胸3,,,skill3_1,,地面打击-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
@@ -4172,9 +4162,7 @@
   - split: 4
     text: "清风徐来，水波不兴，此剑法不急不躁，舒缓平稳，旨在锻炼经脉而非逞强伤人"
     translated: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
-    qcReviewedText: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
     qcTranslated: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen. Clear wind comes gently, the water's waves do not stir, this sword technique does not rush or fret, it is soothing and steady, aiming to train the meridians rather than injuring others."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 40
 - raw: "464,内功,1,静守谷神法,茅山派动静结合，凝练心神的基础内功，修习者需盘膝端坐，咬牙合口，掌按耳门，腹内鼓气以修炼内息,,1.1,内功1;经脉1,生命上限20;内力上限60;内功6;经脉6;恢复0.03;康复0.06;负面抗性0.03,,内功20;经脉10,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
@@ -5131,9 +5119,7 @@
   - split: 4
     text: "一边移动，一边以腿脚扬起沙尘迷惑敌人的步法"
     translated: "One‑step to move while kicking up dust to confuse the enemy"
-    qcReviewedText: "One‑step to move while kicking up dust to confuse the enemy"
     qcTranslated: "One‑step to move while kicking up dust to confuse the enemy with it."
-    qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 60
 - raw: "571,绝技,0,鬼夜哭,过程极为艰苦的锻炼力道之法，修习之时罕有不疼痛哭嚎者，因而得名,,1.1,力道1,绝技4;力道4;壮骨0.04,,绝技5;力道5,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
@@ -5416,10 +5402,8 @@
   - split: 4
     text: "阎罗王自蒙古摔跤术中悟出，以怪力攻敌下盘使其失去重心的拳法，高手相争之时若一方跌倒在地，无异于落入任人鱼肉之境地"
     translated: "King Yama learned this fist technique from Mongolian wrestling, using his extraordinary strength to attack an opponent's lower body, causing them to lose their balance. In a battle between skilled fighters, if one falls to the ground, it is akin to being at the mercy of their opponent."
-    qcReviewedText: "Emperor Yan derived this fist technique from Mongolian wrestling, focusing on using extraordinary strength to attack an opponent's lower body and unbalance them. In a battle of high‑level martial artists, if one falls to the ground, they are essentially in a position where they become easy prey for their opponent."
-    qcTranslated: "Emperor Yan derived this fist technique from Mongolian wrestling, focusing on using extraordinary strength to attack an opponent's lower body and unbalance them. In a battle of high‑level martial artists, if one falls to the ground, they are essentially in a position where they become easy prey for their opponent."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "King Yama learned this fist technique from Mongolian wrestling, using his extraordinary strength to attack an opponent's lower body, causing them to lose their balance. In a battle between skilled fighters, if one falls to the ground, it is akin to being at the mercy of their opponent."
 - raw: "603,拳掌,4,九死离魂掌,外劲威猛霸道，内劲怒涛汹涌的掌法，高手见之犹需避其锋芒，而贸然硬接此掌者，难免魂飞魄散，九死一生,19,1.1,拳掌潜力2;拳掌1;经脉1,,经脉4;拳掌3;内力0.1,拳掌65;经脉45,\"0,1,2\",\"0,0,1\",死战0.06;不愈0.12,23,8,0,手8;胸19,手8;胸4,,,skill0_1,,蓝火爆发-Target-Grid-Happen,拳,Distance,FALSE,0,0"
   splits:
   - split: 4

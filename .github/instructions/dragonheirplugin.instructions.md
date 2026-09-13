@@ -44,6 +44,17 @@ signatures once both namespaces are in scope.
   any IL2CPP-object-handling code as concrete, non-generic methods.
 - `GetComponent(Type)`-style filtered lookups can return a wrong-typed result in this IL2CPP
   build family — guard with a manual type check rather than trusting the filter.
+- **`is T`/`as T` pattern-matching against an element from `GetComponents<Component>()`** silently
+  fails to match even when the component genuinely IS that type — confirmed for `ContentSizeFitter`
+  and `VerticalLayoutGroup` (reading the real IL2CPP native class name directly proved both were
+  present while `is ContentSizeFitter`/`is LayoutGroup` kept missing them). Use a direct,
+  statically-typed `GetComponent<T>()` call instead of enumerating `GetComponents<Component>()` and
+  pattern-matching each element. See
+  `DragonHeirPlugin/docs/plottext-width-overflow-investigation.md`.
+- **`RectTransform.GetWorldCorners`** does not marshal correctly through this game's IL2CPP
+  interop — it always returns 4 identical, effectively-zeroed corners regardless of the
+  RectTransform's real bounds. Use `.position` (a plain property read) plus
+  `RectTransformUtility.WorldToScreenPoint` instead for a screen-space ground-truth check.
 
 ## Confirmed-safe patterns
 
@@ -269,4 +280,30 @@ the surname/given-name part untranslated while the relation-word suffix still tr
 like only "half" the patch works. Use `Directory.GetFiles(resourcesDir, fileName,
 SearchOption.AllDirectories)` (mirroring `DynamicStringPatches.FindResourceFiles`) — default any
 future lookup dictionary to a recursive search under `resources\`, not a flat path check.
+
+## `PlotTextSizePatches` — dialogue speech bubble width clamp (current state)
+
+`Canvas/PlotPanel/PlotTextBack/PlotText`'s `VerticalLayoutGroup` does not control child width, so
+`PlotText` (legacy `UnityEngine.UI.Text`) sizes itself to its own unconstrained single-line
+`Text.preferredWidth` — long/translated dialogue routinely overflows the screen.
+`PlotTextSizePatches.cs` Harmony-postfixes `Text.preferredWidth`'s getter and clamps it to a safe
+value computed from the canvas's own reference-resolution width and `PlotTextBack`'s real anchor
+offset (never a hand-guessed flat constant as the primary path). **Clamp the layout system's
+*input* (`Text.preferredWidth`), not its *output* (`RectTransform.sizeDelta`)** — clamping the
+output directly was tried first and caused position/size disagreement (the box visibly drifted
+across the screen instead of converging), since `VerticalLayoutGroup` had already used the
+uncapped `preferredWidth` to calculate the child's aligned position before the clamped size was
+ever written.
+
+A config-bound `KeyboardShortcut` (`ForceTestPlotTextHotkey`, default disabled) forces a long test
+string into the currently cached `PlotText` for manual verification. Since `BasePlugin` never gets
+a real `Update()` call and `AddComponent<T>`/`ClassInjector` crash here (per "Confirmed-unsafe
+patterns" above), its tick is driven by Harmony-patching `Time.deltaTime`'s getter (read every
+frame by ordinary game code), deduped by `Time.frameCount` — the same pattern already proven in
+`FanslationStudio.Plugins.TextResizerPlugin`.
+
+Full rationale, formulas, and change checklist:
+[`DragonHeirPlugin/docs/plottextsizepatches-agent-reference.md`](../../DragonHeirPlugin/docs/plottextsizepatches-agent-reference.md).
+Investigation narrative (the wrong-node and wrong-formula misdiagnoses along the way):
+[`DragonHeirPlugin/docs/plottext-width-overflow-investigation.md`](../../DragonHeirPlugin/docs/plottext-width-overflow-investigation.md).
 
