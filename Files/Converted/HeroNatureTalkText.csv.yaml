@@ -25,8 +25,6 @@
     text: "忠厚"
     translated: "Honesty"
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Honesty"
   - split: 5
     text: "简单"
     translated: "Simple"
@@ -508,8 +506,6 @@
     text: "飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。"
     translated: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
   - split: 10
     text: "十步杀一人，千里不留行。事了拂衣去，深藏身与名。"
     translated: "Ten steps to kill one man, a thousand miles go unimpeded. After matters are resolved, I depart quietly, hiding my presence and name."

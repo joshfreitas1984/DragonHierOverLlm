@@ -59,8 +59,6 @@
     qcRejectedCorrection: "Footwork derived from ancient soldiers who delivered urgent military dispatches known as \"feather檄\" (Note: The glossary should include the correct term for \"羽檄\", as \"feather檄\" is not accurate.)"
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
 - raw: "4,轻功,0,轻身术,每日背负沙袋行走并渐增负重，乃是最基础的轻功练习之法,,0.9,轻功1,轻功4;灵巧4;意志4,,轻功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -200,18 +198,11 @@
     text: "猎户常用的铁叉招式"
     translated: "Scorpio's common iron fork technique"
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Scorpio's common iron fork technique"
 - raw: "20,长兵,0,禁军枪术,军中流传的基础枪法,12,1,体质1,,长兵2,长兵10,\"4,0,0\",\"4,2,3\",,4,-1,0,胸16,胸4,,,skill3_0,,穿刺_灰黄-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "军中流传的基础枪法"
     translated: "Basic Spear Techniques Passed Down in the Army"
-    qcReviewedText: "Basic Spear Techniques Passed Down in the Army"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Basic Gun Techniques Passed Down in the Army"
-    qcFailureReason: "Glossary term '枪法' (expected 'Spear Art') is missing."
 - raw: "21,奇门,0,三路鞭法,分为上中下三路的基本鞭法,10,1.1,奇门1,,智力2;奇门1;内力0.1,,\"3,1,1\",\"7,0,0\",震脑0.04,5,-1,0,头14,头6,,,skill4_3,,乱刃-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -563,8 +554,6 @@
     qcRejectedCorrection: "The拳法 developed by people observing wild foxes fighting hunting dogs on Mount Changbai is full of feints, aiming to outwit rather than overpower.\\n"
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "White Crane observes foxes fighting dogs; the martial arts developed from this focus on cunning rather than brute force."
 - raw: "61,拳掌,1,螳螂拳,此拳法手型独特，如螳螂前爪般勾起，招式灵活迅速，讲求以螳螂捕蝉之势制敌,12,1.2,拳掌1;灵巧1,,灵巧1;拳掌2;内力0.1,拳掌20;灵巧15,\"1,1,2\",\"0,0,0\",虚弱0.06,10,-1,0,头20,头8,,,skill0_0,,乱斩-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -759,11 +748,6 @@
   - split: 4
     text: "需要双手握刀的刀法，以身催刀，刀随身转，使用者悟性越高，刀势越难于预料"
     translated: "A Blade Art that requires dual‑handed grip. The body drives the blade, and the blade follows the body's movement. The higher the user's comprehension, the harder it is to predict the blade's momentum."
-    qcReviewedText: "A Blade Art that requires dual‑handed grip. The body drives the blade, and the blade follows the body's movement. The higher the user's comprehension, the harder it is to predict the blade's momentum."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "A Blade Art that requires dual-handed grip. The body drives the blade, and the blade follows the body's movement. The higher the user's悟性, the harder it is to predict the blade's momentum."
-    qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
 - raw: "83,刀法,1,雁行刀,注重刚柔并济之刀法，因其招式不疾不徐，横平竖直，观之有如雁行而闻名,13,1.1,刀法1;灵巧1,,力道1;灵巧1;刀法2,刀法15;灵巧10,\"4,0,0\",\"5,2,2\",命中0.06,11,-1,0,心16,心12,,,skill2_1,,十字斩-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -889,8 +873,6 @@
     qcRejectedCorrection: "The Obeah Man is a yamai衙役 (yamai should be corrected to衙役 according to the source text), wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display. The term \"Obeah Man\" is incorrect and should be replaced with the correct term for the character in context. Additionally, \"yamai\" should be \"衙役\" as per the source text."
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The Obeah Man is a dweller of the underworld, wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display."
 - raw: "97,奇门,1,八卦鞭法,八卦门成名鞭法，鞭势暗含八卦之理，在江湖中也多有流传,12,1,奇门1;意志1,,意志1;奇门2;内力0.1,奇门10,\"3,1,1\",\"7,0,0\",命中0.06,9,-1,0,手16,手12,,,skill4_4,,八卦升-Target-Grid-Happen;旋风-Target-Grid-Start,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1172,11 +1154,6 @@
   - split: 4
     text: "主修跳跃攀爬之法，以高楼或高塔为训练工具的轻功法门，练成者顷刻之间便能纵身而上数层"
     translated: "Mastering the techniques of leaping and climbing, this lightness skill uses high buildings or towers as training tools. Upon mastery, one can ascend several stories in an instant."
-    qcReviewedText: "Mastering the techniques of leaping and climbing, this lightness skill uses high buildings or towers as training tools. Upon mastery, one can ascend several stories in an instant."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Mastering the techniques of leaping and climbing, this lightness skill (Qinggong) uses high buildings or towers as training tools. Upon mastery, one can ascend several stories in an instant."
-    qcFailureReason: " Explaination was provided when none should be given."
 - raw: "129,轻功,2,壁虎游墙,借助轻功与内劲吸附，在墙面游行之轻功，精通此术者于广厦高墙上亦能如履平地,,1,轻功1;灵巧1;经脉1,轻功9;经脉9;神行0.08,,轻功30;经脉15,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1559,11 +1536,6 @@
   - split: 4
     text: "蕴含八阵图义理的刀法，以生死八门配合五行生克，经过精确计算使出，方能发挥威力"
     translated: "While combining blade techniques following the principles of Ba Yan Tu with Wu Xing sheng, they can truly unleash their power after precise calculation."
-    qcReviewedText: "While combining blade techniques following the principles of Ba Yan Tu with Wu Xing sheng, they can truly unleash their power after precise calculation."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "A saber technique蕴含着八阵图的义理，结合生死八门和五行生克，经过精确计算才能发挥威力。: Combining Blade Technique with the principles of Ba Yan Tu, it aligns with the Eight Doors of Life and Death and the Five Elements' generation and克制, unleashing its power only after precise calculation."
-    qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
 - raw: "172,刀法,2,春秋刀术,从长兵偃月刀中演化而来的刀术，其招式气势雄伟，威武庄严，往往令敌人不战自危,15,1,刀法1;意志1;经脉1,,意志2;刀法2;内力0.2,刀法30;意志20;经脉10,\"4,0,0\",\"5,1,2\",定神0.08,15,-1,0,头19,头12,,,skill2_0,,火龙卷-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1626,8 +1598,6 @@
     qcRejectedCorrection: "This staff technique excels in rigorous forms and dense defense. Practitioners must use water buckets to泼之而不能进, showcasing their skill and mastery. Note: The phrase \"泼之而不能进\" should be accurately translated or explained in the context of the technique."
     qcFailureReason: " Your previous translation contains Chinese characters. This is unacceptable — all output must be English only.\r\n\r\nReview the translation you just provided and locate every instance of Chinese text. Compare it against the original Chinese from the first user prompt and translate all remaining Chinese characters into fluent, natural English."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "This staff technique excels in rigorous forms and dense defense. Practitioners must receive water like buckets and pour it out without advancing, truly showcasing their power."
 - raw: "179,长兵,2,六合大枪,以六种基本招式为根基的简练枪法，枪路刚猛直接，只需身强力壮者便能发挥威力,16,1,长兵2;体质1,,体质3;长兵1;内力0.1,长兵30;体质20,\"4,0,0\",\"4,1,3\",伤害0.08,16,-1,0,心12;胸8,心7;胸3,,,skill3_1,,地面打击-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -2133,11 +2103,6 @@
   - split: 4
     text: "东瀛武士之刀法，招法看似简单，实则强调对人体力道之极致运用，无需内力修为便能发挥威力"
     translated: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
-    qcReviewedText: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost application of strength, and can still unleash power without requiring inner power cultivation."
-    qcFailureReason: "Glossary term '体力' (expected 'Stamina') is missing."
 - raw: "236,刀法,3,升天斩,猛将所传，刀势自下而上攻击骑兵之招数，据说由臂力惊人者使用，能挑飞战马,20,1,刀法潜力1;刀法1;力道1,,力道3;刀法2;内力0.2,刀法45;力道30,\"4,0,0\",\"4,1,3\",死战0.05;失衡0.05,22,-1,0,头16;胸6,头8;胸4,,,skill2_1,,升龙斩-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -4179,8 +4144,6 @@
     text: "清风徐来，水波不兴，此剑法不急不躁，舒缓平稳，旨在锻炼经脉而非逞强伤人"
     translated: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
 - raw: "464,内功,1,静守谷神法,茅山派动静结合，凝练心神的基础内功，修习者需盘膝端坐，咬牙合口，掌按耳门，腹内鼓气以修炼内息,,1.1,内功1;经脉1,生命上限20;内力上限60;内功6;经脉6;恢复0.03;康复0.06;负面抗性0.03,,内功20;经脉10,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4644,11 +4607,6 @@
   - split: 4
     text: "逐渐加热内息之法，其真气形同炉火，先黑浊，后黄白，再青白，最终化为纯青，乃是功法纯熟，至阳至热之象征"
     translated: "The method of gradually heating true qi is like a furnace. Initially dark and turbid, it then turns yellowish‑white, followed by a bluish‑white hue, ultimately becoming pure green‑a symbol of the technique's mastery and its utmost yang and heat."
-    qcReviewedText: "The method of gradually heating true qi is like a furnace. Initially dark and turbid, it then turns yellowish‑white, followed by a bluish‑white hue, ultimately becoming pure green‑a symbol of the technique's mastery and its utmost yang and heat."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "The method of gradually heating inner qi is like a furnace. Initially dark and turbid, it then turns yellowish-white, followed by bluish-white, and ultimately becomes pure blue—a symbol of the technique's mastery and its utmost yang and heat."
-    qcFailureReason: "Glossary term '真气' (expected 'True Qi') is missing."
 - raw: "516,轻功,3,踏破铁鞋功,穿一双特制重型铁鞋，不断蹬踏地面的苦修之法，能锻炼腿部劲道与下盘之稳固，直至铁鞋碎裂方为功成,,1,轻功潜力1;轻功1;体质1,轻功12;体质12;护甲5;坚毅0.05;装备负重5,,轻功45;体质30,,,,0,6,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6861,11 +6819,6 @@
   - split: 4
     text: "霸刀门主虽资质愚钝但天生神力，因此刀招极为简朴，却能将人体力道发挥至极限，一刀之下，便有轰天裂地，劈山断海之威"
     translated: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
-    qcReviewedText: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's strength. With just one slash, it can create a thunderous and earth-shattering force, splitting mountains and severing seas."
-    qcFailureReason: "Glossary term '体力' (expected 'Stamina') is missing."
 - raw: "761,内功,0,抱元诀,蓬莱派入门心法，有屏息凝神，保养元气之功效，修道练剑之人多有修习,,1,内功1,生命上限10;内力上限30;内功4;经脉4;剑法威力0.04,,内功5;经脉5,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8680,11 +8633,6 @@
   - split: 4
     text: "天山派独门心法，需在寒冷之处以经脉吸纳寒气，借以苦修阴性内功，意志不坚者多难以维持，真可谓不经一番寒彻骨"
     translated: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment."
-    qcReviewedText: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment.,How do we get the fragrance of plum blossoms to greet us?"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment. How do we get the fragrance of plum blossoms to greet us?\\nTruly, without enduring the piercing cold, how can one enjoy the fragrance of plum blossoms?"
-    qcFailureReason: " Alternatives were provided when none should be given."
   - split: 4
     subIndex: 1
     text: "怎得梅花扑鼻香"
@@ -9010,11 +8958,6 @@
   - split: 4
     text: "在高空钢索之上行走的卖艺把式"
     translated: "A performer walking on a tightrope high above"
-    qcReviewedText: "A performer walking on a tightrope high above"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "A performer walking on a tightrope high above.\\nA circus performer walking on a high tightrope."
-    qcFailureReason: " Alternatives were provided when none should be given."
 - raw: "999,轻功,0,钻火圈,飞身跳跃穿过燃烧火圈的卖艺把式,,1.1,体质1,轻功4;体质4;连击0.04,,轻功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9095,11 +9038,6 @@
   - split: 4
     text: "以虚招迷惑对手的枪法"
     translated: "Spear Technique to Confuse the Opponent with False Movements"
-    qcReviewedText: "Spear Technique to Confuse the Opponent with False Movements"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Gun Technique to Confuse the Opponent with False Moves"
-    qcFailureReason: "Glossary term '枪法' (expected 'Spear Art') is missing."
 - raw: "1009,长兵,0,双节棍法,灵活性较高的短棍棍法,11,1.1,意志1,,意志2;长兵2;内力0.1,长兵5,\"3,1,1\",\"7,0,0\",疲劳0.04,5,-1,0,手15,手8,,,skill3_2,,打击1-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4

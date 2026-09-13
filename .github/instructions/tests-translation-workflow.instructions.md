@@ -107,6 +107,45 @@ translations with no separator (`"{0}Year{1}Month{2}Day"`) — overridden by exa
 `"{0} Year {1} Month {2} Day"`.
 
 
+## Quality review (QC) pass — second, independent pass over already-translated text
+
+An LLM (typically a larger/different model than primary translation) reviews each already-
+translated column's fully reconstructed cell, optionally proposes a correction, and rates its own
+confidence 0-100. Opt-in via `qualityReview.enabled: true` in `Files/Config.yaml`; per-file via
+`TextFileToSplit.EnableQualityReview` (defaults true, explicitly `false` on most lookup-key-heavy
+CSVs and the whole `PrefabText`/`DynamicStringsIL2CPP` family except `dynamicStrings.txt`). Run via
+the numbered facts in `TranslationWorkflowTests.cs`: `"3a. RunQualityReviewPassSample"` (small
+random sample - always try this before a full run on a new candidate model),
+`"3b. RunQualityReviewPass"` (full, un-sampled - many hours), `"3c. Find Flagged Quality Review
+Items"` (pulls every column currently flagged for human review), `"3d. Reset Qc Retry Limits"` (un-
+sticks a column parked at `FailedValidation` after fixing whatever caused it - e.g. a false-positive
+bad word), `"3e. Reset Leaked Quality Review Corrections"` (repairs any stored correction containing
+leaked QC-protocol text), `"3f. RunQualityReviewSampleForOneLine"` (forces a fresh review of one
+known corpus row - useful when iterating on the QC prompt/model),
+`"3g. QcOmittedSubjectRegression"` (calls the QC model directly against a fixed known-bad
+SOURCE/TRANSLATION pair, independent of corpus state - a real regression test, not a manual-
+inspection tool; re-validates automatically whichever model `qualityReview.modelName` currently
+points at), and `"3h. Reset ALL Quality Review State (full re-review)"` (wipes every column's Qc
+state back to `NotReviewed`, not just stuck/corrupted ones like `"3d"`/`"3e"` - NOT routine, run
+only after swapping the QC model or a prompt change significant enough that already-recorded
+verdicts can no longer be trusted, since it forces the next `"3b"` to re-review the entire corpus). A proposed correction is only ever accepted if it passes the same structural validation
+gate a normal translation attempt does, plus a glossary-drift check - a rejected correction never
+touches `Translated`; once accepted, a low self-rated confidence score only flags it for human
+review, it no longer discards the correction and re-rolls (see the shared library's postmortem
+notes below). Full mechanics (data model, staleness/freshness, packaging interaction,
+prompt-per-model-family convention, and the 2026-09 omitted-subject/response-truncation/low-score-
+discard postmortems) live in the shared library's `docs/quality-review-pass-architecture.md`; the
+original design rationale is in `docs/plans/quality-review-pass.md`.
+
+**Per-column exclusion** (`GameHooks.CustomQcExclusionRule`, registered as `GameFileHandling.
+ExcludeFunctionRoutedDynamicStringFromQc`) keeps a column out of the QC pass entirely - before any
+LLM call - when its raw/effective text looks like prose but is actually a machine-readable record a
+QC model has no business "correcting". This game's only current use: `dynamicStrings.txt`'s
+`"{choiceText};FunctionName"` dialogue-choice/routing entries. See
+[dynamicstrings-pipeline-architecture.md](../../Tests/docs/dynamicstrings-pipeline-architecture.md#quality-review-exclusion-for-function-routed-choice-entries)
+for this game's case and the shared library's `quality-review-pass-architecture.md` for the general
+mechanism/guidance if a new file+pattern combination needs the same treatment.
+
 ## Working directory layout (`Files/`)
 
 - `Files/Raw/Dumped/GameData/` — raw CSVs dumped from the running game (via BepInEx plugin).

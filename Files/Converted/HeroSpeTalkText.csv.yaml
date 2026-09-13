@@ -150,11 +150,6 @@
   - split: 8
     text: "听师傅说，出招之法在于随心所欲，无拘无束。"
     translated: "According to Master, the key to making a move lies in doing as one pleases without any restrictions."
-    qcReviewedText: "According to Master, the key to making a move lies in doing as one pleases without any restrictions.\\nIf one can inhale and exhale naturally, sending and receiving with ease, one could be considered a minor master, right?"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "According to Master, the key to making a move lies in doing as one pleases without any restrictions. If one can inhale and exhale naturally, and send and receive with ease, one could be considered a minor master, right?"
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
   - split: 8
     subIndex: 1
     text: "若能一呼一吸，收发自然，便也算小半个高手了吧。"
@@ -289,11 +284,6 @@
   - split: 6
     text: "武学之道，在于破除常规，别开蹊径。"
     translated: "The way of martial arts lies in breaking conventional norms and forging new paths."
-    qcReviewedText: "The way of martial arts lies in breaking conventional norms and forging new paths.\\nIf every move and step were rigidly precise, it would be far too boring."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "The way of martial arts lies in breaking conventional norms and forging new paths. If every move and step were rigidly precise, it would be far too boring."
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
   - split: 6
     subIndex: 1
     text: "若是一招一式，一板一眼，那可就太过无聊了。"
@@ -355,11 +345,6 @@
   - split: 12
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。"
     translated: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu."
-    qcReviewedText: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu.\\nIt is said that great accomplished ones can move through stillness and soften to overcome hardness. Their power flows like the taiji circle, ever‑renewing and unending."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu. It is said that great accomplished ones can move through stillness and soften to overcome hardness. Their power flows like the taiji circle, ever-renewing and unending."
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
   - split: 12
     subIndex: 1
     text: "传说大成者可以静制动，以柔克刚，其劲力亦如太极圆转，生生不息。"
@@ -649,11 +634,6 @@
   - split: 11
     text: "#PlayerName#若在武学上有疑惑之处，大可来与我探讨。"
     translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me."
-    qcReviewedText: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nHe will speak his mind fully and without reservation."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me. I will speak my mind fully and without reservation."
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
   - split: 11
     subIndex: 1
     text: "某定当知无不言，言无不尽。"
@@ -661,11 +641,6 @@
   - split: 12
     text: "#PlayerName#招式凌厉，然后劲不足。"
     translated: "#PlayerName#'s attacks were sharp and decisive, but then lacked power."
-    qcReviewedText: "#PlayerName#'s attacks were sharp and decisive, but then lacked power.\\nWhile they can hide their sharpness and gather their energy, improving both internally and externally, they can advance to the next level."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "#PlayerName#'s attacks were sharp and decisive, but then lacked power. If they can hide their sharpness and gather their energy, improving both internally and externally, they can advance to the next level."
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
   - split: 12
     subIndex: 1
     text: "若能藏锋敛气，内外兼修，便能更上一层楼。"
@@ -786,11 +761,6 @@
   - split: 11
     text: "在下不才，蒙武林同道厚爱，得了这“中原大侠”的名号。"
     translated: "I am but an unworthy one, yet through the kindness of my Wulin peers, I have come to bear the title of Great Hero of Central Plains."
-    qcReviewedText: "I am but an unworthy one, yet through the kindness of my Wulin peers, I have come to bear the title of Great Hero of Central Plains.\\nEvery time I think about it, I feel genuinely fearful and deeply ashamed."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "I am but an unworthy one, yet through the kindness of my Wulin peers, I have come to bear the title of Great Hero of Central Plains. Every time I think about it, I feel genuinely fearful and deeply ashamed."
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
   - split: 11
     subIndex: 1
     text: "每每想来，只觉诚惶诚恐，羞愧莫名。"
@@ -854,11 +824,6 @@
   - split: 3
     text: "世人结交须黄金，黄金不多交不深。"
     translated: "People form friendships with gold, but if the gold is lacking, so too is the depth of the friendship."
-    qcReviewedText: "People form friendships with gold, but if the gold is lacking, so too is the depth of the friendship.\\nThough we may temporarily make promises, ultimately their hearts remain strangers."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "People form friendships with gold, but if the gold is lacking, so too is the depth of the friendship. Though we may temporarily make promises, ultimately their hearts remain indifferent."
-    qcFailureReason: " `\\n` has been incorrectly removed from the translation."
   - split: 3
     subIndex: 1
     text: "纵令然诺暂相许，终是悠悠行路心。"
@@ -937,8 +902,6 @@
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
   - split: 10
     subIndex: 1
     text: "故能而示之不能，用而示之不用，近而示之远，远而示之近。"
@@ -1157,8 +1120,6 @@
     text: "天下之间，太多蝇营狗苟之辈。"
     translated: "There are too many xingyinggouguo beggars in this world."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "There are too many xingyinggouguo beggars in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
   - split: 2
     subIndex: 1
     text: "人生一世，又能遇上几个倾心相交的英雄豪杰？"
@@ -1342,8 +1303,6 @@
     text: "#PlayerName#若敢阻碍我铁掌帮行事，"
     translated: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,..."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,...\\nYou can't blame an old man for that."
   - split: 5
     subIndex: 1
     text: "到时可休怪老夫不讲情面。"
@@ -1470,8 +1429,6 @@
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
   - split: 3
     subIndex: 1
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"

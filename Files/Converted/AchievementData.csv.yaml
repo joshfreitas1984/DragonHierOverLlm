@@ -69,8 +69,6 @@
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Drinks not intoxicating"
   - split: 2
     text: "累计对饮获胜100场"
     translated: "Cumulative drinking win count: 100 rounds"
@@ -175,11 +173,6 @@
   - split: 1
     text: "恶贯满盈"
     translated: "Wicked deeds abound"
-    qcReviewedText: "Wicked deeds abound"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "CORRUPTED TO THE CORE"
-    qcFailureReason: "QC correction changed normal casing to all-caps (was 'Wicked deeds abound')."
   - split: 2
     text: "累计获得1000点恶名"
     translated: "Earned 1000 points of Infamy"
@@ -322,8 +315,6 @@
     text: "累计煅烧"
     translated: "Accumulated Firing"
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Accumulated Firing/Prepare/100 times refined"
   - split: 2
     subIndex: 1
     text: "炮制"
@@ -545,8 +536,6 @@
     text: "与一名角色好感达到100"
     translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
   - split: 5
     text: "无"
     translated: "None"
@@ -559,8 +548,6 @@
     text: "义结金兰"
     translated: "Bonds of sisterhood"
     qcQualityScore: 30
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Bonds of sisterhood"
   - split: 2
     text: "与一名角色结义"
     translated: "Buddy up with a character"
@@ -579,11 +566,6 @@
   - split: 1
     text: "相濡以沫"
     translated: "To share one's fate"
-    qcReviewedText: "To share one's fate"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "To support each other in adversity (or \"To live in harmony until death\")"
-    qcFailureReason: " Explaination was provided when none should be given."
   - split: 2
     text: "与一名角色结缘"
     translated: "Befriend a character"
@@ -888,8 +870,6 @@
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -909,8 +889,6 @@
     text: "达成终生监禁结局"
     translated: "Achieve lifetime imprisonment ending"
     qcQualityScore: 60
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Achieve lifetime imprisonment ending"
   - split: 5
     text: "被捕入狱时恶名达到999"
     translated: "When arrested and sent to prison, his infamy reached 999."
@@ -924,14 +902,10 @@
     text: "九死一生"
     translated: "Life and death"
     qcQualityScore: 20
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Life and death"
   - split: 2
     text: "九死一生难度下达成任意结局"
     translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
     qcQualityScore: 50
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Survive Any Ending on Nine Lives Betrayal Difficulty"
   - split: 5
     text: "无"
     translated: "None"

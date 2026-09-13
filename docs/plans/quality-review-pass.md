@@ -1,12 +1,22 @@
 # Plan: Post-translation Quality Review Pass
 
-> **Status: implemented, not yet run for real.** All six phases below have working, built, unit-
-> tested code (see
+> **Status: implemented and run for real (2026-09) — results reviewed and accepted.** All six
+> phases below have working, built, unit-tested code (see
 > [`FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md`](../../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md)
 > for the current-state technical reference — that's the doc to read to understand how the feature
 > actually works today). This file is kept as **design history**: why it's shaped the way it is,
-> and the trade-offs that got resolved along the way. What's still genuinely open is the "Remaining
-> work" checklist near the bottom — nobody has pulled the candidate models and run a live sample yet.
+> and the trade-offs that got resolved along the way. The "Remaining work" checklist below is now
+> historical (kept for the model-comparison methodology, not as an open TODO) — see its closing
+> note for how it was actually resolved, and
+> [`Tests/docs/dynamicstrings-pipeline-architecture.md`](../../Tests/docs/dynamicstrings-pipeline-architecture.md#quality-review-exclusion-for-function-routed-choice-entries)
+> for a real-run addendum: a per-column exclusion mechanism (`GameHooks.CustomQcExclusionRule`)
+> added after discovering `dynamicStrings.txt`'s function-routed dialogue-choice entries needed to
+> stay out of QC's reach even though the rest of that file benefits from review. A later real run
+> (2026-09) surfaced three further bugs against `qwen3.8` as the QC model - an omitted-subject
+> mistranslation surviving review, a regex truncating multi-sentence corrections, and a low
+> self-rated score discarding an already-validated correction - see the architecture doc's
+> "Postmortems" section for the full diagnosis, and `Tests/TranslationWorkflowTests.cs`'s
+> `"3g. QcOmittedSubjectRegression"` for the regression test that now guards the first of the three.
 
 ## Goal
 
@@ -77,7 +87,7 @@ class, a new config section, and a new manually-run pipeline step.
   merges when the underlying raw text is unchanged (a pure efficiency fix, not required for
   correctness). See the architecture doc's "Staleness / freshness" section for the full mechanics.
 
-## Remaining work (not done yet)
+## Remaining work (historical — see "How this actually resolved" below)
 
 1. Pull both candidate models: `ollama pull qwen2.5:14b-instruct` and `ollama pull glm4:9b`.
 2. Set `qualityReview.enabled: true` in `Files/Config.yaml` (already done) and run
@@ -95,8 +105,24 @@ class, a new config section, and a new manually-run pipeline step.
    throughput notes).
 6. Once validated on a real run: the deferred docs write-back this repo's own workflow rule calls
    for — update `tests-translation-workflow.instructions.md` with a current-state summary of the QC
-   pass (not done yet, deliberately deferred until there's real, tested behavior to describe).
+   pass. **Done** — see the closing note below.
 
 (Model landscape moves fast — worth a quick check in Ollama's library for anything newer/
 better-fitting than these two before committing, since the recommendation reflects what was
 well-established when this plan was written.)
+
+**How this actually resolved:** the checklist above predates the eventual model choice — by the
+time a real run happened, `qwen2.5:14b-instruct`/`glm4:9b` were superseded by a larger local
+candidate (`qwen3` in the 8B–27B range) as the primary-translation upgrade under consideration, with
+QC evaluated as the cheaper alternative to a full corpus retranslation. The sample run surfaced one
+new problem not anticipated in this plan: `dynamicStrings.txt`'s function-routed dialogue-choice
+entries (raw `"{label};FunctionName"`, e.g. `出手抢夺;RobNPCItemSure` — confirmed via decompile as a
+real runtime record, not extraction noise) looked like ordinary prose to the QC model despite being
+partly machine-opaque, with no existing validator to catch a corrupted correction the way `PlotData
+.csv` column 9 has. Rather than disabling QC for the whole file (losing review coverage for that
+file's genuine template dialogue lines), a new `GameHooks.CustomQcExclusionRule` hook was added to
+the shared library so a per-column rule can keep specific columns out of the pass entirely, before
+any LLM call — see the shared library's `quality-review-pass-architecture.md` for the mechanism and
+`Tests/docs/dynamicstrings-pipeline-architecture.md` for this game's specific rule. After that fix,
+the run's corrections were reviewed and accepted; item 6 (`tests-translation-workflow.instructions
+.md` write-back) is done.

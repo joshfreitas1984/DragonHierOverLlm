@@ -238,6 +238,97 @@ public class TranslationWorkflowTests
         Console.WriteLine(yaml);
     }
 
+    // Regression test for the omitted-subject/mechanical-subject-carryover QC bug: a Chinese line
+    // that omits its subject ("还好还好，只是精疲力竭昏厥过去了。" - no "I"/"she"/anyone stated) was
+    // being translated as first-person ("No need to worry, I just fainted from exhaustion.") when
+    // the surrounding dialogue ("莫慌，让为师看看……" - "Don't panic, let me take a look...") makes
+    // clear the speaker is examining someone ELSE, who is the one who fainted. Two real bugs
+    // combined to let this slip through QC even after BaseQualityReviewPrompt.txt's rule against
+    // it: (1) the model would score this low (correctly flagging it) but still answer
+    // "CORRECTED: NONE" - fixed by BaseQualityReviewPrompt.txt's added CONSISTENCY rule; (2) even
+    // when the model DID propose a correction, it often joined the corrected sentences with a real
+    // line break instead of the SOURCE/TRANSLATION convention's literal "\n", and
+    // QualityReviewWorkflow.CorrectedLineRegex was Multiline-anchored without Singleline, so it
+    // silently truncated the captured correction to just its first physical line - fixed by adding
+    // RegexOptions.Singleline. See the conversation history in this repo's task log for the full
+    // diagnosis (direct Ollama reproduction that isolated each bug).
+    //
+    // Deliberately bypasses the corpus (Files/Converted/PlotData.csv.yaml) entirely and calls
+    // QualityReviewWorkflow.GetLlmVerdictAsync directly with a fixed, known-bad SOURCE/TRANSLATION
+    // pair - so this test (a) survives corpus edits/repackaging, (b) can be re-run immediately with
+    // no ResetQcRetryLimits/ResetQcState dance, and (c) automatically re-validates against whichever
+    // model Config.yaml's qualityReview.modelName currently points at, so swapping QC models
+    // re-checks this exact regression case with zero test changes. Samples the model a few times
+    // (temperature is low but non-zero) since a single call could get a differently-worded but
+    // still-correct answer, or vice versa - treat ANY sample reproducing the bug as a real
+    // regression, not something to average away.
+    [Fact(DisplayName = "3g. QcOmittedSubjectRegression")]
+    public async Task QcOmittedSubjectRegression()
+    {
+        const string Source = "莫慌，让为师看看……\\n还好还好，只是精疲力竭昏厥过去了。\\n此次战况如何，云裳又是为何受伤啊？";
+        const string BadTranslation = "Don't panic, let me take a look......\\nNo need to worry, I just fainted from exhaustion.\\nHow did the battle go, and why was Yunshang injured?";
+        const int Samples = 3;
+
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var config = ConfigurationExtensions.GetConfiguration(workingDirectory, GameFileHandling.Hooks);
+
+        if (string.IsNullOrEmpty(config.QualityReview.ModelName)
+            || !config.Runtime.Models.TryGetValue(config.QualityReview.ModelName, out var modelConfig))
+            throw new InvalidOperationException(
+                $"QualityReview.ModelName '{config.QualityReview.ModelName}' does not match any configured model - " +
+                "set qualityReview.enabled/modelName in Config.yaml to run this test.");
+
+        var tokenReplacer = new StringTokenReplacer();
+        var maskedRaw = tokenReplacer.Replace(Source);
+        var maskedTranslated = tokenReplacer.Replace(BadTranslation);
+        var glossaryPrompt = GlossaryLine.AppendPromptsFor(Source, config.Runtime.GlossaryLines, "PlotData.csv");
+
+        using var client = new HttpClient { Timeout = TimeSpan.FromSeconds(300) };
+
+        var results = new List<(int Score, string? Corrected)>();
+        for (var i = 0; i < Samples; i++)
+        {
+            var verdict = await QualityReviewWorkflow.GetLlmVerdictAsync(config, modelConfig, client, Source, maskedRaw, maskedTranslated, glossaryPrompt);
+            Assert.True(verdict.Success, $"Sample {i + 1}: QC response did not parse - see console output above for the raw response.");
+
+            var corrected = verdict.CorrectedRawMasked == null ? null : tokenReplacer.Restore(verdict.CorrectedRawMasked);
+            results.Add((verdict.Score, corrected));
+        }
+
+        Console.WriteLine(YamlHelper.CreateSerializer().Serialize(
+            results.Select(r => new { r.Score, r.Corrected })));
+
+        foreach (var (score, corrected) in results)
+        {
+            // Bug 1 (CONSISTENCY): a low score with no correction at all means the model flagged a
+            // real problem but hedged with NONE instead of fixing it.
+            if (score < config.QualityReview.MinAcceptableScore)
+                Assert.True(corrected != null,
+                    $"QC scored this {score} (below MinAcceptableScore={config.QualityReview.MinAcceptableScore}) but proposed no correction.");
+
+            // Bug 2 (regex truncation) and the underlying translation bug both manifest the same
+            // way here: the known-bad first-person phrasing survives into whatever we end up with.
+            Assert.DoesNotContain("I just fainted", corrected ?? BadTranslation, StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
+    // Full do-over, NOT a routine step - unlike "3d"/"3e" (which only un-stick/repair specific
+    // stuck-or-corrupted columns), this wipes every column's Qc* state back to NotReviewed
+    // regardless of its current status, so the next "3a"/"3b"/"1a" pass reviews the ENTIRE corpus
+    // again from scratch. IsQcReviewFresh only tracks whether Translated changed, never whether the
+    // QC model/prompt that produced an existing verdict did - so swapping the QC model, or a prompt
+    // change significant enough that already-recorded Passed/Corrected verdicts can no longer be
+    // trusted (see docs/quality-review-pass-architecture.md's "Postmortems" section, FanslationStudio
+    // .LlmKit - the omitted-subject rule and low-score-discard retry bug fixed there both mean a
+    // PRIOR verdict may be less trustworthy than its stored status suggests), is when to run this -
+    // never as a matter of routine, since a full re-review is the same many-hours job a first full
+    // run already was.
+    [Fact(DisplayName = "3h. Reset ALL Quality Review State (full re-review)")]
+    public async Task ResetAllQcState()
+    {
+        await QualityReviewWorkflow.ResetAllQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
     public async Task SetBracketSplitBugLinesAsInvalid()
     {

@@ -2,7 +2,7 @@
 
 This game's translation pipeline is split across several focused files under `Tests/` (each kept small on purpose):
 
-- **`GameFileHandling.cs`** — `WorkingDirectory`/`GameFolder` constants, the LLM repair/validation hooks (`RepairKnownLlmQuirks`, `RepairGameSpecificColumn`, `ValidateGameSpecificColumn`), `SplitterOptions`, and the shared CSV helpers (`ParseCsvRow`/`RebuildCsvRow`/`StripTrailingCommaBeforeQuote`).
+- **`GameFileHandling.cs`** — `WorkingDirectory`/`GameFolder` constants, the LLM repair/validation hooks (`RepairKnownLlmQuirks`, `RepairGameSpecificColumn`, `ValidateGameSpecificColumn`, `ExcludeFunctionRoutedDynamicStringFromQc`), `SplitterOptions`, and the shared CSV helpers (`ParseCsvRow`/`RebuildCsvRow`/`StripTrailingCommaBeforeQuote`).
 - **`TextFileConfiguration.cs`** — `TextFileConfiguration.TextFilesToSplit`, the authoritative per-file translation/package configuration.
 - **`DynamicStringSources.cs`** — the column-source tables (`DynamicStringSources.DynamicStringColumnSources`, `AtlasSpriteNameColumnSources`, `DynamicStringSources.DynamicStringLabelColumnSources`, `DynamicStringNamePartColumnSources`, `DynamicStringSources.DynamicStringTempNpcNameColumnSources`, `DynamicStringInteractionOptionColumnSources`, `DynamicStringSources.DynamicStringOtherTextFields`) and the extraction regexes.
 - **`DynamicStringExtraction.cs`** — the `Extract*` passes that populate `Raw/Dumped/DynamicStrings/*.txt`, plus `DedupeDynamicStringFiles`.
@@ -26,6 +26,10 @@ CSV parsing and reconstruction must always use `CompoundFieldSplitter.ParseCsvRo
 - [spehero-relationship-and-skillfocus-crashes.md](spehero-relationship-and-skillfocus-crashes.md)
 
 `PlotData.csv` column 9 is intentionally translated. Its `|` and `;` delimiters are structural, so `RepairGameSpecificColumn` strips those characters from translated choice text and `ValidateGameSpecificColumn` checks delimiter counts as a backstop. See [plotdata-column9-crash-and-repair-pattern.md](plotdata-column9-crash-and-repair-pattern.md).
+
+### Quality review hooks
+
+`GameFileHandling.Hooks.CustomQcExclusionRule` (`ExcludeFunctionRoutedDynamicStringFromQc`) keeps this game's `dynamicStrings.txt` dialogue-choice/function-routing entries (`"{label};FunctionName"`, the same structural shape as `PlotData.csv` column 9 above) out of the quality review pass entirely — no LLM call, no reliance on a validator to catch a corrupted correction after the fact, since none is registered for this file. See [dynamicstrings-pipeline-architecture.md](dynamicstrings-pipeline-architecture.md#quality-review-exclusion-for-function-routed-choice-entries) for the full rationale and the shared library's `quality-review-pass-architecture.md` for the general `CustomQcExclusionRule` mechanism.
 
 ### `TextFileConfiguration.TextFilesToSplit` per-file skip-column detail
 

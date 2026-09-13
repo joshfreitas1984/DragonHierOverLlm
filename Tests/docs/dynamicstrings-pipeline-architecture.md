@@ -72,3 +72,27 @@ the supported string-building overloads.
 Known-bad reconstructed results are corrected by
 `GameFileHandling.DynamicStringResultOverrides` after packaging. Do not hand-edit generated
 `Files/Converted` or `Files/Mod` YAML because later export or packaging regenerates those values.
+
+## Quality review exclusion for function-routed choice entries
+
+`dynamicStrings.txt` has `EnableQualityReview = true` (2026-09), so its ordinary template dialogue
+lines get reviewed like any other translated text. But a meaningful slice of this file's entries
+(confirmed via decompile: 1,242 of 6,693 raw entries at time of writing) are the same
+`"{choiceText};FunctionName[;params...]"` dialogue-choice/routing shape the packaging section above
+describes - real runtime records (e.g. `PlotController.cs`'s hardcoded `出手抢夺;RobNPCItemSure`),
+not free-text sentences. A QC model has no way to know `FunctionName` is an opaque identifier
+rather than text to "fix", and unlike `PlotData.csv` column 9 (see
+[plotdata-column9-crash-and-repair-pattern.md](plotdata-column9-crash-and-repair-pattern.md)) there
+is no `CustomColumnValidator` registered for this file to catch a corrupted `;`/`&` structure in a
+proposed correction - packaging would accept a bad `QcTranslated` as the literal final cell value.
+
+`GameFileHandling.ExcludeFunctionRoutedDynamicStringFromQc` (registered as `GameHooks.
+CustomQcExclusionRule`) keeps every such entry out of the QC pass entirely, before any LLM call: any
+`DynamicStringsIL2CPP` column whose reconstructed raw text contains a literal ASCII `;` after
+position 0 is excluded. This is deliberately broader than "must end in `;Identifier`" - the same
+raw dump also contains temp-NPC spawn records (`临时:传令&随机;;-1;3;-1`) and bare trailing-`;`
+dialogue-option fragments (`另选它物;`), all part of the same "machine record, not prose"
+convention; a real corpus sample confirmed every raw entry containing `;` is one of these shapes,
+never ordinary Chinese sentence text (which never contains an ASCII semicolon). See the shared
+library's [`quality-review-pass-architecture.md`](../../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md)
+for the general `CustomQcExclusionRule` mechanism and guidance for writing a similar rule elsewhere.
