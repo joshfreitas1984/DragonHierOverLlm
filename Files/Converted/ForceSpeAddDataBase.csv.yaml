@@ -157,6 +157,11 @@
   - split: 2
     text: "技艺经验"
     translated: "Skill and experience"
+    qcReviewedText: "Skill and experience"
+    qcTranslated: "Skill XP"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
 - raw: "17,内功经验,内功经验,TRUE,0.02"
   splits:
   - split: 2
@@ -218,6 +223,10 @@
   - split: 2
     text: "奇门经验"
     translated: "Dungeon XP"
+    qcReviewedText: "Dungeon XP"
+    qcTranslated: "Qimen XP"
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "25,射术经验,射术经验,TRUE,0.02"
   splits:
   - split: 2
@@ -256,6 +265,9 @@
   - split: 2
     text: "口才经验"
     translated: "Communication skills experience"
+    qcReviewedText: "Communication skills experience"
+    qcStatus: Passed
+    qcQualityScore: 90
 - raw: "30,采伐经验,采伐经验,TRUE,0.02"
   splits:
   - split: 2
@@ -269,6 +281,10 @@
   - split: 2
     text: "木植经验"
     translated: "Tree planting experience"
+    qcReviewedText: "Tree planting experience"
+    qcTranslated: "Woodcutting Experience"
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "32,锻造经验,锻造经验,TRUE,0.02"
   splits:
   - split: 2
@@ -373,6 +389,9 @@
   - split: 2
     text: "全员拳掌"
     translated: "All Fist and Palm"
+    qcReviewedText: "All Fist and Palm"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "45,全员剑法,全员剑法,FALSE,1"
   splits:
   - split: 2
@@ -396,6 +415,10 @@
   - split: 2
     text: "全员长兵"
     translated: "All long weapons"
+    qcReviewedText: "All long weapons"
+    qcTranslated: "All Long weapons"
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "48,全员奇门,全员奇门,FALSE,1"
   splits:
   - split: 2
@@ -434,6 +457,9 @@
   - split: 2
     text: "全员学识"
     translated: "All Knowledge"
+    qcReviewedText: "All Knowledge"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "53,全员口才,全员口才,FALSE,1"
   splits:
   - split: 2
@@ -456,11 +482,19 @@
   - split: 2
     text: "全员木植"
     translated: "All Planting"
+    qcReviewedText: "All Planting"
+    qcStatus: Passed
+    qcQualityScore: 85
 - raw: "56,全员锻造,全员锻造,FALSE,1"
   splits:
   - split: 2
     text: "全员锻造"
     translated: "All Forging"
+    qcReviewedText: "All Forging"
+    qcTranslated: "Full Team Forging"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
 - raw: "57,全员炼药,全员炼药,FALSE,1"
   splits:
   - split: 2
@@ -483,6 +517,11 @@
   - split: 2
     text: "藏经容量"
     translated: "Taoist Canon Capacity"
+    qcReviewedText: "Taoist Canon Capacity"
+    qcTranslated: "Sutra Storage Capacity"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
 - raw: "60,全域治安,全域治安,FALSE,1"
   splits:
   - split: 2
