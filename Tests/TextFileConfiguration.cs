@@ -86,10 +86,10 @@ namespace Tests
             new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [1, 2, 3, 4, 5, 6, 7, 8],  },
 
             // Flat prefab-text input; see docs/gamefilehandling-reference.md.
-            new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText, EnableQualityReview = false },
+            new() {Path = "dumpedPrefabText.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText, EnableQualityReview = true },
 
             // Additional flat PrefabText source; see docs/gamefilehandling-reference.md.
-            new() {Path = "dumpedPrefabTextFromOtherFields.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText, EnableQualityReview = false },
+            new() {Path = "dumpedPrefabTextFromOtherFields.txt", PackageOutput = true, TextFileType = TextFileType.PrefabText, EnableQualityReview = true },
 
             // Flat IL2CPP dynamic-string input; see docs/gamefilehandling-reference.md. QC
             // enabled: ordinary template dialogue lines here benefit from review like any other
@@ -100,13 +100,13 @@ namespace Tests
             new() {Path = "dynamicStrings.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = true },
 
             // Additional dynamic-string source; see docs/gamefilehandling-reference.md.
-            new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            new() {Path = "dynamicStringsFromColumns.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = true },
 
             // ';'-joined structured-record fragments parsed out of dynamicStrings.txt - split into
             // its own file (was previously mixed into dynamicStringsFromColumns.txt) so each
             // dynamic-string file's provenance is unambiguous. See
             // DynamicStringExtraction.ExtractStructuredRecordFragmentCandidates.
-            new() {Path = "dynamicStringsFromStructuredFragments.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            new() {Path = "dynamicStringsFromStructuredFragments.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = true },
 
             // The "log narrative" AddLog-template family (HeroDetailPanel's Log tab, AreaLog,
             // PlotPanel's RecordScrollView) - carved out of dynamicStrings.txt into its own file so
@@ -122,7 +122,7 @@ namespace Tests
             // Stat-label fragments parsed out of dumpedOtherText.txt (e.g. "spellEffectString")
             // - split into its own file (was previously mixed into dynamicStringsFromColumns.txt).
             // See DynamicStringExtraction.ExtractOtherFieldLabelCandidates.
-            new() {Path = "dynamicStringsFromOtherFieldLabels.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
+            new() {Path = "dynamicStringsFromOtherFieldLabels.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = true },
 
             // Poetry minigame ("对诗" fill-in-the-blank) candidates extracted directly from the
             // JSON TextAsset/PoetryData.txt - see PoetryDataWorkflow.ExtractPoetryCandidates.

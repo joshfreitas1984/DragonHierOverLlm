@@ -1,7 +1,9 @@
 - raw: 道无名
   result: Dao Wuming
-  allowalt: 
+  allowalt:
     - Great Way is nameless
+- raw: 花石纲
+  result: "Flower and Stone Convoy"
 - raw: "藏经阁"
   result: "Scripture Pavilion"
 - raw: 材料铺
@@ -129,3 +131,10 @@
   result: Secret Manual
   allowalt:
     - "Manual"   
+
+- raw: 真气
+  rawSimplified: 真气
+  rawTraditional: 真氣
+  result: True Qi
+  allowalt:
+   - grand 

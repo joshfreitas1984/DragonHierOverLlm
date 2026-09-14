@@ -26,10 +26,20 @@
   splits:
   - text: "《龙胤立志传》适龄游戏提示"
     translated: "Age‑appropriate game notice for Dragon Heritage Determination Chronicles"
+    qcReviewedText: "Age‑appropriate game notice for Dragon Heritage Determination Chronicles"
+    qcTranslated: "Age-Appropriate Game Notice for Legend of Dragon Heirs"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
 - raw: "<b>(所有排名均不分先后)</b>\\n策划：ZPP\\n程序：ZPP\\n美术：TPP\\n\\n发行：青豆，Sherry，Ouyi，lele，Lost，云起龙骧，小云，谦谦，黄国，狗狗\\n测试：郑煜，夏田怡静，蒋晟，云起龙骧\\n玩家支持：椰子，Dr.玄\\n\\n特别鸣谢\\n参与自由模式测试的玩家：\\n椰子 \\n奥西法\\n月下饮江河\\n馒头君\\n河物休\\n只为遇见你\\n卿卿神\\n燕四方\\n妙手回春海森保\\nShades"
   splits:
   - text: "所有排名均不分先后"
     translated: "All rankings are unordered"
+    qcReviewedText: "<b>(All rankings are unordered) </b>\\nDesigner：ZPP \\nProgram：ZPP \\nArt：TPP \\n\\nRelease：GreenBean,Sherry，Ouyi，lele，Lost, Rising Clouds and Ascending Dragons, Xiao Yun, Humble Hum, Yellow State, Doggies \\nTest：Zheng Yu, Xia Tianyi, Jiang Sheng, Yun Qilongxiang \\nPlayer support：Coconut Dr.Xuan \\n\\nSpecial thanks \\nPlayers participating in the free mode test：\\nCoconut \\nOxifa \\nDrinking by the riverside under the moonlight \\nSteamed bun king \\nRiver Relic Restorer \\nJust to meet you \\nQingqing Shen \\nFour Directions Yan \\nHai Senbao Revives with Skill\\n Shades"
+    qcTranslated: "<b>(All rankings are in no particular order) </b>\\nDesign: ZPP \\nProgramming: ZPP \\nArt: TPP \\n\\nPublishing: Qingdou, Sherry, Ouyi, lele, Lost, Yunqi Longxiang, Xiaoyun, Qianqian, Huangguo, Gougou\\nTesting: Zheng Yu, Xia Tianyi Jing, Jiang Sheng, Yunqi Longxiang\\nPlayer Support: Yezi, Dr. Xuan\\n\\nSpecial Thanks\\nPlayers who participated in the Free Mode test:\\nYezi \\nAosifa \\nYue Xi Yin Jianghe \\nMantou Jun \\nHe Wu Xiu \\nZhi Wei Yu Nian Ni \\nQingqing Shen \\nYan Sifang \\nMiaoshou Huichun Haishenbao\\n Shades"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
   - subIndex: 1
     text: "策划"
     translated: "Designer"
@@ -102,6 +112,9 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
+    qcReviewedText: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Health Maximum\\n‑0.25% Inner Power Cap\\n‑0.25% Max Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -120,6 +133,9 @@
   splits:
   - text: "体质"
     translated: "Physique"
+    qcReviewedText: "<b>Physique</b>\\n+1 Health Points\\n+0.5% Suppression\\n+0.5% injury resistance"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "+1生命上限"
     translated: "+1 Health Points"
@@ -135,6 +151,10 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
+    qcReviewedText: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Inner Power Cap\\n‑0.5% Maximum Stamina Capacity"
+    qcTranslated: "<b>Internal Injury</b>\\n0.5% All Attributes\\n0.5% Inner Power Cap\\n0.5% Max Stamina"
+    qcStatus: Corrected
+    qcQualityScore: 95
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -150,6 +170,9 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "<b>Neigong</b>\\n+1% Inner Power Cap"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "+1%内力上限"
     translated: "+1% Inner Power Cap"
@@ -159,6 +182,10 @@
   splits:
   - text: "刀法"
     translated: "Blade Art"
+    qcReviewedText: "<b>Blade Art </b>\\nBoost Blade Art damage \\nReduce damage from blade techniques"
+    qcTranslated: "<b>Blade Art</b>\\nBoosts Blade Art damage\\nReduces damage taken from Blade Art"
+    qcStatus: Corrected
+    qcQualityScore: 95
   - subIndex: 1
     text: "提升刀法伤害"
     translated: "Boost Blade Art damage"
@@ -171,6 +198,11 @@
   splits:
   - text: "剑法"
     translated: "Sword Art"
+    qcReviewedText: "<b>Sword Art </b>\\nEnhance sword technique damage \\nReduce damage from sword techniques"
+    qcTranslated: "<b>Sword Art</b>\\nEnhance Sword Art damage\\nReduce Sword Art damage taken"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - subIndex: 1
     text: "提升剑法伤害"
     translated: "Enhance sword technique damage"
@@ -183,6 +215,10 @@
   splits:
   - text: "力道"
     translated: "Strength"
+    qcReviewedText: "<b>Strength</b>\\n+0.5% Critical Hit\\n+0.5% Disconnected\\n+1 load capacity for equipment"
+    qcTranslated: "<b>Strength</b>\\n+0.5% Critical Hit\\n+0.5% Combo Break\\n+1 Equipment Load"
+    qcStatus: Corrected
+    qcQualityScore: 80
   - subIndex: 1
     text: "+0.5%暴击"
     translated: "+0.5% Critical Hit"
@@ -198,6 +234,11 @@
   splits:
   - text: "医术"
     translated: "Medicine"
+    qcReviewedText: "<b>Medicine </b>\\nAffecting External Injuries Treatment/Internal Injury's efficiency"
+    qcTranslated: "<b>Medicine</b>\\nAffects the efficiency of treating External Injuries/Internal Injuries"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
   - subIndex: 1
     text: "影响治疗外伤"
     translated: "Affecting External Injuries Treatment"
@@ -210,6 +251,10 @@
   splits:
   - text: "口才"
     translated: "Eloquence"
+    qcReviewedText: "<b>Eloquence </b>\\nAffect trading prices, debates, and the efficiency of obtaining sect silver."
+    qcTranslated: "<b>Eloquence</b>\\nAffects trading prices, debates, and the efficiency of obtaining Sect silver."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - subIndex: 1
     text: "影响交易价格，论战，以及获取门派银钱的效率"
     translated: "Affect trading prices, debates, and the efficiency of obtaining sect silver."
@@ -219,6 +264,10 @@
   splits:
   - text: "外伤"
     translated: "External Injury"
+    qcReviewedText: "<b>External Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Health Maximum"
+    qcTranslated: "<b>External Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Max Health"
+    qcStatus: Corrected
+    qcQualityScore: 75
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -231,6 +280,11 @@
   splits:
   - text: "奇门"
     translated: "Qi Men"
+    qcReviewedText: "<b>Qi Men </b>\\nBoost Oddly Gate Damage \\nReduce damage from qimen attacks"
+    qcTranslated: "<b>Qimen</b>\\nIncrease Qimen Damage\\nReduce Qimen Damage Taken"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
   - subIndex: 1
     text: "提升奇门伤害"
     translated: "Boost Oddly Gate Damage"
@@ -243,6 +297,9 @@
   splits:
   - text: "学识"
     translated: "Scholarship"
+    qcReviewedText: "<b>Scholarship </b>\\nInfluences the efficiency of treasure appraisal, debates, and sect reputation gain"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "影响珍宝鉴定，论战，以及获取门派威望的效率"
     translated: "Influences the efficiency of treasure appraisal, debates, and sect reputation gain"
@@ -252,6 +309,10 @@
   splits:
   - text: "射术"
     translated: "Archery"
+    qcReviewedText: "<b>Archery </b>\\nIncrease arrow damage \\nReduce their arrow damage taken"
+    qcTranslated: "<b>Archery</b>\\nIncrease archery damage\\nReduce archery damage taken"
+    qcStatus: Corrected
+    qcQualityScore: 75
   - subIndex: 1
     text: "提升射术伤害"
     translated: "Increase arrow damage"
@@ -264,6 +325,9 @@
   splits:
   - text: "意志"
     translated: "Willpower"
+    qcReviewedText: "<b>Willpower</b>\\n+0.5% Counterattack\\n+0.5% Armor\\n+0.5% Negative Resistance"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "+0.5%反击"
     translated: "+0.5% Counterattack"
@@ -279,6 +343,9 @@
   splits:
   - text: "拳掌"
     translated: "Fists and palms"
+    qcReviewedText: "<b>Fists and palms </b>\\nIncrease fist and palm attack damage \\nReduce damage from fist and palm attacks"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "提升拳掌伤害"
     translated: "Increase fist and palm attack damage"
@@ -291,6 +358,10 @@
   splits:
   - text: "智力"
     translated: "Intelligence"
+    qcReviewedText: "<b>Intelligence</b>\\n+0.5% Hit Rate\\n+0.5% Absorb Force\\n+0.5% Negative Bonus"
+    qcTranslated: "<b>Intelligence</b>\\n+0.5% Hit Rate\\n+0.5% Force Dissipation\\n+0.5% Negative Bonus"
+    qcStatus: Corrected
+    qcQualityScore: 85
   - subIndex: 1
     text: "+0.5%命中"
     translated: "+0.5% Hit Rate"
@@ -306,6 +377,10 @@
   splits:
   - text: "木植"
     translated: "Forest Plant"
+    qcReviewedText: "<b>Forest Plant </b>\\nAffect acquisition of Sect grains/Herbs, and the efficiency of reinforcing regional defenses"
+    qcTranslated: "<b>Wood Plant</b>\\nAffects the acquisition of Sect grains/herbs, and the efficiency of reinforcing regional defenses"
+    qcStatus: Corrected
+    qcQualityScore: 70
   - subIndex: 1
     text: "影响获取门派粮食"
     translated: "Affect acquisition of Sect grains"
@@ -318,6 +393,11 @@
   splits:
   - text: "毒术"
     translated: "Poison Technique"
+    qcReviewedText: "<b>Poison Technique </b>\\nAffect poisoning/Efficiency of detoxification"
+    qcTranslated: "<b>Poison Arts</b>\\nAffects the efficiency of poisoning and detoxification"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - subIndex: 1
     text: "影响用毒"
     translated: "Affect poisoning"
@@ -330,6 +410,10 @@
   splits:
   - text: "灵巧"
     translated: "Nimble"
+    qcReviewedText: "<b>Nimble</b>\\n+0.5% Speed\\n+0.5% Dodge\\n+0.5 maximum stamina capacity"
+    qcTranslated: "<b>Nimble</b>\\n+0.5% Speed\\n+0.5% Dodge\\n+0.5 Max Stamina"
+    qcStatus: Corrected
+    qcQualityScore: 80
   - subIndex: 1
     text: "+0.5%速度"
     translated: "+0.5% Speed"
@@ -345,6 +429,11 @@
   splits:
   - text: "炼药"
     translated: "Alchemy"
+    qcReviewedText: "<b>Alchemy </b>\\nAffecting the preparation of elixirs/Strengthening and consolidating/Efficiency in damaging the population"
+    qcTranslated: "<b>Alchemy</b>\\nInfluences the creation and enhancement of pills, as well as the efficiency of consolidating or disrupting regional populations"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 15
   - subIndex: 1
     text: "影响丹药的制作"
     translated: "Affecting the preparation of elixirs"
@@ -360,6 +449,11 @@
   splits:
   - text: "烹饪"
     translated: "Cooking"
+    qcReviewedText: "<b>Cooking </b>\\nInfluences food preparation/Strengthening and consolidating/Efficiency in undermining the morale of the affected area"
+    qcTranslated: "<b>Cooking</b>\\nInfluences the creation/fortification of food, and the efficiency of strengthening/undermining the morale of the local population"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - subIndex: 1
     text: "影响饮食的制作"
     translated: "Influences food preparation"
@@ -375,6 +469,11 @@
   splits:
   - text: "经脉"
     translated: "Meridian"
+    qcReviewedText: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
+    qcTranslated: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5% Combo\\n+0.5% Recovery Efficiency"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - subIndex: 1
     text: "+2内力上限"
     translated: "+2 Inner Power Cap"
@@ -390,6 +489,9 @@
   splits:
   - text: "绝技"
     translated: "Ultimate Technique"
+    qcReviewedText: "<b>Ultimate Technique</b>\\n+1% Health Maximum"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "+1%生命上限"
     translated: "+1% Health Maximum"
@@ -399,6 +501,9 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
+    qcReviewedText: "<b>Qinggong</b>\\n+1% Speed"
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "+1%速度"
     translated: "+1% Speed"
