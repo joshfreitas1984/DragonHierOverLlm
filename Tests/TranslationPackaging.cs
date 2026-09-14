@@ -242,7 +242,8 @@ namespace Tests
             Directory.CreateDirectory(outputPath);
 
             var passedCount = 0;
-            var failedCount = 0;
+            var qcRejectedCount = 0;
+            var rawFallbackCount = 0;
 
             // Flat-text workflows are packaged separately from CSV files.
             var csvTextFiles = textFiles.Where(t => t.TextFileType == TextFileType.RawCsv);
@@ -251,16 +252,18 @@ namespace Tests
 
             foreach (var prefabTextFile in prefabTextFiles)
             {
-                var (passed, failed) = await PrefabTextWorkflow.PackagePrefabTextAsync(workingDirectory, prefabTextFile);
+                var (passed, qcRejected, rawFallback) = await PrefabTextWorkflow.PackagePrefabTextAsync(workingDirectory, prefabTextFile);
                 passedCount += passed;
-                failedCount += failed;
+                qcRejectedCount += qcRejected;
+                rawFallbackCount += rawFallback;
             }
 
             foreach (var dynamicStringFile in dynamicStringFiles)
             {
-                var (passed, failed) = await DynamicStringWorkflow.PackageDynamicStringsAsync(workingDirectory, dynamicStringFile);
+                var (passed, qcRejected, rawFallback) = await DynamicStringWorkflow.PackageDynamicStringsAsync(workingDirectory, dynamicStringFile);
                 passedCount += passed;
-                failedCount += failed;
+                qcRejectedCount += qcRejected;
+                rawFallbackCount += rawFallback;
 
                 // Force known-bad reconstructed template results regardless of whatever
                 // translation currently sits in Files/Converted - see
@@ -283,7 +286,7 @@ namespace Tests
                     .Where(s => s.CsvFileName == textFile.Path)
                     .ToArray();
 
-                var (passed, failed) = await CsvGameDataWorkflow.PackageAsync(
+                var (passed, qcRejected, rawFallback) = await CsvGameDataWorkflow.PackageAsync(
                     workingDirectory,
                     textFile,
                     onColumnPackaged: (column, rawText, packagedText) =>
@@ -322,7 +325,8 @@ namespace Tests
                     });
 
                 passedCount += passed;
-                failedCount += failed;
+                qcRejectedCount += qcRejected;
+                rawFallbackCount += rawFallback;
             }
 
             // Write out the small, dedicated atlas-sprite-name lookup file(s) collected above -
@@ -342,7 +346,8 @@ namespace Tests
             }
 
             Console.WriteLine($"Passed: {passedCount}");
-            Console.WriteLine($"Failed: {failedCount}");
+            Console.WriteLine($"QC failures: {qcRejectedCount}");
+            Console.WriteLine($"Fell back to raw: {rawFallbackCount}");
         }
 
         // Minimal YAML double-quoted scalar escaping (backslash and double-quote only - none of

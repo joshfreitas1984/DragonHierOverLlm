@@ -95,7 +95,8 @@
   result: "Yunshang"
 - raw: 体力
   result: "Stamina"
-
+  allowalt:
+    - "Strength" # only after we fixed all the strengths and the one or two usages of "Strength" that are not "Stamina"
 - raw: 夏天雄
   result: "Xia Tianxiong"
 - raw: 金龙生

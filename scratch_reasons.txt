@@ -1,0 +1,21 @@
+263	Alternatives were provided when none should be given.
+33	|
+9	;
+3	Matches the bad-words list.
+2	Glossary term '体力' (expected 'Stamina') is missing.
+2	If your prior translation includes Chinese, output English only. Scan the last t
+2	#$PlayerName#
+2	Glossary term '掌門' (expected 'Sect Leader') is missing.
+1	Glossary term '真气' (expected 'True Qi') is missing.
+1	Glossary term '修养' (expected 'Cultivation') is missing.
+1	Glossary term '师兄' (expected 'Senior Brother') is missing.
+1	Restore `\n` to the translation, as it was incorrectly removed.
+1	Restore `<size=28>` to the translation, as it was incorrectly removed. `<size=40
+1	#PlayerName#
+1	#PlayerForceName#
+1	Explaination was provided when none should be given. Alternatives were provided 
+1	Explaination was provided when none should be given.
+---files with reason---
+269	dynamicStrings.txt
+53	PlotData.csv
+3	KungFuData.csv

@@ -57,9 +57,10 @@ translateFlagged: true
 # never as part of a batch - same rule as every other numbered workflow step in this repo.
 qualityReview:
   enabled: true
-  modelName: Qwen38Qc #QwenQc-14B #Glm4Qc-9B 
+  modelName: Qwen38Qc #QwenQc-14B #Glm4Qc-9B
   minAcceptableScore: 70 # tune freely and re-run packaging only - no LLM calls needed to see the effect
   maxConcurrency: 2 # falls back to maxConcurrency above, then batchSize, then 20. Lower is faster on big models
+  inlineRuleCheckRetries: 2 # extra in-call retries when a correction hits the bad-words list, before falling back to the cross-run QcRuleCheckFailureCount retry
 #extraStringTokenReplacers:
 #  - '#PlayerName#'
 splitCharactersList:

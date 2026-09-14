@@ -317,7 +317,7 @@
   splits:
   - split: 2
     text: "全员力道"
-    translated: "Full Strength"
+    translated: "All Strength"
     qcReviewedText: "Full Strength"
     qcStatus: Passed
     qcQualityScore: 100
@@ -325,7 +325,7 @@
   splits:
   - split: 2
     text: "全员灵巧"
-    translated: "All agile"
+    translated: "All Agility"
     qcReviewedText: "All agile"
     qcTranslated: "All Agile"
     qcStatus: Corrected
@@ -335,7 +335,7 @@
   splits:
   - split: 2
     text: "全员智力"
-    translated: "All participants' intellect"
+    translated: "All Intellect"
     qcReviewedText: "All participants' intellect"
     qcTranslated: "All participants' intellect"
     qcStatus: Corrected
@@ -344,7 +344,7 @@
   splits:
   - split: 2
     text: "全员意志"
-    translated: "All willpower"
+    translated: "All Willpower"
     qcReviewedText: "All willpower"
     qcTranslated: "All‑Unit Will"
     qcStatus: Corrected
@@ -354,7 +354,7 @@
   splits:
   - split: 2
     text: "全员体质"
-    translated: "All members' physical condition"
+    translated: "All Constitution"
     qcReviewedText: "All members' physical condition"
     qcStatus: Passed
     qcQualityScore: 100
@@ -362,7 +362,7 @@
   splits:
   - split: 2
     text: "全员经脉"
-    translated: "All Meridians Activated"
+    translated: "All Meridians"
     qcReviewedText: "All Meridians Activated"
     qcTranslated: "All Meridians"
     qcStatus: Corrected
@@ -371,7 +371,7 @@
   splits:
   - split: 2
     text: "全员内功"
-    translated: "All members neigong"
+    translated: "All Neigong"
     qcReviewedText: "All members neigong"
     qcTranslated: "All Members' Neigong"
     qcStatus: Corrected
@@ -380,7 +380,7 @@
   splits:
   - split: 2
     text: "全员轻功"
-    translated: "Everyone uses Qinggong"
+    translated: "All Qinggong"
     qcReviewedText: "Everyone uses Qinggong"
     qcTranslated: "All members use Qinggong"
     qcStatus: Corrected
@@ -389,7 +389,7 @@
   splits:
   - split: 2
     text: "全员绝技"
-    translated: "All super skills"
+    translated: "All Special Skills"
     qcReviewedText: "All super skills"
     qcTranslated: "Ultimate Skills"
     qcStatus: Corrected
@@ -399,7 +399,7 @@
   splits:
   - split: 2
     text: "全员拳掌"
-    translated: "All hands and fists engaged"
+    translated: "All Fist and Palm"
     qcReviewedText: "All hands and fists engaged"
     qcTranslated: "All Hands and Fists"
     qcStatus: Corrected
@@ -409,7 +409,7 @@
   splits:
   - split: 2
     text: "全员剑法"
-    translated: "All Sword Techniques"
+    translated: "All Swordsmanship"
     qcReviewedText: "All Sword Techniques"
     qcTranslated: "All Swordsmanship"
     qcStatus: Corrected
@@ -419,7 +419,7 @@
   splits:
   - split: 2
     text: "全员刀法"
-    translated: "All Blade Techniques"
+    translated: "All Blade Arts"
     qcReviewedText: "All Blade Techniques"
     qcTranslated: "All Blade Techniques"
     qcStatus: Corrected
@@ -429,7 +429,7 @@
   splits:
   - split: 2
     text: "全员长兵"
-    translated: "All long weapons"
+    translated: "All Polearms"
     qcReviewedText: "All long weapons"
     qcTranslated: "All Changbing"
     qcStatus: Corrected
@@ -439,7 +439,7 @@
   splits:
   - split: 2
     text: "全员奇门"
-    translated: "All‑In Mystic Array"
+    translated: "All Qimen"
     qcReviewedText: "All‑In Mystic Array"
     qcTranslated: "Everyone Qimen"
     qcStatus: Corrected
@@ -449,7 +449,7 @@
   splits:
   - split: 2
     text: "全员射术"
-    translated: "All‑arrow shooting skill"
+    translated: "All Archery"
     qcReviewedText: "All‑arrow shooting skill"
     qcTranslated: "All‑Member Archery"
     qcStatus: Corrected
@@ -459,7 +459,7 @@
   splits:
   - split: 2
     text: "全员医术"
-    translated: "All‑Clad Medical Skill"
+    translated: "All Medicine"
     qcReviewedText: "All‑Clad Medical Skill"
     qcTranslated: "Universal Medical Arts"
     qcStatus: Corrected
@@ -469,7 +469,7 @@
   splits:
   - split: 2
     text: "全员毒术"
-    translated: "All Poison Techniques"
+    translated: "All Poison Arts"
     qcReviewedText: "All Poison Techniques"
     qcTranslated: "Everyone Poison Technique"
     qcStatus: Corrected
@@ -479,7 +479,7 @@
   splits:
   - split: 2
     text: "全员学识"
-    translated: "All‑encompassing knowledge"
+    translated: "All Knowledge"
     qcReviewedText: "All‑encompassing knowledge"
     qcTranslated: "Knowledge of All"
     qcStatus: Corrected
@@ -489,7 +489,7 @@
   splits:
   - split: 2
     text: "全员口才"
-    translated: "All‑Hands Public Speaking"
+    translated: "All Eloquence"
     qcReviewedText: "All‑Hands Public Speaking"
     qcTranslated: "Everyone's Eloquence"
     qcStatus: Corrected
@@ -499,7 +499,7 @@
   splits:
   - split: 2
     text: "全员采伐"
-    translated: "All Resource Gathering"
+    translated: "All Logging"
     qcReviewedText: "All Resource Gathering"
     qcStatus: Passed
     qcQualityScore: 100
@@ -507,7 +507,7 @@
   splits:
   - split: 2
     text: "全员木植"
-    translated: "All Zhu Ye"
+    translated: "All Planting"
     qcReviewedText: "All Zhu Ye"
     qcTranslated: "All Are Wood"
     qcStatus: Corrected
@@ -517,7 +517,7 @@
   splits:
   - split: 2
     text: "全员锻造"
-    translated: "All‑Item Forge"
+    translated: "All Forging"
     qcReviewedText: "All‑Item Forge"
     qcTranslated: "All‑Character Forging"
     qcStatus: Corrected
@@ -527,7 +527,7 @@
   splits:
   - split: 2
     text: "全员炼药"
-    translated: "All‑Personnel Alchemy Session"
+    translated: "All Alchemy"
     qcReviewedText: "All‑Personnel Alchemy Session"
     qcTranslated: "Group Alchemy"
     qcStatus: Corrected
@@ -536,7 +536,7 @@
   splits:
   - split: 2
     text: "全员烹饪"
-    translated: "Everyone cooks"
+    translated: "All Cooking"
     qcReviewedText: "Everyone cooks"
     qcTranslated: "All‑Household Cooking"
     qcStatus: Corrected

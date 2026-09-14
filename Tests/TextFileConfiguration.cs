@@ -79,7 +79,10 @@ namespace Tests
             // name/temp-NPC spawn record, highlight side, background image/music/sfx, reflection-
             // based call-function dispatch) - see docs/gamefilehandling-reference.md. Column 9
             // (choices) stays translated via the CustomColumnRepair/CustomColumnValidator
-            // delimiter-preservation pattern above, not SkipColumns.
+            // delimiter-preservation pattern above, not SkipColumns. Any column-9 cell containing
+            // a structural '|'/';' delimiter is excluded from the separate QC review pass via
+            // GameFileHandling.ExcludePlotChoiceColumnFromQc (CustomQcExclusionRule) - see
+            // docs/gamefilehandling-reference.md ("Quality review hooks").
             new() {Path = "PlotData.csv", PackageOutput = true, SkipColumns = [1, 2, 3, 4, 5, 6, 7, 8],  },
 
             // Flat prefab-text input; see docs/gamefilehandling-reference.md.

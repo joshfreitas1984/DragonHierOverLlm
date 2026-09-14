@@ -141,6 +141,18 @@ fragment is stripped unconditionally (raw fragments for this column never legiti
 either character), with the validator's exact-count comparison kept as a backstop in case a future
 change to the repair/decompose logic ever lets a mismatch slip through undetected.
 
+**QC review pass note (2026-09)**: the two hooks above guard the *initial* translation pass, which
+operates per-`choiceText`-fragment via `CompoundFieldSplitter`. The separate QC/quality-review pass
+does not go through that same fragment-level machinery — it hands the model the whole reconstructed
+cell to propose a correction against, and a model asked to "improve" a multi-choice
+`"text;FunctionName;0|text;FunctionName;1"`-shaped blob reliably flattens it to prose, dropping every
+`|`/`;`. `ValidateGameSpecificColumn`'s delimiter-count check still catches and rejects that corrupted
+correction, so this was never a data-corruption risk — but it meant every column-9 QC item with a
+delimiter in it was guaranteed to fail forever. `GameFileHandling.ExcludePlotChoiceColumnFromQc`
+(wired via `CustomQcExclusionRule`, same mechanism as
+`ExcludeFunctionRoutedDynamicStringFromQc` for `dynamicStrings.txt`) keeps these out of the QC queue
+entirely instead. See [gamefilehandling-reference.md](gamefilehandling-reference.md#quality-review-hooks).
+
 **Why this is the pattern to reach for first when the next "weird DB-style validation" case shows
 up** (as it likely will, per the pattern of `StringToSpeAddData`/`SkinDataBase`/`ResourcePointTypeData`
 already found in this codebase): `SkipColumns` throws away real translatable content and should be

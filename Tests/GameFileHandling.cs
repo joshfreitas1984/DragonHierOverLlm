@@ -34,7 +34,9 @@ namespace Tests
             CustomPostRepair = RepairKnownLlmQuirks,
             CustomColumnRepair = RepairGameSpecificColumn,
             CustomColumnValidator = ValidateGameSpecificColumn,
-            CustomQcExclusionRule = ExcludeFunctionRoutedDynamicStringFromQc,
+            CustomQcExclusionRule = (textFile, column, raw) =>
+                ExcludeFunctionRoutedDynamicStringFromQc(textFile, column, raw) ||
+                ExcludePlotChoiceColumnFromQc(textFile, column, raw),
         };
 
         // Repairs possessive/contraction suffixes placed inside placeholder wrappers.
@@ -188,6 +190,31 @@ namespace Tests
 
             var semiIndex = raw.IndexOf(';');
             return semiIndex > 0;
+        }
+
+        // Excludes PlotData.csv column 9 (the interaction-choice column, see
+        // plotdata-column9-crash-and-repair-pattern.md) from the QC pass - same rationale as
+        // ExcludeFunctionRoutedDynamicStringFromQc above, applied here because this column has the
+        // same "machine record, not prose" shape. During ordinary translation this column is safe:
+        // CompoundFieldSplitter decomposes each cell into its individual choiceText fragments (never
+        // '|'/';' themselves), translates only those, and RepairGameSpecificColumn/
+        // ValidateGameSpecificColumn guard each fragment/reconstructed cell against a leaked
+        // delimiter. But the QC review pass hands the model the whole reconstructed cell - e.g.
+        // "内功 吐纳法;ForceFightChooseStartSkill;0|轻功 轻身术;ForceFightChooseStartSkill;1" - as one
+        // block of text to "improve" rather than fragment-by-fragment, and a model asked to smooth a
+        // multi-choice blob like that into fluent prose reliably drops every '|'/';' it contains.
+        // ValidateGameSpecificColumn's delimiter-count check already prevents that corrupted
+        // correction from ever being accepted (confirmed via a real triage cluster: every proposed
+        // correction for this shape was rejected for the same reason, the count mismatch on '|'),
+        // so no data gets corrupted either way - but every such entry keeps generating a QC work
+        // item that is guaranteed to fail, forever. Cheaper and safer to keep them out of the QC
+        // queue entirely, same as the DynamicStringsIL2CPP case above.
+        private static bool ExcludePlotChoiceColumnFromQc(TextFileToSplit textFile, int? column, string raw)
+        {
+            if (textFile.Path != "PlotData.csv" || column != 9 || string.IsNullOrEmpty(raw))
+                return false;
+
+            return raw.IndexOfAny(PlotChoiceStructuralDelimiters) > 0;
         }
 
         public static string[] ParseCsvRow(string line) => CompoundFieldSplitter.ParseCsvRow(line);

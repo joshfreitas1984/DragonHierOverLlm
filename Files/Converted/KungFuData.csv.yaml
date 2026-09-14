@@ -2155,13 +2155,6 @@
   - split: 4
     text: "东瀛武士之刀法，招法看似简单，实则强调对人体力道之极致运用，无需内力修为便能发挥威力"
     translated: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
-    qcReviewedText: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "The Blade Art of the Eastern Samurai appears simple, but in reality emphasizes the ultimate application of Strength to the human body, and can unleash power without requiring Inner Power cultivation."
-    qcFailureReason: "Glossary term '体力' (expected 'Stamina') is missing."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
 - raw: "236,刀法,3,升天斩,猛将所传，刀势自下而上攻击骑兵之招数，据说由臂力惊人者使用，能挑飞战马,20,1,刀法潜力1;刀法1;力道1,,力道3;刀法2;内力0.2,刀法45;力道30,\"4,0,0\",\"4,1,3\",死战0.05;失衡0.05,22,-1,0,头16;胸6,头8;胸4,,,skill2_1,,升龙斩-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -5600,13 +5593,6 @@
   - split: 4
     text: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
     translated: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
-    qcReviewedText: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "These eight moves trace the character “永” in mid-air, adopting the eight stroke-writing methods found within it—side, press, forceful lift, leap, spur, sweep, peck, and tear—as the introductory practice for calligraphic martial arts."
-    qcFailureReason: " If your prior translation includes Chinese, output English only. Scan the last translation for Chinese text, cross-check with the original Chinese from the first user prompt, and translate all remaining Chinese into fluent, natural English."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
 - raw: "617,奇门,1,丹青破穴,以人体为画布，以穴位为着墨之处的奇门绘画武功，能快速点指敌人多处穴位,10,1.1,奇门1;意志1,,意志1;奇门3;内力0.2,奇门25;意志15,\"0,1,1\",\"0,0,0\",心胸点穴0.04;头颈点穴0.04,10,9,0,腹17,腹11,,,skill4_7,,墨染-Target-Grid-Happen,笔,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6920,13 +6906,6 @@
   - split: 4
     text: "霸刀门主虽资质愚钝但天生神力，因此刀招极为简朴，却能将人体力道发挥至极限，一刀之下，便有轰天裂地，劈山断海之威"
     translated: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
-    qcReviewedText: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses born strength. Thus, his blade techniques are extremely simple, yet they can fully unleash the user's strength. With just one slash, it possesses the power to thunder and shatter the earth, splitting mountains and severing seas."
-    qcFailureReason: "Glossary term '体力' (expected 'Stamina') is missing."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
 - raw: "761,内功,0,抱元诀,蓬莱派入门心法，有屏息凝神，保养元气之功效，修道练剑之人多有修习,,1,内功1,生命上限10;内力上限30;内功4;经脉4;剑法威力0.04,,内功5;经脉5,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
