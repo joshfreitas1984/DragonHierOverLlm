@@ -1486,11 +1486,11 @@
   - split: 3
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
-    qcRejectedCorrection: "Don't go gawking at those Great Heroes of the Jianghu, all putting on such righteous airs.\nThey've done no small amount of murder and arson behind the scenes; they're much worse than this Miss.\n...... #PlayerName#, you're not one of them, are you?"
-    qcFailureReason: " Restore `\\n` to the translation, as it was incorrectly removed. `\\n` appears in the result but not in the original text."
-    qcQualityScore: 30
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
+    qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
+    qcTranslated: "Don't be fooled by those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've been no stranger to murder and arson behind closed doors; they're much worse than this Miss.\\n......#PlayerName#, you're not one of them, are you?"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
   - split: 3
     subIndex: 1
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"
@@ -1514,7 +1514,7 @@
     text: "什么名门正派，不过是些沽名钓誉之辈！"
     translated: "What noble and righteous sects, merely some people seeking fame and reputation!"
     qcReviewedText: "What noble and righteous sects, merely some people seeking fame and reputation!\\nMeans are irrelevant to the end goal‑such actions befit true men."
-    qcTranslated: "What noble sects, what righteous ways! They are merely pretenders seeking false fame!\\nTo do whatever it takes to achieve one's goal—only this befits a true man of ambition."
+    qcTranslated: "What noble sects, what righteous ways! They are merely pretenders seeking false fame!\\nTo do whatever it takes to achieve one's goal‑only this befits a true man of ambition."
     qcStatus: Corrected
     qcQualityScore: 75
   - split: 5
@@ -1535,11 +1535,11 @@
   - split: 7
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
     translated: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
-    qcRejectedCorrection: "The most difficult thing to gauge is the human heart; even I, the \"Jianghu Bai Xiao\" (the one who knows all of Jianghu), fear I can barely fathom even a fraction of it."
-    qcFailureReason: " Explaination was provided when none should be given."
-    qcQualityScore: 40
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
+    qcReviewedText: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
+    qcTranslated: "The hardest thing to measure is the human heart. Even for this old man, the “Jianghu Hundred Knows,” it would be hard to fathom even a fraction of it."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 65
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
     translated: "What is the Jianghu? Why call it that?"

@@ -451,7 +451,7 @@
     text: "全员射术"
     translated: "All‑arrow shooting skill"
     qcReviewedText: "All‑arrow shooting skill"
-    qcTranslated: "All-Member Archery"
+    qcTranslated: "All‑Member Archery"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 40
@@ -519,7 +519,7 @@
     text: "全员锻造"
     translated: "All‑Item Forge"
     qcReviewedText: "All‑Item Forge"
-    qcTranslated: "All-Character Forging"
+    qcTranslated: "All‑Character Forging"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 50
@@ -538,7 +538,7 @@
     text: "全员烹饪"
     translated: "Everyone cooks"
     qcReviewedText: "Everyone cooks"
-    qcTranslated: "All-Household Cooking"
+    qcTranslated: "All‑Household Cooking"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 55

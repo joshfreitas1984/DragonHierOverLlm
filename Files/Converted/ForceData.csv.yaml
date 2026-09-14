@@ -514,7 +514,7 @@
     text: "机关"
     translated: "Mechanism"
     qcReviewedText: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous studies</b>：All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures./Materials and treasure appraisal additional knowledge bonus"
-    qcTranslated: "<b>Mechanism</b>: Equip modifications to upgrade Mechanism Beasts and gain their corresponding bonuses.\\n<b>Miscellaneous Studies</b>: All skill experience increased by +20%. More likely to obtain high-grade treasures/materials when collecting resources. Additional knowledge bonus for treasure appraisal."
+    qcTranslated: "<b>Mechanism</b>: Equip modifications to upgrade Mechanism Beasts and gain their corresponding bonuses.\\n<b>Miscellaneous Studies</b>: All skill experience increased by +20%. More likely to obtain high‑grade treasures/materials when collecting resources. Additional knowledge bonus for treasure appraisal."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -668,7 +668,7 @@
     text: "八卦"
     translated: "Bagua"
     qcReviewedText: "<b>Bagua</b>：Combat experience +20%, Scholarly experience+20%。"
-    qcTranslated: "<b>Bagua</b>: Combat experience +20%, Scholarly experience +20%."
+    qcTranslated: "<b>Bagua</b>: Combat experience +20%, Scholarly experience +20%"
     qcStatus: Corrected
     qcQualityScore: 85
   - split: 15
@@ -716,7 +716,7 @@
     text: "仙霞"
     translated: "Xianxia"
     qcReviewedText: "<b>Xianxia</b>：All experience points gained+5%。"
-    qcTranslated: "<b>Xianxia</b>: All experience gained +5%."
+    qcTranslated: "<b>Xianxia</b>: All experience gained +5%"
     qcStatus: Corrected
     qcQualityScore: 70
   - split: 15

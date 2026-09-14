@@ -24,7 +24,7 @@
     text: "有间客栈"
     translated: "A Moment's Inn"
     qcReviewedText: "A Moment's Inn"
-    qcTranslated: "The Yujian Inn"
+    qcTranslated: "Yujian Inn"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -32,7 +32,7 @@
     text: "这本是关外一无名小客栈，传说店家愿出高价，求名士题匾额一副，以振声望。"
     translated: "This was originally an unremarkable small inn beyond the borders. Legend has it that the proprietor offered a high reward to scholars seeking to inscribe a plaque, hoping to boost their reputation."
     qcReviewedText: "This was originally an unremarkable small inn beyond the borders. Legend has it that the proprietor offered a high reward to scholars seeking to inscribe a plaque, hoping to boost their reputation.\\nA literary giant from the preceding dynasty, passing by here, clapped and laughed, saying：Since there's already a inn here, let's call it You Jian Inn!\\nWith warfare and unrest leading to the migration of trade routes, business here gradually picked up. Eventually, it became the top guesthouse in Guandong."
-    qcTranslated: "This was originally an unremarkable small inn beyond the borders. Legend has it that the proprietor offered a high reward to a renowned scholar to inscribe a plaque, hoping to boost the inn's reputation.\\nA literary giant from the preceding dynasty, passing by here, clapped and laughed, saying: Since there is an inn here, let's just call it \"You Jian Inn\"!\\nWith warfare and unrest leading to the migration of trade routes, business here gradually picked up. Eventually, it became the foremost inn in Guandong."
+    qcTranslated: "This was originally an unremarkable small inn beyond the borders. Legend has it that the proprietor offered a high reward to a renowned scholar to inscribe a plaque, hoping to boost the inn's reputation.\\nA literary giant from the preceding dynasty, passing by here, clapped and laughed, saying: Since there is an inn here, let's just call it You Jian Inn!\\nWith warfare and unrest leading to the migration of trade routes, business here gradually picked up. Eventually, it became the foremost inn in Guandong."
     qcStatus: Corrected
     qcQualityScore: 82
   - split: 2
@@ -116,7 +116,7 @@
     text: "这晋阳西南，边陲要冲，亦是中原与北方各地交通往来的重要之所，"
     translated: "This Jinyang, located southwest of the border and a crucial junction, is also an important hub for transportation between Central China and various northern regions."
     qcReviewedText: "This Jinyang, located southwest of the border and a crucial junction, is also an important hub for transportation between Central China and various northern regions.\\nYuelai takes its name from It's delightful when friends come from afar.\\nHere, the Han people, Qiang Hu, and various foreign nations do indeed gather together and find mutual harmony."
-    qcTranslated: "This southwestern corner of Jinyang, a strategic frontier outpost, is also a vital hub for traffic between Central China and the northern regions.\\n\"Yuelai\" takes its name from the phrase, \"Is it not delightful to have friends coming from afar?\"\\nHere, Han, Qiang-Hu, and various foreign nations gather together in harmony."
+    qcTranslated: "This southwestern corner of Jinyang, a strategic frontier outpost, is also a vital hub for traffic between Central China and the northern regions.\\nYuelai takes its name from the phrase, Is it not delightful to have friends coming from afar?\\nHere, Han, Qiang‑Hu, and various foreign nations gather together in harmony."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 45
@@ -171,7 +171,7 @@
     text: "此处乃巴蜀地区重要水陆驿站，由于其名取“步步高升”之意，颇受往来商贾旅人的欢迎，"
     translated: "This place is an important water and land relay station in the Bashu region. Due to its name meaning steady progress, it is particularly favored by travelers and merchants."
     qcReviewedText: "This place is an important water and land relay station in the Bashu region. Due to its name meaning steady progress, it is particularly favored by travelers and merchants.\\nGiven its location on a nearly indispensable passageway between Bashu and the Northwest regions, it thus sees customers and esteemed guests every day."
-    qcTranslated: "This place is an important water and land relay station in the Bashu region. As its name carries the meaning of \"advancing step by step,\" it is very popular with merchants and travelers.\\nMoreover, it is located on the nearly mandatory route between Bashu and the Northwest regions, so it is always crowded with customers and distinguished guests every day."
+    qcTranslated: "This place is an important water and land relay station in the Bashu region. As its name carries the meaning of advancing step by step, it is very popular with merchants and travelers.\\nMoreover, it is located on the nearly mandatory route between Bashu and the Northwest regions, so it is always crowded with customers and distinguished guests every day."
     qcStatus: Corrected
     qcQualityScore: 95
   - split: 2
@@ -193,7 +193,7 @@
     text: "此处乃是江陵一带颇具声名之驿站，"
     translated: "This is a renowned relay station in the Jiangling region."
     qcReviewedText: "This is a renowned relay station in the Jiangling region.\\nBecause of its picturesque surroundings and mist‑shrouded mountains that resemble a dwelling for immortals, it is named Xijiu Inn.\\nThose who stay at inns here are mostly merchants and travelers going between the South and Central Plains, or students heading to take exams."
-    qcTranslated: "This is a renowned relay station in the Jiangling region.\\nDue to its picturesque surroundings, with famous mountains providing shelter and misty clouds swirling as if it were a dwelling for immortals, it is named \"Xianju Inn\".\\nThose who rest or lodge here are mostly merchants and tourists traveling between the South and the Central Plains, or students heading to take exams."
+    qcTranslated: "This is a renowned relay station in the Jiangling region.\\nDue to its picturesque surroundings, with famous mountains providing shelter and misty clouds swirling as if it were a dwelling for immortals, it is named Xianju Inn.\\nThose who rest or lodge here are mostly merchants and tourists traveling between the South and the Central Plains, or students heading to take exams."
     qcStatus: Corrected
     qcQualityScore: 70
   - split: 2
