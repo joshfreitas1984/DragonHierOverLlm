@@ -714,49 +714,106 @@
   - split: 6
     text: "若遇到仇家上门，打得过就打，打不过只管逃跑便是。"
     translated: "If enemies come looking for trouble, fight back if you can; if not, just run away."
+    qcReviewedText: "If enemies come looking for trouble, fight back if you can; if not, just run away."
+    qcTranslated: "If enemies come to your door, fight if you can; if not, just run away."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 7
     text: "往事如烟，去日苦多，没有什么仇怨是不能化解的。"
     translated: "Past sorrows like smoke; many days have passed with much hardship. There is nothing in grievance that cannot be resolved."
+    qcReviewedText: "Past sorrows like smoke; many days have passed with much hardship. There is nothing in grievance that cannot be resolved."
+    qcTranslated: "Past affairs are like smoke; the days gone by were filled with hardship. There is no grievance that cannot be Countered."
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 8
     text: "遇上仇家，我自然要啐上他两口唾沫，方能一解心头之恨"
     translated: "Encountering an enemy, I naturally have to spit on him twice to satisfy my resentment."
+    qcReviewedText: "Encountering an enemy, I naturally have to spit on him twice to satisfy my resentment."
+    qcTranslated: "Encountering an enemy, I naturally have to spit at him a couple of times to satisfy my resentment."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 9
     text: "天下熙熙，皆为利来，没有永远的敌友，只有永远的利益。"
     translated: "All comers to this world seek gain, for there are no eternal enemies or allies; only everlasting benefits."
+    qcReviewedText: "All comers to this world seek gain, for there are no eternal enemies or allies; only everlasting benefits."
+    qcTranslated: "All comers to this world seek gain, for there are no eternal enemies or allies; only eternal interests."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 10
     text: "若有人敢与我为敌，我定要叫他后悔终生"
     translated: "If anyone dares to oppose me, I will make them regret it for the rest of their life."
+    qcReviewedText: "If anyone dares to oppose me, I will make them regret it for the rest of their life."
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "评价江湖,江湖纷扰，不过乱花迷人眼，修炼自身的武功心性，才是求真之道。,只要日夜苦练，百折不挠，定能在江湖上闯出一番名头！,江湖险恶，其中魑魅魍魉甚众，#PlayerName#还要多加小心啊。,若人人贯彻仁义之道，江湖也定能成为一方乐土。,江湖世事，纷乱繁杂，每每想到都令我头疼不已。,江湖风云，诡谲多变，唯有顺势而动，方能立于不败之地。,天下英雄出我辈，一入江湖岁月催，不知这乱世之中，最终几人成名，几人饮恨。,那些循规蹈矩，迂腐无趣的江湖大侠，却又偏偏好为人师，实在令人避之不及。,江湖中人多有侠义之名，可又有几人真能大公无私，行侠义之实呢？,时无英雄，使竖子成名，当下江湖所谓名门高手，实则大多酒囊饭袋而已。"
   splits:
   - text: "评价江湖"
     translated: "Rate the Jianghu"
+    qcReviewedText: "Rate the Jianghu"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 1
     text: "江湖纷扰，不过乱花迷人眼，修炼自身的武功心性，才是求真之道。"
     translated: "Tumult in the Jianghu is but a distraction. The true path lies in refining one's martial arts and inner nature."
+    qcReviewedText: "Tumult in the Jianghu is but a distraction. The true path lies in refining one's martial arts and inner nature."
+    qcTranslated: "Jianghu turmoil is but a distraction. The true path lies in refining one's martial arts and inner nature."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 2
     text: "只要日夜苦练，百折不挠，定能在江湖上闯出一番名头！"
     translated: "Only through diligent practice day and night, never giving up, can one certainly make a name for oneself in the Jianghu!"
+    qcReviewedText: "Only through diligent practice day and night, never giving up, can one certainly make a name for oneself in the Jianghu!"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 3
     text: "江湖险恶，其中魑魅魍魉甚众，#PlayerName#还要多加小心啊。"
     translated: "Jianghu is perilous, with many demons and evil spirits lurking around. #PlayerName#, you should be even more cautious."
+    qcReviewedText: "Jianghu is perilous, with many demons and evil spirits lurking around. #PlayerName#, you should be even more cautious."
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 4
     text: "若人人贯彻仁义之道，江湖也定能成为一方乐土。"
     translated: "If everyone upholds the way of benevolence and righteousness, the Jianghu can surely become a land of peace."
+    qcReviewedText: "If everyone upholds the way of benevolence and righteousness, the Jianghu can surely become a land of peace."
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 5
     text: "江湖世事，纷乱繁杂，每每想到都令我头疼不已。"
     translated: "Jianghu affairs are complex and chaotic, causing me nothing but headaches whenever I think about them."
+    qcReviewedText: "Jianghu affairs are complex and chaotic, causing me nothing but headaches whenever I think about them."
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 6
     text: "江湖风云，诡谲多变，唯有顺势而动，方能立于不败之地。"
     translated: "The Jianghu is full of unpredictable changes; they must adapt accordingly to remain unbeaten."
+    qcReviewedText: "The Jianghu is full of unpredictable changes; they must adapt accordingly to remain unbeaten."
+    qcTranslated: "The Jianghu is full of unpredictable changes; only by adapting to the flow can one remain unbeaten."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 7
     text: "天下英雄出我辈，一入江湖岁月催，不知这乱世之中，最终几人成名，几人饮恨。"
     translated: "Heroes of the world arise in our age; upon entering the Jianghu, time presses on. Who knows in this chaotic world, how many will achieve fame, and how many will end in sorrow."
+    qcReviewedText: "Heroes of the world arise in our age; upon entering the Jianghu, time presses on. Who knows in this chaotic world, how many will achieve fame, and how many will end in sorrow."
+    qcStatus: Passed
+    qcQualityScore: 98
   - split: 8
     text: "那些循规蹈矩，迂腐无趣的江湖大侠，却又偏偏好为人师，实在令人避之不及。"
     translated: "Those rigid and boring Great Heroes of the Jianghu who insist on being teachers to others are truly best avoided."
+    qcReviewedText: "Those rigid and boring Great Heroes of the Jianghu who insist on being teachers to others are truly best avoided."
+    qcTranslated: "Those rigid and boring Great Heroes of the Jianghu who insist on being teachers to others are truly best avoided."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 9
     text: "江湖中人多有侠义之名，可又有几人真能大公无私，行侠义之实呢？"
     translated: "People in the Jianghu are often known for their righteous names, but how many truly act with complete selflessness and real acts of chivalry?"
+    qcReviewedText: "People in the Jianghu are often known for their righteous names, but how many truly act with complete selflessness and real acts of chivalry?"
+    qcTranslated: "Though many in the Jianghu bear the name of a chivalrous hero, how few are those who can truly act with selflessness and perform genuine deeds of chivalry?"
+    qcStatus: Corrected
+    qcQualityScore: 75
   - split: 10
     text: "时无英雄，使竖子成名，当下江湖所谓名门高手，实则大多酒囊饭袋而已。"
     translated: "When there are no heroes in the world, it allows upstarts to gain fame. In truth, most of the so‑called high‑ranking experts in today's Jianghu are little more than wine bellies and gluttons."
+    qcReviewedText: "When there are no heroes in the world, it allows upstarts to gain fame. In truth, most of the so‑called high‑ranking experts in today's Jianghu are little more than wine bellies and gluttons."
+    qcTranslated: "When there are no heroes, it is the upstarts who gain fame. The so-called experts of the great sects in today's Jianghu are, in truth, mostly wine sacks and food bags."
+    qcStatus: Corrected
+    qcQualityScore: 85

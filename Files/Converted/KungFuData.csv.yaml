@@ -5716,8 +5716,9 @@
   - split: 4
     text: "南朝刘勰阐述文章笔法义理之巨著，其中包罗万象，开源发流，通晓此书后，各式秘籍中艰深之处自然迎刃而解"
     translated: "The monumental work by Liu Xie of the Southern Liang dynasty that expounds on the techniques and principles of writing is comprehensive, encompassing all aspects and setting the foundation for various developments. After mastering this book, the intricate parts of various Secret Manuals will naturally become clear."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The monumental work by Liu Xie of the Southern Liang dynasty that expounds on the techniques and principles of writing is comprehensive, encompassing all aspects and setting the foundation for various developments. After mastering this book, the intricate parts of various Secret Manuals will naturally become clear."
+    qcReviewedText: "The monumental work by Liu Xie of the Southern Liang dynasty that expounds on the techniques and principles of writing is comprehensive, encompassing all aspects and setting the foundation for various developments. After mastering this book, the intricate parts of various Secret Manuals will naturally become clear."
+    qcStatus: Passed
+    qcQualityScore: 95
 - raw: "630,射术,3,高山流水,春秋时伯牙所作，曲调高妙，余音绕梁，气劲飞射如流水自高山上倾泻而落，每奏一曲便断一弦，以示知音难觅,17,1.2,智力潜力1;射术1;智力1,,智力3;射术4;内力0.2,射术45;智力40,\"1,1,2\",\"7,0,0\",醒脑0.06;定神0.06,20,9,0,头14;心12,头4;心2,,,skill4_8,13-----1.1,水旋风-Target-Grid-Happen,琴,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -6919,10 +6920,10 @@
   - split: 4
     text: "霸刀门主虽资质愚钝但天生神力，因此刀招极为简朴，却能将人体力道发挥至极限，一刀之下，便有轰天裂地，劈山断海之威"
     translated: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
-    qcRejectedCorrection: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born Strength. Thus, his blade techniques are extremely simple, yet they can fully unleash the user's raw Strength. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
+    qcRejectedCorrection: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his blade techniques are extremely simple, yet they can fully unleash the user's strength. With just one slash, it can create a thunderous and earth-shattering force, splitting mountains and severing seas."
     qcFailureReason: "Glossary term '体力' (expected 'Stamina') is missing."
-    qcQualityScore: 88
-    qcRuleCheckFailureCount: 2
+    qcQualityScore: 82
+    qcRuleCheckFailureCount: 3
     qcRuleCheckFailureBaseline: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
 - raw: "761,内功,0,抱元诀,蓬莱派入门心法，有屏息凝神，保养元气之功效，修道练剑之人多有修习,,1,内功1,生命上限10;内力上限30;内功4;经脉4;剑法威力0.04,,内功5;经脉5,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
@@ -7381,10 +7382,10 @@
   - split: 4
     text: "将唐密和藏密修行之法大胆引入道家修真法门的峨眉秘籍，只有悟性高超者方可翻阅，否则极易坠入邪道"
     translated: "The Daoist cultivation manual of Mount Emei, which boldly incorporates methods from Tibetan and Chinese esoteric Buddhism, can only be read by those with exceptional wisdom and insight, or else one is likely to fall into the ways of evil."
-    qcReviewedText: "Integrating the cultivation methods of Tangmi and Zangmi into the Daoist cultivation techniques in the Meigui sect's secret texts requires a highly intuitive individual; otherwise, one is very likely to fall into heresy."
-    qcTranslated: "The Emei secret manual, which boldly introduces the cultivation methods of Tangmi and Zangmi into Daoist cultivation, may only be read by those with high comprehension; otherwise, it is very easy to fall into heresy."
+    qcReviewedText: "The Daoist cultivation manual of Mount Emei, which boldly incorporates methods from Tibetan and Chinese esoteric Buddhism, can only be read by those with exceptional wisdom and insight, or else one is likely to fall into the ways of evil."
+    qcTranslated: "The Mount Emei Secret Manual, which boldly introduces the practices of Tang Esoteric Buddhism and Tibetan Esoteric Buddhism into the Daoist cultivation path, can only be read by those with exceptional insight; otherwise, one is highly likely to fall into the ways of evil."
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 85
 - raw: "810,拳掌,2,金顶绵掌,以防御见长的掌法，运转舒展绵长，能用柔劲卸去来袭力道，无论对方如何使劲，皆如打在棉花上一般无从着力,14,0.9,拳掌2;智力1,,智力2;拳掌2;内力0.3,拳掌25;智力20,\"0,1,1\",\"0,0,1\",疲劳0.04;不屈0.04,13,14,0,头8;腹8,头8;腹8,,,skill0_1,,清风-Target-Grid-Start;羽毛-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9481,33 +9482,60 @@
   - split: 4
     text: "传说虬龙需经九次蜕变，此矛亦有九重境界。每一重威力增进一筹，直到第九重使出便是惊天动地，神鬼难挡"
     translated: "Legend says that the qionglong must undergo nine transformations. This spear also has nine stages of mastery. Each stage increases its power by one notch, culminating in the ninth stage where it becomes earth‑shaking and beyond the reach of gods and ghosts."
+    qcReviewedText: "Legend says that the qionglong must undergo nine transformations. This spear also has nine stages of mastery. Each stage increases its power by one notch, culminating in the ninth stage where it becomes earth‑shaking and beyond the reach of gods and ghosts."
+    qcTranslated: "Legend says the Qiu Long must undergo nine transformations; this spear also has nine realms. Each realm increases its power by a notch, until the ninth realm unleashes power that shakes heaven and earth, unstoppable even by gods and ghosts."
+    qcStatus: Corrected
+    qcQualityScore: 98
 - raw: "1045,长兵,5,十面埋伏,传闻是西楚霸王项羽被困垓下时领悟出的最后招式，奈何因其败亡而最终失传,25,1.1,长兵潜力1;力道潜力1;意志潜力1;意志2,,力道4;意志4;长兵2;内力0.1,长兵80;力道70;意志40,\"0,1,2\",\"7,0,0\",壮骨0.06;定神0.06;死战0.06,31,-1,0,手8;头8;腹8,手5;头5;腹5,,,skill3_0,,黄沙-Target-Grid-Start;血爪爆-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 4
     text: "传闻是西楚霸王项羽被困垓下时领悟出的最后招式，奈何因其败亡而最终失传"
     translated: "It is said that the final technique was conceived by Xiang Yu, the Western Chu Overlord, when he was trapped in Gaixia. Unfortunately, due to his subsequent defeat and death, this technique eventually fell into obscurity."
+    qcReviewedText: "It is said that the final technique was conceived by Xiang Yu, the Western Chu Overlord, when he was trapped in Gaixia. Unfortunately, due to his subsequent defeat and death, this technique eventually fell into obscurity."
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "1046,奇门,5,山河社稷笔,以铁笔描绘九州山河化作的奇门武学，修习者需胸怀天下方能使出真意，否则徒具其形，不得其神,21,1.1,奇门潜力1;智力潜力1;经脉潜力1;经脉2,,智力4;奇门4;内力0.2,奇门85;智力70,\"3,1,3\",\"1,0,1\",醒脑0.06;头颈点穴0.06;笨拙0.06,29,-1,0,胸7;手7;足8,胸6;手6;足7,,,skill4_7,,墨烟-Target-Grid-Start;墨圈-Target-Grid-Happen,笔,Distance,FALSE,0,0"
   splits:
   - split: 4
     text: "以铁笔描绘九州山河化作的奇门武学，修习者需胸怀天下方能使出真意，否则徒具其形，不得其神"
     translated: "Penning the wonders of Jiuzhou's landscapes with an iron pen, practitioners must harbor the world in their hearts to truly bring out the essence; otherwise, they will merely mimic its form without capturing its spirit."
+    qcReviewedText: "Penning the wonders of Jiuzhou's landscapes with an iron pen, practitioners must harbor the world in their hearts to truly bring out the essence; otherwise, they will merely mimic its form without capturing its spirit."
+    qcTranslated: "A martial art depicting the landscapes of Jiuzhou with an iron brush. Practitioners must harbor the world in their hearts to wield its true meaning; otherwise, they will merely possess its form without capturing its spirit."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "1047,奇门,5,真龙霹雳鞭,此鞭法之力量与速度均霸道至极，一鞭挥出如龙吟九天，声闻数十里，旁人皆以为是真龙现世，故而得名,24,1.2,奇门潜力1;灵巧潜力1;体质潜力1;体质2,,灵巧2;体质3;奇门2;内力0.3,奇门80;体质60;灵巧40,\"2,1,2\",\"3,0,2\",坚毅0.08;重碾0.08,32,-1,0,胸12;腹14,胸6;腹9,,,skill4_4,,腾龙-Target-Grid-Start;劈砍_黄裂地-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "此鞭法之力量与速度均霸道至极，一鞭挥出如龙吟九天，声闻数十里，旁人皆以为是真龙现世，故而得名"
     translated: "This whip technique's power and speed are extremely domineering. A single swing echoes like a dragon's roar across the heavens, heard for tens of miles. Others believe it to be a real dragon appearing in the world, hence its name."
+    qcReviewedText: "This whip technique's power and speed are extremely domineering. A single swing echoes like a dragon's roar across the heavens, heard for tens of miles. Others believe it to be a real dragon appearing in the world, hence its name."
+    qcTranslated: "This whip technique's power and speed are extremely domineering. A single swing echoes like a dragon's roar across the nine heavens, heard for tens of miles. Others believe it to be a real dragon appearing in the world, hence its name."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "1048,射术,5,催命符,江湖传闻身中此符者，绝无生还之可能，真可谓阎王要你三更死，断不留人到五更,23,1.2,射术潜力1;灵巧潜力1;经脉潜力1;灵巧2,,灵巧1;经脉3;射术2;内力0.3,射术85;经脉60;灵巧40,\"0,2,5\",\"0,0,1\",毒素0.06;迟缓0.06;脆弱0.06,33,-1,0,头10;腹10;手8,头4;腹4;手4,,,skill5_1,13-----1,多重暗影-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "江湖传闻身中此符者，绝无生还之可能，真可谓阎王要你三更死，断不留人到五更"
     translated: "Jianghu rumors say that those who are struck by this talisman have no chance of survival. One could truly say that death comes at three in the morning and does not wait until five."
+    qcReviewedText: "Jianghu rumors say that those who are struck by this talisman have no chance of survival. One could truly say that death comes at three in the morning and does not wait until five."
+    qcTranslated: "Jianghu rumors say that there is no way for those struck by this talisman to survive. It truly is: if the King of Hell wants you to die at three in the morning, he will never let you live until five."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
 - raw: "1049,射术,5,后羿射日,源自上古之招式，集中全身力道体魄于一点，射出惊天动地，鬼哭神嚎之一箭,26,1,射术潜力1;力道潜力1;体质潜力1;力道2,,力道3;体质2;射术1;内力0.1,射术80;力道65;体质50,\"4,0,0\",\"4,5,8\",破甲0.06;裂膝0.06;击退3,36,-1,0,心14;胸14,心6;胸6,,,skill5_2,0-----1,烈日-Target-Grid-Start;岩浆喷-Target-Grid-Happen,弓,Distance,FALSE,0,0"
   splits:
   - split: 4
     text: "源自上古之招式，集中全身力道体魄于一点，射出惊天动地，鬼哭神嚎之一箭"
     translated: "Originating from ancient techniques, focusing one's entire strength and resilience into a single point to shoot a breathtaking and terrifying arrow that shakes heaven and earth, makes ghosts weep and gods howl."
+    qcReviewedText: "Originating from ancient techniques, focusing one's entire strength and resilience into a single point to shoot a breathtaking and terrifying arrow that shakes heaven and earth, makes ghosts weep and gods howl."
+    qcTranslated: "Originating from ancient techniques, concentrating all strength and body into a single point to shoot an earth-shaking arrow that makes ghosts weep and gods howl"
+    qcStatus: Corrected
+    qcQualityScore: 82
 - raw: "1050,剑法,5,星落九天,白云天所创奇特剑招，需跃至半空居高临下使出，借助坠落之势锋芒锐不可当，但也会消耗巨量内力,27,1.5,轻功潜力1;剑法潜力1;力道潜力1;经脉潜力1,,力道2;剑法3;轻功4;内力0.2,剑法70;力道50;轻功80,\"0,2,3\",\"1,0,1\",暴击0.08;穿甲0.08,50,-1,0,头20;胸10,头5;胸5,,,skill1_2,,剑雨-Target-Grid-Start;星落-Target-Grid-Happen,剑,Same,FALSE,0,1"
   splits:
   - split: 4
     text: "白云天所创奇特剑招，需跃至半空居高临下使出，借助坠落之势锋芒锐不可当，但也会消耗巨量内力"
     translated: "Bai Yuntian's unique sword technique requires leaping into the air to attack from a high vantage point. Utilizing the momentum of the fall, it is sharp and overwhelming, but it also consumes a massive amount of Inner Power."
+    qcReviewedText: "Bai Yuntian's unique sword technique requires leaping into the air to attack from a high vantage point. Utilizing the momentum of the fall, it is sharp and overwhelming, but it also consumes a massive amount of Inner Power."
+    qcStatus: Passed
+    qcQualityScore: 100

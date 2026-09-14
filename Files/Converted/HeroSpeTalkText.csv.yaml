@@ -1469,9 +1469,16 @@
   - split: 1
     text: "......江湖纷乱......#PlayerName#多加小心......"
     translated: "...the Jianghu is in chaos... #PlayerName#, be careful..."
+    qcReviewedText: "...the Jianghu is in chaos... #PlayerName#, be careful..."
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "当今江湖，有太多欺世盗名，妄称侠义之辈。"
     translated: "In today's Jianghu, there are too many pretenders who claim to uphold chivalry."
+    qcReviewedText: "In today's Jianghu, there are too many pretenders who claim to uphold chivalry.\\nOnly by slaying them all can Senior Achiever realize the domineering ambition to bring peace to the chaotic world."
+    qcTranslated: "In today's Jianghu, there are too many pretenders who claim to uphold chivalry.\\nOnly by slaying them all can this old man realize his domineering ambition to quell the chaotic world."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 2
     subIndex: 1
     text: "唯有将他们斩杀干净，老夫荡平乱世的霸道才能实现。"
@@ -1479,6 +1486,11 @@
   - split: 3
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
+    qcRejectedCorrection: "Don't go gawking at those Great Heroes of the Jianghu, all putting on such righteous airs.\nThey've done no small amount of murder and arson behind the scenes; they're much worse than this Miss.\n...... #PlayerName#, you're not one of them, are you?"
+    qcFailureReason: " Restore `\\n` to the translation, as it was incorrectly removed. `\\n` appears in the result but not in the original text."
+    qcQualityScore: 30
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
   - split: 3
     subIndex: 1
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"
@@ -1490,6 +1502,10 @@
   - split: 4
     text: "当今江湖英雄辈出，豪侠并起，此皆天下大乱所致。"
     translated: "Heroes and chivalrous gentlemen abound in the Jianghu today, all due to great turmoil ravaging the land."
+    qcReviewedText: "Heroes and chivalrous gentlemen abound in the Jianghu today, all due to great turmoil ravaging the land.\\nA sage not dying means great thieves will never cease. Only the way of staying true to the middle can maintain the balance of the times."
+    qcTranslated: "Heroes and chivalrous gentlemen abound in the Jianghu today, all due to great turmoil ravaging the land.\\nAs long as sages do not die, great thieves will never cease. Only the Way of the Middle can maintain the balance of the times."
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 4
     subIndex: 1
     text: "圣人不死，大盗不止，唯有守中之道，方能维持时局平衡。"
@@ -1497,6 +1513,10 @@
   - split: 5
     text: "什么名门正派，不过是些沽名钓誉之辈！"
     translated: "What noble and righteous sects, merely some people seeking fame and reputation!"
+    qcReviewedText: "What noble and righteous sects, merely some people seeking fame and reputation!\\nMeans are irrelevant to the end goal‑such actions befit true men."
+    qcTranslated: "What noble sects, what righteous ways! They are merely pretenders seeking false fame!\\nTo do whatever it takes to achieve one's goal—only this befits a true man of ambition."
+    qcStatus: Corrected
+    qcQualityScore: 75
   - split: 5
     subIndex: 1
     text: "为达目的不择手段，如此方为大丈夫所为。"
@@ -1504,6 +1524,10 @@
   - split: 6
     text: "当今江湖，不过一群虫豸杂碎！"
     translated: "Today's Jianghu is but a mix of various insects!"
+    qcReviewedText: "Today's Jianghu is but a mix of various insects!\\nOnly a few people have caught my eye."
+    qcTranslated: "Today's Jianghu is nothing but a swarm of vermin and scum!\\nOnly a handful of people are worthy of my attention."
+    qcStatus: Corrected
+    qcQualityScore: 95
   - split: 6
     subIndex: 1
     text: "能入老子法眼的，不过寥寥数人而已。"
@@ -1511,9 +1535,18 @@
   - split: 7
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
     translated: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
+    qcRejectedCorrection: "The most difficult thing to gauge is the human heart; even I, the \"Jianghu Bai Xiao\" (the one who knows all of Jianghu), fear I can barely fathom even a fraction of it."
+    qcFailureReason: " Explaination was provided when none should be given."
+    qcQualityScore: 40
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
     translated: "What is the Jianghu? Why call it that?"
+    qcReviewedText: "What is the Jianghu? Why call it that?\\nCould those Great Heroes have been reincarnated as fish and shrimp, liking swimming instead...."
+    qcTranslated: "What is the Jianghu? Why is it called that?\\nAre those Great Heroes reincarnated fish and shrimp, fond of swimming or what...."
+    qcStatus: Corrected
+    qcQualityScore: 75
   - split: 8
     subIndex: 1
     text: "难道那些大侠都是鱼虾转世，喜欢游泳不成......"
@@ -1521,6 +1554,9 @@
   - split: 9
     text: "人在江湖，身不由己。"
     translated: "In the Jianghu, one's actions are not entirely in their own control."
+    qcReviewedText: "In the Jianghu, one's actions are not entirely in their own control.\\n#PlayerName#, perhaps we might also come to the point where we draw our swords against each other."
+    qcStatus: Passed
+    qcQualityScore: 98
   - split: 9
     subIndex: 1
     text: "#PlayerName#，或许你我也会有拔剑相向的一天。"
@@ -1528,6 +1564,10 @@
   - split: 10
     text: "循规蹈矩依正道而行者，不过棋子而已。"
     translated: "Those who follow the rules and walk the straight path are merely pieces on the board."
+    qcReviewedText: "Those who follow the rules and walk the straight path are merely pieces on the board.\\nHaha, while I, Ji Xinkuang, only play the role of the chess player."
+    qcTranslated: "Those who follow the rules and walk the straight path are merely pieces on the board.\\nHaha, while I, Ji Xinkuang, choose to be the one who plays the game."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 10
     subIndex: 1
     text: "呵呵，而我计心狂，只做那弈棋之人。"
@@ -1535,6 +1575,9 @@
   - split: 11
     text: "哎，这江湖中的奸邪宵小之徒，"
     translated: "Ah, the villains and scoundrels in this Jianghu."
+    qcReviewedText: "Ah, the villains and scoundrels in this Jianghu.\\nWhy can't we ever fully exterminate or exhaust them..."
+    qcStatus: Passed
+    qcQualityScore: 95
   - split: 11
     subIndex: 1
     text: "为何总是除之不尽，杀之不竭......"
@@ -1542,6 +1585,10 @@
   - split: 12
     text: "师傅总说，这江湖中人亦正亦邪，黑白往往并不分明。"
     translated: "The master often says that in the Jianghu, people can be both upright and wicked, and good and evil are not always clear‑cut."
+    qcReviewedText: "The master often says that in the Jianghu, people can be both upright and wicked, and good and evil are not always clear‑cut.\\nBut I think black is black and white is white. Isn't it clear to someone who isn't blind?"
+    qcTranslated: "Master often says that in the Jianghu, people are neither wholly good nor wholly evil, and the distinction between right and wrong is often blurred.\\nBut I think black is black and white is white. Unless one is blind, how could one fail to see?"
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 12
     subIndex: 1
     text: "我却觉得黑便是黑，白便是白，又不是瞎子，岂能看不出来？"

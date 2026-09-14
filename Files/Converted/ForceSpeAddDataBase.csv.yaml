@@ -440,83 +440,156 @@
   - split: 2
     text: "全员奇门"
     translated: "All‑In Mystic Array"
+    qcReviewedText: "All‑In Mystic Array"
+    qcTranslated: "Everyone Qimen"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
 - raw: "49,全员射术,全员射术,FALSE,1"
   splits:
   - split: 2
     text: "全员射术"
     translated: "All‑arrow shooting skill"
+    qcReviewedText: "All‑arrow shooting skill"
+    qcTranslated: "All-Member Archery"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
 - raw: "50,全员医术,全员医术,FALSE,1"
   splits:
   - split: 2
     text: "全员医术"
     translated: "All‑Clad Medical Skill"
+    qcReviewedText: "All‑Clad Medical Skill"
+    qcTranslated: "Universal Medical Arts"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
 - raw: "51,全员毒术,全员毒术,FALSE,1"
   splits:
   - split: 2
     text: "全员毒术"
     translated: "All Poison Techniques"
+    qcReviewedText: "All Poison Techniques"
+    qcTranslated: "Everyone Poison Technique"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
 - raw: "52,全员学识,全员学识,FALSE,1"
   splits:
   - split: 2
     text: "全员学识"
     translated: "All‑encompassing knowledge"
+    qcReviewedText: "All‑encompassing knowledge"
+    qcTranslated: "Knowledge of All"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
 - raw: "53,全员口才,全员口才,FALSE,1"
   splits:
   - split: 2
     text: "全员口才"
     translated: "All‑Hands Public Speaking"
+    qcReviewedText: "All‑Hands Public Speaking"
+    qcTranslated: "Everyone's Eloquence"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
 - raw: "54,全员采伐,全员采伐,FALSE,1"
   splits:
   - split: 2
     text: "全员采伐"
     translated: "All Resource Gathering"
+    qcReviewedText: "All Resource Gathering"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "55,全员木植,全员木植,FALSE,1"
   splits:
   - split: 2
     text: "全员木植"
     translated: "All Zhu Ye"
+    qcReviewedText: "All Zhu Ye"
+    qcTranslated: "All Are Wood"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
 - raw: "56,全员锻造,全员锻造,FALSE,1"
   splits:
   - split: 2
     text: "全员锻造"
     translated: "All‑Item Forge"
+    qcReviewedText: "All‑Item Forge"
+    qcTranslated: "All-Character Forging"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
 - raw: "57,全员炼药,全员炼药,FALSE,1"
   splits:
   - split: 2
     text: "全员炼药"
     translated: "All‑Personnel Alchemy Session"
+    qcReviewedText: "All‑Personnel Alchemy Session"
+    qcTranslated: "Group Alchemy"
+    qcStatus: Corrected
+    qcQualityScore: 75
 - raw: "58,全员烹饪,全员烹饪,FALSE,1"
   splits:
   - split: 2
     text: "全员烹饪"
     translated: "Everyone cooks"
+    qcReviewedText: "Everyone cooks"
+    qcTranslated: "All-Household Cooking"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
 - raw: "59,藏经容量,藏经容量,FALSE,5"
   splits:
   - split: 2
     text: "藏经容量"
     translated: "Taoist Canon Capacity"
+    qcReviewedText: "Taoist Canon Capacity"
+    qcTranslated: "Sutra Storage Capacity"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
 - raw: "60,全域治安,全域治安,FALSE,1"
   splits:
   - split: 2
     text: "全域治安"
     translated: "Global law and order"
+    qcReviewedText: "Global law and order"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "61,全域民心,全域民心,FALSE,1"
   splits:
   - split: 2
     text: "全域民心"
     translated: "Global public sentiment"
+    qcReviewedText: "Global public sentiment"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "62,全域防御,全域防御,FALSE,1"
   splits:
   - split: 2
     text: "全域防御"
     translated: "Global Defense"
+    qcReviewedText: "Global Defense"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "63,全域人口,全域人口,FALSE,5"
   splits:
   - split: 2
     text: "全域人口"
     translated: "Global population"
+    qcReviewedText: "Global population"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "64,城防耐久,城防耐久,TRUE,0.02"
   splits:
   - split: 2
     text: "城防耐久"
     translated: "City defense durability"
+    qcReviewedText: "City defense durability"
+    qcTranslated: "City Defense Durability"
+    qcStatus: Corrected
+    qcQualityScore: 85

@@ -283,6 +283,9 @@
   splits:
   - text: "战斗中某项伤势较高时，"
     translated: "When damage in battle is particularly high,"
+    qcReviewedText: "When damage in battle is particularly high,\\nYou will gain temporary resistance to that injury."
+    qcStatus: Passed
+    qcQualityScore: 95
   - subIndex: 1
     text: "会获得针对该伤势的临时抗性。"
     translated: "You will gain temporary resistance to that injury."
@@ -292,6 +295,9 @@
   splits:
   - text: "战斗中一名角色败退时，"
     translated: "When a character retreats during battle,"
+    qcReviewedText: "When a character retreats during battle,\\nThe mechanism beasts it controls will also retreat."
+    qcStatus: Passed
+    qcQualityScore: 100
   - subIndex: 1
     text: "其所控制的机关兽也都会败退。"
     translated: "The mechanism beasts it controls will also retreat."
@@ -301,6 +307,10 @@
   splits:
   - text: "在西域灵州的莫高窟中，"
     translated: "In the Mogao Caves of Lingzhou in the Western Regions,"
+    qcReviewedText: "In the Mogao Caves of Lingzhou in the Western Regions,\\nYou can enter seclusion to forget your existing first‑tier martial arts or talents."
+    qcTranslated: "In the Mogao Caves of Lingzhou in the Western Regions,\\nYou can enter seclusion to forget your existing zero-tier martial arts or talents."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - subIndex: 1
     text: "可闭关遗忘已有的零级武学或天赋。"
     translated: "You can enter seclusion to forget your existing first‑tier martial arts or talents."
@@ -310,6 +320,10 @@
   splits:
   - text: "外功武学的突破效果，"
     translated: "The breakthrough effect of External Skill martial arts,"
+    qcReviewedText: "The breakthrough effect of External Skill martial arts,\\nIt only takes effect when using this martial art."
+    qcTranslated: "The breakthrough effect of External Skill martial arts\\nonly takes effect when using this martial art."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - subIndex: 1
     text: "只有在使用该武学时才会生效。"
     translated: "It only takes effect when using this martial art."
@@ -319,6 +333,11 @@
   splits:
   - text: "京城的私宅因为等级最高，"
     translated: "The private residences in the Capital, being of the highest rank,"
+    qcReviewedText: "The private residences in the Capital, being of the highest rank,\\nThe price is naturally also the highest"
+    qcTranslated: "The private residences in the Capital, being of the highest rank,\\nare naturally the most expensive."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - subIndex: 1
     text: "价格自然也最贵。"
     translated: "The price is naturally also the highest"
@@ -328,6 +347,10 @@
   splits:
   - text: "战场局势瞬息万变，"
     translated: "Battlefield situation changes rapidly"
+    qcReviewedText: "Battlefield situation changes rapidly \\nDo not underestimate those who are less powerful."
+    qcTranslated: "Battlefield situations change in the blink of an eye,\\ndo not take those with weaker strength lightly."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - subIndex: 1
     text: "对付实力较弱者也不可掉以轻心。"
     translated: "Do not underestimate those who are less powerful."
@@ -337,6 +360,10 @@
   splits:
   - text: "侧面攻击提升5%伤害及命中，"
     translated: "Side attacks increase 5% damage and hit rate."
+    qcReviewedText: "Side attacks increase 5% damage and hit rate.\\nBackstab attacks increase by 10%"
+    qcTranslated: "Side attacks increase damage and hit rate by 5%.\\nBackstab attacks increase it by 10%."
+    qcStatus: Corrected
+    qcQualityScore: 90
   - subIndex: 1
     text: "背后攻击则提升10%。"
     translated: "Backstab attacks increase by 10%"
@@ -346,6 +373,10 @@
   splits:
   - text: "行走江湖不能一味单打独斗，"
     translated: "Travelling through the Jianghu requires more than just solo combat."
+    qcReviewedText: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other heros often for the best results."
+    qcTranslated: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other Heroes often for the best results."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - subIndex: 1
     text: "多与其他侠士组队同行，方为万全之法。"
     translated: "Team up with other heros often for the best results."
@@ -355,6 +386,10 @@
   splits:
   - text: "行走江湖不能一味单打独斗，"
     translated: "Travelling through the Jianghu requires more than just solo combat."
+    qcReviewedText: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other heros often for the best results."
+    qcTranslated: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other Heroes often for the best results."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - subIndex: 1
     text: "多与其他侠士组队同行，方为万全之法。"
     translated: "Team up with other heros often for the best results."
@@ -364,6 +399,10 @@
   splits:
   - text: "行走江湖不能一味单打独斗，"
     translated: "Travelling through the Jianghu requires more than just solo combat."
+    qcReviewedText: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other heros often for the best results."
+    qcTranslated: "Travelling through the Jianghu requires more than just solo combat.\\nTeam up with other Heroes often for the best results."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - subIndex: 1
     text: "多与其他侠士组队同行，方为万全之法。"
     translated: "Team up with other heros often for the best results."

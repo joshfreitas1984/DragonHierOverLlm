@@ -513,6 +513,11 @@
   - split: 15
     text: "机关"
     translated: "Mechanism"
+    qcReviewedText: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous studies</b>：All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures./Materials and treasure appraisal additional knowledge bonus"
+    qcTranslated: "<b>Mechanism</b>: Equip modifications to upgrade Mechanism Beasts and gain their corresponding bonuses.\\n<b>Miscellaneous Studies</b>: All skill experience increased by +20%. More likely to obtain high-grade treasures/materials when collecting resources. Additional knowledge bonus for treasure appraisal."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
   - split: 15
     subIndex: 1
     text: "使用装备改装升级机关兽，获取对应的机关兽加成。"
@@ -537,6 +542,11 @@
   - split: 15
     text: "火药"
     translated: "Gunpowder"
+    qcReviewedText: "<b>Gunpowder</b>：Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder.\\n<b>Scorching</b>：Gain one Burning Martial Art per level, with an additional 0.5% boost based on the art's grade./1%/1.5%/2%/2.5%/3% negative modifier \\n<b>Stewed Again</b>：You can reheat meals in the Furnace Room to get the corresponding ingredients."
+    qcTranslated: "<b>Gunpowder</b>: Configure gunpowder to enhance the effects of Thunderclap Hall and Scorching martial arts.\\n<b>Scorching</b>: For every level fully completed in a Scorching martial art, gain an additional 0.5%/1%/1.5%/2%/2.5%/3% negative status effect based on the art's grade.\\n<b>Reheating</b>: Reheat food in the Refining Chamber to obtain the corresponding ingredients."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 15
     subIndex: 1
     text: "通过配置火药提升霹雳堂武学和灼烧武学效果。"
@@ -569,6 +579,11 @@
   - split: 15
     text: "密宗"
     translated: "Esoteric Buddhism"
+    qcReviewedText: "<b>Esoteric Buddhism</b>：Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown ceremony</b>：Reform wild villains or other heroes, altering others' stance toward chaos and ferocity, and increase good will and reputation."
+    qcTranslated: "<b>Esoteric Buddhism</b>: Gain Vajra Sect martial arts bonuses through Esoteric cultivation.\\n<b>Abhisheka</b>: Reform wild thugs or other Heroes, shifting their stance toward chaos and ferocity, while increasing favor and reputation."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 15
     subIndex: 1
     text: "通过密宗修行获取金刚宗武学加成。"
@@ -589,6 +604,11 @@
   - split: 15
     text: "玄冰"
     translated: "Xuanbing"
+    qcReviewedText: "<b>Xuanbing</b>：Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>：Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality./4/6/8/10/12 points of Inner Power cap"
+    qcTranslated: "<b>Xuanbing</b>: Condense Xuanbing to enhance Tianshan Sect martial arts and cold martial arts effects.\\n<b>Cold</b>: For each level fully reached in a cold martial art, increase Inner Power cap by an additional 2/4/6/8/10/12 points based on the martial art's rank."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
   - split: 15
     subIndex: 1
     text: "通过凝结玄冰提升天山派武学和冰寒武学效果。"
@@ -613,6 +633,11 @@
   - split: 15
     text: "聚义"
     translated: "Gather to swear loyalty"
+    qcReviewedText: "<b>Gather to swear loyalty</b>：Neigong experience +20%, medical skill experience+20%。"
+    qcTranslated: "<b>Assemble for Uprising</b>: Neigong experience +20%, Medical Skill experience +20%."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
   - split: 15
     subIndex: 1
     text: "内功经验+20%，医术经验"
@@ -625,6 +650,11 @@
   - split: 15
     text: "黄河"
     translated: "Yellow River"
+    qcReviewedText: "<b>Yellow River</b>：Blade Art experience +20%, poison technique experience+20%。"
+    qcTranslated: "<b>Yellow River</b>: Blade Art experience +20%, Poison Technique experience +20%"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 65
   - split: 15
     subIndex: 1
     text: "刀法经验+20%，毒术经验"
@@ -637,6 +667,10 @@
   - split: 15
     text: "八卦"
     translated: "Bagua"
+    qcReviewedText: "<b>Bagua</b>：Combat experience +20%, Scholarly experience+20%。"
+    qcTranslated: "<b>Bagua</b>: Combat experience +20%, Scholarly experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 85
   - split: 15
     subIndex: 1
     text: "奇门经验+20%，学识经验"
@@ -649,6 +683,10 @@
   - split: 15
     text: "海沙"
     translated: "Desert sand"
+    qcReviewedText: "<b>Desert sand</b>：Special Skill Experience +20%, Cooking Experience+20%。"
+    qcTranslated: "<b>Sea Sand</b>: Special Skill Experience +20%, Cooking Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 15
     subIndex: 1
     text: "绝技经验+20%，烹饪经验"
@@ -661,6 +699,10 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
+    qcReviewedText: "<b>Iron Palm</b>：Fist and Palm Experience +20%, Smithing Experience+20%。"
+    qcTranslated: "<b>Iron Palm</b>: Fist and Palm Experience +20%, Smithing Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 75
   - split: 15
     subIndex: 1
     text: "拳掌经验+20%，锻造经验"
@@ -673,6 +715,10 @@
   - split: 15
     text: "仙霞"
     translated: "Xianxia"
+    qcReviewedText: "<b>Xianxia</b>：All experience points gained+5%。"
+    qcTranslated: "<b>Xianxia</b>: All experience gained +5%."
+    qcStatus: Corrected
+    qcQualityScore: 70
   - split: 15
     subIndex: 1
     text: "所有经验获取"
@@ -685,6 +731,11 @@
   - split: 15
     text: "巨鲸"
     translated: "Great whale"
+    qcReviewedText: "<b>Great whale</b>：Qinggong experience +20%, Resource Gathering experience+20%。"
+    qcTranslated: "<b>Great Whale</b>: Qinggong experience +20%, Resource Gathering experience +20%."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - split: 15
     subIndex: 1
     text: "轻功经验+20%，采伐经验"
@@ -697,6 +748,11 @@
   - split: 15
     text: "金龙"
     translated: "Golden Dragon"
+    qcReviewedText: "<b>Golden Dragon</b>：Archery experience +20%, eloquence experience+20%。"
+    qcTranslated: "<b>Golden Dragon</b>: Archery experience +20%, eloquence experience +20%."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 60
   - split: 15
     subIndex: 1
     text: "射术经验+20%，口才经验"
@@ -709,6 +765,11 @@
   - split: 15
     text: "青城"
     translated: "Qingcheng"
+    qcReviewedText: "<b>Qingcheng</b>：Sword Art experience +20%, alchemy experience+20%。"
+    qcTranslated: "<b>Qingcheng</b>: Sword Art experience +20%, alchemy experience +20%"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
   - split: 15
     subIndex: 1
     text: "剑法经验+20%，炼药经验"
@@ -721,6 +782,11 @@
   - split: 15
     text: "伏牛"
     translated: "Wutou Mountain"
+    qcReviewedText: "<b>Wutou Mountain</b>：Long weapon experience +20%, wooden staff experience+20%。"
+    qcTranslated: "<b>Funian</b>: Long weapon experience +20%, wood plant experience +20%"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - split: 15
     subIndex: 1
     text: "长兵经验+20%，木植经验"

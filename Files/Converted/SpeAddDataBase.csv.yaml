@@ -4925,6 +4925,9 @@
   - split: 10
     text: "提升机关建构的速度"
     translated: "Speed up the construction of mechanisms"
+    qcReviewedText: "Speed up the construction of mechanisms"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "210,机关耐久,0.02,无,无,1,1,1,0,0,提升机关建构的生命,我方,0,0,1,0,0"
   splits:
   - split: 3
@@ -4942,6 +4945,11 @@
   - split: 10
     text: "提升机关建构的生命"
     translated: "Boost the health of the mechanism construction"
+    qcReviewedText: "Boost the health of the mechanism construction"
+    qcTranslated: "Boost the Health of the Mechanism"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
 - raw: "211,城防耐久,0.02,无,无,1,1,1,0,0,提升城防建筑耐久,我方,0,0,0,0,0"
   splits:
   - split: 3
@@ -4959,6 +4967,9 @@
   - split: 10
     text: "提升城防建筑耐久"
     translated: "Increase the durability of city defense structures"
+    qcReviewedText: "Increase the durability of city defense structures"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "212,好感获取,0.01,无,无,1,1,1,0,0,提升好感获取,我方,0,0,0,0,0"
   splits:
   - split: 3
@@ -4976,25 +4987,47 @@
   - split: 10
     text: "提升好感获取"
     translated: "Increase affection points"
+    qcReviewedText: "Increase affection points"
+    qcStatus: Passed
+    qcQualityScore: 95
 - raw: "213,本门武学威力,0.01,无,无,1,1,0,0,0,本门武学威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
     text: "无"
     translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 4
     text: "无"
     translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 10
     text: "本门武学威力"
     translated: "The power of this martial arts style"
+    qcReviewedText: "The power of this martial arts style"
+    qcTranslated: "The power of this sect's martial arts"
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "214,恶名减少,0.005,无,无,1,1,0,0,0,减少恶名,伤害,0,0,1,0,0"
   splits:
   - split: 3
     text: "无"
     translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 4
     text: "无"
     translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 10
     text: "减少恶名"
     translated: "Reduce infamy"
+    qcReviewedText: "Reduce infamy"
+    qcStatus: Passed
+    qcQualityScore: 100

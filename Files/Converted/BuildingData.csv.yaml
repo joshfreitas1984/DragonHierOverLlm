@@ -471,41 +471,73 @@
   - split: 19
     text: "楼宇密布，车水马龙，好一派热闹景致，戏院，青楼，酒馆，赌坊林立其中，出入之人除贩夫走卒，三教九流之外，亦不乏豪商巨贾，文人雅士，歌舞宴饮之声，数里之外亦不绝于耳。"
     translated: "Skyscrapers loomed, traffic surged, and the scene was bustling with activity. Theaters, pleasure houses, taverns, and gambling dens were scattered throughout. Besides the common folk and people from all walks of life, it was also frequented by wealthy merchants, scholars, and artists. The sound of music, singing, and feasting echoed for miles around."
+    qcReviewedText: "Skyscrapers loomed, traffic surged, and the scene was bustling with activity. Theaters, pleasure houses, taverns, and gambling dens were scattered throughout. Besides the common folk and people from all walks of life, it was also frequented by wealthy merchants, scholars, and artists. The sound of music, singing, and feasting echoed for miles around."
+    qcTranslated: "Buildings stood densely packed, traffic surged like water and dragons, creating a bustling scene. Theaters, Pleasure Houses, Taverns, and Gambling Dens were numerous within. Among those coming and going, besides peddlers and people of all walks of life, there were also wealthy merchants and refined scholars. The sounds of singing, dancing, feasting, and drinking could be heard from miles away."
+    qcStatus: Corrected
+    qcQualityScore: 75
 - raw: "52,布达拉宫,52,6,1,0,4,灵药--ShowBuildingShop,药材+100;全域治安+1,粮食-200,弟子上限10;仓储容量4,,矿石1000;药材2000,20,60,2000-15-1-1,11,footstep,0;0,依山而建，殿宇嵯峨，气势雄伟的寺庙群，金顶与红幡白墙交相辉映，颇为肃穆庄严。传闻其僧众极擅炮制高原珍稀药材，以此制成之藏药更是具有枯骨生肌，返老还童等神奇功效。"
   splits:
   - split: 19
     text: "依山而建，殿宇嵯峨，气势雄伟的寺庙群，金顶与红幡白墙交相辉映，颇为肃穆庄严。传闻其僧众极擅炮制高原珍稀药材，以此制成之藏药更是具有枯骨生肌，返老还童等神奇功效。"
     translated: "Built upon the mountain, these majestic temples rise in grandeur, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high‑altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
+    qcReviewedText: "Built upon the mountain, these majestic temples rise in grandeur, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high‑altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
+    qcTranslated: "Built upon the mountain, these majestic temples rise in Momentum, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high‑altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "53,销金窟,53,6,1,0,4,提升口才潜力--StudyMaxLivingSkill-3;销金-我&门派功能0-ShowBuildingShopForceStorage,银钱+200,粮食-150,资源点产量0.2;技艺经验0.2;全员口才4;区域上限1,,银钱2000;粮食1000,20,30,0-15-1.5-4,0,door,0;0,世人皆道烟花柳巷为寻乐之处，却不知此处才是世间极乐之所，其间珍馐美馔罗列星陈，朱颜粉黛婀娜逦迤，朝歌夜弦，纸醉金迷，便是王公贵族也以能在此享乐为荣。"
   splits:
   - split: 19
     text: "世人皆道烟花柳巷为寻乐之处，却不知此处才是世间极乐之所，其间珍馐美馔罗列星陈，朱颜粉黛婀娜逦迤，朝歌夜弦，纸醉金迷，便是王公贵族也以能在此享乐为荣。"
     translated: "It is said that the Yanghua Liukuang is a place to seek pleasure. But few realize that this is truly the epitome of bliss in this world. Here, delicacies are laid out like stars, women with rosy cheeks and graceful figures sway gracefully. Daytime songs and night‑time melodies fill the air, all wrapped up in paper dreams and golden illusions. Even nobles and princes consider it an honor to find joy here."
+    qcReviewedText: "It is said that the Yanghua Liukuang is a place to seek pleasure. But few realize that this is truly the epitome of bliss in this world. Here, delicacies are laid out like stars, women with rosy cheeks and graceful figures sway gracefully. Daytime songs and night‑time melodies fill the air, all wrapped up in paper dreams and golden illusions. Even nobles and princes consider it an honor to find joy here."
+    qcTranslated: "It is said that the red-light districts are places of pleasure, but few realize that this is truly the abode of ultimate bliss in this world. Here, delicacies are arrayed like stars, and beauties with rouge-painted faces sway in graceful succession. Songs by day and strings by night, intoxicating paper and blinding gold— even princes and nobles consider it an honor to enjoy themselves here."
+    qcStatus: Corrected
+    qcQualityScore: 75
 - raw: "54,暗室,54,6,1,0,4,提升射术潜力--StudyMaxFightSkill-8;暗器-我&门派功能1-ShowWeaponResearch;杀手订单-我&门派功能1-ShowBuildingMission,威望+10,粮食-100,全员轻功2;射术经验0.2;全员射术2,,木料1000;药材2000,20,31,,10,door,0;0,配置各式暗器毒药的工坊，四周以帘布遮挡，重重叠叠密不透光。盖因唐门武学讲求出奇制胜，在暗室中修习可防止泄密，同时锻炼黑暗中视物之能力。"
   splits:
   - split: 19
     text: "配置各式暗器毒药的工坊，四周以帘布遮挡，重重叠叠密不透光。盖因唐门武学讲求出奇制胜，在暗室中修习可防止泄密，同时锻炼黑暗中视物之能力。"
     translated: "A workshop equipped with various hidden weapons and poisons is shrouded in curtains from all sides, layer upon layer, completely devoid of light. Due to the Tang Clan's martial arts emphasizing surprise and innovation, training in this dark room prevents leaks and also hones the ability to see in darkness."
+    qcReviewedText: "A workshop equipped with various hidden weapons and poisons is shrouded in curtains from all sides, layer upon layer, completely devoid of light. Due to the Tang Clan's martial arts emphasizing surprise and innovation, training in this dark room prevents leaks and also hones the ability to see in darkness."
+    qcTranslated: "A workshop equipped with various Hidden Weapons and poisons is shrouded in curtains from all sides, layer upon layer, completely devoid of light. As the Tang Clan's martial arts emphasize surprise and innovation, training in this dark room prevents leaks and also hones the ability to see in darkness."
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "55,万花谷,55,6,1,0,4,提升医术潜力--StudyMaxLivingSkill-0;灵谷-我&门派功能2-ShowBuildingShopForceStorage,粮食+50;药材+150,银钱-150,医术经验0.2;全员医术4;疗伤效率0.2,,粮食1000;药材2000,20,32,0-10-1.5-5-2,1,footstep,0;0,蜿蜒地势之间一处幽静深谷，其间水草丰茂，灵气汇集，因而生长有奇花异草，灵药仙芝无数，在此处种植药材也是事半功倍，乃是世人修习医术之圣地。"
   splits:
   - split: 19
     text: "蜿蜒地势之间一处幽静深谷，其间水草丰茂，灵气汇集，因而生长有奇花异草，灵药仙芝无数，在此处种植药材也是事半功倍，乃是世人修习医术之圣地。"
     translated: "A tranquil deep valley winding through rugged terrain, where grasses and plants flourish, gathering spiritual energy. As a result, there are countless unusual flowers, strange herbs, and immortals' medicinal fungi here, making it ideal for cultivating medicines‑half the effort for double the result. It is truly a holy land for people to study medical arts."
+    qcReviewedText: "A tranquil deep valley winding through rugged terrain, where grasses and plants flourish, gathering spiritual energy. As a result, there are countless unusual flowers, strange herbs, and immortals' medicinal fungi here, making it ideal for cultivating medicines‑half the effort for double the result. It is truly a holy land for people to study medical arts."
+    qcTranslated: "A tranquil deep valley nestled within the winding terrain, where grasses and plants flourish and spiritual energy gathers. Consequently, countless rare flowers, exotic herbs, and immortal medicinal mushrooms grow here. Cultivating medicinal herbs in this place yields twice the result with half the effort, making it a sacred site for the world to study medical arts."
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "56,大会台,56,6,1,0,4,提升拳掌潜力--StudyMaxFightSkill-3;铁掌-我&门派功能3-ShowWeaponResearch,粮食+200,银钱-50;木料-100,拳掌经验0.2;全员拳掌2;全员长兵2,,粮食2000;木料1000,20,33,,4,footstep,0;0,一处平坦广阔之木台，不论三教九流，鸡鸣狗盗之徒，乃至衣衫褴褛之乞丐，皆可登台或坐而论道，或一展拳脚，丐帮择其贤者招揽，因而人才济济，冠绝东南。"
   splits:
   - split: 19
     text: "一处平坦广阔之木台，不论三教九流，鸡鸣狗盗之徒，乃至衣衫褴褛之乞丐，皆可登台或坐而论道，或一展拳脚，丐帮择其贤者招揽，因而人才济济，冠绝东南。"
     translated: "A flat and expansive wooden platform where practitioners of all three teachings and nine ranks, thieves and vagrants, and even destitute beggars, could gather to discuss philosophy or showcase their skills. The Beggar Sect would welcome the virtuous among them, thus attracting a multitude of talents unmatched in the southeast."
+    qcReviewedText: "A flat and expansive wooden platform where practitioners of all three teachings and nine ranks, thieves and vagrants, and even destitute beggars, could gather to discuss philosophy or showcase their skills. The Beggar Sect would welcome the virtuous among them, thus attracting a multitude of talents unmatched in the southeast."
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "57,赛马场,57,6,1,0,4,提升长兵潜力--StudyMaxFightSkill-6;枪术-我&门派功能4-ShowWeaponResearch,粮食+100,银钱-100,长兵经验0.2;全员长兵2;旅行速度0.2,,粮食2000;木料1000,20,34,,8,footstep,0;0,平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
   splits:
   - split: 19
     text: "平坦辽阔的环形赛场，用于修习马术或举行赛马大会。飞龙门弟子时常居于其间细心观察，挑选筋强骨健者作为坐骑。按照门规一旦选中，则一人一马形影不离，生死相依。"
     translated: "A vast, flat circular arena used for horse riding practice or races. Disciples of the Flying Dragon Gate often reside here, carefully observing to select those with strong and healthy limbs as their mounts. According to the sect rules, once chosen, a disciple and their horse are inseparable, bound by life and death together."
+    qcReviewedText: "A vast, flat circular arena used for horse riding practice or races. Disciples of the Flying Dragon Gate often reside here, carefully observing to select those with strong and healthy limbs as their mounts. According to the sect rules, once chosen, a disciple and their horse are inseparable, bound by life and death together."
+    qcTranslated: "A flat, vast circular arena used for practicing equestrian skills or holding horse racing tournaments. Disciples of the Flying Dragon Gate often reside here, observing carefully to select those with strong sinews and robust bones as mounts. According to sect rules, once selected, a person and their horse become inseparable, sharing life and death."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "58,华阳洞,58,6,1,0,4,提升炼药潜力--StudyMaxLivingSkill-7;丹引-我&门派功能5-StartBreakMed,木料+50;药材+50,银钱-100,全员经脉2;全员奇门2;全员炼药4,,木料1000;药材2000,20,35,,2,footstep,0;0,鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰：素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
   splits:
   - split: 19
     text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰"
     translated: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Shen Zhen and Fu Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:"
+    qcReviewedText: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Shen Zhen and Fu Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:：Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
+    qcTranslated: "Divine Craftsmanship, a grotto filled with ethereal mist, where Maoshan disciples practice the methods of \"preserving the spirit\" and \"swallowing the breath\" to cultivate themselves, finding boundless utility. A former poet praised it in verse: The white tiger and coiled dragon tread the purple mist, watching the blue sea turn into Mulberry Fields. After seeking the true in Chicheng and Yuji, one arrives again at the Eighth Heaven of Huayang."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 45
   - split: 19
     subIndex: 1
     text: "素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
@@ -518,86 +550,154 @@
   - split: 19
     text: "一方清澈见底的水池，池中或卧或立有刀兵剑刃无数，乃是铸剑山庄历代冶炼积累之残次品及试验品。以此池水淬炼兵器，可感应池中无穷剑意，所得之锋利坚韧远非凡俗可比。"
     translated: "A clear pond with countless swords and blades lying or standing within. This is the remnants and test products from Swordforging Manor's centuries of metalworking. Using this pool water to temper weapons can sense the infinite sword intent within, yielding blades far sharper and tougher than ordinary ones."
+    qcReviewedText: "A clear pond with countless swords and blades lying or standing within. This is the remnants and test products from Swordforging Manor's centuries of metalworking. Using this pool water to temper weapons can sense the infinite sword intent within, yielding blades far sharper and tougher than ordinary ones."
+    qcTranslated: "A crystal-clear pool with countless blades and swords lying or standing within, consisting of the defective and experimental products accumulated from generations of smelting at Swordforging Manor. Tempering weapons in this water allows one to sense the infinite sword intent in the pool, yielding sharpness and toughness far beyond the mundane."
+    qcStatus: Corrected
+    qcQualityScore: 82
 - raw: "60,万毒池,60,6,1,0,4,提升毒术潜力--StudyMaxLivingSkill-1;炼蛊-我&门派功能7-ShowSpePoison,药材+100,粮食-100,毒术经验0.2;全员毒术4;恢复效率0.2,,矿石1000;药材2000,20,37,,2,footstep,0;0,瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
   splits:
   - split: 19
     text: "瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
     translated: "Fog of poison thickly shrouds the murky green pool, swirling with hidden currents. This pool is the product of the Five Poisons Sect's long‑standing practice of refining pupae and testing poisons. The Golden Silkworm King Pupa, which strikes fear into even the bravest of Jianghu warriors with its mere presence, originates from here. Those with weak cultivation will feel dizzy and faint upon merely approaching it."
+    qcReviewedText: "Fog of poison thickly shrouds the murky green pool, swirling with hidden currents. This pool is the product of the Five Poisons Sect's long‑standing practice of refining pupae and testing poisons. The Golden Silkworm King Pupa, which strikes fear into even the bravest of Jianghu warriors with its mere presence, originates from here. Those with weak cultivation will feel dizzy and faint upon merely approaching it."
+    qcTranslated: "Fog of poison thickly shrouds the murky green pool, swirling with hidden currents. This pool is the product of the Five Poisons Sect's long-standing practice of refining pupae and testing poisons. The Golden Silkworm King Pupa, which strikes fear into even the bravest of Jianghu warriors with its mere presence, originates from here. Those with weak cultivation will feel dizzy and faint upon merely approaching it, falling to the ground and unable to rise."
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "61,鬼门关,61,6,1,0,4,提升采伐潜力--StudyMaxLivingSkill-4;试炼-我&门派功能8-StartChallengeGhostGatePlot,威望+10;银钱+100,木料-50;矿石-100,城防耐久0.1;全员力道2;全员拳掌2;全员刀法2,,木料1000;矿石2000,20,38,,2,footstep,0;0,于崇山峻岭间开凿而成，险要奇崛之关口，黄鹤高飞不得过，猿猱欲度愁攀援。阎罗殿弟子想正式入门，需要在此通过极为艰险严苛之考验，方能闯过鬼门关，入修罗之道。"
   splits:
   - split: 19
     text: "于崇山峻岭间开凿而成，险要奇崛之关口，黄鹤高飞不得过，猿猱欲度愁攀援。阎罗殿弟子想正式入门，需要在此通过极为艰险严苛之考验，方能闯过鬼门关，入修罗之道。"
     translated: "Carved through towering mountains and steep ridges, this perilous and rugged pass is so treacherous that even yellow cranes cannot fly over it, and monkeys hesitate to cross for fear of the difficult climb. For Yama Hall disciples to formally join, they must undergo an extremely harsh and rigorous test here, passing through the Ghost Gate before entering the path of Deva Realm."
+    qcReviewedText: "Carved through towering mountains and steep ridges, this perilous and rugged pass is so treacherous that even yellow cranes cannot fly over it, and monkeys hesitate to cross for fear of the difficult climb. For Yama Hall disciples to formally join, they must undergo an extremely harsh and rigorous test here, passing through the Ghost Gate before entering the path of Deva Realm."
+    qcTranslated: "Carved through towering mountains and steep ridges, this perilous and rugged pass is so treacherous that even yellow cranes cannot fly over it, and monkeys hesitate to cross for fear of the difficult climb. For Yama Hall disciples to formally join, they must undergo an extremely harsh and rigorous test here, passing through the Ghost Gate before entering the path of Asura."
+    qcStatus: Corrected
+    qcQualityScore: 80
 - raw: "62,星辰楼,62,6,1,0,4,提升轻功潜力--StudyMaxFightSkill-1;博引-我&门派功能9-StartSpeBookStorage,威望+15,木料-100,理论经验0.2;实战经验0.1;全员学识4;藏经容量10,,银钱2000;木料1000,20,39,,2,footstep,0;0,屹立于山巅，取“危楼高百尺，手可摘星辰”之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
   splits:
   - split: 19
     text: "屹立于山巅，取“危楼高百尺，手可摘星辰”之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
     translated: "Perched atop the mountain, it takes inspiration from A perilous tower a hundred feet high, where one's hands can pluck at the stars. The Pavilion houses countless treasures of the Hundred Schools and ancient texts. With each ascent, the depth and complexity of the zhenshu increase. To this day, only a handful of Great Hidden Pavilion disciples have been able to reach the top floor through their layer‑by‑layer study."
+    qcReviewedText: "Perched atop the mountain, it takes inspiration from A perilous tower a hundred feet high, where one's hands can pluck at the stars. The Pavilion houses countless treasures of the Hundred Schools and ancient texts. With each ascent, the depth and complexity of the zhenshu increase. To this day, only a handful of Great Hidden Pavilion disciples have been able to reach the top floor through their layer‑by‑layer study."
+    qcTranslated: "Perched atop the mountain, it takes inspiration from the poem \"A perilous tower a hundred feet high, where one's hands can pluck at the stars.\" The Pavilion houses countless treasures of the Hundred Schools and ancient texts. With each ascent, the depth and complexity of the collections increase. To this day, only a handful of Great Hidden Pavilion disciples have been able to reach the top floor through their layer-by-layer study."
+    qcStatus: Corrected
+    qcQualityScore: 75
 - raw: "63,铜人阵,63,6,1,0,4,提升生命上限--StudyMaxState-0;禅宗修行-我&门派功能10-ShowMeditation,威望+20,木料-50;矿石-100,理论经验0.1;实战经验0.2;全员体质2,,银钱1000;矿石2000,20,40,,3,footstep,0;0,以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
   splits:
   - split: 19
     text: "以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
     translated: "Cast from wrought copper, eighteen Buddha statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought‑after testament to one's strength in the Wulin."
+    qcReviewedText: "Cast from wrought copper, eighteen Buddha statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought‑after testament to one's strength in the Wulin."
+    qcTranslated: "Cast from wrought copper, the eighteen Arhat statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. They are the ultimate method for Shaolin monks to practice martial arts. Being able to emerge unscathed from the copper man array is also a testament to strength that warriors of the Wulin have long dreamed of achieving."
+    qcStatus: Corrected
+    qcQualityScore: 85
 - raw: "64,紫霄宫,64,6,1,0,4,提升内力上限--StudyMaxState-1;道法修行-我&门派功能11-ShowMeditation,威望+10,粮食-100,全员智力2;全员经脉2;全员意志2,,银钱1000;粮食1000;药材1000,20,41,,11,footstep,0;0,依山而建，重檐叠砌之宫殿，上应紫薇星宿，下合帝君方位，聚气藏风，水脉绵延，武当派弟子多在此修习道家心法和上乘内功，以求感通天地，阴阳调和。"
   splits:
   - split: 19
     text: "依山而建，重檐叠砌之宫殿，上应紫薇星宿，下合帝君方位，聚气藏风，水脉绵延，武当派弟子多在此修习道家心法和上乘内功，以求感通天地，阴阳调和。"
     translated: "Built against the mountain, this palace features multiple eaves and tiered structures. It aligns with the Purple Micro Constellation above and corresponds to the imperial directions below. The design gathers energy, harbors winds, and follows water flows. Many disciples of the Wudang Sect practice Taoist Heart Methods and advanced Neigong here, seeking to attune themselves with heaven and earth, achieving harmony between yin and yang."
+    qcReviewedText: "Built against the mountain, this palace features multiple eaves and tiered structures. It aligns with the Purple Micro Constellation above and corresponds to the imperial directions below. The design gathers energy, harbors winds, and follows water flows. Many disciples of the Wudang Sect practice Taoist Heart Methods and advanced Neigong here, seeking to attune themselves with heaven and earth, achieving harmony between yin and yang."
+    qcStatus: Passed
+    qcQualityScore: 95
 - raw: "65,试刀台,65,6,1,0,4,提升刀法潜力--StudyMaxFightSkill-5;试刀-我&门派功能12-ShowWeaponResearch,威望+10,矿石-100,全员体质2;刀法经验0.2;全员刀法2,,粮食1000;矿石2000,20,42,,7,footstep,0;0,一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
   splits:
   - split: 19
     text: "一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
     translated: "A high stage exuding momentum is adorned with hundreds of various swords and blades. Their sizes vary, and their lengths differ, yet the blade light sparkles brilliantly. Disciples of the Tyrant Blade Sect frequently practice their Blade Art here, testing out their weapons. The sound of splitting gold and shattering stones reverberates like thunder, never ceasing to echo."
+    qcReviewedText: "A high stage exuding momentum is adorned with hundreds of various swords and blades. Their sizes vary, and their lengths differ, yet the blade light sparkles brilliantly. Disciples of the Tyrant Blade Sect frequently practice their Blade Art here, testing out their weapons. The sound of splitting gold and shattering stones reverberates like thunder, never ceasing to echo."
+    qcTranslated: "A towering platform exuding momentum displays hundreds of swords and blades, varying in size and length, their gleams dazzling and awe-inspiring. Disciples of the Tyrant Blade Sect often practice their Blade Art here, testing their weapons; the sound of cleaving gold and shattering stone is like sudden thunder, echoing ceaselessly."
+    qcStatus: Corrected
+    qcQualityScore: 75
 - raw: "66,蓬莱阁,66,6,1,0,4,提升剑法潜力--StudyMaxFightSkill-4;万剑-我&门派功能13-ShowWeaponResearch,威望+10,木料-100,全员灵巧2;剑法经验0.2;全员剑法2,,木料2000;药材1000,20,43,,2,footstep,0;0,地处丹崖山峦，东临碣石，以观沧海，传说八仙过海始于此处，蓬莱弟子登临此地，观琼瑶仙境，海市蜃楼之奇景，以此融入剑法剑意之中，轻灵飘逸确不似凡间所有。"
   splits:
   - split: 19
     text: "地处丹崖山峦，东临碣石，以观沧海，传说八仙过海始于此处，蓬莱弟子登临此地，观琼瑶仙境，海市蜃楼之奇景，以此融入剑法剑意之中，轻灵飘逸确不似凡间所有。"
     translated: "Situated amidst the red cliffs of Danxia Mountains, facing Jieshi to the east, one can gaze upon the vast sea. Legend has it that the Eight Immortals first crossed the sea from here. The Penglai disciples ascended this place to behold the Qingyao fairyland and the wondrous sights of the Haishi shenli. They incorporated these into their sword techniques, imbuing them with a lightness and ethereality that seems otherworldly and not found in ordinary mortal lands."
+    qcReviewedText: "Situated amidst the red cliffs of Danxia Mountains, facing Jieshi to the east, one can gaze upon the vast sea. Legend has it that the Eight Immortals first crossed the sea from here. The Penglai disciples ascended this place to behold the Qingyao fairyland and the wondrous sights of the Haishi shenli. They incorporated these into their sword techniques, imbuing them with a lightness and ethereality that seems otherworldly and not found in ordinary mortal lands."
+    qcTranslated: "Situated amidst the red cliffs of the Danxia Mountains, facing Jieshi to the east, one can gaze upon the vast sea. Legend has it that the Eight Immortals first crossed the sea from here. The Penglai disciples ascended this place to behold the jade fairyland and the wondrous sights of the mirage. They incorporated these into their Swordsmanship, imbuing it with a lightness and ethereality that is not of this mortal world."
+    qcStatus: Corrected
+    qcQualityScore: 75
 - raw: "67,金顶,67,6,1,0,4,提升木植潜力--StudyMaxLivingSkill-5;自然修行-我&门派功能14-ShowMeditation,威望+10,矿石-100,全员内功2;轻功经验0.2;全员轻功2,,木料1000;矿石2000,20,44,,2,footstep,0;0,纯铜铸造之宝殿，通体以金箔敷盖，在旭日映射之下，灿烂辉煌，迢耀天地，恍若佛光普照。峨眉弟子多在此观览云海升腾，感悟天地灵韵，从而精进修为，提升武艺。"
   splits:
   - split: 19
     text: "纯铜铸造之宝殿，通体以金箔敷盖，在旭日映射之下，灿烂辉煌，迢耀天地，恍若佛光普照。峨眉弟子多在此观览云海升腾，感悟天地灵韵，从而精进修为，提升武艺。"
     translated: "The Precious Hall forged from pure copper shines brilliantly under the golden foil covering its entire body. When illuminated by the rising sun, it radiates like a divine light bathing the heavens and earth. Many Mount Emei disciples come here to observe the clouds ascending, imbibe the spirit of nature, and thereby refine their cultivation and enhance their martial arts skills."
+    qcReviewedText: "The Precious Hall forged from pure copper shines brilliantly under the golden foil covering its entire body. When illuminated by the rising sun, it radiates like a divine light bathing the heavens and earth. Many Mount Emei disciples come here to observe the clouds ascending, imbibe the spirit of nature, and thereby refine their cultivation and enhance their martial arts skills."
+    qcTranslated: "The Precious Hall, cast from pure copper and covered entirely in gold leaf, shines brilliantly under the reflection of the rising sun, dazzling the heavens and earth as if bathed in Buddhist radiance. Many disciples of Mount Emei come here to observe the rising sea of clouds, attain insight into the spirit of the universe, and thereby advance their cultivation and improve their martial arts."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "68,七十二洞,68,6,1,0,4,提升奇门潜力--StudyMaxFightSkill-7;奇技-我&门派功能15-ShowWeaponResearch,矿石+50;药材+50,银钱-100,全员绝技2;奇门经验0.2;全员奇门2,,矿石1000;药材2000,20,45,,2,footstep,0;0,崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
   splits:
   - split: 19
     text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
     translated: "Kongtong Mountain, perilous and marvelously bizarre, legend speaks of seventy‑two cave entrances scattered throughout its peaks, depths unfathomable and their pathways unknown. After generations of excavation, these caves are now intricately connected, winding and tortuous. The Kongtong disciples cultivate special techniques here. They often employ dangerous tactics that are hard to guard against."
+    qcReviewedText: "Kongtong Mountain, perilous and marvelously bizarre, legend speaks of seventy‑two cave entrances scattered throughout its peaks, depths unfathomable and their pathways unknown. After generations of excavation, these caves are now intricately connected, winding and tortuous. The Kongtong disciples cultivate special techniques here. They often employ dangerous tactics that are hard to guard against."
+    qcTranslated: "Kongtong Mountain is perilous and marvelously bizarre. Legend speaks of seventy‑two caves, their depths unfathomable and pathways unknown. After generations of excavation, they are now intricately connected, winding and tortuous. The Kongtong disciples utilize this terrain to cultivate unique and secret techniques, often employing dangerous moves that are impossible to defend against."
+    qcStatus: Corrected
+    qcQualityScore: 88
 - raw: "69,机关坊,69,6,1,0,4,提升学识潜力--StudyMaxLivingSkill-2;机关-我&门派功能16-ShowSpeSummonResearch,威望+10;银钱+100,木料-150,城防耐久0.2;科研效率0.4;全员灵巧2;全员智力2,,银钱1000;木料2000,20,46,,9,door,0;0,墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
   splits:
   - split: 19
     text: "墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
     translated: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise‑and‑tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
+    qcReviewedText: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise‑and‑tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
+    qcTranslated: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise-and-tenon parts, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the mechanical devices they carry were crafted here."
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "70,火炼室,70,6,1,0,4,提升烹饪潜力--StudyMaxLivingSkill-8;火药-我&门派功能17-ShowForceSpeResearch;重烩-我&门派功能17-StartBreakFood,矿石+100,银钱-100,全员射术2;锻造经验0.1;全员锻造2,,银钱1000;矿石2000,20,47,,7,door,0;0,为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
   splits:
   - split: 19
     text: "为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
     translated: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year‑round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
+    qcReviewedText: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year‑round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
+    qcTranslated: "To prevent explosions, the surrounding area is reinforced with airtight iron walls. Consequently, the interior is engulfed in rolling heat waves and towering flames year-round; ordinary people would find even a brief stay there as painful as being burned by fire. Thunderclap Hall disciples, however, consider this the perfect place to study gunpowder composition or refine their scorching martial arts."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "71,灵塔殿,71,6,1,0,4,提升绝技潜力--StudyMaxFightSkill-2;密宗修行-我&门派功能18-ShowMeditation,威望+10,矿石-100,全员力道2;绝技经验0.2;全员绝技2,,粮食1000;矿石1000;药材1000,20,48,,11,door,0;0,在庄严庙堂中，井然有序错落着数百座大小不一，样式各异的佛塔，其中供奉的皆是历代祖师之骨灰舍利。金刚弟子往往在这四处缭绕，延绵不绝的祭祀香火中，修炼高深之密宗心法。"
   splits:
   - split: 19
     text: "在庄严庙堂中，井然有序错落着数百座大小不一，样式各异的佛塔，其中供奉的皆是历代祖师之骨灰舍利。金刚弟子往往在这四处缭绕，延绵不绝的祭祀香火中，修炼高深之密宗心法。"
     translated: "In the majestic temple hall, hundreds of differently sized and styled Buddha pagodas are neatly arranged in a staggered formation. Each one houses the bone relics of past patriarchs. The Diamond Disciples often circulate around these, cultivating profound Vajrayana Heart Methods amidst the continuous incense smoke from enduring sacrifices."
+    qcReviewedText: "In the majestic temple hall, hundreds of differently sized and styled Buddha pagodas are neatly arranged in a staggered formation. Each one houses the bone relics of past patriarchs. The Diamond Disciples often circulate around these, cultivating profound Vajrayana Heart Methods amidst the continuous incense smoke from enduring sacrifices."
+    qcTranslated: "In the solemn temple hall, hundreds of Buddha pagodas of varying sizes and styles are arranged in an orderly yet staggered formation, each housing the ash and relics of patriarchs from successive generations. Diamond Disciples often move about within these, cultivating profound Vajrayana Heart Methods amidst the sacrificial incense smoke that swirls everywhere and extends without end."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
 - raw: "72,玄冰池,72,6,1,0,4,提升内功潜力--StudyMaxFightSkill-0;玄冰-我&门派功能19-ShowForceSpeResearch,粮食+50;药材+50,银钱-100,全员意志2;内功经验0.2;全员内功2,,银钱1000;粮食1000;药材1000,20,49,,2,footstep,0;0,天山之巅池泽中有玄冰一块，终年不化，阴寒刺骨，常人只需靠近便感周身冰结，血脉凝固，堪称世间至阴至寒之物。天山弟子卧于其上修炼，配合至阴至阳之心法，自是各有奇效。"
   splits:
   - split: 19
     text: "天山之巅池泽中有玄冰一块，终年不化，阴寒刺骨，常人只需靠近便感周身冰结，血脉凝固，堪称世间至阴至寒之物。天山弟子卧于其上修炼，配合至阴至阳之心法，自是各有奇效。"
     translated: "At the peak of Tianshan, there is a pool with a block of yin ice that never melts throughout the year. Its coldness and chilliness seep into bones, and ordinary people will feel their entire body turn to ice just by getting close, causing their blood vessels to congeal. This yin ice can be considered one of the coldest objects in the world. Disciples of Tianshan practice on it, combining it with heart methods that are both yin and yang, achieving various extraordinary effects."
+    qcReviewedText: "At the peak of Tianshan, there is a pool with a block of yin ice that never melts throughout the year. Its coldness and chilliness seep into bones, and ordinary people will feel their entire body turn to ice just by getting close, causing their blood vessels to congeal. This yin ice can be considered one of the coldest objects in the world. Disciples of Tianshan practice on it, combining it with heart methods that are both yin and yang, achieving various extraordinary effects."
+    qcTranslated: "At the peak of Tianshan, in a pool of marshy water, lies a block of mystic ice that never melts. Its yin cold is piercing to the bone; ordinary people feel their entire body freeze and their blood congeal merely by approaching it, making it arguably the most yin and coldest substance in the world. Tianshan disciples lie upon it to cultivate, combining it with Heart Methods that harness both ultimate yin and ultimate yang, each achieving unique effects."
+    qcStatus: Corrected
+    qcQualityScore: 88
 - raw: "73,私宅,73,2,1,0,3,购买-未购买-BuyCityHouse;书房?♦阅读秘籍\\n♦编纂秘籍-已购买-CityHouseBookRoom;练功房?♦自行练习\\n♦突破\\n♦天赋-已购买-CityHousePracticeRoom;休息?休养恢复状态-已购买-HomeRest;私人仓库?存放物品-已购买-OpenSelfStorage;个人展厅?管理个人展厅-已购买-ShowSelfShowRoom;修缮升级?提升私宅等级-已购买-UpgradeCityHouse,,,,,银钱1000,10,1,,1,door,0;0,一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"
   splits:
   - split: 19
     text: "一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"
     translated: "A well‑decorated and beautifully landscaped private residence, suitable for rest, storage, or martial arts training; it comes with a rather steep price tag."
+    qcReviewedText: "A well‑decorated and beautifully landscaped private residence, suitable for rest, storage, or martial arts training; it comes with a rather steep price tag."
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "74,应天书院,74,6,1,0,4,秘籍--ShowBuildingShop,威望+25,粮食-200,技艺经验0.1;科研效率0.4;藏经容量10,,威望100;粮食2000,20,67,2000-15-1-3,1,door,0;0,此书院自本朝开科取士以来，登第者多达六十余人。远近文人学子皆心向往之，慕名求学者亦是络绎不绝，因而成为一处文人武客交流技艺，买卖藏书之胜地。"
   splits:
   - split: 19
     text: "此书院自本朝开科取士以来，登第者多达六十余人。远近文人学子皆心向往之，慕名求学者亦是络绎不绝，因而成为一处文人武客交流技艺，买卖藏书之胜地。"
     translated: "Since the imperial examination system was established in our dynasty, over sixty candidates have passed and entered officialdom from this academy. While scholars and students from near and far all look up to it with admiration, those seeking fame and knowledge flock there without cease. Consequently, it has become a popular venue for exchanges of skills among literati and martial artists, as well as the buying and selling of books."
+    qcReviewedText: "Since the imperial examination system was established in our dynasty, over sixty candidates have passed and entered officialdom from this academy. While scholars and students from near and far all look up to it with admiration, those seeking fame and knowledge flock there without cease. Consequently, it has become a popular venue for exchanges of skills among literati and martial artists, as well as the buying and selling of books."
+    qcTranslated: "Since the imperial examination system was established in our dynasty, over sixty candidates from this academy have passed the exams and entered officialdom. While scholars and students from near and far all look up to it with admiration, those seeking fame and knowledge flock there without cease. Consequently, it has become a popular venue for exchanges of skills among literati and martial artists, as well as the buying and selling of books."
+    qcStatus: Corrected
+    qcQualityScore: 98
 - raw: "75,河套马场,75,6,1,0,4,名驹--ShowBuildingShop,威望+10;粮食+100,银钱-150,旅行速度0.2,,银钱1000;粮食2000,20,7,2000-15-1-6,8,footstep,0;0,黄河裹挟泥沙而下，冲积而成一处水草丰美，沃野千里的天然牧场，不仅可作粮食生产，更是以盛产名驹战马而天下闻名，难怪俗语有云：黄河百害，唯富一套。"
   splits:
   - split: 19
     text: "黄河裹挟泥沙而下，冲积而成一处水草丰美，沃野千里的天然牧场，不仅可作粮食生产，更是以盛产名驹战马而天下闻名，难怪俗语有云"
     translated: "The Yellow River, laden with silt, flows down to form a vast pasture with abundant grass and fertile land. Not only is it suitable for grain production, but it is also famous for its production of renowned horses and war steeds. No wonder there's a saying that goes,"
+    qcRejectedCorrection: "The Yellow River, laden with silt, flows down to form a natural pasture of abundant grass and fertile land stretching for thousands of miles. It is suitable not only for grain production but is also renowned throughout the land for its famous horses and war steeds. No wonder the old saying goes: \"The Yellow River brings a hundred harms, but only enriches the 'tao' (river bend).\""
+    qcFailureReason: " Explaination was provided when none should be given."
+    qcQualityScore: 80
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "The Yellow River, laden with silt, flows down to form a vast pasture with abundant grass and fertile land. Not only is it suitable for grain production, but it is also famous for its production of renowned horses and war steeds. No wonder there's a saying that goes,：The Yellow River brings many harms, but only benefits in one way."
   - split: 19
     subIndex: 1
     text: "黄河百害，唯富一套。"

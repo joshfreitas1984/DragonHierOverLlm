@@ -446,13 +446,25 @@
   - split: 2
     text: "传说祖先乃秦始皇座下名马，为求仙药随其东巡，过名川大山如飞履平地"
     translated: "Legend says that the ancestors were famous horses under Emperor Qin Shi Huang. Seeking immortal medicines, they accompanied him on his eastern tour, traversing renowned rivers and mountains as if flying."
+    qcReviewedText: "Legend says that the ancestors were famous horses under Emperor Qin Shi Huang. Seeking immortal medicines, they accompanied him on his eastern tour, traversing renowned rivers and mountains as if flying."
+    qcTranslated: "Legend has it that the ancestor was a famed steed serving Emperor Qin Shi Huang. In search of elixirs of immortality, it accompanied the emperor on his eastern tour, crossing great rivers and mountains as if treading on level ground."
+    qcStatus: Corrected
+    qcQualityScore: 95
 - raw: "46,飒露紫,紫燕超跃，骨腾神骏，气詟三川，威凌八阵，其先祖曾为救唐太宗于重围之中而殒命，可谓忠勇过人,5,60,85,80,75,6400"
   splits:
   - split: 2
     text: "紫燕超跃，骨腾神骏，气詟三川，威凌八阵，其先祖曾为救唐太宗于重围之中而殒命，可谓忠勇过人"
     translated: "While they soar like purple swallows, their bones leap like spirit horses. Their ancestral valor shakes the Three Rivers and deters eight arrays. They once sacrificed their lives to save Emperor Taizong of Tang from a heavy encirclement, displaying unparalleled loyalty and bravery."
+    qcReviewedText: "While they soar like purple swallows, their bones leap like spirit horses. Their ancestral valor shakes the Three Rivers and deters eight arrays. They once sacrificed their lives to save Emperor Taizong of Tang from a heavy encirclement, displaying unparalleled loyalty and bravery."
+    qcTranslated: "Soaring like purple swallows, their bones surge with the vigor of spirit horses. Their spirit daunts the Three Rivers, and their might looms over the Eight Arrays. Their ancestors once perished in heavy encirclement to save Emperor Taizong of the Tang, displaying loyalty and valor that surpassed all others."
+    qcStatus: Corrected
+    qcQualityScore: 90
 - raw: "47,白龙驹,遍体白毛，神采秀逸之骏马，其奔腾若风雷，世人皆以为是白龙所化,5,70,95,60,75,6400"
   splits:
   - split: 2
     text: "遍体白毛，神采秀逸之骏马，其奔腾若风雷，世人皆以为是白龙所化"
     translated: "Body covered in white fur, graceful and elegant horse, its gallop like wind and thunder, people believe it to be transformed from a white dragon"
+    qcReviewedText: "Body covered in white fur, graceful and elegant horse, its gallop like wind and thunder, people believe it to be transformed from a white dragon"
+    qcTranslated: "A horse of fine white coat and graceful bearing, its gallop like wind and thunder; the world believes it to be a white dragon transformed"
+    qcStatus: Corrected
+    qcQualityScore: 90

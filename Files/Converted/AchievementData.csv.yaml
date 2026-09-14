@@ -901,11 +901,11 @@
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
-    qcRejectedCorrection: "While holding both a spousal relationship and 4 couple(s) with affection at 100, enter the Sect/Home"
-    qcFailureReason: " Explaination was provided when none should be given."
-    qcQualityScore: 10
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
+    qcReviewedText: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
+    qcTranslated: "Simultaneously possessing a married couple and 4 romantic partners, with affection levels all at 100, to enter the Sect/Home"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -918,20 +918,43 @@
   - split: 1
     text: "终生监禁"
     translated: "Life imprisonment"
+    qcReviewedText: "Life imprisonment"
+    qcStatus: Passed
+    qcQualityScore: 100
   - split: 2
     text: "达成终生监禁结局"
     translated: "Achieve lifetime imprisonment ending"
+    qcReviewedText: "Achieve lifetime imprisonment ending"
+    qcTranslated: "Achieve the Life Imprisonment Ending"
+    qcStatus: Corrected
+    qcQualityScore: 90
   - split: 5
     text: "被捕入狱时恶名达到999"
     translated: "When arrested and sent to prison, his infamy reached 999."
+    qcReviewedText: "When arrested and sent to prison, his infamy reached 999."
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "39,九死一生,九死一生难度下达成任意结局,bool,1,无"
   splits:
   - split: 1
     text: "九死一生"
     translated: "Life and death"
+    qcReviewedText: "Life and death"
+    qcTranslated: "Nine deaths and one life"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
   - split: 2
     text: "九死一生难度下达成任意结局"
     translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
+    qcReviewedText: "Survive Any Ending on Nine Lives Betrayal Difficulty"
+    qcTranslated: "Achieve Any Ending on Nine Deaths One Life Difficulty"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 40
   - split: 5
     text: "无"
     translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
