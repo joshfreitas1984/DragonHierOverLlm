@@ -45,19 +45,9 @@
   - split: 1
     text: "舌灿莲花"
     translated: "Talk eloquently"
-    qcReviewedText: "Talk eloquently"
-    qcTranslated: "Tongue of Lotus"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - split: 2
     text: "累计论战获胜100场"
     translated: "Accumulated debating wins: 100 matches"
-    qcReviewedText: "Accumulated debating wins: 100 matches"
-    qcTranslated: "Total debate wins: 100"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 5
     text: "无"
     translated: "None"
@@ -69,11 +59,6 @@
   - split: 1
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
-    qcReviewedText: "Drinks not intoxicating"
-    qcTranslated: "Unbeatable"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 2
     text: "累计对饮获胜100场"
     translated: "Cumulative drinking win count: 100 rounds"
@@ -200,11 +185,6 @@
   - split: 2
     text: "累计结识100名角色"
     translated: "Accumulated 100 characters met"
-    qcReviewedText: "Accumulated 100 characters met"
-    qcTranslated: "Met 100 characters"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     text: "无"
     translated: "None"
@@ -318,11 +298,6 @@
   - split: 2
     text: "累计煅烧"
     translated: "Accumulated Firing"
-    qcReviewedText: "Accumulated Firing/Prepare/100 times refined"
-    qcTranslated: "Cumulative Firing/Processing/Refining: 100"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - split: 2
     subIndex: 1
     text: "炮制"
@@ -451,11 +426,6 @@
   - split: 1
     text: "盖世英雄"
     translated: "World‑Famous Hero"
-    qcReviewedText: "World‑Famous Hero"
-    qcTranslated: "Peerless Hero"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 2
     text: "成为英雄谱战力第一名"
     translated: "Become the top warrior in the heroes' battle rankings"
@@ -538,19 +508,9 @@
   - split: 1
     text: "情深义重"
     translated: "Deeply affectionate and loyal"
-    qcReviewedText: "Deeply affectionate and loyal"
-    qcTranslated: "Deep affection, strong loyalty"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 2
     text: "与一名角色好感达到100"
     translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcReviewedText: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcTranslated: "Reach a favorability of 100 with a character"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - split: 5
     text: "无"
     translated: "None"
@@ -562,19 +522,9 @@
   - split: 1
     text: "义结金兰"
     translated: "Bonds of sisterhood"
-    qcReviewedText: "Bonds of sisterhood"
-    qcTranslated: "Blood Oath"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 2
     text: "与一名角色结义"
     translated: "Buddy up with a character"
-    qcReviewedText: "Buddy up with a character"
-    qcTranslated: "Become sworn siblings with a character"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     text: "无"
     translated: "None"
@@ -592,11 +542,6 @@
   - split: 2
     text: "与一名角色结缘"
     translated: "Befriend a character"
-    qcReviewedText: "Befriend a character"
-    qcTranslated: "Form a bond with a character"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
   - split: 5
     text: "无"
     translated: "None"
@@ -628,11 +573,6 @@
   - split: 1
     text: "天下第一"
     translated: "Number One Under Heaven"
-    qcReviewedText: "Number One Under Heaven"
-    qcTranslated: "World's Number One"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 2
     text: "达成天下第一结局"
     translated: "Achieve the Top Outcome in the World"
@@ -643,11 +583,6 @@
   - split: 5
     text: "第三次泰岳大典胜出后选择归隐"
     translated: "After winning the Third Taiyue Grand Ceremony, choose to seclude oneself."
-    qcReviewedText: "After winning the Third Taiyue Grand Ceremony, choose to seclude oneself."
-    qcTranslated: "Chose to retire from the world after winning the Third Taiyue Grand Ceremony"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "29,归隐田园,达成归隐田园结局,bool,1,第三次泰岳大典失败后选择归隐"
   splits:
   - split: 1
@@ -675,19 +610,9 @@
   - split: 1
     text: "豪商巨贾"
     translated: "Rich merchants and industrialists"
-    qcReviewedText: "Rich merchants and industrialists"
-    qcTranslated: "Wealthy merchants and prominent businesspeople"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
   - split: 2
     text: "达成豪商巨贾结局"
     translated: "Achieve the Outrageous Merchant Outcome"
-    qcReviewedText: "Achieve the Outrageous Merchant Outcome"
-    qcTranslated: "Achieve the Magnate Ending"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 5
     text: "达到50万银钱后进入门派"
     translated: "Reach 50 thousand silver coins to enter the Sect."
@@ -769,11 +694,6 @@
   - split: 2
     text: "达成权势滔天结局"
     translated: "Achieve the Overwhelming Power Ending"
-    qcReviewedText: "Achieve the Overwhelming Power Ending"
-    qcTranslated: "Achieve the All‑Powerful Ending"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     text: "勋阶达到最高后进入门派"
     translated: "After reaching the highest rank, enter the Sect."
@@ -792,11 +712,6 @@
   - split: 1
     text: "名门大派"
     translated: "Elite Family Sect"
-    qcReviewedText: "Elite Family Sect"
-    qcTranslated: "Prestigious Sect"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 2
     text: "达成名门大派结局"
     translated: "Achieve the Outcome of a Renowned Clansman House"
@@ -807,11 +722,6 @@
   - split: 5
     text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派"
     translated: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect after winning the Sect Leader Conference championship."
-    qcReviewedText: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect after winning the Sect Leader Conference championship./Home"
-    qcTranslated: "Become the Sect Leader. Requires Main Hall level 10 or above and population of 200 or more. Enter the Sect/Home after winning the Sect Leader Conference championship."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -837,11 +747,6 @@
   - split: 5
     text: "占领、附庸、同盟区域50%后进入门派"
     translated: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect"
-    qcReviewedText: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect/Home \\nOr complete chapter 4 of the plot mode"
-    qcTranslated: "Conquer, Vassalize, or Ally with 50% of regions to enter the Sect/Home\\nOr complete Chapter 4 of the Story Mode"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -871,11 +776,6 @@
   - split: 5
     text: "占领、附庸、同盟区域100%后进入门派"
     translated: "Occupy, vassalize, ally regions 100% after entering the Sect"
-    qcReviewedText: "Occupy, vassalize, ally regions 100% after entering the Sect/Home"
-    qcTranslated: "Occupy, vassalize, or ally regions 100% to enter the Sect/Home"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -901,11 +801,6 @@
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
-    qcReviewedText: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
-    qcTranslated: "Simultaneously possessing a married couple and 4 romantic partners, with affection levels all at 100, to enter the Sect/Home"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -939,19 +834,9 @@
   - split: 1
     text: "九死一生"
     translated: "Life and death"
-    qcReviewedText: "Life and death"
-    qcTranslated: "Nine deaths and one life"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 2
     text: "九死一生难度下达成任意结局"
     translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
-    qcReviewedText: "Survive Any Ending on Nine Lives Betrayal Difficulty"
-    qcTranslated: "Achieve Any Ending on Nine Deaths One Life Difficulty"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 5
     text: "无"
     translated: "None"

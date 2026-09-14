@@ -15,19 +15,9 @@
   - split: 3
     text: "正面词缀"
     translated: "Positive prefixes"
-    qcReviewedText: "Positive prefixes"
-    qcTranslated: "Positive affixes"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 4
     text: "负面词缀"
     translated: "Negativesuffix"
-    qcReviewedText: "Negativesuffix"
-    qcTranslated: "Negative Affix"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     text: "百分比显示"
     translated: "Percentage display"
@@ -118,11 +108,6 @@
   - split: 10
     text: "+0.5%暴击"
     translated: "+0.5% Critical Hit"
-    qcReviewedText: "+0.5% Critical Hit\\n+0.5% Disconnected\\n+1 load capacity for equipment"
-    qcTranslated: "+0.5% Critical Hit\\n+0.5% Disconnect\\n+1 Equipment Weight"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 10
     subIndex: 1
     text: "+0.5%断连"
@@ -179,11 +164,6 @@
   - split: 4
     text: "愚钝"
     translated: "Stupid"
-    qcReviewedText: "Stupid"
-    qcTranslated: "Dim"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 10
     text: "+0.5%命中"
     translated: "+0.5% Hit Rate"
@@ -313,11 +293,6 @@
   - split: 4
     text: "空乏"
     translated: "Deprive"
-    qcReviewedText: "Deprive"
-    qcTranslated: "Emptiness"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 10
     text: "+1%内力上限"
     translated: "+1% Inner Power Cap"
@@ -335,11 +310,6 @@
   - split: 4
     text: "迟慢"
     translated: "Slow"
-    qcReviewedText: "Slow"
-    qcTranslated: "Chiman"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 10
     text: "+1%速度"
     translated: "+1% Speed"
@@ -371,19 +341,9 @@
   - split: 3
     text: "钢拳"
     translated: "Iron Fist"
-    qcReviewedText: "Iron Fist"
-    qcTranslated: "Steel Fist"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "残拳"
     translated: "Fistfight"
-    qcReviewedText: "Fistfight"
-    qcTranslated: "Remnant Fist"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - split: 10
     text: "提升拳掌伤害"
     translated: "Increase fist and palm attack damage"
@@ -430,11 +390,6 @@
   - split: 3
     text: "宝刀"
     translated: "Sharp Blade"
-    qcReviewedText: "Sharp Blade"
-    qcTranslated: "Precious Sword"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 4
     text: "钝刀"
     translated: "Clumsy Blade"
@@ -467,11 +422,6 @@
   - split: 4
     text: "断枪"
     translated: "Broken Spear"
-    qcReviewedText: "Broken Spear"
-    qcTranslated: "Broken Rifle"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 10
     text: "提升长兵伤害"
     translated: "Increase long weapon damage"
@@ -496,19 +446,9 @@
   - split: 4
     text: "无奇"
     translated: "Oddball"
-    qcReviewedText: "Oddball"
-    qcTranslated: "Wu Qi"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 10
     text: "提升奇门伤害"
     translated: "Boost Oddly Gate Damage"
-    qcReviewedText: "Boost Oddly Gate Damage \\nReduce damage from qimen attacks"
-    qcTranslated: "Increase Qimen Damage\\nReduce Qimen Damage Taken"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 10
     subIndex: 1
     text: "降低受到的奇门伤害"
@@ -533,11 +473,6 @@
   - split: 10
     text: "提升射术伤害"
     translated: "Increase arrow damage"
-    qcReviewedText: "Increase arrow damage \\nReduce their arrow damage taken"
-    qcTranslated: "Increase archery damage\\nReduce archery damage taken"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 10
     subIndex: 1
     text: "降低受到的射术伤害"
@@ -582,11 +517,6 @@
   - split: 10
     text: "轻功威力"
     translated: "Qinggong power"
-    qcReviewedText: "Qinggong power"
-    qcTranslated: "Lightness power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "17,绝技威力,0.01,无,无,1,1,0,0,0,绝技威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -686,11 +616,6 @@
   - split: 10
     text: "长兵威力"
     translated: "Long weapon power"
-    qcReviewedText: "Long weapon power"
-    qcTranslated: "Long Weapon Power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
 - raw: "22,奇门威力,0.01,无,无,1,1,0,0,0,奇门威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -708,11 +633,6 @@
   - split: 10
     text: "奇门威力"
     translated: "Power of the I Ching"
-    qcReviewedText: "Power of the I Ching"
-    qcTranslated: "Qimen Power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
 - raw: "23,射术威力,0.01,无,无,1,1,0,0,0,射术威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -876,11 +796,6 @@
   - split: 10
     text: "影响获取门派粮食"
     translated: "Affect acquisition of Sect grains"
-    qcReviewedText: "Affect acquisition of Sect grains/Medicine, to enhance the efficiency of consolidating regional defenses"
-    qcTranslated: "Affects the efficiency of acquiring Sect grains/medicines and consolidating regional defenses"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 10
     subIndex: 1
     text: "药材，巩固区域防御的效率"
@@ -905,11 +820,6 @@
   - split: 10
     text: "影响装备制作"
     translated: "Affecting equipment crafting"
-    qcReviewedText: "Affecting equipment crafting/Strengthen, consolidate/Efficiency in maintaining order in affected areas"
-    qcTranslated: "Affects the efficiency of equipment crafting/enhancement and the consolidation/disruption of regional public order"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -938,11 +848,6 @@
   - split: 10
     text: "影响丹药制作"
     translated: "Affecting Dan Pill Production"
-    qcReviewedText: "Affecting Dan Pill Production/Strengthen, consolidate/Efficiency in damaging the population"
-    qcTranslated: "Affects the efficiency of crafting/enhancing Elixirs and consolidating/destabilizing regional population"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -971,11 +876,6 @@
   - split: 10
     text: "影响饮食制作"
     translated: "Affect food preparation"
-    qcReviewedText: "Affect food preparation/Strengthen, consolidate/Efficiency in undermining the morale of the affected area"
-    qcTranslated: "Affects the efficiency of food crafting/reinforcement, and of consolidating/undermining regional morale"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -1265,11 +1165,6 @@
   - split: 10
     text: "奇门潜力"
     translated: "Mystery Potential"
-    qcReviewedText: "Mystery Potential"
-    qcTranslated: "Qimen Potential"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "47,射术潜力,1,无,无,0,1,0,0,0,射术潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1367,11 +1262,6 @@
   - split: 10
     text: "口才潜力"
     translated: "Potential eloquence"
-    qcReviewedText: "Potential eloquence"
-    qcTranslated: "Eloquence Potential"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
 - raw: "52,采伐潜力,1,无,无,0,1,0,0,0,采伐潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1409,11 +1299,6 @@
   - split: 10
     text: "木植潜力"
     translated: "Wood Cultivation Potential"
-    qcReviewedText: "Wood Cultivation Potential"
-    qcTranslated: "Muzhi's Potential"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "54,锻造潜力,1,无,无,0,1,0,0,0,锻造潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1491,21 +1376,11 @@
   - split: 10
     text: "生命上限"
     translated: "Health points"
-    qcReviewedText: "Health points"
-    qcTranslated: "Health"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "58,体力上限,5,焕发,疲敝,0,0,0,0,0,体力上限,伤害,0,0,1,0,0"
   splits:
   - split: 3
     text: "焕发"
     translated: "Revive"
-    qcReviewedText: "Revive"
-    qcTranslated: "Radiate"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - split: 4
     text: "疲敝"
     translated: "Weakened"
@@ -1543,11 +1418,6 @@
   - split: 3
     text: "强攻"
     translated: "Storm attack"
-    qcReviewedText: "Storm attack"
-    qcTranslated: "Heavy Attack"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "羸弱"
     translated: "Weak"
@@ -1571,11 +1441,6 @@
   - split: 4
     text: "摧折"
     translated: "Breaking"
-    qcReviewedText: "Breaking"
-    qcTranslated: "Crush"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 10
     text: "降低所受伤害"
     translated: "Reduce damage taken"
@@ -1614,11 +1479,6 @@
   - split: 4
     text: "笨重"
     translated: "Clumsy"
-    qcReviewedText: "Clumsy"
-    qcTranslated: "Bulky"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 10
     text: "行动速度"
     translated: "Movement speed"
@@ -1656,11 +1516,6 @@
   - split: 4
     text: "支拙"
     translated: "Clumsy"
-    qcReviewedText: "Clumsy"
-    qcTranslated: "Zhi Zhuo"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 10
     text: "躲闪攻击"
     translated: "Avoid attack"
@@ -1764,11 +1619,6 @@
   - split: 4
     text: "磕绊"
     translated: "Bumps and obstacles"
-    qcReviewedText: "Bumps and obstacles"
-    qcTranslated: "Stumble"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 10
     text: "再次攻击"
     translated: "Attack again"
@@ -1801,11 +1651,6 @@
   - split: 3
     text: "广博"
     translated: "Broad"
-    qcReviewedText: "Broad"
-    qcTranslated: "Extensive"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 4
     text: "浅陋"
     translated: "Naive"
@@ -1891,11 +1736,6 @@
   - split: 4
     text: "动摇"
     translated: "Shake"
-    qcReviewedText: "Shake"
-    qcTranslated: "Waver"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - split: 10
     text: "降低受到负面效果的概率"
     translated: "Reduce the probability of suffering negative effects"
@@ -2039,11 +1879,6 @@
   - split: 10
     text: "根据毒术差造成中毒"
     translated: "Due to the difference in poison technique, you have been poisoned."
-    qcReviewedText: "Due to the difference in poison technique, you have been poisoned."
-    qcTranslated: "Poisoned due to the difference in poison skills"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
 - raw: "83,吸血,0.01,无,无,1,1,1,0,0,吸取生命,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -2102,11 +1937,6 @@
   - split: 10
     text: "削除内力"
     translated: "Delete Inner Power"
-    qcReviewedText: "Delete Inner Power"
-    qcTranslated: "Remove Inner Power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "86,恢复,0.01,滋养,无,1,0,1,2,1,每回合+5%生命/内力,我方,0,1,1,1,1"
   splits:
   - split: 3
@@ -2168,11 +1998,6 @@
   - split: 3
     text: "回春"
     translated: "Revival"
-    qcReviewedText: "Revival"
-    qcTranslated: "Rejuvenation"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 4
     text: "无"
     translated: "None"
@@ -2283,11 +2108,6 @@
   - split: 10
     text: "每回合-15%体力"
     translated: "Each turn, regain ‑15% stamina"
-    qcReviewedText: "Each turn, regain ‑15% stamina"
-    qcTranslated: "Each turn, 15% Stamina"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
 - raw: "94,冰寒,0.01,阴寒,无,1,0,1,-1,0,速度/恢复效率-30%,敌方,0,1,1,1,0"
   splits:
   - split: 3
@@ -2332,21 +2152,11 @@
   - split: 10
     text: "免疫伤害至下次受击"
     translated: "Damage from immunity lasts until next hit"
-    qcReviewedText: "Damage from immunity lasts until next hit"
-    qcTranslated: "Immune to damage until next hit"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
 - raw: "96,眩晕,0.01,万钧,无,1,0,1,1,0,跳过回合,敌方,0,1,1,1,0"
   splits:
   - split: 3
     text: "万钧"
     translated: "Ten‑thousand‑jun"
-    qcReviewedText: "Ten‑thousand‑jun"
-    qcTranslated: "Wan Jun"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 4
     text: "无"
     translated: "None"
@@ -2487,11 +2297,6 @@
   - split: 10
     text: "智力"
     translated: "Intelligence"
-    qcReviewedText: "Intelligence/Willpower/Negative resistance-30%"
-    qcTranslated: "Intelligence/Will/Negative Resistance‑30%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 10
     subIndex: 1
     text: "意志"
@@ -2531,11 +2336,6 @@
   - split: 3
     text: "横练"
     translated: "Horizontal training"
-    qcReviewedText: "Horizontal training"
-    qcTranslated: "Horizontal Training"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - split: 4
     text: "无"
     translated: "None"
@@ -2603,11 +2403,6 @@
   - split: 3
     text: "迟缓"
     translated: "Lagging"
-    qcReviewedText: "Lagging"
-    qcTranslated: "Slow"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - split: 4
     text: "无"
     translated: "None"
@@ -2721,11 +2516,6 @@
   - split: 3
     text: "霸体"
     translated: "Invincibility"
-    qcReviewedText: "Invincibility"
-    qcTranslated: "Super Armor"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "无"
     translated: "None"
@@ -2771,11 +2561,6 @@
   - split: 3
     text: "疯魔"
     translated: "Mad Despair"
-    qcReviewedText: "Mad Despair"
-    qcTranslated: "Madness"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
   - split: 4
     text: "无"
     translated: "None"
@@ -2817,11 +2602,6 @@
   - split: 10
     text: "敌我不分"
     translated: "Friend or foe"
-    qcReviewedText: "Friend or foe"
-    qcTranslated: "Indiscriminate"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "115,死战,0.01,背水,无,1,0,1,0,0,双方生命越少伤害越高,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -2869,11 +2649,6 @@
   - split: 3
     text: "壮骨"
     translated: "Strengthen bone"
-    qcReviewedText: "Strengthen bone"
-    qcTranslated: "Bone Strengthening"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 4
     text: "无"
     translated: "None"
@@ -2894,11 +2669,6 @@
   - split: 3
     text: "断骨"
     translated: "Broken bone"
-    qcReviewedText: "Broken bone"
-    qcTranslated: "Bone Breaker"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "无"
     translated: "None"
@@ -2942,11 +2712,6 @@
   - split: 3
     text: "伤筋"
     translated: "Sprain"
-    qcReviewedText: "Sprain"
-    qcTranslated: "Tendon Injury"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 4
     text: "无"
     translated: "None"
@@ -3097,11 +2862,6 @@
   - split: 10
     text: "体质"
     translated: "Physique"
-    qcReviewedText: "Physique-50%"
-    qcTranslated: "Constitution‑50%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   templates:
   - split: 10
     template: "{0}-50%"
@@ -3110,11 +2870,6 @@
   - split: 3
     text: "通脉"
     translated: "Tonify Meridians"
-    qcReviewedText: "Tonify Meridians"
-    qcTranslated: "Unblock Meridians"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 4
     text: "无"
     translated: "None"
@@ -3135,11 +2890,6 @@
   - split: 3
     text: "截脉"
     translated: "Cut pulse"
-    qcReviewedText: "Cut pulse"
-    qcTranslated: "Sever Meridian"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 4
     text: "无"
     translated: "None"
@@ -3194,11 +2944,6 @@
   - split: 10
     text: "受伤时反馈伤害"
     translated: "Feedback damage when injured"
-    qcReviewedText: "Feedback damage when injured"
-    qcTranslated: "Reflects damage when injured"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
 - raw: "131,反伤吸内,0.02,无,无,1,1,1,0,0,受伤时吸取内力,伤害,0,2,1,1,0"
   splits:
   - split: 3
@@ -3237,11 +2982,6 @@
   - split: 10
     text: "受伤时削除内力"
     translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcReviewedText: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcTranslated: "Depletes Inner Power when injured"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
 - raw: "133,击退,1,无,无,0,1,1,0,0,将目标击退,敌方,1,1,1,1,0"
   splits:
   - split: 3
@@ -3287,11 +3027,6 @@
   - split: 3
     text: "慧眼"
     translated: "Sharp‑eyed"
-    qcReviewedText: "Sharp‑eyed"
-    qcTranslated: "Eagle Eye"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 4
     text: "无"
     translated: "None"
@@ -3408,11 +3143,6 @@
   - split: 3
     text: "重碾"
     translated: "Repeatedly crushed"
-    qcReviewedText: "Repeatedly crushed"
-    qcTranslated: "Re‑grind"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
   - split: 4
     text: "无"
     translated: "None"
@@ -3503,11 +3233,6 @@
   - split: 3
     text: "阻滞"
     translated: "Obstacle"
-    qcReviewedText: "Obstacle"
-    qcTranslated: "Block"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 4
     text: "无"
     translated: "None"
@@ -3613,11 +3338,6 @@
   - split: 10
     text: "负面抗性"
     translated: "Negative resistance"
-    qcReviewedText: "Negative resistance+50%"
-    qcTranslated: "Negative Resistance +50%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3626,11 +3346,6 @@
   - split: 3
     text: "动摇"
     translated: "Shake"
-    qcReviewedText: "Shake"
-    qcTranslated: "Waver"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - split: 4
     text: "无"
     translated: "None"
@@ -3640,11 +3355,6 @@
   - split: 10
     text: "负面抗性"
     translated: "Negative resistance"
-    qcReviewedText: "Negative resistance-50%"
-    qcTranslated: "Negative Resistance‑50%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   templates:
   - split: 10
     template: "{0}-50%"
@@ -3665,11 +3375,6 @@
   - split: 10
     text: "根据内力差造成真伤"
     translated: "Based on the difference in inner power causing true damage"
-    qcReviewedText: "Based on the difference in inner power causing true damage"
-    qcTranslated: "Deals true damage based on the difference in Inner Power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
 - raw: "151,真伤,0.01,无,无,1,1,1,0,0,无法防御的固定伤害,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -3717,11 +3422,6 @@
   - split: 3
     text: "回内"
     translated: "Inside"
-    qcReviewedText: "Inside"
-    qcTranslated: "Return"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "无"
     translated: "None"
@@ -3779,11 +3479,6 @@
   - split: 3
     text: "护头"
     translated: "Protect your head"
-    qcReviewedText: "Protect your head"
-    qcTranslated: "Head Guard"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 4
     text: "无"
     translated: "None"
@@ -3815,11 +3510,6 @@
   - split: 10
     text: "每回合提升心部架势"
     translated: "Increase Heart Aura each turn"
-    qcReviewedText: "Increase Heart Aura each turn"
-    qcTranslated: "Increase Heart Guard each turn"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "158,护胸,1,护胸,无,0,0,1,0,0,每回合提升胸部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
@@ -3880,21 +3570,11 @@
   - split: 10
     text: "每回合提升手部架势"
     translated: "Increase hand stance by each turn"
-    qcReviewedText: "Increase hand stance by each turn"
-    qcTranslated: "Increases hand stance each turn"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "161,护足,1,护足,无,0,0,1,0,0,每回合提升足部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
     text: "护足"
     translated: "Footrest"
-    qcReviewedText: "Footrest"
-    qcTranslated: "Foot Guard"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "无"
     translated: "None"
@@ -3967,11 +3647,6 @@
   - split: 10
     text: "固定减少伤害"
     translated: "Fixed reduced damage"
-    qcReviewedText: "Fixed reduced damage"
-    qcTranslated: "Fixed damage reduction"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "165,定身,0.01,无,无,1,1,1,-1,0,停止行动条,敌方,0,1,1,1,0"
   splits:
   - split: 3
@@ -4018,11 +3693,6 @@
   - split: 3
     text: "遁地"
     translated: "Burrow through the earth"
-    qcReviewedText: "Burrow through the earth"
-    qcTranslated: "Burrow"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 4
     text: "无"
     translated: "None"
@@ -4043,11 +3713,6 @@
   - split: 3
     text: "裂膝"
     translated: "Split‑knee"
-    qcReviewedText: "Split‑knee"
-    qcTranslated: "Ruptured Kneecap"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "无"
     translated: "None"
@@ -4102,11 +3767,6 @@
   - split: 10
     text: "无视攻招的架势削减"
     translated: "Ignoring the attack stance to reduce its power"
-    qcReviewedText: "Ignoring the attack stance to reduce its power"
-    qcTranslated: "Ignoring the stance reduction of attack moves"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
 - raw: "171,斗转,0.01,无,无,1,1,1,0,0,转移攻击至周边三格,伤害,0,2,1,1,0"
   splits:
   - split: 3
@@ -4266,11 +3926,6 @@
   - split: 10
     text: "技艺经验"
     translated: "Skill and experience"
-    qcReviewedText: "Skill and experience"
-    qcTranslated: "Skill Experience"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
 - raw: "179,内功经验,0.04,无,无,1,1,1,0,0,内功经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4428,11 +4083,6 @@
   - split: 10
     text: "奇门经验"
     translated: "Dungeon XP"
-    qcReviewedText: "Dungeon XP"
-    qcTranslated: "Qimen XP"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
 - raw: "187,射术经验,0.04,无,无,1,1,1,0,0,射术经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4531,11 +4181,6 @@
   - split: 10
     text: "口才经验"
     translated: "Communication skills experience"
-    qcReviewedText: "Communication skills experience"
-    qcTranslated: "Eloquence EXP"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "192,采伐经验,0.04,无,无,1,1,1,0,0,采伐经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4573,11 +4218,6 @@
   - split: 10
     text: "木植经验"
     translated: "Tree planting experience"
-    qcReviewedText: "Tree planting experience"
-    qcTranslated: "Woodcraft experience"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
 - raw: "194,锻造经验,0.04,无,无,1,1,1,0,0,锻造经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4655,11 +4295,6 @@
   - split: 10
     text: "买卖优势"
     translated: "Advantage of Buying and Selling"
-    qcReviewedText: "Advantage of Buying and Selling"
-    qcTranslated: "Trading Advantage"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "198,拳掌距离,1,无,无,0,1,1,0,0,拳掌攻击距离,我方,1,0,1,0,0"
   splits:
   - split: 3
@@ -4758,11 +4393,6 @@
   - split: 10
     text: "奇门攻击距离"
     translated: "Odd Door attack range"
-    qcReviewedText: "Odd Door attack range"
-    qcTranslated: "Qi Men attack range"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
 - raw: "203,射术距离,1,无,无,0,1,1,0,0,射术攻击距离,我方,1,0,1,0,0"
   splits:
   - split: 3
@@ -4866,19 +4496,9 @@
   - split: 3
     text: "重装"
     translated: "Rearmed"
-    qcReviewedText: "Rearmed"
-    qcTranslated: "Heavy Armor"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "简装"
     translated: "Stripped down"
-    qcReviewedText: "Stripped down"
-    qcTranslated: "Simple"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - split: 10
     text: "提升装备负重"
     translated: "Increase equipment burden capacity"
@@ -4903,11 +4523,6 @@
   - split: 10
     text: "提升机关建构的伤害"
     translated: "Increase the damage of mechanism construction"
-    qcReviewedText: "Increase the damage of mechanism construction"
-    qcTranslated: "Increase the damage of the Mechanism"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
 - raw: "209,机关速度,0.02,无,无,1,1,1,0,0,提升机关建构的速度,我方,0,0,1,0,0"
   splits:
   - split: 3
@@ -4945,11 +4560,6 @@
   - split: 10
     text: "提升机关建构的生命"
     translated: "Boost the health of the mechanism construction"
-    qcReviewedText: "Boost the health of the mechanism construction"
-    qcTranslated: "Boost the Health of the Mechanism"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
 - raw: "211,城防耐久,0.02,无,无,1,1,1,0,0,提升城防建筑耐久,我方,0,0,0,0,0"
   splits:
   - split: 3

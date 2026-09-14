@@ -12,11 +12,6 @@
   splits:
   - text: "与"
     translated: "And"
-    qcReviewedText: "{0} And {1} They put the past behind them and resolved their hatred."
-    qcTranslated: "{0} and {1} put the past behind them and resolved their hatred."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "冰释前嫌，化解了二人间的仇恨。"
     translated: "They put the past behind them and resolved their hatred."
@@ -39,11 +34,6 @@
   splits:
   - text: "从"
     translated: "From"
-    qcReviewedText: "{0} From {3} Purchased from the warehouse {1}, Spend silver coins {2}"
-    qcTranslated: "{0} purchased {1} from {3} Warehouse for {2} silver"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "仓库购买了"
     translated: "Purchased from the warehouse"
@@ -56,11 +46,6 @@
   splits:
   - text: "使用门派银钱"
     translated: "Using sect silver money"
-    qcReviewedText: "{0} Using sect silver money {1} Two, purchase {2}。"
-    qcTranslated: "{0} used {1} Sect Silver to purchase {2}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "两，购买"
     translated: "Two, purchase"
@@ -70,11 +55,6 @@
   splits:
   - text: "出售门派"
     translated: "Sell Sect"
-    qcReviewedText: "{0} Sell Sect {1}, Exchange sect currency {2} Taels"
-    qcTranslated: "{0} sells Sect {1} for {2} Taels of Sect Silver."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "，换取门派银钱"
     translated: ", Exchange sect currency"
@@ -106,11 +86,6 @@
   splits:
   - text: "制造了"
     translated: "Created"
-    qcReviewedText: "{0} Created {1} And place it in the Sect's treasury(Consume {2} Wood and ore minerals {3})"
-    qcTranslated: "{0} crafted {1} and stored it in the Sect warehouse (consumed {2} wood, {3} ore)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "并放入门派仓库"
     translated: "And place it in the Sect's treasury"
@@ -145,11 +120,6 @@
   splits:
   - text: "加入了由"
     translated: "Joined the party led by"
-    qcReviewedText: "{0} Joined the party led by {1} Leader's team"
-    qcTranslated: "{0} joined the party led by {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - subIndex: 1
     text: "领导的队伍。"
     translated: "Leader's team"
@@ -159,11 +129,6 @@
   splits:
   - text: "吉人天相，"
     translated: "Heaven will protect the virtuous"
-    qcReviewedText: "{0} Heaven will protect the virtuous {2}, Mastered martial arts skills {1}。"
-    qcTranslated: "{0}Fortune favors the virtuous. {2} has mastered martial arts {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - subIndex: 1
     text: "，学会了武功"
     translated: ", Mastered martial arts skills"
@@ -173,11 +138,6 @@
   splits:
   - text: "吉人天相，寻得前朝皇家宝库，获得了"
     translated: "With the favor of heaven, they found the royal treasury of the previous dynasty and obtained"
-    qcReviewedText: "{0} With the favor of heaven, they found the royal treasury of the previous dynasty and obtained {1} And various treasures"
-    qcTranslated: "{0} Fortunate souls are favored by heaven; they discovered the royal treasury of the previous dynasty and obtained {1} and many other treasures."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "等诸多珍宝。"
     translated: "And various treasures"
@@ -200,11 +160,6 @@
   splits:
   - text: "吉星高照，寻得失落宝藏，搜刮后获得了"
     translated: "With your lucky star shining bright, you've found a lost treasure and acquired items after searching through it."
-    qcReviewedText: "{0} With your lucky star shining bright, you've found a lost treasure and acquired items after searching through it.{1} Silver coins"
-    qcTranslated: "{0}With your lucky star shining bright, you found a lost treasure and gained {1} silver coins after looting it."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - subIndex: 1
     text: "两银钱。"
     translated: "Silver coins"
@@ -214,33 +169,18 @@
   splits:
   - text: "吉星高照，得到一枚灵果，服食后内力上限增加"
     translated: "Good fortune shines upon you, and you obtain a Spirit Fruit. Upon consuming it, your maximum Inner Power capacity increases."
-    qcReviewedText: "{0} Good fortune shines upon you, and you obtain a Spirit Fruit. Upon consuming it, your maximum Inner Power capacity increases.{1}。"
-    qcTranslated: "{0} Good fortune shines upon you, and you obtain a Spirit Fruit. Upon consuming it, your maximum Inner Power increases by {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}吉星高照，得到一株异草，服食后生命上限增加{1}。"
   splits:
   - text: "吉星高照，得到一株异草，服食后生命上限增加"
     translated: "Lucky day, received a strange herb. After consuming it, Health maximum increased."
-    qcReviewedText: "{0} Lucky day, received a strange herb. After consuming it, Health maximum increased.{1}。"
-    qcTranslated: "{0}Fortune smiles upon you. You have obtained a rare herb. Consuming it will increase your maximum Health by {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 45
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}向{3}仓库捐赠了{1}，获取功绩{2}"
   splits:
   - text: "向"
     translated: "Towards"
-    qcReviewedText: "{0} Towards {3} Warehouse made a donation {1}, Earn Merit {2}"
-    qcTranslated: "{0} donated {1} to the {3} warehouse, earning {2} merit"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "仓库捐赠了"
     translated: "Warehouse made a donation"
@@ -253,22 +193,12 @@
   splits:
   - text: "因功勋卓著，被晋升为"
     translated: "Due to outstanding merit, was promoted to"
-    qcReviewedText: "{0} Due to outstanding merit, was promoted to {1}。"
-    qcTranslated: "{0} was promoted to {1} due to outstanding merit."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}在{1}上下打点，花费{3}银两降低了{2}点恶名。"
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Allocate resources, manage expenses {3} Silver has decreased {2} Increase Infamy"
-    qcTranslated: "{0} bribed officials in {1}, spending {3} silver to reduce Infamy by {2} points."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - subIndex: 1
     text: "上下打点，花费"
     translated: "Allocate resources, manage expenses"
@@ -284,11 +214,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} And {2} Exchange insights, hone combat skills, and ultimately {3}。"
-    qcTranslated: "{0} exchanges insights with {1} and {2}, hones combat skills, and ultimately {3}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "与"
     translated: "And"
@@ -301,11 +226,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} And {2} Developed mutual distrust, and thus harbored deep enmity."
-    qcTranslated: "{0} developed a rift with {1} and {2}, harboring deep enmity."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "与"
     translated: "And"
@@ -318,11 +238,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} And {2} They got along wonderfully, as if old friends reunited, and became close friends."
-    qcTranslated: "{0} and {1} met with {2} and hit it off instantly, becoming close friends."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
   - subIndex: 1
     text: "与"
     translated: "And"
@@ -335,11 +250,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} And {2} Chat for a while"
-    qcTranslated: "{0} chats with {1} and {2} for a while."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - subIndex: 1
     text: "与"
     translated: "And"
@@ -352,11 +262,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Learned a new martial art skill {2}。"
-    qcTranslated: "{0} learned a new martial art, {2}, in {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - subIndex: 1
     text: "习得了新武功"
     translated: "Learned a new martial art skill"
@@ -366,11 +271,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Made a transaction, sold idle items {2} {3}。"
-    qcTranslated: "{0} made a transaction in {1}, selling surplus items {2} {3}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "买卖交易，出售了闲置物品"
     translated: "Made a transaction, sold idle items"
@@ -380,11 +280,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Practiced {2} Skill"
-    qcTranslated: "{0} has practiced the {2} skill in {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "修习了"
     translated: "Practiced"
@@ -397,11 +292,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Practiced martial arts {2}。"
-    qcTranslated: "{0} practiced {2} in {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "修习了武功"
     translated: "Practiced martial arts"
@@ -411,11 +301,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Attend {2} Auction conference, expenses {3} I bought an item {4}。"
-    qcTranslated: "{0} attended the {2} auction in {1} and purchased a {4} for {3} taels."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "参加"
     translated: "Attend"
@@ -431,11 +316,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Attend {5} Horse Racing Festival, securing the %d place {2} Name, silver coins+{3}, Reputation+{4}。"
-    qcTranslated: "{0} attended the {5} Horse Racing Festival in {1}, winning {2}th place. Silver: +{3}, Reputation: +{4}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - subIndex: 1
     text: "参加"
     translated: "Attend"
@@ -454,11 +334,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Attend {6}, Claim the top spot as the first {2} Name, silver coins+{3}，{4}, And won the prize {5}。"
-    qcTranslated: "{0} participated in {6} in {1}, claiming {2} place and earning {3} silver, {4}, along with the prize {5}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - subIndex: 1
     text: "参加"
     translated: "Attend"
@@ -477,11 +352,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} While exploring, I unexpectedly discovered {2}。"
-    qcTranslated: "While exploring {1}, {0} unexpectedly discovered {2}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "四下探索之时，意外发现了"
     translated: "While exploring, I unexpectedly discovered"
@@ -491,11 +361,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Completed an important commission, reputation {2}, Silver taels {3}, And obtained {4}。"
-    qcTranslated: "{0} completed an important commission in {1}, gaining {2} reputation and {3} silver taels, and obtaining {4}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - subIndex: 1
     text: "完成了重要委托，名望"
     translated: "Completed an important commission, reputation"
@@ -511,11 +376,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Implement governance, making the place more orderly {2} Improved {3} Dot"
-    qcTranslated: "{0} implemented governance in {1}, increasing {2} by {3} points."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - subIndex: 1
     text: "开展治理，使该地"
     translated: "Implement governance, making the place more orderly"
@@ -531,11 +391,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Earned money by working {2} Silver coins"
-    qcTranslated: "{0} is working part‑time in {1} to earn money and obtained {2} silver coins."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
   - subIndex: 1
     text: "打工赚钱，获取了"
     translated: "Earned money by working"
@@ -548,11 +403,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Undermining things behind the scenes, causing trouble in that place {2} Reduce {3} Dot"
-    qcTranslated: "{0} is secretly sabotaging in {1}, reducing its {2} by {3} points."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "暗中破坏，使该地"
     translated: "Undermining things behind the scenes, causing trouble in that place"
@@ -568,11 +418,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Undermining things behind the scenes, causing trouble in that place {2} Lowered {3} Dot"
-    qcTranslated: "{0} is secretly undermining {1}, causing {2} in that location to decrease by {3} points."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - subIndex: 1
     text: "暗中破坏，使该地"
     translated: "Undermining things behind the scenes, causing trouble in that place"
@@ -603,11 +448,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Want to poison secretly to harm {2}，{3}。"
-    qcTranslated: "{0} attempted to poison {2} in {1}, {3}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "欲下毒暗害"
     translated: "Want to poison secretly to harm"
@@ -617,11 +457,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Wants to sneakily learn from someone {2} Of {3}，{4}。"
-    qcTranslated: "{0} in {1} intends to steal the skills of {2} from {3}. {4}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "欲偷师"
     translated: "Wants to sneakily learn from someone"
@@ -634,11 +469,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Ended the confinement, regained freedom"
-    qcTranslated: "{0} ended their confinement in {1} and regained their freedom."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "结束关押，恢复了自由之身。"
     translated: "Ended the confinement, regained freedom"
@@ -648,11 +478,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Attacked {2}, Fought a bloody battle until the end {3}。"
-    qcTranslated: "{0} attacked {2} in {1}, and after a bloody battle, {3} in the end."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - subIndex: 1
     text: "袭击了"
     translated: "Attacked"
@@ -665,11 +490,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Hard work, bringing in the harvest for the sect.{2}。"
-    qcTranslated: "{0} worked hard in {1}, earning {2} for the Sect."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - subIndex: 1
     text: "辛勤劳作，为门派收获了"
     translated: "Hard work, bringing in the harvest for the sect."
@@ -679,11 +499,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Encounter {5} Adventure, Reputation {2}, Silver taels {3}, And obtained {4}。"
-    qcTranslated: "{0} encountered {5} in {1}. Reputation {2}, Silver {3}, and obtained {4}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - subIndex: 1
     text: "遭逢"
     translated: "Encounter"
@@ -702,11 +517,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} While wandering around, I unexpectedly obtained {2} Silver coins"
-    qcTranslated: "{0} unexpectedly obtained {2} silver coins while wandering around in {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - subIndex: 1
     text: "闲逛之时，意外获取了"
     translated: "While wandering around, I unexpectedly obtained"
@@ -719,11 +529,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} While wandering around, I unexpectedly obtained an item.{2}。"
-    qcTranslated: "{0} While wandering around in {1}, unexpectedly obtained a {2}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - subIndex: 1
     text: "闲逛之时，意外获取了一件"
     translated: "While wandering around, I unexpectedly obtained an item."
@@ -733,11 +538,6 @@
   splits:
   - text: "对自身的"
     translated: "One's own"
-    qcReviewedText: "{0} One's own {1} Poison was administered there"
-    qcTranslated: "{0} poisoned {1} on themselves"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "上进行了下毒。"
     translated: "Poison was administered there"
@@ -747,11 +547,6 @@
   splits:
   - text: "对自身装备的"
     translated: "Equipped items on oneself"
-    qcReviewedText: "{0} Equipped items on oneself {1} Poison refinement complete"
-    qcTranslated: "{0} performed poison extraction on their own {1} equipment."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - subIndex: 1
     text: "进行了粹毒。"
     translated: "Poison refinement complete"
@@ -761,11 +556,6 @@
   splits:
   - text: "掌门"
     translated: "Sect Master"
-    qcReviewedText: "{0} Sect Master {1} Will《{2}》{3} The secret manual has been placed in the Scripture Pavilion for all disciples in the sect to review."
-    qcTranslated: "{0} Sect Master {1} placed the 《{2}》{3} Secret Manual in the Scripture Pavilion for all disciples in the sect to review."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
   - subIndex: 1
     text: "将"
     translated: "Will"
@@ -778,11 +568,6 @@
   splits:
   - text: "掌门"
     translated: "Sect Master"
-    qcReviewedText: "{0} Sect Master {1} Use《{2}》{3} Replaced the one in the Scripture Pavilion with《{2}》{4} Secret manual, for all disciples to consult"
-    qcTranslated: "{0} Sect Master {1} replaced the 《{2}》{4} manual in the Scripture Pavilion with 《{2}》{3}, for all sect disciples to consult."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - subIndex: 1
     text: "用"
     translated: "Use"
@@ -811,11 +596,6 @@
   splits:
   - text: "攻击了"
     translated: "Attacked"
-    qcReviewedText: "{0} Attacked {2} Under control {1}, In the end {3}。"
-    qcTranslated: "{0} attacked {1} controlled by {2}, ultimately resulting in {3}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "掌控下的"
     translated: "Under control"
@@ -848,22 +628,12 @@
   splits:
   - text: "气运过人，寻得一本失传秘籍，鉴别后竟是传说中的"
     translated: "With extraordinary fate, he found a lost manual, and after identification, it turned out to be the legendary one."
-    qcReviewedText: "{0} With extraordinary fate, he found a lost manual, and after identification, it turned out to be the legendary one.{1}。"
-    qcTranslated: "{0} possesses extraordinary destiny and discovers a lost Secret Manual, which is identified as the legendary {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}炼制了{1}并放入行囊(消耗{2}银钱{3})"
   splits:
   - text: "炼制了"
     translated: "Refined"
-    qcReviewedText: "{0} Refined {1} And put it in my bag(Consume {2} Money {3})"
-    qcTranslated: "{0} refined {1} and placed it in the inventory (cost: {2} silver {3})"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "并放入行囊"
     translated: "And put it in my bag"
@@ -898,11 +668,6 @@
   splits:
   - text: "炼制了"
     translated: "Refined"
-    qcReviewedText: "{0} Refined {1}, Since the sect warehouse is full, it can only be placed in my backpack.(Consume {2} Herbs {3})"
-    qcTranslated: "{0} refined {1}. Since the Sect warehouse was full, it had to be placed in the backpack (consumed {2} raw materials {3})."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "，由于门派仓库已满只得放入行囊"
     translated: ", Since the sect warehouse is full, it can only be placed in my backpack."
@@ -918,11 +683,6 @@
   splits:
   - text: "烹饪了"
     translated: "Cooked"
-    qcReviewedText: "{0} Cooked {1} And put it in my bag(Consume {2} Money {3})"
-    qcTranslated: "{0} cooked {1} and put it in the inventory (consumed {2} {3})"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "并放入行囊"
     translated: "And put it in my bag"
@@ -938,11 +698,6 @@
   splits:
   - text: "烹饪了"
     translated: "Cooked"
-    qcReviewedText: "{0} Cooked {1} And place it in the Sect's treasury(Consume {2} Food grain {3})"
-    qcTranslated: "{0} cooked {1} and placed it in the Sect's treasury (consumed {2} food {3})"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "并放入门派仓库"
     translated: "And place it in the Sect's treasury"
@@ -958,11 +713,6 @@
   splits:
   - text: "烹饪了"
     translated: "Cooked"
-    qcReviewedText: "{0} Cooked {1}, Since the sect warehouse is full, it can only be placed in my backpack.(Consume {2} Food grain {3})"
-    qcTranslated: "{0} cooked {1}. As the Sect warehouse was full, it had to be placed in the inventory (Consuming {2} grain {3})."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "，由于门派仓库已满只得放入行囊"
     translated: ", Since the sect warehouse is full, it can only be placed in my backpack."
@@ -978,11 +728,6 @@
   splits:
   - text: "的"
     translated: "Of"
-    qcReviewedText: "{0} Of {1} End {2} Ok"
-    qcTranslated: "{0}'s {1} has ended {2}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "结束"
     translated: "End"
@@ -995,11 +740,6 @@
   splits:
   - text: "离开了由"
     translated: "Left the place where"
-    qcReviewedText: "{0} Left the place where {1} Leader's team"
-    qcTranslated: "{0} left the party led by {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - subIndex: 1
     text: "领导的队伍。"
     translated: "Leader's team"
@@ -1009,11 +749,6 @@
   splits:
   - text: "被"
     translated: "Be"
-    qcReviewedText: "{0} Be {1} Arrest and imprison, detain in {2} Among them"
-    qcTranslated: "{0} was arrested by {1} and imprisoned in {2}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - subIndex: 1
     text: "抓捕入狱，关押在"
     translated: "Arrest and imprison, detain in"
@@ -1026,11 +761,6 @@
   splits:
   - text: "近日大兴土木，开始修缮升级"
     translated: "Recently, they have been undertaking major construction projects to renovate and upgrade."
-    qcReviewedText: "{0} Recently, they have been undertaking major construction projects to renovate and upgrade.{1} {2} ({3} Level)"
-    qcTranslated: "{0} has recently been undertaking major construction to renovate and upgrade {1} {2} ({3} Level)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - subIndex: 1
     text: "级"
     translated: "Level"
@@ -1040,11 +770,6 @@
   splits:
   - text: "近日大兴土木，开始在"
     translated: "Recently, they have been constructing buildings and starting work at"
-    qcReviewedText: "{0} Recently, they have been constructing buildings and starting work at {1} Create New {2}"
-    qcTranslated: "{0} has recently been carrying out large‑scale construction, beginning work on a new {2} at {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
   - subIndex: 1
     text: "新建"
     translated: "Create New"
@@ -1067,11 +792,6 @@
   splits:
   - text: "近日开始加强"
     translated: "Recently, we've been stepping up our efforts"
-    qcReviewedText: "{0} Recently, we've been stepping up our efforts {1} Branch headquarters of the faction's {2} Defense level({3} Level)"
-    qcTranslated: "{0} has recently increased the defense level of the {1} branch's {2} to level {3}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - subIndex: 1
     text: "分舵之"
     translated: "Branch headquarters of the faction's"

@@ -107,6 +107,20 @@ public class QualityControlWorkflowTests
         await QualityReviewWorkflow.ResetLeakedQcCorrections(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
+    // Run this after changing how QC's score is judged (BaseQualityReviewPrompt.txt's scoring
+    // rubric, or switching qualityReview.modelName to a model that scores on a different scale) so
+    // every column currently sitting below minAcceptableScore under the OLD calculation gets a
+    // genuinely fresh score under the new one. Leaves every already-accepted column with an
+    // acceptable score untouched (unlike "Reset ALL Quality Review State", which re-reviews
+    // everything) - only the columns actually worth another look get re-sent to the LLM. A
+    // rejected-correction column (Reason set, QcQualityScore already cleared to null) is never
+    // touched here - use "Reset Qc Retry Limits" for those.
+    [Fact(DisplayName = "Reset Low-Score Quality Review State")]
+    public async Task ResetLowScoreQcState()
+    {
+        await QualityReviewWorkflow.ResetLowScoreQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
+    }
+
     // Dedicated single-row QC sample: forces a fresh QualityReviewWorkflow review of exactly ONE
     // known PlotData.csv row (the master's "别慌..." collapse line, split 10 - see
     // Files/Converted/PlotData.csv.yaml) instead of a random sampleSize=N slice

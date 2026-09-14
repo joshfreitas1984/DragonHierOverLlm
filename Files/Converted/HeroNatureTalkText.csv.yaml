@@ -16,19 +16,9 @@
   - split: 3
     text: "稳重"
     translated: "Reliable"
-    qcReviewedText: "Reliable"
-    qcTranslated: "Steady"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 4
     text: "忠厚"
     translated: "Honesty"
-    qcReviewedText: "Honesty"
-    qcTranslated: "Honesty"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
   - split: 5
     text: "简单"
     translated: "Simple"
@@ -44,11 +34,6 @@
   - split: 7
     text: "潇洒"
     translated: "Graceful"
-    qcReviewedText: "Graceful"
-    qcTranslated: "Xiao Sa"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
   - split: 8
     text: "轻佻"
     translated: "Flippant"
@@ -302,11 +287,6 @@
   - split: 1
     text: "#PlayerName#你这招是如何使出的，快和我说道说道。"
     translated: "#PlayerName#, how did you learn this technique? Spill the beans and tell me about it quickly."
-    qcReviewedText: "#PlayerName#, how did you learn this technique? Spill the beans and tell me about it quickly."
-    qcTranslated: "#PlayerName#, how did you pull off that move? Tell me all about it."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 2
     text: "#PlayerName#武功与我相比孰强孰弱，早晚要分个高下才是！"
     translated: "#PlayerName#'s martial arts skills are either stronger or weaker than mine, and we'll have to settle that once and for all!"
@@ -343,11 +323,6 @@
   - split: 7
     text: "#PlayerName#武功进步神速，只怕早晚要把我远远甩开。"
     translated: "#PlayerName#'s martial arts progress is rapid, and he might leave me far behind before long."
-    qcReviewedText: "#PlayerName#'s martial arts progress is rapid, and he might leave me far behind before long."
-    qcTranslated: "#PlayerName#'s martial arts progress is rapid; he'll likely leave me far behind before long."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 8
     text: "每日练武练武，真是烦煞人也！"
     translated: "Daily training in martial arts truly drives me mad!"
@@ -363,11 +338,6 @@
   - split: 10
     text: "#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
     translated: "#PlayerName#, if my martial arts doesn't improve, I might be left far behind."
-    qcReviewedText: "#PlayerName#, if my martial arts doesn't improve, I might be left far behind."
-    qcTranslated: "#PlayerName#, if your martial arts do not improve, I am afraid I will be left far behind you."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
 - raw: "日常见面,#PlayerName#？抱歉我心有所思，没注意到你。,#PlayerName#我们有几日未见了？容我好好回忆回忆。,不知#PlayerName#寻我有何贵干？,#PlayerName#若有我帮得上忙的地方，只管吩咐。,#PlayerName#别来无恙？,真巧，我正要离开此处，便遇到了#PlayerName#你。,#PlayerName#你我又见面了，算不算是缘分使然？,#PlayerName#几日不见，风采依旧啊！,#PlayerName#前来寻我，只怕是有事相求？,#PlayerName#有话快说吧，我还有要事在身。"
   splits:
   - text: "日常见面"
@@ -385,19 +355,9 @@
   - split: 2
     text: "#PlayerName#我们有几日未见了？容我好好回忆回忆。"
     translated: "#PlayerName#, we haven't seen each other in a few days, I need some time to recall."
-    qcReviewedText: "#PlayerName#, we haven't seen each other in a few days, I need some time to recall."
-    qcTranslated: "#PlayerName#, how many days has it been since we last met? Let me take a moment to remember."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
   - split: 3
     text: "不知#PlayerName#寻我有何贵干？"
     translated: "I don't know what #PlayerName# wants from me."
-    qcReviewedText: "I don't know what #PlayerName# wants from me."
-    qcTranslated: "What is it that #PlayerName# seeks from me?"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "#PlayerName#若有我帮得上忙的地方，只管吩咐。"
     translated: "#PlayerName#, if there's anything I can help with, just let me know."
@@ -460,11 +420,6 @@
   - split: 2
     text: "日出扶桑一丈高，人间万事细如毛。野夫怒见不平事，磨损胸中万古刀。"
     translated: "The sun rises in Su Feng at ten feet high,   Man's affairs are as fine as hair.   Furrowed by rage at unjust deeds,   My chest wears down the ancient blade within me."
-    qcReviewedText: "The sun rises in Su Feng at ten feet high,   Man's affairs are as fine as hair.   Furrowed by rage at unjust deeds,   My chest wears down the ancient blade within me."
-    qcTranslated: "The sun rises over Fusang ten feet high, man's affairs are as fine as hair. Seeing injustice, the wild man is enraged, wearing down the ten‑thousand‑ancient blade in his chest."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 3
     text: "滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。"
     translated: "The Yangtze flows on to the east, washing away heroes. Gains and losses turn to nothing; green mountains remain, as do several settings of sunset."
@@ -487,11 +442,6 @@
   - split: 6
     text: "贵逼人来不自由，龙翔凤翥势难收。满堂花醉三千客，一剑霜寒十四州。"
     translated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
-    qcReviewedText: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
-    qcTranslated: "Noble birth compels me to act beyond my control, like a soaring dragon and ascending phoenix, with momentum impossible to restrain. My full table of flowers intoxicates three thousand guests, and my single sword's frosty chill covers fourteen provinces."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 7
     text: "人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。"
     translated: "Life is short; make the most of it by rejoicing. Do not let golden goblets remain empty under the moon. Heaven endowed me with talents that must serve some purpose; even if I spend a thousand gold pieces, they will come back to me."
@@ -502,19 +452,9 @@
   - split: 8
     text: "名花倾国两相欢，长得君王带笑看。解释春风无限恨，沉香亭北倚阑干。"
     translated: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
-    qcReviewedText: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
-    qcTranslated: "A beauty and the nation's pride share in joy, while the monarch smiles to gaze. The spring breeze explains the boundless sorrow; by the Scented Fragrance Pavilion's north, she leans on the railing."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - split: 9
     text: "飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。"
     translated: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
-    qcReviewedText: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
-    qcTranslated: "The whirling sword strikes are indeed startling, yet one suspects that the customs and rumors are merely false talk. Where now lies the ultimate extremity? It is none other than acting as a person to set right the injustices of the world."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 45
   - split: 10
     text: "十步杀一人，千里不留行。事了拂衣去，深藏身与名。"
     translated: "Ten steps to kill one man, a thousand miles go unimpeded. After matters are resolved, I depart quietly, hiding my presence and name."
@@ -538,11 +478,6 @@
   - split: 2
     text: "即便穷极此生，也要追寻武学之至高境界。"
     translated: "Even if this life is impoverished, one must strive for the pinnacle of martial arts."
-    qcReviewedText: "Even if this life is impoverished, one must strive for the pinnacle of martial arts."
-    qcTranslated: "Even if it takes the rest of my life, I will strive to reach the highest realm of martial arts."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
   - split: 3
     text: "江湖中人需得处处小心谨慎，行差踏错一步，就可能招来杀身之祸。"
     translated: "In the Jianghu, one must be constantly careful and cautious; a single misstep could bring about fatal trouble."
@@ -698,19 +633,9 @@
   - split: 4
     text: "江湖中人以和为贵，若能化敌为友，化干戈为玉帛，岂不是美事一桩！"
     translated: "People in the Jianghu value harmony above all. If one could turn enemies into friends and weapons into jade, would that not be a splendid affair!"
-    qcReviewedText: "People in the Jianghu value harmony above all. If one could turn enemies into friends and weapons into jade, would that not be a splendid affair!"
-    qcTranslated: "People in the Jianghu value harmony above all. If one could turn enemies into friends and turn conflict into peace, would that not be a splendid affair!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     text: "以德报怨，何以报德。对待为敌之人，不能心慈手软。"
     translated: "To forgive those who wrong us is well and good, but how do we repay those who have been kind? We must not show mercy to our enemies."
-    qcReviewedText: "To forgive those who wrong us is well and good, but how do we repay those who have been kind? We must not show mercy to our enemies."
-    qcTranslated: "To repay enmity with virtue, how do we repay virtue? We must not be soft‑hearted or lenient toward our enemies."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 45
   - split: 6
     text: "若遇到仇家上门，打得过就打，打不过只管逃跑便是。"
     translated: "If enemies come looking for trouble, fight back if you can; if not, just run away."

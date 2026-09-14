@@ -3,11 +3,6 @@
   splits:
   - text: "随身携带的珍宝，"
     translated: "Treasure always at hand,"
-    qcReviewedText: "Treasure always at hand,\\nIf learned enough, it will attempt identification automatically every day."
-    qcTranslated: "Treasures carried with you will be automatically appraised each day if your knowledge is sufficient."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "若学识足够会每日自动尝试鉴定。"
     translated: "If learned enough, it will attempt identification automatically every day."
@@ -45,11 +40,6 @@
   splits:
   - text: "门派的弟子人口达到上限后，"
     translated: "When the disciples' population of the Sect reaches its limit,"
-    qcReviewedText: "When the disciples' population of the Sect reaches its limit,\\nSo you can no longer recruit new disciples."
-    qcTranslated: "When the number of disciples in the Sect reaches its limit,\\nyou can no longer recruit new disciples."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "就无法招募新的弟子。"
     translated: "So you can no longer recruit new disciples."
@@ -80,11 +70,6 @@
   splits:
   - text: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
     translated: "Becoming the Sect Leader allows you to obtain imperial granted titles in the capital palace."
-    qcReviewedText: "Becoming the Sect Leader allows you to obtain imperial granted titles in the capital palace."
-    qcTranslated: "After becoming the Sect Leader, you can obtain Imperially Granted Titles at the Palace in the Capital."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "在官府获取官职后，便可以替朝廷效力。"
   splits:
   - text: "在官府获取官职后，便可以替朝廷效力。"
@@ -207,11 +192,6 @@
   splits:
   - text: "与对方的立场越接近，初始好感越高。"
     translated: "The higher the initial affinity starts at if your stance aligns more closely with the other party."
-    qcReviewedText: "The higher the initial affinity starts at if your stance aligns more closely with the other party."
-    qcTranslated: "The closer your stance is to the other party's, the higher the initial affinity."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
 - raw: "较高的恶名会降低好感获取，\\n其他侠士在野外遭遇时也会避而远之。"
   splits:
   - text: "较高的恶名会降低好感获取，"
@@ -333,11 +313,6 @@
   splits:
   - text: "京城的私宅因为等级最高，"
     translated: "The private residences in the Capital, being of the highest rank,"
-    qcReviewedText: "The private residences in the Capital, being of the highest rank,\\nThe price is naturally also the highest"
-    qcTranslated: "The private residences in the Capital, being of the highest rank,\\nare naturally the most expensive."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "价格自然也最贵。"
     translated: "The price is naturally also the highest"

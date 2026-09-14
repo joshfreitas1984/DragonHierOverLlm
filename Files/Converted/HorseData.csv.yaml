@@ -65,11 +65,6 @@
   - split: 2
     text: "腿脚受过伤或是天生残疾的马匹，胜在价格便宜"
     translated: "Horses with injured legs or those born with disabilities may be cheaper."
-    qcReviewedText: "Horses with injured legs or those born with disabilities may be cheaper."
-    qcTranslated: "Horses with injured legs or congenital disabilities have the advantage of being cheaper."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "3,小马,天生体型弱小的马匹，令人几乎不忍骑乘,0,15,10,15,10,200"
   splits:
   - split: 2
@@ -118,11 +113,6 @@
   - split: 2
     text: "体质强健的高头大马，武林人士常用"
     translated: "A sturdy horse of great stature, commonly used by Wulin individuals."
-    qcReviewedText: "A sturdy horse of great stature, commonly used by Wulin individuals."
-    qcTranslated: "A sturdy, high‑headed horse, commonly used by Wulin practitioners."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 50
 - raw: "9,烈马,性格爆裂，难以驾驭的马匹，狂奔时速度极快,1,45,10,35,10,400"
   splits:
   - split: 2
@@ -230,21 +220,11 @@
   - split: 2
     text: "静若处子，动若突兔之白马，深得少年侠士之喜爱"
     translated: "Still as a virgin, swift as a white horse bounding like a hare, she deeply wins the affection of the young heroes."
-    qcReviewedText: "Still as a virgin, swift as a white horse bounding like a hare, she deeply wins the affection of the young heroes."
-    qcTranslated: "Steady as a maiden, swift as a startle‑bolted white horse, it is deeply beloved by young Heroes."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
 - raw: "22,枣红马,遍体枣红色的马匹，性格温驯，极为吃苦耐劳,2,25,60,20,45,800"
   splits:
   - split: 2
     text: "遍体枣红色的马匹，性格温驯，极为吃苦耐劳"
     translated: "Horses painted deep crimson red all over, with a gentle temperament and an exceptionally hardworking nature"
-    qcReviewedText: "Horses painted deep crimson red all over, with a gentle temperament and an exceptionally hardworking nature"
-    qcTranslated: "A horse with a deep chestnut coat, gentle temperament, and exceptional stamina"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "23,绿耳马,青黄色的骏马，传说其先祖曾为周穆王驾车驱使,2,45,25,50,30,800"
   splits:
   - split: 2
@@ -329,21 +309,11 @@
   - split: 2
     text: "毛色如绸缎般柔亮，体格极为健壮的黑马，霸王项羽曾骑着这种战马征伐四方"
     translated: "Horsehair as soft and lustrous as silk, this strong and robust black stallion was ridden by the warlord Xiang Yu as he marched his armies across the land."
-    qcReviewedText: "Horsehair as soft and lustrous as silk, this strong and robust black stallion was ridden by the warlord Xiang Yu as he marched his armies across the land."
-    qcTranslated: "A black stallion with a coat as soft and lustrous as silk and an extremely robust physique; the warlord Xiang Yu once rode such a warhorse to conquer the four directions."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 65
 - raw: "33,白蹄乌,有四只白蹄的纯黑色骏马，其先祖位列唐太宗六骏，被赞为倚天长剑，追风骏足,4,70,60,50,70,3200"
   splits:
   - split: 2
     text: "有四只白蹄的纯黑色骏马，其先祖位列唐太宗六骏，被赞为倚天长剑，追风骏足"
     translated: "Four pure black steeds with four white hooves, whose ancestors were among the Six Steeds of Tang Taizong, are praised as long swords from heaven and swift hooves of the wind."
-    qcReviewedText: "Four pure black steeds with four white hooves, whose ancestors were among the Six Steeds of Tang Taizong, are praised as long swords from heaven and swift hooves of the wind."
-    qcTranslated: "A pure black steed with four white hooves, whose ancestors were among the Six Steeds of Emperor Taizong of Tang, is praised as a sword leaning against the sky and a steed with wind‑chasing hooves."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
 - raw: "34,什伐赤,产自波斯的赤红骏马，其先祖曾随唐太宗征战虎牢关，身中五箭而亡,4,50,75,55,70,3200"
   splits:
   - split: 2
@@ -436,11 +406,6 @@
   - split: 2
     text: "应策腾空，承声半汉，入险摧敌，乘危济难，其先祖乃突厥名马，作为贡品随唐太宗征战多年"
     translated: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties‑his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
-    qcReviewedText: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties‑his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
-    qcTranslated: "Soaring into the air, bearing the sound of the heavens, entering peril to crush the enemy, and riding out danger to save lives‑its ancestors were famed horses of the Turkic people, offered as tribute and accompanying Emperor Taizong of Tang in battle for many years."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
 - raw: "45,神凫马,传说祖先乃秦始皇座下名马，为求仙药随其东巡，过名川大山如飞履平地,5,95,50,70,85,6400"
   splits:
   - split: 2
