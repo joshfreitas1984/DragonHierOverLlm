@@ -66,8 +66,13 @@ qualityReview:
   # despite a low score instead of holding these back for human review. LostIdiom deliberately left
   # off: low precision too, but at least one hand-checked correction made a fine idiom worse instead
   # of fixing a real defect, a different risk than "wastes review time". GarbledNumber/DomainTerm/
-  # UntranslatedPinyin also left off - high precision, worth the human review queue.
-  autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent]
+  # UntranslatedPinyin also left off - high precision, worth the human review queue. DroppedStutter
+  # added after re-triaging under twoStageVerificationEnabled: a ~36-line spot-check came back clean
+  # (0 bad fixes), a marked improvement over the ~65%-genuine/8-bad-fixes finding under single-stage
+  # verification that originally kept it in the review queue - but the sample is still small next to
+  # the old 137-line full-population check, so revisit with a larger sample if this category's flagged
+  # count grows a lot or a bad fix turns up again.
+  autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent, DroppedStutter]
   # Second, narrower LLM call for any column flagged with a named DEFECT: confirms/rejects (raising
   # the score back up on a false positive)/recategorizes the claim, and only its own scoped
   # correction is ever accepted - never call 1's freehand rewrite. See

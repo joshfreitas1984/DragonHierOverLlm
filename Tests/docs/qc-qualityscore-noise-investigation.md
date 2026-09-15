@@ -13,7 +13,11 @@
 > DEFECT verification (root-cause fix, implemented)" near the end of this doc for the newest change:
 > a second, narrower LLM call that confirms/rejects/recategorizes call 1's claimed DEFECT instead of
 > trusting its single-shot freehand correction — the fix for the miscategorization/bad-correction
-> pattern the `DroppedStutter` hand-validation below surfaced.
+> pattern the `DroppedStutter` hand-validation below surfaced. See "Re-triage under
+> `twoStageVerificationEnabled` (2026-09)" near the end of this doc for the first full-corpus run with
+> two-stage verification on: `DroppedStutter` moved into `autoAcceptDefectCategories`, a new
+> no-op-correction bug was found and fixed in `FanslationStudio.LlmKit`, and every other category's
+> policy was confirmed unchanged.
 
 ## Summary
 
@@ -250,7 +254,50 @@ LLM call, but only for the ~10-15% of lines already flagged, not the whole corpu
 reference: `../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md`'s "Two-stage
 DEFECT verification" section.
 
-Not yet done: turning this on for a full corpus run and re-triaging `DroppedStutter` (and the other
-review-queue categories) against its output to see how much it actually moved the false-positive/
-bad-correction rate in practice — this section records the design and implementation, not a
-post-rollout measurement.
+Not yet done (at the time this section was written): turning this on for a full corpus run and
+re-triaging `DroppedStutter` (and the other review-queue categories) against its output to see how
+much it actually moved the false-positive/bad-correction rate in practice — see the next section for
+that measurement.
+
+## Re-triage under `twoStageVerificationEnabled` (2026-09)
+
+First full-corpus run with `twoStageVerificationEnabled: true` (git history: "Another run with
+TwoStageVerification"), followed by a fresh `GetQcTriageAsync` pass
+(`Files/TestResults/QcTriage*.yaml`, `totalFlagged: 6165`). Re-validated by hand-checking a sample
+from each category's `QcTriageByDefectCategory.yaml` entry, comparing `qcReviewedText` (pre-QC) against
+`qcTranslated` (QC's proposed fix) the same way the original per-category pass did.
+
+**`DroppedStutter` moved to `autoAcceptDefectCategories`.** The original single-stage pass found this
+category ~65% genuine with 8/137 outright bad fixes (`撤撤撤` "retreat!" inverted to "Charge!", etc.),
+which is exactly the failure mode two-stage verification was built to catch. In this run's ~36-line
+sample (the category's full flagged set was 458), every single line was a clean, correct stutter
+restoration with zero bad fixes — e.g. "Cough, cough, uh-huh, ah, well, I'll be going!" correctly
+gained a dropped "g-" before "goodbye!". Moved into `Files/Config.yaml`'s `autoAcceptDefectCategories`
+on the strength of this, but the sample (36) is much smaller than the original full 137-line
+hand-validation, so if this category's flagged count grows sharply or a bad fix resurfaces, re-check
+against a larger sample before trusting it further.
+
+**Every other category's policy held.** `DomainTerm`/`GarbledNumber`/`UntranslatedPinyin` samples were
+still high-precision, genuine catches (e.g. 泥鳅蛊 "Fish toad trap" → "Loach Gu", 太、太、and other
+proper-noun/numeral fixes) — correctly still in the human-review queue.
+`DroppedContent`/`HardToParseSeam`/`OtherNamedDefect` samples were still low-severity-but-legitimate
+tweaks (pronoun/title restoration, garbled-seam cleanup) — correctly still auto-accepted. `LostIdiom`
+stayed mixed — correctly still left undecided.
+
+**New finding: no-op "corrections" wasting review time.** ~1.6% of the sampled flagged lines (5/319)
+had `qcTranslated` byte-identical to `qcReviewedText` — the model (or the verification call) confirmed
+a DEFECT category but its own freehand "fix" reproduced the original text verbatim (e.g. `霓裳仙子` →
+"Fairy Nishang" → "Fairy Nishang", unchanged). These got a low score and sat in the human-review queue
+for a translation that was never actually going to change. Fixed in
+`FanslationStudio.LlmKit`'s `QualityReviewWorkflow.ReviewColumnAsync`: a correction identical to the
+already-accepted `effectiveTranslated` is now treated as `DEFECT: NONE` (score 100, `QcStatus.Passed`,
+never flagged) regardless of what the model claimed, rather than kept as a "confirmed" low-score
+defect with nothing behind it.
+
+**Isolated bad-fix regression, not a pattern.** One `DomainTerm` sample had a correct pre-QC
+translation ("glanced at the sun in the mountains") turned *wrong* by the "fix" ("glanced at the
+Great Yang in the mountains" — 太阳 taken as a term-of-art rather than literally "the sun"). A single
+instance in ~40 `DomainTerm` samples, not a repeated pattern, but a reminder that two-stage
+verification reduces this failure mode, it doesn't eliminate it — `autoAcceptDefectCategories`
+membership should keep depending on a category's *aggregate* precision, not an assumption that
+verification makes every individual correction safe.
