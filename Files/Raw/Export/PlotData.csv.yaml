@@ -241932,7 +241932,7 @@
     text: "后续可自行触发终归一统结局。"
   templates:
   - split: 10
-    template: "<color=red><size=40><b>{0}</b></size></color>\\n{1}\\n{2}"
+    template: "<color=red><size=28><b>{0}</b></size></color>\\n{1}\\n{2}"
 - raw: ",,,无,,,,,StartPlotModeEndPlot,,此后之事，\\n亦记载于各种古籍之中......"
   splits:
   - split: 10

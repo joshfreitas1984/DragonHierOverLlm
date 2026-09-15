@@ -106,10 +106,10 @@
     text: "悦来客栈"
     translated: "Yue Coming Inn"
     qcReviewedText: "Yue Coming Inn"
-    qcTranslated: "Welcoming Inn"
+    qcTranslated: "Joyful Arrival Inn"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 0
   - split: 2
     text: "这晋阳西南，边陲要冲，亦是中原与北方各地交通往来的重要之所，"
     translated: "This Jinyang, located southwest of the border and a crucial junction, is also an important hub for transportation between Central China and various northern regions."
@@ -140,10 +140,10 @@
     text: "西北关外，荒烟蔓草，滚滚黄沙中，"
     translated: "Outside the Western Pass, desolate smoke and overgrown grass, rolling yellow sandaguesiniai"
     qcReviewedText: "Outside the Western Pass, desolate smoke and overgrown grass, rolling yellow sandaguesiniai \\nThis prosperous Dragon Gate Inn, with its steady stream of travelers, truly brightens the eyes of those who pass by.\\nHowever, there are also rumors in the Jianghu about his madam being astute and captivating, wielding power through controlling trade routes and border generals to operate black shops and make enormous profits."
-    qcTranslated: "Outside the Western Pass, amidst desolate smoke and overgrown grass, within the rolling sea of yellow sand,\\nthis Dragon Gate Inn, with its bustling business and steady stream of travelers, truly caught the eye of every passerby.\\nHowever, there are also rumors in the Jianghu that its proprietress is shrewd and bold, using her control over the trade routes out of the pass and border generals to run a black market inn for outrageous profits."
+    qcTranslated: "Outside the Western Pass, amidst desolate smoke and overgrown grass, rolling yellow sand \\nthere is this bustling Dragon Gate Inn, with a steady stream of travelers, which truly catches the eye of passersby.\\nHowever, there are also rumors in the Jianghu that its madam is resourceful, coquettish, and bold, running a black market inn to make enormous profits by controlling the trade routes out of the pass and the border generals."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 15
   - split: 2
     subIndex: 1
     text: "竟有这间生意不俗，行人络绎的龙门客栈，着实令往来行者眼前一亮。"

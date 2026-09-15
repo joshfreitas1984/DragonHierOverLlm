@@ -158,10 +158,8 @@
     text: "技艺经验"
     translated: "Skill and experience"
     qcReviewedText: "Skill and experience"
-    qcTranslated: "Skill XP"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcStatus: Passed
+    qcQualityScore: 90
 - raw: "17,内功经验,内功经验,TRUE,0.02"
   splits:
   - split: 2
@@ -491,10 +489,8 @@
     text: "全员锻造"
     translated: "All Forging"
     qcReviewedText: "All Forging"
-    qcTranslated: "Full Team Forging"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    qcStatus: Passed
+    qcQualityScore: 95
 - raw: "57,全员炼药,全员炼药,FALSE,1"
   splits:
   - split: 2

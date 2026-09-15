@@ -53,3 +53,11 @@ was a prerequisite for the load sequence progressing far enough to hit the next 
 - [`docs/dynamicstrings-extraction-sources.md`](docs/dynamicstrings-extraction-sources.md) — the
   `plotText`/`describe`-family field correction (belong in DynamicStrings, not PrefabText) and the
   staleness bug behind the IL2CPP-string-map re-extraction source.
+
+## Quality-review (QC) pipeline
+
+- [`docs/qc-qualityscore-noise-investigation.md`](docs/qc-qualityscore-noise-investigation.md) —
+  `QcQualityScore` false-positive/noise investigation in `QualityReviewWorkflow`: confirmed prompt
+  fixes applied, options ruled out (score-scale widening, `minAcceptableScore` retuning, trigger
+  change), and open triage options for the ~5,000 currently-flagged lines (multi-run consensus,
+  DEFECT-category stratification, deterministic pre-filter, second-model cross-check).

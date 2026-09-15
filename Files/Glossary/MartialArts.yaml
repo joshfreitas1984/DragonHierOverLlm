@@ -12,3 +12,3183 @@
   result: "Split Gold Shatter Jade Palm"
 - raw: "潮起月盈功"
   result: "Tide Rising Full Moon Art"
+
+
+###### New
+- raw: 铜头铁臂功
+  result: Copper Head Iron Arm Skill
+  badtrans: true
+- raw: 凭虚临风
+  result: Treading the Void on the Wind
+  badtrans: true
+- raw: 金钟罩
+  result: Golden Bell Shield
+  badtrans: true
+- raw: 易筋经
+  result: Meridian Cleansing Technique
+  badtrans: true
+- raw: 纯阳无极功
+  result: Pure Yang Infinite Skill
+  badtrans: true
+- raw: 太极神功
+  result: Taiji Divine Skill
+  badtrans: true
+- raw: 漫天花雨
+  result: Flowers Rain from the Sky
+  badtrans: true
+- raw: 降龙掌法
+  result: Dragon Taming Palm Technique
+  badtrans: true
+- raw: 铁砂掌
+  result: Iron Palm
+  badtrans: true
+- raw: 连环剑法
+  result: Linked Sword Technique
+  badtrans: true
+- raw: 八极拳
+  result: Eight Extremes Fist
+  badtrans: true
+- raw: 霹雳雷火弹
+  result: Thunderbolt Fire bomb
+  badtrans: true
+- raw: 回风拂柳剑
+  result: Willow Brushing Sword
+  badtrans: true
+- raw: 灭心绝情剑
+  result: Heart Extinguishing Passion Severing Sword
+  badtrans: true
+- raw: 八仙剑法
+  result: Eight Immortals Sword Technique
+  badtrans: true
+- raw: 梦斩真龙
+  result: Dream Slaying True Dragon
+- raw: 硬气功
+  result: Iron Body Technique
+  badtrans: true
+- raw: 混天功
+  result: Heaven Mixing Technique
+  badtrans: true
+- raw: 飞毛腿
+  result: Fleetfoot
+  badtrans: true
+- raw: 轻身术
+  result: Lightness Technique
+  badtrans: true
+- raw: 千斤坠
+  result: Gravitational pull
+  badtrans: true
+- raw: 无影神针
+  result: Shadowless Divine Needle
+  badtrans: true
+# - raw: 吐纳法
+#   result: Breathing technique
+#   badtrans: true
+- raw: 胸口碎大石
+  result: Breaking a Stone on the Chest
+  badtrans: true
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 御剑要术
+  result: Essential Sword Controlling Technique
+  badtrans: true
+- raw: 五毒掌
+  result: Five Poisons Palm
+  badtrans: true
+- raw: 妙手空空
+  result: Sleight of Hand
+  badtrans: true
+- raw: 鸟兽散
+  result: Scatter in all directions
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 死缠烂打
+  result: Relentless Pursuit
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 逆转周天大法
+  result: Heavenly Cycle Reversal Technique
+  badtrans: true
+- raw: 放浪形骸
+  result: Carefree and Unrestrained
+  badtrans: true
+  only:
+  - dynamicStringsFromColumns.txt
+- raw: 逍遥游
+  result: Free and Easy Wandering
+  badtrans: true
+- raw: 星罗棋布
+  result: Scattered Like Stars Across a Chessboard
+  badtrans: true
+  allowalt: 
+    - Scattered across the land
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 金蚕王蛊
+  result: Golden Silkworm King Gu
+  badtrans: true
+- raw: 气守丹田法
+  result: Guard the Dantian Qi Method
+  badtrans: true
+- raw: 守丹田
+  result: Guard the Dantian
+  badtrans: true
+- raw: 芭蕉铁扇功
+  result: Banana Leaf Iron Fan Skill
+  badtrans: true
+- raw: 铁扇功
+  result: Iron Fan Skill
+  badtrans: true
+- raw: 归墟秘典
+  result: Secret Canon of Guixu
+  badtrans: true
+- raw: 折戟沉沙
+  result: Broken swords buried in sand
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+# - raw: 从军行
+#   result: March to War
+#   badtrans: true
+- raw: 霓裳羽衣舞
+  result: Rainbow Robe and Feathered Garment Dance
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 上高楼
+  result: Ascend to the high tower
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+# - raw: 普贤心经
+#   result: The Heart Sutra of Manjushri Bodhisattva
+#   badtrans: true
+- raw: 一字电剑
+  result: One‑Stroke Lightning Sword
+  badtrans: true
+- raw: 仙人指路
+  result: Immortal Points the Way
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 重剑无锋
+  result: Heavy Sword Has No Edge
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+# - raw: 走马灯
+#   result: Carousel lamp
+#   badtrans: true
+- raw: 金钱镖
+  result: Coin Dart
+  badtrans: true
+- raw: 虎落平阳
+  result: Tiger Fallen to the Plains
+  badtrans: true
+- raw: 醉拳
+  result: Drunken Fist
+  badtrans: true
+- raw: 陷阵之志
+  result: Resolved for the Charge
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 茅山道剑
+  result: Maoshan Daoist Sword
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 鬼夜哭
+  result: Ghosts Weep at Night
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 血脉逆行
+  result: Reverse Blood Flow
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 飞沙走石
+  result: Flying Sand and Rolling Stones
+  badtrans: true
+- raw: 龙胤归藏功
+  result: Dragon Descends into Seclusion Technique
+  badtrans: true
+- raw: 当头棒喝
+  result: Thunderous Awakening
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 绵里藏针
+  result: Hiding needles in cotton
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+- raw: 碧海飞仙剑
+  result: Azure Sea Flying Immortal Sword
+  badtrans: true
+- raw: 河图洛书
+  result: Hetu and Luoshu
+  badtrans: true
+- raw: 帝王封禅功
+  result: Emperor's Sacrifice to Heaven
+  badtrans: true
+- raw: 斗转星移
+  result: Stars Shift and Constellations Move
+  badtrans: true
+# - raw: 震天雷
+#   result: Heaven Shaking Thunder
+#   badtrans: true
+- raw: 突火筒
+  result: Fire Lance
+  badtrans: true
+  only:
+    - dynamicStringsFromColumns.txt
+
+#############################################################
+# Generated:
+# - raw: 脉络诀
+#   result: Pulse Deciphering Technique
+#   badtrans: true
+# # - raw: 气血功
+# #   result: Lifeforce Technique
+# #   badtrans: true
+# - raw: 梅花桩
+#   result: Willow stick posts
+#   badtrans: true
+# - raw: 铁布衫
+#   result: Iron Body Armor
+#   badtrans: true
+# - raw: 十段锦长拳
+#   result: Ten‑Form Brocade Long Fist
+#   badtrans: true
+# - raw: 禁军拳术
+#   result: Forbidden Army Combat Technique
+#   badtrans: true
+
+# - raw: 木剑式
+#   result: Wooden Sword Style
+#   badtrans: true
+# - raw: 禁军剑术
+#   result: Forbidden Army Swordsmanship
+#   badtrans: true
+# - raw: 拔刀功
+#   result: Draw Blade Technique
+#   badtrans: true
+# - raw: 劈柴刀法
+#   result: Chopping Wood Blade Technique
+#   badtrans: true
+# - raw: 禁军刀术
+#   result: Forbidden Army Blade Technique
+#   badtrans: true
+# - raw: 太祖棍法
+#   result: Ancestral Staff Technique
+#   badtrans: true
+# - raw: 猎户叉功
+#   result: Hunter's Fork Technique
+#   badtrans: true
+# - raw: 禁军枪术
+#   result: Forbidden Army Spear Technique
+#   badtrans: true
+# - raw: 三路鞭法
+#   result: Three Whips Technique
+#   badtrans: true
+# - raw: 伐木斧功
+#   result: Axeman Skill
+#   badtrans: true
+# - raw: 禁军钩术
+#   result: Forbidden Army Hook Technique
+#   badtrans: true
+# - raw: 飞镖要诀
+#   result: Dart throwing secrets
+#   badtrans: true
+# - raw: 飞针要诀
+#   result: Essence of Rapid Needle Technique
+#   badtrans: true
+# - raw: 飞刀要诀
+#   result: Essentials of Flying Blade
+#   badtrans: true
+# - raw: 开声贯气法
+#   result: Breath Control Technique
+#   badtrans: true
+# - raw: 舒筋通络法
+#   result: Toning and Unblocking Method
+#   badtrans: true
+# - raw: 四段功法
+#   result: Fourfold Technique
+#   badtrans: true
+# - raw: 玉带诀
+#   result: Silkworm Belt Technique
+#   badtrans: true
+# - raw: 五指点石功
+#   result: Five‑Finger Stoned‑Skipping Technique
+#   badtrans: true
+# - raw: 排打硬功
+#   result: Hardening fist techniques
+#   badtrans: true
+# - raw: 鞭气劲
+#   result: Strong Whip Breath
+#   badtrans: true
+# - raw: 实腹鼓气功
+#   result: Solid Chest Breathing Exercise
+#   badtrans: true
+# - raw: 热炎功
+#   result: Flame Heat Technique
+#   badtrans: true
+# - raw: 草上飞
+#   result: Swift as a Grasshopper
+#   badtrans: true
+# - raw: 泥潭功
+#   result: Mire Technique
+#   badtrans: true
+# - raw: 走壁功
+#   result: Wall Crawling Skill
+#   badtrans: true
+# - raw: 鲤鱼跃龙门
+#   result: Leap over the Dragon Gate
+#   badtrans: true
+# - raw: 一线穿
+#   result: One‑line‑through
+#   badtrans: true
+# - raw: 雁回旋
+#   result: Wild Goose Reversal
+#   badtrans: true
+# - raw: 跑铁索
+#   result: Cross the hanging cable
+#   badtrans: true
+# - raw: 穿帘步
+#   result: Through‑the‑curtain step
+#   badtrans: true
+# - raw: 缸沿功
+#   result: Kanenaga Ichirou
+#   badtrans: true
+# - raw: 铁球滚
+#   result: Iron ball rolls
+#   badtrans: true
+# - raw: 开碑劲
+#   result: Stonesplitting Strength
+#   badtrans: true
+# - raw: 龟甲功
+#   result: Tortoise Shell Technique
+#   badtrans: true
+# - raw: 石锁功
+#   result: Stone Lock Skill
+#   badtrans: true
+# - raw: 拔山功
+#   result: Overwhelming Victory
+#   badtrans: true
+# - raw: 倒踢腿
+#   result: Roundhouse kick
+#   badtrans: true
+# - raw: 柔身术
+#   result: Soft Body Technique
+#   badtrans: true
+# - raw: 拔钉功
+#   result: Nail‑Pulling Technique
+#   badtrans: true
+# - raw: 闪战法
+#   result: Quick Battle Strategy
+#   badtrans: true
+# - raw: 铁牛犁地
+#   result: Iron Ox Plowing the Fields
+#   badtrans: true
+# - raw: 乱弹琵琶
+#   result: Plucking the pipa randomly
+#   badtrans: true
+# - raw: 八卦掌法
+#   result: Bagua Palm Technique
+#   badtrans: true
+# - raw: 通臂拳
+#   result: Long arm fist
+#   badtrans: true
+# - raw: 燕青拳
+#   result: Yanying Quan
+#   badtrans: true
+# - raw: 野狐拳
+#   result: Fox Fist
+#   badtrans: true
+# - raw: 螳螂拳
+#   result: Praying Mantis Fist
+#   badtrans: true
+# - raw: 赤尻连拳
+#   result: Red Ass Combo
+#   badtrans: true
+# - raw: 连环掌法
+#   result: Chain Palm Technique
+#   badtrans: true
+# - raw: 岳家拳
+#   result: Yue Family Fist
+#   badtrans: true
+# - raw: 形意拳
+#   result: Form Sandboxing Fist
+#   badtrans: true
+# - raw: 八卦剑法
+#   result: Bagua Sword Technique
+#   badtrans: true
+# - raw: 雷震剑法
+#   result: Thunderclap Sword Technique
+#   badtrans: true
+# - raw: 白马剑法
+#   result: White Horse Sword Technique
+#   badtrans: true
+# - raw: 云雾剑法
+#   result: Sword Technique in Mist and Cloud
+#   badtrans: true
+# - raw: 无量剑法
+#   result: Boundless Sword Technique
+#   badtrans: true
+# - raw: 迅剑诀
+#   result: Quick Sword Technique
+#   badtrans: true
+# - raw: 闪剑
+#   result: Flash Sword
+#   badtrans: true
+# - raw: 开阖剑术
+#   result: Opening and Closing Swordsmanship
+#   badtrans: true
+# - raw: 迎风剑法
+#   result: Wind Cutting Sword Technique
+#   badtrans: true
+# - raw: 八卦刀法
+#   result: Bagua Blade Art
+#   badtrans: true
+# - raw: 六合刀法
+#   result: Hexing Blade Technique
+#   badtrans: true
+# - raw: 螳螂刀法
+#   result: Mantis Blade Technique
+#   badtrans: true
+# - raw: 劈挂刀法
+#   result: Blade Technique
+#   badtrans: true
+# - raw: 铁门闩刀法
+#   result: Iron Gate Blade Technique
+#   badtrans: true
+# - raw: 辛酉刀法
+#   result: Xinchou Blade Art
+#   badtrans: true
+# - raw: 雁行刀
+#   result: Formation Blade
+#   badtrans: true
+# - raw: 地堂刀法
+#   result: Blade Technique
+#   badtrans: true
+# - raw: 青龙刀法
+#   result: Blue Dragon Blade Art
+#   badtrans: true
+# - raw: 南山刀法
+#   result: Southern Mountain Blade Technique
+#   badtrans: true
+# - raw: 八卦棍法
+#   result: Bagua Staff Technique
+#   badtrans: true
+# - raw: 罗家枪法
+#   result: Ro Family Spear Technique
+#   badtrans: true
+# - raw: 灵猿棍法
+#   result: Monkey Staff Technique
+#   badtrans: true
+# - raw: 五郎棍法
+#   result: Five‑Branch Staff Technique
+#   badtrans: true
+# - raw: 形意枪
+#   result: Shape‑Intent Spear
+#   badtrans: true
+# - raw: 中平枪法
+#   result: Middle‑Level Spear Technique
+#   badtrans: true
+# - raw: 八母枪术
+#   result: Eight Mothers Staff Technique
+#   badtrans: true
+# - raw: 杨家枪法
+#   result: Yangs' Spear Technique
+#   badtrans: true
+# - raw: 千钧棍法
+#   result: Staff technique of a thousand catties
+#   badtrans: true
+# - raw: 牛头钢叉功
+#   result: Bull Horn Pummel Technique
+#   badtrans: true
+# - raw: 八卦鞭法
+#   result: Bagua Whip Technique
+#   badtrans: true
+# - raw: 开山斧
+#   result: Felling Axe
+#   badtrans: true
+# - raw: 黄沙万里鞭
+#   result: Ten‑thousand‑li Whip Through Sands
+#   badtrans: true
+# - raw: 碎石铁鞭
+#   result: Cracked Stone Whip
+#   badtrans: true
+# - raw: 九节鞭法
+#   result: Nine‑section whip technique
+#   badtrans: true
+# - raw: 海叟钩法
+#   result: Old Sea Hook Technique
+#   badtrans: true
+# - raw: 连环对刺
+#   result: Chain Stabbing
+#   badtrans: true
+# - raw: 铁蜈钩
+#   result: Iron Spider Hook
+#   badtrans: true
+# - raw: 清凉扇法
+#   result: Cool Fan Technique
+#   badtrans: true
+# - raw: 闪电五连鞭
+#   result: Lightning Five‑Strike Whip
+#   badtrans: true
+# - raw: 掷短斧
+#   result: Throw small axes
+#   badtrans: true
+# - raw: 梅花镖
+#   result: Plum Blossom Dart
+#   badtrans: true
+# - raw: 玉蜂针
+#   result: Silkworm Needle
+#   badtrans: true
+# - raw: 白翎箭
+#   result: White Feather Arrow
+#   badtrans: true
+# - raw: 枣核钉
+#   result: Split pin
+#   badtrans: true
+# - raw: 甩袖箭
+#   result: Wielded sleeve‑jar arrows
+#   badtrans: true
+# - raw: 棉套索
+#   result: Cotton lasso
+#   badtrans: true
+# - raw: 系绳镖
+#   result: Boomerang
+#   badtrans: true
+# - raw: 铁莲花
+#   result: Iron Lily
+#   badtrans: true
+# - raw: 飞手戟
+#   result: Boarding pike
+#   badtrans: true
+# - raw: 归元吐纳功
+#   result: Primordial Breathing Technique
+#   badtrans: true
+# - raw: 心意气混元功
+#   result: Harmony of Intent and Qi Gong
+#   badtrans: true
+# - raw: 金刚心法
+#   result: Heart Method of Vajra Mind
+#   badtrans: true
+# - raw: 轰天掣地诀
+#   result: Heaven‑Shaking Earth‑Piercing Technique
+#   badtrans: true
+# - raw: 灵台清明功
+#   result: Clear Consciousness Cultivation Technique
+#   badtrans: true
+# - raw: 紫气氤氲法
+#   result: Vapor of Mystic Qi Surrounding Technique
+#   badtrans: true
+# - raw: 沸血法
+#   result: Boiling Blood Magic
+#   badtrans: true
+# - raw: 软玄功
+#   result: Soft Mystic Skill
+#   badtrans: true
+# - raw: 燕子三抄水
+#   result: Swallow Triple Dip the Water
+#   badtrans: true
+# - raw: 壁虎游墙
+#   result: Gecko climbs walls
+#   badtrans: true
+# - raw: 磐罡步
+#   result: Pan Gang Step
+#   badtrans: true
+# - raw: 金雁功
+#   result: Golden Swallow Technique
+#   badtrans: true
+# - raw: 白马悬蹄
+#   result: White Horse Hoof Dangling
+#   badtrans: true
+# - raw: 天云步
+#   result: Heavenly Cloud Step
+#   badtrans: true
+# - raw: 翻腾术
+#   result: Tumbling Technique
+#   badtrans: true
+# - raw: 别离步
+#   result: Step of Parting
+#   badtrans: true
+# - raw: 陆地飞行术
+#   result: Land Flight Spell
+#   badtrans: true
+# - raw: 四两拨千斤
+#   result: A feather's weight moves a thousand catties
+#   badtrans: true
+# - raw: 隔山打牛
+#   result: Hit the bull from afar
+#   badtrans: true
+# - raw: 一指金刚法
+#   result: One Fingertip Vajra Technique
+#   badtrans: true
+# - raw: 千层纸功
+#   result: Multiple Layers Paper Technique
+#   badtrans: true
+# - raw: 分水功
+#   result: Dividing Water Technique
+#   badtrans: true
+# - raw: 柔骨摆柳功
+#   result: Rou Gu Ba Liu Gong
+#   badtrans: true
+# - raw: 卧虎功
+#   result: Tiger‑Crouching Fist
+#   badtrans: true
+# - raw: 乱环扑
+#   result: Chaotic Rings Assault
+#   badtrans: true
+# - raw: 霸王肘
+#   result: Butterfly Sweep
+#   badtrans: true
+# - raw: 摔碑手
+#   result: Crushing themHand
+#   badtrans: true
+# - raw: 追风短打
+#   result: Swift Strike
+#   badtrans: true
+# - raw: 惊涛掌
+#   result: Whirlpool Palm
+#   badtrans: true
+# - raw: 猛禽手
+#   result: Raptor Hand
+#   badtrans: true
+
+# - raw: 伏虎拳
+#   result: Tiger‑Crushing Fist
+#   badtrans: true
+# - raw: 大擒拿手
+#   result: Dragon Entangling Hands
+#   badtrans: true
+# - raw: 铁琵琶手
+#   result: Iron Mallet Hand
+#   badtrans: true
+# - raw: 二郎担山掌
+#   result: Second Young Master Shoulders Mountain Palm
+#   badtrans: true
+# - raw: 快慢十八路
+#   result: Fast and Slow Eighteen Roads
+#   badtrans: true
+# - raw: 泼墨剑法
+#   result: Freehand Sword Technique
+#   badtrans: true
+# - raw: 北斗剑法
+#   result: Northern Dipper Sword Technique
+#   badtrans: true
+# - raw: 雨打飞花剑
+#   result: Rain‑Splashed Flying Flower Sword
+#   badtrans: true
+# - raw: 浣花流水剑
+#   result: Flowing Lotus Sword
+#   badtrans: true
+# - raw: 周公剑法
+#   result: Wu Geng's Sword Technique
+#   badtrans: true
+# - raw: 五大夫剑
+#   result: Doctor's Sword
+#   badtrans: true
+# - raw: 霜花剑式
+#   result: Frost Flower Sword Form
+#   badtrans: true
+# - raw: 八面破身刀
+#   result: Eight‑Faced Piercing Blade
+#   badtrans: true
+# - raw: 逐浪刀法
+#   result: Wave Blade Technique
+#   badtrans: true
+# - raw: 鸳鸯刀法
+#   result: Interlocked Blade Technique
+#   badtrans: true
+# - raw: 五虎断门刀
+#   result: Five Tiger Pierce‑Chest Knife
+#   badtrans: true
+# - raw: 八阵盘龙刀
+#   result: Eight Formation Coiled Dragon Sword
+#   badtrans: true
+# - raw: 春秋刀术
+#   result: Spring and Autumn Sword Art
+#   badtrans: true
+# - raw: 百兽刀法
+#   result: Tiger's Claw Blade Technique
+#   badtrans: true
+# - raw: 荡寇刀法
+#   result: Blade Technique for Subduing Rebels
+#   badtrans: true
+# - raw: 雷鸣刀法
+#   result: Thunder Blade Technique
+#   badtrans: true
+# - raw: 泰山十八刀
+#   result: Eighteen Cuts of Mount Tai
+#   badtrans: true
+# - raw: 二十四路枪势
+#   result: Twenty‑four Styles of Spear Technique
+#   badtrans: true
+# - raw: 泼水杖法
+#   result: Water‑Splashing Staff Technique
+#   badtrans: true
+# - raw: 六合大枪
+#   result: Sixfold Great Spear
+#   badtrans: true
+# - raw: 小夜叉棍法
+#   result: Little Night Demon Staff Technique
+#   badtrans: true
+# - raw: 醉八仙棍法
+#   result: Drunk Eight Immortals Staff Technique
+#   badtrans: true
+# - raw: 蟠龙棍法
+#   result: Pillar Dragon Staff Technique
+#   badtrans: true
+# - raw: 大夜叉棍法
+#   result: Great Night Hare Staff Technique
+#   badtrans: true
+# - raw: 百变菱枪
+#   result: Versatile Rhombus Spear
+#   badtrans: true
+# - raw: 问天枪诀
+#   result: Heavenly Inquiry Staff Technique
+#   badtrans: true
+# - raw: 空灵杖法
+#   result: Staff Technique of Etherealness
+#   badtrans: true
+# - raw: 狂风扫雷扇
+#   result: Wind Sweeping Mine Fan
+#   badtrans: true
+# - raw: 蛇鹤八打
+#   result: Eight Strikes of Snake and Crane
+#   badtrans: true
+# - raw: 金龙鞭法
+#   result: Golden Dragon Whip Technique
+#   badtrans: true
+# - raw: 夺命鞭法
+#   result: Fate‑Stealing Whip Technique
+#   badtrans: true
+# - raw: 乱披风锤法
+#   result: Chaotic Mauling Technique
+#   badtrans: true
+# - raw: 精钢蟹钳功
+#   result: Steel Crustacean Claw Technique
+#   badtrans: true
+# - raw: 普门杖法
+#   result: Staff Method of Universal Doors
+#   badtrans: true
+# - raw: 盘根错节斧
+#   result: Entangled Axes
+#   badtrans: true
+# - raw: 回打软鞭式
+#   result: Return with whip‑like technique
+#   badtrans: true
+# - raw: 呼延鞭法
+#   result: Huayuan Whip Technique
+#   badtrans: true
+# - raw: 八门飞刀术
+#   result: Eight Gates Flying Daggers Technique
+#   badtrans: true
+# - raw: 乌叶镖
+#   result: Black Leaf Dart
+#   badtrans: true
+# - raw: 龙须针
+#   result: Dragon whisker needle
+#   badtrans: true
+# - raw: 铁链飞爪
+#   result: Chain grappling hook
+#   badtrans: true
+# - raw: 流星锤
+#   result: Meteor Hammer
+#   badtrans: true
+# - raw: 银飞梭
+#   result: Silver Flying Shuttle
+#   badtrans: true
+# - raw: 铁索渔网
+#   result: Chain fishing net
+#   badtrans: true
+# - raw: 含沙射影
+#   result: Sling sand to accuse
+#   badtrans: true
+# - raw: 刀叶扇
+#   result: Bladeleaf Fan
+#   badtrans: true
+# - raw: 乾坤飞轮
+#   result: Heavenly Wheel Rush
+#   badtrans: true
+# - raw: 潜渊心经
+#   result: Qian Yuan Heart Sutra
+#   badtrans: true
+# - raw: 五岳独尊功
+#   result: Majestic Five Peaks Technique
+#   badtrans: true
+# - raw: 乾元功
+#   result: Kan Yuan Skill
+#   badtrans: true
+# - raw: 太上十三经
+#   result: The Thirteenth Classic of the Highest Rank
+#   badtrans: true
+# - raw: 水上漂
+#   result: Water Flea
+#   badtrans: true
+# - raw: 七步追魂
+#   result: Seven‑Step Soul Pursuer
+#   badtrans: true
+# - raw: 八步赶蝉
+#   result: Eight Steps to Catch a Cicada
+#   badtrans: true
+# - raw: 踏空行
+#   result: Leap Void
+#   badtrans: true
+# - raw: 飒沓流星步
+#   result: Swift Meteor Step
+#   badtrans: true
+# - raw: 虎鹤双形
+#   result: Tiger and Crane Dual Forms
+#   badtrans: true
+# - raw: 真元护体
+#   result: True Essence Body Guard
+#   badtrans: true
+# - raw: 五方揭谛功
+#   result: Five Directions Perceiver Skill
+#   badtrans: true
+# - raw: 熊形虎相
+#   result: Bear‑like tiger appearance
+#   badtrans: true
+# - raw: 雷霆万钧
+#   result: Thunderous Strike
+#   badtrans: true
+# - raw: 飞凤手
+#   result: Phoenix Fist
+#   badtrans: true
+# - raw: 缠丝擒拿手
+#   result: Silkworm Entanglement Holding Hand Technique
+#   badtrans: true
+# - raw: 百花错拳
+#   result: Flower Mist Fist
+#   badtrans: true
+# - raw: 分筋错骨手
+#   result: Bone‑setting hand
+#   badtrans: true
+# - raw: 追魂夺命剑
+#   result: Lethal Soul‑Seizing Sword
+#   badtrans: true
+# - raw: 子午十二剑
+#   result: Midnight Twelve Swords
+#   badtrans: true
+# - raw: 点苍遗剑
+#   result: Diancang's Lost Sword
+#   badtrans: true
+# - raw: 越女剑法
+#   result: Sword Technique of the Yue Maiden
+#   badtrans: true
+# - raw: 两仪刀法
+#   result: Dual Essence Blade Technique
+#   badtrans: true
+# - raw: 羽衣刀法
+#   result: Feathered Robe Blade Technique
+#   badtrans: true
+# - raw: 空空玄玄刀
+#   result: Emptiness Emptiness Blade
+#   badtrans: true
+# - raw: 东瀛刀术
+#   result: Japanese blade technique
+#   badtrans: true
+# - raw: 升天斩
+#   result: Heavenly Cut
+#   badtrans: true
+# - raw: 阴符枪谱
+#   result: Yinfu Qiangpu
+#   badtrans: true
+# - raw: 灵蛇杖法
+#   result: Staff Technique of the Agile Serpent
+#   badtrans: true
+# - raw: 燎原百击枪
+#   result: Firespark Hundred Strikes Spear
+#   badtrans: true
+# - raw: 焚天棍影
+#   result: Heaven‑Burning Staff Shadow
+#   badtrans: true
+# - raw: 百鸟朝凤枪
+#   result: Spear of a Hundred Birds Paying Homage to the Phoenix
+#   badtrans: true
+# - raw: 毗卢鞭法
+#   result: Vajra Whip Technique
+#   badtrans: true
+# - raw: 子午鸳鸯钺
+#   result: Midday‑Midnight Dual Jade Sabers
+#   badtrans: true
+# - raw: 判官笔法
+#   result: Butterfly Stroke of the Judge
+#   badtrans: true
+# - raw: 月牙弯钩
+#   result: New Moon Crescent Hook
+#   badtrans: true
+# - raw: 开天辟地斧
+#   result: Ax of Creation and Destruction
+#   badtrans: true
+# - raw: 雷公钻
+#   result: Thunder Drill
+#   badtrans: true
+# - raw: 子母如意珠
+#   result: Pearl of Divine Will
+#   badtrans: true
+# - raw: 腐骨针
+#   result: Bonescorning Needle
+#   badtrans: true
+# - raw: 赤链蛇锥
+#   result: Red‑striped Keelback Snake
+#   badtrans: true
+# - raw: 阴冥砂
+#   result: Yinming Sha
+#   badtrans: true
+# - raw: 六言真经
+#   result: True Six Word Classic
+#   badtrans: true
+# - raw: 先天功
+#   result: Predestined Skill
+#   badtrans: true
+# - raw: 元神出窍功
+#   result: Spirit Departure Technique
+#   badtrans: true
+# - raw: 如影随形
+#   result: Like a shadow follows
+#   badtrans: true
+# - raw: 攀云乘龙
+#   result: Climb to great heights and soar like a dragon
+#   badtrans: true
+# - raw: 嫦娥奔月
+#   result: Chang'e Flies to the Moon
+#   badtrans: true
+# - raw: 刀枪不入法
+#   result: Invincible Skill
+#   badtrans: true
+# - raw: 蛤蟆奇功
+#   result: Frog Supreme Skill
+#   badtrans: true
+# - raw: 泫然指法
+#   result: Glistening Fingertouch
+#   badtrans: true
+# - raw: 大风云手
+#   result: Great Wind Hand Technique
+#   badtrans: true
+# - raw: 龙爪十缠
+#   result: Dragon Claw Ten Wraps
+#   badtrans: true
+# - raw: 无名剑法
+#   result: Nameless Sword Technique
+#   badtrans: true
+# - raw: 天意剑诀
+#   result: The Will of the Sword Technique
+#   badtrans: true
+# - raw: 太白剑意
+#   result: Tai Bai Sword Intention
+#   badtrans: true
+# - raw: 万壑刀法
+#   result: Valley of Blades Technique
+#   badtrans: true
+# - raw: 雾隐云龙刀
+#   result: Misty Dragonblade
+#   badtrans: true
+# - raw: 战八方藏刀式
+#   result: War in All Directions, Blade Style
+#   badtrans: true
+# - raw: 披风七杀戟
+#   result: Seven‑Cloak Killing Spear
+#   badtrans: true
+# - raw: 傲世奇枪
+#   result: Domination Strange Spear
+#   badtrans: true
+# - raw: 银索金玲
+#   result: Silver Bell and Golden Loop
+#   badtrans: true
+# - raw: 龙头铁铡功
+#   result: Iron Head Decapitation Skill
+#   badtrans: true
+# - raw: 五蟒狂鞭
+#   result: Five‑Mythical‑Beast Crazy Whip
+#   badtrans: true
+# - raw: 阎王帖
+#   result: Order from the King of Hell
+#   badtrans: true
+# - raw: 追魂魔针
+#   result: Haunting Soul Needle
+#   badtrans: true
+# - raw: 善恶镖
+#   result: Good and Evil Courier
+#   badtrans: true
+# - raw: 元始天功
+#   result: Primordial Heavenly Virtue
+#   badtrans: true
+# - raw: 飘飘欲仙
+#   result: Ethereal and transcendent
+#   badtrans: true
+# - raw: 虎啸龙吟
+#   result: Tiger Roars and Dragon Sings
+#   badtrans: true
+# - raw: 照影神拳
+#   result: Shadowform Divine Fist
+#   badtrans: true
+# - raw: 诛仙剑法
+#   result: Swordsmanship of the Crimson Virtue Sword
+#   badtrans: true
+# - raw: 九州风雷刀
+#   result: Zhou Ji Wind and Thunder Blade
+#   badtrans: true
+# - raw: 大闹天宫棍
+#   result: Staff of Chaos in Heaven
+#   badtrans: true
+# - raw: 碧海潮生曲
+#   result: Tide‑Echoing Melody
+#   badtrans: true
+# - raw: 多情飞刀
+#   result: Romantic Blade
+#   badtrans: true
+# - raw: 哭面功
+#   result: Cry Face Technique
+#   badtrans: true
+# - raw: 爬竿术
+#   result: Tightrope Walking
+#   badtrans: true
+# - raw: 耍狗熊
+#   result: Play with bears
+#   badtrans: true
+# - raw: 石灰散
+#   result: Powdered Lime
+#   badtrans: true
+# - raw: 刑场刀法
+#   result: Execution Blade Art
+#   badtrans: true
+# - raw: 怒面功
+#   result: Furious Mastery
+#   badtrans: true
+
+# - raw: 虎口吞枪
+#   result: Clawed through the spear
+#   badtrans: true
+# - raw: 银屑粉
+#   result: Silver powder
+#   badtrans: true
+# - raw: 铜蟾蜍
+#   result: Brass toad
+#   badtrans: true
+# - raw: 两面三刀法
+#   result: Two‑Faced Blade Technique
+#   badtrans: true
+# - raw: 知足常乐功
+#   result: Contentment Brings Eternal Happiness
+#   badtrans: true
+# - raw: 脚踏飞燕
+#   result: Swallow Leap Forward
+#   badtrans: true
+# - raw: 嬉皮笑脸
+#   result: Grinning
+#   badtrans: true
+# - raw: 长乐散
+#   result: Changle Powder
+#   badtrans: true
+# - raw: 长乐刀法
+#   result: Longevity Blade Technique
+#   badtrans: true
+# - raw: 笑里藏刀式
+#   result: Smile Hiding Blade Technique
+#   badtrans: true
+# - raw: 活弥勒心法
+#   result: Living Maitreya Heart Method
+#   badtrans: true
+# - raw: 得意春风步
+#   result: Pleased by the Spring Breeze Step
+#   badtrans: true
+# - raw: 极乐刺
+#   result: Heavenly Bliss Piercer
+#   badtrans: true
+# - raw: 游龙戏凤刀
+#   result: Dragon Playing Phoenix Blade
+#   badtrans: true
+# - raw: 一刀两断法
+#   result: Cut off completely
+#   badtrans: true
+# - raw: 喜怒哀乐大法
+#   result: Emotion Management Technique
+#   badtrans: true
+# - raw: 日月凌空
+#   result: Sun and Moon Soar into the Sky
+#   badtrans: true
+# - raw: 千金一掷
+#   result: Stake a fortune
+#   badtrans: true
+# - raw: 醉阎罗刀法
+#   result: Blade Technique of Drunken Judge
+#   badtrans: true
+# - raw: 恩断义绝刀法
+#   result: Blade Technique of Cutting Off Both Bonds
+#   badtrans: true
+# - raw: 醉梦鱼龙舞
+#   result: Drunken Dreaming Dance of Fish and Dragon
+#   badtrans: true
+# - raw: 净乐琉璃刀
+#   result: Pure Joy Crystal Blade
+#   badtrans: true
+# - raw: 阴手伤人法
+#   result: Law of Backhand Injury
+#   badtrans: true
+# - raw: 走房檐
+#   result: Walk along the eaves
+#   badtrans: true
+# - raw: 心眼功
+#   result: Mind Eye Skill
+#   badtrans: true
+# - raw: 毒蒺藜
+#   result: Poison spurge
+#   badtrans: true
+# - raw: 绣花针
+#   result: Embroidery needle
+#   badtrans: true
+# - raw: 三寸钉
+#   result: Three‑inch nail
+#   badtrans: true
+# - raw: 袖里藏刀
+#   result: Hidden dagger in one's sleeve
+#   badtrans: true
+# - raw: 七窍玲珑功
+#   result: Clear Orifice Skill
+#   badtrans: true
+# - raw: 鹞子翻身
+#   result: Flying Swallow Spin
+#   badtrans: true
+# - raw: 隐匿术
+#   result: Stealth spell
+#   badtrans: true
+# - raw: 错骨钩
+#   result: Fishbone ribhook
+#   badtrans: true
+# - raw: 牛毛针
+#   result: Fine Needle
+#   badtrans: true
+# - raw: 青蜂钉
+#   result: Poison Bee Pin
+#   badtrans: true
+# - raw: 机关弹刀
+#   result: Mechanism Critique
+#   badtrans: true
+# - raw: 九转飞芒功
+#   result: Nine Turns Swift Spark Skill
+#   badtrans: true
+# - raw: 金蝉脱壳
+#   result: Golden Cicada Shell
+#   badtrans: true
+# - raw: 袖里乾坤
+#   result: Microcosm in the palm of your hand
+#   badtrans: true
+# - raw: 银丝网
+#   result: Silver‑webbed net
+#   badtrans: true
+# - raw: 断肠针
+#   result: Intestine‑Piercing Needle
+#   badtrans: true
+# - raw: 穿心钉
+#   result: Stabbing dagger
+#   badtrans: true
+# - raw: 飞叶斩片刀
+#   result: Falling Leaf Slice Blade
+#   badtrans: true
+# - raw: 百手千指功
+#   result: Skill of Thousand Fingers on Hundred Hands
+#   badtrans: true
+# - raw: 鬼影重重
+#   result: Shadow Conspiracy
+#   badtrans: true
+# - raw: 孔雀翎
+#   result: Peacock Feathers
+#   badtrans: true
+# - raw: 玉髓冰魄针
+#   result: Jade Dew Spirit Needle
+#   badtrans: true
+# - raw: 碎颅钉
+#   result: Braincracker nail
+#   badtrans: true
+# - raw: 百转千折刀
+#   result: Hundred Turns, Thousand Folds Blade
+#   badtrans: true
+# - raw: 天阴柔劲
+#   result: Soft and yielding strength
+#   badtrans: true
+# - raw: 观音泪
+#   result: Goddess Tear
+#   badtrans: true
+# - raw: 暴雨梨花针
+#   result: Bamboo Spears in a Storm
+#   badtrans: true
+# - raw: 七星透骨钉
+#   result: Seven‑Star Piercing Bone Needle
+#   badtrans: true
+# - raw: 万化玄机刀
+#   result: Wan Hua Xuan Ji Sword
+#   badtrans: true
+# - raw: 九天罗候针
+#   result: Nine Heaven Luo Hou Needle
+#   badtrans: true
+# - raw: 千金要方
+#   result: Prescriptions for Universal Relief
+#   badtrans: true
+# - raw: 悬绳功
+#   result: Tightrope walking
+#   badtrans: true
+# - raw: 推拿法
+#   result: Massage technique
+#   badtrans: true
+# - raw: 微雨指法
+#   result: Rain Droplet Finger Technique
+#   badtrans: true
+# - raw: 化瘀掌
+#   result: Palm for Removing Stagnation
+#   badtrans: true
+# - raw: 药王针术
+#   result: Potion Master Needle Technique
+#   badtrans: true
+# - raw: 采补养元功
+#   result: Cai Bu Yang Yuan Gong
+#   badtrans: true
+# - raw: 采燕功
+#   result: Cai Yan Gong
+#   badtrans: true
+# - raw: 回春丹方
+#   result: Revival Pill Formula
+#   badtrans: true
+# - raw: 指点十一式
+#   result: Guide to Eleven Styles
+#   badtrans: true
+# - raw: 春蚕掌
+#   result: Silkworm Grip
+#   badtrans: true
+# - raw: 芙蓉金针
+#   result: Fragrant Lotus Mushrooms
+#   badtrans: true
+# - raw: 金针伐脉术
+#   result: Needle to Seize Meridian Technique
+#   badtrans: true
+# - raw: 灵鳌步
+#   result: Azure Tortoise Step
+#   badtrans: true
+# - raw: 金钗刮膜功
+#   result: Golden Hairpin Skin Peeling Technique
+#   badtrans: true
+# - raw: 凝血指
+#   result: Clotting Finger
+#   badtrans: true
+# - raw: 摧心掌
+#   result: Crushing Heart Palm
+#   badtrans: true
+# - raw: 天王补心针
+#   result: Heavenly King's Heart‑Nourishing Injection
+#   badtrans: true
+# - raw: 扁鹊回春功
+#   result: Rejuvenation Technique
+#   badtrans: true
+# - raw: 女娲补天式
+#   result: Repairing the Sky Style
+#   badtrans: true
+# - raw: 移花接木
+#   result: Planting a seed out of season
+#   badtrans: true
+# - raw: 九幽黄泉指
+#   result: Netherworld Yellow Springs Point
+#   badtrans: true
+# - raw: 药王毒手
+#   result: Poison‑Finger Medicrowad
+#   badtrans: true
+# - raw: 扁鹊神针
+#   result: Fatty Acupoint Sage Needle
+#   badtrans: true
+# - raw: 神农本草秘要
+#   result: Essential Secrets of Shen Nong's Herbal Classic
+#   badtrans: true
+# - raw: 枯骨生肉法
+#   result: Meat from bones technique
+#   badtrans: true
+# - raw: 大慈大悲指
+#   result: Great Compassion and Great Mercy
+#   badtrans: true
+# - raw: 化脉神掌
+#   result: Divine Pulse Palm
+#   badtrans: true
+# - raw: 黄帝秘经
+#   result: Yellow Emperor's Inner Canon
+#   badtrans: true
+# - raw: 灵犀一指
+#   result: Telepathic Touch
+#   badtrans: true
+# - raw: 敲碗诀
+#   result: Tap Bowl Technique
+#   badtrans: true
+# - raw: 野狗步
+#   result: Wolfstep
+#   badtrans: true
+# - raw: 快板功
+#   result: Fast Boxing Technique
+#   badtrans: true
+# - raw: 五行六合拳
+#   result: Five Elements Six Directions Fist
+#   badtrans: true
+# - raw: 快活十三掌
+#   result: Happy Thirteen Palms
+#   badtrans: true
+# - raw: 铁扫帚
+#   result: Iron Broom
+#   badtrans: true
+# - raw: 花子棍
+#   result: Hachiko Staff
+#   badtrans: true
+# - raw: 内家数来宝
+#   result: Internal School's Coming to Showcase
+#   badtrans: true
+
+# - raw: 花鼓戏
+#   result: Huagu Opera
+#   badtrans: true
+# - raw: 沾衣十八跌
+#   result: Cloth‑Dampening Eighteen Falls
+#   badtrans: true
+# - raw: 拜年棍法
+#   result: New Year Staff Technique
+#   badtrans: true
+# - raw: 双棍缠身
+#   result: Staff wearing the Bind of Duty
+#   badtrans: true
+# - raw: 莲花落心法
+#   result: Heart Method of Lotus Fall
+#   badtrans: true
+# - raw: 布袋功
+#   result: Pouch Skill
+#   badtrans: true
+# - raw: 莲花掌
+#   result: Lotus Palm Technique
+#   badtrans: true
+# - raw: 铜锤手
+#   result: Bronze Hammer Fist
+#   badtrans: true
+# - raw: 莲花乱棍
+#   result: Lotus Staff Assault
+#   badtrans: true
+# - raw: 哭丧棍法
+#   result: Staff of Mourning Weeping
+#   badtrans: true
+
+# - raw: 鲲鹏拳法
+#   result: Kunpeng Fist Technique
+#   badtrans: true
+# - raw: 铁蒲扇手
+#   result: Iron Pudan Fan Hand
+#   badtrans: true
+# - raw: 奇门三才棍
+#   result: Odd Doors Three Talents Staff
+#   badtrans: true
+# - raw: 威武棍法
+#   result: Mighty Staff Technique
+#   badtrans: true
+# - raw: 混世天罡
+#   result: World‑Disturbing Celestial Vigor
+#   badtrans: true
+# - raw: 睡梦罗汉拳
+#   result: Dreamless Meditation Fist
+#   badtrans: true
+# - raw: 酒仙散手
+#   result: Immortal of Wine's Open Hand Technique
+#   badtrans: true
+# - raw: 吉祥如意棍
+#   result: Staff of Good Fortune
+#   badtrans: true
+# - raw: 黑白无常棍
+#   result: Black and White Officials' Staffs
+#   badtrans: true
+# - raw: 打狗八绝棍
+#   result: Eight Absolute Staff Techniques
+#   badtrans: true
+# - raw: 禁军心法
+#   result: Forbidden Army Heart Method
+#   badtrans: true
+# - raw: 举盾术
+#   result: Shield Bash
+#   badtrans: true
+# - raw: 薛家戟法
+#   result: Xue Family Saber Technique
+#   badtrans: true
+# - raw: 岳家枪法
+#   result: Yue Clan Spear Art
+#   badtrans: true
+# - raw: 舂米戈术
+#   result: Rice Pound Technique
+#   badtrans: true
+# - raw: 四门刀法
+#   result: Four Gate Blade Technique
+#   badtrans: true
+# - raw: 羽林心法
+#   result: Heart Method of the Imperial Bodyguards
+#   badtrans: true
+# - raw: 衔枚疾走
+#   result: March in silence hurry
+#   badtrans: true
+# - raw: 铁桶功
+#   result: Iron Barrel Technique
+#   badtrans: true
+# - raw: 回马枪术
+#   result: Riding‑the‑Horseback Gun Technique
+#   badtrans: true
+# - raw: 泣血戈术
+#   result: Blood‑Curdling Gore Technique
+#   badtrans: true
+# - raw: 斩马刀法
+#   result: Blade Technique
+#   badtrans: true
+# - raw: 孤烟心经
+#   result: Solo Smoke Sutra
+#   badtrans: true
+# - raw: 策马过五关
+#   result: Ride past five gates
+#   badtrans: true
+# - raw: 飞龙长戟
+#   result: Dragonflight Long Spear
+#   badtrans: true
+# - raw: 潜龙枪诀
+#   result: Dragon‑Severing Spear Technique
+#   badtrans: true
+# - raw: 铁马金戈
+#   result: Iron steeds and golden spears
+#   badtrans: true
+# - raw: 劈天刀法
+#   result: Heaven‑Splitting Blade Technique
+#   badtrans: true
+# - raw: 潜龙心法
+#   result: Heart Method of Hidden Dragon
+#   badtrans: true
+# - raw: 长车踏破
+#   result: Long carriage crushing through
+#   badtrans: true
+# - raw: 明光照铁衣
+#   result: Bright light illuminates his iron armor
+#   badtrans: true
+# - raw: 十六路青龙戟
+#   result: Sixteen Path Azure Dragon Halberds
+#   badtrans: true
+# - raw: 定军枪
+#   result: Soldier Spear
+#   badtrans: true
+# - raw: 干戈琢玉
+#   result: Carve Jade with Sabers
+#   badtrans: true
+# - raw: 百战刀法
+#   result: Hundred‑Fight Blade Technique
+#   badtrans: true
+# - raw: 龙城飞将步
+#   result: Dragon City Flying General Steps
+#   badtrans: true
+# - raw: 满江红神功
+#   result: Red River Divine Skill
+#   badtrans: true
+# - raw: 八荒六合戟
+#   result: Eight Directions Universe Netstaff
+#   badtrans: true
+# - raw: 碧血洗银枪
+#   result: Silver Lance Washed in Crimson Blood
+#   badtrans: true
+# - raw: 退日戈术
+#   result: Defend Against Solar Blades
+#   badtrans: true
+# - raw: 镇魔斩妖刀
+#   result: Demon‑Slaying Monster‑Cutting Blade
+#   badtrans: true
+# - raw: 惊鸿一点枪
+#   result: Elegant Spear Stroke
+#   badtrans: true
+# - raw: 内丹功
+#   result: Nurturing Inner Pill Technique
+#   badtrans: true
+# - raw: 卷云步
+#   result: Wisp Step
+#   badtrans: true
+# - raw: 布气诀
+#   result: Breath Control Technique
+#   badtrans: true
+# - raw: 十八连环破
+#   result: Eighteen Linked Rings Deciphered
+#   badtrans: true
+# - raw: 清心咒
+#   result: Purifying Heart Spell
+#   badtrans: true
+# - raw: 安神咒
+#   result: Soothing Charm
+#   badtrans: true
+# - raw: 清风剑法
+#   result: Qingfeng Sword Technique
+#   badtrans: true
+# - raw: 静守谷神法
+#   result: Cultivating the Vassal Spirit Method
+#   badtrans: true
+# - raw: 御风咒
+#   result: Wind‑Riding Curse
+#   badtrans: true
+# - raw: 长目飞耳功
+#   result: Long‑Eyed Flying Ears Technique
+#   badtrans: true
+# - raw: 跌打梅山咒
+#   result: Meridian Healing Mountain Charm
+#   badtrans: true
+# - raw: 咽喉骨鲠法
+#   result: Throat Bone Stagnation Technique
+#   badtrans: true
+# - raw: 定身咒
+#   result: Paralyze Spell
+#   badtrans: true
+# - raw: 玄门胎息功
+#   result: Xianmen Taisi Gong
+#   badtrans: true
+# - raw: 服内元气诀
+#   result: In‑game Essence Cultivation Technique
+#   badtrans: true
+# - raw: 移形换位
+#   result: Teleportation
+#   badtrans: true
+# - raw: 关公朗真术
+#   result: Guangong Read True Arts
+#   badtrans: true
+# - raw: 引雷术
+#   result: Lightning Diversion Technique
+#   badtrans: true
+# - raw: 勾魂咒
+#   result: Soul‑stealing curse
+#   badtrans: true
+# - raw: 天罡咒
+#   result: Heavenly Constellation Curse
+#   badtrans: true
+# - raw: 御剑秘术
+#   result: Secret Sword Technique
+#   badtrans: true
+# - raw: 五气朝元功
+#   result: Five Elements Reaching the Origin Technique
+#   badtrans: true
+# - raw: 金仙秘旨功
+#   result: Secret Guidance of Golden Immortal Technique
+#   badtrans: true
+# - raw: 瞬息千里
+#   result: A fleeting moment spanning a thousand miles
+#   badtrans: true
+# - raw: 神女报梦
+#   result: Nymph Foretells Dreams
+#   badtrans: true
+# - raw: 寒天咒
+#   result: Cold Winter Curse
+#   badtrans: true
+# - raw: 地母雷网
+#   result: Thunder Mother Net
+#   badtrans: true
+# - raw: 火炼金身符
+#   result: Fiery Body Refinement Talisman
+#   badtrans: true
+# - raw: 钟馗斩妖剑
+#   result: Ghosts destroy their sword
+#   badtrans: true
+# - raw: 龙虎金丹功
+#   result: Dragon Tiger Golden Pill Skill
+#   badtrans: true
+# - raw: 冲虚神功
+#   result: Empty Dew Divine Skill
+#   badtrans: true
+# - raw: 万里神行
+#   result: Ten Thousand Mile Swift Travel
+#   badtrans: true
+# - raw: 三华聚顶
+#   result: Three flowers gather at the crown of the head
+#   badtrans: true
+# - raw: 三昧真火
+#   result: Flaming Mallet Mastery
+#   badtrans: true
+# - raw: 神兵天将咒
+#   result: Divine Soldier Heavenly General Curse
+#   badtrans: true
+# - raw: 斗煞藏魂符
+#   result: Pain Suppression Soul Sealing Talisman
+#   badtrans: true
+# - raw: 玄真剑气
+#   result: Xuanzhen Sword Energy
+#   badtrans: true
+# - raw: 遁甲天书
+#   result: Heavenly Scripture of Hexagram Prediction
+#   badtrans: true
+# - raw: 天劫九重
+#   result: Nine Layers of Heavenly Tribulation
+#   badtrans: true
+# - raw: 打铁功
+#   result: Blacksmithing Skill
+#   badtrans: true
+# - raw: 木屐步
+#   result: Woodclog shuffle
+#   badtrans: true
+# - raw: 木甲百重
+#   result: Wooden Armor Layered Hundred Times
+#   badtrans: true
+# - raw: 寒泉剑法
+#   result: Sword Technique of Cold Spring
+#   badtrans: true
+# - raw: 鱼肠剑法
+#   result: Sword Technique of the Intestine Blade
+#   badtrans: true
+# - raw: 宰鸡牛刀
+#   result: Killing chickens with a big knife
+#   badtrans: true
+# - raw: 百炼功
+#   result: Aging Skill
+#   badtrans: true
+# - raw: 铁履功
+#   result: Iron Boot Technique
+#   badtrans: true
+# - raw: 双剑合璧
+#   result: Double Blades Unite
+#   badtrans: true
+# - raw: 青釭剑法
+#   result: Sword Technique of Qinggang
+#   badtrans: true
+# - raw: 胜邪剑法
+#   result: Sword Technique of Victory Evil
+#   badtrans: true
+# - raw: 乱麻刀法
+#   result: Tangled Blade Technique
+#   badtrans: true
+# - raw: 千锤功
+#   result: Hardened by Thousand Strikes
+#   badtrans: true
+# - raw: 名山寻路
+#   result: Seeking the Path in Mount Name
+#   badtrans: true
+# - raw: 铁甲千重
+#   result: Iron Armor Thousand Layers
+#   badtrans: true
+# - raw: 巨阙重剑
+#   result: Heavy Sword Jue Qu
+#   badtrans: true
+# - raw: 庖丁解牛刀
+#   result: Butterfly Master Slices Ox
+#   badtrans: true
+# - raw: 炉火纯青功
+#   result: Flame refinement technique
+#   badtrans: true
+# - raw: 踏破铁鞋功
+#   result: Finding the needle in the haystack
+#   badtrans: true
+# - raw: 百剑穿心
+#   result: Hundred Swords Through the Heart
+#   badtrans: true
+# - raw: 破军剑法
+#   result: Sword Technique of the Broken Army
+#   badtrans: true
+# - raw: 干将莫邪剑
+#   result: Dryad Sword
+#   badtrans: true
+# - raw: 分金刀术
+#   result: Technique of the Golden Cut Blade
+#   badtrans: true
+# - raw: 万剑奇功
+#   result: Strange Thousand Swords Technique
+#   badtrans: true
+# - raw: 金甲万重
+#   result: Ten Thousand Armored Layers
+#   badtrans: true
+# - raw: 赤霄斩蛇剑
+#   result: Sword of Crimson Heaven Slice Snake
+#   badtrans: true
+# - raw: 含光无形剑
+#   result: Ethereal Sword of Huangguang
+#   badtrans: true
+# - raw: 屠龙要术
+#   result: Dragon Slayer Technique
+#   badtrans: true
+# - raw: 无尽剑意
+#   result: Endless Sword Intention
+#   badtrans: true
+# - raw: 引蛇术
+#   result: Lure Technique
+#   badtrans: true
+# - raw: 泥鳅功
+#   result: Mud Carp Technique
+#   badtrans: true
+# - raw: 迷虫香
+#   result: Cocoon Fragrance
+#   badtrans: true
+# - raw: 蓝砂手
+#   result: Blue Sand Hand
+#   badtrans: true
+# - raw: 朱蟾砂
+#   result: Zhu Chanyan
+#   badtrans: true
+# - raw: 五毒针
+#   result: Venom Needle
+#   badtrans: true
+# - raw: 泥鳅蛊
+#   result: Fish toad trap
+#   badtrans: true
+# - raw: 腐尸功
+#   result: Corpse Decay Technique
+#   badtrans: true
+# - raw: 蛇行步
+#   result: Serpent step
+#   badtrans: true
+# - raw: 炼蛊术
+#   result: Pit Treating Technique
+#   badtrans: true
+# - raw: 金蛇缠丝手
+#   result: Winding Snake Finger Technique
+#   badtrans: true
+# - raw: 灵蛇拳
+#   result: Dragon Serpent Fist
+#   badtrans: true
+# - raw: 腐尸毒
+#   result: Corpse Poison
+#   badtrans: true
+# - raw: 碧磷针
+#   result: Green Phosphorus Needle
+#   badtrans: true
+# - raw: 阴蛇蛊
+#   result: Yin Snake Pesticide
+#   badtrans: true
+# - raw: 五仙真灵诀
+#   result: Five Immortal True Spirit Technique
+#   badtrans: true
+# - raw: 蛤蟆纵跳
+#   result: Frog leap
+#   badtrans: true
+# - raw: 迷魂息
+#   result: Mind‑Distorting Silence
+#   badtrans: true
+# - raw: 三尸蜈蚣爪
+#   result: Three Corpses Scorpion Claw
+#   badtrans: true
+# - raw: 化骨绵掌
+#   result: Bone‑Dispelling Soft Palm Technique
+#   badtrans: true
+# - raw: 断魂砂
+#   result: Painful Sand
+#   badtrans: true
+# - raw: 饮血针
+#   result: Bloodsucking Needle
+#   badtrans: true
+# - raw: 狂癫蛊
+#   result: Mad venom potion
+#   badtrans: true
+# - raw: 天蚕吐丝功
+#   result: Silkworm Spins Silk Skill
+#   badtrans: true
+# - raw: 蜈蚣遁地术
+#   result: Earthworm Diving Technique
+#   badtrans: true
+# - raw: 摄魂大法
+#   result: Mind Theft Technique
+#   badtrans: true
+# - raw: 千蛛万毒手
+#   result: Ten Thousand Poison Hands
+#   badtrans: true
+# - raw: 赤炼神掌
+#   result: Fiery Seizing Palm
+#   badtrans: true
+# - raw: 孟婆散
+#   result: Meng Po Powder
+#   badtrans: true
+# - raw: 赤炼神针
+#   result: Red Refining Divine Needle
+#   badtrans: true
+# - raw: 情花蛊
+#   result: Flower poison spell
+#   badtrans: true
+# - raw: 五毒魔功
+#   result: Poisonous Five Toxins Skill
+#   badtrans: true
+# - raw: 天蛇诡步
+#   result: Heavenly Serpent Deceptive Steps
+#   badtrans: true
+# - raw: 天蚕手
+#   result: Silkworm Hand
+#   badtrans: true
+# - raw: 五毒神掌
+#   result: Poison Palm Technique
+#   badtrans: true
+# - raw: 鹤顶红
+#   result: Red venom dripped into their throat
+#   badtrans: true
+# - raw: 黑血神针
+#   result: Black Blood Divine Needle
+#   badtrans: true
+# - raw: 害神蛊
+#   result: Devil poison
+#   badtrans: true
+# - raw: 蚩尤鬼降
+#   result: Chiyou Ghost Descent
+#   badtrans: true
+# - raw: 万毒宝典
+#   result: Book of Poisonous Diseases
+#   badtrans: true
+# - raw: 黑尸诀
+#   result: Black Corpse Technique
+#   badtrans: true
+# - raw: 夜行刀法
+#   result: Night Blade Technique
+#   badtrans: true
+# - raw: 红眼刀法
+#   result: Blade Technique of the Red‑Eyed One
+#   badtrans: true
+# - raw: 僵尸拳
+#   result: Zombie Punch
+#   badtrans: true
+# - raw: 招魂掌
+#   result: Palming of the Soul
+#   badtrans: true
+# - raw: 杀意心法
+#   result: Heart Method of Killing Intent
+#   badtrans: true
+# - raw: 邪鬼步
+#   result: Evil Spirit Step
+#   badtrans: true
+# - raw: 鬼打墙
+#   result: Dead end
+#   badtrans: true
+# - raw: 鬼面刀法
+#   result: Blade Technique of the Ghost Face
+#   badtrans: true
+# - raw: 阴风刀法
+#   result: Yin Wind Blade Technique
+#   badtrans: true
+# - raw: 绝户爪
+#   result: Bone of contention
+#   badtrans: true
+# - raw: 血手印
+#   result: Bloodstain
+#   badtrans: true
+# - raw: 阴阳磨
+#   result: Yin yang grinder
+#   badtrans: true
+# - raw: 幽冥步
+#   result: Step of the Netherworld
+#   badtrans: true
+# - raw: 鬼见愁
+#   result: Devil's Shoal
+#   badtrans: true
+# - raw: 夺命追魂刀
+#   result: Killing Soul Pursuit Sword
+#   badtrans: true
+# - raw: 修罗刀法
+#   result: Devil Slice Blade Technique
+#   badtrans: true
+# - raw: 鬼哭拳
+#   result: Ghosts Cry Fist
+#   badtrans: true
+# - raw: 朱砂掌
+#   result: Cinnabar Palm Strike
+#   badtrans: true
+# - raw: 混世魔功
+#   result: World‑Destroying Evil Skill
+#   badtrans: true
+# - raw: 百鬼夜行
+#   result: Night Parade of One Thousand Monsters
+#   badtrans: true
+# - raw: 群魔乱舞
+#   result: Chaos reigns
+#   badtrans: true
+# - raw: 天玄七煞刀
+#   result: Heavenly Black Seven Deadly Scimitars
+#   badtrans: true
+# - raw: 阴阳乱刃
+#   result: Blade of Chaos
+#   badtrans: true
+# - raw: 黑龙十八手
+#   result: Eighteen Black Dragon Techniques
+#   badtrans: true
+# - raw: 抽髓掌
+#   result: Bone‑Draining Palm
+#   badtrans: true
+# - raw: 苦海魔功
+#   result: Sea of Suffering Evil Technique
+#   badtrans: true
+# - raw: 无法无天步
+#   result: Lawless Step
+#   badtrans: true
+# - raw: 炼狱破天劲
+#   result: Purgatory Breakheaven Strength
+#   badtrans: true
+# - raw: 饮血魔刀
+#   result: Bloodsucking Blade
+#   badtrans: true
+# - raw: 销魂鬼刃
+#   result: Devil Blade
+#   badtrans: true
+# - raw: 神倒鬼跌拳
+#   result: Divine Down Demon Fallen Fist
+#   badtrans: true
+# - raw: 九死离魂掌
+#   result: Nine Lives Soul‑Stealing Palm
+#   badtrans: true
+# - raw: 万恶魔功
+#   result: Ten Thousand Devils Technique
+#   badtrans: true
+# - raw: 杀人刀法
+#   result: Blade Technique for Murder
+#   badtrans: true
+# - raw: 龟息功
+#   result: Turtle Breathing Technique
+#   badtrans: true
+# - raw: 灵虚步
+#   result: Ethereal Steps
+#   badtrans: true
+# - raw: 抚琴清音
+#   result: Pluck the zither to play clear music
+#   badtrans: true
+# - raw: 胡笳十八拍
+#   result: Eighteen Songs of the Frontier Flute
+#   badtrans: true
+# - raw: 琴棋书画功
+#   result: Music, chess, calligraphy, and painting skills
+#   badtrans: true
+# - raw: 笔走龙蛇
+#   result: Brush moves like dragonsisciendi
+#   badtrans: true
+# - raw: 七弦无形音
+#   result: Seventeenth String Without Formed Sound
+#   badtrans: true
+# - raw: 棋盘四式
+#   result: Four Board Styles
+#   badtrans: true
+# - raw: 永字八法
+#   result: Eight Principles of Calligraphy
+#   badtrans: true
+# - raw: 丹青破穴
+#   result: Danqing Poxue
+#   badtrans: true
+# - raw: 天罗地网剑
+#   result: Heavenly Net Earth Web Sword
+#   badtrans: true
+# - raw: 无欲无情功
+#   result: Desireless and Emotionless Skill
+#   badtrans: true
+# - raw: 横空挪移
+#   result: Horizontal Teleportation
+#   badtrans: true
+# - raw: 丹青妙手
+#   result: Skillful Painter
+#   badtrans: true
+# - raw: 阳春白雪
+#   result: Highbrow music
+#   badtrans: true
+# - raw: 手谈十九路
+#   result: Go on the nineteenth road
+#   badtrans: true
+# - raw: 铁画银钩
+#   result: Iron Lines and Silver Hooks
+#   badtrans: true
+# - raw: 泼墨成画功
+#   result: Murphy's Law Painting Technique
+#   badtrans: true
+# - raw: 玄音幻剑
+#   result: Phantom Sword Xuan Yin
+#   badtrans: true
+# - raw: 梦蝶心经
+#   result: Dream Butterfly Sutra
+#   badtrans: true
+# - raw: 文心雕龙
+#   result: Carving Dragon on Literature
+#   badtrans: true
+# - raw: 高山流水
+#   result: High Mountains and Flowing Water
+#   badtrans: true
+# - raw: 乱点天元
+#   result: Randomly Activating Heavenly Principles
+#   badtrans: true
+# - raw: 裴将军功
+#   result: General Pei's Achievements
+#   badtrans: true
+# - raw: 生花妙笔
+#   result: Ingenious penmanship
+#   badtrans: true
+# - raw: 阴阳奇剑
+#   result: Yin‑Yang Mystery Sword
+#   badtrans: true
+# - raw: 太阳太玄功
+#   result: Great Yang Mystic Skill
+#   badtrans: true
+# - raw: 太阴太玄功
+#   result: Great Yin Mystic Skill
+#   badtrans: true
+# - raw: 螺旋九影
+#   result: Nine‑Division Spiral Shadow
+#   badtrans: true
+
+# - raw: 广陵散曲功
+#   result: Broadsong Skill
+#   badtrans: true
+# - raw: 呕血坐隐功
+#   result: Vomited blood while sitting in meditation
+#   badtrans: true
+# - raw: 春秋笔法
+#   result: Spring Pen Technique
+#   badtrans: true
+# - raw: 画龙点睛
+#   result: Adding the finishing touch
+#   badtrans: true
+# - raw: 天来剑术
+#   result: Heavenly Swordsmanship
+#   badtrans: true
+# - raw: 天人感应步
+#   result: Heavenly Response Step
+#   badtrans: true
+# - raw: 轮回不灭法
+#   result: Immortal Cycle Technique
+#   badtrans: true
+# - raw: 静禅功
+#   result: Calm Zen Technique
+#   badtrans: true
+# - raw: 挑水桶
+#   result: Water bucket
+#   badtrans: true
+# - raw: 铁裆功
+#   result: Iron Crotch Technique
+#   badtrans: true
+# - raw: 少林长拳
+#   result: Shaolin Long Fist
+#   badtrans: true
+# - raw: 少林棍法
+#   result: Shaolin Staff Technique
+#   badtrans: true
+# - raw: 稍子棍法
+#   result: Subduing Staff Technique
+#   badtrans: true
+# - raw: 月牙铲功
+#   result: Crescent Blade Technique
+#   badtrans: true
+# - raw: 罗汉护体功
+#   result: Khan Protection Technique
+#   badtrans: true
+# - raw: 蜻蜓点水
+#   result: Skimming over the water
+#   badtrans: true
+# - raw: 遍体铜人
+#   result: Body of Bronze
+#   badtrans: true
+# - raw: 罗汉拳法
+#   result: Kung Fu of the Arhat Fist
+#   badtrans: true
+# - raw: 韦陀掌
+#   result: Vajra Palm
+#   badtrans: true
+# - raw: 天竺佛指
+#   result: Buddha's Fingertip from India
+#   badtrans: true
+# - raw: 齐眉棍法
+#   result: Staff technique
+#   badtrans: true
+# - raw: 梅花棍法
+#   result: Plum Blossom Staff Technique
+#   badtrans: true
+# - raw: 伏魔铲法
+#   result: Method of the Devil‑subduing Tongs
+#   badtrans: true
+# - raw: 菩提心法
+#   result: Buddha Heart Method
+#   badtrans: true
+# - raw: 九图六坐像
+#   result: Nine Sitting and Six Seated Figures
+#   badtrans: true
+# - raw: 一指禅
+#   result: One‑Finger Zen
+#   badtrans: true
+# - raw: 少林龙爪手
+#   result: Shaolin Dragon Claw Hand
+#   badtrans: true
+# - raw: 去烦恼指
+#   result: Go Free from Worries
+#   badtrans: true
+# - raw: 扫落叶棍法
+#   result: Staff technique for sweeping leaves
+#   badtrans: true
+# - raw: 五虎群羊棍
+#   result: Five Tigers Gathered Lambs Staff
+#   badtrans: true
+# - raw: 大韦陀杵
+#   result: Great Gandharva Mace
+#   badtrans: true
+# - raw: 袈裟伏魔功
+#   result: Robe Suppression Evil Skill
+#   badtrans: true
+# - raw: 少林归藏功
+#   result: Shaolin Guizang Gong
+#   badtrans: true
+# - raw: 一苇渡江
+#   result: Crossing the river on a single reed
+#   badtrans: true
+# - raw: 般若掌
+#   result: Wisdom Palm
+#   badtrans: true
+# - raw: 无相劫指
+#   result: Fist of the Formless Ravaging Fist
+#   badtrans: true
+# - raw: 疯魔棍法
+#   result: Mad Staff Technique
+#   badtrans: true
+# - raw: 大智无定棍法
+#   result: Great Wisdom Has No Fixed Staff Technique
+#   badtrans: true
+# - raw: 菩提智慧杵
+#   result: Bodhi Wisdom Mace
+#   badtrans: true
+# - raw: 阿罗汉神功
+#   result: Arhat Divine Technique
+#   badtrans: true
+# - raw: 无色无相身
+#   result: Formless Form
+#   badtrans: true
+# - raw: 佛门狮吼功
+#   result: Monk's Lion Roar Technique
+#   badtrans: true
+# - raw: 大力金刚掌
+#   result: Powerful Golden Hawk Palm
+#   badtrans: true
+# - raw: 拈花指
+#   result: Blossom Finger
+#   badtrans: true
+# - raw: 如来千叶手
+#   result: Buddha Thousand‑Petaled Hand
+#   badtrans: true
+# - raw: 大文殊杖法
+#   result: Great Manjushri Staff Technique
+#   badtrans: true
+# - raw: 紧那罗王棍法
+#   result: King Vessava Staff Technique
+#   badtrans: true
+# - raw: 金刚伏魔圈
+#   result: Golden Wheel of Subduing Evil Circle
+#   badtrans: true
+# - raw: 洗髓经
+#   result: Bone Washing Classic
+#   badtrans: true
+# - raw: 金刚不坏神功
+#   result: Invincible Divine Skill
+#   badtrans: true
+# - raw: 达摩神杖
+#   result: Bodhidharma's Staff
+#   badtrans: true
+# - raw: 武当太和功
+#   result: Wudang Taihe Gong
+#   badtrans: true
+# - raw: 八卦步
+#   result: Bagua Step
+#   badtrans: true
+# - raw: 武当软硬功
+#   result: Wudang Soft and Hard Skills
+#   badtrans: true
+# - raw: 武当长拳
+#   result: Wudang Changquan
+#   badtrans: true
+# - raw: 武当绵掌
+#   result: Wudang Mian Palm
+#   badtrans: true
+# - raw: 武当丹剑
+#   result: Wudang Dancane Sword
+#   badtrans: true
+# - raw: 松溪小花剑
+#   result: Songxi Minor Flower Sword
+#   badtrans: true
+# - raw: 武当混元桩
+#   result: Wudang Hunyuan Pillar
+#   badtrans: true
+# - raw: 九宫十八步
+#   result: Nine Palaces, Eighteen Steps
+#   badtrans: true
+# - raw: 子午盘功
+#   result: Midday Wheel Technique
+#   badtrans: true
+# - raw: 九宫游身掌
+#   result: Nine Palaces Wandering Palm
+#   badtrans: true
+# - raw: 金针指功
+#   result: Needle‑pricking Skill
+#   badtrans: true
+# - raw: 柔云剑法
+#   result: Soft Cloud Sword Technique
+#   badtrans: true
+# - raw: 玄门十三剑
+#   result: Thirteenth Sword of the Taoist Sect
+#   badtrans: true
+# - raw: 元始周天功
+#   result: Primordial Thousand Heaven Technique
+#   badtrans: true
+# - raw: 武当归藏功
+#   result: Wudang Guichuan Skill
+#   badtrans: true
+# - raw: 四象疑步
+#   result: Four Symbols Doubtful Steps
+#   badtrans: true
+# - raw: 金关玉锁诀
+#   result: Golden Gate and Jade Lock Technique
+#   badtrans: true
+# - raw: 昊天掌
+#   result: Heavenly Arm
+#   badtrans: true
+# - raw: 无极玄功拳
+#   result: Infinite Mystic Skill Fist
+#   badtrans: true
+# - raw: 绕指柔剑
+#   result: Soft‑Bending Sword
+#   badtrans: true
+# - raw: 两仪剑法
+#   result: Dual‑Nature Sword Technique
+#   badtrans: true
+# - raw: 天梯纵云步
+#   result: Heavenly Ladder Leaping Cloud Step
+#   badtrans: true
+# - raw: 柔易九转功
+#   result: Nine Transformations Soft and Gentle Technique
+#   badtrans: true
+# - raw: 伏魔证道拳
+#   result: Purification Fist to Attain Dao
+#   badtrans: true
+# - raw: 太虚掌
+#   result: Void Palm
+#   badtrans: true
+# - raw: 丹凤朝阳剑
+#   result: Golden Phoenix Rising Sword
+#   badtrans: true
+# - raw: 三清化一剑
+#   result: Three Purities as One Sword
+#   badtrans: true
+# - raw: 先天无上罡气
+#   result: Inborn supreme mystic energy
+#   badtrans: true
+# - raw: 北斗仙踪
+#   result: Northern Dipper Xinzong
+#   badtrans: true
+# - raw: 阴阳调元法
+#   result: Yin‑Yang Harmonization Technique
+#   badtrans: true
+# - raw: 日月明光掌
+#   result: Glorious Day and Moon Palm
+#   badtrans: true
+# - raw: 太极拳法
+#   result: Tai Chi boxing
+#   badtrans: true
+# - raw: 太乙神剑
+#   result: Divine Jian of Taiyi
+#   badtrans: true
+# - raw: 真武荡魔剑
+#   result: True Martial Demonic Cleansing Sword
+#   badtrans: true
+# - raw: 道德真经
+#   result: True Classic of Virtue
+#   badtrans: true
+# - raw: 太极剑道
+#   result: Way of the Taiji Sword
+#   badtrans: true
+# - raw: 铁脉功
+#   result: Iron Vein Technique
+#   badtrans: true
+# - raw: 铁膝功
+#   result: Iron Knee Technique
+#   badtrans: true
+# - raw: 铁头功
+#   result: Iron Head Technique
+#   badtrans: true
+# - raw: 开山刀法
+#   result: Mountain‑Cleaving Blade Technique
+#   badtrans: true
+# - raw: 骤雨刀法
+#   result: Thunderstorm Blade Art
+#   badtrans: true
+# - raw: 银蛇枪法
+#   result: Silver Snake Spear Technique
+#   badtrans: true
+# - raw: 十三太保横练
+#   result: Thirteen Guards Hardened Training
+#   badtrans: true
+# - raw: 黄沙落雁
+#   result: Yellow Sand Falling Geese
+#   badtrans: true
+# - raw: 铜皮铁骨功
+#   result: Copper Skin Iron Bones Skill
+#   badtrans: true
+# - raw: 撼地刀法
+#   result: Earth‑Shaking Blade Technique
+#   badtrans: true
+# - raw: 狂风快刀
+#   result: Blazing Gale Blade
+#   badtrans: true
+# - raw: 西凉枪法
+#   result: Xiliang Spear Technique
+#   badtrans: true
+# - raw: 童子金身功
+#   result: Childhood Golden Body Technique
+#   badtrans: true
+# - raw: 猛将步
+#   result: Brave Soldier Step
+#   badtrans: true
+# - raw: 黑砂刚体
+#   result: Black Sand Rigid Body
+#   badtrans: true
+# - raw: 霹雳雷震刀
+#   result: Thunderclap Slash Blade
+#   badtrans: true
+# - raw: 断水流刀法
+#   result: Flowing Water Blade Technique
+#   badtrans: true
+# - raw: 七探盘龙枪
+#   result: Seven Probes Dragon Coil Spear
+#   badtrans: true
+# - raw: 霸王举鼎功
+#   result: Peng Jiang Raising Cauldron Technique
+#   badtrans: true
+# - raw: 千里横行
+#   result: Mile‑long March
+#   badtrans: true
+# - raw: 金刀换掌功
+#   result: Golden Blade for Palm Technique
+#   badtrans: true
+# - raw: 英雄刀法
+#   result: Heroic Blade Technique
+#   badtrans: true
+# - raw: 嗔狂刀法
+#   result: Frenzied Blade Art
+#   badtrans: true
+# - raw: 寻龙枪诀
+#   result: Dragon Seeking Spear Technique
+#   badtrans: true
+# - raw: 霸王卸甲
+#   result: Kingdom Unleashes Armors
+#   badtrans: true
+# - raw: 天命刀法
+#   result: Heavenly Mandate Blade Technique
+#   badtrans: true
+# - raw: 缺月弯刀
+#   result: Bent Sword under a Crescent Moon
+#   badtrans: true
+# - raw: 霸王枪法
+#   result: Butterfly Spear Technique
+#   badtrans: true
+# - raw: 霸刀一式
+#   result: Blade Dominance Fist Style
+#   badtrans: true
+# - raw: 抱元诀
+#   result: Cultivate the Fundamental Technique
+#   badtrans: true
+# - raw: 倒骑驴
+#   result: Ride a donkey backwards
+#   badtrans: true
+# - raw: 通气法
+#   result: Breathing method
+#   badtrans: true
+# - raw: 碧波剑法
+#   result: Sword Technique of Gentle Waves
+#   badtrans: true
+# - raw: 天女散花篮
+#   result: Flower Basket Dropped by Heavenly Maiden
+#   badtrans: true
+# - raw: 灵宝毕法功
+#   result: Divine Treasure Completion Technique
+#   badtrans: true
+# - raw: 泅水术
+#   result: Swimming Spell
+#   badtrans: true
+# - raw: 丹砂诀
+#   result: Art of Cinnabar
+#   badtrans: true
+# - raw: 风波十三式
+#   result: Thirteenth Wave Style
+#   badtrans: true
+# - raw: 流云剑术
+#   result: Whirling Cloud Swordsmanship
+#   badtrans: true
+# - raw: 长生真诀
+#   result: True Art of Immortality
+#   badtrans: true
+# - raw: 乘风归
+#   result: Soar goes home
+#   badtrans: true
+# - raw: 剑气歌
+#   result: Song of Sword Qi
+#   badtrans: true
+# - raw: 花飞蝶舞剑
+#   result: Flower Flying Butterfly Sword
+#   badtrans: true
+# - raw: 沧海追风剑
+#   result: Whirlwind Sword by the Sea
+#   badtrans: true
+# - raw: 天花引
+#   result: Smallpox Inducer
+#   badtrans: true
+# - raw: 仙人抚顶功
+#   result: Immortal Stroke Top Technique
+#   badtrans: true
+# - raw: 青烟飞絮
+#   result: Vapors drift
+#   badtrans: true
+# - raw: 灵剑幻花
+#   result: Flickering Sword Illusory Flower
+#   badtrans: true
+# - raw: 溟海逐月剑
+#   result: Moonchaser Sword
+#   badtrans: true
+# - raw: 朝阳一气剑
+#   result: Sunrise One Breath Sword
+#   badtrans: true
+# - raw: 冲天渔鼓
+#   result: Heaven‑reaching fish drum
+#   badtrans: true
+# - raw: 紫微星诀
+#   result: Purple Microstar Technique
+#   badtrans: true
+# - raw: 凌波虚渡
+#   result: Fleeting Passage on Ripples
+#   badtrans: true
+# - raw: 大道剑诀
+#   result: Great Way Sword Art
+#   badtrans: true
+# - raw: 纯阳剑法
+#   result: Purist Sword Technique
+#   badtrans: true
+# - raw: 铁拐化龙
+#   result: Iron Cane Dragon Transformation
+#   badtrans: true
+# - raw: 五尺混天绫
+#   result: Five‑zhi Huandian Ling
+#   badtrans: true
+# - raw: 敲爻歌诀
+#   result: Song of Hexagram Divination
+#   badtrans: true
+# - raw: 天遁剑法
+#   result: Heavenly Evasion Sword Technique
+#   badtrans: true
+# - raw: 坐忘功
+#   result: Meditation Technique
+#   badtrans: true
+# - raw: 猿公跳涧
+#   result: Monkey Leap Over the Creek
+#   badtrans: true
+# - raw: 凝心诀
+#   result: Concentration Technique
+#   badtrans: true
+# - raw: 鸭形拳
+#   result: Peking Duck Fist
+#   badtrans: true
+# - raw: 三十六闭手
+#   result: Thirty‑Six Closed Hands
+#   badtrans: true
+# - raw: 静心剑法
+#   result: Sword Technique of Calming the Mind
+#   badtrans: true
+# - raw: 临济十二庄
+#   result: Linji Twelve Villages
+#   badtrans: true
+# - raw: 峨眉归藏功
+#   result: Emei Guizang Skill
+#   badtrans: true
+# - raw: 峨眉虎步功
+#   result: Emei Tiger Step Skill
+#   badtrans: true
+# - raw: 清静归一法
+#   result: Method of Calm Unity
+#   badtrans: true
+# - raw: 至云纽丝拳
+#   result: Zhi Yuno Silk Punch
+#   badtrans: true
+# - raw: 白猿通臂拳
+#   result: White Ape Long Arm Fist
+#   badtrans: true
+# - raw: 猿公剑法
+#   result: Monkey King Sword Technique
+#   badtrans: true
+# - raw: 灵悟自然功
+#   result: Eternal Awakening Natural Technique
+#   badtrans: true
+# - raw: 步步生莲
+#   result: Step on Lotus
+#   badtrans: true
+# - raw: 莲花宝笈
+#   result: Lotus Treasure Manual
+#   badtrans: true
+# - raw: 金顶绵掌
+#   result: Golden Peak Soft Palm Technique
+#   badtrans: true
+# - raw: 峨眉鹰爪功
+#   result: Emei Eagle Claw Fist
+#   badtrans: true
+# - raw: 莲花玄功
+#   result: Mystic Skill of the Lotus Flower
+#   badtrans: true
+# - raw: 灵狐拜月步
+#   result: Fox Spirit Moon Worship Step
+#   badtrans: true
+# - raw: 七星横链
+#   result: Seven‑star Horizontal Chain
+#   badtrans: true
+# - raw: 兰花拂穴手
+#   result: Laoran Fuxie Hand
+#   badtrans: true
+# - raw: 金刚三昧掌
+#   result: Golden State Palm
+#   badtrans: true
+# - raw: 玄女九式
+#   result: Nine Mystic Feminine Techniques
+#   badtrans: true
+# # - raw: 梵文贝叶经
+# #   result: Buddhist Palm Leaf Texts
+# #   badtrans: true
+# - raw: 舍身飞渡
+#   result: Selfless leap across
+#   badtrans: true
+# - raw: 金顶佛光
+#   result: Golden Summit Buddha's Light
+#   badtrans: true
+# - raw: 天罡指穴功
+#   result: Heavenly Warden Pointing Skill
+#   badtrans: true
+# - raw: 天罡雷轰掌
+#   result: Heavenly Warrant Thunderous Palm
+#   badtrans: true
+# - raw: 三洞灵宝经
+#   result: Three Caverns Divine Treasure Sutra
+#   badtrans: true
+# - raw: 诸天化身步
+#   result: Step of Infinite Body Factions
+#   badtrans: true
+# - raw: 易通法
+#   result: Easy Communication Method
+#   badtrans: true
+# - raw: 麻雀跃
+#   result: Sparrow jumps
+#   badtrans: true
+# - raw: 爬铁索
+#   result: Climb the iron cables
+#   badtrans: true
+# - raw: 蝎尾鞭
+#   result: Scorpion Tail Whip
+#   badtrans: true
+# - raw: 扫拂尘
+#   result: Sweep away dust
+#   badtrans: true
+# - raw: 铁脊矛突
+#   result: Iron‑spined pike thrust
+#   badtrans: true
+# - raw: 子午流注功
+#   result: Midday and Midnight Skill
+#   badtrans: true
+# - raw: 鹰翼功
+#   result: Eagle Wing Technique
+#   badtrans: true
+# - raw: 磐石劲
+#   result: Rock Steady
+#   badtrans: true
+# - raw: 五鬼追魂鞭
+#   result: Five Ghosts Pursuit Soul Whip
+#   badtrans: true
+# - raw: 龙凤双钩
+#   result: Dragon and Phoenix Dual Hooks
+#   badtrans: true
+# - raw: 搬山铁耙功
+#   result: Picking Axe Skill of Moving Mountains
+#   badtrans: true
+# - raw: 奇门五转
+#   result: Five Turnings of Secret Techniques
+#   badtrans: true
+# - raw: 大鹏展翅
+#   result: Phoenix rises
+#   badtrans: true
+# - raw: 花架门
+#   result: Arbor gate
+#   badtrans: true
+# - raw: 金鳞巨蟒鞭
+#   result: Great Serpent Whip
+#   badtrans: true
+# - raw: 翻天印
+#   result: Turn Heaven Seal
+#   badtrans: true
+# - raw: 贯甲破盾矛
+#   result: Penetrate Armor and Smash Shields
+#   badtrans: true
+# - raw: 上清气功
+#   result: Upper Clear Qi Gong
+#   badtrans: true
+# - raw: 倒踩三叠云
+#   result: Step on three‑tiered clouds
+#   badtrans: true
+# - raw: 龟藏豹隐
+#   result: Turtle Conceals Leopard
+#   badtrans: true
+# - raw: 鬼打狂鞭
+#   result: Ghostly Mad Whip
+#   badtrans: true
+# - raw: 太统法铃
+#   result: Great Unifying Harmonizing Bell
+#   badtrans: true
+# - raw: 北风百裂矛
+#   result: Hundred‑Cracking Spear of the Northern Wind
+#   badtrans: true
+# - raw: 离合神功
+#   result: Skill of Separation and Union
+#   badtrans: true
+# - raw: 七雁落长空
+#   result: Seven wild geese fall into the vast sky
+#   badtrans: true
+# - raw: 回音搜魂术
+#   result: Echo Soul‑searching Technique
+#   badtrans: true
+# - raw: 生死一线鞭
+#   result: Life and Death Thin Thread Whip
+#   badtrans: true
+# - raw: 乾坤日月圈
+#   result: Heaven and Earth Circle
+#   badtrans: true
+# - raw: 玉石俱焚矛
+#   result: Everything goes up in flames
+#   badtrans: true
+# - raw: 非攻法
+#   result: Non‑Assault Technique
+#   badtrans: true
+# - raw: 迷踪步
+#   result: Evasive Steps
+#   badtrans: true
+# - raw: 口算功
+#   result: Mental arithmetic skill
+#   badtrans: true
+# - raw: 木流马
+#   result: Tree Flow Horse
+#   badtrans: true
+# - raw: 机簧斧
+#   result: Springblade Axe
+#   badtrans: true
+# - raw: 飞蝗箭
+#   result: Locust Arrow
+#   badtrans: true
+# - raw: 明鬼诀
+#   result: Art of Conjuring Devils
+#   badtrans: true
+# - raw: 坐五车
+#   result: Have five cars
+#   badtrans: true
+# - raw: 相星术
+#   result: Astrology of Relationship Stars
+#   badtrans: true
+# - raw: 青铜奔牛
+#   result: Bronze Running Bull
+#   badtrans: true
+# - raw: 机关伞
+#   result: Mechanism Umbrella
+#   badtrans: true
+# - raw: 连珠箭
+#   result: Bolt Shower
+#   badtrans: true
+# - raw: 天志术
+#   result: Heavenly Will Spell
+#   badtrans: true
+# - raw: 八阵图步
+#   result: Formation Array Step
+#   badtrans: true
+# - raw: 举手摘星式
+#   result: Hand Raised to Star Pose
+#   badtrans: true
+# - raw: 玉石麒麟
+#   result: Jasper qilin
+#   badtrans: true
+# - raw: 六转孔明锁
+#   result: Six‑turning Clever Lock
+#   badtrans: true
+# - raw: 神机箭
+#   result: Divine Mechanism Arrow
+#   badtrans: true
+# - raw: 本经阴符七术
+#   result: The Seven Arts of Hidden Influence
+#   badtrans: true
+# - raw: 云龙九现
+#   result: Nine Dragons Unleashed
+#   badtrans: true
+# - raw: 指算玄通
+#   result: Calculation by Finger Wisdom
+#   badtrans: true
+# - raw: 燎原朱雀
+#   result: Prickly Heat Phoenix
+#   badtrans: true
+# - raw: 遮天假手
+#   result: Blindfolded Fist
+#   badtrans: true
+# - raw: 五子追心箭
+#   result: Five Hearts Pursuit Arrow
+#   badtrans: true
+# - raw: 千机万巧
+#   result: Ten Thousand Ingenious Machines
+#   badtrans: true
+# - raw: 地动青龙
+#   result: Earthquake Dragon Qinglong
+#   badtrans: true
+# - raw: 傀儡牵丝术
+#   result: Puppeteer's String Manipulation Technique
+#   badtrans: true
+# - raw: 元戎弩箭
+#   result: Commander's Crossbow Arrow
+#   badtrans: true
+# - raw: 武库战车
+#   result: War wagon armory
+#   badtrans: true
+# - raw: 公输遗匣
+#   result: Cao Shu's Legacy Box
+#   badtrans: true
+# - raw: 雷火功
+#   result: Lightning Fire Skill
+#   badtrans: true
+# - raw: 疾电步
+#   result: Lightning Step
+#   badtrans: true
+# - raw: 铁手腕
+#   result: Iron Hand
+#   badtrans: true
+# - raw: 铄心弹
+#   result: Heartsearing Bullet
+#   badtrans: true
+# - raw: 火蒺藜
+#   result: Flame thorn
+#   badtrans: true
+# - raw: 霹雳枪法
+#   result: Thunderbolt Spear Technique
+#   badtrans: true
+# - raw: 烈阳心法
+#   result: Heart Method of Radiant Sun
+#   badtrans: true
+# - raw: 风火轮
+#   result: Magic wheel
+#   badtrans: true
+# - raw: 硝石法
+#   result: Potassium Nitrate Method
+#   badtrans: true
+# - raw: 烈阳枪法
+#   result: Spear Art of Fiery Sun
+#   badtrans: true
+# - raw: 江翻海沸功
+#   result: Chang‑fan‑hai‑bo Skill
+#   badtrans: true
+# - raw: 雷车动地
+#   result: Thundering wheels shake the earth
+#   badtrans: true
+# - raw: 伏硫黄法
+#   result: Phosphorus sulfide method
+#   badtrans: true
+# - raw: 猛火油
+#   result: Hot oil
+#   badtrans: true
+# - raw: 震天枪式
+#   result: Thunderclap Gunstance
+#   badtrans: true
+# - raw: 祝融真火诀
+#   result: Wishing You True Fire Technique Success
+#   badtrans: true
+# # - raw: 电光火石
+# #   result: Flash of lightning
+# #   badtrans: true
+# - raw: 伏火矾法
+#   result: Fire Curing Method
+#   badtrans: true
+# - raw: 飞火流星
+#   result: Firefly Meteor Shower
+#   badtrans: true
+# - raw: 铁嘴火鹞
+#   result: Ironbeak Flameeagle
+#   badtrans: true
+# - raw: 奔雷枪诀
+#   result: Thunderbolt Spear Technique
+#   badtrans: true
+# - raw: 黑火药法
+#   result: Black Powder Law
+#   badtrans: true
+# - raw: 连环子母弹
+#   result: Linked mother‑and‑child rockets
+#   badtrans: true
+# - raw: 神火飞鸦
+#   result: Divine Flame Raven
+#   badtrans: true
+# - raw: 火树银枪
+#   result: Firetree Silver Spear
+#   badtrans: true
+# - raw: 灭世天雷
+#   result: Apocalypse Thunderbolt
+#   badtrans: true
+# - raw: 吐姆功
+#   result: Tum Gong
+#   badtrans: true
+# - raw: 转山行
+#   result: Circle the Holy Mountain
+#   badtrans: true
+# - raw: 天耳通
+#   result: Heavenly Ear Permeation
+#   badtrans: true
+# - raw: 灌顶法
+#   result: Crown Pouring Method
+#   badtrans: true
+# - raw: 如意宝杵
+#   result: Ruyi Treasure Staff
+#   badtrans: true
+# - raw: 飞轮功
+#   result: Flywheel Technique
+#   badtrans: true
+# - raw: 持戒刀法
+#   result: Held Vow Blade Technique
+#   badtrans: true
+# - raw: 宝瓶气功
+#   result: Bottle Qi Gong
+#   badtrans: true
+# - raw: 顶礼功
+#   result: Salute respectfully
+#   badtrans: true
+# - raw: 天眼通
+#   result: All‑seeing Eye
+#   badtrans: true
+# - raw: 密宗缩骨功
+#   result: Taoist bone compression technique
+#   badtrans: true
+# - raw: 三曼荼罗杵
+#   result: Three Mandala Mace
+#   badtrans: true
+# - raw: 往生轮
+#   result: Rebirth Wheel
+#   badtrans: true
+# - raw: 往生刀法
+#   result: Rebirth Blade Technique
+#   badtrans: true
+# - raw: 不动明王功
+#   result: Eye of Wisdom Technique
+#   badtrans: true
+# - raw: 神足通
+#   result: Divine Foot Technique
+#   badtrans: true
+# - raw: 金刚怒目
+#   result: Furious Eyes of Golden Firmament
+#   badtrans: true
+# - raw: 降龙伏虎功
+#   result: Dragon Tames Dragon, Tiger Calms Tiger Kung Fu Technique
+#   badtrans: true
+# - raw: 金刚降魔杵
+#   result: Staff of Subduing Evil
+#   badtrans: true
+# - raw: 五轮大法
+#   result: Five Rims Method
+#   badtrans: true
+# - raw: 金刚降魔刀
+#   result: Devil‑Slaying Great Saber
+#   badtrans: true
+# - raw: 摩揭陀瑜伽功
+#   result: Magadha Yoga Technique
+#   badtrans: true
+# - raw: 转轮行空
+#   result: Skyward Spin Wheel
+#   badtrans: true
+# - raw: 释迦掷象
+#   result: Sakyamuni Rolls the Elephant
+#   badtrans: true
+# - raw: 瑜伽行地
+#   result: Yoga on the Mat
+#   badtrans: true
+# - raw: 大威德杵
+#   result: Vajra
+#   badtrans: true
+# - raw: 无量转轮功
+#   result: Infinite Wheel Rotation Skill
+#   badtrans: true
+# - raw: 阿鼻八刀
+#   result: Avalanche Eight Blades
+#   badtrans: true
+# - raw: 大黑天降魔功
+#   result: Great Black Heaven Defeating Demons Skill
+#   badtrans: true
+# - raw: 密宗大手印
+#   result: Vajra Hand Trajectory
+#   badtrans: true
+# - raw: 宿命通
+#   result: Fate Reader
+#   badtrans: true
+# - raw: 无上大力杵
+#   result: Supreme Power Mace
+#   badtrans: true
+# - raw: 观想日月轮
+#   result: Contemplate the Wheel of the Moon and Sun
+#   badtrans: true
+# - raw: 无苦寂灭刀
+#   result: Blade of Tranquil Bliss
+#   badtrans: true
+# - raw: 大日如来功
+#   result: Great Sun Primordial Buddha Technique
+#   badtrans: true
+# - raw: 龙象护法功
+#   result: Dragon Elephant Guarding Method
+#   badtrans: true
+# - raw: 因陀罗杵
+#   result: Indra's Staff
+#   badtrans: true
+# - raw: 凝冰诀
+#   result: Ice Binding Technique
+#   badtrans: true
+# - raw: 踏雪行
+#   result: Walk on Snowedmaken
+#   badtrans: true
+# - raw: 采冰术
+#   result: Ice Harvesting Skill
+#   badtrans: true
+# - raw: 碧罗掌
+#   result: Emerald Palm Fist
+#   badtrans: true
+# - raw: 朔风指
+#   result: Northeast wind blows
+#   badtrans: true
+# - raw: 天山剑法
+#   result: Tianshan Sword Technique
+#   badtrans: true
+# - raw: 吹雪剑法
+#   result: Blizzard Sword Technique
+#   badtrans: true
+# - raw: 寒梅心经
+#   result: Heart Sutra of Cold Plum
+#   badtrans: true
+# - raw: 雪泥鸿爪
+#   result: Feather marks in the snow
+#   badtrans: true
+# - raw: 傲霜诀
+#   result: Decree to Withstand Frost
+#   badtrans: true
+# - raw: 五罗轻烟掌
+#   result: Five‑robed Light Smoke Palm
+#   badtrans: true
+# - raw: 凌云指
+#   result: Heavenward Fingers
+#   badtrans: true
+# - raw: 烟雨六式
+#   result: Six Styles of Mist and Rain
+#   badtrans: true
+# - raw: 飞瀑剑法
+#   result: Waterfall Sword Technique
+#   badtrans: true
+# - raw: 天池心修
+#   result: Heavenly Pond Heart Cultivator
+#   badtrans: true
+# - raw: 临渊履冰
+#   result: Standing on thin ice near a precipice
+#   badtrans: true
+# - raw: 踏雪寻梅
+#   result: Snowy trail in search of plum blossoms
+#   badtrans: true
+# - raw: 寒霜掌
+#   result: Frost Palm
+#   badtrans: true
+# - raw: 寒袖拂穴
+#   result: Cold Sleeve strokes the acupoint
+#   badtrans: true
+# - raw: 素女冰心剑
+#   result: Pure Heart Ice Maiden Sword
+#   badtrans: true
+# - raw: 长风落雁剑
+#   result: Long Wind Fallen Swallow Sword
+#   badtrans: true
+# - raw: 天山融雪功
+#   result: Tianshan Snowmelt Skill
+#   badtrans: true
+# - raw: 踏雪无痕
+#   result: Leave no trace in the snow
+#   badtrans: true
+# - raw: 控鹤功
+#   result: Featherfall Technique
+#   badtrans: true
+# - raw: 飘雪穿云掌
+#   result: Snow Drifts through Cloud Palm
+#   badtrans: true
+# - raw: 幻阴指
+#   result: Yin Finger Technique
+#   badtrans: true
+# - raw: 夺魂三仙剑
+#   result: Soul Stealing Three Immortal Swords
+#   badtrans: true
+# - raw: 风刀霜剑
+#   result: Blade of Wind and Frost Sword
+#   badtrans: true
+# - raw: 玄冥真气
+#   result: True Qi of Xuan Ming
+#   badtrans: true
+# - raw: 瑶池漫步
+#   result: Strolling Through Yaochi
+#   badtrans: true
+# - raw: 玄天指
+#   result: Heavenly Profound Finger Technique
+#   badtrans: true
+# - raw: 玄冥神掌
+#   result: Palms of Frozen Annihilation
+#   badtrans: true
+# - raw: 清虚广寒剑
+#   result: Sword of Clear Void and Broad Cold
+#   badtrans: true
+# - raw: 九霄冲天剑
+#   result: Heavenward Sword of the Nine Heavens
+#   badtrans: true
+# - raw: 不老长春功
+#   result: Eternal Spring Technique
+#   badtrans: true
+# - raw: 仙娥折梅
+#   result: Immortal Maiden Breaks Branch of Plum
+#   badtrans: true
+# - raw: 白虹贯日掌
+#   result: Sun‑Piercing White Ribbon Palm
+#   badtrans: true
+# - raw: 绝义归藏功
+#   result: Absolute Righteousness and Hidden Power
+#   badtrans: true
+# - raw: 心狂归藏功
+#   result: Calm the Wild Heart Technique
+#   badtrans: true
+# - raw: 八段锦
+#   result: Eight Section Silk Ribbon Exercise
+#   badtrans: true
+# - raw: 走钢索
+#   result: Tightrope walking
+#   badtrans: true
+# - raw: 钻火圈
+#   result: Jump through hoops
+#   badtrans: true
+# - raw: 角抵法
+#   result: Gladiatorial method
+#   badtrans: true
+# - raw: 五禽戏
+#   result: Five Animals Exercise
+#   badtrans: true
+# - raw: 猴拳
+#   result: Monkey Fist
+#   badtrans: true
+# - raw: 劈砖掌
+#   result: Cleave Brick Palm
+#   badtrans: true
+# - raw: 刺剑术
+#   result: Swordsmanship
+#   badtrans: true
+# - raw: 剑器舞
+#   result: Sword dance
+#   badtrans: true
+# - raw: 短刀术
+#   result: Shortsword Technique
+#   badtrans: true
+# - raw: 贼寇刀法
+#   result: Bandit Blade Technique
+#   badtrans: true
+# - raw: 花枪法
+#   result: Spear Technique
+#   badtrans: true
+# - raw: 双节棍法
+#   result: Staff technique
+#   badtrans: true
+# - raw: 点穴笔
+#   result: Acupressure pen
+#   badtrans: true
+# - raw: 飞箭要诀
+#   result: Arrow‑Shooting Essentials
+#   badtrans: true
+# - raw: 飞石要诀
+#   result: Cannonball Technique
+#   badtrans: true
+# - raw: 须弥神功
+#   result: Purifying Domain Divine Technique
+#   badtrans: true
+# - raw: 墨玉心诀
+#   result: Mo Yu Heart Technique
+#   badtrans: true
+# - raw: 遁地潜行
+#   result: Tunnel through the earth
+#   badtrans: true
+# - raw: 凌霄天外
+#   result: Beyond the Heavenly Croton
+#   badtrans: true
+# - raw: 乾坤一气劲
+#   result: Cosmic Qi Power
+#   badtrans: true
+# - raw: 混元掌力
+#   result: Cosmic Palm Power
+#   badtrans: true
+# - raw: 皓月拳
+#   result: Moonlit Fist
+#   badtrans: true
+# - raw: 达摩剑法
+#   result: Shaolin Swordsmanship
+#   badtrans: true
+# - raw: 风雪狂刀
+#   result: Furious Snowstorm Blade
+#   badtrans: true
+# - raw: 秦王破阵刀
+#   result: Qin King's Array‑Piercing Blade
+#   badtrans: true
+# - raw: 飞虎提芦枪
+#   result: Tiger Hawk Wields a Reed Gun
+#   badtrans: true
+# - raw: 天龙八棍法
+#   result: Eight Staff Technique
+#   badtrans: true
+# - raw: 五火七翎扇
+#   result: Five‑Fire Seven‑feather Fan
+#   badtrans: true
+# - raw: 六道轮回
+#   result: Six realms of rebirth
+#   badtrans: true
+# - raw: 掌心雷
+#   result: Hand grenade
+#   badtrans: true
+# - raw: 没羽弓术
+#   result: Feather‑Fleeing Arrow Technique
+#   badtrans: true
+# - raw: 摩诃无量功
+#   result: Great Boundless Skill
+#   badtrans: true
+# - raw: 蚀骨销魂功
+#   result: Bone‑Crushing Soul‑Soothing Skill
+#   badtrans: true
+# - raw: 驾雾腾云步
+#   result: Mist‑walking cloud‑stepping stance
+#   badtrans: true
+# - raw: 咫尺天涯
+#   result: Near yet far
+#   badtrans: true
+# - raw: 阴阳大悲咒
+#   result: Great Sorrow Dharma Formula of Yin and Yang
+#   badtrans: true
+# - raw: 太乙仙身
+#   result: Primordial One Immortal Body
+#   badtrans: true
+# - raw: 如来神掌
+#   result: Buddha's Palm Technique
+#   badtrans: true
+# - raw: 万化归一指
+#   result: One‑Finger Meditation Technique
+#   badtrans: true
+# - raw: 剑十三式
+#   result: Thirteenth Sword Technique
+#   badtrans: true
+# - raw: 独孤剑法
+#   result: Solo Sword Technique
+#   badtrans: true
+# - raw: 无间魔刀
+#   result: Inferno Magic Blade
+#   badtrans: true
+# - raw: 生死劫刀法
+#   result: Life and Death Saber Technique
+#   badtrans: true
+# - raw: 虬龙九变
+#   result: Nine Transformations of the Coiling Dragon
+#   badtrans: true
+# - raw: 十面埋伏
+#   result: Ambush on All Sides
+#   badtrans: true
+# - raw: 山河社稷笔
+#   result: River Mountain and State Pen
+#   badtrans: true
+# - raw: 真龙霹雳鞭
+#   result: True Dragon Thunderstaff
+#   badtrans: true
+# - raw: 催命符
+#   result: Life‑threatening spell
+#   badtrans: true
+# - raw: 后羿射日
+#   result: Hou Yi Shoots the Sun
+#   badtrans: true
+# - raw: 星落九天
+#   result: Fallen Stars from Nine Heavens
+#   badtrans: true
+  

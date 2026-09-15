@@ -147,7 +147,7 @@
     qcTranslated: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent, making it the most important building in the entire city."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 25
 - raw: "16,集市,16,2,1,0,2,交易--ShowBuildingShop;资源贸易?买卖门派资源-有门派-ShowFreeTrade,银钱+100,粮食-50,本地资源点产量0.2,珍宝铺-0.2;兵器铺-0.2;材料铺-0.2,粮食500;木料500,10,1,1000-12-0-0/1/2/3/4/5,0,footstep,1;1,本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
   splits:
   - split: 19
@@ -449,10 +449,10 @@
     text: "历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
     translated: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
     qcReviewedText: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
-    qcTranslated: "Carved into this stone cliff face by generations of artisans, the site boasts over a thousand caves. Zen chambers are densely packed, and Buddha statues abound. The four walls are adorned with countless murals, making the site exceedingly grand and magnificent. Moreover, the Sutra Cave houses an immense collection of scrolls and classics, attracting numerous eminent monks and sages to come here and cultivate their practice."
+    qcTranslated: "Over successive generations, countless caves were chiseled into this stone wall, numbering over a thousand. Zen meditation chambers stand in clusters, and Buddha statues abound. The four walls are adorned with murals, making the site extremely grand and magnificent. Moreover, there is the Sutra Cave, containing countless scrolls and classics, which drew many high monks and great virtuous ones to come here to cultivate."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 5
+    qcQualityScore: 0
 - raw: "50,黄鹤楼,50,6,1,0,4,招贤--SpeHireFollower,威望+10;全域治安+1,木料-150,实战经验0.1;弟子功绩0.2,,粮食1000;木料2000,20,8,,2,footstep,0;0,上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
   splits:
   - split: 19
@@ -530,10 +530,9 @@
     text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰"
     translated: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Shen Zhen and Fu Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:"
     qcReviewedText: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Shen Zhen and Fu Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:：Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
-    qcTranslated: "Work of Ghostly Axes and Divine Craft, in a cave filled with misty spiritual qi, the disciples of Mount Mao cultivate by combining the methods of Preserving the Spirit and Swallowing the Breath, thereby reaping boundless benefits. A predecessor praised this place in verse: White tiger and coiled dragons tread upon purple smoke, I have watched the blue sea turn into Mulberry Fields; after seeking the Dao in Red City and Jade Basket, I arrive once more at the Eighth Heaven of Huayang."
+    qcTranslated: "Supernatural Craftsmanship, in the cavernous grotto filled with ethereal qi, Maoshan disciples practice the methods of Cultivating the Spirit and Serving the Breath here, naturally reaping boundless benefits. A predecessor praised it in verse: The white tiger and coiling dragon tread upon the purple mist, watching the blue seas transform into mulberry fields. After seeking the True in Chicheng and the Jade Casket, one arrives again at the Eighth Heaven of Huayang."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 60
   - split: 19
     subIndex: 1
     text: "素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
@@ -555,6 +554,8 @@
   - split: 19
     text: "瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
     translated: "Fog of poison thickly shrouds the murky green pool, swirling with hidden currents. This pool is the product of the Five Poisons Sect's long‑standing practice of refining pupae and testing poisons. The Golden Silkworm King Pupa, which strikes fear into even the bravest of Jianghu warriors with its mere presence, originates from here. Those with weak cultivation will feel dizzy and faint upon merely approaching it."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Golden Silkworm King Gu,金蚕王蛊,"
     qcReviewedText: "Fog of poison thickly shrouds the murky green pool, swirling with hidden currents. This pool is the product of the Five Poisons Sect's long‑standing practice of refining pupae and testing poisons. The Golden Silkworm King Pupa, which strikes fear into even the bravest of Jianghu warriors with its mere presence, originates from here. Those with weak cultivation will feel dizzy and faint upon merely approaching it."
     qcTranslated: "Fog of poison thickly shrouds the murky green pool, swirling with hidden currents. This pool is the product of the Five Poisons Sect's long‑standing practice of refining pupae and testing poisons. The Golden Silkworm King Pupa, which strikes fear into even the bravest of Jianghu warriors with its mere presence, originates from here. Those with weak cultivation will feel dizzy and faint upon merely approaching it, falling to the ground and unable to rise."
     qcStatus: Corrected

@@ -26,20 +26,10 @@
   splits:
   - text: "《龙胤立志传》适龄游戏提示"
     translated: "Age‑appropriate game notice for Dragon Heritage Determination Chronicles"
-    qcReviewedText: "Age‑appropriate game notice for Dragon Heritage Determination Chronicles"
-    qcTranslated: "Age-Appropriate Game Notice for Legend of Dragon Heirs"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
 - raw: "<b>(所有排名均不分先后)</b>\\n策划：ZPP\\n程序：ZPP\\n美术：TPP\\n\\n发行：青豆，Sherry，Ouyi，lele，Lost，云起龙骧，小云，谦谦，黄国，狗狗\\n测试：郑煜，夏田怡静，蒋晟，云起龙骧\\n玩家支持：椰子，Dr.玄\\n\\n特别鸣谢\\n参与自由模式测试的玩家：\\n椰子 \\n奥西法\\n月下饮江河\\n馒头君\\n河物休\\n只为遇见你\\n卿卿神\\n燕四方\\n妙手回春海森保\\nShades"
   splits:
   - text: "所有排名均不分先后"
     translated: "All rankings are unordered"
-    qcReviewedText: "<b>(All rankings are unordered) </b>\\nDesigner：ZPP \\nProgram：ZPP \\nArt：TPP \\n\\nRelease：GreenBean,Sherry，Ouyi，lele，Lost, Rising Clouds and Ascending Dragons, Xiao Yun, Humble Hum, Yellow State, Doggies \\nTest：Zheng Yu, Xia Tianyi, Jiang Sheng, Yun Qilongxiang \\nPlayer support：Coconut Dr.Xuan \\n\\nSpecial thanks \\nPlayers participating in the free mode test：\\nCoconut \\nOxifa \\nDrinking by the riverside under the moonlight \\nSteamed bun king \\nRiver Relic Restorer \\nJust to meet you \\nQingqing Shen \\nFour Directions Yan \\nHai Senbao Revives with Skill\\n Shades"
-    qcTranslated: "<b>(All rankings are in no particular order) </b>\\nDesign: ZPP \\nProgramming: ZPP \\nArt: TPP \\n\\nPublishing: Qingdou, Sherry, Ouyi, lele, Lost, Yunqi Longxiang, Xiaoyun, Qianqian, Huangguo, Gougou\\nTesting: Zheng Yu, Xia Tianyi Jing, Jiang Sheng, Yunqi Longxiang\\nPlayer Support: Yezi, Dr. Xuan\\n\\nSpecial Thanks\\nPlayers who participated in the Free Mode test:\\nYezi \\nAosifa \\nYue Xi Yin Jianghe \\nMantou Jun \\nHe Wu Xiu \\nZhi Wei Yu Nian Ni \\nQingqing Shen \\nYan Sifang \\nMiaoshou Huichun Haishenbao\\n Shades"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - subIndex: 1
     text: "策划"
     translated: "Designer"
@@ -234,11 +224,6 @@
   splits:
   - text: "医术"
     translated: "Medicine"
-    qcReviewedText: "<b>Medicine </b>\\nAffecting External Injuries Treatment/Internal Injury's efficiency"
-    qcTranslated: "<b>Medicine</b>\\nAffects the efficiency of treating External Injuries/Internal Injuries"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - subIndex: 1
     text: "影响治疗外伤"
     translated: "Affecting External Injuries Treatment"
@@ -280,11 +265,6 @@
   splits:
   - text: "奇门"
     translated: "Qi Men"
-    qcReviewedText: "<b>Qi Men </b>\\nBoost Oddly Gate Damage \\nReduce damage from qimen attacks"
-    qcTranslated: "<b>Qimen</b>\\nIncrease Qimen Damage\\nReduce Qimen Damage Taken"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
   - subIndex: 1
     text: "提升奇门伤害"
     translated: "Boost Oddly Gate Damage"
@@ -393,11 +373,6 @@
   splits:
   - text: "毒术"
     translated: "Poison Technique"
-    qcReviewedText: "<b>Poison Technique </b>\\nAffect poisoning/Efficiency of detoxification"
-    qcTranslated: "<b>Poison Arts</b>\\nAffects the efficiency of poisoning and detoxification"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "影响用毒"
     translated: "Affect poisoning"
@@ -429,11 +404,6 @@
   splits:
   - text: "炼药"
     translated: "Alchemy"
-    qcReviewedText: "<b>Alchemy </b>\\nAffecting the preparation of elixirs/Strengthening and consolidating/Efficiency in damaging the population"
-    qcTranslated: "<b>Alchemy</b>\\nInfluences the creation and enhancement of pills, as well as the efficiency of consolidating or disrupting regional populations"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
   - subIndex: 1
     text: "影响丹药的制作"
     translated: "Affecting the preparation of elixirs"
@@ -449,11 +419,6 @@
   splits:
   - text: "烹饪"
     translated: "Cooking"
-    qcReviewedText: "<b>Cooking </b>\\nInfluences food preparation/Strengthening and consolidating/Efficiency in undermining the morale of the affected area"
-    qcTranslated: "<b>Cooking</b>\\nInfluences the creation/fortification of food, and the efficiency of strengthening/undermining the morale of the local population"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "影响饮食的制作"
     translated: "Influences food preparation"
@@ -469,11 +434,6 @@
   splits:
   - text: "经脉"
     translated: "Meridian"
-    qcReviewedText: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
-    qcTranslated: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5% Combo\\n+0.5% Recovery Efficiency"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
   - subIndex: 1
     text: "+2内力上限"
     translated: "+2 Inner Power Cap"
@@ -1325,7 +1285,7 @@
 - raw: "九死一生"
   splits:
   - text: "九死一生"
-    translated: "Life and death"
+    translated: "Nine deaths in exchange for one life"
 - raw: "习得武学，获取秘籍可解锁对应武学图鉴"
   splits:
   - text: "习得武学，获取秘籍可解锁对应武学图鉴"
@@ -6327,13 +6287,13 @@
     translated: "Difficulty"
   - subIndex: 1
     text: "九死一生"
-    translated: "Life and death"
+    translated: "Nine deaths in exchange for one life"
   - subIndex: 2
     text: "难度"
     translated: "Difficulty"
   - subIndex: 3
     text: "九死一生"
-    translated: "Life and death"
+    translated: "Nine deaths in exchange for one life"
   templates:
   - template: "{0}：{1}\\n{2}：{3}"
 - raw: "难度难度难度     功绩 999"

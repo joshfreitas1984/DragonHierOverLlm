@@ -46,10 +46,9 @@
     text: "舌灿莲花"
     translated: "Talk eloquently"
     qcReviewedText: "Talk eloquently"
-    qcTranslated: "Tongue Like Lotus"
+    qcTranslated: "Tongue of Lotus"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 60
   - split: 2
     text: "累计论战获胜100场"
     translated: "Accumulated debating wins: 100 matches"
@@ -69,10 +68,10 @@
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
     qcReviewedText: "Drinks not intoxicating"
-    qcTranslated: "Never Drunk"
+    qcTranslated: "Drinks a Thousand Cups, Never Intoxicated"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
   - split: 2
     text: "累计对饮获胜100场"
     translated: "Cumulative drinking win count: 100 rounds"
@@ -318,10 +317,10 @@
     text: "累计煅烧"
     translated: "Accumulated Firing"
     qcReviewedText: "Accumulated Firing/Prepare/100 times refined"
-    qcTranslated: "Cumulative Firing/Preparation/Refinement: 100"
+    qcTranslated: "Accumulated Firing/Poundage/Refined Cooking 100 times"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 15
   - split: 2
     subIndex: 1
     text: "炮制"
@@ -543,10 +542,10 @@
     text: "与一名角色好感达到100"
     translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
     qcReviewedText: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcTranslated: "Reach 100 affinity with a character"
+    qcTranslated: "Reach a favorability level of 100 with a character"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 20
   - split: 5
     text: "无"
     translated: "None"
@@ -559,10 +558,8 @@
     text: "义结金兰"
     translated: "Bonds of sisterhood"
     qcReviewedText: "Bonds of sisterhood"
-    qcTranslated: "Oath of Blood Brotherhood"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
+    qcStatus: Passed
+    qcQualityScore: 95
   - split: 2
     text: "与一名角色结义"
     translated: "Buddy up with a character"
@@ -673,8 +670,7 @@
     qcReviewedText: "Achieve the Outrageous Merchant Outcome"
     qcTranslated: "Achieve the Tycoon Ending"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    qcQualityScore: 60
   - split: 5
     text: "达到50万银钱后进入门派"
     translated: "Reach 50 thousand silver coins to enter the Sect."
@@ -823,10 +819,10 @@
     text: "占领、附庸、同盟区域50%后进入门派"
     translated: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect"
     qcReviewedText: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect/Home \\nOr complete chapter 4 of the plot mode"
-    qcTranslated: "Conquer, Vassalize, or Alliance Regions to 50% to Enter Sect/Home \\nOr complete Chapter 4 of Story Mode"
+    qcTranslated: "Conquer, Vassalize, or Alliance Regions 50% to Enter the Sect/Home\\nOr complete Chapter 4 of the Story Mode"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 50
+    qcQualityScore: 20
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -887,10 +883,10 @@
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
     qcReviewedText: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
-    qcTranslated: "Possessing both a spouse and 4 romantic partners, with affection for all at 100, and being located in the Sect or Home"
+    qcTranslated: "While having a spouse and 4 romantic partners with favorability of 100 or higher, enter Sect/Home"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 35
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -923,20 +919,16 @@
   splits:
   - split: 1
     text: "九死一生"
-    translated: "Life and death"
-    qcReviewedText: "Life and death"
-    qcTranslated: "A near‑death experience"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    translated: "Nine deaths in exchange for one life"
+    qcReviewedText: "Nine deaths in exchange for one life"
+    qcStatus: Passed
+    qcQualityScore: 85
   - split: 2
     text: "九死一生难度下达成任意结局"
-    translated: "Survive Any Ending on Nine Lives Betrayal Difficulty"
-    qcReviewedText: "Survive Any Ending on Nine Lives Betrayal Difficulty"
-    qcTranslated: "Achieve Any Ending on Nine Deaths and One Life Difficulty"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    translated: "Achieving any ending on the Nine Lives, One Life difficulty level"
+    qcReviewedText: "Achieving any ending on the Nine Lives, One Life difficulty level"
+    qcStatus: Passed
+    qcQualityScore: 85
   - split: 5
     text: "无"
     translated: "None"

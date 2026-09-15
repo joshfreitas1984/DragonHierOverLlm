@@ -2283,6 +2283,8 @@
   - subIndex: 1
     text: "轻身术"
     translated: "Featherfall Technique"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Lightness Technique,轻身术,"
   templates:
   - template: "{0} {1}"
 - raw: "轻功赶上"

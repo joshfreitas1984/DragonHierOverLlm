@@ -43,10 +43,8 @@
     text: "潇洒"
     translated: "Graceful"
     qcReviewedText: "Graceful"
-    qcTranslated: "Xiaosa"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
+    qcStatus: Passed
+    qcQualityScore: 95
   - split: 8
     text: "轻佻"
     translated: "Flippant"
@@ -360,10 +358,10 @@
     text: "#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
     translated: "#PlayerName#, if my martial arts doesn't improve, I might be left far behind."
     qcReviewedText: "#PlayerName#, if my martial arts doesn't improve, I might be left far behind."
-    qcTranslated: "#PlayerName#, if your martial arts do not improve, I fear you will be left far behind."
+    qcTranslated: "#PlayerName#, if your martial arts do not improve, I am afraid I will be left far behind."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 25
 - raw: "日常见面,#PlayerName#？抱歉我心有所思，没注意到你。,#PlayerName#我们有几日未见了？容我好好回忆回忆。,不知#PlayerName#寻我有何贵干？,#PlayerName#若有我帮得上忙的地方，只管吩咐。,#PlayerName#别来无恙？,真巧，我正要离开此处，便遇到了#PlayerName#你。,#PlayerName#你我又见面了，算不算是缘分使然？,#PlayerName#几日不见，风采依旧啊！,#PlayerName#前来寻我，只怕是有事相求？,#PlayerName#有话快说吧，我还有要事在身。"
   splits:
   - text: "日常见面"
@@ -388,10 +386,10 @@
     text: "不知#PlayerName#寻我有何贵干？"
     translated: "I don't know what #PlayerName# wants from me."
     qcReviewedText: "I don't know what #PlayerName# wants from me."
-    qcTranslated: "How may I be of service to #PlayerName#?"
+    qcTranslated: "May I ask what #PlayerName# seeks from me?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 35
   - split: 4
     text: "#PlayerName#若有我帮得上忙的地方，只管吩咐。"
     translated: "#PlayerName#, if there's anything I can help with, just let me know."
@@ -455,10 +453,9 @@
     text: "日出扶桑一丈高，人间万事细如毛。野夫怒见不平事，磨损胸中万古刀。"
     translated: "The sun rises in Su Feng at ten feet high,   Man's affairs are as fine as hair.   Furrowed by rage at unjust deeds,   My chest wears down the ancient blade within me."
     qcReviewedText: "The sun rises in Su Feng at ten feet high,   Man's affairs are as fine as hair.   Furrowed by rage at unjust deeds,   My chest wears down the ancient blade within me."
-    qcTranslated: "The sun rises a fathom high over the mulberry tree, man's affairs are as fine as hair. A rustic, enraged by injustice, wears down the ancient blade in his heart."
+    qcTranslated: "The sun rises in Fusang ten feet high,\\nMan's affairs are as fine as hair.\\nRoused by rage at unjust deeds,\\nThe ancient blade in my chest is worn down."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 88
   - split: 3
     text: "滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。"
     translated: "The Yangtze flows on to the east, washing away heroes. Gains and losses turn to nothing; green mountains remain, as do several settings of sunset."
@@ -482,10 +479,10 @@
     text: "贵逼人来不自由，龙翔凤翥势难收。满堂花醉三千客，一剑霜寒十四州。"
     translated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
     qcReviewedText: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
-    qcTranslated: "Noble status forces people to yield, beyond their control; the dragon soars and the phoenix dances, a momentum that cannot be checked. A full hall of flowers intoxicates three thousand guests, a single sword's frost‑chill spans fourteen provinces."
+    qcTranslated: "Compelled by fate, one cannot choose one's path; the dragon soars and the phoenix dances, a momentum impossible to restrain. In a hall of flowers, three thousand guests are drunk; one sword's frosty chill spans fourteen provinces."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 40
+    qcQualityScore: 15
   - split: 7
     text: "人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。"
     translated: "Life is short; make the most of it by rejoicing. Do not let golden goblets remain empty under the moon. Heaven endowed me with talents that must serve some purpose; even if I spend a thousand gold pieces, they will come back to me."
@@ -497,10 +494,10 @@
     text: "名花倾国两相欢，长得君王带笑看。解释春风无限恨，沉香亭北倚阑干。"
     translated: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
     qcReviewedText: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
-    qcTranslated: "Fair flowers and the emperor share mutual delight, as the sovereign gazes upon her with a smile. Explaining the boundless sorrow of the spring breeze, she leans on the railing north of the Incense Pavilion."
+    qcTranslated: "Fair flowers and the kingdom's beauty delight each other,\\nGrown to make the sovereign gaze with a smile.\\nLet me explain the infinite sorrow of the spring breeze,\\nAt the north of the Scented Pavilion, leaning on the railing."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 25
   - split: 9
     text: "飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。"
     translated: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."
@@ -697,10 +694,9 @@
     text: "以德报怨，何以报德。对待为敌之人，不能心慈手软。"
     translated: "To forgive those who wrong us is well and good, but how do we repay those who have been kind? We must not show mercy to our enemies."
     qcReviewedText: "To forgive those who wrong us is well and good, but how do we repay those who have been kind? We must not show mercy to our enemies."
-    qcTranslated: "To repay a grudge with kindness, how then to repay kindness? We must not be soft‑hearted or gentle in dealing with our enemies."
+    qcTranslated: "Repay hatred with virtue; how then do we repay virtue? We must not be soft‑hearted or gentle in handling our enemies."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 65
   - split: 6
     text: "若遇到仇家上门，打得过就打，打不过只管逃跑便是。"
     translated: "If enemies come looking for trouble, fight back if you can; if not, just run away."

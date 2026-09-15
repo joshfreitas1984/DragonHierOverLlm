@@ -9,6 +9,20 @@ namespace Tests;
 
 public class QualityControlWorkflowTests
 {
+    // The full "I changed the glossary / got file updates / exported more dynamic strings / added a
+    // bad word / needed a new game repair" workflow in one call: brute-forces Translated back to
+    // clean (TranslationWorkflow.TranslateLinesBruteForce), then does the same for QcTranslated
+    // (QualityReviewWorkflow.RunBruteForce - a no-op if qualityReview.enabled is false), then
+    // packages. Use this instead of running "1" and "3b" separately when you want QC kept in sync
+    // too.
+    [Fact(DisplayName = "0. TranslateAndQualityReviewBruteForce")]
+    public async Task TranslateAndQualityReviewBruteForce()
+    {
+        await TranslationWorkflow.TranslateLinesBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
+        await QualityReviewWorkflow.RunBruteForce(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, hooks: GameFileHandling.Hooks);
+        await FileOutputWorkflowTests.PackageFinalTranslation();
+    }
+
     // Run this BEFORE "2" the first time you try a candidate qualityReview model - reviews only a
     // small random sample (see QualityReviewWorkflow.RunAsync's sampleSize) instead of every
     // eligible column, so you can judge a model's real speed/score-distribution/correction-quality
@@ -87,7 +101,7 @@ public class QualityControlWorkflowTests
     // false-positive bad word, loosened a glossary rule) so columns QualityReviewWorkflow.RunBruteForce
     // already gave up on (see TranslationSplit.QcRuleCheckFailureCount) get retried instead of
     // staying parked forever. A no-op for everything else.
-    [Fact(DisplayName = "Reset Qc Retry Limits")]
+    [Fact(DisplayName = "7. Reset Qc Retry Limits")]
     public async Task ResetQcRetryLimits()
     {
         await QualityReviewWorkflow.ResetQcRetryLimits(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
@@ -115,7 +129,7 @@ public class QualityControlWorkflowTests
     // everything) - only the columns actually worth another look get re-sent to the LLM. A
     // rejected-correction column (Reason set, QcQualityScore already cleared to null) is never
     // touched here - use "Reset Qc Retry Limits" for those.
-    [Fact(DisplayName = "Reset Low-Score Quality Review State")]
+    [Fact(DisplayName = "7. Reset Low-Score Quality Review State")]
     public async Task ResetLowScoreQcState()
     {
         await QualityReviewWorkflow.ResetLowScoreQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);

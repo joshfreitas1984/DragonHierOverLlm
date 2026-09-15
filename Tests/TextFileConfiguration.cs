@@ -47,6 +47,9 @@ namespace Tests
             // AnimationState.SetAnimation - an exact-match Spine animation clip name. Column 25
             // (伤害顺序/Order of damage dealt) is Enum.Parse'd into skillDamageOrder.
             new() {Path = "KungFuData.csv", PackageOutput = true, SkipColumns = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
+
+            //For Glossary extraction
+            //new() {Path = "KungFuData2.csv", PackageOutput = true, SkipColumns = [1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] },
             //new() {Path = "LoveableSpeHero.csv", PackageOutput = true },
             new() {Path = "MartialClubData.csv", PackageOutput = true, EnableQualityReview = false },
             new() {Path = "MedData.csv", PackageOutput = true, SkipColumns = [1, 15], EnableQualityReview = false },

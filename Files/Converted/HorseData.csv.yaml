@@ -230,10 +230,9 @@
     text: "静若处子，动若突兔之白马，深得少年侠士之喜爱"
     translated: "Still as a virgin, swift as a white horse bounding like a hare, she deeply wins the affection of the young heroes."
     qcReviewedText: "Still as a virgin, swift as a white horse bounding like a hare, she deeply wins the affection of the young heroes."
-    qcTranslated: "Still as a maiden, swift as a starting hare, this white horse is deeply beloved by young heroes."
+    qcTranslated: "Still as a maiden, swift as a startled hare, this white horse is deeply beloved by young heroes."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    qcQualityScore: 75
 - raw: "22,枣红马,遍体枣红色的马匹，性格温驯，极为吃苦耐劳,2,25,60,20,45,800"
   splits:
   - split: 2
@@ -433,10 +432,9 @@
     text: "应策腾空，承声半汉，入险摧敌，乘危济难，其先祖乃突厥名马，作为贡品随唐太宗征战多年"
     translated: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties‑his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
     qcReviewedText: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties‑his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
-    qcTranslated: "Should he leap into the air, he carries the sound halfway to the Han; he enters peril to crush the enemy, riding danger to rescue from hardship. His ancestors were renowned horses of the Turks, offered as tribute, accompanying Emperor Taizong of Tang in many campaigns over the years."
+    qcTranslated: "Springing into the air on command, bearing the sound halfway across the sky, entering danger to crush enemies, riding peril to rescue from disaster; its ancestor was a famous Turkic horse, offered as tribute and accompanying Emperor Taizong of Tang in battle for many years."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 60
 - raw: "45,神凫马,传说祖先乃秦始皇座下名马，为求仙药随其东巡，过名川大山如飞履平地,5,95,50,70,85,6400"
   splits:
   - split: 2

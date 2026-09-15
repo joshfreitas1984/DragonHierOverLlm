@@ -1065,7 +1065,7 @@
 - raw: "#$PlayerName#少侠，此前花石纲能平安抵达京城，全赖你鼎力援助。为感谢一路护送之恩，帮主想亲自嘉奖。还望你能抽空来<b>长乐帮</b>领取奖赏，万勿推辞！"
   splits:
   - text: "#$PlayerName#少侠，此前花石纲能平安抵达京城，全赖你鼎力援助。为感谢一路护送之恩，帮主想亲自嘉奖。还望你能抽空来"
-    translated: "Young Hero #$PlayerName#, before the Flower Stone Transport could safely reach the Capital, it was all thanks to your generous assistance. To express our gratitude for your escort, the Gang Leader wishes to personally bestow a reward. I hope you can find time to come."
+    translated: "Young Hero #$PlayerName#, the Flower and Stone Convoy was able to reach the Capital safely, thanks to your generous assistance. The Leader wishes to personally reward you for your escort. I hope you can find time to come."
   - subIndex: 1
     text: "长乐帮"
     translated: "Changle Gang"
@@ -1077,7 +1077,7 @@
 - raw: "#$PlayerName#少侠，长乐帮押运花石纲的队伍即将出发，还望你按照此前约定来<b>杭州</b>汇合，护卫这批珍宝之周全。"
   splits:
   - text: "#$PlayerName#少侠，长乐帮押运花石纲的队伍即将出发，还望你按照此前约定来"
-    translated: "#$PlayerName#, Young Hero, the team from the Changle Gang is about to depart for escort duty. We hope you'll honor our previous agreement."
+    translated: "Young Hero #$PlayerName#, the Changle Gang's convoy transporting the Flower and Stone Convoy is about to depart. We hope you will come as previously agreed."
   - subIndex: 1
     text: "杭州"
     translated: "Hangzhou"
@@ -4588,6 +4588,8 @@
   - subIndex: 2
     text: "五毒掌教龙凤娥已亲率弟子严阵以待，而中原群雄也正紧急赶往此地。"
     translated: "The Venerable Master Long Feng'e of the Five Venom Palms Sect has already led her disciples to await the arrival in strict formation, while the heroes of the Central Plains are also urgently making their way here."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Five Poisons Palm,五毒掌,"
   templates:
   - template: "{0}<b>#PosText#</b>{1}\\n{2}"
 - raw: "传闻大隐掌门道无名已率领联军兵临<b>#PosText#</b>，不知双方这场惊天大战最终鹿死谁手。"
@@ -6008,6 +6010,8 @@
   splits:
   - text: "前往#TargetPlace#，与司马德源一同拜会五毒掌教龙凤娥。"
     translated: "Head to #TargetPlace#, and accompany Sima Deyuan to pay respects to the Five Poison Sect's grandmaster, Long Feng'e."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Five Poisons Palm,五毒掌,"
 - raw: "前往#TargetPlace#，为吴忧求取解药。"
   splits:
   - text: "前往#TargetPlace#，为吴忧求取解药。"
@@ -7112,7 +7116,7 @@
     translated: "Heard that Gang Leader Yue Wuji is preparing to handle it personally."
   - subIndex: 1
     text: "内，为护送花石纲的几位少侠颁发奖赏。"
-    translated: "Inside, rewards are being presented to the Young Heroes who escorted the Huashi Gang."
+    translated: "Inside, to award the Young Heroes who escorted the Flower and Stone Convoy."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "听闻此地有一上古神木，其间时有珍稀木材出土面世。\\n若能前往此处试试手气，或许会有意外收获。"
@@ -7268,7 +7272,7 @@
 - raw: "听闻黑道五鬼抢夺花石纲不成，被中原大侠郭淮一路追杀，逃窜到了<b>#PosText#</b>附近。"
   splits:
   - text: "听闻黑道五鬼抢夺花石纲不成，被中原大侠郭淮一路追杀，逃窜到了"
-    translated: "Heard that the Five Ghosts of the underworld failed to seize the Huashikang, and were instead chased by the Great Hero Guo Huai across Central China, eventually fleeing to"
+    translated: "It's said that the Black Path Five Ghosts, failing to seize the Flower and Stone Convoy, were pursued and hunted down by the Central Plains Great Hero Guo Huai, fleeing to"
   - subIndex: 1
     text: "附近。"
     translated: "Nearby"
@@ -8552,6 +8556,8 @@
   splits:
   - text: "寻找一件绝世级别的丹药交给五毒掌教龙凤娥，用来医治白云天。"
     translated: "Find an unparalleled‑grade medicinal pill to give to Lady Long Feng'e, the Palm Sect's Five Poison Doctrinal Teacher, to treat Bai Yuntian."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Five Poisons Palm,五毒掌,"
 - raw: "寻找优质药引"
   splits:
   - text: "寻找优质药引"
@@ -8596,6 +8602,8 @@
   splits:
   - text: "将御剑要术修炼至十重功力"
     translated: "Refine the Sword Technique to the Tenth Level Power"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Essential Sword Controlling Technique,御剑要术,"
   - subIndex: 1
     text: "理论经验"
     translated: "Theoretical experience"
@@ -9243,10 +9251,14 @@
   splits:
   - text: "御剑要术"
     translated: "Sword Techniques"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Essential Sword Controlling Technique,御剑要术,"
 - raw: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
   splits:
   - text: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
     translated: "The Art of Sword Technique has reached a high level. Go to #TargetPlace# to ask Senior Brother Gu Younian about the next methods of cultivation."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Essential Sword Controlling Technique,御剑要术,"
 - raw: "御史嘉奖"
   splits:
   - text: "御史嘉奖"
@@ -9680,7 +9692,7 @@
 - raw: "护送花石纲"
   splits:
   - text: "护送花石纲"
-    translated: "Escort the flower and stone fleet"
+    translated: "Escort the Flower and Stone Convoy"
 - raw: "护送镖师"
   splits:
   - text: "护送镖师"
@@ -12115,6 +12127,8 @@
   - subIndex: 1
     text: "，共同商议龙胤归藏功之归属。"
     translated: ", Ponder the Return of the Dragon Conceal Their Merit Together."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "算了，随便逛逛便好"
@@ -13169,6 +13183,8 @@
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
     translated: "Zhao Yinzong's Long Yin Gui Cang technique has reappeared in the Jianghu, and the major sects have decided to"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
   - subIndex: 1
     text: "一个月后"
     translated: "A month later"
@@ -13218,7 +13234,7 @@
 - raw: "跟随花石纲押运队伍前往#TargetPlace#进行休整。"
   splits:
   - text: "跟随花石纲押运队伍前往#TargetPlace#进行休整。"
-    translated: "Follow the Hetang transport team to #TargetPlace# for a rest."
+    translated: "Follow the Flower and Stone Convoy escort team to #TargetPlace# for rest and recuperation."
 - raw: "跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"
   splits:
   - text: "跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"

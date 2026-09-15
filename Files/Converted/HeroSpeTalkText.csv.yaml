@@ -102,10 +102,10 @@
     text: "#PlayerName#，你不会和那些无趣江湖人士一般，"
     translated: "#PlayerName#, you won't be like those dull Jianghu folk."
     qcReviewedText: "#PlayerName#, you won't be like those dull Jianghu folk.\\nDoes he only know how to practice martial arts and cultivation all day long!"
-    qcTranslated: "#PlayerName#, you won't be like those dull Jianghu folk, \\nknowing nothing but practicing martial arts and cultivation all day long!"
+    qcTranslated: "#PlayerName#, you won't be like those dull Jianghu folk who\\nknow nothing but practicing martial arts and cultivation all day!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
   - split: 3
     subIndex: 1
     text: "成天只知道习武练功吧！"
@@ -174,10 +174,8 @@
     text: "哼哼，见过我招式之人大多已经殒命，"
     translated: "Hmph. Most who have seen my techniques are already dead."
     qcReviewedText: "Hmph. Most who have seen my techniques are already dead.\\n#PlayerName# had better stay curious about less things."
-    qcTranslated: "Hmph. Most who have witnessed my techniques are already dead.\\n#PlayerName#, it is best to keep your curiosity in check."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    qcStatus: Passed
+    qcQualityScore: 95
   - split: 10
     subIndex: 1
     text: "#PlayerName#还是少好奇些为妙。"
@@ -247,10 +245,9 @@
     text: "当今武学，多拘泥于花哨招式与繁复心法。"
     translated: "Today's martial arts often focus on flashy techniques and complex heart methods."
     qcReviewedText: "Today's martial arts often focus on flashy techniques and complex heart methods.\\nYet only Kill reaches the pinnacle of martial arts."
-    qcTranslated: "Today's martial arts are often constrained by flashy techniques and complex Heart Methods.\\nYet only Kill is the supreme path of martial arts."
+    qcTranslated: "Today's martial arts often dwell in flashy techniques and complex Heart Methods.\\nYet only the Kill is the supreme path of martial arts."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 40
+    qcQualityScore: 60
   - split: 2
     subIndex: 1
     text: "然唯有“杀”者，才是武学至高之道。"
@@ -474,11 +471,13 @@
   - split: 9
     text: "归墟秘典之核心法门，唯有阁主知晓。"
     translated: "The core Heart Method of the Secret Scroll of Huayu, known only to the Lord."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Secret Canon of Guixu,归墟秘典,"
     qcReviewedText: "The core Heart Method of the Secret Scroll of Huayu, known only to the Lord.\\nThis way, those without sufficient cultivation can avoid forcing themselves and going astray."
-    qcTranslated: "The core Heart Method of the Secret Scripture of Guixu, known only to the Pavilion Master.\\nOnly this way can those lacking sufficient cultivation be prevented from forcibly practicing it and falling into madness."
+    qcTranslated: "The core Heart Method of the Secrets of Guixu is known only to the Pavilion Master.\\nThis ensures that those with insufficient cultivation do not force their practice and fall into demonic obsession."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 40
+    qcQualityScore: 30
   - split: 9
     subIndex: 1
     text: "如此，方能避免修为不足之人强行修习，走火入魔。"
@@ -494,6 +493,8 @@
     subIndex: 1
     text: "却听闻这龙胤归藏功中，或许会有线索......"
     translated: "But I've heard that perhaps there might be clues in the Long Yin Huizang technique..."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
   - split: 11
     text: "犬子郭勇锐生性纯良，奈何有些不谙世事。"
     translated: "Guo Yongrui, my son, is inherently kind‑hearted, though he sometimes lacks worldly wisdom."
@@ -619,10 +620,10 @@
     text: "#PlayerName#和师傅老人家比，不知武功谁高谁低？"
     translated: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills."
     qcReviewedText: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills.\\n...I feel #PlayerName# should still be more powerful.\\nAfter all, Master has a full head of white hair; his old body probably can't withstand many punches."
-    qcTranslated: "Compared to Master, who is the stronger martial artist? #PlayerName# or the old man?\\n...I feel #PlayerName# should still be the stronger.\\nAfter all, Master has a big white beard; his old body probably can't withstand many punches."
+    qcTranslated: "Compared to Master, a senior citizen, #PlayerName# doesn't know whose martial arts are superior.\\n...I feel #PlayerName# should still be the stronger.\\nAfter all, Master has a beard as white as a brush; his old bones probably can't take many punches."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 30
   - split: 8
     subIndex: 1
     text: "......感觉应该还是#PlayerName#厉害些。"
@@ -653,10 +654,9 @@
     text: "#PlayerName#若在武学上有疑惑之处，大可来与我探讨。"
     translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me."
     qcReviewedText: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nHe will speak his mind fully and without reservation."
-    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will surely share all that I know and hold nothing back."
+    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will certainly share everything I know without reservation."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 60
   - split: 11
     subIndex: 1
     text: "某定当知无不言，言无不尽。"
@@ -745,16 +745,15 @@
     qcReviewedText: "Cut the crap, #PlayerName# wants something from me?"
     qcTranslated: "Cut the crap, #PlayerName#. What do you want from me?"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 45
+    qcQualityScore: 70
   - split: 7
     text: "呵呵呵呵，#PlayerName#今日前来拜访，老朽恐怕早已猜到了。"
     translated: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
     qcReviewedText: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
-    qcTranslated: "Hehe, #PlayerName# has come to visit today. I'm afraid I had already guessed as much."
+    qcTranslated: "Hehehe, I suspect I had already guessed that you would come to visit today, #PlayerName#."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
   - split: 8
     text: "这世间有比山上野果更好吃的东西？我可不信！"
     translated: "Is there anything better to eat than wild berries on the mountain? I don't believe it!"
@@ -931,10 +930,10 @@
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
     qcReviewedText: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
-    qcTranslated: "In war, deception is the key.\\nTherefore, when able to attack, feign inability; when ready to engage, feign inactivity; when close, appear far away; when far away, appear close.\\nAttack where they are unprepared, appear where you are not expected. These are the secrets of victory in warfare, which must not be revealed in advance."
+    qcTranslated: "War is the way of deception.\\nTherefore, when you can attack, feign inability; when you intend to engage, feign inaction; when you are near, appear far; when you are far, appear near.\\nAttack where they are unprepared, appear where you are not expected. These are the principles of military victory, which must not be revealed in advance."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 35
   - split: 10
     subIndex: 1
     text: "故能而示之不能，用而示之不用，近而示之远，远而示之近。"
@@ -1154,10 +1153,10 @@
     text: "天下之间，太多蝇营狗苟之辈。"
     translated: "There are too many xingyinggouguo beggars in this world."
     qcReviewedText: "There are too many xingyinggouguo beggars in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
-    qcTranslated: "In this world, there are too many sycophants and petty schemers.\\nHow many heroes and heroes with whom one can exchange sincere devotion can one encounter in a lifetime?"
+    qcTranslated: "The world is full of petty, scheming scoundrels.\\nHow many heroes can one truly meet who share one's heart?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
   - split: 2
     subIndex: 1
     text: "人生一世，又能遇上几个倾心相交的英雄豪杰？"
@@ -1241,10 +1240,10 @@
     text: "#PlayerName#若能助一臂之力，我自然不会亏待于你。"
     translated: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
     qcReviewedText: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
-    qcTranslated: "#PlayerName#, if you can lend me a hand, I naturally won't shortchange you."
+    qcTranslated: "#PlayerName#, if you can lend me a hand, I will certainly not let you down."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
   - split: 11
     text: "兄弟义气，自当肝胆相照，一片赤诚。"
     translated: "Brotherly loyalty demands openness and sincerity, a heart as red as one's words."
@@ -1259,7 +1258,7 @@
     text: "只要我等名门大派秉公持正，携手并进，"
     translated: "As long as the prestigious sects uphold justice and advance together,"
     qcReviewedText: "As long as the prestigious sects uphold justice and advance together,\\nSo let us ensure that the Wulin is clear and upright, with a peaceful sea and clean rivers.\\nUnknown if #PlayerName# thinks so as well"
-    qcTranslated: "As long as we, the great sects, uphold justice and progress together,\\nwe will surely make the Wulin upright and the world peaceful and prosperous.\\nDo you think so as well, #PlayerName#?"
+    qcTranslated: "As long as the prestigious sects uphold justice and advance together,\\nthe martial arts world will surely be just and peaceful, with clear seas and calm rivers.\\nDo you also agree, #PlayerName#?"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -1369,10 +1368,10 @@
     text: "峨眉山中有个老猴王，天天撒泼捣乱，破坏田地，"
     translated: "In the midst of Mount Emei, there's an old monkey king who wreaks havoc every day, damaging farmland."
     qcReviewedText: "In the midst of Mount Emei, there's an old monkey king who wreaks havoc every day, damaging farmland.\\nTruly this Miss is my greatest enemy in a lifetime!"
-    qcTranslated: "There is an old Monkey King in Mount Emei who causes trouble every day, ruining the fields.\\nHe is truly this girl's greatest enemy in a lifetime!"
+    qcTranslated: "In the midst of Mount Emei, there's an old monkey king who wreaks havoc every day, damaging farmland.\\nTruly, he is this Miss's greatest enemy in a lifetime!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 35
   - split: 8
     subIndex: 1
     text: "实在是本姑娘一生之大敌！"
@@ -1468,10 +1467,10 @@
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
     qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
-    qcTranslated: "Don't look at those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nIn private, they commit no small amount of murder and arson, far worse than this Miss.\\n......#PlayerName#, you wouldn't happen to be one of them, would you?"
+    qcTranslated: "Don't look at those so-called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no shortage of private killings and arson behind closed doors, much worse than this Miss.\\n......#PlayerName#, you couldn't be one of them, right?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 10
   - split: 3
     subIndex: 1
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"
@@ -1517,10 +1516,10 @@
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
     translated: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
     qcReviewedText: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
-    qcTranslated: "The human heart is the hardest to fathom; even this humble Bai Xiao of the Jianghu fears he can not unravel even a fraction of it."
+    qcTranslated: "The hardest thing to gauge is the human heart; even this old man, the \"Hundred Knows of Jianghu,\" fears he cannot fathom even a fraction of it."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 40
+    qcQualityScore: 20
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
     translated: "What is the Jianghu? Why call it that?"

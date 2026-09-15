@@ -34,6 +34,12 @@ public class GlossaryCreationTests
     }
 
     [Fact]
+    public async Task GetKungfuNames()
+    {
+        await GenerateGlossaryFromIndex("KungFuData2.csv", 0, "KungfuNames");
+    }
+
+    [Fact]
     public async Task GetSpeAddLabels()
     {
         // SpeAddDataBase.csv and ForceSpeAddDataBase.csv's label column (split 1, "特效"/"Special
