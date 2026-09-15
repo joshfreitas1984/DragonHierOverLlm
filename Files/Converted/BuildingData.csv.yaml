@@ -143,11 +143,6 @@
   - split: 19
     text: "居于城镇中央，朝廷官员办公判案之所，气势恢宏，守卫森严，亦是一城之中最为重要之建筑。"
     translated: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent‑making it one of the most crucial structures in the entire city."
-    qcReviewedText: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent‑making it one of the most crucial structures in the entire city."
-    qcTranslated: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent, making it the most important building in the entire city."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
 - raw: "16,集市,16,2,1,0,2,交易--ShowBuildingShop;资源贸易?买卖门派资源-有门派-ShowFreeTrade,银钱+100,粮食-50,本地资源点产量0.2,珍宝铺-0.2;兵器铺-0.2;材料铺-0.2,粮食500;木料500,10,1,1000-12-0-0/1/2/3/4/5,0,footstep,1;1,本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
   splits:
   - split: 19
@@ -448,11 +443,6 @@
   - split: 19
     text: "历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
     translated: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
-    qcReviewedText: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
-    qcTranslated: "Over successive generations, countless caves were chiseled into this stone wall, numbering over a thousand. Zen meditation chambers stand in clusters, and Buddha statues abound. The four walls are adorned with murals, making the site extremely grand and magnificent. Moreover, there is the Sutra Cave, containing countless scrolls and classics, which drew many high monks and great virtuous ones to come here to cultivate."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
 - raw: "50,黄鹤楼,50,6,1,0,4,招贤--SpeHireFollower,威望+10;全域治安+1,木料-150,实战经验0.1;弟子功绩0.2,,粮食1000;木料2000,20,8,,2,footstep,0;0,上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
   splits:
   - split: 19

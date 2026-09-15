@@ -61,6 +61,13 @@ qualityReview:
   minAcceptableScore: 60 # tune freely and re-run packaging only - no LLM calls needed to see the effect
   maxConcurrency: 2 # falls back to maxConcurrency above, then batchSize, then 20. Lower is faster on big models
   inlineRuleCheckRetries: 2 # extra in-call retries when a correction hits the bad-words list, before falling back to the cross-run QcRuleCheckFailureCount retry
+  # DEFECT categories hand-validated (Tests/docs/qc-qualityscore-noise-investigation.md) as near-0%
+  # precision on a 40-line sample each (QcTriageByDefectCategory.yaml) - trust QcTranslated wholesale
+  # despite a low score instead of holding these back for human review. LostIdiom deliberately left
+  # off: low precision too, but at least one hand-checked correction made a fine idiom worse instead
+  # of fixing a real defect, a different risk than "wastes review time". GarbledNumber/DomainTerm/
+  # UntranslatedPinyin also left off - high precision, worth the human review queue.
+  autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent]
 #extraStringTokenReplacers:
 #  - '#PlayerName#'
 splitCharactersList:

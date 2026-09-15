@@ -21,11 +21,6 @@
   - split: 4
     text: "负面词缀"
     translated: "Negativesuffix"
-    qcReviewedText: "Negativesuffix"
-    qcTranslated: "Negative Suffix"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - split: 5
     text: "百分比显示"
     translated: "Percentage display"
@@ -116,11 +111,6 @@
   - split: 10
     text: "+0.5%暴击"
     translated: "+0.5% Critical Hit"
-    qcReviewedText: "+0.5% Critical Hit\\n+0.5% Disconnected\\n+1 load capacity for equipment"
-    qcTranslated: "+0.5% Critical Hit\\n+0.5% Disconnect\\n+1 Equipment Weight"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
   - split: 10
     subIndex: 1
     text: "+0.5%断连"
@@ -364,19 +354,9 @@
   - split: 3
     text: "钢拳"
     translated: "Iron Fist"
-    qcReviewedText: "Iron Fist"
-    qcTranslated: "Steel Fist"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
   - split: 4
     text: "残拳"
     translated: "Fistfight"
-    qcReviewedText: "Fistfight"
-    qcTranslated: "Remnant Fist"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
   - split: 10
     text: "提升拳掌伤害"
     translated: "Increase fist and palm attack damage"
@@ -458,11 +438,6 @@
   - split: 4
     text: "断枪"
     translated: "Broken Spear"
-    qcReviewedText: "Broken Spear"
-    qcTranslated: "Broken Gun"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - split: 10
     text: "提升长兵伤害"
     translated: "Increase long weapon damage"
@@ -487,19 +462,9 @@
   - split: 4
     text: "无奇"
     translated: "Oddball"
-    qcReviewedText: "Oddball"
-    qcTranslated: "Unremarkable"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - split: 10
     text: "提升奇门伤害"
     translated: "Boost Oddly Gate Damage"
-    qcReviewedText: "Boost Oddly Gate Damage \\nReduce damage from qimen attacks"
-    qcTranslated: "Boost Qimen Damage \\nReduce Qimen Damage Taken"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - split: 10
     subIndex: 1
     text: "降低受到的奇门伤害"
@@ -694,11 +659,6 @@
   - split: 10
     text: "奇门威力"
     translated: "Power of the I Ching"
-    qcReviewedText: "Power of the I Ching"
-    qcTranslated: "Power of the Qi Men"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
 - raw: "23,射术威力,0.01,无,无,1,1,0,0,0,射术威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -890,11 +850,6 @@
   - split: 10
     text: "影响装备制作"
     translated: "Affecting equipment crafting"
-    qcReviewedText: "Affecting equipment crafting/Strengthen, consolidate/Efficiency in maintaining order in affected areas"
-    qcTranslated: "Affects the efficiency of crafting and upgrading equipment, as well as stabilizing or disrupting regional order"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -923,11 +878,6 @@
   - split: 10
     text: "影响丹药制作"
     translated: "Affecting Dan Pill Production"
-    qcReviewedText: "Affecting Dan Pill Production/Strengthen, consolidate/Efficiency in damaging the population"
-    qcTranslated: "Affects the efficiency of crafting/strengthening and consolidating/disrupting regional population in Dan Pill production"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -956,11 +906,6 @@
   - split: 10
     text: "影响饮食制作"
     translated: "Affect food preparation"
-    qcReviewedText: "Affect food preparation/Strengthen, consolidate/Efficiency in undermining the morale of the affected area"
-    qcTranslated: "Affects the efficiency of food crafting/reinforcement and of consolidating/undermining local morale"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
   - split: 10
     subIndex: 1
     text: "强化，巩固"
@@ -1250,11 +1195,6 @@
   - split: 10
     text: "奇门潜力"
     translated: "Mystery Potential"
-    qcReviewedText: "Mystery Potential"
-    qcTranslated: "Qimen Potential"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
 - raw: "47,射术潜力,1,无,无,0,1,0,0,0,射术潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -2291,11 +2231,6 @@
   - split: 10
     text: "免疫伤害至下次受击"
     translated: "Damage from immunity lasts until next hit"
-    qcReviewedText: "Damage from immunity lasts until next hit"
-    qcTranslated: "Immune to damage until next hit"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
 - raw: "96,眩晕,0.01,万钧,无,1,0,1,1,0,跳过回合,敌方,0,1,1,1,0"
   splits:
   - split: 3
@@ -3171,11 +3106,6 @@
   - split: 10
     text: "受伤时削除内力"
     translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcReviewedText: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcTranslated: "Drains Inner Power when injured"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
 - raw: "133,击退,1,无,无,0,1,1,0,0,将目标击退,敌方,1,1,1,1,0"
   splits:
   - split: 3
@@ -3639,11 +3569,6 @@
   - split: 3
     text: "回内"
     translated: "Inside"
-    qcReviewedText: "Inside"
-    qcTranslated: "Return to the Interior"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 4
     text: "无"
     translated: "None"
@@ -3809,11 +3734,6 @@
   - split: 3
     text: "护足"
     translated: "Footrest"
-    qcReviewedText: "Footrest"
-    qcTranslated: "Foot Guard"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - split: 4
     text: "无"
     translated: "None"
@@ -3886,11 +3806,6 @@
   - split: 10
     text: "固定减少伤害"
     translated: "Fixed reduced damage"
-    qcReviewedText: "Fixed reduced damage"
-    qcTranslated: "Reduce damage by a fixed amount"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "165,定身,0.01,无,无,1,1,1,-1,0,停止行动条,敌方,0,1,1,1,0"
   splits:
   - split: 3
@@ -4562,11 +4477,6 @@
   - split: 10
     text: "买卖优势"
     translated: "Advantage of Buying and Selling"
-    qcReviewedText: "Advantage of Buying and Selling"
-    qcTranslated: "Trading Advantage"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "198,拳掌距离,1,无,无,0,1,1,0,0,拳掌攻击距离,我方,1,0,1,0,0"
   splits:
   - split: 3
@@ -4777,11 +4687,6 @@
   - split: 4
     text: "简装"
     translated: "Stripped down"
-    qcReviewedText: "Stripped down"
-    qcTranslated: "Simple"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 10
     text: "提升装备负重"
     translated: "Increase equipment burden capacity"

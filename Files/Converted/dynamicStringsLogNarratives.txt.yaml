@@ -58,12 +58,6 @@
   splits:
   - text: "使用门派银钱"
     translated: "Using sect silver money"
-    qcReviewedText: "{0} Using sect silver money {1} Two, purchase {2}。"
-    qcTranslated: "{0} uses {1} taels of Sect silver to purchase {2}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两，购买"
     translated: "Two, purchase"
@@ -73,11 +67,6 @@
   splits:
   - text: "出售门派"
     translated: "Sell Sect"
-    qcReviewedText: "{0} Sell Sect {1}, Exchange sect currency {2} Taels"
-    qcTranslated: "{0} sells Sect {1} in exchange for {2} taels of sect currency."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "，换取门派银钱"
     translated: ", Exchange sect currency"
@@ -256,11 +245,6 @@
   splits:
   - text: "因功勋卓著，被晋升为"
     translated: "Due to outstanding merit, was promoted to"
-    qcReviewedText: "{0} Due to outstanding merit, was promoted to {1}。"
-    qcTranslated: "{0} was promoted to {1} due to outstanding merit."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}在{1}上下打点，花费{3}银两降低了{2}点恶名。"
@@ -404,12 +388,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Practiced martial arts {2}。"
-    qcTranslated: "{0} practiced {2} in {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "修习了武功"
     translated: "Practiced martial arts"
@@ -419,12 +397,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Attend {2} Auction conference, expenses {3} I bought an item {4}。"
-    qcTranslated: "{0} attended the {2} auction in {1} and purchased a {4} for {3} taels."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "参加"
     translated: "Attend"
@@ -522,12 +494,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Implement governance, making the place more orderly {2} Improved {3} Dot"
-    qcTranslated: "{0} implements governance in {1}, increasing the region's {2} by {3} points."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "开展治理，使该地"
     translated: "Implement governance, making the place more orderly"
@@ -633,12 +599,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Wants to sneakily learn from someone {2} Of {3}，{4}。"
-    qcTranslated: "{0} tried to steal the {3} technique of {2} in {1}, {4}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "欲偷师"
     translated: "Wants to sneakily learn from someone"
@@ -741,12 +701,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} While wandering around, I unexpectedly obtained an item.{2}。"
-    qcTranslated: "While wandering around in {1}, {0} unexpectedly obtained an item{2}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "闲逛之时，意外获取了一件"
     translated: "While wandering around, I unexpectedly obtained an item."
@@ -786,12 +740,6 @@
   splits:
   - text: "掌门"
     translated: "Sect Master"
-    qcReviewedText: "{0} Sect Master {1} Will《{2}》{3} The secret manual has been placed in the Scripture Pavilion for all disciples in the sect to review."
-    qcTranslated: "{0} Sect Master {1} has placed the {3} Manual of《{2}》 in the Scripture Pavilion for all disciples in the sect to review."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "将"
     translated: "Will"
@@ -928,11 +876,6 @@
   splits:
   - text: "炼制了"
     translated: "Refined"
-    qcReviewedText: "{0} Refined {1}, Since the sect warehouse is full, it can only be placed in my backpack.(Consume {2} Herbs {3})"
-    qcTranslated: "{0} refined {1}. As the Sect warehouse is full, it was placed in {0}'s inventory (Consumed {2} {3})."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - subIndex: 1
     text: "，由于门派仓库已满只得放入行囊"
     translated: ", Since the sect warehouse is full, it can only be placed in my backpack."

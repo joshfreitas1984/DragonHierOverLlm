@@ -135,6 +135,21 @@ public class QualityControlWorkflowTests
         await QualityReviewWorkflow.ResetLowScoreQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
     }
 
+    // DEFECT-category counterpart to "7" (which resets by score threshold instead). Resets every
+    // flagged column whose DEFECT category is NOT in Config.yaml's qualityReview.autoAcceptDefectCategories
+    // back to NotReviewed for a fresh review - see Tests/docs/qc-qualityscore-noise-investigation.md's
+    // "stratify by DEFECT category" policy step. QcDefectCategory.Unknown always lands in this bucket
+    // (a line whose response predates the DEFECT-first prompt, or otherwise failed to parse a DEFECT:
+    // line), so run this once to sweep up the ~1,100 Unknown rows left over from before DEFECT was
+    // parsed and backfill them via "2" next. Safe to re-run any time autoAcceptDefectCategories
+    // changes (a category's hand-validated precision verdict is added or revised) to pull the
+    // newly-decided set back out of "flagged" one way or the other on the next "1"/"2" pass.
+    [Fact(DisplayName = "8. Reset Non-Auto-Accepted Quality Review State")]
+    public async Task ResetNonAutoAcceptedQcState()
+    {
+        await QualityReviewWorkflow.ResetNonAutoAcceptedQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
+    }
+
     // Dedicated single-row QC sample: forces a fresh QualityReviewWorkflow review of exactly ONE
     // known PlotData.csv row (the master's "别慌..." collapse line, split 10 - see
     // Files/Converted/PlotData.csv.yaml) instead of a random sampleSize=N slice

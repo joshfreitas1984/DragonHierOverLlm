@@ -67,11 +67,6 @@
   - split: 1
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
-    qcReviewedText: "Drinks not intoxicating"
-    qcTranslated: "Drinks a Thousand Cups, Never Intoxicated"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - split: 2
     text: "累计对饮获胜100场"
     translated: "Cumulative drinking win count: 100 rounds"
@@ -198,11 +193,6 @@
   - split: 2
     text: "累计结识100名角色"
     translated: "Accumulated 100 characters met"
-    qcReviewedText: "Accumulated 100 characters met"
-    qcTranslated: "Met 100 characters"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     text: "无"
     translated: "None"
@@ -316,11 +306,6 @@
   - split: 2
     text: "累计煅烧"
     translated: "Accumulated Firing"
-    qcReviewedText: "Accumulated Firing/Prepare/100 times refined"
-    qcTranslated: "Accumulated Firing/Poundage/Refined Cooking 100 times"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
   - split: 2
     subIndex: 1
     text: "炮制"
@@ -541,11 +526,6 @@
   - split: 2
     text: "与一名角色好感达到100"
     translated: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcReviewedText: "With a character's good feeling toward them reaching 100, you will form a strong bond with them."
-    qcTranslated: "Reach a favorability level of 100 with a character"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - split: 5
     text: "无"
     translated: "None"
@@ -788,11 +768,6 @@
   - split: 5
     text: "成为门派掌门，正厅10级且人口200以上，取得掌门大会冠军后进入门派"
     translated: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect after winning the Sect Leader Conference championship."
-    qcReviewedText: "Become the Sect Leader by having a Main Hall rank of 10 or above and a population of 200 or more. Enter the sect after winning the Sect Leader Conference championship./Home"
-    qcTranslated: "Become the Sect Leader: Main Hall level 10 and population 200 or above, then enter the Sect/Home after winning the Sect Leader Conference championship."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -818,11 +793,6 @@
   - split: 5
     text: "占领、附庸、同盟区域50%后进入门派"
     translated: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect"
-    qcReviewedText: "Conquer, Vassalize, Alliance Regions 50% to Enter the Sect/Home \\nOr complete chapter 4 of the plot mode"
-    qcTranslated: "Conquer, Vassalize, or Alliance Regions 50% to Enter the Sect/Home\\nOr complete Chapter 4 of the Story Mode"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -852,11 +822,6 @@
   - split: 5
     text: "占领、附庸、同盟区域100%后进入门派"
     translated: "Occupy, vassalize, ally regions 100% after entering the Sect"
-    qcReviewedText: "Occupy, vassalize, ally regions 100% after entering the Sect/Home"
-    qcTranslated: "Occupy, vassalize, or ally regions by 100% to enter the Sect/Home"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
   - split: 5
     subIndex: 1
     text: "自宅"
@@ -882,11 +847,6 @@
   - split: 5
     text: "同时拥有夫妻和4名情侣且好感均100，进入门派"
     translated: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect."
-    qcReviewedText: "While having both a marital relationship and 4 for each couple, and the favorability towards each is 100, they can join the sect./Home"
-    qcTranslated: "While having a spouse and 4 romantic partners with favorability of 100 or higher, enter Sect/Home"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
   - split: 5
     subIndex: 1
     text: "自宅"

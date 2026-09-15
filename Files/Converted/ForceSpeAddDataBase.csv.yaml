@@ -513,11 +513,6 @@
   - split: 2
     text: "藏经容量"
     translated: "Taoist Canon Capacity"
-    qcReviewedText: "Taoist Canon Capacity"
-    qcTranslated: "Sutra Storage Capacity"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "60,全域治安,全域治安,FALSE,1"
   splits:
   - split: 2

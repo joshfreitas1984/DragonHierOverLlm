@@ -117,11 +117,6 @@
   - split: 2
     text: "体质强健的高头大马，武林人士常用"
     translated: "A sturdy horse of great stature, commonly used by Wulin individuals."
-    qcReviewedText: "A sturdy horse of great stature, commonly used by Wulin individuals."
-    qcTranslated: "A sturdy horse of great stature, commonly used by Wulin practitioners."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
 - raw: "9,烈马,性格爆裂，难以驾驭的马匹，狂奔时速度极快,1,45,10,35,10,400"
   splits:
   - split: 2
