@@ -937,11 +937,11 @@
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
     qcReviewedText: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
-    qcTranslated: "War is the art of deception.\\nTherefore, when able to attack, we must seem unable; when using our forces, we must seem inactive; when close, we must appear to be far away; when far away, we must appear to be close.\\nAttack them where they are unprepared, come upon them at unexpected points. These are the principles of victory in war, which cannot be communicated beforehand."
+    qcTranslated: "In war, deception is the way.\\nTherefore, when able to attack, feign inability; when intending to use troops, feign inaction; when near, appear far away; when far away, appear near.\\nAttack where they are unprepared, appear where you are not expected. This is the victory of the military strategist, which must not be revealed beforehand."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 35
+    qcDefectCategory: DroppedContent
   - split: 10
     subIndex: 1
     text: "故能而示之不能，用而示之不用，近而示之远，远而示之近。"
@@ -1091,11 +1091,9 @@
     text: "窃钩者诛，窃国者侯。"
     translated: "He who steals a hook is put to death, he who steals a country becomes a lord."
     qcReviewedText: "He who steals a hook is put to death, he who steals a country becomes a lord.\\nWhat righteousness and morality, merely bother common people unnecessarily."
-    qcTranslated: "He who steals a hook is put to death, he who steals a country becomes a lord.\\nWhat righteousness and morality? It is merely the self‑aggrandizement of the mediocre."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "什么仁义道德，不过是庸人自扰罢了。"
@@ -1154,19 +1152,17 @@
     text: "......我久居深山幽谷之中......像#PlayerName#这样能说上两句话之人......亦是不多......"
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
     qcReviewedText: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
-    qcTranslated: "......I have dwelled in the deep mountains and secluded valleys for so long......There are few people like #PlayerName# with whom I can exchange a few words......"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。"
     translated: "There are too many xingyinggouguo beggars in this world."
     qcReviewedText: "There are too many xingyinggouguo beggars in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
-    qcTranslated: "In this world, there are too many petty, scheming scoundrels.\\nIn a lifetime, how many heroes can one meet who share a kindred spirit?"
+    qcTranslated: "There are too many sycophantic, petty schemers in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: UntranslatedPinyin
   - split: 2
     subIndex: 1

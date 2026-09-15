@@ -132,12 +132,10 @@
   allowalt:
     - "Manual"   
 
-- raw: 真气
-  rawSimplified: 真气
-  rawTraditional: 真氣
-  result: True Qi
-  allowalt:
-   - grand 
+- raw: 千杯不醉
+  result: Thousand Cups Without Getting Drunk
+  allowalt: 
+    - countless cups without getting drunk
 
 - raw: 奇门
   result: Qimen

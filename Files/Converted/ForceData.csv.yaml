@@ -71,10 +71,10 @@
     text: "痛饮"
     translated: "Drunken revelry"
     qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
-    qcTranslated: "<b>Drunken Revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others has no affinity requirement; drinking consumes 20% internal energy, and drinking increases affinity by +20%.\\n<b>Bold Bet</b>: Gamble anytime to gain extra affinity. Monthly gambling limit and bet amounts are doubled.\\n<b>Gold Dust</b>: Use Sect merits in the Gold Dust Treasury to exchange for high‑quality treasures."
+    qcTranslated: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - split: 15
     subIndex: 1
@@ -129,10 +129,10 @@
     text: "行医"
     translated: "Practice medicine"
     qcReviewedText: "<b>Practice medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>：Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are met.-50%。\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
-    qcTranslated: "<b>Practice Medicine</b>: Healing others is not limited by affinity or frequency. Monthly clinic visits are doubled, and all healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle Medicine</b>: Potion‑making efficiency is increased by +20%, and multiple medicinal aids can be selected. All requirements for refining enhanced elixirs are reduced by ‑50%.\\n<b>Spirit Grain</b>: In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
+    qcTranslated: "<b>Practice medicine</b>: Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>: Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are reduced by ‑50%.\\n<b>Spirit Grove</b>: In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - split: 15
     subIndex: 1
@@ -189,11 +189,9 @@
     text: "枪术"
     translated: "Gun combat"
     qcReviewedText: "<b>Gun combat</b>：Study the long weapon at the racetrack to enhance its power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
-    qcTranslated: "<b>Spear Mastery</b>: Study long weapons at the racetrack to enhance their power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2%."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
@@ -487,10 +485,10 @@
     text: "奇技"
     translated: "Strange Art"
     qcReviewedText: "<b>Strange Art</b>：Research the 72 Caves to enhance the power of the qimen weapons.\\n<b>Constant problems</b>：For each advanced Unorthodox martial art you master at level‑up, you receive an additional bonus based on the quality level of the martial art: 0.5/1/1.5/2/2.5/3 points of Qimen"
-    qcTranslated: "<b>Strange Art</b>: Research the 72 Caves to develop Unorthodox weapons and enhance their power.\\n<b>Constant Problems</b>: For each Unorthodox martial art that reaches max level, gain an additional 72/0.5/1/1.5/2/2.5 points of Qimen based on its quality grade."
+    qcTranslated: "<b>Strange Art</b>：Research the 72 Caves to enhance the power of the qimen weapons.\\n<b>Constant problems</b>：For each advanced Unorthodox martial art you master at level‑up, you receive an additional bonus based on the quality level of the martial art: 72/0.5/1/1.5/2/2.5 points of Qimen"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 30
     qcDefectCategory: GarbledNumber
   - split: 15
     subIndex: 1
@@ -547,10 +545,10 @@
     text: "火药"
     translated: "Gunpowder"
     qcReviewedText: "<b>Gunpowder</b>：Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder.\\n<b>Scorching</b>：Gain one Burning Martial Art per level, with an additional 0.5% boost based on the art's grade./1%/1.5%/2%/2.5%/3% negative modifier \\n<b>Stewed Again</b>：You can reheat meals in the Furnace Room to get the corresponding ingredients."
-    qcTranslated: "<b>Gunpowder</b>: Boost the effectiveness of Thunderclap Hall and burning martial arts by configuring gunpowder.\\n<b>Scorching</b>: For each full level of a Scorching martial art, gain an additional 0.5%/1%/1.5%/2%/2.5%/3% negative modifier based on the art's grade.\\n<b>Reheat</b>: You can reheat meals in the Furnace Room to obtain the corresponding ingredients."
+    qcTranslated: "<b>Gunpowder</b>：Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder.\\n<b>Scorching</b>：For each Burning Martial Art at max level, gain an additional 0.5%/1%/1.5%/2%/2.5%/3% negative modifier based on the art's grade. \\n<b>Stewed Again</b>：You can reheat meals in the Furnace Room to get the corresponding ingredients."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 25
     qcDefectCategory: GarbledNumber
   - split: 15
     subIndex: 1
@@ -611,7 +609,7 @@
     text: "玄冰"
     translated: "Xuanbing"
     qcReviewedText: "<b>Xuanbing</b>：Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>：Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality./4/6/8/10/12 points of Inner Power cap"
-    qcTranslated: "<b>Xuanbing</b>: Condense Xuanbing to enhance Tianshan Sect martial arts and Ice Cold martial techniques.\\n<b>Ice Cold</b>: For each Ice Cold martial art that reaches max level, increase Inner Power cap by an additional 2/4/6/8/10/12 points based on the martial art's rank."
+    qcTranslated: "<b>Xuanbing</b>: Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>: For every Ice and Cold Martial Art that reaches max level, gain an additional 2/4/6/8/10/12 points of Inner Power cap based on the martial art's quality."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20

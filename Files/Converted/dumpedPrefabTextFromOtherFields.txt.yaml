@@ -127,11 +127,9 @@
   - text: "#$PlayerName#凭借着此番功业，将姓名篆刻到了凌烟阁之上。"
     translated: "#$PlayerName# achieved such feats that his name was inscribed upon the Hall of Eminent Literati."
     qcReviewedText: "#$PlayerName# achieved such feats that his name was inscribed upon the Hall of Eminent Literati."
-    qcTranslated: "#$PlayerName# achieved such feats that his name was inscribed upon the Lingyan Pavilion."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "#$PlayerName#寻一僻静之处置办农庄，过上了闲云野鹤的生活。\\n与几位眷侣每日吟诗作赋，对酒当歌，弹琴下棋，飞鹰走犬。"
   splits:
   - text: "#$PlayerName#寻一僻静之处置办农庄，过上了闲云野鹤的生活。"
@@ -283,11 +281,9 @@
   - text: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
     translated: "#PlayerForceDescribe##$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
     qcReviewedText: "#PlayerForceDescribe##$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
-    qcTranslated: "#PlayerForceDescribe##$PlayerName# committed heinous crimes, and anyone in the Jianghu is justified in killing him."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
@@ -763,7 +759,7 @@
   - text: "#SourceInteractName#来得正好，本门的庭院屋舍近来疏于打扫，着实脏乱不堪，有碍观瞻。"
     translated: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly."
     qcReviewedText: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly.\\nYou should thoroughly clean all these nooks and crannies these few days. This way, if any outsiders visit, they won't see the jokes about #TargetForceName#."
-    qcTranslated: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly.\\nYou should thoroughly clean all these nooks and crannies these few days. This way, if any outsiders visit, they won't make fun of #TargetForceName#."
+    qcTranslated: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly.\\nYou should thoroughly clean all these nooks and crannies these few days. This way, if any outsiders visit, they won't see #TargetForceName# as a laughingstock."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -1581,7 +1577,7 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: DomainTerm
 - raw: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
   splits:
   - text: "3月上旬清明节既是节气，又是节日。正值春季气清景明，万物萌发，生机勃勃，也是民众扫墓祭祖，追怀先人的节日。"
@@ -4389,7 +4385,7 @@
   - text: "万物归墟"
     translated: "Sea of Foes"
     qcReviewedText: "Sea of Foes"
-    qcTranslated: "Return to the Void"
+    qcTranslated: "All Things Return to the Ruins"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -4418,7 +4414,7 @@
     qcTranslated: "All walks of life"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "三顾茅庐"
   splits:
@@ -4651,11 +4647,9 @@
   - text: "不醉不休！"
     translated: "Drunk till dawn!"
     qcReviewedText: "Drunk till dawn!"
-    qcTranslated: "No rest until we're drunk!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "与#SourceHeroName#一同前往#TargetPlace#发掘宝藏。"
   splits:
   - text: "与#SourceHeroName#一同前往#TargetPlace#发掘宝藏。"
@@ -4799,11 +4793,9 @@
   - text: "世外桃源"
     translated: "Utopia in the clouds"
     qcReviewedText: "Utopia in the clouds"
-    qcTranslated: "Peach Blossom Spring"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "世外高人"
   splits:
   - text: "世外高人"
@@ -5644,10 +5636,10 @@
   - text: "九为阳极之数，9月9日阳数相重，乃万象更新之吉日。世人皆携老扶幼，登高赏秋，拜神祭祖，以示庆祝。"
     translated: "The number nine is yi zhi shu, meaning the number of yang. The day they refer to as 9 Month 9 Day is a double yang number, making it a fortunate day for renewal. On this day, people carry the elderly and the young to climb heights to admire the autumn, and offer sacrifices to deities and ancestors to celebrate."
     qcReviewedText: "The number nine is yi zhi shu, meaning the number of yang. The day they refer to as 9 Month 9 Day is a double yang number, making it a fortunate day for renewal. On this day, people carry the elderly and the young to climb heights to admire the autumn, and offer sacrifices to deities and ancestors to celebrate."
-    qcTranslated: "The number nine is the ultimate yang number. The day 9 Month 9 Day is a double yang number, making it a fortunate day for renewal. On this day, people carry the elderly and the young to climb heights to admire the autumn, and offer sacrifices to deities and ancestors to celebrate."
+    qcTranslated: "The number nine is the ultimate yang number. The day they refer to as 9 Month 9 Day is a double yang number, making it a fortunate day for renewal. On this day, people carry the elderly and the young to climb heights to admire the autumn, and offer sacrifices to deities and ancestors to celebrate."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: UntranslatedPinyin
 - raw: "九月初九，重阳佳节。\\n正是一年登高望远，饮酒赏菊之时。"
   splits:
@@ -5938,7 +5930,7 @@
   - text: "人死毒消"
     translated: "Deathbed repentance"
     qcReviewedText: "Deathbed repentance"
-    qcTranslated: "The poison fades with the death"
+    qcTranslated: "When the person dies, the poison fades"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -8353,11 +8345,11 @@
   - text: "你你你...你们是不是没长眼？没看见我们官兵正在押运税银吗？"
     translated: "You... didn't you notice? We are escorting the tax silver, haven't you seen it?"
     qcReviewedText: "You... didn't you notice? We are escorting the tax silver, haven't you seen it?\\nQuickly make way, or I shall forgive you for your intrusion..."
-    qcTranslated: "You... you... you... Do you have no eyes? Didn't you see our soldiers escorting the tax silver?\\nQuickly make way, or I shall forgive you for the crime of startling the imperial carriage......"
+    qcTranslated: "You, you, you... don't you have eyes? Didn't you see our soldiers escorting the tax silver?\\nQuickly make way, or I'll forgive you for your crime of startling the imperial carriage......"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 30
+    qcDefectCategory: DroppedStutter
   - subIndex: 1
     text: "快快让开去路，饶饶饶你们惊驾之罪......"
     translated: "Quickly make way, or I shall forgive you for your intrusion..."
@@ -8902,20 +8894,20 @@
   - text: "兄弟阋墙"
     translated: "Brotherly Walls of Conflict"
     qcReviewedText: "Brotherly Walls of Conflict"
-    qcTranslated: "Brothers fighting within the same walls"
+    qcTranslated: "Brothers quarreling within the same walls"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "先到达终点者，即可获得优胜。\\n祝你马到成功！"
   splits:
   - text: "先到达终点者，即可获得优胜。"
     translated: "The first to reach the finish line will be declared the winner."
     qcReviewedText: "The first to reach the finish line will be declared the winner.\\nWish you success right away!"
-    qcTranslated: "The first to reach the finish line will be declared the winner.\\nWishing you immediate success!"
+    qcTranslated: "The first to reach the finish line will be declared the winner.\\nMay you succeed at once!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "祝你马到成功！"
@@ -10039,7 +10031,7 @@
     qcTranslated: "Help #SourceForceName# out"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "助#SourceInteractName#一臂之力"
   splits:
@@ -10065,7 +10057,7 @@
     qcTranslated: "Help #TargetInteractName# out"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "助阵斗殴"
   splits:
@@ -10490,7 +10482,7 @@
     qcTranslated: "In addition, you need to manage the Scripture Pavilion and provide appropriate manuals for your disciples.\\nDisciples will automatically read these manuals and continuously practice martial arts.\\nThe higher the quality of the Secret Manuals in the Scripture Pavilion, the faster the disciples' cultivation speed will be."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "弟子会自动阅读这些秘籍，并持续修炼武功。"
@@ -11520,7 +11512,7 @@
     qcTranslated: "Hear that there is a hidden paradise here, where precious medicinal ingredients occasionally surface.\\nIf you could try your luck here, perhaps you might have some unexpected gains."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "若能前往此处试试手气，或许会有意外收获。"
@@ -11899,11 +11891,9 @@
   - text: "咽喉骨鲠符"
     translated: "Throat‑Phlegm Sealing Symbol"
     qcReviewedText: "Throat‑Phlegm Sealing Symbol"
-    qcTranslated: "Throat‑Bone Sealing Symbol"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "哀痛欲绝"
   splits:
   - text: "哀痛欲绝"
@@ -11933,7 +11923,7 @@
     qcTranslated: "Ha ha, as the Master said, one should not be picky about food or porridge. This is simply human nature.\\n#TargetInteractName# Why be embarrassed about it"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "#TargetInteractName#何必不好意思。"
@@ -12331,11 +12321,9 @@
   - text: "嘿嘿，弟兄们，今天从一不长眼的家伙那里抢了张藏宝图。"
     translated: "Hehe, guys, we intercepted a treasure map from a guy who wasn't watching where he was going today."
     qcReviewedText: "Hehe, guys, we intercepted a treasure map from a guy who wasn't watching where he was going today.\\nOnce we dig up the treasure, I'll take everyone to enjoy the good food and spicy dishes!"
-    qcTranslated: "Hehe, guys, we snatched a treasure map from a guy who wasn't paying attention today.\\nOnce we dig up the treasure, I'll take everyone to enjoy the good food and spicy dishes!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "待咱们挖出宝藏来，我带大家吃香的喝辣的去！"
     translated: "Once we dig up the treasure, I'll take everyone to enjoy the good food and spicy dishes!"
@@ -12388,7 +12376,7 @@
     qcTranslated: "Therefore, try to perform the breakthrough as efficiently as possible!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: UntranslatedPinyin
 - raw: "因此若想扩张势力，\\n培养多名武艺高强的弟子乃是重中之重。"
   splits:
@@ -12425,7 +12413,7 @@
     qcTranslated: "While correcting, Deputy Leader Lu Yulin of the Changle Gang has decided to make an exception and promote them to the position of Elder due to their repeated military achievements. A promotion ceremony will be held in <b>#PosText#</b> in the near future."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "内举办升职仪式。"
@@ -13181,11 +13169,9 @@
   - text: "大胆！我说怎么吵吵闹闹的，原来是#TargetForceName#小贼在此放肆！"
     translated: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!"
     qcReviewedText: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!\\n#PlayerName#, let's give this guy a taste of his own medicine!"
-    qcTranslated: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being so audacious!\\n#PlayerName#, let's give this guy a taste of his own medicine!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "#PlayerName#，咱们一道教训教训这家伙！"
     translated: "#PlayerName#, let's give this guy a taste of his own medicine!"
@@ -14448,10 +14434,10 @@
   - text: "峨眉问道"
     translated: "Emei Way of Asking Questions"
     qcReviewedText: "Emei Way of Asking Questions"
-    qcTranslated: "Emei Dao Seeking"
+    qcTranslated: "Emei Inquiry"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "左护法"
   splits:
@@ -15344,11 +15330,9 @@
   - text: "想必山寨就隐藏在这附近，需得好好探查一番。"
     translated: "I bet the knockoffs are hidden nearby, so we need to search carefully."
     qcReviewedText: "I bet the knockoffs are hidden nearby, so we need to search carefully."
-    qcTranslated: "I bet the stronghold is hidden nearby, so we need to search carefully."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "想必此人就隐藏在这附近，需得好好探查一番。"
   splits:
   - text: "想必此人就隐藏在这附近，需得好好探查一番。"
@@ -15969,10 +15953,10 @@
   - text: "招摇撞骗"
     translated: "Prospering by deception"
     qcReviewedText: "Prospering by deception"
-    qcTranslated: "Swindling"
+    qcTranslated: "Impersonating an official to swindle"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "拜会#TargetPlace#，询问自己在英雄谱上的排名。"
   splits:
@@ -15995,11 +15979,9 @@
   - text: "拜会形意门"
     translated: "Pay a visit to the Shape Intention School"
     qcReviewedText: "Pay a visit to the Shape Intention School"
-    qcTranslated: "Pay a visit to the Xingyiquan School"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "拜会金龙生"
   splits:
   - text: "拜会金龙生"
@@ -16601,10 +16583,10 @@
   - text: "敬酒不吃吃罚酒，兄弟们给我上！"
     translated: "No respectful offer, take the penalty, fellows, let's go!"
     qcReviewedText: "No respectful offer, take the penalty, fellows, let's go!"
-    qcTranslated: "If you won't take a hint, you'll get a beating, fellows, let's go!"
+    qcTranslated: "If you won't take the polite way, take the hard way, brothers, let's go!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "数名强人在#TargetPlace#荒野落草为寇，建立山寨，为祸一方，往来旅人商贾多遭其毒手，请武功高强之士尽快将其铲除。(凶险委托，建议携队友前往)"
   splits:
@@ -16747,10 +16729,10 @@
   - text: "无事不登三宝殿，#PlayerName#此次前来有何贵干？"
     translated: "Unquartered, one does not enter the triple treasure hall; why have you come, #PlayerName#?"
     qcReviewedText: "Unquartered, one does not enter the triple treasure hall; why have you come, #PlayerName#?"
-    qcTranslated: "I don't come to the Three Jewels Hall without a reason; what brings you here, #PlayerName#?"
+    qcTranslated: "I don't come to the Three Jewels' Hall without a reason; what brings you here, #PlayerName#?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "无名地窖"
   splits:
@@ -17074,18 +17056,16 @@
     qcTranslated: "Acting on Heaven's Behalf I"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "替天行道三"
   splits:
   - text: "替天行道三"
     translated: "Three Vengeances for Heaven"
     qcReviewedText: "Three Vengeances for Heaven"
-    qcTranslated: "Three Acts of Justice for Heaven"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "替天行道二"
   splits:
   - text: "替天行道二"
@@ -17406,7 +17386,7 @@
     qcTranslated: "Liangshan Infighting"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "棋子"
   splits:
@@ -17534,7 +17514,7 @@
   - text: "此后，不论是朝廷权贵，还是各派掌门，皆对他敬畏三分。"
     translated: "Since then, both court nobles and sect leaders from various factions have shown him a great deal of respect."
     qcReviewedText: "Since then, both court nobles and sect leaders from various factions have shown him a great deal of respect."
-    qcTranslated: "Since then, whether court nobles or sect leaders from various factions, all held him in awe and respect."
+    qcTranslated: "Since then, whether court nobles or sect leaders from various factions, all have shown him a great deal of awe and respect."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -18079,14 +18059,14 @@
     qcTranslated: "Every 5 month 5. day, this festival originated from ancient dragon worship ceremonies. During the Midsummer Dragon Boat Festival, the Seven Stars of the Azure Dragon are in the most upright position of the year, making it a favorable day as described in the I Ching's The Dragon Soars. Major cities host grand horse racing events on 5."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: GarbledNumber
 - raw: "每年8月15秋高气爽之时，是祭祀月亮的重大节日。以月之圆满预示人之团圆，亲朋好友为此欢聚一堂，共同赏月吃月饼作为庆祝。"
   splits:
   - text: "每年8月15秋高气爽之时，是祭祀月亮的重大节日。以月之圆满预示人之团圆，亲朋好友为此欢聚一堂，共同赏月吃月饼作为庆祝。"
     translated: "Every September 8 month 15 when the weather is crisp and clear, it is a major festival for worshipping the moon. With the full moon symbolizing family reunions, relatives and friends gather to enjoy the moon and eat mooncakes in celebration."
     qcReviewedText: "Every September 8 month 15 when the weather is crisp and clear, it is a major festival for worshipping the moon. With the full moon symbolizing family reunions, relatives and friends gather to enjoy the moon and eat mooncakes in celebration."
-    qcTranslated: "Every year on the 8th of the 15st month, when the weather is crisp and clear, it is a major festival for worshipping the moon. With the full moon symbolizing family reunions, relatives and friends gather to enjoy the moon and eat mooncakes in celebration."
+    qcTranslated: "Every year on the 8th day of the 15th month, when the weather is crisp and clear, it is a major festival for worshipping the moon. With the full moon symbolizing family reunions, relatives and friends gather to enjoy the moon and eat mooncakes in celebration."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -19095,7 +19075,7 @@
     qcTranslated: "Catching a turtle in a jar"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "由于#$PlayerName#罪孽实在过于深重，因而被判处终身监禁，"
   splits:
@@ -19276,7 +19256,7 @@
   - text: "白云苍狗"
     translated: "White clouds, gray dogs"
     qcReviewedText: "White clouds, gray dogs"
-    qcTranslated: "Clouds turn white, then dogs"
+    qcTranslated: "Clouds turn white, then dogs turn gray"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -19565,10 +19545,10 @@
   - text: "瞒天过海"
     translated: "Deceive Heaven and Earth"
     qcReviewedText: "Deceive Heaven and Earth"
-    qcTranslated: "Deceive the Heavens"
+    qcTranslated: "Deceive the Heavens and Cross the Sea"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "短斧"
   splits:
@@ -19650,7 +19630,7 @@
     qcTranslated: "Mysterious stele"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: DomainTerm
 - raw: "神秘请柬"
   splits:
@@ -19780,10 +19760,10 @@
   - text: "离间大隐"
     translated: "Divide the Great Conceal"
     qcReviewedText: "Divide the Great Conceal"
-    qcTranslated: "Sowing Discord Among the Great Hidden"
+    qcTranslated: "Sowing Discord Among the Great Hidden Ones"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "离间神机"
   splits:
@@ -19808,10 +19788,10 @@
   - text: "离间霹雳"
     translated: "Divide and Thunder"
     qcReviewedText: "Divide and Thunder"
-    qcTranslated: "Sowing Discord"
+    qcTranslated: "Sowing Discord with Thunder"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "秀才遇匪"
   splits:
@@ -19876,11 +19856,9 @@
   - text: "积攒了数以十万两计的白银，成为闻名一时的豪商巨贾。"
     translated: "Amassing tens of thousands of silver taels, he became a renowned wealthy merchant of the time."
     qcReviewedText: "Amassing tens of thousands of silver taels, he became a renowned wealthy merchant of the time."
-    qcTranslated: "Amassing hundreds of thousands of silver taels, he became a renowned wealthy merchant of the time."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "积累官府功绩即可晋升官职，\\n为日后行走江湖提供更多便利。"
   splits:
   - text: "积累官府功绩即可晋升官职，"
@@ -19935,10 +19913,10 @@
   - text: "穴位分为灰"
     translated: "Acupoints are divided into gray"
     qcReviewedText: "Acupoints are divided into gray/Green/Blue/Purple/Orange/Six levels \\nThe higher the level, the more difficult it is to clear the challenge, and the more experience rewards you receive.\\nWhile raising the level of the building can reduce the difficulty of clearing the stage, they can also make the gameplay feel less accessible to new players."
-    qcTranslated: "Acupoints are divided into six levels: gray, green, blue, purple, orange, and red.\\nThe higher the level, the more difficult it is to clear the challenge, and the more experience rewards you receive.\\nWhile raising the level of the building can reduce the difficulty of clearing the stage, they can also make the gameplay feel less accessible to new players."
+    qcTranslated: "Acupoints are divided into six levels: gray/green/blue/purple/orange/red.\\nThe higher the level, the more difficult it is to clear the challenge, and the more experience rewards you receive.\\nWhile raising the level of the building can reduce the difficulty of clearing the stage, they can also make the gameplay feel less accessible to new players."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "绿"
@@ -20302,11 +20280,9 @@
   - text: "绝命蛊毒"
     translated: "Lethal Poisoned Viper"
     qcReviewedText: "Lethal Poisoned Viper"
-    qcTranslated: "Lethal Gu Poison"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "绝技主要通过遭受攻击充能。\\n激活绝技可使其效果翻倍，同时恢复部分生命。"
   splits:
   - text: "绝技主要通过遭受攻击充能。"
@@ -20701,7 +20677,7 @@
     qcTranslated: "Kill each other"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "自行练习"
   splits:
@@ -21883,21 +21859,17 @@
   - text: "走火入魔"
     translated: "Lose oneself in something"
     qcReviewedText: "Lose oneself in something"
-    qcTranslated: "Go mad"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "走过路过千万不能错过了噢！\\n兴隆商号，清仓钜惠！<b>全部九折</b>，仅剩一天！\\n机不可失，过期不候了噢！"
   splits:
   - text: "走过路过千万不能错过了噢！"
     translated: "Don't miss this even if you're just passing by!"
     qcReviewedText: "Don't miss this even if you're just passing by!\\nXinglong Business Hall, Clearance Mega Sale!<b>All 90% off</b>, Only one day left!\\nThis offer won't last, so don't miss it!"
-    qcTranslated: "Don't miss this even if you're just passing by!\\nXinglong Business Hall, Clearance Mega Sale!<b>All 10% off</b>, Only one day left!\\nThis offer won't last, so don't miss it!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "兴隆商号，清仓钜惠！"
     translated: "Xinglong Business Hall, Clearance Mega Sale!"
@@ -21957,10 +21929,10 @@
   - text: "跌打梅山符"
     translated: "Meridional MerMAID Sticker"
     qcReviewedText: "Meridional MerMAID Sticker"
-    qcTranslated: "Bruise and Fracture Meishan Talisman"
+    qcTranslated: "Bruise & Fracture Meishan Talisman"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "跟踪上官凤前往#TargetPlace#寻找封桩库。"
   splits:
@@ -22538,7 +22510,7 @@
     qcTranslated: "Return to #TargetPlace# to buy medicine and gather one thousand taels of fine silver."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
 - raw: "返回#TargetPlace#向师傅汇报。"
   splits:
@@ -23464,7 +23436,7 @@
     qcTranslated: "The more precious the auxiliary items, the higher the breakthrough efficiency.\\nBoosting the level of buildings and the corresponding martial arts skills can also increase breakthrough efficiency."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "提升建筑等级和对应武学技能，也可以增加突破效率。"
@@ -23669,7 +23641,7 @@
   - text: "道高一尺魔高一丈，这地窖想必是那魔头的最终藏身之处，"
     translated: "A foot above the law, a yard below, this cellar is likely the final hiding place of that monster."
     qcReviewedText: "A foot above the law, a yard below, this cellar is likely the final hiding place of that monster.\\nThis time, we must arrest this person!"
-    qcTranslated: "The law rises a foot, but evil rises a yard; this cellar is likely the final hiding place of that monster.\\nThis time, we must arrest this person!"
+    qcTranslated: "The law rises a foot, but the devil rises a yard; this cellar is likely the final hiding place of that monster.\\nThis time, we must arrest this person!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -24278,8 +24250,8 @@
     qcTranslated: "After annexing a Sect,\\nYou can freely study its martial arts and special buildings."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 25
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "你便可以自由学习其武学和特殊建筑。"
     translated: "You can freely study its martial arts and special buildings."
@@ -24689,7 +24661,7 @@
     qcTranslated: "Flying Dragon Aid"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: DomainTerm
 - raw: "飞龙门叛党劫持姜婉，眼下正藏身于#TargetPlace#内。"
   splits:

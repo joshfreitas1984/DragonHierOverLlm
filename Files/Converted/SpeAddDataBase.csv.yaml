@@ -374,10 +374,10 @@
     text: "残拳"
     translated: "Fistfight"
     qcReviewedText: "Fistfight"
-    qcTranslated: "Broken Fist"
+    qcTranslated: "Remnant Fist"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
   - split: 10
     text: "提升拳掌伤害"
@@ -2292,11 +2292,9 @@
     text: "免疫伤害至下次受击"
     translated: "Damage from immunity lasts until next hit"
     qcReviewedText: "Damage from immunity lasts until next hit"
-    qcTranslated: "Immune to damage until next hit"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "96,眩晕,0.01,万钧,无,1,0,1,1,0,跳过回合,敌方,0,1,1,1,0"
   splits:
   - split: 3

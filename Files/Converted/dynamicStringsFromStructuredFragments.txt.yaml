@@ -1074,7 +1074,7 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcDefectCategory: LostIdiom
 - raw: "♦邀请对方入队30天\n♦{0}{2}"
   splits:
   - text: "邀请对方入队30天"
@@ -2714,10 +2714,10 @@
   - text: "敬酒不吃吃罚酒"
     translated: "Decline the offer but accept the punishment"
     qcReviewedText: "Decline the offer but accept the punishment"
-    qcTranslated: "You refuse the toast but accept the penalty"
+    qcTranslated: "Refuse the toast but drink the penalty wine"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "斗胆向两位一齐讨教"
   splits:
@@ -2759,7 +2759,7 @@
     qcTranslated: "Severing Bonds"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
   splits:
@@ -3293,7 +3293,7 @@
     qcTranslated: "Asking for the moon"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
 - raw: "献上银两"
   splits:
@@ -4246,7 +4246,7 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
-    qcDefectCategory: DomainTerm
+    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "对方武学满级或超过你时自动停止"
     translated: "When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."

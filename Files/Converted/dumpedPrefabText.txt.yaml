@@ -1160,7 +1160,7 @@
     qcTranslated: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is ineffective on players)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "秘籍越稀有加成越高。"
@@ -1457,7 +1457,7 @@
   - text: "三"
     translated: "Three"
     qcReviewedText: "Three \\nWait \\nPrize"
-    qcTranslated: "Third \\nPlace \\nPrize"
+    qcTranslated: "Third \\nClass \\nPrize"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -2432,10 +2432,10 @@
   - text: "入群会友"
     translated: "Joining friends in the group"
     qcReviewedText: "Joining friends in the group"
-    qcTranslated: "Make friends in the group"
+    qcTranslated: "Meet new friends in the group"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "入门弟子"
   splits:
@@ -4741,11 +4741,9 @@
   - text: "布甲"
     translated: "Leather armor"
     qcReviewedText: "Leather armor"
-    qcTranslated: "Cloth armor"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "布鞋"
   splits:
   - text: "布鞋"
@@ -4754,7 +4752,7 @@
     qcTranslated: "Cloth shoes"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: DomainTerm
 - raw: "师傅"
   splits:
@@ -4801,11 +4799,9 @@
   - text: "建筑九级解锁"
     translated: "Level 9 building unlocked"
     qcReviewedText: "Level 9 building unlocked"
-    qcTranslated: "Level 9 building unlocked"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "开启时每次闪避消耗5体力。\\n体力小于5点时无法闪避。\\n对玩家和所有角色同时生效。"
   splits:
   - text: "开启时每次闪避消耗5体力。"
@@ -5654,7 +5650,7 @@
     qcTranslated: "Protect \\nArmor"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "甲"
@@ -5666,11 +5662,9 @@
   - text: "护甲"
     translated: "Armor"
     qcReviewedText: "Armor\\n(consumption)"
-    qcTranslated: "Armor\\n(Consumable)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "（消耗）"
     translated: "(consumption)"
@@ -6605,7 +6599,7 @@
   - text: "检测到您为未成年人，敬请注意"
     translated: "Detection of minor status, please take notice"
     qcReviewedText: "Detection of minor status, please take notice：\\n\\nThis game is only available for minors to play for up to 1 hours of online gaming from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It must not be provided to minors in any other form or at any other time."
-    qcTranslated: "Detection of minor status, please take notice:\\n\\nThis game is only available for minors to play from 1 to 20 on Fridays, Saturdays, Sundays, and public holidays, providing 21 hours of online gaming service. It must not be provided to minors in any other form or at any other time."
+    qcTranslated: "Detection of minor status, please take notice：\\n\\nThis game is only available for minors to play from 1 to 20 on Fridays, Saturdays, Sundays, and public holidays, providing 21 hours of online gaming service. It must not be provided to minors in any other form or at any other time."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -6702,7 +6696,7 @@
     qcTranslated: "Martial \\nWeapon"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "器"
@@ -6952,11 +6946,9 @@
   - text: "民心"
     translated: "Public sentiment"
     qcReviewedText: "Public sentiment\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦While high morale increases the number of commissions and lowers their difficulty, low morale decreases the number of commissions and raises their difficulty.\\n♦Affects the defense strength in sieges"
-    qcTranslated: "Public sentiment\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦While high morale increases the number of commissions and lowers their difficulty, low morale decreases the number of commissions and raises their difficulty.\\n♦Affects the defense strength in sieges"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "低于50"
     translated: "Lower than 50"
@@ -7034,11 +7026,9 @@
   - text: "治安"
     translated: "Public safety"
     qcReviewedText: "Public safety\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦High stability increases the quantity of goods and lowers buying and selling prices; low stability decreases the quantity of goods and raises buying and selling prices.\\n♦Affects the number of defenders in a siege battle."
-    qcTranslated: "Public safety\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦High stability increases the quantity of goods and lowers buying and selling prices; low stability decreases the quantity of goods and raises buying and selling prices.\\n♦Affects the number of defenders in a siege battle."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "低于50"
     translated: "Lower than 50"
@@ -8853,11 +8843,9 @@
   - text: "药引"
     translated: "Medicine guide"
     qcReviewedText: "Medicine guide \\nIngredients\\n(consumption)"
-    qcTranslated: "Medicine guide \\nIngredients\\n(consumable)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "食材"
     translated: "Ingredients"
@@ -9000,7 +8988,7 @@
   - text: "行侠四方"
     translated: "Wander as a wanderer across the four seas"
     qcReviewedText: "Wander as a wanderer across the four seas"
-    qcTranslated: "Roam the four seas as a chivalrous hero"
+    qcTranslated: "Roam the world as a chivalrous hero"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35

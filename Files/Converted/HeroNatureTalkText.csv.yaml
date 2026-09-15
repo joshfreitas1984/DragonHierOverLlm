@@ -481,10 +481,10 @@
     text: "贵逼人来不自由，龙翔凤翥势难收。满堂花醉三千客，一剑霜寒十四州。"
     translated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
     qcReviewedText: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
-    qcTranslated: "Noble bearing compels men to bow, dragon soars and phoenix rises, a momentum that cannot be halted. A hall full of flowers intoxicates three thousand guests, one sword's frosty chill chills fourteen states."
+    qcTranslated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A hall full of flowers intoxicates three thousand guests; a single sword's frosty chill spans fourteen states."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - split: 7
     text: "人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。"
@@ -497,10 +497,10 @@
     text: "名花倾国两相欢，长得君王带笑看。解释春风无限恨，沉香亭北倚阑干。"
     translated: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
     qcReviewedText: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
-    qcTranslated: "Fair flowers and the nation's beauty delight each other, The King watches them with a smile. Explaining the endless resentment of the spring breeze, By the Scented Incense Pavilion's north side, they lean on the railing."
+    qcTranslated: "A beauty and the emperor, both delighting, \\nWith his smile, he watches them. Explaining the spring breeze's boundless resentment, \\nNorth of the Incense Pavilion, they lean on the railing."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - split: 9
     text: "飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。"

@@ -68,10 +68,10 @@
     text: "千杯不醉"
     translated: "Drinks not intoxicating"
     qcReviewedText: "Drinks not intoxicating"
-    qcTranslated: "Never Drunk"
+    qcTranslated: "Thousand Cups Without Getting Drunk"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - split: 2
     text: "累计对饮获胜100场"
