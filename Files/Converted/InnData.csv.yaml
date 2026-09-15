@@ -140,11 +140,12 @@
   - split: 2
     text: "西北关外，荒烟蔓草，滚滚黄沙中，"
     translated: "Outside the Western Pass, desolate smoke and overgrown grass, rolling yellow sandaguesiniai"
-    qcRejectedCorrection: "Outside the Western Pass, amidst desolate smoke and overgrown grass, within the rolling yellow sand,\\nthis Dragon Gate Inn, with its"
+    qcReviewedText: "Outside the Western Pass, desolate smoke and overgrown grass, rolling yellow sandaguesiniai \\nThis prosperous Dragon Gate Inn, with its steady stream of travelers, truly brightens the eyes of those who pass by.\\nHowever, there are also rumors in the Jianghu about his madam being astute and captivating, wielding power through controlling trade routes and border generals to operate black shops and make enormous profits."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "Outside the Western Pass, amidst desolate smoke and overgrown grass, in the rolling yellow sand, \\nthere is this Dragon Gate Inn,"
     qcFailureReason: "Glossary term '江湖' (expected 'Jianghu') is missing."
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Outside the Western Pass, desolate smoke and overgrown grass, rolling yellow sandaguesiniai \\nThis prosperous Dragon Gate Inn, with its steady stream of travelers, truly brightens the eyes of those who pass by.\\nHowever, there are also rumors in the Jianghu about his madam being astute and captivating, wielding power through controlling trade routes and border generals to operate black shops and make enormous profits."
   - split: 2
     subIndex: 1

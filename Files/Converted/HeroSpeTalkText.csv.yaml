@@ -1480,11 +1480,12 @@
   - split: 3
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
-    qcRejectedCorrection: "Don't look at those so-called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nIn"
+    qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "Don't look at those Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nBehind closed doors"
     qcFailureReason: "#PlayerName#"
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
   - split: 3
     subIndex: 1

@@ -1682,9 +1682,7 @@
     translated: "Ultimate Technique"
   - subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 2
     text: "剑法"
     translated: "Sword Art"
@@ -1734,9 +1732,7 @@
 - raw: "奇门;绝技;拳掌"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 1
     text: "绝技"
     translated: "Ultimate Technique"
@@ -1798,9 +1794,7 @@
     translated: "Qinggong"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 3
     text: "剑法"
     translated: "Sword Art"
@@ -1915,9 +1909,7 @@
     translated: "Sword Art"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0};{1};{2}"
 - raw: "秘籍:0.5"
@@ -1959,9 +1951,7 @@
     translated: "Ultimate Technique"
   - subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 2
     text: "长兵"
     translated: "Long weapon"
@@ -1980,9 +1970,7 @@
 - raw: "奇门;射术;绝技"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 1
     text: "射术"
     translated: "Archery"
@@ -2041,9 +2029,7 @@
     translated: "Ultimate Technique"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0};{1};{2}"
 - raw: "饮食:1.5"
@@ -2128,9 +2114,7 @@
     translated: "Sword Art"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0};{1};{2}"
 - raw: "秘籍:0.25"
@@ -2215,9 +2199,7 @@
     translated: "Qinggong"
   - subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 2
     text: "剑法"
     translated: "Sword Art"
@@ -2413,15 +2395,11 @@
 - raw: "奇门经验"
   splits:
   - text: "奇门经验"
-    translated: "Dungeon XP"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Dungeon XP"
-    qcTranslated: "Qimen XP"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: DomainTerm
+    translated: "Qimen Experience"
+    qcReviewedText: "Qimen Experience"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "射术经验"
   splits:
   - text: "射术经验"
@@ -2613,12 +2591,10 @@
 - raw: "全员奇门"
   splits:
   - text: "全员奇门"
-    translated: "All‑In Mystic Array"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "All‑In Mystic Array"
+    translated: "All Qimen"
+    qcReviewedText: "All Qimen"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 85
     qcDefectCategory: None
 - raw: "全员射术"
   splits:
@@ -3423,10 +3399,8 @@
 - raw: "奇门遁甲"
   splits:
   - text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men Dun Jia"
+    translated: "Qimen Dunjia"
+    qcReviewedText: "Qimen Dunjia"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -6907,12 +6881,10 @@
 - raw: "奇门1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Mystic 1"
+    translated: "Qimen 1"
+    qcReviewedText: "Qimen 1"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "智力2;奇门1;内力0.1"
   splits:
@@ -6920,9 +6892,7 @@
     translated: "2 intelligence"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -6966,9 +6936,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "采伐1"
     translated: "Resource Gathering 1"
@@ -6977,12 +6945,10 @@
 - raw: "奇门5"
   splits:
   - text: "奇门5"
-    translated: "Odd Door 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Odd Door 5"
+    translated: "Qimen 5"
+    qcReviewedText: "Qimen 5"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: None
 - raw: "压制0.04"
   splits:
@@ -7019,22 +6985,16 @@
 - raw: "奇门2"
   splits:
   - text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Trombino2"
-    qcTranslated: "Qimen2"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DomainTerm
+    translated: "Qimen 2"
+    qcReviewedText: "Qimen 2"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "奇门10"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Mystic 10"
+    translated: "Qimen 10"
+    qcReviewedText: "Qimen 10"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -10093,9 +10053,7 @@
 - raw: "奇门1;意志1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -10107,9 +10065,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -10126,9 +10082,7 @@
 - raw: "奇门1;体质1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "体质1"
     translated: "1 stamina"
@@ -10140,17 +10094,13 @@
     translated: "2 stamina"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   templates:
   - template: "{0};{1}"
 - raw: "奇门10;体质15"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -10167,9 +10117,7 @@
 - raw: "奇门1;智力1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "智力1"
     translated: "Intellect 1"
@@ -10178,12 +10126,10 @@
 - raw: "奇门15"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Divination15"
+    translated: "Qimen 15"
+    qcReviewedText: "Qimen 15"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: None
 - raw: "碎石铁鞭"
   splits:
@@ -10198,9 +10144,7 @@
 - raw: "奇门1;力道1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -10212,9 +10156,7 @@
     translated: "Strength 1"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -10223,9 +10165,7 @@
 - raw: "奇门15;力道10"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "力道10"
     translated: "Strength 10"
@@ -10250,9 +10190,7 @@
 - raw: "奇门1;经脉1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "经脉1"
     translated: "Acupoint 1"
@@ -10264,9 +10202,7 @@
     translated: "Acupoint 1"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -10275,9 +10211,7 @@
 - raw: "奇门20;经脉15"
   splits:
   - text: "奇门20"
-    translated: "Odd Doors 20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 20"
   - subIndex: 1
     text: "经脉15"
     translated: "Meridian 15"
@@ -10321,9 +10255,7 @@
     translated: "Intellect 1"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -10343,9 +10275,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -10354,9 +10284,7 @@
 - raw: "奇门15;意志10"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -10383,9 +10311,7 @@
 - raw: "奇门2;灵巧1"
   splits:
   - text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -10394,9 +10320,7 @@
 - raw: "奇门20;灵巧15"
   splits:
   - text: "奇门20"
-    translated: "Odd Doors 20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 20"
   - subIndex: 1
     text: "灵巧15"
     translated: "Agile 15"
@@ -10424,9 +10348,7 @@
     translated: "2 intelligence"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -10435,9 +10357,7 @@
 - raw: "奇门15;智力15"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "智力15"
     translated: "15 intelligence"
@@ -10462,9 +10382,7 @@
 - raw: "奇门1;灵巧1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -10476,9 +10394,7 @@
     translated: "Agile 1"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -10487,9 +10403,7 @@
 - raw: "奇门5;灵巧5"
   splits:
   - text: "奇门5"
-    translated: "Odd Door 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 5"
   - subIndex: 1
     text: "灵巧5"
     translated: "Agile 5"
@@ -14589,9 +14503,7 @@
 - raw: "奇门1;灵巧1;经脉1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -14606,9 +14518,7 @@
     translated: "Agile 2"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -14617,9 +14527,7 @@
 - raw: "奇门30;灵巧20;经脉15"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "灵巧20"
     translated: "Nimble 20"
@@ -14648,9 +14556,7 @@
 - raw: "奇门35;智力25;灵巧15"
   splits:
   - text: "奇门35"
-    translated: "Mystic 35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 35"
   - subIndex: 1
     text: "智力25"
     translated: "Intelligence25"
@@ -14687,9 +14593,7 @@
 - raw: "奇门1;力道1;经脉1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -14704,9 +14608,7 @@
     translated: "Meridian 2"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -14715,9 +14617,7 @@
 - raw: "奇门30;经脉20;力道15"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "经脉20"
     translated: "Meridian 20"
@@ -14745,9 +14645,7 @@
 - raw: "奇门1;意志1;智力1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -14759,9 +14657,7 @@
 - raw: "奇门35;意志20;智力10"
   splits:
   - text: "奇门35"
-    translated: "Mystic 35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 35"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -14807,9 +14703,7 @@
 - raw: "奇门1;力道1;体质1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -14827,17 +14721,13 @@
     translated: "3 stamina"
   - subIndex: 2
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   templates:
   - template: "{0};{1};{2}"
 - raw: "奇门15;力道20;体质30"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -14883,9 +14773,7 @@
 - raw: "奇门1;意志1;绝技1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -14900,9 +14788,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -14911,9 +14797,7 @@
 - raw: "奇门35;意志20"
   splits:
   - text: "奇门35"
-    translated: "Mystic 35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 35"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -14950,9 +14834,7 @@
 - raw: "奇门2;意志1"
   splits:
   - text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -14964,9 +14846,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -14975,9 +14855,7 @@
 - raw: "奇门20;意志15"
   splits:
   - text: "奇门20"
-    translated: "Odd Doors 20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 20"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -15020,9 +14898,7 @@
 - raw: "奇门2;智力1"
   splits:
   - text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 1
     text: "智力1"
     translated: "Intellect 1"
@@ -15034,9 +14910,7 @@
     translated: "3 intelligence"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -15045,9 +14919,7 @@
 - raw: "奇门25;智力15"
   splits:
   - text: "奇门25"
-    translated: "Mystic 25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 25"
   - subIndex: 1
     text: "智力15"
     translated: "15 intelligence"
@@ -15080,9 +14952,7 @@
 - raw: "奇门1;智力1;轻功1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "智力1"
     translated: "Intellect 1"
@@ -15097,9 +14967,7 @@
     translated: "2 intelligence"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -15108,9 +14976,7 @@
 - raw: "奇门30;智力20"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "智力20"
     translated: "Intelligence20"
@@ -15145,9 +15011,7 @@
 - raw: "奇门2;体质1"
   splits:
   - text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 1
     text: "体质1"
     translated: "1 stamina"
@@ -15159,9 +15023,7 @@
     translated: "2 stamina"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -15170,9 +15032,7 @@
 - raw: "奇门30;体质20"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "体质20"
     translated: "20 stamina"
@@ -17808,9 +17668,7 @@
     translated: "Potential willpower 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "经脉1"
     translated: "Acupoint 1"
@@ -17822,9 +17680,7 @@
     translated: "Meridian 2"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -17833,9 +17689,7 @@
 - raw: "奇门45;经脉30;意志20"
   splits:
   - text: "奇门45"
-    translated: "Mystic 45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 45"
   - subIndex: 1
     text: "经脉30"
     translated: "Acupuncture Point 30"
@@ -17887,9 +17741,7 @@
     translated: "Intellectual potential 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "灵巧1"
     translated: "Agile 1"
@@ -17901,9 +17753,7 @@
     translated: "Agile 2"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -17912,9 +17762,7 @@
 - raw: "奇门45;灵巧30;智力20"
   splits:
   - text: "奇门45"
-    translated: "Mystic 45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 45"
   - subIndex: 1
     text: "灵巧30"
     translated: "Agile 30"
@@ -17952,14 +17800,10 @@
 - raw: "奇门潜力1;奇门1;智力1"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -17971,9 +17815,7 @@
     translated: "2 intelligence"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -17982,9 +17824,7 @@
 - raw: "奇门55;智力30"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -18028,14 +17868,10 @@
 - raw: "奇门潜力1;奇门1;意志1"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "意志1"
     translated: "1 will"
@@ -18047,9 +17883,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -18058,9 +17892,7 @@
 - raw: "奇门50;意志35"
   splits:
   - text: "奇门50"
-    translated: "Mystic 50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 50"
   - subIndex: 1
     text: "意志35"
     translated: "35 will not be altered"
@@ -18104,14 +17936,10 @@
 - raw: "奇门潜力1;奇门1;体质1"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "体质1"
     translated: "1 stamina"
@@ -18123,9 +17951,7 @@
     translated: "2 stamina"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -18134,9 +17960,7 @@
 - raw: "奇门45;体质30"
   splits:
   - text: "奇门45"
-    translated: "Mystic 45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 45"
   - subIndex: 1
     text: "体质30"
     translated: "30 stamina"
@@ -19809,9 +19633,7 @@
     translated: "Qimen Potential 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -19823,9 +19645,7 @@
     translated: "3 intelligence"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -19834,9 +19654,7 @@
 - raw: "奇门60;智力45"
   splits:
   - text: "奇门60"
-    translated: "Mystic 60"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 60"
   - subIndex: 1
     text: "智力45"
     translated: "Intellectual 45"
@@ -19880,17 +19698,13 @@
 - raw: "奇门潜力1;智力潜力1;奇门1;意志1"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "智力潜力1"
     translated: "Intellectual potential 1"
   - subIndex: 2
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 3
     text: "意志1"
     translated: "1 will"
@@ -19902,9 +19716,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -19913,9 +19725,7 @@
 - raw: "奇门65;意志50"
   splits:
   - text: "奇门65"
-    translated: "65 Formation"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 65"
   - subIndex: 1
     text: "意志50"
     translated: "50 willpower"
@@ -19961,25 +19771,19 @@
 - raw: "奇门潜力1;意志潜力1;奇门2"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "意志潜力1"
     translated: "Potential willpower 1"
   - subIndex: 2
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   templates:
   - template: "{0};{1};{2}"
 - raw: "奇门5;内力0.4"
   splits:
   - text: "奇门5"
-    translated: "Odd Door 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 5"
   - subIndex: 1
     text: "内力0.4"
     translated: "Inner Power 0.4"
@@ -19988,9 +19792,7 @@
 - raw: "奇门55;意志45;经脉30"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "意志45"
     translated: "45 will"
@@ -20728,9 +20530,7 @@
     translated: "Intellect 1"
   - subIndex: 2
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 3
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -20739,9 +20539,7 @@
 - raw: "奇门75;意志60"
   splits:
   - text: "奇门75"
-    translated: "Mystery 75"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 75"
   - subIndex: 1
     text: "意志60"
     translated: "Willpower 60"
@@ -26302,15 +26100,11 @@
 - raw: "奇门三才棍"
   splits:
   - text: "奇门三才棍"
-    translated: "Odd Doors Three Talents Staff"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Odd Doors Three Talents Staff"
-    qcTranslated: "Qi Men Three Talents Staff"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    translated: "Unorthodox Three Treasures Staff"
+    qcReviewedText: "Unorthodox Three Treasures Staff"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "长兵潜力1;长兵1;经脉1"
   splits:
   - text: "长兵潜力1"
@@ -28508,9 +28302,7 @@
 - raw: "奇门10;智力5"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "智力5"
     translated: "5 intelligence"
@@ -28546,9 +28338,7 @@
     translated: "Will0.1"
   - subIndex: 1
     text: "奇门0.1"
-    translated: "0.1 Formation"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 0.1"
   - subIndex: 2
     text: "内力0.01"
     translated: "Inner Power 0.01"
@@ -28583,9 +28373,7 @@
 - raw: "奇门0.2;医术0.3"
   splits:
   - text: "奇门0.2"
-    translated: "Mystic 0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 0.2"
   - subIndex: 1
     text: "医术0.3"
     translated: "0.3 medicine"
@@ -28746,9 +28534,7 @@
     translated: "Intellect 1"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -28757,9 +28543,7 @@
 - raw: "奇门10;智力10"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -28788,9 +28572,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -28828,9 +28610,7 @@
     translated: "2 intelligence"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -28839,9 +28619,7 @@
 - raw: "奇门10;智力15"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "智力15"
     translated: "15 intelligence"
@@ -29061,9 +28839,7 @@
 - raw: "奇门40;智力20"
   splits:
   - text: "奇门40"
-    translated: "Odd Doors 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 40"
   - subIndex: 1
     text: "智力20"
     translated: "Intelligence20"
@@ -29080,9 +28856,7 @@
 - raw: "奇门1;灵巧1;意志1"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -29097,9 +28871,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -29108,9 +28880,7 @@
 - raw: "奇门30;意志25"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "意志25"
     translated: "25 will"
@@ -29138,9 +28908,7 @@
     translated: "0.2 physique"
   - subIndex: 1
     text: "奇门0.2"
-    translated: "Mystic 0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 0.2"
   - subIndex: 2
     text: "内力0.01"
     translated: "Inner Power 0.01"
@@ -29152,9 +28920,7 @@
 - raw: "奇门25;体质15"
   splits:
   - text: "奇门25"
-    translated: "Mystic 25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 25"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -29396,9 +29162,7 @@
     translated: "Potential willpower 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "意志1"
     translated: "1 will"
@@ -29410,9 +29174,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -29421,9 +29183,7 @@
 - raw: "奇门45;意志30"
   splits:
   - text: "奇门45"
-    translated: "Mystic 45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 45"
   - subIndex: 1
     text: "意志30"
     translated: "Willpower 30"
@@ -29451,9 +29211,7 @@
     translated: "Intellectual potential 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -29465,9 +29223,7 @@
     translated: "Intelligence 4"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -29476,9 +29232,7 @@
 - raw: "奇门50;智力40"
   splits:
   - text: "奇门50"
-    translated: "Mystic 50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 50"
   - subIndex: 1
     text: "智力40"
     translated: "40 intelligence"
@@ -29524,9 +29278,7 @@
     translated: "0.2 physique"
   - subIndex: 1
     text: "奇门0.2"
-    translated: "Mystic 0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 0.2"
   - subIndex: 2
     text: "内力0.02"
     translated: "Inner Power 0.02"
@@ -29538,9 +29290,7 @@
 - raw: "奇门40;体质35"
   splits:
   - text: "奇门40"
-    translated: "Odd Doors 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 40"
   - subIndex: 1
     text: "体质35"
     translated: "35 physique"
@@ -29826,17 +29576,13 @@
 - raw: "奇门潜力1;智力潜力1;奇门1;智力1"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "智力潜力1"
     translated: "Intellectual potential 1"
   - subIndex: 2
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 3
     text: "智力1"
     translated: "Intellect 1"
@@ -29845,9 +29591,7 @@
 - raw: "奇门55;智力50"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "智力50"
     translated: "Intelligence 50"
@@ -29876,9 +29620,7 @@
     translated: "Potential in physique 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "体质1"
     translated: "1 stamina"
@@ -29890,9 +29632,7 @@
     translated: "0.2 physique"
   - subIndex: 1
     text: "奇门0.2"
-    translated: "Mystic 0.2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 0.2"
   - subIndex: 2
     text: "内力0.03"
     translated: "Inner Power 0.03"
@@ -29904,9 +29644,7 @@
 - raw: "奇门55;体质40"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "体质40"
     translated: "40 stamina"
@@ -29931,17 +29669,13 @@
 - raw: "奇门潜力1;意志潜力1;奇门1;意志1"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "意志潜力1"
     translated: "Potential willpower 1"
   - subIndex: 2
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 3
     text: "意志1"
     translated: "1 will"
@@ -29953,9 +29687,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -29964,9 +29696,7 @@
 - raw: "奇门60;意志45"
   splits:
   - text: "奇门60"
-    translated: "Mystic 60"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 60"
   - subIndex: 1
     text: "意志45"
     translated: "45 will"
@@ -30139,9 +29869,7 @@
     translated: "4 will"
   - subIndex: 2
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 3
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -30150,9 +29878,7 @@
 - raw: "奇门75;智力60;意志45"
   splits:
   - text: "奇门75"
-    translated: "Mystery 75"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 75"
   - subIndex: 1
     text: "智力60"
     translated: "Intelligence 60"
@@ -31657,9 +31383,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "毒术2"
     translated: "Poison Technique 2"
@@ -31668,9 +31392,7 @@
 - raw: "奇门10;毒术10"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "毒术10"
     translated: "10 Toxin Technique"
@@ -31956,9 +31678,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "毒术1"
     translated: "Poison technique 1"
@@ -31967,9 +31687,7 @@
 - raw: "奇门15;意志10;毒术10"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -32340,9 +32058,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "毒术3"
     translated: "3 Toxin Technique"
@@ -32351,9 +32067,7 @@
 - raw: "奇门25;意志20;毒术25"
   splits:
   - text: "奇门25"
-    translated: "Mystic 25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 25"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -32752,9 +32466,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "毒术2"
     translated: "Poison Technique 2"
@@ -32763,9 +32475,7 @@
 - raw: "奇门40;意志35;毒术35"
   splits:
   - text: "奇门40"
-    translated: "Odd Doors 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 40"
   - subIndex: 1
     text: "意志35"
     translated: "35 will not be altered"
@@ -33134,9 +32844,7 @@
     translated: "Qimen Potential 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "意志1"
     translated: "1 will"
@@ -33148,9 +32856,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "毒术4"
     translated: "Poison Technique 4"
@@ -33159,9 +32865,7 @@
 - raw: "奇门55;意志45;毒术55"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "意志45"
     translated: "45 will"
@@ -35221,9 +34925,7 @@
     translated: "3 intelligence"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -35232,9 +34934,7 @@
 - raw: "奇门20;智力10"
   splits:
   - text: "奇门20"
-    translated: "Odd Doors 20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 20"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -35264,9 +34964,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -35275,9 +34973,7 @@
 - raw: "奇门25;意志15"
   splits:
   - text: "奇门25"
-    translated: "Mystic 25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 25"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -35508,9 +35204,7 @@
 - raw: "奇门35;智力15"
   splits:
   - text: "奇门35"
-    translated: "Mystic 35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 35"
   - subIndex: 1
     text: "智力15"
     translated: "15 intelligence"
@@ -35538,9 +35232,7 @@
 - raw: "奇门1;意志2"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "意志2"
     translated: "2 will"
@@ -35552,9 +35244,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -35896,9 +35586,7 @@
     translated: "5 intelligence"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -35907,9 +35595,7 @@
 - raw: "奇门40;智力35"
   splits:
   - text: "奇门40"
-    translated: "Odd Doors 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 40"
   - subIndex: 1
     text: "智力35"
     translated: "Intellect 35"
@@ -35956,9 +35642,7 @@
     translated: "4 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -36328,9 +36012,7 @@
     translated: "Intelligence 4"
   - subIndex: 1
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -36339,9 +36021,7 @@
 - raw: "奇门65;智力45"
   splits:
   - text: "奇门65"
-    translated: "65 Formation"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 65"
   - subIndex: 1
     text: "智力45"
     translated: "Intellectual 45"
@@ -36388,9 +36068,7 @@
     translated: "Potential willpower 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "意志1"
     translated: "1 will"
@@ -36402,9 +36080,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门5"
-    translated: "Odd Door 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 5"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -36413,9 +36089,7 @@
 - raw: "奇门60;意志50"
   splits:
   - text: "奇门60"
-    translated: "Mystic 60"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 60"
   - subIndex: 1
     text: "意志50"
     translated: "50 willpower"
@@ -36830,9 +36504,7 @@
     translated: "Strength 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   templates:
   - template: "{0};{1}"
 - raw: "坚毅0.02"
@@ -37101,9 +36773,7 @@
     translated: "1 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -37112,9 +36782,7 @@
 - raw: "奇门15;意志15"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -37416,9 +37084,7 @@
 - raw: "奇门2;力道1"
   splits:
   - text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -37430,9 +37096,7 @@
     translated: "Strength 3"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -37441,9 +37105,7 @@
 - raw: "奇门30;力道20"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -37836,9 +37498,7 @@
     translated: "Intelligence 4"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -37847,9 +37507,7 @@
 - raw: "奇门45;智力30"
   splits:
   - text: "奇门45"
-    translated: "Mystic 45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 45"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -38342,9 +38000,7 @@
     translated: "4 physique"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -38353,9 +38009,7 @@
 - raw: "奇门55;体质55;意志30"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "体质55"
     translated: "55 stamina"
@@ -41459,9 +41113,7 @@
 - raw: "奇门10;意志10"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -41678,9 +41330,7 @@
 - raw: "奇门30;意志15"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -41890,14 +41540,10 @@
 - raw: "奇门潜力1;奇门1;力道1"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "力道1"
     translated: "Strength 1"
@@ -41909,9 +41555,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -41920,9 +41564,7 @@
 - raw: "奇门40;意志35"
   splits:
   - text: "奇门40"
-    translated: "Odd Doors 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 40"
   - subIndex: 1
     text: "意志35"
     translated: "35 will not be altered"
@@ -42229,9 +41871,7 @@
     translated: "Meridian Potential 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "意志1"
     translated: "1 will"
@@ -42243,9 +41883,7 @@
     translated: "Meridian 5"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -42254,9 +41892,7 @@
 - raw: "奇门50;经脉55"
   splits:
   - text: "奇门50"
-    translated: "Mystic 50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 50"
   - subIndex: 1
     text: "经脉55"
     translated: "Meridian 55"
@@ -43694,9 +43330,7 @@
     translated: "Agile 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -43705,9 +43339,7 @@
 - raw: "奇门10;灵巧5"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "灵巧5"
     translated: "Agile 5"
@@ -43727,9 +43359,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -43779,9 +43409,7 @@
     translated: "Heal 0.04"
   - subIndex: 5
     text: "奇门威力0.02"
-    translated: "Power of 0.02"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen power 0.02"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
 - raw: "内功10;体质15"
@@ -43859,9 +43487,7 @@
 - raw: "奇门15;灵巧15"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "灵巧15"
     translated: "Agile 15"
@@ -43887,9 +43513,7 @@
 - raw: "奇门20;意志10"
   splits:
   - text: "奇门20"
-    translated: "Odd Doors 20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 20"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -43935,12 +43559,10 @@
 - raw: "奇门五转"
   splits:
   - text: "奇门五转"
-    translated: "Five Turnings of Secret Techniques"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Five Turnings of Secret Techniques"
+    translated: "Qimen Five Transformations"
+    qcReviewedText: "Qimen Five Transformations"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: None
 - raw: "生命上限90;内力上限30;内功8;体质8;奇门8;奇门威力0.08"
   splits:
@@ -43957,14 +43579,10 @@
     translated: "8 stamina"
   - subIndex: 4
     text: "奇门8"
-    translated: "Mystic 8"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 8"
   - subIndex: 5
     text: "奇门威力0.08"
-    translated: "The power of the I Ching 0.08"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen power 0.08"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
 - raw: "内功20;体质15;奇门30"
@@ -43976,9 +43594,7 @@
     translated: "15 stamina"
   - subIndex: 2
     text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   templates:
   - template: "{0};{1};{2}"
 - raw: "大鹏展翅"
@@ -44026,9 +43642,7 @@
     translated: "Counterattack 0.08"
   - subIndex: 3
     text: "奇门威力0.04"
-    translated: "Power of 0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "The power of Qimen is 0.04"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "金鳞巨蟒鞭"
@@ -44045,9 +43659,7 @@
     translated: "Agile 2"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -44056,9 +43668,7 @@
 - raw: "奇门30;灵巧20"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "灵巧20"
     translated: "Nimble 20"
@@ -44096,9 +43706,7 @@
     translated: "3 will"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -44107,9 +43715,7 @@
 - raw: "奇门25;意志25"
   splits:
   - text: "奇门25"
-    translated: "Mystic 25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 25"
   - subIndex: 1
     text: "意志25"
     translated: "25 will"
@@ -44217,9 +43823,7 @@
     translated: "Counterattack 0.05"
   - subIndex: 3
     text: "奇门威力0.05"
-    translated: "Power of Jiemen 0.05"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen power 0.05"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "轻功45;灵巧35"
@@ -44254,9 +43858,7 @@
     translated: "Unyielding 0.04"
   - subIndex: 4
     text: "奇门威力0.04"
-    translated: "Power of 0.04"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "The power of Qimen is 0.04"
   templates:
   - template: "{0};{1};{2};{3};{4}"
 - raw: "绝技50;意志30"
@@ -44282,9 +43884,7 @@
     translated: "Agile Potential 1"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "灵巧1"
     translated: "Agile 1"
@@ -44296,9 +43896,7 @@
     translated: "Agile 4"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -44307,9 +43905,7 @@
 - raw: "奇门50;灵巧30"
   splits:
   - text: "奇门50"
-    translated: "Mystic 50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 50"
   - subIndex: 1
     text: "灵巧30"
     translated: "Agile 30"
@@ -44347,9 +43943,7 @@
 - raw: "奇门45;意志35"
   splits:
   - text: "奇门45"
-    translated: "Mystic 45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 45"
   - subIndex: 1
     text: "意志35"
     translated: "35 will not be altered"
@@ -44469,9 +44063,7 @@
     translated: "Crush 0.06"
   - subIndex: 3
     text: "奇门威力0.06"
-    translated: "Power of 0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen power 0.06"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "轻功55;灵巧55"
@@ -44518,9 +44110,7 @@
     translated: "Negative modifier 0.04"
   - subIndex: 4
     text: "奇门威力0.06"
-    translated: "Power of 0.06"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen power 0.06"
   templates:
   - template: "{0};{1};{2};{3};{4}"
 - raw: "绝技65;意志45"
@@ -44548,9 +44138,7 @@
     translated: "Qimen Potential 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "灵巧1"
     translated: "Agile 1"
@@ -44562,9 +44150,7 @@
     translated: "Nimble 3"
   - subIndex: 1
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -44573,9 +44159,7 @@
 - raw: "奇门60;灵巧45"
   splits:
   - text: "奇门60"
-    translated: "Mystic 60"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 60"
   - subIndex: 1
     text: "灵巧45"
     translated: "Agile 45"
@@ -44622,9 +44206,7 @@
     translated: "4 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -44633,9 +44215,7 @@
 - raw: "奇门55;意志50"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "意志50"
     translated: "50 willpower"
@@ -44884,9 +44464,7 @@
 - raw: "奇门5;智力10"
   splits:
   - text: "奇门5"
-    translated: "Odd Door 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 5"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -44906,9 +44484,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.05"
     translated: "Inner Power 0.05"
@@ -44917,9 +44493,7 @@
 - raw: "奇门10;意志5"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "意志5"
     translated: "5 will"
@@ -45069,9 +44643,7 @@
     translated: "2 will"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -45080,9 +44652,7 @@
 - raw: "奇门10;灵巧10"
   splits:
   - text: "奇门10"
-    translated: "Mystic 10"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 10"
   - subIndex: 1
     text: "灵巧10"
     translated: "Agile 10"
@@ -45211,9 +44781,7 @@
 - raw: "奇门30;智力30"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -45232,9 +44800,7 @@
 - raw: "奇门1;智力2"
   splits:
   - text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 1
     text: "智力2"
     translated: "2 intelligence"
@@ -45246,17 +44812,13 @@
     translated: "5 intelligence"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   templates:
   - template: "{0};{1}"
 - raw: "奇门25;智力20"
   splits:
   - text: "奇门25"
-    translated: "Mystic 25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 25"
   - subIndex: 1
     text: "智力20"
     translated: "Intelligence20"
@@ -45443,9 +45005,7 @@
 - raw: "奇门40;智力45"
   splits:
   - text: "奇门40"
-    translated: "Odd Doors 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 40"
   - subIndex: 1
     text: "智力45"
     translated: "Intellectual 45"
@@ -45467,9 +45027,7 @@
     translated: "Intelligence 4"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -45478,9 +45036,7 @@
 - raw: "奇门35;智力40"
   splits:
   - text: "奇门35"
-    translated: "Mystic 35"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 35"
   - subIndex: 1
     text: "智力40"
     translated: "40 intelligence"
@@ -45667,9 +45223,7 @@
 - raw: "奇门60;智力55;意志50"
   splits:
   - text: "奇门60"
-    translated: "Mystic 60"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 60"
   - subIndex: 1
     text: "智力55"
     translated: "55 intelligence"
@@ -45692,9 +45246,7 @@
     translated: "Intellectual potential 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -45703,9 +45255,7 @@
 - raw: "奇门65;智力50"
   splits:
   - text: "奇门65"
-    translated: "65 Formation"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 65"
   - subIndex: 1
     text: "智力50"
     translated: "Intelligence 50"
@@ -45877,9 +45427,7 @@
 - raw: "奇门65;智力80;意志55"
   splits:
   - text: "奇门65"
-    translated: "65 Formation"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 65"
   - subIndex: 1
     text: "智力80"
     translated: "Intellect 80"
@@ -47162,9 +46710,7 @@
 - raw: "奇门5;智力5"
   splits:
   - text: "奇门5"
-    translated: "Odd Door 5"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 5"
   - subIndex: 1
     text: "智力5"
     translated: "5 intelligence"
@@ -47184,9 +46730,7 @@
     translated: "1 stamina"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -47352,9 +46896,7 @@
     translated: "2 intelligence"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -47363,9 +46905,7 @@
 - raw: "奇门15;智力10"
   splits:
   - text: "奇门15"
-    translated: "Divination15"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 15"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -47385,9 +46925,7 @@
     translated: "1 stamina"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -47396,9 +46934,7 @@
 - raw: "奇门20;体质10"
   splits:
   - text: "奇门20"
-    translated: "Odd Doors 20"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 20"
   - subIndex: 1
     text: "体质10"
     translated: "10 stamina"
@@ -47592,9 +47128,7 @@
     translated: "2 stamina"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -47603,9 +47137,7 @@
 - raw: "奇门30;体质15"
   splits:
   - text: "奇门30"
-    translated: "Odd Doors 30"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 30"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -47645,9 +47177,7 @@
     translated: "3 intelligence"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -47656,9 +47186,7 @@
 - raw: "奇门25;智力30"
   splits:
   - text: "奇门25"
-    translated: "Mystic 25"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 25"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -47859,9 +47387,7 @@
     translated: "Strength 2"
   - subIndex: 1
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -47870,9 +47396,7 @@
 - raw: "奇门45;力道25"
   splits:
   - text: "奇门45"
-    translated: "Mystic 45"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 45"
   - subIndex: 1
     text: "力道25"
     translated: "Strength 25"
@@ -47916,9 +47440,7 @@
 - raw: "奇门40;智力40"
   splits:
   - text: "奇门40"
-    translated: "Odd Doors 40"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 40"
   - subIndex: 1
     text: "智力40"
     translated: "40 intelligence"
@@ -48145,9 +47667,7 @@
     translated: "Strength potential 2"
   - subIndex: 1
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 2
     text: "力道1"
     translated: "Strength 1"
@@ -48159,9 +47679,7 @@
     translated: "Strength 5"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -48170,9 +47688,7 @@
 - raw: "奇门55;力道50"
   splits:
   - text: "奇门55"
-    translated: "Mystic 55"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 55"
   - subIndex: 1
     text: "力道50"
     translated: "Strength 50"
@@ -48392,9 +47908,7 @@
     translated: "Intellectual potential 1"
   - subIndex: 2
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 3
     text: "力道1"
     translated: "Strength 1"
@@ -48409,9 +47923,7 @@
     translated: "3 intelligence"
   - subIndex: 2
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 3
     text: "内力0.1"
     translated: "Inner Power 0.1"
@@ -48420,9 +47932,7 @@
 - raw: "奇门65;智力65;力道65"
   splits:
   - text: "奇门65"
-    translated: "65 Formation"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 65"
   - subIndex: 1
     text: "智力65"
     translated: "65 intelligence"
@@ -50293,9 +49803,7 @@
     translated: "3 intelligence"
   - subIndex: 1
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -51236,9 +50744,7 @@
     translated: "Potential of Meridians 1"
   - subIndex: 2
     text: "奇门1"
-    translated: "Mystic 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 1"
   - subIndex: 3
     text: "经脉1"
     translated: "Acupoint 1"
@@ -51253,9 +50759,7 @@
     translated: "Meridian 4"
   - subIndex: 2
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 3
     text: "内力0.5"
     translated: "Inner Power 0.5"
@@ -51264,9 +50768,7 @@
 - raw: "奇门50;经脉65;力道30"
   splits:
   - text: "奇门50"
-    translated: "Mystic 50"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 50"
   - subIndex: 1
     text: "经脉65"
     translated: "Meridian 65"
@@ -51316,9 +50818,7 @@
     translated: "Potential in constitution 1"
   - subIndex: 1
     text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 2
     text: "绝技1"
     translated: "Master Skill 1"
@@ -51333,9 +50833,7 @@
     translated: "3 stamina"
   - subIndex: 1
     text: "奇门3"
-    translated: "Mystic 3"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 3"
   - subIndex: 2
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -51344,9 +50842,7 @@
 - raw: "奇门70;体质50"
   splits:
   - text: "奇门70"
-    translated: "Odd Doors 70"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 70"
   - subIndex: 1
     text: "体质50"
     translated: "50 physique"
@@ -52519,9 +52015,7 @@
 - raw: "奇门潜力1;智力潜力1;经脉潜力1;经脉2"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "智力潜力1"
     translated: "Intellectual potential 1"
@@ -52539,9 +52033,7 @@
     translated: "Intelligence 4"
   - subIndex: 1
     text: "奇门4"
-    translated: "Odd Doors 4"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 4"
   - subIndex: 2
     text: "内力0.2"
     translated: "Inner Power 0.2"
@@ -52550,9 +52042,7 @@
 - raw: "奇门85;智力70"
   splits:
   - text: "奇门85"
-    translated: "Mystic 85"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 85"
   - subIndex: 1
     text: "智力70"
     translated: "Intellect 70"
@@ -52607,9 +52097,7 @@
 - raw: "奇门潜力1;灵巧潜力1;体质潜力1;体质2"
   splits:
   - text: "奇门潜力1"
-    translated: "Dungeon Potential 1"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen potential 1"
   - subIndex: 1
     text: "灵巧潜力1"
     translated: "Agile Potential 1"
@@ -52630,9 +52118,7 @@
     translated: "3 stamina"
   - subIndex: 2
     text: "奇门2"
-    translated: "Trombino2"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 2"
   - subIndex: 3
     text: "内力0.3"
     translated: "Inner Power 0.3"
@@ -52641,9 +52127,7 @@
 - raw: "奇门80;体质60;灵巧40"
   splits:
   - text: "奇门80"
-    translated: "Mystic 80"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen 80"
   - subIndex: 1
     text: "体质60"
     translated: "60 stamina"
@@ -53389,15 +52873,11 @@
 - raw: "奇门威力"
   splits:
   - text: "奇门威力"
-    translated: "Power of the I Ching"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Power of the I Ching"
-    qcTranslated: "Qimen Power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    translated: "Power of Qimen"
+    qcReviewedText: "Power of Qimen"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "射术威力"
   splits:
   - text: "射术威力"
@@ -53513,12 +52993,10 @@
 - raw: "奇门潜力"
   splits:
   - text: "奇门潜力"
-    translated: "Mystery Potential"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Mystery Potential"
+    translated: "Unorthodox Potential"
+    qcReviewedText: "Unorthodox Potential"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: None
 - raw: "射术潜力"
   splits:
@@ -54285,10 +53763,8 @@
 - raw: "奇门距离"
   splits:
   - text: "奇门距离"
-    translated: "Distance from Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Distance from Qi Men"
+    translated: "Qimen distance"
+    qcReviewedText: "Qimen distance"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -54623,18 +54099,16 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "Neigong/Sword Art/Qi Men"
+    qcReviewedText: "Neigong/Sword Art/Qimen"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Art"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "学识/口才"
@@ -54741,15 +54215,13 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
-    qcReviewedText: "Qinggong/Qi Men/Sword Art"
+    qcReviewedText: "Qinggong/Qimen/Sword Art"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 2
     text: "剑法"
     translated: "Sword Art"
@@ -55671,9 +55143,7 @@
     translated: "Fortune teller"
   - subIndex: 2
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 3
     text: "灵丹妙药"
     translated: "Wonder drug"
@@ -55875,9 +55345,7 @@
     translated: "Breathtakingly beautiful"
   - subIndex: 1
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 2
     text: "射术"
     translated: "Archery"
@@ -56476,9 +55944,7 @@
     translated: "Iron Fists"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 3
     text: "内力精纯"
     translated: "Inner power refined"
@@ -56521,9 +55987,7 @@
     translated: "Zen Master"
   - subIndex: 1
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 2
     text: "奇异莫名"
     translated: "Strange and inexplicable"
@@ -56885,17 +56349,13 @@
   splits:
   - text: "剑法"
     translated: "Sword Art"
-    qcReviewedText: "Sword Art/Qi Men"
-    qcTranslated: "Sword Art/Unorthodox Techniques"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcReviewedText: "Sword Art/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0}/{1}"
 - raw: "胸怀大志;不择手段;剑随意动;轻功;炉火纯青;杂学;修道;气冲斗牛"
@@ -56946,10 +56406,8 @@
 - raw: "奇门/剑法"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men/Sword Art"
+    translated: "Qimen"
+    qcReviewedText: "Qimen/Sword Art"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -57133,15 +56591,11 @@
 - raw: "奇门/长兵"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men/Long weapon"
-    qcTranslated: "Qi Men/Long weapon"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    translated: "Qimen"
+    qcReviewedText: "Qimen/Long weapon"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -57245,9 +56699,7 @@
     translated: "Old wounds have not fully healed"
   - subIndex: 5
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 6
     text: "百步穿杨"
     translated: "Hundred steps through the willow"
@@ -57587,9 +57039,7 @@
     translated: "Cut off completely"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 3
     text: "内力精纯"
     translated: "Inner power refined"
@@ -57623,12 +57073,10 @@
 - raw: "奇门/刀法"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men/Blade Art"
+    translated: "Qimen"
+    qcReviewedText: "Qimen/Blade Art"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
@@ -58441,9 +57889,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 1
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 2
     text: "足智多谋"
     translated: "Resourceful"
@@ -59383,17 +58829,13 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
-    qcReviewedText: "Qinggong/Qi Men"
-    qcTranslated: "Qinggong/Secret Arts"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: UntranslatedPinyin
+    qcReviewedText: "Qinggong/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0}/{1}"
 - raw: "避世绝俗;气定神闲;虚怀若谷;鸾吟凤唱;飞檐走壁;奇门遁甲;儒术"
@@ -59414,9 +58856,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 5
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 6
     text: "儒术"
     translated: "Confucianism"
@@ -60328,20 +59768,16 @@
   splits:
   - text: "剑法"
     translated: "Sword Art"
-    qcReviewedText: "Sword Art/Blade Art/Qi Men"
-    qcTranslated: "Sword Art/Blade Art/Unorthodox Techniques"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: UntranslatedPinyin
+    qcReviewedText: "Sword Art/Blade Art/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
     translated: "Blade Art"
   - subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "东倒西歪;经脉断绝;奇门遁甲;人剑合一;一刀两断;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
@@ -60353,9 +59789,7 @@
     translated: "Meridian severed"
   - subIndex: 2
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 3
     text: "人剑合一"
     translated: "One with the Sword"
@@ -60390,12 +59824,10 @@
 - raw: "奇门/长兵/射术"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men/Long weapon/Archery"
+    translated: "Qimen"
+    qcReviewedText: "Qimen/Long weapon/Archery"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "长兵"
@@ -60414,9 +59846,7 @@
     translated: "Foggy mist scenery"
   - subIndex: 2
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 3
     text: "例无虚发"
     translated: "Accurate shot"
@@ -60516,15 +59946,11 @@
 - raw: "奇门/绝技/轻功"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men/Ultimate Technique/Qinggong"
-    qcTranslated: "Qi Men/Ultimate Technique/Qinggong"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    translated: "Qimen"
+    qcReviewedText: "Qimen/Ultimate Technique/Qinggong"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "绝技"
     translated: "Ultimate Technique"
@@ -60545,9 +59971,7 @@
     translated: "Sea of Foes"
   - subIndex: 3
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 4
     text: "奇异莫名"
     translated: "Strange and inexplicable"
@@ -61001,9 +60425,7 @@
     translated: "Foggy mist scenery"
   - subIndex: 2
     text: "奇门遁甲"
-    translated: "Qi Men Dun Jia"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Dunjia"
   - subIndex: 3
     text: "内力精纯"
     translated: "Inner power refined"
@@ -61088,17 +60510,13 @@
   splits:
   - text: "拳掌"
     translated: "Fists and palms"
-    qcReviewedText: "Fists and palms/Qi Men"
-    qcTranslated: "Fists/Palms/Unorthodox Martial Arts"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcReviewedText: "Fists and palms/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0}/{1}"
 - raw: "缚鸡之力;智力;学识;仁慈;儒生;博览群书;军师"
@@ -65016,12 +64434,10 @@
 - raw: "提升奇门潜力"
   splits:
   - text: "提升奇门潜力"
-    translated: "Enhance their potential in the Jiemen practice"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Enhance their potential in the Jiemen practice"
+    translated: "Enhance Qimen Potential"
+    qcReviewedText: "Enhance Qimen Potential"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 95
     qcDefectCategory: None
 - raw: "提升学识潜力"
   splits:

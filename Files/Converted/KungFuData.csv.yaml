@@ -916,13 +916,11 @@
   splits:
   - split: 4
     text: "从西域传入的奇门鞭法，鞭势绵密飞舞，卷起沙尘高达数丈，可令周遭敌人目不能视"
-    translated: "The whip technique, Qi Men Bian Fa, from the Western Regions, moves swiftly and densely, swirling up dust several yards high, blinding enemies in the vicinity."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "The whip technique, Qi Men Bian Fa, from the Western Regions, moves swiftly and densely, swirling up dust several yards high, blinding enemies in the vicinity."
-    qcTranslated: "This exotic whip technique introduced from the Western Regions features a dense, flowing motion, whipping up dust that rises several zhang high, blinding nearby enemies."
-    qcStatus: Corrected
-    qcQualityScore: 82
+    translated: "The Qimen whip techniques imported from the Western Regions have a continuous and swirling motion, kicking up dust to a height of several meters, blinding any nearby enemies."
+    qcReviewedText: "The Qimen whip techniques imported from the Western Regions have a continuous and swirling motion, kicking up dust to a height of several meters, blinding any nearby enemies."
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "100,奇门,1,碎石铁鞭,一门大开大合的进攻性鞭法，功力深厚者可以一鞭击碎岩石，足见其力道之刚猛,13,1,奇门1;力道1,,力道1;奇门2;内力0.1,奇门15;力道10,\"4,0,0\",\"4,1,2\",破甲0.06,12,-1,0,胸19,胸9,,,skill4_4,,劈砍_裂地-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -936,12 +934,11 @@
   splits:
   - split: 4
     text: "由九节铁鞭铰接而成的奇门兵器，以内力灌注其中，则可刚可柔，如臂指使，招式多变异常"
-    translated: "Made from nine‑section steel whips linked together, this peculiar weapon can be both hard and soft when infused with inner power. Its fighting styles are highly versatile and unpredictable, much like the movements of an arm or finger."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Made from nine‑section steel whips linked together, this peculiar weapon can be both hard and soft when infused with inner power. Its fighting styles are highly versatile and unpredictable, much like the movements of an arm or finger."
+    translated: "A Qimen weapon made by hinging nine iron whips together; when infused with Inner Power, it can be both rigid and flexible, responding like an extension of one's arm, with an exceptionally wide range of variable techniques."
+    qcReviewedText: "A Qimen weapon made by hinging nine iron whips together; when infused with Inner Power, it can be both rigid and flexible, responding like an extension of one's arm, with an exceptionally wide range of variable techniques."
     qcStatus: Passed
     qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "102,奇门,1,海叟钩法,本是海边船夫以铁钩捕鱼之法，化为武学后招式奇特，别出心裁，非聪慧之人难以使用,11,1.1,奇门1;智力1,,智力1;奇门2;内力0.1,奇门15,\"4,0,0\",\"4,1,3\",拉近2,9,-1,0,心18,心10,,,skill4_1,,水滴-Target-Grid-Happen,对刺,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -973,13 +970,11 @@
   splits:
   - split: 4
     text: "一套使用铁扇的奇门武功，其招式进退有据，儒雅非凡，劲风绵绵不绝，可达数尺之远"
-    translated: "A set of peculiar martial arts using a metal fan. The movements are precise and refined, with a continuous gentle breeze that can reach several feet away."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "A set of peculiar martial arts using a metal fan. The movements are precise and refined, with a continuous gentle breeze that can reach several feet away."
-    qcTranslated: "A set of unconventional martial arts employing a metal fan. The techniques are grounded in principle and exceptionally refined, with a ceaseless surge of wind force that can reach several feet away."
-    qcStatus: Corrected
-    qcQualityScore: 82
+    translated: "A Qimen martial arts style using iron fans, with moves that are well‑grounded in offense and defense, elegant and extraordinary, generating continuous gusts of wind reaching several feet away."
+    qcReviewedText: "A Qimen martial arts style using iron fans, with moves that are well‑grounded in offense and defense, elegant and extraordinary, generating continuous gusts of wind reaching several feet away."
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "106,奇门,1,闪电五连鞭,马姓道人修习拂尘功时，意外创出的一套飘忽若闪电的鞭法，以虚招为主，因此精妙有余而威力不足,3,0.6,奇门1;灵巧1,,灵巧1;奇门2;内力0.1,奇门5;灵巧5,\"0,1,1\",\"0,0,0\",雷电0.1;连击0.1;疲劳0.1,5,-1,0,腹18,腹10,,,skill4_5,,磁暴-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1067,13 +1062,11 @@
   splits:
   - split: 4
     text: "状如莲花的奇门暗器，其花瓣边缘锋利无比，可一齐飞射而出，攻击周遭敌人"
-    translated: "Lotus‑shaped Hidden Weapons, with their petal edges razor‑sharp, can be fired en masse to attack nearby enemies."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Lotus‑shaped Hidden Weapons, with their petal edges razor‑sharp, can be fired en masse to attack nearby enemies."
-    qcTranslated: "Lotus‑shaped Hidden Weapons, with their petal edges razor‑sharp, can be fired en masse to attack nearby enemies"
-    qcStatus: Corrected
-    qcQualityScore: 92
+    translated: "A Qimen hidden weapon shaped like a lotus, with its petal edges razor‑sharp, can all fly out together to attack nearby enemies."
+    qcReviewedText: "A Qimen hidden weapon shaped like a lotus, with its petal edges razor‑sharp, can all fly out together to attack nearby enemies."
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "116,射术,1,飞手戟,仿照手戟制成的暗器，可作近身格斗之用，关键时刻掷出，威力也不容小觑,13,1,射术1;体质1,,体质1;射术2;内力0.1,射术15;体质10,\"0,1,2\",\"0,0,0\",压制0.02,11,-1,0,头19,头5,,,skill5_0,6,劈砍_灰震地-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1813,13 +1806,11 @@
   splits:
   - split: 4
     text: "以奇门遁甲中的生死八门之法计算飞刀射击的方位，可以缩小乃至封死敌人的躲避空档"
-    translated: "Calculating the direction for throwing a dart using the Life and Death Eight Doors method from the I Ching can narrow down or even block an enemy's dodge options."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Calculating the direction for throwing a dart using the Life and Death Eight Doors method from the I Ching can narrow down or even block an enemy's dodge options."
-    qcTranslated: "Calculating the firing direction of a thrown knife using the Life and Death Eight Doors method from Qimen Dunjia can narrow down or even seal off an enemy's escape gaps"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    translated: "Using the life and death Eight Doors techniques from Qimen Dunjia to calculate the trajectory of throwing knives can narrow down, or even close off, an enemy's evasion window."
+    qcReviewedText: "Using the life and death Eight Doors techniques from Qimen Dunjia to calculate the trajectory of throwing knives can narrow down, or even close off, an enemy's evasion window."
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "198,射术,2,乌叶镖,如同乌黑树叶一般的飞镖，颇有几分重量，在夜间或树林中射出，常人人难以察觉,16,0.9,射术2;意志1,,意志2;射术2;内力0.2,射术25;意志20,\"0,2,3\",\"0,0,0\",鹰眼0.08,14,-1,0,胸24,胸5,,,skill5_1,1-----1.1,爆叶-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2241,24 +2232,20 @@
   splits:
   - split: 4
     text: "如同一轮弯月的细长铁钩，一旦被其钩中便再难脱身，乃是苗疆抓捕恶徒之奇门兵刃"
-    translated: "Like a slender crescent moon, this long iron hook once clutched becomes almost impossible to escape. It is a unique weapon used in the Miaojiang region to capture villains."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Like a slender crescent moon, this long iron hook once clutched becomes almost impossible to escape. It is a unique weapon used in the Miaojiang region to capture villains."
-    qcTranslated: "Like a slender crescent moon, this long iron hook is nearly impossible to escape once hooked. It is a unique weapon used in the Miaojiang region to capture villains."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    translated: "Like a crescent moon, this slender iron hook is difficult to escape once it catches you, making it a unique and unorthodox weapon used by the Miao people to capture evildoers."
+    qcReviewedText: "Like a crescent moon, this slender iron hook is difficult to escape once it catches you, making it a unique and unorthodox weapon used by the Miao people to capture evildoers."
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "246,奇门,3,开天辟地斧,以巨斧迎头重劈的奇门招式，伴以怒吼之声増其声威，如盘古开天地般势不可挡,19,0.9,奇门潜力1;奇门1;体质1,,体质2;奇门3;内力0.2,奇门45;体质30,\"2,1,3\",\"0,0,1\",活血0.05;外伤0.05,21,-1,0,头12;足12,头5;足5,,,skill2_1,,地震波-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "以巨斧迎头重劈的奇门招式，伴以怒吼之声増其声威，如盘古开天地般势不可挡"
-    translated: "A powerful strike with a great axe delivered head‑on, accompanied by a roar to enhance its momentum, akin to the unstoppable force of Pangu splitting the heavens and earth."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "A powerful strike with a great axe delivered head‑on, accompanied by a roar to enhance its momentum, akin to the unstoppable force of Pangu splitting the heavens and earth."
-    qcTranslated: "A bizarre technique delivering a heavy head‑on strike with a giant axe, accompanied by a roar to boost its intimidation, unstoppable like Pangu opening the heavens and earth."
-    qcStatus: Corrected
+    translated: "A Qimen technique wielded with a massive axe, a powerful strike to the head accompanied by a roar, increasing its ferocity, like Pangu splitting the heavens and earth."
+    qcReviewedText: "A Qimen technique wielded with a massive axe, a powerful strike to the head accompanied by a roar, increasing its ferocity, like Pangu splitting the heavens and earth."
+    qcStatus: Passed
     qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "247,射术,3,雷公钻,带有螺旋形锋利棱角的铁钻，用铁锤击打射出，力道惊人，在中距离上可以贯穿甲胄，重伤敌人,19,1.1,射术潜力1;射术1;力道1,,力道2;射术3;内力0.2,射术50;力道35,\"4,0,0\",\"4,1,3\",破甲0.05;雷电0.05,22,-1,0,胸16;心6,胸2;心2,,,skill5_0,7-----1.1,穿刺_风电-Target-Grid-Happen;闪电-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -3733,12 +3720,11 @@
   splits:
   - split: 4
     text: "此棍法共分三大式，一式敬天，一式敬地，一式敬人，其中招式变换和内劲运用暗合奇门遁甲之法"
-    translated: "This staff technique is divided into three major forms: one for honoring heaven, one for honoring earth, and one for honoring people. Among them, the changes in movements and internal strength usage secretly align with the methods of Qi Men Dun Jia."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "This staff technique is divided into three major forms: one for honoring heaven, one for honoring earth, and one for honoring people. Among them, the changes in movements and internal strength usage secretly align with the methods of Qi Men Dun Jia."
+    translated: "This staff technique is divided into three major forms: one form in reverence of the heavens, one form in reverence of the earth, and one form in reverence of people. The changes in techniques and the internal energy usage subtly align with the principles of Qimen Dunjia."
+    qcReviewedText: "This staff technique is divided into three major forms: one form in reverence of the heavens, one form in reverence of the earth, and one form in reverence of people. The changes in techniques and the internal energy usage subtly align with the principles of Qimen Dunjia."
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "412,长兵,3,威武棍法,衙门升堂之时，左右衙役高呼威武之动作中领悟出的棍法，其路数威风凛凛，屏开八面，不时敲击地面发出巨响，震慑敌人心神,18,1,力道潜力1;长兵1;力道1,,力道3;长兵3;内力0.1,长兵45;力道25,\"1,1,1\",\"7,0,0\",动摇0.05;虚弱0.05,21,3,0,心8;足14,心8;足4,,,skill3_1,,地震波-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3770,12 +3756,12 @@
   - split: 4
     text: "相传是跛脚僧于睡梦中传授丐帮前辈的神妙拳法，出招时双眼微闭做昏昏欲睡状，招式空幻奇绝令人如坠梦中而不自知，待惊醒已身中数拳矣"
     translated: "It is said that the limping monk taught the mystical martial arts techniques of the Beggar Sect to its seniors during their dreams. When using these moves, they keep their eyes slightly closed, giving an appearance of drowsiness. While performing the gesture was fluid and graceful, they moved with such elusiveness that it was like watching a dream, and before one could realize it, they had already been struck by several punches."
-    qcRejectedCorrection: "It is said that the Limping Monk transmitted this marvelous fist technique to the"
-    qcFailureReason: "Glossary term '丐幫' (expected 'Beggar Sect') is missing."
-    qcQualityScore: 25
-    qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 2
-    qcRuleCheckFailureBaseline: "It is said that the limping monk taught the mystical martial arts techniques of the Beggar Sect to its seniors during their dreams. When using these moves, they keep their eyes slightly closed, giving an appearance of drowsiness. While performing the gesture was fluid and graceful, they moved with such elusiveness that it was like watching a dream, and before one could realize it, they had already been struck by several punches."
+    qcReviewedText: "It is said that the limping monk taught the mystical martial arts techniques of the Beggar Sect to its seniors during their dreams. When using these moves, they keep their eyes slightly closed, giving an appearance of drowsiness. While performing the gesture was fluid and graceful, they moved with such elusiveness that it was like watching a dream, and before one could realize it, they had already been struck by several punches."
+    qcTranslated: "It is said that a limping monk taught the Beggar Sect's seniors"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
 - raw: "416,拳掌,4,酒仙散手,丐帮前任帮主嗜酒如命，尝饮百杯不醉，并在随性挥舞间，创出这套以醉拳为基础的精妙拳法，其形散神不散，四面出击，潇洒快意，不负酒仙之名,22,1.2,拳掌潜力2;拳掌1;力道1,,力道4;拳掌2;内力0.1,拳掌55;力道55,\"2,1,2\",\"0,0,1\",压制0.06;断骨0.06;击退2,26,3,0,胸12;腹12,胸4;腹8,,,skill0_1,,墨爪狂-Target-Grid-Start;地面打击4-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4245,35 +4231,31 @@
   splits:
   - split: 4
     text: "以内劲扰乱敌方重心，使之跌倒的奇门咒术，茅山道士有时会用以戏弄功力低微的武林人士"
-    translated: "Using internal strength to disrupt an opponent's balance and cause them to fall, this unique magical technique is sometimes employed by Maoshan Daoists to playfully trick martial artists with weaker skills."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Using internal strength to disrupt an opponent's balance and cause them to fall, this unique magical technique is sometimes employed by Maoshan Daoists to playfully trick martial artists with weaker skills."
-    qcTranslated: "Using internal strength to disrupt an opponent's center of gravity and cause them to fall, this bizarre spell is sometimes employed by Maoshan Daoists to playfully trick Wulin figures with weak cultivation."
-    qcStatus: Corrected
+    translated: "A Qimen spell that disrupts an opponent's center of gravity with internal energy, causing them to fall. It is sometimes used by Maoshan Taoists to tease those with weaker martial arts abilities in Wulin."
+    qcReviewedText: "A Qimen spell that disrupts an opponent's center of gravity with internal energy, causing them to fall. It is sometimes used by Maoshan Taoists to tease those with weaker martial arts abilities in Wulin."
+    qcStatus: Passed
     qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "468,奇门,1,咽喉骨鲠法,扰乱对方内息的奇门咒术，命中者骨鲠在喉，芒刺在背，难以发挥全力,8,1,奇门1;意志1,,意志1;奇门2;内力0.2,奇门15;意志10,\"0,1,2\",\"0,0,0\",虚弱0.06;笨拙0.06,10,5,0,头15,,,,skill0_2,,符纸-Target-Grid-Happen;诅咒-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "扰乱对方内息的奇门咒术，命中者骨鲠在喉，芒刺在背，难以发挥全力"
-    translated: "Disturbing the opponent's Inner Qi with peculiar ritual magic; those hit find a bone caught in their throat and thorns on their back, making it hard for them to give their full effort."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Disturbing the opponent's Inner Qi with peculiar ritual magic; those hit find a bone caught in their throat and thorns on their back, making it hard for them to give their full effort."
-    qcTranslated: "Peculiar ritual magic that disturbs the opponent's Inner Qi; those hit by it feel a bone stuck in their throat and thorns on their backs, making it difficult to exert their full power."
+    translated: "Disruptive Unorthodox incantations that interfere with an opponent's Inner Qi, causing them to feel a fishbone stuck in the throat and needles in the back, making it difficult to fully exert their strength."
+    qcReviewedText: "Disruptive Unorthodox incantations that interfere with an opponent's Inner Qi, causing them to feel a fishbone stuck in the throat and needles in the back, making it difficult to fully exert their strength."
+    qcTranslated: "Qimen incantations that disrupt the opponent's Inner Qi, causing a sense of a fishbone stuck in the throat and thorns in the back, making it difficult to exert full strength."
     qcStatus: Corrected
-    qcQualityScore: 88
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: LostIdiom
 - raw: "469,奇门,1,定身咒,专攻下盘的奇门点穴之法，命中者腿脚僵劲不能动，如被仙法定身一般,2,1,经脉1;智力1,,智力2;奇门1;内力0.3,奇门10;智力15,\"0,1,1\",\"0,0,0\",腿足点穴0.09;雷电0.09,7,5,0,足14,,,,skill0_2,,符纸-Target-Grid-Happen;锁链-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "专攻下盘的奇门点穴之法，命中者腿脚僵劲不能动，如被仙法定身一般"
-    translated: "Focusing on lower body acupressure techniques, a successful hit would render the target's legs and feet stiff and immobile, much like being petrified by a divine curse."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Focusing on lower body acupressure techniques, a successful hit would render the target's legs and feet stiff and immobile, much like being petrified by a divine curse."
-    qcTranslated: "Focusing on Qimen acupressure techniques targeting the lower body, a hit would render the target's legs and feet stiff and immobile, as if bound by a divine spell."
-    qcStatus: Corrected
-    qcQualityScore: 88
+    translated: "Special techniques from Qimen acupoint striking that target the lower body; if hit, the legs become stiff and unable to move, as if immobilized by a magical spell."
+    qcReviewedText: "Special techniques from Qimen acupoint striking that target the lower body; if hit, the legs become stiff and unable to move, as if immobilized by a magical spell."
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "470,剑法,1,茅山道剑,茅山派剑法根基，招式谨守中庸之道，不疾不徐，不温不火，攻守有度，亦有调复内息之功效,11,0.9,剑法1;经脉1,,经脉2;剑法2;内力0.1,剑法10;经脉15,\"4,0,0\",\"4,1,3\",调息0.06,9,5,0,胸16,胸12,,,skill1_2,,八卦爆-Target-Grid-Happen;叶轮-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4325,24 +4307,20 @@
   splits:
   - split: 4
     text: "茅山派最为闻名的奇门功法，引动阴阳内息剧烈摩擦碰撞，产生雷电攻击敌人"
-    translated: "The most renowned odd‑door cultivation technique of the Maoshan Sect, inducing intense friction and collision of yin‑yang inner qi, producing lightning attacks on enemies"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "The most renowned odd‑door cultivation technique of the Maoshan Sect, inducing intense friction and collision of yin‑yang inner qi, producing lightning attacks on enemies"
-    qcTranslated: "The Maoshan Sect's most renowned Qimen cultivation technique, inducing intense friction and collision of yin‑yang Inner Qi to generate lightning attacks against enemies"
-    qcStatus: Corrected
+    translated: "The Maoshan Sect's most renowned Qimen technique, which harnesses the intense friction and collision of yin and yang Inner Qi to generate lightning attacks on enemies."
+    qcReviewedText: "The Maoshan Sect's most renowned Qimen technique, which harnesses the intense friction and collision of yin and yang Inner Qi to generate lightning attacks on enemies."
+    qcStatus: Passed
     qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "476,奇门,2,勾魂咒,以内息扰乱敌人心脉，使其神智混乱，敌我不分的奇门咒术,3,1,奇门1;灵巧1;意志1,,意志3;奇门1;内力0.3,奇门30;意志25,\"1,1,1\",\"0,0,0\",混乱0.24,12,5,0,心17,,,,skill0_2,,符纸-Target-Grid-Happen;黑爆-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "以内息扰乱敌人心脉，使其神智混乱，敌我不分的奇门咒术"
-    translated: "Use inner qi to disrupt the enemy's vital meridians, causing confusion and losing sense of self in bizarre magical incantation."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Use inner qi to disrupt the enemy's vital meridians, causing confusion and losing sense of self in bizarre magical incantation."
-    qcTranslated: "Use Inner Qi to disrupt the enemy's vital meridians, causing mental confusion and an inability to distinguish friend from foe, a bizarre Qimen incantation."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    translated: "A Qimen curse that disrupts an enemy's heart meridian with Inner Qi, causing confusion and blurring the line between friend and foe."
+    qcReviewedText: "A Qimen curse that disrupts an enemy's heart meridian with Inner Qi, causing confusion and blurring the line between friend and foe."
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "477,奇门,2,天罡咒,念动咒文同时运转内息，能在短时间内使硬功防御突飞猛进的奇门咒术,-4,0.9,奇门1;力道1;体质1,,体质0.2;奇门0.2;内力0.01;医术0.2,奇门25;体质15,\"1,0,1\",\"0,0,0\",铜皮0.24,11,5,1,,,,,skill0_2,,光圈-Target-Hip-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5025,12 +5003,11 @@
   splits:
   - split: 4
     text: "结合毒烟迷雾，传音催眠和邪门真气等法，使心智不坚定者困惑迷狂，坠入幻境的五毒教奇门秘法"
-    translated: "Using the mist of poisonous smoke, voice‑induced hypnosis, and heretical True Qi, this bizarre technique from the Five Poisons Sect confounds and drives mad those with unstable minds, causing them to fall into a hallucinatory state."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Using the mist of poisonous smoke, voice‑induced hypnosis, and heretical True Qi, this bizarre technique from the Five Poisons Sect confounds and drives mad those with unstable minds, causing them to fall into a hallucinatory state."
+    translated: "Using toxic smoke and fog, voice‑induced hypnosis, and unorthodox True Qi techniques, the Five Poisons Sect's Qimen secret methods confuse and drive the mentally weak into madness, leading them to fall into a delusional realm."
+    qcReviewedText: "Using toxic smoke and fog, voice‑induced hypnosis, and unorthodox True Qi techniques, the Five Poisons Sect's Qimen secret methods confuse and drive the mentally weak into madness, leading them to fall into a delusional realm."
     qcStatus: Passed
-    qcQualityScore: 100
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "554,拳掌,3,千蛛万毒手,驱使斑斓花蛛吸食自身血液，同时将蛛毒缓缓引入体内的奇功，出手时毒素聚集指尖，皮肤也会变得五彩斑斓，诡异莫名，触之者立中奇毒,18,1.2,拳掌潜力1;拳掌1;意志1,,意志2;拳掌2;毒术3,拳掌40;意志35;毒术40,\"1,1,1\",\"0,0,0\",毒素0.1;不愈0.06,18,7,0,手15;胸6,手9;胸4,,,skill0_0,,墨染-Target-Grid-Happen;血爪卷-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5044,12 +5021,13 @@
   splits:
   - split: 4
     text: "含有五毒教奇门热毒的掌法，命中后会留下鲜红色掌印，此热毒入体会使人血脉膨胀，五内俱焚，功力孱弱者更是自燃当场"
-    translated: "Palm techniques containing Five Poisons Sect's peculiar scorching poison will leave bright red palm prints upon hitting. This poison, once absorbed by the body, causes blood vessels to swell and internal organs to ignite. Those with weaker cultivation may even spontaneously combust on the spot."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Palm techniques containing Five Poisons Sect's peculiar scorching poison will leave bright red palm prints upon hitting. This poison, once absorbed by the body, causes blood vessels to swell and internal organs to ignite. Those with weaker cultivation may even spontaneously combust on the spot."
-    qcStatus: Passed
-    qcQualityScore: 95
+    translated: "A palm technique containing the Five Poisons Sect's Unorthodox Heat Poison leaves a bright red palm mark. This heat poison, upon entering the body, causes the blood vessels to swell and internal organs to burn, severely weakening one's abilities and causing spontaneous combustion."
+    qcReviewedText: "A palm technique containing the Five Poisons Sect's Unorthodox Heat Poison leaves a bright red palm mark. This heat poison, upon entering the body, causes the blood vessels to swell and internal organs to burn, severely weakening one's abilities and causing spontaneous combustion."
+    qcTranslated: "A palm technique containing the Five Poisons Sect's Qimen Heat Poison leaves a bright red palm mark upon hit. This heat poison, upon entering the body, causes"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DroppedContent
 - raw: "556,射术,3,孟婆散,可迅速麻痹心脉大脑之五毒教特制迷药，中者如饮孟婆汤般，迷离惝恍，神情恍惚，乃至当场昏迷不醒，丧失记忆,10,0.9,毒术潜力1;毒术1;智力1,,智力2;射术1;毒术4,射术35;智力25;毒术45,\"2,1,2\",\"0,0,1\",毒素0.08;震脑0.06;混乱0.06,14,7,0,头18;心8,头3;心1,,,skill5_0,11-----1.15,毒素-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -5602,12 +5580,11 @@
   splits:
   - split: 4
     text: "以人体为画布，以穴位为着墨之处的奇门绘画武功，能快速点指敌人多处穴位"
-    translated: "A unique martial art that uses the human body as a canvas and acupoints as the focal points, allowing for rapid pinpoint strikes to multiple acupressure points on an enemy."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "A unique martial art that uses the human body as a canvas and acupoints as the focal points, allowing for rapid pinpoint strikes to multiple acupressure points on an enemy."
+    translated: "A Qimen painting martial art that uses the human body as a canvas and acupoints as the areas of ink, allowing for rapid strikes to multiple acupoints on an opponent."
+    qcReviewedText: "A Qimen painting martial art that uses the human body as a canvas and acupoints as the areas of ink, allowing for rapid strikes to multiple acupoints on an opponent."
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "618,剑法,1,天罗地网剑,剑光铺天盖地笼罩敌人周身，看似颇具威力之剑法，然而并不求杀伤目标，而是以限制其行动为目的,8,1,剑法1;灵巧1,,灵巧1;剑法3;内力0.1,剑法20;灵巧10,\"1,1,1\",\"7,0,0\",腿足点穴0.06;笨拙0.06,9,9,0,足14,足14,,,skill1_2,,三连剑影小-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5743,13 +5720,11 @@
   splits:
   - split: 4
     text: "精妙奇门笔法，笔尖上下翻飞，轻舞慢点，残影在空中生出纷繁绚烂各式花卉，可谓华丽非常"
-    translated: "Elegant and intricate calligraphy strokes, the pen tips dance swiftly in the air. Slow yet graceful movements create a myriad of vivid flowers in their fleeting shadows, truly a breathtaking display."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Elegant and intricate calligraphy strokes, the pen tips dance swiftly in the air. Slow yet graceful movements create a myriad of vivid flowers in their fleeting shadows, truly a breathtaking display."
-    qcTranslated: "Elegant and intricate brushwork, the pen tip dancing up and down, light and slow, its afterimages blooming into a myriad of vivid flowers in the air, truly a breathtaking display."
-    qcStatus: Corrected
+    translated: "With exquisite Qimen brushwork, the brush tip danced up and down, gracefully creating intricate patterns that left behind a trail of vivid, elaborate floral images in the air, truly a marvel of beauty."
+    qcReviewedText: "With exquisite Qimen brushwork, the brush tip danced up and down, gracefully creating intricate patterns that left behind a trail of vivid, elaborate floral images in the air, truly a marvel of beauty."
+    qcStatus: Passed
     qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "634,剑法,3,阴阳奇剑,遵循阴阳相生相克之理的奇特剑法，其招式一正一反，一攻一守，不断交错转换，每一剑都符合情理却又出人意料,19,1.1,剑法潜力1;剑法1;灵巧1,,灵巧3;剑法3;内力0.2,剑法50;灵巧35,\"3,1,2\",\"7,0,0\",连绵0.05;断招0.05,23,9,0,手12;足12,手6;足6,,,skill1_2,,墨旋-Target-Grid-Start;火龙卷-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6179,12 +6154,10 @@
   - split: 4
     text: "颇为艰深的罗汉堂秘传内功，其内劲浑厚，吐息澎湃，真气游走全身，以精炼体魄兼得硬功修习之效，可谓一举两得之奇功"
     translated: "Quite profound, the secret Neigong of the Arhat Hall, its internal strength is thick and surging, True Qi circulates throughout the body, refining Resilience while also practicing hard skills, truly a skill that achieves two benefits at once."
-    qcRejectedCorrection: "A profound secret Neigong of the Arhat Hall, its internal strength is thick and surging, True Qi circulates throughout the"
-    qcFailureReason: "Glossary term '体魄' (expected 'Resilience') is missing."
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 2
-    qcRuleCheckFailureBaseline: "Quite profound, the secret Neigong of the Arhat Hall, its internal strength is thick and surging, True Qi circulates throughout the body, refining Resilience while also practicing hard skills, truly a skill that achieves two benefits at once."
+    qcReviewedText: "Quite profound, the secret Neigong of the Arhat Hall, its internal strength is thick and surging, True Qi circulates throughout the body, refining Resilience while also practicing hard skills, truly a skill that achieves two benefits at once."
+    qcStatus: Passed
+    qcQualityScore: 92
+    qcDefectCategory: None
 - raw: "681,轻功,4,无色无相身,少林至高身法，需破除执念，心静止水，目中空无一物，其身形如梦幻泡影，如露亦如电，稍纵即逝，无可捉摸,,1.1,轻功潜力2;轻功1;经脉1,轻功15;经脉15;无敌0.02;慧眼0.04;负面抗性0.08,,轻功60;经脉45,,,,0,10,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6369,13 +6342,11 @@
   splits:
   - split: 4
     text: "在九宫格阵中按五行生克移动之法，能够提升修习者下盘灵活以及奇门数术功力"
-    translated: "Following the Five Elements generating and overcoming method in the Nine Palaces array can enhance a practitioner's lower body flexibility and prowess in odd door numerology."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Following the Five Elements generating and overcoming method in the Nine Palaces array can enhance a practitioner's lower body flexibility and prowess in odd door numerology."
-    qcTranslated: "Following the Five Elements generating and overcoming method in the Nine Palaces array can enhance a practitioner's lower body agility and Qimen numerology prowess"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "The method of moving according to the generating and overcoming relationships of the five elements within the nine‑square grid can enhance a practitioner's lower‑body flexibility and Qimen numerological skills."
+    qcReviewedText: "The method of moving according to the generating and overcoming relationships of the five elements within the nine‑square grid can enhance a practitioner's lower‑body flexibility and Qimen numerological skills."
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "702,绝技,1,子午盘功,在空气流通之清静室内，屏息凝神，盘腿打坐之法，有修身养性，锻炼心智之功效,,1,绝技1;灵巧1,绝技6;智力6;疲劳0.03;蓄力0.03,,绝技15;智力10;灵巧5,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7166,6 +7137,10 @@
   - split: 4
     text: "蓬莱派第三代掌门凌霄子在海边练剑时，曾目睹海市蜃楼间仙女舞剑，便默记下招式，最终创出这套碧海飞仙剑，其招飘逸绝伦，使人如见飞仙之丰神绰约。"
     translated: "Third Generation Sect Leader Lingxiaozi of the Penglai Sect once witnessed fairy sword dancing in a mirage over the sea and silently memorized the moves, eventually creating the Azure Sea Flying Immortal Sword Technique. Its techniques are graceful and unparalleled, making one feel as if they are seeing the ethereal beauty of flying immortals."
+    qcReviewedText: "Third Generation Sect Leader Lingxiaozi of the Penglai Sect once witnessed fairy sword dancing in a mirage over the sea and silently memorized the moves, eventually creating the Azure Sea Flying Immortal Sword Technique. Its techniques are graceful and unparalleled, making one feel as if they are seeing the ethereal beauty of flying immortals."
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "789,剑法,4,纯阳剑法,相传是纯阳祖师吕洞宾所创之剑术，招式沉雄古逸，力道绵绵，使此术者当翦除邪恶，斩杀凶顽，消除浮世不平之事。,22,1.1,剑法潜力2;剑法1;经脉1,,经脉3;剑法4;内力0.1,剑法55;经脉50,\"4,0,0\",\"4,1,5\",内伤0.05;调息0.05;截脉0.05,27,13,0,头12;胸12,头6;胸6,,,skill1_0,,火焰爆发-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7179,13 +7154,11 @@
   splits:
   - split: 4
     text: "八仙之首铁拐李所传奇门，有劈金碎石之威能，其中更有将铁拐一击掷出，直捣黄龙，再以内劲吸回手中的神奇招式"
-    translated: "The legendary school of the first among the Eight Immortals, Iron Crutch Li, boasts the prowess to split gold and shatter rocks. Among its techniques is one where Iron Crutch is thrown out and directly pierces the imperial heart before being drawn back by inner strength into his hand."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "The legendary school of the first among the Eight Immortals, Iron Crutch Li, boasts the prowess to split gold and shatter rocks. Among its techniques is one where Iron Crutch is thrown out and directly pierces the imperial heart before being drawn back by inner strength into his hand."
-    qcTranslated: "The legendary school of the first among the Eight Immortals, Iron Crutch Li, boasts the prowess to split gold and shatter rocks. Among its techniques is a miraculous move where Iron Crutch is thrown out, strikes directly at the Yellow Dragon, and is then drawn back into his hand by inner strength."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    translated: "According to the legendary Qimen of the Taoist immortal Iron Crutch Li, it has the power to cleave through gold and shatter stones. Among its techniques is a miraculous move where he hurls his crutch with a strike, aiming straight for the target, and then uses his inner strength to pull it back into his hand."
+    qcReviewedText: "According to the legendary Qimen of the Taoist immortal Iron Crutch Li, it has the power to cleave through gold and shatter stones. Among its techniques is a miraculous move where he hurls his crutch with a strike, aiming straight for the target, and then uses his inner strength to pull it back into his hand."
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "791,奇门,4,五尺混天绫,一卷平平无奇之蚕丝绫布，在深厚内力和独特手法挥舞之下，迎风招展，遮天蔽日，可缠卷兵刃，绑缚敌身，其曲折回环间如有灵性,18,0.9,经脉潜力2;奇门1;意志1,,经脉5;奇门2;内力0.2,奇门50;经脉55,\"1,1,2\",\"7,0,0\",手臂点穴0.05;腿足点穴0.05;阻滞0.05,25,13,0,手9;足16,手9;足5,,,skill4_5,,冰龙卷-Target-Grid-Happen,鞭,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -7612,13 +7585,11 @@
   splits:
   - split: 4
     text: "以一双铁钩使出的奇门招法，左右开弓，龙飞凤舞，一旦武器或肢体被其钩住便再难挣脱"
-    translated: "Using a pair of iron hooks to perform strange techniques, attacking from both sides like dragons flying and phoenixes dancing; once hooked by the weapon or limb, it's nearly impossible to break free."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Using a pair of iron hooks to perform strange techniques, attacking from both sides like dragons flying and phoenixes dancing; once hooked by the weapon or limb, it's nearly impossible to break free."
-    qcTranslated: "Employing a pair of iron hooks with bizarre, unconventional moves, attacking from both sides in a style like dragons flying and phoenixes dancing; once a weapon or limb is hooked, it is nearly impossible to break free."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "Using unorthodox techniques delivered with iron hooks, they attack with equal skill in both directions, like dancing dragons and phoenixes. Once a weapon or limb is hooked, it is nearly impossible to escape."
+    qcReviewedText: "Using unorthodox techniques delivered with iron hooks, they attack with equal skill in both directions, like dancing dragons and phoenixes. Once a weapon or limb is hooked, it is nearly impossible to escape."
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "838,长兵,1,搬山铁耙功,铁耙本是常见松土之农具，挥舞起来却也是虎虎生风，威力惊人,14,0.9,长兵1;体质1,,体质3;长兵1,长兵10;体质15,\"4,0,0\",\"4,2,2\",压制0.04,11,15,0,足14,足12,,,skill3_1,,地面打击3-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7632,13 +7603,11 @@
   splits:
   - split: 4
     text: "崆峒派以奇门功夫闻名天下，此心法是专为此所创，其真气灵活多变，诡谲难测，配合各式奇门武功皆有妙效"
-    translated: "The Kongtong Sect is renowned worldwide for its amazing martial arts techniques. This heart method was specifically created for it, with True Qi that is flexible and ever‑changing, cunning and unpredictable. It proves highly effective when paired with various styles of amazing martial arts techniques."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "The Kongtong Sect is renowned worldwide for its amazing martial arts techniques. This heart method was specifically created for it, with True Qi that is flexible and ever‑changing, cunning and unpredictable. It proves highly effective when paired with various styles of amazing martial arts techniques."
-    qcTranslated: "The Kongtong Sect is renowned worldwide for its Qimen martial arts. This Heart Method was specifically created for this purpose; its True Qi is flexible and ever‑changing, deceptive and unpredictable. It yields remarkable effects when combined with various Qimen martial arts."
-    qcStatus: Corrected
-    qcQualityScore: 78
+    translated: "The Kongtong Sect is renowned for its Unorthodox martial arts. This Heart Method was created specifically for them; its True Qi is flexible and versatile, unpredictable and elusive, providing excellent effects when combined with various Unorthodox martial techniques."
+    qcReviewedText: "The Kongtong Sect is renowned for its Unorthodox martial arts. This Heart Method was created specifically for them; its True Qi is flexible and versatile, unpredictable and elusive, providing excellent effects when combined with various Unorthodox martial techniques."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "840,轻功,2,大鹏展翅,模仿山间大鹏将双臂大开，可在空中长时间滑翔的轻功法门，崆峒派弟子时常需用此身法在山头间快速移动,,1,轻功2;灵巧1,轻功9;灵巧9;压制0.04;反击0.04,,轻功25;灵巧25,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7777,13 +7746,11 @@
   splits:
   - split: 4
     text: "崆峒奇门高手所使的圆环形兵刃，可持于手中挥砍格挡，也可掷于空中回环飞舞，招式纷繁复杂变化无穷，功浅者使用反而容易划伤自己"
-    translated: "The round ring weapon used by experts in the Kongtong Strange Gate style can be wielded to slash and block, or thrown into the air to spin and fly in a complex array of movements. Those with lesser skill may accidentally injure themselves due to its intricacy."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "The round ring weapon used by experts in the Kongtong Strange Gate style can be wielded to slash and block, or thrown into the air to spin and fly in a complex array of movements. Those with lesser skill may accidentally injure themselves due to its intricacy."
-    qcTranslated: "The circular ring‑shaped weapon used by experts in the Kongtong Strange Gate style can be held in the hand to slash and block, or thrown into the air to fly in looping patterns. The techniques are intricate and complex, with endless variations, and those with shallow cultivation will easily injure themselves when using it."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "A circular weapon used by masters of Qimen from Kongtong, which can be wielded in hand to slash and parry, or thrown into the air to spin and fly. The techniques are intricate and varied, with practitioners of lower skill levels often injuring themselves instead."
+    qcReviewedText: "A circular weapon used by masters of Qimen from Kongtong, which can be wielded in hand to slash and parry, or thrown into the air to spin and fly. The techniques are intricate and varied, with practitioners of lower skill levels often injuring themselves instead."
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "856,长兵,4,玉石俱焚矛,西凉死士所创，但求同归于尽的悲壮招式，虽毫无防御且不留后手，其一往无前之势却能摧毁敌人意志，颇有置之死地而后生之意,23,0.9,长兵潜力2;长兵1;体质1,,体质3;长兵4,长兵50;体质50,\"4,0,0\",\"4,2,4\",死战0.05;不屈0.05;不愈0.05,27,15,0,胸16;腹9,胸6;腹4,,,skill3_0,,血爪狂-Target-Grid-Happen;喷血迹-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7913,13 +7880,11 @@
   splits:
   - split: 4
     text: "试图以奇门数术之法，解释上天意志的墨家法门，若以此法掌控内力运行，统领周身经脉，修为便能获得精进"
-    translated: "Attempting to explain the will of heaven using the methods of Lo Shu and I Ching, this Mohist technique seeks to control Inner Power through these means, guiding the body's meridians. Thus, cultivation can achieve advancement."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Attempting to explain the will of heaven using the methods of Lo Shu and I Ching, this Mohist technique seeks to control Inner Power through these means, guiding the body's meridians. Thus, cultivation can achieve advancement."
-    qcTranslated: "A Mohist technique that attempts to interpret the will of heaven through the methods of Qi Men and Shu Shu; by using this method to control the flow of Inner Power and govern the body's meridians, cultivation can advance."
-    qcStatus: Corrected
-    qcQualityScore: 88
+    translated: "Using the Unorthodox methods to interpret the will of heaven, the Mohist technique attempts to control the flow of Inner Power and govern the body's meridians, thereby advancing one's cultivation."
+    qcReviewedText: "Using the Unorthodox methods to interpret the will of heaven, the Mohist technique attempts to control the flow of Inner Power and govern the body's meridians, thereby advancing one's cultivation."
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "871,轻功,2,八阵图步,自孔明八阵图中演化而来的步法，需结合兵法和周易之理，决定下一步行走方位，若一步算错则步步皆错,,1.1,轻功2;智力1,轻功9;智力9;急速0.04;迟缓0.04,,轻功30;智力25,,,,0,16,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8372,7 +8337,7 @@
     text: "源于天竺的金刚宗杵形法器，象征所向无敌、无坚不摧的智慧与佛法，可斩断烦恼，祛除邪魔"
     translated: "A weapon from the Vajrayana school of Kasmira, symbolizing invincible and indestructible wisdom and Buddhism that can cut through suffering and expel evil spirits."
     qcReviewedText: "A weapon from the Vajrayana school of Kasmira, symbolizing invincible and indestructible wisdom and Buddhism that can cut through suffering and expel evil spirits."
-    qcTranslated: "A vajra-shaped ritual instrument of the Vajra sect originating from India, symbolizing the invincible and indestructible wisdom and Dharma that can cut through afflictions and expel demons."
+    qcTranslated: "A vajra‑shaped ritual instrument of the Vajra sect originating from India, symbolizing the invincible and indestructible wisdom and Dharma that can cut through afflictions and expel demons."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -8381,13 +8346,13 @@
   splits:
   - split: 4
     text: "产自天竺的圆轮形奇门兵刃，平时可作祭祀法器，战斗时可大力挥舞格挡，或投掷攻敌"
-    translated: "A circular wheeled mystical weapon from Gandhara. In peace, it serves as a sacrificial artifact. During battle, it can be powerfully swung for blocking or thrown to attack enemies."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "A circular wheeled mystical weapon from Gandhara. In peace, it serves as a sacrificial artifact. During battle, it can be powerfully swung for blocking or thrown to attack enemies."
-    qcTranslated: "A circular, wheel‑shaped mystical weapon from India. In peacetime, it serves as a ritual artifact; in battle, it can be powerfully swung to block or thrown to attack enemies."
+    translated: "A circular Qimen weapon from India, which can be used as a ritual implement in daily life, and in battle, it can be swung and used to block or thrown to attack."
+    qcReviewedText: "A circular Qimen weapon from India, which can be used as a ritual implement in daily life, and in battle, it can be swung and used to block or thrown to attack."
+    qcTranslated: "A circular Qimen weapon from Tianzhu. Normally used as a ritual implement, in battle it can be swung with great force to block or thrown to attack the enemy."
     qcStatus: Corrected
-    qcQualityScore: 92
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: LostIdiom
 - raw: "924,刀法,0,持戒刀法,以防守为重的刀法，一招一式皆遵循规制，严谨板正,10,0.8,刀法1,,力道2;刀法2,刀法5,\"4,0,0\",\"4,1,2\",铜皮0.05,4,18,0,头13,头12,,,skill2_1,,十字斩-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8733,6 +8698,12 @@
   - split: 4
     text: "天山派独门心法，需在寒冷之处以经脉吸纳寒气，借以苦修阴性内功，意志不坚者多难以维持，真可谓不经一番寒彻骨"
     translated: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment."
+    qcReviewedText: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians. This aids in cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to endure, truly reflecting that one must withstand severe cold before achieving enlightenment.,How do we get the fragrance of plum blossoms to greet us?"
+    qcTranslated: "The exclusive Heart Method of the Tianshan Sect requires practitioners to absorb cold qi in frigid places through their meridians, thereby cultivating Yin Neigong through arduous training. Those with weak willpower often struggle to maintain it. Truly, without enduring the penetrating cold, how can one obtain the fragrance of plum blossoms?"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - split: 4
     subIndex: 1
     text: "怎得梅花扑鼻香"
@@ -8957,11 +8928,12 @@
   - split: 4
     text: "剑势优美繁复，至阴至柔，嫦娥起舞，清影缭绕，令人如坠广寒宫中，有彻骨透心之意，唯有天山派资质最高之女弟子方能修习"
     translated: "The sword technique was elegant and intricate, extremely yin and soft. Like Chang'e dancing, the clear shadow seemed to envelop one, making it feel as if one were in the Cold Palace of the Moon. There was a chilling yet penetrating essence to it. Only those disciples with the highest abilities from the Tianshan Sect could practice this. The female disciples they considered to be of the highest caliber were the ones chosen."
+    qcReviewedText: "The sword technique was elegant and intricate, extremely yin and soft. Like Chang'e dancing, the clear shadow seemed to envelop one, making it feel as if one were in the Cold Palace of the Moon. There was a chilling yet penetrating essence to it. Only those disciples with the highest abilities from the Tianshan Sect could practice this. The female disciples they considered to be of the highest caliber were the ones chosen."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
     qcRejectedCorrection: "The sword technique was elegant and intricate, extremely yin and soft. Like Chang'e dancing, the clear shadow seemed to envelop one, making"
     qcFailureReason: "Glossary term '天山' (expected 'Tianshan') is missing."
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "The sword technique was elegant and intricate, extremely yin and soft. Like Chang'e dancing, the clear shadow seemed to envelop one, making it feel as if one were in the Cold Palace of the Moon. There was a chilling yet penetrating essence to it. Only those disciples with the highest abilities from the Tianshan Sect could practice this. The female disciples they considered to be of the highest caliber were the ones chosen."
 - raw: "988,剑法,4,九霄冲天剑,剑势简雅古朴，至阳至刚，内劲炙热，烈火烁金，其气直贯九霄云外，有冲天动地之能，唯有天山派资质最高之男弟子方能修习,22,1.2,剑法潜力2;剑法1;经脉1,,经脉4;剑法3;内力0.1,剑法60;经脉55,\"4,0,0\",\"4,1,6\",灼烧0.06;恢复0.06,26,19,0,头10;胸15,头4;胸6,,,skill1_0,,岩浆喷-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
@@ -9164,23 +9136,20 @@
   splits:
   - split: 4
     text: "以铁扇为兵刃的基础奇门功法"
-    translated: "Basic chi kung technique using the iron fan as a weapon"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Basic chi kung technique using the iron fan as a weapon"
-    qcTranslated: "Basic Qimen technique using the iron fan as a weapon"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "The fundamental Qimen martial arts technique using the iron fan as a weapon"
+    qcReviewedText: "The fundamental Qimen martial arts technique using the iron fan as a weapon"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "1011,奇门,0,点穴笔,初习武艺者用于辨明穴位的奇门功法,8,1,智力1,,智力3;奇门2;内力0.2,智力5,\"4,0,0\",\"4,1,3\",头颈点穴0.06,3,-1,0,腹16,腹8,,,skill4_0,,墨劈-Target-Grid-Happen,笔,Distance,FALSE,0,0"
   splits:
   - split: 4
     text: "初习武艺者用于辨明穴位的奇门功法"
-    translated: "Martial arts technique for identifying acupoints used by beginners"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Martial arts technique for identifying acupoints used by beginners"
+    translated: "Beginner martial artists use this unorthodox technique to identify acupuncture points."
+    qcReviewedText: "Beginner martial artists use this unorthodox technique to identify acupuncture points."
     qcStatus: Passed
-    qcQualityScore: 100
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "1012,射术,0,飞箭要诀,一门使用羽箭的基础手法,9,1,射术1,,灵巧1;射术2;内力0.2,灵巧5,\"0,2,4\",\"0,0,0\",鹰眼0.06,4,-1,0,足20,足3,,,skill5_2,0-----0.7,劈砍-Target-Grid-Happen,弓,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9484,13 +9453,11 @@
   splits:
   - split: 4
     text: "以铁笔描绘九州山河化作的奇门武学，修习者需胸怀天下方能使出真意，否则徒具其形，不得其神"
-    translated: "Penning the wonders of Jiuzhou's landscapes with an iron pen, practitioners must harbor the world in their hearts to truly bring out the essence; otherwise, they will merely mimic its form without capturing its spirit."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Penning the wonders of Jiuzhou's landscapes with an iron pen, practitioners must harbor the world in their hearts to truly bring out the essence; otherwise, they will merely mimic its form without capturing its spirit."
-    qcTranslated: "A martial art depicting the landscapes of Jiuzhou with an iron brush. Practitioners must harbor the world in their hearts to wield its true meaning; otherwise, they will merely possess its form without capturing its spirit."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    translated: "Using an iron brush to depict the mountains and rivers of the Nine Provinces as Qimen martial arts, practitioners must have a heart for the world to unleash its true essence; otherwise, they merely mimic its form without capturing its spirit."
+    qcReviewedText: "Using an iron brush to depict the mountains and rivers of the Nine Provinces as Qimen martial arts, practitioners must have a heart for the world to unleash its true essence; otherwise, they merely mimic its form without capturing its spirit."
+    qcStatus: Passed
+    qcQualityScore: 92
+    qcDefectCategory: None
 - raw: "1047,奇门,5,真龙霹雳鞭,此鞭法之力量与速度均霸道至极，一鞭挥出如龙吟九天，声闻数十里，旁人皆以为是真龙现世，故而得名,24,1.2,奇门潜力1;灵巧潜力1;体质潜力1;体质2,,灵巧2;体质3;奇门2;内力0.3,奇门80;体质60;灵巧40,\"2,1,2\",\"3,0,2\",坚毅0.08;重碾0.08,32,-1,0,胸12;腹14,胸6;腹9,,,skill4_4,,腾龙-Target-Grid-Start;劈砍_黄裂地-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4

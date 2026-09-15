@@ -298,20 +298,14 @@
 - raw: "<b>奇门</b>\\n提升奇门伤害\\n降低受到的奇门伤害"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "<b>Qi Men </b>\\nBoost Oddly Gate Damage \\nReduce damage from qimen attacks"
-    qcTranslated: "<b>Qi Men</b>\\nBoosts Qi Men damage\\nReduces Qi Men damage taken"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    translated: "Qimen"
+    qcReviewedText: "<b>Qimen </b>\\nIncrease Qimen damage \\nReduce damage from qimen attacks"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "提升奇门伤害"
-    translated: "Boost Oddly Gate Damage"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Increase Qimen damage"
   - subIndex: 2
     text: "降低受到的奇门伤害"
     translated: "Reduce damage from qimen attacks"
@@ -1265,6 +1259,12 @@
   splits:
   - text: "本游戏是一款武侠题材的开放世界游戏，适用于16周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。"
     translated: "This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance."
+    qcReviewedText: "1. This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features a ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real‑name authentication system for users. Minors will be subject to the following management measures.：\\n<color=#BC1717>  〇 Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n  〇 This game is only available for minors to play for up to 1 hours of online gaming service from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies.\\n"
+    qcTranslated: "1. This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real‑name authentication system for users. Minors will be subject to the following management measures:\\n<color=#BC1717>  〇 Users under 8 years old cannot make in‑game purchases; users aged 8 and above but under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users aged 16 and above can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n 〇 This game provides online gaming services to minors only from 1 to 20 hours daily for up to 21 hours on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。"
     translated: "The game features a ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations."
@@ -3571,7 +3571,7 @@
   - text: "取寻仙问道之“仙”字，与陶弘景“心标象外，志结霞门”之“霞”字，"
     translated: "Take the character xian from the quest for immortality and questions of dao, and the xia character from Tao Hongjing's heart marked beyond form, will tied to the clouds."
     qcReviewedText: "Take the character xian from the quest for immortality and questions of dao, and the xia character from Tao Hongjing's heart marked beyond form, will tied to the clouds."
-    qcTranslated: "Take the character \"immortal\" from \"seeking the immortal path of the Dao,\" and the character \"rainbow\" from Tao Hongjing's \"mind anchored beyond form, will bound to the rainbow gate.\""
+    qcTranslated: "Take the character immortal from seeking the immortal path of the Dao, and the character rainbow from Tao Hongjing's mind anchored beyond form, will bound to the rainbow gate."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: None
@@ -4115,36 +4115,28 @@
 - raw: "奇门"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men"
+    translated: "Qimen"
+    qcReviewedText: "Qimen"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "奇门+5"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men+5"
-    qcTranslated: "Secret Gate+5"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    translated: "Qimen"
+    qcReviewedText: "Qimen+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+5"
 - raw: "奇门+5\\n炼药+5"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men+5 \\nAlchemy+5"
+    translated: "Qimen"
+    qcReviewedText: "Qimen+5 \\nAlchemy+5"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: None
   - subIndex: 1
     text: "炼药"
@@ -4154,12 +4146,10 @@
 - raw: "奇门武器"
   splits:
   - text: "奇门武器"
-    translated: "Mystic Weapon"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Mystic Weapon"
+    translated: "Unorthodox weapons"
+    qcReviewedText: "Unorthodox weapons"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 90
     qcDefectCategory: None
 - raw: "奈何天妒英才，不久竟突发恶疾，中道崩殂。"
   splits:
@@ -5239,6 +5229,12 @@
   splits:
   - text: "恶名"
     translated: "Infamy"
+    qcReviewedText: "Infamy\\n♦For affection points/Trading activities causing negative impacts will result in a wanted notice if they exceed 50.\\n♦Town center infamy +100%, town perimeter green safe zone+50%。\\n♦Attacking fellow disciples or family and friends will cause your infamy to increase exponentially.\\n♦Decreases slowly over time and can be reduced through patrolling sentry posts or performing acts of chivalry. It can also be cleared by paying a fine to the official government."
+    qcTranslated: "Infamy\\n♦Negative impacts on affinity and trading; exceeding 50. results in a wanted status.\\n♦Infamy gain is +100% in town centers and +50% in the green safe zones surrounding towns.\\n♦Attacking fellow disciples or relatives and friends will cause Infamy to increase exponentially.\\n♦Decays slowly each month. Can be reduced by patrolling Sentry Posts or performing acts of chivalry, or cleared by paying a fine to the authorities."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "对好感"
     translated: "For affection points"
@@ -6965,6 +6961,12 @@
   splits:
   - text: "民心"
     translated: "Public sentiment"
+    qcReviewedText: "Public sentiment\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦While high morale increases the number of commissions and lowers their difficulty, low morale decreases the number of commissions and raises their difficulty.\\n♦Affects the defense strength in sieges"
+    qcTranslated: "Public sentiment\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity +10%\\n  Greater than 80：Productivity +15%\\n  Greater than 90：Productivity +20%\\n♦High morale increases the number of commissions and lowers their difficulty; low morale decreases the number of commissions and raises their difficulty.\\n♦Affects the defense strength in sieges"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "低于50"
     translated: "Lower than 50"
@@ -7041,6 +7043,12 @@
   splits:
   - text: "治安"
     translated: "Public safety"
+    qcReviewedText: "Public safety\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦High stability increases the quantity of goods and lowers buying and selling prices; low stability decreases the quantity of goods and raises buying and selling prices.\\n♦Affects the number of defenders in a siege battle."
+    qcTranslated: "Public safety\\n♦Below 50: Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Above 70: Production efficiency +10%\\n  Above 80: Production efficiency +15%\\n  Above 90: Production efficiency +20%\\n♦High public safety increases the quantity of goods and lowers buying and selling prices; low public safety decreases the quantity of goods and raises buying and selling prices.\\n♦Affects the number of defenders in a siege battle."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "低于50"
     translated: "Lower than 50"

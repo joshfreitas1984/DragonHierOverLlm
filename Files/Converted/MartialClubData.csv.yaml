@@ -25,9 +25,7 @@
   - split: 1
     subIndex: 2
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - split: 1
     template: "{0}/{1}/{2}"
@@ -69,9 +67,7 @@
   - split: 1
     subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - split: 1
     template: "{0}/{1}"
@@ -169,9 +165,7 @@
   - split: 1
     subIndex: 1
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - split: 1
     template: "{0}/{1}"

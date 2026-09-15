@@ -764,12 +764,12 @@
   splits:
   - text: "#SourceInteractName#来得正好，本门的庭院屋舍近来疏于打扫，着实脏乱不堪，有碍观瞻。"
     translated: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly."
-    qcRejectedCorrection: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly.\\nYou should thoroughly clean all these nooks and crannies these few days. This way, if any outsiders visit, they"
-    qcFailureReason: "#TargetForceName#"
+    qcReviewedText: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly.\\nYou should thoroughly clean all these nooks and crannies these few days. This way, if any outsiders visit, they won't see the jokes about #TargetForceName#."
+    qcTranslated: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have been neglected lately and are truly dirty and messy, quite unsightly.\\nClean all these nooks and crannies thoroughly over the next few days, so that when outsiders visit, they won't have a reason to mock #TargetForceName#."
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 35
     qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#SourceInteractName# comes just in time. The courtyards and dwellings of our sect have lately been neglected, and are in a truly untidy state, quite unsightly.\\nYou should thoroughly clean all these nooks and crannies these few days. This way, if any outsiders visit, they won't see the jokes about #TargetForceName#."
   - subIndex: 1
     text: "你这几日便将这些角角落落好生洒扫一番，免得外人来访看了我#TargetForceName#的笑话。"
     translated: "You should thoroughly clean all these nooks and crannies these few days. This way, if any outsiders visit, they won't see the jokes about #TargetForceName#."
@@ -2443,12 +2443,12 @@
   splits:
   - text: "#PlayerName#，阎罗王果真率领逐鹿盟大军近抵"
     translated: "#PlayerName#, King Yama truly led the Battle for the Swallow Alliance army near."
-    qcRejectedCorrection: "#PlayerName#, King Yama has indeed led the Zhulu Alliance army close to the foot of <b>Wud"
-    qcFailureReason: "Glossary term '武當' (expected 'Wudang') is missing."
-    qcQualityScore: 30
-    qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#PlayerName#, King Yama truly led the Battle for the Swallow Alliance army near.<b>Wudang </b>Shanyang, prepare to attack our sect's main den.\\nNow, the outcome of life and death hangs in this single battle. If you can swiftly rally your forces to support us, Wudang Shangxia will surely be eternally grateful!"
+    qcReviewedText: "#PlayerName#, King Yama truly led the Battle for the Swallow Alliance army near.<b>Wudang </b>Shanyang, prepare to attack our sect's main den.\\nNow, the outcome of life and death hangs in this single battle. If you can swiftly rally your forces to support us, Wudang Shangxia will surely be eternally grateful!"
+    qcTranslated: "#PlayerName#, King Yama has truly led the Zhulu Alliance army to the foot of <b>Wudang</b> Mountain, preparing to attack our sect's main headquarters.\\nNow, life and death hinge on this battle. If you can rally your forces to support us soon, all of Wudang will be deeply grateful!"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "武当"
     translated: "Wudang"
@@ -3114,12 +3114,12 @@
   splits:
   - text: "我近日在应天城内寻欢作乐时，听说了一桩奇事"
     translated: "I heard a strange tale while enjoying myself in Yingtian City recently."
-    qcRejectedCorrection: "While I was having a good time in Yingtian City recently, I heard of a strange incident: a few months ago, a fisherman netted a \"water monkey\""
-    qcFailureReason: "#PlayerName#"
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "I heard a strange tale while enjoying myself in Yingtian City recently.：A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come and take a look.<b>City of Yingtian </b>Meet me!"
+    qcReviewedText: "I heard a strange tale while enjoying myself in Yingtian City recently.：A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come and take a look.<b>City of Yingtian </b>Meet me!"
+    qcTranslated: "I heard a strange tale while enjoying myself in Yingtian City recently: A few months ago, a fisherman pulled a water monkey from the river. If #PlayerName# is interested, come and join me in <b>Yingtian City</b>!"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "几个月前，有一渔民从江中网出了个“水猴子”。#PlayerName#若感兴趣，就来"
     translated: "A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come and take a look."
@@ -3727,12 +3727,12 @@
   splits:
   - text: "#PlayerName#！我在"
     translated: "#PlayerName#! I am"
-    qcRejectedCorrection: "#PlayerName#! I have <b>traced the Grinning Ghost north of Hangzhou</b>. Please come and help intercept him."
-    qcFailureReason: "Glossary term '兄弟' (expected 'Brother') is missing."
+    qcReviewedText: "#PlayerName#! I am <b>Northern Hangzhou </b>Now that we've located the Grinning Ghost, I hope you'll join me in intercepting this person. We must find out exactly what relation he has to Brother Tianyi!"
+    qcTranslated: "#PlayerName#! I have found traces of the Grinning Ghost in <b>Northern Hangzhou</b>. I hope you will come along to help intercept him. We must find out exactly what his relationship is to Brother Wang Tianyi!"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#PlayerName#! I am <b>Northern Hangzhou </b>Now that we've located the Grinning Ghost, I hope you'll join me in intercepting this person. We must find out exactly what relation he has to Brother Tianyi!"
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "杭州北方"
     translated: "Northern Hangzhou"
@@ -3884,8 +3884,12 @@
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
     translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\\nI still hope you will come and share the full details of your previous investigation."
+    qcReviewedText: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\\nI still hope you will come and share the full details of your previous investigation."
+    qcTranslated: "#PlayerName#, I have invited the Sect Leaders of Shaolin, Wudang, Emei, and the Beggar Sect to meet at <b>Banqiao Town</b>.\\nOstensibly to discuss the third Taiyue Grand Ceremony, it is actually to reveal that Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\\nI urge you to be sure to attend and explain the full details of your previous investigation."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "板桥镇"
     translated: "Banqiao Town"
@@ -5238,9 +5242,9 @@
   splits:
   - text: "主属性"
     translated: "Primary Stat"
-    qcReviewedText: "Primary Stat Physique Willpower \\nMain Martial Art Long weapon Qi Men"
+    qcReviewedText: "Primary Stat Physique Willpower \\nMain Martial Art Long weapon Qimen"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 85
     qcDefectCategory: None
   - subIndex: 1
     text: "体质"
@@ -5256,9 +5260,7 @@
     translated: "Long weapon"
   - subIndex: 5
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   templates:
   - template: "{0} {1} {2}\\n{3} {4} {5}"
 - raw: "主属性 力道 体质\\n主武学 刀法 长兵"
@@ -5290,7 +5292,7 @@
   splits:
   - text: "主属性"
     translated: "Primary Stat"
-    qcReviewedText: "Primary Stat Willpower Intelligence \\nMain Martial Art Qi Men Archery"
+    qcReviewedText: "Primary Stat Willpower Intelligence \\nMain Martial Art Qimen Archery"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -5305,9 +5307,7 @@
     translated: "Main Martial Art"
   - subIndex: 4
     text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen"
   - subIndex: 5
     text: "射术"
     translated: "Archery"
@@ -5676,17 +5676,15 @@
   splits:
   - text: "九种武学技能分别为"
     translated: "Nine martial arts skills are as follows:"
-    qcReviewedText: "Nine martial arts skills are as follows:：\\nInternal Skill, Qinggong, Superb Skill, Palm Technique, Sword Art, Blade Technique, Long weapon, Strange Doors, Archery."
-    qcTranslated: "Nine martial arts skills are as follows:\\nInternal Skill, Qinggong, Superb Skill, Fist & Palm, Sword Art, Blade Technique, Long weapon, Odd Technique, Archery."
+    qcReviewedText: "Nine martial arts skills are as follows:：\\nInternal Skill, Lightness, Special Techniques, Fist and Palm Techniques, Sword Art, Blade Art, Long weapon, Unorthodox, Archery."
+    qcTranslated: "Nine martial arts skills are as follows:\\nInternal Skill, Lightness, Special Techniques, Fist and Palm Techniques, Sword Art, Blade Art, Long weapon, Unorthodox, Archery."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
     qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "内功，轻功，绝技，拳掌，剑法，刀法，长兵，奇门，射术。"
-    translated: "Internal Skill, Qinggong, Superb Skill, Palm Technique, Sword Art, Blade Technique, Long weapon, Strange Doors, Archery."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Internal Skill, Lightness, Special Techniques, Fist and Palm Techniques, Sword Art, Blade Art, Long weapon, Unorthodox, Archery."
   templates:
   - template: "{0}：\\n{1}"
 - raw: "九种生活技艺分别为：\\n医术，毒术，学识，口才，采伐，木植，锻造，炼药，烹饪。"
@@ -7203,12 +7201,12 @@
   splits:
   - text: "传闻大隐叛徒思中澜一路逃亡，即将抵达"
     translated: "Rumors have it that the traitor Si Zhonglan is on the run and is about to arrive at his destination."
-    qcRejectedCorrection: "Rumors have it that the traitor Si Zhonglan is on"
-    qcFailureReason: "Glossary term '龙凤娥' (expected 'Long Feng'e') is missing."
+    qcReviewedText: "Rumors have it that the traitor Si Zhonglan is on the run and is about to arrive at his destination.<b>#PosText#</b>Nearby \\nMaster Long Feng'e of the Five Poisons Palm has personally led her disciples to prepare for the confrontation, while the heroes from Central Plains are urgently rushing to this location."
+    qcTranslated: "Rumors have it that the traitor Si Zhonglan is on the run and is about to arrive near <b>#PosText#</b>.\\nMaster Long Feng'e of the Five Poisons Palm has personally led her disciples to prepare for the confrontation, while the heroes from Central Plains are urgently rushing to this location."
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 35
     qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Rumors have it that the traitor Si Zhonglan is on the run and is about to arrive at his destination.<b>#PosText#</b>Nearby \\nMaster Long Feng'e of the Five Poisons Palm has personally led her disciples to prepare for the confrontation, while the heroes from Central Plains are urgently rushing to this location."
   - subIndex: 1
     text: "附近。"
     translated: "Nearby"
@@ -7572,6 +7570,12 @@
   splits:
   - text: "传闻武当副掌门张文馨和阎罗殿主武绝义一同出现在"
     translated: "It's rumored that Sect Leader Zhang Wenxin of Wudang and Yama Hall's Master Wu Jueyi appeared together."
+    qcReviewedText: "It's rumored that Sect Leader Zhang Wenxin of Wudang and Yama Hall's Master Wu Jueyi appeared together.<b>Jinyang</b>, It seems you are looking for the Abbot of Longquan Temple; there is an important matter you wish to discuss."
+    qcTranslated: "It is rumored that Zhang Wenxin, Vice Sect Leader of Wudang, and Wu Jueyi, Master of Yama Hall, were seen together in <b>Jinyang</b>. They appear to be searching for the Abbot of Longquan Temple to discuss an important matter."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "晋阳"
     translated: "Jinyang"
@@ -12437,6 +12441,12 @@
   splits:
   - text: "因笑面虎屡立战功，长乐帮副帮主卢玉麟准备破例拔擢其担任长老之职，不日便会在"
     translated: "While correcting, Deputy Leader Lu Yulin of the Changle Gang has decided to make an exception and promote them to the position of Elder due to their repeated military achievements. They are expected to be formally appointed as an Elder in the near future."
+    qcReviewedText: "While correcting, Deputy Leader Lu Yulin of the Changle Gang has decided to make an exception and promote them to the position of Elder due to their repeated military achievements. They are expected to be formally appointed as an Elder in the near future.<b>#PosText#</b>Host a promotion ceremony"
+    qcTranslated: "Because Smiling Tiger has repeatedly earned military merit, Deputy Leader Lu Yulin of the Changle Gang is preparing to make an exception and promote him to the position of Elder. A promotion ceremony will be held in <b>#PosText#</b> in the near future."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "内举办升职仪式。"
     translated: "Host a promotion ceremony"
@@ -13190,12 +13200,12 @@
   splits:
   - text: "大胆！我说怎么吵吵闹闹的，原来是#TargetForceName#小贼在此放肆！"
     translated: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!"
-    qcRejectedCorrection: "Insolent! I wondered what all the commotion was about. So it's you, you little thief from #TargetForceName#, behaving so brazenly!\n#PlayerName#, let's teach this fellow a lesson together!"
-    qcFailureReason: " Restore `\\n` to the translation, as it was incorrectly removed. `\\n` appears in the result but not in the original text."
-    qcQualityScore: 25
+    qcReviewedText: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!\\n#PlayerName#, let's give this guy a taste of his own medicine!"
+    qcTranslated: "Insolent! I wondered why there was so much noise, turns out the little thief from #TargetForceName# is acting brazenly here!\\n#PlayerName#, let's teach this fellow a lesson together!"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!\\n#PlayerName#, let's give this guy a taste of his own medicine!"
   - subIndex: 1
     text: "#PlayerName#，咱们一道教训教训这家伙！"
     translated: "#PlayerName#, let's give this guy a taste of his own medicine!"
@@ -13294,11 +13304,10 @@
   splits:
   - text: "天网恢恢"
     translated: "The net of heaven is wide"
-    qcRejectedCorrection: "The net of heaven is vast, though wide it lets nothing slip"
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The net of heaven is wide"
+    qcReviewedText: "The net of heaven is wide"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "天罡符"
   splits:
   - text: "天罡符"
@@ -22286,12 +22295,12 @@
   splits:
   - text: "近来"
     translated: "Recently"
-    qcRejectedCorrection: "Recently, there have been frequent internal disturbances in"
-    qcFailureReason: "Glossary term '幫主' (expected 'Gang Leader') is missing."
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Recently <b>Changle Gang </b>Internal changes are frequent, and rumors in the Jianghu suggest they are related to the Deputy Sect Leader Lu Yulan."
+    qcReviewedText: "Recently <b>Changle Gang </b>Internal changes are frequent, and rumors in the Jianghu suggest they are related to the Deputy Sect Leader Lu Yulan."
+    qcTranslated: "Recently, there have been frequent disturbances within the <b>Changle Gang</b>. Rumors in the Jianghu suggest they are related to Deputy Leader Lu Yulin."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "长乐帮"
     translated: "Changle Gang"

@@ -496,15 +496,11 @@
     qcDefectCategory: None
   - split: 10
     text: "提升奇门伤害"
-    translated: "Boost Oddly Gate Damage"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Boost Oddly Gate Damage \\nReduce damage from qimen attacks"
-    qcTranslated: "Boost Qimen Damage \\nReduce damage taken from Qimen attacks"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    translated: "Increase Qimen damage"
+    qcReviewedText: "Increase Qimen damage \\nReduce damage from qimen attacks"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "降低受到的奇门伤害"
@@ -698,15 +694,11 @@
     qcQualityScore: 100
   - split: 10
     text: "奇门威力"
-    translated: "Power of the I Ching"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Power of the I Ching"
-    qcTranslated: "Qimen Power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    translated: "Power of Qimen"
+    qcReviewedText: "Power of Qimen"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "23,射术威力,0.01,无,无,1,1,0,0,0,射术威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -1260,12 +1252,10 @@
     qcQualityScore: 100
   - split: 10
     text: "奇门潜力"
-    translated: "Mystery Potential"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Mystery Potential"
+    translated: "Unorthodox Potential"
+    qcReviewedText: "Unorthodox Potential"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: None
 - raw: "47,射术潜力,1,无,无,0,1,0,0,0,射术潜力,伤害,0,0,0,0,0"
   splits:
@@ -4352,12 +4342,11 @@
     qcQualityScore: 100
   - split: 10
     text: "奇门经验"
-    translated: "Dungeon XP"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Dungeon XP"
+    translated: "Qimen Experience"
+    qcReviewedText: "Qimen Experience"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "187,射术经验,0.04,无,无,1,1,1,0,0,射术经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4678,12 +4667,11 @@
     qcQualityScore: 100
   - split: 10
     text: "奇门攻击距离"
-    translated: "Odd Door attack range"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Odd Door attack range"
+    translated: "Unorthodox attack range"
+    qcReviewedText: "Unorthodox attack range"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "203,射术距离,1,无,无,0,1,1,0,0,射术攻击距离,我方,1,0,1,0,0"
   splits:
   - split: 3

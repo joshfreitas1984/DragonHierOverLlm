@@ -2026,12 +2026,12 @@
   splits:
   - text: "#PlayerName#果真慧眼识珠，此人确实是个可造之材。"
     translated: "#PlayerName# truly has keen insight; this person is indeed a promising talent."
-    qcRejectedCorrection: "#PlayerName# truly has a discerning eye; this person is indeed a promising talent.\\nIf #SourceForceName# does not disdain them, I shall immediately command them to swear allegiance to #PlayerName#'s banner!\\n(Recruit {"
-    qcFailureReason: " Restore `{0}` to the translation, as it was incorrectly removed. Restore `{1}` to the translation, as it was incorrectly removed."
-    qcQualityScore: 20
+    qcReviewedText: "#PlayerName# truly has keen insight; this person is indeed a promising talent.\nIf #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Click)"
+    qcTranslated: "#PlayerName# truly has keen insight; this person is indeed a promising talent.\\nIf #SourceForceName# does not reject me, I will immediately command him to join #PlayerName#'s ranks!\\n(Recruiting a {0} of a Subordinate Sect requires consuming {1} Sect Prestige.)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
     qcDefectCategory: OtherNamedDefect
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#PlayerName# truly has keen insight; this person is indeed a promising talent.\nIf #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Click)"
   - subIndex: 1
     text: "若蒙#SourceForceName#不弃，我这就命其拜入#PlayerName#麾下！"
     translated: "If #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!"
@@ -3893,12 +3893,12 @@
   splits:
   - text: "#SourceInteractName#，你去年共得功绩"
     translated: "#SourceInteractName#, you accumulated a total of merit points last year."
-    qcRejectedCorrection: "#SourceInteractName#, you accumulated a total"
-    qcFailureReason: "Glossary term '掌門' (expected 'Sect Leader') is missing."
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#SourceInteractName#, you accumulated a total of merit points last year.{0}, It is the top achievement of this sect.\nThis #PlotInteractItemName# manual is from last year when I, the Sect Leader, happened to obtain it. Take it and ponder it well."
+    qcReviewedText: "#SourceInteractName#, you accumulated a total of merit points last year.{0}, It is the top achievement of this sect.\nThis #PlotInteractItemName# manual is from last year when I, the Sect Leader, happened to obtain it. Take it and ponder it well."
+    qcTranslated: "#SourceInteractName#, you accumulated a total of {0} merit points last year, making you the top achiever in our sect.\\nThis #PlotInteractItemName# manual was obtained by me, the Sect Leader, by chance last year. Take it and study it well."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 15
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "，乃是本门功劳第一。"
     translated: ", It is the top achievement of this sect."
@@ -4029,12 +4029,12 @@
   splits:
   - text: "#TargetInteractName#何必如此灰心丧气？长风破浪会有时，直挂云帆济沧海。"
     translated: "#TargetInteractName# Why be so disheartened? There will be times when we can sail bravely, hanging clouds as sails to cross the vast sea."
-    qcRejectedCorrection: "#TargetInteractName# Why be so disheartened? A favorable wind will surely come to fill our sails, and we shall cross the vast sea.\nLet's exchange a few moves. If I happen to win, will #TargetInteractName# do me the favor"
-    qcFailureReason: "Glossary term '江湖' (expected 'Jianghu') is missing."
-    qcQualityScore: 30
+    qcReviewedText: "#TargetInteractName# Why be so disheartened? There will be times when we can sail bravely, hanging clouds as sails to cross the vast sea.\nLet's exchange two moves. If I happen to win, how about #TargetInteractName# consider keeping your retirement from the Jianghu?"
+    qcTranslated: "#TargetInteractName# Why be so disheartened? The time will come to ride the long wind and break the waves; we shall raise the cloud sail and cross the vast sea. Let's exchange a few moves. If I happen to win, would #TargetInteractName# do me the favor of abandoning your idea of retreating from the Jianghu?"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#TargetInteractName# Why be so disheartened? There will be times when we can sail bravely, hanging clouds as sails to cross the vast sea.\nLet's exchange two moves. If I happen to win, how about #TargetInteractName# consider keeping your retirement from the Jianghu?"
   - subIndex: 1
     text: "咱们不妨过上两招，我若是侥幸取胜，#TargetInteractName#就看在我面子上，断了这退隐江湖的念头可好？"
     translated: "Let's exchange two moves. If I happen to win, how about #TargetInteractName# consider keeping your retirement from the Jianghu?"
@@ -4230,12 +4230,12 @@
   splits:
   - text: "#TargetInteractName#可敢按照江湖规矩与我斗智一番，胜利者就能学会这"
     translated: "#TargetInteractName#, do you dare to test your wits against me according to the rules of the Jianghu? The victor will learn this."
-    qcRejectedCorrection: "#TargetInteract"
-    qcFailureReason: "Glossary term '江湖' (expected 'Jianghu') is missing."
-    qcQualityScore: 30
-    qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#TargetInteractName#, do you dare to test your wits against me according to the rules of the Jianghu? The victor will learn this.{0} How?\n(The higher the intelligence, meridian mastery, and proficiency in targeted martial arts skills, and the greater the favor, the higher the success rate.\nCurrent strategy success rate {1}%, Expected increase in infamy {2} Dot)"
+    qcReviewedText: "#TargetInteractName#, do you dare to test your wits against me according to the rules of the Jianghu? The victor will learn this.{0} How?\n(The higher the intelligence, meridian mastery, and proficiency in targeted martial arts skills, and the greater the favor, the higher the success rate.\nCurrent strategy success rate {1}%, Expected increase in infamy {2} Dot)"
+    qcTranslated: "#TargetInteractName#, do you dare to test your wits against me according to the rules of the Jianghu? The victor will learn this {0}. How does that sound?\\n(The higher your Intelligence, Meridians, and Target Martial Arts Skill compared to the opponent, and the higher your Affection, the higher the success rate.\\nCurrent wit‑battle success rate {1}%, expected Infamy increase {2}.)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "如何？"
     translated: "How?"
@@ -5663,12 +5663,12 @@
   splits:
   - text: "新手推荐！"
     translated: "New Player Recommendation!"
-    qcRejectedCorrection: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking"
-    qcFailureReason: " Restore `</b>` to the translation, as it was incorrectly removed."
-    qcQualityScore: 30
+    qcReviewedText: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Injured-20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=green>Maximum potential points 9\nSpecial building cap 5</color>"
+    qcTranslated: "<b><color=teal>New Player Recommendation!\\nSuitable for players seeking a relaxed experience </color></b>\\nPlayer damage+20%/Damage taken‑20%\\nAll attributes/All skills+20\\nPlayer experience/Reputation+100%\\nThis Sect's Disciple Experience+60%\\nNon‑Sect Disciple Experience‑60%\\n<color=green>Maximum potential points 9\\nSpecial building cap 5</color>"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
     qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Injured-20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=green>Maximum potential points 9\nSpecial building cap 5</color>"
   - subIndex: 1
     text: "适合寻求轻松体验的玩家"
     translated: "Suitable for players seeking a relaxed experience"
@@ -5980,6 +5980,12 @@
   splits:
   - text: "可两个月参加一次门派会议"
     translated: "Could participate in the sect meeting once every two months."
+    qcReviewedText: "<b>Could participate in the sect meeting once every two months.</b>\nGain 70% Sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Scripture Pavilion) Compile the Secret Manual：Integrate/Copy/Recite\n♦(Healing Room) On duty：Treat injuries and illnesses for fellow disciples\n♦(Ancestral hall) Exhibit hall：Display artifacts\n♦(Warehouse) Sect Treasury：Receive silver coins\n♦Function creation：Casting/Prepare</color></i>"
+    qcTranslated: "<b>Can participate in the sect meeting once every two months</b>\nGain 70% Sect bonus effect\n<i><color=#696969>New Sect features:\n♦(Scripture Pavilion) Compile Secret Manual: Integrate/Copy/Recite\n♦(Healing Room) Consultation: Treat injuries and illnesses for fellow disciples\n♦(Ancestral Hall) Exhibit Hall: Display collections\n♦(Warehouse) Sect Treasury: Collect silver\n♦Crafting: Casting/Processing</color></i>"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "获得70%门派加成效果"
     translated: "Gain 70% Sect bonus effect"
@@ -6043,12 +6049,12 @@
   splits:
   - text: "可两个月参加一次门派会议"
     translated: "Could participate in the sect meeting once every two months."
-    qcRejectedCorrection: "<b>Can attend the Sect meeting once every two months</b>\nGain 80% Sect bonus effect\n<i><color=#696969>New Sect features:\n♦(Main Hall) Research Project: Assign research tasks\n♦Craft"
-    qcFailureReason: " Restore `</i>` to the translation, as it was incorrectly removed."
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "<b>Could participate in the sect meeting once every two months.</b>\nGain 80% sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Main Hall) Research project：Arrange for scientific research\n♦Function creation：Firing\n♦Construction Mode：Upgrade building</color></i>"
+    qcReviewedText: "<b>Could participate in the sect meeting once every two months.</b>\nGain 80% sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Main Hall) Research project：Arrange for scientific research\n♦Function creation：Firing\n♦Construction Mode：Upgrade building</color></i>"
+    qcTranslated: "<b>You can attend a Sect meeting once every two months.</b>\\nGain 80% Sect bonus effect\\n<i><color=#696969>New Sect features:\\n♦(Main Hall) Research Projects: Manage research arrangements\\n♦Crafting: Firing\\n♦Build Mode: Upgrade buildings</color></i>"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DroppedStutter
   - subIndex: 1
     text: "获得80%门派加成效果"
     translated: "Gain 80% sect bonus effect"
@@ -6238,6 +6244,12 @@
   splits:
   - text: "每个月都需参加门派会议"
     translated: "Every month, you must attend the sect meeting."
+    qcReviewedText: "<b>Every month, you must attend the sect meeting.</b>\nGain 60% sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Main Hall) Sect Commission：Accept the Sect's Commission\n♦(Ancestral hall) Identification：Actively appraise treasures\n♦(Warehouse) Sect Treasury：Donate silver coins\n♦Function creation：Essence/Alchemy/Poisoning</color></i>"
+    qcTranslated: "<b>Attend the sect meeting every month</b>\nGain 60% sect bonus effect\n<i><color=#696969>New sect features:\n♦(Main Hall) Sect Commissions: Accept commissions\n♦(Ancestral Hall) Appraisal: Appraise treasures\n♦(Warehouse) Sect Treasury: Donate silver\n♦Crafting: Refining/Medicines/Poisons</color></i>"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "获得60%门派加成效果"
     translated: "Gain 60% sect bonus effect"
@@ -8961,12 +8973,12 @@
   splits:
   - text: "对"
     translated: "For"
-    qcRejectedCorrection: "{0} dealt {1} {3} damage ({2} points{4})."
-    qcFailureReason: " Explaination was provided when none should be given."
+    qcReviewedText: "{0} For {1} Caused {3} Damage {2} Click {4}。"
+    qcTranslated: "{0} dealt {1} {3} points of {2} damage to {4}."
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 20
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "{0} For {1} Caused {3} Damage {2} Click {4}。"
   - subIndex: 1
     text: "造成了"
     translated: "Caused"
@@ -9311,6 +9323,12 @@
   splits:
   - text: "新的练习最高纪录"
     translated: "New practice high score"
+    qcReviewedText: "{0} New practice high score：{1} Click"
+    qcTranslated: "{0}New practice high record: {1} points"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "点"
     translated: "Click"
@@ -10957,6 +10975,12 @@
   splits:
   - text: "新的"
     translated: "New"
+    qcReviewedText: "《{0}》New {2} Read highest record：{1} Click"
+    qcTranslated: "New highest {2} reading record for 《{0}》: {1}"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "阅读最高纪录"
     translated: "Read highest record"
@@ -13840,12 +13864,12 @@
   splits:
   - text: "久闻#TargetInteractName#有一式"
     translated: "I've heard that #TargetInteractName# has a style"
-    qcRejectedCorrection: "I've long heard that #TargetInteractName# has a form {0} that is quite exquisite. How about trying to block these few"
-    qcFailureReason: "Glossary term '恶名' (expected 'Infamy') is missing."
+    qcReviewedText: "I've heard that #TargetInteractName# has a style {0} It's rather ingenious. How about trying these techniques against me?\n(The higher the intelligence, meridian mastery, and proficiency in targeted martial arts skills, and the greater the favor, the higher the success rate.\nCurrent stealth success rate {1}%, Expected increase in infamy {2} Dot)"
+    qcTranslated: "I've long heard that #TargetInteractName# has a style {0} that is quite ingenious. How about trying to block these moves of mine?\\n(The higher your Intelligence, Meridians, and target martial arts skill relative to the opponent, and the higher the favorability, the higher the success rate.\\nCurrent Skill Stealing success rate {1}%, estimated Infamy increase {2} points.)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 35
-    qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "I've heard that #TargetInteractName# has a style {0} It's rather ingenious. How about trying these techniques against me?\n(The higher the intelligence, meridian mastery, and proficiency in targeted martial arts skills, and the greater the favor, the higher the success rate.\nCurrent stealth success rate {1}%, Expected increase in infamy {2} Dot)"
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "颇为精妙，不如试试看接下我这几招如何？"
     translated: "It's rather ingenious. How about trying these techniques against me?"
@@ -14578,12 +14602,12 @@
   splits:
   - text: "人迎"
     translated: "Jug of the neck"
-    qcRejectedCorrection: "Ren Ying (LI-18)"
-    qcFailureReason: " Explaination was provided when none should be given."
-    qcQualityScore: 15
-    qcDefectCategory: DomainTerm
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Jug of the neck"
+    qcReviewedText: "Jug of the neck"
+    qcTranslated: "Ren Ying"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: LostIdiom
 - raw: "什么人？竟敢擅闯我{0}仓库重地，还不快束手就擒！"
   splits:
   - text: "什么人？竟敢擅闯我"
@@ -15708,12 +15732,10 @@
   splits:
   - text: "优"
     translated: "You"
-    qcRejectedCorrection: "优"
-    qcFailureReason: " If your prior translation includes Chinese, output English only. Scan the last translation for Chinese text, cross-check with the original Chinese from the first user prompt, and translate all remaining Chinese into fluent, natural English."
-    qcQualityScore: 10
-    qcDefectCategory: DomainTerm
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "You"
+    qcReviewedText: "You"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "优质"
   splits:
   - text: "优质"
@@ -16587,12 +16609,12 @@
   splits:
   - text: "你说什么！本门待你恩重如山，#PlayerName#你当真要叛离我#PlayerForceName#？！"
     translated: "What did you say! We have shown you great kindness, #PlayerName#, are you really considering betraying me, #PlayerForceName#?!"
-    qcRejectedCorrection: "What did you say! We have shown you great kindness, #PlayerName#, are you really considering betraying us, #Player"
-    qcFailureReason: "Glossary term '恶名' (expected 'Infamy') is missing."
+    qcReviewedText: "What did you say! We have shown you great kindness, #PlayerName#, are you really considering betraying me, #PlayerForceName#?!\n(As {0}, Leaving the Sect will fixedly increase {1} Point Infamy, and {2} You cannot apprentice or join another sect within a month.)"
+    qcTranslated: "What are you saying! Our Sect has treated you with kindness as heavy as a mountain, #PlayerName#. Do you truly intend to betray my #PlayerForceName#?!\\n(As {0}, leaving the Sect will permanently increase Infamy by {1} points, and you will be unable to take on a master or join another sect within {2} days.)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 25
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "What did you say! We have shown you great kindness, #PlayerName#, are you really considering betraying me, #PlayerForceName#?!\n(As {0}, Leaving the Sect will fixedly increase {1} Point Infamy, and {2} You cannot apprentice or join another sect within a month.)"
   - subIndex: 1
     text: "身为"
     translated: "As"
@@ -21839,12 +21861,12 @@
   splits:
   - text: "听说#TargetInteractName#最近得了件"
     translated: "I heard #TargetInteractName# recently got an item"
-    qcRejectedCorrection: "I heard #TargetInteractName# recently acquired a {0}. How about letting me take a look?\n(The more Strength"
-    qcFailureReason: "Glossary term '恶名' (expected 'Infamy') is missing."
-    qcQualityScore: 30
+    qcReviewedText: "I heard #TargetInteractName# recently got an item {0}, Why don't you watch how it's done?\n(The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate.\nCurrent Raid Success Rate {1}%, Expected increase in infamy {2} Dot)"
+    qcTranslated: "I heard #TargetInteractName# recently acquired a {0}. How about letting me take a look?\n(The more your Strength, Constitution, and Special Skills exceed the opponent's, and the higher the affinity, the higher the success rate.\nCurrent Robbery Success Rate {1}%, Expected Infamy Increase: {2} points.)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "I heard #TargetInteractName# recently got an item {0}, Why don't you watch how it's done?\n(The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate.\nCurrent Raid Success Rate {1}%, Expected increase in infamy {2} Dot)"
   - subIndex: 1
     text: "，不妨让我观赏一番如何？"
     translated: ", Why don't you watch how it's done?"
@@ -25960,12 +25982,12 @@
   splits:
   - text: "啊这...小的四海为家，性子粗野，况还有悬赏在身。"
     translated: "Ah well... The little one roams the world, has a rough nature, and there's a bounty on their head."
-    qcRejectedCorrection: "Ah, this... I'm a wanderer with a rough nature, and there's a bounty on my head.\\nIf I joined your sect, I might just cause"
-    qcFailureReason: "Glossary term '大侠' (expected 'Great Hero') is missing."
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Ah well... The little one roams the world, has a rough nature, and there's a bounty on their head.\nIf you go to your sect, it might instead cause trouble for the Great Hero!\n(Recruit {0} Will decrease the goodwill of all Sects {1} Be loyal to all disciples {2})"
+    qcReviewedText: "Ah well... The little one roams the world, has a rough nature, and there's a bounty on their head.\nIf you go to your sect, it might instead cause trouble for the Great Hero!\n(Recruit {0} Will decrease the goodwill of all Sects {1} Be loyal to all disciples {2})"
+    qcTranslated: "Ah, this... I live wherever I go, and my nature is rough, besides, there is a bounty on my head. If I were to join your sect, I am afraid it would only cause trouble for the Great Hero! (Recruiting {0} will reduce all Sects' favor by {1} and all disciples' loyalty by {2})"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "若是去了贵派，怕反倒会给大侠添乱啊！"
     translated: "If you go to your sect, it might instead cause trouble for the Great Hero!"
@@ -29007,12 +29029,12 @@
   splits:
   - text: "天子呼来不上船，自称臣是酒中仙。"
     translated: "The emperor calls, but he refuses to come; he says he is a immortal drunk."
-    qcRejectedCorrection: "The Son of Heaven called him, but he stayed ashore, / Claiming to be the immortal of the wine."
-    qcFailureReason: " Alternatives were provided when none should be given."
+    qcReviewedText: "The emperor calls, but he refuses to come; he says he is a immortal drunk."
+    qcTranslated: "The Son of Heaven summons him, yet he stays off the boat, boasting that he is the immortal of wine."
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 35
     qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The emperor calls, but he refuses to come; he says he is a immortal drunk."
 - raw: "天宗"
   splits:
   - text: "天宗"
@@ -29327,24 +29349,19 @@
 - raw: "奇门"
   splits:
   - text: "奇门"
-    translated: "Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Qi Men"
+    translated: "Qimen"
+    qcReviewedText: "Qimen"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇门术士"
   splits:
   - text: "奇门术士"
-    translated: "Mystic Oracle"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Mystic Oracle"
-    qcTranslated: "Qi Men Diviner"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Qimen Practitioner"
+    qcReviewedText: "Qimen Practitioner"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奈何这群刁民贪心不足，竟以庄稼歉收为由，想要分文不交。\n国有国法家有家规，你们人人都不交税，咱们朝廷哪来的钱粮去剿匪，去平定天下啊！"
   splits:
   - text: "奈何这群刁民贪心不足，竟以庄稼歉收为由，想要分文不交。"
@@ -32587,12 +32604,12 @@
   splits:
   - text: "少侠若想在此举办一场奢华宴会，纵情享乐，会见贵客，非得花上"
     translated: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend"
-    qcRejectedCorrection: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend {0} taels of silver.\\n(Current {1} is level {2}, which can increase"
-    qcFailureReason: " Restore `{3}` to the translation, as it was incorrectly removed. Restore `{4}` to the translation, as it was incorrectly removed."
-    qcQualityScore: 10
+    qcReviewedText: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend {0} Silver coins are not enough\n(Current {1} For level {2}, Can enhance the banquet {3} Click on the basic score and {4}%Score boost)"
+    qcTranslated: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend {0} taels of silver.\n(Current {1} is level {2}, which can increase the banquet's {3} base score and {4}% score bonus.)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 15
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend {0} Silver coins are not enough\n(Current {1} For level {2}, Can enhance the banquet {3} Click on the basic score and {4}%Score boost)"
   - subIndex: 1
     text: "两银钱不可。"
     translated: "Silver coins are not enough"
@@ -32617,12 +32634,12 @@
   splits:
   - text: "少侠若有无法辨识的珍宝，只消花上"
     translated: "If the young hero has treasures that are hard to identify, just spend"
-    qcRejectedCorrection: "If Young Hero #PlayerName# has any treasures that are difficult to identify, you need only spend {3} silver taels to have our shop help appraise them.\\n({0} boosts {1} Knowledge points. Currently, treasures with a Knowledge requirement of {2} or below can be appraised)"
-    qcFailureReason: "#PlayerName#"
-    qcQualityScore: 10
+    qcReviewedText: "If the young hero has treasures that are hard to identify, just spend {3} A handful of silver could help the shop identify the authenticity of the goods.\n({0} Improve {1} Activate knowledge effect: Current identification knowledge requirement Applies {2} Following Treasures)"
+    qcTranslated: "If Young Hero has any treasures that cannot be identified, you only need to spend {3} taels of silver, and our shop can help appraise them. ({0} improves {1} knowledge points, current appraisal knowledge requirement is {2} or below)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "If the young hero has treasures that are hard to identify, just spend {3} A handful of silver could help the shop identify the authenticity of the goods.\n({0} Improve {1} Activate knowledge effect: Current identification knowledge requirement Applies {2} Following Treasures)"
   - subIndex: 1
     text: "银两，便可让小店帮忙鉴别一二。"
     translated: "A handful of silver could help the shop identify the authenticity of the goods."
@@ -36158,12 +36175,12 @@
   splits:
   - text: "我"
     translated: "I"
-    qcRejectedCorrection: "I have always upheld the Way of {1}, {2}.\\nThis school's martial arts are renowned for {3} and have long been celebrated in the Jianghu."
-    qcFailureReason: " Restore `{0}` to the translation, as it was incorrectly removed."
-    qcQualityScore: 15
-    qcDefectCategory: OtherNamedDefect
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "I {0} Has always upheld {1} Way,{2}。\nThis martial art is based on {3} See, he is also renowned in the Jianghu."
+    qcReviewedText: "I {0} Has always upheld {1} Way,{2}。\nThis martial art is based on {3} See, he is also renowned in the Jianghu."
+    qcTranslated: "I {0} have always upheld the Way of {1}, {2}.\\nOur sect's martial arts are renowned for their expertise in {3}, enjoying a long‑standing reputation in the Jianghu."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "向来秉持"
     translated: "Has always upheld"
@@ -42576,12 +42593,12 @@
   splits:
   - text: "本届掌门大会我#PlayerForceName#能够夺得第"
     translated: "This term's Sect Leader, Conference I, managed to win first place, #PlayerForceName#. They have proven themselves once again in the competition."
-    qcRejectedCorrection: "At this year's Sect Leader Conference, our #PlayerForceName#"
-    qcFailureReason: "#PlayerName#"
+    qcReviewedText: "This term's Sect Leader, Conference I, managed to win first place, #PlayerForceName#. They have proven themselves once again in the competition.{0} Name, #PlayerName#, has also made significant contributions\nI hope you remain humble and continue to improve your martial arts.\nNext year at the Sect Leader Conference, I'll certainly shine and leave everyone amazed."
+    qcTranslated: "This term's Sect Leader Conference, our #PlayerForceName# managed to win {0}th place, and #PlayerName# has also made significant contributions.\\nI hope you remain humble and continue to improve your martial arts.\\nNext year at the Sect Leader Conference, you will certainly shine and leave everyone amazed."
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 10
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "This term's Sect Leader, Conference I, managed to win first place, #PlayerForceName#. They have proven themselves once again in the competition.{0} Name, #PlayerName#, has also made significant contributions\nI hope you remain humble and continue to improve your martial arts.\nNext year at the Sect Leader Conference, I'll certainly shine and leave everyone amazed."
   - subIndex: 1
     text: "名，#PlayerName#也算功不可没。"
     translated: "Name, #PlayerName#, has also made significant contributions"
@@ -46882,11 +46899,12 @@
   splits:
   - text: "洛神赋图"
     translated: "Illustration of the Luo River Goddess Assignation"
-    qcRejectedCorrection: "Illustration of the Rhapsody on the Goddess of the Luo River"
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Illustration of the Luo River Goddess Assignation"
+    qcReviewedText: "Illustration of the Luo River Goddess Assignation"
+    qcTranslated: "Painting of the Goddess of the Luo River"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: DomainTerm
 - raw: "洞中方一日，世上已千年。\n此番闭关，确是令人领悟颇深。"
   splits:
   - text: "洞中方一日，世上已千年。"
@@ -50353,11 +50371,12 @@
   splits:
   - text: "确认消耗"
     translated: "Confirm consumption"
-    qcRejectedCorrection: "Confirm consuming {1} day(s) to practice {0}? {3} {2}"
-    qcFailureReason: " Restore `{4}` to the translation, as it was incorrectly removed. Explaination was provided when none should be given."
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 1
+    qcReviewedText: "Confirm consumption {1} Sky {4} Practice {0}？{3} {2}"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "Confirm spending {1} days to practice {0}? {3} {2}"
+    qcFailureReason: " Restore `{4}` to the translation, as it was incorrectly removed."
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Confirm consumption {1} Sky {4} Practice {0}？{3} {2}"
   - subIndex: 1
     text: "天"
@@ -53551,12 +53570,12 @@
   splits:
   - text: "自古以来千里马常有，伯乐不常有！"
     translated: "A thousand‑mile horse is common, but a bosom friend is not always around! A steed is found often, but a bosom friend, or a bole, is not!"
-    qcRejectedCorrection: "A thousand-mile horse is often found, but a Bo Le (a discerning judge) is rarely seen! \\nOnly the horse racing champion can become the master of this fine steed, which is both reasonable and in line with the rules of the Jianghu. \\nI presume you heroes"
-    qcFailureReason: " Explaination was provided when none should be given."
+    qcReviewedText: "A thousand‑mile horse is common, but a bosom friend is not always around! A steed is found often, but a bosom friend, or a bole, is not!\nOnly the horse racing champion can become the master of this steed, which is both reasonable and in line with the rules of the Jianghu.\nI presume you heroes have no objections!"
+    qcTranslated: "A thousand‑mile steed is common, but a Bo Le is not! \\nOnly the winner of the horse race can become the master of this fine steed, which is both reasonable and in line with Jianghu custom. \\nI presume none of you heroes have any objections!"
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 25
     qcDefectCategory: LostIdiom
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "A thousand‑mile horse is common, but a bosom friend is not always around! A steed is found often, but a bosom friend, or a bole, is not!\nOnly the horse racing champion can become the master of this steed, which is both reasonable and in line with the rules of the Jianghu.\nI presume you heroes have no objections!"
   - subIndex: 1
     text: "赛马夺冠者方能成为此名驹之主，自是合情合理，也符合江湖规矩。"
     translated: "Only the horse racing champion can become the master of this steed, which is both reasonable and in line with the rules of the Jianghu."
@@ -53863,12 +53882,12 @@
   splits:
   - text: "花费好些功夫，终于打通了潜入密道，再经过一处地下迷宫，便可抵达藏经之所。"
     translated: "While making the effort, I finally cleared the secret passage, and after navigating through the underground maze, I could reach the place where sacred scriptures are stored."
-    qcRejectedCorrection: "After some effort, the secret passage was finally cleared. Passing through the underground maze leads to the Scripture"
-    qcFailureReason: "Glossary term '藏经阁' (expected 'Scripture Pavilion') is missing."
-    qcQualityScore: 15
+    qcReviewedText: "While making the effort, I finally cleared the secret passage, and after navigating through the underground maze, I could reach the place where sacred scriptures are stored.\nThis Scripture Pavilion is divided into {0} The higher the floor, the rarer the Secret Manual, but the defenses are also more rigorous.\nWhich layer should we target for infiltration?"
+    qcTranslated: "After considerable effort, I finally broke through the secret passage. After navigating through an underground maze, I can reach the Scripture Pavilion.\nThis Scripture Pavilion is divided into {0} floors. The higher the floor, the rarer the Secret Manual, but the defenses are also more rigorous.\nWhich floor should we target for infiltration?"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "While making the effort, I finally cleared the secret passage, and after navigating through the underground maze, I could reach the place where sacred scriptures are stored.\nThis Scripture Pavilion is divided into {0} The higher the floor, the rarer the Secret Manual, but the defenses are also more rigorous.\nWhich layer should we target for infiltration?"
   - subIndex: 1
     text: "这藏经阁分为"
     translated: "This Scripture Pavilion is divided into"
@@ -57527,12 +57546,12 @@
   splits:
   - text: "身为本门"
     translated: "As head of the sect"
-    qcRejectedCorrection: "As the {0} of our sect, #PlayerName#, you have mastered your"
-    qcFailureReason: "Glossary term '江湖' (expected 'Jianghu') is missing."
-    qcQualityScore: 10
+    qcReviewedText: "As head of the sect {0}, #PlayerName#, you have mastered your skills and earned sufficient merits.\nIf you wish to leave the sect and go into the Jianghu to right wrongs and wander far and wide, I, the Sect Leader, will not hinder you."
+    qcTranslated: "As the {0} of our sect, #PlayerName#, you have mastered your skills and earned sufficient merits. If you wish to leave our sect and go into the Jianghu to right wrongs and wander far and wide, I, the Sect Leader, will not hinder you."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 15
     qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "As head of the sect {0}, #PlayerName#, you have mastered your skills and earned sufficient merits.\nIf you wish to leave the sect and go into the Jianghu to right wrongs and wander far and wide, I, the Sect Leader, will not hinder you."
   - subIndex: 1
     text: "，#PlayerName#你已学有所成，同时立下了足够的功勋。"
     translated: ", #PlayerName#, you have mastered your skills and earned sufficient merits."
@@ -58168,12 +58187,12 @@
   splits:
   - text: "还望#PlayerName#在我聚义弟子中，选择一名可造之材带回#PlayerForceName#，"
     translated: "I hope you, #PlayerName#, will choose one promising disciple from my gathered allies to bring back to #PlayerForceName#."
-    qcRejectedCorrection: "I hope #PlayerName# will choose a promising disciple from among my gathered disciples to bring back to #PlayerForceName#.\nThis will serve as the final contribution"
-    qcFailureReason: "Glossary term '聚义门' (expected 'Righteous Alliance Gate') is missing."
-    qcQualityScore: 35
+    qcReviewedText: "I hope you, #PlayerName#, will choose one promising disciple from my gathered allies to bring back to #PlayerForceName#.\nIt's also my contribution to the Righteous Alliance Gate for the martial arts world of Central Plains in the future...\nCough cough, that's all for now, so don't hesitate to accept!"
+    qcTranslated: "I hope you, #PlayerName#, will choose one promising disciple from my Righteous Alliance Gate to bring back to #PlayerForceName#.\\nThis also counts"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
     qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "I hope you, #PlayerName#, will choose one promising disciple from my gathered allies to bring back to #PlayerForceName#.\nIt's also my contribution to the Righteous Alliance Gate for the martial arts world of Central Plains in the future...\nCough cough, that's all for now, so don't hesitate to accept!"
   - subIndex: 1
     text: "也算是我聚义门，为日后中原武林出的最后一份力..."
     translated: "It's also my contribution to the Righteous Alliance Gate for the martial arts world of Central Plains in the future..."
@@ -58262,12 +58281,12 @@
   splits:
   - text: "还需等待"
     translated: "Still waiting"
-    qcRejectedCorrection: "You must wait another {0} day(s) before you can apologize again"
-    qcFailureReason: " Explaination was provided when none should be given."
-    qcQualityScore: 0
+    qcReviewedText: "Still waiting {0} The Japanese can offer another apology"
+    qcTranslated: "Must wait {0} days before offering another apology"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Still waiting {0} The Japanese can offer another apology"
   - subIndex: 1
     text: "日方能再次赔礼道歉"
     translated: "The Japanese can offer another apology"
@@ -58462,12 +58481,12 @@
   splits:
   - text: "这"
     translated: "This"
-    qcRejectedCorrection: "This {0} is the supreme sacred ground for {1} to cultivate {2}. You only need to pay the maintenance fee to practice here.\\nYoung Hero, your current {2} is {3}. Cultivation will require {4} days and {5} silver. {"
-    qcFailureReason: " Restore `{6}` to the translation, as it was incorrectly removed."
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "This {0} Is {1} Practice {2} This supreme sacred land requires only the payment of maintenance and repair fees to cultivate here.\nYoung Hero, you currently {2} For {3}, Training requires {4} Peaceful Day {5} Silver coins {6}"
+    qcReviewedText: "This {0} Is {1} Practice {2} This supreme sacred land requires only the payment of maintenance and repair fees to cultivate here.\nYoung Hero, you currently {2} For {3}, Training requires {4} Peaceful Day {5} Silver coins {6}"
+    qcTranslated: "This {0} is the supreme land for {1} to practice {2}. Simply pay the maintenance fee to cultivate here.\\nYoung Hero, your current {2} is {3}. Cultivation requires {4} days and {5} silver taels.{6}"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "乃"
     translated: "Is"
@@ -60012,12 +60031,12 @@
   splits:
   - text: "这莫高窟虽地处幽僻，却藏有经书典籍无数。"
     translated: "Though this Mogao Caves are secluded, they house countless scriptures and classics."
-    qcRejectedCorrection: "Though the Mogao Caves are secluded, they house countless scriptures and classics.\nThe grottoes on the cliff walls are also an unmatched choice for secluding oneself in meditation"
-    qcFailureReason: "Glossary term '少俠' (expected 'Young Hero') is missing."
-    qcQualityScore: 10
+    qcReviewedText: "Though this Mogao Caves are secluded, they house countless scriptures and classics.\nThe cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent.\nWith your current talent, young hero, closing yourself off for fifteen days here will require you to consume {0} Silver coins are expected to yield {1} Select talents"
+    qcTranslated: "Though this Mogao Caves are secluded, they house countless scriptures and classics.\\nThe cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent.\\nWith your current talent, young hero, closing yourself off for fifteen days here will require you to consume {0} taels of silver, and is expected to yield {1} points of talent."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Though this Mogao Caves are secluded, they house countless scriptures and classics.\nThe cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent.\nWith your current talent, young hero, closing yourself off for fifteen days here will require you to consume {0} Silver coins are expected to yield {1} Select talents"
   - subIndex: 1
     text: "悬崖壁上的石窟亦是潜心闭关，修炼天赋的不二之选。"
     translated: "The cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent."
@@ -60054,12 +60073,12 @@
   splits:
   - text: "这轻功名为“逍遥游”，乃是脱胎自道家典籍《庄子》的轻功，"
     translated: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic Zhuangzi."
-    qcRejectedCorrection: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic"
-    qcFailureReason: "Glossary term '丐幫' (expected 'Beggar Sect') is missing."
+    qcReviewedText: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic Zhuangzi.\nTo ride the principles of nature, to wander beyond the bounds of the mundane.\nIt rather suits the wandering spirit of the disciples of the Beggar Sect."
+    qcTranslated: "This Qinggong is called Free and Easy Wandering, a Qinggong derived from the Daoist classic Zhuangzi.\\nRiding the rectitude of Heaven and Earth, harnessing the shifts of the six qi to roam the infinite,\\nIt rather suits the wandering spirit of the disciples of the Beggar Sect."
+    qcStatus: Corrected
+    flaggedForQcReview: true
     qcQualityScore: 35
-    qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic Zhuangzi.\nTo ride the principles of nature, to wander beyond the bounds of the mundane.\nIt rather suits the wandering spirit of the disciples of the Beggar Sect."
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "乘天地之正，御六气之辩，以游无穷，"
     translated: "To ride the principles of nature, to wander beyond the bounds of the mundane."

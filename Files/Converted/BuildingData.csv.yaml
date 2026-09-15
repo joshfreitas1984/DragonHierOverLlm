@@ -622,13 +622,11 @@
   splits:
   - split: 19
     text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
-    translated: "Kongtong Mountain, perilous and marvelously bizarre, legend speaks of seventy‑two cave entrances scattered throughout its peaks, depths unfathomable and their pathways unknown. After generations of excavation, these caves are now intricately connected, winding and tortuous. The Kongtong disciples cultivate special techniques here. They often employ dangerous tactics that are hard to guard against."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Kongtong Mountain, perilous and marvelously bizarre, legend speaks of seventy‑two cave entrances scattered throughout its peaks, depths unfathomable and their pathways unknown. After generations of excavation, these caves are now intricately connected, winding and tortuous. The Kongtong disciples cultivate special techniques here. They often employ dangerous tactics that are hard to guard against."
-    qcTranslated: "Kongtong Mountain is perilous and marvelously bizarre. Legend speaks of seventy‑two caves, their depths unfathomable and pathways unknown. After generations of excavation, they are now intricately connected, winding and tortuous. The Kongtong disciples utilize this terrain to cultivate unique and secret techniques, often employing dangerous moves that are impossible to defend against."
-    qcStatus: Corrected
-    qcQualityScore: 88
+    translated: "The Mountain of Kongtong is perilous and unparalleled in its danger. Legend has it that there are seventy‑two caves, deep and unfathomable, with unknown connections. After generations of excavation, these caves have become interconnected, twisting and turning. The disciples of Kongtong use this terrain to practice their unorthodox and extraordinary skills, often employing risky tactics that are hard to guard against."
+    qcReviewedText: "The Mountain of Kongtong is perilous and unparalleled in its danger. Legend has it that there are seventy‑two caves, deep and unfathomable, with unknown connections. After generations of excavation, these caves have become interconnected, twisting and turning. The disciples of Kongtong use this terrain to practice their unorthodox and extraordinary skills, often employing risky tactics that are hard to guard against."
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "69,机关坊,69,6,1,0,4,提升学识潜力--StudyMaxLivingSkill-2;机关-我&门派功能16-ShowSpeSummonResearch,威望+10;银钱+100,木料-150,城防耐久0.2;科研效率0.4;全员灵巧2;全员智力2,,银钱1000;木料2000,20,46,,9,door,0;0,墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
   splits:
   - split: 19

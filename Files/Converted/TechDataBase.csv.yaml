@@ -176,14 +176,10 @@
   splits:
   - split: 1
     text: "奇门纲要"
-    translated: "Essence of the Mystical Arts"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Outline"
   - split: 2
     text: "奇门纲要"
-    translated: "Essence of the Mystical Arts"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen Outline"
 - raw: "20,射术纲要,射术纲要,1,射术经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
@@ -380,14 +376,10 @@
   splits:
   - split: 1
     text: "奇门训练"
-    translated: "Training in Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen training"
   - split: 2
     text: "奇门训练"
-    translated: "Training in Qi Men"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
+    translated: "Qimen training"
 - raw: "45,射术训练,射术训练,3,全员射术,1,TRUE,2,银钱"
   splits:
   - split: 1

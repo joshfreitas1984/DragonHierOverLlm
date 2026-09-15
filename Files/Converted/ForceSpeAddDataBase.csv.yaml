@@ -220,13 +220,11 @@
   splits:
   - split: 2
     text: "奇门经验"
-    translated: "Dungeon XP"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Qimen,奇门,"
-    qcReviewedText: "Dungeon XP"
-    qcTranslated: "Qimen XP"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    translated: "Qimen Experience"
+    qcReviewedText: "Qimen Experience"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "25,射术经验,射术经验,TRUE,0.02"
   splits:
   - split: 2
