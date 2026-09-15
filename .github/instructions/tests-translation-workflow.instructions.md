@@ -118,32 +118,56 @@ translations with no separator (`"{0}Year{1}Month{2}Day"`) — overridden by exa
 ## Quality review (QC) pass — second, independent pass over already-translated text
 
 An LLM (typically a larger/different model than primary translation) reviews each already-
-translated column's fully reconstructed cell, optionally proposes a correction, and rates its own
-confidence 0-100. Opt-in via `qualityReview.enabled: true` in `Files/Config.yaml`; per-file via
-`TextFileToSplit.EnableQualityReview` (defaults true, explicitly `false` on most lookup-key-heavy
-CSVs and the whole `PrefabText`/`DynamicStringsIL2CPP` family except `dynamicStrings.txt`). Run via
-the numbered facts in `TranslationWorkflowTests.cs`: `"3a. RunQualityReviewPassSample"` (small
-random sample - always try this before a full run on a new candidate model),
-`"3b. RunQualityReviewPass"` (full, un-sampled - many hours), `"3c. Find Flagged Quality Review
-Items"` (pulls every column currently flagged for human review), `"3d. Reset Qc Retry Limits"` (un-
-sticks a column parked at `FailedValidation` after fixing whatever caused it - e.g. a false-positive
-bad word), `"3e. Reset Leaked Quality Review Corrections"` (repairs any stored correction containing
-leaked QC-protocol text), `"3f. RunQualityReviewSampleForOneLine"` (forces a fresh review of one
-known corpus row - useful when iterating on the QC prompt/model),
-`"3g. QcOmittedSubjectRegression"` (calls the QC model directly against a fixed known-bad
-SOURCE/TRANSLATION pair, independent of corpus state - a real regression test, not a manual-
-inspection tool; re-validates automatically whichever model `qualityReview.modelName` currently
-points at), and `"3h. Reset ALL Quality Review State (full re-review)"` (wipes every column's Qc
-state back to `NotReviewed`, not just stuck/corrupted ones like `"3d"`/`"3e"` - NOT routine, run
-only after swapping the QC model or a prompt change significant enough that already-recorded
-verdicts can no longer be trusted, since it forces the next `"3b"` to re-review the entire corpus). A proposed correction is only ever accepted if it passes the same structural validation
-gate a normal translation attempt does, plus a glossary-drift check - a rejected correction never
-touches `Translated`; once accepted, a low self-rated confidence score only flags it for human
-review, it no longer discards the correction and re-rolls (see the shared library's postmortem
-notes below). Full mechanics (data model, staleness/freshness, packaging interaction,
-prompt-per-model-family convention, and the 2026-09 omitted-subject/response-truncation/low-score-
-discard postmortems) live in the shared library's `docs/quality-review-pass-architecture.md`; the
-original design rationale is in `docs/plans/quality-review-pass.md`.
+translated column's fully reconstructed cell, optionally proposes a correction (`CORRECTED:`),
+rates its own confidence 0-100 (`SCORE:`), and names a `DEFECT:` category (`GARBLED_NUMBER` /
+`DOMAIN_TERM` / `LOST_IDIOM` / `UNTRANSLATED_PINYIN` / `DROPPED_CONTENT` / `HARD_TO_PARSE_SEAM` /
+`OTHER_NAMED_DEFECT` / `NONE`). Opt-in via `qualityReview.enabled: true` in `Files/Config.yaml`;
+per-file via `TextFileToSplit.EnableQualityReview` (defaults true, explicitly `false` on most
+lookup-key-heavy CSVs and the whole `PrefabText`/`DynamicStringsIL2CPP` family except
+`dynamicStrings.txt`). **All numbered QC facts live in `Tests/QualityControlWorkflowTests.cs`
+(NOT `TranslationWorkflowTests.cs`, and numbered `0`-`8`, not `3a`-`3h` - those refer to an older
+layout, don't search for them)**: `"1. RunQualityReviewPassSample"` (small random sample - always
+try this before a full run on a new candidate model), `"2. RunQualityReviewPass"` (full,
+un-sampled - many hours), `"3. ApplyRulesToQCReview"` (re-syncs `QcTranslated` after a
+glossary/config change, mirroring what rule #2 does to `Translated`), `"4. Find Flagged Quality
+Review Items"` (pulls every column currently flagged for human review), `"5. Triage Flagged
+Quality Review Items"` (groups the flagged set by rejection reason, low score, AND `DEFECT`
+category - writes `TestResults/QcTriage*.yaml`, including `QcTriageByDefectCategory.yaml`),
+`"6. Generate Quality Review Fix Prompts"` (turns "5"'s clusters into ready-to-paste chat prompts),
+`"7. Reset Qc Retry Limits"`/`"7. Reset Low-Score Quality Review State"` (un-sticks a column parked
+at `FailedValidation`, or re-reviews everything under the old `minAcceptableScore`/rubric),
+`"8. Reset Non-Auto-Accepted Quality Review State"` (resets every flagged column whose `DEFECT`
+category isn't in `qualityReview.autoAcceptDefectCategories` - see "DEFECT-category policy" below -
+back to `NotReviewed`; also the way to backfill `DEFECT` on rows reviewed before the DEFECT-first
+prompt existed, since `Unknown` is never auto-accepted), plus unnumbered
+`"Reset Leaked Quality Review Corrections"`, `"RunQualityReviewSampleForOneLine"`,
+`"QcOmittedSubjectRegression"` (regression test, independent of corpus state), and
+`"Reset ALL Quality Review State (full re-review)"` (NOT routine - full do-over only, see the doc
+comment on `QualityReviewWorkflow.ResetAllQcState`). A proposed correction is only ever accepted if
+it passes the same structural validation gate a normal translation attempt does, plus a
+glossary-drift check - a rejected correction never touches `Translated`; once accepted, a low
+self-rated confidence score only flags it for human review, it no longer discards the correction and
+re-rolls (see the shared library's postmortem notes below). Full mechanics (data model,
+staleness/freshness, packaging interaction, prompt-per-model-family convention, DEFECT-category
+parsing/policy, and the 2026-09 omitted-subject/response-truncation/low-score-discard postmortems)
+live in the shared library's `docs/quality-review-pass-architecture.md`
+(`../../FanslationStudio.LlmKit/docs/` - a SIBLING repo, see "Shared library boundary" below); the original
+design rationale is in `docs/plans/quality-review-pass.md`, and the `DEFECT`-category noise
+investigation/precision findings/policy decisions are in
+`Tests/docs/qc-qualityscore-noise-investigation.md`.
+
+### DEFECT-category policy (`qualityReview.autoAcceptDefectCategories` in `Config.yaml`)
+
+A hand-validated-precision-per-category policy, not a code-level default: `Config.yaml` currently
+auto-accepts `HardToParseSeam`/`OtherNamedDefect`/`DroppedContent` (near-0% precision on a 40-line
+sample each - see `Tests/docs/qc-qualityscore-noise-investigation.md` for the per-category
+findings) and deliberately leaves `GarbledNumber`/`DomainTerm`/`UntranslatedPinyin` (high precision
+- worth the human review queue) and `LostIdiom` (low precision, but at least one hand-checked
+correction made a fine idiom *worse* - a different risk than wasted review time) off the list. If
+you re-hand-validate a category and want to change its policy, edit
+`Config.yaml`'s `qualityReview.autoAcceptDefectCategories`, then run
+`Tests/QualityControlWorkflowTests.cs`'s `"8. Reset Non-Auto-Accepted Quality Review State"` to pull
+the affected rows back out of their current bucket.
 
 **Per-column exclusion** (`GameHooks.CustomQcExclusionRule`, registered as `GameFileHandling.
 ExcludeFunctionRoutedDynamicStringFromQc`) keeps a column out of the QC pass entirely - before any

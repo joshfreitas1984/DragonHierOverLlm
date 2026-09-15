@@ -1,5 +1,15 @@
 # QC `QcQualityScore` noise investigation and current triage state
 
+> **Status (2026-09): option 2 (stratify by DEFECT category) is implemented and its policy is set.**
+> DEFECT parsing/persistence, the flagged-subset backfill, and per-category triage
+> (`QcTriageByDefectCategory.yaml`) are all done — see "Per-category hand-validation findings and
+> policy (implemented)" near the end of this doc for what was found and what `Config.yaml`'s
+> `qualityReview.autoAcceptDefectCategories` is currently set to. The mechanism lives in the
+> **sibling repo** `FanslationStudio.LlmKit` — see
+> `../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md`'s "DEFECT categories and
+> per-category policy" section for the current-state technical reference; this document remains the
+> investigation history and the record of *why* each category landed where it did.
+
 ## Summary
 
 `QcQualityScore` (0-100, self-rated by the QC LLM in `QualityReviewWorkflow`, model
@@ -62,7 +72,7 @@ temperature 0.15, top_p 0.92, top_k 40, repeat_penalty 1.05, num_ctx 2048, num_p
   triaged directly by the user via manual glossary entries (`Files/Glossary/HandRolled.yaml`), not
   through this prompt-tuning effort.
 
-## Current triage options under consideration (not yet decided)
+## Current triage options under consideration (option 2 now implemented — see below)
 
 For the ~5,000 flagged lines, hand-validating all of them is impractical. Options discussed, in
 order of expected effort-to-payoff:
@@ -86,7 +96,11 @@ order of expected effort-to-payoff:
    defensible to stop trusting `QcQualityScore` for automated gating entirely and ship the 10% as
    flagged-but-unreviewed.
 
-No option has been implemented yet as of this writing.
+Option 2 (stratify by DEFECT category) is implemented — see "Per-category hand-validation findings
+and policy (implemented)" below. Options 1/3/4/5 remain unimplemented; option 3 (deterministic
+pre-filter for `GARBLED_NUMBER`/`UNTRANSLATED_PINYIN`) is worth revisiting given those two
+categories' high measured precision below — a mechanical check could plausibly clear even more of
+them without an LLM call at all.
 
 ## Requirements for option 2 (stratify by DEFECT category)
 
@@ -128,3 +142,45 @@ This option's main up-front cost is steps 1-2 (parsing/persisting DEFECT, and re
 flagged subset to backfill it for lines scored before the DEFECT-first prompt was live) — after
 that, it's a fixed, small hand-validation cost (a few hundred lines total across categories) rather
 than validating all 5,000.
+
+## Per-category hand-validation findings and policy (implemented)
+
+Steps 1-4 above were completed (DEFECT parsing/persistence, flagged-subset backfill, per-category
+counts, 40-line-per-category sample — see `TestResults/QcTriageSummary.yaml`/
+`QcTriageByDefectCategory.yaml`). Step 5 (hand-validation) was done by reading all ~320 sampled
+lines: for each, comparing `text` (SOURCE) against `qcReviewedText` (the *original*, pre-QC
+translation — confirmed from `QualityReviewWorkflow.cs`'s `anchor.QcReviewedText = effectiveTranslated`
+assignment, set BEFORE the QC call) and `qcTranslated` (QC's *proposed correction*, set AFTER, from
+`anchor.QcTranslated = correctedResult`) to judge whether a genuine defect existed and was actually
+fixed, not just whether the two texts differ.
+
+Counts below are out of `TotalFlagged: 6620` at the time of this pass (`QcTriageSummary.yaml`).
+
+| Category | Count | Sample verdict | Policy |
+| --- | --- | --- | --- |
+| `HardToParseSeam` | 1,360 | Near-uniformly fine translations flagged for register/fluency preference. Almost no genuine defects in 40 samples. | **Auto-accept** |
+| `DroppedContent` | 1,286 | Mostly false positives (pronoun/style tweaks), but 2-3 genuine content-restoration catches per 40 (e.g. "不愧是老夫" dropped, then correctly restored). Low precision, not zero. | **Auto-accept** |
+| `Unknown` | 1,138 | Not a DEFECT category — lines whose response predates the DEFECT-first prompt or otherwise failed to parse a `DEFECT:` line. Scores cluster 60-70 (just under the 70 threshold), unlike every other category's sharply bimodal <40 scores under the CONSISTENCY rule — confirms these are pre-DEFECT-prompt responses, not a precision question. | **Not a policy category** — backfill via `ResetNonAutoAcceptedQcState` (`Unknown` is never auto-accepted) + a re-run |
+| `LostIdiom` | 1,069 | Mixed: many flagged items are subjective literal-vs-idiomatic renderings of skill/move names (not really defects), a few genuine idiom-meaning-inversion catches, and **at least one case where the "fix" made a fine translation worse** (鬼门关: good idiomatic "Narrow escape" → over-literal "Gate of the Underworld"). Low precision, but a different risk than wasted review time. | **Deliberately undecided** — left off `autoAcceptDefectCategories` |
+| `OtherNamedDefect` | 777 | Catch-all bucket — nearly every sample is a stylistic paraphrase with no factual difference. No consistent defect pattern. | **Auto-accept** |
+| `GarbledNumber` | 396 | Moderate-high precision — genuine numeric/placeholder-integration garbles (a fully-untranslated numeral-unit string, wrong tael amounts, date-digit confusion). | **Review queue** |
+| `DomainTerm` | 386 | High precision — real proper-noun/terminology fixes (五毒弟子 mistranslated as nonsense "Poisson Disciple" → correctly fixed; consistent character-name garbling across samples, e.g. Zhao Yinzong/Yanxi/Dianjian). | **Review queue** |
+| `UntranslatedPinyin` | 206 | Near-100% precision — reviewed text is routinely literal raw pinyin ("xiang dang nian", "daoshan youpo", "wuqu mingge"), correction properly translates it. | **Review queue** |
+| `None` | 2 | Negligible, not worth a policy. | N/A |
+
+**Implemented policy** (`Files/Config.yaml`'s `qualityReview.autoAcceptDefectCategories`):
+`[HardToParseSeam, OtherNamedDefect, DroppedContent]` — auto-accepted categories total 3,423 lines
+(52% of the flagged set) cleared without individual review; `GarbledNumber`/`DomainTerm`/
+`UntranslatedPinyin` (988 lines, 15%) stay in the human-review queue where the flags are worth the
+time; `LostIdiom` (1,069) is intentionally left undecided; `Unknown` (1,138) needs its own re-run via
+`Tests/QualityControlWorkflowTests.cs`'s `"8. Reset Non-Auto-Accepted Quality Review State"` +
+`"2. RunQualityReviewPass"` before it can be categorized at all. The mechanism (`QualityReviewConfig
+.AutoAcceptDefectCategories`, `QualityReviewHelpers.PassesQcScoreGate`, `QualityReviewWorkflow
+.ResetNonAutoAcceptedQcState`) lives in `FanslationStudio.LlmKit` — see its
+`docs/quality-review-pass-architecture.md`'s "DEFECT categories and per-category policy" section.
+
+**Re-running this process**: if `LostIdiom` (or any category) gets re-hand-validated later — a
+prompt tweak, a larger sample, or just revisiting the judgment call — update
+`autoAcceptDefectCategories` in `Config.yaml`, then run `"8. Reset Non-Auto-Accepted Quality Review
+State"` to pull the affected rows back out of their current bucket for a fresh look on the next QC
+pass.

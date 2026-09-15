@@ -143,15 +143,19 @@
   - split: 19
     text: "居于城镇中央，朝廷官员办公判案之所，气势恢宏，守卫森严，亦是一城之中最为重要之建筑。"
     translated: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent‑making it one of the most crucial structures in the entire city."
+    qcReviewedText: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent‑making it one of the most crucial structures in the entire city."
+    qcStatus: Passed
+    qcQualityScore: 82
+    qcDefectCategory: None
 - raw: "16,集市,16,2,1,0,2,交易--ShowBuildingShop;资源贸易?买卖门派资源-有门派-ShowFreeTrade,银钱+100,粮食-50,本地资源点产量0.2,珍宝铺-0.2;兵器铺-0.2;材料铺-0.2,粮食500;木料500,10,1,1000-12-0-0/1/2/3/4/5,0,footstep,1;1,本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
   splits:
   - split: 19
     text: "本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
     translated: "Local vendors gather here, a place for the common folk to trade and sell goods. Most items sold are varied but not of high quality. Members of various sects can also conduct large‑scale resource transactions here."
     qcReviewedText: "Local vendors gather here, a place for the common folk to trade and sell goods. Most items sold are varied but not of high quality. Members of various sects can also conduct large‑scale resource transactions here."
-    qcTranslated: "Local vendors gather here, a place for the common folk to trade and buy goods. Most items sold are varied but not of high quality. Members of various Sects can also conduct large‑scale resource transactions here."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "17,客栈,17,1,1,0,3,探听?打探周边随机事件--AskNearRandomEvent;住宿?休养恢复状态--HotelRest;打杂?赚取少量银钱--SimpleWork;烹饪?制作饮食--StartCraftFoodMoney;精烩?强化饮食--StartEnhanceFoodMoney;义诊?增加区域人口\\n技能影响：炼药-我-AreaBuildingWork-4;投药?降低区域人口\\n技能影响：炼药-敌-AreaBuildingWork-负4,民心+6,治安-4,本地恢复效率0.1,岗哨-0.2;集市-0.2,银钱500;粮食500,10,1,,0,door,0;0,供商贾旅人和武林人士打尖住店之所，一楼提供各式家常菜肴，二楼则为住宿客房。"
   splits:
   - split: 19
@@ -443,6 +447,10 @@
   - split: 19
     text: "历代于此石壁之上不断穿凿而成，号称洞窟千余，其中禅室林立，佛像众多，四壁多绘有壁画，极为宏伟瑰丽。更兼藏经洞窟，内有书卷典籍无数，引得众多高僧大德前来修行。"
     translated: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
+    qcReviewedText: "While traversing through the Zang Jing Dongku, they studied endless scriptures and classics. With an insatiable hunger for knowledge, they yearned to delve deeper and preserve these teachings."
+    qcTranslated: "Carved continuously into the stone wall by generations of artisans, the site is said to contain over a thousand caves. Zen chambers are densely packed, Buddha statues are numerous, and the four walls are adorned with magnificent and resplendent murals. Additionally, the Scripture Storage Cave contains countless scrolls and classics, attracting many high monks and virtuous scholars to come and practice."
+    qcStatus: Corrected
+    qcQualityScore: 100
 - raw: "50,黄鹤楼,50,6,1,0,4,招贤--SpeHireFollower,威望+10;全域治安+1,木料-150,实战经验0.1;弟子功绩0.2,,粮食1000;木料2000,20,8,,2,footstep,0;0,上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
   splits:
   - split: 19
@@ -536,9 +544,9 @@
     text: "一方清澈见底的水池，池中或卧或立有刀兵剑刃无数，乃是铸剑山庄历代冶炼积累之残次品及试验品。以此池水淬炼兵器，可感应池中无穷剑意，所得之锋利坚韧远非凡俗可比。"
     translated: "A clear pond with countless swords and blades lying or standing within. This is the remnants and test products from Swordforging Manor's centuries of metalworking. Using this pool water to temper weapons can sense the infinite sword intent within, yielding blades far sharper and tougher than ordinary ones."
     qcReviewedText: "A clear pond with countless swords and blades lying or standing within. This is the remnants and test products from Swordforging Manor's centuries of metalworking. Using this pool water to temper weapons can sense the infinite sword intent within, yielding blades far sharper and tougher than ordinary ones."
-    qcTranslated: "A crystal‑clear pool with countless blades and swords lying or standing within, consisting of the defective and experimental products accumulated from generations of smelting at Swordforging Manor. Tempering weapons in this water allows one to sense the infinite sword intent in the pool, yielding sharpness and toughness far beyond the mundane."
+    qcTranslated: "A clear pool with countless swords and blades lying or standing within, which are the defective and test products accumulated from generations of smelting at Swordforging Manor. Using this pool water to temper weapons allows one to sense the infinite sword intent within, yielding blades far sharper and tougher than ordinary ones."
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 100
 - raw: "60,万毒池,60,6,1,0,4,提升毒术潜力--StudyMaxLivingSkill-1;炼蛊-我&门派功能7-ShowSpePoison,药材+100,粮食-100,毒术经验0.2;全员毒术4;恢复效率0.2,,矿石1000;药材2000,20,37,,2,footstep,0;0,瘴气密布，暗流涌动的墨绿毒池，五毒教历代炼蛊试毒之产物，江湖中人闻风丧胆的金蚕王蛊便是出自其中，功力薄弱者只需稍稍靠近，便会头晕眼花，倒地不起。"
   splits:
   - split: 19
@@ -615,6 +623,8 @@
   - split: 19
     text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
     translated: "Kongtong Mountain, perilous and marvelously bizarre, legend speaks of seventy‑two cave entrances scattered throughout its peaks, depths unfathomable and their pathways unknown. After generations of excavation, these caves are now intricately connected, winding and tortuous. The Kongtong disciples cultivate special techniques here. They often employ dangerous tactics that are hard to guard against."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
     qcReviewedText: "Kongtong Mountain, perilous and marvelously bizarre, legend speaks of seventy‑two cave entrances scattered throughout its peaks, depths unfathomable and their pathways unknown. After generations of excavation, these caves are now intricately connected, winding and tortuous. The Kongtong disciples cultivate special techniques here. They often employ dangerous tactics that are hard to guard against."
     qcTranslated: "Kongtong Mountain is perilous and marvelously bizarre. Legend speaks of seventy‑two caves, their depths unfathomable and pathways unknown. After generations of excavation, they are now intricately connected, winding and tortuous. The Kongtong disciples utilize this terrain to cultivate unique and secret techniques, often employing dangerous moves that are impossible to defend against."
     qcStatus: Corrected

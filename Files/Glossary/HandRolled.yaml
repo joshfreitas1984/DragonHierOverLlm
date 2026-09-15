@@ -138,3 +138,8 @@
   result: True Qi
   allowalt:
    - grand 
+
+- raw: 奇门
+  result: Qimen
+  allowalt:
+    - Unorthodox

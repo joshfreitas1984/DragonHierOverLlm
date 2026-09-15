@@ -13,7 +13,7 @@ LLM-based translation. The sub-projects are independent and are documented separ
 | --- | --- |
 | [`Converter/`](../Converter/) | Decompiles the game's IL2CPP `Assembly-CSharp.dll` + `GameAssembly.dll` into readable pseudo-C# via Ghidra, for reverse-engineering game data structures. |
 | [`DragonHeirPlugin/`](../DragonHeirPlugin/) | BepInEx runtime plugin (Harmony patches) that injects translated text into the running game via IL2CPP interop. |
-| [`Tests/`](../Tests/) | Translation pipeline: extracts game CSV/TextAsset data, drives the LLM translation workflow (built on `FanslationStudio.LlmKit`), and repackages translated data for the plugin/mod. |
+| [`Tests/`](../Tests/) | Translation pipeline: extracts game CSV/TextAsset data, drives the LLM translation workflow (built on `FanslationStudio.LlmKit` — a **sibling repo** at `../FanslationStudio.LlmKit`, referenced via project reference, not a NuGet package; its own `docs/` folder is the source of truth for shared-library mechanics like the QC pass), and repackages translated data for the plugin/mod. |
 | [`Verify/`](../Verify/) | Persistent, re-runnable verification harness project for isolating and reproducing logic bugs (regex/string-processing, etc.) outside the running game or main test suite. |
 | [`Files/`](../Files/) | Working-directory data: raw extracted game text, glossary, manual translations, converted/translated output, and the mod drop-in folder consumed by `DragonHeirPlugin`. |
 
@@ -77,4 +77,5 @@ all three in sync if a repository-wide rule changes.
 | Debug a data-loss or crash bug in `GameFileHandling`/`LoadAllGameData` | [`Tests/KNOWN_ISSUES.md`](../Tests/KNOWN_ISSUES.md) |
 | Reproduce/isolate a logic bug outside the running game | [`Verify/`](../Verify/) (see the workflow rule in [`.github/copilot-instructions.md`](../.github/copilot-instructions.md)) |
 | Understand the `Files/` raw/converted/mod data layout | [`Tests/docs/gamefilehandling-reference.md`](../Tests/docs/gamefilehandling-reference.md) |
+| Work on the QC (quality review) pass — DEFECT categories, triage, auto-accept policy, packaging gate | [`Tests/KNOWN_ISSUES.md`](../Tests/KNOWN_ISSUES.md#quality-review-qc-pipeline) for current state, then `../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md` (**sibling repo** — the actual `QualityReviewWorkflow` implementation lives there, not in this repo) |
 | Install/play the released patch | [`readme.md`](../readme.md) |

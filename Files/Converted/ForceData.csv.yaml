@@ -150,6 +150,12 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
+    qcReviewedText: "<b>Iron Palm</b>：The conference focuses on palm and fist weapons, enhancing their power.\\n<b>Begging</b>：Consume prestige to beg for silver from others. Requesting items from others consumes goodwill.-40%。"
+    qcTranslated: "<b>Iron Palm</b>: Researches fist and palm weapons at the assembly, enhancing their power.\\n<b>Begging</b>: Consume prestige to beg for silver from others. Requesting items from others consumes ‑40% of their goodwill."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: HardToParseSeam
   - split: 15
     subIndex: 1
     text: "大会台研究拳掌兵器，提升拳掌威力。"
@@ -170,6 +176,12 @@
   - split: 15
     text: "枪术"
     translated: "Gun combat"
+    qcReviewedText: "<b>Gun combat</b>：Study the long weapon at the racetrack to enhance its power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcTranslated: "<b>Spear technique</b>: Study long weapons at the racetrack to enhance their power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: DomainTerm
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
@@ -250,6 +262,12 @@
   - split: 15
     text: "炼蛊"
     translated: "Incubate poison insects"
+    qcReviewedText: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
+    qcTranslated: "<b>Poison Refining</b>: Consume catalysts/ingredients in the Pool of Ten Thousand Poisons to obtain poisons. Fuse low‑level poisons to obtain powerful high‑level poisons.\\n<b>Poison Arts</b>: You can select multiple poisons for application; equipping"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - split: 15
     subIndex: 1
     text: "在万毒池消耗药引"
@@ -274,6 +292,12 @@
   - split: 15
     text: "试炼"
     translated: "Trial"
+    qcReviewedText: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：The Infamy ‑40% for stealing from others and stores; when caught by the authorities, you can use your special skill to break through."
+    qcTranslated: "<b>Trial</b>: Challenge the Gate of Despair trials with increasing difficulty to obtain progressively enhanced talent effects.\\n<b>Domineering</b>: Infamy 40% for snatching items from others and shops; when caught by the authorities,"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DroppedContent
   - split: 15
     subIndex: 1
     text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
@@ -294,6 +318,12 @@
   - split: 15
     text: "博引"
     translated: "Wide‑ranging"
+    qcRejectedCorrection: "<b>Broad Citations</b>: Collect secret manuals from other Sects and place them in the"
+    qcFailureReason: " Restore `\\n` to the translation, as it was incorrectly removed."
+    qcQualityScore: 20
+    qcDefectCategory: HardToParseSeam
+    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureBaseline: "<b>Wide‑ranging</b>：Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial evidence</b>：Discuss the hand card limit +3, discuss obtaining bonus effects and additional affinity upon victory. The skill requirements for compiling the Secret Manual.-10%。"
   - split: 15
     subIndex: 1
     text: "搜集其他门派秘籍放入星辰阁，获取对应武学加成。"
@@ -438,6 +468,12 @@
   - split: 15
     text: "奇技"
     translated: "Strange Art"
+    qcReviewedText: "<b>Strange Art</b>：Research the 72 Caves to enhance the power of the qimen weapons.\\n<b>Constant problems</b>：Gain one Odd Door Martial Art upon leveling up, with additional enhancement based on the art's grade by 0.5./1/1.5/2/2.5/3 Points of Mystical Gates"
+    qcTranslated: "<b>Strange Arts</b>: Research the 72 Caves to study Qimen weapons and enhance their power.\\n<b>Hundredfold</b>: For each Qimen martial art that reaches full level, gain an additional 72/0.5/1/1.5/2/{5"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 15
+    qcDefectCategory: GarbledNumber
   - split: 15
     subIndex: 1
     text: "七十二洞研究奇门兵器，提升奇门威力。"
@@ -450,10 +486,14 @@
     subIndex: 3
     text: "每满级一门奇门武学，根据武学品级额外提升0.5"
     translated: "Gain one Odd Door Martial Art upon leveling up, with additional enhancement based on the art's grade by 0.5."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
   - split: 15
     subIndex: 4
     text: "3点奇门。"
     translated: "3 Points of Mystical Gates"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/1/1.5/2/2.5/{4}"
@@ -462,6 +502,12 @@
   - split: 15
     text: "机关"
     translated: "Mechanism"
+    qcReviewedText: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous studies</b>：All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures./Materials and treasure appraisal additional knowledge bonus"
+    qcTranslated: "<b>Mechanism</b>: Upgrade Mechanical Beasts by equipping items and enhancing them to gain corresponding Mechanical Beast bonuses.\\n<b>Miscellaneous Studies</b>: All skill experience +20%, higher"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - split: 15
     subIndex: 1
     text: "使用装备改装升级机关兽，获取对应的机关兽加成。"
@@ -518,6 +564,12 @@
   - split: 15
     text: "密宗"
     translated: "Esoteric Buddhism"
+    qcReviewedText: "<b>Esoteric Buddhism</b>：Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown ceremony</b>：Reform wild villains or other heroes, altering others' stance toward chaos and ferocity, and increase good will and reputation."
+    qcTranslated: "<b>Esoteric Buddhism</b>: Gain bonuses to Vajra School martial arts through Esoteric practice.\\n<b>Abhisheka</b>: Reform wild villains or other Heroes, shifting their stance toward chaos and ferocity, while boosting affinity and reputation."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DomainTerm
   - split: 15
     subIndex: 1
     text: "通过密宗修行获取金刚宗武学加成。"
@@ -538,6 +590,10 @@
   - split: 15
     text: "玄冰"
     translated: "Xuanbing"
+    qcQualityScore: 1
+    qcDefectCategory: GarbledNumber
+    qcRuleCheckFailureCount: 2
+    qcRuleCheckFailureBaseline: "<b>Xuanbing</b>：Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>：Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality./4/6/8/10/12 points of Inner Power cap"
   - split: 15
     subIndex: 1
     text: "通过凝结玄冰提升天山派武学和冰寒武学效果。"
@@ -578,6 +634,12 @@
   - split: 15
     text: "黄河"
     translated: "Yellow River"
+    qcReviewedText: "<b>Yellow River</b>：Blade Art experience +20%, poison technique experience+20%。"
+    qcTranslated: "<b>Yellow River</b>: Blade Art experience +20%, poison technique experience +20%."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "刀法经验+20%，毒术经验"
@@ -598,6 +660,8 @@
     subIndex: 1
     text: "奇门经验+20%，学识经验"
     translated: "Combat experience +20%, Scholarly experience"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"
@@ -654,6 +718,12 @@
   - split: 15
     text: "巨鲸"
     translated: "Great whale"
+    qcReviewedText: "<b>Great whale</b>：Qinggong experience +20%, Resource Gathering experience+20%。"
+    qcTranslated: "<b>Great Whale</b>: Qinggong experience +20%, Resource Gathering experience +20%."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "轻功经验+20%，采伐经验"
@@ -666,6 +736,12 @@
   - split: 15
     text: "金龙"
     translated: "Golden Dragon"
+    qcReviewedText: "<b>Golden Dragon</b>：Archery experience +20%, eloquence experience+20%。"
+    qcTranslated: "<b>Golden Dragon</b>: Archery experience +20%, Eloquence experience +20%"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "射术经验+20%，口才经验"
@@ -694,6 +770,12 @@
   - split: 15
     text: "伏牛"
     translated: "Wutou Mountain"
+    qcReviewedText: "<b>Wutou Mountain</b>：Long weapon experience +20%, wooden staff experience+20%。"
+    qcTranslated: "<b>Funiu</b>: Long weapon experience +20%, wood planting experience +20%."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - split: 15
     subIndex: 1
     text: "长兵经验+20%，木植经验"

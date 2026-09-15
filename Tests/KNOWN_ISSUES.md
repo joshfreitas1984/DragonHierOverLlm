@@ -56,8 +56,28 @@ was a prerequisite for the load sequence progressing far enough to hit the next 
 
 ## Quality-review (QC) pipeline
 
+The actual `QualityReviewWorkflow` implementation lives in the **sibling repo**
+`../FanslationStudio.LlmKit` (a project reference, not part of this repo) — its
+`docs/quality-review-pass-architecture.md` is the current-state technical reference (data model,
+DEFECT parsing, packaging gate, triage, reset levels, config). This repo's numbered QC test facts
+live in [`Tests/QualityControlWorkflowTests.cs`](QualityControlWorkflowTests.cs) (numbered `0`-`8`
+plus a few unnumbered ones — see that file or the auto-loaded
+[`tests-translation-workflow.instructions.md`](../.github/instructions/tests-translation-workflow.instructions.md)
+for what each one does).
+
 - [`docs/qc-qualityscore-noise-investigation.md`](docs/qc-qualityscore-noise-investigation.md) —
   `QcQualityScore` false-positive/noise investigation in `QualityReviewWorkflow`: confirmed prompt
   fixes applied, options ruled out (score-scale widening, `minAcceptableScore` retuning, trigger
-  change), and open triage options for the ~5,000 currently-flagged lines (multi-run consensus,
-  DEFECT-category stratification, deterministic pre-filter, second-model cross-check).
+  change), and the DEFECT-category-stratification option (now implemented — see below) including
+  the per-category hand-validation findings and precision estimates.
+
+**Current state (2026-09):** DEFECT parsing/persistence, the ~5,000-line backfill, and per-category
+triage (`QcTriageByDefectCategory.yaml`) are all done. `Config.yaml`'s
+`qualityReview.autoAcceptDefectCategories` now auto-accepts `HardToParseSeam`/`OtherNamedDefect`/
+`DroppedContent` (hand-validated near-0% precision); `GarbledNumber`/`DomainTerm`/
+`UntranslatedPinyin` stay in the human-review queue (hand-validated high precision); `LostIdiom` is
+deliberately left undecided (low precision, but at least one correction made a fine translation
+worse — a different risk than wasted review time). `Tests/QualityControlWorkflowTests.cs`'s
+`"8. Reset Non-Auto-Accepted Quality Review State"` is the repeatable step for re-running this
+policy after a category's verdict changes, and doubles as the backfill for `QcDefectCategory.Unknown`
+rows (reviewed before the DEFECT-first prompt existed).

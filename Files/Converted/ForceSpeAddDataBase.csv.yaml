@@ -221,6 +221,8 @@
   - split: 2
     text: "奇门经验"
     translated: "Dungeon XP"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
     qcReviewedText: "Dungeon XP"
     qcTranslated: "Qimen XP"
     qcStatus: Corrected
@@ -513,6 +515,10 @@
   - split: 2
     text: "藏经容量"
     translated: "Taoist Canon Capacity"
+    qcReviewedText: "Taoist Canon Capacity"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "60,全域治安,全域治安,FALSE,1"
   splits:
   - split: 2

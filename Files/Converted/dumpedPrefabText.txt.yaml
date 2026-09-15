@@ -217,6 +217,10 @@
   splits:
   - text: "剑法"
     translated: "Sword Art"
+    qcReviewedText: "<b>Sword Art </b>\\nEnhance sword technique damage \\nReduce damage from sword techniques"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "提升剑法伤害"
     translated: "Enhance sword technique damage"
@@ -295,9 +299,19 @@
   splits:
   - text: "奇门"
     translated: "Qi Men"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
+    qcReviewedText: "<b>Qi Men </b>\\nBoost Oddly Gate Damage \\nReduce damage from qimen attacks"
+    qcTranslated: "<b>Qi Men</b>\\nBoosts Qi Men damage\\nReduces Qi Men damage taken"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "提升奇门伤害"
     translated: "Boost Oddly Gate Damage"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
   - subIndex: 2
     text: "降低受到的奇门伤害"
     translated: "Reduce damage from qimen attacks"
@@ -620,6 +634,12 @@
   splits:
   - text: "使用头盔"
     translated: "Use the helmet"
+    qcReviewedText: "♦Use the helmet/Armor/Step the Mechanism Beast to modify it, and you will gain special bonuses applicable to all Mechanism Beasts for 30 days.\\n♦Each modification will increase the experience of the corresponding body part. After upgrading a body part, it will provide permanent enhancements to the mecha beast."
+    qcTranslated: "♦Use the helmet/armor/boots to modify the Mechanism Beast, gaining special bonuses that apply to all Mechanism Beasts for 30 days.\\n♦Each modification increases the experience of the corresponding slot"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "护甲"
     translated: "Armor"
@@ -1106,6 +1126,12 @@
   splits:
   - text: "自定义选项会在"
     translated: "Custom options will be available in"
+    qcReviewedText: "♦Custom options will be available in <b>Based on the selected difficulty </b>Have an impact\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase Skill Cap by +1.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
+    qcTranslated: "♦Custom options will have an effect <b>based on the selected difficulty</b>\\n♦Achievements can only be obtained when the overall level is set to Balanced, Hard, Very Hard, or Extreme\\n♦For every 10 difficulty points, the +1. talent cap increases\\n♦It is recommended to understand the game mechanics"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "所选难度基础上"
     translated: "Based on the selected difficulty"
@@ -1136,6 +1162,12 @@
   splits:
   - text: "藏经阁秘籍可提升门派所有弟子修炼该武学的速度。"
     translated: "The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art. The Scripture Pavilion's Secret Manual can increase the cultivation speed of all sect disciples for that martial art."
+    qcReviewedText: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art. The Scripture Pavilion's Secret Manual can increase the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is ineffective on players)"
+    qcTranslated: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "秘籍越稀有加成越高。"
     translated: "The rarer the Secret Manual, the higher the bonus."
@@ -1424,6 +1456,12 @@
   splits:
   - text: "三"
     translated: "Three"
+    qcReviewedText: "Three \\nWait \\nPrize"
+    qcTranslated: "Third \\nClass \\nPrize"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1674,6 +1712,10 @@
   splits:
   - text: "九死一生"
     translated: "Nine deaths in exchange for one life"
+    qcReviewedText: "Nine deaths in exchange for one life"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "习得武学，获取秘籍可解锁对应武学图鉴"
   splits:
   - text: "习得武学，获取秘籍可解锁对应武学图鉴"
@@ -1710,6 +1752,12 @@
   splits:
   - text: "二"
     translated: "Two"
+    qcReviewedText: "Two \\nWait \\nPrize"
+    qcTranslated: "Second \\nClass \\nPrize"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1906,6 +1954,12 @@
   splits:
   - text: "仙霞派派正式正式"
     translated: "Xianxia Sect officially"
+    qcReviewedText: "Xianxia Sect officially"
+    qcTranslated: "Xi‑Xianxia Sect officially"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: DroppedStutter
 - raw: "以此换取支持，稳固皇位。"
   splits:
   - text: "以此换取支持，稳固皇位。"
@@ -1947,6 +2001,10 @@
   splits:
   - text: "仿本"
     translated: "Sample"
+    qcReviewedText: "Sample"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "休息(快捷键S)\\n♦生命+1% 内力+2%\\n♦体力+10\\n♦恢复5%已损失架势"
   splits:
   - text: "休息"
@@ -2026,6 +2084,10 @@
   splits:
   - text: "会"
     translated: "Will"
+    qcReviewedText: "Will \\nDiscuss"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "议"
     translated: "Discuss"
@@ -2369,6 +2431,12 @@
   splits:
   - text: "入群会友"
     translated: "Joining friends in the group"
+    qcReviewedText: "Joining friends in the group"
+    qcTranslated: "Join the Group to Meet Friends"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: LostIdiom
 - raw: "入门弟子"
   splits:
   - text: "入门弟子"
@@ -2413,6 +2481,10 @@
   splits:
   - text: "全关"
     translated: "Shut down all rooms"
+    qcReviewedText: "Shut down all rooms"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "全屏"
   splits:
   - text: "全屏"
@@ -3425,6 +3497,12 @@
   splits:
   - text: "博引特殊加成"
     translated: "Borrowed Unique Bonus"
+    qcReviewedText: "Borrowed Unique Bonus"
+    qcTranslated: "Extensive Citation Special Bonus"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: LostIdiom
 - raw: "占领区域"
   splits:
   - text: "占领区域"
@@ -3492,8 +3570,11 @@
   splits:
   - text: "取寻仙问道之“仙”字，与陶弘景“心标象外，志结霞门”之“霞”字，"
     translated: "Take the character xian from the quest for immortality and questions of dao, and the xia character from Tao Hongjing's heart marked beyond form, will tied to the clouds."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Take the character xian from the quest for immortality and questions of dao, and the xia character from Tao Hongjing's heart marked beyond form, will tied to the clouds."
+    qcReviewedText: "Take the character xian from the quest for immortality and questions of dao, and the xia character from Tao Hongjing's heart marked beyond form, will tied to the clouds."
+    qcTranslated: "Take the character \"immortal\" from \"seeking the immortal path of the Dao,\" and the character \"rainbow\" from Tao Hongjing's \"mind anchored beyond form, will bound to the rainbow gate.\""
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "取消"
   splits:
   - text: "取消"
@@ -3842,6 +3923,10 @@
   splits:
   - text: "增加潜力"
     translated: "Increase potential"
+    qcReviewedText: "Increase potential \\nPress and hold the left button shift Add 1 point to 5"
+    qcTranslated: "Increase Potential \\nHold left Shift to add 5 points"
+    qcStatus: Corrected
+    qcQualityScore: 60
   - subIndex: 1
     text: "按住左"
     translated: "Press and hold the left button"
@@ -4018,6 +4103,10 @@
   splits:
   - text: "头盔"
     translated: "Helmet"
+    qcReviewedText: "Helmet\\n(consumption)"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "（消耗）"
     translated: "(consumption)"
@@ -4027,6 +4116,8 @@
   splits:
   - text: "奇门"
     translated: "Qi Men"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
     qcReviewedText: "Qi Men"
     qcStatus: Passed
     qcQualityScore: 85
@@ -4035,12 +4126,22 @@
   splits:
   - text: "奇门"
     translated: "Qi Men"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
+    qcReviewedText: "Qi Men+5"
+    qcTranslated: "Secret Gate+5"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: UntranslatedPinyin
   templates:
   - template: "{0}+5"
 - raw: "奇门+5\\n炼药+5"
   splits:
   - text: "奇门"
     translated: "Qi Men"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
     qcReviewedText: "Qi Men+5 \\nAlchemy+5"
     qcStatus: Passed
     qcQualityScore: 85
@@ -4054,6 +4155,8 @@
   splits:
   - text: "奇门武器"
     translated: "Mystic Weapon"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Qimen,奇门,"
     qcReviewedText: "Mystic Weapon"
     qcStatus: Passed
     qcQualityScore: 95
@@ -4649,10 +4752,22 @@
   splits:
   - text: "布甲"
     translated: "Leather armor"
+    qcReviewedText: "Leather armor"
+    qcTranslated: "Cloth armor"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: DomainTerm
 - raw: "布鞋"
   splits:
   - text: "布鞋"
     translated: "Sneakers"
+    qcReviewedText: "Sneakers"
+    qcTranslated: "Cloth Shoes"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: DomainTerm
 - raw: "师傅"
   splits:
   - text: "师傅"
@@ -4689,10 +4804,22 @@
   splits:
   - text: "建筑三级解锁"
     translated: "Unlock level 3 construction"
+    qcReviewedText: "Unlock level 3 construction"
+    qcTranslated: "Unlock Level 3 Construction"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: GarbledNumber
 - raw: "建筑九级解锁"
   splits:
   - text: "建筑九级解锁"
     translated: "Level 9 building unlocked"
+    qcReviewedText: "Level 9 building unlocked"
+    qcTranslated: "Level 9 building unlocked"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: GarbledNumber
 - raw: "开启时每次闪避消耗5体力。\\n体力小于5点时无法闪避。\\n对玩家和所有角色同时生效。"
   splits:
   - text: "开启时每次闪避消耗5体力。"
@@ -4996,6 +5123,12 @@
   splits:
   - text: "快速路"
     translated: "Expressway"
+    qcReviewedText: "Expressway \\nMoving up is equivalent to sprinting and accelerating."
+    qcTranslated: "Expressway \\nMoving on top of it is equivalent to sprinting"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "在上面移动相当于冲刺加速"
     translated: "Moving up is equivalent to sprinting and accelerating."
@@ -5527,6 +5660,12 @@
   splits:
   - text: "护"
     translated: "Protect"
+    qcReviewedText: "Protect \\nJia"
+    qcTranslated: "Shield\\nArmor"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "甲"
     translated: "Jia"
@@ -5536,6 +5675,12 @@
   splits:
   - text: "护甲"
     translated: "Armor"
+    qcReviewedText: "Armor\\n(consumption)"
+    qcTranslated: "Armor\\n(Consumable)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "（消耗）"
     translated: "(consumption)"
@@ -5606,6 +5751,12 @@
   splits:
   - text: "拳掌"
     translated: "Fists and palms"
+    qcReviewedText: "Fists and palms+5 \\nForest Plant+5"
+    qcTranslated: "Fists and Palms +5 \\n Wood & Vegetation +5"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 20
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "木植"
     translated: "Forest Plant"
@@ -5615,6 +5766,12 @@
   splits:
   - text: "拳掌兵器"
     translated: "Punching and palm weapons"
+    qcReviewedText: "Punching and palm weapons\\n(consumption)"
+    qcTranslated: "Fists, Palms & Weapons\\n(Consumption)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "（消耗）"
     translated: "(consumption)"
@@ -5915,6 +6072,10 @@
   splits:
   - text: "斗笠"
     translated: "Hood"
+    qcReviewedText: "Hood"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "新建"
   splits:
   - text: "新建"
@@ -6317,6 +6478,12 @@
   splits:
   - text: "木植"
     translated: "Forest Plant"
+    qcReviewedText: "Forest Plant"
+    qcTranslated: "Muzhi"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: OtherNamedDefect
 - raw: "未获取"
   splits:
   - text: "未获取"
@@ -6451,6 +6618,12 @@
   splits:
   - text: "检测到您为未成年人，敬请注意"
     translated: "Detection of minor status, please take notice"
+    qcReviewedText: "Detection of minor status, please take notice：\\n\\nThis game is only available for minors to play for up to 1 hours of online gaming from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It must not be provided to minors in any other form or at any other time."
+    qcTranslated: "It has been detected that you are a minor, please note:\\n\\nThis game may only provide 21 hours of online gaming services to minors daily from 1 to 20 on Fridays, Saturdays, Sundays, and statutory holidays. Online gaming services must not be provided to minors in any other form or at any other time."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
     translated: "This game is only available for minors to play for up to 1 hours of online gaming from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It must not be provided to minors in any other form or at any other time."
@@ -6539,6 +6712,12 @@
   splits:
   - text: "武"
     translated: "Martial"
+    qcReviewedText: "Martial \\nVessel"
+    qcTranslated: "Wea\\npon"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "器"
     translated: "Vessel"
@@ -6635,6 +6814,12 @@
   splits:
   - text: "武当派"
     translated: "Wudang Sect"
+    qcReviewedText: "Wudang Sect \\nDirect Disciple wore the Daoist robe"
+    qcTranslated: "Wudang Sect \\nDirect Disciple Daoist Robe"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "亲传弟子道袍道"
     translated: "Direct Disciple wore the Daoist robe"
@@ -7353,6 +7538,10 @@
   splits:
   - text: "特效特效"
     translated: "Special effects special effects"
+    qcReviewedText: "Special effects special effects[99]"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   templates:
   - template: "{0}[99]"
 - raw: "特殊"
@@ -7430,6 +7619,10 @@
   splits:
   - text: "猪皮无敌"
     translated: "Skin as Strong as Pig Leather Invincible"
+    qcReviewedText: "Skin as Strong as Pig Leather Invincible"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "猪皮无敌使用"
   splits:
   - text: "猪皮无敌使用"
@@ -7567,6 +7760,12 @@
   splits:
   - text: "百会"
     translated: "Meeting of the Hundred Sands"
+    qcReviewedText: "Meeting of the Hundred Sands"
+    qcTranslated: "Bai Hui"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 10
+    qcDefectCategory: LostIdiom
 - raw: "监牢"
   splits:
   - text: "监牢"
@@ -7595,6 +7794,12 @@
   splits:
   - text: "眼看日薄西山，朝廷只能将治下城镇分封给各大门派，"
     translated: "As the sun set, the court was forced to grant control of the towns under its jurisdiction to the major sects."
+    qcReviewedText: "As the sun set, the court was forced to grant control of the towns under its jurisdiction to the major sects."
+    qcTranslated: "Seeing that power was on the wane, the court could only enfeoff the towns under its rule to the major sects."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: LostIdiom
 - raw: "眼睛"
   splits:
   - text: "眼睛"
@@ -7739,6 +7944,10 @@
   splits:
   - text: "确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确认确"
     translated: "Confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm"
+    qcReviewedText: "Confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm confirm"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "礼法"
   splits:
   - text: "礼法"
@@ -7767,6 +7976,10 @@
   splits:
   - text: "禁止"
     translated: "No permission"
+    qcReviewedText: "No permission"
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "禅宗修行"
   splits:
   - text: "禅宗修行"
@@ -8295,6 +8508,10 @@
   splits:
   - text: "继续坐牢"
     translated: "Keep going to jail"
+    qcReviewedText: "Keep going to jail"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "继续游戏"
   splits:
   - text: "继续游戏"
@@ -8637,6 +8854,12 @@
   splits:
   - text: "药引"
     translated: "Medicine guide"
+    qcReviewedText: "Medicine guide \\nIngredients\\n(consumption)"
+    qcTranslated: "Medicinal Guide\\nIngredients\\n(Consumable)"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "食材"
     translated: "Ingredients"
@@ -8704,6 +8927,10 @@
   splits:
   - text: "藏经经"
     translated: "Treasure Canon Canon"
+    qcReviewedText: "Treasure Canon Canon"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "藏经经验加成"
   splits:
   - text: "藏经经验加成"
@@ -8774,6 +9001,12 @@
   splits:
   - text: "行侠四方"
     translated: "Wander as a wanderer across the four seas"
+    qcReviewedText: "Wander as a wanderer across the four seas"
+    qcTranslated: "Ride for justice across the four seas"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: LostIdiom
 - raw: "行赏"
   splits:
   - text: "行赏"
@@ -8799,6 +9032,12 @@
   splits:
   - text: "袭击黄河帮"
     translated: "Attack the Yellow River Gang"
+    qcReviewedText: "Attack the Yellow River Gang <color=#8C8C8C>Outer Disciple </color>East Gate: Delighted by Joy 1 Times"
+    qcTranslated: "Attack Yellow River Gang <color=#8C8C8C>Outer Disciple</color> Dongmen Jingle 1 Times"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 25
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "外门弟子"
     translated: "Outer Disciple"
@@ -8843,6 +9082,12 @@
   splits:
   - text: "角色服装会提供不同的加成效果，需要在游戏内自行解锁"
     translated: "Character clothing provides different bonuses, which need to be unlocked in‑game."
+    qcReviewedText: "Character clothing provides different bonuses, which need to be unlocked in‑game./Upgrade"
+    qcTranslated: "Character clothing provides different bonus effects, which need to be unlocked/upgraded in‑game."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "升级。"
     translated: "Upgrade"
@@ -9095,6 +9340,12 @@
   splits:
   - text: "购"
     translated: "Buy"
+    qcReviewedText: "Buy \\nBuy"
+    qcTranslated: "Buy"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 30
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "买"
     translated: "Buy"
@@ -9172,6 +9423,12 @@
   splits:
   - text: "足"
     translated: "Foot"
+    qcReviewedText: "Foot \\nWalk"
+    qcTranslated: "Shoes"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "履"
     translated: "Walk"
@@ -9682,6 +9939,10 @@
   splits:
   - text: "门派任务"
     translated: "Sect quest"
+    qcReviewedText: "Sect quest \\nReduce Five Poisons <color=#FF8C06>Elder </color>Qinyu Ruirui loyalty to 3 points  (0/3)"
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "降低五毒"
     translated: "Reduce Five Poisons"
@@ -10353,6 +10614,10 @@
   splits:
   - text: "鸾凤和鸣"
     translated: "Dragon and phoenix resonate"
+    qcReviewedText: "Dragon and phoenix resonate"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "默写"
   splits:
   - text: "默写"

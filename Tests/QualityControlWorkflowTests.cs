@@ -150,6 +150,22 @@ public class QualityControlWorkflowTests
         await QualityReviewWorkflow.ResetNonAutoAcceptedQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
     }
 
+    // Run this ONCE after adding the DROPPED_STUTTER defect category/stutter-handling rule to
+    // BaseSystemPrompt.txt/BaseQualityReviewPrompt.txt: before that change, a Chinese stammer/stutter
+    // (e.g. "思、思阁主", "你、你、你……") had no named defect to score against, so a dropped stutter
+    // almost always passed QC silently at a high score instead of getting flagged - it would NOT have
+    // shown up under DROPPED_CONTENT (scoped to subject/object/clause/title only) or reliably under
+    // OTHER_NAMED_DEFECT (the scoring anchors explicitly told the model not to score down anything
+    // outside the named defect list). This resets every column whose SOURCE actually contains the
+    // pattern back to NotReviewed regardless of its old score/status, so the next "1"/"2" pass gives
+    // it a genuinely fresh review under the new prompt - far cheaper than "Reset ALL Quality Review
+    // State" since it targets only the columns a plain regex scan finds, with no LLM call of its own.
+    [Fact(DisplayName = "9. Reset Stutter-Affected Quality Review State")]
+    public async Task ResetStutterAffectedQcState()
+    {
+        await QualityReviewWorkflow.ResetStutterAffectedQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
     // Dedicated single-row QC sample: forces a fresh QualityReviewWorkflow review of exactly ONE
     // known PlotData.csv row (the master's "别慌..." collapse line, split 10 - see
     // Files/Converted/PlotData.csv.yaml) instead of a random sampleSize=N slice
