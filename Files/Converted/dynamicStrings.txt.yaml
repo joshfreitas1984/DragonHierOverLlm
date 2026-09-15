@@ -598,7 +598,7 @@
   - text: "#PlayerName#与我酒逢知己，旗鼓相当，实在是痛快痛快！"
     translated: "#PlayerName# drinks as if he were a known acquaintance, matching me cup for cup, truly delightful!"
     qcReviewedText: "#PlayerName# drinks as if he were a known acquaintance, matching me cup for cup, truly delightful!\nIt's getting late, let's have another hearty drink next Mid‑Autumn Festival!"
-    qcTranslated: "#PlayerName#, drinking with you like a soulmate, matching me cup for cup, is truly delightful!\nIt's getting late, let's have another hearty drink next Double Ninth Festival!"
+    qcTranslated: "#PlayerName# drinks as if we were kindred spirits, matching me cup for cup, truly delightful!\nIt's getting late, let's have another hearty drink next Double Ninth Festival!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -1375,11 +1375,11 @@
   - text: "#PlayerName#对"
     translated: "#PlayerName# agreed"
     qcReviewedText: "#PlayerName# agreed {0} Deep obligations, today I shall repay these {1} It makes sense to teach you as well.\nJust remember, don't use this martial arts to commit evil deeds, or you might bring shame to me.{0} His reputation"
-    qcTranslated: "#PlayerName# owes {0} a deep debt of gratitude, so it is only fitting that he passes these {1} on to you today.\\nJust remember, do not use this martial art to commit violence or evil deeds, lest you tarnish the reputation of our {0}."
+    qcTranslated: "#PlayerName# has deep obligations to {0}, so it is reasonable for me to pass these {1} on to you today.\\nJust remember, do not use this martial art to commit evil deeds, lest you bring shame to the reputation of my {0}."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 15
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "恩义深重，今日将这"
     translated: "Deep obligations, today I shall repay these"
@@ -2242,10 +2242,10 @@
   - text: "#PlayerName#海量，真乃酒中仙人。"
     translated: "#PlayerName# You are truly a jiaoshi xianren, a master of fine wines."
     qcReviewedText: "#PlayerName# You are truly a jiaoshi xianren, a master of fine wines.\nIt's getting late, let's have a great drink another day!"
-    qcTranslated: "#PlayerName# You have a bottomless appetite. You truly are a celestial of the wine cup.\\nIt's getting late, let's drink to our heart's content another day!"
+    qcTranslated: "#PlayerName# You are truly a wine immortal.\nIt's getting late, let's have a great drink another day!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "时候不早，咱们改日再痛饮一番！"
@@ -2257,11 +2257,11 @@
   - text: "#PlayerName#海量，真乃酒中仙人。"
     translated: "#PlayerName# You are truly a jiaoshi xianren, a master of fine wines."
     qcReviewedText: "#PlayerName# You are truly a jiaoshi xianren, a master of fine wines.\nIt's getting late, let's have another hearty drink next Mid‑Autumn Festival!"
-    qcTranslated: "#PlayerName# You are truly an immortal of wine.\nIt's getting late. Let's drink heartily again at the Double Ninth Festival next year!"
+    qcTranslated: "#PlayerName# You are truly a jiaoshi xianren, a master of fine wines.\\nIt's getting late, let's have another hearty drink next Double Ninth Festival!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "时候不早，咱们来年重阳佳节再痛饮一番！"
     translated: "It's getting late, let's have another hearty drink next Mid‑Autumn Festival!"
@@ -2397,7 +2397,7 @@
   - text: "#PlayerName#的江湖声望太低，若将本门"
     translated: "#PlayerName#'s standing in the Jianghu is too low. If I were to bring this matter to the attention of the sect,"
     qcReviewedText: "#PlayerName#'s standing in the Jianghu is too low. If I were to bring this matter to the attention of the sect,{1} If I entrust the attire to you, it might not gain widespread approval.\n(Need at least {0} Raise reputation)"
-    qcTranslated: "#PlayerName#'s standing in the Jianghu is too low. If I entrust the {1} attire of our sect to you, I fear it would be hard to win the crowd's approval.\\n(Requires at least {0} reputation points)"
+    qcTranslated: "#PlayerName#'s standing in the Jianghu is too low. If I were to entrust this sect's {1} attire to you, it might not gain widespread approval.\\n(Need at least {0} reputation points)"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -2664,10 +2664,10 @@
   - text: "#PlayerName#真是贵人多忘事呐，我本月才刚刚帮你鉴别过物品，还需积累一些新的心得才是"
     translated: "#PlayerName# really is a case of riches come and go. I just helped you appraise items last month, and there's still a lot to learn."
     qcReviewedText: "#PlayerName# really is a case of riches come and go. I just helped you appraise items last month, and there's still a lot to learn."
-    qcTranslated: "#PlayerName#, you are truly one of those whose busy affairs make them forgetful. I only just helped you appraise items this month; you still need to accumulate some new insights."
+    qcTranslated: "#PlayerName# really has the memory of a fish. I just helped you appraise items this month, and there's still a lot to learn."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
 - raw: "#PlayerName#真是贵人多忘事呐，我本月才刚刚承蒙你帮助，实在不能再多做打扰了。"
   splits:
@@ -2992,10 +2992,10 @@
   - text: "#PlayerName#身手不凡，眼下终极演武已经获得"
     translated: "#PlayerName# is skilled indeed, and the final martial performance competition is now underway."
     qcReviewedText: "#PlayerName# is skilled indeed, and the final martial performance competition is now underway.{0} Victory!\nIf you can defeat the top ten masters, you will receive a grand reward.\nFeel free to come back and keep up the good work, challenging stronger opponents."
-    qcTranslated: "#PlayerName# has exceptional martial prowess and has already secured {0} victories in the Ultimate Martial Arts Competition.\\nIf you can defeat the Top Ten Masters, a grand reward will be yours.\\nFeel free to return anytime to keep challenging and face even more powerful opponents."
+    qcTranslated: "#PlayerName# is skilled indeed, and the final martial performance competition has already secured {0} wins.\nIf you can defeat the top ten masters, you will receive a grand reward.\nFeel free to come back and keep up the good work, challenging stronger opponents."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "胜场了。"
@@ -3876,7 +3876,7 @@
   - text: "#SourceInteractName#，你去年共得功绩"
     translated: "#SourceInteractName#, you accumulated a total of merit points last year."
     qcReviewedText: "#SourceInteractName#, you accumulated a total of merit points last year.{0}, It is the top achievement of this sect.\nThis '#PlotInteractItemName#' Secret Manual was a lucky find of mine last year. Take it and study it well."
-    qcTranslated: "#SourceInteractName#, you accumulated a total of {0} merit points last year, making you the top contributor in this sect.\\nThis #PlotInteractItemName# Secret Manual was a lucky find of mine last year. Take it and study it well."
+    qcTranslated: "#SourceInteractName#, you accumulated a total of {0} merit points last year, making you the top achiever in this sect.\\nThis '#PlotInteractItemName#' Secret Manual was a lucky find of mine last year. Take it and study it well."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -3894,10 +3894,10 @@
   - text: "#SourceInteractName#，你去年共得功绩"
     translated: "#SourceInteractName#, you accumulated a total of merit points last year."
     qcReviewedText: "#SourceInteractName#, you accumulated a total of merit points last year.{0}, It is the top achievement of this sect.\nThis #PlotInteractItemName# manual is from last year when I, the Sect Leader, happened to obtain it. Take it and ponder it well."
-    qcTranslated: "#SourceInteractName#, you accumulated a total of {0} merit points last year, making you the top achiever in our sect.\\nThis #PlotInteractItemName# manual was obtained by me, the Sect Leader, by chance last year. Take it and study it well."
+    qcTranslated: "#SourceInteractName#, you accumulated a total of {0} merit points last year, making you the top achiever in this sect.\\nThis #PlotInteractItemName# manual is from last year when I, the Sect Leader, happened to obtain it. Take it and ponder it well."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "，乃是本门功劳第一。"
@@ -4030,7 +4030,7 @@
   - text: "#TargetInteractName#何必如此灰心丧气？长风破浪会有时，直挂云帆济沧海。"
     translated: "#TargetInteractName# Why be so disheartened? There will be times when we can sail bravely, hanging clouds as sails to cross the vast sea."
     qcReviewedText: "#TargetInteractName# Why be so disheartened? There will be times when we can sail bravely, hanging clouds as sails to cross the vast sea.\nLet's exchange two moves. If I happen to win, how about #TargetInteractName# consider keeping your retirement from the Jianghu?"
-    qcTranslated: "#TargetInteractName# Why be so disheartened? The time will come to ride the long wind and break the waves; we shall raise the cloud sail and cross the vast sea. Let's exchange a few moves. If I happen to win, would #TargetInteractName# do me the favor of abandoning your idea of retreating from the Jianghu?"
+    qcTranslated: "#TargetInteractName# Why be so disheartened? The time will come when we ride the long wind and break the waves, raising cloud‑sails to cross the vast sea.\\nLet's exchange two moves. If I happen to win, how about #TargetInteractName# consider keeping your retirement from the Jianghu?"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -4358,7 +4358,7 @@
   - text: "#TargetInteractName#所学的"
     translated: "#TargetInteractName# learned"
     qcReviewedText: "#TargetInteractName# learned {0} Martial arts are still inadequate {1} The door requires frequent practice as well"
-    qcTranslated: "#TargetInteractName# has learned fewer than {1} martial arts of {0} and still needs to practice diligently."
+    qcTranslated: "#TargetInteractName# has learned fewer than {1} of the {0} martial arts, and needs to practice diligently."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -4517,11 +4517,11 @@
   - text: "#TargetInteractName#武功超绝，智虑过人，"
     translated: "#TargetInteractName# martial arts superb, intellect exceptional,"
     qcReviewedText: "#TargetInteractName# martial arts superb, intellect exceptional,\nHow come {0} Ruefully, he finds himself beneath the common folk, like a fine steed stumbling, a mighty eagle with broken wings, unable to fully unfold his grand ambitions.\nIt's truly heart‑wrenching!"
-    qcTranslated: "#TargetInteractName#'s martial arts are superb, his intellect exceptional,\\nyet in {0}, he is forced to submit to mediocrities, like a noble steed stumbling or a mighty eagle with broken wings, unable to fully realize his grand ambitions.\nIt is truly painful to witness!"
+    qcTranslated: "#TargetInteractName# martial arts superb, intellect exceptional,\\nYet in {0}, he is forced to rank beneath the mediocre, like a fine steed stumbling, a mighty eagle with broken wings, unable to fully unfold his grand ambitions.\\nIt's truly heart‑wrenching!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "奈何在"
     translated: "How come"
@@ -4637,10 +4637,10 @@
   - text: "#TargetInteractName#说的虽有道理，但我也使命在身，不能坐视不管。"
     translated: "#TargetInteractName# makes a valid point, but I have a mission and cannot sit idly by."
     qcReviewedText: "#TargetInteractName# makes a valid point, but I have a mission and cannot sit idly by.\nLet's discuss a round, and decide by victory or defeat.\nIf I happen to win, I hope you, #TargetInteractName#, will spare this place and allow peace to remain."
-    qcTranslated: "#TargetInteractName# makes a valid point, but I have a mission to fulfill and cannot sit idly by.\\nLet us have a sparring match and settle this by the result.\\nIf I happen to win, I hope you, #TargetInteractName#, will extend your courtesy and leave this place in peace."
+    qcTranslated: "#TargetInteractName# makes a valid point, but I have a mission and cannot sit idly by.\\nLet's have a sparring match, and let the winner decide.\\nIf I happen to win, I hope you, #TargetInteractName#, will spare this place and allow peace to remain."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "不如你我二人就此切磋一番，以胜负论之。"
@@ -4973,7 +4973,7 @@
   - text: "当前"
     translated: "Current"
     qcReviewedText: "(Current {1} Favorability towards this art form is {2})"
-    qcTranslated: "(Current {1} affinity towards this sect is {2})"
+    qcTranslated: "(Current {1} Favorability towards this sect is {2})"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -5226,11 +5226,11 @@
   - text: "这"
     translated: "This"
     qcReviewedText: "(This {0} I've learned to make other plans...)"
-    qcTranslated: "(I have long since mastered this {0}, so let's make other plans......)"
+    qcTranslated: "(This {0} I've long since learned, let's make other plans...)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 25
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "我早已学会，还是另做打算吧......"
     translated: "I've learned to make other plans..."
@@ -5286,10 +5286,10 @@
   - text: "......可恶，竟将我的"
     translated: "......Damnit, they actually took my"
     qcReviewedText: "......Damnit, they actually took my {0} Steal a goat, this grudge will not go unpunished!"
-    qcTranslated: "......Damn it, they actually pocketed my {0}. I must have my revenge!"
+    qcTranslated: "......Damnit, they actually swiped my {0}, this grudge will not go unpunished!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "顺手牵羊，此仇不报非君子！"
@@ -6050,11 +6050,9 @@
   - text: "可两个月参加一次门派会议"
     translated: "Could participate in the sect meeting once every two months."
     qcReviewedText: "<b>Could participate in the sect meeting once every two months.</b>\nGain 80% sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Main Hall) Research project：Arrange for scientific research\n♦Function creation：Firing\n♦Construction Mode：Upgrade building</color></i>"
-    qcTranslated: "<b>You can attend a Sect meeting once every two months.</b>\\nGain 80% Sect bonus effect\\n<i><color=#696969>New Sect features:\\n♦(Main Hall) Research Projects: Manage research arrangements\\n♦Crafting: Firing\\n♦Build Mode: Upgrade buildings</color></i>"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedStutter
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "获得80%门派加成效果"
     translated: "Gain 80% sect bonus effect"
@@ -6245,11 +6243,9 @@
   - text: "每个月都需参加门派会议"
     translated: "Every month, you must attend the sect meeting."
     qcReviewedText: "<b>Every month, you must attend the sect meeting.</b>\nGain 60% sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Main Hall) Sect Commission：Accept the Sect's Commission\n♦(Ancestral hall) Identification：Actively appraise treasures\n♦(Warehouse) Sect Treasury：Donate silver coins\n♦Function creation：Essence/Alchemy/Poisoning</color></i>"
-    qcTranslated: "<b>Attend the sect meeting every month</b>\nGain 60% sect bonus effect\n<i><color=#696969>New sect features:\n♦(Main Hall) Sect Commissions: Accept commissions\n♦(Ancestral Hall) Appraisal: Appraise treasures\n♦(Warehouse) Sect Treasury: Donate silver\n♦Crafting: Refining/Medicines/Poisons</color></i>"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "获得60%门派加成效果"
     translated: "Gain 60% sect bonus effect"
@@ -6816,11 +6812,9 @@
   - text: "全场经验"
     translated: "Xp throughout the map"
     qcReviewedText: "<i>Xp throughout the map-10%</i>"
-    qcTranslated: "<i>Global XP‑10%</i>"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   templates:
   - template: "<i>{0}-10%</i>"
 - raw: "<i>换装冷却 {0}日</i>"
@@ -7364,11 +7358,11 @@
   - text: "初始化失败"
     translated: "Initialization failed"
     qcReviewedText: "[CISAuthSDKLite] Initialization failed AppID Or AppSig For nothing"
-    qcTranslated: "[CISAuthSDKLite] Initialization failed: AppID or AppSig is empty"
+    qcTranslated: "[CISAuthSDKLite] Initialization failed AppID Or AppSig Is empty"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "或"
     translated: "Or"
@@ -7382,11 +7376,9 @@
   - text: "初始化失败"
     translated: "Initialization failed"
     qcReviewedText: "[CISAuthSDKLite] Initialization failed Channel For nothing"
-    qcTranslated: "[CISAuthSDKLite] Initialization failed Channel is empty"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "为空"
     translated: "For nothing"
@@ -7655,7 +7647,7 @@
   - text: "已习得"
     translated: "Already learned"
     qcReviewedText: "{0} (Already learned Chapter {1} Repeat)</color>"
-    qcTranslated: "{0} (Mastered Layer {1})</color>"
+    qcTranslated: "{0} (Already learned Tier {1})</color>"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -7760,11 +7752,9 @@
   - text: "格"
     translated: "Grate"
     qcReviewedText: "{0} {1} Grate"
-    qcTranslated: "{0} {1} Grid"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   templates:
   - template: "⟦0⟧⟦1⟧{0}"
 - raw: "{0}{1}格内跳跃\n恢复{2}%已损失体力"
@@ -8215,11 +8205,11 @@
   - text: "向"
     translated: "Towards"
     qcReviewedText: "{0} Towards {1} To show goodwill, the relationship was elevated to {2}。"
-    qcTranslated: "{0} gave {1} silver to show goodwill, and their relationship improved to {2}."
+    qcTranslated: "{0} gifted {1} silver to show goodwill, and their relationship was elevated to {2}."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 20
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "赠送银两以示亲善，双方关系提升到了"
     translated: "To show goodwill, the relationship was elevated to"
@@ -8790,7 +8780,7 @@
   - text: "天"
     translated: "Sky"
     qcReviewedText: "{0} Sky"
-    qcTranslated: "{0} days"
+    qcTranslated: "{0} Days"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -8974,11 +8964,11 @@
   - text: "对"
     translated: "For"
     qcReviewedText: "{0} For {1} Caused {3} Damage {2} Click {4}。"
-    qcTranslated: "{0} dealt {1} {3} points of {2} damage to {4}."
+    qcTranslated: "{0} dealt {3} damage to {1}{2}{4}"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 10
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "造成了"
     translated: "Caused"
@@ -9195,10 +9185,10 @@
   - text: "待我恩重如山，#PlayerName#休要再出此狂悖荒唐之言！"
     translated: "Wait until I show you the weight of my gratitude, #PlayerName#, do not utter such reckless and absurd words again!"
     qcReviewedText: "{0} Wait until I show you the weight of my gratitude, #PlayerName#, do not utter such reckless and absurd words again!"
-    qcTranslated: "{0} Treats me with kindness as deep as a mountain, #PlayerName#, do not dare utter such reckless and absurd words again!"
+    qcTranslated: "{0} I have treated you with a kindness as heavy as a mountain, #PlayerName#, do not utter such reckless and absurd words again!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
   templates:
   - template: "⟦0⟧{0}"
@@ -9323,12 +9313,6 @@
   splits:
   - text: "新的练习最高纪录"
     translated: "New practice high score"
-    qcReviewedText: "{0} New practice high score：{1} Click"
-    qcTranslated: "{0}New practice high record: {1} points"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "点"
     translated: "Click"
@@ -9466,7 +9450,7 @@
   - text: "服食灵果，内力上限增加"
     translated: "While consuming the Spirit Fruit, they increase their inner power limit to the Inner Power Limit."
     qcReviewedText: "{0} While consuming the Spirit Fruit, they increase their inner power limit to the Inner Power Limit.{1}"
-    qcTranslated: "{0}Consuming the Spirit Fruit increases Inner Power limit by {1}"
+    qcTranslated: "{0} While consuming the Spirit Fruit, their Inner Power limit increases by {1}."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -9767,10 +9751,10 @@
   - text: "突破至第"
     translated: "Break through to the next level of"
     qcReviewedText: "{0} Break through to the next level of {1} Heavily!"
-    qcTranslated: "{0} has broken through to Tier {1}!"
+    qcTranslated: "{0} Break through to the {1}th layer!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "重！"
@@ -10651,11 +10635,11 @@
   - text: "的门派地位晋升至"
     translated: "His sect position has risen to"
     qcReviewedText: "{3} His sect position has risen to {0}?\nThis action requires consumption of {2} {1} Click on Sect Achievements {4}"
-    qcTranslated: "{3} promote their Sect position to {0}?\\nThis action will consume {2} {1} Sect Merit points.{4}"
+    qcTranslated: "{3} His sect position has risen to {0}?\nThis action requires consumption of {2} {1} points of Sect Achievements. {4}"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 20
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "吗？"
     translated: "?"
@@ -10976,11 +10960,9 @@
   - text: "新的"
     translated: "New"
     qcReviewedText: "《{0}》New {2} Read highest record：{1} Click"
-    qcTranslated: "New highest {2} reading record for 《{0}》: {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "阅读最高纪录"
     translated: "Read highest record"
@@ -11167,10 +11149,10 @@
   - text: "一番血战，终于闯过了第"
     translated: "After the fiercest battle, we finally managed to clear the first round."
     qcReviewedText: "After the fiercest battle, we finally managed to clear the first round.{0} Trial of the Layered Devil Gate\nAfter this battle, my heart and body have greatly improved."
-    qcTranslated: "After a fierce battle, I finally cleared the {0}th layer of the Nether Gate trial.\\nAfter this battle, my spirit and Resilience have greatly improved."
+    qcTranslated: "After a fierce battle, we finally cleared the {0}th layer of the Ghost Gate Trial.\\nAfter this battle, my soul and Resilience have greatly improved."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "层鬼门关试炼。"
@@ -11584,10 +11566,10 @@
   - text: "上品"
     translated: "Up‑grade"
     qcReviewedText: "Up‑grade"
-    qcTranslated: "High Grade"
+    qcTranslated: "Top Grade"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "上官凤"
   splits:
@@ -11769,10 +11751,10 @@
   - text: "不久前刚偷师过"
     translated: "Not long ago, I just picked up some tricks."
     qcReviewedText: "Not long ago, I just picked up some tricks.{0} With martial arts, the defenses are currently very strict, making it impossible to find an opening.\nAt least you have to wait {1} After the storms subside for six months, we may seek another opportunity."
-    qcTranslated: "Not long ago, I just picked up some of {0}'s martial arts. The defenses are currently very strict, making it impossible to find an opening.\\nWe must wait at least {1} months for things to calm down before seeking another opportunity."
+    qcTranslated: "Not long ago, I just picked up some tricks.{0} With martial arts, the defenses are currently very strict, making it impossible to find an opening.\\nAt least you have to wait {1} months until things calm down before we can seek another opportunity."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "之武学，此刻守备森严，已然无从下手。"
@@ -11852,10 +11834,10 @@
   - text: "不堪一击"
     translated: "Weak as a kitten"
     qcReviewedText: "Weak as a kitten"
-    qcTranslated: "Fragile"
+    qcTranslated: "Paper tiger"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
 - raw: "不好意思，这件{1}我就笑纳了"
   splits:
@@ -12339,11 +12321,9 @@
   - text: "不过在咱官府中，讲求论功行赏，循序渐进，"
     translated: "But in our government office, we emphasize rewarding based on merit and advancing step by step."
     qcReviewedText: "But in our government office, we emphasize rewarding based on merit and advancing step by step.\nTherefore, even if the Young Hero is famous, you must start from the lowest level.{0} Get started"
-    qcTranslated: "But in our government office, we emphasize rewarding based on merit and advancing step by step.\\nTherefore, even if the Young Hero is very famous, you must start from the lowest level, {0}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "因此少侠就算名气再大，也要先从最低级的"
     translated: "Therefore, even if the Young Hero is famous, you must start from the lowest level."
@@ -12538,10 +12518,10 @@
   - text: "与"
     translated: "And"
     qcReviewedText: "And {0} Win through mutual improvement {1} Times"
-    qcTranslated: "Defeated {0} in {1} sparring matches"
+    qcTranslated: "And {0} Win through sparring {1} Times"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 25
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "切磋获胜"
@@ -12880,11 +12860,11 @@
   - text: "中年天残"
     translated: "Middle‑aged heavenly maimed"
     qcReviewedText: "Middle‑aged heavenly maimed"
-    qcTranslated: "Middle‑aged Heaven's Ruin"
+    qcTranslated: "Middle‑aged Heavenly Maim"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcQualityScore: 20
+    qcDefectCategory: LostIdiom
 - raw: "中年赵胤宗"
   splits:
   - text: "中年赵胤宗"
@@ -13015,7 +12995,7 @@
   - text: "中！"
     translated: "Hi!"
     qcReviewedText: "Hi!"
-    qcTranslated: "Direct hit!"
+    qcTranslated: "Hit!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -13675,10 +13655,10 @@
   - text: "为今之计，要想收买此人放我一马，非得付出银钱"
     translated: "For now, to buy this person's mercy and let me go, I must pay a price in silver."
     qcReviewedText: "For now, to buy this person's mercy and let me go, I must pay a price in silver.{0} Neither nor"
-    qcTranslated: "For now, to buy this person's mercy and let me go, I must pay {0} taels of silver."
+    qcTranslated: "For now, to buy this person's mercy and let me go, I must pay a price in silver.{0}"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 15
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两不可。"
@@ -13690,7 +13670,7 @@
   - text: "为今之计，要想收买此人放我一马，非得献上价值"
     translated: "For now, to buy off this person and let me go, I must offer a value"
     qcReviewedText: "For now, to buy off this person and let me go, I must offer a value {0} Taels items are not allowed\nBut if we can cater to their preferences, the value {1} Seems like two items can also be accepted."
-    qcTranslated: "The best course of action is to offer an item worth {0} taels to bribe this person into letting me go.\\nHowever, if the gift matches their preferences, an item worth {1} taels might also be accepted."
+    qcTranslated: "For now, to buy off this person and let me go, I must offer an item worth {0} taels. \\nBut if we can cater to their preferences, an item worth {1} taels seems acceptable too."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -13865,11 +13845,9 @@
   - text: "久闻#TargetInteractName#有一式"
     translated: "I've heard that #TargetInteractName# has a style"
     qcReviewedText: "I've heard that #TargetInteractName# has a style {0} It's rather ingenious. How about trying these techniques against me?\n(The higher the intelligence, meridian mastery, and proficiency in targeted martial arts skills, and the greater the favor, the higher the success rate.\nCurrent stealth success rate {1}%, Expected increase in infamy {2} Dot)"
-    qcTranslated: "I've long heard that #TargetInteractName# has a style {0} that is quite ingenious. How about trying to block these moves of mine?\\n(The higher your Intelligence, Meridians, and target martial arts skill relative to the opponent, and the higher the favorability, the higher the success rate.\\nCurrent Skill Stealing success rate {1}%, estimated Infamy increase {2} points.)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "颇为精妙，不如试试看接下我这几招如何？"
     translated: "It's rather ingenious. How about trying these techniques against me?"
@@ -13991,11 +13969,9 @@
   - text: "乘坐马车前往"
     translated: "Travel by carriage"
     qcReviewedText: "Travel by carriage {0}?\nTime‑consuming {1} Sky, taxi fare {2} Silver taels"
-    qcTranslated: "Travel by carriage to {0}?\nTravel time: {1} days, fare: {2} silver taels"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "吗？"
     translated: "?"
@@ -14514,7 +14490,7 @@
     qcTranslated: "Philtrum"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "人口"
   splits:
@@ -14603,11 +14579,9 @@
   - text: "人迎"
     translated: "Jug of the neck"
     qcReviewedText: "Jug of the neck"
-    qcTranslated: "Ren Ying"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "什么人？竟敢擅闯我{0}仓库重地，还不快束手就擒！"
   splits:
   - text: "什么人？竟敢擅闯我"
@@ -14872,11 +14846,9 @@
   - text: "今日一战我期待已久"
     translated: "I have been looking forward to this battle for today."
     qcReviewedText: "I have been looking forward to this battle for today."
-    qcTranslated: "I've been looking forward to today's battle for a long time."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "今日之战，我也有所领悟，这就回去闭关几日，\n#PlayerName#后会有期！"
   splits:
   - text: "今日之战，我也有所领悟，这就回去闭关几日，"
@@ -15025,11 +14997,11 @@
   - text: "从事工作"
     translated: "Work profession"
     qcReviewedText: "Work profession_Making friends"
-    qcTranslated: "Career_Socializing"
+    qcTranslated: "Work_Friendship"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 20
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "交友"
     translated: "Making friends"
@@ -15096,11 +15068,9 @@
   - text: "从事工作"
     translated: "Work profession"
     qcReviewedText: "Work profession_Study"
-    qcTranslated: "Work_Studies"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "学习"
     translated: "Study"
@@ -15387,11 +15357,11 @@
   - text: "以多欺少还被击败，实在可笑。"
     translated: "Defeating the stronger by bullying them is truly laughable."
     qcReviewedText: "Defeating the stronger by bullying them is truly laughable.\n#SourceInteractName# and #PlotTargetInteractName0#, go back and practice for ten years, and come back to show everyone how incompetent you are!"
-    qcTranslated: "Being outnumbered and still losing is truly laughable.\\n#SourceInteractName# and #PlotTargetInteractName0#, go back and practice for ten years, then come back out to embarrass yourselves!"
+    qcTranslated: "Being defeated while bullying the weak is truly laughable.\\n#SourceInteractName# and #PlotTargetInteractName0#, go back and practice for ten years, and come back to show everyone how incompetent you are!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DomainTerm
+    qcQualityScore: 35
+    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "#SourceInteractName#和#PlotTargetInteractName0#回去练上十年，再出来丢人现眼吧！"
     translated: "#SourceInteractName# and #PlotTargetInteractName0#, go back and practice for ten years, and come back to show everyone how incompetent you are!"
@@ -15415,7 +15385,7 @@
   - text: "以少侠目前的职位，需要消耗"
     translated: "With your current position as a Young Hero, you need to consume"
     qcReviewedText: "With your current position as a Young Hero, you need to consume {0} Click on official achievements\nYou may order a guard to safeguard you for thirty days."
-    qcTranslated: "With your current position as a Young Hero, you need to consume {0} points of official merit\\n to command a guard to provide personal protection for thirty days."
+    qcTranslated: "With your current position as a Young Hero, you need to consume {0} points of official merit\\nYou may order a guard to safeguard you for thirty days."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -15546,10 +15516,10 @@
   - text: "仲尼梦奠帖"
     translated: "Zhong Ni Dream Foundation Inscription"
     qcReviewedText: "Zhong Ni Dream Foundation Inscription"
-    qcTranslated: "Zhongni's Dream Offering Scroll"
+    qcTranslated: "Zhongni's Dream Offering Inscription"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "任务_失败"
   splits:
@@ -16236,11 +16206,11 @@
   - text: "何以解忧，唯有杜康"
     translated: "How to relieve sorrow? Only Gu Di Kang can help."
     qcReviewedText: "How to relieve sorrow? Only Gu Di Kang can help."
-    qcTranslated: "What eases sorrow? Only Dukang."
+    qcTranslated: "How to relieve sorrow? Only Dukang can help."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcQualityScore: 20
+    qcDefectCategory: LostIdiom
 - raw: "何足道"
   splits:
   - text: "何足道"
@@ -16346,10 +16316,10 @@
   - text: "你在做什么？竟想窃取我的"
     translated: "What are you doing? Trying to steal from me?"
     qcReviewedText: "What are you doing? Trying to steal from me?{0}？\nI never expected #TargetInteractName# to be such a scoundrel. I guess I was wrong."
-    qcTranslated: "What are you doing? You dare try to steal my {0}?\nI never expected #TargetInteractName# to be such a petty thief. I guess I was wrong."
+    qcTranslated: "What are you doing? Trying to steal my {0}?\nI never expected #TargetInteractName# to be such a scoundrel. I guess I was wrong."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "没想到#TargetInteractName#竟是这种偷鸡摸狗之徒，算我看走眼了。"
@@ -16399,7 +16369,7 @@
   - text: "你就是#$PlayerName#？"
     translated: "You're #$PlayerName#?"
     qcReviewedText: "You're #$PlayerName#?\nHmph, you've been challenging others everywhere lately and amassed {0} Set the deterrence value"
-    qcTranslated: "You're #$PlayerName#?\nHmph, you've been challenging others everywhere lately and amassed {0} points of Deterrence."
+    qcTranslated: "You're #$PlayerName#?\\nHmph, you've been challenging others everywhere lately and amassed {0} points of deterrence."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -16610,10 +16580,10 @@
   - text: "你说什么！本门待你恩重如山，#PlayerName#你当真要叛离我#PlayerForceName#？！"
     translated: "What did you say! We have shown you great kindness, #PlayerName#, are you really considering betraying me, #PlayerForceName#?!"
     qcReviewedText: "What did you say! We have shown you great kindness, #PlayerName#, are you really considering betraying me, #PlayerForceName#?!\n(As {0}, Leaving the Sect will fixedly increase {1} Point Infamy, and {2} You cannot apprentice or join another sect within a month.)"
-    qcTranslated: "What are you saying! Our Sect has treated you with kindness as heavy as a mountain, #PlayerName#. Do you truly intend to betray my #PlayerForceName#?!\\n(As {0}, leaving the Sect will permanently increase Infamy by {1} points, and you will be unable to take on a master or join another sect within {2} days.)"
+    qcTranslated: "What did you say! We have shown you great kindness, #PlayerName#, are you really considering betraying me, #PlayerForceName#?!\\n(As {0}, Leaving the Sect will fixedly increase {1} Point Infamy, and {2} You cannot apprentice or join another sect within a month.)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "身为"
@@ -16768,10 +16738,10 @@
   - text: "侍御史"
     translated: "Counselor of the Imperial Stables"
     qcReviewedText: "Counselor of the Imperial Stables"
-    qcTranslated: "Imperial Censor"
+    qcTranslated: "Censor"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "供奉"
   splits:
@@ -16808,7 +16778,7 @@
     qcTranslated: "Hero"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "侠客"
   splits:
@@ -17258,10 +17228,10 @@
   - text: "先生您就是传闻中的神医吧！"
     translated: "You are the legendary doctor, sir!"
     qcReviewedText: "You are the legendary doctor, sir!\nIt's truly out of sight, out of mind like the dragon. I had a tough time finding you."
-    qcTranslated: "You must be the Divine Doctor they speak of!\nHe's like a dragon that shows his head but hides his tail. I had a hard time finding you."
+    qcTranslated: "You are the legendary doctor, sir!\\nYou're truly a dragon whose head is seen but not its tail. I had a tough time finding you."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "真是神龙见首不见尾啊，让我一通好找。"
@@ -17297,7 +17267,7 @@
   - text: "免、免费相赠？我没听错吧？"
     translated: "Isn't it free? You must be mistaken."
     qcReviewedText: "Isn't it free? You must be mistaken.\nHa ha, I'm really very grateful. You can't regret this, #PlayerName#."
-    qcTranslated: "Fr‑free? You must be mistaken.\nHa ha, I'm really very grateful. You can't regret this, #PlayerName#."
+    qcTranslated: "Free, free of charge? You must be mistaken.\\nHa ha, I'm really very grateful. You can't regret this, #PlayerName#."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -17744,10 +17714,10 @@
   - text: "内伤超过"
     translated: "Internal Injury exceeds"
     qcReviewedText: "Internal Injury exceeds {0} Then, the treatment appears to be effective for them.-75%"
-    qcTranslated: "When Internal Injury exceeds {0}, healing effects are ‑75%"
+    qcTranslated: "Internal Injury exceeds {0}, treatment effect ‑75%"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 10
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "时，治疗效果"
@@ -18302,10 +18272,10 @@
   - text: "几日未见，没想到#SourceInteractName#就要和"
     translated: "Not seeing you for a few days, I didn't expect #SourceInteractName# to be leaving soon."
     qcReviewedText: "Not seeing you for a few days, I didn't expect #SourceInteractName# to be leaving soon.{0} Congratulations! The wedding ceremony is complete!\nI hastily prepared this #PlotInteractItemName# as a token of respect. I hope you do not disdain it."
-    qcTranslated: "I haven't seen you in a few days, and I didn't expect #SourceInteractName# to be marrying {0} in the wedding hall so soon. Congratulations, congratulations!\nI hastily prepared this #PlotInteractItemName# as a gift. I hope you won't disdain it."
+    qcTranslated: "Not seeing you for a few days, I didn't expect #SourceInteractName# to be marrying {0} so soon. Congratulations! \\nI hastily prepared this #PlotInteractItemName# as a gift. I hope you do not disdain it."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "拜堂成亲了，恭喜恭喜！"
@@ -18828,11 +18798,9 @@
   - text: "别打了别打了，#TargetInteractName#勇力过人，我实在抵挡不住......"
     translated: "Stop it, stop it, #TargetInteractName# you're too strong... I can't hold on anymore......"
     qcReviewedText: "Stop it, stop it, #TargetInteractName# you're too strong... I can't hold on anymore......\nSpit! (sprays a large mouthful of blood)"
-    qcTranslated: "Stop it, stop it, #TargetInteractName#'s strength surpasses ordinary men; I simply cannot withstand him......\\nPhew! (Spews out a large mouthful of blood)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "噗！（喷出一大口鲜血）"
     translated: "Spit! (sprays a large mouthful of blood)"
@@ -19806,7 +19774,7 @@
   - text: "千里之行，始于足下。接下来该修炼哪门武功呢？"
     translated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?"
     qcReviewedText: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase neigong/Qinggong/Combat experience with advanced techniques,{0} Best effect within the grade)"
-    qcTranslated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase the practical combat experience of Neigong, Qinggong, and Ultimate Techniques, with the best effect within {0} levels)"
+    qcTranslated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase neigong/Qinggong/Combat experience with advanced techniques, best effect within {0} levels)"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -19872,11 +19840,9 @@
   - text: "升级中"
     translated: "Upgrading..."
     qcReviewedText: "Upgrading...\nRemaining {0} Sky"
-    qcTranslated: "Upgrading...\nRemaining {0} Days"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "剩余"
     translated: "Remaining"
@@ -20068,7 +20034,7 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: OtherNamedDefect
 - raw: "压制"
   splits:
   - text: "压制"
@@ -21029,11 +20995,9 @@
   - text: "只要花上"
     translated: "As long as you spend"
     qcReviewedText: "As long as you spend {0} A few silver coins could ensure #TargetInteractName# gets everything taken care of.\nHealing some damage accumulated in prison"
-    qcTranslated: "For just {0} silver, you can put in a good word for #TargetInteractName#,\\nhelping to heal some of the injuries they've accumulated in prison."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "银两，便能为#TargetInteractName#上下打点一番，"
     translated: "A few silver coins could ensure #TargetInteractName# gets everything taken care of."
@@ -21574,11 +21538,9 @@
   - text: "合谷"
     translated: "Hand Yangmingoins"
     qcReviewedText: "Hand Yangmingoins"
-    qcTranslated: "Hegu"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "同心竭力，不负本门青睐之恩"
   splits:
   - text: "同心竭力，不负本门青睐之恩"
@@ -21824,10 +21786,10 @@
   - text: "吞吞吐吐，瞻前顾后，真乃无胆鼠辈！"
     translated: "Hesitant and cautious, truly a fearless rodent!"
     qcReviewedText: "Hesitant and cautious, truly a fearless rodent!"
-    qcTranslated: "Stuttering and hesitating, looking left and right, truly a spineless rat!"
+    qcTranslated: "Hesitant and cautious, truly a cowardly rat!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
 - raw: "听宫"
   splits:
@@ -21862,7 +21824,7 @@
   - text: "听说#TargetInteractName#最近得了件"
     translated: "I heard #TargetInteractName# recently got an item"
     qcReviewedText: "I heard #TargetInteractName# recently got an item {0}, Why don't you watch how it's done?\n(The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate.\nCurrent Raid Success Rate {1}%, Expected increase in infamy {2} Dot)"
-    qcTranslated: "I heard #TargetInteractName# recently acquired a {0}. How about letting me take a look?\n(The more your Strength, Constitution, and Special Skills exceed the opponent's, and the higher the affinity, the higher the success rate.\nCurrent Robbery Success Rate {1}%, Expected Infamy Increase: {2} points.)"
+    qcTranslated: "I heard #TargetInteractName# recently got an item {0}, how about letting me take a look?\n(The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate.\nCurrent Raid Success Rate {1}%, Expected increase in infamy {2} Dot)"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -21958,7 +21920,7 @@
   - text: "听闻#TargetInteractName#博采众长，技艺精湛，"
     translated: "Heard that #TargetInteractName# has broadened his horizons and is skilled in his craft."
     qcReviewedText: "Heard that #TargetInteractName# has broadened his horizons and is skilled in his craft.\nI have a heart‑to‑heart I'd like to have with you."
-    qcTranslated: "I've heard that #TargetInteractName# draws on the strengths of many and is masterful in his craft.\\nI would like to exchange techniques with you."
+    qcTranslated: "Heard that #TargetInteractName# has broadened his horizons and is skilled in his craft.\\nI'd like to exchange a few words with you."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -22168,11 +22130,9 @@
   - text: "呕血谱"
     translated: "Bleeding Melody"
     qcReviewedText: "Bleeding Melody"
-    qcTranslated: "Blood Vomit Chart"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "呜呜呜呜呜呜！小女子本就命苦，如今又被说成是什么骗子。\n也罢，小女子这就去悬梁自尽，以证自身清白。"
   splits:
   - text: "呜呜呜呜呜呜！小女子本就命苦，如今又被说成是什么骗子。"
@@ -22304,11 +22264,11 @@
   - text: "呵呵，#PlayerName#你呀，其实就是馋枣泥月饼了吧！"
     translated: "Haha, #PlayerName#, you're just craving the zaoru red bean paste mooncakes, right!"
     qcReviewedText: "Haha, #PlayerName#, you're just craving the zaoru red bean paste mooncakes, right!"
-    qcTranslated: "Haha, #PlayerName#, you're just craving the date paste mooncakes, right!"
+    qcTranslated: "Haha, #PlayerName#, you're just craving the red bean paste mooncakes, right!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: OtherNamedDefect
 - raw: "呵呵，#PlayerName#虽有所见解，但大多是老生常谈，我还有事先告辞了。"
   splits:
   - text: "呵呵，#PlayerName#虽有所见解，但大多是老生常谈，我还有事先告辞了。"
@@ -22605,11 +22565,9 @@
   - text: "咦，发生了什么？"
     translated: "Hey, what's going on?"
     qcReviewedText: "Hey, what's going on?\n......#PlayerName# How would you be here?"
-    qcTranslated: "Hey, what's going on?\n......#PlayerName#, how are you here?"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "......#PlayerName#你怎会在此处？"
     translated: "......#PlayerName# How would you be here?"
@@ -22817,10 +22775,10 @@
   - text: "咳咳咳咳，是是是。"
     translated: "Cough cough, yes yes yes"
     qcReviewedText: "Cough cough, yes yes yes\nUnderstand me, #TargetInteractName# also"
-    qcTranslated: "C‑cough, yes, yes, yes.\\nThose who understand me, it is #TargetInteractName#."
+    qcTranslated: "Cough cough, yes yes yes\\nUnderstand me, #TargetInteractName# too"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: DroppedStutter
   - subIndex: 1
     text: "知我者，#TargetInteractName#也。"
@@ -23057,10 +23015,10 @@
   - text: "哈哈我这药方果然没问题，你有没有感觉龙精虎猛，浑身都是力气？"
     translated: "Haha, my remedy really works. Do you feel dragon fierce and tiger strong, with lots of energy all over your body?"
     qcReviewedText: "Haha, my remedy really works. Do you feel dragon fierce and tiger strong, with lots of energy all over your body?"
-    qcTranslated: "Haha, my prescription really works. Do you feel as vigorous as a dragon and a tiger, with energy coursing through your whole body?"
+    qcTranslated: "Haha, my remedy really works. Do you feel full of vigor and vitality, with lots of energy all over your body?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "哈哈！#PlayerName#这点口才也来调解纷争，未免不自量力了。\n后会有期！"
   splits:
@@ -23209,10 +23167,10 @@
   - text: "哈哈，一不小心连胜三场，实在不好意思。"
     translated: "Ha ha, won three games in a row by accident. Really shouldn't be so humble."
     qcReviewedText: "Ha ha, won three games in a row by accident. Really shouldn't be so humble.\n#PlayerName#, don't lose heart; we'll decide this another day!"
-    qcTranslated: "Ha ha, I accidentally won three matches in a row. I'm really sorry about that.\\n#PlayerName#, don't be discouraged. Let's settle this another day!"
+    qcTranslated: "Ha ha, won three games in a row by accident. I'm really sorry about that.\\n#PlayerName#, don't lose heart; we'll decide this another day!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "#PlayerName#不必灰心，咱们改日再决胜负！"
@@ -23572,11 +23530,9 @@
   - text: "哎呀呀，#SourceInteractName#和"
     translated: "Oh no, #SourceInteractName# and"
     qcReviewedText: "Oh no, #SourceInteractName# and {0} This divine couple has finally tied the knot; how could I, #$TargetInteractName#, fail to attend?\nCome, come, this #PlotInteractItemName# is my gift for you two. Make sure to keep it."
-    qcTranslated: "Oh my, #SourceInteractName# and {0}, this celestial match, have finally tied the knot; how could I, #$TargetInteractName#, fail to attend?\\nCome, come, this #PlotInteractItemName# is my gift for you two. Please accept it."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "这对神仙侠侣终于成婚，我#$TargetInteractName#岂能不来？"
     translated: "This divine couple has finally tied the knot; how could I, #$TargetInteractName#, fail to attend?"
@@ -23704,7 +23660,7 @@
   - text: "哎呀，一不小心玩过头，连续"
     translated: "Oh no, I got carried away and played for too long in a row,"
     qcReviewedText: "Oh no, I got carried away and played for too long in a row,{0} Hasn't attended the Sect meeting for a month.\nSect Master won't be angry, right......"
-    qcTranslated: "Oh no, I got carried away and missed {0} consecutive months of Sect meetings.\\nThe Sect Master won't be angry, right......"
+    qcTranslated: "Oh no, I got carried away and played for too long in a row, missing the Sect meeting for {0} months in a row.\\nSect Master won't be angry, right......"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -23722,10 +23678,10 @@
   - text: "哎呀，不知不觉已日斜西山了......"
     translated: "Oh, I didn't realize it was already sunset..."
     qcReviewedText: "Oh, I didn't realize it was already sunset...\nDiscussing with #SourceInteractName# always allows me to speak my mind and forget to return, finding great joy in the conversation.\nUnknown Eastern Whiteness describes a certain mood. Do you feel the same way, #SourceInteractName#?"
-    qcTranslated: "Oh, I didn't realize the sun had already set in the west...\nChatting with #SourceInteractName# always lets us talk freely, and I lose track of time in the joy.\nI didn't even notice the east turn white, as they say. Do you feel the same way, #SourceInteractName#?"
+    qcTranslated: "Oh, I didn't realize it was already sunset...\nDiscussing with #SourceInteractName# always allows me to speak my mind and forget to return, finding great joy in the conversation.\nIt's as if I didn't know the east had turned white. Do you feel the same way, #SourceInteractName#?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "每每与#SourceInteractName#谈天，总能畅所欲言，乐而忘返，"
@@ -23827,11 +23783,11 @@
   - text: "哎哟喂，大侠饶命，大侠饶命。"
     translated: "Oh my goodness, Great Hero, spare my life, spare my life."
     qcReviewedText: "Oh my goodness, Great Hero, spare my life, spare my life.\nLittle one dares not again! Hurry, hurry..."
-    qcTranslated: "Oh my goodness, Great Hero, spare my life, spare my life.\\nI dare not again! Run, run..."
+    qcTranslated: "Oh my goodness, Great Hero, spare my life, spare my life. I dare not do it again! Hurry, hurry..."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 35
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "小的再也不敢了！快走，快走..."
     translated: "Little one dares not again! Hurry, hurry..."
@@ -24281,10 +24237,10 @@
   - text: "哎，这第"
     translated: "Oh, this fifth"
     qcReviewedText: "Oh, this fifth {0} The trials at the Layered Demon Gate Passage are truly extremely perilous.\nWith my current martial arts skills still falling short, I need to improve them further."
-    qcTranslated: "Oh, the trial on the {0}th layer of the Ghost Gate is truly extremely perilous.\nWith my current martial arts skills, I am still unable to handle it, so I need to improve them further."
+    qcTranslated: "Oh, this {0}th layer of the Ghost Gate Trial is truly extremely perilous.\\nWith my current martial arts skills still falling short, I need to improve them further."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "层鬼门关试炼当真凶险万分。"
@@ -24433,10 +24389,10 @@
   - text: "哦？#PlayerName#是要将这"
     translated: "Oh? #PlayerName# wants to take this to the next level, I see?"
     qcReviewedText: "Oh? #PlayerName# wants to take this to the next level, I see?{0} Will you give it to me?\n(Reduce {1} Boost loyalty. The higher the other party's status, the more valuable the gift needed to lower their loyalty.)"
-    qcTranslated: "Oh? #PlayerName# is going to gift this {0} to me?\n(Reduce loyalty by {1} points. The higher the other party's status, the more expensive the gift needed to lower loyalty.)"
+    qcTranslated: "Oh? #PlayerName# wants to give this {0} to me?\n(Reduce loyalty by {1}. The higher the other party's status, the more valuable the gift needed to lower their loyalty.)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "赠送于我吗？"
@@ -24744,10 +24700,10 @@
   - text: "哼哼，承让承让！"
     translated: "Hmph, it's a fair fight!"
     qcReviewedText: "Hmph, it's a fair fight!\nSince I have come out slightly inferior, I shall humbly accept all of the treasure."
-    qcTranslated: "Hmph, you're welcome! \\nSince I have the upper hand, I shall graciously accept all of this treasure."
+    qcTranslated: "Hmph, you're welcome! \\nSince I have come out slightly ahead, I shall humbly accept all of the treasure."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "既然是在下小胜一筹，那这宝藏我便全数笑纳了。"
@@ -25782,7 +25738,7 @@
   - text: "唔！这桩梁子算是结下了，#PlayerName#我们后会有期！"
     translated: "Ah! This grudge is settled. #PlayerName#, we'll meet again!"
     qcReviewedText: "Ah! This grudge is settled. #PlayerName#, we'll meet again!"
-    qcTranslated: "Ah! The grudge is settled, #PlayerName#. We'll meet again!"
+    qcTranslated: "Ah! This grudge is set. #PlayerName#, we'll meet again!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -26020,10 +25976,10 @@
   - text: "啊？什、什么地方？"
     translated: "Ah? What? Where exactly?"
     qcReviewedText: "Ah? What? Where exactly?"
-    qcTranslated: "Ah? W‑wh‑where is this?"
+    qcTranslated: "Ah? Wh‑what place?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: DroppedStutter
 - raw: "啊？几位，慢着慢着慢着！\n你们来真的啊？还请听我解释啊！！！\n(完了完了，若非此前三心二意，又怎会落入今日之修罗场)"
   splits:
@@ -26070,10 +26026,10 @@
   - text: "啊？那、那当然是都很重要......."
     translated: "Ah? Well, of course, all of that is very important......."
     qcReviewedText: "Ah? Well, of course, all of that is very important.......\nYou are all hearts aligned with mine, #$PlayerName#. Why must there be a distinction in order?"
-    qcTranslated: "Ah? W‑well, of course, all of that is very important.......\nYou are all hearts aligned with mine, #$PlayerName#. W‑why must there be a distinction in order?"
+    qcTranslated: "Ah? Well, of course, all of that is very important.......\nYou are all hearts aligned with mine, #$PlayerName#. Why, why must there be a distinction in order?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: DroppedStutter
   - subIndex: 1
     text: "你们都是与我#$PlayerName#心心相印之人，何、何必分什么先后？"
@@ -26085,11 +26041,9 @@
   - text: "喂喂喂！#PlayerName#你耍赖，不许抢跑！"
     translated: "Halo Halo Halo!#PlayerName#, you're cheating! No peeking before the start!"
     qcReviewedText: "Halo Halo Halo!#PlayerName#, you're cheating! No peeking before the start!"
-    qcTranslated: "Halo Halo Halo! #PlayerName#, you're cheating! No head starts!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "喂喂喂！#PlayerName#你都当上掌门了，怎么还耍赖抢跑！"
   splits:
   - text: "喂喂喂！#PlayerName#你都当上掌门了，怎么还耍赖抢跑！"
@@ -26274,7 +26228,7 @@
   - text: "嗯，今日本掌门便派遣信使，向"
     translated: "Hmm, today the Sect Leader has dispatched a messenger to inform"
     qcReviewedText: "Hmm, today the Sect Leader has dispatched a messenger to inform {0} Gift {1} Two dowries\nThis would also improve the relations between the two factions.{2} Dot"
-    qcTranslated: "Hmm, today the Sect Leader will dispatch a messenger to gift {0} {1} liang in liquid gold.\\nThis will also improve the relations between the two factions by {2} points."
+    qcTranslated: "Hmm, today the Sect Leader has dispatched a messenger to present {0} with {1} liang of gift money.\\nThis will also improve the relations between the two factions by {2} points."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -27285,11 +27239,11 @@
   - text: "在这石窟之中与世隔绝，酣然入梦，足以明心见性，忘却前尘旧事。"
     translated: "Secluded in this cave, asleep and undisturbed, one can purify the mind and forget past deeds."
     qcReviewedText: "Secluded in this cave, asleep and undisturbed, one can purify the mind and forget past deeds.\nYoung Hero needs to expend {0} With ten days of seclusion, you may forget one art.<b>Rebirth at Zero Weight </b>His martial arts"
-    qcTranslated: "Secluded in this cave, asleep and undisturbed, one can purify the mind and forget past deeds.\\nYoung Hero only needs to expend {0} silver to seclude here for ten days to forget one <b>Zero‑Realm</b> martial art."
+    qcTranslated: "Secluded in this cave, asleep and undisturbed, one can purify the mind and forget past deeds.\\nYoung Hero needs to expend {0} silver taels for ten days of seclusion here to forget one <b>Zero Weight Cultivation</b> martial art."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 15
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "少侠只需耗费"
     translated: "Young Hero needs to expend"
@@ -27578,11 +27532,9 @@
   - text: "增进与"
     translated: "Increase interaction with"
     qcReviewedText: "Increase interaction with {0} Goodwill {1} Click"
-    qcTranslated: "Increase affinity with {0} by {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "的好感"
     translated: "Goodwill"
@@ -27898,10 +27850,10 @@
   - text: "多谢#PlayerName#助我鉴明了"
     translated: "Thanks, #PlayerName#, for helping me see more clearly."
     qcReviewedText: "Thanks, #PlayerName#, for helping me see more clearly.{0} Precious treasure, I'll definitely treat you to a drink another day!"
-    qcTranslated: "Thanks, #PlayerName#, for helping me appraise {0} treasures. I'll definitely treat you to a drink another day!"
+    qcTranslated: "Thanks, #PlayerName#, for helping me identify {0} precious treasures. I'll definitely treat you to a drink another day!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "件珍宝，改日定当请你喝酒！"
@@ -28176,7 +28128,7 @@
     qcTranslated: "Moonlight Cup"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
 - raw: "夜宴图"
   splits:
@@ -28244,10 +28196,10 @@
   - text: "大侠吉人天相，全部猜中，这大奖可谓实至名归了！恭喜恭喜！"
     translated: "Great Hero Ji Ren Tian Xiang, having guessed all correctly, this grand prize truly deserves its win! Congratulations, congratulations!"
     qcReviewedText: "Great Hero Ji Ren Tian Xiang, having guessed all correctly, this grand prize truly deserves its win! Congratulations, congratulations!"
-    qcTranslated: "Great Hero, fortune has favored you. Having guessed all correctly, this grand prize truly deserves its win! Congratulations, congratulations!"
+    qcTranslated: "Great Hero, with heaven's favor, having guessed all correctly, this grand prize truly deserves its win! Congratulations, congratulations!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: UntranslatedPinyin
 - raw: "大侠大恩大德无以为报，\n小的这些货品中，大侠只管任选一件拿去便是！"
   splits:
@@ -28843,11 +28795,9 @@
   - text: "大隐精锐"
     translated: "Elite Hidden Vein"
     qcReviewedText: "Elite Hidden Vein"
-    qcTranslated: "Elite of the Grand Concealment"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "大隐阁主"
   splits:
   - text: "大隐阁主"
@@ -29030,7 +28980,7 @@
   - text: "天子呼来不上船，自称臣是酒中仙。"
     translated: "The emperor calls, but he refuses to come; he says he is a immortal drunk."
     qcReviewedText: "The emperor calls, but he refuses to come; he says he is a immortal drunk."
-    qcTranslated: "The Son of Heaven summons him, yet he stays off the boat, boasting that he is the immortal of wine."
+    qcTranslated: "The emperor calls, but he refuses to come; he says he is a drunken immortal."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -29509,10 +29459,10 @@
   - text: "好了好了，这"
     translated: "Alright, alright, it's done"
     qcReviewedText: "Alright, alright, it's done {0} Go get something to eat"
-    qcTranslated: "Alright, alright, here are these {0} tael. Go buy yourself something to eat."
+    qcTranslated: "Alright, alright, here's {0} to buy some food."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 25
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两拿去买点吃的。"
@@ -29638,10 +29588,10 @@
   - text: "好啦好啦，看在你嘴这么甜的份上，"
     translated: "Alright, alright, considering how sweet your mouth is,"
     qcReviewedText: "Alright, alright, considering how sweet your mouth is,\nI'll keep Master from him for this time, but you mustn't cause any trouble off the mountain.~"
-    qcTranslated: "Alright, alright, considering how sweet your mouth is,\\nI'll cover for you with Master this time, but you mustn't go causing any trouble off the mountain~"
+    qcTranslated: "Alright, alright, considering how sweet your mouth is,\\nI'll keep it from Master for this time, but you mustn't cause any trouble off the mountain.~"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "我就替你瞒一回师傅他老人家，可不许下山闯祸哦"
@@ -29778,10 +29728,10 @@
   - text: "好汉不吃眼前亏，眼下势头不妙，只能催动轻功溜之大吉了。"
     translated: "A hero doesn't swallow his pride, and with the situation not looking good, he could only muster his lightness to make a quick getaway."
     qcReviewedText: "A hero doesn't swallow his pride, and with the situation not looking good, he could only muster his lightness to make a quick getaway.\n(Current success rate is {0}%.The higher one's Qinggong is compared to the other, the greater the chance of escaping unharmed.)"
-    qcTranslated: "A hero doesn't swallow the sour grape of immediate defeat, and with the situation not looking good, he could only muster his Qinggong to make a quick getaway.\\n(Current success rate is {0}%. The higher one's Qinggong is compared to the opponent's, the greater the chance of escaping un"
+    qcTranslated: "A hero doesn't take a loss in the short term, and with the situation not looking good, he could only muster his lightness to make a quick getaway.\\n(Current success rate is {0}%.The higher one's Qinggong is compared to the other, the greater the chance of escaping unharmed.)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 25
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "（当前成功率为"
@@ -29820,10 +29770,10 @@
   - text: "好说好说，今日咱们不醉不归！"
     translated: "No problem at all! Let's get drunk today and call it a day!"
     qcReviewedText: "No problem at all! Let's get drunk today and call it a day!"
-    qcTranslated: "No problem, no problem! Today, we don't leave until we're drunk!"
+    qcTranslated: "No problem at all! Let's not leave until we're drunk today!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "好说好说，你们赶紧动工吧。\n相信不久后此处便会焕然一新了。"
   splits:
@@ -29957,7 +29907,7 @@
   - text: "好！从今日起，#PlayerName#你便拜入我"
     translated: "Good! Starting from today, #PlayerName#, you will be a Apprentice under me."
     qcReviewedText: "Good! Starting from today, #PlayerName#, you will be a Apprentice under me.{0} Under your command\nAs long as you fulfill your duties,{0} Solve problems and alleviate worries\nThis Sect Leader would never wrong you"
-    qcTranslated: "Good! From today, #PlayerName#, you will join my {0} sect. As long as you fulfill your duties and resolve {0}'s troubles, this Sect Leader will never wrong you."
+    qcTranslated: "Good! Starting from today, #PlayerName#, you will be an Apprentice under my {0}. \\nAs long as you fulfill your duties and solve problems for {0}, \\nthis Sect Leader would never wrong you."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -30255,7 +30205,7 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: OtherNamedDefect
 - raw: "如此一来，大功告成，本掌门先来尝上一尝，看看成果如何。"
   splits:
   - text: "如此一来，大功告成，本掌门先来尝上一尝，看看成果如何。"
@@ -30333,7 +30283,7 @@
   - text: "如此成绩只能说聊胜于无，"
     translated: "Such results can only be said to be better than nothing."
     qcReviewedText: "Such results can only be said to be better than nothing.\n#SourceInteractName#, you must seriously reflect. You must never spend your days stealing chickens and dogs or loafing around again!"
-    qcTranslated: "Such results can only be said to be better than nothing.\\n#SourceInteractName#, you must seriously reflect. You must never be a thieving vagrant again!"
+    qcTranslated: "Such results can only be said to be better than nothing.\\n#SourceInteractName#, you must seriously reflect. You must never spend your days up to no good or loafing around again!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -32472,7 +32422,7 @@
   - text: "少侠目前在江湖中威慑为"
     translated: "The Young Hero currently deters in the Jianghu."
     qcReviewedText: "The Young Hero currently deters in the Jianghu.{0}, Should we lower the deterrent?"
-    qcTranslated: "The Young Hero's current Deterrence in the Jianghu is {0}. Do you wish to lower it?"
+    qcTranslated: "The Young Hero's current deterrence in the Jianghu is {0}. Should we lower it?"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -32605,10 +32555,10 @@
   - text: "少侠若想在此举办一场奢华宴会，纵情享乐，会见贵客，非得花上"
     translated: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend"
     qcReviewedText: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend {0} Silver coins are not enough\n(Current {1} For level {2}, Can enhance the banquet {3} Click on the basic score and {4}%Score boost)"
-    qcTranslated: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend {0} taels of silver.\n(Current {1} is level {2}, which can increase the banquet's {3} base score and {4}% score bonus.)"
+    qcTranslated: "If you, Young Hero, wish to hold a lavish banquet here, indulge in pleasure, and meet distinguished guests, you will have to spend {0} taels of silver. \\n(Current {1} is level {2}, can enhance the banquet's base score by {3} points and score bonus by {4}%)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 10
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两银钱不可。"
@@ -32635,10 +32585,10 @@
   - text: "少侠若有无法辨识的珍宝，只消花上"
     translated: "If the young hero has treasures that are hard to identify, just spend"
     qcReviewedText: "If the young hero has treasures that are hard to identify, just spend {3} A handful of silver could help the shop identify the authenticity of the goods.\n({0} Improve {1} Activate knowledge effect: Current identification knowledge requirement Applies {2} Following Treasures)"
-    qcTranslated: "If Young Hero has any treasures that cannot be identified, you only need to spend {3} taels of silver, and our shop can help appraise them. ({0} improves {1} knowledge points, current appraisal knowledge requirement is {2} or below)"
+    qcTranslated: "If the Young Hero has treasures that are hard to identify, just spend {3} silver taels and the shop can help appraise them. ({0} increases {1} Knowledge points; current appraisal requires Knowledge of {2} or below)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 10
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "银两，便可让小店帮忙鉴别一二。"
@@ -33983,7 +33933,7 @@
     qcTranslated: "Construction cost ({0} days)\n{1}"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "天"
@@ -34565,7 +34515,7 @@
   - text: "当前最高纪录"
     translated: "Current highest record"
     qcReviewedText: "Current highest record：{1} Gain experience points\nDoes it consume {4} Automatic practice {0}？\nFei Kong {2}%({3} Click)"
-    qcTranslated: "Current highest record: {1} XP\\nConsume {4} to auto‑practice {0}?\\nReward: {2}% ({3} XP)"
+    qcTranslated: "Current highest record: {1} experience points\\nDoes it consume {4} to automatically practice {0}?\\nGain {2}% ({3} points)"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -34742,10 +34692,10 @@
   - text: "影青香兽"
     translated: "Silver Qingqiang Beast"
     qcReviewedText: "Silver Qingqiang Beast"
-    qcTranslated: "Celadon Incense Beast"
+    qcTranslated: "Shadow Blue Incense Beast"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "往年本门烹饪这腊八粥，都是讲究一个同心协力，人人有份。\n不论厨艺高低，皆需尽心尽力，\n师傅每每借此方法，教育我们“众人拾柴火焰高”的道理。"
   splits:
@@ -35073,7 +35023,7 @@
   - text: "忘忧清乐集"
     translated: "Forget Worry Clear Music Collection"
     qcReviewedText: "Forget Worry Clear Music Collection"
-    qcTranslated: "Carefree Melodies Collection"
+    qcTranslated: "The Forget‑Worry and Clear Music Collection"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -35605,7 +35555,7 @@
     qcTranslated: "Bully Leader"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "悉心指点;TeachLivingSkillWithNPCSure;"
   splits:
@@ -35793,7 +35743,7 @@
   - text: "感、感激不尽！"
     translated: "Thank you very much!"
     qcReviewedText: "Thank you very much!"
-    qcTranslated: "Than‑thank you so much!"
+    qcTranslated: "Thank, thank you very much!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -35841,10 +35791,10 @@
   - text: "愿与#TargetInteractName#琴瑟和鸣，相敬如宾。"
     translated: "I wish to play music and chess with #TargetInteractName# and treat her with the utmost respect."
     qcReviewedText: "I wish to play music and chess with #TargetInteractName# and treat her with the utmost respect.\nIf your heart is as mine, you will surely not disappoint my longing."
-    qcTranslated: "I wish to be in perfect harmony with #TargetInteractName#, like the guqin and se, and to treat each other with mutual respect.\\nIf your heart is as mine, I will surely not betray our mutual longing."
+    qcTranslated: "I wish to live in harmonious accord with #TargetInteractName#, treating each other with mutual respect.\\nIf your heart is as mine, you will surely not disappoint my longing."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "若君心似我心，定不负相思意。"
@@ -36069,10 +36019,10 @@
   - text: "成王败寇，在此一把"
     translated: "Winner takes all, I suppose"
     qcReviewedText: "Winner takes all, I suppose"
-    qcTranslated: "Winner takes all. This is it."
+    qcTranslated: "Winner takes all, here's the final showdown"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "成败在此一举"
   splits:
@@ -36391,11 +36341,9 @@
   - text: "我也想帮忙，可实在是不擅厨艺......"
     translated: "I want to help, but I'm really not good at cooking......"
     qcReviewedText: "I want to help, but I'm really not good at cooking......\nRecently, I've been cutting back on drinks to practice lightness and lose weight, so it's better to have just a little less."
-    qcTranslated: "I want to help, but I'm really not good at cooking......\\nI've been drinking less recently to practice Lightness and lose weight, so it's best to keep the drinks to a minimum."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "最近正好为了苦练轻功减肥，还是少喝两口为妙。"
     translated: "Recently, I've been cutting back on drinks to practice lightness and lose weight, so it's better to have just a little less."
@@ -37370,10 +37318,10 @@
   - text: "我行走江湖多年，也一直在寻找高手切磋演武，"
     translated: "I have wandered the Jianghu for many years, always seeking out high‑hand cutting skills to refine my martial arts."
     qcReviewedText: "I have wandered the Jianghu for many years, always seeking out high‑hand cutting skills to refine my martial arts.\nOne reason is to verify the accuracy of one's mental imagery.\nOn the other hand, it is also to exhaust the essence and true principles of all martial arts under heaven."
-    qcTranslated: "I have wandered the Jianghu for many years, constantly seeking out masters to exchange techniques and test my skills.\nOn one hand, it is to verify if my mental simulations are accurate;\non the other, it is to exhaust the true essence and spirit of martial arts under heaven."
+    qcTranslated: "I have wandered the Jianghu for many years, always seeking out masters to spar and exchange martial arts.\\nOne reason is to verify the accuracy of one's mental imagery.\\nOn the other hand, it is also to exhaust the essence and true principles of all martial arts under heaven."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "一方面是为了检验脑中想象是否准确，"
@@ -38115,7 +38063,7 @@
   - text: "执掌铲勺，把控火候，必能将这道菜做的卓尔不群，出类拔萃。"
     translated: "Mastering the shaochuo and controlling the fire will surely make this dish stand out from the crowd."
     qcReviewedText: "Mastering the shaochuo and controlling the fire will surely make this dish stand out from the crowd."
-    qcTranslated: "Wielding the spatula and ladle, and controlling the heat, will surely make this dish exceptional and outstanding."
+    qcTranslated: "Mastering the spatula and ladle and controlling the heat will surely make this dish stand out from the crowd."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -38194,7 +38142,7 @@
     qcTranslated: "Chengjiang"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 10
     qcDefectCategory: DomainTerm
 - raw: "承蒙#PlayerName#不弃，我必当赴汤蹈火，为{0}效犬马之劳。"
   splits:
@@ -38383,10 +38331,10 @@
   - text: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。"
     translated: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top."
     qcReviewedText: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top.\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
-    qcTranslated: "My apologies, my apologies. It seems that in this Taiyue Grand Ceremony, I, #$SourceInteractName#, have taken first place.\\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
+    qcTranslated: "My apologies, my apologies. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top.\\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
@@ -39261,10 +39209,10 @@
   - text: "掌、掌门，大、大事不好了！"
     translated: "Sect Leader, big trouble!"
     qcReviewedText: "Sect Leader, big trouble!"
-    qcTranslated: "Sec‑Sect Leader, big, big trouble!"
+    qcTranslated: "Sect Leader, big, big trouble!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: DroppedStutter
 - raw: "掌柜"
   splits:
@@ -39834,11 +39782,9 @@
   - text: "撤除职位"
     translated: "Remove position"
     qcReviewedText: "Remove position\nCooling {0} Sky"
-    qcTranslated: "Remove position\\nCooldown {0} Days"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "冷却"
     translated: "Cooling"
@@ -40257,10 +40203,10 @@
   - text: "散席"
     translated: "End of performance"
     qcReviewedText: "End of performance"
-    qcTranslated: "End of banquet"
+    qcTranslated: "Dismissed"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
 - raw: "敬酒不吃吃罚酒;PlotStartFight;HardFight-RobDeliveryProtectorResult-0-"
   splits:
@@ -40880,10 +40826,10 @@
   - text: "既是#SourceInteractName#盛情邀请，那我便与你共度七夕好了。"
     translated: "Since #SourceInteractName# extended such a kind invitation, let's spend Qixi together."
     qcReviewedText: "Since #SourceInteractName# extended such a kind invitation, let's spend Qixi together.\nBut if #SourceInteractName# gets any foolish ideas about this life, don't blame me for getting angry.~"
-    qcTranslated: "Since #SourceInteractName# has extended such a kind invitation, I shall spend Qixi with you then.\\nBut if #SourceInteractName# harbors any improper thoughts, don't blame me for getting angry~"
+    qcTranslated: "Since #SourceInteractName# extended such a kind invitation, let's spend Qixi together.\\nBut if #SourceInteractName# gets any improper thoughts about this, don't blame me for getting angry.~"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "只是若#SourceInteractName#为此生出什么非分之想，可别怪我生气哦"
@@ -41065,7 +41011,7 @@
   - text: "既然是#PlayerName#诚心求取的话......也罢，那我就将这门"
     translated: "Since #PlayerName# is genuinely seeking this... well, I'll teach you this technique."
     qcReviewedText: "Since #PlayerName# is genuinely seeking this... well, I'll teach you this technique.{0} Teach it to you\n(Consume the other party's goodwill {1}, if the opponent is a Master, then the points are halved.)"
-    qcTranslated: "Since #PlayerName# is genuinely seeking this... well, I'll teach you this {0} technique.\\n(Consumes {1} affinity points from the other party; halved if the other party is a Master)"
+    qcTranslated: "Since #PlayerName# is genuinely seeking this... well, I'll teach you this technique. {0}\n(Consume the other party's goodwill {1}, if the opponent is a Master, then the points are halved.)"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -41524,11 +41470,9 @@
   - text: "是否自动阅读"
     translated: "Do you want to enable automatic reading?"
     qcReviewedText: "Do you want to enable automatic reading?《{0}》？\nCurrent {4} Highest experience record {1} Click\nAuto practice earns {2}%({3} Click)"
-    qcTranslated: "Enable automatic reading of 《{0}》?\\nCurrent {4} max experience record: {1} points\\nAuto practice earns {2}% ({3} points)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "当前"
     translated: "Current"
@@ -42508,10 +42452,10 @@
   - text: "本场考核就由掌门我亲自主持好了。"
     translated: "Let me, the Sect Leader, personally conduct this assessment."
     qcReviewedText: "Let me, the Sect Leader, personally conduct this assessment.\n#PlayerName# must compete with me to prove that your martial arts proficiency is worthy of our sect.{0} Great responsibility"
-    qcTranslated: "Let me, the Sect Leader, personally conduct this assessment.\\n#PlayerName# must compete with me to prove that your martial arts proficiency is worthy of the great responsibility of being our sect's {0}."
+    qcTranslated: "Let me, the Sect Leader, personally conduct this assessment.\\n#PlayerName# must compete with me to prove that your martial arts proficiency is worthy of the great responsibility of our sect's {0}."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "#PlayerName#需得与我一较高下，方能证明自己之武功修为堪当本门"
@@ -42526,11 +42470,11 @@
   - text: "本大爷今日心情不错，乖乖交出银两细软，便可饶你不死！"
     translated: "This old man is in a good mood today. Hand over the silver and soft things, and I might spare your life!"
     qcReviewedText: "This old man is in a good mood today. Hand over the silver and soft things, and I might spare your life!"
-    qcTranslated: "This Lord is in a good mood today. Hand over the silver and valuables, and I might spare your life!"
+    qcTranslated: "This old man is in a good mood today. Hand over the silver and valuables, and I might spare your life!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcQualityScore: 35
+    qcDefectCategory: OtherNamedDefect
 - raw: "本寺以医术闻名于世，无论大侠伤重几何，只需在此疗养三日便可痊愈。\n以大侠当前的伤势，在此处治愈需消耗{0}两银钱。"
   splits:
   - text: "本寺以医术闻名于世，无论大侠伤重几何，只需在此疗养三日便可痊愈。"
@@ -42594,7 +42538,7 @@
   - text: "本届掌门大会我#PlayerForceName#能够夺得第"
     translated: "This term's Sect Leader, Conference I, managed to win first place, #PlayerForceName#. They have proven themselves once again in the competition."
     qcReviewedText: "This term's Sect Leader, Conference I, managed to win first place, #PlayerForceName#. They have proven themselves once again in the competition.{0} Name, #PlayerName#, has also made significant contributions\nI hope you remain humble and continue to improve your martial arts.\nNext year at the Sect Leader Conference, I'll certainly shine and leave everyone amazed."
-    qcTranslated: "This term's Sect Leader Conference, our #PlayerForceName# managed to win {0}th place, and #PlayerName# has also made significant contributions.\\nI hope you remain humble and continue to improve your martial arts.\\nNext year at the Sect Leader Conference, you will certainly shine and leave everyone amazed."
+    qcTranslated: "In this term's Sect Leader Conference, #PlayerForceName# managed to win {0}th place, and #PlayerName# has also made significant contributions.\\nI hope you remain humble and continue to improve your martial arts.\\nNext year at the Sect Leader Conference, I'll certainly shine and leave everyone amazed."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -42706,7 +42650,7 @@
   - text: "本座与#PlayerName#你交情尚浅，恐怕还不能将本门"
     translated: "I have not known you long, #PlayerName#, so I am afraid I cannot share the secrets of our sect yet."
     qcReviewedText: "I have not known you long, #PlayerName#, so I am afraid I cannot share the secrets of our sect yet.{1} Martial arts are rashly entrusted to you\n(Need at least {0} Increase the Sect Leader's favor)"
-    qcTranslated: "I have not known you long, #PlayerName#, so I am afraid I cannot rashly entrust our sect's {1} martial arts to you.\\n(Requires at least {0} Sect Leader Favor.)"
+    qcTranslated: "I have not known you long, #PlayerName#, so I am afraid I cannot rashly entrust the {1} martial arts of our sect to you.\\n(Requires at least {0} Sect Leader favor.)"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -42803,11 +42747,9 @@
   - text: "本月已与"
     translated: "This month, I have already"
     qcReviewedText: "This month, I have already {0} Further diplomatic overtures will require additional opportunities"
-    qcTranslated: "This month, diplomatic overtures have already been made with {0}. The timing for further negotiations must be observed."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "进行过外交亲善，还需另待时机。"
     translated: "Further diplomatic overtures will require additional opportunities"
@@ -42869,7 +42811,7 @@
   - text: "本月已拆解过"
     translated: "Decomposed this month already"
     qcReviewedText: "Decomposed this month already {0} More equipment is needed, and the disciples still need to finish clearing the waste."
-    qcTranslated: "You have already dismantled {0} pieces of equipment this month. You must wait for the disciples to finish clearing the scrap."
+    qcTranslated: "You have already decomposed {0} pieces of equipment this month. Please wait for the disciples to finish clearing the waste."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -42909,10 +42851,10 @@
   - text: "本月已炼化过"
     translated: "This month, I have already refined it"
     qcReviewedText: "This month, I have already refined it {0} More elixirs will need to wait until the disciple finishes cleaning the waste."
-    qcTranslated: "I have already refined {0} elixirs this month. Please wait until the disciples finish cleaning up the waste."
+    qcTranslated: "This month, I have already refined {0} elixirs. We need to wait until the disciple finishes cleaning up the waste."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "件丹药，还需等待弟子将废料清理完毕。"
@@ -42970,10 +42912,10 @@
   - text: "本月已重烩过"
     translated: "This month, you've already had this dish revisited."
     qcReviewedText: "This month, you've already had this dish revisited.{0} Before we can eat, the disciple still needs to finish clearing the waste."
-    qcTranslated: "This month, you've already revisited {0} dishes. The disciples must still finish clearing the waste before more can be prepared."
+    qcTranslated: "This month, you've already revisited {0} dishes. Before we can eat, the disciple still needs to finish clearing the waste."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "件饮食，还需等待弟子将废料清理完毕。"
@@ -43366,11 +43308,9 @@
   - text: "杂"
     translated: "Jie"
     qcReviewedText: "Jie"
-    qcTranslated: "Miscellaneous"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "杂役"
   splits:
   - text: "杂役"
@@ -43546,11 +43486,9 @@
   - text: "来者不善，眼下还是保命要紧。"
     translated: "Cometh not with evil, first and foremost, one must preserve their life."
     qcReviewedText: "Cometh not with evil, first and foremost, one must preserve their life.\nIt seems we have no choice but to flee!"
-    qcTranslated: "Whoever comes here has ill intent; preserving my life is the priority for now.\\nIt seems I have no choice but to use the 36 Stratagems: flight!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "看样子，只好三十六计走为上了！"
     translated: "It seems we have no choice but to flee!"
@@ -43806,10 +43744,10 @@
   - text: "根据当前难度，你的全属性"
     translated: "Based on the current difficulty, your full stats"
     qcReviewedText: "Based on the current difficulty, your full stats/Skill enhancement {0} Click"
-    qcTranslated: "Based on the current difficulty, your all attributes/Skills increased by {0}"
+    qcTranslated: "Based on the current difficulty, your full stats/Skill enhancement {0} points"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "技能提升"
@@ -43866,11 +43804,9 @@
   - text: "桀桀桀桀，竟敢打我这皇家宝库的主意，真是活得不耐烦了！"
     translated: "Haha, dare to eye up the royal treasury‑really have had enough of living!"
     qcReviewedText: "Haha, dare to eye up the royal treasury‑really have had enough of living!\nBoy, today you will lay the foundation for my treasury with your life. Submit and die peacefully!"
-    qcTranslated: "Jie jie jie jie, you dare to lay eyes on the Imperial Treasury? You truly are tired of living!\\nBoy, today I shall use your life to lay the foundation for my treasury. Submit and die!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "小子，今天就拿你的命为我这宝库奠基，乖乖受死！"
     translated: "Boy, today you will lay the foundation for my treasury with your life. Submit and die peacefully!"
@@ -44251,10 +44187,10 @@
   - text: "正所谓见者有份，#PlayerName#你若是不把这宝藏分一半给我，"
     translated: "As they say, where there's smoke, there's fire. #PlayerName#, if you don't split this treasure with me, I won't let you off easy."
     qcReviewedText: "As they say, where there's smoke, there's fire. #PlayerName#, if you don't split this treasure with me, I won't let you off easy.\nIsn't that a bit hard to explain!"
-    qcTranslated: "They say that if you see it, you have a share. #PlayerName#, if you don't split this treasure with me,\\nit's a bit hard to explain, isn't it!"
+    qcTranslated: "As they say, everyone who sees it gets a share. #PlayerName#, if you don't split this treasure with me, I won't let you off easy.\\nIsn't that a bit hard to explain!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "未免就有些说不过去了吧！"
@@ -44503,10 +44439,10 @@
   - text: "此功法果然是高深莫测......多、多谢前辈指点！"
     translated: "This cultivation method is indeed profound and unfathomable... Thank you very much, Senior!"
     qcReviewedText: "This cultivation method is indeed profound and unfathomable... Thank you very much, Senior!\nSenior? Where have the seniors gone... Truly, an ultimate master is like the Dragon, seen only at the beginning but not at the end."
-    qcTranslated: "This cultivation method is indeed profound and unfathomable... Th‑thank you very much, Senior!\\nSenior? Where have the seniors gone... Truly, an ultimate master is like the Dragon, seen only at the beginning but not at the end."
+    qcTranslated: "This cultivation method is indeed profound and unfathomable... Th-thank you very much, Senior!\\nSenior? Where have the seniors gone... Truly, an ultimate master is like the Dragon, seen only at the beginning but not at the end."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 30
     qcDefectCategory: DroppedStutter
   - subIndex: 1
     text: "前辈？前辈人怎么不见了......绝世高手，果然是神龙见首不见尾。"
@@ -46100,11 +46036,11 @@
   - text: "江湖儿女，本如浮萍，聚散有时，漂泊不定。"
     translated: "Wives of Jianghu, like floating on the water, come together and part at times, wandering without certainty."
     qcReviewedText: "Wives of Jianghu, like floating on the water, come together and part at times, wandering without certainty.\nNow that our bond is thin and our destiny draws to a close, let us part ways for the better, each seeking our own future!"
-    qcTranslated: "Children of the Jianghu are like water hyacinths, gathering and parting in due course, drifting without a fixed home. Now that our bond is thin and our fate nearly spent, it is best to part ways amicably, each seeking our own future!"
+    qcTranslated: "Jianghu men and women, like floating duckweed, come together and part at times, wandering without certainty.\\nNow that our bond is thin and our destiny draws to a close, let us part ways for the better, each seeking our own future!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "如今你我情义已浅，缘分将尽，不如就此一别两宽，各觅前程去吧！"
     translated: "Now that our bond is thin and our destiny draws to a close, let us part ways for the better, each seeking our own future!"
@@ -46253,11 +46189,9 @@
   - text: "江老六"
     translated: "Old Man Jiang Liu"
     qcReviewedText: "Old Man Jiang Liu"
-    qcTranslated: "Old Sixth Jiang"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
 - raw: "江老十"
   splits:
   - text: "江老十"
@@ -46284,11 +46218,9 @@
   - text: "池泽"
     translated: "Cishai"
     qcReviewedText: "Cishai"
-    qcTranslated: "Chize"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "汪财"
   splits:
   - text: "汪财"
@@ -46604,11 +46536,9 @@
   - text: "没想到这轮的对手是#PlayerName#啊，"
     translated: "Unexpectedly, the opponent in this round is #PlayerName#."
     qcReviewedText: "Unexpectedly, the opponent in this round is #PlayerName#.\nI won't hold back with my words, so speak up!"
-    qcTranslated: "I can't believe my opponent this round is #PlayerName#. I won't hold back on my words, so bring on your best!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "我可不会口下留情，进言吧！"
     translated: "I won't hold back with my words, so speak up!"
@@ -46900,11 +46830,11 @@
   - text: "洛神赋图"
     translated: "Illustration of the Luo River Goddess Assignation"
     qcReviewedText: "Illustration of the Luo River Goddess Assignation"
-    qcTranslated: "Painting of the Goddess of the Luo River"
+    qcTranslated: "Illustration of the Goddess of the Luo River"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: DomainTerm
+    qcQualityScore: 30
+    qcDefectCategory: LostIdiom
 - raw: "洞中方一日，世上已千年。\n此番闭关，确是令人领悟颇深。"
   splits:
   - text: "洞中方一日，世上已千年。"
@@ -47015,10 +46945,10 @@
   - text: "消耗"
     translated: "Consume"
     qcReviewedText: "Consume ({0} Sky)"
-    qcTranslated: "Consume ({0} Day)"
+    qcTranslated: "Consume ({0} days)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 35
     qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "天"
@@ -47135,11 +47065,9 @@
   - text: "消耗时间"
     translated: "Spend time"
     qcReviewedText: "Spend time：{0} Sky"
-    qcTranslated: "Time Consumed: {0} Days"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "天"
     translated: "Sky"
@@ -47252,7 +47180,7 @@
   - text: "渊腋"
     translated: "Deep armpit"
     qcReviewedText: "Deep armpit"
-    qcTranslated: "Abyssal Armpit"
+    qcTranslated: "Yuan Ye"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -47376,10 +47304,10 @@
   - text: "满堂花醉三千客，一剑霜寒十四州"
     translated: "Ten thousand flowers would intoxicate a thousand guests, one sword chill fourteen states."
     qcReviewedText: "Ten thousand flowers would intoxicate a thousand guests, one sword chill fourteen states."
-    qcTranslated: "Flowers fill the hall, intoxicating three thousand guests; one sword's frost chills fourteen states."
+    qcTranslated: "A hall full of flowers intoxicates three thousand guests, one sword's frost chills fourteen states."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 30
     qcDefectCategory: GarbledNumber
 - raw: "满意离去;FinishExploreMap;true"
   splits:
@@ -47878,10 +47806,10 @@
   - text: "牲酒赛秋社，箫鼓迎新婚，"
     translated: "Sacrifices and wine for the autumn harvest festival, flutes and drums for new weddings,"
     qcReviewedText: "Sacrifices and wine for the autumn harvest festival, flutes and drums for new weddings,\nToday is #SourceInteractName# and {0} A day filled with great joy, how can we not celebrate properly?\nYou see, I also brought this #PlotInteractItemName# as a new marriage gift, it's not to show respect, not to show respect!"
-    qcTranslated: "Sacrifices and wine for the autumn harvest festival, flutes and drums for new weddings,\\nToday is #SourceInteractName# and {0}'s wedding day. How can we not celebrate properly?\\nYou see, I also brought this #PlotInteractItemName# as"
+    qcTranslated: "Sacrifices and wine for the autumn harvest festival, flutes and drums for new weddings,\\nToday is #SourceInteractName# and {0} A day filled with great joy, how can we not celebrate properly?\\nYou see, I also brought this #PlotInteractItemName# as a new marriage gift, please accept it, please accept it!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "今天是#SourceInteractName#和"
@@ -48129,11 +48057,9 @@
   - text: "玄玄谱"
     translated: "Xuan Xuan Score"
     qcReviewedText: "Xuan Xuan Score"
-    qcTranslated: "Xuan Xuan Manual"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "率谷"
   splits:
   - text: "率谷"
@@ -48654,7 +48580,7 @@
     qcTranslated: "Tianhe Gang"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 30
     qcDefectCategory: LostIdiom
 - raw: "由于悬赏在身，你本想避人耳目混入此地。\n不成想刚进门，便被一群埋伏多时的官差团团围住，\n看来一场恶战在所难免！"
   splits:
@@ -48705,11 +48631,9 @@
   - text: "申脉"
     translated: "Sinkiang"
     qcReviewedText: "Sinkiang"
-    qcTranslated: "Shenmai"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "男"
   splits:
   - text: "男"
@@ -49026,11 +48950,11 @@
   - text: "百会"
     translated: "Meeting of the Hundred Sands"
     qcReviewedText: "Meeting of the Hundred Sands"
-    qcTranslated: "Bai Hui"
+    qcTranslated: "Baihui"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 20
+    qcDefectCategory: DomainTerm
 - raw: "百姓"
   splits:
   - text: "百姓"
@@ -49307,10 +49231,10 @@
   - text: "目前少侠的官府功绩为"
     translated: "Currently, your Young Hero's gongji at the Zhengfu Bangongshi is"
     qcReviewedText: "Currently, your Young Hero's gongji at the Zhengfu Bangongshi is {0}。\nWhich exchange do you need to perform?"
-    qcTranslated: "Currently, Young Hero, your official merit is {0}.\nWhich exchange would you like to make?"
+    qcTranslated: "Currently, your Young Hero's official merit at the Zhengfu Bangongshi is {0}.\\nWhich exchange do you need to perform?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "需要进行哪种兑换呢？"
@@ -49322,11 +49246,11 @@
   - text: "目前已有"
     translated: "Currently there are"
     qcReviewedText: "Currently there are {0} With a sect task on his hands, he should settle this first before proceeding."
-    qcTranslated: "You are already undertaking {0} Sect quests. It is best to settle this matter first before proceeding."
+    qcTranslated: "Currently, there are {0} sect tasks on his hands. He should settle this matter properly first before proceeding."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 25
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "门派任务在身，还是先将此事料理妥当再说。"
     translated: "With a sect task on his hands, he should settle this first before proceeding."
@@ -49864,11 +49788,11 @@
   - text: "眼下已将这"
     translated: "Now this has been"
     qcReviewedText: "Now this has been {0} Heart Method verses fully committed to memory\nNext, diligent practice is required to master it fully."
-    qcTranslated: "I have now fully committed the verses of this {0} Heart Method to memory.\\nNext, diligent practice is required to master it fully."
+    qcTranslated: "Now the {0} Heart Method verses have been fully committed to memory.\\nNext, diligent practice is required to master it fully."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "的心法口诀尽数记下。"
     translated: "Heart Method verses fully committed to memory"
@@ -50160,7 +50084,7 @@
     qcTranslated: "Machete Gang"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "研究"
   splits:
@@ -50372,12 +50296,9 @@
   - text: "确认消耗"
     translated: "Confirm consumption"
     qcReviewedText: "Confirm consumption {1} Sky {4} Practice {0}？{3} {2}"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Confirm spending {1} days to practice {0}? {3} {2}"
-    qcFailureReason: " Restore `{4}` to the translation, as it was incorrectly removed."
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Confirm consumption {1} Sky {4} Practice {0}？{3} {2}"
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "天"
     translated: "Sky"
@@ -50441,7 +50362,7 @@
   - text: "确认要将"
     translated: "Confirm you want to proceed?"
     qcReviewedText: "Confirm you want to proceed?{0} Upgrade to {1} Is it level?\nApproximately needs {2} Heavenly time"
-    qcTranslated: "Are you sure you want to promote {0} to level {1}?\\nThis will take approximately {2} days."
+    qcTranslated: "Confirm you want to promote {0} to level {1}?\nIt will take approximately {2} days."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -50499,7 +50420,7 @@
     qcTranslated: "Are you sure you want to copy this #PlotInteractItemName# to the Treasure Hall?\\nThis will occupy {0} points of value capacity."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 25
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "此举将占用"
@@ -50769,10 +50690,10 @@
   - text: "神阙"
     translated: "Middle Palace"
     qcReviewedText: "Middle Palace"
-    qcTranslated: "Shen Que"
+    qcTranslated: "Shenque"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 30
     qcDefectCategory: DomainTerm
 - raw: "祭侄文稿"
   splits:
@@ -51060,11 +50981,11 @@
   - text: "穿越迷宫后，可以窃取商店内一件"
     translated: "After navigating the maze, you can steal an item from the store."
     qcReviewedText: "After navigating the maze, you can steal an item from the store.<b>{0}</b> Following Items"
-    qcTranslated: "After navigating the maze, you can steal one item worth <b>{0}</b> or less from the store"
+    qcTranslated: "After navigating the maze, you can steal an item from the store worth <b>{0}</b> or less."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "以下物品"
     translated: "Following Items"
@@ -51244,10 +51165,10 @@
   - text: "竟敢拉帮结伙来此放肆！"
     translated: "Dare to gang up and cause trouble here!"
     qcReviewedText: "Dare to gang up and cause trouble here!\nFortunately, I heard the commotion and called you all here today to taste it.{0} As a means!"
-    qcTranslated: "Dare to gang up and cause trouble here!\\nFortunately, I heard the commotion. Today, you will taste {0}'s might!"
+    qcTranslated: "Dare to gang up and cause trouble here!\nFortunately, I heard the commotion. Today, you'll taste {0}'s methods!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 25
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "还好我听到吵嚷之声，今天叫你们尝尝"
@@ -51374,10 +51295,10 @@
   - text: "第"
     translated: "Chapter"
     qcReviewedText: "Chapter {0} Name is {1}！\nReward is in cash {2} Taels and this {3}, Your faction's prestige will also increase as a result.{4} Dot\nAdditionally, each participating disciple will receive {5} Sect achievements are shown to encourage members"
-    qcTranslated: "Rank {0} is {1}!\\nThe reward is {2} taels of silver and this {3}, and your Sect's prestige will also increase by {4} points.\\nIn addition, each participating disciple will receive {5} Sect Merit as encouragement."
+    qcTranslated: "Chapter {0} Name is {1}！\\nReward is in cash {2} Taels and this {3}, Your faction's prestige will also increase as a result by {4} points.\\nAdditionally, each participating disciple will receive {5} Sect achievements are shown to encourage members"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "名是"
@@ -51452,7 +51373,7 @@
     qcTranslated: "Chapter {0}"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "章"
@@ -51735,10 +51656,10 @@
   - text: "粗看尚可，然细节处处透出庸俗之气，可谓食之无味，弃之可惜。"
     translated: "It looks decent at first glance, but the details everywhere exude a common taste, making it enjoyable but not worth keeping."
     qcReviewedText: "It looks decent at first glance, but the details everywhere exude a common taste, making it enjoyable but not worth keeping."
-    qcTranslated: "It looks acceptable at a glance, but the details everywhere exude a vulgar air. It is like food that is flavorless to eat yet a pity to throw away."
+    qcTranslated: "It looks decent at first glance, but the details everywhere exude a common taste; it is tasteless to consume and a pity to discard."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "粮食"
   splits:
@@ -52087,7 +52008,7 @@
   - text: "终于准备完毕，只需闯过一处迷宫，便可开始挑战。"
     translated: "Finally prepared, just need to navigate through a maze before we can start the challenge."
     qcReviewedText: "Finally prepared, just need to navigate through a maze before we can start the challenge.\nThis warehouse is divided into {0} Higher floors yield more resources, but the challenges become tougher as well.\nWhich layer area should we challenge?"
-    qcTranslated: "Finally prepared, we just need to navigate through a maze before we can start the challenge.\\nThis warehouse is divided into {0} floor areas. The higher the floor, the richer the resources, but the more difficult the challenge.\\nWhich floor area should we set as our challenge target?"
+    qcTranslated: "Finally prepared, just need to navigate through a maze before we can start the challenge.\\nThis warehouse is divided into {0} floors. Higher floors yield more resources, but the challenges become tougher as well.\\nWhich layer area should we challenge?"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 30
@@ -52108,10 +52029,10 @@
   - text: "终于准备完毕，只需闯过一处迷宫，便可开始挑战。"
     translated: "Finally prepared, just need to navigate through a maze before we can start the challenge."
     qcReviewedText: "Finally prepared, just need to navigate through a maze before we can start the challenge.\nThis Scripture Pavilion is divided into {0} The higher the floor level, the rarer the Secret Manual, but the challenge also becomes more difficult.\nWhich layer area should we challenge?"
-    qcTranslated: "Finally prepared, just need to navigate through a maze before we can start the challenge.\\nThis Scripture Pavilion is divided into {0} floors. The higher the floor level, the rarer the Secret Manual, but the challenge"
+    qcTranslated: "Finally prepared, just need to navigate through a maze before we can start the challenge.\\nThis Scripture Pavilion is divided into {0} floors. The higher the floor level, the rarer the Secret Manual, but the challenge also becomes more difficult.\\nWhich layer area should we challenge?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "这藏经阁分为"
@@ -52828,7 +52749,7 @@
   - text: "老先生就是传闻中的神匠吧！"
     translated: "The elderly gentleman is the legendary Artisan God, right!"
     qcReviewedText: "The elderly gentleman is the legendary Artisan God, right!\nIt's truly out of sight, out of mind like the dragon. I had a tough time finding you."
-    qcTranslated: "The elderly gentleman is the legendary divine artisan, isn't he!\\nHe is truly a dragon whose head and tail are never seen. I had a hard time finding you."
+    qcTranslated: "The elderly gentleman is the legendary Artisan God, right! \\nYou're truly like a dragon whose head you see but not its tail. I had a tough time finding you."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -53142,7 +53063,7 @@
   - text: "背击"
     translated: "Counterattack"
     qcReviewedText: "Counterattack"
-    qcTranslated: "Back Strike"
+    qcTranslated: "Backstab"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -53476,7 +53397,7 @@
   - text: "腹哀"
     translated: "Chest grief"
     qcReviewedText: "Chest grief"
-    qcTranslated: "Hara Aie"
+    qcTranslated: "Hara-ai"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -53571,10 +53492,10 @@
   - text: "自古以来千里马常有，伯乐不常有！"
     translated: "A thousand‑mile horse is common, but a bosom friend is not always around! A steed is found often, but a bosom friend, or a bole, is not!"
     qcReviewedText: "A thousand‑mile horse is common, but a bosom friend is not always around! A steed is found often, but a bosom friend, or a bole, is not!\nOnly the horse racing champion can become the master of this steed, which is both reasonable and in line with the rules of the Jianghu.\nI presume you heroes have no objections!"
-    qcTranslated: "A thousand‑mile steed is common, but a Bo Le is not! \\nOnly the winner of the horse race can become the master of this fine steed, which is both reasonable and in line with Jianghu custom. \\nI presume none of you heroes have any objections!"
+    qcTranslated: "A thousand-mile horse is common, but a Bo Le is not! A steed is found often, but a Bo Le is not!\nOnly the horse racing champion can become the master of this steed, which is both reasonable and in line with the rules of the Jianghu.\nI presume you heroes have no objections!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "赛马夺冠者方能成为此名驹之主，自是合情合理，也符合江湖规矩。"
@@ -53826,7 +53747,7 @@
   - text: "花费"
     translated: "Spend"
     qcReviewedText: "Spend {3} Over time, I grew in understanding {0} {1}。\n{2}"
-    qcTranslated: "After {3} days, obtained {0} {1}.\n{2}"
+    qcTranslated: "Spend {3} days, and gain {0} {1}.\n{2}"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -53841,11 +53762,9 @@
   - text: "花费"
     translated: "Spend"
     qcReviewedText: "Spend {5} Time passed, allowing {0} Of {1} {2} Ok {3}。\n{4}"
-    qcTranslated: "Spend {5} days to {2} {0}'s {1} by {3}.\\n{4}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - subIndex: 1
     text: "天时间，使"
     translated: "Time passed, allowing"
@@ -53862,10 +53781,10 @@
   - text: "花费好些功夫，终于打通了潜入密道，再经过一处地下迷宫，便可抵达仓储之所。"
     translated: "After putting in considerable effort, I finally cleared the secret passage, and by navigating through a underground maze, I could reach the storage area."
     qcReviewedText: "After putting in considerable effort, I finally cleared the secret passage, and by navigating through a underground maze, I could reach the storage area.\nThis warehouse is divided into {0} Higher levels in the area contain richer resources, but the defenses become more formidable as well.\nWhich layer should we target for infiltration?"
-    qcTranslated: "After putting in considerable effort, I finally cleared the secret passage, and by navigating through an underground maze, I could reach the storage area.\\nThis warehouse is divided into {0} levels. Higher levels contain richer resources, but the defenses become more formidable as well.\\nWhich level should we target for infiltration?"
+    qcTranslated: "After putting in considerable effort, I finally cleared the secret passage, and by navigating through a underground maze, I could reach the storage area.\\nThis warehouse is divided into {0} levels. Higher levels contain richer resources, but the defenses become more formidable as well.\\nWhich layer should we target for infiltration?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "这仓库分为"
@@ -53883,10 +53802,10 @@
   - text: "花费好些功夫，终于打通了潜入密道，再经过一处地下迷宫，便可抵达藏经之所。"
     translated: "While making the effort, I finally cleared the secret passage, and after navigating through the underground maze, I could reach the place where sacred scriptures are stored."
     qcReviewedText: "While making the effort, I finally cleared the secret passage, and after navigating through the underground maze, I could reach the place where sacred scriptures are stored.\nThis Scripture Pavilion is divided into {0} The higher the floor, the rarer the Secret Manual, but the defenses are also more rigorous.\nWhich layer should we target for infiltration?"
-    qcTranslated: "After considerable effort, I finally broke through the secret passage. After navigating through an underground maze, I can reach the Scripture Pavilion.\nThis Scripture Pavilion is divided into {0} floors. The higher the floor, the rarer the Secret Manual, but the defenses are also more rigorous.\nWhich floor should we target for infiltration?"
+    qcTranslated: "While making the effort, I finally cleared the secret passage, and after navigating through the underground maze, I could reach the place where sacred scriptures are stored.\\nThis Scripture Pavilion is divided into {0} levels. The higher the floor, the rarer the Secret Manual, but the defenses are also more rigorous.\\nWhich layer should we target for infiltration?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "这藏经阁分为"
@@ -54136,11 +54055,11 @@
   - text: "若是有"
     translated: "If there is"
     qcReviewedText: "If there is {0} With silver coins, I will certainly consider the matter.\n(Decrease 10 points of loyalty)"
-    qcTranslated: "If I have {0} taels of silver, I will naturally consider this matter.\n(Decrease 10 loyalty)"
+    qcTranslated: "If there are {0} taels of silver, I will certainly consider the matter.\\n(Decrease 10 points of loyalty)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 35
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "两银钱的话，我自然会考虑一下此事。"
     translated: "With silver coins, I will certainly consider the matter."
@@ -54162,10 +54081,10 @@
   - text: "若能以"
     translated: "If I may"
     qcReviewedText: "If I may {0} Secure both of these {1}, It's also a beautiful thing"
-    qcTranslated: "If I could secure this {1} for {0} taels, that would be a fine deal"
+    qcTranslated: "If I can secure this {1} for {0} taels, that would also be a fine deal"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两拿下此"
@@ -54243,10 +54162,10 @@
   - text: "若要将少侠当前的威慑清空，非得牺牲"
     translated: "To clear the Young Hero's current deterrence, they must sacrifice."
     qcReviewedText: "To clear the Young Hero's current deterrence, they must sacrifice.{0} Do not raise your reputation in the Jianghu."
-    qcTranslated: "To clear the Young Hero's current deterrence, {0} points of Jianghu reputation must be sacrificed."
+    qcTranslated: "To clear the Young Hero's current deterrence, they must sacrifice {0} points of Jianghu reputation."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "点江湖声望不可。"
@@ -54257,12 +54176,6 @@
   splits:
   - text: "若要将少侠当前的威慑清空，非得缴纳"
     translated: "To clear Young Hero's current intimidation, you must pay"
-    qcReviewedText: "To clear Young Hero's current intimidation, you must pay {0} No double fines"
-    qcTranslated: "To clear Young Hero's current intimidation, you must pay a fine of {0} taels."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两罚金不可。"
     translated: "No double fines"
@@ -54272,12 +54185,6 @@
   splits:
   - text: "若要将少侠当前的恶名与悬赏一笔勾销，非得牺牲"
     translated: "To erase the current infamy and bounty on the Young Hero's head, one must sacrifice"
-    qcReviewedText: "To erase the current infamy and bounty on the Young Hero's head, one must sacrifice {0} Do not raise your reputation in the Jianghu."
-    qcTranslated: "To erase the Young Hero's current infamy and bounty in one stroke, one must sacrifice {0} Jianghu Reputation."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "点江湖声望不可。"
     translated: "Do not raise your reputation in the Jianghu."
@@ -54287,12 +54194,6 @@
   splits:
   - text: "若要将少侠当前的恶名与悬赏一笔勾销，非得缴纳"
     translated: "To settle the current infamy and bounty on the Young Hero's head, one must pay off"
-    qcReviewedText: "To settle the current infamy and bounty on the Young Hero's head, one must pay off {0} No double fines"
-    qcTranslated: "To wipe out the Young Hero's current infamy and bounty in one stroke, a fine of {0} taels must be paid."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两罚金不可。"
     translated: "No double fines"
@@ -54369,12 +54270,6 @@
   splits:
   - text: "药引"
     translated: "Medicine guide"
-    qcReviewedText: "Medicine guide"
-    qcTranslated: "Medicine Lead"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
 - raw: "药引\n食材"
   splits:
   - text: "药引"
@@ -54888,12 +54783,6 @@
   splits:
   - text: "血衣头目乙"
     translated: "Blood Leader Theythem"
-    qcReviewedText: "Blood Leader Theythem"
-    qcTranslated: "Blood Robe Leader B"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
 - raw: "血衣头目甲"
   splits:
   - text: "血衣头目甲"
@@ -55071,12 +54960,6 @@
   splits:
   - text: "行至一山明水秀之处，只见花飞蝶舞之间，"
     translated: "Arriving at a place where the mountains are clear and the waters are beautiful, one sees flowers flying and butterflies dancing."
-    qcReviewedText: "Arriving at a place where the mountains are clear and the waters are beautiful, one sees flowers flying and butterflies dancing.\nIt was a field of medicinal herbs infused with spirit, from which many herbs could be harvested at a glance.\nBut to select the finest pieces, one must have exquisite woodworking skills."
-    qcTranslated: "Arriving at a place where the mountains are clear and the waters are beautiful, one sees flowers flying and butterflies dancing.\\nThere, unmistakably, is a medicinal field that carries a spirit and holds a soul, with many herbs visible at a glance for picking.\\nBut to select the finest from among them, one must possess superior botany skills."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "赫然是一片负气含灵的药田，一眼望去有诸多药材可供取用。"
     translated: "It was a field of medicinal herbs infused with spirit, from which many herbs could be harvested at a glance."
@@ -55107,12 +54990,6 @@
   splits:
   - text: "行至一水草丰茂之处，只见鸟语花香之间，"
     translated: "Arriving at a place where the grass is lush and verdant, one finds oneself amid the sounds of birds and the fragrance of flowers."
-    qcReviewedText: "Arriving at a place where the grass is lush and verdant, one finds oneself amid the sounds of birds and the fragrance of flowers.\nIt was a vibrant river valley, offering a variety of edible ingredients at first glance.\nBut to select the finest pieces, one must have exquisite woodworking skills."
-    qcTranslated: "Arriving at a place where the grass is lush and verdant, one finds oneself amid the sounds of birds and the fragrance of flowers.\\nIt was a vibrant river valley, offering a variety of edible ingredients at first glance.\\nBut to select the finest pieces, one must have exquisite botany skills."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "赫然是一片生机勃勃的河谷，一眼望去有诸多食材可供取用。"
     translated: "It was a vibrant river valley, offering a variety of edible ingredients at first glance."
@@ -55234,12 +55111,6 @@
   splits:
   - text: "被你说的都饿了，我也再吃一个好了......"
     translated: "Hearing you say that makes me hungry too... I'll have one more..."
-    qcReviewedText: "Hearing you say that makes me hungry too... I'll have one more...\nJust lately, I've been feeling a bit too content, and practicing lightness techniques is really not advisable. Sin, sin...\nMm, it's definitely tasty"
-    qcTranslated: "Hearing you say that makes me hungry too... I'll have one more...\nJust lately, I've been feeling a bit too content, and practicing Lightness is really not advisable. Sin, sin...\nMm, it's definitely tasty"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "只是近来有些心宽体胖，修炼轻功实在大为不宜，罪过罪过......"
     translated: "Just lately, I've been feeling a bit too content, and practicing lightness techniques is really not advisable. Sin, sin..."
@@ -55379,12 +55250,6 @@
   splits:
   - text: "要与#TargetInteractName#博骰，至少要准备"
     translated: "To gamble with #TargetInteractName#, you need to prepare at least"
-    qcReviewedText: "To gamble with #TargetInteractName#, you need to prepare at least {0} Two golden apples, please"
-    qcTranslated: "To gamble with #TargetInteractName#, you need to have at least {0} Taels of silver on you."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两本金才行啊。"
     translated: "Two golden apples, please"
@@ -55428,13 +55293,6 @@
   splits:
   - text: "要修缮升级这处房产需要"
     translated: "Renovating and upgrading this property will require"
-    qcReviewedText: "Renovating and upgrading this property will require {0} Silver coins and {1} Time passed,\nThis can increase your Young Hero 10 points in storage capacity and 0.5% in reputation gain speed."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Renovating and upgrading this property will require {0} Silver coins and {1} days,\nThis can increase Young Hero #PlayerName#'s storage capacity by 10 points and reputation gain speed by 0.5%."
-    qcFailureReason: "#PlayerName#"
-    qcRuleCheckFailureCount: 5
-    qcRuleCheckFailureBaseline: "Renovating and upgrading this property will require {0} Silver coins and {1} Time passed,\nThis can increase your Young Hero 10 points in storage capacity and 0.5% in reputation gain speed."
   - subIndex: 1
     text: "两银子以及"
     translated: "Silver coins and"
@@ -55908,12 +55766,6 @@
   splits:
   - text: "让我看看，大侠总共猜对了"
     translated: "Let me see, the Great Hero guessed it correctly"
-    qcReviewedText: "Let me see, the Great Hero guessed it correctly {0} Next\n{1}"
-    qcTranslated: "Let me see, Great Hero, you guessed it correctly {0} times.\\n{1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "次。"
     translated: "Next"
@@ -56530,12 +56382,6 @@
   splits:
   - text: "谢师傅教导！"
     translated: "Master taught with merit!"
-    qcReviewedText: "Master taught with merit!"
-    qcTranslated: "Thank you, Master, for your teachings!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
 - raw: "谢师傅教诲......开饭咯开饭咯！"
   splits:
   - text: "谢师傅教诲......开饭咯开饭咯！"
@@ -57206,12 +57052,6 @@
   splits:
   - text: "走舸帮"
     translated: "Walkboat Clan"
-    qcReviewedText: "Walkboat Clan"
-    qcTranslated: "Skiff Gang"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DomainTerm
 - raw: "走马帮"
   splits:
   - text: "走马帮"
@@ -57854,12 +57694,6 @@
   splits:
   - text: "辄筋"
     translated: "Always tense"
-    qcReviewedText: "Always tense"
-    qcTranslated: "Always tense"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: UntranslatedPinyin
 - raw: "辛苦啦！我先尝尝......\n嗯，饼皮香韧，馅料充实，软糯可口，枣香扑鼻，\n一尝就知道是金牌大厨的手艺！"
   splits:
   - text: "辛苦啦！我先尝尝......"
@@ -58281,12 +58115,6 @@
   splits:
   - text: "还需等待"
     translated: "Still waiting"
-    qcReviewedText: "Still waiting {0} The Japanese can offer another apology"
-    qcTranslated: "Must wait {0} days before offering another apology"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "日方能再次赔礼道歉"
     translated: "The Japanese can offer another apology"
@@ -58481,12 +58309,6 @@
   splits:
   - text: "这"
     translated: "This"
-    qcReviewedText: "This {0} Is {1} Practice {2} This supreme sacred land requires only the payment of maintenance and repair fees to cultivate here.\nYoung Hero, you currently {2} For {3}, Training requires {4} Peaceful Day {5} Silver coins {6}"
-    qcTranslated: "This {0} is the supreme land for {1} to practice {2}. Simply pay the maintenance fee to cultivate here.\\nYoung Hero, your current {2} is {3}. Cultivation requires {4} days and {5} silver taels.{6}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "乃"
     translated: "Is"
@@ -58905,12 +58727,6 @@
   splits:
   - text: "这"
     translated: "This"
-    qcReviewedText: "This {1}, Have to be {0} Neither nor"
-    qcTranslated: "This {1} is worth exactly {0} liang, no more, no less."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "，非得值"
     translated: ", Have to be"
@@ -59070,12 +58886,6 @@
   splits:
   - text: "这个月已经坐诊"
     translated: "This month I have already been in practice."
-    qcReviewedText: "This month I have already been in practice.{0} Day after day, you should still hone your medical skills to avoid endangering lives.\n(Current medical skill {1} Point can see patients no more than once a month.{2} Next)"
-    qcTranslated: "I have already been in practice for {0} days this month. I should continue to hone my medical skills to avoid endangering lives.\\n(Current medical skill: {1} points. You can see patients at most {2} times per month.)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "日，还是应当再去多加磨炼医术，免得误人性命。"
     translated: "Day after day, you should still hone your medical skills to avoid endangering lives."
@@ -59148,12 +58958,6 @@
   splits:
   - text: "这个月已让拍卖大会重新进货"
     translated: "This month, the auction gala has restocked"
-    qcReviewedText: "This month, the auction gala has restocked {0} Next,\nIt probably won't be worth the effort to look for anything good anymore."
-    qcTranslated: "This month, the auction gala has restocked {0} times,\\nIt's probably not worth any more effort to find anything good."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "次，"
     translated: "Next,"
@@ -59571,12 +59375,6 @@
   splits:
   - text: "这宝箱上有一个颇为坚固的铁锁，可以用这迷宫内找到的钥匙打开，"
     translated: "This treasure box has a rather sturdy iron lock that can be opened with a key found within this maze."
-    qcReviewedText: "This treasure box has a rather sturdy iron lock that can be opened with a key found within this maze.\nIf all else fails, you can break it open with brute force, but it will require extra time and effort.\n(Violence will exhaust them {0} Build endurance)"
-    qcTranslated: "This treasure box has a rather sturdy iron lock that can be opened with a key found within this maze.\\nIf all else fails, you can break it open with brute force, but it will require extra time and effort.\\n(Violence will exhaust {0} Stamina)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "实在不行也能用蛮力砸开，就是得耗上额外的时间与精力。"
     translated: "If all else fails, you can break it open with brute force, but it will require extra time and effort."
@@ -60031,12 +59829,6 @@
   splits:
   - text: "这莫高窟虽地处幽僻，却藏有经书典籍无数。"
     translated: "Though this Mogao Caves are secluded, they house countless scriptures and classics."
-    qcReviewedText: "Though this Mogao Caves are secluded, they house countless scriptures and classics.\nThe cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent.\nWith your current talent, young hero, closing yourself off for fifteen days here will require you to consume {0} Silver coins are expected to yield {1} Select talents"
-    qcTranslated: "Though this Mogao Caves are secluded, they house countless scriptures and classics.\\nThe cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent.\\nWith your current talent, young hero, closing yourself off for fifteen days here will require you to consume {0} taels of silver, and is expected to yield {1} points of talent."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "悬崖壁上的石窟亦是潜心闭关，修炼天赋的不二之选。"
     translated: "The cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent."
@@ -61160,12 +60952,6 @@
   splits:
   - text: "那群杀手被你打的七零八落，四散而逃。"
     translated: "That group of assassins were scattered and ran in all directions after you beat them up."
-    qcReviewedText: "That group of assassins were scattered and ran in all directions after you beat them up.\nYou seized the down payment for the assassin from the scattered belongings on the ground.{0} Silver coins"
-    qcTranslated: "That group of assassins were scattered and fled in all directions after you beat them up.\\nYou recovered {0} taels of silver, the down payment paid to the assassins, from the scattered belongings on the ground."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "你从地上散落的行囊中，收缴了付给杀手作为订金的"
     translated: "You seized the down payment for the assassin from the scattered belongings on the ground."
@@ -61252,12 +61038,6 @@
   splits:
   - text: "邪道"
     translated: "Necromancer"
-    qcReviewedText: "Necromancer"
-    qcTranslated: "Evil Way"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
 - raw: "邪道头目"
   splits:
   - text: "邪道头目"
@@ -61571,12 +61351,6 @@
   splits:
   - text: "鉴于我现在的"
     translated: "Given my current situation,"
-    qcReviewedText: "Given my current situation,{4} Status\n{0} Willing to have the highest level as {3} Sell me the items in your inventory"
-    qcTranslated: "Given my current {4} status, {0} are willing to sell me inventory items of up to level {3}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "地位，"
     translated: "Status"
@@ -61744,12 +61518,6 @@
   splits:
   - text: "铁掌恶徒丙"
     translated: "Evil Palm Bandit C Bing"
-    qcReviewedText: "Evil Palm Bandit C Bing"
-    qcTranslated: "Evil Palm Bandit C"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
 - raw: "铁掌恶徒乙"
   splits:
   - text: "铁掌恶徒乙"
@@ -61886,12 +61654,6 @@
   splits:
   - text: "铸剑精锐"
     translated: "Sharp Sword Master"
-    qcReviewedText: "Sharp Sword Master"
-    qcTranslated: "Sword‑Forging Elite"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
 - raw: "铸造"
   splits:
   - text: "铸造"
@@ -61936,12 +61698,6 @@
   splits:
   - text: "错金博山炉"
     translated: "Electroformed Incense Burner"
-    qcReviewedText: "Electroformed Incense Burner"
-    qcTranslated: "Gold‑inlaid Boshan Incense Burner"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
 - raw: "锦缎"
   splits:
   - text: "锦缎"
@@ -62425,12 +62181,6 @@
   splits:
   - text: "闻惊鸿"
     translated: "Hear Feng Hong"
-    qcReviewedText: "Hear Feng Hong"
-    qcTranslated: "Startled by the Unexpected"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: UntranslatedPinyin
 - raw: "闻着酒香一路而来，没想到是#SourceInteractName#你在举办宴会啊！\n也罢也罢，既来之则安之，我找个位置去也。"
   splits:
   - text: "闻着酒香一路而来，没想到是#SourceInteractName#你在举办宴会啊！"
@@ -62773,12 +62523,6 @@
   splits:
   - text: "阎罗"
     translated: "Judge Gong"
-    qcReviewedText: "Judge Gong"
-    qcTranslated: "Yama"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DomainTerm
 - raw: "阎罗后备"
   splits:
   - text: "阎罗后备"
@@ -62995,12 +62739,6 @@
   splits:
   - text: "附庸藏经阁"
     translated: "Appendage to the Scripture Pavilion"
-    qcReviewedText: "Appendage to the Scripture Pavilion"
-    qcTranslated: "Scripture Pavilion Annex"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
 - raw: "附庸门派"
   splits:
   - text: "附庸门派"
@@ -63056,12 +62794,6 @@
   splits:
   - text: "降低"
     translated: "Reduce"
-    qcReviewedText: "Reduce {0} Loyalty {1} Click"
-    qcTranslated: "Reduce {0} Loyalty by {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "忠诚"
     translated: "Loyalty"
@@ -63074,12 +62806,6 @@
   splits:
   - text: "降低"
     translated: "Reduce"
-    qcReviewedText: "Reduce {0} Of {1} {2} Click"
-    qcTranslated: "Reduce {0}'s {1} by {2}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "的"
     translated: "Of"
@@ -63092,12 +62818,6 @@
   splits:
   - text: "降低与"
     translated: "Reduce contact with"
-    qcReviewedText: "Reduce contact with {0} Relationship {1} Click"
-    qcTranslated: "Reduce relationship with {0} by {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "的关系"
     translated: "Relationship"
@@ -63154,12 +62874,6 @@
   splits:
   - text: "限时"
     translated: "Limited Time"
-    qcReviewedText: "Limited Time {0} Sky"
-    qcTranslated: "Limited Time {0} Days"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "天"
     translated: "Sky"
@@ -63243,12 +62957,6 @@
   splits:
   - text: "随机打通下"
     translated: "Randomly clear it through"
-    qcReviewedText: "Randomly clear it through {0} An acupoint</color>"
-    qcTranslated: "Randomly connect {0} acupoints</color>"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "个穴位"
     translated: "An acupoint"
@@ -63258,12 +62966,6 @@
   splits:
   - text: "随机揭示"
     translated: "Random Revelation"
-    qcReviewedText: "Random Revelation {0} A point</color>"
-    qcTranslated: "Randomly Reveal {0} Points</color>"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "个点"
     translated: "A point"
@@ -63373,12 +63075,6 @@
   splits:
   - text: "难得#PlayerName#有此雅兴，那我奉陪便是！"
     translated: "Hard to find #PlayerName# with this interest, so I'll join in!"
-    qcReviewedText: "Hard to find #PlayerName# with this interest, so I'll join in!"
-    qcTranslated: "It's rare to see #PlayerName# in such a refined mood, so I'll gladly join you!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
 - raw: "难得#SourceInteractName#有此雅兴，\n你我今天便一道登高望远，共赏美景好了。"
   splits:
   - text: "难得#SourceInteractName#有此雅兴，"
@@ -63529,12 +63225,6 @@
   splits:
   - text: "零一二三四五六七八九十"
     translated: "Ling er si wu liu qii ba jiu"
-    qcReviewedText: "Ling er si wu liu qii ba jiu"
-    qcTranslated: "0 1 2 3 4 5 6 7 8 9"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: UntranslatedPinyin
 - raw: "雷殷殷"
   splits:
   - text: "雷殷殷"
@@ -63715,12 +63405,6 @@
   splits:
   - text: "需要消耗"
     translated: "Requires consumption"
-    qcReviewedText: "Requires consumption {0} Click to reduce Sect prestige; only then can you expel #$TargetInteractName#."
-    qcTranslated: "Requires {0} Sect prestige to expel #$TargetInteractName#"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "点门派威望，方能将#$TargetInteractName#逐出门派。"
     translated: "Click to reduce Sect prestige; only then can you expel #$TargetInteractName#."
@@ -63772,12 +63456,6 @@
   splits:
   - text: "霸业"
     translated: "Prosperity"
-    qcReviewedText: "Prosperity"
-    qcTranslated: "Hegemony"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DomainTerm
 - raw: "霸刀门试刀台可提升潜力"
   splits:
   - text: "霸刀门试刀台可提升潜力"
@@ -63853,12 +63531,6 @@
   splits:
   - text: "青铜爵"
     translated: "Bronze Zhi"
-    qcReviewedText: "Bronze Zhi"
-    qcTranslated: "Bronze Jue"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: DomainTerm
 - raw: "青铜编钟"
   splits:
   - text: "青铜编钟"
@@ -64294,12 +63966,6 @@
   splits:
   - text: "飞龙弟子"
     translated: "Dragonfly Disciple"
-    qcReviewedText: "Dragonfly Disciple"
-    qcTranslated: "Dragon Fly Disciple"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
 - raw: "飞龙援军"
   splits:
   - text: "飞龙援军"
@@ -64349,12 +64015,6 @@
   splits:
   - text: "食窦"
     translated: "Stomachache"
-    qcReviewedText: "Stomachache"
-    qcTranslated: "Shisou"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DomainTerm
 - raw: "饕餮纹鼎"
   splits:
   - text: "饕餮纹鼎"
@@ -64387,12 +64047,6 @@
   splits:
   - text: "饶、饶命啊！"
     translated: "Rao, spare me!"
-    qcReviewedText: "Rao, spare me!"
-    qcTranslated: "Ra‑Rao, spare me!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedStutter
 - raw: "首先，来看看上个月各位的功绩情况吧！"
   splits:
   - text: "首先，来看看上个月各位的功绩情况吧！"
@@ -64719,12 +64373,6 @@
   splits:
   - text: "鹿死谁手犹未可知"
     translated: "The hand of the stag remains uncertain"
-    qcReviewedText: "The hand of the stag remains uncertain"
-    qcTranslated: "It remains to be seen who will get the final say"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: LostIdiom
 - raw: "黄口小子，今日难得你我有缘，\n我这有件奇珍至宝，世间罕见，就破例卖给你好了。"
   splits:
   - text: "黄口小子，今日难得你我有缘，"
@@ -64880,12 +64528,6 @@
   splits:
   - text: "鼎盛"
     translated: "Prime Zukunft"
-    qcReviewedText: "Prime Zukunft"
-    qcTranslated: "Zenith"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DomainTerm
 - raw: "鼻"
   splits:
   - text: "鼻"
@@ -65202,12 +64844,6 @@
   splits:
   - text: "（满意）食不厌精，烩不厌细，"
     translated: "Satisfy with food that is not overly refined, cooked with meticulous care."
-    qcReviewedText: "Satisfy with food that is not overly refined, cooked with meticulous care.\nThanks to #SourceInteractName#'s generosity and hospitality, everyone here is in high spirits and having a great time."
-    qcTranslated: "(Satisfied) Food should be as refined as possible, and cooking as meticulous as possible.\\nMany thanks for your generosity and for being such a gracious host, #SourceInteractName#. You have truly delighted the entire company and had all our guests in high spirits."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "多谢#SourceInteractName#慷慨大方，尽地主之谊，方才使得举座皆欢，宾朋尽乐。"
     translated: "Thanks to #SourceInteractName#'s generosity and hospitality, everyone here is in high spirits and having a great time."

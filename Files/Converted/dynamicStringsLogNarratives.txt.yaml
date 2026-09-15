@@ -402,12 +402,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Practiced martial arts {2}。"
-    qcTranslated: "{0} practiced {2} in {1}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "修习了武功"
     translated: "Practiced martial arts"
@@ -739,12 +733,6 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} While wandering around, I unexpectedly obtained an item.{2}。"
-    qcTranslated: "{0} was wandering around in {1} when they unexpectedly obtained a {2}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "闲逛之时，意外获取了一件"
     translated: "While wandering around, I unexpectedly obtained an item."

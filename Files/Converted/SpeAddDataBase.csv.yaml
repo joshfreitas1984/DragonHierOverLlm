@@ -378,7 +378,7 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
-    qcDefectCategory: DomainTerm
+    qcDefectCategory: LostIdiom
   - split: 10
     text: "提升拳掌伤害"
     translated: "Increase fist and palm attack damage"
@@ -461,11 +461,9 @@
     text: "断枪"
     translated: "Broken Spear"
     qcReviewedText: "Broken Spear"
-    qcTranslated: "Broken Halberd"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - split: 10
     text: "提升长兵伤害"
     translated: "Increase long weapon damage"
@@ -2297,7 +2295,7 @@
     qcTranslated: "Immune to damage until next hit"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "96,眩晕,0.01,万钧,无,1,0,1,1,0,跳过回合,敌方,0,1,1,1,0"
   splits:

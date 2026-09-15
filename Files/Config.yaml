@@ -68,6 +68,11 @@ qualityReview:
   # of fixing a real defect, a different risk than "wastes review time". GarbledNumber/DomainTerm/
   # UntranslatedPinyin also left off - high precision, worth the human review queue.
   autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent]
+  # Second, narrower LLM call for any column flagged with a named DEFECT: confirms/rejects (raising
+  # the score back up on a false positive)/recategorizes the claim, and only its own scoped
+  # correction is ever accepted - never call 1's freehand rewrite. See
+  # Tests/docs/qc-qualityscore-noise-investigation.md's "Two-stage DEFECT verification" section.
+  twoStageVerificationEnabled: true
 #extraStringTokenReplacers:
 #  - '#PlayerName#'
 splitCharactersList:

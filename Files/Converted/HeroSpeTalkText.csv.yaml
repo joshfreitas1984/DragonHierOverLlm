@@ -754,11 +754,11 @@
     text: "呵呵呵呵，#PlayerName#今日前来拜访，老朽恐怕早已猜到了。"
     translated: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
     qcReviewedText: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
-    qcTranslated: "Heh heh heh, #PlayerName#'s visit today... I suspect I would have guessed it long ago."
+    qcTranslated: "Heh heh, #PlayerName#, I suspect I had already guessed you would come to visit today."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 20
+    qcDefectCategory: OtherNamedDefect
   - split: 8
     text: "这世间有比山上野果更好吃的东西？我可不信！"
     translated: "Is there anything better to eat than wild berries on the mountain? I don't believe it!"
@@ -827,11 +827,9 @@
     text: "古人医在心，心正药自真......今人医在手，手滥药不神。"
     translated: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders."
     qcReviewedText: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders.\\nI wish for the Heavens Furnace to grant me the body of Bianque... May there be fewer poor patients in this world."
-    qcTranslated: "The ancients practiced medicine with their hearts; when the heart is upright, the medicine is naturally true... The moderns practice medicine with their hands; when the hands are reckless, the medicine loses its efficacy.\\nI wish to be the furnace of heaven and earth, containing many bodies of Bianque... Thus, within the Four Quarters, few would hear of the poor and the sick."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
   - split: 1
     subIndex: 1
     text: "我愿天地炉，多衔扁鹊身......自然六合内，少闻贫病人。"
@@ -939,11 +937,11 @@
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
     qcReviewedText: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
-    qcTranslated: "In war, the way is deception.\\nThus, though capable, appear incapable; though prepared, appear unprepared; though near, appear far; though far, appear near.\\nAttack where they are unprepared, appear where you are not expected to. This is the path to victory in warfare, and it must not"
+    qcTranslated: "War is the art of deception.\\nTherefore, when able to attack, we must seem unable; when using our forces, we must seem inactive; when close, we must appear to be far away; when far away, we must appear to be close.\\nAttack them where they are unprepared, come upon them at unexpected points. These are the principles of victory in war, which cannot be communicated beforehand."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: LostIdiom
   - split: 10
     subIndex: 1
     text: "故能而示之不能，用而示之不用，近而示之远，远而示之近。"
@@ -1093,10 +1091,10 @@
     text: "窃钩者诛，窃国者侯。"
     translated: "He who steals a hook is put to death, he who steals a country becomes a lord."
     qcReviewedText: "He who steals a hook is put to death, he who steals a country becomes a lord.\\nWhat righteousness and morality, merely bother common people unnecessarily."
-    qcTranslated: "He who steals a hook is executed, he who steals a state is ennobled.\\nWhat is this talk of benevolence and righteousness? It is nothing but the self‑inflicted anxiety of the mediocre."
+    qcTranslated: "He who steals a hook is put to death, he who steals a country becomes a lord.\\nWhat righteousness and morality? It is merely the self‑aggrandizement of the mediocre."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
   - split: 10
     subIndex: 1
@@ -1156,7 +1154,7 @@
     text: "......我久居深山幽谷之中......像#PlayerName#这样能说上两句话之人......亦是不多......"
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
     qcReviewedText: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
-    qcTranslated: "......I have dwelled in the deep mountains and secluded valleys for so long......few people like #PlayerName# with whom one can exchange even a few words......"
+    qcTranslated: "......I have dwelled in the deep mountains and secluded valleys for so long......There are few people like #PlayerName# with whom I can exchange a few words......"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -1165,10 +1163,10 @@
     text: "天下之间，太多蝇营狗苟之辈。"
     translated: "There are too many xingyinggouguo beggars in this world."
     qcReviewedText: "There are too many xingyinggouguo beggars in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
-    qcTranslated: "In this world, there are far too many petty, scheming upstarts.\\nIn a lifetime, how many heroes and paragons can one truly find who share a kindred spirit?"
+    qcTranslated: "In this world, there are too many petty, scheming scoundrels.\\nIn a lifetime, how many heroes can one meet who share a kindred spirit?"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: UntranslatedPinyin
   - split: 2
     subIndex: 1
@@ -1481,12 +1479,11 @@
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
     qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
-    qcStatus: FailedValidation
+    qcTranslated: "Don't look at those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no small amount of killing and arson behind closed doors, much worse than this girl.\\n.... #PlayerName#, you couldn't be one of them, right?"
+    qcStatus: Corrected
     flaggedForQcReview: true
-    qcRejectedCorrection: "Don't look at those Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nBehind closed doors"
-    qcFailureReason: "#PlayerName#"
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
+    qcQualityScore: 20
+    qcDefectCategory: DroppedContent
   - split: 3
     subIndex: 1
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"

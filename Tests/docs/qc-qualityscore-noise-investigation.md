@@ -1,14 +1,19 @@
 # QC `QcQualityScore` noise investigation and current triage state
 
-> **Status (2026-09): option 2 (stratify by DEFECT category) is implemented and its policy is set.**
-> DEFECT parsing/persistence, the flagged-subset backfill, and per-category triage
+> **Status (2026-09): option 2 (stratify by DEFECT category) is implemented and its policy is set;**
+> **a two-stage DEFECT verification call is now also implemented (opt-in).** DEFECT
+> parsing/persistence, the flagged-subset backfill, and per-category triage
 > (`QcTriageByDefectCategory.yaml`) are all done — see "Per-category hand-validation findings and
 > policy (implemented)" near the end of this doc for what was found and what `Config.yaml`'s
 > `qualityReview.autoAcceptDefectCategories` is currently set to. The mechanism lives in the
 > **sibling repo** `FanslationStudio.LlmKit` — see
 > `../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md`'s "DEFECT categories and
 > per-category policy" section for the current-state technical reference; this document remains the
-> investigation history and the record of *why* each category landed where it did.
+> investigation history and the record of *why* each category landed where it did. See "Two-stage
+> DEFECT verification (root-cause fix, implemented)" near the end of this doc for the newest change:
+> a second, narrower LLM call that confirms/rejects/recategorizes call 1's claimed DEFECT instead of
+> trusting its single-shot freehand correction — the fix for the miscategorization/bad-correction
+> pattern the `DroppedStutter` hand-validation below surfaced.
 
 ## Summary
 
@@ -167,20 +172,85 @@ Counts below are out of `TotalFlagged: 6620` at the time of this pass (`QcTriage
 | `DomainTerm` | 386 | High precision — real proper-noun/terminology fixes (五毒弟子 mistranslated as nonsense "Poisson Disciple" → correctly fixed; consistent character-name garbling across samples, e.g. Zhao Yinzong/Yanxi/Dianjian). | **Review queue** |
 | `UntranslatedPinyin` | 206 | Near-100% precision — reviewed text is routinely literal raw pinyin ("xiang dang nian", "daoshan youpo", "wuqu mingge"), correction properly translates it. | **Review queue** |
 | `None` | 2 | Negligible, not worth a policy. | N/A |
+| `DroppedStutter` | 137 | Not part of the original 8-category sample (added to `QcDefectCategory` after the main pass, small enough to hand-check in full rather than sample). All 137 lines (136 `PlotData.csv.yaml`, 1 `HeroSpeTalkText.csv.yaml`) hand-validated directly. See below. | **Review queue** |
+
+`DroppedStutter` full-population hand-validation (not a sample — all 137 lines read): roughly 65%
+are genuine catches — the pre-QC translation dropped a SOURCE stammer (`师、师、师兄` → "senior
+brother?!" with no stutter at all) and the QC correction properly restored it. ~20% are stylistic
+reformatting rather than real defects — the pre-QC text already rendered the stammer as a full
+separately-spoken repeat ("You, you, you......") and QC just reformatted it to a hyphenated partial
+("Y-y-you"); both are valid stutter conventions, so this is the same "more fluent rewrite ≠ defect"
+pattern already found for `HardToParseSeam`. The remainder split between lines miscategorized (the
+real defect was a place name, a garbled number, or an idiom — unrelated to stuttering) and, more
+seriously, **8 lines where QC's proposed correction was itself wrong and made the translation worse**
+(inverting `撤撤撤` "retreat!" into "Charge!", replacing a correct "T-T-Taoist" with the nonsensical
+"N-N-Nose", turning a translated idiom into raw pinyin, leaving `大当家` untranslated as "Da-Da
+Dangjia", and a malformed `"Ye-,"` typo). Those 8 lines have been corrected directly in
+`Files/Converted/PlotData.csv.yaml`: 5 reverted to `qcStatus: Passed` (no defect existed, QC's
+"fix" was net-negative and discarded) and 3 kept as `qcStatus: Corrected` with a properly-fixed
+`qcTranslated` (one recategorized `DroppedStutter` → `LostIdiom`, since the idiom mistranslation was
+the dominant defect, not the missing stutter). Given ~65% genuine precision — well above the
+near-zero categories that got blanket auto-accepted — `DroppedStutter` stays in the human-review
+queue rather than joining `autoAcceptDefectCategories`; 137 lines is small enough that a full
+hand-review (as done here) is more reliable than sampling.
 
 **Implemented policy** (`Files/Config.yaml`'s `qualityReview.autoAcceptDefectCategories`):
 `[HardToParseSeam, OtherNamedDefect, DroppedContent]` — auto-accepted categories total 3,423 lines
 (52% of the flagged set) cleared without individual review; `GarbledNumber`/`DomainTerm`/
-`UntranslatedPinyin` (988 lines, 15%) stay in the human-review queue where the flags are worth the
-time; `LostIdiom` (1,069) is intentionally left undecided; `Unknown` (1,138) needs its own re-run via
-`Tests/QualityControlWorkflowTests.cs`'s `"8. Reset Non-Auto-Accepted Quality Review State"` +
-`"2. RunQualityReviewPass"` before it can be categorized at all. The mechanism (`QualityReviewConfig
-.AutoAcceptDefectCategories`, `QualityReviewHelpers.PassesQcScoreGate`, `QualityReviewWorkflow
-.ResetNonAutoAcceptedQcState`) lives in `FanslationStudio.LlmKit` — see its
-`docs/quality-review-pass-architecture.md`'s "DEFECT categories and per-category policy" section.
+`UntranslatedPinyin`/`DroppedStutter` (1,125 lines, ~17%) stay in the human-review queue where the
+flags are worth the time; `LostIdiom` (1,069) is intentionally left undecided; `Unknown` (1,138)
+needs its own re-run via `Tests/QualityControlWorkflowTests.cs`'s `"8. Reset Non-Auto-Accepted
+Quality Review State"` + `"2. RunQualityReviewPass"` before it can be categorized at all. The
+mechanism (`QualityReviewConfig.AutoAcceptDefectCategories`, `QualityReviewHelpers
+.PassesQcScoreGate`, `QualityReviewWorkflow.ResetNonAutoAcceptedQcState`) lives in
+`FanslationStudio.LlmKit` — see its `docs/quality-review-pass-architecture.md`'s "DEFECT categories
+and per-category policy" section.
 
 **Re-running this process**: if `LostIdiom` (or any category) gets re-hand-validated later — a
 prompt tweak, a larger sample, or just revisiting the judgment call — update
 `autoAcceptDefectCategories` in `Config.yaml`, then run `"8. Reset Non-Auto-Accepted Quality Review
 State"` to pull the affected rows back out of their current bucket for a fresh look on the next QC
 pass.
+
+## Two-stage DEFECT verification (root-cause fix, implemented)
+
+The `DroppedStutter` full-population hand-validation above surfaced a failure mode none of the
+earlier prompt fixes addressed: a single QC call is asked to detect a defect, name its category,
+judge severity, and freehand-rewrite a correction all in one shot. That's too much for one call to
+do reliably. Two distinct problems came out of the same root cause:
+
+1. **Miscategorization** — the model reached for `DROPPED_STUTTER` just because SOURCE happened to
+   contain a stammer, even when TRANSLATION already conveyed it validly (a false positive) or the
+   real defect on the line was something else entirely (a wrong place name, a garbled number, a
+   mistranslated idiom) — see the "~8 lines miscategorized outright" finding above.
+2. **Bad corrections** — worse, when a genuine defect *was* present, the freehand rewrite meant to
+   fix it sometimes broke something else in the same line: a correct "T-T-Taoist" replaced with the
+   nonsensical "N-N-Nose", `撤撤撤` ("retreat!") inverted into "Charge!", a translated idiom turned
+   into raw pinyin, `大当家` left untranslated as "Da-Da Dangjia" — see the "8 lines actively bad
+   fixes" finding above, all found and corrected by hand in `PlotData.csv.yaml` this pass.
+
+Prompt wording alone can't fully close this — the model conflates "detect" and "freely rewrite"
+because they're asked in the same breath. The fix is architectural, not another prompt tweak: split
+DEFECT detection from correction into two calls, the same pattern the main translation pipeline
+already uses for its own rule-violation retries (`TranslationService.CalulateCorrectionPrompt` —
+translate, validate, and only on failure issue a second, narrowly-scoped correction call rather than
+trusting the first attempt to also self-diagnose and fix).
+
+**Implemented**: `qualityReview.twoStageVerificationEnabled` (`Config.yaml`, off by default). When
+on, any column the main QC call flags with a named DEFECT gets a second, narrower call
+(`QualityReviewWorkflow.GetVerificationVerdictAsync` in `FanslationStudio.LlmKit`) shown SOURCE, the
+*original* TRANSLATION, and the single claimed DEFECT category — not asked to rediscover a defect
+from scratch, only to judge that one specific claim — which responds `CONFIRMED` (keep the category,
+use this call's SCORE/CORRECTED instead), `FALSE_POSITIVE` (clear the defect and raise the score —
+the automated version of the manual per-category hand-validation this doc's "stratify by DEFECT
+category" section describes), or a different DEFECT token (recategorize). A correction is only ever
+accepted from this second, narrowly-scoped call, never from the first call's freehand rewrite — this
+is what should prevent the "Cui Cui Cui" → "Charge!" class of bad fix going forward. Costs one extra
+LLM call, but only for the ~10-15% of lines already flagged, not the whole corpus. Full technical
+reference: `../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md`'s "Two-stage
+DEFECT verification" section.
+
+Not yet done: turning this on for a full corpus run and re-triaging `DroppedStutter` (and the other
+review-queue categories) against its output to see how much it actually moved the false-positive/
+bad-correction rate in practice — this section records the design and implementation, not a
+post-rollout measurement.

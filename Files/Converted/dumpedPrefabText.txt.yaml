@@ -1121,11 +1121,11 @@
   - text: "自定义选项会在"
     translated: "Custom options will be available in"
     qcReviewedText: "♦Custom options will be available in <b>Based on the selected difficulty </b>Have an impact\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase Skill Cap by +1.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
-    qcTranslated: "♦Custom options will have an effect <b>based on the selected difficulty</b>\\n♦Achievements can only be obtained when the overall level is set to Balanced, Hard, Very Hard, or Extreme\\n♦For every 10 difficulty points, the +1. talent cap increases\\n♦It is recommended to understand the game mechanics"
+    qcTranslated: "♦Custom options will have an effect <b>based on the selected difficulty</b>\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase Skill Cap by +1.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 20
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "所选难度基础上"
     translated: "Based on the selected difficulty"
@@ -1157,10 +1157,10 @@
   - text: "藏经阁秘籍可提升门派所有弟子修炼该武学的速度。"
     translated: "The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art. The Scripture Pavilion's Secret Manual can increase the cultivation speed of all sect disciples for that martial art."
     qcReviewedText: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art. The Scripture Pavilion's Secret Manual can increase the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is ineffective on players)"
-    qcTranslated: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is"
+    qcTranslated: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is ineffective on players)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "秘籍越稀有加成越高。"
@@ -1457,10 +1457,10 @@
   - text: "三"
     translated: "Three"
     qcReviewedText: "Three \\nWait \\nPrize"
-    qcTranslated: "Third \\nClass \\nPrize"
+    qcTranslated: "Third \\nPlace \\nPrize"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "等"
@@ -1955,10 +1955,10 @@
   - text: "仙霞派派正式正式"
     translated: "Xianxia Sect officially"
     qcReviewedText: "Xianxia Sect officially"
-    qcTranslated: "Xi‑Xianxia Sect officially"
+    qcTranslated: "Xianxia Sect officially, officially"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: DroppedStutter
 - raw: "以此换取支持，稳固皇位。"
   splits:
@@ -2432,7 +2432,7 @@
   - text: "入群会友"
     translated: "Joining friends in the group"
     qcReviewedText: "Joining friends in the group"
-    qcTranslated: "Join the Group to Meet Friends"
+    qcTranslated: "Make friends in the group"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -3498,11 +3498,9 @@
   - text: "博引特殊加成"
     translated: "Borrowed Unique Bonus"
     qcReviewedText: "Borrowed Unique Bonus"
-    qcTranslated: "Extensive Citation Special Bonus"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 90
+    qcDefectCategory: None
 - raw: "占领区域"
   splits:
   - text: "占领区域"
@@ -4746,14 +4744,14 @@
     qcTranslated: "Cloth armor"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
 - raw: "布鞋"
   splits:
   - text: "布鞋"
     translated: "Sneakers"
     qcReviewedText: "Sneakers"
-    qcTranslated: "Cloth Shoes"
+    qcTranslated: "Cloth shoes"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -4795,11 +4793,9 @@
   - text: "建筑三级解锁"
     translated: "Unlock level 3 construction"
     qcReviewedText: "Unlock level 3 construction"
-    qcTranslated: "Unlock Level 3 Construction"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
 - raw: "建筑九级解锁"
   splits:
   - text: "建筑九级解锁"
@@ -4808,7 +4804,7 @@
     qcTranslated: "Level 9 building unlocked"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
 - raw: "开启时每次闪避消耗5体力。\\n体力小于5点时无法闪避。\\n对玩家和所有角色同时生效。"
   splits:
@@ -5114,11 +5110,9 @@
   - text: "快速路"
     translated: "Expressway"
     qcReviewedText: "Expressway \\nMoving up is equivalent to sprinting and accelerating."
-    qcTranslated: "Expressway \\nMoving on top of it is equivalent to sprinting"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "在上面移动相当于冲刺加速"
     translated: "Moving up is equivalent to sprinting and accelerating."
@@ -5657,7 +5651,7 @@
   - text: "护"
     translated: "Protect"
     qcReviewedText: "Protect \\nJia"
-    qcTranslated: "Shield\\nArmor"
+    qcTranslated: "Protect \\nArmor"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
@@ -5675,7 +5669,7 @@
     qcTranslated: "Armor\\n(Consumable)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "（消耗）"
@@ -5748,11 +5742,9 @@
   - text: "拳掌"
     translated: "Fists and palms"
     qcReviewedText: "Fists and palms+5 \\nForest Plant+5"
-    qcTranslated: "Fists and Palms +5 \\n Wood & Vegetation +5"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 95
+    qcDefectCategory: None
   - subIndex: 1
     text: "木植"
     translated: "Forest Plant"
@@ -5763,11 +5755,9 @@
   - text: "拳掌兵器"
     translated: "Punching and palm weapons"
     qcReviewedText: "Punching and palm weapons\\n(consumption)"
-    qcTranslated: "Fists, Palms & Weapons\\n(Consumption)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - subIndex: 1
     text: "（消耗）"
     translated: "(consumption)"
@@ -6615,10 +6605,10 @@
   - text: "检测到您为未成年人，敬请注意"
     translated: "Detection of minor status, please take notice"
     qcReviewedText: "Detection of minor status, please take notice：\\n\\nThis game is only available for minors to play for up to 1 hours of online gaming from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It must not be provided to minors in any other form or at any other time."
-    qcTranslated: "It has been detected that you are a minor, please note:\\n\\nThis game may only provide 21 hours of online gaming services to minors daily from 1 to 20 on Fridays, Saturdays, Sundays, and statutory holidays. Online gaming services must not be provided to minors in any other form or at any other time."
+    qcTranslated: "Detection of minor status, please take notice:\\n\\nThis game is only available for minors to play from 1 to 20 on Fridays, Saturdays, Sundays, and public holidays, providing 21 hours of online gaming service. It must not be provided to minors in any other form or at any other time."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
@@ -6709,10 +6699,10 @@
   - text: "武"
     translated: "Martial"
     qcReviewedText: "Martial \\nVessel"
-    qcTranslated: "Wea\\npon"
+    qcTranslated: "Martial \\nWeapon"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "器"
@@ -6962,10 +6952,10 @@
   - text: "民心"
     translated: "Public sentiment"
     qcReviewedText: "Public sentiment\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦While high morale increases the number of commissions and lowers their difficulty, low morale decreases the number of commissions and raises their difficulty.\\n♦Affects the defense strength in sieges"
-    qcTranslated: "Public sentiment\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity +10%\\n  Greater than 80：Productivity +15%\\n  Greater than 90：Productivity +20%\\n♦High morale increases the number of commissions and lowers their difficulty; low morale decreases the number of commissions and raises their difficulty.\\n♦Affects the defense strength in sieges"
+    qcTranslated: "Public sentiment\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦While high morale increases the number of commissions and lowers their difficulty, low morale decreases the number of commissions and raises their difficulty.\\n♦Affects the defense strength in sieges"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "低于50"
@@ -7044,10 +7034,10 @@
   - text: "治安"
     translated: "Public safety"
     qcReviewedText: "Public safety\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦High stability increases the quantity of goods and lowers buying and selling prices; low stability decreases the quantity of goods and raises buying and selling prices.\\n♦Affects the number of defenders in a siege battle."
-    qcTranslated: "Public safety\\n♦Below 50: Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Above 70: Production efficiency +10%\\n  Above 80: Production efficiency +15%\\n  Above 90: Production efficiency +20%\\n♦High public safety increases the quantity of goods and lowers buying and selling prices; low public safety decreases the quantity of goods and raises buying and selling prices.\\n♦Affects the number of defenders in a siege battle."
+    qcTranslated: "Public safety\\n♦Lower than 50：Reduces production efficiency of all buildings by 1% for every 1 points lowered.\\n  Greater than 70：Productivity+10%\\n  Greater than 80：Productivity+15%\\n  Greater than 90：Productivity+20%\\n♦High stability increases the quantity of goods and lowers buying and selling prices; low stability decreases the quantity of goods and raises buying and selling prices.\\n♦Affects the number of defenders in a siege battle."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 20
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "低于50"
@@ -7769,11 +7759,11 @@
   - text: "百会"
     translated: "Meeting of the Hundred Sands"
     qcReviewedText: "Meeting of the Hundred Sands"
-    qcTranslated: "Bai Hui"
+    qcTranslated: "Baihui"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 20
+    qcDefectCategory: DomainTerm
 - raw: "监牢"
   splits:
   - text: "监牢"
@@ -7803,10 +7793,10 @@
   - text: "眼看日薄西山，朝廷只能将治下城镇分封给各大门派，"
     translated: "As the sun set, the court was forced to grant control of the towns under its jurisdiction to the major sects."
     qcReviewedText: "As the sun set, the court was forced to grant control of the towns under its jurisdiction to the major sects."
-    qcTranslated: "Seeing that power was on the wane, the court could only enfeoff the towns under its rule to the major sects."
+    qcTranslated: "As the empire's twilight approached, the court was forced to grant control of the towns under its jurisdiction to the major sects."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 35
     qcDefectCategory: LostIdiom
 - raw: "眼睛"
   splits:
@@ -8863,11 +8853,11 @@
   - text: "药引"
     translated: "Medicine guide"
     qcReviewedText: "Medicine guide \\nIngredients\\n(consumption)"
-    qcTranslated: "Medicinal Guide\\nIngredients\\n(Consumable)"
+    qcTranslated: "Medicine guide \\nIngredients\\n(consumable)"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DomainTerm
+    qcQualityScore: 30
+    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "食材"
     translated: "Ingredients"
@@ -9010,7 +9000,7 @@
   - text: "行侠四方"
     translated: "Wander as a wanderer across the four seas"
     qcReviewedText: "Wander as a wanderer across the four seas"
-    qcTranslated: "Ride for justice across the four seas"
+    qcTranslated: "Roam the four seas as a chivalrous hero"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -9041,11 +9031,11 @@
   - text: "袭击黄河帮"
     translated: "Attack the Yellow River Gang"
     qcReviewedText: "Attack the Yellow River Gang <color=#8C8C8C>Outer Disciple </color>East Gate: Delighted by Joy 1 Times"
-    qcTranslated: "Attack Yellow River Gang <color=#8C8C8C>Outer Disciple</color> Dongmen Jingle 1 Times"
+    qcTranslated: "Attack the Yellow River Gang <color=#8C8C8C>Outer Disciple </color>Dongmen Jing Le 1 Times"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: DomainTerm
+    qcQualityScore: 20
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "外门弟子"
     translated: "Outer Disciple"

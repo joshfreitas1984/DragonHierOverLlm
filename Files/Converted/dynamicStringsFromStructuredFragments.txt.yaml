@@ -350,12 +350,6 @@
   splits:
   - text: "中级嘉奖"
     translated: "Middle Award"
-    qcReviewedText: "Middle Award"
-    qcTranslated: "Meritorious Service"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
 - raw: "中额红包"
   splits:
   - text: "中额红包"
@@ -401,12 +395,6 @@
   splits:
   - text: "怪盗"
     translated: "Thief King"
-    qcReviewedText: "Thief King&Randomly"
-    qcTranslated: "Phantom Thief&Randomly"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "随机"
     translated: "Randomly"
@@ -455,12 +443,6 @@
   splits:
   - text: "恶霸头目"
     translated: "Bullseye Boss"
-    qcReviewedText: "Bullseye Boss&Randomly"
-    qcTranslated: "Bullies Leader&Random"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "随机"
     translated: "Randomly"
@@ -604,12 +586,6 @@
   splits:
   - text: "为其践行"
     translated: "To uphold it"
-    qcReviewedText: "To uphold it"
-    qcTranslated: "To see it off"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: LostIdiom
 - raw: "举手之劳"
   splits:
   - text: "举手之劳"
@@ -1077,12 +1053,6 @@
   splits:
   - text: "入队"
     translated: "Join the queue"
-    qcReviewedText: "Join the queue"
-    qcTranslated: "Join Party"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
 - raw: "♦邀请对方入队30天\n♦{0}{2}"
   splits:
   - text: "邀请对方入队30天"
@@ -1352,12 +1322,6 @@
   splits:
   - text: "千恩万谢"
     translated: "Thousand thanks"
-    qcReviewedText: "Thousand thanks"
-    qcTranslated: "A thousand thanks"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
 - raw: "单次指点"
   splits:
   - text: "单次指点"
@@ -1849,12 +1813,6 @@
   splits:
   - text: "学艺不精"
     translated: "Lackluster training"
-    qcReviewedText: "Lackluster training"
-    qcTranslated: "Poor skill"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
 - raw: "完全恢复"
   splits:
   - text: "完全恢复"
@@ -2723,12 +2681,6 @@
   splits:
   - text: "敬酒不吃吃罚酒"
     translated: "Decline the offer but accept the punishment"
-    qcReviewedText: "Decline the offer but accept the punishment"
-    qcTranslated: "Reject the gentle persuasion, only to accept the harsh punishment"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
 - raw: "斗胆向两位一齐讨教"
   splits:
   - text: "斗胆向两位一齐讨教"
@@ -2765,12 +2717,6 @@
   splits:
   - text: "断义"
     translated: "Cut Meaning"
-    qcReviewedText: "Cut Meaning"
-    qcTranslated: "Severing Loyalty"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
 - raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
   splits:
   - text: "与对方断绝结义关系"
@@ -3193,12 +3139,6 @@
   splits:
   - text: "满载而归"
     translated: "Come back with a full load"
-    qcReviewedText: "Come back with a full load"
-    qcTranslated: "Return home with a full load"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
 - raw: "照单全收"
   splits:
   - text: "照单全收"
@@ -3301,12 +3241,6 @@
   splits:
   - text: "狮子大开口"
     translated: "Open wide the lion's mouth"
-    qcReviewedText: "Open wide the lion's mouth"
-    qcTranslated: "Demanding a fortune"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
 - raw: "献上银两"
   splits:
   - text: "献上银两"
@@ -4189,12 +4123,6 @@
   splits:
   - text: "轻功赶上"
     translated: "Qinggong catches up"
-    qcReviewedText: "Qinggong catches up"
-    qcTranslated: "Lightness catches up"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: UntranslatedPinyin
 - raw: "轻功躲避"
   splits:
   - text: "轻功躲避"
@@ -4255,12 +4183,6 @@
   splits:
   - text: "消耗剩余指点次数"
     translated: "Consume remaining directional inputs"
-    qcReviewedText: "♦Consume remaining directional inputs\n♦When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
-    qcTranslated: "♦Consumes remaining guidance points\\n♦Automatically stops when the opponent's martial arts level is maxed out or exceeds yours"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "对方武学满级或超过你时自动停止"
     translated: "When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
