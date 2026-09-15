@@ -71,7 +71,7 @@
     text: "痛饮"
     translated: "Drunken revelry"
     qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
-    qcTranslated: "<b>Drunken Revelry</b>: Consume fine wine to gain the corresponding long-term buff. Drinking with others has no affection requirement; drinking consumes 20% of internal energy, and drinking increases affection by +20%.\\n<b>Bold Gambling</b>: Gamble at any time to gain extra affection; monthly gambling limit and bet amounts are doubled.\\n<b>Gold Spending</b>: Exchange Sect merit for high-quality treasures at the Treasury."
+    qcTranslated: "<b>Drunken Revelry</b>: Consume fine wine to gain the corresponding long‑term buff. Drinking with others has no affection requirement; drinking consumes 20% of internal energy, and drinking increases affection by +20%.\\n<b>Bold Gambling</b>: Gamble at any time to gain extra affection; monthly gambling limit and bet amounts are doubled.\\n<b>Gold Spending</b>: Exchange Sect merit for high‑quality treasures at the Treasury."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35
@@ -128,7 +128,7 @@
     text: "行医"
     translated: "Practice medicine"
     qcReviewedText: "<b>Practice medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>：Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are met.-50%。\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
-    qcTranslated: "<b>Practice Medicine</b>: No limits on affinity or frequency when healing others. Monthly clinic sessions are doubled. All healing actions increase affinity by +20% and grant additional reputation.\\n<b>Miracle Medicine</b>: Potion-making efficiency increased by +20%, and multiple medicinal additives can be used. All requirements for crafting enhanced elixirs are reduced by -50%.\\n<b>Spirit Grain</b>: In Wanhua Valley, sect contributions can be exchanged for high-quality medicinal additives."
+    qcTranslated: "<b>Practice Medicine</b>: No limits on affinity or frequency when healing others. Monthly clinic sessions are doubled. All healing actions increase affinity by +20% and grant additional reputation.\\n<b>Miracle Medicine</b>: Potion‑making efficiency increased by +20%, and multiple medicinal additives can be used. All requirements for crafting enhanced elixirs are reduced by ‑50%.\\n<b>Spirit Grain</b>: In Wanhua Valley, sect contributions can be exchanged for high‑quality medicinal additives."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 25
@@ -161,7 +161,7 @@
     text: "铁掌"
     translated: "Iron Palm"
     qcReviewedText: "<b>Iron Palm</b>：The conference focuses on palm and fist weapons, enhancing their power.\\n<b>Begging</b>：Consume prestige to beg for silver from others. Requesting items from others consumes goodwill.-40%。"
-    qcTranslated: "<b>Iron Palm</b>: Research fist, palm, and weapon techniques at the guild to enhance their power.\\n<b>Begging</b>: Consume reputation to beg for silver from others. Requesting items from others consumes -40% of favorability."
+    qcTranslated: "<b>Iron Palm</b>: Research fist, palm, and weapon techniques at the guild to enhance their power.\\n<b>Begging</b>: Consume reputation to beg for silver from others. Requesting items from others consumes ‑40% of favorability."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 25
@@ -276,7 +276,7 @@
     text: "炼蛊"
     translated: "Incubate poison insects"
     qcReviewedText: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
-    qcTranslated: "<b>Incubate Gusu</b>: Consume catalysts/ingredients in the Pool of Ten Thousand Poisons to obtain poisons, and fuse low-level poisons to obtain powerful high-level poisons.\\n<b>Poison Arts</b>: Multiple poisons can be selected for use. Equipped poison coating reduces the depletion rate by -25%."
+    qcTranslated: "<b>Incubate Gusu</b>: Consume catalysts/ingredients in the Pool of Ten Thousand Poisons to obtain poisons, and fuse low‑level poisons to obtain powerful high‑level poisons.\\n<b>Poison Arts</b>: Multiple poisons can be selected for use. Equipped poison coating reduces the depletion rate by ‑25%."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -330,7 +330,7 @@
     text: "博引"
     translated: "Wide‑ranging"
     qcReviewedText: "<b>Wide‑ranging</b>：Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial evidence</b>：Discuss the hand card limit +3, discuss obtaining bonus effects and additional affinity upon victory. The skill requirements for compiling the Secret Manual.-10%。"
-    qcTranslated: "<b>Broad References</b>: Collect secret manuals from other Sects and place them in the Star Pavilion to gain corresponding martial arts bonuses.\\n<b>Corroboration</b>: The hand card limit in Duels is +3. Winning a Duel grants enhanced effects and additional affinity. The skill requirement for compiling Secret Manuals is -10%"
+    qcTranslated: "<b>Broad References</b>: Collect secret manuals from other Sects and place them in the Star Pavilion to gain corresponding martial arts bonuses.\\n<b>Corroboration</b>: The hand card limit in Duels is +3. Winning a Duel grants enhanced effects and additional affinity. The skill requirement for compiling Secret Manuals is ‑10%"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 25
@@ -508,7 +508,7 @@
     text: "机关"
     translated: "Mechanism"
     qcReviewedText: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous studies</b>：All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures./Materials and treasure appraisal additional knowledge bonus"
-    qcTranslated: "<b>Mechanism</b>: Upgrade mechanism beasts by equipping and enhancing them to gain corresponding beast bonuses.\\n<b>Miscellaneous Studies</b>: All skill experience +20%, increased chance to obtain high-grade treasures/materials when collecting resources, and extra knowledge bonus for treasure appraisal."
+    qcTranslated: "<b>Mechanism</b>: Upgrade mechanism beasts by equipping and enhancing them to gain corresponding beast bonuses.\\n<b>Miscellaneous Studies</b>: All skill experience +20%, increased chance to obtain high‑grade treasures/materials when collecting resources, and extra knowledge bonus for treasure appraisal."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 35

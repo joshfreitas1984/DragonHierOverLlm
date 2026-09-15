@@ -3261,9 +3261,7 @@
 - raw: "飞毛腿"
   splits:
   - text: "飞毛腿"
-    translated: "Fast Foot"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Fleetfoot,飞毛腿,"
+    translated: "Fleetfoot"
 - raw: "灵巧1"
   splits:
   - text: "灵巧1"
@@ -3283,9 +3281,7 @@
 - raw: "轻身术"
   splits:
   - text: "轻身术"
-    translated: "Featherfall Technique"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lightness Technique,轻身术,"
+    translated: "Lightness Technique"
 - raw: "轻功1"
   splits:
   - text: "轻功1"
@@ -3369,9 +3365,7 @@
 - raw: "胸口碎大石"
   splits:
   - text: "胸口碎大石"
-    translated: "Chest Smash Great Stones"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Breaking a Stone on the Chest,胸口碎大石,"
+    translated: "Breaking a Stone on the Chest"
 - raw: "意志1"
   splits:
   - text: "意志1"
@@ -3479,9 +3473,7 @@
 - raw: "御剑要术"
   splits:
   - text: "御剑要术"
-    translated: "Sword Techniques"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Essential Sword Controlling Technique,御剑要术,"
+    translated: "Essential Sword Controlling Technique"
 - raw: "剑法1"
   splits:
   - text: "剑法1"
@@ -3944,9 +3936,7 @@
 - raw: "气守丹田法"
   splits:
   - text: "气守丹田法"
-    translated: "Method of Conserving Qi in the Dantian"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Guard the Dantian Qi Method,气守丹田法,Guard the Dantian,守丹田,"
+    translated: "Guard the Dantian Qi Method"
 - raw: "内力上限80;内功6;经脉6;回内0.009"
   splits:
   - text: "内力上限80"
@@ -6796,9 +6786,7 @@
 - raw: "硬气功"
   splits:
   - text: "硬气功"
-    translated: "Hard Qigong"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Iron Body Technique,硬气功,"
+    translated: "Iron Body Technique"
 - raw: "内功1;力道1;体质1"
   splits:
   - text: "内功1"
@@ -7637,9 +7625,7 @@
 - raw: "铜头铁臂功"
   splits:
   - text: "铜头铁臂功"
-    translated: "Iron‑arm Copper‑head Skill"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Copper Head Iron Arm Skill,铜头铁臂功,"
+    translated: "Copper Head Iron Arm Skill"
 - raw: "绝技2;体质1"
   splits:
   - text: "绝技2"
@@ -8745,9 +8731,7 @@
 - raw: "一字电剑"
   splits:
   - text: "一字电剑"
-    translated: "One‑Stroke Electric Sword"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "One‑Stroke Lightning Sword,一字电剑,"
+    translated: "One‑Stroke Lightning Sword"
 - raw: "剑法1;力道1;意志1"
   splits:
   - text: "剑法1"
@@ -13845,9 +13829,7 @@
 - raw: "梦斩真龙"
   splits:
   - text: "梦斩真龙"
-    translated: "Dream Slice True Dragon"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dream Slaying True Dragon,梦斩真龙,"
+    translated: "Dream Slaying True Dragon"
 - raw: "绝技潜力2;绝技1;智力1"
   splits:
   - text: "绝技潜力2"
@@ -14600,9 +14582,7 @@
 - raw: "当头棒喝"
   splits:
   - text: "当头棒喝"
-    translated: "A sudden harsh awakening"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Thunderous Awakening,当头棒喝,"
+    translated: "Thunderous Awakening"
 - raw: "长兵潜力2;长兵1;意志1"
   splits:
   - text: "长兵潜力2"
@@ -15721,9 +15701,7 @@
 - raw: "金钱镖"
   splits:
   - text: "金钱镖"
-    translated: "Money Courier"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Coin Dart,金钱镖,"
+    translated: "Coin Dart"
 - raw: "射术5;灵巧10"
   splits:
   - text: "射术5"
@@ -16159,9 +16137,7 @@
 - raw: "放浪形骸"
   splits:
   - text: "放浪形骸"
-    translated: "Carefree"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Carefree and Unrestrained,放浪形骸,"
+    translated: "Carefree and Unrestrained"
 - raw: "绝技12;力道12;虚弱0.05;昏沉0.05"
   splits:
   - text: "绝技12"
@@ -18080,9 +18056,7 @@
 - raw: "漫天花雨"
   splits:
   - text: "漫天花雨"
-    translated: "Flowering rain"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Flowers Rain from the Sky,漫天花雨,"
+    translated: "Flowers Rain from the Sky"
 - raw: "绝技潜力1;射术潜力1;灵巧潜力1;智力潜力1"
   splits:
   - text: "绝技潜力1"
@@ -19443,9 +19417,7 @@
 - raw: "无影神针"
   splits:
   - text: "无影神针"
-    translated: "Ethereal Divine Needle"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Shadowless Divine Needle,无影神针,"
+    translated: "Shadowless Divine Needle"
 - raw: "智力潜力1;经脉潜力1;射术1;智力1"
   splits:
   - text: "智力潜力1"
@@ -19811,9 +19783,7 @@
 - raw: "鸟兽散"
   splits:
   - text: "鸟兽散"
-    translated: "Scatter like birds and beasts"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Scatter in all directions,鸟兽散,"
+    translated: "Scatter in all directions"
 - raw: "轻功6;灵巧4;体质4;速度0.04"
   splits:
   - text: "轻功6"
@@ -19883,9 +19853,7 @@
 - raw: "醉拳"
   splits:
   - text: "醉拳"
-    translated: "Drunk Fist"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Drunken Fist,醉拳,"
+    translated: "Drunken Fist"
 - raw: "拳掌20;体质10"
   splits:
   - text: "拳掌20"
@@ -19982,9 +19950,7 @@
 - raw: "死缠烂打"
   splits:
   - text: "死缠烂打"
-    translated: "P Persistent as Hell"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Relentless Pursuit,死缠烂打,"
+    translated: "Relentless Pursuit"
 - raw: "轻功9;力道9;笨拙0.08;负面加成0.04"
   splits:
   - text: "轻功9"
@@ -20177,9 +20143,7 @@
 - raw: "混天功"
   splits:
   - text: "混天功"
-    translated: "Tianjin Gong"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heaven Mixing Technique,混天功,"
+    translated: "Heaven Mixing Technique"
 - raw: "生命上限80;内力上限80;内功8;力道8;经脉8;眩晕0.04;铜皮0.04;拳掌威力0.04"
   splits:
   - text: "生命上限80"
@@ -20222,9 +20186,7 @@
 - raw: "逍遥游"
   splits:
   - text: "逍遥游"
-    translated: "Free and Unfettered Roaming"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Free and Easy Wandering,逍遥游,"
+    translated: "Free and Easy Wandering"
 - raw: "轻功8;力道8;经脉8;壮骨0.05;通脉0.05"
   splits:
   - text: "轻功8"
@@ -20258,9 +20220,7 @@
 - raw: "妙手空空"
   splits:
   - text: "妙手空空"
-    translated: "Empty‑handed Genius"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Sleight of Hand,妙手空空,"
+    translated: "Sleight of Hand"
 - raw: "绝技潜力1;绝技1;灵巧1"
   splits:
   - text: "绝技潜力1"
@@ -20566,9 +20526,7 @@
 - raw: "虎落平阳"
   splits:
   - text: "虎落平阳"
-    translated: "Tiger falling to plain town"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Tiger Fallen to the Plains,虎落平阳,"
+    translated: "Tiger Fallen to the Plains"
 - raw: "力道潜力1;绝技潜力1;绝技2"
   splits:
   - text: "力道潜力1"
@@ -20849,9 +20807,7 @@
 - raw: "降龙掌法"
   splits:
   - text: "降龙掌法"
-    translated: "Dragon‑Taming Palm Technique"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dragon Taming Palm Technique,降龙掌法,"
+    translated: "Dragon Taming Palm Technique"
 - raw: "拳掌潜力1;力道潜力2;经脉2"
   splits:
   - text: "拳掌潜力1"
@@ -21216,9 +21172,7 @@
 - raw: "折戟沉沙"
   splits:
   - text: "折戟沉沙"
-    translated: "Broken sword buried in sand"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Broken swords buried in sand,折戟沉沙,"
+    translated: "Broken swords buried in sand"
 - raw: "意志1;长兵3;内力0.1"
   splits:
   - text: "意志1"
@@ -22142,9 +22096,7 @@
 - raw: "帝王封禅功"
   splits:
   - text: "帝王封禅功"
-    translated: "Imperial Sacrifice to Heaven"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Emperor's Sacrifice to Heaven,帝王封禅功,"
+    translated: "Imperial Fengshan Technique"
 - raw: "绝技潜力2;体质潜力1;绝技2"
   splits:
   - text: "绝技潜力2"
@@ -22626,9 +22578,7 @@
 - raw: "茅山道剑"
   splits:
   - text: "茅山道剑"
-    translated: "Mountain Fog Sword"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Maoshan Daoist Sword,茅山道剑,"
+    translated: "Maoshan Daoist Sword"
 - raw: "经脉2;剑法2;内力0.1"
   splits:
   - text: "经脉2"
@@ -24935,9 +24885,7 @@
 - raw: "五毒掌"
   splits:
   - text: "五毒掌"
-    translated: "Five‑Toxic Palm"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Five Poisons Palm,五毒掌,"
+    translated: "Five Poisons Palm"
 - raw: "毒术1"
   splits:
   - text: "毒术1"
@@ -26448,9 +26396,7 @@
 - raw: "金蚕王蛊"
   splits:
   - text: "金蚕王蛊"
-    translated: "Golden Silkworm King Infestation"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Golden Silkworm King Gu,金蚕王蛊,"
+    translated: "Golden Silkworm King Gu"
 - raw: "毒术潜力1;智力潜力1;射术潜力1;射术2"
   splits:
   - text: "毒术潜力1"
@@ -26545,9 +26491,7 @@
 - raw: "飞沙走石"
   splits:
   - text: "飞沙走石"
-    translated: "Dust storms"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Flying Sand and Rolling Stones,飞沙走石,"
+    translated: "Flying Sand and Rolling Stones"
 - raw: "轻功2;体质5;目盲0.04"
   splits:
   - text: "轻功2"
@@ -26563,9 +26507,7 @@
 - raw: "鬼夜哭"
   splits:
   - text: "鬼夜哭"
-    translated: "Cry in the Night"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Ghosts Weep at Night,鬼夜哭,"
+    translated: "Ghosts Weep at Night"
 - raw: "绝技4;力道4;壮骨0.04"
   splits:
   - text: "绝技4"
@@ -27772,9 +27714,7 @@
 - raw: "血脉逆行"
   splits:
   - text: "血脉逆行"
-    translated: "Reverse flow of blood"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Reverse Blood Flow,血脉逆行,"
+    translated: "Reverse Blood Flow"
 - raw: "经脉潜力2;绝技潜力1;绝技1;经脉1"
   splits:
   - text: "经脉潜力2"
@@ -28078,9 +28018,7 @@
 - raw: "星罗棋布"
   splits:
   - text: "星罗棋布"
-    translated: "Starlit and densely dotted"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Scattered Like Stars Across a Chessboard,星罗棋布,"
+    translated: "Scattered Like Stars Across a Chessboard"
 - raw: "绝技6;智力6;弱点0.06"
   splits:
   - text: "绝技6"
@@ -28544,9 +28482,7 @@
 - raw: "凭虚临风"
   splits:
   - text: "凭虚临风"
-    translated: "Gaze into the void with wind at one's back"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Treading the Void on the Wind,凭虚临风,"
+    translated: "Treading the Void on the Wind"
 - raw: "轻功8;灵巧8;意志8;护体真气0.1;飘逸0.05"
   splits:
   - text: "轻功8"
@@ -28970,9 +28906,7 @@
 - raw: "霓裳羽衣舞"
   splits:
   - text: "霓裳羽衣舞"
-    translated: "Feather Robe Dance"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Rainbow Robe and Feathered Garment Dance,霓裳羽衣舞,"
+    translated: "Rainbow Robe and Feathered Garment Dance"
 - raw: "绝技潜力1;灵巧潜力2"
   splits:
   - text: "绝技潜力1"
@@ -29272,9 +29206,7 @@
 - raw: "归墟秘典"
   splits:
   - text: "归墟秘典"
-    translated: "Mystic Texts of Huixu"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Secret Canon of Guixu,归墟秘典,"
+    translated: "Secret Canon of Guixu"
 - raw: "智力潜力2;内功潜力1;内功1;智力1"
   splits:
   - text: "智力潜力2"
@@ -30172,9 +30104,7 @@
 - raw: "金钟罩"
   splits:
   - text: "金钟罩"
-    translated: "Golden Bell Protection"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Golden Bell Shield,金钟罩,"
+    translated: "Golden Bell Shield"
 - raw: "绝技10;体质10;护甲5;霸体0.04;负面抗性0.04"
   splits:
   - text: "绝技10"
@@ -33429,9 +33359,7 @@
 - raw: "八仙剑法"
   splits:
   - text: "八仙剑法"
-    translated: "Sword Technique of the Eight Immortals"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Eight Immortals Sword Technique,八仙剑法,"
+    translated: "Eight Immortals Sword Technique"
 - raw: "碧波剑法"
   splits:
   - text: "碧波剑法"
@@ -33567,9 +33495,7 @@
 - raw: "芭蕉铁扇功"
   splits:
   - text: "芭蕉铁扇功"
-    translated: "Banana Fan Power"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Banana Leaf Iron Fan Skill,芭蕉铁扇功,Iron Fan Skill,铁扇功,"
+    translated: "Banana Leaf Iron Fan Skill"
 - raw: "奇门10;意志10"
   splits:
   - text: "奇门10"
@@ -34817,9 +34743,7 @@
 - raw: "回风拂柳剑"
   splits:
   - text: "回风拂柳剑"
-    translated: "Breeze‑Brushing Willow Sword"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Willow Brushing Sword,回风拂柳剑,"
+    translated: "Willow Brushing Sword"
 - raw: "灵巧2;剑法3;内力0.1"
   splits:
   - text: "灵巧2"
@@ -35302,9 +35226,7 @@
 - raw: "灭心绝情剑"
   splits:
   - text: "灭心绝情剑"
-    translated: "Heart‑Cleansing and Emotion‑Ending Sword"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heart Extinguishing Passion Severing Sword,灭心绝情剑,"
+    translated: "Heart Extinguishing Passion Severing Sword"
 - raw: "杀机0.06;弱点0.06"
   splits:
   - text: "杀机0.06"
@@ -36382,7 +36304,7 @@
 - raw: "斗转星移"
   splits:
   - text: "斗转星移"
-    translated: "Stars Shift and Constellations Move"
+    translated: "Stars Shift and Stars Turn"
 - raw: "意志潜力2;灵巧潜力1;体质潜力1"
   splits:
   - text: "意志潜力2"
@@ -37043,9 +36965,7 @@
 - raw: "河图洛书"
   splits:
   - text: "河图洛书"
-    translated: "River Map and Luo Book"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Hetu and Luoshu,河图洛书,"
+    translated: "Hetu and Luoshu"
 - raw: "生命上限100;内力上限100;内功10;智力10;意志10;弱点0.06;失衡0.06;机关耐久0.08"
   splits:
   - text: "生命上限100"
@@ -37558,9 +37478,7 @@
 - raw: "突火筒"
   splits:
   - text: "突火筒"
-    translated: "Rocket launcher"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Fire Lance,突火筒,"
+    translated: "Fire Lance"
 - raw: "灵巧1;射术3;内力0.1"
   splits:
   - text: "灵巧1"
@@ -40605,9 +40523,7 @@
 - raw: "逆转周天大法"
   splits:
   - text: "逆转周天大法"
-    translated: "Reverse Cycle Heaven Technique"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heavenly Cycle Reversal Technique,逆转周天大法,"
+    translated: "Heavenly Cycle Reversal Technique"
 - raw: "力道潜力1;意志潜力1;体质潜力2"
   splits:
   - text: "力道潜力1"
@@ -40769,9 +40685,7 @@
 - raw: "龙胤归藏功"
   splits:
   - text: "龙胤归藏功"
-    translated: "Long Yin Guizang Gong"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
+    translated: "Dragon Descends into Seclusion Technique"
 - raw: "力道潜力1;灵巧潜力1;智力潜力1;意志潜力1;体质潜力1;经脉潜力1"
   splits:
   - text: "力道潜力1"
@@ -40838,9 +40752,7 @@
 - raw: "守丹田"
   splits:
   - text: "守丹田"
-    translated: "Guard the Dan Tian"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Guard the Dantian,守丹田,"
+    translated: "Guard the Dantian"
 - raw: "内力上限40;内功4;体质4;减伤2"
   splits:
   - text: "内力上限40"
@@ -41389,9 +41301,7 @@
 - raw: "仙人指路"
   splits:
   - text: "仙人指路"
-    translated: "Mistress Points the Way"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Immortal Points the Way,仙人指路,"
+    translated: "Immortal Points the Way"
 - raw: "智力潜力1;体质潜力1;绝技1;智力1"
   splits:
   - text: "智力潜力1"
@@ -41620,9 +41530,7 @@
 - raw: "重剑无锋"
   splits:
   - text: "重剑无锋"
-    translated: "A sword without a sharp edge"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heavy Sword Has No Edge,重剑无锋,"
+    translated: "Heavy Sword Has No Edge"
 - raw: "剑法潜力1;力道潜力2"
   splits:
   - text: "剑法潜力1"

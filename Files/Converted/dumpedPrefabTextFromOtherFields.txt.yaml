@@ -4587,9 +4587,7 @@
     translated: "Nearby"
   - subIndex: 2
     text: "五毒掌教龙凤娥已亲率弟子严阵以待，而中原群雄也正紧急赶往此地。"
-    translated: "The Venerable Master Long Feng'e of the Five Venom Palms Sect has already led her disciples to await the arrival in strict formation, while the heroes of the Central Plains are also urgently making their way here."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Five Poisons Palm,五毒掌,"
+    translated: "Master Long Feng'e of the Five Poisons Palm has personally led her disciples to prepare for the confrontation, while the heroes from Central Plains are urgently rushing to this location."
   templates:
   - template: "{0}<b>#PosText#</b>{1}\\n{2}"
 - raw: "传闻大隐掌门道无名已率领联军兵临<b>#PosText#</b>，不知双方这场惊天大战最终鹿死谁手。"
@@ -6009,9 +6007,7 @@
 - raw: "前往#TargetPlace#，与司马德源一同拜会五毒掌教龙凤娥。"
   splits:
   - text: "前往#TargetPlace#，与司马德源一同拜会五毒掌教龙凤娥。"
-    translated: "Head to #TargetPlace#, and accompany Sima Deyuan to pay respects to the Five Poison Sect's grandmaster, Long Feng'e."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Five Poisons Palm,五毒掌,"
+    translated: "Go to #TargetPlace# and meet with Sima Deyuan to pay respects to the headmaster of the Five Poisons Palm, Long Feng'e."
 - raw: "前往#TargetPlace#，为吴忧求取解药。"
   splits:
   - text: "前往#TargetPlace#，为吴忧求取解药。"
@@ -8555,9 +8551,7 @@
 - raw: "寻找一件绝世级别的丹药交给五毒掌教龙凤娥，用来医治白云天。"
   splits:
   - text: "寻找一件绝世级别的丹药交给五毒掌教龙凤娥，用来医治白云天。"
-    translated: "Find an unparalleled‑grade medicinal pill to give to Lady Long Feng'e, the Palm Sect's Five Poison Doctrinal Teacher, to treat Bai Yuntian."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Five Poisons Palm,五毒掌,"
+    translated: "Find a legendary‑grade elixir and give it to Master Long Feng'e of the Five Poisons Palm Sect to treat Bai Yuntian."
 - raw: "寻找优质药引"
   splits:
   - text: "寻找优质药引"
@@ -8601,9 +8595,7 @@
 - raw: "将御剑要术修炼至十重功力\\n<i>理论经验：在藏经阁阅读秘籍\\n实战经验：在练武场练习或切磋\\n突破瓶颈：在闭关室选择突破</i>"
   splits:
   - text: "将御剑要术修炼至十重功力"
-    translated: "Refine the Sword Technique to the Tenth Level Power"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Essential Sword Controlling Technique,御剑要术,"
+    translated: "Cultivate the Essential Sword Controlling Technique to the tenth level of proficiency."
   - subIndex: 1
     text: "理论经验"
     translated: "Theoretical experience"
@@ -9250,15 +9242,11 @@
 - raw: "御剑要术"
   splits:
   - text: "御剑要术"
-    translated: "Sword Techniques"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Essential Sword Controlling Technique,御剑要术,"
+    translated: "Essential Sword Controlling Technique"
 - raw: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
   splits:
   - text: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
-    translated: "The Art of Sword Technique has reached a high level. Go to #TargetPlace# to ask Senior Brother Gu Younian about the next methods of cultivation."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Essential Sword Controlling Technique,御剑要术,"
+    translated: "The Essential Sword Controlling Technique is now complete. Go to #TargetPlace# and ask Senior Brother Gu Younian about the next stage of cultivation methods. Practice methods\\nCultivation methods The cultivation methods are recorded in the ancient scripture. A more natural translation might be the next steps in my training or similar, depending on context.)"
 - raw: "御史嘉奖"
   splits:
   - text: "御史嘉奖"
@@ -12126,9 +12114,7 @@
     translated: "The Second Taiyue Grand Ceremony officially convened on Jade Emperor Peak of Mount Tai, with various sect leaders gathering."
   - subIndex: 1
     text: "，共同商议龙胤归藏功之归属。"
-    translated: ", Ponder the Return of the Dragon Conceal Their Merit Together."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
+    translated: ", Discuss together the disposition of the Dragon Descends into Seclusion Technique."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "算了，随便逛逛便好"
@@ -13182,9 +13168,7 @@
 - raw: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于<b>一个月后</b>在泰山举办第二届泰岳大典，商定神功归属。\\n许多武林人士已提前前往<b>#PosText#</b>，欲一睹这场空前绝后之盛会。"
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
-    translated: "Zhao Yinzong's Long Yin Gui Cang technique has reappeared in the Jianghu, and the major sects have decided to"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
+    translated: "Zhao Yunzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to..."
   - subIndex: 1
     text: "一个月后"
     translated: "A month later"

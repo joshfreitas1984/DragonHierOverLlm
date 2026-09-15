@@ -21137,13 +21137,9 @@
 - raw: "哈哈哈哈，仙居客栈一战，乃是我逆转周天大法散功之际，这才让你占了便宜。\n今天，我功力大成，便要打到你们心服口服为止！"
   splits:
   - text: "哈哈哈哈，仙居客栈一战，乃是我逆转周天大法散功之际，这才让你占了便宜。"
-    translated: "Haha, the battle at the Xianju Inn was when I was reversing my Tranquil Heaven Technique and losing power. That's how you got the upper hand."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heavenly Cycle Reversal Technique,逆转周天大法,"
-    qcReviewedText: "Haha, the battle at the Xianju Inn was when I was reversing my Tranquil Heaven Technique and losing power. That's how you got the upper hand.\nToday, with my power fully unleashed, I shall fight until you submit!"
-    qcTranslated: "Hahaha, the battle at the Xianju Inn was when I was in the midst of scattering my Reversing the Cycle of Heaven Great Technique. That's why you got the upper hand.\nToday, my power is fully mastered, and I shall fight until you submit!"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "Hahaha, in the battle at the Immortal Residence Inn, it was during the moment I was scattering my cultivation due to the Heavenly Cycle Reversal Technique that you managed to gain an advantage."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Hahaha, in the battle at the Immortal Residence Inn, it was during the moment I was scattering my cultivation due to the Heavenly Cycle Reversal Technique that you managed to gain an advantage.\nToday, with my power fully unleashed, I shall fight until you submit!"
   - subIndex: 1
     text: "今天，我功力大成，便要打到你们心服口服为止！"
     translated: "Today, with my power fully unleashed, I shall fight until you submit!"
@@ -30751,9 +30747,7 @@
 - raw: "已习得千斤坠"
   splits:
   - text: "已习得千斤坠"
-    translated: "Mastered the Thousand‑Pound Fall Technique"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Gravitational pull,千斤坠,"
+    translated: "Have learned Gravitational Pull"
     qcReviewedText: "Mastered the Thousand‑Pound Fall Technique"
     qcStatus: Passed
     qcQualityScore: 100
@@ -30767,9 +30761,7 @@
 - raw: "已习得轻身术"
   splits:
   - text: "已习得轻身术"
-    translated: "Has mastered the Light Step Technique"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lightness Technique,轻身术,"
+    translated: "Lightness Technique learned"
     qcReviewedText: "Has mastered the Light Step Technique"
     qcStatus: Passed
     qcQualityScore: 100
@@ -35496,16 +35488,11 @@
   splits:
   - text: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。"
     translated: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top."
-    qcReviewedText: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top.\nFrom today onward, all the merits and achievements of the Dragon Lineage #SourceForceName# belong to me!"
-    qcTranslated: "My apologies, my apologies. It seems I, #$SourceInteractName#, have taken the lead at this Taiyue Grand Ceremony.\nFrom today on, the Dragon Lineage Archive Skill shall belong to my #SourceForceName#!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 60
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top.\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
   - subIndex: 1
     text: "从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
-    translated: "From today onward, all the merits and achievements of the Dragon Lineage #SourceForceName# belong to me!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
+    translated: "From today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "技不如人"
@@ -41906,18 +41893,14 @@
   splits:
   - text: "武绝义！昔日仙居客栈一战，你落败而逃，之后便销声匿迹。"
     translated: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight."
-    qcReviewedText: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight.\nI thought you had repented and turned over a new leaf, but it seems you are still obstinate.\nComing to the Taiyue Grand Ceremony to compete for the Long Yin Guizang is really daring enough!"
-    qcTranslated: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight.\nI thought you had repented and turned over a new leaf, but it seems you are still obstinate,\ndaring to come to the Taiyue Grand Ceremony to compete for the Long Yin Guizang Art. You are truly bold!"
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight.\nI thought you had repented and turned over a new leaf, but it seems you are still obstinate.\nDaring to come to the Taiyue Grand Ceremony to compete for the Dragon Descends into Seclusion Technique is truly outrageous!"
   - subIndex: 1
     text: "我本以为你已洗心革面，改过自新，没想到你竟执迷不悟，"
     translated: "I thought you had repented and turned over a new leaf, but it seems you are still obstinate."
   - subIndex: 2
     text: "还敢来泰岳大典争夺龙胤归藏功，实在是胆大包天了！"
-    translated: "Coming to the Taiyue Grand Ceremony to compete for the Long Yin Guizang is really daring enough!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
+    translated: "Daring to come to the Taiyue Grand Ceremony to compete for the Dragon Descends into Seclusion Technique is truly outrageous!"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "武者"
@@ -43180,13 +43163,9 @@
 - raw: "没有仿本以下归墟秘典！"
   splits:
   - text: "没有仿本以下归墟秘典！"
-    translated: "No copies of the Weixu Secret Treatise!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Secret Canon of Guixu,归墟秘典,"
-    qcReviewedText: "No copies of the Weixu Secret Treatise!"
-    qcTranslated: "No copies of the Ruin Secret Treatise!"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "Don't imitate the Secret Canon of Guixu!"
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Don't imitate the Secret Canon of Guixu!"
 - raw: "没有发现满意的人选，看来只能另做打算了。"
   splits:
   - text: "没有发现满意的人选，看来只能另做打算了。"
@@ -50618,9 +50597,7 @@
 - raw: "虎落平阳;"
   splits:
   - text: "虎落平阳"
-    translated: "Tiger falling to plain town"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Tiger Fallen to the Plains,虎落平阳,"
+    translated: "Tiger Fallen to the Plains"
   templates:
   - template: "{0};"
 - raw: "虽不想与同道相争，奈何这{1}着实诱人，我出{0}两！"
@@ -53587,9 +53564,7 @@
     translated: "Qinggong"
   - subIndex: 1
     text: "轻身术"
-    translated: "Featherfall Technique"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Lightness Technique,轻身术,"
+    translated: "Lightness Technique"
   templates:
   - template: "{0} {1};ForceFightChooseStartSkill;1"
 - raw: "轻功;ShowBeggerFoodExchangeSkill;1"
@@ -55054,13 +55029,9 @@
 - raw: "这内功名为“混天功”，乃是丐帮高级内功心法，\n此功法内息刚猛，遒劲有力，\n左冲右突之时，颇有几分混天动地之威势。"
   splits:
   - text: "这内功名为“混天功”，乃是丐帮高级内功心法，"
-    translated: "This internal skill is named Huantian Gong, and it is an advanced heart method of the Beggar Sect."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heaven Mixing Technique,混天功,"
-    qcReviewedText: "This internal skill is named Huantian Gong, and it is an advanced heart method of the Beggar Sect.\nThis cultivation method's inner qi is powerful and robust.\nMoving left and right with great force, it exudes a powerful aura that shakes heaven and earth."
-    qcTranslated: "This Neigong is named Huantian Gong and is an advanced Heart Method of the Beggar Sect.\nThis technique's Inner Qi is fierce and vigorous.\nWhen it surges left and right, it possesses a considerable momentum of shaking heaven and earth."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    translated: "This internal skill is called the Heaven Mixing Technique and is a high‑level heart method of the Beggar Sect."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "This internal skill is called the Heaven Mixing Technique and is a high‑level heart method of the Beggar Sect.\nThis cultivation method's inner qi is powerful and robust.\nMoving left and right with great force, it exudes a powerful aura that shakes heaven and earth."
   - subIndex: 1
     text: "此功法内息刚猛，遒劲有力，"
     translated: "This cultivation method's inner qi is powerful and robust."
@@ -55086,13 +55057,9 @@
 - raw: "这千斤坠乃绝技筑基之法，还望你好生参悟。\n待功力大成之后，方能修习更高深之武学。"
   splits:
   - text: "这千斤坠乃绝技筑基之法，还望你好生参悟。"
-    translated: "This Thousand‑Denarius Weight is a supreme technique of Foundation Establishment. I hope you can contemplate it deeply."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Gravitational pull,千斤坠,"
-    qcReviewedText: "This Thousand‑Denarius Weight is a supreme technique of Foundation Establishment. I hope you can contemplate it deeply.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
-    qcTranslated: "This Thousand‑Pound Sinking is a supreme technique for Foundation Establishment. I hope you will contemplate it carefully. Only after your cultivation is fully mastered can you practice more profound martial arts.\\n"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    translated: "This Gravitational Pull is a supreme technique for Foundation Establishment; I hope you will study it thoroughly."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "This Gravitational Pull is a supreme technique for Foundation Establishment; I hope you will study it thoroughly.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
   - subIndex: 1
     text: "待功力大成之后，方能修习更高深之武学。"
     translated: "Only after one's cultivation is complete can they practice more advanced martial arts."
@@ -55474,13 +55441,9 @@
 - raw: "这绝技名为“妙手空空”，乃是一式探囊取物的偷盗手法，\n虽说丐帮中人大多遵纪守法，但情急时仍需干些偷鸡摸狗的勾当，\n不过，要是有贸然以此作奸犯科者，也难逃重罚。"
   splits:
   - text: "这绝技名为“妙手空空”，乃是一式探囊取物的偷盗手法，"
-    translated: "This supreme technique is named Miaoshou Kongkong, and it is a thief's method of picking pockets."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Sleight of Hand,妙手空空,"
-    qcReviewedText: "This supreme technique is named Miaoshou Kongkong, and it is a thief's method of picking pockets.\nThough most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds.\nBut if anyone dares to abuse this for personal gain, they will also face severe punishment."
-    qcTranslated: "This supreme technique is named Miaoshou Kongkong, a method of lifting items from a bag or pocket.\nThough most members of the Beggar Sect are law‑abiding, in times of urgent need they may still have to resort to petty theft.\nHowever, anyone who rashly uses it to commit crimes will also face severe punishment."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    translated: "This advanced technique is called Sleight of Hand, and it is a skill for secretly taking objects from someone's pocket."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "This advanced technique is called Sleight of Hand, and it is a skill for secretly taking objects from someone's pocket.\nThough most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds.\nBut if anyone dares to abuse this for personal gain, they will also face severe punishment."
   - subIndex: 1
     text: "虽说丐帮中人大多遵纪守法，但情急时仍需干些偷鸡摸狗的勾当，"
     translated: "Though most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds."
@@ -55640,13 +55603,9 @@
 - raw: "这轻功名为“逍遥游”，乃是脱胎自道家典籍《庄子》的轻功，\n乘天地之正，御六气之辩，以游无穷，\n倒也颇为符合丐帮弟子云游天下之意趣。"
   splits:
   - text: "这轻功名为“逍遥游”，乃是脱胎自道家典籍《庄子》的轻功，"
-    translated: "This lightness technique is named Xiaoyao You, derived from the Daoist classic Zhuangzi."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Free and Easy Wandering,逍遥游,"
-    qcReviewedText: "This lightness technique is named Xiaoyao You, derived from the Daoist classic Zhuangzi.\nTo ride the principles of nature, to wander beyond the bounds of the mundane.\nIt rather suits the wandering spirit of the disciples of the Beggar Sect."
-    qcTranslated: "This Qinggong is named “Xiaoyao You,” derived from the Daoist classic Zhuangzi.\\nTo ride the constancy of Heaven and Earth, to control the six qi and their changes, and to roam the infinite,\\nit rather fits the spirit of Beggar Sect disciples wandering the world."
-    qcStatus: Corrected
-    qcQualityScore: 70
+    translated: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic Zhuangzi."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic Zhuangzi.\nTo ride the principles of nature, to wander beyond the bounds of the mundane.\nIt rather suits the wandering spirit of the disciples of the Beggar Sect."
   - subIndex: 1
     text: "乘天地之正，御六气之辩，以游无穷，"
     translated: "To ride the principles of nature, to wander beyond the bounds of the mundane."
@@ -56834,9 +56793,7 @@
     translated: "Great Hero, Sect Leaders, it's been a long time!"
   - subIndex: 1
     text: "我的逆转周天大法已经功成，今日特地回来，从各位手中取走这龙胤归藏功！"
-    translated: "My Reversal Heaven Cycle Technique is complete today. I've come specially to take back the Dragon Return Concealment Skill from them!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Heavenly Cycle Reversal Technique,逆转周天大法,Dragon Descends into Seclusion Technique,龙胤归藏功,"
+    translated: "I have mastered the Heavenly Cycle Reversal Technique and have returned today to reclaim the Dragon Descends into Seclusion Technique from all of you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "郭淮"

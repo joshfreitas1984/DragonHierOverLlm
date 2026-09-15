@@ -130,10 +130,14 @@
   badtrans: true
 - raw: 气守丹田法
   result: Guard the Dantian Qi Method
+  allowalt:
+    - Guarding the Dantian
   badtrans: true
 - raw: 守丹田
   result: Guard the Dantian
   badtrans: true
+  allowalt:
+    - Guarding the Dantian
 - raw: 芭蕉铁扇功
   result: Banana Leaf Iron Fan Skill
   badtrans: true
@@ -232,10 +236,10 @@
   result: Hetu and Luoshu
   badtrans: true
 - raw: 帝王封禅功
-  result: Emperor's Sacrifice to Heaven
+  result: Imperial Fengshan Technique
   badtrans: true
 - raw: 斗转星移
-  result: Stars Shift and Constellations Move
+  result: Stars Shift and Stars Turn
   badtrans: true
 # - raw: 震天雷
 #   result: Heaven Shaking Thunder

@@ -470,14 +470,13 @@
     translated: "#PlayerName# wants to try? Let's see who catches more!"
   - split: 9
     text: "归墟秘典之核心法门，唯有阁主知晓。"
-    translated: "The core Heart Method of the Secret Scroll of Huayu, known only to the Lord."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Secret Canon of Guixu,归墟秘典,"
-    qcReviewedText: "The core Heart Method of the Secret Scroll of Huayu, known only to the Lord.\\nThis way, those without sufficient cultivation can avoid forcing themselves and going astray."
-    qcTranslated: "The core Heart Method of the Secrets of Guixu is known only to the Pavilion Master.\\nThis ensures that those with insufficient cultivation do not force their practice and fall into demonic obsession."
+    translated: "The core heart method of the Secret Canon of Guixu are known only by the Pavilion Master."
+    qcReviewedText: "The core heart method of the Secret Canon of Guixu are known only by the Pavilion Master.\\nThis way, those without sufficient cultivation can avoid forcing themselves and going astray."
+    qcTranslated: "The core Heart Method of the Secret Canon of Guixu is known only to the Pavilion Master.\\nThis ensures that those with insufficient cultivation do not forcibly practice it and suffer from cultivation deviation."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 35
+    qcDefectCategory: LostIdiom
   - split: 9
     subIndex: 1
     text: "如此，方能避免修为不足之人强行修习，走火入魔。"
@@ -485,16 +484,14 @@
   - split: 10
     text: "叛出五毒教后，我便一直在寻找天下至毒之法门。"
     translated: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world."
-    qcReviewedText: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world.\\nBut I've heard that perhaps there might be clues in the Long Yin Huizang technique..."
-    qcTranslated: "After leaving the Five Poisons Sect, I have been searching for the ultimate method of poison under heaven.\\nBut I've heard that perhaps there might be clues in the Long Yin Guizang technique..."
-    qcStatus: Corrected
-    qcQualityScore: 92
+    qcReviewedText: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world.\\nBut I heard that there might be clues within the Dragon Descends into Seclusion Technique..."
+    qcStatus: Passed
+    qcQualityScore: 85
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "却听闻这龙胤归藏功中，或许会有线索......"
-    translated: "But I've heard that perhaps there might be clues in the Long Yin Huizang technique..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Dragon Descends into Seclusion Technique,龙胤归藏功,"
+    translated: "But I heard that there might be clues within the Dragon Descends into Seclusion Technique..."
   - split: 11
     text: "犬子郭勇锐生性纯良，奈何有些不谙世事。"
     translated: "Guo Yongrui, my son, is inherently kind‑hearted, though he sometimes lacks worldly wisdom."
@@ -1467,7 +1464,7 @@
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
     qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
-    qcTranslated: "Don't look at those so-called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no shortage of private killings and arson behind closed doors, much worse than this Miss.\\n......#PlayerName#, you couldn't be one of them, right?"
+    qcTranslated: "Don't look at those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no shortage of private killings and arson behind closed doors, much worse than this Miss.\\n......#PlayerName#, you couldn't be one of them, right?"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 10
@@ -1516,7 +1513,7 @@
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
     translated: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
     qcReviewedText: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
-    qcTranslated: "The hardest thing to gauge is the human heart; even this old man, the \"Hundred Knows of Jianghu,\" fears he cannot fathom even a fraction of it."
+    qcTranslated: "The hardest thing to gauge is the human heart; even this old man, the Hundred Knows of Jianghu, fears he cannot fathom even a fraction of it."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 20
