@@ -51,10 +51,20 @@ batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true
 translateFlagged: true
-# Post-translation quality review pass (see docs/plans/quality-review-pass.md). Disabled by
-# default - a documented no-op until you're ready to run it (QualityReviewWorkflow.RunAsync just
-# logs and returns when enabled: false). Run the "3b. RunQualityReviewPass" test fact manually,
-# never as part of a batch - same rule as every other numbered workflow step in this repo.
+# Post-translation quality review pass (see docs/plans/quality-review-pass.md and
+# ../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md). Disabled by default - a
+# documented no-op until you're ready to run it (QualityReviewWorkflow.RunAsync just logs and
+# returns when enabled: false). Run the "3b. RunQualityReviewPass" test fact manually, never as
+# part of a batch - same rule as every other numbered workflow step in this repo.
+#
+# `enabled` also gates PACKAGING, not just the QC pass itself: when false, every packaging path
+# ignores any already-stored QcTranslated/QcQualityScore (via QualityReviewHelpers.IsQcReviewFresh)
+# and packages the plain pre-QC Translated text instead - minAcceptableScore/
+# autoAcceptDefectCategories below are never consulted. Safe to flip and re-run packaging only, no
+# LLM calls needed - nothing in Files/Converted is touched, so re-enabling restores the QC-corrected
+# output exactly as it was. Useful for isolating "did a QC correction cause this" from "was it
+# already broken before QC touched it" - see
+# Tests/docs/qc-run-startup-crash-investigation-2026-09-15.md for a worked example.
 qualityReview:
   enabled: true
   modelName: Qwen38Qc #QwenQc-14B #Glm4Qc-9B

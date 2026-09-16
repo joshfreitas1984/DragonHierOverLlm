@@ -17,6 +17,11 @@
   adjustX: 10.0
   adjustY: -20.0
   adjustWidth: 75.0
+- path: Canvas/HeroDetailPanel/Item/EquipmentWeight/Lv
+  sampleText: Light
+  idealFontSize: 14.0
+  allowWordWrap: true
+  adjustWidth: 20.0
 - path: Canvas/HeroDetailPanel/Item/ItemTabGrid/*/Label
   sampleText: Equipment
   idealFontSize: 12.0

@@ -53,6 +53,15 @@ was a prerequisite for the load sequence progressing far enough to hit the next 
 - [`docs/dynamicstrings-extraction-sources.md`](docs/dynamicstrings-extraction-sources.md) — the
   `plotText`/`describe`-family field correction (belong in DynamicStrings, not PrefabText) and the
   staleness bug behind the IL2CPP-string-map re-extraction source.
+- [`docs/qc-run-startup-crash-investigation-2026-09-15.md`](docs/qc-run-startup-crash-investigation-2026-09-15.md)
+  — **RESOLVED (2026-09-16)**: "QC run broke game startup" after commit `551bb94` was
+  `PrefabTextWorkflow`/`DynamicStringWorkflow` (FanslationStudio.LlmKit) discarding a low-scoring
+  QC-corrected column all the way down to raw, untranslated Chinese text instead of its already-good
+  pre-QC translation — including the age-rating splash notice shown at boot. Fixed: a QC-rejected
+  column now falls back to `Translated`, never raw text; a genuine unsafe/missing-translation column
+  is now omitted from the packaged dictionary entirely rather than packaged with raw Chinese.
+  `qualityReview.enabled` also now gates packaging (not just the QC pass), which is what made
+  isolating this possible without any LLM calls.
 
 ## Quality-review (QC) pipeline
 

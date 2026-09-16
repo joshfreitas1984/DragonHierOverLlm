@@ -80,7 +80,7 @@ The `"{0}年{1}月{2}日"` case is a save-slot date built via `DateTime.ToString
 
 ## Packaging behavior
 
-`TranslationPackaging.PackageFinalTranslationAsync` sends PrefabText and DynamicStringsIL2CPP files through their dedicated workflows, then reconstructs only regular CSV files. A fragment is unsafe when it is flagged, not safe to translate, or has a missing result despite non-empty source text; the complete raw line is retained in that case. The reported counts include all dedicated-workflow entries and regular CSV rows.
+`TranslationPackaging.PackageFinalTranslationAsync` sends PrefabText and DynamicStringsIL2CPP files through their dedicated workflows, then reconstructs only regular CSV files. A fragment is unsafe when it is flagged, not safe to translate, or has a missing result despite non-empty source text; for regular CSV rows the complete raw line is retained in that case (a CSV row structurally must have something in every column). For PrefabText/DynamicStringsIL2CPP files, as of 2026-09-16 that line is instead omitted from the packaged dictionary entirely rather than packaged with raw Chinese text — see [`qc-run-startup-crash-investigation-2026-09-15.md`](qc-run-startup-crash-investigation-2026-09-15.md) for why (a real game-startup-breaking incident caused by an explicit raw-Chinese packaged entry). A QC-rejected correction similarly falls back to the column's ordinary pre-QC translation rather than raw text for every file type. The reported counts include all dedicated-workflow entries and regular CSV rows.
 
 ## Workflow ordering
 

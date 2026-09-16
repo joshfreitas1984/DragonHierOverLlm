@@ -90,7 +90,13 @@ exact whole-string replacement. The field-selection rationale is in
 `GameFileHandling.PackageFinalTranslationAsync` excludes DynamicStringsIL2CPP files from the CSV
 reconstruction loop and calls `DynamicStringWorkflow.PackageDynamicStringsAsync` for each one.
 Each output is a flat list of `DynamicStringResult` values with `raw` and `result` YAML keys.
-Unsafe, flagged, or untranslated lines fall back to their raw value.
+Unsafe, flagged, or untranslated lines are omitted from the packaged dictionary entirely (as of
+2026-09-16 - see
+[`qc-run-startup-crash-investigation-2026-09-15.md`](qc-run-startup-crash-investigation-2026-09-15.md)),
+never written as their raw Chinese value: since this is a runtime substring-replacement dictionary,
+an explicit raw-Chinese entry risked the runtime's own "still contains untranslated Chinese" check
+re-matching its own packaged output. A missing entry means no substitution happens, which is
+visually identical but carries no re-match risk.
 
 Dialogue-option values such as `Label;ActionName;Param` also emit a deduplicated bare-label
 dictionary entry when the template has one translatable split. The game renders the label before

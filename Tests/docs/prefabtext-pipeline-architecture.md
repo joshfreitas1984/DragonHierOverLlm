@@ -33,11 +33,17 @@ similar flat-list dumper can reuse this as-is):
   - raw: 地图一览
     result: Map Overview
   ```
-  A line falls back to `Result = Text` (untranslated) if it has no usable translation yet
-  (`Translated` empty, `FlaggedForRetranslation`, or `!SafeToTranslate`) — so the output always has
-  one entry per dumped string, never a missing key. `DragonHeirPlugin/PrefabTextPatches.cs`
-  loads these files and applies exact `raw` string matches at resource, asset-bundle, scene-load,
-  and TMP/UI text-setter hooks.
+  A line with no usable translation (`Translated` empty, `FlaggedForRetranslation`, or
+  `!SafeToTranslate`) is **omitted from the packaged YAML entirely** (as of 2026-09-16 — see
+  [`qc-run-startup-crash-investigation-2026-09-15.md`](qc-run-startup-crash-investigation-2026-09-15.md)),
+  not written with `Result = Text` (raw Chinese) as it used to be — so the output no longer has
+  guaranteed one entry per dumped string; a missing key just means `PrefabTextPatches.cs` never
+  replaces that UI text at all, which is visually the same as a raw-Chinese entry but without ever
+  shipping Chinese in a packaged "translation." A QC-rejected correction (low score, uncovered
+  DEFECT category) also no longer falls back to raw Chinese — it falls back to the column's ordinary
+  pre-QC `Translated` text instead. `DragonHeirPlugin/PrefabTextPatches.cs` loads these files and
+  applies exact `raw` string matches at resource, asset-bundle, scene-load, and TMP/UI text-setter
+  hooks.
 - **Bug fixed (2026-08-27): a failed split was invisible in `PackageFinalTranslationAsync`'s
   printed `Passed`/`Failed` totals for `PrefabText`/`DynamicStringsIL2CPP` files.** The
   reconstruction fallback-to-raw logic itself was always correct (a flagged/unsafe/untranslated
@@ -50,6 +56,11 @@ similar flat-list dumper can reuse this as-is):
   Failed)` tuple (their private `ReconstructLine` returns `(string? Result, bool Failed)`), and
   `GameFileHandling.PackageFinalTranslationAsync` adds these into its existing totals. If either
   method's signature changes again, re-check this aggregation still compiles/wires up correctly.
+  (Historical note: "forced the whole line back to `Raw`" describes 2026-08-27 behavior. As of
+  2026-09-16 a failed line is omitted from the packaged YAML instead of packaged with raw Chinese —
+  see the bullet above and
+  [`qc-run-startup-crash-investigation-2026-09-15.md`](qc-run-startup-crash-investigation-2026-09-15.md).
+  The `Passed`/`Failed` count wiring this bullet describes is unaffected by that later change.)
 - **Implemented:** `DragonHeirPlugin/PrefabTextPatches.cs` loads `dumpedPrefabText*.txt.yaml` and
   applies exact whole-string matches at resource load, asset-bundle load, scene load, and the
   `UI.Text`/`TMP_Text` setters. See
