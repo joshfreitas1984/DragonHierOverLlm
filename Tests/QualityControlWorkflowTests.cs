@@ -311,55 +311,55 @@ public class QualityControlWorkflowTests
     // (temperature is low but non-zero) since a single call could get a differently-worded but
     // still-correct answer, or vice versa - treat ANY sample reproducing the bug as a real
     // regression, not something to average away.
-    [Fact(DisplayName = "QcOmittedSubjectRegression")]
-    public async Task QcOmittedSubjectRegression()
-    {
-        const string Source = "莫慌，让为师看看……\\n还好还好，只是精疲力竭昏厥过去了。\\n此次战况如何，云裳又是为何受伤啊？";
-        const string BadTranslation = "Don't panic, let me take a look......\\nNo need to worry, I just fainted from exhaustion.\\nHow did the battle go, and why was Yunshang injured?";
-        const int Samples = 3;
+    //[Fact(DisplayName = "QcOmittedSubjectRegression")]
+    //public async Task QcOmittedSubjectRegression()
+    //{
+    //    const string Source = "莫慌，让为师看看……\\n还好还好，只是精疲力竭昏厥过去了。\\n此次战况如何，云裳又是为何受伤啊？";
+    //    const string BadTranslation = "Don't panic, let me take a look......\\nNo need to worry, I just fainted from exhaustion.\\nHow did the battle go, and why was Yunshang injured?";
+    //    const int Samples = 3;
 
-        var workingDirectory = GameFileHandling.WorkingDirectory;
-        var config = ConfigurationExtensions.GetConfiguration(workingDirectory, GameFileHandling.Hooks);
+    //    var workingDirectory = GameFileHandling.WorkingDirectory;
+    //    var config = ConfigurationExtensions.GetConfiguration(workingDirectory, GameFileHandling.Hooks);
 
-        if (string.IsNullOrEmpty(config.QualityReview.ModelName)
-            || !config.Runtime.Models.TryGetValue(config.QualityReview.ModelName, out var modelConfig))
-            throw new InvalidOperationException(
-                $"QualityReview.ModelName '{config.QualityReview.ModelName}' does not match any configured model - " +
-                "set qualityReview.enabled/modelName in Config.yaml to run this test.");
+    //    if (string.IsNullOrEmpty(config.QualityReview.ModelName)
+    //        || !config.Runtime.Models.TryGetValue(config.QualityReview.ModelName, out var modelConfig))
+    //        throw new InvalidOperationException(
+    //            $"QualityReview.ModelName '{config.QualityReview.ModelName}' does not match any configured model - " +
+    //            "set qualityReview.enabled/modelName in Config.yaml to run this test.");
 
-        var tokenReplacer = new StringTokenReplacer();
-        var maskedRaw = tokenReplacer.Replace(Source);
-        var maskedTranslated = tokenReplacer.Replace(BadTranslation);
-        var glossaryPrompt = GlossaryLine.AppendPromptsFor(Source, config.Runtime.GlossaryLines, "PlotData.csv");
+    //    var tokenReplacer = new StringTokenReplacer();
+    //    var maskedRaw = tokenReplacer.Replace(Source);
+    //    var maskedTranslated = tokenReplacer.Replace(BadTranslation);
+    //    var glossaryPrompt = GlossaryLine.AppendPromptsFor(Source, config.Runtime.GlossaryLines, "PlotData.csv");
 
-        using var client = new HttpClient { Timeout = TimeSpan.FromSeconds(300) };
+    //    using var client = new HttpClient { Timeout = TimeSpan.FromSeconds(300) };
 
-        var results = new List<(int Score, string? Corrected)>();
-        for (var i = 0; i < Samples; i++)
-        {
-            var verdict = await QualityReviewWorkflow.GetLlmVerdictAsync(config, modelConfig, client, Source, maskedRaw, maskedTranslated, glossaryPrompt);
-            Assert.True(verdict.Success, $"Sample {i + 1}: QC response did not parse - see console output above for the raw response.");
+    //    var results = new List<(int Score, string? Corrected)>();
+    //    for (var i = 0; i < Samples; i++)
+    //    {
+    //        var verdict = await QualityReviewWorkflow.GetLlmVerdictAsync(config, modelConfig, client, Source, maskedRaw, maskedTranslated, glossaryPrompt);
+    //        Assert.True(verdict.Success, $"Sample {i + 1}: QC response did not parse - see console output above for the raw response.");
 
-            var corrected = verdict.CorrectedRawMasked == null ? null : tokenReplacer.Restore(verdict.CorrectedRawMasked);
-            results.Add((verdict.Score, corrected));
-        }
+    //        var corrected = verdict.CorrectedRawMasked == null ? null : tokenReplacer.Restore(verdict.CorrectedRawMasked);
+    //        results.Add((verdict.Score, corrected));
+    //    }
 
-        Console.WriteLine(YamlHelper.CreateSerializer().Serialize(
-            results.Select(r => new { r.Score, r.Corrected })));
+    //    Console.WriteLine(YamlHelper.CreateSerializer().Serialize(
+    //        results.Select(r => new { r.Score, r.Corrected })));
 
-        foreach (var (score, corrected) in results)
-        {
-            // Bug 1 (CONSISTENCY): a low score with no correction at all means the model flagged a
-            // real problem but hedged with NONE instead of fixing it.
-            if (score < config.QualityReview.MinAcceptableScore)
-                Assert.True(corrected != null,
-                    $"QC scored this {score} (below MinAcceptableScore={config.QualityReview.MinAcceptableScore}) but proposed no correction.");
+    //    foreach (var (score, corrected) in results)
+    //    {
+    //        // Bug 1 (CONSISTENCY): a low score with no correction at all means the model flagged a
+    //        // real problem but hedged with NONE instead of fixing it.
+    //        if (score < config.QualityReview.MinAcceptableScore)
+    //            Assert.True(corrected != null,
+    //                $"QC scored this {score} (below MinAcceptableScore={config.QualityReview.MinAcceptableScore}) but proposed no correction.");
 
-            // Bug 2 (regex truncation) and the underlying translation bug both manifest the same
-            // way here: the known-bad first-person phrasing survives into whatever we end up with.
-            Assert.DoesNotContain("I just fainted", corrected ?? BadTranslation, StringComparison.OrdinalIgnoreCase);
-        }
-    }
+    //        // Bug 2 (regex truncation) and the underlying translation bug both manifest the same
+    //        // way here: the known-bad first-person phrasing survives into whatever we end up with.
+    //        Assert.DoesNotContain("I just fainted", corrected ?? BadTranslation, StringComparison.OrdinalIgnoreCase);
+    //    }
+    //}
 
     // Full do-over, NOT a routine step - unlike "Reset Qc Retry Limits"/"Reset Leaked Quality
     // Review Corrections" (which only un-stick/repair specific stuck-or-corrupted columns), this

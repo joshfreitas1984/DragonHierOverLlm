@@ -121,7 +121,7 @@
 - raw: "孟婆娑"
   splits:
   - text: "孟婆娑"
-    translated: "Meng Posa"
+    translated: "Meng Posuo"
 - raw: "常无黑"
   splits:
   - text: "常无黑"
@@ -133,7 +133,7 @@
 - raw: "牛头"
   splits:
   - text: "牛头"
-    translated: "Bull Head"
+    translated: "Ox Head"
 - raw: "马面"
   splits:
   - text: "马面"
@@ -161,7 +161,7 @@
 - raw: "如是大师"
   splits:
   - text: "如是大师"
-    translated: "Master Lisi"
+    translated: "Master Rushi"
 - raw: "张青蓬"
   splits:
   - text: "张青蓬"
@@ -173,11 +173,11 @@
 - raw: "宋廉庭"
   splits:
   - text: "宋廉庭"
-    translated: "Song Lian Ting"
+    translated: "Song Lianting"
 - raw: "项元霸"
   splits:
   - text: "项元霸"
-    translated: "Yang Yuanba"
+    translated: "Xiang Yuanba"
 - raw: "宇文极"
   splits:
   - text: "宇文极"
@@ -289,11 +289,11 @@
 - raw: "卓远望"
   splits:
   - text: "卓远望"
-    translated: "Zhao Yuwang"
+    translated: "Zhuo Yuanwang"
 - raw: "陆离"
   splits:
   - text: "陆离"
-    translated: "Luli"
+    translated: "Lu Li"
 - raw: "卫海川"
   splits:
   - text: "卫海川"
@@ -361,23 +361,23 @@
 - raw: "厉苍穹"
   splits:
   - text: "厉苍穹"
-    translated: "Liyi Tianqiu"
+    translated: "Li Cangqiong"
 - raw: "迟百城"
   splits:
   - text: "迟百城"
-    translated: "Late Baicheng"
+    translated: "Chi Baicheng"
 - raw: "费彬"
   splits:
   - text: "费彬"
-    translated: "Fe Bin"
+    translated: "Fei Bin"
 - raw: "岳无畏"
   splits:
   - text: "岳无畏"
-    translated: "Yue Wowe"
+    translated: "Yue Wuwei"
 - raw: "高首"
   splits:
   - text: "高首"
-    translated: "High Lord"
+    translated: "Gao Shou"
 - raw: "王彪"
   splits:
   - text: "王彪"
@@ -385,7 +385,7 @@
 - raw: "马悍"
   splits:
   - text: "马悍"
-    translated: "Strongblade"
+    translated: "Ma Han"
 - raw: "凤南飞"
   splits:
   - text: "凤南飞"
@@ -445,7 +445,7 @@
 - raw: "朱全"
   splits:
   - text: "朱全"
-    translated: "Chu Quan"
+    translated: "Zhu Quan"
 - raw: "严达开"
   splits:
   - text: "严达开"
@@ -473,7 +473,7 @@
 - raw: "孟经世"
   splits:
   - text: "孟经世"
-    translated: "Ben Jingshi"
+    translated: "Meng Jingshi"
 - raw: "郭淮"
   splits:
   - text: "郭淮"
@@ -605,23 +605,23 @@
 - raw: "赵胤宗"
   splits:
   - text: "赵胤宗"
-    translated: "Zhao Yizong"
+    translated: "Zhao Yinzong"
 - raw: "中年天残"
   splits:
   - text: "中年天残"
-    translated: "Middle‑aged Tian Can"
+    translated: "Middle aged Tian Can"
 - raw: "中年地缺"
   splits:
   - text: "中年地缺"
-    translated: "Middle‑aged Di Que"
+    translated: "Middle aged Di Que"
 - raw: "中年南丑"
   splits:
   - text: "中年南丑"
-    translated: "Middle‑aged Nan Chou"
+    translated: "Middle aged Nan Chou"
 - raw: "中年北怪"
   splits:
   - text: "中年北怪"
-    translated: "Middle‑aged Bei Guai"
+    translated: "Middle aged Bei Guai"
 - raw: "赵义仁"
   splits:
   - text: "赵义仁"
@@ -633,7 +633,7 @@
 - raw: "中年赵胤宗"
   splits:
   - text: "中年赵胤宗"
-    translated: "Middle‑aged Zhao Yizong"
+    translated: "Middle aged Zhao Yinzong"
 - raw: "傅砚之"
   splits:
   - text: "傅砚之"

@@ -288,11 +288,11 @@
   splits:
   - split: 2
     text: "此马色如霜纨，形如秋雁，毛发如白练，高首而脩颈，气质如霜，寒气逼人"
-    translated: "This horse's coat is as white as frosty silk, its form like that of autumn geese, its hair as pure as snow, with a tall and elongated neck. Its temperament is like frost, chilling to the bone."
-    qcReviewedText: "This horse's coat is as white as frosty silk, its form like that of autumn geese, its hair as pure as snow, with a tall and elongated neck. Its temperament is like frost, chilling to the bone."
-    qcTranslated: "This horse's coat is the color of frosty silk, its form like autumn geese, its hair like white silk, with a high head and long neck. Its temperament is like frost, its coldness piercing."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "This horse has a color as pale as frost on silk, a form like autumn geese, hair as white as silk ribbons, with a tall head and long neck. Its demeanor is like frost, exuding a chilling aura."
+    qcReviewedText: "This horse has a color as pale as frost on silk, a form like autumn geese, hair as white as silk ribbons, with a tall head and long neck. Its demeanor is like frost, exuding a chilling aura."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "29,玉花骢,毛色青白相杂，身形优雅健美之骏马，堪称马中之美人也,3,60,30,60,50,1600"
   splits:
   - split: 2

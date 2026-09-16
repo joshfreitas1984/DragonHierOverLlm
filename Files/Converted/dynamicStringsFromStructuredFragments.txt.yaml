@@ -374,12 +374,10 @@
   splits:
   - text: "强盗头目"
     translated: "Bandit leader"
-    qcReviewedText: "Bandit leader&Randomly"
-    qcTranslated: "Bandit Leader&Random"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcReviewedText: "Bandit leader & Randomly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "随机"
     translated: "Randomly"
@@ -399,9 +397,9 @@
   splits:
   - text: "怪盗"
     translated: "Thief King"
-    qcReviewedText: "Thief King&Randomly"
+    qcReviewedText: "Thief King & Randomly"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "随机"
@@ -430,9 +428,9 @@
   splits:
   - text: "恶贼头目"
     translated: "Chief villain"
-    qcReviewedText: "Chief villain&Randomly"
+    qcReviewedText: "Chief villain & Randomly"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "随机"
@@ -451,9 +449,9 @@
   splits:
   - text: "恶霸头目"
     translated: "Bullseye Boss"
-    qcReviewedText: "Bullseye Boss&Randomly"
+    qcReviewedText: "Bullseye Boss & Randomly"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "随机"
@@ -464,9 +462,9 @@
   splits:
   - text: "杀手头目"
     translated: "Boss Killer"
-    qcReviewedText: "Boss Killer&Randomly"
+    qcReviewedText: "Boss Killer & Randomly"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "随机"
@@ -485,12 +483,10 @@
   splits:
   - text: "盗贼"
     translated: "Thief"
-    qcReviewedText: "Thief&Randomly"
-    qcTranslated: "Thief&Random"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcReviewedText: "Thief & Randomly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "随机"
     translated: "Randomly"
@@ -508,9 +504,9 @@
   splits:
   - text: "逃犯"
     translated: "Fugitive"
-    qcReviewedText: "Fugitive&Randomly"
+    qcReviewedText: "Fugitive & Randomly"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "随机"
@@ -521,9 +517,9 @@
   splits:
   - text: "邪道头目"
     translated: "Chief Heretic Leader"
-    qcReviewedText: "Chief Heretic Leader&Randomly"
+    qcReviewedText: "Chief Heretic Leader & Randomly"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "随机"
@@ -550,12 +546,10 @@
   splits:
   - text: "马贼头目"
     translated: "Bandit leader"
-    qcReviewedText: "Bandit leader&Randomly"
-    qcTranslated: "Bandit Leader & Random"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcReviewedText: "Bandit leader & Randomly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "随机"
     translated: "Randomly"
@@ -573,12 +567,10 @@
   splits:
   - text: "魔头"
     translated: "Demon king"
-    qcReviewedText: "Demon king&Randomly"
-    qcTranslated: "Demon Boss & Random"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcReviewedText: "Demon king & Randomly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "随机"
     translated: "Randomly"

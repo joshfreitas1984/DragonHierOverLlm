@@ -1621,11 +1621,10 @@
   splits:
   - text: "#PlayerName#，见字如面。近来长乐帮弟子已集结完毕，不日便会兵临"
     translated: "#PlayerName#, see the words as if I were facing you. Recently, the disciples of the Changle Gang have gathered, and they will soon be at the gates."
-    qcReviewedText: "#PlayerName#, see the words as if I were facing you. Recently, the disciples of the Changle Gang have gathered, and they will soon be at the gates.<b>Hangzhou </b>At the city gate, I implore you not to forget our agreement, and bring the #PlayerForceName# elites to assist.\\nIf we can successfully recover Hangzhou and capture Lu Yulan, I will surely repay your grace with a thousand acts of kindness!"
-    qcTranslated: "#PlayerName#, these words serve as a face‑to‑face greeting. Recently, the disciples of the Changle Gang have finished assembling and will soon lay siege to the city of <b>Hangzhou</b>. I beg you not to forget our promise and to bring the elite of #PlayerForceName# to support us.\\nIf we can successfully reclaim Hangzhou and capture the traitor Lu Yulin, I shall surely repay your kindness a thousand times over!"
+    qcReviewedText: "#PlayerName#, see the words as if I were facing you. Recently, the disciples of the Changle Gang have gathered, and they will soon be at the gates.<b>Hangzhou </b>At the city gate, I implore you not to forget our agreement, and bring the #PlayerForceName# elites to assist.\\nIf we can successfully reclaim Hangzhou and capture the villain Lu Yulin, this lady will surely be eternally grateful and repay your kindness!"
+    qcTranslated: "#PlayerName#, seeing these words is like meeting me in person. The disciples of the Changle Gang have finished gathering, and in a few days they will march on <b>Hangzhou</b>. I implore you not to forget our agreement; please lead the elite forces of #PlayerForceName# to support us.\\nIf we can successfully reclaim Hangzhou and capture the villain Lu Yulin, this lady will surely repay your kindness with the utmost gratitude!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "杭州"
@@ -1635,7 +1634,7 @@
     translated: "At the city gate, I implore you not to forget our agreement, and bring the #PlayerForceName# elites to assist."
   - subIndex: 3
     text: "若能成功光复杭州，擒拿贼人卢玉麟，妾身必当结草衔环以报君恩！"
-    translated: "If we can successfully recover Hangzhou and capture Lu Yulan, I will surely repay your grace with a thousand acts of kindness!"
+    translated: "If we can successfully reclaim Hangzhou and capture the villain Lu Yulin, this lady will surely be eternally grateful and repay your kindness!"
   templates:
   - template: "{0}<b>{1}</b>{2}\\n{3}"
 - raw: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你<b>尽快回门派</b>商议大事！"
@@ -1870,18 +1869,17 @@
   splits:
   - text: "我们兄弟三个在"
     translated: "We three brothers are"
-    qcReviewedText: "We three brothers are <b>Jinyang </b>Found the thief's head #PlayerName#, please come quickly to apprehend him!"
-    qcTranslated: "The three of us, brothers, have tracked the ringleader Gao Shou to <b>Jinyang</b>. We hope #PlayerName# will come quickly to help us capture him!"
+    qcReviewedText: "We three brothers are <b>Jinyang </b>Found the trail of that thief Gao Shou; I hope #PlayerName# comes quickly to help apprehend him!"
+    qcTranslated: "We three brothers have found the trail of that thief Gao Shou in <b>Jinyang</b>; I hope #PlayerName# comes quickly to help apprehend him!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "晋阳"
     translated: "Jinyang"
   - subIndex: 2
     text: "寻得了那贼人高首的踪迹，还望#PlayerName#速来一道擒贼！"
-    translated: "Found the thief's head #PlayerName#, please come quickly to apprehend him!"
+    translated: "Found the trail of that thief Gao Shou; I hope #PlayerName# comes quickly to help apprehend him!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，听闻师傅死讯，我也不准备独活。\\n我准备于近日自尽，去九泉下陪师傅作伴。\\n还望你能赶来<b>飞龙门</b>，与我见上最后一面。"
@@ -2089,12 +2087,11 @@
 - raw: "#PlayerName#，听闻你此前击败了血衣盟西统领上官凤，并见到了貌似是赵胤宗的神秘老将。\\n还望你能来<b>丐帮</b>一趟道明情况，郭大侠与金先生交情匪浅，或许能借此说服他透露金先生之下落。"
   splits:
   - text: "#PlayerName#，听闻你此前击败了血衣盟西统领上官凤，并见到了貌似是赵胤宗的神秘老将。"
-    translated: "#PlayerName#, you heard about your previous victory over Shangguan Feng, the West Leader of the Blood Robe Alliance, and your encounter with what seems to be Zhao Yizong's mysterious old general."
-    qcReviewedText: "#PlayerName#, you heard about your previous victory over Shangguan Feng, the West Leader of the Blood Robe Alliance, and your encounter with what seems to be Zhao Yizong's mysterious old general.\\nI hope you can come <b>Beggar Sect </b>A journey to elucidate the situation might reveal that Great Hero Guo and Mr. Jin have a deep friendship, perhaps enabling him to persuade Mr. Jin to disclose his whereabouts."
-    qcTranslated: "#PlayerName#, we have heard that you previously defeated Shangguan Feng, the Western Commander of the Blood Robe Alliance, and encountered a mysterious old general who appears to be the late Emperor Zhao Yinzong.\\nPlease come to the <b>Beggar Sect</b> to explain the situation. Great Hero Guo and Mr. Jin have a deep friendship, so perhaps we can use this to persuade him to reveal Mr. Jin's whereabouts."
+    translated: "#PlayerName#, I heard that you previously defeated Blood Robe Alliance's Western Commander Shangguan Feng and met a mysterious old general who seems to be Zhao Yinzong."
+    qcReviewedText: "#PlayerName#, I heard that you previously defeated Blood Robe Alliance's Western Commander Shangguan Feng and met a mysterious old general who seems to be Zhao Yinzong.\\nI hope you can come <b>Beggar Sect </b>A journey to elucidate the situation might reveal that Great Hero Guo and Mr. Jin have a deep friendship, perhaps enabling him to persuade Mr. Jin to disclose his whereabouts."
+    qcTranslated: "#PlayerName#, I heard that you previously defeated Blood Robe Alliance's Western Commander Shangguan Feng and met a mysterious old general who seems to be Zhao Yinzong.\\nI hope you can come to the <b>Beggar Sect</b> to explain the situation. Great Hero Guo and Mr. Jin are close friends, so perhaps he can be persuaded to reveal Mr. Jin's whereabouts."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "还望你能来"
@@ -2128,12 +2125,11 @@
 - raw: "#PlayerName#，听闻血衣盟东统领卢玉麟已经伏诛，其在扬州城内的总舵位置也被你得知。\\n师傅想请你和武绝义一道会于<b>神机门</b>内，共商抓捕计心狂，铲除血衣盟之大计。"
   splits:
   - text: "#PlayerName#，听闻血衣盟东统领卢玉麟已经伏诛，其在扬州城内的总舵位置也被你得知。"
-    translated: "#PlayerName#, you've learned that Lu Yulan, the eastern commander of the Blood Cloth Alliance, has been executed. His main base in Yangzhou has also been revealed to you."
-    qcReviewedText: "#PlayerName#, you've learned that Lu Yulan, the eastern commander of the Blood Cloth Alliance, has been executed. His main base in Yangzhou has also been revealed to you.\\nMaster wants to have you meet Wu Jueyi together.<b>Divine Mechanism Sect </b>Inside, they discussed the plan to capture Ji Xinkuang and eliminate the Blood Robe Alliance."
-    qcTranslated: "#PlayerName#, word has reached us that Lu Yulin, the Eastern Commander of the Blood Robe Alliance, has been executed, and the location of its main headquarters in Yangzhou has been identified.\\nMaster wishes to have you and Wu Jueyi meet at the <b>Divine Mechanism Sect</b> to discuss the grand plan of capturing Ji Xinkuang and eradicating the Blood Robe Alliance."
+    translated: "#PlayerName#, I heard that Blood Robe Alliance's Eastern Commander Lu Yulin has already been dealt with, and you have also learned the location of their main headquarters in Yangzhou."
+    qcReviewedText: "#PlayerName#, I heard that Blood Robe Alliance's Eastern Commander Lu Yulin has already been dealt with, and you have also learned the location of their main headquarters in Yangzhou.\\nMaster wants to have you meet Wu Jueyi together.<b>Divine Mechanism Sect </b>Inside, they discussed the plan to capture Ji Xinkuang and eliminate the Blood Robe Alliance."
+    qcTranslated: "#PlayerName#, I have heard that Lu Yulin, the Eastern Commander of the Blood Robe Alliance, has been executed, and that you have discovered the location of their main headquarters in Yangzhou.\\nMaster wishes for you to meet with Wu Jueyi inside the <b>Divine Mechanism Sect</b> to jointly discuss the grand plan to capture Ji Xinkuang and eradicate the Blood Robe Alliance."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "师傅想请你和武绝义一道会于"
@@ -2171,18 +2167,17 @@
   splits:
   - text: "#PlayerName#，我与武殿主已准备妥当。咱们便如此前约定，在"
     translated: "#PlayerName#, I have prepared with Martial Pinnacle Lord as agreed. Let's proceed as we planned."
-    qcReviewedText: "#PlayerName#, I have prepared with Martial Pinnacle Lord as agreed. Let's proceed as we planned.<b>Within the city of Jinyang </b>Converge. Then head to Longquan Temple to inquire with Abbot Treasure Light about Zhao Yizong's whereabouts."
-    qcTranslated: "#PlayerName#, I have prepared with Martial Pinnacle Lord. Let's proceed as previously agreed and converge within <b>Jinyang City</b>. Afterwards, we will head to Longquan Temple together to ask Abbot Xunbaoguang about Zhao Yinzong's whereabouts."
+    qcReviewedText: "#PlayerName#, I have prepared with Martial Pinnacle Lord as agreed. Let's proceed as we planned.<b>Within the city of Jinyang </b>Meet up. Then go to Longquan Temple together to ask Master Baoguang about Zhao Yinzong's whereabouts."
+    qcTranslated: "#PlayerName#, I and Lord Wu of the Martial Hall are ready. As agreed, let's meet up <b>within the city of Jinyang</b>. Then we will go to Longquan Temple together to ask Abbot Baoguang about Zhao Yinzong's whereabouts."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "晋阳城内"
     translated: "Within the city of Jinyang"
   - subIndex: 2
     text: "汇合。随后一同前往龙泉寺，寻宝光方丈询问赵胤宗下落去。"
-    translated: "Converge. Then head to Longquan Temple to inquire with Abbot Treasure Light about Zhao Yizong's whereabouts."
+    translated: "Meet up. Then go to Longquan Temple together to ask Master Baoguang about Zhao Yinzong's whereabouts."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我在<b>武当派南方</b>一带巡逻之际，突遭逐鹿盟袭击，一时难以脱身。\\n还望你尽快率众前来援救，感激不尽！"
@@ -2726,18 +2721,17 @@
   splits:
   - text: "近来"
     translated: "Recently"
-    qcReviewedText: "Recently <b>Yangzhou city inside </b>Pandemics raging unchecked, despite repeated efforts to contain them, Ruan Zhi and I are currently tracking the source of infection, which seems to be associated with Black Organization's Five Ghosts Bai Bicheng. I hope #PlayerName# will come and help us stop their evil deeds!"
-    qcTranslated: "Recently, a plague has been ravaging <b>Yangzhou</b>, defying all efforts to contain it. Ruan Zhi and I are tracking the source of the infection, which appears to be linked to the Black Society's Five Ghosts, Chi Baicheng. I hope #PlayerName# will come forward to help us stop his evil deeds!"
+    qcReviewedText: "Recently <b>Yangzhou city inside </b>An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
+    qcTranslated: "Recently, <b>inside Yangzhou city</b>, an epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "扬州城内"
     translated: "Yangzhou city inside"
   - subIndex: 2
     text: "疫病横行，屡治不止，我与阮芷正在追查传染源头，似乎与黑道五鬼迟百城有关。还望#PlayerName#前来，同我等一道阻止其恶行！"
-    translated: "Pandemics raging unchecked, despite repeated efforts to contain them, Ruan Zhi and I are currently tracking the source of infection, which seems to be associated with Black Organization's Five Ghosts Bai Bicheng. I hope #PlayerName# will come and help us stop their evil deeds!"
+    translated: "An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我这段时间一直躲在<b>怀柔村西方</b>苦练武艺。但近来似乎有邪道寻得我行踪，只怕又要来抢夺神功。还望你能前来助我一臂之力！"
@@ -3002,13 +2996,11 @@
 - raw: "#PlayerName#，计心狂已密信孟婆娑，准备引老夫去他们的陷阱中。\\n你和张文馨便如此前约定，在后面远远跟着压阵。切记莫要轻举妄动，露了马脚！"
   splits:
   - text: "#PlayerName#，计心狂已密信孟婆娑，准备引老夫去他们的陷阱中。"
-    translated: "#PlayerName#, Ji Xinkuang has sent a secret letter to Meng Poshuo, planning to lure Old Man into their trap."
-    qcReviewedText: "#PlayerName#, Ji Xinkuang has sent a secret letter to Meng Poshuo, planning to lure Old Man into their trap.\\nYou and Zhang Wenxin will follow behind, as previously agreed, keeping a distance to hold the position. Remember, do not act rashly and give away your presence!"
-    qcTranslated: "#PlayerName#, Ji Xinkuang has already sent a secret letter to Meng Poshuo, preparing to lure Old Man into their trap.\\nYou and Zhang Wenxin will follow from afar behind as previously agreed to hold the rear. Remember not to act rashly or reveal your movements!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    translated: "#PlayerName#, Ji Xinkuang has sent a secret letter to Meng Posuo, preparing to lure me into their trap."
+    qcReviewedText: "#PlayerName#, Ji Xinkuang has sent a secret letter to Meng Posuo, preparing to lure me into their trap.\\nYou and Zhang Wenxin will follow behind, as previously agreed, keeping a distance to hold the position. Remember, do not act rashly and give away your presence!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "你和张文馨便如此前约定，在后面远远跟着压阵。切记莫要轻举妄动，露了马脚！"
     translated: "You and Zhang Wenxin will follow behind, as previously agreed, keeping a distance to hold the position. Remember, do not act rashly and give away your presence!"
@@ -3017,13 +3009,12 @@
 - raw: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在<b>少林寺</b>内！\\n老子先行一步，你和文逸真人随后赶来，一同会会这家伙去！"
   splits:
   - text: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在"
-    translated: "Though Father did not find any clues about his cousin Zhao Yizong, he did discover a person who is likely closely related, and this person is currently hiding."
-    qcReviewedText: "Though Father did not find any clues about his cousin Zhao Yizong, he did discover a person who is likely closely related, and this person is currently hiding.<b>Shaolin Temple </b>In!\\nOld Immortal Wen Yi, you should follow behind and catch up! Go meet this guy with me!"
-    qcTranslated: "Though I didn't find any clues about my brother Zhao Yizong, I did find a person likely closely connected to him, and he's currently hiding in <b>Shaolin Temple</b>!\\nI'll go ahead first. You and Immortal Wen Yi should follow close behind and meet up with this guy together!"
+    translated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here."
+    qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\\nOld Immortal Wen Yi, you should follow behind and catch up! Go meet this guy with me!"
+    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\\nI'll go ahead first. You and Immortal Wen Yi should follow behind and catch up! Let's go meet this guy together!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -3052,18 +3043,17 @@
   splits:
   - text: "近日一路追捕，终于在"
     translated: "Recently, we've been on their tail, and finally caught up with them today."
-    qcReviewedText: "Recently, we've been on their tail, and finally caught up with them today.<b>Northern Yangzhou </b>Caught up with Wang Lang's remnants. This person is cunning, and I fear there might be a trap. I hope #PlayerName# will come to reinforce us, so we can join forces to eliminate this great evil together."
-    qcTranslated: "After days of pursuit, we finally caught up with Wang Lun's remnants in <b>Northern Yangzhou</b>. This man is full of tricks, and I fear there may be a trap. I hope #PlayerName# will come to oversee the situation, so we can join forces to eliminate this great threat."
+    qcReviewedText: "Recently, we've been on their tail, and finally caught up with them today.<b>Northern Yangzhou </b>I caught up with Wang Lun's remnants. This person is cunning and deceitful; I fear there may be a trap. I hope #PlayerName# will come to support us so we can work together to eliminate this great threat."
+    qcTranslated: "Recently, we've been on their tail, and finally caught up with Wang Lun's remnants in <b>Northern Yangzhou</b>. This person is cunning and deceitful; I fear there may be a trap. I hope #PlayerName# will come to support us so we can work together to eliminate this great threat."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "扬州北方"
     translated: "Northern Yangzhou"
   - subIndex: 2
     text: "追上了王伦残党。此人诡计多端，我担心其中有诈，还望#PlayerName#前来压阵，好联手共除此大害。"
-    translated: "Caught up with Wang Lang's remnants. This person is cunning, and I fear there might be a trap. I hope #PlayerName# will come to reinforce us, so we can join forces to eliminate this great evil together."
+    translated: "I caught up with Wang Lun's remnants. This person is cunning and deceitful; I fear there may be a trap. I hope #PlayerName# will come to support us so we can work together to eliminate this great threat."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我在<b>应天城中</b>被一伙恶人盯上，似乎欲行不轨之事。还望你尽快赶来搭救，感激不尽！"
@@ -3126,12 +3116,11 @@
 - raw: "#PlayerName#，我在卢玉麟身边潜伏多时，已深得其信任。近来此人异动不断，血衣盟可能正谋划一桩大事！还望你和郭兄尽快来<b>长乐帮</b>商量对策。"
   splits:
   - text: "#PlayerName#，我在卢玉麟身边潜伏多时，已深得其信任。近来此人异动不断，血衣盟可能正谋划一桩大事！还望你和郭兄尽快来"
-    translated: "#PlayerName#, I have been infiltrating near Lu Yulan for some time and have gained his trust. Recently, this person has been making frequent moves. The Blood Clothing Alliance might be planning a significant event! I hope you and Brother Guo can come as soon as possible."
-    qcReviewedText: "#PlayerName#, I have been infiltrating near Lu Yulan for some time and have gained his trust. Recently, this person has been making frequent moves. The Blood Clothing Alliance might be planning a significant event! I hope you and Brother Guo can come as soon as possible.<b>Changle Gang </b>Discuss strategies"
-    qcTranslated: "#PlayerName#, I have been infiltrating near Lu Yulan for some time and have gained his trust. Recently, this person has been making frequent moves. The Blood Clothing Alliance might be planning a significant event! I hope you and Brother Guo can come to <b>Changle Gang</b> as soon as possible to discuss strategies."
+    translated: "#PlayerName#, I have been undercover near Lu Yulin for a long time and have earned his trust. Lately, he has been acting suspiciously; the Blood Robe Alliance might be planning something big! I hope you and Brother Guo can come quickly."
+    qcReviewedText: "#PlayerName#, I have been undercover near Lu Yulin for a long time and have earned his trust. Lately, he has been acting suspiciously; the Blood Robe Alliance might be planning something big! I hope you and Brother Guo can come quickly.<b>Changle Gang </b>Discuss strategies"
+    qcTranslated: "#PlayerName#, I have been undercover near Lu Yulin for a long time and have earned his trust. Lately, he has been acting suspiciously; the Blood Robe Alliance might be planning something big! I hope you and Brother Guo can come quickly to <b>Changle Gang</b> to discuss strategies."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "长乐帮"
@@ -3180,13 +3169,11 @@
 - raw: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来<b>青城派</b>，与兄弟一同领赏！"
   splits:
   - text: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来"
-    translated: "Heard there's a Cishi coming to commend our brave act of apprehending Yue Wufei. #PlayerName# hurry up."
-    qcReviewedText: "Heard there's a Cishi coming to commend our brave act of apprehending Yue Wufei. #PlayerName# hurry up.<b>Qingcheng Sect</b>, Collect your reward with your Brother!"
-    qcTranslated: "I've heard a Cishi official is coming to commend our righteous act of apprehending Yue Wufei. #PlayerName#, hurry to <b>Qingcheng Sect</b> and claim your reward with your brothers!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    translated: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#."
+    qcReviewedText: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#.<b>Qingcheng Sect</b>, Collect your reward with your Brother!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -3532,12 +3519,11 @@
 - raw: "我们兄弟仨已将贼人高首押送归案了，#PlayerName#速来<b>飞龙门</b>一同领赏！"
   splits:
   - text: "我们兄弟仨已将贼人高首押送归案了，#PlayerName#速来"
-    translated: "We brothers have already delivered the thief Gao to the authorities, #PlayerName# come quickly."
-    qcReviewedText: "We brothers have already delivered the thief Gao to the authorities, #PlayerName# come quickly.<b>Flying Dragon Gate </b>Let's receive the reward together!"
-    qcTranslated: "We brothers have already delivered the bandit Gao Shou to the authorities, #PlayerName# come quickly to <b>Flying Dragon Gate</b> to claim the reward together!"
+    translated: "We three brothers have already apprehended the thief Gao Shou and brought him to justice, #PlayerName#, hurry over!"
+    qcReviewedText: "We three brothers have already apprehended the thief Gao Shou and brought him to justice, #PlayerName#, hurry over!<b>Flying Dragon Gate </b>Let's receive the reward together!"
+    qcTranslated: "We three brothers have already apprehended the thief Gao Shou and brought him to justice, #PlayerName#, hurry over to <b>Flying Dragon Gate</b> to receive the reward together!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "飞龙门"
@@ -3550,19 +3536,18 @@
 - raw: "#PlayerName#，听闻王添翼兄弟已经杀上<b>青城山</b>，恐怕是想和周莫知那老贼同归于尽。\\n项问天兄弟等人已经出发，还望你也多带些人手，一同去为他讨还公道！"
   splits:
   - text: "#PlayerName#，听闻王添翼兄弟已经杀上"
-    translated: "#PlayerName#, hearing that Brother Tianyi has already advanced"
-    qcReviewedText: "#PlayerName#, hearing that Brother Tianyi has already advanced <b>Qingcheng Mountain</b>, He probably wanted to die together with Old Scoundrel Zhou Mozi.\\nXiang Wentian Brother and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
-    qcTranslated: "#PlayerName#, it is said that Brother Tianyi has already stormed <b>Qingcheng Mountain</b>, likely intending to take Old Scoundrel Zhou Mozi down with him.\\nBrother Xiang Wentian and the others have already set off. I hope you will also bring a large retinue to go with them and seek justice for him!"
+    translated: "#PlayerName#, I hear Brother Wang Tianyi has already attacked."
+    qcReviewedText: "#PlayerName#, I hear Brother Wang Tianyi has already attacked.<b>Qingcheng Mountain</b>, Probably wants to die with that old villain, Zhou Mozhi, at the same time.\\nXiang Wentian Brother and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
+    qcTranslated: "#PlayerName#, I hear Brother Wang Tianyi has already attacked <b>Qingcheng Mountain</b>. He probably wants to die with that old villain, Zhou Mozhi.\\nBrother Xiang Wentian and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "青城山"
     translated: "Qingcheng Mountain"
   - subIndex: 2
     text: "，恐怕是想和周莫知那老贼同归于尽。"
-    translated: ", He probably wanted to die together with Old Scoundrel Zhou Mozi."
+    translated: ", Probably wants to die with that old villain, Zhou Mozhi, at the same time."
   - subIndex: 3
     text: "项问天兄弟等人已经出发，还望你也多带些人手，一同去为他讨还公道！"
     translated: "Xiang Wentian Brother and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
@@ -3590,29 +3575,27 @@
   splits:
   - text: "#PlayerName#，我爹在"
     translated: "#PlayerName#, my father is here"
-    qcReviewedText: "#PlayerName#, my father is here <b>Qingyuan Township West </b>Seemingly on the verge of catching up with the Black Society's Five Devils. I hope you can come to meet me and surely prevent Father from accidentally injuring Brother Tianyi."
-    qcTranslated: "#PlayerName#, my father is near <b>the west of Qingyuan Township</b>, on the verge of catching up with the Black Society's Five Devils. I hope you can come to meet me so we can stop Father from accidentally injuring Brother Tianyi."
+    qcReviewedText: "#PlayerName#, my father is here <b>Qingyuan Township West </b>I'm about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
+    qcTranslated: "#PlayerName#, my father is in <b>Qingyuan Township West</b> and is about to catch up with the Black Path Five Ghosts. Please come and join me; we must stop Father from accidentally harming Brother Wang Tianyi."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "清远乡西方"
     translated: "Qingyuan Township West"
   - subIndex: 2
     text: "眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
-    translated: "Seemingly on the verge of catching up with the Black Society's Five Devils. I hope you can come to meet me and surely prevent Father from accidentally injuring Brother Tianyi."
+    translated: "I'm about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在<b>应天北方</b>一带将其截住。\\n望你前来助我们一臂之力，联手将此人捉拿归案！"
   splits:
   - text: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在"
-    translated: "#PlayerName#, we have been chasing the villain Lu Yulan all the way, and we are finally here."
-    qcReviewedText: "#PlayerName#, we have been chasing the villain Lu Yulan all the way, and we are finally here.<b>Northern Yingtian </b>One stopped it \\nI look forward to your help in apprehending this person!"
-    qcTranslated: "#PlayerName#, we have pursued the villain Lu Yulin all the way and have now cornered him in the <b>Northern Yingtian</b> area. \\nWe look forward to your help in joining forces to capture him and bring him to justice!"
+    translated: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now he is here."
+    qcReviewedText: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now he is here.<b>Northern Yingtian </b>One stopped it \\nI look forward to your help in apprehending this person!"
+    qcTranslated: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now we have cornered him in the <b>Northern Yingtian</b> area.\\nI look forward to your help in apprehending this person!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "应天北方"
@@ -3646,12 +3629,11 @@
 - raw: "#PlayerName#，王添翼兄弟就要被发配充军了，咱们这就去<b>成都</b>汇合，准备劫狱大计！"
   splits:
   - text: "#PlayerName#，王添翼兄弟就要被发配充军了，咱们这就去"
-    translated: "#PlayerName#, Brother Tianyi is about to be sent to the frontier as a soldier. Let's go now."
-    qcReviewedText: "#PlayerName#, Brother Tianyi is about to be sent to the frontier as a soldier. Let's go now.<b>Chengdu </b>Converge and prepare for the great prison break!"
-    qcTranslated: "#PlayerName#, Brother Wang Tianyi is about to be sent to the frontier as a conscript. Let's head to <b>Chengdu</b> to regroup and prepare for the prison break!"
+    translated: "#PlayerName#, Brother Wang Tianyi is about to be exiled, let's go right away."
+    qcReviewedText: "#PlayerName#, Brother Wang Tianyi is about to be exiled, let's go right away.<b>Chengdu </b>Converge and prepare for the great prison break!"
+    qcTranslated: "#PlayerName#, Brother Wang Tianyi is about to be exiled to serve as a convict soldier. Let's head to <b>Chengdu</b> right away to rendezvous and prepare for the great prison break!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "成都"
@@ -3682,12 +3664,11 @@
 - raw: "#PlayerName#！最近听到风声，王添翼兄弟在<b>大理北方</b>被唐门和青城派堵上了，咱们得赶紧前去搭救才行。"
   splits:
   - text: "#PlayerName#！最近听到风声，王添翼兄弟在"
-    translated: "#PlayerName#! Recently heard that Brother Tianyi has"
-    qcReviewedText: "#PlayerName#! Recently heard that Brother Tianyi has <b>Northern Dali </b>Blocked by the Tang Clan and Qingcheng Sect, we need to hurry and go rescue them."
-    qcTranslated: "#PlayerName#! I've recently heard rumors that Brother Tianyi was blocked by the Tang Clan and the Qingcheng Sect in <b>northern Dali</b>. We must hurry to rescue him."
+    translated: "#PlayerName#! I've heard some rumors recently. Brother Wang Tianyi is in..."
+    qcReviewedText: "#PlayerName#! I've heard some rumors recently. Brother Wang Tianyi is in...<b>Northern Dali </b>Blocked by the Tang Clan and Qingcheng Sect, we need to hurry and go rescue them."
+    qcTranslated: "#PlayerName#! I've heard some rumors recently. Brother Wang Tianyi has been cornered by the Tang Clan and Qingcheng Sect in <b>Northern Dali</b>. We need to hurry over there to rescue him."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "大理北方"
@@ -3700,12 +3681,11 @@
 - raw: "#PlayerName#！我刚听说王添翼兄弟被抓的消息，真是岂有此理！咱们赶快去<b>成都</b>汇合，你和我说说到底是怎么回事！"
   splits:
   - text: "#PlayerName#！我刚听说王添翼兄弟被抓的消息，真是岂有此理！咱们赶快去"
-    translated: "#PlayerName#!I just heard that Brother Tianyi has been arrested. This is outrageous! Let's go right away."
-    qcReviewedText: "#PlayerName#!I just heard that Brother Tianyi has been arrested. This is outrageous! Let's go right away.<b>Chengdu </b>Meet up, tell me exactly what's going on!"
-    qcTranslated: "#PlayerName#! I just heard that Brother Tianyi has been arrested. This is outrageous! Let's hurry to <b>Chengdu </b>to meet up. Tell me exactly what happened!"
+    translated: "#PlayerName#! I just heard that Brother Wang Tianyi was arrested! How outrageous! Let's go there right away!"
+    qcReviewedText: "#PlayerName#! I just heard that Brother Wang Tianyi was arrested! How outrageous! Let's go there right away!<b>Chengdu </b>Meet up, tell me exactly what's going on!"
+    qcTranslated: "#PlayerName#! I just heard the news that Brother Wang Tianyi was arrested. How outrageous! Let's hurry to <b>Chengdu</b> to meet up, and tell me exactly what happened!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "成都"
@@ -3719,18 +3699,17 @@
   splits:
   - text: "#PlayerName#！我在"
     translated: "#PlayerName#! I am"
-    qcReviewedText: "#PlayerName#! I am <b>Northern Hangzhou </b>Now that we've located the Grinning Ghost, I hope you'll join me in intercepting this person. We must find out exactly what relation he has to Brother Tianyi!"
-    qcTranslated: "#PlayerName#! I found traces of the Grinning Ghost in <b>Northern Hangzhou</b>. I hope you'll join me in intercepting this person. We must find out exactly what relation he has to Brother Tianyi!"
+    qcReviewedText: "#PlayerName#! I am <b>Northern Hangzhou </b>I've found a lead on Laughing Demon's whereabouts. I hope you can come and help intercept him, and make sure to find out what his relationship is with Brother Wang Tianyi!"
+    qcTranslated: "#PlayerName#! I have found a lead on the Laughing Demon's whereabouts in <b>Northern Hangzhou</b>. Please come and help intercept him. We must find out what his relationship is with Brother Wang Tianyi!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "杭州北方"
     translated: "Northern Hangzhou"
   - subIndex: 2
     text: "寻得了笑面鬼的踪迹，还望你来一道截住此人，定要问清他跟王添翼兄弟是什么关系！"
-    translated: "Now that we've located the Grinning Ghost, I hope you'll join me in intercepting this person. We must find out exactly what relation he has to Brother Tianyi!"
+    translated: "I've found a lead on Laughing Demon's whereabouts. I hope you can come and help intercept him, and make sure to find out what his relationship is with Brother Wang Tianyi!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "<b>第二届泰岳大典</b>已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
@@ -3749,13 +3728,12 @@
 - raw: "上次被岳无畏侥幸逃脱，这次总算又在<b>成都</b>追上这狗贼。我想到个绝妙的捉贼之策，只是还缺两位帮手。望#PlayerName#与添翼兄一道前来相助，合咱们三人之力定能一举擒贼！"
   splits:
   - text: "上次被岳无畏侥幸逃脱，这次总算又在"
-    translated: "Last time Ye Wowe escaped by a lucky chance, this time we finally managed to catch up with him."
-    qcReviewedText: "Last time Ye Wowe escaped by a lucky chance, this time we finally managed to catch up with him.<b>Chengdu </b>Catch this dog thief. I've come up with a brilliant plan to catch him, but I still need two helpers. I hope #PlayerName# and Brother Tianyi can join us to help out. With the three of us, we're sure to catch the thief in one go!"
-    qcTranslated: "Last time Ye Wuwei escaped by a lucky chance, but this time we finally caught up with this dog thief in <b>Chengdu</b>. I've come up with a brilliant plan to catch him, but I still need two helpers. I hope #PlayerName# and Brother Tianyi can join us to help out. With the three of us, we're sure to catch the thief in one go!"
+    translated: "Last time I narrowly escaped from Yue Wuwei, this time I've finally managed to catch up with him again."
+    qcReviewedText: "Last time I narrowly escaped from Yue Wuwei, this time I've finally managed to catch up with him again.<b>Chengdu </b>Catch this dog thief. I've come up with a brilliant plan to catch him, but I still need two helpers. I hope #PlayerName# and Brother Tianyi can join us to help out. With the three of us, we're sure to catch the thief in one go!"
+    qcTranslated: "Last time Yue Wuwei escaped by a stroke of luck, but this time I've finally caught up with that dog thief in <b>Chengdu</b>. I've come up with a brilliant plan to catch him, but I still need two helpers. I hope #PlayerName# and Brother Tianyi can join me to help out. With the three of us, we're sure to catch the thief in one go!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 82
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
@@ -3767,12 +3745,11 @@
 - raw: "我一路追捕贼人岳无畏，总算在<b>陇西县</b>寻得其踪迹。还请#PlayerName#前来助我一同擒贼！"
   splits:
   - text: "我一路追捕贼人岳无畏，总算在"
-    translated: "I chased after the thief Yue Wuxie all the way, and finally caught up with him."
-    qcReviewedText: "I chased after the thief Yue Wuxie all the way, and finally caught up with him.<b>Longxi County </b>Track down their whereabouts. Please come here, #PlayerName#, to help me catch the thieves!"
-    qcTranslated: "I chased after the thief Yue Wuxie all the way and finally tracked him down in <b>Longxi County</b>. Please come to my aid, #PlayerName#, to help me capture him!"
+    translated: "I have been chasing the bandit Yue Wuwei all along; finally, I caught up to him at"
+    qcReviewedText: "I have been chasing the bandit Yue Wuwei all along; finally, I caught up to him at <b>Longxi County </b>Track down their whereabouts. Please come here, #PlayerName#, to help me catch the thieves!"
+    qcTranslated: "I have been chasing the bandit Yue Wuwei all along; finally, I caught up to him at <b>Longxi County</b>. Please come here, #PlayerName#, to help me catch the thief!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "陇西县"
@@ -3940,12 +3917,11 @@
 - raw: "#PlayerName#，我与吕舞阳兄弟一路追击，终于将曾镇海堵在了<b>江陵城内</b>。\\n还望你尽快前来，与我们一同捉拿此贼！"
   splits:
   - text: "#PlayerName#，我与吕舞阳兄弟一路追击，终于将曾镇海堵在了"
-    translated: "#PlayerName#, I chased with Brother Lv Wuyang and finally cornered Zeng Zhenhai."
-    qcReviewedText: "#PlayerName#, I chased with Brother Lv Wuyang and finally cornered Zeng Zhenhai.<b>Within Jiangling City</b>。\\nI look forward to your swift arrival so we can apprehend this villain together!"
-    qcTranslated: "#PlayerName#, I chased with Brother Lv Wuyang and finally cornered Zeng Zhenhai within <b>Jiangling City</b>.\\nPlease hurry over so we can apprehend this villain together!"
+    translated: "#PlayerName#, I and Brother Lu Wuyang pursued him all the way and finally cornered Zeng Zhenhai."
+    qcReviewedText: "#PlayerName#, I and Brother Lu Wuyang pursued him all the way and finally cornered Zeng Zhenhai.<b>Within Jiangling City</b>。\\nI look forward to your swift arrival so we can apprehend this villain together!"
+    qcTranslated: "#PlayerName#, I and Brother Lu Wuyang pursued him all the way and finally cornered Zeng Zhenhai within <b>Jiangling City</b>.\\nI look forward to your swift arrival so we can apprehend this villain together!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "江陵城内"
@@ -3998,18 +3974,17 @@
   splits:
   - text: "昔日仙居客栈一战后，吕舞阳已逃至"
     translated: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to"
-    qcReviewedText: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to <b>Southern Longxi County </b>One hopes to meet Zheng Zhenhai and the Four Killers here.\\nI hope #PlayerName# brings more people to help this time. We must capture them all."
-    qcTranslated: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang fled to the <b>Southern Longxi County</b> area, likely intending to reunite with Zeng Zhenhai and the Four Assassins there.\\nPlease, #PlayerName#, bring more reinforcements. This time, we will put an end to them all."
+    qcReviewedText: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to <b>Southern Longxi County </b>In this area, they might want to meet up with Zeng Zhenhai and the Four Great Assassins.\\nI hope #PlayerName# brings more people to help this time. We must capture them all."
+    qcTranslated: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to <b>Southern Longxi County</b>. He may be trying to rendezvous with Zeng Zhenhai and the Four Great Assassins there.\\nI hope #PlayerName# brings more reinforcements. This time, we must capture them all."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "陇西县南方"
     translated: "Southern Longxi County"
   - subIndex: 2
     text: "一带，可能想在此处与曾镇海及四大杀手汇合。"
-    translated: "One hopes to meet Zheng Zhenhai and the Four Killers here."
+    translated: "In this area, they might want to meet up with Zeng Zhenhai and the Four Great Assassins."
   - subIndex: 3
     text: "还望#PlayerName#多带些人手前来相助，这次定要将他们一网打尽。"
     translated: "I hope #PlayerName# brings more people to help this time. We must capture them all."
@@ -4864,9 +4839,9 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Trader&Randomly;;-1;Event difficulty-1;-3"
+    qcReviewedText: "Temporary:Trader & Randomly;;-1;Event difficulty-1;-3"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "商人"
@@ -4883,12 +4858,10 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Officer led the way&Randomly;;-1;Event difficulty;-5"
-    qcTranslated: "Temporary: Officer Lead & Random;;‑1;Event Difficulty;‑5"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcReviewedText: "Temporary:Officer led the way & Randomly;;-1;Event difficulty;-5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "官兵领队"
     translated: "Officer led the way"
@@ -4904,9 +4877,9 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Common people&Randomly;;-1;Event difficulty-3"
+    qcReviewedText: "Temporary:Common people & Randomly;;-1;Event difficulty-3"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "百姓"
@@ -4923,9 +4896,9 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Common people&Randomly;;-1;Event difficulty-3;-2"
+    qcReviewedText: "Temporary:Common people & Randomly;;-1;Event difficulty-3;-2"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "百姓"
@@ -5181,13 +5154,11 @@
 - raw: "为祖心炎寻找一件精良级别的装备"
   splits:
   - text: "为祖心炎寻找一件精良级别的装备"
-    translated: "Equip Zuxinyan with a Fine‑quality item"
-    qcReviewedText: "Equip Zuxinyan with a Fine‑quality item"
-    qcTranslated: "Find a Fine‑quality item for Zuxinyan"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: DroppedContent
+    translated: "Find a fine‑quality equipment for Zu Xinyan"
+    qcReviewedText: "Find a fine‑quality equipment for Zu Xinyan"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "为药王谷主皇甫青衫寻找一件优质级别的药引"
   splits:
   - text: "为药王谷主皇甫青衫寻找一件优质级别的药引"
@@ -6695,18 +6666,17 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
-    qcReviewedText: "Rumor <b>Tang Clan </b>Sect Master's eldest son Tang Li will soon hold a betrothal ceremony with the daughter of the Thunderclap Hall Sect Leader. This union of two prominent hidden weapon sects is sure to be unprecedented and shock the entire Wulin."
-    qcTranslated: "Rumor has it that <b>Tang Clan </b>Sect Master's eldest son, Tang Li, will soon hold a betrothal ceremony with Lei Yinyin, the daughter of the Thunderclap Hall Sect Leader. This union of two prominent Hidden Weapon sects is sure to be unprecedented and shock the entire Wulin."
+    qcReviewedText: "Rumor <b>Tang Clan </b>Sect Leader's eldest son, Tang Li, will soon be engaged to the daughter of Thunderclap Hall's Sect Leader, Lei Yinyin. This union between the two major Hidden Weapon sects is unprecedented in grandeur and has shaken Wulin to its core."
+    qcTranslated: "Rumor has it that Tang Li, the eldest son of <b>Tang Clan</b> Sect Leader, will soon hold an engagement ceremony with Lei Yinyin, daughter of Thunderclap Hall's Sect Leader. This union between the two major Hidden Weapon sects is unprecedented in grandeur and has shaken Wulin to its core."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "唐门"
     translated: "Tang Clan"
   - subIndex: 2
     text: "掌门长子唐离，不日将与霹雳堂掌门之女雷殷殷举行订婚仪式。此次两大暗器门派联姻，可谓盛况空前，震动武林。"
-    translated: "Sect Master's eldest son Tang Li will soon hold a betrothal ceremony with the daughter of the Thunderclap Hall Sect Leader. This union of two prominent hidden weapon sects is sure to be unprecedented and shock the entire Wulin."
+    translated: "Sect Leader's eldest son, Tang Li, will soon be engaged to the daughter of Thunderclap Hall's Sect Leader, Lei Yinyin. This union between the two major Hidden Weapon sects is unprecedented in grandeur and has shaken Wulin to its core."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻<b>巴陵村</b>突遭贼人大举进攻，眼下村内守备已危在旦夕。"
@@ -6808,13 +6778,9 @@
 - raw: "传闻中原大侠郭淮一路追捕西凉富商凤南飞，如今已到了<b>#PosText#</b>内。"
   splits:
   - text: "传闻中原大侠郭淮一路追捕西凉富商凤南飞，如今已到了"
-    translated: "While correcting, it was said that the Great Hero Guo Huai had been pursuing from the Central Plains, chasing the wealthy merchant Feng Nvfei of Xiliang, and now they have arrived at"
-    qcReviewedText: "While correcting, it was said that the Great Hero Guo Huai had been pursuing from the Central Plains, chasing the wealthy merchant Feng Nvfei of Xiliang, and now they have arrived at<b>#PosText#</b>Inside"
-    qcTranslated: "Rumor has it that the Central Plains Great Hero Guo Huai has been pursuing the wealthy Xiliang merchant Feng Nvfei, and has now arrived at <b>#PosText#</b>."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: HardToParseSeam
+    translated: "It is said that Great Hero Guo Huai has been chasing the wealthy merchant Feng Nanfei of Xiliang all the way to here."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "It is said that Great Hero Guo Huai has been chasing the wealthy merchant Feng Nanfei of Xiliang all the way to here.<b>#PosText#</b>Inside"
   - subIndex: 1
     text: "内。"
     translated: "Inside"
@@ -6853,13 +6819,12 @@
 - raw: "传闻中原小侠郭勇锐一路追踪黑道五鬼岳无畏，如今到了<b>#PosText#</b>附近。"
   splits:
   - text: "传闻中原小侠郭勇锐一路追踪黑道五鬼岳无畏，如今到了"
-    translated: "Rumors say that the young hero Guo Yongrui has been chasing the Five Devils led by Yue Wuxie from the underworld all the way. Now he has arrived"
-    qcReviewedText: "Rumors say that the young hero Guo Yongrui has been chasing the Five Devils led by Yue Wuxie from the underworld all the way. Now he has arrived<b>#PosText#</b>Nearby"
-    qcTranslated: "Rumors say that the young hero Guo Yongrui of the Central Plains has been tracking the Five Devils of the Underworld, led by Yue Wuxie. He has now arrived near <b>#PosText#</b>."
+    translated: "It is said that Young Hero Guo Yongrui has been chasing the Black Path Five Ghosts' Yue Wuwei all the way here."
+    qcReviewedText: "It is said that Young Hero Guo Yongrui has been chasing the Black Path Five Ghosts' Yue Wuwei all the way here.<b>#PosText#</b>Nearby"
+    qcTranslated: "It is said that Young Hero Guo Yongrui has been chasing the Black Path Five Ghosts' Yue Wuwei all the way here, and he is now near <b>#PosText#</b>."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 85
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "附近。"
     translated: "Nearby"
@@ -7015,15 +6980,14 @@
   splits:
   - text: "传闻唐门与青城派在"
     translated: "Rumors suggest that the Tang Clan and Qingcheng Sect are"
-    qcReviewedText: "Rumors suggest that the Tang Clan and Qingcheng Sect are<b>#PosText#</b>A major manhunt for the fugitives Wang Tianyi and Yue Wufeiyue, it's likely that these two have been hiding in this area."
-    qcTranslated: "Rumors suggest that the Tang Clan and Qingcheng Sect are conducting a major manhunt for the fugitives Wang Tianyi and Yue Wufeiyue at <b>#PosText#</b>, so it's likely that these two have been hiding in this area."
+    qcReviewedText: "Rumors suggest that the Tang Clan and Qingcheng Sect are<b>#PosText#</b>A large‑scale manhunt for the fugitives Wang Tianyi and Yue Wuwei is underway; they must be hiding somewhere in this area."
+    qcTranslated: "Rumors suggest that the Tang Clan and Qingcheng Sect are conducting a large‑scale manhunt for the fugitives Wang Tianyi and Yue Wuwei in <b>#PosText#</b>; they must be hiding somewhere in this area."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "大举搜捕逃犯王添翼与岳无畏，想必此二人在这一带躲藏。"
-    translated: "A major manhunt for the fugitives Wang Tianyi and Yue Wufeiyue, it's likely that these two have been hiding in this area."
+    translated: "A large‑scale manhunt for the fugitives Wang Tianyi and Yue Wuwei is underway; they must be hiding somewhere in this area."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻四大御史之一已亲临<b>#PosText#</b>城，准备对阻止疫病蔓延的几位少侠予以嘉奖。"
@@ -7271,12 +7235,11 @@
 - raw: "传闻山贼头领曾镇海在四大杀手保护之下，一路逃窜到了<b>#PosText#</b>。"
   splits:
   - text: "传闻山贼头领曾镇海在四大杀手保护之下，一路逃窜到了"
-    translated: "It was said that Cheng Hai, the leader of the mountain bandits, had fled all the way with the Four Killers protecting him."
-    qcReviewedText: "It was said that Cheng Hai, the leader of the mountain bandits, had fled all the way with the Four Killers protecting him.<b>#PosText#</b>。"
-    qcTranslated: "It was said that Cheng Zhenhai, the leader of the mountain bandits, had fled all the way to <b>#PosText#</b> under the protection of the Four Killers."
+    translated: "It's said that Mountain Bandit Chief Zeng Zhenhai, under the protection of the Four Great Assassins, has been fleeing all the way to here."
+    qcReviewedText: "It's said that Mountain Bandit Chief Zeng Zhenhai, under the protection of the Four Great Assassins, has been fleeing all the way to here.<b>#PosText#</b>。"
+    qcTranslated: "It's said that Mountain Bandit Chief Zeng Zhenhai, under the protection of the Four Great Assassins, has been fleeing all the way to <b>#PosText#</b>."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   templates:
   - template: "{0}<b>#PosText#</b>。"
@@ -7345,13 +7308,11 @@
 - raw: "传闻广南西路山贼头领曾镇海被侠士追捕，眼下躲藏到了<b>#PosText#城内</b>。"
   splits:
   - text: "传闻广南西路山贼头领曾镇海被侠士追捕，眼下躲藏到了"
-    translated: "It is said that the bandit leader Zhenhai from the Shandong Southwest Region is being pursued by heroic warriors and is now hiding."
-    qcReviewedText: "It is said that the bandit leader Zhenhai from the Shandong Southwest Region is being pursued by heroic warriors and is now hiding.<b>#PosText# downtown</b>。"
-    qcTranslated: "Rumor has it that the bandit leader Zhenhai of Guangnan Southwest is being pursued by Heroes and is currently hiding in <b>#PosText#</b>."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "It's said that the bandit leader Zeng Zhenhai from Guangnan West Road has been hunted by a Hero and is now hiding out in..."
+    qcReviewedText: "It's said that the bandit leader Zeng Zhenhai from Guangnan West Road has been hunted by a Hero and is now hiding out in...<b>#PosText# downtown</b>。"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "#PosText#城内"
     translated: "#PosText# downtown"
@@ -7613,12 +7574,11 @@
 - raw: "传闻玉面判官殷雨霏一路追捕梁山大当家王伦，终于在<b>#PosText#</b>追上其残党。"
   splits:
   - text: "传闻玉面判官殷雨霏一路追捕梁山大当家王伦，终于在"
-    translated: "Rumors have it that the Fair‑Faced Magistrate Yin Yufei pursued Liangshan's chief commander Wang Ren all the way, and finally caught up with him at"
-    qcReviewedText: "Rumors have it that the Fair‑Faced Magistrate Yin Yufei pursued Liangshan's chief commander Wang Ren all the way, and finally caught up with him at<b>#PosText#</b>Catch up with its remnants"
-    qcTranslated: "Rumors have it that the Fair‑Faced Magistrate Yin Yufei pursued Liangshan's chief commander Wang Lun all the way, and finally caught up with his remnants at<b>#PosText#</b>."
+    translated: "It is said that Fair‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way until..."
+    qcReviewedText: "It is said that Fair‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way until...<b>#PosText#</b>Catch up with its remnants"
+    qcTranslated: "It is said that Fair‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way until...<b>#PosText#</b>, where she finally caught up with his remnants."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "追上其残党。"
@@ -7774,12 +7734,11 @@
 - raw: "传闻逃犯王添翼与岳无畏越狱之后，被唐门和青城派一路追杀，如今逃到了<b>#PosText#</b>地界。"
   splits:
   - text: "传闻逃犯王添翼与岳无畏越狱之后，被唐门和青城派一路追杀，如今逃到了"
-    translated: "It was said that after convicts Wang Tianyi and Yue Wuwu escaped from prison, they have been pursued by the Tang Clan and Qingcheng Sect. Now they have fled to"
-    qcReviewedText: "It was said that after convicts Wang Tianyi and Yue Wuwu escaped from prison, they have been pursued by the Tang Clan and Qingcheng Sect. Now they have fled to<b>#PosText#</b>Boundary"
-    qcTranslated: "Rumor has it that after fugitives Wang Tianyi and Yue Wuwu escaped from prison, they were pursued by the Tang Clan and Qingcheng Sect, and have now fled to the <b>#PosText#</b> territory."
+    translated: "It is said that the escaped prisoner Wang Tianyi and Yue Wuwei were hunted down by the Tang Clan and Qingcheng Sect after their escape, and now they have fled to"
+    qcReviewedText: "It is said that the escaped prisoner Wang Tianyi and Yue Wuwei were hunted down by the Tang Clan and Qingcheng Sect after their escape, and now they have fled to<b>#PosText#</b>Boundary"
+    qcTranslated: "It is said that the escaped prisoner Wang Tianyi and Yue Wuwei were hunted down by the Tang Clan and Qingcheng Sect after their escape, and now they have fled to the <b>#PosText#</b> territory."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "地界。"
@@ -7875,12 +7834,11 @@
 - raw: "传闻长乐帮叛徒卢玉麟逃出杭州后，一路向北流亡，如今已抵达<b>#PosText#</b>一带。"
   splits:
   - text: "传闻长乐帮叛徒卢玉麟逃出杭州后，一路向北流亡，如今已抵达"
-    translated: "It was said that after traitor Lu Yulan of the Changle Gang fled Hangzhou, he had been in exile to the north, and now he has arrived at"
-    qcReviewedText: "It was said that after traitor Lu Yulan of the Changle Gang fled Hangzhou, he had been in exile to the north, and now he has arrived at<b>#PosText#</b>One belt"
-    qcTranslated: "It is rumored that Lu Yulin, a traitor of the Changle Gang, fled north after escaping Hangzhou and has now arrived in the area around <b>#PosText#</b>."
+    translated: "It is said that after the traitor Lu Yulin of the Changle Gang fled Hangzhou, he went into exile northward and has now arrived at"
+    qcReviewedText: "It is said that after the traitor Lu Yulin of the Changle Gang fled Hangzhou, he went into exile northward and has now arrived at<b>#PosText#</b>One belt"
+    qcTranslated: "It is said that after the traitor Lu Yulin of the Changle Gang fled Hangzhou, he went into exile northward and has now arrived in the <b>#PosText#</b> area."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "一带。"
@@ -8121,12 +8079,11 @@
 - raw: "传闻黑道五鬼迟百城在<b>#PosText#</b>一带啸聚山林，买马招兵，似乎在谋划什么大计。"
   splits:
   - text: "传闻黑道五鬼迟百城在"
-    translated: "Rumors say that the Five Ghosts of the underworld, including Chi Baocheng,"
-    qcReviewedText: "Rumors say that the Five Ghosts of the underworld, including Chi Baocheng,<b>#PosText#</b>One day, he gathered in the mountains and forests, buying horses and recruiting soldiers, as if plotting some great scheme."
-    qcTranslated: "Rumors say that the Five Ghosts of the underworld, led by Chi Baocheng, are gathering in the mountains around <b>#PosText#</b>, buying horses and recruiting soldiers, seemingly plotting some great scheme."
+    translated: "It's said that Black Path Ghost Number Five, Chi Baicheng, is here."
+    qcReviewedText: "It's said that Black Path Ghost Number Five, Chi Baicheng, is here.<b>#PosText#</b>One day, he gathered in the mountains and forests, buying horses and recruiting soldiers, as if plotting some great scheme."
+    qcTranslated: "It's said that Black Path Ghost Number Five, Chi Baicheng, is lurking in the mountains and forests around <b>#PosText#</b>, buying horses and recruiting soldiers, as if plotting some great scheme."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "一带啸聚山林，买马招兵，似乎在谋划什么大计。"
@@ -9719,10 +9676,10 @@
 - raw: "前往#TargetPlace#寻找北怪。"
   splits:
   - text: "前往#TargetPlace#寻找北怪。"
-    translated: "Head to #TargetPlace# to find the northern monster."
-    qcReviewedText: "Head to #TargetPlace# to find the northern monster."
+    translated: "Go to #TargetPlace# to find Bei Guai"
+    qcReviewedText: "Go to #TargetPlace# to find Bei Guai"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "前往#TargetPlace#寻找南丑。"
   splits:
@@ -9735,21 +9692,19 @@
 - raw: "前往#TargetPlace#寻找地缺。"
   splits:
   - text: "前往#TargetPlace#寻找地缺。"
-    translated: "Head to #TargetPlace# to find Diqie"
-    qcReviewedText: "Head to #TargetPlace# to find Diqie"
+    translated: "Go to #TargetPlace# to find Di Que"
+    qcReviewedText: "Go to #TargetPlace# to find Di Que"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "前往#TargetPlace#寻找天残。"
   splits:
   - text: "前往#TargetPlace#寻找天残。"
-    translated: "Head to #TargetPlace# to find Tienshan"
-    qcReviewedText: "Head to #TargetPlace# to find Tienshan"
-    qcTranslated: "Head to #TargetPlace# to find Tian Can"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Go to #TargetPlace# to find Tian Can"
+    qcReviewedText: "Go to #TargetPlace# to find Tian Can"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "前往#TargetPlace#寻找那位捞出“水猴子”的渔民。"
   splits:
   - text: "前往#TargetPlace#寻找那位捞出“水猴子”的渔民。"
@@ -11564,18 +11519,17 @@
   splits:
   - text: "听闻近来四大御史之一驾临"
     translated: "Heard that one of the Four Imperial Censors has arrived recently."
-    qcReviewedText: "Heard that one of the Four Imperial Censors has arrived recently.<b>Qingcheng Sect</b>, To commend the Young Heroes who apprehended Yue Woweifu."
-    qcTranslated: "Heard that one of the Four Imperial Censors has recently arrived at <b>Qingcheng Sect</b>, wishing to commend the Young Heroes who apprehended Yue Woweifu."
+    qcReviewedText: "Heard that one of the Four Imperial Censors has arrived recently.<b>Qingcheng Sect</b>, Wants to reward the Young Heroes who captured Yue Wuwei."
+    qcTranslated: "Heard that one of the Four Imperial Censors has recently arrived at <b>Qingcheng Sect</b>, intending to reward the Young Heroes who captured Yue Wuwei."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "青城派"
     translated: "Qingcheng Sect"
   - subIndex: 2
     text: "，欲对抓捕岳无畏的几位少侠予以嘉奖。"
-    translated: ", To commend the Young Heroes who apprehended Yue Woweifu."
+    translated: ", Wants to reward the Young Heroes who captured Yue Wuwei."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "听闻近来有侠士前往<b>乐山镇</b>抓捕悍匪戴壮，在当地惹出了不小的骚动。"
@@ -11683,12 +11637,11 @@
 - raw: "听闻黄河五鬼岳无畏被侠客追杀，一路向西南逃亡，如今在<b>#PosText#</b>城内躲藏。"
   splits:
   - text: "听闻黄河五鬼岳无畏被侠客追杀，一路向西南逃亡，如今在"
-    translated: "Hearing that the Five Ghosts of the Yellow River, Yue Wowe, was pursued by the Wanderer and fled southwest, he now is"
-    qcReviewedText: "Hearing that the Five Ghosts of the Yellow River, Yue Wowe, was pursued by the Wanderer and fled southwest, he now is<b>#PosText#</b>Hide within the city"
-    qcTranslated: "It is said that Yue Wowe, one of the Five Ghosts of the Yellow River, was pursued by Wanderers and fled southwest. He is currently hiding in <b>#PosText#</b> city."
+    translated: "It was heard that Yue Wuwei, one of the Five Ghosts of the Yellow River, has been hunted down by a wanderer and has fled southwest; he is now in"
+    qcReviewedText: "It was heard that Yue Wuwei, one of the Five Ghosts of the Yellow River, has been hunted down by a wanderer and has fled southwest; he is now in<b>#PosText#</b>Hide within the city"
+    qcTranslated: "It was heard that Yue Wuwei, one of the Five Ghosts of the Yellow River, has been hunted down by a Wanderer and has fled southwest; he is now hiding in<b>#PosText#</b> city."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "城内躲藏。"
@@ -14139,13 +14092,11 @@
 - raw: "将雷殷殷护送至#TargetPlace#，安全交还霹雳堂。"
   splits:
   - text: "将雷殷殷护送至#TargetPlace#，安全交还霹雳堂。"
-    translated: "Escort Lei Yin Yin to #TargetPlace# and safely return her to Thunderclap Hall."
-    qcReviewedText: "Escort Lei Yin Yin to #TargetPlace# and safely return her to Thunderclap Hall."
-    qcTranslated: "Escort Lei Yinyin to #TargetPlace# and safely hand her over to Thunderclap Hall."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Escort Lei Yinyin to #TargetPlace# and safely return her to Thunderclap Hall."
+    qcReviewedText: "Escort Lei Yinyin to #TargetPlace# and safely return her to Thunderclap Hall."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "小伙子你看上去精明强干，是个当家丁的好材料，\\n不知可有兴趣，来干两天试试啊？"
   splits:
   - text: "小伙子你看上去精明强干，是个当家丁的好材料，"
@@ -15969,10 +15920,10 @@
 - raw: "拜会了青城派掌门周莫知，向#TargetPlace#复命。"
   splits:
   - text: "拜会了青城派掌门周莫知，向#TargetPlace#复命。"
-    translated: "Met with the Qingcheng Sect Master Zhou Mo Zhi, reporting back to #TargetPlace#."
-    qcReviewedText: "Met with the Qingcheng Sect Master Zhou Mo Zhi, reporting back to #TargetPlace#."
+    translated: "Visited Sect Leader Zhou Mozhi of Qingcheng Sect and reported back to #TargetPlace#."
+    qcReviewedText: "Visited Sect Leader Zhou Mozhi of Qingcheng Sect and reported back to #TargetPlace#."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "拜会形意门"
   splits:
@@ -17482,13 +17433,12 @@
 - raw: "此后，#$PlayerName#便效仿都点检赵胤宗，\\n于泰山玉皇顶召开泰岳大典，宣告武林一统。"
   splits:
   - text: "此后，#$PlayerName#便效仿都点检赵胤宗，"
-    translated: "Afterward, #$PlayerName# began to emulate Zhuo Yinzong, the Du Dianjian."
-    qcReviewedText: "Afterward, #$PlayerName# began to emulate Zhuo Yinzong, the Du Dianjian.\\nHold the Great Ceremony of Taiye on Tai'an Yuhuadong to declare the unification of the Wulin."
-    qcTranslated: "Afterward, #$PlayerName# emulated Zhao Yinzong, the Du Dianjian, and held the Great Ceremony of Taiyue on the Yuhuang Peak of Mount Tai, declaring the unification of the Wulin."
+    translated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector."
+    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector.\\nHold the Great Ceremony of Taiye on Tai'an Yuhuadong to declare the unification of the Wulin."
+    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector,\\nand held the Great Ceremony of Taiye on Mount Tai's Jade Emperor Peak to declare the unification of the Wulin."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "于泰山玉皇顶召开泰岳大典，宣告武林一统。"
     translated: "Hold the Great Ceremony of Taiye on Tai'an Yuhuadong to declare the unification of the Wulin."
@@ -17497,12 +17447,11 @@
 - raw: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，\\n并借此时机黄袍加身，登基称帝。"
   splits:
   - text: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，"
-    translated: "Afterwards, #$PlayerName# followed in the footsteps of Zhuo Yinzong, the Chief Inspector, and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai."
-    qcReviewedText: "Afterwards, #$PlayerName# followed in the footsteps of Zhuo Yinzong, the Chief Inspector, and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai.\\nAnd seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
-    qcTranslated: "Afterwards, #$PlayerName# followed in the footsteps of Zhuo Yinzong, the Chief Inspector, and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai.\\nSeizing this opportunity, he donned the yellow robe and ascended the throne to proclaim himself emperor."
+    translated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai."
+    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai.\\nAnd seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
+    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai.\\nHe then seized this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "并借此时机黄袍加身，登基称帝。"
@@ -20342,13 +20291,11 @@
 - raw: "继续跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"
   splits:
   - text: "继续跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"
-    translated: "Continue following Zhao Yizong's old path to escort Jingnang, heading to #TargetPlace#."
-    qcReviewedText: "Continue following Zhao Yizong's old path to escort Jingnang, heading to #TargetPlace#."
-    qcTranslated: "Continue along Zhao Yizong's old route for escorting Jingnang, heading to #TargetPlace#."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    translated: "Continue to follow the old route Zhao Yinzong used to escort Lady Jing, heading for #TargetPlace#."
+    qcReviewedText: "Continue to follow the old route Zhao Yinzong used to escort Lady Jing, heading for #TargetPlace#."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "继续追查"
   splits:
   - text: "继续追查"
@@ -21887,12 +21834,11 @@
 - raw: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于<b>一个月后</b>在泰山举办第二届泰岳大典，商定神功归属。\\n许多武林人士已提前前往<b>#PosText#</b>，欲一睹这场空前绝后之盛会。"
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
-    translated: "Zhao Yunzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to..."
-    qcReviewedText: "Zhao Yunzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to...<b>A month later </b>Host the Second Taiyue Great Ceremony on Mount Tai to determine the ownership of the divine arts.\\nMany Wulin practitioners have gone there in advance.<b>#PosText#</b>, To catch a glimpse of this unprecedented grand festival."
-    qcTranslated: "Zhao Yunzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to hold the Second Taiyue Great Ceremony on Mount Tai <b>a month later</b> to determine the ownership of the divine arts.\\nMany Wulin practitioners have already gone to <b>#PosText#</b> in advance to witness this unprecedented grand festival."
+    translated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at"
+    qcReviewedText: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at <b>A month later </b>Host the Second Taiyue Great Ceremony on Mount Tai to determine the ownership of the divine arts.\\nMany Wulin practitioners have gone there in advance.<b>#PosText#</b>, To catch a glimpse of this unprecedented grand festival."
+    qcTranslated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to hold the Second Taiyue Great Ceremony on Mount Tai <b>one month later</b> to determine the ownership of the divine arts.\\nMany Wulin practitioners have already traveled to <b>#PosText#</b> in advance to catch a glimpse of this unprecedented grand festival."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "一个月后"
@@ -21985,10 +21931,10 @@
 - raw: "跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"
   splits:
   - text: "跟随赵胤宗护送京娘之旧路，前往#TargetPlace#。"
-    translated: "Follow Zhao Yizong's old path to escort Jingnang to #TargetPlace#."
-    qcReviewedText: "Follow Zhao Yizong's old path to escort Jingnang to #TargetPlace#."
+    translated: "Follow the old route used to escort Lady Jing with Zhao Yinzong to #TargetPlace#."
+    qcReviewedText: "Follow the old route used to escort Lady Jing with Zhao Yinzong to #TargetPlace#."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "路见不平，拔刀相助！\\n见到这姑娘遭劫怎能袖手旁观！"
   splits:
@@ -22229,16 +22175,17 @@
   splits:
   - text: "近来"
     translated: "Recently"
-    qcReviewedText: "Recently <b>Changle Gang </b>Internal changes are frequent, and rumors in the Jianghu suggest they are related to the Deputy Sect Leader Lu Yulan."
-    qcStatus: Passed
-    qcQualityScore: 90
-    qcDefectCategory: None
+    qcReviewedText: "Recently <b>Changle Gang </b>Internal unrest is frequent, and rumors in the Jianghu seem to be related to Deputy Leader Lu Yulin."
+    qcTranslated: "Recently, internal unrest has been frequent within <b>Changle Gang</b>, and rumors in the Jianghu seem to be related to Deputy Leader Lu Yulin."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "长乐帮"
     translated: "Changle Gang"
   - subIndex: 2
     text: "内异动频频，江湖传闻似乎与其副帮主卢玉麟有关。"
-    translated: "Internal changes are frequent, and rumors in the Jianghu suggest they are related to the Deputy Sect Leader Lu Yulan."
+    translated: "Internal unrest is frequent, and rumors in the Jianghu seem to be related to Deputy Leader Lu Yulin."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "近来<b>飞龙门</b>内骚动不断，似乎有重要人士欲寻短见。"
@@ -22321,13 +22268,12 @@
 - raw: "近来唐门与霹雳堂广发请帖，邀请天下群雄参加唐离与雷殷殷的大婚庆典。江湖中人纷纷前往<b>#PosText#</b>，欲一睹这次联姻之盛况。"
   splits:
   - text: "近来唐门与霹雳堂广发请帖，邀请天下群雄参加唐离与雷殷殷的大婚庆典。江湖中人纷纷前往"
-    translated: "Recently, the Tang Clan and Thunderclap Hall have widely issued invitations, inviting heroes from all under heaven to attend the grand wedding celebration of Tang Li and Lei Yanyan. People from the Jianghu have flocked to attend."
-    qcReviewedText: "Recently, the Tang Clan and Thunderclap Hall have widely issued invitations, inviting heroes from all under heaven to attend the grand wedding celebration of Tang Li and Lei Yanyan. People from the Jianghu have flocked to attend.<b>#PosText#</b>, To witness the grandeur of this marriage alliance."
-    qcTranslated: "Recently, the Tang Clan and Thunderclap Hall have widely issued invitations, inviting heroes from all under heaven to attend the grand wedding celebration of Tang Li and Lei Yanyin. Jianghu figures have flocked to <b>#PosText#</b>, eager to witness the grandeur of this marriage alliance."
+    translated: "Recently, the Tang Clan and Thunderclap Hall have widely distributed invitations, inviting all the heroes of the land to attend the grand wedding celebration of Tang Li and Lei Yinyin. People from Jianghu have been flocking there."
+    qcReviewedText: "Recently, the Tang Clan and Thunderclap Hall have widely distributed invitations, inviting all the heroes of the land to attend the grand wedding celebration of Tang Li and Lei Yinyin. People from Jianghu have been flocking there.<b>#PosText#</b>, To witness the grandeur of this marriage alliance."
+    qcTranslated: "Recently, the Tang Clan and Thunderclap Hall have widely distributed invitations, inviting all the heroes of the land to attend the grand wedding celebration of Tang Li and Lei Yinyin. People from Jianghu have been flocking to <b>#PosText#</b>, eager to witness the grandeur of this marriage alliance."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "，欲一睹这次联姻之盛况。"
     translated: ", To witness the grandeur of this marriage alliance."
@@ -23312,20 +23258,18 @@
 - raw: "追捕岳无畏"
   splits:
   - text: "追捕岳无畏"
-    translated: "Chase Yu Woweifu"
-    qcReviewedText: "Chase Yu Woweifu"
-    qcTranslated: "Pursuit of Yue Wuwei"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Chasing after Yue Wuwei"
+    qcReviewedText: "Chasing after Yue Wuwei"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "追捕王伦"
   splits:
   - text: "追捕王伦"
-    translated: "Chase Wang Lin"
-    qcReviewedText: "Chase Wang Lin"
+    translated: "Chasing after Wang Lun"
+    qcReviewedText: "Chasing after Wang Lun"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "追捕盗贼"
   splits:
@@ -23354,10 +23298,10 @@
 - raw: "追捕高首"
   splits:
   - text: "追捕高首"
-    translated: "Chase Highhead"
-    qcReviewedText: "Chase Highhead"
+    translated: "Chasing after Gao Shou"
+    qcReviewedText: "Chasing after Gao Shou"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "追捕魔头"
   splits:

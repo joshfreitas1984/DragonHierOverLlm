@@ -9944,10 +9944,10 @@
 - raw: "牛头钢叉功"
   splits:
   - text: "牛头钢叉功"
-    translated: "Bull Horn Pummel Technique"
-    qcReviewedText: "Bull Horn Pummel Technique"
+    translated: "Ox Head Steel Fork Technique"
+    qcReviewedText: "Ox Head Steel Fork Technique"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "力道1;体质2;长兵1"
   splits:
@@ -55188,8 +55188,8 @@
 - raw: "阎.罗王"
   splits:
   - text: "阎.罗王"
-    translated: "Yan Luowang"
-    qcReviewedText: "Yan Luowang"
+    translated: "King Yama"
+    qcReviewedText: "King Yama"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -55455,8 +55455,8 @@
 - raw: "牛.头"
   splits:
   - text: "牛.头"
-    translated: "Niu Tou"
-    qcReviewedText: "Niu Tou"
+    translated: "Ox Head"
+    qcReviewedText: "Ox Head"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -55491,8 +55491,8 @@
 - raw: "马.面"
   splits:
   - text: "马.面"
-    translated: "Ma Mian"
-    qcReviewedText: "Ma Mian"
+    translated: "Horse Face"
+    qcReviewedText: "Horse Face"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60103,8 +60103,8 @@
 - raw: "中年天.残"
   splits:
   - text: "中年天.残"
-    translated: "Middle‑aged Tian Can"
-    qcReviewedText: "Middle‑aged Tian Can"
+    translated: "Middle aged Tian Can"
+    qcReviewedText: "Middle aged Tian Can"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60140,8 +60140,8 @@
 - raw: "中年地.缺"
   splits:
   - text: "中年地.缺"
-    translated: "Middle‑aged Di Que"
-    qcReviewedText: "Middle‑aged Di Que"
+    translated: "Middle aged Di Que"
+    qcReviewedText: "Middle aged Di Que"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60169,8 +60169,8 @@
 - raw: "中年南.丑"
   splits:
   - text: "中年南.丑"
-    translated: "Middle‑aged Nan Chou"
-    qcReviewedText: "Middle‑aged Nan Chou"
+    translated: "Middle aged Nan Chou"
+    qcReviewedText: "Middle aged Nan Chou"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60198,8 +60198,8 @@
 - raw: "中年北.怪"
   splits:
   - text: "中年北.怪"
-    translated: "Middle‑aged Bei Guai"
-    qcReviewedText: "Middle‑aged Bei Guai"
+    translated: "Middle aged Bei Guai"
+    qcReviewedText: "Middle aged Bei Guai"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60243,8 +60243,8 @@
 - raw: "中年赵.胤宗"
   splits:
   - text: "中年赵.胤宗"
-    translated: "Middle‑aged Zhao Yinzong"
-    qcReviewedText: "Middle‑aged Zhao Yinzong"
+    translated: "Middle aged Zhao Yinzong"
+    qcReviewedText: "Middle aged Zhao Yinzong"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60368,8 +60368,8 @@
 - raw: "罗.八怪"
   splits:
   - text: "罗.八怪"
-    translated: "Luo Bagua"
-    qcReviewedText: "Luo Bagua"
+    translated: "Luo Bagui"
+    qcReviewedText: "Luo Bagui"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -65173,10 +65173,10 @@
 - raw: "雷彤"
   splits:
   - text: "雷彤"
-    translated: "Le Tong"
-    qcReviewedText: "Le Tong"
+    translated: "Lei Tong"
+    qcReviewedText: "Lei Tong"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "工事"
   splits:

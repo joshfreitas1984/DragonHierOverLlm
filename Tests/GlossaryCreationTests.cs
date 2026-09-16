@@ -189,5 +189,43 @@ public class GlossaryCreationTests
                 await Task.CompletedTask;
             });
         FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/ExportNameData.yaml", glossary);
-    }    
+    }
+
+    [Fact]
+    public async Task GetHeroFullNames()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var config = ConfigurationExtensions.GetConfiguration(workingDirectory);
+
+        var glossary = new List<string>();
+        var items = new List<string>();
+
+        await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
+            TextFileConfiguration.TextFilesToSplit,
+            async (outputFile, textFileToTranslate, fileLines) =>
+            {
+                if (textFileToTranslate.Path != "heroFullNames.txt")
+                    return;
+
+                foreach (var line in fileLines)
+                {
+                    var raw = line.Splits[0].Text;
+                    if (string.IsNullOrEmpty(raw) || items.Contains(raw))
+                        continue;
+
+                    items.Add(raw);
+
+                    glossary.Add($"- raw: {line.Splits[0].Text}");
+                    glossary.Add($"  result: {line.Splits[0].Translated}");
+                    glossary.Add($"  badtrans: true");
+                    //glossary.Add($"  only: ");
+                    //foreach (var file in only)
+                    //    glossary.Add($"    - {file}");
+                }
+
+                await Task.CompletedTask;
+            });
+
+        FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/HeroFullNames.yaml", glossary);
+    }
 }

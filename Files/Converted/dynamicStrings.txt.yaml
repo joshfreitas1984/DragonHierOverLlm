@@ -12833,43 +12833,43 @@
 - raw: "中年北怪"
   splits:
   - text: "中年北怪"
-    translated: "Middle‑aged North Monster"
-    qcReviewedText: "Middle‑aged North Monster"
-    qcTranslated: "Middle‑aged Northern Monster"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "Middle aged Bei Guai"
+    qcReviewedText: "Middle aged Bei Guai"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "中年南丑"
   splits:
   - text: "中年南丑"
-    translated: "Middle‑aged Southern Ugly"
-    qcReviewedText: "Middle‑aged Southern Ugly"
+    translated: "Middle aged Nan Chou"
+    qcReviewedText: "Middle aged Nan Chou"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "中年地缺"
   splits:
   - text: "中年地缺"
-    translated: "Middle‑aged Mr. Que"
-    qcReviewedText: "Middle‑aged Mr. Que"
+    translated: "Middle aged Di Que"
+    qcReviewedText: "Middle aged Di Que"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "中年天残"
   splits:
   - text: "中年天残"
-    translated: "Middle‑aged heavenly maimed"
-    qcReviewedText: "Middle‑aged heavenly maimed"
-    qcTranslated: "Middle‑aged Heavenly Maimed"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    translated: "Middle aged Tian Can"
+    qcReviewedText: "Middle aged Tian Can"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "中年赵胤宗"
   splits:
   - text: "中年赵胤宗"
-    translated: "Middle‑aged Zhao Yizong"
-    qcReviewedText: "Middle‑aged Zhao Yizong"
+    translated: "Middle aged Zhao Yinzong"
+    qcReviewedText: "Middle aged Zhao Yinzong"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "中府"
   splits:
   - text: "中府"
@@ -15834,10 +15834,11 @@
 - raw: "传说青城叛徒王添翼逃出中原后，代替岳无畏成了黑道第四鬼，被唤作“笑面鬼”。\n曾经的英雄侠少，如今竟助纣为虐，堕入邪道，实在令人不齿！"
   splits:
   - text: "传说青城叛徒王添翼逃出中原后，代替岳无畏成了黑道第四鬼，被唤作“笑面鬼”。"
-    translated: "Legend says that after Wang Tianyi, the traitor of Qingcheng, fled from Central Plains, he replaced Yue Wowe as the Fourth Ghost of the underworld, earning the nickname Smiling Ghost."
-    qcReviewedText: "Legend says that after Wang Tianyi, the traitor of Qingcheng, fled from Central Plains, he replaced Yue Wowe as the Fourth Ghost of the underworld, earning the nickname Smiling Ghost.\nOnce a heroic young hero, he now aids the wicked and falls into evil ways‑truly despicable!"
+    translated: "It is said that after the Qingcheng traitor Wang Tianyi fled the Central Plains, he replaced Yue Wuwei as the fourth ghost of the underworld, known as Smiling Ghost."
+    qcReviewedText: "It is said that after the Qingcheng traitor Wang Tianyi fled the Central Plains, he replaced Yue Wuwei as the fourth ghost of the underworld, known as Smiling Ghost.\nOnce a heroic young hero, he now aids the wicked and falls into evil ways‑truly despicable!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "曾经的英雄侠少，如今竟助纣为虐，堕入邪道，实在令人不齿！"
     translated: "Once a heroic young hero, he now aids the wicked and falls into evil ways‑truly despicable!"
@@ -17554,10 +17555,11 @@
 - raw: "公孙防"
   splits:
   - text: "公孙防"
-    translated: "Gong Sun Fang"
-    qcReviewedText: "Gong Sun Fang"
+    translated: "Gongsun Fang"
+    qcReviewedText: "Gongsun Fang"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "六品"
   splits:
   - text: "六品"
@@ -19632,10 +19634,11 @@
 - raw: "北怪"
   splits:
   - text: "北怪"
-    translated: "North Monster"
-    qcReviewedText: "North Monster"
+    translated: "Bei Guai"
+    qcReviewedText: "Bei Guai"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "匪徒"
   splits:
   - text: "匪徒"
@@ -19868,11 +19871,11 @@
 - raw: "卓远望"
   splits:
   - text: "卓远望"
-    translated: "Zhao Yuwang"
-    qcReviewedText: "Zhao Yuwang"
-    qcTranslated: "Zhuo Yuanwang"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    translated: "Zhuo Yuanwang"
+    qcReviewedText: "Zhuo Yuanwang"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "单次指点;ForceTeachNPCSure;"
   splits:
   - text: "单次指点"
@@ -19889,10 +19892,10 @@
 - raw: "南丑"
   splits:
   - text: "南丑"
-    translated: "South Ugly"
-    qcReviewedText: "South Ugly"
+    translated: "Nan Chou"
+    qcReviewedText: "Nan Chou"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "南宫瑶"
   splits:
@@ -20015,23 +20018,19 @@
 - raw: "厉苍穹"
   splits:
   - text: "厉苍穹"
-    translated: "Liyi Tianqiu"
-    qcReviewedText: "Liyi Tianqiu"
-    qcTranslated: "Li Cangqiong"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    translated: "Li Cangqiong"
+    qcReviewedText: "Li Cangqiong"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "厉苍穹陷入了癫狂！"
   splits:
   - text: "厉苍穹陷入了癫狂！"
-    translated: "Liyi Ciqiong fell into a state of madness!"
-    qcReviewedText: "Liyi Ciqiong fell into a state of madness!"
-    qcTranslated: "Li Ciqiong fell into a state of madness!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Li Cangqiong has fallen into madness!"
+    qcReviewedText: "Li Cangqiong has fallen into madness!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "压制"
   splits:
   - text: "压制"
@@ -27356,10 +27355,11 @@
 - raw: "地缺"
   splits:
   - text: "地缺"
-    translated: "Di Qie"
-    qcReviewedText: "Di Qie"
+    translated: "Di Que"
+    qcReviewedText: "Di Que"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "均价出售({0}两);GiveNpcBountyItemPriceSure;2"
   splits:
   - text: "均价出售"
@@ -29025,10 +29025,10 @@
 - raw: "天残"
   splits:
   - text: "天残"
-    translated: "Heavenly Wrecker"
-    qcReviewedText: "Heavenly Wrecker"
+    translated: "Tian Can"
+    qcReviewedText: "Tian Can"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "天气 x"
   splits:
@@ -30188,13 +30188,11 @@
 - raw: "如是大师"
   splits:
   - text: "如是大师"
-    translated: "Master Li Si"
-    qcReviewedText: "Master Li Si"
-    qcTranslated: "Master Rushi"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Master Rushi"
+    qcReviewedText: "Master Rushi"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "如此一来，大功告成，本掌门先来尝上一尝，看看成果如何。"
   splits:
   - text: "如此一来，大功告成，本掌门先来尝上一尝，看看成果如何。"
@@ -30690,17 +30688,18 @@
 - raw: "孟婆娑"
   splits:
   - text: "孟婆娑"
-    translated: "Meng Po Sa"
-    qcReviewedText: "Meng Po Sa"
+    translated: "Meng Posuo"
+    qcReviewedText: "Meng Posuo"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "孟经世"
   splits:
   - text: "孟经世"
-    translated: "Ben Jingshi"
-    qcReviewedText: "Ben Jingshi"
+    translated: "Meng Jingshi"
+    qcReviewedText: "Meng Jingshi"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "季节_"
   splits:
@@ -30959,18 +30958,19 @@
 - raw: "宋廉庭"
   splits:
   - text: "宋廉庭"
-    translated: "Song Lian Ting"
-    qcReviewedText: "Song Lian Ting"
+    translated: "Song Lianting"
+    qcReviewedText: "Song Lianting"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "宋廉庭-负"
   splits:
   - text: "宋廉庭"
-    translated: "Song Lian Ting"
-    qcReviewedText: "Song Lian Ting-Negative"
-    qcTranslated: "Song Lian Ting ‑ Deficit"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "Song Lianting"
+    qcReviewedText: "Song Lianting-Negative"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "负"
     translated: "Negative"
@@ -32907,13 +32907,11 @@
 - raw: "岳无畏"
   splits:
   - text: "岳无畏"
-    translated: "Yue Wowe"
-    qcReviewedText: "Yue Wowe"
-    qcTranslated: "Yue Wuwei"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    translated: "Yue Wuwei"
+    qcReviewedText: "Yue Wuwei"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "峨眉夜雨打苍茫"
   splits:
   - text: "峨眉夜雨打苍茫"
@@ -43166,10 +43164,11 @@
 - raw: "朱全"
   splits:
   - text: "朱全"
-    translated: "Chu Quan"
-    qcReviewedText: "Chu Quan"
+    translated: "Zhu Quan"
+    qcReviewedText: "Zhu Quan"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "朱大户"
   splits:
   - text: "朱大户"
@@ -47601,13 +47600,11 @@
 - raw: "熊刚"
   splits:
   - text: "熊刚"
-    translated: "Bear Stonge"
-    qcReviewedText: "Bear Stonge"
-    qcTranslated: "Xiong Gang"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    translated: "Xiong Gang"
+    qcReviewedText: "Xiong Gang"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "熊百胜"
   splits:
   - text: "熊百胜"
@@ -47705,8 +47702,8 @@
 - raw: "牛头"
   splits:
   - text: "牛头"
-    translated: "Bullheaded"
-    qcReviewedText: "Bullheaded"
+    translated: "Ox Head"
+    qcReviewedText: "Ox Head"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -48073,10 +48070,11 @@
 - raw: "王伦"
   splits:
   - text: "王伦"
-    translated: "Lun Wang"
-    qcReviewedText: "Lun Wang"
+    translated: "Wang Lun"
+    qcReviewedText: "Wang Lun"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "王彪"
   splits:
   - text: "王彪"
@@ -50022,19 +50020,19 @@
 - raw: "石守信"
   splits:
   - text: "石守信"
-    translated: "Stone Shouxin"
-    qcReviewedText: "Stone Shouxin"
-    qcTranslated: "Shishouxin"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    translated: "Shi Shouxin"
+    qcReviewedText: "Shi Shouxin"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "石崇虎"
   splits:
   - text: "石崇虎"
-    translated: "Stone Fortress Tiger"
-    qcReviewedText: "Stone Fortress Tiger"
-    qcTranslated: "Shi Chong Hu"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "Shi Chonghu"
+    qcReviewedText: "Shi Chonghu"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "矿料"
   splits:
   - text: "矿料"
@@ -50580,10 +50578,11 @@
 - raw: "祖心炎"
   splits:
   - text: "祖心炎"
-    translated: "Zu Xin Yan"
-    qcReviewedText: "Zu Xin Yan"
+    translated: "Zu Xinyan"
+    qcReviewedText: "Zu Xinyan"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "神"
   splits:
   - text: "神"
@@ -50945,11 +50944,11 @@
 - raw: "空见大师"
   splits:
   - text: "空见大师"
-    translated: "Master Kongshein"
-    qcReviewedText: "Master Kongshein"
-    qcTranslated: "Master Kongjian"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "Master Kongjian"
+    qcReviewedText: "Master Kongjian"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "空闻大师"
   splits:
   - text: "空闻大师"
@@ -56819,10 +56818,11 @@
 - raw: "费彬"
   splits:
   - text: "费彬"
-    translated: "Fe Bin"
-    qcReviewedText: "Fe Bin"
+    translated: "Fei Bin"
+    qcReviewedText: "Fei Bin"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "贼人已经伏法，如此一来，此处的违法乱纪之风应该能消停一阵了吧！"
   splits:
   - text: "贼人已经伏法，如此一来，此处的违法乱纪之风应该能消停一阵了吧！"
@@ -57146,10 +57146,11 @@
 - raw: "赵胤宗"
   splits:
   - text: "赵胤宗"
-    translated: "Zhao Yizong"
-    qcReviewedText: "Zhao Yizong"
+    translated: "Zhao Yinzong"
+    qcReviewedText: "Zhao Yinzong"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "赶尽杀绝;DeathFightKillHero;;;♦追杀成功后，夺取其所有物品装备\n♦与对方门派和亲友结仇\n♦根据对方身份等级增加大量恶名，每月最多1次"
   splits:
   - text: "赶尽杀绝"
@@ -60163,10 +60164,10 @@
 - raw: "迟百城"
   splits:
   - text: "迟百城"
-    translated: "Late Baicheng"
-    qcReviewedText: "Late Baicheng"
+    translated: "Chi Baicheng"
+    qcReviewedText: "Chi Baicheng"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "迷"
   splits:
@@ -62311,10 +62312,10 @@
 - raw: "闻惊鸿"
   splits:
   - text: "闻惊鸿"
-    translated: "Hear Feng Hong"
-    qcReviewedText: "Hear Feng Hong"
+    translated: "Wen Jinghong"
+    qcReviewedText: "Wen Jinghong"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "闻着酒香一路而来，没想到是#SourceInteractName#你在举办宴会啊！\n也罢也罢，既来之则安之，我找个位置去也。"
   splits:
@@ -63429,10 +63430,10 @@
 - raw: "雷震天"
   splits:
   - text: "雷震天"
-    translated: "Thunderstrike Lei"
-    qcReviewedText: "Thunderstrike Lei"
+    translated: "Lei Zhentian"
+    qcReviewedText: "Lei Zhentian"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "需先选择编纂角色"
   splits:
@@ -63858,13 +63859,11 @@
 - raw: "项元霸"
   splits:
   - text: "项元霸"
-    translated: "Yang Yuanba"
-    qcReviewedText: "Yang Yuanba"
-    qcTranslated: "Xiang Yuanba"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Xiang Yuanba"
+    qcReviewedText: "Xiang Yuanba"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "项问天"
   splits:
   - text: "项问天"
@@ -64339,10 +64338,10 @@
 - raw: "马悍"
   splits:
   - text: "马悍"
-    translated: "Strongblade"
-    qcReviewedText: "Strongblade"
+    translated: "Ma Han"
+    qcReviewedText: "Ma Han"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "马未装备"
   splits:
@@ -64385,11 +64384,11 @@
 - raw: "马面"
   splits:
   - text: "马面"
-    translated: "Face Horse"
-    qcReviewedText: "Face Horse"
-    qcTranslated: "Horse‑Faced"
-    qcStatus: Corrected
-    qcQualityScore: 88
+    translated: "Horse Face"
+    qcReviewedText: "Horse Face"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "驯服"
   splits:
   - text: "驯服"
@@ -64493,10 +64492,10 @@
 - raw: "高首"
   splits:
   - text: "高首"
-    translated: "High Lord"
-    qcReviewedText: "High Lord"
+    translated: "Gao Shou"
+    qcReviewedText: "Gao Shou"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "鬼门试炼"
   splits:

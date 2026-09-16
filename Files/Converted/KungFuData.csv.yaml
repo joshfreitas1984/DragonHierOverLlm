@@ -882,13 +882,11 @@
   splits:
   - split: 4
     text: "牛头乃阴间衙役，手持钢叉，力能排山。此招假其名号，由身强体壮者使出，确实威猛异常"
-    translated: "The Obeah Man is a dweller of the underworld, wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display."
-    qcReviewedText: "The Obeah Man is a dweller of the underworld, wielding a steel fork and possessing strength to move mountains. This technique borrows his name and is performed by someone sturdy and powerful, indeed a formidable display."
-    qcTranslated: "The Ox‑Head is a yamen runner of the Underworld, wielding a steel fork with strength to shatter mountains. This move borrows his name and is executed by someone strong and sturdy, making it indeed extraordinarily ferocious."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    translated: "Ox Head is a constable, wielding a steel fork, with strength capable of moving mountains. This move borrows his name; when used by a strong and sturdy individual, it is indeed extraordinarily fierce."
+    qcReviewedText: "Ox Head is a constable, wielding a steel fork, with strength capable of moving mountains. This move borrows his name; when used by a strong and sturdy individual, it is indeed extraordinarily fierce."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "97,奇门,1,八卦鞭法,八卦门成名鞭法，鞭势暗含八卦之理，在江湖中也多有流传,12,1,奇门1;意志1,,意志1;奇门2;内力0.1,奇门10,\"3,1,1\",\"7,0,0\",命中0.06,9,-1,0,手16,手12,,,skill4_4,,八卦升-Target-Grid-Happen;旋风-Target-Grid-Start,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8983,11 +8981,11 @@
   splits:
   - split: 4
     text: "赵胤宗所创，玄妙无比，威力无穷，可将修习者的体魄经脉发挥至天人境界，从而获得经天纬地之能，号称当世第一内功。"
-    translated: "Created by Zhao Yizong, it is incredibly mysterious and powerful. It can unleash the full potential of practitioners' resilience and meridians, enabling them to reach the heavens and encompass all under heaven. It is renowned as the top neigong of this era."
-    qcReviewedText: "Created by Zhao Yizong, it is incredibly mysterious and powerful. It can unleash the full potential of practitioners' resilience and meridians, enabling them to reach the heavens and encompass all under heaven. It is renowned as the top neigong of this era."
-    qcTranslated: "Created by Zhao Yizong, it is incredibly mysterious and powerful. It can unleash the full potential of practitioners' resilience and meridians, enabling them to reach the realm of unity between man and heaven, thereby gaining the power to span heaven and earth. It is renowned as the top neigong of this era."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    translated: "Created by Zhao Yinzong, it is incredibly profound and powerful, capable of elevating the practitioner's resilience and meridians to a divine realm, thereby granting them the ability to influence the world. It is known as the greatest internal skill of the present age."
+    qcReviewedText: "Created by Zhao Yinzong, it is incredibly profound and powerful, capable of elevating the practitioner's resilience and meridians to a divine realm, thereby granting them the ability to influence the world. It is known as the greatest internal skill of the present age."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "996,内功,0,守丹田,强调气守丹田的防御性内功法门,,1.1,内功1;意志1,内力上限40;内功4;体质4;减伤2,,内功5,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4

@@ -6612,10 +6612,10 @@
 - raw: "次年，飞龙门掌门赵胤宗于泰山举行会盟大会，"
   splits:
   - text: "次年，飞龙门掌门赵胤宗于泰山举行会盟大会，"
-    translated: "The following year, Sect Leader Zhao Yizong of Flying Dragon Gate held a grand alliance conference on Mount Tai."
-    qcReviewedText: "The following year, Sect Leader Zhao Yizong of Flying Dragon Gate held a grand alliance conference on Mount Tai."
+    translated: "The following year, Sect Master Zhao Yinzong of the Flying Dragon Gate held a meeting alliance conference on Mount Tai."
+    qcReviewedText: "The following year, Sect Master Zhao Yinzong of the Flying Dragon Gate held a meeting alliance conference on Mount Tai."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "欲凭一己之力消弭武林纷争。"
   splits:

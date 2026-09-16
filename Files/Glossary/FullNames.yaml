@@ -1,0 +1,342 @@
+- raw: 姜映泉
+  result: Jiang Yingquan
+- raw: 陆仁谦
+  result: Lu Renqian
+- raw: 魏胥华
+  result: Wei Xuhua
+- raw: 余采薇
+  result: Yu Caiwei
+- raw: 顾游年
+  result: Gu Younian
+- raw: 沈退
+  result: Shen Tui
+- raw: 姜婉
+  result: Jiang Wan
+- raw: 杨思迟
+  result: Yang Sichi
+- raw: 林云裳
+  result: Lin Yunshang
+- raw: 乐无疾
+  result: Yue Wuji
+- raw: 云彩衣
+  result: Yun Caiyi
+- raw: 卢玉麟
+  result: Lu Yulin
+- raw: 唐逸影
+  result: Tang Yiying
+- raw: 唐离
+  result: Tang Li
+- raw: 唐嫣然
+  result: Tang Yanran
+- raw: 皇甫青衫
+  result: Huangfu Qingshan
+- raw: 皇甫斌
+  result: Huangfu Bin
+- raw: 朱断岳
+  result: Zhu Duanyue
+- raw: 徐不平
+  result: Xu Boping
+- raw: 赵破虏
+  result: Zhao Polu
+- raw: 诸葛伶
+  result: Zhuge Ling
+- raw: 南宫瑶
+  result: Nangong Yao
+- raw: 葛知远
+  result: Ge Zhiyuan
+- raw: 欧长兵
+  result: Ou Changbing
+- raw: 祖心炎
+  result: Zu Xinyan
+- raw: 龙凤娥
+  result: Long Feng'e
+- raw: 龙凝霜
+  result: Long Ningshuang
+- raw: 石崇虎
+  result: Shi Chonghu
+- raw: 阎罗王
+  result: King Yama
+- raw: 崔命官
+  result: Cui Minguan
+- raw: 孟婆娑
+  result: Meng Posuo
+- raw: 常无黑
+  result: Chang Wuhei
+- raw: 常无白
+  result: Cang Wubai
+- raw: 牛头
+  result: Ox Head
+- raw: 马面
+  result: Horse Face
+- raw: 道无名
+  result: Dao Wuming
+- raw: 思中澜
+  result: Si Zhonglan
+- raw: 姬清梵
+  result: Ji Qingfan
+- raw: 空闻大师
+  result: Master Kongwen
+- raw: 空见大师
+  result: Master Kongjian
+- raw: 如是大师
+  result: Master Rushi
+- raw: 张青蓬
+  result: Zhang Qingpeng
+- raw: 张文馨
+  result: Zhang Wenxin
+- raw: 宋廉庭
+  result: Song Lianting
+- raw: 项元霸
+  result: Xiang Yuanba
+- raw: 宇文极
+  result: Yuwen Ji
+- raw: 吕寻峰
+  result: Lu Xinfeng
+- raw: 庄晓梦
+  result: Zhuang Xiaomeng
+- raw: 司马德源
+  result: Sima Deyuan
+- raw: 李潇湘
+  result: Li Xiaoxiang
+- raw: 白云天
+  result: Bai Yuntian
+- raw: 曲自封
+  result: Qu Zifeng
+- raw: 闻惊鸿
+  result: Wen Jinghong
+- raw: 墨璇玑
+  result: Mo Xuanji
+- raw: 墨从义
+  result: Mo Congyi
+- raw: 雷震天
+  result: Lei Zhentian
+- raw: 雷冠群
+  result: Lei Guanqun
+- raw: 雷彤
+  result: Lei Tong
+# - raw: 转轮法王
+#   result: Zhuanlun Dharma King
+# - raw: 金刚法王
+#   result: Jingang Dharma King
+# - raw: 真言法王
+#   result: Zhenyan Dharma King
+- raw: 凌北渊
+  result: Ling Beiyuan
+- raw: 云九霄
+  result: Yun Jiuxiao
+- raw: 江映寒
+  result: Jiang Yinghan
+- raw: 夏天雄
+  result: Xia Tianxiong
+- raw: 叶一鸣
+  result: Ye Yiming
+- raw: 韩嵩
+  result: Han Song
+- raw: 陆奇
+  result: Lu Qi
+- raw: 吕子芳
+  result: Lu Zifang
+- raw: 公孙防
+  result: Gongsun Fang
+- raw: 狄坤
+  result: Di Kun
+- raw: 万仞山
+  result: Wan Renshan
+- raw: 卓远望
+  result: Zhuo Yuanwang
+- raw: 陆离
+  result: Lu Li
+- raw: 卫海川
+  result: Wei Haichuan
+- raw: 沈蛟
+  result: Shen Jiao
+- raw: 上官雯
+  result: Shangguan Wen
+- raw: 周莫知
+  result: Zhou Mozhi
+- raw: 陌田桑
+  result: Mo Tiansang
+- raw: 武绝义
+  result: Wu Jueyi
+# - raw: 黄泉
+#   result: Yellow Springs
+# - raw: 玉观音
+#   result: Buddha of Jade
+# - raw: 雨人屠
+#   result: Rainfall Executioner
+- raw: 上官凤
+  result: Shangguan Feng
+- raw: 计心狂
+  result: Ji Xinkuang
+- raw: 慕容星辰
+  result: Murong Xingchen
+# - raw: 幽冥
+#   result: Netherworld
+# - raw: 魅影
+#   result: Phantom
+# - raw: 血刃
+#   result: Blood Blade
+# - raw: 残阳
+#   result: Setting Sun
+- raw: 厉苍穹
+  result: Li Cangqiong
+- raw: 迟百城
+  result: Chi Baicheng
+- raw: 费彬
+  result: Fei Bin
+- raw: 岳无畏
+  result: Yue Wuwei
+- raw: 高首
+  result: Gao Shou
+  exclude:
+    - HorseData.csv
+- raw: 王彪
+  result: Wang Biao
+- raw: 马悍
+  result: Ma Han
+- raw: 凤南飞
+  result: Feng Nanfei
+- raw: 裘龙
+  result: Qiu Long
+- raw: 张成化
+  result: Zhang Chenghua
+- raw: 曾镇海
+  result: Zeng Zhenhai
+- raw: 宋明公
+  result: Song Minggong
+- raw: 戴壮
+  result: Dai Zhuang
+- raw: 马应龙
+  result: Ma Yinglong
+- raw: 马超群
+  result: Ma Chaoqun
+- raw: 马丹心
+  result: Ma Danxin
+- raw: 马宝郭
+  result: Ma Baoguo
+- raw: 郝大力
+  result: Hao Dali
+- raw: 汪财
+  result: Wang Cai
+- raw: 吴谋
+  result: Wu Mou
+- raw: 熊百胜
+  result: Xiong Baisheng
+- raw: 朱全
+  result: Zhu Quan
+- raw: 严达开
+  result: Yan Dakai
+- raw: 冯虎
+  result: Feng Hu
+- raw: 刘豹
+  result: Liu Bao
+- raw: 黄豺
+  result: Huang Chai
+- raw: 韩狼
+  result: Han Lang
+- raw: 吴忧
+  result: Wu You
+- raw: 孟经世
+  result: Meng Jingshi
+- raw: 郭淮
+  result: Guo Huai
+- raw: 吕天行
+  result: Lu Tianxiang
+- raw: 何足道
+  result: He Zudao
+- raw: 楚风疾
+  result: Chu Fengji
+- raw: 林弄影
+  result: Lin Nongying
+- raw: 齐焱
+  result: Qi Yan
+- raw: 张峻
+  result: Zhang Jun
+- raw: 项问天
+  result: Xiang Wentian
+- raw: 郭勇锐
+  result: Guo Yongrui
+- raw: 阮芷
+  result: Ruan Zhi
+- raw: 彗定
+  result: Hui Ding
+- raw: 清风
+  result: Qing Feng
+- raw: 李云鹤
+  result: Li Yunhe
+- raw: 吕舞阳
+  result: Lu Wuyang
+- raw: 曲佩环
+  result: Qu Peihuan
+- raw: 水清秋
+  result: Shui Qingqiu
+- raw: 柳如月
+  result: Liu Ruyue
+- raw: 殷雨霏
+  result: Yin Yufei
+- raw: 北冥雪
+  result: Beiming Xue
+- raw: 金龙生
+  result: Jin Longsheng
+- raw: 天残
+  result: Tian Can
+- raw: 地缺
+  result: Di Que
+- raw: 南丑
+  result: Nan Chou
+- raw: 北怪
+  result: Bei Guai
+# - raw: 逍遥生
+#   result: Free Spirited Fellow
+# - raw: 独孤剑
+#   result: Solitary Saber
+# - raw: 炼气士
+#   result: Qi Refining Master
+# - raw: 都点检
+#   result: City Inspector
+# - raw: 独臂刀
+#   result: One‑Arm Saber
+# - raw: 斗酒僧
+#   result: Monk who drinks wine
+- raw: 王添翼
+  result: Wang Tianyi
+- raw: 雷殷殷
+  result: Lei Yinyin
+- raw: 赵胤宗
+  result: Zhao Yinzong
+- raw: 中年天残
+  result: Middle aged Tian Can
+- raw: 中年地缺
+  result: Middle aged Di Que
+- raw: 中年南丑
+  result: Middle aged Nan Chou
+- raw: 中年北怪
+  result: Middle aged Bei Guai
+- raw: 赵义仁
+  result: Zhao Yiren
+- raw: 石守信
+  result: Shi Shouxin
+- raw: 中年赵胤宗
+  result: Middle aged Zhao Yinzong
+- raw: 傅砚之
+  result: Fu Yanzhi
+- raw: 张弥勒
+  result: Zhang Mile
+- raw: 陆沉舟
+  result: Lu Chenzhou
+- raw: 王霸
+  result: Wang Ba
+- raw: 龙灭
+  result: Long Mie
+- raw: 罗八怪
+  result: Luo Bagui
+- raw: 菲燕子
+  result: Fei Yanzi
+- raw: 叶寒
+  result: Ye Han
+- raw: 李天临
+  result: Li Tianlin
+- raw: 熊刚
+  result: Xiong Gang
+- raw: 王伦
+  result: Wang Lun
