@@ -40,6 +40,19 @@ never actually translated. Lesson: when a diagnostic log's *text* and a raw hex/
 *same value* disagree, trust the hex dump - the display text may have been translated by an
 unrelated broad patch after the fact.
 
+## Second line of defense (2026-09-17): packaging-level guarantee that `{1}` is never translated
+
+The fix above reverses the problem at the runtime call site after the fact. A second, cheaper fix
+now also prevents the packaged mod's own CSV from ever containing a translated hero name in this
+slot in the first place: `Tests/TranslationPackaging.cs`'s `RepairRobHeroItemChooseCallParam` runs
+right after `CsvGameDataWorkflow.PackageAsync` writes `Files/Mod/PlotData.csv` and force-corrects
+column 9's `{1}` slot back to its own raw text, for every row whose column-9 template is confirmed
+(via the actual template text in `Files/Converted/PlotData.csv.yaml`) to be exactly
+`"{0};RobHeroItemChoose;{1}"`. See
+[plotdata-column9-crash-and-repair-pattern.md](../../Tests/docs/plotdata-column9-crash-and-repair-pattern.md)
+for the full detail. `GetHero_Prefix` below is kept as-is as a defense-in-depth backstop (e.g. for
+any already-translated name sitting in an older save/mod build produced before this fix).
+
 ## Removed: PlotInteractController.OnClick_Prefix
 An earlier fix pre-translated `choiceData.callParam` in an `OnClick` prefix via
 `DynamicStringPatches.ReverseTranslate` (exact-match) before *any* `callFuc` handler ran. This was

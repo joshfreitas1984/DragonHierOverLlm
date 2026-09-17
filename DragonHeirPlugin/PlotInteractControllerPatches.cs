@@ -27,8 +27,7 @@ internal static class PlotInteractControllerPatches
         {
             _inGetHeroPrefix = true;
 
-
-            MainPlugin.Logger.LogError($"[PlotInteractControllerPatches] GetHero_Prefix yo: {heroName}");
+            //MainPlugin.Logger.LogError($"[PlotInteractControllerPatches] GetHero_Prefix yo: {heroName}");
             __result = __instance.GetHero(heroName);
             if (__result != null) return false;
 

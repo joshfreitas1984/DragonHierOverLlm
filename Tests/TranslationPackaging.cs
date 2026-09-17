@@ -208,6 +208,88 @@ namespace Tests
             FileHelper.WriteAllTextWithRetry(modPath, serializer.Serialize(results));
         }
 
+        // Re-reads the just-packaged Files/Mod/PlotData.csv and force-corrects column 9's
+        // "{0};RobHeroItemChoose;{1}" template's {1} slot (PlotController.RobHeroItemChoose(n)'s
+        // callParam) back to its own raw Chinese text - see
+        // Tests/docs/plotdata-column9-crash-and-repair-pattern.md and
+        // DragonHeirPlugin/docs/robheroitemchoose-getherofix.md for why: that callParam is passed
+        // straight into WorldData.GetHero, which looks a hero up by raw (dot-stripped) Chinese name,
+        // never its translated display name.
+        //
+        // Deliberately scoped by the ACTUAL template text read back from
+        // Files/Converted/PlotData.csv.yaml (line.Templates, Split == 9, Template ==
+        // "{0};RobHeroItemChoose;{1}" exactly) rather than by fragment position (SubIndex == 1)
+        // alone - column 9 is shared by every choice function in this game, and a different
+        // template shape could in principle also land a second fragment at SubIndex 1 for an
+        // unrelated reason. Matching the literal template text first, then reconstructing BOTH the
+        // translated and raw versions of that exact template from the SAME fragments
+        // (CompoundFieldSplitter.Reconstruct with .Translated vs .Text), guarantees the correction
+        // only ever touches a row confirmed to be this exact shape, and uses the fragment's own raw
+        // text (never a reverse-translation/name-dictionary lookup that could miss or mismatch).
+        //
+        // Runs as a packaging-time-only fixup (post-file rewrite, same pattern as
+        // ApplyDynamicStringResultOverrides above) rather than a CustomColumnRepair/translation-time
+        // hook, since the {1} slot must never be translated in the first place, not merely repaired
+        // after an LLM call.
+        private const string RobHeroItemChooseTemplate = "{0};RobHeroItemChoose;{1}";
+
+        private static void RepairRobHeroItemChooseCallParam(string workingDirectory, TextFileToSplit textFile)
+        {
+            if (textFile.Path != "PlotData.csv")
+                return;
+
+            var modPath = $"{workingDirectory}/Mod/{textFile.Path}";
+            var convertedPath = $"{workingDirectory}/Converted/{textFile.Path}.yaml";
+            if (!File.Exists(modPath) || !File.Exists(convertedPath))
+                return;
+
+            var deserializer = YamlHelper.CreateDeserializer();
+            var lines = deserializer.Deserialize<List<TranslationLine>>(File.ReadAllText(convertedPath)) ?? new();
+
+            var packagedToRaw = new Dictionary<string, string>();
+
+            foreach (var line in lines)
+            {
+                var template = line.Templates.FirstOrDefault(t => t.Split == 9 && t.Template == RobHeroItemChooseTemplate);
+                if (template == null)
+                    continue;
+
+                var fragments = line.Splits.Where(s => s.Split == 9).OrderBy(s => s.SubIndex).ToList();
+                if (fragments.Count != 2 || fragments.Any(f => string.IsNullOrEmpty(f.Translated)))
+                    continue;
+
+                var translatedReconstructed = CompoundFieldSplitter.Reconstruct(template.Template, fragments.Select(f => f.Translated).ToList());
+
+                // Only {1} (SubIndex 1, the callParam) goes back to its own raw text - {0}
+                // (choiceText, SubIndex 0) stays translated. Reconstructing with a fully-raw
+                // fragment list here would revert the whole cell, not just the callParam slot.
+                var mixedFragments = fragments.Select(f => f.SubIndex == 1 ? f.Text : f.Translated).ToList();
+                var correctedReconstructed = CompoundFieldSplitter.Reconstruct(template.Template, mixedFragments);
+
+                packagedToRaw[translatedReconstructed] = correctedReconstructed;
+            }
+
+            if (packagedToRaw.Count == 0)
+                return;
+
+            var csvLines = File.ReadAllLines(modPath);
+            var changed = false;
+
+            for (var i = 0; i < csvLines.Length; i++)
+            {
+                var columns = CompoundFieldSplitter.ParseCsvRow(csvLines[i]);
+                if (columns.Length <= 9 || !packagedToRaw.TryGetValue(columns[9], out var rawValue) || columns[9] == rawValue)
+                    continue;
+
+                columns[9] = rawValue;
+                csvLines[i] = CompoundFieldSplitter.RebuildCsvRow(columns);
+                changed = true;
+            }
+
+            if (changed)
+                FileHelper.WriteAllLinesWithRetry(modPath, csvLines);
+        }
+
         // Drops junk dynamic-string dictionary entries whose Raw contains no Chinese characters at
         // all (same pattern as DragonHeirPlugin/MainPlugin.cs's ChineseCharPattern) - only text
         // containing real Chinese characters is ever a genuine translatable fragment. Filtering
@@ -327,6 +409,10 @@ namespace Tests
                 passedCount += passed;
                 qcRejectedCount += qcRejected;
                 rawFallbackCount += rawFallback;
+
+                // Runs AFTER CsvGameDataWorkflow.PackageAsync has written this file, same pattern
+                // as ApplyDynamicStringResultOverrides below - see that method's own comment for why.
+                RepairRobHeroItemChooseCallParam(workingDirectory, textFile);
             }
 
             // Write out the small, dedicated atlas-sprite-name lookup file(s) collected above -

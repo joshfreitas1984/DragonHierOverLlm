@@ -37,6 +37,7 @@ namespace Tests
             CustomQcExclusionRule = (textFile, column, raw) =>
                 ExcludeFunctionRoutedDynamicStringFromQc(textFile, column, raw) ||
                 ExcludePlotChoiceColumnFromQc(textFile, column, raw),
+            CustomTranslationExclusionRule = GetDanglingColorTagOverride,
         };
 
         // Repairs possessive/contraction suffixes placed inside placeholder wrappers.
@@ -215,6 +216,92 @@ namespace Tests
                 return false;
 
             return raw.IndexOfAny(PlotChoiceStructuralDelimiters) > 0;
+        }
+
+        // Hand-written overrides for dynamicStrings.txt raw templates where a literal closing tag
+        // (e.g. "</color>") appears with no matching literal opening tag anywhere in the raw text -
+        // meaning the opening tag is a runtime-computed game value substituted through one of the
+        // "{n}" placeholders (see EnhanceUIController.cs's plVar7 argument array, decompiled: {0}/{2}
+        // are dynamically chosen "<color=...>" tags picked by game code depending on whether a
+        // requirement is met). No mechanical validator can ever verify a rewritten sentence keeps
+        // that placeholder positioned correctly relative to the literal close - ordinary,
+        // grammatically-correct word reordering during translation is indistinguishable from a
+        // corruption that silently breaks the color span (confirmed in production: QC's correction
+        // of the "提升强化等级至" Enhance-UI string dropped the literal "级</color>" off the end of its
+        // first line entirely, see docs/gamefilehandling-reference.md). Every entry here keeps the
+        // exact "{n}" placeholder order/position from raw - only the literal text between them was
+        // translated - so the color tag pairing can never be disturbed by a future re-translation or
+        // QC pass touching these lines, because SafeToTranslate=false (set by
+        // GetDanglingColorTagOverride below, wired via CustomTranslationExclusionRule) keeps both the
+        // LLM and QC from ever seeing them again. Candidates identified by scanning
+        // Files/Converted/dynamicStrings*.yaml and Files/Converted/dumpedPrefabText*.yaml raw text
+        // for "a {n} placeholder is present AND a literal closing tag has no matching literal opening
+        // tag" - dumpedPrefabText* had zero matches, so every entry below is a dynamicStrings.txt raw
+        // string. Keyed by the exact raw text (same convention as
+        // Tests.TranslationPackaging.DynamicStringResultOverrides).
+        private static readonly Dictionary<string, string> DanglingColorTagOverrides = new()
+        {
+            ["<b>门派特性</b>\n{1}{0}</color>"] = "<b>Sect Traits</b>\n{1} {0}</color>",
+            ["<i>{2}(因超过{0}级，练习只获取{1}%经验！)</color></i>"] =
+                "<i>{2} (Due to exceeding Level {0}, practice only grants {1}% experience!)</color></i>",
+            ["{0}(已习得 第{1}重)</color>"] = "{0} (Already learned Tier {1})</color>",
+            ["{0}<b>作恶导致禁用{1}个月</b></color>"] = "{0}<b>Banned for {1} months due to misconduct</b></color>",
+            // Confirmed via QuickDetail.cs/decompile: {1} is a pre-concatenated "{skillName}{level}"
+            // blob (e.g. "Qinggong 3") and {2} is a pass/fail color tag - the line reads "Requires:
+            // <color>SkillName Level</color>", not literal "passing" (通行 = "passage/traversal" here,
+            // a terrain-obstacle skill gate, not the English verb "pass").
+            ["{0}\n通行{2}{1}</color>"] = "{0}\nRequires {2}{1}</color>",
+            ["{0}{1}日</color>"] = "{0} {1} Day</color>",
+            ["{0}同盟</color>"] = "{0} Alliance</color>",
+            ["{0}宗主</color>"] = "{0} Sect Leader</color>",
+            ["{0}已{1}至满级</color>"] = "{0} has {1} reached the level cap</color>",
+            ["{0}已拥有</color>"] = "{0} is already owned</color>",
+            ["{0}未拥有</color>"] = "{0} Not owned</color>",
+            ["{0}本门</color>"] = "{0} This Sect</color>",
+            ["{0}禁用{1}个月</color>"] = "{0} Banned for {1} months</color>",
+            ["{0}终点</color>"] = "{0} Finish</color>",
+            ["{0}耐药性 {1}%</color>"] = "{0} Drug resistance {1}%</color>",
+            ["{0}耐药性{1}%</color>"] = "{0} Drug resistance {1}%</color>",
+            ["{0}附庸</color>"] = "{0} Vassal</color>",
+            ["{1}[有毒{0}]</color>"] = "{1}[Toxic {0}]</color>",
+            ["{1}休战{0}日</color>"] = "{1} Truce {0} Days</color>",
+            ["{1}困难{0}</color>"] = "{1} Difficulty {0}</color>",
+            ["{1}守卫熟络{0}</color>"] = "{1} Guard familiarity {0}</color>",
+            ["{1}守卫警戒{0}</color>"] = "{1} Guard alertness {0}</color>",
+            ["{1}容易{0}</color>"] = "{1} Easy {0}</color>",
+            ["{1}有毒 {0}</color>"] = "{1} Toxic {0}</color>",
+            ["{1}极易{0}</color>"] = "{1} is very easy {0}</color>",
+            ["{1}极难{0}</color>"] = "{1} Extremely difficult {0}</color>",
+            ["{1}较易{0}</color>"] = "{1} Easier {0}</color>",
+            ["{1}较难{0}</color>"] = "{1} More difficult {0}</color>",
+            ["♦忠诚小于50时，每月有概率叛离门派。\n{1}每月叛离概率:{0}%</color>"] =
+                "♦When loyalty is less than 50, there is a monthly chance of defecting from the Sect.\n{1} Monthly chance of defection: {0}%</color>",
+            ["体力{0}</color>"] = "Stamina {0}</color>",
+            ["内力{0}</color>"] = "Inner Power {0}</color>",
+            ["因招募{4}{0}，所有门派对{1}{5}好感{2}</color>且全弟子{5}忠诚{3}</color>！"] =
+                "Recruiting {4} {0} increases all sects' {1} {5} favorability by {2}</color> and all disciples' {5} loyalty by {3}</color>!",
+            ["因门派银钱告罄，全弟子{0}忠诚-20</color>！"] =
+                "Due to the sect's treasury being exhausted, all disciples' {0} loyalty -20</color>!",
+            ["对方好感 60{1}(当前{0})</color>"] = "The other party's affinity 60 {1} (Current: {0})</color>",
+            ["提升强化等级至+{6}\n{0}需要建筑等级 {1}级</color>\n{2}需要{5}技能 {3}</color>\n{4}"] =
+                "Increase the enhancement level to +{6}\n{0}Requires building level {1}</color>\n{2}Requires {5} skill {3}</color>\n{4}",
+            ["每月产出\n{2}{0}</color>\n\n周边效率+{1}%"] = "Monthly production\n{2} {0}</color>\n\nSurrounding efficiency+{1}%",
+            ["特殊建筑 {0}({1}</color>)"] = "Special buildings {0} ({1}</color>)",
+            ["生命{0}</color>"] = "Health {0}</color>",
+            ["随机打通下{0}个穴位</color>"] = "Randomly unblock {0} acupoints</color>",
+            ["随机揭示{0}个点</color>"] = "Randomly reveal {0} points</color>",
+            ["需要:{2}{0}{1}</color>"] = "Need: {2} {0} {1}</color>",
+            ["需要\n{0} {1}级</color>"] = "Need\n{0} {1} Level</color>",
+            ["需要\n{0}人口 {1}</color>"] = "Need\n{0} Population {1}</color>",
+            ["需要\n{0}弟子 {1}</color>"] = "Need\n{0} Disciple {1}</color>",
+        };
+
+        private static string? GetDanglingColorTagOverride(TextFileToSplit textFile, int? column, string raw)
+        {
+            if (textFile.TextFileType != TextFileType.DynamicStringsIL2CPP || string.IsNullOrEmpty(raw))
+                return null;
+
+            return DanglingColorTagOverrides.TryGetValue(raw, out var overrideResult) ? overrideResult : null;
         }
 
         public static string[] ParseCsvRow(string line) => CompoundFieldSplitter.ParseCsvRow(line);

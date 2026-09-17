@@ -166,6 +166,28 @@ public class QualityControlWorkflowTests
         await QualityReviewWorkflow.ResetStutterAffectedQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
+    // Run this ONCE after adding the tag-seam rule to BaseQualityReviewPrompt.txt/
+    // BaseQualityReviewVerificationPrompt.txt (all model families): before that rule existed, the QC
+    // model had no guidance that a markup/formatting tag or placeholder (e.g. <b>, <color=...>)
+    // sitting between two stitched fragments isn't a sentence boundary, so a genuinely broken seam
+    // like "...here.<b>#PosText#</b>Inside" (a translated compound sentence split into two
+    // independently-translated fragments that don't grammatically connect) could pass silently at
+    // DEFECT: NONE / SCORE: 100 - see the /investigate-qc-issue writeup for the dumpedPrefabText line
+    // that surfaced this. Scans every templated column's CURRENT effective (reconstructed) translated
+    // text for that tag-seam signature (a period touching a tag open AND a tag close touching a
+    // capital, both required - see QualityReviewWorkflow's TagSeamPunctBeforeRegex/
+    // TagSeamCapitalAfterRegex) and resets any match back
+    // to NotReviewed for a fresh review under the new prompt rule, regardless of its old score/status
+    // - console output during the run lists exactly which file/split each reset column came from, so
+    // you can eyeball the affected lines before/after the next "1"/"2" pass re-reviews them. Far
+    // cheaper than "Reset ALL Quality Review State" since it only touches columns the regex scan
+    // actually finds, with no LLM call of its own - same shape as "9" above.
+    [Fact(DisplayName = "Reset Tag-Seam-Affected Quality Review State")]
+    public async Task ResetTagSeamAffectedQcState()
+    {
+        await QualityReviewWorkflow.ResetTagSeamAffectedQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
     // Dedicated single-row QC sample: forces a fresh QualityReviewWorkflow review of exactly ONE
     // known PlotData.csv row (the master's "别慌..." collapse line, split 10 - see
     // Files/Converted/PlotData.csv.yaml) instead of a random sampleSize=N slice

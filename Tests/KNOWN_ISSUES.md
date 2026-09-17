@@ -53,6 +53,13 @@ was a prerequisite for the load sequence progressing far enough to hit the next 
 - [`docs/dynamicstrings-extraction-sources.md`](docs/dynamicstrings-extraction-sources.md) — the
   `plotText`/`describe`-family field correction (belong in DynamicStrings, not PrefabText) and the
   staleness bug behind the IL2CPP-string-map re-extraction source.
+- [`docs/dynamicstrings-dangling-color-tag-templates.md`](docs/dynamicstrings-dangling-color-tag-templates.md)
+  — a color span left unclosed in-game (Enhance-UI string) because `{0}`/`{2}` are runtime-computed
+  `<color=...>` opens while the matching `</color>` is literal raw text; QC's correction dropped the
+  literal close. Fixed via a new `GameHooks.CustomTranslationExclusionRule` (LlmKit) plus a 44-entry
+  manual-override dictionary in `GameFileHandling.cs` covering every raw string in
+  `dynamicStrings*.yaml` with this shape (found by scanning raw text for a `{n}` placeholder +
+  dangling literal closing tag).
 - [`docs/qc-run-startup-crash-investigation-2026-09-15.md`](docs/qc-run-startup-crash-investigation-2026-09-15.md)
   — **RESOLVED (2026-09-16)**: "QC run broke game startup" after commit `551bb94` was
   `PrefabTextWorkflow`/`DynamicStringWorkflow` (FanslationStudio.LlmKit) discarding a low-scoring

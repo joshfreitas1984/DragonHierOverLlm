@@ -153,6 +153,29 @@ delimiter in it was guaranteed to fail forever. `GameFileHandling.ExcludePlotCho
 `ExcludeFunctionRoutedDynamicStringFromQc` for `dynamicStrings.txt`) keeps these out of the QC queue
 entirely instead. See [gamefilehandling-reference.md](gamefilehandling-reference.md#quality-review-hooks).
 
+**Follow-up (2026-09-17): the `{1}` callParam slot of `"{0};RobHeroItemChoose;{1}"` must never be
+translated at all**, not just guarded against delimiter leakage — `PlotController.RobHeroItemChoose(n)`
+passes that callParam straight into `WorldData.GetHero`, which looks a hero up by its *raw* Chinese
+name, never its translated display name (see
+[robheroitemchoose-getherofix.md](../../DragonHeirPlugin/docs/robheroitemchoose-getherofix.md), which
+already carries a runtime Harmony patch reversing this at the point of use). This is now also
+guaranteed at the packaging level: `Tests/TranslationPackaging.cs`'s
+`RepairRobHeroItemChooseCallParam` runs after `CsvGameDataWorkflow.PackageAsync` writes
+`Files/Mod/PlotData.csv` (same pattern as `ApplyDynamicStringResultOverrides` for dynamic strings -
+re-read the just-packaged file, force-correct, rewrite). For every line in
+`Files/Converted/PlotData.csv.yaml` whose column-9 `FieldTemplate.Template` is confirmed **exactly**
+`"{0};RobHeroItemChoose;{1}"` (checked against the actual template text, not inferred from fragment
+position alone - a different column-9 template shape could in principle also place a fragment at
+`SubIndex == 1` for an unrelated reason, and matching on position alone would incorrectly force that
+one raw too), it reconstructs the column-9 cell twice from the same two fragments - once fully
+translated (the packaged form to match against) and once with only the `SubIndex == 1` fragment's
+own raw `Text` substituted in place of its `Translated` value (`{0}` stays translated) - then
+replaces any row whose packaged column 9 matches the first form with the second. This is
+deliberately a packaging-time-only fixup, not a `CustomColumnRepair` rule (which only ever sees one
+isolated fragment's raw/translated text, with no way to confirm which template it belongs to), and
+deliberately uses each fragment's own raw text rather than a reverse-translation/dictionary lookup,
+since that's guaranteed correct by construction with no chance of a missed/mismatched name.
+
 **Why this is the pattern to reach for first when the next "weird DB-style validation" case shows
 up** (as it likely will, per the pattern of `StringToSpeAddData`/`SkinDataBase`/`ResourcePointTypeData`
 already found in this codebase): `SkipColumns` throws away real translatable content and should be
